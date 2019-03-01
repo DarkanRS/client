@@ -67,7 +67,7 @@ public class ChatLine {
 		Iterator iterator_3 = Class235.aList2896.iterator();
 
 		while (iterator_3.hasNext()) {
-			Class539 class539_4 = (Class539) iterator_3.next();
+			ParticleSystem class539_4 = (ParticleSystem) iterator_3.next();
 			if (class539_4.aBool7130) {
 				class539_4.method11516(sceneobjectmanager_0, graphicalrenderer_1);
 			}

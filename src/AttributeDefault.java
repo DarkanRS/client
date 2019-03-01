@@ -49,7 +49,7 @@ public class AttributeDefault {
 			Class356.method6227(false, (byte) -17);
 			Class225_Sub6.method13413(-1756133525);
 			Class122.method2111(true, 662490589);
-			Class59.method1160(-319039192);
+			ParticleProducerDefinition.method1160(-319039192);
 			Class386.method6673(326422820);
 
 			int i_1;

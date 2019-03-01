@@ -3021,7 +3021,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		this.anInt8775 = 1 << this.anInt8806 * -1431655765 * 3 * -1431655765 * 3;
 	}
 
-	public final FontRenderer method8448(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public final FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
 		return new Class8_Sub4(this, fontmetrics_1, arr_2, bool_3);
 	}
 

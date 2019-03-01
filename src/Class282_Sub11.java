@@ -54,7 +54,7 @@ public abstract class Class282_Sub11 extends Node {
 			;
 		}
 
-		client.aLong7401 = Class169.method2869(1757662467);
+		client.aLong7401 = Class169.time();
 		client.aBool7400 = false;
 	}
 

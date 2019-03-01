@@ -55,7 +55,7 @@ public abstract class Class468 {
 	}
 
 	static void method7789(int i_0) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(84527156) == 1) {
+		if (Class393.preferences.aClass468_Sub3_8199.method12632(84527156) == 1) {
 			IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3152, (RsBitsBuffer) null), 301123709);
 		} else {
 			IndexLoaders.MAP_REGION_DECODER.method4547((byte) -107);

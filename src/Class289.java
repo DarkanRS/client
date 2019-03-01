@@ -154,7 +154,7 @@ public class Class289 implements Runnable {
 	}
 
 	static boolean method5097(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		Class169.method2869(1783349516);
+		Class169.time();
 		if (!graphicalrenderer_0.method8455(1890093661)) {
 			return false;
 		} else {
@@ -331,7 +331,7 @@ public class Class289 implements Runnable {
 
 								try {
 									graphicalrenderer_0.method8393((short) 3740);
-									Class89.method1504(2000L);
+									Class89.sleep(2000L);
 								} catch (Exception exception_48) {
 									;
 								}
@@ -347,7 +347,7 @@ public class Class289 implements Runnable {
 
 						try {
 							graphicalrenderer_0.method8393((short) 11377);
-							Class89.method1504(2000L);
+							Class89.sleep(2000L);
 						} catch (Exception exception_47) {
 							;
 						}

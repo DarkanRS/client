@@ -54,15 +54,15 @@ public class DefaultsFile {
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		if (Class84.myPlayer.playerAppearance != null) {
 			int i_4;
-			for (i_4 = 0; i_4 < Class44.anIntArray428.length; i_4++) {
-				if (Class44.anIntArray428[i_4] == i_2) {
+			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray428.length; i_4++) {
+				if (IdentikitDefinition.anIntArray428[i_4] == i_2) {
 					Class84.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, -1891661545);
 					return;
 				}
 			}
 
-			for (i_4 = 0; i_4 < Class44.anIntArray422.length; i_4++) {
-				if (Class44.anIntArray422[i_4] == i_2) {
+			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray422.length; i_4++) {
+				if (IdentikitDefinition.anIntArray422[i_4] == i_2) {
 					Class84.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, 938562628);
 					break;
 				}

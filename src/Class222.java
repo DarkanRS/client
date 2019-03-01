@@ -3,9 +3,9 @@ public class Class222 implements Interface17 {
 	int anInt2764;
 	int anInt2765;
 
-	public boolean method129(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method129(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		for (int i_5 = 0; i_5 < i_3 && i_5 < arr_2.length; i_5++) {
-			Interface16 interface16_6 = arr_2[i_5];
+			KeyRecord interface16_6 = arr_2[i_5];
 			if (interface16_6 != null && interface16_6.method92(317240429) == -954825461 * this.anInt2764 * -1837752669 && interface16_6.method125(2136691793) == 534615765 * this.anInt2765 * 593031805) {
 				return true;
 			}
@@ -14,9 +14,9 @@ public class Class222 implements Interface17 {
 		return false;
 	}
 
-	public boolean method127(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4, byte b_5) {
+	public boolean method127(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4, byte b_5) {
 		for (int i_6 = 0; i_6 < i_3 && i_6 < arr_2.length; i_6++) {
-			Interface16 interface16_7 = arr_2[i_6];
+			KeyRecord interface16_7 = arr_2[i_6];
 			if (interface16_7 != null && interface16_7.method92(317240429) == this.anInt2764 && interface16_7.method125(938641210) == this.anInt2765) {
 				return true;
 			}
@@ -25,9 +25,9 @@ public class Class222 implements Interface17 {
 		return false;
 	}
 
-	public boolean method128(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method128(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		for (int i_5 = 0; i_5 < i_3 && i_5 < arr_2.length; i_5++) {
-			Interface16 interface16_6 = arr_2[i_5];
+			KeyRecord interface16_6 = arr_2[i_5];
 			if (interface16_6 != null && interface16_6.method92(317240429) == -954825461 * this.anInt2764 * -1837752669 && interface16_6.method125(898626927) == 534615765 * this.anInt2765 * 593031805) {
 				return true;
 			}
@@ -41,9 +41,9 @@ public class Class222 implements Interface17 {
 		this.anInt2765 = i_2;
 	}
 
-	public boolean method126(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method126(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		for (int i_5 = 0; i_5 < i_3 && i_5 < arr_2.length; i_5++) {
-			Interface16 interface16_6 = arr_2[i_5];
+			KeyRecord interface16_6 = arr_2[i_5];
 			if (interface16_6 != null && interface16_6.method92(317240429) == -954825461 * this.anInt2764 * -1837752669 && interface16_6.method125(1229951069) == 534615765 * this.anInt2765 * 593031805) {
 				return true;
 			}

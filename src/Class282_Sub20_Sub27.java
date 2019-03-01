@@ -277,7 +277,7 @@ public class Class282_Sub20_Sub27 extends Class282_Sub20 {
 	public static void method15395(Object object_0, int i_1) {
 		if (Class282_Sub50_Sub17.anEventQueue10074 != null) {
 			for (int i_2 = 0; i_2 < 50 && Class282_Sub50_Sub17.anEventQueue10074.peekEvent() != null; i_2++) {
-				Class89.method1504(1L);
+				Class89.sleep(1L);
 			}
 
 			try {

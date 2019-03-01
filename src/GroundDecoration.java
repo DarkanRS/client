@@ -386,8 +386,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						}
 
 						if (client.aBool7364 && client.aBool7403) {
-							i_17 = Class163.aClass209_2031.method3569(2098527627);
-							i_18 = Class163.aClass209_2031.method3570(756095591);
+							i_17 = Class163.mouseRecorder.method3569(2098527627);
+							i_18 = Class163.mouseRecorder.method3570(756095591);
 							i_17 -= client.anInt7361;
 							i_18 -= client.anInt7362;
 							if (i_17 < client.anInt7432) {
@@ -516,7 +516,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								method16094(icomponentdefinitions_12.aClass118Array1439, icomponentdefinitions_12.idHash, i_17, i_18, i_19, i_20, i_14 - icomponentdefinitions_12.anInt1311, i_15 - icomponentdefinitions_12.anInt1312, i_13, bool_9, (byte) 6);
 							}
 
-							Class282_Sub44 class282_sub44_33 = (Class282_Sub44) client.aClass465_7442.method7754((long) icomponentdefinitions_12.idHash);
+							Class282_Sub44 class282_sub44_33 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_12.idHash);
 							if (class282_sub44_33 != null) {
 								RenderAnimIndexLoader.method3629(class282_sub44_33.anInt8063, i_17, i_18, i_19, i_20, i_14, i_15, i_13, -1473886497);
 							}
@@ -580,7 +580,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											}
 
 											if ((itemdefinitions_36.stackable == 1 || icomponentdefinitions_12.anInt1427 != 1) && icomponentdefinitions_12.anInt1427 != -1) {
-												string_35 = Class59.method1163(16748608, 619010179) + string_35 + "</col>" + " x" + Class488.method8210(icomponentdefinitions_12.anInt1427, -518631775);
+												string_35 = ParticleProducerDefinition.method1163(16748608, 619010179) + string_35 + "</col>" + " x" + Class488.method8210(icomponentdefinitions_12.anInt1427, -518631775);
 											}
 										}
 
@@ -701,7 +701,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 111) == icomponentdefinitions_12.anInt1339)) {
-														meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, icomponentdefinitions_12.aClass456_1437, player_37.playerAppearance, -1254103030);
+														meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, player_37.playerAppearance, -1254103030);
 														if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 															Class109.method1858(icomponentdefinitions_12, (byte) -76);
 														}
@@ -712,17 +712,17 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 17) == icomponentdefinitions_12.anInt1339)) {
-														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, icomponentdefinitions_12.aClass456_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357);
+														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357);
 													}
 												}
 											} else if (icomponentdefinitions_12.anInt1329 != 8 && icomponentdefinitions_12.anInt1329 != 9) {
 												if (icomponentdefinitions_12.aClass456_1437 != null && icomponentdefinitions_12.aClass456_1437.hasDefs()) {
-													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, icomponentdefinitions_12.aClass456_1437, Class84.myPlayer.playerAppearance, -1254103030);
+													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, Class84.myPlayer.playerAppearance, -1254103030);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 														Class109.method1858(icomponentdefinitions_12, (byte) -7);
 													}
 												} else {
-													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, (Animation) null, Class84.myPlayer.playerAppearance, -1254103030);
+													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, Class84.myPlayer.playerAppearance, -1254103030);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 														Class109.method1858(icomponentdefinitions_12, (byte) -35);
 													}

@@ -92,10 +92,10 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 	}
 
 	static final void method15437(CS2Executor cs2executor_0, short s_1) {
-		if (client.anInt7166 == 0 && !JS5CacheFile.method3360((byte) 56)) {
+		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 56)) {
 			if (Class448.aBool5422) {
 				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			} else if (Class448.aLong5425 > Class169.method2869(1849274283) - 1000L) {
+			} else if (Class448.aLong5425 > Class169.time() - 1000L) {
 				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 			} else {
 				Class448.aBool5422 = true;

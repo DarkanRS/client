@@ -11,7 +11,7 @@ public class Class253 {
 	int anInt3132;
 	int anInt3121;
 	static Class254 aClass254_3120;
-	long aLong3124 = Class169.method2869(1926471611);
+	long aLong3124 = Class169.time();
 	long aLong3128 = 0L;
 	boolean aBool3133 = true;
 	int anInt3114 = 0;
@@ -85,7 +85,7 @@ public class Class253 {
 
 	public final synchronized void method4333() {
 		if (!this.aBool3135) {
-			long long_1 = Class169.method2869(1993392309);
+			long long_1 = Class169.time();
 
 			try {
 				if (long_1 > this.aLong3124 + 6000L) {
@@ -95,7 +95,7 @@ public class Class253 {
 				while (long_1 > this.aLong3124 + 5000L) {
 					this.method4373(256);
 					this.aLong3124 += (long) (256000 / anInt3129);
-					long_1 = Class169.method2869(1843823776);
+					long_1 = Class169.time();
 				}
 			} catch (Exception exception_7) {
 				this.aLong3124 = long_1;
@@ -180,7 +180,7 @@ public class Class253 {
 			this.method4344();
 		} catch (Exception exception_2) {
 			this.method4343();
-			this.aLong3128 = Class169.method2869(1703218389) + 2000L;
+			this.aLong3128 = Class169.time() + 2000L;
 		}
 
 	}
@@ -203,7 +203,7 @@ public class Class253 {
 				aClass254_3120.aBool3143 = true;
 
 				while (aClass254_3120.aBool3144) {
-					Class89.method1504(50L);
+					Class89.sleep(50L);
 				}
 
 				aClass254_3120 = null;
@@ -322,7 +322,7 @@ public class Class253 {
 			this.aClass282_Sub15_3122.method12230(ints_1, 0, i_2);
 		}
 
-		this.aLong3124 = Class169.method2869(1568857193);
+		this.aLong3124 = Class169.time();
 	}
 
 	static final void method4338(Class282_Sub15 class282_sub15_0) {

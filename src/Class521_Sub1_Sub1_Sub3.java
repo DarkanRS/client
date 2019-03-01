@@ -7,7 +7,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	double aDouble10390;
 	boolean aBool10401 = false;
 	int anInt10385 = 0;
-	Class539 aClass539_10402;
+	ParticleSystem aClass539_10402;
 	boolean aBool10398 = false;
 	int anInt10386;
 	public int anInt10393;
@@ -46,7 +46,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					}
 				} else {
 					i_14 = this.anInt10389 - 1;
-					Class282_Sub47 class282_sub47_4 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_14);
+					Class282_Sub47 class282_sub47_4 = (Class282_Sub47) client.NPCS.get((long) i_14);
 					if (class282_sub47_4 != null) {
 						obj_2 = (Animable) class282_sub47_4.anObject8068;
 					}
@@ -188,7 +188,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		Class87[] arr_5 = meshrasterizer_2.method11253();
 		Class172[] arr_6 = meshrasterizer_2.method11274();
 		if ((this.aClass539_10402 == null || this.aClass539_10402.aBool7132) && (arr_5 != null || arr_6 != null)) {
-			this.aClass539_10402 = Class539.method11557(client.cycles, true);
+			this.aClass539_10402 = ParticleSystem.method11557(client.cycles, true);
 		}
 
 		if (this.aClass539_10402 != null) {

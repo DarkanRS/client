@@ -53,7 +53,7 @@ public class Player extends Animable {
 			matrix44var_2.method5219(0.0F, (float) (-20 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
-			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -110) == 1) {
+			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -110) == 1) {
 				RenderAnimDefs renderanimdefs_8 = this.getRenderAnimDefs((byte) -17);
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149, (byte) -104).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-563768008) ? this.currentAnimation : null;
@@ -80,7 +80,7 @@ public class Player extends Animable {
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
 						int i_13;
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.aClass465_7208.method7754((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595);
@@ -176,7 +176,7 @@ public class Player extends Animable {
 
 	}
 
-	public final boolean method16126(byte b_1) {
+	public final boolean hasAppearance(byte b_1) {
 		return this.playerAppearance != null;
 	}
 
@@ -351,7 +351,7 @@ public class Player extends Animable {
 			i_2 |= 0x80000;
 		}
 
-		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.playerAppearance.method3998(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_10, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437);
+		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.playerAppearance.method3998(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_10, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437);
 		int i_13 = Class46.method932(-708293505);
 		if (Engine.MAX_MEMORY < 96 && i_13 > 50) {
 			JS5CacheFile.method3359(-1275511493);
@@ -433,7 +433,7 @@ public class Player extends Animable {
 			matrix44var_2.method5219(0.0F, (float) (-20 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
-			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -42) == 1) {
+			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -42) == 1) {
 				RenderAnimDefs renderanimdefs_8 = this.getRenderAnimDefs((byte) -17);
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149, (byte) -47).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-305064415) ? this.currentAnimation : null;
@@ -460,7 +460,7 @@ public class Player extends Animable {
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
 						int i_13;
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.aClass465_7208.method7754((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595);
@@ -548,7 +548,7 @@ public class Player extends Animable {
 			matrix44var_2.method5219(0.0F, (float) (-20 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
-			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -32) == 1) {
+			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -32) == 1) {
 				RenderAnimDefs renderanimdefs_8 = this.getRenderAnimDefs((byte) -17);
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149, (byte) -84).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(871780846) ? this.currentAnimation : null;
@@ -575,7 +575,7 @@ public class Player extends Animable {
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
 						int i_13;
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.aClass465_7208.method7754((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595);
@@ -1026,7 +1026,7 @@ public class Player extends Animable {
 			matrix44var_3.method5219(0.0F, (float) (-20 - this.anInt10325), 0.0F);
 			Class285 class285_18 = null;
 			this.aBool10312 = false;
-			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -35) == 1) {
+			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -35) == 1) {
 				RenderAnimDefs renderanimdefs_9 = this.getRenderAnimDefs((byte) -17);
 				if (renderanimdefs_9.aBool2787 && (this.playerAppearance.anInt2928 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928, (byte) 90).aBool4912)) {
 					Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1045482299) ? this.currentAnimation : null;
@@ -1053,7 +1053,7 @@ public class Player extends Animable {
 					if (class180_26 != null && class180_26.anInt2242 != -1) {
 						int i_14;
 						if (class180_26.anInt2236 == 1) {
-							Class282_Sub47 class282_sub47_27 = (Class282_Sub47) client.aClass465_7208.method7754((long) class180_26.anInt2238);
+							Class282_Sub47 class282_sub47_27 = (Class282_Sub47) client.NPCS.get((long) class180_26.anInt2238);
 							if (class282_sub47_27 != null) {
 								NPC npc_30 = (NPC) class282_sub47_27.anObject8068;
 								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595);

@@ -219,8 +219,8 @@ public class Class242 {
 	}
 
 	static final void method4168(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8187, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1129391338);
-		Class190.method3148((byte) 102);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8187, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1129391338);
+		Class190.savePreferences((byte) 102);
 	}
 
 }

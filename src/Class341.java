@@ -17,7 +17,7 @@ public class Class341 {
 		this.anInt3992 = 32 + (int) (Math.random() * 4.0D);
 		this.anInt3993 = 3 + (int) (Math.random() * 2.0D);
 		this.anInt3994 = 16 + (int) (Math.random() * 3.0D);
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(1888881077) == 1) {
+		if (Class393.preferences.aClass468_Sub22_8213.method12873(1888881077) == 1) {
 			this.anInt3995 = (int) (Math.random() * 6.0D);
 		} else {
 			this.anInt3995 = (int) (Math.random() * 12.0D);
@@ -60,7 +60,7 @@ public class Class341 {
 					Class209.method3598("Pausing for " + i_3 + " seconds...", -1904731219);
 					Class276.aStringArray3345 = arr_0;
 					Class179.anInt2231 = i_2 + 1;
-					Class179.aLong2232 = Class169.method2869(1670266818) + (long) (i_3 * 1000);
+					Class179.aLong2232 = Class169.time() + (long) (i_3 * 1000);
 					break;
 				}
 

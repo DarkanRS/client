@@ -17,15 +17,15 @@ public final class Class75 {
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10314 = this.anInt740;
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10353 = client.cycles;
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.anInt739, (byte) 5), 687087501);
-				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method15836(this.aClass521_Sub1_Sub1_Sub2_Sub2_741.aClass409_10580.anInt4858, (byte) -96);
-				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10340 = this.aClass521_Sub1_Sub1_Sub2_Sub2_741.aClass409_10580.anInt4889 << 3;
-				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10321 = ++Class86.anInt819 - 1;
+				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method15836(this.aClass521_Sub1_Sub1_Sub2_Sub2_741.definitions.anInt4858, (byte) -96);
+				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10340 = this.aClass521_Sub1_Sub1_Sub2_Sub2_741.definitions.anInt4889 << 3;
+				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.drawPriority = ++Class86.anInt819 - 1;
 			} else {
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744 = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1995345801), 25);
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.decodeAppearance(Class276.aClass282_Sub35_3346, 1925099603);
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10314 = this.anInt740;
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10353 = client.cycles;
-				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10321 = ++Class86.anInt819 - 1;
+				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.drawPriority = ++Class86.anInt819 - 1;
 			}
 		}
 
@@ -107,7 +107,7 @@ public final class Class75 {
 	}
 
 	static final void method1350(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -16) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub28_8212.method12966((byte) -16) == 1 ? 1 : 0;
 	}
 
 	static final void method1351(CS2Executor cs2executor_0, int i_1) {
@@ -116,7 +116,7 @@ public final class Class75 {
 
 	static final void method1352(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub17_8200.method7785(i_2, -332063758);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub17_8200.method7785(i_2, -332063758);
 	}
 
 	public static String method1353(String string_0, int i_1) {
@@ -173,7 +173,7 @@ public final class Class75 {
 	}
 
 	static String method1354(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1) {
-		return class282_sub50_sub15_0.aString9771 + Class59.method1163(16777215, 619010179) + " >";
+		return class282_sub50_sub15_0.aString9771 + ParticleProducerDefinition.method1163(16777215, 619010179) + " >";
 	}
 
 	static final void method1355(CS2Executor cs2executor_0, int i_1) {

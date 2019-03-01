@@ -92,13 +92,13 @@ public final class Class459 {
 			}
 
 			boolean bool_4 = false;
-			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_3);
+			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get((long) i_3);
 			NPC npc_6;
 			if (class282_sub47_5 == null) {
 				npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1073098599));
 				npc_6.anInt10314 = i_3;
 				class282_sub47_5 = new Class282_Sub47(npc_6);
-				client.aClass465_7208.method7765(class282_sub47_5, (long) i_3);
+				client.NPCS.method7765(class282_sub47_5, (long) i_3);
 				client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
 				bool_4 = true;
 			}
@@ -106,7 +106,7 @@ public final class Class459 {
 			npc_6 = (NPC) class282_sub47_5.anObject8068;
 			client.anIntArray7212[++client.anInt7211 - 1] = i_3;
 			npc_6.anInt10353 = client.anInt7332;
-			if (npc_6.aClass409_10580 != null && npc_6.aClass409_10580.method6886(-1639112398)) {
+			if (npc_6.definitions != null && npc_6.definitions.method6886(-1639112398)) {
 				Class169.method2876(npc_6, 1280406765);
 			}
 
@@ -145,14 +145,14 @@ public final class Class459 {
 
 			int i_11 = rsbitsbuffer_2.readBits(1, (byte) 80);
 			int i_12 = rsbitsbuffer_2.readBits(2, (byte) 49);
-			npc_6.method15836(npc_6.aClass409_10580.anInt4858, (byte) -107);
-			npc_6.anInt10340 = npc_6.aClass409_10580.anInt4889 << 3;
+			npc_6.method15836(npc_6.definitions.anInt4858, (byte) -107);
+			npc_6.anInt10340 = npc_6.definitions.anInt4889 << 3;
 			if (bool_4) {
 				npc_6.method15791(i_9, true, (byte) -43);
 			}
 
 			npc_6.method16159(i_12, Class84.myPlayer.regionBaseX[0] + i_10, Class84.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize(828768449), -1655892623);
-			if (npc_6.aClass409_10580.method6886(-1862040818)) {
+			if (npc_6.definitions.method6886(-1862040818)) {
 				Class397.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
 			}
 		}
@@ -163,7 +163,7 @@ public final class Class459 {
 	static void method7678(int i_0) {
 		Class122.method2111(false, 662490589);
 		if (Class291_Sub1.anInt8021 >= 0 && Class291_Sub1.anInt8021 != 0) {
-			Class538.method11500(Class291_Sub1.anInt8021, false, (byte) 24);
+			ParticleProducer.method11500(Class291_Sub1.anInt8021, false, (byte) 24);
 			Class291_Sub1.anInt8021 = -1;
 		}
 

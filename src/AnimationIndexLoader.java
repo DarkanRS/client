@@ -98,8 +98,8 @@ public class AnimationIndexLoader {
 
 	static final void method11218(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub20_8207, i_2, 1266441439);
-		Class190.method3148((byte) 88);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub20_8207, i_2, 1266441439);
+		Class190.savePreferences((byte) 88);
 		client.aBool7175 = false;
 	}
 

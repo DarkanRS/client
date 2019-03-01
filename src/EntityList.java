@@ -1,9 +1,9 @@
-public class Class457 {
+public class EntityList {
 
 	Class275 aClass275_5468 = new Class275();
 	Class275 aClass275_5469;
 
-	public Class457() {
+	public EntityList() {
 		this.aClass275_5468.aClass275_3339 = this.aClass275_5468;
 		this.aClass275_5468.aClass275_3340 = this.aClass275_5468;
 	}
@@ -29,7 +29,7 @@ public class Class457 {
 		}
 	}
 
-	public void method7649(Class275 class275_1, int i_2) {
+	public void offer(Class275 class275_1, int i_2) {
 		if (class275_1.aClass275_3340 != null) {
 			class275_1.method4887((byte) -24);
 		}

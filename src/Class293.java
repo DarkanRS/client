@@ -21,7 +21,7 @@ public class Class293 {
 
 	static final void method5202(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class158_Sub1.aClass3_8507.method241(i_2, 161109114);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_2, 161109114);
 	}
 
 	static final void method5203(CS2Executor cs2executor_0, int i_1) {

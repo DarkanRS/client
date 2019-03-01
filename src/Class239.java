@@ -19,7 +19,7 @@ public class Class239 {
 	Class535 aClass535_2931;
 
 	public void method4037(MapRegion mapregion_1, byte b_2) {
-		if (!Class97.method1612(client.anInt7166, 1908805257) && !Class282_Sub17.method12259(client.anInt7166, -1116602507)) {
+		if (!Class97.loggedOutState(client.gameState, 1908805257) && !Class282_Sub17.lobbyState(client.gameState, -1116602507)) {
 			int i_3 = -1;
 			int i_4 = -1;
 			if (Class84.myPlayer != null) {
@@ -83,7 +83,7 @@ public class Class239 {
 	}
 
 	void method4049(byte b_1) {
-		this.aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * this.aClass535_2951.aFloat7081);
+		this.aClass505_2944.IA((0.7F + (float) Class393.preferences.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * this.aClass535_2951.aFloat7081);
 		this.aClass505_2944.m(this.aClass535_2951.anInt7083, this.aClass535_2951.aFloat7082, this.aClass535_2951.aFloat7090, (float) ((int) this.aClass385_2952.x << 2), (float) ((int) this.aClass385_2952.y << 2), (float) ((int) this.aClass385_2952.z << 2));
 		this.aClass505_2944.method8477(this.aClass535_2951.aClass152_7087);
 	}
@@ -104,7 +104,7 @@ public class Class239 {
 	}
 
 	public void method4052(byte b_1) {
-		this.aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1614008770)) * 1.1523438F);
+		this.aClass505_2944.IA((0.7F + (float) Class393.preferences.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1614008770)) * 1.1523438F);
 		this.aClass505_2944.m(anInt2935, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
 		this.aClass505_2944.c(anInt2932, -1, 0);
 		this.aClass505_2944.method8477(Class81.aClass152_802);
@@ -128,7 +128,7 @@ public class Class239 {
 
 	void method4065(int i_1) {
 		if (this.anInt2945 >= 0) {
-			long long_2 = Class169.method2869(2103046036);
+			long long_2 = Class169.time();
 			this.anInt2945 = (int) ((long) (this.anInt2945 * 824774497) - (long_2 - this.aLong2936) * 824774497L) * 1863439521;
 			if (this.anInt2945 > 0) {
 				this.aClass535_2951.method11445(this.aClass505_2944, this.aClass535_2937, this.aClass535_2931, (float) (this.anInt2946 - this.anInt2945) / (float) this.anInt2946, (byte) 24);
@@ -159,7 +159,7 @@ public class Class239 {
 
 		if (!this.aClass535_2931.method11449(class535_5, -1943830455)) {
 			this.aClass535_2931.method11444(class535_5, -1309813608);
-			this.aLong2936 = Class169.method2869(2064594062);
+			this.aLong2936 = Class169.time();
 			this.anInt2946 = this.anInt2945 = i_3;
 			if (this.anInt2946 != 0) {
 				this.aClass535_2937.method11444(this.aClass535_2951, -1309813608);
@@ -180,7 +180,7 @@ public class Class239 {
 	public void method4075(int i_1) {
 		byte b_2 = 0;
 		int i_3 = (this.aClass535_2951.anInt7086 + 256 << 2) + b_2;
-		this.aClass505_2944.c(this.aClass535_2951.anInt7085, Class393.aClass282_Sub54_4783.aClass468_Sub30_8194.method13417(-2079793648) == 1 ? i_3 : -1, 0);
+		this.aClass505_2944.c(this.aClass535_2951.anInt7085, Class393.preferences.aClass468_Sub30_8194.method13417(-2079793648) == 1 ? i_3 : -1, 0);
 	}
 
 	public Class239(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {

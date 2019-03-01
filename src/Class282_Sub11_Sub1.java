@@ -68,9 +68,9 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	}
 
 	static int method15433(NPC npc_0, int i_1) {
-		NPCDefinitions npcdefinitions_2 = npc_0.aClass409_10580;
+		NPCDefinitions npcdefinitions_2 = npc_0.definitions;
 		if (npcdefinitions_2.anIntArray4886 != null) {
-			npcdefinitions_2 = npcdefinitions_2.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			npcdefinitions_2 = npcdefinitions_2.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 			if (npcdefinitions_2 == null) {
 				return -1;
 			}
@@ -94,20 +94,20 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		return i_3;
 	}
 
-	public static Class59 method15434(int i_0, byte b_1) {
-		Class59 class59_2 = (Class59) Class59.aClass229_533.get((long) i_0);
-		if (class59_2 != null) {
-			return class59_2;
+	public static ParticleProducerDefinition getParticleProducerDefs(int i_0, byte b_1) {
+		ParticleProducerDefinition defs = (ParticleProducerDefinition) ParticleProducerDefinition.aClass229_533.get((long) i_0);
+		if (defs != null) {
+			return defs;
 		} else {
-			byte[] bytes_3 = CoordGrid.aClass317_2710.getFile(0, i_0);
-			class59_2 = new Class59();
+			byte[] bytes_3 = CoordGrid.PARTICLE_INDEX.getFile(0, i_0);
+			defs = new ParticleProducerDefinition();
 			if (bytes_3 != null) {
-				class59_2.method1150(new RsByteBuffer(bytes_3), -1621727040);
+				defs.decode(new RsByteBuffer(bytes_3), -1621727040);
 			}
 
-			class59_2.method1146((byte) 1);
-			Class59.aClass229_533.put(class59_2, (long) i_0);
-			return class59_2;
+			defs.init((byte) 1);
+			ParticleProducerDefinition.aClass229_533.put(defs, (long) i_0);
+			return defs;
 		}
 	}
 

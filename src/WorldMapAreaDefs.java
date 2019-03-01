@@ -228,7 +228,7 @@ public class WorldMapAreaDefs {
 		if (this.aClass465_2737 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_2737.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_2737.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -237,7 +237,7 @@ public class WorldMapAreaDefs {
 		if (this.aClass465_2737 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_2737.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_2737.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -279,10 +279,10 @@ public class WorldMapAreaDefs {
 
 	static void method3736(NPC npc_0, boolean bool_1, int i_2) {
 		if (Class20.anInt169 < 412) {
-			NPCDefinitions npcdefinitions_3 = npc_0.aClass409_10580;
+			NPCDefinitions npcdefinitions_3 = npc_0.definitions;
 			String string_4 = npc_0.aString10584;
 			if (npcdefinitions_3.anIntArray4886 != null) {
-				npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.aClass3_8507, 265881693);
+				npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 				if (npcdefinitions_3 == null) {
 					return;
 				}
@@ -299,7 +299,7 @@ public class WorldMapAreaDefs {
 				if (client.aBool7344 && !bool_1) {
 					AttributeDefault attributedefault_10 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
 					if ((Class506.anInt5858 & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.anInt9319, attributedefault_10.anInt5337, 130038001) != attributedefault_10.anInt5337)) {
-						PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Class59.method1163(16776960, 619010179) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1728725165);
+						PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960, 619010179) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1728725165);
 					}
 				}
 
@@ -348,7 +348,7 @@ public class WorldMapAreaDefs {
 									i_8 = npcdefinitions_3.anInt4861;
 								}
 
-								PlayerAppearance.method4032(arr_11[i_6], Class59.method1163(16776960, 619010179) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1773453670);
+								PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960, 619010179) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1773453670);
 							}
 						}
 
@@ -398,7 +398,7 @@ public class WorldMapAreaDefs {
 										i_9 = npcdefinitions_3.anInt4861;
 									}
 
-									PlayerAppearance.method4032(arr_11[i_6], Class59.method1163(16776960, 619010179) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1021673171);
+									PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960, 619010179) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1021673171);
 								}
 							}
 						}
@@ -440,9 +440,9 @@ public class WorldMapAreaDefs {
 
 	static final void method3740(CS2Executor cs2executor_0, int i_1) {
 		NPC npc_2 = (NPC) cs2executor_0.animable;
-		NPCDefinitions npcdefinitions_3 = npc_2.aClass409_10580;
+		NPCDefinitions npcdefinitions_3 = npc_2.definitions;
 		if (npcdefinitions_3.anIntArray4886 != null) {
-			npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 		}
 
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = npcdefinitions_3 != null ? 1 : 0;

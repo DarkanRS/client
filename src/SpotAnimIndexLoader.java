@@ -93,7 +93,7 @@ public class SpotAnimIndexLoader {
 	}
 
 	public static NativeSprite method8858(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		Class282_Sub37 class282_sub37_3 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i_1);
+		Class282_Sub37 class282_sub37_3 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_1);
 		if (class282_sub37_3 != null) {
 			Class282_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918(1179079332);
 			class282_sub37_3.aBool7996 = true;
@@ -192,9 +192,9 @@ public class SpotAnimIndexLoader {
 	}
 
 	public static void method8862(int i_0, int i_1, int i_2, boolean bool_3, int i_4) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1767720477) != 0) {
-			Class291_Sub1.anInt8021 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-124335836);
-			Class538.method11500(0, true, (byte) 24);
+		if (Class393.preferences.currentToolkit.getValue(1767720477) != 0) {
+			Class291_Sub1.anInt8021 = Class393.preferences.currentToolkit.getValue(-124335836);
+			ParticleProducer.method11500(0, true, (byte) 24);
 		} else {
 			Class122.method2111(false, 662490589);
 		}

@@ -79,10 +79,10 @@ public class Class174 {
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1735262041) != null) {
 				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0, 1801793645), -1251785888);
 				if (i_4 >= 0) {
-					int i_10 = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 28);
-					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, 1, -1662895154);
+					int i_10 = Class393.preferences.aClass468_Sub23_8202.method12897((byte) 28);
+					Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, 1, -1662895154);
 					IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0, 1801793645), i_7, -1045787010);
-					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, i_10, -1533283163);
+					Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, i_10, -1533283163);
 				}
 			}
 		}
@@ -344,7 +344,7 @@ public class Class174 {
 			Class152.method2605(cs2executor_1, 1391596567);
 			break;
 		case 84:
-			Class457.method7668(cs2executor_1, 488455804);
+			EntityList.method7668(cs2executor_1, 488455804);
 			break;
 		case 85:
 			HitbarDefinitions.method3232(cs2executor_1, -1033910256);
@@ -389,7 +389,7 @@ public class Class174 {
 			Class487.method8208(cs2executor_1, (byte) -50);
 			break;
 		case 99:
-			Class59.method1162(cs2executor_1, -1999288658);
+			ParticleProducerDefinition.method1162(cs2executor_1, -1999288658);
 			break;
 		case 100:
 			Class500.method8344(cs2executor_1, (byte) -19);
@@ -704,7 +704,7 @@ public class Class174 {
 			Defaults7Loader.method8750(cs2executor_1, 1840991775);
 			break;
 		case 204:
-			Class282_Sub53.method13491(cs2executor_1, -69545373);
+			MouseRecord.method13491(cs2executor_1, -69545373);
 			break;
 		case 205:
 			Class10.method460(cs2executor_1, -2132201205);
@@ -731,7 +731,7 @@ public class Class174 {
 			IncomingPacket.method6374(cs2executor_1, -1541456845);
 			break;
 		case 213:
-			Class44.method911(cs2executor_1, 1598874470);
+			IdentikitDefinition.method911(cs2executor_1, 1598874470);
 			break;
 		case 214:
 			Class202_Sub1.method13494(cs2executor_1, 673234512);
@@ -773,7 +773,7 @@ public class Class174 {
 			Class282_Sub41_Sub4.method14857(cs2executor_1, 1781356630);
 			break;
 		case 227:
-			Class234.method3950(cs2executor_1, -1574810438);
+			ParticleTriangle.method3950(cs2executor_1, -1574810438);
 			break;
 		case 228:
 			Class150.method2584(cs2executor_1, 1465832902);
@@ -1040,7 +1040,7 @@ public class Class174 {
 			Message.method7270(cs2executor_1, -104209121);
 			break;
 		case 316:
-			Class234.method3949(cs2executor_1, 1525549828);
+			ParticleTriangle.method3949(cs2executor_1, 1525549828);
 			break;
 		case 317:
 			Class279.method4965(cs2executor_1, 1413517764);
@@ -3023,7 +3023,7 @@ public class Class174 {
 			Class4.method290(cs2executor_1, (byte) -32);
 			break;
 		case 977:
-			Class234.method3951(cs2executor_1, -217803069);
+			ParticleTriangle.method3951(cs2executor_1, -217803069);
 			break;
 		case 978:
 			Class149_Sub4.method14659(cs2executor_1, (byte) -119);

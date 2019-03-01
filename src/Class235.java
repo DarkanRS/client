@@ -3,7 +3,7 @@ import java.util.List;
 public class Class235 {
 
 	static List aList2896;
-	static Class275_Sub1_Sub1_Sub1[] aClass275_Sub1_Sub1_Sub1Array2897;
+	static Particle[] aClass275_Sub1_Sub1_Sub1Array2897;
 	static int anInt2902 = 0;
 	static int anInt2905 = 0;
 	static int anInt2899 = 0;

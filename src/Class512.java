@@ -36,7 +36,7 @@ final class Class512 implements Runnable {
 
 	static final void method8763(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		Class158_Sub1.aClass3_8507.method280(i_2, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1160393570);
+		Class158_Sub1.PLAYER_VAR_PROVIDER.method280(i_2, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1160393570);
 	}
 
 }

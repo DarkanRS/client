@@ -20,7 +20,7 @@ public abstract class Class282_Sub17 extends Node {
 
 	abstract void method12258(Class61 var1);
 
-	public static boolean method12259(int i_0, int i_1) {
+	public static boolean lobbyState(int i_0, int i_1) {
 		return i_0 == 0 || i_0 == 2 || i_0 == 7 || i_0 == 6;
 	}
 
@@ -47,7 +47,7 @@ public abstract class Class282_Sub17 extends Node {
 		icomponentdefinitions_0.aByte1368 = (byte) i_4;
 		icomponentdefinitions_0.aByte1294 = (byte) i_5;
 		Class109.method1858(icomponentdefinitions_0, (byte) -29);
-		Class44.method913(interface_1, icomponentdefinitions_0, (byte) 1);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
 		if (icomponentdefinitions_0.anInt1268 == 0) {
 			Class12.method483(interface_1, icomponentdefinitions_0, false, -610252618);
 		}

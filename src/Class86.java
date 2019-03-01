@@ -53,7 +53,7 @@ public class Class86 {
 	}
 
 	static boolean method1481(Class232 class232_0, byte b_1) {
-		return Class6.method302(class232_0, (Class282_Sub53) null, 898171196);
+		return Class6.method302(class232_0, (MouseRecord) null, 898171196);
 	}
 
 	static void method1482(IComponentDefinitions icomponentdefinitions_0, byte b_1) {

@@ -4,13 +4,13 @@ public abstract class Class202 {
 
 	public abstract void method3310();
 
-	public abstract void method3311(byte[] var1, int var2, int var3, int var4) throws IOException;
+	public abstract void write(byte[] var1, int var2, int var3, int var4) throws IOException;
 
 	public abstract int method3312(int var1) throws IOException;
 
 	public abstract void method3314();
 
-	public abstract boolean method3315(int var1, byte var2) throws IOException;
+	public abstract boolean available(int var1, byte var2) throws IOException;
 
 	public abstract void method3316();
 
@@ -34,7 +34,7 @@ public abstract class Class202 {
 
 	public abstract void method3326(byte[] var1, int var2, int var3) throws IOException;
 
-	public abstract int method3327(byte[] var1, int var2, int var3, int var4) throws IOException;
+	public abstract int read(byte[] var1, int var2, int var3, int var4) throws IOException;
 
 	public abstract boolean method3328(int var1) throws IOException;
 
@@ -177,7 +177,7 @@ public abstract class Class202 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		FontMetrics fontmetrics_5 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_4, 0, 1119085558);
+		FontMetrics fontmetrics_5 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, i_4, 0, 1119085558);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = fontmetrics_5.method6949(string_2, i_3, Class182.aClass160Array2261, 437013959);
 	}
 

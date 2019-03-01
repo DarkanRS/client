@@ -14,9 +14,9 @@ public class Class94 {
 			i_2 = 0;
 		}
 
-		if (i_2 != Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -18)) {
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub11_8217, i_2, -1291296502);
-			Class190.method3148((byte) 116);
+		if (i_2 != Class393.preferences.aClass468_Sub11_8217.method12699((byte) -18)) {
+			Class393.preferences.setValue(Class393.preferences.aClass468_Sub11_8217, i_2, -1291296502);
+			Class190.savePreferences((byte) 116);
 			client.aBool7175 = false;
 		}
 
@@ -37,14 +37,14 @@ public class Class94 {
 		return rsbytebuffer_1;
 	}
 
-	public static FontMetrics method1588(Index index_0, int i_1, int i_2, int i_3) {
+	public static FontMetrics createFontSpecification(Index index_0, int i_1, int i_2, int i_3) {
 		byte[] bytes_4 = index_0.getFile(i_1, i_2);
 		return bytes_4 == null ? null : new FontMetrics(bytes_4);
 	}
 
 	public static void method1589(short s_0) {
 		int i_1 = 0;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1) {
+		if (Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1) {
 			i_1 |= 0x1;
 			i_1 |= 0x10;
 			i_1 |= 0x20;
@@ -52,7 +52,7 @@ public class Class94 {
 			i_1 |= 0x4;
 		}
 
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(477680375) == 0) {
+		if (Class393.preferences.aClass468_Sub22_8213.method12873(477680375) == 0) {
 			i_1 |= 0x40;
 		}
 
@@ -72,10 +72,10 @@ public class Class94 {
 
 	static final void method1590(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = Class96_Sub14.method14641(399363690);
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class233.anInt2880 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1802099431);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class233.anInt2880 = Class393.preferences.currentToolkit.getValue(1802099431);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_2;
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -112);
-		Class190.method3148((byte) 117);
+		Class190.savePreferences((byte) 117);
 		client.aBool7175 = false;
 	}
 

@@ -88,7 +88,7 @@ public class Interface {
 									i_14 = 0;
 								}
 
-								i_5 = (i_7 - i_14) * Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(347360160) * class268_2.anInt3299 / i_7 >> 2;
+								i_5 = (i_7 - i_14) * Class393.preferences.aClass468_Sub13_8193.method12714(347360160) * class268_2.anInt3299 / i_7 >> 2;
 								if (class268_2.anInt3305 != -1) {
 									i_10 = class268_2.anInt3305;
 									i_12 = class268_2.anInt3306;
@@ -115,7 +115,7 @@ public class Interface {
 								i_5 = 0;
 							}
 						} else {
-							i_5 = class268_2.anInt3299 * (class268_2.aByte3300 == 3 ? Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(-356829345) : Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(-2116926454)) >> 2;
+							i_5 = class268_2.anInt3299 * (class268_2.aByte3300 == 3 ? Class393.preferences.aClass468_Sub13_8227.method12714(-356829345) : Class393.preferences.aClass468_Sub13_8225.method12714(-2116926454)) >> 2;
 						}
 
 						if (i_5 > 0) {
@@ -150,17 +150,17 @@ public class Interface {
 		}
 
 		if (Class260.aBool3220 && !Class116.method1966(1117518618)) {
-			if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1550374075) != 0 && Class260.anInt3223 != -1) {
+			if (Class393.preferences.aClass468_Sub13_8228.method12714(-1550374075) != 0 && Class260.anInt3223 != -1) {
 				if (Class260.aClass282_Sub15_Sub2_3231 != null) {
-					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1791834725), false, Class260.aClass282_Sub15_Sub2_3231, 62181845);
+					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.preferences.aClass468_Sub13_8228.method12714(1791834725), false, Class260.aClass282_Sub15_Sub2_3231, 62181845);
 				} else {
-					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.preferences.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
 				}
 			}
 
 			Class260.aBool3220 = false;
 			Class260.aClass282_Sub15_Sub2_3231 = null;
-		} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-597103482) != 0 && Class260.anInt3223 != -1 && !Class116.method1966(1621182156)) {
+		} else if (Class393.preferences.aClass468_Sub13_8228.method12714(-597103482) != 0 && Class260.anInt3223 != -1 && !Class116.method1966(1621182156)) {
 			TCPMessage tcpmessage_17 = Class271.method4828(OutgoingPacket.aClass379_4529, client.aClass184_7475.isaac, 61949935);
 			tcpmessage_17.buffer.writeInt(Class260.anInt3223);
 			client.aClass184_7475.method3049(tcpmessage_17, -952420572);

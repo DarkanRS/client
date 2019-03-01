@@ -56,13 +56,13 @@ public abstract class Class158 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2, (short) 9738).anInt10277;
 	}
 
-	public static int method2730(short s_0) {
-		return Class475.aBool5623 && client.aFrame3260 != null ? 3 : (client.aBool7301 ? 2 : 1);
+	public static int windowedMode() {
+		return Class475.supportsFullScreen && client.fullScreenFrame != null ? 3 : (client.resizeableScreen ? 2 : 1);
 	}
 
 	static void method2731(GraphicalRenderer graphicalrenderer_0, Class455 class455_1, IComponentDefinitions icomponentdefinitions_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		WorldMapAreaDefs worldmapareadefs_9 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_7, 2092552415);
-		if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.method3719(Class158_Sub1.aClass3_8507, -1138810540)) {
+		if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.method3719(Class158_Sub1.PLAYER_VAR_PROVIDER, -1138810540)) {
 			int i_11;
 			if (worldmapareadefs_9.anIntArray2717 != null) {
 				int[] ints_10 = new int[worldmapareadefs_9.anIntArray2717.length];

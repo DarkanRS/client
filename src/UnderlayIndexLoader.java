@@ -61,7 +61,7 @@ public class UnderlayIndexLoader {
 	}
 
 	static void method8036(int i_0, byte b_1) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 0) {
+		if (Class393.preferences.aClass468_Sub8_8219.method12675(-1589433086) == 0) {
 			i_0 = -1;
 		}
 

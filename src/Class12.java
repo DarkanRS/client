@@ -27,7 +27,7 @@ public class Class12 implements Runnable {
 	}
 
 	static final void method481(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub6_8192.method12654(-239553097);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub6_8192.method12654(-239553097);
 	}
 
 	static void method482(byte b_0) {

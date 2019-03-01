@@ -20,7 +20,7 @@ public class Class169 {
 	public byte aByte2090;
 	public int anInt2091;
 
-	public static final synchronized long method2869(int i_0) {
+	public static final synchronized long time() {
 		long long_1 = System.currentTimeMillis();
 		if (long_1 < Class97.aLong993) {
 			Class97.aLong994 += Class97.aLong993 - long_1;
@@ -53,7 +53,7 @@ public class Class169 {
 	}
 
 	static final void method2873(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub14_8211.method12728(-1912429644);
 	}
 
 	static final void method2874(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {

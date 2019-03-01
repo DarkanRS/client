@@ -6239,17 +6239,17 @@ public class Class528_Sub2 extends MeshRasterizer {
 		this.anInt8606 = i_4;
 		this.anInt8577 = i_5;
 		Interface22 interface22_7 = this.aClass505_Sub3_8638.anInterface22_5834;
-		this.anInt8578 = rsmesh_2.anInt1974;
+		this.anInt8578 = rsmesh_2.vertexCount;
 		this.anInt8579 = rsmesh_2.anInt1999;
-		this.anIntArray8580 = rsmesh_2.anIntArray1976;
-		this.anIntArray8581 = rsmesh_2.anIntArray2003;
-		this.anIntArray8610 = rsmesh_2.anIntArray1978;
+		this.anIntArray8580 = rsmesh_2.vertexX;
+		this.anIntArray8581 = rsmesh_2.vertexY;
+		this.anIntArray8610 = rsmesh_2.vertexZ;
 		this.anInt8586 = rsmesh_2.anInt1973;
 		this.aShortArray8587 = rsmesh_2.aShortArray1982;
 		this.aShortArray8588 = rsmesh_2.aShortArray1983;
 		this.aShortArray8642 = rsmesh_2.aShortArray1984;
 		this.aByteArray8601 = rsmesh_2.aByteArray1977;
-		this.aShortArray8604 = rsmesh_2.aShortArray2006;
+		this.aShortArray8604 = rsmesh_2.colors;
 		this.aByteArray8602 = rsmesh_2.aByteArray1975;
 		this.aShortArray8632 = rsmesh_2.aShortArray1981;
 		this.aByteArray8600 = rsmesh_2.aByteArray1985;
@@ -6303,8 +6303,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 			}
 
 			s_68 = -1;
-			if (rsmesh_2.aShortArray1993 != null) {
-				s_68 = rsmesh_2.aShortArray1993[i_55];
+			if (rsmesh_2.textures != null) {
+				s_68 = rsmesh_2.textures[i_55];
 				if (s_68 != -1) {
 					class169_13 = interface22_7.method144(s_68 & 0xffff, -1793423627);
 					if ((i_6 & 0x40) != 0 && class169_13.aBool2056) {
@@ -6342,7 +6342,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			for (i_11 = 0; i_11 < rsmesh_2.aClass84Array2009.length; i_11++) {
 				Class84 class84_12 = rsmesh_2.aClass84Array2009[i_11];
 				Class347 class347_62 = Class417.method7005(class84_12.anInt812, -1147106415);
-				i_14 = Class335.anIntArray3916[rsmesh_2.aShortArray2006[class84_12.anInt809] & 0xffff] & 0xffffff;
+				i_14 = Class335.anIntArray3916[rsmesh_2.colors[class84_12.anInt809] & 0xffff] & 0xffffff;
 				i_14 |= 255 - (rsmesh_2.aByteArray1975 != null ? rsmesh_2.aByteArray1975[class84_12.anInt809] & 0xff : 0) << 24;
 				this.aClass193Array8618[i_11] = new Class193(class84_12.anInt809, rsmesh_2.aShortArray1982[class84_12.anInt809], rsmesh_2.aShortArray1983[class84_12.anInt809], rsmesh_2.aShortArray1984[class84_12.anInt809], class347_62.anInt4054, class347_62.anInt4050, class347_62.anInt4055, class347_62.anInt4057, class347_62.anInt4051, class347_62.aBool4059, class84_12.anInt810);
 				this.aClass176Array8582[i_11] = new Class176(i_14);
@@ -6365,7 +6365,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 				b_17 = rsmesh_2.aByteArray1988[i_67];
 			}
 
-			s_68 = rsmesh_2.aShortArray1993 == null ? -1 : rsmesh_2.aShortArray1993[i_67];
+			s_68 = rsmesh_2.textures == null ? -1 : rsmesh_2.textures[i_67];
 			if (s_68 != -1 && (i_6 & 0x40) != 0) {
 				Class169 class169_57 = interface22_7.method144(s_68 & 0xffff, -1940118414);
 				if (class169_57.aBool2056) {
@@ -6574,12 +6574,12 @@ public class Class528_Sub2 extends MeshRasterizer {
 			this.anIntArrayArray8620 = rsmesh_2.method2667();
 		}
 
-		if (rsmesh_2.aShortArray1993 != null) {
+		if (rsmesh_2.textures != null) {
 			this.aShortArray8603 = new short[this.anInt8586];
 			boolean bool_65 = false;
 
 			for (i_67 = 0; i_67 < this.anInt8586; i_67++) {
-				short s_70 = rsmesh_2.aShortArray1993[i_67];
+				short s_70 = rsmesh_2.textures[i_67];
 				if (s_70 != -1) {
 					Class169 class169_56 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_70, -1981607530);
 					if ((i_6 & 0x40) != 0 && class169_56.aBool2056) {

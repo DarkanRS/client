@@ -16,11 +16,11 @@ public class Class96_Sub17 extends Class96 {
 	}
 
 	public void method1592(int i_1) {
-		Class59.method1161(Class4.anInt35, this.anInt9385, this.anInt9386, Class504.method8389(this.anInt9385, this.anInt9386, Class4.anInt35, (byte) 47), this.anInt9389, this.anInt9388, this.aString9387, (short) 12244);
+		ParticleProducerDefinition.method1161(Class4.anInt35, this.anInt9385, this.anInt9386, Class504.method8389(this.anInt9385, this.anInt9386, Class4.anInt35, (byte) 47), this.anInt9389, this.anInt9388, this.aString9387, (short) 12244);
 	}
 
 	public void method1601() {
-		Class59.method1161(Class4.anInt35 * -647602067 * 675588453, 31133705 * this.anInt9385 * -1930592711, this.anInt9386 * -621881623 * -2086575783, Class504.method8389(31133705 * this.anInt9385 * -1930592711, -2086575783 * this.anInt9386 * -621881623, 675588453 * Class4.anInt35 * -647602067, (byte) 93), this.anInt9389 * -159499065 * -469908233, this.anInt9388 * -1475639137 * 882611039, this.aString9387, (short) 20309);
+		ParticleProducerDefinition.method1161(Class4.anInt35 * -647602067 * 675588453, 31133705 * this.anInt9385 * -1930592711, this.anInt9386 * -621881623 * -2086575783, Class504.method8389(31133705 * this.anInt9385 * -1930592711, -2086575783 * this.anInt9386 * -621881623, 675588453 * Class4.anInt35 * -647602067, (byte) 93), this.anInt9389 * -159499065 * -469908233, this.anInt9388 * -1475639137 * 882611039, this.aString9387, (short) 20309);
 	}
 
 	static final void method14653(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

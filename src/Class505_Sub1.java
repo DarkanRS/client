@@ -176,7 +176,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 				throw new RuntimeException("");
 			}
 
-			Class89.method1504(1000L);
+			Class89.sleep(1000L);
 		}
 
 	}
@@ -1371,9 +1371,9 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && Class169.method2869(1574638631) > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && Class169.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = Class169.method2869(1953079517);
+			this.aLong8316 = Class169.time();
 		}
 
 		this.anInt8368 = i_1;
@@ -1626,7 +1626,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		return i_7;
 	}
 
-	public FontRenderer method8448(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
 		return new Class8_Sub5(this, fontmetrics_1, arr_2, bool_3);
 	}
 
@@ -2098,9 +2098,9 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && Class169.method2869(1589099144) > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && Class169.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = Class169.method2869(2020919396);
+			this.aLong8316 = Class169.time();
 		}
 
 		this.anInt8368 = i_1;
@@ -3019,9 +3019,9 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && Class169.method2869(1803310072) > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && Class169.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = Class169.method2869(1554670012);
+			this.aLong8316 = Class169.time();
 		}
 
 		this.anInt8368 = i_1;

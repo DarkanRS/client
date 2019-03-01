@@ -94,7 +94,7 @@ public class JS5Manager {
 		return this.method5478(i_1, js5cachefile_2, js5cachefile_3, true, -84077622);
 	}
 
-	public void method5482(int i_1) {
+	public void pulse(int i_1) {
 		if (this.grabWorkers != null) {
 			int i_2;
 			for (i_2 = 0; i_2 < this.grabWorkers.length; i_2++) {

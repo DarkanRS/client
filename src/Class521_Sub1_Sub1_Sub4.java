@@ -5,7 +5,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 	int anInt10408 = 0;
 	int anInt10406;
 	Animation aClass456_10404;
-	Class539 aClass539_10409;
+	ParticleSystem aClass539_10409;
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
 		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.anInt10408 * -2052644023 != 0 ? 5 : 0), this.anInt10406 * -1615535539 * 346760837, (short) 27510);
@@ -116,7 +116,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		Class87[] arr_5 = meshrasterizer_2.method11253();
 		Class172[] arr_6 = meshrasterizer_2.method11274();
 		if ((this.aClass539_10409 == null || this.aClass539_10409.aBool7132) && (arr_5 != null || arr_6 != null)) {
-			this.aClass539_10409 = Class539.method11557(client.cycles, true);
+			this.aClass539_10409 = ParticleSystem.method11557(client.cycles, true);
 		}
 
 		if (this.aClass539_10409 != null) {

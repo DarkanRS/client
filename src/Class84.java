@@ -32,11 +32,11 @@ public class Class84 {
 	}
 
 	static final void method1463(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method12666(2085478304);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub7_8210.method12666(2085478304);
 	}
 
 	static final void method1464(int i_0) {
-		for (int i_1 = Class158_Sub1.aClass3_8507.method264(true, (byte) 112); i_1 != -1; i_1 = Class158_Sub1.aClass3_8507.method264(false, (byte) 48)) {
+		for (int i_1 = Class158_Sub1.PLAYER_VAR_PROVIDER.method264(true, (byte) 112); i_1 != -1; i_1 = Class158_Sub1.PLAYER_VAR_PROVIDER.method264(false, (byte) 48)) {
 			Class499.method8333(i_1, 1768744786);
 			client.anIntArray7379[++client.anInt7453 - 1 & 0x1f] = i_1;
 		}

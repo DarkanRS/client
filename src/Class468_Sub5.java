@@ -43,7 +43,7 @@ public class Class468_Sub5 extends Class468 {
 		return this.aClass282_Sub54_5581.method13504((byte) 1).method7720(-1527744651) > 1 ? 4 : 2;
 	}
 
-	public int method12651(int i_1) {
+	public int getValue() {
 		return this.anInt5578;
 	}
 

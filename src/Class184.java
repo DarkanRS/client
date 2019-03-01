@@ -32,7 +32,7 @@ public class Class184 {
 			while (true) {
 				TCPMessage tcpmessage_2 = (TCPMessage) this.queuedPackets.head((byte) 41);
 				if (tcpmessage_2 == null || tcpmessage_2.anInt7680 > this.aClass282_Sub35_2282.buffer.length - this.aClass282_Sub35_2282.index) {
-					this.aClass202_2281.method3311(this.aClass282_Sub35_2282.buffer, 0, this.aClass282_Sub35_2282.index, -771843978);
+					this.aClass202_2281.write(this.aClass282_Sub35_2282.buffer, 0, this.aClass282_Sub35_2282.index, -771843978);
 					this.anInt2297 += this.aClass282_Sub35_2282.index;
 					this.anInt2290 = 0;
 					break;
@@ -113,7 +113,7 @@ public class Class184 {
 	}
 
 	static final void method3066(CS2Executor cs2executor_0, int i_1) {
-		if (Class475.aBool5623) {
+		if (Class475.supportsFullScreen) {
 			Class467[] arr_2 = Class405.method6825((byte) -71);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = arr_2.length;
 		} else {

@@ -397,8 +397,8 @@ public class Class46 implements Interface2 {
 
 	static void method935(byte b_0) {
 		int i_1 = 0;
-		if (Class393.aClass282_Sub54_4783 != null) {
-			i_1 = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method12666(1300916790);
+		if (Class393.preferences != null) {
+			i_1 = Class393.preferences.aClass468_Sub7_8210.method12666(1300916790);
 		}
 
 		int i_2;

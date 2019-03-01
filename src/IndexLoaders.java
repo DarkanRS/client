@@ -77,10 +77,10 @@ public class IndexLoaders {
 
 	public static int initializeGame(byte b_0) {
 		int i_1;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub25_8206.method12926((byte) 1) == 0) {
+		if (Class393.preferences.safeMode.getValue((byte) 1) == 0) {
 			for (i_1 = 0; i_1 < client.anInt7193; i_1++) {
-				if (client.anInterface16Array7154[i_1].method118(-469731478) == 115 || client.anInterface16Array7154[i_1].method118(-1315201556) == 83) {
-					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub25_8206, 1, -821310033);
+				if (client.anInterface16Array7154[i_1].getCode(-469731478) == 115 || client.anInterface16Array7154[i_1].getCode(-1315201556) == 83) {
+					Class393.preferences.setValue(Class393.preferences.safeMode, 1, -821310033);
 					client.aBool7155 = true;
 					break;
 				}
@@ -118,7 +118,7 @@ public class IndexLoaders {
 			Class96_Sub10_Sub1.anInt10159 = LOADING_FONT_INDEX.getCrc();
 			Class302.anInt3561 = GAME_TIPS_INDEX.getCrc();
 			Class477.method7960(LOADING_FONT_INDEX, (byte) -12);
-			int i_3 = Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -106);
+			int i_3 = Class393.preferences.aClass468_Sub11_8217.method12699((byte) -106);
 			Class275_Sub7.aClass400_7862 = new Class400(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
 			Class399[] arr_4 = Class275_Sub7.aClass400_7862.method6786(i_3, -1983202433);
 			if (arr_4.length == 0) {
@@ -160,7 +160,7 @@ public class IndexLoaders {
 
 			Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
 			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 425996443);
-			Class365.setGameState(15, 1025544676);
+			Class365.setGameState(15);
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4699) {
@@ -228,7 +228,7 @@ public class IndexLoaders {
 
 			Class89.method1496(bytes_7, -164492309);
 			NodeCollection.method8148((byte) 4);
-			Class365.setGameState(1, 1855105859);
+			Class365.setGameState(1);
 		}
 
 		if (LoadingStage.aClass387_4709 == LOADING_STAGE) {
@@ -298,7 +298,7 @@ public class IndexLoaders {
 			JS5StandardRequester.method5559(BILLBOARD_INDEX, -1845335453);
 			QUICK_CHAT_INDEX_LOADER = new Class331(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX);
 			QUICK_CHAT_INDEX_LOADER2 = new QuickchatDefinitionsLoader(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX, new Class58());
-			Class158_Sub1.aClass3_8507 = new Class3();
+			Class158_Sub1.PLAYER_VAR_PROVIDER = new Class3();
 			Class94.method1589((short) 255);
 			Class77.method1369(ANIMATION_INDEX_LOADER, 1486901897);
 			Class62.method1261(PARTICLE_INDEX, (byte) -73);
@@ -310,7 +310,7 @@ public class IndexLoaders {
 		}
 
 		if (LoadingStage.aClass387_4705 == LOADING_STAGE) {
-			i_1 = Class59.method1159(SPRITES_INDEX, -1920163258) + Class487.aClass378_5752.method6405(true, 1940883220);
+			i_1 = ParticleProducerDefinition.method1159(SPRITES_INDEX, -1920163258) + Class487.aClass378_5752.method6405(true, 1940883220);
 			i_2 = Class109_Sub1.method14651(-2091974733) + Class487.aClass378_5752.method6422(-167054108);
 			if (i_1 < i_2) {
 				return i_1 * 100 / i_2;
@@ -318,7 +318,7 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4706) {
-			Class291.method5125(WORLD_MAP_INDEX, aClass536_1535, UNDERLAY_INDEX_LOADER, MAP_REGION_DECODER.method4436(-2053638412), WORLD_MAP_INDEX_LOADER, aClass427_995, Class158_Sub1.aClass3_8507);
+			Class291.method5125(WORLD_MAP_INDEX, aClass536_1535, UNDERLAY_INDEX_LOADER, MAP_REGION_DECODER.method4436(-2053638412), WORLD_MAP_INDEX_LOADER, aClass427_995, Class158_Sub1.PLAYER_VAR_PROVIDER);
 		}
 
 		if (LoadingStage.aClass387_4707 == LOADING_STAGE) {
@@ -383,22 +383,22 @@ public class IndexLoaders {
 			Class275_Sub7.aClass400_7862 = null;
 			Class302.anInterface27Array3559 = null;
 			Class358.method6234((byte) 120);
-			client.aBool7465 = Class393.aClass282_Sub54_4783.aClass468_Sub25_8206.method12926((byte) -77) == 1;
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub25_8206, 1, -425362702);
+			client.aBool7465 = Class393.preferences.safeMode.getValue((byte) -77) == 1;
+			Class393.preferences.setValue(Class393.preferences.safeMode, 1, -425362702);
 			if (client.aBool7465) {
-				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 0, 2109366156);
-			} else if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
-				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 0, -28181047);
+				Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, 2109366156);
+			} else if (Class393.preferences.aClass468_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
+				Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, -28181047);
 			}
 
-			Class190.method3148((byte) 125);
+			Class190.savePreferences((byte) 125);
 			if (client.aBool7465) {
-				Class538.method11500(0, false, (byte) 24);
+				ParticleProducer.method11500(0, false, (byte) 24);
 			} else {
-				Class538.method11500(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method12776(2116214746), false, (byte) 24);
+				ParticleProducer.method11500(Class393.preferences.aClass468_Sub18_8214.getValue(2116214746), false, (byte) 24);
 			}
 
-			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-2050547783), -1, -1, false, (byte) 65);
+			Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(-2050547783), -1, -1, false, (byte) 65);
 			Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
 			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, -2058774683);
 			Class188.method3139(Renderers.SOFTWARE_RENDERER, SPRITES_INDEX, -814245885);

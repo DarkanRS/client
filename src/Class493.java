@@ -5,7 +5,7 @@ public class Class493 {
 	}
 
 	public static void sendCheckEmailPacket(String string_0, byte b_1) {
-		if (client.anInt7166 == 3) {
+		if (client.gameState == 3) {
 			TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4570, client.aClass184_7218.isaac, 302264892);
 			tcpmessage_2.buffer.writeShort(0, 1417031095);
 			int i_3 = tcpmessage_2.buffer.index;

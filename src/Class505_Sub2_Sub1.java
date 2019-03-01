@@ -911,9 +911,9 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			OpenGL.glDeleteLists((int) class282_sub38_4.data, class282_sub38_4.anInt8002);
 		}
 
-		if (this.za() > 100663296 && Class169.method2869(1578958721) > this.aLong10199 + 60000L) {
+		if (this.za() > 100663296 && Class169.time() > this.aLong10199 + 60000L) {
 			System.gc();
-			this.aLong10199 = Class169.method2869(2044788226);
+			this.aLong10199 = Class169.time();
 		}
 
 		super.method8398(i_1);
@@ -1214,9 +1214,9 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
-		if (this.za() > 100663296 && Class169.method2869(1746619997) > this.aLong10199 + 60000L) {
+		if (this.za() > 100663296 && Class169.time() > this.aLong10199 + 60000L) {
 			System.gc();
-			this.aLong10199 = Class169.method2869(2047459986);
+			this.aLong10199 = Class169.time();
 		}
 
 		super.method8398(i_1);
@@ -2305,9 +2305,9 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
-		if (this.za() > 100663296 && Class169.method2869(2017519398) > this.aLong10199 + 60000L) {
+		if (this.za() > 100663296 && Class169.time() > this.aLong10199 + 60000L) {
 			System.gc();
-			this.aLong10199 = Class169.method2869(2095972718);
+			this.aLong10199 = Class169.time();
 		}
 
 		super.method8398(i_1);

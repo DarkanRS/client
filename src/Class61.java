@@ -49,7 +49,7 @@ public class Class61 {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
-			Node node_3 = this.aClass465_629.method7754((long) i_1);
+			Node node_3 = this.aClass465_629.get((long) i_1);
 			return node_3 != null && node_3 instanceof Class282_Sub38 ? new Integer(((Class282_Sub38) node_3).anInt8002) : null;
 		}
 	}
@@ -58,7 +58,7 @@ public class Class61 {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
-			Node node_3 = this.aClass465_629.method7754((long) i_1);
+			Node node_3 = this.aClass465_629.get((long) i_1);
 			return node_3 != null && node_3 instanceof Class282_Sub45 ? new Long(((Class282_Sub45) node_3).aLong8066) : null;
 		}
 	}
@@ -67,7 +67,7 @@ public class Class61 {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
-			Node node_3 = this.aClass465_629.method7754((long) i_1);
+			Node node_3 = this.aClass465_629.get((long) i_1);
 			return node_3 != null && node_3 instanceof Class282_Sub47 ? (String) ((Class282_Sub47) node_3).anObject8068 : null;
 		}
 	}
@@ -204,7 +204,7 @@ public class Class61 {
 		i_2 <<= i_3;
 		i_2 &= i_8;
 		if (this.aClass465_629 != null) {
-			Node node_9 = this.aClass465_629.method7754((long) i_1);
+			Node node_9 = this.aClass465_629.get((long) i_1);
 			if (node_9 != null) {
 				if (node_9 instanceof Class282_Sub38) {
 					Class282_Sub38 class282_sub38_10 = (Class282_Sub38) node_9;
@@ -229,7 +229,7 @@ public class Class61 {
 
 	boolean method1213(int i_1, long long_2) {
 		if (this.aClass465_629 != null) {
-			Node node_4 = this.aClass465_629.method7754((long) i_1);
+			Node node_4 = this.aClass465_629.get((long) i_1);
 			if (node_4 != null) {
 				if (node_4 instanceof Class282_Sub45) {
 					Class282_Sub45 class282_sub45_5 = (Class282_Sub45) node_4;
@@ -308,7 +308,7 @@ public class Class61 {
 
 	boolean method1222(int i_1, int i_2, int i_3) {
 		if (this.aClass465_629 != null) {
-			Node node_4 = this.aClass465_629.method7754((long) i_1);
+			Node node_4 = this.aClass465_629.get((long) i_1);
 			if (node_4 != null) {
 				if (node_4 instanceof Class282_Sub38) {
 					Class282_Sub38 class282_sub38_5 = (Class282_Sub38) node_4;
@@ -338,7 +338,7 @@ public class Class61 {
 		}
 
 		if (this.aClass465_629 != null) {
-			Node node_4 = this.aClass465_629.method7754((long) i_1);
+			Node node_4 = this.aClass465_629.get((long) i_1);
 			if (node_4 != null) {
 				if (node_4 instanceof Class282_Sub47) {
 					Class282_Sub47 class282_sub47_5 = (Class282_Sub47) node_4;
@@ -368,7 +368,7 @@ public class Class61 {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
-			Node node_5 = this.aClass465_629.method7754((long) i_1);
+			Node node_5 = this.aClass465_629.get((long) i_1);
 			if (node_5 != null && node_5 instanceof Class282_Sub38) {
 				int i_6 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
 				return new Integer((((Class282_Sub38) node_5).anInt8002 & i_6) >>> i_2);

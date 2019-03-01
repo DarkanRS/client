@@ -46,8 +46,8 @@ public class Class161 {
 		Class109.method1858(client.aClass118_7257, (byte) -8);
 		++Class96_Sub1.anInt8308;
 		if (client.aBool7369 && client.aBool7403) {
-			int i_1 = Class163.aClass209_2031.method3569(2003806769);
-			int i_2 = Class163.aClass209_2031.method3570(756095591);
+			int i_1 = Class163.mouseRecorder.method3569(2003806769);
+			int i_2 = Class163.mouseRecorder.method3570(756095591);
 			i_1 -= client.anInt7361;
 			i_2 -= client.anInt7362;
 			if (i_1 < client.anInt7432) {
@@ -77,7 +77,7 @@ public class Class161 {
 			}
 
 			HookRequest hookrequest_5;
-			if (!Class163.aClass209_2031.method3568((short) -19628)) {
+			if (!Class163.mouseRecorder.method3568((short) -19628)) {
 				if (client.aBool7364) {
 					Class60.method1170(-609337146);
 					if (client.aClass118_7257.anObjectArray1394 != null) {

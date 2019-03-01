@@ -49,14 +49,14 @@ public class Class306 implements Runnable {
 
 	public void run() {
 		while (!this.aBool3599) {
-			long long_1 = Class169.method2869(1937016324);
+			long long_1 = Class169.time();
 			synchronized (this) {
 				try {
 					++this.anInt3600;
 					if (this.anInterface27_3598 instanceof Class304) {
 						this.anInterface27_3598.method187(this.aBool3597, 1725591035);
 					} else {
-						long long_4 = Class169.method2869(2127985835);
+						long long_4 = Class169.time();
 						if (Renderers.SOFTWARE_RENDERER != null && this.anInterface27_3604 != null && this.anInterface27_3604.method190(1422459894) != 0 && this.aLong3601 >= long_4 - (long) this.anInterface27_3604.method190(1006889549)) {
 							int i_6 = (int) (255L * (long_4 - this.aLong3601) / (long) this.anInterface27_3604.method190(908741626));
 							int i_7 = 255 - i_6;
@@ -99,7 +99,7 @@ public class Class306 implements Runnable {
 							}
 						} catch (Exception_Sub3 exception_sub3_14) {
 							Class151.method2594(exception_sub3_14.getMessage() + Class308.aclient3620.method4669(1137623288), exception_sub3_14, (byte) -20);
-							Class538.method11500(0, true, (byte) 24);
+							ParticleProducer.method11500(0, true, (byte) 24);
 						}
 					}
 
@@ -112,10 +112,10 @@ public class Class306 implements Runnable {
 				}
 			}
 
-			long long_12 = Class169.method2869(1993428891);
+			long long_12 = Class169.time();
 			int i_5 = (int) (20L - (long_12 - long_1));
 			if (i_5 > 0) {
-				Class89.method1504((long) i_5);
+				Class89.sleep((long) i_5);
 			}
 		}
 
@@ -132,7 +132,7 @@ public class Class306 implements Runnable {
 	synchronized void method5445(Interface27 interface27_1, byte b_2) {
 		this.anInterface27_3604 = this.anInterface27_3598;
 		this.anInterface27_3598 = interface27_1;
-		this.aLong3601 = Class169.method2869(2076129630);
+		this.aLong3601 = Class169.time();
 	}
 
 	synchronized boolean method5450(int i_1) {

@@ -15,7 +15,7 @@ public class Class281 {
 		if (rsmesh_3 == null) {
 			return null;
 		} else {
-			if (rsmesh_3.zoom < 13) {
+			if (rsmesh_3.version < 13) {
 				rsmesh_3.upscale(2);
 			}
 
@@ -133,7 +133,7 @@ public class Class281 {
 	}
 
 	static final void method4989(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12622(531406560) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub2_8205.method12622(531406560) ? 1 : 0;
 	}
 
 }

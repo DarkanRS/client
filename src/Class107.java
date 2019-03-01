@@ -19,7 +19,7 @@ public class Class107 {
 	public Class282_Sub21 method1820(String string_1, int i_2) {
 		long long_3 = this.anInterface11_1078.method79(string_1, 166693021);
 
-		for (Class282_Sub21 class282_sub21_5 = (Class282_Sub21) this.aClass465_1080.method7754(long_3); class282_sub21_5 != null; class282_sub21_5 = (Class282_Sub21) this.aClass465_1080.method7747(-1934040693)) {
+		for (Class282_Sub21 class282_sub21_5 = (Class282_Sub21) this.aClass465_1080.get(long_3); class282_sub21_5 != null; class282_sub21_5 = (Class282_Sub21) this.aClass465_1080.method7747(-1934040693)) {
 			if (class282_sub21_5.aString7674.equals(string_1)) {
 				return class282_sub21_5;
 			}
@@ -97,8 +97,8 @@ public class Class107 {
 					i_7 = Class282_Sub20_Sub24.aClass118_9884.anInt1428;
 				}
 
-				cs2executor_3.intLocals[0] = Class163.aClass209_2031.method3569(2102959757) - i_6;
-				cs2executor_3.intLocals[1] = Class163.aClass209_2031.method3570(756095591) - i_7;
+				cs2executor_3.intLocals[0] = Class163.mouseRecorder.method3569(2102959757) - i_6;
+				cs2executor_3.intLocals[1] = Class163.mouseRecorder.method3570(756095591) - i_7;
 			}
 
 			Class51.method1068(cs2script_5, 200000, cs2executor_3, 223631814);

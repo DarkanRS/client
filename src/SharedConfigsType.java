@@ -134,7 +134,7 @@ public class SharedConfigsType {
 				long long_2 = class282_sub50_sub7_0.aLong9580;
 
 				Class282_Sub50_Sub15 class282_sub50_sub15_4;
-				for (class282_sub50_sub15_4 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7754(long_2); class282_sub50_sub15_4 != null && !class282_sub50_sub15_4.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_4 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-1584347554)) {
+				for (class282_sub50_sub15_4 = (Class282_Sub50_Sub15) Class20.aClass465_172.get(long_2); class282_sub50_sub15_4 != null && !class282_sub50_sub15_4.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_4 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-1584347554)) {
 					;
 				}
 

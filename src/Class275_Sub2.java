@@ -5,7 +5,7 @@ public class Class275_Sub2 extends Class275 {
 	int anInt7742;
 	int anInt7743;
 	int anInt7744;
-	static Class457 aClass457_7745 = new Class457();
+	static EntityList aClass457_7745 = new EntityList();
 	static int anInt7741 = 0;
 
 	static final void method12504(CS2Executor cs2executor_0, int i_1) {
@@ -26,7 +26,7 @@ public class Class275_Sub2 extends Class275 {
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		boolean bool_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1;
 		if (Class291_Sub1.aClass465_8029 != null) {
-			Node node_4 = Class291_Sub1.aClass465_8029.method7754((long) i_2);
+			Node node_4 = Class291_Sub1.aClass465_8029.get((long) i_2);
 			if (node_4 != null && !bool_3) {
 				node_4.remove();
 			} else if (node_4 == null && bool_3) {

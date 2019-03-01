@@ -46,10 +46,10 @@ public class Class213 {
 				}
 			} else {
 				if (class521_sub1_2 == Class84.myPlayer) {
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(-1858915479) == 0) {
+					if (Class393.preferences.aClass468_Sub13_8225.method12714(-1858915479) == 0) {
 						return;
 					}
-				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(70703320) == 0) {
+				} else if (Class393.preferences.aClass468_Sub13_8193.method12714(70703320) == 0) {
 					return;
 				}
 

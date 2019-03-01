@@ -107,7 +107,7 @@ public final class SoftCache {
 	}
 
 	public Object get(long long_1) {
-		Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass465_2854.method7754(long_1);
+		Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass465_2854.get(long_1);
 		if (class282_sub50_sub1_3 == null) {
 			return null;
 		} else {
@@ -174,7 +174,7 @@ public final class SoftCache {
 	}
 
 	public void method3873(long long_1) {
-		Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass465_2854.method7754(long_1);
+		Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass465_2854.get(long_1);
 		this.method3864(class282_sub50_sub1_3, (byte) -6);
 	}
 
@@ -186,7 +186,7 @@ public final class SoftCache {
 	}
 
 	static final void method3893(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12615(-1794676778);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub1_8197.method12615(-1794676778);
 	}
 
 	static final void method3894(CS2Executor cs2executor_0, int i_1) {

@@ -142,7 +142,7 @@ public class SpotAnimDefinitions {
 				return null;
 			}
 
-			if (rsmesh_15.zoom < 13) {
+			if (rsmesh_15.version < 13) {
 				rsmesh_15.upscale(2);
 			}
 

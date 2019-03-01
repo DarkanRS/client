@@ -68,7 +68,7 @@ public class Class252 implements Interface43 {
 	}
 
 	static final void method4324(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -9);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub11_8217.method12699((byte) -9);
 	}
 
 	static int method4325(Class217_Sub1 class217_sub1_0, Class217_Sub1 class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5, int i_6) {
@@ -109,7 +109,7 @@ public class Class252 implements Interface43 {
 			if (long_13 != -1L) {
 				str_15 = long_13 + "ms";
 				if (long_13 > 500L) {
-					str_15 = Class59.method1163(16711680, 619010179) + str_15 + Class59.method1163(16776960, 619010179);
+					str_15 = ParticleProducerDefinition.method1163(16711680, 619010179) + str_15 + ParticleProducerDefinition.method1163(16776960, 619010179);
 				}
 			}
 
@@ -120,7 +120,7 @@ public class Class252 implements Interface43 {
 			if (long_16 != -1L) {
 				str_18 = long_16 + "ms";
 				if (long_16 > 500L) {
-					str_18 = Class59.method1163(16711680, 619010179) + str_18 + Class59.method1163(16776960, 619010179);
+					str_18 = ParticleProducerDefinition.method1163(16711680, 619010179) + str_18 + ParticleProducerDefinition.method1163(16776960, 619010179);
 				}
 			}
 

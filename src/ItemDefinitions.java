@@ -1,4 +1,4 @@
-public class ItemDefinitions implements Interface46 {
+public class ItemDefinitions implements Definition {
 
 	ItemIndexLoader loader;
 	int id;
@@ -129,7 +129,7 @@ public class ItemDefinitions implements Interface46 {
 				return null;
 			}
 
-			if (rsmesh_14.zoom < 13) {
+			if (rsmesh_14.version < 13) {
 				rsmesh_14.upscale(2);
 			}
 
@@ -468,12 +468,12 @@ public class ItemDefinitions implements Interface46 {
 		return this;
 	}
 
-	int[] renderToSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int renderAmounts, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short s_10) {
+	int[] getSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int renderAmounts, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short s_10) {
 		RSMesh inventoryMesh = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId, 0);
 		if (inventoryMesh == null) {
 			return null;
 		} else {
-			if (inventoryMesh.zoom < 13) {
+			if (inventoryMesh.version < 13) {
 				inventoryMesh.upscale(2);
 			}
 
@@ -521,17 +521,17 @@ public class ItemDefinitions implements Interface46 {
 
 				NativeSprite sprite = null;
 				if (this.certTemplateId != -1) {
-					sprite = this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, this.certId, 10, 1, 0, true, true, 0, fontRenderer, playerAppearance, (byte) -12);
+					sprite = this.loader.getSprite(hardwareRenderer, softwareRenderer, this.certId, 10, 1, 0, true, true, 0, fontRenderer, playerAppearance, (byte) -12);
 					if (sprite == null) {
 						return null;
 					}
 				} else if (this.landTemplateId != -1) {
-					sprite = this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, this.lendId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 63);
+					sprite = this.loader.getSprite(hardwareRenderer, softwareRenderer, this.lendId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 63);
 					if (sprite == null) {
 						return null;
 					}
 				} else if (this.bindTemplateId != -1) {
-					sprite = this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, this.bindId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 12);
+					sprite = this.loader.getSprite(hardwareRenderer, softwareRenderer, this.bindId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 12);
 					if (sprite == null) {
 						return null;
 					}
@@ -696,19 +696,19 @@ public class ItemDefinitions implements Interface46 {
 			if (rsmesh_7 == null) {
 				return null;
 			} else {
-				if (rsmesh_7.zoom < 13) {
+				if (rsmesh_7.version < 13) {
 					rsmesh_7.upscale(2);
 				}
 
 				if (i_5 != -1) {
 					RSMesh rsmesh_8 = RSMesh.decodeMesh(this.loader.meshIndex, i_5, 0);
-					if (rsmesh_8.zoom < 13) {
+					if (rsmesh_8.version < 13) {
 						rsmesh_8.upscale(2);
 					}
 
 					if (i_6 != -1) {
 						RSMesh rsmesh_9 = RSMesh.decodeMesh(this.loader.meshIndex, i_6, 0);
-						if (rsmesh_9.zoom < 13) {
+						if (rsmesh_9.version < 13) {
 							rsmesh_9.upscale(2);
 						}
 
@@ -721,11 +721,11 @@ public class ItemDefinitions implements Interface46 {
 				}
 
 				if (!bool_1 && (this.maleWearXOffset != 0 || this.maleWearYOffset != 0 || this.maleWearZOffset != 0)) {
-					rsmesh_7.method2712(this.maleWearXOffset, this.maleWearYOffset, this.maleWearZOffset);
+					rsmesh_7.translate(this.maleWearXOffset, this.maleWearYOffset, this.maleWearZOffset);
 				}
 
 				if (bool_1 && (this.femaleWearXOffset != 0 || this.femaleWearYOffset != 0 || this.femaleWearZOffset != 0)) {
-					rsmesh_7.method2712(this.femaleWearXOffset, this.femaleWearYOffset, this.femaleWearZOffset);
+					rsmesh_7.translate(this.femaleWearXOffset, this.femaleWearYOffset, this.femaleWearZOffset);
 				}
 
 				int i_11;
@@ -798,7 +798,7 @@ public class ItemDefinitions implements Interface46 {
 		if (this.cs2Map == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.cs2Map.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.cs2Map.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -807,7 +807,7 @@ public class ItemDefinitions implements Interface46 {
 		if (this.cs2Map == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.cs2Map.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.cs2Map.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -861,13 +861,13 @@ public class ItemDefinitions implements Interface46 {
 			return null;
 		} else {
 			RSMesh rsmesh_6 = RSMesh.decodeMesh(this.loader.meshIndex, i_4, 0);
-			if (rsmesh_6.zoom < 13) {
+			if (rsmesh_6.version < 13) {
 				rsmesh_6.upscale(2);
 			}
 
 			if (i_5 != -1) {
 				RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_5, 0);
-				if (rsmesh_7.zoom < 13) {
+				if (rsmesh_7.version < 13) {
 					rsmesh_7.upscale(2);
 				}
 
@@ -984,7 +984,7 @@ public class ItemDefinitions implements Interface46 {
 			class275_sub2_15.anInt7743 = i_14;
 			class275_sub2_15.anInt7744 = i_13 + 16;
 			class275_sub2_15.anInt7740 = i_14 + 16;
-			client.aClass457_7290.method7649(class275_sub2_15, 1174204485);
+			client.aClass457_7290.offer(class275_sub2_15, 1174204485);
 		}
 
 	}
@@ -999,7 +999,7 @@ public class ItemDefinitions implements Interface46 {
 	}
 
 	static final void method7143(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8229.method12714(-988664751);
 	}
 
 }

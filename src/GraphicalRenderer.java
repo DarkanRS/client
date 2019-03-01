@@ -241,7 +241,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8446(Matrix44Arr var1);
 
-	public abstract FontRenderer method8448(FontMetrics var1, Class91[] var2, boolean var3);
+	public abstract FontRenderer createFont(FontMetrics var1, Class91[] var2, boolean var3);
 
 	public abstract Matrix44Arr method8449();
 
@@ -758,7 +758,7 @@ public abstract class GraphicalRenderer {
 	static void method8695(Class275_Sub2 class275_sub2_0, int i_1) {
 		class275_sub2_0.aClass521_Sub1_Sub1_Sub2_7739 = null;
 		if (Class275_Sub2.anInt7741 < 20) {
-			Class275_Sub2.aClass457_7745.method7649(class275_sub2_0, 1876581083);
+			Class275_Sub2.aClass457_7745.offer(class275_sub2_0, 1876581083);
 			++Class275_Sub2.anInt7741;
 		}
 

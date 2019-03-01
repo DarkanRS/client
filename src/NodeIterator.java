@@ -13,11 +13,11 @@ public class NodeIterator implements Iterator {
 
 	public Object next() {
 		Node node_1 = this.aClass282_5536;
-		if (node_1 == this.collection.head) {
+		if (node_1 == this.collection.tail) {
 			node_1 = null;
 			this.aClass282_5536 = null;
 		} else {
-			this.aClass282_5536 = node_1.prev;
+			this.aClass282_5536 = node_1.next;
 		}
 
 		this.aClass282_5537 = node_1;
@@ -25,18 +25,18 @@ public class NodeIterator implements Iterator {
 	}
 
 	public boolean hasNext() {
-		return this.collection.head != this.aClass282_5536;
+		return this.collection.tail != this.aClass282_5536;
 	}
 
 	public void method7684(NodeCollection nodecollection_1, byte b_2) {
 		this.collection = nodecollection_1;
-		this.aClass282_5536 = this.collection.head.prev;
+		this.aClass282_5536 = this.collection.tail.next;
 		this.aClass282_5537 = null;
 	}
 
 	public NodeIterator(NodeCollection nodecollection_1) {
 		this.collection = nodecollection_1;
-		this.aClass282_5536 = this.collection.head.prev;
+		this.aClass282_5536 = this.collection.tail.next;
 		this.aClass282_5537 = null;
 	}
 
@@ -50,7 +50,7 @@ public class NodeIterator implements Iterator {
 	}
 
 	void method7697(short s_1) {
-		this.aClass282_5536 = this.collection.head.prev;
+		this.aClass282_5536 = this.collection.tail.next;
 		this.aClass282_5537 = null;
 	}
 

@@ -22,8 +22,8 @@ public class Class451 implements Iterator {
 			return true;
 		} else {
 			while (this.anInt5442 < this.aClass465_5439.anInt5560) {
-				if (this.aClass465_5439.aClass282Array5558[++this.anInt5442 - 1].prev != this.aClass465_5439.aClass282Array5558[this.anInt5442 - 1]) {
-					this.aClass282_5440 = this.aClass465_5439.aClass282Array5558[this.anInt5442 - 1].prev;
+				if (this.aClass465_5439.aClass282Array5558[++this.anInt5442 - 1].next != this.aClass465_5439.aClass282Array5558[this.anInt5442 - 1]) {
+					this.aClass282_5440 = this.aClass465_5439.aClass282Array5558[this.anInt5442 - 1].next;
 					return true;
 				}
 
@@ -47,14 +47,14 @@ public class Class451 implements Iterator {
 		Node node_1;
 		if (this.aClass465_5439.aClass282Array5558[this.anInt5442 - 1] != this.aClass282_5440) {
 			node_1 = this.aClass282_5440;
-			this.aClass282_5440 = node_1.prev;
+			this.aClass282_5440 = node_1.next;
 			this.aClass282_5441 = node_1;
 			return node_1;
 		} else {
 			while (this.anInt5442 < this.aClass465_5439.anInt5560) {
-				node_1 = this.aClass465_5439.aClass282Array5558[++this.anInt5442 - 1].prev;
+				node_1 = this.aClass465_5439.aClass282Array5558[++this.anInt5442 - 1].next;
 				if (node_1 != this.aClass465_5439.aClass282Array5558[this.anInt5442 - 1]) {
-					this.aClass282_5440 = node_1.prev;
+					this.aClass282_5440 = node_1.next;
 					this.aClass282_5441 = node_1;
 					return node_1;
 				}
@@ -65,7 +65,7 @@ public class Class451 implements Iterator {
 	}
 
 	void method7512(int i_1) {
-		this.aClass282_5440 = this.aClass465_5439.aClass282Array5558[0].prev;
+		this.aClass282_5440 = this.aClass465_5439.aClass282Array5558[0].next;
 		this.anInt5442 = 1;
 		this.aClass282_5441 = null;
 	}
@@ -91,7 +91,7 @@ public class Class451 implements Iterator {
 	}
 
 	static final void method7521(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12920(308447312) == 2 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub24_8216.method12920(308447312) == 2 ? 1 : 0;
 	}
 
 	static final void method7522(CS2Executor cs2executor_0, int i_1) {

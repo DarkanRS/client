@@ -30,7 +30,7 @@ public final class CS2Runner {
 
 	static Class282_Sub30 method11127(int i_0, boolean bool_1, int i_2) {
 		long long_3 = (long) (i_0 | (bool_1 ? Integer.MIN_VALUE : 0));
-		return (Class282_Sub30) Class282_Sub30.aClass465_7711.method7754(long_3);
+		return (Class282_Sub30) Class282_Sub30.aClass465_7711.get(long_3);
 	}
 
 	static final void method11128(CS2Executor cs2executor_0, int i_1) {

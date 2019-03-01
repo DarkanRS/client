@@ -74,7 +74,7 @@ public class MapRegion {
 	}
 
 	void method4422(byte b_1) {
-		this.method4456(Class480.method8046(Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
+		this.method4456(Class480.method8046(Class393.preferences.aClass468_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
 		int i_2 = this.coordGrid.x;
 		int i_3 = this.coordGrid.y;
 		int i_4 = (Class31.anInt361 >> 12) + (i_2 >> 3);
@@ -127,15 +127,15 @@ public class MapRegion {
 		}
 
 		byte b_11;
-		if (client.anInt7166 == 5) {
+		if (client.gameState == 5) {
 			b_11 = 11;
-		} else if (client.anInt7166 == 7) {
+		} else if (client.gameState == 7) {
 			b_11 = 6;
-		} else if (client.anInt7166 == 0) {
+		} else if (client.gameState == 0) {
 			b_11 = 2;
 		} else {
-			if (client.anInt7166 != 3) {
-				throw new RuntimeException("" + client.anInt7166);
+			if (client.gameState != 3) {
+				throw new RuntimeException("" + client.gameState);
 			}
 
 			b_11 = 9;
@@ -449,7 +449,7 @@ public class MapRegion {
 			if (this.aClass256_3163 == Class256.aClass256_3155 || this.aClass256_3163 == Class256.aClass256_3157 || this.aClass256_3164 != this.aClass256_3163 && (this.aClass256_3163 == Class256.aClass256_3158 || this.aClass256_3164 == Class256.aClass256_3158)) {
 				client.anInt7211 = 0;
 				client.anInt7210 = 0;
-				client.aClass465_7208.method7749(-1318045853);
+				client.NPCS.method7749(-1318045853);
 			}
 
 			this.aClass256_3164 = this.aClass256_3163;
@@ -471,7 +471,7 @@ public class MapRegion {
 			this.anInt3170 = i_1;
 			this.anInt3207 = i_2;
 			if (!this.aBool3171) {
-				Class365.setGameState(i_3, 1265357038);
+				Class365.setGameState(i_3);
 				Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -532223437), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -29);
 			}
 
@@ -559,11 +559,11 @@ public class MapRegion {
 			}
 
 			if (bool_21) {
-				client.anInt7210 = client.aClass465_7208.method7748((short) 292);
+				client.anInt7210 = client.NPCS.method7748((short) 292);
 				i_8 = 0;
 
 				Class282_Sub47 class282_sub47_28;
-				for (Iterator iterator_24 = client.aClass465_7208.iterator(); iterator_24.hasNext(); client.aClass282_Sub47Array7209[i_8++] = class282_sub47_28) {
+				for (Iterator iterator_24 = client.NPCS.iterator(); iterator_24.hasNext(); client.aClass282_Sub47Array7209[i_8++] = class282_sub47_28) {
 					class282_sub47_28 = (Class282_Sub47) iterator_24.next();
 				}
 			}
@@ -836,7 +836,7 @@ public class MapRegion {
 
 				boolean bool_20 = false;
 				int i_11;
-				if (Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12920(-2143596575) == 2) {
+				if (Class393.preferences.aClass468_Sub24_8216.method12920(-2143596575) == 2) {
 					for (i_11 = 0; i_11 < this.mapDataBuffer.length; i_11++) {
 						if (this.landscapeDataUnderlayBuffer[i_11] != null || this.mapDataUnderlayBuffer[i_11] != null) {
 							bool_20 = true;
@@ -845,7 +845,7 @@ public class MapRegion {
 					}
 				}
 
-				i_11 = Class5.method295(Class393.aClass282_Sub54_4783.aClass468_Sub16_8198.method12750((byte) 32), 44628475).chunkSize * 8;
+				i_11 = Class5.method295(Class393.preferences.aClass468_Sub16_8198.method12750((byte) 32), 44628475).chunkSize * 8;
 				if (Renderers.SOFTWARE_RENDERER.method8454()) {
 					++i_11;
 				}
@@ -865,11 +865,11 @@ public class MapRegion {
 				this.aFloat3173 = -0.05F + (float) (Math.random() / 10.0D);
 				this.aClass329_Sub1_3167 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 4, this.sizeX, this.sizeY, false, this.aClass311_3202, this.aClass239_3175);
 				this.aClass329_Sub1_3167.method5835(1920682092);
-				this.aClass329_Sub1_3167.anInt3809 = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -19);
-				this.aClass329_Sub1_3167.aBool3835 = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12920(-1025705953) == 2;
-				this.aClass329_Sub1_3167.aBool3780 = Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1;
-				this.aClass329_Sub1_3167.aBool3820 = Class393.aClass282_Sub54_4783.aClass468_Sub17_8200.method12762(-267054469) == 1;
-				this.aClass329_Sub1_3167.aBool3782 = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(1377050121) == 1;
+				this.aClass329_Sub1_3167.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -19);
+				this.aClass329_Sub1_3167.aBool3835 = Class393.preferences.aClass468_Sub24_8216.method12920(-1025705953) == 2;
+				this.aClass329_Sub1_3167.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1;
+				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(-267054469) == 1;
+				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.aClass468_Sub22_8213.method12873(1377050121) == 1;
 				if (!this.aClass256_3163.method4410((byte) -32)) {
 					this.method4463(this.aClass329_Sub1_3167, this.mapDataBuffer, 1315892185);
 				} else {
@@ -886,11 +886,11 @@ public class MapRegion {
 					this.sceneObjectManager.method3380(true, -914334995);
 					this.aClass329_Sub1_3166 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 1, this.sizeX, this.sizeY, true, this.aClass311_3202, this.aClass239_3175);
 					this.aClass329_Sub1_3166.method5835(1973869970);
-					this.aClass329_Sub1_3166.anInt3809 = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -93);
-					this.aClass329_Sub1_3166.aBool3835 = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12920(-962367192) == 2;
-					this.aClass329_Sub1_3166.aBool3780 = Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1;
-					this.aClass329_Sub1_3166.aBool3820 = Class393.aClass282_Sub54_4783.aClass468_Sub17_8200.method12762(1666715266) == 1;
-					this.aClass329_Sub1_3166.aBool3782 = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-332126301) == 1;
+					this.aClass329_Sub1_3166.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -93);
+					this.aClass329_Sub1_3166.aBool3835 = Class393.preferences.aClass468_Sub24_8216.method12920(-962367192) == 2;
+					this.aClass329_Sub1_3166.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1;
+					this.aClass329_Sub1_3166.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(1666715266) == 1;
+					this.aClass329_Sub1_3166.aBool3782 = Class393.preferences.aClass468_Sub22_8213.method12873(-332126301) == 1;
 					if (!this.aClass256_3163.method4410((byte) 46)) {
 						this.method4463(this.aClass329_Sub1_3166, this.mapDataUnderlayBuffer, 500096938);
 						if (!this.aBool3171) {
@@ -982,7 +982,7 @@ public class MapRegion {
 
 				this.sceneObjectManager.method3428(1203434505);
 				if (this.aBool3171) {
-					Class169.method2869(1612700146);
+					Class169.time();
 
 					while (!Renderers.SOFTWARE_RENDERER.method8455(-203069693)) {
 						this.method4462(1, (byte) -98);
@@ -995,7 +995,7 @@ public class MapRegion {
 					this.method4418(mapregion_12, 16711935);
 					IndexLoaders.MAP_REGION_LOADER_THREAD.method6050(mapregion_12, (byte) -54);
 					bool_21 = true;
-					Class169.method2869(1958706553);
+					Class169.time();
 					Object object_13 = client.anObject7227;
 					synchronized (client.anObject7227) {
 						client.aBool7225 = true;
@@ -1035,7 +1035,7 @@ public class MapRegion {
 				Class405.method6823(-734889653);
 				Class48_Sub2.method14571((byte) 0);
 				TCPMessage tcpmessage_22;
-				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.method3053((byte) -27) != null && client.anInt7166 == 18) {
+				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.method3053((byte) -27) != null && client.gameState == 18) {
 					tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4609, client.aClass184_7475.isaac, 582872651);
 					tcpmessage_22.buffer.writeInt(1057001181);
 					client.aClass184_7475.method3049(tcpmessage_22, 278728590);
@@ -1059,25 +1059,25 @@ public class MapRegion {
 					}
 				}
 
-				if (client.anInt7166 == 11) {
-					Class365.setGameState(5, 897954436);
-				} else if (client.anInt7166 == 2) {
-					Class365.setGameState(0, 1905920660);
-				} else if (client.anInt7166 == 6) {
-					Class365.setGameState(7, 1471410444);
-				} else if (client.anInt7166 == 9) {
-					Class365.setGameState(3, 1843758807);
+				if (client.gameState == 11) {
+					Class365.setGameState(5);
+				} else if (client.gameState == 2) {
+					Class365.setGameState(0);
+				} else if (client.gameState == 6) {
+					Class365.setGameState(7);
+				} else if (client.gameState == 9) {
+					Class365.setGameState(3);
 				} else {
-					Class365.setGameState(13, 850026987);
+					Class365.setGameState(13);
 					if (client.aClass184_7475.method3053((byte) -84) != null) {
 						tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.isaac, 1466063096);
 						client.aClass184_7475.method3049(tcpmessage_22, 1512043524);
 					}
 				}
 
-				Class59.method1160(-1437458578);
+				ParticleProducerDefinition.method1160(-1437458578);
 				if (this.aBool3206) {
-					Class209.method3598(Long.toString(Class169.method2869(1592227857) - this.aLong3183), -1857188149);
+					Class209.method3598(Long.toString(Class169.time() - this.aLong3183), -1857188149);
 					this.aBool3206 = false;
 				}
 
@@ -1242,19 +1242,19 @@ public class MapRegion {
 					int i_12 = (this.regionIds[i_3] >> 8) * 64 - this.coordGrid.x + i_10;
 					int i_13 = (this.regionIds[i_3] & 0xff) * 64 - this.coordGrid.y + i_11;
 					NPCDefinitions npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbytebuffer_18.readUnsignedShort(), (byte) -4);
-					Class282_Sub47 class282_sub47_15 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_7);
+					Class282_Sub47 class282_sub47_15 = (Class282_Sub47) client.NPCS.get((long) i_7);
 					if (class282_sub47_15 == null && (npcdefinitions_14.aByte4900 & 0x1) > 0 && i_12 >= 0 && i_12 + npcdefinitions_14.anInt4858 < this.sizeX && i_13 >= 0 && i_13 + npcdefinitions_14.anInt4858 < this.sizeY) {
 						NPC npc_16 = new NPC(this.sceneObjectManager);
 						npc_16.anInt10314 = i_7;
 						Class282_Sub47 class282_sub47_17 = new Class282_Sub47(npc_16);
-						client.aClass465_7208.method7765(class282_sub47_17, (long) i_7);
+						client.NPCS.method7765(class282_sub47_17, (long) i_7);
 						client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_17;
 						client.anIntArray7212[++client.anInt7211 - 1] = i_7;
 						npc_16.anInt10353 = client.cycles;
 						npc_16.method16166(npcdefinitions_14, 2038282269);
-						npc_16.method15836(npc_16.aClass409_10580.anInt4858, (byte) -20);
-						npc_16.anInt10340 = npc_16.aClass409_10580.anInt4889 << 3;
-						npc_16.method15791(npc_16.aClass409_10580.aClass252_4910.method4317((short) 18632).method243((byte) 1) << 11 & 0x3fff, true, (byte) -122);
+						npc_16.method15836(npc_16.definitions.anInt4858, (byte) -20);
+						npc_16.anInt10340 = npc_16.definitions.anInt4889 << 3;
+						npc_16.method15791(npc_16.definitions.aClass252_4910.method4317((short) 18632).method243((byte) 1) << 11 & 0x3fff, true, (byte) -122);
 						npc_16.method16159(i_9, i_12, i_13, true, npc_16.getSize(828768449), -1215667141);
 					}
 				}
@@ -1474,16 +1474,16 @@ public class MapRegion {
 			this.anInt3207 = mapregion_2.anInt3207;
 			this.sizeX = mapregion_2.sizeX;
 			this.sizeY = mapregion_2.sizeY;
-		} else if (client.anInt7166 == 5) {
-			Class365.setGameState(11, 1377312199);
-		} else if (client.anInt7166 == 0) {
-			Class365.setGameState(2, 1244371600);
-		} else if (client.anInt7166 == 7) {
-			Class365.setGameState(6, 1707832511);
-		} else if (client.anInt7166 == 13) {
-			Class365.setGameState(18, 706362895);
-		} else if (client.anInt7166 == 3) {
-			Class365.setGameState(9, 1330863416);
+		} else if (client.gameState == 5) {
+			Class365.setGameState(11);
+		} else if (client.gameState == 0) {
+			Class365.setGameState(2);
+		} else if (client.gameState == 7) {
+			Class365.setGameState(6);
+		} else if (client.gameState == 13) {
+			Class365.setGameState(18);
+		} else if (client.gameState == 3) {
+			Class365.setGameState(9);
 		}
 
 	}
@@ -1493,7 +1493,7 @@ public class MapRegion {
 	}
 
 	static void method4556(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4093(Class158_Sub1.aClass3_8507, client.anIntArray7337, 1568436027) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4093(Class158_Sub1.PLAYER_VAR_PROVIDER, client.anIntArray7337, 1568436027) ? 1 : 0;
 	}
 
 	static final void method4557(CS2Executor cs2executor_0, byte b_1) {

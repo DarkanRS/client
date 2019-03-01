@@ -1,7 +1,7 @@
 public class Class275_Sub7 extends Class275 {
 
 	static Class400 aClass400_7862;
-	Class457 aClass457_7861 = new Class457();
+	EntityList aClass457_7861 = new EntityList();
 	public HitbarDefinitions aClass198_7863;
 
 	public Class275_Sub7(HitbarDefinitions hitbardefinitions_1) {

@@ -67,7 +67,7 @@ public class Class4 {
 	}
 
 	static final void method292(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub27_8208.method12952((byte) 83) == 2 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub27_8208.method12952((byte) 83) == 2 ? 1 : 0;
 	}
 
 }

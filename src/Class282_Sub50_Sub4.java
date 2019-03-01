@@ -42,7 +42,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 		if (this.aClass465_9518 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_9518.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_9518.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -51,7 +51,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 		if (this.aClass465_9518 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_9518.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_9518.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}

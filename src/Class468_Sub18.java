@@ -32,7 +32,7 @@ public class Class468_Sub18 extends Class468 {
 		return i_1 == 3 && !Class362.getNativeLibraryLoader(616047582).method218("jagdx", -369170770) ? 3 : 2;
 	}
 
-	public int method12776(int i_1) {
+	public int getValue(int i_1) {
 		return this.anInt5578;
 	}
 

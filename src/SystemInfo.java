@@ -30,12 +30,12 @@ public class SystemInfo extends Node {
 
 	public int method13454(int i_1) {
 		byte b_2 = 38;
-		int i_3 = b_2 + Class234.method3952(this.aString8157, -696675148);
-		i_3 += Class234.method3952(this.aString8160, 1704970825);
-		i_3 += Class234.method3952(this.aString8159, 1902429767);
-		i_3 += Class234.method3952(this.aString8153, 1087732237);
-		i_3 += Class234.method3952(this.aString8165, -126400447);
-		i_3 += Class234.method3952(this.aString8166, -276282908);
+		int i_3 = b_2 + ParticleTriangle.method3952(this.aString8157, -696675148);
+		i_3 += ParticleTriangle.method3952(this.aString8160, 1704970825);
+		i_3 += ParticleTriangle.method3952(this.aString8159, 1902429767);
+		i_3 += ParticleTriangle.method3952(this.aString8153, 1087732237);
+		i_3 += ParticleTriangle.method3952(this.aString8165, -126400447);
+		i_3 += ParticleTriangle.method3952(this.aString8166, -276282908);
 		return i_3;
 	}
 
@@ -352,21 +352,21 @@ public class SystemInfo extends Node {
 		RenderAnimDefs renderanimdefs_3 = animable_0.getRenderAnimDefs((byte) -17);
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;
-			Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+			IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 			Class8_Sub1.anInt8515 = 0;
 		} else {
 			if (animable_0.currentAnimation.hasDefs() && !animable_0.currentAnimation.hasSpeed(584514311)) {
 				AnimationDefinitions animationdefinitions_4 = animable_0.currentAnimation.getDefs();
 				if (animable_0.anInt10367 > 0 && animationdefinitions_4.animatingPrecedence == 0) {
 					++animable_0.anInt10366;
-					Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+					IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
 
 				if (animable_0.anInt10367 <= 0 && animationdefinitions_4.walkingPrecedence == 0) {
 					++animable_0.anInt10366;
-					Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+					IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
@@ -379,14 +379,14 @@ public class SystemInfo extends Node {
 						AnimationDefinitions animationdefinitions_20 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_19.animationId, (byte) -10);
 						if (animable_0.anInt10367 > 0 && animationdefinitions_20.animatingPrecedence == 0) {
 							++animable_0.anInt10366;
-							Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+							IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
 
 						if (animable_0.anInt10367 <= 0 && animationdefinitions_20.walkingPrecedence == 0) {
 							++animable_0.anInt10366;
-							Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+							IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
@@ -426,7 +426,7 @@ public class SystemInfo extends Node {
 				int i_10 = 16;
 				boolean bool_11 = true;
 				if (animable_0 instanceof NPC) {
-					bool_11 = ((NPC) animable_0).aClass409_10580.aBool4894;
+					bool_11 = ((NPC) animable_0).definitions.aBool4894;
 				}
 
 				int i_12;
@@ -505,7 +505,7 @@ public class SystemInfo extends Node {
 
 				Class8_Sub1.anInt8515 = 0;
 				if (i_7 == i_5 && i_8 == i_6) {
-					Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+					IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 				} else {
 					if (i_5 < i_7) {
 						vector3_21.x += (float) i_10;
@@ -537,9 +537,9 @@ public class SystemInfo extends Node {
 
 					animable_0.method11171(vector3_21);
 					if (i_10 >= 32) {
-						Class44.anInt430 = Class249.aClass249_3086.aByte3085;
+						IdentikitDefinition.anInt430 = Class249.aClass249_3086.aByte3085;
 					} else {
-						Class44.anInt430 = b_9;
+						IdentikitDefinition.anInt430 = b_9;
 					}
 				}
 
@@ -559,7 +559,7 @@ public class SystemInfo extends Node {
 					--animable_0.anInt10367;
 				}
 
-				Class44.anInt430 = Class249.aClass249_3083.aByte3085;
+				IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 				Class8_Sub1.anInt8515 = 0;
 				vector3_21.method6624();
 			}

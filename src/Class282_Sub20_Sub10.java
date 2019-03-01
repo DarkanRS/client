@@ -2,7 +2,7 @@ import java.net.Socket;
 
 public class Class282_Sub20_Sub10 extends Class282_Sub20 {
 
-	static Socket aSocket9802;
+	static Socket clientSocket;
 	int[][] anIntArrayArray9800;
 	int[] anIntArray9798;
 	int[] anIntArray9796;

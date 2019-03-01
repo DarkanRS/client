@@ -67,7 +67,7 @@ public class Class58 implements Interface19 {
 	}
 
 	static final void method1140(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub17_8200.method12762(-283512869) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub17_8200.method12762(-283512869) == 1 ? 1 : 0;
 	}
 
 	static int method1141(int i_0) {
@@ -82,8 +82,8 @@ public class Class58 implements Interface19 {
 				}
 			} else {
 				FontMetrics fontmetrics_1 = Class114.method1887(466263588);
-				int i_2 = Class163.aClass209_2031.method3569(1973979950);
-				int i_3 = Class163.aClass209_2031.method3570(756095591);
+				int i_2 = Class163.mouseRecorder.method3569(1973979950);
+				int i_3 = Class163.mouseRecorder.method3570(756095591);
 				int i_4;
 				int i_5;
 				Class282_Sub50_Sub7 class282_sub50_sub7_7;

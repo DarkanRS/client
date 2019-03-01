@@ -115,7 +115,7 @@ public class RenderAnimIndexLoader {
 					return;
 				}
 
-				class282_sub53_sub1_2.method13475(-1123290307);
+				class282_sub53_sub1_2.cache(-1123290307);
 			}
 		}
 	}

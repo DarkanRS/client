@@ -14,7 +14,7 @@ public final class Class153 {
 	}
 
 	public int method2609(int i_1, byte b_2) {
-		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) this.aClass465_1963.method7754((long) i_1);
+		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) this.aClass465_1963.get((long) i_1);
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {
@@ -43,7 +43,7 @@ public final class Class153 {
 			this.aClass465_1963 = new IterableNodeMap(this.anInt1964);
 		}
 
-		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1963.method7754((long) i_1);
+		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1963.get((long) i_1);
 		if (class282_sub38_4 != null) {
 			if (s_3 == 768) {
 				class282_sub38_4.anInt8002 = i_2;
@@ -71,7 +71,7 @@ public final class Class153 {
 	}
 
 	public static Class268 method2618(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(1292855903) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+		if (Class393.preferences.aClass468_Sub13_8225.method12714(1292855903) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
 			Class268 class268_6 = new Class268((byte) 1, i_0, i_1, i_2, i_3, 0, i_4, (Class521_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_6;
 			return class268_6;

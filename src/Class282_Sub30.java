@@ -79,7 +79,7 @@ public class Class282_Sub30 extends Node {
 						}
 
 						if (i_18 != 0 || i_19 != 0 || i_20 != 0) {
-							arr_27[i_17].method2712(i_18, i_19, i_20);
+							arr_27[i_17].translate(i_18, i_19, i_20);
 						}
 					}
 				}

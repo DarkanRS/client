@@ -40,7 +40,7 @@ public class Class89 {
 
 	static final void method1499(CS2Executor cs2executor_0, int i_1) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) (Class116.aLong1259 / 60000L);
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) ((Class116.aLong1259 - Class169.method2869(1705160163) - Class43.aLong420) / 60000L);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) ((Class116.aLong1259 - Class169.time() - Class43.aLong420) / 60000L);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class509.aBool5870 ? 1 : 0;
 	}
 
@@ -93,7 +93,7 @@ public class Class89 {
 		method1502(-1202375965);
 	}
 
-	public static final void method1504(long long_0) {
+	public static final void sleep(long long_0) {
 		if (long_0 > 0L) {
 			if (long_0 % 10L == 0L) {
 				Class350_Sub3_Sub1.method15560(long_0 - 1L);

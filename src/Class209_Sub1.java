@@ -132,8 +132,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -119743031);
 	}
 
-	public Class282_Sub53 method3571(byte b_1) {
-		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -121);
+	public MouseRecord nextSubmission(byte b_1) {
+		return (MouseRecord) this.aClass482_7941.popHead((byte) -121);
 	}
 
 	int method12908(MouseEvent mouseevent_1, int i_2) {
@@ -158,7 +158,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	void method12909(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		Class282_Sub53_Sub2 class282_sub53_sub2_6 = Class521_Sub1_Sub3_Sub1.method16080(i_1, i_2, i_3, Class169.method2869(1557164427), i_4, 1660805972);
+		Class282_Sub53_Sub2 class282_sub53_sub2_6 = Class521_Sub1_Sub3_Sub1.method16080(i_1, i_2, i_3, Class169.time(), i_4, 1660805972);
 		this.aClass482_7945.append(class282_sub53_sub2_6, 335888371);
 	}
 
@@ -172,8 +172,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.aClass482_7945.method8118(237232495);
 	}
 
-	public Class282_Sub53 method3590() {
-		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -90);
+	public MouseRecord method3590() {
+		return (MouseRecord) this.aClass482_7941.popHead((byte) -90);
 	}
 
 	public synchronized void mouseWheelMoved(MouseWheelEvent mousewheelevent_1) {
@@ -204,8 +204,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.aClass482_7945.method8118(-461780594);
 	}
 
-	public Class282_Sub53 method3591() {
-		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -123);
+	public MouseRecord method3591() {
+		return (MouseRecord) this.aClass482_7941.popHead((byte) -123);
 	}
 
 	public boolean method3583() {
@@ -240,8 +240,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		return 954893953 * this.anInt7939 * 220182913;
 	}
 
-	public Class282_Sub53 method3592() {
-		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -101);
+	public MouseRecord method3592() {
+		return (MouseRecord) this.aClass482_7941.popHead((byte) -101);
 	}
 
 	public synchronized void mouseExited(MouseEvent mouseevent_1) {
@@ -252,8 +252,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -641824056);
 	}
 
-	public Class282_Sub53 method3588() {
-		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -37);
+	public MouseRecord method3588() {
+		return (MouseRecord) this.aClass482_7941.popHead((byte) -37);
 	}
 
 	public void method3594() {
@@ -267,9 +267,9 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	static final void method12915(CS2Executor cs2executor_0, int i_1) {
 		NPC npc_2 = (NPC) cs2executor_0.animable;
 		String string_3 = npc_2.aString10584;
-		NPCDefinitions npcdefinitions_4 = npc_2.aClass409_10580;
+		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.anIntArray4886 != null) {
-			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 			if (npcdefinitions_4 == null) {
 				string_3 = "";
 			} else {

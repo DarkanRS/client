@@ -10,7 +10,7 @@ public abstract class Class504 {
 		icomponentdefinitions_0.anInt1380 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 	}
 
-	static boolean method8388(int i_0, byte b_1) {
+	static boolean loadingState(int i_0, byte b_1) {
 		return i_0 == 4 || i_0 == 15 || i_0 == 1;
 	}
 

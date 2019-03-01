@@ -68,7 +68,7 @@ public abstract class MeshRasterizer {
 		int[] ints_6 = null;
 		float[][] floats_7 = null;
 		if (rsmesh_1.aByteArray1988 != null) {
-			int i_8 = rsmesh_1.anInt1979;
+			int i_8 = rsmesh_1.texturedFaceCount;
 			int[] ints_9 = new int[i_8];
 			int[] ints_10 = new int[i_8];
 			int[] ints_11 = new int[i_8];
@@ -102,9 +102,9 @@ public abstract class MeshRasterizer {
 							s_19 = rsmesh_1.aShortArray1984[i_16];
 						}
 
-						i_20 = rsmesh_1.anIntArray1976[s_19];
-						int i_21 = rsmesh_1.anIntArray2003[s_19];
-						int i_22 = rsmesh_1.anIntArray1978[s_19];
+						i_20 = rsmesh_1.vertexX[s_19];
+						int i_21 = rsmesh_1.vertexY[s_19];
+						int i_22 = rsmesh_1.vertexZ[s_19];
 						if (i_20 < ints_9[i_17]) {
 							ints_9[i_17] = i_20;
 						}

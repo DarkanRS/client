@@ -85,7 +85,7 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public NativeSprite renderItemSprite(GraphicalRenderer graphicalrenderer_1, GraphicalRenderer graphicalrenderer_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8, int i_9, FontRenderer fontrenderer_10, PlayerAppearance playerappearance_11, byte b_12) {
+	public NativeSprite getSprite(GraphicalRenderer graphicalrenderer_1, GraphicalRenderer graphicalrenderer_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8, int i_9, FontRenderer fontrenderer_10, PlayerAppearance playerappearance_11, byte b_12) {
 		if (!bool_8) {
 			NativeSprite nativesprite_13 = this.softwareRender(graphicalrenderer_2, i_3, i_4, i_5, i_6, i_9, playerappearance_11, 206421629);
 			if (nativesprite_13 != null) {
@@ -108,7 +108,7 @@ public class ItemIndexLoader implements IndexLoader {
 			}
 		}
 
-		int[] ints_17 = itemdefinitions_19.renderToSprite(graphicalrenderer_1, graphicalrenderer_2, i_4, i_5, i_6, bool_7, i_9, fontrenderer_10, playerappearance_11, (short) 255);
+		int[] ints_17 = itemdefinitions_19.getSprite(graphicalrenderer_1, graphicalrenderer_2, i_4, i_5, i_6, bool_7, i_9, fontrenderer_10, playerappearance_11, (short) 255);
 		if (ints_17 == null) {
 			return null;
 		} else {
@@ -252,7 +252,7 @@ public class ItemIndexLoader implements IndexLoader {
 
 	static String method7169(int i_0, int i_1, int i_2) {
 		int i_3 = i_1 - i_0;
-		return i_3 < -9 ? Class59.method1163(16711680, 619010179) : (i_3 < -6 ? Class59.method1163(16723968, 619010179) : (i_3 < -3 ? Class59.method1163(16740352, 619010179) : (i_3 < 0 ? Class59.method1163(16756736, 619010179) : (i_3 > 9 ? Class59.method1163(65280, 619010179) : (i_3 > 6 ? Class59.method1163(4259584, 619010179) : (i_3 > 3 ? Class59.method1163(8453888, 619010179) : (i_3 > 0 ? Class59.method1163(12648192, 619010179) : Class59.method1163(16776960, 619010179))))))));
+		return i_3 < -9 ? ParticleProducerDefinition.method1163(16711680, 619010179) : (i_3 < -6 ? ParticleProducerDefinition.method1163(16723968, 619010179) : (i_3 < -3 ? ParticleProducerDefinition.method1163(16740352, 619010179) : (i_3 < 0 ? ParticleProducerDefinition.method1163(16756736, 619010179) : (i_3 > 9 ? ParticleProducerDefinition.method1163(65280, 619010179) : (i_3 > 6 ? ParticleProducerDefinition.method1163(4259584, 619010179) : (i_3 > 3 ? ParticleProducerDefinition.method1163(8453888, 619010179) : (i_3 > 0 ? ParticleProducerDefinition.method1163(12648192, 619010179) : ParticleProducerDefinition.method1163(16776960, 619010179))))))));
 	}
 
 	static void method7170(int i_0, int i_1) {

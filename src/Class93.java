@@ -76,14 +76,14 @@ public class Class93 {
 
 	static final void method1572(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method7785(i_2, -398594048);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub22_8213.method7785(i_2, -398594048);
 	}
 
 	static final void method1573(CS2Executor cs2executor_0, byte b_1) {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		Class282_Sub44 class282_sub44_4 = (Class282_Sub44) client.aClass465_7442.method7754((long) i_2);
+		Class282_Sub44 class282_sub44_4 = (Class282_Sub44) client.aClass465_7442.get((long) i_2);
 		if (class282_sub44_4 != null && i_3 == class282_sub44_4.anInt8063) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 		} else {
@@ -93,11 +93,11 @@ public class Class93 {
 	}
 
 	static final void method1574(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12727(-247262308) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub14_8211.method12727(-247262308) ? 1 : 0;
 	}
 
 	public static void method1575(int i_0, int i_1, boolean bool_2, int i_3) {
-		if (Class492.aClass465_5774.method7754((long) i_0) == null) {
+		if (Class492.aClass465_5774.get((long) i_0) == null) {
 			if (!client.aBool7393) {
 				Class62.method1260(i_0, bool_2, 860609292);
 			} else {

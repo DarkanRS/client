@@ -10,7 +10,7 @@ public class Class499 {
 		LinkedNodeList.method7887(-1685527133);
 		int i_2 = IndexLoaders.aClass377_1065.method6384(i_0, -822529502).anInt4327;
 		if (i_2 != 0) {
-			int i_3 = Class158_Sub1.aClass3_8507.anIntArray26[i_0];
+			int i_3 = Class158_Sub1.PLAYER_VAR_PROVIDER.anIntArray26[i_0];
 			if (i_2 == 5) {
 				client.anInt7339 = i_3;
 			}

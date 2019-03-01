@@ -69,7 +69,7 @@ final class Class237 implements Interface45 {
 	}
 
 	static final void method3988(CS2Executor cs2executor_0, byte b_1) {
-		if (Class96_Sub21.aClass199_9438.method3236(86, -1402541861)) {
+		if (Class96_Sub21.keyRecorder.method3236(86, -1402541861)) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;

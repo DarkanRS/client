@@ -153,27 +153,27 @@ public class Class461 {
 				Class20.aClass282_Sub50_Sub7_168 = null;
 			} else {
 				if (Class468_Sub1.method12619(694674525) && Class20.anInt169 > 2) {
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) Class20.aClass482_171.head.next.next;
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) Class20.aClass482_171.tail.prev.prev;
 				} else {
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) Class20.aClass482_171.head.next;
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) Class20.aClass482_171.tail.prev;
 				}
 
-				Class1.aClass282_Sub50_Sub7_12 = (Class282_Sub50_Sub7) Class20.aClass482_171.head.next;
+				Class1.aClass282_Sub50_Sub7_12 = (Class282_Sub50_Sub7) Class20.aClass482_171.tail.prev;
 				if (Class20.anInt169 > 2) {
-					Class20.aClass282_Sub50_Sub7_168 = (Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.next;
+					Class20.aClass282_Sub50_Sub7_168 = (Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.prev;
 				} else {
 					Class20.aClass282_Sub50_Sub7_168 = null;
 				}
 			}
 
-			Class282_Sub53 class282_sub53_14 = (Class282_Sub53) client.aClass482_7267.head((byte) 32);
+			MouseRecord class282_sub53_14 = (MouseRecord) client.mouseRecords.head((byte) 32);
 			int i_4;
 			if (class282_sub53_14 != null) {
 				i_3 = class282_sub53_14.method13481(1796432776);
 				i_4 = class282_sub53_14.method13469(-1321812289);
 			} else {
-				i_3 = Class163.aClass209_2031.method3569(1994441818);
-				i_4 = Class163.aClass209_2031.method3570(756095591);
+				i_3 = Class163.mouseRecorder.method3569(1994441818);
+				i_4 = Class163.mouseRecorder.method3570(756095591);
 			}
 
 			boolean bool_16;

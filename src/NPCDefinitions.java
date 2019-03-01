@@ -86,7 +86,7 @@ public class NPCDefinitions {
 		if (this.aClass465_4896 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_4896.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_4896.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -210,12 +210,12 @@ public class NPCDefinitions {
 						}
 
 						if (arr_47[i_25] != null) {
-							if (arr_47[i_25].zoom < 13) {
+							if (arr_47[i_25].version < 13) {
 								arr_47[i_25].upscale(2);
 							}
 
 							if (this.anIntArrayArray4895 != null && this.anIntArrayArray4895[i_25] != null) {
-								arr_47[i_25].method2712(this.anIntArrayArray4895[i_25][0], this.anIntArrayArray4895[i_25][1], this.anIntArrayArray4895[i_25][2]);
+								arr_47[i_25].translate(this.anIntArrayArray4895[i_25][0], this.anIntArrayArray4895[i_25][1], this.anIntArrayArray4895[i_25][2]);
 							}
 						}
 					}
@@ -245,7 +245,7 @@ public class NPCDefinitions {
 							}
 
 							if (i_35 != 0 || i_27 != 0 || i_28 != 0) {
-								arr_47[i_25].method2712(i_35, i_27, i_28);
+								arr_47[i_25].translate(i_35, i_27, i_28);
 							}
 						}
 					}
@@ -448,7 +448,7 @@ public class NPCDefinitions {
 				}
 
 				for (i_15 = 0; i_15 < ints_12.length; i_15++) {
-					if (arr_26[i_15] != null && arr_26[i_15].zoom < 13) {
+					if (arr_26[i_15] != null && arr_26[i_15].version < 13) {
 						arr_26[i_15].upscale(2);
 					}
 				}
@@ -534,7 +534,7 @@ public class NPCDefinitions {
 		if (this.aClass465_4896 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_4896.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_4896.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -844,7 +844,7 @@ public class NPCDefinitions {
 	}
 
 	static final void method6908(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method12776(-558492277);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub18_8214.getValue(-558492277);
 	}
 
 }

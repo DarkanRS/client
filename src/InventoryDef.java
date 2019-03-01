@@ -1,4 +1,4 @@
-public class InventoryDef extends CacheableNode implements Interface46 {
+public class InventoryDef extends CacheableNode implements Definition {
 
 	public int anInt10276 = 0;
 	public int anInt10277 = 0;

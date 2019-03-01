@@ -68,7 +68,7 @@ public class Class357 implements Interface3 {
 
 		for (i_2 = 0; i_2 < client.anInt7211; i_2++) {
 			long long_6 = (long) client.anIntArray7212[i_2];
-			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.aClass465_7208.method7754(long_6);
+			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get(long_6);
 			if (class282_sub47_5 != null) {
 				((Animable) class282_sub47_5.anObject8068).method15812(655110500);
 			}

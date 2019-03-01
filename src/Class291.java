@@ -88,11 +88,11 @@ public class Class291 {
 	}
 
 	static void method5128(int i_0) {
-		aClass282_Sub50_Sub6_3491 = (Class282_Sub50_Sub6) aClass465_3461.method7754((long) i_0);
+		aClass282_Sub50_Sub6_3491 = (Class282_Sub50_Sub6) aClass465_3461.get((long) i_0);
 	}
 
 	public static Class282_Sub50_Sub6 method5130(int i_0) {
-		return (Class282_Sub50_Sub6) aClass465_3461.method7754((long) i_0);
+		return (Class282_Sub50_Sub6) aClass465_3461.get((long) i_0);
 	}
 
 	static void renderMap(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4) {

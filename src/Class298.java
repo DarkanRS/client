@@ -55,7 +55,7 @@ public class Class298 implements Interface41 {
 	}
 
 	static boolean method5303(byte b_0) {
-		return !Class504.method8388(client.anInt7166, (byte) 22);
+		return !Class504.loadingState(client.gameState, (byte) 22);
 	}
 
 	public static boolean method5304(int i_0, int i_1) {

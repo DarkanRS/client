@@ -26,7 +26,7 @@ public class Class463 {
 	static void method7724(Animable animable_0, int i_1) {
 		if (animable_0 instanceof NPC) {
 			NPC npc_2 = (NPC) animable_0;
-			if (npc_2.aClass409_10580 != null) {
+			if (npc_2.definitions != null) {
 				WorldMapAreaDefs.method3736(npc_2, npc_2.plane != Class84.myPlayer.plane, 2058310476);
 			}
 		} else if (animable_0 instanceof Player) {

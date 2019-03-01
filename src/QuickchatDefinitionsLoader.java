@@ -60,7 +60,7 @@ public class QuickchatDefinitionsLoader {
 	}
 
 	static final void method7215(byte b_0) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 89) == 2) {
+		if (Class393.preferences.aClass468_Sub27_8209.method12952((byte) 89) == 2) {
 			byte[][][] bytes_1 = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
 			byte b_2 = (byte) (client.anInt7286 - 4 & 0xff);
 			int i_3 = client.anInt7286 % IndexLoaders.MAP_REGION_DECODER.getSizeX(575613336);

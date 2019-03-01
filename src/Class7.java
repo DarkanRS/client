@@ -49,7 +49,7 @@ public class Class7 implements Runnable {
 			}
 		}
 
-		Class89.method1504(1000L);
+		Class89.sleep(1000L);
 	}
 
 	static void method356(CS2Executor cs2executor_0, int i_1) {

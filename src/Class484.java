@@ -5,7 +5,7 @@ public final class Class484 {
 	}
 
 	static final void method8199(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class158.method2730((short) -26831);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class158.windowedMode();
 	}
 
 	static void method8200(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, boolean bool_3, int i_4) {

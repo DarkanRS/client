@@ -111,7 +111,7 @@ public class Class5 {
 		} else {
 			Class192.ACCOUNT_CREATION_STAGE = null;
 			Class96_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5731;
-			Class365.setGameState(5, 1700286123);
+			Class365.setGameState(5);
 		}
 
 	}

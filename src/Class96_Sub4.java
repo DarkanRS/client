@@ -29,7 +29,7 @@ public class Class96_Sub4 extends Class96 {
 	}
 
 	static void method13789(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1, int i_2, int i_3) {
-		if (class282_sub50_sub7_0 != null && Class20.aClass482_171.head != class282_sub50_sub7_0) {
+		if (class282_sub50_sub7_0 != null && Class20.aClass482_171.tail != class282_sub50_sub7_0) {
 			int i_4 = class282_sub50_sub7_0.anInt9581;
 			int i_5 = class282_sub50_sub7_0.anInt9582;
 			int i_6 = class282_sub50_sub7_0.anInt9587;
@@ -151,7 +151,7 @@ public class Class96_Sub4 extends Class96 {
 
 			TCPMessage tcpmessage_15;
 			if (outgoingpacket_18 != null) {
-				Class282_Sub47 class282_sub47_19 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_7);
+				Class282_Sub47 class282_sub47_19 = (Class282_Sub47) client.NPCS.get((long) i_7);
 				if (class282_sub47_19 != null) {
 					NPC npc_14 = (NPC) class282_sub47_19.anObject8068;
 					client.anInt7293 = i_1;
@@ -269,7 +269,7 @@ public class Class96_Sub4 extends Class96 {
 						client.aString7275 = "Null";
 					}
 
-					client.aString7356 = icomponentdefinitions_23.aString1369 + Class59.method1163(16777215, 619010179);
+					client.aString7356 = icomponentdefinitions_23.aString1369 + ParticleProducerDefinition.method1163(16777215, 619010179);
 				}
 			} else {
 				OutgoingPacket outgoingpacket_27 = null;
@@ -302,7 +302,7 @@ public class Class96_Sub4 extends Class96 {
 				}
 
 				if (i_6 == 8) {
-					Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_7);
+					Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.NPCS.get((long) i_7);
 					if (class282_sub47_24 != null) {
 						NPC npc_25 = (NPC) class282_sub47_24.anObject8068;
 						client.anInt7293 = i_1;

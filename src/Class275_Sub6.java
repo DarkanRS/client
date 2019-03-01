@@ -10,7 +10,7 @@ public class Class275_Sub6 extends Class275 {
 
 	static final void method12596(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method7785(i_2, -2053641335);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub7_8210.method7785(i_2, -2053641335);
 	}
 
 	static final void method12597(CS2Executor cs2executor_0, byte b_1) {

@@ -20,7 +20,7 @@ import java.net.URL;
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 
 	public static int anInt3249;
-	public static Frame aFrame3260;
+	public static Frame fullScreenFrame;
 	static long aLong3242 = 20000000L;
 	public static int FPS = 0;
 	static long[] aLongArray3246 = new long[32];
@@ -44,7 +44,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public static int AVAILABLE_PROCESSORS = 1;
 	public static int anInt3243;
 	static File aFile3264;
-	public static Frame aFrame3261;
+	public static Frame engineFrame;
 	boolean aBool3254 = false;
 	boolean aBool3268 = false;
 	public static Class273 aClass273_3244;
@@ -194,7 +194,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		try {
 			Class274.aClass470_3336 = new Class470();
 		} catch (Exception exception_15) {
-			Class475.aBool5623 = false;
+			Class475.supportsFullScreen = false;
 		}
 
 		MeshModifier.aClass267_5026 = new Class267();
@@ -367,15 +367,15 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	synchronized void method4661(String string_1, short s_2) {
-		aFrame3261 = new Frame();
-		aFrame3261.setTitle(string_1);
-		aFrame3261.setResizable(true);
-		aFrame3261.addWindowListener(this);
-		aFrame3261.setBackground(Color.black);
-		aFrame3261.setVisible(true);
-		aFrame3261.toFront();
-		Insets insets_3 = aFrame3261.getInsets();
-		aFrame3261.setSize(insets_3.right + insets_3.left + Class45.anInt434, insets_3.top + insets_3.bottom + Class107.anInt1082);
+		engineFrame = new Frame();
+		engineFrame.setTitle(string_1);
+		engineFrame.setResizable(true);
+		engineFrame.addWindowListener(this);
+		engineFrame.setBackground(Color.black);
+		engineFrame.setVisible(true);
+		engineFrame.toFront();
+		Insets insets_3 = engineFrame.getInsets();
+		engineFrame.setSize(insets_3.right + insets_3.left + Class45.anInt434, insets_3.top + insets_3.bottom + Class107.anInt1082);
 	}
 
 	public boolean method4662(byte b_1) {
@@ -388,8 +388,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		container_1.add(Class351.gameCanvas);
 		Class351.gameCanvas.setSize(Class349.anInt4083, anInt3243 * -969250379);
 		Class351.gameCanvas.setVisible(true);
-		if (container_1 == aFrame3261) {
-			Insets insets_3 = aFrame3261.getInsets();
+		if (container_1 == engineFrame) {
+			Insets insets_3 = engineFrame.getInsets();
 			Class351.gameCanvas.setLocation(insets_3.left + anInt3250, insets_3.top + anInt3251);
 		} else {
 			Class351.gameCanvas.setLocation(anInt3250, anInt3251);
@@ -402,7 +402,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		Class351.gameCanvas.setFocusTraversalKeysEnabled(false);
 		aBool3274 = true;
 		aBool3257 = false;
-		aLong3280 = Class169.method2869(2040905349);
+		aLong3280 = Class169.time();
 	}
 
 	final boolean method4665(byte b_1) {
@@ -456,7 +456,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	void method4667(int i_1) {
-		long long_2 = Class169.method2869(1711185014);
+		long long_2 = Class169.time();
 		long long_4 = aLongArray3247[Class75.anInt747];
 		aLongArray3247[Class75.anInt747] = long_2;
 		Class75.anInt747 = Class75.anInt747 + 1 & 0x1f;
@@ -472,7 +472,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	void method4668(int i_1) {
-		long long_2 = Class169.method2869(1929238921);
+		long long_2 = Class169.time();
 		long long_4 = aLongArray3246[Class165.anInt2036];
 		aLongArray3246[Class165.anInt2036] = long_2;
 		Class165.anInt2036 = Class165.anInt2036 + 1 & 0x1f;
@@ -486,8 +486,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			aBool3274 = true;
 			Class351.gameCanvas.setSize(Class349.anInt4083, anInt3243 * -969250379);
 			Class351.gameCanvas.setVisible(true);
-			if (aFrame3261 != null && aFrame3260 == null) {
-				Insets insets_7 = aFrame3261.getInsets();
+			if (engineFrame != null && fullScreenFrame == null) {
+				Insets insets_7 = engineFrame.getInsets();
 				Class351.gameCanvas.setLocation(insets_7.left + anInt3250, insets_7.top + anInt3251);
 			} else {
 				Class351.gameCanvas.setLocation(anInt3250, anInt3251);
@@ -503,15 +503,15 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	public void stop() {
 		if (!aBool3276) {
-			aLong3255 = Class169.method2869(2052853338) + 4000L;
+			aLong3255 = Class169.time() + 4000L;
 		}
 
 	}
 
 	public void destroy() {
 		if (!aBool3276) {
-			aLong3255 = Class169.method2869(1658627673);
-			Class89.method1504(5000L);
+			aLong3255 = Class169.time();
+			Class89.sleep(5000L);
 			this.method4675(false, -2042911108);
 		}
 
@@ -520,7 +520,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public final synchronized void paint(Graphics graphics_1) {
 		if (!aBool3276) {
 			aBool3274 = true;
-			if (Class169.method2869(2051320390) - aLong3280 > 1000L) {
+			if (Class169.time() - aLong3280 > 1000L) {
 				Rectangle rectangle_2 = graphics_1.getClipBounds();
 				if (rectangle_2 == null || rectangle_2.width >= Class45.anInt434 && rectangle_2.height >= Class107.anInt1082) {
 					aBool3257 = true;
@@ -600,10 +600,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			}
 		}
 
-		if (aFrame3261 != null) {
-			aFrame3261.setVisible(false);
-			aFrame3261.dispose();
-			aFrame3261 = null;
+		if (engineFrame != null) {
+			engineFrame.setVisible(false);
+			engineFrame.dispose();
+			engineFrame = null;
 		}
 
 	}
@@ -690,7 +690,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	synchronized void method4704(int i_1) {
 		this.method4729((byte) 23);
-		Container container_2 = Class371.method6354((byte) 1);
+		Container container_2 = Class371.getActiveContainer((byte) 1);
 		Class351.gameCanvas = new Canvas_Sub1(container_2);
 		this.method4663(container_2, 135642590);
 	}
@@ -698,7 +698,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public final synchronized void method180(Graphics graphics_1) {
 		if (!aBool3276) {
 			aBool3274 = true;
-			if (Class169.method2869(1848544211) - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
+			if (Class169.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
 				Rectangle rectangle_2 = graphics_1.getClipBounds();
 				if (rectangle_2 == null || rectangle_2.width >= Class45.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511) {
 					aBool3257 = true;
@@ -763,28 +763,28 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	public void method171() {
 		if (!aBool3276) {
-			aLong3255 = (Class169.method2869(1644405330) + 4000L) * -7135659755925244301L * 2009587532026748603L;
+			aLong3255 = (Class169.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
 		}
 
 	}
 
 	public void method181() {
 		if (!aBool3276) {
-			aLong3255 = (Class169.method2869(1651695228) + 4000L) * -7135659755925244301L * 2009587532026748603L;
+			aLong3255 = (Class169.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
 		}
 
 	}
 
 	public void method172() {
 		if (!aBool3276) {
-			aLong3255 = (Class169.method2869(1855857438) + 4000L) * -7135659755925244301L * 2009587532026748603L;
+			aLong3255 = (Class169.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
 		}
 
 	}
 
 	public void method173() {
 		if (!aBool3276) {
-			aLong3255 = (Class169.method2869(1739901836) + 4000L) * -7135659755925244301L * 2009587532026748603L;
+			aLong3255 = (Class169.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
 		}
 
 	}
@@ -795,8 +795,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	public void method175() {
 		if (!aBool3276) {
-			aLong3255 = Class169.method2869(2146320231) * -7135659755925244301L * 2009587532026748603L;
-			Class89.method1504(5000L);
+			aLong3255 = Class169.time() * -7135659755925244301L * 2009587532026748603L;
+			Class89.sleep(5000L);
 			this.method4675(false, -1541596193);
 		}
 
@@ -817,7 +817,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public final synchronized void method179(Graphics graphics_1) {
 		if (!aBool3276) {
 			aBool3274 = true;
-			if (Class169.method2869(1731963969) - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
+			if (Class169.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
 				Rectangle rectangle_2 = graphics_1.getClipBounds();
 				if (rectangle_2 == null || rectangle_2.width >= Class45.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511) {
 					aBool3257 = true;
@@ -852,14 +852,14 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			}
 		}
 
-		Class371.method6354((byte) 1).setFocusCycleRoot(true);
+		Class371.getActiveContainer((byte) 1).setFocusCycleRoot(true);
 		MAX_MEMORY = (int) (Runtime.getRuntime().maxMemory() / 1048576L) + 1;
 		AVAILABLE_PROCESSORS = Runtime.getRuntime().availableProcessors();
 		this.method4704(1996724901);
 		this.method4676((byte) 58);
 		aClass273_3244 = Class84.method1461(192179911);
 
-		while (aLong3255 == 0L || Class169.method2869(1780900677) < aLong3255) {
+		while (aLong3255 == 0L || Class169.time() < aLong3255) {
 			anInt3279 = aClass273_3244.method4842(aLong3242);
 
 			for (int i_6 = 0; i_6 < anInt3279; i_6++) {
@@ -877,8 +877,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	public void method174() {
 		if (!aBool3276) {
-			aLong3255 = Class169.method2869(1931930446) * -7135659755925244301L * 2009587532026748603L;
-			Class89.method1504(5000L);
+			aLong3255 = Class169.time() * -7135659755925244301L * 2009587532026748603L;
+			Class89.sleep(5000L);
 			this.method4675(false, -1481410790);
 		}
 
@@ -932,8 +932,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	static final void method4776(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub6_8192, 0, -1214034115);
-		Class190.method3148((byte) 63);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 0, -1214034115);
+		Class190.savePreferences((byte) 63);
 		client.aBool7175 = false;
 	}
 
@@ -942,7 +942,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	static Class282_Sub50_Sub12 getIComponentVar(int i_0, long long_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.method7754((long) i_0 << 56 | long_1);
+		Class282_Sub50_Sub12 class282_sub50_sub12_3 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.get((long) i_0 << 56 | long_1);
 		if (class282_sub50_sub12_3 == null) {
 			class282_sub50_sub12_3 = new Class282_Sub50_Sub12(i_0, long_1);
 			Class282_Sub50_Sub12.aClass465_9667.method7765(class282_sub50_sub12_3, class282_sub50_sub12_3.data);

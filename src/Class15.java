@@ -1,15 +1,15 @@
 final class Class15 implements Interface35 {
 
 	public Object method216(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3, int i_4) {
-		return Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
+		return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
 	public Object method215(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
-		return Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
+		return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
 	public Object method214(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
-		return Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
+		return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
 	public static void method540(int i_0, byte b_1) {
@@ -18,7 +18,7 @@ final class Class15 implements Interface35 {
 		}
 
 		Class235.anInt2906 = i_0;
-		Class477.aClass539Array5632 = new Class539[Class89.anIntArray931[Class235.anInt2906] + 1];
+		Class477.aClass539Array5632 = new ParticleSystem[Class89.anIntArray931[Class235.anInt2906] + 1];
 		Class235.anInt2899 = 0;
 		Class235.anInt2901 = 0;
 	}

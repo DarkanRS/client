@@ -3,23 +3,23 @@ import java.util.Iterator;
 
 public class NodeCollection implements Iterable, Collection {
 
-	Node aClass282_5727;
-	public Node head = new Node();
+	Node current;
+	public Node tail = new Node();
 
 	public void append(Node node_1, int i_2) {
-		if (node_1.next != null) {
+		if (node_1.prev != null) {
 			node_1.remove();
 		}
 
-		node_1.next = this.head.next;
-		node_1.prev = this.head;
-		node_1.next.prev = node_1;
+		node_1.prev = this.tail.prev;
+		node_1.next = this.tail;
 		node_1.prev.next = node_1;
+		node_1.next.prev = node_1;
 	}
 
-	public Node method8061(byte b_1) {
-		Node node_2 = this.head.prev;
-		if (node_2 == this.head) {
+	public Node popHead(byte b_1) {
+		Node node_2 = this.tail.next;
+		if (node_2 == this.tail) {
 			return null;
 		} else {
 			node_2.remove();
@@ -28,21 +28,21 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	void method8062(NodeCollection nodecollection_1, Node node_2, int i_3) {
-		Node node_4 = this.head.next;
-		this.head.next = node_2.next;
-		node_2.next.prev = this.head;
-		if (node_2 != this.head) {
-			node_2.next = nodecollection_1.head.next;
-			node_2.next.prev = node_2;
-			node_4.prev = nodecollection_1.head;
-			nodecollection_1.head.next = node_4;
+		Node node_4 = this.tail.prev;
+		this.tail.prev = node_2.prev;
+		node_2.prev.next = this.tail;
+		if (node_2 != this.tail) {
+			node_2.prev = nodecollection_1.tail.prev;
+			node_2.prev.next = node_2;
+			node_4.next = nodecollection_1.tail;
+			nodecollection_1.tail.prev = node_4;
 		}
 
 	}
 
 	public void method8063(NodeCollection nodecollection_1, int i_2) {
-		if (this.head.prev != this.head) {
-			this.method8062(nodecollection_1, this.head.prev, -1691020971);
+		if (this.tail.next != this.tail) {
+			this.method8062(nodecollection_1, this.tail.next, -1691020971);
 		}
 
 	}
@@ -58,46 +58,46 @@ public class NodeCollection implements Iterable, Collection {
 	Node method8066(Node node_1, byte b_2) {
 		Node node_3;
 		if (node_1 == null) {
-			node_3 = this.head.next;
+			node_3 = this.tail.prev;
 		} else {
 			node_3 = node_1;
 		}
 
-		if (node_3 == this.head) {
-			this.aClass282_5727 = null;
+		if (node_3 == this.tail) {
+			this.current = null;
 			return null;
 		} else {
-			this.aClass282_5727 = node_3.next;
+			this.current = node_3.prev;
 			return node_3;
 		}
 	}
 
 	public Node next(int i_1) {
-		Node node_2 = this.aClass282_5727;
-		if (node_2 == this.head) {
-			this.aClass282_5727 = null;
+		Node node_2 = this.current;
+		if (node_2 == this.tail) {
+			this.current = null;
 			return null;
 		} else {
-			this.aClass282_5727 = node_2.prev;
+			this.current = node_2.next;
 			return node_2;
 		}
 	}
 
 	public Node method8068(byte b_1) {
-		Node node_2 = this.aClass282_5727;
-		if (node_2 == this.head) {
-			this.aClass282_5727 = null;
+		Node node_2 = this.current;
+		if (node_2 == this.tail) {
+			this.current = null;
 			return null;
 		} else {
-			this.aClass282_5727 = node_2.next;
+			this.current = node_2.prev;
 			return node_2;
 		}
 	}
 
-	public int size(int i_1) {
+	public int size() {
 		int i_2 = 0;
 
-		for (Node node_3 = this.head.prev; node_3 != this.head; node_3 = node_3.prev) {
+		for (Node node_3 = this.tail.next; node_3 != this.tail; node_3 = node_3.next) {
 			++i_2;
 		}
 
@@ -109,10 +109,10 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	Node[] method8070(int i_1) {
-		Node[] arr_2 = new Node[this.size(-1374254477)];
+		Node[] arr_2 = new Node[this.size()];
 		int i_3 = 0;
 
-		for (Node node_4 = this.head.prev; node_4 != this.head; node_4 = node_4.prev) {
+		for (Node node_4 = this.tail.next; node_4 != this.tail; node_4 = node_4.next) {
 			arr_2[i_3++] = node_4;
 		}
 
@@ -138,7 +138,7 @@ public class NodeCollection implements Iterable, Collection {
 	public Object[] toArray(Object[] arr_1) {
 		int i_2 = 0;
 
-		for (Node node_3 = this.head.prev; node_3 != this.head; node_3 = node_3.prev) {
+		for (Node node_3 = this.tail.next; node_3 != this.tail; node_3 = node_3.next) {
 			arr_1[i_2++] = node_3;
 		}
 
@@ -177,22 +177,22 @@ public class NodeCollection implements Iterable, Collection {
 	Node method8076(Node node_1, int i_2) {
 		Node node_3;
 		if (node_1 == null) {
-			node_3 = this.head.prev;
+			node_3 = this.tail.next;
 		} else {
 			node_3 = node_1;
 		}
 
-		if (node_3 == this.head) {
-			this.aClass282_5727 = null;
+		if (node_3 == this.tail) {
+			this.current = null;
 			return null;
 		} else {
-			this.aClass282_5727 = node_3.prev;
+			this.current = node_3.next;
 			return node_3;
 		}
 	}
 
 	public boolean hasNext(int i_1) {
-		return this.head.prev == this.head;
+		return this.tail.next == this.tail;
 	}
 
 	public Node head(byte b_1) {
@@ -200,30 +200,26 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public void method8098(Node node_1, byte b_2) {
-		if (node_1.next != null) {
+		if (node_1.prev != null) {
 			node_1.remove();
 		}
 
-		node_1.next = this.head;
-		node_1.prev = this.head.prev;
-		node_1.next.prev = node_1;
+		node_1.prev = this.tail;
+		node_1.next = this.tail.next;
 		node_1.prev.next = node_1;
+		node_1.next.prev = node_1;
 	}
 
 	public NodeCollection() {
-		this.head.prev = this.head;
-		this.head.next = this.head;
+		this.tail.next = this.tail;
+		this.tail.prev = this.tail;
 	}
 
 	public void method8118(int i_1) {
-		while (this.head.prev != this.head) {
-			this.head.prev.remove();
+		while (this.tail.next != this.tail) {
+			this.tail.next.remove();
 		}
 
-	}
-
-	public int size() {
-		return this.size(-1374254477);
 	}
 
 	public boolean remove(Object object_1) {
@@ -270,7 +266,7 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public static void method8148(byte b_0) {
-		Class253.method4330(22050, Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(722134232) == 1, 2);
+		Class253.method4330(22050, Class393.preferences.aClass468_Sub10_8215.method12691(722134232) == 1, 2);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(true, Class282_Sub20_Sub10.method15262((Class282_Sub15_Sub2) null, 191335579), (short) 27702);
 		Class100.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);

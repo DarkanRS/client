@@ -1,16 +1,16 @@
-public abstract class Class282_Sub53 extends Node {
+public abstract class MouseRecord extends Node {
 
 	public abstract int method13469(int var1);
 
-	public abstract int method13470(int var1);
+	public abstract int getClickType(int var1);
 
 	public abstract long method13471(int var1);
 
 	public abstract int method13472();
 
-	public abstract int method13473(byte var1);
+	public abstract int getMeta(byte var1);
 
-	public abstract void method13475(int var1);
+	public abstract void cache(int var1);
 
 	public abstract int method13476();
 

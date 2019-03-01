@@ -4,7 +4,7 @@ public class Class232 implements Interface17 {
 	public static int anInt2879;
 	int[] anIntArray2877;
 
-	public boolean method126(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method126(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		int[] ints_5 = this.anIntArray2877;
 
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
@@ -17,7 +17,7 @@ public class Class232 implements Interface17 {
 		return true;
 	}
 
-	public boolean method127(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4, byte b_5) {
+	public boolean method127(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4, byte b_5) {
 		int[] ints_6 = this.anIntArray2877;
 
 		for (int i_7 = 0; i_7 < ints_6.length; i_7++) {
@@ -30,7 +30,7 @@ public class Class232 implements Interface17 {
 		return true;
 	}
 
-	public boolean method128(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method128(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		int[] ints_5 = this.anIntArray2877;
 
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
@@ -43,7 +43,7 @@ public class Class232 implements Interface17 {
 		return true;
 	}
 
-	public boolean method129(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method129(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		int[] ints_5 = this.anIntArray2877;
 
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {

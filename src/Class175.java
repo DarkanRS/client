@@ -69,7 +69,7 @@ public class Class175 {
 	static final void method2963(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (Class291_Sub1.aClass465_8029 != null) {
-			Node node_3 = Class291_Sub1.aClass465_8029.method7754((long) i_2);
+			Node node_3 = Class291_Sub1.aClass465_8029.get((long) i_2);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = node_3 != null ? 1 : 0;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
@@ -80,7 +80,7 @@ public class Class175 {
 	static void method2964(Class282_Sub48 class282_sub48_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if (class282_sub48_0.anInt8095 != -1 || class282_sub48_0.anIntArray8102 != null) {
 			int i_6 = 0;
-			int i_7 = class282_sub48_0.anInt8089 * Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(2107219176) >> 8;
+			int i_7 = class282_sub48_0.anInt8089 * Class393.preferences.aClass468_Sub13_8193.method12714(2107219176) >> 8;
 			if (i_2 > class282_sub48_0.anInt8079) {
 				i_6 += i_2 - class282_sub48_0.anInt8079;
 			} else if (i_2 < class282_sub48_0.anInt8107) {
@@ -93,7 +93,7 @@ public class Class175 {
 				i_6 += class282_sub48_0.anInt8078 - i_3;
 			}
 
-			if (class282_sub48_0.anInt8105 != 0 && i_6 - 256 <= class282_sub48_0.anInt8105 && Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(1276396243) != 0 && class282_sub48_0.anInt8076 == i_1) {
+			if (class282_sub48_0.anInt8105 != 0 && i_6 - 256 <= class282_sub48_0.anInt8105 && Class393.preferences.aClass468_Sub13_8193.method12714(1276396243) != 0 && class282_sub48_0.anInt8076 == i_1) {
 				i_6 -= 256;
 				if (i_6 < 0) {
 					i_6 = 0;

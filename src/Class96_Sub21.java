@@ -1,6 +1,6 @@
 public class Class96_Sub21 extends Class96 {
 
-	public static Class199 aClass199_9438;
+	public static Class199 keyRecorder;
 	int anInt9437;
 	int anInt9436;
 
@@ -47,9 +47,9 @@ public class Class96_Sub21 extends Class96 {
 
 			if (b_6 != class282_sub48_5.anInt8091) {
 				i_9 = Class282_Sub11_Sub1.method15433(class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085, 912866554);
-				NPCDefinitions npcdefinitions_10 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580;
+				NPCDefinitions npcdefinitions_10 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions;
 				if (npcdefinitions_10.anIntArray4886 != null) {
-					npcdefinitions_10 = npcdefinitions_10.method6884(Class158_Sub1.aClass3_8507, 265881693);
+					npcdefinitions_10 = npcdefinitions_10.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 				}
 
 				if (npcdefinitions_10 != null && i_9 != -1) {

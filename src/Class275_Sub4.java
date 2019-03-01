@@ -1,6 +1,6 @@
 public class Class275_Sub4 extends Class275 {
 
-	int anInt7838 = (int) (Class169.method2869(1747469156) / 1000L);
+	int anInt7838 = (int) (Class169.time() / 1000L);
 	String aString7837;
 	short aShort7839;
 
@@ -51,7 +51,7 @@ public class Class275_Sub4 extends Class275 {
 	}
 
 	static void method12587(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4105(Class158_Sub1.aClass3_8507, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], 93625804) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4105(Class158_Sub1.PLAYER_VAR_PROVIDER, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], 93625804) ? 1 : 0;
 		--cs2executor_0.intStackPtr;
 	}
 

@@ -62,7 +62,7 @@ public class Class116 {
 
 	static final void method1968(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method7785(i_2, -225955104);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub29_8201.method7785(i_2, -225955104);
 	}
 
 	public static MeshRasterizer method1969(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, MeshRasterizer meshrasterizer_6, int i_7, int i_8, int i_9, int i_10, Animation animation_11, int i_12) {

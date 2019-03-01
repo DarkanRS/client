@@ -43,7 +43,7 @@ public class Class501 {
 		NativeLibraryLoader.anInt3240 = 2;
 		Class86.anInt833 = -1;
 		Class508.anInt5864 = -1;
-		Class365.setGameState(13, 2041470654);
+		Class365.setGameState(13);
 
 		for (i_1 = 0; i_1 < 107; i_1++) {
 			client.aBoolArray7443[i_1] = true;

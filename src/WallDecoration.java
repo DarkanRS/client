@@ -376,7 +376,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 							i_9 = (int) vector3_8.x - (int) vector3_15.x;
 							i_10 = (int) vector3_8.z - (int) vector3_15.z;
 						} else {
-							Class282_Sub47 class282_sub47_16 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_5);
+							Class282_Sub47 class282_sub47_16 = (Class282_Sub47) client.NPCS.get((long) i_5);
 							if (class282_sub47_16 == null) {
 								animable_0.method15798(i_4, -1, (short) 256);
 								continue;
@@ -404,7 +404,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	public static void method16088(int i_0, byte b_1) {
-		if (client.anInt7166 == 3) {
+		if (client.gameState == 3) {
 			TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.isaac, -396054970);
 			tcpmessage_2.buffer.writeByte(i_0);
 			client.aClass184_7218.method3049(tcpmessage_2, 820598049);

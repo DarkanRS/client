@@ -137,13 +137,13 @@ public class ItemDefaultsLoader {
 	}
 
 	public static void method7081(byte b_0) {
-		Class365.setGameState(18, 1932929676);
+		Class365.setGameState(18);
 		Class459.method7678(142230333);
 		System.gc();
 	}
 
 	static final void method7082(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(-1233469498) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub10_8215.method12691(-1233469498) == 1 ? 1 : 0;
 	}
 
 	static void method7083(CS2Executor cs2executor_0, int i_1) {

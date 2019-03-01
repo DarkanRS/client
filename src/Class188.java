@@ -117,7 +117,7 @@ public class Class188 {
 			i_10 = rsbitsbuffer_2.readUnsignedShort();
 			i_11 = rsbitsbuffer_2.readUnsignedShort();
 			if (client.aClass465_7414 != null) {
-				Class282_Sub29 class282_sub29_12 = (Class282_Sub29) client.aClass465_7414.method7754((long) (Class272.anInt3331 << 28 | i_6 << 14 | i_8));
+				Class282_Sub29 class282_sub29_12 = (Class282_Sub29) client.aClass465_7414.get((long) (Class272.anInt3331 << 28 | i_6 << 14 | i_8));
 				if (class282_sub29_12 != null) {
 					for (Class282_Sub34 class282_sub34_13 = (Class282_Sub34) class282_sub29_12.aClass482_7708.head((byte) 55); class282_sub34_13 != null; class282_sub34_13 = (Class282_Sub34) class282_sub29_12.aClass482_7708.next(1296718058)) {
 						if ((i_9 & 0x7fff) == class282_sub34_13.anInt7853 && i_10 == class282_sub34_13.anInt7852) {
@@ -155,7 +155,7 @@ public class Class188 {
 					i_9 = rsbitsbuffer_2.readUnsignedByte();
 					if (IndexLoaders.MAP_REGION_DECODER.method4419(-1960644512) != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1162153340) && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1140122689)) {
 						if (i_6 == -1) {
-							Class282_Sub50_Sub10 class282_sub50_sub10_22 = (Class282_Sub50_Sub10) client.aClass465_7334.method7754((long) (i_21 << 16 | i_5));
+							Class282_Sub50_Sub10 class282_sub50_sub10_22 = (Class282_Sub50_Sub10) client.aClass465_7334.get((long) (i_21 << 16 | i_5));
 							if (class282_sub50_sub10_22 != null) {
 								class282_sub50_sub10_22.aClass521_Sub1_Sub1_Sub4_9636.method15931(-2141216299);
 								class282_sub50_sub10_22.remove();
@@ -267,7 +267,7 @@ public class Class188 {
 						i_7 = (i_3 >> 4 & 0x7) + SceneObjectType.anInt5495;
 						i_8 = i_7 + coordgrid_4.x;
 						i_9 = rsbitsbuffer_2.readShortLE128();
-						Class282_Sub29 class282_sub29_39 = (Class282_Sub29) client.aClass465_7414.method7754((long) (Class272.anInt3331 << 28 | i_6 << 14 | i_8));
+						Class282_Sub29 class282_sub29_39 = (Class282_Sub29) client.aClass465_7414.get((long) (Class272.anInt3331 << 28 | i_6 << 14 | i_8));
 						if (class282_sub29_39 != null) {
 							for (Class282_Sub34 class282_sub34_26 = (Class282_Sub34) class282_sub29_39.aClass482_7708.head((byte) 19); class282_sub34_26 != null; class282_sub34_26 = (Class282_Sub34) class282_sub29_39.aClass482_7708.next(715558625)) {
 								if ((i_9 & 0x7fff) == class282_sub34_26.anInt7853) {
@@ -368,7 +368,7 @@ public class Class188 {
 							i_8 = rsbitsbuffer_2.read24BitUnsignedInteger();
 							String string_27 = rsbitsbuffer_2.readString();
 							if (IndexLoaders.MAP_REGION_DECODER.method4419(-2041304970) != Class256.aClass256_3153) {
-								Class59.method1161(Class272.anInt3331, i_21, i_5, i_7, i_6, i_8, string_27, (short) 17078);
+								ParticleProducerDefinition.method1161(Class272.anInt3331, i_21, i_5, i_7, i_6, i_8, string_27, (short) 17078);
 							}
 						} else if (TilestreamPacket.aClass364_4217 == tilestreampacket_0) {
 							i_3 = rsbitsbuffer_2.readUnsignedByte();
@@ -486,7 +486,7 @@ public class Class188 {
 		if (NamedFileReference.method867(1523656747) != Class279.aClass279_3368) {
 			try {
 				String string_1 = Class282_Sub44.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
-				int i_2 = (int) (Class169.method2869(2038445900) / 86400000L) - 11745;
+				int i_2 = (int) (Class169.time() / 86400000L) - 11745;
 				String string_3 = "usrdob=" + i_2 + "; version=1; path=/; domain=" + string_1;
 				Class441.method7376(Class282_Sub44.anApplet8065, "document.cookie=\"" + string_3 + "\"", (byte) 18);
 			} catch (Throwable throwable_4) {

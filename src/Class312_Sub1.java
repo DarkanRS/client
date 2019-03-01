@@ -4,7 +4,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 	Class202 aClass202_7778;
 
-	public void method5522(Object object_1, boolean bool_2, int i_3) {
+	public void init(Object object_1, boolean bool_2, int i_3) {
 		if (this.aClass202_7778 != null) {
 			try {
 				this.aClass202_7778.method3318(83456367);
@@ -33,7 +33,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								this.aClass282_Sub35_3655.writeByte(4);
 								this.aClass282_Sub35_3655.writeByte(this.aByte3656);
 								this.aClass282_Sub35_3655.writeInt(0);
-								this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1775828673);
+								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1775828673);
 							} catch (IOException ioexception_7) {
 								try {
 									this.aClass202_7778.method3318(1779285831);
@@ -48,7 +48,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						}
 
 						this.anInt3653 = 0;
-						this.aLong3648 = Class169.method2869(1852641285);
+						this.aLong3648 = Class169.time();
 						return;
 					}
 
@@ -66,7 +66,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(bool_1 ? 2 : 3);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -443418120);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -443418120);
 			} catch (IOException ioexception_5) {
 				try {
 					this.aClass202_7778.method3318(-1183746217);
@@ -102,7 +102,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0;
 				this.aClass282_Sub35_3655.writeByte(bool_1 ? 2 : 3);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -585768342);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -585768342);
 			} catch (IOException ioexception_6) {
 				try {
 					this.aClass202_7778.method3318(1946895320);
@@ -124,7 +124,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1373474989);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1373474989);
 			} catch (IOException ioexception_5) {
 				try {
 					this.aClass202_7778.method3318(-1489776443);
@@ -196,7 +196,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5524() {
 		int i_3;
 		if (this.aClass202_7778 != null) {
-			long long_1 = Class169.method2869(1579895096);
+			long long_1 = Class169.time();
 			i_3 = (int) (long_1 - 3280542953542993467L * this.aLong3648 * 4647288634594403059L);
 			this.aLong3648 = 4647288634594403059L * long_1 * 3280542953542993467L;
 			if (i_3 > 200) {
@@ -224,7 +224,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2053652444);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2053652444);
 					this.aClass477_3645.method7936(class282_sub50_sub11_sub1_2, -1738910950);
 				}
 
@@ -232,7 +232,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1058968042);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1058968042);
 					this.aClass477_3654.method7936(class282_sub50_sub11_sub1_2, -1738910950);
 				}
 
@@ -263,7 +263,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_5 = i_3;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -1598930989);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -1598930989);
 						if (this.aByte3656 != 0) {
 							for (i_6 = 0; i_6 < i_5; i_6++) {
 								this.aClass282_Sub35_3647.buffer[i_6 + -1990677291 * this.aClass282_Sub35_3647.index * -1115476867] ^= this.aByte3656;
@@ -328,7 +328,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -2058896407);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -2058896407);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 * -1990677291] ^= this.aByte3656;
@@ -367,7 +367,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5542() {
 		int i_3;
 		if (this.aClass202_7778 != null) {
-			long long_1 = Class169.method2869(1587330491);
+			long long_1 = Class169.time();
 			i_3 = (int) (long_1 - 3280542953542993467L * this.aLong3648 * 4647288634594403059L);
 			this.aLong3648 = 4647288634594403059L * long_1 * 3280542953542993467L;
 			if (i_3 > 200) {
@@ -395,7 +395,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 1134264052);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 1134264052);
 					this.aClass477_3645.method7936(class282_sub50_sub11_sub1_2, -1738910950);
 				}
 
@@ -403,7 +403,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2080680995);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2080680995);
 					this.aClass477_3654.method7936(class282_sub50_sub11_sub1_2, -1738910950);
 				}
 
@@ -434,7 +434,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_5 = i_3;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -717221969);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -717221969);
 						if (this.aByte3656 != 0) {
 							for (i_6 = 0; i_6 < i_5; i_6++) {
 								this.aClass282_Sub35_3647.buffer[i_6 + -1990677291 * this.aClass282_Sub35_3647.index * -1115476867] ^= this.aByte3656;
@@ -499,7 +499,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -625709122);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -625709122);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 * -1990677291] ^= this.aByte3656;
@@ -542,7 +542,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.writeByte(6);
 				this.aClass282_Sub35_3655.write24BitInt(3, (byte) 14);
 				this.aClass282_Sub35_3655.writeShort(0, 1417031095);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 810595372);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 810595372);
 			} catch (IOException ioexception_5) {
 				try {
 					this.aClass202_7778.method3318(192003951);
@@ -587,7 +587,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								this.aClass282_Sub35_3655.writeByte(4);
 								this.aClass282_Sub35_3655.writeByte(this.aByte3656);
 								this.aClass282_Sub35_3655.writeInt(0);
-								this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1020594054);
+								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1020594054);
 							} catch (IOException ioexception_6) {
 								try {
 									this.aClass202_7778.method3318(684361654);
@@ -602,7 +602,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						}
 
 						this.anInt3653 = 0 * -1846332317;
-						this.aLong3648 = Class169.method2869(1578275045) * 4647288634594403059L * 3280542953542993467L;
+						this.aLong3648 = Class169.time() * 4647288634594403059L * 3280542953542993467L;
 						return;
 					}
 
@@ -643,7 +643,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								this.aClass282_Sub35_3655.writeByte(4);
 								this.aClass282_Sub35_3655.writeByte(this.aByte3656);
 								this.aClass282_Sub35_3655.writeInt(0);
-								this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 1101181210);
+								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 1101181210);
 							} catch (IOException ioexception_6) {
 								try {
 									this.aClass202_7778.method3318(1984653342);
@@ -658,7 +658,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						}
 
 						this.anInt3653 = 0 * -1846332317;
-						this.aLong3648 = Class169.method2869(1665275219) * 4647288634594403059L * 3280542953542993467L;
+						this.aLong3648 = Class169.time() * 4647288634594403059L * 3280542953542993467L;
 						return;
 					}
 
@@ -673,7 +673,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5521(byte b_1) {
 		int i_4;
 		if (this.aClass202_7778 != null) {
-			long long_2 = Class169.method2869(1789732045);
+			long long_2 = Class169.time();
 			i_4 = (int) (long_2 - this.aLong3648);
 			this.aLong3648 = long_2;
 			if (i_4 > 200) {
@@ -701,7 +701,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_3.key);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1323919760);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1323919760);
 					this.aClass477_3645.method7936(class282_sub50_sub11_sub1_3, -1738910950);
 				}
 
@@ -709,7 +709,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_3.key);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 5845484);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 5845484);
 					this.aClass477_3654.method7936(class282_sub50_sub11_sub1_3, -1738910950);
 				}
 
@@ -740,7 +740,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_4;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub35_3647.buffer, this.aClass282_Sub35_3647.index, i_6, -1570276139);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, this.aClass282_Sub35_3647.index, i_6, -1570276139);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.aClass282_Sub35_3647.buffer[i_7 + this.aClass282_Sub35_3647.index] ^= this.aByte3656;
@@ -805,7 +805,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_7 = i_4;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index, i_7, -1556112403);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index, i_7, -1556112403);
 						if (this.aByte3656 != 0) {
 							for (i_8 = 0; i_8 < i_7; i_8++) {
 								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_8 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index] ^= this.aByte3656;
@@ -851,7 +851,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5557() {
 		int i_3;
 		if (this.aClass202_7778 != null) {
-			long long_1 = Class169.method2869(1829447666);
+			long long_1 = Class169.time();
 			i_3 = (int) (long_1 - 3280542953542993467L * this.aLong3648 * 4647288634594403059L);
 			this.aLong3648 = 4647288634594403059L * long_1 * 3280542953542993467L;
 			if (i_3 > 200) {
@@ -879,7 +879,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -943163618);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -943163618);
 					this.aClass477_3645.method7936(class282_sub50_sub11_sub1_2, -1738910950);
 				}
 
@@ -887,7 +887,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -477727140);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -477727140);
 					this.aClass477_3654.method7936(class282_sub50_sub11_sub1_2, -1738910950);
 				}
 
@@ -918,7 +918,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_5 = i_3;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -914075102);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -914075102);
 						if (this.aByte3656 != 0) {
 							for (i_6 = 0; i_6 < i_5; i_6++) {
 								this.aClass282_Sub35_3647.buffer[i_6 + -1990677291 * this.aClass282_Sub35_3647.index * -1115476867] ^= this.aByte3656;
@@ -983,7 +983,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.method3327(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -777445999);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -777445999);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 * -1990677291] ^= this.aByte3656;
@@ -1025,7 +1025,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -533636623);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -533636623);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(2071907403);
@@ -1061,7 +1061,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -199994614);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -199994614);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(-800915699);
@@ -1083,7 +1083,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 391543029);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 391543029);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(855871609);
@@ -1105,7 +1105,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.method3311(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2081026700);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2081026700);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(198330451);

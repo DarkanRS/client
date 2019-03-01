@@ -119,8 +119,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 		for (int i_9 = 0; i_9 < rsmesh_2.anInt1973; i_9++) {
 			if (rsmesh_2.aByteArray1985 == null || rsmesh_2.aByteArray1985[i_9] != 2) {
-				if (rsmesh_2.aShortArray1993 != null && rsmesh_2.aShortArray1993[i_9] != -1) {
-					Class169 class169_72 = interface22_7.method144(rsmesh_2.aShortArray1993[i_9] & 0xffff, -1871308532);
+				if (rsmesh_2.textures != null && rsmesh_2.textures[i_9] != -1) {
+					Class169 class169_72 = interface22_7.method144(rsmesh_2.textures[i_9] & 0xffff, -1871308532);
 					if (((this.anInt8241 & 0x40) == 0 || !class169_72.aBool2056) && class169_72.aBool2072) {
 						continue;
 					}
@@ -178,8 +178,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 			}
 
 			s_82 = -1;
-			if (rsmesh_2.aShortArray1993 != null) {
-				s_82 = rsmesh_2.aShortArray1993[i_12];
+			if (rsmesh_2.textures != null) {
+				s_82 = rsmesh_2.textures[i_12];
 				if (s_82 != -1) {
 					class169_65 = interface22_7.method144(s_82 & 0xffff, -1964447414);
 					if ((this.anInt8241 & 0x40) != 0 && class169_65.aBool2056) {
@@ -214,11 +214,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 
 		Class159.method2736(longs_63, ints_8, (byte) 8);
-		this.anInt8303 = rsmesh_2.anInt1974;
+		this.anInt8303 = rsmesh_2.vertexCount;
 		this.anInt8248 = rsmesh_2.anInt1999;
-		this.anIntArray8249 = rsmesh_2.anIntArray1976;
-		this.anIntArray8250 = rsmesh_2.anIntArray2003;
-		this.anIntArray8251 = rsmesh_2.anIntArray1978;
+		this.anIntArray8249 = rsmesh_2.vertexX;
+		this.anIntArray8250 = rsmesh_2.vertexY;
+		this.anIntArray8251 = rsmesh_2.vertexZ;
 		this.aShortArray8253 = rsmesh_2.aShortArray1980;
 		Class126[] arr_64 = new Class126[this.anInt8248];
 		this.aClass87Array8252 = rsmesh_2.aClass87Array2007;
@@ -245,7 +245,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 					throw new RuntimeException();
 				}
 
-				i_79 = Class540.anIntArray7136[rsmesh_2.aShortArray2006[class84_110.anInt809] & 0xffff] & 0xffffff;
+				i_79 = Class540.anIntArray7136[rsmesh_2.colors[class84_110.anInt809] & 0xffff] & 0xffffff;
 				i_79 |= 255 - (rsmesh_2.aByteArray1975 != null ? rsmesh_2.aByteArray1975[class84_110.anInt809] : 0) << 24;
 				this.aClass162Array8295[i_12] = new Class162(i_111, rsmesh_2.aShortArray1982[class84_110.anInt809], rsmesh_2.aShortArray1983[class84_110.anInt809], rsmesh_2.aShortArray1984[class84_110.anInt809], class347_66.anInt4054, class347_66.anInt4050, class347_66.anInt4055, class347_66.anInt4057, class347_66.anInt4051, class347_66.aBool4059, class347_66.aBool4058, class84_110.anInt810);
 				this.aClass145Array8258[i_12] = new Class145(i_79);
@@ -345,7 +345,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_85;
 		for (i_79 = 0; i_79 < this.anInt8262; i_79++) {
 			int i_81 = ints_8[i_79];
-			i_85 = rsmesh_2.aShortArray2006[i_81] & 0xffff;
+			i_85 = rsmesh_2.colors[i_81] & 0xffff;
 			if (rsmesh_2.aByteArray1988 == null) {
 				i_19 = -1;
 			} else {
@@ -358,7 +358,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 				i_20 = rsmesh_2.aByteArray1975[i_81] & 0xff;
 			}
 
-			short s_86 = rsmesh_2.aShortArray1993 == null ? -1 : rsmesh_2.aShortArray1993[i_81];
+			short s_86 = rsmesh_2.textures == null ? -1 : rsmesh_2.textures[i_81];
 			if (s_86 != -1 && (this.anInt8241 & 0x40) != 0) {
 				class169_71 = interface22_7.method144(s_86 & 0xffff, -1997959177);
 				if (class169_71.aBool2056) {
@@ -410,24 +410,24 @@ public class Class528_Sub1 extends MeshRasterizer {
 						s_35 = rsmesh_2.aShortArray1996[i_19];
 						s_36 = rsmesh_2.aShortArray1987[i_19];
 						short s_77 = rsmesh_2.aShortArray1998[i_19];
-						float f_38 = (float) rsmesh_2.anIntArray1976[s_35];
-						float f_39 = (float) rsmesh_2.anIntArray2003[s_35];
-						f_40 = (float) rsmesh_2.anIntArray1978[s_35];
-						f_41 = (float) rsmesh_2.anIntArray1976[s_36] - f_38;
-						f_42 = (float) rsmesh_2.anIntArray2003[s_36] - f_39;
-						float f_43 = (float) rsmesh_2.anIntArray1978[s_36] - f_40;
-						float f_44 = (float) rsmesh_2.anIntArray1976[s_77] - f_38;
-						float f_45 = (float) rsmesh_2.anIntArray2003[s_77] - f_39;
-						float f_46 = (float) rsmesh_2.anIntArray1978[s_77] - f_40;
-						float f_47 = (float) rsmesh_2.anIntArray1976[s_75] - f_38;
-						float f_48 = (float) rsmesh_2.anIntArray2003[s_75] - f_39;
-						float f_49 = (float) rsmesh_2.anIntArray1978[s_75] - f_40;
-						float f_50 = (float) rsmesh_2.anIntArray1976[s_76] - f_38;
-						float f_51 = (float) rsmesh_2.anIntArray2003[s_76] - f_39;
-						f_52 = (float) rsmesh_2.anIntArray1978[s_76] - f_40;
-						f_53 = (float) rsmesh_2.anIntArray1976[s_34] - f_38;
-						f_54 = (float) rsmesh_2.anIntArray2003[s_34] - f_39;
-						f_55 = (float) rsmesh_2.anIntArray1978[s_34] - f_40;
+						float f_38 = (float) rsmesh_2.vertexX[s_35];
+						float f_39 = (float) rsmesh_2.vertexY[s_35];
+						f_40 = (float) rsmesh_2.vertexZ[s_35];
+						f_41 = (float) rsmesh_2.vertexX[s_36] - f_38;
+						f_42 = (float) rsmesh_2.vertexY[s_36] - f_39;
+						float f_43 = (float) rsmesh_2.vertexZ[s_36] - f_40;
+						float f_44 = (float) rsmesh_2.vertexX[s_77] - f_38;
+						float f_45 = (float) rsmesh_2.vertexY[s_77] - f_39;
+						float f_46 = (float) rsmesh_2.vertexZ[s_77] - f_40;
+						float f_47 = (float) rsmesh_2.vertexX[s_75] - f_38;
+						float f_48 = (float) rsmesh_2.vertexY[s_75] - f_39;
+						float f_49 = (float) rsmesh_2.vertexZ[s_75] - f_40;
+						float f_50 = (float) rsmesh_2.vertexX[s_76] - f_38;
+						float f_51 = (float) rsmesh_2.vertexY[s_76] - f_39;
+						f_52 = (float) rsmesh_2.vertexZ[s_76] - f_40;
+						f_53 = (float) rsmesh_2.vertexX[s_34] - f_38;
+						f_54 = (float) rsmesh_2.vertexY[s_34] - f_39;
+						f_55 = (float) rsmesh_2.vertexZ[s_34] - f_40;
 						f_56 = f_42 * f_46 - f_43 * f_45;
 						f_57 = f_43 * f_44 - f_41 * f_46;
 						float f_58 = f_41 * f_45 - f_42 * f_44;
@@ -457,13 +457,13 @@ public class Class528_Sub1 extends MeshRasterizer {
 						f_40 = (float) rsmesh_2.anIntArray1992[i_19] / 256.0F;
 						if (b_73 == 1) {
 							f_41 = (float) rsmesh_2.anIntArray2001[i_19] / 1024.0F;
-							this.method11306(rsmesh_2.anIntArray1976[s_75], rsmesh_2.anIntArray2003[s_75], rsmesh_2.anIntArray1978[s_75], i_97, i_98, i_112, floats_78, f_41, b_99, f_40, aFloatArray8299);
+							this.method11306(rsmesh_2.vertexX[s_75], rsmesh_2.vertexY[s_75], rsmesh_2.vertexZ[s_75], i_97, i_98, i_112, floats_78, f_41, b_99, f_40, aFloatArray8299);
 							f_87 = aFloatArray8299[0];
 							f_88 = aFloatArray8299[1];
-							this.method11306(rsmesh_2.anIntArray1976[s_76], rsmesh_2.anIntArray2003[s_76], rsmesh_2.anIntArray1978[s_76], i_97, i_98, i_112, floats_78, f_41, b_99, f_40, aFloatArray8299);
+							this.method11306(rsmesh_2.vertexX[s_76], rsmesh_2.vertexY[s_76], rsmesh_2.vertexZ[s_76], i_97, i_98, i_112, floats_78, f_41, b_99, f_40, aFloatArray8299);
 							f_89 = aFloatArray8299[0];
 							f_90 = aFloatArray8299[1];
-							this.method11306(rsmesh_2.anIntArray1976[s_34], rsmesh_2.anIntArray2003[s_34], rsmesh_2.anIntArray1978[s_34], i_97, i_98, i_112, floats_78, f_41, b_99, f_40, aFloatArray8299);
+							this.method11306(rsmesh_2.vertexX[s_34], rsmesh_2.vertexY[s_34], rsmesh_2.vertexZ[s_34], i_97, i_98, i_112, floats_78, f_41, b_99, f_40, aFloatArray8299);
 							f_91 = aFloatArray8299[0];
 							f_92 = aFloatArray8299[1];
 							f_42 = f_41 / 2.0F;
@@ -503,12 +503,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 						} else if (b_73 == 2) {
 							f_41 = (float) rsmesh_2.anIntArray1997[i_19] / 256.0F;
 							f_42 = (float) rsmesh_2.anIntArray2004[i_19] / 256.0F;
-							int i_100 = rsmesh_2.anIntArray1976[s_76] - rsmesh_2.anIntArray1976[s_75];
-							int i_101 = rsmesh_2.anIntArray2003[s_76] - rsmesh_2.anIntArray2003[s_75];
-							int i_102 = rsmesh_2.anIntArray1978[s_76] - rsmesh_2.anIntArray1978[s_75];
-							int i_103 = rsmesh_2.anIntArray1976[s_34] - rsmesh_2.anIntArray1976[s_75];
-							int i_104 = rsmesh_2.anIntArray2003[s_34] - rsmesh_2.anIntArray2003[s_75];
-							int i_105 = rsmesh_2.anIntArray1978[s_34] - rsmesh_2.anIntArray1978[s_75];
+							int i_100 = rsmesh_2.vertexX[s_76] - rsmesh_2.vertexX[s_75];
+							int i_101 = rsmesh_2.vertexY[s_76] - rsmesh_2.vertexY[s_75];
+							int i_102 = rsmesh_2.vertexZ[s_76] - rsmesh_2.vertexZ[s_75];
+							int i_103 = rsmesh_2.vertexX[s_34] - rsmesh_2.vertexX[s_75];
+							int i_104 = rsmesh_2.vertexY[s_34] - rsmesh_2.vertexY[s_75];
+							int i_105 = rsmesh_2.vertexZ[s_34] - rsmesh_2.vertexZ[s_75];
 							int i_106 = i_101 * i_105 - i_104 * i_102;
 							int i_107 = i_102 * i_103 - i_105 * i_100;
 							int i_108 = i_100 * i_104 - i_103 * i_101;
@@ -519,23 +519,23 @@ public class Class528_Sub1 extends MeshRasterizer {
 							f_56 = ((float) i_106 * floats_78[3] + (float) i_107 * floats_78[4] + (float) i_108 * floats_78[5]) / f_53;
 							f_57 = ((float) i_106 * floats_78[6] + (float) i_107 * floats_78[7] + (float) i_108 * floats_78[8]) / f_54;
 							i_95 = this.method11254(f_55, f_56, f_57);
-							this.method11255(rsmesh_2.anIntArray1976[s_75], rsmesh_2.anIntArray2003[s_75], rsmesh_2.anIntArray1978[s_75], i_97, i_98, i_112, i_95, floats_78, b_99, f_40, f_41, f_42, aFloatArray8299);
+							this.method11255(rsmesh_2.vertexX[s_75], rsmesh_2.vertexY[s_75], rsmesh_2.vertexZ[s_75], i_97, i_98, i_112, i_95, floats_78, b_99, f_40, f_41, f_42, aFloatArray8299);
 							f_87 = aFloatArray8299[0];
 							f_88 = aFloatArray8299[1];
-							this.method11255(rsmesh_2.anIntArray1976[s_76], rsmesh_2.anIntArray2003[s_76], rsmesh_2.anIntArray1978[s_76], i_97, i_98, i_112, i_95, floats_78, b_99, f_40, f_41, f_42, aFloatArray8299);
+							this.method11255(rsmesh_2.vertexX[s_76], rsmesh_2.vertexY[s_76], rsmesh_2.vertexZ[s_76], i_97, i_98, i_112, i_95, floats_78, b_99, f_40, f_41, f_42, aFloatArray8299);
 							f_89 = aFloatArray8299[0];
 							f_90 = aFloatArray8299[1];
-							this.method11255(rsmesh_2.anIntArray1976[s_34], rsmesh_2.anIntArray2003[s_34], rsmesh_2.anIntArray1978[s_34], i_97, i_98, i_112, i_95, floats_78, b_99, f_40, f_41, f_42, aFloatArray8299);
+							this.method11255(rsmesh_2.vertexX[s_34], rsmesh_2.vertexY[s_34], rsmesh_2.vertexZ[s_34], i_97, i_98, i_112, i_95, floats_78, b_99, f_40, f_41, f_42, aFloatArray8299);
 							f_91 = aFloatArray8299[0];
 							f_92 = aFloatArray8299[1];
 						} else if (b_73 == 3) {
-							this.method11271(rsmesh_2.anIntArray1976[s_75], rsmesh_2.anIntArray2003[s_75], rsmesh_2.anIntArray1978[s_75], i_97, i_98, i_112, floats_78, b_99, f_40, aFloatArray8299);
+							this.method11271(rsmesh_2.vertexX[s_75], rsmesh_2.vertexY[s_75], rsmesh_2.vertexZ[s_75], i_97, i_98, i_112, floats_78, b_99, f_40, aFloatArray8299);
 							f_87 = aFloatArray8299[0];
 							f_88 = aFloatArray8299[1];
-							this.method11271(rsmesh_2.anIntArray1976[s_76], rsmesh_2.anIntArray2003[s_76], rsmesh_2.anIntArray1978[s_76], i_97, i_98, i_112, floats_78, b_99, f_40, aFloatArray8299);
+							this.method11271(rsmesh_2.vertexX[s_76], rsmesh_2.vertexY[s_76], rsmesh_2.vertexZ[s_76], i_97, i_98, i_112, floats_78, b_99, f_40, aFloatArray8299);
 							f_89 = aFloatArray8299[0];
 							f_90 = aFloatArray8299[1];
-							this.method11271(rsmesh_2.anIntArray1976[s_34], rsmesh_2.anIntArray2003[s_34], rsmesh_2.anIntArray1978[s_34], i_97, i_98, i_112, floats_78, b_99, f_40, aFloatArray8299);
+							this.method11271(rsmesh_2.vertexX[s_34], rsmesh_2.vertexY[s_34], rsmesh_2.vertexZ[s_34], i_97, i_98, i_112, floats_78, b_99, f_40, aFloatArray8299);
 							f_91 = aFloatArray8299[0];
 							f_92 = aFloatArray8299[1];
 							if ((b_99 & 0x1) == 0) {
@@ -609,7 +609,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 				this.aShortArray8304[i_79] = rsmesh_2.aShortArray1981[i_81];
 			}
 
-			this.aShortArray8260[i_79] = rsmesh_2.aShortArray2006[i_81];
+			this.aShortArray8260[i_79] = rsmesh_2.colors[i_81];
 			this.aShortArray8269[i_79] = s_86;
 		}
 

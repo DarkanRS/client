@@ -80,7 +80,7 @@ public class Class386 {
 	}
 
 	static final void method6675(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -45);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -45);
 	}
 
 }

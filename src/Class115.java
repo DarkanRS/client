@@ -152,8 +152,8 @@ public abstract class Class115 implements Interface7 {
 			}
 
 			if (bool_0 != bool_2) {
-				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub12_8195, bool_0 ? 1 : 0, -2016706726);
-				Class190.method3148((byte) 111);
+				Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, bool_0 ? 1 : 0, -2016706726);
+				Class190.savePreferences((byte) 111);
 				return true;
 			} else {
 				return false;

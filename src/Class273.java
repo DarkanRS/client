@@ -3,7 +3,7 @@ public abstract class Class273 {
 	final int method4842(long long_1) {
 		long long_3 = this.method4844(-1314444349);
 		if (long_3 > 0L) {
-			Class89.method1504(long_3);
+			Class89.sleep(long_3);
 		}
 
 		return this.method4845(long_1);
@@ -113,7 +113,7 @@ public abstract class Class273 {
 
 	static final void method4867(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method7785(i_2, -1905006369);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub14_8211.method7785(i_2, -1905006369);
 	}
 
 }

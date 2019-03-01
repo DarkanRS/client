@@ -79,9 +79,9 @@ public class Class210 {
 	}
 
 	static final void method3611(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -163458202);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub2_8205, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -163458202);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -4);
-		Class190.method3148((byte) 43);
+		Class190.savePreferences((byte) 43);
 		client.aBool7175 = false;
 	}
 
@@ -110,8 +110,8 @@ public class Class210 {
 	}
 
 	static final void method3613(CS2Executor cs2executor_0, int i_1) {
-		if (Class475.aBool5623 && Engine.aFrame3260 != null) {
-			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(551500203), -1, -1, false, (byte) 52);
+		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
+			Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(551500203), -1, -1, false, (byte) 52);
 		}
 
 	}

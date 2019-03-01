@@ -6,8 +6,8 @@ public class Class151 {
 	public Class464 aClass464_1961 = new Class464();
 
 	static final void method2586(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub5_8221, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -2100114669);
-		Class190.method3148((byte) 44);
+		Class393.preferences.setValue(Class393.preferences.cpu, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -2100114669);
+		Class190.savePreferences((byte) 44);
 	}
 
 	static final void method2587(CS2Executor cs2executor_0, byte b_1) {
@@ -16,7 +16,7 @@ public class Class151 {
 	}
 
 	static final void method2588(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12923(-1002096865) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub24_8216.method12923(-1002096865) ? 1 : 0;
 	}
 
 	public static void method2589(boolean bool_0, byte[] bytes_1, int i_2) {
@@ -38,7 +38,7 @@ public class Class151 {
 			}
 
 			Class448.aBool5422 = false;
-			Class448.aLong5425 = Class169.method2869(1708391360);
+			Class448.aLong5425 = Class169.time();
 			Class96_Sub20.aClass282_Sub35_9415 = null;
 		}
 
@@ -78,7 +78,7 @@ public class Class151 {
 						method2591(icomponentdefinitions_4.aClass118Array1439, i_1, (byte) -28);
 					}
 
-					Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.method7754((long) icomponentdefinitions_4.idHash);
+					Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
 					if (class282_sub44_5 != null) {
 						Class383.method6514(class282_sub44_5.anInt8063, i_1, -138211954);
 					}
@@ -111,10 +111,10 @@ public class Class151 {
 	}
 
 	static final void method2592(byte b_0) {
-		if (!Class282_Sub17.method12259(client.anInt7166, -632153862) && !Class97.method1612(client.anInt7166, 1908805257)) {
+		if (!Class282_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState, 1908805257)) {
 			Class233.aClass202_2883 = client.aClass184_7475.method3053((byte) -113);
 			client.aClass184_7475.method3061(-1872117357);
-			Class365.setGameState(10, 1328603649);
+			Class365.setGameState(10);
 		} else {
 			Class438.method7333(false, 2084407063);
 		}

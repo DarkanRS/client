@@ -65,10 +65,10 @@ public class Class397 implements Interface38 {
 			Class282_Sub48.aClass482_8073.append(class282_sub48_8, -427234199);
 		} else if (npc_5 != null) {
 			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub2_8085 = npc_5;
-			NPCDefinitions npcdefinitions_11 = npc_5.aClass409_10580;
+			NPCDefinitions npcdefinitions_11 = npc_5.definitions;
 			if (npcdefinitions_11.anIntArray4886 != null) {
 				class282_sub48_8.aBool8092 = true;
-				npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.aClass3_8507, 265881693);
+				npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 			}
 
 			if (npcdefinitions_11 != null) {

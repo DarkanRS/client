@@ -54,7 +54,7 @@ public class Class51 implements Interface2 {
 
 	public void method16() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 20);
-		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public boolean method10(int i_1) {
@@ -72,27 +72,27 @@ public class Class51 implements Interface2 {
 
 	public void method15() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 108);
-		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public void method22(int i_1) {
 		FontMetrics fontmetrics_2 = Class163.method2845(this.aClass317_486, this.aClass62_485.anInt658, (byte) 81);
-		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1534(this.aClass317_487, this.aClass62_485.anInt658), true);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1534(this.aClass317_487, this.aClass62_485.anInt658), true);
 	}
 
 	public void method23() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 60);
-		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public void method18() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 122);
-		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public void method19() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 65);
-		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public boolean method13() {
@@ -144,7 +144,7 @@ public class Class51 implements Interface2 {
 	}
 
 	static void method1067(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4104(Class158_Sub1.aClass3_8507, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], (short) 32683) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4104(Class158_Sub1.PLAYER_VAR_PROVIDER, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], (short) 32683) ? 1 : 0;
 		--cs2executor_0.intStackPtr;
 	}
 
@@ -234,7 +234,7 @@ public class Class51 implements Interface2 {
 
 	static final void method1073(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		Class158_Sub1.aClass3_8507.method266(i_2, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1744724277);
+		Class158_Sub1.PLAYER_VAR_PROVIDER.method266(i_2, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1744724277);
 	}
 
 	public static void method1074(int[] ints_0, Object[] arr_1, int i_2, int i_3, int i_4) {

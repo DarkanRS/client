@@ -37,7 +37,7 @@ public class Class346 {
 	}
 
 	static final void method6153(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13050(519629067);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub29_8201.method13050(519629067);
 	}
 
 	public static byte[] method6154(Object object_0, boolean bool_1, byte b_2) {

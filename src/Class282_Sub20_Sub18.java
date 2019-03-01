@@ -14,7 +14,7 @@ public class Class282_Sub20_Sub18 extends Class282_Sub20 {
 	}
 
 	static final void method15371(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12964((byte) 127) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub28_8212.method12964((byte) 127) ? 1 : 0;
 	}
 
 }

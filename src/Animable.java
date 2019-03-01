@@ -16,7 +16,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public int anInt10357;
 	public int[] anIntArray10335;
 	public int[] anIntArray10362;
-	Class539 aClass539_10369;
+	ParticleSystem aClass539_10369;
 	boolean aBool10370;
 	public int anInt10355;
 	public int anInt10367;
@@ -29,14 +29,14 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public boolean aBool10318;
 	public int anInt10319;
 	public int anInt10375;
-	public int anInt10321;
+	public int drawPriority;
 	int anInt10325;
 	public int[] anIntArray10316;
 	public int[] anIntArray10329;
 	public int[] anIntArray10351;
 	public int[] anIntArray10331;
 	public int[] anIntArray10332;
-	public Class457 aClass457_10333;
+	public EntityList aClass457_10333;
 	public int faceEntity;
 	public int[] currentAnimations;
 	public Class456_Sub3 aClass456_Sub3_10337;
@@ -265,7 +265,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 
 			if ((this.aClass539_10369 == null || this.aClass539_10369.aBool7132) && (i_7 > 0 || i_9 > 0)) {
-				this.aClass539_10369 = Class539.method11557(client.cycles, true);
+				this.aClass539_10369 = ParticleSystem.method11557(client.cycles, true);
 			}
 
 			if (this.aClass539_10369 != null) {
@@ -783,7 +783,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.aBool10318 = true;
 		this.anInt10319 = 0;
 		this.anInt10375 = -1;
-		this.anInt10321 = 0;
+		this.drawPriority = 0;
 		this.anInt10325 = 0;
 		this.aByte10358 = 0;
 		this.anIntArray10316 = new int[Class58.aClass529_527.anInt7026];
@@ -791,7 +791,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.anIntArray10351 = new int[Class58.aClass529_527.anInt7026];
 		this.anIntArray10331 = new int[Class58.aClass529_527.anInt7026];
 		this.anIntArray10332 = new int[Class58.aClass529_527.anInt7026];
-		this.aClass457_10333 = new Class457();
+		this.aClass457_10333 = new EntityList();
 		this.faceEntity = -1;
 		this.currentAnimations = null;
 		this.aClass456_Sub3_10337 = new Class456_Sub3(this, false);

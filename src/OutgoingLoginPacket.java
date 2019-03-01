@@ -61,7 +61,7 @@ public class OutgoingLoginPacket {
 	}
 
 	static final void method6317(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class169.method2875(client.anInt7166, -2059083211) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class169.method2875(client.gameState, -2059083211) ? 1 : 0;
 	}
 
 	static final void method6318(CS2Executor cs2executor_0, int i_1) {

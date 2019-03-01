@@ -28,7 +28,7 @@ public class Class350_Sub2 extends Class350 {
 			Renderers.SOFTWARE_RENDERER.method8524(Class351.gameCanvas, dimension_1.width, dimension_1.height, (byte) -5);
 			Renderers.SOFTWARE_RENDERER.method8412(Class351.gameCanvas, (byte) 8);
 		} else {
-			Class538.method11500(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1386089693), false, (byte) 24);
+			ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(-1386089693), false, (byte) 24);
 		}
 
 		IncomingPacket.method6378(-1538407760);
@@ -54,7 +54,7 @@ public class Class350_Sub2 extends Class350 {
 	}
 
 	static final void method12573(CS2Executor cs2executor_0, short s_1) {
-		if (client.anInt7166 == 0) {
+		if (client.gameState == 0) {
 			Class448.aBool5419 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1;
 		}
 

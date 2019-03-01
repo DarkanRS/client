@@ -1,6 +1,6 @@
 public class Class393 {
 
-	public static Class282_Sub54 aClass282_Sub54_4783;
+	public static Class282_Sub54 preferences;
 	public Interface3[] anInterface3Array4782;
 
 	void method6743(RsByteBuffer rsbytebuffer_1, int i_2) {

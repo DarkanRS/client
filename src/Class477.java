@@ -3,7 +3,7 @@ import java.util.Iterator;
 public class Class477 implements Iterable {
 
 	static int anInt5630;
-	static Class539[] aClass539Array5632;
+	static ParticleSystem[] aClass539Array5632;
 	public CacheableNode aClass282_Sub50_5629 = new CacheableNode();
 	CacheableNode aClass282_Sub50_5631;
 
@@ -87,7 +87,7 @@ public class Class477 implements Iterable {
 	}
 
 	public static void method7960(Index index_0, byte b_1) {
-		Class16.anInt140 = index_0.getArchiveId("p11_full");
+		Class16.p11FullIndex = index_0.getArchiveId("p11_full");
 		Class16.anInt136 = index_0.getArchiveId("p12_full");
 		Class395.anInt4788 = index_0.getArchiveId("b12_full");
 	}

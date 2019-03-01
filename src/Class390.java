@@ -143,12 +143,12 @@ public abstract class Class390 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		boolean bool_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1;
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, i_2, 77442027);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, i_2, 77442027);
 		if (!bool_3) {
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub6_8192, 0, -1019376772);
+			Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 0, -1019376772);
 		}
 
-		Class190.method3148((byte) 45);
+		Class190.savePreferences((byte) 45);
 		client.aBool7175 = false;
 	}
 

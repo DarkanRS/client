@@ -23,7 +23,7 @@ public class Class172 {
 
 	static final void method2914(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7754((long) i_2);
+		Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.get((long) i_2);
 		if (class282_sub44_3 != null) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 		} else {

@@ -40,7 +40,7 @@ public class Class383 implements Interface41 {
 	}
 
 	public static Class268 method6509(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(-784920848) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+		if (Class393.preferences.aClass468_Sub13_8225.method12714(-784920848) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
 			Class268 class268_7 = new Class268((byte) 1, i_0, i_1, i_2, i_3, i_4, i_5, (Class521_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
 			return class268_7;
@@ -84,9 +84,9 @@ public class Class383 implements Interface41 {
 		if (Class58.aClass529_527.anInt7034 == -1) {
 			return 1;
 		} else {
-			if (i_0 != Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-408744518)) {
+			if (i_0 != Class393.preferences.currentToolkit.getValue(-408744518)) {
 				Class231.method3914(i_0, Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1872391356), true, (byte) 110);
-				if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-455278899) != i_0) {
+				if (Class393.preferences.currentToolkit.getValue(-455278899) != i_0) {
 					return -1;
 				}
 			}
@@ -95,7 +95,7 @@ public class Class383 implements Interface41 {
 				Dimension dimension_4 = Class351.gameCanvas.getSize();
 				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
 				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, Class58.aClass529_527.anInt7034, 0);
-				long long_6 = Class169.method2869(2130587013);
+				long long_6 = Class169.time();
 				Renderers.SOFTWARE_RENDERER.L();
 				client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
 				Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
@@ -115,7 +115,7 @@ public class Class383 implements Interface41 {
 							client.aClass294_7169.method5223((float) ((int) (512.0F * ((float) i_13 - (float) i_12 / 2.0F))), 0.0F, (float) ((i_12 + 1) * 512));
 							meshrasterizer_9.method11282(client.aClass294_7169, (Class275_Sub5) null, 0);
 							++i_10;
-							if (Class169.method2869(1699271863) - long_6 >= (long) i_1) {
+							if (Class169.time() - long_6 >= (long) i_1) {
 								break label43;
 							}
 						}
@@ -123,7 +123,7 @@ public class Class383 implements Interface41 {
 				}
 
 				Renderers.SOFTWARE_RENDERER.method8395();
-				long long_14 = (long) (i_10 * 1000) / (Class169.method2869(1634298146) - long_6);
+				long long_14 = (long) (i_10 * 1000) / (Class169.time() - long_6);
 				Renderers.SOFTWARE_RENDERER.ba(3, 0);
 				int i_3 = (int) long_14;
 				return i_3;

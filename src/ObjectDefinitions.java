@@ -87,7 +87,7 @@ public class ObjectDefinitions {
 		if (this.aClass465_5668 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_5668.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_5668.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -476,7 +476,7 @@ public class ObjectDefinitions {
 								MeshRasterizer class528_47_ = null;
 								return class528_47_;
 							}
-							if (class157.zoom < 13)
+							if (class157.version < 13)
 								class157.upscale(2);
 							if (i_43_ > 1)
 								((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass157Array5616[i_46_] = class157;
@@ -547,7 +547,7 @@ public class ObjectDefinitions {
 		if (this.aClass465_5668 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_5668.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_5668.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -888,7 +888,7 @@ public class ObjectDefinitions {
 					return null;
 				}
 
-				if (class282_sub50_sub12_1.method14955(31148025) > Class169.method2869(1956971878)) {
+				if (class282_sub50_sub12_1.method14955(31148025) > Class169.time()) {
 					return null;
 				}
 

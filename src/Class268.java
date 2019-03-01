@@ -76,7 +76,7 @@ public class Class268 {
 			}
 
 			if (Class20.anInt169 > 2) {
-				string_2 = string_2 + Class59.method1163(16777215, 619010179) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
+				string_2 = string_2 + ParticleProducerDefinition.method1163(16777215, 619010179) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
 			}
 
 			if (Class20.aClass118_183 != null) {

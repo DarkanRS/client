@@ -44,7 +44,7 @@ public class Class14 {
 
 		for (int i_1 = 0; i_1 < client.npcListSize; i_1++) {
 			int i_2 = client.NPC_INDICES[i_1];
-			NPC npc_3 = (NPC) ((Class282_Sub47) client.aClass465_7208.method7754((long) i_2)).anObject8068;
+			NPC npc_3 = (NPC) ((Class282_Sub47) client.NPCS.get((long) i_2)).anObject8068;
 			int i_4 = rsbitsbuffer_0.readUnsignedByte();
 			if ((i_4 & 0x40) != 0) {
 				i_4 += rsbitsbuffer_0.readUnsignedByte() << 8;
@@ -81,15 +81,15 @@ public class Class14 {
 			short[] shorts_20;
 			long long_21;
 			if ((i_4 & 0x100) != 0) {
-				i_14 = npc_3.aClass409_10580.anIntArray4859.length;
+				i_14 = npc_3.definitions.anIntArray4859.length;
 				i_6 = 0;
-				if (npc_3.aClass409_10580.aShortArray4892 != null) {
-					i_6 = npc_3.aClass409_10580.aShortArray4892.length;
+				if (npc_3.definitions.aShortArray4892 != null) {
+					i_6 = npc_3.definitions.aShortArray4892.length;
 				}
 
 				i_7 = 0;
-				if (npc_3.aClass409_10580.aShortArray4867 != null) {
-					i_7 = npc_3.aClass409_10580.aShortArray4867.length;
+				if (npc_3.definitions.aShortArray4867 != null) {
+					i_7 = npc_3.definitions.aShortArray4867.length;
 				}
 
 				i_8 = rsbitsbuffer_0.readUnsigned128Byte();
@@ -267,14 +267,14 @@ public class Class14 {
 			}
 
 			if ((i_4 & 0x8) != 0) {
-				if (npc_3.aClass409_10580.method6886(-1543379642)) {
+				if (npc_3.definitions.method6886(-1543379642)) {
 					Class169.method2876(npc_3, 1280406765);
 				}
 
 				npc_3.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_0.readBigSmart(), (byte) 45), 332217631);
-				npc_3.method15836(npc_3.aClass409_10580.anInt4858, (byte) -91);
-				npc_3.anInt10340 = npc_3.aClass409_10580.anInt4889 << 3;
-				if (npc_3.aClass409_10580.method6886(-1928423029)) {
+				npc_3.method15836(npc_3.definitions.anInt4858, (byte) -91);
+				npc_3.anInt10340 = npc_3.definitions.anInt4889 << 3;
+				if (npc_3.definitions.method6886(-1928423029)) {
 					Class397.method6775(npc_3.plane, npc_3.regionBaseX[0], npc_3.regionBaseY[0], 0, (ObjectDefinitions) null, npc_3, (Player) null, 352984427);
 				}
 			}
@@ -309,15 +309,15 @@ public class Class14 {
 			}
 
 			if ((i_4 & 0x40000) != 0) {
-				i_14 = npc_3.aClass409_10580.anIntArray4860.length;
+				i_14 = npc_3.definitions.anIntArray4860.length;
 				i_6 = 0;
-				if (npc_3.aClass409_10580.aShortArray4892 != null) {
-					i_6 = npc_3.aClass409_10580.aShortArray4892.length;
+				if (npc_3.definitions.aShortArray4892 != null) {
+					i_6 = npc_3.definitions.aShortArray4892.length;
 				}
 
 				byte b_25 = 0;
-				if (npc_3.aClass409_10580.aShortArray4867 != null) {
-					i_6 = npc_3.aClass409_10580.aShortArray4867.length;
+				if (npc_3.definitions.aShortArray4867 != null) {
+					i_6 = npc_3.definitions.aShortArray4867.length;
 				}
 
 				i_8 = rsbitsbuffer_0.readUnsignedByte128(-1866772562);
@@ -357,7 +357,7 @@ public class Class14 {
 			if ((i_4 & 0x10000) != 0) {
 				npc_3.anInt10582 = rsbitsbuffer_0.readUnsignedShort128();
 				if (npc_3.anInt10582 == 65535) {
-					npc_3.anInt10582 = npc_3.aClass409_10580.anInt4879;
+					npc_3.anInt10582 = npc_3.definitions.anInt4879;
 				}
 			}
 
@@ -388,8 +388,8 @@ public class Class14 {
 
 			if ((i_4 & 0x800000) != 0) {
 				npc_3.aString10584 = rsbitsbuffer_0.readString();
-				if ("".equals(npc_3.aString10584) || npc_3.aString10584.equals(npc_3.aClass409_10580.aString4857)) {
-					npc_3.aString10584 = npc_3.aClass409_10580.aString4857;
+				if ("".equals(npc_3.aString10584) || npc_3.aString10584.equals(npc_3.definitions.aString4857)) {
+					npc_3.aString10584 = npc_3.definitions.aString4857;
 				}
 			}
 

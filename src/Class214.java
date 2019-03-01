@@ -5,7 +5,7 @@ public class Class214 {
 	}
 
 	static final void method3667(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-105598031);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.currentToolkit.getValue(-105598031);
 	}
 
 	public static Class351 method3668(RsByteBuffer rsbytebuffer_0, byte b_1) {

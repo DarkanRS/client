@@ -72,7 +72,7 @@ public class Class207 {
 	static final void method3557(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (Class291_Sub1.aClass465_8025 != null) {
-			Node node_3 = Class291_Sub1.aClass465_8025.method7754((long) i_2);
+			Node node_3 = Class291_Sub1.aClass465_8025.get((long) i_2);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = node_3 != null ? 1 : 0;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;

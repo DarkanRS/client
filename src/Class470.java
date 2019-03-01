@@ -161,14 +161,14 @@ public class Class470 {
 			b_2 = 1;
 		}
 
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1022441189) != 2) {
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 2, -676897118);
-			Class538.method11500(2, false, (byte) 24);
+		if (Class393.preferences.currentToolkit.getValue(-1022441189) != 2) {
+			Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 2, -676897118);
+			ParticleProducer.method11500(2, false, (byte) 24);
 		} else {
-			Class393.aClass282_Sub54_4783.method13505(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, true, 861454749);
+			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, 861454749);
 		}
 
-		Class190.method3148((byte) 99);
+		Class190.savePreferences((byte) 99);
 		return b_2;
 	}
 

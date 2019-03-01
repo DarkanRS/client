@@ -1,6 +1,6 @@
 public class CoordGrid {
 
-	static Index aClass317_2710;
+	static Index PARTICLE_INDEX;
 	public int level;
 	public int x;
 	public int y;
@@ -32,7 +32,7 @@ public class CoordGrid {
 
 	static final void method3713(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method7785(i_2, 618850580);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub24_8216.method7785(i_2, 618850580);
 	}
 
 	static final void method3714(CS2Executor cs2executor_0, int i_1) {

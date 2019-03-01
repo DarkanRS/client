@@ -48,7 +48,7 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 		int[] ints_2 = cs2executor_0.intStack;
 		int i_3 = ++cs2executor_0.intStackPtr - 1;
 		byte b_4;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 38) == 1) {
+		if (Class393.preferences.aClass468_Sub23_8202.method12897((byte) 38) == 1) {
 			b_4 = 1;
 		} else {
 			b_4 = 0;

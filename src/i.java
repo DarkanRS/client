@@ -209,7 +209,7 @@ public class i extends Class390 implements Interface40 {
 
 	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
 		int i_7 = 0;
-		float[] floats_8 = new float[this.aClass482_7143.size(-1374254477)];
+		float[] floats_8 = new float[this.aClass482_7143.size()];
 
 		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head((byte) 78); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(89434836)) {
 			floats_8[i_7++] = class282_sub24_9.method12395(-730968094);
@@ -273,7 +273,7 @@ public class i extends Class390 implements Interface40 {
 
 	public void method6716(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
 		int i_7 = 0;
-		float[] floats_8 = new float[this.aClass482_7143.size(-1374254477)];
+		float[] floats_8 = new float[this.aClass482_7143.size()];
 
 		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head((byte) 81); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(-1062392884)) {
 			floats_8[i_7++] = class282_sub24_9.method12395(1226134811);

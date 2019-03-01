@@ -164,7 +164,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 			}
 		}
 
-		Class282_Sub14 class282_sub14_10 = (Class282_Sub14) this.aClass465_9694.method7754((long) this.anIntArray9699[i_1]);
+		Class282_Sub14 class282_sub14_10 = (Class282_Sub14) this.aClass465_9694.get((long) this.anIntArray9699[i_1]);
 		if (class282_sub14_10 != null) {
 			Class282_Sub26_Sub1 class282_sub26_sub1_6 = class282_sub14_10.aClass282_Sub26_Sub1Array7589[i_2];
 			if (class282_sub26_sub1_6 != null) {
@@ -1026,7 +1026,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 
 		for (Class282_Sub47 class282_sub47_8 = (Class282_Sub47) class282_sub7_1.aClass465_7521.method7750(772569462); class282_sub47_8 != null; class282_sub47_8 = (Class282_Sub47) class282_sub7_1.aClass465_7521.method7751((byte) 16)) {
 			int i_9 = (int) class282_sub47_8.data;
-			Class282_Sub14 class282_sub14_10 = (Class282_Sub14) this.aClass465_9694.method7754((long) i_9);
+			Class282_Sub14 class282_sub14_10 = (Class282_Sub14) this.aClass465_9694.get((long) i_9);
 			if (class282_sub14_10 == null) {
 				class282_sub14_10 = Class96_Sub21.method14676(index_2, i_9, 450746801);
 				if (class282_sub14_10 == null) {

@@ -131,10 +131,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 		Class275_Sub1 class275_sub1_6 = class151_4.aClass464_1961.aClass275_Sub1_5554;
 
 		for (Class275_Sub1 class275_sub1_7 = class275_sub1_6.aClass275_Sub1_7706; class275_sub1_7 != class275_sub1_6; class275_sub1_7 = class275_sub1_7.aClass275_Sub1_7706) {
-			Class275_Sub1_Sub1 class275_sub1_sub1_8 = (Class275_Sub1_Sub1) class275_sub1_7;
-			int i_9 = class275_sub1_sub1_8.anInt10205 >> 12;
-			int i_10 = class275_sub1_sub1_8.anInt10208 >> 12;
-			int i_11 = class275_sub1_sub1_8.anInt10202 >> 12;
+			PointEntity class275_sub1_sub1_8 = (PointEntity) class275_sub1_7;
+			int i_9 = class275_sub1_sub1_8.x >> 12;
+			int i_10 = class275_sub1_sub1_8.z >> 12;
+			int i_11 = class275_sub1_sub1_8.y >> 12;
 			float f_12 = this.aClass384_8996.buf[14] + this.aClass384_8996.buf[10] * (float) i_11 + (float) i_9 * this.aClass384_8996.buf[2] + (float) i_10 * this.aClass384_8996.buf[6];
 			float f_13 = this.aClass384_8996.buf[15] + this.aClass384_8996.buf[7] * (float) i_10 + this.aClass384_8996.buf[3] * (float) i_9 + this.aClass384_8996.buf[11] * (float) i_11;
 			if (f_12 >= -f_13) {
@@ -143,7 +143,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					float f_15 = this.aClass384_8996.buf[0] * (float) i_9 + this.aClass384_8996.buf[4] * (float) i_10 + (float) i_11 * this.aClass384_8996.buf[8] + this.aClass384_8996.buf[12];
 					float f_16 = (float) i_11 * this.aClass384_8996.buf[9] + this.aClass384_8996.buf[1] * (float) i_9 + this.aClass384_8996.buf[5] * (float) i_10 + this.aClass384_8996.buf[13];
 					if (f_15 >= -f_13 && f_15 <= f_13 && f_16 >= -f_13 && f_16 <= f_13) {
-						float f_17 = (float) class275_sub1_sub1_8.anInt10206 / 4096.0F;
+						float f_17 = (float) class275_sub1_sub1_8.size / 4096.0F;
 						float f_18 = f_17 * this.aClass384_8995.buf[0] + f_15;
 						float f_19 = f_13 + this.aClass384_8995.buf[3] * f_17;
 						float f_20 = this.aFloat9003 + f_15 * this.aFloat8976 / f_13;
@@ -345,7 +345,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 	}
 
-	public FontRenderer method8448(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
@@ -2074,12 +2074,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8611() {
 	}
 
-	void method14371(boolean bool_1, boolean bool_2, boolean bool_3, Class275_Sub1_Sub1 class275_sub1_sub1_4, int i_5, int i_6, float f_7, int i_8) {
-		int i_9 = class275_sub1_sub1_4.anInt10207;
+	void method14371(boolean bool_1, boolean bool_2, boolean bool_3, PointEntity class275_sub1_sub1_4, int i_5, int i_6, float f_7, int i_8) {
+		int i_9 = class275_sub1_sub1_4.rotation;
 		int i_10 = i_8;
 		i_8 <<= 1;
 		if (i_9 == -1) {
-			this.method14373(bool_2, i_5, i_6, f_7, i_10, class275_sub1_sub1_4.anInt10209, 1);
+			this.method14373(bool_2, i_5, i_6, f_7, i_10, class275_sub1_sub1_4.color, 1);
 		} else {
 			if (i_9 != this.anInt9015) {
 				NativeSprite nativesprite_11 = (NativeSprite) this.aClass229_9013.get((long) i_9);
@@ -2099,7 +2099,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			++i_8;
-			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.anInt10209, 1, 1, false);
+			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, 1, false);
 		}
 
 	}
@@ -2439,7 +2439,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			this.method14409(0);
 			Class38.method854(true, true, -1425832759);
 			this.aBool9012 = true;
-			this.anInt8977 = (int) Class169.method2869(1594851121);
+			this.anInt8977 = (int) Class169.time();
 		} catch (Throwable throwable_3) {
 			throwable_3.printStackTrace();
 			this.method8396(-752657427);

@@ -59,17 +59,17 @@ public class Class231 {
 		Class122.method2109(Class182.aClass160Array2261, (byte) 8);
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
-		if (client.anInt7166 == 5) {
-			Class365.setGameState(11, 2080039213);
-		} else if (client.anInt7166 == 0) {
-			Class365.setGameState(2, 2028461626);
-		} else if (client.anInt7166 == 7) {
-			Class365.setGameState(6, 1241604185);
-		} else if (client.anInt7166 == 13) {
-			Class365.setGameState(18, 1354384204);
-		} else if (client.anInt7166 != 15 && client.anInt7166 != 1) {
-			if (client.anInt7166 == 3) {
-				Class365.setGameState(9, 703598448);
+		if (client.gameState == 5) {
+			Class365.setGameState(11);
+		} else if (client.gameState == 0) {
+			Class365.setGameState(2);
+		} else if (client.gameState == 7) {
+			Class365.setGameState(6);
+		} else if (client.gameState == 13) {
+			Class365.setGameState(18);
+		} else if (client.gameState != 15 && client.gameState != 1) {
+			if (client.gameState == 3) {
+				Class365.setGameState(9);
 			}
 		} else {
 			Class386.method6673(1101279462);

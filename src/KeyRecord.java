@@ -1,12 +1,12 @@
-public interface Interface16 {
+public interface KeyRecord {
 
 	int method75();
 
-	char method118(int var1);
+	char getCode(int var1);
 
 	int method4();
 
-	int method84(int var1);
+	int getType(int var1);
 
 	int method92(int var1);
 

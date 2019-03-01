@@ -98,7 +98,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	synchronized void method14815(Class282_Sub39 class282_sub39_1, int i_2) {
 		while (this.anInt9569 >= 100) {
-			this.aClass482_9568.method8061((byte) -124);
+			this.aClass482_9568.popHead((byte) -124);
 			--this.anInt9569;
 		}
 
@@ -411,7 +411,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		boolean bool_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1;
 		if (Class291_Sub1.aClass465_8025 != null) {
-			Node node_4 = Class291_Sub1.aClass465_8025.method7754((long) i_2);
+			Node node_4 = Class291_Sub1.aClass465_8025.get((long) i_2);
 			if (node_4 != null && !bool_3) {
 				node_4.remove();
 			} else if (node_4 == null && bool_3) {

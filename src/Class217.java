@@ -33,13 +33,13 @@ public abstract class Class217 {
 	}
 
 	static final void method3692(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1998684386);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8228.method12714(-1998684386);
 	}
 
 	static final void method3693(CS2Executor cs2executor_0, short s_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub24_8216, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 2 : 0, 447619076);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 2 : 0, 447619076);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -59);
-		Class190.method3148((byte) 121);
+		Class190.savePreferences((byte) 121);
 		client.aBool7175 = false;
 	}
 
@@ -57,7 +57,7 @@ public abstract class Class217 {
 			class282_sub53_sub1_6.anInt9517 = i_1;
 			class282_sub53_sub1_6.anInt9513 = i_2;
 			class282_sub53_sub1_6.anInt9514 = i_3;
-			class282_sub53_sub1_6.aLong9515 = Class169.method2869(1816092863);
+			class282_sub53_sub1_6.aLong9515 = Class169.time();
 			return class282_sub53_sub1_6;
 		}
 	}

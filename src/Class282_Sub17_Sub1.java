@@ -72,11 +72,11 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 
 	public static void method15402(int i_0, String string_1, boolean bool_2, int i_3) {
 		if (i_0 == 0) {
-			Renderers.SOFTWARE_RENDERER = Class320.method5732(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1783373613) * 2, -1283280673);
+			Renderers.SOFTWARE_RENDERER = Class320.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aClass468_Sub4_8223.method12641(-1783373613) * 2, -1283280673);
 			if (string_1 != null) {
 				Renderers.SOFTWARE_RENDERER.ba(1, 0);
-				FontMetrics fontmetrics_4 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 0, 1150997063);
-				FontRenderer fontrenderer_5 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_4, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136, 0), true);
+				FontMetrics fontmetrics_4 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 0, 1150997063);
+				FontRenderer fontrenderer_5 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_4, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136, 0), true);
 				Class275.method4891((byte) -128);
 				Class446.method7447(string_1, true, Renderers.SOFTWARE_RENDERER, fontrenderer_5, fontmetrics_4, (byte) -87);
 			}
@@ -85,21 +85,21 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			FontMetrics fontmetrics_17;
 			FontRenderer fontrenderer_6;
 			if (string_1 != null) {
-				graphicalrenderer_16 = Class320.method5732(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -603391790);
+				graphicalrenderer_16 = Class320.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -603391790);
 				graphicalrenderer_16.ba(1, 0);
-				fontmetrics_17 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 0, 1961117540);
-				fontrenderer_6 = graphicalrenderer_16.method8448(fontmetrics_17, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136, 0), true);
+				fontmetrics_17 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 0, 1961117540);
+				fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136, 0), true);
 				Class275.method4891((byte) -74);
 				Class446.method7447(string_1, true, graphicalrenderer_16, fontrenderer_6, fontmetrics_17, (byte) -82);
 			}
 
 			try {
 				try {
-					Renderers.SOFTWARE_RENDERER = Class320.method5732(i_0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(169664234) * 2, -694595538);
+					Renderers.SOFTWARE_RENDERER = Class320.createRenderer(i_0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aClass468_Sub4_8223.method12641(169664234) * 2, -694595538);
 					if (string_1 != null) {
 						graphicalrenderer_16.ba(1, 0);
-						fontmetrics_17 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 0, 1716473063);
-						fontrenderer_6 = graphicalrenderer_16.method8448(fontmetrics_17, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136, 0), true);
+						fontmetrics_17 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 0, 1716473063);
+						fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136, 0), true);
 						Class275.method4891((byte) -30);
 						Class446.method7447(string_1, true, graphicalrenderer_16, fontrenderer_6, fontmetrics_17, (byte) -16);
 					}
@@ -123,12 +123,12 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 						Renderers.SOFTWARE_RENDERER.method8439(class282_sub1_18);
 					}
 				} catch (Throwable throwable_14) {
-					int i_9 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1734953723);
+					int i_9 = Class393.preferences.currentToolkit.getValue(-1734953723);
 					if (i_9 == 2) {
 						client.aBool7171 = true;
 					}
 
-					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, 0, -1949394777);
+					Class393.preferences.setValue(Class393.preferences.currentToolkit, 0, -1949394777);
 					method15402(i_9, string_1, bool_2, 1368243224);
 					if (graphicalrenderer_16 != null) {
 						try {
@@ -160,12 +160,12 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		}
 
 		if (bool_2) {
-			Class393.aClass282_Sub54_4783.method13505(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, !bool_2, 2032339457);
+			Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2, 2032339457);
 		}
 
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, i_0, -952272736);
+		Class393.preferences.setValue(Class393.preferences.currentToolkit, i_0, -952272736);
 		if (!bool_2) {
-			Class393.aClass282_Sub54_4783.method13505(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, !bool_2, -1976221425);
+			Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2, -1976221425);
 		}
 
 		Class12.method482((byte) 53);
@@ -174,7 +174,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		IndexLoaders.MAP_REGION_DECODER.method4447(1353866416);
 		Renderers.SOFTWARE_RENDERER.method8568(false);
 		if (Renderers.SOFTWARE_RENDERER.method8403()) {
-			Class115.method1952(Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method12706((byte) 97) == 1, -1437511825);
+			Class115.method1952(Class393.preferences.aClass468_Sub12_8195.method12706((byte) 97) == 1, -1437511825);
 		}
 
 		IndexLoaders.MAP_REGION_DECODER.method4446((byte) 78);

@@ -1,25 +1,25 @@
 public class Class534_Sub2 extends Class534 {
 
 	boolean method11434() {
-		return this.method12842(654823929) != null || this.aLong7076 * 1203484888895588483L * 2966128844247041579L < Class169.method2869(1907896045) - 2000L;
+		return this.method12842(654823929) != null || this.aLong7076 * 1203484888895588483L * 2966128844247041579L < Class169.time() - 2000L;
 	}
 
-	Class282_Sub53 method12842(int i_1) {
-		return (Class282_Sub53) client.aClass482_7267.head((byte) 61);
+	MouseRecord method12842(int i_1) {
+		return (MouseRecord) client.mouseRecords.head((byte) 61);
 	}
 
-	void method11427(RsByteBuffer rsbytebuffer_1, Class282_Sub53 class282_sub53_2) {
+	void method11427(RsByteBuffer rsbytebuffer_1, MouseRecord class282_sub53_2) {
 	}
 
 	boolean method11423(int i_1) {
-		return this.method12842(1070936564) != null || this.aLong7076 < Class169.method2869(1563123713) - 2000L;
+		return this.method12842(1070936564) != null || this.aLong7076 < Class169.time() - 2000L;
 	}
 
 	TCPMessage method11416(byte b_1) {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, -490942131);
 	}
 
-	void method11413(RsByteBuffer rsbytebuffer_1, Class282_Sub53 class282_sub53_2, int i_3) {
+	void method11413(RsByteBuffer rsbytebuffer_1, MouseRecord class282_sub53_2, int i_3) {
 	}
 
 	int method11412(int i_1) {
@@ -27,7 +27,7 @@ public class Class534_Sub2 extends Class534 {
 	}
 
 	void method11431() {
-		Class282_Sub53 class282_sub53_1 = this.method12842(1478779913);
+		MouseRecord class282_sub53_1 = this.method12842(1478779913);
 		if (class282_sub53_1 != null) {
 			int i_2 = this.method11408(class282_sub53_1, 32767, 207131238);
 			int i_3 = class282_sub53_1.method13469(792510855);
@@ -45,7 +45,7 @@ public class Class534_Sub2 extends Class534 {
 			}
 
 			byte b_5 = 0;
-			if (class282_sub53_1.method13470(-959652469) == 2) {
+			if (class282_sub53_1.getClickType(-959652469) == 2) {
 				b_5 = 1;
 			}
 
@@ -58,7 +58,7 @@ public class Class534_Sub2 extends Class534 {
 	}
 
 	void method11418() {
-		Class282_Sub53 class282_sub53_1 = this.method12842(898910000);
+		MouseRecord class282_sub53_1 = this.method12842(898910000);
 		if (class282_sub53_1 != null) {
 			int i_2 = this.method11408(class282_sub53_1, 32767, 1197830293);
 			int i_3 = class282_sub53_1.method13469(2099556517);
@@ -76,7 +76,7 @@ public class Class534_Sub2 extends Class534 {
 			}
 
 			byte b_5 = 0;
-			if (class282_sub53_1.method13470(-956354647) == 2) {
+			if (class282_sub53_1.getClickType(-956354647) == 2) {
 				b_5 = 1;
 			}
 
@@ -105,7 +105,7 @@ public class Class534_Sub2 extends Class534 {
 	}
 
 	void method11414(int i_1) {
-		Class282_Sub53 class282_sub53_2 = this.method12842(500103661);
+		MouseRecord class282_sub53_2 = this.method12842(500103661);
 		if (class282_sub53_2 != null) {
 			int i_3 = this.method11408(class282_sub53_2, 32767, -102422024);
 			int i_4 = class282_sub53_2.method13469(367077082);
@@ -123,7 +123,7 @@ public class Class534_Sub2 extends Class534 {
 			}
 
 			byte b_6 = 0;
-			if (class282_sub53_2.method13470(-235884507) == 2) {
+			if (class282_sub53_2.getClickType(-235884507) == 2) {
 				b_6 = 1;
 			}
 
@@ -147,7 +147,7 @@ public class Class534_Sub2 extends Class534 {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, 1192447706);
 	}
 
-	void method11426(RsByteBuffer rsbytebuffer_1, Class282_Sub53 class282_sub53_2) {
+	void method11426(RsByteBuffer rsbytebuffer_1, MouseRecord class282_sub53_2) {
 	}
 
 	static final void method12846(CS2Executor cs2executor_0, int i_1) {

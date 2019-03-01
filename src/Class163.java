@@ -5,7 +5,7 @@ public class Class163 {
 	String aString2028;
 	int anInt2029;
 	int anInt2030;
-	public static Class209 aClass209_2031;
+	public static Class209 mouseRecorder;
 
 	public String method2829(int i_1) {
 		return this.aString2028;

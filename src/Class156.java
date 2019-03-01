@@ -34,7 +34,7 @@ public class Class156 {
 
 	static synchronized void method2652(byte b_0) {
 		while (true) {
-			Class282_Sub47 class282_sub47_1 = (Class282_Sub47) aClass482_1971.method8061((byte) -94);
+			Class282_Sub47 class282_sub47_1 = (Class282_Sub47) aClass482_1971.popHead((byte) -94);
 			if (class282_sub47_1 == null) {
 				return;
 			}

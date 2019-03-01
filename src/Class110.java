@@ -153,7 +153,7 @@ public class Class110 {
 	}
 
 	static final void method1862(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12899(-386531740) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub23_8202.method12899(-386531740) ? 1 : 0;
 	}
 
 }

@@ -51,7 +51,7 @@ public class Class530 {
 
 	static final void method11351(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method7785(i_2, -1569082845);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub2_8205.method7785(i_2, -1569082845);
 	}
 
 	static Class106[] method11352(int i_0) {

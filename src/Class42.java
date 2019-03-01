@@ -99,7 +99,7 @@ public class Class42 implements Interface2 {
 			tcpmessage_4.buffer.writeInt(-1);
 			client.aClass184_7475.method3049(tcpmessage_4, 1617512289);
 		} else {
-			i_1 = i_1 * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1100344734) >> 8;
+			i_1 = i_1 * Class393.preferences.aClass468_Sub13_8228.method12714(-1100344734) >> 8;
 			if (i_0 == -1 && !Class260.aBool3220) {
 				Class226.method3805(-1719520107);
 			} else if (i_0 != -1 && (i_0 != Class260.anInt3223 || !Class116.method1966(1943151089)) && i_1 != 0 && !Class260.aBool3220) {

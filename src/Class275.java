@@ -35,18 +35,18 @@ public class Class275 {
 	}
 
 	public static void method4891(byte b_0) {
-		if (client.aFrame3260 == null) {
+		if (client.fullScreenFrame == null) {
 			int i_1 = client.anInt3250;
 			int i_2 = client.anInt3251;
 			int i_3 = Class45.anInt434 - Class349.anInt4083 - i_1;
 			int i_4 = Class107.anInt1082 - client.anInt3243 * -969250379 - i_2;
 			if (i_1 > 0 || i_3 > 0 || i_2 > 0 || i_4 > 0) {
 				try {
-					Container container_5 = Class371.method6354((byte) 1);
+					Container container_5 = Class371.getActiveContainer((byte) 1);
 					int i_6 = 0;
 					int i_7 = 0;
-					if (container_5 == client.aFrame3261) {
-						Insets insets_8 = client.aFrame3261.getInsets();
+					if (container_5 == client.engineFrame) {
+						Insets insets_8 = client.engineFrame.getInsets();
 						i_6 = insets_8.left;
 						i_7 = insets_8.top;
 					}

@@ -85,7 +85,7 @@ public class Class320 {
 		Class260.aClass277_3234 = new Class277(i_0, i_1 << 9, i_2 << 9, i_3 << 8, i_4 * 8);
 	}
 
-	public static GraphicalRenderer method5732(int i_0, Canvas canvas_1, Interface22 interface22_2, Index index_3, int i_4, int i_5) {
+	public static GraphicalRenderer createRenderer(int i_0, Canvas canvas_1, Interface22 interface22_2, Index index_3, int i_4, int i_5) {
 		int i_6 = 0;
 		int i_7 = 0;
 		if (canvas_1 != null) {
@@ -102,7 +102,7 @@ public class Class320 {
 	}
 
 	static final void method5734(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(1068541972);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8227.method12714(1068541972);
 	}
 
 	static final void method5735(CS2Executor cs2executor_0, byte b_1) {
@@ -110,7 +110,7 @@ public class Class320 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		FontMetrics fontmetrics_5 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_4, 0, 1444002710);
+		FontMetrics fontmetrics_5 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, i_4, 0, 1444002710);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = fontmetrics_5.method6951(string_2, i_3, Class182.aClass160Array2261, (byte) 76);
 	}
 

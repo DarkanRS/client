@@ -229,13 +229,13 @@ public class ReferenceTable {
 	}
 
 	static final void method5766(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub1_8197, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1012945270);
-		Class190.method3148((byte) 77);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1012945270);
+		Class190.savePreferences((byte) 77);
 		client.aBool7175 = false;
 	}
 
 	static final void method5767(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub20_8207.method12797((byte) 57) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub20_8207.method12797((byte) 57) ? 1 : 0;
 	}
 
 	static void method5768(int i_0, byte b_1) {
@@ -247,7 +247,7 @@ public class ReferenceTable {
 
 	static final void method5769(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		if (Class475.aBool5623) {
+		if (Class475.supportsFullScreen) {
 			Class467[] arr_3 = Class405.method6825((byte) 57);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = arr_3[i_2].anInt5571;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = arr_3[i_2].anInt5574;

@@ -64,14 +64,14 @@ public class Class446 {
 	}
 
 	public static void method7430(Node node_0, Node node_1, int i_2) {
-		if (node_0.next != null) {
+		if (node_0.prev != null) {
 			node_0.remove();
 		}
 
-		node_0.next = node_1.next;
-		node_0.prev = node_1;
-		node_0.next.prev = node_0;
+		node_0.prev = node_1.prev;
+		node_0.next = node_1;
 		node_0.prev.next = node_0;
+		node_0.next.prev = node_0;
 	}
 
 	public int method7432(byte b_1) {
@@ -126,7 +126,7 @@ public class Class446 {
 			int i_11;
 			if (Class174.aBool2135 && bool_6) {
 				fontmetrics_4 = Class197.aClass414_2436;
-				fontrenderer_3 = graphicalrenderer_2.method8448(fontmetrics_4, Class174.aClass91Array2132, true);
+				fontrenderer_3 = graphicalrenderer_2.createFont(fontmetrics_4, Class174.aClass91Array2132, true);
 				i_7 = fontmetrics_4.method6951(string_0, 250, (Sprite[]) null, (byte) 127);
 				i_8 = fontmetrics_4.method6972(string_0, 250, fontmetrics_4.anInt4975, (Sprite[]) null, 369575167);
 				int i_15 = Class174.aClass91_2138.anInt957;
@@ -186,7 +186,7 @@ public class Class446 {
 	}
 
 	static final void method7448(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub5_8221.method12651(-1091175329);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.cpu.getValue();
 	}
 
 }

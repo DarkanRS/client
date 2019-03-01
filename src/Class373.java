@@ -11,7 +11,7 @@ public class Class373 {
 
 	static final void method6363(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class158_Sub1.aClass3_8507.anIntArray26[i_2];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.anIntArray26[i_2];
 	}
 
 	static final void method6364(CS2Executor cs2executor_0, int i_1) {
@@ -41,15 +41,15 @@ public class Class373 {
 					if (point_2 != null && Class351.gameCanvas.isShowing() && Class530.aBool7050) {
 						class282_sub53_sub1_3.method14732(point_2, -1545161336);
 						if (!class282_sub53_sub1_3.method14731(-1966919184) && class282_sub53_sub1_3.method13481(1700591909) < Class349.anInt4083 && class282_sub53_sub1_3.method13469(1495235000) < Engine.anInt3243 * -969250379 && class282_sub53_sub1_3.method13481(1815146840) >= 0 && class282_sub53_sub1_3.method13469(-1984385021) >= 0) {
-							int i_4 = class282_sub53_sub1_3.method13470(1166516765);
-							if (class282_sub53_sub1_3.method13470(1107239769) == -1) {
+							int i_4 = class282_sub53_sub1_3.getClickType(1166516765);
+							if (class282_sub53_sub1_3.getClickType(1107239769) == -1) {
 								Class236.aClass534_Sub1_2913.method11410(class282_sub53_sub1_3, (byte) 24);
 							} else if (Class298.method5304(i_4, -1867456508)) {
 								Class236.aClass534_Sub1_2913.method12809(class282_sub53_sub1_3, 16711935);
 							}
 						}
 					} else {
-						class282_sub53_sub1_3.method13475(665742059);
+						class282_sub53_sub1_3.cache(665742059);
 					}
 				}
 			}

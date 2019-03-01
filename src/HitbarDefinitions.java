@@ -309,11 +309,11 @@ public class HitbarDefinitions {
 
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_2, i_3, (byte) -77);
 				IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
-				byte b_15 = Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(client.cycles, Class31.anInt361, Class109_Sub1.anInt9384, Class246.anInt3029, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(619789577) == 0, true, 0, true);
+				byte b_15 = Class393.preferences.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(client.cycles, Class31.anInt361, Class109_Sub1.anInt9384, Class246.anInt3029, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aClass468_Sub26_8224.method12943(619789577) == 0, true, 0, true);
 				++client.anInt7396;
 				Class282_Sub20_Sub24.method15391(-1221353280);
-				if (client.anInt7166 == 13) {
+				if (client.gameState == 13) {
 					Class423.method7066(i_0, i_1, i_2, i_3, 256, 256, (byte) -11);
 					Class250.method4298(i_0, i_1, i_2, i_3, 256, 256, (byte) -90);
 					Class96_Sub12.method14612(i_0, i_1, i_2, i_3, 256, 256, -927883680);
@@ -353,7 +353,7 @@ public class HitbarDefinitions {
 	static final void method3233(CS2Executor cs2executor_0, int i_1) {
 		Defaults6Loader.method11248(2004309168);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -90);
-		Class190.method3148((byte) 38);
+		Class190.savePreferences((byte) 38);
 		client.aBool7175 = false;
 	}
 

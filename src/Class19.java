@@ -98,7 +98,7 @@ public class Class19 {
 	}
 
 	static final void method585(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1 ? 1 : 0;
 	}
 
 	static final void method586(CS2Executor cs2executor_0, byte b_1) {

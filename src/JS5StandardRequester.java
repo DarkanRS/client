@@ -57,7 +57,7 @@ public abstract class JS5StandardRequester {
 
 	public abstract boolean method5521(byte var1);
 
-	public abstract void method5522(Object var1, boolean var2, int var3);
+	public abstract void init(Object var1, boolean var2, int var3);
 
 	public abstract void method5523(boolean var1, byte var2);
 

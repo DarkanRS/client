@@ -39,7 +39,7 @@ public abstract class Class96_Sub10 extends Class96 {
 
 			if (client.method11633(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
 				Class184 class184_8 = Class468_Sub20.method12807(870102038);
-				if (client.anInt7166 == 0 || client.anInt7166 == 13) {
+				if (client.gameState == 0 || client.gameState == 13) {
 					TCPMessage tcpmessage_7;
 					if (i_0 == 1) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4574, class184_8.isaac, 440245011);

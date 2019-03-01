@@ -31,7 +31,7 @@ public class Class282_Sub20_Sub38 extends Class282_Sub20 {
 
 			Class9.anInt76 = i_0;
 			client.aClass184_7218.method3051((byte) -50);
-			Class365.setGameState(14, 1309842268);
+			Class365.setGameState(14);
 		}
 
 	}

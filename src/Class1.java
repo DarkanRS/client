@@ -14,7 +14,7 @@ public class Class1 {
 	}
 
 	static final void method253(int i_0, IterableNodeMap iterablenodemap_1, int i_2) {
-		if (i_0 != -1 && iterablenodemap_1.method7754((long) i_0) == null) {
+		if (i_0 != -1 && iterablenodemap_1.get((long) i_0) == null) {
 			iterablenodemap_1.method7765(new Node(), (long) i_0);
 		}
 

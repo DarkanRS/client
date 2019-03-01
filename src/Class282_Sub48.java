@@ -36,7 +36,7 @@ public class Class282_Sub48 extends Node {
 		int i_2 = this.anInt8095;
 		boolean bool_3 = this.aBool8098;
 		if (this.aClass478_8104 != null) {
-			ObjectDefinitions objectdefinitions_4 = this.aClass478_8104.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 46);
+			ObjectDefinitions objectdefinitions_4 = this.aClass478_8104.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 46);
 			if (objectdefinitions_4 != null) {
 				this.anInt8095 = objectdefinitions_4.anInt5653;
 				this.aBool8098 = objectdefinitions_4.aBool5696;
@@ -65,9 +65,9 @@ public class Class282_Sub48 extends Node {
 			int i_6 = Class282_Sub11_Sub1.method15433(this.aClass521_Sub1_Sub1_Sub2_Sub2_8085, 912866554);
 			if (i_2 != i_6) {
 				this.anInt8095 = i_6;
-				NPCDefinitions npcdefinitions_5 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580;
+				NPCDefinitions npcdefinitions_5 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions;
 				if (npcdefinitions_5.anIntArray4886 != null) {
-					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.aClass3_8507, 265881693);
+					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 				}
 
 				if (npcdefinitions_5 != null) {
@@ -81,7 +81,7 @@ public class Class282_Sub48 extends Node {
 					this.anInt8081 = 0;
 					this.anInt8105 = 0;
 					this.anInt8089 = 0;
-					this.aBool8098 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580.aBool4872;
+					this.aBool8098 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions.aBool4872;
 					this.anInt8094 = 256;
 					this.anInt8093 = 256;
 				}

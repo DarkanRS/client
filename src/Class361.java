@@ -61,7 +61,7 @@ public class Class361 {
 			if (!class282_sub50_sub7_0.aBool9586 && !"".equals(class282_sub50_sub7_0.aString9588)) {
 				long long_4 = class282_sub50_sub7_0.aLong9580;
 
-				for (class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7754(long_4); class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-2120595653)) {
+				for (class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.get(long_4); class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-2120595653)) {
 					;
 				}
 
@@ -91,18 +91,18 @@ public class Class361 {
 	}
 
 	static void method6270(byte b_0) {
-		if (QuickChatDynamicValue.method4180(client.anInt7166, (byte) -11)) {
+		if (QuickChatDynamicValue.method4180(client.gameState, (byte) -11)) {
 			if (client.aClass184_7218.method3053((byte) -30) == null) {
-				Class365.setGameState(14, 1288084460);
+				Class365.setGameState(14);
 			} else {
-				Class365.setGameState(0, 2055282492);
+				Class365.setGameState(0);
 			}
-		} else if (client.anInt7166 != 14 && client.anInt7166 != 19) {
-			if (client.anInt7166 == 12) {
-				Class365.setGameState(5, 2013882728);
+		} else if (client.gameState != 14 && client.gameState != 19) {
+			if (client.gameState == 12) {
+				Class365.setGameState(5);
 			}
 		} else {
-			Class365.setGameState(5, 1099298467);
+			Class365.setGameState(5);
 		}
 
 	}

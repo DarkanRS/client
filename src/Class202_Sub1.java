@@ -12,7 +12,7 @@ public class Class202_Sub1 extends Class202 {
 		return this.aClass286_8183.method5034(675588453);
 	}
 
-	public boolean method3315(int i_1, byte b_2) throws IOException {
+	public boolean available(int i_1, byte b_2) throws IOException {
 		return this.aClass286_8183.method5030(i_1, 140362254);
 	}
 
@@ -28,11 +28,11 @@ public class Class202_Sub1 extends Class202 {
 		this.aClass286_8183.method5042(1037256692);
 	}
 
-	public int method3327(byte[] bytes_1, int i_2, int i_3, int i_4) throws IOException {
+	public int read(byte[] bytes_1, int i_2, int i_3, int i_4) throws IOException {
 		return this.aClass286_8183.method5043(bytes_1, i_2, i_3, -1812586359);
 	}
 
-	public void method3311(byte[] bytes_1, int i_2, int i_3, int i_4) throws IOException {
+	public void write(byte[] bytes_1, int i_2, int i_3, int i_4) throws IOException {
 		this.aClass289_8185.method5087(bytes_1, i_2, i_3, -2123189080);
 	}
 

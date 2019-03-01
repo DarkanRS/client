@@ -19,7 +19,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 
 		ObjectDefinitions objectdefinitions_12 = this.objectDefLoader.getObjectDefinitions(i_6, 65280);
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(590379458) != 0 || !objectdefinitions_12.aBool5701) {
+		if (Class393.preferences.aClass468_Sub22_8213.method12873(590379458) != 0 || !objectdefinitions_12.aBool5701) {
 			int i_13;
 			int i_14;
 			if (i_7 != 1 && i_7 != 3) {
@@ -63,7 +63,7 @@ public class Class329_Sub1 extends Class329 {
 			if (!aBool7717 || (!Class308.isWall(i_8, -2097799445) || objectdefinitions_12.anInt5656 == 1) && (!QuestDefinitions.isRoof(i_8, -1938518575) || objectdefinitions_12.anInt5656 != 0)) {
 				Object obj_25;
 				if (i_8 == SceneObjectType.GROUND_DECORATION.type) {
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 84) != 0 || objectdefinitions_12.anInt5652 != 0 || objectdefinitions_12.clipType == 1 || objectdefinitions_12.aBool5685) {
+					if (Class393.preferences.aClass468_Sub23_8202.method12897((byte) 84) != 0 || objectdefinitions_12.anInt5652 != 0 || objectdefinitions_12.clipType == 1 || objectdefinitions_12.aBool5685) {
 						if (bool_24) {
 							Class521_Sub1_Sub3_Sub1 class521_sub1_sub3_sub1_26 = new Class521_Sub1_Sub3_Sub1(this.aClass206_3776, graphicalrenderer_1, this.objectDefLoader, objectdefinitions_12, i_3, i_2, i_21, i_20, i_22, this.overlayHidden, i_7, bool_23);
 							if (class521_sub1_sub3_sub1_26.method86(1102115730)) {

@@ -300,9 +300,9 @@ public final class JS5CacheFile {
 		this.anInt2572 = i_4;
 	}
 
-	public static void method3353(Class282_Sub53 class282_sub53_0, int i_1) {
-		if (!Class169.method2875(client.anInt7166, -1927229770)) {
-			class282_sub53_0.method13475(-485901681);
+	public static void record(MouseRecord class282_sub53_0, int i_1) {
+		if (!Class169.method2875(client.gameState, -1927229770)) {
+			class282_sub53_0.cache(-485901681);
 		} else {
 			Class236.aClass534_Sub2_2911.method11410(class282_sub53_0, (byte) 24);
 		}
@@ -345,7 +345,7 @@ public final class JS5CacheFile {
 	}
 
 	static final void method3358(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-317680305);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub9_8226.method12687(-317680305);
 	}
 
 	public static void method3359(int i_0) {

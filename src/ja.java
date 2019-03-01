@@ -385,7 +385,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void DA(int var1, Class455 var2, int var3, int var4);
 
-	public FontRenderer method8448(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
@@ -861,13 +861,13 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		int i_6 = 0;
 		boolean bool_7 = false;
 
-		for (Class275_Sub1_Sub1 class275_sub1_sub1_8 = (Class275_Sub1_Sub1) class151_1.aClass464_1961.method7731(1278936127); class275_sub1_sub1_8 != null; class275_sub1_sub1_8 = (Class275_Sub1_Sub1) class151_1.aClass464_1961.method7734((byte) -107)) {
-			bi[i_3++] = class275_sub1_sub1_8.anInt10205;
-			bi[i_3++] = class275_sub1_sub1_8.anInt10208;
-			bi[i_3++] = class275_sub1_sub1_8.anInt10202;
-			bw[i_4++] = class275_sub1_sub1_8.anInt10209;
-			bz[i_6++] = (short) class275_sub1_sub1_8.anInt10207;
-			bx[i_5++] = class275_sub1_sub1_8.anInt10206;
+		for (PointEntity class275_sub1_sub1_8 = (PointEntity) class151_1.aClass464_1961.method7731(1278936127); class275_sub1_sub1_8 != null; class275_sub1_sub1_8 = (PointEntity) class151_1.aClass464_1961.method7734((byte) -107)) {
+			bi[i_3++] = class275_sub1_sub1_8.x;
+			bi[i_3++] = class275_sub1_sub1_8.z;
+			bi[i_3++] = class275_sub1_sub1_8.y;
+			bw[i_4++] = class275_sub1_sub1_8.color;
+			bz[i_6++] = (short) class275_sub1_sub1_8.rotation;
+			bx[i_5++] = class275_sub1_sub1_8.size;
 		}
 
 	}

@@ -5,7 +5,7 @@ public class Class123 {
 	MeshRasterizer aClass528_1544;
 	boolean[] aBoolArray1553;
 	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_1551;
-	Class539 aClass539_1538;
+	ParticleSystem aClass539_1538;
 	int anInt1548;
 	boolean aBool1552 = false;
 	boolean aBool1543 = false;
@@ -55,11 +55,11 @@ public class Class123 {
 		if ((this.aClass539_1538 == null || this.aClass539_1538.aBool7132) && (arr_10 != null || arr_11 != null)) {
 			ObjectDefinitions objectdefinitions_12 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
 			if (objectdefinitions_12.anIntArray5650 != null) {
-				objectdefinitions_12 = objectdefinitions_12.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) -36);
+				objectdefinitions_12 = objectdefinitions_12.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) -36);
 			}
 
 			if (objectdefinitions_12 != null) {
-				this.aClass539_1538 = Class539.method11557(client.cycles, true);
+				this.aClass539_1538 = ParticleSystem.method11557(client.cycles, true);
 			}
 		}
 
@@ -87,7 +87,7 @@ public class Class123 {
 			ObjectDefinitions objectdefinitions_7 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
 			ObjectDefinitions objectdefinitions_8 = objectdefinitions_7;
 			if (objectdefinitions_7.anIntArray5650 != null) {
-				objectdefinitions_7 = objectdefinitions_7.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 4);
+				objectdefinitions_7 = objectdefinitions_7.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 4);
 			}
 
 			if (objectdefinitions_7 == null) {
@@ -160,7 +160,7 @@ public class Class123 {
 	final MeshRasterizer method2132(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, boolean bool_4, int i_5) {
 		ObjectDefinitions objectdefinitions_6 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
 		if (objectdefinitions_6.anIntArray5650 != null) {
-			objectdefinitions_6 = objectdefinitions_6.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 31);
+			objectdefinitions_6 = objectdefinitions_6.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 31);
 		}
 
 		if (objectdefinitions_6 == null) {
@@ -176,7 +176,7 @@ public class Class123 {
 
 			this.method2133(this.aClass521_Sub1_1539, 1031248161);
 			if (bool_4) {
-				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -25) != 0;
+				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.preferences.aClass468_Sub2_8205.method12624((byte) -25) != 0;
 			}
 
 			if (bool_3 && !bool_4) {
@@ -261,7 +261,7 @@ public class Class123 {
 	void method2133(Class521_Sub1 class521_sub1_1, int i_2) {
 		if (this.aClass456_1545.hasDefs()) {
 			if (this.aClass456_1545.method7627(client.cycles - this.anInt1548, -1604815652)) {
-				if (Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -127) == 2) {
+				if (Class393.preferences.aClass468_Sub2_8205.method12624((byte) -127) == 2) {
 					this.aBool1552 = false;
 				}
 
@@ -320,7 +320,7 @@ public class Class123 {
 	}
 
 	public static void method2152(int i_0, int i_1) {
-		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i_0);
+		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.aBool7995 = !class282_sub37_2.aBool7995;
 			class282_sub37_2.aClass278_Sub1_8001.method4924(class282_sub37_2.aBool7995, -1401371611);

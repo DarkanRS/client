@@ -146,7 +146,7 @@ public class IComponentDefinitions {
 	public Object[] anObjectArray1353;
 	public Object[] anObjectArray1271;
 	public boolean aBool1384;
-	public Class539 aClass539_1452;
+	public ParticleSystem aClass539_1452;
 	IterableNodeMap aClass465_1365;
 	public int idHash = -1;
 	public int anInt1288 = -1;
@@ -555,7 +555,7 @@ public class IComponentDefinitions {
 		Class87[] arr_6 = meshrasterizer_2.method11253();
 		Class172[] arr_7 = meshrasterizer_2.method11274();
 		if ((this.aClass539_1452 == null || this.aClass539_1452.aBool7132) && (arr_6 != null || arr_7 != null)) {
-			this.aClass539_1452 = Class539.method11557(i_4, false);
+			this.aClass539_1452 = ParticleSystem.method11557(i_4, false);
 		}
 
 		if (this.aClass539_1452 != null) {
@@ -581,7 +581,7 @@ public class IComponentDefinitions {
 
 	public void method1995(int i_1, int i_2) {
 		if (this.aClass465_1365 != null) {
-			Node node_3 = this.aClass465_1365.method7754((long) i_1);
+			Node node_3 = this.aClass465_1365.get((long) i_1);
 			if (node_3 != null) {
 				node_3.remove();
 			}
@@ -593,7 +593,7 @@ public class IComponentDefinitions {
 		if (this.aClass465_1365 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -602,7 +602,7 @@ public class IComponentDefinitions {
 		if (this.aClass465_1365 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -612,7 +612,7 @@ public class IComponentDefinitions {
 			this.aClass465_1365 = new IterableNodeMap(16);
 			this.aClass465_1365.method7765(new Class282_Sub38(i_2), (long) i_1);
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.get((long) i_1);
 			if (class282_sub38_4 == null) {
 				this.aClass465_1365.method7765(new Class282_Sub38(i_2), (long) i_1);
 			} else {
@@ -627,7 +627,7 @@ public class IComponentDefinitions {
 			this.aClass465_1365 = new IterableNodeMap(16);
 			this.aClass465_1365.method7765(new Class282_Sub47(string_2), (long) i_1);
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.get((long) i_1);
 			if (class282_sub47_4 != null) {
 				class282_sub47_4.remove();
 			}
@@ -686,7 +686,7 @@ public class IComponentDefinitions {
 					return null;
 				}
 
-				if (rsmesh_19.zoom < 13) {
+				if (rsmesh_19.version < 13) {
 					rsmesh_19.upscale(2);
 				}
 

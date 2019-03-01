@@ -3,7 +3,7 @@ public class Class468_Sub12 extends Class468 {
 	static int anInt7899;
 
 	public void method12703(int i_1) {
-		if (this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12777(284817815) && !Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-1858254285), -1873449120)) {
+		if (this.aClass282_Sub54_5581.currentToolkit.method12777(284817815) && !Class60.method1166(this.aClass282_Sub54_5581.currentToolkit.getValue(-1858254285), -1873449120)) {
 			this.anInt5578 = 0;
 		}
 
@@ -34,7 +34,7 @@ public class Class468_Sub12 extends Class468 {
 	}
 
 	public int method7784(int i_1) {
-		return !Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(1997051125), -790341890) ? 3 : 1;
+		return !Class60.method1166(this.aClass282_Sub54_5581.currentToolkit.getValue(1997051125), -790341890) ? 3 : 1;
 	}
 
 	void method7780(int i_1) {
@@ -50,11 +50,11 @@ public class Class468_Sub12 extends Class468 {
 	}
 
 	public boolean method12707(int i_1) {
-		return Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-1301268154), -1253259438);
+		return Class60.method1166(this.aClass282_Sub54_5581.currentToolkit.getValue(-1301268154), -1253259438);
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return !Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-2032316540), -1020408311) ? 3 : 1;
+		return !Class60.method1166(this.aClass282_Sub54_5581.currentToolkit.getValue(-2032316540), -1020408311) ? 3 : 1;
 	}
 
 	static void method12708(int i_0) {

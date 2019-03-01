@@ -54,7 +54,7 @@ public class Class38 {
 		Class180.aClass229_2245.method3859(1791836497);
 	}
 
-	public static Class202 method852(Socket socket_0, int i_1, int i_2) throws IOException {
+	public static Class202 createAsyncConnection(Socket socket_0, int i_1, int i_2) throws IOException {
 		return new Class202_Sub1(socket_0, i_1);
 	}
 
@@ -135,8 +135,8 @@ public class Class38 {
 			i_9 = 0;
 		}
 
-		int i_10 = Class163.aClass209_2031.method3569(2129837373);
-		int i_11 = Class163.aClass209_2031.method3570(756095591);
+		int i_10 = Class163.mouseRecorder.method3569(2129837373);
+		int i_11 = Class163.mouseRecorder.method3570(756095591);
 		int i_12;
 		Class282_Sub50_Sub7 class282_sub50_sub7_13;
 		int i_14;

@@ -8,7 +8,7 @@ public final class Class97 {
 		throw new Error();
 	}
 
-	public static boolean method1612(int i_0, int i_1) {
+	public static boolean loggedOutState(int i_0, int i_1) {
 		return i_0 == 5 || i_0 == 11 || i_0 == 14 || i_0 == 19 || i_0 == 3 || i_0 == 8 || i_0 == 9;
 	}
 

@@ -6,12 +6,12 @@ public class Class190 {
 		throw new Error();
 	}
 
-	public static void method3148(byte b_0) {
+	public static void savePreferences(byte b_0) {
 		Class442 class442_1 = null;
 
 		try {
 			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, true, (byte) -1);
-			RsByteBuffer rsbytebuffer_2 = Class393.aClass282_Sub54_4783.method13499(-1147561842);
+			RsByteBuffer rsbytebuffer_2 = Class393.preferences.method13499(-1147561842);
 			class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index, -1686459180);
 		} catch (Exception exception_4) {
 			;
@@ -71,7 +71,7 @@ public class Class190 {
 			if (class180_9 != null && class180_9.anInt2236 != 0 && client.cycles % 20 < 10) {
 				int i_13;
 				if (class180_9.anInt2236 == 1) {
-					Class282_Sub47 class282_sub47_10 = (Class282_Sub47) client.aClass465_7208.method7754((long) class180_9.anInt2238);
+					Class282_Sub47 class282_sub47_10 = (Class282_Sub47) client.NPCS.get((long) class180_9.anInt2238);
 					if (class282_sub47_10 != null) {
 						NPC npc_11 = (NPC) class282_sub47_10.anObject8068;
 						Vector3 vector3_12 = npc_11.method11166().aClass385_3595;
@@ -104,7 +104,7 @@ public class Class190 {
 	}
 
 	static void method3152(byte b_0) {
-		if (client.anInt7166 == 17) {
+		if (client.gameState == 17) {
 			Class42_Sub1.method14562(733346392);
 		}
 
@@ -135,14 +135,14 @@ public class Class190 {
 		Class84.myPlayer = null;
 		client.anInt7211 = 0;
 		client.anInt7210 = 0;
-		client.aClass465_7208.method7749(1966305284);
+		client.NPCS.method7749(1966305284);
 		client.aClass482_7333.method8118(1024989967);
 		client.aClass465_7334.method7749(1935752602);
 		client.aClass457_7335.method7651((byte) 5);
 		client.aClass465_7414.method7749(828403909);
 		Class282_Sub31.aClass482_7775 = new NodeCollection();
 		Class282_Sub31.aClass482_7776 = new NodeCollection();
-		Class158_Sub1.aClass3_8507.method265(-1043684196);
+		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(-1043684196);
 		Class8_Sub3.method14341(1480679080);
 		Class296.anInt3534 = 0;
 		Class282_Sub44.anInt8064 = 0;
@@ -202,7 +202,7 @@ public class Class190 {
 		client.aBool7371 = true;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1420130584);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8209, Class393.aClass282_Sub54_4783.aClass468_Sub27_8208.method12952((byte) 104), 999317322);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, Class393.preferences.aClass468_Sub27_8208.method12952((byte) 104), 999317322);
 		client.anInt7221 = 0;
 		Class350.method6189((byte) 111);
 		Class388.method6692(2043592347);

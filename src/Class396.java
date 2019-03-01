@@ -67,7 +67,7 @@ public class Class396 {
 	}
 
 	static final void method6773(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub15_8203.method12739(-118386335);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.idleAnimations.getValue(-118386335);
 	}
 
 	public static void method6774(int i_0, byte b_1) {

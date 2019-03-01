@@ -12,7 +12,7 @@ public class Class212 {
 	final void method3634(Interface18 interface18_1) {
 		long long_2 = interface18_1.method130();
 
-		for (Class282_Sub50_Sub8 class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.method7754(long_2); class282_sub50_sub8_4 != null; class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.method7747(-2008700188)) {
+		for (Class282_Sub50_Sub8 class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.get(long_2); class282_sub50_sub8_4 != null; class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.method7747(-2008700188)) {
 			if (class282_sub50_sub8_4.anInterface18_9607.method131(interface18_1)) {
 				this.method3635(class282_sub50_sub8_4);
 				break;
@@ -108,7 +108,7 @@ public class Class212 {
 	public final Object method3654(Interface18 interface18_1) {
 		long long_2 = interface18_1.method130();
 
-		for (Class282_Sub50_Sub8 class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.method7754(long_2); class282_sub50_sub8_4 != null; class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.method7747(-1822367147)) {
+		for (Class282_Sub50_Sub8 class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.get(long_2); class282_sub50_sub8_4 != null; class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass465_2677.method7747(-1822367147)) {
 			if (class282_sub50_sub8_4.anInterface18_9607.method131(interface18_1)) {
 				Object object_5 = class282_sub50_sub8_4.method14860();
 				if (object_5 != null) {

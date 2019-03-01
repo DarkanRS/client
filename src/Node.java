@@ -3,21 +3,21 @@ import java.awt.Point;
 public class Node {
 
 	public long data;
-	public Node prev;
 	public Node next;
+	public Node prev;
 
 	public void remove() {
-		if (this.next != null) {
-			this.next.prev = this.prev;
+		if (this.prev != null) {
 			this.prev.next = this.next;
-			this.prev = null;
+			this.next.prev = this.prev;
 			this.next = null;
+			this.prev = null;
 		}
 
 	}
 
 	public boolean method4994(int i_1) {
-		return this.next != null;
+		return this.prev != null;
 	}
 
 	static final void method5000(CS2Executor cs2executor_0, int i_1) {

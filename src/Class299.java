@@ -62,7 +62,7 @@ public class Class299 implements Interface27 {
 	}
 
 	public boolean method189(long long_1) {
-		return Class169.method2869(1518246840) >= long_1 + (long) this.anInt3540;
+		return Class169.time() >= long_1 + (long) this.anInt3540;
 	}
 
 	public int method190(int i_1) {
@@ -200,7 +200,7 @@ public class Class299 implements Interface27 {
 	}
 
 	public boolean method193(long long_1) {
-		return Class169.method2869(1596220251) >= long_1 + (long) (this.anInt3540 * -239238277 * 2055594931);
+		return Class169.time() >= long_1 + (long) (this.anInt3540 * -239238277 * 2055594931);
 	}
 
 	public int method197() {
@@ -237,7 +237,7 @@ public class Class299 implements Interface27 {
 
 	static final void method5312(CS2Executor cs2executor_0, int i_1) {
 		IterableNodeMap iterablenodemap_2 = cs2executor_0.current.switchMaps[cs2executor_0.intOpValues[cs2executor_0.instrPtr]];
-		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) iterablenodemap_2.method7754((long) cs2executor_0.intStack[--cs2executor_0.intStackPtr]);
+		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) iterablenodemap_2.get((long) cs2executor_0.intStack[--cs2executor_0.intStackPtr]);
 		if (class282_sub38_3 != null) {
 			cs2executor_0.instrPtr += class282_sub38_3.anInt8002;
 		}

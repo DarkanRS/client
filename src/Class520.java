@@ -4,7 +4,7 @@ public class Class520 {
 	int anInt5933;
 
 	public Class521_Sub1_Sub2_Sub1 method11158(int i_1) {
-		Class282_Sub29 class282_sub29_2 = (Class282_Sub29) client.aClass465_7414.method7754((long) (this.aClass219_5934.level << 28 | this.aClass219_5934.y << 14 | this.aClass219_5934.x));
+		Class282_Sub29 class282_sub29_2 = (Class282_Sub29) client.aClass465_7414.get((long) (this.aClass219_5934.level << 28 | this.aClass219_5934.y << 14 | this.aClass219_5934.x));
 		if (class282_sub29_2 == null) {
 			return null;
 		} else {

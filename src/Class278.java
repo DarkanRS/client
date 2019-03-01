@@ -25,7 +25,7 @@ public abstract class Class278 {
 			return !this.aClass282_Sub41_Sub3_3363.method14794(-1464343328) || this.method4923(24293549) > this.aClass282_Sub41_Sub3_3363.method14792((short) 255);
 		} else {
 			double d_2 = (double) this.aClass282_Sub41_Sub3_3363.method14791(-1670765094);
-			return d_2 == 0.0D || (double) Class169.method2869(2019710921) >= (double) this.aClass282_Sub41_Sub3_3363.method14793(2126760544) + 1000.0D / d_2;
+			return d_2 == 0.0D || (double) Class169.time() >= (double) this.aClass282_Sub41_Sub3_3363.method14793(2126760544) + 1000.0D / d_2;
 		}
 	}
 
@@ -54,7 +54,7 @@ public abstract class Class278 {
 
 			i_2 = this.anOggPage3352.getSerialNumber();
 			if (!this.anOggPage3352.isBOS()) {
-				Class282_Sub41 class282_sub41_9 = (Class282_Sub41) this.aClass465_3358.method7754((long) i_2);
+				Class282_Sub41 class282_sub41_9 = (Class282_Sub41) this.aClass465_3358.get((long) i_2);
 				if (!class282_sub41_9.anOggStreamState8032.pageIn(this.anOggPage3352)) {
 					throw new IllegalStateException();
 				} else {
@@ -210,7 +210,7 @@ public abstract class Class278 {
 
 					this.aBool3359 = true;
 				} else {
-					class282_sub41_2 = (Class282_Sub41) this.aClass465_3358.method7754((long) this.anOggPage3352.getSerialNumber());
+					class282_sub41_2 = (Class282_Sub41) this.aClass465_3358.get((long) this.anOggPage3352.getSerialNumber());
 				}
 
 				if (class282_sub41_2 == this.aClass282_Sub41_Sub4_3366) {

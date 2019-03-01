@@ -1,4 +1,4 @@
-public class Class226 implements Interface46 {
+public class Class226 implements Definition {
 
 	public int anInt2784;
 	public int anInt2785;
@@ -44,8 +44,8 @@ public class Class226 implements Interface46 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_10000 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		i_10000 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		if (Class475.aBool5623) {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Engine.aFrame3260 != null ? 1 : 0;
+		if (Class475.supportsFullScreen) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Engine.fullScreenFrame != null ? 1 : 0;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 		}

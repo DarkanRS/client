@@ -67,7 +67,7 @@ public class Class92 {
 	}
 
 	public static void method1563(int i_0, int i_1) {
-		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i_0);
+		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.aClass278_Sub1_8001.method4947((byte) 44);
 			Class62.method1260(class282_sub37_2.anInt7999, class282_sub37_2.aBool7998, 1656056599);

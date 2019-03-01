@@ -36,7 +36,7 @@ public class QuickChatDynamicValue {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 10);
 		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
-		Class457.method7667(icomponentdefinitions_3, interface_4, cs2executor_0, 668340664);
+		EntityList.method7667(icomponentdefinitions_3, interface_4, cs2executor_0, 668340664);
 	}
 
 	static final void method4175(CS2Executor cs2executor_0, short s_1) {

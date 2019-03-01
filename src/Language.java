@@ -123,7 +123,7 @@ public class Language implements Interface43 {
 	}
 
 	static final void method8297(CS2Executor cs2executor_0, byte b_1) {
-		if (Class96_Sub21.aClass199_9438.method3236(81, -2091776550)) {
+		if (Class96_Sub21.keyRecorder.method3236(81, -2091776550)) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;

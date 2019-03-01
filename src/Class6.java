@@ -19,15 +19,15 @@ public class Class6 {
 	}
 
 	static final void method299(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.aClass209_2031.method3570(756095591);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.mouseRecorder.method3570(756095591);
 	}
 
 	static final void method300(CS2Executor cs2executor_0, byte b_1) {
 		NPC npc_2 = (NPC) cs2executor_0.animable;
 		boolean bool_3 = false;
-		NPCDefinitions npcdefinitions_4 = npc_2.aClass409_10580;
+		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.anIntArray4886 != null) {
-			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 		}
 
 		if (npcdefinitions_4 != null) {
@@ -41,8 +41,8 @@ public class Class6 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class9.anInt106;
 	}
 
-	static boolean method302(Interface17 interface17_0, Class282_Sub53 class282_sub53_1, int i_2) {
-		return interface17_0 != null && interface17_0.method127(class282_sub53_1, client.anInterface16Array7298, client.anInt7196, Class96_Sub21.aClass199_9438, (byte) 2);
+	static boolean method302(Interface17 interface17_0, MouseRecord class282_sub53_1, int i_2) {
+		return interface17_0 != null && interface17_0.method127(class282_sub53_1, client.anInterface16Array7298, client.maximumHeldKeys, Class96_Sub21.keyRecorder, (byte) 2);
 	}
 
 	static void method303(int i_0, int i_1, int i_2, int i_3) {

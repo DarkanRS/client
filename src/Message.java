@@ -203,7 +203,7 @@ public class Message {
 
 	static void method7275(GraphicalRenderer graphicalrenderer_0, int i_1) {
 		if (Class187.anInt2351 != Class84.myPlayer.plane && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1864995825) != null) {
-			Class169.method2869(1767772693);
+			Class169.time();
 			if (Class289.method5097(graphicalrenderer_0, Class84.myPlayer.plane, 17547042)) {
 				Class187.anInt2351 = Class84.myPlayer.plane;
 			}

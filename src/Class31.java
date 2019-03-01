@@ -7,11 +7,11 @@ public class Class31 implements IndexLoader {
 	Index aClass317_358;
 	Index aClass317_359;
 
-	public Class44 method800(int i_1, int i_2) {
+	public IdentikitDefinition method800(int i_1, int i_2) {
 		SoftCache softcache_4 = this.aClass229_360;
-		Class44 class44_3;
+		IdentikitDefinition class44_3;
 		synchronized (this.aClass229_360) {
-			class44_3 = (Class44) this.aClass229_360.get((long) i_1);
+			class44_3 = (IdentikitDefinition) this.aClass229_360.get((long) i_1);
 		}
 
 		if (class44_3 != null) {
@@ -23,7 +23,7 @@ public class Class31 implements IndexLoader {
 				bytes_10 = this.aClass317_358.getFile(SharedConfigsType.aClass120_1466.id, i_1);
 			}
 
-			class44_3 = new Class44();
+			class44_3 = new IdentikitDefinition();
 			class44_3.aClass31_429 = this;
 			if (bytes_10 != null) {
 				class44_3.method909(new RsByteBuffer(bytes_10), -1148034067);
@@ -97,7 +97,7 @@ public class Class31 implements IndexLoader {
 	}
 
 	public static final Class282_Sub44 method812(int i_0, Class282_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
-		Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.method7754((long) i_0);
+		Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) i_0);
 		if (class282_sub44_5 != null) {
 			Class351.method6196(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
 		}

@@ -89,7 +89,7 @@ public class Class358 {
 	static final void method6239(CS2Executor cs2executor_0, int i_1) {
 		Class282_Sub20_Sub25.method15393(true, 1862489719);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -87);
-		Class190.method3148((byte) 74);
+		Class190.savePreferences((byte) 74);
 		client.aBool7175 = false;
 	}
 

@@ -29,7 +29,7 @@ public class AnimationDefinitions {
 		if (this.aClass465_5910 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_5910.method7754((long) i_1);
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_5910.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -194,7 +194,7 @@ public class AnimationDefinitions {
 		if (this.aClass465_5910 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_5910.method7754((long) i_1);
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_5910.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -219,7 +219,7 @@ public class AnimationDefinitions {
 	}
 
 	static final void method11147(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12609(-1561738474) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub1_8197.method12609(-1561738474) ? 1 : 0;
 	}
 
 	public static final void method11148(Class521_Sub1 class521_sub1_0, int i_1, int i_2) {

@@ -90,8 +90,8 @@ public class Class377 implements IndexLoader {
 	}
 
 	static final void method6397(CS2Executor cs2executor_0, int i_1) {
-		int i_2 = Class393.aClass282_Sub54_4783.aClass468_Sub27_8208.method12952((byte) 81);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8209, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 0 : i_2, 2046929998);
+		int i_2 = Class393.preferences.aClass468_Sub27_8208.method12952((byte) 81);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 0 : i_2, 2046929998);
 		Class405.method6823(-734889653);
 	}
 

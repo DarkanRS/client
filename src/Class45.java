@@ -75,7 +75,7 @@ public class Class45 {
 	}
 
 	static final void method928(CS2Executor cs2executor_0, int i_1) {
-		if (Class96_Sub21.aClass199_9438.method3236(82, -2064164643)) {
+		if (Class96_Sub21.keyRecorder.method3236(82, -2064164643)) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;

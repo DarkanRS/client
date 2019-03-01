@@ -218,8 +218,8 @@ public class Class282_Sub41_Sub4 extends Class282_Sub41 {
 	}
 
 	static final void method14857(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub28_8212, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, 1214573976);
-		Class190.method3148((byte) 106);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub28_8212, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, 1214573976);
+		Class190.savePreferences((byte) 106);
 		client.aBool7175 = false;
 	}
 

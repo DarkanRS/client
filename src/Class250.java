@@ -13,7 +13,7 @@ public class Class250 {
 		int i_5 = i_2 ^ (i_1 << 4 & 0xffff | i_1 >>> 12);
 		i_5 |= i_1 << 16;
 		long long_6 = (long) i_5;
-		Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_8 = (Class282_Sub26_Sub1_Sub2) this.aClass465_3089.method7754(long_6);
+		Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_8 = (Class282_Sub26_Sub1_Sub2) this.aClass465_3089.get(long_6);
 		if (class282_sub26_sub1_sub2_8 != null) {
 			return class282_sub26_sub1_sub2_8;
 		} else if (ints_3 != null && ints_3[0] <= 0) {
@@ -38,13 +38,13 @@ public class Class250 {
 		int i_5 = i_2 ^ (i_1 << 4 & 0xffff | i_1 >>> 12);
 		i_5 |= i_1 << 16;
 		long long_6 = (long) i_5 ^ 0x100000000L;
-		Class282_Sub26_Sub1_Sub1 class282_sub26_sub1_sub1_8 = (Class282_Sub26_Sub1_Sub1) this.aClass465_3090.method7754(long_6);
+		Class282_Sub26_Sub1_Sub1 class282_sub26_sub1_sub1_8 = (Class282_Sub26_Sub1_Sub1) this.aClass465_3090.get(long_6);
 		if (class282_sub26_sub1_sub1_8 != null) {
 			return class282_sub26_sub1_sub1_8;
 		} else if (ints_3 != null && ints_3[0] <= 0) {
 			return null;
 		} else {
-			Class282_Sub18 class282_sub18_9 = (Class282_Sub18) this.aClass465_3087.method7754(long_6);
+			Class282_Sub18 class282_sub18_9 = (Class282_Sub18) this.aClass465_3087.get(long_6);
 			if (class282_sub18_9 == null) {
 				class282_sub18_9 = Class282_Sub18.method12271(this.aClass317_3088, i_1, i_2);
 				if (class282_sub18_9 == null) {
@@ -99,13 +99,13 @@ public class Class250 {
 	}
 
 	static void method4297(int i_0) {
-		Class96_Sub21.aClass199_9438.method3238(-1428980483);
-		Class163.aClass209_2031.method3584(-2146990157);
+		Class96_Sub21.keyRecorder.method3238(-1428980483);
+		Class163.mouseRecorder.method3584(-2146990157);
 		Class308.aclient3620.method4704(2044329067);
 		Class351.gameCanvas.setBackground(Color.black);
 		client.anInt7190 = -1;
-		Class96_Sub21.aClass199_9438 = Class325.method5787(Class351.gameCanvas, 539499635);
-		Class163.aClass209_2031 = FontRenderer.method400(Class351.gameCanvas, true, (byte) -106);
+		Class96_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas, 539499635);
+		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, true, (byte) -106);
 	}
 
 	static final void method4298(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
@@ -143,9 +143,9 @@ public class Class250 {
 				}
 
 				if (class75_13.anInt739 >= 0) {
-					npcdefinitions_91 = ((NPC) obj_12).aClass409_10580;
+					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.anIntArray4886 != null) {
-						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.aClass3_8507, 265881693);
+						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 						if (npcdefinitions_91 == null) {
 							continue;
 						}
@@ -155,17 +155,17 @@ public class Class250 {
 				if (i_10 < i_7) {
 					obj_12 = client.players[ints_8[i_10]];
 				} else {
-					obj_12 = (Animable) ((Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_10 - i_7])).anObject8068;
-					npcdefinitions_91 = ((NPC) obj_12).aClass409_10580;
+					obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_10 - i_7])).anObject8068;
+					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.anIntArray4886 != null) {
-						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.aClass3_8507, 265881693);
+						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 						if (npcdefinitions_91 == null) {
 							continue;
 						}
 					}
 				}
 
-				if (((Animable) obj_12).anInt10321 < 0 || ((Animable) obj_12).anInt10349 != client.anInt7286 && ((Animable) obj_12).plane != Class84.myPlayer.plane) {
+				if (((Animable) obj_12).drawPriority < 0 || ((Animable) obj_12).anInt10349 != client.anInt7286 && ((Animable) obj_12).plane != Class84.myPlayer.plane) {
 					continue;
 				}
 			}
@@ -744,7 +744,7 @@ public class Class250 {
 			if (i_11 < 2048) {
 				obj_12 = client.players[i_11];
 			} else {
-				obj_12 = (Animable) ((Class282_Sub47) client.aClass465_7208.method7754((long) (i_11 - 2048))).anObject8068;
+				obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) (i_11 - 2048))).anObject8068;
 			}
 
 			i_92 = client.anIntArray7288[i_10];
@@ -752,7 +752,7 @@ public class Class250 {
 			if (i_92 < 2048) {
 				obj_14 = client.players[i_92];
 			} else {
-				obj_14 = (Animable) ((Class282_Sub47) client.aClass465_7208.method7754((long) (i_92 - 2048))).anObject8068;
+				obj_14 = (Animable) ((Class282_Sub47) client.NPCS.get((long) (i_92 - 2048))).anObject8068;
 			}
 
 			ItemDefinitions.method7140((Animable) obj_12, (Animable) obj_14, --((Animable) obj_12).anInt10319, i_0, i_1, i_2, i_3, i_4, i_5, (byte) 41);

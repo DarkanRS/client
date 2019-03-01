@@ -29,34 +29,34 @@ public class Class507 {
 	}
 
 	static void method8725(int i_0, int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
-		if (Class475.aBool5623 && client.aFrame3260 != null && (i_1 != 3 || i_2 != Class363.anInt4203 || i_3 != client.anInt3249)) {
-			Class329.method5903(Class274.aClass470_3336, client.aFrame3260, -1600993985);
-			client.aFrame3260 = null;
+		if (Class475.supportsFullScreen && client.fullScreenFrame != null && (i_1 != 3 || i_2 != Class363.anInt4203 || i_3 != client.anInt3249)) {
+			Class329.method5903(Class274.aClass470_3336, client.fullScreenFrame, -1600993985);
+			client.fullScreenFrame = null;
 		}
 
-		if (Class475.aBool5623 && i_1 == 3 && client.aFrame3260 == null) {
-			client.aFrame3260 = Class472.method7852(Class274.aClass470_3336, i_2, i_3, 0, 0, (byte) -27);
-			if (client.aFrame3260 != null) {
+		if (Class475.supportsFullScreen && i_1 == 3 && client.fullScreenFrame == null) {
+			client.fullScreenFrame = Class472.method7852(Class274.aClass470_3336, i_2, i_3, 0, 0, (byte) -27);
+			if (client.fullScreenFrame != null) {
 				Class363.anInt4203 = i_2;
 				client.anInt3249 = i_3;
-				Class190.method3148((byte) 115);
+				Class190.savePreferences((byte) 115);
 			}
 		}
 
-		if (i_1 == 3 && (!Class475.aBool5623 || client.aFrame3260 == null)) {
-			method8725(i_0, Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-1519705843), -1, -1, true, -1040786933);
+		if (i_1 == 3 && (!Class475.supportsFullScreen || client.fullScreenFrame == null)) {
+			method8725(i_0, Class393.preferences.aClass468_Sub9_8226.method12687(-1519705843), -1, -1, true, -1040786933);
 		} else {
-			Container container_6 = Class371.method6354((byte) 1);
+			Container container_6 = Class371.getActiveContainer((byte) 1);
 			Insets insets_7;
-			if (client.aFrame3260 != null) {
+			if (client.fullScreenFrame != null) {
 				Class45.anInt434 = i_2;
 				Class107.anInt1082 = i_3;
-			} else if (client.aFrame3261 != null) {
-				insets_7 = client.aFrame3261.getInsets();
+			} else if (client.engineFrame != null) {
+				insets_7 = client.engineFrame.getInsets();
 				int i_10001 = insets_7.left + insets_7.right;
-				Class45.anInt434 = client.aFrame3261.getSize().width - i_10001;
+				Class45.anInt434 = client.engineFrame.getSize().width - i_10001;
 				i_10001 = insets_7.bottom + insets_7.top;
-				Class107.anInt1082 = client.aFrame3261.getSize().height - i_10001;
+				Class107.anInt1082 = client.engineFrame.getSize().height - i_10001;
 			} else {
 				Class45.anInt434 = container_6.getSize().width;
 				Class107.anInt1082 = container_6.getSize().height;
@@ -86,8 +86,8 @@ public class Class507 {
 			if (!bool_4) {
 				Class351.gameCanvas.setSize(Class349.anInt4083, client.anInt3243 * -969250379);
 				Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
-				if (container_6 == client.aFrame3261) {
-					insets_7 = client.aFrame3261.getInsets();
+				if (container_6 == client.engineFrame) {
+					insets_7 = client.engineFrame.getInsets();
 					Class351.gameCanvas.setLocation(insets_7.left + client.anInt3250, insets_7.top + client.anInt3251);
 				} else {
 					Class351.gameCanvas.setLocation(client.anInt3250, client.anInt3251);
@@ -97,9 +97,9 @@ public class Class507 {
 			}
 
 			if (i_1 >= 2) {
-				client.aBool7301 = true;
+				client.resizeableScreen = true;
 			} else {
-				client.aBool7301 = false;
+				client.resizeableScreen = false;
 			}
 
 			Class400.method6795(2030703690);
@@ -107,7 +107,7 @@ public class Class507 {
 				Class516.method8867(true, -905479502);
 			}
 
-			if (client.aClass184_7475.method3053((byte) -102) != null && Class169.method2875(client.anInt7166, -2070106492)) {
+			if (client.aClass184_7475.method3053((byte) -102) != null && Class169.method2875(client.gameState, -2070106492)) {
 				Class388.method6692(529242177);
 			}
 

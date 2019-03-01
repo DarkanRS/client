@@ -217,7 +217,7 @@ public class Class334 {
 				}
 			}
 
-			rsmesh_1.anInt1999 = rsmesh_1.anInt1974;
+			rsmesh_1.anInt1999 = rsmesh_1.vertexCount;
 			rsmesh_1.anIntArray1991 = null;
 			rsmesh_1.anIntArray2002 = null;
 			rsmesh_1.aByteArray1977 = null;

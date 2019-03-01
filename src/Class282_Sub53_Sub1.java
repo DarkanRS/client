@@ -1,6 +1,6 @@
 import java.awt.Point;
 
-public class Class282_Sub53_Sub1 extends Class282_Sub53 {
+public class Class282_Sub53_Sub1 extends MouseRecord {
 
 	int anInt9513;
 	int anInt9514;
@@ -13,7 +13,7 @@ public class Class282_Sub53_Sub1 extends Class282_Sub53 {
 		return this.anInt9514;
 	}
 
-	public void method13475(int i_1) {
+	public void cache(int i_1) {
 		Class282_Sub53_Sub1[] arr_2 = aClass282_Sub53_Sub1Array9497;
 		synchronized (aClass282_Sub53_Sub1Array9497) {
 			if (Class81.anInt803 < Class268.anInt3307 - 1) {
@@ -56,7 +56,7 @@ public class Class282_Sub53_Sub1 extends Class282_Sub53 {
 		}
 	}
 
-	public int method13473(byte b_1) {
+	public int getMeta(byte b_1) {
 		switch (this.anInt9513) {
 		case 160:
 		case 512:
@@ -84,7 +84,7 @@ public class Class282_Sub53_Sub1 extends Class282_Sub53 {
 		this.anInt9517 -= point_1.y;
 	}
 
-	public int method13470(int i_1) {
+	public int getClickType(int i_1) {
 		switch (this.anInt9513) {
 		case 160:
 		case 512:

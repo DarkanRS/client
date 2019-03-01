@@ -54,12 +54,12 @@ public class Class42_Sub1 extends Class42 {
 		}
 
 		client.anInt7211 = 0;
-		client.aClass465_7208.method7749(299866501);
+		client.NPCS.method7749(299866501);
 		client.anInt7210 = 0;
 		client.aClass465_7414.method7749(-156011970);
 		Class514.method8841(912280086);
 		client.anInt7221 = 0;
-		Class158_Sub1.aClass3_8507.method265(161279493);
+		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(161279493);
 		Class282_Sub13.aClass61_7587 = null;
 		Class58.aClass61_528 = null;
 		Class202_Sub1.aClass282_Sub4_8186 = null;

@@ -37,15 +37,15 @@ public final class Class241 {
 	public static int method4150(int i_0) {
 		Canvas canvas_1 = new Canvas();
 		canvas_1.setSize(100, 100);
-		GraphicalRenderer graphicalrenderer_2 = Class320.method5732(0, canvas_1, (Interface22) null, (Index) null, 0, -2017555063);
-		long long_3 = Class169.method2869(1572721272);
+		GraphicalRenderer graphicalrenderer_2 = Class320.createRenderer(0, canvas_1, (Interface22) null, (Index) null, 0, -2017555063);
+		long long_3 = Class169.time();
 
 		int i_5;
 		for (i_5 = 0; i_5 < 10000; i_5++) {
 			graphicalrenderer_2.method8658(5, 10, 100.0F, 75, 50, 100.0F, 15, 90, 100.0F, -65536, -65536, -65536, 1);
 		}
 
-		i_5 = (int) (Class169.method2869(1890808944) - long_3);
+		i_5 = (int) (Class169.time() - long_3);
 		graphicalrenderer_2.method8425(0, 0, 100, 100, -16777216, (byte) -29);
 		graphicalrenderer_2.method8396(-2143467944);
 		return i_5;

@@ -6,12 +6,12 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	int anInt9827 = -1;
 
 	void method15274(Node node_1, Class282_Sub22 class282_sub22_2) {
-		while (this.aClass482_9825.head != node_1 && ((Class282_Sub22) node_1).anInt7676 <= class282_sub22_2.anInt7676) {
-			node_1 = node_1.prev;
+		while (this.aClass482_9825.tail != node_1 && ((Class282_Sub22) node_1).anInt7676 <= class282_sub22_2.anInt7676) {
+			node_1 = node_1.next;
 		}
 
 		Class446.method7430(class282_sub22_2, node_1, -579151114);
-		this.anInt9827 = ((Class282_Sub22) this.aClass482_9825.head.prev).anInt7676;
+		this.anInt9827 = ((Class282_Sub22) this.aClass482_9825.tail.next).anInt7676;
 	}
 
 	public final synchronized void method15275(Class282_Sub15 class282_sub15_1) {
@@ -37,8 +37,8 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	void method15279(Class282_Sub22 class282_sub22_1) {
 		class282_sub22_1.remove();
 		class282_sub22_1.method12355();
-		Node node_2 = this.aClass482_9825.head.prev;
-		if (node_2 == this.aClass482_9825.head) {
+		Node node_2 = this.aClass482_9825.tail.next;
+		if (node_2 == this.aClass482_9825.tail) {
 			this.anInt9827 = -1;
 		} else {
 			this.anInt9827 = ((Class282_Sub22) node_2).anInt7676;
@@ -79,7 +79,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_5);
 					} else {
 						class282_sub22_5.anInt7676 = i_7;
-						this.method15274(class282_sub22_5.prev, class282_sub22_5);
+						this.method15274(class282_sub22_5.next, class282_sub22_5);
 					}
 				}
 
@@ -120,7 +120,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_3);
 					} else {
 						class282_sub22_3.anInt7676 = i_5;
-						this.method15274(class282_sub22_3.prev, class282_sub22_3);
+						this.method15274(class282_sub22_3.next, class282_sub22_3);
 					}
 				}
 
@@ -159,7 +159,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_5);
 					} else {
 						class282_sub22_5.anInt7676 = i_7;
-						this.method15274(class282_sub22_5.prev, class282_sub22_5);
+						this.method15274(class282_sub22_5.next, class282_sub22_5);
 					}
 				}
 
@@ -194,7 +194,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_5);
 					} else {
 						class282_sub22_5.anInt7676 = i_7;
-						this.method15274(class282_sub22_5.prev, class282_sub22_5);
+						this.method15274(class282_sub22_5.next, class282_sub22_5);
 					}
 				}
 
@@ -264,7 +264,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_3);
 					} else {
 						class282_sub22_3.anInt7676 = i_5;
-						this.method15274(class282_sub22_3.prev, class282_sub22_3);
+						this.method15274(class282_sub22_3.next, class282_sub22_3);
 					}
 				}
 
@@ -298,7 +298,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_3);
 					} else {
 						class282_sub22_3.anInt7676 = i_5;
-						this.method15274(class282_sub22_3.prev, class282_sub22_3);
+						this.method15274(class282_sub22_3.next, class282_sub22_3);
 					}
 				}
 
@@ -337,7 +337,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 						this.method15279(class282_sub22_5);
 					} else {
 						class282_sub22_5.anInt7676 = i_7;
-						this.method15274(class282_sub22_5.prev, class282_sub22_5);
+						this.method15274(class282_sub22_5.next, class282_sub22_5);
 					}
 				}
 

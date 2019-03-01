@@ -90,7 +90,7 @@ public class Defaults7Loader {
 				return null;
 			}
 
-			if (rsmesh_11.zoom < 13) {
+			if (rsmesh_11.version < 13) {
 				rsmesh_11.upscale(2);
 			}
 

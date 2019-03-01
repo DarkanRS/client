@@ -21,7 +21,7 @@ public class Class121 {
 	}
 
 	static final void method2103(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = ((NPC) cs2executor_0.animable).aClass409_10580.anInt4856;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = ((NPC) cs2executor_0.animable).definitions.anInt4856;
 	}
 
 	static final void method2104(CS2Executor cs2executor_0, short s_1) {

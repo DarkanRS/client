@@ -41,7 +41,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	int method5806(int i_1, byte b_2) {
-		JS5CacheRequest js5cacherequest_3 = (JS5CacheRequest) this.aClass465_7796.method7754((long) i_1);
+		JS5CacheRequest js5cacherequest_3 = (JS5CacheRequest) this.aClass465_7796.get((long) i_1);
 		return js5cacherequest_3 != null ? js5cacherequest_3.getCompletion(-1369977403) : 0;
 	}
 
@@ -166,7 +166,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	JS5CacheRequest method12546(int i_1, int i_2, int i_3) {
-		Object obj_4 = (JS5CacheRequest) this.aClass465_7796.method7754((long) i_1);
+		Object obj_4 = (JS5CacheRequest) this.aClass465_7796.get((long) i_1);
 		if (obj_4 != null && i_2 == 0 && !((JS5CacheRequest) obj_4).aBool9637 && ((JS5CacheRequest) obj_4).incomplete) {
 			((JS5CacheRequest) obj_4).remove();
 			obj_4 = null;
@@ -391,7 +391,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	int method5810(int i_1) {
-		JS5CacheRequest js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7754((long) i_1);
+		JS5CacheRequest js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.get((long) i_1);
 		return js5cacherequest_2 != null ? js5cacherequest_2.getCompletion(-1968748053) : 0;
 	}
 
@@ -535,7 +535,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			}
 		}
 
-		if (this.aBool7801 && Class169.method2869(2055331378) >= this.aLong7785) {
+		if (this.aBool7801 && Class169.time() >= this.aLong7785) {
 			for (JS5CacheRequest js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7750(-556717169); js5cacherequest_2 != null; js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7751((byte) 47)) {
 				if (!js5cacherequest_2.incomplete) {
 					if (js5cacherequest_2.aBool9638) {
@@ -550,7 +550,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				}
 			}
 
-			this.aLong7785 = Class169.method2869(1703691062) + 1000L;
+			this.aLong7785 = Class169.time() + 1000L;
 		}
 
 	}
@@ -567,7 +567,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	static final void method12560(CS2Executor cs2executor_0, short s_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(1554846172) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub26_8224.method12943(1554846172) == 1 ? 1 : 0;
 	}
 
 	static final void method12561(CS2Executor cs2executor_0, int i_1) {

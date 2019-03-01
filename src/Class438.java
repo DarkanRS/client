@@ -112,9 +112,9 @@ public class Class438 {
 		Class204.method3367(-2146743661);
 		Class42_Sub1.method14562(1915286568);
 		if (bool_0) {
-			Class365.setGameState(12, 1408893156);
+			Class365.setGameState(12);
 		} else {
-			Class365.setGameState(5, 1704453778);
+			Class365.setGameState(5);
 
 			try {
 				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1769975690);
@@ -126,7 +126,7 @@ public class Class438 {
 	}
 
 	static final void method7334(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
 	}
 
 	static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, int i_15) {
@@ -142,7 +142,7 @@ public class Class438 {
 				}
 			} else {
 				i_17 = i_1 - 1;
-				Class282_Sub47 class282_sub47_18 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_17);
+				Class282_Sub47 class282_sub47_18 = (Class282_Sub47) client.NPCS.get((long) i_17);
 				if (class282_sub47_18 != null) {
 					obj_16 = (Animable) class282_sub47_18.anObject8068;
 				}

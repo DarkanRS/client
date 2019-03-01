@@ -81,7 +81,7 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 
 	static final void method15407(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub30_8194.method7785(i_2, -723558345);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub30_8194.method7785(i_2, -723558345);
 	}
 
 	static final void method15408(CS2Executor cs2executor_0, int i_1) {

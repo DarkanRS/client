@@ -10,17 +10,17 @@ public class Class215 implements Interface17 {
 		this.anIntArray2685 = ints_3;
 	}
 
-	public boolean method127(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4, byte b_5) {
+	public boolean method127(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4, byte b_5) {
 		if (class282_sub53_1 == null) {
 			if (this.anInt2683 != -1) {
 				return false;
 			}
 		} else {
-			if (this.anInt2683 != class282_sub53_1.method13470(-69637093)) {
+			if (this.anInt2683 != class282_sub53_1.getClickType(-69637093)) {
 				return false;
 			}
 
-			if (this.anInt2684 > class282_sub53_1.method13473((byte) 1)) {
+			if (this.anInt2684 > class282_sub53_1.getMeta((byte) 1)) {
 				return false;
 			}
 
@@ -37,17 +37,17 @@ public class Class215 implements Interface17 {
 		return true;
 	}
 
-	public boolean method128(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method128(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		if (class282_sub53_1 == null) {
 			if (-142561261 * this.anInt2683 * 985045531 != -1) {
 				return false;
 			}
 		} else {
-			if (this.anInt2683 * 985045531 * -142561261 != class282_sub53_1.method13470(2068258113)) {
+			if (this.anInt2683 * 985045531 * -142561261 != class282_sub53_1.getClickType(2068258113)) {
 				return false;
 			}
 
-			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.method13473((byte) 1)) {
+			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta((byte) 1)) {
 				return false;
 			}
 
@@ -64,17 +64,17 @@ public class Class215 implements Interface17 {
 		return true;
 	}
 
-	public boolean method129(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method129(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		if (class282_sub53_1 == null) {
 			if (-142561261 * this.anInt2683 * 985045531 != -1) {
 				return false;
 			}
 		} else {
-			if (this.anInt2683 * 985045531 * -142561261 != class282_sub53_1.method13470(-1374498088)) {
+			if (this.anInt2683 * 985045531 * -142561261 != class282_sub53_1.getClickType(-1374498088)) {
 				return false;
 			}
 
-			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.method13473((byte) 1)) {
+			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta((byte) 1)) {
 				return false;
 			}
 
@@ -91,17 +91,17 @@ public class Class215 implements Interface17 {
 		return true;
 	}
 
-	public boolean method126(Class282_Sub53 class282_sub53_1, Interface16[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method126(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
 		if (class282_sub53_1 == null) {
 			if (-142561261 * this.anInt2683 * 985045531 != -1) {
 				return false;
 			}
 		} else {
-			if (this.anInt2683 * 985045531 * -142561261 != class282_sub53_1.method13470(-63255169)) {
+			if (this.anInt2683 * 985045531 * -142561261 != class282_sub53_1.getClickType(-63255169)) {
 				return false;
 			}
 
-			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.method13473((byte) 1)) {
+			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta((byte) 1)) {
 				return false;
 			}
 

@@ -59,7 +59,7 @@ public class Class176 {
 	}
 
 	static final void method2978(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method12641(-255008598);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub4_8187.method12641(-255008598);
 	}
 
 	static long method2979(int i_0) {

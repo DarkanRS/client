@@ -31,7 +31,7 @@ public class Class283 {
 	static final void method5010(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
-		if (client.anInt7166 == 0 && !JS5CacheFile.method3360((byte) 17)) {
+		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 17)) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class62.method1262(i_2, string_3, (byte) 55) ? 1 : 0;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;

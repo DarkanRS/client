@@ -57,7 +57,7 @@ public class Class20 {
 	}
 
 	static final void method743(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
 	}
 
 	static void method744(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {

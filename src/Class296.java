@@ -49,7 +49,7 @@ public class Class296 {
 	}
 
 	static final void method5299(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class282_Sub45.method13405(Class169.method2869(1994559110));
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class282_Sub45.method13405(Class169.time());
 	}
 
 }

@@ -5,7 +5,7 @@ public class Class295 {
 	}
 
 	static void method5290(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4099(Class158_Sub1.aClass3_8507, 54222589) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4099(Class158_Sub1.PLAYER_VAR_PROVIDER, 54222589) ? 1 : 0;
 	}
 
 	static final void method5291(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

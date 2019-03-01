@@ -109,9 +109,9 @@ public class Class233 {
 	}
 
 	static final void method3942(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -989964873);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub10_8215, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -989964873);
 		Class282_Sub20_Sub36.method15418(668850119);
-		Class190.method3148((byte) 44);
+		Class190.savePreferences((byte) 44);
 		client.aBool7175 = false;
 	}
 

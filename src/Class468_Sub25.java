@@ -4,7 +4,7 @@ public class Class468_Sub25 extends Class468 {
 		return 0;
 	}
 
-	public int method12926(byte b_1) {
+	public int getValue(byte b_1) {
 		return this.anInt5578;
 	}
 

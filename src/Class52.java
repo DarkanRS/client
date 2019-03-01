@@ -13,7 +13,7 @@ public abstract class Class52 implements Interface2 {
 
 	public void method22(int i_1) {
 		FontMetrics fontmetrics_2 = Class163.method2845(this.aClass317_490, this.aClass350_489.anInt4086, (byte) 32);
-		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086), true);
+		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086), true);
 	}
 
 	public boolean method10(int i_1) {
@@ -35,7 +35,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_2, i_3, 1585240849);
 		this.method1077(bool_1, i_2, i_3, 338046880);
 		String string_4 = Class328.aClass306_3771.method5425(-665821973);
-		if (Class169.method2869(1566700257) - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
+		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-1441344140).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
 
@@ -53,7 +53,7 @@ public abstract class Class52 implements Interface2 {
 				long long_5 = this.aLong491 - Class328.aClass306_3771.method5439(2121936553);
 				if (long_5 > 0L) {
 					long long_7 = 10000L * long_5 / (long) i_2 * (long) (i_4 - i_2);
-					long long_9 = (Class169.method2869(1652602768) - this.aLong491) * 10000L;
+					long long_9 = (Class169.time() - this.aLong491) * 10000L;
 					if (long_9 < long_7) {
 						i_3 = (int) (100L * long_9 * (long) (i_4 - i_2) / long_7 + (long) (i_2 * 100));
 					} else {
@@ -63,7 +63,7 @@ public abstract class Class52 implements Interface2 {
 			}
 		} else {
 			this.anInt494 = i_2;
-			this.aLong491 = Class169.method2869(2083744360);
+			this.aLong491 = Class169.time();
 		}
 
 		return i_3;
@@ -88,7 +88,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_2, i_3, 1820160042);
 		this.method1077(bool_1, i_2, i_3, -656602947);
 		String string_4 = Class328.aClass306_3771.method5425(-101176994);
-		if (Class169.method2869(1957529705) - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
+		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-588033146).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
 
@@ -99,27 +99,27 @@ public abstract class Class52 implements Interface2 {
 
 	public void method15() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 91);
-		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
 	}
 
 	public void method16() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 27);
-		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
 	}
 
 	public void method23() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 126);
-		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
 	}
 
 	public void method18() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 51);
-		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
 	}
 
 	public void method19() {
 		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 125);
-		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
 	}
 
 	Class52(Index index_1, Index index_2, Class350 class350_3) {
@@ -160,7 +160,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_3, i_4, 213494325);
 		this.method1077(bool_1, i_3, i_4, -281773092);
 		String string_5 = Class328.aClass306_3771.method5425(661479168);
-		if (Class169.method2869(1593852196) - this.aLong491 > 10000L) {
+		if (Class169.time() - this.aLong491 > 10000L) {
 			string_5 = string_5 + " (" + Class328.aClass306_3771.method5427(-260598892).anInt4712 + ")";
 		}
 
@@ -190,7 +190,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_2, i_3, 217412171);
 		this.method1077(bool_1, i_2, i_3, -688757760);
 		String string_4 = Class328.aClass306_3771.method5425(1074452204);
-		if (Class169.method2869(1750466311) - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
+		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(396217824).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
 

@@ -38,7 +38,7 @@ public abstract class RouteStrategy {
 	}
 
 	static final void method3792(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.aClass209_2031.method3569(2029806925);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.mouseRecorder.method3569(2029806925);
 	}
 
 	static final void method3793(CS2Executor cs2executor_0, byte b_1) {

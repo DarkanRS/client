@@ -131,8 +131,8 @@ public class Class371 {
 		class184_1.method3049(tcpmessage_2, 963665082);
 	}
 
-	public static Container method6354(byte b_0) {
-		return (Container) (Engine.aFrame3260 != null ? Engine.aFrame3260 : (Engine.aFrame3261 != null ? Engine.aFrame3261 : Class282_Sub44.anApplet8065));
+	public static Container getActiveContainer(byte b_0) {
+		return (Container) (Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : Class282_Sub44.anApplet8065));
 	}
 
 }

@@ -205,7 +205,7 @@ public class Class170 {
 				this.anInt2098 = i_3;
 				this.anInt2099 = i_4;
 
-				for (Node node_5 = this.aClass473_2108.getBack(); node_5 != this.aClass473_2108.head; node_5 = node_5.prev) {
+				for (Node node_5 = this.aClass473_2108.getBack(); node_5 != this.aClass473_2108.head; node_5 = node_5.next) {
 					((Class282_Sub5) node_5).method12122(this.anInt2098, this.anInt2099);
 				}
 
@@ -298,7 +298,7 @@ public class Class170 {
 		this.aClass137_Sub1Array2106 = null;
 		this.aClass282_Sub50_Sub19_2107 = null;
 		if (!this.aClass473_2108.method7861(141891001)) {
-			for (Node node_1 = this.aClass473_2108.getBack(); node_1 != this.aClass473_2108.head; node_1 = node_1.prev) {
+			for (Node node_1 = this.aClass473_2108.getBack(); node_1 != this.aClass473_2108.head; node_1 = node_1.next) {
 				((Class282_Sub5) node_1).method12120();
 			}
 		}

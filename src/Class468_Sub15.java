@@ -16,7 +16,7 @@ public class Class468_Sub15 extends Class468 {
 		this.anInt5578 = i_1;
 	}
 
-	public int method12739(int i_1) {
+	public int getValue(int i_1) {
 		return this.anInt5578;
 	}
 

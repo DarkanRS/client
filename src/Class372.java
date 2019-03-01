@@ -1,4 +1,4 @@
-public class Class372 implements Interface46 {
+public class Class372 implements Definition {
 
 	public char aChar4328;
 	public int anInt4327 = 0;

@@ -1,4 +1,4 @@
-public final class Class282_Sub52 extends Node implements Interface16 {
+public final class Class282_Sub52 extends Node implements KeyRecord {
 
 	long aLong8169;
 	char aChar8171;
@@ -10,11 +10,11 @@ public final class Class282_Sub52 extends Node implements Interface16 {
 		return this.anInt8173 * -461318909 * -921682517;
 	}
 
-	public int method84(int i_1) {
+	public int getType(int i_1) {
 		return this.anInt8173;
 	}
 
-	public char method118(int i_1) {
+	public char getCode(int i_1) {
 		return this.aChar8171;
 	}
 

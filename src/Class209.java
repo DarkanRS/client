@@ -19,7 +19,7 @@ public abstract class Class209 {
 
 	public abstract int method3570(int var1);
 
-	public abstract Class282_Sub53 method3571(byte var1);
+	public abstract MouseRecord nextSubmission(byte var1);
 
 	public abstract int method3573();
 
@@ -39,15 +39,15 @@ public abstract class Class209 {
 
 	public abstract int method3585();
 
-	public abstract Class282_Sub53 method3588();
+	public abstract MouseRecord method3588();
 
 	public abstract void method3589(byte var1);
 
-	public abstract Class282_Sub53 method3590();
+	public abstract MouseRecord method3590();
 
-	public abstract Class282_Sub53 method3591();
+	public abstract MouseRecord method3591();
 
-	public abstract Class282_Sub53 method3592();
+	public abstract MouseRecord method3592();
 
 	public abstract boolean method3593();
 
@@ -77,7 +77,7 @@ public abstract class Class209 {
 			FontRenderer.method402(1696819544);
 		}
 
-		client.aCalendar7278.setTime(new Date(Class169.method2869(1677357681)));
+		client.aCalendar7278.setTime(new Date(Class169.time()));
 		int i_2 = client.aCalendar7278.get(11);
 		int i_3 = client.aCalendar7278.get(12);
 		int i_4 = client.aCalendar7278.get(13);
@@ -109,8 +109,8 @@ public abstract class Class209 {
 	}
 
 	static final void method3599(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8225, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -334486590);
-		Class190.method3148((byte) 97);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub13_8225, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -334486590);
+		Class190.savePreferences((byte) 97);
 		client.aBool7175 = false;
 	}
 

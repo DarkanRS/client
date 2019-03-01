@@ -7,7 +7,7 @@ public class LinkedNodeList {
 
 	public void clear() {
 		while (true) {
-			Node node_1 = this.head.prev;
+			Node node_1 = this.head.next;
 			if (node_1 == this.head) {
 				this.current = null;
 				return;
@@ -23,13 +23,13 @@ public class LinkedNodeList {
 			this.current = null;
 			return null;
 		} else {
-			this.current = node_1.prev;
+			this.current = node_1.next;
 			return node_1;
 		}
 	}
 
 	public Node popTail() {
-		Node node_1 = this.head.prev;
+		Node node_1 = this.head.next;
 		if (node_1 == this.head) {
 			return null;
 		} else {
@@ -39,26 +39,6 @@ public class LinkedNodeList {
 	}
 
 	public Node getBack() {
-		Node node_1 = this.head.prev;
-		if (node_1 == this.head) {
-			this.current = null;
-			return null;
-		} else {
-			this.current = node_1.prev;
-			return node_1;
-		}
-	}
-
-	public LinkedNodeList() {
-		this.head.prev = this.head;
-		this.head.next = this.head;
-	}
-
-	public boolean method7861(int i_1) {
-		return this.head.prev == this.head;
-	}
-
-	public Node getNext() {
 		Node node_1 = this.head.next;
 		if (node_1 == this.head) {
 			this.current = null;
@@ -69,26 +49,46 @@ public class LinkedNodeList {
 		}
 	}
 
+	public LinkedNodeList() {
+		this.head.next = this.head;
+		this.head.prev = this.head;
+	}
+
+	public boolean method7861(int i_1) {
+		return this.head.next == this.head;
+	}
+
+	public Node getNext() {
+		Node node_1 = this.head.prev;
+		if (node_1 == this.head) {
+			this.current = null;
+			return null;
+		} else {
+			this.current = node_1.prev;
+			return node_1;
+		}
+	}
+
 	public void insertFront(Node node_1) {
-		if (node_1.next != null) {
+		if (node_1.prev != null) {
 			node_1.remove();
 		}
 
-		node_1.next = this.head;
-		node_1.prev = this.head.prev;
-		node_1.next.prev = node_1;
+		node_1.prev = this.head;
+		node_1.next = this.head.next;
 		node_1.prev.next = node_1;
+		node_1.next.prev = node_1;
 	}
 
 	public void insertBack(Node node_1) {
-		if (node_1.next != null) {
+		if (node_1.prev != null) {
 			node_1.remove();
 		}
 
-		node_1.next = this.head.next;
-		node_1.prev = this.head;
-		node_1.next.prev = node_1;
+		node_1.prev = this.head.prev;
+		node_1.next = this.head;
 		node_1.prev.next = node_1;
+		node_1.next.prev = node_1;
 	}
 
 	public static byte[] method7885(CharSequence charsequence_0, byte b_1) {

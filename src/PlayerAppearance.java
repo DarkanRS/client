@@ -288,7 +288,7 @@ public class PlayerAppearance {
 										}
 
 										if (i_41 != 0 || i_54 != 0 || i_34 != 0) {
-											arr_56[i_31].method2712(i_41, i_54, i_34);
+											arr_56[i_31].translate(i_41, i_54, i_34);
 										}
 									}
 								}
@@ -596,9 +596,9 @@ public class PlayerAppearance {
 	}
 
 	static final void method4031(CS2Executor cs2executor_0, short s_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.aClass209_2031.method3565((byte) -75) ? 1 : 0;
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.aClass209_2031.method3566(-2143623365) ? 1 : 0;
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.aClass209_2031.method3567((byte) -59) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.mouseRecorder.method3565((byte) -75) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.mouseRecorder.method3566(-2143623365) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class163.mouseRecorder.method3567((byte) -59) ? 1 : 0;
 	}
 
 	static void method4032(String string_0, String string_1, int i_2, int i_3, int i_4, long long_5, int i_7, int i_8, boolean bool_9, boolean bool_10, long long_11, boolean bool_13, int i_14) {
@@ -647,8 +647,8 @@ public class PlayerAppearance {
 	}
 
 	static final void method4035(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub7_8210, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1004111582);
-		Class190.method3148((byte) 112);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1004111582);
+		Class190.savePreferences((byte) 112);
 		client.aBool7185 = true;
 	}
 

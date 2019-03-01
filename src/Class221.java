@@ -36,8 +36,8 @@ public class Class221 {
 	}
 
 	static final void method3750(CS2Executor cs2executor_0, byte b_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1688733645);
-		Class190.method3148((byte) 79);
+		Class393.preferences.setValue(Class393.preferences.idleAnimations, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1688733645);
+		Class190.savePreferences((byte) 79);
 	}
 
 	static void method3751(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {

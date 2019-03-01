@@ -28,7 +28,7 @@ public class Class405 {
 	}
 
 	public static final void method6823(int i_0) {
-		int i_1 = Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 47);
+		int i_1 = Class393.preferences.aClass468_Sub27_8209.method12952((byte) 47);
 		if (i_1 == 0) {
 			IndexLoaders.MAP_REGION_DECODER.method4440((byte[][][]) null, (byte) 2);
 			Class534_Sub2.method12847(0, (byte) 57);
@@ -184,7 +184,7 @@ public class Class405 {
 			Class467[] arr_1 = Class386.method6671(Class274.aClass470_3336, 1629641091);
 			Class467[] arr_2 = new Class467[arr_1.length];
 			int i_3 = 0;
-			int i_4 = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method12666(527706569);
+			int i_4 = Class393.preferences.aClass468_Sub7_8210.method12666(527706569);
 
 			label70: for (int i_5 = 0; i_5 < arr_1.length; i_5++) {
 				Class467 class467_10 = arr_1[i_5];

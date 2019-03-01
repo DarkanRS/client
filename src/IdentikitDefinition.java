@@ -1,16 +1,16 @@
-public class Class44 implements Interface46 {
+public class IdentikitDefinition implements Definition {
 
 	Class31 aClass31_429;
 	static int anInt430;
 	static int anInt431;
 	public static int[] anIntArray428 = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };
 	public static int[] anIntArray422 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
-	int[] anIntArray427;
-	short[] aShortArray423;
-	short[] aShortArray424;
-	short[] aShortArray425;
-	short[] aShortArray426;
-	int[] anIntArray421 = new int[] { -1, -1, -1, -1, -1 };
+	int[] modelIds;
+	short[] originalColours;
+	short[] replacementColours;
+	short[] originalTextures;
+	short[] replacementTextures;
+	int[] headModels = new int[] { -1, -1, -1, -1, -1 };
 
 	public RSMesh method895(int i_1) {
 		RSMesh[] arr_2 = new RSMesh[5];
@@ -25,8 +25,8 @@ public class Class44 implements Interface46 {
 					break;
 				}
 
-				if (this.anIntArray421[i_5] != -1) {
-					arr_2[i_3++] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.anIntArray421[i_5], 0);
+				if (this.headModels[i_5] != -1) {
+					arr_2[i_3++] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.headModels[i_5], 0);
 				}
 
 				++i_5;
@@ -34,61 +34,61 @@ public class Class44 implements Interface46 {
 		}
 
 		for (int i_6 = 0; i_6 < 5; i_6++) {
-			if (arr_2[i_6] != null && arr_2[i_6].zoom < 13) {
+			if (arr_2[i_6] != null && arr_2[i_6].version < 13) {
 				arr_2[i_6].upscale(2);
 			}
 		}
 
 		RSMesh rsmesh_8 = new RSMesh(arr_2, i_3);
-		if (this.aShortArray423 != null) {
-			for (i_5 = 0; i_5 < this.aShortArray423.length; i_5++) {
-				rsmesh_8.recolor(this.aShortArray423[i_5], this.aShortArray424[i_5]);
+		if (this.originalColours != null) {
+			for (i_5 = 0; i_5 < this.originalColours.length; i_5++) {
+				rsmesh_8.recolor(this.originalColours[i_5], this.replacementColours[i_5]);
 			}
 		}
 
-		if (this.aShortArray425 != null) {
-			for (i_5 = 0; i_5 < this.aShortArray425.length; i_5++) {
-				rsmesh_8.retexture(this.aShortArray425[i_5], this.aShortArray426[i_5]);
+		if (this.originalTextures != null) {
+			for (i_5 = 0; i_5 < this.originalTextures.length; i_5++) {
+				rsmesh_8.retexture(this.originalTextures[i_5], this.replacementTextures[i_5]);
 			}
 		}
 
 		return rsmesh_8;
 	}
 
-	void method897(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
-		if (i_2 == 1) {
-			rsbytebuffer_1.readUnsignedByte();
+	void method897(RsByteBuffer buffer, int opcode, int i_3) {
+		if (opcode == 1) {
+			buffer.readUnsignedByte();
 		} else {
-			int i_4;
+			int count;
 			int i_5;
-			if (i_2 == 2) {
-				i_4 = rsbytebuffer_1.readUnsignedByte();
-				this.anIntArray427 = new int[i_4];
+			if (opcode == 2) {
+				count = buffer.readUnsignedByte();
+				this.modelIds = new int[count];
 
-				for (i_5 = 0; i_5 < i_4; i_5++) {
-					this.anIntArray427[i_5] = rsbytebuffer_1.readBigSmart();
+				for (i_5 = 0; i_5 < count; i_5++) {
+					this.modelIds[i_5] = buffer.readBigSmart();
 				}
-			} else if (i_2 != 3) {
-				if (i_2 == 40) {
-					i_4 = rsbytebuffer_1.readUnsignedByte();
-					this.aShortArray423 = new short[i_4];
-					this.aShortArray424 = new short[i_4];
+			} else if (opcode != 3) {
+				if (opcode == 40) {
+					count = buffer.readUnsignedByte();
+					this.originalColours = new short[count];
+					this.replacementColours = new short[count];
 
-					for (i_5 = 0; i_5 < i_4; i_5++) {
-						this.aShortArray423[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
-						this.aShortArray424[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+					for (i_5 = 0; i_5 < count; i_5++) {
+						this.originalColours[i_5] = (short) buffer.readUnsignedShort();
+						this.replacementColours[i_5] = (short) buffer.readUnsignedShort();
 					}
-				} else if (i_2 == 41) {
-					i_4 = rsbytebuffer_1.readUnsignedByte();
-					this.aShortArray425 = new short[i_4];
-					this.aShortArray426 = new short[i_4];
+				} else if (opcode == 41) {
+					count = buffer.readUnsignedByte();
+					this.originalTextures = new short[count];
+					this.replacementTextures = new short[count];
 
-					for (i_5 = 0; i_5 < i_4; i_5++) {
-						this.aShortArray425[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
-						this.aShortArray426[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+					for (i_5 = 0; i_5 < count; i_5++) {
+						this.originalTextures[i_5] = (short) buffer.readUnsignedShort();
+						this.replacementTextures[i_5] = (short) buffer.readUnsignedShort();
 					}
-				} else if (i_2 >= 60 && i_2 < 70) {
-					this.anIntArray421[i_2 - 60] = rsbytebuffer_1.readBigSmart();
+				} else if (opcode >= 60 && opcode < 70) {
+					this.headModels[opcode - 60] = buffer.readBigSmart();
 				}
 			}
 		}
@@ -96,14 +96,14 @@ public class Class44 implements Interface46 {
 	}
 
 	public boolean method898(int i_1) {
-		if (this.anIntArray427 == null) {
+		if (this.modelIds == null) {
 			return true;
 		} else {
 			boolean bool_2 = true;
 			Index index_3 = this.aClass31_429.aClass317_359;
 			synchronized (this.aClass31_429.aClass317_359) {
-				for (int i_4 = 0; i_4 < this.anIntArray427.length; i_4++) {
-					if (!this.aClass31_429.aClass317_359.load(this.anIntArray427[i_4], 0)) {
+				for (int i_4 = 0; i_4 < this.modelIds.length; i_4++) {
+					if (!this.aClass31_429.aClass317_359.load(this.modelIds[i_4], 0)) {
 						bool_2 = false;
 					}
 				}
@@ -114,27 +114,27 @@ public class Class44 implements Interface46 {
 	}
 
 	public RSMesh method899(int i_1) {
-		if (this.anIntArray427 == null) {
+		if (this.modelIds == null) {
 			return null;
 		} else {
-			RSMesh[] arr_2 = new RSMesh[this.anIntArray427.length];
+			RSMesh[] arr_2 = new RSMesh[this.modelIds.length];
 			Index index_3 = this.aClass31_429.aClass317_359;
 			int i_4;
 			synchronized (this.aClass31_429.aClass317_359) {
 				i_4 = 0;
 
 				while (true) {
-					if (i_4 >= this.anIntArray427.length) {
+					if (i_4 >= this.modelIds.length) {
 						break;
 					}
 
-					arr_2[i_4] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.anIntArray427[i_4], 0);
+					arr_2[i_4] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.modelIds[i_4], 0);
 					++i_4;
 				}
 			}
 
-			for (int i_5 = 0; i_5 < this.anIntArray427.length; i_5++) {
-				if (arr_2[i_5].zoom < 13) {
+			for (int i_5 = 0; i_5 < this.modelIds.length; i_5++) {
+				if (arr_2[i_5].version < 13) {
 					arr_2[i_5].upscale(2);
 				}
 			}
@@ -149,15 +149,15 @@ public class Class44 implements Interface46 {
 			if (rsmesh_7 == null) {
 				return null;
 			} else {
-				if (this.aShortArray423 != null) {
-					for (i_4 = 0; i_4 < this.aShortArray423.length; i_4++) {
-						rsmesh_7.recolor(this.aShortArray423[i_4], this.aShortArray424[i_4]);
+				if (this.originalColours != null) {
+					for (i_4 = 0; i_4 < this.originalColours.length; i_4++) {
+						rsmesh_7.recolor(this.originalColours[i_4], this.replacementColours[i_4]);
 					}
 				}
 
-				if (this.aShortArray425 != null) {
-					for (i_4 = 0; i_4 < this.aShortArray425.length; i_4++) {
-						rsmesh_7.retexture(this.aShortArray425[i_4], this.aShortArray426[i_4]);
+				if (this.originalTextures != null) {
+					for (i_4 = 0; i_4 < this.originalTextures.length; i_4++) {
+						rsmesh_7.retexture(this.originalTextures[i_4], this.replacementTextures[i_4]);
 					}
 				}
 
@@ -171,7 +171,7 @@ public class Class44 implements Interface46 {
 		Index index_3 = this.aClass31_429.aClass317_359;
 		synchronized (this.aClass31_429.aClass317_359) {
 			for (int i_4 = 0; i_4 < 5; i_4++) {
-				if (this.anIntArray421[i_4] != -1 && !this.aClass31_429.aClass317_359.load(this.anIntArray421[i_4], 0)) {
+				if (this.headModels[i_4] != -1 && !this.aClass31_429.aClass317_359.load(this.headModels[i_4], 0)) {
 					bool_2 = false;
 				}
 			}

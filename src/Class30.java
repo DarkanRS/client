@@ -64,7 +64,7 @@ public class Class30 implements Runnable {
 		Iterator iterator_1 = Class235.aList2896.iterator();
 
 		while (iterator_1.hasNext()) {
-			Class539 class539_2 = (Class539) iterator_1.next();
+			ParticleSystem class539_2 = (ParticleSystem) iterator_1.next();
 			class539_2.method11506();
 		}
 

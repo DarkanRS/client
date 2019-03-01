@@ -251,7 +251,7 @@ public class Class400 {
 		}
 
 		try {
-			Class361.aClass361_4173.method6256(new Object[] { Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.method2730((short) -17142)), Integer.valueOf(Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method12666(1852404651)) }, 2140026236);
+			Class361.aClass361_4173.method6256(new Object[] { Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.windowedMode()), Integer.valueOf(Class393.preferences.aClass468_Sub7_8210.method12666(1852404651)) }, 2140026236);
 		} catch (Throwable throwable_4) {
 			;
 		}

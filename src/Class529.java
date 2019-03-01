@@ -153,7 +153,7 @@ public class Class529 {
 
 	static final void method11341(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method7785(i_2, -2039814723);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub23_8202.method7785(i_2, -2039814723);
 	}
 
 }

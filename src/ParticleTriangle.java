@@ -1,20 +1,20 @@
-public class Class234 {
+public class ParticleTriangle {
 
 	int anInt2884;
 	int anInt2885;
 	int anInt2886;
-	int anInt2887;
+	int centerZ;
 	int anInt2888;
 	int anInt2889;
 	int anInt2890;
 	int anInt2891;
-	int anInt2892;
+	int centerY;
 	int anInt2893;
-	int anInt2894;
+	int centerX;
 	int anInt2895;
 
-	boolean method3944(Class234 class234_1, byte b_2) {
-		return this.anInt2894 == class234_1.anInt2894 && this.anInt2887 == class234_1.anInt2887 && this.anInt2892 == class234_1.anInt2892;
+	boolean equals(ParticleTriangle class234_1, byte b_2) {
+		return this.centerX == class234_1.centerX && this.centerZ == class234_1.centerZ && this.centerY == class234_1.centerY;
 	}
 
 	static final void method3949(CS2Executor cs2executor_0, int i_1) {

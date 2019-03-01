@@ -2,7 +2,7 @@ public final class Class475 {
 
 	static int anInt5622;
 	public static int anInt5624;
-	public static boolean aBool5623 = true;
+	public static boolean supportsFullScreen = true;
 
 	Class475() throws Throwable {
 		throw new Error();

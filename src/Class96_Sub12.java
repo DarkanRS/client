@@ -71,11 +71,11 @@ public class Class96_Sub12 extends Class96 {
 	public static void method14614(GraphicalRenderer graphicalrenderer_0, long long_1) {
 		Class235.anInt2903 = Class235.anInt2900;
 		Class235.anInt2900 = 0;
-		Class169.method2869(1533515778);
+		Class169.time();
 		Iterator iterator_3 = Class235.aList2896.iterator();
 
 		while (iterator_3.hasNext()) {
-			Class539 class539_4 = (Class539) iterator_3.next();
+			ParticleSystem class539_4 = (ParticleSystem) iterator_3.next();
 			boolean bool_5 = class539_4.method11509(graphicalrenderer_0, long_1);
 			if (!bool_5) {
 				iterator_3.remove();

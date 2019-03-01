@@ -503,14 +503,14 @@ public class Class8_Sub1 extends FontRenderer {
 			b_3 = 1;
 		}
 
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1837910677) != i_0) {
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, i_0, -1336804214);
-			Class538.method11500(i_0, false, (byte) 24);
+		if (Class393.preferences.currentToolkit.getValue(-1837910677) != i_0) {
+			Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, i_0, -1336804214);
+			ParticleProducer.method11500(i_0, false, (byte) 24);
 		} else {
-			Class393.aClass282_Sub54_4783.method13505(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, true, -1708960758);
+			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, -1708960758);
 		}
 
-		Class190.method3148((byte) 58);
+		Class190.savePreferences((byte) 58);
 		return b_3;
 	}
 

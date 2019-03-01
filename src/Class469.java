@@ -51,13 +51,13 @@ public class Class469 implements Iterator {
 
 	static void method7805(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6, int i_7) {
 		for (int i_8 = 0; i_8 < client.anInt7211; i_8++) {
-			Class282_Sub47 class282_sub47_9 = (Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_8]);
+			Class282_Sub47 class282_sub47_9 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_8]);
 			if (class282_sub47_9 != null) {
 				NPC npc_10 = (NPC) class282_sub47_9.anObject8068;
-				if (npc_10.method16160(-438666523) && npc_10.plane == Class84.myPlayer.plane) {
-					NPCDefinitions npcdefinitions_11 = npc_10.aClass409_10580;
+				if (npc_10.hasDefinition(-438666523) && npc_10.plane == Class84.myPlayer.plane) {
+					NPCDefinitions npcdefinitions_11 = npc_10.definitions;
 					if (npcdefinitions_11 != null && npcdefinitions_11.anIntArray4886 != null) {
-						npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.aClass3_8507, 265881693);
+						npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
 					}
 
 					if (npcdefinitions_11 != null && npcdefinitions_11.aBool4864 && npcdefinitions_11.aBool4893) {

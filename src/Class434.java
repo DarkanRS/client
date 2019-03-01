@@ -25,12 +25,12 @@ public abstract class Class434 {
 		Class236.aClass534_Sub1_2913.method11417(-2125512068);
 		TCPMessage tcpmessage_1;
 		int i_2;
-		if (client.anInt7196 > 0) {
+		if (client.maximumHeldKeys > 0) {
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4555, client.aClass184_7475.isaac, 1297366609);
-			tcpmessage_1.buffer.writeShort(client.anInt7196 * 4, 1417031095);
+			tcpmessage_1.buffer.writeShort(client.maximumHeldKeys * 4, 1417031095);
 
-			for (i_2 = 0; i_2 < client.anInt7196; i_2++) {
-				Interface16 interface16_3 = client.anInterface16Array7298[i_2];
+			for (i_2 = 0; i_2 < client.maximumHeldKeys; i_2++) {
+				KeyRecord interface16_3 = client.anInterface16Array7298[i_2];
 				long long_4 = interface16_3.method119(272047645) - Class236.aLong2910;
 				if (long_4 > 16777215L) {
 					long_4 = 16777215L;
@@ -68,7 +68,7 @@ public abstract class Class434 {
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4537, client.aClass184_7475.isaac, 1548432137);
 			tcpmessage_1.buffer.writeByte(0);
 			i_2 = tcpmessage_1.buffer.index;
-			RsByteBuffer rsbytebuffer_6 = Class393.aClass282_Sub54_4783.method13499(-1147561842);
+			RsByteBuffer rsbytebuffer_6 = Class393.preferences.method13499(-1147561842);
 			tcpmessage_1.buffer.writeBytes(rsbytebuffer_6.buffer, 0, rsbytebuffer_6.index);
 			tcpmessage_1.buffer.method13061(tcpmessage_1.buffer.index - i_2, -1036471531);
 			client.aClass184_7475.method3049(tcpmessage_1, 1020342841);

@@ -1,6 +1,6 @@
 public abstract class Class158_Sub1 extends Class158 {
 
-	public static Class3 aClass3_8507;
+	public static Class3 PLAYER_VAR_PROVIDER;
 
 	public abstract void method13757(Interface8 var1);
 

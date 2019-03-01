@@ -103,7 +103,7 @@ public class Class290 {
 	}
 
 	static final void method5122(CS2Executor cs2executor_0, short s_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub30_8194.method13417(-1771623069) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub30_8194.method13417(-1771623069) == 1 ? 1 : 0;
 	}
 
 	static final void method5123(CS2Executor cs2executor_0, byte b_1) {

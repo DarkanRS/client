@@ -103,7 +103,7 @@ public class Class427 {
 			if (animable_0.faceEntity != -1) {
 				Object obj_2 = null;
 				if (animable_0.faceEntity < 32768) {
-					Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.aClass465_7208.method7754((long) animable_0.faceEntity);
+					Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.NPCS.get((long) animable_0.faceEntity);
 					if (class282_sub47_3 != null) {
 						obj_2 = (Animable) class282_sub47_3.anObject8068;
 					}

@@ -279,7 +279,7 @@ public class Class440 {
 
 	public static void method7373(int i_0, int i_1, int i_2, boolean bool_3, byte b_4) {
 		client.aLong7307 = 0L;
-		int i_5 = Class158.method2730((short) -26855);
+		int i_5 = Class158.windowedMode();
 		if (i_0 == 3 || i_5 == 3) {
 			bool_3 = true;
 		}

@@ -18,8 +18,8 @@ public class Class134 {
 	int[] anIntArray1611;
 	int[] anIntArray1615;
 	int[] anIntArray1604;
-	Class275_Sub1_Sub1[][] aClass275_Sub1_Sub1ArrayArray1614;
-	Class275_Sub1_Sub1[][] aClass275_Sub1_Sub1ArrayArray1607;
+	PointEntity[][] aClass275_Sub1_Sub1ArrayArray1614;
+	PointEntity[][] aClass275_Sub1_Sub1ArrayArray1607;
 
 	void method2328(Class505_Sub1 class505_sub1_1) {
 		this.anInterface14_1602 = class505_sub1_1.method13599(24, (byte[]) null, 196584, true);
@@ -43,8 +43,8 @@ public class Class134 {
 				Class275_Sub1 class275_sub1_10 = class151_2.aClass464_1961.aClass275_Sub1_5554;
 
 				for (Class275_Sub1 class275_sub1_11 = class275_sub1_10.aClass275_Sub1_7706; class275_sub1_11 != class275_sub1_10; class275_sub1_11 = class275_sub1_11.aClass275_Sub1_7706) {
-					Class275_Sub1_Sub1 class275_sub1_sub1_12 = (Class275_Sub1_Sub1) class275_sub1_11;
-					int i_13 = (int) (f_3 * (float) (class275_sub1_sub1_12.anInt10205 >> 12) + f_4 * (float) (class275_sub1_sub1_12.anInt10208 >> 12) + f_5 * (float) (class275_sub1_sub1_12.anInt10202 >> 12) + f_6);
+					PointEntity class275_sub1_sub1_12 = (PointEntity) class275_sub1_11;
+					int i_13 = (int) (f_3 * (float) (class275_sub1_sub1_12.x >> 12) + f_4 * (float) (class275_sub1_sub1_12.z >> 12) + f_5 * (float) (class275_sub1_sub1_12.y >> 12) + f_6);
 					if (i_13 > i_9) {
 						i_9 = i_13;
 					}
@@ -84,14 +84,14 @@ public class Class134 {
 					}
 
 					for (; class275_sub1_21 != class275_sub1_10; class275_sub1_21 = class275_sub1_21.aClass275_Sub1_7706) {
-						Class275_Sub1_Sub1 class275_sub1_sub1_22 = (Class275_Sub1_Sub1) class275_sub1_21;
+						PointEntity class275_sub1_sub1_22 = (PointEntity) class275_sub1_21;
 						if (bool_16) {
-							i_14 = class275_sub1_sub1_22.anInt10207;
+							i_14 = class275_sub1_sub1_22.rotation;
 							bool_15 = class275_sub1_sub1_22.aBool10210;
 							bool_16 = false;
 						}
 
-						if (i_7 > 0 && (i_14 != class275_sub1_sub1_22.anInt10207 || bool_15 != class275_sub1_sub1_22.aBool10210)) {
+						if (i_7 > 0 && (i_14 != class275_sub1_sub1_22.rotation || bool_15 != class275_sub1_sub1_22.aBool10210)) {
 							bool_16 = true;
 							break;
 						}
@@ -109,7 +109,7 @@ public class Class134 {
 									this.anIntArray1615[i_18] += 1 + this.anInt1616++;
 								}
 
-								Class275_Sub1_Sub1[] arr_10000 = this.aClass275_Sub1_Sub1ArrayArray1607[this.anIntArray1615[i_18] - 64 - 1];
+								PointEntity[] arr_10000 = this.aClass275_Sub1_Sub1ArrayArray1607[this.anIntArray1615[i_18] - 64 - 1];
 								int i_10002 = this.anIntArray1615[i_18] - 64 - 1;
 								int i_10004 = this.anIntArray1604[this.anIntArray1615[i_18] - 64 - 1];
 								this.anIntArray1604[i_10002] = this.anIntArray1604[this.anIntArray1615[i_18] - 64 - 1] + 1;
@@ -161,7 +161,7 @@ public class Class134 {
 		int i_19;
 		int i_20;
 		int i_21;
-		Class275_Sub1_Sub1 class275_sub1_sub1_22;
+		PointEntity class275_sub1_sub1_22;
 		byte b_23;
 		byte b_24;
 		byte b_25;
@@ -171,7 +171,7 @@ public class Class134 {
 		float f_29;
 		int i_30;
 		int i_31;
-		Class275_Sub1_Sub1 class275_sub1_sub1_32;
+		PointEntity class275_sub1_sub1_32;
 		int i_33;
 		int i_34;
 		byte b_35;
@@ -182,15 +182,15 @@ public class Class134 {
 				if (i_19 > 0) {
 					for (i_20 = i_19 - 1; i_20 >= 0; --i_20) {
 						class275_sub1_sub1_32 = this.aClass275_Sub1_Sub1ArrayArray1614[i_18][i_20];
-						i_33 = class275_sub1_sub1_32.anInt10209;
+						i_33 = class275_sub1_sub1_32.color;
 						b_23 = (byte) (i_33 >> 16);
 						b_24 = (byte) (i_33 >> 8);
 						b_25 = (byte) i_33;
 						b_26 = (byte) (i_33 >>> 24);
-						f_27 = (float) (class275_sub1_sub1_32.anInt10205 >> 12);
-						f_28 = (float) (class275_sub1_sub1_32.anInt10208 >> 12);
-						f_29 = (float) (class275_sub1_sub1_32.anInt10202 >> 12);
-						i_30 = class275_sub1_sub1_32.anInt10206 >> 12;
+						f_27 = (float) (class275_sub1_sub1_32.x >> 12);
+						f_28 = (float) (class275_sub1_sub1_32.z >> 12);
+						f_29 = (float) (class275_sub1_sub1_32.y >> 12);
+						i_30 = class275_sub1_sub1_32.size >> 12;
 						this.aClass282_Sub35_Sub1_1601.method14688(0.0F);
 						this.aClass282_Sub35_Sub1_1601.method14688(0.0F);
 						this.aClass282_Sub35_Sub1_1601.method14688(f_27 + f_9 * (float) (-i_30));
@@ -234,15 +234,15 @@ public class Class134 {
 
 						for (i_21 = this.anIntArray1604[i_20] - 1; i_21 >= 0; --i_21) {
 							class275_sub1_sub1_22 = this.aClass275_Sub1_Sub1ArrayArray1607[i_20][i_21];
-							i_34 = class275_sub1_sub1_22.anInt10209;
+							i_34 = class275_sub1_sub1_22.color;
 							b_24 = (byte) (i_34 >> 16);
 							b_25 = (byte) (i_34 >> 8);
 							b_26 = (byte) i_34;
 							b_35 = (byte) (i_34 >>> 24);
-							f_28 = (float) (class275_sub1_sub1_22.anInt10205 >> 12);
-							f_29 = (float) (class275_sub1_sub1_22.anInt10208 >> 12);
-							f_36 = (float) (class275_sub1_sub1_22.anInt10202 >> 12);
-							i_31 = class275_sub1_sub1_22.anInt10206 >> 12;
+							f_28 = (float) (class275_sub1_sub1_22.x >> 12);
+							f_29 = (float) (class275_sub1_sub1_22.z >> 12);
+							f_36 = (float) (class275_sub1_sub1_22.y >> 12);
+							i_31 = class275_sub1_sub1_22.size >> 12;
 							this.aClass282_Sub35_Sub1_1601.method14688(0.0F);
 							this.aClass282_Sub35_Sub1_1601.method14688(0.0F);
 							this.aClass282_Sub35_Sub1_1601.method14688(f_28 + f_9 * (float) (-i_31));
@@ -289,15 +289,15 @@ public class Class134 {
 				if (i_19 > 0) {
 					for (i_20 = i_19 - 1; i_20 >= 0; --i_20) {
 						class275_sub1_sub1_32 = this.aClass275_Sub1_Sub1ArrayArray1614[i_18][i_20];
-						i_33 = class275_sub1_sub1_32.anInt10209;
+						i_33 = class275_sub1_sub1_32.color;
 						b_23 = (byte) (i_33 >> 16);
 						b_24 = (byte) (i_33 >> 8);
 						b_25 = (byte) i_33;
 						b_26 = (byte) (i_33 >>> 24);
-						f_27 = (float) (class275_sub1_sub1_32.anInt10205 >> 12);
-						f_28 = (float) (class275_sub1_sub1_32.anInt10208 >> 12);
-						f_29 = (float) (class275_sub1_sub1_32.anInt10202 >> 12);
-						i_30 = class275_sub1_sub1_32.anInt10206 >> 12;
+						f_27 = (float) (class275_sub1_sub1_32.x >> 12);
+						f_28 = (float) (class275_sub1_sub1_32.z >> 12);
+						f_29 = (float) (class275_sub1_sub1_32.y >> 12);
+						i_30 = class275_sub1_sub1_32.size >> 12;
 						this.aClass282_Sub35_Sub1_1601.method14685(0.0F);
 						this.aClass282_Sub35_Sub1_1601.method14685(0.0F);
 						this.aClass282_Sub35_Sub1_1601.method14685(f_27 + f_9 * (float) (-i_30));
@@ -341,15 +341,15 @@ public class Class134 {
 
 						for (i_21 = this.anIntArray1604[i_20] - 1; i_21 >= 0; --i_21) {
 							class275_sub1_sub1_22 = this.aClass275_Sub1_Sub1ArrayArray1607[i_20][i_21];
-							i_34 = class275_sub1_sub1_22.anInt10209;
+							i_34 = class275_sub1_sub1_22.color;
 							b_24 = (byte) (i_34 >> 16);
 							b_25 = (byte) (i_34 >> 8);
 							b_26 = (byte) i_34;
 							b_35 = (byte) (i_34 >>> 24);
-							f_28 = (float) (class275_sub1_sub1_22.anInt10205 >> 12);
-							f_29 = (float) (class275_sub1_sub1_22.anInt10208 >> 12);
-							f_36 = (float) (class275_sub1_sub1_22.anInt10202 >> 12);
-							i_31 = class275_sub1_sub1_22.anInt10206 >> 12;
+							f_28 = (float) (class275_sub1_sub1_22.x >> 12);
+							f_29 = (float) (class275_sub1_sub1_22.z >> 12);
+							f_36 = (float) (class275_sub1_sub1_22.y >> 12);
+							i_31 = class275_sub1_sub1_22.size >> 12;
 							this.aClass282_Sub35_Sub1_1601.method14685(0.0F);
 							this.aClass282_Sub35_Sub1_1601.method14685(0.0F);
 							this.aClass282_Sub35_Sub1_1601.method14685(f_28 + f_9 * (float) (-i_31));
@@ -428,8 +428,8 @@ public class Class134 {
 		this.anIntArray1611 = new int[8191];
 		this.anIntArray1615 = new int[1600];
 		this.anIntArray1604 = new int[64];
-		this.aClass275_Sub1_Sub1ArrayArray1614 = new Class275_Sub1_Sub1[1600][64];
-		this.aClass275_Sub1_Sub1ArrayArray1607 = new Class275_Sub1_Sub1[64][768];
+		this.aClass275_Sub1_Sub1ArrayArray1614 = new PointEntity[1600][64];
+		this.aClass275_Sub1_Sub1ArrayArray1607 = new PointEntity[64][768];
 		this.anInt1616 = 0;
 	}
 

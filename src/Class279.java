@@ -61,15 +61,15 @@ public class Class279 {
 		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class44.method910(icomponentdefinitions_3, interface_4, cs2executor_0, 2070102575);
+		IdentikitDefinition.method910(icomponentdefinitions_3, interface_4, cs2executor_0, 2070102575);
 	}
 
 	static void renderItems(GraphicalRenderer graphicalrenderer_0, int i_1) {
-		if (Class182.ITEMS.size(-1374254477) != 0) {
+		if (Class182.ITEMS.size() != 0) {
 			Item item_2;
-			if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1853603888) == 0) {
+			if (Class393.preferences.currentToolkit.getValue(1853603888) == 0) {
 				for (item_2 = (Item) Class182.ITEMS.head((byte) 98); item_2 != null; item_2 = (Item) Class182.ITEMS.next(471077510)) {
-					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(graphicalrenderer_0, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Renderers.FONT_RENDERER, item_2.hasPlayerAppearance ? Class84.myPlayer.playerAppearance : null, (byte) 77);
+					IndexLoaders.ITEM_INDEX_LOADER.getSprite(graphicalrenderer_0, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Renderers.FONT_RENDERER, item_2.hasPlayerAppearance ? Class84.myPlayer.playerAppearance : null, (byte) 77);
 					item_2.remove();
 				}
 
@@ -78,12 +78,12 @@ public class Class279 {
 				if (Class182.HARDWARE_RENDERER == null) {
 					Canvas canvas_3 = new Canvas();
 					canvas_3.setSize(36, 32);
-					Class182.HARDWARE_RENDERER = Class320.method5732(0, canvas_3, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -2102871027);
-					Class182.aClass8_2259 = Class182.HARDWARE_RENDERER.method8448(Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt140, 0, 2062772930), Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt140, 0), true);
+					Class182.HARDWARE_RENDERER = Class320.createRenderer(0, canvas_3, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -2102871027);
+					Class182.aClass8_2259 = Class182.HARDWARE_RENDERER.createFont(Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.p11FullIndex, 0, 2062772930), Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.p11FullIndex, 0), true);
 				}
 
 				for (item_2 = (Item) Class182.ITEMS.head((byte) 59); item_2 != null; item_2 = (Item) Class182.ITEMS.next(-468135531)) {
-					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(Class182.HARDWARE_RENDERER, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Class182.aClass8_2259, item_2.hasPlayerAppearance ? Class84.myPlayer.playerAppearance : null, (byte) 0);
+					IndexLoaders.ITEM_INDEX_LOADER.getSprite(Class182.HARDWARE_RENDERER, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Class182.aClass8_2259, item_2.hasPlayerAppearance ? Class84.myPlayer.playerAppearance : null, (byte) 0);
 					item_2.remove();
 				}
 			}

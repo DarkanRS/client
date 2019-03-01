@@ -44,7 +44,7 @@ public class Class353 {
 
 	static void method6209(int i_0, int i_1, int i_2, Class282_Sub34 class282_sub34_3, int i_4) {
 		long long_5 = (long) (i_0 << 28 | i_2 << 14 | i_1);
-		Class282_Sub29 class282_sub29_7 = (Class282_Sub29) client.aClass465_7414.method7754(long_5);
+		Class282_Sub29 class282_sub29_7 = (Class282_Sub29) client.aClass465_7414.get(long_5);
 		if (class282_sub29_7 == null) {
 			class282_sub29_7 = new Class282_Sub29();
 			client.aClass465_7414.method7765(class282_sub29_7, long_5);

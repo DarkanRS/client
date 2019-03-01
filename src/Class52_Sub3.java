@@ -80,7 +80,7 @@ public class Class52_Sub3 extends Class52 {
 	}
 
 	public static int[] method14522(int i_0) {
-		return new int[] { Class16.anInt140, Class16.anInt136, Class395.anInt4788 };
+		return new int[] { Class16.p11FullIndex, Class16.anInt136, Class395.anInt4788 };
 	}
 
 }

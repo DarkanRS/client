@@ -52,7 +52,7 @@ public class Class106 {
 
 	static final void method1817(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class59.method1163(i_2, 619010179);
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = ParticleProducerDefinition.method1163(i_2, 619010179);
 	}
 
 	public static void method1818(int i_0, int i_1) {

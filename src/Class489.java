@@ -37,7 +37,7 @@ public class Class489 {
 	}
 
 	static void method8216(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4098(Class158_Sub1.aClass3_8507, (byte) 1) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4098(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 1) ? 1 : 0;
 	}
 
 	static void method8217(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, Class476 class476_6, byte b_7) {

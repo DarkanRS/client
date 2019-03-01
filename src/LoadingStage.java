@@ -80,7 +80,7 @@ public class LoadingStage {
 			i_2 = 2;
 		}
 
-		Class538.method11500(i_2, false, (byte) 24);
+		ParticleProducer.method11500(i_2, false, (byte) 24);
 	}
 
 	static final void decodeUpdate(RsBitsBuffer rsbitsbuffer_0, int i_1) {

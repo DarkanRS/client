@@ -16,15 +16,15 @@ public class Class105 {
 	}
 
 	static final void method1803(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0 ? 1 : 0, -564300666);
-		Class190.method3148((byte) 98);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub17_8200, cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0 ? 1 : 0, -564300666);
+		Class190.savePreferences((byte) 98);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -119);
 	}
 
 	static void method1804(int i_0, String string_1, String string_2, byte b_3) {
 		if (client.aClass184_7475 != null) {
 			TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4533, client.aClass184_7475.isaac, -368168097);
-			tcpmessage_4.buffer.writeShort(1 + Class234.method3952(string_1, 1356057931) + Class234.method3952(string_2, 876996155), 1417031095);
+			tcpmessage_4.buffer.writeShort(1 + ParticleTriangle.method3952(string_1, 1356057931) + ParticleTriangle.method3952(string_2, 876996155), 1417031095);
 			tcpmessage_4.buffer.writeByte(i_0);
 			tcpmessage_4.buffer.writeJagString(string_2, 2115936374);
 			tcpmessage_4.buffer.writeJagString(string_1, 2111937462);

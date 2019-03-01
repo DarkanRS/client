@@ -100,7 +100,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 		this.aByte10487 = (byte) i_14;
 		this.aByte10485 = (byte) i_13;
 		this.aBool10481 = objectdefinitions_4.anInt5652 != 0 && !bool_10;
-		this.aBool10490 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10488 && Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -12) != 0;
+		this.aBool10490 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10488 && Class393.preferences.aClass468_Sub2_8205.method12624((byte) -12) != 0;
 		int i_15 = 2048;
 		if (objectdefinitions_4.aBool5711) {
 			i_15 |= 0x80000;
@@ -534,14 +534,14 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 											i_22 = (int) vector3_36.z - (player_58.getSize(828768449) - 1 << 8);
 
 											for (i_51 = 0; i_51 < client.anInt7211; i_51++) {
-												Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_51]);
+												Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_51]);
 												if (class282_sub47_24 != null) {
 													NPC npc_40 = (NPC) class282_sub47_24.anObject8068;
 													if (npc_40.anInt10375 != client.cycles && npc_40.aBool10318) {
 														vector3_26 = npc_40.method11166().aClass385_3595;
-														i_41 = (int) vector3_26.x - (npc_40.aClass409_10580.anInt4858 - 1 << 8);
-														i_28 = (int) vector3_26.z - (npc_40.aClass409_10580.anInt4858 - 1 << 8);
-														if (i_41 >= i_21 && npc_40.aClass409_10580.anInt4858 <= player_58.getSize(828768449) - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.aClass409_10580.anInt4858 <= player_58.getSize(828768449) - (i_28 - i_22 >> 9)) {
+														i_41 = (int) vector3_26.x - (npc_40.definitions.anInt4858 - 1 << 8);
+														i_28 = (int) vector3_26.z - (npc_40.definitions.anInt4858 - 1 << 8);
+														if (i_41 >= i_21 && npc_40.definitions.anInt4858 <= player_58.getSize(828768449) - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.anInt4858 <= player_58.getSize(828768449) - (i_28 - i_22 >> 9)) {
 															WorldMapAreaDefs.method3736(npc_40, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane, 1752430415);
 															npc_40.anInt10375 = client.cycles;
 														}
@@ -578,24 +578,24 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 									}
 
 									NPC npc_59 = (NPC) class285_34.aClass521_Sub1_3391;
-									if (npc_59.aClass409_10580 == null) {
+									if (npc_59.definitions == null) {
 										break;
 									}
 
 									Vector3 vector3_56 = npc_59.method11166().aClass385_3595;
-									if ((npc_59.aClass409_10580.anInt4858 & 0x1) == 0 && ((int) vector3_56.x & 0x1ff) == 0 && ((int) vector3_56.z & 0x1ff) == 0 || (npc_59.aClass409_10580.anInt4858 & 0x1) == 1 && ((int) vector3_56.x & 0x1ff) == 256 && ((int) vector3_56.z & 0x1ff) == 256) {
-										int i_50 = (int) vector3_56.x - (npc_59.aClass409_10580.anInt4858 - 1 << 8);
-										i_21 = (int) vector3_56.z - (npc_59.aClass409_10580.anInt4858 - 1 << 8);
+									if ((npc_59.definitions.anInt4858 & 0x1) == 0 && ((int) vector3_56.x & 0x1ff) == 0 && ((int) vector3_56.z & 0x1ff) == 0 || (npc_59.definitions.anInt4858 & 0x1) == 1 && ((int) vector3_56.x & 0x1ff) == 256 && ((int) vector3_56.z & 0x1ff) == 256) {
+										int i_50 = (int) vector3_56.x - (npc_59.definitions.anInt4858 - 1 << 8);
+										i_21 = (int) vector3_56.z - (npc_59.definitions.anInt4858 - 1 << 8);
 
 										for (i_22 = 0; i_22 < client.anInt7211; i_22++) {
-											Class282_Sub47 class282_sub47_37 = (Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_22]);
+											Class282_Sub47 class282_sub47_37 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_22]);
 											if (class282_sub47_37 != null) {
 												NPC npc_54 = (NPC) class282_sub47_37.anObject8068;
 												if (npc_54.anInt10375 != client.cycles && npc_59 != npc_54 && npc_54.aBool10318) {
 													Vector3 vector3_66 = npc_54.method11166().aClass385_3595;
-													i_42 = (int) vector3_66.x - (npc_54.aClass409_10580.anInt4858 - 1 << 8);
-													i_41 = (int) vector3_66.z - (npc_54.aClass409_10580.anInt4858 - 1 << 8);
-													if (i_42 >= i_50 && npc_54.aClass409_10580.anInt4858 <= npc_59.aClass409_10580.anInt4858 - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.aClass409_10580.anInt4858 <= npc_59.aClass409_10580.anInt4858 - (i_41 - i_21 >> 9)) {
+													i_42 = (int) vector3_66.x - (npc_54.definitions.anInt4858 - 1 << 8);
+													i_41 = (int) vector3_66.z - (npc_54.definitions.anInt4858 - 1 << 8);
+													if (i_42 >= i_50 && npc_54.definitions.anInt4858 <= npc_59.definitions.anInt4858 - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.anInt4858 <= npc_59.definitions.anInt4858 - (i_41 - i_21 >> 9)) {
 														WorldMapAreaDefs.method3736(npc_54, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane, 1644654446);
 														npc_54.anInt10375 = client.cycles;
 													}
@@ -612,7 +612,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 												vector3_26 = player_67.method11166().aClass385_3595;
 												i_41 = (int) vector3_26.x - (player_67.getSize(828768449) - 1 << 8);
 												i_28 = (int) vector3_26.z - (player_67.getSize(828768449) - 1 << 8);
-												if (i_41 >= i_50 && player_67.getSize(828768449) <= npc_59.aClass409_10580.anInt4858 - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize(828768449) <= npc_59.aClass409_10580.anInt4858 - (i_28 - i_21 >> 9)) {
+												if (i_41 >= i_50 && player_67.getSize(828768449) <= npc_59.definitions.anInt4858 - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize(828768449) <= npc_59.definitions.anInt4858 - (i_28 - i_21 >> 9)) {
 													Class96_Sub22.method14678(player_67, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane, 1557506355);
 													player_67.anInt10375 = client.cycles;
 												}
@@ -630,7 +630,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 								if (class285_34.aClass521_Sub1_3391 instanceof Class521_Sub1_Sub2_Sub1) {
 									int i_48 = i_46 + coordgrid_4.x;
 									i_49 = i_47 + coordgrid_4.y;
-									Class282_Sub29 class282_sub29_61 = (Class282_Sub29) client.aClass465_7414.method7754((long) (class285_34.aClass521_Sub1_3391.plane << 28 | i_49 << 14 | i_48));
+									Class282_Sub29 class282_sub29_61 = (Class282_Sub29) client.aClass465_7414.get((long) (class285_34.aClass521_Sub1_3391.plane << 28 | i_49 << 14 | i_48));
 									if (class282_sub29_61 != null) {
 										i_21 = 0;
 
@@ -647,7 +647,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 											if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == Class84.myPlayer.plane) {
 												AttributeDefault attributedefault_68 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
 												if ((Class506.anInt5858 & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.method7099(Class96_Sub12.anInt9319, attributedefault_68.anInt5337, -1083542144) != attributedefault_68.anInt5337)) {
-													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Class59.method1163(i_38, 619010179) + itemdefinitions_65.aString5043, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
+													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(i_38, 619010179) + itemdefinitions_65.aString5043, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
 												}
 											}
 
@@ -690,7 +690,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 															i_28 = itemdefinitions_65.anInt5056;
 														}
 
-														PlayerAppearance.method4032(arr_69[i_42], Class59.method1163(i_38, 619010179) + itemdefinitions_65.aString5043, i_28, s_70, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1528903882);
+														PlayerAppearance.method4032(arr_69[i_42], ParticleProducerDefinition.method1163(i_38, 619010179) + itemdefinitions_65.aString5043, i_28, s_70, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1528903882);
 													}
 												}
 											}
@@ -704,14 +704,14 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 							sceneobject_60 = (SceneObject) class285_34.aClass521_Sub1_3391;
 							objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436(-1539469212).getObjectDefinitions(sceneobject_60.getId(2000772127), 65280);
 							if (objectdefinitions_57.anIntArray5650 != null) {
-								objectdefinitions_57 = objectdefinitions_57.method8013(Class158_Sub1.aClass3_8507, (byte) 107);
+								objectdefinitions_57 = objectdefinitions_57.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 107);
 							}
 						} while (objectdefinitions_57 == null);
 
 						if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == Class84.myPlayer.plane) {
 							AttributeDefault attributedefault_62 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
 							if ((Class506.anInt5858 & 0x4) != 0 && (attributedefault_62 == null || objectdefinitions_57.method7963(Class96_Sub12.anInt9319, attributedefault_62.anInt5337, -2052450472) != attributedefault_62.anInt5337)) {
-								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Class59.method1163(65535, 619010179) + objectdefinitions_57.aString5638, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
+								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(65535, 619010179) + objectdefinitions_57.aString5638, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
 							}
 						}
 					} while (class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
@@ -755,7 +755,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 							i_51 = objectdefinitions_57.anInt5666;
 						}
 
-						PlayerAppearance.method4032(arr_63[i_21], Class59.method1163(65535, 619010179) + objectdefinitions_57.aString5638, i_51, s_52, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -98), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -1344607256);
+						PlayerAppearance.method4032(arr_63[i_21], ParticleProducerDefinition.method1163(65535, 619010179) + objectdefinitions_57.aString5638, i_51, s_52, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -98), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -1344607256);
 					}
 				}
 			}

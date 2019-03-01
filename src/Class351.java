@@ -49,7 +49,7 @@ public class Class351 implements Interface3 {
 	}
 
 	static final void method6195(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1731892952);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub4_8223.method12641(-1731892952);
 	}
 
 	public static final void method6196(Class282_Sub44 class282_sub44_0, boolean bool_1, boolean bool_2, int i_3) {

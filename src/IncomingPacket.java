@@ -257,7 +257,7 @@ public class IncomingPacket {
 	}
 
 	public static void method6379(Player player_0, int i_1) {
-		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.method7754((long) player_0.anInt10314);
+		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.anInt10314);
 		if (class282_sub48_2 == null) {
 			Class397.method6775(player_0.plane, player_0.regionBaseX[0], player_0.regionBaseY[0], 0, (ObjectDefinitions) null, (NPC) null, player_0, 77262483);
 		} else {

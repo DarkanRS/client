@@ -5,7 +5,7 @@ public class Class16 {
 	static int anInt137;
 	static NativeSprite[] aClass160Array138;
 	public static FontMetrics aClass414_139;
-	static int anInt140;
+	static int p11FullIndex;
 	static int anInt141;
 	static int anInt142;
 	static int anInt143;

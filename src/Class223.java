@@ -8,7 +8,7 @@ public final class Class223 {
 	IterableNodeMap aClass465_2771;
 
 	public CacheableNode method3758(long long_1) {
-		CacheableNode cacheablenode_3 = (CacheableNode) this.aClass465_2771.method7754(long_1);
+		CacheableNode cacheablenode_3 = (CacheableNode) this.aClass465_2771.get(long_1);
 		if (cacheablenode_3 != null) {
 			this.aClass477_2767.method7936(cacheablenode_3, -1738910950);
 		}

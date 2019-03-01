@@ -26,7 +26,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 
 			for (i_3 = 0; i_3 < i_2; i_3++) {
 				int i_4 = client.anIntArray7212[i_3];
-				NPC npc_5 = (NPC) ((Class282_Sub47) client.aClass465_7208.method7754((long) i_4)).anObject8068;
+				NPC npc_5 = (NPC) ((Class282_Sub47) client.NPCS.get((long) i_4)).anObject8068;
 				int i_6 = rsbitsbuffer_1.readBits(1, (byte) 26);
 				if (i_6 == 0) {
 					client.anIntArray7212[++client.anInt7211 - 1] = i_4;

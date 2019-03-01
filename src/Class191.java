@@ -11,10 +11,10 @@ public class Class191 implements Runnable {
 	boolean aBool2386;
 
 	public void run() {
-		Container container_1 = Class371.method6354((byte) 1);
+		Container container_1 = Class371.getActiveContainer((byte) 1);
 		Frame frame_2 = null;
-		if (Engine.aFrame3261 != null) {
-			frame_2 = Engine.aFrame3261;
+		if (Engine.engineFrame != null) {
+			frame_2 = Engine.engineFrame;
 		} else {
 			while (container_1 != null) {
 				if (container_1 instanceof Frame) {
@@ -74,7 +74,7 @@ public class Class191 implements Runnable {
 	}
 
 	public static void method3166(int i_0) {
-		Class59.aClass229_533.method3859(1570831832);
+		ParticleProducerDefinition.aClass229_533.method3859(1570831832);
 	}
 
 	public static void method3167(int i_0, int i_1, String string_2, String string_3, String string_4, String string_5, int i_6) {

@@ -51,7 +51,7 @@ public class AccountCreationResponseOpcodes implements Interface43 {
 	}
 
 	static final void method8156(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub21_8222.method12865(475375870);
 	}
 
 }

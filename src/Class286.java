@@ -190,9 +190,9 @@ public class Class286 implements Runnable {
 
 	static final void method5047(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub21_8222, i_2, -1752837734);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub21_8222, i_2, -1752837734);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -44);
-		Class190.method3148((byte) 84);
+		Class190.savePreferences((byte) 84);
 		client.aBool7175 = false;
 	}
 

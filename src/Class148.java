@@ -13,11 +13,11 @@ public class Class148 {
 	}
 
 	static final void method2549(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class383.method6513(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(742990495), 200, 804853307);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class383.method6513(Class393.preferences.currentToolkit.getValue(742990495), 200, 804853307);
 	}
 
 	public static String method2550(int i_0, int i_1) {
-		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i_0);
+		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			Class282_Sub41_Sub2 class282_sub41_sub2_3 = class282_sub37_2.aClass278_Sub1_8001.method4935(-1962983901);
 			if (class282_sub41_sub2_3 != null) {
@@ -51,9 +51,9 @@ public class Class148 {
 
 	static final void method2554(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		int i_3 = Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1677203613);
+		int i_3 = Class393.preferences.aClass468_Sub13_8228.method12714(1677203613);
 		if (i_2 != i_3) {
-			if (Class169.method2875(client.anInt7166, -2096796884)) {
+			if (Class169.method2875(client.gameState, -2096796884)) {
 				if (i_3 == 0 && Class260.anInt3223 != -1) {
 					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, i_2, false, (byte) -40);
 					Class468_Sub6.method12658(1298761444);
@@ -66,8 +66,8 @@ public class Class148 {
 				}
 			}
 
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8228, i_2, 1268885388);
-			Class190.method3148((byte) 29);
+			Class393.preferences.setValue(Class393.preferences.aClass468_Sub13_8228, i_2, 1268885388);
+			Class190.savePreferences((byte) 29);
 			client.aBool7175 = false;
 		}
 

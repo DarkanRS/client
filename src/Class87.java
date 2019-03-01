@@ -16,8 +16,8 @@ public class Class87 {
 	public int anInt838;
 	public byte aByte839;
 
-	public Class59 method1485(int i_1) {
-		return Class282_Sub11_Sub1.method15434(this.anInt842, (byte) 14);
+	public ParticleProducerDefinition method1485(int i_1) {
+		return Class282_Sub11_Sub1.getParticleProducerDefs(this.anInt842, (byte) 14);
 	}
 
 	Class87 method1488(int i_1, int i_2, int i_3, byte b_4) {

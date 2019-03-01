@@ -10,7 +10,7 @@ public class Class11 {
 	}
 
 	static void method466(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4101(Class158_Sub1.aClass3_8507, (byte) -15) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4101(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) -15) ? 1 : 0;
 	}
 
 	static final void method467(CS2Executor cs2executor_0, byte b_1) {

@@ -17,7 +17,7 @@ public final class Class155 {
 			this.aClass465_1969 = new IterableNodeMap(this.anInt1968);
 		}
 
-		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1969.method7754((long) i_1);
+		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1969.get((long) i_1);
 		if (class282_sub38_4 != null) {
 			class282_sub38_4.anInt8002 = i_2;
 		} else {
@@ -28,7 +28,7 @@ public final class Class155 {
 	}
 
 	public int method2626(int i_1, byte b_2) {
-		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) this.aClass465_1969.method7754((long) i_1);
+		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) this.aClass465_1969.get((long) i_1);
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {
@@ -58,7 +58,7 @@ public final class Class155 {
 			Class290.method5118((byte) -126);
 			Class9.aString99 = string_0;
 			Class9.aString102 = string_1;
-			Class365.setGameState(14, 2000356060);
+			Class365.setGameState(14);
 		}
 
 	}

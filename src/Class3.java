@@ -25,7 +25,7 @@ public class Class3 implements Interface42 {
 	}
 
 	int method264(boolean bool_1, byte b_2) {
-		long long_3 = Class169.method2869(1700652075);
+		long long_3 = Class169.time();
 
 		for (Class282_Sub45 class282_sub45_5 = (Class282_Sub45) (bool_1 ? this.aClass465_28.method7750(-1019501860) : this.aClass465_28.method7751((byte) 13)); class282_sub45_5 != null; class282_sub45_5 = (Class282_Sub45) this.aClass465_28.method7751((byte) 105)) {
 			if ((class282_sub45_5.aLong8066 & 0x3fffffffffffffffL) < long_3) {
@@ -54,11 +54,11 @@ public class Class3 implements Interface42 {
 
 	public void method266(int i_1, int i_2, int i_3) {
 		this.anIntArray26[i_1] = i_2;
-		Class282_Sub45 class282_sub45_4 = (Class282_Sub45) this.aClass465_28.method7754((long) i_1);
+		Class282_Sub45 class282_sub45_4 = (Class282_Sub45) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {
-			class282_sub45_4.aLong8066 = Class169.method2869(2002446854) + 500L;
+			class282_sub45_4.aLong8066 = Class169.time() + 500L;
 		} else {
-			class282_sub45_4 = new Class282_Sub45(Class169.method2869(2004288140) + 500L);
+			class282_sub45_4 = new Class282_Sub45(Class169.time() + 500L);
 			this.aClass465_28.method7765(class282_sub45_4, (long) i_1);
 		}
 
@@ -128,10 +128,10 @@ public class Class3 implements Interface42 {
 
 	void method281(int i_1, int i_2, byte b_3) {
 		this.anIntArray25[i_1] = i_2;
-		Class282_Sub45 class282_sub45_4 = (Class282_Sub45) this.aClass465_28.method7754((long) i_1);
+		Class282_Sub45 class282_sub45_4 = (Class282_Sub45) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {
 			if (class282_sub45_4.aLong8066 != 4611686018427387905L) {
-				class282_sub45_4.aLong8066 = Class169.method2869(2128597494) + 500L | 0x4000000000000000L;
+				class282_sub45_4.aLong8066 = Class169.time() + 500L | 0x4000000000000000L;
 			}
 		} else {
 			class282_sub45_4 = new Class282_Sub45(4611686018427387905L);
@@ -160,10 +160,10 @@ public class Class3 implements Interface42 {
 
 	static final void method284(CS2Executor cs2executor_0, int i_1) {
 		boolean bool_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1;
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8208, bool_2 ? 2 : 1, 681995550);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8209, bool_2 ? 2 : 1, -1225765043);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8208, bool_2 ? 2 : 1, 681995550);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, bool_2 ? 2 : 1, -1225765043);
 		Class405.method6823(-734889653);
-		Class190.method3148((byte) 111);
+		Class190.savePreferences((byte) 111);
 		client.aBool7175 = false;
 	}
 
@@ -188,7 +188,7 @@ public class Class3 implements Interface42 {
 	}
 
 	static final void method287(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) (Class169.method2869(1779387759) / 86400000L) - 11745;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) (Class169.time() / 86400000L) - 11745;
 	}
 
 }

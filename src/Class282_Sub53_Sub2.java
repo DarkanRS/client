@@ -1,4 +1,4 @@
-public final class Class282_Sub53_Sub2 extends Class282_Sub53 {
+public final class Class282_Sub53_Sub2 extends MouseRecord {
 
 	int anInt9629;
 	static int anInt9630;
@@ -8,7 +8,7 @@ public final class Class282_Sub53_Sub2 extends Class282_Sub53 {
 	int anInt9635;
 	static Class282_Sub53_Sub2[] aClass282_Sub53_Sub2Array9633 = new Class282_Sub53_Sub2[0];
 
-	public int method13470(int i_1) {
+	public int getClickType(int i_1) {
 		return this.anInt9631;
 	}
 
@@ -24,11 +24,11 @@ public final class Class282_Sub53_Sub2 extends Class282_Sub53 {
 		return this.anInt9631 * 516361889 * -608676511;
 	}
 
-	public int method13473(byte b_1) {
+	public int getMeta(byte b_1) {
 		return this.anInt9635;
 	}
 
-	public void method13475(int i_1) {
+	public void cache(int i_1) {
 		Class282_Sub53_Sub2[] arr_2 = aClass282_Sub53_Sub2Array9633;
 		synchronized (aClass282_Sub53_Sub2Array9633) {
 			if (Class279.anInt3370 < anInt9630 - 1) {

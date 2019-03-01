@@ -31,7 +31,7 @@ public class Class119 {
 	}
 
 	public static void method2074(String string_0, String string_1, int i_2, boolean bool_3, byte b_4) {
-		if (client.anInt7166 == 3) {
+		if (client.gameState == 3) {
 			TCPMessage tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.isaac, 94516093);
 			tcpmessage_5.buffer.writeShort(0, 1417031095);
 			int i_6 = tcpmessage_5.buffer.index;
@@ -106,27 +106,27 @@ public class Class119 {
 	}
 
 	public static void method2077(int i_0) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8208, 1, -879331586);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8209, 1, -1380077307);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, 1, 748663457);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, 1, 2086914701);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, 0, -480234174);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub26_8224, 0, -1904588686);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub28_8212, 0, 213575590);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, 0, 665870482);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub22_8213, 0, -1952612636);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub19_8204, 0, -998359039);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub24_8216, 0, 812339318);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, 0, 926852510);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8187, 0, -561555646);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223, 0, -1744988767);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub20_8207, 0, -1860208204);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -1298876886);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub12_8195, 0, -1771298616);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub14_8211, 0, -1247353645);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8208, 1, -879331586);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, 1, -1380077307);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, 1, 748663457);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub17_8200, 1, 2086914701);
+		Class393.preferences.setValue(Class393.preferences.idleAnimations, 0, -480234174);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub26_8224, 0, -1904588686);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub28_8212, 0, 213575590);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub2_8205, 0, 665870482);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, 0, -1952612636);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub19_8204, 0, -998359039);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, 0, 812339318);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub30_8194, 0, 926852510);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8187, 0, -561555646);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8223, 0, -1744988767);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub20_8207, 0, -1860208204);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -1298876886);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, -1771298616);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 0, -1247353645);
 		Class323.method5777(1139653705);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub7_8210, 2, 2126000152);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub6_8192, 2, -761948866);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, 2126000152);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 2, -761948866);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(572282036);
 		client.aBool7185 = true;

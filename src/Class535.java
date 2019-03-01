@@ -95,7 +95,7 @@ public class Class535 {
 
 	public void method11468(RsByteBuffer rsbytebuffer_1, Class239 class239_2, int i_3) {
 		int i_4 = rsbytebuffer_1.readUnsignedByte();
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
+		if (Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
 			if ((i_4 & 0x1) != 0) {
 				this.anInt7083 = rsbytebuffer_1.readInt();
 			} else {

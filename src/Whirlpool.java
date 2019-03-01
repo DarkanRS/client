@@ -212,7 +212,7 @@ public class Whirlpool {
 	}
 
 	static final void method7420(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13049(426414688) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub29_8201.method13049(426414688) ? 1 : 0;
 	}
 
 	static void method7421(int i_0, int i_1) {
@@ -283,7 +283,7 @@ public class Whirlpool {
 					} else if (i_0 == 27) {
 						Class468.method7789(-838440375);
 					} else if (i_0 == 6) {
-						IndexLoaders.MAP_REGION_DECODER.aLong3183 = Class169.method2869(1624509158);
+						IndexLoaders.MAP_REGION_DECODER.aLong3183 = Class169.time();
 						IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
 						Class468.method7789(620089057);
 					} else {

@@ -109,7 +109,7 @@ public class Class301 implements Interface41 {
 		}
 
 		int i_1;
-		if (Class179.anInt2231 != -1 && Class179.aLong2232 < Class169.method2869(2051394880)) {
+		if (Class179.anInt2231 != -1 && Class179.aLong2232 < Class169.time()) {
 			for (i_1 = Class179.anInt2231; i_1 < Class276.aStringArray3345.length; i_1++) {
 				if (Class276.aStringArray3345[i_1].startsWith("pause")) {
 					int i_2 = 5;
@@ -122,7 +122,7 @@ public class Class301 implements Interface41 {
 
 					Class209.method3598("Pausing for " + i_2 + " seconds...", -707420136);
 					Class179.anInt2231 = i_1 + 1;
-					Class179.aLong2232 = Class169.method2869(1776970496) + (long) (i_2 * 1000);
+					Class179.aLong2232 = Class169.time() + (long) (i_2 * 1000);
 					return;
 				}
 
@@ -147,9 +147,9 @@ public class Class301 implements Interface41 {
 		}
 
 		for (i_1 = 0; i_1 < client.anInt7193; i_1++) {
-			Interface16 interface16_9 = client.anInterface16Array7154[i_1];
+			KeyRecord interface16_9 = client.anInterface16Array7154[i_1];
 			int i_10 = interface16_9.method92(317240429);
-			char var_4 = interface16_9.method118(-63648913);
+			char var_4 = interface16_9.getCode(-63648913);
 			int i_5 = interface16_9.method125(1713705553);
 			if (i_10 == 84) {
 				Class165.method2853(false, -2060132011);
@@ -206,13 +206,13 @@ public class Class301 implements Interface41 {
 				Class534.method11441((byte) -128);
 				Class179.anInt2220 = Class179.aString2225.length();
 			} else if (Class380.method6450(var_4, -803297917) || "\\/.:, _-+[]~@".indexOf(var_4) != -1) {
-				Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.anInterface16Array7154[i_1].method118(-890560120) + Class179.aString2225.substring(Class179.anInt2220);
+				Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.anInterface16Array7154[i_1].getCode(-890560120) + Class179.aString2225.substring(Class179.anInt2220);
 				++Class179.anInt2220;
 			}
 		}
 
 		client.anInt7193 = 0;
-		client.anInt7196 = 0;
+		client.maximumHeldKeys = 0;
 		IncomingPacket.method6378(-1538407760);
 	}
 

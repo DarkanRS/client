@@ -44,7 +44,7 @@ public class Class96_Sub5 extends Class96 {
 		int i_2 = Class363.anInt4203;
 		int i_3 = Engine.anInt3249;
 		int i_4 = -1;
-		if (Class475.aBool5623) {
+		if (Class475.supportsFullScreen) {
 			Class467[] arr_5 = Class405.method6825((byte) 55);
 
 			for (int i_6 = 0; i_6 < arr_5.length; i_6++) {

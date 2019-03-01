@@ -25,7 +25,7 @@ public class Class256 {
 	}
 
 	public static void method4412(Class116 class116_0, int i_1, int i_2) {
-		i_1 = i_1 * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(241459419) >> 8;
+		i_1 = i_1 * Class393.preferences.aClass468_Sub13_8228.method12714(241459419) >> 8;
 		if (class116_0 == null) {
 			Class226.method3805(-1719520107);
 		} else {
@@ -40,13 +40,13 @@ public class Class256 {
 		if (!Renderers.SOFTWARE_RENDERER.method8403()) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 3;
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method7785(i_2, -550763763);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub12_8195.method7785(i_2, -550763763);
 		}
 
 	}
 
 	public static Class268 method4414(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5, int i_6, byte b_7) {
-		if ((bool_5 ? Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(-2090466829) : Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(-1389613330)) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+		if ((bool_5 ? Class393.preferences.aClass468_Sub13_8227.method12714(-2090466829) : Class393.preferences.aClass468_Sub13_8225.method12714(-1389613330)) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
 			Class268 class268_8 = new Class268((byte) (bool_5 ? 3 : 2), i_0, i_1, i_2, i_3, i_4, i_6, (Class521_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_8;
 			return class268_8;

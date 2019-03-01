@@ -51,8 +51,8 @@ public class Class450 {
 	}
 
 	static final void method7500(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1848816059);
-		Class190.method3148((byte) 103);
+		Class393.preferences.setValue(Class393.preferences.idleAnimations, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1848816059);
+		Class190.savePreferences((byte) 103);
 		client.aBool7175 = false;
 	}
 

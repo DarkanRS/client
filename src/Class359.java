@@ -64,7 +64,7 @@ public class Class359 {
 		icomponentdefinitions_0.anInt1289 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1375 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.method1858(icomponentdefinitions_0, (byte) 14);
-		Class44.method913(interface_1, icomponentdefinitions_0, (byte) 1);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
 		if (icomponentdefinitions_0.anInt1268 == 0) {
 			Class12.method483(interface_1, icomponentdefinitions_0, false, -1114649951);
 		}

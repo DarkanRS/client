@@ -91,7 +91,7 @@ public class Class96_Sub14 extends Class96 {
 			if (bool_3) {
 				try {
 					i_6 = Class383.method6513(3, 1000, 1356532046);
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(525522056) == 3) {
+					if (Class393.preferences.currentToolkit.getValue(525522056) == 3) {
 						Class168 class168_7 = Renderers.SOFTWARE_RENDERER.method8392();
 						long long_8 = class168_7.aLong2049 & 0xffffffffffffL;
 						switch (class168_7.anInt2052) {

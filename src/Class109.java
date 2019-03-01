@@ -59,7 +59,7 @@ public abstract class Class109 {
 	static final void method1854(CS2Executor cs2executor_0, int i_1) {
 		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		FontMetrics fontmetrics_4 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_3, 0, 1361822536);
+		FontMetrics fontmetrics_4 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, i_3, 0, 1361822536);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = fontmetrics_4.getWidth(string_2, Class182.aClass160Array2261);
 	}
 
@@ -78,8 +78,8 @@ public abstract class Class109 {
 	}
 
 	static final void method1857(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub8_8219, cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0 ? 1 : 0, -123995659);
-		Class190.method3148((byte) 35);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub8_8219, cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0 ? 1 : 0, -123995659);
+		Class190.savePreferences((byte) 35);
 	}
 
 	public static void method1858(IComponentDefinitions icomponentdefinitions_0, byte b_1) {

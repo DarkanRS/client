@@ -9,7 +9,7 @@ public abstract class Class534 {
 	int anInt7078 = -1;
 	NodeCollection aClass482_7077 = new NodeCollection();
 
-	int method11408(Class282_Sub53 class282_sub53_1, int i_2, int i_3) {
+	int method11408(MouseRecord class282_sub53_1, int i_2, int i_3) {
 		long long_4;
 		if (this.aLong7074 == -1L) {
 			long_4 = (long) i_2;
@@ -32,13 +32,13 @@ public abstract class Class534 {
 		this.anInt7078 = -1;
 	}
 
-	void method11410(Class282_Sub53 class282_sub53_1, byte b_2) {
+	void method11410(MouseRecord class282_sub53_1, byte b_2) {
 		this.aClass482_7077.append(class282_sub53_1, -1396840421);
 	}
 
 	abstract int method11412(int var1);
 
-	abstract void method11413(RsByteBuffer var1, Class282_Sub53 var2, int var3);
+	abstract void method11413(RsByteBuffer var1, MouseRecord var2, int var3);
 
 	abstract void method11414(int var1);
 
@@ -60,7 +60,7 @@ public abstract class Class534 {
 						break label105;
 					}
 
-					Class282_Sub53 class282_sub53_13 = (Class282_Sub53) iterator_6.next();
+					MouseRecord class282_sub53_13 = (MouseRecord) iterator_6.next();
 					if (tcpmessage_2 != null && tcpmessage_2.buffer.index - i_3 >= 252 - (6 + this.method11412(919512464))) {
 						break label105;
 					}
@@ -81,7 +81,7 @@ public abstract class Class534 {
 					}
 
 					if (i_9 == this.anInt7075 && i_8 == this.anInt7078) {
-						class282_sub53_13.method13475(-894194576);
+						class282_sub53_13.cache(-894194576);
 					} else {
 						if (tcpmessage_2 == null) {
 							tcpmessage_2 = this.method11416((byte) -81);
@@ -136,7 +136,7 @@ public abstract class Class534 {
 						++i_5;
 						this.method11413(tcpmessage_2.buffer, class282_sub53_13, 1351568696);
 						this.aLong7076 = class282_sub53_13.method13471(1014804991);
-						class282_sub53_13.method13475(684754110);
+						class282_sub53_13.cache(684754110);
 					}
 				}
 			}
@@ -169,9 +169,9 @@ public abstract class Class534 {
 
 	abstract int method11425();
 
-	abstract void method11426(RsByteBuffer var1, Class282_Sub53 var2);
+	abstract void method11426(RsByteBuffer var1, MouseRecord var2);
 
-	abstract void method11427(RsByteBuffer var1, Class282_Sub53 var2);
+	abstract void method11427(RsByteBuffer var1, MouseRecord var2);
 
 	abstract TCPMessage method11428();
 

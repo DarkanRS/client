@@ -10,8 +10,8 @@ public class Class282_Sub29 extends Node {
 	}
 
 	public static void method12426(int i_0) {
-		if (client.anInt7166 == 5 && !JS5CacheFile.method3360((byte) -32) && !Class85.method1466(1509823443)) {
-			Class365.setGameState(8, 2077518946);
+		if (client.gameState == 5 && !JS5CacheFile.method3360((byte) -32) && !Class85.method1466(1509823443)) {
+			Class365.setGameState(8);
 		}
 
 	}

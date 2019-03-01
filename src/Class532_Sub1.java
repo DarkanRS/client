@@ -28,14 +28,14 @@ public class Class532_Sub1 extends Class532 {
 	public static void method12840(int i_0) {
 		client client_1 = Class308.aclient3620;
 		synchronized (Class308.aclient3620) {
-			if (client.aFrame3260 == null) {
-				Container container_2 = Class371.method6354((byte) 1);
+			if (client.fullScreenFrame == null) {
+				Container container_2 = Class371.getActiveContainer((byte) 1);
 				if (container_2 != null) {
 					Class45.anInt434 = container_2.getSize().width;
 					Class107.anInt1082 = container_2.getSize().height;
 					Insets insets_3;
-					if (container_2 == client.aFrame3261) {
-						insets_3 = client.aFrame3261.getInsets();
+					if (container_2 == client.engineFrame) {
+						insets_3 = client.engineFrame.getInsets();
 						Class45.anInt434 -= insets_3.left + insets_3.right;
 						Class107.anInt1082 -= insets_3.bottom + insets_3.top;
 					}
@@ -48,7 +48,7 @@ public class Class532_Sub1 extends Class532 {
 						Class107.anInt1082 = 1;
 					}
 
-					if (Class158.method2730((short) -11561) != 1) {
+					if (Class158.windowedMode() != 1) {
 						Class46.method935((byte) 0);
 					} else {
 						Class349.anInt4083 = client.anInt7439;
@@ -66,8 +66,8 @@ public class Class532_Sub1 extends Class532 {
 						Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379, -2138128111);
 					}
 
-					if (container_2 == client.aFrame3261) {
-						insets_3 = client.aFrame3261.getInsets();
+					if (container_2 == client.engineFrame) {
+						insets_3 = client.engineFrame.getInsets();
 						Class351.gameCanvas.setLocation(insets_3.left + client.anInt3250, insets_3.top + client.anInt3251);
 					} else {
 						Class351.gameCanvas.setLocation(client.anInt3250, client.anInt3251);

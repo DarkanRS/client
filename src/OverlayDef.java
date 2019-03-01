@@ -34,7 +34,7 @@ public class OverlayDef {
 
 	void method11364(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
 		if (i_2 == 1) {
-			this.primaryRGB = Class44.method912(rsbytebuffer_1.read24BitUnsignedInteger(), 2117926535);
+			this.primaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger(), 2117926535);
 		} else if (i_2 == 2) {
 			this.texture = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 3) {
@@ -45,7 +45,7 @@ public class OverlayDef {
 		} else if (i_2 == 5) {
 			this.aBool7056 = false;
 		} else if (i_2 == 7) {
-			this.secondaryRGB = Class44.method912(rsbytebuffer_1.read24BitUnsignedInteger(), 2117926535);
+			this.secondaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger(), 2117926535);
 		} else if (i_2 == 8) {
 			this.aClass536_7062.anInt7093 = this.anInt7053;
 		} else if (i_2 == 9) {

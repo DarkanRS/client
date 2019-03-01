@@ -26,7 +26,7 @@ public final class Class224 {
 	}
 
 	static final void method3781(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method12774((byte) -14) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub18_8214.method12774((byte) -14) ? 1 : 0;
 	}
 
 	public static void method3782(CacheableNode cacheablenode_0, CacheableNode cacheablenode_1, int i_2) {

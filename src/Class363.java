@@ -90,7 +90,7 @@ public class Class363 {
 			Class463.method7727(animable_0, -1790074477);
 		} else {
 			SystemInfo.method13466(animable_0, bool_1, 141891001);
-			i_3 = Class44.anInt430;
+			i_3 = IdentikitDefinition.anInt430;
 			i_4 = Class8_Sub1.anInt8515;
 		}
 

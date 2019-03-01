@@ -69,7 +69,7 @@ public class Item extends Node {
 					i_17 = Class187.anIntArray2355[i_21] * 4 + 2 - i_9 / 128;
 					ObjectDefinitions objectdefinitions_23 = IndexLoaders.MAP_REGION_DECODER.method4436(-1953311803).getObjectDefinitions(Class187.anIntArray2357[i_21], 65280);
 					if (objectdefinitions_23.anIntArray5650 != null) {
-						objectdefinitions_23 = objectdefinitions_23.method8013(Class158_Sub1.aClass3_8507, (byte) -58);
+						objectdefinitions_23 = objectdefinitions_23.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) -58);
 						if (objectdefinitions_23 == null || objectdefinitions_23.anInt5669 == -1) {
 							continue;
 						}

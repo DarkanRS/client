@@ -29,7 +29,7 @@ public class TCPMessage extends Node {
 
 			for (i_10 = 0; i_10 < client.anInt7211; i_10++) {
 				int i_11 = client.anIntArray7212[i_10];
-				Class282_Sub47 class282_sub47_12 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_11);
+				Class282_Sub47 class282_sub47_12 = (Class282_Sub47) client.NPCS.get((long) i_11);
 				if (class282_sub47_12 != null) {
 					((Animable) class282_sub47_12.anObject8068).method15818(i_0, i_1, i_2, i_3, i_4, i_5, i_6, 1391480104);
 				}

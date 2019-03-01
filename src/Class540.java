@@ -58,14 +58,14 @@ public class Class540 {
 		int i_4;
 		for (i_3 = 0; i_3 < client.anInt7216; i_3++) {
 			i_4 = client.anIntArray7421[i_3];
-			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_4);
+			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get((long) i_4);
 			NPC npc_7 = (NPC) class282_sub47_5.anObject8068;
 			if (npc_7.anInt10353 != client.anInt7332) {
 				if (Class20.aBool161 && EnumIndexLoader.method7426(i_4, (byte) -86)) {
 					Class316.method5594(-559600711);
 				}
 
-				if (npc_7.aClass409_10580.method6886(-1089073917)) {
+				if (npc_7.definitions.method6886(-1089073917)) {
 					Class169.method2876(npc_7, 1280406765);
 				}
 
@@ -77,11 +77,11 @@ public class Class540 {
 
 		if (bool_2) {
 			i_3 = client.anInt7210;
-			client.anInt7210 = client.aClass465_7208.method7748((short) 15812);
+			client.anInt7210 = client.NPCS.method7748((short) 15812);
 			i_4 = 0;
 
 			Class282_Sub47 class282_sub47_9;
-			for (Iterator iterator_8 = client.aClass465_7208.iterator(); iterator_8.hasNext(); client.aClass282_Sub47Array7209[i_4++] = class282_sub47_9) {
+			for (Iterator iterator_8 = client.NPCS.iterator(); iterator_8.hasNext(); client.aClass282_Sub47Array7209[i_4++] = class282_sub47_9) {
 				class282_sub47_9 = (Class282_Sub47) iterator_8.next();
 			}
 
@@ -94,7 +94,7 @@ public class Class540 {
 			throw new RuntimeException(client.aClass184_7475.recievedBuffer.index + " " + client.aClass184_7475.anInt2287);
 		} else {
 			for (i_3 = 0; i_3 < client.anInt7211; i_3++) {
-				if (client.aClass465_7208.method7754((long) client.anIntArray7212[i_3]) == null) {
+				if (client.NPCS.get((long) client.anIntArray7212[i_3]) == null) {
 					throw new RuntimeException(i_3 + " " + client.anInt7211);
 				}
 			}

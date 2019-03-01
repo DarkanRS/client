@@ -68,7 +68,7 @@ public class Class480 {
 
 	public static final void method8043(int i_0) {
 		String string_1 = Class445.aString5384 != null ? Class445.aString5384 : WorldMapAreaDefs.method3741((byte) -1);
-		Class282_Sub50_Sub6.method14788(string_1, false, Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
+		Class282_Sub50_Sub6.method14788(string_1, false, Class393.preferences.currentToolkit.getValue(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
 	}
 
 	static void method8044(IComponentDefinitions[] arr_0, IComponentDefinitions icomponentdefinitions_1, boolean bool_2, byte b_3) {
@@ -79,7 +79,7 @@ public class Class480 {
 			InteractableObject.method16099(icomponentdefinitions_1.aClass118Array1439, icomponentdefinitions_1.idHash, i_4, i_5, bool_2, (byte) 17);
 		}
 
-		Class282_Sub44 class282_sub44_6 = (Class282_Sub44) client.aClass465_7442.method7754((long) icomponentdefinitions_1.idHash);
+		Class282_Sub44 class282_sub44_6 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_1.idHash);
 		if (class282_sub44_6 != null) {
 			Class442.method7403(class282_sub44_6.anInt8063, i_4, i_5, bool_2, 1720687852);
 		}
@@ -98,7 +98,7 @@ public class Class480 {
 
 			for (i_9 = 0; i_9 < client.anInt7211; i_9++) {
 				int i_10 = client.anIntArray7212[i_9];
-				Class282_Sub47 class282_sub47_11 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_10);
+				Class282_Sub47 class282_sub47_11 = (Class282_Sub47) client.NPCS.get((long) i_10);
 				if (class282_sub47_11 != null) {
 					((Animable) class282_sub47_11.anObject8068).method15795(i_4, i_5, bool_2, (byte) -94);
 				}

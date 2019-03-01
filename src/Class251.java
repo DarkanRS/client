@@ -79,7 +79,7 @@ public final class Class251 {
 					}
 
 					Class168 class168_4 = Renderers.SOFTWARE_RENDERER.method8392();
-					Class209.method3598("Toolkit ID: " + Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(174476725), -199774023);
+					Class209.method3598("Toolkit ID: " + Class393.preferences.currentToolkit.getValue(174476725), -199774023);
 					Class209.method3598("Vendor: " + class168_4.anInt2052, -1266717403);
 					Class209.method3598("Name: " + class168_4.aString2051, -2120239732);
 					Class209.method3598("Version: " + class168_4.anInt2045, -1689852117);
@@ -105,7 +105,7 @@ public final class Class251 {
 			try {
 				if (string_0.equalsIgnoreCase("wm1")) {
 					Class440.method7373(1, -1, -1, false, (byte) 111);
-					if (Class158.method2730((short) -2613) == 1) {
+					if (Class158.windowedMode() == 1) {
 						Class209.method3598("Success", -1081042103);
 					} else {
 						Class209.method3598("Failure", -1679059179);
@@ -116,7 +116,7 @@ public final class Class251 {
 
 				if (string_0.equalsIgnoreCase("wm2")) {
 					Class440.method7373(2, -1, -1, false, (byte) 71);
-					if (Class158.method2730((short) -27549) == 2) {
+					if (Class158.windowedMode() == 2) {
 						Class209.method3598("Success", -268796037);
 					} else {
 						Class209.method3598("Failure", -693309543);
@@ -125,9 +125,9 @@ public final class Class251 {
 					return;
 				}
 
-				if (Class475.aBool5623 && string_0.equalsIgnoreCase("wm3")) {
+				if (Class475.supportsFullScreen && string_0.equalsIgnoreCase("wm3")) {
 					Class440.method7373(3, 1024, 768, false, (byte) 71);
-					if (Class158.method2730((short) -23797) == 3) {
+					if (Class158.windowedMode() == 3) {
 						Class209.method3598("Success", -1837857918);
 					} else {
 						Class209.method3598("Failure", -223811881);
@@ -144,7 +144,7 @@ public final class Class251 {
 				int i_10;
 				if (string_0.startsWith("dumpitems")) {
 					for (i_10 = 0; i_10 < 24806; i_10++) {
-						int[] ints_23 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_10, 1).renderToSprite(Class182.HARDWARE_RENDERER, Renderers.SOFTWARE_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, Class84.myPlayer.playerAppearance, (short) 1);
+						int[] ints_23 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_10, 1).getSprite(Class182.HARDWARE_RENDERER, Renderers.SOFTWARE_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, Class84.myPlayer.playerAppearance, (short) 1);
 
 						try {
 							i_6 = (int) Math.sqrt((double) ints_23.length) - 1;
@@ -195,11 +195,11 @@ public final class Class251 {
 				}
 
 				if (string_0.equalsIgnoreCase("tk0")) {
-					Class538.method11500(0, false, (byte) 24);
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-491393282) == 0) {
+					ParticleProducer.method11500(0, false, (byte) 24);
+					if (Class393.preferences.currentToolkit.getValue(-491393282) == 0) {
 						Class209.method3598("Success", -1340836055);
-						Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 0, -1122635532);
-						Class190.method3148((byte) 68);
+						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, -1122635532);
+						Class190.savePreferences((byte) 68);
 						client.aBool7175 = false;
 					} else {
 						Class209.method3598("Failure", -344734779);
@@ -209,11 +209,11 @@ public final class Class251 {
 				}
 
 				if (string_0.equalsIgnoreCase("tk1")) {
-					Class538.method11500(1, false, (byte) 24);
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1821997083) == 1) {
+					ParticleProducer.method11500(1, false, (byte) 24);
+					if (Class393.preferences.currentToolkit.getValue(-1821997083) == 1) {
 						Class209.method3598("Success", -364086081);
-						Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 1, -1690467164);
-						Class190.method3148((byte) 47);
+						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 1, -1690467164);
+						Class190.savePreferences((byte) 47);
 						client.aBool7175 = false;
 					} else {
 						Class209.method3598("Failure", -716939990);
@@ -223,11 +223,11 @@ public final class Class251 {
 				}
 
 				if (string_0.equalsIgnoreCase("tk2")) {
-					Class538.method11500(2, false, (byte) 24);
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(2070272351) == 2) {
+					ParticleProducer.method11500(2, false, (byte) 24);
+					if (Class393.preferences.currentToolkit.getValue(2070272351) == 2) {
 						Class209.method3598("Success", -1794668716);
-						Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 2, -259704912);
-						Class190.method3148((byte) 17);
+						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 2, -259704912);
+						Class190.savePreferences((byte) 17);
 						client.aBool7175 = false;
 					} else {
 						Class209.method3598("Failure", -822814139);
@@ -237,11 +237,11 @@ public final class Class251 {
 				}
 
 				if (string_0.equalsIgnoreCase("tk3")) {
-					Class538.method11500(3, false, (byte) 24);
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(389435618) == 3) {
+					ParticleProducer.method11500(3, false, (byte) 24);
+					if (Class393.preferences.currentToolkit.getValue(389435618) == 3) {
 						Class209.method3598("Success", -832737067);
-						Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 3, 1626226442);
-						Class190.method3148((byte) 28);
+						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 3, 1626226442);
+						Class190.savePreferences((byte) 28);
 						client.aBool7175 = false;
 					} else {
 						Class209.method3598("Failure", -129081346);
@@ -251,11 +251,11 @@ public final class Class251 {
 				}
 
 				if (string_0.equalsIgnoreCase("tk5")) {
-					Class538.method11500(5, false, (byte) 24);
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-889180352) == 5) {
+					ParticleProducer.method11500(5, false, (byte) 24);
+					if (Class393.preferences.currentToolkit.getValue(-889180352) == 5) {
 						Class209.method3598("Success", -1022184236);
-						Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 5, -1654618197);
-						Class190.method3148((byte) 119);
+						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 5, -1654618197);
+						Class190.savePreferences((byte) 119);
 						client.aBool7175 = false;
 					} else {
 						Class209.method3598("Failure", -1885199360);
@@ -265,9 +265,9 @@ public final class Class251 {
 				}
 
 				if (string_0.equalsIgnoreCase("clientdrop")) {
-					if (client.anInt7166 == 13) {
+					if (client.gameState == 13) {
 						Class151.method2592((byte) 34);
-					} else if (client.anInt7166 == 18) {
+					} else if (client.gameState == 18) {
 						client.aClass184_7475.aBool2298 = true;
 					}
 
@@ -291,13 +291,13 @@ public final class Class251 {
 
 				if (string_0.startsWith("getclientvarpbit")) {
 					i_10 = Integer.parseInt(string_0.substring(17));
-					Class209.method3598("varpbit=" + Class158_Sub1.aClass3_8507.method241(i_10, -632025668), -1998632005);
+					Class209.method3598("varpbit=" + Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_10, -632025668), -1998632005);
 					return;
 				}
 
 				if (string_0.startsWith("getclientvarp")) {
 					i_10 = Integer.parseInt(string_0.substring(14));
-					Class209.method3598("varp=" + Class158_Sub1.aClass3_8507.method240(i_10, 127032296), -2108704386);
+					Class209.method3598("varp=" + Class158_Sub1.PLAYER_VAR_PROVIDER.method240(i_10, 127032296), -2108704386);
 					return;
 				}
 
@@ -322,7 +322,7 @@ public final class Class251 {
 				if (string_0.startsWith("setoutput ")) {
 					file_20 = new File(string_0.substring(10));
 					if (file_20.exists()) {
-						file_20 = new File(string_0.substring(10) + "." + Class169.method2869(1635435907) + ".log");
+						file_20 = new File(string_0.substring(10) + "." + Class169.time() + ".log");
 						if (file_20.exists()) {
 							Class209.method3598("file already exists!", -2041307357);
 							return;
@@ -371,7 +371,7 @@ public final class Class251 {
 					Class341.method6074(arr_12, 1579654554);
 				}
 
-				if (client.anInt7166 == 13) {
+				if (client.gameState == 13) {
 					TCPMessage tcpmessage_21 = Class271.method4828(OutgoingPacket.aClass379_4612, client.aClass184_7475.isaac, 704086040);
 					tcpmessage_21.buffer.writeByte(string_0.length() + 3);
 					tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
@@ -385,14 +385,14 @@ public final class Class251 {
 			}
 		}
 
-		if (client.anInt7166 != 13) {
+		if (client.gameState != 13) {
 			Class209.method3598(Message.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1344246012) + string_0, -1444759652);
 		}
 
 	}
 
 	static void method4314(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4103(Class158_Sub1.aClass3_8507, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -394016301) ? 1 : 0;
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4103(Class158_Sub1.PLAYER_VAR_PROVIDER, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -394016301) ? 1 : 0;
 		--cs2executor_0.intStackPtr;
 	}
 
@@ -431,7 +431,7 @@ public final class Class251 {
 					int i_18 = i_3 + i_14;
 					if (i_17 > 0 && i_18 > 0 && i_17 < i_4 - 1 && i_18 < i_5 - 1) {
 						ObjectDefinitions objectdefinitions_19 = objectindexloader_0.getObjectDefinitions(i_9, 65280);
-						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 59) != 0 || objectdefinitions_19.anInt5652 != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.aBool5685) {
+						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.aClass468_Sub23_8202.method12897((byte) 59) != 0 || objectdefinitions_19.anInt5652 != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.aBool5685) {
 							if (!objectdefinitions_19.method7968(-2090294731)) {
 								++i_7;
 							}

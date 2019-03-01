@@ -31,7 +31,7 @@ public abstract class Class282_Sub1 extends Node {
 			}
 
 			Class9.anInt76 = i_0;
-			Class365.setGameState(19, 1363938860);
+			Class365.setGameState(19);
 		}
 
 	}

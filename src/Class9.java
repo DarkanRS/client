@@ -37,18 +37,18 @@ public class Class9 {
 	}
 
 	static final void method451(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub19_8204, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -349576977);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub19_8204, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -349576977);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-407830274);
-		Class190.method3148((byte) 90);
+		Class190.savePreferences((byte) 90);
 		client.aBool7175 = false;
 	}
 
 	static final void method452(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		if (i_2 != Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644)) {
-			Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub14_8211, i_2, 1770678701);
-			Class190.method3148((byte) 15);
+		if (i_2 != Class393.preferences.aClass468_Sub14_8211.method12728(-1912429644)) {
+			Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, i_2, 1770678701);
+			Class190.savePreferences((byte) 15);
 			client.aBool7175 = false;
 		}
 

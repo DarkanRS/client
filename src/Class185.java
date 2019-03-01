@@ -127,8 +127,8 @@ public class Class185 {
 	}
 
 	static final void method3079(CS2Executor cs2executor_0, int i_1) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub22_8213, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -1510347468);
-		Class190.method3148((byte) 119);
+		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -1510347468);
+		Class190.savePreferences((byte) 119);
 		Class94.method1589((short) 255);
 		client.aBool7175 = false;
 	}

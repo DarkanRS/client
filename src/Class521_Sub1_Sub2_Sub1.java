@@ -22,7 +22,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		this.anInt10420 = 32 + (int) (Math.random() * 4.0D);
 		this.anInt10421 = 3 + (int) (Math.random() * 2.0D);
 		this.anInt10413 = 16 + (int) (Math.random() * 3.0D);
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(1014790347) == 1) {
+		if (Class393.preferences.aClass468_Sub22_8213.method12873(1014790347) == 1) {
 			this.anInt10417 = (int) (Math.random() * 10.0D);
 		} else {
 			this.anInt10417 = (int) (Math.random() * 20.0D);

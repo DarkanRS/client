@@ -546,7 +546,7 @@ public class Class8_Sub3 extends FontRenderer {
 			boolean bool_2 = PacketsDecoder.method14433(class184_0, -1939307433);
 			return bool_2;
 		} catch (IOException ioexception_7) {
-			if (client.anInt7166 == 7) {
+			if (client.gameState == 7) {
 				class184_0.method3061(-1844369751);
 				return false;
 			} else {

@@ -27,7 +27,7 @@ public class Class430 {
 		if (!Renderers.SOFTWARE_RENDERER.method8405()) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 3;
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method7785(i_2, -702184257);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub4_8187.method7785(i_2, -702184257);
 		}
 
 	}
