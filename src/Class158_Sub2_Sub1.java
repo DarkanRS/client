@@ -5,7 +5,7 @@ import java.awt.Dimension;
 public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 
 	boolean aBool10122;
-	Class505_Sub1 aClass505_Sub1_10118;
+	OpenGLGraphicalRenderer aClass505_Sub1_10118;
 	Canvas aCanvas10120;
 	OpenGL anOpenGL10119;
 	long aLong10117;
@@ -16,7 +16,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 		return true;
 	}
 
-	Class158_Sub2_Sub1(Class505_Sub1 class505_sub1_1, Canvas canvas_2, long long_3) {
+	Class158_Sub2_Sub1(OpenGLGraphicalRenderer class505_sub1_1, Canvas canvas_2, long long_3) {
 		this.aBool10122 = false;
 		this.aClass505_Sub1_10118 = class505_sub1_1;
 		this.aCanvas10120 = canvas_2;
@@ -75,7 +75,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 		return this.anInt10116;
 	}
 
-	Class158_Sub2_Sub1(Class505_Sub1 class505_sub1_1, Canvas canvas_2) {
+	Class158_Sub2_Sub1(OpenGLGraphicalRenderer class505_sub1_1, Canvas canvas_2) {
 		this(class505_sub1_1, canvas_2, class505_sub1_1.anOpenGL8352.prepareSurface(canvas_2));
 	}
 

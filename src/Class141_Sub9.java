@@ -138,7 +138,7 @@ public class Class141_Sub9 extends Class141 {
 		this.aClass505_Sub1_1664.method13612(i_2);
 	}
 
-	Class141_Sub9(Class505_Sub1 class505_sub1_1, Class136 class136_2) {
+	Class141_Sub9(OpenGLGraphicalRenderer class505_sub1_1, Class136 class136_2) {
 		super(class505_sub1_1);
 		this.aClass136_9108 = class136_2;
 		if (this.aClass505_Sub1_1664.aBool8484 && this.aClass505_Sub1_1664.anInt8469 >= 2) {

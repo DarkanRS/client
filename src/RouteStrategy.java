@@ -16,7 +16,7 @@ public abstract class RouteStrategy {
 	public abstract boolean method3789(int var1, int var2, int var3, ClipMap var4);
 
 	static final void method3790(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		if (underlaydefinition_2.aClass118_5886.anInt1288 == -1) {
 			if (cs2executor_0.aBool7022) {
 				throw new RuntimeException("");

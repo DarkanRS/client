@@ -1,4 +1,4 @@
-public class Class468_Sub2 extends Class468 {
+public class Class468_Sub2 extends Preference {
 
 	public static int anInt7868;
 
@@ -7,7 +7,7 @@ public class Class468_Sub2 extends Class468 {
 	}
 
 	public boolean method12622(int i_1) {
-		return this.aClass282_Sub54_5581.aClass468_Sub22_8213.method12873(-767175327) != 0;
+		return this.manager.textures.method12873(-767175327) != 0;
 	}
 
 	int method7786() {
@@ -15,7 +15,7 @@ public class Class468_Sub2 extends Class468 {
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return this.aClass282_Sub54_5581.aClass468_Sub22_8213.method12873(547920845) == 0 ? 3 : 1;
+		return this.manager.textures.method12873(547920845) == 0 ? 3 : 1;
 	}
 
 	void method7783(int i_1, int i_2) {
@@ -27,7 +27,7 @@ public class Class468_Sub2 extends Class468 {
 	}
 
 	public int method7784(int i_1) {
-		return this.aClass282_Sub54_5581.aClass468_Sub22_8213.method12873(1209563326) == 0 ? 3 : 1;
+		return this.manager.textures.method12873(1209563326) == 0 ? 3 : 1;
 	}
 
 	void method7780(int i_1) {
@@ -47,7 +47,7 @@ public class Class468_Sub2 extends Class468 {
 	}
 
 	public void method12627(byte b_1) {
-		if (this.aClass282_Sub54_5581.aClass468_Sub22_8213.method12873(-503019853) == 0) {
+		if (this.manager.textures.method12873(-503019853) == 0) {
 			this.anInt5578 = 0;
 		}
 

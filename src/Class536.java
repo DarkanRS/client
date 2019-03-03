@@ -5,7 +5,7 @@ public class Class536 {
 	Index aClass317_7095;
 	public int anInt7094;
 
-	public OverlayDef method11475(int i_1, byte b_2) {
+	public OverlayDef getOverlayDef(int i_1, byte b_2) {
 		SoftCache softcache_4 = this.aClass229_7092;
 		OverlayDef overlaydef_3;
 		synchronized (this.aClass229_7092) {

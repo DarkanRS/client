@@ -37,7 +37,7 @@ public abstract class Class217 {
 	}
 
 	static final void method3693(CS2Executor cs2executor_0, short s_1) {
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 2 : 0, 447619076);
+		Class393.preferences.setValue(Class393.preferences.water, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 2 : 0, 447619076);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -59);
 		Class190.savePreferences((byte) 121);
 		client.aBool7175 = false;

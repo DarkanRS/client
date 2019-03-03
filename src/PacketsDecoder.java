@@ -628,7 +628,7 @@ public class PacketsDecoder extends Class455 {
 												boolean bool_66;
 												if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4367) {
 													if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-														Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(-2060452662), -1, -1, false, (byte) 2);
+														Class440.method7373(Class393.preferences.screenSize.method12687(-2060452662), -1, -1, false, (byte) 2);
 													}
 
 													bytes_64 = new byte[class184_0.anInt2287 - 1];
@@ -1931,8 +1931,8 @@ public class PacketsDecoder extends Class455 {
 																					Class470.method7825(-586263541);
 																					Class96_Sub9.method14587(i_5, i_24, i_6, (short) -342);
 																					ItemDefinitions itemdefinitions_128 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_24, 985436598);
-																					Class149_Sub1.method14583(i_5, itemdefinitions_128.anInt5058, itemdefinitions_128.anInt5045, itemdefinitions_128.modelZoom, -2105289855);
-																					Class28.method778(i_5, itemdefinitions_128.anInt5063, itemdefinitions_128.anInt5044, itemdefinitions_128.anInt5074, (byte) 16);
+																					Class149_Sub1.method14583(i_5, itemdefinitions_128.modelRotation1, itemdefinitions_128.modelRotation2, itemdefinitions_128.modelZoom, -2105289855);
+																					Class28.method778(i_5, itemdefinitions_128.modelOffset1, itemdefinitions_128.modelOffset2, itemdefinitions_128.unknownInt5, (byte) 16);
 																					class184_0.aClass375_2286 = null;
 																					return true;
 																				} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4481) {
@@ -2574,7 +2574,7 @@ public class PacketsDecoder extends Class455 {
 																						return true;
 																					} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4437) {
 																						if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
-																							Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(-1706994104), -1, -1, false, (byte) 30);
+																							Class440.method7373(Class393.preferences.screenSize.method12687(-1706994104), -1, -1, false, (byte) 30);
 																						}
 
 																						bytes_64 = new byte[class184_0.anInt2287];

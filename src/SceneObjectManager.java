@@ -4,7 +4,7 @@ public class SceneObjectManager {
 
 	public static boolean aBool2644 = true;
 	public Class293[][][] aClass293ArrayArrayArray2604;
-	public Class390[] aClass390Array2591;
+	public Ground[] aClass390Array2591;
 	public int anInt2601;
 	int anInt2616 = 0;
 	int anInt2615;
@@ -44,15 +44,15 @@ public class SceneObjectManager {
 	Class454 aClass454_2597;
 	public Class201 aClass201_2600;
 	public Class293[][][] aClass293ArrayArrayArray2610;
-	public Class390[] aClass390Array2607;
-	int[][] anIntArrayArray2606;
-	byte[][] aByteArrayArray2612;
-	short[][] aShortArrayArray2611;
-	byte[][] aByteArrayArray2613;
-	byte[][] aByteArrayArray2595;
-	byte[][] aByteArrayArray2620;
-	public Class293[][][] aClass293ArrayArrayArray2608;
-	public Class390[] aClass390Array2614;
+	public Ground[] aClass390Array2607;
+	int[][] colors;
+	byte[][] intensities;
+	short[][] scales;
+	byte[][] waterRelatedArray4;
+	byte[][] waterRelatedArray5;
+	byte[][] waterRelatedArray6;
+	public Class293[][][] waterRelatedClassArray1;
+	public Ground[] aClass390Array2614;
 	long[][][] aLongArrayArrayArray2645;
 	Class287[] aClass287Array2646;
 	boolean[] aBoolArray2647;
@@ -73,7 +73,7 @@ public class SceneObjectManager {
 
 	public void method3380(boolean bool_1, int i_2) {
 		if (bool_1) {
-			this.aClass293ArrayArrayArray2604 = this.aClass293ArrayArrayArray2608;
+			this.aClass293ArrayArrayArray2604 = this.waterRelatedClassArray1;
 			this.aClass390Array2591 = this.aClass390Array2614;
 		} else {
 			this.aClass293ArrayArrayArray2604 = this.aClass293ArrayArrayArray2610;
@@ -146,45 +146,45 @@ public class SceneObjectManager {
 
 	}
 
-	public void method3385(int i_1, Class390 class390_2, int i_3) {
+	public void method3385(int i_1, Ground class390_2, int i_3) {
 		this.aClass390Array2591[i_1] = class390_2;
 	}
 
-	public int method3386(int i_1, int i_2, int i_3) {
-		return this.aShortArrayArray2611 != null ? this.aShortArrayArray2611[i_1][i_2] & 0xffff : 0;
+	public int getScale(int i_1, int i_2, int i_3) {
+		return this.scales != null ? this.scales[i_1][i_2] & 0xffff : 0;
 	}
 
-	public int method3387(int i_1, int i_2, byte b_3) {
-		return this.anIntArrayArray2606 != null ? this.anIntArrayArray2606[i_1][i_2] & 0xffffff : 0;
+	public int getColor(int i_1, int i_2, byte b_3) {
+		return this.colors != null ? this.colors[i_1][i_2] & 0xffffff : 0;
 	}
 
 	public int method3391(int i_1, int i_2, int i_3) {
-		return this.aByteArrayArray2620 != null ? this.aByteArrayArray2620[i_1][i_2] & 0xff : 0;
+		return this.waterRelatedArray6 != null ? this.waterRelatedArray6[i_1][i_2] & 0xff : 0;
 	}
 
-	public void method3392(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, short s_9) {
-		if (this.anIntArrayArray2606 != null) {
-			this.anIntArrayArray2606[i_1][i_2] = ~0xffffff | i_3;
+	public void method3392(int x, int y, int waterColor, int waterScale, int waterIntensity, int i_6, int i_7, int i_8, short s_9) {
+		if (this.colors != null) {
+			this.colors[x][y] = ~0xffffff | waterColor;
 		}
 
-		if (this.aShortArrayArray2611 != null) {
-			this.aShortArrayArray2611[i_1][i_2] = (short) i_4;
+		if (this.scales != null) {
+			this.scales[x][y] = (short) waterScale;
 		}
 
-		if (this.aByteArrayArray2612 != null) {
-			this.aByteArrayArray2612[i_1][i_2] = (byte) i_5;
+		if (this.intensities != null) {
+			this.intensities[x][y] = (byte) waterIntensity;
 		}
 
-		if (this.aByteArrayArray2613 != null) {
-			this.aByteArrayArray2613[i_1][i_2] = (byte) i_6;
+		if (this.waterRelatedArray4 != null) {
+			this.waterRelatedArray4[x][y] = (byte) i_6;
 		}
 
-		if (this.aByteArrayArray2595 != null) {
-			this.aByteArrayArray2595[i_1][i_2] = (byte) i_7;
+		if (this.waterRelatedArray5 != null) {
+			this.waterRelatedArray5[x][y] = (byte) i_7;
 		}
 
-		if (this.aByteArrayArray2620 != null) {
-			this.aByteArrayArray2620[i_1][i_2] = (byte) i_8;
+		if (this.waterRelatedArray6 != null) {
+			this.waterRelatedArray6[x][y] = (byte) i_8;
 		}
 
 	}
@@ -333,10 +333,10 @@ public class SceneObjectManager {
 							class208_13.aClass208_2660 = class208_12;
 						}
 
-						if (bool_4 && (this.anIntArrayArray2606[i_9][i_10] & ~0xffffff) != 0) {
-							i_5 = this.anIntArrayArray2606[i_9][i_10];
-							s_6 = this.aShortArrayArray2611[i_9][i_10];
-							b_7 = this.aByteArrayArray2612[i_9][i_10];
+						if (bool_4 && (this.colors[i_9][i_10] & ~0xffffff) != 0) {
+							i_5 = this.colors[i_9][i_10];
+							s_6 = this.scales[i_9][i_10];
+							b_7 = this.intensities[i_9][i_10];
 						}
 
 						if (!bool_2 && class293_11.aClass521_Sub1_Sub3_3499 != null && class293_11.aClass521_Sub1_Sub3_3499.aShort9561 > s_8) {
@@ -349,10 +349,10 @@ public class SceneObjectManager {
 			if (bool_4 && (i_5 & ~0xffffff) != 0) {
 				for (i_9 = class521_sub1_sub1_1.aShort9458; i_9 <= class521_sub1_sub1_1.localX; i_9++) {
 					for (i_10 = class521_sub1_sub1_1.aShort9456; i_10 <= class521_sub1_sub1_1.localY; i_10++) {
-						if ((this.anIntArrayArray2606[i_9][i_10] & ~0xffffff) == 0) {
-							this.anIntArrayArray2606[i_9][i_10] = i_5;
-							this.aShortArrayArray2611[i_9][i_10] = s_6;
-							this.aByteArrayArray2612[i_9][i_10] = b_7;
+						if ((this.colors[i_9][i_10] & ~0xffffff) == 0) {
+							this.colors[i_9][i_10] = i_5;
+							this.scales[i_9][i_10] = s_6;
+							this.intensities[i_9][i_10] = b_7;
 						}
 					}
 				}
@@ -712,15 +712,15 @@ public class SceneObjectManager {
 		}
 	}
 
-	public boolean method3426(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3, int i_4, boolean[] bools_5, byte b_6) {
+	public boolean method3426(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, boolean[] bools_5, byte b_6) {
 		boolean bool_7 = false;
 		if (this.aClass390Array2591 != this.aClass390Array2614) {
-			int i_8 = this.aClass390Array2607[i_2].method6709(i_3, i_4, 1177871260);
+			int i_8 = this.aClass390Array2607[i_2].averageHeight(i_3, i_4, 1177871260);
 
 			for (int i_9 = 0; i_9 <= i_2; i_9++) {
-				Class390 class390_10 = this.aClass390Array2607[i_9];
+				Ground class390_10 = this.aClass390Array2607[i_9];
 				if (class390_10 != null) {
-					int i_11 = i_8 - class390_10.method6709(i_3, i_4, 1885983541);
+					int i_11 = i_8 - class390_10.averageHeight(i_3, i_4, 1885983541);
 					if (bools_5 != null) {
 						bools_5[i_9] = class390_10.method6712(class282_sub50_sub17_1, i_3, i_11, i_4, 0, false);
 						if (!bools_5[i_9]) {
@@ -737,15 +737,15 @@ public class SceneObjectManager {
 		return bool_7;
 	}
 
-	public void method3427(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3, int i_4, boolean[] bools_5, byte b_6) {
+	public void method3427(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, boolean[] bools_5, byte b_6) {
 		if (this.aClass390Array2614 != this.aClass390Array2591) {
-			int i_7 = this.aClass390Array2607[i_2].method6709(i_3, i_4, 2131709892);
+			int i_7 = this.aClass390Array2607[i_2].averageHeight(i_3, i_4, 2131709892);
 
 			for (int i_8 = 0; i_8 <= i_2; i_8++) {
 				if (bools_5 == null || bools_5[i_8]) {
-					Class390 class390_9 = this.aClass390Array2607[i_8];
+					Ground class390_9 = this.aClass390Array2607[i_8];
 					if (class390_9 != null) {
-						class390_9.NA(class282_sub50_sub17_1, i_3, i_7 - class390_9.method6709(i_3, i_4, 159261886), i_4, 0, false);
+						class390_9.NA(class282_sub50_sub17_1, i_3, i_7 - class390_9.averageHeight(i_3, i_4, 159261886), i_4, 0, false);
 					}
 				}
 			}
@@ -936,7 +936,7 @@ public class SceneObjectManager {
 	}
 
 	public int method3432(int i_1, int i_2, byte b_3) {
-		return this.aByteArrayArray2613 != null ? this.aByteArrayArray2613[i_1][i_2] & 0xff : 0;
+		return this.waterRelatedArray4 != null ? this.waterRelatedArray4[i_1][i_2] & 0xff : 0;
 	}
 
 	public Class521_Sub1_Sub2 method3437(int i_1, int i_2, int i_3, short s_4) {
@@ -1223,7 +1223,7 @@ public class SceneObjectManager {
 			}
 		}
 
-		if (this.aClass293ArrayArrayArray2608 != null) {
+		if (this.waterRelatedClassArray1 != null) {
 			this.method3380(true, -914334995);
 			this.aClass505_2596.method8475(-1, new Class90(1583160, 40, 127, 63, 0, 0, 0));
 			this.method3441(true, bytes_5, i_11, b_12, i_17);
@@ -1314,7 +1314,7 @@ public class SceneObjectManager {
 	}
 
 	public int method3464(int i_1, int i_2, int i_3) {
-		return this.aByteArrayArray2595 != null ? this.aByteArrayArray2595[i_1][i_2] & 0xff : 0;
+		return this.waterRelatedArray5 != null ? this.waterRelatedArray5[i_1][i_2] & 0xff : 0;
 	}
 
 	void method3466(Class521_Sub1[] arr_1, int i_2, int i_3) {
@@ -1343,10 +1343,10 @@ public class SceneObjectManager {
 	}
 
 	void method3486(int i_1, int i_2, int i_3) {
-		Class282_Sub50_Sub17 class282_sub50_sub17_4 = null;
+		Shadow class282_sub50_sub17_4 = null;
 
 		for (int i_5 = i_1; i_5 < i_2; i_5++) {
-			Class390 class390_6 = this.aClass390Array2607[i_5];
+			Ground class390_6 = this.aClass390Array2607[i_5];
 			if (class390_6 != null) {
 				for (int i_7 = 0; i_7 < this.anInt2603; i_7++) {
 					for (int i_8 = 0; i_8 < this.anInt2617; i_8++) {
@@ -1356,7 +1356,7 @@ public class SceneObjectManager {
 							int i_10 = i_7 << this.anInt2592;
 
 							for (int i_11 = i_5 - 1; i_11 >= 0; --i_11) {
-								Class390 class390_12 = this.aClass390Array2607[i_11];
+								Ground class390_12 = this.aClass390Array2607[i_11];
 								if (class390_12 != null) {
 									int i_13 = class390_6.method6722(i_8, i_7, 65280) - class390_12.method6722(i_8, i_7, 65280);
 									int i_14 = class390_6.method6722(i_8 + 1, i_7, 65280) - class390_12.method6722(i_8 + 1, i_7, 65280);
@@ -1424,13 +1424,13 @@ public class SceneObjectManager {
 			}
 
 			Class90 class90_8 = new Class90();
-			class90_8.anInt946 = this.method3387(i_6, i_7, (byte) 102);
-			class90_8.anInt945 = this.method3386(i_6, i_7, 1481885588);
-			class90_8.anInt947 = this.method3538(i_6, i_7, -575094789);
+			class90_8.color = this.getColor(i_6, i_7, (byte) 102);
+			class90_8.scale = this.getScale(i_6, i_7, 1481885588);
+			class90_8.intensity = this.getIntensities(i_6, i_7, -575094789);
 			class90_8.anInt949 = this.method3432(i_6, i_7, (byte) 1);
 			class90_8.anInt950 = this.method3464(i_6, i_7, 1819707800);
 			class90_8.anInt951 = this.method3391(i_6, i_7, 2124895018);
-			this.aClass505_2596.method8476(this.aClass390Array2607[0].method6709((int) vector3_5.x, (int) vector3_5.z, -402315089), class90_8);
+			this.aClass505_2596.method8476(this.aClass390Array2607[0].averageHeight((int) vector3_5.x, (int) vector3_5.z, -402315089), class90_8);
 		}
 
 		Class285 class285_9 = class521_sub1_1.method12990(this.aClass505_2596, 389193782);
@@ -1450,7 +1450,7 @@ public class SceneObjectManager {
 		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub4_3503;
 	}
 
-	public SceneObjectManager(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8) {
+	public SceneObjectManager(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean highDetailWater, boolean bool_8) {
 		this.anInt2634 = 10072;
 		this.anInt2618 = 5015;
 		this.anInt2619 = 5040;
@@ -1469,16 +1469,16 @@ public class SceneObjectManager {
 		this.aClass454_2597 = new Class454();
 		this.aClass201_2600 = new Class201(this);
 		this.aClass293ArrayArrayArray2610 = new Class293[i_3][this.anInt2617][this.anInt2603];
-		this.aClass390Array2607 = new Class390[i_3];
-		if (bool_7) {
-			this.anIntArrayArray2606 = new int[this.anInt2617][this.anInt2603];
-			this.aByteArrayArray2612 = new byte[this.anInt2617][this.anInt2603];
-			this.aShortArrayArray2611 = new short[this.anInt2617][this.anInt2603];
-			this.aByteArrayArray2613 = new byte[this.anInt2617][this.anInt2603];
-			this.aByteArrayArray2595 = new byte[this.anInt2617][this.anInt2603];
-			this.aByteArrayArray2620 = new byte[this.anInt2617][this.anInt2603];
-			this.aClass293ArrayArrayArray2608 = new Class293[1][this.anInt2617][this.anInt2603];
-			this.aClass390Array2614 = new Class390[1];
+		this.aClass390Array2607 = new Ground[i_3];
+		if (highDetailWater) {
+			this.colors = new int[this.anInt2617][this.anInt2603];
+			this.intensities = new byte[this.anInt2617][this.anInt2603];
+			this.scales = new short[this.anInt2617][this.anInt2603];
+			this.waterRelatedArray4 = new byte[this.anInt2617][this.anInt2603];
+			this.waterRelatedArray5 = new byte[this.anInt2617][this.anInt2603];
+			this.waterRelatedArray6 = new byte[this.anInt2617][this.anInt2603];
+			this.waterRelatedClassArray1 = new Class293[1][this.anInt2617][this.anInt2603];
+			this.aClass390Array2614 = new Ground[1];
 		}
 
 		if (bool_8) {
@@ -1521,8 +1521,8 @@ public class SceneObjectManager {
 		}
 	}
 
-	public int method3538(int i_1, int i_2, int i_3) {
-		return this.aByteArrayArray2612 != null ? this.aByteArrayArray2612[i_1][i_2] & 0xff : 0;
+	public int getIntensities(int i_1, int i_2, int i_3) {
+		return this.intensities != null ? this.intensities[i_1][i_2] & 0xff : 0;
 	}
 
 	static Class215 method3545(RsByteBuffer rsbytebuffer_0, int i_1) {
@@ -1539,7 +1539,7 @@ public class SceneObjectManager {
 	}
 
 	static final void method3546(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Login.method5017(icomponentdefinitions_3, interface_4, cs2executor_0, -974856399);

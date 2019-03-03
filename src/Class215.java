@@ -150,7 +150,7 @@ public class Class215 implements Interface17 {
 
 		for (int i_11 = 0; i_11 < IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount; i_11++) {
 			ItemDefinitions itemdefinitions_17 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_11, 1398783345);
-			if ((!bool_1 || itemdefinitions_17.grandExchange) && itemdefinitions_17.certTemplateId == -1 && itemdefinitions_17.landTemplateId == -1 && itemdefinitions_17.bindTemplateId == -1 && itemdefinitions_17.anInt5095 == 0 && itemdefinitions_17.aString5043.toLowerCase().indexOf(string_0) != -1) {
+			if ((!bool_1 || itemdefinitions_17.grandExchange) && itemdefinitions_17.certTemplateId == -1 && itemdefinitions_17.lendTemplateId == -1 && itemdefinitions_17.bindTemplateId == -1 && itemdefinitions_17.unknownInt6 == 0 && itemdefinitions_17.name.toLowerCase().indexOf(string_0) != -1) {
 				if (i_2 != -1) {
 					if (bool_5) {
 						if (!string_4.equals(itemdefinitions_17.method7101(i_2, string_9, -1780783562))) {
@@ -187,7 +187,7 @@ public class Class215 implements Interface17 {
 		String[] arr_16 = new String[Class415.anInt4985];
 
 		for (int i_12 = 0; i_12 < Class415.anInt4985; i_12++) {
-			arr_16[i_12] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(shorts_7[i_12], 1650435768).aString5043;
+			arr_16[i_12] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(shorts_7[i_12], 1650435768).name;
 		}
 
 		Class100.method1644(arr_16, Class308.aShortArray3621, (short) 2733);

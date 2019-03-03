@@ -5,7 +5,7 @@ public abstract class Class135 {
 
 	static int[] anIntArray1626 = new int[1];
 	boolean aBool1619 = false;
-	Class505_Sub1 aClass505_Sub1_1620;
+	OpenGLGraphicalRenderer aClass505_Sub1_1620;
 	int anInt1621;
 	int anInt1623;
 	boolean aBool1624;
@@ -20,7 +20,7 @@ public abstract class Class135 {
 		super.finalize();
 	}
 
-	Class135(Class505_Sub1 class505_sub1_1, int i_2, Buffer buffer_3, int i_4, boolean bool_5) {
+	Class135(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Buffer buffer_3, int i_4, boolean bool_5) {
 		this.aClass505_Sub1_1620 = class505_sub1_1;
 		this.anInt1621 = i_2;
 		this.anInt1623 = i_4;
@@ -46,7 +46,7 @@ public abstract class Class135 {
 
 	}
 
-	Class135(Class505_Sub1 class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
+	Class135(OpenGLGraphicalRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
 		this.aClass505_Sub1_1620 = class505_sub1_1;
 		this.anInt1621 = i_2;
 		this.anInt1623 = i_4;

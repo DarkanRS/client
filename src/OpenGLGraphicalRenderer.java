@@ -4,7 +4,7 @@ import jaclib.memory.heap.NativeHeap;
 import jaggl.OpenGL;
 import java.awt.Canvas;
 
-public class Class505_Sub1 extends GraphicalRenderer {
+public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	static int[] anIntArray8381 = new int[1000];
 	static int anInt8421 = 4;
@@ -102,8 +102,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 	boolean aBool8393;
 	NativeHeap aNativeHeap8445;
 	Interface14 anInterface14_8496;
-	Class143 aClass143_8494;
-	Class143 aClass143_8495;
+	OpenGlArrayBufferPointer aClass143_8494;
+	OpenGlArrayBufferPointer aClass143_8495;
 	int anInt8450;
 	Class90 aClass90_8423;
 	boolean aBool8448;
@@ -369,7 +369,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		return true;
 	}
 
-	Class505_Sub1(Canvas canvas_1, Interface22 interface22_2, int i_3) {
+	OpenGLGraphicalRenderer(Canvas canvas_1, Interface22 interface22_2, int i_3) {
 		super(interface22_2);
 		this.aClass282_Sub24Array8435 = new Class282_Sub24[anInt8421];
 		this.anInt8441 = -1;
@@ -1004,8 +1004,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 			}
 
 			this.anInterface14_8496 = this.method13599(20, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index, false);
-			this.aClass143_8494 = new Class143(this.anInterface14_8496, 5126, 3, 0);
-			this.aClass143_8495 = new Class143(this.anInterface14_8496, 5126, 2, 12);
+			this.aClass143_8494 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 3, 0);
+			this.aClass143_8495 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 2, 12);
 			this.aClass134_8359.method2328(this);
 		}
 
@@ -1542,8 +1542,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		this.aClass170_8357.method2884(i_1, i_2, i_3, i_4);
 	}
 
-	public Class390 method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new Class390_Sub2(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+	public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+		return new OpenGLGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
 	public final void IA(float f_1) {
@@ -1685,8 +1685,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 			}
 
 			this.anInterface14_8496 = this.method13599(20, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index * -1115476867 * -1990677291, false);
-			this.aClass143_8494 = new Class143(this.anInterface14_8496, 5126, 3, 0);
-			this.aClass143_8495 = new Class143(this.anInterface14_8496, 5126, 2, 12);
+			this.aClass143_8494 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 3, 0);
+			this.aClass143_8495 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 2, 12);
 			this.aClass134_8359.method2328(this);
 		}
 
@@ -1844,7 +1844,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		return (Interface14) (!this.aBool8309 || bool_4 && !this.aBool8362 ? new Class131_Sub1(this, i_1, bytes_2, i_3) : new Class135_Sub2(this, i_1, bytes_2, i_3, bool_4));
 	}
 
-	final Interface14 method13600(int i_1, Buffer buffer_2, int i_3, boolean bool_4) {
+	final Interface14 createArrayBuffer(int i_1, Buffer buffer_2, int i_3, boolean bool_4) {
 		return (Interface14) (!this.aBool8309 || bool_4 && !this.aBool8362 ? new Class131_Sub1(this, i_1, buffer_2) : new Class135_Sub2(this, i_1, buffer_2, i_3, bool_4));
 	}
 
@@ -3784,7 +3784,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		return i_7;
 	}
 
-	final void method13647(Class143 class143_1, Class143 class143_2, Class143 class143_3, Class143 class143_4) {
+	final void method13647(OpenGlArrayBufferPointer class143_1, OpenGlArrayBufferPointer class143_2, OpenGlArrayBufferPointer class143_3, OpenGlArrayBufferPointer class143_4) {
 		if (class143_1 != null) {
 			this.method13601(class143_1.anInterface14_1667);
 			OpenGL.glVertexPointer(class143_1.aByte1670, class143_1.aShort1668, this.anInterface14_8483.method59(), this.anInterface14_8483.method109() + (long) class143_1.aByte1669);
@@ -3950,8 +3950,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 			}
 
 			this.anInterface14_8496 = this.method13599(20, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index * -1115476867 * -1990677291, false);
-			this.aClass143_8494 = new Class143(this.anInterface14_8496, 5126, 3, 0);
-			this.aClass143_8495 = new Class143(this.anInterface14_8496, 5126, 2, 12);
+			this.aClass143_8494 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 3, 0);
+			this.aClass143_8495 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 2, 12);
 			this.aClass134_8359.method2328(this);
 		}
 
@@ -4006,8 +4006,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 			}
 
 			this.anInterface14_8496 = this.method13599(20, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index * -1115476867 * -1990677291, false);
-			this.aClass143_8494 = new Class143(this.anInterface14_8496, 5126, 3, 0);
-			this.aClass143_8495 = new Class143(this.anInterface14_8496, 5126, 2, 12);
+			this.aClass143_8494 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 3, 0);
+			this.aClass143_8495 = new OpenGlArrayBufferPointer(this.anInterface14_8496, 5126, 2, 12);
 			this.aClass134_8359.method2328(this);
 		}
 
@@ -4787,8 +4787,8 @@ public class Class505_Sub1 extends GraphicalRenderer {
 		OpenGL.glEnd();
 	}
 
-	public Class390 method8478(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new Class390_Sub2(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+		return new OpenGLGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
 	public void method8629(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {

@@ -1,4 +1,4 @@
-public class Class468_Sub16 extends Class468 {
+public class Class468_Sub16 extends Preference {
 
 	public void method12749(int i_1) {
 		if (this.anInt5578 < Class104.aClass104_1061.id || this.anInt5578 > Class104.aClass104_1062.id) {

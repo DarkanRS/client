@@ -114,10 +114,10 @@ public class Class119 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub26_8224, 0, -1904588686);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub28_8212, 0, 213575590);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub2_8205, 0, 665870482);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, 0, -1952612636);
+		Class393.preferences.setValue(Class393.preferences.textures, 0, -1952612636);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub19_8204, 0, -998359039);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, 0, 812339318);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub30_8194, 0, 926852510);
+		Class393.preferences.setValue(Class393.preferences.water, 0, 812339318);
+		Class393.preferences.setValue(Class393.preferences.fog, 0, 926852510);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8187, 0, -561555646);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8223, 0, -1744988767);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub20_8207, 0, -1860208204);
@@ -126,7 +126,7 @@ public class Class119 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 0, -1247353645);
 		Class323.method5777(1139653705);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, 2126000152);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 2, -761948866);
+		Class393.preferences.setValue(Class393.preferences.graphics, 2, -761948866);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(572282036);
 		client.aBool7185 = true;

@@ -11,24 +11,24 @@ public class MeshModifier {
 	public short[] modifiedTextures;
 
 	MeshModifier(ItemDefinitions itemdefinitions_1) {
-		this.maleBody[0] = itemdefinitions_1.maleBody1;
-		this.maleBody[1] = itemdefinitions_1.maleBody2;
-		this.maleBody[2] = itemdefinitions_1.maleBody3;
-		this.femaleBody[0] = itemdefinitions_1.femaleBody1;
-		this.femaleBody[1] = itemdefinitions_1.femaleBody2;
-		this.femaleBody[2] = itemdefinitions_1.femaleBody3;
+		this.maleBody[0] = itemdefinitions_1.maleEquip1;
+		this.maleBody[1] = itemdefinitions_1.maleEquip2;
+		this.maleBody[2] = itemdefinitions_1.maleEquip3;
+		this.femaleBody[0] = itemdefinitions_1.femaleEquip1;
+		this.femaleBody[1] = itemdefinitions_1.femaleEquip2;
+		this.femaleBody[2] = itemdefinitions_1.femaleEquip3;
 		this.maleHeads[0] = itemdefinitions_1.maleHead1;
 		this.maleHeads[1] = itemdefinitions_1.maleHead2;
 		this.femaleHeads[0] = itemdefinitions_1.femaleHead1;
 		this.femaleHeads[1] = itemdefinitions_1.femaleHead2;
-		if (itemdefinitions_1.modifiedColors != null) {
-			this.modifiedColors = new short[itemdefinitions_1.modifiedColors.length];
-			System.arraycopy(itemdefinitions_1.modifiedColors, 0, this.modifiedColors, 0, this.modifiedColors.length);
+		if (itemdefinitions_1.modifiedModelColors != null) {
+			this.modifiedColors = new short[itemdefinitions_1.modifiedModelColors.length];
+			System.arraycopy(itemdefinitions_1.modifiedModelColors, 0, this.modifiedColors, 0, this.modifiedColors.length);
 		}
 
-		if (itemdefinitions_1.modifiedTextures != null) {
-			this.modifiedTextures = new short[itemdefinitions_1.modifiedTextures.length];
-			System.arraycopy(itemdefinitions_1.modifiedTextures, 0, this.modifiedTextures, 0, this.modifiedTextures.length);
+		if (itemdefinitions_1.modifiedTextureIds != null) {
+			this.modifiedTextures = new short[itemdefinitions_1.modifiedTextureIds.length];
+			System.arraycopy(itemdefinitions_1.modifiedTextureIds, 0, this.modifiedTextures, 0, this.modifiedTextures.length);
 		}
 
 	}

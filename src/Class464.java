@@ -81,7 +81,7 @@ public final class Class464 {
 
 					Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
 					if (class282_sub44_5 != null) {
-						UnderlayDefinition.method8777(class282_sub44_5.anInt8063, (byte) -57);
+						ClassSomet.method8777(class282_sub44_5.anInt8063, (byte) -57);
 					}
 				}
 

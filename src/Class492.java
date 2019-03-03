@@ -10,7 +10,7 @@ public class Class492 {
 
 	static final void method8263(CS2Executor cs2executor_0, int i_1) {
 		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-			Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(577867050), -1, -1, false, (byte) 35);
+			Class440.method7373(Class393.preferences.screenSize.method12687(577867050), -1, -1, false, (byte) 35);
 		}
 
 		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];

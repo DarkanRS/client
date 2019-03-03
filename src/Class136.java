@@ -10,7 +10,7 @@ public class Class136 {
 	Class137_Sub4 aClass137_Sub4_1638 = null;
 	boolean aBool1631;
 
-	static void method2348(Class505_Sub1 class505_sub1_0) {
+	static void method2348(OpenGLGraphicalRenderer class505_sub1_0) {
 		byte[] bytes_2;
 		if (anObject1637 == null) {
 			Class370_Sub1_Sub2 class370_sub1_sub2_1 = new Class370_Sub1_Sub2();
@@ -32,7 +32,7 @@ public class Class136 {
 
 	}
 
-	Class136(Class505_Sub1 class505_sub1_1) {
+	Class136(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.aBool1631 = class505_sub1_1.aBool8393;
 		method2348(class505_sub1_1);
 		if (!this.aBool1631) {

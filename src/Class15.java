@@ -24,10 +24,10 @@ final class Class15 implements Interface35 {
 	}
 
 	static final void method541(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class453.method7547(icomponentdefinitions_3, interface_4, cs2executor_0, -996229805);
+		HashTable.method7547(icomponentdefinitions_3, interface_4, cs2executor_0, -996229805);
 	}
 
 	static final void method542(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

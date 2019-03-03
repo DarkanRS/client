@@ -60,7 +60,7 @@ public class Class141_Sub8 extends Class141 {
 	void method2405(boolean bool_1) {
 	}
 
-	Class141_Sub8(Class505_Sub1 class505_sub1_1, Class136 class136_2) {
+	Class141_Sub8(OpenGLGraphicalRenderer class505_sub1_1, Class136 class136_2) {
 		super(class505_sub1_1);
 		this.aClass136_9093 = class136_2;
 		if (this.aClass136_9093.aClass137_Sub4_1638 != null && this.aClass505_Sub1_1664.aBool8485 && this.aClass505_Sub1_1664.aBool8365) {

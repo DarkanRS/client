@@ -317,7 +317,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8477(Class152 var1);
 
-	public abstract Class390 method8478(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
+	public abstract Ground createGround(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
 
 	public abstract void method8479(float var1, float var2, float var3, float[] var4);
 
@@ -543,7 +543,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8568(boolean var1);
 
-	public abstract Class390 method8569(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
+	public abstract Ground method8569(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
 
 	public abstract Class282_Sub1 method8570(int var1);
 

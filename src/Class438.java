@@ -126,7 +126,7 @@ public class Class438 {
 	}
 
 	static final void method7334(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.customCursors.method12675(-1589433086) == 1 ? 1 : 0;
 	}
 
 	static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, int i_15) {

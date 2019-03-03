@@ -35,11 +35,11 @@ public class Class282_Sub40 extends Node {
 		Class393.preferences.setValue(Class393.preferences.idleAnimations, 1, 1356970908);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub26_8224, 1, -2135009160);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub28_8212, 1, -1797604906);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, 1, -1288035070);
+		Class393.preferences.setValue(Class393.preferences.textures, 1, -1288035070);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub2_8205, 1, -1070811454);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub19_8204, 1, 1324855689);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, 0, -1873038629);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub30_8194, 1, 161881697);
+		Class393.preferences.setValue(Class393.preferences.water, 0, -1873038629);
+		Class393.preferences.setValue(Class393.preferences.fog, 1, 161881697);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8187, 0, -160088461);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8223, 0, -27348328);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub20_8207, 1, 989070776);
@@ -48,7 +48,7 @@ public class Class282_Sub40 extends Node {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 1, -1616300201);
 		Class323.method5777(1459972295);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 1, 100643539);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 3, -1425167451);
+		Class393.preferences.setValue(Class393.preferences.graphics, 3, -1425167451);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(2045600476);
 		client.aBool7185 = true;

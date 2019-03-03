@@ -1,4 +1,4 @@
-public class Class282_Sub50_Sub17_Sub1 extends Class282_Sub50_Sub17 {
+public class Class282_Sub50_Sub17_Sub1 extends Shadow {
 
 	byte[] aByteArray10297;
 	int anInt10293;
@@ -491,7 +491,7 @@ public class Class282_Sub50_Sub17_Sub1 extends Class282_Sub50_Sub17 {
 		return this.aByteArray10297.length >= i_2 * i_1;
 	}
 
-	Class282_Sub50_Sub17_Sub1(Class505_Sub1 class505_sub1_1, int i_2, int i_3) {
+	Class282_Sub50_Sub17_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3) {
 		this.aByteArray10297 = new byte[i_3 * i_2];
 	}
 

@@ -1,4 +1,4 @@
-public class Class468_Sub18 extends Class468 {
+public class Class468_Sub18 extends Preference {
 
 	boolean aBool7913 = true;
 	public boolean aBool7914 = false;

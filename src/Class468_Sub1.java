@@ -1,4 +1,4 @@
-public class Class468_Sub1 extends Class468 {
+public class Class468_Sub1 extends Preference {
 
 	public Class468_Sub1(Class282_Sub54 class282_sub54_1) {
 		super(class282_sub54_1);
@@ -13,12 +13,12 @@ public class Class468_Sub1 extends Class468 {
 	}
 
 	public boolean method12609(int i_1) {
-		int i_2 = this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-1148008427);
+		int i_2 = this.manager.method13504((byte) 1).method7721(-1148008427);
 		return i_2 >= 245;
 	}
 
 	public int method7785(int i_1, int i_2) {
-		int i_3 = this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-1778990032);
+		int i_3 = this.manager.method13504((byte) 1).method7721(-1778990032);
 		return i_3 < 245 ? 3 : (i_1 == Class106.aClass106_1073.anInt1071 && i_3 < 500 ? 3 : 1);
 	}
 
@@ -27,7 +27,7 @@ public class Class468_Sub1 extends Class468 {
 	}
 
 	public int method7784(int i_1) {
-		int i_2 = this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-141998405);
+		int i_2 = this.manager.method13504((byte) 1).method7721(-141998405);
 		return i_2 < 245 ? 3 : (Class106.aClass106_1073.anInt1071 * -827615537 * -530599889 == i_1 && i_2 < 500 ? 3 : 1);
 	}
 
@@ -48,7 +48,7 @@ public class Class468_Sub1 extends Class468 {
 	}
 
 	public void method12616(byte b_1) {
-		int i_2 = this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-410330652);
+		int i_2 = this.manager.method13504((byte) 1).method7721(-410330652);
 		if (i_2 < 245) {
 			this.anInt5578 = Class106.aClass106_1075.anInt1071;
 		}

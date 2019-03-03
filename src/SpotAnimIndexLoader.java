@@ -107,7 +107,7 @@ public class SpotAnimIndexLoader {
 	}
 
 	static final void method8859(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2;
+		ClassSomet underlaydefinition_2;
 		if (cs2executor_0.aBool7022) {
 			underlaydefinition_2 = cs2executor_0.aClass513_6994;
 		} else {
@@ -206,7 +206,7 @@ public class SpotAnimIndexLoader {
 	}
 
 	static final void method8863(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1299;
 	}

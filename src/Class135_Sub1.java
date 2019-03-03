@@ -20,7 +20,7 @@ public class Class135_Sub1 extends Class135 implements Interface15 {
 		this.method2342(bytes_2, i_3);
 	}
 
-	Class135_Sub1(Class505_Sub1 class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
+	Class135_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
 		super(class505_sub1_1, 34963, bytes_3, i_4, bool_5);
 	}
 

@@ -834,12 +834,12 @@ public class MapRegion {
 					Class247.method4250((byte) -72);
 				}
 
-				boolean bool_20 = false;
+				boolean highDetailWater = false;
 				int i_11;
-				if (Class393.preferences.aClass468_Sub24_8216.method12920(-2143596575) == 2) {
+				if (Class393.preferences.water.getValue(-2143596575) == 2) {
 					for (i_11 = 0; i_11 < this.mapDataBuffer.length; i_11++) {
 						if (this.landscapeDataUnderlayBuffer[i_11] != null || this.mapDataUnderlayBuffer[i_11] != null) {
-							bool_20 = true;
+							highDetailWater = true;
 							break;
 						}
 					}
@@ -852,7 +852,7 @@ public class MapRegion {
 
 				this.method4447(1045268791);
 				this.method4460(1219957593);
-				this.sceneObjectManager = new SceneObjectManager(Renderers.SOFTWARE_RENDERER, 9, 4, this.sizeX, this.sizeY, i_11, bool_20, Renderers.SOFTWARE_RENDERER.method8463() > 0);
+				this.sceneObjectManager = new SceneObjectManager(Renderers.SOFTWARE_RENDERER, 9, 4, this.sizeX, this.sizeY, i_11, highDetailWater, Renderers.SOFTWARE_RENDERER.method8463() > 0);
 				this.sceneObjectManager.method3380(false, -914334995);
 				this.sceneObjectManager.method3378(client.anInt7240, -1193950137);
 				if (client.anInt7240 != 0) {
@@ -866,10 +866,10 @@ public class MapRegion {
 				this.aClass329_Sub1_3167 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 4, this.sizeX, this.sizeY, false, this.aClass311_3202, this.aClass239_3175);
 				this.aClass329_Sub1_3167.method5835(1920682092);
 				this.aClass329_Sub1_3167.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -19);
-				this.aClass329_Sub1_3167.aBool3835 = Class393.preferences.aClass468_Sub24_8216.method12920(-1025705953) == 2;
+				this.aClass329_Sub1_3167.highDetailWater = Class393.preferences.water.getValue(-1025705953) == 2;
 				this.aClass329_Sub1_3167.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1;
 				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(-267054469) == 1;
-				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.aClass468_Sub22_8213.method12873(1377050121) == 1;
+				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.textures.method12873(1377050121) == 1;
 				if (!this.aClass256_3163.method4410((byte) -32)) {
 					this.method4463(this.aClass329_Sub1_3167, this.mapDataBuffer, 1315892185);
 				} else {
@@ -882,15 +882,15 @@ public class MapRegion {
 
 				this.aClass239_3175.method4045(this.sizeX >> 4, this.sizeY >> 4, -1230013231);
 				this.aClass239_3175.method4037(this, (byte) 122);
-				if (bool_20) {
+				if (highDetailWater) {
 					this.sceneObjectManager.method3380(true, -914334995);
 					this.aClass329_Sub1_3166 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 1, this.sizeX, this.sizeY, true, this.aClass311_3202, this.aClass239_3175);
 					this.aClass329_Sub1_3166.method5835(1973869970);
 					this.aClass329_Sub1_3166.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -93);
-					this.aClass329_Sub1_3166.aBool3835 = Class393.preferences.aClass468_Sub24_8216.method12920(-962367192) == 2;
+					this.aClass329_Sub1_3166.highDetailWater = Class393.preferences.water.getValue(-962367192) == 2;
 					this.aClass329_Sub1_3166.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1;
 					this.aClass329_Sub1_3166.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(1666715266) == 1;
-					this.aClass329_Sub1_3166.aBool3782 = Class393.preferences.aClass468_Sub22_8213.method12873(-332126301) == 1;
+					this.aClass329_Sub1_3166.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;
 					if (!this.aClass256_3163.method4410((byte) 46)) {
 						this.method4463(this.aClass329_Sub1_3166, this.mapDataUnderlayBuffer, 500096938);
 						if (!this.aBool3171) {
@@ -903,7 +903,7 @@ public class MapRegion {
 						}
 					}
 
-					this.aClass329_Sub1_3166.method5853(0, this.aClass329_Sub1_3167.unk0Data[0], -1156911590);
+					this.aClass329_Sub1_3166.method5853(0, this.aClass329_Sub1_3167.tileHeights[0], -1156911590);
 					this.aClass329_Sub1_3166.initClipMap(Renderers.SOFTWARE_RENDERER, (int[][][]) null, (ClipMap[]) null, (byte) 11);
 					this.sceneObjectManager.method3380(false, -914334995);
 					if (this.aBool3171) {
@@ -911,7 +911,7 @@ public class MapRegion {
 					}
 				}
 
-				this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, bool_20 ? this.aClass329_Sub1_3166.unk0Data : null, this.clipMaps, (byte) 44);
+				this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, highDetailWater ? this.aClass329_Sub1_3166.tileHeights : null, this.clipMaps, (byte) 44);
 				if (!this.aClass256_3163.method4410((byte) -39)) {
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, -1924347583);
@@ -933,7 +933,7 @@ public class MapRegion {
 					Exception_Sub3.method15619(true, -665945100);
 				}
 
-				this.aClass329_Sub1_3167.method5837(Renderers.SOFTWARE_RENDERER, bool_20 ? this.sceneObjectManager.aClass390Array2614[0] : null, (Class390) null, 111695504);
+				this.aClass329_Sub1_3167.method5837(Renderers.SOFTWARE_RENDERER, highDetailWater ? this.sceneObjectManager.aClass390Array2614[0] : null, (Ground) null, 111695504);
 				if (this.aBool3171) {
 					this.method4462(75, (byte) -2);
 				}
@@ -947,7 +947,7 @@ public class MapRegion {
 					Exception_Sub3.method15619(true, 2049102512);
 				}
 
-				if (bool_20) {
+				if (highDetailWater) {
 					this.sceneObjectManager.method3380(true, -914334995);
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, 1689569657);
@@ -963,7 +963,7 @@ public class MapRegion {
 						Exception_Sub3.method15619(true, -1264882543);
 					}
 
-					this.aClass329_Sub1_3166.method5837(Renderers.SOFTWARE_RENDERER, (Class390) null, this.sceneObjectManager.aClass390Array2607[0], -1009930272);
+					this.aClass329_Sub1_3166.method5837(Renderers.SOFTWARE_RENDERER, (Ground) null, this.sceneObjectManager.aClass390Array2607[0], -1009930272);
 					this.aClass329_Sub1_3166.method12463(Renderers.SOFTWARE_RENDERER, true, 454950063);
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, 163262675);
@@ -1502,7 +1502,7 @@ public class MapRegion {
 	}
 
 	static final void method4558(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class13.method505(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 1);

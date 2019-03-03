@@ -3,30 +3,30 @@ public class ItemDefinitions implements Definition {
 	ItemIndexLoader loader;
 	int id;
 	public static short[] staticColorArr256 = new short[256];
-	public int anInt5051 = 1;
+	public int value = 1;
 	int modelId;
 	public int modelZoom = 2000;
-	public int anInt5058 = 0;
-	public int anInt5045 = 0;
-	public int anInt5074 = 0;
-	public int anInt5063 = 0;
-	public int anInt5044 = 0;
-	short[] originalColors;
-	short[] modifiedColors;
+	public int modelRotation1 = 0;
+	public int modelRotation2 = 0;
+	public int unknownInt5 = 0;
+	public int modelOffset1 = 0;
+	public int modelOffset2 = 0;
+	short[] originalModelColors;
+	short[] modifiedModelColors;
 	byte[] spriteRecolorIndices;
-	short[] originalTextures;
-	short[] modifiedTextures;
-	public String aString5043 = "null";
-	public boolean members = false;
-	public int anInt5047 = -1;
-	public int anInt5064 = -1;
-	public int anInt5065 = -1;
-	int maleBody1 = -1;
-	int maleBody2 = -1;
-	int maleBody3 = -1;
-	int femaleBody1 = -1;
-	int femaleBody2 = -1;
-	int femaleBody3 = -1;
+	short[] originalTextureIds;
+	short[] modifiedTextureIds;
+	public String name = "null";
+	public boolean membersOnly = false;
+	public int equipSlot = -1;
+	public int equipType = -1;
+	public int unknownInt25 = -1;
+	int maleEquip1 = -1;
+	int maleEquip2 = -1;
+	int maleEquip3 = -1;
+	int femaleEquip1 = -1;
+	int femaleEquip2 = -1;
+	int femaleEquip3 = -1;
 	int maleWearXOffset = 0;
 	int femaleWearXOffset = 0;
 	int maleWearYOffset = 0;
@@ -37,16 +37,16 @@ public class ItemDefinitions implements Definition {
 	int maleHead2 = -1;
 	int femaleHead1 = -1;
 	int femaleHead2 = -1;
-	public int team = 0;
+	public int teamId = 0;
 	public String[] groundOptions;
 	IterableNodeMap cs2Map;
 	public int stackable = 0;
 	public String[] inventoryOptions;
-	public int anInt5050 = -1;
-	public int anInt5102;
-	public boolean aBool5101 = false;
+	public int unknownInt24 = -1;
+	public int unknownInt26;
+	public boolean unknownBool1 = false;
 	public boolean grandExchange = false;
-	public int anInt5095 = 0;
+	public int unknownInt6 = 0;
 	public int certId = -1;
 	public int certTemplateId = -1;
 	int resizeX = 128;
@@ -57,17 +57,17 @@ public class ItemDefinitions implements Definition {
 	int ambient = 0;
 	int contrast = 0;
 	int lendId = -1;
-	public int landTemplateId = -1;
-	public int anInt5059 = -1;
-	public int anInt5055 = -1;
-	public int anInt5060 = -1;
-	public int anInt5056 = -1;
-	public int anInt5061 = -1;
-	public int anInt5062 = -1;
-	public int anInt5030 = -1;
-	public int anInt5031 = -1;
+	public int lendTemplateId = -1;
+	public int unknownInt18 = -1;
+	public int unknownInt19 = -1;
+	public int unknownInt20 = -1;
+	public int unknownInt21 = -1;
+	public int unknownInt22 = -1;
+	public int unknownInt23 = -1;
+	public int unknownInt27 = -1;
+	public int unknownInt28 = -1;
 	public int[] quests;
-	public int anInt5098 = 0;
+	public int unknownInt29 = 0;
 	int bindId = -1;
 	public int bindTemplateId = -1;
 
@@ -104,11 +104,11 @@ public class ItemDefinitions implements Definition {
 			}
 
 			int i_18 = i_11;
-			if (this.originalTextures != null) {
+			if (this.originalTextureIds != null) {
 				i_18 = i_11 | 0x8000;
 			}
 
-			if (this.originalColors != null || playerappearance_4 != null) {
+			if (this.originalModelColors != null || playerappearance_4 != null) {
 				i_18 |= 0x4000;
 			}
 
@@ -139,19 +139,19 @@ public class ItemDefinitions implements Definition {
 			}
 
 			int i_15;
-			if (this.originalColors != null) {
-				for (i_15 = 0; i_15 < this.originalColors.length; i_15++) {
+			if (this.originalModelColors != null) {
+				for (i_15 = 0; i_15 < this.originalModelColors.length; i_15++) {
 					if (this.spriteRecolorIndices != null && i_15 < this.spriteRecolorIndices.length) {
-						meshrasterizer_17.X(this.originalColors[i_15], staticColorArr256[this.spriteRecolorIndices[i_15] & 0xff]);
+						meshrasterizer_17.X(this.originalModelColors[i_15], staticColorArr256[this.spriteRecolorIndices[i_15] & 0xff]);
 					} else {
-						meshrasterizer_17.X(this.originalColors[i_15], this.modifiedColors[i_15]);
+						meshrasterizer_17.X(this.originalModelColors[i_15], this.modifiedModelColors[i_15]);
 					}
 				}
 			}
 
-			if (this.originalTextures != null) {
-				for (i_15 = 0; i_15 < this.originalTextures.length; i_15++) {
-					meshrasterizer_17.W(this.originalTextures[i_15], this.modifiedTextures[i_15]);
+			if (this.originalTextureIds != null) {
+				for (i_15 = 0; i_15 < this.originalTextureIds.length; i_15++) {
+					meshrasterizer_17.W(this.originalTextureIds[i_15], this.modifiedTextureIds[i_15]);
 				}
 			}
 
@@ -202,30 +202,30 @@ public class ItemDefinitions implements Definition {
 	}
 
 	void generateBind(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
-		this.anInt5051 = 0;
+		this.value = 0;
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
-		this.anInt5058 = itemdefinitions_1.anInt5058;
-		this.anInt5045 = itemdefinitions_1.anInt5045;
-		this.anInt5074 = itemdefinitions_1.anInt5074;
-		this.anInt5063 = itemdefinitions_1.anInt5063;
-		this.anInt5044 = itemdefinitions_1.anInt5044;
-		this.originalColors = itemdefinitions_2.originalColors;
-		this.modifiedColors = itemdefinitions_2.modifiedColors;
+		this.modelRotation1 = itemdefinitions_1.modelRotation1;
+		this.modelRotation2 = itemdefinitions_1.modelRotation2;
+		this.unknownInt5 = itemdefinitions_1.unknownInt5;
+		this.modelOffset1 = itemdefinitions_1.modelOffset1;
+		this.modelOffset2 = itemdefinitions_1.modelOffset2;
+		this.originalModelColors = itemdefinitions_2.originalModelColors;
+		this.modifiedModelColors = itemdefinitions_2.modifiedModelColors;
 		this.spriteRecolorIndices = itemdefinitions_2.spriteRecolorIndices;
-		this.originalTextures = itemdefinitions_2.originalTextures;
-		this.modifiedTextures = itemdefinitions_2.modifiedTextures;
-		this.aString5043 = itemdefinitions_2.aString5043;
-		this.members = itemdefinitions_2.members;
-		this.anInt5047 = itemdefinitions_2.anInt5047;
-		this.anInt5064 = itemdefinitions_2.anInt5064;
-		this.anInt5065 = itemdefinitions_2.anInt5065;
-		this.maleBody1 = itemdefinitions_2.maleBody1;
-		this.maleBody2 = itemdefinitions_2.maleBody2;
-		this.maleBody3 = itemdefinitions_2.maleBody3;
-		this.femaleBody1 = itemdefinitions_2.femaleBody1;
-		this.femaleBody2 = itemdefinitions_2.femaleBody2;
-		this.femaleBody3 = itemdefinitions_2.femaleBody3;
+		this.originalTextureIds = itemdefinitions_2.originalTextureIds;
+		this.modifiedTextureIds = itemdefinitions_2.modifiedTextureIds;
+		this.name = itemdefinitions_2.name;
+		this.membersOnly = itemdefinitions_2.membersOnly;
+		this.equipSlot = itemdefinitions_2.equipSlot;
+		this.equipType = itemdefinitions_2.equipType;
+		this.unknownInt25 = itemdefinitions_2.unknownInt25;
+		this.maleEquip1 = itemdefinitions_2.maleEquip1;
+		this.maleEquip2 = itemdefinitions_2.maleEquip2;
+		this.maleEquip3 = itemdefinitions_2.maleEquip3;
+		this.femaleEquip1 = itemdefinitions_2.femaleEquip1;
+		this.femaleEquip2 = itemdefinitions_2.femaleEquip2;
+		this.femaleEquip3 = itemdefinitions_2.femaleEquip3;
 		this.maleWearXOffset = itemdefinitions_2.maleWearXOffset;
 		this.femaleWearXOffset = itemdefinitions_2.femaleWearXOffset;
 		this.maleWearYOffset = itemdefinitions_2.maleWearYOffset;
@@ -236,7 +236,7 @@ public class ItemDefinitions implements Definition {
 		this.maleHead2 = itemdefinitions_2.maleHead2;
 		this.femaleHead1 = itemdefinitions_2.femaleHead1;
 		this.femaleHead2 = itemdefinitions_2.femaleHead2;
-		this.team = itemdefinitions_2.team;
+		this.teamId = itemdefinitions_2.teamId;
 		this.groundOptions = itemdefinitions_2.groundOptions;
 		this.cs2Map = itemdefinitions_2.cs2Map;
 		this.stackable = itemdefinitions_2.stackable;
@@ -253,19 +253,19 @@ public class ItemDefinitions implements Definition {
 	void generateCert(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
-		this.anInt5058 = itemdefinitions_1.anInt5058;
-		this.anInt5045 = itemdefinitions_1.anInt5045;
-		this.anInt5074 = itemdefinitions_1.anInt5074;
-		this.anInt5063 = itemdefinitions_1.anInt5063;
-		this.anInt5044 = itemdefinitions_1.anInt5044;
-		this.originalColors = itemdefinitions_1.originalColors;
-		this.modifiedColors = itemdefinitions_1.modifiedColors;
+		this.modelRotation1 = itemdefinitions_1.modelRotation1;
+		this.modelRotation2 = itemdefinitions_1.modelRotation2;
+		this.unknownInt5 = itemdefinitions_1.unknownInt5;
+		this.modelOffset1 = itemdefinitions_1.modelOffset1;
+		this.modelOffset2 = itemdefinitions_1.modelOffset2;
+		this.originalModelColors = itemdefinitions_1.originalModelColors;
+		this.modifiedModelColors = itemdefinitions_1.modifiedModelColors;
 		this.spriteRecolorIndices = itemdefinitions_1.spriteRecolorIndices;
-		this.originalTextures = itemdefinitions_1.originalTextures;
-		this.modifiedTextures = itemdefinitions_1.modifiedTextures;
-		this.aString5043 = itemdefinitions_2.aString5043;
-		this.members = itemdefinitions_2.members;
-		this.anInt5051 = itemdefinitions_2.anInt5051;
+		this.originalTextureIds = itemdefinitions_1.originalTextureIds;
+		this.modifiedTextureIds = itemdefinitions_1.modifiedTextureIds;
+		this.name = itemdefinitions_2.name;
+		this.membersOnly = itemdefinitions_2.membersOnly;
+		this.value = itemdefinitions_2.value;
 		this.stackable = 1;
 	}
 
@@ -273,45 +273,45 @@ public class ItemDefinitions implements Definition {
 		if (opcode == 1) {
 			this.modelId = stream.readBigSmart();
 		} else if (opcode == 2) {
-			this.aString5043 = stream.readString();
+			this.name = stream.readString();
 		} else if (opcode == 4) {
 			this.modelZoom = stream.readUnsignedShort();
 		} else if (opcode == 5) {
-			this.anInt5058 = stream.readUnsignedShort();
+			this.modelRotation1 = stream.readUnsignedShort();
 		} else if (opcode == 6) {
-			this.anInt5045 = stream.readUnsignedShort();
+			this.modelRotation2 = stream.readUnsignedShort();
 		} else if (opcode == 7) {
-			this.anInt5063 = stream.readUnsignedShort();
-			if (this.anInt5063 > 32767) {
-				this.anInt5063 -= 65536;
+			this.modelOffset1 = stream.readUnsignedShort();
+			if (this.modelOffset1 > 32767) {
+				this.modelOffset1 -= 65536;
 			}
 		} else if (opcode == 8) {
-			this.anInt5044 = stream.readUnsignedShort();
-			if (this.anInt5044 > 32767) {
-				this.anInt5044 -= 65536;
+			this.modelOffset2 = stream.readUnsignedShort();
+			if (this.modelOffset2 > 32767) {
+				this.modelOffset2 -= 65536;
 			}
 		} else if (opcode == 11) {
 			this.stackable = 1;
 		} else if (opcode == 12) {
-			this.anInt5051 = stream.readInt();
+			this.value = stream.readInt();
 		} else if (opcode == 13) {
-			this.anInt5047 = stream.readUnsignedByte();
+			this.equipSlot = stream.readUnsignedByte();
 		} else if (opcode == 14) {
-			this.anInt5064 = stream.readUnsignedByte();
+			this.equipType = stream.readUnsignedByte();
 		} else if (opcode == 16) {
-			this.members = true;
+			this.membersOnly = true;
 		} else if (opcode == 18) {
-			this.anInt5050 = stream.readUnsignedShort();
+			this.unknownInt24 = stream.readUnsignedShort();
 		} else if (opcode == 23) {
-			this.maleBody1 = stream.readBigSmart();
+			this.maleEquip1 = stream.readBigSmart();
 		} else if (opcode == 24) {
-			this.maleBody2 = stream.readBigSmart();
+			this.maleEquip2 = stream.readBigSmart();
 		} else if (opcode == 25) {
-			this.femaleBody1 = stream.readBigSmart();
+			this.femaleEquip1 = stream.readBigSmart();
 		} else if (opcode == 26) {
-			this.femaleBody2 = stream.readBigSmart();
+			this.femaleEquip2 = stream.readBigSmart();
 		} else if (opcode == 27) {
-			this.anInt5065 = stream.readUnsignedByte();
+			this.unknownInt25 = stream.readUnsignedByte();
 		} else if (opcode >= 30 && opcode < 35) {
 			this.groundOptions[opcode - 30] = stream.readString();
 		} else if (opcode >= 35 && opcode < 40) {
@@ -321,21 +321,21 @@ public class ItemDefinitions implements Definition {
 			int i_5;
 			if (opcode == 40) {
 				i_4 = stream.readUnsignedByte();
-				this.originalColors = new short[i_4];
-				this.modifiedColors = new short[i_4];
+				this.originalModelColors = new short[i_4];
+				this.modifiedModelColors = new short[i_4];
 
 				for (i_5 = 0; i_5 < i_4; i_5++) {
-					this.originalColors[i_5] = (short) stream.readUnsignedShort();
-					this.modifiedColors[i_5] = (short) stream.readUnsignedShort();
+					this.originalModelColors[i_5] = (short) stream.readUnsignedShort();
+					this.modifiedModelColors[i_5] = (short) stream.readUnsignedShort();
 				}
 			} else if (opcode == 41) {
 				i_4 = stream.readUnsignedByte();
-				this.originalTextures = new short[i_4];
-				this.modifiedTextures = new short[i_4];
+				this.originalTextureIds = new short[i_4];
+				this.modifiedTextureIds = new short[i_4];
 
 				for (i_5 = 0; i_5 < i_4; i_5++) {
-					this.originalTextures[i_5] = (short) stream.readUnsignedShort();
-					this.modifiedTextures[i_5] = (short) stream.readUnsignedShort();
+					this.originalTextureIds[i_5] = (short) stream.readUnsignedShort();
+					this.modifiedTextureIds[i_5] = (short) stream.readUnsignedShort();
 				}
 			} else if (opcode == 42) {
 				i_4 = stream.readUnsignedByte();
@@ -345,14 +345,14 @@ public class ItemDefinitions implements Definition {
 					this.spriteRecolorIndices[i_5] = stream.readByte();
 				}
 			} else if (opcode == 43) {
-				this.anInt5102 = stream.readInt();
-				this.aBool5101 = true;
+				this.unknownInt26 = stream.readInt();
+				this.unknownBool1 = true;
 			} else if (opcode == 65) {
 				this.grandExchange = true;
 			} else if (opcode == 78) {
-				this.maleBody3 = stream.readBigSmart();
+				this.maleEquip3 = stream.readBigSmart();
 			} else if (opcode == 79) {
-				this.femaleBody3 = stream.readBigSmart();
+				this.femaleEquip3 = stream.readBigSmart();
 			} else if (opcode == 90) {
 				this.maleHead1 = stream.readBigSmart();
 			} else if (opcode == 91) {
@@ -362,9 +362,9 @@ public class ItemDefinitions implements Definition {
 			} else if (opcode == 93) {
 				this.femaleHead2 = stream.readBigSmart();
 			} else if (opcode == 95) {
-				this.anInt5074 = stream.readUnsignedShort();
+				this.unknownInt5 = stream.readUnsignedShort();
 			} else if (opcode == 96) {
-				this.anInt5095 = stream.readUnsignedByte();
+				this.unknownInt6 = stream.readUnsignedByte();
 			} else if (opcode == 97) {
 				this.certId = stream.readUnsignedShort();
 			} else if (opcode == 98) {
@@ -388,11 +388,11 @@ public class ItemDefinitions implements Definition {
 			} else if (opcode == 114) {
 				this.contrast = stream.readByte();
 			} else if (opcode == 115) {
-				this.team = stream.readUnsignedByte();
+				this.teamId = stream.readUnsignedByte();
 			} else if (opcode == 121) {
 				this.lendId = stream.readUnsignedShort();
 			} else if (opcode == 122) {
-				this.landTemplateId = stream.readUnsignedShort();
+				this.lendTemplateId = stream.readUnsignedShort();
 			} else if (opcode == 125) {
 				this.maleWearXOffset = stream.readByte() << 2;
 				this.maleWearYOffset = stream.readByte() << 2;
@@ -402,17 +402,17 @@ public class ItemDefinitions implements Definition {
 				this.femaleWearYOffset = stream.readByte() << 2;
 				this.femaleWearZOffset = stream.readByte() << 2;
 			} else if (opcode == 127) {
-				this.anInt5059 = stream.readUnsignedByte();
-				this.anInt5055 = stream.readUnsignedShort();
+				this.unknownInt18 = stream.readUnsignedByte();
+				this.unknownInt19 = stream.readUnsignedShort();
 			} else if (opcode == 128) {
-				this.anInt5060 = stream.readUnsignedByte();
-				this.anInt5056 = stream.readUnsignedShort();
+				this.unknownInt20 = stream.readUnsignedByte();
+				this.unknownInt21 = stream.readUnsignedShort();
 			} else if (opcode == 129) {
-				this.anInt5061 = stream.readUnsignedByte();
-				this.anInt5062 = stream.readUnsignedShort();
+				this.unknownInt22 = stream.readUnsignedByte();
+				this.unknownInt23 = stream.readUnsignedShort();
 			} else if (opcode == 130) {
-				this.anInt5030 = stream.readUnsignedByte();
-				this.anInt5031 = stream.readUnsignedShort();
+				this.unknownInt27 = stream.readUnsignedByte();
+				this.unknownInt28 = stream.readUnsignedShort();
 			} else if (opcode == 132) {
 				i_4 = stream.readUnsignedByte();
 				this.quests = new int[i_4];
@@ -421,7 +421,7 @@ public class ItemDefinitions implements Definition {
 					this.quests[i_5] = stream.readUnsignedShort();
 				}
 			} else if (opcode == 134) {
-				this.anInt5098 = stream.readUnsignedByte();
+				this.unknownInt29 = stream.readUnsignedByte();
 			} else if (opcode == 139) {
 				this.bindId = stream.readUnsignedShort();
 			} else if (opcode == 140) {
@@ -478,19 +478,19 @@ public class ItemDefinitions implements Definition {
 			}
 
 			int i;
-			if (this.originalColors != null) {
-				for (i = 0; i < this.originalColors.length; i++) {
+			if (this.originalModelColors != null) {
+				for (i = 0; i < this.originalModelColors.length; i++) {
 					if (this.spriteRecolorIndices != null && i < this.spriteRecolorIndices.length) {
-						inventoryMesh.recolor(this.originalColors[i], staticColorArr256[this.spriteRecolorIndices[i] & 0xff]);
+						inventoryMesh.recolor(this.originalModelColors[i], staticColorArr256[this.spriteRecolorIndices[i] & 0xff]);
 					} else {
-						inventoryMesh.recolor(this.originalColors[i], this.modifiedColors[i]);
+						inventoryMesh.recolor(this.originalModelColors[i], this.modifiedModelColors[i]);
 					}
 				}
 			}
 
-			if (this.originalTextures != null) {
-				for (i = 0; i < this.originalTextures.length; i++) {
-					inventoryMesh.retexture(this.originalTextures[i], this.modifiedTextures[i]);
+			if (this.originalTextureIds != null) {
+				for (i = 0; i < this.originalTextureIds.length; i++) {
+					inventoryMesh.retexture(this.originalTextureIds[i], this.modifiedTextureIds[i]);
 				}
 			}
 
@@ -525,7 +525,7 @@ public class ItemDefinitions implements Definition {
 					if (sprite == null) {
 						return null;
 					}
-				} else if (this.landTemplateId != -1) {
+				} else if (this.lendTemplateId != -1) {
 					sprite = this.loader.getSprite(hardwareRenderer, softwareRenderer, this.lendId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 63);
 					if (sprite == null) {
 						return null;
@@ -556,10 +556,10 @@ public class ItemDefinitions implements Definition {
 				hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0D));
 				hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0D), 0.95F + (float) (Math.random() / 10.0D), -50.0F, -10.0F, -50.0F);
 				Matrix44Var matrix44var_20 = hardwareRenderer.method8450();
-				matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-this.anInt5074 << 3));
-				matrix44var_20.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(this.anInt5045 << 3));
-				matrix44var_20.method5219((float) (this.anInt5063 << 2), (float) ((zoom * Class382.anIntArray4657[this.anInt5058 << 3] >> 14) - meshRasterizer.YA() / 2 + (this.anInt5044 << 2)), (float) ((zoom * Class382.anIntArray4661[this.anInt5058 << 3] >> 14) + (this.anInt5044 << 2)));
-				matrix44var_20.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(this.anInt5058 << 3));
+				matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-this.unknownInt5 << 3));
+				matrix44var_20.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(this.modelRotation2 << 3));
+				matrix44var_20.method5219((float) (this.modelOffset1 << 2), (float) ((zoom * Class382.anIntArray4657[this.modelRotation1 << 3] >> 14) - meshRasterizer.YA() / 2 + (this.modelOffset2 << 2)), (float) ((zoom * Class382.anIntArray4661[this.modelRotation1 << 3] >> 14) + (this.modelOffset2 << 2)));
+				matrix44var_20.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(this.modelRotation1 << 3));
 				hardwareRenderer.r(0, 0, 36, 32);
 				hardwareRenderer.ba(2, 0);
 				hardwareRenderer.B(0, 0, 36, 32, 0, 0);
@@ -578,7 +578,7 @@ public class ItemDefinitions implements Definition {
 					this.addShadow(ints_21, shadowColor, (byte) -34);
 				}
 
-				if (this.landTemplateId != -1) {
+				if (this.lendTemplateId != -1) {
 					sprite.method2752(0, 0);
 				} else if (this.bindTemplateId != -1) {
 					sprite.method2752(0, 0);
@@ -631,18 +631,18 @@ public class ItemDefinitions implements Definition {
 				i_5 = meshmodifier_2.femaleBody[1];
 				i_6 = meshmodifier_2.femaleBody[2];
 			} else {
-				i_4 = this.femaleBody1;
-				i_5 = this.femaleBody2;
-				i_6 = this.femaleBody3;
+				i_4 = this.femaleEquip1;
+				i_5 = this.femaleEquip2;
+				i_6 = this.femaleEquip3;
 			}
 		} else if (meshmodifier_2 != null && meshmodifier_2.maleBody != null) {
 			i_4 = meshmodifier_2.maleBody[0];
 			i_5 = meshmodifier_2.maleBody[1];
 			i_6 = meshmodifier_2.maleBody[2];
 		} else {
-			i_4 = this.maleBody1;
-			i_5 = this.maleBody2;
-			i_6 = this.maleBody3;
+			i_4 = this.maleEquip1;
+			i_5 = this.maleEquip2;
+			i_6 = this.maleEquip3;
 		}
 
 		if (i_4 == -1) {
@@ -675,18 +675,18 @@ public class ItemDefinitions implements Definition {
 				i_5 = meshmodifier_2.femaleBody[1];
 				i_6 = meshmodifier_2.femaleBody[2];
 			} else {
-				i_4 = this.femaleBody1;
-				i_5 = this.femaleBody2;
-				i_6 = this.femaleBody3;
+				i_4 = this.femaleEquip1;
+				i_5 = this.femaleEquip2;
+				i_6 = this.femaleEquip3;
 			}
 		} else if (meshmodifier_2 != null && meshmodifier_2.maleBody != null) {
 			i_4 = meshmodifier_2.maleBody[0];
 			i_5 = meshmodifier_2.maleBody[1];
 			i_6 = meshmodifier_2.maleBody[2];
 		} else {
-			i_4 = this.maleBody1;
-			i_5 = this.maleBody2;
-			i_6 = this.maleBody3;
+			i_4 = this.maleEquip1;
+			i_5 = this.maleEquip2;
+			i_6 = this.maleEquip3;
 		}
 
 		if (i_4 == -1) {
@@ -730,27 +730,27 @@ public class ItemDefinitions implements Definition {
 
 				int i_11;
 				short[] shorts_12;
-				if (this.originalColors != null) {
+				if (this.originalModelColors != null) {
 					if (meshmodifier_2 != null && meshmodifier_2.modifiedColors != null) {
 						shorts_12 = meshmodifier_2.modifiedColors;
 					} else {
-						shorts_12 = this.modifiedColors;
+						shorts_12 = this.modifiedModelColors;
 					}
 
-					for (i_11 = 0; i_11 < this.originalColors.length; i_11++) {
-						rsmesh_7.recolor(this.originalColors[i_11], shorts_12[i_11]);
+					for (i_11 = 0; i_11 < this.originalModelColors.length; i_11++) {
+						rsmesh_7.recolor(this.originalModelColors[i_11], shorts_12[i_11]);
 					}
 				}
 
-				if (this.originalTextures != null) {
+				if (this.originalTextureIds != null) {
 					if (meshmodifier_2 != null && meshmodifier_2.modifiedTextures != null) {
 						shorts_12 = meshmodifier_2.modifiedTextures;
 					} else {
-						shorts_12 = this.modifiedTextures;
+						shorts_12 = this.modifiedTextureIds;
 					}
 
-					for (i_11 = 0; i_11 < this.originalTextures.length; i_11++) {
-						rsmesh_7.retexture(this.originalTextures[i_11], shorts_12[i_11]);
+					for (i_11 = 0; i_11 < this.originalTextureIds.length; i_11++) {
+						rsmesh_7.retexture(this.originalTextureIds[i_11], shorts_12[i_11]);
 					}
 				}
 
@@ -877,27 +877,27 @@ public class ItemDefinitions implements Definition {
 
 			int i_9;
 			short[] shorts_10;
-			if (this.originalColors != null) {
+			if (this.originalModelColors != null) {
 				if (meshmodifier_2 != null && meshmodifier_2.modifiedColors != null) {
 					shorts_10 = meshmodifier_2.modifiedColors;
 				} else {
-					shorts_10 = this.modifiedColors;
+					shorts_10 = this.modifiedModelColors;
 				}
 
-				for (i_9 = 0; i_9 < this.originalColors.length; i_9++) {
-					rsmesh_6.recolor(this.originalColors[i_9], shorts_10[i_9]);
+				for (i_9 = 0; i_9 < this.originalModelColors.length; i_9++) {
+					rsmesh_6.recolor(this.originalModelColors[i_9], shorts_10[i_9]);
 				}
 			}
 
-			if (this.originalTextures != null) {
+			if (this.originalTextureIds != null) {
 				if (meshmodifier_2 != null && meshmodifier_2.modifiedTextures != null) {
 					shorts_10 = meshmodifier_2.modifiedTextures;
 				} else {
-					shorts_10 = this.modifiedTextures;
+					shorts_10 = this.modifiedTextureIds;
 				}
 
-				for (i_9 = 0; i_9 < this.originalTextures.length; i_9++) {
-					rsmesh_6.retexture(this.originalTextures[i_9], shorts_10[i_9]);
+				for (i_9 = 0; i_9 < this.originalTextureIds.length; i_9++) {
+					rsmesh_6.retexture(this.originalTextureIds[i_9], shorts_10[i_9]);
 				}
 			}
 
@@ -906,30 +906,30 @@ public class ItemDefinitions implements Definition {
 	}
 
 	void generateLend(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
-		this.anInt5051 = 0;
+		this.value = 0;
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
-		this.anInt5058 = itemdefinitions_1.anInt5058;
-		this.anInt5045 = itemdefinitions_1.anInt5045;
-		this.anInt5074 = itemdefinitions_1.anInt5074;
-		this.anInt5063 = itemdefinitions_1.anInt5063;
-		this.anInt5044 = itemdefinitions_1.anInt5044;
-		this.originalColors = itemdefinitions_2.originalColors;
-		this.modifiedColors = itemdefinitions_2.modifiedColors;
+		this.modelRotation1 = itemdefinitions_1.modelRotation1;
+		this.modelRotation2 = itemdefinitions_1.modelRotation2;
+		this.unknownInt5 = itemdefinitions_1.unknownInt5;
+		this.modelOffset1 = itemdefinitions_1.modelOffset1;
+		this.modelOffset2 = itemdefinitions_1.modelOffset2;
+		this.originalModelColors = itemdefinitions_2.originalModelColors;
+		this.modifiedModelColors = itemdefinitions_2.modifiedModelColors;
 		this.spriteRecolorIndices = itemdefinitions_2.spriteRecolorIndices;
-		this.originalTextures = itemdefinitions_2.originalTextures;
-		this.modifiedTextures = itemdefinitions_2.modifiedTextures;
-		this.aString5043 = itemdefinitions_2.aString5043;
-		this.members = itemdefinitions_2.members;
-		this.anInt5047 = itemdefinitions_2.anInt5047;
-		this.anInt5064 = itemdefinitions_2.anInt5064;
-		this.anInt5065 = itemdefinitions_2.anInt5065;
-		this.maleBody1 = itemdefinitions_2.maleBody1;
-		this.maleBody2 = itemdefinitions_2.maleBody2;
-		this.maleBody3 = itemdefinitions_2.maleBody3;
-		this.femaleBody1 = itemdefinitions_2.femaleBody1;
-		this.femaleBody2 = itemdefinitions_2.femaleBody2;
-		this.femaleBody3 = itemdefinitions_2.femaleBody3;
+		this.originalTextureIds = itemdefinitions_2.originalTextureIds;
+		this.modifiedTextureIds = itemdefinitions_2.modifiedTextureIds;
+		this.name = itemdefinitions_2.name;
+		this.membersOnly = itemdefinitions_2.membersOnly;
+		this.equipSlot = itemdefinitions_2.equipSlot;
+		this.equipType = itemdefinitions_2.equipType;
+		this.unknownInt25 = itemdefinitions_2.unknownInt25;
+		this.maleEquip1 = itemdefinitions_2.maleEquip1;
+		this.maleEquip2 = itemdefinitions_2.maleEquip2;
+		this.maleEquip3 = itemdefinitions_2.maleEquip3;
+		this.femaleEquip1 = itemdefinitions_2.femaleEquip1;
+		this.femaleEquip2 = itemdefinitions_2.femaleEquip2;
+		this.femaleEquip3 = itemdefinitions_2.femaleEquip3;
 		this.maleWearXOffset = itemdefinitions_2.maleWearXOffset;
 		this.femaleWearXOffset = itemdefinitions_2.femaleWearXOffset;
 		this.maleWearYOffset = itemdefinitions_2.maleWearYOffset;
@@ -940,7 +940,7 @@ public class ItemDefinitions implements Definition {
 		this.maleHead2 = itemdefinitions_2.maleHead2;
 		this.femaleHead1 = itemdefinitions_2.femaleHead1;
 		this.femaleHead2 = itemdefinitions_2.femaleHead2;
-		this.team = itemdefinitions_2.team;
+		this.teamId = itemdefinitions_2.teamId;
 		this.groundOptions = itemdefinitions_2.groundOptions;
 		this.cs2Map = itemdefinitions_2.cs2Map;
 		this.inventoryOptions = new String[5];

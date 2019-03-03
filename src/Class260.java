@@ -26,10 +26,10 @@ public class Class260 {
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] - 1;
 		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1109098301);
-		if (i_3 == itemdefinitions_4.anInt5061) {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = itemdefinitions_4.anInt5062;
-		} else if (i_3 == itemdefinitions_4.anInt5030) {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = itemdefinitions_4.anInt5031;
+		if (i_3 == itemdefinitions_4.unknownInt22) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = itemdefinitions_4.unknownInt23;
+		} else if (i_3 == itemdefinitions_4.unknownInt27) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = itemdefinitions_4.unknownInt28;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
 		}

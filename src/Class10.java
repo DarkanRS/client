@@ -24,7 +24,7 @@ public class Class10 {
 	}
 
 	static final void method459(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class109.method1852(icomponentdefinitions_3, interface_4, cs2executor_0, 1050548242);

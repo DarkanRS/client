@@ -174,7 +174,7 @@ public class Class31 implements IndexLoader {
 	}
 
 	static final void method815(CS2Executor cs2executor_0, short s_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Class413.method6942(icomponentdefinitions_3, cs2executor_0, 312854602);
 	}

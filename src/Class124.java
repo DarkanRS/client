@@ -2,7 +2,7 @@ public class Class124 {
 
 	boolean aBool1556 = true;
 	int anInt1563 = -1;
-	Class505_Sub1 aClass505_Sub1_1558;
+	OpenGLGraphicalRenderer aClass505_Sub1_1558;
 	Class130 aClass130_1559;
 	int anInt1557;
 	int anInt1561;
@@ -20,7 +20,7 @@ public class Class124 {
 		this.method2165(this.aClass131_Sub2_1567, i_2);
 	}
 
-	Class124(Class505_Sub1 class505_sub1_1, Class130 class130_2, Class390_Sub2 class390_sub2_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+	Class124(OpenGLGraphicalRenderer class505_sub1_1, Class130 class130_2, OpenGLGround class390_sub2_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		this.aClass505_Sub1_1558 = class505_sub1_1;
 		this.aClass130_1559 = class130_2;
 		this.anInt1557 = i_7;
@@ -33,10 +33,10 @@ public class Class124 {
 		int i_14;
 		int i_15;
 		for (int i_13 = 0; i_13 < i_9; i_13++) {
-			i_14 = class390_sub2_3.anInt4776 * (i_12 + i_13) + i_11;
+			i_14 = class390_sub2_3.width * (i_12 + i_13) + i_11;
 
 			for (i_15 = 0; i_15 < i_9; i_15++) {
-				short[] shorts_20 = class390_sub2_3.aShortArrayArray8653[i_14++];
+				short[] shorts_20 = class390_sub2_3.materialIndices[i_14++];
 				if (shorts_20 != null) {
 					i_10 += shorts_20.length;
 				}
@@ -51,10 +51,10 @@ public class Class124 {
 			int i_18;
 			if (this.aClass505_Sub1_1558.aBool8467) {
 				for (i_14 = 0; i_14 < i_9; i_14++) {
-					i_15 = class390_sub2_3.anInt4776 * (i_12 + i_14) + i_11;
+					i_15 = class390_sub2_3.width * (i_12 + i_14) + i_11;
 
 					for (i_16 = 0; i_16 < i_9; i_16++) {
-						shorts_17 = class390_sub2_3.aShortArrayArray8653[i_15++];
+						shorts_17 = class390_sub2_3.materialIndices[i_15++];
 						if (shorts_17 != null) {
 							for (i_18 = 0; i_18 < shorts_17.length; i_18++) {
 								rsbytebuffer_19.writeShort(shorts_17[i_18] & 0xffff, 1417031095);
@@ -64,10 +64,10 @@ public class Class124 {
 				}
 			} else {
 				for (i_14 = 0; i_14 < i_9; i_14++) {
-					i_15 = class390_sub2_3.anInt4776 * (i_12 + i_14) + i_11;
+					i_15 = class390_sub2_3.width * (i_12 + i_14) + i_11;
 
 					for (i_16 = 0; i_16 < i_9; i_16++) {
-						shorts_17 = class390_sub2_3.aShortArrayArray8653[i_15++];
+						shorts_17 = class390_sub2_3.materialIndices[i_15++];
 						if (shorts_17 != null) {
 							for (i_18 = 0; i_18 < shorts_17.length; i_18++) {
 								rsbytebuffer_19.writeLEShort(shorts_17[i_18] & 0xffff, (byte) -58);

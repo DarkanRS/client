@@ -7,7 +7,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 	boolean aBool10135;
 	boolean aBool10137;
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7) {
 		super(class505_sub1_1, 3553, class150_2, class76_3, i_6, i_7);
 		this.anInt10136 = i_4;
 		this.anInt10133 = i_5;
@@ -18,7 +18,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.method14445(false, false);
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7, byte[] bytes_8, Class150 class150_9) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7, byte[] bytes_8, Class150 class150_9) {
 		super(class505_sub1_1, 3553, class150_2, class76_3, i_6, i_7);
 		this.anInt10136 = i_4;
 		this.anInt10133 = i_5;
@@ -30,15 +30,15 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.method14445(false, false);
 	}
 
-	static Class137_Sub1_Sub1 method15537(Class505_Sub1 class505_sub1_0, int i_1, int i_2, boolean bool_3, int[] ints_4, int i_5, int i_6) {
+	static Class137_Sub1_Sub1 method15537(OpenGLGraphicalRenderer class505_sub1_0, int i_1, int i_2, boolean bool_3, int[] ints_4, int i_5, int i_6) {
 		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_1, 1942118537) || !Class96_Sub9.method14585(i_2, 1942118537)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, bool_3, ints_4, i_5, i_6) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, Class323.nextPowerOfTwo(i_1, 253386604), Class323.nextPowerOfTwo(i_2, 1037655353), ints_4)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, bool_3, ints_4, i_5, i_6);
 	}
 
-	static Class137_Sub1_Sub1 method15538(Class505_Sub1 class505_sub1_0, int i_1, int i_2, int i_3, int i_4) {
+	static Class137_Sub1_Sub1 method15538(OpenGLGraphicalRenderer class505_sub1_0, int i_1, int i_2, int i_3, int i_4) {
 		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, i_3, i_4, true) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, i_3, i_4, Class323.nextPowerOfTwo(i_3, -1948475331), Class323.nextPowerOfTwo(i_4, -366919304), true)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, i_3, i_4, true);
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6) {
 		super(class505_sub1_1, i_2, class150_3, class76_4, i_5, i_6);
 		this.anInt10136 = i_5;
 		this.anInt10133 = i_6;
@@ -55,7 +55,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.aBool10137 = false;
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
 		super(class505_sub1_1, i_2, i_3, i_4, i_5, i_6);
 		this.anInt10136 = i_5;
 		this.anInt10133 = i_6;
@@ -72,11 +72,11 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.aBool10137 = false;
 	}
 
-	static Class137_Sub1_Sub1 method15540(Class505_Sub1 class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, Class150 class150_7) {
+	static Class137_Sub1_Sub1 method15540(OpenGLGraphicalRenderer class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, Class150 class150_7) {
 		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4, bool_5, bytes_6, class150_7) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Class323.nextPowerOfTwo(i_3, 527754772), Class323.nextPowerOfTwo(i_4, 1788397404), bytes_6, class150_7)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4, bool_5, bytes_6, class150_7);
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6) {
 		super(class505_sub1_1, 3553, Class150.aClass150_1949, Class76.aClass76_751, i_4, i_5);
 		this.anInt10136 = i_2;
 		this.anInt10133 = i_3;
@@ -88,7 +88,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.method14445(false, false);
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
 		super(class505_sub1_1, 3553, i_2, i_3, i_6, i_7);
 		this.anInt10136 = i_4;
 		this.anInt10133 = i_5;
@@ -99,7 +99,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.method14445(false, false);
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int i_4, boolean bool_5, int[] ints_6, int i_7, int i_8) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, boolean bool_5, int[] ints_6, int i_7, int i_8) {
 		super(class505_sub1_1, i_2, i_3, i_4, bool_5, ints_6, i_7, i_8, true);
 		this.anInt10136 = i_3;
 		this.anInt10133 = i_4;
@@ -120,7 +120,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		super.method2351(bool_1 && !this.aBool10137);
 	}
 
-	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, byte[] bytes_8, Class150 class150_9) {
+	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, byte[] bytes_8, Class150 class150_9) {
 		super(class505_sub1_1, i_2, class150_3, class76_4, i_5, i_6, bool_7, bytes_8, class150_9, true);
 		this.anInt10136 = i_5;
 		this.anInt10133 = i_6;
@@ -137,7 +137,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 		this.aBool10137 = false;
 	}
 
-	static Class137_Sub1_Sub1 method15547(Class505_Sub1 class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
+	static Class137_Sub1_Sub1 method15547(OpenGLGraphicalRenderer class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
 		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Class323.nextPowerOfTwo(i_3, -572466042), Class323.nextPowerOfTwo(i_4, -2128087947))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4);
 	}
 

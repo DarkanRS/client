@@ -10,7 +10,7 @@ public class Class509 {
 	static final void method8738(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (i_2 >= 1 && i_2 <= 2) {
-			Class393.preferences.setValue(Class393.preferences.aClass468_Sub9_8226, i_2, -296279259);
+			Class393.preferences.setValue(Class393.preferences.screenSize, i_2, -296279259);
 			Class393.preferences.setValue(Class393.preferences.aClass468_Sub9_8218, i_2, -2128693924);
 			Class190.savePreferences((byte) 78);
 		}

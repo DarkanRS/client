@@ -55,14 +55,14 @@ public class Class93 {
 	}
 
 	static final void method1569(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class249.method4280(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 60);
 	}
 
 	static final void method1570(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 1, cs2executor_0, (byte) -4);
@@ -76,7 +76,7 @@ public class Class93 {
 
 	static final void method1572(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub22_8213.method7785(i_2, -398594048);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.textures.method7785(i_2, -398594048);
 	}
 
 	static final void method1573(CS2Executor cs2executor_0, byte b_1) {

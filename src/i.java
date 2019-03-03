@@ -1,4 +1,4 @@
-public class i extends Class390 implements Interface40 {
+public class i extends Ground implements Interface40 {
 
 	long nativeid;
 	NodeCollection aClass482_7143 = new NodeCollection();
@@ -11,14 +11,14 @@ public class i extends Class390 implements Interface40 {
 
 	native void G(ja var1, ba var2, int var3, int var4, int[][] var5, int[][] var6, int var7, int var8, int var9);
 
-	public native void z(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void z(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	native void ap(float[] var1);
 
 	public native void LA(int var1, int var2, int var3);
 
 	public final void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
-		this.ya(i_1, i_2, ints_3, ints_4, ints_5, ints_6, ints_7, ints_8, ints_9, ints_10, class90_11.anInt946, class90_11.anInt945, class90_11.anInt947, bool_12);
+		this.ya(i_1, i_2, ints_3, ints_4, ints_5, ints_6, ints_7, ints_8, ints_9, ints_10, class90_11.color, class90_11.scale, class90_11.intensity, bool_12);
 	}
 
 	public void method6710(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
@@ -111,7 +111,7 @@ public class i extends Class390 implements Interface40 {
 		}
 
 		if (bool_16 || ints_23 != null) {
-			this.ya(i_1, i_2, ints_32, ints_24, ints_19, ints_25, ints_20, ints_23, ints_21, ints_22, class90_14.anInt946 * -1856397433 * 1152775735, class90_14.anInt945 * 873459953 * 973144081, class90_14.anInt947 * -96197041 * -732614481, bool_15);
+			this.ya(i_1, i_2, ints_32, ints_24, ints_19, ints_25, ints_20, ints_23, ints_21, ints_22, class90_14.color, class90_14.scale, class90_14.intensity, bool_15);
 		}
 
 	}
@@ -202,7 +202,7 @@ public class i extends Class390 implements Interface40 {
 		}
 
 		if (bool_16 || ints_23 != null) {
-			this.ya(i_1, i_2, ints_32, ints_24, ints_19, ints_25, ints_20, ints_23, ints_21, ints_22, class90_14.anInt946, class90_14.anInt945, class90_14.anInt947, bool_15);
+			this.ya(i_1, i_2, ints_32, ints_24, ints_19, ints_25, ints_20, ints_23, ints_21, ints_22, class90_14.color, class90_14.scale, class90_14.intensity, bool_15);
 		}
 
 	}
@@ -222,7 +222,7 @@ public class i extends Class390 implements Interface40 {
 				if (bools_4[i_13][i_10]) {
 					int i_11 = i_13 + (i_1 - i_3);
 					int i_12 = i_10 + (i_2 - i_3);
-					if (i_11 >= 0 && i_11 < this.anInt4776 && i_12 >= 0 && i_12 < this.anInt4773) {
+					if (i_11 >= 0 && i_11 < this.width && i_12 >= 0 && i_12 < this.length) {
 						this.aja7144.nx().method316(this, i_11, i_12);
 					}
 				}
@@ -235,13 +235,13 @@ public class i extends Class390 implements Interface40 {
 		this.aja7144.nx().method318(this, i_1, i_2, i_3, i_4, i_5, i_6, i_7, bools_8);
 	}
 
-	public native Class282_Sub50_Sub17 w(int var1, int var2, Class282_Sub50_Sub17 var3);
+	public native Shadow w(int var1, int var2, Shadow var3);
 
-	public native void UA(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void UA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public native void NA(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void NA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public native void u(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void u(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public void method6713(Class282_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1, 806761388);
@@ -254,12 +254,12 @@ public class i extends Class390 implements Interface40 {
 
 	public native void m(int var1, int var2, int var3);
 
-	public boolean method6718(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6718(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		return true;
 	}
 
 	public final void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
-		this.ya(i_1, i_2, ints_3, ints_4, ints_5, ints_6, ints_7, ints_8, ints_9, ints_10, class90_11.anInt946 * -1856397433 * 1152775735, class90_11.anInt945 * 873459953 * 973144081, class90_11.anInt947 * -96197041 * -732614481, bool_12);
+		this.ya(i_1, i_2, ints_3, ints_4, ints_5, ints_6, ints_7, ints_8, ints_9, ints_10, class90_11.color, class90_11.scale, class90_11.intensity, bool_12);
 	}
 
 	public native void p();
@@ -286,7 +286,7 @@ public class i extends Class390 implements Interface40 {
 				if (bools_4[i_13][i_10]) {
 					int i_11 = i_1 - i_3 + i_13;
 					int i_12 = i_2 - i_3 + i_10;
-					if (i_11 >= 0 && i_11 < this.anInt4776 * 1018124697 * -1843860823 && i_12 >= 0 && i_12 < this.anInt4773 * -689114519 * 1826078169) {
+					if (i_11 >= 0 && i_11 < this.width && i_12 >= 0 && i_12 < this.length) {
 						this.aja7144.nx().method316(this, i_11, i_12);
 					}
 				}
@@ -295,21 +295,21 @@ public class i extends Class390 implements Interface40 {
 
 	}
 
-	public native Class282_Sub50_Sub17 s(int var1, int var2, Class282_Sub50_Sub17 var3);
+	public native Shadow s(int var1, int var2, Shadow var3);
 
 	native void ya(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int var11, int var12, int var13, boolean var14);
 
-	public boolean method6712(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		return true;
 	}
 
-	public boolean method6719(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6719(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		return true;
 	}
 
-	public native void d(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void d(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public native void a(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void a(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public native void e();
 
@@ -331,7 +331,7 @@ public class i extends Class390 implements Interface40 {
 		this.aja7144.nx().method318(this, i_1, i_2, i_3, i_4, i_5, i_6, i_7, bools_8);
 	}
 
-	public native void b(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void b(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public native void y(boolean var1);
 
@@ -344,7 +344,7 @@ public class i extends Class390 implements Interface40 {
 	i(ja ja_1, ba ba_2, int i_3, int i_4, int[][] ints_5, int[][] ints_6, int i_7, int i_8, int i_9) {
 		super(i_3, i_4, i_7, ints_5);
 		this.aja7144 = ja_1;
-		this.G(this.aja7144, ba_2, i_3, i_4, this.anIntArrayArray4772, ints_6, i_7, i_8, i_9);
+		this.G(this.aja7144, ba_2, i_3, i_4, this.tileHeights, ints_6, i_7, i_8, i_9);
 	}
 
 }

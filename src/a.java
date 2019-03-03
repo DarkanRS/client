@@ -62,11 +62,11 @@ public class a implements Interface40 {
 
 	native void J(long var1, long var3, int[] var5, float[] var6);
 
-	void method316(Class390 class390_1, int i_2, int i_3) {
+	void method316(Ground class390_1, int i_2, int i_3) {
 		this.v(this.nativeid, ((i) class390_1).nativeid, i_2, i_3);
 	}
 
-	void method318(Class390 class390_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean[][] bools_9) {
+	void method318(Ground class390_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean[][] bools_9) {
 		this.i(this.nativeid, ((i) class390_1).nativeid, i_2, i_3, i_4, i_5, i_6, i_7, i_8, bools_9);
 	}
 

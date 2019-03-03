@@ -17,7 +17,7 @@ public class Class131_Sub1 extends Class131 implements Interface14 {
 		return 0;
 	}
 
-	Class131_Sub1(Class505_Sub1 class505_sub1_1, int i_2, byte[] bytes_3, int i_4) {
+	Class131_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4) {
 		super(class505_sub1_1, bytes_3, i_4);
 		this.anInt9016 = i_2;
 	}
@@ -26,7 +26,7 @@ public class Class131_Sub1 extends Class131 implements Interface14 {
 		return this.aBuffer1593.method2();
 	}
 
-	Class131_Sub1(Class505_Sub1 class505_sub1_1, int i_2, Buffer buffer_3) {
+	Class131_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Buffer buffer_3) {
 		super(class505_sub1_1, buffer_3);
 		this.anInt9016 = i_2;
 	}

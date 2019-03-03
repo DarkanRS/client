@@ -29,7 +29,7 @@ public class Class4 {
 					++i_21;
 				}
 
-				int i_22 = sceneobjectmanager_15.aClass390Array2607[i_21].method6709((int) f_16, (int) f_18, 1453959191);
+				int i_22 = sceneobjectmanager_15.aClass390Array2607[i_21].averageHeight((int) f_16, (int) f_18, 1453959191);
 				if ((float) i_22 < f_17) {
 					if (i_6 >= 2) {
 						return f_8 - 0.1F + method288(f_12, f_13, f_14, f_16, f_17, f_18, i_6 - 1, -1906772657) * 0.1F;

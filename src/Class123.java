@@ -4,7 +4,7 @@ public class Class123 {
 	Class476 aClass476_1541;
 	MeshRasterizer aClass528_1544;
 	boolean[] aBoolArray1553;
-	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_1551;
+	Shadow aClass282_Sub50_Sub17_1551;
 	ParticleSystem aClass539_1538;
 	int anInt1548;
 	boolean aBool1552 = false;
@@ -190,8 +190,8 @@ public class Class123 {
 					this.aBool1552 = false;
 				}
 
-				Class390 class390_9 = sceneobjectmanager_8.aClass390Array2591[this.aByte1549];
-				Class390 class390_10;
+				Ground class390_9 = sceneobjectmanager_8.aClass390Array2591[this.aByte1549];
+				Ground class390_10;
 				if (this.aBool1543) {
 					class390_10 = sceneobjectmanager_8.aClass390Array2607[0];
 				} else {
@@ -204,7 +204,7 @@ public class Class123 {
 						i_2 |= 0x40000;
 					}
 
-					meshrasterizer_11 = objectdefinitions_6.method8012(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.method6709((int) vector3_7.x, (int) vector3_7.z, -2124588555), (int) vector3_7.z, this.aClass456_1545, this.aClass476_1541, 1502121981);
+					meshrasterizer_11 = objectdefinitions_6.method8012(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2124588555), (int) vector3_7.z, this.aClass456_1545, this.aClass476_1541, 1502121981);
 					if (meshrasterizer_11 != null) {
 						if (bool_4) {
 							if (this.aBoolArray1553 == null) {
@@ -232,11 +232,11 @@ public class Class123 {
 						i_2 |= this.aClass528_1544.m();
 					}
 
-					Class452 class452_12 = objectdefinitions_6.method8010(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.method6709((int) vector3_7.x, (int) vector3_7.z, -2029689654), (int) vector3_7.z, bool_4, this.aClass476_1541, 1886483873);
+					Class452 class452_12 = objectdefinitions_6.method8010(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2029689654), (int) vector3_7.z, bool_4, this.aClass476_1541, 1886483873);
 					if (class452_12 != null) {
 						this.aClass528_1544 = meshrasterizer_11 = (MeshRasterizer) class452_12.anObject5443;
 						if (bool_4) {
-							this.aClass282_Sub50_Sub17_1551 = (Class282_Sub50_Sub17) class452_12.anObject5444;
+							this.aClass282_Sub50_Sub17_1551 = (Shadow) class452_12.anObject5444;
 							this.aBoolArray1553 = null;
 							sceneobjectmanager_8.method3426(this.aClass282_Sub50_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, (boolean[]) null, (byte) -31);
 							this.aBool1552 = true;

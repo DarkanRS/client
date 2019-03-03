@@ -3,7 +3,7 @@ import jaggl.OpenGL;
 public class Class164 {
 
 	Class128 aClass128_2032;
-	Class505_Sub1 aClass505_Sub1_2033;
+	OpenGLGraphicalRenderer aClass505_Sub1_2033;
 
 	boolean method2847() {
 		if (this.aClass505_Sub1_2033.aBool8472 && this.aClass505_Sub1_2033.aBool8365 && this.aClass128_2032 == null) {
@@ -69,7 +69,7 @@ public class Class164 {
 		}
 	}
 
-	Class164(Class505_Sub1 class505_sub1_1) {
+	Class164(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.aClass505_Sub1_2033 = class505_sub1_1;
 	}
 

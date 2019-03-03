@@ -51,14 +51,14 @@ public class Class353 {
 			class282_sub29_7.aClass482_7708.append(class282_sub34_3, 64810777);
 		} else {
 			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_3.anInt7853, 1474868024);
-			int i_9 = itemdefinitions_8.anInt5051;
+			int i_9 = itemdefinitions_8.value;
 			if (itemdefinitions_8.stackable == 1) {
 				i_9 *= class282_sub34_3.anInt7852 + 1;
 			}
 
 			for (Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_7.aClass482_7708.head((byte) 33); class282_sub34_10 != null; class282_sub34_10 = (Class282_Sub34) class282_sub29_7.aClass482_7708.next(1444311005)) {
 				itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_10.anInt7853, 1449282948);
-				int i_11 = itemdefinitions_8.anInt5051;
+				int i_11 = itemdefinitions_8.value;
 				if (itemdefinitions_8.stackable == 1) {
 					i_11 *= class282_sub34_10.anInt7852 + 1;
 				}
@@ -75,7 +75,7 @@ public class Class353 {
 	}
 
 	static final void method6210(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class29.method789(icomponentdefinitions_3, interface_4, cs2executor_0, -19478635);

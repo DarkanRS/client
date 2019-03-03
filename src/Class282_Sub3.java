@@ -4,11 +4,11 @@ import jaggl.OpenGL;
 
 public class Class282_Sub3 extends Node {
 
-	Class143 aClass143_7492;
+	OpenGlArrayBufferPointer aClass143_7492;
 	NativeHeapBuffer aNativeHeapBuffer7495;
 	Stream aStream7489;
-	Class390_Sub2 aClass390_Sub2_7488;
-	Class505_Sub1 aClass505_Sub1_7494;
+	OpenGLGround aClass390_Sub2_7488;
+	OpenGLGraphicalRenderer aClass505_Sub1_7494;
 	int anInt7493;
 	float aFloat7490;
 	Class90 aClass90_7487;
@@ -21,7 +21,7 @@ public class Class282_Sub3 extends Node {
 	}
 
 	void method12082(int i_1, int i_2, int i_3) {
-		this.anIntArray7496[i_2 * this.aClass390_Sub2_7488.anInt4776 + i_1] |= 1 << i_3;
+		this.anIntArray7496[i_2 * this.aClass390_Sub2_7488.width + i_1] |= 1 << i_3;
 	}
 
 	void method12083(int i_1, int i_2, int i_3, float f_4) {
@@ -117,7 +117,7 @@ public class Class282_Sub3 extends Node {
 		if (this.aClass505_Sub1_7494.aBool8467) {
 			for (i_5 = 0; i_5 < i_2; i_5++) {
 				i_6 = ints_1[i_5];
-				shorts_7 = this.aClass390_Sub2_7488.aShortArrayArray8653[i_6];
+				shorts_7 = this.aClass390_Sub2_7488.materialIndices[i_6];
 				i_8 = this.anIntArray7496[i_6];
 				if (i_8 != 0 && shorts_7 != null) {
 					i_9 = 0;
@@ -140,7 +140,7 @@ public class Class282_Sub3 extends Node {
 		} else {
 			for (i_5 = 0; i_5 < i_2; i_5++) {
 				i_6 = ints_1[i_5];
-				shorts_7 = this.aClass390_Sub2_7488.aShortArrayArray8653[i_6];
+				shorts_7 = this.aClass390_Sub2_7488.materialIndices[i_6];
 				i_8 = this.anIntArray7496[i_6];
 				if (i_8 != 0 && shorts_7 != null) {
 					i_9 = 0;
@@ -164,8 +164,8 @@ public class Class282_Sub3 extends Node {
 
 		if (i_3 > 0) {
 			this.aClass131_Sub2_7491.method111(5123, class282_sub35_sub1_4.buffer, class282_sub35_sub1_4.index);
-			this.aClass505_Sub1_7494.method13647(this.aClass390_Sub2_7488.aClass143_8668, this.aClass390_Sub2_7488.aClass143_8670, this.aClass143_7492, this.aClass390_Sub2_7488.aClass143_8671);
-			this.aClass505_Sub1_7494.method13609(this.anInt7493, (this.aClass390_Sub2_7488.anInt8652 & 0x7) != 0, (this.aClass390_Sub2_7488.anInt8652 & 0x8) != 0);
+			this.aClass505_Sub1_7494.method13647(this.aClass390_Sub2_7488.vertexPointer, this.aClass390_Sub2_7488.normalPointer, this.aClass143_7492, this.aClass390_Sub2_7488.texturePointer);
+			this.aClass505_Sub1_7494.method13609(this.anInt7493, (this.aClass390_Sub2_7488.flags & 0x7) != 0, (this.aClass390_Sub2_7488.flags & 0x8) != 0);
 			if (this.aClass505_Sub1_7494.aBool8448) {
 				this.aClass505_Sub1_7494.method8476(Integer.MAX_VALUE, this.aClass90_7487);
 			}
@@ -174,7 +174,7 @@ public class Class282_Sub3 extends Node {
 			OpenGL.glPushMatrix();
 			OpenGL.glScalef(1.0F / this.aFloat7490, 1.0F / this.aFloat7490, 1.0F);
 			OpenGL.glMatrixMode(5888);
-			this.aClass505_Sub1_7494.method13647(this.aClass390_Sub2_7488.aClass143_8668, this.aClass390_Sub2_7488.aClass143_8670, this.aClass143_7492, this.aClass390_Sub2_7488.aClass143_8671);
+			this.aClass505_Sub1_7494.method13647(this.aClass390_Sub2_7488.vertexPointer, this.aClass390_Sub2_7488.normalPointer, this.aClass143_7492, this.aClass390_Sub2_7488.texturePointer);
 			this.aClass505_Sub1_7494.method13611(this.aClass131_Sub2_7491, 4, 0, i_3);
 			OpenGL.glMatrixMode(5890);
 			OpenGL.glPopMatrix();
@@ -185,23 +185,23 @@ public class Class282_Sub3 extends Node {
 
 	void method12087(int i_1) {
 		this.aStream7489.method2925();
-		Interface14 interface14_2 = this.aClass505_Sub1_7494.method13600(4, this.aNativeHeapBuffer7495, i_1 * 4, false);
+		Interface14 interface14_2 = this.aClass505_Sub1_7494.createArrayBuffer(4, this.aNativeHeapBuffer7495, i_1 * 4, false);
 		if (interface14_2 instanceof Class135_Sub2) {
 			this.aNativeHeapBuffer7495.method1178();
 		}
 
-		this.aClass143_7492 = new Class143(interface14_2, 5121, 4, 0);
+		this.aClass143_7492 = new OpenGlArrayBufferPointer(interface14_2, 5121, 4, 0);
 		this.aNativeHeapBuffer7495 = null;
 		this.aStream7489 = null;
 	}
 
-	Class282_Sub3(Class390_Sub2 class390_sub2_1, int i_2, int i_3, Class90 class90_4) {
+	Class282_Sub3(OpenGLGround class390_sub2_1, int i_2, int i_3, Class90 class90_4) {
 		this.aClass390_Sub2_7488 = class390_sub2_1;
-		this.aClass505_Sub1_7494 = this.aClass390_Sub2_7488.aClass505_Sub1_8648;
+		this.aClass505_Sub1_7494 = this.aClass390_Sub2_7488.renderer;
 		this.anInt7493 = i_2;
 		this.aFloat7490 = (float) i_3;
 		this.aClass90_7487 = class90_4;
-		this.anIntArray7496 = new int[this.aClass390_Sub2_7488.anInt4776 * this.aClass390_Sub2_7488.anInt4773];
+		this.anIntArray7496 = new int[this.aClass390_Sub2_7488.width * this.aClass390_Sub2_7488.length];
 		this.aClass131_Sub2_7491 = new Class131_Sub2(this.aClass505_Sub1_7494, 5123, (byte[]) null, 1);
 	}
 

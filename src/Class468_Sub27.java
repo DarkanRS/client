@@ -1,11 +1,11 @@
-public class Class468_Sub27 extends Class468 {
+public class Class468_Sub27 extends Preference {
 
 	public Class468_Sub27(int i_1, Class282_Sub54 class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
 	public void method12950(int i_1) {
-		if (this.aClass282_Sub54_5581.aClass468_Sub29_8201.method13050(519629067) == 2 && this.anInt5578 == 2) {
+		if (this.manager.aClass468_Sub29_8201.method13050(519629067) == 2 && this.anInt5578 == 2) {
 			this.anInt5578 = 1;
 		}
 

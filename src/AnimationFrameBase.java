@@ -51,7 +51,7 @@ public class AnimationFrameBase extends Node {
 
 			int i_6;
 			for (Class282_Sub50_Sub7 class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7941((byte) 4); class282_sub50_sub7_5 != null; class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7955(-726833918)) {
-				i_6 = Class282_Sub50_Sub17.method15507(class282_sub50_sub7_5, fontmetrics_3, 943671530);
+				i_6 = Shadow.method15507(class282_sub50_sub7_5, fontmetrics_3, 943671530);
 				if (i_6 > i_4) {
 					i_4 = i_6;
 				}

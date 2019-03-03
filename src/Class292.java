@@ -15,7 +15,7 @@ public class Class292 {
 
 	static final void method5198(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1980153420).members ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1980153420).membersOnly ? 1 : 0;
 	}
 
 	static final void method5199(CS2Executor cs2executor_0, byte b_1) {
@@ -27,7 +27,7 @@ public class Class292 {
 	}
 
 	static final void method5200(boolean bool_0, CS2Executor cs2executor_1, byte b_2) {
-		UnderlayDefinition underlaydefinition_3 = cs2executor_1.aBool7022 ? cs2executor_1.aClass513_6994 : cs2executor_1.aClass513_7007;
+		ClassSomet underlaydefinition_3 = cs2executor_1.aBool7022 ? cs2executor_1.aClass513_6994 : cs2executor_1.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_3.aClass118_5886;
 		Interface interface_5 = underlaydefinition_3.aClass98_5885;
 		if (bool_0) {

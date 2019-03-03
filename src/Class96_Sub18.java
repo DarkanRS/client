@@ -60,11 +60,11 @@ public class Class96_Sub18 extends Class96 {
 			icomponentdefinitions_0.anInt1427 = i_7;
 			icomponentdefinitions_0.aBool1388 = bool_2;
 			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_6, 501470763);
-			icomponentdefinitions_0.anInt1385 = itemdefinitions_8.anInt5058;
-			icomponentdefinitions_0.anInt1336 = itemdefinitions_8.anInt5045;
-			icomponentdefinitions_0.anInt1337 = itemdefinitions_8.anInt5074;
-			icomponentdefinitions_0.anInt1293 = itemdefinitions_8.anInt5063;
-			icomponentdefinitions_0.anInt1334 = itemdefinitions_8.anInt5044;
+			icomponentdefinitions_0.anInt1385 = itemdefinitions_8.modelRotation1;
+			icomponentdefinitions_0.anInt1336 = itemdefinitions_8.modelRotation2;
+			icomponentdefinitions_0.anInt1337 = itemdefinitions_8.unknownInt5;
+			icomponentdefinitions_0.anInt1293 = itemdefinitions_8.modelOffset1;
+			icomponentdefinitions_0.anInt1334 = itemdefinitions_8.modelOffset2;
 			icomponentdefinitions_0.anInt1343 = itemdefinitions_8.modelZoom;
 			icomponentdefinitions_0.anInt1335 = i_3;
 			if (icomponentdefinitions_0.anInt1417 > 0) {

@@ -1,7 +1,7 @@
 import java.awt.EventQueue;
 import java.io.File;
 
-public abstract class Class282_Sub50_Sub17 extends CacheableNode {
+public abstract class Shadow extends CacheableNode {
 
 	static EventQueue anEventQueue10074;
 

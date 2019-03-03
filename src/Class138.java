@@ -16,7 +16,7 @@ public class Class138 {
 		OpenGL.glEndList();
 	}
 
-	Class138(Class505_Sub1 class505_sub1_1, int i_2) {
+	Class138(OpenGLGraphicalRenderer class505_sub1_1, int i_2) {
 		this.anInt1655 = OpenGL.glGenLists(i_2);
 	}
 

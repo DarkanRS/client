@@ -350,7 +350,7 @@ public class NativeLibraryLoader implements Interface36 {
 			int i_7;
 			if (!Class20.aBool162) {
 				for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361)) {
-					i_7 = Class282_Sub50_Sub17.method15507(class282_sub50_sub7_9, fontmetrics_3, 943671530);
+					i_7 = Shadow.method15507(class282_sub50_sub7_9, fontmetrics_3, 943671530);
 					if (i_7 > i_4) {
 						i_4 = i_7;
 					}
@@ -362,7 +362,7 @@ public class NativeLibraryLoader implements Interface36 {
 			} else {
 				for (Class282_Sub50_Sub15 class282_sub50_sub15_6 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_6 != null; class282_sub50_sub15_6 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1603156921)) {
 					if (class282_sub50_sub15_6.anInt9769 == 1) {
-						i_7 = Class282_Sub50_Sub17.method15507((Class282_Sub50_Sub7) class282_sub50_sub15_6.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, fontmetrics_3, 943671530);
+						i_7 = Shadow.method15507((Class282_Sub50_Sub7) class282_sub50_sub15_6.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, fontmetrics_3, 943671530);
 					} else {
 						i_7 = Class163.method2840(class282_sub50_sub15_6, fontmetrics_3, 444800403);
 					}

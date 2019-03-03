@@ -29,8 +29,8 @@ public class Loader extends Applet implements AppletStub {
 	public JFrame clientFrame = null;
 
 	public static void main(String[] arg0) {
-		if (arg0 != null && arg0[0] != null)
-			IP_ADDRESS = "127.0.0.1";
+//		if (arg0 != null && arg0.length > 0 && arg0[0] != null)
+//			IP_ADDRESS = "127.0.0.1";
 		new Loader().doFrame();
 	}
 

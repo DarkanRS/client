@@ -39,7 +39,7 @@ public class Class20 {
 	}
 
 	static final void method741(CS2Executor cs2executor_0, short s_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class306.method5455(icomponentdefinitions_3, interface_4, cs2executor_0, -869216999);
@@ -57,7 +57,7 @@ public class Class20 {
 	}
 
 	static final void method743(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.textures.method12872(-257053432) ? 1 : 0;
 	}
 
 	static void method744(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {

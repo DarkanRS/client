@@ -137,7 +137,7 @@ public class Class345 {
 	}
 
 	static final void method6138(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Node.method5001(icomponentdefinitions_3, cs2executor_0, -1847769999);
 	}
@@ -155,7 +155,7 @@ public class Class345 {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 94);
 		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
-		Class453.method7547(icomponentdefinitions_3, interface_4, cs2executor_0, 1462639259);
+		HashTable.method7547(icomponentdefinitions_3, interface_4, cs2executor_0, 1462639259);
 	}
 
 	static final void method6142(CS2Executor cs2executor_0, int i_1) {

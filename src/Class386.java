@@ -8,7 +8,7 @@ public class Class386 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		UnderlayDefinition underlaydefinition_4;
+		ClassSomet underlaydefinition_4;
 		if (cs2executor_0.aBool7022) {
 			underlaydefinition_4 = cs2executor_0.aClass513_6994;
 		} else {

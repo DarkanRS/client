@@ -1,4 +1,4 @@
-public class UnderlayDefinition {
+public class ClassSomet {
 
 	Interface aClass98_5885;
 	IComponentDefinitions aClass118_5886;

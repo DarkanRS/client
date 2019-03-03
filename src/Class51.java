@@ -180,7 +180,7 @@ public class Class51 implements Interface2 {
 					}
 
 					if (cs2opinfo_4 == CS2OpInfo.aClass522_5959 && cs2executor_2.anInt7002 == 0) {
-						Class282_Sub50_Sub17.method15509(1969627147);
+						Shadow.method15509(1969627147);
 						break;
 					}
 
@@ -196,10 +196,10 @@ public class Class51 implements Interface2 {
 
 				stringbuilder_6.append("").append(Integer.valueOf(cs2opinfo_4.opcode));
 				Class151.method2594(stringbuilder_6.toString(), exception_8, (byte) -32);
-				Class282_Sub50_Sub17.method15509(1831526496);
+				Shadow.method15509(1831526496);
 			}
 		} catch (Exception exception_9) {
-			Class282_Sub50_Sub17.method15509(105300500);
+			Shadow.method15509(105300500);
 		}
 
 	}

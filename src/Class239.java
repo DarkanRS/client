@@ -180,7 +180,7 @@ public class Class239 {
 	public void method4075(int i_1) {
 		byte b_2 = 0;
 		int i_3 = (this.aClass535_2951.anInt7086 + 256 << 2) + b_2;
-		this.aClass505_2944.c(this.aClass535_2951.anInt7085, Class393.preferences.aClass468_Sub30_8194.method13417(-2079793648) == 1 ? i_3 : -1, 0);
+		this.aClass505_2944.c(this.aClass535_2951.anInt7085, Class393.preferences.fog.method13417(-2079793648) == 1 ? i_3 : -1, 0);
 	}
 
 	public Class239(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {

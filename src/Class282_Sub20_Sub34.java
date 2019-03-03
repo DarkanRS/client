@@ -21,7 +21,7 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 
 			for (int i_7 = 0; i_7 < Class316.anInt3670; i_7++) {
 				Class282_Sub11_Sub2.anInt10003 = Integer.MAX_VALUE;
-				Class390.anInt4777 = Integer.MAX_VALUE;
+				Ground.anInt4777 = Integer.MAX_VALUE;
 				Class10.anInt118 = Integer.MAX_VALUE;
 				Class368.anInt4266 = Integer.MAX_VALUE;
 				int i_8 = Class316.anIntArray3672[i_7] * this.anInt9961 + 2048;
@@ -64,17 +64,17 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 						}
 
 						if (i_17 < Class368.anInt4266) {
-							Class282_Sub11_Sub2.anInt10003 = Class390.anInt4777;
-							Class390.anInt4777 = Class10.anInt118;
+							Class282_Sub11_Sub2.anInt10003 = Ground.anInt4777;
+							Ground.anInt4777 = Class10.anInt118;
 							Class10.anInt118 = Class368.anInt4266;
 							Class368.anInt4266 = i_17;
 						} else if (i_17 < Class10.anInt118) {
-							Class282_Sub11_Sub2.anInt10003 = Class390.anInt4777;
-							Class390.anInt4777 = Class10.anInt118;
+							Class282_Sub11_Sub2.anInt10003 = Ground.anInt4777;
+							Ground.anInt4777 = Class10.anInt118;
 							Class10.anInt118 = i_17;
-						} else if (i_17 < Class390.anInt4777) {
-							Class282_Sub11_Sub2.anInt10003 = Class390.anInt4777;
-							Class390.anInt4777 = i_17;
+						} else if (i_17 < Ground.anInt4777) {
+							Class282_Sub11_Sub2.anInt10003 = Ground.anInt4777;
+							Ground.anInt4777 = i_17;
 						} else if (i_17 < Class282_Sub11_Sub2.anInt10003) {
 							Class282_Sub11_Sub2.anInt10003 = i_17;
 						}
@@ -92,7 +92,7 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 					ints_3[i_7] = Class10.anInt118 - Class368.anInt4266;
 					break;
 				case 3:
-					ints_3[i_7] = Class390.anInt4777;
+					ints_3[i_7] = Ground.anInt4777;
 					break;
 				case 4:
 					ints_3[i_7] = Class282_Sub11_Sub2.anInt10003;
@@ -150,7 +150,7 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 	}
 
 	static final void method15416(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class282_Sub11.method12209(icomponentdefinitions_3, interface_4, cs2executor_0, 1467575804);

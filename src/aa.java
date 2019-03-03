@@ -1,4 +1,4 @@
-public class aa extends Class282_Sub50_Sub17 implements Interface40 {
+public class aa extends Shadow implements Interface40 {
 
 	long nativeid;
 

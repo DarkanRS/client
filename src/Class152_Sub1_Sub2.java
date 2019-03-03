@@ -3,7 +3,7 @@ import jaggl.OpenGL;
 public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
 	static int[] anIntArray10125 = new int[4];
-	Class505_Sub1 aClass505_Sub1_10123;
+	OpenGLGraphicalRenderer aClass505_Sub1_10123;
 	Class137_Sub2 aClass137_Sub2_10124;
 
 	Class137_Sub2 method13519() {
@@ -164,7 +164,7 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 		return this.aClass137_Sub2_10124;
 	}
 
-	Class152_Sub1_Sub2(Class505_Sub1 class505_sub1_1, int i_2) {
+	Class152_Sub1_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2) {
 		this.aClass505_Sub1_10123 = class505_sub1_1;
 		this.aClass137_Sub2_10124 = new Class137_Sub2(class505_sub1_1, Class150.aClass150_1949, Class76.aClass76_751, i_2);
 	}

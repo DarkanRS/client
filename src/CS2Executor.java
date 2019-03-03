@@ -25,8 +25,8 @@ public class CS2Executor {
 	int anInt7001 = 0;
 	int anInt7002 = 0;
 	Class509[] aClass509Array7016 = new Class509[50];
-	UnderlayDefinition aClass513_7007 = new UnderlayDefinition();
-	UnderlayDefinition aClass513_6994 = new UnderlayDefinition();
+	ClassSomet aClass513_7007 = new ClassSomet();
+	ClassSomet aClass513_6994 = new ClassSomet();
 	int anInt7015 = 0;
 	int instrPtr = -1;
 

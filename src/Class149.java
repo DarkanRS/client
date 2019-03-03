@@ -28,7 +28,7 @@ public abstract class Class149 {
 	abstract void method2562(int var1, int var2);
 
 	static final void method2563(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 0, cs2executor_0, (byte) -16);
@@ -75,7 +75,7 @@ public abstract class Class149 {
 	}
 
 	static final void method2567(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class463.method7729(icomponentdefinitions_3, interface_4, cs2executor_0, 1735506761);

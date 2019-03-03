@@ -1,11 +1,11 @@
-public class Class468_Sub22 extends Class468 {
+public class Class468_Sub22 extends Preference {
 
 	int method7787() {
 		return 1;
 	}
 
 	public void method12871(byte b_1) {
-		if (this.aClass282_Sub54_5581.method13514((byte) 28) != Game.darkan) {
+		if (this.manager.method13514((byte) 28) != Game.darkan) {
 			this.anInt5578 = 1;
 		}
 
@@ -20,11 +20,11 @@ public class Class468_Sub22 extends Class468 {
 	}
 
 	public boolean method12872(int i_1) {
-		return this.aClass282_Sub54_5581.method13514((byte) 119) == Game.darkan;
+		return this.manager.method13514((byte) 119) == Game.darkan;
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return this.aClass282_Sub54_5581.method13514((byte) 66) == Game.darkan ? (i_1 != 0 && this.aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(288309414) != 1 ? 2 : 1) : 3;
+		return this.manager.method13514((byte) 66) == Game.darkan ? (i_1 != 0 && this.manager.aClass468_Sub17_8200.method12762(288309414) != 1 ? 2 : 1) : 3;
 	}
 
 	public int method12873(int i_1) {
@@ -36,7 +36,7 @@ public class Class468_Sub22 extends Class468 {
 	}
 
 	public int method7784(int i_1) {
-		return this.aClass282_Sub54_5581.method13514((byte) 72) == Game.darkan ? (i_1 != 0 && this.aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(-925093981) != 1 ? 2 : 1) : 3;
+		return this.manager.method13514((byte) 72) == Game.darkan ? (i_1 != 0 && this.manager.aClass468_Sub17_8200.method12762(-925093981) != 1 ? 2 : 1) : 3;
 	}
 
 	void method7780(int i_1) {

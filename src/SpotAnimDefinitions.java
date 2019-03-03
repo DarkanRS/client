@@ -91,14 +91,14 @@ public class SpotAnimDefinitions {
 	}
 
 	public final MeshRasterizer method11228(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, byte b_4, byte b_5) {
-		return this.rasterize(graphicalrenderer_1, i_2, false, (Class390) null, (Class390) null, 0, 0, 0, animation_3, b_4, -2132170713);
+		return this.rasterize(graphicalrenderer_1, i_2, false, (Ground) null, (Ground) null, 0, 0, 0, animation_3, b_4, -2132170713);
 	}
 
 	public final boolean method11230(int i_1) {
 		return this.defaultModel == -1 ? true : this.aClass515_6973.aClass317_5889.load(this.defaultModel, 0);
 	}
 
-	public final MeshRasterizer rasterize(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, Class390 class390_4, Class390 class390_5, int i_6, int i_7, int i_8, Animation animation_9, byte b_10, int i_11) {
+	public final MeshRasterizer rasterize(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, Ground class390_4, Ground class390_5, int i_6, int i_7, int i_8, Animation animation_9, byte b_10, int i_11) {
 		int i_12 = i_2;
 		bool_3 &= this.aByte6982 != 0;
 		if (animation_9 != null) {

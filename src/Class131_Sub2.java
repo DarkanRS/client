@@ -16,7 +16,7 @@ public class Class131_Sub2 extends Class131 implements Interface15 {
 		return 0;
 	}
 
-	Class131_Sub2(Class505_Sub1 class505_sub1_1, int i_2, byte[] bytes_3, int i_4) {
+	Class131_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4) {
 		super(class505_sub1_1, bytes_3, i_4);
 	}
 

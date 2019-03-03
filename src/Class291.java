@@ -721,7 +721,7 @@ public class Class291 {
 	}
 
 	static int method5164(Interface22 interface22_0, int i_1, int i_2, int i_3) {
-		OverlayDef overlaydef_4 = aClass536_3482.method11475(i_1, (byte) 0);
+		OverlayDef overlaydef_4 = aClass536_3482.getOverlayDef(i_1, (byte) 0);
 		if (overlaydef_4 == null) {
 			return 0;
 		} else {

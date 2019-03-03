@@ -152,7 +152,7 @@ public abstract class Class152 {
 
 		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
 		if (client.anInt7349 != -1) {
-			UnderlayDefinition.method8777(client.anInt7349, (byte) -80);
+			ClassSomet.method8777(client.anInt7349, (byte) -80);
 		}
 
 		int i_2;

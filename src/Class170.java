@@ -19,7 +19,7 @@ public class Class170 {
 	int anInt2111 = 0;
 	LinkedNodeList aClass473_2108 = new LinkedNodeList();
 	Class137_Sub1[] aClass137_Sub1Array2106 = new Class137_Sub1[2];
-	Class505_Sub1 aClass505_Sub1_2112;
+	OpenGLGraphicalRenderer aClass505_Sub1_2112;
 	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2092;
 	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2095;
 	Class158_Sub1_Sub4 aClass158_Sub1_Sub4_2101;
@@ -273,7 +273,7 @@ public class Class170 {
 		this.anInt2111 = i_1;
 	}
 
-	Class170(Class505_Sub1 class505_sub1_1) {
+	Class170(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.aClass76_2102 = Class76.aClass76_751;
 		this.aClass505_Sub1_2112 = class505_sub1_1;
 		if (this.aClass505_Sub1_2112.aBool8472 && this.aClass505_Sub1_2112.aBool8401) {

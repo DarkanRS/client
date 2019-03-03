@@ -1,4 +1,4 @@
-public class Class468_Sub7 extends Class468 {
+public class Class468_Sub7 extends Preference {
 
 	public Class468_Sub7(int i_1, Class282_Sub54 class282_sub54_2) {
 		super(i_1, class282_sub54_2);
@@ -36,15 +36,15 @@ public class Class468_Sub7 extends Class468 {
 	}
 
 	int method7786() {
-		return this.aClass282_Sub54_5581.currentToolkit.method12777(284817815) && Class520.method11162(this.aClass282_Sub54_5581.currentToolkit.getValue(-1694677300), (byte) -33) ? 1 : 0;
+		return this.manager.currentToolkit.method12777(284817815) && Class520.method11162(this.manager.currentToolkit.getValue(-1694677300), (byte) -33) ? 1 : 0;
 	}
 
 	int method7787() {
-		return this.aClass282_Sub54_5581.currentToolkit.method12777(284817815) && Class520.method11162(this.aClass282_Sub54_5581.currentToolkit.getValue(1892648668), (byte) -118) ? 1 : 0;
+		return this.manager.currentToolkit.method12777(284817815) && Class520.method11162(this.manager.currentToolkit.getValue(1892648668), (byte) -118) ? 1 : 0;
 	}
 
 	int method7781(int i_1) {
-		return this.aClass282_Sub54_5581.currentToolkit.method12777(284817815) && Class520.method11162(this.aClass282_Sub54_5581.currentToolkit.getValue(1685029630), (byte) -110) ? 1 : 0;
+		return this.manager.currentToolkit.method12777(284817815) && Class520.method11162(this.manager.currentToolkit.getValue(1685029630), (byte) -110) ? 1 : 0;
 	}
 
 	public int method7784(int i_1) {

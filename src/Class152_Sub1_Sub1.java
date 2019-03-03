@@ -3,7 +3,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 	static int[] anIntArray10082 = new int[6];
 	static int[][] anIntArrayArray10076 = new int[6][];
 	Class137_Sub2 aClass137_Sub2_10077;
-	Class505_Sub1 aClass505_Sub1_10079;
+	OpenGLGraphicalRenderer aClass505_Sub1_10079;
 	int anInt10080;
 	int anInt10085;
 	int anInt10078;
@@ -50,7 +50,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 		return this.aClass137_Sub2_10077;
 	}
 
-	Class152_Sub1_Sub1(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	Class152_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		this.aClass505_Sub1_10079 = class505_sub1_1;
 		this.anInt10080 = i_4;
 		this.anInt10085 = i_5;

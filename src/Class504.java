@@ -26,7 +26,7 @@ public abstract class Class504 {
 					i_6 = i_2 + 1;
 				}
 
-				return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1489528047).aClass390Array2591[i_6].method6709(i_0, i_1, 1879647652);
+				return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1489528047).aClass390Array2591[i_6].averageHeight(i_0, i_1, 1879647652);
 			} else {
 				return 0;
 			}

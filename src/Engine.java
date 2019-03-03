@@ -143,7 +143,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 
 		try {
-			Class282_Sub50_Sub17.anEventQueue10074 = Toolkit.getDefaultToolkit().getSystemEventQueue();
+			Shadow.anEventQueue10074 = Toolkit.getDefaultToolkit().getSystemEventQueue();
 		} catch (Throwable throwable_16) {
 			;
 		}
@@ -932,7 +932,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	static final void method4776(CS2Executor cs2executor_0, int i_1) {
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 0, -1214034115);
+		Class393.preferences.setValue(Class393.preferences.graphics, 0, -1214034115);
 		Class190.savePreferences((byte) 63);
 		client.aBool7175 = false;
 	}

@@ -205,9 +205,9 @@ public class IdentikitDefinition implements Definition {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1594974983);
 		int i_4;
-		if (itemdefinitions_3.aBool5101) {
-			i_4 = itemdefinitions_3.anInt5102;
-		} else if (itemdefinitions_3.members) {
+		if (itemdefinitions_3.unknownBool1) {
+			i_4 = itemdefinitions_3.unknownInt26;
+		} else if (itemdefinitions_3.membersOnly) {
 			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880;
 		} else {
 			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881;

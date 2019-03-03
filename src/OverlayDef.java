@@ -10,9 +10,9 @@ public class OverlayDef {
 	public int anInt7057 = 512;
 	public boolean aBool7059 = true;
 	public boolean aBool7061 = false;
-	public int anInt7051 = 1190717;
-	public int anInt7063 = -2069119040;
-	public int anInt7064 = 255;
+	public int waterColour = 1190717;
+	public int waterScale = 512;
+	public int waterIntensity = 255;
 	public int anInt7065 = 63;
 	public int anInt7055 = 0;
 	public int anInt7067 = 64;
@@ -57,11 +57,11 @@ public class OverlayDef {
 		} else if (i_2 == 12) {
 			this.aBool7061 = true;
 		} else if (i_2 == 13) {
-			this.anInt7051 = rsbytebuffer_1.read24BitUnsignedInteger();
+			this.waterColour = rsbytebuffer_1.read24BitUnsignedInteger();
 		} else if (i_2 == 14) {
-			this.anInt7063 = (rsbytebuffer_1.readUnsignedByte() << 2) * 2048044799;
+			this.waterScale = (rsbytebuffer_1.readUnsignedByte() << 2);
 		} else if (i_2 == 16) {
-			this.anInt7064 = rsbytebuffer_1.readUnsignedByte();
+			this.waterIntensity = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 20) {
 			this.anInt7065 = rsbytebuffer_1.readUnsignedShort();
 		} else if (i_2 == 21) {

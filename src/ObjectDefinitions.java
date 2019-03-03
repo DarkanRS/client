@@ -631,7 +631,7 @@ public class ObjectDefinitions {
 		return this.anIntArray5659;
 	}
 
-	public final synchronized Class452 method8010(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Class390 class390_5, Class390 class390_6, int i_7, int i_8, int i_9, boolean bool_10, Class476 class476_11, int i_12) {
+	public final synchronized Class452 method8010(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, boolean bool_10, Class476 class476_11, int i_12) {
 		if (Class485.method8201(i_3, -159499065)) {
 			i_3 = SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
 		}
@@ -670,11 +670,11 @@ public class ObjectDefinitions {
 		}
 
 		MeshRasterizer meshrasterizer_24 = (MeshRasterizer) (class452_16 != null ? class452_16.anObject5443 : null);
-		Class282_Sub50_Sub17 class282_sub50_sub17_18 = null;
+		Shadow class282_sub50_sub17_18 = null;
 		if (meshrasterizer_24 != null && graphicalrenderer_1.method8452(meshrasterizer_24.m(), i_15) == 0) {
-			class282_sub50_sub17_18 = (Class282_Sub50_Sub17) class452_16.anObject5444;
+			class282_sub50_sub17_18 = (Shadow) class452_16.anObject5444;
 			if (bool_10 && class282_sub50_sub17_18 == null) {
-				class282_sub50_sub17_18 = (Class282_Sub50_Sub17) (class452_16.anObject5444 = meshrasterizer_24.ga((Class282_Sub50_Sub17) null));
+				class282_sub50_sub17_18 = (Shadow) (class452_16.anObject5444 = meshrasterizer_24.ga((Shadow) null));
 			}
 		} else {
 			if (meshrasterizer_24 != null) {
@@ -696,7 +696,7 @@ public class ObjectDefinitions {
 			}
 
 			if (bool_10) {
-				class282_sub50_sub17_18 = meshrasterizer_24.ga((Class282_Sub50_Sub17) null);
+				class282_sub50_sub17_18 = meshrasterizer_24.ga((Shadow) null);
 			}
 
 			meshrasterizer_24.KA(i_15);
@@ -729,7 +729,7 @@ public class ObjectDefinitions {
 		return this.loader.aClass452_5620;
 	}
 
-	public final synchronized MeshRasterizer method8012(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Class390 class390_5, Class390 class390_6, int i_7, int i_8, int i_9, Animation animation_10, Class476 class476_11, int i_12) {
+	public final synchronized MeshRasterizer method8012(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, Animation animation_10, Class476 class476_11, int i_12) {
 		if (Class485.method8201(i_3, -159499065)) {
 			i_3 = SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
 		}

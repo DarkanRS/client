@@ -102,7 +102,7 @@ public class Class159 {
 					icomponentdefinitions_7.aClass118Array1439[i_3] = icomponentdefinitions_12;
 				}
 
-				UnderlayDefinition underlaydefinition_13;
+				ClassSomet underlaydefinition_13;
 				if (bool_4) {
 					underlaydefinition_13 = cs2executor_5.aClass513_6994;
 				} else {

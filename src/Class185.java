@@ -127,14 +127,14 @@ public class Class185 {
 	}
 
 	static final void method3079(CS2Executor cs2executor_0, int i_1) {
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -1510347468);
+		Class393.preferences.setValue(Class393.preferences.textures, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -1510347468);
 		Class190.savePreferences((byte) 119);
 		Class94.method1589((short) 255);
 		client.aBool7175 = false;
 	}
 
 	static final void method3080(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 2, cs2executor_0, (byte) -57);

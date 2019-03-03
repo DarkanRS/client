@@ -22,7 +22,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		this.anInt10420 = 32 + (int) (Math.random() * 4.0D);
 		this.anInt10421 = 3 + (int) (Math.random() * 2.0D);
 		this.anInt10413 = 16 + (int) (Math.random() * 3.0D);
-		if (Class393.preferences.aClass468_Sub22_8213.method12873(1014790347) == 1) {
+		if (Class393.preferences.textures.method12873(1014790347) == 1) {
 			this.anInt10417 = (int) (Math.random() * 10.0D);
 		} else {
 			this.anInt10417 = (int) (Math.random() * 20.0D);
@@ -124,20 +124,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_7 = false;
 			boolean bool_8 = false;
 			boolean bool_9 = false;
-			Class390 class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
 			int i_11 = 599728753 * this.anInt10418 * -1885839727 << 1;
 			int i_13 = -i_11 / 2;
 			int i_14 = -i_11 / 2;
-			int i_15 = class390_10.method6709((int) vector3_2.x + i_13, (int) vector3_2.z + i_14, 2105992060);
+			int i_15 = class390_10.averageHeight((int) vector3_2.x + i_13, (int) vector3_2.z + i_14, 2105992060);
 			int i_16 = i_11 / 2;
 			int i_17 = -i_11 / 2;
-			int i_18 = class390_10.method6709((int) vector3_2.x + i_16, i_17 + (int) vector3_2.z, 1157857956);
+			int i_18 = class390_10.averageHeight((int) vector3_2.x + i_16, i_17 + (int) vector3_2.z, 1157857956);
 			int i_19 = -i_11 / 2;
 			int i_20 = i_11 / 2;
-			int i_21 = class390_10.method6709((int) vector3_2.x + i_19, i_20 + (int) vector3_2.z, -102791110);
+			int i_21 = class390_10.averageHeight((int) vector3_2.x + i_19, i_20 + (int) vector3_2.z, -102791110);
 			int i_22 = i_11 / 2;
 			int i_23 = i_11 / 2;
-			int i_24 = class390_10.method6709((int) vector3_2.x + i_22, (int) vector3_2.z + i_23, 63414596);
+			int i_24 = class390_10.averageHeight((int) vector3_2.x + i_22, (int) vector3_2.z + i_23, 63414596);
 			int i_25 = i_15 < i_18 ? i_15 : i_18;
 			int i_26 = i_21 < i_24 ? i_21 : i_24;
 			int i_27 = i_18 < i_24 ? i_18 : i_24;
@@ -217,19 +217,19 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 
 	int method12996(int i_1) {
 		ItemDefinitions itemdefinitions_2 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 688788238);
-		int i_3 = itemdefinitions_2.anInt5098;
+		int i_3 = itemdefinitions_2.unknownInt29;
 		ItemDefinitions itemdefinitions_4;
 		if (this.anInt10411 != -1) {
 			itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411, 448963833);
-			if (itemdefinitions_4.anInt5098 > i_3) {
-				i_3 = itemdefinitions_4.anInt5098;
+			if (itemdefinitions_4.unknownInt29 > i_3) {
+				i_3 = itemdefinitions_4.unknownInt29;
 			}
 		}
 
 		if (this.anInt10415 != -1) {
 			itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415, 2069769929);
-			if (itemdefinitions_4.anInt5098 > i_3) {
-				i_3 = itemdefinitions_4.anInt5098;
+			if (itemdefinitions_4.unknownInt29 > i_3) {
+				i_3 = itemdefinitions_4.unknownInt29;
 			}
 		}
 
@@ -271,20 +271,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_7 = false;
 			boolean bool_8 = false;
 			boolean bool_9 = false;
-			Class390 class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
 			int i_11 = 599728753 * this.anInt10418 * -1885839727 << 1;
 			int i_13 = -i_11 / 2;
 			int i_14 = -i_11 / 2;
-			int i_15 = class390_10.method6709((int) vector3_2.x + i_13, (int) vector3_2.z + i_14, 1641785657);
+			int i_15 = class390_10.averageHeight((int) vector3_2.x + i_13, (int) vector3_2.z + i_14, 1641785657);
 			int i_16 = i_11 / 2;
 			int i_17 = -i_11 / 2;
-			int i_18 = class390_10.method6709((int) vector3_2.x + i_16, i_17 + (int) vector3_2.z, -450358171);
+			int i_18 = class390_10.averageHeight((int) vector3_2.x + i_16, i_17 + (int) vector3_2.z, -450358171);
 			int i_19 = -i_11 / 2;
 			int i_20 = i_11 / 2;
-			int i_21 = class390_10.method6709((int) vector3_2.x + i_19, i_20 + (int) vector3_2.z, -1463134594);
+			int i_21 = class390_10.averageHeight((int) vector3_2.x + i_19, i_20 + (int) vector3_2.z, -1463134594);
 			int i_22 = i_11 / 2;
 			int i_23 = i_11 / 2;
-			int i_24 = class390_10.method6709((int) vector3_2.x + i_22, (int) vector3_2.z + i_23, -1500462449);
+			int i_24 = class390_10.averageHeight((int) vector3_2.x + i_22, (int) vector3_2.z + i_23, -1500462449);
 			int i_25 = i_15 < i_18 ? i_15 : i_18;
 			int i_26 = i_21 < i_24 ? i_21 : i_24;
 			int i_27 = i_18 < i_24 ? i_18 : i_24;
@@ -379,20 +379,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_7 = false;
 			boolean bool_8 = false;
 			boolean bool_9 = false;
-			Class390 class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
 			int i_11 = 599728753 * this.anInt10418 * -1885839727 << 1;
 			int i_13 = -i_11 / 2;
 			int i_14 = -i_11 / 2;
-			int i_15 = class390_10.method6709((int) vector3_2.x + i_13, (int) vector3_2.z + i_14, 1551660618);
+			int i_15 = class390_10.averageHeight((int) vector3_2.x + i_13, (int) vector3_2.z + i_14, 1551660618);
 			int i_16 = i_11 / 2;
 			int i_17 = -i_11 / 2;
-			int i_18 = class390_10.method6709((int) vector3_2.x + i_16, i_17 + (int) vector3_2.z, 250380296);
+			int i_18 = class390_10.averageHeight((int) vector3_2.x + i_16, i_17 + (int) vector3_2.z, 250380296);
 			int i_19 = -i_11 / 2;
 			int i_20 = i_11 / 2;
-			int i_21 = class390_10.method6709((int) vector3_2.x + i_19, i_20 + (int) vector3_2.z, -268709026);
+			int i_21 = class390_10.averageHeight((int) vector3_2.x + i_19, i_20 + (int) vector3_2.z, -268709026);
 			int i_22 = i_11 / 2;
 			int i_23 = i_11 / 2;
-			int i_24 = class390_10.method6709((int) vector3_2.x + i_22, (int) vector3_2.z + i_23, 1481182627);
+			int i_24 = class390_10.averageHeight((int) vector3_2.x + i_22, (int) vector3_2.z + i_23, 1481182627);
 			int i_25 = i_15 < i_18 ? i_15 : i_18;
 			int i_26 = i_21 < i_24 ? i_21 : i_24;
 			int i_27 = i_18 < i_24 ? i_18 : i_24;
@@ -527,20 +527,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_8 = false;
 			boolean bool_9 = false;
 			boolean bool_10 = false;
-			Class390 class390_11 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_11 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
 			int i_12 = this.anInt10418 << 1;
 			int i_14 = -i_12 / 2;
 			int i_15 = -i_12 / 2;
-			int i_16 = class390_11.method6709(i_14 + (int) vector3_3.x, i_15 + (int) vector3_3.z, 924924615);
+			int i_16 = class390_11.averageHeight(i_14 + (int) vector3_3.x, i_15 + (int) vector3_3.z, 924924615);
 			int i_17 = i_12 / 2;
 			int i_18 = -i_12 / 2;
-			int i_19 = class390_11.method6709(i_17 + (int) vector3_3.x, i_18 + (int) vector3_3.z, 533438354);
+			int i_19 = class390_11.averageHeight(i_17 + (int) vector3_3.x, i_18 + (int) vector3_3.z, 533438354);
 			int i_20 = -i_12 / 2;
 			int i_21 = i_12 / 2;
-			int i_22 = class390_11.method6709(i_20 + (int) vector3_3.x, i_21 + (int) vector3_3.z, 656324571);
+			int i_22 = class390_11.averageHeight(i_20 + (int) vector3_3.x, i_21 + (int) vector3_3.z, 656324571);
 			int i_23 = i_12 / 2;
 			int i_24 = i_12 / 2;
-			int i_25 = class390_11.method6709(i_23 + (int) vector3_3.x, i_24 + (int) vector3_3.z, -1831727640);
+			int i_25 = class390_11.averageHeight(i_23 + (int) vector3_3.x, i_24 + (int) vector3_3.z, -1831727640);
 			int i_26 = i_16 < i_19 ? i_16 : i_19;
 			int i_27 = i_22 < i_25 ? i_22 : i_25;
 			int i_28 = i_19 < i_25 ? i_19 : i_25;

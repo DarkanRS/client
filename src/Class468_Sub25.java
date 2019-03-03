@@ -1,4 +1,4 @@
-public class Class468_Sub25 extends Class468 {
+public class Class468_Sub25 extends Preference {
 
 	int method7787() {
 		return 0;

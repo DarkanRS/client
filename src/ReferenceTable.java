@@ -4,9 +4,9 @@ public class ReferenceTable {
 	int numValidArchives;
 	int[] validArchiveIds;
 	int archiveCount;
-	int[] unknown;
-	byte[][] whirlpool;
 	int[] crcs;
+	byte[][] whirlpool;
+	int[] versions;
 	int[] validFileIdSizes;
 	int[][] validFileIds;
 	int[] fileCounts;
@@ -14,42 +14,42 @@ public class ReferenceTable {
 	NamedFileReference archiveName;
 	int[][] fileNameHashes;
 	NamedFileReference[] namedFiles;
-	int crc;
-	byte[] aByteArray3734;
+	int headerCrc;
+	byte[] headerWhirlpool;
 
 	void decodeHeader(byte[] bytes_1) {
-		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(Class282_Sub17_Sub6.method15438(bytes_1, (byte) 90));
-		int i_3 = rsbytebuffer_2.readUnsignedByte();
-		if (i_3 >= 5 && i_3 <= 7) {
-			if (i_3 >= 6) {
-				this.revision = rsbytebuffer_2.readInt();
+		RsByteBuffer stream = new RsByteBuffer(Class282_Sub17_Sub6.method15438(bytes_1, (byte) 90));
+		int protocol = stream.readUnsignedByte();
+		if (protocol >= 5 && protocol <= 7) {
+			if (protocol >= 6) {
+				this.revision = stream.readInt();
 			} else {
 				this.revision = 0;
 			}
 
-			int i_4 = rsbytebuffer_2.readUnsignedByte();
-			boolean bool_5 = (i_4 & 0x1) != 0;
-			boolean bool_6 = (i_4 & 0x2) != 0;
-			if (i_3 >= 7) {
-				this.numValidArchives = rsbytebuffer_2.readUnsignedBigSmart();
+			int flags = stream.readUnsignedByte();
+			boolean named = (flags & 0x1) != 0;
+			boolean usesWhirpool = (flags & 0x2) != 0;
+			if (protocol >= 7) {
+				this.numValidArchives = stream.readUnsignedBigSmart();
 			} else {
-				this.numValidArchives = rsbytebuffer_2.readUnsignedShort();
+				this.numValidArchives = stream.readUnsignedShort();
 			}
 
 			int i_7 = 0;
 			int i_8 = -1;
 			this.validArchiveIds = new int[this.numValidArchives];
 			int i_9;
-			if (i_3 >= 7) {
+			if (protocol >= 7) {
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-					this.validArchiveIds[i_9] = i_7 += rsbytebuffer_2.readUnsignedBigSmart();
+					this.validArchiveIds[i_9] = i_7 += stream.readUnsignedBigSmart();
 					if (this.validArchiveIds[i_9] > i_8) {
 						i_8 = this.validArchiveIds[i_9];
 					}
 				}
 			} else {
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-					this.validArchiveIds[i_9] = i_7 += rsbytebuffer_2.readUnsignedShort();
+					this.validArchiveIds[i_9] = i_7 += stream.readUnsignedShort();
 					if (this.validArchiveIds[i_9] > i_8) {
 						i_8 = this.validArchiveIds[i_9];
 					}
@@ -57,16 +57,16 @@ public class ReferenceTable {
 			}
 
 			this.archiveCount = i_8 + 1;
-			this.unknown = new int[this.archiveCount];
-			if (bool_6) {
+			this.crcs = new int[this.archiveCount];
+			if (usesWhirpool) {
 				this.whirlpool = new byte[this.archiveCount][];
 			}
 
-			this.crcs = new int[this.archiveCount];
+			this.versions = new int[this.archiveCount];
 			this.validFileIdSizes = new int[this.archiveCount];
 			this.validFileIds = new int[this.archiveCount][];
 			this.fileCounts = new int[this.archiveCount];
-			if (bool_5) {
+			if (named) {
 				this.nameHashes = new int[this.archiveCount];
 
 				for (i_9 = 0; i_9 < this.archiveCount; i_9++) {
@@ -74,26 +74,26 @@ public class ReferenceTable {
 				}
 
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-					this.nameHashes[this.validArchiveIds[i_9]] = rsbytebuffer_2.readInt();
+					this.nameHashes[this.validArchiveIds[i_9]] = stream.readInt();
 				}
 
 				this.archiveName = new NamedFileReference(this.nameHashes);
 			}
 
 			for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-				this.unknown[this.validArchiveIds[i_9]] = rsbytebuffer_2.readInt();
+				this.crcs[this.validArchiveIds[i_9]] = stream.readInt();
 			}
 
-			if (bool_6) {
+			if (usesWhirpool) {
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
 					byte[] bytes_15 = new byte[64];
-					rsbytebuffer_2.readBytes(bytes_15, 0, 64, 612047318);
+					stream.readBytes(bytes_15, 0, 64, 612047318);
 					this.whirlpool[this.validArchiveIds[i_9]] = bytes_15;
 				}
 			}
 
 			for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-				this.crcs[this.validArchiveIds[i_9]] = rsbytebuffer_2.readInt();
+				this.versions[this.validArchiveIds[i_9]] = stream.readInt();
 			}
 
 			int i_10;
@@ -101,9 +101,9 @@ public class ReferenceTable {
 			int i_12;
 			int i_13;
 			int i_14;
-			if (i_3 >= 7) {
+			if (protocol >= 7) {
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-					this.validFileIdSizes[this.validArchiveIds[i_9]] = rsbytebuffer_2.readUnsignedBigSmart();
+					this.validFileIdSizes[this.validArchiveIds[i_9]] = stream.readUnsignedBigSmart();
 				}
 
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
@@ -114,7 +114,7 @@ public class ReferenceTable {
 					this.validFileIds[i_10] = new int[i_11];
 
 					for (i_13 = 0; i_13 < i_11; i_13++) {
-						i_14 = this.validFileIds[i_10][i_13] = i_7 += rsbytebuffer_2.readUnsignedBigSmart();
+						i_14 = this.validFileIds[i_10][i_13] = i_7 += stream.readUnsignedBigSmart();
 						if (i_14 > i_12) {
 							i_12 = i_14;
 						}
@@ -127,7 +127,7 @@ public class ReferenceTable {
 				}
 			} else {
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
-					this.validFileIdSizes[this.validArchiveIds[i_9]] = rsbytebuffer_2.readUnsignedShort();
+					this.validFileIdSizes[this.validArchiveIds[i_9]] = stream.readUnsignedShort();
 				}
 
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
@@ -138,7 +138,7 @@ public class ReferenceTable {
 					this.validFileIds[i_10] = new int[i_11];
 
 					for (i_13 = 0; i_13 < i_11; i_13++) {
-						i_14 = this.validFileIds[i_10][i_13] = i_7 += rsbytebuffer_2.readUnsignedShort();
+						i_14 = this.validFileIds[i_10][i_13] = i_7 += stream.readUnsignedShort();
 						if (i_14 > i_12) {
 							i_12 = i_14;
 						}
@@ -151,7 +151,7 @@ public class ReferenceTable {
 				}
 			}
 
-			if (bool_5) {
+			if (named) {
 				this.fileNameHashes = new int[i_8 + 1][];
 				this.namedFiles = new NamedFileReference[i_8 + 1];
 
@@ -171,7 +171,7 @@ public class ReferenceTable {
 							i_13 = i_12;
 						}
 
-						this.fileNameHashes[i_10][i_13] = rsbytebuffer_2.readInt();
+						this.fileNameHashes[i_10][i_13] = stream.readInt();
 					}
 
 					this.namedFiles[i_10] = new NamedFileReference(this.fileNameHashes[i_10]);
@@ -183,26 +183,26 @@ public class ReferenceTable {
 		}
 	}
 
-	ReferenceTable(byte[] bytes_1, int i_2, byte[] bytes_3) {
-		this.crc = Class285.getCRC(bytes_1, bytes_1.length);
-		if (i_2 != this.crc) {
+	ReferenceTable(byte[] data, int crcCheck, byte[] whirlpool) {
+		this.headerCrc = Class285.getCRC(data, data.length);
+		if (crcCheck != this.headerCrc) {
 			throw new RuntimeException();
 		} else {
-			if (bytes_3 != null) {
-				if (bytes_3.length != 64) {
+			if (whirlpool != null) {
+				if (whirlpool.length != 64) {
 					throw new RuntimeException();
 				}
 
-				this.aByteArray3734 = Class361.method6273(bytes_1, 0, bytes_1.length);
+				this.headerWhirlpool = Class361.getWhirlpool(data, 0, data.length);
 
-				for (int i_4 = 0; i_4 < 64; i_4++) {
-					if (bytes_3[i_4] != this.aByteArray3734[i_4]) {
+				for (int i = 0; i < 64; i++) {
+					if (whirlpool[i] != this.headerWhirlpool[i]) {
 						throw new RuntimeException();
 					}
 				}
 			}
 
-			this.decodeHeader(bytes_1);
+			this.decodeHeader(data);
 		}
 	}
 
@@ -225,7 +225,7 @@ public class ReferenceTable {
 
 	static final void method5765(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 200987173).anInt5064;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 200987173).equipType;
 	}
 
 	static final void method5766(CS2Executor cs2executor_0, int i_1) {

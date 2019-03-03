@@ -81,7 +81,7 @@ public class Class107 {
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
 		CS2Script cs2script_5 = Class225_Sub1.method12792(class397_0, i_1, i_2, 856735933);
 		if (cs2script_5 == null) {
-			Class282_Sub50_Sub17.method15509(282059094);
+			Shadow.method15509(282059094);
 		} else {
 			cs2executor_3.intLocals = new int[cs2script_5.intLocalsCount];
 			cs2executor_3.objectLocals = new Object[cs2script_5.stringLocalsCount];

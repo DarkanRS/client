@@ -1,19 +1,19 @@
 import java.util.Calendar;
 
-public abstract class Class468 {
+public abstract class Preference {
 
 	protected int anInt5578;
-	protected Class282_Sub54 aClass282_Sub54_5581;
+	protected Class282_Sub54 manager;
 
-	Class468(int i_1, Class282_Sub54 class282_sub54_2) {
+	Preference(int i_1, Class282_Sub54 class282_sub54_2) {
 		this.anInt5578 = i_1;
-		this.aClass282_Sub54_5581 = class282_sub54_2;
+		this.manager = class282_sub54_2;
 	}
 
 	abstract void method7780(int var1);
 
-	Class468(Class282_Sub54 class282_sub54_1) {
-		this.aClass282_Sub54_5581 = class282_sub54_1;
+	Preference(Class282_Sub54 class282_sub54_1) {
+		this.manager = class282_sub54_1;
 		this.anInt5578 = this.method7781(1882816731);
 	}
 

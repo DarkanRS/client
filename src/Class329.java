@@ -3,8 +3,8 @@ import java.awt.Frame;
 public class Class329 {
 
 	public byte[][][] aByteArrayArrayArray3788;
-	static int[] anIntArray3814 = new int[] { 2, 1, 1, 1, 2, 2, 2, 1, 3, 3, 3, 2, 0, 4, 0 };
-	static int[] anIntArray3829 = new int[] { 0, 1, 2, 2, 1, 1, 2, 3, 1, 3, 3, 4, 2, 0, 4 };
+	static int[] OVERLAY_FACE_COUNT = new int[] { 2, 1, 1, 1, 2, 2, 2, 1, 3, 3, 3, 2, 0, 4, 0 };
+	static int[] UNDERLAY_FACE_COUNT = new int[] { 0, 1, 2, 2, 1, 1, 2, 3, 1, 3, 3, 4, 2, 0, 4 };
 	static int[] anIntArray3826 = new int[] { 4, 2, 1, 1, 2, 2, 3, 1, 3, 3, 3, 2, 0 };
 	static int[] anIntArray3847 = new int[] { 0, 2, 2, 2, 1, 1, 3, 3, 1, 3, 3, 4, 4 };
 	static int[] anIntArray3778 = new int[] { 4, 2, 1, 1, 2, 2, 3, 1, 3, 3, 3, 2, 0 };
@@ -32,8 +32,8 @@ public class Class329 {
 	int[] anIntArray3797;
 	int[] anIntArray3798;
 	int[] anIntArray3799;
-	int anInt3855;
-	int anInt3856;
+	int underlayFaceCount;
+	int overlayFaceCount;
 	int anInt3781;
 	int anInt3848;
 	int anInt3844;
@@ -49,7 +49,7 @@ public class Class329 {
 	int anInt3850;
 	int anInt3849;
 	public int anInt3809 = 0;
-	public boolean aBool3835 = false;
+	public boolean highDetailWater = false;
 	public boolean aBool3780 = false;
 	public boolean aBool3820 = false;
 	public boolean aBool3782 = false;
@@ -68,11 +68,11 @@ public class Class329 {
 	Class536 aClass536_3834;
 	UnderlayIndexLoader aClass479_3789;
 	protected RegionMap regionMap;
-	byte[][][] underlayColors;
-	byte[][][] overlayColors;
-	byte[][][] val49ArrDiv4;
-	byte[][][] val49ArrAnd0x3;
-	public int[][][] unk0Data;
+	byte[][][] underlayIds;
+	byte[][][] overlayIds;
+	byte[][][] overlayPathShapes;
+	byte[][][] overlayRotations;
+	public int[][][] tileHeights;
 	protected byte[][][] aByteArrayArrayArray3794;
 	boolean aBool3854;
 
@@ -80,7 +80,7 @@ public class Class329 {
 		this.aBool3773 = true;
 	}
 
-	public final void method5837(GraphicalRenderer graphicalrenderer_1, Class390 class390_2, Class390 class390_3, int i_4) {
+	public final void method5837(GraphicalRenderer graphicalrenderer_1, Ground class390_2, Ground class390_3, int i_4) {
 		int[][] ints_5 = new int[this.maxX][this.maxY];
 		if (this.anIntArray3795 == null || this.anIntArray3795.length != this.maxY) {
 			this.anIntArray3795 = new int[this.maxY];
@@ -109,7 +109,7 @@ public class Class329 {
 				for (i_8 = 0; i_8 < this.maxY; i_8++) {
 					i_9 = i_7 + 5;
 					if (i_9 < this.maxX) {
-						i_10 = this.underlayColors[i_6][i_9][i_8] & 0xff;
+						i_10 = this.underlayIds[i_6][i_9][i_8] & 0xff;
 						if (i_10 > 0) {
 							UnderlayDef underlaydef_16 = this.aClass479_3789.getUnderlayDef(i_10 - 1, (byte) -26);
 							this.anIntArray3795[i_8] += underlaydef_16.r;
@@ -122,7 +122,7 @@ public class Class329 {
 
 					i_10 = i_7 - 5;
 					if (i_10 >= 0) {
-						i_11 = this.underlayColors[i_6][i_10][i_8] & 0xff;
+						i_11 = this.underlayIds[i_6][i_10][i_8] & 0xff;
 						if (i_11 > 0) {
 							UnderlayDef underlaydef_17 = this.aClass479_3789.getUnderlayDef(i_11 - 1, (byte) -111);
 							this.anIntArray3795[i_8] -= underlaydef_17.r;
@@ -173,10 +173,10 @@ public class Class329 {
 				this.method5845(graphicalrenderer_1, this.aClass206_3776.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null, (byte) 1);
 			}
 
-			this.underlayColors[i_6] = null;
-			this.overlayColors[i_6] = null;
-			this.val49ArrDiv4[i_6] = null;
-			this.val49ArrAnd0x3[i_6] = null;
+			this.underlayIds[i_6] = null;
+			this.overlayIds[i_6] = null;
+			this.overlayPathShapes[i_6] = null;
+			this.overlayRotations[i_6] = null;
 		}
 
 		if (!this.overlayHidden) {
@@ -200,7 +200,7 @@ public class Class329 {
 		for (i_7 = i_3; i_7 < i_3 + i_5; i_7++) {
 			for (int i_8 = i_2; i_8 < i_2 + i_4; i_8++) {
 				if (i_8 >= 0 && i_8 < this.maxX && i_7 >= 0 && i_7 < this.maxY) {
-					this.unk0Data[i_1][i_8][i_7] = i_1 > 0 ? this.unk0Data[i_1 - 1][i_8][i_7] - 960 : 0;
+					this.tileHeights[i_1][i_8][i_7] = i_1 > 0 ? this.tileHeights[i_1 - 1][i_8][i_7] - 960 : 0;
 				}
 			}
 		}
@@ -208,7 +208,7 @@ public class Class329 {
 		if (i_2 > 0 && i_2 < this.maxX) {
 			for (i_7 = i_3 + 1; i_7 < i_3 + i_5; i_7++) {
 				if (i_7 >= 0 && i_7 < this.maxY) {
-					this.unk0Data[i_1][i_2][i_7] = this.unk0Data[i_1][i_2 - 1][i_7];
+					this.tileHeights[i_1][i_2][i_7] = this.tileHeights[i_1][i_2 - 1][i_7];
 				}
 			}
 		}
@@ -216,26 +216,26 @@ public class Class329 {
 		if (i_3 > 0 && i_3 < this.maxY) {
 			for (i_7 = i_2 + 1; i_7 < i_2 + i_4; i_7++) {
 				if (i_7 >= 0 && i_7 < this.maxX) {
-					this.unk0Data[i_1][i_7][i_3] = this.unk0Data[i_1][i_7][i_3 - 1];
+					this.tileHeights[i_1][i_7][i_3] = this.tileHeights[i_1][i_7][i_3 - 1];
 				}
 			}
 		}
 
 		if (i_2 >= 0 && i_3 >= 0 && i_2 < this.maxX && i_3 < this.maxY) {
 			if (i_1 == 0) {
-				if (i_2 > 0 && this.unk0Data[i_1][i_2 - 1][i_3] != 0) {
-					this.unk0Data[i_1][i_2][i_3] = this.unk0Data[i_1][i_2 - 1][i_3];
-				} else if (i_3 > 0 && this.unk0Data[i_1][i_2][i_3 - 1] != 0) {
-					this.unk0Data[i_1][i_2][i_3] = this.unk0Data[i_1][i_2][i_3 - 1];
-				} else if (i_2 > 0 && i_3 > 0 && this.unk0Data[i_1][i_2 - 1][i_3 - 1] != 0) {
-					this.unk0Data[i_1][i_2][i_3] = this.unk0Data[i_1][i_2 - 1][i_3 - 1];
+				if (i_2 > 0 && this.tileHeights[i_1][i_2 - 1][i_3] != 0) {
+					this.tileHeights[i_1][i_2][i_3] = this.tileHeights[i_1][i_2 - 1][i_3];
+				} else if (i_3 > 0 && this.tileHeights[i_1][i_2][i_3 - 1] != 0) {
+					this.tileHeights[i_1][i_2][i_3] = this.tileHeights[i_1][i_2][i_3 - 1];
+				} else if (i_2 > 0 && i_3 > 0 && this.tileHeights[i_1][i_2 - 1][i_3 - 1] != 0) {
+					this.tileHeights[i_1][i_2][i_3] = this.tileHeights[i_1][i_2 - 1][i_3 - 1];
 				}
-			} else if (i_2 > 0 && this.unk0Data[i_1 - 1][i_2 - 1][i_3] != this.unk0Data[i_1][i_2 - 1][i_3]) {
-				this.unk0Data[i_1][i_2][i_3] = this.unk0Data[i_1][i_2 - 1][i_3];
-			} else if (i_3 > 0 && this.unk0Data[i_1][i_2][i_3 - 1] != this.unk0Data[i_1 - 1][i_2][i_3 - 1]) {
-				this.unk0Data[i_1][i_2][i_3] = this.unk0Data[i_1][i_2][i_3 - 1];
-			} else if (i_2 > 0 && i_3 > 0 && this.unk0Data[i_1 - 1][i_2 - 1][i_3 - 1] != this.unk0Data[i_1][i_2 - 1][i_3 - 1]) {
-				this.unk0Data[i_1][i_2][i_3] = this.unk0Data[i_1][i_2 - 1][i_3 - 1];
+			} else if (i_2 > 0 && this.tileHeights[i_1 - 1][i_2 - 1][i_3] != this.tileHeights[i_1][i_2 - 1][i_3]) {
+				this.tileHeights[i_1][i_2][i_3] = this.tileHeights[i_1][i_2 - 1][i_3];
+			} else if (i_3 > 0 && this.tileHeights[i_1][i_2][i_3 - 1] != this.tileHeights[i_1 - 1][i_2][i_3 - 1]) {
+				this.tileHeights[i_1][i_2][i_3] = this.tileHeights[i_1][i_2][i_3 - 1];
+			} else if (i_2 > 0 && i_3 > 0 && this.tileHeights[i_1 - 1][i_2 - 1][i_3 - 1] != this.tileHeights[i_1][i_2 - 1][i_3 - 1]) {
+				this.tileHeights[i_1][i_2][i_3] = this.tileHeights[i_1][i_2 - 1][i_3 - 1];
 			}
 		}
 
@@ -370,7 +370,7 @@ public class Class329 {
 								}
 
 								if (i_26 >= 0 && i_26 < this.maxX && i_27 >= 0 && i_27 < this.maxY) {
-									this.unk0Data[i_2][i_26][i_27] = this.unk0Data[i_2][i_20 + b_29][b_30 + i_21];
+									this.tileHeights[i_2][i_26][i_27] = this.tileHeights[i_2][i_20 + b_29][b_30 + i_21];
 								}
 							}
 						}
@@ -410,7 +410,7 @@ public class Class329 {
 			i_6 = 0;
 			i_7 = 0;
 			if (!this.overlayHidden) {
-				if (this.aBool3835) {
+				if (this.highDetailWater) {
 					i_7 |= 0x8;
 				}
 
@@ -432,78 +432,78 @@ public class Class329 {
 				i_7 |= 0x20;
 			}
 
-			int[][] ints_8 = ints_2 != null && i_5 < ints_2.length ? ints_2[i_5] : this.unk0Data[i_5];
-			this.aClass206_3776.method3385(i_5, graphicalrenderer_1.method8478(this.maxX, this.maxY, this.unk0Data[i_5], ints_8, 512, i_6, i_7), 322492568);
+			int[][] ints_8 = ints_2 != null && i_5 < ints_2.length ? ints_2[i_5] : this.tileHeights[i_5];
+			this.aClass206_3776.method3385(i_5, graphicalrenderer_1.createGround(this.maxX, this.maxY, this.tileHeights[i_5], ints_8, 512, i_6, i_7), 322492568);
 		}
 
 	}
 
-	void method5845(GraphicalRenderer graphicalrenderer_1, Class390 class390_2, int i_3, int[][] ints_4, Class390 class390_5, Class390 class390_6, byte b_7) {
-		for (int i_8 = 0; i_8 < this.maxX; i_8++) {
-			for (int i_9 = 0; i_9 < this.maxY; i_9++) {
-				byte b_10 = this.val49ArrDiv4[i_3][i_8][i_9];
-				byte b_11 = this.val49ArrAnd0x3[i_3][i_8][i_9];
-				int i_12 = this.overlayColors[i_3][i_8][i_9] & 0xff;
-				int i_13 = this.underlayColors[i_3][i_8][i_9] & 0xff;
-				OverlayDef overlaydef_14 = i_12 != 0 ? this.aClass536_3834.method11475(i_12 - 1, (byte) 0) : null;
-				UnderlayDef underlaydef_15 = i_13 != 0 ? this.aClass479_3789.getUnderlayDef(i_13 - 1, (byte) -14) : null;
-				if (b_10 == 0 && overlaydef_14 == null) {
-					b_10 = 12;
+	void method5845(GraphicalRenderer renderer, Ground ground, int plane, int[][] ints_4, Ground class390_5, Ground class390_6, byte b_7) {
+		for (int x = 0; x < this.maxX; x++) {
+			for (int y = 0; y < this.maxY; y++) {
+				byte pathShape = this.overlayPathShapes[plane][x][y];
+				byte pathRotation = this.overlayRotations[plane][x][y];
+				int overlayId = this.overlayIds[plane][x][y] & 0xff;
+				int underlayId = this.underlayIds[plane][x][y] & 0xff;
+				OverlayDef overlay = overlayId != 0 ? this.aClass536_3834.getOverlayDef(overlayId - 1, (byte) 0) : null;
+				UnderlayDef underlay = underlayId != 0 ? this.aClass479_3789.getUnderlayDef(underlayId - 1, (byte) -14) : null;
+				if (pathShape == 0 && overlay == null) {
+					pathShape = 12;
 				}
 
-				OverlayDef overlaydef_16 = overlaydef_14;
-				if (overlaydef_14 != null && overlaydef_14.primaryRGB == -1 && overlaydef_14.secondaryRGB == -1) {
-					overlaydef_16 = overlaydef_14;
-					overlaydef_14 = null;
+				OverlayDef overlaydef_16 = overlay;
+				if (overlay != null && overlay.primaryRGB == -1 && overlay.secondaryRGB == -1) {
+					overlaydef_16 = overlay;
+					overlay = null;
 				}
 
-				if (overlaydef_14 != null || underlaydef_15 != null) {
-					this.anInt3855 = anIntArray3829[b_10];
-					this.anInt3856 = anIntArray3814[b_10];
-					int i_17 = (underlaydef_15 != null ? this.anInt3855 : 0) + (overlaydef_14 != null ? this.anInt3856 : 0);
+				if (overlay != null || underlay != null) {
+					this.underlayFaceCount = UNDERLAY_FACE_COUNT[pathShape];
+					this.overlayFaceCount = OVERLAY_FACE_COUNT[pathShape];
+					int i_17 = (underlay != null ? this.underlayFaceCount : 0) + (overlay != null ? this.overlayFaceCount : 0);
 					int i_18 = 0;
 					this.anInt3781 = 0;
-					this.anInt3848 = overlaydef_14 != null ? overlaydef_14.texture : -1;
-					int i_19 = underlaydef_15 != null ? underlaydef_15.anInt5719 : -1;
+					this.anInt3848 = overlay != null ? overlay.texture : -1;
+					int i_19 = underlay != null ? underlay.texture : -1;
 					int[] ints_20 = new int[i_17];
 					int[] ints_21 = new int[i_17];
 					int[] ints_22 = new int[i_17];
 					int[] ints_23 = new int[i_17];
 					int[] ints_24 = new int[i_17];
 					int[] ints_25 = new int[i_17];
-					int[] ints_26 = overlaydef_14 != null && overlaydef_14.secondaryRGB != -1 ? new int[i_17] : null;
+					int[] ints_26 = overlay != null && overlay.secondaryRGB != -1 ? new int[i_17] : null;
 					int i_27;
-					if (overlaydef_14 != null) {
-						for (i_27 = 0; i_27 < this.anInt3856; i_27++) {
-							ints_20[i_18] = anIntArrayArray3824[b_10][this.anInt3781];
-							ints_21[i_18] = anIntArrayArray3860[b_10][this.anInt3781];
-							ints_22[i_18] = anIntArrayArray3815[b_10][this.anInt3781];
+					if (overlay != null) {
+						for (i_27 = 0; i_27 < this.overlayFaceCount; i_27++) {
+							ints_20[i_18] = anIntArrayArray3824[pathShape][this.anInt3781];
+							ints_21[i_18] = anIntArrayArray3860[pathShape][this.anInt3781];
+							ints_22[i_18] = anIntArrayArray3815[pathShape][this.anInt3781];
 							ints_24[i_18] = this.anInt3848;
-							ints_25[i_18] = overlaydef_14.anInt7057;
-							ints_23[i_18] = overlaydef_14.primaryRGB;
+							ints_25[i_18] = overlay.anInt7057;
+							ints_23[i_18] = overlay.primaryRGB;
 							if (ints_26 != null) {
-								ints_26[i_18] = overlaydef_14.secondaryRGB;
+								ints_26[i_18] = overlay.secondaryRGB;
 							}
 
 							++i_18;
 							++this.anInt3781;
 						}
 
-						if (!this.overlayHidden && i_3 == 0) {
-							this.aClass206_3776.method3392(i_8, i_9, overlaydef_14.anInt7051, overlaydef_14.anInt7063 * 442664952, overlaydef_14.anInt7064, overlaydef_14.anInt7065, overlaydef_14.anInt7055, overlaydef_14.anInt7067, (short) -10476);
+						if (!this.overlayHidden && plane == 0) {
+							this.aClass206_3776.method3392(x, y, overlay.waterColour, overlay.waterScale, overlay.waterIntensity, overlay.anInt7065, overlay.anInt7055, overlay.anInt7067, (short) -10476);
 						}
 					} else {
-						this.anInt3781 += this.anInt3856;
+						this.anInt3781 += this.overlayFaceCount;
 					}
 
-					if (underlaydef_15 != null) {
-						for (i_27 = 0; i_27 < this.anInt3855; i_27++) {
-							ints_20[i_18] = anIntArrayArray3824[b_10][this.anInt3781];
-							ints_21[i_18] = anIntArrayArray3860[b_10][this.anInt3781];
-							ints_22[i_18] = anIntArrayArray3815[b_10][this.anInt3781];
+					if (underlay != null) {
+						for (i_27 = 0; i_27 < this.underlayFaceCount; i_27++) {
+							ints_20[i_18] = anIntArrayArray3824[pathShape][this.anInt3781];
+							ints_21[i_18] = anIntArrayArray3860[pathShape][this.anInt3781];
+							ints_22[i_18] = anIntArrayArray3815[pathShape][this.anInt3781];
 							ints_24[i_18] = i_19;
-							ints_25[i_18] = underlaydef_15.anInt5720;
-							ints_23[i_18] = ints_4[i_8][i_9];
+							ints_25[i_18] = underlay.scale;
+							ints_23[i_18] = ints_4[x][y];
 							if (ints_26 != null) {
 								ints_26[i_18] = ints_23[i_18];
 							}
@@ -526,83 +526,83 @@ public class Class329 {
 					for (i_32 = 0; i_32 < i_27; i_32++) {
 						i_33 = anIntArray3811[i_32];
 						i_34 = anIntArray3800[i_32];
-						if (b_11 == 0) {
+						if (pathRotation == 0) {
 							ints_28[i_32] = i_33;
 							ints_29[i_32] = i_34;
-						} else if (b_11 == 1) {
+						} else if (pathRotation == 1) {
 							ints_28[i_32] = i_34;
 							ints_29[i_32] = 512 - i_33;
-						} else if (b_11 == 2) {
+						} else if (pathRotation == 2) {
 							ints_28[i_32] = 512 - i_33;
 							ints_29[i_32] = 512 - i_34;
-						} else if (b_11 == 3) {
+						} else if (pathRotation == 3) {
 							ints_28[i_32] = 512 - i_34;
 							ints_29[i_32] = i_33;
 						}
 
 						int i_36;
-						if (ints_30 != null && aBoolArrayArray3822[b_10][i_32]) {
-							i_35 = (i_8 << 9) + ints_28[i_32];
-							i_36 = (i_9 << 9) + ints_29[i_32];
-							ints_30[i_32] = class390_6.method6709(i_35, i_36, 1611134572) - class390_2.method6709(i_35, i_36, -1090922483);
+						if (ints_30 != null && aBoolArrayArray3822[pathShape][i_32]) {
+							i_35 = (x << 9) + ints_28[i_32];
+							i_36 = (y << 9) + ints_29[i_32];
+							ints_30[i_32] = class390_6.averageHeight(i_35, i_36, 1611134572) - ground.averageHeight(i_35, i_36, -1090922483);
 						}
 
 						if (ints_31 != null) {
-							if (class390_6 != null && !aBoolArrayArray3822[b_10][i_32]) {
-								i_35 = (i_8 << 9) + ints_28[i_32];
-								i_36 = (i_9 << 9) + ints_29[i_32];
-								ints_31[i_32] = class390_2.method6709(i_35, i_36, 1460513028) - class390_6.method6709(i_35, i_36, -2104579941);
-							} else if (class390_5 != null && !aBoolArrayArray3823[b_10][i_32]) {
-								i_35 = (i_8 << 9) + ints_28[i_32];
-								i_36 = (i_9 << 9) + ints_29[i_32];
-								ints_31[i_32] = class390_5.method6709(i_35, i_36, -896694521) - class390_2.method6709(i_35, i_36, 1289574118);
+							if (class390_6 != null && !aBoolArrayArray3822[pathShape][i_32]) {
+								i_35 = (x << 9) + ints_28[i_32];
+								i_36 = (y << 9) + ints_29[i_32];
+								ints_31[i_32] = ground.averageHeight(i_35, i_36, 1460513028) - class390_6.averageHeight(i_35, i_36, -2104579941);
+							} else if (class390_5 != null && !aBoolArrayArray3823[pathShape][i_32]) {
+								i_35 = (x << 9) + ints_28[i_32];
+								i_36 = (y << 9) + ints_29[i_32];
+								ints_31[i_32] = class390_5.averageHeight(i_35, i_36, -896694521) - ground.averageHeight(i_35, i_36, 1289574118);
 							}
 						}
 					}
 
-					i_32 = class390_2.method6722(i_8, i_9, 65280);
-					i_33 = class390_2.method6722(i_8 + 1, i_9, 65280);
-					i_34 = class390_2.method6722(i_8 + 1, i_9 + 1, 65280);
-					i_35 = class390_2.method6722(i_8, i_9 + 1, 65280);
-					boolean bool_39 = this.regionMap.is0x2(i_8, i_9, 1772345202);
-					if (bool_39 && i_3 > 1 || !bool_39 && i_3 > 0) {
+					i_32 = ground.method6722(x, y, 65280);
+					i_33 = ground.method6722(x + 1, y, 65280);
+					i_34 = ground.method6722(x + 1, y + 1, 65280);
+					i_35 = ground.method6722(x, y + 1, 65280);
+					boolean bool_39 = this.regionMap.is0x2(x, y, 1772345202);
+					if (bool_39 && plane > 1 || !bool_39 && plane > 0) {
 						boolean bool_37 = true;
-						if (underlaydef_15 != null && !underlaydef_15.aBool5722) {
+						if (underlay != null && !underlay.aBool5722) {
 							bool_37 = false;
-						} else if (i_13 == 0 && b_10 != 0) {
+						} else if (underlayId == 0 && pathShape != 0) {
 							bool_37 = false;
-						} else if (i_12 > 0 && overlaydef_16 != null && !overlaydef_16.aBool7056) {
+						} else if (overlayId > 0 && overlaydef_16 != null && !overlaydef_16.aBool7056) {
 							bool_37 = false;
 						}
 
 						if (bool_37 && i_32 == i_33 && i_32 == i_34 && i_32 == i_35) {
-							this.aByteArrayArrayArray3794[i_3][i_8][i_9] = (byte) (this.aByteArrayArrayArray3794[i_3][i_8][i_9] | 0x4);
+							this.aByteArrayArrayArray3794[plane][x][y] = (byte) (this.aByteArrayArrayArray3794[plane][x][y] | 0x4);
 						}
 					}
 
 					Class90 class90_38 = new Class90();
 					if (this.overlayHidden) {
-						class90_38.anInt946 = this.aClass206_3776.method3387(i_8, i_9, (byte) 110);
-						class90_38.anInt945 = this.aClass206_3776.method3386(i_8, i_9, 2091764285);
-						class90_38.anInt947 = this.aClass206_3776.method3538(i_8, i_9, -575094789);
-						class90_38.anInt949 = this.aClass206_3776.method3432(i_8, i_9, (byte) 1);
-						class90_38.anInt950 = this.aClass206_3776.method3464(i_8, i_9, -989916176);
-						class90_38.anInt951 = this.aClass206_3776.method3391(i_8, i_9, 2086149647);
+						class90_38.color = this.aClass206_3776.getColor(x, y, (byte) 110);
+						class90_38.scale = this.aClass206_3776.getScale(x, y, 2091764285);
+						class90_38.intensity = this.aClass206_3776.getIntensities(x, y, -575094789);
+						class90_38.anInt949 = this.aClass206_3776.method3432(x, y, (byte) 1);
+						class90_38.anInt950 = this.aClass206_3776.method3464(x, y, -989916176);
+						class90_38.anInt951 = this.aClass206_3776.method3391(x, y, 2086149647);
 					}
 
-					class390_2.method6708(i_8, i_9, ints_28, ints_30, ints_29, ints_31, ints_20, ints_21, ints_22, ints_23, ints_26, ints_24, ints_25, class90_38, false);
-					this.aClass206_3776.method3384(i_3, i_8, i_9, (byte) 44);
+					ground.method6708(x, y, ints_28, ints_30, ints_29, ints_31, ints_20, ints_21, ints_22, ints_23, ints_26, ints_24, ints_25, class90_38, false);
+					this.aClass206_3776.method3384(plane, x, y, (byte) 44);
 				}
 			}
 		}
 
 	}
 
-	void method5846(GraphicalRenderer graphicalrenderer_1, Class390 class390_2, int i_3, int[][] ints_4, Class390 class390_5, Class390 class390_6, byte b_7) {
-		byte[][] bytes_8 = this.val49ArrDiv4[i_3];
-		byte[][] bytes_9 = this.val49ArrAnd0x3[i_3];
-		byte[][] bytes_10 = this.underlayColors[i_3];
-		byte[][] bytes_11 = this.overlayColors[i_3];
+	void method5846(GraphicalRenderer graphicalrenderer_1, Ground class390_2, int i_3, int[][] ints_4, Ground class390_5, Ground class390_6, byte b_7) {
+		byte[][] bytes_8 = this.overlayPathShapes[i_3];
+		byte[][] bytes_9 = this.overlayRotations[i_3];
+		byte[][] bytes_10 = this.underlayIds[i_3];
+		byte[][] bytes_11 = this.overlayIds[i_3];
 		boolean[] bools_12 = new boolean[4];
 
 		for (int i_13 = 0; i_13 < this.maxX; i_13++) {
@@ -612,11 +612,11 @@ public class Class329 {
 				int i_16 = i_15 < this.maxY - 1 ? i_15 + 1 : i_15;
 				this.anInt3844 = bytes_8[i_13][i_15];
 				this.anInt3781 = bytes_9[i_13][i_15];
-				int i_17 = bytes_11[i_13][i_15] & 0xff;
-				int i_18 = bytes_10[i_13][i_15] & 0xff;
-				if (i_17 != 0 || i_18 != 0) {
-					OverlayDef overlaydef_19 = i_17 != 0 ? this.aClass536_3834.method11475(i_17 - 1, (byte) 0) : null;
-					UnderlayDef underlaydef_20 = i_18 != 0 ? this.aClass479_3789.getUnderlayDef(i_18 - 1, (byte) -6) : null;
+				int overlayId = bytes_11[i_13][i_15] & 0xff;
+				int underlayId = bytes_10[i_13][i_15] & 0xff;
+				if (overlayId != 0 || underlayId != 0) {
+					OverlayDef overlaydef_19 = overlayId != 0 ? this.aClass536_3834.getOverlayDef(overlayId - 1, (byte) 0) : null;
+					UnderlayDef underlaydef_20 = underlayId != 0 ? this.aClass479_3789.getUnderlayDef(underlayId - 1, (byte) -6) : null;
 					if (this.anInt3844 == 0 && overlaydef_19 == null) {
 						this.anInt3844 = 12;
 					}
@@ -637,7 +637,7 @@ public class Class329 {
 						}
 					}
 
-					this.anInt3781 = this.method5870(i_18, i_13, i_15, i_14, i_16, class390_2, bytes_10, -770588954);
+					this.anInt3781 = this.method5870(underlayId, i_13, i_15, i_14, i_16, class390_2, bytes_10, -770588954);
 
 					int i_25;
 					for (i_25 = 0; i_25 < 13; i_25++) {
@@ -648,7 +648,7 @@ public class Class329 {
 					this.method5859(graphicalrenderer_1, overlaydef_19, underlaydef_20, i_13, i_15, bytes_8, bytes_9, bytes_11, bools_12, (short) 14961);
 					this.aBool3853 = !this.aBool3810 && !bools_12[0] && !bools_12[2] && !bools_12[1] && !bools_12[3];
 					this.method5849(overlaydef_19, underlaydef_20, -961871857);
-					i_25 = this.anInt3855 + this.anInt3856;
+					i_25 = this.underlayFaceCount + this.overlayFaceCount;
 					if (i_25 <= 0) {
 						this.aClass206_3776.method3384(i_3, i_13, i_15, (byte) 7);
 					} else {
@@ -683,13 +683,13 @@ public class Class329 {
 						int i_35 = bytes_10[i_13][i_16] & 0xff;
 						int i_36 = bytes_10[i_14][i_16] & 0xff;
 						int i_37 = bytes_10[i_14][i_15] & 0xff;
-						this.method5851(graphicalrenderer_1, i_3, i_13, i_15, i_14, i_16, underlaydef_20, i_18, i_35, i_36, i_37, bools_12, ints_27, ints_28, ints_29, ints_30, ints_31, ints_32, ints_33, ints_34, ints_4, class390_2, class390_6, class390_5, (byte) 2);
-						this.method5852(class390_2, underlaydef_20, overlaydef_24, i_3, i_13, i_15, i_14, i_16, i_18, i_17, (short) 13205);
+						this.method5851(graphicalrenderer_1, i_3, i_13, i_15, i_14, i_16, underlaydef_20, underlayId, i_35, i_36, i_37, bools_12, ints_27, ints_28, ints_29, ints_30, ints_31, ints_32, ints_33, ints_34, ints_4, class390_2, class390_6, class390_5, (byte) 2);
+						this.method5852(class390_2, underlaydef_20, overlaydef_24, i_3, i_13, i_15, i_14, i_16, underlayId, overlayId, (short) 13205);
 						Class90 class90_38 = new Class90();
 						if (this.overlayHidden) {
-							class90_38.anInt946 = this.aClass206_3776.method3387(i_13, i_15, (byte) 114);
-							class90_38.anInt945 = this.aClass206_3776.method3386(i_13, i_15, 1952003657);
-							class90_38.anInt947 = this.aClass206_3776.method3538(i_13, i_15, -575094789);
+							class90_38.color = this.aClass206_3776.getColor(i_13, i_15, (byte) 114);
+							class90_38.scale = this.aClass206_3776.getScale(i_13, i_15, 1952003657);
+							class90_38.intensity = this.aClass206_3776.getIntensities(i_13, i_15, -575094789);
 							class90_38.anInt949 = this.aClass206_3776.method3432(i_13, i_15, (byte) 1);
 							class90_38.anInt950 = this.aClass206_3776.method3464(i_13, i_15, -1127280692);
 							class90_38.anInt951 = this.aClass206_3776.method3391(i_13, i_15, 2048484597);
@@ -715,7 +715,7 @@ public class Class329 {
 			if (i_4 > 0) {
 				i_14 = bytes_8[i_4 - 1][i_5 - 1] & 0xff;
 				if (i_14 > 0) {
-					overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+					overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 - 1][i_5 - 1];
 						i_17 = bytes_10[i_4 - 1][i_5 - 1] * 2 + 4 & 0x7;
@@ -735,7 +735,7 @@ public class Class329 {
 			if (i_4 < i_6 - 1) {
 				i_14 = bytes_8[i_4 + 1][i_5 - 1] & 0xff;
 				if (i_14 > 0) {
-					overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+					overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 + 1][i_5 - 1];
 						i_17 = bytes_10[i_4 + 1][i_5 - 1] * 2 + 6 & 0x7;
@@ -757,7 +757,7 @@ public class Class329 {
 			if (i_4 > 0) {
 				i_14 = bytes_8[i_4 - 1][i_5 + 1] & 0xff;
 				if (i_14 > 0) {
-					overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+					overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 - 1][i_5 + 1];
 						i_17 = bytes_10[i_4 - 1][i_5 + 1] * 2 + 2 & 0x7;
@@ -777,7 +777,7 @@ public class Class329 {
 			if (i_4 < i_6 - 1) {
 				i_14 = bytes_8[i_4 + 1][i_5 + 1] & 0xff;
 				if (i_14 > 0) {
-					overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+					overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 + 1][i_5 + 1];
 						i_17 = bytes_10[i_4 + 1][i_5 + 1] * 2 + 0 & 0x7;
@@ -802,7 +802,7 @@ public class Class329 {
 		if (i_5 > 0) {
 			i_14 = bytes_8[i_4][i_5 - 1] & 0xff;
 			if (i_14 > 0) {
-				overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+				overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 				if (overlaydef_15.primaryRGB != -1) {
 					b_16 = bytes_9[i_4][i_5 - 1];
 					b_23 = bytes_10[i_4][i_5 - 1];
@@ -845,7 +845,7 @@ public class Class329 {
 		if (i_5 < i_7 - 1) {
 			i_14 = bytes_8[i_4][i_5 + 1] & 0xff;
 			if (i_14 > 0) {
-				overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+				overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 				if (overlaydef_15.primaryRGB != -1) {
 					b_16 = bytes_9[i_4][i_5 + 1];
 					b_23 = bytes_10[i_4][i_5 + 1];
@@ -888,7 +888,7 @@ public class Class329 {
 		if (i_4 > 0) {
 			i_14 = bytes_8[i_4 - 1][i_5] & 0xff;
 			if (i_14 > 0) {
-				overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+				overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 				if (overlaydef_15.primaryRGB != -1) {
 					b_16 = bytes_9[i_4 - 1][i_5];
 					b_23 = bytes_10[i_4 - 1][i_5];
@@ -931,7 +931,7 @@ public class Class329 {
 		if (i_4 < i_6 - 1) {
 			i_14 = bytes_8[i_4 + 1][i_5] & 0xff;
 			if (i_14 > 0) {
-				overlaydef_15 = this.aClass536_3834.method11475(i_14 - 1, (byte) 0);
+				overlaydef_15 = this.aClass536_3834.getOverlayDef(i_14 - 1, (byte) 0);
 				if (overlaydef_15.primaryRGB != -1) {
 					b_16 = bytes_9[i_4 + 1][i_5];
 					b_23 = bytes_10[i_4 + 1][i_5];
@@ -999,27 +999,27 @@ public class Class329 {
 			this.anIntArray3857 = anIntArrayArray3824[this.anInt3844];
 			this.anIntArray3858 = anIntArrayArray3860[this.anInt3844];
 			this.anIntArray3859 = anIntArrayArray3815[this.anInt3844];
-			this.anInt3856 = overlaydef_1 != null ? anIntArray3814[this.anInt3844] : 0;
-			this.anInt3855 = underlaydef_2 != null ? anIntArray3829[this.anInt3844] : 0;
+			this.overlayFaceCount = overlaydef_1 != null ? OVERLAY_FACE_COUNT[this.anInt3844] : 0;
+			this.underlayFaceCount = underlaydef_2 != null ? UNDERLAY_FACE_COUNT[this.anInt3844] : 0;
 		} else if (this.aBool3810) {
 			this.anIntArray3857 = anIntArrayArray3775[this.anInt3844];
 			this.anIntArray3858 = anIntArrayArray3821[this.anInt3844];
 			this.anIntArray3859 = anIntArrayArray3836[this.anInt3844];
-			this.anInt3856 = overlaydef_1 != null ? anIntArray3778[this.anInt3844] : 0;
-			this.anInt3855 = underlaydef_2 != null ? anIntArray3819[this.anInt3844] : 0;
+			this.overlayFaceCount = overlaydef_1 != null ? anIntArray3778[this.anInt3844] : 0;
+			this.underlayFaceCount = underlaydef_2 != null ? anIntArray3819[this.anInt3844] : 0;
 			this.anIntArray3832 = anIntArrayArray3833[this.anInt3844];
 		} else {
 			this.anIntArray3857 = anIntArrayArray3774[this.anInt3844];
 			this.anIntArray3858 = anIntArrayArray3830[this.anInt3844];
 			this.anIntArray3859 = anIntArrayArray3831[this.anInt3844];
-			this.anInt3856 = overlaydef_1 != null ? anIntArray3826[this.anInt3844] : 0;
-			this.anInt3855 = underlaydef_2 != null ? anIntArray3847[this.anInt3844] : 0;
+			this.overlayFaceCount = overlaydef_1 != null ? anIntArray3826[this.anInt3844] : 0;
+			this.underlayFaceCount = underlaydef_2 != null ? anIntArray3847[this.anInt3844] : 0;
 			this.anIntArray3832 = anIntArrayArray3828[this.anInt3844];
 		}
 
 	}
 
-	void method5850(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, OverlayDef overlaydef_5, boolean[] bools_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, int[] ints_14, Class390 class390_15, Class390 class390_16, Class390 class390_17, int i_18) {
+	void method5850(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, OverlayDef overlaydef_5, boolean[] bools_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, int[] ints_14, Ground class390_15, Ground class390_16, Ground class390_17, int i_18) {
 		this.anInt3850 = -1;
 		this.anInt3848 = -1;
 		this.anInt3849 = 256;
@@ -1029,7 +1029,7 @@ public class Class329 {
 			this.anInt3849 = overlaydef_5.anInt7057;
 			int i_19 = Class153.method2617(graphicalrenderer_1, overlaydef_5, (byte) 29);
 
-			for (int i_20 = 0; i_20 < this.anInt3856; i_20++) {
+			for (int i_20 = 0; i_20 < this.overlayFaceCount; i_20++) {
 				boolean bool_21 = false;
 				byte b_22;
 				if (bools_6[0 - this.anInt3781 & 0x3] && this.anInt3846 == this.anIntArray3832[0]) {
@@ -1099,18 +1099,18 @@ public class Class329 {
 					if (ints_13 != null && aBoolArrayArray3822[this.anInt3844][i_24]) {
 						i_30 = (i_3 << 9) + i_28;
 						i_31 = (i_4 << 9) + i_29;
-						ints_13[this.anInt3852] = class390_16.method6709(i_30, i_31, 1550950385) - class390_15.method6709(i_30, i_31, -497084405);
+						ints_13[this.anInt3852] = class390_16.averageHeight(i_30, i_31, 1550950385) - class390_15.averageHeight(i_30, i_31, -497084405);
 					}
 
 					if (ints_14 != null) {
 						if (class390_16 != null && !aBoolArrayArray3822[this.anInt3844][i_24]) {
 							i_30 = (i_3 << 9) + i_28;
 							i_31 = (i_4 << 9) + i_29;
-							ints_14[this.anInt3852] = class390_15.method6709(i_30, i_31, -1953375051) - class390_16.method6709(i_30, i_31, -1082530779);
+							ints_14[this.anInt3852] = class390_15.averageHeight(i_30, i_31, -1953375051) - class390_16.averageHeight(i_30, i_31, -1082530779);
 						} else if (class390_17 != null && !aBoolArrayArray3823[this.anInt3844][i_24]) {
 							i_30 = (i_3 << 9) + i_28;
 							i_31 = (i_4 << 9) + i_29;
-							ints_14[this.anInt3852] = class390_17.method6709(i_30, i_31, -1990196729) - class390_15.method6709(i_30, i_31, -1843099367);
+							ints_14[this.anInt3852] = class390_17.averageHeight(i_30, i_31, -1990196729) - class390_15.averageHeight(i_30, i_31, -1843099367);
 						}
 					}
 
@@ -1139,14 +1139,14 @@ public class Class329 {
 			}
 
 			if (!this.overlayHidden && i_2 == 0) {
-				this.aClass206_3776.method3392(i_3, i_4, overlaydef_5.anInt7051, overlaydef_5.anInt7063 * 442664952, overlaydef_5.anInt7064, overlaydef_5.anInt7065, overlaydef_5.anInt7055, overlaydef_5.anInt7067, (short) -30684);
+				this.aClass206_3776.method3392(i_3, i_4, overlaydef_5.waterColour, overlaydef_5.waterScale, overlaydef_5.waterIntensity, overlaydef_5.anInt7065, overlaydef_5.anInt7055, overlaydef_5.anInt7067, (short) -30684);
 			}
 
 			if (this.anInt3844 != 12 && overlaydef_5.primaryRGB != -1 && overlaydef_5.aBool7059) {
 				this.aBool3851 = true;
 			}
 		} else if (this.aBool3853) {
-			this.anInt3846 += anIntArray3814[this.anInt3844];
+			this.anInt3846 += OVERLAY_FACE_COUNT[this.anInt3844];
 		} else if (this.aBool3810) {
 			this.anInt3846 += anIntArray3778[this.anInt3844];
 		} else {
@@ -1155,7 +1155,7 @@ public class Class329 {
 
 	}
 
-	void method5851(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, UnderlayDef underlaydef_7, int i_8, int i_9, int i_10, int i_11, boolean[] bools_12, int[] ints_13, int[] ints_14, int[] ints_15, int[] ints_16, int[] ints_17, int[] ints_18, int[] ints_19, int[] ints_20, int[][] ints_21, Class390 class390_22, Class390 class390_23, Class390 class390_24, byte b_25) {
+	void method5851(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, UnderlayDef underlaydef_7, int i_8, int i_9, int i_10, int i_11, boolean[] bools_12, int[] ints_13, int[] ints_14, int[] ints_15, int[] ints_16, int[] ints_17, int[] ints_18, int[] ints_19, int[] ints_20, int[][] ints_21, Ground class390_22, Ground class390_23, Ground class390_24, byte b_25) {
 		if (underlaydef_7 != null) {
 			if (i_9 == 0) {
 				i_9 = i_8;
@@ -1174,7 +1174,7 @@ public class Class329 {
 			UnderlayDef underlaydef_28 = this.aClass479_3789.getUnderlayDef(i_10 - 1, (byte) -95);
 			UnderlayDef underlaydef_29 = this.aClass479_3789.getUnderlayDef(i_11 - 1, (byte) -80);
 
-			for (int i_30 = 0; i_30 < this.anInt3855; i_30++) {
+			for (int i_30 = 0; i_30 < this.underlayFaceCount; i_30++) {
 				boolean bool_31 = false;
 				byte b_32;
 				if (bools_12[0 - this.anInt3781 & 0x3] && this.anInt3846 == this.anIntArray3832[0]) {
@@ -1244,18 +1244,18 @@ public class Class329 {
 					if (ints_19 != null && aBoolArrayArray3822[this.anInt3844][i_34]) {
 						i_40 = (i_3 << 9) + i_38;
 						i_41 = (i_4 << 9) + i_39;
-						ints_19[this.anInt3852] = class390_23.method6709(i_40, i_41, -722499660) - class390_22.method6709(i_40, i_41, 478616173);
+						ints_19[this.anInt3852] = class390_23.averageHeight(i_40, i_41, -722499660) - class390_22.averageHeight(i_40, i_41, 478616173);
 					}
 
 					if (ints_20 != null) {
 						if (class390_23 != null && !aBoolArrayArray3822[this.anInt3844][i_34]) {
 							i_40 = (i_3 << 9) + i_38;
 							i_41 = (i_4 << 9) + i_39;
-							ints_20[this.anInt3852] = class390_22.method6709(i_40, i_41, -1591634709) - class390_23.method6709(i_40, i_41, -1293906415);
+							ints_20[this.anInt3852] = class390_22.averageHeight(i_40, i_41, -1591634709) - class390_23.averageHeight(i_40, i_41, -1293906415);
 						} else if (class390_24 != null && !aBoolArrayArray3823[this.anInt3844][i_34]) {
 							i_40 = (i_3 << 9) + i_38;
 							i_41 = (i_4 << 9) + i_39;
-							ints_20[this.anInt3852] = class390_24.method6709(i_40, i_41, 2113040787) - class390_22.method6709(i_40, i_41, 1891063345);
+							ints_20[this.anInt3852] = class390_24.averageHeight(i_40, i_41, 2113040787) - class390_22.averageHeight(i_40, i_41, 1891063345);
 						}
 					}
 
@@ -1274,35 +1274,35 @@ public class Class329 {
 							ints_16[this.anInt3852] = this.anInt3850;
 						} else if (i_38 == 0 && i_39 == 0) {
 							ints_16[this.anInt3852] = ints_21[i_3][i_4];
-							ints_17[this.anInt3852] = underlaydef_26.anInt5719;
-							ints_18[this.anInt3852] = underlaydef_26.anInt5720;
+							ints_17[this.anInt3852] = underlaydef_26.texture;
+							ints_18[this.anInt3852] = underlaydef_26.scale;
 						} else if (i_38 == 0 && i_39 == 512) {
 							ints_16[this.anInt3852] = ints_21[i_3][i_6];
-							ints_17[this.anInt3852] = underlaydef_27.anInt5719;
-							ints_18[this.anInt3852] = underlaydef_27.anInt5720;
+							ints_17[this.anInt3852] = underlaydef_27.texture;
+							ints_18[this.anInt3852] = underlaydef_27.scale;
 						} else if (i_38 == 512 && i_39 == 512) {
 							ints_16[this.anInt3852] = ints_21[i_5][i_6];
-							ints_17[this.anInt3852] = underlaydef_28.anInt5719;
-							ints_18[this.anInt3852] = underlaydef_28.anInt5720;
+							ints_17[this.anInt3852] = underlaydef_28.texture;
+							ints_18[this.anInt3852] = underlaydef_28.scale;
 						} else if (i_38 == 512 && i_39 == 0) {
 							ints_16[this.anInt3852] = ints_21[i_5][i_4];
-							ints_17[this.anInt3852] = underlaydef_29.anInt5719;
-							ints_18[this.anInt3852] = underlaydef_29.anInt5720;
+							ints_17[this.anInt3852] = underlaydef_29.texture;
+							ints_18[this.anInt3852] = underlaydef_29.scale;
 						} else {
 							if (i_38 < 256) {
 								if (i_39 < 256) {
-									ints_17[this.anInt3852] = underlaydef_26.anInt5719;
-									ints_18[this.anInt3852] = underlaydef_26.anInt5720;
+									ints_17[this.anInt3852] = underlaydef_26.texture;
+									ints_18[this.anInt3852] = underlaydef_26.scale;
 								} else {
-									ints_17[this.anInt3852] = underlaydef_27.anInt5719;
-									ints_18[this.anInt3852] = underlaydef_27.anInt5720;
+									ints_17[this.anInt3852] = underlaydef_27.texture;
+									ints_18[this.anInt3852] = underlaydef_27.scale;
 								}
 							} else if (i_39 < 256) {
-								ints_17[this.anInt3852] = underlaydef_29.anInt5719;
-								ints_18[this.anInt3852] = underlaydef_29.anInt5720;
+								ints_17[this.anInt3852] = underlaydef_29.texture;
+								ints_18[this.anInt3852] = underlaydef_29.scale;
 							} else {
-								ints_17[this.anInt3852] = underlaydef_28.anInt5719;
-								ints_18[this.anInt3852] = underlaydef_28.anInt5720;
+								ints_17[this.anInt3852] = underlaydef_28.texture;
+								ints_18[this.anInt3852] = underlaydef_28.scale;
 							}
 
 							i_40 = Class371.method6347(ints_21[i_3][i_4], ints_21[i_5][i_4], i_38 << 7 >> 9, -1964912847);
@@ -1321,14 +1321,14 @@ public class Class329 {
 				++this.anInt3846;
 			}
 
-			if (this.anInt3844 != 0 && underlaydef_7.aBool5721) {
+			if (this.anInt3844 != 0 && underlaydef_7.blockShadow) {
 				this.aBool3851 = true;
 			}
 		}
 
 	}
 
-	void method5852(Class390 class390_1, UnderlayDef underlaydef_2, OverlayDef overlaydef_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, short s_11) {
+	void method5852(Ground class390_1, UnderlayDef underlaydef_2, OverlayDef overlaydef_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, short s_11) {
 		int i_12 = class390_1.method6722(i_5, i_6, 65280);
 		int i_13 = class390_1.method6722(i_7, i_6, 65280);
 		int i_14 = class390_1.method6722(i_7, i_8, 65280);
@@ -1352,7 +1352,7 @@ public class Class329 {
 	}
 
 	public final void method5853(int i_1, int[][] ints_2, int i_3) {
-		int[][] ints_4 = this.unk0Data[i_1];
+		int[][] ints_4 = this.tileHeights[i_1];
 
 		for (int i_5 = 0; i_5 < this.maxX + 1; i_5++) {
 			for (int i_6 = 0; i_6 < this.maxY + 1; i_6++) {
@@ -1371,11 +1371,11 @@ public class Class329 {
 		this.aClass536_3834 = class536_6;
 		this.aClass479_3789 = underlayindexloader_7;
 		this.regionMap = regionmap_8;
-		this.underlayColors = new byte[this.anInt3845][this.maxX][this.maxY];
-		this.overlayColors = new byte[this.anInt3845][this.maxX][this.maxY];
-		this.val49ArrDiv4 = new byte[this.anInt3845][this.maxX][this.maxY];
-		this.val49ArrAnd0x3 = new byte[this.anInt3845][this.maxX][this.maxY];
-		this.unk0Data = new int[this.anInt3845][this.maxX + 1][this.maxY + 1];
+		this.underlayIds = new byte[this.anInt3845][this.maxX][this.maxY];
+		this.overlayIds = new byte[this.anInt3845][this.maxX][this.maxY];
+		this.overlayPathShapes = new byte[this.anInt3845][this.maxX][this.maxY];
+		this.overlayRotations = new byte[this.anInt3845][this.maxX][this.maxY];
+		this.tileHeights = new int[this.anInt3845][this.maxX + 1][this.maxY + 1];
 		this.aByteArrayArrayArray3794 = new byte[this.anInt3845][this.maxX + 1][this.maxY + 1];
 	}
 
@@ -1439,7 +1439,7 @@ public class Class329 {
 
 	}
 
-	int method5870(int i_1, int i_2, int i_3, int i_4, int i_5, Class390 class390_6, byte[][] bytes_7, int i_8) {
+	int method5870(int i_1, int i_2, int i_3, int i_4, int i_5, Ground class390_6, byte[][] bytes_7, int i_8) {
 		if ((this.anInt3844 == 0 || this.anInt3844 == 12) && i_2 > 0 && i_3 > 0 && i_2 < this.maxX && i_3 < this.maxY) {
 			byte b_9 = 0;
 			byte b_10 = 0;
@@ -1529,11 +1529,11 @@ public class Class329 {
 				i_12 = rsbytebuffer_1.readUnsignedByte();
 				if (i_12 == 0) {
 					if (this.overlayHidden) {
-						this.unk0Data[0][i_3 + i_5][i_4 + i_6] = 0;
+						this.tileHeights[0][i_3 + i_5][i_4 + i_6] = 0;
 					} else if (i_2 == 0) {
-						this.unk0Data[0][i_3 + i_5][i_4 + i_6] = -Class92.method1560(i_7 + 932731, i_8 + 556238, 1995871883) * 8 << 2;
+						this.tileHeights[0][i_3 + i_5][i_4 + i_6] = -Class92.calculateTileHeights(i_7 + 932731, i_8 + 556238, 1995871883) * 8 << 2;
 					} else {
-						this.unk0Data[i_2][i_3 + i_5][i_4 + i_6] = this.unk0Data[i_2 - 1][i_3 + i_5][i_4 + i_6] - 960;
+						this.tileHeights[i_2][i_3 + i_5][i_4 + i_6] = this.tileHeights[i_2 - 1][i_3 + i_5][i_4 + i_6] - 960;
 					}
 					break;
 				}
@@ -1546,12 +1546,12 @@ public class Class329 {
 						}
 
 						if (i_2 == 0) {
-							this.unk0Data[0][i_3 + i_5][i_4 + i_6] = -i_13 * 8 << 2;
+							this.tileHeights[0][i_3 + i_5][i_4 + i_6] = -i_13 * 8 << 2;
 						} else {
-							this.unk0Data[i_2][i_3 + i_5][i_4 + i_6] = this.unk0Data[i_2 - 1][i_3 + i_5][i_4 + i_6] - (i_13 * 8 << 2);
+							this.tileHeights[i_2][i_3 + i_5][i_4 + i_6] = this.tileHeights[i_2 - 1][i_3 + i_5][i_4 + i_6] - (i_13 * 8 << 2);
 						}
 					} else {
-						this.unk0Data[0][i_3 + i_5][i_4 + i_6] = i_13 * 8 << 2;
+						this.tileHeights[0][i_3 + i_5][i_4 + i_6] = i_13 * 8 << 2;
 					}
 					break;
 				}
@@ -1560,16 +1560,16 @@ public class Class329 {
 					if (bool_10) {
 						rsbytebuffer_1.readUnsignedByte();
 					} else {
-						this.overlayColors[i_2][i_3][i_4] = rsbytebuffer_1.readByte();
-						this.val49ArrDiv4[i_2][i_3][i_4] = (byte) ((i_12 - 2) / 4);
-						this.val49ArrAnd0x3[i_2][i_3][i_4] = (byte) (i_12 - 2 + i_9 & 0x3);
+						this.overlayIds[i_2][i_3][i_4] = rsbytebuffer_1.readByte();
+						this.overlayPathShapes[i_2][i_3][i_4] = (byte) ((i_12 - 2) / 4);
+						this.overlayRotations[i_2][i_3][i_4] = (byte) (i_12 - 2 + i_9 & 0x3);
 					}
 				} else if (i_12 <= 81) {
 					if (!this.overlayHidden && !bool_10) {
 						this.regionMap.tileMasks[i_2][i_3][i_4] = (byte) (i_12 - 49);
 					}
 				} else if (!bool_10) {
-					this.underlayColors[i_2][i_3][i_4] = (byte) (i_12 - 81);
+					this.underlayIds[i_2][i_3][i_4] = (byte) (i_12 - 81);
 				}
 			}
 		} else {

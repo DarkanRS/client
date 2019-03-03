@@ -110,28 +110,28 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 
 	}
 
-	static final byte[] method15438(byte[] bytes_0, byte b_1) {
+	static final byte[] method15438(byte[] data, byte b_1) {
 		try {
-			RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
-			int i_3 = rsbytebuffer_2.readUnsignedByte();
-			int i_4 = rsbytebuffer_2.readInt();
+			RsByteBuffer buffer = new RsByteBuffer(data);
+			int i_3 = buffer.readUnsignedByte();
+			int i_4 = buffer.readInt();
 			if (i_4 >= 0 && (Index.anInt3689 == 0 || i_4 <= Index.anInt3689)) {
 				if (i_3 == 0) {
 					byte[] bytes_5 = new byte[i_4];
-					rsbytebuffer_2.readBytes(bytes_5, 0, i_4, 1321336426);
+					buffer.readBytes(bytes_5, 0, i_4, 1321336426);
 					return bytes_5;
 				} else {
-					int i_8 = rsbytebuffer_2.readInt();
+					int i_8 = buffer.readInt();
 					if (i_8 < 0 || Index.anInt3689 != 0 && i_8 > Index.anInt3689) {
 						throw new RuntimeException();
 					} else {
 						byte[] bytes_6 = new byte[i_8];
 						if (i_3 == 1) {
-							Class471.method7828(bytes_6, i_8, bytes_0, i_4, 9);
+							Class471.method7828(bytes_6, i_8, data, i_4, 9);
 						} else {
 							Class395 class395_7 = Index.aClass395_3684;
 							synchronized (Index.aClass395_3684) {
-								Index.aClass395_3684.method6767(rsbytebuffer_2, bytes_6, -1958864927);
+								Index.aClass395_3684.method6767(buffer, bytes_6, -1958864927);
 							}
 						}
 

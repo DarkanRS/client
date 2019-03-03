@@ -8,7 +8,7 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 		return 0L;
 	}
 
-	Class135_Sub2(Class505_Sub1 class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
+	Class135_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
 		super(class505_sub1_1, 34962, bytes_3, i_4, bool_5);
 		this.anInt9085 = i_2;
 	}
@@ -60,7 +60,7 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 		this.anInt9085 = i_1;
 	}
 
-	Class135_Sub2(Class505_Sub1 class505_sub1_1, int i_2, Buffer buffer_3, int i_4, boolean bool_5) {
+	Class135_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Buffer buffer_3, int i_4, boolean bool_5) {
 		super(class505_sub1_1, 34962, buffer_3, i_4, bool_5);
 		this.anInt9085 = i_2;
 	}

@@ -5,9 +5,9 @@ public class UnderlayDef {
 	public int a;
 	public int r;
 	int rgb = 0;
-	public int anInt5719 = -1;
-	public int anInt5720 = 512;
-	public boolean aBool5721 = true;
+	public int texture = -1;
+	public int scale = 512;
+	public boolean blockShadow = true;
 	public boolean aBool5722 = true;
 
 	void method8048(int i_1, int i_2) {
@@ -86,14 +86,14 @@ public class UnderlayDef {
 			this.rgb = rsbytebuffer_1.read24BitUnsignedInteger();
 			this.method8048(this.rgb, 1049430248);
 		} else if (i_2 == 2) {
-			this.anInt5719 = rsbytebuffer_1.readUnsignedShort();
-			if (this.anInt5719 == 65535) {
-				this.anInt5719 = -1;
+			this.texture = rsbytebuffer_1.readUnsignedShort();
+			if (this.texture == 65535) {
+				this.texture = -1;
 			}
 		} else if (i_2 == 3) {
-			this.anInt5720 = rsbytebuffer_1.readUnsignedShort() << 2;
+			this.scale = rsbytebuffer_1.readUnsignedShort() << 2;
 		} else if (i_2 == 4) {
-			this.aBool5721 = false;
+			this.blockShadow = false;
 		} else if (i_2 == 5) {
 			this.aBool5722 = false;
 		}

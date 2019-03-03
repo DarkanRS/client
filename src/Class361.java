@@ -108,7 +108,7 @@ public class Class361 {
 	}
 
 	static final void method6271(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class125.method2168(icomponentdefinitions_3, interface_4, cs2executor_0, 539000010);
@@ -121,7 +121,7 @@ public class Class361 {
 		cs2executor_0.intStackPtr += 3;
 	}
 
-	public static byte[] method6273(byte[] bytes_0, int i_1, int i_2) {
+	public static byte[] getWhirlpool(byte[] bytes_0, int i_1, int i_2) {
 		byte[] bytes_3;
 		if (i_1 > 0) {
 			bytes_3 = new byte[i_2];

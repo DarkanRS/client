@@ -1,4 +1,4 @@
-public class Class468_Sub9 extends Class468 {
+public class Class468_Sub9 extends Preference {
 
 	public static JS5Manager JS5_MANAGER;
 
@@ -30,11 +30,11 @@ public class Class468_Sub9 extends Class468 {
 	}
 
 	int method7786() {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
+		return this.manager.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
 	}
 
 	int method7787() {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
+		return this.manager.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
 	}
 
 	public int method12687(int i_1) {
@@ -42,7 +42,7 @@ public class Class468_Sub9 extends Class468 {
 	}
 
 	int method7781(int i_1) {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
+		return this.manager.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
 	}
 
 	int method7785(int i_1, int i_2) {

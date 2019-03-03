@@ -62,7 +62,7 @@ public class IndexReference {
 
 	static final void method1784(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		UnderlayDefinition underlaydefinition_3;
+		ClassSomet underlaydefinition_3;
 		if (cs2executor_0.aBool7022) {
 			underlaydefinition_3 = cs2executor_0.aClass513_6994;
 		} else {

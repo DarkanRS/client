@@ -223,12 +223,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 						aCRC32_7804.reset();
 						aCRC32_7804.update(bytes_5, 0, bytes_5.length - 2);
 						int i_7 = (int) aCRC32_7804.getValue();
-						if (i_7 != this.table.unknown[i_1]) {
+						if (i_7 != this.table.crcs[i_1]) {
 							throw new RuntimeException();
 						} else {
 							if (this.table.whirlpool != null && this.table.whirlpool[i_1] != null) {
 								bytes_8 = this.table.whirlpool[i_1];
-								byte[] bytes_9 = Class361.method6273(bytes_5, 0, bytes_5.length - 2);
+								byte[] bytes_9 = Class361.getWhirlpool(bytes_5, 0, bytes_5.length - 2);
 
 								for (int i_10 = 0; i_10 < 64; i_10++) {
 									if (bytes_9[i_10] != bytes_8[i_10]) {
@@ -238,7 +238,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 							}
 
 							int i_11 = (bytes_5[bytes_5.length - 1] & 0xff) + ((bytes_5[bytes_5.length - 2] & 0xff) << 8);
-							if (i_11 != (this.table.crcs[i_1] & 0xffff)) {
+							if (i_11 != (this.table.versions[i_1] & 0xffff)) {
 								throw new RuntimeException();
 							} else {
 								if (this.aByteArray7792[i_1] != 1) {
@@ -271,12 +271,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 				aCRC32_7804.reset();
 				aCRC32_7804.update(bytes_5, 0, bytes_5.length - 2);
 				int i_13 = (int) aCRC32_7804.getValue();
-				if (i_13 != this.table.unknown[i_1]) {
+				if (i_13 != this.table.crcs[i_1]) {
 					throw new RuntimeException();
 				} else {
 					if (this.table.whirlpool != null && this.table.whirlpool[i_1] != null) {
 						byte[] bytes_12 = this.table.whirlpool[i_1];
-						bytes_8 = Class361.method6273(bytes_5, 0, bytes_5.length - 2);
+						bytes_8 = Class361.getWhirlpool(bytes_5, 0, bytes_5.length - 2);
 
 						for (int i_14 = 0; i_14 < 64; i_14++) {
 							if (bytes_8[i_14] != bytes_12[i_14]) {
@@ -287,8 +287,8 @@ public class JS5GrabWorker extends JS5FileWorker {
 
 					this.standardRequester.anInt3657 = 0;
 					this.standardRequester.anInt3650 = 0;
-					bytes_5[bytes_5.length - 2] = (byte) (this.table.crcs[i_1] >>> 8);
-					bytes_5[bytes_5.length - 1] = (byte) this.table.crcs[i_1];
+					bytes_5[bytes_5.length - 2] = (byte) (this.table.versions[i_1] >>> 8);
+					bytes_5[bytes_5.length - 1] = (byte) this.table.versions[i_1];
 					if (this.dataFile != null) {
 						this.localRequester.method5564(i_1, bytes_5, this.dataFile, -234788536);
 						if (this.aByteArray7792[i_1] != 1) {

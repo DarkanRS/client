@@ -1,4 +1,4 @@
-public class Class282_Sub50_Sub17_Sub2 extends Class282_Sub50_Sub17 {
+public class Class282_Sub50_Sub17_Sub2 extends Shadow {
 
 	int anInt10453;
 	int anInt10455;

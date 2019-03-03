@@ -73,11 +73,11 @@ public class Defaults6Loader {
 		Class393.preferences.setValue(Class393.preferences.idleAnimations, 1, -1488523867);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub26_8224, 1, 1312691024);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub28_8212, 1, 1015106335);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, 1, -562253480);
+		Class393.preferences.setValue(Class393.preferences.textures, 1, -562253480);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub2_8205, 2, -1286707836);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub19_8204, 1, 478043407);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, 2, -821146984);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub30_8194, 1, -268934018);
+		Class393.preferences.setValue(Class393.preferences.water, 2, -821146984);
+		Class393.preferences.setValue(Class393.preferences.fog, 1, -268934018);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8187, 0, 1600153169);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8223, 0, -2035572278);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub20_8207, 2, 2138674404);
@@ -86,14 +86,14 @@ public class Defaults6Loader {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 1, 991235937);
 		Class323.method5777(1560410818);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 0, -231227368);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 4, -702190975);
+		Class393.preferences.setValue(Class393.preferences.graphics, 4, -702190975);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(1356336946);
 		client.aBool7185 = true;
 	}
 
 	static final void method11249(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1343;
 	}

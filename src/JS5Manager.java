@@ -44,7 +44,7 @@ public class JS5Manager {
 				if (bytes_5.length != 64 && bytes_5.length != 65) {
 					throw new RuntimeException();
 				} else {
-					Class361.method6273(rsbytebuffer_2.buffer, 5, rsbytebuffer_2.index - bytes_4.length - 5);
+					Class361.getWhirlpool(rsbytebuffer_2.buffer, 5, rsbytebuffer_2.index - bytes_4.length - 5);
 
 					for (int i_8 = 0; i_8 < 64; i_8++) {
 						;
@@ -113,7 +113,7 @@ public class JS5Manager {
 	}
 
 	static final void method5487(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class306.method5453(icomponentdefinitions_3, interface_4, cs2executor_0, -218121128);

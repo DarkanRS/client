@@ -2,10 +2,10 @@ import jaclib.memory.Buffer;
 
 public class Class131 {
 
-	Class505_Sub1 aClass505_Sub1_1594;
+	OpenGLGraphicalRenderer aClass505_Sub1_1594;
 	Buffer aBuffer1593;
 
-	Class131(Class505_Sub1 class505_sub1_1, Buffer buffer_2) {
+	Class131(OpenGLGraphicalRenderer class505_sub1_1, Buffer buffer_2) {
 		this.aClass505_Sub1_1594 = class505_sub1_1;
 		this.aBuffer1593 = buffer_2;
 	}
@@ -18,7 +18,7 @@ public class Class131 {
 		this.aBuffer1593.method116(bytes_1, 0, 0, i_2);
 	}
 
-	Class131(Class505_Sub1 class505_sub1_1, byte[] bytes_2, int i_3) {
+	Class131(OpenGLGraphicalRenderer class505_sub1_1, byte[] bytes_2, int i_3) {
 		this.aClass505_Sub1_1594 = class505_sub1_1;
 		this.aBuffer1593 = this.aClass505_Sub1_1594.aNativeHeap8445.method759(i_3, false);
 		if (bytes_2 != null) {

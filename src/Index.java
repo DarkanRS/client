@@ -14,7 +14,7 @@ public final class Index {
 		if (!this.referenceTableLoaded()) {
 			throw new IllegalStateException("");
 		} else {
-			return this.referenceTable.crc;
+			return this.referenceTable.headerCrc;
 		}
 	}
 

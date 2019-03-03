@@ -1,6 +1,6 @@
 public abstract class Class141 {
 
-	Class505_Sub1 aClass505_Sub1_1664;
+	OpenGLGraphicalRenderer aClass505_Sub1_1664;
 
 	abstract void method2394(Class137 var1, int var2);
 
@@ -32,7 +32,7 @@ public abstract class Class141 {
 
 	abstract void method2408(boolean var1);
 
-	Class141(Class505_Sub1 class505_sub1_1) {
+	Class141(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.aClass505_Sub1_1664 = class505_sub1_1;
 	}
 

@@ -590,15 +590,15 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final void iw(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-		boolean bool_7 = this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 != i_1;
+		boolean bool_7 = this.anInt8765 != i_1;
 		if (bool_7 || this.aFloat8770 != f_2 || this.aFloat8826 != f_3) {
-			this.anInt8765 = i_1 * -16777217 * 16777215 * -16777217 * 16777215;
+			this.anInt8765 = i_1;
 			this.aFloat8770 = f_2;
 			this.aFloat8826 = f_3;
 			if (bool_7) {
-				this.aFloat8766 = (float) (this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 & 0xff0000) / 1.671168E7F;
-				this.aFloat8767 = (float) (this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 & 0xff00) / 65280.0F;
-				this.aFloat8768 = (float) (this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 & 0xff) / 255.0F;
+				this.aFloat8766 = (float) (this.anInt8765 & 0xff0000) / 1.671168E7F;
+				this.aFloat8767 = (float) (this.anInt8765 & 0xff00) / 65280.0F;
+				this.aFloat8768 = (float) (this.anInt8765 & 0xff) / 255.0F;
 				this.method13948();
 			}
 
@@ -797,7 +797,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return i_1 | i_2;
 	}
 
-	public final Class390 method8478(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+	public final Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
 		return new Class390_Sub1(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
@@ -1382,11 +1382,11 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final void il(int i_1) {
-		for (this.anInt8806 = 0 * -1431655765 * 3 * -1431655765 * 3; i_1 > 1; i_1 >>= 1) {
-			this.anInt8806 = (this.anInt8806 * -1431655765 * 3 * -1431655765 * 3 + 1) * -1431655765 * 3 * -1431655765 * 3;
+		for (this.anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+			this.anInt8806 = (this.anInt8806 + 1);
 		}
 
-		this.anInt8775 = 1 << this.anInt8806 * -1431655765 * 3 * -1431655765 * 3;
+		this.anInt8775 = 1 << this.anInt8806;
 	}
 
 	abstract Interface1 method13962(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);
@@ -2837,7 +2837,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return i_1 & i_2 ^ i_2;
 	}
 
-	public final Class390 method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+	public final Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
 		return new Class390_Sub1(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
@@ -2968,15 +2968,15 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final void im(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-		boolean bool_7 = this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 != i_1;
+		boolean bool_7 = this.anInt8765 != i_1;
 		if (bool_7 || this.aFloat8770 != f_2 || this.aFloat8826 != f_3) {
-			this.anInt8765 = i_1 * -16777217 * 16777215 * -16777217 * 16777215;
+			this.anInt8765 = i_1;
 			this.aFloat8770 = f_2;
 			this.aFloat8826 = f_3;
 			if (bool_7) {
-				this.aFloat8766 = (float) (this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 & 0xff0000) / 1.671168E7F;
-				this.aFloat8767 = (float) (this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 & 0xff00) / 65280.0F;
-				this.aFloat8768 = (float) (this.anInt8765 * -16777217 * 16777215 * -16777217 * 16777215 & 0xff) / 255.0F;
+				this.aFloat8766 = (float) (this.anInt8765 & 0xff0000) / 1.671168E7F;
+				this.aFloat8767 = (float) (this.anInt8765 & 0xff00) / 65280.0F;
+				this.aFloat8768 = (float) (this.anInt8765 & 0xff) / 255.0F;
 				this.method13948();
 			}
 
@@ -3006,19 +3006,19 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final void iq(int i_1) {
-		for (this.anInt8806 = 0 * -1431655765 * 3 * -1431655765 * 3; i_1 > 1; i_1 >>= 1) {
-			this.anInt8806 = (this.anInt8806 * -1431655765 * 3 * -1431655765 * 3 + 1) * -1431655765 * 3 * -1431655765 * 3;
+		for (this.anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+			this.anInt8806 = (this.anInt8806 + 1);
 		}
 
-		this.anInt8775 = 1 << this.anInt8806 * -1431655765 * 3 * -1431655765 * 3;
+		this.anInt8775 = 1 << this.anInt8806;
 	}
 
 	public final void ii(int i_1) {
-		for (this.anInt8806 = 0 * -1431655765 * 3 * -1431655765 * 3; i_1 > 1; i_1 >>= 1) {
-			this.anInt8806 = (this.anInt8806 * -1431655765 * 3 * -1431655765 * 3 + 1) * -1431655765 * 3 * -1431655765 * 3;
+		for (this.anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+			this.anInt8806 = (this.anInt8806 + 1);
 		}
 
-		this.anInt8775 = 1 << this.anInt8806 * -1431655765 * 3 * -1431655765 * 3;
+		this.anInt8775 = 1 << this.anInt8806;
 	}
 
 	public final FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {

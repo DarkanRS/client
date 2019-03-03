@@ -75,9 +75,9 @@ public class Class141_Sub4 extends Class141 {
 			float f_2 = this.aClass505_Sub1_1664.aFloat8403;
 			float f_3 = f_1 - (f_1 - f_2) * 0.125F;
 			float f_4 = f_1 - (f_1 - f_2) * 0.25F;
-			OpenGL.glProgramLocalParameter4fARB(34336, 0, f_4, f_3, 256.0F / (float) this.aClass505_Sub1_1664.aClass90_8423.anInt945, (float) this.aClass505_Sub1_1664.aClass90_8423.anInt947 / 255.0F);
+			OpenGL.glProgramLocalParameter4fARB(34336, 0, f_4, f_3, 256.0F / (float) this.aClass505_Sub1_1664.aClass90_8423.scale, (float) this.aClass505_Sub1_1664.aClass90_8423.intensity / 255.0F);
 			this.aClass505_Sub1_1664.method13610(1);
-			this.aClass505_Sub1_1664.method13617(this.aClass505_Sub1_1664.aClass90_8423.anInt946);
+			this.aClass505_Sub1_1664.method13617(this.aClass505_Sub1_1664.aClass90_8423.color);
 			this.aClass505_Sub1_1664.method13610(0);
 		}
 
@@ -133,7 +133,7 @@ public class Class141_Sub4 extends Class141 {
 	void method2406(boolean bool_1) {
 	}
 
-	Class141_Sub4(Class505_Sub1 class505_sub1_1) {
+	Class141_Sub4(OpenGLGraphicalRenderer class505_sub1_1) {
 		super(class505_sub1_1);
 		if (this.aClass505_Sub1_1664.aBool8484) {
 			this.aClass133_9075 = Class133.method2321(this.aClass505_Sub1_1664, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, fogFactor;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n");

@@ -10,7 +10,7 @@ public class Class507 {
 	}
 
 	static final void method8723(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class202.method3338(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 40);
@@ -44,7 +44,7 @@ public class Class507 {
 		}
 
 		if (i_1 == 3 && (!Class475.supportsFullScreen || client.fullScreenFrame == null)) {
-			method8725(i_0, Class393.preferences.aClass468_Sub9_8226.method12687(-1519705843), -1, -1, true, -1040786933);
+			method8725(i_0, Class393.preferences.screenSize.method12687(-1519705843), -1, -1, true, -1040786933);
 		} else {
 			Container container_6 = Class371.getActiveContainer((byte) 1);
 			Insets insets_7;
@@ -121,7 +121,7 @@ public class Class507 {
 	}
 
 	static final void method8726(CS2Executor cs2executor_0, short s_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class30.method797(icomponentdefinitions_3, interface_4, cs2executor_0, 2104717291);

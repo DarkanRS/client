@@ -24,7 +24,7 @@ public class Class282_Sub6 extends Node {
 		this.anInt7510 = i_2;
 		this.aFloat7511 = (float) i_3;
 		this.aClass90_7512 = class90_4;
-		this.anIntArray7515 = new int[this.aClass390_Sub1_7509.anInt4776 * this.aClass390_Sub1_7509.anInt4773];
+		this.anIntArray7515 = new int[this.aClass390_Sub1_7509.width * this.aClass390_Sub1_7509.length];
 		byte b_5 = 10;
 		if (i_2 >= 0) {
 			Class169 class169_6 = this.aClass505_Sub2_7518.anInterface22_5834.method144(i_2, -1808049505);
@@ -188,7 +188,7 @@ public class Class282_Sub6 extends Node {
 	}
 
 	void method12152(int i_1, int i_2, int i_3) {
-		this.anIntArray7515[i_2 * this.aClass390_Sub1_7509.anInt4776 + i_1] |= 1 << i_3;
+		this.anIntArray7515[i_2 * this.aClass390_Sub1_7509.width + i_1] |= 1 << i_3;
 		++this.anInt7508;
 	}
 

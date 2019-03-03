@@ -3,7 +3,7 @@ public class Class146 {
 	int anInt1716 = 0;
 	int anInt1717 = 0;
 	int anInt1718 = 0;
-	Class505_Sub1 aClass505_Sub1_1719;
+	OpenGLGraphicalRenderer aClass505_Sub1_1719;
 	Class136 aClass136_1720;
 	Class141[] aClass141Array1721;
 	Class141_Sub4 aClass141_Sub4_1715;
@@ -60,7 +60,7 @@ public class Class146 {
 		return this.aClass141Array1721[i_1].method2395();
 	}
 
-	Class146(Class505_Sub1 class505_sub1_1) {
+	Class146(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.aClass505_Sub1_1719 = class505_sub1_1;
 		this.aClass136_1720 = new Class136(class505_sub1_1);
 		this.aClass141Array1721 = new Class141[16];

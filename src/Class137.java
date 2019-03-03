@@ -6,7 +6,7 @@ public abstract class Class137 {
 	boolean aBool1652 = false;
 	boolean aBool1641;
 	int anInt1647;
-	Class505_Sub1 aClass505_Sub1_1646;
+	OpenGLGraphicalRenderer aClass505_Sub1_1646;
 	int anInt1648;
 	Class150 aClass150_1650;
 	Class76 aClass76_1651;
@@ -91,7 +91,7 @@ public abstract class Class137 {
 			byte[] bytes_12 = new byte[i_9 * i_10 * i_6];
 
 			while (true) {
-				OpenGL.glTexImage2Dub(i_0, i_7, i_1, i_2, i_3, 0, Class505_Sub1.method13629(class150_4), 5121, bytes_11, 0);
+				OpenGL.glTexImage2Dub(i_0, i_7, i_1, i_2, i_3, 0, OpenGLGraphicalRenderer.method13629(class150_4), 5121, bytes_11, 0);
 				if (i_8 <= 1) {
 					return;
 				}
@@ -150,7 +150,7 @@ public abstract class Class137 {
 			float[] floats_12 = new float[i_9 * i_10 * i_6];
 
 			while (true) {
-				OpenGL.glTexImage2Df(i_0, i_7, i_1, i_2, i_3, 0, Class505_Sub1.method13629(class150_4), 5126, floats_11, 0);
+				OpenGL.glTexImage2Df(i_0, i_7, i_1, i_2, i_3, 0, OpenGLGraphicalRenderer.method13629(class150_4), 5126, floats_11, 0);
 				if (i_8 <= 1) {
 					return;
 				}
@@ -199,7 +199,7 @@ public abstract class Class137 {
 		super.finalize();
 	}
 
-	Class137(Class505_Sub1 class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
+	Class137(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
 		this.aClass505_Sub1_1646 = class505_sub1_1;
 		this.anInt1648 = i_2;
 		this.aClass150_1650 = class150_3;

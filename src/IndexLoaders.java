@@ -398,7 +398,7 @@ public class IndexLoaders {
 				ParticleProducer.method11500(Class393.preferences.aClass468_Sub18_8214.getValue(2116214746), false, (byte) 24);
 			}
 
-			Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(-2050547783), -1, -1, false, (byte) 65);
+			Class440.method7373(Class393.preferences.screenSize.method12687(-2050547783), -1, -1, false, (byte) 65);
 			Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
 			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, -2058774683);
 			Class188.method3139(Renderers.SOFTWARE_RENDERER, SPRITES_INDEX, -814245885);

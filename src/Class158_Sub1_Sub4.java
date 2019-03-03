@@ -8,7 +8,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	int anInt10230;
 	int anInt10229;
 	Interface13[] anInterface13Array10233 = new Interface13[4];
-	Class505_Sub1 aClass505_Sub1_10227;
+	OpenGLGraphicalRenderer aClass505_Sub1_10227;
 	Interface13 anInterface13_10232;
 
 	public void method186() {
@@ -147,7 +147,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 
 	}
 
-	Class158_Sub1_Sub4(Class505_Sub1 class505_sub1_1) {
+	Class158_Sub1_Sub4(OpenGLGraphicalRenderer class505_sub1_1) {
 		if (!class505_sub1_1.aBool8472) {
 			throw new IllegalStateException("");
 		} else {

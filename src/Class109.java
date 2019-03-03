@@ -78,7 +78,7 @@ public abstract class Class109 {
 	}
 
 	static final void method1857(CS2Executor cs2executor_0, int i_1) {
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub8_8219, cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0 ? 1 : 0, -123995659);
+		Class393.preferences.setValue(Class393.preferences.customCursors, cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0 ? 1 : 0, -123995659);
 		Class190.savePreferences((byte) 35);
 	}
 

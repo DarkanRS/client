@@ -22,10 +22,10 @@ public class Class150 {
 		if (Class148.anInt1730 != 0) {
 			if (i_0 < 0) {
 				for (int i_3 = 0; i_3 < 16; i_3++) {
-					Class453.anIntArray5449[i_3] = i_1;
+					HashTable.anIntArray5449[i_3] = i_1;
 				}
 			} else {
-				Class453.anIntArray5449[i_0] = i_1;
+				HashTable.anIntArray5449[i_0] = i_1;
 			}
 		}
 

@@ -87,10 +87,10 @@ public class SharedConfigsType {
 		Class148.aClass317_1732 = index_2;
 		Class148.aClass282_Sub15_Sub2_1735 = class282_sub15_sub2_3;
 		Class502.aClass253_5830 = class253_4;
-		Class453.anIntArray5449 = new int[16];
+		HashTable.anIntArray5449 = new int[16];
 
 		for (int i_6 = 0; i_6 < 16; i_6++) {
-			Class453.anIntArray5449[i_6] = 255;
+			HashTable.anIntArray5449[i_6] = 255;
 		}
 
 		return true;

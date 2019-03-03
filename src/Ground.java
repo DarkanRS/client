@@ -1,11 +1,11 @@
-public abstract class Class390 {
+public abstract class Ground {
 
 	static int anInt4777;
-	public int anInt4776;
-	public int anInt4773;
-	public int anInt4774;
-	public int anInt4775;
-	public int[][] anIntArrayArray4772;
+	public int width;
+	public int length;
+	public int tileUnits;
+	public int tileScale;
+	public int[][] tileHeights;
 
 	public abstract void method6706(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, Class90 var11, boolean var12);
 
@@ -19,15 +19,15 @@ public abstract class Class390 {
 
 	public abstract void p();
 
-	public final int method6709(int i_1, int i_2, int i_3) {
-		int i_4 = i_1 >> this.anInt4775;
-		int i_5 = i_2 >> this.anInt4775;
-		if (i_4 >= 0 && i_5 >= 0 && i_4 <= this.anInt4776 - 1 && i_5 <= this.anInt4773 - 1) {
-			int i_6 = i_1 & this.anInt4774 - 1;
-			int i_7 = i_2 & this.anInt4774 - 1;
-			int i_8 = this.anIntArrayArray4772[i_4][i_5] * (this.anInt4774 - i_6) + i_6 * this.anIntArrayArray4772[i_4 + 1][i_5] >> this.anInt4775;
-			int i_9 = this.anIntArrayArray4772[i_4][i_5 + 1] * (this.anInt4774 - i_6) + this.anIntArrayArray4772[i_4 + 1][i_5 + 1] * i_6 >> this.anInt4775;
-			return i_9 * i_7 + i_8 * (this.anInt4774 - i_7) >> this.anInt4775;
+	public final int averageHeight(int i_1, int i_2, int i_3) {
+		int i_4 = i_1 >> this.tileScale;
+		int i_5 = i_2 >> this.tileScale;
+		if (i_4 >= 0 && i_5 >= 0 && i_4 <= this.width - 1 && i_5 <= this.length - 1) {
+			int i_6 = i_1 & this.tileUnits - 1;
+			int i_7 = i_2 & this.tileUnits - 1;
+			int i_8 = this.tileHeights[i_4][i_5] * (this.tileUnits - i_6) + i_6 * this.tileHeights[i_4 + 1][i_5] >> this.tileScale;
+			int i_9 = this.tileHeights[i_4][i_5 + 1] * (this.tileUnits - i_6) + this.tileHeights[i_4 + 1][i_5 + 1] * i_6 >> this.tileScale;
+			return i_9 * i_7 + i_8 * (this.tileUnits - i_7) >> this.tileScale;
 		} else {
 			return 0;
 		}
@@ -35,15 +35,15 @@ public abstract class Class390 {
 
 	public abstract void method6710(int var1, int var2, int var3, int var4, int var5, int var6, int var7, boolean[][] var8);
 
-	public abstract void z(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void z(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public abstract void method6711(Class282_Sub24 var1, int[] var2);
 
-	public abstract void UA(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void UA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract void NA(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void NA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract boolean method6712(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract boolean method6712(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public abstract void method6713(Class282_Sub24 var1, int[] var2);
 
@@ -51,7 +51,7 @@ public abstract class Class390 {
 
 	public abstract void method6714(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, Class90 var14, boolean var15);
 
-	public abstract void b(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void b(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public abstract void method6715(int var1, int var2, int var3, int var4, int var5, int var6, int var7, boolean[][] var8);
 
@@ -61,43 +61,43 @@ public abstract class Class390 {
 
 	public abstract void method6717(int var1, int var2, int var3, boolean[][] var4, boolean var5, int var6);
 
-	public abstract void u(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void u(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract boolean method6718(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract boolean method6718(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract boolean method6719(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract boolean method6719(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract void d(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void d(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract void a(Class282_Sub50_Sub17 var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void a(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	Class390(int i_1, int i_2, int i_3, int[][] ints_4) {
-		this.anInt4776 = i_1;
-		this.anInt4773 = i_2;
+	Ground(int i_1, int i_2, int i_3, int[][] ints_4) {
+		this.width = i_1;
+		this.length = i_2;
 
-		int i_5;
-		for (i_5 = 0; i_3 > 1; i_3 >>= 1) {
-			++i_5;
+		int scale;
+		for (scale = 0; i_3 > 1; i_3 >>= 1) {
+			++scale;
 		}
 
-		this.anInt4774 = 1 << i_5;
-		this.anInt4775 = i_5;
-		this.anIntArrayArray4772 = ints_4;
+		this.tileUnits = 1 << scale;
+		this.tileScale = scale;
+		this.tileHeights = ints_4;
 	}
 
 	public abstract void method6720(Class282_Sub24 var1, int[] var2);
 
-	public abstract Class282_Sub50_Sub17 s(int var1, int var2, Class282_Sub50_Sub17 var3);
+	public abstract Shadow s(int var1, int var2, Shadow var3);
 
 	public abstract void method6721(Class282_Sub24 var1, int[] var2);
 
 	public final int method6722(int i_1, int i_2, int i_3) {
-		return this.anIntArrayArray4772[i_1][i_2];
+		return this.tileHeights[i_1][i_2];
 	}
 
 	public abstract void method6723(int var1, int var2, int var3, int var4, int var5, int var6, int var7, boolean[][] var8);
 
-	public abstract Class282_Sub50_Sub17 w(int var1, int var2, Class282_Sub50_Sub17 var3);
+	public abstract Shadow w(int var1, int var2, Shadow var3);
 
 	static void method6728(IComponentDefinitions icomponentdefinitions_0, Class119 class119_1, int i_2, int i_3, int i_4, int i_5, int i_6, long long_7) {
 		int i_9 = i_5 * i_5 + i_4 * i_4;
@@ -145,7 +145,7 @@ public abstract class Class390 {
 		boolean bool_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1;
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, i_2, 77442027);
 		if (!bool_3) {
-			Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 0, -1019376772);
+			Class393.preferences.setValue(Class393.preferences.graphics, 0, -1019376772);
 		}
 
 		Class190.savePreferences((byte) 45);

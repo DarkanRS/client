@@ -3,10 +3,10 @@ import jaggl.OpenGL;
 public class Class128 {
 
 	static int[] anIntArray1582 = new int[2];
-	Class505_Sub1 aClass505_Sub1_1581;
+	OpenGLGraphicalRenderer aClass505_Sub1_1581;
 	int anInt1583;
 
-	static Class128 method2174(Class505_Sub1 class505_sub1_0, Class140[] arr_1) {
+	static Class128 method2174(OpenGLGraphicalRenderer class505_sub1_0, Class140[] arr_1) {
 		int i_2;
 		for (i_2 = 0; i_2 < arr_1.length; i_2++) {
 			if (arr_1[i_2] == null || arr_1[i_2].anInt1663 <= 0) {
@@ -49,7 +49,7 @@ public class Class128 {
 		super.finalize();
 	}
 
-	Class128(Class505_Sub1 class505_sub1_1, int i_2, Class140[] arr_3) {
+	Class128(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class140[] arr_3) {
 		this.aClass505_Sub1_1581 = class505_sub1_1;
 		this.anInt1583 = i_2;
 	}

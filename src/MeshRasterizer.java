@@ -2,7 +2,7 @@ public abstract class MeshRasterizer {
 
 	protected boolean aBool7023 = false;
 
-	public abstract void bc(int var1, int var2, Class390 var3, Class390 var4, int var5, int var6, int var7);
+	public abstract void bc(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
 	public abstract Class87[] method11253();
 
@@ -67,8 +67,8 @@ public abstract class MeshRasterizer {
 		int[] ints_5 = null;
 		int[] ints_6 = null;
 		float[][] floats_7 = null;
-		if (rsmesh_1.aByteArray1988 != null) {
-			int i_8 = rsmesh_1.texturedFaceCount;
+		if (rsmesh_1.texturePos != null) {
+			int i_8 = rsmesh_1.numTextureTriangles;
 			int[] ints_9 = new int[i_8];
 			int[] ints_10 = new int[i_8];
 			int[] ints_11 = new int[i_8];
@@ -89,17 +89,17 @@ public abstract class MeshRasterizer {
 			int i_20;
 			for (i_15 = 0; i_15 < i_3; i_15++) {
 				int i_16 = ints_2[i_15];
-				if (rsmesh_1.aByteArray1988[i_16] != -1) {
-					int i_17 = rsmesh_1.aByteArray1988[i_16] & 0xff;
+				if (rsmesh_1.texturePos[i_16] != -1) {
+					int i_17 = rsmesh_1.texturePos[i_16] & 0xff;
 
 					for (int i_18 = 0; i_18 < 3; i_18++) {
 						short s_19;
 						if (i_18 == 0) {
-							s_19 = rsmesh_1.aShortArray1982[i_16];
+							s_19 = rsmesh_1.triangleX[i_16];
 						} else if (i_18 == 1) {
-							s_19 = rsmesh_1.aShortArray1983[i_16];
+							s_19 = rsmesh_1.triangleY[i_16];
 						} else {
-							s_19 = rsmesh_1.aShortArray1984[i_16];
+							s_19 = rsmesh_1.triangleZ[i_16];
 						}
 
 						i_20 = rsmesh_1.vertexX[s_19];
@@ -138,7 +138,7 @@ public abstract class MeshRasterizer {
 			floats_7 = new float[i_8][];
 
 			for (i_15 = 0; i_15 < i_8; i_15++) {
-				byte b_23 = rsmesh_1.aByteArray1995[i_15];
+				byte b_23 = rsmesh_1.textureRenderTypes[i_15];
 				if (b_23 > 0) {
 					ints_4[i_15] = (ints_9[i_15] + ints_10[i_15]) / 2;
 					ints_5[i_15] = (ints_11[i_15] + ints_12[i_15]) / 2;
@@ -170,7 +170,7 @@ public abstract class MeshRasterizer {
 						f_26 = (float) rsmesh_1.anIntArray2001[i_15] / 1024.0F;
 					}
 
-					floats_7[i_15] = this.method11257(rsmesh_1.aShortArray1996[i_15], rsmesh_1.aShortArray1987[i_15], rsmesh_1.aShortArray1998[i_15], rsmesh_1.aByteArray2005[i_15] & 0xff, f_24, f_25, f_26);
+					floats_7[i_15] = this.method11257(rsmesh_1.texTriX[i_15], rsmesh_1.texTriY[i_15], rsmesh_1.texTriZ[i_15], rsmesh_1.aByteArray2005[i_15] & 0xff, f_24, f_25, f_26);
 				}
 			}
 		}
@@ -579,7 +579,7 @@ public abstract class MeshRasterizer {
 
 	public abstract boolean method11270(int var1, int var2, Matrix44Var var3, boolean var4, int var5);
 
-	public abstract Class282_Sub50_Sub17 ga(Class282_Sub50_Sub17 var1);
+	public abstract Shadow ga(Shadow var1);
 
 	public abstract int N();
 
@@ -663,22 +663,22 @@ public abstract class MeshRasterizer {
 
 	public abstract MeshRasterizer method11279(byte var1, int var2, boolean var3);
 
-	void method11281(Class390 class390_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+	void method11281(Ground class390_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		boolean bool_9 = false;
 		boolean bool_10 = false;
 		boolean bool_11 = false;
 		int i_12 = -i_5 / 2;
 		int i_13 = -i_6 / 2;
-		int i_14 = class390_1.method6709(i_12 + i_2, i_13 + i_4, 2029342916);
+		int i_14 = class390_1.averageHeight(i_12 + i_2, i_13 + i_4, 2029342916);
 		int i_15 = i_5 / 2;
 		int i_16 = -i_6 / 2;
-		int i_17 = class390_1.method6709(i_15 + i_2, i_16 + i_4, 211604312);
+		int i_17 = class390_1.averageHeight(i_15 + i_2, i_16 + i_4, 211604312);
 		int i_18 = -i_5 / 2;
 		int i_19 = i_6 / 2;
-		int i_20 = class390_1.method6709(i_18 + i_2, i_19 + i_4, -1995785916);
+		int i_20 = class390_1.averageHeight(i_18 + i_2, i_19 + i_4, -1995785916);
 		int i_21 = i_5 / 2;
 		int i_22 = i_6 / 2;
-		int i_23 = class390_1.method6709(i_21 + i_2, i_22 + i_4, 1123501570);
+		int i_23 = class390_1.averageHeight(i_21 + i_2, i_22 + i_4, 1123501570);
 		int i_24 = i_14 < i_17 ? i_14 : i_17;
 		int i_25 = i_20 < i_23 ? i_20 : i_23;
 		int i_26 = i_17 < i_23 ? i_17 : i_23;
@@ -927,13 +927,13 @@ public abstract class MeshRasterizer {
 
 	public abstract void EA(int var1);
 
-	public abstract Class282_Sub50_Sub17 dn(Class282_Sub50_Sub17 var1);
+	public abstract Shadow dn(Shadow var1);
 
-	public abstract Class282_Sub50_Sub17 da(Class282_Sub50_Sub17 var1);
+	public abstract Shadow da(Shadow var1);
 
-	public abstract Class282_Sub50_Sub17 dw(Class282_Sub50_Sub17 var1);
+	public abstract Shadow dw(Shadow var1);
 
-	public abstract Class282_Sub50_Sub17 dr(Class282_Sub50_Sub17 var1);
+	public abstract Shadow dr(Shadow var1);
 
 	abstract void bp();
 
@@ -945,7 +945,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void by();
 
-	public abstract void pa(int var1, int var2, Class390 var3, Class390 var4, int var5, int var6, int var7);
+	public abstract void pa(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
 	public abstract void bi(int var1);
 

@@ -111,7 +111,7 @@ public class Class210 {
 
 	static final void method3613(CS2Executor cs2executor_0, int i_1) {
 		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-			Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(551500203), -1, -1, false, (byte) 52);
+			Class440.method7373(Class393.preferences.screenSize.method12687(551500203), -1, -1, false, (byte) 52);
 		}
 
 	}

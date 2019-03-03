@@ -875,7 +875,7 @@ public class Class174 {
 			Class350_Sub2.method12572(cs2executor_1, 693718550);
 			break;
 		case 261:
-			Class390.method6729(cs2executor_1, 177606197);
+			Ground.method6729(cs2executor_1, 177606197);
 			break;
 		case 262:
 			Class58.method1137(cs2executor_1, 1990422976);
@@ -1691,7 +1691,7 @@ public class Class174 {
 			OverlayDef.method11372(cs2executor_1, -1660682202);
 			break;
 		case 533:
-			Class390.method6732(cs2executor_1, (byte) 51);
+			Ground.method6732(cs2executor_1, (byte) 51);
 			break;
 		case 534:
 			Class282_Sub48.method13446(cs2executor_1, 814107150);
@@ -1976,7 +1976,7 @@ public class Class174 {
 			Class346.method6150(cs2executor_1, (short) 245);
 			break;
 		case 628:
-			Class282_Sub50_Sub17.method15510(cs2executor_1, -1046810016);
+			Shadow.method15510(cs2executor_1, -1046810016);
 			break;
 		case 629:
 			Class191.method3164(cs2executor_1, -1986400390);
@@ -2135,7 +2135,7 @@ public class Class174 {
 			Class276.method4901(cs2executor_1, (byte) 1);
 			break;
 		case 681:
-			Class282_Sub50_Sub17.method15512(cs2executor_1, 265164609);
+			Shadow.method15512(cs2executor_1, 265164609);
 			break;
 		case 682:
 			Class475.method7928(cs2executor_1, (byte) 34);
@@ -2528,7 +2528,7 @@ public class Class174 {
 			Class96_Sub11.method14606(cs2executor_1, -573390475);
 			break;
 		case 812:
-			Class390.method6730(cs2executor_1, 1558469536);
+			Ground.method6730(cs2executor_1, 1558469536);
 			break;
 		case 813:
 			Class96.method1606(cs2executor_1, -1612733757);
@@ -2540,7 +2540,7 @@ public class Class174 {
 			Class331.method5922(cs2executor_1, -503207112);
 			break;
 		case 816:
-			Class282_Sub50_Sub17.method15514(cs2executor_1, -1523081403);
+			Shadow.method15514(cs2executor_1, -1523081403);
 			break;
 		case 817:
 			Class94.method1586(cs2executor_1, 1772986490);
@@ -3011,7 +3011,7 @@ public class Class174 {
 			TilestreamPacket.method6291(cs2executor_1, (byte) 1);
 			break;
 		case 973:
-			Class282_Sub50_Sub17.method15513(cs2executor_1, 287550285);
+			Shadow.method15513(cs2executor_1, 287550285);
 			break;
 		case 974:
 			Class121.method2103(cs2executor_1, (byte) 74);

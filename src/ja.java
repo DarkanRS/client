@@ -572,7 +572,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	native void M(int var1, int var2, int var3, int var4);
 
 	public final void method8475(int i_1, Class90 class90_2) {
-		this.M(i_1, class90_2.anInt946, class90_2.anInt945, class90_2.anInt947);
+		this.M(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
 	public Class455 method8553(int i_1, int i_2, int[] ints_3, int[] ints_4) {
@@ -633,7 +633,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	}
 
 	public final void method8476(int i_1, Class90 class90_2) {
-		this.JA(i_1, class90_2.anInt946, class90_2.anInt945, class90_2.anInt947);
+		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
 	void method8555(int i_1, int i_2) throws Exception_Sub3 {
@@ -723,7 +723,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	public native int dv();
 
 	public final void method8616(int i_1, Class90 class90_2) {
-		this.JA(i_1, class90_2.anInt946 * -1856397433 * 1152775735, class90_2.anInt945 * 873459953 * 973144081, class90_2.anInt947 * -96197041 * -732614481);
+		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
 	public void method8613() {
@@ -820,7 +820,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	public native void en(float var1, float var2);
 
 	public final void method8585(int i_1, Class90 class90_2) {
-		this.M(i_1, class90_2.anInt946 * -1856397433 * 1152775735, class90_2.anInt945 * 873459953 * 973144081, class90_2.anInt947 * -96197041 * -732614481);
+		this.M(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
 	public native void ez();
@@ -1285,7 +1285,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return i_3 & i_4 ^ i_4;
 	}
 
-	public Class390 method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+	public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
 		return new i(this, this.z, i_1, i_2, ints_3, ints_4, i_5, i_6, i_7);
 	}
 
@@ -1444,7 +1444,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void fw(int var1, int var2, int var3, int var4, int var5);
 
-	public Class390 method8478(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
 		return new i(this, this.z, i_1, i_2, ints_3, ints_4, i_5, i_6, i_7);
 	}
 
@@ -1504,7 +1504,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	native void oi(int var1, int var2, int var3, int var4);
 
 	public final void method8615(int i_1, Class90 class90_2) {
-		this.JA(i_1, class90_2.anInt946 * -1856397433 * 1152775735, class90_2.anInt945 * 873459953 * 973144081, class90_2.anInt947 * -96197041 * -732614481);
+		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
 	native void V(short var1, short var2, int var3, byte var4, byte var5, int var6, boolean var7, byte var8, byte var9, byte var10, byte var11, boolean var12, boolean var13, boolean var14, boolean var15, boolean var16, byte var17, boolean var18, boolean var19, int var20);

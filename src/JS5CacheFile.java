@@ -331,7 +331,7 @@ public final class JS5CacheFile {
 	}
 
 	static final void method3356(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		ReferenceTable.method5763(icomponentdefinitions_3, interface_4, cs2executor_0, 2042314343);
@@ -345,14 +345,14 @@ public final class JS5CacheFile {
 	}
 
 	static final void method3358(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub9_8226.method12687(-317680305);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.screenSize.method12687(-317680305);
 	}
 
 	public static void method3359(int i_0) {
 		if (!Class190.aBool2383) {
 			Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1518927169).aClass293ArrayArrayArray2610, (byte) 90);
-			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2093053436).aClass293ArrayArrayArray2608 != null) {
-				Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1407673431).aClass293ArrayArrayArray2608, (byte) 112);
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2093053436).waterRelatedClassArray1 != null) {
+				Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1407673431).waterRelatedClassArray1, (byte) 112);
 			}
 
 			Class190.aBool2383 = true;

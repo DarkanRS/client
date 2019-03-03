@@ -16,7 +16,7 @@ public class Class151 {
 	}
 
 	static final void method2588(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub24_8216.method12923(-1002096865) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.water.method12923(-1002096865) ? 1 : 0;
 	}
 
 	public static void method2589(boolean bool_0, byte[] bytes_1, int i_2) {

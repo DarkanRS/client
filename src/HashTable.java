@@ -1,4 +1,4 @@
-public final class Class453 {
+public final class HashTable {
 
 	static int[] anIntArray5449;
 	long aLong5447;
@@ -63,7 +63,7 @@ public final class Class453 {
 		return i_2;
 	}
 
-	public Class453(int i_1) {
+	public HashTable(int i_1) {
 		this.anInt5445 = i_1;
 		this.aClass282Array5446 = new Node[i_1];
 

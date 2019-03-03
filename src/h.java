@@ -84,7 +84,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void bj(int var1);
 
-	public native Class282_Sub50_Sub17 da(Class282_Sub50_Sub17 var1);
+	public native Shadow da(Shadow var1);
 
 	public native void EA(int var1);
 
@@ -163,7 +163,7 @@ public class h extends MeshRasterizer implements Interface40 {
 			ints_13[i_14++] = class84_16.anInt811;
 		}
 
-		this.U(this.aja7140, this.aba7141, rsmesh_3.vertexCount, rsmesh_3.anInt1999, rsmesh_3.vertexX, rsmesh_3.vertexY, rsmesh_3.vertexZ, rsmesh_3.anIntArray2002, rsmesh_3.aShortArray1980, rsmesh_3.anInt1973, rsmesh_3.aShortArray1982, rsmesh_3.aShortArray1983, rsmesh_3.aShortArray1984, rsmesh_3.aByteArray1985, rsmesh_3.aByteArray1977, rsmesh_3.aByteArray1975, rsmesh_3.aByteArray1988, rsmesh_3.colors, rsmesh_3.textures, rsmesh_3.anIntArray1991, rsmesh_3.aByte1994, rsmesh_3.aShortArray1981, rsmesh_3.texturedFaceCount, rsmesh_3.aByteArray1995, rsmesh_3.aShortArray1996, rsmesh_3.aShortArray1987, rsmesh_3.aShortArray1998, rsmesh_3.anIntArray1989, rsmesh_3.anIntArray2000, rsmesh_3.anIntArray2001, rsmesh_3.aByteArray2005, rsmesh_3.aByteArray1990, rsmesh_3.anIntArray1992, rsmesh_3.anIntArray1997, rsmesh_3.anIntArray2004, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
+		this.U(this.aja7140, this.aba7141, rsmesh_3.vertexCount, rsmesh_3.anInt1999, rsmesh_3.vertexX, rsmesh_3.vertexY, rsmesh_3.vertexZ, rsmesh_3.vertexSkins, rsmesh_3.aShortArray1980, rsmesh_3.faceCount, rsmesh_3.triangleX, rsmesh_3.triangleY, rsmesh_3.triangleZ, rsmesh_3.faceType, rsmesh_3.facePriorities, rsmesh_3.faceAlphas, rsmesh_3.texturePos, rsmesh_3.faceColor, rsmesh_3.faceTextures, rsmesh_3.skinValues, rsmesh_3.priority, rsmesh_3.aShortArray1981, rsmesh_3.numTextureTriangles, rsmesh_3.textureRenderTypes, rsmesh_3.texTriX, rsmesh_3.texTriY, rsmesh_3.texTriZ, rsmesh_3.anIntArray1989, rsmesh_3.anIntArray2000, rsmesh_3.anIntArray2001, rsmesh_3.aByteArray2005, rsmesh_3.aByteArray1990, rsmesh_3.anIntArray1992, rsmesh_3.anIntArray1997, rsmesh_3.anIntArray2004, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
 	}
 
 	native void J(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
@@ -345,7 +345,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		this.aja7140.nx().method331(this, ints_1, matrix44var_2);
 	}
 
-	public native Class282_Sub50_Sub17 ga(Class282_Sub50_Sub17 var1);
+	public native Shadow ga(Shadow var1);
 
 	native boolean bh();
 
@@ -490,7 +490,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void cr(int var1);
 
-	public native void bc(int var1, int var2, Class390 var3, Class390 var4, int var5, int var6, int var7);
+	public native void bc(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
 	public native int ch();
 
@@ -577,13 +577,13 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	}
 
-	public native Class282_Sub50_Sub17 dn(Class282_Sub50_Sub17 var1);
+	public native Shadow dn(Shadow var1);
 
-	public native void pa(int var1, int var2, Class390 var3, Class390 var4, int var5, int var6, int var7);
+	public native void pa(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
-	public native Class282_Sub50_Sub17 dw(Class282_Sub50_Sub17 var1);
+	public native Shadow dw(Shadow var1);
 
-	public native Class282_Sub50_Sub17 dr(Class282_Sub50_Sub17 var1);
+	public native Shadow dr(Shadow var1);
 
 	public native void ce(int var1);
 

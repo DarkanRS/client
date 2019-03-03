@@ -1,4 +1,4 @@
-public class Class468_Sub29 extends Class468 {
+public class Class468_Sub29 extends Preference {
 
 	void method7783(int i_1, int i_2) {
 		this.anInt5578 = i_1;

@@ -21,7 +21,7 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 	}
 
 	static final void method15552(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 1, cs2executor_0, (byte) 24);

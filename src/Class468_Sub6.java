@@ -1,4 +1,4 @@
-public class Class468_Sub6 extends Class468 {
+public class Class468_Sub6 extends Preference {
 
 	public void method12653(int i_1) {
 		if (this.anInt5578 < 0 || this.anInt5578 > 4) {
@@ -52,7 +52,7 @@ public class Class468_Sub6 extends Class468 {
 	}
 
 	static final void method12659(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2;
+		ClassSomet underlaydefinition_2;
 		if (cs2executor_0.aBool7022) {
 			underlaydefinition_2 = cs2executor_0.aClass513_6994;
 		} else {

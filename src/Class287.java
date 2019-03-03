@@ -199,7 +199,7 @@ public class Class287 {
 	}
 
 	static final void method5065(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub30_8194.method13421(635605552) ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.fog.method13421(635605552) ? 1 : 0;
 	}
 
 	static final void method5066(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

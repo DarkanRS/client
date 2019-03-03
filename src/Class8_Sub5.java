@@ -2,7 +2,7 @@ import jaggl.OpenGL;
 
 public class Class8_Sub5 extends FontRenderer {
 
-	Class505_Sub1 aClass505_Sub1_9323;
+	OpenGLGraphicalRenderer aClass505_Sub1_9323;
 	Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9325;
 	boolean aBool9326;
 	Class138 aClass138_9324;
@@ -127,7 +127,7 @@ public class Class8_Sub5 extends FontRenderer {
 
 	}
 
-	Class8_Sub5(Class505_Sub1 class505_sub1_1, FontMetrics fontmetrics_2, Class91[] arr_3, boolean bool_4) {
+	Class8_Sub5(OpenGLGraphicalRenderer class505_sub1_1, FontMetrics fontmetrics_2, Class91[] arr_3, boolean bool_4) {
 		super(class505_sub1_1, fontmetrics_2);
 		this.aClass505_Sub1_9323 = class505_sub1_1;
 		int i_5 = 0;

@@ -1,4 +1,4 @@
-public class Class468_Sub28 extends Class468 {
+public class Class468_Sub28 extends Preference {
 
 	public static int anInt7961;
 

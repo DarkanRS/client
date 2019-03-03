@@ -3,9 +3,9 @@ import jaggl.OpenGL;
 public class Class134 {
 
 	Interface14 anInterface14_1602;
-	Class143 aClass143_1617;
-	Class143 aClass143_1603;
-	Class143 aClass143_1605;
+	OpenGlArrayBufferPointer aClass143_1617;
+	OpenGlArrayBufferPointer aClass143_1603;
+	OpenGlArrayBufferPointer aClass143_1605;
 	int anInt1616;
 	static float aFloat1600;
 	int anInt1606 = 64;
@@ -21,14 +21,14 @@ public class Class134 {
 	PointEntity[][] aClass275_Sub1_Sub1ArrayArray1614;
 	PointEntity[][] aClass275_Sub1_Sub1ArrayArray1607;
 
-	void method2328(Class505_Sub1 class505_sub1_1) {
+	void method2328(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.anInterface14_1602 = class505_sub1_1.method13599(24, (byte[]) null, 196584, true);
-		this.aClass143_1617 = new Class143(this.anInterface14_1602, 5126, 2, 0);
-		this.aClass143_1603 = new Class143(this.anInterface14_1602, 5126, 3, 8);
-		this.aClass143_1605 = new Class143(this.anInterface14_1602, 5121, 4, 20);
+		this.aClass143_1617 = new OpenGlArrayBufferPointer(this.anInterface14_1602, 5126, 2, 0);
+		this.aClass143_1603 = new OpenGlArrayBufferPointer(this.anInterface14_1602, 5126, 3, 8);
+		this.aClass143_1605 = new OpenGlArrayBufferPointer(this.anInterface14_1602, 5121, 4, 20);
 	}
 
-	void method2329(Class505_Sub1 class505_sub1_1, Class151 class151_2) {
+	void method2329(OpenGLGraphicalRenderer class505_sub1_1, Class151 class151_2) {
 		if (class505_sub1_1.aClass384_8348 != null) {
 			this.method2331(class505_sub1_1);
 			float f_3 = class505_sub1_1.aClass384_8348.buf[2];
@@ -139,7 +139,7 @@ public class Class134 {
 
 	}
 
-	void method2330(Class505_Sub1 class505_sub1_1, int i_2) {
+	void method2330(OpenGLGraphicalRenderer class505_sub1_1, int i_2) {
 		OpenGL.glGetFloatv(2982, this.aFloatArray1613, 0);
 		float f_3 = this.aFloatArray1613[0];
 		float f_4 = this.aFloatArray1613[4];
@@ -394,13 +394,13 @@ public class Class134 {
 
 		if (this.aClass282_Sub35_Sub1_1601.index != 0) {
 			this.anInterface14_1602.method106(24, this.aClass282_Sub35_Sub1_1601.buffer, this.aClass282_Sub35_Sub1_1601.index);
-			class505_sub1_1.method13647(this.aClass143_1603, (Class143) null, this.aClass143_1605, this.aClass143_1617);
+			class505_sub1_1.method13647(this.aClass143_1603, (OpenGlArrayBufferPointer) null, this.aClass143_1605, this.aClass143_1617);
 			class505_sub1_1.method13603(7, 0, this.aClass282_Sub35_Sub1_1601.index / 24);
 		}
 
 	}
 
-	void method2331(Class505_Sub1 class505_sub1_1) {
+	void method2331(OpenGLGraphicalRenderer class505_sub1_1) {
 		aFloat1600 = class505_sub1_1.aFloat8432;
 		class505_sub1_1.method13607();
 		OpenGL.glDisable(16384);
@@ -409,7 +409,7 @@ public class Class134 {
 		OpenGL.glNormal3f(0.0F, -1.0F, 0.0F);
 	}
 
-	void method2332(Class505_Sub1 class505_sub1_1) {
+	void method2332(OpenGLGraphicalRenderer class505_sub1_1) {
 		class505_sub1_1.method13623(true);
 		OpenGL.glEnable(16384);
 		OpenGL.glEnable(16385);

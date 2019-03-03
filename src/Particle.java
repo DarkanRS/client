@@ -57,7 +57,7 @@ public class Particle extends PointEntity {
 		if (i_7 <= 0 && i_7 >= -262144 && i_5 >= 0 && i_5 < sceneobjectmanager_1.anInt2617 && i_6 >= 0 && i_6 < sceneobjectmanager_1.anInt2603) {
 			ParticleSystem class539_8 = this.producer.parent;
 			ParticleProducerDefinition class59_9 = this.producer.definition;
-			Class390[] arr_10 = sceneobjectmanager_1.aClass390Array2591;
+			Ground[] arr_10 = sceneobjectmanager_1.aClass390Array2591;
 			int i_11 = class539_8.anInt7122;
 			Class293 class293_12 = sceneobjectmanager_1.aClass293ArrayArrayArray2604[class539_8.anInt7122][i_5][i_6];
 			if (class293_12 != null) {

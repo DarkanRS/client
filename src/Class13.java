@@ -103,7 +103,7 @@ public class Class13 {
 						++i_4;
 					}
 
-					return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_4].method6709(i_0, i_1, -1580541166);
+					return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_4].averageHeight(i_0, i_1, -1580541166);
 				} else {
 					return 0;
 				}
@@ -111,7 +111,7 @@ public class Class13 {
 				return 0;
 			}
 		} else {
-			return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_4].method6709(i_0, i_1, -1580541166);
+			return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_4].averageHeight(i_0, i_1, -1580541166);
 		}
 	}
 

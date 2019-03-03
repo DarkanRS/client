@@ -79,7 +79,7 @@ public class Class74 {
 
 						for (int i_19 = i_25; i_19 < i_13; i_19++) {
 							if (i_19 - i_3 >= -i_4 && i_19 - i_3 <= i_4) {
-								int i_20 = i_17 + this.aClass390_Sub1_731.anInt4776 * i_19;
+								int i_20 = i_17 + this.aClass390_Sub1_731.width * i_19;
 
 								for (int i_21 = i_17; i_21 < i_18; i_21++) {
 									if (i_21 - i_2 >= -i_4 && i_21 - i_2 <= i_4 && bools_5[i_21 - i_2 + i_4][i_4 + (i_19 - i_3)]) {
@@ -128,7 +128,7 @@ public class Class74 {
 
 	}
 
-	void method1315(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3) {
+	void method1315(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
 		Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub2_4.anInt10453 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub2_4.anInt10455 + 1;
@@ -176,7 +176,7 @@ public class Class74 {
 
 	}
 
-	boolean method1316(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3) {
+	boolean method1316(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
 		Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub2_4.anInt10453 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub2_4.anInt10455 + 1;
@@ -220,7 +220,7 @@ public class Class74 {
 		}
 	}
 
-	void method1317(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3) {
+	void method1317(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
 		Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub2_4.anInt10453 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub2_4.anInt10455 + 1;
@@ -352,12 +352,12 @@ public class Class74 {
 	Class74(Class505_Sub2 class505_sub2_1, Class390_Sub1 class390_sub1_2) {
 		this.aClass505_Sub2_730 = class505_sub2_1;
 		this.aClass390_Sub1_731 = class390_sub1_2;
-		this.anInt732 = (this.aClass390_Sub1_731.anInt4776 * this.aClass390_Sub1_731.anInt4774 >> this.aClass505_Sub2_730.anInt8806) + 2;
-		this.anInt734 = (this.aClass390_Sub1_731.anInt4773 * this.aClass390_Sub1_731.anInt4774 >> this.aClass505_Sub2_730.anInt8806) + 2;
+		this.anInt732 = (this.aClass390_Sub1_731.width * this.aClass390_Sub1_731.tileUnits >> this.aClass505_Sub2_730.anInt8806) + 2;
+		this.anInt734 = (this.aClass390_Sub1_731.length * this.aClass390_Sub1_731.tileUnits >> this.aClass505_Sub2_730.anInt8806) + 2;
 		this.aByteArray736 = new byte[this.anInt732 * this.anInt734];
-		this.anInt737 = this.aClass505_Sub2_730.anInt8806 + 7 - this.aClass390_Sub1_731.anInt4775;
-		this.anInt735 = this.aClass390_Sub1_731.anInt4776 >> this.anInt737;
-		this.anInt733 = this.aClass390_Sub1_731.anInt4773 >> this.anInt737;
+		this.anInt737 = this.aClass505_Sub2_730.anInt8806 + 7 - this.aClass390_Sub1_731.tileScale;
+		this.anInt735 = this.aClass390_Sub1_731.width >> this.anInt737;
+		this.anInt733 = this.aClass390_Sub1_731.length >> this.anInt737;
 	}
 
 	static final void method1330(byte[] bytes_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {

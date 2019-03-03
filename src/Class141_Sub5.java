@@ -65,7 +65,7 @@ public class Class141_Sub5 extends Class141 {
 		return true;
 	}
 
-	Class141_Sub5(Class505_Sub1 class505_sub1_1, Class136 class136_2) {
+	Class141_Sub5(OpenGLGraphicalRenderer class505_sub1_1, Class136 class136_2) {
 		super(class505_sub1_1);
 		this.aClass136_9080 = class136_2;
 		this.aClass138_9082 = new Class138(class505_sub1_1, 2);

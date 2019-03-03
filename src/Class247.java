@@ -294,7 +294,7 @@ public class Class247 {
 
 	static final void method4247(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1589162254).aString5043;
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1589162254).name;
 	}
 
 	public static boolean method4248(int i_0, int i_1, short s_2) {

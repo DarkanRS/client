@@ -135,7 +135,7 @@ public final class Class428 {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 45);
 		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
-		Class282_Sub50_Sub17.method15511(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 126);
+		Shadow.method15511(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 126);
 	}
 
 	static final void method7209(CS2Executor cs2executor_0, int i_1) {

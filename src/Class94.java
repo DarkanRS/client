@@ -52,7 +52,7 @@ public class Class94 {
 			i_1 |= 0x4;
 		}
 
-		if (Class393.preferences.aClass468_Sub22_8213.method12873(477680375) == 0) {
+		if (Class393.preferences.textures.method12873(477680375) == 0) {
 			i_1 |= 0x40;
 		}
 

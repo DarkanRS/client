@@ -2,8 +2,8 @@ import jaggl.OpenGL;
 
 public class Class130 {
 
-	Class505_Sub1 aClass505_Sub1_1592;
-	Class390_Sub2 aClass390_Sub2_1584;
+	OpenGLGraphicalRenderer aClass505_Sub1_1592;
+	OpenGLGround aClass390_Sub2_1584;
 	int anInt1586;
 	int anInt1587;
 	byte[] aByteArray1588;
@@ -66,11 +66,11 @@ public class Class130 {
 
 					for (int i_15 = i_8; i_15 < i_9; i_15++) {
 						if (i_15 - i_2 >= -i_3 && i_15 - i_2 <= i_3) {
-							int i_16 = i_12 + this.aClass390_Sub2_1584.anInt4776 * i_15;
+							int i_16 = i_12 + this.aClass390_Sub2_1584.width * i_15;
 
 							for (int i_17 = i_12; i_17 < i_13; i_17++) {
 								if (i_17 - i_1 >= -i_3 && i_17 - i_1 <= i_3 && bools_4[i_3 + (i_17 - i_1)][i_15 - i_2 + i_3]) {
-									short[] shorts_18 = this.aClass390_Sub2_1584.aShortArrayArray8653[i_16];
+									short[] shorts_18 = this.aClass390_Sub2_1584.materialIndices[i_16];
 									if (shorts_18 != null) {
 										int i_19;
 										if (this.aClass505_Sub1_1592.aBool8467) {
@@ -109,7 +109,7 @@ public class Class130 {
 		OpenGL.glMatrixMode(5888);
 	}
 
-	boolean method2293(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3) {
+	boolean method2293(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
 		Class282_Sub50_Sub17_Sub1 class282_sub50_sub17_sub1_4 = (Class282_Sub50_Sub17_Sub1) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub1_4.anInt10293 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub1_4.anInt10295 + 1;
@@ -261,15 +261,15 @@ public class Class130 {
 
 	}
 
-	Class130(Class505_Sub1 class505_sub1_1, Class390_Sub2 class390_sub2_2) {
+	Class130(OpenGLGraphicalRenderer class505_sub1_1, OpenGLGround class390_sub2_2) {
 		this.aClass505_Sub1_1592 = class505_sub1_1;
 		this.aClass390_Sub2_1584 = class390_sub2_2;
-		this.anInt1586 = (this.aClass390_Sub2_1584.anInt4776 * this.aClass390_Sub2_1584.anInt4774 >> this.aClass505_Sub1_1592.anInt8473) + 2;
-		this.anInt1587 = (this.aClass390_Sub2_1584.anInt4773 * this.aClass390_Sub2_1584.anInt4774 >> this.aClass505_Sub1_1592.anInt8473) + 2;
+		this.anInt1586 = (this.aClass390_Sub2_1584.width * this.aClass390_Sub2_1584.tileUnits >> this.aClass505_Sub1_1592.anInt8473) + 2;
+		this.anInt1587 = (this.aClass390_Sub2_1584.length * this.aClass390_Sub2_1584.tileUnits >> this.aClass505_Sub1_1592.anInt8473) + 2;
 		this.aByteArray1588 = new byte[this.anInt1586 * this.anInt1587];
-		this.anInt1589 = this.aClass505_Sub1_1592.anInt8473 + 7 - this.aClass390_Sub2_1584.anInt4775;
-		this.anInt1591 = this.aClass390_Sub2_1584.anInt4776 >> this.anInt1589;
-		this.anInt1590 = this.aClass390_Sub2_1584.anInt4773 >> this.anInt1589;
+		this.anInt1589 = this.aClass505_Sub1_1592.anInt8473 + 7 - this.aClass390_Sub2_1584.tileScale;
+		this.anInt1591 = this.aClass390_Sub2_1584.width >> this.anInt1589;
+		this.anInt1590 = this.aClass390_Sub2_1584.length >> this.anInt1589;
 	}
 
 	void method2309() {
@@ -283,7 +283,7 @@ public class Class130 {
 
 	}
 
-	void method2313(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3) {
+	void method2313(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
 		Class282_Sub50_Sub17_Sub1 class282_sub50_sub17_sub1_4 = (Class282_Sub50_Sub17_Sub1) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub1_4.anInt10293 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub1_4.anInt10295 + 1;
@@ -331,7 +331,7 @@ public class Class130 {
 
 	}
 
-	void method2314(Class282_Sub50_Sub17 class282_sub50_sub17_1, int i_2, int i_3) {
+	void method2314(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
 		Class282_Sub50_Sub17_Sub1 class282_sub50_sub17_sub1_4 = (Class282_Sub50_Sub17_Sub1) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub1_4.anInt10293 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub1_4.anInt10295 + 1;

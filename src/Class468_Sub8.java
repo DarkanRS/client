@@ -1,4 +1,4 @@
-public class Class468_Sub8 extends Class468 {
+public class Class468_Sub8 extends Preference {
 
 	public static Interface[] aClass98Array7889;
 

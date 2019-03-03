@@ -8,7 +8,7 @@ public class Class160_Sub2 extends NativeSprite {
 	int anInt9035 = 0;
 	boolean aBool9028 = false;
 	int anInt9031 = 0;
-	Class505_Sub1 aClass505_Sub1_9032;
+	OpenGLGraphicalRenderer aClass505_Sub1_9032;
 	Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9033;
 	Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9029;
 
@@ -66,7 +66,7 @@ public class Class160_Sub2 extends NativeSprite {
 		OpenGL.glEnd();
 	}
 
-	Class160_Sub2(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
+	Class160_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
 		this.aClass505_Sub1_9032 = class505_sub1_1;
 		this.aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_2, i_3, false, ints_4, i_6, i_5);
 	}
@@ -576,7 +576,7 @@ public class Class160_Sub2 extends NativeSprite {
 
 	}
 
-	Class160_Sub2(Class505_Sub1 class505_sub1_1, int i_2, int i_3, int i_4, int i_5) {
+	Class160_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5) {
 		this.aClass505_Sub1_9032 = class505_sub1_1;
 		this.aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15538(class505_sub1_1, i_2, i_3, i_4, i_5);
 	}
@@ -1188,7 +1188,7 @@ public class Class160_Sub2 extends NativeSprite {
 
 	}
 
-	Class160_Sub2(Class505_Sub1 class505_sub1_1, int i_2, int i_3, boolean bool_4) {
+	Class160_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, boolean bool_4) {
 		this.aClass505_Sub1_9032 = class505_sub1_1;
 		this.aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15547(class505_sub1_1, bool_4 ? Class150.aClass150_1949 : Class150.aClass150_1950, Class76.aClass76_751, i_2, i_3);
 	}

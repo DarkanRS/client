@@ -39,7 +39,7 @@ public class Class141_Sub7 extends Class141 {
 
 	}
 
-	Class141_Sub7(Class505_Sub1 class505_sub1_1) {
+	Class141_Sub7(OpenGLGraphicalRenderer class505_sub1_1) {
 		super(class505_sub1_1);
 		if (class505_sub1_1.aBool8480) {
 			this.aClass138_9088 = new Class138(class505_sub1_1, 2);

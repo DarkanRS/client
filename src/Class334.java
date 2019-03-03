@@ -218,9 +218,9 @@ public class Class334 {
 			}
 
 			rsmesh_1.anInt1999 = rsmesh_1.vertexCount;
-			rsmesh_1.anIntArray1991 = null;
-			rsmesh_1.anIntArray2002 = null;
-			rsmesh_1.aByteArray1977 = null;
+			rsmesh_1.skinValues = null;
+			rsmesh_1.vertexSkins = null;
+			rsmesh_1.facePriorities = null;
 			aClass528_3905 = graphicalrenderer_0.createMeshRasterizer(rsmesh_1, 51200, 33, 64, 768);
 		}
 

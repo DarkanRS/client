@@ -261,7 +261,7 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 		return Class76.aClass76_755;
 	}
 
-	Class282_Sub5_Sub1(Class505_Sub1 class505_sub1_1) {
+	Class282_Sub5_Sub1(OpenGLGraphicalRenderer class505_sub1_1) {
 		super(class505_sub1_1);
 	}
 

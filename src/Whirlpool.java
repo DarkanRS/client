@@ -281,11 +281,11 @@ public class Whirlpool {
 					} else if (i_0 == 1) {
 						Class351.gameCanvas.setLocation(Engine.anInt3250, Engine.anInt3251);
 					} else if (i_0 == 27) {
-						Class468.method7789(-838440375);
+						Preference.method7789(-838440375);
 					} else if (i_0 == 6) {
 						IndexLoaders.MAP_REGION_DECODER.aLong3183 = Class169.time();
 						IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
-						Class468.method7789(620089057);
+						Preference.method7789(620089057);
 					} else {
 						Vector3 vector3_8;
 						if (i_0 == 26) {

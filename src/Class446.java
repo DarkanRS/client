@@ -114,7 +114,7 @@ public class Class446 {
 
 	static final void method7445(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1828860210).anInt5047;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1828860210).equipSlot;
 	}
 
 	public static void method7447(String string_0, boolean bool_1, GraphicalRenderer graphicalrenderer_2, FontRenderer fontrenderer_3, FontMetrics fontmetrics_4, byte b_5) {

@@ -850,7 +850,7 @@ public class Player extends Animable {
 						i_17 -= 16384;
 						ints_11[i_14] = i_17 | 0x40000000;
 						arr_13[i_14] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_17, 233758785);
-						i_18 = arr_13[i_14].team;
+						i_18 = arr_13[i_14].teamId;
 						if (i_18 != 0) {
 							this.anInt10559 = i_18;
 						}

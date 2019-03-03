@@ -10,7 +10,7 @@ public class Class282_Sub54 extends Node {
 	public Class468_Sub1 aClass468_Sub1_8197;
 	public Class468_Sub16 aClass468_Sub16_8198;
 	public Class468_Sub26 aClass468_Sub26_8224;
-	public Class468_Sub30 aClass468_Sub30_8194;
+	public Class468_Sub30 fog;
 	public Class468_Sub17 aClass468_Sub17_8200;
 	public Class468_Sub23 aClass468_Sub23_8202;
 	public Class468_Sub15 idleAnimations;
@@ -23,13 +23,13 @@ public class Class282_Sub54 extends Node {
 	public Class468_Sub7 aClass468_Sub7_8210;
 	public Class468_Sub14 aClass468_Sub14_8211;
 	public Class468_Sub28 aClass468_Sub28_8212;
-	public Class468_Sub22 aClass468_Sub22_8213;
+	public Class468_Sub22 textures;
 	public Class468_Sub18 aClass468_Sub18_8214;
-	public Class468_Sub24 aClass468_Sub24_8216;
-	public Class468_Sub9 aClass468_Sub9_8226;
+	public Class468_Sub24 water;
+	public Class468_Sub9 screenSize;
 	public Class468_Sub9 aClass468_Sub9_8218;
-	public Class468_Sub8 aClass468_Sub8_8219;
-	public Class468_Sub6 aClass468_Sub6_8192;
+	public Class468_Sub8 customCursors;
+	public Class468_Sub6 graphics;
 	public Class468_Sub5 cpu;
 	public Class468_Sub11 aClass468_Sub11_8217;
 	public Class468_Sub25 safeMode;
@@ -72,7 +72,7 @@ public class Class282_Sub54 extends Node {
 				}
 
 				this.aClass468_Sub26_8224 = new Class468_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aClass468_Sub30_8194 = new Class468_Sub30(rsbytebuffer_1.readUnsignedByte(), this);
+				this.fog = new Class468_Sub30(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aClass468_Sub17_8200 = new Class468_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aClass468_Sub23_8202 = new Class468_Sub23(rsbytebuffer_1.readUnsignedByte(), this);
 				this.idleAnimations = new Class468_Sub15(rsbytebuffer_1.readUnsignedByte(), this);
@@ -95,15 +95,15 @@ public class Class282_Sub54 extends Node {
 					++rsbytebuffer_1.index;
 				}
 
-				this.aClass468_Sub22_8213 = new Class468_Sub22(rsbytebuffer_1.readUnsignedByte(), this);
+				this.textures = new Class468_Sub22(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aClass468_Sub18_8214 = new Class468_Sub18(rsbytebuffer_1.readUnsignedByte(), this);
 				this.currentToolkit = new Class468_Sub18(this.aClass468_Sub18_8214.getValue(-958077547), this);
 				rsbytebuffer_1.readUnsignedByte();
-				this.aClass468_Sub24_8216 = new Class468_Sub24(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aClass468_Sub9_8226 = new Class468_Sub9(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aClass468_Sub9_8218 = new Class468_Sub9(this.aClass468_Sub9_8226.method12687(-1215691938), this);
-				this.aClass468_Sub8_8219 = new Class468_Sub8(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aClass468_Sub6_8192 = new Class468_Sub6(rsbytebuffer_1.readUnsignedByte(), this);
+				this.water = new Class468_Sub24(rsbytebuffer_1.readUnsignedByte(), this);
+				this.screenSize = new Class468_Sub9(rsbytebuffer_1.readUnsignedByte(), this);
+				this.aClass468_Sub9_8218 = new Class468_Sub9(this.screenSize.method12687(-1215691938), this);
+				this.customCursors = new Class468_Sub8(rsbytebuffer_1.readUnsignedByte(), this);
+				this.graphics = new Class468_Sub6(rsbytebuffer_1.readUnsignedByte(), this);
 				this.cpu = new Class468_Sub5(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aClass468_Sub11_8217 = new Class468_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
 				this.safeMode = new Class468_Sub25(rsbytebuffer_1.readUnsignedByte(), this);
@@ -155,8 +155,8 @@ public class Class282_Sub54 extends Node {
 			this.aClass468_Sub26_8224 = new Class468_Sub26(this);
 		}
 
-		if (bool_1 || this.aClass468_Sub30_8194 == null) {
-			this.aClass468_Sub30_8194 = new Class468_Sub30(this);
+		if (bool_1 || this.fog == null) {
+			this.fog = new Class468_Sub30(this);
 		}
 
 		if (bool_1 || this.aClass468_Sub17_8200 == null) {
@@ -207,8 +207,8 @@ public class Class282_Sub54 extends Node {
 			this.aClass468_Sub28_8212 = new Class468_Sub28(this);
 		}
 
-		if (bool_1 || this.aClass468_Sub22_8213 == null) {
-			this.aClass468_Sub22_8213 = new Class468_Sub22(this);
+		if (bool_1 || this.textures == null) {
+			this.textures = new Class468_Sub22(this);
 		}
 
 		if (bool_1 || this.aClass468_Sub18_8214 == null) {
@@ -219,24 +219,24 @@ public class Class282_Sub54 extends Node {
 			this.currentToolkit = new Class468_Sub18(this.aClass468_Sub18_8214.getValue(-1125192103), this);
 		}
 
-		if (bool_1 || this.aClass468_Sub24_8216 == null) {
-			this.aClass468_Sub24_8216 = new Class468_Sub24(this);
+		if (bool_1 || this.water == null) {
+			this.water = new Class468_Sub24(this);
 		}
 
-		if (bool_1 || this.aClass468_Sub9_8226 == null) {
-			this.aClass468_Sub9_8226 = new Class468_Sub9(this);
+		if (bool_1 || this.screenSize == null) {
+			this.screenSize = new Class468_Sub9(this);
 		}
 
 		if (bool_1 || this.aClass468_Sub9_8218 == null) {
-			this.aClass468_Sub9_8218 = new Class468_Sub9(this.aClass468_Sub9_8226.method12687(-1865727854), this);
+			this.aClass468_Sub9_8218 = new Class468_Sub9(this.screenSize.method12687(-1865727854), this);
 		}
 
-		if (bool_1 || this.aClass468_Sub8_8219 == null) {
-			this.aClass468_Sub8_8219 = new Class468_Sub8(this);
+		if (bool_1 || this.customCursors == null) {
+			this.customCursors = new Class468_Sub8(this);
 		}
 
-		if (bool_1 || this.aClass468_Sub6_8192 == null) {
-			this.aClass468_Sub6_8192 = new Class468_Sub6(this);
+		if (bool_1 || this.graphics == null) {
+			this.graphics = new Class468_Sub6(this);
 		}
 
 		if (bool_1 || this.cpu == null) {
@@ -311,8 +311,8 @@ public class Class282_Sub54 extends Node {
 		}
 
 		this.aClass468_Sub19_8204 = new Class468_Sub19(bool_6 | bool_7 ? 1 : 0, this);
-		this.aClass468_Sub24_8216 = new Class468_Sub24(rsbytebuffer_1.readUnsignedByte(), this);
-		this.aClass468_Sub30_8194 = new Class468_Sub30(rsbytebuffer_1.readUnsignedByte(), this);
+		this.water = new Class468_Sub24(rsbytebuffer_1.readUnsignedByte(), this);
+		this.fog = new Class468_Sub30(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aClass468_Sub4_8187 = new Class468_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aClass468_Sub10_8215 = new Class468_Sub10(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aClass468_Sub13_8225 = new Class468_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
@@ -345,7 +345,7 @@ public class Class282_Sub54 extends Node {
 
 		rsbytebuffer_1.readInt();
 		if (i_2 >= 6) {
-			this.aClass468_Sub9_8226 = new Class468_Sub9(rsbytebuffer_1.readUnsignedByte(), this);
+			this.screenSize = new Class468_Sub9(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 7) {
@@ -365,7 +365,7 @@ public class Class282_Sub54 extends Node {
 		}
 
 		if (i_2 >= 11) {
-			this.aClass468_Sub8_8219 = new Class468_Sub8(rsbytebuffer_1.readUnsignedByte(), this);
+			this.customCursors = new Class468_Sub8(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 12) {
@@ -385,11 +385,11 @@ public class Class282_Sub54 extends Node {
 		}
 
 		if (i_2 >= 16) {
-			this.aClass468_Sub22_8213 = new Class468_Sub22(rsbytebuffer_1.readUnsignedByte(), this);
+			this.textures = new Class468_Sub22(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 18) {
-			this.aClass468_Sub6_8192 = new Class468_Sub6(rsbytebuffer_1.readUnsignedByte(), this);
+			this.graphics = new Class468_Sub6(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 19) {
@@ -411,7 +411,7 @@ public class Class282_Sub54 extends Node {
 		rsbytebuffer_2.writeByte(this.aClass468_Sub1_8197.method12615(-462784918));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub16_8198.method12750((byte) 32));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub26_8224.method12943(975799184));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub30_8194.method13417(-1899817216));
+		rsbytebuffer_2.writeByte(this.fog.method13417(-1899817216));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub17_8200.method12762(-140573));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub23_8202.method12897((byte) 75));
 		rsbytebuffer_2.writeByte(this.idleAnimations.getValue(-118386335));
@@ -423,13 +423,13 @@ public class Class282_Sub54 extends Node {
 		rsbytebuffer_2.writeByte(this.aClass468_Sub7_8210.method12666(141061966));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub14_8211.method12728(-1912429644));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub28_8212.method12966((byte) -41));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub22_8213.method12873(2145197376));
+		rsbytebuffer_2.writeByte(this.textures.method12873(2145197376));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub18_8214.getValue(-120460114));
 		rsbytebuffer_2.writeByte(0);
-		rsbytebuffer_2.writeByte(this.aClass468_Sub24_8216.method12920(1244153925));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub9_8226.method12687(416506379));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub8_8219.method12675(-1589433086));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub6_8192.method12654(-239553097));
+		rsbytebuffer_2.writeByte(this.water.getValue(1244153925));
+		rsbytebuffer_2.writeByte(this.screenSize.method12687(416506379));
+		rsbytebuffer_2.writeByte(this.customCursors.method12675(-1589433086));
+		rsbytebuffer_2.writeByte(this.graphics.method12654(-239553097));
 		rsbytebuffer_2.writeByte(this.cpu.getValue());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub11_8217.method12699((byte) -71));
 		rsbytebuffer_2.writeByte(this.safeMode.getValue((byte) -54));
@@ -451,7 +451,7 @@ public class Class282_Sub54 extends Node {
 		this.aClass468_Sub1_8197.method12616((byte) 16);
 		this.aClass468_Sub16_8198.method12749(-1385034853);
 		this.aClass468_Sub26_8224.method12941((byte) -58);
-		this.aClass468_Sub30_8194.method13415((byte) -26);
+		this.fog.method13415((byte) -26);
 		this.aClass468_Sub17_8200.method12767((byte) 6);
 		this.aClass468_Sub23_8202.method12898((byte) 34);
 		this.idleAnimations.method12741(130294314);
@@ -464,14 +464,14 @@ public class Class282_Sub54 extends Node {
 		this.aClass468_Sub7_8210.method12663(-911909604);
 		this.aClass468_Sub14_8211.method12725(-1401423341);
 		this.aClass468_Sub28_8212.method12959(-922946523);
-		this.aClass468_Sub22_8213.method12871((byte) -2);
+		this.textures.method12871((byte) -2);
 		this.aClass468_Sub18_8214.method12773(-132030593);
 		this.currentToolkit.method12773(-1630198990);
-		this.aClass468_Sub24_8216.method12918((short) 22655);
-		this.aClass468_Sub9_8226.method12684((byte) -10);
+		this.water.method12918((short) 22655);
+		this.screenSize.method12684((byte) -10);
 		this.aClass468_Sub9_8218.method12684((byte) 105);
-		this.aClass468_Sub8_8219.method12674(-956855309);
-		this.aClass468_Sub6_8192.method12653(-1781190291);
+		this.customCursors.method12674(-956855309);
+		this.graphics.method12653(-1781190291);
 		this.cpu.method12648(2102747953);
 		this.aClass468_Sub11_8217.method12698((byte) -36);
 		this.safeMode.method12928((byte) 32);
@@ -500,7 +500,7 @@ public class Class282_Sub54 extends Node {
 		this.method13497(true, 311350524);
 	}
 
-	public void setValue(Class468 class468_1, int i_2, int i_3) {
+	public void setValue(Preference class468_1, int i_2, int i_3) {
 		class468_1.method7782(i_2, (byte) 120);
 		this.method13502(-1736305082);
 	}

@@ -45,16 +45,16 @@ public class ItemIndexLoader implements IndexLoader {
 				itemdefinitions_3.generateCert(this.getItemDefinitions(itemdefinitions_3.certTemplateId, 1167906942), this.getItemDefinitions(itemdefinitions_3.certId, 1245595517), -1715219620);
 			}
 
-			if (itemdefinitions_3.landTemplateId != -1) {
-				itemdefinitions_3.generateLend(this.getItemDefinitions(itemdefinitions_3.landTemplateId, 294444778), this.getItemDefinitions(itemdefinitions_3.lendId, 1908925068), -1404615542);
+			if (itemdefinitions_3.lendTemplateId != -1) {
+				itemdefinitions_3.generateLend(this.getItemDefinitions(itemdefinitions_3.lendTemplateId, 294444778), this.getItemDefinitions(itemdefinitions_3.lendId, 1908925068), -1404615542);
 			}
 
 			if (itemdefinitions_3.bindTemplateId != -1) {
 				itemdefinitions_3.generateBind(this.getItemDefinitions(itemdefinitions_3.bindTemplateId, 828359432), this.getItemDefinitions(itemdefinitions_3.bindId, 1928714230), 1201532175);
 			}
 
-			if (!this.membersOnly && itemdefinitions_3.members) {
-				itemdefinitions_3.team = 0;
+			if (!this.membersOnly && itemdefinitions_3.membersOnly) {
+				itemdefinitions_3.teamId = 0;
 				itemdefinitions_3.groundOptions = this.defaultGroundOptions;
 				itemdefinitions_3.inventoryOptions = this.defaultInventoryOptions;
 				itemdefinitions_3.grandExchange = false;

@@ -66,15 +66,15 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8208, 1, 62287602);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, 1, 463702183);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, 0, -1779797403);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub30_8194, 0, -1558090127);
+		Class393.preferences.setValue(Class393.preferences.fog, 0, -1558090127);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub17_8200, 0, 1513887822);
 		Class393.preferences.setValue(Class393.preferences.idleAnimations, 0, -1514537540);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub26_8224, 0, 1378722670);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub28_8212, 0, -339994641);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub2_8205, 0, 1587382390);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub22_8213, 0, -1566931898);
+		Class393.preferences.setValue(Class393.preferences.textures, 0, -1566931898);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub19_8204, 0, 142474266);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub24_8216, 0, 1640092780);
+		Class393.preferences.setValue(Class393.preferences.water, 0, 1640092780);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8187, 0, -847424999);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub4_8223, 0, 358482435);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub20_8207, 0, 2033925467);
@@ -83,7 +83,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 0, -1623251899);
 		Class323.method5777(1755856105);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, -1469341129);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub6_8192, 1, -971375585);
+		Class393.preferences.setValue(Class393.preferences.graphics, 1, -971375585);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-462453553);
 		client.aBool7185 = true;

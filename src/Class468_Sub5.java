@@ -1,4 +1,4 @@
-public class Class468_Sub5 extends Class468 {
+public class Class468_Sub5 extends Preference {
 
 	void method7783(int i_1, int i_2) {
 		this.anInt5578 = i_1;
@@ -16,7 +16,7 @@ public class Class468_Sub5 extends Class468 {
 	}
 
 	int method7781(int i_1) {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7720(-2118359386) > 1 ? 4 : 2;
+		return this.manager.method13504((byte) 1).method7720(-2118359386) > 1 ? 4 : 2;
 	}
 
 	void method7780(int i_1) {
@@ -36,11 +36,11 @@ public class Class468_Sub5 extends Class468 {
 	}
 
 	int method7786() {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7720(-1591316902) > 1 ? 4 : 2;
+		return this.manager.method13504((byte) 1).method7720(-1591316902) > 1 ? 4 : 2;
 	}
 
 	int method7787() {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7720(-1527744651) > 1 ? 4 : 2;
+		return this.manager.method13504((byte) 1).method7720(-1527744651) > 1 ? 4 : 2;
 	}
 
 	public int getValue() {

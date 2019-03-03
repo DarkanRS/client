@@ -19,7 +19,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 
 		ObjectDefinitions objectdefinitions_12 = this.objectDefLoader.getObjectDefinitions(i_6, 65280);
-		if (Class393.preferences.aClass468_Sub22_8213.method12873(590379458) != 0 || !objectdefinitions_12.aBool5701) {
+		if (Class393.preferences.textures.method12873(590379458) != 0 || !objectdefinitions_12.aBool5701) {
 			int i_13;
 			int i_14;
 			if (i_7 != 1 && i_7 != 3) {
@@ -50,7 +50,7 @@ public class Class329_Sub1 extends Class329 {
 				i_18 = i_5 + 1;
 			}
 
-			Class390 class390_19 = this.aClass206_3776.aClass390Array2591[i_2];
+			Ground class390_19 = this.aClass206_3776.aClass390Array2591[i_2];
 			int i_20 = class390_19.method6722(i_15, i_17, 65280) + class390_19.method6722(i_16, i_17, 65280) + class390_19.method6722(i_15, i_18, 65280) + class390_19.method6722(i_16, i_18, 65280) >> 2;
 			int i_21 = (i_4 << 9) + (i_13 << 8);
 			int i_22 = (i_5 << 9) + (i_14 << 8);
@@ -192,7 +192,7 @@ public class Class329_Sub1 extends Class329 {
 											i_29 = i_22 >> 9;
 											i_21 = i_23 >> 9;
 											if (i_29 >= 0 && i_21 >= 0 && i_29 < this.maxX && i_21 < this.maxY) {
-												class282_sub24_28.method12374(i_22, this.unk0Data[i_6][i_29][i_21] - class282_sub24_28.method12369(1534020223), i_23, 1982941604);
+												class282_sub24_28.method12374(i_22, this.tileHeights[i_6][i_29][i_21] - class282_sub24_28.method12369(1534020223), i_23, 1982941604);
 												this.aClass206_3776.method3430(class287_25, (byte) 1);
 											}
 										}
@@ -467,7 +467,7 @@ public class Class329_Sub1 extends Class329 {
 							}
 
 							if ((i_8 - i_7 + 1) * (i_10 - i_9 + 1) >= 4) {
-								i_11 = this.unk0Data[i_4][i_7][i_9];
+								i_11 = this.tileHeights[i_4][i_7][i_9];
 								this.aClass206_3776.aClass201_2600.method3266(4, i_4, i_7 << 9, (i_8 << 9) + 512, i_9 << 9, (i_10 << 9) + 512, i_11, i_11);
 
 								for (int i_12 = i_7; i_12 <= i_8; i_12++) {
@@ -487,7 +487,7 @@ public class Class329_Sub1 extends Class329 {
 		this.aByteArrayArrayArray3794 = null;
 	}
 
-	boolean method12464(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, ObjectDefinitions objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, Class390 class390_15, ClipMap clipmap_16, int i_17, int i_18, int i_19) {
+	boolean method12464(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, boolean bool_4, ObjectDefinitions objectdefinitions_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, Ground class390_15, ClipMap clipmap_16, int i_17, int i_18, int i_19) {
 		int i_20;
 		Object obj_28;
 		if (i_2 == SceneObjectType.WALL_STRAIGHT.type) {
@@ -880,7 +880,7 @@ public class Class329_Sub1 extends Class329 {
 										i_15 = i_13 >> 9;
 										int i_16 = i_14 >> 9;
 										if (i_15 >= 0 && i_16 >= 0 && i_15 < this.maxX && i_16 < this.maxY) {
-											class282_sub24_21.method12374(i_13, this.unk0Data[class287_17.anInt3419][i_15][i_16] - class282_sub24_21.method12369(1534020223), i_14, 2078101485);
+											class282_sub24_21.method12374(i_13, this.tileHeights[class287_17.anInt3419][i_15][i_16] - class282_sub24_21.method12369(1534020223), i_14, 2078101485);
 											this.aClass206_3776.method3430(class287_17, (byte) 1);
 										}
 									}

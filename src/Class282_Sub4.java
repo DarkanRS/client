@@ -134,10 +134,10 @@ public class Class282_Sub4 extends Node {
 	}
 
 	static final void method12116(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub50_Sub17.method15511(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 63);
+		Shadow.method15511(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 63);
 	}
 
 	static void method12117(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
@@ -179,7 +179,7 @@ public class Class282_Sub4 extends Node {
 	}
 
 	static final void method12118(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Class241.method4149(icomponentdefinitions_3, interface_4, cs2executor_0, -799762783);

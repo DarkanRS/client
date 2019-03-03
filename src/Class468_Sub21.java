@@ -1,4 +1,4 @@
-public class Class468_Sub21 extends Class468 {
+public class Class468_Sub21 extends Preference {
 
 	public Class468_Sub21(int i_1, Class282_Sub54 class282_sub54_2) {
 		super(i_1, class282_sub54_2);

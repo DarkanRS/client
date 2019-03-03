@@ -1,4 +1,4 @@
-public class Class468_Sub15 extends Class468 {
+public class Class468_Sub15 extends Preference {
 
 	int method7781(int i_1) {
 		return 1;
@@ -29,7 +29,7 @@ public class Class468_Sub15 extends Class468 {
 	}
 
 	public void method12741(int i_1) {
-		if (this.aClass282_Sub54_5581.method13514((byte) 95) == Game.stellarDawn) {
+		if (this.manager.method13514((byte) 95) == Game.stellarDawn) {
 			this.anInt5578 = 2;
 		}
 

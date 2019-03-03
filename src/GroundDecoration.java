@@ -463,7 +463,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							}
 
 							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1276) {
-								Class282_Sub50_Sub17.method15506(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, 1138717057);
+								Shadow.method15506(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, 1138717057);
 								continue;
 							}
 
@@ -574,7 +574,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										String string_35 = icomponentdefinitions_12.aString1391;
 										if (icomponentdefinitions_12.anInt1426 != -1) {
 											itemdefinitions_36 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(icomponentdefinitions_12.anInt1426, 75675331);
-											string_35 = itemdefinitions_36.aString5043;
+											string_35 = itemdefinitions_36.name;
 											if (string_35 == null) {
 												string_35 = "null";
 											}
@@ -843,7 +843,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	static final void method16095(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		Engine.method4772(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 12);

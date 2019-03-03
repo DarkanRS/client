@@ -572,7 +572,7 @@ public class Class8_Sub3 extends FontRenderer {
 	}
 
 	static final void method14340(CS2Executor cs2executor_0, byte b_1) {
-		UnderlayDefinition underlaydefinition_2;
+		ClassSomet underlaydefinition_2;
 		if (cs2executor_0.aBool7022) {
 			underlaydefinition_2 = cs2executor_0.aClass513_6994;
 		} else {

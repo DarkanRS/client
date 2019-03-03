@@ -1518,13 +1518,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 			Class185 class185_16 = this.method14370(Thread.currentThread());
 			ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
 			choppyitemfixclass_17.aBool1675 = false;
-			i_1 -= this.anInt8983 * -363774331 * 72550989;
-			i_4 -= 72550989 * this.anInt8983 * -363774331;
-			i_7 -= this.anInt8983 * -363774331 * 72550989;
-			i_2 -= this.anInt9009 * 1457972577 * 1516535457;
-			i_5 -= 1516535457 * this.anInt9009 * 1457972577;
-			i_8 -= 1516535457 * this.anInt9009 * 1457972577;
-			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309;
+			i_1 -= this.anInt8983;
+			i_4 -= this.anInt8983;
+			i_7 -= this.anInt8983;
+			i_2 -= this.anInt9009;
+			i_5 -= this.anInt9009;
+			i_8 -= this.anInt9009;
+			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
 			int i_18 = i_10 >>> 24;
 			if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
 				choppyitemfixclass_17.anInt1674 = 0;
@@ -1589,8 +1589,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
-			int i_13 = 1516535457 * this.anInt9009 * 1457972577 > i_9 ? this.anInt9009 * 1457972577 * 1516535457 : i_9;
-			int i_14 = 1383960921 * this.anInt8986 * 760194793 < i_9 + ints_11.length ? this.anInt8986 * 760194793 * 1383960921 : ints_11.length + i_9;
+			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
+			int i_14 = this.anInt8986 < i_9 + ints_11.length ? this.anInt8986 : ints_11.length + i_9;
 			i_3 -= i_1;
 			i_4 -= i_2;
 			if (i_4 + i_3 < 0) {
@@ -1615,13 +1615,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 				i_4 <<= 16;
 				i_15 = (int) Math.floor((double) i_4 / (double) i_3 + 0.5D);
 				i_3 += i_1;
-				if (i_1 < this.anInt8983 * -363774331 * 72550989) {
-					i_2 += (this.anInt8983 * -363774331 * 72550989 - i_1) * i_15;
-					i_1 = this.anInt8983 * -363774331 * 72550989;
+				if (i_1 < this.anInt8983) {
+					i_2 += (this.anInt8983 - i_1) * i_15;
+					i_1 = this.anInt8983;
 				}
 
-				if (i_3 >= this.anInt9002 * 1714763515 * -1710988237) {
-					i_3 = -1710988237 * this.anInt9002 * 1714763515 - 1;
+				if (i_3 >= this.anInt9002) {
+					i_3 = this.anInt9002 - 1;
 				}
 
 				i_16 = i_5 >>> 24;
@@ -1632,7 +1632,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = ints_11[i_18] + i_8;
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								this.anIntArray8979[i_17 * 444800403 * this.anInt8980 * 299731099 + i_1] = i_5;
+								this.anIntArray8979[i_17 * this.anInt8980 + i_1] = i_5;
 							}
 						}
 
@@ -1648,7 +1648,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_18 >= i_13 && i_18 < i_14) {
 							i_20 = ints_11[i_19] + i_8;
 							if (i_1 >= i_20 && i_1 < i_20 + ints_12[i_19]) {
-								i_21 = i_1 + 444800403 * this.anInt8980 * 299731099 * i_18;
+								i_21 = i_1 + this.anInt8980 * i_18;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 								this.anIntArray8979[i_21] = i_5 + i_22;
@@ -1668,7 +1668,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = i_8 + ints_11[i_18];
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								i_20 = i_17 * this.anInt8980 * 299731099 * 444800403 + i_1;
+								i_20 = i_17 * this.anInt8980 + i_1;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_21 + i_5;
 								i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -1705,11 +1705,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_18 = i_1 >> 16;
 							i_19 = i_2 - i_9;
 							i_20 = i_8 + ints_11[i_19];
-							if (i_18 >= this.anInt8983 * -363774331 * 72550989 && i_18 < -1710988237 * this.anInt9002 * 1714763515 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-								i_21 = i_18 + i_2 * this.anInt8980 * 299731099 * 444800403;
+							if (i_18 >= this.anInt8983 && i_18 < this.anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
+								i_21 = i_18 + i_2 * this.anInt8980;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-								this.anIntArray8979[i_18 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_22 + i_5;
+								this.anIntArray8979[i_18 + i_2 * this.anInt8980] = i_22 + i_5;
 							}
 
 							i_1 += i_15;
@@ -1723,8 +1723,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_17 = i_1 >> 16;
 							i_18 = i_2 - i_9;
 							i_19 = ints_11[i_18] + i_8;
-							if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < -1710988237 * this.anInt9002 * 1714763515 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-								i_20 = 444800403 * this.anInt8980 * 299731099 * i_2 + i_17;
+							if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
+								i_20 = this.anInt8980 * i_2 + i_17;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_5 + i_21;
 								i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -1741,8 +1741,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_17 = i_1 >> 16;
 						i_18 = i_2 - i_9;
 						i_19 = ints_11[i_18] + i_8;
-						if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < this.anInt9002 * 1714763515 * -1710988237 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-							this.anIntArray8979[i_17 + this.anInt8980 * 299731099 * 444800403 * i_2] = i_5;
+						if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
+							this.anIntArray8979[i_17 + this.anInt8980 * i_2] = i_5;
 						}
 
 						i_1 += i_15;
@@ -1805,7 +1805,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.aFloat8978 = f_2 - f_1;
 		this.aFloat8985 = f_2 + f_1 - 1.0F;
 
-		for (int i_3 = 0; i_3 < this.anInt9008 * 1696391419 * 656550451; i_3++) {
+		for (int i_3 = 0; i_3 < this.anInt9008; i_3++) {
 			Class185 class185_4 = this.aClass185Array8984[i_3];
 			ChoppyItemFixClass choppyitemfixclass_5 = class185_4.aClass144_2310;
 			choppyitemfixclass_5.aFloat1683 = this.aFloat8978;
@@ -1840,15 +1840,15 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return i_1 | i_2;
 	}
 
-	public Class390 method8478(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
 		return new Class390_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
 	public void method8634() {
-		this.anInt8998 = 0 * 116006945;
-		this.anInt8999 = 0 * 842600775;
-		this.anInt9000 = this.anInt8980 * 299731099 * -50906609 * -441894851;
-		this.anInt9001 = this.anInt8981 * 1730944391 * 651224101 * 3132971;
+		this.anInt8998 = 0;
+		this.anInt8999 = 0;
+		this.anInt9000 = this.anInt8980;
+		this.anInt9001 = this.anInt8981;
 		this.method14364();
 	}
 
@@ -1862,12 +1862,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void iw(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-		this.anInt8990 = (int) (65535.0F * f_2) * 1216319887 * 501902703;
-		this.anInt8991 = -1460403627 * (int) (65535.0F * f_3) * -237442307;
+		this.anInt8990 = (int) (65535.0F * f_2);
+		this.anInt8991 = (int) (65535.0F * f_3);
 		float f_7 = (float) Math.sqrt((double) (f_6 * f_6 + f_5 * f_5 + f_4 * f_4));
-		this.anInt9011 = (int) (f_4 * 65535.0F / f_7) * 672118063 * 1302966735;
-		this.anInt8988 = (int) (65535.0F * f_5 / f_7) * -1077609237 * -1947219005;
-		this.anInt9007 = 1394142547 * (int) (f_6 * 65535.0F / f_7) * 1237704411;
+		this.anInt9011 = (int) (f_4 * 65535.0F / f_7);
+		this.anInt8988 = (int) (65535.0F * f_5 / f_7);
+		this.anInt9007 = (int) (f_6 * 65535.0F / f_7) ;
 	}
 
 	public void method8547(int i_1, Class282_Sub24[] arr_2) {
@@ -1878,8 +1878,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			PacketsDecoder packetsdecoder_13 = (PacketsDecoder) class455_7;
 			int[] ints_14 = packetsdecoder_13.anIntArray9077;
 			int[] ints_15 = packetsdecoder_13.anIntArray9078;
-			int i_16 = this.anInt9009 * 1457972577 * 1516535457 > i_9 ? this.anInt9009 * 1457972577 * 1516535457 : i_9;
-			int i_17 = this.anInt8986 * 760194793 * 1383960921 < i_9 + ints_14.length ? this.anInt8986 * 760194793 * 1383960921 : i_9 + ints_14.length;
+			int i_16 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
+			int i_17 = this.anInt8986 < i_9 + ints_14.length ? this.anInt8986 : i_9 + ints_14.length;
 			i_12 <<= 8;
 			i_10 <<= 8;
 			i_11 <<= 8;
@@ -1923,10 +1923,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 					while (i_1 <= i_3) {
 						i_22 = i_2 >> 16;
 						i_23 = i_22 - i_9;
-						if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
+						if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
 							i_24 = i_8 + ints_14[i_23];
 							if (i_1 >= i_24 && i_1 < ints_15[i_23] + i_24) {
-								this.anIntArray8979[i_22 * 444800403 * this.anInt8980 * 299731099 + i_1] = i_5;
+								this.anIntArray8979[i_22 * this.anInt8980 + i_1] = i_5;
 							}
 						}
 
@@ -1941,10 +1941,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 					for (i_22 = 256 - i_20; i_1 <= i_3; i_12 %= i_18) {
 						i_23 = i_2 >> 16;
 						i_24 = i_23 - i_9;
-						if (i_1 >= 72550989 * this.anInt8983 * -363774331 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_23 >= i_16 && i_23 < i_17 && i_12 < i_10) {
+						if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_23 >= i_16 && i_23 < i_17 && i_12 < i_10) {
 							i_25 = i_8 + ints_14[i_24];
 							if (i_1 >= i_25 && i_1 < i_25 + ints_15[i_24]) {
-								i_26 = this.anInt8980 * 299731099 * 444800403 * i_23 + i_1;
+								i_26 = this.anInt8980 * i_23 + i_1;
 								i_27 = this.anIntArray8979[i_26];
 								i_27 = (i_22 * (i_27 & 0xff00ff) >> 8 & 0xff00ff) + (i_22 * (i_27 & 0xff00) >> 8 & 0xff00);
 								this.anIntArray8979[i_26] = i_27 + i_5;
@@ -1963,10 +1963,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 					while (i_1 <= i_3) {
 						i_22 = i_2 >> 16;
 						i_23 = i_22 - i_9;
-						if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < this.anInt9002 * 1714763515 * -1710988237 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
+						if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_22 >= i_16 && i_22 < i_17 && i_12 < i_10) {
 							i_24 = i_8 + ints_14[i_23];
 							if (i_1 >= i_24 && i_1 < i_24 + ints_15[i_23]) {
-								i_25 = i_1 + i_22 * this.anInt8980 * 299731099 * 444800403;
+								i_25 = i_1 + i_22 * this.anInt8980;
 								i_26 = this.anIntArray8979[i_25];
 								i_27 = i_26 + i_5;
 								int i_28 = (i_26 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -1993,8 +1993,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					while (i_2 <= i_4) {
 						i_22 = i_1 >> 16;
 						i_23 = i_2 - i_9;
-						if (i_2 >= i_16 && i_2 < i_17 && i_22 >= this.anInt8983 * -363774331 * 72550989 && i_22 < -1710988237 * this.anInt9002 * 1714763515 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_14[i_23] + i_8 + ints_15[i_23]) {
-							this.anIntArray8979[i_2 * 444800403 * this.anInt8980 * 299731099 + i_22] = i_5;
+						if (i_2 >= i_16 && i_2 < i_17 && i_22 >= this.anInt8983 && i_22 < this.anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_14[i_23] + i_8 + ints_15[i_23]) {
+							this.anIntArray8979[i_2 * this.anInt8980 + i_22] = i_5;
 						}
 
 						i_1 += i_19;
@@ -2008,11 +2008,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 					for (i_22 = 256 - i_21; i_2 <= i_4; i_12 %= i_18) {
 						i_23 = i_1 >> 16;
 						i_24 = i_2 - i_9;
-						if (i_2 >= i_16 && i_2 < i_17 && i_23 >= 72550989 * this.anInt8983 * -363774331 && i_23 < -1710988237 * this.anInt9002 * 1714763515 && i_12 < i_10 && i_23 >= i_8 + ints_14[i_24] && i_23 < i_8 + ints_14[i_24] + ints_15[i_24]) {
-							i_25 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_23;
+						if (i_2 >= i_16 && i_2 < i_17 && i_23 >= this.anInt8983 && i_23 < this.anInt9002 && i_12 < i_10 && i_23 >= i_8 + ints_14[i_24] && i_23 < i_8 + ints_14[i_24] + ints_15[i_24]) {
+							i_25 = i_2 * this.anInt8980 + i_23;
 							i_26 = this.anIntArray8979[i_25];
 							i_26 = (i_22 * (i_26 & 0xff00) >> 8 & 0xff00) + (i_22 * (i_26 & 0xff00ff) >> 8 & 0xff00ff);
-							this.anIntArray8979[this.anInt8980 * 299731099 * 444800403 * i_2 + i_23] = i_26 + i_5;
+							this.anIntArray8979[this.anInt8980 * i_2 + i_23] = i_26 + i_5;
 						}
 
 						i_1 += i_19;
@@ -2027,8 +2027,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					while (i_2 <= i_4) {
 						i_22 = i_1 >> 16;
 						i_23 = i_2 - i_9;
-						if (i_2 >= i_16 && i_2 < i_17 && i_22 >= 72550989 * this.anInt8983 * -363774331 && i_22 < this.anInt9002 * 1714763515 * -1710988237 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_15[i_23] + ints_14[i_23] + i_8) {
-							i_24 = i_22 + i_2 * 444800403 * this.anInt8980 * 299731099;
+						if (i_2 >= i_16 && i_2 < i_17 && i_22 >= this.anInt8983 && i_22 < this.anInt9002 && i_12 < i_10 && i_22 >= i_8 + ints_14[i_23] && i_22 < ints_15[i_23] + ints_14[i_23] + i_8) {
+							i_24 = i_22 + i_2 * this.anInt8980;
 							i_25 = this.anIntArray8979[i_24];
 							i_26 = i_5 + i_25;
 							i_27 = (i_25 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -2523,23 +2523,23 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void ik(int i_1, int i_2, int i_3) {
 		for (int i_4 = 0; i_4 < this.aClass185Array8984.length; i_4++) {
 			Class185 class185_5 = this.aClass185Array8984[i_4];
-			class185_5.anInt2307 = (i_1 & 0xffffff) * -1172711273 * 1402414887;
-			int i_6 = class185_5.anInt2307 * -1172711273 * 1402414887 >>> 16 & 0xff;
+			class185_5.anInt2307 = (i_1 & 0xffffff);
+			int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
 			if (i_6 < 2) {
 				i_6 = 2;
 			}
 
-			int i_7 = 1402414887 * class185_5.anInt2307 * -1172711273 >> 8 & 0xff;
+			int i_7 = class185_5.anInt2307 >> 8 & 0xff;
 			if (i_7 < 2) {
 				i_7 = 2;
 			}
 
-			int i_8 = 1402414887 * class185_5.anInt2307 * -1172711273 & 0xff;
+			int i_8 = class185_5.anInt2307 & 0xff;
 			if (i_8 < 2) {
 				i_8 = 2;
 			}
 
-			class185_5.anInt2307 = -1172711273 * (i_6 << 16 | i_7 << 8 | i_8) * 1402414887;
+			class185_5.anInt2307 = (i_6 << 16 | i_7 << 8 | i_8);
 			if (i_2 < 0) {
 				class185_5.aBool2304 = false;
 			} else {
@@ -2593,7 +2593,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void fu(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0) {
-			this.B(0, 0, 444800403 * this.anInt8980 * 299731099, 2138511415 * this.anInt8981 * 1730944391, i_2, 0);
+			this.B(0, 0, this.anInt8980, this.anInt8981, i_2, 0);
 		}
 
 		if ((i_1 & 0x2) != 0) {
@@ -2626,8 +2626,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8476(int i_1, Class90 class90_2) {
 		Class185 class185_3 = this.method14370(Thread.currentThread());
 		class185_3.anInt2306 = i_1;
-		class185_3.anInt2307 = class90_2.anInt946;
-		class185_3.anInt2313 = class90_2.anInt945;
+		class185_3.anInt2307 = class90_2.color;
+		class185_3.anInt2313 = class90_2.scale;
 	}
 
 	public void O() {
@@ -2729,9 +2729,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 				}
 
 				this.RA(false);
-				choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 * -992859573 * -214577309 || i_22 < 0 || i_22 > choppyitemfixclass_9.anInt1684 * -992859573 * -214577309 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684 * -992859573 * -214577309;
+				choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 || i_22 < 0 || i_22 > choppyitemfixclass_9.anInt1684 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684;
 				choppyitemfixclass_9.method2428(true, false, false, (float) i_25, (float) i_26, (float) i_27, (float) i_21, (float) i_22, (float) i_23, 100.0F, 100.0F, 100.0F, i_5);
-				choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 * -992859573 * -214577309 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684 * -992859573 * -214577309 || i_24 < 0 || i_24 > choppyitemfixclass_9.anInt1684 * -992859573 * -214577309;
+				choppyitemfixclass_9.aBool1708 = i_21 < 0 || i_21 > choppyitemfixclass_9.anInt1684 || i_23 < 0 || i_23 > choppyitemfixclass_9.anInt1684 || i_24 < 0 || i_24 > choppyitemfixclass_9.anInt1684;
 				choppyitemfixclass_9.method2428(true, false, false, (float) i_25, (float) i_27, (float) i_28, (float) i_21, (float) i_23, (float) i_24, 100.0F, 100.0F, 100.0F, i_5);
 				this.RA(true);
 			}
@@ -2856,7 +2856,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8487(int i_1) {
-		int i_2 = i_1 - 1426154545 * this.anInt8977 * -987269935;
+		int i_2 = i_1 - 1426154545 * this.anInt8977;
 
 		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(863387437); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867(297413420)) {
 			if (class282_sub27_3.aBool7693) {
@@ -2873,23 +2873,23 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 		}
 
-		this.anInt8977 = -987269935 * i_1 * 1426154545;
+		this.anInt8977 = i_1;
 		this.aClass229_9013.method3858(5, (byte) -11);
 		this.aClass229_9006.method3858(5, (byte) -40);
 	}
 
 	public void fq(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (this.anIntArray8979 != null && i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < this.anInt8986 * 760194793 * 1383960921) {
-			if (i_1 < 72550989 * this.anInt8983 * -363774331) {
-				i_3 -= 72550989 * this.anInt8983 * -363774331 - i_1;
-				i_1 = 72550989 * this.anInt8983 * -363774331;
+		if (this.anIntArray8979 != null && i_2 >= this.anInt9009 && i_2 < this.anInt8986) {
+			if (i_1 < this.anInt8983) {
+				i_3 -= this.anInt8983 - i_1;
+				i_1 = this.anInt8983;
 			}
 
-			if (i_3 + i_1 > -1710988237 * this.anInt9002 * 1714763515) {
-				i_3 = -1710988237 * this.anInt9002 * 1714763515 - i_1;
+			if (i_3 + i_1 > this.anInt9002) {
+				i_3 = this.anInt9002 - i_1;
 			}
 
-			int i_6 = i_2 * 444800403 * this.anInt8980 * 299731099 + i_1;
+			int i_6 = i_2 * this.anInt8980 + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
@@ -2978,13 +2978,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			int i_6 = i_2 - i_3;
-			if (i_6 < 1516535457 * this.anInt9009 * 1457972577) {
-				i_6 = this.anInt9009 * 1457972577 * 1516535457;
+			if (i_6 < this.anInt9009) {
+				i_6 = this.anInt9009;
 			}
 
 			int i_7 = 1 + i_2 + i_3;
-			if (i_7 > 1383960921 * this.anInt8986 * 760194793) {
-				i_7 = 1383960921 * this.anInt8986 * 760194793;
+			if (i_7 > this.anInt8986) {
+				i_7 = this.anInt8986;
 			}
 
 			int i_8 = i_6;
@@ -3015,16 +3015,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_16 = i_1 - i_10 + 1;
-						if (i_16 < 72550989 * this.anInt8983 * -363774331) {
-							i_16 = 72550989 * this.anInt8983 * -363774331;
+						if (i_16 < this.anInt8983) {
+							i_16 = this.anInt8983;
 						}
 
 						i_17 = i_1 + i_10;
-						if (i_17 > this.anInt9002 * 1714763515 * -1710988237) {
-							i_17 = -1710988237 * this.anInt9002 * 1714763515;
+						if (i_17 > this.anInt9002) {
+							i_17 = this.anInt9002;
 						}
 
-						i_18 = i_16 + i_8 * 444800403 * this.anInt8980 * 299731099;
+						i_18 = i_16 + i_8 * this.anInt8980;
 
 						for (i_19 = i_16; i_19 < i_17; i_19++) {
 							i_20 = this.anIntArray8979[i_18];
@@ -3048,16 +3048,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_16 = i_1 - i_10;
-						if (i_16 < this.anInt8983 * -363774331 * 72550989) {
-							i_16 = 72550989 * this.anInt8983 * -363774331;
+						if (i_16 < this.anInt8983) {
+							i_16 = this.anInt8983;
 						}
 
 						i_17 = i_10 + i_1;
-						if (i_17 > this.anInt9002 * 1714763515 * -1710988237 - 1) {
-							i_17 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+						if (i_17 > this.anInt9002 - 1) {
+							i_17 = this.anInt9002 - 1;
 						}
 
-						i_18 = i_16 + 444800403 * this.anInt8980 * 299731099 * i_8;
+						i_18 = i_16 + this.anInt8980 * i_8;
 
 						for (i_19 = i_16; i_19 <= i_17; i_19++) {
 							i_20 = this.anIntArray8979[i_18];
@@ -3081,16 +3081,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_15 = i_1 - i_10 + 1;
-						if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-							i_15 = 72550989 * this.anInt8983 * -363774331;
+						if (i_15 < this.anInt8983) {
+							i_15 = this.anInt8983;
 						}
 
 						i_16 = i_10 + i_1;
-						if (i_16 > this.anInt9002 * 1714763515 * -1710988237) {
-							i_16 = this.anInt9002 * 1714763515 * -1710988237;
+						if (i_16 > this.anInt9002) {
+							i_16 = this.anInt9002;
 						}
 
-						i_17 = i_15 + this.anInt8980 * 299731099 * 444800403 * i_8;
+						i_17 = i_15 + this.anInt8980 * i_8;
 
 						for (i_18 = i_15; i_18 < i_16; i_18++) {
 							i_19 = this.anIntArray8979[i_17];
@@ -3117,16 +3117,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_15 = i_1 - i_10;
-						if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-							i_15 = 72550989 * this.anInt8983 * -363774331;
+						if (i_15 < this.anInt8983) {
+							i_15 = this.anInt8983;
 						}
 
 						i_16 = i_10 + i_1;
-						if (i_16 > -1710988237 * this.anInt9002 * 1714763515 - 1) {
-							i_16 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+						if (i_16 > this.anInt9002 - 1) {
+							i_16 = this.anInt9002 - 1;
 						}
 
-						i_17 = i_15 + this.anInt8980 * 299731099 * 444800403 * i_8;
+						i_17 = i_15 + this.anInt8980 * i_8;
 
 						for (i_18 = i_15; i_18 <= i_16; i_18++) {
 							i_19 = this.anIntArray8979[i_17];
@@ -3148,16 +3148,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					i_15 = 1 + (i_1 - i_10);
-					if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-						i_15 = 72550989 * this.anInt8983 * -363774331;
+					if (i_15 < this.anInt8983) {
+						i_15 = this.anInt8983;
 					}
 
 					i_16 = i_10 + i_1;
-					if (i_16 > this.anInt9002 * 1714763515 * -1710988237) {
-						i_16 = this.anInt9002 * 1714763515 * -1710988237;
+					if (i_16 > this.anInt9002) {
+						i_16 = this.anInt9002;
 					}
 
-					i_17 = i_15 + i_8 * this.anInt8980 * 299731099 * 444800403;
+					i_17 = i_15 + i_8 * this.anInt8980;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++) {
 						this.anIntArray8979[i_17++] = i_4;
@@ -3180,16 +3180,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					i_15 = i_1 - i_10;
-					if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-						i_15 = 72550989 * this.anInt8983 * -363774331;
+					if (i_15 < this.anInt8983) {
+						i_15 = this.anInt8983;
 					}
 
 					i_16 = i_1 + i_10;
-					if (i_16 > this.anInt9002 * 1714763515 * -1710988237 - 1) {
-						i_16 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+					if (i_16 > this.anInt9002 - 1) {
+						i_16 = this.anInt9002 - 1;
 					}
 
-					i_17 = i_15 + i_8 * this.anInt8980 * 299731099 * 444800403;
+					i_17 = i_15 + i_8 * this.anInt8980;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++) {
 						this.anIntArray8979[i_17++] = i_4;
@@ -3265,8 +3265,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		for (int i_3 = 0; i_3 < this.aClass185Array8984.length; i_3++) {
 			this.aClass185Array8984[i_3].anInt2336 = this.aClass185Array8984[i_3].anInt2307;
 			this.aClass185Array8984[i_3].anInt2306 = i_1;
-			this.aClass185Array8984[i_3].anInt2307 = class90_2.anInt946;
-			this.aClass185Array8984[i_3].anInt2313 = class90_2.anInt945;
+			this.aClass185Array8984[i_3].anInt2307 = class90_2.color;
+			this.aClass185Array8984[i_3].anInt2313 = class90_2.scale;
 			this.aClass185Array8984[i_3].aBool2309 = true;
 		}
 
@@ -3290,7 +3290,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		if (656550451 * this.anInt9008 * 1696391419 > 1) {
 			throw new IllegalStateException();
 		} else {
-			this.method14369(this.anInt9008 * 1696391419 * 656550451);
+			this.method14369(this.anInt9008);
 			this.method14409(0);
 		}
 	}
@@ -3316,7 +3316,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void fd(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0) {
-			this.B(0, 0, 444800403 * this.anInt8980 * 299731099, 2138511415 * this.anInt8981 * 1730944391, i_2, 0);
+			this.B(0, 0, this.anInt8980, this.anInt8981, i_2, 0);
 		}
 
 		if ((i_1 & 0x2) != 0) {
@@ -3342,7 +3342,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		if (656550451 * this.anInt9008 * 1696391419 > 1) {
 			throw new IllegalStateException();
 		} else {
-			this.method14369(this.anInt9008 * 1696391419 * 656550451);
+			this.method14369(this.anInt9008);
 			this.method14409(0);
 		}
 	}
@@ -3353,10 +3353,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8513(int i_1, int i_2, int i_3, int i_4) {
-		this.anInt8998 = 1009607649 * i_1 * 116006945;
-		this.anInt8999 = 117131383 * i_2 * 842600775;
-		this.anInt9000 = -1636098283 * i_3 * -441894851;
-		this.anInt9001 = i_4 * 995917955 * 3132971;
+		this.anInt8998 = i_1;
+		this.anInt8999 = i_2;
+		this.anInt9000 = i_3;
+		this.anInt9001 = i_4;
 		this.method14364();
 	}
 
@@ -3429,16 +3429,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void ez() {
 		this.anInt8983 = 0 * 72550989;
 		this.anInt9009 = 0 * 1516535457;
-		this.anInt9002 = 1480196385 * this.anInt8980 * 299731099 * -1710988237;
-		this.anInt8986 = this.anInt8981 * 1730944391 * 1628550159 * 1383960921;
+		this.anInt9002 = 1480196385 * this.anInt8980;
+		this.anInt8986 = this.anInt8981 * 1628550159;
 		this.method14364();
 	}
 
 	public void eh() {
 		this.anInt8983 = 0 * 72550989;
 		this.anInt9009 = 0 * 1516535457;
-		this.anInt9002 = 1480196385 * this.anInt8980 * 299731099 * -1710988237;
-		this.anInt8986 = this.anInt8981 * 1730944391 * 1628550159 * 1383960921;
+		this.anInt9002 = 1480196385 * this.anInt8980;
+		this.anInt8986 = this.anInt8981 * 1628550159;
 		this.method14364();
 	}
 
@@ -3510,36 +3510,36 @@ public class HardwareRenderer extends GraphicalRenderer {
 			i_2 = 0;
 		}
 
-		if (i_3 > 444800403 * this.anInt8980 * 299731099) {
-			i_3 = this.anInt8980 * 299731099 * 444800403;
+		if (i_3 > this.anInt8980) {
+			i_3 = this.anInt8980;
 		}
 
-		if (i_4 > 2138511415 * this.anInt8981 * 1730944391) {
-			i_4 = 2138511415 * this.anInt8981 * 1730944391;
+		if (i_4 > this.anInt8981) {
+			i_4 = this.anInt8981;
 		}
 
-		this.anInt8983 = i_1 * -363774331 * 72550989;
-		this.anInt9002 = i_3 * 1714763515 * -1710988237;
-		this.anInt9009 = i_2 * 1457972577 * 1516535457;
-		this.anInt8986 = 760194793 * i_4 * 1383960921;
+		this.anInt8983 = i_1;
+		this.anInt9002 = i_3;
+		this.anInt9009 = i_2;
+		this.anInt8986 = i_4;
 		this.method14364();
 	}
 
 	public void fe(int i_1, int i_2, int i_3, int i_4) {
-		if (this.anInt8983 * -363774331 * 72550989 < i_1) {
-			this.anInt8983 = i_1 * -363774331 * 72550989;
+		if (this.anInt8983 < i_1) {
+			this.anInt8983 = i_1;
 		}
 
-		if (this.anInt9009 * 1457972577 * 1516535457 < i_2) {
-			this.anInt9009 = i_2 * 1457972577 * 1516535457;
+		if (this.anInt9009 < i_2) {
+			this.anInt9009 = i_2;
 		}
 
-		if (-1710988237 * this.anInt9002 * 1714763515 > i_3) {
-			this.anInt9002 = 1714763515 * i_3 * -1710988237;
+		if (this.anInt9002 > i_3) {
+			this.anInt9002 = 1714763515 * i_3;
 		}
 
-		if (this.anInt8986 * 760194793 * 1383960921 > i_4) {
-			this.anInt8986 = 760194793 * i_4 * 1383960921;
+		if (this.anInt8986 > i_4) {
+			this.anInt8986 = i_4;
 		}
 
 		this.method14364();
@@ -3626,7 +3626,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void fi(int i_1, int i_2) {
 		if ((i_1 & 0x1) != 0) {
-			this.B(0, 0, 444800403 * this.anInt8980 * 299731099, 2138511415 * this.anInt8981 * 1730944391, i_2, 0);
+			this.B(0, 0, this.anInt8980, this.anInt8981, i_2, 0);
 		}
 
 		if ((i_1 & 0x2) != 0) {
@@ -3636,20 +3636,20 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void fk(int i_1, int i_2, int i_3, int i_4) {
-		if (this.anInt8983 * -363774331 * 72550989 < i_1) {
-			this.anInt8983 = i_1 * -363774331 * 72550989;
+		if (this.anInt8983 < i_1) {
+			this.anInt8983 = i_1;
 		}
 
-		if (this.anInt9009 * 1457972577 * 1516535457 < i_2) {
-			this.anInt9009 = i_2 * 1457972577 * 1516535457;
+		if (this.anInt9009 < i_2) {
+			this.anInt9009 = i_2;
 		}
 
-		if (-1710988237 * this.anInt9002 * 1714763515 > i_3) {
-			this.anInt9002 = 1714763515 * i_3 * -1710988237;
+		if (this.anInt9002 > i_3) {
+			this.anInt9002 = 1714763515 * i_3;
 		}
 
-		if (this.anInt8986 * 760194793 * 1383960921 > i_4) {
-			this.anInt8986 = 760194793 * i_4 * 1383960921;
+		if (this.anInt8986 > i_4) {
+			this.anInt8986 = i_4;
 		}
 
 		this.method14364();
@@ -3664,27 +3664,27 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void fp(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		if (this.anIntArray8979 != null) {
-			if (i_1 < 72550989 * this.anInt8983 * -363774331) {
-				i_3 -= 72550989 * this.anInt8983 * -363774331 - i_1;
-				i_1 = this.anInt8983 * -363774331 * 72550989;
+			if (i_1 < this.anInt8983) {
+				i_3 -= this.anInt8983 - i_1;
+				i_1 = this.anInt8983;
 			}
 
-			if (i_2 < this.anInt9009 * 1457972577 * 1516535457) {
-				i_4 -= 1516535457 * this.anInt9009 * 1457972577 - i_2;
-				i_2 = 1516535457 * this.anInt9009 * 1457972577;
+			if (i_2 < this.anInt9009) {
+				i_4 -= this.anInt9009 - i_2;
+				i_2 = this.anInt9009;
 			}
 
-			if (i_1 + i_3 > this.anInt9002 * 1714763515 * -1710988237) {
-				i_3 = -1710988237 * this.anInt9002 * 1714763515 - i_1;
+			if (i_1 + i_3 > this.anInt9002) {
+				i_3 = this.anInt9002 - i_1;
 			}
 
-			if (i_2 + i_4 > 1383960921 * this.anInt8986 * 760194793) {
-				i_4 = 1383960921 * this.anInt8986 * 760194793 - i_2;
+			if (i_2 + i_4 > this.anInt8986) {
+				i_4 = this.anInt8986 - i_2;
 			}
 
-			if (i_3 > 0 && i_4 > 0 && i_1 <= this.anInt9002 * 1714763515 * -1710988237 && i_2 <= 1383960921 * this.anInt8986 * 760194793) {
-				int i_7 = 444800403 * this.anInt8980 * 299731099 - i_3;
-				int i_8 = i_1 + i_2 * 444800403 * this.anInt8980 * 299731099;
+			if (i_3 > 0 && i_4 > 0 && i_1 <= this.anInt9002 && i_2 <= this.anInt8986) {
+				int i_7 = this.anInt8980 - i_3;
+				int i_8 = i_1 + i_2 * this.anInt8980;
 				int i_9 = i_5 >>> 24;
 				int i_10;
 				int i_11;
@@ -3771,27 +3771,27 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void fb(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		if (this.anIntArray8979 != null) {
-			if (i_1 < 72550989 * this.anInt8983 * -363774331) {
-				i_3 -= 72550989 * this.anInt8983 * -363774331 - i_1;
-				i_1 = this.anInt8983 * -363774331 * 72550989;
+			if (i_1 < this.anInt8983) {
+				i_3 -= this.anInt8983 - i_1;
+				i_1 = this.anInt8983;
 			}
 
-			if (i_2 < this.anInt9009 * 1457972577 * 1516535457) {
-				i_4 -= 1516535457 * this.anInt9009 * 1457972577 - i_2;
-				i_2 = 1516535457 * this.anInt9009 * 1457972577;
+			if (i_2 < this.anInt9009) {
+				i_4 -= this.anInt9009 - i_2;
+				i_2 = this.anInt9009;
 			}
 
-			if (i_1 + i_3 > this.anInt9002 * 1714763515 * -1710988237) {
-				i_3 = -1710988237 * this.anInt9002 * 1714763515 - i_1;
+			if (i_1 + i_3 > this.anInt9002) {
+				i_3 = this.anInt9002 - i_1;
 			}
 
-			if (i_2 + i_4 > 1383960921 * this.anInt8986 * 760194793) {
-				i_4 = 1383960921 * this.anInt8986 * 760194793 - i_2;
+			if (i_2 + i_4 > this.anInt8986) {
+				i_4 = this.anInt8986 - i_2;
 			}
 
-			if (i_3 > 0 && i_4 > 0 && i_1 <= this.anInt9002 * 1714763515 * -1710988237 && i_2 <= 1383960921 * this.anInt8986 * 760194793) {
-				int i_7 = 444800403 * this.anInt8980 * 299731099 - i_3;
-				int i_8 = i_1 + i_2 * 444800403 * this.anInt8980 * 299731099;
+			if (i_3 > 0 && i_4 > 0 && i_1 <= this.anInt9002 && i_2 <= this.anInt8986) {
+				int i_7 = this.anInt8980 - i_3;
+				int i_8 = i_1 + i_2 * this.anInt8980;
 				int i_9 = i_5 >>> 24;
 				int i_10;
 				int i_11;
@@ -3882,28 +3882,28 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i_11 = 0;
 			int i_12 = (i_8 << 16) / i_3;
 			int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-			int i_14 = i_1 + 444800403 * this.anInt8980 * 299731099 * i_2;
-			int i_15 = this.anInt8980 * 299731099 * 444800403 - i_3;
-			if (i_2 + i_4 > this.anInt8986 * 760194793 * 1383960921) {
-				i_4 -= i_4 + i_2 - 1383960921 * this.anInt8986 * 760194793;
+			int i_14 = i_1 + this.anInt8980 * i_2;
+			int i_15 = this.anInt8980 - i_3;
+			if (i_2 + i_4 > this.anInt8986) {
+				i_4 -= i_4 + i_2 - this.anInt8986;
 			}
 
 			int i_16;
-			if (i_2 < 1516535457 * this.anInt9009 * 1457972577) {
-				i_16 = 1516535457 * this.anInt9009 * 1457972577 - i_2;
+			if (i_2 < this.anInt9009) {
+				i_16 = this.anInt9009 - i_2;
 				i_4 -= i_16;
-				i_14 += this.anInt8980 * 299731099 * 444800403 * i_16;
+				i_14 += this.anInt8980 * i_16;
 				i_11 += i_16 * i_13;
 			}
 
-			if (i_1 + i_3 > this.anInt9002 * 1714763515 * -1710988237) {
-				i_16 = i_3 + i_1 - this.anInt9002 * 1714763515 * -1710988237;
+			if (i_1 + i_3 > this.anInt9002) {
+				i_16 = i_3 + i_1 - this.anInt9002;
 				i_3 -= i_16;
 				i_15 += i_16;
 			}
 
-			if (i_1 < 72550989 * this.anInt8983 * -363774331) {
-				i_16 = 72550989 * this.anInt8983 * -363774331 - i_1;
+			if (i_1 < this.anInt8983) {
+				i_16 = this.anInt8983 - i_1;
 				i_3 -= i_16;
 				i_14 += i_16;
 				i_10 += i_16 * i_12;
@@ -4009,28 +4009,28 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i_11 = 0;
 			int i_12 = (i_8 << 16) / i_3;
 			int i_13 = (bytes_7.length / i_8 << 16) / i_4;
-			int i_14 = i_1 + 444800403 * this.anInt8980 * 299731099 * i_2;
-			int i_15 = this.anInt8980 * 299731099 * 444800403 - i_3;
-			if (i_2 + i_4 > this.anInt8986 * 760194793 * 1383960921) {
-				i_4 -= i_4 + i_2 - 1383960921 * this.anInt8986 * 760194793;
+			int i_14 = i_1 + this.anInt8980 * i_2;
+			int i_15 = this.anInt8980 - i_3;
+			if (i_2 + i_4 > this.anInt8986) {
+				i_4 -= i_4 + i_2 - this.anInt8986;
 			}
 
 			int i_16;
-			if (i_2 < 1516535457 * this.anInt9009 * 1457972577) {
-				i_16 = 1516535457 * this.anInt9009 * 1457972577 - i_2;
+			if (i_2 < this.anInt9009) {
+				i_16 = this.anInt9009 - i_2;
 				i_4 -= i_16;
-				i_14 += this.anInt8980 * 299731099 * 444800403 * i_16;
+				i_14 += this.anInt8980 * i_16;
 				i_11 += i_16 * i_13;
 			}
 
-			if (i_1 + i_3 > this.anInt9002 * 1714763515 * -1710988237) {
-				i_16 = i_3 + i_1 - this.anInt9002 * 1714763515 * -1710988237;
+			if (i_1 + i_3 > this.anInt9002) {
+				i_16 = i_3 + i_1 - this.anInt9002;
 				i_3 -= i_16;
 				i_15 += i_16;
 			}
 
-			if (i_1 < 72550989 * this.anInt8983 * -363774331) {
-				i_16 = 72550989 * this.anInt8983 * -363774331 - i_1;
+			if (i_1 < this.anInt8983) {
+				i_16 = this.anInt8983 - i_1;
 				i_3 -= i_16;
 				i_14 += i_16;
 				i_10 += i_16 * i_12;
@@ -4137,13 +4137,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			int i_6 = i_2 - i_3;
-			if (i_6 < 1516535457 * this.anInt9009 * 1457972577) {
-				i_6 = this.anInt9009 * 1457972577 * 1516535457;
+			if (i_6 < this.anInt9009) {
+				i_6 = this.anInt9009;
 			}
 
 			int i_7 = 1 + i_2 + i_3;
-			if (i_7 > 1383960921 * this.anInt8986 * 760194793) {
-				i_7 = 1383960921 * this.anInt8986 * 760194793;
+			if (i_7 > this.anInt8986) {
+				i_7 = this.anInt8986;
 			}
 
 			int i_8 = i_6;
@@ -4174,16 +4174,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_16 = i_1 - i_10 + 1;
-						if (i_16 < 72550989 * this.anInt8983 * -363774331) {
-							i_16 = 72550989 * this.anInt8983 * -363774331;
+						if (i_16 < this.anInt8983) {
+							i_16 = this.anInt8983;
 						}
 
 						i_17 = i_1 + i_10;
-						if (i_17 > this.anInt9002 * 1714763515 * -1710988237) {
-							i_17 = -1710988237 * this.anInt9002 * 1714763515;
+						if (i_17 > this.anInt9002) {
+							i_17 = this.anInt9002;
 						}
 
-						i_18 = i_16 + i_8 * 444800403 * this.anInt8980 * 299731099;
+						i_18 = i_16 + i_8 * this.anInt8980;
 
 						for (i_19 = i_16; i_19 < i_17; i_19++) {
 							i_20 = this.anIntArray8979[i_18];
@@ -4207,16 +4207,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_16 = i_1 - i_10;
-						if (i_16 < this.anInt8983 * -363774331 * 72550989) {
-							i_16 = 72550989 * this.anInt8983 * -363774331;
+						if (i_16 < this.anInt8983) {
+							i_16 = this.anInt8983;
 						}
 
 						i_17 = i_10 + i_1;
-						if (i_17 > this.anInt9002 * 1714763515 * -1710988237 - 1) {
-							i_17 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+						if (i_17 > this.anInt9002 - 1) {
+							i_17 = this.anInt9002 - 1;
 						}
 
-						i_18 = i_16 + 444800403 * this.anInt8980 * 299731099 * i_8;
+						i_18 = i_16 + this.anInt8980 * i_8;
 
 						for (i_19 = i_16; i_19 <= i_17; i_19++) {
 							i_20 = this.anIntArray8979[i_18];
@@ -4240,16 +4240,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_15 = i_1 - i_10 + 1;
-						if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-							i_15 = 72550989 * this.anInt8983 * -363774331;
+						if (i_15 < this.anInt8983) {
+							i_15 = this.anInt8983;
 						}
 
 						i_16 = i_10 + i_1;
-						if (i_16 > this.anInt9002 * 1714763515 * -1710988237) {
-							i_16 = this.anInt9002 * 1714763515 * -1710988237;
+						if (i_16 > this.anInt9002) {
+							i_16 = this.anInt9002;
 						}
 
-						i_17 = i_15 + this.anInt8980 * 299731099 * 444800403 * i_8;
+						i_17 = i_15 + this.anInt8980 * i_8;
 
 						for (i_18 = i_15; i_18 < i_16; i_18++) {
 							i_19 = this.anIntArray8979[i_17];
@@ -4276,16 +4276,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						i_15 = i_1 - i_10;
-						if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-							i_15 = 72550989 * this.anInt8983 * -363774331;
+						if (i_15 < this.anInt8983) {
+							i_15 = this.anInt8983;
 						}
 
 						i_16 = i_10 + i_1;
-						if (i_16 > -1710988237 * this.anInt9002 * 1714763515 - 1) {
-							i_16 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+						if (i_16 > this.anInt9002 - 1) {
+							i_16 = this.anInt9002 - 1;
 						}
 
-						i_17 = i_15 + this.anInt8980 * 299731099 * 444800403 * i_8;
+						i_17 = i_15 + this.anInt8980 * i_8;
 
 						for (i_18 = i_15; i_18 <= i_16; i_18++) {
 							i_19 = this.anIntArray8979[i_17];
@@ -4307,16 +4307,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					i_15 = 1 + (i_1 - i_10);
-					if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-						i_15 = 72550989 * this.anInt8983 * -363774331;
+					if (i_15 < this.anInt8983) {
+						i_15 = this.anInt8983;
 					}
 
 					i_16 = i_10 + i_1;
-					if (i_16 > this.anInt9002 * 1714763515 * -1710988237) {
-						i_16 = this.anInt9002 * 1714763515 * -1710988237;
+					if (i_16 > this.anInt9002) {
+						i_16 = this.anInt9002;
 					}
 
-					i_17 = i_15 + i_8 * this.anInt8980 * 299731099 * 444800403;
+					i_17 = i_15 + i_8 * this.anInt8980;
 
 					for (i_18 = i_15; i_18 < i_16; i_18++) {
 						this.anIntArray8979[i_17++] = i_4;
@@ -4339,16 +4339,16 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					i_15 = i_1 - i_10;
-					if (i_15 < 72550989 * this.anInt8983 * -363774331) {
-						i_15 = 72550989 * this.anInt8983 * -363774331;
+					if (i_15 < this.anInt8983) {
+						i_15 = this.anInt8983;
 					}
 
 					i_16 = i_1 + i_10;
-					if (i_16 > this.anInt9002 * 1714763515 * -1710988237 - 1) {
-						i_16 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+					if (i_16 > this.anInt9002 - 1) {
+						i_16 = this.anInt9002 - 1;
 					}
 
-					i_17 = i_15 + i_8 * this.anInt8980 * 299731099 * 444800403;
+					i_17 = i_15 + i_8 * this.anInt8980;
 
 					for (i_18 = i_15; i_18 <= i_16; i_18++) {
 						this.anIntArray8979[i_17++] = i_4;
@@ -4365,25 +4365,25 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8514(int i_1, int i_2, int i_3, int i_4) {
-		this.anInt8998 = 1009607649 * i_1 * 116006945;
-		this.anInt8999 = 117131383 * i_2 * 842600775;
-		this.anInt9000 = -1636098283 * i_3 * -441894851;
-		this.anInt9001 = i_4 * 995917955 * 3132971;
+		this.anInt8998 = i_1;
+		this.anInt8999 = i_2;
+		this.anInt9000 = i_3;
+		this.anInt9001 = i_4;
 		this.method14364();
 	}
 
 	public void fs(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (this.anIntArray8979 != null && i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < this.anInt8986 * 760194793 * 1383960921) {
-			if (i_1 < 72550989 * this.anInt8983 * -363774331) {
-				i_3 -= 72550989 * this.anInt8983 * -363774331 - i_1;
-				i_1 = 72550989 * this.anInt8983 * -363774331;
+		if (this.anIntArray8979 != null && i_2 >= this.anInt9009 && i_2 < this.anInt8986) {
+			if (i_1 < this.anInt8983) {
+				i_3 -= this.anInt8983 - i_1;
+				i_1 = this.anInt8983;
 			}
 
-			if (i_3 + i_1 > -1710988237 * this.anInt9002 * 1714763515) {
-				i_3 = -1710988237 * this.anInt9002 * 1714763515 - i_1;
+			if (i_3 + i_1 > this.anInt9002) {
+				i_3 = this.anInt9002 - i_1;
 			}
 
-			int i_6 = i_2 * 444800403 * this.anInt8980 * 299731099 + i_1;
+			int i_6 = i_2 * this.anInt8980 + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
@@ -4428,7 +4428,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.aFloat8978 = f_2 - f_1;
 		this.aFloat8985 = f_2 + f_1 - 1.0F;
 
-		for (int i_3 = 0; i_3 < this.anInt9008 * 1696391419 * 656550451; i_3++) {
+		for (int i_3 = 0; i_3 < this.anInt9008; i_3++) {
 			Class185 class185_4 = this.aClass185Array8984[i_3];
 			ChoppyItemFixClass choppyitemfixclass_5 = class185_4.aClass144_2310;
 			choppyitemfixclass_5.aFloat1683 = this.aFloat8978;
@@ -4438,22 +4438,22 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void fo(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (this.anIntArray8979 != null && i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < this.anInt9002 * 1714763515 * -1710988237) {
-			if (i_2 < this.anInt9009 * 1457972577 * 1516535457) {
-				i_3 -= 1516535457 * this.anInt9009 * 1457972577 - i_2;
-				i_2 = 1516535457 * this.anInt9009 * 1457972577;
+		if (this.anIntArray8979 != null && i_1 >= this.anInt8983 && i_1 < this.anInt9002) {
+			if (i_2 < this.anInt9009) {
+				i_3 -= this.anInt9009 - i_2;
+				i_2 = this.anInt9009;
 			}
 
-			if (i_2 + i_3 > this.anInt8986 * 760194793 * 1383960921) {
-				i_3 = 1383960921 * this.anInt8986 * 760194793 - i_2;
+			if (i_2 + i_3 > this.anInt8986) {
+				i_3 = this.anInt8986 - i_2;
 			}
 
-			int i_6 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_1;
+			int i_6 = i_2 * this.anInt8980 + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
 				for (i_8 = 0; i_8 < i_3; i_8++) {
-					this.anIntArray8979[i_6 + this.anInt8980 * 299731099 * 444800403 * i_8] = i_4;
+					this.anIntArray8979[i_6 + this.anInt8980 * i_8] = i_4;
 				}
 			} else {
 				int i_9;
@@ -4464,7 +4464,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_8 = 256 - i_7;
 
 					for (i_9 = 0; i_9 < i_3; i_9++) {
-						i_10 = i_6 + i_9 * this.anInt8980 * 299731099 * 444800403;
+						i_10 = i_6 + i_9 * this.anInt8980;
 						i_11 = this.anIntArray8979[i_10];
 						i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + ((i_11 & 0xff00) * i_8 >> 8 & 0xff00);
 						this.anIntArray8979[i_10] = i_4 + i_11;
@@ -4475,7 +4475,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					for (i_8 = 0; i_8 < i_3; i_8++) {
-						i_9 = 444800403 * this.anInt8980 * 299731099 * i_8 + i_6;
+						i_9 = this.anInt8980 * i_8 + i_6;
 						i_10 = this.anIntArray8979[i_9];
 						i_11 = i_10 + i_4;
 						int i_12 = (i_4 & 0xff00ff) + (i_10 & 0xff00ff);
@@ -4489,22 +4489,22 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void fl(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (this.anIntArray8979 != null && i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < this.anInt9002 * 1714763515 * -1710988237) {
-			if (i_2 < this.anInt9009 * 1457972577 * 1516535457) {
-				i_3 -= 1516535457 * this.anInt9009 * 1457972577 - i_2;
-				i_2 = 1516535457 * this.anInt9009 * 1457972577;
+		if (this.anIntArray8979 != null && i_1 >= this.anInt8983 && i_1 < this.anInt9002) {
+			if (i_2 < this.anInt9009) {
+				i_3 -= this.anInt9009 - i_2;
+				i_2 = this.anInt9009;
 			}
 
-			if (i_2 + i_3 > this.anInt8986 * 760194793 * 1383960921) {
-				i_3 = 1383960921 * this.anInt8986 * 760194793 - i_2;
+			if (i_2 + i_3 > this.anInt8986) {
+				i_3 = this.anInt8986 - i_2;
 			}
 
-			int i_6 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_1;
+			int i_6 = i_2 * this.anInt8980 + i_1;
 			int i_7 = i_4 >>> 24;
 			int i_8;
 			if (i_5 == 0 || i_5 == 1 && i_7 == 255) {
 				for (i_8 = 0; i_8 < i_3; i_8++) {
-					this.anIntArray8979[i_6 + this.anInt8980 * 299731099 * 444800403 * i_8] = i_4;
+					this.anIntArray8979[i_6 + this.anInt8980 * i_8] = i_4;
 				}
 			} else {
 				int i_9;
@@ -4515,7 +4515,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_8 = 256 - i_7;
 
 					for (i_9 = 0; i_9 < i_3; i_9++) {
-						i_10 = i_6 + i_9 * this.anInt8980 * 299731099 * 444800403;
+						i_10 = i_6 + i_9 * this.anInt8980;
 						i_11 = this.anIntArray8979[i_10];
 						i_11 = ((i_11 & 0xff00ff) * i_8 >> 8 & 0xff00ff) + ((i_11 & 0xff00) * i_8 >> 8 & 0xff00);
 						this.anIntArray8979[i_10] = i_4 + i_11;
@@ -4526,7 +4526,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					for (i_8 = 0; i_8 < i_3; i_8++) {
-						i_9 = 444800403 * this.anInt8980 * 299731099 * i_8 + i_6;
+						i_9 = this.anInt8980 * i_8 + i_6;
 						i_10 = this.anIntArray8979[i_9];
 						i_11 = i_10 + i_4;
 						int i_12 = (i_4 & 0xff00ff) + (i_10 & 0xff00ff);
@@ -4580,13 +4580,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_4 <<= 16;
 					i_7 = (int) Math.floor(0.5D + (double) i_4 / (double) i_3);
 					i_3 += i_1;
-					if (i_1 < this.anInt8983 * -363774331 * 72550989) {
-						i_2 += (72550989 * this.anInt8983 * -363774331 - i_1) * i_7;
-						i_1 = this.anInt8983 * -363774331 * 72550989;
+					if (i_1 < this.anInt8983) {
+						i_2 += (this.anInt8983 - i_1) * i_7;
+						i_1 = this.anInt8983;
 					}
 
-					if (i_3 >= this.anInt9002 * 1714763515 * -1710988237) {
-						i_3 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+					if (i_3 >= this.anInt9002) {
+						i_3 = this.anInt9002 - 1;
 					}
 
 					i_8 = i_5 >>> 24;
@@ -4596,8 +4596,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							for (i_9 = 256 - i_8; i_1 <= i_3; i_1++) {
 								i_10 = i_2 >> 16;
-								if (i_10 >= this.anInt9009 * 1457972577 * 1516535457 && i_10 < 1383960921 * this.anInt8986 * 760194793) {
-									i_11 = i_1 + this.anInt8980 * 299731099 * 444800403 * i_10;
+								if (i_10 >= this.anInt9009 && i_10 < this.anInt8986) {
+									i_11 = i_1 + this.anInt8980 * i_10;
 									i_12 = this.anIntArray8979[i_11];
 									i_12 = (i_9 * (i_12 & 0xff00ff) >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
 									this.anIntArray8979[i_11] = i_5 + i_12;
@@ -4612,8 +4612,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							while (i_1 <= i_3) {
 								i_9 = i_2 >> 16;
-								if (i_9 >= this.anInt9009 * 1457972577 * 1516535457 && i_9 < 1383960921 * this.anInt8986 * 760194793) {
-									i_10 = i_1 + i_9 * this.anInt8980 * 299731099 * 444800403;
+								if (i_9 >= this.anInt9009 && i_9 < this.anInt8986) {
+									i_10 = i_1 + i_9 * this.anInt8980;
 									i_11 = this.anIntArray8979[i_10];
 									i_12 = i_5 + i_11;
 									i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4628,8 +4628,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					} else {
 						while (i_1 <= i_3) {
 							i_9 = i_2 >> 16;
-							if (i_9 >= 1516535457 * this.anInt9009 * 1457972577 && i_9 < this.anInt8986 * 760194793 * 1383960921) {
-								this.anIntArray8979[i_1 + i_9 * 444800403 * this.anInt8980 * 299731099] = i_5;
+							if (i_9 >= this.anInt9009 && i_9 < this.anInt8986) {
+								this.anIntArray8979[i_1 + i_9 * this.anInt8980] = i_5;
 							}
 
 							i_2 += i_7;
@@ -4642,21 +4642,21 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_3 <<= 16;
 					i_7 = (int) Math.floor((double) i_3 / (double) i_4 + 0.5D);
 					i_4 += i_2;
-					if (i_2 < this.anInt9009 * 1457972577 * 1516535457) {
-						i_1 += (1516535457 * this.anInt9009 * 1457972577 - i_2) * i_7;
-						i_2 = 1516535457 * this.anInt9009 * 1457972577;
+					if (i_2 < this.anInt9009) {
+						i_1 += (this.anInt9009 - i_2) * i_7;
+						i_2 = this.anInt9009;
 					}
 
-					if (i_4 >= 1383960921 * this.anInt8986 * 760194793) {
-						i_4 = 1383960921 * this.anInt8986 * 760194793 - 1;
+					if (i_4 >= this.anInt8986) {
+						i_4 = this.anInt8986 - 1;
 					}
 
 					i_8 = i_5 >>> 24;
 					if (i_6 == 0 || i_6 == 1 && i_8 == 255) {
 						while (i_2 <= i_4) {
 							i_9 = i_1 >> 16;
-							if (i_9 >= 72550989 * this.anInt8983 * -363774331 && i_9 < -1710988237 * this.anInt9002 * 1714763515) {
-								this.anIntArray8979[i_9 + 444800403 * this.anInt8980 * 299731099 * i_2] = i_5;
+							if (i_9 >= this.anInt8983 && i_9 < this.anInt9002) {
+								this.anIntArray8979[i_9 + this.anInt8980 * i_2] = i_5;
 							}
 
 							i_1 += i_7;
@@ -4667,11 +4667,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						for (i_9 = 256 - i_8; i_2 <= i_4; i_2++) {
 							i_10 = i_1 >> 16;
-							if (i_10 >= this.anInt8983 * -363774331 * 72550989 && i_10 < this.anInt9002 * 1714763515 * -1710988237) {
-								i_11 = this.anInt8980 * 299731099 * 444800403 * i_2 + i_10;
+							if (i_10 >= this.anInt8983 && i_10 < this.anInt9002) {
+								i_11 = this.anInt8980 * i_2 + i_10;
 								i_12 = this.anIntArray8979[i_11];
 								i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + ((i_12 & 0xff00) * i_9 >> 8 & 0xff00);
-								this.anIntArray8979[this.anInt8980 * 299731099 * 444800403 * i_2 + i_10] = i_5 + i_12;
+								this.anIntArray8979[this.anInt8980 * i_2 + i_10] = i_5 + i_12;
 							}
 
 							i_1 += i_7;
@@ -4683,8 +4683,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						while (i_2 <= i_4) {
 							i_9 = i_1 >> 16;
-							if (i_9 >= this.anInt8983 * -363774331 * 72550989 && i_9 < -1710988237 * this.anInt9002 * 1714763515) {
-								i_10 = i_9 + i_2 * 444800403 * this.anInt8980 * 299731099;
+							if (i_9 >= this.anInt8983 && i_9 < this.anInt9002) {
+								i_10 = i_9 + i_2 * this.anInt8980;
 								i_11 = this.anIntArray8979[i_10];
 								i_12 = i_11 + i_5;
 								i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4739,13 +4739,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_4 <<= 16;
 					i_7 = (int) Math.floor(0.5D + (double) i_4 / (double) i_3);
 					i_3 += i_1;
-					if (i_1 < this.anInt8983 * -363774331 * 72550989) {
-						i_2 += (72550989 * this.anInt8983 * -363774331 - i_1) * i_7;
-						i_1 = this.anInt8983 * -363774331 * 72550989;
+					if (i_1 < this.anInt8983) {
+						i_2 += (this.anInt8983 - i_1) * i_7;
+						i_1 = this.anInt8983;
 					}
 
-					if (i_3 >= this.anInt9002 * 1714763515 * -1710988237) {
-						i_3 = this.anInt9002 * 1714763515 * -1710988237 - 1;
+					if (i_3 >= this.anInt9002) {
+						i_3 = this.anInt9002 - 1;
 					}
 
 					i_8 = i_5 >>> 24;
@@ -4755,8 +4755,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							for (i_9 = 256 - i_8; i_1 <= i_3; i_1++) {
 								i_10 = i_2 >> 16;
-								if (i_10 >= this.anInt9009 * 1457972577 * 1516535457 && i_10 < 1383960921 * this.anInt8986 * 760194793) {
-									i_11 = i_1 + this.anInt8980 * 299731099 * 444800403 * i_10;
+								if (i_10 >= this.anInt9009 && i_10 < this.anInt8986) {
+									i_11 = i_1 + this.anInt8980 * i_10;
 									i_12 = this.anIntArray8979[i_11];
 									i_12 = (i_9 * (i_12 & 0xff00ff) >> 8 & 0xff00ff) + (i_9 * (i_12 & 0xff00) >> 8 & 0xff00);
 									this.anIntArray8979[i_11] = i_5 + i_12;
@@ -4771,8 +4771,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							while (i_1 <= i_3) {
 								i_9 = i_2 >> 16;
-								if (i_9 >= this.anInt9009 * 1457972577 * 1516535457 && i_9 < 1383960921 * this.anInt8986 * 760194793) {
-									i_10 = i_1 + i_9 * this.anInt8980 * 299731099 * 444800403;
+								if (i_9 >= this.anInt9009 && i_9 < this.anInt8986) {
+									i_10 = i_1 + i_9 * this.anInt8980;
 									i_11 = this.anIntArray8979[i_10];
 									i_12 = i_5 + i_11;
 									i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4787,8 +4787,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					} else {
 						while (i_1 <= i_3) {
 							i_9 = i_2 >> 16;
-							if (i_9 >= 1516535457 * this.anInt9009 * 1457972577 && i_9 < this.anInt8986 * 760194793 * 1383960921) {
-								this.anIntArray8979[i_1 + i_9 * 444800403 * this.anInt8980 * 299731099] = i_5;
+							if (i_9 >= this.anInt9009 && i_9 < this.anInt8986) {
+								this.anIntArray8979[i_1 + i_9 * this.anInt8980] = i_5;
 							}
 
 							i_2 += i_7;
@@ -4801,21 +4801,21 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_3 <<= 16;
 					i_7 = (int) Math.floor((double) i_3 / (double) i_4 + 0.5D);
 					i_4 += i_2;
-					if (i_2 < this.anInt9009 * 1457972577 * 1516535457) {
-						i_1 += (1516535457 * this.anInt9009 * 1457972577 - i_2) * i_7;
-						i_2 = 1516535457 * this.anInt9009 * 1457972577;
+					if (i_2 < this.anInt9009) {
+						i_1 += (this.anInt9009 - i_2) * i_7;
+						i_2 = this.anInt9009;
 					}
 
-					if (i_4 >= 1383960921 * this.anInt8986 * 760194793) {
-						i_4 = 1383960921 * this.anInt8986 * 760194793 - 1;
+					if (i_4 >= this.anInt8986) {
+						i_4 = this.anInt8986 - 1;
 					}
 
 					i_8 = i_5 >>> 24;
 					if (i_6 == 0 || i_6 == 1 && i_8 == 255) {
 						while (i_2 <= i_4) {
 							i_9 = i_1 >> 16;
-							if (i_9 >= 72550989 * this.anInt8983 * -363774331 && i_9 < -1710988237 * this.anInt9002 * 1714763515) {
-								this.anIntArray8979[i_9 + 444800403 * this.anInt8980 * 299731099 * i_2] = i_5;
+							if (i_9 >= this.anInt8983 && i_9 < this.anInt9002) {
+								this.anIntArray8979[i_9 + this.anInt8980 * i_2] = i_5;
 							}
 
 							i_1 += i_7;
@@ -4826,11 +4826,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						for (i_9 = 256 - i_8; i_2 <= i_4; i_2++) {
 							i_10 = i_1 >> 16;
-							if (i_10 >= this.anInt8983 * -363774331 * 72550989 && i_10 < this.anInt9002 * 1714763515 * -1710988237) {
-								i_11 = this.anInt8980 * 299731099 * 444800403 * i_2 + i_10;
+							if (i_10 >= this.anInt8983 && i_10 < this.anInt9002) {
+								i_11 = this.anInt8980 * i_2 + i_10;
 								i_12 = this.anIntArray8979[i_11];
 								i_12 = ((i_12 & 0xff00ff) * i_9 >> 8 & 0xff00ff) + ((i_12 & 0xff00) * i_9 >> 8 & 0xff00);
-								this.anIntArray8979[this.anInt8980 * 299731099 * 444800403 * i_2 + i_10] = i_5 + i_12;
+								this.anIntArray8979[this.anInt8980 * i_2 + i_10] = i_5 + i_12;
 							}
 
 							i_1 += i_7;
@@ -4842,8 +4842,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						while (i_2 <= i_4) {
 							i_9 = i_1 >> 16;
-							if (i_9 >= this.anInt8983 * -363774331 * 72550989 && i_9 < -1710988237 * this.anInt9002 * 1714763515) {
-								i_10 = i_9 + i_2 * 444800403 * this.anInt8980 * 299731099;
+							if (i_9 >= this.anInt8983 && i_9 < this.anInt9002) {
+								i_10 = i_9 + i_2 * this.anInt8980;
 								i_11 = this.anIntArray8979[i_10];
 								i_12 = i_11 + i_5;
 								i_13 = (i_11 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4938,8 +4938,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= 72550989 * this.anInt8983 * -363774331 && i_1 < this.anInt9002 * 1714763515 * -1710988237 && i_14 >= 1516535457 * this.anInt9009 * 1457972577 && i_14 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								this.anIntArray8979[i_1 + 444800403 * this.anInt8980 * 299731099 * i_14] = i_5;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								this.anIntArray8979[i_1 + this.anInt8980 * i_14] = i_5;
 							}
 
 							i_2 += i_11;
@@ -4952,8 +4952,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_15 >= 1516535457 * this.anInt9009 * 1457972577 && i_15 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								i_16 = i_15 * this.anInt8980 * 299731099 * 444800403 + i_1;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_15 >= this.anInt9009 && i_15 < this.anInt8986 && i_9 < i_7) {
+								i_16 = i_15 * this.anInt8980 + i_1;
 								i_17 = this.anIntArray8979[i_16];
 								i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 								this.anIntArray8979[i_16] = i_17 + i_5;
@@ -4970,8 +4970,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_14 >= this.anInt9009 * 1457972577 * 1516535457 && i_14 < 1383960921 * this.anInt8986 * 760194793 && i_9 < i_7) {
-								i_15 = i_1 + i_14 * 444800403 * this.anInt8980 * 299731099;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								i_15 = i_1 + i_14 * this.anInt8980;
 								i_16 = this.anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -4999,11 +4999,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
-								if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < this.anInt8986 * 760194793 * 1383960921 && i_15 >= this.anInt8983 * -363774331 * 72550989 && i_15 < -1710988237 * this.anInt9002 * 1714763515 && i_9 < i_7) {
-									i_16 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_15;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_15 >= this.anInt8983 && i_15 < this.anInt9002 && i_9 < i_7) {
+									i_16 = i_2 * this.anInt8980 + i_15;
 									i_17 = this.anIntArray8979[i_16];
 									i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-									this.anIntArray8979[i_15 + 444800403 * this.anInt8980 * 299731099 * i_2] = i_17 + i_5;
+									this.anIntArray8979[i_15 + this.anInt8980 * i_2] = i_17 + i_5;
 								}
 
 								i_1 += i_11;
@@ -5017,8 +5017,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
-								if (i_2 >= 1516535457 * this.anInt9009 * 1457972577 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-									i_15 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_14;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+									i_15 = i_2 * this.anInt8980 + i_14;
 									i_16 = this.anIntArray8979[i_15];
 									i_17 = i_16 + i_5;
 									i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -5035,8 +5035,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					} else {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
-							if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-								this.anIntArray8979[i_14 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_5;
+							if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+								this.anIntArray8979[i_14 + i_2 * this.anInt8980] = i_5;
 							}
 
 							i_1 += i_11;
@@ -5124,8 +5124,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= 72550989 * this.anInt8983 * -363774331 && i_1 < this.anInt9002 * 1714763515 * -1710988237 && i_14 >= 1516535457 * this.anInt9009 * 1457972577 && i_14 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								this.anIntArray8979[i_1 + 444800403 * this.anInt8980 * 299731099 * i_14] = i_5;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								this.anIntArray8979[i_1 + this.anInt8980 * i_14] = i_5;
 							}
 
 							i_2 += i_11;
@@ -5138,8 +5138,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_15 >= 1516535457 * this.anInt9009 * 1457972577 && i_15 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								i_16 = i_15 * this.anInt8980 * 299731099 * 444800403 + i_1;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_15 >= this.anInt9009 && i_15 < this.anInt8986 && i_9 < i_7) {
+								i_16 = i_15 * this.anInt8980 + i_1;
 								i_17 = this.anIntArray8979[i_16];
 								i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 								this.anIntArray8979[i_16] = i_17 + i_5;
@@ -5156,8 +5156,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_14 >= this.anInt9009 * 1457972577 * 1516535457 && i_14 < 1383960921 * this.anInt8986 * 760194793 && i_9 < i_7) {
-								i_15 = i_1 + i_14 * 444800403 * this.anInt8980 * 299731099;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								i_15 = i_1 + i_14 * this.anInt8980;
 								i_16 = this.anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5185,11 +5185,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
-								if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < this.anInt8986 * 760194793 * 1383960921 && i_15 >= this.anInt8983 * -363774331 * 72550989 && i_15 < -1710988237 * this.anInt9002 * 1714763515 && i_9 < i_7) {
-									i_16 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_15;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_15 >= this.anInt8983 && i_15 < this.anInt9002 && i_9 < i_7) {
+									i_16 = i_2 * this.anInt8980 + i_15;
 									i_17 = this.anIntArray8979[i_16];
 									i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-									this.anIntArray8979[i_15 + 444800403 * this.anInt8980 * 299731099 * i_2] = i_17 + i_5;
+									this.anIntArray8979[i_15 + this.anInt8980 * i_2] = i_17 + i_5;
 								}
 
 								i_1 += i_11;
@@ -5203,8 +5203,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
-								if (i_2 >= 1516535457 * this.anInt9009 * 1457972577 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-									i_15 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_14;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+									i_15 = i_2 * this.anInt8980 + i_14;
 									i_16 = this.anIntArray8979[i_15];
 									i_17 = i_16 + i_5;
 									i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -5221,8 +5221,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					} else {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
-							if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-								this.anIntArray8979[i_14 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_5;
+							if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+								this.anIntArray8979[i_14 + i_2 * this.anInt8980] = i_5;
 							}
 
 							i_1 += i_11;
@@ -5310,8 +5310,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= 72550989 * this.anInt8983 * -363774331 && i_1 < this.anInt9002 * 1714763515 * -1710988237 && i_14 >= 1516535457 * this.anInt9009 * 1457972577 && i_14 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								this.anIntArray8979[i_1 + 444800403 * this.anInt8980 * 299731099 * i_14] = i_5;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								this.anIntArray8979[i_1 + this.anInt8980 * i_14] = i_5;
 							}
 
 							i_2 += i_11;
@@ -5324,8 +5324,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_15 >= 1516535457 * this.anInt9009 * 1457972577 && i_15 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								i_16 = i_15 * this.anInt8980 * 299731099 * 444800403 + i_1;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_15 >= this.anInt9009 && i_15 < this.anInt8986 && i_9 < i_7) {
+								i_16 = i_15 * this.anInt8980 + i_1;
 								i_17 = this.anIntArray8979[i_16];
 								i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 								this.anIntArray8979[i_16] = i_17 + i_5;
@@ -5342,8 +5342,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_14 >= this.anInt9009 * 1457972577 * 1516535457 && i_14 < 1383960921 * this.anInt8986 * 760194793 && i_9 < i_7) {
-								i_15 = i_1 + i_14 * 444800403 * this.anInt8980 * 299731099;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								i_15 = i_1 + i_14 * this.anInt8980;
 								i_16 = this.anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5371,11 +5371,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
-								if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < this.anInt8986 * 760194793 * 1383960921 && i_15 >= this.anInt8983 * -363774331 * 72550989 && i_15 < -1710988237 * this.anInt9002 * 1714763515 && i_9 < i_7) {
-									i_16 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_15;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_15 >= this.anInt8983 && i_15 < this.anInt9002 && i_9 < i_7) {
+									i_16 = i_2 * this.anInt8980 + i_15;
 									i_17 = this.anIntArray8979[i_16];
 									i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-									this.anIntArray8979[i_15 + 444800403 * this.anInt8980 * 299731099 * i_2] = i_17 + i_5;
+									this.anIntArray8979[i_15 + this.anInt8980 * i_2] = i_17 + i_5;
 								}
 
 								i_1 += i_11;
@@ -5389,8 +5389,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
-								if (i_2 >= 1516535457 * this.anInt9009 * 1457972577 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-									i_15 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_14;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+									i_15 = i_2 * this.anInt8980 + i_14;
 									i_16 = this.anIntArray8979[i_15];
 									i_17 = i_16 + i_5;
 									i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -5407,8 +5407,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					} else {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
-							if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-								this.anIntArray8979[i_14 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_5;
+							if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+								this.anIntArray8979[i_14 + i_2 * this.anInt8980] = i_5;
 							}
 
 							i_1 += i_11;
@@ -5428,8 +5428,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
-			int i_13 = 1516535457 * this.anInt9009 * 1457972577 > i_9 ? this.anInt9009 * 1457972577 * 1516535457 : i_9;
-			int i_14 = 1383960921 * this.anInt8986 * 760194793 < i_9 + ints_11.length ? this.anInt8986 * 760194793 * 1383960921 : ints_11.length + i_9;
+			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
+			int i_14 = this.anInt8986 < i_9 + ints_11.length ? this.anInt8986 : ints_11.length + i_9;
 			i_3 -= i_1;
 			i_4 -= i_2;
 			if (i_4 + i_3 < 0) {
@@ -5454,13 +5454,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 				i_4 <<= 16;
 				i_15 = (int) Math.floor((double) i_4 / (double) i_3 + 0.5D);
 				i_3 += i_1;
-				if (i_1 < this.anInt8983 * -363774331 * 72550989) {
-					i_2 += (this.anInt8983 * -363774331 * 72550989 - i_1) * i_15;
-					i_1 = this.anInt8983 * -363774331 * 72550989;
+				if (i_1 < this.anInt8983) {
+					i_2 += (this.anInt8983 - i_1) * i_15;
+					i_1 = this.anInt8983;
 				}
 
-				if (i_3 >= this.anInt9002 * 1714763515 * -1710988237) {
-					i_3 = -1710988237 * this.anInt9002 * 1714763515 - 1;
+				if (i_3 >= this.anInt9002) {
+					i_3 = this.anInt9002 - 1;
 				}
 
 				i_16 = i_5 >>> 24;
@@ -5471,7 +5471,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = ints_11[i_18] + i_8;
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								this.anIntArray8979[i_17 * 444800403 * this.anInt8980 * 299731099 + i_1] = i_5;
+								this.anIntArray8979[i_17 * this.anInt8980 + i_1] = i_5;
 							}
 						}
 
@@ -5487,7 +5487,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_18 >= i_13 && i_18 < i_14) {
 							i_20 = ints_11[i_19] + i_8;
 							if (i_1 >= i_20 && i_1 < i_20 + ints_12[i_19]) {
-								i_21 = i_1 + 444800403 * this.anInt8980 * 299731099 * i_18;
+								i_21 = i_1 + this.anInt8980 * i_18;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 								this.anIntArray8979[i_21] = i_5 + i_22;
@@ -5507,7 +5507,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = i_8 + ints_11[i_18];
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								i_20 = i_17 * this.anInt8980 * 299731099 * 444800403 + i_1;
+								i_20 = i_17 * this.anInt8980 + i_1;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_21 + i_5;
 								i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -5544,11 +5544,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_18 = i_1 >> 16;
 							i_19 = i_2 - i_9;
 							i_20 = i_8 + ints_11[i_19];
-							if (i_18 >= this.anInt8983 * -363774331 * 72550989 && i_18 < -1710988237 * this.anInt9002 * 1714763515 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-								i_21 = i_18 + i_2 * this.anInt8980 * 299731099 * 444800403;
+							if (i_18 >= this.anInt8983 && i_18 < this.anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
+								i_21 = i_18 + i_2 * this.anInt8980;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-								this.anIntArray8979[i_18 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_22 + i_5;
+								this.anIntArray8979[i_18 + i_2 * this.anInt8980] = i_22 + i_5;
 							}
 
 							i_1 += i_15;
@@ -5562,8 +5562,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_17 = i_1 >> 16;
 							i_18 = i_2 - i_9;
 							i_19 = ints_11[i_18] + i_8;
-							if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < -1710988237 * this.anInt9002 * 1714763515 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-								i_20 = 444800403 * this.anInt8980 * 299731099 * i_2 + i_17;
+							if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
+								i_20 = this.anInt8980 * i_2 + i_17;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_5 + i_21;
 								i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5580,8 +5580,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_17 = i_1 >> 16;
 						i_18 = i_2 - i_9;
 						i_19 = ints_11[i_18] + i_8;
-						if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < this.anInt9002 * 1714763515 * -1710988237 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-							this.anIntArray8979[i_17 + this.anInt8980 * 299731099 * 444800403 * i_2] = i_5;
+						if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
+							this.anIntArray8979[i_17 + this.anInt8980 * i_2] = i_5;
 						}
 
 						i_1 += i_15;
@@ -5595,7 +5595,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void jf() {
 		for (int i_1 = 0; i_1 < this.aClass185Array8984.length; i_1++) {
-			this.aClass185Array8984[i_1].anInt2307 = this.aClass185Array8984[i_1].anInt2336 * -1172711273 * 521028353 * 1803205889 * 1402414887;
+			this.aClass185Array8984[i_1].anInt2307 = this.aClass185Array8984[i_1].anInt2336;
 			this.aClass185Array8984[i_1].aBool2309 = false;
 		}
 
@@ -5606,8 +5606,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
-			int i_13 = 1516535457 * this.anInt9009 * 1457972577 > i_9 ? this.anInt9009 * 1457972577 * 1516535457 : i_9;
-			int i_14 = 1383960921 * this.anInt8986 * 760194793 < i_9 + ints_11.length ? this.anInt8986 * 760194793 * 1383960921 : ints_11.length + i_9;
+			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
+			int i_14 = this.anInt8986 < i_9 + ints_11.length ? this.anInt8986 : ints_11.length + i_9;
 			i_3 -= i_1;
 			i_4 -= i_2;
 			if (i_4 + i_3 < 0) {
@@ -5632,13 +5632,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 				i_4 <<= 16;
 				i_15 = (int) Math.floor((double) i_4 / (double) i_3 + 0.5D);
 				i_3 += i_1;
-				if (i_1 < this.anInt8983 * -363774331 * 72550989) {
-					i_2 += (this.anInt8983 * -363774331 * 72550989 - i_1) * i_15;
-					i_1 = this.anInt8983 * -363774331 * 72550989;
+				if (i_1 < this.anInt8983) {
+					i_2 += (this.anInt8983 - i_1) * i_15;
+					i_1 = this.anInt8983;
 				}
 
-				if (i_3 >= this.anInt9002 * 1714763515 * -1710988237) {
-					i_3 = -1710988237 * this.anInt9002 * 1714763515 - 1;
+				if (i_3 >= this.anInt9002) {
+					i_3 = this.anInt9002 - 1;
 				}
 
 				i_16 = i_5 >>> 24;
@@ -5649,7 +5649,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = ints_11[i_18] + i_8;
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								this.anIntArray8979[i_17 * 444800403 * this.anInt8980 * 299731099 + i_1] = i_5;
+								this.anIntArray8979[i_17 * this.anInt8980 + i_1] = i_5;
 							}
 						}
 
@@ -5665,7 +5665,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_18 >= i_13 && i_18 < i_14) {
 							i_20 = ints_11[i_19] + i_8;
 							if (i_1 >= i_20 && i_1 < i_20 + ints_12[i_19]) {
-								i_21 = i_1 + 444800403 * this.anInt8980 * 299731099 * i_18;
+								i_21 = i_1 + this.anInt8980 * i_18;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 								this.anIntArray8979[i_21] = i_5 + i_22;
@@ -5685,7 +5685,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = i_8 + ints_11[i_18];
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								i_20 = i_17 * this.anInt8980 * 299731099 * 444800403 + i_1;
+								i_20 = i_17 * this.anInt8980 + i_1;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_21 + i_5;
 								i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -5722,11 +5722,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_18 = i_1 >> 16;
 							i_19 = i_2 - i_9;
 							i_20 = i_8 + ints_11[i_19];
-							if (i_18 >= this.anInt8983 * -363774331 * 72550989 && i_18 < -1710988237 * this.anInt9002 * 1714763515 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-								i_21 = i_18 + i_2 * this.anInt8980 * 299731099 * 444800403;
+							if (i_18 >= this.anInt8983 && i_18 < this.anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
+								i_21 = i_18 + i_2 * this.anInt8980;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-								this.anIntArray8979[i_18 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_22 + i_5;
+								this.anIntArray8979[i_18 + i_2 * this.anInt8980] = i_22 + i_5;
 							}
 
 							i_1 += i_15;
@@ -5740,8 +5740,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_17 = i_1 >> 16;
 							i_18 = i_2 - i_9;
 							i_19 = ints_11[i_18] + i_8;
-							if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < -1710988237 * this.anInt9002 * 1714763515 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-								i_20 = 444800403 * this.anInt8980 * 299731099 * i_2 + i_17;
+							if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
+								i_20 = this.anInt8980 * i_2 + i_17;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_5 + i_21;
 								i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5758,8 +5758,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_17 = i_1 >> 16;
 						i_18 = i_2 - i_9;
 						i_19 = ints_11[i_18] + i_8;
-						if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < this.anInt9002 * 1714763515 * -1710988237 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-							this.anIntArray8979[i_17 + this.anInt8980 * 299731099 * 444800403 * i_2] = i_5;
+						if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
+							this.anIntArray8979[i_17 + this.anInt8980 * i_2] = i_5;
 						}
 
 						i_1 += i_15;
@@ -5776,8 +5776,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
-			int i_13 = 1516535457 * this.anInt9009 * 1457972577 > i_9 ? this.anInt9009 * 1457972577 * 1516535457 : i_9;
-			int i_14 = 1383960921 * this.anInt8986 * 760194793 < i_9 + ints_11.length ? this.anInt8986 * 760194793 * 1383960921 : ints_11.length + i_9;
+			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
+			int i_14 = this.anInt8986 < i_9 + ints_11.length ? this.anInt8986 : ints_11.length + i_9;
 			i_3 -= i_1;
 			i_4 -= i_2;
 			if (i_4 + i_3 < 0) {
@@ -5802,13 +5802,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 				i_4 <<= 16;
 				i_15 = (int) Math.floor((double) i_4 / (double) i_3 + 0.5D);
 				i_3 += i_1;
-				if (i_1 < this.anInt8983 * -363774331 * 72550989) {
-					i_2 += (this.anInt8983 * -363774331 * 72550989 - i_1) * i_15;
-					i_1 = this.anInt8983 * -363774331 * 72550989;
+				if (i_1 < this.anInt8983) {
+					i_2 += (this.anInt8983 - i_1) * i_15;
+					i_1 = this.anInt8983;
 				}
 
-				if (i_3 >= this.anInt9002 * 1714763515 * -1710988237) {
-					i_3 = -1710988237 * this.anInt9002 * 1714763515 - 1;
+				if (i_3 >= this.anInt9002) {
+					i_3 = this.anInt9002 - 1;
 				}
 
 				i_16 = i_5 >>> 24;
@@ -5819,7 +5819,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = ints_11[i_18] + i_8;
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								this.anIntArray8979[i_17 * 444800403 * this.anInt8980 * 299731099 + i_1] = i_5;
+								this.anIntArray8979[i_17 * this.anInt8980 + i_1] = i_5;
 							}
 						}
 
@@ -5835,7 +5835,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_18 >= i_13 && i_18 < i_14) {
 							i_20 = ints_11[i_19] + i_8;
 							if (i_1 >= i_20 && i_1 < i_20 + ints_12[i_19]) {
-								i_21 = i_1 + 444800403 * this.anInt8980 * 299731099 * i_18;
+								i_21 = i_1 + this.anInt8980 * i_18;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00) >> 8 & 0xff00) + (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff);
 								this.anIntArray8979[i_21] = i_5 + i_22;
@@ -5855,7 +5855,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						if (i_17 >= i_13 && i_17 < i_14) {
 							i_19 = i_8 + ints_11[i_18];
 							if (i_1 >= i_19 && i_1 < ints_12[i_18] + i_19) {
-								i_20 = i_17 * this.anInt8980 * 299731099 * 444800403 + i_1;
+								i_20 = i_17 * this.anInt8980 + i_1;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_21 + i_5;
 								i_23 = (i_5 & 0xff00ff) + (i_21 & 0xff00ff);
@@ -5892,11 +5892,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_18 = i_1 >> 16;
 							i_19 = i_2 - i_9;
 							i_20 = i_8 + ints_11[i_19];
-							if (i_18 >= this.anInt8983 * -363774331 * 72550989 && i_18 < -1710988237 * this.anInt9002 * 1714763515 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
-								i_21 = i_18 + i_2 * this.anInt8980 * 299731099 * 444800403;
+							if (i_18 >= this.anInt8983 && i_18 < this.anInt9002 && i_18 >= i_20 && i_18 < i_20 + ints_12[i_19]) {
+								i_21 = i_18 + i_2 * this.anInt8980;
 								i_22 = this.anIntArray8979[i_21];
 								i_22 = (i_17 * (i_22 & 0xff00ff) >> 8 & 0xff00ff) + (i_17 * (i_22 & 0xff00) >> 8 & 0xff00);
-								this.anIntArray8979[i_18 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_22 + i_5;
+								this.anIntArray8979[i_18 + i_2 * this.anInt8980] = i_22 + i_5;
 							}
 
 							i_1 += i_15;
@@ -5910,8 +5910,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_17 = i_1 >> 16;
 							i_18 = i_2 - i_9;
 							i_19 = ints_11[i_18] + i_8;
-							if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < -1710988237 * this.anInt9002 * 1714763515 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
-								i_20 = 444800403 * this.anInt8980 * 299731099 * i_2 + i_17;
+							if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < i_19 + ints_12[i_18]) {
+								i_20 = this.anInt8980 * i_2 + i_17;
 								i_21 = this.anIntArray8979[i_20];
 								i_22 = i_5 + i_21;
 								i_23 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -5928,8 +5928,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_17 = i_1 >> 16;
 						i_18 = i_2 - i_9;
 						i_19 = ints_11[i_18] + i_8;
-						if (i_17 >= 72550989 * this.anInt8983 * -363774331 && i_17 < this.anInt9002 * 1714763515 * -1710988237 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
-							this.anIntArray8979[i_17 + this.anInt8980 * 299731099 * 444800403 * i_2] = i_5;
+						if (i_17 >= this.anInt8983 && i_17 < this.anInt9002 && i_17 >= i_19 && i_17 < ints_12[i_18] + i_19) {
+							this.anIntArray8979[i_17 + this.anInt8980 * i_2] = i_5;
 						}
 
 						i_1 += i_15;
@@ -5949,7 +5949,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i_6 = 0;
 
 			for (int i_7 = 0; i_7 < i_4; i_7++) {
-				int i_8 = i_1 + (i_2 + i_7) * this.anInt8980 * 299731099 * 444800403;
+				int i_8 = i_1 + (i_2 + i_7) * this.anInt8980;
 
 				for (int i_9 = 0; i_9 < i_3; i_9++) {
 					ints_5[i_6++] = this.anIntArray8979[i_8 + i_9];
@@ -6009,13 +6009,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 			Class185 class185_16 = this.method14370(Thread.currentThread());
 			ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
 			choppyitemfixclass_17.aBool1675 = false;
-			i_1 -= this.anInt8983 * -363774331 * 72550989;
-			i_4 -= 72550989 * this.anInt8983 * -363774331;
-			i_7 -= this.anInt8983 * -363774331 * 72550989;
-			i_2 -= this.anInt9009 * 1457972577 * 1516535457;
-			i_5 -= 1516535457 * this.anInt9009 * 1457972577;
-			i_8 -= 1516535457 * this.anInt9009 * 1457972577;
-			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309;
+			i_1 -= this.anInt8983;
+			i_4 -= this.anInt8983;
+			i_7 -= this.anInt8983;
+			i_2 -= this.anInt9009;
+			i_5 -= this.anInt9009;
+			i_8 -= this.anInt9009;
+			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
 			int i_18 = i_10 >>> 24;
 			if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
 				choppyitemfixclass_17.anInt1674 = 0;
@@ -6199,8 +6199,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			throw new IllegalStateException("");
 		} else {
 			int[] ints_6 = new int[i_3 * i_4];
-			int i_7 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_1;
-			int i_8 = 444800403 * this.anInt8980 * 299731099 - i_3;
+			int i_7 = i_2 * this.anInt8980 + i_1;
+			int i_8 = this.anInt8980 - i_3;
 
 			for (int i_9 = 0; i_9 < i_4; i_9++) {
 				int i_10 = i_9 * i_3;
@@ -6296,33 +6296,33 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;
-			if (this.anInt8986 * 760194793 * 1383960921 < i_4 + ints_6.length) {
-				i_8 = this.anInt8986 * 760194793 * 1383960921 - i_4;
+			if (this.anInt8986 < i_4 + ints_6.length) {
+				i_8 = this.anInt8986 - i_4;
 			} else {
 				i_8 = ints_6.length;
 			}
 
 			int i_9;
-			if (this.anInt9009 * 1457972577 * 1516535457 > i_4) {
-				i_9 = 1516535457 * this.anInt9009 * 1457972577 - i_4;
-				i_4 = this.anInt9009 * 1457972577 * 1516535457;
+			if (this.anInt9009 > i_4) {
+				i_9 = this.anInt9009 - i_4;
+				i_4 = this.anInt9009;
 			} else {
 				i_9 = 0;
 			}
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = 444800403 * this.anInt8980 * 299731099 * i_4;
+				int i_10 = this.anInt8980 * i_4;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = ints_6[i_11] + i_3;
 					int i_13 = ints_7[i_11];
-					if (this.anInt8983 * -363774331 * 72550989 > i_12) {
-						i_13 -= 72550989 * this.anInt8983 * -363774331 - i_12;
-						i_12 = this.anInt8983 * -363774331 * 72550989;
+					if (this.anInt8983 > i_12) {
+						i_13 -= this.anInt8983 - i_12;
+						i_12 = this.anInt8983;
 					}
 
-					if (-1710988237 * this.anInt9002 * 1714763515 < i_13 + i_12) {
-						i_13 = -1710988237 * this.anInt9002 * 1714763515 - i_12;
+					if (this.anInt9002 < i_13 + i_12) {
+						i_13 = this.anInt9002 - i_12;
 					}
 
 					i_12 += i_10;
@@ -6331,7 +6331,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						this.anIntArray8979[i_12++] = i_1;
 					}
 
-					i_10 += this.anInt8980 * 299731099 * 444800403;
+					i_10 += this.anInt8980;
 				}
 			}
 		}
@@ -6344,33 +6344,33 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;
-			if (this.anInt8986 * 760194793 * 1383960921 < i_4 + ints_6.length) {
-				i_8 = this.anInt8986 * 760194793 * 1383960921 - i_4;
+			if (this.anInt8986 < i_4 + ints_6.length) {
+				i_8 = this.anInt8986 - i_4;
 			} else {
 				i_8 = ints_6.length;
 			}
 
 			int i_9;
-			if (this.anInt9009 * 1457972577 * 1516535457 > i_4) {
-				i_9 = 1516535457 * this.anInt9009 * 1457972577 - i_4;
-				i_4 = this.anInt9009 * 1457972577 * 1516535457;
+			if (this.anInt9009 > i_4) {
+				i_9 = this.anInt9009 - i_4;
+				i_4 = this.anInt9009;
 			} else {
 				i_9 = 0;
 			}
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = 444800403 * this.anInt8980 * 299731099 * i_4;
+				int i_10 = this.anInt8980 * i_4;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = ints_6[i_11] + i_3;
 					int i_13 = ints_7[i_11];
-					if (this.anInt8983 * -363774331 * 72550989 > i_12) {
-						i_13 -= 72550989 * this.anInt8983 * -363774331 - i_12;
-						i_12 = this.anInt8983 * -363774331 * 72550989;
+					if (this.anInt8983 > i_12) {
+						i_13 -= this.anInt8983 - i_12;
+						i_12 = this.anInt8983;
 					}
 
-					if (-1710988237 * this.anInt9002 * 1714763515 < i_13 + i_12) {
-						i_13 = -1710988237 * this.anInt9002 * 1714763515 - i_12;
+					if (this.anInt9002 < i_13 + i_12) {
+						i_13 = this.anInt9002 - i_12;
 					}
 
 					i_12 += i_10;
@@ -6379,7 +6379,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						this.anIntArray8979[i_12++] = i_1;
 					}
 
-					i_10 += this.anInt8980 * 299731099 * 444800403;
+					i_10 += this.anInt8980;
 				}
 			}
 		}
@@ -6432,10 +6432,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void fh(int[] ints_1) {
-		ints_1[0] = this.anInt8983 * -363774331 * 72550989;
-		ints_1[1] = this.anInt9009 * 1457972577 * 1516535457;
-		ints_1[2] = -1710988237 * this.anInt9002 * 1714763515;
-		ints_1[3] = 1383960921 * this.anInt8986 * 760194793;
+		ints_1[0] = this.anInt8983;
+		ints_1[1] = this.anInt9009;
+		ints_1[2] = this.anInt9002;
+		ints_1[3] = this.anInt8986;
 	}
 
 	public MeshRasterizer method8623(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
@@ -6463,7 +6463,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, false, class151_1);
 	}
 
-	public Class390 method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
+	public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
 		return new Class390_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
@@ -6499,18 +6499,18 @@ public class HardwareRenderer extends GraphicalRenderer {
 			i_2 = 0;
 		}
 
-		if (i_3 > 444800403 * this.anInt8980 * 299731099) {
-			i_3 = this.anInt8980 * 299731099 * 444800403;
+		if (i_3 > this.anInt8980) {
+			i_3 = this.anInt8980;
 		}
 
-		if (i_4 > 2138511415 * this.anInt8981 * 1730944391) {
-			i_4 = 2138511415 * this.anInt8981 * 1730944391;
+		if (i_4 > this.anInt8981) {
+			i_4 = this.anInt8981;
 		}
 
-		this.anInt8983 = i_1 * -363774331 * 72550989;
-		this.anInt9002 = i_3 * 1714763515 * -1710988237;
-		this.anInt9009 = i_2 * 1457972577 * 1516535457;
-		this.anInt8986 = 760194793 * i_4 * 1383960921;
+		this.anInt8983 = i_1;
+		this.anInt9002 = i_3;
+		this.anInt9009 = i_2;
+		this.anInt8986 = i_4;
 		this.method14364();
 	}
 
@@ -6528,7 +6528,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i_6 = 0;
 
 			for (int i_7 = 0; i_7 < i_4; i_7++) {
-				int i_8 = i_1 + (i_2 + i_7) * this.anInt8980 * 299731099 * 444800403;
+				int i_8 = i_1 + (i_2 + i_7) * this.anInt8980;
 
 				for (int i_9 = 0; i_9 < i_3; i_9++) {
 					ints_5[i_6++] = this.anIntArray8979[i_8 + i_9];
@@ -6703,8 +6703,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= 72550989 * this.anInt8983 * -363774331 && i_1 < this.anInt9002 * 1714763515 * -1710988237 && i_14 >= 1516535457 * this.anInt9009 * 1457972577 && i_14 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								this.anIntArray8979[i_1 + 444800403 * this.anInt8980 * 299731099 * i_14] = i_5;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								this.anIntArray8979[i_1 + this.anInt8980 * i_14] = i_5;
 							}
 
 							i_2 += i_11;
@@ -6717,8 +6717,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
 							i_15 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_15 >= 1516535457 * this.anInt9009 * 1457972577 && i_15 < this.anInt8986 * 760194793 * 1383960921 && i_9 < i_7) {
-								i_16 = i_15 * this.anInt8980 * 299731099 * 444800403 + i_1;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_15 >= this.anInt9009 && i_15 < this.anInt8986 && i_9 < i_7) {
+								i_16 = i_15 * this.anInt8980 + i_1;
 								i_17 = this.anIntArray8979[i_16];
 								i_17 = ((i_17 & 0xff00ff) * i_14 >> 8 & 0xff00ff) + (i_14 * (i_17 & 0xff00) >> 8 & 0xff00);
 								this.anIntArray8979[i_16] = i_17 + i_5;
@@ -6735,8 +6735,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
-							if (i_1 >= this.anInt8983 * -363774331 * 72550989 && i_1 < -1710988237 * this.anInt9002 * 1714763515 && i_14 >= this.anInt9009 * 1457972577 * 1516535457 && i_14 < 1383960921 * this.anInt8986 * 760194793 && i_9 < i_7) {
-								i_15 = i_1 + i_14 * 444800403 * this.anInt8980 * 299731099;
+							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
+								i_15 = i_1 + i_14 * this.anInt8980;
 								i_16 = this.anIntArray8979[i_15];
 								i_17 = i_16 + i_5;
 								i_18 = (i_16 & 0xff00ff) + (i_5 & 0xff00ff);
@@ -6764,11 +6764,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
 								i_15 = i_1 >> 16;
-								if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < this.anInt8986 * 760194793 * 1383960921 && i_15 >= this.anInt8983 * -363774331 * 72550989 && i_15 < -1710988237 * this.anInt9002 * 1714763515 && i_9 < i_7) {
-									i_16 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_15;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_15 >= this.anInt8983 && i_15 < this.anInt9002 && i_9 < i_7) {
+									i_16 = i_2 * this.anInt8980 + i_15;
 									i_17 = this.anIntArray8979[i_16];
 									i_17 = (i_14 * (i_17 & 0xff00ff) >> 8 & 0xff00ff) + ((i_17 & 0xff00) * i_14 >> 8 & 0xff00);
-									this.anIntArray8979[i_15 + 444800403 * this.anInt8980 * 299731099 * i_2] = i_17 + i_5;
+									this.anIntArray8979[i_15 + this.anInt8980 * i_2] = i_17 + i_5;
 								}
 
 								i_1 += i_11;
@@ -6782,8 +6782,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 							while (i_2 <= i_4) {
 								i_14 = i_1 >> 16;
-								if (i_2 >= 1516535457 * this.anInt9009 * 1457972577 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-									i_15 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_14;
+								if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+									i_15 = i_2 * this.anInt8980 + i_14;
 									i_16 = this.anIntArray8979[i_15];
 									i_17 = i_16 + i_5;
 									i_18 = (i_5 & 0xff00ff) + (i_16 & 0xff00ff);
@@ -6800,8 +6800,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					} else {
 						while (i_2 <= i_4) {
 							i_14 = i_1 >> 16;
-							if (i_2 >= this.anInt9009 * 1457972577 * 1516535457 && i_2 < 1383960921 * this.anInt8986 * 760194793 && i_14 >= this.anInt8983 * -363774331 * 72550989 && i_14 < this.anInt9002 * 1714763515 * -1710988237 && i_9 < i_7) {
-								this.anIntArray8979[i_14 + i_2 * this.anInt8980 * 299731099 * 444800403] = i_5;
+							if (i_2 >= this.anInt9009 && i_2 < this.anInt8986 && i_14 >= this.anInt8983 && i_14 < this.anInt9002 && i_9 < i_7) {
+								this.anIntArray8979[i_14 + i_2 * this.anInt8980] = i_5;
 							}
 
 							i_1 += i_11;
@@ -6849,11 +6849,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void iz(float f_1) {
-		this.anInt8992 = -579931197 * (int) (f_1 * 65535.0F) * -456583957;
+		this.anInt8992 = (int) (f_1 * 65535.0F);
 	}
 
 	public void in(float f_1) {
-		this.anInt8992 = -579931197 * (int) (f_1 * 65535.0F) * -456583957;
+		this.anInt8992 = (int) (f_1 * 65535.0F);
 	}
 
 	boolean method14408() {
@@ -6861,12 +6861,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void im(int i_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-		this.anInt8990 = (int) (65535.0F * f_2) * 1216319887 * 501902703;
-		this.anInt8991 = -1460403627 * (int) (65535.0F * f_3) * -237442307;
+		this.anInt8990 = (int) (65535.0F * f_2);
+		this.anInt8991 = (int) (65535.0F * f_3);
 		float f_7 = (float) Math.sqrt((double) (f_6 * f_6 + f_5 * f_5 + f_4 * f_4));
-		this.anInt9011 = (int) (f_4 * 65535.0F / f_7) * 672118063 * 1302966735;
-		this.anInt8988 = (int) (65535.0F * f_5 / f_7) * -1077609237 * -1947219005;
-		this.anInt9007 = 1394142547 * (int) (f_6 * 65535.0F / f_7) * 1237704411;
+		this.anInt9011 = (int) (f_4 * 65535.0F / f_7);
+		this.anInt8988 = (int) (65535.0F * f_5 / f_7);
+		this.anInt9007 = (int) (f_6 * 65535.0F / f_7) ;
 	}
 
 	public void iq(int i_1) {
@@ -6881,23 +6881,23 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void is(int i_1, int i_2, int i_3) {
 		for (int i_4 = 0; i_4 < this.aClass185Array8984.length; i_4++) {
 			Class185 class185_5 = this.aClass185Array8984[i_4];
-			class185_5.anInt2307 = (i_1 & 0xffffff) * -1172711273 * 1402414887;
-			int i_6 = class185_5.anInt2307 * -1172711273 * 1402414887 >>> 16 & 0xff;
+			class185_5.anInt2307 = (i_1 & 0xffffff);
+			int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
 			if (i_6 < 2) {
 				i_6 = 2;
 			}
 
-			int i_7 = 1402414887 * class185_5.anInt2307 * -1172711273 >> 8 & 0xff;
+			int i_7 = class185_5.anInt2307 >> 8 & 0xff;
 			if (i_7 < 2) {
 				i_7 = 2;
 			}
 
-			int i_8 = 1402414887 * class185_5.anInt2307 * -1172711273 & 0xff;
+			int i_8 = class185_5.anInt2307 & 0xff;
 			if (i_8 < 2) {
 				i_8 = 2;
 			}
 
-			class185_5.anInt2307 = -1172711273 * (i_6 << 16 | i_7 << 8 | i_8) * 1402414887;
+			class185_5.anInt2307 = (i_6 << 16 | i_7 << 8 | i_8);
 			if (i_2 < 0) {
 				class185_5.aBool2304 = false;
 			} else {
@@ -7096,23 +7096,23 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void ib(int i_1, int i_2, int i_3) {
 		for (int i_4 = 0; i_4 < this.aClass185Array8984.length; i_4++) {
 			Class185 class185_5 = this.aClass185Array8984[i_4];
-			class185_5.anInt2307 = (i_1 & 0xffffff) * -1172711273 * 1402414887;
-			int i_6 = class185_5.anInt2307 * -1172711273 * 1402414887 >>> 16 & 0xff;
+			class185_5.anInt2307 = (i_1 & 0xffffff);
+			int i_6 = class185_5.anInt2307 >>> 16 & 0xff;
 			if (i_6 < 2) {
 				i_6 = 2;
 			}
 
-			int i_7 = 1402414887 * class185_5.anInt2307 * -1172711273 >> 8 & 0xff;
+			int i_7 = class185_5.anInt2307 >> 8 & 0xff;
 			if (i_7 < 2) {
 				i_7 = 2;
 			}
 
-			int i_8 = 1402414887 * class185_5.anInt2307 * -1172711273 & 0xff;
+			int i_8 = class185_5.anInt2307 & 0xff;
 			if (i_8 < 2) {
 				i_8 = 2;
 			}
 
-			class185_5.anInt2307 = -1172711273 * (i_6 << 16 | i_7 << 8 | i_8) * 1402414887;
+			class185_5.anInt2307 = (i_6 << 16 | i_7 << 8 | i_8);
 			if (i_2 < 0) {
 				class185_5.aBool2304 = false;
 			} else {
@@ -7163,8 +7163,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			throw new IllegalStateException("");
 		} else {
 			int[] ints_6 = new int[i_3 * i_4];
-			int i_7 = i_2 * this.anInt8980 * 299731099 * 444800403 + i_1;
-			int i_8 = 444800403 * this.anInt8980 * 299731099 - i_3;
+			int i_7 = i_2 * this.anInt8980 + i_1;
+			int i_8 = this.anInt8980 - i_3;
 
 			for (int i_9 = 0; i_9 < i_4; i_9++) {
 				int i_10 = i_9 * i_3;
@@ -7225,10 +7225,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8585(int i_1, Class90 class90_2) {
 		for (int i_3 = 0; i_3 < this.aClass185Array8984.length; i_3++) {
-			this.aClass185Array8984[i_3].anInt2336 = this.aClass185Array8984[i_3].anInt2307 * -1172711273 * 521028353 * 1803205889 * 1402414887;
-			this.aClass185Array8984[i_3].anInt2306 = i_1 * 473039441 * 2102822577;
-			this.aClass185Array8984[i_3].anInt2307 = 275882609 * class90_2.anInt946 * -1856397433 * 1402414887;
-			this.aClass185Array8984[i_3].anInt2313 = 1456783305 * class90_2.anInt945 * 873459953 * 1493774857;
+			this.aClass185Array8984[i_3].anInt2336 = this.aClass185Array8984[i_3].anInt2307;
+			this.aClass185Array8984[i_3].anInt2306 = i_1;
+			this.aClass185Array8984[i_3].anInt2307 = class90_2.color;
+			this.aClass185Array8984[i_3].anInt2313 = class90_2.scale;
 			this.aClass185Array8984[i_3].aBool2309 = true;
 		}
 
@@ -7236,20 +7236,20 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8615(int i_1, Class90 class90_2) {
 		Class185 class185_3 = this.method14370(Thread.currentThread());
-		class185_3.anInt2306 = 473039441 * i_1 * 2102822577;
-		class185_3.anInt2307 = 275882609 * class90_2.anInt946 * -1856397433 * 1402414887;
-		class185_3.anInt2313 = class90_2.anInt945 * 873459953 * 1456783305 * 1493774857;
+		class185_3.anInt2306 =i_1;
+		class185_3.anInt2307 = class90_2.color;
+		class185_3.anInt2313 = class90_2.scale;
 	}
 
 	public void method8616(int i_1, Class90 class90_2) {
 		Class185 class185_3 = this.method14370(Thread.currentThread());
-		class185_3.anInt2306 = 473039441 * i_1 * 2102822577;
-		class185_3.anInt2307 = 275882609 * class90_2.anInt946 * -1856397433 * 1402414887;
-		class185_3.anInt2313 = class90_2.anInt945 * 873459953 * 1456783305 * 1493774857;
+		class185_3.anInt2306 =i_1;
+		class185_3.anInt2307 = class90_2.color;
+		class185_3.anInt2313 = class90_2.scale;
 	}
 
 	public void method8488(int i_1) {
-		int i_2 = i_1 - 1426154545 * this.anInt8977 * -987269935;
+		int i_2 = i_1 - 1426154545 * this.anInt8977;
 
 		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(514216110); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867(297413420)) {
 			if (class282_sub27_3.aBool7693) {
@@ -7266,7 +7266,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 		}
 
-		this.anInt8977 = -987269935 * i_1 * 1426154545;
+		this.anInt8977 = i_1;
 		this.aClass229_9013.method3858(5, (byte) -94);
 		this.aClass229_9006.method3858(5, (byte) 3);
 	}
@@ -7334,10 +7334,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void ft(int[] ints_1) {
-		ints_1[0] = this.anInt8983 * -363774331 * 72550989;
-		ints_1[1] = this.anInt9009 * 1457972577 * 1516535457;
-		ints_1[2] = -1710988237 * this.anInt9002 * 1714763515;
-		ints_1[3] = 1383960921 * this.anInt8986 * 760194793;
+		ints_1[0] = this.anInt8983;
+		ints_1[1] = this.anInt9009;
+		ints_1[2] = this.anInt9002;
+		ints_1[3] = this.anInt8986;
 	}
 
 	void method14409(int i_1) {
@@ -7352,7 +7352,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i_6 = 0;
 
 			for (int i_7 = 0; i_7 < i_4; i_7++) {
-				int i_8 = i_1 + (i_2 + i_7) * this.anInt8980 * 299731099 * 444800403;
+				int i_8 = i_1 + (i_2 + i_7) * this.anInt8980;
 
 				for (int i_9 = 0; i_9 < i_3; i_9++) {
 					ints_5[i_6++] = this.anIntArray8979[i_8 + i_9];
@@ -7370,13 +7370,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 			Class185 class185_16 = this.method14370(Thread.currentThread());
 			ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
 			choppyitemfixclass_17.aBool1675 = false;
-			i_1 -= this.anInt8983 * -363774331 * 72550989;
-			i_4 -= 72550989 * this.anInt8983 * -363774331;
-			i_7 -= this.anInt8983 * -363774331 * 72550989;
-			i_2 -= this.anInt9009 * 1457972577 * 1516535457;
-			i_5 -= 1516535457 * this.anInt9009 * 1457972577;
-			i_8 -= 1516535457 * this.anInt9009 * 1457972577;
-			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684 * -992859573 * -214577309;
+			i_1 -= this.anInt8983;
+			i_4 -= this.anInt8983;
+			i_7 -= this.anInt8983;
+			i_2 -= this.anInt9009;
+			i_5 -= this.anInt9009;
+			i_8 -= this.anInt9009;
+			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
 			int i_18 = i_10 >>> 24;
 			if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
 				choppyitemfixclass_17.anInt1674 = 0;
@@ -7407,33 +7407,33 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;
-			if (this.anInt8986 * 760194793 * 1383960921 < i_4 + ints_6.length) {
-				i_8 = this.anInt8986 * 760194793 * 1383960921 - i_4;
+			if (this.anInt8986 < i_4 + ints_6.length) {
+				i_8 = this.anInt8986 - i_4;
 			} else {
 				i_8 = ints_6.length;
 			}
 
 			int i_9;
-			if (this.anInt9009 * 1457972577 * 1516535457 > i_4) {
-				i_9 = 1516535457 * this.anInt9009 * 1457972577 - i_4;
-				i_4 = this.anInt9009 * 1457972577 * 1516535457;
+			if (this.anInt9009 > i_4) {
+				i_9 = this.anInt9009 - i_4;
+				i_4 = this.anInt9009;
 			} else {
 				i_9 = 0;
 			}
 
 			if (i_8 - i_9 > 0) {
-				int i_10 = 444800403 * this.anInt8980 * 299731099 * i_4;
+				int i_10 = this.anInt8980 * i_4;
 
 				for (int i_11 = i_9; i_11 < i_8; i_11++) {
 					int i_12 = ints_6[i_11] + i_3;
 					int i_13 = ints_7[i_11];
-					if (this.anInt8983 * -363774331 * 72550989 > i_12) {
-						i_13 -= 72550989 * this.anInt8983 * -363774331 - i_12;
-						i_12 = this.anInt8983 * -363774331 * 72550989;
+					if (this.anInt8983 > i_12) {
+						i_13 -= this.anInt8983 - i_12;
+						i_12 = this.anInt8983;
 					}
 
-					if (-1710988237 * this.anInt9002 * 1714763515 < i_13 + i_12) {
-						i_13 = -1710988237 * this.anInt9002 * 1714763515 - i_12;
+					if (this.anInt9002 < i_13 + i_12) {
+						i_13 = this.anInt9002 - i_12;
 					}
 
 					i_12 += i_10;
@@ -7442,7 +7442,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						this.anIntArray8979[i_12++] = i_1;
 					}
 
-					i_10 += this.anInt8980 * 299731099 * 444800403;
+					i_10 += this.anInt8980;
 				}
 			}
 		}
@@ -7536,18 +7536,18 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8633() {
-		this.anInt8998 = 0 * 116006945;
-		this.anInt8999 = 0 * 842600775;
-		this.anInt9000 = this.anInt8980 * 299731099 * -50906609 * -441894851;
-		this.anInt9001 = this.anInt8981 * 1730944391 * 651224101 * 3132971;
+		this.anInt8998 = 0;
+		this.anInt8999 = 0;
+		this.anInt9000 = this.anInt8980;
+		this.anInt9001 = this.anInt8981;
 		this.method14364();
 	}
 
 	public void method8635() {
-		this.anInt8998 = 0 * 116006945;
-		this.anInt8999 = 0 * 842600775;
-		this.anInt9000 = this.anInt8980 * 299731099 * -50906609 * -441894851;
-		this.anInt9001 = this.anInt8981 * 1730944391 * 651224101 * 3132971;
+		this.anInt8998 = 0;
+		this.anInt8999 = 0;
+		this.anInt9000 = this.anInt8980;
+		this.anInt9001 = this.anInt8981;
 		this.method14364();
 	}
 

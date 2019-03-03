@@ -1,9 +1,9 @@
 public abstract class Class282_Sub5 extends Node {
 
 	boolean aBool7506;
-	Class505_Sub1 aClass505_Sub1_7507;
+	OpenGLGraphicalRenderer aClass505_Sub1_7507;
 
-	Class282_Sub5(Class505_Sub1 class505_sub1_1) {
+	Class282_Sub5(OpenGLGraphicalRenderer class505_sub1_1) {
 		this.aClass505_Sub1_7507 = class505_sub1_1;
 	}
 

@@ -11,7 +11,7 @@ public class Class58 implements Interface19 {
 			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_STATBASE ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 2106456977);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 1575511012);
-			return itemdefinitions_5.aString5043;
+			return itemdefinitions_5.name;
 		}
 	}
 
@@ -23,7 +23,7 @@ public class Class58 implements Interface19 {
 			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 579863966);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 1001383169);
-			return itemdefinitions_5.aString5043;
+			return itemdefinitions_5.name;
 		}
 	}
 
@@ -35,7 +35,7 @@ public class Class58 implements Interface19 {
 			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 870502499);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 980580063);
-			return itemdefinitions_5.aString5043;
+			return itemdefinitions_5.name;
 		}
 	}
 

@@ -171,7 +171,7 @@ public class Class71 {
 		int i_14;
 		int i_15;
 		for (int i_13 = 0; i_13 < i_9; i_13++) {
-			i_14 = class390_sub1_3.anInt4776 * (i_12 + i_13) + i_11;
+			i_14 = class390_sub1_3.width * (i_12 + i_13) + i_11;
 
 			for (i_15 = 0; i_15 < i_9; i_15++) {
 				short[] shorts_21 = class390_sub1_3.aShortArrayArray8534[i_14++];
@@ -190,7 +190,7 @@ public class Class71 {
 			bytebuffer_20.clear();
 
 			for (i_14 = 0; i_14 < i_9; i_14++) {
-				i_15 = class390_sub1_3.anInt4776 * (i_12 + i_14) + i_11;
+				i_15 = class390_sub1_3.width * (i_12 + i_14) + i_11;
 
 				for (int i_16 = 0; i_16 < i_9; i_16++) {
 					short[] shorts_17 = class390_sub1_3.aShortArrayArray8534[i_15++];

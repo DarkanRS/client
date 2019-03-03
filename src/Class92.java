@@ -44,7 +44,7 @@ public class Class92 {
 		this.anInt967 = i_4;
 	}
 
-	static final int method1560(int i_0, int i_1, int i_2) {
+	static final int calculateTileHeights(int i_0, int i_1, int i_2) {
 		int i_3 = Class159.method2735(45365 + i_0, i_1 + 91923, 4, -726719813) - 128 + (Class159.method2735(i_0 + 10294, 37821 + i_1, 2, -726719813) - 128 >> 1) + (Class159.method2735(i_0, i_1, 1, -726719813) - 128 >> 2);
 		i_3 = (int) ((double) i_3 * 0.3D) + 35;
 		if (i_3 < 10) {
@@ -61,7 +61,7 @@ public class Class92 {
 	}
 
 	static final void method1562(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.method11633(icomponentdefinitions_3).getUseOptionFlags();
 	}

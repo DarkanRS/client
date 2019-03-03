@@ -1,9 +1,9 @@
-public class Class468_Sub20 extends Class468 {
+public class Class468_Sub20 extends Preference {
 
 	static int[] anIntArray7920;
 
 	int method7787() {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7721(1185241423) < 245 ? 0 : 2;
+		return this.manager.method13504((byte) 1).method7721(1185241423) < 245 ? 0 : 2;
 	}
 
 	public Class468_Sub20(int i_1, Class282_Sub54 class282_sub54_2) {
@@ -12,7 +12,7 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	public void method12793(int i_1) {
-		if (this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-1348501274) < 245) {
+		if (this.manager.method13504((byte) 1).method7721(-1348501274) < 245) {
 			this.anInt5578 = 0;
 		}
 
@@ -23,7 +23,7 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	int method7781(int i_1) {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-1989714120) < 245 ? 0 : 2;
+		return this.manager.method13504((byte) 1).method7721(-1989714120) < 245 ? 0 : 2;
 	}
 
 	public int method12794(int i_1) {
@@ -31,7 +31,7 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7721(1512170398) < 245 ? 3 : 1;
+		return this.manager.method13504((byte) 1).method7721(1512170398) < 245 ? 3 : 1;
 	}
 
 	void method7783(int i_1, int i_2) {
@@ -45,15 +45,15 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	int method7786() {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7721(1353747708) < 245 ? 0 : 2;
+		return this.manager.method13504((byte) 1).method7721(1353747708) < 245 ? 0 : 2;
 	}
 
 	public boolean method12797(byte b_1) {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7721(335245917) >= 245;
+		return this.manager.method13504((byte) 1).method7721(335245917) >= 245;
 	}
 
 	public int method7784(int i_1) {
-		return this.aClass282_Sub54_5581.method13504((byte) 1).method7721(-672863929) < 245 ? 3 : 1;
+		return this.manager.method13504((byte) 1).method7721(-672863929) < 245 ? 3 : 1;
 	}
 
 	public Class468_Sub20(Class282_Sub54 class282_sub54_1) {
@@ -62,14 +62,14 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	static final void method12802(CS2Executor cs2executor_0, int i_1) {
-		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
 		NativeLibraryLoader.method4651(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 56);
 	}
 
 	static final void method12803(CS2Executor cs2executor_0, int i_1) {
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub30_8194, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -204242656);
+		Class393.preferences.setValue(Class393.preferences.fog, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -204242656);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -96);
 		Class190.savePreferences((byte) 37);
 		client.aBool7175 = false;

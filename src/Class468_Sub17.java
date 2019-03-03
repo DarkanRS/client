@@ -1,17 +1,17 @@
-public class Class468_Sub17 extends Class468 {
+public class Class468_Sub17 extends Preference {
 
 	public int method7785(int i_1, int i_2) {
-		if (this.aClass282_Sub54_5581.method13514((byte) 3) == Game.darkan) {
+		if (this.manager.method13514((byte) 3) == Game.darkan) {
 			if (i_1 == 0) {
-				if (this.aClass282_Sub54_5581.aClass468_Sub30_8194.method13417(-2085338596) == 1) {
+				if (this.manager.fog.method13417(-2085338596) == 1) {
 					return 2;
 				}
 
-				if (this.aClass282_Sub54_5581.aClass468_Sub22_8213.method12873(1169663488) == 1) {
+				if (this.manager.textures.method12873(1169663488) == 1) {
 					return 2;
 				}
 
-				if (this.aClass282_Sub54_5581.aClass468_Sub24_8216.method12920(-792271600) > 0) {
+				if (this.manager.water.getValue(-792271600) > 0) {
 					return 2;
 				}
 			}
@@ -35,7 +35,7 @@ public class Class468_Sub17 extends Class468 {
 	}
 
 	public boolean method12761(int i_1) {
-		return this.aClass282_Sub54_5581.method13514((byte) 119) == Game.darkan;
+		return this.manager.method13514((byte) 119) == Game.darkan;
 	}
 
 	public int method12762(int i_1) {
@@ -51,17 +51,17 @@ public class Class468_Sub17 extends Class468 {
 	}
 
 	public int method7784(int i_1) {
-		if (this.aClass282_Sub54_5581.method13514((byte) 37) == Game.darkan) {
+		if (this.manager.method13514((byte) 37) == Game.darkan) {
 			if (i_1 == 0) {
-				if (this.aClass282_Sub54_5581.aClass468_Sub30_8194.method13417(-2146317040) == 1) {
+				if (this.manager.fog.method13417(-2146317040) == 1) {
 					return 2;
 				}
 
-				if (this.aClass282_Sub54_5581.aClass468_Sub22_8213.method12873(533294977) == 1) {
+				if (this.manager.textures.method12873(533294977) == 1) {
 					return 2;
 				}
 
-				if (this.aClass282_Sub54_5581.aClass468_Sub24_8216.method12920(76059424) > 0) {
+				if (this.manager.water.getValue(76059424) > 0) {
 					return 2;
 				}
 			}
@@ -77,7 +77,7 @@ public class Class468_Sub17 extends Class468 {
 	}
 
 	public void method12767(byte b_1) {
-		if (this.aClass282_Sub54_5581.method13514((byte) 98) != Game.darkan) {
+		if (this.manager.method13514((byte) 98) != Game.darkan) {
 			this.anInt5578 = 1;
 		}
 

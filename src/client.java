@@ -982,7 +982,7 @@ public final class client extends Engine {
 			}
 
 			if (Class475.supportsFullScreen && fullScreenFrame != null && !Class530.aBool7050 && Class176.method2980(gameState, -576589462)) {
-				Class440.method7373(Class393.preferences.aClass468_Sub9_8226.method12687(-342071815), -1, -1, false, (byte) 98);
+				Class440.method7373(Class393.preferences.screenSize.method12687(-342071815), -1, -1, false, (byte) 98);
 			}
 
 			boolean bool_9 = false;
@@ -1086,8 +1086,8 @@ public final class client extends Engine {
 			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.aClass468_Sub4_8187.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) + " ";
 			str_2 = str_2 + Class393.preferences.aClass468_Sub2_8205.method12624((byte) -13) + " ";
-			str_2 = str_2 + Class393.preferences.aClass468_Sub24_8216.method12920(-14216160) + " ";
-			str_2 = str_2 + Class393.preferences.aClass468_Sub22_8213.method12873(-932998306) + " ";
+			str_2 = str_2 + Class393.preferences.water.getValue(-14216160) + " ";
+			str_2 = str_2 + Class393.preferences.textures.method12873(-932998306) + " ";
 			str_2 = str_2 + Class393.preferences.aClass468_Sub12_8195.method12706((byte) 75) + " ";
 			str_2 = str_2 + "0 ";
 			str_2 = str_2 + MAX_MEMORY + " ";

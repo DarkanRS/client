@@ -37,7 +37,7 @@ public final class Stream {
 			throw new RuntimeException();
 	}
 
-	public int method2918() {
+	public int written() {
 		return anInt2123 * -781132199 + anInt2122 * 1160648251;
 	}
 

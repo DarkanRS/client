@@ -1,7 +1,7 @@
 public class Class167 {
 
 	SoftCache aClass229_2044 = new SoftCache(256);
-	Class505_Sub1 aClass505_Sub1_2042;
+	OpenGLGraphicalRenderer aClass505_Sub1_2042;
 	Interface22 anInterface22_2043;
 
 	Class137_Sub1 method2857(int i_1, int i_2) {
@@ -49,7 +49,7 @@ public class Class167 {
 		this.aClass229_2044.method3859(355316582);
 	}
 
-	Class167(Class505_Sub1 class505_sub1_1, Interface22 interface22_2) {
+	Class167(OpenGLGraphicalRenderer class505_sub1_1, Interface22 interface22_2) {
 		this.aClass505_Sub1_2042 = class505_sub1_1;
 		this.anInterface22_2043 = interface22_2;
 	}

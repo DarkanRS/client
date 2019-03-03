@@ -36,7 +36,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_5 = this.anInt9392 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9393 >> 12;
 		int i_7 = i_2 * this.anInt9394 >> 12;
-		Class390.method6731(i_4, i_5, i_6, i_7, this.anInt1743, this.anInt1741, this.anInt1742, 1235101523);
+		Ground.method6731(i_4, i_5, i_6, i_7, this.anInt1743, this.anInt1741, this.anInt1742, 1235101523);
 	}
 
 	void method2555(int i_1, int i_2) {
@@ -60,7 +60,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_4 = i_1 * 232719965 * this.anInt9392 * 50986485 >> 12;
 		int i_5 = i_2 * -1685653473 * this.anInt9393 * -724925473 >> 12;
 		int i_6 = i_2 * this.anInt9394 * 954206695 * -1856308777 >> 12;
-		Class390.method6731(i_3, i_4, i_5, i_6, 1340859839 * this.anInt1743 * 440863295, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331, 2071365081);
+		Ground.method6731(i_3, i_4, i_5, i_6, 1340859839 * this.anInt1743 * 440863295, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331, 2071365081);
 	}
 
 	void method2560(int i_1, int i_2) {

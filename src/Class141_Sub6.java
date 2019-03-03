@@ -46,7 +46,7 @@ public class Class141_Sub6 extends Class141 {
 	void method2406(boolean bool_1) {
 	}
 
-	Class141_Sub6(Class505_Sub1 class505_sub1_1) {
+	Class141_Sub6(OpenGLGraphicalRenderer class505_sub1_1) {
 		super(class505_sub1_1);
 	}
 
