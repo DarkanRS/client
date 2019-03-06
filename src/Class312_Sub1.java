@@ -299,9 +299,9 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 								int i_16 = i_10 == 0 ? 5 : 9;
 								this.aClass282_Sub50_Sub11_Sub1_3660 = class282_sub50_sub11_sub1_15;
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378 = new RsByteBuffer(i_16 + i_9 + this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeByte(i_10);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeInt(i_9);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream = new RsByteBuffer(i_16 + i_9 + this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeByte(i_10);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeInt(i_9);
 								this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = -131722454 * -5971791;
 								this.aClass282_Sub35_3647.index = 0 * -1990677291;
 							} else {
@@ -318,26 +318,26 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							}
 						}
 					} else {
-						i_5 = this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
+						i_5 = this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
 						i_6 = 512 - this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 * -442668975 * -5971791;
-						if (i_6 > i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867) {
-							i_6 = i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867;
+						if (i_6 > i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867) {
+							i_6 = i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867;
 						}
 
 						if (i_6 > i_3) {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -2058896407);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867, i_6, -2058896407);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 * -1990677291] ^= this.aByte3656;
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867 * -1990677291] ^= this.aByte3656;
 							}
 						}
 
-						this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index = (this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 + i_6 * -1115476867) * -1990677291;
+						this.aClass282_Sub50_Sub11_Sub1_3660.stream.index = (this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867 + i_6 * -1115476867) * -1990677291;
 						this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = (this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 * -442668975 + i_6 * -442668975) * -5971791;
-						if (i_5 == -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867) {
+						if (i_5 == -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867) {
 							this.aClass282_Sub50_Sub11_Sub1_3660.method13452();
 							this.aClass282_Sub50_Sub11_Sub1_3660.incomplete = false;
 							this.aClass282_Sub50_Sub11_Sub1_3660 = null;
@@ -470,9 +470,9 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 								int i_16 = i_10 == 0 ? 5 : 9;
 								this.aClass282_Sub50_Sub11_Sub1_3660 = class282_sub50_sub11_sub1_15;
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378 = new RsByteBuffer(i_16 + i_9 + this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeByte(i_10);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeInt(i_9);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream = new RsByteBuffer(i_16 + i_9 + this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeByte(i_10);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeInt(i_9);
 								this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = -131722454 * -5971791;
 								this.aClass282_Sub35_3647.index = 0 * -1990677291;
 							} else {
@@ -489,26 +489,26 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							}
 						}
 					} else {
-						i_5 = this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
+						i_5 = this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
 						i_6 = 512 - this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 * -442668975 * -5971791;
-						if (i_6 > i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867) {
-							i_6 = i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867;
+						if (i_6 > i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867) {
+							i_6 = i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867;
 						}
 
 						if (i_6 > i_3) {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -625709122);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867, i_6, -625709122);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 * -1990677291] ^= this.aByte3656;
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867 * -1990677291] ^= this.aByte3656;
 							}
 						}
 
-						this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index = (this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 + i_6 * -1115476867) * -1990677291;
+						this.aClass282_Sub50_Sub11_Sub1_3660.stream.index = (this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867 + i_6 * -1115476867) * -1990677291;
 						this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = (this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 * -442668975 + i_6 * -442668975) * -5971791;
-						if (i_5 == -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867) {
+						if (i_5 == -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867) {
 							this.aClass282_Sub50_Sub11_Sub1_3660.method13452();
 							this.aClass282_Sub50_Sub11_Sub1_3660.incomplete = false;
 							this.aClass282_Sub50_Sub11_Sub1_3660 = null;
@@ -776,9 +776,9 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 								int i_17 = i_11 == 0 ? 5 : 9;
 								this.aClass282_Sub50_Sub11_Sub1_3660 = class282_sub50_sub11_sub1_16;
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378 = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376 + i_17 + i_10);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeByte(i_11);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeInt(i_10);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376 + i_17 + i_10);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeByte(i_11);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeInt(i_10);
 								this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = 10;
 								this.aClass282_Sub35_3647.index = 0;
 							} else {
@@ -795,26 +795,26 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							}
 						}
 					} else {
-						i_6 = this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
+						i_6 = this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
 						i_7 = 512 - this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377;
-						if (i_7 > i_6 - this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index) {
-							i_7 = i_6 - this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index;
+						if (i_7 > i_6 - this.aClass282_Sub50_Sub11_Sub1_3660.stream.index) {
+							i_7 = i_6 - this.aClass282_Sub50_Sub11_Sub1_3660.stream.index;
 						}
 
 						if (i_7 > i_4) {
 							i_7 = i_4;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index, i_7, -1556112403);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer, this.aClass282_Sub50_Sub11_Sub1_3660.stream.index, i_7, -1556112403);
 						if (this.aByte3656 != 0) {
 							for (i_8 = 0; i_8 < i_7; i_8++) {
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_8 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index] ^= this.aByte3656;
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer[i_8 + this.aClass282_Sub50_Sub11_Sub1_3660.stream.index] ^= this.aByte3656;
 							}
 						}
 
-						this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index += i_7;
+						this.aClass282_Sub50_Sub11_Sub1_3660.stream.index += i_7;
 						this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 += i_7;
-						if (this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index == i_6) {
+						if (this.aClass282_Sub50_Sub11_Sub1_3660.stream.index == i_6) {
 							this.aClass282_Sub50_Sub11_Sub1_3660.method13452();
 							this.aClass282_Sub50_Sub11_Sub1_3660.incomplete = false;
 							this.aClass282_Sub50_Sub11_Sub1_3660 = null;
@@ -954,9 +954,9 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 								int i_16 = i_10 == 0 ? 5 : 9;
 								this.aClass282_Sub50_Sub11_Sub1_3660 = class282_sub50_sub11_sub1_15;
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378 = new RsByteBuffer(i_16 + i_9 + this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeByte(i_10);
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.writeInt(i_9);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream = new RsByteBuffer(i_16 + i_9 + this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeByte(i_10);
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.writeInt(i_9);
 								this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = -131722454 * -5971791;
 								this.aClass282_Sub35_3647.index = 0 * -1990677291;
 							} else {
@@ -973,26 +973,26 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							}
 						}
 					} else {
-						i_5 = this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
+						i_5 = this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer.length - this.aClass282_Sub50_Sub11_Sub1_3660.aByte10376;
 						i_6 = 512 - this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 * -442668975 * -5971791;
-						if (i_6 > i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867) {
-							i_6 = i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867;
+						if (i_6 > i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867) {
+							i_6 = i_5 - -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867;
 						}
 
 						if (i_6 > i_3) {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867, i_6, -777445999);
+						this.aClass202_7778.read(this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer, -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867, i_6, -777445999);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
-								this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 * -1990677291] ^= this.aByte3656;
+								this.aClass282_Sub50_Sub11_Sub1_3660.stream.buffer[i_7 + this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867 * -1990677291] ^= this.aByte3656;
 							}
 						}
 
-						this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index = (this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867 + i_6 * -1115476867) * -1990677291;
+						this.aClass282_Sub50_Sub11_Sub1_3660.stream.index = (this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867 + i_6 * -1115476867) * -1990677291;
 						this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 = (this.aClass282_Sub50_Sub11_Sub1_3660.anInt10377 * -442668975 + i_6 * -442668975) * -5971791;
-						if (i_5 == -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.aClass282_Sub35_10378.index * -1115476867) {
+						if (i_5 == -1990677291 * this.aClass282_Sub50_Sub11_Sub1_3660.stream.index * -1115476867) {
 							this.aClass282_Sub50_Sub11_Sub1_3660.method13452();
 							this.aClass282_Sub50_Sub11_Sub1_3660.incomplete = false;
 							this.aClass282_Sub50_Sub11_Sub1_3660 = null;

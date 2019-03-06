@@ -29,8 +29,10 @@ public class Loader extends Applet implements AppletStub {
 	public JFrame clientFrame = null;
 
 	public static void main(String[] arg0) {
-		if (arg0 != null && arg0.length > 0 && arg0[0] != null)
+		if (arg0 != null && arg0.length > 0 && arg0[0] != null) {
 			IP_ADDRESS = "127.0.0.1";
+			loadParams();
+		}
 		new Loader().doFrame();
 	}
 
@@ -48,8 +50,9 @@ public class Loader extends Applet implements AppletStub {
 		startClient();
 		clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
-	static {
+	
+	public static void loadParams() {
+		clientParams.clear();
 		clientParams.put("boxborder", "false");
 		clientParams.put("boxbgcolor", "black");
 		clientParams.put("separate_jvm", "true");
@@ -89,6 +92,10 @@ public class Loader extends Applet implements AppletStub {
 		clientParams.put("17", "ev9+VAp5/tMKeNR/7MOuH6lKWS+rGkHK");
 		clientParams.put("8", "0");
 		clientParams.put("29", "false");
+	}
+
+	static {
+		loadParams();
 	}
 
 	private void openFrame() {

@@ -26,32 +26,33 @@ public class JS5Manager {
 			if (this.aClass282_Sub50_Sub11_Sub1_3626.incomplete) {
 				return false;
 			} else {
-				RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(-1991458699));
-				rsbytebuffer_2.index = 5;
-				int i_3 = rsbytebuffer_2.readUnsignedByte();
-				rsbytebuffer_2.index += i_3 * 72;
-				byte[] bytes_4 = new byte[rsbytebuffer_2.buffer.length - rsbytebuffer_2.index];
-				rsbytebuffer_2.readBytes(bytes_4, 0, bytes_4.length, -24451515);
-				byte[] bytes_5;
+				RsByteBuffer stream = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(-1991458699));
+				stream.index = 5;
+				int i_3 = stream.readUnsignedByte();
+				stream.index += i_3 * 72;
+				byte[] encrypted = new byte[stream.buffer.length - stream.index];
+				stream.readBytes(encrypted, 0, encrypted.length, -24451515);
+				byte[] decrypted;
 				if (this.updateServerExponent != null && this.updateServerModulus != null) {
-					BigInteger biginteger_6 = new BigInteger(bytes_4);
+					BigInteger biginteger_6 = new BigInteger(encrypted);
 					BigInteger biginteger_7 = biginteger_6.modPow(this.updateServerExponent, this.updateServerModulus);
-					bytes_5 = biginteger_7.toByteArray();
+					decrypted = biginteger_7.toByteArray();
 				} else {
-					bytes_5 = bytes_4;
+					decrypted = encrypted;
 				}
 
-				if (bytes_5.length != 64 && bytes_5.length != 65) {
+				if (decrypted.length != 65) {
+					System.out.println("Invalid length: " + decrypted.length);
 					throw new RuntimeException();
 				} else {
-					Class361.getWhirlpool(rsbytebuffer_2.buffer, 5, rsbytebuffer_2.index - bytes_4.length - 5);
+					Class361.getWhirlpool(stream.buffer, 5, stream.index - encrypted.length - 5);
 
 					for (int i_8 = 0; i_8 < 64; i_8++) {
 						;
 					}
 
 					this.grabWorkers = new JS5GrabWorker[i_3];
-					this.buffer = rsbytebuffer_2;
+					this.buffer = stream;
 					return true;
 				}
 			}
