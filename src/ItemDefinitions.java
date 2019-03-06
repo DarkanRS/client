@@ -6,11 +6,11 @@ public class ItemDefinitions implements Definition {
 	public int value = 1;
 	int modelId;
 	public int modelZoom = 2000;
-	public int modelRotation1 = 0;
-	public int modelRotation2 = 0;
-	public int unknownInt5 = 0;
-	public int modelOffset1 = 0;
-	public int modelOffset2 = 0;
+	public int modelRotationX = 0;
+	public int modelRotationY = 0;
+	public int modelRotationZ = 0;
+	public int modelOffsetX = 0;
+	public int modelOffsetY = 0;
 	short[] originalModelColors;
 	short[] modifiedModelColors;
 	byte[] spriteRecolorIndices;
@@ -18,9 +18,9 @@ public class ItemDefinitions implements Definition {
 	short[] modifiedTextureIds;
 	public String name = "null";
 	public boolean membersOnly = false;
-	public int equipSlot = -1;
-	public int equipType = -1;
-	public int unknownInt25 = -1;
+	public int wearPos = -1;
+	public int wearPos2 = -1;
+	public int wearPos3 = -1;
 	int maleEquip1 = -1;
 	int maleEquip2 = -1;
 	int maleEquip3 = -1;
@@ -42,9 +42,9 @@ public class ItemDefinitions implements Definition {
 	IterableNodeMap cs2Map;
 	public int stackable = 0;
 	public String[] inventoryOptions;
-	public int unknownInt24 = -1;
-	public int unknownInt26;
-	public boolean unknownBool1 = false;
+	public int multiStackSize = -1;
+	public int tooltipColor;
+	public boolean hasTooltipColor = false;
 	public boolean grandExchange = false;
 	public int unknownInt6 = 0;
 	public int certId = -1;
@@ -67,7 +67,7 @@ public class ItemDefinitions implements Definition {
 	public int unknownInt27 = -1;
 	public int unknownInt28 = -1;
 	public int[] quests;
-	public int unknownInt29 = 0;
+	public int pickSizeShift = 0;
 	int bindId = -1;
 	public int bindTemplateId = -1;
 
@@ -205,11 +205,11 @@ public class ItemDefinitions implements Definition {
 		this.value = 0;
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
-		this.modelRotation1 = itemdefinitions_1.modelRotation1;
-		this.modelRotation2 = itemdefinitions_1.modelRotation2;
-		this.unknownInt5 = itemdefinitions_1.unknownInt5;
-		this.modelOffset1 = itemdefinitions_1.modelOffset1;
-		this.modelOffset2 = itemdefinitions_1.modelOffset2;
+		this.modelRotationX = itemdefinitions_1.modelRotationX;
+		this.modelRotationY = itemdefinitions_1.modelRotationY;
+		this.modelRotationZ = itemdefinitions_1.modelRotationZ;
+		this.modelOffsetX = itemdefinitions_1.modelOffsetX;
+		this.modelOffsetY = itemdefinitions_1.modelOffsetY;
 		this.originalModelColors = itemdefinitions_2.originalModelColors;
 		this.modifiedModelColors = itemdefinitions_2.modifiedModelColors;
 		this.spriteRecolorIndices = itemdefinitions_2.spriteRecolorIndices;
@@ -217,9 +217,9 @@ public class ItemDefinitions implements Definition {
 		this.modifiedTextureIds = itemdefinitions_2.modifiedTextureIds;
 		this.name = itemdefinitions_2.name;
 		this.membersOnly = itemdefinitions_2.membersOnly;
-		this.equipSlot = itemdefinitions_2.equipSlot;
-		this.equipType = itemdefinitions_2.equipType;
-		this.unknownInt25 = itemdefinitions_2.unknownInt25;
+		this.wearPos = itemdefinitions_2.wearPos;
+		this.wearPos2 = itemdefinitions_2.wearPos2;
+		this.wearPos3 = itemdefinitions_2.wearPos3;
 		this.maleEquip1 = itemdefinitions_2.maleEquip1;
 		this.maleEquip2 = itemdefinitions_2.maleEquip2;
 		this.maleEquip3 = itemdefinitions_2.maleEquip3;
@@ -253,11 +253,11 @@ public class ItemDefinitions implements Definition {
 	void generateCert(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
-		this.modelRotation1 = itemdefinitions_1.modelRotation1;
-		this.modelRotation2 = itemdefinitions_1.modelRotation2;
-		this.unknownInt5 = itemdefinitions_1.unknownInt5;
-		this.modelOffset1 = itemdefinitions_1.modelOffset1;
-		this.modelOffset2 = itemdefinitions_1.modelOffset2;
+		this.modelRotationX = itemdefinitions_1.modelRotationX;
+		this.modelRotationY = itemdefinitions_1.modelRotationY;
+		this.modelRotationZ = itemdefinitions_1.modelRotationZ;
+		this.modelOffsetX = itemdefinitions_1.modelOffsetX;
+		this.modelOffsetY = itemdefinitions_1.modelOffsetY;
 		this.originalModelColors = itemdefinitions_1.originalModelColors;
 		this.modifiedModelColors = itemdefinitions_1.modifiedModelColors;
 		this.spriteRecolorIndices = itemdefinitions_1.spriteRecolorIndices;
@@ -277,31 +277,31 @@ public class ItemDefinitions implements Definition {
 		} else if (opcode == 4) {
 			this.modelZoom = stream.readUnsignedShort();
 		} else if (opcode == 5) {
-			this.modelRotation1 = stream.readUnsignedShort();
+			this.modelRotationX = stream.readUnsignedShort();
 		} else if (opcode == 6) {
-			this.modelRotation2 = stream.readUnsignedShort();
+			this.modelRotationY = stream.readUnsignedShort();
 		} else if (opcode == 7) {
-			this.modelOffset1 = stream.readUnsignedShort();
-			if (this.modelOffset1 > 32767) {
-				this.modelOffset1 -= 65536;
+			this.modelOffsetX = stream.readUnsignedShort();
+			if (this.modelOffsetX > 32767) {
+				this.modelOffsetX -= 65536;
 			}
 		} else if (opcode == 8) {
-			this.modelOffset2 = stream.readUnsignedShort();
-			if (this.modelOffset2 > 32767) {
-				this.modelOffset2 -= 65536;
+			this.modelOffsetY = stream.readUnsignedShort();
+			if (this.modelOffsetY > 32767) {
+				this.modelOffsetY -= 65536;
 			}
 		} else if (opcode == 11) {
 			this.stackable = 1;
 		} else if (opcode == 12) {
 			this.value = stream.readInt();
 		} else if (opcode == 13) {
-			this.equipSlot = stream.readUnsignedByte();
+			this.wearPos = stream.readUnsignedByte();
 		} else if (opcode == 14) {
-			this.equipType = stream.readUnsignedByte();
+			this.wearPos2 = stream.readUnsignedByte();
 		} else if (opcode == 16) {
 			this.membersOnly = true;
 		} else if (opcode == 18) {
-			this.unknownInt24 = stream.readUnsignedShort();
+			this.multiStackSize = stream.readUnsignedShort();
 		} else if (opcode == 23) {
 			this.maleEquip1 = stream.readBigSmart();
 		} else if (opcode == 24) {
@@ -311,7 +311,7 @@ public class ItemDefinitions implements Definition {
 		} else if (opcode == 26) {
 			this.femaleEquip2 = stream.readBigSmart();
 		} else if (opcode == 27) {
-			this.unknownInt25 = stream.readUnsignedByte();
+			this.wearPos3 = stream.readUnsignedByte();
 		} else if (opcode >= 30 && opcode < 35) {
 			this.groundOptions[opcode - 30] = stream.readString();
 		} else if (opcode >= 35 && opcode < 40) {
@@ -345,8 +345,8 @@ public class ItemDefinitions implements Definition {
 					this.spriteRecolorIndices[i_5] = stream.readByte();
 				}
 			} else if (opcode == 43) {
-				this.unknownInt26 = stream.readInt();
-				this.unknownBool1 = true;
+				this.tooltipColor = stream.readInt();
+				this.hasTooltipColor = true;
 			} else if (opcode == 65) {
 				this.grandExchange = true;
 			} else if (opcode == 78) {
@@ -362,7 +362,7 @@ public class ItemDefinitions implements Definition {
 			} else if (opcode == 93) {
 				this.femaleHead2 = stream.readBigSmart();
 			} else if (opcode == 95) {
-				this.unknownInt5 = stream.readUnsignedShort();
+				this.modelRotationZ = stream.readUnsignedShort();
 			} else if (opcode == 96) {
 				this.unknownInt6 = stream.readUnsignedByte();
 			} else if (opcode == 97) {
@@ -421,7 +421,7 @@ public class ItemDefinitions implements Definition {
 					this.quests[i_5] = stream.readUnsignedShort();
 				}
 			} else if (opcode == 134) {
-				this.unknownInt29 = stream.readUnsignedByte();
+				this.pickSizeShift = stream.readUnsignedByte();
 			} else if (opcode == 139) {
 				this.bindId = stream.readUnsignedShort();
 			} else if (opcode == 140) {
@@ -556,10 +556,10 @@ public class ItemDefinitions implements Definition {
 				hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0D));
 				hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0D), 0.95F + (float) (Math.random() / 10.0D), -50.0F, -10.0F, -50.0F);
 				Matrix44Var matrix44var_20 = hardwareRenderer.method8450();
-				matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-this.unknownInt5 << 3));
-				matrix44var_20.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(this.modelRotation2 << 3));
-				matrix44var_20.method5219((float) (this.modelOffset1 << 2), (float) ((zoom * Class382.anIntArray4657[this.modelRotation1 << 3] >> 14) - meshRasterizer.YA() / 2 + (this.modelOffset2 << 2)), (float) ((zoom * Class382.anIntArray4661[this.modelRotation1 << 3] >> 14) + (this.modelOffset2 << 2)));
-				matrix44var_20.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(this.modelRotation1 << 3));
+				matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-this.modelRotationZ << 3));
+				matrix44var_20.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(this.modelRotationY << 3));
+				matrix44var_20.method5219((float) (this.modelOffsetX << 2), (float) ((zoom * Class382.anIntArray4657[this.modelRotationX << 3] >> 14) - meshRasterizer.YA() / 2 + (this.modelOffsetY << 2)), (float) ((zoom * Class382.anIntArray4661[this.modelRotationX << 3] >> 14) + (this.modelOffsetY << 2)));
+				matrix44var_20.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(this.modelRotationX << 3));
 				hardwareRenderer.r(0, 0, 36, 32);
 				hardwareRenderer.ba(2, 0);
 				hardwareRenderer.B(0, 0, 36, 32, 0, 0);
@@ -909,11 +909,11 @@ public class ItemDefinitions implements Definition {
 		this.value = 0;
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
-		this.modelRotation1 = itemdefinitions_1.modelRotation1;
-		this.modelRotation2 = itemdefinitions_1.modelRotation2;
-		this.unknownInt5 = itemdefinitions_1.unknownInt5;
-		this.modelOffset1 = itemdefinitions_1.modelOffset1;
-		this.modelOffset2 = itemdefinitions_1.modelOffset2;
+		this.modelRotationX = itemdefinitions_1.modelRotationX;
+		this.modelRotationY = itemdefinitions_1.modelRotationY;
+		this.modelRotationZ = itemdefinitions_1.modelRotationZ;
+		this.modelOffsetX = itemdefinitions_1.modelOffsetX;
+		this.modelOffsetY = itemdefinitions_1.modelOffsetY;
 		this.originalModelColors = itemdefinitions_2.originalModelColors;
 		this.modifiedModelColors = itemdefinitions_2.modifiedModelColors;
 		this.spriteRecolorIndices = itemdefinitions_2.spriteRecolorIndices;
@@ -921,9 +921,9 @@ public class ItemDefinitions implements Definition {
 		this.modifiedTextureIds = itemdefinitions_2.modifiedTextureIds;
 		this.name = itemdefinitions_2.name;
 		this.membersOnly = itemdefinitions_2.membersOnly;
-		this.equipSlot = itemdefinitions_2.equipSlot;
-		this.equipType = itemdefinitions_2.equipType;
-		this.unknownInt25 = itemdefinitions_2.unknownInt25;
+		this.wearPos = itemdefinitions_2.wearPos;
+		this.wearPos2 = itemdefinitions_2.wearPos2;
+		this.wearPos3 = itemdefinitions_2.wearPos3;
 		this.maleEquip1 = itemdefinitions_2.maleEquip1;
 		this.maleEquip2 = itemdefinitions_2.maleEquip2;
 		this.maleEquip3 = itemdefinitions_2.maleEquip3;

@@ -380,14 +380,14 @@ public class Class289 implements Runnable {
 
 									if (sceneobject_40 != null) {
 										ObjectDefinitions objectdefinitions_41 = objectindexloader_39.getObjectDefinitions(sceneobject_40.getId(905574000), 65280);
-										if (!objectdefinitions_41.aBool5660 || client.membersWorld) {
-											i_26 = objectdefinitions_41.anInt5669;
-											if (objectdefinitions_41.anIntArray5650 != null) {
-												for (i_27 = 0; i_27 < objectdefinitions_41.anIntArray5650.length; i_27++) {
-													if (objectdefinitions_41.anIntArray5650[i_27] != -1) {
-														ObjectDefinitions objectdefinitions_42 = objectindexloader_39.getObjectDefinitions(objectdefinitions_41.anIntArray5650[i_27], 65280);
-														if (objectdefinitions_42.anInt5669 >= 0) {
-															i_26 = objectdefinitions_42.anInt5669;
+										if (!objectdefinitions_41.members || client.membersWorld) {
+											i_26 = objectdefinitions_41.mapIcon;
+											if (objectdefinitions_41.toObjectIds != null) {
+												for (i_27 = 0; i_27 < objectdefinitions_41.toObjectIds.length; i_27++) {
+													if (objectdefinitions_41.toObjectIds[i_27] != -1) {
+														ObjectDefinitions objectdefinitions_42 = objectindexloader_39.getObjectDefinitions(objectdefinitions_41.toObjectIds[i_27], 65280);
+														if (objectdefinitions_42.mapIcon >= 0) {
+															i_26 = objectdefinitions_42.mapIcon;
 														}
 													}
 												}

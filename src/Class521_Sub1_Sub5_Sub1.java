@@ -303,7 +303,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		this.aBool10525 = bool_10;
 		this.aByte10521 = (byte) i_11;
 		this.aByte10520 = (byte) i_12;
-		this.aBool10523 = objectdefinitions_4.anInt5652 != 0 && !bool_10;
+		this.aBool10523 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.aBool10524 = bool_13;
 		this.aBool10516 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10525 && Class393.preferences.aClass468_Sub2_8205.method12624((byte) -75) != 0;
 		int i_14 = 2048;

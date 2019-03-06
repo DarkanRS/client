@@ -1931,8 +1931,8 @@ public class PacketsDecoder extends Class455 {
 																					Class470.method7825(-586263541);
 																					Class96_Sub9.method14587(i_5, i_24, i_6, (short) -342);
 																					ItemDefinitions itemdefinitions_128 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_24, 985436598);
-																					Class149_Sub1.method14583(i_5, itemdefinitions_128.modelRotation1, itemdefinitions_128.modelRotation2, itemdefinitions_128.modelZoom, -2105289855);
-																					Class28.method778(i_5, itemdefinitions_128.modelOffset1, itemdefinitions_128.modelOffset2, itemdefinitions_128.unknownInt5, (byte) 16);
+																					Class149_Sub1.method14583(i_5, itemdefinitions_128.modelRotationX, itemdefinitions_128.modelRotationY, itemdefinitions_128.modelZoom, -2105289855);
+																					Class28.method778(i_5, itemdefinitions_128.modelOffsetX, itemdefinitions_128.modelOffsetY, itemdefinitions_128.modelRotationZ, (byte) 16);
 																					class184_0.aClass375_2286 = null;
 																					return true;
 																				} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4481) {

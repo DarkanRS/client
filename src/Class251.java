@@ -431,7 +431,7 @@ public final class Class251 {
 					int i_18 = i_3 + i_14;
 					if (i_17 > 0 && i_18 > 0 && i_17 < i_4 - 1 && i_18 < i_5 - 1) {
 						ObjectDefinitions objectdefinitions_19 = objectindexloader_0.getObjectDefinitions(i_9, 65280);
-						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.aClass468_Sub23_8202.method12897((byte) 59) != 0 || objectdefinitions_19.anInt5652 != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.aBool5685) {
+						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.aClass468_Sub23_8202.method12897((byte) 59) != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
 							if (!objectdefinitions_19.method7968(-2090294731)) {
 								++i_7;
 							}

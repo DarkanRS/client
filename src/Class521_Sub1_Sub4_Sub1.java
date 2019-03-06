@@ -99,7 +99,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 		this.aBool10488 = bool_10;
 		this.aByte10487 = (byte) i_14;
 		this.aByte10485 = (byte) i_13;
-		this.aBool10481 = objectdefinitions_4.anInt5652 != 0 && !bool_10;
+		this.aBool10481 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.aBool10490 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10488 && Class393.preferences.aClass468_Sub2_8205.method12624((byte) -12) != 0;
 		int i_15 = 2048;
 		if (objectdefinitions_4.aBool5711) {
@@ -636,8 +636,8 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 										for (Class282_Sub34 class282_sub34_39 = (Class282_Sub34) class282_sub29_61.aClass482_7708.method8065(-2081006953); class282_sub34_39 != null; i_21++) {
 											ItemDefinitions itemdefinitions_65 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_39.anInt7853, 2117137985);
-											if (itemdefinitions_65.unknownBool1) {
-												i_38 = itemdefinitions_65.unknownInt26;
+											if (itemdefinitions_65.hasTooltipColor) {
+												i_38 = itemdefinitions_65.tooltipColor;
 											} else if (itemdefinitions_65.membersOnly) {
 												i_38 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880;
 											} else {
@@ -703,7 +703,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 							sceneobject_60 = (SceneObject) class285_34.aClass521_Sub1_3391;
 							objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436(-1539469212).getObjectDefinitions(sceneobject_60.getId(2000772127), 65280);
-							if (objectdefinitions_57.anIntArray5650 != null) {
+							if (objectdefinitions_57.toObjectIds != null) {
 								objectdefinitions_57 = objectdefinitions_57.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 107);
 							}
 						} while (objectdefinitions_57 == null);
@@ -711,7 +711,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 						if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == Class84.myPlayer.plane) {
 							AttributeDefault attributedefault_62 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
 							if ((Class506.anInt5858 & 0x4) != 0 && (attributedefault_62 == null || objectdefinitions_57.method7963(Class96_Sub12.anInt9319, attributedefault_62.anInt5337, -2052450472) != attributedefault_62.anInt5337)) {
-								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(65535, 619010179) + objectdefinitions_57.aString5638, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
+								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(65535, 619010179) + objectdefinitions_57.name, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
 							}
 						}
 					} while (class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
@@ -755,7 +755,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 							i_51 = objectdefinitions_57.anInt5666;
 						}
 
-						PlayerAppearance.method4032(arr_63[i_21], ParticleProducerDefinition.method1163(65535, 619010179) + objectdefinitions_57.aString5638, i_51, s_52, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -98), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -1344607256);
+						PlayerAppearance.method4032(arr_63[i_21], ParticleProducerDefinition.method1163(65535, 619010179) + objectdefinitions_57.name, i_51, s_52, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -98), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -1344607256);
 					}
 				}
 			}

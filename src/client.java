@@ -1619,7 +1619,7 @@ public final class client extends Engine {
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new Class312_Sub1();
 		Class239.method4090(new int[] { 20, 260 }, new int[] { 1000, 100 }, 1716786333);
-		Vector3.method6643(100);
+		Vector3.initVectorStack(100);
 		Quaternion.method6493(10);
 		ItemDefinitions.method7141(100, (byte) -88);
 		Class282_Sub41_Sub3.method14807(100, 649907715);
@@ -1782,7 +1782,7 @@ public final class client extends Engine {
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new Class312_Sub1();
 		Class239.method4090(new int[] { 20, 260 }, new int[] { 1000, 100 }, -651551316);
-		Vector3.method6643(100);
+		Vector3.initVectorStack(100);
 		Quaternion.method6493(10);
 		ItemDefinitions.method7141(100, (byte) -10);
 		Class282_Sub41_Sub3.method14807(100, 702651669);
@@ -2849,7 +2849,7 @@ public final class client extends Engine {
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new Class312_Sub1();
 		Class239.method4090(new int[] { 20, 260 }, new int[] { 1000, 100 }, -196172746);
-		Vector3.method6643(100);
+		Vector3.initVectorStack(100);
 		Quaternion.method6493(10);
 		ItemDefinitions.method7141(100, (byte) -39);
 		Class282_Sub41_Sub3.method14807(100, -741497337);

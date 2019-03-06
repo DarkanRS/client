@@ -73,8 +73,8 @@ public class Class96_Sub22 extends Class96 {
 									s_11 = 2000;
 								}
 
-								if (Class84.myPlayer.anInt10559 != 0 && player_0.anInt10559 != 0) {
-									if (player_0.anInt10559 == Class84.myPlayer.anInt10559) {
+								if (Class84.myPlayer.teamId != 0 && player_0.teamId != 0) {
+									if (player_0.teamId == Class84.myPlayer.teamId) {
 										s_11 = 2000;
 									} else {
 										s_11 = 0;

@@ -16,7 +16,7 @@ public class Class180 {
 	static final void method3030(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 504897377);
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = itemdefinitions_3.unknownBool1 ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = itemdefinitions_3.hasTooltipColor ? 1 : 0;
 	}
 
 	static final void method3031(CS2Executor cs2executor_0, int i_1) {

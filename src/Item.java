@@ -68,14 +68,14 @@ public class Item extends Node {
 					i_16 = Class187.anIntArray2354[i_21] * 4 + 2 - i_8 / 128;
 					i_17 = Class187.anIntArray2355[i_21] * 4 + 2 - i_9 / 128;
 					ObjectDefinitions objectdefinitions_23 = IndexLoaders.MAP_REGION_DECODER.method4436(-1953311803).getObjectDefinitions(Class187.anIntArray2357[i_21], 65280);
-					if (objectdefinitions_23.anIntArray5650 != null) {
+					if (objectdefinitions_23.toObjectIds != null) {
 						objectdefinitions_23 = objectdefinitions_23.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) -58);
-						if (objectdefinitions_23 == null || objectdefinitions_23.anInt5669 == -1) {
+						if (objectdefinitions_23 == null || objectdefinitions_23.mapIcon == -1) {
 							continue;
 						}
 					}
 
-					Class158.method2731(graphicalrenderer_0, class455_6, icomponentdefinitions_1, i_2, i_3, i_16, i_17, objectdefinitions_23.anInt5669, 2923328);
+					Class158.method2731(graphicalrenderer_0, class455_6, icomponentdefinitions_1, i_2, i_3, i_16, i_17, objectdefinitions_23.mapIcon, 2923328);
 				}
 
 				for (Class282_Sub29 class282_sub29_24 = (Class282_Sub29) client.aClass465_7414.method7750(-456921914); class282_sub29_24 != null; class282_sub29_24 = (Class282_Sub29) client.aClass465_7414.method7751((byte) 97)) {

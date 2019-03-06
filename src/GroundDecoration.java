@@ -229,7 +229,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	public GroundDecoration(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2, ObjectIndexLoader objectindexloader_3, ObjectDefinitions objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12) {
 		super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, objectdefinitions_4.anInt5704);
 		this.aClass123_10507 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, SceneObjectType.GROUND_DECORATION.type, i_11, i_5, i_6, this, bool_10, i_12);
-		this.aBool10506 = objectdefinitions_4.anInt5652 != 0 && !bool_10;
+		this.aBool10506 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.method13008(1, (byte) -48);
 	}
 

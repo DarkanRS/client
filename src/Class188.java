@@ -302,27 +302,27 @@ public class Class188 {
 							}
 
 							i_23 = 0;
-							if (objectdefinitions_32.aByteArray5636 != null) {
+							if (objectdefinitions_32.types != null) {
 								i_24 = -1;
 
-								for (i_14 = 0; i_14 < objectdefinitions_32.aByteArray5636.length; i_14++) {
-									if (i_6 == objectdefinitions_32.aByteArray5636[i_14]) {
+								for (i_14 = 0; i_14 < objectdefinitions_32.types.length; i_14++) {
+									if (i_6 == objectdefinitions_32.types[i_14]) {
 										i_24 = i_14;
 										break;
 									}
 								}
 
-								i_23 = objectdefinitions_32.anIntArrayArray5637[i_24].length;
+								i_23 = objectdefinitions_32.modelIds[i_24].length;
 							}
 
 							i_24 = 0;
-							if (objectdefinitions_32.aShortArray5640 != null) {
-								i_24 = objectdefinitions_32.aShortArray5640.length;
+							if (objectdefinitions_32.modifiedColors != null) {
+								i_24 = objectdefinitions_32.modifiedColors.length;
 							}
 
 							i_14 = 0;
-							if (objectdefinitions_32.aShortArray5643 != null) {
-								i_14 = objectdefinitions_32.aShortArray5643.length;
+							if (objectdefinitions_32.modifiedTextures != null) {
+								i_14 = objectdefinitions_32.modifiedTextures.length;
 							}
 
 							if ((i_8 & 0x1) == 1) {

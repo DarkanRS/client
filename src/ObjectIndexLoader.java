@@ -39,12 +39,12 @@ public class ObjectIndexLoader {
 			}
 
 			objectdefinitions_3.method7966(787748525);
-			if (objectdefinitions_3.ignoreClipOnAlternativeRoute) {
+			if (objectdefinitions_3.gateway) {
 				objectdefinitions_3.clipType = 0;
 				objectdefinitions_3.projectileClipped = false;
 			}
 
-			if (!this.showOptions && objectdefinitions_3.aBool5660) {
+			if (!this.showOptions && objectdefinitions_3.members) {
 				objectdefinitions_3.options = null;
 				objectdefinitions_3.anIntArray5707 = null;
 			}

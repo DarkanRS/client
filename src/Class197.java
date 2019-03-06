@@ -52,7 +52,7 @@ public class Class197 {
 		}
 
 		if (aClass282_Sub35Array2428[i_2] != null) {
-			player_3.decodeAppearance(aClass282_Sub35Array2428[i_2], 1925099603);
+			player_3.decodeAppearance(aClass282_Sub35Array2428[i_2]);
 		}
 
 		NUM_PLAYER_INDICES = 0;

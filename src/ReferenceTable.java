@@ -225,7 +225,7 @@ public class ReferenceTable {
 
 	static final void method5765(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 200987173).equipType;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 200987173).wearPos2;
 	}
 
 	static final void method5766(CS2Executor cs2executor_0, int i_1) {

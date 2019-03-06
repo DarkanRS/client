@@ -82,11 +82,11 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 						int i_11 = Class382.anIntArray4661[i_9];
 						int i_12 = i_10 * i_6 + i_5 * i_11 >> 14;
 						i_6 = i_6 * i_11 - i_10 * i_5 >> 14;
-						Vector3 vector3_13 = Vector3.method6623(this.method11166().aClass385_3595);
+						Vector3 vector3_13 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 						vector3_13.x += (float) i_12;
 						vector3_13.z += (float) i_6;
 						this.method11171(vector3_13);
-						vector3_13.method6624();
+						vector3_13.pushVectorStack();
 					}
 				}
 			}
@@ -99,7 +99,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	}
 
 	public final void method15904(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		Vector3 vector3_6 = Vector3.method6623(this.method11166().aClass385_3595);
+		Vector3 vector3_6 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		if (!this.aBool10398) {
 			float f_7 = (float) i_1 - vector3_6.x;
 			float f_8 = (float) i_2 - vector3_6.z;
@@ -130,7 +130,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 			this.aDouble10397 = (double) ((float) i_3 - vector3_6.y) / d_10;
 		}
 
-		vector3_6.method6624();
+		vector3_6.pushVectorStack();
 	}
 
 	boolean method13000() {

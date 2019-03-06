@@ -1652,11 +1652,11 @@ public class Class329 {
 		long long_6 = Long.MIN_VALUE;
 		ObjectDefinitions objectdefinitions_8 = IndexLoaders.MAP_REGION_DECODER.method4436(-1495690632).getObjectDefinitions(sceneobject_0.getId(1049688189), 65280);
 		long long_9 = (long) (i_1 | i_2 << 7 | sceneobject_0.method89(1466657768) << 14 | sceneobject_0.method92(-524760179) << 20 | 0x40000000);
-		if (objectdefinitions_8.anInt5652 == 0) {
+		if (objectdefinitions_8.interactable == 0) {
 			long_9 |= long_6;
 		}
 
-		if (objectdefinitions_8.anInt5687 == 1) {
+		if (objectdefinitions_8.supportsItems == 1) {
 			long_9 |= long_4;
 		}
 

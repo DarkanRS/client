@@ -140,7 +140,7 @@ public class HitbarDefinitions {
 
 	static final void method3229(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1626966641).unknownInt24;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1626966641).multiStackSize;
 	}
 
 	static void method3230(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte b_7) {

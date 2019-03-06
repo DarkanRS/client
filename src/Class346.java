@@ -83,7 +83,7 @@ public class Class346 {
 				Player player_8 = client.players[i_1] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1638773780));
 				player_8.anInt10314 = i_1;
 				if (Class197.aClass282_Sub35Array2428[i_1] != null) {
-					player_8.decodeAppearance(Class197.aClass282_Sub35Array2428[i_1], 1925099603);
+					player_8.decodeAppearance(Class197.aClass282_Sub35Array2428[i_1]);
 				}
 
 				player_8.method15791(class4_7.anInt30, true, (byte) -43);

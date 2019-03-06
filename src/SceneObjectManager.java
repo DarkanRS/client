@@ -378,10 +378,10 @@ public class SceneObjectManager {
 			}
 
 			if (bool_2) {
-				Vector3 vector3_14 = Vector3.method6623(class521_sub1_sub1_1.method11166().aClass385_3595);
+				Vector3 vector3_14 = Vector3.popVectorStackTo(class521_sub1_sub1_1.method11166().aClass385_3595);
 				vector3_14.y -= (float) s_8;
 				class521_sub1_sub1_1.method11171(vector3_14);
-				vector3_14.method6624();
+				vector3_14.pushVectorStack();
 			}
 
 			return true;

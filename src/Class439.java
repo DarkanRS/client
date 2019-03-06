@@ -28,11 +28,11 @@ public final class Class439 {
 			int i_10;
 			int i_11;
 			if (i_5 != 0 && i_5 != 2) {
-				i_10 = objectdefinitions_9.anInt5649;
-				i_11 = objectdefinitions_9.anInt5648;
+				i_10 = objectdefinitions_9.sizeY;
+				i_11 = objectdefinitions_9.sizeX;
 			} else {
-				i_10 = objectdefinitions_9.anInt5648;
-				i_11 = objectdefinitions_9.anInt5649;
+				i_10 = objectdefinitions_9.sizeX;
+				i_11 = objectdefinitions_9.sizeY;
 			}
 
 			routestrategy_8 = JS5CacheFile.method3354(i_0, i_1, i_10, i_11, SceneObjectType.WALL_STRAIGHT, 0, 1608795477);

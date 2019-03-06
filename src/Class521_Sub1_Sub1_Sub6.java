@@ -67,14 +67,14 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Scene
 	}
 
 	public Class521_Sub1_Sub1_Sub6(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2, ObjectIndexLoader objectindexloader_3, ObjectDefinitions objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15, int i_16, boolean bool_17) {
-		super(sceneobjectmanager_1, i_5, i_6, i_7, i_8, i_9, i_11, i_12, i_13, i_14, objectdefinitions_4.anInt5687 == 1, Class472.method7853(i_15, i_16, 1133726339));
+		super(sceneobjectmanager_1, i_5, i_6, i_7, i_8, i_9, i_11, i_12, i_13, i_14, objectdefinitions_4.supportsItems == 1, Class472.method7853(i_15, i_16, 1133726339));
 		this.aClass474_10542 = objectindexloader_3;
 		this.id = objectdefinitions_4.id;
 		this.aByte7968 = (byte) i_6;
 		this.aBool10536 = bool_10;
 		this.aByte10539 = (byte) i_15;
 		this.aByte10540 = (byte) i_16;
-		this.aBool10541 = objectdefinitions_4.anInt5652 != 0 && !bool_10;
+		this.aBool10541 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.aBool10543 = bool_17;
 		this.aBool10544 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10536 && Class393.preferences.aClass468_Sub2_8205.method12624((byte) -6) != 0;
 		int i_18 = 2048;

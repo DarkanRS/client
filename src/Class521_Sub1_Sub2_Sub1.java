@@ -100,7 +100,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = Vector3.method6623(this.method11166().aClass385_3595);
+		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) -112);
 		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, -387297653);
 		int i_5 = 0;
@@ -168,7 +168,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		vector3_2.method6624();
+		vector3_2.pushVectorStack();
 		Vector3 vector3_30 = this.method11166().aClass385_3595;
 		matrix44var_6.method5219(vector3_30.x, vector3_30.y - 10.0F, vector3_30.z);
 		Class285 class285_31 = Class470.method7824(true, (byte) 2);
@@ -217,19 +217,19 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 
 	int method12996(int i_1) {
 		ItemDefinitions itemdefinitions_2 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 688788238);
-		int i_3 = itemdefinitions_2.unknownInt29;
+		int i_3 = itemdefinitions_2.pickSizeShift;
 		ItemDefinitions itemdefinitions_4;
 		if (this.anInt10411 != -1) {
 			itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411, 448963833);
-			if (itemdefinitions_4.unknownInt29 > i_3) {
-				i_3 = itemdefinitions_4.unknownInt29;
+			if (itemdefinitions_4.pickSizeShift > i_3) {
+				i_3 = itemdefinitions_4.pickSizeShift;
 			}
 		}
 
 		if (this.anInt10415 != -1) {
 			itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415, 2069769929);
-			if (itemdefinitions_4.unknownInt29 > i_3) {
-				i_3 = itemdefinitions_4.unknownInt29;
+			if (itemdefinitions_4.pickSizeShift > i_3) {
+				i_3 = itemdefinitions_4.pickSizeShift;
 			}
 		}
 
@@ -247,7 +247,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = Vector3.method6623(this.method11166().aClass385_3595);
+		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) 62);
 		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, -387297653);
 		int i_5 = 0;
@@ -315,7 +315,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		vector3_2.method6624();
+		vector3_2.pushVectorStack();
 		Vector3 vector3_30 = this.method11166().aClass385_3595;
 		matrix44var_6.method5219(vector3_30.x, vector3_30.y - 10.0F, vector3_30.z);
 		Class285 class285_31 = Class470.method7824(true, (byte) -32);
@@ -355,7 +355,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = Vector3.method6623(this.method11166().aClass385_3595);
+		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) 88);
 		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, -387297653);
 		int i_5 = 0;
@@ -423,7 +423,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		vector3_2.method6624();
+		vector3_2.pushVectorStack();
 		Vector3 vector3_30 = this.method11166().aClass385_3595;
 		matrix44var_6.method5219(vector3_30.x, vector3_30.y - 10.0F, vector3_30.z);
 		Class285 class285_31 = Class470.method7824(true, (byte) -61);
@@ -503,7 +503,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		Vector3 vector3_3 = Vector3.method6623(this.method11166().aClass385_3595);
+		Vector3 vector3_3 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_4 = this.aClass206_7970.method3507(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9, (byte) -92);
 		SceneObjectNode sceneobjectnode_5 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9, -387297653);
 		int i_6 = 0;
@@ -571,7 +571,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		vector3_3.method6624();
+		vector3_3.pushVectorStack();
 		Vector3 vector3_31 = this.method11166().aClass385_3595;
 		matrix44var_7.method5219(vector3_31.x, vector3_31.y - 10.0F, vector3_31.z);
 		Class285 class285_32 = Class470.method7824(true, (byte) -5);

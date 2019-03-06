@@ -54,7 +54,7 @@ public class Class123 {
 		Class172[] arr_11 = meshrasterizer_2.method11274();
 		if ((this.aClass539_1538 == null || this.aClass539_1538.aBool7132) && (arr_10 != null || arr_11 != null)) {
 			ObjectDefinitions objectdefinitions_12 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
-			if (objectdefinitions_12.anIntArray5650 != null) {
+			if (objectdefinitions_12.toObjectIds != null) {
 				objectdefinitions_12 = objectdefinitions_12.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) -36);
 			}
 
@@ -86,7 +86,7 @@ public class Class123 {
 		if (i_2 == -1) {
 			ObjectDefinitions objectdefinitions_7 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
 			ObjectDefinitions objectdefinitions_8 = objectdefinitions_7;
-			if (objectdefinitions_7.anIntArray5650 != null) {
+			if (objectdefinitions_7.toObjectIds != null) {
 				objectdefinitions_7 = objectdefinitions_7.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 4);
 			}
 
@@ -159,7 +159,7 @@ public class Class123 {
 
 	final MeshRasterizer method2132(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, boolean bool_4, int i_5) {
 		ObjectDefinitions objectdefinitions_6 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
-		if (objectdefinitions_6.anIntArray5650 != null) {
+		if (objectdefinitions_6.toObjectIds != null) {
 			objectdefinitions_6 = objectdefinitions_6.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 31);
 		}
 

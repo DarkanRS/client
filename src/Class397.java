@@ -33,27 +33,27 @@ public class Class397 implements Interface38 {
 		class282_sub48_8.anInt8078 = i_2 << 9;
 		if (objectdefinitions_4 != null) {
 			class282_sub48_8.aClass478_8104 = objectdefinitions_4;
-			int i_9 = objectdefinitions_4.anInt5648;
-			int i_10 = objectdefinitions_4.anInt5649;
+			int i_9 = objectdefinitions_4.sizeX;
+			int i_10 = objectdefinitions_4.sizeY;
 			if (i_3 == 1 || i_3 == 3) {
-				i_9 = objectdefinitions_4.anInt5649;
-				i_10 = objectdefinitions_4.anInt5648;
+				i_9 = objectdefinitions_4.sizeY;
+				i_10 = objectdefinitions_4.sizeX;
 			}
 
 			class282_sub48_8.anInt8079 = i_9 + i_1 << 9;
 			class282_sub48_8.anInt8077 = i_10 + i_2 << 9;
-			class282_sub48_8.anInt8095 = objectdefinitions_4.anInt5653;
+			class282_sub48_8.anInt8095 = objectdefinitions_4.ambientSoundId;
 			class282_sub48_8.aBool8098 = objectdefinitions_4.aBool5696;
-			class282_sub48_8.anInt8105 = objectdefinitions_4.anInt5693 << 9;
-			class282_sub48_8.anInt8089 = objectdefinitions_4.anInt5695;
+			class282_sub48_8.anInt8105 = objectdefinitions_4.ambientSoundHearDistance << 9;
+			class282_sub48_8.anInt8089 = objectdefinitions_4.ambientSoundVolume;
 			class282_sub48_8.anInt8072 = objectdefinitions_4.anInt5667;
 			class282_sub48_8.anInt8101 = objectdefinitions_4.anInt5698;
-			class282_sub48_8.anIntArray8102 = objectdefinitions_4.anIntArray5688;
+			class282_sub48_8.anIntArray8102 = objectdefinitions_4.audioTracks;
 			class282_sub48_8.aBool8103 = objectdefinitions_4.aBool5700;
 			class282_sub48_8.anInt8094 = objectdefinitions_4.anInt5709;
 			class282_sub48_8.anInt8093 = objectdefinitions_4.anInt5708;
 			class282_sub48_8.anInt8081 = objectdefinitions_4.anInt5694 << 9;
-			if (objectdefinitions_4.anIntArray5650 != null) {
+			if (objectdefinitions_4.toObjectIds != null) {
 				class282_sub48_8.aBool8092 = true;
 				class282_sub48_8.method13426((byte) 1);
 			}

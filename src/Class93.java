@@ -132,10 +132,10 @@ public class Class93 {
 
 	static boolean method1577(SceneObject sceneobject_0, int i_1) {
 		ObjectDefinitions objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(sceneobject_0.getId(-1594739949), 65280);
-		if (objectdefinitions_2.anInt5689 == -1) {
+		if (objectdefinitions_2.mapSpriteId == -1) {
 			return true;
 		} else {
-			Class418 class418_3 = IndexLoaders.aClass427_995.method7172(objectdefinitions_2.anInt5689, -1014703371);
+			Class418 class418_3 = IndexLoaders.aClass427_995.method7172(objectdefinitions_2.mapSpriteId, -1014703371);
 			return class418_3.anInt4995 == -1 ? true : class418_3.method7015(65280);
 		}
 	}

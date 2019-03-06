@@ -1019,7 +1019,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			RsByteBuffer rsbytebuffer_22 = new RsByteBuffer(bytes_21);
 			rsbitsbuffer_0.readBytes(bytes_21, 0, i_6, 1586054229);
 			Class197.aClass282_Sub35Array2428[i_1] = rsbytebuffer_22;
-			player_2.decodeAppearance(rsbytebuffer_22, 1925099603);
+			player_2.decodeAppearance(rsbytebuffer_22);
 		}
 
 		if ((i_3 & 0x10) != 0) {

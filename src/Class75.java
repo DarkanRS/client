@@ -22,7 +22,7 @@ public final class Class75 {
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.drawPriority = ++Class86.anInt819 - 1;
 			} else {
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744 = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1995345801), 25);
-				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.decodeAppearance(Class276.aClass282_Sub35_3346, 1925099603);
+				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.decodeAppearance(Class276.aClass282_Sub35_3346);
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10314 = this.anInt740;
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10353 = client.cycles;
 				this.aClass521_Sub1_Sub1_Sub2_Sub1_744.drawPriority = ++Class86.anInt819 - 1;

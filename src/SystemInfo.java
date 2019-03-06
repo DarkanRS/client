@@ -394,7 +394,7 @@ public class SystemInfo extends Node {
 				}
 			}
 
-			Vector3 vector3_21 = Vector3.method6623(animable_0.method11166().aClass385_3595);
+			Vector3 vector3_21 = Vector3.popVectorStackTo(animable_0.method11166().aClass385_3595);
 			int i_5 = (int) vector3_21.x;
 			int i_6 = (int) vector3_21.z;
 			int i_7 = 512 * animable_0.regionBaseX[animable_0.anInt10355 - 1] + animable_0.getSize(828768449) * 256;
@@ -550,7 +550,7 @@ public class SystemInfo extends Node {
 					}
 				}
 
-				vector3_21.method6624();
+				vector3_21.pushVectorStack();
 			} else {
 				animable_0.method11172((float) i_7, vector3_21.y, (float) i_8);
 				animable_0.method15791(animable_0.anInt10361, false, (byte) -111);
@@ -561,7 +561,7 @@ public class SystemInfo extends Node {
 
 				IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
 				Class8_Sub1.anInt8515 = 0;
-				vector3_21.method6624();
+				vector3_21.pushVectorStack();
 			}
 		}
 

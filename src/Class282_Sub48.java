@@ -38,13 +38,13 @@ public class Class282_Sub48 extends Node {
 		if (this.aClass478_8104 != null) {
 			ObjectDefinitions objectdefinitions_4 = this.aClass478_8104.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 46);
 			if (objectdefinitions_4 != null) {
-				this.anInt8095 = objectdefinitions_4.anInt5653;
+				this.anInt8095 = objectdefinitions_4.ambientSoundId;
 				this.aBool8098 = objectdefinitions_4.aBool5696;
-				this.anInt8105 = objectdefinitions_4.anInt5693 << 9;
-				this.anInt8089 = objectdefinitions_4.anInt5695;
+				this.anInt8105 = objectdefinitions_4.ambientSoundHearDistance << 9;
+				this.anInt8089 = objectdefinitions_4.ambientSoundVolume;
 				this.anInt8072 = objectdefinitions_4.anInt5667;
 				this.anInt8101 = objectdefinitions_4.anInt5698;
-				this.anIntArray8102 = objectdefinitions_4.anIntArray5688;
+				this.anIntArray8102 = objectdefinitions_4.audioTracks;
 				this.aBool8103 = objectdefinitions_4.aBool5700;
 				this.anInt8094 = objectdefinitions_4.anInt5709;
 				this.anInt8093 = objectdefinitions_4.anInt5708;

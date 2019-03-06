@@ -11,13 +11,13 @@ public class Class335 {
 
 	static void method5961(int i_0) {
 		if (Class260.aClass277_3221 != null) {
-			Vector3 vector3_1 = Vector3.method6623(Class84.myPlayer.method11166().aClass385_3595);
+			Vector3 vector3_1 = Vector3.popVectorStackTo(Class84.myPlayer.method11166().aClass385_3595);
 			CoordGrid coordgrid_2 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(898248165);
 			vector3_1.x += (float) (coordgrid_2.x << 9);
 			vector3_1.z += (float) (coordgrid_2.y << 9);
 			vector3_1.subtract((float) Class260.aClass277_3221.anInt3349, vector3_1.y, (float) Class260.aClass277_3221.anInt3348);
 			float f_3 = vector3_1.magnitude();
-			vector3_1.method6624();
+			vector3_1.pushVectorStack();
 			float f_4 = 0.0F;
 			if (f_3 < (float) Class260.aClass277_3221.anInt3351) {
 				f_4 = 1.0F;

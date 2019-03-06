@@ -156,7 +156,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	public WallDecoration(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2, ObjectIndexLoader objectindexloader_3, ObjectDefinitions objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15) {
 		super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, i_11, i_12);
 		this.aClass123_10501 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, i_13, i_14, this.plane, i_6, this, bool_10, i_15);
-		this.aBool10502 = objectdefinitions_4.anInt5652 != 0 && !bool_10;
+		this.aBool10502 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.method13008(1, (byte) -98);
 	}
 

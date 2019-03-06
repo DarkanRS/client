@@ -34,22 +34,22 @@ public class Class415 {
 	}
 
 	static void method6997(GraphicalRenderer graphicalrenderer_0, ObjectDefinitions objectdefinitions_1, int i_2, int i_3, int i_4, int i_5) {
-		Class418 class418_6 = IndexLoaders.aClass427_995.method7172(objectdefinitions_1.anInt5689, -1014703371);
+		Class418 class418_6 = IndexLoaders.aClass427_995.method7172(objectdefinitions_1.mapSpriteId, -1014703371);
 		if (class418_6.anInt4995 != -1) {
-			if (objectdefinitions_1.aBool5671) {
-				i_2 += objectdefinitions_1.anInt5672;
+			if (objectdefinitions_1.adjustMapSceneRotation) {
+				i_2 += objectdefinitions_1.mapSpriteRotation;
 				i_2 &= 0x3;
 			} else {
 				i_2 = 0;
 			}
 
-			NativeSprite nativesprite_7 = class418_6.method7010(graphicalrenderer_0, i_2, objectdefinitions_1.aBool5673, (byte) 75);
+			NativeSprite nativesprite_7 = class418_6.method7010(graphicalrenderer_0, i_2, objectdefinitions_1.flipMapSprite, (byte) 75);
 			if (nativesprite_7 != null) {
-				int i_8 = objectdefinitions_1.anInt5648;
-				int i_9 = objectdefinitions_1.anInt5649;
+				int i_8 = objectdefinitions_1.sizeX;
+				int i_9 = objectdefinitions_1.sizeY;
 				if ((i_2 & 0x1) == 1) {
-					i_8 = objectdefinitions_1.anInt5649;
-					i_9 = objectdefinitions_1.anInt5648;
+					i_8 = objectdefinitions_1.sizeY;
+					i_9 = objectdefinitions_1.sizeX;
 				}
 
 				int i_10 = nativesprite_7.method228();

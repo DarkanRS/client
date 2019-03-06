@@ -509,11 +509,11 @@ public class MapRegion {
 						npc_7.regionBaseY[i_8] -= i_4;
 					}
 
-					Vector3 vector3_20 = Vector3.method6623(npc_7.method11166().aClass385_3595);
+					Vector3 vector3_20 = Vector3.popVectorStackTo(npc_7.method11166().aClass385_3595);
 					vector3_20.x -= (float) (i_3 * 512);
 					vector3_20.z -= (float) (i_4 * 512);
 					npc_7.method11171(vector3_20);
-					vector3_20.method6624();
+					vector3_20.pushVectorStack();
 				}
 			}
 		} else {
@@ -526,7 +526,7 @@ public class MapRegion {
 				Class282_Sub47 class282_sub47_9 = client.aClass282_Sub47Array7209[i_8];
 				if (class282_sub47_9 != null) {
 					NPC npc_18 = (NPC) class282_sub47_9.anObject8068;
-					Vector3 vector3_19 = Vector3.method6623(npc_18.method11166().aClass385_3595);
+					Vector3 vector3_19 = Vector3.popVectorStackTo(npc_18.method11166().aClass385_3595);
 					vector3_19.x -= (float) (i_3 * 512);
 					vector3_19.z -= (float) (i_4 * 512);
 					npc_18.method11171(vector3_19);
@@ -554,7 +554,7 @@ public class MapRegion {
 						bool_21 = true;
 					}
 
-					vector3_19.method6624();
+					vector3_19.pushVectorStack();
 				}
 			}
 
@@ -577,11 +577,11 @@ public class MapRegion {
 					player_25.regionBaseY[i_16] -= i_4;
 				}
 
-				Vector3 vector3_22 = Vector3.method6623(player_25.method11166().aClass385_3595);
+				Vector3 vector3_22 = Vector3.popVectorStackTo(player_25.method11166().aClass385_3595);
 				vector3_22.x -= (float) (i_3 * 512);
 				vector3_22.z -= (float) (i_4 * 512);
 				player_25.method11171(vector3_22);
-				vector3_22.method6624();
+				vector3_22.pushVectorStack();
 			}
 		}
 

@@ -133,7 +133,7 @@ public class Class534_Sub1 extends Class534 {
 			}
 		} else if (EnumDefinitions.method7252(class282_sub50_sub7_0.anInt9587, (byte) 0)) {
 			ObjectDefinitions objectdefinitions_6 = IndexLoaders.MAP_REGION_DECODER.method4436(-1943524543).getObjectDefinitions((int) (class282_sub50_sub7_0.aLong9584 >>> 32 & 0x7fffffffL), 65280);
-			if (objectdefinitions_6.anIntArray5650 != null) {
+			if (objectdefinitions_6.toObjectIds != null) {
 				objectdefinitions_6 = objectdefinitions_6.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 45);
 			}
 

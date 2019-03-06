@@ -1,37 +1,35 @@
 public class Vector3 {
 
-	static Vector3[] aClass385Array4669;
-	static int anInt4668;
+	static Vector3[] vectorStack;
+	static int vecStackIdx;
 	public float x;
 	public float y;
 	public float z;
-	static int anInt4670;
+	static int vectorStackSize;
 
 	static {
 		new Vector3(0.0F, 0.0F, 0.0F);
-		aClass385Array4669 = new Vector3[0];
+		vectorStack = new Vector3[0];
 	}
 
-	public static Vector3 method6623(Vector3 vector3_0) {
-		Vector3[] arr_1 = aClass385Array4669;
-		synchronized (aClass385Array4669) {
-			Vector3 vector3_2;
-			if (anInt4668 == 0) {
-				vector3_2 = new Vector3(vector3_0);
-				return vector3_2;
+	public static Vector3 popVectorStackTo(Vector3 toReturn) {
+		synchronized (vectorStack) {
+			Vector3 vector;
+			if (vecStackIdx == 0) {
+				vector = new Vector3(toReturn);
+				return vector;
 			} else {
-				aClass385Array4669[--anInt4668].copy(vector3_0);
-				vector3_2 = aClass385Array4669[anInt4668];
-				return vector3_2;
+				vectorStack[--vecStackIdx].copy(toReturn);
+				vector = vectorStack[vecStackIdx];
+				return vector;
 			}
 		}
 	}
 
-	public void method6624() {
-		Vector3[] arr_1 = aClass385Array4669;
-		synchronized (aClass385Array4669) {
-			if (anInt4668 < anInt4670 - 1) {
-				aClass385Array4669[anInt4668++] = this;
+	public void pushVectorStack() {
+		synchronized (vectorStack) {
+			if (vecStackIdx < vectorStackSize - 1) {
+				vectorStack[vecStackIdx++] = this;
 			}
 
 		}
@@ -69,7 +67,7 @@ public class Vector3 {
 	}
 
 	public static final Vector3 method6632(Vector3 vector3_0, Vector3 vector3_1) {
-		Vector3 vector3_2 = method6623(vector3_0);
+		Vector3 vector3_2 = popVectorStackTo(vector3_0);
 		vector3_2.subtract(vector3_1);
 		return vector3_2;
 	}
@@ -100,24 +98,23 @@ public class Vector3 {
 	}
 
 	public static Vector3 method6639(float f_0, float f_1, float f_2) {
-		Vector3[] arr_3 = aClass385Array4669;
-		synchronized (aClass385Array4669) {
+		synchronized (vectorStack) {
 			Vector3 vector3_4;
-			if (anInt4668 == 0) {
+			if (vecStackIdx == 0) {
 				vector3_4 = new Vector3(f_0, f_1, f_2);
 				return vector3_4;
 			} else {
-				aClass385Array4669[--anInt4668].set(f_0, f_1, f_2);
-				vector3_4 = aClass385Array4669[anInt4668];
+				vectorStack[--vecStackIdx].set(f_0, f_1, f_2);
+				vector3_4 = vectorStack[vecStackIdx];
 				return vector3_4;
 			}
 		}
 	}
 
-	public static void method6643(int i_0) {
-		anInt4670 = i_0;
-		aClass385Array4669 = new Vector3[i_0];
-		anInt4668 = 0;
+	public static void initVectorStack(int size) {
+		vectorStackSize = size;
+		vectorStack = new Vector3[size];
+		vecStackIdx = 0;
 	}
 
 	public final void method6649(Matrix44Var matrix44var_1) {

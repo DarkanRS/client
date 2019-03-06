@@ -91,7 +91,7 @@ final class Class82 implements Interface11 {
 				}
 
 				boolean bool_19 = false;
-				if (Class84.myPlayer.anInt10559 != 0 && player_10.anInt10559 != 0 && player_10.anInt10559 == Class84.myPlayer.anInt10559) {
+				if (Class84.myPlayer.teamId != 0 && player_10.teamId != 0 && player_10.teamId == Class84.myPlayer.teamId) {
 					bool_19 = true;
 				}
 

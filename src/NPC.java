@@ -162,11 +162,11 @@ public class NPC extends Animable {
 		this.anInt10366 = 0;
 		this.regionBaseX[0] = i_2;
 		this.regionBaseY[0] = i_3;
-		Vector3 vector3_10 = Vector3.method6623(this.method11166().aClass385_3595);
+		Vector3 vector3_10 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		vector3_10.x = (float) ((i_5 << 8) + (this.regionBaseX[0] << 9));
 		vector3_10.z = (float) ((i_5 << 8) + (this.regionBaseY[0] << 9));
 		this.method11171(vector3_10);
-		vector3_10.method6624();
+		vector3_10.pushVectorStack();
 		if (this.aClass539_10369 != null) {
 			this.aClass539_10369.method11505();
 		}

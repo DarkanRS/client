@@ -339,11 +339,11 @@ public class Class291 {
 						if (class282_sub49_14 != null) {
 							for (int i_4 = 0; i_4 < class282_sub49_14.anIntArray8109.length; i_4++) {
 								ObjectDefinitions objectdefinitions_12 = aClass474_3455.getObjectDefinitions(class282_sub49_14.anIntArray8109[i_4], 65280);
-								i_13 = objectdefinitions_12.anInt5669;
-								if (objectdefinitions_12.anIntArray5650 != null) {
+								i_13 = objectdefinitions_12.mapIcon;
+								if (objectdefinitions_12.toObjectIds != null) {
 									objectdefinitions_12 = objectdefinitions_12.method8013(anInterface42_3458, (byte) -58);
 									if (objectdefinitions_12 != null) {
-										i_13 = objectdefinitions_12.anInt5669;
+										i_13 = objectdefinitions_12.mapIcon;
 									}
 								}
 
@@ -358,11 +358,11 @@ public class Class291 {
 					} else {
 						Integer integer_3 = (Integer) object_2;
 						ObjectDefinitions objectdefinitions_10 = aClass474_3455.getObjectDefinitions(integer_3.intValue(), 65280);
-						int i_5 = objectdefinitions_10.anInt5669;
-						if (objectdefinitions_10.anIntArray5650 != null) {
+						int i_5 = objectdefinitions_10.mapIcon;
+						if (objectdefinitions_10.toObjectIds != null) {
 							objectdefinitions_10 = objectdefinitions_10.method8013(anInterface42_3458, (byte) 19);
 							if (objectdefinitions_10 != null) {
-								i_5 = objectdefinitions_10.anInt5669;
+								i_5 = objectdefinitions_10.mapIcon;
 							}
 						}
 
@@ -396,11 +396,11 @@ public class Class291 {
 
 							for (i_13 = 0; i_13 < class269_18.anIntArray3313.length; i_13++) {
 								ObjectDefinitions objectdefinitions_16 = aClass474_3455.getObjectDefinitions(class269_18.anIntArray3313[i_13], 65280);
-								int i_8 = objectdefinitions_16.anInt5669;
-								if (objectdefinitions_16.anIntArray5650 != null) {
+								int i_8 = objectdefinitions_16.mapIcon;
+								if (objectdefinitions_16.toObjectIds != null) {
 									objectdefinitions_16 = objectdefinitions_16.method8013(anInterface42_3458, (byte) -18);
 									if (objectdefinitions_16 != null) {
-										i_8 = objectdefinitions_16.anInt5669;
+										i_8 = objectdefinitions_16.mapIcon;
 									}
 								}
 
@@ -479,9 +479,9 @@ public class Class291 {
 				int i_14 = bytes_9[i_13] & 0x3f;
 				if (i_14 == SceneObjectType.WALL_STRAIGHT.type || i_14 == SceneObjectType.WALL_WHOLE_CORNER.type || i_14 == SceneObjectType.WALL_STRAIGHT_CORNER.type || i_14 == SceneObjectType.WALL_INTERACT.type) {
 					ObjectDefinitions objectdefinitions_15 = aClass474_3455.getObjectDefinitions(ints_8[i_13], 65280);
-					if (objectdefinitions_15.anInt5689 == -1) {
+					if (objectdefinitions_15.mapSpriteId == -1) {
 						int i_16 = -3355444;
-						if (objectdefinitions_15.anInt5652 == 1) {
+						if (objectdefinitions_15.interactable == 1) {
 							i_16 = -3407872;
 						}
 
@@ -770,16 +770,16 @@ public class Class291 {
 		if (ints_5 != null) {
 			for (int i_7 = 0; i_7 < ints_5.length; i_7++) {
 				ObjectDefinitions objectdefinitions_8 = aClass474_3455.getObjectDefinitions(ints_5[i_7], 65280);
-				int i_9 = objectdefinitions_8.anInt5689;
+				int i_9 = objectdefinitions_8.mapSpriteId;
 				if (i_9 != -1) {
 					Class418 class418_10 = aClass427_3457.method7172(i_9, -1014703371);
-					NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.aBool5671 ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.aBool5673 ? objectdefinitions_8.aBool5674 : false, (byte) 70);
+					NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.adjustMapSceneRotation ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.flipMapSprite ? objectdefinitions_8.inverted : false, (byte) 70);
 					if (nativesprite_11 != null) {
 						int i_12 = i_3 * nativesprite_11.method228() >> 2;
 						int i_13 = i_4 * nativesprite_11.method2748() >> 2;
 						if (class418_10.aBool4996) {
-							int i_14 = objectdefinitions_8.anInt5648;
-							int i_15 = objectdefinitions_8.anInt5649;
+							int i_14 = objectdefinitions_8.sizeX;
+							int i_15 = objectdefinitions_8.sizeY;
 							if ((bytes_6[i_7] >> 6 & 0x1) == 1) {
 								int i_16 = i_14;
 								i_14 = i_15;
