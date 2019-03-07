@@ -28,9 +28,9 @@ public final class CS2Runner {
 		Class82.method1455(icomponentdefinitions_3, interface_4, cs2executor_0, -1784890209);
 	}
 
-	static Class282_Sub30 method11127(int i_0, boolean bool_1, int i_2) {
-		long long_3 = (long) (i_0 | (bool_1 ? Integer.MIN_VALUE : 0));
-		return (Class282_Sub30) Class282_Sub30.aClass465_7711.get(long_3);
+	static ItemContainer getItemContainer(int key, boolean negativeKey) {
+		long longKey = (long) (key | (negativeKey ? Integer.MIN_VALUE : 0));
+		return (ItemContainer) ItemContainer.CONTAINER_MAP.get(longKey);
 	}
 
 	static final void method11128(CS2Executor cs2executor_0, int i_1) {

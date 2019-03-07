@@ -945,7 +945,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		Class282_Sub50_Sub12 class282_sub50_sub12_3 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.get((long) i_0 << 56 | long_1);
 		if (class282_sub50_sub12_3 == null) {
 			class282_sub50_sub12_3 = new Class282_Sub50_Sub12(i_0, long_1);
-			Class282_Sub50_Sub12.aClass465_9667.method7765(class282_sub50_sub12_3, class282_sub50_sub12_3.data);
+			Class282_Sub50_Sub12.aClass465_9667.put(class282_sub50_sub12_3, class282_sub50_sub12_3.data);
 		}
 
 		return class282_sub50_sub12_3;

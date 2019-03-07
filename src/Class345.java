@@ -166,7 +166,7 @@ public class Class345 {
 
 	static void method6143(int i_0, int i_1) {
 		Class105.anInt1069 = i_0;
-		Class282_Sub30.aClass229_7712.method3859(-1205784337);
+		ItemContainer.aClass229_7712.method3859(-1205784337);
 	}
 
 	static OutgoingLoginPacket[] getOutgoingLoginPackets() {

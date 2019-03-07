@@ -489,9 +489,9 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Scene
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class280.method4975(string_2, (byte) -104) ? 1 : 0;
 	}
 
-	public static int method16125(int i_0, int i_1, boolean bool_2, int i_3) {
-		Class282_Sub30 class282_sub30_4 = CS2Runner.method11127(i_0, bool_2, -1144151775);
-		return class282_sub30_4 == null ? 0 : (i_1 >= 0 && i_1 < class282_sub30_4.anIntArray7709.length ? class282_sub30_4.anIntArray7709[i_1] : 0);
+	public static int getAmountAtSlot(int key, int slot, boolean negativeKey, int i_3) {
+		ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+		return container == null ? 0 : (slot >= 0 && slot < container.amounts.length ? container.amounts[slot] : 0);
 	}
 
 }

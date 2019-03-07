@@ -418,9 +418,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		int i_4 = -1;
 
-		for (int i_5 = 0; i_5 < inventorydef_2.anInt10276; i_5++) {
-			if (i_3 == inventorydef_2.anIntArray10274[i_5]) {
-				i_4 = inventorydef_2.anIntArray10275[i_5];
+		for (int i_5 = 0; i_5 < inventorydef_2.contentSize; i_5++) {
+			if (i_3 == inventorydef_2.itemIds[i_5]) {
+				i_4 = inventorydef_2.amounts[i_5];
 				break;
 			}
 		}

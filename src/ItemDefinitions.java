@@ -443,7 +443,7 @@ public class ItemDefinitions implements Definition {
 						obj_8 = new Class282_Sub38(stream.readInt());
 					}
 
-					this.cs2Map.method7765((Node) obj_8, (long) i_7);
+					this.cs2Map.put((Node) obj_8, (long) i_7);
 				}
 			}
 		}

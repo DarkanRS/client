@@ -59,7 +59,7 @@ public class Class3 implements Interface42 {
 			class282_sub45_4.aLong8066 = Class169.time() + 500L;
 		} else {
 			class282_sub45_4 = new Class282_Sub45(Class169.time() + 500L);
-			this.aClass465_28.method7765(class282_sub45_4, (long) i_1);
+			this.aClass465_28.put(class282_sub45_4, (long) i_1);
 		}
 
 	}
@@ -135,7 +135,7 @@ public class Class3 implements Interface42 {
 			}
 		} else {
 			class282_sub45_4 = new Class282_Sub45(4611686018427387905L);
-			this.aClass465_28.method7765(class282_sub45_4, (long) i_1);
+			this.aClass465_28.put(class282_sub45_4, (long) i_1);
 		}
 
 	}

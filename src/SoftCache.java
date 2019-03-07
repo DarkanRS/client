@@ -35,7 +35,7 @@ public final class SoftCache {
 			}
 
 			Class282_Sub50_Sub1_Sub1 class282_sub50_sub1_sub1_7 = new Class282_Sub50_Sub1_Sub1(object_1, i_4);
-			this.aClass465_2854.method7765(class282_sub50_sub1_sub1_7, long_2);
+			this.aClass465_2854.put(class282_sub50_sub1_sub1_7, long_2);
 			this.aClass477_2855.method7936(class282_sub50_sub1_sub1_7, -1738910950);
 			class282_sub50_sub1_sub1_7.key = 0L;
 		}
@@ -51,7 +51,7 @@ public final class SoftCache {
 				}
 			} else if (++class282_sub50_sub1_3.key > (long) i_1) {
 				Class282_Sub50_Sub1_Sub2 class282_sub50_sub1_sub2_4 = new Class282_Sub50_Sub1_Sub2(class282_sub50_sub1_3.method14692(-264417270), class282_sub50_sub1_3.anInt9451);
-				this.aClass465_2854.method7765(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3.data);
+				this.aClass465_2854.put(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3.data);
 				Class224.method3782(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3, -782987779);
 				class282_sub50_sub1_3.remove();
 				class282_sub50_sub1_3.method13452();
@@ -120,7 +120,7 @@ public final class SoftCache {
 			} else {
 				if (class282_sub50_sub1_3.method14691(279512561)) {
 					Class282_Sub50_Sub1_Sub1 class282_sub50_sub1_sub1_5 = new Class282_Sub50_Sub1_Sub1(object_4, class282_sub50_sub1_3.anInt9451);
-					this.aClass465_2854.method7765(class282_sub50_sub1_sub1_5, class282_sub50_sub1_3.data);
+					this.aClass465_2854.put(class282_sub50_sub1_sub1_5, class282_sub50_sub1_3.data);
 					this.aClass477_2855.method7936(class282_sub50_sub1_sub1_5, -1738910950);
 					class282_sub50_sub1_sub1_5.key = 0L;
 					class282_sub50_sub1_3.remove();

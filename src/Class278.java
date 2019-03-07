@@ -90,7 +90,7 @@ public abstract class Class278 {
 						}
 					}
 
-					this.aClass465_3358.method7765((Node) obj_4, (long) i_2);
+					this.aClass465_3358.put((Node) obj_4, (long) i_2);
 					return (Class282_Sub41) obj_4;
 				}
 			}

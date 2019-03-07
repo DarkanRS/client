@@ -1,9 +1,9 @@
-public class Class282_Sub30 extends Node {
+public class ItemContainer extends Node {
 
-	static IterableNodeMap aClass465_7711 = new IterableNodeMap(32);
+	static IterableNodeMap CONTAINER_MAP = new IterableNodeMap(32);
 	static SoftCache aClass229_7712 = new SoftCache(11);
-	int[] anIntArray7710 = new int[] { -1 };
-	int[] anIntArray7709 = new int[1];
+	int[] itemIds = new int[] { -1 };
+	int[] amounts = new int[1];
 
 	final MeshRasterizer method12429(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, int i_4, boolean bool_5, PlayerAppearance playerappearance_6, int i_7) {
 		MeshRasterizer meshrasterizer_8 = null;
@@ -13,14 +13,14 @@ public class Class282_Sub30 extends Node {
 			renderanimdefs_10 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_4, (byte) 66);
 		}
 
-		int[] ints_11 = this.anIntArray7710;
+		int[] ints_11 = this.itemIds;
 		if (renderanimdefs_10 != null && renderanimdefs_10.anIntArray2811 != null) {
 			ints_11 = new int[renderanimdefs_10.anIntArray2811.length];
 
 			for (int i_12 = 0; i_12 < renderanimdefs_10.anIntArray2811.length; i_12++) {
 				int i_13 = renderanimdefs_10.anIntArray2811[i_12];
-				if (i_13 >= 0 && i_13 < this.anIntArray7710.length) {
-					ints_11[i_12] = this.anIntArray7710[i_13];
+				if (i_13 >= 0 && i_13 < this.itemIds.length) {
+					ints_11[i_12] = this.itemIds[i_13];
 				} else {
 					ints_11[i_12] = -1;
 				}

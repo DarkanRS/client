@@ -1034,7 +1034,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 					continue;
 				}
 
-				this.aClass465_9694.method7765(class282_sub14_10, (long) i_9);
+				this.aClass465_9694.put(class282_sub14_10, (long) i_9);
 			}
 
 			if (!class282_sub14_10.method12216(class250_3, (byte[]) class282_sub47_8.anObject8068, ints_7, -1083943154)) {

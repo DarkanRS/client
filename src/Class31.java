@@ -102,7 +102,7 @@ public class Class31 implements IndexLoader {
 			Class351.method6196(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
 		}
 
-		client.aClass465_7442.method7765(class282_sub44_1, (long) i_0);
+		client.aClass465_7442.put(class282_sub44_1, (long) i_0);
 		ClipMap.method6007(class282_sub44_1.anInt8063, ints_2, -1937827624);
 		IComponentDefinitions icomponentdefinitions_6 = Class117.method1981(i_0, (byte) 76);
 		if (icomponentdefinitions_6 != null) {

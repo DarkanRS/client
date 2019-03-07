@@ -152,18 +152,18 @@ public class Class252 implements Interface43 {
 	}
 
 	public static int method4327(int i_0, int i_1, boolean bool_2, boolean bool_3, byte b_4) {
-		Class282_Sub30 class282_sub30_5 = CS2Runner.method11127(i_0, bool_3, 1863818579);
+		ItemContainer class282_sub30_5 = CS2Runner.getItemContainer(i_0, bool_3);
 		if (class282_sub30_5 == null) {
 			return 0;
 		} else {
 			int i_6 = 0;
 
-			for (int i_7 = 0; i_7 < class282_sub30_5.anIntArray7710.length; i_7++) {
-				if (class282_sub30_5.anIntArray7710[i_7] >= 0 && class282_sub30_5.anIntArray7710[i_7] < IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount) {
-					ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub30_5.anIntArray7710[i_7], 1670357313);
+			for (int i_7 = 0; i_7 < class282_sub30_5.itemIds.length; i_7++) {
+				if (class282_sub30_5.itemIds[i_7] >= 0 && class282_sub30_5.itemIds[i_7] < IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount) {
+					ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub30_5.itemIds[i_7], 1670357313);
 					int i_9 = itemdefinitions_8.method7099(i_1, IndexLoaders.ITEM_DEFAULTS.method7069(i_1, (byte) 0).anInt5337, -304171855);
 					if (bool_2) {
-						i_6 += i_9 * class282_sub30_5.anIntArray7709[i_7];
+						i_6 += i_9 * class282_sub30_5.amounts[i_7];
 					} else {
 						i_6 += i_9;
 					}

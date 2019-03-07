@@ -796,7 +796,7 @@ public class NPCDefinitions {
 							obj_8 = new Class282_Sub38(rsbytebuffer_1.readInt());
 						}
 
-						this.aClass465_4896.method7765((Node) obj_8, (long) i_9);
+						this.aClass465_4896.put((Node) obj_8, (long) i_9);
 					}
 				}
 			} else {

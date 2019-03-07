@@ -50,7 +50,7 @@ public final class Class153 {
 			}
 		} else {
 			class282_sub38_4 = new Class282_Sub38(i_2);
-			this.aClass465_1963.method7765(class282_sub38_4, (long) i_1);
+			this.aClass465_1963.put(class282_sub38_4, (long) i_1);
 		}
 
 	}

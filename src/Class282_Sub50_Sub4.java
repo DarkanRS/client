@@ -21,7 +21,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 					obj_8 = new Class282_Sub38(rsbytebuffer_1.readInt());
 				}
 
-				this.aClass465_9518.method7765((Node) obj_8, (long) i_7);
+				this.aClass465_9518.put((Node) obj_8, (long) i_7);
 			}
 		}
 

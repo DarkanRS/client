@@ -419,7 +419,7 @@ public class IComponentDefinitions {
 			for (i_12 = 0; i_12 < i_11; i_12++) {
 				i_13 = rsbytebuffer_1.read24BitUnsignedInteger();
 				i_14 = rsbytebuffer_1.readInt();
-				this.aClass465_1365.method7765(new Class282_Sub38(i_14), (long) i_13);
+				this.aClass465_1365.put(new Class282_Sub38(i_14), (long) i_13);
 			}
 
 			i_12 = rsbytebuffer_1.readUnsignedByte();
@@ -427,7 +427,7 @@ public class IComponentDefinitions {
 			for (i_13 = 0; i_13 < i_12; i_13++) {
 				i_14 = rsbytebuffer_1.read24BitUnsignedInteger();
 				String string_15 = rsbytebuffer_1.readGJString(162017967);
-				this.aClass465_1365.method7765(new Class282_Sub47(string_15), (long) i_14);
+				this.aClass465_1365.put(new Class282_Sub47(string_15), (long) i_14);
 			}
 		}
 
@@ -610,11 +610,11 @@ public class IComponentDefinitions {
 	public void method1999(int i_1, int i_2, int i_3) {
 		if (this.aClass465_1365 == null) {
 			this.aClass465_1365 = new IterableNodeMap(16);
-			this.aClass465_1365.method7765(new Class282_Sub38(i_2), (long) i_1);
+			this.aClass465_1365.put(new Class282_Sub38(i_2), (long) i_1);
 		} else {
 			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.get((long) i_1);
 			if (class282_sub38_4 == null) {
-				this.aClass465_1365.method7765(new Class282_Sub38(i_2), (long) i_1);
+				this.aClass465_1365.put(new Class282_Sub38(i_2), (long) i_1);
 			} else {
 				class282_sub38_4.anInt8002 = i_2;
 			}
@@ -625,14 +625,14 @@ public class IComponentDefinitions {
 	public void method2000(int i_1, String string_2, int i_3) {
 		if (this.aClass465_1365 == null) {
 			this.aClass465_1365 = new IterableNodeMap(16);
-			this.aClass465_1365.method7765(new Class282_Sub47(string_2), (long) i_1);
+			this.aClass465_1365.put(new Class282_Sub47(string_2), (long) i_1);
 		} else {
 			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.get((long) i_1);
 			if (class282_sub47_4 != null) {
 				class282_sub47_4.remove();
 			}
 
-			this.aClass465_1365.method7765(new Class282_Sub47(string_2), (long) i_1);
+			this.aClass465_1365.put(new Class282_Sub47(string_2), (long) i_1);
 		}
 
 	}

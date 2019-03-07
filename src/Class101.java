@@ -305,19 +305,19 @@ public abstract class Class101 {
 		if (bool_1) {
 			return 0;
 		} else {
-			Class282_Sub30 class282_sub30_3 = CS2Runner.method11127(i_0, bool_1, 1085109812);
+			ItemContainer class282_sub30_3 = CS2Runner.getItemContainer(i_0, bool_1);
 			if (class282_sub30_3 == null) {
-				return IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 6976).anInt10277;
+				return IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
 			} else {
 				int i_4 = 0;
 
-				for (int i_5 = 0; i_5 < class282_sub30_3.anIntArray7710.length; i_5++) {
-					if (class282_sub30_3.anIntArray7710[i_5] == -1) {
+				for (int i_5 = 0; i_5 < class282_sub30_3.itemIds.length; i_5++) {
+					if (class282_sub30_3.itemIds[i_5] == -1) {
 						++i_4;
 					}
 				}
 
-				i_4 += IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 24410).anInt10277 - class282_sub30_3.anIntArray7710.length;
+				i_4 += IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 24410).maxSize - class282_sub30_3.itemIds.length;
 				return i_4;
 			}
 		}

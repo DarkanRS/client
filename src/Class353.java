@@ -47,7 +47,7 @@ public class Class353 {
 		Class282_Sub29 class282_sub29_7 = (Class282_Sub29) client.aClass465_7414.get(long_5);
 		if (class282_sub29_7 == null) {
 			class282_sub29_7 = new Class282_Sub29();
-			client.aClass465_7414.method7765(class282_sub29_7, long_5);
+			client.aClass465_7414.put(class282_sub29_7, long_5);
 			class282_sub29_7.aClass482_7708.append(class282_sub34_3, 64810777);
 		} else {
 			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_3.anInt7853, 1474868024);

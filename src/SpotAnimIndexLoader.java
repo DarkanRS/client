@@ -186,9 +186,9 @@ public class SpotAnimIndexLoader {
 
 	}
 
-	public static int method8861(int i_0, int i_1, boolean bool_2, int i_3) {
-		Class282_Sub30 class282_sub30_4 = CS2Runner.method11127(i_0, bool_2, 1815831231);
-		return class282_sub30_4 == null ? -1 : (i_1 >= 0 && i_1 < class282_sub30_4.anIntArray7710.length ? class282_sub30_4.anIntArray7710[i_1] : -1);
+	public static int getItemIdAtSlot(int key, int slot, boolean negativeKey, int i_3) {
+		ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+		return container == null ? -1 : (slot >= 0 && slot < container.itemIds.length ? container.itemIds[slot] : -1);
 	}
 
 	public static void method8862(int i_0, int i_1, int i_2, boolean bool_3, int i_4) {

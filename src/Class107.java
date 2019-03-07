@@ -54,7 +54,7 @@ public class Class107 {
 				for (int i_7 = 0; i_7 < this.aClass282_Sub21Array1079.length; i_7++) {
 					Class282_Sub21 class282_sub21_10 = this.aClass282_Sub21Array1079[i_7];
 					if (class282_sub21_10 != null) {
-						this.aClass465_1080.method7765(class282_sub21_10, class282_sub21_10.data);
+						this.aClass465_1080.put(class282_sub21_10, class282_sub21_10.data);
 					}
 				}
 
@@ -69,7 +69,7 @@ public class Class107 {
 
 			class282_sub21_3.anInt7675 = i_1;
 			class282_sub21_3.aString7674 = string_2;
-			this.aClass465_1080.method7765(class282_sub21_3, this.anInterface11_1078.method79(string_2, 276122066));
+			this.aClass465_1080.put(class282_sub21_3, this.anInterface11_1078.method79(string_2, 276122066));
 			this.aClass282_Sub21Array1079[i_1] = class282_sub21_3;
 		}
 	}

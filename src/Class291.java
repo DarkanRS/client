@@ -58,7 +58,7 @@ public class Class291 {
 		if (ints_8 != null) {
 			for (int i_9 = 0; i_9 < ints_8.length; i_9++) {
 				Class282_Sub50_Sub6 class282_sub50_sub6_10 = Class52.method1087(aClass317_3460, i_7, ints_8[i_9], 1237767362);
-				aClass465_3461.method7765(class282_sub50_sub6_10, (long) class282_sub50_sub6_10.anInt9536);
+				aClass465_3461.put(class282_sub50_sub6_10, (long) class282_sub50_sub6_10.anInt9536);
 			}
 		}
 

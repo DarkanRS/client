@@ -95,7 +95,7 @@ public class Class397 implements Interface38 {
 			class282_sub48_8.anInt8094 = 256;
 			class282_sub48_8.anInt8093 = 256;
 			class282_sub48_8.anInt8081 = 0;
-			Class282_Sub48.aClass465_8075.method7765(class282_sub48_8, (long) player_6.anInt10314);
+			Class282_Sub48.aClass465_8075.put(class282_sub48_8, (long) player_6.anInt10314);
 		}
 
 	}

@@ -293,7 +293,7 @@ public class Class117 {
 	}
 
 	public static int method1980(int i_0, int i_1, boolean bool_2, int i_3) {
-		Class282_Sub30 class282_sub30_4 = CS2Runner.method11127(i_0, bool_2, -2136766081);
+		ItemContainer class282_sub30_4 = CS2Runner.getItemContainer(i_0, bool_2);
 		if (class282_sub30_4 == null) {
 			return 0;
 		} else if (i_1 == -1) {
@@ -301,9 +301,9 @@ public class Class117 {
 		} else {
 			int i_5 = 0;
 
-			for (int i_6 = 0; i_6 < class282_sub30_4.anIntArray7709.length; i_6++) {
-				if (class282_sub30_4.anIntArray7710[i_6] == i_1) {
-					i_5 += class282_sub30_4.anIntArray7709[i_6];
+			for (int i_6 = 0; i_6 < class282_sub30_4.amounts.length; i_6++) {
+				if (class282_sub30_4.itemIds[i_6] == i_1) {
+					i_5 += class282_sub30_4.amounts[i_6];
 				}
 			}
 

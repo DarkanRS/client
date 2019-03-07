@@ -75,7 +75,7 @@ public class Class361 {
 						class282_sub50_sub15_3 = new Class282_Sub50_Sub15(class282_sub50_sub7_0.aString9588);
 					}
 
-					Class20.aClass465_172.method7765(class282_sub50_sub15_3, long_4);
+					Class20.aClass465_172.put(class282_sub50_sub15_3, long_4);
 					++Class20.anInt170;
 				}
 			} else {

@@ -22,7 +22,7 @@ public final class Class155 {
 			class282_sub38_4.anInt8002 = i_2;
 		} else {
 			class282_sub38_4 = new Class282_Sub38(i_2);
-			this.aClass465_1969.method7765(class282_sub38_4, (long) i_1);
+			this.aClass465_1969.put(class282_sub38_4, (long) i_1);
 		}
 
 	}

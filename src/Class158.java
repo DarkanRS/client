@@ -53,7 +53,7 @@ public abstract class Class158 {
 
 	static final void method2729(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2, (short) 9738).anInt10277;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2, (short) 9738).maxSize;
 	}
 
 	public static int windowedMode() {

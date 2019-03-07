@@ -98,7 +98,7 @@ public final class Class459 {
 				npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1073098599));
 				npc_6.anInt10314 = i_3;
 				class282_sub47_5 = new Class282_Sub47(npc_6);
-				client.NPCS.method7765(class282_sub47_5, (long) i_3);
+				client.NPCS.put(class282_sub47_5, (long) i_3);
 				client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
 				bool_4 = true;
 			}

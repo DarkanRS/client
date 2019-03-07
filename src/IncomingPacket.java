@@ -5,7 +5,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4504 = new IncomingPacket(2, -1);
 	public static IncomingPacket aClass375_4354 = new IncomingPacket(3, 7);
 	public static IncomingPacket aClass375_4450 = new IncomingPacket(4, -2);
-	public static IncomingPacket aClass375_4356 = new IncomingPacket(5, -2);
+	public static IncomingPacket SEND_ITEMS = new IncomingPacket(5, -2);
 	public static IncomingPacket NPC_UPDATE = new IncomingPacket(6, -2);
 	public static IncomingPacket CONFIG_2 = new IncomingPacket(7, 8);
 	public static IncomingPacket aClass375_4381 = new IncomingPacket(8, 6);

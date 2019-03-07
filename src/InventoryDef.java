@@ -1,9 +1,9 @@
 public class InventoryDef extends CacheableNode implements Definition {
 
-	public int anInt10276 = 0;
-	public int anInt10277 = 0;
-	public int[] anIntArray10274;
-	public int[] anIntArray10275;
+	public int contentSize = 0;
+	public int maxSize = 0;
+	public int[] itemIds;
+	public int[] amounts;
 
 	void method15690(RsByteBuffer rsbytebuffer_1, int i_2) {
 		while (true) {
@@ -18,15 +18,19 @@ public class InventoryDef extends CacheableNode implements Definition {
 
 	void method15691(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
 		if (i_2 == 2) {
-			this.anInt10277 = rsbytebuffer_1.readUnsignedShort();
+			this.maxSize = rsbytebuffer_1.readUnsignedShort();
+			if (this.maxSize == 556) {
+				System.out.println("Bank inventorydef increased to 800.");
+				this.maxSize = 800;
+			}
 		} else if (i_2 == 4) {
-			this.anInt10276 = rsbytebuffer_1.readUnsignedByte();
-			this.anIntArray10274 = new int[this.anInt10276];
-			this.anIntArray10275 = new int[this.anInt10276];
+			this.contentSize = rsbytebuffer_1.readUnsignedByte();
+			this.itemIds = new int[this.contentSize];
+			this.amounts = new int[this.contentSize];
 
-			for (int i_4 = 0; i_4 < this.anInt10276; i_4++) {
-				this.anIntArray10274[i_4] = rsbytebuffer_1.readUnsignedShort();
-				this.anIntArray10275[i_4] = rsbytebuffer_1.readUnsignedShort();
+			for (int i_4 = 0; i_4 < this.contentSize; i_4++) {
+				this.itemIds[i_4] = rsbytebuffer_1.readUnsignedShort();
+				this.amounts[i_4] = rsbytebuffer_1.readUnsignedShort();
 			}
 		}
 

@@ -866,7 +866,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		boolean bool_11;
 		if ((i_3 & 0x200) != 0) {
 			i_6 = rsbitsbuffer_0.readUnsignedShort();
-			i_7 = rsbitsbuffer_0.readIntV2(-534504239);
+			i_7 = rsbitsbuffer_0.readIntV2();
 			if (i_6 == 65535) {
 				i_6 = -1;
 			}
@@ -950,7 +950,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if ((i_3 & 0x40000) != 0) {
 			i_6 = rsbitsbuffer_0.readShortLE128();
-			i_7 = rsbitsbuffer_0.readIntV2(-1265526717);
+			i_7 = rsbitsbuffer_0.readIntV2();
 			if (i_6 == 65535) {
 				i_6 = -1;
 			}

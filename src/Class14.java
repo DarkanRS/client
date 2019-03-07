@@ -165,7 +165,7 @@ public class Class14 {
 			boolean bool_24;
 			if ((i_4 & 0x1000000) != 0) {
 				i_14 = rsbitsbuffer_0.readUnsignedShort128();
-				i_6 = rsbitsbuffer_0.readIntV2(-309073722);
+				i_6 = rsbitsbuffer_0.readIntV2();
 				if (i_14 == 65535) {
 					i_14 = -1;
 				}
@@ -419,7 +419,7 @@ public class Class14 {
 
 			if ((i_4 & 0x20) != 0) {
 				i_14 = rsbitsbuffer_0.readUnsignedShort();
-				i_6 = rsbitsbuffer_0.readIntV2(-1710167524);
+				i_6 = rsbitsbuffer_0.readIntV2();
 				if (i_14 == 65535) {
 					i_14 = -1;
 				}

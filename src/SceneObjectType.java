@@ -74,7 +74,7 @@ public class SceneObjectType implements Interface43 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = SpotAnimIndexLoader.method8861(i_2, i_3, false, 946854305);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = SpotAnimIndexLoader.getItemIdAtSlot(i_2, i_3, false, 946854305);
 	}
 
 }

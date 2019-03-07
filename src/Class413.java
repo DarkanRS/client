@@ -54,7 +54,7 @@ public class Class413 implements Interface43 {
 	}
 
 	static void method6939(byte b_0) {
-		Class282_Sub30.aClass229_7712.method3859(1403175614);
+		ItemContainer.aClass229_7712.method3859(1403175614);
 	}
 
 	static final void method6940(CS2Executor cs2executor_0, int i_1) {

@@ -336,7 +336,7 @@ public class ObjectDefinitions {
 						obj_8 = new Class282_Sub38(buffer.readInt());
 					}
 
-					this.aClass465_5668.method7765((Node) obj_8, (long) i_7);
+					this.aClass465_5668.put((Node) obj_8, (long) i_7);
 				}
 			}
 		} else {

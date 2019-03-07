@@ -209,7 +209,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				obj_4 = this.standardRequester.method5515(this.indexId, i_1, (byte) 2, false, (byte) 54);
 			}
 
-			this.aClass465_7796.method7765((Node) obj_4, (long) i_1);
+			this.aClass465_7796.put((Node) obj_4, (long) i_1);
 		}
 
 		if (((JS5CacheRequest) obj_4).incomplete) {
@@ -262,7 +262,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 					((JS5CacheRequest) obj_4).remove();
 					if (((JS5CacheRequest) obj_4).aBool9637 && !this.standardRequester.method5517(-439719120)) {
 						Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1_16 = this.standardRequester.method5515(this.indexId, i_1, (byte) 2, true, (byte) -66);
-						this.aClass465_7796.method7765(class282_sub50_sub11_sub1_16, (long) i_1);
+						this.aClass465_7796.put(class282_sub50_sub11_sub1_16, (long) i_1);
 					}
 
 					return null;

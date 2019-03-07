@@ -41,7 +41,7 @@ public class Class357 implements Interface3 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class521_Sub1_Sub1_Sub6.method16125(i_2, i_3, true, -1743480204);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class521_Sub1_Sub1_Sub6.getAmountAtSlot(i_2, i_3, true, -1743480204);
 	}
 
 	static final void method6231(CS2Executor cs2executor_0, int i_1) {

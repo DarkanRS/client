@@ -175,7 +175,7 @@ public class QuestDefinitions {
 						obj_8 = new Class282_Sub38(rsbytebuffer_1.readInt());
 					}
 
-					this.aClass465_2972.method7765((Node) obj_8, (long) i_7);
+					this.aClass465_2972.put((Node) obj_8, (long) i_7);
 				}
 			}
 		}

@@ -52,10 +52,10 @@ public class Class29 {
 
 	}
 
-	static void method788(int i_0, boolean bool_1, int i_2) {
-		Class282_Sub30 class282_sub30_3 = CS2Runner.method11127(i_0, bool_1, 1384603359);
-		if (class282_sub30_3 != null) {
-			class282_sub30_3.remove();
+	static void deleteItemContainer(int key, boolean negativeKey, int i_2) {
+		ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+		if (container != null) {
+			container.remove();
 		}
 
 	}

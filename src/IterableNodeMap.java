@@ -102,7 +102,7 @@ public final class IterableNodeMap implements Iterable {
 		return null;
 	}
 
-	public void method7765(Node node_1, long long_2) {
+	public void put(Node node_1, long long_2) {
 		if (node_1.prev != null) {
 			node_1.remove();
 		}

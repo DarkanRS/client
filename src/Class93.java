@@ -103,7 +103,7 @@ public class Class93 {
 			} else {
 				Class282_Sub37 class282_sub37_4 = new Class282_Sub37(i_0, new Class278_Sub1(4096, IndexLoaders.aClass317_2663, i_0), i_1, bool_2);
 				class282_sub37_4.aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
-				Class492.aClass465_5774.method7765(class282_sub37_4, (long) i_0);
+				Class492.aClass465_5774.put(class282_sub37_4, (long) i_0);
 			}
 		}
 

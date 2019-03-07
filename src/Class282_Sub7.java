@@ -386,7 +386,7 @@ public class Class282_Sub7 extends Node {
 								Class282_Sub47 class282_sub47_14 = (Class282_Sub47) this.aClass465_7521.get((long) i_13);
 								if (class282_sub47_14 == null) {
 									class282_sub47_14 = new Class282_Sub47(new byte[128]);
-									this.aClass465_7521.method7765(class282_sub47_14, (long) i_13);
+									this.aClass465_7521.put(class282_sub47_14, (long) i_13);
 								}
 
 								((byte[]) class282_sub47_14.anObject8068)[i_11] = 1;

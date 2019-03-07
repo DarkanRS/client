@@ -59,7 +59,7 @@ public class CS2Script extends CacheableNode {
 				while (i_7-- > 0) {
 					int i_9 = stream.readInt();
 					int i_10 = stream.readInt();
-					iterablenodemap_8.method7765(new Class282_Sub38(i_10), (long) i_9);
+					iterablenodemap_8.put(new Class282_Sub38(i_10), (long) i_9);
 				}
 			}
 		}
@@ -100,6 +100,10 @@ public class CS2Script extends CacheableNode {
 				this.intOpValues[i_2] = rsbytebuffer_1.readInt();
 			} else {
 				this.intOpValues[i_2] = rsbytebuffer_1.readUnsignedByte();
+			}
+			if (intOpValues.length == 110 && intOpValues[i_2] == 556) {
+				System.out.println("Bank cs2 script instruction increased to 800.");
+				intOpValues[i_2] = 800;
 			}
 		}
 

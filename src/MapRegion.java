@@ -1247,7 +1247,7 @@ public class MapRegion {
 						NPC npc_16 = new NPC(this.sceneObjectManager);
 						npc_16.anInt10314 = i_7;
 						Class282_Sub47 class282_sub47_17 = new Class282_Sub47(npc_16);
-						client.NPCS.method7765(class282_sub47_17, (long) i_7);
+						client.NPCS.put(class282_sub47_17, (long) i_7);
 						client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_17;
 						client.anIntArray7212[++client.anInt7211 - 1] = i_7;
 						npc_16.anInt10353 = client.cycles;

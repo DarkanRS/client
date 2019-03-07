@@ -416,7 +416,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 				node_4.remove();
 			} else if (node_4 == null && bool_3) {
 				node_4 = new Node();
-				Class291_Sub1.aClass465_8025.method7765(node_4, (long) i_2);
+				Class291_Sub1.aClass465_8025.put(node_4, (long) i_2);
 			}
 		}
 

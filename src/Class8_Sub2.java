@@ -381,7 +381,7 @@ public class Class8_Sub2 extends FontRenderer {
 	}
 
 	static void method14262(int i_0) {
-		Class282_Sub30.aClass465_7711.method7749(-1390768924);
+		ItemContainer.CONTAINER_MAP.method7749(-1390768924);
 	}
 
 	public static void method14263(int i_0, int i_1, byte b_2) {

@@ -69,7 +69,7 @@ public class Class271 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = SpotAnimIndexLoader.method8861(i_2, i_3, true, 113694446);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = SpotAnimIndexLoader.getItemIdAtSlot(i_2, i_3, true, 113694446);
 	}
 
 	static final void method4826(CS2Executor cs2executor_0, int i_1) {

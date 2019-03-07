@@ -30,7 +30,7 @@ public final class Class223 {
 			--this.anInt2769;
 		}
 
-		this.aClass465_2771.method7765(cacheablenode_1, long_2);
+		this.aClass465_2771.put(cacheablenode_1, long_2);
 		this.aClass477_2767.method7936(cacheablenode_1, -1738910950);
 	}
 

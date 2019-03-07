@@ -112,12 +112,12 @@ public class Class225_Sub5 extends RouteStrategy {
 
 	}
 
-	static void method13043(int i_0, boolean bool_1, short s_2) {
-		Class282_Sub30 class282_sub30_3 = CS2Runner.method11127(i_0, bool_1, 1007335801);
-		if (class282_sub30_3 != null) {
-			for (int i_4 = 0; i_4 < class282_sub30_3.anIntArray7710.length; i_4++) {
-				class282_sub30_3.anIntArray7710[i_4] = -1;
-				class282_sub30_3.anIntArray7709[i_4] = 0;
+	static void resetContainer(int key, boolean negativeKey) {
+		ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+		if (container != null) {
+			for (int i_4 = 0; i_4 < container.itemIds.length; i_4++) {
+				container.itemIds[i_4] = -1;
+				container.amounts[i_4] = 0;
 			}
 		}
 

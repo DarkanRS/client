@@ -151,7 +151,7 @@ public class ParticleSystem {
 						Class282_Sub40 class282_sub40_5 = null;
 						if (arr_1[i_4].method2913(-1744283986).anInt4041 == 1 && Class235.anInt2898 < 32) {
 							class282_sub40_5 = new Class282_Sub40(arr_1[i_4], this);
-							Class235.aClass465_2904.method7765(class282_sub40_5, (long) arr_1[i_4].anInt2115);
+							Class235.aClass465_2904.put(class282_sub40_5, (long) arr_1[i_4].anInt2115);
 							++Class235.anInt2898;
 						}
 
