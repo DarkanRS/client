@@ -1482,7 +1482,7 @@ public class PacketsDecoder extends Class455 {
 																			} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4358) {
 																				bool_91 = buffer.readUnsignedByte() == 1;
 																				byte[] bytes_107 = new byte[class184_0.anInt2287 - 1];
-																				buffer.readBytes(bytes_107, 0, class184_0.anInt2287 - 1, 1093492861);
+																				buffer.readBytes(bytes_107, 0, class184_0.anInt2287 - 1);
 																				Class151.method2589(bool_91, bytes_107, -1912381757);
 																				class184_0.aClass375_2286 = null;
 																				return true;

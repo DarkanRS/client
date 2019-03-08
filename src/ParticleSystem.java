@@ -257,7 +257,7 @@ public class ParticleSystem {
 
 	public static ParticleSystem method11557(int i_0, boolean bool_1) {
 		if (Class235.anInt2901 != Class235.anInt2899) {
-			ParticleSystem class539_2 = Class477.aClass539Array5632[Class235.anInt2899];
+			ParticleSystem class539_2 = Queue.aClass539Array5632[Class235.anInt2899];
 			Class235.anInt2899 = Class235.anInt2899 + 1 & Class89.anIntArray931[Class235.anInt2906];
 			class539_2.method11504(i_0, bool_1);
 			return class539_2;

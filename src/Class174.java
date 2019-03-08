@@ -31,8 +31,8 @@ public class Class174 {
 		}
 
 		if (aClass91_2138 == null) {
-			if (IndexLoaders.SPRITES_INDEX.method5661(Class477.anInt5630, -743951421)) {
-				aClass91_2138 = Class91.method1515(IndexLoaders.SPRITES_INDEX, Class477.anInt5630);
+			if (IndexLoaders.SPRITES_INDEX.method5661(Queue.anInt5630, -743951421)) {
+				aClass91_2138 = Class91.method1515(IndexLoaders.SPRITES_INDEX, Queue.anInt5630);
 			} else {
 				bool_1 = false;
 			}
@@ -1613,7 +1613,7 @@ public class Class174 {
 			Class377.method6396(cs2executor_1, (byte) 0);
 			break;
 		case 507:
-			Class477.method7962(cs2executor_1, (byte) -1);
+			Queue.method7962(cs2executor_1, (byte) -1);
 			break;
 		case 508:
 			Class106.method1813(cs2executor_1, (byte) 86);
@@ -1967,7 +1967,7 @@ public class Class174 {
 			Class184.method3065(cs2executor_1, 1574707317);
 			break;
 		case 625:
-			Class477.method7961(cs2executor_1, -1647619870);
+			Queue.method7961(cs2executor_1, -1647619870);
 			break;
 		case 626:
 			Class191.method3168(cs2executor_1, 1630461232);
@@ -2063,7 +2063,7 @@ public class Class174 {
 			WorldMapAreaDefs.method3739(cs2executor_1, -1137290569);
 			break;
 		case 657:
-			InventoryDef.method15696(cs2executor_1, 873457785);
+			ItemContainerDefinitions.method15696(cs2executor_1, 873457785);
 			break;
 		case 658:
 			JS5FileWorker.method5816(cs2executor_1, 2144210152);

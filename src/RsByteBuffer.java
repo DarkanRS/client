@@ -367,7 +367,7 @@ public class RsByteBuffer extends Node {
 		int i_3 = this.index;
 		this.index = 0;
 		byte[] bytes_4 = new byte[i_3];
-		this.readBytes(bytes_4, 0, i_3, 1787887302);
+		this.readBytes(bytes_4, 0, i_3);
 		BigInteger biginteger_5 = new BigInteger(bytes_4);
 		BigInteger biginteger_6 = biginteger_5.modPow(biginteger_1, biginteger_2);
 		byte[] bytes_7 = biginteger_6.toByteArray();
@@ -493,7 +493,7 @@ public class RsByteBuffer extends Node {
 		return ((this.buffer[this.index - 1] & 0xff) << 8) + ((this.buffer[this.index - 3] & 0xff) << 16) + (this.buffer[this.index - 2] & 0xff);
 	}
 
-	public void readBytes(byte[] bytes_1, int i_2, int i_3, int i_4) {
+	public void readBytes(byte[] bytes_1, int i_2, int i_3) {
 		for (int i_5 = i_2; i_5 < i_3 + i_2; i_5++) {
 			bytes_1[i_5] = this.buffer[++this.index - 1];
 		}

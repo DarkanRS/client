@@ -84,7 +84,7 @@ public class Class334 {
 	}
 
 	void method5939(GraphicalRenderer graphicalrenderer_1, Class334 class334_2) {
-		RSMesh rsmesh_3 = RSMesh.decodeMesh(Class282_Sub50_Sub11_Sub1.aClass317_10379, this.anInt3893, 0);
+		RSMesh rsmesh_3 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3893, 0);
 		if (rsmesh_3 != null) {
 			graphicalrenderer_1.qa(anIntArray3884);
 			graphicalrenderer_1.r(0, 0, this.anInt3902, this.anInt3902);

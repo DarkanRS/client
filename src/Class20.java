@@ -14,7 +14,7 @@ public class Class20 {
 	public static int anInt170 = 0;
 	static NodeCollection aClass482_171 = new NodeCollection();
 	static IterableNodeMap aClass465_172 = new IterableNodeMap(16);
-	static Class477 aClass477_182 = new Class477();
+	static Queue aClass477_182 = new Queue();
 	static NodeCollection aClass482_174 = new NodeCollection();
 	static NodeCollection aClass482_175 = new NodeCollection();
 	static SoftCache aClass229_164 = new SoftCache(30);

@@ -1,9 +1,10 @@
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 
 public class JS5Manager {
 
-	Class282_Sub50_Sub11_Sub1 aClass282_Sub50_Sub11_Sub1_3626;
+	PaddedJS5Request tableRequest;
 	JS5GrabWorker[] grabWorkers;
 	RsByteBuffer buffer;
 	JS5StandardRequester standardRequester;
@@ -11,27 +12,27 @@ public class JS5Manager {
 	BigInteger updateServerExponent;
 	BigInteger updateServerModulus;
 
-	public boolean verify255RSA(byte b_1) {
+	public boolean init(byte b_1) {
 		if (this.buffer != null) {
 			return true;
 		} else {
-			if (this.aClass282_Sub50_Sub11_Sub1_3626 == null) {
-				if (this.standardRequester.method5517(-1826319794)) {
+			if (this.tableRequest == null) {
+				if (this.standardRequester.priorityUnavailable(-1826319794)) {
 					return false;
 				}
 
-				this.aClass282_Sub50_Sub11_Sub1_3626 = this.standardRequester.method5515(255, 255, (byte) 0, true, (byte) 26);
+				this.tableRequest = this.standardRequester.request(255, 255, (byte) 0, true, (byte) 26);
 			}
 
-			if (this.aClass282_Sub50_Sub11_Sub1_3626.incomplete) {
+			if (this.tableRequest.waiting) {
 				return false;
 			} else {
-				RsByteBuffer stream = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(-1991458699));
+				RsByteBuffer stream = new RsByteBuffer(this.tableRequest.getData(-1991458699));
 				stream.index = 5;
-				int i_3 = stream.readUnsignedByte();
-				stream.index += i_3 * 72;
+				int indiceLength = stream.readUnsignedByte();
+				stream.index += indiceLength * 72;
 				byte[] encrypted = new byte[stream.buffer.length - stream.index];
-				stream.readBytes(encrypted, 0, encrypted.length, -24451515);
+				stream.readBytes(encrypted, 0, encrypted.length);
 				byte[] decrypted;
 				if (this.updateServerExponent != null && this.updateServerModulus != null) {
 					BigInteger biginteger_6 = new BigInteger(encrypted);
@@ -40,21 +41,42 @@ public class JS5Manager {
 				} else {
 					decrypted = encrypted;
 				}
-
-				if (decrypted.length != 65) {
+				
+				if (decrypted.length != 65 && decrypted.length != 64) {
 					System.out.println("Invalid length: " + decrypted.length);
+					System.out.println(Arrays.toString(decrypted));
 					throw new RuntimeException();
 				} else {
-					Class361.getWhirlpool(stream.buffer, 5, stream.index - encrypted.length - 5);
+					byte[] whirlpool = Class361.getWhirlpool(stream.buffer, 5, stream.index - encrypted.length - 5);
 
 					for (int i_8 = 0; i_8 < 64; i_8++) {
-						;
+						if (whirlpool[i_8] != decrypted[i_8 + (decrypted.length == 65 ? 1 : 0)]) {
+							throw new RuntimeException();
+						}
 					}
 
-					this.grabWorkers = new JS5GrabWorker[i_3];
+					this.grabWorkers = new JS5GrabWorker[indiceLength];
 					this.buffer = stream;
 					return true;
 				}
+
+//				if (decrypted.length != 65) {
+//					System.out.println("Invalid length: " + decrypted.length);
+//					System.out.println(Arrays.toString(decrypted));
+//					throw new RuntimeException();
+//				} else {
+//					byte[] whirlpool = Class361.getWhirlpool(stream.buffer, 5, stream.index - encrypted.length - 5);
+//
+//					for (int i_8 = 0; i_8 < 64; i_8++) {
+//						if (whirlpool[i_8] != decrypted[i_8 + 1]) {
+//							throw new RuntimeException();
+//						}
+//					}
+//
+//					this.grabWorkers = new JS5GrabWorker[indiceLength];
+//					this.buffer = stream;
+//					return true;
+//				}
 			}
 		}
 	}
@@ -64,8 +86,8 @@ public class JS5Manager {
 		this.localRequester = js5localrequester_2;
 		this.updateServerExponent = biginteger_3;
 		this.updateServerModulus = biginteger_4;
-		if (!this.standardRequester.method5517(-630500434)) {
-			this.aClass282_Sub50_Sub11_Sub1_3626 = this.standardRequester.method5515(255, 255, (byte) 0, true, (byte) 58);
+		if (!this.standardRequester.priorityUnavailable(-630500434)) {
+			this.tableRequest = this.standardRequester.request(255, 255, (byte) 0, true, (byte) 58);
 		}
 
 	}
@@ -81,7 +103,7 @@ public class JS5Manager {
 				int i_6 = this.buffer.readInt();
 				int i_7 = this.buffer.readInt();
 				byte[] bytes_8 = new byte[64];
-				this.buffer.readBytes(bytes_8, 0, 64, 1722880167);
+				this.buffer.readBytes(bytes_8, 0, 64);
 				JS5GrabWorker js5grabworker_9 = new JS5GrabWorker(i_1, js5cachefile_2, js5cachefile_3, this.standardRequester, this.localRequester, i_6, bytes_8, i_7, bool_4);
 				this.grabWorkers[i_1] = js5grabworker_9;
 				return js5grabworker_9;

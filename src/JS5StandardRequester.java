@@ -5,11 +5,11 @@ public abstract class JS5StandardRequester {
 
 	long aLong3648;
 	int anInt3653;
-	Class282_Sub50_Sub11_Sub1 aClass282_Sub50_Sub11_Sub1_3660;
-	Class477 aClass477_3652 = new Class477();
-	Class477 aClass477_3645 = new Class477();
-	Class477 aClass477_3651 = new Class477();
-	Class477 aClass477_3654 = new Class477();
+	PaddedJS5Request current;
+	Queue priorities = new Queue();
+	Queue waitingPriorities = new Queue();
+	Queue extras = new Queue();
+	Queue waitingExtras = new Queue();
 	RsByteBuffer aClass282_Sub35_3655 = new RsByteBuffer(6);
 	byte aByte3656 = 0;
 	public volatile int anInt3657 = 0;
@@ -18,39 +18,39 @@ public abstract class JS5StandardRequester {
 
 	public abstract void method5514();
 
-	Class282_Sub50_Sub11_Sub1 method5515(int i_1, int i_2, byte b_3, boolean bool_4, byte b_5) {
+	PaddedJS5Request request(int i_1, int i_2, byte b_3, boolean bool_4, byte b_5) {
 		long long_6 = ((long) i_1 << 32) + (long) i_2;
-		Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1_8 = new Class282_Sub50_Sub11_Sub1();
-		class282_sub50_sub11_sub1_8.key = long_6;
-		class282_sub50_sub11_sub1_8.aByte10376 = b_3;
-		class282_sub50_sub11_sub1_8.aBool9637 = bool_4;
+		PaddedJS5Request request = new PaddedJS5Request();
+		request.key = long_6;
+		request.padding = b_3;
+		request.highPriority = bool_4;
 		if (bool_4) {
-			if (this.method5553((short) 22331) >= 50) {
+			if (this.priorities((short) 22331) >= 50) {
 				throw new RuntimeException();
 			}
 
-			this.aClass477_3652.method7936(class282_sub50_sub11_sub1_8, -1738910950);
+			this.priorities.method7936(request, -1738910950);
 		} else {
-			if (this.method5518(-1983883069) >= 20) {
+			if (this.extras(-1983883069) >= 20) {
 				throw new RuntimeException();
 			}
 
-			this.aClass477_3651.method7936(class282_sub50_sub11_sub1_8, -1738910950);
+			this.extras.method7936(request, -1738910950);
 		}
 
-		return class282_sub50_sub11_sub1_8;
+		return request;
 	}
 
-	boolean method5516(int i_1) {
-		return this.method5518(-1727956644) >= 20;
+	boolean extraUnavailable(int i_1) {
+		return this.extras(-1727956644) >= 20;
 	}
 
-	boolean method5517(int i_1) {
-		return this.method5553((short) 24755) >= 50;
+	boolean priorityUnavailable(int i_1) {
+		return this.priorities((short) 24755) >= 50;
 	}
 
-	int method5518(int i_1) {
-		return this.aClass477_3651.method7939(-1975244786) + this.aClass477_3654.method7939(431574855);
+	int extras(int i_1) {
+		return this.extras.size(-1975244786) + this.waitingExtras.size(431574855);
 	}
 
 	abstract void method5520(byte var1);
@@ -103,8 +103,8 @@ public abstract class JS5StandardRequester {
 
 	public abstract void method5552();
 
-	public int method5553(short s_1) {
-		return this.aClass477_3652.method7939(946484951) + this.aClass477_3645.method7939(1256746547);
+	public int priorities(short s_1) {
+		return this.priorities.size(946484951) + this.waitingPriorities.size(1256746547);
 	}
 
 	public abstract void method5554();
@@ -156,7 +156,7 @@ public abstract class JS5StandardRequester {
 							for (int i_12 = 0; i_12 < i_8; i_12++) {
 								i_13 = rsbytebuffer_0.readInt();
 								bytes_11[i_12] = new byte[i_13];
-								rsbytebuffer_0.readBytes(bytes_11[i_12], 0, i_13, 1724620794);
+								rsbytebuffer_0.readBytes(bytes_11[i_12], 0, i_13);
 							}
 						}
 

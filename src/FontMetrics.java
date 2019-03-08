@@ -366,7 +366,7 @@ public class FontMetrics {
 		} else {
 			boolean bool_4 = rsbytebuffer_2.readUnsignedByte() == 1;
 			this.characters = new byte[256];
-			rsbytebuffer_2.readBytes(this.characters, 0, 256, 1533977369);
+			rsbytebuffer_2.readBytes(this.characters, 0, 256);
 			if (bool_4) {
 				int[] ints_5 = new int[256];
 				int[] ints_6 = new int[256];

@@ -56,7 +56,7 @@ public class Class463 {
 		}
 
 		rsbytebuffer_2.writeShort((int) (Math.random() * 9.9999999E7D), 1417031095);
-		rsbytebuffer_2.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
+		rsbytebuffer_2.applyRSA(Loader.RSA_PUBLIC_EXPONENT, Loader.RSA_PUBLIC_MODULUS);
 		tcpmessage_0.buffer.writeBytes(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index);
 		return ints_3;
 	}

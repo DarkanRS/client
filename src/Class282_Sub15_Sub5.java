@@ -1017,7 +1017,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			i_6 = rsbitsbuffer_0.readUnsignedByteC(850654507);
 			byte[] bytes_21 = new byte[i_6];
 			RsByteBuffer rsbytebuffer_22 = new RsByteBuffer(bytes_21);
-			rsbitsbuffer_0.readBytes(bytes_21, 0, i_6, 1586054229);
+			rsbitsbuffer_0.readBytes(bytes_21, 0, i_6);
 			Class197.aClass282_Sub35Array2428[i_1] = rsbytebuffer_22;
 			player_2.decodeAppearance(rsbytebuffer_22);
 		}

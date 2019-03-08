@@ -59,7 +59,7 @@ public class ChatLine {
 		rsbytebuffer_0.writeString(Class9.aString102);
 		rsbytebuffer_0.writeLong(Class9.aLong86);
 		rsbytebuffer_0.writeLong(client.aLong7409);
-		rsbytebuffer_0.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
+		rsbytebuffer_0.applyRSA(Loader.RSA_PUBLIC_EXPONENT, Loader.RSA_PUBLIC_MODULUS);
 		return rsbytebuffer_0;
 	}
 

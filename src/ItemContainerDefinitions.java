@@ -1,4 +1,4 @@
-public class InventoryDef extends CacheableNode implements Definition {
+public class ItemContainerDefinitions extends CacheableNode implements Definition {
 
 	public int contentSize = 0;
 	public int maxSize = 0;
@@ -19,10 +19,10 @@ public class InventoryDef extends CacheableNode implements Definition {
 	void method15691(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
 		if (i_2 == 2) {
 			this.maxSize = rsbytebuffer_1.readUnsignedShort();
-			if (this.maxSize == 556) {
-				System.out.println("Bank inventorydef increased to 800.");
-				this.maxSize = 800;
-			}
+//			if (this.maxSize == 556) {
+//				System.out.println("Bank inventorydef increased to 800.");
+//				this.maxSize = 800;
+//			}
 		} else if (i_2 == 4) {
 			this.contentSize = rsbytebuffer_1.readUnsignedByte();
 			this.itemIds = new int[this.contentSize];

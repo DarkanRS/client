@@ -4,7 +4,7 @@ public class Class469 implements Iterator {
 
 	public static boolean aBool5585;
 	CacheableNode aClass282_Sub50_5582 = null;
-	Class477 aClass477_5584;
+	Queue aClass477_5584;
 	CacheableNode aClass282_Sub50_5583;
 
 	public CacheableNode method7790(int i_1) {
@@ -12,7 +12,7 @@ public class Class469 implements Iterator {
 		return (CacheableNode) this.next();
 	}
 
-	public Class469(Class477 class477_1) {
+	public Class469(Queue class477_1) {
 		this.aClass477_5584 = class477_1;
 		this.aClass282_Sub50_5583 = this.aClass477_5584.aClass282_Sub50_5629.aClass282_Sub50_8119;
 		this.aClass282_Sub50_5582 = null;

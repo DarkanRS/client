@@ -87,7 +87,7 @@ public class ReferenceTable {
 			if (usesWhirpool) {
 				for (i_9 = 0; i_9 < this.numValidArchives; i_9++) {
 					byte[] bytes_15 = new byte[64];
-					stream.readBytes(bytes_15, 0, 64, 612047318);
+					stream.readBytes(bytes_15, 0, 64);
 					this.whirlpool[this.validArchiveIds[i_9]] = bytes_15;
 				}
 			}

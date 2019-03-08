@@ -1,8 +1,8 @@
 public abstract class JS5CacheRequest extends CacheableNode {
 
-	boolean aBool9637;
+	boolean highPriority;
 	boolean aBool9638;
-	volatile boolean incomplete = true;
+	volatile boolean waiting = true;
 
 	abstract byte[] method14941();
 

@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class Class477 implements Iterable {
+public class Queue implements Iterable {
 
 	static int anInt5630;
 	static ParticleSystem[] aClass539Array5632;
@@ -35,7 +35,7 @@ public class Class477 implements Iterable {
 		}
 	}
 
-	public int method7939(int i_1) {
+	public int size(int i_1) {
 		int i_2 = 0;
 
 		for (CacheableNode cacheablenode_3 = this.aClass282_Sub50_5629.aClass282_Sub50_8119; cacheablenode_3 != this.aClass282_Sub50_5629; cacheablenode_3 = cacheablenode_3.aClass282_Sub50_8119) {
@@ -45,7 +45,7 @@ public class Class477 implements Iterable {
 		return i_2;
 	}
 
-	public Class477() {
+	public Queue() {
 		this.aClass282_Sub50_5629.aClass282_Sub50_8119 = this.aClass282_Sub50_5629;
 		this.aClass282_Sub50_5629.current = this.aClass282_Sub50_5629;
 	}

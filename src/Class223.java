@@ -3,7 +3,7 @@ public final class Class223 {
 	public static Language CURRENT_LANGUAGE;
 	int anInt2769;
 	CacheableNode aClass282_Sub50_2770 = new CacheableNode();
-	Class477 aClass477_2767 = new Class477();
+	Queue aClass477_2767 = new Queue();
 	int anInt2768;
 	IterableNodeMap aClass465_2771;
 

@@ -207,7 +207,7 @@ public class Class282_Sub18 extends Node {
 				} while (i_6 >= 255);
 
 				byte[] bytes_7 = new byte[i_5];
-				rsbytebuffer_2.readBytes(bytes_7, 0, i_5, 1760605162);
+				rsbytebuffer_2.readBytes(bytes_7, 0, i_5);
 				this.aByteArrayArray7606[i_4] = bytes_7;
 			}
 

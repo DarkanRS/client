@@ -89,10 +89,10 @@ public class IndexLoaders {
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4697) {
 			if (Class468_Sub9.JS5_MANAGER == null) {
-				Class468_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER, Class18.UPDATE_SERVER_EXPONENT, Class18.UPDATE_SERVER_MODULUS);
+				Class468_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER, Loader.RSA_PUBLIC_EXPONENT, Loader.RSA_PUBLIC_MODULUS);
 			}
 
-			if (!Class468_Sub9.JS5_MANAGER.verify255RSA((byte) -44)) {
+			if (!Class468_Sub9.JS5_MANAGER.init((byte) -44)) {
 				return 0;
 			}
 
@@ -117,7 +117,7 @@ public class IndexLoaders {
 
 			Class96_Sub10_Sub1.anInt10159 = LOADING_FONT_INDEX.getCrc();
 			Class302.anInt3561 = GAME_TIPS_INDEX.getCrc();
-			Class477.method7960(LOADING_FONT_INDEX, (byte) -12);
+			Queue.method7960(LOADING_FONT_INDEX, (byte) -12);
 			int i_3 = Class393.preferences.aClass468_Sub11_8217.method12699((byte) -106);
 			Class275_Sub7.aClass400_7862 = new Class400(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
 			Class399[] arr_4 = Class275_Sub7.aClass400_7862.method6786(i_3, -1983202433);

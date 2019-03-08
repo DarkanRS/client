@@ -29,10 +29,10 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 					}
 
 					RsByteBuffer rsbytebuffer_12 = new RsByteBuffer(16);
-					rsbytebuffer_3.readBytes(rsbytebuffer_12.buffer, 0, 16, -535587345);
+					rsbytebuffer_3.readBytes(rsbytebuffer_12.buffer, 0, 16);
 					this.aString9466 = rsbytebuffer_12.readString();
 					rsbytebuffer_12.index = 0;
-					rsbytebuffer_3.readBytes(rsbytebuffer_12.buffer, 0, 16, -346714339);
+					rsbytebuffer_3.readBytes(rsbytebuffer_12.buffer, 0, 16);
 					this.aString9469 = rsbytebuffer_12.readString();
 				}
 			} else {
@@ -87,10 +87,10 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 					}
 
 					RsByteBuffer rsbytebuffer_11 = new RsByteBuffer(16);
-					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16, -399425573);
+					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16);
 					this.aString9466 = rsbytebuffer_11.readString();
 					rsbytebuffer_11.index = 0 * -1990677291;
-					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16, 1205214509);
+					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16);
 					this.aString9469 = rsbytebuffer_11.readString();
 				}
 			} else {
@@ -152,10 +152,10 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 					}
 
 					RsByteBuffer rsbytebuffer_11 = new RsByteBuffer(16);
-					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16, 1763599266);
+					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16);
 					this.aString9466 = rsbytebuffer_11.readString();
 					rsbytebuffer_11.index = 0 * -1990677291;
-					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16, 843155159);
+					rsbytebuffer_2.readBytes(rsbytebuffer_11.buffer, 0, 16);
 					this.aString9469 = rsbytebuffer_11.readString();
 				}
 			} else {

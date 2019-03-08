@@ -1,7 +1,7 @@
 public class Class282_Sub50_Sub15 extends CacheableNode {
 
 	String aString9771;
-	Class477 aClass477_9770;
+	Queue aClass477_9770;
 	int anInt9769;
 
 	int method15244(byte b_1) {
@@ -10,7 +10,7 @@ public class Class282_Sub50_Sub15 extends CacheableNode {
 
 	Class282_Sub50_Sub15(String string_1) {
 		this.aString9771 = string_1;
-		this.aClass477_9770 = new Class477();
+		this.aClass477_9770 = new Queue();
 	}
 
 	boolean method15245(Class282_Sub50_Sub7 class282_sub50_sub7_1, int i_2) {

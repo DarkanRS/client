@@ -414,7 +414,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 
 	static final void method16089(CS2Executor cs2executor_0, int i_1) {
 		cs2executor_0.intStackPtr -= 2;
-		InventoryDef inventorydef_2 = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(cs2executor_0.intStack[cs2executor_0.intStackPtr], (short) 24055);
+		ItemContainerDefinitions inventorydef_2 = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(cs2executor_0.intStack[cs2executor_0.intStackPtr], (short) 24055);
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		int i_4 = -1;
 

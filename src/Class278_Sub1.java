@@ -58,7 +58,7 @@ public class Class278_Sub1 extends Class278 {
 				int i_5 = this.aClass282_Sub35_8116.buffer.length - -1990677291 * this.aClass282_Sub35_8116.index * -1115476867;
 				i_3 = this.aClass282_Sub35_8112.buffer.length - -1990677291 * this.aClass282_Sub35_8112.index * -1115476867;
 				if (i_5 < i_3) {
-					this.aClass282_Sub35_8112.readBytes(this.aClass282_Sub35_8116.buffer, this.aClass282_Sub35_8116.index * -1115476867 * -1990677291, i_5, 17733425);
+					this.aClass282_Sub35_8112.readBytes(this.aClass282_Sub35_8116.buffer, this.aClass282_Sub35_8116.index * -1115476867 * -1990677291, i_5);
 					this.aClass282_Sub35_8116.buffer = null;
 					return bytes_1.length;
 				}
@@ -134,7 +134,7 @@ public class Class278_Sub1 extends Class278 {
 				int i_6 = this.aClass282_Sub35_8116.buffer.length - this.aClass282_Sub35_8116.index;
 				i_4 = this.aClass282_Sub35_8112.buffer.length - this.aClass282_Sub35_8112.index;
 				if (i_6 < i_4) {
-					this.aClass282_Sub35_8112.readBytes(this.aClass282_Sub35_8116.buffer, this.aClass282_Sub35_8116.index, i_6, 437167462);
+					this.aClass282_Sub35_8112.readBytes(this.aClass282_Sub35_8116.buffer, this.aClass282_Sub35_8116.index, i_6);
 					this.aClass282_Sub35_8116.buffer = null;
 					return bytes_1.length;
 				}

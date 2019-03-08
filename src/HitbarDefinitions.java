@@ -326,7 +326,7 @@ public class HitbarDefinitions {
 				Class246.anInt3029 = i_10;
 				Class293.anInt3512 = i_11;
 				AnimationDefinitions.anInt5930 = i_12;
-				if (client.aBool7172 && Class119.JS5_STANDARD_REQUESTER.method5553((short) 26280) == 0) {
+				if (client.aBool7172 && Class119.JS5_STANDARD_REQUESTER.priorities((short) 26280) == 0) {
 					client.aBool7172 = false;
 				}
 

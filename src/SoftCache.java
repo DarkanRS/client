@@ -1,12 +1,12 @@
 public final class SoftCache {
 
-	Class477 aClass477_2855;
+	Queue aClass477_2855;
 	int anInt2853;
 	int anInt2852;
 	IterableNodeMap aClass465_2854;
 
 	public SoftCache(int i_1, int i_2) {
-		this.aClass477_2855 = new Class477();
+		this.aClass477_2855 = new Queue();
 		this.anInt2853 = i_1;
 		this.anInt2852 = i_1;
 

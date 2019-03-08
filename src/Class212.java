@@ -1,7 +1,7 @@
 public class Class212 {
 
 	int anInt2676;
-	Class477 aClass477_2675 = new Class477();
+	Queue aClass477_2675 = new Queue();
 	int anInt2678;
 	IterableNodeMap aClass465_2677;
 

@@ -75,8 +75,8 @@ public class Class291 {
 		anIntArray3481 = new int[aClass536_3482.anInt7094 + 1];
 	}
 
-	public static Class477 method5127(int i_0, int i_1) {
-		Class477 class477_2 = new Class477();
+	public static Queue method5127(int i_0, int i_1) {
+		Queue class477_2 = new Queue();
 
 		for (Class282_Sub50_Sub6 class282_sub50_sub6_3 = (Class282_Sub50_Sub6) aClass465_3461.method7750(1631315315); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (Class282_Sub50_Sub6) aClass465_3461.method7751((byte) 13)) {
 			if (class282_sub50_sub6_3.aBool9543 && class282_sub50_sub6_3.method14784(i_0, i_1, 2036854357)) {

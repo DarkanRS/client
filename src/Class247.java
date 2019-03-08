@@ -237,10 +237,10 @@ public class Class247 {
 
 	void method4229(GraphicalRenderer graphicalrenderer_1, byte b_2) {
 		try {
-			boolean bool_3 = Class282_Sub50_Sub11_Sub1.aClass317_10379.loadArchive(this.anInt3047);
+			boolean bool_3 = PaddedJS5Request.aClass317_10379.loadArchive(this.anInt3047);
 			if (bool_3) {
 				graphicalrenderer_1.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-				RSMesh rsmesh_4 = RSMesh.decodeMesh(Class282_Sub50_Sub11_Sub1.aClass317_10379, this.anInt3047, 0);
+				RSMesh rsmesh_4 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3047, 0);
 				this.aClass528_3048 = graphicalrenderer_1.createMeshRasterizer(rsmesh_4, 1099776, 0, 255, 1);
 				byte[] bytes_5 = this.aClass528_3048.aw();
 				if (bytes_5 == null) {

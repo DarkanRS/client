@@ -18,7 +18,7 @@ final class Class15 implements Interface35 {
 		}
 
 		Class235.anInt2906 = i_0;
-		Class477.aClass539Array5632 = new ParticleSystem[Class89.anIntArray931[Class235.anInt2906] + 1];
+		Queue.aClass539Array5632 = new ParticleSystem[Class89.anIntArray931[Class235.anInt2906] + 1];
 		Class235.anInt2899 = 0;
 		Class235.anInt2901 = 0;
 	}

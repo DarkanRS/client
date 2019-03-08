@@ -9,11 +9,11 @@ public class InventoriesIndexLoader implements IndexLoader {
 		this.configIndex.filesCount(SharedConfigsType.INVENTORIES.id);
 	}
 
-	public InventoryDef getInventoryDef(int i_1, short s_2) {
+	public ItemContainerDefinitions getInventoryDef(int i_1, short s_2) {
 		SoftCache softcache_4 = this.cached;
-		InventoryDef inventorydef_3;
+		ItemContainerDefinitions inventorydef_3;
 		synchronized (this.cached) {
-			inventorydef_3 = (InventoryDef) this.cached.get((long) i_1);
+			inventorydef_3 = (ItemContainerDefinitions) this.cached.get((long) i_1);
 		}
 
 		if (inventorydef_3 != null) {
@@ -25,7 +25,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 				bytes_10 = this.configIndex.getFile(SharedConfigsType.INVENTORIES.id, i_1);
 			}
 
-			inventorydef_3 = new InventoryDef();
+			inventorydef_3 = new ItemContainerDefinitions();
 			if (bytes_10 != null) {
 				inventorydef_3.method15690(new RsByteBuffer(bytes_10), 1939942716);
 			}

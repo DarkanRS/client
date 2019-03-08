@@ -4,8 +4,8 @@ public class Class282_Sub50_Sub12 extends CacheableNode {
 	int anInt9641;
 	int anInt9642;
 	int anInt9668;
-	static Class477 aClass477_9666 = new Class477();
-	static Class477 aClass477_9655 = new Class477();
+	static Queue aClass477_9666 = new Queue();
+	static Queue aClass477_9655 = new Queue();
 	static IterableNodeMap aClass465_9667 = new IterableNodeMap(16);
 
 	int method14953(int i_1) {

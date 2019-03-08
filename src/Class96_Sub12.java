@@ -79,7 +79,7 @@ public class Class96_Sub12 extends Class96 {
 			boolean bool_5 = class539_4.method11509(graphicalrenderer_0, long_1);
 			if (!bool_5) {
 				iterator_3.remove();
-				Class477.aClass539Array5632[Class235.anInt2901] = class539_4;
+				Queue.aClass539Array5632[Class235.anInt2901] = class539_4;
 				Class235.anInt2901 = Class235.anInt2901 + 1 & Class89.anIntArray931[Class235.anInt2906];
 			}
 		}

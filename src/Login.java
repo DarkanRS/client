@@ -157,7 +157,7 @@ public class Login {
 						rsbytebuffer_4.writeLong(client.aLong7409);
 						rsbytebuffer_4.writeByte(client.CURRENT_GAME.anInt5746);
 						rsbytebuffer_4.writeByte((int) (Math.random() * 9.9999999E7D));
-						rsbytebuffer_4.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
+						rsbytebuffer_4.applyRSA(Loader.RSA_PUBLIC_EXPONENT, Loader.RSA_PUBLIC_MODULUS);
 						tcpmessage_2.buffer.writeBytes(rsbytebuffer_4.buffer, 0, rsbytebuffer_4.index);
 						tcpmessage_2.buffer.method13281(tcpmessage_2.buffer.index - i_3, 1201423895);
 					} else {

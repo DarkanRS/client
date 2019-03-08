@@ -118,7 +118,7 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 			if (i_4 >= 0 && (Index.anInt3689 == 0 || i_4 <= Index.anInt3689)) {
 				if (i_3 == 0) {
 					byte[] bytes_5 = new byte[i_4];
-					buffer.readBytes(bytes_5, 0, i_4, 1321336426);
+					buffer.readBytes(bytes_5, 0, i_4);
 					return bytes_5;
 				} else {
 					int i_8 = buffer.readInt();

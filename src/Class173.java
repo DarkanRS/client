@@ -8,7 +8,7 @@ public class Class173 {
 	public int anInt2131;
 
 	public static void method2943(Index index_0, Interface22 interface22_1, int i_2) {
-		Class282_Sub50_Sub11_Sub1.aClass317_10379 = index_0;
+		PaddedJS5Request.aClass317_10379 = index_0;
 		Class247.anInterface22_3046 = interface22_1;
 	}
 

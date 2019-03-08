@@ -101,10 +101,10 @@ public class CS2Script extends CacheableNode {
 			} else {
 				this.intOpValues[i_2] = rsbytebuffer_1.readUnsignedByte();
 			}
-			if (intOpValues.length == 110 && intOpValues[i_2] == 556) {
-				System.out.println("Bank cs2 script instruction increased to 800.");
-				intOpValues[i_2] = 800;
-			}
+//			if (intOpValues.length == 110 && intOpValues[i_2] == 556) {
+//				System.out.println("Bank cs2 script instruction increased to 800.");
+//				intOpValues[i_2] = 800;
+//			}
 		}
 
 		this.operations[i_2] = cs2opinfo_3;

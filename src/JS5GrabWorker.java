@@ -50,14 +50,14 @@ public class JS5GrabWorker extends JS5FileWorker {
 			return this.table;
 		} else {
 			if (this.refTableReq == null) {
-				if (this.standardRequester.method5517(-1056221811)) {
+				if (this.standardRequester.priorityUnavailable(-1056221811)) {
 					return null;
 				}
 
-				this.refTableReq = this.standardRequester.method5515(255, this.indexId, (byte) 0, true, (byte) 102);
+				this.refTableReq = this.standardRequester.request(255, this.indexId, (byte) 0, true, (byte) 102);
 			}
 
-			if (this.refTableReq.incomplete) {
+			if (this.refTableReq.waiting) {
 				return null;
 			} else {
 				byte[] bytes_2 = this.refTableReq.getData(862505694);
@@ -167,7 +167,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 
 	JS5CacheRequest method12546(int i_1, int i_2, int i_3) {
 		Object obj_4 = (JS5CacheRequest) this.aClass465_7796.get((long) i_1);
-		if (obj_4 != null && i_2 == 0 && !((JS5CacheRequest) obj_4).aBool9637 && ((JS5CacheRequest) obj_4).incomplete) {
+		if (obj_4 != null && i_2 == 0 && !((JS5CacheRequest) obj_4).highPriority && ((JS5CacheRequest) obj_4).waiting) {
 			((JS5CacheRequest) obj_4).remove();
 			obj_4 = null;
 		}
@@ -177,11 +177,11 @@ public class JS5GrabWorker extends JS5FileWorker {
 				if (this.dataFile != null && this.aByteArray7792[i_1] != -1) {
 					obj_4 = this.localRequester.method5578(i_1, this.dataFile, -1224840675);
 				} else {
-					if (this.standardRequester.method5517(-1505335895)) {
+					if (this.standardRequester.priorityUnavailable(-1505335895)) {
 						return null;
 					}
 
-					obj_4 = this.standardRequester.method5515(this.indexId, i_1, (byte) 2, true, (byte) 13);
+					obj_4 = this.standardRequester.request(this.indexId, i_1, (byte) 2, true, (byte) 13);
 				}
 			} else if (i_2 == 1) {
 				if (this.dataFile == null) {
@@ -202,17 +202,17 @@ public class JS5GrabWorker extends JS5FileWorker {
 					throw new RuntimeException();
 				}
 
-				if (this.standardRequester.method5516(-633705058)) {
+				if (this.standardRequester.extraUnavailable(-633705058)) {
 					return null;
 				}
 
-				obj_4 = this.standardRequester.method5515(this.indexId, i_1, (byte) 2, false, (byte) 54);
+				obj_4 = this.standardRequester.request(this.indexId, i_1, (byte) 2, false, (byte) 54);
 			}
 
 			this.aClass465_7796.put((Node) obj_4, (long) i_1);
 		}
 
-		if (((JS5CacheRequest) obj_4).incomplete) {
+		if (((JS5CacheRequest) obj_4).waiting) {
 			return null;
 		} else {
 			byte[] bytes_5 = ((JS5CacheRequest) obj_4).getData(-530456645);
@@ -247,7 +247,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 									this.aByteArray7792[i_1] = 1;
 								}
 
-								if (!((JS5CacheRequest) obj_4).aBool9637) {
+								if (!((JS5CacheRequest) obj_4).highPriority) {
 									((JS5CacheRequest) obj_4).remove();
 								}
 
@@ -260,8 +260,8 @@ public class JS5GrabWorker extends JS5FileWorker {
 				} catch (Exception exception_15) {
 					this.aByteArray7792[i_1] = -1;
 					((JS5CacheRequest) obj_4).remove();
-					if (((JS5CacheRequest) obj_4).aBool9637 && !this.standardRequester.method5517(-439719120)) {
-						Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1_16 = this.standardRequester.method5515(this.indexId, i_1, (byte) 2, true, (byte) -66);
+					if (((JS5CacheRequest) obj_4).highPriority && !this.standardRequester.priorityUnavailable(-439719120)) {
+						PaddedJS5Request class282_sub50_sub11_sub1_16 = this.standardRequester.request(this.indexId, i_1, (byte) 2, true, (byte) -66);
 						this.aClass465_7796.put(class282_sub50_sub11_sub1_16, (long) i_1);
 					}
 
@@ -297,7 +297,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 						}
 					}
 
-					if (!((JS5CacheRequest) obj_4).aBool9637) {
+					if (!((JS5CacheRequest) obj_4).highPriority) {
 						((JS5CacheRequest) obj_4).remove();
 					}
 
@@ -314,14 +314,14 @@ public class JS5GrabWorker extends JS5FileWorker {
 			return this.table;
 		} else {
 			if (this.refTableReq == null) {
-				if (this.standardRequester.method5517(-1103490150)) {
+				if (this.standardRequester.priorityUnavailable(-1103490150)) {
 					return null;
 				}
 
-				this.refTableReq = this.standardRequester.method5515(255, 737076305 * this.indexId * -507714383, (byte) 0, true, (byte) -74);
+				this.refTableReq = this.standardRequester.request(255, 737076305 * this.indexId * -507714383, (byte) 0, true, (byte) -74);
 			}
 
-			if (this.refTableReq.incomplete) {
+			if (this.refTableReq.waiting) {
 				return null;
 			} else {
 				byte[] bytes_1 = this.refTableReq.getData(1691080819);
@@ -506,7 +506,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 					if (this.table.validFileIdSizes[this.anInt7797 * 1482915297] == 0) {
 						this.anInt7797 += -1503033823;
 					} else {
-						if (this.standardRequester.method5516(-619518274)) {
+						if (this.standardRequester.extraUnavailable(-619518274)) {
 							bool_5 = false;
 							break;
 						}
@@ -537,9 +537,9 @@ public class JS5GrabWorker extends JS5FileWorker {
 
 		if (this.aBool7801 && Class169.time() >= this.aLong7785) {
 			for (JS5CacheRequest js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7750(-556717169); js5cacherequest_2 != null; js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7751((byte) 47)) {
-				if (!js5cacherequest_2.incomplete) {
+				if (!js5cacherequest_2.waiting) {
 					if (js5cacherequest_2.aBool9638) {
-						if (!js5cacherequest_2.aBool9637) {
+						if (!js5cacherequest_2.highPriority) {
 							throw new RuntimeException();
 						}
 
