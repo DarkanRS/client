@@ -90,7 +90,7 @@ public class Class451 implements Iterator {
 		Class282_Sub11.method12209(icomponentdefinitions_3, interface_4, cs2executor_0, 1467575804);
 	}
 
-	static final void method7521(CS2Executor cs2executor_0, int i_1) {
+	static final void getWaterPreference(CS2Executor cs2executor_0, int i_1) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.water.getValue(308447312) == 2 ? 1 : 0;
 	}
 

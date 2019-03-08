@@ -41,7 +41,7 @@ public class Class329 {
 	boolean aBool3810;
 	boolean aBool3853;
 	int anInt3846 = 0;
-	int anInt3852 = 0;
+	int index = 0;
 	int[] anIntArray3857;
 	int[] anIntArray3858;
 	int[] anIntArray3859;
@@ -669,7 +669,7 @@ public class Class329 {
 						}
 
 						this.anInt3846 = 0;
-						this.anInt3852 = 0;
+						this.index = 0;
 						int i_26 = i_25 * 3;
 						int[] ints_27 = this.aBool3854 ? new int[i_26] : null;
 						int[] ints_28 = new int[i_26];
@@ -1019,7 +1019,7 @@ public class Class329 {
 
 	}
 
-	void method5850(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, OverlayDef overlaydef_5, boolean[] bools_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, int[] ints_14, Ground class390_15, Ground class390_16, Ground class390_17, int i_18) {
+	void method5850(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, OverlayDef overlaydef_5, boolean[] bools_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] waterTextures, int[] ints_12, int[] ints_13, int[] ints_14, Ground class390_15, Ground class390_16, Ground class390_17, int i_18) {
 		this.anInt3850 = -1;
 		this.anInt3848 = -1;
 		this.anInt3849 = 256;
@@ -1092,47 +1092,47 @@ public class Class329 {
 						i_29 = i_27;
 					}
 
-					ints_8[this.anInt3852] = i_28;
-					ints_9[this.anInt3852] = i_29;
+					ints_8[this.index] = i_28;
+					ints_9[this.index] = i_29;
 					int i_30;
 					int i_31;
 					if (ints_13 != null && aBoolArrayArray3822[this.anInt3844][i_24]) {
 						i_30 = (i_3 << 9) + i_28;
 						i_31 = (i_4 << 9) + i_29;
-						ints_13[this.anInt3852] = class390_16.averageHeight(i_30, i_31, 1550950385) - class390_15.averageHeight(i_30, i_31, -497084405);
+						ints_13[this.index] = class390_16.averageHeight(i_30, i_31, 1550950385) - class390_15.averageHeight(i_30, i_31, -497084405);
 					}
 
 					if (ints_14 != null) {
 						if (class390_16 != null && !aBoolArrayArray3822[this.anInt3844][i_24]) {
 							i_30 = (i_3 << 9) + i_28;
 							i_31 = (i_4 << 9) + i_29;
-							ints_14[this.anInt3852] = class390_15.averageHeight(i_30, i_31, -1953375051) - class390_16.averageHeight(i_30, i_31, -1082530779);
+							ints_14[this.index] = class390_15.averageHeight(i_30, i_31, -1953375051) - class390_16.averageHeight(i_30, i_31, -1082530779);
 						} else if (class390_17 != null && !aBoolArrayArray3823[this.anInt3844][i_24]) {
 							i_30 = (i_3 << 9) + i_28;
 							i_31 = (i_4 << 9) + i_29;
-							ints_14[this.anInt3852] = class390_17.averageHeight(i_30, i_31, -1990196729) - class390_15.averageHeight(i_30, i_31, -1843099367);
+							ints_14[this.index] = class390_17.averageHeight(i_30, i_31, -1990196729) - class390_15.averageHeight(i_30, i_31, -1843099367);
 						}
 					}
 
 					if (i_24 < 8 && this.anIntArray3842[i_25] > overlaydef_5.anInt7052) {
 						if (ints_7 != null) {
-							ints_7[this.anInt3852] = this.anIntArray3839[i_25];
+							ints_7[this.index] = this.anIntArray3839[i_25];
 						}
 
-						ints_12[this.anInt3852] = this.anIntArray3827[i_25];
-						ints_11[this.anInt3852] = this.anIntArray3813[i_25];
-						ints_10[this.anInt3852] = this.anIntArray3838[i_25];
+						ints_12[this.index] = this.anIntArray3827[i_25];
+						waterTextures[this.index] = this.anIntArray3813[i_25];
+						ints_10[this.index] = this.anIntArray3838[i_25];
 					} else {
 						if (ints_7 != null) {
-							ints_7[this.anInt3852] = i_19;
+							ints_7[this.index] = i_19;
 						}
-
-						ints_11[this.anInt3852] = overlaydef_5.texture;
-						ints_12[this.anInt3852] = overlaydef_5.anInt7057;
-						ints_10[this.anInt3852] = this.anInt3850;
+						//set water texture
+						waterTextures[this.index] = overlaydef_5.texture;
+						ints_12[this.index] = overlaydef_5.anInt7057;
+						ints_10[this.index] = this.anInt3850;
 					}
 
-					++this.anInt3852;
+					++this.index;
 				}
 
 				++this.anInt3846;
@@ -1155,7 +1155,7 @@ public class Class329 {
 
 	}
 
-	void method5851(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, UnderlayDef underlaydef_7, int i_8, int i_9, int i_10, int i_11, boolean[] bools_12, int[] ints_13, int[] ints_14, int[] ints_15, int[] ints_16, int[] ints_17, int[] ints_18, int[] ints_19, int[] ints_20, int[][] ints_21, Ground class390_22, Ground class390_23, Ground class390_24, byte b_25) {
+	void method5851(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, UnderlayDef underlaydef_7, int i_8, int i_9, int i_10, int i_11, boolean[] bools_12, int[] ints_13, int[] ints_14, int[] ints_15, int[] ints_16, int[] waterTextures, int[] ints_18, int[] ints_19, int[] ints_20, int[][] ints_21, Ground class390_22, Ground class390_23, Ground class390_24, byte b_25) {
 		if (underlaydef_7 != null) {
 			if (i_9 == 0) {
 				i_9 = i_8;
@@ -1237,85 +1237,85 @@ public class Class329 {
 						i_39 = i_37;
 					}
 
-					ints_14[this.anInt3852] = i_38;
-					ints_15[this.anInt3852] = i_39;
+					ints_14[this.index] = i_38;
+					ints_15[this.index] = i_39;
 					int i_40;
 					int i_41;
 					if (ints_19 != null && aBoolArrayArray3822[this.anInt3844][i_34]) {
 						i_40 = (i_3 << 9) + i_38;
 						i_41 = (i_4 << 9) + i_39;
-						ints_19[this.anInt3852] = class390_23.averageHeight(i_40, i_41, -722499660) - class390_22.averageHeight(i_40, i_41, 478616173);
+						ints_19[this.index] = class390_23.averageHeight(i_40, i_41, -722499660) - class390_22.averageHeight(i_40, i_41, 478616173);
 					}
 
 					if (ints_20 != null) {
 						if (class390_23 != null && !aBoolArrayArray3822[this.anInt3844][i_34]) {
 							i_40 = (i_3 << 9) + i_38;
 							i_41 = (i_4 << 9) + i_39;
-							ints_20[this.anInt3852] = class390_22.averageHeight(i_40, i_41, -1591634709) - class390_23.averageHeight(i_40, i_41, -1293906415);
+							ints_20[this.index] = class390_22.averageHeight(i_40, i_41, -1591634709) - class390_23.averageHeight(i_40, i_41, -1293906415);
 						} else if (class390_24 != null && !aBoolArrayArray3823[this.anInt3844][i_34]) {
 							i_40 = (i_3 << 9) + i_38;
 							i_41 = (i_4 << 9) + i_39;
-							ints_20[this.anInt3852] = class390_24.averageHeight(i_40, i_41, 2113040787) - class390_22.averageHeight(i_40, i_41, 1891063345);
+							ints_20[this.index] = class390_24.averageHeight(i_40, i_41, 2113040787) - class390_22.averageHeight(i_40, i_41, 1891063345);
 						}
 					}
 
 					if (i_34 < 8 && this.anIntArray3842[i_35] >= 0) {
 						if (ints_13 != null) {
-							ints_13[this.anInt3852] = this.anIntArray3839[i_35];
+							ints_13[this.index] = this.anIntArray3839[i_35];
 						}
 
-						ints_18[this.anInt3852] = this.anIntArray3827[i_35];
-						ints_17[this.anInt3852] = this.anIntArray3813[i_35];
-						ints_16[this.anInt3852] = this.anIntArray3838[i_35];
+						ints_18[this.index] = this.anIntArray3827[i_35];
+						waterTextures[this.index] = this.anIntArray3813[i_35];
+						ints_16[this.index] = this.anIntArray3838[i_35];
 					} else {
 						if (this.aBool3810 && aBoolArrayArray3822[this.anInt3844][i_34]) {
-							ints_17[this.anInt3852] = this.anInt3848;
-							ints_18[this.anInt3852] = this.anInt3849;
-							ints_16[this.anInt3852] = this.anInt3850;
+							waterTextures[this.index] = this.anInt3848;
+							ints_18[this.index] = this.anInt3849;
+							ints_16[this.index] = this.anInt3850;
 						} else if (i_38 == 0 && i_39 == 0) {
-							ints_16[this.anInt3852] = ints_21[i_3][i_4];
-							ints_17[this.anInt3852] = underlaydef_26.texture;
-							ints_18[this.anInt3852] = underlaydef_26.scale;
+							ints_16[this.index] = ints_21[i_3][i_4];
+							waterTextures[this.index] = underlaydef_26.texture;
+							ints_18[this.index] = underlaydef_26.scale;
 						} else if (i_38 == 0 && i_39 == 512) {
-							ints_16[this.anInt3852] = ints_21[i_3][i_6];
-							ints_17[this.anInt3852] = underlaydef_27.texture;
-							ints_18[this.anInt3852] = underlaydef_27.scale;
+							ints_16[this.index] = ints_21[i_3][i_6];
+							waterTextures[this.index] = underlaydef_27.texture;
+							ints_18[this.index] = underlaydef_27.scale;
 						} else if (i_38 == 512 && i_39 == 512) {
-							ints_16[this.anInt3852] = ints_21[i_5][i_6];
-							ints_17[this.anInt3852] = underlaydef_28.texture;
-							ints_18[this.anInt3852] = underlaydef_28.scale;
+							ints_16[this.index] = ints_21[i_5][i_6];
+							waterTextures[this.index] = underlaydef_28.texture;
+							ints_18[this.index] = underlaydef_28.scale;
 						} else if (i_38 == 512 && i_39 == 0) {
-							ints_16[this.anInt3852] = ints_21[i_5][i_4];
-							ints_17[this.anInt3852] = underlaydef_29.texture;
-							ints_18[this.anInt3852] = underlaydef_29.scale;
+							ints_16[this.index] = ints_21[i_5][i_4];
+							waterTextures[this.index] = underlaydef_29.texture;
+							ints_18[this.index] = underlaydef_29.scale;
 						} else {
 							if (i_38 < 256) {
 								if (i_39 < 256) {
-									ints_17[this.anInt3852] = underlaydef_26.texture;
-									ints_18[this.anInt3852] = underlaydef_26.scale;
+									waterTextures[this.index] = underlaydef_26.texture;
+									ints_18[this.index] = underlaydef_26.scale;
 								} else {
-									ints_17[this.anInt3852] = underlaydef_27.texture;
-									ints_18[this.anInt3852] = underlaydef_27.scale;
+									waterTextures[this.index] = underlaydef_27.texture;
+									ints_18[this.index] = underlaydef_27.scale;
 								}
 							} else if (i_39 < 256) {
-								ints_17[this.anInt3852] = underlaydef_29.texture;
-								ints_18[this.anInt3852] = underlaydef_29.scale;
+								waterTextures[this.index] = underlaydef_29.texture;
+								ints_18[this.index] = underlaydef_29.scale;
 							} else {
-								ints_17[this.anInt3852] = underlaydef_28.texture;
-								ints_18[this.anInt3852] = underlaydef_28.scale;
+								waterTextures[this.index] = underlaydef_28.texture;
+								ints_18[this.index] = underlaydef_28.scale;
 							}
 
 							i_40 = Class371.method6347(ints_21[i_3][i_4], ints_21[i_5][i_4], i_38 << 7 >> 9, -1964912847);
 							i_41 = Class371.method6347(ints_21[i_3][i_6], ints_21[i_5][i_6], i_38 << 7 >> 9, -2132910365);
-							ints_16[this.anInt3852] = Class371.method6347(i_40, i_41, i_39 << 7 >> 9, -2113555849);
+							ints_16[this.index] = Class371.method6347(i_40, i_41, i_39 << 7 >> 9, -2113555849);
 						}
 
 						if (ints_13 != null) {
-							ints_13[this.anInt3852] = ints_16[this.anInt3852];
+							ints_13[this.index] = ints_16[this.index];
 						}
 					}
 
-					++this.anInt3852;
+					++this.index;
 				}
 
 				++this.anInt3846;

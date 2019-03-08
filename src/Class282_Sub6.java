@@ -8,7 +8,7 @@ public class Class282_Sub6 extends Node {
 	int anInt7514 = 0;
 	int anInt7519 = 0;
 	int anInt7517 = 0;
-	Class390_Sub1 aClass390_Sub1_7509;
+	HardwareGround aClass390_Sub1_7509;
 	Class505_Sub2 aClass505_Sub2_7518;
 	int anInt7510;
 	float aFloat7511;
@@ -18,7 +18,7 @@ public class Class282_Sub6 extends Node {
 	NativeHeapBuffer aNativeHeapBuffer7520;
 	Stream aStream7513;
 
-	Class282_Sub6(Class390_Sub1 class390_sub1_1, int i_2, int i_3, Class90 class90_4) {
+	Class282_Sub6(HardwareGround class390_sub1_1, int i_2, int i_3, Class90 class90_4) {
 		this.aClass390_Sub1_7509 = class390_sub1_1;
 		this.aClass505_Sub2_7518 = this.aClass390_Sub1_7509.aClass505_Sub2_8528;
 		this.anInt7510 = i_2;

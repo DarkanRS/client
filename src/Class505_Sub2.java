@@ -798,7 +798,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new Class390_Sub1(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+		return new HardwareGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
 	abstract void method13915();
@@ -2838,7 +2838,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new Class390_Sub1(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+		return new HardwareGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
 	public final Matrix44Arr method8517() {

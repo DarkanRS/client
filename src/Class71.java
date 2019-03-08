@@ -158,7 +158,7 @@ public class Class71 {
 
 	}
 
-	Class71(Class505_Sub2 class505_sub2_1, Class74 class74_2, Class390_Sub1 class390_sub1_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+	Class71(Class505_Sub2 class505_sub2_1, Class74 class74_2, HardwareGround class390_sub1_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		this.aClass505_Sub2_708 = class505_sub2_1;
 		this.aClass74_711 = class74_2;
 		this.anInt712 = i_7;

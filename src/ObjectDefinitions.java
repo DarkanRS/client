@@ -552,7 +552,7 @@ public class ObjectDefinitions {
 		}
 	}
 
-	public boolean method7974(int i_1) {
+	public boolean hasSound(int i_1) {
 		if (this.toObjectIds == null) {
 			return this.ambientSoundId != -1 || this.audioTracks != null;
 		} else {

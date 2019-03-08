@@ -55,7 +55,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_21 = (i_4 << 9) + (i_13 << 8);
 			int i_22 = (i_5 << 9) + (i_14 << 8);
 			boolean bool_23 = this.aBool3773 && !this.overlayHidden && objectdefinitions_12.delayShading;
-			if (objectdefinitions_12.method7974(317865608)) {
+			if (objectdefinitions_12.hasSound(317865608)) {
 				Class397.method6775(i_3, i_4, i_5, i_7, objectdefinitions_12, (NPC) null, (Player) null, 2109240355);
 			}
 
@@ -1045,7 +1045,6 @@ public class Class329_Sub1 extends Class329 {
 				break;
 			}
 		}
-
 	}
 
 	void method12475(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, ClipMap clipmap_6, int i_7) {
@@ -1054,7 +1053,7 @@ public class Class329_Sub1 extends Class329 {
 			ObjectDefinitions objectdefinitions_9 = this.objectDefLoader.getObjectDefinitions(sceneobject_8.getId(-289246828), 65280);
 			int i_10 = sceneobject_8.method89(1128699312);
 			int i_11 = sceneobject_8.method92(-2000294676);
-			if (objectdefinitions_9.method7974(1930590252)) {
+			if (objectdefinitions_9.hasSound(1930590252)) {
 				Class256.method4415(i_2, i_4, i_5, objectdefinitions_9, 522913859);
 			}
 

@@ -147,9 +147,9 @@ public abstract class Class521_Sub1 extends Class521 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3866;
 	}
 
-	static final void method13041(CS2Executor cs2executor_0, int i_1) {
-		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 107);
+	static final void getIComponentText(CS2Executor cs2executor_0, int i_1) {
+		int component = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(component, (byte) 107);
 		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = icomponentdefinitions_3.aString1391;
 	}
 

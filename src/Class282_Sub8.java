@@ -5,7 +5,7 @@ public class Class282_Sub8 extends Node {
 	int anInt7530;
 	Class505_Sub2 aClass505_Sub2_7533;
 	Class282_Sub24 aClass282_Sub24_7528;
-	Class390_Sub1 aClass390_Sub1_7524;
+	HardwareGround aClass390_Sub1_7524;
 	int anInt7531;
 	int anInt7527;
 	int anInt7526;
@@ -141,7 +141,7 @@ public class Class282_Sub8 extends Node {
 		bytebuffer_7.putShort(s_14);
 	}
 
-	Class282_Sub8(Class505_Sub2 class505_sub2_1, Class390_Sub1 class390_sub1_2, Class282_Sub24 class282_sub24_3, int[] ints_4) {
+	Class282_Sub8(Class505_Sub2 class505_sub2_1, HardwareGround class390_sub1_2, Class282_Sub24 class282_sub24_3, int[] ints_4) {
 		this.aClass505_Sub2_7533 = class505_sub2_1;
 		this.aClass282_Sub24_7528 = class282_sub24_3;
 		this.aClass390_Sub1_7524 = class390_sub1_2;

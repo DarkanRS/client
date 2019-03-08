@@ -1553,7 +1553,7 @@ public class Class174 {
 			Class394.method6762(cs2executor_1, -1493190257);
 			break;
 		case 487:
-			Class451.method7521(cs2executor_1, -793117810);
+			Class451.getWaterPreference(cs2executor_1, -793117810);
 			break;
 		case 488:
 			Class251.method4311(cs2executor_1, -1761461567);
@@ -2336,7 +2336,7 @@ public class Class174 {
 			Class42.method892(cs2executor_1, -1539143119);
 			break;
 		case 748:
-			Class521_Sub1.method13041(cs2executor_1, 1234006962);
+			Class521_Sub1.getIComponentText(cs2executor_1, 1234006962);
 			break;
 		case 749:
 			RegionMap.method5512(cs2executor_1, -837844602);

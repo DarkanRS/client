@@ -4,7 +4,7 @@ public class Class74 {
 
 	Class71[][] aClass71ArrayArray738;
 	Class505_Sub2 aClass505_Sub2_730;
-	Class390_Sub1 aClass390_Sub1_731;
+	HardwareGround aClass390_Sub1_731;
 	int anInt732;
 	int anInt734;
 	byte[] aByteArray736;
@@ -349,7 +349,7 @@ public class Class74 {
 		return false;
 	}
 
-	Class74(Class505_Sub2 class505_sub2_1, Class390_Sub1 class390_sub1_2) {
+	Class74(Class505_Sub2 class505_sub2_1, HardwareGround class390_sub1_2) {
 		this.aClass505_Sub2_730 = class505_sub2_1;
 		this.aClass390_Sub1_731 = class390_sub1_2;
 		this.anInt732 = (this.aClass390_Sub1_731.width * this.aClass390_Sub1_731.tileUnits >> this.aClass505_Sub2_730.anInt8806) + 2;

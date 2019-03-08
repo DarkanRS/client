@@ -16,8 +16,8 @@ public class MapRegion {
 	byte[][] npcSpawnBuffer;
 	int[] mapDataUnderlayArchiveIds;
 	int[] landscapeDataUnderlayArchiveIds;
-	byte[][] mapDataUnderlayBuffer;
-	byte[][] landscapeDataUnderlayBuffer;
+	byte[][] highDetailWaterMapDataBuffer;
+	byte[][] highDetailWaterLandscapeDataBuffer;
 	Class256 aClass256_3163;
 	byte[][][] aByteArrayArrayArray3162;
 	ObjectIndexLoader objectDefsLoader;
@@ -42,7 +42,7 @@ public class MapRegion {
 	CoordGrid coordGrid = new CoordGrid();
 	Class282_Sub50_Sub6 aClass282_Sub50_Sub6_3176;
 	Class283 aClass283_3180;
-	Class329_Sub1 aClass329_Sub1_3166;
+	Class329_Sub1 highDetailWaterPlane;
 	Class329_Sub1 aClass329_Sub1_3167;
 	Class341 aClass341_3181 = new Class341(0, 0, 0, 0);
 	float aFloat3173;
@@ -93,8 +93,8 @@ public class MapRegion {
 		this.npcSpawnBuffer = new byte[b_6][];
 		this.mapDataUnderlayArchiveIds = new int[b_6];
 		this.landscapeDataUnderlayArchiveIds = new int[b_6];
-		this.mapDataUnderlayBuffer = new byte[b_6][];
-		this.landscapeDataUnderlayBuffer = new byte[b_6][];
+		this.highDetailWaterMapDataBuffer = new byte[b_6][];
+		this.highDetailWaterLandscapeDataBuffer = new byte[b_6][];
 		int i_10 = 0;
 
 		int i_7;
@@ -275,8 +275,8 @@ public class MapRegion {
 		this.npcSpawnBuffer = null;
 		this.mapDataUnderlayArchiveIds = new int[i_9];
 		this.landscapeDataUnderlayArchiveIds = new int[i_9];
-		this.mapDataUnderlayBuffer = new byte[i_9][];
-		this.landscapeDataUnderlayBuffer = new byte[i_9][];
+		this.highDetailWaterMapDataBuffer = new byte[i_9][];
+		this.highDetailWaterLandscapeDataBuffer = new byte[i_9][];
 		i_9 = 0;
 
 		for (i_10 = 0; i_10 < 4; i_10++) {
@@ -392,8 +392,8 @@ public class MapRegion {
 		this.npcSpawnBuffer = null;
 		this.mapDataUnderlayArchiveIds = new int[i_6];
 		this.landscapeDataUnderlayArchiveIds = new int[i_6];
-		this.mapDataUnderlayBuffer = new byte[i_6][];
-		this.landscapeDataUnderlayBuffer = new byte[i_6][];
+		this.highDetailWaterMapDataBuffer = new byte[i_6][];
+		this.highDetailWaterLandscapeDataBuffer = new byte[i_6][];
 		i_6 = 0;
 
 		for (i_7 = (i_3 - (this.sizeX >> 4)) / 8; i_7 <= (i_3 + (this.sizeX >> 4)) / 8; i_7++) {
@@ -667,7 +667,7 @@ public class MapRegion {
 	}
 
 	void method4460(int i_1) {
-		this.aClass329_Sub1_3166 = null;
+		this.highDetailWaterPlane = null;
 		this.aClass329_Sub1_3167 = null;
 
 		for (int i_2 = 0; i_2 < 4; i_2++) {
@@ -714,16 +714,16 @@ public class MapRegion {
 				}
 			}
 
-			if (this.mapDataUnderlayArchiveIds[i_2] != -1 && this.mapDataUnderlayBuffer[i_2] == null) {
-				this.mapDataUnderlayBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.mapDataUnderlayArchiveIds[i_2], 0);
-				if (this.mapDataUnderlayBuffer[i_2] == null) {
+			if (this.mapDataUnderlayArchiveIds[i_2] != -1 && this.highDetailWaterMapDataBuffer[i_2] == null) {
+				this.highDetailWaterMapDataBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.mapDataUnderlayArchiveIds[i_2], 0);
+				if (this.highDetailWaterMapDataBuffer[i_2] == null) {
 					++this.missingMapCount;
 				}
 			}
 
-			if (this.landscapeDataUnderlayArchiveIds[i_2] != -1 && this.landscapeDataUnderlayBuffer[i_2] == null) {
-				this.landscapeDataUnderlayBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.landscapeDataUnderlayArchiveIds[i_2], 0);
-				if (this.landscapeDataUnderlayBuffer[i_2] == null) {
+			if (this.landscapeDataUnderlayArchiveIds[i_2] != -1 && this.highDetailWaterLandscapeDataBuffer[i_2] == null) {
+				this.highDetailWaterLandscapeDataBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.landscapeDataUnderlayArchiveIds[i_2], 0);
+				if (this.highDetailWaterLandscapeDataBuffer[i_2] == null) {
 					++this.missingMapCount;
 				}
 			}
@@ -777,7 +777,7 @@ public class MapRegion {
 					}
 				}
 
-				bytes_3 = this.landscapeDataUnderlayBuffer[i_2];
+				bytes_3 = this.highDetailWaterLandscapeDataBuffer[i_2];
 				if (bytes_3 != null) {
 					i_4 = (this.regionIds[i_2] >> 8) * 64 - this.coordGrid.x;
 					i_5 = (this.regionIds[i_2] & 0xff) * 64 - this.coordGrid.y;
@@ -838,7 +838,7 @@ public class MapRegion {
 				int i_11;
 				if (Class393.preferences.water.getValue(-2143596575) == 2) {
 					for (i_11 = 0; i_11 < this.mapDataBuffer.length; i_11++) {
-						if (this.landscapeDataUnderlayBuffer[i_11] != null || this.mapDataUnderlayBuffer[i_11] != null) {
+						if (this.highDetailWaterLandscapeDataBuffer[i_11] != null || this.highDetailWaterMapDataBuffer[i_11] != null) {
 							highDetailWater = true;
 							break;
 						}
@@ -871,7 +871,7 @@ public class MapRegion {
 				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(-267054469) == 1;
 				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.textures.method12873(1377050121) == 1;
 				if (!this.aClass256_3163.method4410((byte) -32)) {
-					this.method4463(this.aClass329_Sub1_3167, this.mapDataBuffer, 1315892185);
+					this.decodeUnderlayMasks(this.aClass329_Sub1_3167, this.mapDataBuffer, 1315892185);
 				} else {
 					this.method4464(this.aClass329_Sub1_3167, this.mapDataBuffer, 1987015126);
 				}
@@ -884,34 +884,34 @@ public class MapRegion {
 				this.aClass239_3175.method4037(this, (byte) 122);
 				if (highDetailWater) {
 					this.sceneObjectManager.method3380(true, -914334995);
-					this.aClass329_Sub1_3166 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 1, this.sizeX, this.sizeY, true, this.aClass311_3202, this.aClass239_3175);
-					this.aClass329_Sub1_3166.method5835(1973869970);
-					this.aClass329_Sub1_3166.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -93);
-					this.aClass329_Sub1_3166.highDetailWater = Class393.preferences.water.getValue(-962367192) == 2;
-					this.aClass329_Sub1_3166.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1;
-					this.aClass329_Sub1_3166.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(1666715266) == 1;
-					this.aClass329_Sub1_3166.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;
+					this.highDetailWaterPlane = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 1, this.sizeX, this.sizeY, true, this.aClass311_3202, this.aClass239_3175);
+					this.highDetailWaterPlane.method5835(1973869970);
+					this.highDetailWaterPlane.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -93);
+					this.highDetailWaterPlane.highDetailWater = Class393.preferences.water.getValue(-962367192) == 2;
+					this.highDetailWaterPlane.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1;
+					this.highDetailWaterPlane.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(1666715266) == 1;
+					this.highDetailWaterPlane.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;
 					if (!this.aClass256_3163.method4410((byte) 46)) {
-						this.method4463(this.aClass329_Sub1_3166, this.mapDataUnderlayBuffer, 500096938);
+						this.decodeUnderlayMasks(this.highDetailWaterPlane, this.highDetailWaterMapDataBuffer, 500096938);
 						if (!this.aBool3171) {
 							Exception_Sub3.method15619(true, -1068785077);
 						}
 					} else {
-						this.method4464(this.aClass329_Sub1_3166, this.mapDataUnderlayBuffer, 1544003060);
+						this.method4464(this.highDetailWaterPlane, this.highDetailWaterMapDataBuffer, 1544003060);
 						if (!this.aBool3171) {
 							Exception_Sub3.method15619(true, -466489103);
 						}
 					}
 
-					this.aClass329_Sub1_3166.method5853(0, this.aClass329_Sub1_3167.tileHeights[0], -1156911590);
-					this.aClass329_Sub1_3166.initClipMap(Renderers.SOFTWARE_RENDERER, (int[][][]) null, (ClipMap[]) null, (byte) 11);
+					this.highDetailWaterPlane.method5853(0, this.aClass329_Sub1_3167.tileHeights[0], -1156911590);
+					this.highDetailWaterPlane.initClipMap(Renderers.SOFTWARE_RENDERER, (int[][][]) null, (ClipMap[]) null, (byte) 11);
 					this.sceneObjectManager.method3380(false, -914334995);
 					if (this.aBool3171) {
 						this.method4462(50, (byte) -1);
 					}
 				}
 
-				this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, highDetailWater ? this.aClass329_Sub1_3166.tileHeights : null, this.clipMaps, (byte) 44);
+				this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, highDetailWater ? this.highDetailWaterPlane.tileHeights : null, this.clipMaps, (byte) 44);
 				if (!this.aClass256_3163.method4410((byte) -39)) {
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, -1924347583);
@@ -954,17 +954,17 @@ public class MapRegion {
 					}
 
 					if (!this.aClass256_3163.method4410((byte) -69)) {
-						this.method4465(this.aClass329_Sub1_3166, this.landscapeDataUnderlayBuffer, -1228514951);
+						this.method4465(this.highDetailWaterPlane, this.highDetailWaterLandscapeDataBuffer, -1228514951);
 					} else {
-						this.method4432(this.aClass329_Sub1_3166, this.landscapeDataUnderlayBuffer, 346534701);
+						this.method4432(this.highDetailWaterPlane, this.highDetailWaterLandscapeDataBuffer, 346534701);
 					}
 
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, -1264882543);
 					}
 
-					this.aClass329_Sub1_3166.method5837(Renderers.SOFTWARE_RENDERER, (Ground) null, this.sceneObjectManager.aClass390Array2607[0], -1009930272);
-					this.aClass329_Sub1_3166.method12463(Renderers.SOFTWARE_RENDERER, true, 454950063);
+					this.highDetailWaterPlane.method5837(Renderers.SOFTWARE_RENDERER, (Ground) null, this.sceneObjectManager.aClass390Array2607[0], -1009930272);
+					this.highDetailWaterPlane.method12463(Renderers.SOFTWARE_RENDERER, true, 454950063);
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, 163262675);
 					}
@@ -976,8 +976,8 @@ public class MapRegion {
 				}
 
 				this.aClass329_Sub1_3167.method5891((short) -9701);
-				if (this.aClass329_Sub1_3166 != null) {
-					this.aClass329_Sub1_3166.method5891((short) -22349);
+				if (this.highDetailWaterPlane != null) {
+					this.highDetailWaterPlane.method5891((short) -22349);
 				}
 
 				this.sceneObjectManager.method3428(1203434505);
@@ -1102,7 +1102,7 @@ public class MapRegion {
 
 	}
 
-	void method4463(Class329_Sub1 class329_sub1_1, byte[][] bytes_2, int i_3) {
+	void decodeUnderlayMasks(Class329_Sub1 class329_sub1_1, byte[][] bytes_2, int i_3) {
 		int i_4 = bytes_2.length;
 
 		int i_5;
@@ -1347,8 +1347,8 @@ public class MapRegion {
 		this.npcSpawnBuffer = null;
 		this.mapDataUnderlayArchiveIds = new int[i_2];
 		this.landscapeDataUnderlayArchiveIds = new int[i_2];
-		this.mapDataUnderlayBuffer = new byte[i_2][];
-		this.landscapeDataUnderlayBuffer = new byte[i_2][];
+		this.highDetailWaterMapDataBuffer = new byte[i_2][];
+		this.highDetailWaterLandscapeDataBuffer = new byte[i_2][];
 		i_2 = 0;
 
 		for (Class282_Sub2 class282_sub2_3 = (Class282_Sub2) Class86.aClass482_827.head((byte) 29); class282_sub2_3 != null; class282_sub2_3 = (Class282_Sub2) Class86.aClass482_827.next(2076366148)) {
@@ -1453,8 +1453,8 @@ public class MapRegion {
 			this.mapDataBuffer = mapregion_2.mapDataBuffer;
 			this.landscapeDataBuffer = mapregion_2.landscapeDataBuffer;
 			this.npcSpawnBuffer = mapregion_2.npcSpawnBuffer;
-			this.mapDataUnderlayBuffer = mapregion_2.mapDataUnderlayBuffer;
-			this.landscapeDataUnderlayBuffer = mapregion_2.landscapeDataUnderlayBuffer;
+			this.highDetailWaterMapDataBuffer = mapregion_2.highDetailWaterMapDataBuffer;
+			this.highDetailWaterLandscapeDataBuffer = mapregion_2.highDetailWaterLandscapeDataBuffer;
 			this.clipMaps = mapregion_2.clipMaps;
 			this.aClass311_3202 = mapregion_2.aClass311_3202;
 			this.aClass239_3175 = mapregion_2.aClass239_3175;
