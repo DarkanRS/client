@@ -18,18 +18,18 @@ public class CS2Script extends CacheableNode {
 		int i_2 = this.decodeHeader(rsbytebuffer_1);
 		int i_3 = 0;
 
-		for (CS2OpInfo[] arr_4 = CS2OpInfo.getCS2Operations(); rsbytebuffer_1.index < i_2; i_3++) {
-			CS2OpInfo cs2opinfo_5 = this.getOpcode(rsbytebuffer_1, arr_4);
+		for (;rsbytebuffer_1.index < i_2; i_3++) {
+			CS2OpInfo cs2opinfo_5 = this.getOpcode(rsbytebuffer_1);
 			this.decodeInstruction(rsbytebuffer_1, i_3, cs2opinfo_5);
 		}
 
 	}
 
-	CS2OpInfo getOpcode(RsByteBuffer rsbytebuffer_1, CS2OpInfo[] arr_2) {
+	CS2OpInfo getOpcode(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedShort();
-		if (i_3 >= 0 && i_3 < arr_2.length) {
-			CS2OpInfo cs2opinfo_4 = arr_2[i_3];
-			return cs2opinfo_4;
+		CS2OpInfo operation = CS2OpInfo.getByOpcode(i_3);
+		if (operation != null) {
+			return operation;
 		} else {
 			throw new RuntimeException("");
 		}
