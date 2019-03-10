@@ -283,7 +283,7 @@ public class ParticleProducer {
 		client.anInt7408 = client.cycles;
 		if (client.anInt7349 != -1) {
 			client.anInt7407 = 0;
-			Class421.method7039((byte) 16);
+			StructIndexLoader.method7039((byte) 16);
 		}
 
 		Renderers.SOFTWARE_RENDERER.L();

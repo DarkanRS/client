@@ -2195,7 +2195,7 @@ public final class client extends Engine {
 											aBool7375 = true;
 											Class282_Sub15_Sub5.anInt9859 = ints_43[0];
 											IdentikitDefinition.anInt431 = ints_43[1];
-											Class421.anInt5015 = ints_43[2];
+											StructIndexLoader.anInt5015 = ints_43[2];
 										}
 
 										anInt7184 = 1;

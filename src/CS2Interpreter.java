@@ -1821,8 +1821,8 @@ public class CS2Interpreter {
 		case instr6550:
 			method11222(exec);
 			break;
-		case GET_PARAM_VALUE:
-			getParamValue(exec);
+		case GET_STRUCT_VALUE:
+			getStructValue(exec);
 			break;
 		case instr6947:
 			method3674(exec);
@@ -7597,15 +7597,15 @@ public class CS2Interpreter {
 		NamedFileReference.method869(icomponentdefinitions_3, interface_4, executor, -1209481120);
 	}
 
-	static final void getParamValue(CS2Executor executor) {
+	static final void getStructValue(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(1555061388)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.PARAM_INDEX_LOADER.getParam(i_2, -1979038944).method14751(i_3, attributedefault_4.typeName, 1092559999);
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.STRUCT_INDEX_LOADER.getStruct(i_2, -1979038944).method14751(i_3, attributedefault_4.typeName, 1092559999);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.PARAM_INDEX_LOADER.getParam(i_2, 1053782715).method14750(i_3, attributedefault_4.defaultInt, (byte) 53);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.STRUCT_INDEX_LOADER.getStruct(i_2, 1053782715).method14750(i_3, attributedefault_4.defaultInt, (byte) 53);
 		}
 	}
 

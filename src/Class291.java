@@ -19,7 +19,7 @@ public class Class291 {
 	static byte[] aByteArray3467 = new byte[1];
 	protected static NodeCollection aClass482_3459 = new NodeCollection();
 	protected static Index aClass317_3460;
-	static Class536 aClass536_3482;
+	static OverlayIndexLoader aClass536_3482;
 	static UnderlayIndexLoader UNDERLAY_DEF_LOADER;
 	protected static ObjectIndexLoader aClass474_3455;
 	protected static WorldMapIndexLoader aClass218_3456;
@@ -44,7 +44,7 @@ public class Class291 {
 	protected static int anInt3476;
 	protected static int anInt3492;
 
-	public static void method5125(Index index_0, Class536 class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, WorldMapIndexLoader worldmapindexloader_4, Class427 class427_5, Interface42 interface42_6) {
+	public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, WorldMapIndexLoader worldmapindexloader_4, Class427 class427_5, Interface42 interface42_6) {
 		aClass317_3460 = index_0;
 		aClass536_3482 = class536_1;
 		UNDERLAY_DEF_LOADER = underlayindexloader_2;

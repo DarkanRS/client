@@ -46,7 +46,7 @@ public class IndexLoaders {
 	public static RenderAnimIndexLoader RENDER_ANIMS;
 	public static Class438 aClass438_7932;
 	public static EnumIndexLoader ENUM_LOADER;
-	public static Class536 aClass536_1535;
+	public static OverlayIndexLoader OVERLAY_INDEX_LOADER;
 	public static UnderlayIndexLoader UNDERLAY_INDEX_LOADER;
 	public static Class210 HITSPLAT_INDEX_LOADER;
 	public static Class290 HITBAR_INDEX;
@@ -63,7 +63,7 @@ public class IndexLoaders {
 	public static Class288 aClass288_1746;
 	public static Class45 aClass45_5759;
 	public static SpotAnimIndexLoader SPOT_ANIM_INDEX_LOADER;
-	public static Class421 PARAM_INDEX_LOADER;
+	public static StructIndexLoader STRUCT_INDEX_LOADER;
 	public static Class401 aClass401_4791;
 	public static Class408 aClass408_7207;
 	public static Class230 aClass230_147;
@@ -266,7 +266,7 @@ public class IndexLoaders {
 			RENDER_ANIMS = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.DEFAULTS_LOADER_6);
 			aClass438_7932 = new Class438(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			ENUM_LOADER = new EnumIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
-			aClass536_1535 = new Class536(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
+			OVERLAY_INDEX_LOADER = new OverlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			UNDERLAY_INDEX_LOADER = new UnderlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			HITSPLAT_INDEX_LOADER = new Class210(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			HITBAR_INDEX = new Class290(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
@@ -285,7 +285,7 @@ public class IndexLoaders {
 			aClass288_1746 = new Class288(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass45_5759 = new Class45(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			SPOT_ANIM_INDEX_LOADER = new SpotAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SPOTANIM_INDEX, MESH_INDEX);
-			PARAM_INDEX_LOADER = new Class421(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, true);
+			STRUCT_INDEX_LOADER = new StructIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, true);
 			aClass401_4791 = new Class401(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass408_7207 = new Class408(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass230_147 = new Class230(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, VARBIT_INDEX);
@@ -318,7 +318,7 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4706) {
-			Class291.method5125(WORLD_MAP_INDEX, aClass536_1535, UNDERLAY_INDEX_LOADER, MAP_REGION_DECODER.method4436(-2053638412), WORLD_MAP_INDEX_LOADER, aClass427_995, Class158_Sub1.PLAYER_VAR_PROVIDER);
+			Class291.method5125(WORLD_MAP_INDEX, OVERLAY_INDEX_LOADER, UNDERLAY_INDEX_LOADER, MAP_REGION_DECODER.method4436(-2053638412), WORLD_MAP_INDEX_LOADER, aClass427_995, Class158_Sub1.PLAYER_VAR_PROVIDER);
 		}
 
 		if (LoadingStage.aClass387_4707 == LOADING_STAGE) {

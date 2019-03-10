@@ -126,7 +126,7 @@ public abstract class Class152 {
 		Class380.method6451(-1, -1, 926012216);
 		if (client.anInt7349 != -1) {
 			client.anInt7407 = 0;
-			Class421.method7039((byte) 58);
+			StructIndexLoader.method7039((byte) 58);
 		}
 		Renderers.SOFTWARE_RENDERER.L();
 		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 23);

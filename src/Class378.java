@@ -156,7 +156,7 @@ public class Class378 {
 	}
 
 	static final void method6438(byte b_0) {
-		IndexLoaders.aClass536_1535.method11477(5, (byte) 1);
+		IndexLoaders.OVERLAY_INDEX_LOADER.method11477(5, (byte) 1);
 		IndexLoaders.UNDERLAY_INDEX_LOADER.method8030(5, 1440443465);
 		IndexLoaders.aClass31_204.method802(5, -957587210);
 		IndexLoaders.MAP_REGION_DECODER.method4436(-1981388866).method7896(5, (byte) -88);

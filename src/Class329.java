@@ -128,7 +128,7 @@ public class Class329 {
 
 	public boolean overlayHidden;
 
-	Class536 aClass536_3834;
+	OverlayIndexLoader aClass536_3834;
 
 	UnderlayIndexLoader aClass479_3789;
 
@@ -1311,7 +1311,7 @@ public class Class329 {
 		}
 	}
 
-	Class329(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, boolean bool_5, Class536 class536_6, UnderlayIndexLoader underlayindexloader_7, RegionMap regionmap_8) {
+	Class329(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, boolean bool_5, OverlayIndexLoader class536_6, UnderlayIndexLoader underlayindexloader_7, RegionMap regionmap_8) {
 		this.aClass206_3776 = sceneobjectmanager_1;
 		this.anInt3845 = i_2;
 		this.maxX = i_3;

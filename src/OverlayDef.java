@@ -2,7 +2,7 @@ public class OverlayDef {
 
 	int anInt7053;
 
-	Class536 aClass536_7062;
+	OverlayIndexLoader aClass536_7062;
 
 	public int anInt7052 = 8;
 

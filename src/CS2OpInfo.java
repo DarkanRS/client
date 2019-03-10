@@ -606,7 +606,7 @@ public enum CS2OpInfo {
 	instr6548(213),
 	instr6549(425),
 	instr6550(935),
-	GET_PARAM_VALUE(594),
+	GET_STRUCT_VALUE(594),
 	instr6947(404),
 	instr6553(456),
 	instr6554(643),

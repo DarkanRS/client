@@ -64,7 +64,7 @@ public class Class356 {
 
 	public static final void method6227(boolean bool_0, byte b_1) {
 		if (!bool_0) {
-			IndexLoaders.aClass536_1535.method11476((byte) -55);
+			IndexLoaders.OVERLAY_INDEX_LOADER.method11476((byte) -55);
 			IndexLoaders.UNDERLAY_INDEX_LOADER.method8026(113468323);
 			IndexLoaders.aClass31_204.method801(-1911445195);
 			IndexLoaders.MAP_REGION_DECODER.method4436(-1471749977).method7895((byte) 113);

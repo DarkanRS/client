@@ -1,4 +1,4 @@
-public class Class536 {
+public class OverlayIndexLoader {
 
 	SoftCache aClass229_7092 = new SoftCache(64);
 
@@ -58,7 +58,7 @@ public class Class536 {
 		}
 	}
 
-	public Class536(Game game_1, Language xlanguage_2, Index index_3) {
+	public OverlayIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_7095 = index_3;
 		this.anInt7094 = this.aClass317_7095.filesCount(SharedConfigsType.FLO2.id);
 	}

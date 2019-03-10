@@ -1,15 +1,15 @@
-public class Class421 {
+public class StructIndexLoader {
 
 	static int anInt5015;
 	Index aClass317_5014;
 	int anInt5013;
 	Class282_Sub50_Sub4[] aClass282_Sub50_Sub4Array5012;
 
-	public Class282_Sub50_Sub4 getParam(int i_1, int i_2) {
+	public Class282_Sub50_Sub4 getStruct(int i_1, int i_2) {
 		return i_1 < 0 ? new Class282_Sub50_Sub4() : this.aClass282_Sub50_Sub4Array5012[i_1];
 	}
 
-	public Class421(Game game_1, Language xlanguage_2, Index index_3, boolean bool_4) {
+	public StructIndexLoader(Game game_1, Language xlanguage_2, Index index_3, boolean bool_4) {
 		this.aClass317_5014 = index_3;
 		this.anInt5013 = this.aClass317_5014.filesCount(SharedConfigsType.aClass120_1473.id);
 		this.aClass282_Sub50_Sub4Array5012 = new Class282_Sub50_Sub4[this.anInt5013];

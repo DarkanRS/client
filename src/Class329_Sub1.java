@@ -986,7 +986,7 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	public Class329_Sub1(SceneObjectManager sceneobjectmanager_1, ObjectIndexLoader objectindexloader_2, int i_3, int i_4, int i_5, boolean bool_6, RegionMap regionmap_7, Class239 class239_8) {
-		super(sceneobjectmanager_1, i_3, i_4, i_5, bool_6, IndexLoaders.aClass536_1535, IndexLoaders.UNDERLAY_INDEX_LOADER, regionmap_7);
+		super(sceneobjectmanager_1, i_3, i_4, i_5, bool_6, IndexLoaders.OVERLAY_INDEX_LOADER, IndexLoaders.UNDERLAY_INDEX_LOADER, regionmap_7);
 		this.objectDefLoader = objectindexloader_2;
 		this.aClass239_7719 = class239_8;
 	}

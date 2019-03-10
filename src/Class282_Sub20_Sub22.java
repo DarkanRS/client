@@ -214,7 +214,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						TCPMessage tcpmessage_8;
 						if (client.aBool7375) {
 							tcpmessage_8 = Class271.method4828(OutgoingPacket.aClass379_4549, client.aClass184_7475.isaac, 771698207);
-							tcpmessage_8.buffer.writeLEInt(Class282_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | Class421.anInt5015, (byte) -22);
+							tcpmessage_8.buffer.writeLEInt(Class282_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015, (byte) -22);
 							client.aClass184_7475.method3049(tcpmessage_8, -1247398056);
 							client.aBool7375 = false;
 						}
