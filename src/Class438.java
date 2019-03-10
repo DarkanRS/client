@@ -2,167 +2,146 @@ import java.io.IOException;
 
 public class Class438 {
 
-	SoftCache aClass229_5344 = new SoftCache(64);
-	SoftCache aClass229_5342 = new SoftCache(2);
-	Index aClass317_5343;
-	Index aClass317_5341;
+    SoftCache aClass229_5344 = new SoftCache(64);
 
-	public void method7324(int i_1) {
-		SoftCache softcache_2 = this.aClass229_5344;
-		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3859(1982287383);
-		}
+    SoftCache aClass229_5342 = new SoftCache(2);
 
-		softcache_2 = this.aClass229_5342;
-		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3859(378665676);
-		}
-	}
+    Index aClass317_5343;
 
-	public Class419 method7325(int i_1, int i_2) {
-		SoftCache softcache_4 = this.aClass229_5344;
-		Class419 class419_3;
-		synchronized (this.aClass229_5344) {
-			class419_3 = (Class419) this.aClass229_5344.get((long) i_1);
-		}
+    Index aClass317_5341;
 
-		if (class419_3 != null) {
-			return class419_3;
-		} else {
-			Index index_5 = this.aClass317_5343;
-			byte[] bytes_10;
-			synchronized (this.aClass317_5343) {
-				bytes_10 = this.aClass317_5343.getFile(SharedConfigsType.aClass120_1496.id, i_1);
-			}
+    public void method7324(int i_1) {
+        SoftCache softcache_2 = this.aClass229_5344;
+        synchronized (this.aClass229_5344) {
+            this.aClass229_5344.method3859(1982287383);
+        }
+        softcache_2 = this.aClass229_5342;
+        synchronized (this.aClass229_5342) {
+            this.aClass229_5342.method3859(378665676);
+        }
+    }
 
-			class419_3 = new Class419();
-			class419_3.aClass438_5001 = this;
-			if (bytes_10 != null) {
-				class419_3.method7024(new RsByteBuffer(bytes_10), 2098733573);
-			}
+    public Class419 method7325(int i_1, int i_2) {
+        SoftCache softcache_4 = this.aClass229_5344;
+        Class419 class419_3;
+        synchronized (this.aClass229_5344) {
+            class419_3 = (Class419) this.aClass229_5344.get((long) i_1);
+        }
+        if (class419_3 != null) {
+            return class419_3;
+        } else {
+            Index index_5 = this.aClass317_5343;
+            byte[] bytes_10;
+            synchronized (this.aClass317_5343) {
+                bytes_10 = this.aClass317_5343.getFile(SharedConfigsType.aClass120_1496.id, i_1);
+            }
+            class419_3 = new Class419();
+            class419_3.aClass438_5001 = this;
+            if (bytes_10 != null) {
+                class419_3.method7024(new RsByteBuffer(bytes_10), 2098733573);
+            }
+            SoftCache softcache_9 = this.aClass229_5344;
+            synchronized (this.aClass229_5344) {
+                this.aClass229_5344.put(class419_3, (long) i_1);
+                return class419_3;
+            }
+        }
+    }
 
-			SoftCache softcache_9 = this.aClass229_5344;
-			synchronized (this.aClass229_5344) {
-				this.aClass229_5344.put(class419_3, (long) i_1);
-				return class419_3;
-			}
-		}
-	}
+    public void method7326(int i_1, int i_2) {
+        SoftCache softcache_3 = this.aClass229_5344;
+        synchronized (this.aClass229_5344) {
+            this.aClass229_5344.method3858(i_1, (byte) -55);
+        }
+        softcache_3 = this.aClass229_5342;
+        synchronized (this.aClass229_5342) {
+            this.aClass229_5342.method3858(i_1, (byte) 18);
+        }
+    }
 
-	public void method7326(int i_1, int i_2) {
-		SoftCache softcache_3 = this.aClass229_5344;
-		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3858(i_1, (byte) -55);
-		}
+    public void method7327(int i_1) {
+        SoftCache softcache_2 = this.aClass229_5344;
+        synchronized (this.aClass229_5344) {
+            this.aClass229_5344.method3863(1594658345);
+        }
+        softcache_2 = this.aClass229_5342;
+        synchronized (this.aClass229_5342) {
+            this.aClass229_5342.method3863(725307198);
+        }
+    }
 
-		softcache_3 = this.aClass229_5342;
-		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3858(i_1, (byte) 18);
-		}
-	}
+    public Class438(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+        this.aClass317_5343 = index_3;
+        this.aClass317_5341 = index_4;
+        this.aClass317_5343.filesCount(SharedConfigsType.aClass120_1496.id);
+    }
 
-	public void method7327(int i_1) {
-		SoftCache softcache_2 = this.aClass229_5344;
-		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3863(1594658345);
-		}
+    public static final void method7333(boolean bool_0, int i_1) {
+        Class184[] arr_2 = client.aClass184Array7220;
+        for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
+            Class184 class184_4 = arr_2[i_3];
+            try {
+                class184_4.method3047(1513639473);
+            } catch (IOException ioexception_8) {
+                ;
+            }
+            class184_4.method3051((byte) -59);
+        }
+        JS5StandardRequester.method5558(-500941691);
+        Class356.method6227(false, (byte) -48);
+        IndexLoaders.MAP_REGION_DECODER.method4444(1869336559);
+        IndexLoaders.MAP_REGION_DECODER.method4485(-756888037);
+        Class122.method2111(false, 662490589);
+        Class358.method6240(2, 1510969650);
+        Class260.anInt3223 = -1;
+        Class260.aBool3220 = false;
+        Class468_Sub6.method12658(-111108219);
+        ClipMap.method6008(true, (byte) 8);
+        Class459.method7678(-1273832193);
+        Class204.method3367(-2146743661);
+        Class42_Sub1.method14562(1915286568);
+        if (bool_0) {
+            Class365.setGameState(12);
+        } else {
+            Class365.setGameState(5);
+            try {
+                Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1769975690);
+            } catch (Throwable throwable_7) {
+                ;
+            }
+        }
+    }
 
-		softcache_2 = this.aClass229_5342;
-		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3863(725307198);
-		}
-	}
-
-	public Class438(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
-		this.aClass317_5343 = index_3;
-		this.aClass317_5341 = index_4;
-		this.aClass317_5343.filesCount(SharedConfigsType.aClass120_1496.id);
-	}
-
-	static final void method7332(CS2Executor cs2executor_0) {
-		Class337.method6018((Class521_Sub1) cs2executor_0.anInterface12_7013, cs2executor_0, 1876481461);
-	}
-
-	public static final void method7333(boolean bool_0, int i_1) {
-		Class184[] arr_2 = client.aClass184Array7220;
-
-		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-			Class184 class184_4 = arr_2[i_3];
-
-			try {
-				class184_4.method3047(1513639473);
-			} catch (IOException ioexception_8) {
-				;
-			}
-
-			class184_4.method3051((byte) -59);
-		}
-
-		JS5StandardRequester.method5558(-500941691);
-		Class356.method6227(false, (byte) -48);
-		IndexLoaders.MAP_REGION_DECODER.method4444(1869336559);
-		IndexLoaders.MAP_REGION_DECODER.method4485(-756888037);
-		Class122.method2111(false, 662490589);
-		Class358.method6240(2, 1510969650);
-		Class260.anInt3223 = -1;
-		Class260.aBool3220 = false;
-		Class468_Sub6.method12658(-111108219);
-		ClipMap.method6008(true, (byte) 8);
-		Class459.method7678(-1273832193);
-		Class204.method3367(-2146743661);
-		Class42_Sub1.method14562(1915286568);
-		if (bool_0) {
-			Class365.setGameState(12);
-		} else {
-			Class365.setGameState(5);
-
-			try {
-				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1769975690);
-			} catch (Throwable throwable_7) {
-				;
-			}
-		}
-
-	}
-
-	static final void method7334(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.customCursors.method12675(-1589433086) == 1 ? 1 : 0;
-	}
-
-	static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, int i_15) {
-		if (i_1 != 0 && i_3 != -1) {
-			Object obj_16 = null;
-			int i_17;
-			if (i_1 < 0) {
-				i_17 = -i_1 - 1;
-				if (i_17 == client.anInt7315) {
-					obj_16 = Class84.myPlayer;
-				} else {
-					obj_16 = client.players[i_17];
-				}
-			} else {
-				i_17 = i_1 - 1;
-				Class282_Sub47 class282_sub47_18 = (Class282_Sub47) client.NPCS.get((long) i_17);
-				if (class282_sub47_18 != null) {
-					obj_16 = (Animable) class282_sub47_18.anObject8068;
-				}
-			}
-
-			if (obj_16 != null) {
-				RenderAnimDefs renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs((byte) -17);
-				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
-					i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
-				}
-
-				if (renderanimdefs_19.anIntArrayArray2791 != null && renderanimdefs_19.anIntArrayArray2791[i_3] != null) {
-					i_4 -= renderanimdefs_19.anIntArrayArray2791[i_3][1];
-				}
-			}
-		}
-
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1810939972), i_0, Class272.anInt3331, Class272.anInt3331, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
-		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.anInt3331, (byte) 65) - i_5, i_10 + client.cycles, -209443166);
-		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_20), -1750493342);
-	}
-
+    static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, int i_15) {
+        if (i_1 != 0 && i_3 != -1) {
+            Object obj_16 = null;
+            int i_17;
+            if (i_1 < 0) {
+                i_17 = -i_1 - 1;
+                if (i_17 == client.anInt7315) {
+                    obj_16 = Class84.myPlayer;
+                } else {
+                    obj_16 = client.players[i_17];
+                }
+            } else {
+                i_17 = i_1 - 1;
+                Class282_Sub47 class282_sub47_18 = (Class282_Sub47) client.NPCS.get((long) i_17);
+                if (class282_sub47_18 != null) {
+                    obj_16 = (Animable) class282_sub47_18.anObject8068;
+                }
+            }
+            if (obj_16 != null) {
+                RenderAnimDefs renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs((byte) -17);
+                if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
+                    i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
+                }
+                if (renderanimdefs_19.anIntArrayArray2791 != null && renderanimdefs_19.anIntArrayArray2791[i_3] != null) {
+                    i_4 -= renderanimdefs_19.anIntArrayArray2791[i_3][1];
+                }
+            }
+        }
+        Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1810939972), i_0, Class272.anInt3331, Class272.anInt3331, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
+        class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.anInt3331, (byte) 65) - i_5, i_10 + client.cycles, -209443166);
+        client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_20), -1750493342);
+    }
 }

@@ -1,132 +1,126 @@
 public class Class302 {
 
-	static LoadingStage[] aClass387Array3557;
-	static Interface27[] anInterface27Array3559;
-	static int anInt3561;
-	static long aLong3562;
-	static int anInt3563;
-	static int[] anIntArray3558 = new int[] { 4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 };
-	static int anInt3560 = -1;
-	static int anInt3564 = -1;
+    static LoadingStage[] aClass387Array3557;
 
-	Class302() throws Throwable {
-		throw new Error();
-	}
+    static Interface27[] anInterface27Array3559;
 
-	static int method5360(int i_0, int i_1, int i_2) {
-		int i_3 = i_0 >> 31 & i_1 - 1;
-		return (i_0 + (i_0 >>> 31)) % i_1 + i_3;
-	}
+    static int anInt3561;
 
-	static void method5361(Animable animable_0, int i_1, int i_2, int i_3, int i_4) {
-		RenderAnimDefs renderanimdefs_5 = animable_0.getRenderAnimDefs((byte) -17);
-		Class456_Sub3 class456_sub3_6 = animable_0.aClass456_Sub3_10337;
-		int i_7 = animable_0.anInt10361 - animable_0.aClass19_10359.anInt153 & 0x3fff;
-		if (i_1 == Class249.aClass249_3083.aByte3085) {
-			if (i_7 == 0 && animable_0.anInt10357 <= 25) {
-				if (!class456_sub3_6.aBool7891 || !renderanimdefs_5.method3810(class456_sub3_6.method7597(-457692749), -1546960795)) {
-					class456_sub3_6.method7570(renderanimdefs_5.method3809(346097495), false, true, -1633423132);
-					class456_sub3_6.aBool7891 = class456_sub3_6.hasDefs();
-				}
-			} else if (i_3 < 0 && renderanimdefs_5.walkDir1 != -1) {
-				class456_sub3_6.method7570(renderanimdefs_5.walkDir1, false, true, -1480402548);
-				class456_sub3_6.aBool7891 = false;
-			} else if (i_3 > 0 && renderanimdefs_5.walkDir2 != -1) {
-				class456_sub3_6.method7570(renderanimdefs_5.walkDir2, false, true, -529478475);
-				class456_sub3_6.aBool7891 = false;
-			} else if (!class456_sub3_6.aBool7891 || !renderanimdefs_5.method3810(class456_sub3_6.method7597(-1676563676), -1546960795)) {
-				class456_sub3_6.method7570(renderanimdefs_5.method3809(711048554), false, true, -1671257670);
-				class456_sub3_6.aBool7891 = animable_0.aClass456_Sub3_10337.hasDefs();
-			}
-		} else if (animable_0.faceEntity == -1 || i_7 < 10240 && i_7 > 2048) {
-			if (i_7 == 0 && animable_0.anInt10357 <= 25) {
-				if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2797, false, true, -1921383310);
-				} else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2801, false, true, -352623375);
-				} else {
-					class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, false, true, -765983563);
-				}
+    static long aLong3562;
 
-				class456_sub3_6.aBool7891 = false;
-			} else {
-				if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
-					if (i_3 < 0 && renderanimdefs_5.anInt2807 != -1) {
-						class456_sub3_6.method7570(renderanimdefs_5.anInt2807, false, true, -484680989);
-					} else if (i_3 > 0 && renderanimdefs_5.anInt2808 != -1) {
-						class456_sub3_6.method7570(renderanimdefs_5.anInt2808, false, true, -274851042);
-					} else {
-						class456_sub3_6.method7570(renderanimdefs_5.anInt2797, false, true, -85228314);
-					}
-				} else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
-					if (i_3 < 0 && renderanimdefs_5.anInt2830 != -1) {
-						class456_sub3_6.method7570(renderanimdefs_5.anInt2830, false, true, -1720670633);
-					} else if (i_3 > 0 && renderanimdefs_5.anInt2806 != -1) {
-						class456_sub3_6.method7570(renderanimdefs_5.anInt2806, false, true, -568161732);
-					} else {
-						class456_sub3_6.method7570(renderanimdefs_5.anInt2801, false, true, -1131572762);
-					}
-				} else if (i_3 < 0 && renderanimdefs_5.anInt2809 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2809, false, true, -443057729);
-				} else if (i_3 > 0 && renderanimdefs_5.anInt2810 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2810, false, true, -1335690885);
-				} else {
-					class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, false, true, -1249670627);
-				}
+    static int anInt3563;
 
-				class456_sub3_6.aBool7891 = false;
-			}
-		} else {
-			int i_8 = client.anIntArray7380[i_2] - animable_0.aClass19_10359.anInt153 & 0x3fff;
-			if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
-				if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.anInt2800 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2800, false, true, -744132293);
-				} else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.anInt2799 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2799, false, true, -930326431);
-				} else if (i_8 > 6144 && i_8 < 10240 && renderanimdefs_5.walkDir6 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.walkDir6, false, true, -1031888720);
-				} else {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2797, false, true, -1257308259);
-				}
-			} else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
-				if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.anInt2812 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2812, false, true, -173534330);
-				} else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.anInt2803 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2803, false, true, -1986637657);
-				} else if (i_8 > 6144 && i_8 < 10240 && renderanimdefs_5.anInt2828 != -1) {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2828, false, true, -1528009558);
-				} else {
-					class456_sub3_6.method7570(renderanimdefs_5.anInt2801, false, true, -1259452142);
-				}
-			} else if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.walkDir5 != -1) {
-				class456_sub3_6.method7570(renderanimdefs_5.walkDir5, false, true, -989017367);
-			} else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.walkDir4 != -1) {
-				class456_sub3_6.method7570(renderanimdefs_5.walkDir4, false, true, -1349434432);
-			} else if (i_8 > 6144 && i_8 < 10240 && renderanimdefs_5.walkDir3 != -1) {
-				class456_sub3_6.method7570(renderanimdefs_5.walkDir3, false, true, -994621922);
-			} else {
-				class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, false, true, -883440567);
-			}
+    static int[] anIntArray3558 = new int[] { 4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 };
 
-			class456_sub3_6.aBool7891 = false;
-		}
+    static int anInt3560 = -1;
 
-	}
+    static int anInt3564 = -1;
 
-	static final void method5362(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStackPtr -= 3;
-		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
-		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass61_7010.method1198(i_2, i_3, i_4, 1532957096);
-	}
+    Class302() throws Throwable {
+        throw new Error();
+    }
 
-	public static long method5363(int i_0, int i_1) {
-		return (long) (i_0 + 11745) * 86400000L;
-	}
+    static int method5360(int i_0, int i_1, int i_2) {
+        int i_3 = i_0 >> 31 & i_1 - 1;
+        return (i_0 + (i_0 >>> 31)) % i_1 + i_3;
+    }
 
-	public static int method5364(int i_0, int i_1, float f_2, int i_3) {
-		return Class8_Sub3.method14337(i_0, i_1, (int) f_2, 1385119855);
-	}
+    static void method5361(Animable animable_0, int i_1, int i_2, int i_3, int i_4) {
+        RenderAnimDefs renderanimdefs_5 = animable_0.getRenderAnimDefs((byte) -17);
+        Class456_Sub3 class456_sub3_6 = animable_0.aClass456_Sub3_10337;
+        int i_7 = animable_0.anInt10361 - animable_0.aClass19_10359.anInt153 & 0x3fff;
+        if (i_1 == Class249.aClass249_3083.aByte3085) {
+            if (i_7 == 0 && animable_0.anInt10357 <= 25) {
+                if (!class456_sub3_6.aBool7891 || !renderanimdefs_5.method3810(class456_sub3_6.method7597(-457692749), -1546960795)) {
+                    class456_sub3_6.method7570(renderanimdefs_5.method3809(346097495), false, true, -1633423132);
+                    class456_sub3_6.aBool7891 = class456_sub3_6.hasDefs();
+                }
+            } else if (i_3 < 0 && renderanimdefs_5.walkDir1 != -1) {
+                class456_sub3_6.method7570(renderanimdefs_5.walkDir1, false, true, -1480402548);
+                class456_sub3_6.aBool7891 = false;
+            } else if (i_3 > 0 && renderanimdefs_5.walkDir2 != -1) {
+                class456_sub3_6.method7570(renderanimdefs_5.walkDir2, false, true, -529478475);
+                class456_sub3_6.aBool7891 = false;
+            } else if (!class456_sub3_6.aBool7891 || !renderanimdefs_5.method3810(class456_sub3_6.method7597(-1676563676), -1546960795)) {
+                class456_sub3_6.method7570(renderanimdefs_5.method3809(711048554), false, true, -1671257670);
+                class456_sub3_6.aBool7891 = animable_0.aClass456_Sub3_10337.hasDefs();
+            }
+        } else if (animable_0.faceEntity == -1 || i_7 < 10240 && i_7 > 2048) {
+            if (i_7 == 0 && animable_0.anInt10357 <= 25) {
+                if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2797, false, true, -1921383310);
+                } else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2801, false, true, -352623375);
+                } else {
+                    class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, false, true, -765983563);
+                }
+                class456_sub3_6.aBool7891 = false;
+            } else {
+                if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
+                    if (i_3 < 0 && renderanimdefs_5.anInt2807 != -1) {
+                        class456_sub3_6.method7570(renderanimdefs_5.anInt2807, false, true, -484680989);
+                    } else if (i_3 > 0 && renderanimdefs_5.anInt2808 != -1) {
+                        class456_sub3_6.method7570(renderanimdefs_5.anInt2808, false, true, -274851042);
+                    } else {
+                        class456_sub3_6.method7570(renderanimdefs_5.anInt2797, false, true, -85228314);
+                    }
+                } else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
+                    if (i_3 < 0 && renderanimdefs_5.anInt2830 != -1) {
+                        class456_sub3_6.method7570(renderanimdefs_5.anInt2830, false, true, -1720670633);
+                    } else if (i_3 > 0 && renderanimdefs_5.anInt2806 != -1) {
+                        class456_sub3_6.method7570(renderanimdefs_5.anInt2806, false, true, -568161732);
+                    } else {
+                        class456_sub3_6.method7570(renderanimdefs_5.anInt2801, false, true, -1131572762);
+                    }
+                } else if (i_3 < 0 && renderanimdefs_5.anInt2809 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2809, false, true, -443057729);
+                } else if (i_3 > 0 && renderanimdefs_5.anInt2810 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2810, false, true, -1335690885);
+                } else {
+                    class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, false, true, -1249670627);
+                }
+                class456_sub3_6.aBool7891 = false;
+            }
+        } else {
+            int i_8 = client.anIntArray7380[i_2] - animable_0.aClass19_10359.anInt153 & 0x3fff;
+            if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
+                if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.anInt2800 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2800, false, true, -744132293);
+                } else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.anInt2799 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2799, false, true, -930326431);
+                } else if (i_8 > 6144 && i_8 < 10240 && renderanimdefs_5.walkDir6 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.walkDir6, false, true, -1031888720);
+                } else {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2797, false, true, -1257308259);
+                }
+            } else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
+                if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.anInt2812 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2812, false, true, -173534330);
+                } else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.anInt2803 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2803, false, true, -1986637657);
+                } else if (i_8 > 6144 && i_8 < 10240 && renderanimdefs_5.anInt2828 != -1) {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2828, false, true, -1528009558);
+                } else {
+                    class456_sub3_6.method7570(renderanimdefs_5.anInt2801, false, true, -1259452142);
+                }
+            } else if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.walkDir5 != -1) {
+                class456_sub3_6.method7570(renderanimdefs_5.walkDir5, false, true, -989017367);
+            } else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.walkDir4 != -1) {
+                class456_sub3_6.method7570(renderanimdefs_5.walkDir4, false, true, -1349434432);
+            } else if (i_8 > 6144 && i_8 < 10240 && renderanimdefs_5.walkDir3 != -1) {
+                class456_sub3_6.method7570(renderanimdefs_5.walkDir3, false, true, -994621922);
+            } else {
+                class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, false, true, -883440567);
+            }
+            class456_sub3_6.aBool7891 = false;
+        }
+    }
 
+    public static long method5363(int i_0, int i_1) {
+        return (long) (i_0 + 11745) * 86400000L;
+    }
+
+    public static int method5364(int i_0, int i_1, float f_2, int i_3) {
+        return Class8_Sub3.method14337(i_0, i_1, (int) f_2, 1385119855);
+    }
 }
