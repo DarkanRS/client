@@ -270,7 +270,7 @@ public class IncomingPacket {
 		return class282_sub50_sub7_0.aString9585 != null && class282_sub50_sub7_0.aString9585.length() != 0 ? (class282_sub50_sub7_0.aString9588 != null && class282_sub50_sub7_0.aString9588.length() > 0 ? class282_sub50_sub7_0.aString9576 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -1322354341) + class282_sub50_sub7_0.aString9588 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -1270840835) + class282_sub50_sub7_0.aString9585 : class282_sub50_sub7_0.aString9576 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -394104656) + class282_sub50_sub7_0.aString9585) : (class282_sub50_sub7_0.aString9588 != null && class282_sub50_sub7_0.aString9588.length() > 0 ? class282_sub50_sub7_0.aString9576 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -1844703581) + class282_sub50_sub7_0.aString9588 : class282_sub50_sub7_0.aString9576);
 	}
 
-	static final void method6381(CS2Executor cs2executor_0, byte b_1) {
+	static final void method6381(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 65);
 		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];

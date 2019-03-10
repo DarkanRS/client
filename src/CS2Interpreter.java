@@ -112,133 +112,133 @@ public class CS2Interpreter {
 			Class207.method3557(exec);
 			break;
 		case 36:
-			Class249.method4277(exec, (byte) -127);
+			Class249.method4277(exec);
 			break;
 		case 37:
-			ObjectDefinitions.method8019(exec, (short) 1088);
+			ObjectDefinitions.method8019(exec);
 			break;
 		case 38:
-			Class4.method289(exec, (byte) -51);
+			Class4.method289(exec);
 			break;
 		case 39:
-			Class163.method2841(exec, 608785741);
+			Class163.method2841(exec);
 			break;
 		case 40:
-			Class202.method3341(exec, (byte) 88);
+			Class202.method3341(exec);
 			break;
 		case 41:
-			Class233.method3937(exec, (byte) 116);
+			Class233.method3937(exec);
 			break;
 		case 42:
-			Class358.method6238(exec, (byte) 112);
+			Class358.method6238(exec);
 			break;
 		case 43:
-			Class320.method5735(exec, (byte) 1);
+			Class320.method5735(exec);
 			break;
 		case 44:
-			Class123.method2153(exec, -2146932291);
+			Class123.method2153(exec);
 			break;
 		case 45:
-			Class260.method4630(exec, 2082268722);
+			Class260.method4630(exec);
 			break;
 		case 46:
-			Class122.method2112(exec, -743598106);
+			Class122.method2112(exec);
 			break;
 		case 47:
-			Class282_Sub17_Sub3.method15404(exec, 321795442);
+			Class282_Sub17_Sub3.method15404(exec);
 			break;
 		case 48:
-			Class97.method1613(exec, -1839239802);
+			Class97.method1613(exec);
 			break;
 		case 49:
-			Class306.method5456(exec, -1384937123);
+			Class306.method5456(exec);
 			break;
 		case 50:
-			Class344.method6121(exec, (byte) -81);
+			Class344.method6121(exec);
 			break;
 		case 51:
-			Index.method5695(exec, (byte) 105);
+			Index.method5695(exec);
 			break;
 		case 52:
-			Class413.method6941(exec, -910146013);
+			Class413.method6941(exec);
 			break;
 		case 53:
-			Class273.method4867(exec, 1156940422);
+			Class273.method4867(exec);
 			break;
 		case 54:
-			SoftCache.method3894(exec, -1300899221);
+			SoftCache.method3894(exec);
 			break;
 		case 55:
-			Class454.method7551(exec, (short) 30);
+			Class454.method7551(exec);
 			break;
 		case 56:
-			ReferenceTable.method5764(exec, (short) -4973);
+			ReferenceTable.method5764(exec);
 			break;
 		case 57:
-			Class104.method1800(exec, 378924675);
+			Class104.method1800(exec);
 			break;
 		case 58:
-			Class530.method11351(exec, 1943263783);
+			Class530.method11351(exec);
 			break;
 		case 59:
-			Class296.method5296(exec, (byte) 23);
+			Class296.method5296(exec);
 			break;
 		case 60:
-			Class96_Sub6.method14503(exec, -1666430419);
+			Class96_Sub6.method14503(exec);
 			break;
 		case 61:
-			Class1.method254(exec, (byte) -5);
+			Class1.method254(exec);
 			break;
 		case 62:
-			Class247.method4249(exec, -181903823);
+			Class247.method4249(exec);
 			break;
 		case 63:
-			Class152.method2597(exec, (byte) 1);
+			Class152.method2597(exec);
 			break;
 		case 64:
-			Class339.method6040(exec, (byte) 14);
+			Class339.method6040(exec);
 			break;
 		case 65:
-			Class233.method3938(exec, -2038379922);
+			Class233.method3938(exec);
 			break;
 		case 66:
-			Class366.method6305(exec, 1749125215);
+			Class366.method6305(exec);
 			break;
 		case 67:
-			Class282_Sub20_Sub34.method15416(exec, (byte) -72);
+			Class282_Sub20_Sub34.method15416(exec);
 			break;
 		case 68:
-			Class233.method3941(exec, 2039402379);
+			Class233.method3941(exec);
 			break;
 		case 69:
-			Class438.method7332(exec, (byte) 10);
+			Class438.method7332(exec);
 			break;
 		case 70:
-			Class323.method5775(exec, -2078698405);
+			Class323.method5775(exec);
 			break;
 		case 71:
-			Class149.method2568(exec, (byte) 8);
+			Class149.method2568(exec);
 			break;
 		case 72:
-			IncomingPacket.method6381(exec, (byte) 28);
+			IncomingPacket.method6381(exec);
 			break;
 		case 73:
-			Class199_Sub1.method13399(exec, 609107398);
+			Class199_Sub1.method13399(exec);
 			break;
 		case 74:
-			Class175.method2963(exec, 1724737651);
+			Class175.method2963(exec);
 			break;
 		case 75:
-			Class28.method779(exec, (byte) 53);
+			Class28.method779(exec);
 			break;
 		case 76:
-			Class529.method11338(exec, 1916576796);
+			Class529.method11338(exec);
 			break;
 		case 77:
-			Class115.method1949(exec, -1501334315);
+			Class115.method1949(exec);
 			break;
 		case 78:
-			Class447.method7462(exec, -1027798859);
+			Class447.method7462(exec);
 			break;
 		case 79:
 			Class468_Sub20.method12804(exec, -1961027060);

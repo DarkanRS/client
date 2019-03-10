@@ -21,7 +21,7 @@ public class Class260 {
 		Class306.method5455(icomponentdefinitions_3, interface_4, cs2executor_0, 1919949252);
 	}
 
-	static final void method4630(CS2Executor cs2executor_0, int i_1) {
+	static final void method4630(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] - 1;

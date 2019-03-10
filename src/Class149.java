@@ -81,7 +81,7 @@ public abstract class Class149 {
 		Class463.method7729(icomponentdefinitions_3, interface_4, cs2executor_0, 1735506761);
 	}
 
-	static final void method2568(CS2Executor cs2executor_0, byte b_1) {
+	static final void method2568(CS2Executor cs2executor_0) {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub26_8224, cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1 ? 1 : 0, -2145743553);
 		Class190.savePreferences((byte) 49);
 		client.aBool7175 = false;

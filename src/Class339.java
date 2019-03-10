@@ -6,7 +6,7 @@ public class Class339 {
 	public static Class339 aClass339_3983 = new Class339();
 	static Class339 aClass339_3982 = new Class339();
 
-	static final void method6040(CS2Executor cs2executor_0, byte b_1) {
+	static final void method6040(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 101);
 		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];

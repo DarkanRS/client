@@ -133,7 +133,7 @@ public class Class122 {
 		IndexLoaders.aClass230_147.method3906(64, (short) 727);
 	}
 
-	static final void method2112(CS2Executor cs2executor_0, int i_1) {
+	static final void method2112(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 7;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] << 1;

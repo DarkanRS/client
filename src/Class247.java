@@ -331,7 +331,7 @@ public class Class247 {
 		}
 	}
 
-	static void method4249(CS2Executor cs2executor_0, int i_1) {
+	static void method4249(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];

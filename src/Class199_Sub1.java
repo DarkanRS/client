@@ -254,7 +254,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		return i_2;
 	}
 
-	static final void method13399(CS2Executor cs2executor_0, int i_1) {
+	static final void method13399(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
 		Class537 class537_3 = IndexLoaders.aClass233_5822.method3933(i_2, 1715918723);
 		if (class537_3 == null) {

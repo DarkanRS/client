@@ -189,7 +189,7 @@ public final class SoftCache {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub1_8197.method12615(-1794676778);
 	}
 
-	static final void method3894(CS2Executor cs2executor_0, int i_1) {
+	static final void method3894(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class221.anInt2762;
 	}
 

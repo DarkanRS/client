@@ -51,7 +51,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 		class61_1.aString622 = this.aString9935;
 	}
 
-	static final void method15404(CS2Executor cs2executor_0, int i_1) {
+	static final void method15404(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 4;
 		client.aShort7276 = (short) cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		if (client.aShort7276 <= 0) {

@@ -132,7 +132,7 @@ public class Class529 {
 
 	}
 
-	static final void method11338(CS2Executor cs2executor_0, int i_1) {
+	static final void method11338(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 115);
 		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];

@@ -66,7 +66,7 @@ public class Class175 {
 		}
 	}
 
-	static final void method2963(CS2Executor cs2executor_0, int i_1) {
+	static final void method2963(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (Class291_Sub1.aClass465_8029 != null) {
 			Node node_3 = Class291_Sub1.aClass465_8029.get((long) i_2);

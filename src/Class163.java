@@ -32,7 +32,7 @@ public class Class163 {
 		return fontmetrics_1.getWidth(string_3, Class115.aClass160Array1248);
 	}
 
-	static void method2841(CS2Executor cs2executor_0, int i_1) {
+	static void method2841(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).anIntArrayArray2966[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]][1];
 		--cs2executor_0.intStackPtr;
 	}

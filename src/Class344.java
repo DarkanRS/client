@@ -210,7 +210,7 @@ public class Class344 {
 		Class52.method1083(icomponentdefinitions_3, interface_4, cs2executor_0, -1250124563);
 	}
 
-	static final void method6121(CS2Executor cs2executor_0, byte b_1) {
+	static final void method6121(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class20.anInt169;
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class20.anInt170;
 	}

@@ -850,7 +850,7 @@ public class ObjectDefinitions {
 		ItemDefinitions.method7142(icomponentdefinitions_3, interface_4, cs2executor_0, -1447710686);
 	}
 
-	static final void method8019(CS2Executor cs2executor_0, short s_1) {
+	static final void method8019(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.anInt7434 != 0 && i_2 < client.anInt7373) {
 			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aClass10Array7456[i_2].aString115;

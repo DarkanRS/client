@@ -67,7 +67,7 @@ public class Class233 {
 		Class532.anIntArrayArray7072 = ints_0;
 	}
 
-	static final void method3937(CS2Executor cs2executor_0, byte b_1) {
+	static final void method3937(CS2Executor cs2executor_0) {
 		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		StringBuilder stringbuilder_3 = new StringBuilder(string_2.length());
 		boolean bool_4 = false;
@@ -86,7 +86,7 @@ public class Class233 {
 		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = stringbuilder_3.toString();
 	}
 
-	static final void method3938(CS2Executor cs2executor_0, int i_1) {
+	static final void method3938(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 2;
 	}
 
@@ -101,7 +101,7 @@ public class Class233 {
 		Class388.method6689(icomponentdefinitions_3, interface_4, cs2executor_0, -1054634282);
 	}
 
-	static final void method3941(CS2Executor cs2executor_0, int i_1) {
+	static final void method3941(CS2Executor cs2executor_0) {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;

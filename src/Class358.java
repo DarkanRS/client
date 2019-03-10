@@ -82,7 +82,7 @@ public class Class358 {
 		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_4;
 	}
 
-	static final void method6238(CS2Executor cs2executor_0, byte b_1) {
+	static final void method6238(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7465 ? 1 : 0;
 	}
 

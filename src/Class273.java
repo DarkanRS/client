@@ -111,7 +111,7 @@ public abstract class Class273 {
 
 	}
 
-	static final void method4867(CS2Executor cs2executor_0, int i_1) {
+	static final void method4867(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub14_8211.method7785(i_2, -1905006369);
 	}

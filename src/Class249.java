@@ -42,7 +42,7 @@ public class Class249 implements Interface43 {
 
 	}
 
-	static final void method4277(CS2Executor cs2executor_0, byte b_1) {
+	static final void method4277(CS2Executor cs2executor_0) {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1426;

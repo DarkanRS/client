@@ -34,7 +34,7 @@ public abstract class Class152 {
 
 	}
 
-	static final void method2597(CS2Executor cs2executor_0, byte b_1) {
+	static final void method2597(CS2Executor cs2executor_0) {
 		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.aBool7310) {
 			try {

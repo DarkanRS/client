@@ -11,7 +11,7 @@ public class Class454 {
 		return System.nanoTime();
 	}
 
-	static final void method7551(CS2Executor cs2executor_0, short s_1) {
+	static final void method7551(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) (Class169.time() / 60000L);
 	}
 

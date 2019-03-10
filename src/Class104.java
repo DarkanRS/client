@@ -15,7 +15,7 @@ public class Class104 {
 		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).anInt2963;
 	}
 
-	static final void method1800(CS2Executor cs2executor_0, int i_1) {
+	static final void method1800(CS2Executor cs2executor_0) {
 		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = cs2executor_0.current.stringOpValues[cs2executor_0.instrPtr];
 	}
 

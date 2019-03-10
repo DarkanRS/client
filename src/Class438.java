@@ -79,7 +79,7 @@ public class Class438 {
 		this.aClass317_5343.filesCount(SharedConfigsType.aClass120_1496.id);
 	}
 
-	static final void method7332(CS2Executor cs2executor_0, byte b_1) {
+	static final void method7332(CS2Executor cs2executor_0) {
 		Class337.method6018((Class521_Sub1) cs2executor_0.anInterface12_7013, cs2executor_0, 1876481461);
 	}
 

@@ -47,7 +47,7 @@ public class Class4 {
 		return -1.0F;
 	}
 
-	static final void method289(CS2Executor cs2executor_0, byte b_1) {
+	static final void method289(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 125);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1343;

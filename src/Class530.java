@@ -49,7 +49,7 @@ public class Class530 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1293;
 	}
 
-	static final void method11351(CS2Executor cs2executor_0, int i_1) {
+	static final void method11351(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub2_8205.method7785(i_2, -1569082845);
 	}

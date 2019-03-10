@@ -65,7 +65,7 @@ public class Class413 implements Interface43 {
 		Class96_Sub10.method14603(6, i_2 << 16 | i_3, i_4, "", (byte) 43);
 	}
 
-	static final void method6941(CS2Executor cs2executor_0, int i_1) {
+	static final void method6941(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 102);
 		Node.method5001(icomponentdefinitions_3, cs2executor_0, -11442386);

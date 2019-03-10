@@ -655,7 +655,7 @@ public final class Index {
 		return i_1 == -1 ? icomponentdefinitions_3 : (icomponentdefinitions_3 != null && icomponentdefinitions_3.aClass118Array1438 != null && i_1 < icomponentdefinitions_3.aClass118Array1438.length ? icomponentdefinitions_3.aClass118Array1438[i_1] : null);
 	}
 
-	static final void method5695(CS2Executor cs2executor_0, byte b_1) {
+	static final void method5695(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aClass6Array7452[i_2].anInt39;

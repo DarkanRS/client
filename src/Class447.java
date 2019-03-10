@@ -65,7 +65,7 @@ public class Class447 {
 		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).aBool2962 ? 1 : 0;
 	}
 
-	static final void method7462(CS2Executor cs2executor_0, int i_1) {
+	static final void method7462(CS2Executor cs2executor_0) {
 		String string_2 = null;
 		if (Class119.aClass12_1461 != null) {
 			string_2 = Class119.aClass12_1461.method473(1840459942);

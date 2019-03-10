@@ -161,7 +161,7 @@ public class Class306 implements Runnable {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method5456(CS2Executor cs2executor_0, int i_1) {
+	static final void method5456(CS2Executor cs2executor_0) {
 		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Class182.method3044(string_2, -1519993030);
 	}

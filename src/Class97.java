@@ -12,7 +12,7 @@ public final class Class97 {
 		return i_0 == 5 || i_0 == 11 || i_0 == 14 || i_0 == 19 || i_0 == 3 || i_0 == 8 || i_0 == 9;
 	}
 
-	static final void method1613(CS2Executor cs2executor_0, int i_1) {
+	static final void method1613(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 4;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];

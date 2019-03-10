@@ -105,7 +105,7 @@ public class Class320 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8227.method12714(1068541972);
 	}
 
-	static final void method5735(CS2Executor cs2executor_0, byte b_1) {
+	static final void method5735(CS2Executor cs2executor_0) {
 		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
