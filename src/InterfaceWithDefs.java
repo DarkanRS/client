@@ -1,4 +1,4 @@
-public class ClassSomet {
+public class InterfaceWithDefs {
 
 	Interface aClass98_5885;
 	IComponentDefinitions aClass118_5886;

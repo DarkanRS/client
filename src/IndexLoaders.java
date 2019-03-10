@@ -63,7 +63,7 @@ public class IndexLoaders {
 	public static Class288 aClass288_1746;
 	public static Class45 aClass45_5759;
 	public static SpotAnimIndexLoader SPOT_ANIM_INDEX_LOADER;
-	public static Class421 aClass421_2658;
+	public static Class421 PARAM_INDEX_LOADER;
 	public static Class401 aClass401_4791;
 	public static Class408 aClass408_7207;
 	public static Class230 aClass230_147;
@@ -285,7 +285,7 @@ public class IndexLoaders {
 			aClass288_1746 = new Class288(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass45_5759 = new Class45(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			SPOT_ANIM_INDEX_LOADER = new SpotAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SPOTANIM_INDEX, MESH_INDEX);
-			aClass421_2658 = new Class421(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, true);
+			PARAM_INDEX_LOADER = new Class421(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, true);
 			aClass401_4791 = new Class401(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass408_7207 = new Class408(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass230_147 = new Class230(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, VARBIT_INDEX);

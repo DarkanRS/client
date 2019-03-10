@@ -115,7 +115,7 @@ public abstract class Class152 {
 		}
 		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
 		if (client.anInt7349 != -1) {
-			ClassSomet.method8777(client.anInt7349, (byte) -80);
+			InterfaceWithDefs.method8777(client.anInt7349, (byte) -80);
 		}
 		int i_2;
 		for (i_2 = 0; i_2 < client.anInt7407; i_2++) {

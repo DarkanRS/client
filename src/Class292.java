@@ -7,7 +7,7 @@ public class Class292 {
 	}
 
 	static final void method5200(boolean bool_0, CS2Executor cs2executor_1, byte b_2) {
-		ClassSomet underlaydefinition_3 = cs2executor_1.aBool7022 ? cs2executor_1.aClass513_6994 : cs2executor_1.aClass513_7007;
+		InterfaceWithDefs underlaydefinition_3 = cs2executor_1.aBool7022 ? cs2executor_1.aClass513_6994 : cs2executor_1.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_3.aClass118_5886;
 		Interface interface_5 = underlaydefinition_3.aClass98_5885;
 		if (bool_0) {

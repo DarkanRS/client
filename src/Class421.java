@@ -5,7 +5,7 @@ public class Class421 {
 	int anInt5013;
 	Class282_Sub50_Sub4[] aClass282_Sub50_Sub4Array5012;
 
-	public Class282_Sub50_Sub4 method7036(int i_1, int i_2) {
+	public Class282_Sub50_Sub4 getParam(int i_1, int i_2) {
 		return i_1 < 0 ? new Class282_Sub50_Sub4() : this.aClass282_Sub50_Sub4Array5012[i_1];
 	}
 
