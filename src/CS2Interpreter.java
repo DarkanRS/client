@@ -6,3023 +6,3023 @@ public class CS2Interpreter {
 
 	public static final void executeOperation(CS2OpInfo operation, CS2Executor exec) {
 		switch (operation) {
-		case instr6135:
-			method11249(exec);
-			break;
-		case instr6091:
-			method8285(exec);
-			break;
-		case PLAY_SOUND_EFFECT:
-			method5696(exec);
-			break;
-		case instr6150:
-			method4565(exec);
-			break;
-		case instr6315:
-			method4197(exec);
-			break;
-		case instr6465:
-			method471(exec);
-			break;
-		case instr6657:
-			method8206(exec);
-			break;
-		case instr6830:
-			method4295(exec);
-			break;
-		case instr6823:
-			method7518(exec);
-			break;
-		case instr6700:
-			method4417(exec);
-			break;
-		case instr6581:
-			method814(exec);
-			break;
-		case instr6078:
-			method7083(exec);
-			break;
-		case instr6949:
-			method8216(exec);
-			break;
-		case instr6057:
-			method3080(exec);
-			break;
-		case instr6933:
-			method5016(exec);
-			break;
-		case instr6510:
-			method7556(exec);
-			break;
-		case instr6612:
-			method8219(exec);
-			break;
-		case instr6821:
-			method6272(exec);
-			break;
-		case instr6317:
-			method870(exec);
-			break;
-		case instr6707:
-			method5925(exec);
-			break;
-		case instr6693:
-			method3984(exec);
-			break;
-		case STORE_VARC_STRING:
-			method5300(exec);
-			break;
-		case instr6508:
-			method7445(exec);
-			break;
-		case instr6245:
-			method3169(exec);
-			break;
-		case instr6079:
-			method893(exec);
-			break;
-		case instr6168:
-			method6799(exec);
-			break;
-		case instr6755:
-			method7082(exec);
-			break;
-		case instr6340:
-			method3802(exec);
-			break;
-		case instr6831:
-			method7929(exec);
-			break;
-		case instr6906:
-			method12586(exec);
-			break;
-		case instr6400:
-			method2549(exec);
-			break;
-		case instr6825:
-			method11340(exec);
-			break;
-		case instr6055:
-			method8726(exec);
-			break;
-		case instr6622:
-			method1572(exec);
-			break;
-		case instr6139:
-			method8735(exec);
-			break;
-		case instr6582:
-			method3557(exec);
-			break;
-		case instr6636:
-			method4277(exec);
-			break;
-		case instr6432:
-			method8019(exec);
-			break;
-		case instr6277:
-			method289(exec);
-			break;
-		case instr6940:
-			method2841(exec);
-			break;
-		case instr6816:
-			method3341(exec);
-			break;
-		case instr6519:
-			method3937(exec);
-			break;
-		case instr6784:
-			method6238(exec);
-			break;
-		case instr6801:
-			method5735(exec);
-			break;
-		case instr6101:
-			method2153(exec);
-			break;
-		case instr6540:
-			method4630(exec);
-			break;
-		case instr6651:
-			method2112(exec);
-			break;
-		case instr6792:
-			method15404(exec);
-			break;
-		case instr6327:
-			method1613(exec);
-			break;
-		case instr6511:
-			method5456(exec);
-			break;
-		case instr6379:
-			method6121(exec);
-			break;
-		case instr6932:
-			method5695(exec);
-			break;
-		case instr6391:
-			method6941(exec);
-			break;
-		case instr6900:
-			method4867(exec);
-			break;
-		case instr6483:
-			method3894(exec);
-			break;
-		case instr6365:
-			method7551(exec);
-			break;
-		case DIVIDE_INT:
-			method5764(exec);
-			break;
-		case PUSH_STRING:
-			method1800(exec);
-			break;
-		case instr6760:
-			method11351(exec);
-			break;
-		case instr6437:
-			method5296(exec);
-			break;
-		case instr6593:
-			method14503(exec);
-			break;
-		case instr6661:
-			method254(exec);
-			break;
-		case instr6951:
-			method4249(exec);
-			break;
-		case instr6058:
-			method2597(exec);
-			break;
-		case instr6263:
-			method6040(exec);
-			break;
-		case instr6660:
-			method3938(exec);
-			break;
-		case instr6083:
-			method6305(exec);
-			break;
-		case instr6086:
-			method15416(exec);
-			break;
-		case instr6676:
-			method3941(exec);
-			break;
-		case instr6000:
-			method7332(exec);
-			break;
-		case instr6116:
-			method5775(exec);
-			break;
-		case instr6726:
-			method2568(exec);
-			break;
-		case instr6879:
-			method6381(exec);
-			break;
-		case LOAD_CLAN_SETTING_VAR:
-			method13399(exec);
-			break;
-		case instr6633:
-			method2963(exec);
-			break;
-		case instr6153:
-			method779(exec);
-			break;
-		case instr6708:
-			method11338(exec);
-			break;
-		case instr6047:
-			method1949(exec);
-			break;
-		case instr6536:
-			method7462(exec);
-			break;
 		case PUSH_INT:
 			method12804(exec);
-			break;
-		case instr6337:
-			method456(exec);
-			break;
-		case instr6359:
-			method1467(exec);
-			break;
-		case instr6369:
-			method1509(exec);
-			break;
-		case instr5998:
-			method2605(exec);
-			break;
-		case instr6308:
-			method7668(exec);
-			break;
-		case instr6177:
-			method3232(exec);
-			break;
-		case instr6705:
-			method536(exec);
-			break;
-		case instr6021:
-			method8700(exec);
-			break;
-		case instr6861:
-			method12561(exec);
-			break;
-		case instr6380:
-			method6284(exec);
-			break;
-		case instr6747:
-			method2586(exec);
-			break;
-		case instr6841:
-			method5902(exec);
-			break;
-		case instr6323:
-			method4161(exec);
-			break;
-		case instr6865:
-			method13057(exec);
-			break;
-		case instr6533:
-			method12215(exec);
-			break;
-		case instr6924:
-			method3067(exec);
-			break;
-		case instr6279:
-			method6174(exec);
-			break;
-		case instr6005:
-			method11350(exec);
-			break;
-		case instr5969:
-			method8208(exec);
-			break;
-		case instr6162:
-			method1162(exec);
-			break;
-		case instr6051:
-			method8344(exec);
-			break;
-		case instr6326:
-			method2870(exec);
-			break;
-		case instr6042:
-			method2953(exec);
-			break;
-		case instr6036:
-			method12659(exec);
-			break;
-		case instr6114:
-			method15075(exec);
-			break;
-		case instr6898:
-			method6372(exec);
-			break;
-		case instr6867:
-			method15406(exec);
-			break;
-		case instr6677:
-			method1366(exec);
-			break;
-		case instr6518:
-			method8839(exec);
-			break;
-		case instr6596:
-			method4631(exec);
-			break;
-		case instr6666:
-			method11405(exec);
-			break;
-		case instr6261:
-			method4629(exec);
-			break;
-		case instr6118:
-			method2638(exec);
-			break;
-		case instr6137:
-			method5962(exec);
-			break;
-		case instr6886:
-			method11341(exec);
-			break;
-		case instr6143:
-			method1801(exec);
-			break;
-		case ARRAY_STORE:
-			method5474(exec);
-			break;
-		case instr6313:
-			method4889(exec);
-			break;
-		case instr6563:
-			method6005(exec);
-			break;
-		case instr6485:
-			method545(exec);
-			break;
-		case instr6539:
-			method2728(exec);
-			break;
-		case instr6942:
-			method7501(exec);
-			break;
-		case instr6222:
-			method8152(exec);
-			break;
-		case GOTO:
-			method1254(exec);
-			break;
-		case instr6024:
-			method6687(exec);
-			break;
-		case instr6154:
-			method1864(exec);
-			break;
-		case instr6020:
-			method459(exec);
-			break;
-		case instr6226:
-			method6851(exec);
-			break;
-		case instr6749:
-			method3042(exec);
-			break;
-		case instr6779:
-			method15371(exec);
-			break;
-		case SUBTRACT_INT:
-			method2961(exec);
-			break;
-		case instr6182:
-			method4960(exec);
-			break;
-		case instr6941:
-			method4324(exec);
-			break;
-		case instr6665:
-			method6283(exec);
-			break;
-		case instr6010:
-			method1860(exec);
-			break;
-		case instr6269:
-			method5045(exec);
-			break;
-		case instr6815:
-			method5904(exec);
-			break;
-		case instr6148:
-			method8154(exec);
-			break;
-		case instr6339:
-			method5197(exec);
-			break;
-		case instr6362:
-			method6916(exec);
-			break;
-		case instr6016:
-			method6116(exec);
-			break;
-		case instr6704:
-			method3066(exec);
-			break;
-		case LONG_GE:
-			method7888(exec);
-			break;
-		case instr6231:
-			method11438(exec);
-			break;
-		case instr6679:
-			method16079(exec);
-			break;
-		case instr6332:
-			method11612(exec);
-			break;
-		case instr6104:
-			method4315(exec);
-			break;
-		case LOAD_CLAN_SETTING_VARBIT:
-			method7700(exec);
-			break;
-		case instr6837:
-			method1499(exec);
-			break;
-		case instr6945:
-			method1853(exec);
-			break;
-		case instr6514:
-			method8218(exec);
-			break;
-		case instr6122:
-			method12115(exec);
-			break;
-		case instr6571:
-			method4556(exec);
-			break;
-		case instr6523:
-			method6373(exec);
 			break;
 		case LOAD_VARP:
 			method6363(exec);
 			break;
-		case instr6686:
-			method1367(exec);
+		case STORE_VARP:
+			method1073(exec);
 			break;
-		case instr6012:
-			method1835(exec);
+		case PUSH_STRING:
+			method1800(exec);
 			break;
-		case instr6341:
-			method2729(exec);
-			break;
-		case instr5957:
-			method3892(exec);
-			break;
-		case instr6914:
-			method12116(exec);
-			break;
-		case instr6566:
-			method15559(exec);
-			break;
-		case instr6681:
-			method1370(exec);
-			break;
-		case instr6140:
-			method6194(exec);
-			break;
-		case instr6300:
-			method855(exec);
-			break;
-		case instr6297:
-			method8045(exec);
-			break;
-		case instr6908:
-			method1784(exec);
-			break;
-		case instr6444:
-			method2102(exec);
-			break;
-		case instr6307:
-			method5029(exec);
-			break;
-		case STORE_INT:
-			method3138(exec);
-			break;
-		case instr6284:
-			method6212(exec);
-			break;
-		case instr6265:
-			method6151(exec);
-			break;
-		case instr6694:
-			method3368(exec);
-			break;
-		case instr6239:
-			method2564(exec);
-			break;
-		case instr6066:
-			method2563(exec);
-			break;
-		case instr6046:
-			method6290(exec);
-			break;
-		case instr6488:
-			method3613(exec);
-			break;
-		case instr6080:
-			method5203(exec);
-			break;
-		case instr6758:
-			method1452(exec);
-			break;
-		case MOD_INT:
-			method12816(exec);
-			break;
-		case instr6252:
-			method4175(exec);
-			break;
-		case instr6338:
-			method7675(exec);
-			break;
-		case instr6742:
-			method1857(exec);
-			break;
-		case instr6641:
-			method2107(exec);
-			break;
-		case instr6690:
-			method4773(exec);
-			break;
-		case RETURN:
-			method8743(exec);
-			break;
-		case instr6098:
-			method15448(exec);
-			break;
-		case instr6059:
-			method6802(exec);
-			break;
-		case instr6586:
-			method11154(exec);
-			break;
-		case instr6449:
-			method1783(exec);
-			break;
-		case instr6257:
-			method6685(exec);
-			break;
-		case instr6479:
-			method7463(exec);
-			break;
-		case instr6452:
-			method6043(exec);
-			break;
-		case instr6467:
-			method16089(exec);
-			break;
-		case instr6060:
-			method5122(exec);
-			break;
-		case instr6195:
-			method4174(exec);
-			break;
-		case instr5990:
-			method6909(exec);
-			break;
-		case instr6026:
-			method5332(exec);
-			break;
-		case instr6299:
-			method8715(exec);
-			break;
-		case instr6192:
-			method12839(exec);
-			break;
-		case BIT_AND:
-			method14604(exec);
-			break;
-		case instr6441:
-			method1135(exec);
-			break;
-		case instr6836:
-			method5832(exec);
-			break;
-		case instr6734:
-			method4193(exec);
-			break;
-		case instr6205:
-			method8750(exec);
-			break;
-		case instr6462:
-			method13491(exec);
-			break;
-		case instr6169:
-			method460(exec);
-			break;
-		case instr6194:
-			method305(exec);
-			break;
-		case instr6346:
-			method260(exec);
-			break;
-		case instr6592:
-			method4148(exec);
-			break;
-		case instr6043:
-			method7933(exec);
-			break;
-		case instr6818:
-			method15403(exec);
-			break;
-		case instr6324:
-			method8147(exec);
-			break;
-		case instr6227:
-			method6374(exec);
-			break;
-		case instr6548:
-			method911(exec);
-			break;
-		case instr6382:
-			method13494(exec);
-			break;
-		case LOAD_CLAN_VAR_LONG:
-			method3747(exec);
-			break;
-		case instr6314:
-			method5786(exec);
-			break;
-		case instr6597:
-			method1085(exec);
-			break;
-		case instr6748:
-			method3079(exec);
-			break;
-		case instr6087:
-			method6776(exec);
-			break;
-		case LOAD_CLAN_VARBIT:
-			method2602(exec);
-			break;
-		case instr6877:
-			method11147(exec);
-			break;
-		case instr6136:
-			method5758(exec);
-			break;
-		case instr6075:
-			method4801(exec);
-			break;
-		case instr6387:
-			method1069(exec);
-			break;
-		case instr6855:
-			method15306(exec);
-			break;
-		case instr6727:
-			method14857(exec);
-			break;
-		case instr6601:
-			method3950(exec);
-			break;
-		case instr6638:
-			method2584(exec);
-			break;
-		case GET_VARN_OLD:
-			method6734(exec);
-			break;
-		case instr6835:
-			method8758(exec);
-			break;
-		case instr6560:
-			method2824(exec);
-			break;
-		case instr6730:
-			method3693(exec);
-			break;
-		case instr6803:
-			method15437(exec);
-			break;
-		case instr6649:
-			method1861(exec);
-			break;
-		case ARRAY_NEW:
-			method2959(exec);
-			break;
-		case instr6840:
-			method12859(exec);
-			break;
-		case LONG_GT:
-			method3678(exec);
-			break;
-		case instr6325:
-			method2072(exec);
-			break;
-		case instr6806:
-			method5010(exec);
-			break;
-		case instr6786:
-			method6153(exec);
-			break;
-		case instr6839:
-			method7915(exec);
-			break;
-		case instr6623:
-			method775(exec);
-			break;
-		case instr6375:
-			method3792(exec);
-			break;
-		case instr6237:
-			method3940(exec);
-			break;
-		case instr6311:
-			method1836(exec);
-			break;
-		case instr6006:
-			method15553(false, exec);
-			break;
-		case STR_LEN:
-			method1856(exec);
-			break;
-		case instr6028:
-			method2639(exec);
-			break;
-		case instr6291:
-			method3229(exec);
-			break;
-		case instr6309:
-			method12583(exec);
-			break;
-		case instr6824:
-			method6940(exec);
-			break;
-		case instr6763:
-			method2096(exec);
-			break;
-		case instr6847:
-			method13467(exec);
-			break;
-		case instr6688:
-			method6773(exec);
-			break;
-		case instr6213:
-			method15475(exec);
-			break;
-		case instr6802:
-			method4194(exec);
-			break;
-		case instr6559:
-			sendReportAbusePacket(exec);
-			break;
-		case instr6883:
-			method7420(exec);
-			break;
-		case instr6318:
-			method5082(exec);
-			break;
-		case instr5966:
-			method12572(exec);
-			break;
-		case instr6922:
-			method6729(exec);
-			break;
-		case instr6361:
-			method1137(exec);
-			break;
-		case GET_COMP_WIDTH:
-			method7930(exec);
-			break;
-		case instr6546:
-			method6400(exec);
-			break;
-		case instr6850:
-			method1351(exec);
-			break;
-		case instr6827:
-			method548(exec);
-			break;
-		case GET_VARP_OLD:
-			method7428(exec);
-			break;
-		case instr6756:
-			method15555(exec);
-			break;
-		case instr6674:
-			method14647(exec);
-			break;
-		case instr6860:
-			method3611(exec);
-			break;
-		case instr6812:
-			method927(exec);
-			break;
-		case instr6249:
-			method894(exec);
-			break;
-		case instr6204:
-			method6695(exec);
-			break;
-		case instr6626:
-			method5314(exec);
-			break;
-		case instr6076:
-			method7522(exec);
-			break;
-		case instr6735:
-			method2554(exec);
-			break;
-		case instr6495:
-			method8719(exec);
-			break;
-		case instr6487:
-			method6213(exec);
-			break;
-		case ADD_INT:
-			method871(exec);
-			break;
-		case instr6795:
-			method6691(exec);
-			break;
-		case instr6729:
-			method451(exec);
-			break;
-		case instr6902:
-			method261(exec);
-			break;
-		case instr5988:
-			method2587(exec);
-			break;
-		case instr6421:
-			method5489(exec);
-			break;
-		case instr6602:
-			method468(exec);
-			break;
-		case instr6500:
-			method6211(exec);
-			break;
-		case instr5973:
-			method5511(exec);
-			break;
-		case instr6632:
-			method12506(exec);
-			break;
-		case instr6569:
-			method6310(exec);
-			break;
-		case instr6233:
-			method3988(exec);
-			break;
-		case instr6321:
-			method4839(exec);
-			break;
-		case instr6796:
-			method8717(exec);
-			break;
-		case instr6926:
-			method4902(exec);
-			break;
-		case instr6890:
-			method15387(exec);
-			break;
-		case instr6921:
-			method3769(exec);
-			break;
-		case instr6808:
-			method7726(exec);
-			break;
-		case instr6644:
-			method8199(exec);
-			break;
-		case instr6348:
-			method7427(exec);
-			break;
-		case instr6352:
-			method1067(exec);
-			break;
-		case instr6342:
-			method11246(exec);
-			break;
-		case instr6343:
-			method3913(exec);
-			break;
-		case instr6943:
-			method3553(exec);
-			break;
-		case instr6589:
-			method3039(exec);
-			break;
-		case instr6910:
-			method12841(exec);
-			break;
-		case instr6659:
-			method11440(exec);
-			break;
-		case instr6615:
-			method4988(exec);
-			break;
-		case instr6015:
-			method8724(exec);
-			break;
-		case instr6889:
-			method299(exec);
-			break;
-		case instr6574:
-			method7771(exec);
-			break;
-		case instr6541:
-			method4987(exec);
-			break;
-		case LOAD_VARC:
-			method2104(exec);
-			break;
-		case instr6857:
-			method4776(exec);
-			break;
-		case instr6534:
-			method12724(exec);
-			break;
-		case instr6064:
-			method2567(exec);
-			break;
-		case instr6096:
-			method7270(exec);
-			break;
-		case instr6197:
-			method3949(exec);
-			break;
-		case instr6038:
-			method4965(exec);
-			break;
-		case instr6656:
-			method1604(exec);
-			break;
-		case INT_GE:
-			method298(exec);
-			break;
-		case instr6023:
-			method5487(exec);
-			break;
-		case instr6256:
-			method5595(exec);
-			break;
-		case instr6107:
-			method3740(exec);
-			break;
-		case instr6580:
-			method1084(exec);
-			break;
-		case instr6595:
-			method6439(exec);
-			break;
-		case instr6635:
-			method4310(exec);
-			break;
-		case instr6009:
-			method4173(exec);
-			break;
-		case instr6682:
-			method3803(exec);
-			break;
-		case instr6583:
-			method5697(exec);
-			break;
-		case instr6587:
-			method6315(exec);
-			break;
-		case instr6664:
-			method6190(exec);
-			break;
-		case instr6295:
-			method14679(exec);
-			break;
-		case instr6948:
-			method452(exec);
-			break;
-		case instr6004:
-			method2620(exec);
-			break;
-		case instr6606:
-			method8297(exec);
-			break;
-		case instr6565:
-			method3783(exec);
-			break;
-		case instr6385:
-			method5733(exec);
-			break;
-		case instr6869:
-			method6350(exec);
-			break;
-		case instr6424:
-			method13044(exec);
-			break;
-		case instr6881:
-			method3830(exec);
-			break;
-		case instr6701:
-			method11486(exec);
-			break;
-		case instr6018:
-			method6282(exec);
-			break;
-		case instr6813:
-			method11613(exec);
-			break;
-		case instr6667:
-			method12210(exec);
-			break;
-		case instr6181:
-			method484(exec);
-			break;
-		case instr6073:
-			method2169(exec);
-			break;
-		case instr6415:
-			method3829(exec);
-			break;
-		case instr6455:
-			method13046(exec);
-			break;
-		case instr6745:
-			method6678(exec);
-			break;
-		case instr6598:
-			method2091(exec);
-			break;
-		case instr5984:
-			method4968(exec);
-			break;
-		case instr6034:
-			method13412(exec);
-			break;
-		case instr6208:
-			method8295(exec);
-			break;
-		case instr6783:
-			method7143(exec);
-			break;
-		case POP_STRING:
-			method6935(exec);
-			break;
-		case instr6655:
-			method8263(exec);
-			break;
-		case STORE_STRING:
-			method12535(exec);
-			break;
-		case instr6721:
-			method3748(exec);
-			break;
-		case instr6741:
-			method3599(exec);
-			break;
-		case instr6668:
-			method6044(exec);
-			break;
-		case instr6320:
-			method1355(exec);
-			break;
-		case instr6266:
-			method5297(exec);
-			break;
-		case instr6697:
-			method3172(exec);
-			break;
-		case instr6031:
-			method15523(exec);
-			break;
-		case instr6395:
-			method11594(exec);
-			break;
-		case instr6013:
-			method3038(exec);
-			break;
-		case instr6378:
-			method7322(exec);
-			break;
-		case MULTIPLY_INT:
-			method15385(exec);
-			break;
-		case instr6216:
-			method11252(exec);
-			break;
-		case instr6191:
-			method5756(exec);
-			break;
-		case instr6931:
-			method811(exec);
-			break;
-		case STORE_VARPBIT:
-			method8763(exec);
-			break;
-		case instr6724:
-			method457(exec);
-			break;
-		case instr6875:
-			method4201(exec);
-			break;
-		case instr6450:
-			method4030(exec);
-			break;
-		case instr6851:
-			method6046(exec);
-			break;
-		case instr6740:
-			method5766(exec);
-			break;
-		case SWITCH:
-			method5312(exec);
-			break;
-		case instr6203:
-			method6281(exec);
-			break;
-		case instr6509:
-			method14655(exec);
-			break;
-		case instr5993:
-			method4168(exec);
-			break;
-		case LONG_EQ:
-			method7210(exec);
-			break;
-		case instr6232:
-			method4904(exec);
-			break;
-		case instr6733:
-			method3942(exec);
-			break;
-		case instr6537:
-			method6781(exec);
-			break;
-		case instr6100:
-			method4247(exec);
-			break;
-		case instr6607:
-			method4798(exec);
-			break;
-		case instr6773:
-			method7334(exec);
-			break;
-		case instr6199:
-			method5024(exec);
-			break;
-		case instr6067:
-			method5408(exec);
-			break;
-		case instr6785:
-			method6675(exec);
-			break;
-		case instr6711:
-			method12597(exec);
-			break;
-		case instr6499:
-			method14746(exec);
-			break;
-		case instr6848:
-			method8869(exec);
-			break;
-		case instr6414:
-			method8756(exec);
-			break;
-		case instr6336:
-			method5335(exec);
-			break;
-		case instr6236:
-			method8742(exec);
-			break;
-		case instr6610:
-			method13756(exec);
-			break;
-		case instr6853:
-			method3233(exec);
-			break;
-		case instr6459:
-			method13410(exec);
-			break;
-		case instr6672:
-			method8718(exec);
-			break;
-		case instr6260:
-			method2855(exec);
-			break;
-		case instr6022:
-			method3918(exec);
-			break;
-		case instr6486:
-			method4973(exec);
-			break;
-		case instr6947:
-			method3674(exec);
-			break;
-		case instr6614:
-			method7276(exec);
-			break;
-		case instr6027:
-			method5774(exec);
-			break;
-		case instr6846:
-			method586(exec);
-			break;
-		case LOAD_VARPBIT:
-			method5202(exec);
-			break;
-		case instr6543:
-			method15407(exec);
-			break;
-		case instr6439:
-			method3768(exec);
-			break;
-		case instr6445:
-			method1171(exec);
-			break;
-		case instr6912:
-			method12719(exec);
-			break;
-		case instr6217:
-			method5488(exec);
-			break;
-		case instr6316:
-			method6231(exec);
-			break;
-		case instr6025:
-			method6071(exec);
-			break;
-		case instr6251:
-			method11593(exec);
-			break;
-		case instr6736:
-			method12718(exec);
-			break;
-		case instr6286:
-			method4900(exec);
-			break;
-		case instr5954:
-			method1140(exec);
-			break;
-		case instr6868:
-			method572(exec);
-			break;
-		case instr6897:
-			method6152(exec);
-			break;
-		case instr6305:
-			method301(exec);
-			break;
-		case instr6097:
-			method745(exec);
-			break;
-		case instr6558:
-			method11371(exec);
-			break;
-		case instr6549:
-			method16100(exec);
-			break;
-		case instr6381:
-			method3340(exec);
-			break;
-		case instr6364:
-			method3743(exec);
-			break;
-		case instr6273:
-			method11473(exec);
-			break;
-		case instr6386:
-			method7187(exec);
-			break;
-		case instr6388:
-			method543(exec);
-			break;
-		case instr6658:
-			method7277(exec);
-			break;
-		case instr6190:
-			method1624(exec);
-			break;
-		case instr6126:
-			method6042(exec);
-			break;
-		case instr6161:
-			method283(exec);
-			break;
-		case instr6673:
-			method7021(exec);
-			break;
-		case instr6280:
-			method1571(exec);
-			break;
-		case instr5955:
-			method504(exec);
-			break;
-		case instr6392:
-			method8757(exec);
-			break;
-		case instr6918:
-			method5692(exec);
-			break;
-		case instr6113:
-			method14340(exec);
-			break;
-		case instr6090:
-			method3556(exec);
-			break;
-		case instr6156:
-			method3713(exec);
-			break;
-		case instr6618:
-			method4381(exec);
-			break;
-		case instr6460:
-			method1979(exec);
-			break;
-		case instr6920:
-			method1138(exec);
-			break;
-		case instr6822:
-			method7552(exec);
-			break;
-		case instr6710:
-			method2825(exec);
-			break;
-		case instr6294:
-			method5002(exec);
-			break;
-		case instr6928:
-			method6314(exec);
-			break;
-		case instr6102:
-			method4137(exec);
-			break;
-		case instr6762:
-			method7219(exec);
-			break;
-		case instr6435:
-			method12881(exec);
-			break;
-		case instr6383:
-			method4031(exec);
-			break;
-		case instr6319:
-			method6139(exec);
-			break;
-		case instr6629:
-			method4899(exec);
-			break;
-		case instr6553:
-			method15408(exec);
-			break;
-		case instr6687:
-			method4971(exec);
-			break;
-		case instr6770:
-			method2978(exec);
-			break;
-		case instr6820:
-			method1854(exec);
-			break;
-		case instr6142:
-			method3250(exec);
-			break;
-		case instr6292:
-			method2945(exec);
-			break;
-		case instr6573:
-			method14835(exec);
-			break;
-		case instr6283:
-			method6696(exec);
-			break;
-		case instr6744:
-			method1803(exec);
-			break;
-		case LONG_LE:
-			method13406(exec);
-			break;
-		case instr6110:
-			method1511(exec);
-			break;
-		case instr6585:
-			method1562(exec);
-			break;
-		case instr6930:
-			method7434(exec);
-			break;
-		case instr6152:
-			method3346(exec);
-			break;
-		case instr6105:
-			method8212(exec);
-			break;
-		case instr6625:
-			method3339(exec);
-			break;
-		case instr6842:
-			method7676(exec);
-			break;
-		case LOAD_LONG:
-			method15370(exec);
-			break;
-		case instr6732:
-			method3691(exec);
-			break;
-		case instr6238:
-			method3919(exec);
-			break;
-		case instr6198:
-			method12846(exec);
-			break;
-		case instr6416:
-			method2171(exec);
-			break;
-		case instr6235:
-			method2071(exec);
-			break;
-		case instr6193:
-			method14342(exec);
-			break;
-		case instr6471:
-			method7715(exec);
-			break;
-		case instr6547:
-			method3030(exec);
-			break;
-		case instr6572:
-			method1814(exec);
-			break;
-		case instr6684:
-			method1071(exec);
-			break;
-		case instr6609:
-			method284(exec);
-			break;
-		case instr6810:
-			method15389(exec);
-			break;
-		case instr6393:
-			method6762(exec);
-			break;
-		case instr6175:
-			getWaterPreference(exec);
-			break;
-		case instr6171:
-			method4311(exec);
-			break;
-		case instr6787:
-			method3021(exec);
-			break;
-		case instr6112:
-			method5004(exec);
-			break;
-		case instr6901:
-			method12925(exec);
-			break;
-		case POP_INT:
-			method3749(exec);
-			break;
-		case instr6456:
-			method1456(exec);
-			break;
-		case instr6130:
-			method11125(exec);
-			break;
-		case instr6215:
-			method2150(exec);
-			break;
-		case instr6275:
-			method858(exec);
-			break;
-		case instr6048:
-			method3031(exec);
-			break;
-		case instr6703:
-			method5205(exec);
-			break;
-		case instr6210:
-			method3117(exec);
-			break;
-		case LOAD_INT:
-			method12504(exec);
-			break;
-		case instr6872:
-			method4413(exec);
-			break;
-		case instr6419:
-			method815(exec);
-			break;
-		case instr6183:
-			method6669(exec);
-			break;
-		case instr6776:
-			method8844(exec);
-			break;
-		case instr6119:
-			method741(exec);
-			break;
-		case instr6719:
-			method6396(exec);
-			break;
-		case instr6680:
-			method7962(exec);
-			break;
-		case instr6259:
-			method1813(exec);
-			break;
-		case instr6717:
-			method3120(exec);
-			break;
-		case STORE_VARC:
-			method5098(exec);
-			break;
-		case instr6397:
-			method5828(exec);
-			break;
-		case instr6220:
-			method4864(exec);
-			break;
-		case instr6050:
-			method6210(exec);
-			break;
-		case instr6637:
-			method12660(exec);
-			break;
-		case instr6438:
-			method15553(true, exec);
-			break;
-		case instr6333:
-			method2823(exec);
-			break;
-		case instr6751:
-			method798(exec);
-			break;
-		case instr6207:
-			method4961(exec);
-			break;
-		case instr6797:
-			method287(exec);
-			break;
-		case instr6427:
-			method1775(exec);
-			break;
-		case instr6451:
-			method13359(exec);
-			break;
-		case instr6844:
-			method1855(exec);
-			break;
-		case instr6772:
-			method6796(exec);
-			break;
-		case instr6713:
-			method1872(exec);
-			break;
-		case instr6054:
-			method4283(exec);
-			break;
-		case GET_VARNBIT_OLD:
-			method2093(exec);
-			break;
-		case instr6187:
-			method7208(exec);
-			break;
-		case instr6683:
-			method6364(exec);
-			break;
-		case SET_COMP_SPRITE:
-			method1136(exec);
-			break;
-		case instr6167:
-			method6016(exec);
-			break;
-		case MERGE_STRINGS:
-			method13785(exec);
-			break;
-		case instr6253:
-			method11372(exec);
-			break;
-		case GET_DATAMAP_SIZE:
-			method6732(exec);
-			break;
-		case instr6498:
-			method13446(exec);
-			break;
-		case instr6788:
-			method1888(exec);
-			break;
-		case instr6349:
-			method5003(exec);
-			break;
-		case instr6725:
-			method7500(exec);
-			break;
-		case MIN_INT:
-			method7779(exec);
-			break;
-		case POP_LONG:
-			method6149(exec);
-			break;
-		case instr6896:
-			method5901(exec);
-			break;
-		case instr6769:
-			method8037(exec);
-			break;
-		case instr6306:
-			method3356(exec);
-			break;
-		case instr6289:
-			method6142(exec);
-			break;
-		case instr6120:
-			method3370(exec);
-			break;
-		case instr6124:
-			method7032(exec);
-			break;
-		case instr6817:
-			method6271(exec);
-			break;
-		case instr6864:
-			method1510(exec);
-			break;
-		case instr6863:
-			method14818(exec);
-			break;
-		case instr6440:
-			method7274(exec);
-			break;
-		case instr6246:
-			method14640(exec);
-			break;
-		case instr6774:
-			method4826(exec);
-			break;
-		case instr6129:
-			method4962(exec);
-			break;
-		case instr6743:
-			method3750(exec);
-			break;
-		case instr6384:
-			method7186(exec);
-			break;
-		case instr6670:
-			method6236(exec);
-			break;
-		case LOWER_STRING:
-			method3793(exec);
-			break;
-		case instr6160:
-			method3361(exec);
-			break;
-		case instr6728:
-			method5298(exec);
-			break;
-		case instr6147:
-			method14639(exec);
-			break;
-		case instr6849:
-			method1391(exec);
-			break;
-		case instr6278:
-			method3562(exec);
-			break;
-		case instr6402:
-			method11370(exec);
-			break;
-		case instr6882:
-			method5065(exec);
-			break;
-		case instr6557:
-			method1508(exec);
-			break;
-		case instr6866:
-			method584(exec);
-			break;
-		case INT_LT:
-			method8749(exec);
-			break;
-		case instr6650:
-			method296(exec);
-			break;
-		case instr6570:
-			method4035(exec);
-			break;
-		case instr6712:
-			method453(exec);
-			break;
-		case instr6675:
-			method4177(exec);
-			break;
-		case instr6892:
-			method14649(exec);
-			break;
-		case OP_CLEAR_CHILDREN:
-			method3909(exec);
-			break;
-		case instr6501:
-			method926(exec);
-			break;
-		case instr6312:
-			method3939(exec);
-			break;
-		case instr6469:
-			method13040(exec);
-			break;
-		case instr6476:
-			method14839(exec);
-			break;
-		case instr6648:
-			method14434(exec);
-			break;
-		case instr6268:
-			method6232(exec);
-			break;
-		case instr6053:
-			method6688(exec);
-			break;
-		case instr6431:
-			method4566(exec);
-			break;
-		case instr6789:
-			method2873(exec);
-			break;
-		case instr6605:
-			method3893(exec);
-			break;
-		case instr6219:
-			method4633(exec);
-			break;
-		case instr6008:
-			method5200(false, exec);
-			break;
-		case instr6489:
-			method12560(exec);
-			break;
-		case instr6497:
-			method5292(exec);
-			break;
-		case instr6413:
-			method4905(exec);
-			break;
-		case instr6303:
-			method1967(exec);
-			break;
-		case instr6052:
-			method11380(exec);
-			break;
-		case HIDE_COMP:
-			method5301(exec);
-			break;
-		case instr6063:
-			method4970(exec);
-			break;
-		case instr6691:
-			method14841(exec);
-			break;
-		case instr6520:
-			method5915(exec);
-			break;
-		case GET_ATTRMAP_VALUE:
-			method2151(exec);
-			break;
-		case instr6652:
-			method4176(exec);
-			break;
-		case instr6404:
-			method5769(exec);
-			break;
-		case LONG_LT:
-			method467(exec);
-			break;
-		case instr6919:
-			method12492(exec);
-			break;
-		case instr6532:
-			method1569(exec);
-			break;
-		case HOOK_MOUSE_EXIT:
-			method3791(exec);
-			break;
-		case instr6356:
-			method12584(exec);
-			break;
-		case instr6468:
-			method6316(exec);
-			break;
-		case instr6212:
-			method2916(exec);
-			break;
-		case instr6425:
-			method14492(exec);
-			break;
-		case instr6056:
-			method3020(exec);
-			break;
-		case instr6909:
-			method8753(exec);
-			break;
-		case instr6790:
-			method1643(exec);
-			break;
-		case instr6723:
-			method1799(exec);
-			break;
-		case instr6399:
-			method1500(exec);
-			break;
-		case instr6878:
-			method6072(exec);
-			break;
-		case instr6179:
-			method8298(exec);
-			break;
-		case instr6351:
-			method4825(exec);
-			break;
-		case instr6011:
-			method11224(exec);
-			break;
-		case instr6939:
-			method2092(exec);
-			break;
-		case instr6765:
-			method12499(exec);
-			break;
-		case instr6173:
-			method2108(exec);
-			break;
-		case instr6406:
-			method3358(exec);
-			break;
-		case instr6504:
-			method4967(exec);
-			break;
-		case instr6604:
-			method6399(exec);
-			break;
-		case instr6151:
-			method4802(exec);
-			break;
-		case instr6041:
-			method8343(exec);
-			break;
-		case instr6624:
-			method6733(exec);
-			break;
-		case instr6542:
-			method2868(exec);
-			break;
-		case instr6072:
-			method3065(exec);
-			break;
-		case instr6250:
-			method7961(exec);
-			break;
-		case instr6128:
-			method3168(exec);
-			break;
-		case instr6218:
-			method6150(exec);
-			break;
-		case instr6185:
-			method15510(exec);
-			break;
-		case instr6430:
-			method3164(exec);
-			break;
-		case instr6255:
-			method4033(exec);
-			break;
-		case instr6832:
-			method1255(exec);
-			break;
-		case instr6750:
-			method3200(exec);
-			break;
-		case PUSH_LONG:
-			method5912(exec);
-			break;
-		case instr6913:
-			method300(exec);
-			break;
-		case instr6874:
-			method2588(exec);
-			break;
-		case instr6798:
-			method4178(exec);
-			break;
-		case instr6322:
-			method15399(exec);
-			break;
-		case instr6513:
-			method4252(exec);
-			break;
-		case instr6049:
-			method4558(exec);
-			break;
-		case instr6873:
-			method4989(exec);
-			break;
-		case instr6628:
-			method7774(exec);
-			break;
-		case instr6535:
-			method777(exec);
-			break;
-		case instr6554:
-			method5755(exec);
-			break;
-		case instr6037:
-			method8714(exec);
-			break;
-		case instr6347:
-			method4652(exec);
-			break;
-		case instr6759:
-			method1350(exec);
-			break;
-		case instr6403:
-			method1641(exec);
-			break;
-		case instr6529:
-			method8211(exec);
-			break;
-		case instr6647:
-			method8738(exec);
-			break;
-		case instr6372:
-			method6797(exec);
-			break;
-		case instr6180:
-			method3064(exec);
-			break;
-		case instr6492:
-			method3041(exec);
-			break;
-		case instr6794:
-			method11128(exec);
-			break;
-		case instr6695:
-			method6006(exec);
-			break;
-		case instr6374:
-			method7699(exec);
-			break;
-		case instr6029:
-			method3739(exec);
-			break;
-		case instr6457:
-			method15696(exec);
-			break;
-		case instr6809:
-			method5816(exec);
-			break;
-		case instr6737:
-			method12118(exec);
-			break;
-		case instr6907:
-			method12915(exec);
-			break;
-		case instr6069:
-			method1362(exec);
-			break;
-		case instr6631:
-			method5829(exec);
-			break;
-		case instr6603:
-			method1603(exec);
-			break;
-		case instr6230:
-			method6449(exec);
-			break;
-		case instr6092:
-			method5008(exec);
-			break;
-		case instr6714:
-			method3119(exec);
-			break;
-		case instr6428:
-			method14833(exec);
-			break;
-		case instr6706:
-			method1167(exec);
-			break;
-		case instr6911:
-			method2867(exec);
-			break;
-		case INT_LE:
-			method5204(exec);
-			break;
-		case instr6071:
-			method6452(exec);
-			break;
-		case instr6410:
-			method587(exec);
-			break;
-		case instr6461:
-			method6677(exec);
-			break;
-		case instr6617:
-			method787(exec);
-			break;
-		case instr6481:
-			method6207(exec);
-			break;
-		case instr6621:
-			method2737(exec);
-			break;
-		case instr6003:
-			method6668(exec);
-			break;
-		case instr6804:
-			method12573(exec);
-			break;
-		case instr6843:
-			method1357(exec);
-			break;
-		case instr6133:
-			method4901(exec);
-			break;
-		case instr6739:
-			method15512(exec);
-			break;
-		case instr6093:
-			method7928(exec);
-			break;
-		case instr6247:
-			method5000(exec);
-			break;
-		case instr6698:
-			method7704(exec);
-			break;
-		case instr6731:
-			method12803(exec);
-			break;
-		case instr6568:
-			method4568(exec);
-			break;
-		case instr6472:
-			method6206(exec);
-			break;
-		case INT_TO_STRING:
-			method4563(exec);
-			break;
-		case instr6170:
-			method8018(exec);
-			break;
-		case ANIMATE_COMP:
-			method8741(exec);
-			break;
-		case instr6643:
-			method14244(exec);
-			break;
-		case instr6270:
-			method8220(exec);
+		case GOTO:
+			method1254(exec);
 			break;
 		case INT_NE:
 			method5597(exec);
 			break;
-		case instr6155:
-			method401(exec);
-			break;
-		case instr6106:
-			method12802(exec);
-			break;
-		case instr6366:
-			method3228(exec);
-			break;
-		case instr6095:
-			method5454(exec);
-			break;
-		case instr6062:
-			method868(exec);
-			break;
-		case instr6412:
-			method8870(exec);
-			break;
-		case LOAD_VARC_STRING:
-			method1874(exec);
-			break;
-		case instr6512:
-			method6117(exec);
-			break;
-		case instr6121:
-			method6800(exec);
-			break;
-		case instr6738:
-			method11218(exec);
-			break;
-		case instr6296:
-			method6041(exec);
-			break;
-		case instr6224:
-			method6120(exec);
-			break;
-		case instr6442:
-			method1802(exec);
-			break;
-		case instr6662:
-			method8859(exec);
-			break;
-		case instr6084:
-			method4797(exec);
-			break;
-		case instr6505:
-			method6243(exec);
-			break;
-		case instr6398:
-			method4146(exec);
-			break;
-		case instr6599:
-			method1070(exec);
-			break;
-		case instr5975:
-			method4279(exec);
-			break;
-		case instr6590:
-			method291(exec);
-			break;
-		case instr6781:
-			method1463(exec);
-			break;
-		case GET_SYSTEM_UPDATE_TIMER:
-			method3752(exec);
-			break;
-		case instr6653:
-			method2866(exec);
-			break;
-		case LOAD_CLAN_VAR:
-			method4323(exec);
-			break;
-		case instr6360:
-			method3033(exec);
-			break;
-		case instr6111:
-			method3676(exec);
-			break;
-		case instr6575:
-			method6230(exec);
-			break;
-		case instr6544:
-			method5926(exec);
-			break;
-		case instr6627:
-			method11439(exec);
-			break;
-		case instr6144:
-			method12723(exec);
-			break;
-		case SET_COMP_TEXT:
-			method6224(exec);
-			break;
-		case instr6600:
-			method3667(exec);
-			break;
-		case instr6611:
-			method6073(exec);
-			break;
-		case instr6354:
-			method4312(exec);
-			break;
-		case instr6262:
-			method1498(exec);
-			break;
-		case instr6418:
-			method6226(exec);
-			break;
-		case instr6248:
-			method564(exec);
-			break;
-		case instr6608:
-			method15417(exec);
-			break;
-		case instr6401:
-			method3597(exec);
-			break;
-		case instr6474:
-			method8716(exec);
-			break;
-		case instr6777:
-			method6908(exec);
-			break;
-		case instr6420:
-			method4829(exec);
-			break;
-		case instr6002:
-			method3171(exec);
-			break;
-		case instr6775:
-			method934(exec);
-			break;
-		case instr6950:
-			method7006(exec);
-			break;
-		case instr6477:
-			method6938(exec);
-			break;
-		case instr6905:
-			method5814(exec);
-			break;
-		case instr6178:
-			method4205(exec);
-			break;
-		case instr6702:
-			method5119(exec);
-			break;
-		case instr6211:
-			method6913(exec);
-			break;
-		case instr6209:
-			method11126(exec);
-			break;
-		case instr6764:
-			method1815(exec);
-			break;
-		case instr6446:
-			method3779(exec);
-			break;
-		case instr6344:
-			method892(exec);
-			break;
-		case GET_COMP_TEXT:
-			getIComponentText(exec);
-			break;
-		case instr6258:
-			method5512(exec);
-			break;
-		case MAX_INT:
-			method4567(exec);
-			break;
-		case instr6039:
-			method1497(exec);
-			break;
-		case instr6640:
-			method15449(exec);
-			break;
-		case HOOK_MOUSE_HOVER:
-			method8311(exec);
-			break;
-		case instr6545:
-			method4089(exec);
-			break;
-		case instr6131:
-			method5123(exec);
-			break;
-		case instr6408:
-			method5765(exec);
-			break;
-		case instr6833:
-			method3755(exec);
-			break;
-		case instr6376:
-			method13408(exec);
-			break;
-		case instr6716:
-			method928(exec);
-			break;
-		case instr6188:
-			method6738(exec);
-			break;
-		case instr6871:
-			method1862(exec);
-			break;
-		case instr6862:
-			method5199(exec);
-			break;
-		case SET_COMP_TRANSPARENCY:
-			method12425(exec);
-			break;
-		case instr6443:
-			method2965(exec);
-			break;
-		case instr6282:
-			method3966(exec);
-			break;
-		case instr6838:
-			method3170(exec);
-			break;
-		case instr6409:
-			method2871(exec);
-			break;
-		case instr6507:
-			method8843(exec);
-			break;
-		case instr6845:
-			method12352(exec);
-			break;
-		case instr6527:
-			method3357(exec);
-			break;
-		case instr6353:
-			method5490(exec);
-			break;
-		case instr6345:
-			method7444(exec);
-			break;
-		case instr6858:
-			method6998(exec);
-			break;
-		case instr6184:
-			method1492(exec);
-			break;
-		case instr6671:
-			method4091(exec);
-			break;
-		case instr6490:
-			method5494(exec);
-			break;
-		case instr6458:
-			method546(exec);
-			break;
-		case instr6826:
-			method3714(exec);
-			break;
-		case instr6433:
-			method1968(exec);
-			break;
-		case instr6619:
-			method4557(exec);
-			break;
-		case instr6373:
-			method14611(exec);
-			break;
-		case instr6938:
-			method6195(exec);
-			break;
-		case instr6201:
-			method11403(exec);
-			break;
-		case instr6330:
-			method14520(exec);
-			break;
-		case instr6639:
-			method3804(exec);
-			break;
-		case instr6229:
-			method1349(exec);
-			break;
-		case instr6019:
-			method3163(exec);
-			break;
-		case instr6616:
-			method5788(exec);
-			break;
-		case instr6189:
-			method6237(exec);
-			break;
-		case instr6223:
-			method6141(exec);
-			break;
-		case instr6089:
-			method2101(exec);
-			break;
-		case instr6562:
-			method5046(exec);
-			break;
-		case instr6799:
-			method5299(exec);
-			break;
-		case instr6925:
-			method13301(exec);
-			break;
-		case instr6594:
-			method6304(exec);
-			break;
-		case instr6125:
-			method5598(exec);
-			break;
-		case instr6552:
-			method8863(exec);
-			break;
-		case instr6271:
-			method454(exec);
-			break;
-		case LOAD_STRING:
-			method3364(exec);
-			break;
-		case instr6145:
-			method5691(exec);
-			break;
-		case instr6515:
-			method3068(exec);
-			break;
-		case instr6423:
-			method1608(exec);
-			break;
-		case instr6876:
-			method5767(exec);
-			break;
-		case instr6778:
-			method7448(exec);
-			break;
-		case instr6888:
-			method1385(exec);
-			break;
-		case instr6081:
-			method541(exec);
-			break;
-		case instr6370:
-			method6395(exec);
-			break;
-		case instr6290:
-			method15392(exec);
-			break;
-		case instr6243:
-			method2595(exec);
-			break;
-		case COMPARE_STRINGS:
-			method4560(exec);
-			break;
-		case instr5946:
-			method14606(exec);
-			break;
-		case instr6904:
-			method6730(exec);
-			break;
-		case instr6088:
-			method1606(exec);
-			break;
-		case instr6396:
-			method6275(exec);
-			break;
-		case instr6436:
-			method5922(exec);
-			break;
-		case instr6164:
-			method15514(exec);
-			break;
-		case instr6752:
-			method1586(exec);
-			break;
-		case instr6645:
-			method12933(exec);
-			break;
-		case instr6350:
-			method8021(exec);
-			break;
-		case instr6819:
-			method4966(exec);
-			break;
-		case instr6885:
-			method1574(exec);
-			break;
-		case instr6538:
-			method5198(exec);
-			break;
-		case instr6685:
-			method7043(exec);
-			break;
-		case instr6174:
-			method11492(exec);
-			break;
-		case instr6163:
-			method5302(exec);
-			break;
-		case CHECK_JAVA_VERSION:
-			method6750(exec);
-			break;
-		case GET_VARPBIT_OLD:
-			method4986(exec);
-			break;
-		case instr6766:
-			method4881(exec);
-			break;
-		case instr6134:
-			method14578(exec);
-			break;
-		case instr6613:
-			method3986(exec);
-			break;
-		case instr6692:
-			method6674(exec);
-			break;
-		case instr6771:
-			method1134(exec);
-			break;
-		case instr6434:
-			method8698(exec);
-			break;
-		case instr6070:
-			method1570(exec);
-			break;
-		case instr6946:
-			method11592(exec);
-			break;
-		case instr5023:
-			method3737(exec);
-			break;
-		case instr6310:
-			method7773(exec);
-			break;
-		case instr6453:
-			method6741(exec);
-			break;
-		case instr6526:
-			method1173(exec);
-			break;
-		case instr6389:
-			method5776(exec);
-			break;
-		case instr6903:
-			method16095(exec);
-			break;
-		case instr6929:
-			method356(exec);
-			break;
-		case instr6491:
-			method8701(exec);
-			break;
-		case instr6521:
-			method3547(exec);
-			break;
-		case instr6715:
-			method2865(exec);
-			break;
-		case instr6936:
-			method3753(exec);
-			break;
-		case instr6146:
-			method7561(exec);
-			break;
-		case instr6754:
-			method8156(exec);
-			break;
-		case instr6722:
-			method5047(exec);
-			break;
-		case instr6884:
-			method3781(exec);
-			break;
-		case instr6482:
-			method5831(exec);
-			break;
-		case instr6915:
-			method3344(exec);
-			break;
-		case instr5956:
-			method6440(exec);
-			break;
-		case instr6417:
-			method14491(exec);
-			break;
-		case instr6480:
-			method3555(exec);
-			break;
-		case instr6935:
-			method4314(exec);
-			break;
-		case instr6200:
-			method4863(exec);
-			break;
-		case instr6241:
-			method12587(exec);
-			break;
-		case ARRAY_LOAD:
-			method8720(exec);
-			break;
-		case instr6746:
-			method2872(exec);
-			break;
-		case instr6447:
-			method5362(exec);
-			break;
-		case instr6377:
-			method563(exec);
-			break;
-		case instr6371:
-			method7461(exec);
-			break;
-		case instr6159:
-			method1512(exec);
-			break;
-		case instr6894:
-			method1352(exec);
-			break;
-		case instr6358:
-			method15376(exec);
-			break;
-		case instr6577:
-			method565(exec);
-			break;
-		case instr6108:
-			method1627(exec);
-			break;
-		case instr6718:
-			method6169(exec);
-			break;
-		case instr6287:
-			method14602(exec);
-			break;
-		case instr6407:
-			method4181(exec);
-			break;
-		case instr6475:
-			method8327(exec);
-			break;
-		case instr6564:
-			method1882(exec);
-			break;
-		case instr6502:
-			method1817(exec);
-			break;
-		case instr6576:
-			method14669(exec);
-			break;
-		case instr6891:
-			method6279(exec);
-			break;
-		case instr6800:
-			method1479(exec);
-			break;
-		case instr6065:
-			method6318(exec);
-			break;
-		case instr6944:
-			method7932(exec);
-			break;
-		case instr6426:
-			method1625(exec);
-			break;
-		case HOOK_MOUSE_PRESS:
-			method1777(exec);
-			break;
-		case instr6186:
-			method3201(exec);
-			break;
-		case instr6099:
-			method3561(exec);
-			break;
-		case instr6454:
-			method1501(exec);
-			break;
-		case instr6642:
-			method6280(exec);
-			break;
-		case instr6899:
-			method8723(exec);
-			break;
-		case instr6496:
-			method1816(exec);
-			break;
-		case instr6805:
-			method2914(exec);
-			break;
-		case instr6463:
-			method5736(exec);
-			break;
-		case instr6484:
-			method6437(exec);
-			break;
-		case instr6761:
-			method585(exec);
-			break;
-		case instr6094:
-			method1631(exec);
-			break;
-		case instr6663:
-			method4775(exec);
-			break;
-		case instr6264:
-			method1889(exec);
-			break;
-		case instr6085:
-			method4200(exec);
-			break;
-		case instr6221:
-			method11373(exec);
-			break;
-		case instr6464:
-			method3043(exec);
-			break;
-		case instr6793:
-			method3806(exec);
-			break;
-		case instr6214:
-			method4838(exec);
-			break;
-		case instr6123:
-			method7218(exec);
-			break;
-		case instr6634:
-			method14836(exec);
-			break;
-		case CALL_CS2:
-			method5315(exec);
-			break;
-		case instr6228:
-			method7520(exec);
-			break;
-		case instr6367:
-			method6242(exec);
-			break;
-		case instr6335:
-			method11406(exec);
-			break;
-		case instr6828:
-			method3911(exec);
-			break;
-		case instr6531:
-			method14644(exec);
-			break;
-		case LONG_NE:
-			method2854(exec);
-			break;
-		case instr6588:
-			method8296(exec);
-			break;
-		case instr5999:
-			method8864(exec);
-			break;
-		case instr6032:
-			method5099(exec);
-			break;
-		case instr6281:
-			method11247(exec);
-			break;
-		case instr6040:
-			method6229(exec);
-			break;
-		case instr6405:
-			method4278(exec);
-			break;
-		case instr6829:
-			method11244(exec);
-			break;
-		case instr6782:
-			method3546(exec);
-			break;
-		case instr6720:
-			method7744(exec);
-			break;
-		case instr6165:
-			method3554(exec);
-			break;
-		case instr6768:
-			method13404(exec);
-			break;
-		case instr6329:
-			method5027(exec);
-			break;
-		case instr5997:
-			method12596(exec);
-			break;
-		case instr6368:
-			method3921(exec);
-			break;
-		case instr6620:
-			method856(exec);
-			break;
-		case instr6068:
-			method5833(exec);
-			break;
-		case instr6014:
-			method773(exec);
-			break;
-		case instr6240:
-			method3596(exec);
-			break;
-		case instr6578:
-			method12689(exec);
-			break;
-		case instr6895:
-			method6510(exec);
-			break;
-		case STORE_VARP:
-			method1073(exec);
-			break;
-		case instr6528:
-			method3017(exec);
-			break;
-		case instr6331:
-			method8205(exec);
-			break;
-		case instr6272:
-			method7422(exec);
-			break;
 		case INT_EQ:
 			method4299(exec);
 			break;
-		case instr6516:
-			method550(exec);
-			break;
-		case instr6550:
-			method11222(exec);
-			break;
-		case instr6141:
-			method4882(exec);
-			break;
-		case SET_COMP_POS:
-			method14579(exec);
-			break;
-		case instr6880:
-			method743(exec);
+		case INT_LT:
+			method8749(exec);
 			break;
 		case INT_GT:
 			method15307(exec);
 			break;
-		case instr6678:
-			method1837(exec);
+		case GET_VARP_OLD:
+			method7428(exec);
 			break;
-		case instr6302:
-			method6670(exec);
+		case GET_VARPBIT_OLD:
+			method4986(exec);
 			break;
-		case instr6767:
-			method3692(exec);
+		case GET_VARN_OLD:
+			method6734(exec);
 			break;
-		case instr6061:
-			method11355(exec);
+		case GET_VARNBIT_OLD:
+			method2093(exec);
 			break;
-		case instr6357:
-			method14667(exec);
+		case RETURN:
+			method8743(exec);
 			break;
-		case instr6709:
-			method6285(exec);
+		case LOAD_VARPBIT:
+			method5202(exec);
 			break;
-		case instr6202:
-			method742(exec);
+		case STORE_VARPBIT:
+			method8763(exec);
 			break;
-		case instr6254:
-			method8694(exec);
+		case INT_LE:
+			method5204(exec);
 			break;
-		case instr6304:
-			method14660(exec);
+		case INT_GE:
+			method298(exec);
 			break;
-		case instr6893:
-			method4202(exec);
+		case LOAD_INT:
+			method12504(exec);
 			break;
-		case instr6196:
-			method7560(exec);
+		case STORE_INT:
+			method3138(exec);
 			break;
-		case instr6654:
-			method4774(exec);
+		case LOAD_STRING:
+			method3364(exec);
 			break;
-		case instr6859:
-			method481(exec);
+		case STORE_STRING:
+			method12535(exec);
 			break;
-		case GET_COMP_HEIGHT:
-			method4147(exec);
+		case MERGE_STRINGS:
+			method13785(exec);
 			break;
-		case instr6429:
-			method1462(exec);
+		case POP_INT:
+			method3749(exec);
 			break;
-		case instr6394:
-			method6239(exec);
+		case POP_STRING:
+			method6935(exec);
 			break;
-		case instr6854:
-			method6205(exec);
+		case CALL_CS2:
+			method5315(exec);
 			break;
-		case instr6556:
-			method14521(exec);
+		case LOAD_VARC:
+			method2104(exec);
 			break;
-		case instr6584:
-			method8865(exec);
+		case STORE_VARC:
+			method5098(exec);
 			break;
-		case instr6334:
-			method8153(exec);
+		case ARRAY_NEW:
+			method2959(exec);
 			break;
-		case instr6807:
-			method1387(exec);
+		case ARRAY_LOAD:
+			method8720(exec);
 			break;
-		case instr6225:
-			method5100(exec);
+		case ARRAY_STORE:
+			method5474(exec);
 			break;
-		case instr6448:
-			method933(exec);
+		case LOAD_VARC_STRING:
+			method1874(exec);
 			break;
-		case instr6927:
-			method5290(exec);
+		case STORE_VARC_STRING:
+			method5300(exec);
 			break;
-		case instr6780:
-			method7209(exec);
+		case SWITCH:
+			method5312(exec);
 			break;
-		case instr6045:
-			method1259(exec);
+		case PUSH_LONG:
+			method5912(exec);
 			break;
-		case instr6422:
-			method16124(exec);
+		case POP_LONG:
+			method6149(exec);
 			break;
-		case instr6937:
-			method466(exec);
-			break;
-		case HOOK_MOUSE_ENTER:
-			method1490(exec);
-			break;
-		case instr6630:
-			method11339(exec);
-			break;
-		case instr6206:
-			method810(exec);
-			break;
-		case instr6301:
-			method5734(exec);
-			break;
-		case instr6033:
-			method6291(exec);
-			break;
-		case instr6923:
-			method15513(exec);
-			break;
-		case instr6917:
-			method2103(exec);
-			break;
-		case instr6074:
-			method2856(exec);
-			break;
-		case instr6834:
-			method290(exec);
-			break;
-		case instr6522:
-			method3951(exec);
-			break;
-		case instr6276:
-			method14659(exec);
-			break;
-		case instr6132:
-			method7502(exec);
-			break;
-		case instr6077:
-			method2552(exec);
-			break;
-		case instr6001:
-			method3790(exec);
-			break;
-		case instr6934:
-			method2826(exec);
-			break;
-		case instr6285:
-			method292(exec);
-			break;
-		case instr6109:
-			method1951(exec);
-			break;
-		case instr6696:
-			method15616(exec);
-			break;
-		case instr6916:
-			method4830(exec);
+		case LOAD_LONG:
+			method15370(exec);
 			break;
 		case STORE_LONG:
 			method8328(exec);
 			break;
-		case instr6030:
-			method3780(exec);
+		case LONG_NE:
+			method2854(exec);
 			break;
-		case instr6157:
-			method6138(exec);
+		case LONG_EQ:
+			method7210(exec);
 			break;
-		case instr6555:
-			method2566(exec);
+		case LONG_LT:
+			method467(exec);
 			break;
-		case instr6103:
-			method485(exec);
+		case LONG_GT:
+			method3678(exec);
 			break;
-		case instr6525:
-			method6397(exec);
+		case LONG_LE:
+			method13406(exec);
 			break;
-		case instr6007:
-			method5200(true, exec);
+		case LONG_GE:
+			method7888(exec);
 			break;
-		case instr6591:
-			method7826(exec);
+		case instr5990:
+			method6909(exec);
+			break;
+		case instr5023:
+			method3737(exec);
+			break;
+		case LOAD_CLAN_VAR:
+			method4323(exec);
+			break;
+		case LOAD_CLAN_VARBIT:
+			method2602(exec);
+			break;
+		case LOAD_CLAN_VAR_LONG:
+			method3747(exec);
 			break;
 		case LOAD_CLAN_VAR_STRING:
 			method3355(exec);
 			break;
-		case instr6298:
-			method8215(exec);
+		case LOAD_CLAN_SETTING_VAR:
+			method13399(exec);
 			break;
-		case instr6288:
-			method7643(exec);
+		case LOAD_CLAN_SETTING_VARBIT:
+			method7700(exec);
+			break;
+		case instr5998:
+			method2605(exec);
+			break;
+		case instr5999:
+			method8864(exec);
+			break;
+		case instr6137:
+			method5962(exec);
+			break;
+		case instr6001:
+			method3790(exec);
+			break;
+		case OP_CLEAR_CHILDREN:
+			method3909(exec);
+			break;
+		case instr6003:
+			method6668(exec);
+			break;
+		case instr6004:
+			method2620(exec);
+			break;
+		case instr6438:
+			method15553(true, exec);
+			break;
+		case instr6006:
+			method15553(false, exec);
+			break;
+		case instr6007:
+			method5200(true, exec);
+			break;
+		case instr6008:
+			method5200(false, exec);
+			break;
+		case instr6009:
+			method4173(exec);
+			break;
+		case instr6419:
+			method815(exec);
+			break;
+		case instr6011:
+			method11224(exec);
+			break;
+		case instr6012:
+			method1835(exec);
+			break;
+		case instr6635:
+			method4310(exec);
+			break;
+		case instr6014:
+			method773(exec);
+			break;
+		case instr6146:
+			method7561(exec);
+			break;
+		case instr6016:
+			method6116(exec);
+			break;
+		case instr6118:
+			method2638(exec);
+			break;
+		case instr6018:
+			method6282(exec);
+			break;
+		case instr6019:
+			method3163(exec);
+			break;
+		case instr6020:
+			method459(exec);
+			break;
+		case instr6626:
+			method5314(exec);
+			break;
+		case instr6022:
+			method3918(exec);
+			break;
+		case instr6023:
+			method5487(exec);
+			break;
+		case instr6024:
+			method6687(exec);
+			break;
+		case instr6025:
+			method6071(exec);
+			break;
+		case instr6026:
+			method5332(exec);
+			break;
+		case instr6027:
+			method5774(exec);
+			break;
+		case instr6475:
+			method8327(exec);
+			break;
+		case instr6683:
+			method6364(exec);
+			break;
+		case instr6055:
+			method8726(exec);
+			break;
+		case instr6031:
+			method15523(exec);
+			break;
+		case instr6032:
+			method5099(exec);
+			break;
+		case instr6033:
+			method6291(exec);
+			break;
+		case instr6034:
+			method13412(exec);
+			break;
+		case instr6817:
+			method6271(exec);
+			break;
+		case instr6036:
+			method12659(exec);
+			break;
+		case instr6037:
+			method8714(exec);
+			break;
+		case instr6038:
+			method4965(exec);
+			break;
+		case instr6039:
+			method1497(exec);
+			break;
+		case instr6532:
+			method1569(exec);
+			break;
+		case instr6098:
+			method15448(exec);
+			break;
+		case instr6831:
+			method7929(exec);
+			break;
+		case instr6043:
+			method7933(exec);
+			break;
+		case instr6914:
+			method12116(exec);
+			break;
+		case instr6045:
+			method1259(exec);
+			break;
+		case instr6079:
+			method893(exec);
+			break;
+		case instr6047:
+			method1949(exec);
+			break;
+		case instr6048:
+			method3031(exec);
+			break;
+		case instr6049:
+			method4558(exec);
+			break;
+		case instr6050:
+			method6210(exec);
+			break;
+		case instr6051:
+			method8344(exec);
+			break;
+		case instr6052:
+			method11380(exec);
+			break;
+		case instr6053:
+			method6688(exec);
+			break;
+		case instr6198:
+			method12846(exec);
+			break;
+		case instr6909:
+			method8753(exec);
+			break;
+		case instr6068:
+			method5833(exec);
+			break;
+		case instr6057:
+			method3080(exec);
+			break;
+		case instr6306:
+			method3356(exec);
+			break;
+		case instr6059:
+			method6802(exec);
+			break;
+		case instr6105:
+			method8212(exec);
+			break;
+		case instr6665:
+			method6283(exec);
+			break;
+		case instr6912:
+			method12719(exec);
+			break;
+		case instr6063:
+			method4970(exec);
+			break;
+		case instr6064:
+			method2567(exec);
+			break;
+		case instr6065:
+			method6318(exec);
+			break;
+		case instr6066:
+			method2563(exec);
+			break;
+		case instr6895:
+			method6510(exec);
+			break;
+		case instr6618:
+			method4381(exec);
 			break;
 		case instr6244:
 			method15552(exec);
 			break;
-		case instr6646:
-			method4865(exec);
+		case instr6070:
+			method1570(exec);
+			break;
+		case instr6071:
+			method6452(exec);
+			break;
+		case instr6676:
+			method3941(exec);
+			break;
+		case instr6073:
+			method2169(exec);
+			break;
+		case instr6443:
+			method2965(exec);
+			break;
+		case instr6075:
+			method4801(exec);
+			break;
+		case instr6076:
+			method7522(exec);
+			break;
+		case instr6110:
+			method1511(exec);
+			break;
+		case instr6179:
+			method8298(exec);
+			break;
+		case instr6218:
+			method6150(exec);
+			break;
+		case instr6080:
+			method5203(exec);
+			break;
+		case instr6081:
+			method541(exec);
+			break;
+		case instr6737:
+			method12118(exec);
+			break;
+		case instr6083:
+			method6305(exec);
+			break;
+		case instr6258:
+			method5512(exec);
+			break;
+		case instr6085:
+			method4200(exec);
+			break;
+		case instr6086:
+			method15416(exec);
+			break;
+		case instr6087:
+			method6776(exec);
+			break;
+		case instr6088:
+			method1606(exec);
+			break;
+		case instr5957:
+			method3892(exec);
+			break;
+		case instr6450:
+			method4030(exec);
+			break;
+		case instr6091:
+			method8285(exec);
+			break;
+		case instr6092:
+			method5008(exec);
+			break;
+		case instr6224:
+			method6120(exec);
+			break;
+		case instr6094:
+			method1631(exec);
+			break;
+		case instr6095:
+			method5454(exec);
+			break;
+		case instr6556:
+			method14521(exec);
+			break;
+		case instr6687:
+			method4971(exec);
+			break;
+		case instr6499:
+			method14746(exec);
+			break;
+		case instr6084:
+			method4797(exec);
+			break;
+		case instr6346:
+			method260(exec);
+			break;
+		case instr6452:
+			method6043(exec);
+			break;
+		case instr6899:
+			method8723(exec);
+			break;
+		case instr6103:
+			method485(exec);
+			break;
+		case instr6765:
+			method12499(exec);
+			break;
+		case instr6370:
+			method6395(exec);
+			break;
+		case instr6106:
+			method12802(exec);
+			break;
+		case instr6580:
+			method1084(exec);
+			break;
+		case instr6437:
+			method5296(exec);
+			break;
+		case instr6903:
+			method16095(exec);
+			break;
+		case instr6099:
+			method3561(exec);
+			break;
+		case instr6111:
+			method3676(exec);
+			break;
+		case instr6112:
+			method5004(exec);
+			break;
+		case instr6113:
+			method14340(exec);
+			break;
+		case instr6492:
+			method3041(exec);
+			break;
+		case instr6096:
+			method7270(exec);
+			break;
+		case instr6116:
+			method5775(exec);
+			break;
+		case instr6054:
+			method4283(exec);
+			break;
+		case instr6782:
+			method3546(exec);
+			break;
+		case instr6119:
+			method741(exec);
+			break;
+		case instr6120:
+			method3370(exec);
+			break;
+		case instr6121:
+			method6800(exec);
+			break;
+		case instr6552:
+			method8863(exec);
+			break;
+		case instr6772:
+			method6796(exec);
+			break;
+		case instr6124:
+			method7032(exec);
+			break;
+		case instr6125:
+			method5598(exec);
+			break;
+		case instr6344:
+			method892(exec);
+			break;
+		case instr6462:
+			method13491(exec);
+			break;
+		case instr6128:
+			method3168(exec);
+			break;
+		case instr6762:
+			method7219(exec);
+			break;
+		case instr6130:
+			method11125(exec);
+			break;
+		case instr6131:
+			method5123(exec);
+			break;
+		case instr6132:
+			method7502(exec);
+			break;
+		case instr6133:
+			method4901(exec);
+			break;
+		case instr6134:
+			method14578(exec);
+			break;
+		case instr6135:
+			method11249(exec);
+			break;
+		case instr6901:
+			method12925(exec);
+			break;
+		case instr6529:
+			method8211(exec);
+			break;
+		case instr6670:
+			method6236(exec);
+			break;
+		case instr6139:
+			method8735(exec);
+			break;
+		case instr6005:
+			method11350(exec);
+			break;
+		case instr6262:
+			method1498(exec);
+			break;
+		case instr6928:
+			method6314(exec);
+			break;
+		case instr6771:
+			method1134(exec);
+			break;
+		case instr6144:
+			method12723(exec);
+			break;
+		case instr6230:
+			method6449(exec);
+			break;
+		case instr6566:
+			method15559(exec);
+			break;
+		case instr6842:
+			method7676(exec);
+			break;
+		case instr6148:
+			method8154(exec);
+			break;
+		case instr6636:
+			method4277(exec);
+			break;
+		case instr6150:
+			method4565(exec);
+			break;
+		case instr6151:
+			method4802(exec);
+			break;
+		case instr6585:
+			method1562(exec);
+			break;
+		case instr6153:
+			method779(exec);
+			break;
+		case instr6154:
+			method1864(exec);
+			break;
+		case instr6155:
+			method401(exec);
+			break;
+		case instr6662:
+			method8859(exec);
+			break;
+		case instr6157:
+			method6138(exec);
+			break;
+		case SET_COMP_POS:
+			method14579(exec);
+			break;
+		case instr6934:
+			method2826(exec);
+			break;
+		case HIDE_COMP:
+			method5301(exec);
+			break;
+		case instr6161:
+			method283(exec);
+			break;
+		case instr6706:
+			method1167(exec);
+			break;
+		case instr6163:
+			method5302(exec);
+			break;
+		case instr6164:
+			method15514(exec);
+			break;
+		case instr6165:
+			method3554(exec);
+			break;
+		case SET_COMP_TRANSPARENCY:
+			method12425(exec);
+			break;
+		case instr6167:
+			method6016(exec);
+			break;
+		case SET_COMP_SPRITE:
+			method1136(exec);
+			break;
+		case instr6169:
+			method460(exec);
+			break;
+		case instr6142:
+			method3250(exec);
+			break;
+		case instr6171:
+			method4311(exec);
+			break;
+		case instr6056:
+			method3020(exec);
+			break;
+		case ANIMATE_COMP:
+			method8741(exec);
+			break;
+		case instr6174:
+			method11492(exec);
+			break;
+		case instr6369:
+			method1509(exec);
+			break;
+		case SET_COMP_TEXT:
+			method6224(exec);
+			break;
+		case instr6177:
+			method3232(exec);
+			break;
+		case instr6178:
+			method4205(exec);
+			break;
+		case instr6170:
+			method8018(exec);
+			break;
+		case instr6180:
+			method3064(exec);
+			break;
+		case instr6181:
+			method484(exec);
+			break;
+		case instr6182:
+			method4960(exec);
+			break;
+		case instr6183:
+			method6669(exec);
+			break;
+		case instr6184:
+			method1492(exec);
+			break;
+		case instr6185:
+			method15510(exec);
+			break;
+		case instr6216:
+			method11252(exec);
+			break;
+		case instr6187:
+			method7208(exec);
+			break;
+		case instr6188:
+			method6738(exec);
+			break;
+		case instr6377:
+			method563(exec);
+			break;
+		case instr6190:
+			method1624(exec);
+			break;
+		case instr6191:
+			method5756(exec);
+			break;
+		case instr6192:
+			method12839(exec);
+			break;
+		case instr6193:
+			method14342(exec);
+			break;
+		case instr6194:
+			method305(exec);
+			break;
+		case instr6195:
+			method4174(exec);
+			break;
+		case instr6196:
+			method7560(exec);
+			break;
+		case instr6197:
+			method3949(exec);
+			break;
+		case instr6387:
+			method1069(exec);
+			break;
+		case instr6199:
+			method5024(exec);
+			break;
+		case instr6200:
+			method4863(exec);
+			break;
+		case instr6201:
+			method11403(exec);
+			break;
+		case instr6715:
+			method2865(exec);
+			break;
+		case instr6864:
+			method1510(exec);
+			break;
+		case instr6879:
+			method6381(exec);
+			break;
+		case instr6205:
+			method8750(exec);
+			break;
+		case instr6919:
+			method12492(exec);
+			break;
+		case instr6207:
+			method4961(exec);
+			break;
+		case instr6208:
+			method8295(exec);
+			break;
+		case instr6209:
+			method11126(exec);
+			break;
+		case instr6210:
+			method3117(exec);
+			break;
+		case instr6129:
+			method4962(exec);
+			break;
+		case instr6793:
+			method3806(exec);
+			break;
+		case instr6213:
+			method15475(exec);
+			break;
+		case instr6214:
+			method4838(exec);
+			break;
+		case instr6215:
+			method2150(exec);
+			break;
+		case instr5969:
+			method8208(exec);
+			break;
+		case instr6217:
+			method5488(exec);
+			break;
+		case instr6569:
+			method6310(exec);
+			break;
+		case instr6219:
+			method4633(exec);
+			break;
+		case instr6220:
+			method4864(exec);
+			break;
+		case instr6221:
+			method11373(exec);
+			break;
+		case instr6222:
+			method8152(exec);
+			break;
+		case instr6223:
+			method6141(exec);
+			break;
+		case instr6888:
+			method1385(exec);
+			break;
+		case instr6136:
+			method5758(exec);
+			break;
+		case instr6226:
+			method6851(exec);
+			break;
+		case instr6477:
+			method6938(exec);
+			break;
+		case instr6228:
+			method7520(exec);
+			break;
+		case instr6229:
+			method1349(exec);
+			break;
+		case HOOK_MOUSE_PRESS:
+			method1777(exec);
+			break;
+		case instr6231:
+			method11438(exec);
+			break;
+		case instr6232:
+			method4904(exec);
+			break;
+		case HOOK_MOUSE_ENTER:
+			method1490(exec);
+			break;
+		case HOOK_MOUSE_EXIT:
+			method3791(exec);
+			break;
+		case instr6235:
+			method2071(exec);
+			break;
+		case instr6527:
+			method3357(exec);
+			break;
+		case instr6237:
+			method3940(exec);
+			break;
+		case instr6342:
+			method11246(exec);
+			break;
+		case instr6239:
+			method2564(exec);
+			break;
+		case instr6240:
+			method3596(exec);
+			break;
+		case instr5973:
+			method5511(exec);
+			break;
+		case HOOK_MOUSE_HOVER:
+			method8311(exec);
+			break;
+		case instr6243:
+			method2595(exec);
+			break;
+		case instr6393:
+			method6762(exec);
+			break;
+		case instr6376:
+			method13408(exec);
+			break;
+		case instr6246:
+			method14640(exec);
+			break;
+		case instr6247:
+			method5000(exec);
+			break;
+		case instr6248:
+			method564(exec);
+			break;
+		case instr6708:
+			method11338(exec);
+			break;
+		case instr6250:
+			method7961(exec);
+			break;
+		case instr6251:
+			method11593(exec);
+			break;
+		case instr6252:
+			method4175(exec);
+			break;
+		case instr6253:
+			method11372(exec);
+			break;
+		case instr6254:
+			method8694(exec);
+			break;
+		case instr6255:
+			method4033(exec);
+			break;
+		case instr6256:
+			method5595(exec);
+			break;
+		case instr6257:
+			method6685(exec);
+			break;
+		case instr6507:
+			method8843(exec);
+			break;
+		case instr6259:
+			method1813(exec);
+			break;
+		case instr6260:
+			method2855(exec);
+			break;
+		case instr6261:
+			method4629(exec);
+			break;
+		case instr6898:
+			method6372(exec);
+			break;
+		case instr6263:
+			method6040(exec);
+			break;
+		case instr6398:
+			method4146(exec);
+			break;
+		case instr6265:
+			method6151(exec);
+			break;
+		case GET_COMP_WIDTH:
+			method7930(exec);
+			break;
+		case GET_COMP_HEIGHT:
+			method4147(exec);
+			break;
+		case instr6268:
+			method6232(exec);
+			break;
+		case instr6269:
+			method5045(exec);
+			break;
+		case instr6270:
+			method8220(exec);
+			break;
+		case instr6271:
+			method454(exec);
+			break;
+		case instr6272:
+			method7422(exec);
+			break;
+		case instr6273:
+			method11473(exec);
+			break;
+		case GET_COMP_TEXT:
+			getIComponentText(exec);
+			break;
+		case instr6275:
+			method858(exec);
+			break;
+		case instr6276:
+			method14659(exec);
+			break;
+		case instr6277:
+			method289(exec);
+			break;
+		case instr6292:
+			method2945(exec);
+			break;
+		case instr6279:
+			method6174(exec);
+			break;
+		case instr6280:
+			method1571(exec);
+			break;
+		case instr6281:
+			method11247(exec);
+			break;
+		case instr6544:
+			method5926(exec);
+			break;
+		case instr6283:
+			method6696(exec);
+			break;
+		case instr6284:
+			method6212(exec);
+			break;
+		case instr6072:
+			method3065(exec);
+			break;
+		case instr6159:
+			method1512(exec);
+			break;
+		case instr6287:
+			method14602(exec);
+			break;
+		case instr6288:
+			method7643(exec);
+			break;
+		case instr6289:
+			method6142(exec);
+			break;
+		case instr6290:
+			method15392(exec);
+			break;
+		case instr6875:
+			method4201(exec);
+			break;
+		case instr6805:
+			method2914(exec);
 			break;
 		case instr6293:
 			method4898(exec);
 			break;
-		case instr6887:
-			method15551(exec);
+		case instr6294:
+			method5002(exec);
+			break;
+		case instr6295:
+			method14679(exec);
+			break;
+		case instr6296:
+			method6041(exec);
+			break;
+		case instr6297:
+			method8045(exec);
+			break;
+		case instr6298:
+			method8215(exec);
+			break;
+		case instr6299:
+			method8715(exec);
+			break;
+		case instr6300:
+			method855(exec);
+			break;
+		case instr6391:
+			method6941(exec);
+			break;
+		case instr6302:
+			method6670(exec);
+			break;
+		case instr6303:
+			method1967(exec);
+			break;
+		case instr6304:
+			method14660(exec);
+			break;
+		case instr6646:
+			method4865(exec);
+			break;
+		case instr6186:
+			method3201(exec);
+			break;
+		case instr6307:
+			method5029(exec);
+			break;
+		case instr6002:
+			method3171(exec);
+			break;
+		case instr6309:
+			method12583(exec);
+			break;
+		case instr6625:
+			method3339(exec);
+			break;
+		case instr6311:
+			method1836(exec);
+			break;
+		case instr6312:
+			method3939(exec);
+			break;
+		case instr6313:
+			method4889(exec);
+			break;
+		case instr6314:
+			method5786(exec);
+			break;
+		case instr6315:
+			method4197(exec);
+			break;
+		case instr6140:
+			method6194(exec);
+			break;
+		case instr6317:
+			method870(exec);
+			break;
+		case instr6318:
+			method5082(exec);
+			break;
+		case instr6910:
+			method12841(exec);
+			break;
+		case instr6320:
+			method1355(exec);
+			break;
+		case instr6321:
+			method4839(exec);
+			break;
+		case instr6322:
+			method15399(exec);
+			break;
+		case instr6040:
+			method6229(exec);
+			break;
+		case instr6324:
+			method8147(exec);
+			break;
+		case instr6325:
+			method2072(exec);
+			break;
+		case instr6326:
+			method2870(exec);
+			break;
+		case PLAY_SOUND_EFFECT:
+			method5696(exec);
+			break;
+		case instr6480:
+			method3555(exec);
+			break;
+		case instr6329:
+			method5027(exec);
+			break;
+		case instr6330:
+			method14520(exec);
+			break;
+		case instr6619:
+			method4557(exec);
+			break;
+		case instr6332:
+			method11612(exec);
+			break;
+		case instr6333:
+			method2823(exec);
+			break;
+		case instr6334:
+			method8153(exec);
+			break;
+		case instr6788:
+			method1888(exec);
+			break;
+		case instr6336:
+			method5335(exec);
+			break;
+		case instr6337:
+			method456(exec);
+			break;
+		case instr6338:
+			method7675(exec);
+			break;
+		case instr6339:
+			method5197(exec);
+			break;
+		case instr6810:
+			method15389(exec);
+			break;
+		case instr6341:
+			method2729(exec);
+			break;
+		case instr6467:
+			method16089(exec);
+			break;
+		case instr6343:
+			method3913(exec);
+			break;
+		case instr6701:
+			method11486(exec);
+			break;
+		case instr6345:
+			method7444(exec);
+			break;
+		case instr6067:
+			method5408(exec);
+			break;
+		case instr6865:
+			method13057(exec);
+			break;
+		case instr6348:
+			method7427(exec);
+			break;
+		case instr6349:
+			method5003(exec);
+			break;
+		case instr6385:
+			method5733(exec);
+			break;
+		case instr6351:
+			method4825(exec);
+			break;
+		case instr6575:
+			method6230(exec);
+			break;
+		case instr6353:
+			method5490(exec);
+			break;
+		case instr6354:
+			method4312(exec);
+			break;
+		case GET_SYSTEM_UPDATE_TIMER:
+			method3752(exec);
+			break;
+		case instr6356:
+			method12584(exec);
+			break;
+		case instr6357:
+			method14667(exec);
+			break;
+		case instr6358:
+			method15376(exec);
+			break;
+		case instr6359:
+			method1467(exec);
+			break;
+		case instr6360:
+			method3033(exec);
+			break;
+		case instr6361:
+			method1137(exec);
+			break;
+		case instr6362:
+			method6916(exec);
+			break;
+		case instr6457:
+			method15696(exec);
+			break;
+		case instr6364:
+			method3743(exec);
+			break;
+		case instr6693:
+			method3984(exec);
+			break;
+		case instr6366:
+			method3228(exec);
+			break;
+		case instr6713:
+			method1872(exec);
+			break;
+		case instr6734:
+			method4193(exec);
+			break;
+		case instr6327:
+			method1613(exec);
+			break;
+		case instr6168:
+			method6799(exec);
+			break;
+		case instr6528:
+			method3017(exec);
+			break;
+		case instr6604:
+			method6399(exec);
+			break;
+		case instr6373:
+			method14611(exec);
+			break;
+		case instr6374:
+			method7699(exec);
+			break;
+		case instr6375:
+			method3792(exec);
+			break;
+		case instr6889:
+			method299(exec);
+			break;
+		case instr6143:
+			method1801(exec);
+			break;
+		case instr6378:
+			method7322(exec);
+			break;
+		case instr6379:
+			method6121(exec);
+			break;
+		case instr6077:
+			method2552(exec);
+			break;
+		case instr6381:
+			method3340(exec);
+			break;
+		case instr6382:
+			method13494(exec);
+			break;
+		case instr6383:
+			method4031(exec);
+			break;
+		case instr6384:
+			method7186(exec);
+			break;
+		case instr6396:
+			method6275(exec);
+			break;
+		case instr6819:
+			method4966(exec);
+			break;
+		case instr6896:
+			method5901(exec);
+			break;
+		case instr6593:
+			method14503(exec);
+			break;
+		case instr6389:
+			method5776(exec);
+			break;
+		case GET_DATAMAP_SIZE:
+			method6732(exec);
+			break;
+		case instr6945:
+			method1853(exec);
+			break;
+		case instr6392:
+			method8757(exec);
+			break;
+		case instr6367:
+			method6242(exec);
+			break;
+		case instr6705:
+			method536(exec);
+			break;
+		case instr6395:
+			method11594(exec);
+			break;
+		case instr6942:
+			method7501(exec);
+			break;
+		case instr6397:
+			method5828(exec);
+			break;
+		case instr6690:
+			method4773(exec);
+			break;
+		case instr6763:
+			method2096(exec);
+			break;
+		case instr6932:
+			method5695(exec);
+			break;
+		case instr6401:
+			method3597(exec);
+			break;
+		case instr6402:
+			method11370(exec);
+			break;
+		case instr6403:
+			method1641(exec);
+			break;
+		case instr6399:
+			method1500(exec);
+			break;
+		case instr6405:
+			method4278(exec);
+			break;
+		case instr6758:
+			method1452(exec);
+			break;
+		case instr6407:
+			method4181(exec);
+			break;
+		case instr6944:
+			method7932(exec);
+			break;
+		case instr6409:
+			method2871(exec);
+			break;
+		case instr6282:
+			method3966(exec);
 			break;
 		case instr6411:
 			method6680(exec);
 			break;
-		case instr6699:
-			method8303(exec);
+		case instr6412:
+			method8870(exec);
+			break;
+		case instr6413:
+			method4905(exec);
+			break;
+		case instr6414:
+			method8756(exec);
+			break;
+		case instr6415:
+			method3829(exec);
+			break;
+		case instr6897:
+			method6152(exec);
+			break;
+		case instr6417:
+			method14491(exec);
+			break;
+		case instr6926:
+			method4902(exec);
+			break;
+		case instr6093:
+			method7928(exec);
+			break;
+		case instr6420:
+			method4829(exec);
+			break;
+		case instr6421:
+			method5489(exec);
+			break;
+		case instr6422:
+			method16124(exec);
+			break;
+		case instr6423:
+			method1608(exec);
+			break;
+		case instr6424:
+			method13044(exec);
+			break;
+		case instr6061:
+			method11355(exec);
+			break;
+		case instr6426:
+			method1625(exec);
+			break;
+		case instr6427:
+			method1775(exec);
+			break;
+		case instr6428:
+			method14833(exec);
+			break;
+		case instr6429:
+			method1462(exec);
+			break;
+		case instr6430:
+			method3164(exec);
+			break;
+		case instr6431:
+			method4566(exec);
+			break;
+		case instr6432:
+			method8019(exec);
+			break;
+		case instr6029:
+			method3739(exec);
+			break;
+		case instr6434:
+			method8698(exec);
+			break;
+		case instr6435:
+			method12881(exec);
+			break;
+		case instr6436:
+			method5922(exec);
+			break;
+		case instr6491:
+			method8701(exec);
+			break;
+		case instr6841:
+			method5902(exec);
+			break;
+		case instr6264:
+			method1889(exec);
+			break;
+		case instr6440:
+			method7274(exec);
+			break;
+		case instr6441:
+			method1135(exec);
+			break;
+		case instr6442:
+			method1802(exec);
+			break;
+		case instr6769:
+			method8037(exec);
+			break;
+		case instr6444:
+			method2102(exec);
+			break;
+		case instr6445:
+			method1171(exec);
+			break;
+		case instr6446:
+			method3779(exec);
+			break;
+		case instr6447:
+			method5362(exec);
+			break;
+		case instr6448:
+			method933(exec);
+			break;
+		case instr6830:
+			method4295(exec);
+			break;
+		case instr6160:
+			method3361(exec);
+			break;
+		case instr6854:
+			method6205(exec);
+			break;
+		case instr6114:
+			method15075(exec);
+			break;
+		case instr6453:
+			method6741(exec);
+			break;
+		case instr6454:
+			method1501(exec);
+			break;
+		case instr6455:
+			method13046(exec);
+			break;
+		case instr6931:
+			method811(exec);
+			break;
+		case instr6531:
+			method14644(exec);
+			break;
+		case instr6787:
+			method3021(exec);
+			break;
+		case instr6459:
+			method13410(exec);
+			break;
+		case instr6460:
+			method1979(exec);
+			break;
+		case instr6461:
+			method6677(exec);
+			break;
+		case instr6245:
+			method3169(exec);
+			break;
+		case instr5984:
+			method4968(exec);
+			break;
+		case instr6464:
+			method3043(exec);
+			break;
+		case instr6465:
+			method471(exec);
+			break;
+		case instr6147:
+			method14639(exec);
+			break;
+		case instr6316:
+			method6231(exec);
+			break;
+		case instr6468:
+			method6316(exec);
+			break;
+		case instr6469:
+			method13040(exec);
+			break;
+		case instr6340:
+			method3802(exec);
+			break;
+		case instr6471:
+			method7715(exec);
+			break;
+		case instr6472:
+			method6206(exec);
+			break;
+		case instr6372:
+			method6797(exec);
+			break;
+		case instr6474:
+			method8716(exec);
+			break;
+		case instr6109:
+			method1951(exec);
+			break;
+		case instr6266:
+			method5297(exec);
+			break;
+		case ADD_INT:
+			method871(exec);
+			break;
+		case SUBTRACT_INT:
+			method2961(exec);
+			break;
+		case MULTIPLY_INT:
+			method15385(exec);
+			break;
+		case DIVIDE_INT:
+			method5764(exec);
+			break;
+		case instr6481:
+			method6207(exec);
+			break;
+		case instr6482:
+			method5831(exec);
+			break;
+		case instr6479:
+			method7463(exec);
+			break;
+		case instr6484:
+			method6437(exec);
+			break;
+		case instr6485:
+			method545(exec);
+			break;
+		case instr6564:
+			method1882(exec);
+			break;
+		case instr6487:
+			method6213(exec);
+			break;
+		case MOD_INT:
+			method12816(exec);
+			break;
+		case instr6347:
+			method4652(exec);
+			break;
+		case instr6490:
+			method5494(exec);
+			break;
+		case BIT_AND:
+			method14604(exec);
+			break;
+		case instr6732:
+			method3691(exec);
+			break;
+		case MIN_INT:
+			method7779(exec);
+			break;
+		case MAX_INT:
+			method4567(exec);
+			break;
+		case instr6495:
+			method8719(exec);
+			break;
+		case instr6418:
+			method6226(exec);
+			break;
+		case instr6497:
+			method5292(exec);
+			break;
+		case instr6498:
+			method13446(exec);
+			break;
+		case instr6541:
+			method4987(exec);
+			break;
+		case instr6500:
+			method6211(exec);
+			break;
+		case instr6501:
+			method926(exec);
+			break;
+		case instr6502:
+			method1817(exec);
+			break;
+		case LOWER_STRING:
+			method3793(exec);
+			break;
+		case instr6504:
+			method4967(exec);
+			break;
+		case instr6505:
+			method6243(exec);
+			break;
+		case INT_TO_STRING:
+			method4563(exec);
+			break;
+		case COMPARE_STRINGS:
+			method4560(exec);
+			break;
+		case instr6152:
+			method3346(exec);
+			break;
+		case instr6801:
+			method5735(exec);
+			break;
+		case instr6510:
+			method7556(exec);
+			break;
+		case instr6511:
+			method5456(exec);
+			break;
+		case instr6512:
+			method6117(exec);
+			break;
+		case instr6513:
+			method4252(exec);
+			break;
+		case instr6514:
+			method8218(exec);
+			break;
+		case instr6515:
+			method3068(exec);
+			break;
+		case instr6516:
+			method550(exec);
+			break;
+		case STR_LEN:
+			method1856(exec);
+			break;
+		case instr6518:
+			method8839(exec);
+			break;
+		case instr6519:
+			method3937(exec);
+			break;
+		case instr6520:
+			method5915(exec);
+			break;
+		case instr6521:
+			method3547(exec);
+			break;
+		case instr6522:
+			method3951(exec);
+			break;
+		case instr6523:
+			method6373(exec);
+			break;
+		case instr6795:
+			method6691(exec);
+			break;
+		case instr6820:
+			method1854(exec);
+			break;
+		case instr6881:
+			method3830(exec);
+			break;
+		case instr6319:
+			method6139(exec);
+			break;
+		case instr6100:
+			method4247(exec);
+			break;
+		case instr6749:
+			method3042(exec);
+			break;
+		case instr6893:
+			method4202(exec);
+			break;
+		case instr6380:
+			method6284(exec);
+			break;
+		case instr6335:
+			method11406(exec);
+			break;
+		case instr6533:
+			method12215(exec);
+			break;
+		case instr6534:
+			method12724(exec);
+			break;
+		case instr6508:
+			method7445(exec);
+			break;
+		case instr6408:
+			method5765(exec);
+			break;
+		case instr6537:
+			method6781(exec);
+			break;
+		case instr6538:
+			method5198(exec);
+			break;
+		case instr6539:
+			method2728(exec);
+			break;
+		case instr6540:
+			method4630(exec);
+			break;
+		case instr6145:
+			method5691(exec);
+			break;
+		case instr6542:
+			method2868(exec);
+			break;
+		case instr6104:
+			method4315(exec);
+			break;
+		case instr6291:
+			method3229(exec);
+			break;
+		case instr6545:
+			method4089(exec);
+			break;
+		case instr6546:
+			method6400(exec);
+			break;
+		case instr6547:
+			method3030(exec);
+			break;
+		case instr6548:
+			method911(exec);
+			break;
+		case instr6549:
+			method16100(exec);
+			break;
+		case instr6550:
+			method11222(exec);
+			break;
+		case GET_ATTRMAP_VALUE:
+			method2151(exec);
+			break;
+		case instr6947:
+			method3674(exec);
+			break;
+		case instr6553:
+			method15408(exec);
+			break;
+		case instr6554:
+			method5755(exec);
+			break;
+		case instr6555:
+			method2566(exec);
+			break;
+		case instr6458:
+			method546(exec);
+			break;
+		case instr6746:
+			method2872(exec);
+			break;
+		case instr6558:
+			method11371(exec);
+			break;
+		case instr6559:
+			sendReportAbusePacket(exec);
+			break;
+		case instr6560:
+			method2824(exec);
+			break;
+		case instr6739:
+			method15512(exec);
+			break;
+		case instr6562:
+			method5046(exec);
+			break;
+		case instr6563:
+			method6005(exec);
+			break;
+		case instr6010:
+			method1860(exec);
+			break;
+		case instr6211:
+			method6913(exec);
+			break;
+		case instr6189:
+			method6237(exec);
+			break;
+		case instr6624:
+			method6733(exec);
+			break;
+		case instr6565:
+			method3783(exec);
+			break;
+		case instr6796:
+			method8717(exec);
+			break;
+		case instr6526:
+			method1173(exec);
+			break;
+		case instr6225:
+			method5100(exec);
+			break;
+		case instr6572:
+			method1814(exec);
+			break;
+		case instr6573:
+			method14835(exec);
+			break;
+		case instr6574:
+			method7771(exec);
+			break;
+		case instr6682:
+			method3803(exec);
+			break;
+		case instr6249:
+			method894(exec);
+			break;
+		case instr6577:
+			method565(exec);
+			break;
+		case instr6578:
+			method12689(exec);
+			break;
+		case instr6202:
+			method742(exec);
+			break;
+		case instr6030:
+			method3780(exec);
+			break;
+		case instr6581:
+			method814(exec);
+			break;
+		case instr6425:
+			method14492(exec);
+			break;
+		case instr6583:
+			method5697(exec);
+			break;
+		case instr6584:
+			method8865(exec);
+			break;
+		case instr6069:
+			method1362(exec);
+			break;
+		case instr6586:
+			method11154(exec);
+			break;
+		case instr6587:
+			method6315(exec);
+			break;
+		case instr6588:
+			method8296(exec);
+			break;
+		case instr6368:
+			method3921(exec);
+			break;
+		case instr6590:
+			method291(exec);
+			break;
+		case instr6591:
+			method7826(exec);
+			break;
+		case instr6592:
+			method4148(exec);
+			break;
+		case instr6449:
+			method1783(exec);
+			break;
+		case instr6594:
+			method6304(exec);
+			break;
+		case instr6595:
+			method6439(exec);
+			break;
+		case instr6596:
+			method4631(exec);
+			break;
+		case instr6597:
+			method1085(exec);
+			break;
+		case instr6598:
+			method2091(exec);
+			break;
+		case instr6599:
+			method1070(exec);
+			break;
+		case instr6613:
+			method3986(exec);
+			break;
+		case instr6601:
+			method3950(exec);
+			break;
+		case instr6602:
+			method468(exec);
+			break;
+		case instr6603:
+			method1603(exec);
+			break;
+		case instr6233:
+			method3988(exec);
+			break;
+		case instr6716:
+			method928(exec);
+			break;
+		case instr6606:
+			method8297(exec);
+			break;
+		case instr6607:
+			method4798(exec);
+			break;
+		case instr6608:
+			method15417(exec);
+			break;
+		case instr6308:
+			method7668(exec);
+			break;
+		case instr6610:
+			method13756(exec);
+			break;
+		case instr6611:
+			method6073(exec);
+			break;
+		case instr6612:
+			method8219(exec);
+			break;
+		case instr6849:
+			method1391(exec);
+			break;
+		case instr6614:
+			method7276(exec);
+			break;
+		case instr6615:
+			method4988(exec);
+			break;
+		case instr6616:
+			method5788(exec);
+			break;
+		case instr6617:
+			method787(exec);
+			break;
+		case instr6090:
+			method3556(exec);
+			break;
+		case instr6074:
+			method2856(exec);
+			break;
+		case instr6620:
+			method856(exec);
+			break;
+		case instr6621:
+			method2737(exec);
+			break;
+		case instr6439:
+			method3768(exec);
+			break;
+		case instr6685:
+			method7043(exec);
+			break;
+		case instr6638:
+			method2584(exec);
+			break;
+		case instr6212:
+			method2916(exec);
+			break;
+		case instr5966:
+			method12572(exec);
+			break;
+		case instr6206:
+			method810(exec);
+			break;
+		case instr6628:
+			method7774(exec);
+			break;
+		case instr6238:
+			method3919(exec);
+			break;
+		case instr6630:
+			method11339(exec);
+			break;
+		case instr6631:
+			method5829(exec);
+			break;
+		case instr6632:
+			method12506(exec);
+			break;
+		case instr6633:
+			method2963(exec);
+			break;
+		case instr6634:
+			method14836(exec);
+			break;
+		case instr6582:
+			method3557(exec);
+			break;
+		case instr6671:
+			method4091(exec);
+			break;
+		case instr6637:
+			method12660(exec);
+			break;
+		case instr6818:
+			method15403(exec);
+			break;
+		case instr6639:
+			method3804(exec);
+			break;
+		case instr6488:
+			method3613(exec);
+			break;
+		case instr6704:
+			method3066(exec);
+			break;
+		case instr6404:
+			method5769(exec);
+			break;
+		case instr6643:
+			method14244(exec);
+			break;
+		case instr6644:
+			method8199(exec);
+			break;
+		case instr6645:
+			method12933(exec);
+			break;
+		case instr6406:
+			method3358(exec);
+			break;
+		case instr6647:
+			method8738(exec);
+			break;
+		case instr6648:
+			method14434(exec);
+			break;
+		case instr6649:
+			method1861(exec);
+			break;
+		case instr6650:
+			method296(exec);
+			break;
+		case instr6651:
+			method2112(exec);
+			break;
+		case instr6652:
+			method4176(exec);
+			break;
+		case instr6653:
+			method2866(exec);
+			break;
+		case instr6654:
+			method4774(exec);
+			break;
+		case instr6655:
+			method8263(exec);
+			break;
+		case instr6656:
+			method1604(exec);
+			break;
+		case instr6657:
+			method8206(exec);
+			break;
+		case instr6658:
+			method7277(exec);
+			break;
+		case instr6666:
+			method11405(exec);
+			break;
+		case instr6660:
+			method3938(exec);
+			break;
+		case instr6661:
+			method254(exec);
+			break;
+		case instr6866:
+			method584(exec);
+			break;
+		case instr6416:
+			method2171(exec);
+			break;
+		case instr6410:
+			method587(exec);
+			break;
+		case instr5956:
+			method6440(exec);
+			break;
+		case instr6780:
+			method7209(exec);
+			break;
+		case instr6667:
+			method12210(exec);
+			break;
+		case instr6668:
+			method6044(exec);
+			break;
+		case CHECK_JAVA_VERSION:
+			method6750(exec);
 			break;
 		case instr6044:
 			method6317(exec);
 			break;
+		case instr6923:
+			method15513(exec);
+			break;
+		case instr6672:
+			method8718(exec);
+			break;
+		case instr6673:
+			method7021(exec);
+			break;
+		case instr6451:
+			method13359(exec);
+			break;
+		case instr6675:
+			method4177(exec);
+			break;
+		case instr6162:
+			method1162(exec);
+			break;
+		case instr6677:
+			method1366(exec);
+			break;
+		case instr6678:
+			method1837(exec);
+			break;
+		case instr6679:
+			method16079(exec);
+			break;
+		case instr6456:
+			method1456(exec);
+			break;
+		case instr6681:
+			method1370(exec);
+			break;
+		case instr6663:
+			method4775(exec);
+			break;
+		case instr6108:
+			method1627(exec);
+			break;
+		case instr6684:
+			method1071(exec);
+			break;
+		case instr6823:
+			method7518(exec);
+			break;
+		case instr6686:
+			method1367(exec);
+			break;
+		case instr6331:
+			method8205(exec);
+			break;
+		case instr6627:
+			method11439(exec);
+			break;
+		case instr6236:
+			method8742(exec);
+			break;
+		case instr6013:
+			method3038(exec);
+			break;
+		case instr6122:
+			method12115(exec);
+			break;
+		case instr6692:
+			method6674(exec);
+			break;
+		case instr6204:
+			method6695(exec);
+			break;
+		case instr6694:
+			method3368(exec);
+			break;
+		case instr6695:
+			method6006(exec);
+			break;
+		case instr6568:
+			method4568(exec);
+			break;
+		case instr6697:
+			method3172(exec);
+			break;
+		case instr6698:
+			method7704(exec);
+			break;
+		case instr6699:
+			method8303(exec);
+			break;
+		case instr6700:
+			method4417(exec);
+			break;
+		case instr6323:
+			method4161(exec);
+			break;
+		case instr6702:
+			method5119(exec);
+			break;
+		case instr6703:
+			method5205(exec);
+			break;
+		case instr6774:
+			method4826(exec);
+			break;
+		case instr6641:
+			method2107(exec);
+			break;
+		case instr6305:
+			method301(exec);
+			break;
+		case instr6707:
+			method5925(exec);
+			break;
+		case instr6623:
+			method775(exec);
+			break;
+		case instr6709:
+			method6285(exec);
+			break;
+		case instr6710:
+			method2825(exec);
+			break;
+		case instr6711:
+			method12597(exec);
+			break;
+		case instr6712:
+			method453(exec);
+			break;
+		case instr6642:
+			method6280(exec);
+			break;
+		case instr6714:
+			method3119(exec);
+			break;
+		case instr6576:
+			method14669(exec);
+			break;
+		case instr6101:
+			method2153(exec);
+			break;
+		case instr6717:
+			method3120(exec);
+			break;
+		case instr6718:
+			method6169(exec);
+			break;
+		case instr6719:
+			method6396(exec);
+			break;
+		case instr6720:
+			method7744(exec);
+			break;
+		case instr6721:
+			method3748(exec);
+			break;
+		case instr6722:
+			method5047(exec);
+			break;
+		case instr6609:
+			method284(exec);
+			break;
+		case instr6724:
+			method457(exec);
+			break;
+		case instr6725:
+			method7500(exec);
+			break;
+		case instr6726:
+			method2568(exec);
+			break;
+		case instr6727:
+			method14857(exec);
+			break;
+		case instr6860:
+			method3611(exec);
+			break;
+		case instr6729:
+			method451(exec);
+			break;
+		case instr6730:
+			method3693(exec);
+			break;
+		case instr6731:
+			method12803(exec);
+			break;
+		case instr6674:
+			method14647(exec);
+			break;
+		case instr6733:
+			method3942(exec);
+			break;
+		case instr6741:
+			method3599(exec);
+			break;
+		case instr6735:
+			method2554(exec);
+			break;
+		case instr6736:
+			method12718(exec);
+			break;
+		case instr6525:
+			method6397(exec);
+			break;
+		case instr6738:
+			method11218(exec);
+			break;
+		case instr5993:
+			method4168(exec);
+			break;
+		case instr6740:
+			method5766(exec);
+			break;
+		case instr6557:
+			method1508(exec);
+			break;
+		case instr6742:
+			method1857(exec);
+			break;
+		case instr6743:
+			method3750(exec);
+			break;
+		case instr6744:
+			method1803(exec);
+			break;
+		case instr6745:
+			method6678(exec);
+			break;
+		case instr6922:
+			method6729(exec);
+			break;
+		case instr6747:
+			method2586(exec);
+			break;
+		case instr6748:
+			method3079(exec);
+			break;
+		case instr6570:
+			method4035(exec);
+			break;
+		case instr6750:
+			method3200(exec);
+			break;
+		case instr6629:
+			method4899(exec);
+			break;
+		case instr6752:
+			method1586(exec);
+			break;
+		case instr6948:
+			method452(exec);
+			break;
+		case instr6754:
+			method8156(exec);
+			break;
+		case instr6285:
+			method292(exec);
+			break;
+		case instr6756:
+			method15555(exec);
+			break;
+		case instr6688:
+			method6773(exec);
+			break;
+		case instr6489:
+			method12560(exec);
+			break;
+		case instr6759:
+			method1350(exec);
+			break;
+		case instr6785:
+			method6675(exec);
+			break;
+		case instr6761:
+			method585(exec);
+			break;
+		case instr6175:
+			getWaterPreference(exec);
+			break;
+		case instr6060:
+			method5122(exec);
+			break;
+		case instr6938:
+			method6195(exec);
+			break;
+		case instr6755:
+			method7082(exec);
+			break;
+		case instr6766:
+			method4881(exec);
+			break;
+		case instr6767:
+			method3692(exec);
+			break;
+		case instr6768:
+			method13404(exec);
+			break;
+		case instr5975:
+			method4279(exec);
+			break;
+		case instr6770:
+			method2978(exec);
+			break;
+		case instr6605:
+			method3893(exec);
+			break;
+		case instr6640:
+			method15449(exec);
+			break;
+		case instr6773:
+			method7334(exec);
+			break;
+		case instr6925:
+			method13301(exec);
+			break;
+		case instr5954:
+			method1140(exec);
+			break;
+		case instr6600:
+			method3667(exec);
+			break;
+		case instr6777:
+			method6908(exec);
+			break;
+		case instr6778:
+			method7448(exec);
+			break;
+		case instr6286:
+			method4900(exec);
+			break;
+		case instr6400:
+			method2549(exec);
+			break;
+		case instr6781:
+			method1463(exec);
+			break;
+		case instr6301:
+			method5734(exec);
+			break;
+		case instr6783:
+			method7143(exec);
+			break;
+		case instr6784:
+			method6238(exec);
+			break;
+		case instr6941:
+			method4324(exec);
+			break;
+		case instr6786:
+			method6153(exec);
+			break;
+		case instr6775:
+			method934(exec);
+			break;
+		case instr6097:
+			method745(exec);
+			break;
+		case instr6789:
+			method2873(exec);
+			break;
+		case instr6790:
+			method1643(exec);
+			break;
+		case instr6764:
+			method1815(exec);
+			break;
+		case instr6792:
+			method15404(exec);
+			break;
+		case instr6141:
+			method4882(exec);
+			break;
+		case instr6486:
+			method4973(exec);
+			break;
+		case instr5988:
+			method2587(exec);
+			break;
+		case instr6365:
+			method7551(exec);
+			break;
+		case instr6797:
+			method287(exec);
+			break;
+		case instr6798:
+			method4178(exec);
+			break;
+		case instr6799:
+			method5299(exec);
+			break;
+		case instr6800:
+			method1479(exec);
+			break;
+		case instr6821:
+			method6272(exec);
+			break;
+		case instr6802:
+			method4194(exec);
+			break;
+		case instr6803:
+			method15437(exec);
+			break;
+		case instr6227:
+			method6374(exec);
+			break;
+		case instr6829:
+			method11244(exec);
+			break;
+		case instr6806:
+			method5010(exec);
+			break;
+		case instr6807:
+			method1387(exec);
+			break;
+		case instr6808:
+			method7726(exec);
+			break;
+		case instr6809:
+			method5816(exec);
+			break;
+		case instr6804:
+			method12573(exec);
+			break;
+		case instr6589:
+			method3039(exec);
+			break;
+		case instr6812:
+			method927(exec);
+			break;
+		case instr6813:
+			method11613(exec);
+			break;
+		case instr6950:
+			method7006(exec);
+			break;
+		case instr6815:
+			method5904(exec);
+			break;
+		case instr6816:
+			method3341(exec);
+			break;
+		case instr6015:
+			method8724(exec);
+			break;
+		case instr6386:
+			method7187(exec);
+			break;
+		case instr6659:
+			method11440(exec);
+			break;
+		case instr6794:
+			method11128(exec);
+			break;
+		case instr6278:
+			method3562(exec);
+			break;
+		case instr6890:
+			method15387(exec);
+			break;
+		case instr6350:
+			method8021(exec);
+			break;
+		case instr6824:
+			method6940(exec);
+			break;
+		case instr6825:
+			method11340(exec);
+			break;
+		case instr6826:
+			method3714(exec);
+			break;
+		case instr6827:
+			method548(exec);
+			break;
+		case instr6828:
+			method3911(exec);
+			break;
+		case instr6920:
+			method1138(exec);
+			break;
+		case instr5955:
+			method504(exec);
+			break;
+		case instr6696:
+			method15616(exec);
+			break;
+		case instr6832:
+			method1255(exec);
+			break;
+		case instr6833:
+			method3755(exec);
+			break;
+		case instr6834:
+			method290(exec);
+			break;
+		case instr6835:
+			method8758(exec);
+			break;
+		case instr6836:
+			method5832(exec);
+			break;
+		case instr6837:
+			method1499(exec);
+			break;
+		case instr6509:
+			method14655(exec);
+			break;
+		case instr6839:
+			method7915(exec);
+			break;
+		case instr6840:
+			method12859(exec);
+			break;
+		case instr6536:
+			method7462(exec);
+			break;
+		case instr6483:
+			method3894(exec);
+			break;
+		case instr6843:
+			method1357(exec);
+			break;
+		case instr6844:
+			method1855(exec);
+			break;
+		case instr6845:
+			method12352(exec);
+			break;
+		case instr6846:
+			method586(exec);
+			break;
+		case instr6847:
+			method13467(exec);
+			break;
+		case instr6848:
+			method8869(exec);
+			break;
+		case instr6496:
+			method1816(exec);
+			break;
+		case instr6850:
+			method1351(exec);
+			break;
+		case instr6851:
+			method6046(exec);
+			break;
 		case instr6852:
 			method1590(exec);
+			break;
+		case instr6853:
+			method3233(exec);
+			break;
+		case instr6310:
+			method7773(exec);
+			break;
+		case instr6855:
+			method15306(exec);
+			break;
+		case instr6394:
+			method6239(exec);
+			break;
+		case instr6857:
+			method4776(exec);
+			break;
+		case instr6858:
+			method6998(exec);
+			break;
+		case instr6859:
+			method481(exec);
+			break;
+		case instr6046:
+			method6290(exec);
+			break;
+		case instr6861:
+			method12561(exec);
+			break;
+		case instr6862:
+			method5199(exec);
+			break;
+		case instr6863:
+			method14818(exec);
+			break;
+		case instr6838:
+			method3170(exec);
+			break;
+		case instr6680:
+			method7962(exec);
+			break;
+		case instr6476:
+			method14839(exec);
+			break;
+		case instr6867:
+			method15406(exec);
+			break;
+		case instr6868:
+			method572(exec);
+			break;
+		case instr6869:
+			method6350(exec);
+			break;
+		case instr6058:
+			method2597(exec);
+			break;
+		case instr6871:
+			method1862(exec);
+			break;
+		case instr6779:
+			method15371(exec);
+			break;
+		case instr6873:
+			method4989(exec);
+			break;
+		case instr6874:
+			method2588(exec);
+			break;
+		case instr6041:
+			method8343(exec);
+			break;
+		case instr6876:
+			method5767(exec);
+			break;
+		case instr6877:
+			method11147(exec);
+			break;
+		case instr6878:
+			method6072(exec);
+			break;
+		case instr6776:
+			method8844(exec);
+			break;
+		case instr6880:
+			method743(exec);
+			break;
+		case instr6822:
+			method7552(exec);
+			break;
+		case instr6882:
+			method5065(exec);
+			break;
+		case instr6883:
+			method7420(exec);
+			break;
+		case instr6884:
+			method3781(exec);
+			break;
+		case instr6885:
+			method1574(exec);
+			break;
+		case instr6886:
+			method11341(exec);
+			break;
+		case instr6887:
+			method15551(exec);
+			break;
+		case instr6760:
+			method11351(exec);
+			break;
+		case instr6156:
+			method3713(exec);
+			break;
+		case instr6123:
+			method7218(exec);
+			break;
+		case instr6891:
+			method6279(exec);
+			break;
+		case instr6892:
+			method14649(exec);
+			break;
+		case instr6872:
+			method4413(exec);
+			break;
+		case instr6894:
+			method1352(exec);
+			break;
+		case instr6622:
+			method1572(exec);
+			break;
+		case instr5997:
+			method12596(exec);
+			break;
+		case instr6543:
+			method15407(exec);
+			break;
+		case instr6433:
+			method1968(exec);
+			break;
+		case instr6173:
+			method2108(exec);
+			break;
+		case instr6900:
+			method4867(exec);
+			break;
+		case instr6388:
+			method543(exec);
+			break;
+		case instr6902:
+			method261(exec);
+			break;
+		case instr6203:
+			method6281(exec);
+			break;
+		case instr6904:
+			method6730(exec);
+			break;
+		case instr6905:
+			method5814(exec);
+			break;
+		case instr6906:
+			method12586(exec);
+			break;
+		case instr6907:
+			method12915(exec);
+			break;
+		case instr6908:
+			method1784(exec);
+			break;
+		case instr6664:
+			method6190(exec);
+			break;
+		case instr5946:
+			method14606(exec);
+			break;
+		case instr6911:
+			method2867(exec);
+			break;
+		case instr6028:
+			method2639(exec);
+			break;
+		case instr6913:
+			method300(exec);
+			break;
+		case instr6107:
+			method3740(exec);
+			break;
+		case instr6915:
+			method3344(exec);
+			break;
+		case instr6916:
+			method4830(exec);
+			break;
+		case instr6917:
+			method2103(exec);
+			break;
+		case instr6918:
+			method5692(exec);
+			break;
+		case instr6102:
+			method4137(exec);
+			break;
+		case instr6126:
+			method6042(exec);
+			break;
+		case instr6921:
+			method3769(exec);
+			break;
+		case instr6000:
+			method7332(exec);
+			break;
+		case instr6751:
+			method798(exec);
+			break;
+		case instr6924:
+			method3067(exec);
+			break;
+		case instr6728:
+			method5298(exec);
+			break;
+		case instr6021:
+			method8700(exec);
+			break;
+		case instr6089:
+			method2101(exec);
+			break;
+		case instr6463:
+			method5736(exec);
+			break;
+		case instr6929:
+			method356(exec);
+			break;
+		case instr6930:
+			method7434(exec);
+			break;
+		case instr6371:
+			method7461(exec);
+			break;
+		case instr6723:
+			method1799(exec);
+			break;
+		case instr6933:
+			method5016(exec);
+			break;
+		case instr6535:
+			method777(exec);
+			break;
+		case instr6935:
+			method4314(exec);
+			break;
+		case instr6936:
+			method3753(exec);
+			break;
+		case instr6937:
+			method466(exec);
+			break;
+		case instr6042:
+			method2953(exec);
+			break;
+		case instr6939:
+			method2092(exec);
+			break;
+		case instr6940:
+			method2841(exec);
+			break;
+		case instr6691:
+			method14841(exec);
+			break;
+		case instr6062:
+			method868(exec);
+			break;
+		case instr6943:
+			method3553(exec);
+			break;
+		case instr6352:
+			method1067(exec);
+			break;
+		case instr6078:
+			method7083(exec);
+			break;
+		case instr6946:
+			method11592(exec);
+			break;
+		case instr6241:
+			method12587(exec);
+			break;
+		case instr6571:
+			method4556(exec);
+			break;
+		case instr6949:
+			method8216(exec);
+			break;
+		case instr6927:
+			method5290(exec);
+			break;
+		case instr6951:
+			method4249(exec);
 			break;
 		default:
 			throw new RuntimeException();
