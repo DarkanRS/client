@@ -310,11 +310,11 @@ public class Class123 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(1555061388)) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass421_2658.method7036(i_2, -1979038944).method14751(i_3, attributedefault_4.aString5335, 1092559999);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.aClass421_2658.method7036(i_2, -1979038944).method14751(i_3, attributedefault_4.typeName, 1092559999);
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass421_2658.method7036(i_2, 1053782715).method14750(i_3, attributedefault_4.anInt5337, (byte) 53);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass421_2658.method7036(i_2, 1053782715).method14750(i_3, attributedefault_4.defaultInt, (byte) 53);
 		}
 
 	}

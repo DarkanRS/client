@@ -1617,7 +1617,7 @@ public class Class329 {
 		EnumDefinitions enumDefinitions = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_4, (byte) 8);
 		if (i_2 == enumDefinitions.aChar5146 && i_3 == enumDefinitions.aChar5140) {
 			if (i_3 == 115) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = enumDefinitions.getStringValue(i_5, 870483820);
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = enumDefinitions.getStringValue(i_5, 870483820);
 			} else {
 				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = enumDefinitions.getIntValue(i_5, -1848389937);
 			}

@@ -64,7 +64,7 @@ public class Class498 {
 	}
 
 	static final void method8328(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.longLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]] = cs2executor_0.aLongArray7003[--cs2executor_0.anInt7001];
+		cs2executor_0.longLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]] = cs2executor_0.longStack[--cs2executor_0.longStackPtr];
 	}
 
 }

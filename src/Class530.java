@@ -71,9 +71,9 @@ public class Class530 {
 	static final void method11355(CS2Executor cs2executor_0, short s_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class467.aClass173Array5575[i_2].aString2130;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Class467.aClass173Array5575[i_2].aString2130;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

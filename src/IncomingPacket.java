@@ -50,7 +50,7 @@ public class IncomingPacket {
 	public static IncomingPacket NPC_UPDATE_LARGE = new IncomingPacket(47, -2);
 	public static IncomingPacket MOVE_ICOMPONENT = new IncomingPacket(48, 8);
 	public static IncomingPacket aClass375_4400 = new IncomingPacket(49, -2);
-	public static IncomingPacket aClass375_4401 = new IncomingPacket(50, -1);
+	public static IncomingPacket SET_CLAN_STRING = new IncomingPacket(50, -1);
 	public static IncomingPacket DYNAMIC_MAP_REGION = new IncomingPacket(51, -2);
 	public static IncomingPacket aClass375_4499 = new IncomingPacket(52, 1);
 	public static IncomingPacket aClass375_4478 = new IncomingPacket(53, 10);
@@ -187,22 +187,22 @@ public class IncomingPacket {
 		if (class217_sub1_2 != null) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt7975;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt2700;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class217_sub1_2.aString7977;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class217_sub1_2.aString7977;
 			Class213 class213_3 = class217_sub1_2.method13055((short) -23628);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class213_3.anInt2680;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class213_3.aString2679;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class213_3.aString2679;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt2701;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt7978;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class217_sub1_2.aString7976;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class217_sub1_2.aString7976;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

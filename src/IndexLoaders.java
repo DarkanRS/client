@@ -42,7 +42,7 @@ public class IndexLoaders {
 	public static Index FONT_METRICS_INDEX;
 	public static NativeLibraryLoader NATIVE_LIBRARY_LOADER;
 	public static Interface22 IMAGE_LOADER;
-	public static ItemDefaultsLoader ITEM_DEFAULTS;
+	public static ParamDefinitionsLoader ITEM_DEFAULTS;
 	public static RenderAnimIndexLoader RENDER_ANIMS;
 	public static Class438 aClass438_7932;
 	public static EnumIndexLoader ENUM_LOADER;
@@ -70,7 +70,7 @@ public class IndexLoaders {
 	public static Class377 aClass377_1065;
 	public static Class447 aClass447_435;
 	public static Class498 aClass498_3001;
-	public static Class394 aClass394_5831;
+	public static Class394 CLAN_VAR_LOADER;
 	public static Class233 aClass233_5822;
 	public static Class331 QUICK_CHAT_INDEX_LOADER;
 	public static QuickchatDefinitionsLoader QUICK_CHAT_INDEX_LOADER2;
@@ -262,7 +262,7 @@ public class IndexLoaders {
 			}
 
 			IMAGE_LOADER = new Class323(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
-			ITEM_DEFAULTS = new ItemDefaultsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
+			ITEM_DEFAULTS = new ParamDefinitionsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			RENDER_ANIMS = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.DEFAULTS_LOADER_6);
 			aClass438_7932 = new Class438(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			ENUM_LOADER = new EnumIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
@@ -292,7 +292,7 @@ public class IndexLoaders {
 			aClass377_1065 = new Class377(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass447_435 = new Class447(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass498_3001 = new Class498(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			aClass394_5831 = new Class394(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
+			CLAN_VAR_LOADER = new Class394(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass233_5822 = new Class233(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			Class403.method6803(INTERFACE_INDEX, MESH_INDEX, SPRITES_INDEX, FONT_METRICS_INDEX, 78858918);
 			JS5StandardRequester.method5559(BILLBOARD_INDEX, -1845335453);

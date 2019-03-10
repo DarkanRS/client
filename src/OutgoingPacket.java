@@ -139,7 +139,7 @@ public class OutgoingPacket {
 			}
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_2;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_2;
 	}
 
 }

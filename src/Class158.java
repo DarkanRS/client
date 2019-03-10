@@ -42,11 +42,11 @@ public abstract class Class158 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(2069262708)) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 156724259).method7101(i_3, attributedefault_4.aString5335, -1662195407);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 156724259).method7101(i_3, attributedefault_4.typeName, -1662195407);
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 221320768).method7099(i_3, attributedefault_4.anInt5337, -1410109564);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 221320768).method7099(i_3, attributedefault_4.defaultInt, -1410109564);
 		}
 
 	}
@@ -178,7 +178,7 @@ public abstract class Class158 {
 	}
 
 	static final void method2732(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (!string_4.equals(icomponentdefinitions_0.aString1391)) {
 			icomponentdefinitions_0.aString1391 = string_4;
 			Class109.method1858(icomponentdefinitions_0, (byte) 79);

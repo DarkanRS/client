@@ -153,7 +153,7 @@ public abstract class Ground {
 	}
 
 	static final void method6730(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = ((Player) cs2executor_0.animable).method16127(true, 2071482968);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = ((Player) cs2executor_0.animable).method16127(true, 2071482968);
 	}
 
 	public static final void method6731(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {

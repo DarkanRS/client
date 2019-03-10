@@ -30,7 +30,7 @@ public abstract class Class96 {
 	}
 
 	static final void method1604(CS2Executor cs2executor_0, byte b_1) {
-		System.out.println(cs2executor_0.objectStack[--cs2executor_0.anInt7000]);
+		System.out.println(cs2executor_0.stringStack[--cs2executor_0.stringStackPtr]);
 	}
 
 	public static Interface method1605(int i_0, byte b_1) {
@@ -48,7 +48,7 @@ public abstract class Class96 {
 		Class61.aClass160_647 = null;
 		Class60.aClass160_612 = null;
 		Class467.aClass160_5576 = null;
-		AttributeDefault.aClass160_5339 = null;
+		ParamDefinitions.aClass160_5339 = null;
 		Class290.aClass160_3452 = null;
 		Class354.aClass160_4110 = null;
 		Class125.aClass160_1571 = null;

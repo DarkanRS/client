@@ -30,9 +30,9 @@ public class Class520 {
 
 	static final void method11160(Class282_Sub50_Sub7 class282_sub50_sub7_0, CS2Executor cs2executor_1, int i_2) {
 		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = Class96_Sub12.method14613(class282_sub50_sub7_0, 1552705781);
-		cs2executor_1.objectStack[++cs2executor_1.anInt7000 - 1] = Class158_Sub1.method13768(class282_sub50_sub7_0, -1718939970);
-		cs2executor_1.objectStack[++cs2executor_1.anInt7000 - 1] = Class435.method7303(class282_sub50_sub7_0, (byte) -72);
-		cs2executor_1.objectStack[++cs2executor_1.anInt7000 - 1] = Class9.method450(class282_sub50_sub7_0, (byte) 30);
+		cs2executor_1.stringStack[++cs2executor_1.stringStackPtr - 1] = Class158_Sub1.method13768(class282_sub50_sub7_0, -1718939970);
+		cs2executor_1.stringStack[++cs2executor_1.stringStackPtr - 1] = Class435.method7303(class282_sub50_sub7_0, (byte) -72);
+		cs2executor_1.stringStack[++cs2executor_1.stringStackPtr - 1] = Class9.method450(class282_sub50_sub7_0, (byte) 30);
 	}
 
 	public static void method11161(byte b_0) {

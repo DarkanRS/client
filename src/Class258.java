@@ -6,7 +6,7 @@ public class Class258 {
 		throw new Error();
 	}
 
-	static final void method4565(CS2Executor cs2executor_0, int i_1) {
+	static final void method4565(CS2Executor cs2executor_0) {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		if (icomponentdefinitions_3.anInt1426 != -1) {
@@ -20,9 +20,9 @@ public class Class258 {
 	static final void method4566(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class467.aClass173Array5575[i_2].aString2127;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Class467.aClass173Array5575[i_2].aString2127;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}
@@ -35,9 +35,9 @@ public class Class258 {
 	}
 
 	static final void method4568(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7000 -= 2;
+		cs2executor_0.stringStackPtr -= 2;
 		cs2executor_0.intStackPtr -= 2;
-		Class119.method2074((String) cs2executor_0.objectStack[cs2executor_0.anInt7000], (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1], cs2executor_0.intStack[cs2executor_0.intStackPtr], cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1, (byte) 55);
+		Class119.method2074((String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr], (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1], cs2executor_0.intStack[cs2executor_0.intStackPtr], cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1, (byte) 55);
 	}
 
 	static final void method4569(int i_0) {

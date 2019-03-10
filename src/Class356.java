@@ -102,7 +102,7 @@ public class Class356 {
 			IndexLoaders.aClass377_1065.method6388((byte) -38);
 			IndexLoaders.aClass447_435.method7458(1914523860);
 			IndexLoaders.aClass498_3001.method8319(-835963973);
-			IndexLoaders.aClass394_5831.method6754(-1473374430);
+			IndexLoaders.CLAN_VAR_LOADER.method6754(-1473374430);
 			IndexLoaders.aClass233_5822.method3924(-1007220233);
 			IndexLoaders.RENDER_ANIMS.method3617(-1794100621);
 			IndexLoaders.aClass427_995.method7174(-504359816);

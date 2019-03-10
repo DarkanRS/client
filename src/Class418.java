@@ -85,7 +85,7 @@ public class Class418 {
 		}
 
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = bool_2 ? 1 : 0;
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_3;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_3;
 	}
 
 	static void method7022(byte b_0) {

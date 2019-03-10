@@ -25,7 +25,7 @@ public class Class291_Sub1 extends Class291 {
 	}
 
 	static final void method13359(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		boolean bool_3 = Class308.aclient3620.method4658(new File(string_2), -576964244);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = bool_3 ? 1 : 0;
 	}

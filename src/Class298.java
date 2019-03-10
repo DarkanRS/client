@@ -34,9 +34,9 @@ public class Class298 implements Interface41 {
 		this.index = index_1;
 	}
 
-	static final void method5300(CS2Executor cs2executor_0, int i_1) {
+	static final void method5300(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		Class462.aStringArray5548[i_2] = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		Class462.aStringArray5548[i_2] = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class282_Sub20_Sub10.method15263(i_2, (byte) 42);
 	}
 

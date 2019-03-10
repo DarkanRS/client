@@ -98,7 +98,7 @@ public class QuickChatDynamicValue {
 	}
 
 	static final void method4181(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class96_Sub19.method14665(string_2, 1220033429);
 	}
 

@@ -57,8 +57,8 @@ public class Class450 {
 	}
 
 	static final void method7501(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4558, client.aClass184_7218.isaac, -375525383);
 		tcpmessage_4.buffer.writeShort(ChatLine.getLength(string_2) + ChatLine.getLength(string_3), 1417031095);
 		tcpmessage_4.buffer.writeString(string_2);
@@ -75,7 +75,7 @@ public class Class450 {
 		}
 
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = icomponentdefinitions_4.aString1391;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = icomponentdefinitions_4.aString1391;
 	}
 
 }

@@ -21,7 +21,7 @@ public class Class282_Sub20_Sub30 extends Class282_Sub20 {
 	}
 
 	static final void method15399(CS2Executor cs2executor_0, int i_1) {
-		Class242.method4167((String) cs2executor_0.objectStack[--cs2executor_0.anInt7000], 1836583632);
+		Class242.method4167((String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr], 1836583632);
 	}
 
 }

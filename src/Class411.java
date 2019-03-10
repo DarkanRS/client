@@ -70,9 +70,9 @@ public class Class411 {
 	}
 
 	static final void method6913(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7000 -= 2;
-		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
-		String string_3 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+		cs2executor_0.stringStackPtr -= 2;
+		String string_2 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
+		String string_3 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1];
 		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
 			Class184 class184_4 = Class468_Sub20.method12807(65699692);
 			TCPMessage tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4542, class184_4.isaac, 1733219960);

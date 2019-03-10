@@ -23,7 +23,7 @@ public class Class161 {
 			str_4 = chatline_3.message;
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_4;
 	}
 
 	static final void method2825(CS2Executor cs2executor_0, byte b_1) {

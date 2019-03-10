@@ -94,7 +94,7 @@ public class Class19 {
 	}
 
 	static final void method584(CS2Executor cs2executor_0, byte b_1) {
-		Class251.handleCommand((String) cs2executor_0.objectStack[--cs2executor_0.anInt7000], false, false, -354697449);
+		Class251.handleCommand((String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr], false, false, -354697449);
 	}
 
 	static final void method585(CS2Executor cs2executor_0, int i_1) {

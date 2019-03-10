@@ -68,7 +68,7 @@ public class Class233 {
 	}
 
 	static final void method3937(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		StringBuilder stringbuilder_3 = new StringBuilder(string_2.length());
 		boolean bool_4 = false;
 
@@ -83,7 +83,7 @@ public class Class233 {
 			}
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = stringbuilder_3.toString();
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = stringbuilder_3.toString();
 	}
 
 	static final void method3938(CS2Executor cs2executor_0, int i_1) {

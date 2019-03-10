@@ -10,7 +10,7 @@ public class Class18 {
 
 	static final void method572(CS2Executor cs2executor_0, int i_1) {
 		boolean bool_2 = true;
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.aBool7310) {
 			try {
 				Object object_4 = Class361.aClass361_4181.method6254(new Object[] { string_3 }, (byte) -31);

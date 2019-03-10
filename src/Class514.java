@@ -7,11 +7,11 @@ public final class Class514 {
 	}
 
 	static final void method8839(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2.substring(i_3, i_4);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2.substring(i_3, i_4);
 	}
 
 	static int method8840(char var_0, int i_1) {

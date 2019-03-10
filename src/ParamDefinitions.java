@@ -1,10 +1,10 @@
-public class AttributeDefault {
+public class ParamDefinitions {
 
 	public static NativeSprite aClass160_5339;
-	char aChar5336;
-	public int anInt5337;
+	char typeChar;
+	public int defaultInt;
 	public boolean autoDisable = true;
-	public String aString5335;
+	public String typeName;
 
 	void method7315(RsByteBuffer rsbytebuffer_1, int i_2) {
 		while (true) {
@@ -19,19 +19,19 @@ public class AttributeDefault {
 
 	void method7316(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
 		if (i_2 == 1) {
-			this.aChar5336 = Class11.getChar(rsbytebuffer_1.readByte(), 1486768413);
+			this.typeChar = Class11.getChar(rsbytebuffer_1.readByte(), 1486768413);
 		} else if (i_2 == 2) {
-			this.anInt5337 = rsbytebuffer_1.readInt();
+			this.defaultInt = rsbytebuffer_1.readInt();
 		} else if (i_2 == 4) {
 			this.autoDisable = false;
 		} else if (i_2 == 5) {
-			this.aString5335 = rsbytebuffer_1.readString();
+			this.typeName = rsbytebuffer_1.readString();
 		}
 
 	}
 
 	public boolean method7319(int i_1) {
-		return this.aChar5336 == 115;
+		return this.typeChar == 115;
 	}
 
 	static final void method7322(CS2Executor cs2executor_0, int i_1) {

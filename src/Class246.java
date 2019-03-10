@@ -48,9 +48,9 @@ public class Class246 {
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 173872175);
 		if (i_3 >= 1 && i_3 <= 5 && itemdefinitions_4.inventoryOptions[i_3 - 1] != null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = itemdefinitions_4.inventoryOptions[i_3 - 1];
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = itemdefinitions_4.inventoryOptions[i_3 - 1];
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

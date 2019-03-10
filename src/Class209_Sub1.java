@@ -281,7 +281,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 			string_3 = "";
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_3;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_3;
 	}
 
 	public static void method12916(byte b_0) {

@@ -29,14 +29,14 @@ public class Class489 {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 98);
 		if (icomponentdefinitions_3.aString1369 == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = icomponentdefinitions_3.aString1369;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = icomponentdefinitions_3.aString1369;
 		}
 
 	}
 
-	static void method8216(CS2Executor cs2executor_0, int i_1) {
+	static void method8216(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).method4098(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 1) ? 1 : 0;
 	}
 
@@ -71,7 +71,7 @@ public class Class489 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class380.method6450((char) i_2, -294596475) ? 1 : 0;
 	}
 
-	static final void method8219(CS2Executor cs2executor_0, int i_1) {
+	static final void method8219(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class488.anInt5760;
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class351.anInt4097;
 	}

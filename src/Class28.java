@@ -226,9 +226,9 @@ public class Class28 implements Interface2 {
 		int i_4 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		--i_4;
 		if (icomponentdefinitions_3.aStringArray1352 != null && i_4 < icomponentdefinitions_3.aStringArray1352.length && icomponentdefinitions_3.aStringArray1352[i_4] != null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = icomponentdefinitions_3.aStringArray1352[i_4];
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = icomponentdefinitions_3.aStringArray1352[i_4];
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

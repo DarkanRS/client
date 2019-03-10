@@ -303,16 +303,16 @@ public class Class299 implements Interface27 {
 			}
 
 			for (i_7 = 0; i_7 < cs2script_3.stringArgsCount; i_7++) {
-				arr_5[i_7] = cs2executor_0.objectStack[i_7 + (cs2executor_0.anInt7000 - cs2script_3.stringArgsCount)];
+				arr_5[i_7] = cs2executor_0.stringStack[i_7 + (cs2executor_0.stringStackPtr - cs2script_3.stringArgsCount)];
 			}
 
 			for (i_7 = 0; i_7 < cs2script_3.longArgsCount; i_7++) {
-				longs_6[i_7] = cs2executor_0.aLongArray7003[i_7 + (cs2executor_0.anInt7001 - cs2script_3.longArgsCount)];
+				longs_6[i_7] = cs2executor_0.longStack[i_7 + (cs2executor_0.longStackPtr - cs2script_3.longArgsCount)];
 			}
 
 			cs2executor_0.intStackPtr -= cs2script_3.intArgsCount;
-			cs2executor_0.anInt7000 -= cs2script_3.stringArgsCount;
-			cs2executor_0.anInt7001 -= cs2script_3.longArgsCount;
+			cs2executor_0.stringStackPtr -= cs2script_3.stringArgsCount;
+			cs2executor_0.longStackPtr -= cs2script_3.longArgsCount;
 			Class509 class509_8 = new Class509();
 			class509_8.aClass282_Sub50_Sub5_5869 = cs2executor_0.current;
 			class509_8.anInt5866 = cs2executor_0.instrPtr;

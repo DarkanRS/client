@@ -39,7 +39,7 @@ public class Class371 {
 
 	static final void method6350(CS2Executor cs2executor_0, byte b_1) {
 		boolean bool_2 = false;
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.aBool7310) {
 			try {
 				Object object_4 = Class361.aClass361_4172.method6254(new Object[] { string_3 }, (byte) -29);

@@ -153,15 +153,15 @@ public class JS5Manager {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.anInt7434 != 0 && i_2 < client.anInt7373) {
 			Class10 class10_3 = client.aClass10Array7456[i_2];
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class10_3.aString115;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class10_3.aString115;
 			if (class10_3.aString116 != null) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class10_3.aString116;
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class10_3.aString116;
 			} else {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			}
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

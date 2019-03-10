@@ -9,7 +9,7 @@ public class Class346 {
 	static NodeCollection aClass482_4049;
 
 	static final void method6149(CS2Executor cs2executor_0, byte b_1) {
-		--cs2executor_0.anInt7001;
+		--cs2executor_0.longStackPtr;
 	}
 
 	static final void method6150(CS2Executor cs2executor_0, short s_1) {
@@ -32,7 +32,7 @@ public class Class346 {
 	}
 
 	static final void method6152(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class344.method6119(string_2, -315586619);
 	}
 
@@ -197,7 +197,7 @@ public class Class346 {
 	}
 
 	static final void method6158(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 908211513) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

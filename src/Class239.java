@@ -199,7 +199,7 @@ public class Class239 {
 	}
 
 	static final void method4089(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.intStackPtr -= 3;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];

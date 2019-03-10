@@ -2,7 +2,7 @@ public class Class394 {
 
 	SoftCache aClass229_4786 = new SoftCache(64);
 	Index aClass317_4784;
-	public int anInt4785;
+	public int clanVarSize;
 
 	public Class405 method6753(int i_1, int i_2) {
 		SoftCache softcache_4 = this.aClass229_4786;
@@ -57,9 +57,9 @@ public class Class394 {
 	public Class394(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_4784 = index_3;
 		if (this.aClass317_4784 != null) {
-			this.anInt4785 = this.aClass317_4784.filesCount(SharedConfigsType.aClass120_1510.id);
+			this.clanVarSize = this.aClass317_4784.filesCount(SharedConfigsType.aClass120_1510.id);
 		} else {
-			this.anInt4785 = 0;
+			this.clanVarSize = 0;
 		}
 
 	}

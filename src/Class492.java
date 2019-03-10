@@ -13,7 +13,7 @@ public class Class492 {
 			Class440.method7373(Class393.preferences.screenSize.method12687(577867050), -1, -1, false, (byte) 35);
 		}
 
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		boolean bool_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1;
 		String string_4 = WorldMapAreaDefs.method3741((byte) -1) + string_2;
 		Class282_Sub50_Sub6.method14788(string_4, bool_3, Class393.preferences.currentToolkit.getValue(-1739196165) == 5, client.aBool7158, client.aBool7159, (byte) -52);

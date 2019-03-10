@@ -60,7 +60,7 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6689(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		int[] ints_5 = Class96_Sub14.method14642(string_4, cs2executor_2, 1724948075);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
@@ -72,7 +72,7 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6690(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 41262162) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -84,7 +84,7 @@ public class Class388 implements Interface41 {
 	static final void method6691(CS2Executor cs2executor_0, int i_1) {
 		boolean bool_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0;
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class202.method3342((long) i_3, 0, bool_2, Class223.CURRENT_LANGUAGE, (byte) -28);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Class202.method3342((long) i_3, 0, bool_2, Class223.CURRENT_LANGUAGE, (byte) -28);
 	}
 
 	static void method6692(int i_0) {

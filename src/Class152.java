@@ -35,7 +35,7 @@ public abstract class Class152 {
 	}
 
 	static final void method2597(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.aBool7310) {
 			try {
 				Class361.aClass361_4183.method6254(new Object[] { string_2 }, (byte) -80);
@@ -188,12 +188,12 @@ public abstract class Class152 {
 
 	static final void method2602(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		Class405 class405_3 = IndexLoaders.aClass394_5831.method6753(i_2, -292141252);
+		Class405 class405_3 = IndexLoaders.CLAN_VAR_LOADER.method6753(i_2, -292141252);
 		if (class405_3.aChar4832 != 1) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 		}
 
-		Integer integer_4 = (Integer) Class46.anObjectArray437[class405_3.anInt4833];
+		Integer integer_4 = (Integer) Class46.CLAN_VARS[class405_3.anInt4833];
 		if (integer_4 == null) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 		} else {
@@ -281,7 +281,7 @@ public abstract class Class152 {
 			long_4 = long_3.longValue();
 		}
 
-		cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = long_4;
+		cs2executor_0.longStack[++cs2executor_0.longStackPtr - 1] = long_4;
 	}
 
 }

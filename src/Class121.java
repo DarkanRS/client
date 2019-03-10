@@ -12,7 +12,7 @@ public class Class121 {
 	}
 
 	static void method2101(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1396181317).name;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1396181317).name;
 	}
 
 	static final void method2102(CS2Executor cs2executor_0, short s_1) {

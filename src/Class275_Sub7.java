@@ -77,7 +77,7 @@ public class Class275_Sub7 extends Class275 {
 		Class521_Sub1_Sub2.anInt9461 = Class109_Sub1.anInt9384;
 		Class282_Sub15_Sub1.anInt9575 = Class246.anInt3029;
 		ClipMap.anInt3968 = Class293.anInt3512;
-		ItemDefaultsLoader.anInt5029 = AnimationDefinitions.anInt5930;
+		ParamDefinitionsLoader.anInt5029 = AnimationDefinitions.anInt5930;
 	}
 
 }

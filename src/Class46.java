@@ -1,6 +1,6 @@
 public class Class46 implements Interface2 {
 
-	public static Object[] anObjectArray437;
+	public static Object[] CLAN_VARS;
 	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_438;
 	Class366 aClass366_436;
 

@@ -26,7 +26,7 @@ public class Class357 implements Interface3 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		String string_4 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_4 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (i_2 == 99) {
 			Class209.method3598(string_4, -914132655);
 		} else if (i_2 == 98) {

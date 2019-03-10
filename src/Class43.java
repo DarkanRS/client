@@ -142,7 +142,7 @@ public class Class43 implements Interface2 {
 		return this.aClass317_419.method5661(this.aClass351_418.anInt4095 * -1867361899 * -985960003, 85333751);
 	}
 
-	static final void method893(CS2Executor cs2executor_0, byte b_1) {
+	static final void method893(CS2Executor cs2executor_0) {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;

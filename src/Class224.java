@@ -13,7 +13,7 @@ public final class Class224 {
 
 	static final void method3779(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.aClass61_7010.aStringArray617[i_2];
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = cs2executor_0.aClass61_7010.aStringArray617[i_2];
 	}
 
 	static final void method3780(CS2Executor cs2executor_0, byte b_1) {

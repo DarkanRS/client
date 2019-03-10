@@ -24,9 +24,9 @@ public class Class351 implements Interface3 {
 		int i_4;
 		for (i_4 = arr_3.length - 1; i_4 >= 1; --i_4) {
 			if (string_0.charAt(i_4 - 1) == 115) {
-				arr_3[i_4] = cs2executor_1.objectStack[--cs2executor_1.anInt7000];
+				arr_3[i_4] = cs2executor_1.stringStack[--cs2executor_1.stringStackPtr];
 			} else if (string_0.charAt(i_4 - 1) == 167) {
-				arr_3[i_4] = new Long(cs2executor_1.aLongArray7003[--cs2executor_1.anInt7001]);
+				arr_3[i_4] = new Long(cs2executor_1.longStack[--cs2executor_1.longStackPtr]);
 			} else {
 				arr_3[i_4] = new Integer(cs2executor_1.intStack[--cs2executor_1.intStackPtr]);
 			}
@@ -44,7 +44,7 @@ public class Class351 implements Interface3 {
 
 	static final void method6194(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class119.method2075(i_2, string_3, (byte) 3);
 	}
 

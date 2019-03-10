@@ -321,11 +321,11 @@ public final class JS5CacheFile {
 
 	static final void method3355(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		String string_3 = (String) Class46.anObjectArray437[i_2];
+		String string_3 = (String) Class46.CLAN_VARS[i_2];
 		if (string_3 == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_3;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_3;
 		}
 
 	}
@@ -372,7 +372,7 @@ public final class JS5CacheFile {
 	}
 
 	static final void method3361(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass61_7010.method1197((String) cs2executor_0.objectStack[--cs2executor_0.anInt7000], 1985834786);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass61_7010.method1197((String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr], 1985834786);
 	}
 
 }

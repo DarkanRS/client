@@ -90,7 +90,7 @@ public class Class250 {
 		}
 	}
 
-	static final void method4295(CS2Executor cs2executor_0, int i_1) {
+	static final void method4295(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass61_7010.anInt636;
 	}
 

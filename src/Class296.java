@@ -39,9 +39,9 @@ public class Class296 {
 
 	static final void method5298(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.anInt7000 -= 2;
-		String string_3 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
-		String string_4 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+		cs2executor_0.stringStackPtr -= 2;
+		String string_3 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
+		String string_4 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1];
 		if (string_3.length() <= 500 && string_4.length() <= 500) {
 			Class105.method1804(i_2, string_3, string_4, (byte) -22);
 		}

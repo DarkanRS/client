@@ -53,13 +53,13 @@ public class Class417 {
 	static final void method7006(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
 			String string_3 = Class468_Sub8.aClass98Array7889[i_2].components[0].aString1285;
 			if (string_3 == null) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			} else {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_3.substring(0, string_3.indexOf(58));
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_3.substring(0, string_3.indexOf(58));
 			}
 		}
 

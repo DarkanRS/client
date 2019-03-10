@@ -62,7 +62,7 @@ public abstract class Class202 {
 	}
 
 	static final void method3338(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		int[] ints_5 = Class96_Sub14.method14642(string_4, cs2executor_2, 510066471);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
@@ -74,7 +74,7 @@ public abstract class Class202 {
 	}
 
 	static final void method3339(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class2.method258(string_2, 779827732);
 	}
 
@@ -87,13 +87,13 @@ public abstract class Class202 {
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
 			String string_4 = Class468_Sub8.aClass98Array7889[i_2].components[i_3].aString1285;
 			if (string_4 == null) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			} else {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_4;
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_4;
 			}
 		}
 
@@ -173,7 +173,7 @@ public abstract class Class202 {
 	}
 
 	static final void method3346(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];

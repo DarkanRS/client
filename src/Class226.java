@@ -24,7 +24,7 @@ public class Class226 implements Definition {
 
 	}
 
-	static final void method3802(CS2Executor cs2executor_0, int i_1) {
+	static final void method3802(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3865;
 	}

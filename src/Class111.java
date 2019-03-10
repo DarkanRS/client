@@ -135,9 +135,9 @@ public class Class111 {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		if (icomponentdefinitions_3.aString1369 == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = icomponentdefinitions_3.aString1369;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = icomponentdefinitions_3.aString1369;
 		}
 
 	}

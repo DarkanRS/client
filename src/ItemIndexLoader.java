@@ -8,7 +8,7 @@ public class ItemIndexLoader implements IndexLoader {
 	SoftwareItemRender softwareItemRender = new SoftwareItemRender();
 	Game game;
 	Language language;
-	ItemDefaultsLoader attrDefaults;
+	ParamDefinitionsLoader attrDefaults;
 	Index fs19;
 	Index meshIndex;
 	public int maxItemsCount;
@@ -63,7 +63,7 @@ public class ItemIndexLoader implements IndexLoader {
 					boolean bool_8 = false;
 
 					for (Node node_6 = itemdefinitions_3.cs2Map.method7750(-778830741); node_6 != null; node_6 = itemdefinitions_3.cs2Map.method7751((byte) 57)) {
-						AttributeDefault attributedefault_7 = this.attrDefaults.method7069((int) node_6.data, (byte) 0);
+						ParamDefinitions attributedefault_7 = this.attrDefaults.method7069((int) node_6.data, (byte) 0);
 						if (attributedefault_7.autoDisable) {
 							node_6.remove();
 						} else {
@@ -199,7 +199,7 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public ItemIndexLoader(Game game_1, Language xlanguage_2, boolean bool_3, ItemDefaultsLoader itemdefaultsloader_4, Index index_5, Index index_6) {
+	public ItemIndexLoader(Game game_1, Language xlanguage_2, boolean bool_3, ParamDefinitionsLoader itemdefaultsloader_4, Index index_5, Index index_6) {
 		this.game = game_1;
 		this.language = xlanguage_2;
 		this.membersOnly = bool_3;

@@ -186,7 +186,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 	}
 
 	static final void method15403(CS2Executor cs2executor_0, int i_1) {
-		ItemDefaultsLoader.method7081((byte) -41);
+		ParamDefinitionsLoader.method7081((byte) -41);
 	}
 
 }

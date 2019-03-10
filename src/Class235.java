@@ -28,9 +28,9 @@ public class Class235 {
 
 	static final void method3966(CS2Executor cs2executor_0, int i_1) {
 		if (client.aString7426 != null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class285.method5025(client.aString7426, 2091594482);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Class285.method5025(client.aString7426, 2091594482);
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

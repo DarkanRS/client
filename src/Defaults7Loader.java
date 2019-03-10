@@ -124,8 +124,8 @@ public class Defaults7Loader {
 		cs2executor_0.intStackPtr -= 2;
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_5 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
-		if (i_5 != attributedefault_6.anInt5337) {
+		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
+		if (i_5 != attributedefault_6.defaultInt) {
 			icomponentdefinitions_3.method1999(i_4, i_5, -76076232);
 		} else {
 			icomponentdefinitions_3.method1995(i_4, -1265527536);
@@ -154,7 +154,7 @@ public class Defaults7Loader {
 
 	static final void method8757(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (i_2 == -1) {
 			throw new RuntimeException();
 		} else {
@@ -177,11 +177,11 @@ public class Defaults7Loader {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(2036753920)) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 882562729).method3722(i_3, attributedefault_4.aString5335, -379285425);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 882562729).method3722(i_3, attributedefault_4.typeName, -379285425);
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 884887679).method3723(i_3, attributedefault_4.anInt5337, 1942118537);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 884887679).method3723(i_3, attributedefault_4.defaultInt, 1942118537);
 		}
 
 	}

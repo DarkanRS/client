@@ -34,11 +34,11 @@ public class Class506 {
 			string_2 = "";
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2;
 	}
 
 	static final void method8718(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.aClass191_7008 = new Class191(string_2, true);
 	}
 

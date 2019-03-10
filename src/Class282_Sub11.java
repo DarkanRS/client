@@ -21,8 +21,8 @@ public abstract class Class282_Sub11 extends Node {
 	}
 
 	static final void method12210(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.anInt7000 -= 3;
-		Class533.method11404((String) cs2executor_0.objectStack[cs2executor_0.anInt7000], (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1], (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 2], cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1, true, -94301647);
+		cs2executor_0.stringStackPtr -= 3;
+		Class533.method11404((String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr], (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1], (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 2], cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1, true, -94301647);
 	}
 
 	public static void method12211(int i_0) {

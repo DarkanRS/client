@@ -7,7 +7,7 @@ public class Class325 {
 	}
 
 	static final void method5786(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4607, client.aClass184_7475.isaac, 1863419528);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);

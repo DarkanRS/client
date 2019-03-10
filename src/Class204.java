@@ -25,11 +25,11 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3364(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.objectLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]];
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = cs2executor_0.objectLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]];
 	}
 
 	static final void method3365(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1659229843) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -39,7 +39,7 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3366(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 570698140) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -61,7 +61,7 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3369(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.aString1338 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		icomponentdefinitions_0.aString1338 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 
 	static final void method3370(CS2Executor cs2executor_0, byte b_1) {

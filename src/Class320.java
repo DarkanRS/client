@@ -106,7 +106,7 @@ public class Class320 {
 	}
 
 	static final void method5735(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
@@ -115,7 +115,7 @@ public class Class320 {
 	}
 
 	static void method5736(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1396181317).altName;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1396181317).altName;
 	}
 
 }

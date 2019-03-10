@@ -11,9 +11,9 @@ public class Class295 {
 	static final void method5291(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] - 1;
 		if (i_4 >= 0 && i_4 <= 9) {
-			icomponentdefinitions_0.method1994(i_4, (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000], (byte) -12);
+			icomponentdefinitions_0.method1994(i_4, (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr], (byte) -12);
 		} else {
-			--cs2executor_2.anInt7000;
+			--cs2executor_2.stringStackPtr;
 		}
 
 	}

@@ -55,7 +55,7 @@ public class Class331 {
 	}
 
 	static final void method5922(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.aClass61_7010.aString622;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = cs2executor_0.aClass61_7010.aString622;
 	}
 
 	public static void method5923(Animable animable_0, int[] ints_1, int[] ints_2, int[] ints_3, int i_4) {
@@ -109,10 +109,10 @@ public class Class331 {
 		class282_sub50_sub12_3.anInt9668 = bool_1 ? 1 : 0;
 	}
 
-	static final void method5925(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7000 -= 2;
-		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
-		String string_3 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+	static final void method5925(CS2Executor cs2executor_0) {
+		cs2executor_0.stringStackPtr -= 2;
+		String string_2 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
+		String string_3 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1];
 		Class155.method2635(string_2, string_3, 431989150);
 	}
 

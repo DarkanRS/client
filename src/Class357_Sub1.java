@@ -28,7 +28,7 @@ public class Class357_Sub1 extends Class357 {
 		IndexLoaders.aClass377_1065.method6390(-555567449);
 		IndexLoaders.aClass447_435.method7453((byte) 12);
 		IndexLoaders.aClass498_3001.method8321(1853718430);
-		IndexLoaders.aClass394_5831.method6756(856917319);
+		IndexLoaders.CLAN_VAR_LOADER.method6756(856917319);
 		IndexLoaders.aClass233_5822.method3926((byte) -18);
 		IndexLoaders.RENDER_ANIMS.method3618((byte) 8);
 		IndexLoaders.aClass427_995.method7177((short) -20960);

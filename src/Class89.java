@@ -45,7 +45,7 @@ public class Class89 {
 	}
 
 	static final void method1500(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class152.method2603(string_2, -671341252);
 	}
 

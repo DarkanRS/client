@@ -6,8 +6,8 @@ public class Class245 {
 		throw new Error();
 	}
 
-	static final void method4197(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+	static final void method4197(CS2Executor cs2executor_0) {
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4614, client.aClass184_7475.isaac, 1498065982);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);

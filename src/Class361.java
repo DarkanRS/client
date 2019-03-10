@@ -114,7 +114,7 @@ public class Class361 {
 		Class125.method2168(icomponentdefinitions_3, interface_4, cs2executor_0, 539000010);
 	}
 
-	static final void method6272(CS2Executor cs2executor_0, byte b_1) {
+	static final void method6272(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		int[] ints_3 = Class268.method4799(i_2, 72550989);
 		Class503.method8362(ints_3, 0, cs2executor_0.intStack, cs2executor_0.intStackPtr, 3);
@@ -147,8 +147,8 @@ public class Class361 {
 
 	static final void method6275(CS2Executor cs2executor_0, byte b_1) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7344 ? 1 : 0;
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7356 == null ? "" : client.aString7356;
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7275 == null ? "" : client.aString7275;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aString7356 == null ? "" : client.aString7356;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aString7275 == null ? "" : client.aString7275;
 	}
 
 }

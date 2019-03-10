@@ -23,7 +23,7 @@ public class Game {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7271 - client.anInt7270;
 	}
 
-	static final void method8206(CS2Executor cs2executor_0, int i_1) {
+	static final void method8206(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 12;
 		Class316.method5594(-559600711);
 		Class96.method1607((byte) 35);
@@ -53,7 +53,7 @@ public class Game {
 		Class61.aClass160_647 = null;
 		Class467.aClass160_5576 = null;
 		Class290.aClass160_3452 = null;
-		AttributeDefault.aClass160_5339 = null;
+		ParamDefinitions.aClass160_5339 = null;
 		Class20.aBool187 = true;
 	}
 

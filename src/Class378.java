@@ -182,7 +182,7 @@ public class Class378 {
 		IndexLoaders.aClass377_1065.method6386(5, (byte) 31);
 		IndexLoaders.aClass447_435.method7452(5, (byte) 17);
 		IndexLoaders.aClass498_3001.method8320(5, 1532833912);
-		IndexLoaders.aClass394_5831.method6755(5, (byte) -16);
+		IndexLoaders.CLAN_VAR_LOADER.method6755(5, (byte) -16);
 		IndexLoaders.aClass233_5822.method3923(5, -1373028288);
 		IndexLoaders.RENDER_ANIMS.method3615(5, -1820135458);
 		IndexLoaders.WORLD_MAP_INDEX_LOADER.method3695(5, -103071229);

@@ -52,10 +52,10 @@ public class Class252 implements Interface43 {
 	}
 
 	static final void method4323(CS2Executor cs2executor_0, byte b_1) {
-		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		Integer integer_3 = (Integer) Class46.anObjectArray437[i_2];
+		int param = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		Integer integer_3 = (Integer) Class46.CLAN_VARS[param];
 		if (integer_3 == null) {
-			Class405 class405_4 = IndexLoaders.aClass394_5831.method6753(i_2, 908110130);
+			Class405 class405_4 = IndexLoaders.CLAN_VAR_LOADER.method6753(param, 908110130);
 			if (class405_4.aChar4832 != 105 && class405_4.aChar4832 != 49) {
 				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
 			} else {
@@ -161,7 +161,7 @@ public class Class252 implements Interface43 {
 			for (int i_7 = 0; i_7 < class282_sub30_5.itemIds.length; i_7++) {
 				if (class282_sub30_5.itemIds[i_7] >= 0 && class282_sub30_5.itemIds[i_7] < IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount) {
 					ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub30_5.itemIds[i_7], 1670357313);
-					int i_9 = itemdefinitions_8.method7099(i_1, IndexLoaders.ITEM_DEFAULTS.method7069(i_1, (byte) 0).anInt5337, -304171855);
+					int i_9 = itemdefinitions_8.method7099(i_1, IndexLoaders.ITEM_DEFAULTS.method7069(i_1, (byte) 0).defaultInt, -304171855);
 					if (bool_2) {
 						i_6 += i_9 * class282_sub30_5.amounts[i_7];
 					} else {

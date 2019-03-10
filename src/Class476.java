@@ -14,7 +14,7 @@ public class Class476 {
 		this.aShortArray5625 = shorts_5;
 	}
 
-	static final void method7929(CS2Executor cs2executor_0, int i_1) {
+	static final void method7929(CS2Executor cs2executor_0) {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
@@ -45,7 +45,7 @@ public class Class476 {
 	}
 
 	static final void method7932(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (string_2.startsWith(Class76.getCrown(0)) || string_2.startsWith(Class76.getCrown(1))) {
 			string_2 = string_2.substring(7);
 		}

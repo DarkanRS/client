@@ -568,7 +568,7 @@ public final class Index {
 	}
 
 	static final void method5691(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		Class282_Sub20_Sub36.method15419(string_2, i_3 == 1, -940793702);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class415.anInt4985;
@@ -665,7 +665,7 @@ public final class Index {
 
 	}
 
-	static final void method5696(CS2Executor cs2executor_0, int i_1) {
+	static final void method5696(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 3;
 		Class153.method2618(cs2executor_0.intStack[cs2executor_0.intStackPtr], cs2executor_0.intStack[cs2executor_0.intStackPtr + 1], cs2executor_0.intStack[cs2executor_0.intStackPtr + 2], 255, 256, 1363502239);
 	}

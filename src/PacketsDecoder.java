@@ -225,7 +225,7 @@ public class PacketsDecoder extends Class455 {
 									i_9 = buffer.readInt();
 									Class470.method7825(-400873026);
 									if (i_7 == 2) {
-										ItemDefaultsLoader.method7081((byte) 18);
+										ParamDefinitionsLoader.method7081((byte) 18);
 									}
 
 									int[] ints_93 = new int[] { i_9, i_8, key, flags };
@@ -961,15 +961,15 @@ public class PacketsDecoder extends Class455 {
 																	Class275_Sub7.method12606((byte) 81);
 																	class184_0.aClass375_2286 = null;
 																	return true;
-																} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4401) {
+																} else if (class184_0.aClass375_2286 == IncomingPacket.SET_CLAN_STRING) {
 																	key = buffer.readUnsignedShort();
 																	string_88 = buffer.readString();
-																	if (Class46.anObjectArray437 == null) {
-																		Class46.anObjectArray437 = new Object[IndexLoaders.aClass394_5831.anInt4785];
+																	if (Class46.CLAN_VARS == null) {
+																		Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
 																	}
 
-																	Class46.anObjectArray437[key] = string_88;
-																	client.anIntArray7222[++client.anInt7390 - 1 & 0x1f] = key;
+																	Class46.CLAN_VARS[key] = string_88;
+																	client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 																	class184_0.aClass375_2286 = null;
 																	return true;
 																} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4414) {
@@ -1121,12 +1121,12 @@ public class PacketsDecoder extends Class455 {
 																	} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4377) {
 																		key = buffer.readUnsignedShort();
 																		long_47 = buffer.readLong(923196069);
-																		if (Class46.anObjectArray437 == null) {
-																			Class46.anObjectArray437 = new Object[IndexLoaders.aClass394_5831.anInt4785];
+																		if (Class46.CLAN_VARS == null) {
+																			Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
 																		}
 
-																		Class46.anObjectArray437[key] = new Long(long_47);
-																		client.anIntArray7222[++client.anInt7390 - 1 & 0x1f] = key;
+																		Class46.CLAN_VARS[key] = new Long(long_47);
+																		client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 																		class184_0.aClass375_2286 = null;
 																		return true;
 																	} else {
@@ -1189,12 +1189,12 @@ public class PacketsDecoder extends Class455 {
 																		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4484) {
 																			key = buffer.readUnsignedShort();
 																			flags = buffer.readInt();
-																			if (Class46.anObjectArray437 == null) {
-																				Class46.anObjectArray437 = new Object[IndexLoaders.aClass394_5831.anInt4785];
+																			if (Class46.CLAN_VARS == null) {
+																				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
 																			}
 
-																			Class46.anObjectArray437[key] = new Integer(flags);
-																			client.anIntArray7222[++client.anInt7390 - 1 & 0x1f] = key;
+																			Class46.CLAN_VARS[key] = new Integer(flags);
+																			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 																			class184_0.aClass375_2286 = null;
 																			return true;
 																		} else if (class184_0.aClass375_2286 == IncomingPacket.WORLD_TILE) {
@@ -1276,12 +1276,12 @@ public class PacketsDecoder extends Class455 {
 																			} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4474) {
 																				key = buffer.readUnsignedShort();
 																				byte b_84 = buffer.readByte();
-																				if (Class46.anObjectArray437 == null) {
-																					Class46.anObjectArray437 = new Object[IndexLoaders.aClass394_5831.anInt4785];
+																				if (Class46.CLAN_VARS == null) {
+																					Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
 																				}
 
-																				Class46.anObjectArray437[key] = new Integer(b_84);
-																				client.anIntArray7222[++client.anInt7390 - 1 & 0x1f] = key;
+																				Class46.CLAN_VARS[key] = new Integer(b_84);
+																				client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 																				class184_0.aClass375_2286 = null;
 																				return true;
 																			} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4458) {
@@ -1794,7 +1794,7 @@ public class PacketsDecoder extends Class455 {
 																					class184_0.aClass375_2286 = null;
 																					return true;
 																				} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4440) {
-																					Class46.anObjectArray437 = new Object[IndexLoaders.aClass394_5831.anInt4785];
+																					Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
 																					class184_0.aClass375_2286 = null;
 																					return true;
 																				} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4495) {
@@ -2569,7 +2569,7 @@ public class PacketsDecoder extends Class455 {
 																						class184_0.aClass375_2286 = null;
 																						return true;
 																					} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4445) {
-																						Class46.anObjectArray437 = null;
+																						Class46.CLAN_VARS = null;
 																						class184_0.aClass375_2286 = null;
 																						return true;
 																					} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4437) {
@@ -2645,8 +2645,8 @@ public class PacketsDecoder extends Class455 {
 	}
 
 	static final void method14434(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7000 -= 2;
-		Class533.method11404((String) cs2executor_0.objectStack[cs2executor_0.anInt7000], (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1], "", cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1, false, -94301647);
+		cs2executor_0.stringStackPtr -= 2;
+		Class533.method11404((String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr], (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1], "", cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1, false, -94301647);
 	}
 
 }

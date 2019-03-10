@@ -13,7 +13,7 @@ public class Class14 {
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
-		String string_5 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_5 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (i_3 == -1) {
 			throw new RuntimeException();
 		} else {

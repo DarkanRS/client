@@ -78,9 +78,9 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 461290146);
 		if (worldmapareadefs_3.areaName == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = worldmapareadefs_3.areaName;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = worldmapareadefs_3.areaName;
 		}
 
 	}

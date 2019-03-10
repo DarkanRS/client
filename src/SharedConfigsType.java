@@ -10,7 +10,7 @@ public class SharedConfigsType {
 	public static SharedConfigsType ENUMS = new SharedConfigsType(8, 8);
 	public static SharedConfigsType aClass120_1467 = new SharedConfigsType(9, 7);
 	public static SharedConfigsType ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
-	public static SharedConfigsType aClass120_1474 = new SharedConfigsType(11);
+	public static SharedConfigsType PARAMS = new SharedConfigsType(11);
 	public static SharedConfigsType SEQUENCES = new SharedConfigsType(12, 7);
 	public static SharedConfigsType SPOT_ANIMS = new SharedConfigsType(13, 8);
 	public static SharedConfigsType aClass120_1477 = new SharedConfigsType(14, 10);
@@ -171,15 +171,15 @@ public class SharedConfigsType {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
 			Class6 class6_3 = client.aClass6Array7452[i_2];
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class6_3.aString37;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class6_3.aString37;
 			if (class6_3.aString43 != null) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class6_3.aString43;
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class6_3.aString43;
 			} else {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			}
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

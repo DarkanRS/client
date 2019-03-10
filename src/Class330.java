@@ -28,7 +28,7 @@ public class Class330 {
 	}
 
 	static final void method5912(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = cs2executor_0.current.longOpValues[cs2executor_0.instrPtr];
+		cs2executor_0.longStack[++cs2executor_0.longStackPtr - 1] = cs2executor_0.current.longOpValues[cs2executor_0.instrPtr];
 	}
 
 	public static void method5913(int i_0) {
@@ -60,7 +60,7 @@ public class Class330 {
 	}
 
 	static final void method5915(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		cs2executor_0.intStackPtr -= 2;
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];

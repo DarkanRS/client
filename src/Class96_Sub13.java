@@ -32,7 +32,7 @@ public class Class96_Sub13 extends Class96 {
 	}
 
 	static final void method14639(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class46.anObjectArray437 != null ? 1 : 0;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class46.CLAN_VARS != null ? 1 : 0;
 	}
 
 	static final void method14640(CS2Executor cs2executor_0, int i_1) {

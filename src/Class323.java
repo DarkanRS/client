@@ -296,7 +296,7 @@ public class Class323 implements Interface22 {
 
 	static final void method5776(CS2Executor cs2executor_0, short s_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (i_2 == -1) {
 			throw new RuntimeException();
 		} else {

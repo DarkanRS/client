@@ -13,20 +13,20 @@ public class Class221 {
 
 	static final void method3747(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		Long long_3 = (Long) Class46.anObjectArray437[i_2];
+		Long long_3 = (Long) Class46.CLAN_VARS[i_2];
 		if (long_3 == null) {
-			cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = -1L;
+			cs2executor_0.longStack[++cs2executor_0.longStackPtr - 1] = -1L;
 		} else {
-			cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = long_3.longValue();
+			cs2executor_0.longStack[++cs2executor_0.longStackPtr - 1] = long_3.longValue();
 		}
 
 	}
 
 	static final void method3748(CS2Executor cs2executor_0, int i_1) {
 		if (client.aString7165 != null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7165;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aString7165;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

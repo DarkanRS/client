@@ -60,9 +60,9 @@ public class Class45 {
 	}
 
 	static final void method926(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2 + Class290.method5120(i_3, true, -948271642);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2 + Class290.method5120(i_3, true, -948271642);
 	}
 
 	static final void method927(CS2Executor cs2executor_0, int i_1) {

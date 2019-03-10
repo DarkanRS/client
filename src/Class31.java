@@ -93,7 +93,7 @@ public class Class31 implements IndexLoader {
 	}
 
 	static final void method811(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.aClass282_Sub4_7011.aString7501;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = cs2executor_0.aClass282_Sub4_7011.aString7501;
 	}
 
 	public static final Class282_Sub44 method812(int i_0, Class282_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
@@ -162,7 +162,7 @@ public class Class31 implements IndexLoader {
 
 	}
 
-	static final void method814(CS2Executor cs2executor_0, int i_1) {
+	static final void method814(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		Class282_Sub50_Sub14 class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, 1213236683);
 		if (class282_sub50_sub14_3.anIntArray9747 == null) {

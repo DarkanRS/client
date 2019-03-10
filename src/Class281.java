@@ -114,9 +114,9 @@ public class Class281 {
 	}
 
 	static final void method4987(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2 + i_3;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2 + i_3;
 	}
 
 	static final void method4988(CS2Executor cs2executor_0, int i_1) {

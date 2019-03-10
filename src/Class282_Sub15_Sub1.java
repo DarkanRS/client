@@ -403,7 +403,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 			str_4 = chatline_3.name;
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_4;
 	}
 
 	static final void method14836(CS2Executor cs2executor_0, byte b_1) {

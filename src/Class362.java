@@ -43,9 +43,9 @@ public class Class362 {
 	static final void method6281(CS2Executor cs2executor_0, int i_1) {
 		Class163 class163_2 = cs2executor_0.animable.method15811(767923452);
 		if (class163_2 == null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class163_2.method2829(-766550436);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class163_2.method2829(-766550436);
 		}
 
 	}

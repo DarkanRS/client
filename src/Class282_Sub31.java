@@ -18,7 +18,7 @@ public final class Class282_Sub31 extends Node {
 	boolean aBool7774 = false;
 
 	static final void method12535(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]] = cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		cs2executor_0.objectLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]] = cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 	}
 
 }

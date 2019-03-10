@@ -27,7 +27,7 @@ public class Class84 {
 	}
 
 	static final void method1462(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class16.method567(string_2, true, (byte) -67);
 	}
 

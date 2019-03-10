@@ -19,10 +19,10 @@ public class CS2Executor {
 	int[][] globalArrays = new int[5][5000];
 	int[] intStack = new int[1000];
 	int intStackPtr = 0;
-	Object[] objectStack = new Object[1000];
-	int anInt7000 = 0;
-	long[] aLongArray7003 = new long[1000];
-	int anInt7001 = 0;
+	Object[] stringStack = new Object[1000];
+	int stringStackPtr = 0;
+	long[] longStack = new long[1000];
+	int longStackPtr = 0;
 	int anInt7002 = 0;
 	Class509[] aClass509Array7016 = new Class509[50];
 	ClassSomet aClass513_7007 = new ClassSomet();

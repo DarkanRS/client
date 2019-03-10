@@ -289,7 +289,7 @@ public class Class117 {
 
 	static final void method1979(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.aClass282_Sub4_7011.aClass57Array7499[i_2].aString524;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = cs2executor_0.aClass282_Sub4_7011.aClass57Array7499[i_2].aString524;
 	}
 
 	public static int method1980(int i_0, int i_1, boolean bool_2, int i_3) {

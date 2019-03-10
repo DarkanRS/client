@@ -66,9 +66,9 @@ public final class Class328 implements Comparable {
 	}
 
 	static final void method5828(CS2Executor cs2executor_0, int i_1) {
-		--cs2executor_0.anInt7000;
+		--cs2executor_0.stringStackPtr;
 		cs2executor_0.intStackPtr -= 3;
-		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
 		boolean bool_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr] == 1;
 		boolean bool_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1] == 1;
 		boolean bool_5 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2] == 1;

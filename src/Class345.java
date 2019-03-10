@@ -143,8 +143,8 @@ public class Class345 {
 	}
 
 	static final void method6139(CS2Executor cs2executor_0, int i_1) {
-		long long_2 = cs2executor_0.aLongArray7003[--cs2executor_0.anInt7001];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = long_2 == -1L ? "" : Long.toString(long_2, 36).toUpperCase();
+		long long_2 = cs2executor_0.longStack[--cs2executor_0.longStackPtr];
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = long_2 == -1L ? "" : Long.toString(long_2, 36).toUpperCase();
 	}
 
 	public static boolean method6140(int i_0) {

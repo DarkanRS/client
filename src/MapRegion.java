@@ -1532,8 +1532,8 @@ public class MapRegion {
 	}
 
 	static final void method4560(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.anInt7000 -= 2;
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class455.method7557((String) cs2executor_0.objectStack[cs2executor_0.anInt7000], (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1], Class223.CURRENT_LANGUAGE, 1341608337);
+		cs2executor_0.stringStackPtr -= 2;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class455.method7557((String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr], (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1], Class223.CURRENT_LANGUAGE, 1341608337);
 	}
 
 	static void method4561(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -1568,7 +1568,7 @@ public class MapRegion {
 
 	static final void method4563(CS2Executor cs2executor_0, short s_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Integer.toString(i_2);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Integer.toString(i_2);
 	}
 
 	public static Class350 method4564(RsByteBuffer rsbytebuffer_0, int i_1) {

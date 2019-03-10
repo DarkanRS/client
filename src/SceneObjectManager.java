@@ -1546,9 +1546,9 @@ public class SceneObjectManager {
 	}
 
 	static final void method3547(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7000 -= 2;
-		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
-		String string_3 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+		cs2executor_0.stringStackPtr -= 2;
+		String string_2 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
+		String string_3 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1];
 		int i_4 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = string_2.indexOf(string_3, i_4);
 	}

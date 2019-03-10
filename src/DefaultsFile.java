@@ -16,7 +16,7 @@ public class DefaultsFile {
 	}
 
 	static final void method11221(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1482833983) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -29,17 +29,17 @@ public class DefaultsFile {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(1753438100)) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_2, 65280).method7973(i_3, attributedefault_4.aString5335, (byte) 97);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_2, 65280).method7973(i_3, attributedefault_4.typeName, (byte) 97);
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_2, 65280).method7963(i_3, attributedefault_4.anInt5337, 1059658238);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_2, 65280).method7963(i_3, attributedefault_4.defaultInt, 1059658238);
 		}
 
 	}
 
 	static final void method11223(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 382641837) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

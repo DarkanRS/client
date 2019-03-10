@@ -112,7 +112,7 @@ public class Class446 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anIntArray7338[i_2];
 	}
 
-	static final void method7445(CS2Executor cs2executor_0, int i_1) {
+	static final void method7445(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1828860210).wearPos;
 	}

@@ -75,7 +75,7 @@ public class Class447 {
 			string_2 = "";
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2;
 	}
 
 	static final void method7463(CS2Executor cs2executor_0, int i_1) {

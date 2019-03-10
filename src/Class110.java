@@ -14,7 +14,7 @@ public class Class110 {
 	static int anInt1105;
 
 	static final void method1860(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
 			String string_3 = string_2.toLowerCase();
 			byte b_4 = 0;

@@ -31,7 +31,7 @@ public class Class169 {
 	}
 
 	static final void method2870(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4596, client.aClass184_7475.isaac, 1814841723);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
@@ -41,9 +41,9 @@ public class Class169 {
 	static final void method2871(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aClass6Array7452[i_2].aString40;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aClass6Array7452[i_2].aString40;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}
@@ -57,7 +57,7 @@ public class Class169 {
 	}
 
 	static final void method2874(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 69608151) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

@@ -141,7 +141,7 @@ public final class Class112 {
 			string_2 = "";
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2;
 	}
 
 }

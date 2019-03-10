@@ -75,7 +75,7 @@ public class Class451 implements Iterator {
 		return class282_sub42_1 != null;
 	}
 
-	static final void method7518(CS2Executor cs2executor_0, byte b_1) {
+	static final void method7518(CS2Executor cs2executor_0) {
 		NodeCollection.method8146(-1130869373);
 	}
 

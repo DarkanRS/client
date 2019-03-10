@@ -160,12 +160,12 @@ public class Class344 {
 	}
 
 	static final void method6117(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (i_3 == -1) {
 			throw new RuntimeException("");
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2 + (char) i_3;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2 + (char) i_3;
 		}
 	}
 
@@ -216,7 +216,7 @@ public class Class344 {
 	}
 
 	static final void method6122(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aString1369 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		icomponentdefinitions_0.aString1369 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 
 }

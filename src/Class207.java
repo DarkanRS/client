@@ -42,7 +42,7 @@ public class Class207 {
 	}
 
 	static void method3553(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).aStringArray2971[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]];
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).aStringArray2971[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]];
 		cs2executor_0.intStackPtr -= 2;
 	}
 
@@ -69,7 +69,7 @@ public class Class207 {
 
 	}
 
-	static final void method3557(CS2Executor cs2executor_0, byte b_1) {
+	static final void method3557(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (Class291_Sub1.aClass465_8025 != null) {
 			Node node_3 = Class291_Sub1.aClass465_8025.get((long) i_2);

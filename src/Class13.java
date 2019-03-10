@@ -15,7 +15,7 @@ public class Class13 {
 	}
 
 	static final void method502(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		int[] ints_5 = Class96_Sub14.method14642(string_4, cs2executor_2, 2090816514);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
@@ -50,9 +50,9 @@ public class Class13 {
 
 	static final void method505(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		String string_5 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
-		AttributeDefault attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
-		if (!attributedefault_6.aString5335.equals(string_5)) {
+		String string_5 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
+		if (!attributedefault_6.typeName.equals(string_5)) {
 			icomponentdefinitions_0.method2000(i_4, string_5, 2122573770);
 		} else {
 			icomponentdefinitions_0.method1995(i_4, -1265527536);

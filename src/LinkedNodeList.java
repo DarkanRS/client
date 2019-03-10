@@ -202,15 +202,15 @@ public class LinkedNodeList {
 	}
 
 	static final void method7888(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7001 -= 2;
-		if (cs2executor_0.aLongArray7003[cs2executor_0.anInt7001] >= cs2executor_0.aLongArray7003[cs2executor_0.anInt7001 + 1]) {
+		cs2executor_0.longStackPtr -= 2;
+		if (cs2executor_0.longStack[cs2executor_0.longStackPtr] >= cs2executor_0.longStack[cs2executor_0.longStackPtr + 1]) {
 			cs2executor_0.instrPtr += cs2executor_0.intOpValues[cs2executor_0.instrPtr];
 		}
 
 	}
 
 	static final void method7889(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1390174253) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

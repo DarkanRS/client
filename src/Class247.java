@@ -294,7 +294,7 @@ public class Class247 {
 
 	static final void method4247(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1589162254).name;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1589162254).name;
 	}
 
 	public static boolean method4248(int i_0, int i_1, short s_2) {
@@ -335,16 +335,16 @@ public class Class247 {
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(2105121793)) {
-			String string_5 = attributedefault_4.aString5335;
+			String string_5 = attributedefault_4.typeName;
 			if (i_2 == -1) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_5;
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_5;
 			} else {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(i_2, -1396181317).method4110(i_3, string_5, (byte) 1);
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(i_2, -1396181317).method4110(i_3, string_5, (byte) 1);
 			}
 		} else {
-			int i_6 = attributedefault_4.anInt5337;
+			int i_6 = attributedefault_4.defaultInt;
 			if (i_2 == -1) {
 				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_6;
 			} else {

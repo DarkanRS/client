@@ -55,7 +55,7 @@ public abstract class Class149 {
 	}
 
 	static final void method2566(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 72)) {
 			if (string_2.length() > 20) {
 				client.aByte7458 = -4;

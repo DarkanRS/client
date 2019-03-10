@@ -95,14 +95,14 @@ public class Class232 implements Interface17 {
 			Class109_Sub1.anInt9384 = (int) ((float) Class521_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.anInt9384 - Class521_Sub1_Sub2.anInt9461));
 			Class246.anInt3029 = (int) ((float) (Class246.anInt3029 - Class282_Sub15_Sub1.anInt9575) * f_6 + (float) Class282_Sub15_Sub1.anInt9575);
 			Class293.anInt3512 = (int) ((float) ClipMap.anInt3968 + f_6 * (float) (Class293.anInt3512 - ClipMap.anInt3968));
-			int i_7 = AnimationDefinitions.anInt5930 - ItemDefaultsLoader.anInt5029;
+			int i_7 = AnimationDefinitions.anInt5930 - ParamDefinitionsLoader.anInt5029;
 			if (i_7 > 8192) {
 				i_7 -= 16384;
 			} else if (i_7 < -8192) {
 				i_7 += 16384;
 			}
 
-			AnimationDefinitions.anInt5930 = (int) ((float) ItemDefaultsLoader.anInt5029 + f_6 * (float) i_7);
+			AnimationDefinitions.anInt5930 = (int) ((float) ParamDefinitionsLoader.anInt5029 + f_6 * (float) i_7);
 			AnimationDefinitions.anInt5930 &= 0x3fff;
 		}
 

@@ -19,7 +19,7 @@ public class Class275 {
 	}
 
 	static final void method4889(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		int i_3 = 0;
 		if (Class115.method1950(string_2, -1586612370)) {
 			i_3 = Class328.parseInt(string_2, 1827486792);

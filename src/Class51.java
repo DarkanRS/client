@@ -150,7 +150,7 @@ public class Class51 implements Interface2 {
 
 	static void method1068(CS2Script cs2script_0, int i_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr = 0;
-		cs2executor_2.anInt7000 = 0;
+		cs2executor_2.stringStackPtr = 0;
 		cs2executor_2.instrPtr = -1;
 		cs2executor_2.current = cs2script_0;
 		cs2executor_2.operations = cs2executor_2.current.operations;
@@ -179,12 +179,12 @@ public class Class51 implements Interface2 {
 						cs2executor_2.aBool7022 = false;
 					}
 
-					if (cs2opinfo_4 == CS2OpInfo.aClass522_5959 && cs2executor_2.anInt7002 == 0) {
+					if (cs2opinfo_4 == CS2OpInfo.RETURN && cs2executor_2.anInt7002 == 0) {
 						Shadow.method15509(1969627147);
 						break;
 					}
 
-					Class174.executeOperation(cs2opinfo_4, cs2executor_2, -1241831264);
+					CS2Interpreter.executeOperation(cs2opinfo_4, cs2executor_2);
 				}
 			} catch (Exception exception_8) {
 				StringBuilder stringbuilder_6 = new StringBuilder(30);
@@ -212,7 +212,7 @@ public class Class51 implements Interface2 {
 	}
 
 	static final void method1070(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		boolean bool_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1;
 		Class76.method1360(string_2, bool_3, (byte) 1);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class415.anInt4985;

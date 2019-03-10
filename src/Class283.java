@@ -19,7 +19,7 @@ public class Class283 {
 	}
 
 	static final void method5009(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1962956605) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -30,7 +30,7 @@ public class Class283 {
 
 	static final void method5010(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 17)) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class62.method1262(i_2, string_3, (byte) 55) ? 1 : 0;
 		} else {

@@ -364,11 +364,11 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		cs2executor_0.intStackPtr -= 2;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
 		if (attributedefault_4.method7319(1555289189)) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2, (byte) -99).method6882(i_3, attributedefault_4.aString5335, -1939123518);
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2, (byte) -99).method6882(i_3, attributedefault_4.typeName, -1939123518);
 		} else {
-			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2, (byte) 20).method6876(i_3, attributedefault_4.anInt5337, 1365877231);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2, (byte) 20).method6876(i_3, attributedefault_4.defaultInt, 1365877231);
 		}
 
 	}

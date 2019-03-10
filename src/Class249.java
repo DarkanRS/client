@@ -49,7 +49,7 @@ public class Class249 implements Interface43 {
 	}
 
 	static final void method4278(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class402.method6798(string_2, (short) -15782);
 	}
 

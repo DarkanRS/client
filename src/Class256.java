@@ -81,7 +81,7 @@ public class Class256 {
 		Class187.anInt2359 = -1;
 	}
 
-	static final void method4417(CS2Executor cs2executor_0, int i_1) {
+	static final void method4417(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class9.anInt103;
 	}
 

@@ -101,21 +101,21 @@ public final class Class78 {
 		Class217_Sub1 class217_sub1_3 = ObjectIndexLoader.method7916(i_2, 1517040496);
 		if (class217_sub1_3 != null) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_3.anInt2700;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class217_sub1_3.aString7977;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class217_sub1_3.aString7977;
 			Class213 class213_4 = class217_sub1_3.method13055((short) -22599);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class213_4.anInt2680;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class213_4.aString2679;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class213_4.aString2679;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_3.anInt2701;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_3.anInt7978;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class217_sub1_3.aString7976;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class217_sub1_3.aString7976;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

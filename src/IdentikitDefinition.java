@@ -192,7 +192,7 @@ public class IdentikitDefinition implements Definition {
 	}
 
 	static final void method910(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 513538858) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

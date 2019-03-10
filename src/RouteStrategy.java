@@ -42,8 +42,8 @@ public abstract class RouteStrategy {
 	}
 
 	static final void method3793(CS2Executor cs2executor_0, byte b_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2.toLowerCase();
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2.toLowerCase();
 	}
 
 	public static final void method3794(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5, byte b_6) {

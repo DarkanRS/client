@@ -73,15 +73,15 @@ public class Class182 {
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1029070809);
 		if (i_3 >= 1 && i_3 <= 5 && itemdefinitions_4.groundOptions[i_3 - 1] != null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = itemdefinitions_4.groundOptions[i_3 - 1];
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = itemdefinitions_4.groundOptions[i_3 - 1];
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}
 
 	static final void method3043(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass282_Sub4_7011.method12098((String) cs2executor_0.objectStack[--cs2executor_0.anInt7000], 1952889687);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass282_Sub4_7011.method12098((String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr], 1952889687);
 	}
 
 	public static String method3044(String string_0, int i_1) {

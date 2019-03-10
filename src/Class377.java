@@ -134,12 +134,12 @@ public class Class377 implements IndexLoader {
 	}
 
 	static final void method6400(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.anInt7000 -= 2;
+		cs2executor_0.stringStackPtr -= 2;
 		cs2executor_0.intStackPtr -= 2;
-		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
-		String string_5 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+		String string_5 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1];
 		Class96_Sub19.method14666(string_2, i_3 == 1, i_4, string_5, 720350555);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class415.anInt4985;
 	}

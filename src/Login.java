@@ -70,13 +70,13 @@ public class Login {
 		this.aBool3386 = bool_1;
 	}
 
-	static void method5016(CS2Executor cs2executor_0, int i_1) {
+	static void method5016(CS2Executor cs2executor_0) {
 		QuestDefinitions questdefinitions_2 = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1396181317);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = questdefinitions_2.anIntArray2968 == null ? 0 : questdefinitions_2.anIntArray2968.length;
 	}
 
 	static final void method5017(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, -305873852) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

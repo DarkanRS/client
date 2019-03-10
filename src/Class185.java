@@ -117,7 +117,7 @@ public class Class185 {
 	}
 
 	static final void method3078(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 198501911) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -133,7 +133,7 @@ public class Class185 {
 		client.aBool7175 = false;
 	}
 
-	static final void method3080(CS2Executor cs2executor_0, byte b_1) {
+	static final void method3080(CS2Executor cs2executor_0) {
 		ClassSomet underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;

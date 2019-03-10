@@ -46,7 +46,7 @@ public class Class236 {
 
 	}
 
-	static final void method3984(CS2Executor cs2executor_0, int i_1) {
+	static final void method3984(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class101.method1776(i_2, false, 610483852);
 	}

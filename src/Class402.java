@@ -38,7 +38,7 @@ public class Class402 {
 
 	}
 
-	static final void method6799(CS2Executor cs2executor_0, byte b_1) {
+	static final void method6799(CS2Executor cs2executor_0) {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7149;
 	}
 

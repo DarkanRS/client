@@ -74,7 +74,7 @@ public class Class93 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1336;
 	}
 
-	static final void method1572(CS2Executor cs2executor_0, byte b_1) {
+	static final void method1572(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.preferences.textures.method7785(i_2, -398594048);
 	}

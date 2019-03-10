@@ -42,7 +42,7 @@ public class Class275_Sub4 extends Class275 {
 
 	}
 
-	static final void method12586(CS2Executor cs2executor_0, short s_1) {
+	static final void method12586(CS2Executor cs2executor_0) {
 		cs2executor_0.intStackPtr -= 3;
 		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];

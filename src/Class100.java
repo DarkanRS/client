@@ -46,13 +46,13 @@ public class Class100 {
 	}
 
 	static final void method1641(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		Class404.method6809(string_2, i_3, 1250092294);
 	}
 
 	static final void method1642(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1421907667) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}

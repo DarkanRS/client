@@ -119,7 +119,7 @@ public class Class215 implements Interface17 {
 	}
 
 	static final void method3672(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, short s_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 394644224) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -134,15 +134,15 @@ public class Class215 implements Interface17 {
 		int i_8 = -1;
 		String string_9 = null;
 		if (i_2 != -1) {
-			AttributeDefault attributedefault_10 = IndexLoaders.ITEM_DEFAULTS.method7069(i_2, (byte) 0);
+			ParamDefinitions attributedefault_10 = IndexLoaders.ITEM_DEFAULTS.method7069(i_2, (byte) 0);
 			if (attributedefault_10 == null || attributedefault_10.method7319(1591846177) != bool_5) {
 				return;
 			}
 
 			if (attributedefault_10.method7319(1882298499)) {
-				string_9 = attributedefault_10.aString5335;
+				string_9 = attributedefault_10.typeName;
 			} else {
-				i_8 = attributedefault_10.anInt5337;
+				i_8 = attributedefault_10.defaultInt;
 			}
 		}
 

@@ -14,7 +14,7 @@ public class Class391 {
 			str_4 = chatline_3.clan;
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_4;
 	}
 
 	static final void method6734(CS2Executor cs2executor_0, int i_1) {

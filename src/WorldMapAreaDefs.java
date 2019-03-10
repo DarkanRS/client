@@ -297,8 +297,8 @@ public class WorldMapAreaDefs {
 				}
 
 				if (client.aBool7344 && !bool_1) {
-					AttributeDefault attributedefault_10 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
-					if ((Class506.anInt5858 & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.anInt9319, attributedefault_10.anInt5337, 130038001) != attributedefault_10.anInt5337)) {
+					ParamDefinitions attributedefault_10 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
+					if ((Class506.anInt5858 & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.anInt9319, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
 						PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960, 619010179) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1728725165);
 					}
 				}

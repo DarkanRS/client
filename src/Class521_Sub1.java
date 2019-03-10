@@ -150,7 +150,7 @@ public abstract class Class521_Sub1 extends Class521 {
 	static final void getIComponentText(CS2Executor cs2executor_0, int i_1) {
 		int component = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(component, (byte) 107);
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = icomponentdefinitions_3.aString1391;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = icomponentdefinitions_3.aString1391;
 	}
 
 }

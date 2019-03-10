@@ -894,7 +894,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	static final void method4772(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1550392426) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
@@ -924,7 +924,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			string_2 = "";
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2;
 	}
 
 	static final void method4775(CS2Executor cs2executor_0, int i_1) {

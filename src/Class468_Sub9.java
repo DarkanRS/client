@@ -51,7 +51,7 @@ public class Class468_Sub9 extends Preference {
 
 	static final void method12689(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -2116649195).aString9744;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -2116649195).aString9744;
 	}
 
 }

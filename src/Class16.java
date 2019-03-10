@@ -136,7 +136,7 @@ public class Class16 {
 			str_4 = chatline_3.nameSimple;
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = str_4;
 	}
 
 	public static void method566(int i_0) {

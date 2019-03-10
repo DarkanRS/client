@@ -135,7 +135,7 @@ public final class IterableNodeMap implements Iterable {
 			string_2 = "";
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2;
 	}
 
 	static final void method7772(Class282_Sub31 class282_sub31_0, boolean bool_1, int i_2) {

@@ -45,7 +45,7 @@ public class Class192 implements Interface9 {
 	public void method32() {
 	}
 
-	static final void method3169(CS2Executor cs2executor_0, int i_1) {
+	static final void method3169(CS2Executor cs2executor_0) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass282_Sub4_7011.aClass57Array7499[i_2].anInt526;
 	}

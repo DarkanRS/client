@@ -125,9 +125,9 @@ public class Class225_Sub5 extends RouteStrategy {
 
 	static final void method13044(CS2Executor cs2executor_0, int i_1) {
 		if (client.aString7359 != null) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7359;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aString7359;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

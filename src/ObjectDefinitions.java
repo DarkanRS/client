@@ -853,9 +853,9 @@ public class ObjectDefinitions {
 	static final void method8019(CS2Executor cs2executor_0, short s_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		if (client.anInt7434 != 0 && i_2 < client.anInt7373) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aClass10Array7456[i_2].aString115;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = client.aClass10Array7456[i_2].aString115;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

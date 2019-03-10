@@ -905,7 +905,7 @@ public class ClipMap {
 	}
 
 	static final void method6006(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		Class493.sendCheckEmailPacket(string_2, (byte) -74);
 	}
 

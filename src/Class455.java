@@ -4,8 +4,8 @@ public abstract class Class455 {
 
 	static void method7553(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
 		if (client.aBool7344) {
-			AttributeDefault attributedefault_4 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
-			if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.anInt5858 & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.anInt9319, attributedefault_4.anInt5337, 1315662275) != attributedefault_4.anInt5337)) {
+			ParamDefinitions attributedefault_4 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
+			if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.anInt5858 & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.anInt9319, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
 				PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.aString1369, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1704442537);
 			}
 		}
@@ -90,14 +90,14 @@ public abstract class Class455 {
 
 	}
 
-	static final void method7556(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.anInt7000 -= 2;
-		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
-		String string_3 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+	static final void method7556(CS2Executor cs2executor_0) {
+		cs2executor_0.stringStackPtr -= 2;
+		String string_2 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr];
+		String string_3 = (String) cs2executor_0.stringStack[cs2executor_0.stringStackPtr + 1];
 		if (cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1) {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_2;
 		} else {
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_3;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_3;
 		}
 
 	}

@@ -245,8 +245,8 @@ public final class client extends Engine {
 	static int anInt7368;
 	static int[] anIntArray7387;
 	static int anInt7388;
-	static int[] anIntArray7222;
-	static int anInt7390;
+	static int[] CLAN_VAR_KEYS;
+	static int CLAN_VAR_COUNTER;
 	public static int anInt7391;
 	static int anInt7386;
 	static int anInt7179;
@@ -472,8 +472,8 @@ public final class client extends Engine {
 		anInt7368 = 0;
 		anIntArray7387 = new int[32];
 		anInt7388 = 0;
-		anIntArray7222 = new int[32];
-		anInt7390 = 0;
+		CLAN_VAR_KEYS = new int[32];
+		CLAN_VAR_COUNTER = 0;
 		anInt7391 = 0;
 		anInt7386 = 0;
 		anInt7179 = 0;
@@ -2460,10 +2460,10 @@ public final class client extends Engine {
 								icomponentdefinitions_12.anInt1445 = anInt7384;
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1407 != null && anInt7390 > icomponentdefinitions_12.anInt1448) {
-								if (icomponentdefinitions_12.anIntArray1408 != null && anInt7390 - icomponentdefinitions_12.anInt1448 <= 32) {
-									label849: for (i_24 = icomponentdefinitions_12.anInt1448; i_24 < anInt7390; i_24++) {
-										i_25 = anIntArray7222[i_24 & 0x1f];
+							if (icomponentdefinitions_12.anObjectArray1407 != null && CLAN_VAR_COUNTER > icomponentdefinitions_12.anInt1448) {
+								if (icomponentdefinitions_12.anIntArray1408 != null && CLAN_VAR_COUNTER - icomponentdefinitions_12.anInt1448 <= 32) {
+									label849: for (i_24 = icomponentdefinitions_12.anInt1448; i_24 < CLAN_VAR_COUNTER; i_24++) {
+										i_25 = CLAN_VAR_KEYS[i_24 & 0x1f];
 
 										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1408.length; i_26++) {
 											if (i_25 == icomponentdefinitions_12.anIntArray1408[i_26]) {
@@ -2482,7 +2482,7 @@ public final class client extends Engine {
 									aClass482_7402.append(hookrequest_53, -715862270);
 								}
 
-								icomponentdefinitions_12.anInt1448 = anInt7390;
+								icomponentdefinitions_12.anInt1448 = CLAN_VAR_COUNTER;
 							}
 
 							if (anInt7391 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1413 != null) {

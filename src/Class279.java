@@ -27,11 +27,11 @@ public class Class279 {
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		EnumDefinitions enumdefinitions_4 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_2, (byte) 8);
 		char var_10000 = enumdefinitions_4.aChar5140;
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = enumdefinitions_4.getStringValue(i_3, 1017509768);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = enumdefinitions_4.getStringValue(i_3, 1017509768);
 	}
 
 	static final void method4967(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class225_Sub5.method13045(Class302.method5363(cs2executor_0.intStack[--cs2executor_0.intStackPtr], 126882752), Class223.CURRENT_LANGUAGE.method243((byte) 1), -912746201);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = Class225_Sub5.method13045(Class302.method5363(cs2executor_0.intStack[--cs2executor_0.intStackPtr], 126882752), Class223.CURRENT_LANGUAGE.method243((byte) 1), -912746201);
 	}
 
 	static final void method4968(CS2Executor cs2executor_0, int i_1) {

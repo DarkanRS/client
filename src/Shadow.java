@@ -70,7 +70,7 @@ public abstract class Shadow extends CacheableNode {
 	}
 
 	static final void method15513(CS2Executor cs2executor_0, int i_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = method15508(-1026148530).toString();
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = method15508(-1026148530).toString();
 	}
 
 	static final void method15514(CS2Executor cs2executor_0, int i_1) {

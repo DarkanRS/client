@@ -11,7 +11,7 @@ public class Class540 {
 	}
 
 	static void method11592(CS2Executor cs2executor_0, byte b_1) {
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).aStringArray2975[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]];
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).aStringArray2975[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]];
 		cs2executor_0.intStackPtr -= 2;
 	}
 
@@ -23,7 +23,7 @@ public class Class540 {
 	}
 
 	static final void method11594(CS2Executor cs2executor_0, int i_1) {
-		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		String string_2 = (String) cs2executor_0.stringStack[--cs2executor_0.stringStackPtr];
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4579, client.aClass184_7218.isaac, 1692651039);
 		tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_2));
 		tcpmessage_3.buffer.writeString(string_2);

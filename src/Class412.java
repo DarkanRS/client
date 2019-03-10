@@ -22,7 +22,7 @@ public class Class412 {
 	}
 
 	static final void method6935(CS2Executor cs2executor_0, int i_1) {
-		--cs2executor_0.anInt7000;
+		--cs2executor_0.stringStackPtr;
 	}
 
 }

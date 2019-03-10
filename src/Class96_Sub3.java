@@ -33,9 +33,9 @@ public class Class96_Sub3 extends Class96 {
 
 	static final void method13785(CS2Executor cs2executor_0, int i_1) {
 		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
-		cs2executor_0.anInt7000 -= i_2;
-		String string_3 = Class377.method6398(cs2executor_0.objectStack, cs2executor_0.anInt7000, i_2, 2084790838);
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_3;
+		cs2executor_0.stringStackPtr -= i_2;
+		String string_3 = Class377.method6398(cs2executor_0.stringStack, cs2executor_0.stringStackPtr, i_2, 2084790838);
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = string_3;
 	}
 
 	static void method13786(int i_0, int i_1, int i_2, int i_3, byte b_4) {

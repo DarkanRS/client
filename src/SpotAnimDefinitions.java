@@ -215,22 +215,22 @@ public class SpotAnimDefinitions {
 		if (class217_sub1_2 != null) {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt7975;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt2700;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class217_sub1_2.aString7977;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class217_sub1_2.aString7977;
 			Class213 class213_3 = class217_sub1_2.method13055((short) -24683);
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class213_3.anInt2680;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class213_3.aString2679;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class213_3.aString2679;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt2701;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class217_sub1_2.anInt7978;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class217_sub1_2.aString7976;
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class217_sub1_2.aString7976;
 		} else {
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
-			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 		}
 
 	}

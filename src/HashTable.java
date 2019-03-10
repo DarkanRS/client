@@ -93,7 +93,7 @@ public final class HashTable {
 	}
 
 	static final void method7547(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aString1348 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		icomponentdefinitions_0.aString1348 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 
 }

@@ -26,8 +26,8 @@ final class Class82 implements Interface11 {
 		cs2executor_2.intStackPtr -= 2;
 		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		AttributeDefault attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
-		if (i_5 != attributedefault_6.anInt5337) {
+		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
+		if (i_5 != attributedefault_6.defaultInt) {
 			icomponentdefinitions_0.method1999(i_4, i_5, 146446242);
 		} else {
 			icomponentdefinitions_0.method1995(i_4, -1265527536);

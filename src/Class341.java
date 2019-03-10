@@ -33,7 +33,7 @@ public class Class341 {
 			}
 
 			if (class282_sub50_sub6_2.aString9534 != null) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class282_sub50_sub6_2.aString9534;
+				cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = class282_sub50_sub6_2.aString9534;
 				return;
 			}
 
@@ -42,7 +42,7 @@ public class Class341 {
 			}
 		}
 
-		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+		cs2executor_0.stringStack[++cs2executor_0.stringStackPtr - 1] = "";
 	}
 
 	static void method6074(String[] arr_0, int i_1) {

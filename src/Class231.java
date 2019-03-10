@@ -48,7 +48,7 @@ public class Class231 {
 
 	static void method3914(int i_0, String string_1, boolean bool_2, byte b_3) {
 		Class28.method772((byte) 14);
-		AttributeDefault.method7323((byte) -45);
+		ParamDefinitions.method7323((byte) -45);
 		Class250.method4297(620530459);
 		Class282_Sub17_Sub1.method15402(i_0, string_1, bool_2, 1568129445);
 		Class487.aClass378_5752.method6433(-1648322777);
