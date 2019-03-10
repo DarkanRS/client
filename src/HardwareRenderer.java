@@ -1867,7 +1867,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		float f_7 = (float) Math.sqrt((double) (f_6 * f_6 + f_5 * f_5 + f_4 * f_4));
 		this.anInt9011 = (int) (f_4 * 65535.0F / f_7);
 		this.anInt8988 = (int) (65535.0F * f_5 / f_7);
-		this.anInt9007 = (int) (f_6 * 65535.0F / f_7) ;
+		this.anInt9007 = (int) (f_6 * 65535.0F / f_7);
 	}
 
 	public void method8547(int i_1, Class282_Sub24[] arr_2) {
@@ -6866,7 +6866,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		float f_7 = (float) Math.sqrt((double) (f_6 * f_6 + f_5 * f_5 + f_4 * f_4));
 		this.anInt9011 = (int) (f_4 * 65535.0F / f_7);
 		this.anInt8988 = (int) (65535.0F * f_5 / f_7);
-		this.anInt9007 = (int) (f_6 * 65535.0F / f_7) ;
+		this.anInt9007 = (int) (f_6 * 65535.0F / f_7);
 	}
 
 	public void iq(int i_1) {
@@ -7236,14 +7236,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8615(int i_1, Class90 class90_2) {
 		Class185 class185_3 = this.method14370(Thread.currentThread());
-		class185_3.anInt2306 =i_1;
+		class185_3.anInt2306 = i_1;
 		class185_3.anInt2307 = class90_2.color;
 		class185_3.anInt2313 = class90_2.scale;
 	}
 
 	public void method8616(int i_1, Class90 class90_2) {
 		Class185 class185_3 = this.method14370(Thread.currentThread());
-		class185_3.anInt2306 =i_1;
+		class185_3.anInt2306 = i_1;
 		class185_3.anInt2307 = class90_2.color;
 		class185_3.anInt2313 = class90_2.scale;
 	}

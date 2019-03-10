@@ -1,6 +1,6 @@
 public class Class318 {
 
-    Class318() throws Throwable {
-        throw new Error();
-    }
+	Class318() throws Throwable {
+		throw new Error();
+	}
 }

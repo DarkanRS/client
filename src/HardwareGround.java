@@ -2084,7 +2084,7 @@ public class HardwareGround extends Ground {
 							case 4:
 							case 8:
 							case 9:
-								//render shaders/ripples water
+								// render shaders/ripples water
 								if (!this.aClass505_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
 									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aClass505_Sub2_8528.aClass41_Sub1_Sub1_8691;
 									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);

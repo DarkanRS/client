@@ -4400,7 +4400,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 		int i_11 = i_7 + this.anInt8943;
 		if (i_1 != 1 && i_1 != 2 && i_1 != 3 && i_1 != 5 || i_8 >= 0 && i_9 + class390_3.tileUnits >> class390_3.tileScale < class390_3.width && i_10 >= 0 && i_11 + class390_3.tileUnits >> class390_3.tileScale < class390_3.length) {
 			if (i_1 != 4 && i_1 != 5) {
-				i_8 >>= class390_3.tileScale ;
+				i_8 >>= class390_3.tileScale;
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;

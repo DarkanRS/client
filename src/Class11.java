@@ -1,63 +1,63 @@
 public class Class11 {
 
-    static Class109 aClass109_121;
+	static Class109 aClass109_121;
 
-    public static int anInt122;
+	public static int anInt122;
 
-    static int anInt123;
+	static int anInt123;
 
-    public static SystemInfo SYSTEM_INFO;
+	public static SystemInfo SYSTEM_INFO;
 
-    Class11() throws Throwable {
-        throw new Error();
-    }
+	Class11() throws Throwable {
+		throw new Error();
+	}
 
-    public static final void method469(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
-        Class96_Sub13.anInt9368 = i_0;
-        OutgoingLoginPacket.anInt4280 = i_1;
-        Class121.anInt1527 = i_2;
-        LinkedNodeList.anInt5606 = i_3;
-        Class501.anInt5828 = i_4;
-        if (Class501.anInt5828 >= 100) {
-            int i_6 = Class96_Sub13.anInt9368 * 512 + 256;
-            int i_7 = OutgoingLoginPacket.anInt4280 * 512 + 256;
-            int i_8 = Class504.method8389(i_6, i_7, Class4.anInt35, (byte) 25) - Class121.anInt1527;
-            int i_9 = i_6 - Class31.anInt361;
-            int i_10 = i_8 - Class109_Sub1.anInt9384;
-            int i_11 = i_7 - Class246.anInt3029;
-            int i_12 = (int) Math.sqrt((double) (i_9 * i_9 + i_11 * i_11));
-            Class293.anInt3512 = (int) (Math.atan2((double) i_10, (double) i_12) * 2607.5945876176133D) & 0x3fff;
-            AnimationDefinitions.anInt5930 = (int) (Math.atan2((double) i_9, (double) i_11) * -2607.5945876176133D) & 0x3fff;
-            Class121.anInt1525 = 0;
-            if (Class293.anInt3512 < 1024) {
-                Class293.anInt3512 = 1024;
-            }
-            if (Class293.anInt3512 > 3072) {
-                Class293.anInt3512 = 3072;
-            }
-        }
-        NativeLibraryLoader.anInt3240 = 5;
-        Class86.anInt833 = -1;
-        Class508.anInt5864 = -1;
-    }
+	public static final void method469(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+		Class96_Sub13.anInt9368 = i_0;
+		OutgoingLoginPacket.anInt4280 = i_1;
+		Class121.anInt1527 = i_2;
+		LinkedNodeList.anInt5606 = i_3;
+		Class501.anInt5828 = i_4;
+		if (Class501.anInt5828 >= 100) {
+			int i_6 = Class96_Sub13.anInt9368 * 512 + 256;
+			int i_7 = OutgoingLoginPacket.anInt4280 * 512 + 256;
+			int i_8 = Class504.method8389(i_6, i_7, Class4.anInt35, (byte) 25) - Class121.anInt1527;
+			int i_9 = i_6 - Class31.anInt361;
+			int i_10 = i_8 - Class109_Sub1.anInt9384;
+			int i_11 = i_7 - Class246.anInt3029;
+			int i_12 = (int) Math.sqrt((double) (i_9 * i_9 + i_11 * i_11));
+			Class293.anInt3512 = (int) (Math.atan2((double) i_10, (double) i_12) * 2607.5945876176133D) & 0x3fff;
+			AnimationDefinitions.anInt5930 = (int) (Math.atan2((double) i_9, (double) i_11) * -2607.5945876176133D) & 0x3fff;
+			Class121.anInt1525 = 0;
+			if (Class293.anInt3512 < 1024) {
+				Class293.anInt3512 = 1024;
+			}
+			if (Class293.anInt3512 > 3072) {
+				Class293.anInt3512 = 3072;
+			}
+		}
+		NativeLibraryLoader.anInt3240 = 5;
+		Class86.anInt833 = -1;
+		Class508.anInt5864 = -1;
+	}
 
-    public static char getChar(byte b_0, int i_1) {
-        int i_2 = b_0 & 0xff;
-        if (i_2 == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(i_2, 16));
-        } else {
-            if (i_2 >= 128 && i_2 < 160) {
-                char var_3 = Class490.aCharArray5766[i_2 - 128];
-                if (var_3 == 0) {
-                    var_3 = 63;
-                }
-                i_2 = var_3;
-            }
-            return (char) i_2;
-        }
-    }
+	public static char getChar(byte b_0, int i_1) {
+		int i_2 = b_0 & 0xff;
+		if (i_2 == 0) {
+			throw new IllegalArgumentException("" + Integer.toString(i_2, 16));
+		} else {
+			if (i_2 >= 128 && i_2 < 160) {
+				char var_3 = Class490.aCharArray5766[i_2 - 128];
+				if (var_3 == 0) {
+					var_3 = 63;
+				}
+				i_2 = var_3;
+			}
+			return (char) i_2;
+		}
+	}
 
-    public static void method13400(Index index_0, int i_1, int i_2, int i_3, boolean bool_4, byte b_5) {
-        Class271.method4827(index_0, i_1, i_2, i_3, bool_4, 0L);
-    }
+	public static void method13400(Index index_0, int i_1, int i_2, int i_3, boolean bool_4, byte b_5) {
+		Class271.method4827(index_0, i_1, i_2, i_3, bool_4, 0L);
+	}
 }
