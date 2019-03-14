@@ -221,8 +221,8 @@ public class Class346 {
 		Class9.aClass184_73 = client.aClass184_7218;
 		if (client.aByteArray7152 != null) {
 			RsByteBuffer rsbytebuffer_1 = new RsByteBuffer(client.aByteArray7152);
-			Class9.aLong77 = rsbytebuffer_1.readLong(1238599154);
-			Class9.aLong86 = rsbytebuffer_1.readLong(169037294);
+			Class9.aLong77 = rsbytebuffer_1.readLong();
+			Class9.aLong86 = rsbytebuffer_1.readLong();
 		}
 		if (Class9.aLong77 < 0L) {
 			Class8_Sub1.method13784(35, 776111623);

@@ -9,7 +9,7 @@ public class Class282_Sub11_Sub2 extends Class282_Sub11 {
 		rsbytebuffer_1.readUnsignedByte();
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			rsbytebuffer_1.readLong(1174596283);
+			rsbytebuffer_1.readLong();
 		}
 
 	}
@@ -19,16 +19,16 @@ public class Class282_Sub11_Sub2 extends Class282_Sub11 {
 		rsbytebuffer_1.readUnsignedByte();
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			--rsbytebuffer_1.index;
-			rsbytebuffer_1.readLong(743164989);
+			rsbytebuffer_1.readLong();
 		}
 
 	}
 
-	void method12204(Class282_Sub4 class282_sub4_1, int i_2) {
+	void method12204(ClanChannel class282_sub4_1, int i_2) {
 		class282_sub4_1.method12096(this.anInt10002, (byte) 2);
 	}
 
-	void method12205(Class282_Sub4 class282_sub4_1) {
+	void method12205(ClanChannel class282_sub4_1) {
 		class282_sub4_1.method12096(1942169437 * this.anInt10002 * -1617468171, (byte) 2);
 	}
 
@@ -37,7 +37,7 @@ public class Class282_Sub11_Sub2 extends Class282_Sub11 {
 		rsbytebuffer_1.readUnsignedByte();
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			rsbytebuffer_1.readLong(1586533216);
+			rsbytebuffer_1.readLong();
 		}
 
 	}
@@ -52,7 +52,7 @@ public class Class282_Sub11_Sub2 extends Class282_Sub11 {
 		rsbytebuffer_1.readUnsignedByte();
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			rsbytebuffer_1.readLong(360836285);
+			rsbytebuffer_1.readLong();
 		}
 
 	}

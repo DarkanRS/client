@@ -484,7 +484,7 @@ public class Class61 {
 				}
 				for (i_5 = 0; i_5 < this.anInt632; i_5++) {
 					if (this.aBool618) {
-						this.aLongArray630[i_5] = rsbytebuffer_1.readLong(1657847296);
+						this.aLongArray630[i_5] = rsbytebuffer_1.readLong();
 					}
 					if (this.aBool620) {
 						this.aStringArray639[i_5] = rsbytebuffer_1.readNullString();
@@ -510,7 +510,7 @@ public class Class61 {
 				}
 				for (i_5 = 0; i_5 < this.anInt641; i_5++) {
 					if (this.aBool618) {
-						this.aLongArray638[i_5] = rsbytebuffer_1.readLong(612955628);
+						this.aLongArray638[i_5] = rsbytebuffer_1.readLong();
 					}
 					if (this.aBool620) {
 						this.aStringArray617[i_5] = rsbytebuffer_1.readNullString();
@@ -529,7 +529,7 @@ public class Class61 {
 							int i_9 = rsbytebuffer_1.readInt();
 							this.aClass465_629.put(new Class282_Sub38(i_9), (long) i_7);
 						} else if (i_8 == 1) {
-							long long_11 = rsbytebuffer_1.readLong(1934711036);
+							long long_11 = rsbytebuffer_1.readLong();
 							this.aClass465_629.put(new Class282_Sub45(long_11), (long) i_7);
 						} else if (i_8 == 2) {
 							String string_13 = rsbytebuffer_1.readString();

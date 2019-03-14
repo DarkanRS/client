@@ -3822,7 +3822,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method13410(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.anInt7503;
+		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.numPlayers;
 	}
 
 	static final void method12925(CS2Executor executor) {
@@ -4762,7 +4762,7 @@ public class CS2Interpreter {
 
 	static final void method3169(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.aClass57Array7499[i_2].anInt526;
+		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.players[i_2].world;
 	}
 
 	static final void method4161(CS2Executor executor) {
@@ -4775,7 +4775,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14644(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.aByte7497;
+		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.minRankToKick;
 	}
 
 	static final void method12586(CS2Executor executor) {
@@ -6030,9 +6030,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method13046(CS2Executor executor) {
-		if (Class113.aClass282_Sub4_1235 != null) {
+		if (Class113.CLAN_CHANNEL != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aClass282_Sub4_7011 = Class113.aClass282_Sub4_1235;
+			executor.aClass282_Sub4_7011 = Class113.CLAN_CHANNEL;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -6158,7 +6158,7 @@ public class CS2Interpreter {
 
 	static final void method4968(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class468_Sub19.method12790(executor.aClass282_Sub4_7011 == Class113.aClass282_Sub4_1235, i_2, -128209044);
+		Class468_Sub19.method12790(executor.aClass282_Sub4_7011 == Class113.CLAN_CHANNEL, i_2, -128209044);
 	}
 
 	static final void method4970(CS2Executor executor) {
@@ -7324,9 +7324,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method1501(CS2Executor executor) {
-		if (Class202_Sub1.aClass282_Sub4_8186 != null) {
+		if (Class202_Sub1.GUEST_CLAN_CHANNEL != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aClass282_Sub4_7011 = Class202_Sub1.aClass282_Sub4_8186;
+			executor.aClass282_Sub4_7011 = Class202_Sub1.GUEST_CLAN_CHANNEL;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -8229,7 +8229,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3021(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.aByte7504;
+		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.guestsTalk;
 	}
 
 	static final void method7675(CS2Executor executor) {
@@ -8287,7 +8287,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method811(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass282_Sub4_7011.aString7501;
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass282_Sub4_7011.clanName;
 	}
 
 	static final void method814(CS2Executor executor) {
@@ -9466,7 +9466,7 @@ public class CS2Interpreter {
 
 	static final void method6677(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.aClass57Array7499[i_2].aByte525;
+		executor.intStack[++executor.intStackPtr - 1] = executor.aClass282_Sub4_7011.players[i_2].rank;
 	}
 
 	static final void method6678(CS2Executor executor) {
@@ -9845,7 +9845,7 @@ public class CS2Interpreter {
 
 	static final void method1979(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass282_Sub4_7011.aClass57Array7499[i_2].aString524;
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass282_Sub4_7011.players[i_2].name;
 	}
 
 	static final void method7744(CS2Executor executor) {
@@ -10268,7 +10268,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4798(CS2Executor executor) {
-		Class282_Sub4.method12114(executor.intStack[--executor.intStackPtr], 917416551);
+		ClanChannel.method12114(executor.intStack[--executor.intStackPtr], 917416551);
 	}
 
 	static final void method4801(CS2Executor executor) {

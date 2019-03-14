@@ -7,7 +7,7 @@ public class Class348 {
 	NodeCollection aClass482_4062 = new NodeCollection();
 
 	void method6171(RsByteBuffer rsbytebuffer_1, byte b_2) {
-		this.aLong4073 = rsbytebuffer_1.readLong(1262555059);
+		this.aLong4073 = rsbytebuffer_1.readLong();
 		this.anInt4060 = rsbytebuffer_1.readInt();
 		for (int i_3 = rsbytebuffer_1.readUnsignedByte(); i_3 != 0; i_3 = rsbytebuffer_1.readUnsignedByte()) {
 			Object obj_4;

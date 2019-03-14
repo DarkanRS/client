@@ -14,7 +14,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		this.anInt10061 = rsbytebuffer_1.readUnsignedShort() * -800503111 * -1538155639;
 		this.aByte10062 = rsbytebuffer_1.readByte();
 		this.anInt10063 = rsbytebuffer_1.readUnsignedShort() * 1544248451 * 415027755;
-		rsbytebuffer_1.readLong(1060653483);
+		rsbytebuffer_1.readLong();
 		this.aString10064 = rsbytebuffer_1.readString();
 	}
 
@@ -22,15 +22,15 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		this.anInt10061 = rsbytebuffer_1.readUnsignedShort() * -800503111 * -1538155639;
 		this.aByte10062 = rsbytebuffer_1.readByte();
 		this.anInt10063 = rsbytebuffer_1.readUnsignedShort() * 1544248451 * 415027755;
-		rsbytebuffer_1.readLong(1948051444);
+		rsbytebuffer_1.readLong();
 		this.aString10064 = rsbytebuffer_1.readString();
 	}
 
-	void method12204(Class282_Sub4 class282_sub4_1, int i_2) {
-		Class57 class57_3 = class282_sub4_1.aClass57Array7499[this.anInt10061];
-		class57_3.aByte525 = this.aByte10062;
-		class57_3.anInt526 = this.anInt10063;
-		class57_3.aString524 = this.aString10064;
+	void method12204(ClanChannel class282_sub4_1, int i_2) {
+		ClanChannelPlayer class57_3 = class282_sub4_1.players[this.anInt10061];
+		class57_3.rank = this.aByte10062;
+		class57_3.world = this.anInt10063;
+		class57_3.name = this.aString10064;
 	}
 
 	Class282_Sub11_Sub3(Class349 class349_1) {
@@ -42,7 +42,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		this.anInt10061 = rsbytebuffer_1.readUnsignedShort();
 		this.aByte10062 = rsbytebuffer_1.readByte();
 		this.anInt10063 = rsbytebuffer_1.readUnsignedShort();
-		rsbytebuffer_1.readLong(-3036577);
+		rsbytebuffer_1.readLong();
 		this.aString10064 = rsbytebuffer_1.readString();
 	}
 
@@ -50,15 +50,15 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		this.anInt10061 = rsbytebuffer_1.readUnsignedShort() * -800503111 * -1538155639;
 		this.aByte10062 = rsbytebuffer_1.readByte();
 		this.anInt10063 = rsbytebuffer_1.readUnsignedShort() * 1544248451 * 415027755;
-		rsbytebuffer_1.readLong(270516625);
+		rsbytebuffer_1.readLong();
 		this.aString10064 = rsbytebuffer_1.readString();
 	}
 
-	void method12205(Class282_Sub4 class282_sub4_1) {
-		Class57 class57_2 = class282_sub4_1.aClass57Array7499[this.anInt10061 * -800503111 * -1538155639];
-		class57_2.aByte525 = this.aByte10062;
-		class57_2.anInt526 = -452687215 * this.anInt10063 * 1544248451 * -1097296133;
-		class57_2.aString524 = this.aString10064;
+	void method12205(ClanChannel class282_sub4_1) {
+		ClanChannelPlayer class57_2 = class282_sub4_1.players[this.anInt10061 * -800503111 * -1538155639];
+		class57_2.rank = this.aByte10062;
+		class57_2.world = -452687215 * this.anInt10063 * 1544248451 * -1097296133;
+		class57_2.name = this.aString10064;
 	}
 
 	public static void method15476(GraphicalRenderer graphicalrenderer_0, int i_1) {

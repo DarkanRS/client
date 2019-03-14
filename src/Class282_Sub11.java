@@ -2,9 +2,9 @@ public abstract class Class282_Sub11 extends Node {
 
 	abstract void method12203(RsByteBuffer var1, int var2);
 
-	abstract void method12204(Class282_Sub4 var1, int var2);
+	abstract void method12204(ClanChannel var1, int var2);
 
-	abstract void method12205(Class282_Sub4 var1);
+	abstract void method12205(ClanChannel var1);
 
 	abstract void method12206(RsByteBuffer var1);
 

@@ -48,11 +48,11 @@ public class Class468_Sub19 extends Preference {
 	}
 
 	public static final void method12790(boolean bool_0, int i_1, int i_2) {
-		Class282_Sub4 class282_sub4_3 = bool_0 ? Class113.aClass282_Sub4_1235 : Class202_Sub1.aClass282_Sub4_8186;
-		if (class282_sub4_3 != null && i_1 >= 0 && i_1 < class282_sub4_3.anInt7503) {
-			Class57 class57_4 = class282_sub4_3.aClass57Array7499[i_1];
-			if (class57_4.aByte525 == -1) {
-				String string_5 = class57_4.aString524;
+		ClanChannel class282_sub4_3 = bool_0 ? Class113.CLAN_CHANNEL : Class202_Sub1.GUEST_CLAN_CHANNEL;
+		if (class282_sub4_3 != null && i_1 >= 0 && i_1 < class282_sub4_3.numPlayers) {
+			ClanChannelPlayer class57_4 = class282_sub4_3.players[i_1];
+			if (class57_4.rank == -1) {
+				String string_5 = class57_4.name;
 				Class184 class184_6 = Class468_Sub20.method12807(-1321489648);
 				TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4617, class184_6.isaac, 1070287495);
 				tcpmessage_7.buffer.writeByte(3 + ChatLine.getLength(string_5));

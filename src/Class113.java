@@ -2,7 +2,7 @@ public class Class113 {
 
 	static Class117 aClass117_1234;
 
-	public static Class282_Sub4 aClass282_Sub4_1235;
+	public static ClanChannel CLAN_CHANNEL;
 
 	Class113() throws Throwable {
 		throw new Error();

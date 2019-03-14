@@ -3,7 +3,7 @@ import java.net.Socket;
 
 public class Class202_Sub1 extends Class202 {
 
-	public static Class282_Sub4 aClass282_Sub4_8186;
+	public static ClanChannel GUEST_CLAN_CHANNEL;
 
 	Socket aSocket8184;
 

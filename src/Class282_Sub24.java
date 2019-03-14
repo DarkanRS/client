@@ -46,7 +46,7 @@ public class Class282_Sub24 extends Node {
 
 	public static void method12399(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
 		if (i_0 >= Class532_Sub2_Sub1.anInt7071 && i_0 <= Class532_Sub2_Sub1.anInt7069 && i_2 >= Class532_Sub2_Sub1.anInt7071 && i_2 <= Class532_Sub2_Sub1.anInt7069 && i_4 >= Class532_Sub2_Sub1.anInt7071 && i_4 <= Class532_Sub2_Sub1.anInt7069 && i_6 >= Class532_Sub2_Sub1.anInt7071 && i_6 <= Class532_Sub2_Sub1.anInt7069 && i_1 >= Class532_Sub2_Sub1.anInt7070 && i_1 <= Class532_Sub2_Sub1.anInt7068 && i_3 >= Class532_Sub2_Sub1.anInt7070 && i_3 <= Class532_Sub2_Sub1.anInt7068 && i_5 >= Class532_Sub2_Sub1.anInt7070 && i_5 <= Class532_Sub2_Sub1.anInt7068 && i_7 >= Class532_Sub2_Sub1.anInt7070 && i_7 <= Class532_Sub2_Sub1.anInt7068) {
-			Class282_Sub4.method12117(i_0, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, -907179464);
+			ClanChannel.method12117(i_0, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, -907179464);
 		} else {
 			Engine.method4779(i_0, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, (byte) 16);
 		}

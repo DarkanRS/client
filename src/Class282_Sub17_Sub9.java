@@ -18,7 +18,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			--rsbytebuffer_1.index;
-			this.aLong10046 = rsbytebuffer_1.readLong(190708592);
+			this.aLong10046 = rsbytebuffer_1.readLong();
 		}
 		this.aString10045 = rsbytebuffer_1.readNullString();
 		this.anInt10044 = rsbytebuffer_1.readUnsignedShort();
@@ -31,7 +31,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 	void method12249(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			this.aLong10046 = rsbytebuffer_1.readLong(1103302515) * -3261396651546806203L * 1079166826874198669L;
+			this.aLong10046 = rsbytebuffer_1.readLong() * -3261396651546806203L * 1079166826874198669L;
 		}
 		this.aString10045 = rsbytebuffer_1.readNullString();
 		this.anInt10044 = rsbytebuffer_1.readUnsignedShort() * -643750647 * 881981753;
@@ -40,7 +40,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 	void method12253(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			this.aLong10046 = rsbytebuffer_1.readLong(1812970180) * -3261396651546806203L * 1079166826874198669L;
+			this.aLong10046 = rsbytebuffer_1.readLong() * -3261396651546806203L * 1079166826874198669L;
 		}
 		this.aString10045 = rsbytebuffer_1.readNullString();
 		this.anInt10044 = rsbytebuffer_1.readUnsignedShort() * -643750647 * 881981753;
@@ -69,7 +69,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 	void method12257(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			this.aLong10046 = rsbytebuffer_1.readLong(1495645552) * -3261396651546806203L * 1079166826874198669L;
+			this.aLong10046 = rsbytebuffer_1.readLong() * -3261396651546806203L * 1079166826874198669L;
 		}
 		this.aString10045 = rsbytebuffer_1.readNullString();
 		this.anInt10044 = rsbytebuffer_1.readUnsignedShort() * -643750647 * 881981753;

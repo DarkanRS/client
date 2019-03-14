@@ -90,7 +90,7 @@ public class CS2Script extends CacheableNode {
 				this.longOpValues = new long[i_4];
 			}
 
-			this.longOpValues[i_2] = rsbytebuffer_1.readLong(1461379326);
+			this.longOpValues[i_2] = rsbytebuffer_1.readLong();
 		} else {
 			if (this.intOpValues == null) {
 				this.intOpValues = new int[i_4];

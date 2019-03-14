@@ -5,11 +5,11 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	byte aByte10000;
 	Class349 this$0;
 
-	void method12204(Class282_Sub4 class282_sub4_1, int i_2) {
-		class282_sub4_1.aString7501 = this.aString10001;
+	void method12204(ClanChannel class282_sub4_1, int i_2) {
+		class282_sub4_1.clanName = this.aString10001;
 		if (this.aString10001 != null) {
-			class282_sub4_1.aByte7504 = this.aByte9999;
-			class282_sub4_1.aByte7497 = this.aByte10000;
+			class282_sub4_1.guestsTalk = this.aByte9999;
+			class282_sub4_1.minRankToKick = this.aByte10000;
 		}
 
 	}
@@ -34,11 +34,11 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 
 	}
 
-	void method12205(Class282_Sub4 class282_sub4_1) {
-		class282_sub4_1.aString7501 = this.aString10001;
+	void method12205(ClanChannel class282_sub4_1) {
+		class282_sub4_1.clanName = this.aString10001;
 		if (this.aString10001 != null) {
-			class282_sub4_1.aByte7504 = this.aByte9999;
-			class282_sub4_1.aByte7497 = this.aByte10000;
+			class282_sub4_1.guestsTalk = this.aByte9999;
+			class282_sub4_1.minRankToKick = this.aByte10000;
 		}
 
 	}

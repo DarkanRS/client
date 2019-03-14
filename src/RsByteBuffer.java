@@ -228,7 +228,7 @@ public class RsByteBuffer extends Node {
 		return (this.buffer[this.index - 4] & 0xff) + ((this.buffer[this.index - 3] & 0xff) << 8) + ((this.buffer[this.index - 2] & 0xff) << 16) + ((this.buffer[this.index - 1] & 0xff) << 24);
 	}
 
-	public long readLong(int i_1) {
+	public long readLong() {
 		long long_2 = (long) this.readInt() & 0xffffffffL;
 		long long_4 = (long) this.readInt() & 0xffffffffL;
 		return long_4 + (long_2 << 32);

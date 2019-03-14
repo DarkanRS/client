@@ -9,7 +9,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 	void method12257(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			this.aLong9930 = rsbytebuffer_1.readLong(1688907962) * -7156069632047741567L * -6384031897606374783L;
+			this.aLong9930 = rsbytebuffer_1.readLong() * -7156069632047741567L * -6384031897606374783L;
 		}
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}
@@ -17,7 +17,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			--rsbytebuffer_1.index;
-			this.aLong9930 = rsbytebuffer_1.readLong(1312780753);
+			this.aLong9930 = rsbytebuffer_1.readLong();
 		}
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}
@@ -29,7 +29,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 	void method12249(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			this.aLong9930 = rsbytebuffer_1.readLong(2019975858) * -7156069632047741567L * -6384031897606374783L;
+			this.aLong9930 = rsbytebuffer_1.readLong() * -7156069632047741567L * -6384031897606374783L;
 		}
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}
@@ -41,7 +41,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 	void method12253(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			rsbytebuffer_1.index = (rsbytebuffer_1.index * -1115476867 - -1115476867) * -1990677291;
-			this.aLong9930 = rsbytebuffer_1.readLong(1143481691) * -7156069632047741567L * -6384031897606374783L;
+			this.aLong9930 = rsbytebuffer_1.readLong() * -7156069632047741567L * -6384031897606374783L;
 		}
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}

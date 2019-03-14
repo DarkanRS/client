@@ -503,7 +503,7 @@ public class Class8_Sub3 extends FontRenderer {
 			}
 		} catch (Exception exception_8) {
 			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1387149052);
-			String string_5 = (class184_0.aClass375_2286 != null ? class184_0.aClass375_2286.anInt4512 : -1) + "," + (class184_0.aClass375_2296 != null ? class184_0.aClass375_2296.anInt4512 : -1) + "," + (class184_0.aClass375_2291 != null ? class184_0.aClass375_2291.anInt4512 : -1) + " " + class184_0.anInt2287 + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_4.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_4.y) + " ";
+			String string_5 = (class184_0.aClass375_2286 != null ? class184_0.aClass375_2286.opcode : -1) + "," + (class184_0.aClass375_2296 != null ? class184_0.aClass375_2296.opcode : -1) + "," + (class184_0.aClass375_2291 != null ? class184_0.aClass375_2291.opcode : -1) + " " + class184_0.anInt2287 + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_4.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_4.y) + " ";
 			for (int i_6 = 0; i_6 < class184_0.anInt2287 && i_6 < 50; i_6++) {
 				string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";
 			}

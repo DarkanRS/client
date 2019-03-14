@@ -25,14 +25,14 @@ public class Class404 {
 	}
 
 	public static final void method6811(int i_0, int i_1) {
-		if (Class113.aClass282_Sub4_1235 != null && i_0 >= 0 && i_0 < Class113.aClass282_Sub4_1235.anInt7503) {
-			Class57 class57_2 = Class113.aClass282_Sub4_1235.aClass57Array7499[i_0];
-			if (class57_2.aByte525 == -1) {
+		if (Class113.CLAN_CHANNEL != null && i_0 >= 0 && i_0 < Class113.CLAN_CHANNEL.numPlayers) {
+			ClanChannelPlayer class57_2 = Class113.CLAN_CHANNEL.players[i_0];
+			if (class57_2.rank == -1) {
 				Class184 class184_3 = Class468_Sub20.method12807(2122526956);
 				TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4630, class184_3.isaac, -301971618);
-				tcpmessage_4.buffer.writeByte(2 + ChatLine.getLength(class57_2.aString524));
+				tcpmessage_4.buffer.writeByte(2 + ChatLine.getLength(class57_2.name));
 				tcpmessage_4.buffer.writeShort(i_0, 1417031095);
-				tcpmessage_4.buffer.writeString(class57_2.aString524);
+				tcpmessage_4.buffer.writeString(class57_2.name);
 				class184_3.method3049(tcpmessage_4, 1522960717);
 			}
 		}

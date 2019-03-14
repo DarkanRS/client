@@ -206,8 +206,8 @@ public class Login {
 					Class9.aClass184_73.recievedBuffer.index = 16;
 					Class9.aClass184_73.recievedBuffer.method13100(Class500.anIntArray5827, 1118777738);
 					Class9.aClass184_73.recievedBuffer.index = 0;
-					Class9.aLong77 = Class9.aClass184_73.recievedBuffer.readLong(798642301);
-					Class9.aLong86 = Class9.aClass184_73.recievedBuffer.readLong(1832189608);
+					Class9.aLong77 = Class9.aClass184_73.recievedBuffer.readLong();
+					Class9.aLong86 = Class9.aClass184_73.recievedBuffer.readLong();
 					Class9.loginStage = 80;
 				}
 				RsBitsBuffer rsbitsbuffer_22;
@@ -469,7 +469,7 @@ public class Login {
 							Class84.myPlayer.male = (byte) rsbitsbuffer_19.readUnsignedByte();
 							client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
 							client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
-							Class116.aLong1259 = rsbitsbuffer_19.readLong(1319458246);
+							Class116.aLong1259 = rsbitsbuffer_19.readLong();
 							Class43.aLong420 = Class116.aLong1259 - Class169.time() - rsbitsbuffer_19.read5ByteInteger(-315353616);
 							i_3 = rsbitsbuffer_19.readUnsignedByte();
 							client.aBool7316 = (i_3 & 0x1) != 0;

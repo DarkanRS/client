@@ -6,8 +6,8 @@ public class Class349 {
 	NodeCollection aClass482_4076 = new NodeCollection();
 
 	void method6178(RsByteBuffer rsbytebuffer_1, int i_2) {
-		this.aLong4081 = rsbytebuffer_1.readLong(-33819059);
-		this.aLong4077 = rsbytebuffer_1.readLong(377148964);
+		this.aLong4081 = rsbytebuffer_1.readLong();
+		this.aLong4077 = rsbytebuffer_1.readLong();
 
 		for (int i_3 = rsbytebuffer_1.readUnsignedByte(); i_3 != 0; i_3 = rsbytebuffer_1.readUnsignedByte()) {
 			Object obj_4;
@@ -31,13 +31,13 @@ public class Class349 {
 
 	}
 
-	public void method6179(Class282_Sub4 class282_sub4_1, short s_2) {
-		if (class282_sub4_1.data == this.aLong4081 && class282_sub4_1.aLong7502 == this.aLong4077) {
+	public void method6179(ClanChannel class282_sub4_1, short s_2) {
+		if (class282_sub4_1.data == this.aLong4081 && class282_sub4_1.nextUpdateNumber == this.aLong4077) {
 			for (Class282_Sub11 class282_sub11_3 = (Class282_Sub11) this.aClass482_4076.head((byte) 71); class282_sub11_3 != null; class282_sub11_3 = (Class282_Sub11) this.aClass482_4076.next(2116443073)) {
 				class282_sub11_3.method12204(class282_sub4_1, 43407056);
 			}
 
-			++class282_sub4_1.aLong7502;
+			++class282_sub4_1.nextUpdateNumber;
 		} else {
 			throw new RuntimeException("");
 		}
