@@ -44,7 +44,7 @@ public class IncomingPacket {
 	public static IncomingPacket SET_LOCAL_REGION = new IncomingPacket(41, 3);
 	public static IncomingPacket aClass375_4393 = new IncomingPacket(42, 3);
 	public static IncomingPacket PLAYER_UPDATE = new IncomingPacket(43, -2);
-	public static IncomingPacket aClass375_4395 = new IncomingPacket(44, 10);
+	public static IncomingPacket ICOMPONENT_SPRITE_SCALE = new IncomingPacket(44, 10);
 	public static IncomingPacket aClass375_4440 = new IncomingPacket(45, 0);
 	public static IncomingPacket aClass375_4502 = new IncomingPacket(46, -2);
 	public static IncomingPacket NPC_UPDATE_LARGE = new IncomingPacket(47, -2);
@@ -121,8 +121,8 @@ public class IncomingPacket {
 	public static IncomingPacket CAMERA_ROTATION = new IncomingPacket(118, 4);
 	public static IncomingPacket GLOBAL_STRING_BIG = new IncomingPacket(119, -2);
 	public static IncomingPacket RESET_SOUNDS = new IncomingPacket(120, 0);
-	public static IncomingPacket ICOMPONENT_SETTINGS_LARGE = new IncomingPacket(121, 12);
-	public static IncomingPacket aClass375_4509 = new IncomingPacket(122, 0);
+	public static IncomingPacket ICOMPONENT_SETTINGS_SET = new IncomingPacket(121, 12);
+	public static IncomingPacket RESET_ALL_ANIMATIONS = new IncomingPacket(122, 0);
 	public static IncomingPacket aClass375_4474 = new IncomingPacket(123, 3);
 	public static IncomingPacket ICOMPONENT_TEXT = new IncomingPacket(124, -2);
 	public static IncomingPacket REMOVE_GROUND_ITEM = new IncomingPacket(125, 3);
@@ -145,10 +145,10 @@ public class IncomingPacket {
 	public static IncomingPacket RECIEVE_FRIENDS_CHAT_QUICKCHAT = new IncomingPacket(142, -1);
 	public static IncomingPacket PROJECTILE = new IncomingPacket(143, 16);
 	public static IncomingPacket aClass375_4495 = new IncomingPacket(144, 9);
-	public static IncomingPacket aClass375_4496 = new IncomingPacket(145, 19);
+	public static IncomingPacket ANIMATE_NPC = new IncomingPacket(145, 19);
 	public static IncomingPacket aClass375_4497 = new IncomingPacket(146, 0);
 	public static IncomingPacket IDENTIFY_HOST_NAME = new IncomingPacket(147, 4);
-	public static IncomingPacket ICOMPONENT_SETTINGS_SMALL = new IncomingPacket(148, 10);
+	public static IncomingPacket ICOMPONENT_SETTINGS_RESTORE_DEFAULT = new IncomingPacket(148, 10);
 	public static IncomingPacket aClass375_4375 = new IncomingPacket(149, -2);
 	public static IncomingPacket aClass375_4501 = new IncomingPacket(150, 5);
 	public static IncomingPacket PLAYER_UNDER_NPC_PRIORITY = new IncomingPacket(151, 1);

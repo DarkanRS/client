@@ -32,11 +32,4 @@ public class Class96_Sub16 extends Class96 {
 		}
 		this.anInt9381 = rsbytebuffer_1.readInt();
 	}
-
-	static void method14648(int i_0, int i_1, int i_2, byte b_3) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_4 = Engine.getIComponentVar(11, (long) i_0);
-		class282_sub50_sub12_4.method14995(467467668);
-		class282_sub50_sub12_4.anInt9668 = i_1;
-		class282_sub50_sub12_4.anInt9641 = i_2;
-	}
 }

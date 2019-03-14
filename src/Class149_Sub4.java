@@ -122,10 +122,4 @@ public class Class149_Sub4 extends Class149 {
 			throw new IllegalArgumentException("" + i_1);
 		}
 	}
-
-	static void method14663(int i_0, int i_1, byte b_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(7, (long) i_0);
-		class282_sub50_sub12_3.method14995(2079559306);
-		class282_sub50_sub12_3.anInt9668 = i_1;
-	}
 }

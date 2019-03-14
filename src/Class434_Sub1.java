@@ -292,7 +292,7 @@ public class Class434_Sub1 extends Class434 {
 	}
 
 	public static void method12760(int i_0, int i_1, int i_2, int i_3) {
-		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(499129134);
+		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = coordgrid_4.x + i_1;
 		int i_6 = i_2 + coordgrid_4.y;
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153 && i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1612887157) && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1255966708)) {

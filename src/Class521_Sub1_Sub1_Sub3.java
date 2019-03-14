@@ -304,7 +304,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		this.anInt10391 = i_16;
 		int i_17 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -8).animationId;
 		this.aClass456_10399 = new Class456_Sub2(this, false);
-		this.aClass456_10399.method7567(i_17, (short) 8960);
+		this.aClass456_10399.update(i_17);
 		this.method13008(1, (byte) -89);
 	}
 

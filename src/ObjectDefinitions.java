@@ -862,15 +862,15 @@ public class ObjectDefinitions {
 		Class335.method5961(1418471735);
 	}
 
-	static Class282_Sub50_Sub12 method8022(int i_0) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_1 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass477_9666.method7941((byte) 4);
+	static PulseEvent nextPulseEvent() {
+		PulseEvent class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9666.method7941((byte) 4);
 		if (class282_sub50_sub12_1 != null) {
 			class282_sub50_sub12_1.remove();
 			class282_sub50_sub12_1.method13452();
 			return class282_sub50_sub12_1;
 		} else {
 			do {
-				class282_sub50_sub12_1 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass477_9655.method7941((byte) 4);
+				class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9655.method7941((byte) 4);
 				if (class282_sub50_sub12_1 == null) {
 					return null;
 				}

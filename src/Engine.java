@@ -844,15 +844,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		return i_0 != SceneObjectType.WALL_DIAGONAL_CORNER.type && i_0 != SceneObjectType.WALL_STRAIGHT_CORNER.type ? Wall.anIntArray10531[i_1 & 0x3] : Wall.anIntArray10533[i_1 & 0x3];
 	}
 
-	static Class282_Sub50_Sub12 getIComponentVar(int i_0, long long_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.get((long) i_0 << 56 | long_1);
-		if (class282_sub50_sub12_3 == null) {
-			class282_sub50_sub12_3 = new Class282_Sub50_Sub12(i_0, long_1);
-			Class282_Sub50_Sub12.aClass465_9667.put(class282_sub50_sub12_3, class282_sub50_sub12_3.data);
-		}
-		return class282_sub50_sub12_3;
-	}
-
 	static void method4779(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, byte b_9) {
 		if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
 			Class346.method6159(i_0, i_1, i_6, i_7, i_8, -1028676957);

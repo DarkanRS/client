@@ -500,7 +500,7 @@ public class Class282_Sub14 extends Node {
 	}
 
 	public static void method12223(int i_0, byte b_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(6, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(6, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -46);
 	}
 

@@ -58,11 +58,4 @@ public class Class506 {
 		}
 		return meshmodifier_3;
 	}
-
-	static void method8722(int i_0, int i_1, int i_2, int i_3, int i_4) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_5 = Engine.getIComponentVar(18, (long) i_1 << 32 | (long) i_0);
-		class282_sub50_sub12_5.method14995(540803591);
-		class282_sub50_sub12_5.anInt9668 = i_2;
-		class282_sub50_sub12_5.anInt9641 = i_3;
-	}
 }

@@ -190,9 +190,9 @@ public class Class38 {
 		return i_0 != 18 && i_0 != 19 && i_0 != 20 && i_0 != 21 && i_0 != 22 && i_0 != 1004 ? i_0 == 17 : true;
 	}
 
-	static void method860(int i_0, String string_1, int i_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(3, (long) i_0);
-		class282_sub50_sub12_3.method14995(902819927);
-		class282_sub50_sub12_3.aString9640 = string_1;
+	static void setComponentText(int i_0, String string_1, int i_2) {
+		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(3, (long) i_0);
+		class282_sub50_sub12_3.immediate();
+		class282_sub50_sub12_3.string = string_1;
 	}
 }

@@ -10,7 +10,7 @@ public class Class96_Sub18 extends Class96 {
 	Class96_Sub18(RsByteBuffer rsbytebuffer_1) {
 		super(rsbytebuffer_1);
 		this.anInt9395 = rsbytebuffer_1.readUnsignedShort();
-		this.anIntArray9397 = new int[Class8_Sub3.method14339(1886074121).length];
+		this.anIntArray9397 = new int[Class8_Sub3.method14339().length];
 		this.anInt9396 = rsbytebuffer_1.readBigSmart();
 		Arrays.fill(this.anIntArray9397, 0, this.anIntArray9397.length, this.anInt9396);
 		this.anInt9398 = rsbytebuffer_1.readInt();

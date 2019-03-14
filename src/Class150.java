@@ -60,7 +60,7 @@ public class Class150 {
 					if (spotanimdefinitions_5.aBool6968) {
 						if (animationdefinitions_6.animatingPrecedence == 3) {
 							if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
-								animation_4.method7567(-1, (short) 8960);
+								animation_4.update(-1);
 								animable_0.aClass161Array10339[i_3].spotAnimId = -1;
 								continue;
 							}
@@ -70,7 +70,7 @@ public class Class150 {
 					}
 				}
 				if (animation_4.method7627(1, -1386003531) && animation_4.method7580(1255247674)) {
-					animation_4.method7567(-1, (short) 8960);
+					animation_4.update(-1);
 					animable_0.aClass161Array10339[i_3].spotAnimId = -1;
 				}
 			}
@@ -82,7 +82,7 @@ public class Class150 {
 				if (animationdefinitions_9.animatingPrecedence == 3) {
 					if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
 						animable_0.currentAnimations = null;
-						animation_7.method7567(-1, (short) 8960);
+						animation_7.update(-1);
 						break label88;
 					}
 				} else if (animationdefinitions_9.animatingPrecedence == 1) {
@@ -94,7 +94,7 @@ public class Class150 {
 				}
 				if (animation_7.method7627(1, 1985078512) && animation_7.method7580(1773255286)) {
 					animable_0.currentAnimations = null;
-					animation_7.method7567(-1, (short) 8960);
+					animation_7.update(-1);
 				}
 			}
 		}

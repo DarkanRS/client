@@ -186,7 +186,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						}
 						Class357.method6233((byte) 36);
 						Class149_Sub4.method14661((byte) -86);
-						Class84.method1464(1237119486);
+						PulseEvent.processPulseEvents();
 						++client.anInt7261;
 						if (client.anInt7296 != 0) {
 							client.anInt7295 += 20;
@@ -247,7 +247,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 																} else if (i_2 > 3) {
 																	i_2 = 3;
 																}
-																CoordGrid coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1589459272);
+																CoordGrid coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 																Class447.method7460(i_2, Class84.myPlayer.regionBaseX[0] + coordgrid_12.x, Class84.myPlayer.regionBaseY[0] + coordgrid_12.y, -1104014965);
 															}
 															for (i_2 = 0; i_2 < 5; i_2++) {

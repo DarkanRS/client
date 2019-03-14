@@ -3165,7 +3165,7 @@ public class CS2Interpreter {
 	static final void method5408(CS2Executor executor) {
 		byte b_2 = Class84.myPlayer.plane;
 		Vector3 vector3_3 = Class84.myPlayer.method11166().aClass385_3595;
-		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(165047864);
+		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = ((int) vector3_3.x >> 9) + coordgrid_4.x;
 		int i_6 = ((int) vector3_3.z >> 9) + coordgrid_4.y;
 		executor.intStack[++executor.intStackPtr - 1] = (i_5 << 14) + i_6 + (b_2 << 28);
@@ -5464,7 +5464,7 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		int i_5 = executor.intStack[executor.intStackPtr + 3];
-		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1537474699);
+		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		RouteStrategy.method3794((i_2 >> 14 & 0x3fff) - coordgrid_6.x, (i_2 & 0x3fff) - coordgrid_6.y, i_3 << 2, i_4, i_5, false, (byte) -1);
 	}
 
@@ -6109,7 +6109,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		int i_3 = i_2 >> 14 & 0x3fff;
 		int i_4 = i_2 & 0x3fff;
-		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(2060657850);
+		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		i_3 -= coordgrid_5.x;
 		if (i_3 < 0) {
 			i_3 = 0;
@@ -8065,7 +8065,7 @@ public class CS2Interpreter {
 		if (i_2 == -1) {
 			int i_3 = i_2 >> 14 & 0x3fff;
 			int i_4 = i_2 & 0x3fff;
-			CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(660934001);
+			CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			i_3 -= coordgrid_5.x;
 			if (i_3 < 0) {
 				i_3 = 0;
@@ -9832,7 +9832,7 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		int i_5 = executor.intStack[executor.intStackPtr + 3];
-		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(988818864);
+		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		Class11.method469((i_2 >> 14 & 0x3fff) - coordgrid_6.x, (i_2 & 0x3fff) - coordgrid_6.y, i_3 << 2, i_4, i_5, (byte) -62);
 	}
 

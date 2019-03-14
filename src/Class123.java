@@ -258,7 +258,7 @@ public class Class123 {
 					this.aBool1552 = false;
 				}
 				if (this.aClass456_1545.method7580(487845582)) {
-					this.aClass456_1545.method7567(-1, (short) 8960);
+					this.aClass456_1545.update(-1);
 					this.aBool1546 = false;
 					this.method2124(false, -1, 0, 1157413618);
 				}

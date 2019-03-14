@@ -6,7 +6,7 @@ public class TilestreamPacket {
 
 	public static TilestreamPacket aClass364_4207 = new TilestreamPacket(3);
 
-	public static TilestreamPacket aClass364_4206 = new TilestreamPacket(5);
+	public static TilestreamPacket CREATE_GROUND_ITEM = new TilestreamPacket(5);
 
 	public static TilestreamPacket aClass364_4213 = new TilestreamPacket(2);
 
@@ -24,7 +24,7 @@ public class TilestreamPacket {
 
 	public static TilestreamPacket aClass364_4214 = new TilestreamPacket(8);
 
-	public static TilestreamPacket aClass364_4215 = new TilestreamPacket(-1);
+	public static TilestreamPacket TILE_MESSAGE = new TilestreamPacket(-1);
 
 	public static TilestreamPacket aClass364_4216 = new TilestreamPacket(6);
 

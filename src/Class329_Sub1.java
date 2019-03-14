@@ -992,7 +992,7 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	public static void method12491(Player player_0, int i_1, int i_2, byte b_3) {
-		int[] ints_4 = new int[Class8_Sub3.method14339(439477133).length];
+		int[] ints_4 = new int[Class8_Sub3.method14339().length];
 		Arrays.fill(ints_4, 0, ints_4.length, i_1);
 		Class20.animate(player_0, ints_4, i_2, false, (byte) -11);
 	}

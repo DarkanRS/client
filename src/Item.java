@@ -26,7 +26,7 @@ public class Item extends Node {
 			}
 
 			if (Class187.anInt2363 != 2 && Class187.anInt2363 != 5 && Class419.aClass160_5004 != null) {
-				CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1681892219);
+				CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 				int i_8;
 				int i_9;
 				int i_10;
@@ -111,7 +111,7 @@ public class Item extends Node {
 	}
 
 	public static void method12575(int i_0, byte b_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(10, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(10, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 34);
 	}
 

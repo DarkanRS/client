@@ -43,10 +43,4 @@ public abstract class Class199 {
 			}
 		}
 	}
-
-	static void method3252(int i_0, boolean bool_1, int i_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(22, (long) i_0);
-		class282_sub50_sub12_3.method14995(2035738525);
-		class282_sub50_sub12_3.anInt9668 = bool_1 ? 1 : 0;
-	}
 }

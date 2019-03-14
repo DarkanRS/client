@@ -85,7 +85,7 @@ public final class Class464 {
 				if (icomponentdefinitions_4.type == 6 && icomponentdefinitions_4.animation != -1) {
 					if (icomponentdefinitions_4.aClass456_1437 == null) {
 						icomponentdefinitions_4.aClass456_1437 = new Class456_Sub1();
-						icomponentdefinitions_4.aClass456_1437.method7567(icomponentdefinitions_4.animation, (short) 8960);
+						icomponentdefinitions_4.aClass456_1437.update(icomponentdefinitions_4.animation);
 					}
 					if (icomponentdefinitions_4.aClass456_1437.method7627(client.anInt7261, 1231441216) && icomponentdefinitions_4.aClass456_1437.method7580(602854407)) {
 						icomponentdefinitions_4.aClass456_1437.method7582((byte) -59);

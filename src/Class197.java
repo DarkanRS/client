@@ -40,7 +40,7 @@ public class Class197 {
 		byte b_5 = (byte) (i_4 >> 28);
 		int i_6 = i_4 >> 14 & 0x3fff;
 		int i_7 = i_4 & 0x3fff;
-		CoordGrid coordgrid_8 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(331387961);
+		CoordGrid coordgrid_8 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		player_3.regionBaseX[0] = i_6 - coordgrid_8.x;
 		player_3.regionBaseY[0] = i_7 - coordgrid_8.y;
 		player_3.method11172((float) ((player_3.regionBaseX[0] << 9) + (player_3.getSize(828768449) << 8)), player_3.method11165().aClass385_3595.y, (float) ((player_3.regionBaseY[0] << 9) + (player_3.getSize(828768449) << 8)));

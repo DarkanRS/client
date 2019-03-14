@@ -332,7 +332,7 @@ public class Class282_Sub20_Sub9 extends Class282_Sub20 {
 	}
 
 	static void method15255(short s_0) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_1 = Engine.getIComponentVar(15, 0L);
+		PulseEvent class282_sub50_sub12_1 = PulseEvent.createPulseEvent(15, 0L);
 		class282_sub50_sub12_1.method14965((byte) 18);
 	}
 

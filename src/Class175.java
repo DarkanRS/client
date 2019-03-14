@@ -178,10 +178,4 @@ public class Class175 {
 			}
 		}
 	}
-
-	static void method2966(int i_0, int i_1, short s_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(12, (long) i_0);
-		class282_sub50_sub12_3.method14995(1634011909);
-		class282_sub50_sub12_3.anInt9668 = i_1;
-	}
 }

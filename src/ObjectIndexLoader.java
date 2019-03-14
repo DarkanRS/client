@@ -175,10 +175,4 @@ public class ObjectIndexLoader {
 	public static Class217_Sub1 method7916(int i_0, int i_1) {
 		return Class244.aBool3007 && i_0 >= Class485.anInt5740 && i_0 <= Class244.anInt3003 ? Class244.aClass217_Sub1Array3006[i_0 - Class485.anInt5740] : null;
 	}
-
-	static void method7917(int i_0, int i_1, byte b_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(14, (long) i_0);
-		class282_sub50_sub12_3.method14995(1795507411);
-		class282_sub50_sub12_3.anInt9668 = i_1;
-	}
 }

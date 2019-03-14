@@ -187,7 +187,7 @@ public class QuickchatDefinitionsLoader {
 								}
 							}
 						} else {
-							CoordGrid coordgrid_15 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1940390478);
+							CoordGrid coordgrid_15 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 							Class151.method2594(i_9 + "," + i_10 + " " + i_11 + "," + i_12 + " " + coordgrid_15.x + "," + coordgrid_15.y, new RuntimeException(), (byte) -63);
 						}
 					}

@@ -502,7 +502,7 @@ public class Class8_Sub3 extends FontRenderer {
 				return true;
 			}
 		} catch (Exception exception_8) {
-			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1387149052);
+			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			String string_5 = (class184_0.currentPacket != null ? class184_0.currentPacket.opcode : -1) + "," + (class184_0.secondLastPacket != null ? class184_0.secondLastPacket.opcode : -1) + "," + (class184_0.thirdLastPacket != null ? class184_0.thirdLastPacket.opcode : -1) + " " + class184_0.currentPacketSize + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_4.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_4.y) + " ";
 			for (int i_6 = 0; i_6 < class184_0.currentPacketSize && i_6 < 50; i_6++) {
 				string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";
@@ -513,13 +513,13 @@ public class Class8_Sub3 extends FontRenderer {
 		}
 	}
 
-	public static Class249[] method14339(int i_0) {
+	public static Class249[] method14339() {
 		return new Class249[] { Class249.aClass249_3082, Class249.aClass249_3084, Class249.aClass249_3086, Class249.aClass249_3083 };
 	}
 
 	static void method14341(int i_0) {
-		Class282_Sub50_Sub12.aClass465_9667.method7749(207048647);
-		Class282_Sub50_Sub12.aClass477_9655.method7935((byte) -65);
-		Class282_Sub50_Sub12.aClass477_9666.method7935((byte) -9);
+		PulseEvent.aClass465_9667.method7749(207048647);
+		PulseEvent.aClass477_9655.method7935((byte) -65);
+		PulseEvent.aClass477_9666.method7935((byte) -9);
 	}
 }

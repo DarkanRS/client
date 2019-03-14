@@ -111,10 +111,4 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		}
 	}
 
-	static void method15435(int i_0, int i_1, byte b_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(16, (long) i_0);
-		class282_sub50_sub12_3.method14995(1165505680);
-		class282_sub50_sub12_3.anInt9668 = i_1;
-	}
-
 }

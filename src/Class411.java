@@ -98,7 +98,7 @@ public class Class411 {
 	}
 
 	public static void method6914(int i_0, short s_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(9, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(9, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -16);
 	}
 

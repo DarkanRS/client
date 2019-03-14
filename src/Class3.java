@@ -25,7 +25,7 @@ public class Class3 implements Interface42 {
 		return this.anIntArray26[i_3] >> i_4 & i_6;
 	}
 
-	int method264(boolean bool_1, byte b_2) {
+	int poll(boolean bool_1) {
 		long long_3 = Class169.time();
 		for (Class282_Sub45 class282_sub45_5 = (Class282_Sub45) (bool_1 ? this.aClass465_28.method7750(-1019501860) : this.aClass465_28.method7751((byte) 13)); class282_sub45_5 != null; class282_sub45_5 = (Class282_Sub45) this.aClass465_28.method7751((byte) 105)) {
 			if ((class282_sub45_5.aLong8066 & 0x3fffffffffffffffL) < long_3) {

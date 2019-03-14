@@ -416,7 +416,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 	static void method16073(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3) {
 		if (i_1 >= 0 && i_2 >= 0 && Class20.aClass384_158 != null) {
-			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1956252326);
+			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			Matrix44Arr matrix44arr_5 = graphicalrenderer_0.method8449();
 			graphicalrenderer_0.method8424(Class20.aClass384_158);
 			graphicalrenderer_0.method8457(Class20.aClass294_155);

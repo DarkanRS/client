@@ -856,7 +856,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			i_6 = rsbitsbuffer_0.buffer[++rsbitsbuffer_0.index - 1] & 0xff;
 
 			for (i_7 = 0; i_7 < i_6; i_7++) {
-				i_8 = rsbitsbuffer_0.readShortLE((byte) -120);
+				i_8 = rsbitsbuffer_0.readShortLE();
 				i_9 = rsbitsbuffer_0.readInt();
 				player_2.aClass155_10561.method2625(i_8, i_9, (byte) 28);
 			}
@@ -895,7 +895,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			i_6 = rsbitsbuffer_0.buffer[++rsbitsbuffer_0.index - 1] & 0xff;
 
 			for (i_7 = 0; i_7 < i_6; i_7++) {
-				i_8 = rsbitsbuffer_0.readShortLE((byte) -4);
+				i_8 = rsbitsbuffer_0.readShortLE();
 				i_9 = rsbitsbuffer_0.readInt();
 				player_2.aClass155_10561.method2625(i_8, i_9, (byte) 28);
 			}
@@ -949,7 +949,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		}
 
 		if ((i_3 & 0x40000) != 0) {
-			i_6 = rsbitsbuffer_0.readShortLE128();
+			i_6 = rsbitsbuffer_0.readUnsignedShortLE128();
 			i_7 = rsbitsbuffer_0.readIntV2();
 			if (i_6 == 65535) {
 				i_6 = -1;
@@ -1023,9 +1023,9 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		}
 
 		if ((i_3 & 0x10) != 0) {
-			int[] ints_23 = new int[Class8_Sub3.method14339(1672148913).length];
+			int[] ints_23 = new int[Class8_Sub3.method14339().length];
 
-			for (i_7 = 0; i_7 < Class8_Sub3.method14339(1868309585).length; i_7++) {
+			for (i_7 = 0; i_7 < Class8_Sub3.method14339().length; i_7++) {
 				ints_23[i_7] = rsbitsbuffer_0.readBigSmart();
 			}
 
@@ -1055,7 +1055,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			for (i_10 = 0; i_10 < i_6; i_10++) {
 				ints_14[i_10] = rsbitsbuffer_0.readBigSmart();
 				ints_15[i_10] = rsbitsbuffer_0.readUnsignedByteC();
-				ints_17[i_10] = rsbitsbuffer_0.readShortLE128();
+				ints_17[i_10] = rsbitsbuffer_0.readUnsignedShortLE128();
 			}
 
 			Class331.method5923(player_2, ints_14, ints_15, ints_17, 263851655);
@@ -1066,7 +1066,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		}
 
 		if ((i_3 & 0x200000) != 0) {
-			i_6 = rsbitsbuffer_0.readShortLE((byte) -115);
+			i_6 = rsbitsbuffer_0.readShortLE();
 			i_7 = rsbitsbuffer_0.readIntLE();
 			if (i_6 == 65535) {
 				i_6 = -1;
@@ -1088,8 +1088,8 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			player_2.anInt10328 = rsbitsbuffer_0.read128Byte((short) -6627);
 			player_2.anInt10341 = rsbitsbuffer_0.readByte128(1577194121);
 			player_2.anInt10343 = rsbitsbuffer_0.readByteC(343474194);
-			player_2.anInt10342 = rsbitsbuffer_0.readShortLE128() + client.cycles;
-			player_2.anInt10345 = rsbitsbuffer_0.readShortLE((byte) -80) + client.cycles;
+			player_2.anInt10342 = rsbitsbuffer_0.readUnsignedShortLE128() + client.cycles;
+			player_2.anInt10345 = rsbitsbuffer_0.readShortLE() + client.cycles;
 			player_2.anInt10346 = rsbitsbuffer_0.readUnsignedShort128();
 			if (player_2.aBool10568) {
 				player_2.anInt10326 += player_2.anInt10569;
@@ -1109,7 +1109,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		}
 
 		if ((i_3 & 0x80) != 0) {
-			i_6 = rsbitsbuffer_0.readShortLE((byte) -74);
+			i_6 = rsbitsbuffer_0.readShortLE();
 			i_7 = rsbitsbuffer_0.readInt();
 			if (i_6 == 65535) {
 				i_6 = -1;

@@ -691,7 +691,7 @@ public class NPCDefinitions {
 				} else if (i_2 == 127) {
 					this.anInt4898 = rsbytebuffer_1.readUnsignedShort();
 				} else if (i_2 == 128) {
-					Class386.method6672(Class8_Sub3.method14339(392788046), rsbytebuffer_1.readUnsignedByte(), -1112541696);
+					Class386.method6672(Class8_Sub3.method14339(), rsbytebuffer_1.readUnsignedByte(), -1112541696);
 				} else if (i_2 == 134) {
 					this.anInt4903 = rsbytebuffer_1.readUnsignedShort();
 					if (this.anInt4903 == 65535) {

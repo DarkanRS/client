@@ -139,7 +139,7 @@ public class SpotAnimIndexLoader {
 				i_12 = client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 2][i_5] - i_9 + i_7 - i_8;
 				floats_3[i_5] = (float) i_9 + (((float) i_12 * f_2 + (float) i_18) * f_2 + (float) i_10) * f_2;
 			}
-			CoordGrid coordgrid_16 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1394522751);
+			CoordGrid coordgrid_16 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			Class31.anInt361 = (int) floats_3[0] - coordgrid_16.x * 512;
 			Class109_Sub1.anInt9384 = (int) floats_3[1] * -1;
 			Class246.anInt3029 = (int) floats_3[2] - coordgrid_16.y * 512;

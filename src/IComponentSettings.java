@@ -1,40 +1,40 @@
 public final class IComponentSettings extends Node {
 
 	static IComponentSettings DEFAULT_SETTINGS = new IComponentSettings(0, -1);
-	public int settings;
+	public int settingsHash;
 	public int interfaceId;
 
 	public final boolean dragEnabled() {
-		return (this.settings >> 21 & 0x1) != 0;
+		return (this.settingsHash >> 21 & 0x1) != 0;
 	}
 
 	public final boolean clickOptionEnabled(int option) {
-		return (this.settings >> option + 1 & 0x1) != 0;
+		return (this.settingsHash >> option + 1 & 0x1) != 0;
 	}
 
 	public final int getUseOptionFlags() {
-		return Class96_Sub6.getUseOptionFlags(this.settings);
+		return Class96_Sub6.getUseOptionFlags(this.settingsHash);
 	}
 
 	public final int depthFlags() {
-		return this.settings >> 18 & 0x7;
+		return this.settingsHash >> 18 & 0x7;
 	}
 
 	public IComponentSettings(int i_1, int i_2) {
-		this.settings = i_1;
+		this.settingsHash = i_1;
 		this.interfaceId = i_2;
 	}
 
 	public final boolean bit22Enabled() {
-		return (this.settings >> 22 & 0x1) != 0;
+		return (this.settingsHash >> 22 & 0x1) != 0;
 	}
 
 	public final boolean continueOptionEnabled() {
-		return (this.settings & 0x1) != 0;
+		return (this.settingsHash & 0x1) != 0;
 	}
 
 	public final boolean bit23Enabled() {
-		return (this.settings >> 23 & 0x1) != 0;
+		return (this.settingsHash >> 23 & 0x1) != 0;
 	}
 
 }

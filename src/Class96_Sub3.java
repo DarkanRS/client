@@ -33,14 +33,6 @@ public class Class96_Sub3 extends Class96 {
 		this.anInt8517 = rsbytebuffer_1.readBigSmart();
 	}
 
-	static void method13786(int i_0, int i_1, int i_2, int i_3, byte b_4) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_5 = Engine.getIComponentVar(4, (long) i_0);
-		class282_sub50_sub12_5.method14995(1205574173);
-		class282_sub50_sub12_5.anInt9668 = i_1;
-		class282_sub50_sub12_5.anInt9641 = i_2;
-		class282_sub50_sub12_5.anInt9642 = i_3;
-	}
-
 	static String method13787(Throwable throwable_0, byte b_1) throws IOException {
 		String str_2;
 		if (throwable_0 instanceof RuntimeException_Sub3) {

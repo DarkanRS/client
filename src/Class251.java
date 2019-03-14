@@ -48,7 +48,7 @@ public final class Class251 {
 							return;
 						}
 						if (string_0.equalsIgnoreCase("getcamerapos")) {
-							CoordGrid coordgrid_27 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1275338740);
+							CoordGrid coordgrid_27 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 							Class209.printConsoleMessage("Pos: " + Class84.myPlayer.plane + "," + ((Class31.anInt361 >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y >> 6) + "," + ((Class31.anInt361 >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.method8389(Class31.anInt361, Class246.anInt3029, Class84.myPlayer.plane, (byte) 22) - Class109_Sub1.anInt9384), -2096324041);
 							Class209.printConsoleMessage("Look: " + Class84.myPlayer.plane + "," + (coordgrid_27.x + Class96_Sub13.anInt9368 >> 6) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 >> 6) + "," + (coordgrid_27.x + Class96_Sub13.anInt9368 & 0x3f) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 & 0x3f) + " Height: " + (Class504.method8389(Class96_Sub13.anInt9368, OutgoingLoginPacket.anInt4280, Class84.myPlayer.plane, (byte) 2) - Class121.anInt1527), -2049086171);
 							return;

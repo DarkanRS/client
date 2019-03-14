@@ -81,7 +81,7 @@ public class Class331 {
 						}
 						if (class456_sub2_sub1_12 == null || !class456_sub2_sub1_12.hasDefs()) {
 							class456_sub2_sub1_12 = animable_0.aClass456_Sub2_Sub1Array10354[i_9] = new Class456_Sub2_Sub1(animable_0);
-							class456_sub2_sub1_12.method7567(i_6, (short) 8960);
+							class456_sub2_sub1_12.update(i_6);
 							class456_sub2_sub1_12.anInt10065 = i_8;
 						}
 					}
@@ -89,11 +89,5 @@ public class Class331 {
 				++i_9;
 			}
 		}
-	}
-
-	static void method5924(int i_0, boolean bool_1, int i_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(21, (long) i_0);
-		class282_sub50_sub12_3.method14995(1949020630);
-		class282_sub50_sub12_3.anInt9668 = bool_1 ? 1 : 0;
 	}
 }

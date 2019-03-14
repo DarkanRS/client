@@ -56,7 +56,7 @@ public class Animation {
 		return this.defs;
 	}
 
-	public final void method7567(int i_1, short s_2) {
+	public final void update(int i_1) {
 		this.method7571(i_1, 0, 0, false, -629553578);
 	}
 

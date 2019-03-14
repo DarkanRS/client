@@ -63,16 +63,8 @@ public class Class149_Sub1 extends Class149 {
 	}
 
 	public static void method14582(int i_0, int i_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(5, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(5, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -51);
-	}
-
-	static void method14583(int i_0, int i_1, int i_2, int i_3) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_5 = Engine.getIComponentVar(8, (long) i_0);
-		class282_sub50_sub12_5.method14995(1672803485);
-		class282_sub50_sub12_5.anInt9668 = i_1;
-		class282_sub50_sub12_5.anInt9641 = i_2;
-		class282_sub50_sub12_5.anInt9642 = i_3;
 	}
 
 	public static void method14584(int i_0, int i_1, int i_2, int i_3, int i_4, short s_5) {

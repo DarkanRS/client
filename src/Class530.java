@@ -25,7 +25,7 @@ public class Class530 {
 
 	SceneObject method11348(short s_1) {
 		int i_2 = this.aClass219_7048.level;
-		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1217612419);
+		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_4 = this.aClass219_7048.x - coordgrid_3.x;
 		int i_5 = this.aClass219_7048.y - coordgrid_3.y;
 		if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-444629403) && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-343963365)) {

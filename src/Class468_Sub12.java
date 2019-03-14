@@ -63,7 +63,7 @@ public class Class468_Sub12 extends Preference {
 	}
 
 	public static void method12709(int i_0, byte b_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(12, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(12, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 7);
 	}
 

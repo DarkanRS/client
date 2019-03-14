@@ -360,7 +360,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					int i_14 = icomponentdefinitions_12.anInt1299 + i_6;
 					int i_15 = i_7 + icomponentdefinitions_12.anInt1428;
 					int i_16 = icomponentdefinitions_12.anInt1453;
-					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).settings != 0 || icomponentdefinitions_12.type == 0) && i_16 > 127) {
+					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).settingsHash != 0 || icomponentdefinitions_12.type == 0) && i_16 > 127) {
 						i_16 = 127;
 					}
 					int i_17;

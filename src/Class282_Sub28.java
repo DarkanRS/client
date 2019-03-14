@@ -46,11 +46,4 @@ public class Class282_Sub28 extends Node {
 		return i_1 >= this.anInt7698 && i_1 <= this.anInt7700 && i_2 >= this.anInt7699 && i_2 <= this.anInt7702;
 	}
 
-	static void method12420(int i_0, int i_1, int i_2, int i_3, int i_4) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_5 = Engine.getIComponentVar(19, (long) i_1 << 32 | (long) i_0);
-		class282_sub50_sub12_5.method14995(956319706);
-		class282_sub50_sub12_5.anInt9668 = i_2;
-		class282_sub50_sub12_5.anInt9641 = i_3;
-	}
-
 }

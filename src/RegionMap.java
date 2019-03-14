@@ -33,7 +33,7 @@ public class RegionMap {
 	}
 
 	public static void method5513(int i_0, int i_1, byte b_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(18, (long) i_1 << 32 | (long) i_0);
+		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(18, (long) i_1 << 32 | (long) i_0);
 		class282_sub50_sub12_3.method14965((byte) -18);
 	}
 }

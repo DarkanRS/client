@@ -1,11 +1,8 @@
 public class Class249 implements Interface43 {
 
 	public static Class249 aClass249_3083 = new Class249((byte) -1);
-
 	public static Class249 aClass249_3082 = new Class249((byte) 0);
-
 	public static Class249 aClass249_3084 = new Class249((byte) 1);
-
 	public static Class249 aClass249_3086 = new Class249((byte) 2);
 
 	public byte aByte3085;

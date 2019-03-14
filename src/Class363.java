@@ -68,10 +68,10 @@ public class Class363 {
 		Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
 		int i_6;
 		if ((int) vector3_5.x < 512 || (int) vector3_5.z < 512 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(735172073) - 1) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY(-1048165287) - 1) * 512) {
-			animable_0.currentAnimation.method7567(-1, (short) 8960);
+			animable_0.currentAnimation.update(-1);
 			for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
 				animable_0.aClass161Array10339[i_6].spotAnimId = -1;
-				animable_0.aClass161Array10339[i_6].animation.method7567(-1, (short) 8960);
+				animable_0.aClass161Array10339[i_6].animation.update(-1);
 			}
 			animable_0.currentAnimations = null;
 			animable_0.anInt10342 = 0;
@@ -82,10 +82,10 @@ public class Class363 {
 			animable_0.method15801(-1972620165);
 		}
 		if (Class84.myPlayer == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(723986373) - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY(-806842262) - 12) * 512)) {
-			animable_0.currentAnimation.method7567(-1, (short) 8960);
+			animable_0.currentAnimation.update(-1);
 			for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
 				animable_0.aClass161Array10339[i_6].spotAnimId = -1;
-				animable_0.aClass161Array10339[i_6].animation.method7567(-1, (short) 8960);
+				animable_0.aClass161Array10339[i_6].animation.update(-1);
 			}
 			animable_0.currentAnimations = null;
 			animable_0.anInt10342 = 0;

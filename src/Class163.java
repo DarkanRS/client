@@ -38,7 +38,7 @@ public class Class163 {
 	}
 
 	public static TilestreamPacket[] method2842(int i_0) {
-		return new TilestreamPacket[] { TilestreamPacket.aClass364_4209, TilestreamPacket.aClass364_4207, TilestreamPacket.aClass364_4206, TilestreamPacket.aClass364_4213, TilestreamPacket.aClass364_4208, TilestreamPacket.PROJECTILE, TilestreamPacket.aClass364_4210, TilestreamPacket.aClass364_4211, TilestreamPacket.aClass364_4205, TilestreamPacket.aClass364_4204, TilestreamPacket.aClass364_4214, TilestreamPacket.aClass364_4215, TilestreamPacket.aClass364_4216, TilestreamPacket.aClass364_4217, TilestreamPacket.aClass364_4218 };
+		return new TilestreamPacket[] { TilestreamPacket.aClass364_4209, TilestreamPacket.aClass364_4207, TilestreamPacket.CREATE_GROUND_ITEM, TilestreamPacket.aClass364_4213, TilestreamPacket.aClass364_4208, TilestreamPacket.PROJECTILE, TilestreamPacket.aClass364_4210, TilestreamPacket.aClass364_4211, TilestreamPacket.aClass364_4205, TilestreamPacket.aClass364_4204, TilestreamPacket.aClass364_4214, TilestreamPacket.TILE_MESSAGE, TilestreamPacket.aClass364_4216, TilestreamPacket.aClass364_4217, TilestreamPacket.aClass364_4218 };
 	}
 
 	public static Class350 method2843(RsByteBuffer rsbytebuffer_0, int i_1) {

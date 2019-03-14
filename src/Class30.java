@@ -75,7 +75,7 @@ public class Class30 implements Runnable {
 				if (icomponentdefinitions_0.aClass456_1437 == null) {
 					icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
 				}
-				icomponentdefinitions_0.aClass456_1437.method7567(i_4, (short) 8960);
+				icomponentdefinitions_0.aClass456_1437.update(i_4);
 			} else {
 				icomponentdefinitions_0.aClass456_1437 = null;
 			}

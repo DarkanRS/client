@@ -39,7 +39,7 @@ public class Class96_Sub4 extends Class96 {
 				i_6 -= 2000;
 			}
 
-			CoordGrid coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1872189276);
+			CoordGrid coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			OutgoingPacket outgoingpacket_11 = null;
 			if (i_6 == 44) {
 				outgoingpacket_11 = OutgoingPacket.aClass379_4539;

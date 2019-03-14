@@ -291,10 +291,4 @@ public class Class440 {
 		Class507.method8725(i_5, i_0, i_1, i_2, bool_3, -1040786933);
 	}
 
-	static void method7374(int i_0, int i_1, int i_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(6, (long) i_0);
-		class282_sub50_sub12_3.method14995(752010216);
-		class282_sub50_sub12_3.anInt9668 = i_1;
-	}
-
 }

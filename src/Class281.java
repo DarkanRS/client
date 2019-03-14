@@ -54,7 +54,7 @@ public class Class281 {
 	void method4983(SceneObjectManager sceneobjectmanager_1, int i_2) {
 		this.aLinkedList3377 = new LinkedList();
 		RegionMap regionmap_3 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(309280433);
+		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		CoordGrid coordgrid_5 = new CoordGrid(Class4.anInt35, this.anIntArray3375[0], this.anIntArray3373[0]);
 		for (int i_6 = 1; i_6 < this.anInt3374; i_6++) {
 			CoordGrid coordgrid_7 = new CoordGrid(Class4.anInt35, this.anIntArray3375[i_6], this.anIntArray3373[i_6]);

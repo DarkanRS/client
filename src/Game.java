@@ -27,7 +27,7 @@ public class Game {
 	}
 
 	public static void method8207(int i_0, int i_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(16, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(16, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -1);
 	}
 }

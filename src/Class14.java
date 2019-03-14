@@ -33,8 +33,8 @@ public class Class14 {
 			}
 			int i_6;
 			if ((i_4 & 0x10) != 0) {
-				int[] ints_5 = new int[Class8_Sub3.method14339(195444347).length];
-				for (i_6 = 0; i_6 < Class8_Sub3.method14339(1841907826).length; i_6++) {
+				int[] ints_5 = new int[Class8_Sub3.method14339().length];
+				for (i_6 = 0; i_6 < Class8_Sub3.method14339().length; i_6++) {
 					ints_5[i_6] = rsbitsbuffer_0.readBigSmart();
 				}
 				i_6 = rsbitsbuffer_0.readUnsignedByte();
@@ -94,9 +94,9 @@ public class Class14 {
 				npc_3.anInt10328 = rsbitsbuffer_0.readByte128(1918538585);
 				npc_3.anInt10341 = rsbitsbuffer_0.readByteC(-1245142414);
 				npc_3.anInt10343 = rsbitsbuffer_0.readByte128(1932630708);
-				npc_3.anInt10342 = rsbitsbuffer_0.readShortLE((byte) -102) + client.cycles;
-				npc_3.anInt10345 = rsbitsbuffer_0.readShortLE((byte) -65) + client.cycles;
-				npc_3.anInt10346 = rsbitsbuffer_0.readShortLE128();
+				npc_3.anInt10342 = rsbitsbuffer_0.readShortLE() + client.cycles;
+				npc_3.anInt10345 = rsbitsbuffer_0.readShortLE() + client.cycles;
+				npc_3.anInt10346 = rsbitsbuffer_0.readUnsignedShortLE128();
 				npc_3.anInt10326 += npc_3.regionBaseX[0];
 				npc_3.anInt10328 += npc_3.regionBaseY[0];
 				npc_3.anInt10341 += npc_3.regionBaseX[0];
@@ -113,7 +113,7 @@ public class Class14 {
 			if ((i_4 & 0x200000) != 0) {
 				i_14 = rsbitsbuffer_0.buffer[++rsbitsbuffer_0.index - 1] & 0xff;
 				for (i_6 = 0; i_6 < i_14; i_6++) {
-					i_7 = rsbitsbuffer_0.readShortLE128();
+					i_7 = rsbitsbuffer_0.readUnsignedShortLE128();
 					i_8 = rsbitsbuffer_0.readIntV1();
 					npc_3.aClass153_10579.method2614(i_7, i_8, (short) 768);
 				}
@@ -136,7 +136,7 @@ public class Class14 {
 				npc_3.sendSpotAnim(i_14, i_6, i_8, i_9, bool_24, 3, -770849102);
 			}
 			if ((i_4 & 0x80) != 0) {
-				npc_3.faceEntity = rsbitsbuffer_0.readShortLE((byte) -44);
+				npc_3.faceEntity = rsbitsbuffer_0.readShortLE();
 				if (npc_3.faceEntity == 65535) {
 					npc_3.faceEntity = -1;
 				}
@@ -152,12 +152,12 @@ public class Class14 {
 					i_10 = rsbitsbuffer_0.readBigSmart();
 					ints_15[i_9] = i_10;
 					ints_16[i_9] = rsbitsbuffer_0.readUnsignedByte();
-					ints_17[i_9] = rsbitsbuffer_0.readShortLE((byte) -27);
+					ints_17[i_9] = rsbitsbuffer_0.readShortLE();
 				}
 				Class331.method5923(npc_3, ints_15, ints_16, ints_17, -125170497);
 			}
 			if ((i_4 & 0x800) != 0) {
-				i_14 = rsbitsbuffer_0.readShortLE((byte) -78);
+				i_14 = rsbitsbuffer_0.readShortLE();
 				i_6 = rsbitsbuffer_0.readInt();
 				if (i_14 == 65535) {
 					i_14 = -1;
@@ -222,7 +222,7 @@ public class Class14 {
 				}
 			}
 			if ((i_4 & 0x2000000) != 0) {
-				i_14 = rsbitsbuffer_0.readShortLE((byte) -78);
+				i_14 = rsbitsbuffer_0.readShortLE();
 				i_6 = rsbitsbuffer_0.readIntLE();
 				if (i_14 == 65535) {
 					i_14 = -1;
@@ -275,7 +275,7 @@ public class Class14 {
 					if ((i_8 & 0x8) == 8) {
 						shorts_20 = new short[b_25];
 						for (i_12 = 0; i_12 < b_25; i_12++) {
-							shorts_20[i_12] = (short) rsbitsbuffer_0.readShortLE128();
+							shorts_20[i_12] = (short) rsbitsbuffer_0.readUnsignedShortLE128();
 						}
 					}
 					long_21 = (long) i_2 | (long) (++npc_3.anInt10576 - 1) << 32;
@@ -298,15 +298,15 @@ public class Class14 {
 				}
 			}
 			if ((i_4 & 0x4) != 0) {
-				npc_3.anInt10578 = rsbitsbuffer_0.readShortLE128();
-				npc_3.anInt10577 = rsbitsbuffer_0.readShortLE((byte) -32);
+				npc_3.anInt10578 = rsbitsbuffer_0.readUnsignedShortLE128();
+				npc_3.anInt10577 = rsbitsbuffer_0.readShortLE();
 			}
 			if ((i_4 & 0x20000) != 0) {
 				npc_3.aByte10371 = rsbitsbuffer_0.read128Byte((short) 2463);
 				npc_3.aByte10327 = rsbitsbuffer_0.readByte();
 				npc_3.aByte10364 = rsbitsbuffer_0.readByte();
 				npc_3.aByte10352 = (byte) rsbitsbuffer_0.readUnsigned128Byte();
-				npc_3.anInt10347 = client.cycles + rsbitsbuffer_0.readShortLE((byte) -97);
+				npc_3.anInt10347 = client.cycles + rsbitsbuffer_0.readShortLE();
 				npc_3.anInt10348 = client.cycles + rsbitsbuffer_0.readUnsignedShort();
 			}
 			if ((i_4 & 0x800000) != 0) {
@@ -323,14 +323,14 @@ public class Class14 {
 				ints_15 = new int[i_14];
 				ints_16 = new int[i_14];
 				for (i_8 = 0; i_8 < i_14; i_8++) {
-					i_9 = rsbitsbuffer_0.readShortLE128();
+					i_9 = rsbitsbuffer_0.readUnsignedShortLE128();
 					if ((i_9 & 0xc000) == 49152) {
 						i_10 = rsbitsbuffer_0.readUnsignedShort();
 						ints_15[i_8] = i_9 << 16 | i_10;
 					} else {
 						ints_15[i_8] = i_9;
 					}
-					ints_16[i_8] = rsbitsbuffer_0.readShortLE128();
+					ints_16[i_8] = rsbitsbuffer_0.readUnsignedShortLE128();
 				}
 				npc_3.method15797(ints_15, ints_16, -1858199952);
 			}

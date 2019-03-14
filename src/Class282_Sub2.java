@@ -33,7 +33,7 @@ public class Class282_Sub2 extends Node {
 			tcpmessage_4 = Class271.method4828(OutgoingPacket.MINI_WALK, client.aClass184_7475.isaac, -505511344);
 		}
 
-		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1520760306);
+		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		tcpmessage_4.buffer.writeByte(Class84.method1465(-2046314159) ? 1 : 0);
 		tcpmessage_4.buffer.writeShort(i_0 + coordgrid_5.x, 1417031095);
 		tcpmessage_4.buffer.writeShortLE(coordgrid_5.y + i_1, (short) -23988);

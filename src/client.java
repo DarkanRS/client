@@ -1,4 +1,6 @@
 import jaclib.ping.Ping;
+import net.arikia.dev.drpc.DiscordRichPresence;
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Frame;
@@ -311,6 +313,15 @@ public final class client extends Engine {
 	public static byte aByte7458;
 	public static Interface25 anInterface25_7446;
 	static int[] anIntArray7461;
+	public static Object presence;
+	
+	public static DiscordRichPresence getPresence() {
+		try {
+			return (DiscordRichPresence) presence;
+		} catch (Exception e) {
+			return null;
+		}
+	}
 
 	static {
 		aClass184Array7220 = new BufferedConnectionContext[] { aClass184_7475, aClass184_7218 };
@@ -1075,7 +1086,7 @@ public final class client extends Engine {
 		String str_2 = " ";
 
 		try {
-			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1082242167);
+			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			str_2 = str_2 + coordgrid_3.x + "," + coordgrid_3.y + "," + IndexLoaders.MAP_REGION_DECODER.getSizeX(-2095875527) + "," + IndexLoaders.MAP_REGION_DECODER.getSizeY(-1882387528) + " ";
 			if (Class84.myPlayer != null) {
 				str_2 = str_2 + Class4.anInt35 + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_3.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_3.y) + " ";
@@ -1709,7 +1720,7 @@ public final class client extends Engine {
 
 	static boolean method11651(IComponentDefinitions icomponentdefinitions_0) {
 		if (aBool7168) {
-			if (method11633(icomponentdefinitions_0).settings != 0) {
+			if (method11633(icomponentdefinitions_0).settingsHash != 0) {
 				return false;
 			}
 
@@ -1865,7 +1876,7 @@ public final class client extends Engine {
 					i_18 = i_20 < i_6 ? i_20 : i_6;
 				}
 
-				if (icomponentdefinitions_12.type != 0 && !icomponentdefinitions_12.aBool1384 && method11633(icomponentdefinitions_12).settings == 0 && icomponentdefinitions_12 != aClass118_7247 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1269 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1374 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1372 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1436) {
+				if (icomponentdefinitions_12.type != 0 && !icomponentdefinitions_12.aBool1384 && method11633(icomponentdefinitions_12).settingsHash == 0 && icomponentdefinitions_12 != aClass118_7247 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1269 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1374 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1372 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1436) {
 					if (i_15 < i_17 && i_16 < i_18) {
 						Class86.method1482(icomponentdefinitions_12, (byte) 35);
 					}
@@ -2967,7 +2978,7 @@ public final class client extends Engine {
 			}
 		}
 
-		Class84.method1464(490404841);
+		PulseEvent.processPulseEvents();
 		RenderAnimIndexLoader.method3630(1475911246);
 		++anInt7261;
 		Class380.method6451(-1, -1, 703434359);

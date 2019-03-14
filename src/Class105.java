@@ -40,7 +40,7 @@ public class Class105 {
 	}
 
 	static void method1806(RsBitsBuffer rsbitsbuffer_0, int i_1, int i_2) {
-		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(2087234907);
+		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		boolean bool_4 = rsbitsbuffer_0.readBits(1, (byte) 56) == 1;
 		if (bool_4) {
 			Class197.anIntArray2435[++Class197.anInt2434 - 1] = i_1;
@@ -224,7 +224,7 @@ public class Class105 {
 	}
 
 	public static void method1807(int i_0, byte b_1) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(14, (long) i_0);
+		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(14, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 94);
 	}
 }

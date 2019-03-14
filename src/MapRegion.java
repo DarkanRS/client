@@ -1304,7 +1304,7 @@ public class MapRegion {
 		return this.aClass329_Sub1_3167 != null && this.aClass329_Sub1_3167.aByteArrayArrayArray3788 != null && this.aClass329_Sub1_3167.aByteArrayArrayArray3788[i_1] != null ? this.aClass329_Sub1_3167.aByteArrayArrayArray3788[i_1] : null;
 	}
 
-	public CoordGrid getCoordGrid(int i_1) {
+	public CoordGrid getCoordGrid() {
 		return this.coordGrid;
 	}
 
@@ -1428,9 +1428,9 @@ public class MapRegion {
 	}
 
 	static void method4562(int i_0, String string_1, int i_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(2, (long) i_0);
-		class282_sub50_sub12_3.method14995(860950307);
-		class282_sub50_sub12_3.aString9640 = string_1;
+		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(2, (long) i_0);
+		class282_sub50_sub12_3.immediate();
+		class282_sub50_sub12_3.string = string_1;
 	}
 
 	public static Class350 method4564(RsByteBuffer rsbytebuffer_0, int i_1) {

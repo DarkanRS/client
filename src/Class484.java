@@ -27,7 +27,7 @@ public final class Class484 {
 		if (icomponentdefinitions_0.aByte1294 == 4) {
 			icomponentdefinitions_0.anInt1429 = icomponentdefinitions_0.anInt1301 * icomponentdefinitions_0.anInt1375 / icomponentdefinitions_0.anInt1289;
 		}
-		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).settings != 0 || icomponentdefinitions_0.type == 0)) {
+		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).settingsHash != 0 || icomponentdefinitions_0.type == 0)) {
 			if (icomponentdefinitions_0.anInt1429 < 5 && icomponentdefinitions_0.anInt1301 < 5) {
 				icomponentdefinitions_0.anInt1429 = 5;
 				icomponentdefinitions_0.anInt1301 = 5;

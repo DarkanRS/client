@@ -419,12 +419,12 @@ public class RsByteBuffer extends Node {
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
 	}
 
-	public int readShortLE(byte b_1) {
+	public int readShortLE() {
 		this.index += 2;
 		return ((this.buffer[this.index - 1] & 0xff) << 8) + (this.buffer[this.index - 2] & 0xff);
 	}
 
-	public int readShortLE128() {
+	public int readUnsignedShortLE128() {
 		this.index += 2;
 		return ((this.buffer[this.index - 1] & 0xff) << 8) + (this.buffer[this.index - 2] - 128 & 0xff);
 	}
@@ -439,7 +439,7 @@ public class RsByteBuffer extends Node {
 		return i_2;
 	}
 
-	public int readUnsignedShort128(int i_1) {
+	public int readShort128() {
 		this.index += 2;
 		int i_2 = (this.buffer[this.index - 1] - 128 & 0xff) + ((this.buffer[this.index - 2] & 0xff) << 8);
 		if (i_2 > 32767) {
@@ -449,7 +449,7 @@ public class RsByteBuffer extends Node {
 		return i_2;
 	}
 
-	public int readUnsignedShortLE128(int i_1) {
+	public int readShortLE128() {
 		this.index += 2;
 		int i_2 = ((this.buffer[this.index - 1] & 0xff) << 8) + (this.buffer[this.index - 2] - 128 & 0xff);
 		if (i_2 > 32767) {

@@ -23,13 +23,6 @@ public class Defaults8Loader {
 		}
 	}
 
-	static void method11155(int i_0, int i_1, int i_2) {
-		Class282_Sub50_Sub12 class282_sub50_sub12_3 = Engine.getIComponentVar(15, 0L);
-		class282_sub50_sub12_3.method14995(1022143569);
-		class282_sub50_sub12_3.anInt9668 = i_0;
-		class282_sub50_sub12_3.anInt9641 = i_1;
-	}
-
 	public static void method11156(int i_0) {
 		Stack stack_1 = Class285.aStack3390;
 		synchronized (Class285.aStack3390) {
