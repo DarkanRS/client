@@ -248,7 +248,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		if (i_1 == 0) {
 			this.method15364(i_2, i_3, 16711935);
 		} else {
-			int i_5 = Class12.method488(i_2, i_3, -1863158316);
+			int i_5 = HostNameIdentifier.method488(i_2, i_3, -1863158316);
 			int i_6 = Class282_Sub20_Sub24.method15390(i_2, i_3, 768902996);
 			if (i_5 == this.anInt9845 && i_6 == this.anInt9850) {
 				this.anInt9858 = 0;
@@ -354,7 +354,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			i_3 = 0;
 			i_2 = 0;
 		} else {
-			i_3 = Class12.method488(i_2, this.anInt9847, -1833618815);
+			i_3 = HostNameIdentifier.method488(i_2, this.anInt9847, -1833618815);
 			i_4 = Class282_Sub20_Sub24.method15390(i_2, this.anInt9847, 1570261179);
 		}
 
@@ -780,7 +780,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 	final void method15332(byte b_1) {
 		this.anInt9848 = this.anInt9846;
-		this.anInt9845 = Class12.method488(this.anInt9846, this.anInt9847, -1884211393);
+		this.anInt9845 = HostNameIdentifier.method488(this.anInt9846, this.anInt9847, -1884211393);
 		this.anInt9850 = Class282_Sub20_Sub24.method15390(this.anInt9846, this.anInt9847, 1768966833);
 	}
 
@@ -940,7 +940,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if ((i_3 & 0x80000) != 0) {
 			string_16 = rsbitsbuffer_0.readString();
-			i_7 = rsbitsbuffer_0.readUnsignedByte128(-1590045136);
+			i_7 = rsbitsbuffer_0.readUnsignedByte128();
 			if ((i_7 & 0x1) != 0) {
 				Class191.method3167(2, i_7, player_2.method16127(true, 1944808899), player_2.method16128(false, 1912893547), player_2.username, string_16, 1566432010);
 			}
@@ -955,7 +955,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				i_6 = -1;
 			}
 
-			i_8 = rsbitsbuffer_0.readUnsignedByte128(-1571232040);
+			i_8 = rsbitsbuffer_0.readUnsignedByte128();
 			i_9 = i_8 & 0x7;
 			i_10 = i_8 >> 3 & 0xf;
 			if (i_10 == 15) {
@@ -986,7 +986,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 						i_10 = rsbitsbuffer_0.readUnsignedSmart(2133803964);
 					} else if (i_19 == 32766) {
 						i_19 = -1;
-						i_9 = rsbitsbuffer_0.readUnsignedByteC(-1911985407);
+						i_9 = rsbitsbuffer_0.readUnsignedByteC();
 					} else {
 						i_9 = rsbitsbuffer_0.readUnsignedSmart(2072861558);
 					}
@@ -1004,7 +1004,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 					if (i_10 != 32767) {
 						i_19 = rsbitsbuffer_0.readUnsignedSmart(1806128568);
 						i_12 = rsbitsbuffer_0.readUnsigned128Byte();
-						int i_13 = i_10 > 0 ? rsbitsbuffer_0.readUnsignedByte128(-1733572994) : i_12;
+						int i_13 = i_10 > 0 ? rsbitsbuffer_0.readUnsignedByte128() : i_12;
 						player_2.displayHitbar(i_9, client.cycles, i_10, i_19, i_12, i_13, (byte) 0);
 					} else {
 						player_2.method15857(i_9, 1885735347);
@@ -1014,7 +1014,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		}
 
 		if ((i_3 & 0x1) != 0) {
-			i_6 = rsbitsbuffer_0.readUnsignedByteC(850654507);
+			i_6 = rsbitsbuffer_0.readUnsignedByteC();
 			byte[] bytes_21 = new byte[i_6];
 			RsByteBuffer rsbytebuffer_22 = new RsByteBuffer(bytes_21);
 			rsbitsbuffer_0.readBytes(bytes_21, 0, i_6);
@@ -1054,7 +1054,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 			for (i_10 = 0; i_10 < i_6; i_10++) {
 				ints_14[i_10] = rsbitsbuffer_0.readBigSmart();
-				ints_15[i_10] = rsbitsbuffer_0.readUnsignedByteC(145947443);
+				ints_15[i_10] = rsbitsbuffer_0.readUnsignedByteC();
 				ints_17[i_10] = rsbitsbuffer_0.readShortLE128();
 			}
 
@@ -1115,7 +1115,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				i_6 = -1;
 			}
 
-			i_8 = rsbitsbuffer_0.readUnsignedByte128(-1063420458);
+			i_8 = rsbitsbuffer_0.readUnsignedByte128();
 			i_9 = i_8 & 0x7;
 			i_10 = i_8 >> 3 & 0xf;
 			if (i_10 == 15) {

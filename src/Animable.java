@@ -572,7 +572,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				return false;
 			} else {
 				this.loadedInterfaceId = i_1;
-				Class202.runIComponentScripts(this.inter.components, 2088119296);
+				Connection.runIComponentScripts(this.inter.components, 2088119296);
 				return true;
 			}
 		}
@@ -580,7 +580,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	void method15816(byte b_1) {
 		if (this.loadedInterfaceId != -1) {
-			Class12.clearComponents(this.loadedInterfaceId, -1658723672);
+			HostNameIdentifier.clearComponents(this.loadedInterfaceId, -1658723672);
 			this.inter = null;
 			this.loadedInterfaceId = -1;
 		}

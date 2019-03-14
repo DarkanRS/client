@@ -47,10 +47,10 @@ public class Class378 {
 			int i_3 = 0;
 			for (int i_4 = 0; i_4 < this.anIntArray4521.length; i_4++) {
 				int i_5 = this.anIntArray4521[i_4];
-				if (this.aClass317_4522.method5661(i_5, 2017428513)) {
+				if (this.aClass317_4522.loadCutscene(i_5)) {
 					++i_3;
 				}
-				if (this.aClass317_4523.method5661(i_5, -810105857)) {
+				if (this.aClass317_4523.loadCutscene(i_5)) {
 					++i_3;
 				}
 			}

@@ -62,7 +62,7 @@ public class Class496 implements Interface43 {
 
 	static final void method8310(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		icomponentdefinitions_0.anInt1423 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		Class109.method1858(icomponentdefinitions_0, (byte) -17);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -17);
 	}
 
 	static int method8313(byte b_0) {
@@ -96,14 +96,14 @@ public class Class496 implements Interface43 {
 		return b_1;
 	}
 
-	public static void method8314(String string_0, int i_1, int i_2) {
-		if (Class448.aClass450_5424 == null) {
-			Class448.aClass450_5424 = new Class450();
+	public static void method8314(String string_0, int port, int i_2) {
+		if (Class448.lobbyConnectionInfo == null) {
+			Class448.lobbyConnectionInfo = new ConnectionInfo();
 		}
-		Class448.aClass450_5424.aString5433 = string_0;
-		Class448.aClass450_5424.worldId = i_1 + 1099;
-		Class448.aClass450_5424.anInt5434 = Class448.aClass450_5424.worldId * -1708079975 + 1140744768;
-		Class448.aClass450_5424.anInt5437 = Class448.aClass450_5424.worldId * -1473668237 + 1047080176;
+		Class448.lobbyConnectionInfo.host = string_0;
+		Class448.lobbyConnectionInfo.worldId = port + 1099;
+		Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId;
+		Class448.lobbyConnectionInfo.anInt5437 = Class448.lobbyConnectionInfo.worldId;
 	}
 
 	static final void method8315(int i_0) {

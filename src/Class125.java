@@ -64,7 +64,7 @@ public class Class125 implements Interface8 {
 		icomponentdefinitions_0.anInt1359 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1360 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		icomponentdefinitions_0.anInt1358 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
-		Class109.method1858(icomponentdefinitions_0, (byte) -42);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -42);
 	}
 
 	static final void method2170(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

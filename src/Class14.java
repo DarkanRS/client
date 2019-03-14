@@ -126,7 +126,7 @@ public class Class14 {
 				if (i_14 == 65535) {
 					i_14 = -1;
 				}
-				i_7 = rsbitsbuffer_0.readUnsignedByte128(-1454950076);
+				i_7 = rsbitsbuffer_0.readUnsignedByte128();
 				i_8 = i_7 & 0x7;
 				i_9 = i_7 >> 3 & 0xf;
 				if (i_9 == 15) {
@@ -144,7 +144,7 @@ public class Class14 {
 			int[] ints_15;
 			int[] ints_16;
 			if ((i_4 & 0x8000) != 0) {
-				i_14 = rsbitsbuffer_0.readUnsignedByteC(-172016026);
+				i_14 = rsbitsbuffer_0.readUnsignedByteC();
 				ints_15 = new int[i_14];
 				ints_16 = new int[i_14];
 				int[] ints_17 = new int[i_14];
@@ -162,7 +162,7 @@ public class Class14 {
 				if (i_14 == 65535) {
 					i_14 = -1;
 				}
-				i_7 = rsbitsbuffer_0.readUnsignedByte128(-967780898);
+				i_7 = rsbitsbuffer_0.readUnsignedByte128();
 				i_8 = i_7 & 0x7;
 				i_9 = i_7 >> 3 & 0xf;
 				if (i_9 == 15) {
@@ -172,7 +172,7 @@ public class Class14 {
 				npc_3.sendSpotAnim(i_14, i_6, i_8, i_9, bool_24, 1, 733349032);
 			}
 			if ((i_4 & 0x1) != 0) {
-				i_14 = rsbitsbuffer_0.readUnsignedByte128(-1043197231);
+				i_14 = rsbitsbuffer_0.readUnsignedByte128();
 				if (i_14 > 0) {
 					for (i_6 = 0; i_6 < i_14; i_6++) {
 						i_7 = -1;
@@ -194,7 +194,7 @@ public class Class14 {
 						npc_3.applyHit(i_10, i_8, i_7, i_9, client.cycles, i_11, 1810678734);
 					}
 				}
-				i_6 = rsbitsbuffer_0.readUnsignedByte128(-625812613);
+				i_6 = rsbitsbuffer_0.readUnsignedByte128();
 				if (i_6 > 0) {
 					for (i_7 = 0; i_7 < i_6; i_7++) {
 						i_8 = rsbitsbuffer_0.readUnsignedSmart(2098648600);
@@ -202,7 +202,7 @@ public class Class14 {
 						if (i_9 != 32767) {
 							i_10 = rsbitsbuffer_0.readUnsignedSmart(1675414519);
 							i_11 = rsbitsbuffer_0.readUnsigned128Byte();
-							i_12 = i_9 > 0 ? rsbitsbuffer_0.readUnsignedByte128(-1240191837) : i_11;
+							i_12 = i_9 > 0 ? rsbitsbuffer_0.readUnsignedByte128() : i_11;
 							npc_3.displayHitbar(i_8, client.cycles, i_9, i_10, i_11, i_12, (byte) 0);
 						} else {
 							npc_3.method15857(i_8, 1885735347);
@@ -239,7 +239,7 @@ public class Class14 {
 			if ((i_4 & 0x80000) != 0) {
 				i_14 = rsbitsbuffer_0.buffer[++rsbitsbuffer_0.index - 1] & 0xff;
 				for (i_6 = 0; i_6 < i_14; i_6++) {
-					i_7 = rsbitsbuffer_0.readUnsignedByte128(-890813741);
+					i_7 = rsbitsbuffer_0.readUnsignedByte128();
 					i_8 = rsbitsbuffer_0.readInt();
 					i_9 = rsbitsbuffer_0.method13132(-458827259);
 					npc_3.method16179(i_7, i_8, i_9, (byte) -110);
@@ -255,7 +255,7 @@ public class Class14 {
 				if (npc_3.definitions.aShortArray4867 != null) {
 					i_6 = npc_3.definitions.aShortArray4867.length;
 				}
-				i_8 = rsbitsbuffer_0.readUnsignedByte128(-1866772562);
+				i_8 = rsbitsbuffer_0.readUnsignedByte128();
 				if ((i_8 & 0x1) != 1) {
 					ints_18 = null;
 					if ((i_8 & 0x2) == 2) {
@@ -340,7 +340,7 @@ public class Class14 {
 				if (i_14 == 65535) {
 					i_14 = -1;
 				}
-				i_7 = rsbitsbuffer_0.readUnsignedByteC(-1949571815);
+				i_7 = rsbitsbuffer_0.readUnsignedByteC();
 				i_8 = i_7 & 0x7;
 				i_9 = i_7 >> 3 & 0xf;
 				if (i_9 == 15) {

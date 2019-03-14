@@ -13,7 +13,7 @@ public class Class175 {
 
 	static final void method2960(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.aBool1363 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
-		Class109.method1858(icomponentdefinitions_0, (byte) 9);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 9);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class244.method4196(icomponentdefinitions_0.idHash, (byte) 0);
 		}
@@ -156,7 +156,7 @@ public class Class175 {
 				} else {
 					class282_sub48_0.aClass282_Sub15_Sub5_8096.method15312(i_9, (byte) 125);
 					class282_sub48_0.aClass282_Sub15_Sub5_8096.method15340(i_11, -1828796659);
-					if (!class282_sub48_0.aClass282_Sub15_Sub5_8096.method4994(274080272)) {
+					if (!class282_sub48_0.aClass282_Sub15_Sub5_8096.isLinked()) {
 						class282_sub48_0.aClass282_Sub15_Sub5_8096 = null;
 						class282_sub48_0.aClass282_Sub18_8087 = null;
 						class282_sub48_0.aClass282_Sub26_Sub1_Sub1_8106 = null;

@@ -21,8 +21,8 @@ public class Class236 {
 
 	static final void method3983(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 4;
-		icomponentdefinitions_0.anInt1295 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1296 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.basePositionX = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.basePositionY = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		if (i_4 < 0) {
 			i_4 = 0;
@@ -37,10 +37,10 @@ public class Class236 {
 		}
 		icomponentdefinitions_0.aByte1333 = (byte) i_4;
 		icomponentdefinitions_0.aByte1355 = (byte) i_5;
-		Class109.method1858(icomponentdefinitions_0, (byte) -75);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -75);
 		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
-		if (icomponentdefinitions_0.anInt1268 == 0) {
-			Class12.method483(interface_1, icomponentdefinitions_0, false, -1665129520);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1665129520);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class396.method6774(icomponentdefinitions_0.idHash, (byte) -43);

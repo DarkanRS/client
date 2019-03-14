@@ -344,7 +344,7 @@ public class QuestDefinitions {
 		rsbitsbuffer_0.writeInt(IndexLoaders.aClass317_2663.getCrc());
 	}
 
-	public static void method4140(String string_0, int i_1) {
+	public static void setConsoleText(String string_0, int i_1) {
 		Class179.aString2225 = string_0;
 		Class179.anInt2220 = Class179.aString2225.length();
 	}

@@ -113,7 +113,7 @@ public class Class150 {
 	public static void method2582(int i_0, int[] ints_1, int i_2) {
 		if (i_0 != -1 && Class456_Sub3.isInterfaceLoaded(i_0, ints_1, -1943227865)) {
 			IComponentDefinitions[] arr_3 = Class468_Sub8.INTERFACES[i_0].components;
-			Class202.runIComponentScripts(arr_3, 2088119296);
+			Connection.runIComponentScripts(arr_3, 2088119296);
 		}
 	}
 

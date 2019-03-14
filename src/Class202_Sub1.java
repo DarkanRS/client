@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.net.Socket;
 
-public class Class202_Sub1 extends Class202 {
+public class Class202_Sub1 extends Connection {
 
 	public static ClanChannel GUEST_CLAN_CHANNEL;
 

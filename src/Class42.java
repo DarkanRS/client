@@ -7,7 +7,7 @@ public class Class42 implements Interface2 {
 	Class357 aClass357_416;
 
 	public boolean method17() {
-		return this.aClass317_415.method5661(this.aClass357_416.anInt4124 * -206423037 * -1847374165, -1305601959);
+		return this.aClass317_415.loadCutscene(this.aClass357_416.anInt4124 * -206423037 * -1847374165);
 	}
 
 	public void method18() {
@@ -20,7 +20,7 @@ public class Class42 implements Interface2 {
 	}
 
 	public boolean method10(int i_1) {
-		return this.aClass317_415.method5661(this.aClass357_416.anInt4124, 1496586207);
+		return this.aClass317_415.loadCutscene(this.aClass357_416.anInt4124);
 	}
 
 	public void method12(boolean bool_1) {
@@ -52,7 +52,7 @@ public class Class42 implements Interface2 {
 	}
 
 	public boolean method13() {
-		return this.aClass317_415.method5661(this.aClass357_416.anInt4124 * -206423037 * -1847374165, -299517708);
+		return this.aClass317_415.loadCutscene(this.aClass357_416.anInt4124 * -206423037 * -1847374165);
 	}
 
 	public void method14(boolean bool_1) {
@@ -72,11 +72,11 @@ public class Class42 implements Interface2 {
 	}
 
 	public boolean method9() {
-		return this.aClass317_415.method5661(this.aClass357_416.anInt4124 * -206423037 * -1847374165, -849546583);
+		return this.aClass317_415.loadCutscene(this.aClass357_416.anInt4124 * -206423037 * -1847374165);
 	}
 
 	public boolean method21() {
-		return this.aClass317_415.method5661(this.aClass357_416.anInt4124 * -206423037 * -1847374165, -709821543);
+		return this.aClass317_415.loadCutscene(this.aClass357_416.anInt4124 * -206423037 * -1847374165);
 	}
 
 	public void method20(boolean bool_1, int i_2) {

@@ -39,7 +39,7 @@ public class Class418 {
 		NativeSprite nativesprite_7 = (NativeSprite) this.aClass427_4998.aClass229_5122.get(long_5);
 		if (nativesprite_7 != null) {
 			return nativesprite_7;
-		} else if (!this.aClass427_4998.aClass317_5118.method5661(this.anInt4995, -2124549990)) {
+		} else if (!this.aClass427_4998.aClass317_5118.loadCutscene(this.anInt4995)) {
 			return null;
 		} else {
 			Class91 class91_8 = Class91.method1522(this.aClass427_4998.aClass317_5118, this.anInt4995, 0);
@@ -64,7 +64,7 @@ public class Class418 {
 	}
 
 	public boolean method7015(int i_1) {
-		return this.aClass427_4998.aClass317_5118.method5661(this.anInt4995, 2025308521);
+		return this.aClass427_4998.aClass317_5118.loadCutscene(this.anInt4995);
 	}
 
 	static void method7022(byte b_0) {

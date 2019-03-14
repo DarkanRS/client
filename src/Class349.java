@@ -48,7 +48,7 @@ public class Class349 {
 	}
 
 	static final void method6186(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		if (icomponentdefinitions_0.anInt1268 == 4) {
+		if (icomponentdefinitions_0.type == 4) {
 			Class306.method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -2108209213);
 		}
 

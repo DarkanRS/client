@@ -185,7 +185,7 @@ public abstract class Class152 {
 					if (Class383.method6515(Class84.myPlayer.displayName, 1942118537).equals(string_2)) {
 						LoadingStage.method6681(4, Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592), (byte) 58);
 					} else {
-						Class184 class184_7 = Class468_Sub20.method12807(1188178835);
+						BufferedConnectionContext class184_7 = Class468_Sub20.method12807(1188178835);
 						TCPMessage tcpmessage_9 = Class271.method4828(OutgoingPacket.aClass379_4553, class184_7.isaac, 564733792);
 						tcpmessage_9.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_9.buffer.writeString(string_0);

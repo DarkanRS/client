@@ -55,7 +55,7 @@ public abstract class Class209 {
 
 	public abstract void method3595();
 
-	public static void method3598(String string_0, int i_1) {
+	public static void printConsoleMessage(String string_0, int i_1) {
 		if (Class13.aStringArray129 == null) {
 			FontRenderer.method402(1696819544);
 		}
@@ -104,7 +104,7 @@ public abstract class Class209 {
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(1488415195);
 			if (npcdefinitions_5.aShortArray4867 != null && i_4 >= 0 && i_4 < npcdefinitions_5.aShortArray4867.length) {
 				icomponentdefinitions_0.aClass417_1308.aShortArray4991[i_4] = (short) i_3;
-				Class109.method1858(icomponentdefinitions_0, (byte) 25);
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) 25);
 			} else {
 				throw new RuntimeException("");
 			}

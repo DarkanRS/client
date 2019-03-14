@@ -151,17 +151,17 @@ public class Class28 implements Interface2 {
 
 	static final void method774(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.aBool1351 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
-		Class109.method1858(icomponentdefinitions_0, (byte) 44);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 44);
 	}
 
 	static final void method776(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
-		if (icomponentdefinitions_0.anInt1290 == IComponentDefinitions.anInt1266) {
+		if (icomponentdefinitions_0.contentType == IComponentDefinitions.anInt1266) {
 			if (Class84.myPlayer.displayName == null) {
 				icomponentdefinitions_0.anInt1330 = 0;
 				icomponentdefinitions_0.anInt1339 = 0;
 			} else {
-				icomponentdefinitions_0.anInt1385 = 150;
-				icomponentdefinitions_0.anInt1336 = (int) (Math.sin((double) client.cycles / 40.0D) * 256.0D) & 0x7ff;
+				icomponentdefinitions_0.spritePitch = 150;
+				icomponentdefinitions_0.spriteRoll = (int) (Math.sin((double) client.cycles / 40.0D) * 256.0D) & 0x7ff;
 				icomponentdefinitions_0.anInt1329 = 5;
 				icomponentdefinitions_0.anInt1330 = client.anInt7315;
 				icomponentdefinitions_0.anInt1339 = Class272.method4840(Class84.myPlayer.displayName, (byte) 15);
@@ -170,7 +170,7 @@ public class Class28 implements Interface2 {
 					if (icomponentdefinitions_0.aClass456_1437 == null) {
 						icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
 					}
-					icomponentdefinitions_0.anInt1321 = class456_sub3_2.method7597(-486545120);
+					icomponentdefinitions_0.animation = class456_sub3_2.method7597(-486545120);
 					icomponentdefinitions_0.aClass456_1437.method7563(class456_sub3_2, -887916681);
 				} else {
 					icomponentdefinitions_0.aClass456_1437 = null;

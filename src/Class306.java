@@ -144,7 +144,7 @@ public class Class306 implements Runnable {
 
 	static final void method5453(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1453 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		Class109.method1858(icomponentdefinitions_0, (byte) 38);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 38);
 	}
 
 	static final void method5455(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -200,7 +200,7 @@ public class Class306 implements Runnable {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (i_4 != icomponentdefinitions_0.anInt1435) {
 			icomponentdefinitions_0.anInt1435 = i_4;
-			Class109.method1858(icomponentdefinitions_0, (byte) 77);
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 77);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			JS5LocalRequester.method5581(icomponentdefinitions_0.idHash, (byte) 2);

@@ -325,7 +325,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	public static void method16099(IComponentDefinitions[] arr_0, int i_1, int i_2, int i_3, boolean bool_4, byte b_5) {
 		for (int i_6 = 0; i_6 < arr_0.length; i_6++) {
 			IComponentDefinitions icomponentdefinitions_7 = arr_0[i_6];
-			if (icomponentdefinitions_7 != null && icomponentdefinitions_7.anInt1305 == i_1) {
+			if (icomponentdefinitions_7 != null && icomponentdefinitions_7.parent == i_1) {
 				Class484.method8200(icomponentdefinitions_7, i_2, i_3, bool_4, -417515150);
 				Class246.method4204(icomponentdefinitions_7, i_2, i_3, -878856707);
 				if (icomponentdefinitions_7.anInt1311 > icomponentdefinitions_7.anInt1376 - icomponentdefinitions_7.anInt1301) {
@@ -340,7 +340,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 				if (icomponentdefinitions_7.anInt1312 < 0) {
 					icomponentdefinitions_7.anInt1312 = 0;
 				}
-				if (icomponentdefinitions_7.anInt1268 == 0) {
+				if (icomponentdefinitions_7.type == 0) {
 					Class480.method8044(arr_0, icomponentdefinitions_7, bool_4, (byte) -82);
 				}
 			}

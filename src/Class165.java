@@ -21,7 +21,7 @@ public class Class165 {
 
 	static void method2853(boolean bool_0, int i_1) {
 		if (Class179.aString2225.length() != 0) {
-			Class209.method3598("--> " + Class179.aString2225, -1362570363);
+			Class209.printConsoleMessage("--> " + Class179.aString2225, -1362570363);
 			Class251.handleCommand(Class179.aString2225, false, bool_0, -354697449);
 			Class179.anInt2226 = 0;
 			if (!bool_0) {

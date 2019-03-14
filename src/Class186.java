@@ -71,10 +71,10 @@ public class Class186 {
 	static void method3083(int i_0) {
 		Class9.aClass184_73.method3054((short) 18699);
 		Class9.aClass184_73.recievedBuffer.index = 0;
-		Class9.aClass184_73.aClass375_2278 = null;
-		Class9.aClass184_73.aClass375_2296 = null;
-		Class9.aClass184_73.aClass375_2291 = null;
-		Class9.aClass184_73.anInt2289 = 0;
+		Class9.aClass184_73.lastPacket = null;
+		Class9.aClass184_73.secondLastPacket = null;
+		Class9.aClass184_73.thirdLastPacket = null;
+		Class9.aClass184_73.idleReadPulses = 0;
 		client.anInt7178 = 0;
 		Class209_Sub1.method12916((byte) 16);
 		client.anInt7434 = 0;

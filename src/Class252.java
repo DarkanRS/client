@@ -127,7 +127,7 @@ public class Class252 implements Interface43 {
 			}
 			i_23 = i_22 * 100 / i_20;
 			int i_24 = i_21 * 10000 / i_20;
-			String string_25 = "Cache:" + Class202.method3342((long) i_24, 2, true, Language.aClass495_5795, (byte) 28) + "% (" + i_23 + "%)";
+			String string_25 = "Cache:" + Connection.method3342((long) i_24, 2, true, Language.aClass495_5795, (byte) 28) + "% (" + i_23 + "%)";
 			Renderers.FONT_RENDERER.method359(string_25, i_4, i_5, -256, -1, 1878721557);
 			i_5 += 12;
 		}

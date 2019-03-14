@@ -62,7 +62,7 @@ public class Class38 {
 		Class180.aClass229_2245.method3859(1791836497);
 	}
 
-	public static Class202 createAsyncConnection(Socket socket_0, int i_1, int i_2) throws IOException {
+	public static Connection createAsyncConnection(Socket socket_0, int i_1, int i_2) throws IOException {
 		return new Class202_Sub1(socket_0, i_1);
 	}
 
@@ -87,7 +87,7 @@ public class Class38 {
 
 	static void method857(GraphicalRenderer graphicalrenderer_0, int i_1) {
 		int i_2 = Class301.anInt3555;
-		int i_3 = Class184.anInt2300;
+		int i_3 = BufferedConnectionContext.anInt2300;
 		int i_4 = Class158_Sub2.anInt8975;
 		int i_5 = Class110.anInt1104 - 3;
 		byte b_6 = 20;
@@ -95,7 +95,7 @@ public class Class38 {
 			Class186.aClass8_2348 = (FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, Class242.anInt2982, true, true, -2144080048);
 			Class176.aClass414_2200 = Class487.aClass378_5752.method6415(client.anInterface35_7206, Class242.anInt2982, -1588148414);
 			if (Class186.aClass8_2348 != null && Class176.aClass414_2200 != null) {
-				Class316.method5594(-559600711);
+				Class316.method5594();
 				int i_15 = i_4 / 2 + i_2;
 				if (i_15 + i_4 > Class349.anInt4083) {
 					i_15 = Class349.anInt4083 - i_4;
@@ -103,7 +103,7 @@ public class Class38 {
 				if (i_15 < 0) {
 					i_15 = 0;
 				}
-				NativeLibraryLoader.method4653(i_15, Class184.anInt2300, 1505177278);
+				NativeLibraryLoader.method4653(i_15, BufferedConnectionContext.anInt2300, 1505177278);
 				return;
 			}
 		}
@@ -114,7 +114,7 @@ public class Class38 {
 			fontrenderer_7 = Class285.aClass8_3394;
 		}
 		FontMetrics fontmetrics_8 = Class114.method1887(-864314974);
-		Class456_Sub2.method12680(graphicalrenderer_0, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, fontrenderer_7, fontmetrics_8, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -827597083), -1519032164);
+		Class456_Sub2.method12680(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, fontrenderer_7, fontmetrics_8, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -827597083), -1519032164);
 		int i_9 = 255 - Class182.anInt2262 - Class20.anInt156;
 		if (i_9 < 0) {
 			i_9 = 0;
@@ -156,7 +156,7 @@ public class Class38 {
 				Class487.method8209(graphicalrenderer_0, Class341.anInt3996, Class282_Sub50_Sub2.anInt9471, Class96_Sub3.anInt8518, Class521_Sub1_Sub5_Sub1.anInt10526, b_6, (byte) 61);
 			}
 		}
-		Class487.method8209(graphicalrenderer_0, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, (byte) -15);
+		Class487.method8209(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, (byte) -15);
 		if (!Class20.aBool162) {
 			i_12 = 0;
 			for (class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 123); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(-668033309)) {
@@ -167,11 +167,11 @@ public class Class38 {
 		} else {
 			i_12 = 0;
 			for (class282_sub50_sub15_16 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_16 != null; class282_sub50_sub15_16 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(880459303)) {
-				i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.anInt4978 + Class184.anInt2300 + 1;
+				i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.anInt4978 + BufferedConnectionContext.anInt2300 + 1;
 				if (class282_sub50_sub15_16.anInt9769 == 1) {
-					Class282_Sub25.method12400(i_10, i_11, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_14, (Class282_Sub50_Sub7) class282_sub50_sub15_16.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -462904311);
+					Class282_Sub25.method12400(i_10, i_11, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_14, (Class282_Sub50_Sub7) class282_sub50_sub15_16.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -462904311);
 				} else {
-					Class99.method1630(i_10, i_11, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_14, class282_sub50_sub15_16, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -814194841);
+					Class99.method1630(i_10, i_11, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_14, class282_sub50_sub15_16, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -814194841);
 				}
 				++i_12;
 			}

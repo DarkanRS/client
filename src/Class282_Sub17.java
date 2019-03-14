@@ -26,8 +26,8 @@ public abstract class Class282_Sub17 extends Node {
 
 	static final void method12260(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 4;
-		icomponentdefinitions_0.anInt1297 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1298 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.baseWidth = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.baseHeight = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		icomponentdefinitions_0.anInt1417 = 0;
 		icomponentdefinitions_0.anInt1326 = 0;
 		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
@@ -46,10 +46,10 @@ public abstract class Class282_Sub17 extends Node {
 
 		icomponentdefinitions_0.aByte1368 = (byte) i_4;
 		icomponentdefinitions_0.aByte1294 = (byte) i_5;
-		Class109.method1858(icomponentdefinitions_0, (byte) -29);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -29);
 		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
-		if (icomponentdefinitions_0.anInt1268 == 0) {
-			Class12.method483(interface_1, icomponentdefinitions_0, false, -610252618);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -610252618);
 		}
 
 	}

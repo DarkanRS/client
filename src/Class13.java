@@ -14,7 +14,7 @@ public class Class13 {
 
 	static final void method501(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		icomponentdefinitions_0.aBool1322 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
-		Class109.method1858(icomponentdefinitions_0, (byte) -70);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -70);
 	}
 
 	static final void method502(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -58,9 +58,9 @@ public class Class13 {
 		cs2executor_2.intStackPtr -= 2;
 		icomponentdefinitions_0.anInt1376 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1314 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		Class109.method1858(icomponentdefinitions_0, (byte) -10);
-		if (icomponentdefinitions_0.anInt1268 == 0) {
-			Class12.method483(interface_1, icomponentdefinitions_0, false, -1735080264);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -10);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1735080264);
 		}
 	}
 

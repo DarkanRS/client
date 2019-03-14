@@ -66,8 +66,8 @@ public class Class42_Sub1 extends Class42 {
 		Class113.CLAN_CHANNEL = null;
 		Class496.aClass510_5816 = null;
 		Class28.aLong351 = 0L;
-		Class316.method5594(-559600711);
-		HitsplatDefinitions.method3851(-402153223);
+		Class316.method5594();
+		HitsplatDefinitions.method3851();
 	}
 
 	static void method14563(boolean bool_0, Class282_Sub15_Sub2 class282_sub15_sub2_1, short s_2) {

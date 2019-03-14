@@ -53,7 +53,7 @@ public class Class86 {
 	}
 
 	static void method1482(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
-		if (icomponentdefinitions_0.anInt1268 == 5 && icomponentdefinitions_0.anInt1426 != -1) {
+		if (icomponentdefinitions_0.type == 5 && icomponentdefinitions_0.anInt1426 != -1) {
 			Class415.method6996(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_0, -585931804);
 		}
 	}

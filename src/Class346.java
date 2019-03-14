@@ -138,7 +138,7 @@ public class Class346 {
 	}
 
 	public static Class411 method6156(int i_0, int i_1) {
-		Class411[] arr_2 = Class451.method7519((short) 19418);
+		Class411[] arr_2 = HashTableIterator.method7519((short) 19418);
 		Class411[] arr_3 = arr_2;
 		for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class411 class411_5 = arr_3[i_4];
@@ -237,13 +237,13 @@ public class Class346 {
 				Class337.unloadInterface(client.anInt7349, -650534239);
 			}
 			for (Class282_Sub44 class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 6)) {
-				if (!class282_sub44_2.method4994(-2135855077)) {
+				if (!class282_sub44_2.isLinked()) {
 					class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(439080271);
 					if (class282_sub44_2 == null) {
 						break;
 					}
 				}
-				Class351.method6196(class282_sub44_2, true, false, -1457682699);
+				Class351.closeChildren(class282_sub44_2, true, false, -1457682699);
 			}
 			client.anInt7349 = -1;
 			client.aClass465_7442 = new IterableNodeMap(8);

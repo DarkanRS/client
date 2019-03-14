@@ -154,7 +154,7 @@ public class Class96_Sub19 extends Class96 {
 							client.aClass10Array7456[i_7] = client.aClass10Array7456[i_7 + 1];
 						}
 						client.anInt7386 = client.anInt7347;
-						Class184 class184_9 = Class468_Sub20.method12807(-1089718324);
+						BufferedConnectionContext class184_9 = Class468_Sub20.method12807(-1089718324);
 						TCPMessage tcpmessage_8 = Class271.method4828(OutgoingPacket.aClass379_4561, class184_9.isaac, 1422272717);
 						tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_8.buffer.writeString(string_0);

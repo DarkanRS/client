@@ -7,7 +7,7 @@ public class Class487 {
 	}
 
 	static void method8209(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
-		if ((Class354.aClass160_4110 == null || ParamDefinitions.aClass160_5339 == null || Class125.aClass160_1571 == null) && IndexLoaders.SPRITES_INDEX.method5661(Class254.anInt3145, -635610932) && IndexLoaders.SPRITES_INDEX.method5661(Class446.anInt5396, -688613423) && IndexLoaders.SPRITES_INDEX.method5661(Class17.anInt148, 1307952066)) {
+		if ((Class354.aClass160_4110 == null || ParamDefinitions.aClass160_5339 == null || Class125.aClass160_1571 == null) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class254.anInt3145) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class446.anInt5396) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class17.anInt148)) {
 			Class91 class91_10 = Class91.method1522(IndexLoaders.SPRITES_INDEX, Class446.anInt5396, 0);
 			ParamDefinitions.aClass160_5339 = graphicalrenderer_0.method8444(class91_10, true);
 			class91_10.method1525();

@@ -24,7 +24,7 @@ public class Class52_Sub1 extends Class52 {
 	}
 
 	public boolean method13() {
-		return !super.method10(2015288079) ? false : this.aClass317_493.method5661(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279, -1211021035);
+		return !super.method10(2015288079) ? false : this.aClass317_493.loadCutscene(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279);
 	}
 
 	public void method22(int i_1) {
@@ -37,7 +37,7 @@ public class Class52_Sub1 extends Class52 {
 	}
 
 	public boolean method10(int i_1) {
-		return !super.method10(1121926798) ? false : this.aClass317_493.method5661(((Class350_Sub1) this.aClass350_489).anInt7756, -4331164);
+		return !super.method10(1121926798) ? false : this.aClass317_493.loadCutscene(((Class350_Sub1) this.aClass350_489).anInt7756);
 	}
 
 	public void method16() {
@@ -61,15 +61,15 @@ public class Class52_Sub1 extends Class52 {
 	}
 
 	public boolean method9() {
-		return !super.method10(2028287243) ? false : this.aClass317_493.method5661(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279, -1414518154);
+		return !super.method10(2028287243) ? false : this.aClass317_493.loadCutscene(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279);
 	}
 
 	public boolean method21() {
-		return !super.method10(836898161) ? false : this.aClass317_493.method5661(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279, 2037828412);
+		return !super.method10(836898161) ? false : this.aClass317_493.loadCutscene(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279);
 	}
 
 	public boolean method17() {
-		return !super.method10(896318051) ? false : this.aClass317_493.method5661(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279, -288465333);
+		return !super.method10(896318051) ? false : this.aClass317_493.loadCutscene(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279);
 	}
 
 	void method1080(boolean bool_1, int i_2, int i_3) {

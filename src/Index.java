@@ -484,7 +484,7 @@ public final class Index {
 		}
 	}
 
-	public synchronized boolean method5661(int i_1, int i_2) {
+	public synchronized boolean loadCutscene(int i_1) {
 		if (!this.referenceTableLoaded()) {
 			return false;
 		} else if (this.referenceTable.fileCounts.length == 1) {

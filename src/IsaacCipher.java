@@ -136,7 +136,7 @@ public final class IsaacCipher {
 		this.anInt5152 = 256;
 	}
 
-	public final int nextInt(int i_1) {
+	public final int nextInt() {
 		if (this.anInt5152 == 0) {
 			this.method7256(420526674);
 			this.anInt5152 = 256;
@@ -147,7 +147,7 @@ public final class IsaacCipher {
 		return (this.anIntArray5150[(this.anInt5152 -= 1)]);
 	}
 
-	public final int method7255(int i_1) {
+	public final int method7255() {
 		if (this.anInt5152 == 0) {
 			this.method7256(420526674);
 			this.anInt5152 = 256;
@@ -192,12 +192,12 @@ public final class IsaacCipher {
 	}
 
 	public static Class217_Sub1 method7266(int i_0) {
-		return ObjectIndexLoader.method7916(Class159.aClass450_2010.worldId, 1371284314);
+		return ObjectIndexLoader.method7916(Class159.GAME_CONNECTION_INFO.worldId, 1371284314);
 	}
 
 	static final void method7267(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.aBool1344 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
-		Class109.method1858(icomponentdefinitions_0, (byte) 89);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 89);
 	}
 
 	static final void method7268(int i_0) {

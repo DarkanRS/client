@@ -89,8 +89,8 @@ public class Class290 {
 	}
 
 	static final void method5121(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.anInt1264 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		Class109.method1858(icomponentdefinitions_0, (byte) 103);
+		icomponentdefinitions_0.color = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 103);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class282_Sub14.method12223(icomponentdefinitions_0.idHash, (byte) -48);
 		}

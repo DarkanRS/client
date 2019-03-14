@@ -101,7 +101,7 @@ public class WorldMapIndexLoader {
 		if (icomponentdefinitions_1 != null) {
 			int i_4;
 			if (icomponentdefinitions_1.anInt1288 != -1) {
-				IComponentDefinitions icomponentdefinitions_3 = interface_0.components[icomponentdefinitions_1.anInt1305 & 0xffff];
+				IComponentDefinitions icomponentdefinitions_3 = interface_0.components[icomponentdefinitions_1.parent & 0xffff];
 				if (icomponentdefinitions_3 != null) {
 					if (icomponentdefinitions_3.aClass118Array1438 == icomponentdefinitions_3.aClass118Array1439) {
 						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];

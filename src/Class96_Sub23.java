@@ -81,14 +81,14 @@ public class Class96_Sub23 extends Class96 {
 	}
 
 	public static final IComponentDefinitions method14682(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, int i_2) {
-		if (icomponentdefinitions_1.anInt1305 != -1) {
-			return interface_0.getComponent(icomponentdefinitions_1.anInt1305);
+		if (icomponentdefinitions_1.parent != -1) {
+			return interface_0.getComponent(icomponentdefinitions_1.parent);
 		} else {
 			if (!interface_0.aBool999) {
 				int i_3 = icomponentdefinitions_1.idHash >>> 16;
-				Class451 class451_4 = new Class451(client.aClass465_7442);
+				HashTableIterator class451_4 = new HashTableIterator(client.aClass465_7442);
 
-				for (Class282_Sub44 class282_sub44_5 = (Class282_Sub44) class451_4.method7503(1677593260); class282_sub44_5 != null; class282_sub44_5 = (Class282_Sub44) class451_4.next()) {
+				for (Class282_Sub44 class282_sub44_5 = (Class282_Sub44) class451_4.first(); class282_sub44_5 != null; class282_sub44_5 = (Class282_Sub44) class451_4.next()) {
 					if (i_3 == class282_sub44_5.anInt8063) {
 						return Class117.getInterfaceComponent((int) class282_sub44_5.data);
 					}

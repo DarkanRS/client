@@ -68,12 +68,12 @@ public class Class58 implements Interface19 {
 						i_4 = -1;
 						for (i_5 = 0; i_5 < Class20.anInt169; i_5++) {
 							if (Class20.aBool187) {
-								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + fontmetrics_1.anInt4978 + Class184.anInt2300 + 1 + 20;
+								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
 								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
 									i_4 = i_5;
 								}
 							} else {
-								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + Class184.anInt2300 + 31;
+								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
 									i_4 = i_5;
 								}
@@ -95,12 +95,12 @@ public class Class58 implements Interface19 {
 						i_4 = -1;
 						for (i_5 = 0; i_5 < Class20.anInt170; i_5++) {
 							if (Class20.aBool187) {
-								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.anInt4978 + Class184.anInt2300 + 1 + 20;
+								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
 								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
 									i_4 = i_5;
 								}
 							} else {
-								i_8 = i_5 * Class20.anInt178 + Class184.anInt2300 + 31;
+								i_8 = i_5 * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
 									i_4 = i_5;
 								}

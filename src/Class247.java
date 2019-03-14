@@ -294,7 +294,7 @@ public class Class247 {
 			if (Class468_Sub8.INTERFACES[i_3] != null && Class468_Sub8.INTERFACES[i_3].components[i_4] != null) {
 				IComponentDefinitions icomponentdefinitions_5 = Class468_Sub8.INTERFACES[i_3].components[i_4];
 				Class282_Sub50_Sub7 class282_sub50_sub7_6;
-				if (i_1 == -1 && icomponentdefinitions_5.anInt1268 == 0) {
+				if (i_1 == -1 && icomponentdefinitions_5.type == 0) {
 					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 59); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1787533982)) {
 						if (class282_sub50_sub7_6.anInt9587 == 58 || class282_sub50_sub7_6.anInt9587 == 1007 || class282_sub50_sub7_6.anInt9587 == 25 || class282_sub50_sub7_6.anInt9587 == 57 || class282_sub50_sub7_6.anInt9587 == 30) {
 							for (IComponentDefinitions icomponentdefinitions_7 = Class117.getInterfaceComponent(class282_sub50_sub7_6.anInt9582); icomponentdefinitions_7 != null; icomponentdefinitions_7 = Class96_Sub23.method14682(Class468_Sub8.INTERFACES[icomponentdefinitions_7.idHash >> 16], icomponentdefinitions_7, -838454718)) {

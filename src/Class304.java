@@ -719,7 +719,7 @@ public class Class304 implements Interface27 {
 			client.anInt7346 = icomponentdefinitions_0.anInt1426;
 			Defaults8Loader.anInt5932 = icomponentdefinitions_0.anInt1307;
 			client.anInt7427 = icomponentdefinitions_0.anInt1310;
-			Class109.method1858(icomponentdefinitions_0, (byte) 35);
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 35);
 		}
 	}
 

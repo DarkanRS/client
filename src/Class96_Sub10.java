@@ -33,7 +33,7 @@ public abstract class Class96_Sub10 extends Class96 {
 				Class96_Sub4.executeHookInner200k(hookrequest_6, 156165111);
 			}
 			if (client.method11633(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
-				Class184 class184_8 = Class468_Sub20.method12807(870102038);
+				BufferedConnectionContext class184_8 = Class468_Sub20.method12807(870102038);
 				if (client.gameState == 0 || client.gameState == 13) {
 					TCPMessage tcpmessage_7;
 					if (i_0 == 1) {

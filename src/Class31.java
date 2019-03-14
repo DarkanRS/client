@@ -87,21 +87,21 @@ public class Class31 implements IndexLoader {
 	public static final Class282_Sub44 method812(int i_0, Class282_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
 		Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) i_0);
 		if (class282_sub44_5 != null) {
-			Class351.method6196(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
+			Class351.closeChildren(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
 		}
 		client.aClass465_7442.put(class282_sub44_1, (long) i_0);
 		ClipMap.method6007(class282_sub44_1.anInt8063, ints_2, -1937827624);
 		IComponentDefinitions icomponentdefinitions_6 = Class117.getInterfaceComponent(i_0);
 		if (icomponentdefinitions_6 != null) {
-			Class109.method1858(icomponentdefinitions_6, (byte) 12);
+			Class109.redrawComponent(icomponentdefinitions_6, (byte) 12);
 		}
 		if (client.aClass118_7352 != null) {
-			Class109.method1858(client.aClass118_7352, (byte) -25);
+			Class109.redrawComponent(client.aClass118_7352, (byte) -25);
 			client.aClass118_7352 = null;
 		}
 		OutputStream_Sub1.method12938((byte) 26);
 		if (icomponentdefinitions_6 != null) {
-			Class12.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
+			HostNameIdentifier.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
 		}
 		if (!bool_3) {
 			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);

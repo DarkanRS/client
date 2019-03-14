@@ -510,11 +510,11 @@ public abstract class FontRenderer {
 		for (int i_1 = 0; i_1 < Class13.aStringArray129.length; i_1++) {
 			Class13.aStringArray129[i_1] = "";
 		}
-		Class209.method3598(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE, -1940277002), -1694092142);
+		Class209.printConsoleMessage(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE, -1940277002), -1694092142);
 	}
 
 	static final void method403(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aBool1291 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.disableHover = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 	}
 
 	public static GraphicalRenderer method404(Canvas canvas_0, Interface22 interface22_1, int i_2, int i_3, int i_4) {

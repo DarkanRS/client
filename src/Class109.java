@@ -22,13 +22,13 @@ public abstract class Class109 {
 		if (icomponentdefinitions_0.anInt1312 < 0) {
 			icomponentdefinitions_0.anInt1312 = 0;
 		}
-		method1858(icomponentdefinitions_0, (byte) 19);
+		redrawComponent(icomponentdefinitions_0, (byte) 19);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class468_Sub12.method12709(icomponentdefinitions_0.idHash, (byte) 67);
 		}
 	}
 
-	public static void method1858(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
+	public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
 		if (icomponentdefinitions_0.anInt1450 == client.anInt7408) {
 			client.aBoolArray7443[icomponentdefinitions_0.anInt1449] = true;
 		}

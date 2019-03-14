@@ -822,7 +822,7 @@ public class ClipMap {
 		short s_6 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		if (i_4 >= 0 && i_4 < 5) {
 			icomponentdefinitions_0.method2013(i_4, s_5, s_6, (byte) 11);
-			Class109.method1858(icomponentdefinitions_0, (byte) -78);
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) -78);
 			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 				Class276.method4903(icomponentdefinitions_0.idHash, i_4, -1379026024);
 			}

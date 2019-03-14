@@ -111,7 +111,7 @@ public class Class301 implements Interface41 {
 					} catch (Exception exception_12) {
 						;
 					}
-					Class209.method3598("Pausing for " + i_2 + " seconds...", -707420136);
+					Class209.printConsoleMessage("Pausing for " + i_2 + " seconds...", -707420136);
 					Class179.anInt2231 = i_1 + 1;
 					Class179.aLong2232 = Class169.time() + (long) (i_2 * 1000);
 					return;

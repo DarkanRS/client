@@ -146,9 +146,9 @@ public abstract class Class158 {
 
 	static final void method2732(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (!string_4.equals(icomponentdefinitions_0.aString1391)) {
-			icomponentdefinitions_0.aString1391 = string_4;
-			Class109.method1858(icomponentdefinitions_0, (byte) 79);
+		if (!string_4.equals(icomponentdefinitions_0.text)) {
+			icomponentdefinitions_0.text = string_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 79);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			RenderAnimIndexLoader.method3631(icomponentdefinitions_0.idHash, -1844455774);

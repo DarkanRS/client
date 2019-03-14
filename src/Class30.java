@@ -33,7 +33,7 @@ public class Class30 implements Runnable {
 	public void run() {
 		try {
 			int i_1 = Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId + 7000;
-			BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.aString5433 + ":" + i_1 + "/news.ws?game=" + client.CURRENT_GAME.anInt5746)).openStream())));
+			BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.host + ":" + i_1 + "/news.ws?game=" + client.CURRENT_GAME.anInt5746)).openStream())));
 			String string_3 = bufferedreader_2.readLine();
 			ArrayList arraylist_4;
 			for (arraylist_4 = new ArrayList(); string_3 != null; string_3 = bufferedreader_2.readLine()) {
@@ -70,7 +70,7 @@ public class Class30 implements Runnable {
 
 	static final void method797(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		if (i_4 != icomponentdefinitions_0.anInt1321) {
+		if (i_4 != icomponentdefinitions_0.animation) {
 			if (i_4 != -1) {
 				if (icomponentdefinitions_0.aClass456_1437 == null) {
 					icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
@@ -79,8 +79,8 @@ public class Class30 implements Runnable {
 			} else {
 				icomponentdefinitions_0.aClass456_1437 = null;
 			}
-			icomponentdefinitions_0.anInt1321 = i_4;
-			Class109.method1858(icomponentdefinitions_0, (byte) 39);
+			icomponentdefinitions_0.animation = i_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 39);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class149_Sub1.method14582(icomponentdefinitions_0.idHash, -370064085);

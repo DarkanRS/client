@@ -1,6 +1,6 @@
 public final class Class47_Sub1 extends Class47 {
 
-	static Class202 updateConnection;
+	static Connection updateConnection;
 	int[] anIntArray9139;
 	Class101 aClass101_9124;
 	Class115[] aClass115Array9137 = new Class115[3];

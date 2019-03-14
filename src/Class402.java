@@ -25,7 +25,7 @@ public class Class402 {
 							client.aClass6Array7452[i_7] = client.aClass6Array7452[i_7 + 1];
 						}
 						client.anInt7386 = client.anInt7347;
-						Class184 class184_9 = Class468_Sub20.method12807(222304163);
+						BufferedConnectionContext class184_9 = Class468_Sub20.method12807(222304163);
 						TCPMessage tcpmessage_8 = Class271.method4828(OutgoingPacket.aClass379_4551, class184_9.isaac, 1980188569);
 						tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_8.buffer.writeString(string_0);

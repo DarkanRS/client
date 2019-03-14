@@ -65,9 +65,9 @@ public class Class96_Sub22 extends Class96 {
 					PlayerAppearance.method4032(ParticleProducerDefinition.method1163(13421772, 619010179) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, (long) player_0.anInt10314, false, -1005059728);
 				} else {
 					for (int i_10 = 7; i_10 >= 0; --i_10) {
-						if (client.aStringArray7329[i_10] != null) {
+						if (client.PLAYER_OPTIONS[i_10] != null) {
 							short s_11 = 0;
-							if (Game.darkan == client.CURRENT_GAME && client.aStringArray7329[i_10].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -440996695))) {
+							if (Game.darkan == client.CURRENT_GAME && client.PLAYER_OPTIONS[i_10].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -440996695))) {
 								if (client.aBool7454 && player_0.anInt10565 > Class84.myPlayer.anInt10565) {
 									s_11 = 2000;
 								}
@@ -80,12 +80,12 @@ public class Class96_Sub22 extends Class96 {
 								} else if (player_0.aBool10550) {
 									s_11 = 2000;
 								}
-							} else if (client.aBoolArray7330[i_10]) {
+							} else if (client.PLAYER_OPTION_REDUCED_PRIORITY[i_10]) {
 								s_11 = 2000;
 							}
 							short s_12 = (short) (client.aShortArray7239[i_10] + s_11);
-							int i_7 = client.anIntArray7328[i_10] != -1 ? client.anIntArray7328[i_10] : client.anInt7342;
-							PlayerAppearance.method4032(client.aStringArray7329[i_10], ParticleProducerDefinition.method1163(16777215, 619010179) + string_3, i_7, s_12, -1, (long) player_0.anInt10314, 0, 0, true, false, (long) player_0.anInt10314, false, -1621747030);
+							int i_7 = client.PLAYER_OPTION_CURSORS[i_10] != -1 ? client.PLAYER_OPTION_CURSORS[i_10] : client.anInt7342;
+							PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], ParticleProducerDefinition.method1163(16777215, 619010179) + string_3, i_7, s_12, -1, (long) player_0.anInt10314, 0, 0, true, false, (long) player_0.anInt10314, false, -1621747030);
 						}
 					}
 				}
@@ -114,7 +114,7 @@ public class Class96_Sub22 extends Class96 {
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(-610795534);
 			if (i_4 >= 0 && i_4 < npcdefinitions_5.anIntArray4859.length) {
 				icomponentdefinitions_0.aClass417_1308.anIntArray4992[i_4] = i_3;
-				Class109.method1858(icomponentdefinitions_0, (byte) -65);
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) -65);
 			} else {
 				throw new RuntimeException("" + i_4);
 			}

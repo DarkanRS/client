@@ -2,7 +2,7 @@ public class Class233 {
 
 	public static int anInt2880;
 
-	static Class202 aClass202_2883;
+	static Connection aClass202_2883;
 
 	SoftCache aClass229_2881 = new SoftCache(64);
 

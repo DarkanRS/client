@@ -163,18 +163,18 @@ public class LinkedNodeList {
 		TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4587, client.aClass184_7475.isaac, 1209499491);
 		client.aClass184_7475.method3049(tcpmessage_2, 2048910350);
 		for (Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 30)) {
-			if (!class282_sub44_3.method4994(-1056667124)) {
+			if (!class282_sub44_3.isLinked()) {
 				class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(861555487);
 				if (class282_sub44_3 == null) {
 					break;
 				}
 			}
 			if (class282_sub44_3.anInt8062 == 0) {
-				Class351.method6196(class282_sub44_3, true, bool_0, -1206109982);
+				Class351.closeChildren(class282_sub44_3, true, bool_0, -1206109982);
 			}
 		}
 		if (client.aClass118_7352 != null) {
-			Class109.method1858(client.aClass118_7352, (byte) 66);
+			Class109.redrawComponent(client.aClass118_7352, (byte) 66);
 			client.aClass118_7352 = null;
 		}
 	}

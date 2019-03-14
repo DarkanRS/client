@@ -77,9 +77,9 @@ public class Class438 {
 	}
 
 	public static final void method7333(boolean bool_0, int i_1) {
-		Class184[] arr_2 = client.aClass184Array7220;
+		BufferedConnectionContext[] arr_2 = client.aClass184Array7220;
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-			Class184 class184_4 = arr_2[i_3];
+			BufferedConnectionContext class184_4 = arr_2[i_3];
 			try {
 				class184_4.method3047(1513639473);
 			} catch (IOException ioexception_8) {

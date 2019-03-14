@@ -980,6 +980,6 @@ public class ItemDefinitions implements Definition {
 
 	static final void method7142(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.aBool1420 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
-		Class109.method1858(icomponentdefinitions_0, (byte) 53);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 53);
 	}
 }

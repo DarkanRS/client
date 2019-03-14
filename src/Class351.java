@@ -41,26 +41,26 @@ public class Class351 implements Interface3 {
 		return arr_3;
 	}
 
-	public static final void method6196(Class282_Sub44 class282_sub44_0, boolean bool_1, boolean bool_2, int i_3) {
-		int i_4 = class282_sub44_0.anInt8063;
-		int i_5 = (int) class282_sub44_0.data;
-		class282_sub44_0.remove();
-		if (bool_1) {
+	public static final void closeChildren(Class282_Sub44 parentInterface, boolean unload, boolean bool_2, int i_3) {
+		int i_4 = parentInterface.anInt8063;
+		int interfaceHash = (int) parentInterface.data;
+		parentInterface.remove();
+		if (unload) {
 			Class337.unloadInterface(i_4, -775991491);
 		}
 		Class109_Sub1.method14650(i_4, 185452428);
-		IComponentDefinitions icomponentdefinitions_6 = Class117.getInterfaceComponent(i_5);
-		if (icomponentdefinitions_6 != null) {
-			Class109.method1858(icomponentdefinitions_6, (byte) -15);
+		IComponentDefinitions component = Class117.getInterfaceComponent(interfaceHash);
+		if (component != null) {
+			Class109.redrawComponent(component, (byte) -15);
 		}
 		OutputStream_Sub1.method12938((byte) 7);
 		if (!bool_2 && client.anInt7349 != -1) {
 			Class383.method6514(client.anInt7349, 1, 772605854);
 		}
-		Class451 class451_7 = new Class451(client.aClass465_7442);
-		for (Class282_Sub44 class282_sub44_8 = (Class282_Sub44) class451_7.method7503(2066696054); class282_sub44_8 != null; class282_sub44_8 = (Class282_Sub44) class451_7.next()) {
-			if (!class282_sub44_8.method4994(1418797057)) {
-				class282_sub44_8 = (Class282_Sub44) class451_7.method7503(1554887126);
+		HashTableIterator itr = new HashTableIterator(client.aClass465_7442);
+		for (Class282_Sub44 class282_sub44_8 = (Class282_Sub44) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (Class282_Sub44) itr.next()) {
+			if (!class282_sub44_8.isLinked()) {
+				class282_sub44_8 = (Class282_Sub44) itr.first();
 				if (class282_sub44_8 == null) {
 					break;
 				}
@@ -68,7 +68,7 @@ public class Class351 implements Interface3 {
 			if (class282_sub44_8.anInt8062 == 3) {
 				int i_9 = (int) class282_sub44_8.data;
 				if (i_9 >>> 16 == i_4) {
-					method6196(class282_sub44_8, true, bool_2, -1676599874);
+					closeChildren(class282_sub44_8, true, bool_2, -1676599874);
 				}
 			}
 		}

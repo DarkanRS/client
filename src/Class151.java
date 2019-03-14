@@ -53,7 +53,7 @@ public class Class151 {
 		for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
 			IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
 			if (icomponentdefinitions_4 != null) {
-				if (icomponentdefinitions_4.anInt1268 == 0) {
+				if (icomponentdefinitions_4.type == 0) {
 					if (icomponentdefinitions_4.aClass118Array1439 != null) {
 						method2591(icomponentdefinitions_4.aClass118Array1439, i_1, (byte) -28);
 					}
@@ -87,7 +87,7 @@ public class Class151 {
 
 	static final void method2592(byte b_0) {
 		if (!Class282_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState, 1908805257)) {
-			Class233.aClass202_2883 = client.aClass184_7475.method3053((byte) -113);
+			Class233.aClass202_2883 = client.aClass184_7475.getConnection();
 			client.aClass184_7475.method3061(-1872117357);
 			Class365.setGameState(10);
 		} else {

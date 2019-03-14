@@ -55,12 +55,12 @@ public class Class242 {
 		icomponentdefinitions_0.anInt1350 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		icomponentdefinitions_0.anInt1281 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		icomponentdefinitions_0.anInt1354 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
-		Class109.method1858(icomponentdefinitions_0, (byte) -26);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -26);
 	}
 
 	static final void method4160(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, short s_3) {
 		icomponentdefinitions_0.anInt1323 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		Class109.method1858(icomponentdefinitions_0, (byte) -6);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -6);
 	}
 
 	public static final int method4162(int i_0, int i_1, byte b_2) {

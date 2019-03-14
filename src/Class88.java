@@ -36,7 +36,7 @@ public class Class88 {
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(1471250768);
 			if (i_4 >= 0 && i_4 < npcdefinitions_5.anIntArray4860.length) {
 				icomponentdefinitions_0.aClass417_1308.anIntArray4992[i_4] = i_3;
-				Class109.method1858(icomponentdefinitions_0, (byte) 54);
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) 54);
 			} else {
 				throw new RuntimeException("");
 			}

@@ -71,8 +71,8 @@ public final class Class464 {
 	static final void method7743(IComponentDefinitions[] arr_0, int i_1, byte b_2) {
 		for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
 			IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
-			if (icomponentdefinitions_4 != null && icomponentdefinitions_4.anInt1305 == i_1 && !client.method11651(icomponentdefinitions_4)) {
-				if (icomponentdefinitions_4.anInt1268 == 0) {
+			if (icomponentdefinitions_4 != null && icomponentdefinitions_4.parent == i_1 && !client.method11651(icomponentdefinitions_4)) {
+				if (icomponentdefinitions_4.type == 0) {
 					method7743(arr_0, icomponentdefinitions_4.idHash, (byte) 10);
 					if (icomponentdefinitions_4.aClass118Array1439 != null) {
 						method7743(icomponentdefinitions_4.aClass118Array1439, icomponentdefinitions_4.idHash, (byte) 10);
@@ -82,10 +82,10 @@ public final class Class464 {
 						InterfaceWithDefs.method8777(class282_sub44_5.anInt8063, (byte) -57);
 					}
 				}
-				if (icomponentdefinitions_4.anInt1268 == 6 && icomponentdefinitions_4.anInt1321 != -1) {
+				if (icomponentdefinitions_4.type == 6 && icomponentdefinitions_4.animation != -1) {
 					if (icomponentdefinitions_4.aClass456_1437 == null) {
 						icomponentdefinitions_4.aClass456_1437 = new Class456_Sub1();
-						icomponentdefinitions_4.aClass456_1437.method7567(icomponentdefinitions_4.anInt1321, (short) 8960);
+						icomponentdefinitions_4.aClass456_1437.method7567(icomponentdefinitions_4.animation, (short) 8960);
 					}
 					if (icomponentdefinitions_4.aClass456_1437.method7627(client.anInt7261, 1231441216) && icomponentdefinitions_4.aClass456_1437.method7580(602854407)) {
 						icomponentdefinitions_4.aClass456_1437.method7582((byte) -59);

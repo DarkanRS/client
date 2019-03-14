@@ -62,7 +62,7 @@ public class Class413 implements Interface43 {
 		if (client.method11633(icomponentdefinitions_0).continueOptionEnabled() && client.aClass118_7352 == null) {
 			Class158_Sub2.method14355(icomponentdefinitions_0.idHash, icomponentdefinitions_0.anInt1288, -946546687);
 			client.aClass118_7352 = Index.method5694(icomponentdefinitions_0.idHash, icomponentdefinitions_0.anInt1288, -1963750401);
-			Class109.method1858(client.aClass118_7352, (byte) -38);
+			Class109.redrawComponent(client.aClass118_7352, (byte) -38);
 		}
 	}
 }

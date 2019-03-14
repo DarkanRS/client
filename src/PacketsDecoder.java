@@ -11,83 +11,83 @@ public class PacketsDecoder extends Class455 {
 		this.anIntArray9078 = ints_4;
 	}
 
-	static final boolean method14433(Class184 class184_0, int i_1) throws IOException {
-		Class202 class202_2 = class184_0.method3053((byte) -107);
-		RsBitsBuffer buffer = class184_0.recievedBuffer;
-		if (class202_2 == null)
+	static final boolean method14433(BufferedConnectionContext context) throws IOException {
+		Connection connection = context.getConnection();
+		RsBitsBuffer buffer = context.recievedBuffer;
+		if (connection == null)
 			return false;
-		if (class184_0.aClass375_2286 == null) {
-			if (class184_0.aBool2288) {
-				if (!class202_2.available(1, (byte) 84)) {
+		if (context.currentPacket == null) {
+			if (context.aBool2288) {
+				if (!connection.available(1, (byte) 84)) {
 					return false;
 				}
-				class202_2.read(class184_0.recievedBuffer.buffer, 0, 1, -1338515791);
-				++class184_0.anInt2292;
-				class184_0.anInt2289 = 0;
-				class184_0.aBool2288 = false;
+				connection.read(context.recievedBuffer.buffer, 0, 1, -1338515791);
+				++context.read;
+				context.idleReadPulses = 0;
+				context.aBool2288 = false;
 			}
 			buffer.index = 0;
-			if (buffer.method14869((short) 22877)) {
-				if (!class202_2.available(1, (byte) 98)) {
+			if (buffer.nextIsSmart()) {
+				if (!connection.available(1, (byte) 98)) {
 					return false;
 				}
-				class202_2.read(class184_0.recievedBuffer.buffer, 1, 1, -566199770);
-				++class184_0.anInt2292;
-				class184_0.anInt2289 = 0;
+				connection.read(context.recievedBuffer.buffer, 1, 1, -566199770);
+				++context.read;
+				context.idleReadPulses = 0;
 			}
-			class184_0.aBool2288 = true;
+			context.aBool2288 = true;
 			IncomingPacket[] arr_4 = Class60.getIncommingPacket();
-			int flags = buffer.method14870();
-			if (flags < 0 || flags >= arr_4.length) {
-				throw new IOException(flags + " " + buffer.index);
+			int opcode = buffer.readEncryptedSmart();
+			if (opcode < 0 || opcode >= arr_4.length) {
+				throw new IOException(opcode + " " + buffer.index);
 			}
-			class184_0.aClass375_2286 = arr_4[flags];
-			class184_0.anInt2287 = class184_0.aClass375_2286.size;
+			context.currentPacket = arr_4[opcode];
+			context.currentPacketSize = context.currentPacket.size;
 		}
-		if (class184_0.anInt2287 == -1) {
-			if (!class202_2.available(1, (byte) 96)) {
+		if (context.currentPacketSize == -1) {
+			if (!connection.available(1, (byte) 96)) {
 				return false;
 			}
-			class202_2.read(buffer.buffer, 0, 1, -1428027721);
-			class184_0.anInt2287 = buffer.buffer[0] & 0xff;
-			++class184_0.anInt2292;
-			class184_0.anInt2289 = 0;
+			connection.read(buffer.buffer, 0, 1, -1428027721);
+			context.currentPacketSize = buffer.buffer[0] & 0xff;
+			++context.read;
+			context.idleReadPulses = 0;
 		}
-		if (class184_0.anInt2287 == -2) {
-			if (!class202_2.available(2, (byte) 58)) {
+		if (context.currentPacketSize == -2) {
+			if (!connection.available(2, (byte) 58)) {
 				return false;
 			}
-			class202_2.read(buffer.buffer, 0, 2, -1086022200);
+			connection.read(buffer.buffer, 0, 2, -1086022200);
 			buffer.index = 0;
-			class184_0.anInt2287 = buffer.readUnsignedShort();
-			class184_0.anInt2292 += 2;
-			class184_0.anInt2289 = 0;
+			context.currentPacketSize = buffer.readUnsignedShort();
+			context.read += 2;
+			context.idleReadPulses = 0;
 		}
-		if (class184_0.anInt2287 > 0) {
-			if (!class202_2.available(class184_0.anInt2287, (byte) 90)) {
+		if (context.currentPacketSize > 0) {
+			if (!connection.available(context.currentPacketSize, (byte) 90)) {
 				return false;
 			}
 			buffer.index = 0;
-			class202_2.read(buffer.buffer, 0, class184_0.anInt2287, -2131709422);
-			class184_0.anInt2292 += class184_0.anInt2287;
-			class184_0.anInt2289 = 0;
+			connection.read(buffer.buffer, 0, context.currentPacketSize, -2131709422);
+			context.read += context.currentPacketSize;
+			context.idleReadPulses = 0;
 		}
-		class184_0.aClass375_2291 = class184_0.aClass375_2296;
-		class184_0.aClass375_2296 = class184_0.aClass375_2278;
-		class184_0.aClass375_2278 = class184_0.aClass375_2286;
-		if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_MODEL) {
+		context.thirdLastPacket = context.secondLastPacket;
+		context.secondLastPacket = context.lastPacket;
+		context.lastPacket = context.currentPacket;
+		if (context.currentPacket == IncomingPacket.ICOMPONENT_MODEL) {
 			int key = buffer.readInt();
 			int flags = buffer.readIntV2();
 			Class470.method7825();
 			Class96_Sub3.method13786(key, 1, flags, -1, (byte) -45);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PROCESS_DEV_CONSOLE_COMMAND) {
+		} else if (context.currentPacket == IncomingPacket.PROCESS_DEV_CONSOLE_COMMAND) {
 			String string_63 = buffer.readString();
 			Class251.handleCommand(string_63, false, false, -354697449);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SEND_ITEM_CONTAINER) {
+		} else if (context.currentPacket == IncomingPacket.SEND_ITEM_CONTAINER) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readUnsignedByte();
 			boolean isNegativeKey = (flags & 0x1) == 1;
@@ -102,47 +102,47 @@ public class PacketsDecoder extends Class455 {
 				Class282_Sub21.setItemInContainer(key, slot, itemId - 1, amount, isNegativeKey);
 			}
 			client.anIntArray7381[++client.anInt7382 - 1 & 0x1f] = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_UNDER_NPC_PRIORITY) {
-			int key = buffer.readUnsignedByteC(1686876240);
+		} else if (context.currentPacket == IncomingPacket.PLAYER_UNDER_NPC_PRIORITY) {
+			int key = buffer.readUnsignedByteC();
 			Class470.method7825();
 			client.anInt7291 = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SET_CURSOR) {
-			Class85.aString817 = class184_0.anInt2287 > 2 ? buffer.readString() : Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1187913693);
-			client.anInt7311 = class184_0.anInt2287 > 0 ? buffer.readUnsignedShort() : -1;
+		} else if (context.currentPacket == IncomingPacket.SET_CURSOR) {
+			Class85.aString817 = context.currentPacketSize > 2 ? buffer.readString() : Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1187913693);
+			client.anInt7311 = context.currentPacketSize > 0 ? buffer.readUnsignedShort() : -1;
 			if (client.anInt7311 == 65535) {
 				client.anInt7311 = -1;
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CAMERA_ROTATION) {
+		} else if (context.currentPacket == IncomingPacket.CAMERA_ROTATION) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readShortLE128();
 			Class470.method7825();
-			Class12.method486(flags, key, 0, 596260679);
-			class184_0.aClass375_2286 = null;
+			HostNameIdentifier.method486(flags, key, 0, 596260679);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.LOGOUT_FULL) {
+		} else if (context.currentPacket == IncomingPacket.LOGOUT_FULL) {
 			Class438.method7333(false, 2061848059);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4446) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4446) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4210, 2050771049);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CLAN_CHAT_CHANNEL) {
+		} else if (context.currentPacket == IncomingPacket.CLAN_CHAT_CHANNEL) {
 			client.anInt7395 = client.anInt7347;
 			boolean nonGuest = buffer.readUnsignedByte() == 1;
-			if (class184_0.anInt2287 == 1) {
+			if (context.currentPacketSize == 1) {
 				if (nonGuest) {
 					Class113.CLAN_CHANNEL = null;
 				} else {
 					Class202_Sub1.GUEST_CLAN_CHANNEL = null;
 				}
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			} else {
 				if (nonGuest) {
@@ -150,10 +150,10 @@ public class PacketsDecoder extends Class455 {
 				} else {
 					Class202_Sub1.GUEST_CLAN_CHANNEL = new ClanChannel(buffer);
 				}
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			}
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GRAND_EXCHANGE_SLOT) {
+		} else if (context.currentPacket == IncomingPacket.GRAND_EXCHANGE_SLOT) {
 			int key = buffer.readUnsignedByte();
 			if (buffer.readUnsignedByte() == 0) {
 				client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot();
@@ -162,25 +162,25 @@ public class PacketsDecoder extends Class455 {
 				client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot(buffer);
 			}
 			client.anInt7320 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4395) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4395) {
 			int key = buffer.readInt();
 			int flags = buffer.readShortLE((byte) -42);
 			int i_6 = buffer.readShortLE((byte) -126);
 			int i_7 = buffer.readShortLE128();
 			Class470.method7825();
 			Class149_Sub1.method14583(key, flags, i_6, i_7);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_TEXT) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_TEXT) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readIntV1();
 			Class470.method7825();
 			Class38.method860(flags, string_63, -697454473);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.WINDOW_PANE_PACKET) {
+		} else if (context.currentPacket == IncomingPacket.WINDOW_PANE_PACKET) {
 			int key = buffer.readIntV1();
 			int flags = buffer.readIntV1();
 			int i_6 = buffer.readUnsignedShort128();
@@ -199,27 +199,27 @@ public class PacketsDecoder extends Class455 {
 			for (int i_11 = 0; i_11 < 107; i_11++) {
 				client.aBoolArray7443[i_11] = true;
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4478) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4478) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntV1();
 			int i_6 = buffer.readIntV1();
 			Class470.method7825();
 			Class96_Sub3.method13786(flags, 5, key, i_6, (byte) -76);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RESET_CAMERA) {
+		} else if (context.currentPacket == IncomingPacket.RESET_CAMERA) {
 			Class470.method7825();
 			Class514.method8841(1210401894);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_STRING_SMALL) {
+		} else if (context.currentPacket == IncomingPacket.GLOBAL_STRING_SMALL) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readShortLE128();
 			Class470.method7825();
 			MapRegion.method4562(flags, string_63, -1783534567);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
 			// } else if (class184.aClass375_2286 == IncomingPacket.aClass375_4459) {
 			// try {
@@ -239,24 +239,24 @@ public class PacketsDecoder extends Class455 {
 			// }
 			// class184.aClass375_2286 = null;
 			// return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4416) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4416) {
 			Class158_Sub1_Sub2.anInt10131 = buffer.read128Byte((short) 9583) << 3;
-			Class272.anInt3331 = buffer.readUnsignedByte128(-1153285276);
+			Class272.anInt3331 = buffer.readUnsignedByte128();
 			SceneObjectType.anInt5495 = buffer.readByte() << 3;
-			while (buffer.index < class184_0.anInt2287) {
+			while (buffer.index < context.currentPacketSize) {
 				TilestreamPacket tilestreampacket_68 = Class163.method2842(-332458150)[buffer.readUnsignedByte()];
 				Class188.decodeTilestreamPacket(tilestreampacket_68, 1774288531);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4406) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4406) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readInt();
 			Class470.method7825();
 			Class175.method2966(flags, key, (short) 151);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RECIEVE_PRIVATE_QUICKCHAT) {
+		} else if (context.currentPacket == IncomingPacket.RECIEVE_PRIVATE_QUICKCHAT) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -295,16 +295,16 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(18, 0, string_88, str_92, string_88, string_101, (String) null, i_12);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4456) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4456) {
 			int key = buffer.readIntLE();
 			int flags = buffer.readUnsignedShort128();
 			Class470.method7825();
 			Class440.method7374(key, flags, -1621742846);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4433) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4433) {
 			int key = buffer.readUnsignedShort();
 			if (key == 65535) {
 				key = -1;
@@ -314,28 +314,28 @@ public class PacketsDecoder extends Class455 {
 			int i_7 = buffer.readUnsignedByte();
 			int i_8 = buffer.readUnsignedShort();
 			Class435.method7300(key, flags, i_6, i_7, false, i_8, 1449989045);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RUN_ENERGY) {
+		} else if (context.currentPacket == IncomingPacket.RUN_ENERGY) {
 			client.anInt7300 = buffer.readUnsignedByte();
 			client.anInt7397 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4379) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4379) {
 			int key = buffer.readInt();
 			int flags = buffer.readShortLE128();
 			int i_6 = buffer.readIntV1();
 			Class470.method7825();
 			Class96_Sub3.method13786(i_6, 3, flags, key, (byte) -84);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SPOTANIM) {
-			int key = buffer.readUnsignedByteC(1994158207);
+		} else if (context.currentPacket == IncomingPacket.SPOTANIM) {
+			int key = buffer.readUnsignedByteC();
 			int flags = buffer.readUnsignedShort128();
 			if (flags == 65535) {
 				flags = -1;
 			}
-			int i_6 = buffer.readUnsignedByteC(-1478296892);
+			int i_6 = buffer.readUnsignedByteC();
 			int i_7 = buffer.readUnsignedShort128();
 			int i_8 = buffer.readIntLE();
 			int i_9 = buffer.readShortLE((byte) -30);
@@ -487,26 +487,26 @@ public class PacketsDecoder extends Class455 {
 					}
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CAMERA_LOOK) {
-			int key = buffer.readUnsignedByte();
-			int flags = buffer.readUnsignedShort128() << 2;
-			int i_6 = buffer.readUnsignedByte128(-1952319270);
-			int i_7 = buffer.readUnsignedByteC(1062022644);
+		} else if (context.currentPacket == IncomingPacket.CAMERA_LOOK) {
+			int viewX = buffer.readUnsignedByte();
+			int viewY = buffer.readUnsignedShort128() << 2;
+			int viewZ = buffer.readUnsignedByte128();
+			int i_7 = buffer.readUnsignedByteC();
 			int i_8 = buffer.readUnsigned128Byte();
 			Class470.method7825();
-			Class11.method469(key, i_6, flags, i_8, i_7, (byte) -10);
-			class184_0.aClass375_2286 = null;
+			Class11.method469(viewX, viewZ, viewY, i_8, i_7, (byte) -10);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4368) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4368) {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readUnsignedShort128();
 			Class470.method7825();
 			Class93.method1575(flags, key, true, 733762718);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GAME_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.GAME_MESSAGE) {
 			int key = buffer.readUnsignedSmart(1685842544);
 			int flags = buffer.readInt();
 			int i_6 = buffer.readUnsignedByte();
@@ -522,49 +522,49 @@ public class PacketsDecoder extends Class455 {
 			}
 			String string_135 = buffer.readString();
 			if (key == 99) {
-				Class209.method3598(string_135, -1476632772);
+				Class209.printConsoleMessage(string_135, -1476632772);
 			} else if (key == 98) {
-				QuestDefinitions.method4140(string_135, -2007576372);
+				QuestDefinitions.setConsoleText(string_135, -2007576372);
 			} else {
 				if (!string_137.equals("") && Class280.method4975(string_137, (byte) -48)) {
-					class184_0.aClass375_2286 = null;
+					context.currentPacket = null;
 					return true;
 				}
 				Class191.method3167(key, flags, string_42, string_137, string_42, string_135, 1911483495);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4439) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4439) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4211, 34147700);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.OPEN_URL) {
+		} else if (context.currentPacket == IncomingPacket.OPEN_URL) {
 			if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
 				Class440.method7373(Class393.preferences.screenSize.method12687(-2060452662), -1, -1, false, (byte) 2);
 			}
-			byte[] bytes_64 = new byte[class184_0.anInt2287 - 1];
+			byte[] bytes = new byte[context.currentPacketSize - 1];
 			boolean bool_66 = buffer.readUnsignedByte() == 1;
-			buffer.method14873(bytes_64, 0, class184_0.anInt2287 - 1, (byte) 8);
-			RsByteBuffer rsbytebuffer_127 = new RsByteBuffer(bytes_64);
-			String string_42 = rsbytebuffer_127.readString();
+			buffer.readBytes(bytes, 0, context.currentPacketSize - 1, (byte) 8);
+			RsByteBuffer rsbytebuffer_127 = new RsByteBuffer(bytes);
+			String url = rsbytebuffer_127.readString();
 			if (bool_66) {
 				String string_137 = rsbytebuffer_127.readString();
 				if (string_137.length() == 0) {
-					string_137 = string_42;
+					string_137 = url;
 				}
-				if (!client.aBool7310 || Class225_Sub6.aString8069.startsWith("mac") || !Class186.method3082(string_42, 1, Class361.aClass361_4179.method6253((byte) -74), 145298920)) {
+				if (!client.aBool7310 || Class225_Sub6.aString8069.startsWith("mac") || !Class186.method3082(url, 1, Class361.aClass361_4179.method6253((byte) -74), 145298920)) {
 					Class282_Sub50_Sub6.method14788(string_137, true, Class393.preferences.currentToolkit.getValue(111625844) == 5, client.aBool7158, client.aBool7159, (byte) -120);
 				}
 			} else {
-				Class282_Sub50_Sub6.method14788(string_42, true, Class393.preferences.currentToolkit.getValue(-1499528045) == 5, client.aBool7158, client.aBool7159, (byte) -96);
+				Class282_Sub50_Sub6.method14788(url, true, Class393.preferences.currentToolkit.getValue(-1499528045) == 5, client.aBool7158, client.aBool7159, (byte) -96);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CAMERA_SHAKE) {
+		} else if (context.currentPacket == IncomingPacket.CAMERA_SHAKE) {
 			int key = buffer.readUnsigned128Byte();
 			int flags = buffer.readUnsignedShort();
-			int i_6 = buffer.readUnsignedByteC(-588997418);
-			int i_7 = buffer.readUnsignedByteC(138735834);
+			int i_6 = buffer.readUnsignedByteC();
+			int i_7 = buffer.readUnsignedByteC();
 			int i_8 = buffer.readUnsigned128Byte();
 			Class470.method7825();
 			client.aBoolArray7431[i_6] = true;
@@ -572,9 +572,9 @@ public class PacketsDecoder extends Class455 {
 			client.anIntArray7433[i_6] = key;
 			client.anIntArray7462[i_6] = i_8;
 			client.anIntArray7435[i_6] = flags;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4355) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4355) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -602,9 +602,9 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(24, 0, string_88, str_92, string_88, string_135, (String) null, -1);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4434) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4434) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -627,13 +627,13 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(25, 0, string_88, str_92, string_88, str_25, (String) null, i_8);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PRIVATE_GAME_BAR_SETTING) {
+		} else if (context.currentPacket == IncomingPacket.PRIVATE_GAME_BAR_SETTING) {
 			Class149_Sub2.aClass461_9316 = Class246.method4203(buffer.readUnsignedByte(), (byte) 2);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4496) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4496) {
 			int key = buffer.readShortLE128();
 			int[] ints_122 = new int[Class8_Sub3.method14339(179659033).length];
 			for (int i_6 = 0; i_6 < Class8_Sub3.method14339(2021729749).length; i_6++) {
@@ -644,42 +644,42 @@ public class PacketsDecoder extends Class455 {
 			if (class282_sub47_131 != null) {
 				Class20.animate((Animable) class282_sub47_131.anObject8068, ints_122, i_6, true, (byte) 72);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_POSITION) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_POSITION) {
 			int key = buffer.readUnsignedShort128(877005762);
 			int flags = buffer.readIntV2();
 			int i_6 = buffer.readUnsignedShortLE128(-1358044133);
 			Class470.method7825();
 			Class96_Sub16.method14648(flags, i_6, key, (byte) 8);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.DYNAMIC_MAP_REGION) {
-			RsBitsBuffer rsbitsbuffer_65 = new RsBitsBuffer(class184_0.anInt2287);
-			System.arraycopy(class184_0.recievedBuffer.buffer, class184_0.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, class184_0.anInt2287);
+		} else if (context.currentPacket == IncomingPacket.DYNAMIC_MAP_REGION) {
+			RsBitsBuffer rsbitsbuffer_65 = new RsBitsBuffer(context.currentPacketSize);
+			System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
 			FontMetrics.method6989(1407669515);
 			if (Class393.preferences.aClass468_Sub3_8199.method12632(917077703) == 1) {
 				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3155, rsbitsbuffer_65), 301123709);
 			} else {
 				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, rsbitsbuffer_65), 1959185438);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4499) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4499) {
 			client.aByte7458 = buffer.readByte();
 			if (client.aByte7458 == 0 || client.aByte7458 == 1) {
 				client.aBool7323 = true;
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.NPC_ON_ICOMPONENT) {
+		} else if (context.currentPacket == IncomingPacket.NPC_ON_ICOMPONENT) {
 			int key = buffer.readIntLE();
 			int flags = buffer.readIntV1();
 			Class470.method7825();
 			Class96_Sub3.method13786(key, 2, flags, -1, (byte) -52);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PUBLIC_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.PUBLIC_MESSAGE) {
 			int key = buffer.readUnsignedShort();
 			Player player_119;
 			if (key == client.anInt7315) {
@@ -688,7 +688,7 @@ public class PacketsDecoder extends Class455 {
 				player_119 = client.players[key];
 			}
 			if (player_119 == null) {
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			} else {
 				int i_6 = buffer.readUnsignedShort();
@@ -730,31 +730,31 @@ public class PacketsDecoder extends Class455 {
 						}
 					}
 				}
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			}
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4409) {
-			int key = buffer.readUnsignedShort();
-			String string_88 = buffer.readString();
-			boolean isNegativeKey = buffer.readUnsignedByte() == 1;
-			Class448.aClass450_5429 = Class159.aClass450_2010;
-			Class448.aBool5428 = isNegativeKey;
-			Class62.method1262(key, string_88, (byte) 0);
+		} else if (context.currentPacket == IncomingPacket.QUICK_HOP_WORLDS) {
+			int port = buffer.readUnsignedShort();
+			String host = buffer.readString();
+			boolean reconnecting = buffer.readUnsignedByte() == 1;
+			Class448.aClass450_5429 = Class159.GAME_CONNECTION_INFO;
+			Class448.aBool5428 = reconnecting;
+			Class62.setGameHost(port, host);
 			Class365.setGameState(17);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.LOGOUT_LOBBY) {
+		} else if (context.currentPacket == IncomingPacket.LOGOUT_LOBBY) {
 			Class438.method7333(Class9.aBool71, 2100753515);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_CONFIG_1) {
+		} else if (context.currentPacket == IncomingPacket.GLOBAL_CONFIG_1) {
 			int key = buffer.readShortLE((byte) -64);
 			int flags = buffer.readIntV2();
 			Class470.method7825();
 			Class393.method6751(key, flags, -1413337528);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GROUNDITEM_INTERFACE) {
+		} else if (context.currentPacket == IncomingPacket.GROUNDITEM_INTERFACE) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readIntLE();
 			int i_6 = buffer.readShortLE((byte) -14);
@@ -766,16 +766,16 @@ public class PacketsDecoder extends Class455 {
 			int i_12 = buffer.readShortLE128();
 			Class470.method7825();
 			Class31.method812(key, new Class282_Sub44_Sub3(i_6, i_9, new Class520(coordgrid_90, i_12)), new int[] { i_8, i_11, flags, i_7 }, false, (byte) 121);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.FRIENDS_CHAT_CHANNEL) {
+		} else if (context.currentPacket == IncomingPacket.FRIENDS_CHAT_CHANNEL) {
 			client.anInt7179 = client.anInt7347;
-			if (class184_0.anInt2287 == 0) {
+			if (context.currentPacketSize == 0) {
 				client.aString7426 = null;
 				client.aString7359 = null;
 				Class459.anInt5534 = 0;
 				Class467.aClass173Array5575 = null;
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			} else {
 				client.aString7359 = buffer.readString();
@@ -788,7 +788,7 @@ public class PacketsDecoder extends Class455 {
 				Class412.aByte4963 = buffer.readByte();
 				int i_7 = buffer.readUnsignedByte();
 				if (i_7 == 255) {
-					class184_0.aClass375_2286 = null;
+					context.currentPacket = null;
 					return true;
 				} else {
 					Class459.anInt5534 = i_7;
@@ -828,16 +828,16 @@ public class PacketsDecoder extends Class455 {
 						}
 					}
 					Class467.aClass173Array5575 = arr_136;
-					class184_0.aClass375_2286 = null;
+					context.currentPacket = null;
 					return true;
 				}
 			}
-		} else if (class184_0.aClass375_2286 == IncomingPacket.STOP_CAMERA_SHAKE) {
+		} else if (context.currentPacket == IncomingPacket.STOP_CAMERA_SHAKE) {
 			Class470.method7825();
 			Class275_Sub7.method12606((byte) 81);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SET_CLAN_STRING) {
+		} else if (context.currentPacket == IncomingPacket.SET_CLAN_STRING) {
 			int key = buffer.readUnsignedShort();
 			String string_88 = buffer.readString();
 			if (Class46.CLAN_VARS == null) {
@@ -845,26 +845,26 @@ public class PacketsDecoder extends Class455 {
 			}
 			Class46.CLAN_VARS[key] = string_88;
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.MUSIC_TRACK) {
-			int key = buffer.readUnsignedByte128(-1018518837);
-			int flags = buffer.readUnsignedByte128(-655779539);
+		} else if (context.currentPacket == IncomingPacket.MUSIC_TRACK) {
+			int key = buffer.readUnsignedByte128();
+			int flags = buffer.readUnsignedByte128();
 			int i_6 = buffer.readUnsignedShort128();
 			if (i_6 == 65535) {
 				i_6 = -1;
 			}
 			Class42.method890(i_6, flags, key, (byte) -6);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4501) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4501) {
 			boolean bool_91 = buffer.readUnsigned128Byte() == 1;
 			int flags = buffer.readIntLE();
 			Class470.method7825();
 			Class331.method5924(flags, bool_91, 16777472);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.MUSIC_EFFECT) {
+		} else if (context.currentPacket == IncomingPacket.MUSIC_EFFECT) {
 			int key = buffer.method13132(-458827259);
 			int flags = buffer.readUnsigned128Byte();
 			int i_6 = buffer.readShortLE((byte) -115);
@@ -872,28 +872,28 @@ public class PacketsDecoder extends Class455 {
 				i_6 = -1;
 			}
 			Class117.method1978(i_6, key, flags, (byte) 1);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GAME_BAR_SETTINGS) {
-			client.anInt7422 = buffer.readUnsignedByteC(-751450518);
-			client.anInt7416 = buffer.readUnsignedByte128(-1679113626);
-			class184_0.aClass375_2286 = null;
+		} else if (context.currentPacket == IncomingPacket.GAME_BAR_SETTINGS) {
+			client.anInt7422 = buffer.readUnsignedByteC();
+			client.anInt7416 = buffer.readUnsignedByte128();
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4451) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4451) {
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method265(1066076779);
 			client.anInt7453 += 32;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.TILE_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.TILE_MESSAGE) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4215, 844987156);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_WEIGHT) {
+		} else if (context.currentPacket == IncomingPacket.PLAYER_WEIGHT) {
 			client.anInt7354 = buffer.readShort();
 			client.anInt7397 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4399) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4399) {
 			int key = buffer.readIntLE();
 			Class470.method7825();
 			if (key == -1) {
@@ -918,9 +918,9 @@ public class PacketsDecoder extends Class455 {
 				Class508.anInt5864 = (i_6 << 9) + 256;
 				Class86.anInt833 = (i_7 << 9) + 256;
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4509) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4509) {
 			for (int key = 0; key < client.players.length; key++) {
 				if (client.players[key] != null) {
 					client.players[key].currentAnimations = null;
@@ -931,9 +931,9 @@ public class PacketsDecoder extends Class455 {
 				((Animable) client.aClass282_Sub47Array7209[key].anObject8068).currentAnimations = null;
 				((Animable) client.aClass282_Sub47Array7209[key].anObject8068).currentAnimation.method7567(-1, (short) 8960);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CLAN_QUICK_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.CLAN_QUICK_MESSAGE) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			long long_49 = (long) buffer.readUnsignedShort();
@@ -973,9 +973,9 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(i_82, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + string_88, string_88, string_17, class282_sub4_102.clanName, i_11);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4377) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4377) {
 			int key = buffer.readUnsignedShort();
 			long long_47 = buffer.readLong();
 			if (Class46.CLAN_VARS == null) {
@@ -983,9 +983,9 @@ public class PacketsDecoder extends Class455 {
 			}
 			Class46.CLAN_VARS[key] = new Long(long_47);
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RECIEVE_FRIENDS_CHAT_QUICKCHAT) {
+		} else if (context.currentPacket == IncomingPacket.RECIEVE_FRIENDS_CHAT_QUICKCHAT) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -1025,16 +1025,16 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(20, 0, string_88, str_92, string_88, string_41, Class179.method3018(long_28), i_77);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SEND_PRIVATE_QUICKCHAT) {
+		} else if (context.currentPacket == IncomingPacket.SEND_PRIVATE_QUICKCHAT) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readUnsignedShort();
 			String str_92 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(flags, -1726302200).fillDynamicValues(buffer, (byte) 0);
 			MapRegionLoaderTask.appendMessage(19, 0, string_63, string_63, string_63, str_92, (String) null, flags);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4484) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4484) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readInt();
 			if (Class46.CLAN_VARS == null) {
@@ -1042,15 +1042,15 @@ public class PacketsDecoder extends Class455 {
 			}
 			Class46.CLAN_VARS[key] = new Integer(flags);
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.WORLD_TILE) {
+		} else if (context.currentPacket == IncomingPacket.SET_LOCAL_REGION) {
 			Class158_Sub1_Sub2.anInt10131 = buffer.readByte128(2090412640) << 3;
-			Class272.anInt3331 = buffer.readUnsignedByte128(-2083264480);
+			Class272.anInt3331 = buffer.readUnsignedByte128();
 			SceneObjectType.anInt5495 = buffer.readByte128(1860551613) << 3;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SETTINGS_LARGE) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_SETTINGS_LARGE) {
 			int toSlot = buffer.readShortLE128();
 			if (toSlot == 65535) {
 				toSlot = -1;
@@ -1078,9 +1078,9 @@ public class PacketsDecoder extends Class455 {
 				}
 				client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4375) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4375) {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readBigSmart();
 			if (client.aClass281Array7180[key] != null) {
@@ -1091,27 +1091,27 @@ public class PacketsDecoder extends Class455 {
 				client.aClass281Array7180[key] = new Class281(Renderers.SOFTWARE_RENDERER, buffer, flags);
 				client.aClass281Array7180[key].method4978(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1306272287), (byte) -1);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RESET_SOUNDS) {
+		} else if (context.currentPacket == IncomingPacket.RESET_SOUNDS) {
 			Class185.method3077(1093107755);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4405) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4405) {
 			int key = buffer.readInt();
 			int flags = buffer.readInt();
-			TCPMessage tcpmessage_111 = Class271.method4828(OutgoingPacket.aClass379_4595, class184_0.isaac, 2042092);
+			TCPMessage tcpmessage_111 = Class271.method4828(OutgoingPacket.aClass379_4595, context.isaac, 2042092);
 			tcpmessage_111.buffer.writeIntV2(key, (byte) 104);
 			tcpmessage_111.buffer.writeIntV1(flags, -1650869516);
 			tcpmessage_111.buffer.write128Byte(client.FPS, -826747048);
-			class184_0.method3049(tcpmessage_111, -917310259);
-			class184_0.aClass375_2286 = null;
+			context.method3049(tcpmessage_111, -917310259);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4464) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4464) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4216, 1197049024);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4474) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4474) {
 			int key = buffer.readUnsignedShort();
 			byte b_84 = buffer.readByte();
 			if (Class46.CLAN_VARS == null) {
@@ -1119,34 +1119,34 @@ public class PacketsDecoder extends Class455 {
 			}
 			Class46.CLAN_VARS[key] = new Integer(b_84);
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4458) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4458) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4205, 1052430539);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4393) {
-			int key = buffer.readUnsignedByteC(726740720);
+		} else if (context.currentPacket == IncomingPacket.aClass375_4393) {
+			int key = buffer.readUnsignedByteC();
 			int flags = buffer.readShortLE((byte) -122);
 			boolean isNegativeKey = (key & 0x1) == 1;
 			Class29.deleteItemContainer(flags, isNegativeKey, -2088356489);
 			client.anIntArray7381[++client.anInt7382 - 1 & 0x1f] = flags;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SYSTEM_UPDATE) {
+		} else if (context.currentPacket == IncomingPacket.SYSTEM_UPDATE) {
 			if (Class282_Sub17.lobbyState(client.gameState, -1298993736)) {
 				client.anInt7178 = (int) ((float) buffer.readUnsignedShort() * 2.5F);
 			} else {
 				client.anInt7178 = buffer.readUnsignedShort() * 30;
 			}
 			client.anInt7397 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4479) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4479) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4214, 1188928157);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4392) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4392) {
 			SceneObjectType.anInt5495 = buffer.read128Byte((short) 15542) << 3;
 			Class158_Sub1_Sub2.anInt10131 = buffer.readByte() << 3;
 			Class272.anInt3331 = buffer.readUnsignedByte();
@@ -1175,9 +1175,9 @@ public class PacketsDecoder extends Class455 {
 					class282_sub31_110.aBool7774 = true;
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SOUND_IDX14) {
+		} else if (context.currentPacket == IncomingPacket.SOUND_IDX14) {
 			int key = buffer.readUnsignedShort();
 			if (key == 65535) {
 				key = -1;
@@ -1187,28 +1187,28 @@ public class PacketsDecoder extends Class455 {
 			int i_7 = buffer.readUnsignedByte();
 			int i_8 = buffer.readUnsignedShort();
 			Class153.method2618(key, flags, i_6, i_7, i_8, 1278035776);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4372) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4372) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			Class470.method7825();
 			Class96_Sub6.aBool9173 = bool_91;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4441) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4441) {
 			buffer.index += 28;
 			if (buffer.method13105((byte) 80)) {
 				Class496.method8309(buffer, buffer.index - 28, 1177161322);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.HINT_ICON) {
+		} else if (context.currentPacket == IncomingPacket.HINT_ICON) {
 			int key = buffer.readUnsignedByte();
 			int flags = key >> 5;
 			int i_6 = key & 0x1f;
 			if (i_6 == 0) {
 				client.aClass180Array7348[flags] = null;
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			} else {
 				Class180 class180_129 = new Class180();
@@ -1253,27 +1253,27 @@ public class PacketsDecoder extends Class455 {
 					class180_129.anInt2242 = buffer.readInt();
 					client.aClass180Array7348[flags] = class180_129;
 				}
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			}
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4429) {
-			int key = buffer.readUnsignedByte128(-1139286912) * 4;
+		} else if (context.currentPacket == IncomingPacket.aClass375_4429) {
+			int key = buffer.readUnsignedByte128() * 4;
 			int flags = buffer.readUnsignedShortLE128(-1358044133);
 			int i_6 = buffer.readShortLE((byte) -25);
 			int i_7 = buffer.readShort();
-			int i_8 = buffer.readUnsignedByte128(-850673914);
+			int i_8 = buffer.readUnsignedByte128();
 			int i_9 = buffer.readUnsignedShort128();
 			int i_10 = buffer.readUnsignedShort();
 			int i_11 = buffer.readShortLE128();
 			int i_12 = buffer.readShortLE128();
-			int i_35 = buffer.readUnsignedByte128(-1518251062);
+			int i_35 = buffer.readUnsignedByte128();
 			if (i_35 == 255) {
 				i_35 = -1;
 			}
 			byte b_75 = buffer.readByteC(-1483186607);
 			byte b_79 = buffer.readByteC(616572083);
 			int i_81 = buffer.readUnsignedShort128();
-			int i_34 = buffer.readUnsignedByteC(-1005375060);
+			int i_34 = buffer.readUnsignedByteC();
 			boolean bool_18 = (i_8 & 0x1) != 0;
 			boolean bool_19 = (i_8 & 0x2) != 0;
 			int i_40 = bool_19 ? i_8 >> 2 : -1;
@@ -1297,37 +1297,37 @@ public class PacketsDecoder extends Class455 {
 				i_10 <<= 2;
 				Class438.method7335(i_12, flags, i_7, i_40, i_34, key, i_59, i_23, i_77, i_15, i_11, i_6, i_35, i_10, bool_18, 1771137455);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4358) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4358) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
-			byte[] bytes_107 = new byte[class184_0.anInt2287 - 1];
-			buffer.readBytes(bytes_107, 0, class184_0.anInt2287 - 1);
+			byte[] bytes_107 = new byte[context.currentPacketSize - 1];
+			buffer.readBytes(bytes_107, 0, context.currentPacketSize - 1);
 			Class151.method2589(bool_91, bytes_107, -1912381757);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.VARPBIT_2) {
+		} else if (context.currentPacket == IncomingPacket.VARPBIT_2) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readUnsignedShort128();
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method268(flags, key, -1714881897);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4362) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4362) {
 			int key = buffer.readShortLE128();
 			Class470.method7825();
 			Class92.method1563(key, 1917715893);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CLAN_SETTINGS) {
+		} else if (context.currentPacket == IncomingPacket.CLAN_SETTINGS) {
 			client.anInt7192 = client.anInt7347;
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
-			if (class184_0.anInt2287 == 1) {
+			if (context.currentPacketSize == 1) {
 				if (bool_91) {
 					Class58.aClass61_528 = null;
 				} else {
 					Class282_Sub13.aClass61_7587 = null;
 				}
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			} else {
 				if (bool_91) {
@@ -1335,20 +1335,20 @@ public class PacketsDecoder extends Class455 {
 				} else {
 					Class282_Sub13.aClass61_7587 = new Class61(buffer);
 				}
-				class184_0.aClass375_2286 = null;
+				context.currentPacket = null;
 				return true;
 			}
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4457) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4457) {
 			int key = buffer.readUnsignedShort();
 			Class470.method7825();
 			Class123.method2152(key, -1865446551);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.UPDATE_ITEM_CONTAINER) {
+		} else if (context.currentPacket == IncomingPacket.UPDATE_ITEM_CONTAINER) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readUnsignedByte();
 			int i_7, i_8, i_9;
-			for (boolean isNegativeKey = (flags & 0x1) == 1; buffer.index < class184_0.anInt2287; Class282_Sub21.setItemInContainer(key, i_7, i_8 - 1, i_9, isNegativeKey)) {
+			for (boolean isNegativeKey = (flags & 0x1) == 1; buffer.index < context.currentPacketSize; Class282_Sub21.setItemInContainer(key, i_7, i_8 - 1, i_9, isNegativeKey)) {
 				i_7 = buffer.readUnsignedSmart(1532067241);
 				i_8 = buffer.readUnsignedShort();
 				i_9 = 0;
@@ -1360,36 +1360,36 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			client.anIntArray7381[++client.anInt7382 - 1 & 0x1f] = key;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PING) {
-			class184_0.aClass375_2286 = null;
+		} else if (context.currentPacket == IncomingPacket.PING) {
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CONFIG_1) {
+		} else if (context.currentPacket == IncomingPacket.CONFIG_1) {
 			byte b_100 = buffer.readByte();
 			int flags = buffer.readShortLE128();
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method281(flags, b_100, (byte) 16);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4359) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4359) {
 			int key = buffer.readUnsigned128Byte();
 			int flags = buffer.readUnsignedByte();
-			int i_6 = buffer.readUnsignedByteC(1030625671);
+			int i_6 = buffer.readUnsignedByteC();
 			int i_7 = buffer.readInt();
 			int i_8 = buffer.readIntV1();
 			int i_9 = i_8 >> 28;
 			int i_10 = i_8 >> 14 & 0x3fff;
 			int i_11 = i_8 & 0x3fff;
 			Class320.method5731(i_9, i_10, i_11, key, i_6, i_7, flags, -595463761);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4497) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4497) {
 			if (client.anInt7349 != -1) {
 				Class383.method6514(client.anInt7349, 0, 1952807696);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4370) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4370) {
 			String string_63 = buffer.readString();
 			boolean bool_66 = buffer.readUnsignedByte() == 1;
 			String str_92;
@@ -1407,7 +1407,7 @@ public class PacketsDecoder extends Class455 {
 			int i_11;
 			if (bool_69) {
 				if (Class459.anInt5534 == 0) {
-					class184_0.aClass375_2286 = null;
+					context.currentPacket = null;
 					return true;
 				}
 				for (i_11 = 0; i_11 < Class459.anInt5534 && (!Class467.aClass173Array5575[i_11].aString2127.equals(str_92) || i_7 != Class467.aClass173Array5575[i_11].anInt2131); i_11++) {
@@ -1441,7 +1441,7 @@ public class PacketsDecoder extends Class455 {
 							Class48_Sub2.aByte9263 = b_72;
 						}
 						client.anInt7179 = client.anInt7347;
-						class184_0.aClass375_2286 = null;
+						context.currentPacket = null;
 						return true;
 					}
 					if (i_35 < 0) {
@@ -1449,7 +1449,7 @@ public class PacketsDecoder extends Class455 {
 					}
 				}
 				if (Class459.anInt5534 >= Class467.aClass173Array5575.length) {
-					class184_0.aClass375_2286 = null;
+					context.currentPacket = null;
 					return true;
 				}
 				for (int i_35 = Class459.anInt5534 - 1; i_35 > i_12; --i_35) {
@@ -1465,9 +1465,9 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			client.anInt7179 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SETTINGS_SMALL) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_SETTINGS_SMALL) {
 			int interfaceHash = buffer.readIntV1();
 			int settings = buffer.readShortLE128();
 			int toSlot = buffer.readUnsignedShort();
@@ -1495,16 +1495,16 @@ public class PacketsDecoder extends Class455 {
 				}
 				client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slotHash);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.HIDE_ICOMPONENT) {
-			int key = buffer.readUnsignedByte128(-1543145246);
+		} else if (context.currentPacket == IncomingPacket.HIDE_ICOMPONENT) {
+			int key = buffer.readUnsignedByte128();
 			int flags = buffer.readInt();
 			Class470.method7825();
 			Class149_Sub4.method14663(flags, key, (byte) 0);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4480) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4480) {
 			client.anInt7395 = client.anInt7347;
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			Class349 class349_105 = new Class349(buffer);
@@ -1515,54 +1515,54 @@ public class PacketsDecoder extends Class455 {
 				class282_sub4_108 = Class202_Sub1.GUEST_CLAN_CHANNEL;
 			}
 			class349_105.method6179(class282_sub4_108, (short) -12831);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.REGION) {
-			RsBitsBuffer rsbitsbuffer_65 = new RsBitsBuffer(class184_0.anInt2287);
-			System.arraycopy(class184_0.recievedBuffer.buffer, class184_0.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, class184_0.anInt2287);
+		} else if (context.currentPacket == IncomingPacket.REGION) {
+			RsBitsBuffer rsbitsbuffer_65 = new RsBitsBuffer(context.currentPacketSize);
+			System.arraycopy(context.recievedBuffer.buffer, context.recievedBuffer.index, rsbitsbuffer_65.buffer, 0, context.currentPacketSize);
 			FontMetrics.method6989(1407669515);
 			if (Class393.preferences.aClass468_Sub3_8199.method12632(621836544) == 1) {
 				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3158, rsbitsbuffer_65), 301123709);
 			} else {
 				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, rsbitsbuffer_65), 1089182926);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.REMOVE_GROUND_ITEM) {
+		} else if (context.currentPacket == IncomingPacket.REMOVE_GROUND_ITEM) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4207, 915834659);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_ANIMATION) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_ANIMATION) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readInt();
 			Class470.method7825();
-			Class184.method3069(flags, key, 393215246);
-			class184_0.aClass375_2286 = null;
+			BufferedConnectionContext.method3069(flags, key, 393215246);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4351) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4351) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4218, 385099520);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4381) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4381) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readShortLE128();
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method281(flags, key, (byte) -17);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CLOSE_CHILDREN) {
-			int key = buffer.readInt();
+		} else if (context.currentPacket == IncomingPacket.CLOSE_CHILDREN) {
+			int parentInterface = buffer.readInt();
 			Class470.method7825();
-			Class282_Sub44 class282_sub44_103 = (Class282_Sub44) client.aClass465_7442.get((long) key);
+			Class282_Sub44 class282_sub44_103 = (Class282_Sub44) client.aClass465_7442.get((long) parentInterface);
 			if (class282_sub44_103 != null) {
-				Class351.method6196(class282_sub44_103, true, false, -1452683291);
+				Class351.closeChildren(class282_sub44_103, true, false, -1452683291);
 			}
 			if (client.aClass118_7352 != null) {
-				Class109.method1858(client.aClass118_7352, (byte) 55);
+				Class109.redrawComponent(client.aClass118_7352, (byte) 55);
 				client.aClass118_7352 = null;
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SKILL_LEVEL) {
+		} else if (context.currentPacket == IncomingPacket.SKILL_LEVEL) {
 			int key = buffer.readInt();
 			int flags = buffer.readUnsignedByte();
 			int i_6 = buffer.readUnsignedByte();
@@ -1576,50 +1576,50 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			client.anIntArray7283[++client.anInt7384 - 1 & 0x1f] = flags;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4453) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4453) {
 			byte b_100 = buffer.readByte();
-			int flags = buffer.readUnsignedByteC(-1202169109);
+			int flags = buffer.readUnsignedByteC();
 			Class470.method7825();
 			Class52_Sub2.method14501(b_100, flags, 1624203213);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4440) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4440) {
 			Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4495) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4495) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readShortLE((byte) -57);
 			int i_6 = buffer.readShortLE((byte) -93);
 			int i_7 = buffer.readUnsignedByte();
 			Class470.method7825();
 			Class506.method8722(key, i_7, flags, i_6, 1767108719);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4397) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4397) {
 			boolean bool_91 = buffer.readUnsigned128Byte() == 1;
 			int flags = buffer.readIntV2();
 			Class470.method7825();
 			Class199.method3252(flags, bool_91, -1395501412);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4352) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4352) {
 			int key = buffer.readUnsignedByte();
 			Class466 class466_98 = (Class466) Class386.method6672(Class335.method5963(-5009614), key, -2108912489);
 			if (class466_98 == null) {
 				class466_98 = Class466.aClass466_5563;
 			}
 			JS5CacheRequest.method14949(class466_98, 1453204131);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4508) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4508) {
 			Class504.anInt5832 = buffer.read24BitInteger(1949038328);
 			client.aBool7224 = buffer.readUnsignedByte() == 1;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.NPC_INTERFACE) {
+		} else if (context.currentPacket == IncomingPacket.NPC_INTERFACE) {
 			int key = buffer.readIntLE();
 			int flags = buffer.readUnsignedByte();
 			int i_6 = buffer.readIntV1();
@@ -1630,9 +1630,9 @@ public class PacketsDecoder extends Class455 {
 			int i_11 = buffer.readShortLE((byte) -104);
 			Class470.method7825();
 			Class31.method812(i_9, new Class282_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4502) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4502) {
 			client.anInt7192 = client.anInt7347;
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			Class348 class348_97 = new Class348(buffer);
@@ -1643,9 +1643,9 @@ public class PacketsDecoder extends Class455 {
 				class61_99 = Class282_Sub13.aClass61_7587;
 			}
 			class348_97.method6173(class61_99, -1753022365);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.MINIMAP_FLAG) {
+		} else if (context.currentPacket == IncomingPacket.MINIMAP_FLAG) {
 			int key = buffer.readUnsigned128Byte();
 			int flags = buffer.readUnsigned128Byte();
 			if (key == 255) {
@@ -1653,148 +1653,148 @@ public class PacketsDecoder extends Class455 {
 				flags = -1;
 			}
 			Defaults8Loader.method11155(key, flags, -1859663619);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.BLOCK_MINIMAP_STATE) {
+		} else if (context.currentPacket == IncomingPacket.BLOCK_MINIMAP_STATE) {
 			Class187.anInt2363 = buffer.readUnsignedByte();
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4402) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4402) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntLE();
 			Class470.method7825();
 			Class282_Sub20_Sub21.method15381(flags, key, -665241735);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.INTERFACE) {
+		} else if (context.currentPacket == IncomingPacket.INTERFACE) {
 			int key = buffer.readInt();
 			int flags = buffer.readIntV2();
 			int i_6 = buffer.readIntV2();
 			int i_7 = buffer.readShortLE128();
 			int i_8 = buffer.readIntLE();
 			int i_9 = buffer.readInt();
-			int i_10 = buffer.readUnsignedByteC(1579852251);
+			int i_10 = buffer.readUnsignedByteC();
 			Class470.method7825();
 			Class31.method812(i_9, new Class282_Sub44(i_7, i_10), new int[] { key, i_6, flags, i_8 }, false, (byte) 25);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4438) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4438) {
 			int key = buffer.readUnsignedByte();
 			Class494 class494_96 = (Class494) Class386.method6672(UnderlayIndexLoader.method8038((byte) 99), key, -1560493235);
 			if (class494_96 == null) {
 				class494_96 = Class494.aClass494_5782;
 			}
 			Class468_Sub26.method12948(class494_96, -16711936);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_OPTION) {
-			String string_63 = buffer.readString();
-			int flags = buffer.readUnsignedByte128(-694816925);
-			int i_6 = buffer.readShortLE128();
-			if (i_6 == 65535) {
-				i_6 = -1;
+		} else if (context.currentPacket == IncomingPacket.PLAYER_OPTION) {
+			String option = buffer.readString();
+			int slot = buffer.readUnsignedByte128();
+			int cursor = buffer.readShortLE128();
+			if (cursor == 65535) {
+				cursor = -1;
 			}
-			int i_7 = buffer.readUnsignedByteC(1148216670);
-			if (flags >= 1 && flags <= 8) {
-				if (string_63.equalsIgnoreCase("null")) {
-					string_63 = null;
+			int onTop = buffer.readUnsignedByteC();
+			if (slot >= 1 && slot <= 8) {
+				if (option.equalsIgnoreCase("null")) {
+					option = null;
 				}
-				client.aStringArray7329[flags - 1] = string_63;
-				client.anIntArray7328[flags - 1] = i_6;
-				client.aBoolArray7330[flags - 1] = i_7 == 0;
+				client.PLAYER_OPTIONS[slot - 1] = option;
+				client.PLAYER_OPTION_CURSORS[slot - 1] = cursor;
+				client.PLAYER_OPTION_REDUCED_PRIORITY[slot - 1] = onTop == 0;
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_ITEM) {
-			int key = buffer.readUnsignedShort();
-			if (key == 65535) {
-				key = -1;
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_ITEM) {
+			int itemId = buffer.readUnsignedShort();
+			if (itemId == 65535) {
+				itemId = -1;
 			}
-			int flags = buffer.readInt();
-			int i_6 = buffer.readIntV2();
+			int interfaceHash = buffer.readInt();
+			int amount = buffer.readIntV2();
 			Class470.method7825();
-			Class96_Sub9.method14587(flags, key, i_6, (short) -342);
-			ItemDefinitions itemdefinitions_128 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(key, 985436598);
-			Class149_Sub1.method14583(flags, itemdefinitions_128.modelRotationX, itemdefinitions_128.modelRotationY, itemdefinitions_128.modelZoom);
-			Class28.method778(flags, itemdefinitions_128.modelOffsetX, itemdefinitions_128.modelOffsetY, itemdefinitions_128.modelRotationZ, (byte) 16);
-			class184_0.aClass375_2286 = null;
+			Class96_Sub9.setComponentItem(interfaceHash, itemId, amount, (short) -342);
+			ItemDefinitions defs = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(itemId, 985436598);
+			Class149_Sub1.method14583(interfaceHash, defs.modelRotationX, defs.modelRotationY, defs.modelZoom);
+			Class28.method778(interfaceHash, defs.modelOffsetX, defs.modelOffsetY, defs.modelRotationZ, (byte) 16);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4481) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4481) {
 			int key = buffer.readShortLE((byte) -74);
 			int flags = buffer.readUnsignedShort128();
 			int i_6 = buffer.readUnsignedShort128();
 			int i_7 = buffer.readIntV2();
 			Class470.method7825();
 			Class96_Sub3.method13786(i_7, 7, key << 16 | i_6, flags, (byte) -41);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4354) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4354) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4204, 1220604522);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4423) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4423) {
 			int key = buffer.readIntV1();
 			Class470.method7825();
 			Class96_Sub3.method13786(key, 5, client.anInt7315, 0, (byte) -60);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4428) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4428) {
 			int key = buffer.readShortLE128();
 			if (key == 65535) {
 				key = -1;
 			}
 			Class332.method5930(key, (byte) 38);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4492) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4492) {
 			int key = buffer.readUnsignedShort();
 			Whirlpool.method7421(key, 2001451534);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CREATE_OBJECT) {
+		} else if (context.currentPacket == IncomingPacket.CREATE_OBJECT) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4208, 428929195);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SEND_PRIVATE_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.SEND_PRIVATE_MESSAGE) {
 			String string_63 = buffer.readString();
 			String string_88 = Class182.method3044(Defaults7Loader.method8755(buffer, (byte) 116), -1519993030);
 			Class191.method3167(6, 0, string_63, string_63, string_63, string_88, 1342704972);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CREATE_GROUND_ITEM) {
+		} else if (context.currentPacket == IncomingPacket.CREATE_GROUND_ITEM) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4206, 894121342);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4452) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4452) {
 			client.anInt7434 = 1;
 			client.anInt7386 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_ON_ICOMPONENT) {
+		} else if (context.currentPacket == IncomingPacket.PLAYER_ON_ICOMPONENT) {
 			int key = buffer.readIntLE();
 			Class470.method7825();
 			Class96_Sub3.method13786(key, 3, client.anInt7315, 0, (byte) -81);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4426) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4426) {
 			int key = buffer.readIntLE();
 			if (key != Class354.anInt4112) {
 				Class354.anInt4112 = key;
 				Class210.method3614(Class397.aClass397_4812, -1, -1, (byte) 95);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.REFLECTION_CHECK) {
-			JS5StandardRequester.method5560(buffer, class184_0.anInt2287, -822486096);
-			class184_0.aClass375_2286 = null;
+		} else if (context.currentPacket == IncomingPacket.REFLECTION_CHECK) {
+			JS5StandardRequester.method5560(buffer, context.currentPacketSize, -822486096);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.VARPBIT_1) {
+		} else if (context.currentPacket == IncomingPacket.VARPBIT_1) {
 			int key = buffer.readUnsignedShort();
-			int flags = buffer.readUnsignedByte128(-1075041075);
+			int flags = buffer.readUnsignedByte128();
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method268(key, flags, -1140695527);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RECIEVE_PRIVATE_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.RECIEVE_PRIVATE_MESSAGE) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -1838,30 +1838,30 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(3, 0, string_88, str_92, string_88, string_118, (String) null, -1);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_CONFIG_2) {
+		} else if (context.currentPacket == IncomingPacket.GLOBAL_CONFIG_2) {
 			byte b_100 = buffer.read128Byte((short) -6566);
 			int flags = buffer.readShortLE((byte) -105);
 			Class470.method7825();
 			Class393.method6751(flags, b_100, 1876892604);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CONFIG_2) {
+		} else if (context.currentPacket == IncomingPacket.CONFIG_2) {
 			int key = buffer.readInt();
 			int flags = buffer.readIntV1();
 			Class470.method7825();
 			Class282_Sub11_Sub1.method15435(flags, key, (byte) -67);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SPRITE) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_SPRITE) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readIntV2();
 			Class470.method7825();
 			ObjectIndexLoader.method7917(flags, key, (byte) 2);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4396) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4396) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readUnsignedShort();
 			int i_6 = buffer.readUnsignedShort();
@@ -1875,27 +1875,27 @@ public class PacketsDecoder extends Class455 {
 					}
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CUSTOMIZE_OBJECT) {
+		} else if (context.currentPacket == IncomingPacket.CUSTOMIZE_OBJECT) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4209, 408109448);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_UPDATE) {
-			Class282_Sub34.decodePlayerUpdate(buffer, class184_0.anInt2287, (byte) 3);
-			class184_0.aClass375_2286 = null;
+		} else if (context.currentPacket == IncomingPacket.PLAYER_UPDATE) {
+			Class282_Sub34.decodePlayerUpdate(buffer, context.currentPacketSize, (byte) 3);
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CAMERA_POSITION) {
+		} else if (context.currentPacket == IncomingPacket.CAMERA_POSITION) {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readUnsignedByte();
 			int i_6 = buffer.readUnsigned128Byte();
 			int i_7 = buffer.readShortLE((byte) -27) << 2;
-			int i_8 = buffer.readUnsignedByte128(-904691893);
+			int i_8 = buffer.readUnsignedByte128();
 			Class470.method7825();
 			RouteStrategy.method3794(flags, key, i_7, i_6, i_8, true, (byte) -1);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RECIEVE_CLAN_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.RECIEVE_CLAN_MESSAGE) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			long long_49 = (long) buffer.readUnsignedShort();
@@ -1940,12 +1940,12 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(i_34, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + string_88, string_88, string_101, class282_sub4_37.clanName, -1);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4507) {
-			byte[] bytes_64 = new byte[class184_0.anInt2287];
-			buffer.method14873(bytes_64, 0, class184_0.anInt2287, (byte) 8);
-			String string_88 = Class344.method6118(bytes_64, 0, class184_0.anInt2287, (byte) -124);
+		} else if (context.currentPacket == IncomingPacket.aClass375_4507) {
+			byte[] bytes_64 = new byte[context.currentPacketSize];
+			buffer.readBytes(bytes_64, 0, context.currentPacketSize, (byte) 8);
+			String string_88 = Class344.method6118(bytes_64, 0, context.currentPacketSize, (byte) -124);
 			if (client.aBool7310) {
 				try {
 					Class361.aClass361_4180.method6254(new Object[] { string_88 }, (byte) 51);
@@ -1953,22 +1953,22 @@ public class PacketsDecoder extends Class455 {
 					;
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PROJECTILE) {
+		} else if (context.currentPacket == IncomingPacket.PROJECTILE) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.PROJECTILE, 1406697126);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4442) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4442) {
 			Class516.method8868(buffer.readString(), (byte) -72);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4412) {
-			client.aBool7454 = buffer.readUnsignedByte128(-2050851904) == 1;
-			class184_0.aClass375_2286 = null;
+		} else if (context.currentPacket == IncomingPacket.aClass375_4412) {
+			client.aBool7454 = buffer.readUnsignedByte128() == 1;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.FRIEND_STATUS) {
-			while (buffer.index < class184_0.anInt2287) {
+		} else if (context.currentPacket == IncomingPacket.FRIEND_STATUS) {
+			while (buffer.index < context.currentPacketSize) {
 				boolean bool_91 = buffer.readUnsignedByte() == 1;
 				String string_88 = buffer.readString();
 				String str_92 = buffer.readString();
@@ -2046,7 +2046,7 @@ public class PacketsDecoder extends Class455 {
 					boolean bool_70 = false;
 					Class6 class6_132 = client.aClass6Array7452[i_6];
 					Class6 class6_134 = client.aClass6Array7452[i_6 + 1];
-					if (class6_132.anInt39 != Class159.aClass450_2010.worldId && class6_134.anInt39 == Class159.aClass450_2010.worldId) {
+					if (class6_132.anInt39 != Class159.GAME_CONNECTION_INFO.worldId && class6_134.anInt39 == Class159.GAME_CONNECTION_INFO.worldId) {
 						bool_70 = true;
 					}
 					if (!bool_70 && class6_132.anInt39 == 0 && class6_134.anInt39 != 0) {
@@ -2066,51 +2066,51 @@ public class PacketsDecoder extends Class455 {
 					break;
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4498) {
-			int key = buffer.readInt();
-			Class119.aClass12_1461 = new Class12(key);
-			Thread thread_94 = new Thread(Class119.aClass12_1461);
+		} else if (context.currentPacket == IncomingPacket.IDENTIFY_HOST_NAME) {
+			int ip = buffer.readInt();
+			Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(ip);
+			Thread thread_94 = new Thread(Class119.HOSTNAME_IDENTIFIER);
 			thread_94.setPriority(1);
 			thread_94.start();
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4365) {
-			int key = buffer.readIntV2();
+		} else if (context.currentPacket == IncomingPacket.aClass375_4365) {
+			int interfaceHash = buffer.readIntV2();
 			int flags = buffer.readInt();
 			Class470.method7825();
 			Class282_Sub44 class282_sub44_95 = (Class282_Sub44) client.aClass465_7442.get((long) flags);
-			Class282_Sub44 class282_sub44_126 = (Class282_Sub44) client.aClass465_7442.get((long) key);
+			Class282_Sub44 class282_sub44_126 = (Class282_Sub44) client.aClass465_7442.get((long) interfaceHash);
 			if (class282_sub44_126 != null) {
-				Class351.method6196(class282_sub44_126, class282_sub44_95 == null || class282_sub44_95.anInt8063 != class282_sub44_126.anInt8063, false, -1298031252);
+				Class351.closeChildren(class282_sub44_126, class282_sub44_95 == null || class282_sub44_95.anInt8063 != class282_sub44_126.anInt8063, false, -1298031252);
 			}
 			if (class282_sub44_95 != null) {
 				class282_sub44_95.remove();
-				client.aClass465_7442.put(class282_sub44_95, (long) key);
+				client.aClass465_7442.put(class282_sub44_95, (long) interfaceHash);
 			}
 			IComponentDefinitions icomponentdefinitions_130 = Class117.getInterfaceComponent(flags);
 			if (icomponentdefinitions_130 != null) {
-				Class109.method1858(icomponentdefinitions_130, (byte) -6);
+				Class109.redrawComponent(icomponentdefinitions_130, (byte) -6);
 			}
-			icomponentdefinitions_130 = Class117.getInterfaceComponent(key);
+			icomponentdefinitions_130 = Class117.getInterfaceComponent(interfaceHash);
 			if (icomponentdefinitions_130 != null) {
-				Class109.method1858(icomponentdefinitions_130, (byte) 22);
-				Class12.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
+				Class109.redrawComponent(icomponentdefinitions_130, (byte) 22);
+				HostNameIdentifier.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
 			}
 			if (client.anInt7349 != -1) {
 				Class383.method6514(client.anInt7349, 1, 1200373841);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.CUTSCENE) {
+		} else if (context.currentPacket == IncomingPacket.CUTSCENE) {
 			int key = buffer.readUnsignedShort();
 			client.anInt7357 = -1;
-			client.anInt7231 = key;
+			client.CURRENT_CUTSCENE = key;
 			client.anInt7341 = 3;
-			IndexLoaders.CUTSCENE_INDEX.method5661(client.anInt7231, -190684974);
-			Class316.method5594(-559600711);
-			HitsplatDefinitions.method3851(-402153223);
+			IndexLoaders.CUTSCENE_INDEX.loadCutscene(client.CURRENT_CUTSCENE);
+			Class316.method5594();
+			HitsplatDefinitions.method3851();
 			int flags = buffer.readUnsignedShort();
 			NativeLibraryLoader.anIntArrayArray3239 = new int[flags][4];
 			for (int i_6 = 0; i_6 < flags; i_6++) {
@@ -2122,26 +2122,26 @@ public class PacketsDecoder extends Class455 {
 			Class276.aClass282_Sub35_3346 = new RsByteBuffer(i_6);
 			Class276.aClass282_Sub35_3346.writeBytes(buffer.buffer, buffer.index, i_6);
 			buffer.index += i_6;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return false;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.DESTROY_OBJECT) {
+		} else if (context.currentPacket == IncomingPacket.DESTROY_OBJECT) {
 			Class188.decodeTilestreamPacket(TilestreamPacket.aClass364_4213, 1743263242);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_CONFIG) {
+		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_CONFIG) {
 			int key = buffer.readInt();
-			boolean bool_66 = buffer.readUnsignedByteC(-999919017) == 1;
+			boolean bool_66 = buffer.readUnsignedByteC() == 1;
 			if (bool_66 != Class469.aBool5585 || key != Class232.anInt2879) {
 				Class469.aBool5585 = bool_66;
 				Class232.anInt2879 = key;
 				Class210.method3614(Class397.aClass397_4803, -1, -1, (byte) 27);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_INTERFACE) {
+		} else if (context.currentPacket == IncomingPacket.PLAYER_INTERFACE) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntLE();
-			int i_6 = buffer.readUnsignedByteC(1811840250);
+			int i_6 = buffer.readUnsignedByteC();
 			int i_7 = buffer.readInt();
 			int i_8 = buffer.readIntLE();
 			int i_9 = buffer.readShortLE128();
@@ -2149,9 +2149,9 @@ public class PacketsDecoder extends Class455 {
 			int i_11 = buffer.readInt();
 			Class470.method7825();
 			Class31.method812(i_7, new Class282_Sub44_Sub1(i_9, i_6, key), new int[] { i_11, flags, i_10, i_8 }, false, (byte) 46);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ADD_IGNORE) {
+		} else if (context.currentPacket == IncomingPacket.ADD_IGNORE) {
 			int key = buffer.readUnsignedByte();
 			boolean bool_66 = (key & 0x1) == 1;
 			String str_92 = buffer.readString();
@@ -2174,20 +2174,20 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			client.anInt7386 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_STRING_BIG) {
+		} else if (context.currentPacket == IncomingPacket.GLOBAL_STRING_BIG) {
 			int key = buffer.readShortLE((byte) -15);
 			String string_88 = buffer.readString();
 			Class470.method7825();
 			MapRegion.method4562(key, string_88, -1183230823);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.NPC_UPDATE) {
+		} else if (context.currentPacket == IncomingPacket.NPC_UPDATE) {
 			Class540.decodeNPCUpdate(false, -1846664385);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RECIEVE_FRIENDS_CHAT_MESSAGE) {
+		} else if (context.currentPacket == IncomingPacket.RECIEVE_FRIENDS_CHAT_MESSAGE) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -2234,9 +2234,9 @@ public class PacketsDecoder extends Class455 {
 					MapRegionLoaderTask.appendMessage(9, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_17, Class179.method3018(long_28), -1);
 				}
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.OBJECT_ANIMATION) {
+		} else if (context.currentPacket == IncomingPacket.OBJECT_ANIMATION) {
 			int key = buffer.readIntV2();
 			int flags = key >> 28 & 0x3;
 			int i_6 = key >> 14 & 0x3fff;
@@ -2250,9 +2250,9 @@ public class PacketsDecoder extends Class455 {
 			i_6 -= coordgrid_33.x;
 			i_7 -= coordgrid_33.y;
 			Class9.animateObject(flags, i_6, i_7, i_12, i_10, i_11, i_8, (byte) 1);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.SOUND_IDX15) {
+		} else if (context.currentPacket == IncomingPacket.SOUND_IDX15) {
 			int key = buffer.readUnsignedShort();
 			if (key == 65535) {
 				key = -1;
@@ -2261,9 +2261,9 @@ public class PacketsDecoder extends Class455 {
 			int i_6 = buffer.readUnsignedShort();
 			int i_7 = buffer.readUnsignedByte();
 			Class435.method7300(key, flags, i_6, i_7, true, 256, 1449989045);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.IGNORE_LIST) {
+		} else if (context.currentPacket == IncomingPacket.IGNORE_LIST) {
 			client.anInt7373 = buffer.readUnsignedByte();
 			for (int key = 0; key < client.anInt7373; key++) {
 				Class10 class10_89 = new Class10();
@@ -2273,25 +2273,25 @@ public class PacketsDecoder extends Class455 {
 				class10_89.aBool117 = false;
 			}
 			client.anInt7386 = client.anInt7347;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4483) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4483) {
 			int key = buffer.readShortLE((byte) -26);
 			int flags = buffer.readUnsignedShort();
 			int i_6 = buffer.readUnsigned128Byte();
 			int i_7 = buffer.readIntLE();
 			Class470.method7825();
 			Class282_Sub28.method12420(i_7, i_6, flags, key, 2108425103);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4364) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4364) {
 			client.anInt7162 = buffer.method13121(358505784);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.OBJECT_INTERFACE) {
+		} else if (context.currentPacket == IncomingPacket.OBJECT_INTERFACE) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readIntV2();
-			int i_6 = buffer.readUnsignedByte128(-1264346056);
+			int i_6 = buffer.readUnsignedByte128();
 			int i_7 = buffer.readInt();
 			int i_8 = buffer.readIntV1();
 			int i_9 = buffer.readUnsignedShort128();
@@ -2303,34 +2303,34 @@ public class PacketsDecoder extends Class455 {
 			int i_15 = buffer.readInt();
 			Class470.method7825();
 			Class31.method812(key, new Class282_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4445) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4445) {
 			Class46.CLAN_VARS = null;
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4437) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4437) {
 			if (Class475.supportsFullScreen && client.fullScreenFrame != null) {
 				Class440.method7373(Class393.preferences.screenSize.method12687(-1706994104), -1, -1, false, (byte) 30);
 			}
-			byte[] bytes_64 = new byte[class184_0.anInt2287];
-			buffer.method14873(bytes_64, 0, class184_0.anInt2287, (byte) 8);
-			String string_88 = Class344.method6118(bytes_64, 0, class184_0.anInt2287, (byte) -8);
+			byte[] bytes_64 = new byte[context.currentPacketSize];
+			buffer.readBytes(bytes_64, 0, context.currentPacketSize, (byte) 8);
+			String string_88 = Class344.method6118(bytes_64, 0, context.currentPacketSize, (byte) -8);
 			String str_92 = "opensn";
 			if (!client.aBool7310 || !Class186.method3082(string_88, 1, str_92, 145298920)) {
 				Class508.method8736(string_88, true, Class393.preferences.currentToolkit.getValue(-780399145) == 5, str_92, client.aBool7158, client.aBool7159, (byte) -17);
 			}
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4418) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_4418) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntV2();
 			int i_6 = buffer.readShortLE((byte) -6);
 			Class470.method7825();
 			Class225_Sub2.method12882(flags, key + (i_6 << 16), 1247559712);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.RUN_CS2_SCRIPT) {
+		} else if (context.currentPacket == IncomingPacket.RUN_CS2_SCRIPT) {
 			String string_63 = buffer.readString();
 			Object[] arr_26 = new Object[string_63.length() + 1];
 			for (int i_6 = string_63.length() - 1; i_6 >= 0; --i_6) {
@@ -2345,14 +2345,14 @@ public class PacketsDecoder extends Class455 {
 			HookRequest hookrequest_27 = new HookRequest();
 			hookrequest_27.params = arr_26;
 			Class96_Sub4.executeHookInner200k(hookrequest_27, 502538057);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.NPC_UPDATE_LARGE) {
+		} else if (context.currentPacket == IncomingPacket.NPC_UPDATE_LARGE) {
 			Class540.decodeNPCUpdate(true, -938480813);
-			class184_0.aClass375_2286 = null;
+			context.currentPacket = null;
 			return true;
 		} else {
-			Class151.method2594((class184_0.aClass375_2286 != null ? class184_0.aClass375_2286.opcode : -1) + "," + (class184_0.aClass375_2296 != null ? class184_0.aClass375_2296.opcode : -1) + "," + (class184_0.aClass375_2291 != null ? class184_0.aClass375_2291.opcode : -1) + " " + class184_0.anInt2287, new RuntimeException(), (byte) -73);
+			Class151.method2594((context.currentPacket != null ? context.currentPacket.opcode : -1) + "," + (context.secondLastPacket != null ? context.secondLastPacket.opcode : -1) + "," + (context.thirdLastPacket != null ? context.thirdLastPacket.opcode : -1) + " " + context.currentPacketSize, new RuntimeException(), (byte) -73);
 			Class438.method7333(false, 2095335662);
 			return true;
 		}

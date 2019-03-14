@@ -155,7 +155,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		if (!bool_2) {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2, -1976221425);
 		}
-		Class12.method482((byte) 53);
+		HostNameIdentifier.method482((byte) 53);
 		Renderers.SOFTWARE_RENDERER.method8459(10000);
 		Renderers.SOFTWARE_RENDERER.J(32);
 		IndexLoaders.MAP_REGION_DECODER.method4447(1353866416);

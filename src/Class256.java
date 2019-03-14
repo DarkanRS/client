@@ -38,7 +38,7 @@ public class Class256 {
 		if (class116_0 == null) {
 			Class226.method3805(-1719520107);
 		} else {
-			Class12.method487(class116_0, i_1, -1509382705);
+			HostNameIdentifier.method487(class116_0, i_1, -1509382705);
 			Class230.method3912((byte) 3);
 		}
 	}

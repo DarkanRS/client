@@ -67,13 +67,13 @@ public class Class348 {
 				Class337.unloadInterface(client.anInt7349, -1669420859);
 			}
 			for (Class282_Sub44 class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(1087054250); class282_sub44_2 != null; class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 11)) {
-				if (!class282_sub44_2.method4994(1167502204)) {
+				if (!class282_sub44_2.isLinked()) {
 					class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(-848491079);
 					if (class282_sub44_2 == null) {
 						break;
 					}
 				}
-				Class351.method6196(class282_sub44_2, true, false, -2131194694);
+				Class351.closeChildren(class282_sub44_2, true, false, -2131194694);
 			}
 			client.anInt7349 = -1;
 			client.aClass465_7442 = new IterableNodeMap(8);

@@ -353,7 +353,7 @@ public class IndexLoaders {
 
 			for (i_2 = 0; i_2 < Class468_Sub8.INTERFACES[Class58.aClass529_527.anInt7036].components.length; i_2++) {
 				IComponentDefinitions icomponentdefinitions_8 = Class468_Sub8.INTERFACES[Class58.aClass529_527.anInt7036].components[i_2];
-				if (icomponentdefinitions_8.anInt1268 == 5 && icomponentdefinitions_8.anInt1320 != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.anInt1320, 0)) {
+				if (icomponentdefinitions_8.type == 5 && icomponentdefinitions_8.anInt1320 != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.anInt1320, 0)) {
 					bool_10 = false;
 				}
 			}

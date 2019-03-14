@@ -42,7 +42,7 @@ public class Class96_Sub9 extends Class96 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static void method14587(int i_0, int i_1, int i_2, short s_3) {
+	static void setComponentItem(int i_0, int i_1, int i_2, short s_3) {
 		Class282_Sub50_Sub12 class282_sub50_sub12_4 = Engine.getIComponentVar(9, (long) i_0);
 		class282_sub50_sub12_4.method14995(1698715246);
 		class282_sub50_sub12_4.anInt9668 = i_1;

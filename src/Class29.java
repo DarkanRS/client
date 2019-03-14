@@ -29,9 +29,9 @@ public class Class29 {
 
 	static final void method786(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		boolean bool_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
-		if (bool_4 != icomponentdefinitions_0.aBool1306) {
-			icomponentdefinitions_0.aBool1306 = bool_4;
-			Class109.method1858(icomponentdefinitions_0, (byte) -3);
+		if (bool_4 != icomponentdefinitions_0.hidden) {
+			icomponentdefinitions_0.hidden = bool_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) -3);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class78.method1389(icomponentdefinitions_0.idHash, -626903266);
@@ -46,7 +46,7 @@ public class Class29 {
 	}
 
 	static final void method789(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		if (icomponentdefinitions_0.anInt1268 == 5) {
+		if (icomponentdefinitions_0.type == 5) {
 			Class306.method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -1486072931);
 		}
 	}

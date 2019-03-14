@@ -111,7 +111,7 @@ public class Class461 {
 	}
 
 	static void method7703(int i_0) {
-		if (client.anInt7231 < 0) {
+		if (client.CURRENT_CUTSCENE < 0) {
 			FontMetrics fontmetrics_1 = Class114.method1887(-785695641);
 			if (!Class20.aBool161) {
 				Class20.aBool162 = Class20.anInt198 != -1 && Class20.anInt169 >= Class20.anInt198 || (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * Class20.anInt169 > Engine.anInt3243 * -969250379;
@@ -192,18 +192,18 @@ public class Class461 {
 								++i_6;
 							}
 						}
-						Class316.method5594(-559600711);
-					} else if (i_3 >= Class301.anInt3555 && i_3 <= Class158_Sub2.anInt8975 + Class301.anInt3555 && i_4 >= Class184.anInt2300 && i_4 <= Class184.anInt2300 + Class110.anInt1104) {
+						Class316.method5594();
+					} else if (i_3 >= Class301.anInt3555 && i_3 <= Class158_Sub2.anInt8975 + Class301.anInt3555 && i_4 >= BufferedConnectionContext.anInt2300 && i_4 <= BufferedConnectionContext.anInt2300 + Class110.anInt1104) {
 						if (!Class20.aBool162) {
 							i_5 = -1;
 							for (i_6 = 0; i_6 < Class20.anInt169; i_6++) {
 								if (Class20.aBool187) {
-									i_11 = (Class20.anInt169 - 1 - i_6) * Class20.anInt178 + fontmetrics_1.anInt4978 + Class184.anInt2300 + 1 + 20;
+									i_11 = (Class20.anInt169 - 1 - i_6) * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
 									if (i_4 > i_11 - fontmetrics_1.anInt4978 - 1 && i_4 < i_11 + fontmetrics_1.anInt4979) {
 										i_5 = i_6;
 									}
 								} else {
-									i_11 = (Class20.anInt169 - 1 - i_6) * Class20.anInt178 + Class184.anInt2300 + 31;
+									i_11 = (Class20.anInt169 - 1 - i_6) * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 									if (i_4 > i_11 - 13 && i_4 < i_11 + 3) {
 										i_5 = i_6;
 									}
@@ -220,18 +220,18 @@ public class Class461 {
 									++i_6;
 								}
 							}
-							Class316.method5594(-559600711);
+							Class316.method5594();
 						} else {
 							i_5 = -1;
 							for (i_6 = 0; i_6 < Class20.anInt170; i_6++) {
 								if (Class20.aBool187) {
-									i_11 = i_6 * Class20.anInt178 + fontmetrics_1.anInt4978 + Class184.anInt2300 + 1 + 20;
+									i_11 = i_6 * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
 									if (i_4 > i_11 - fontmetrics_1.anInt4978 - 1 && i_4 < i_11 + fontmetrics_1.anInt4979) {
 										i_5 = i_6;
 										break;
 									}
 								} else {
-									i_11 = i_6 * Class20.anInt178 + Class184.anInt2300 + 31;
+									i_11 = i_6 * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 									if (i_4 > i_11 - 13 && i_4 < i_11 + 3) {
 										i_5 = i_6;
 										break;
@@ -244,7 +244,7 @@ public class Class461 {
 								for (Class282_Sub50_Sub15 class282_sub50_sub15_17 = (Class282_Sub50_Sub15) class469_15.method7790(1832486278); class282_sub50_sub15_17 != null; class282_sub50_sub15_17 = (Class282_Sub50_Sub15) class469_15.next()) {
 									if (i_5 == i_6) {
 										Class96_Sub4.method13789((Class282_Sub50_Sub7) class282_sub50_sub15_17.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, i_3, i_4, 1026140504);
-										Class316.method5594(-559600711);
+										Class316.method5594();
 										break;
 									}
 									++i_6;
@@ -262,7 +262,7 @@ public class Class461 {
 						}
 					}
 					if (!bool_16) {
-						if (i_3 >= Class301.anInt3555 - 10 && i_3 <= Class158_Sub2.anInt8975 + Class301.anInt3555 + 10 && i_4 >= Class184.anInt2300 - 10 && i_4 <= Class110.anInt1104 + Class184.anInt2300 + 10) {
+						if (i_3 >= Class301.anInt3555 - 10 && i_3 <= Class158_Sub2.anInt8975 + Class301.anInt3555 + 10 && i_4 >= BufferedConnectionContext.anInt2300 - 10 && i_4 <= Class110.anInt1104 + BufferedConnectionContext.anInt2300 + 10) {
 							if (Class20.aBool162) {
 								i_6 = -1;
 								i_11 = -1;
@@ -270,14 +270,14 @@ public class Class461 {
 								for (i_12 = 0; i_12 < Class20.anInt170; i_12++) {
 									int i_13;
 									if (Class20.aBool187) {
-										i_13 = i_12 * Class20.anInt178 + fontmetrics_1.anInt4978 + Class184.anInt2300 + 1 + 20;
+										i_13 = i_12 * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
 										if (i_4 > i_13 - fontmetrics_1.anInt4978 - 1 && i_4 < i_13 + fontmetrics_1.anInt4979) {
 											i_6 = i_12;
 											i_11 = i_13 - fontmetrics_1.anInt4978 - 1;
 											break;
 										}
 									} else {
-										i_13 = i_12 * Class20.anInt178 + Class184.anInt2300 + 31;
+										i_13 = i_12 * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 										if (i_4 > i_13 - 13 && i_4 < i_13 + 3) {
 											i_6 = i_12;
 											i_11 = i_13 - 13;
@@ -300,7 +300,7 @@ public class Class461 {
 								}
 							}
 						} else {
-							Class316.method5594(-559600711);
+							Class316.method5594();
 						}
 					}
 				}

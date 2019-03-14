@@ -172,7 +172,7 @@ public class Class16 {
 					if (Class383.method6515(Class84.myPlayer.displayName, 1942118537).equals(string_3)) {
 						LoadingStage.method6681(4, Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
 					} else {
-						Class184 class184_8 = Class468_Sub20.method12807(1039135585);
+						BufferedConnectionContext class184_8 = Class468_Sub20.method12807(1039135585);
 						TCPMessage tcpmessage_10 = Class271.method4828(OutgoingPacket.aClass379_4578, class184_8.isaac, 732263274);
 						tcpmessage_10.buffer.writeByte(ChatLine.getLength(string_0) + 1);
 						tcpmessage_10.buffer.writeString(string_0);

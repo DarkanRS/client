@@ -7,8 +7,8 @@ public class Class533 {
 	}
 
 	static void method11404(String string_0, String string_1, String string_2, boolean bool_3, boolean bool_4, int i_5) {
-		Class184 class184_6 = Class468_Sub20.method12807(-1561736689);
-		if (class184_6.method3053((byte) -70) != null) {
+		BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-1561736689);
+		if (class184_6.getConnection() != null) {
 			TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4543, class184_6.isaac, 666430203);
 			tcpmessage_7.buffer.writeShort(ChatLine.getLength(string_0) + ChatLine.getLength(string_1) + ChatLine.getLength(string_2) + 1, 1417031095);
 			tcpmessage_7.buffer.writeString(string_0);

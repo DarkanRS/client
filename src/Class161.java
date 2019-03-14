@@ -15,7 +15,7 @@ public class Class161 {
 	}
 
 	static final void method2827(int i_0) {
-		Class109.method1858(client.aClass118_7257, (byte) -8);
+		Class109.redrawComponent(client.aClass118_7257, (byte) -8);
 		++Class96_Sub1.anInt8308;
 		if (client.aBool7369 && client.aBool7403) {
 			int i_1 = Class163.mouseRecorder.method3569(2003806769);

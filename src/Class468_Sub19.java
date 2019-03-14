@@ -53,7 +53,7 @@ public class Class468_Sub19 extends Preference {
 			ClanChannelPlayer class57_4 = class282_sub4_3.players[i_1];
 			if (class57_4.rank == -1) {
 				String string_5 = class57_4.name;
-				Class184 class184_6 = Class468_Sub20.method12807(-1321489648);
+				BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-1321489648);
 				TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4617, class184_6.isaac, 1070287495);
 				tcpmessage_7.buffer.writeByte(3 + ChatLine.getLength(string_5));
 				tcpmessage_7.buffer.writeByte(bool_0 ? 1 : 0);

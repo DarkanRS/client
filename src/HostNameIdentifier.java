@@ -1,22 +1,22 @@
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-public class Class12 implements Runnable {
+public class HostNameIdentifier implements Runnable {
 
-	volatile String aString126;
+	volatile String host;
 
-	InetAddress anInetAddress125;
+	InetAddress address;
 
-	public String method473(int i_1) {
-		return this.aString126;
+	public String getHostName() {
+		return this.host;
 	}
 
 	public void run() {
-		this.aString126 = this.anInetAddress125.getHostName();
+		this.host = this.address.getHostName();
 	}
 
-	Class12(int i_1) throws UnknownHostException {
-		this.anInetAddress125 = InetAddress.getByAddress(new byte[] { (byte) (i_1 >> 24 & 0xff), (byte) (i_1 >> 16 & 0xff), (byte) (i_1 >> 8 & 0xff), (byte) (i_1 & 0xff) });
+	HostNameIdentifier(int i_1) throws UnknownHostException {
+		this.address = InetAddress.getByAddress(new byte[] { (byte) (i_1 >> 24 & 0xff), (byte) (i_1 >> 16 & 0xff), (byte) (i_1 >> 8 & 0xff), (byte) (i_1 & 0xff) });
 	}
 
 	public static void clearComponents(int i_0, int i_1) {

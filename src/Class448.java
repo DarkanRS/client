@@ -1,11 +1,11 @@
 public class Class448 {
 
-	public static Class450 aClass450_5420;
-	public static Class450 aClass450_5421;
-	public static Class450 aClass450_5424;
+	public static ConnectionInfo aClass450_5420;
+	public static ConnectionInfo aClass450_5421;
+	public static ConnectionInfo lobbyConnectionInfo;
 	public static long aLong5425;
 	public static boolean aBool5428;
-	public static Class450 aClass450_5429;
+	public static ConnectionInfo aClass450_5429;
 	public static boolean aBool5422 = false;
 	static Class217_Sub1[] aClass217_Sub1Array5426 = new Class217_Sub1[0];
 	static int anInt5427 = 1000336;

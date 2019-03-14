@@ -12,13 +12,13 @@ public class Class96_Sub5 extends Class96 {
 
 	public void method1601() {
 		RouteStrategy.method3794(-1748191497 * this.anInt8845 * -597628217, this.anInt8846 * 693223401 * -808646567, -602355731 * this.anInt8847 * 1851960805, 100, 100, false, (byte) -1);
-		Class12.method486(-908637089 * this.anInt8848 * -1393422433, this.anInt8849 * -652781679 * -1608889999, 0, 596260679);
+		HostNameIdentifier.method486(-908637089 * this.anInt8848 * -1393422433, this.anInt8849 * -652781679 * -1608889999, 0, 596260679);
 		client.aBool7321 = true;
 	}
 
 	public void method1592(int i_1) {
 		RouteStrategy.method3794(this.anInt8845, this.anInt8846, this.anInt8847, 100, 100, false, (byte) -1);
-		Class12.method486(this.anInt8848, this.anInt8849, 0, 596260679);
+		HostNameIdentifier.method486(this.anInt8848, this.anInt8849, 0, 596260679);
 		client.aBool7321 = true;
 	}
 

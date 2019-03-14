@@ -8,18 +8,18 @@ public final class Class484 {
 		int i_5 = icomponentdefinitions_0.anInt1301;
 		int i_6 = icomponentdefinitions_0.anInt1429;
 		if (icomponentdefinitions_0.aByte1368 == 0) {
-			icomponentdefinitions_0.anInt1301 = icomponentdefinitions_0.anInt1297;
+			icomponentdefinitions_0.anInt1301 = icomponentdefinitions_0.baseWidth;
 		} else if (icomponentdefinitions_0.aByte1368 == 1) {
-			icomponentdefinitions_0.anInt1301 = i_1 - icomponentdefinitions_0.anInt1297;
+			icomponentdefinitions_0.anInt1301 = i_1 - icomponentdefinitions_0.baseWidth;
 		} else if (icomponentdefinitions_0.aByte1368 == 2) {
-			icomponentdefinitions_0.anInt1301 = icomponentdefinitions_0.anInt1297 * i_1 >> 14;
+			icomponentdefinitions_0.anInt1301 = icomponentdefinitions_0.baseWidth * i_1 >> 14;
 		}
 		if (icomponentdefinitions_0.aByte1294 == 0) {
-			icomponentdefinitions_0.anInt1429 = icomponentdefinitions_0.anInt1298;
+			icomponentdefinitions_0.anInt1429 = icomponentdefinitions_0.baseHeight;
 		} else if (icomponentdefinitions_0.aByte1294 == 1) {
-			icomponentdefinitions_0.anInt1429 = i_2 - icomponentdefinitions_0.anInt1298;
+			icomponentdefinitions_0.anInt1429 = i_2 - icomponentdefinitions_0.baseHeight;
 		} else if (icomponentdefinitions_0.aByte1294 == 2) {
-			icomponentdefinitions_0.anInt1429 = i_2 * icomponentdefinitions_0.anInt1298 >> 14;
+			icomponentdefinitions_0.anInt1429 = i_2 * icomponentdefinitions_0.baseHeight >> 14;
 		}
 		if (icomponentdefinitions_0.aByte1368 == 4) {
 			icomponentdefinitions_0.anInt1301 = icomponentdefinitions_0.anInt1289 * icomponentdefinitions_0.anInt1429 / icomponentdefinitions_0.anInt1375;
@@ -27,7 +27,7 @@ public final class Class484 {
 		if (icomponentdefinitions_0.aByte1294 == 4) {
 			icomponentdefinitions_0.anInt1429 = icomponentdefinitions_0.anInt1301 * icomponentdefinitions_0.anInt1375 / icomponentdefinitions_0.anInt1289;
 		}
-		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).settings != 0 || icomponentdefinitions_0.anInt1268 == 0)) {
+		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).settings != 0 || icomponentdefinitions_0.type == 0)) {
 			if (icomponentdefinitions_0.anInt1429 < 5 && icomponentdefinitions_0.anInt1301 < 5) {
 				icomponentdefinitions_0.anInt1429 = 5;
 				icomponentdefinitions_0.anInt1301 = 5;
@@ -40,7 +40,7 @@ public final class Class484 {
 				}
 			}
 		}
-		if (icomponentdefinitions_0.anInt1290 == IComponentDefinitions.anInt1372) {
+		if (icomponentdefinitions_0.contentType == IComponentDefinitions.anInt1372) {
 			client.aClass118_7183 = icomponentdefinitions_0;
 		}
 		if (bool_3 && icomponentdefinitions_0.anObjectArray1271 != null && (i_5 != icomponentdefinitions_0.anInt1301 || i_6 != icomponentdefinitions_0.anInt1429)) {

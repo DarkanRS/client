@@ -1,7 +1,7 @@
 public class Class119 {
 
 	static Class344 aClass344_1460;
-	public static Class12 aClass12_1461;
+	public static HostNameIdentifier HOSTNAME_IDENTIFIER;
 	public static JS5StandardRequester JS5_STANDARD_REQUESTER;
 	public int anInt1458;
 	public int anInt1454;

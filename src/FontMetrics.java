@@ -526,7 +526,7 @@ public class FontMetrics {
 	}
 
 	static final void method6989(int i_0) {
-		client.anInt7231 = -1;
+		client.CURRENT_CUTSCENE = -1;
 		client.anInt7341 = 1;
 		NativeLibraryLoader.anIntArrayArray3239 = null;
 		Class276.aClass282_Sub35_3346 = null;

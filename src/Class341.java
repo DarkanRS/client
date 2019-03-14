@@ -38,7 +38,7 @@ public class Class341 {
 					} catch (Exception exception_5) {
 						;
 					}
-					Class209.method3598("Pausing for " + i_3 + " seconds...", -1904731219);
+					Class209.printConsoleMessage("Pausing for " + i_3 + " seconds...", -1904731219);
 					Class276.aStringArray3345 = arr_0;
 					Class179.anInt2231 = i_2 + 1;
 					Class179.aLong2232 = Class169.time() + (long) (i_3 * 1000);

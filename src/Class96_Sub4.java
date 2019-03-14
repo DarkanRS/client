@@ -246,7 +246,7 @@ public class Class96_Sub4 extends Class96 {
 				Class158_Sub2.method14355(i_5, i_4, 382043562);
 				client.aClass118_7352 = Index.method5694(i_5, i_4, -702392131);
 				if (client.aClass118_7352 != null) {
-					Class109.method1858(client.aClass118_7352, (byte) -7);
+					Class109.redrawComponent(client.aClass118_7352, (byte) -7);
 				}
 			}
 
@@ -358,7 +358,7 @@ public class Class96_Sub4 extends Class96 {
 				}
 
 				if (Class401.aClass118_4825 != null && client.anInt7297 == 0) {
-					Class109.method1858(Class401.aClass118_4825, (byte) -103);
+					Class109.redrawComponent(Class401.aClass118_4825, (byte) -103);
 				}
 			}
 		}

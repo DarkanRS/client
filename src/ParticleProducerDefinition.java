@@ -299,40 +299,40 @@ public class ParticleProducerDefinition {
 
 	public static int method1159(Index index_0, int i_1) {
 		int i_2 = 0;
-		if (index_0.method5661(Class165.anInt2035, 1772789270)) {
+		if (index_0.loadCutscene(Class165.anInt2035)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class475.anInt5622, 1087630651)) {
+		if (index_0.loadCutscene(Class475.anInt5622)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class16.anInt135, -1445417233)) {
+		if (index_0.loadCutscene(Class16.anInt135)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class16.anInt142, 1290057314)) {
+		if (index_0.loadCutscene(Class16.anInt142)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class16.anInt137, -1474020229)) {
+		if (index_0.loadCutscene(Class16.anInt137)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class468_Sub12.anInt7899, 704936626)) {
+		if (index_0.loadCutscene(Class468_Sub12.anInt7899)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class13.anInt130, 602886024)) {
+		if (index_0.loadCutscene(Class13.anInt130)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class16.anInt143, -1990269462)) {
+		if (index_0.loadCutscene(Class16.anInt143)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class400.anInt4821, 245812600)) {
+		if (index_0.loadCutscene(Class400.anInt4821)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class16.anInt141, -1961759001)) {
+		if (index_0.loadCutscene(Class16.anInt141)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class165.anInt2037, -521696107)) {
+		if (index_0.loadCutscene(Class165.anInt2037)) {
 			++i_2;
 		}
-		if (index_0.method5661(Class271.anInt3330, -80851855)) {
+		if (index_0.loadCutscene(Class271.anInt3330)) {
 			++i_2;
 		}
 		return i_2;

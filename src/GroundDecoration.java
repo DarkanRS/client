@@ -343,7 +343,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 		Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 		for (int i_11 = 0; i_11 < arr_0.length; i_11++) {
 			IComponentDefinitions icomponentdefinitions_12 = arr_0[i_11];
-			if (icomponentdefinitions_12 != null && (icomponentdefinitions_12.anInt1305 == i_1 || i_1 == -1412584499 && icomponentdefinitions_12 == client.aClass118_7257)) {
+			if (icomponentdefinitions_12 != null && (icomponentdefinitions_12.parent == i_1 || i_1 == -1412584499 && icomponentdefinitions_12 == client.aClass118_7257)) {
 				int i_13;
 				if (i_8 == -1) {
 					client.aRectangleArray7411[client.anInt7407].setBounds(icomponentdefinitions_12.anInt1299 + i_6, i_7 + icomponentdefinitions_12.anInt1428, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
@@ -354,13 +354,13 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 				icomponentdefinitions_12.anInt1449 = i_13;
 				icomponentdefinitions_12.anInt1450 = client.cycles;
 				if (!client.method11651(icomponentdefinitions_12)) {
-					if (icomponentdefinitions_12.anInt1290 != 0) {
+					if (icomponentdefinitions_12.contentType != 0) {
 						Class28.method776(icomponentdefinitions_12, (byte) 119);
 					}
 					int i_14 = icomponentdefinitions_12.anInt1299 + i_6;
 					int i_15 = i_7 + icomponentdefinitions_12.anInt1428;
 					int i_16 = icomponentdefinitions_12.anInt1453;
-					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).settings != 0 || icomponentdefinitions_12.anInt1268 == 0) && i_16 > 127) {
+					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).settings != 0 || icomponentdefinitions_12.type == 0) && i_16 > 127) {
 						i_16 = 127;
 					}
 					int i_17;
@@ -403,7 +403,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					int i_20;
 					int i_21;
 					int i_22;
-					if (icomponentdefinitions_12.anInt1268 == 2) {
+					if (icomponentdefinitions_12.type == 2) {
 						i_17 = i_2;
 						i_18 = i_3;
 						i_19 = i_4;
@@ -411,7 +411,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					} else {
 						i_21 = i_14 + icomponentdefinitions_12.anInt1301;
 						i_22 = i_15 + icomponentdefinitions_12.anInt1429;
-						if (icomponentdefinitions_12.anInt1268 == 9) {
+						if (icomponentdefinitions_12.type == 9) {
 							++i_21;
 							++i_22;
 						}
@@ -421,16 +421,16 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						i_20 = i_22 < i_5 ? i_22 : i_5;
 					}
 					if (i_17 < i_19 && i_18 < i_20) {
-						if (icomponentdefinitions_12.anInt1290 != 0) {
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1372 || icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1436) {
-								HitbarDefinitions.method3231(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1436, 72550989);
+						if (icomponentdefinitions_12.contentType != 0) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1372 || icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436) {
+								HitbarDefinitions.method3231(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436, 72550989);
 								TCPMessage.method12366(i_13, i_17, i_18, i_19, i_20, i_14, i_15, -368732775);
 								Renderers.SOFTWARE_RENDERER.method8421();
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								client.aBoolArray7443[i_13] = true;
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1269 && client.anInt7341 == 1) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1269 && client.anInt7341 == 1) {
 								if (icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, -890940576) != null) {
 									Class282_Sub20_Sub24.method15391(-165186170);
 									Item.method12574(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12, i_14, i_15, -1198677116);
@@ -438,34 +438,34 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								}
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1276) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1276) {
 								Shadow.method15506(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, 1138717057);
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1300) {
-								Class366.method6301(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, icomponentdefinitions_12.anInt1264 % 64, -16711936);
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1300) {
+								Class366.method6301(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, icomponentdefinitions_12.color % 64, -16711936);
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1270) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1270) {
 								if (icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, -1781031351) != null) {
 									Class278_Sub1.method13448(icomponentdefinitions_12, i_14, i_15, 1237889366);
 									Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								}
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1313) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1313) {
 								Class282_Sub46.method13407(Renderers.SOFTWARE_RENDERER, IndexLoaders.IMAGE_LOADER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, (byte) 85);
 								client.aBoolArray7443[i_13] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1272) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1272) {
 								LoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, (short) 20938);
 								client.aBoolArray7443[i_13] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								continue;
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1273) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1273) {
 								if (client.aBool7176 || client.aBool7177) {
 									Class252.method4326(i_14, i_15, icomponentdefinitions_12, -2019729413);
 									client.aBoolArray7443[i_13] = true;
@@ -476,8 +476,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						int i_23;
 						int i_24;
 						int i_25;
-						if (icomponentdefinitions_12.anInt1268 == 0) {
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1275 && Renderers.SOFTWARE_RENDERER.method8471()) {
+						if (icomponentdefinitions_12.type == 0) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1275 && Renderers.SOFTWARE_RENDERER.method8471()) {
 								Renderers.SOFTWARE_RENDERER.method8525(0, 0, Class349.anInt4083, client.anInt3243 * -969250379);
 							}
 							method16094(arr_0, icomponentdefinitions_12.idHash, i_17, i_18, i_19, i_20, i_14 - icomponentdefinitions_12.anInt1311, i_15 - icomponentdefinitions_12.anInt1312, i_13, bool_9, (byte) 6);
@@ -488,7 +488,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							if (class282_sub44_33 != null) {
 								RenderAnimIndexLoader.method3629(class282_sub44_33.anInt8063, i_17, i_18, i_19, i_20, i_14, i_15, i_13, -1473886497);
 							}
-							if (icomponentdefinitions_12.anInt1290 == IComponentDefinitions.anInt1275) {
+							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1275) {
 								if (Renderers.SOFTWARE_RENDERER.method8471()) {
 									Renderers.SOFTWARE_RENDERER.method8474();
 								}
@@ -512,29 +512,29 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 						}
 						if (client.aBoolArray7410[i_13] || client.anInt7412 > 1) {
-							if (icomponentdefinitions_12.anInt1268 == 3) {
+							if (icomponentdefinitions_12.type == 3) {
 								if (i_16 == 0) {
 									if (icomponentdefinitions_12.aBool1316) {
-										Renderers.SOFTWARE_RENDERER.B(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.anInt1264, 0);
+										Renderers.SOFTWARE_RENDERER.B(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.color, 0);
 									} else {
-										Renderers.SOFTWARE_RENDERER.method8430(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.anInt1264, 0);
+										Renderers.SOFTWARE_RENDERER.method8430(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.color, 0);
 									}
 								} else if (icomponentdefinitions_12.aBool1316) {
-									Renderers.SOFTWARE_RENDERER.B(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | icomponentdefinitions_12.anInt1264 & 0xffffff, 1);
+									Renderers.SOFTWARE_RENDERER.B(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | icomponentdefinitions_12.color & 0xffffff, 1);
 								} else {
-									Renderers.SOFTWARE_RENDERER.method8430(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | icomponentdefinitions_12.anInt1264 & 0xffffff, 1);
+									Renderers.SOFTWARE_RENDERER.method8430(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | icomponentdefinitions_12.color & 0xffffff, 1);
 								}
 							} else {
 								ItemDefinitions itemdefinitions_36;
-								if (icomponentdefinitions_12.anInt1268 == 4) {
+								if (icomponentdefinitions_12.type == 4) {
 									FontRenderer fontrenderer_43 = icomponentdefinitions_12.method1988(Class487.aClass378_5752, client.anInterface35_7206, 177804367);
 									if (fontrenderer_43 == null) {
 										if (IComponentDefinitions.aBool1399) {
-											Class109.method1858(icomponentdefinitions_12, (byte) -4);
+											Class109.redrawComponent(icomponentdefinitions_12, (byte) -4);
 										}
 									} else {
-										i_22 = icomponentdefinitions_12.anInt1264;
-										String string_35 = icomponentdefinitions_12.aString1391;
+										i_22 = icomponentdefinitions_12.color;
+										String string_35 = icomponentdefinitions_12.text;
 										if (icomponentdefinitions_12.anInt1426 != -1) {
 											itemdefinitions_36 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(icomponentdefinitions_12.anInt1426, 75675331);
 											string_35 = itemdefinitions_36.name;
@@ -553,7 +553,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										}
 										if (icomponentdefinitions_12 == client.aClass118_7352) {
 											string_35 = Message.PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1013521006);
-											i_22 = icomponentdefinitions_12.anInt1264;
+											i_22 = icomponentdefinitions_12.color;
 										}
 										if (client.aBool7358) {
 											Renderers.SOFTWARE_RENDERER.o(i_14, i_15, i_14 + icomponentdefinitions_12.anInt1301, i_15 + icomponentdefinitions_12.anInt1429);
@@ -570,7 +570,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								} else {
 									int i_27;
 									int i_39;
-									if (icomponentdefinitions_12.anInt1268 == 5) {
+									if (icomponentdefinitions_12.type == 5) {
 										if (icomponentdefinitions_12.anInt1404 >= 0) {
 											icomponentdefinitions_12.method2027(IndexLoaders.aClass288_1746, IndexLoaders.aClass45_5759, -1984245878).method4214(Renderers.SOFTWARE_RENDERER, 0, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.anInt1430 << 3, icomponentdefinitions_12.anInt1431 << 3, 0, 0, -789260204);
 										} else {
@@ -586,9 +586,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											if (nativesprite_41 != null) {
 												i_22 = nativesprite_41.method228();
 												i_23 = nativesprite_41.method2748();
-												i_24 = 255 - (i_16 & 0xff) << 24 | (icomponentdefinitions_12.anInt1264 != 0 ? icomponentdefinitions_12.anInt1264 & 0xffffff : 16777215);
+												i_24 = 255 - (i_16 & 0xff) << 24 | (icomponentdefinitions_12.color != 0 ? icomponentdefinitions_12.color & 0xffffff : 16777215);
 												if (!icomponentdefinitions_12.aBool1322) {
-													if (icomponentdefinitions_12.anInt1264 == 0 && i_16 == 0) {
+													if (icomponentdefinitions_12.color == 0 && i_16 == 0) {
 														if (icomponentdefinitions_12.anInt1423 != 0) {
 															nativesprite_41.method2758((float) icomponentdefinitions_12.anInt1301 / 2.0F + (float) i_14, (float) i_15 + (float) icomponentdefinitions_12.anInt1429 / 2.0F, icomponentdefinitions_12.anInt1301 * 4096 / i_22, icomponentdefinitions_12.anInt1423);
 														} else if (i_22 == icomponentdefinitions_12.anInt1301 && i_23 == icomponentdefinitions_12.anInt1429) {
@@ -610,14 +610,14 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 														i_39 = (i_23 - 1 + icomponentdefinitions_12.anInt1429) / i_23;
 														for (i_27 = 0; i_27 < i_25; i_27++) {
 															for (int i_28 = 0; i_28 < i_39; i_28++) {
-																if (icomponentdefinitions_12.anInt1264 != 0) {
+																if (icomponentdefinitions_12.color != 0) {
 																	nativesprite_41.method2790((float) (i_14 + i_27 * i_22) + (float) i_22 / 2.0F, (float) i_23 / 2.0F + (float) (i_15 + i_23 * i_28), 4096, icomponentdefinitions_12.anInt1423, 0, i_24, 1);
 																} else {
 																	nativesprite_41.method2758((float) (i_14 + i_22 * i_27) + (float) i_22 / 2.0F, (float) (i_15 + i_23 * i_28) + (float) i_23 / 2.0F, 4096, icomponentdefinitions_12.anInt1423);
 																}
 															}
 														}
-													} else if (icomponentdefinitions_12.anInt1264 == 0 && i_16 == 0) {
+													} else if (icomponentdefinitions_12.color == 0 && i_16 == 0) {
 														nativesprite_41.method2756(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
 													} else {
 														nativesprite_41.method2772(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 0, i_24, 1);
@@ -625,10 +625,10 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 												}
 											} else if (IComponentDefinitions.aBool1399) {
-												Class109.method1858(icomponentdefinitions_12, (byte) 43);
+												Class109.redrawComponent(icomponentdefinitions_12, (byte) 43);
 											}
 										}
-									} else if (icomponentdefinitions_12.anInt1268 == 6) {
+									} else if (icomponentdefinitions_12.type == 6) {
 										IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4052((byte) 1);
 										MeshRasterizer meshrasterizer_40 = null;
 										i_22 = 2048;
@@ -644,7 +644,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (meshrasterizer_40 != null) {
 													i_23 = -meshrasterizer_40.YA() >> 1;
 												} else {
-													Class109.method1858(icomponentdefinitions_12, (byte) 15);
+													Class109.redrawComponent(icomponentdefinitions_12, (byte) 15);
 												}
 											}
 										} else {
@@ -656,7 +656,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 111) == icomponentdefinitions_12.anInt1339)) {
 														meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, player_37.playerAppearance, -1254103030);
 														if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
-															Class109.method1858(icomponentdefinitions_12, (byte) -76);
+															Class109.redrawComponent(icomponentdefinitions_12, (byte) -76);
 														}
 													}
 												}
@@ -672,12 +672,12 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (icomponentdefinitions_12.aClass456_1437 != null && icomponentdefinitions_12.aClass456_1437.hasDefs()) {
 													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, Class84.myPlayer.playerAppearance, -1254103030);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
-														Class109.method1858(icomponentdefinitions_12, (byte) -7);
+														Class109.redrawComponent(icomponentdefinitions_12, (byte) -7);
 													}
 												} else {
 													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, Class84.myPlayer.playerAppearance, -1254103030);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
-														Class109.method1858(icomponentdefinitions_12, (byte) -35);
+														Class109.redrawComponent(icomponentdefinitions_12, (byte) -35);
 													}
 												}
 											} else {
@@ -712,12 +712,12 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											Matrix44Arr matrix44arr_38 = Renderers.SOFTWARE_RENDERER.method8449();
 											int i_29 = IndexLoaders.MAP_REGION_DECODER.method4544(-1051442584);
 											int i_30 = IndexLoaders.MAP_REGION_DECODER.method4522(-1749801746);
-											i_30 += icomponentdefinitions_12.anInt1343;
+											i_30 += icomponentdefinitions_12.spriteScale;
 											if (icomponentdefinitions_12.aBool1344) {
 												if (icomponentdefinitions_12.aBool1332) {
-													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379), (float) icomponentdefinitions_12.anInt1343);
+													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379), (float) icomponentdefinitions_12.spriteScale);
 												} else {
-													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379), (float) (icomponentdefinitions_12.anInt1343 << 2));
+													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379), (float) (icomponentdefinitions_12.spriteScale << 2));
 												}
 											} else {
 												matrix44arr_38.method6531((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379));
@@ -728,17 +728,17 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												Renderers.SOFTWARE_RENDERER.RA(false);
 											}
 											if (icomponentdefinitions_12.aBool1332) {
-												client.aClass294_7169.method5217(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.anInt1385));
-												client.aClass294_7169.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.anInt1336));
-												client.aClass294_7169.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(icomponentdefinitions_12.anInt1337));
+												client.aClass294_7169.method5217(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spritePitch));
+												client.aClass294_7169.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spriteRoll));
+												client.aClass294_7169.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(icomponentdefinitions_12.spriteYaw));
 												client.aClass294_7169.method5219((float) icomponentdefinitions_12.anInt1441, (float) icomponentdefinitions_12.anInt1263, (float) icomponentdefinitions_12.anInt1304);
 											} else {
-												int i_31 = Class382.anIntArray4657[icomponentdefinitions_12.anInt1385 << 3] * (icomponentdefinitions_12.anInt1343 << 2) >> 14;
-												int i_32 = Class382.anIntArray4661[icomponentdefinitions_12.anInt1385 << 3] * (icomponentdefinitions_12.anInt1343 << 2) >> 14;
-												client.aClass294_7169.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-icomponentdefinitions_12.anInt1337 << 3));
-												client.aClass294_7169.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.anInt1336 << 3));
+												int i_31 = Class382.anIntArray4657[icomponentdefinitions_12.spritePitch << 3] * (icomponentdefinitions_12.spriteScale << 2) >> 14;
+												int i_32 = Class382.anIntArray4661[icomponentdefinitions_12.spritePitch << 3] * (icomponentdefinitions_12.spriteScale << 2) >> 14;
+												client.aClass294_7169.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-icomponentdefinitions_12.spriteYaw << 3));
+												client.aClass294_7169.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spriteRoll << 3));
 												client.aClass294_7169.method5219((float) (icomponentdefinitions_12.anInt1293 << 2), (float) (i_31 + i_23 + (icomponentdefinitions_12.anInt1334 << 2)), (float) (i_32 + (icomponentdefinitions_12.anInt1334 << 2)));
-												client.aClass294_7169.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.anInt1385 << 3));
+												client.aClass294_7169.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spritePitch << 3));
 											}
 											icomponentdefinitions_12.method1991(Renderers.SOFTWARE_RENDERER, meshrasterizer_40, client.aClass294_7169, client.cycles, (byte) -118);
 											if (client.aBool7358) {
@@ -755,7 +755,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												Renderers.SOFTWARE_RENDERER.RA(true);
 											}
 										}
-									} else if (icomponentdefinitions_12.anInt1268 == 9) {
+									} else if (icomponentdefinitions_12.type == 9) {
 										if (icomponentdefinitions_12.aBool1357) {
 											i_21 = i_14;
 											i_22 = i_15 + icomponentdefinitions_12.anInt1429;
@@ -768,9 +768,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											i_24 = i_15 + icomponentdefinitions_12.anInt1429;
 										}
 										if (icomponentdefinitions_12.anInt1377 == 1) {
-											Renderers.SOFTWARE_RENDERER.method8433(i_21, i_22, i_23, i_24, icomponentdefinitions_12.anInt1264, 0);
+											Renderers.SOFTWARE_RENDERER.method8433(i_21, i_22, i_23, i_24, icomponentdefinitions_12.color, 0);
 										} else {
-											Renderers.SOFTWARE_RENDERER.method8496(i_21, i_22, i_23, i_24, icomponentdefinitions_12.anInt1264, icomponentdefinitions_12.anInt1377, 0);
+											Renderers.SOFTWARE_RENDERER.method8496(i_21, i_22, i_23, i_24, icomponentdefinitions_12.color, icomponentdefinitions_12.anInt1377, 0);
 										}
 									}
 								}

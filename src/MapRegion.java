@@ -251,7 +251,7 @@ public class MapRegion {
 	}
 
 	void method4439(RsBitsBuffer rsbitsbuffer_1, int i_2) {
-		int i_3 = rsbitsbuffer_1.readUnsignedByteC(19053846);
+		int i_3 = rsbitsbuffer_1.readUnsignedByteC();
 		boolean bool_4 = (i_3 & 0x1) != 0;
 		int i_5 = rsbitsbuffer_1.readUnsigned128Byte();
 		if (i_5 == 1) {
@@ -263,7 +263,7 @@ public class MapRegion {
 		} else if (i_5 == 4) {
 			this.aClass256_3163 = Class256.aClass256_3161;
 		}
-		int i_6 = rsbitsbuffer_1.readUnsignedByte128(-1236952914);
+		int i_6 = rsbitsbuffer_1.readUnsignedByte128();
 		int i_7 = rsbitsbuffer_1.readUnsignedShort128();
 		int i_8 = rsbitsbuffer_1.readUnsignedShort();
 		if (!this.aBool3171) {
@@ -474,7 +474,7 @@ public class MapRegion {
 				throw new IllegalStateException();
 			}
 			client.anInt7341 = 1;
-			client.anInt7231 = -1;
+			client.CURRENT_CUTSCENE = -1;
 		}
 		if (bool_4 || this.anInt3170 != i_1 || i_2 != this.anInt3207) {
 			this.anInt3170 = i_1;
@@ -970,7 +970,7 @@ public class MapRegion {
 				Class405.method6823(-734889653);
 				Class48_Sub2.method14571((byte) 0);
 				TCPMessage tcpmessage_22;
-				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.method3053((byte) -27) != null && client.gameState == 18) {
+				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.getConnection() != null && client.gameState == 18) {
 					tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4609, client.aClass184_7475.isaac, 582872651);
 					tcpmessage_22.buffer.writeInt(1057001181);
 					client.aClass184_7475.method3049(tcpmessage_22, 278728590);
@@ -1001,14 +1001,14 @@ public class MapRegion {
 					Class365.setGameState(3);
 				} else {
 					Class365.setGameState(13);
-					if (client.aClass184_7475.method3053((byte) -84) != null) {
+					if (client.aClass184_7475.getConnection() != null) {
 						tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.isaac, 1466063096);
 						client.aClass184_7475.method3049(tcpmessage_22, 1512043524);
 					}
 				}
 				ParticleProducerDefinition.method1160(-1437458578);
 				if (this.aBool3206) {
-					Class209.method3598(Long.toString(Class169.time() - this.aLong3183), -1857188149);
+					Class209.printConsoleMessage(Long.toString(Class169.time() - this.aLong3183), -1857188149);
 					this.aBool3206 = false;
 				}
 				if (bool_21) {

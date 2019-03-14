@@ -49,7 +49,7 @@ public class AnimationFrameSet extends CacheableNode {
 				buffer.index = 1;
 				int frameId = buffer.readUnsignedShort();
 				synchronized (ANIMATION_FRAME_INDEX) {
-					loaded &= ANIMATION_FRAME_INDEX.method5661(frameId, 518523792);
+					loaded &= ANIMATION_FRAME_INDEX.loadCutscene(frameId);
 				}
 			}
 

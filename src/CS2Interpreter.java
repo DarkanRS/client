@@ -3437,7 +3437,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method468(CS2Executor executor) {
-		Class184 class184_2 = Class468_Sub20.method12807(461566707);
+		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(461566707);
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, 1283884802);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
@@ -3828,7 +3828,7 @@ public class CS2Interpreter {
 	static final void method12925(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1385;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spritePitch;
 	}
 
 	static final void method1864(CS2Executor executor) {
@@ -4324,7 +4324,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
 		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 17)) {
-			executor.intStack[++executor.intStackPtr - 1] = Class62.method1262(i_2, string_3, (byte) 55) ? 1 : 0;
+			executor.intStack[++executor.intStackPtr - 1] = Class62.setGameHost(i_2, string_3) ? 1 : 0;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -4725,7 +4725,7 @@ public class CS2Interpreter {
 	static final void method6691(CS2Executor executor) {
 		boolean bool_2 = executor.intStack[--executor.intStackPtr] != 0;
 		int i_3 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = Class202.method3342((long) i_3, 0, bool_2, Class223.CURRENT_LANGUAGE, (byte) -28);
+		executor.stringStack[++executor.stringStackPtr - 1] = Connection.method3342((long) i_3, 0, bool_2, Class223.CURRENT_LANGUAGE, (byte) -28);
 	}
 
 	static final void method6695(CS2Executor executor) {
@@ -4970,7 +4970,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3921(CS2Executor executor) {
-		Class184 class184_2 = Class468_Sub20.method12807(-1070075874);
+		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1070075874);
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, 1590511706);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
@@ -5008,7 +5008,7 @@ public class CS2Interpreter {
 	static final void method289(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1343;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteScale;
 	}
 
 	static final void method290(CS2Executor executor) {
@@ -5296,7 +5296,7 @@ public class CS2Interpreter {
 	static final void getCompText(CS2Executor executor) {
 		int component = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(component);
-		executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.aString1391;
+		executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.text;
 	}
 
 	static final void method5487(CS2Executor executor) {
@@ -5343,7 +5343,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6315(CS2Executor executor) {
-		Class184 class184_2 = Class468_Sub20.method12807(-1148731547);
+		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1148731547);
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, 213013153);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
@@ -5730,7 +5730,7 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
 		icomponentdefinitions_2.aClass118Array1438 = null;
 		icomponentdefinitions_2.aClass118Array1439 = null;
-		Class109.method1858(icomponentdefinitions_2, (byte) -71);
+		Class109.redrawComponent(icomponentdefinitions_2, (byte) -71);
 	}
 
 	static final void method3911(CS2Executor executor) {
@@ -5780,8 +5780,8 @@ public class CS2Interpreter {
 
 	static final void method4774(CS2Executor executor) {
 		String string_2 = null;
-		if (Class119.aClass12_1461 != null) {
-			string_2 = Class119.aClass12_1461.method473(-495509625);
+		if (Class119.HOSTNAME_IDENTIFIER != null) {
+			string_2 = Class119.HOSTNAME_IDENTIFIER.getHostName();
 		}
 		if (string_2 == null) {
 			string_2 = "";
@@ -5979,7 +5979,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.get((long) i_2);
 		if (class282_sub44_3 != null && class282_sub44_3.anInt8062 == 3) {
-			Class351.method6196(class282_sub44_3, true, true, -1932930202);
+			Class351.closeChildren(class282_sub44_3, true, true, -1932930202);
 		}
 	}
 
@@ -6088,7 +6088,7 @@ public class CS2Interpreter {
 	static final void method6174(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1337;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteYaw;
 	}
 
 	static final void method15448(CS2Executor executor) {
@@ -6251,7 +6251,7 @@ public class CS2Interpreter {
 
 	static final void method16079(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		Class12.method486(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], 0, 596260679);
+		HostNameIdentifier.method486(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], 0, 596260679);
 	}
 
 	static final void method1624(CS2Executor executor) {
@@ -6492,14 +6492,14 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class202.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 82);
+		Connection.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 82);
 	}
 
 	static final void method8723(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class202.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 40);
+		Connection.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 40);
 	}
 
 	static final void method8724(CS2Executor executor) {
@@ -6986,7 +6986,7 @@ public class CS2Interpreter {
 	static final void method5045(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1305;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.parent;
 	}
 
 	static final void method5046(CS2Executor executor) {
@@ -7064,7 +7064,7 @@ public class CS2Interpreter {
 	static final void method892(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.aBool1306 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.hidden ? 1 : 0;
 	}
 
 	static final void method6212(CS2Executor executor) {
@@ -7205,7 +7205,7 @@ public class CS2Interpreter {
 
 	static final void method4902(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class202.method3345(string_2, 1291002521);
+		Connection.method3345(string_2, 1291002521);
 	}
 
 	static final void method15437(CS2Executor executor) {
@@ -7655,7 +7655,7 @@ public class CS2Interpreter {
 	static final void method13491(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1305;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.parent;
 	}
 
 	static final void method4193(CS2Executor executor) {
@@ -7670,7 +7670,7 @@ public class CS2Interpreter {
 	static final void method6236(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1336;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteRoll;
 	}
 
 	static final void method6237(CS2Executor executor) {
@@ -7700,9 +7700,9 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		String string_4 = (String) executor.stringStack[--executor.stringStackPtr];
 		if (i_2 == 99) {
-			Class209.method3598(string_4, -914132655);
+			Class209.printConsoleMessage(string_4, -914132655);
 		} else if (i_2 == 98) {
-			QuestDefinitions.method4140(string_4, 2053399101);
+			QuestDefinitions.setConsoleText(string_4, 2053399101);
 		} else {
 			Class191.method3167(i_2, i_3, "", "", "", string_4, 30910415);
 		}
@@ -7723,7 +7723,7 @@ public class CS2Interpreter {
 	static final void method6232(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.aBool1306 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.hidden ? 1 : 0;
 	}
 
 	static final void method1613(CS2Executor executor) {
@@ -7781,7 +7781,7 @@ public class CS2Interpreter {
 		} else {
 			IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.method8772(42076446);
 			icomponentdefinitions_3.aClass118Array1438[underlaydefinition_2.aClass118_5886.anInt1288] = null;
-			Class109.method1858(icomponentdefinitions_3, (byte) -39);
+			Class109.redrawComponent(icomponentdefinitions_3, (byte) -39);
 		}
 	}
 
@@ -7908,7 +7908,7 @@ public class CS2Interpreter {
 	static final void method11249(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1343;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteScale;
 	}
 
 	static final void method254(CS2Executor executor) {
@@ -7966,12 +7966,12 @@ public class CS2Interpreter {
 	static final void method7219(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1264;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.color;
 	}
 
 	static final void method6005(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class184 class184_3 = Class468_Sub20.method12807(-1949417532);
+		BufferedConnectionContext class184_3 = Class468_Sub20.method12807(-1949417532);
 		TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4557, class184_3.isaac, 502225021);
 		tcpmessage_4.buffer.writeByte(i_2);
 		class184_3.method3049(tcpmessage_4, -616684350);
@@ -8019,7 +8019,7 @@ public class CS2Interpreter {
 		if (string_3.length() > 80) {
 			string_3 = string_3.substring(0, 80);
 		}
-		Class184 class184_6 = Class468_Sub20.method12807(-837831842);
+		BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-837831842);
 		TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4611, class184_6.isaac, -589637310);
 		tcpmessage_7.buffer.writeByte(ChatLine.getLength(string_2) + 2 + ChatLine.getLength(string_3));
 		tcpmessage_7.buffer.writeString(string_2);
@@ -8527,13 +8527,13 @@ public class CS2Interpreter {
 	static final void method454(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1264;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.color;
 	}
 
 	static final void method8211(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1337;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteYaw;
 	}
 
 	static final void method8212(CS2Executor executor) {
@@ -8576,7 +8576,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1603(CS2Executor executor) {
-		Class184 class184_2 = Class468_Sub20.method12807(-846822027);
+		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-846822027);
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, -312926267);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
@@ -8634,7 +8634,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method12584(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class159.aClass450_2010.worldId;
+		executor.intStack[++executor.intStackPtr - 1] = Class159.GAME_CONNECTION_INFO.worldId;
 	}
 
 	static final void method1888(CS2Executor executor) {
@@ -8980,13 +8980,13 @@ public class CS2Interpreter {
 
 	static final void method8206(CS2Executor executor) {
 		executor.intStackPtr -= 12;
-		Class316.method5594(-559600711);
+		Class316.method5594();
 		Class96.method1607((byte) 35);
 		Class282_Sub20_Sub9.anInt9792 = executor.intStack[executor.intStackPtr];
 		Class301.anInt3556 = executor.intStack[executor.intStackPtr + 1];
 		Class20.anInt188 = executor.intStack[executor.intStackPtr + 2];
 		Class182.anInt2262 = executor.intStack[executor.intStackPtr + 3];
-		Class450.anInt5438 = executor.intStack[executor.intStackPtr + 4];
+		ConnectionInfo.anInt5438 = executor.intStack[executor.intStackPtr + 4];
 		Class373.anInt4350 = executor.intStack[executor.intStackPtr + 5];
 		Class254.anInt3145 = executor.intStack[executor.intStackPtr + 6];
 		Class446.anInt5396 = executor.intStack[executor.intStackPtr + 7];
@@ -8994,13 +8994,13 @@ public class CS2Interpreter {
 		Class388.anInt4722 = executor.intStack[executor.intStackPtr + 9];
 		Class99.anInt1005 = executor.intStack[executor.intStackPtr + 10];
 		Class242.anInt2982 = executor.intStack[executor.intStackPtr + 11];
-		IndexLoaders.SPRITES_INDEX.method5661(Class450.anInt5438, 1020606537);
-		IndexLoaders.SPRITES_INDEX.method5661(Class373.anInt4350, -2132853844);
-		IndexLoaders.SPRITES_INDEX.method5661(Class254.anInt3145, 849271104);
-		IndexLoaders.SPRITES_INDEX.method5661(Class446.anInt5396, 1880113432);
-		IndexLoaders.SPRITES_INDEX.method5661(Class17.anInt148, 1880542430);
-		IndexLoaders.SPRITES_INDEX.method5661(Class242.anInt2982, 522426974);
-		IndexLoaders.FONT_METRICS_INDEX.method5661(Class242.anInt2982, 1908708810);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(ConnectionInfo.anInt5438);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(Class373.anInt4350);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(Class254.anInt3145);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(Class446.anInt5396);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(Class17.anInt148);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(Class242.anInt2982);
+		IndexLoaders.FONT_METRICS_INDEX.loadCutscene(Class242.anInt2982);
 		Class354.aClass160_4110 = null;
 		Class149_Sub2.aClass160_9315 = null;
 		Class125.aClass160_1571 = null;
@@ -9352,7 +9352,7 @@ public class CS2Interpreter {
 
 	static final void method8296(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class184 class184_3 = Class468_Sub20.method12807(-625511967);
+		BufferedConnectionContext class184_3 = Class468_Sub20.method12807(-625511967);
 		TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4541, class184_3.isaac, 103463045);
 		tcpmessage_4.buffer.writeByte(0);
 		int i_5 = tcpmessage_4.buffer.index;
@@ -9576,7 +9576,7 @@ public class CS2Interpreter {
 		String string_2 = (String) executor.stringStack[executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
 		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
-			Class184 class184_4 = Class468_Sub20.method12807(65699692);
+			BufferedConnectionContext class184_4 = Class468_Sub20.method12807(65699692);
 			TCPMessage tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4542, class184_4.isaac, 1733219960);
 			tcpmessage_5.buffer.writeShort(0, 1417031095);
 			int i_6 = tcpmessage_5.buffer.index;
@@ -9716,7 +9716,7 @@ public class CS2Interpreter {
 			underlaydefinition_2 = executor.aClass513_7007;
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
-		executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_4.aString1391;
+		executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_4.text;
 	}
 
 	static final void method3949(CS2Executor executor) {
@@ -9786,7 +9786,7 @@ public class CS2Interpreter {
 	static final void method1571(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1336;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteRoll;
 	}
 
 	static final void method1572(CS2Executor executor) {
@@ -9899,7 +9899,7 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_2 = executor.animable.inter.getComponent(executor.intStack[--executor.intStackPtr]);
 		icomponentdefinitions_2.aClass118Array1438 = null;
 		icomponentdefinitions_2.aClass118Array1439 = null;
-		Class109.method1858(icomponentdefinitions_2, (byte) -73);
+		Class109.redrawComponent(icomponentdefinitions_2, (byte) -73);
 	}
 
 	static void method7461(CS2Executor executor) {
@@ -9908,8 +9908,8 @@ public class CS2Interpreter {
 
 	static final void method7462(CS2Executor executor) {
 		String string_2 = null;
-		if (Class119.aClass12_1461 != null) {
-			string_2 = Class119.aClass12_1461.method473(1840459942);
+		if (Class119.HOSTNAME_IDENTIFIER != null) {
+			string_2 = Class119.HOSTNAME_IDENTIFIER.getHostName();
 		}
 		if (string_2 == null) {
 			string_2 = "";
@@ -10042,7 +10042,7 @@ public class CS2Interpreter {
 					string_2 = string_2.substring(Message.aClass433_5326.translate(Class223.CURRENT_LANGUAGE, -1032612070).length());
 				}
 			}
-			Class184 class184_6 = Class468_Sub20.method12807(-1317872697);
+			BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-1317872697);
 			TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4538, class184_6.isaac, 1631130061);
 			tcpmessage_7.buffer.writeByte(0);
 			int i_8 = tcpmessage_7.buffer.index;
@@ -10325,7 +10325,7 @@ public class CS2Interpreter {
 			Class149_Sub2.aClass461_9316 = Class461.aClass461_5539;
 		}
 		client.anInt7422 = executor.intStack[executor.intStackPtr + 2];
-		Class184 class184_2 = Class468_Sub20.method12807(-405485002);
+		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-405485002);
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4547, class184_2.isaac, 984159932);
 		tcpmessage_3.buffer.writeByte(client.anInt7416);
 		tcpmessage_3.buffer.writeByte(Class149_Sub2.aClass461_9316.anInt5541);
@@ -10401,7 +10401,7 @@ public class CS2Interpreter {
 	static final void method2945(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1385;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spritePitch;
 	}
 
 	static final void method3913(CS2Executor executor) {

@@ -28,7 +28,7 @@ public class Class415 {
 		boolean bool_3 = IndexLoaders.ITEM_INDEX_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.anInt1426, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.anInt1323, ~0xffffff | icomponentdefinitions_1.anInt1324, icomponentdefinitions_1.anInt1335, icomponentdefinitions_1.aBool1388 ? Class84.myPlayer.playerAppearance : null, 206421629) == null;
 		if (bool_3) {
 			Class182.ITEMS.append(new Item(icomponentdefinitions_1.anInt1426, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.anInt1323, ~0xffffff | icomponentdefinitions_1.anInt1324, icomponentdefinitions_1.anInt1335, icomponentdefinitions_1.aBool1388), 2129824962);
-			Class109.method1858(icomponentdefinitions_1, (byte) 71);
+			Class109.redrawComponent(icomponentdefinitions_1, (byte) 71);
 		}
 	}
 

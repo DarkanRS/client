@@ -38,30 +38,30 @@ public class IComponentDefinitions {
 	static SoftCache aClass229_1282 = new SoftCache(4);
 	public static SoftCache aClass229_1341 = new SoftCache(50);
 	public static boolean aBool1399 = false;
-	public int anInt1268;
+	public int type;
 	public String aString1285;
-	public int anInt1290 = 0;
-	public int anInt1295 = 0;
-	public int anInt1296 = 0;
-	public int anInt1297 = 0;
-	public int anInt1298 = 0;
+	public int contentType = 0;
+	public int basePositionX = 0;
+	public int basePositionY = 0;
+	public int baseWidth = 0;
+	public int baseHeight = 0;
 	public byte aByte1368 = 0;
 	public byte aByte1294 = 0;
 	public byte aByte1333 = 0;
 	public byte aByte1355 = 0;
-	public int anInt1305 = -1;
-	public boolean aBool1306 = false;
+	public int parent = -1;
+	public boolean hidden = false;
 	public int anInt1376 = 0;
 	public int anInt1314 = 0;
-	public boolean aBool1291 = false;
+	public boolean disableHover = false;
 	public int anInt1320 = -1;
 	public int anInt1423 = 0;
 	public int anInt1329 = 1;
 	public int anInt1330;
 	public boolean aBool1322 = false;
 	public int anInt1277 = -1;
-	public String aString1391 = "";
-	public int anInt1264 = 0;
+	public String text = "";
+	public int color = 0;
 	public boolean aBool1327 = false;
 	public int anInt1453 = 0;
 	public int anInt1323 = 0;
@@ -95,13 +95,13 @@ public class IComponentDefinitions {
 	public String aString1338;
 	public int anInt1441 = 0;
 	public int anInt1263 = 0;
-	public int anInt1385 = 0;
-	public int anInt1336 = 0;
-	public int anInt1337 = 0;
-	public int anInt1343 = 100;
+	public int spritePitch = 0;
+	public int spriteRoll = 0;
+	public int spriteYaw = 0;
+	public int spriteScale = 100;
 	public boolean aBool1328 = true;
 	public int anInt1304 = 0;
-	public int anInt1321;
+	public int animation;
 	public int anInt1307 = -1;
 	public int anInt1309 = -1;
 	public IComponentSettings settings;
@@ -191,40 +191,40 @@ public class IComponentDefinitions {
 		if (i_3 == 255) {
 			i_3 = -1;
 		}
-		this.anInt1268 = rsbytebuffer_1.readUnsignedByte();
-		if ((this.anInt1268 & 0x80) != 0) {
-			this.anInt1268 &= 0x7f;
+		this.type = rsbytebuffer_1.readUnsignedByte();
+		if ((this.type & 0x80) != 0) {
+			this.type &= 0x7f;
 			this.aString1285 = rsbytebuffer_1.readString();
 		}
-		this.anInt1290 = rsbytebuffer_1.readUnsignedShort();
-		this.anInt1295 = rsbytebuffer_1.readShort();
-		this.anInt1296 = rsbytebuffer_1.readShort();
-		this.anInt1297 = rsbytebuffer_1.readUnsignedShort();
-		this.anInt1298 = rsbytebuffer_1.readUnsignedShort();
+		this.contentType = rsbytebuffer_1.readUnsignedShort();
+		this.basePositionX = rsbytebuffer_1.readShort();
+		this.basePositionY = rsbytebuffer_1.readShort();
+		this.baseWidth = rsbytebuffer_1.readUnsignedShort();
+		this.baseHeight = rsbytebuffer_1.readUnsignedShort();
 		this.aByte1368 = rsbytebuffer_1.readByte();
 		this.aByte1294 = rsbytebuffer_1.readByte();
 		this.aByte1333 = rsbytebuffer_1.readByte();
 		this.aByte1355 = rsbytebuffer_1.readByte();
-		this.anInt1305 = rsbytebuffer_1.readUnsignedShort();
-		if (this.anInt1305 == 65535) {
-			this.anInt1305 = -1;
+		this.parent = rsbytebuffer_1.readUnsignedShort();
+		if (this.parent == 65535) {
+			this.parent = -1;
 		} else {
-			this.anInt1305 += this.idHash & ~0xffff;
+			this.parent += this.idHash & ~0xffff;
 		}
 		int i_4 = rsbytebuffer_1.readUnsignedByte();
-		this.aBool1306 = (i_4 & 0x1) != 0;
+		this.hidden = (i_4 & 0x1) != 0;
 		if (i_3 >= 0) {
-			this.aBool1291 = (i_4 & 0x2) != 0;
+			this.disableHover = (i_4 & 0x2) != 0;
 		}
-		if (this.anInt1268 == 0) {
+		if (this.type == 0) {
 			this.anInt1376 = rsbytebuffer_1.readUnsignedShort();
 			this.anInt1314 = rsbytebuffer_1.readUnsignedShort();
 			if (i_3 < 0) {
-				this.aBool1291 = rsbytebuffer_1.readUnsignedByte() == 1;
+				this.disableHover = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
 		int i_5;
-		if (this.anInt1268 == 5) {
+		if (this.type == 5) {
 			this.anInt1320 = rsbytebuffer_1.readInt();
 			this.anInt1423 = rsbytebuffer_1.readUnsignedShort();
 			i_5 = rsbytebuffer_1.readUnsignedByte();
@@ -235,12 +235,12 @@ public class IComponentDefinitions {
 			this.anInt1324 = rsbytebuffer_1.readInt();
 			this.aBool1325 = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.aBool1351 = rsbytebuffer_1.readUnsignedByte() == 1;
-			this.anInt1264 = rsbytebuffer_1.readInt();
+			this.color = rsbytebuffer_1.readInt();
 			if (i_3 >= 3) {
 				this.aBool1328 = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
-		if (this.anInt1268 == 6) {
+		if (this.type == 6) {
 			this.anInt1329 = 1;
 			this.anInt1330 = rsbytebuffer_1.readBigSmart();
 			i_5 = rsbytebuffer_1.readUnsignedByte();
@@ -251,20 +251,20 @@ public class IComponentDefinitions {
 			if (bool_6) {
 				this.anInt1441 = rsbytebuffer_1.readShort();
 				this.anInt1263 = rsbytebuffer_1.readShort();
-				this.anInt1385 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1336 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1337 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1343 = rsbytebuffer_1.readUnsignedShort();
+				this.spritePitch = rsbytebuffer_1.readUnsignedShort();
+				this.spriteRoll = rsbytebuffer_1.readUnsignedShort();
+				this.spriteYaw = rsbytebuffer_1.readUnsignedShort();
+				this.spriteScale = rsbytebuffer_1.readUnsignedShort();
 			} else if (this.aBool1332) {
 				this.anInt1441 = rsbytebuffer_1.readShort();
 				this.anInt1263 = rsbytebuffer_1.readShort();
 				this.anInt1304 = rsbytebuffer_1.readShort();
-				this.anInt1385 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1336 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1337 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1343 = rsbytebuffer_1.readShort();
+				this.spritePitch = rsbytebuffer_1.readUnsignedShort();
+				this.spriteRoll = rsbytebuffer_1.readUnsignedShort();
+				this.spriteYaw = rsbytebuffer_1.readUnsignedShort();
+				this.spriteScale = rsbytebuffer_1.readShort();
 			}
-			this.anInt1321 = rsbytebuffer_1.readBigSmart();
+			this.animation = rsbytebuffer_1.readBigSmart();
 			if (this.aByte1368 != 0) {
 				this.anInt1417 = rsbytebuffer_1.readUnsignedShort();
 			}
@@ -272,35 +272,35 @@ public class IComponentDefinitions {
 				this.anInt1326 = rsbytebuffer_1.readUnsignedShort();
 			}
 		}
-		if (this.anInt1268 == 4) {
+		if (this.type == 4) {
 			this.anInt1277 = rsbytebuffer_1.readBigSmart();
 			if (i_3 >= 2) {
 				this.aBool1356 = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
-			this.aString1391 = rsbytebuffer_1.readString();
-			if (this.aString1391.toLowerCase().contains("runescape")) {
-				this.aString1391 = this.aString1391.replace("runescape", "Darkan");
-				this.aString1391 = this.aString1391.replace("RuneScape", "Darkan");
-				this.aString1391 = this.aString1391.replace("Runescape", "Darkan");
+			this.text = rsbytebuffer_1.readString();
+			if (this.text.toLowerCase().contains("runescape")) {
+				this.text = this.text.replace("runescape", "Darkan");
+				this.text = this.text.replace("RuneScape", "Darkan");
+				this.text = this.text.replace("Runescape", "Darkan");
 			}
 			this.anInt1358 = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1359 = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1360 = rsbytebuffer_1.readUnsignedByte();
 			this.aBool1420 = rsbytebuffer_1.readUnsignedByte() == 1;
-			this.anInt1264 = rsbytebuffer_1.readInt();
+			this.color = rsbytebuffer_1.readInt();
 			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 >= 0) {
 				this.anInt1362 = rsbytebuffer_1.readUnsignedByte();
 			}
 		}
-		if (this.anInt1268 == 3) {
-			this.anInt1264 = rsbytebuffer_1.readInt();
+		if (this.type == 3) {
+			this.color = rsbytebuffer_1.readInt();
 			this.aBool1316 = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
 		}
-		if (this.anInt1268 == 9) {
+		if (this.type == 9) {
 			this.anInt1377 = rsbytebuffer_1.readUnsignedByte();
-			this.anInt1264 = rsbytebuffer_1.readInt();
+			this.color = rsbytebuffer_1.readInt();
 			this.aBool1357 = rsbytebuffer_1.readUnsignedByte() == 1;
 		}
 		i_5 = rsbytebuffer_1.read24BitUnsignedInteger();
@@ -732,7 +732,7 @@ public class IComponentDefinitions {
 		this.aBool1388 = false;
 		this.anInt1404 = -1;
 		this.anInt1435 = -1;
-		this.anInt1321 = -1;
+		this.animation = -1;
 		this.aBool1440 = false;
 		this.aBool1286 = false;
 		this.anInt1442 = -1;

@@ -224,7 +224,7 @@ public class Class188 {
 							}
 						}
 					} else if (TilestreamPacket.aClass364_4213 == tilestreampacket_0) {
-						i_3 = rsbitsbuffer_2.readUnsignedByte128(-1710516450);
+						i_3 = rsbitsbuffer_2.readUnsignedByte128();
 						i_21 = i_3 >> 2;
 						i_5 = i_3 & 0x3;
 						i_6 = client.anIntArray7230[i_21];
@@ -235,7 +235,7 @@ public class Class188 {
 							Class299.method5313(Class272.anInt3331, i_8, i_9, i_6, -1, i_21, i_5, 1736684675);
 						}
 					} else if (TilestreamPacket.aClass364_4207 == tilestreampacket_0) {
-						i_3 = rsbitsbuffer_2.readUnsignedByteC(-1607193362);
+						i_3 = rsbitsbuffer_2.readUnsignedByteC();
 						coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1369508080);
 						i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.anInt10131;
 						i_6 = i_5 + coordgrid_4.y;
@@ -263,11 +263,11 @@ public class Class188 {
 						if (TilestreamPacket.aClass364_4209 == tilestreampacket_0) {
 							i_3 = rsbitsbuffer_2.readInt();
 							ObjectDefinitions objectdefinitions_32 = IndexLoaders.MAP_REGION_DECODER.method4436(-1701060227).getObjectDefinitions(i_3, 65280);
-							i_5 = rsbitsbuffer_2.readUnsignedByte128(-2062158899);
+							i_5 = rsbitsbuffer_2.readUnsignedByte128();
 							i_6 = i_5 >> 2;
 							i_7 = client.anIntArray7230[i_6];
 							i_8 = rsbitsbuffer_2.readUnsignedByte();
-							i_9 = rsbitsbuffer_2.readUnsignedByte128(-1833974634);
+							i_9 = rsbitsbuffer_2.readUnsignedByte128();
 							i_10 = (i_9 >> 4 & 0x7) + SceneObjectType.anInt5495;
 							i_11 = (i_9 & 0x7) + Class158_Sub1_Sub2.anInt10131;
 							if (i_6 == SceneObjectType.GROUND_INTERACT.type) {
@@ -367,7 +367,7 @@ public class Class188 {
 						} else if (TilestreamPacket.aClass364_4206 == tilestreampacket_0) {
 							i_3 = rsbitsbuffer_2.readShortLE128();
 							i_21 = rsbitsbuffer_2.readUnsignedShort128();
-							i_5 = rsbitsbuffer_2.readUnsignedByteC(-1139243709);
+							i_5 = rsbitsbuffer_2.readUnsignedByteC();
 							CoordGrid coordgrid_31 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(171672593);
 							i_7 = (i_5 & 0x7) + Class158_Sub1_Sub2.anInt10131;
 							i_8 = i_7 + coordgrid_31.y;

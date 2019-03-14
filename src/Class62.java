@@ -74,13 +74,13 @@ public class Class62 implements Interface3 {
 		Class111.method1866(index_0, -473782412);
 	}
 
-	public static boolean method1262(int i_0, String string_1, byte b_2) {
-		Class159.aClass450_2010 = new Class450();
-		Class159.aClass450_2010.worldId = i_0;
-		Class159.aClass450_2010.aString5433 = string_1;
+	public static boolean setGameHost(int i_0, String string_1) {
+		Class159.GAME_CONNECTION_INFO = new ConnectionInfo();
+		Class159.GAME_CONNECTION_INFO.worldId = i_0;
+		Class159.GAME_CONNECTION_INFO.host = string_1;
 		if (Class90.aClass496_952 != Class496.aClass496_5813) {
-			Class159.aClass450_2010.anInt5434 = Class159.aClass450_2010.worldId * -1708079975 + 1140744768;
-			Class159.aClass450_2010.anInt5437 = Class159.aClass450_2010.worldId * -1473668237 + 1047080176;
+			Class159.GAME_CONNECTION_INFO.anInt5434 = Class159.GAME_CONNECTION_INFO.worldId;
+			Class159.GAME_CONNECTION_INFO.anInt5437 = Class159.GAME_CONNECTION_INFO.worldId;
 		}
 		return true;
 	}

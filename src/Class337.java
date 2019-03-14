@@ -10,7 +10,7 @@ public class Class337 {
 
 	public static void unloadInterface(int i_0, int i_1) {
 		WorldMapIndexLoader.INTERFACES_LOADED[i_0] = false;
-		Class12.clearComponents(i_0, -1495607995);
+		HostNameIdentifier.clearComponents(i_0, -1495607995);
 	}
 
 	static final void method6018(Class521_Sub1 class521_sub1_0, CS2Executor cs2executor_1, int i_2) {

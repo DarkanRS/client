@@ -42,7 +42,7 @@ public class Class540 {
 			NPC npc_7 = (NPC) class282_sub47_5.anObject8068;
 			if (npc_7.anInt10353 != client.anInt7332) {
 				if (Class20.aBool161 && EnumIndexLoader.method7426(i_4, (byte) -86)) {
-					Class316.method5594(-559600711);
+					Class316.method5594();
 				}
 				if (npc_7.definitions.method6886(-1089073917)) {
 					Class169.method2876(npc_7, 1280406765);
@@ -64,8 +64,8 @@ public class Class540 {
 				client.aClass282_Sub47Array7209[i_6] = null;
 			}
 		}
-		if (client.aClass184_7475.recievedBuffer.index != client.aClass184_7475.anInt2287) {
-			throw new RuntimeException(client.aClass184_7475.recievedBuffer.index + " " + client.aClass184_7475.anInt2287);
+		if (client.aClass184_7475.recievedBuffer.index != client.aClass184_7475.currentPacketSize) {
+			throw new RuntimeException(client.aClass184_7475.recievedBuffer.index + " " + client.aClass184_7475.currentPacketSize);
 		} else {
 			for (i_3 = 0; i_3 < client.anInt7211; i_3++) {
 				if (client.NPCS.get((long) client.anIntArray7212[i_3]) == null) {

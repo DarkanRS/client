@@ -261,7 +261,7 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(976304204);
 			if (npcdefinitions_5.aShortArray4892 != null && i_4 >= 0 && i_4 < npcdefinitions_5.aShortArray4892.length) {
 				icomponentdefinitions_0.aClass417_1308.aShortArray4990[i_4] = (short) i_3;
-				Class109.method1858(icomponentdefinitions_0, (byte) 49);
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) 49);
 			} else {
 				throw new RuntimeException("");
 			}

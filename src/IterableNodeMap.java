@@ -42,7 +42,7 @@ public final class IterableNodeMap implements Iterable {
 	}
 
 	public Iterator iterator() {
-		return new Class451(this);
+		return new HashTableIterator(this);
 	}
 
 	public void method7749(int i_1) {

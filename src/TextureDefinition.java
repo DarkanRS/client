@@ -22,7 +22,7 @@ public class TextureDefinition extends CacheableNode {
 			}
 		} else {
 			for (i_4 = 0; i_4 < this.anIntArray9475.length; i_4++) {
-				if (!index_1.method5661(this.anIntArray9475[i_4], 1546931007)) {
+				if (!index_1.loadCutscene(this.anIntArray9475[i_4])) {
 					return false;
 				}
 			}

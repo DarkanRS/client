@@ -34,10 +34,10 @@ public class Class51 implements Interface2 {
 
 	public boolean method21() {
 		boolean bool_1 = true;
-		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -1933108469)) {
+		if (!this.aClass317_487.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
-		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -1620849369)) {
+		if (!this.aClass317_486.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
 		return bool_1;
@@ -58,10 +58,10 @@ public class Class51 implements Interface2 {
 
 	public boolean method10(int i_1) {
 		boolean bool_2 = true;
-		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658, -1926337814)) {
+		if (!this.aClass317_487.loadCutscene(this.aClass62_485.anInt658)) {
 			bool_2 = false;
 		}
-		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658, 1793873759)) {
+		if (!this.aClass317_486.loadCutscene(this.aClass62_485.anInt658)) {
 			bool_2 = false;
 		}
 		return bool_2;
@@ -94,10 +94,10 @@ public class Class51 implements Interface2 {
 
 	public boolean method13() {
 		boolean bool_1 = true;
-		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -871751794)) {
+		if (!this.aClass317_487.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
-		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -194229407)) {
+		if (!this.aClass317_486.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
 		return bool_1;
@@ -105,10 +105,10 @@ public class Class51 implements Interface2 {
 
 	public boolean method9() {
 		boolean bool_1 = true;
-		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -335910971)) {
+		if (!this.aClass317_487.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
-		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -1623629823)) {
+		if (!this.aClass317_486.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
 		return bool_1;
@@ -124,10 +124,10 @@ public class Class51 implements Interface2 {
 
 	public boolean method17() {
 		boolean bool_1 = true;
-		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -89900344)) {
+		if (!this.aClass317_487.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
-		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, 2010922736)) {
+		if (!this.aClass317_486.loadCutscene(this.aClass62_485.anInt658 * -2111808237 * -1949174501)) {
 			bool_1 = false;
 		}
 		return bool_1;

@@ -12,7 +12,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.method5661(-1642545265 * class350_sub3_1.anInt7844 * 1903394671, 461666626) ? false : (!this.aClass317_493.method5661(-733628077 * class350_sub3_1.anInt7840 * 2096034523, 443394418) ? false : (!this.aClass317_493.method5661(class350_sub3_1.anInt7842 * -1010155381 * -821287133, 235003215) ? false : (!this.aClass317_493.method5661(-2050274227 * class350_sub3_1.anInt7843 * -1461400443, -954135021) ? false : (!this.aClass317_493.method5661(-485291629 * class350_sub3_1.anInt7841 * -141394789, 625440758) ? false : this.aClass317_493.method5661(class350_sub3_1.anInt7845 * 1560773125 * 657783501, 272941216)))));
+			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 
@@ -143,7 +143,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.method5661(-1642545265 * class350_sub3_1.anInt7844 * 1903394671, 1005205431) ? false : (!this.aClass317_493.method5661(-733628077 * class350_sub3_1.anInt7840 * 2096034523, 789152626) ? false : (!this.aClass317_493.method5661(class350_sub3_1.anInt7842 * -1010155381 * -821287133, 1630295405) ? false : (!this.aClass317_493.method5661(-2050274227 * class350_sub3_1.anInt7843 * -1461400443, -1526435602) ? false : (!this.aClass317_493.method5661(-485291629 * class350_sub3_1.anInt7841 * -141394789, 2016829769) ? false : this.aClass317_493.method5661(class350_sub3_1.anInt7845 * 1560773125 * 657783501, 1881760678)))));
+			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 
@@ -152,7 +152,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.method5661(-1642545265 * class350_sub3_1.anInt7844 * 1903394671, -56636433) ? false : (!this.aClass317_493.method5661(-733628077 * class350_sub3_1.anInt7840 * 2096034523, -237372898) ? false : (!this.aClass317_493.method5661(class350_sub3_1.anInt7842 * -1010155381 * -821287133, -2085500424) ? false : (!this.aClass317_493.method5661(-2050274227 * class350_sub3_1.anInt7843 * -1461400443, -957823909) ? false : (!this.aClass317_493.method5661(-485291629 * class350_sub3_1.anInt7841 * -141394789, -531136957) ? false : this.aClass317_493.method5661(class350_sub3_1.anInt7845 * 1560773125 * 657783501, 79806119)))));
+			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 
@@ -161,7 +161,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_2 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.method5661(class350_sub3_2.anInt7844, -412673067) ? false : (!this.aClass317_493.method5661(class350_sub3_2.anInt7840, 1252829307) ? false : (!this.aClass317_493.method5661(class350_sub3_2.anInt7842, 321826067) ? false : (!this.aClass317_493.method5661(class350_sub3_2.anInt7843, 432512941) ? false : (!this.aClass317_493.method5661(class350_sub3_2.anInt7841, 361051687) ? false : this.aClass317_493.method5661(class350_sub3_2.anInt7845, -71925669)))));
+			return !this.aClass317_493.loadCutscene(class350_sub3_2.anInt7844) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7840) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7842) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7843) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7841) ? false : this.aClass317_493.loadCutscene(class350_sub3_2.anInt7845)))));
 		}
 	}
 
@@ -232,7 +232,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.method5661(-1642545265 * class350_sub3_1.anInt7844 * 1903394671, -1878319030) ? false : (!this.aClass317_493.method5661(-733628077 * class350_sub3_1.anInt7840 * 2096034523, -1074614597) ? false : (!this.aClass317_493.method5661(class350_sub3_1.anInt7842 * -1010155381 * -821287133, -846878158) ? false : (!this.aClass317_493.method5661(-2050274227 * class350_sub3_1.anInt7843 * -1461400443, 1472121701) ? false : (!this.aClass317_493.method5661(-485291629 * class350_sub3_1.anInt7841 * -141394789, -921583943) ? false : this.aClass317_493.method5661(class350_sub3_1.anInt7845 * 1560773125 * 657783501, -145692726)))));
+			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 

@@ -120,22 +120,22 @@ public class HitsplatDefinitions {
 	void method3839(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		Index index_3 = this.aClass210_2850.aClass317_2666;
 		Class91 class91_4;
-		if (this.anInt2842 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2842) == null && index_3.method5661(this.anInt2842, -1191844183)) {
+		if (this.anInt2842 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2842) == null && index_3.loadCutscene(this.anInt2842)) {
 			class91_4 = Class91.method1515(index_3, this.anInt2842);
 			this.aClass210_2850.aClass229_2664.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2842);
 		}
 
-		if (this.anInt2843 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2843) == null && index_3.method5661(this.anInt2843, -794594441)) {
+		if (this.anInt2843 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2843) == null && index_3.loadCutscene(this.anInt2843)) {
 			class91_4 = Class91.method1515(index_3, this.anInt2843);
 			this.aClass210_2850.aClass229_2664.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2843);
 		}
 
-		if (this.anInt2851 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2851) == null && index_3.method5661(this.anInt2851, 1719697328)) {
+		if (this.anInt2851 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2851) == null && index_3.loadCutscene(this.anInt2851)) {
 			class91_4 = Class91.method1515(index_3, this.anInt2851);
 			this.aClass210_2850.aClass229_2664.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2851);
 		}
 
-		if (this.anInt2845 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2845) == null && index_3.method5661(this.anInt2845, 1508436716)) {
+		if (this.anInt2845 >= 0 && this.aClass210_2850.aClass229_2664.get((long) this.anInt2845) == null && index_3.loadCutscene(this.anInt2845)) {
 			class91_4 = Class91.method1515(index_3, this.anInt2845);
 			this.aClass210_2850.aClass229_2664.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2845);
 		}
@@ -165,7 +165,7 @@ public class HitsplatDefinitions {
 		matrix44arr_0.method6531(f_2, f_3, f_4, f_5, (float) i_10, (float) i_9, (float) i_6, (float) i_7);
 	}
 
-	static void method3851(int i_0) {
+	static void method3851() {
 		for (Class282_Sub50_Sub15 class282_sub50_sub15_1 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_1 != null; class282_sub50_sub15_1 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-395453439)) {
 			if (class282_sub50_sub15_1.anInt9769 > 1) {
 				class282_sub50_sub15_1.anInt9769 = 0;

@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class Class451 implements Iterator {
+public class HashTableIterator implements Iterator {
 
 	Node aClass282_5441 = null;
 
@@ -10,12 +10,12 @@ public class Class451 implements Iterator {
 
 	Node aClass282_5440;
 
-	public Node method7503(int i_1) {
+	public Node first() {
 		this.method7512(789041827);
 		return (Node) this.next();
 	}
 
-	public Class451(IterableNodeMap iterablenodemap_1) {
+	public HashTableIterator(IterableNodeMap iterablenodemap_1) {
 		this.aClass465_5439 = iterablenodemap_1;
 		this.method7512(-303095976);
 	}

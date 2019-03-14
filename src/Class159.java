@@ -1,6 +1,6 @@
 public class Class159 {
 
-	public static Class450 aClass450_2010;
+	public static ConnectionInfo GAME_CONNECTION_INFO;
 
 	Class159() throws Throwable {
 		throw new Error();
@@ -79,8 +79,8 @@ public class Class159 {
 				throw new RuntimeException("" + (i_3 - 1));
 			} else {
 				IComponentDefinitions icomponentdefinitions_12 = new IComponentDefinitions();
-				icomponentdefinitions_12.anInt1268 = i_2;
-				icomponentdefinitions_12.anInt1305 = icomponentdefinitions_12.idHash = icomponentdefinitions_7.idHash;
+				icomponentdefinitions_12.type = i_2;
+				icomponentdefinitions_12.parent = icomponentdefinitions_12.idHash = icomponentdefinitions_7.idHash;
 				icomponentdefinitions_12.anInt1288 = i_3;
 				icomponentdefinitions_7.aClass118Array1438[i_3] = icomponentdefinitions_12;
 				if (icomponentdefinitions_7.aClass118Array1438 != icomponentdefinitions_7.aClass118Array1439) {
@@ -94,7 +94,7 @@ public class Class159 {
 				}
 				underlaydefinition_13.aClass98_5885 = interface_0;
 				underlaydefinition_13.aClass118_5886 = icomponentdefinitions_12;
-				Class109.method1858(icomponentdefinitions_7, (byte) -95);
+				Class109.redrawComponent(icomponentdefinitions_7, (byte) -95);
 			}
 		}
 	}
@@ -140,6 +140,6 @@ public class Class159 {
 			bool_5 = false;
 		}
 		icomponentdefinitions_0.aBool1327 = bool_5;
-		Class109.method1858(icomponentdefinitions_0, (byte) 1);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 1);
 	}
 }

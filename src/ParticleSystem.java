@@ -138,7 +138,7 @@ public class ParticleSystem {
 				if (!bool_2) {
 					class282_sub40_7.remove();
 					--this.anInt7121;
-					if (class282_sub40_7.method4994(1211562351)) {
+					if (class282_sub40_7.isLinked()) {
 						class282_sub40_7.remove();
 						--Class235.anInt2898;
 					}

@@ -82,7 +82,7 @@ public class Class5 {
 	static void method297(int i_0) {
 		client.aClass184_7218.method3051((byte) -37);
 		if (Class14.anInt134 < 2) {
-			Class448.aClass450_5424.method7493(876652608);
+			Class448.lobbyConnectionInfo.swap(876652608);
 			Class14.anInt133 = 0;
 			++Class14.anInt134;
 			Class192.ACCOUNT_CREATION_STAGE = Class1.REQUEST;

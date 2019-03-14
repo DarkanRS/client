@@ -41,7 +41,7 @@ public class IncomingPacket {
 	public static IncomingPacket INTERFACE = new IncomingPacket(38, 23);
 	public static IncomingPacket CAMERA_POSITION = new IncomingPacket(39, 6);
 	public static IncomingPacket aClass375_4399 = new IncomingPacket(40, 4);
-	public static IncomingPacket WORLD_TILE = new IncomingPacket(41, 3);
+	public static IncomingPacket SET_LOCAL_REGION = new IncomingPacket(41, 3);
 	public static IncomingPacket aClass375_4393 = new IncomingPacket(42, 3);
 	public static IncomingPacket PLAYER_UPDATE = new IncomingPacket(43, -2);
 	public static IncomingPacket aClass375_4395 = new IncomingPacket(44, 10);
@@ -58,7 +58,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4406 = new IncomingPacket(55, 6);
 	public static IncomingPacket aClass375_4429 = new IncomingPacket(56, 22);
 	public static IncomingPacket GRAND_EXCHANGE_SLOT = new IncomingPacket(57, 20);
-	public static IncomingPacket aClass375_4409 = new IncomingPacket(58, -1);
+	public static IncomingPacket QUICK_HOP_WORLDS = new IncomingPacket(58, -1);
 	public static IncomingPacket NPC_INTERFACE = new IncomingPacket(59, 25);
 	public static IncomingPacket MUSIC_EFFECT = new IncomingPacket(60, 6);
 	public static IncomingPacket aClass375_4412 = new IncomingPacket(61, 1);
@@ -147,7 +147,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4495 = new IncomingPacket(144, 9);
 	public static IncomingPacket aClass375_4496 = new IncomingPacket(145, 19);
 	public static IncomingPacket aClass375_4497 = new IncomingPacket(146, 0);
-	public static IncomingPacket aClass375_4498 = new IncomingPacket(147, 4);
+	public static IncomingPacket IDENTIFY_HOST_NAME = new IncomingPacket(147, 4);
 	public static IncomingPacket ICOMPONENT_SETTINGS_SMALL = new IncomingPacket(148, 10);
 	public static IncomingPacket aClass375_4375 = new IncomingPacket(149, -2);
 	public static IncomingPacket aClass375_4501 = new IncomingPacket(150, 5);

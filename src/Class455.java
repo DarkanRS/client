@@ -38,7 +38,7 @@ public abstract class Class455 {
 		if (icomponentdefinitions_1 != null) {
 			int i_4;
 			if (icomponentdefinitions_1.anInt1288 != -1) {
-				IComponentDefinitions icomponentdefinitions_3 = interface_0.getComponent(icomponentdefinitions_1.anInt1305);
+				IComponentDefinitions icomponentdefinitions_3 = interface_0.getComponent(icomponentdefinitions_1.parent);
 				if (icomponentdefinitions_3 != null) {
 					if (icomponentdefinitions_3.aClass118Array1439 == icomponentdefinitions_3.aClass118Array1438) {
 						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
@@ -73,7 +73,7 @@ public abstract class Class455 {
 	static final void method7555(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		icomponentdefinitions_0.anInt1329 = 1;
 		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		Class109.method1858(icomponentdefinitions_0, (byte) -15);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -15);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -624586705);
 		}

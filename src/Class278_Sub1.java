@@ -197,7 +197,7 @@ public class Class278_Sub1 extends Class278 {
 	static final void method13450(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.aBool1357 = i_4 == 1;
-		Class109.method1858(icomponentdefinitions_0, (byte) 41);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 41);
 	}
 
 }

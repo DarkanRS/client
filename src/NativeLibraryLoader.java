@@ -350,7 +350,7 @@ public class NativeLibraryLoader implements Interface36 {
 				i_7 = 0;
 			}
 			Class301.anInt3555 = i_8;
-			Class184.anInt2300 = i_7;
+			BufferedConnectionContext.anInt2300 = i_7;
 			Class158_Sub2.anInt8975 = i_4;
 			Class20.anInt156 = (int) (Math.random() * 24.0D);
 			Class20.aBool161 = true;

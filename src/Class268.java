@@ -82,7 +82,7 @@ public class Class268 {
 				if (fontrenderer_5 == null) {
 					fontrenderer_5 = Class285.aClass8_3394;
 				}
-				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.anInt1301, Class20.aClass118_183.anInt1429, Class20.aClass118_183.anInt1264, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aClass160Array1248, Class20.anIntArray177, 1750233370);
+				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.anInt1301, Class20.aClass118_183.anInt1429, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aClass160Array1248, Class20.anIntArray177, 1750233370);
 				Class292.method5201(client.anIntArray7438[0], client.anIntArray7438[1], client.anIntArray7438[2], client.anIntArray7438[3], (byte) 12);
 			}
 		}

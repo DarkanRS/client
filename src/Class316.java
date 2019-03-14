@@ -86,10 +86,10 @@ public class Class316 {
 		}
 	}
 
-	public static void method5594(int i_0) {
+	public static void method5594() {
 		Class404.method6810(1208455577);
 		Class20.aBool161 = false;
-		Class292.method5201(Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, (byte) 12);
+		Class292.method5201(Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, (byte) 12);
 		Class96_Sub23.aClass282_Sub50_Sub7_9445 = null;
 		Class20.aClass282_Sub50_Sub7_168 = null;
 	}

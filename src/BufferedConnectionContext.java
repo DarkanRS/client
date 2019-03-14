@@ -1,16 +1,16 @@
 import java.io.IOException;
 
-public class Class184 {
+public class BufferedConnectionContext {
 
-	IncomingPacket aClass375_2278;
+	IncomingPacket lastPacket;
 
 	public IsaacCipher isaac;
 
-	IncomingPacket aClass375_2291;
+	IncomingPacket thirdLastPacket;
 
 	IsaacCipher aClass432_2295;
 
-	IncomingPacket aClass375_2296;
+	IncomingPacket secondLastPacket;
 
 	static int anInt2300;
 
@@ -20,7 +20,7 @@ public class Class184 {
 
 	int anInt2279 = 0;
 
-	Class202 aClass202_2281;
+	Connection aClass202_2281;
 
 	NodeCollection queuedPackets = new NodeCollection();
 
@@ -28,13 +28,13 @@ public class Class184 {
 
 	RsBitsBuffer recievedBuffer = new RsBitsBuffer(15000);
 
-	IncomingPacket aClass375_2286 = null;
+	IncomingPacket currentPacket = null;
 
-	int anInt2287 = 0;
+	int currentPacketSize = 0;
 
 	boolean aBool2288 = true;
 
-	int anInt2289 = 0;
+	int idleReadPulses = 0;
 
 	public boolean aBool2298 = false;
 
@@ -44,7 +44,7 @@ public class Class184 {
 
 	int anInt2294;
 
-	int anInt2292;
+	int read;
 
 	public final void method3047(int i_1) throws IOException {
 		if (this.aClass202_2281 != null && this.anInt2279 > 0) {
@@ -73,7 +73,7 @@ public class Class184 {
 		this.anInt2279 += tcpmessage_1.anInt7680;
 	}
 
-	void method3050(Class202 class202_1, String string_2, byte b_3) {
+	void method3050(Connection class202_1, String string_2, byte b_3) {
 		this.aClass202_2281 = class202_1;
 		this.aClass7_2299.method346(string_2, -181392292);
 	}
@@ -86,7 +86,7 @@ public class Class184 {
 		this.aClass7_2299.method346((String) null, -1992601565);
 	}
 
-	public Class202 method3053(byte b_1) {
+	public Connection getConnection() {
 		return this.aClass202_2281;
 	}
 
@@ -95,7 +95,7 @@ public class Class184 {
 		this.anInt2279 = 0;
 	}
 
-	Class184() {
+	BufferedConnectionContext() {
 		Thread thread_1 = new Thread(this.aClass7_2299);
 		thread_1.setPriority(1);
 		thread_1.start();
@@ -105,8 +105,8 @@ public class Class184 {
 		if (client.cycles % 50 == 0) {
 			this.anInt2293 = this.anInt2297;
 			this.anInt2297 = 0;
-			this.anInt2294 = this.anInt2292;
-			this.anInt2292 = 0;
+			this.anInt2294 = this.read;
+			this.read = 0;
 		}
 	}
 

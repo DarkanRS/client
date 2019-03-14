@@ -123,7 +123,7 @@ public class Interface {
 				} else {
 					bool_3 = true;
 				}
-			} else if (!class268_2.aClass282_Sub15_Sub5_3304.method4994(1880697803)) {
+			} else if (!class268_2.aClass282_Sub15_Sub5_3304.isLinked()) {
 				bool_3 = true;
 			}
 			if (bool_3) {

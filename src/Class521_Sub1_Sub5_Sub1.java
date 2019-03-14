@@ -498,7 +498,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 				int i_3;
 				if (Class192.ACCOUNT_CREATION_STAGE == Class1.REQUEST) {
-					client.aClass184_7218.method3050(Class38.createAsyncConnection(Class448.aClass450_5424.method7494((byte) 121), 15000, 1038176780), Class448.aClass450_5424.aString5433, (byte) -47);
+					client.aClass184_7218.method3050(Class38.createAsyncConnection(Class448.lobbyConnectionInfo.createSocket((byte) 121), 15000, 1038176780), Class448.lobbyConnectionInfo.host, (byte) -47);
 					client.aClass184_7218.method3054((short) 8665);
 					TCPMessage tcpmessage_2 = Class207.method3558((byte) 87);
 					tcpmessage_2.buffer.writeByte(OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
@@ -531,10 +531,10 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				}
 
 				if (Class1.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
-					if (client.aClass184_7218.method3053((byte) -48) == null) {
+					if (client.aClass184_7218.getConnection() == null) {
 						Class5.method297(2055895853);
-					} else if (client.aClass184_7218.method3053((byte) -55).available(1, (byte) 85)) {
-						client.aClass184_7218.method3053((byte) -73).read(client.aClass184_7218.recievedBuffer.buffer, 0, 1, -1181691571);
+					} else if (client.aClass184_7218.getConnection().available(1, (byte) 85)) {
+						client.aClass184_7218.getConnection().read(client.aClass184_7218.recievedBuffer.buffer, 0, 1, -1181691571);
 						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.method6672(Interface.method1626(1186080710), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff, -865772612);
 						if (AccountCreationResponseOpcodes.CONTINUE != Class96_Sub9.RECIEVED_RESPONSE) {
 							client.aClass184_7218.method3051((byte) -45);
@@ -551,13 +551,13 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 							Class365.setGameState(3);
 							client.aClass184_7218.method3054((short) -8634);
 							client.aClass184_7218.recievedBuffer.index = 0;
-							client.aClass184_7218.aClass375_2278 = null;
-							client.aClass184_7218.aClass375_2296 = null;
-							client.aClass184_7218.aClass375_2291 = null;
-							client.aClass184_7218.anInt2289 = 0;
+							client.aClass184_7218.lastPacket = null;
+							client.aClass184_7218.secondLastPacket = null;
+							client.aClass184_7218.thirdLastPacket = null;
+							client.aClass184_7218.idleReadPulses = 0;
 						}
 
-						client.aClass184_7218.aClass375_2286 = null;
+						client.aClass184_7218.currentPacket = null;
 						Class192.ACCOUNT_CREATION_STAGE = null;
 					}
 				}

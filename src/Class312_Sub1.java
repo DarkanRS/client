@@ -2,7 +2,7 @@ import java.io.IOException;
 
 public class Class312_Sub1 extends JS5StandardRequester {
 
-	Class202 aClass202_7778;
+	Connection aClass202_7778;
 
 	public void init(Object object_1, boolean bool_2, int i_3) {
 		if (this.aClass202_7778 != null) {
@@ -15,7 +15,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			this.aClass202_7778 = null;
 		}
 
-		this.aClass202_7778 = (Class202) object_1;
+		this.aClass202_7778 = (Connection) object_1;
 		this.method12537((byte) 78);
 		this.method5523(bool_2, (byte) 116);
 		this.aClass282_Sub35_3647.index = 0;
@@ -569,7 +569,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			this.aClass202_7778 = null;
 		}
 
-		this.aClass202_7778 = (Class202) object_1;
+		this.aClass202_7778 = (Connection) object_1;
 		this.method12537((byte) -6);
 		this.method5523(bool_2, (byte) 29);
 		this.aClass282_Sub35_3647.index = 0 * -1990677291;
@@ -625,7 +625,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			this.aClass202_7778 = null;
 		}
 
-		this.aClass202_7778 = (Class202) object_1;
+		this.aClass202_7778 = (Connection) object_1;
 		this.method12537((byte) 23);
 		this.method5523(bool_2, (byte) 95);
 		this.aClass282_Sub35_3647.index = 0 * -1990677291;

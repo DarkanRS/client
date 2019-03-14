@@ -489,9 +489,9 @@ public class Class8_Sub3 extends FontRenderer {
 		return ((i_4 * (i_0 & 0xff00ff) & ~0xff00ff | (i_0 & 0xff00) * i_4 & 0xff0000) >>> 8) + i_1;
 	}
 
-	static final boolean method14338(Class184 class184_0, byte b_1) {
+	static final boolean method14338(BufferedConnectionContext class184_0, byte b_1) {
 		try {
-			boolean bool_2 = PacketsDecoder.method14433(class184_0, -1939307433);
+			boolean bool_2 = PacketsDecoder.method14433(class184_0);
 			return bool_2;
 		} catch (IOException ioexception_7) {
 			if (client.gameState == 7) {
@@ -503,8 +503,8 @@ public class Class8_Sub3 extends FontRenderer {
 			}
 		} catch (Exception exception_8) {
 			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1387149052);
-			String string_5 = (class184_0.aClass375_2286 != null ? class184_0.aClass375_2286.opcode : -1) + "," + (class184_0.aClass375_2296 != null ? class184_0.aClass375_2296.opcode : -1) + "," + (class184_0.aClass375_2291 != null ? class184_0.aClass375_2291.opcode : -1) + " " + class184_0.anInt2287 + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_4.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_4.y) + " ";
-			for (int i_6 = 0; i_6 < class184_0.anInt2287 && i_6 < 50; i_6++) {
+			String string_5 = (class184_0.currentPacket != null ? class184_0.currentPacket.opcode : -1) + "," + (class184_0.secondLastPacket != null ? class184_0.secondLastPacket.opcode : -1) + "," + (class184_0.thirdLastPacket != null ? class184_0.thirdLastPacket.opcode : -1) + " " + class184_0.currentPacketSize + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_4.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_4.y) + " ";
+			for (int i_6 = 0; i_6 < class184_0.currentPacketSize && i_6 < 50; i_6++) {
 				string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";
 			}
 			Class151.method2594(string_5, exception_8, (byte) -124);

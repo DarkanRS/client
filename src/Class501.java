@@ -15,12 +15,12 @@ public class Class501 {
 	static void method8350(int i_0) {
 		Class9.aClass184_73.method3054((short) 1653);
 		Class9.aClass184_73.recievedBuffer.index = 0;
-		Class9.aClass184_73.aClass375_2286 = null;
-		Class9.aClass184_73.aClass375_2278 = null;
-		Class9.aClass184_73.aClass375_2296 = null;
-		Class9.aClass184_73.aClass375_2291 = null;
-		Class9.aClass184_73.anInt2287 = 0;
-		Class9.aClass184_73.anInt2289 = 0;
+		Class9.aClass184_73.currentPacket = null;
+		Class9.aClass184_73.lastPacket = null;
+		Class9.aClass184_73.secondLastPacket = null;
+		Class9.aClass184_73.thirdLastPacket = null;
+		Class9.aClass184_73.currentPacketSize = 0;
+		Class9.aClass184_73.idleReadPulses = 0;
 		client.anInt7178 = 0;
 		Class350.method6189((byte) 111);
 		Class256.method4416((byte) -105);

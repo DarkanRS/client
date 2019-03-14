@@ -1,6 +1,6 @@
 public class Class9 {
 
-	static Class184 aClass184_73;
+	static BufferedConnectionContext aClass184_73;
 
 	static int lobbyStage;
 

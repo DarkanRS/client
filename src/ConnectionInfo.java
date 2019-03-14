@@ -2,39 +2,33 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Calendar;
 
-public class Class450 {
+public class ConnectionInfo {
 
-	public String aString5433;
-
+	public String host;
 	public int worldId;
-
 	public static int anInt5438;
-
-	boolean aBool5436 = true;
-
-	boolean aBool5432 = false;
-
+	boolean alternate = true;
+	boolean proxied = false;
 	public int anInt5437 = 1;
-
 	public int anInt5434 = -190419398;
 
-	public boolean method7491(Class450 class450_1, int i_2) {
-		return class450_1 == null ? false : this.worldId == class450_1.worldId && this.aString5433.equals(class450_1.aString5433);
+	public boolean equals(ConnectionInfo class450_1, int i_2) {
+		return class450_1 == null ? false : this.worldId == class450_1.worldId && this.host.equals(class450_1.host);
 	}
 
-	public void method7493(int i_1) {
-		if (!this.aBool5436) {
-			this.aBool5436 = true;
-			this.aBool5432 = true;
-		} else if (this.aBool5432) {
-			this.aBool5432 = false;
+	public void swap(int i_1) {
+		if (!this.alternate) {
+			this.alternate = true;
+			this.proxied = true;
+		} else if (this.proxied) {
+			this.proxied = false;
 		} else {
-			this.aBool5436 = false;
+			this.alternate = false;
 		}
 	}
 
-	public Socket method7494(byte b_1) throws IOException {
-		return new Socket(this.aString5433, 5555);
+	public Socket createSocket(byte b_1) throws IOException {
+		return new Socket(this.host, 5555);
 	}
 
 	static String method7499(long long_0, int i_2, boolean bool_3, int i_4) {

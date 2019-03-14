@@ -48,8 +48,8 @@ public class Class277 {
 
 	static void method4908(GraphicalRenderer graphicalrenderer_0, int i_1) {
 		int i_2 = -10660793;
-		Class377.method6394(graphicalrenderer_0, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_2, -16777216, -68635316);
-		Class285.aClass8_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -384363737), Class301.anInt3555 + 3, Class184.anInt2300 + 14, i_2, -1, -418109423);
+		Class377.method6394(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_2, -16777216, -68635316);
+		Class285.aClass8_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -384363737), Class301.anInt3555 + 3, BufferedConnectionContext.anInt2300 + 14, i_2, -1, -418109423);
 		int i_3 = Class163.mouseRecorder.method3569(1993106311);
 		int i_4 = Class163.mouseRecorder.method3570(756095591);
 		int i_5;
@@ -58,18 +58,18 @@ public class Class277 {
 		if (!Class20.aBool162) {
 			i_5 = 0;
 			for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 45); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(980795881)) {
-				i_7 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + Class184.anInt2300 + 31;
-				Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub7_6, Class285.aClass8_3394, Class288.aClass414_3438, -1, -256, -786945772);
+				i_7 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
+				Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub7_6, Class285.aClass8_3394, Class288.aClass414_3438, -1, -256, -786945772);
 				++i_5;
 			}
 		} else {
 			i_5 = 0;
 			for (Class282_Sub50_Sub15 class282_sub50_sub15_8 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_8 != null; class282_sub50_sub15_8 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1913703770)) {
-				i_7 = i_5 * Class20.anInt178 + Class184.anInt2300 + 31;
+				i_7 = i_5 * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 				if (class282_sub50_sub15_8.anInt9769 == 1) {
-					Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, (Class282_Sub50_Sub7) class282_sub50_sub15_8.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, Class285.aClass8_3394, Class288.aClass414_3438, -1, -256, -1056594399);
+					Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, (Class282_Sub50_Sub7) class282_sub50_sub15_8.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, Class285.aClass8_3394, Class288.aClass414_3438, -1, -256, -1056594399);
 				} else {
-					Class99.method1630(i_3, i_4, Class301.anInt3555, Class184.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub15_8, Class285.aClass8_3394, Class288.aClass414_3438, -1, -256, -2123555932);
+					Class99.method1630(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub15_8, Class285.aClass8_3394, Class288.aClass414_3438, -1, -256, -2123555932);
 				}
 				++i_5;
 			}

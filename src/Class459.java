@@ -107,7 +107,7 @@ public final class Class459 {
 
 	static final void decodeUpdate(boolean bool_0, int i_1) {
 		RsBitsBuffer rsbitsbuffer_2 = client.aClass184_7475.recievedBuffer;
-		while (rsbitsbuffer_2.readableBits(client.aClass184_7475.anInt2287, 816213370) >= 15) {
+		while (rsbitsbuffer_2.readableBits(client.aClass184_7475.currentPacketSize, 816213370) >= 15) {
 			int i_3 = rsbitsbuffer_2.readBits(15, (byte) -53);
 			if (i_3 == 32767) {
 				break;

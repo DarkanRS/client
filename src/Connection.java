@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public abstract class Class202 {
+public abstract class Connection {
 
 	public abstract void method3310();
 
@@ -123,7 +123,7 @@ public abstract class Class202 {
 
 	public static final void method3345(String string_0, int i_1) {
 		if (!string_0.equals("")) {
-			Class184 class184_2 = Class468_Sub20.method12807(-1721172592);
+			BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1721172592);
 			TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_2.isaac, 595380659);
 			tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
 			tcpmessage_3.buffer.writeString(string_0);

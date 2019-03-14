@@ -34,11 +34,11 @@ public class Class249 implements Interface43 {
 		cs2executor_2.intStackPtr -= 6;
 		icomponentdefinitions_0.anInt1293 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1334 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		icomponentdefinitions_0.anInt1385 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
-		icomponentdefinitions_0.anInt1336 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
-		icomponentdefinitions_0.anInt1337 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 4];
-		icomponentdefinitions_0.anInt1343 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 5];
-		Class109.method1858(icomponentdefinitions_0, (byte) 60);
+		icomponentdefinitions_0.spritePitch = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		icomponentdefinitions_0.spriteRoll = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		icomponentdefinitions_0.spriteYaw = cs2executor_2.intStack[cs2executor_2.intStackPtr + 4];
+		icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[cs2executor_2.intStackPtr + 5];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 60);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class106.method1818(icomponentdefinitions_0.idHash, -1101705065);
 			Item.method12575(icomponentdefinitions_0.idHash, (byte) 9);
@@ -53,7 +53,7 @@ public class Class249 implements Interface43 {
 			bool_5 = false;
 		}
 		icomponentdefinitions_0.aBool1325 = bool_5;
-		Class109.method1858(icomponentdefinitions_0, (byte) 40);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 40);
 	}
 
 	static final void method4281(Animable animable_0, int i_1) {

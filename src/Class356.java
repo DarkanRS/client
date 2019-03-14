@@ -108,6 +108,6 @@ public class Class356 {
 			Class20.aClass229_191.method3859(-1112414148);
 		}
 		Class430.method7217(953478712);
-		Class12.method482((byte) 38);
+		HostNameIdentifier.method482((byte) 38);
 	}
 }

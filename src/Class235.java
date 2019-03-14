@@ -32,7 +32,7 @@ public class Class235 {
 		FontMetrics fontmetrics_3 = icomponentdefinitions_0.method1989(Class487.aClass378_5752, client.anInterface35_7206, 1667104026);
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_5 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
-		int i_6 = fontmetrics_3.method6956(icomponentdefinitions_0.aString1391, icomponentdefinitions_0.anInt1301, icomponentdefinitions_0.anInt1358, i_5, i_4, Class182.aClass160Array2261, 1449374266);
+		int i_6 = fontmetrics_3.method6956(icomponentdefinitions_0.text, icomponentdefinitions_0.anInt1301, icomponentdefinitions_0.anInt1358, i_5, i_4, Class182.aClass160Array2261, 1449374266);
 		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_6;
 	}
 

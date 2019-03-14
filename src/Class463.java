@@ -89,7 +89,7 @@ public class Class463 {
 		cs2executor_2.intStackPtr -= 2;
 		icomponentdefinitions_0.anInt1430 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1431 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		Class109.method1858(icomponentdefinitions_0, (byte) 64);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 64);
 	}
 
 	public static boolean method7730(int i_0) {

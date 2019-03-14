@@ -567,7 +567,7 @@ public class RsByteBuffer extends Node {
 		return i_2 == 0 ? "" : Class344.method6118(this.buffer, i_1, i_2, (byte) -24);
 	}
 
-	public int readUnsignedByte128(int i_1) {
+	public int readUnsignedByte128() {
 		return this.buffer[++this.index - 1] - 128 & 0xff;
 	}
 
@@ -626,7 +626,7 @@ public class RsByteBuffer extends Node {
 		return (byte) (0 - this.buffer[++this.index - 1]);
 	}
 
-	public int readUnsignedByteC(int i_1) {
+	public int readUnsignedByteC() {
 		return 0 - this.buffer[++this.index - 1] & 0xff;
 	}
 
@@ -645,7 +645,7 @@ public class RsByteBuffer extends Node {
 		cs2executor_2.intStackPtr -= 2;
 		icomponentdefinitions_0.anInt1441 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1263 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		Class109.method1858(icomponentdefinitions_0, (byte) -27);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -27);
 	}
 
 }

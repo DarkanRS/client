@@ -8,14 +8,14 @@ public class RsBitsBuffer extends RsByteBuffer {
 		this.isaac = isaaccipher_1;
 	}
 
-	public boolean method14869(short s_1) {
-		int i_2 = this.buffer[this.index] - this.isaac.method7255(-44751888) & 0xff;
+	public boolean nextIsSmart() {
+		int i_2 = this.buffer[this.index] - this.isaac.method7255() & 0xff;
 		return i_2 >= 128;
 	}
 
-	public int method14870() {
-		int i_1 = this.buffer[++this.index - 1] - this.isaac.nextInt(1151052161) & 0xff;
-		return i_1 < 128 ? i_1 : (i_1 - 128 << 8) + (this.buffer[++this.index - 1] - this.isaac.nextInt(843866869) & 0xff);
+	public int readEncryptedSmart() {
+		int i_1 = this.buffer[++this.index - 1] - this.isaac.nextInt() & 0xff;
+		return i_1 < 128 ? i_1 : (i_1 - 128 << 8) + (this.buffer[++this.index - 1] - this.isaac.nextInt() & 0xff);
 	}
 
 	public int readBits(int i_1, byte b_2) {
@@ -41,9 +41,9 @@ public class RsBitsBuffer extends RsByteBuffer {
 		this.anInt9608 = this.index * 8;
 	}
 
-	public void method14873(byte[] bytes_1, int i_2, int i_3, byte b_4) {
+	public void readBytes(byte[] bytes_1, int i_2, int i_3, byte b_4) {
 		for (int i_5 = 0; i_5 < i_3; i_5++) {
-			bytes_1[i_5 + i_2] = (byte) (this.buffer[++this.index - 1] - this.isaac.nextInt(1542383540));
+			bytes_1[i_5 + i_2] = (byte) (this.buffer[++this.index - 1] - this.isaac.nextInt());
 		}
 
 	}
@@ -57,7 +57,7 @@ public class RsBitsBuffer extends RsByteBuffer {
 	}
 
 	public void writeIsaacByte(int i_1, int i_2) {
-		this.buffer[++this.index - 1] = (byte) (i_1 + this.isaac.nextInt(1317631877));
+		this.buffer[++this.index - 1] = (byte) (i_1 + this.isaac.nextInt());
 	}
 
 	public RsBitsBuffer(int i_1) {

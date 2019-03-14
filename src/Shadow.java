@@ -39,8 +39,8 @@ public abstract class Shadow extends CacheableNode {
 	}
 
 	static final void method15511(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.anInt1343 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		Class109.method1858(icomponentdefinitions_0, (byte) 56);
+		icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 56);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class106.method1818(icomponentdefinitions_0.idHash, 438520847);
 		}

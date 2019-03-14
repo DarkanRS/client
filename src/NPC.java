@@ -638,7 +638,7 @@ public class NPC extends Animable {
 
 	public void method16166(NPCDefinitions npcdefinitions_1, int i_2) {
 		if (npcdefinitions_1 != this.definitions && Class20.aBool161 && EnumIndexLoader.method7426(this.anInt10314, (byte) -83)) {
-			Class316.method5594(-559600711);
+			Class316.method5594();
 		}
 
 		this.definitions = npcdefinitions_1;

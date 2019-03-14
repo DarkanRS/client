@@ -45,6 +45,6 @@ public class OutgoingLoginPacket {
 		icomponentdefinitions_0.anInt1432 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		icomponentdefinitions_0.anInt1433 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		icomponentdefinitions_0.anInt1434 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
-		Class109.method1858(icomponentdefinitions_0, (byte) 33);
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 33);
 	}
 }
