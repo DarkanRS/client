@@ -67,7 +67,7 @@ public class Class149_Sub1 extends Class149 {
 		class282_sub50_sub12_2.method14965((byte) -51);
 	}
 
-	static void method14583(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static void method14583(int i_0, int i_1, int i_2, int i_3) {
 		Class282_Sub50_Sub12 class282_sub50_sub12_5 = Engine.getIComponentVar(8, (long) i_0);
 		class282_sub50_sub12_5.method14995(1672803485);
 		class282_sub50_sub12_5.anInt9668 = i_1;

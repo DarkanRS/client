@@ -1,6 +1,6 @@
 public class WorldMapIndexLoader {
 
-	static boolean[] aBoolArray2709;
+	static boolean[] INTERFACES_LOADED;
 	SoftCache aClass229_2707 = new SoftCache(128);
 	SoftCache aClass229_2708 = new SoftCache(64);
 	Index aClass317_2705;

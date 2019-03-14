@@ -171,7 +171,7 @@ public class Class470 {
 		}
 	}
 
-	static boolean method7825(int i_0) {
+	static boolean method7825() {
 		++client.anInt7221;
 		client.aBool7459 = true;
 		return true;

@@ -19,11 +19,11 @@ public class Interface {
 		return this.iComponentDefinitions;
 	}
 
-	public IComponentDefinitions method1618(int i_1, byte b_2) {
-		if (i_1 >>> 16 != this.components[0].idHash >>> 16) {
+	public IComponentDefinitions getComponent(int componentId) {
+		if (componentId >>> 16 != this.components[0].idHash >>> 16) {
 			throw new IllegalArgumentException();
 		} else {
-			return this.components[i_1 & 0xffff];
+			return this.components[componentId & 0xffff];
 		}
 	}
 

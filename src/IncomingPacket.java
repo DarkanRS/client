@@ -121,7 +121,7 @@ public class IncomingPacket {
 	public static IncomingPacket CAMERA_ROTATION = new IncomingPacket(118, 4);
 	public static IncomingPacket GLOBAL_STRING_BIG = new IncomingPacket(119, -2);
 	public static IncomingPacket RESET_SOUNDS = new IncomingPacket(120, 0);
-	public static IncomingPacket ICOMPONENT_SETTINGS = new IncomingPacket(121, 12);
+	public static IncomingPacket ICOMPONENT_SETTINGS_LARGE = new IncomingPacket(121, 12);
 	public static IncomingPacket aClass375_4509 = new IncomingPacket(122, 0);
 	public static IncomingPacket aClass375_4474 = new IncomingPacket(123, 3);
 	public static IncomingPacket ICOMPONENT_TEXT = new IncomingPacket(124, -2);
@@ -148,7 +148,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4496 = new IncomingPacket(145, 19);
 	public static IncomingPacket aClass375_4497 = new IncomingPacket(146, 0);
 	public static IncomingPacket aClass375_4498 = new IncomingPacket(147, 4);
-	public static IncomingPacket aClass375_4383 = new IncomingPacket(148, 10);
+	public static IncomingPacket ICOMPONENT_SETTINGS_SMALL = new IncomingPacket(148, 10);
 	public static IncomingPacket aClass375_4375 = new IncomingPacket(149, -2);
 	public static IncomingPacket aClass375_4501 = new IncomingPacket(150, 5);
 	public static IncomingPacket PLAYER_UNDER_NPC_PRIORITY = new IncomingPacket(151, 1);

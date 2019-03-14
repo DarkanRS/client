@@ -9,7 +9,7 @@ public class Class337 {
 	}
 
 	public static void unloadInterface(int i_0, int i_1) {
-		WorldMapIndexLoader.aBoolArray2709[i_0] = false;
+		WorldMapIndexLoader.INTERFACES_LOADED[i_0] = false;
 		Class12.clearComponents(i_0, -1495607995);
 	}
 

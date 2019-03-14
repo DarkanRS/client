@@ -18,7 +18,7 @@ public abstract class Class96 {
 	public abstract void method1601();
 
 	public static Interface method1605(int i_0, byte b_1) {
-		return Class468_Sub8.aClass98Array7889[i_0 >> 16];
+		return Class468_Sub8.INTERFACES[i_0 >> 16];
 	}
 
 	public static void method1607(byte b_0) {

@@ -1,35 +1,30 @@
-public class Class330 {
+public class GrandExchangeSlot {
 
-	byte aByte3864;
+	byte progress;
+	public int itemId;
+	public int price;
+	public int amount;
+	public int currentAmount;
+	public int totalPrice;
 
-	public int anInt3863;
-
-	public int anInt3866;
-
-	public int anInt3865;
-
-	public int anInt3862;
-
-	public int anInt3867;
-
-	public Class330() {
+	public GrandExchangeSlot() {
 	}
 
 	public int method5908(int i_1) {
-		return this.aByte3864 & 0x7;
+		return this.progress & 0x7;
 	}
 
 	public int method5909(int i_1) {
-		return (this.aByte3864 & 0x8) == 8 ? 1 : 0;
+		return (this.progress & 0x8) == 8 ? 1 : 0;
 	}
 
-	public Class330(RsByteBuffer rsbytebuffer_1) {
-		this.aByte3864 = rsbytebuffer_1.readByte();
-		this.anInt3863 = rsbytebuffer_1.readUnsignedShort();
-		this.anInt3866 = rsbytebuffer_1.readInt();
-		this.anInt3865 = rsbytebuffer_1.readInt();
-		this.anInt3862 = rsbytebuffer_1.readInt();
-		this.anInt3867 = rsbytebuffer_1.readInt();
+	public GrandExchangeSlot(RsByteBuffer buffer) {
+		this.progress = buffer.readByte();
+		this.itemId = buffer.readUnsignedShort();
+		this.price = buffer.readInt();
+		this.amount = buffer.readInt();
+		this.currentAmount = buffer.readInt();
+		this.totalPrice = buffer.readInt();
 	}
 
 	public static void method5913(int i_0) {

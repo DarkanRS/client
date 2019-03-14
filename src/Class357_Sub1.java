@@ -41,7 +41,7 @@ public class Class357_Sub1 extends Class357 {
 		IndexLoaders.HITSPLAT_INDEX_LOADER.method3608(1870758255);
 		IndexLoaders.HITBAR_INDEX.method5109(-1565036437);
 		Class93.method1568(-243786038);
-		Class330.method5913(-1907778608);
+		GrandExchangeSlot.method5913(-1907778608);
 		Class487.aClass378_5752.method6412(-558941782);
 		Class18.method571((short) -14092);
 		Class354.method6215((byte) 69);

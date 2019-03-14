@@ -3043,8 +3043,8 @@ public class CS2Interpreter {
 
 	static final void method15553(boolean bool, CS2Executor executor) {
 		int i_3 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_4 = Class117.method1981(i_3, (byte) 11);
-		Interface interface_5 = Class468_Sub8.aClass98Array7889[i_3 >> 16];
+		IComponentDefinitions icomponentdefinitions_4 = Class117.getInterfaceComponent(i_3);
+		Interface interface_5 = Class468_Sub8.INTERFACES[i_3 >> 16];
 		if (bool) {
 			Class455.method7554(interface_5, icomponentdefinitions_4, 1019153265);
 		} else {
@@ -3059,14 +3059,14 @@ public class CS2Interpreter {
 
 	static final void method5756(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 45);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class82.method1454(icomponentdefinitions_3, interface_4, executor, (byte) 50);
 	}
 
 	static final void method5758(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 127);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class475.method7927(icomponentdefinitions_3, executor, (byte) -98);
 	}
 
@@ -3146,8 +3146,8 @@ public class CS2Interpreter {
 
 	static final void method7520(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 58);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub11.method12209(icomponentdefinitions_3, interface_4, executor, 1467575804);
 	}
 
@@ -3173,8 +3173,8 @@ public class CS2Interpreter {
 
 	static final void method15510(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 76);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class13.method506(icomponentdefinitions_3, interface_4, executor, 73822298);
 	}
 
@@ -3198,15 +3198,15 @@ public class CS2Interpreter {
 
 	static final void method15514(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 72);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class290.method5121(icomponentdefinitions_3, interface_4, executor, (byte) 7);
 	}
 
 	static final void method2865(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 45);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class529.method11337(icomponentdefinitions_3, interface_4, executor, -1404316012);
 	}
 
@@ -3313,13 +3313,13 @@ public class CS2Interpreter {
 
 	static final void method8715(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 60);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class199.method3251(icomponentdefinitions_3, executor, 1146866687);
 	}
 
 	static final void method8716(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = client.aClass330Array7428[i_2].method5908(-12393301);
+		int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908(-12393301);
 		executor.intStack[++executor.intStackPtr - 1] = i_3 == 2 ? 1 : 0;
 	}
 
@@ -3395,8 +3395,8 @@ public class CS2Interpreter {
 
 	static final void method3554(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 71);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Defaults7Loader.method8754(icomponentdefinitions_3, interface_4, executor, 1449946769);
 	}
 
@@ -3511,7 +3511,7 @@ public class CS2Interpreter {
 
 	static final void method3171(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 105);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class209.method3601(icomponentdefinitions_3, executor, -1995583516);
 	}
 
@@ -3550,8 +3550,8 @@ public class CS2Interpreter {
 
 	static final void method6016(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 101);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class521_Sub1_Sub4.method14892(icomponentdefinitions_3, interface_4, executor, (byte) 79);
 	}
 
@@ -3640,8 +3640,8 @@ public class CS2Interpreter {
 
 	static final void method13408(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 113);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class100.method1642(icomponentdefinitions_3, interface_4, executor, -441010369);
 	}
 
@@ -3702,7 +3702,7 @@ public class CS2Interpreter {
 
 	static final void method7643(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 98);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		int i_4 = -1;
 		int i_5 = -1;
 		Class119 class119_6 = icomponentdefinitions_3.method2046(Renderers.SOFTWARE_RENDERER, 1740359651);
@@ -3880,8 +3880,8 @@ public class CS2Interpreter {
 
 	static final void method8843(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 47);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class363.method6288(icomponentdefinitions_3, interface_4, executor, (short) 25412);
 	}
 
@@ -3944,8 +3944,8 @@ public class CS2Interpreter {
 
 	static final void method15475(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 19);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class295.method5291(icomponentdefinitions_3, interface_4, executor, 464841858);
 	}
 
@@ -3975,7 +3975,7 @@ public class CS2Interpreter {
 
 	static final void method6797(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = client.aClass330Array7428[i_2].method5908(-1939537694);
+		int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908(-1939537694);
 		executor.intStack[++executor.intStackPtr - 1] = i_3 == 0 ? 1 : 0;
 	}
 
@@ -3985,10 +3985,10 @@ public class CS2Interpreter {
 
 	static final void method7006(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
+		if (Class468_Sub8.INTERFACES[i_2] == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
-			String string_3 = Class468_Sub8.aClass98Array7889[i_2].components[0].aString1285;
+			String string_3 = Class468_Sub8.INTERFACES[i_2].components[0].aString1285;
 			if (string_3 == null) {
 				executor.stringStack[++executor.stringStackPtr - 1] = "";
 			} else {
@@ -4003,15 +4003,15 @@ public class CS2Interpreter {
 
 	static final void method4863(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 84);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		ReferenceTable.method5763(icomponentdefinitions_3, interface_4, executor, 258036500);
 	}
 
 	static final void method4864(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 65);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub21_Sub1.method15474(icomponentdefinitions_3, interface_4, executor, (byte) 126);
 	}
 
@@ -4034,15 +4034,15 @@ public class CS2Interpreter {
 
 	static final void hideComp(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 84);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class29.method786(icomponentdefinitions_3, interface_4, executor, -1279446637);
 	}
 
 	static final void method5302(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 23);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class109.method1852(icomponentdefinitions_3, interface_4, executor, 1050548242);
 	}
 
@@ -4054,8 +4054,8 @@ public class CS2Interpreter {
 
 	static final void method11126(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 97);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class82.method1455(icomponentdefinitions_3, interface_4, executor, -1784890209);
 	}
 
@@ -4091,10 +4091,10 @@ public class CS2Interpreter {
 
 	static final void method5904(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
+		if (Class468_Sub8.INTERFACES[i_2] == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class468_Sub8.aClass98Array7889[i_2].components.length;
+			executor.intStack[++executor.intStackPtr - 1] = Class468_Sub8.INTERFACES[i_2].components.length;
 		}
 	}
 
@@ -4113,14 +4113,14 @@ public class CS2Interpreter {
 
 	static final void method6669(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 19);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class249.method4280(icomponentdefinitions_3, interface_4, executor, (byte) 114);
 	}
 
 	static final void method6670(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 103);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class96_Sub22.method14680(icomponentdefinitions_3, executor, 434841982);
 	}
 
@@ -4163,8 +4163,8 @@ public class CS2Interpreter {
 
 	static final void method4033(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 64);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub17.method14653(icomponentdefinitions_3, interface_4, executor, -1617819065);
 	}
 
@@ -4284,14 +4284,14 @@ public class CS2Interpreter {
 
 	static final void method3064(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 73);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class175.method2960(icomponentdefinitions_3, interface_4, executor, 1289929299);
 	}
 
 	static final void method3065(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 93);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1423;
 	}
 
@@ -4377,8 +4377,8 @@ public class CS2Interpreter {
 
 	static final void hookMousePress(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 29);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub17_Sub4.method15409(icomponentdefinitions_3, interface_4, executor, -1219012115);
 	}
 
@@ -4401,8 +4401,8 @@ public class CS2Interpreter {
 
 	static final void method3357(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 111);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub9.method14586(icomponentdefinitions_3, interface_4, executor, 909686877);
 	}
 
@@ -4416,8 +4416,8 @@ public class CS2Interpreter {
 
 	static final void method1385(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 32);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class241.method4149(icomponentdefinitions_3, interface_4, executor, -1861412275);
 	}
 
@@ -4454,7 +4454,7 @@ public class CS2Interpreter {
 
 	static final void method6206(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3867;
+		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].totalPrice;
 	}
 
 	static final void method6207(CS2Executor executor) {
@@ -4485,7 +4485,7 @@ public class CS2Interpreter {
 
 	static final void getCompWidth(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 18);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1301;
 	}
 
@@ -4590,8 +4590,8 @@ public class CS2Interpreter {
 
 	static final void method14342(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 90);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class29.method789(icomponentdefinitions_3, interface_4, executor, -19478635);
 	}
 
@@ -4611,8 +4611,8 @@ public class CS2Interpreter {
 
 	static final void method8750(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 23);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		OutgoingLoginPacket.method6313(icomponentdefinitions_3, interface_4, executor, 435475117);
 	}
 
@@ -4698,8 +4698,8 @@ public class CS2Interpreter {
 
 	static final void setCompPosition(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 55);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class236.method3983(icomponentdefinitions_3, interface_4, executor, -1297016434);
 	}
 
@@ -4994,20 +4994,20 @@ public class CS2Interpreter {
 
 	static final void method6141(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 94);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		HashTable.method7547(icomponentdefinitions_3, interface_4, executor, 1462639259);
 	}
 
 	static final void method6142(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 30);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
 	}
 
 	static final void method289(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 125);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1343;
 	}
 
@@ -5060,8 +5060,8 @@ public class CS2Interpreter {
 
 	static final void method1069(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 52);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub52.method13468(icomponentdefinitions_3, interface_4, executor, 769396750);
 	}
 
@@ -5098,8 +5098,8 @@ public class CS2Interpreter {
 
 	static final void method11252(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 112);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class159.method2741(icomponentdefinitions_3, interface_4, executor, (byte) 59);
 	}
 
@@ -5175,8 +5175,8 @@ public class CS2Interpreter {
 
 	static final void method2564(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 82);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		IdentikitDefinition.method910(icomponentdefinitions_3, interface_4, executor, 1996171820);
 	}
 
@@ -5214,8 +5214,8 @@ public class CS2Interpreter {
 
 	static final void method1349(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 104);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class174.method2955(icomponentdefinitions_3, interface_4, executor, (byte) 0);
 	}
 
@@ -5244,8 +5244,8 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		Class117.method1981(i_2, (byte) 55);
-		Class159.method2738(Class468_Sub8.aClass98Array7889[i_2 >>> 16], i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor, -1306169472);
+		Class117.getInterfaceComponent(i_2);
+		Class159.method2738(Class468_Sub8.INTERFACES[i_2 >>> 16], i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor, -1306169472);
 	}
 
 	static final void method5296(CS2Executor executor) {
@@ -5262,7 +5262,7 @@ public class CS2Interpreter {
 
 	static final void method5297(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = client.aClass330Array7428[i_2].method5908(-1252250172);
+		int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908(-1252250172);
 		int[] ints_4 = executor.intStack;
 		int i_5 = ++executor.intStackPtr - 1;
 		byte b_6;
@@ -5290,12 +5290,12 @@ public class CS2Interpreter {
 
 	static final void method13040(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3866;
+		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].price;
 	}
 
 	static final void getCompText(CS2Executor executor) {
 		int component = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(component, (byte) 107);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(component);
 		executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.aString1391;
 	}
 
@@ -5308,8 +5308,8 @@ public class CS2Interpreter {
 
 	static final void method5488(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 80);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub20_Sub9.method15256(icomponentdefinitions_3, interface_4, executor, -1115547958);
 	}
 
@@ -5356,7 +5356,7 @@ public class CS2Interpreter {
 
 	static final void method6316(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3863;
+		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].itemId;
 	}
 
 	static final void method6317(CS2Executor executor) {
@@ -5372,8 +5372,8 @@ public class CS2Interpreter {
 
 	static final void setCompSprite(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 50);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class504.method8390(icomponentdefinitions_3, interface_4, executor, 1964593641);
 	}
 
@@ -5398,8 +5398,8 @@ public class CS2Interpreter {
 
 	static final void method6310(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 120);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class344.method6122(icomponentdefinitions_3, interface_4, executor, -345845771);
 	}
 
@@ -5417,8 +5417,8 @@ public class CS2Interpreter {
 
 	static final void method11403(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 25);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class237.method3987(icomponentdefinitions_3, interface_4, executor, -599656695);
 	}
 
@@ -5435,21 +5435,21 @@ public class CS2Interpreter {
 
 	static final void method4173(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 117);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class413.method6942(icomponentdefinitions_3, executor, -839720836);
 	}
 
 	static final void method4174(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 10);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		EntityList.method7667(icomponentdefinitions_3, interface_4, executor, 668340664);
 	}
 
 	static final void method4175(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 17);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class125.method2170(icomponentdefinitions_3, interface_4, executor, 809860903);
 	}
 
@@ -5532,8 +5532,8 @@ public class CS2Interpreter {
 
 	static final void method305(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 121);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class349.method6186(icomponentdefinitions_3, interface_4, executor, -94301647);
 	}
 
@@ -5569,7 +5569,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4201(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.method1981(executor.intStack[--executor.intStackPtr], (byte) 117);
+		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
 		if (icomponentdefinitions_2.anInt1426 != -1) {
 			executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_2.anInt1427;
 		} else {
@@ -5591,8 +5591,8 @@ public class CS2Interpreter {
 
 	static final void method4205(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 63);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class125.method2168(icomponentdefinitions_3, interface_4, executor, -1301648510);
 	}
 
@@ -5658,7 +5658,7 @@ public class CS2Interpreter {
 
 	static final void method5926(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 108);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1293;
 	}
 
@@ -5727,7 +5727,7 @@ public class CS2Interpreter {
 	}
 
 	static final void clearCompChildren(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.method1981(executor.intStack[--executor.intStackPtr], (byte) 38);
+		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
 		icomponentdefinitions_2.aClass118Array1438 = null;
 		icomponentdefinitions_2.aClass118Array1439 = null;
 		Class109.method1858(icomponentdefinitions_2, (byte) -71);
@@ -5860,7 +5860,7 @@ public class CS2Interpreter {
 
 	static final void method3802(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3865;
+		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].amount;
 	}
 
 	static final void method3803(CS2Executor executor) {
@@ -5884,8 +5884,8 @@ public class CS2Interpreter {
 
 	static final void method3806(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 114);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 1, executor, (byte) -9);
 	}
 
@@ -5917,7 +5917,7 @@ public class CS2Interpreter {
 
 	static final void method8215(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 98);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		if (icomponentdefinitions_3.aString1369 == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
@@ -5941,8 +5941,8 @@ public class CS2Interpreter {
 
 	static final void method8220(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 50);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >>> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >>> 16];
 		IComponentDefinitions icomponentdefinitions_5 = Class96_Sub23.method14682(interface_4, icomponentdefinitions_3, -838454718);
 		int[] ints_6 = executor.intStack;
 		int i_7 = ++executor.intStackPtr - 1;
@@ -5969,8 +5969,8 @@ public class CS2Interpreter {
 
 	static final void method4838(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 10);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		WorldMapAreaDefs.method3738(icomponentdefinitions_3, interface_4, executor, (byte) -2);
 	}
 
@@ -6087,7 +6087,7 @@ public class CS2Interpreter {
 
 	static final void method6174(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 116);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1337;
 	}
 
@@ -6100,8 +6100,8 @@ public class CS2Interpreter {
 
 	static final void method11438(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 76);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class185.method3078(icomponentdefinitions_3, interface_4, executor, -1906837964);
 	}
 
@@ -6196,15 +6196,15 @@ public class CS2Interpreter {
 
 	static final void method563(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 11);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		RsByteBuffer.method13292(icomponentdefinitions_3, interface_4, executor, (byte) 60);
 	}
 
 	static final void method564(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 53);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		NativeLibraryLoader.method4651(icomponentdefinitions_3, interface_4, executor, (byte) 59);
 	}
 
@@ -6220,7 +6220,7 @@ public class CS2Interpreter {
 
 	static final void method6851(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 27);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class96_Sub10.method14605(icomponentdefinitions_3, executor, (byte) -34);
 	}
 
@@ -6256,8 +6256,8 @@ public class CS2Interpreter {
 
 	static final void method1624(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 24);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class17.method569(icomponentdefinitions_3, interface_4, executor, -575655435);
 	}
 
@@ -6369,8 +6369,8 @@ public class CS2Interpreter {
 
 	static final void method2595(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 76);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class380.method6453(icomponentdefinitions_3, interface_4, executor, -1649840188);
 	}
 
@@ -6393,8 +6393,8 @@ public class CS2Interpreter {
 
 	static final void method2855(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 59);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Login.method5017(icomponentdefinitions_3, interface_4, executor, -974856399);
 	}
 
@@ -6439,8 +6439,8 @@ public class CS2Interpreter {
 
 	static final void method283(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 27);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class359.method6244(icomponentdefinitions_3, interface_4, executor, 606535438);
 	}
 
@@ -6463,8 +6463,8 @@ public class CS2Interpreter {
 
 	static final void method484(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 9);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class242.method4160(icomponentdefinitions_3, interface_4, executor, (short) 8078);
 	}
 
@@ -6490,8 +6490,8 @@ public class CS2Interpreter {
 
 	static final void method6762(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 41);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class202.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 82);
 	}
 
@@ -6506,10 +6506,10 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
+		if (Class468_Sub8.INTERFACES[i_2] == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class468_Sub8.aClass98Array7889[i_2].components[i_3].anInt1414;
+			executor.intStack[++executor.intStackPtr - 1] = Class468_Sub8.INTERFACES[i_2].components[i_3].anInt1414;
 		}
 	}
 
@@ -6610,8 +6610,8 @@ public class CS2Interpreter {
 
 	static final void animateComp(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 19);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class30.method797(icomponentdefinitions_3, interface_4, executor, 2057644852);
 	}
 
@@ -6744,20 +6744,20 @@ public class CS2Interpreter {
 
 	static final void method14659(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 45);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1314;
 	}
 
 	static final void method14660(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 122);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class88.method1494(icomponentdefinitions_3, executor, (byte) -43);
 	}
 
 	static final void setCompTransparency(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 95);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class306.method5453(icomponentdefinitions_3, interface_4, executor, 1925615787);
 	}
 
@@ -6795,8 +6795,8 @@ public class CS2Interpreter {
 
 	static final void method3940(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 105);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class388.method6689(icomponentdefinitions_3, interface_4, executor, -1054634282);
 	}
 
@@ -6839,8 +6839,8 @@ public class CS2Interpreter {
 
 	static final void method2826(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 25);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub17.method12260(icomponentdefinitions_3, interface_4, executor, 456705608);
 	}
 
@@ -6985,7 +6985,7 @@ public class CS2Interpreter {
 
 	static final void method5045(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 61);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1305;
 	}
 
@@ -7069,7 +7069,7 @@ public class CS2Interpreter {
 
 	static final void method6212(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 87);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1320;
 	}
 
@@ -7087,8 +7087,8 @@ public class CS2Interpreter {
 
 	static final void method11593(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 27);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Engine.method4772(icomponentdefinitions_3, interface_4, executor, (byte) 88);
 	}
 
@@ -7102,7 +7102,7 @@ public class CS2Interpreter {
 
 	static final void method7715(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3862;
+		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].currentAmount;
 	}
 
 	static final void method5332(CS2Executor executor) {
@@ -7151,12 +7151,12 @@ public class CS2Interpreter {
 
 	static final void method1951(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = client.aClass330Array7428[i_2].method5908(-1286970996);
+		int i_3 = client.GRAND_EXCHANGE_SLOTS[i_2].method5908(-1286970996);
 		executor.intStack[++executor.intStackPtr - 1] = i_3 == 5 ? 1 : 0;
 	}
 
 	static final void method4898(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.method1981(executor.intStack[--executor.intStackPtr], (byte) 97);
+		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
 		if (icomponentdefinitions_2.aClass118Array1438 == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
@@ -7240,8 +7240,8 @@ public class CS2Interpreter {
 
 	static final void method3232(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 92);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub41_Sub1.method14700(icomponentdefinitions_3, interface_4, executor, -442383470);
 	}
 
@@ -7254,8 +7254,8 @@ public class CS2Interpreter {
 
 	static final void method11492(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 98);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		IsaacCipher.method7267(icomponentdefinitions_3, interface_4, executor, 1465963300);
 	}
 
@@ -7272,7 +7272,7 @@ public class CS2Interpreter {
 
 	static final void method11473(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 123);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1312;
 	}
 
@@ -7284,7 +7284,7 @@ public class CS2Interpreter {
 
 	static final void method3201(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 71);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class282_Sub20_Sub4.method15207(icomponentdefinitions_3, executor, 1765364986);
 	}
 
@@ -7334,7 +7334,7 @@ public class CS2Interpreter {
 
 	static final void method14602(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 123);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
 	}
 
@@ -7351,15 +7351,15 @@ public class CS2Interpreter {
 
 	static final void hookMouseHover(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 77);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Language.method8277(icomponentdefinitions_3, interface_4, executor, 1396779389);
 	}
 
 	static final void method6738(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 91);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class278_Sub1.method13450(icomponentdefinitions_3, interface_4, executor, -51249694);
 	}
 
@@ -7408,8 +7408,8 @@ public class CS2Interpreter {
 
 	static final void method8018(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 74);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		ItemDefinitions.method7142(icomponentdefinitions_3, interface_4, executor, -1447710686);
 	}
 
@@ -7432,7 +7432,7 @@ public class CS2Interpreter {
 
 	static final void method8045(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 119);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		--i_4;
 		if (icomponentdefinitions_3.aStringArray1352 != null && i_4 < icomponentdefinitions_3.aStringArray1352.length && icomponentdefinitions_3.aStringArray1352[i_4] != null) {
@@ -7444,8 +7444,8 @@ public class CS2Interpreter {
 
 	static final void method1813(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 126);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		DefaultsFile.method11221(icomponentdefinitions_3, interface_4, executor, -2007218506);
 	}
 
@@ -7514,15 +7514,15 @@ public class CS2Interpreter {
 
 	static final void method1509(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 110);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class242.method4159(icomponentdefinitions_3, interface_4, executor, -710786215);
 	}
 
 	static final void method1510(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 104);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class287.method5066(icomponentdefinitions_3, interface_4, executor, 711806396);
 	}
 
@@ -7535,7 +7535,7 @@ public class CS2Interpreter {
 
 	static final void method1512(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 83);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.anInt1330 : -1;
 	}
 
@@ -7552,8 +7552,8 @@ public class CS2Interpreter {
 
 	static final void method4904(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 74);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class204.method3365(icomponentdefinitions_3, interface_4, executor, -1548245230);
 	}
 
@@ -7592,8 +7592,8 @@ public class CS2Interpreter {
 
 	static final void method2150(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 53);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		NamedFileReference.method869(icomponentdefinitions_3, interface_4, executor, -1209481120);
 	}
 
@@ -7717,12 +7717,12 @@ public class CS2Interpreter {
 
 	static final void method6231(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass330Array7428[i_2].method5909(-41459410);
+		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].method5909(-41459410);
 	}
 
 	static final void method6232(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 107);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.aBool1306 ? 1 : 0;
 	}
 
@@ -7787,8 +7787,8 @@ public class CS2Interpreter {
 
 	static final void hookMouseExit(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 77);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		DefaultsFile.method11223(icomponentdefinitions_3, interface_4, executor, 334837898);
 	}
 
@@ -7862,8 +7862,8 @@ public class CS2Interpreter {
 
 	static final void method7560(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 59);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		ClipMap.method6010(icomponentdefinitions_3, interface_4, executor, -298020679);
 	}
 
@@ -7894,14 +7894,14 @@ public class CS2Interpreter {
 
 	static final void method11246(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 99);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		QuestDefinitions.method4136(icomponentdefinitions_3, interface_4, executor, (byte) 78);
 	}
 
 	static final void method11247(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 113);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1453;
 	}
 
@@ -8036,8 +8036,8 @@ public class CS2Interpreter {
 
 	static final void method12492(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 117);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class463.method7729(icomponentdefinitions_3, interface_4, executor, 1544396395);
 	}
 
@@ -8128,7 +8128,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15392(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.method1981(executor.intStack[--executor.intStackPtr], (byte) 16);
+		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_2.anInt1426;
 	}
 
@@ -8159,8 +8159,8 @@ public class CS2Interpreter {
 
 	static final void method6372(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 52);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class15.method542(icomponentdefinitions_3, interface_4, executor, -1893429225);
 	}
 
@@ -8195,8 +8195,8 @@ public class CS2Interpreter {
 
 	static final void method6381(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 65);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 0, executor, (byte) -19);
 	}
 
@@ -8223,8 +8223,8 @@ public class CS2Interpreter {
 
 	static final void method3020(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 40);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class249.method4276(icomponentdefinitions_3, interface_4, executor, -724687188);
 	}
 
@@ -8329,10 +8329,10 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
+		if (Class468_Sub8.INTERFACES[i_2] == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
-			String string_4 = Class468_Sub8.aClass98Array7889[i_2].components[i_3].aString1285;
+			String string_4 = Class468_Sub8.INTERFACES[i_2].components[i_3].aString1285;
 			if (string_4 == null) {
 				executor.stringStack[++executor.stringStackPtr - 1] = "";
 			} else {
@@ -8398,8 +8398,8 @@ public class CS2Interpreter {
 
 	static final void method7208(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 45);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Shadow.method15511(icomponentdefinitions_3, interface_4, executor, (byte) 126);
 	}
 
@@ -8447,8 +8447,8 @@ public class CS2Interpreter {
 
 	static final void method4629(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 40);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class306.method5455(icomponentdefinitions_3, interface_4, executor, 1919949252);
 	}
 
@@ -8475,8 +8475,8 @@ public class CS2Interpreter {
 
 	static final void method4633(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 59);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class204.method3369(icomponentdefinitions_3, interface_4, executor, (byte) 0);
 	}
 
@@ -8485,7 +8485,7 @@ public class CS2Interpreter {
 		byte[] bytes_2 = new byte[] { (byte) executor.intStack[executor.intStackPtr] };
 		byte[] bytes_3 = new byte[] { (byte) executor.intStack[executor.intStackPtr + 1] };
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		IComponentDefinitions icomponentdefinitions_5 = Class117.method1981(i_4, (byte) 48);
+		IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent(i_4);
 		Class107.method1838(icomponentdefinitions_5, bytes_2, bytes_3, executor, 1844755981);
 	}
 
@@ -8499,7 +8499,7 @@ public class CS2Interpreter {
 
 	static final void method6941(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 102);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Node.method5001(icomponentdefinitions_3, executor, -11442386);
 	}
 
@@ -8526,7 +8526,7 @@ public class CS2Interpreter {
 
 	static final void method454(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 4);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1264;
 	}
 
@@ -8557,8 +8557,8 @@ public class CS2Interpreter {
 
 	static final void method3117(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 83);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class282_Sub25.method12401(icomponentdefinitions_3, interface_4, executor, 2018146774);
 	}
 
@@ -8671,8 +8671,8 @@ public class CS2Interpreter {
 
 	static final void method5024(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 82);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 2, executor, (byte) 56);
 	}
 
@@ -8711,8 +8711,8 @@ public class CS2Interpreter {
 
 	static final void method3596(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 50);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class151.method2593(icomponentdefinitions_3, interface_4, executor, -1741314875);
 	}
 
@@ -8733,7 +8733,7 @@ public class CS2Interpreter {
 
 	static final void method855(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 78);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Class235.method3965(icomponentdefinitions_3, executor, -252931751);
 	}
 
@@ -8749,7 +8749,7 @@ public class CS2Interpreter {
 
 	static final void method858(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 35);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1376;
 	}
 
@@ -8839,7 +8839,7 @@ public class CS2Interpreter {
 
 	static final void method7422(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 68);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1311;
 	}
 
@@ -8896,8 +8896,8 @@ public class CS2Interpreter {
 
 	static final void method4311(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 118);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class455.method7555(icomponentdefinitions_3, interface_4, executor, (byte) -54);
 	}
 
@@ -8943,15 +8943,15 @@ public class CS2Interpreter {
 
 	static final void hookMouseEnter(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 28);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		TilestreamPacket.method6289(icomponentdefinitions_3, interface_4, executor, (byte) -46);
 	}
 
 	static final void method1492(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 54);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class28.method774(icomponentdefinitions_3, interface_4, executor, -1296322680);
 	}
 
@@ -9014,8 +9014,8 @@ public class CS2Interpreter {
 
 	static final void method3250(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 33);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class13.method501(icomponentdefinitions_3, interface_4, executor, (byte) -2);
 	}
 
@@ -9090,8 +9090,8 @@ public class CS2Interpreter {
 
 	static final void method5000(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 91);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class283.method5009(icomponentdefinitions_3, interface_4, executor, -1863768075);
 	}
 
@@ -9129,8 +9129,8 @@ public class CS2Interpreter {
 
 	static final void setCompText(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 8);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class158.method2732(icomponentdefinitions_3, interface_4, executor, 2144367938);
 	}
 
@@ -9147,8 +9147,8 @@ public class CS2Interpreter {
 
 	static final void method7961(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 26);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class204.method3366(icomponentdefinitions_3, interface_4, executor, (byte) -87);
 	}
 
@@ -9288,14 +9288,14 @@ public class CS2Interpreter {
 
 	static final void method6040(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 101);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class468_Sub2.method12630(icomponentdefinitions_3, interface_4, executor, 1465627737);
 	}
 
 	static final void method6041(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 43);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = client.method11633(icomponentdefinitions_3).getUseOptionFlags();
 	}
 
@@ -9345,8 +9345,8 @@ public class CS2Interpreter {
 
 	static final void method8295(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 65);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 0, executor, (byte) -3);
 	}
 
@@ -9393,7 +9393,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		IComponentDefinitions icomponentdefinitions_5 = Class117.method1981(i_4, (byte) 9);
+		IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent(i_4);
 		Class282_Sub14.method12221(icomponentdefinitions_5, i_2, i_3, 1698123949);
 	}
 
@@ -9487,15 +9487,15 @@ public class CS2Interpreter {
 
 	static final void method6685(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 18);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class13.method502(icomponentdefinitions_3, interface_4, executor, 577432492);
 	}
 
 	static final void method12839(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 105);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class13.method505(icomponentdefinitions_3, interface_4, executor, (byte) 1);
 	}
 
@@ -9526,8 +9526,8 @@ public class CS2Interpreter {
 
 	static final void method460(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 25);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class496.method8310(icomponentdefinitions_3, interface_4, executor, (byte) -108);
 	}
 
@@ -9668,8 +9668,8 @@ public class CS2Interpreter {
 
 	static final void method1167(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 23);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		FontRenderer.method403(icomponentdefinitions_3, interface_4, executor, 2136495218);
 	}
 
@@ -9721,8 +9721,8 @@ public class CS2Interpreter {
 
 	static final void method3949(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 82);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class389.method6697(icomponentdefinitions_3, interface_4, executor, 1042468011);
 	}
 
@@ -9737,8 +9737,8 @@ public class CS2Interpreter {
 
 	static final void method5511(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 98);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class169.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 3);
 	}
 
@@ -9750,22 +9750,22 @@ public class CS2Interpreter {
 
 	static final void method4960(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 120);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class172.method2915(icomponentdefinitions_3, interface_4, executor, (byte) 0);
 	}
 
 	static final void method4961(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 17);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 2, executor, (byte) 71);
 	}
 
 	static final void method4962(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 10);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 1, executor, (byte) 28);
 	}
 
@@ -9785,7 +9785,7 @@ public class CS2Interpreter {
 
 	static final void method1571(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 38);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1336;
 	}
 
@@ -9896,7 +9896,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4830(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = executor.animable.inter.method1618(executor.intStack[--executor.intStackPtr], (byte) 12);
+		IComponentDefinitions icomponentdefinitions_2 = executor.animable.inter.getComponent(executor.intStack[--executor.intStackPtr]);
 		icomponentdefinitions_2.aClass118Array1438 = null;
 		icomponentdefinitions_2.aClass118Array1439 = null;
 		Class109.method1858(icomponentdefinitions_2, (byte) -73);
@@ -10199,7 +10199,7 @@ public class CS2Interpreter {
 
 	static final void method6151(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 7);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1428;
 	}
 
@@ -10286,8 +10286,8 @@ public class CS2Interpreter {
 
 	static final void method11338(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 115);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class346.method6158(icomponentdefinitions_3, interface_4, executor, -1706086119);
 	}
 
@@ -10335,15 +10335,15 @@ public class CS2Interpreter {
 
 	static final void method11372(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 14);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		LinkedNodeList.method7889(icomponentdefinitions_3, interface_4, executor, 1072784051);
 	}
 
 	static final void method11373(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 42);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class339.method6045(icomponentdefinitions_3, interface_4, executor, (byte) -2);
 	}
 
@@ -10381,8 +10381,8 @@ public class CS2Interpreter {
 
 	static final void method2071(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 54);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class52.method1083(icomponentdefinitions_3, interface_4, executor, -1250124563);
 	}
 
@@ -10400,7 +10400,7 @@ public class CS2Interpreter {
 
 	static final void method2945(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 124);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1385;
 	}
 
@@ -10437,8 +10437,8 @@ public class CS2Interpreter {
 
 	static final void method8152(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 107);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class47_Sub1.method14482(icomponentdefinitions_3, interface_4, executor, -544899981);
 	}
 
@@ -10459,8 +10459,8 @@ public class CS2Interpreter {
 
 	static final void method8694(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 95);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class388.method6690(icomponentdefinitions_3, interface_4, executor, (byte) 95);
 	}
 
@@ -10516,13 +10516,13 @@ public class CS2Interpreter {
 
 	static final void method4146(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 59);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1299;
 	}
 
 	static final void getCompHeight(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 107);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1429;
 	}
 
@@ -10539,8 +10539,8 @@ public class CS2Interpreter {
 
 	static final void method5595(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 26);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		ChatLine.method1845(icomponentdefinitions_3, interface_4, executor, -1020802647);
 	}
 
@@ -10568,8 +10568,8 @@ public class CS2Interpreter {
 
 	static final void method14640(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 36);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class215.method3672(icomponentdefinitions_3, interface_4, executor, (short) 9324);
 	}
 
@@ -10594,8 +10594,8 @@ public class CS2Interpreter {
 
 	static final void method8208(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 70);
-		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		Class504.method8387(icomponentdefinitions_3, interface_4, executor, 1918613827);
 	}
 
@@ -10605,7 +10605,7 @@ public class CS2Interpreter {
 
 	static final void method6696(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 20);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1334;
 	}
 

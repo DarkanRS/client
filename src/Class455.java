@@ -38,7 +38,7 @@ public abstract class Class455 {
 		if (icomponentdefinitions_1 != null) {
 			int i_4;
 			if (icomponentdefinitions_1.anInt1288 != -1) {
-				IComponentDefinitions icomponentdefinitions_3 = interface_0.method1618(icomponentdefinitions_1.anInt1305, (byte) 12);
+				IComponentDefinitions icomponentdefinitions_3 = interface_0.getComponent(icomponentdefinitions_1.anInt1305);
 				if (icomponentdefinitions_3 != null) {
 					if (icomponentdefinitions_3.aClass118Array1439 == icomponentdefinitions_3.aClass118Array1438) {
 						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];

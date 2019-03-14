@@ -78,7 +78,7 @@ public class PacketsDecoder extends Class455 {
 		if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_MODEL) {
 			int key = buffer.readInt();
 			int flags = buffer.readIntV2();
-			Class470.method7825(-402122141);
+			Class470.method7825();
 			Class96_Sub3.method13786(key, 1, flags, -1, (byte) -45);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -106,7 +106,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_UNDER_NPC_PRIORITY) {
 			int key = buffer.readUnsignedByteC(1686876240);
-			Class470.method7825(-39143318);
+			Class470.method7825();
 			client.anInt7291 = key;
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -121,7 +121,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.CAMERA_ROTATION) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readShortLE128();
-			Class470.method7825(1278401565);
+			Class470.method7825();
 			Class12.method486(flags, key, 0, 596260679);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -156,10 +156,10 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.GRAND_EXCHANGE_SLOT) {
 			int key = buffer.readUnsignedByte();
 			if (buffer.readUnsignedByte() == 0) {
-				client.aClass330Array7428[key] = new Class330();
+				client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot();
 			} else {
 				--buffer.index;
-				client.aClass330Array7428[key] = new Class330(buffer);
+				client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot(buffer);
 			}
 			client.anInt7320 = client.anInt7347;
 			class184_0.aClass375_2286 = null;
@@ -169,14 +169,14 @@ public class PacketsDecoder extends Class455 {
 			int flags = buffer.readShortLE((byte) -42);
 			int i_6 = buffer.readShortLE((byte) -126);
 			int i_7 = buffer.readShortLE128();
-			Class470.method7825(94861760);
-			Class149_Sub1.method14583(key, flags, i_6, i_7, -2141386100);
+			Class470.method7825();
+			Class149_Sub1.method14583(key, flags, i_6, i_7);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_TEXT) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readIntV1();
-			Class470.method7825(-588315880);
+			Class470.method7825();
 			Class38.method860(flags, string_63, -697454473);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -187,7 +187,7 @@ public class PacketsDecoder extends Class455 {
 			int i_7 = buffer.readUnsigned128Byte();
 			int i_8 = buffer.readInt();
 			int i_9 = buffer.readInt();
-			Class470.method7825(-400873026);
+			Class470.method7825();
 			if (i_7 == 2) {
 				ParamDefinitionsLoader.method7081((byte) 18);
 			}
@@ -205,19 +205,19 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntV1();
 			int i_6 = buffer.readIntV1();
-			Class470.method7825(994147760);
+			Class470.method7825();
 			Class96_Sub3.method13786(flags, 5, key, i_6, (byte) -76);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.RESET_CAMERA) {
-			Class470.method7825(1974206194);
+			Class470.method7825();
 			Class514.method8841(1210401894);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_STRING_SMALL) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readShortLE128();
-			Class470.method7825(1212962087);
+			Class470.method7825();
 			MapRegion.method4562(flags, string_63, -1783534567);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -252,7 +252,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4406) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readInt();
-			Class470.method7825(1616362856);
+			Class470.method7825();
 			Class175.method2966(flags, key, (short) 151);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -300,7 +300,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4456) {
 			int key = buffer.readIntLE();
 			int flags = buffer.readUnsignedShort128();
-			Class470.method7825(1178481607);
+			Class470.method7825();
 			Class440.method7374(key, flags, -1621742846);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -325,7 +325,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readInt();
 			int flags = buffer.readShortLE128();
 			int i_6 = buffer.readIntV1();
-			Class470.method7825(-444552624);
+			Class470.method7825();
 			Class96_Sub3.method13786(i_6, 3, flags, key, (byte) -84);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -495,14 +495,14 @@ public class PacketsDecoder extends Class455 {
 			int i_6 = buffer.readUnsignedByte128(-1952319270);
 			int i_7 = buffer.readUnsignedByteC(1062022644);
 			int i_8 = buffer.readUnsigned128Byte();
-			Class470.method7825(1011041047);
+			Class470.method7825();
 			Class11.method469(key, i_6, flags, i_8, i_7, (byte) -10);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4368) {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readUnsignedShort128();
-			Class470.method7825(-822536297);
+			Class470.method7825();
 			Class93.method1575(flags, key, true, 733762718);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -566,7 +566,7 @@ public class PacketsDecoder extends Class455 {
 			int i_6 = buffer.readUnsignedByteC(-588997418);
 			int i_7 = buffer.readUnsignedByteC(138735834);
 			int i_8 = buffer.readUnsigned128Byte();
-			Class470.method7825(665470469);
+			Class470.method7825();
 			client.aBoolArray7431[i_6] = true;
 			client.anIntArray7268[i_6] = i_7;
 			client.anIntArray7433[i_6] = key;
@@ -650,7 +650,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort128(877005762);
 			int flags = buffer.readIntV2();
 			int i_6 = buffer.readUnsignedShortLE128(-1358044133);
-			Class470.method7825(457880484);
+			Class470.method7825();
 			Class96_Sub16.method14648(flags, i_6, key, (byte) 8);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -675,7 +675,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.NPC_ON_ICOMPONENT) {
 			int key = buffer.readIntLE();
 			int flags = buffer.readIntV1();
-			Class470.method7825(-1093951005);
+			Class470.method7825();
 			Class96_Sub3.method13786(key, 2, flags, -1, (byte) -52);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -750,7 +750,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_CONFIG_1) {
 			int key = buffer.readShortLE((byte) -64);
 			int flags = buffer.readIntV2();
-			Class470.method7825(933827827);
+			Class470.method7825();
 			Class393.method6751(key, flags, -1413337528);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -764,7 +764,7 @@ public class PacketsDecoder extends Class455 {
 			CoordGrid coordgrid_90 = new CoordGrid(buffer.readIntV1());
 			int i_11 = buffer.readIntV1();
 			int i_12 = buffer.readShortLE128();
-			Class470.method7825(881365038);
+			Class470.method7825();
 			Class31.method812(key, new Class282_Sub44_Sub3(i_6, i_9, new Class520(coordgrid_90, i_12)), new int[] { i_8, i_11, flags, i_7 }, false, (byte) 121);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -833,7 +833,7 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 		} else if (class184_0.aClass375_2286 == IncomingPacket.STOP_CAMERA_SHAKE) {
-			Class470.method7825(1881544107);
+			Class470.method7825();
 			Class275_Sub7.method12606((byte) 81);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -860,7 +860,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4501) {
 			boolean bool_91 = buffer.readUnsigned128Byte() == 1;
 			int flags = buffer.readIntLE();
-			Class470.method7825(1755063045);
+			Class470.method7825();
 			Class331.method5924(flags, bool_91, 16777472);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -895,7 +895,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4399) {
 			int key = buffer.readIntLE();
-			Class470.method7825(-741454199);
+			Class470.method7825();
 			if (key == -1) {
 				Class508.anInt5864 = -1;
 				Class86.anInt833 = -1;
@@ -1050,33 +1050,33 @@ public class PacketsDecoder extends Class455 {
 			SceneObjectType.anInt5495 = buffer.readByte128(1860551613) << 3;
 			class184_0.aClass375_2286 = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SETTINGS) {
-			int key = buffer.readShortLE128();
-			if (key == 65535) {
-				key = -1;
+		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SETTINGS_LARGE) {
+			int toSlot = buffer.readShortLE128();
+			if (toSlot == 65535) {
+				toSlot = -1;
 			}
-			int flags = buffer.readIntV2();
-			int i_6 = buffer.readUnsignedShort();
-			if (i_6 == 65535) {
-				i_6 = -1;
+			int interfaceHash = buffer.readIntV2();
+			int fromSlot = buffer.readUnsignedShort();
+			if (fromSlot == 65535) {
+				fromSlot = -1;
 			}
-			int i_7 = buffer.readIntLE();
-			Class470.method7825(745585795);
-			for (int i_8 = i_6; i_8 <= key; i_8++) {
-				long long_30 = (long) i_8 + ((long) flags << 32);
-				IComponentSettings class282_sub10_46 = (IComponentSettings) client.aClass465_7405.get(long_30);
-				IComponentSettings class282_sub10_45;
-				if (class282_sub10_46 == null) {
-					if (i_8 == -1) {
-						class282_sub10_45 = new IComponentSettings(i_7, Class117.method1981(flags, (byte) 67).aClass282_Sub10_1364.interfaceId);
+			int settings = buffer.readIntLE();
+			Class470.method7825();
+			for (int i = fromSlot; i <= toSlot; i++) {
+				long slots = (long) i + ((long) interfaceHash << 32);
+				IComponentSettings currentSettings = (IComponentSettings) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
+				IComponentSettings newSettings;
+				if (currentSettings == null) {
+					if (i == -1) {
+						newSettings = new IComponentSettings(settings, Class117.getInterfaceComponent(interfaceHash).settings.interfaceId);
 					} else {
-						class282_sub10_45 = new IComponentSettings(i_7, -1);
+						newSettings = new IComponentSettings(settings, -1);
 					}
 				} else {
-					class282_sub10_45 = new IComponentSettings(i_7, class282_sub10_46.interfaceId);
-					class282_sub10_46.remove();
+					newSettings = new IComponentSettings(settings, currentSettings.interfaceId);
+					currentSettings.remove();
 				}
-				client.aClass465_7405.put(class282_sub10_45, long_30);
+				client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);
 			}
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1191,7 +1191,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4372) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
-			Class470.method7825(1191925088);
+			Class470.method7825();
 			Class96_Sub6.aBool9173 = bool_91;
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1314,7 +1314,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4362) {
 			int key = buffer.readShortLE128();
-			Class470.method7825(869737055);
+			Class470.method7825();
 			Class92.method1563(key, 1917715893);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1340,7 +1340,7 @@ public class PacketsDecoder extends Class455 {
 			}
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4457) {
 			int key = buffer.readUnsignedShort();
-			Class470.method7825(711453188);
+			Class470.method7825();
 			Class123.method2152(key, -1865446551);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1467,40 +1467,40 @@ public class PacketsDecoder extends Class455 {
 			client.anInt7179 = client.anInt7347;
 			class184_0.aClass375_2286 = null;
 			return true;
-		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4383) {
-			int key = buffer.readIntV1();
-			int flags = buffer.readShortLE128();
-			int i_6 = buffer.readUnsignedShort();
-			if (i_6 == 65535) {
-				i_6 = -1;
+		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SETTINGS_SMALL) {
+			int interfaceHash = buffer.readIntV1();
+			int settings = buffer.readShortLE128();
+			int toSlot = buffer.readUnsignedShort();
+			if (toSlot == 65535) {
+				toSlot = -1;
 			}
-			int i_7 = buffer.readUnsignedShort128();
-			if (i_7 == 65535) {
-				i_7 = -1;
+			int fromSlot = buffer.readUnsignedShort128();
+			if (fromSlot == 65535) {
+				fromSlot = -1;
 			}
-			Class470.method7825(-1105399171);
-			for (int i_8 = i_7; i_8 <= i_6; i_8++) {
-				long long_30 = (long) i_8 + ((long) key << 32);
-				IComponentSettings class282_sub10_46 = (IComponentSettings) client.aClass465_7405.get(long_30);
-				IComponentSettings class282_sub10_45;
-				if (class282_sub10_46 == null) {
+			Class470.method7825();
+			for (int i_8 = fromSlot; i_8 <= toSlot; i_8++) {
+				long slotHash = (long) i_8 + ((long) interfaceHash << 32);
+				IComponentSettings currentSettings = (IComponentSettings) client.ICOMPONENT_SETTINGS_SLOTS.get(slotHash);
+				IComponentSettings newSettings;
+				if (currentSettings == null) {
 					if (i_8 == -1) {
-						class282_sub10_45 = new IComponentSettings(Class117.method1981(key, (byte) 100).aClass282_Sub10_1364.settings, flags);
+						newSettings = new IComponentSettings(Class117.getInterfaceComponent(interfaceHash).settings.settings, settings);
 					} else {
-						class282_sub10_45 = new IComponentSettings(0, flags);
+						newSettings = new IComponentSettings(0, settings);
 					}
 				} else {
-					class282_sub10_45 = new IComponentSettings(class282_sub10_46.settings, flags);
-					class282_sub10_46.remove();
+					newSettings = new IComponentSettings(currentSettings.settings, settings);
+					currentSettings.remove();
 				}
-				client.aClass465_7405.put(class282_sub10_45, long_30);
+				client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slotHash);
 			}
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.HIDE_ICOMPONENT) {
 			int key = buffer.readUnsignedByte128(-1543145246);
 			int flags = buffer.readInt();
-			Class470.method7825(278578436);
+			Class470.method7825();
 			Class149_Sub4.method14663(flags, key, (byte) 0);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1535,7 +1535,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_ANIMATION) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readInt();
-			Class470.method7825(1816561941);
+			Class470.method7825();
 			Class184.method3069(flags, key, 393215246);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1551,7 +1551,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.CLOSE_CHILDREN) {
 			int key = buffer.readInt();
-			Class470.method7825(-1159345533);
+			Class470.method7825();
 			Class282_Sub44 class282_sub44_103 = (Class282_Sub44) client.aClass465_7442.get((long) key);
 			if (class282_sub44_103 != null) {
 				Class351.method6196(class282_sub44_103, true, false, -1452683291);
@@ -1581,7 +1581,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4453) {
 			byte b_100 = buffer.readByte();
 			int flags = buffer.readUnsignedByteC(-1202169109);
-			Class470.method7825(-603286899);
+			Class470.method7825();
 			Class52_Sub2.method14501(b_100, flags, 1624203213);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1594,14 +1594,14 @@ public class PacketsDecoder extends Class455 {
 			int flags = buffer.readShortLE((byte) -57);
 			int i_6 = buffer.readShortLE((byte) -93);
 			int i_7 = buffer.readUnsignedByte();
-			Class470.method7825(-126108182);
+			Class470.method7825();
 			Class506.method8722(key, i_7, flags, i_6, 1767108719);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4397) {
 			boolean bool_91 = buffer.readUnsigned128Byte() == 1;
 			int flags = buffer.readIntV2();
-			Class470.method7825(1854453567);
+			Class470.method7825();
 			Class199.method3252(flags, bool_91, -1395501412);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1628,7 +1628,7 @@ public class PacketsDecoder extends Class455 {
 			int i_9 = buffer.readIntV1();
 			int i_10 = buffer.readIntV1();
 			int i_11 = buffer.readShortLE((byte) -104);
-			Class470.method7825(726119231);
+			Class470.method7825();
 			Class31.method812(i_9, new Class282_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1662,7 +1662,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4402) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntLE();
-			Class470.method7825(-963697092);
+			Class470.method7825();
 			Class282_Sub20_Sub21.method15381(flags, key, -665241735);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1674,7 +1674,7 @@ public class PacketsDecoder extends Class455 {
 			int i_8 = buffer.readIntLE();
 			int i_9 = buffer.readInt();
 			int i_10 = buffer.readUnsignedByteC(1579852251);
-			Class470.method7825(473378556);
+			Class470.method7825();
 			Class31.method812(i_9, new Class282_Sub44(i_7, i_10), new int[] { key, i_6, flags, i_8 }, false, (byte) 25);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1712,10 +1712,10 @@ public class PacketsDecoder extends Class455 {
 			}
 			int flags = buffer.readInt();
 			int i_6 = buffer.readIntV2();
-			Class470.method7825(-586263541);
+			Class470.method7825();
 			Class96_Sub9.method14587(flags, key, i_6, (short) -342);
 			ItemDefinitions itemdefinitions_128 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(key, 985436598);
-			Class149_Sub1.method14583(flags, itemdefinitions_128.modelRotationX, itemdefinitions_128.modelRotationY, itemdefinitions_128.modelZoom, -2105289855);
+			Class149_Sub1.method14583(flags, itemdefinitions_128.modelRotationX, itemdefinitions_128.modelRotationY, itemdefinitions_128.modelZoom);
 			Class28.method778(flags, itemdefinitions_128.modelOffsetX, itemdefinitions_128.modelOffsetY, itemdefinitions_128.modelRotationZ, (byte) 16);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1724,7 +1724,7 @@ public class PacketsDecoder extends Class455 {
 			int flags = buffer.readUnsignedShort128();
 			int i_6 = buffer.readUnsignedShort128();
 			int i_7 = buffer.readIntV2();
-			Class470.method7825(754356437);
+			Class470.method7825();
 			Class96_Sub3.method13786(i_7, 7, key << 16 | i_6, flags, (byte) -41);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1734,7 +1734,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4423) {
 			int key = buffer.readIntV1();
-			Class470.method7825(627328237);
+			Class470.method7825();
 			Class96_Sub3.method13786(key, 5, client.anInt7315, 0, (byte) -60);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1772,7 +1772,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.PLAYER_ON_ICOMPONENT) {
 			int key = buffer.readIntLE();
-			Class470.method7825(889183110);
+			Class470.method7825();
 			Class96_Sub3.method13786(key, 3, client.anInt7315, 0, (byte) -81);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1843,21 +1843,21 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_CONFIG_2) {
 			byte b_100 = buffer.read128Byte((short) -6566);
 			int flags = buffer.readShortLE((byte) -105);
-			Class470.method7825(865938232);
+			Class470.method7825();
 			Class393.method6751(flags, b_100, 1876892604);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.CONFIG_2) {
 			int key = buffer.readInt();
 			int flags = buffer.readIntV1();
-			Class470.method7825(1770241922);
+			Class470.method7825();
 			Class282_Sub11_Sub1.method15435(flags, key, (byte) -67);
 			class184_0.aClass375_2286 = null;
 			return true;
 		} else if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SPRITE) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readIntV2();
-			Class470.method7825(-971334097);
+			Class470.method7825();
 			ObjectIndexLoader.method7917(flags, key, (byte) 2);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -1865,13 +1865,13 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readUnsignedShort();
 			int i_6 = buffer.readUnsignedShort();
-			Class470.method7825(-958341641);
+			Class470.method7825();
 			int i_8;
-			if (Class468_Sub8.aClass98Array7889[key] != null) {
+			if (Class468_Sub8.INTERFACES[key] != null) {
 				for (int i_7 = flags; i_7 < i_6; i_7++) {
 					i_8 = buffer.read24BitUnsignedInteger();
-					if (i_7 < Class468_Sub8.aClass98Array7889[key].components.length && Class468_Sub8.aClass98Array7889[key].components[i_7] != null) {
-						Class468_Sub8.aClass98Array7889[key].components[i_7].anInt1414 = i_8;
+					if (i_7 < Class468_Sub8.INTERFACES[key].components.length && Class468_Sub8.INTERFACES[key].components[i_7] != null) {
+						Class468_Sub8.INTERFACES[key].components[i_7].anInt1414 = i_8;
 					}
 				}
 			}
@@ -1891,7 +1891,7 @@ public class PacketsDecoder extends Class455 {
 			int i_6 = buffer.readUnsigned128Byte();
 			int i_7 = buffer.readShortLE((byte) -27) << 2;
 			int i_8 = buffer.readUnsignedByte128(-904691893);
-			Class470.method7825(-450255418);
+			Class470.method7825();
 			RouteStrategy.method3794(flags, key, i_7, i_6, i_8, true, (byte) -1);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -2079,7 +2079,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4365) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readInt();
-			Class470.method7825(1577365213);
+			Class470.method7825();
 			Class282_Sub44 class282_sub44_95 = (Class282_Sub44) client.aClass465_7442.get((long) flags);
 			Class282_Sub44 class282_sub44_126 = (Class282_Sub44) client.aClass465_7442.get((long) key);
 			if (class282_sub44_126 != null) {
@@ -2089,14 +2089,14 @@ public class PacketsDecoder extends Class455 {
 				class282_sub44_95.remove();
 				client.aClass465_7442.put(class282_sub44_95, (long) key);
 			}
-			IComponentDefinitions icomponentdefinitions_130 = Class117.method1981(flags, (byte) 29);
+			IComponentDefinitions icomponentdefinitions_130 = Class117.getInterfaceComponent(flags);
 			if (icomponentdefinitions_130 != null) {
 				Class109.method1858(icomponentdefinitions_130, (byte) -6);
 			}
-			icomponentdefinitions_130 = Class117.method1981(key, (byte) 46);
+			icomponentdefinitions_130 = Class117.getInterfaceComponent(key);
 			if (icomponentdefinitions_130 != null) {
 				Class109.method1858(icomponentdefinitions_130, (byte) 22);
-				Class12.method483(Class468_Sub8.aClass98Array7889[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
+				Class12.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
 			}
 			if (client.anInt7349 != -1) {
 				Class383.method6514(client.anInt7349, 1, 1200373841);
@@ -2147,7 +2147,7 @@ public class PacketsDecoder extends Class455 {
 			int i_9 = buffer.readShortLE128();
 			int i_10 = buffer.readInt();
 			int i_11 = buffer.readInt();
-			Class470.method7825(1088980855);
+			Class470.method7825();
 			Class31.method812(i_7, new Class282_Sub44_Sub1(i_9, i_6, key), new int[] { i_11, flags, i_10, i_8 }, false, (byte) 46);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -2179,7 +2179,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (class184_0.aClass375_2286 == IncomingPacket.GLOBAL_STRING_BIG) {
 			int key = buffer.readShortLE((byte) -15);
 			String string_88 = buffer.readString();
-			Class470.method7825(-929905527);
+			Class470.method7825();
 			MapRegion.method4562(key, string_88, -1183230823);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -2280,7 +2280,7 @@ public class PacketsDecoder extends Class455 {
 			int flags = buffer.readUnsignedShort();
 			int i_6 = buffer.readUnsigned128Byte();
 			int i_7 = buffer.readIntLE();
-			Class470.method7825(1533122072);
+			Class470.method7825();
 			Class282_Sub28.method12420(i_7, i_6, flags, key, 2108425103);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -2301,7 +2301,7 @@ public class PacketsDecoder extends Class455 {
 			int i_35 = buffer.readInt();
 			CoordGrid coordgrid_36 = new CoordGrid(buffer.readIntV2());
 			int i_15 = buffer.readInt();
-			Class470.method7825(-1402446608);
+			Class470.method7825();
 			Class31.method812(key, new Class282_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -2326,7 +2326,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readIntV2();
 			int i_6 = buffer.readShortLE((byte) -6);
-			Class470.method7825(-1216270588);
+			Class470.method7825();
 			Class225_Sub2.method12882(flags, key + (i_6 << 16), 1247559712);
 			class184_0.aClass375_2286 = null;
 			return true;
@@ -2341,7 +2341,7 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			arr_26[0] = new Integer(buffer.readInt());
-			Class470.method7825(14988826);
+			Class470.method7825();
 			HookRequest hookrequest_27 = new HookRequest();
 			hookrequest_27.params = arr_26;
 			Class96_Sub4.executeHookInner200k(hookrequest_27, 502538057);

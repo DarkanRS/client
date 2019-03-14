@@ -259,15 +259,15 @@ public class Class117 {
 		}
 	}
 
-	public static IComponentDefinitions method1981(int i_0, byte b_1) {
-		int i_2 = i_0 >> 16;
-		if (Class468_Sub8.aClass98Array7889[i_2] == null || Class468_Sub8.aClass98Array7889[i_2].method1618(i_0, (byte) 12) == null) {
-			boolean bool_3 = Class456_Sub3.method12682(i_2, (int[]) null, -1161112150);
+	public static IComponentDefinitions getInterfaceComponent(int hash) {
+		int interfaceId = hash >> 16;
+		if (Class468_Sub8.INTERFACES[interfaceId] == null || Class468_Sub8.INTERFACES[interfaceId].getComponent(hash) == null) {
+			boolean bool_3 = Class456_Sub3.isInterfaceLoaded(interfaceId, (int[]) null, -1161112150);
 			if (!bool_3) {
 				return null;
 			}
 		}
-		return Class468_Sub8.aClass98Array7889[i_2].method1618(i_0, (byte) 12);
+		return Class468_Sub8.INTERFACES[interfaceId].getComponent(hash);
 	}
 
 	static void method1982(int i_0, int i_1) {

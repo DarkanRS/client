@@ -20,9 +20,9 @@ public class Class12 implements Runnable {
 	}
 
 	public static void clearComponents(int i_0, int i_1) {
-		if (i_0 != -1 && !WorldMapIndexLoader.aBoolArray2709[i_0]) {
+		if (i_0 != -1 && !WorldMapIndexLoader.INTERFACES_LOADED[i_0]) {
 			Class388.INTERFACE_INDEX.clearFiles(i_0);
-			Class468_Sub8.aClass98Array7889[i_0] = null;
+			Class468_Sub8.INTERFACES[i_0] = null;
 		}
 	}
 

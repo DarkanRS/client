@@ -91,7 +91,7 @@ public class Class31 implements IndexLoader {
 		}
 		client.aClass465_7442.put(class282_sub44_1, (long) i_0);
 		ClipMap.method6007(class282_sub44_1.anInt8063, ints_2, -1937827624);
-		IComponentDefinitions icomponentdefinitions_6 = Class117.method1981(i_0, (byte) 76);
+		IComponentDefinitions icomponentdefinitions_6 = Class117.getInterfaceComponent(i_0);
 		if (icomponentdefinitions_6 != null) {
 			Class109.method1858(icomponentdefinitions_6, (byte) 12);
 		}
@@ -101,7 +101,7 @@ public class Class31 implements IndexLoader {
 		}
 		OutputStream_Sub1.method12938((byte) 26);
 		if (icomponentdefinitions_6 != null) {
-			Class12.method483(Class468_Sub8.aClass98Array7889[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
+			Class12.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
 		}
 		if (!bool_3) {
 			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);

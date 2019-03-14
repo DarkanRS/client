@@ -35,15 +35,15 @@ public class Class456_Sub3 extends Animation {
 		return arr_4;
 	}
 
-	public static boolean method12682(int i_0, int[] ints_1, int i_2) {
-		if (WorldMapIndexLoader.aBoolArray2709[i_0]) {
+	public static boolean isInterfaceLoaded(int interfaceId, int[] xteas, int i_2) {
+		if (WorldMapIndexLoader.INTERFACES_LOADED[interfaceId]) {
 			return true;
 		} else {
-			Class468_Sub8.aClass98Array7889[i_0] = Class288.getInterface(i_0, ints_1, Class468_Sub8.aClass98Array7889[i_0], false, (byte) -15);
-			if (Class468_Sub8.aClass98Array7889[i_0] == null) {
+			Class468_Sub8.INTERFACES[interfaceId] = Class288.getInterface(interfaceId, xteas, Class468_Sub8.INTERFACES[interfaceId], false, (byte) -15);
+			if (Class468_Sub8.INTERFACES[interfaceId] == null) {
 				return false;
 			} else {
-				WorldMapIndexLoader.aBoolArray2709[i_0] = true;
+				WorldMapIndexLoader.INTERFACES_LOADED[interfaceId] = true;
 				return true;
 			}
 		}

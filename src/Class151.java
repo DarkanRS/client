@@ -71,7 +71,7 @@ public class Class151 {
 				}
 				if (i_1 == 1 && icomponentdefinitions_4.anObjectArray1346 != null) {
 					if (icomponentdefinitions_4.anInt1288 >= 0) {
-						IComponentDefinitions icomponentdefinitions_7 = Class117.method1981(icomponentdefinitions_4.idHash, (byte) 87);
+						IComponentDefinitions icomponentdefinitions_7 = Class117.getInterfaceComponent(icomponentdefinitions_4.idHash);
 						if (icomponentdefinitions_7 == null || icomponentdefinitions_7.aClass118Array1438 == null || icomponentdefinitions_4.anInt1288 >= icomponentdefinitions_7.aClass118Array1438.length || icomponentdefinitions_4 != icomponentdefinitions_7.aClass118Array1438[icomponentdefinitions_4.anInt1288]) {
 							continue;
 						}

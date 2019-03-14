@@ -1,6 +1,6 @@
 public final class IComponentSettings extends Node {
 
-	static IComponentSettings aClass282_Sub10_7546 = new IComponentSettings(0, -1);
+	static IComponentSettings DEFAULT_SETTINGS = new IComponentSettings(0, -1);
 	public int settings;
 	public int interfaceId;
 

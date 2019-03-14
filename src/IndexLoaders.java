@@ -345,14 +345,14 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4713) {
-			if (!Class456_Sub3.method12682(Class58.aClass529_527.anInt7036, (int[]) null, -402984376)) {
+			if (!Class456_Sub3.isInterfaceLoaded(Class58.aClass529_527.anInt7036, (int[]) null, -402984376)) {
 				return 0;
 			}
 
 			bool_10 = true;
 
-			for (i_2 = 0; i_2 < Class468_Sub8.aClass98Array7889[Class58.aClass529_527.anInt7036].components.length; i_2++) {
-				IComponentDefinitions icomponentdefinitions_8 = Class468_Sub8.aClass98Array7889[Class58.aClass529_527.anInt7036].components[i_2];
+			for (i_2 = 0; i_2 < Class468_Sub8.INTERFACES[Class58.aClass529_527.anInt7036].components.length; i_2++) {
+				IComponentDefinitions icomponentdefinitions_8 = Class468_Sub8.INTERFACES[Class58.aClass529_527.anInt7036].components[i_2];
 				if (icomponentdefinitions_8.anInt1268 == 5 && icomponentdefinitions_8.anInt1320 != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.anInt1320, 0)) {
 					bool_10 = false;
 				}

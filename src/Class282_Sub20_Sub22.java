@@ -147,7 +147,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 					} else {
 						if (client.anInt7341 == 1) {
 							Class155.method2636((byte) 20);
-							Class330.method5916(1211695569);
+							GrandExchangeSlot.method5916(1211695569);
 						} else if (Class282_Sub13.DEFAULTS_LOADER_8.anInterface17_5931.method127(class282_sub53_13, client.anInterface16Array7298, client.maximumHeldKeys, Class96_Sub21.keyRecorder, (byte) 81)) {
 							Class468_Sub21.method12869(false, -200546110);
 						} else {
@@ -342,7 +342,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 														if (icomponentdefinitions_10.anInt1288 < 0) {
 															break;
 														}
-														icomponentdefinitions_11 = Class117.method1981(icomponentdefinitions_10.anInt1305, (byte) 33);
+														icomponentdefinitions_11 = Class117.getInterfaceComponent(icomponentdefinitions_10.anInt1305);
 													} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
 													Class96_Sub4.executeHookInner200k(hookrequest_14, 2146300541);
 												}
@@ -351,7 +351,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 											if (icomponentdefinitions_10.anInt1288 < 0) {
 												break;
 											}
-											icomponentdefinitions_11 = Class117.method1981(icomponentdefinitions_10.anInt1305, (byte) 7);
+											icomponentdefinitions_11 = Class117.getInterfaceComponent(icomponentdefinitions_10.anInt1305);
 										} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
 										Class96_Sub4.executeHookInner200k(hookrequest_14, 690549551);
 									}
@@ -360,7 +360,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 								if (icomponentdefinitions_10.anInt1288 < 0) {
 									break;
 								}
-								icomponentdefinitions_11 = Class117.method1981(icomponentdefinitions_10.anInt1305, (byte) 48);
+								icomponentdefinitions_11 = Class117.getInterfaceComponent(icomponentdefinitions_10.anInt1305);
 							} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
 							Class96_Sub4.executeHookInner200k(hookrequest_14, 859874447);
 						}

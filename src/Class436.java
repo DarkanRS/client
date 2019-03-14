@@ -59,11 +59,11 @@ public class Class436 {
 	}
 
 	static final void method7313(Class282_Sub44 class282_sub44_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, byte b_10) {
-		if (Class456_Sub3.method12682(i_1, (int[]) null, -149079200)) {
+		if (Class456_Sub3.isInterfaceLoaded(i_1, (int[]) null, -149079200)) {
 			if (class282_sub44_0 != null && !class282_sub44_0.method13401((byte) -110)) {
 				Class351.method6196(class282_sub44_0, true, false, -1434411886);
 			} else {
-				Interface interface_11 = Class468_Sub8.aClass98Array7889[i_1];
+				Interface interface_11 = Class468_Sub8.INTERFACES[i_1];
 				client.method11768(interface_11, interface_11.method1616(2121969346), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9);
 			}
 		}

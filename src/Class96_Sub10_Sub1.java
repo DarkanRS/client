@@ -25,8 +25,8 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 
 	static final void method15553(boolean bool_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_4 = Class117.method1981(i_3, (byte) 11);
-		Interface interface_5 = Class468_Sub8.aClass98Array7889[i_3 >> 16];
+		IComponentDefinitions icomponentdefinitions_4 = Class117.getInterfaceComponent(i_3);
+		Interface interface_5 = Class468_Sub8.INTERFACES[i_3 >> 16];
 		if (bool_0) {
 			Class455.method7554(interface_5, icomponentdefinitions_4, 1019153265);
 		} else {

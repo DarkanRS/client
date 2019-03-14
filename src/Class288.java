@@ -77,16 +77,16 @@ public class Class288 {
 		Class407.aCalendar4846.setTime(new Date(long_0));
 	}
 
-	public static Interface getInterface(int i_0, int[] ints_1, Interface interface_2, boolean bool_3, byte b_4) {
-		if (!Class388.INTERFACE_INDEX.loadArchive(i_0)) {
+	public static Interface getInterface(int interfaceId, int[] ints_1, Interface interface_2, boolean bool_3, byte b_4) {
+		if (!Class388.INTERFACE_INDEX.loadArchive(interfaceId)) {
 			return null;
 		} else {
-			int i_5 = Class388.INTERFACE_INDEX.filesCount(i_0);
+			int componentSize = Class388.INTERFACE_INDEX.filesCount(interfaceId);
 			IComponentDefinitions[] arr_6;
-			if (i_5 == 0) {
+			if (componentSize == 0) {
 				arr_6 = new IComponentDefinitions[0];
 			} else if (interface_2 == null) {
-				arr_6 = new IComponentDefinitions[i_5];
+				arr_6 = new IComponentDefinitions[componentSize];
 			} else {
 				arr_6 = interface_2.components;
 			}
@@ -96,13 +96,13 @@ public class Class288 {
 				interface_2.components = arr_6;
 				interface_2.aBool999 = bool_3;
 			}
-			for (int i_7 = 0; i_7 < i_5; i_7++) {
-				if (interface_2.components[i_7] == null) {
-					byte[] bytes_8 = Class388.INTERFACE_INDEX.getFile(i_0, i_7, ints_1);
+			for (int i = 0; i < componentSize; i++) {
+				if (interface_2.components[i] == null) {
+					byte[] bytes_8 = Class388.INTERFACE_INDEX.getFile(interfaceId, i, ints_1);
 					if (bytes_8 != null) {
-						IComponentDefinitions icomponentdefinitions_9 = interface_2.components[i_7] = new IComponentDefinitions();
-						icomponentdefinitions_9.idHash = i_7 + (i_0 << 16);
-						icomponentdefinitions_9.readValues(new RsByteBuffer(bytes_8), 1943098120);
+						IComponentDefinitions component = interface_2.components[i] = new IComponentDefinitions();
+						component.idHash = i + (interfaceId << 16);
+						component.readValues(new RsByteBuffer(bytes_8), 1943098120);
 					}
 				}
 			}

@@ -1,373 +1,189 @@
 public class IComponentDefinitions {
 
 	public int anInt1281;
-
 	public Class417 aClass417_1308;
-
 	public int anInt1340;
-
 	public int anInt1350;
-
 	public int anInt1354;
-
 	public Object[] anObjectArray1407;
-
 	public int[] anIntArray1408;
-
 	public int anInt1414;
-
 	public Object[] anObjectArray1418;
-
 	public int[] anIntArray1425;
-
 	public int anInt1430;
-
 	public int anInt1431;
-
 	public int anInt1432;
-
 	public int anInt1433;
-
 	public int anInt1434;
-
 	public Animation aClass456_1437;
-
 	public IComponentDefinitions[] aClass118Array1438;
-
 	public IComponentDefinitions[] aClass118Array1439;
-
 	public static int anInt1283 = 0;
-
 	public static int anInt1373 = 1;
-
 	public static int anInt1265 = 2;
-
 	public static int anInt1266 = 328;
-
 	public static int anInt1372 = 1337;
-
 	public static int anInt1436 = 1403;
-
 	public static int anInt1269 = 1338;
-
 	public static int anInt1270 = 1339;
-
 	public static int anInt1313 = 1400;
-
 	public static int anInt1272 = 1401;
-
 	public static int anInt1273 = 1405;
-
 	public static int anInt1374 = 1406;
-
 	public static int anInt1275 = 1407;
-
 	public static int anInt1276 = 1408;
-
 	public static int anInt1300 = 1409;
-
 	public static SoftCache aClass229_1280 = new SoftCache(3000000, 200);
-
 	static SoftCache aClass229_1303 = new SoftCache(8);
-
 	static SoftCache aClass229_1282 = new SoftCache(4);
-
 	public static SoftCache aClass229_1341 = new SoftCache(50);
-
 	public static boolean aBool1399 = false;
-
 	public int anInt1268;
-
 	public String aString1285;
-
 	public int anInt1290 = 0;
-
 	public int anInt1295 = 0;
-
 	public int anInt1296 = 0;
-
 	public int anInt1297 = 0;
-
 	public int anInt1298 = 0;
-
 	public byte aByte1368 = 0;
-
 	public byte aByte1294 = 0;
-
 	public byte aByte1333 = 0;
-
 	public byte aByte1355 = 0;
-
 	public int anInt1305 = -1;
-
 	public boolean aBool1306 = false;
-
 	public int anInt1376 = 0;
-
 	public int anInt1314 = 0;
-
 	public boolean aBool1291 = false;
-
 	public int anInt1320 = -1;
-
 	public int anInt1423 = 0;
-
 	public int anInt1329 = 1;
-
 	public int anInt1330;
-
 	public boolean aBool1322 = false;
-
 	public int anInt1277 = -1;
-
 	public String aString1391 = "";
-
 	public int anInt1264 = 0;
-
 	public boolean aBool1327 = false;
-
 	public int anInt1453 = 0;
-
 	public int anInt1323 = 0;
-
 	public int anInt1324 = 0;
-
 	public int anInt1358 = 0;
-
 	public int anInt1359 = 0;
-
 	public int anInt1360 = 0;
-
 	public int anInt1377 = 1;
-
 	public boolean aBool1332;
-
 	public boolean aBool1356 = true;
-
 	public boolean aBool1316 = false;
-
 	public byte[][] aByteArrayArray1366;
-
 	public byte[][] aByteArrayArray1367;
-
 	public int[] anIntArray1395;
-
 	public int[] anIntArray1267;
-
 	public String aString1369;
-
 	public boolean aBool1325;
-
 	public boolean aBool1420 = false;
-
 	public boolean aBool1357 = false;
-
 	public String[] aStringArray1352;
-
 	public boolean aBool1344 = false;
-
 	public int anInt1362 = 0;
-
 	public int[] anIntArray1284;
-
 	public boolean aBool1351;
-
 	public String aString1348;
-
 	public boolean aBool1345 = false;
-
 	public boolean aBool1424;
-
 	public int anInt1380;
-
 	public int anInt1381;
-
 	public int anInt1382;
-
 	public String aString1338;
-
 	public int anInt1441 = 0;
-
 	public int anInt1263 = 0;
-
 	public int anInt1385 = 0;
-
 	public int anInt1336 = 0;
-
 	public int anInt1337 = 0;
-
 	public int anInt1343 = 100;
-
 	public boolean aBool1328 = true;
-
 	public int anInt1304 = 0;
-
 	public int anInt1321;
-
 	public int anInt1307 = -1;
-
 	public int anInt1309 = -1;
-
-	public IComponentSettings aClass282_Sub10_1364;
-
+	public IComponentSettings settings;
 	public int anInt1417 = 0;
-
 	public int anInt1310 = -1;
-
 	public Object[] scriptParams;
-
 	public Object[] anObjectArray1390;
-
 	public Object[] anObjectArray1392;
-
 	public Object[] anObjectArray1396;
-
 	public Object[] anObjectArray1400;
-
 	public Object[] anObjectArray1397;
-
 	public Object[] anObjectArray1342;
-
 	public Object[] anObjectArray1387;
-
 	public Object[] anObjectArray1409;
-
 	public Object[] params;
-
 	public int anInt1326 = 0;
-
 	public Object[] anObjectArray1393;
-
 	public Object[] anObjectArray1278;
-
 	public Object[] anObjectArray1386;
-
 	public Object[] anObjectArray1319;
-
 	public Object[] anObjectArray1302;
-
 	public Object[] anObjectArray1389;
-
 	public Object[] anObjectArray1451;
-
 	public Object[] anObjectArray1394;
-
 	public Object[] anObjectArray1412;
-
 	public Object[] anObjectArray1403;
-
 	public Object[] anObjectArray1405;
-
 	public int[] anIntArray1401;
-
 	public int[] anIntArray1398;
-
 	public int[] anIntArray1402;
-
 	public int[] anIntArray1315;
-
 	public int[] anIntArray1406;
-
 	public Object[] anObjectArray1413;
-
 	public Object[] anObjectArray1292;
-
 	public Object[] anObjectArray1415;
-
 	public Object[] anObjectArray1416;
-
 	public Object[] anObjectArray1383;
-
 	public Object[] anObjectArray1419;
-
 	public Object[] anObjectArray1361;
-
 	public Object[] anObjectArray1421;
-
 	public Object[] anObjectArray1346;
-
 	public Object[] anObjectArray1353;
-
 	public Object[] anObjectArray1271;
-
 	public boolean aBool1384;
-
-	public ParticleSystem aClass539_1452;
-
+	public ParticleSystem particleSystem;
 	IterableNodeMap aClass465_1365;
-
 	public int idHash = -1;
-
 	public int anInt1288 = -1;
-
 	public int anInt1299 = 0;
-
 	public int anInt1428 = 0;
-
 	public int anInt1301 = 0;
-
 	public int anInt1429 = 0;
-
 	public int anInt1289 = 1;
-
 	public int anInt1375 = 1;
-
 	public int anInt1311 = 0;
-
 	public int anInt1312 = 0;
-
 	public int anInt1339 = -1;
-
 	public int anInt1293 = 0;
-
 	public int anInt1334 = 0;
-
 	public int anInt1335 = 2;
-
 	public boolean aBool1363 = false;
-
 	public int anInt1378;
-
 	public IComponentDefinitions aClass118_1379;
-
 	public int anInt1426;
-
 	public int anInt1427;
-
 	public boolean aBool1388;
-
 	public int anInt1404;
-
 	public int anInt1435;
-
 	public boolean aBool1440;
-
 	public boolean aBool1286;
-
 	public int anInt1442;
-
 	public int anInt1443;
-
 	public int anInt1444;
-
 	public int anInt1445;
-
 	public int anInt1446;
-
 	public int anInt1447;
-
 	public int anInt1448;
-
 	public int anInt1449;
-
 	public int anInt1450;
-
 	short[] aShortArray1347;
-
 	short[] aShortArray1331;
-
 	short[] aShortArray1349;
-
 	short[] aShortArray1317;
 
 	void readValues(RsByteBuffer rsbytebuffer_1, int i_2) {
@@ -564,7 +380,7 @@ public class IComponentDefinitions {
 				this.anInt1309 = -1;
 			}
 		}
-		this.aClass282_Sub10_1364 = new IComponentSettings(i_5, i_10);
+		this.settings = new IComponentSettings(i_5, i_10);
 		if (i_3 >= 0) {
 			i_11 = rsbytebuffer_1.readUnsignedByte();
 			int i_12;
@@ -700,11 +516,11 @@ public class IComponentDefinitions {
 		meshrasterizer_2.method11273(matrix44var_3);
 		Class87[] arr_6 = meshrasterizer_2.method11253();
 		Class172[] arr_7 = meshrasterizer_2.method11274();
-		if ((this.aClass539_1452 == null || this.aClass539_1452.aBool7132) && (arr_6 != null || arr_7 != null)) {
-			this.aClass539_1452 = ParticleSystem.method11557(i_4, false);
+		if ((this.particleSystem == null || this.particleSystem.aBool7132) && (arr_6 != null || arr_7 != null)) {
+			this.particleSystem = ParticleSystem.method11557(i_4, false);
 		}
-		if (this.aClass539_1452 != null) {
-			this.aClass539_1452.method11511(graphicalrenderer_1, (long) i_4, arr_6, arr_7, false);
+		if (this.particleSystem != null) {
+			this.particleSystem.method11511(graphicalrenderer_1, (long) i_4, arr_6, arr_7, false);
 		}
 	}
 
@@ -901,7 +717,7 @@ public class IComponentDefinitions {
 	}
 
 	public IComponentDefinitions() {
-		this.aClass282_Sub10_1364 = IComponentSettings.aClass282_Sub10_7546;
+		this.settings = IComponentSettings.DEFAULT_SETTINGS;
 		this.aBool1424 = false;
 		this.aString1369 = "";
 		this.anInt1378 = -1;

@@ -19,7 +19,7 @@ public class Class403 {
 		Class388.INTERFACE_INDEX = index_0;
 		Class488.MESH_INDEX = index_1;
 		Class463.SPRITES_INDEX = index_2;
-		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount()];
-		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount()];
+		Class468_Sub8.INTERFACES = new Interface[Class388.INTERFACE_INDEX.containersCount()];
+		WorldMapIndexLoader.INTERFACES_LOADED = new boolean[Class388.INTERFACE_INDEX.containersCount()];
 	}
 }

@@ -195,7 +195,7 @@ public class Class190 {
 		}
 
 		for (i_1 = 0; i_1 < 6; i_1++) {
-			client.aClass330Array7428[i_1] = new Class330();
+			client.GRAND_EXCHANGE_SLOTS[i_1] = new GrandExchangeSlot();
 		}
 
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(117803918);

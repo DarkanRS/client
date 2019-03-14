@@ -260,7 +260,7 @@ public final class client extends Engine {
 	public static NodeCollection aClass482_7402;
 	static NodeCollection aClass482_7233;
 	static NodeCollection aClass482_7404;
-	static IterableNodeMap aClass465_7405;
+	static IterableNodeMap ICOMPONENT_SETTINGS_SLOTS;
 	static int anInt7407;
 	static int anInt7408;
 	public static boolean[] aBoolArray7443;
@@ -281,7 +281,7 @@ public final class client extends Engine {
 	static int anInt7389;
 	public static String aString7426;
 	public static String aString7359;
-	public static Class330[] aClass330Array7428;
+	public static GrandExchangeSlot[] GRAND_EXCHANGE_SLOTS;
 	static int anInt7429;
 	static boolean[] aBoolArray7431;
 	static int[] anIntArray7268;
@@ -487,7 +487,7 @@ public final class client extends Engine {
 		aClass482_7402 = new NodeCollection();
 		aClass482_7233 = new NodeCollection();
 		aClass482_7404 = new NodeCollection();
-		aClass465_7405 = new IterableNodeMap(512);
+		ICOMPONENT_SETTINGS_SLOTS = new IterableNodeMap(512);
 		anInt7407 = 0;
 		anInt7408 = -2;
 		aBoolArray7443 = new boolean[107];
@@ -513,7 +513,7 @@ public final class client extends Engine {
 		anInt7389 = 0;
 		aString7426 = null;
 		aString7359 = null;
-		aClass330Array7428 = new Class330[6];
+		GRAND_EXCHANGE_SLOTS = new GrandExchangeSlot[6];
 		anInt7429 = 0;
 		aBoolArray7431 = new boolean[5];
 		anIntArray7268 = new int[5];
@@ -1585,8 +1585,8 @@ public final class client extends Engine {
 	}
 
 	public static IComponentSettings method11633(IComponentDefinitions icomponentdefinitions_0) {
-		IComponentSettings class282_sub10_1 = (IComponentSettings) aClass465_7405.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
-		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.aClass282_Sub10_1364;
+		IComponentSettings class282_sub10_1 = (IComponentSettings) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
+		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.settings;
 	}
 
 	static IComponentDefinitions method11634(IComponentDefinitions icomponentdefinitions_0) {
@@ -3119,7 +3119,7 @@ public final class client extends Engine {
 											break;
 										}
 
-										icomponentdefinitions_14 = Class117.method1981(icomponentdefinitions_16.anInt1305, (byte) 6);
+										icomponentdefinitions_14 = Class117.getInterfaceComponent(icomponentdefinitions_16.anInt1305);
 									} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
 
 									Class96_Sub4.executeHookInner200k(hookrequest_13, 970362287);
@@ -3131,7 +3131,7 @@ public final class client extends Engine {
 								break;
 							}
 
-							icomponentdefinitions_14 = Class117.method1981(icomponentdefinitions_16.anInt1305, (byte) 126);
+							icomponentdefinitions_14 = Class117.getInterfaceComponent(icomponentdefinitions_16.anInt1305);
 						} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
 
 						Class96_Sub4.executeHookInner200k(hookrequest_13, 433740759);
@@ -3143,7 +3143,7 @@ public final class client extends Engine {
 					break;
 				}
 
-				icomponentdefinitions_14 = Class117.method1981(icomponentdefinitions_16.anInt1305, (byte) 83);
+				icomponentdefinitions_14 = Class117.getInterfaceComponent(icomponentdefinitions_16.anInt1305);
 			} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
 
 			Class96_Sub4.executeHookInner200k(hookrequest_13, 60192385);

@@ -745,8 +745,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												Renderers.SOFTWARE_RENDERER.o(i_14, i_15, i_14 + icomponentdefinitions_12.anInt1301, i_15 + icomponentdefinitions_12.anInt1429);
 											}
 											meshrasterizer_40.method11282(client.aClass294_7169, (Class275_Sub5) null, 1);
-											if (!icomponentdefinitions_12.aBool1344 && icomponentdefinitions_12.aClass539_1452 != null) {
-												Renderers.SOFTWARE_RENDERER.method8456(icomponentdefinitions_12.aClass539_1452.method11533());
+											if (!icomponentdefinitions_12.aBool1344 && icomponentdefinitions_12.particleSystem != null) {
+												Renderers.SOFTWARE_RENDERER.method8456(icomponentdefinitions_12.particleSystem.method11533());
 											}
 											if (client.aBool7358) {
 												Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);

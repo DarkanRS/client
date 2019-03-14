@@ -600,7 +600,7 @@ public final class Index {
 	}
 
 	public static IComponentDefinitions method5694(int i_0, int i_1, int i_2) {
-		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_0, (byte) 33);
+		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_0);
 		return i_1 == -1 ? icomponentdefinitions_3 : (icomponentdefinitions_3 != null && icomponentdefinitions_3.aClass118Array1438 != null && i_1 < icomponentdefinitions_3.aClass118Array1438.length ? icomponentdefinitions_3.aClass118Array1438[i_1] : null);
 	}
 }

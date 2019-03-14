@@ -49,7 +49,7 @@ public class Class351 implements Interface3 {
 			Class337.unloadInterface(i_4, -775991491);
 		}
 		Class109_Sub1.method14650(i_4, 185452428);
-		IComponentDefinitions icomponentdefinitions_6 = Class117.method1981(i_5, (byte) 49);
+		IComponentDefinitions icomponentdefinitions_6 = Class117.getInterfaceComponent(i_5);
 		if (icomponentdefinitions_6 != null) {
 			Class109.method1858(icomponentdefinitions_6, (byte) -15);
 		}

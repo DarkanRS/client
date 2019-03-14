@@ -20,7 +20,7 @@ final class Class109_Sub1 extends Class109 {
 	}
 
 	static void method14650(int i_0, int i_1) {
-		for (Node node_2 = client.aClass465_7405.method7750(1412707931); node_2 != null; node_2 = client.aClass465_7405.method7751((byte) 92)) {
+		for (Node node_2 = client.ICOMPONENT_SETTINGS_SLOTS.method7750(1412707931); node_2 != null; node_2 = client.ICOMPONENT_SETTINGS_SLOTS.method7751((byte) 92)) {
 			if ((long) i_0 == (node_2.data >> 48 & 0xffffL)) {
 				node_2.remove();
 			}

@@ -764,8 +764,8 @@ public class ClipMap {
 	}
 
 	static final void method6007(int i_0, int[] ints_1, int i_2) {
-		if (Class456_Sub3.method12682(i_0, ints_1, 214426228)) {
-			IComponentDefinitions[] arr_3 = Class468_Sub8.aClass98Array7889[i_0].components;
+		if (Class456_Sub3.isInterfaceLoaded(i_0, ints_1, 214426228)) {
+			IComponentDefinitions[] arr_3 = Class468_Sub8.INTERFACES[i_0].components;
 			for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
 				IComponentDefinitions icomponentdefinitions_5 = arr_3[i_4];
 				if (icomponentdefinitions_5 != null && icomponentdefinitions_5.aClass456_1437 != null) {

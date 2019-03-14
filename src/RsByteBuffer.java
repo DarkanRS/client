@@ -130,7 +130,7 @@ public class RsByteBuffer extends Node {
 
 		this.buffer[++this.index - 1] = 0;
 		this.method13077(i_4, 1646116683);
-		this.index += Class330.method5914(this.buffer, this.index, charsequence_1, -1772783727);
+		this.index += GrandExchangeSlot.method5914(this.buffer, this.index, charsequence_1, -1772783727);
 	}
 
 	public void writeBytes(byte[] bytes_1, int i_2, int i_3) {
