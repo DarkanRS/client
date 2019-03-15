@@ -29,7 +29,7 @@ public class Class302 {
 		RenderAnimDefs renderanimdefs_5 = animable_0.getRenderAnimDefs();
 		Class456_Sub3 class456_sub3_6 = animable_0.aClass456_Sub3_10337;
 		int i_7 = animable_0.anInt10361 - animable_0.aClass19_10359.anInt153 & 0x3fff;
-		if (i_1 == Class249.aClass249_3083.aByte3085) {
+		if (i_1 == Class249.MOVE_TYPE_DEFAULT.id) {
 			if (i_7 == 0 && animable_0.anInt10357 <= 25) {
 				if (!class456_sub3_6.aBool7891 || !renderanimdefs_5.method3810(class456_sub3_6.method7597(-457692749))) {
 					class456_sub3_6.method7570(renderanimdefs_5.method3809(346097495), -1633423132);
@@ -47,16 +47,16 @@ public class Class302 {
 			}
 		} else if (animable_0.faceEntity == -1 || i_7 < 10240 && i_7 > 2048) {
 			if (i_7 == 0 && animable_0.anInt10357 <= 25) {
-				if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
+				if (i_1 == Class249.MOVE_TYPE_2.id && renderanimdefs_5.anInt2797 != -1) {
 					class456_sub3_6.method7570(renderanimdefs_5.anInt2797, -1921383310);
-				} else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
+				} else if (i_1 == Class249.MOVE_TYPE_0.id && renderanimdefs_5.anInt2801 != -1) {
 					class456_sub3_6.method7570(renderanimdefs_5.anInt2801, -352623375);
 				} else {
 					class456_sub3_6.method7570(renderanimdefs_5.walkAnimation, -765983563);
 				}
 				class456_sub3_6.aBool7891 = false;
 			} else {
-				if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
+				if (i_1 == Class249.MOVE_TYPE_2.id && renderanimdefs_5.anInt2797 != -1) {
 					if (i_3 < 0 && renderanimdefs_5.anInt2807 != -1) {
 						class456_sub3_6.method7570(renderanimdefs_5.anInt2807, -484680989);
 					} else if (i_3 > 0 && renderanimdefs_5.anInt2808 != -1) {
@@ -64,7 +64,7 @@ public class Class302 {
 					} else {
 						class456_sub3_6.method7570(renderanimdefs_5.anInt2797, -85228314);
 					}
-				} else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
+				} else if (i_1 == Class249.MOVE_TYPE_0.id && renderanimdefs_5.anInt2801 != -1) {
 					if (i_3 < 0 && renderanimdefs_5.anInt2830 != -1) {
 						class456_sub3_6.method7570(renderanimdefs_5.anInt2830, -1720670633);
 					} else if (i_3 > 0 && renderanimdefs_5.anInt2806 != -1) {
@@ -83,7 +83,7 @@ public class Class302 {
 			}
 		} else {
 			int i_8 = client.anIntArray7380[i_2] - animable_0.aClass19_10359.anInt153 & 0x3fff;
-			if (i_1 == Class249.aClass249_3086.aByte3085 && renderanimdefs_5.anInt2797 != -1) {
+			if (i_1 == Class249.MOVE_TYPE_2.id && renderanimdefs_5.anInt2797 != -1) {
 				if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.anInt2800 != -1) {
 					class456_sub3_6.method7570(renderanimdefs_5.anInt2800, -744132293);
 				} else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.anInt2799 != -1) {
@@ -93,7 +93,7 @@ public class Class302 {
 				} else {
 					class456_sub3_6.method7570(renderanimdefs_5.anInt2797, -1257308259);
 				}
-			} else if (i_1 == Class249.aClass249_3082.aByte3085 && renderanimdefs_5.anInt2801 != -1) {
+			} else if (i_1 == Class249.MOVE_TYPE_0.id && renderanimdefs_5.anInt2801 != -1) {
 				if (i_8 > 2048 && i_8 <= 6144 && renderanimdefs_5.anInt2812 != -1) {
 					class456_sub3_6.method7570(renderanimdefs_5.anInt2812, -173534330);
 				} else if (i_8 >= 10240 && i_8 < 14336 && renderanimdefs_5.anInt2803 != -1) {

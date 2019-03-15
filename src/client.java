@@ -1240,9 +1240,9 @@ public final class client extends Engine {
 
 				int reponse;
 				if (updateStage == 2) {
-					if (Class47_Sub1.updateConnection.available(1, (byte) 59)) {
+					if (Class47_Sub1.updateConnection.available(1)) {
 						byte[] bytes_6 = new byte[1];
-						reponse = Class47_Sub1.updateConnection.read(bytes_6, 0, 1, -1159358495);
+						reponse = Class47_Sub1.updateConnection.read(bytes_6, 0, 1);
 						if (bytes_6[0] == 25) {
 							return;
 						}
@@ -1262,9 +1262,9 @@ public final class client extends Engine {
 				if (updateStage == 3) {
 					Class446[] arr_10 = Class446.method7436();
 					reponse = arr_10.length * 4;
-					if (Class47_Sub1.updateConnection.available(reponse, (byte) 108)) {
+					if (Class47_Sub1.updateConnection.available(reponse)) {
 						RsByteBuffer rsbytebuffer_4 = new RsByteBuffer(reponse);
-						Class47_Sub1.updateConnection.read(rsbytebuffer_4.buffer, 0, rsbytebuffer_4.buffer.length, -892041058);
+						Class47_Sub1.updateConnection.read(rsbytebuffer_4.buffer, 0, rsbytebuffer_4.buffer.length);
 
 						for (int i_5 = 0; i_5 < arr_10.length; i_5++) {
 							arr_10[i_5].method7439(rsbytebuffer_4.readInt());
@@ -3020,7 +3020,7 @@ public final class client extends Engine {
 								for (int i_11 = 0; i_11 < i_10; i_11++) {
 									npc_3.regionBaseX[i_11] = walkStepsX[i_10 - i_11 - 1];
 									npc_3.regionBaseY[i_11] = walkStepsY[i_10 - i_11 - 1];
-									npc_3.aByteArray10365[i_11] = Class249.aClass249_3084.aByte3085;
+									npc_3.aByteArray10365[i_11] = Class249.MOVE_TYPE_1.id;
 								}
 
 								npc_3.anInt10355 = i_10;

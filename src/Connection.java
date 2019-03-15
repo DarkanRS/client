@@ -10,7 +10,7 @@ public abstract class Connection {
 
 	public abstract void method3314();
 
-	public abstract boolean available(int var1, byte var2) throws IOException;
+	public abstract boolean available(int var1) throws IOException;
 
 	public abstract void method3316();
 
@@ -34,7 +34,7 @@ public abstract class Connection {
 
 	public abstract void method3326(byte[] var1, int var2, int var3) throws IOException;
 
-	public abstract int read(byte[] var1, int var2, int var3, int var4) throws IOException;
+	public abstract int read(byte[] var1, int var2, int var3) throws IOException;
 
 	public abstract boolean method3328(int var1) throws IOException;
 

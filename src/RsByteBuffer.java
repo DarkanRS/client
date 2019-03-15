@@ -401,11 +401,11 @@ public class RsByteBuffer extends Node {
 		return 128 - this.buffer[++this.index - 1] & 0xff;
 	}
 
-	public byte readByte128(int i_1) {
+	public byte readByte128() {
 		return (byte) (this.buffer[++this.index - 1] - 128);
 	}
 
-	public byte read128Byte(short s_1) {
+	public byte read128Byte() {
 		return (byte) (128 - this.buffer[++this.index - 1]);
 	}
 
@@ -622,7 +622,7 @@ public class RsByteBuffer extends Node {
 		this.index = i_5;
 	}
 
-	public byte readByteC(int i_1) {
+	public byte readByteC() {
 		return (byte) (0 - this.buffer[++this.index - 1]);
 	}
 

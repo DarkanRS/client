@@ -54,7 +54,7 @@ public class Class363 {
 	}
 
 	static final void method6287(Animable animable_0, boolean bool_1, int i_2) {
-		int i_3 = Class249.aClass249_3083.aByte3085;
+		int i_3 = Class249.MOVE_TYPE_DEFAULT.id;
 		int i_4 = 0;
 		if (animable_0.anInt10342 > client.cycles) {
 			Class249.method4281(animable_0);
@@ -76,7 +76,7 @@ public class Class363 {
 			animable_0.currentAnimations = null;
 			animable_0.anInt10342 = 0;
 			animable_0.anInt10345 = 0;
-			i_3 = Class249.aClass249_3083.aByte3085;
+			i_3 = Class249.MOVE_TYPE_DEFAULT.id;
 			i_4 = 0;
 			animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
 			animable_0.method15801();
@@ -90,7 +90,7 @@ public class Class363 {
 			animable_0.currentAnimations = null;
 			animable_0.anInt10342 = 0;
 			animable_0.anInt10345 = 0;
-			i_3 = Class249.aClass249_3083.aByte3085;
+			i_3 = Class249.MOVE_TYPE_DEFAULT.id;
 			i_4 = 0;
 			animable_0.method11172((float) (animable_0.regionBaseX[0] * 512 + animable_0.getSize() * 256), vector3_5.y, (float) (512 * animable_0.regionBaseY[0] + animable_0.getSize() * 256));
 			animable_0.method15801();

@@ -514,7 +514,7 @@ public class Class8_Sub3 extends FontRenderer {
 	}
 
 	public static Class249[] method14339() {
-		return new Class249[] { Class249.aClass249_3082, Class249.aClass249_3084, Class249.aClass249_3086, Class249.aClass249_3083 };
+		return new Class249[] { Class249.MOVE_TYPE_0, Class249.MOVE_TYPE_1, Class249.MOVE_TYPE_2, Class249.MOVE_TYPE_DEFAULT };
 	}
 
 	static void method14341() {

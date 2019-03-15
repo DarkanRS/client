@@ -22,20 +22,20 @@ public class PacketsDecoder extends Class455 {
 			return false;
 		if (context.currentPacket == null) {
 			if (context.aBool2288) {
-				if (!connection.available(1, (byte) 84)) {
+				if (!connection.available(1)) {
 					return false;
 				}
-				connection.read(context.recievedBuffer.buffer, 0, 1, -1338515791);
+				connection.read(context.recievedBuffer.buffer, 0, 1);
 				++context.read;
 				context.idleReadPulses = 0;
 				context.aBool2288 = false;
 			}
 			buffer.index = 0;
 			if (buffer.nextIsSmart()) {
-				if (!connection.available(1, (byte) 98)) {
+				if (!connection.available(1)) {
 					return false;
 				}
-				connection.read(context.recievedBuffer.buffer, 1, 1, -566199770);
+				connection.read(context.recievedBuffer.buffer, 1, 1);
 				++context.read;
 				context.idleReadPulses = 0;
 			}
@@ -49,30 +49,30 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacketSize = context.currentPacket.size;
 		}
 		if (context.currentPacketSize == -1) {
-			if (!connection.available(1, (byte) 96)) {
+			if (!connection.available(1)) {
 				return false;
 			}
-			connection.read(buffer.buffer, 0, 1, -1428027721);
+			connection.read(buffer.buffer, 0, 1);
 			context.currentPacketSize = buffer.buffer[0] & 0xff;
 			++context.read;
 			context.idleReadPulses = 0;
 		}
 		if (context.currentPacketSize == -2) {
-			if (!connection.available(2, (byte) 58)) {
+			if (!connection.available(2)) {
 				return false;
 			}
-			connection.read(buffer.buffer, 0, 2, -1086022200);
+			connection.read(buffer.buffer, 0, 2);
 			buffer.index = 0;
 			context.currentPacketSize = buffer.readUnsignedShort();
 			context.read += 2;
 			context.idleReadPulses = 0;
 		}
 		if (context.currentPacketSize > 0) {
-			if (!connection.available(context.currentPacketSize, (byte) 90)) {
+			if (!connection.available(context.currentPacketSize)) {
 				return false;
 			}
 			buffer.index = 0;
-			connection.read(buffer.buffer, 0, context.currentPacketSize, -2131709422);
+			connection.read(buffer.buffer, 0, context.currentPacketSize);
 			context.read += context.currentPacketSize;
 			context.idleReadPulses = 0;
 		}
@@ -243,7 +243,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4416) {
-			Class158_Sub1_Sub2.anInt10131 = buffer.read128Byte((short) 9583) << 3;
+			Class158_Sub1_Sub2.anInt10131 = buffer.read128Byte() << 3;
 			Class272.anInt3331 = buffer.readUnsignedByte128();
 			SceneObjectType.anInt5495 = buffer.readByte() << 3;
 			while (buffer.index < context.currentPacketSize) {
@@ -1042,9 +1042,9 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.SET_LOCAL_REGION) {
-			Class158_Sub1_Sub2.anInt10131 = buffer.readByte128(2090412640) << 3;
+			Class158_Sub1_Sub2.anInt10131 = buffer.readByte128() << 3;
 			Class272.anInt3331 = buffer.readUnsignedByte128();
-			SceneObjectType.anInt5495 = buffer.readByte128(1860551613) << 3;
+			SceneObjectType.anInt5495 = buffer.readByte128() << 3;
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_SETTINGS_SET) {
@@ -1174,7 +1174,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4392) {
-			SceneObjectType.anInt5495 = buffer.read128Byte((short) 15542) << 3;
+			SceneObjectType.anInt5495 = buffer.read128Byte() << 3;
 			Class158_Sub1_Sub2.anInt10131 = buffer.readByte() << 3;
 			Class272.anInt3331 = buffer.readUnsignedByte();
 			CoordGrid coordgrid_67 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -1297,8 +1297,8 @@ public class PacketsDecoder extends Class455 {
 			if (i_35 == 255) {
 				i_35 = -1;
 			}
-			byte b_75 = buffer.readByteC(-1483186607);
-			byte b_79 = buffer.readByteC(616572083);
+			byte b_75 = buffer.readByteC();
+			byte b_79 = buffer.readByteC();
 			int i_81 = buffer.readUnsignedShort128();
 			int i_34 = buffer.readUnsignedByteC();
 			boolean bool_18 = (i_8 & 0x1) != 0;
@@ -1838,7 +1838,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.GLOBAL_CONFIG_2) {
-			byte b_100 = buffer.read128Byte((short) -6566);
+			byte b_100 = buffer.read128Byte();
 			int flags = buffer.readShortLE();
 			Class470.method7825();
 			PulseEvent.method6751(flags, b_100, 1876892604);

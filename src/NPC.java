@@ -152,7 +152,7 @@ public class NPC extends Animable {
 
 				this.regionBaseX[0] = i_2;
 				this.regionBaseY[0] = i_3;
-				this.aByteArray10365[0] = Class249.aClass249_3084.aByte3085;
+				this.aByteArray10365[0] = Class249.MOVE_TYPE_1.id;
 				return;
 			}
 		}

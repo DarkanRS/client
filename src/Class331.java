@@ -50,23 +50,23 @@ public class Class331 {
 		}
 	}
 
-	public static void method5923(Animable animable_0, int[] ints_1, int[] ints_2, int[] ints_3, int i_4) {
-		for (int i_5 = 0; i_5 < ints_1.length; i_5++) {
-			int i_6 = ints_1[i_5];
+	public static void method5923(Animable animable, int[] animationIds, int[] ints_2, int[] ints_3, int i_4) {
+		for (int i_5 = 0; i_5 < animationIds.length; i_5++) {
+			int i_6 = animationIds[i_5];
 			int i_7 = ints_3[i_5];
 			int i_8 = ints_2[i_5];
-			for (int i_9 = 0; i_7 != 0 && i_9 < animable_0.aClass456_Sub2_Sub1Array10354.length; i_7 >>>= 1) {
+			for (int i_9 = 0; i_7 != 0 && i_9 < animable.aClass456_Sub2_Sub1Array10354.length; i_7 >>>= 1) {
 				if ((i_7 & 0x1) != 0) {
 					if (i_6 == -1) {
-						animable_0.aClass456_Sub2_Sub1Array10354[i_9] = null;
+						animable.aClass456_Sub2_Sub1Array10354[i_9] = null;
 					} else {
 						AnimationDefinitions animationdefinitions_10 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_6, (byte) 24);
 						int i_11 = animationdefinitions_10.replayMode;
-						Class456_Sub2_Sub1 class456_sub2_sub1_12 = animable_0.aClass456_Sub2_Sub1Array10354[i_9];
+						Class456_Sub2_Sub1 class456_sub2_sub1_12 = animable.aClass456_Sub2_Sub1Array10354[i_9];
 						if (class456_sub2_sub1_12 != null && class456_sub2_sub1_12.hasDefs()) {
 							if (i_6 == class456_sub2_sub1_12.method7597(-1055922469)) {
 								if (i_11 == 0) {
-									animable_0.aClass456_Sub2_Sub1Array10354[i_9] = null;
+									animable.aClass456_Sub2_Sub1Array10354[i_9] = null;
 									class456_sub2_sub1_12 = null;
 								} else if (i_11 == 1) {
 									class456_sub2_sub1_12.method7582((byte) -96);
@@ -75,12 +75,12 @@ public class Class331 {
 									class456_sub2_sub1_12.method7584(-309852534);
 								}
 							} else if (animationdefinitions_10.priority >= class456_sub2_sub1_12.getDefs().priority) {
-								animable_0.aClass456_Sub2_Sub1Array10354[i_9] = null;
+								animable.aClass456_Sub2_Sub1Array10354[i_9] = null;
 								class456_sub2_sub1_12 = null;
 							}
 						}
 						if (class456_sub2_sub1_12 == null || !class456_sub2_sub1_12.hasDefs()) {
-							class456_sub2_sub1_12 = animable_0.aClass456_Sub2_Sub1Array10354[i_9] = new Class456_Sub2_Sub1(animable_0);
+							class456_sub2_sub1_12 = animable.aClass456_Sub2_Sub1Array10354[i_9] = new Class456_Sub2_Sub1(animable);
 							class456_sub2_sub1_12.update(i_6);
 							class456_sub2_sub1_12.anInt10065 = i_8;
 						}

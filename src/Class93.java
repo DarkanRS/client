@@ -27,11 +27,11 @@ public class Class93 {
 			int i_8 = this.anIntArray968[i_6];
 			animable_5.regionBaseX[animable_5.anInt10355] = i_8 >> 16;
 			animable_5.regionBaseY[animable_5.anInt10355] = i_8 & 0xffff;
-			byte b_9 = Class249.aClass249_3084.aByte3085;
+			byte b_9 = Class249.MOVE_TYPE_1.id;
 			if (i_7 == 0) {
-				b_9 = Class249.aClass249_3082.aByte3085;
+				b_9 = Class249.MOVE_TYPE_0.id;
 			} else if (i_7 == 2) {
-				b_9 = Class249.aClass249_3086.aByte3085;
+				b_9 = Class249.MOVE_TYPE_2.id;
 			}
 			animable_5.aByteArray10365[animable_5.anInt10355] = b_9;
 			++animable_5.anInt10355;

@@ -263,7 +263,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_5 = i_3;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -1598930989);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5);
 						if (this.aByte3656 != 0) {
 							for (i_6 = 0; i_6 < i_5; i_6++) {
 								this.aClass282_Sub35_3647.buffer[i_6 + -1990677291 * this.aClass282_Sub35_3647.index * -1115476867] ^= this.aByte3656;
@@ -328,7 +328,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.read(this.current.stream.buffer, -1990677291 * this.current.stream.index * -1115476867, i_6, -2058896407);
+						this.aClass202_7778.read(this.current.stream.buffer, -1990677291 * this.current.stream.index * -1115476867, i_6);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.current.stream.buffer[i_7 + this.current.stream.index * -1115476867 * -1990677291] ^= this.aByte3656;
@@ -434,7 +434,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_5 = i_3;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -717221969);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5);
 						if (this.aByte3656 != 0) {
 							for (i_6 = 0; i_6 < i_5; i_6++) {
 								this.aClass282_Sub35_3647.buffer[i_6 + -1990677291 * this.aClass282_Sub35_3647.index * -1115476867] ^= this.aByte3656;
@@ -499,7 +499,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.read(this.current.stream.buffer, -1990677291 * this.current.stream.index * -1115476867, i_6, -625709122);
+						this.aClass202_7778.read(this.current.stream.buffer, -1990677291 * this.current.stream.index * -1115476867, i_6);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.current.stream.buffer[i_7 + this.current.stream.index * -1115476867 * -1990677291] ^= this.aByte3656;
@@ -740,7 +740,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_4;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, this.aClass282_Sub35_3647.index, i_6, -1570276139);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, this.aClass282_Sub35_3647.index, i_6);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.aClass282_Sub35_3647.buffer[i_7 + this.aClass282_Sub35_3647.index] ^= this.aByte3656;
@@ -805,7 +805,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_7 = i_4;
 						}
 
-						this.aClass202_7778.read(this.current.stream.buffer, this.current.stream.index, i_7, -1556112403);
+						this.aClass202_7778.read(this.current.stream.buffer, this.current.stream.index, i_7);
 						if (this.aByte3656 != 0) {
 							for (i_8 = 0; i_8 < i_7; i_8++) {
 								this.current.stream.buffer[i_8 + this.current.stream.index] ^= this.aByte3656;
@@ -918,7 +918,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_5 = i_3;
 						}
 
-						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5, -914075102);
+						this.aClass202_7778.read(this.aClass282_Sub35_3647.buffer, -1990677291 * this.aClass282_Sub35_3647.index * -1115476867, i_5);
 						if (this.aByte3656 != 0) {
 							for (i_6 = 0; i_6 < i_5; i_6++) {
 								this.aClass282_Sub35_3647.buffer[i_6 + -1990677291 * this.aClass282_Sub35_3647.index * -1115476867] ^= this.aByte3656;
@@ -983,7 +983,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							i_6 = i_3;
 						}
 
-						this.aClass202_7778.read(this.current.stream.buffer, -1990677291 * this.current.stream.index * -1115476867, i_6, -777445999);
+						this.aClass202_7778.read(this.current.stream.buffer, -1990677291 * this.current.stream.index * -1115476867, i_6);
 						if (this.aByte3656 != 0) {
 							for (i_7 = 0; i_7 < i_6; i_7++) {
 								this.current.stream.buffer[i_7 + this.current.stream.index * -1115476867 * -1990677291] ^= this.aByte3656;

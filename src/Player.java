@@ -227,8 +227,8 @@ public class Player extends Animable {
 		this.faceDirection = -1;
 		if (i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1727502065) && i_2 >= 0 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1374799853)) {
 			if (this.regionBaseX[0] >= 0 && this.regionBaseX[0] < IndexLoaders.MAP_REGION_DECODER.getSizeX(1713910486) && this.regionBaseY[0] >= 0 && this.regionBaseY[0] < IndexLoaders.MAP_REGION_DECODER.getSizeY(-499497479)) {
-				if (b_3 == Class249.aClass249_3086.aByte3085) {
-					Class512.method8762(this, i_1, i_2, Class249.aClass249_3086.aByte3085);
+				if (b_3 == Class249.MOVE_TYPE_2.id) {
+					Class512.method8762(this, i_1, i_2, Class249.MOVE_TYPE_2.id);
 				}
 
 				this.method16132(i_1, i_2, b_3);

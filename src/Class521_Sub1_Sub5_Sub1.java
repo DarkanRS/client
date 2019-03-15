@@ -533,8 +533,8 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				if (Class1.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
 					if (client.aClass184_7218.getConnection() == null) {
 						Class5.method297(2055895853);
-					} else if (client.aClass184_7218.getConnection().available(1, (byte) 85)) {
-						client.aClass184_7218.getConnection().read(client.aClass184_7218.recievedBuffer.buffer, 0, 1, -1181691571);
+					} else if (client.aClass184_7218.getConnection().available(1)) {
+						client.aClass184_7218.getConnection().read(client.aClass184_7218.recievedBuffer.buffer, 0, 1);
 						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.method6672(Interface.method1626(), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff, -865772612);
 						if (AccountCreationResponseOpcodes.CONTINUE != Class96_Sub9.RECIEVED_RESPONSE) {
 							client.aClass184_7218.method3051((byte) -45);

@@ -1,30 +1,30 @@
 public class Class249 implements Interface43 {
 
-	public static Class249 aClass249_3083 = new Class249((byte) -1);
-	public static Class249 aClass249_3082 = new Class249((byte) 0);
-	public static Class249 aClass249_3084 = new Class249((byte) 1);
-	public static Class249 aClass249_3086 = new Class249((byte) 2);
+	public static Class249 MOVE_TYPE_DEFAULT = new Class249((byte) -1);
+	public static Class249 MOVE_TYPE_0 = new Class249((byte) 0);
+	public static Class249 MOVE_TYPE_1 = new Class249((byte) 1);
+	public static Class249 MOVE_TYPE_2 = new Class249((byte) 2);
 
-	public byte aByte3085;
+	public byte id;
 
 	public int method243() {
-		return this.aByte3085;
+		return this.id;
 	}
 
 	public int method4268() {
-		return this.aByte3085 + 1;
+		return this.id + 1;
 	}
 
 	public int method76() {
-		return this.aByte3085;
+		return this.id;
 	}
 
 	public int method75() {
-		return this.aByte3085;
+		return this.id;
 	}
 
 	Class249(byte b_1) {
-		this.aByte3085 = b_1;
+		this.id = b_1;
 	}
 
 	static final void method4276(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

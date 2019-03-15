@@ -90,10 +90,10 @@ public class Class14 {
 				}
 			}
 			if ((i_4 & 0x400) != 0) {
-				npc_3.anInt10326 = rsbitsbuffer_0.read128Byte((short) -21275);
-				npc_3.anInt10328 = rsbitsbuffer_0.readByte128(1918538585);
-				npc_3.anInt10341 = rsbitsbuffer_0.readByteC(-1245142414);
-				npc_3.anInt10343 = rsbitsbuffer_0.readByte128(1932630708);
+				npc_3.anInt10326 = rsbitsbuffer_0.read128Byte();
+				npc_3.anInt10328 = rsbitsbuffer_0.readByte128();
+				npc_3.anInt10341 = rsbitsbuffer_0.readByteC();
+				npc_3.anInt10343 = rsbitsbuffer_0.readByte128();
 				npc_3.anInt10342 = rsbitsbuffer_0.readShortLE() + client.cycles;
 				npc_3.anInt10345 = rsbitsbuffer_0.readShortLE() + client.cycles;
 				npc_3.anInt10346 = rsbitsbuffer_0.readUnsignedShortLE128();
@@ -302,7 +302,7 @@ public class Class14 {
 				npc_3.anInt10577 = rsbitsbuffer_0.readShortLE();
 			}
 			if ((i_4 & 0x20000) != 0) {
-				npc_3.aByte10371 = rsbitsbuffer_0.read128Byte((short) 2463);
+				npc_3.aByte10371 = rsbitsbuffer_0.read128Byte();
 				npc_3.aByte10327 = rsbitsbuffer_0.readByte();
 				npc_3.aByte10364 = rsbitsbuffer_0.readByte();
 				npc_3.aByte10352 = (byte) rsbitsbuffer_0.readUnsigned128Byte();

@@ -39,7 +39,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 							client.anIntArray7212[++client.anInt7211 - 1] = i_4;
 							npc_5.anInt10353 = client.anInt7332;
 							class252_8 = (Class252) Class386.method6672(Class46.method931(1696399796), rsbitsbuffer_1.readBits(3, (byte) -36), -2098267169);
-							npc_5.method16161(class252_8, Class249.aClass249_3084.aByte3085, 59420458);
+							npc_5.method16161(class252_8, Class249.MOVE_TYPE_1.id, 59420458);
 							int i_9 = rsbitsbuffer_1.readBits(1, (byte) 10);
 							if (i_9 == 1) {
 								client.NPC_INDICES[++client.npcListSize - 1] = i_4;
@@ -49,12 +49,12 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 							npc_5.anInt10353 = client.anInt7332;
 							if (rsbitsbuffer_1.readBits(1, (byte) 34) == 1) {
 								class252_8 = (Class252) Class386.method6672(Class46.method931(-112780956), rsbitsbuffer_1.readBits(3, (byte) 44), -2077804920);
-								npc_5.method16161(class252_8, Class249.aClass249_3086.aByte3085, -82675465);
+								npc_5.method16161(class252_8, Class249.MOVE_TYPE_2.id, -82675465);
 								Class252 class252_10 = (Class252) Class386.method6672(Class46.method931(-882869718), rsbitsbuffer_1.readBits(3, (byte) 30), -1179003968);
-								npc_5.method16161(class252_10, Class249.aClass249_3086.aByte3085, 1093039209);
+								npc_5.method16161(class252_10, Class249.MOVE_TYPE_2.id, 1093039209);
 							} else {
 								class252_8 = (Class252) Class386.method6672(Class46.method931(-867338683), rsbitsbuffer_1.readBits(3, (byte) 35), -1403757890);
-								npc_5.method16161(class252_8, Class249.aClass249_3082.aByte3085, 1992160730);
+								npc_5.method16161(class252_8, Class249.MOVE_TYPE_0.id, 1992160730);
 							}
 
 							int i_11 = rsbitsbuffer_1.readBits(1, (byte) 3);
