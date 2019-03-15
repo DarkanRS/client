@@ -104,7 +104,7 @@ public class JS5Manager {
 				int i_7 = this.buffer.readInt();
 				byte[] bytes_8 = new byte[64];
 				this.buffer.readBytes(bytes_8, 0, 64);
-				JS5GrabWorker js5grabworker_9 = new JS5GrabWorker(i_1, js5cachefile_2, js5cachefile_3, this.standardRequester, this.localRequester, i_6, bytes_8, i_7, true);
+				JS5GrabWorker js5grabworker_9 = new JS5GrabWorker(i_1, js5cachefile_2, js5cachefile_3, this.standardRequester, this.localRequester, i_6, bytes_8, i_7);
 				this.grabWorkers[i_1] = js5grabworker_9;
 				return js5grabworker_9;
 			}

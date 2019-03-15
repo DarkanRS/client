@@ -21,8 +21,8 @@ public class NPC extends Animable {
 		return this.definitions == null ? 0 : this.definitions.anInt4913;
 	}
 
-	public NPC(SceneObjectManager sceneobjectmanager_1, int i_2) {
-		super(sceneobjectmanager_1, i_2);
+	public NPC(SceneObjectManager sceneobjectmanager_1) {
+		super(sceneobjectmanager_1, 25);
 		this.method16156();
 	}
 
@@ -903,10 +903,4 @@ public class NPC extends Animable {
 	public int method15806() {
 		return 1 + this.anInt10314 * -1498872675 * -1691508299;
 	}
-
-	public NPC(SceneObjectManager sceneobjectmanager_1) {
-		super(sceneobjectmanager_1);
-		this.method16156();
-	}
-
 }

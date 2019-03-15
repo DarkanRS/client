@@ -74,7 +74,7 @@ public class Class370_Sub1 extends Class370 {
 	}
 
 	Class370_Sub1() {
-		super(8, 5, 8, 8, 2);
+		super(8, 8, 8);
 		this.anInt7748 = (int) ((float) 3.0 * 4096.0F);
 		this.anInt7753 = (int) ((float) 0.55 * 4096.0F);
 		this.anInt7747 = this.anInt7754 = (int) (Math.pow(0.5D, (double) (-(float) 0.1)) * 4096.0D);

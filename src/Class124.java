@@ -78,7 +78,7 @@ public class Class124 {
 			}
 
 			this.anInterface15_1565 = this.aClass505_Sub1_1558.method13598(rsbytebuffer_19.buffer, rsbytebuffer_19.index, false);
-			this.aClass131_Sub2_1567 = new Class131_Sub2(this.aClass505_Sub1_1558, 5123, (byte[]) null, 1);
+			this.aClass131_Sub2_1567 = new Class131_Sub2(this.aClass505_Sub1_1558, (byte[]) null, 1);
 		} else {
 			this.aClass137_Sub1_1560 = null;
 		}

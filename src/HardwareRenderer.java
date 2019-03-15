@@ -149,7 +149,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						float f_20 = this.aFloat9003 + f_15 * this.aFloat8976 / f_13;
 						float f_21 = this.aFloat9004 * f_16 / f_13 + this.aFloat8982;
 						float f_22 = this.aFloat9003 + f_18 * this.aFloat8976 / f_19;
-						this.method14371(bool_1, bool_2, false, class275_sub1_sub1_8, (int) f_20, (int) f_21, f_14, (int) (f_22 < f_20 ? f_20 - f_22 : f_22 - f_20));
+						this.method14371(bool_1, bool_2, class275_sub1_sub1_8, (int) f_20, (int) f_21, f_14, (int) (f_22 < f_20 ? f_20 - f_22 : f_22 - f_20));
 					}
 				}
 			}
@@ -2074,7 +2074,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8611() {
 	}
 
-	void method14371(boolean bool_1, boolean bool_2, boolean bool_3, PointEntity class275_sub1_sub1_4, int i_5, int i_6, float f_7, int i_8) {
+	void method14371(boolean bool_1, boolean bool_2, PointEntity class275_sub1_sub1_4, int i_5, int i_6, float f_7, int i_8) {
 		int i_9 = class275_sub1_sub1_4.rotation;
 		int i_10 = i_8;
 		i_8 <<= 1;
@@ -2099,7 +2099,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			++i_8;
-			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, false);
+			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, false, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, false);
 		}
 
 	}
@@ -2456,7 +2456,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.anInt9007 = (int) (f_6 * 65535.0F / f_7);
 	}
 
-	public void J(int i_1) {
+	public void J() {
 	}
 
 	public void c(int i_1, int i_2, int i_3) {
@@ -2638,37 +2638,23 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
+	public void method8658() {
 		boolean bool_14 = this.anIntArray8979 != null;
 		boolean bool_15 = this.aFloatArray9010 != null;
 		if (bool_14 || bool_15) {
 			Class185 class185_16 = this.method14370(Thread.currentThread());
 			ChoppyItemFixClass choppyitemfixclass_17 = class185_16.aClass144_2310;
 			choppyitemfixclass_17.aBool1675 = false;
-			i_1 -= this.anInt8983;
-			i_4 -= this.anInt8983;
-			i_7 -= this.anInt8983;
-			i_2 -= this.anInt9009;
-			i_5 -= this.anInt9009;
-			i_8 -= this.anInt9009;
-			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
+			choppyitemfixclass_17.aBool1708 = 5 < 0 || 5 > choppyitemfixclass_17.anInt1684 || 75 < 0 || 75 > choppyitemfixclass_17.anInt1684 || 15 < 0 || 15 > choppyitemfixclass_17.anInt1684;
 			int i_18 = -65536 >>> 24;
 			if (1 == 0 || 1 == 1 && i_18 == 255) {
 				choppyitemfixclass_17.anInt1674 = 0;
 				choppyitemfixclass_17.aBool1672 = false;
-				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
-			} else if (1 == 1) {
+				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) 10, (float) 50, (float) 90, (float) 5, (float) 75, (float) 15, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
+			} else {
 				choppyitemfixclass_17.anInt1674 = 255 - i_18;
 				choppyitemfixclass_17.aBool1672 = false;
-				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
-			} else {
-				if (1 != 2) {
-					throw new IllegalArgumentException();
-				}
-
-				choppyitemfixclass_17.anInt1674 = 128;
-				choppyitemfixclass_17.aBool1672 = true;
-				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
+				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) 10, (float) 50, (float) 90, (float) 5, (float) 75, (float) 15, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
 			}
 
 			choppyitemfixclass_17.aBool1675 = true;

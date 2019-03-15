@@ -31,7 +31,8 @@ public class Class261_Sub1 extends Class261 {
 
 	}
 
-	void method4634(int i_1, int i_2, int i_3, int i_4, float f_5, float f_6, float f_7, float f_8, float[] floats_9, int i_10) {
+	void method4634(int i_1, int i_2, int i_3, int i_4, float f_5, float f_6, float f_7, float f_8, float[] floats_9) {
+		int start = 0;
 		int i_11 = (int) ((float) i_2 * f_5 - 1.0F);
 		i_11 &= 0xff;
 		int i_12 = (int) ((float) i_3 * f_6 - 1.0F);
@@ -72,7 +73,7 @@ public class Class261_Sub1 extends Class261 {
 				float f_39 = method13372(f_37);
 				i_35 &= i_11;
 				i_36 &= i_11;
-				floats_9[i_10++] = f_8 * method13369(method13369(method13369(method13370(this.anIntArray8042[i_35 + i_29] & 0x7, f_38, f_27, f_18), method13370(this.anIntArray8042[i_36 + i_29] & 0x7, f_37, f_27, f_18), f_39), method13369(method13370(this.anIntArray8042[i_35 + i_30] & 0x7, f_38, f_26, f_18), method13370(this.anIntArray8042[i_36 + i_30] & 0x7, f_37, f_26, f_18), f_39), f_28), method13369(method13369(method13370(this.anIntArray8042[i_35 + i_31] & 0x7, f_38, f_27, f_17), method13370(this.anIntArray8042[i_36 + i_31] & 0x7, f_37, f_27, f_17), f_39), method13369(method13370(this.anIntArray8042[i_35 + i_32] & 0x7, f_38, f_26, f_17), method13370(this.anIntArray8042[i_36 + i_32] & 0x7, f_37, f_26, f_17), f_39), f_28), f_19);
+				floats_9[i_33] = f_8 * method13369(method13369(method13369(method13370(this.anIntArray8042[i_35 + i_29] & 0x7, f_38, f_27, f_18), method13370(this.anIntArray8042[i_36 + i_29] & 0x7, f_37, f_27, f_18), f_39), method13369(method13370(this.anIntArray8042[i_35 + i_30] & 0x7, f_38, f_26, f_18), method13370(this.anIntArray8042[i_36 + i_30] & 0x7, f_37, f_26, f_18), f_39), f_28), method13369(method13369(method13370(this.anIntArray8042[i_35 + i_31] & 0x7, f_38, f_27, f_17), method13370(this.anIntArray8042[i_36 + i_31] & 0x7, f_37, f_27, f_17), f_39), method13369(method13370(this.anIntArray8042[i_35 + i_32] & 0x7, f_38, f_26, f_17), method13370(this.anIntArray8042[i_36 + i_32] & 0x7, f_37, f_26, f_17), f_39), f_28), f_19);
 			}
 		}
 

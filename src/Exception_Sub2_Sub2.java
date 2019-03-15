@@ -1,11 +1,7 @@
 public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 
-	Exception_Sub2_Sub2(String string_1, boolean bool_2) {
-		super(string_1);
-	}
-
 	Exception_Sub2_Sub2(String string_1) {
-		this(string_1, false);
+		super(string_1);
 	}
 
 	static final void decodeAddRemove() {

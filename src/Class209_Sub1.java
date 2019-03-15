@@ -53,9 +53,9 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		}
 	}
 
-	Class209_Sub1(Component component_1, boolean bool_2) {
+	Class209_Sub1(Component component_1) {
 		this.method12906(component_1);
-		this.aBool7946 = bool_2;
+		this.aBool7946 = true;
 	}
 
 	public synchronized void method3589() {

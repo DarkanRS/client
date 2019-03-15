@@ -207,7 +207,7 @@ public class i extends Ground implements Interface40 {
 
 	}
 
-	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
+	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5) {
 		int i_7 = 0;
 		float[] floats_8 = new float[this.aClass482_7143.size()];
 

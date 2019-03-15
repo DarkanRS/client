@@ -1,32 +1,10 @@
 public class Class341 {
 
 	static int anInt3996;
-
 	public int anInt3992;
-
 	public int anInt3993;
-
 	public int anInt3994;
-
 	public int anInt3995;
-
-	Class341(int i_1) {
-		this.anInt3992 = i_1;
-		this.anInt3993 = 0;
-		this.anInt3994 = 0;
-		this.anInt3995 = 0;
-	}
-
-	Class341() {
-		this.anInt3992 = 32 + (int) (Math.random() * 4.0D);
-		this.anInt3993 = 3 + (int) (Math.random() * 2.0D);
-		this.anInt3994 = 16 + (int) (Math.random() * 3.0D);
-		if (Class393.preferences.textures.method12873(1888881077) == 1) {
-			this.anInt3995 = (int) (Math.random() * 6.0D);
-		} else {
-			this.anInt3995 = (int) (Math.random() * 12.0D);
-		}
-	}
 
 	static void method6074(String[] arr_0, int i_1) {
 		if (arr_0.length > 1) {

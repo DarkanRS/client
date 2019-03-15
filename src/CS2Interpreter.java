@@ -6720,7 +6720,7 @@ public class CS2Interpreter {
 		if (i_2 != i_3) {
 			if (Class169.method2875(client.gameState, -2096796884)) {
 				if (i_3 == 0 && Class260.anInt3223 != -1) {
-					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, i_2, false, (byte) -40);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2, (byte) -40);
 					Class468_Sub6.method12658(1298761444);
 					Class260.aBool3220 = false;
 				} else if (i_2 == 0) {
@@ -7177,7 +7177,7 @@ public class CS2Interpreter {
 		if (i_3 != i_2 && Class260.anInt3228 == Class260.anInt3223) {
 			if (!Class169.method2875(client.gameState, -2119377821)) {
 				if (i_3 == 0) {
-					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, i_2, false, (byte) -58);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2, (byte) -58);
 					Class468_Sub6.method12658(173344706);
 					Class260.aBool3220 = false;
 				} else if (i_2 == 0) {

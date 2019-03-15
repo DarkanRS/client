@@ -35,7 +35,7 @@ public class Class137_Sub2 extends Class137 {
 	}
 
 	Interface9 method14458(int i_1) {
-		return new Class139(this, i_1, 0);
+		return new Class139(this, i_1);
 	}
 
 	Class137_Sub2(OpenGLGraphicalRenderer class505_sub1_1, Class150 class150_2, Class76 class76_3, byte[][] bytes_6, Class150 class150_7) {

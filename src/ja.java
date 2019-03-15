@@ -256,7 +256,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void N(int var1, int var2, int var3, int var4, int var5, int var6, byte[] var7, int var8, int var9);
 
-	public void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
+	public void method8658() {
 		throw new IllegalStateException();
 	}
 
@@ -506,7 +506,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void m(int var1, float var2, float var3, float var4, float var5, float var6);
 
-	public native void J(int var1);
+	public native void J();
 
 	native void YA(int var1, int var2, int var3, int var4, int var5, int var6);
 

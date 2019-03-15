@@ -51,7 +51,7 @@ public abstract class Preference {
 		int i_8 = calendar_5.get(1);
 		int i_9 = calendar_5.get(11);
 		int i_10 = calendar_5.get(12);
-		return i_2 == 3 ? ConnectionInfo.method7499(long_0, i_2, true) : Integer.toString(i_6 / 10) + i_6 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_7] + "-" + i_8 + " " + i_9 / 10 + i_9 % 10 + ":" + i_10 / 10 + i_10 % 10;
+		return i_2 == 3 ? ConnectionInfo.method7499(long_0, i_2) : Integer.toString(i_6 / 10) + i_6 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_7] + "-" + i_8 + " " + i_9 / 10 + i_9 % 10 + ":" + i_10 / 10 + i_10 % 10;
 	}
 
 	static void method7789(int i_0) {

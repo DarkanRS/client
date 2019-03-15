@@ -4,13 +4,9 @@ public class Class282_Sub20_Sub21 extends Class282_Sub20 {
 	int anInt9870;
 	int anInt9871;
 
-	Class282_Sub20_Sub21(int i_1) {
+	Class282_Sub20_Sub21() {
 		super(0, false);
-		this.method15378(i_1);
-	}
-
-	public Class282_Sub20_Sub21() {
-		this(0);
+		this.method15378(0);
 	}
 
 	void method15378(int i_1) {

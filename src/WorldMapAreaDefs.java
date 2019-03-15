@@ -431,7 +431,7 @@ public class WorldMapAreaDefs {
 		return "http://" + str_1 + "." + string_3 + "/l=" + Class223.CURRENT_LANGUAGE + "/a=" + client.anInt7149 + str_2 + "/";
 	}
 
-	static boolean renderIconsAndNames(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2, int i_3, int i_4) {
+	static boolean renderIconsAndNames(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2) {
 		int i_6 = Integer.MAX_VALUE;
 		int i_7 = Integer.MIN_VALUE;
 		int i_8 = Integer.MAX_VALUE;
@@ -503,19 +503,19 @@ public class WorldMapAreaDefs {
 						i_19 = i_26;
 					}
 				}
-				i_20 = i_3 + (i_17 - i_19 / 2);
+				i_20 = 0 + (i_17 - i_19 / 2);
 				if (i_20 < i_6) {
 					i_6 = i_20;
 				}
-				i_21 = i_3 + i_19 / 2 + i_17;
+				i_21 = 0 + i_19 / 2 + i_17;
 				if (i_21 > i_7) {
 					i_7 = i_21;
 				}
-				i_22 = i_18 + i_4;
+				i_22 = i_18 + 0;
 				if (i_22 < i_8) {
 					i_8 = i_22;
 				}
-				i_23 = i_18 + i_16 * class194_15.method3173() + i_4;
+				i_23 = i_18 + i_16 * class194_15.method3173() + 0;
 				if (i_23 > i_9) {
 					i_9 = i_23;
 				}

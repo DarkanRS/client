@@ -98,18 +98,18 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				this.method4661(class274_1.method4870());
 			}
 			RuntimeException_Sub3.anApplet10460 = Class282_Sub44.anApplet8065;
-			this.method4656(string_2, string_3, i_4, i_5, 727, 1);
+			this.method4656(string_2, string_3, i_4, i_5);
 		} catch (Throwable throwable_11) {
 			Class151.method2594((String) null, throwable_11, (byte) -115);
 			this.method4680("crash", -1314193107);
 		}
 	}
 
-	final void method4656(String string_1, String string_2, int i_3, int i_4, int i_5, int i_6) throws Exception {
+	final void method4656(String string_1, String string_2, int i_3, int i_4) throws Exception {
 		Class290.anInt3451 = i_4;
 		Class514.anInt5887 = i_3;
-		RuntimeException_Sub3.anInt10457 = i_5;
-		InventoriesIndexLoader.anInt4781 = i_6;
+		RuntimeException_Sub3.anInt10457 = 727;
+		InventoriesIndexLoader.anInt4781 = 1;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		ChatLine.aString1093 = "1.1";
 		try {

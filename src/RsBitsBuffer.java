@@ -41,7 +41,7 @@ public class RsBitsBuffer extends RsByteBuffer {
 		this.anInt9608 = this.index * 8;
 	}
 
-	public void readBytes(byte[] bytes_1, int i_3, byte b_4) {
+	public void readBytes(byte[] bytes_1, int i_3) {
 		for (int i_5 = 0; i_5 < i_3; i_5++) {
 			bytes_1[i_5 + 0] = (byte) (this.buffer[++this.index - 1] - this.isaac.nextInt());
 		}

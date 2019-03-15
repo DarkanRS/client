@@ -86,7 +86,7 @@ public class MapRegion {
 
 	Class329_Sub1 aClass329_Sub1_3167;
 
-	Class341 aClass341_3181 = new Class341(0);
+	Class341 aClass341_3181 = new Class341();
 
 	float aFloat3173;
 

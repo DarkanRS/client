@@ -46,8 +46,8 @@ public final class Quaternion {
 		this.reset();
 	}
 
-	Quaternion(float f_1, float f_2, float f_3, float f_4) {
-		this.set(f_1, f_2, f_3, f_4);
+	Quaternion(float f_1, float f_2, float f_3) {
+		this.set(f_1, f_2, f_3, (float) 0.0);
 	}
 
 	Quaternion(Quaternion quaternion_1) {
@@ -122,7 +122,7 @@ public final class Quaternion {
 		synchronized (aClass381Array4641) {
 			Quaternion quaternion_5;
 			if (anInt4639 == 0) {
-				quaternion_5 = new Quaternion(f_0, f_1, f_2, (float) 0.0);
+				quaternion_5 = new Quaternion(f_0, f_1, f_2);
 				return quaternion_5;
 			} else {
 				aClass381Array4641[--anInt4639].set(f_0, f_1, f_2, (float) 0.0);

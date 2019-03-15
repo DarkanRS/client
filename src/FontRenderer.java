@@ -500,7 +500,7 @@ public abstract class FontRenderer {
 	}
 
 	public static Class209 method400(Component component_0, byte b_2) {
-		return new Class209_Sub1(component_0, true);
+		return new Class209_Sub1(component_0);
 	}
 
 	static void method402(int i_0) {

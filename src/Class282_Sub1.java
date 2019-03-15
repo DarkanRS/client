@@ -28,7 +28,7 @@ public abstract class Class282_Sub1 extends Node {
 			if (class109_6 != null) {
 				class109_6.method1849((byte) -109);
 			}
-			Class11.method13400(index_1, i_2, 0, i_4, false, (byte) -106);
+			Class11.method13400(index_1, i_2, i_4, (byte) -106);
 		}
 	}
 }

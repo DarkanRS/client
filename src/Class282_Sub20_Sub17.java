@@ -10,10 +10,10 @@ public class Class282_Sub20_Sub17 extends Class282_Sub20 {
 		return ints_3;
 	}
 
-	Class282_Sub20_Sub17(int i_1) {
+	Class282_Sub20_Sub17() {
 		super(0, true);
 		this.anInt9860 = 4096;
-		this.anInt9860 = i_1;
+		this.anInt9860 = 4096;
 	}
 
 	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
@@ -22,9 +22,5 @@ public class Class282_Sub20_Sub17 extends Class282_Sub20 {
 			this.anInt9860 = (rsbytebuffer_2.readUnsignedByte() << 12) / 255;
 		default:
 		}
-	}
-
-	public Class282_Sub20_Sub17() {
-		this(4096);
 	}
 }

@@ -153,7 +153,7 @@ public class Class160_Sub2 extends NativeSprite {
 	}
 
 	void method14414(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_7) {
-		this.aClass137_Sub1_Sub1_9033.method14452(i_1, i_2, i_3, i_4, ints_5, 0, i_7);
+		this.aClass137_Sub1_Sub1_9033.method14452(i_1, i_2, i_3, i_4, ints_5, i_7);
 	}
 
 	public void method2772(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {

@@ -119,14 +119,14 @@ public class Loader extends Applet implements AppletStub {
 	}
 
 	private void startClient() {
-		try {
-			DiscordRPC.discordInitialize("459588260252090378", null, true);
-			client.presence = new DiscordRichPresence.Builder("In Menu").setBigImage("main", "https://darkan.org").build();
-			client.getPresence().details = "http://darkan.org";
-			client.getPresence().startTimestamp = System.currentTimeMillis() / 1000L;
-			DiscordRPC.discordUpdatePresence(client.getPresence());
-		} catch (Exception e) {
-		}
+//		try {
+//			DiscordRPC.discordInitialize("459588260252090378", null, true);
+//			client.presence = new DiscordRichPresence.Builder("In Menu").setBigImage("main", "https://darkan.org").build();
+//			client.getPresence().details = "http://darkan.org";
+//			client.getPresence().startTimestamp = System.currentTimeMillis() / 1000L;
+//			DiscordRPC.discordUpdatePresence(client.getPresence());
+//		} catch (Exception e) {
+//		}
 		
 		client clnt = new client();
 		clnt.supplyApplet(this);

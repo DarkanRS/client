@@ -245,7 +245,7 @@ public class ItemDefinitions implements Definition {
 			if (i_3 == 0) {
 				return;
 			}
-			this.decode(rsbytebuffer_1, i_3, 1695857075);
+			this.decode(rsbytebuffer_1, i_3);
 		}
 	}
 
@@ -316,7 +316,7 @@ public class ItemDefinitions implements Definition {
 		this.stackable = 1;
 	}
 
-	void decode(RsByteBuffer stream, int opcode, int i_3) {
+	void decode(RsByteBuffer stream, int opcode) {
 		if (opcode == 1) {
 			this.modelId = stream.readBigSmart();
 		} else if (opcode == 2) {
@@ -942,7 +942,7 @@ public class ItemDefinitions implements Definition {
 		this.inventoryOptions[4] = Message.DISCARD.translate(this.loader.language, -898798531);
 	}
 
-	static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+	static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		int i_10 = animable_1.method15899(-525246876);
 		if (i_10 != -1) {
 			NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get((long) i_10);
@@ -975,7 +975,7 @@ public class ItemDefinitions implements Definition {
 	}
 
 	public static void method7141(byte b_1) {
-		Class329.method5906(100);
+		Class329.method5906();
 	}
 
 	static final void method7142(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

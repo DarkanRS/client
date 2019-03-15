@@ -25,14 +25,14 @@ public final class Stream {
 
 	public Stream(Buffer buffer, int i_0_) {
 		this(buffer.method1() < 4096 ? buffer.method1() : 4096);
-		method2917(buffer, 0, i_0_);
+		method2917(buffer, i_0_);
 	}
 
-	private void method2917(Buffer buffer, int i, int i_1_) {
+	private void method2917(Buffer buffer, int i_1_) {
 		method2925();
 		aBuffer2120 = buffer;
-		anInt2122 = -1706667277 * i;
-		anInt2121 = (i_1_ + i) * -946986007;
+		anInt2122 = -1706667277 * 0;
+		anInt2121 = (i_1_ + 0) * -946986007;
 		if (-863312807 * anInt2121 > buffer.method1())
 			throw new RuntimeException();
 	}

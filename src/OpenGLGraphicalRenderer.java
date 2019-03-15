@@ -659,16 +659,16 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		OpenGL.glDepthMask(this.aBool8388 && this.aBool8353);
 	}
 
-	public void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
+	public void method8658() {
 		this.method13659();
 		this.method13624(1);
 		OpenGL.glBegin(4);
 		OpenGL.glColor4ub((byte) (-65536 >> 16), (byte) (-65536 >> 8), (byte) -65536, (byte) (-65536 >> 24));
-		OpenGL.glVertex3f((float) i_1 + 0.35F, (float) i_2 + 0.35F, (float) 100.0);
+		OpenGL.glVertex3f((float) 5 + 0.35F, (float) 10 + 0.35F, (float) 100.0);
 		OpenGL.glColor4ub((byte) (-65536 >> 16), (byte) (-65536 >> 8), (byte) -65536, (byte) (-65536 >> 24));
-		OpenGL.glVertex3f((float) i_4 + 0.35F, (float) i_5 + 0.35F, (float) 100.0);
+		OpenGL.glVertex3f((float) 75 + 0.35F, (float) 50 + 0.35F, (float) 100.0);
 		OpenGL.glColor4ub((byte) (-65536 >> 16), (byte) (-65536 >> 8), (byte) -65536, (byte) (-65536 >> 24));
-		OpenGL.glVertex3f((float) i_7 + 0.35F, (float) i_8 + 0.35F, (float) 100.0);
+		OpenGL.glVertex3f((float) 15 + 0.35F, (float) 90 + 0.35F, (float) 100.0);
 		OpenGL.glEnd();
 	}
 
@@ -1837,7 +1837,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	final Interface15 method13598(byte[] bytes_2, int i_3, boolean bool_4) {
-		return (Interface15) (!this.aBool8309 || bool_4 && !this.aBool8362 ? new Class131_Sub2(this, 5123, bytes_2, i_3) : new Class135_Sub1(this, 5123, bytes_2, i_3, bool_4));
+		return (Interface15) (!this.aBool8309 || bool_4 && !this.aBool8362 ? new Class131_Sub2(this, bytes_2, i_3) : new Class135_Sub1(this, bytes_2, i_3, bool_4));
 	}
 
 	final Interface14 method13599(int i_1, byte[] bytes_2, int i_3, boolean bool_4) {
@@ -1845,7 +1845,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	final Interface14 createArrayBuffer(int i_1, Buffer buffer_2, int i_3) {
-		return (Interface14) (!this.aBool8309 || false && !this.aBool8362 ? new Class131_Sub1(this, i_1, buffer_2) : new Class135_Sub2(this, i_1, buffer_2, i_3, false));
+		return (Interface14) (!this.aBool8309 || false && !this.aBool8362 ? new Class131_Sub1(this, i_1, buffer_2) : new Class135_Sub2(this, i_1, buffer_2, i_3));
 	}
 
 	final void method13601(Interface14 interface14_1) {
@@ -2765,8 +2765,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		return true;
 	}
 
-	public final void J(int i_1) {
-		for (this.anInt8473 = 0; i_1 > 1; i_1 >>= 1) {
+	public final void J() {
+		int meme = 32;
+		for (this.anInt8473 = 0; meme > 1; meme >>= 1) {
 			++this.anInt8473;
 		}
 

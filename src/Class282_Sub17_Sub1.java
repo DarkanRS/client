@@ -157,7 +157,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		}
 		HostNameIdentifier.method482((byte) 53);
 		Renderers.SOFTWARE_RENDERER.method8459();
-		Renderers.SOFTWARE_RENDERER.J(32);
+		Renderers.SOFTWARE_RENDERER.J();
 		IndexLoaders.MAP_REGION_DECODER.method4447(1353866416);
 		Renderers.SOFTWARE_RENDERER.method8568();
 		if (Renderers.SOFTWARE_RENDERER.method8403()) {

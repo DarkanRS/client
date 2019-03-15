@@ -1555,9 +1555,9 @@ public class Class329 {
 		return long_9;
 	}
 
-	static void method5906(int i_0) {
-		Class282_Sub53_Sub2.anInt9630 = i_0;
-		Class282_Sub53_Sub2.aClass282_Sub53_Sub2Array9633 = new Class282_Sub53_Sub2[i_0];
+	static void method5906() {
+		Class282_Sub53_Sub2.anInt9630 = 100;
+		Class282_Sub53_Sub2.aClass282_Sub53_Sub2Array9633 = new Class282_Sub53_Sub2[100];
 		Class279.anInt3370 = 0;
 	}
 }

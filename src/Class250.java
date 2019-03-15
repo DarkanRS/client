@@ -675,7 +675,7 @@ public class Class250 {
 			} else {
 				obj_14 = (Animable) ((Class282_Sub47) client.NPCS.get((long) (i_92 - 2048))).anObject8068;
 			}
-			ItemDefinitions.method7140((Animable) obj_12, (Animable) obj_14, --((Animable) obj_12).anInt10319, i_0, i_1, i_2, i_3, 256, 256);
+			ItemDefinitions.method7140((Animable) obj_12, (Animable) obj_14, --((Animable) obj_12).anInt10319, i_0, i_1, i_2, i_3);
 		}
 		i_10 = Class288.aClass414_3438.anInt4979 + Class288.aClass414_3438.anInt4978 + 2;
 		for (i_11 = 0; i_11 < client.anInt7415; i_11++) {

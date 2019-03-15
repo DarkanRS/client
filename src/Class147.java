@@ -53,7 +53,7 @@ public class Class147 {
 			throw new IllegalStateException();
 		} else {
 			method2475();
-			method2476(ints_1, 0, i_3);
+			method2476(ints_1, i_3);
 			method2477(ints_7[1]);
 
 			while (true) {
@@ -91,7 +91,7 @@ public class Class147 {
 		anInt1726 = 0;
 	}
 
-	static void method2476(int[] ints_0, int i_1, int i_2) {
+	static void method2476(int[] ints_0, int i_2) {
 		int i_3 = (i_2 << 1) + anInt1726;
 		int i_5;
 		if (anIntArray1728 == null || anIntArray1728.length < i_3) {
@@ -104,10 +104,10 @@ public class Class147 {
 			anIntArray1728 = ints_8;
 		}
 
-		i_2 += i_1;
+		i_2 += 0;
 		int i_4 = i_2 - 2;
 
-		for (i_5 = i_1; i_5 < i_2; i_5 += 2) {
+		for (i_5 = 0; i_5 < i_2; i_5 += 2) {
 			int i_6 = ints_0[i_4 + 1];
 			int i_7 = ints_0[i_5 + 1];
 			if (i_6 < i_7) {

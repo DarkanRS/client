@@ -18,41 +18,41 @@ public abstract class Class370 {
 
 	}
 
-	Class370(int i_1, int i_2, int i_3, int i_4, int i_5) {
+	Class370(int i_1, int i_3, int i_4) {
 		this.anInt4283 = i_1;
 		this.anInt4286 = i_3;
 		this.anInt4288 = i_4;
-		this.anInt4289 = i_5;
-		this.anInt4290 = i_2;
+		this.anInt4289 = 2;
+		this.anInt4290 = 5;
 		this.method6323();
 		this.method6325();
 	}
 
 	abstract void method6321();
 
-	void method6322(int i_1, int i_2, int i_3) {
-		int[] ints_4 = new int[i_1];
-		int[] ints_5 = new int[i_2];
-		int[] ints_6 = new int[i_3];
+	void method6322() {
+		int[] ints_4 = new int[128];
+		int[] ints_5 = new int[128];
+		int[] ints_6 = new int[16];
 
 		int i_7;
-		for (i_7 = 0; i_7 < i_1; i_7++) {
-			ints_4[i_7] = (i_7 << 12) / i_1;
+		for (i_7 = 0; i_7 < 128; i_7++) {
+			ints_4[i_7] = (i_7 << 12) / 128;
 		}
 
-		for (i_7 = 0; i_7 < i_2; i_7++) {
-			ints_5[i_7] = (i_7 << 12) / i_2;
+		for (i_7 = 0; i_7 < 128; i_7++) {
+			ints_5[i_7] = (i_7 << 12) / 128;
 		}
 
-		for (i_7 = 0; i_7 < i_3; i_7++) {
-			ints_6[i_7] = (i_7 << 12) / i_3;
+		for (i_7 = 0; i_7 < 16; i_7++) {
+			ints_6[i_7] = (i_7 << 12) / 16;
 		}
 
 		this.method6332();
 
-		for (i_7 = 0; i_7 < i_3; i_7++) {
-			for (int i_8 = 0; i_8 < i_2; i_8++) {
-				for (int i_9 = 0; i_9 < i_1; i_9++) {
+		for (i_7 = 0; i_7 < 16; i_7++) {
+			for (int i_8 = 0; i_8 < 128; i_8++) {
+				for (int i_9 = 0; i_9 < 128; i_9++) {
 					for (int i_10 = 0; i_10 < this.anInt4290; i_10++) {
 						int i_11 = this.aShortArray4281[i_10] << 12;
 						int i_12 = i_11 * this.anInt4286 >> 12;

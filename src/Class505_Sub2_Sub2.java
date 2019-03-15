@@ -494,8 +494,8 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return new Class360_Sub1(this, class150_1, i_2, i_3, i_4, bool_5, bytes_6);
 	}
 
-	Interface6 method13961(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5) {
-		return new Class360_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, 0, 0);
+	Interface6 method13961(Class150 class150_1, int i_2, int i_3, float[] floats_5) {
+		return new Class360_Sub2(this, class150_1, i_2, i_3, true, floats_5, 0, 0);
 	}
 
 	void method14188() {

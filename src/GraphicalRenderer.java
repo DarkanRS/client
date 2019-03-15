@@ -277,7 +277,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void m(int var1, float var2, float var3, float var4, float var5, float var6);
 
-	public abstract void J(int var1);
+	public abstract void J();
 
 	public abstract NativeSprite method8461(int var1, int var2, boolean var3, boolean var4);
 
@@ -597,7 +597,7 @@ public abstract class GraphicalRenderer {
 	public abstract int[] ke(int var1, int var2, int var3, int var4);
 
 	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class282_Sub24(i_1, i_2, i_3, i_4, i_5, (float) 1.0);
+		return new Class282_Sub24(i_1, i_2, i_3, i_4, i_5);
 	}
 
 	public abstract void ib(int var1, int var2, int var3);
@@ -708,7 +708,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract NativeSprite method8654(int var1, int var2, boolean var3, boolean var4);
 
-	public abstract void method8658(int var1, int var2, int var4, int var5, int var7, int var8);
+	public abstract void method8658();
 
 	public final void method8659(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		this.XA(i_1, i_2, i_3, i_4, 1);

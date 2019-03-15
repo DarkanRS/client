@@ -541,7 +541,7 @@ public class PacketsDecoder extends Class455 {
 			}
 			byte[] bytes = new byte[context.currentPacketSize - 1];
 			boolean bool_66 = buffer.readUnsignedByte() == 1;
-			buffer.readBytes(bytes, context.currentPacketSize - 1, (byte) 8);
+			buffer.readBytes(bytes, context.currentPacketSize - 1);
 			RsByteBuffer rsbytebuffer_127 = new RsByteBuffer(bytes);
 			String url = rsbytebuffer_127.readString();
 			if (bool_66) {
@@ -1941,7 +1941,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4507) {
 			byte[] bytes_64 = new byte[context.currentPacketSize];
-			buffer.readBytes(bytes_64, context.currentPacketSize, (byte) 8);
+			buffer.readBytes(bytes_64, context.currentPacketSize);
 			String string_88 = Class344.method6118(bytes_64, 0, context.currentPacketSize, (byte) -124);
 			if (client.aBool7310) {
 				try {
@@ -2311,7 +2311,7 @@ public class PacketsDecoder extends Class455 {
 				Class440.method7373(Class393.preferences.screenSize.method12687(-1706994104), -1, -1, false, (byte) 30);
 			}
 			byte[] bytes_64 = new byte[context.currentPacketSize];
-			buffer.readBytes(bytes_64, context.currentPacketSize, (byte) 8);
+			buffer.readBytes(bytes_64, context.currentPacketSize);
 			String string_88 = Class344.method6118(bytes_64, 0, context.currentPacketSize, (byte) -8);
 			String str_92 = "opensn";
 			if (!client.aBool7310 || !Class186.method3082(string_88, 1, str_92)) {

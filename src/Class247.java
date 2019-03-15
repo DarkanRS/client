@@ -48,7 +48,7 @@ public class Class247 {
 
 	int anInt3047;
 
-	void method4206(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, boolean bool_11, boolean bool_12, int i_13, byte b_14) {
+	void method4206(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, boolean bool_11, int i_13, byte b_14) {
 		int i_15 = 255 - i_13;
 		if (this.aClass528_3048 == null) {
 			graphicalrenderer_1.ba(2, 0);
@@ -102,7 +102,7 @@ public class Class247 {
 			} else {
 				graphicalrenderer_1.B(i_3, i_4, i_5, i_6, i_15 << 24 | i_10, 1);
 			}
-		} else if (bool_12) {
+		} else if (false) {
 			Matrix44Arr matrix44arr_24 = graphicalrenderer_1.method8453();
 			Matrix44Arr matrix44arr_25 = graphicalrenderer_1.method8453();
 			matrix44arr_24.buf[2] = matrix44arr_24.buf[3];
@@ -173,10 +173,10 @@ public class Class247 {
 				class247_16 = this;
 				i_14 = 255 - i_14;
 			}
-			class247_15.method4206(graphicalrenderer_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, true, false, i_14, (byte) -85);
-			class247_16.method4206(graphicalrenderer_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, false, false, 255 - i_14, (byte) -6);
+			class247_15.method4206(graphicalrenderer_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, true, i_14, (byte) -85);
+			class247_16.method4206(graphicalrenderer_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, false, 255 - i_14, (byte) -6);
 		} else {
-			this.method4206(graphicalrenderer_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, true, false, i_14, (byte) -95);
+			this.method4206(graphicalrenderer_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, true, i_14, (byte) -95);
 		}
 	}
 

@@ -554,9 +554,9 @@ public class Class291 {
 
 	}
 
-	static void method5146(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, int i_2, int i_3, int i_4, int i_5) {
-		class282_sub36_1.anInt7990 = (i_4 + i_2 * (class282_sub36_1.anInt7987 - anInt3485) >> 16) + anInt3489;
-		class282_sub36_1.anInt7992 = anInt3492 - (i_5 + i_3 * (class282_sub36_1.anInt7993 - anInt3465) >> 16);
+	static void method5146(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, int i_2, int i_3) {
+		class282_sub36_1.anInt7990 = (0 + i_2 * (class282_sub36_1.anInt7987 - anInt3485) >> 16) + anInt3489;
+		class282_sub36_1.anInt7992 = anInt3492 - (0 + i_3 * (class282_sub36_1.anInt7993 - anInt3465) >> 16);
 	}
 
 	static void method5147(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2) {
@@ -816,7 +816,7 @@ public class Class291 {
 
 	static NodeCollection method5179(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
 		for (Class282_Sub36 class282_sub36_5 = (Class282_Sub36) aClass482_3459.head((byte) 82); class282_sub36_5 != null; class282_sub36_5 = (Class282_Sub36) aClass482_3459.next(-413792246)) {
-			method5146(graphicalrenderer_0, class282_sub36_5, i_1, i_2, 0, 0);
+			method5146(graphicalrenderer_0, class282_sub36_5, i_1, i_2);
 		}
 
 		return aClass482_3459;

@@ -67,7 +67,7 @@ public class Class271 {
 	}
 
 	static void method4827(Index index_0, int i_1, int i_2, int i_3, boolean bool_4) {
-		Class109.method1859(index_0, i_1, i_2, i_3, bool_4, (long) 0);
+		Class109.method1859(index_0, i_1, i_2, i_3, bool_4);
 	}
 
 	public static TCPMessage method4828(OutgoingPacket outgoingpacket_0, IsaacCipher isaaccipher_1, int i_2) {

@@ -34,7 +34,7 @@ public abstract class Class109 {
 		}
 	}
 
-	static void method1859(Index index_0, int i_1, int i_2, int i_3, boolean bool_4, long long_5) {
+	static void method1859(Index index_0, int i_1, int i_2, int i_3, boolean bool_4) {
 		Class148.anInt1730 = 1;
 		Class75.aClass317_746 = index_0;
 		Class6.anInt46 = i_1;
@@ -43,7 +43,7 @@ public abstract class Class109 {
 		Class158_Sub2_Sub3.anInt10243 = i_3;
 		Class152.aBool1962 = bool_4;
 		Class96_Sub22.anInt9440 = 10000;
-		Class148.aLong1740 = long_5;
+		Class148.aLong1740 = (long) 0;
 		Class383.anInt4664 = 0;
 	}
 }

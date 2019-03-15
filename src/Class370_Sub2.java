@@ -19,7 +19,7 @@ public class Class370_Sub2 extends Class370 {
 	}
 
 	Class370_Sub2() {
-		super(12, 5, 16, 2, 2);
+		super(12, 16, 2);
 		this.anIntArray7761 = new int[this.anInt4290];
 
 		for (int i_7 = 0; i_7 < this.anInt4290; i_7++) {

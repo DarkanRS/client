@@ -245,9 +245,9 @@ public abstract class Class41_Sub1 extends Class41 {
 		this.method14532(Matrix44Var.aClass294_3518);
 	}
 
-	void method14536(int i_1) {
+	void method14536() {
 		for (int i_2 = 0; i_2 < this.anInt9226; i_2++) {
-			this.anIntArray9201[i_2] |= 128 << i_1;
+			this.anIntArray9201[i_2] |= 128 << 0;
 		}
 
 	}
@@ -285,7 +285,7 @@ public abstract class Class41_Sub1 extends Class41 {
 
 	void method14550() {
 		this.aClass384Array9227[0].identity();
-		this.method14536(0);
+		this.method14536();
 	}
 
 }

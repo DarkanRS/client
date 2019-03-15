@@ -64,7 +64,7 @@ public abstract class Ground {
 
 	public abstract void method6716(int var1, int var2, int var3, boolean[][] var4, boolean var5, int var6);
 
-	public abstract void method6717(int var1, int var2, int var3, boolean[][] var4, boolean var5, int var6);
+	public abstract void method6717(int var1, int var2, int var3, boolean[][] var4, boolean var5);
 
 	public abstract void u(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 

@@ -13,11 +13,11 @@ public class Class282_Sub24 extends Node {
 		return (int) this.aClass385_7687.y;
 	}
 
-	Class282_Sub24(int i_1, int i_2, int i_3, int i_4, int i_5, float f_6) {
+	Class282_Sub24(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		this.aClass385_7687.set((float) i_1, (float) i_2, (float) i_3);
 		this.anInt7684 = i_4;
 		this.anInt7685 = i_5;
-		this.aFloat7686 = f_6;
+		this.aFloat7686 = (float) 1.0;
 	}
 
 	public final int method12370() {

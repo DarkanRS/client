@@ -21,8 +21,8 @@ public class Class154 implements Interface13 {
 		OpenGL.glFramebufferTexture2DEXT(36160, i_1, this.aClass137_Sub1_1966.anInt1648, this.aClass137_Sub1_1966.anInt1647, this.anInt1967);
 	}
 
-	Class154(Class137_Sub1 class137_sub1_1, int i_2) {
-		this.anInt1967 = i_2;
+	Class154(Class137_Sub1 class137_sub1_1) {
+		this.anInt1967 = 0;
 		this.aClass137_Sub1_1966 = class137_sub1_1;
 	}
 

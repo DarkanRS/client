@@ -45,8 +45,8 @@ public class Class139 implements Interface13 {
 		return this.aClass137_Sub2_1656.anInt9104;
 	}
 
-	Class139(Class137_Sub2 class137_sub2_1, int i_2, int i_3) {
-		this.anInt1658 = i_3;
+	Class139(Class137_Sub2 class137_sub2_1, int i_2) {
+		this.anInt1658 = 0;
 		this.aClass137_Sub2_1656 = class137_sub2_1;
 		this.anInt1657 = i_2;
 	}

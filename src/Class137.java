@@ -135,7 +135,7 @@ public abstract class Class137 {
 		}
 	}
 
-	static void method2361(int i_0, int i_1, int i_2, int i_3, Class150 class150_4, float[] floats_5) {
+	static void method2361(int i_1, int i_2, int i_3, Class150 class150_4, float[] floats_5) {
 		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
 		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
@@ -150,7 +150,7 @@ public abstract class Class137 {
 			float[] floats_12 = new float[i_9 * i_10 * i_6];
 
 			while (true) {
-				OpenGL.glTexImage2Df(i_0, i_7, i_1, i_2, i_3, 0, OpenGLGraphicalRenderer.method13629(class150_4), 5126, floats_11, 0);
+				OpenGL.glTexImage2Df(3553, i_7, i_1, i_2, i_3, 0, OpenGLGraphicalRenderer.method13629(class150_4), 5126, floats_11, 0);
 				if (i_8 <= 1) {
 					return;
 				}

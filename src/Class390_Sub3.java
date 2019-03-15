@@ -1259,7 +1259,7 @@ public class Class390_Sub3 extends Ground {
 	public void z(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 	}
 
-	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
+	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5) {
 		if (this.aClass505_Sub3_9353.anIntArray8979 != null && this.aClass505_Sub3_9353.aFloatArray9010 != null) {
 			Matrix44Arr matrix44arr_7 = this.aClass505_Sub3_9353.aClass384_8996;
 			this.aFloat9338 = matrix44arr_7.buf[0];
@@ -1285,7 +1285,7 @@ public class Class390_Sub3 extends Ground {
 						int i_10 = i_8 + (i_1 - i_3);
 						int i_11 = i_9 + (i_2 - i_3);
 						if (i_10 >= 0 && i_10 < this.width && i_11 >= 0 && i_11 < this.length) {
-							this.method14638(i_10, i_11, i_6);
+							this.method14638(i_10, i_11, 0);
 						}
 					}
 				}

@@ -242,7 +242,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void ia(int var1, int var2, int var3);
 
-	public final void method11258(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9, int[] ints_10) {
+	public final void method11258(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_8, boolean bool_9, int[] ints_10) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
@@ -258,7 +258,7 @@ public abstract class MeshRasterizer {
 					}
 				}
 
-				this.method11266(animationskinnode_12, animationskin_11, animationskin_13, i_5, i_6, i_7, (boolean[]) null, false, bool_9, i_8, ints_10);
+				this.method11266(animationskinnode_12, animationskin_11, animationskin_13, i_5, i_6, 0, (boolean[]) null, false, bool_9, i_8, ints_10);
 				this.ka();
 				this.method11261();
 			}

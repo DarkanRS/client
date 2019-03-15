@@ -4,7 +4,7 @@ public class Class370_Sub1_Sub1 extends Class370_Sub1 {
 
 	byte[] method15431() {
 		this.aByteArray9998 = new byte[16 * 128 * 128 * 2];
-		this.method6322(128, 128, 16);
+		this.method6322();
 		return this.aByteArray9998;
 	}
 

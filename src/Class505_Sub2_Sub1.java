@@ -540,7 +540,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		OpenGL.glLightfv(16385, 4609, this.aFloatArray10172, 0);
 	}
 
-	Interface6 method13961(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5) {
+	Interface6 method13961(Class150 class150_1, int i_2, int i_3, float[] floats_5) {
 		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2) || !Class96_Sub9.method14585(i_3))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, 0, 0);
@@ -550,7 +550,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 				return class319_sub2_8;
 			}
 		} else {
-			return new Class319_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, 0, 0);
+			return new Class319_Sub2(this, class150_1, i_2, i_3, true, floats_5, 0, 0);
 		}
 	}
 

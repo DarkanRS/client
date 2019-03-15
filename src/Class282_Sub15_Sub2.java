@@ -141,10 +141,10 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 		this.anIntArray9712[i_1] = (int) (2097152.0D * Math.pow(2.0D, (double) i_2 * 5.4931640625E-4D) + 0.5D);
 	}
 
-	void method15105(int i_1, int i_2) {
-		this.anIntArray9698[i_1] = i_2;
-		this.anIntArray9700[i_1] = i_2 & ~0x7f;
-		this.method15189(i_1, i_2, -1424510729);
+	void method15105() {
+		this.anIntArray9698[9] = 128;
+		this.anIntArray9700[9] = 128 & ~0x7f;
+		this.method15189(9, 128, -1424510729);
 	}
 
 	void method15107(int i_1, int i_2, int i_3) {
@@ -951,7 +951,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 	}
 
 	public synchronized void method15137(int i_3) {
-		this.method15105(9, 128);
+		this.method15105();
 	}
 
 	synchronized void method15144(int i_1, int i_2) {

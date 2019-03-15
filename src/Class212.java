@@ -67,7 +67,7 @@ public class Class212 {
 		this.anInt2676 = this.anInt2678;
 	}
 
-	public final void method3639(int i_1) {
+	public final void method3639() {
 		for (Class282_Sub50_Sub8 class282_sub50_sub8_2 = (Class282_Sub50_Sub8) this.aClass477_2675.method7941(); class282_sub50_sub8_2 != null; class282_sub50_sub8_2 = (Class282_Sub50_Sub8) this.aClass477_2675.method7955(450272970)) {
 			if (class282_sub50_sub8_2.method14865()) {
 				if (class282_sub50_sub8_2.method14860() == null) {
@@ -75,7 +75,7 @@ public class Class212 {
 					class282_sub50_sub8_2.method13452();
 					this.anInt2676 += class282_sub50_sub8_2.anInt9606;
 				}
-			} else if (++class282_sub50_sub8_2.key > (long) i_1) {
+			} else if (++class282_sub50_sub8_2.key > (long) 5) {
 				Class282_Sub50_Sub8_Sub2 class282_sub50_sub8_sub2_3 = new Class282_Sub50_Sub8_Sub2(class282_sub50_sub8_2.anInterface18_9607, class282_sub50_sub8_2.method14860(), class282_sub50_sub8_2.anInt9606);
 				this.aClass465_2677.put(class282_sub50_sub8_sub2_3, class282_sub50_sub8_2.data);
 				Class224.method3782(class282_sub50_sub8_sub2_3, class282_sub50_sub8_2, -1476316652);

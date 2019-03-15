@@ -81,7 +81,7 @@ public class Class278_Sub1 extends Class278 {
 	}
 
 	public Class278_Sub1(Index index_2, int i_3) {
-		super(4096);
+		super();
 		this.aClass317_8117 = index_2;
 		this.anInt8113 = i_3;
 	}

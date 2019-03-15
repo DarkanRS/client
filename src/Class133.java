@@ -6,7 +6,7 @@ public class Class133 {
 	OpenGLGraphicalRenderer aClass505_Sub1_1597;
 	int anInt1596;
 
-	Class133(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3) {
+	Class133(OpenGLGraphicalRenderer class505_sub1_1, int i_3) {
 		this.aClass505_Sub1_1597 = class505_sub1_1;
 		this.anInt1596 = i_3;
 	}
@@ -26,7 +26,7 @@ public class Class133 {
 			return null;
 		} else {
 			OpenGL.glBindProgramARB(34336, 0);
-			return new Class133(class505_sub1_0, 34336, i_3);
+			return new Class133(class505_sub1_0, i_3);
 		}
 	}
 

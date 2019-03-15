@@ -741,7 +741,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			if (i_10 > 0) {
-				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, 5123, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
+				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
 				this.renderer.method13611(class131_sub2_17, 0, i_10);
 			}
 		}
@@ -1970,7 +1970,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			if (i_10 > 0) {
-				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, 5123, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
+				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
 				this.renderer.method13611(class131_sub2_17, 0, i_10);
 			}
 		}
@@ -1986,8 +1986,8 @@ public class OpenGLGround extends Ground {
 
 	}
 
-	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
-		this.method13881(i_1, i_2, i_3, bools_4, bool_5, i_6);
+	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5) {
+		this.method13881(i_1, i_2, i_3, bools_4, bool_5, 0);
 	}
 
 	public void method6720(Class282_Sub24 class282_sub24_1, int[] ints_2) {
@@ -2125,7 +2125,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			if (i_10 > 0) {
-				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, 5123, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
+				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
 				this.renderer.method13611(class131_sub2_17, 0, i_10);
 			}
 		}

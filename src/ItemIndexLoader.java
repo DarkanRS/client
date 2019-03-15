@@ -195,7 +195,7 @@ public class ItemIndexLoader implements IndexLoader {
 
 		Class212 class212_7 = this.aClass212_5114;
 		synchronized (this.aClass212_5114) {
-			this.aClass212_5114.method3639(5);
+			this.aClass212_5114.method3639();
 		}
 	}
 

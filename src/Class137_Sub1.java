@@ -92,7 +92,7 @@ public class Class137_Sub1 extends Class137 {
 		this.anInt9086 = i_6;
 		this.aClass505_Sub1_1646.method13654(this);
 		if (bool_7 && this.anInt1648 != 34037) {
-			method2361(3553, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), i_5, i_6, class150_9, floats_8);
+			method2361(OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), i_5, i_6, class150_9, floats_8);
 			this.method2354(true);
 		} else {
 			OpenGL.glTexImage2Df(this.anInt1648, 0, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), this.anInt9087, this.anInt9086, 0, OpenGLGraphicalRenderer.method13629(class150_9), 5126, floats_8, 0);
@@ -114,11 +114,11 @@ public class Class137_Sub1 extends Class137 {
 	}
 
 	Interface8 method14440() {
-		return new Class154(this, 0);
+		return new Class154(this);
 	}
 
 	Interface9 method14441() {
-		return new Class154(this, 0);
+		return new Class154(this);
 	}
 
 	void method14445(boolean bool_1, boolean bool_2) {
@@ -139,7 +139,7 @@ public class Class137_Sub1 extends Class137 {
 		this.method2351(true);
 	}
 
-	void method14452(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6, int i_7) {
+	void method14452(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_7) {
 		if (i_7 == 0) {
 			i_7 = i_3;
 		}
@@ -148,7 +148,7 @@ public class Class137_Sub1 extends Class137 {
 
 		for (int i_10 = 0; i_10 < i_4; i_10++) {
 			int i_11 = i_3 * i_10;
-			int i_12 = (i_4 - i_10 - 1) * i_7 + i_6;
+			int i_12 = (i_4 - i_10 - 1) * i_7 + 0;
 
 			for (int i_13 = 0; i_13 < i_3; i_13++) {
 				ints_9[i_11++] = ints_5[i_12++];
@@ -160,7 +160,7 @@ public class Class137_Sub1 extends Class137 {
 			OpenGL.glPixelStorei(3314, i_7);
 		}
 
-		OpenGL.glTexSubImage2Di(this.anInt1648, 0, i_1, this.anInt9086 - i_2 - i_4, i_3, i_4, 32993, this.aClass505_Sub1_1646.anInt8410, ints_9, i_6);
+		OpenGL.glTexSubImage2Di(this.anInt1648, 0, i_1, this.anInt9086 - i_2 - i_4, i_3, i_4, 32993, this.aClass505_Sub1_1646.anInt8410, ints_9, 0);
 		if (i_3 != i_7) {
 			OpenGL.glPixelStorei(3314, 0);
 		}

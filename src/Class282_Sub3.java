@@ -202,7 +202,7 @@ public class Class282_Sub3 extends Node {
 		this.aFloat7490 = (float) i_3;
 		this.aClass90_7487 = class90_4;
 		this.anIntArray7496 = new int[this.aClass390_Sub2_7488.width * this.aClass390_Sub2_7488.length];
-		this.aClass131_Sub2_7491 = new Class131_Sub2(this.aClass505_Sub1_7494, 5123, (byte[]) null, 1);
+		this.aClass131_Sub2_7491 = new Class131_Sub2(this.aClass505_Sub1_7494, (byte[]) null, 1);
 	}
 
 	void method12092(int i_1) {

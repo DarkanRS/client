@@ -31,9 +31,9 @@ public class ConnectionInfo {
 		return new Socket(this.host, 5555);
 	}
 
-	static String method7499(long long_0, int i_2, boolean bool_3) {
+	static String method7499(long long_0, int i_2) {
 		Calendar calendar_5;
-		if (bool_3) {
+		if (true) {
 			Class288.method5083(long_0);
 			calendar_5 = Class407.aCalendar4846;
 		} else {

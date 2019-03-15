@@ -1361,7 +1361,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	final Interface6 method13958(Class150 class150_1, int i_2, int i_3, float[] floats_5) {
-		return this.method13961(class150_1, i_2, i_3, true, floats_5);
+		return this.method13961(class150_1, i_2, i_3, floats_5);
 	}
 
 	public abstract void method13959(Class352 var1, int var2, int var3);
@@ -1375,7 +1375,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	}
 
-	abstract Interface6 method13961(Class150 var1, int var2, int var3, boolean var4, float[] var5);
+	abstract Interface6 method13961(Class150 var1, int var2, int var3, float[] var5);
 
 	public Matrix44Var method8458() {
 		return this.aClass294_8706;
@@ -1625,7 +1625,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	public final void N(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte[] bytes_7, int i_8, int i_9) {
 	}
 
-	public final void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
+	public final void method8658() {
 	}
 
 	final void CA(int i_1, int i_2, int i_3, int i_4) {
@@ -2852,8 +2852,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return this.aClass294_8842;
 	}
 
-	public final void J(int i_1) {
-		for (this.anInt8806 = 0; i_1 > 1; i_1 >>= 1) {
+	public final void J() {
+		int meme = 32;
+		for (this.anInt8806 = 0; meme > 1; meme >>= 1) {
 			++this.anInt8806;
 		}
 

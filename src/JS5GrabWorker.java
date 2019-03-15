@@ -338,7 +338,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	JS5GrabWorker(int i_1, JS5CacheFile js5cachefile_2, JS5CacheFile js5cachefile_3, JS5StandardRequester js5standardrequester_4, JS5LocalRequester js5localrequester_5, int i_6, byte[] bytes_7, int i_8, boolean bool_9) {
+	JS5GrabWorker(int i_1, JS5CacheFile js5cachefile_2, JS5CacheFile js5cachefile_3, JS5StandardRequester js5standardrequester_4, JS5LocalRequester js5localrequester_5, int i_6, byte[] bytes_7, int i_8) {
 		this.indexId = i_1;
 		this.dataFile = js5cachefile_2;
 		if (this.dataFile == null) {
@@ -353,7 +353,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		this.tableCRC = i_6;
 		this.tableDigest = bytes_7;
 		this.tableRevision = i_8;
-		this.aBool7801 = bool_9;
+		this.aBool7801 = true;
 		if (this.refsFile != null) {
 			this.refTableReq = this.localRequester.method5578(this.indexId, this.refsFile, -1435732555);
 		}

@@ -158,10 +158,6 @@ public class Player extends Animable {
 		return null;
 	}
 
-	public Player(SceneObjectManager sceneobjectmanager_1, int i_2) {
-		super(sceneobjectmanager_1, i_2);
-	}
-
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		if (this.playerAppearance != null && (this.aBool10370 || this.method16133(graphicalrenderer_1, 0))) {
 			Matrix44Var matrix44var_3 = graphicalrenderer_1.method8450();

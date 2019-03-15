@@ -1926,7 +1926,7 @@ public class HardwareGround extends Ground {
 		}
 	}
 
-	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
+	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5) {
 		if (this.aClass282Array8547 != null) {
 			int i_7 = i_3 + i_3 + 1;
 			i_7 *= i_7;

@@ -139,7 +139,7 @@ public class Interface {
 				if (Class260.aClass282_Sub15_Sub2_3231 != null) {
 					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aClass468_Sub13_8228.method12714(1791834725), Class260.aClass282_Sub15_Sub2_3231);
 				} else {
-					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.preferences.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aClass468_Sub13_8228.method12714(-786685196), (byte) -3);
 				}
 			}
 			Class260.aBool3220 = false;

@@ -36,9 +36,9 @@ public final class Class321 {
 		}
 	}
 
-	Class321(int i_3, Class332 class332_4) {
+	Class321(Class332 class332_4) {
 		this.aLong3726 = (long) -1;
-		this.anInt3730 = i_3;
+		this.anInt3730 = 64;
 		this.aClass332_3729 = class332_4;
 		if (this.anInt3730 == -1) {
 			this.aMap3728 = new HashMap(64);
@@ -151,10 +151,6 @@ public final class Class321 {
 				}
 			}
 		}
-	}
-
-	public Class321(Class332 class332_2) {
-		this(64, class332_2);
 	}
 
 	public static void method5757() {

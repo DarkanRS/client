@@ -786,7 +786,7 @@ public class ChoppyItemFixClass {
 					f_5 -= f_4;
 
 					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_35, f_39, f_40, f_42, f_43, f_45, f_46, f_48, f_49, f_51, f_52, f_54);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_35, f_39, f_40, f_42, f_43, f_45, f_46, f_48, f_49, f_51, f_52, f_54);
 						f_7 += f_55;
 						f_9 += f_79;
 						f_10 += f_56;
@@ -814,7 +814,7 @@ public class ChoppyItemFixClass {
 					}
 
 					while (--f_6 >= 0.0F) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_8, (int) f_9, f_11, f_12, f_14, f_15, f_17, f_18, f_20, f_21, f_27, f_28, f_38, f_39, f_41, f_42, f_44, f_45, f_47, f_48, f_50, f_51, f_53, f_54);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_8, (int) f_9, f_11, f_12, f_14, f_15, f_17, f_18, f_20, f_21, f_27, f_28, f_38, f_39, f_41, f_42, f_44, f_45, f_47, f_48, f_50, f_51, f_53, f_54);
 						f_8 += f_67;
 						f_9 += f_79;
 						f_11 += f_68;
@@ -848,7 +848,7 @@ public class ChoppyItemFixClass {
 					f_5 -= f_4;
 
 					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_39, f_35, f_42, f_40, f_45, f_43, f_48, f_46, f_51, f_49, f_54, f_52);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_39, f_35, f_42, f_40, f_45, f_43, f_48, f_46, f_51, f_49, f_54, f_52);
 						f_7 += f_55;
 						f_9 += f_79;
 						f_10 += f_56;
@@ -876,7 +876,7 @@ public class ChoppyItemFixClass {
 					}
 
 					while (--f_6 >= 0.0F) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_9, (int) f_8, f_12, f_11, f_15, f_14, f_18, f_17, f_21, f_20, f_28, f_27, f_39, f_38, f_42, f_41, f_45, f_44, f_48, f_47, f_51, f_50, f_54, f_53);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_9, (int) f_8, f_12, f_11, f_15, f_14, f_18, f_17, f_21, f_20, f_28, f_27, f_39, f_38, f_42, f_41, f_45, f_44, f_48, f_47, f_51, f_50, f_54, f_53);
 						f_8 += f_67;
 						f_9 += f_79;
 						f_11 += f_68;
@@ -968,7 +968,7 @@ public class ChoppyItemFixClass {
 					f_6 -= f_4;
 
 					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_8, (int) f_7, f_11, f_10, f_14, f_13, f_17, f_16, f_20, f_19, f_27, f_26, f_38, f_35, f_41, f_40, f_44, f_43, f_47, f_46, f_50, f_49, f_53, f_52);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_8, (int) f_7, f_11, f_10, f_14, f_13, f_17, f_16, f_20, f_19, f_27, f_26, f_38, f_35, f_41, f_40, f_44, f_43, f_47, f_46, f_50, f_49, f_53, f_52);
 						f_7 += f_55;
 						f_8 += f_79;
 						f_10 += f_56;
@@ -996,7 +996,7 @@ public class ChoppyItemFixClass {
 					}
 
 					while (--f_5 >= 0.0F) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_39, f_35, f_42, f_40, f_45, f_43, f_48, f_46, f_51, f_49, f_54, f_52);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_39, f_35, f_42, f_40, f_45, f_43, f_48, f_46, f_51, f_49, f_54, f_52);
 						f_9 += f_67;
 						f_7 += f_55;
 						f_12 += f_68;
@@ -1030,7 +1030,7 @@ public class ChoppyItemFixClass {
 					f_6 -= f_4;
 
 					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_7, (int) f_8, f_10, f_11, f_13, f_14, f_16, f_17, f_19, f_20, f_26, f_27, f_35, f_38, f_40, f_41, f_43, f_44, f_46, f_47, f_49, f_50, f_52, f_53);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_7, (int) f_8, f_10, f_11, f_13, f_14, f_16, f_17, f_19, f_20, f_26, f_27, f_35, f_38, f_40, f_41, f_43, f_44, f_46, f_47, f_49, f_50, f_52, f_53);
 						f_8 += f_79;
 						f_7 += f_55;
 						f_11 += f_80;
@@ -1058,7 +1058,7 @@ public class ChoppyItemFixClass {
 					}
 
 					while (--f_5 >= 0.0F) {
-						this.method2427(true, false, this.anIntArray1689, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_35, f_39, f_40, f_42, f_43, f_45, f_46, f_48, f_49, f_51, f_52, f_54);
+						this.method2427(this.anIntArray1689, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_35, f_39, f_40, f_42, f_43, f_45, f_46, f_48, f_49, f_51, f_52, f_54);
 						f_7 += f_55;
 						f_9 += f_67;
 						f_10 += f_56;
@@ -3372,7 +3372,7 @@ public class ChoppyItemFixClass {
 
 	}
 
-	final void method2427(boolean bool_1, boolean bool_2, int[] ints_3, int i_4, int i_5, int i_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, float f_22, float f_23, float f_24, float f_25, float f_26, float f_27, float f_28) {
+	final void method2427(int[] ints_3, int i_4, int i_5, int i_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, float f_22, float f_23, float f_24, float f_25, float f_26, float f_27, float f_28) {
 		int i_29 = i_6 - i_5;
 		float f_30 = 1.0F / (float) i_29;
 		float f_31 = (f_8 - f_7) * f_30;
@@ -3413,7 +3413,7 @@ public class ChoppyItemFixClass {
 			for (i_4 += i_5; i_29-- > 0; f_27 += f_41) {
 				float f_42 = 1.0F / f_7;
 				float f_43 = 1.0F / f_9;
-				if (!bool_1 || f_42 < this.aFloatArray1690[i_4]) {
+				if (!true || f_42 < this.aFloatArray1690[i_4]) {
 					float f_44 = f_11 * f_43;
 					float f_45 = f_13 * f_43;
 					int i_46 = (int) (f_44 * (float) this.anInt1694 * this.aFloat1696) & this.anInt1691;
@@ -3437,13 +3437,13 @@ public class ChoppyItemFixClass {
 						i_53 = i_55 + (((i_53 & 0xff00ff) * i_54 & ~0xff00ff | i_54 * (i_53 & 0xff00) & 0xff0000) >>> 8);
 					}
 
-					if (bool_2) {
+					if (false) {
 						ints_3[i_4] = ((int) f_17 | ints_3[i_4] >> 24) << 24 | i_53;
 					} else {
 						ints_3[i_4] = i_53;
 					}
 
-					if (bool_1) {
+					if (true) {
 						this.aFloatArray1690[i_4] = f_42;
 					}
 				}

@@ -20,11 +20,11 @@ public abstract class Class135 {
 		super.finalize();
 	}
 
-	Class135(OpenGLGraphicalRenderer class505_sub1_1, Buffer buffer_3, int i_4, boolean bool_5) {
+	Class135(OpenGLGraphicalRenderer class505_sub1_1, Buffer buffer_3, int i_4) {
 		this.aClass505_Sub1_1620 = class505_sub1_1;
 		this.anInt1621 = 34962;
 		this.anInt1623 = i_4;
-		this.aBool1624 = bool_5;
+		this.aBool1624 = false;
 		OpenGL.glGenBuffersARB(1, anIntArray1626, 0);
 		this.anInt1622 = anIntArray1626[0];
 		this.method2341();

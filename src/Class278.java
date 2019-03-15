@@ -267,11 +267,11 @@ public abstract class Class278 {
 		this.method4915(this.aString3365, -159539907);
 	}
 
-	Class278(int i_1) {
+	Class278() {
 		if (!Class362.getNativeLibraryLoader().loadLibrary("jagtheora", -784781962)) {
 			throw new RuntimeException("");
 		} else {
-			this.aByteArray3354 = new byte[i_1];
+			this.aByteArray3354 = new byte[4096];
 			this.anOggSyncState3355 = new OggSyncState();
 			this.anOggPage3352 = new OggPage();
 			this.anOggPacket3356 = new OggPacket();
