@@ -19,7 +19,7 @@ public class Class100 {
 		return s_2;
 	}
 
-	String method1633(int i_1) {
+	String method1633() {
 		int i_2 = this.method1632((byte) -122);
 		if (i_2 == -1) {
 			return null;
@@ -32,8 +32,8 @@ public class Class100 {
 		}
 	}
 
-	static Class221 method1640(int i_0, byte b_1) {
-		Class221[] arr_2 = JS5FileWorker.method5815(484597042);
+	static Class221 method1640(int i_0) {
+		Class221[] arr_2 = JS5FileWorker.method5815();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Class221 class221_4 = arr_2[i_3];
 			if (i_0 == class221_4.anInt2758) {

@@ -10,7 +10,7 @@ public class Class147 {
 	static int anInt1723;
 
 	public static void method2471(GraphicalRenderer graphicalrenderer_0, int[] ints_1, int i_2) {
-		method2474(graphicalrenderer_0, ints_1, 0, ints_1.length, i_2, (int[]) null, (int[]) null);
+		method2474(graphicalrenderer_0, ints_1, ints_1.length, i_2, (int[]) null, (int[]) null);
 	}
 
 	static void method2472(int i_0, int i_1) {
@@ -46,14 +46,14 @@ public class Class147 {
 
 	}
 
-	static void method2474(GraphicalRenderer graphicalrenderer_0, int[] ints_1, int i_2, int i_3, int i_4, int[] ints_5, int[] ints_6) {
+	static void method2474(GraphicalRenderer graphicalrenderer_0, int[] ints_1, int i_3, int i_4, int[] ints_5, int[] ints_6) {
 		int[] ints_7 = new int[4];
 		graphicalrenderer_0.qa(ints_7);
 		if (ints_5 != null && ints_5.length != ints_7[3] - ints_7[1]) {
 			throw new IllegalStateException();
 		} else {
 			method2475();
-			method2476(ints_1, i_2, i_3);
+			method2476(ints_1, 0, i_3);
 			method2477(ints_7[1]);
 
 			while (true) {
@@ -261,7 +261,7 @@ public class Class147 {
 	}
 
 	public static void method2505(GraphicalRenderer graphicalrenderer_0, int[] ints_1, int i_2, int[] ints_3, int[] ints_4) {
-		method2474(graphicalrenderer_0, ints_1, 0, ints_1.length, i_2, ints_3, ints_4);
+		method2474(graphicalrenderer_0, ints_1, ints_1.length, i_2, ints_3, ints_4);
 	}
 
 }

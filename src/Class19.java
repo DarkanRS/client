@@ -82,11 +82,11 @@ public class Class19 {
 		this.anInt154 = 0;
 	}
 
-	public int method578(byte b_1) {
+	public int method578() {
 		return this.anInt153 & 0x3fff;
 	}
 
-	public void method579(int i_1) {
+	public void method579() {
 		this.anInt153 &= 0x3fff;
 	}
 }

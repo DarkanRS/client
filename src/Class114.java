@@ -10,13 +10,13 @@ public class Class114 {
 
 	Class99[] aClass99Array1241;
 
-	void method1885(byte[] bytes_1, int i_2) throws Exception_Sub1 {
+	void method1885(byte[] bytes_1) throws Exception_Sub1 {
 		Class100 class100_3 = new Class100(bytes_1);
 		int i_4 = class100_3.method1632((byte) -72);
 		if (i_4 != 4) {
-			throw new Exception_Sub1(this, i_4, 4);
+			throw new Exception_Sub1(this, i_4);
 		} else {
-			this.aString1237 = class100_3.method1633(16711935);
+			this.aString1237 = class100_3.method1633();
 			this.aClass122Array1236 = new Class122[class100_3.method1632((byte) -44)];
 			this.aClass122Array1240 = new Class122[class100_3.method1632((byte) -15)];
 			this.aClass99Array1241 = new Class99[class100_3.method1632((byte) -125)];
@@ -31,13 +31,13 @@ public class Class114 {
 			}
 			for (i_5 = 0; i_5 < this.aClass99Array1241.length; i_5++) {
 				this.aClass99Array1241[i_5] = new Class99();
-				this.aClass99Array1241[i_5].method1628(class100_3, -998614135);
+				this.aClass99Array1241[i_5].method1628(class100_3);
 			}
 		}
 	}
 
 	public Class114(byte[] bytes_1) throws Exception_Sub1 {
-		this.method1885(bytes_1, 1555548172);
+		this.method1885(bytes_1);
 	}
 
 	static FontMetrics method1887(int i_0) {
@@ -55,7 +55,7 @@ public class Class114 {
 		return fontmetrics_1;
 	}
 
-	static void method1890(long[] longs_0, Object[] arr_1, int i_2, int i_3, short s_4) {
+	static void method1890(long[] longs_0, Object[] arr_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_5 = (i_3 + i_2) / 2;
 			int i_6 = i_2;
@@ -80,8 +80,8 @@ public class Class114 {
 			longs_0[i_6] = long_7;
 			arr_1[i_3] = arr_1[i_6];
 			arr_1[i_6] = object_9;
-			method1890(longs_0, arr_1, i_2, i_6 - 1, (short) 255);
-			method1890(longs_0, arr_1, i_6 + 1, i_3, (short) 255);
+			method1890(longs_0, arr_1, i_2, i_6 - 1);
+			method1890(longs_0, arr_1, i_6 + 1, i_3);
 		}
 	}
 }

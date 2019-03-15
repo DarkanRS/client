@@ -9,11 +9,11 @@ public class Class532_Sub1 extends Class532 {
 		throw new Error();
 	}
 
-	static final void method12838(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, short s_6) {
+	static final void method12838(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if (i_0 - i_2 >= Class532_Sub3.anInt7071 && i_0 + i_2 <= Class532_Sub3.anInt7069 && i_1 - i_2 >= Class532_Sub3.anInt7070 && i_2 + i_1 <= Class532_Sub3.anInt7068) {
-			Class155.method2637(i_0, i_1, i_2, i_3, i_4, i_5, (byte) 6);
+			Class155.method2637(i_0, i_1, i_2, i_3, i_4, i_5);
 		} else {
-			Class60.method1174(i_0, i_1, i_2, i_3, i_4, i_5, -1253230247);
+			Class60.method1174(i_0, i_1, i_2, i_3, i_4, i_5);
 		}
 	}
 
@@ -21,7 +21,7 @@ public class Class532_Sub1 extends Class532 {
 		client client_1 = Class308.aclient3620;
 		synchronized (Class308.aclient3620) {
 			if (client.fullScreenFrame == null) {
-				Container container_2 = Class371.getActiveContainer((byte) 1);
+				Container container_2 = Class371.getActiveContainer();
 				if (container_2 != null) {
 					Class45.anInt434 = container_2.getSize().width;
 					Class107.anInt1082 = container_2.getSize().height;
@@ -60,7 +60,7 @@ public class Class532_Sub1 extends Class532 {
 					}
 					Class400.method6795(-366853248);
 					if (client.anInt7349 != -1) {
-						Class516.method8867(true, -905479502);
+						Class516.method8867(true);
 					}
 					Class275.method4891((byte) -40);
 				}

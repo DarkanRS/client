@@ -10,7 +10,7 @@ public class UnderlayDef {
 	public boolean blockShadow = true;
 	public boolean aBool5722 = true;
 
-	void method8048(int i_1, int i_2) {
+	void method8048(int i_1) {
 		double d_3 = (double) (i_1 >> 16 & 0xff) / 256.0D;
 		double d_5 = (double) (i_1 >> 8 & 0xff) / 256.0D;
 		double d_7 = (double) (i_1 & 0xff) / 256.0D;
@@ -81,10 +81,10 @@ public class UnderlayDef {
 		this.r = (int) (d_13 * (double) this.a);
 	}
 
-	void method8049(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method8049(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.rgb = rsbytebuffer_1.read24BitUnsignedInteger();
-			this.method8048(this.rgb, 1049430248);
+			this.method8048(this.rgb);
 		} else if (i_2 == 2) {
 			this.texture = rsbytebuffer_1.readUnsignedShort();
 			if (this.texture == 65535) {
@@ -100,14 +100,14 @@ public class UnderlayDef {
 
 	}
 
-	void method8050(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method8050(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method8049(rsbytebuffer_1, i_3, (byte) 87);
+			this.method8049(rsbytebuffer_1, i_3);
 		}
 	}
 

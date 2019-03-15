@@ -28,11 +28,11 @@ public class Class516 {
 		class275_0.aClass275_3339.aClass275_3340 = class275_0;
 	}
 
-	static final void method8867(boolean bool_0, int i_1) {
+	static final void method8867(boolean bool_0) {
 		Class442.method7403(client.anInt7349, Class349.anInt4083, client.anInt3243 * -969250379, bool_0, 2111552471);
 	}
 
-	static void method8868(String string_0, byte b_1) {
+	static void method8868(String string_0) {
 		client.aString7281 = string_0;
 		if (NamedFileReference.method867(-1769935536) != Class279.aClass279_3368) {
 			try {

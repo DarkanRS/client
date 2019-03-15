@@ -2,7 +2,7 @@ public interface Interface36 {
 
 	boolean method217(String var1);
 
-	boolean method218(String var1, int var2);
+	boolean method218();
 
 	boolean method219(int var1);
 

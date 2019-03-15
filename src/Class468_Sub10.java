@@ -12,14 +12,14 @@ public class Class468_Sub10 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	public void method12692(int i_1) {
+	public void method12692() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
 			this.anInt5578 = this.method7781(2089221504);
 		}
 
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -47,7 +47,7 @@ public class Class468_Sub10 extends Preference {
 		return 1;
 	}
 
-	public static boolean method12695(byte[] bytes_0, byte b_1) {
+	public static boolean method12695(byte[] bytes_0) {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
 		int i_3 = rsbytebuffer_2.readUnsignedByte();
 		if (i_3 != 2) {
@@ -55,15 +55,15 @@ public class Class468_Sub10 extends Preference {
 		} else {
 			boolean bool_4 = rsbytebuffer_2.readUnsignedByte() == 1;
 			if (bool_4) {
-				Class411.method6912(rsbytebuffer_2, 1288904902);
+				Class411.method6912(rsbytebuffer_2);
 			}
 
-			Class359.method6241(rsbytebuffer_2, 587524029);
+			Class359.method6241(rsbytebuffer_2);
 			return true;
 		}
 	}
 
-	static void method12696(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static void method12696(RsByteBuffer rsbytebuffer_0) {
 		if (rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 1) {
 			int i_2 = rsbytebuffer_0.readUnsignedByte();
 			if (i_2 >= 0 && i_2 <= 1 && rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 2) {

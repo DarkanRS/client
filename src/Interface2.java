@@ -26,7 +26,7 @@ public interface Interface2 {
 
 	boolean method21();
 
-	void method22(int var1);
+	void method22();
 
 	void method23();
 

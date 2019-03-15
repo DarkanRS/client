@@ -8,17 +8,17 @@ public class ItemContainerDefinitions extends CacheableNode implements Definitio
 
 	public int[] amounts;
 
-	void method15690(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method15690(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method15691(rsbytebuffer_1, i_3, -1602172632);
+			this.method15691(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method15691(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method15691(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 2) {
 			this.maxSize = rsbytebuffer_1.readUnsignedShort();
 			// if (this.maxSize == 556) {

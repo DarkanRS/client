@@ -39,9 +39,9 @@ public class NPCIndexLoader {
 			npcdefinitions_3.aClass406_4855 = this;
 			npcdefinitions_3.aStringArray4882 = (String[]) this.aStringArray4840.clone();
 			if (bytes_10 != null) {
-				npcdefinitions_3.method6874(new RsByteBuffer(bytes_10), 1737313867);
+				npcdefinitions_3.method6874(new RsByteBuffer(bytes_10));
 			}
-			npcdefinitions_3.method6877(1494985964);
+			npcdefinitions_3.method6877();
 			SoftCache softcache_9 = this.aClass229_4841;
 			synchronized (this.aClass229_4841) {
 				this.aClass229_4841.put(npcdefinitions_3, (long) i_1);
@@ -50,7 +50,7 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public void method6829(int i_1, int i_2) {
+	public void method6829(int i_1) {
 		this.anInt4845 = i_1;
 		SoftCache softcache_3 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
@@ -62,7 +62,7 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public void method6831(int i_1) {
+	public void method6831() {
 		SoftCache softcache_2 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
 			this.aClass229_4836.method3859(-157973986);
@@ -73,22 +73,22 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public void method6832(int i_1, int i_2) {
+	public void method6832() {
 		SoftCache softcache_3 = this.aClass229_4841;
 		synchronized (this.aClass229_4841) {
-			this.aClass229_4841.method3858(i_1, (byte) 39);
+			this.aClass229_4841.method3858(5, (byte) 39);
 		}
 		softcache_3 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
-			this.aClass229_4836.method3858(i_1, (byte) -24);
+			this.aClass229_4836.method3858(5, (byte) -24);
 		}
 		softcache_3 = this.aClass229_4843;
 		synchronized (this.aClass229_4843) {
-			this.aClass229_4843.method3858(i_1, (byte) -2);
+			this.aClass229_4843.method3858(5, (byte) -2);
 		}
 	}
 
-	public void method6833(int i_1) {
+	public void method6833() {
 		SoftCache softcache_2 = this.aClass229_4841;
 		synchronized (this.aClass229_4841) {
 			this.aClass229_4841.method3863(813622109);
@@ -118,10 +118,10 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public NPCIndexLoader(Game game_1, Language xlanguage_2, boolean bool_3, Index index_4, Index index_5) {
+	public NPCIndexLoader(Game game_1, Language xlanguage_2, Index index_4, Index index_5) {
 		this.aClass486_4844 = game_1;
 		this.aClass495_4837 = xlanguage_2;
-		this.aBool4838 = bool_3;
+		this.aBool4838 = true;
 		this.aClass317_4839 = index_4;
 		this.aClass317_4842 = index_5;
 		if (this.aClass317_4839 != null) {
@@ -136,7 +136,7 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public void method6847(boolean bool_1, byte b_2) {
+	public void method6847(boolean bool_1) {
 		if (this.aBool4838 != bool_1) {
 			this.aBool4838 = bool_1;
 			this.method6836((byte) -17);

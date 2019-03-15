@@ -105,8 +105,8 @@ public class Class319_Sub3 extends Class319 implements Interface29 {
 		return super.method54();
 	}
 
-	public Interface9 method200(int i_1) {
-		return new Class314(this, i_1);
+	public Interface9 method200() {
+		return new Class314(this, 0);
 	}
 
 	public int method70() {
@@ -161,13 +161,13 @@ public class Class319_Sub3 extends Class319 implements Interface29 {
 		return f_1;
 	}
 
-	public void method53(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6) {
+	public void method53(int i_3, int i_4, int[] ints_5) {
 		int[] ints_7 = new int[this.anInt9167 * this.anInt9166];
 		this.aClass505_Sub2_Sub1_3700.method14035(this);
 		OpenGL.glGetTexImagei(this.anInt3707, 0, 32993, 5121, ints_7, 0);
 
 		for (int i_8 = 0; i_8 < i_4; i_8++) {
-			System.arraycopy(ints_7, this.anInt9167 * (i_2 + (i_4 - 1) - i_8), ints_5, i_3 * i_8 + i_6, i_3);
+			System.arraycopy(ints_7, this.anInt9167 * (0 + (i_4 - 1) - i_8), ints_5, i_3 * i_8 + 0, i_3);
 		}
 
 	}

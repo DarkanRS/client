@@ -70,12 +70,12 @@ public class HashTableIterator implements Iterator {
 		this.aClass282_5441 = null;
 	}
 
-	public static boolean method7517(byte b_0) {
+	public static boolean method7517() {
 		Class282_Sub42 class282_sub42_1 = (Class282_Sub42) Class435.aClass482_5332.head((byte) 42);
 		return class282_sub42_1 != null;
 	}
 
-	static Class411[] method7519(short s_0) {
+	static Class411[] method7519() {
 		return new Class411[] { Class411.aClass411_4928, Class411.aClass411_4952, Class411.aClass411_4939, Class411.aClass411_4954, Class411.aClass411_4942, Class411.aClass411_4948, Class411.aClass411_4941, Class411.aClass411_4953, Class411.aClass411_4934, Class411.aClass411_4926, Class411.aClass411_4951, Class411.aClass411_4930, Class411.aClass411_4935, Class411.aClass411_4946, Class411.aClass411_4927, Class411.aClass411_4944, Class411.aClass411_4943, Class411.aClass411_4931, Class411.aClass411_4949, Class411.aClass411_4940, Class411.aClass411_4936, Class411.aClass411_4947, Class411.aClass411_4925, Class411.aClass411_4929, Class411.aClass411_4955, Class411.aClass411_4950, Class411.aClass411_4937, Class411.aClass411_4932, Class411.aClass411_4933, Class411.aClass411_4938, Class411.aClass411_4945 };
 	}
 }

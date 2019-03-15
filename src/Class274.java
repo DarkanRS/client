@@ -12,23 +12,23 @@ public class Class274 {
 
 	String aString3337;
 
-	int method4868(short s_1) {
+	int method4868() {
 		return this.anInt3333;
 	}
 
-	String method4870(int i_1) {
+	String method4870() {
 		return this.aString3337;
 	}
 
-	int method4871(int i_1) {
+	int method4871() {
 		return this.anInt3334;
 	}
 
-	int method4872(byte b_1) {
+	int method4872() {
 		return this.anInt3335;
 	}
 
-	int method4877(byte b_1) {
+	int method4877() {
 		return this.anInt3338;
 	}
 
@@ -40,7 +40,7 @@ public class Class274 {
 		this.aString3337 = string_5;
 	}
 
-	static final void method4883(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, CS2Executor cs2executor_3, int i_4) {
+	static final void method4883(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, CS2Executor cs2executor_3) {
 		if (icomponentdefinitions_0.anIntArray1267 == null) {
 			if (i_2 <= 0) {
 				return;

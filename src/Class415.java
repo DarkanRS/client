@@ -6,17 +6,17 @@ public class Class415 {
 
 	public char aChar4984;
 
-	void method6990(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method6990(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method6991(rsbytebuffer_1, i_3, -650729602);
+			this.method6991(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method6991(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method6991(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aChar4984 = Class11.getChar(rsbytebuffer_1.readByte(), -792484929);
 		} else if (i_2 == 2) {
@@ -24,8 +24,8 @@ public class Class415 {
 		}
 	}
 
-	static void method6996(GraphicalRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1, int i_2) {
-		boolean bool_3 = IndexLoaders.ITEM_INDEX_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.anInt1426, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.anInt1323, ~0xffffff | icomponentdefinitions_1.anInt1324, icomponentdefinitions_1.anInt1335, icomponentdefinitions_1.aBool1388 ? Class84.myPlayer.playerAppearance : null, 206421629) == null;
+	static void method6996(GraphicalRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1) {
+		boolean bool_3 = IndexLoaders.ITEM_INDEX_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.anInt1426, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.anInt1323, ~0xffffff | icomponentdefinitions_1.anInt1324, icomponentdefinitions_1.anInt1335, icomponentdefinitions_1.aBool1388 ? Class84.myPlayer.playerAppearance : null) == null;
 		if (bool_3) {
 			Class182.ITEMS.append(new Item(icomponentdefinitions_1.anInt1426, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.anInt1323, ~0xffffff | icomponentdefinitions_1.anInt1324, icomponentdefinitions_1.anInt1335, icomponentdefinitions_1.aBool1388), 2129824962);
 			Class109.redrawComponent(icomponentdefinitions_1, (byte) 71);
@@ -33,7 +33,7 @@ public class Class415 {
 	}
 
 	static void method6997(GraphicalRenderer graphicalrenderer_0, ObjectDefinitions objectdefinitions_1, int i_2, int i_3, int i_4, int i_5) {
-		Class418 class418_6 = IndexLoaders.aClass427_995.method7172(objectdefinitions_1.mapSpriteId, -1014703371);
+		Class418 class418_6 = IndexLoaders.aClass427_995.method7172(objectdefinitions_1.mapSpriteId);
 		if (class418_6.anInt4995 != -1) {
 			if (objectdefinitions_1.adjustMapSceneRotation) {
 				i_2 += objectdefinitions_1.mapSpriteRotation;

@@ -22,15 +22,15 @@ public class Class282_Sub28 extends Node {
 		this.anInt7705 = i_9;
 	}
 
-	boolean method12408(int i_1, int i_2, int i_3, int i_4) {
+	boolean method12408(int i_1, int i_2, int i_3) {
 		return this.anInt7697 == i_1 && i_2 >= this.anInt7698 && i_2 <= this.anInt7700 && i_3 >= this.anInt7699 && i_3 <= this.anInt7702;
 	}
 
-	boolean method12409(int i_1, int i_2, byte b_3) {
+	boolean method12409(int i_1, int i_2) {
 		return i_1 >= this.anInt7701 && i_1 <= this.anInt7704 && i_2 >= this.anInt7703 && i_2 <= this.anInt7705;
 	}
 
-	void method12410(int i_1, int i_2, int[] ints_3, int i_4) {
+	void method12410(int i_1, int i_2, int[] ints_3) {
 		ints_3[0] = this.anInt7697;
 		ints_3[1] = this.anInt7698 - this.anInt7701 + i_1;
 		ints_3[2] = this.anInt7699 - this.anInt7703 + i_2;

@@ -2,10 +2,10 @@ public class Class282_Sub44_Sub4 extends Class282_Sub44 {
 
 	Class530 aClass530_9564;
 
-	public boolean method13401(byte b_1) {
-		SceneObject sceneobject_2 = this.aClass530_9564.method11344((byte) 1);
+	public boolean method13401() {
+		SceneObject sceneobject_2 = this.aClass530_9564.method11344();
 		if (sceneobject_2 != null) {
-			Class15.method549(Class397.aClass397_4808, this.anInt8063, -1, sceneobject_2, -479586155);
+			Class15.method549(Class397.aClass397_4808, this.anInt8063, sceneobject_2);
 			return true;
 		} else {
 			return false;

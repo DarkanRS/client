@@ -41,19 +41,19 @@ public class Class282_Sub54 extends Node {
 	public Class468_Sub13 aClass468_Sub13_8229;
 	public Class468_Sub10 aClass468_Sub10_8215;
 
-	public Class282_Sub54(RsByteBuffer rsbytebuffer_1, Game game_2, int i_3) {
+	public Class282_Sub54(RsByteBuffer rsbytebuffer_1, Game game_2) {
 		this.aClass486_8191 = game_2;
 		this.aClass463_8196 = new Class463(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.indexOf("arm") != -1);
-		this.currentToolkit = new Class468_Sub18(i_3, this);
-		this.method13496(rsbytebuffer_1, (short) -14853);
+		this.currentToolkit = new Class468_Sub18(0, this);
+		this.method13496(rsbytebuffer_1);
 	}
 
-	void method13496(RsByteBuffer rsbytebuffer_1, short s_2) {
+	void method13496(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1 != null && rsbytebuffer_1.buffer != null) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 < 23) {
 				try {
-					this.method13498(rsbytebuffer_1, i_3, 1555660216);
+					this.method13498(rsbytebuffer_1, i_3);
 				} catch (Exception exception_5) {
 					this.method13497(true, 612084272);
 				}
@@ -123,7 +123,7 @@ public class Class282_Sub54 extends Node {
 			this.method13497(true, -1548642338);
 		}
 
-		this.method13502(-1736305082);
+		this.method13502();
 	}
 
 	void method13497(boolean bool_1, int i_2) {
@@ -281,7 +281,7 @@ public class Class282_Sub54 extends Node {
 
 	}
 
-	void method13498(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method13498(RsByteBuffer rsbytebuffer_1, int i_2) {
 		this.aClass468_Sub21_8222 = new Class468_Sub21(rsbytebuffer_1.readUnsignedByte(), this);
 		++rsbytebuffer_1.index;
 		this.aClass468_Sub27_8208 = new Class468_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
@@ -402,34 +402,34 @@ public class Class282_Sub54 extends Node {
 
 	}
 
-	public RsByteBuffer method13499(int i_1) {
+	public RsByteBuffer method13499() {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(40);
 		rsbytebuffer_2.writeByte(27);
 		rsbytebuffer_2.writeByte(this.aClass468_Sub4_8187.method12641(1497480561));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub12_8195.method12706((byte) 95));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub21_8222.method12865(475375870));
+		rsbytebuffer_2.writeByte(this.aClass468_Sub21_8222.method12865());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub1_8197.method12615(-462784918));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub16_8198.method12750((byte) 32));
+		rsbytebuffer_2.writeByte(this.aClass468_Sub16_8198.method12750());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub26_8224.method12943(975799184));
 		rsbytebuffer_2.writeByte(this.fog.method13417(-1899817216));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub17_8200.method12762(-140573));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub23_8202.method12897((byte) 75));
-		rsbytebuffer_2.writeByte(this.idleAnimations.getValue(-118386335));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub19_8204.method12786(-399420695));
+		rsbytebuffer_2.writeByte(this.idleAnimations.getValue());
+		rsbytebuffer_2.writeByte(this.aClass468_Sub19_8204.method12786());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub2_8205.method12624((byte) -37));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub29_8201.method13050(519629067));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub20_8207.method12794(1270958764));
+		rsbytebuffer_2.writeByte(this.aClass468_Sub29_8201.method13050());
+		rsbytebuffer_2.writeByte(this.aClass468_Sub20_8207.method12794());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub27_8208.method12952((byte) 121));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub7_8210.method12666(141061966));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub14_8211.method12728(-1912429644));
+		rsbytebuffer_2.writeByte(this.aClass468_Sub14_8211.method12728());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub28_8212.method12966((byte) -41));
 		rsbytebuffer_2.writeByte(this.textures.method12873(2145197376));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub18_8214.getValue(-120460114));
 		rsbytebuffer_2.writeByte(0);
 		rsbytebuffer_2.writeByte(this.water.getValue(1244153925));
 		rsbytebuffer_2.writeByte(this.screenSize.method12687(416506379));
-		rsbytebuffer_2.writeByte(this.customCursors.method12675(-1589433086));
-		rsbytebuffer_2.writeByte(this.graphics.method12654(-239553097));
+		rsbytebuffer_2.writeByte(this.customCursors.method12675());
+		rsbytebuffer_2.writeByte(this.graphics.method12654());
 		rsbytebuffer_2.writeByte(this.cpu.getValue());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub11_8217.method12699((byte) -71));
 		rsbytebuffer_2.writeByte(this.safeMode.getValue((byte) -54));
@@ -443,66 +443,66 @@ public class Class282_Sub54 extends Node {
 		return rsbytebuffer_2;
 	}
 
-	void method13502(int i_1) {
+	void method13502() {
 		this.aClass468_Sub4_8187.method12639((byte) -35);
 		this.aClass468_Sub4_8223.method12639((byte) -23);
-		this.aClass468_Sub12_8195.method12703(-2130049176);
-		this.aClass468_Sub21_8222.method12861(-833257877);
-		this.aClass468_Sub1_8197.method12616((byte) 16);
-		this.aClass468_Sub16_8198.method12749(-1385034853);
-		this.aClass468_Sub26_8224.method12941((byte) -58);
-		this.fog.method13415((byte) -26);
-		this.aClass468_Sub17_8200.method12767((byte) 6);
-		this.aClass468_Sub23_8202.method12898((byte) 34);
-		this.idleAnimations.method12741(130294314);
-		this.aClass468_Sub19_8204.method12785(1216614107);
-		this.aClass468_Sub2_8205.method12627((byte) -59);
-		this.aClass468_Sub29_8201.method13048(-2117218391);
-		this.aClass468_Sub20_8207.method12793(1354281667);
+		this.aClass468_Sub12_8195.method12703();
+		this.aClass468_Sub21_8222.method12861();
+		this.aClass468_Sub1_8197.method12616();
+		this.aClass468_Sub16_8198.method12749();
+		this.aClass468_Sub26_8224.method12941();
+		this.fog.method13415();
+		this.aClass468_Sub17_8200.method12767();
+		this.aClass468_Sub23_8202.method12898();
+		this.idleAnimations.method12741();
+		this.aClass468_Sub19_8204.method12785();
+		this.aClass468_Sub2_8205.method12627();
+		this.aClass468_Sub29_8201.method13048();
+		this.aClass468_Sub20_8207.method12793();
 		this.aClass468_Sub27_8208.method12950(1301389562);
 		this.aClass468_Sub27_8209.method12950(221369371);
-		this.aClass468_Sub7_8210.method12663(-911909604);
-		this.aClass468_Sub14_8211.method12725(-1401423341);
-		this.aClass468_Sub28_8212.method12959(-922946523);
-		this.textures.method12871((byte) -2);
+		this.aClass468_Sub7_8210.method12663();
+		this.aClass468_Sub14_8211.method12725();
+		this.aClass468_Sub28_8212.method12959();
+		this.textures.method12871();
 		this.aClass468_Sub18_8214.method12773(-132030593);
 		this.currentToolkit.method12773(-1630198990);
-		this.water.method12918((short) 22655);
+		this.water.method12918();
 		this.screenSize.method12684((byte) -10);
 		this.aClass468_Sub9_8218.method12684((byte) 105);
-		this.customCursors.method12674(-956855309);
-		this.graphics.method12653(-1781190291);
-		this.cpu.method12648(2102747953);
-		this.aClass468_Sub11_8217.method12698((byte) -36);
-		this.safeMode.method12928((byte) 32);
-		this.aClass468_Sub3_8199.method12631(-1642104120);
+		this.customCursors.method12674();
+		this.graphics.method12653();
+		this.cpu.method12648();
+		this.aClass468_Sub11_8217.method12698();
+		this.safeMode.method12928();
+		this.aClass468_Sub3_8199.method12631();
 		this.aClass468_Sub13_8225.method12712((byte) 114);
 		this.aClass468_Sub13_8193.method12712((byte) 41);
 		this.aClass468_Sub13_8227.method12712((byte) 85);
 		this.aClass468_Sub13_8228.method12712((byte) 78);
 		this.aClass468_Sub13_8229.method12712((byte) 16);
-		this.aClass468_Sub10_8215.method12692(2077923945);
+		this.aClass468_Sub10_8215.method12692();
 	}
 
-	public Class463 method13504(byte b_1) {
+	public Class463 method13504() {
 		return this.aClass463_8196;
 	}
 
 	public void method13505(Class468_Sub18 class468_sub18_1, boolean bool_2, int i_3) {
-		class468_sub18_1.method12783(bool_2, (byte) 0);
-		this.method13502(-1736305082);
+		class468_sub18_1.method12783(bool_2);
+		this.method13502();
 	}
 
-	public Class282_Sub54(Game game_1, int i_2) {
+	public Class282_Sub54(Game game_1) {
 		this.aClass486_8191 = game_1;
 		this.aClass463_8196 = new Class463(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.toLowerCase().indexOf("arm") != -1);
-		this.currentToolkit = new Class468_Sub18(i_2, this);
+		this.currentToolkit = new Class468_Sub18(0, this);
 		this.method13497(true, 311350524);
 	}
 
 	public void setValue(Preference class468_1, int i_2, int i_3) {
-		class468_1.method7782(i_2, (byte) 120);
-		this.method13502(-1736305082);
+		class468_1.method7782(i_2);
+		this.method13502();
 	}
 
 	public Game method13514(byte b_1) {

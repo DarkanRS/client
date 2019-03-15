@@ -6,7 +6,7 @@ public class Class117 {
 
 	int[] anIntArray1262;
 
-	int method1971(byte[] bytes_1, int i_2, int i_3, byte[] bytes_4, int i_5, int i_6) {
+	int method1971(byte[] bytes_1, int i_2, int i_3, byte[] bytes_4, int i_5) {
 		int i_7 = 0;
 		int i_8 = i_5 << 3;
 		for (i_3 += i_2; i_2 < i_3; i_2++) {
@@ -47,7 +47,7 @@ public class Class117 {
 		return (i_8 + 7 >> 3) - i_5;
 	}
 
-	int method1973(byte[] bytes_1, int i_2, byte[] bytes_3, int i_4, int i_5, byte b_6) {
+	int method1973(byte[] bytes_1, int i_2, byte[] bytes_3, int i_4, int i_5) {
 		if (i_5 == 0) {
 			return 0;
 		} else {
@@ -227,14 +227,14 @@ public class Class117 {
 		}
 	}
 
-	public static void method1978(int i_0, int i_1, int i_2, byte b_3) {
+	public static void method1978(int i_0, int i_1, int i_2) {
 		i_2 = i_2 * Class393.preferences.aClass468_Sub13_8228.method12714(-964271083) >> 8;
 		if (i_2 != 0 && i_0 != -1) {
-			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && Class116.method1966(1048199259) && !Class345.method6140(644777212)) {
-				Class260.aClass282_Sub15_Sub2_3231 = Message.method7272((byte) 9);
-				Class230.method3912((byte) 3);
+			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && Class116.method1966(1048199259) && !Class345.method6140()) {
+				Class260.aClass282_Sub15_Sub2_3231 = Message.method7272();
+				Class230.method3912();
 				Class282_Sub15_Sub2 class282_sub15_sub2_4 = Class282_Sub20_Sub10.method15262(Class260.aClass282_Sub15_Sub2_3231, 1475290596);
-				Class42_Sub1.method14563(true, class282_sub15_sub2_4, (short) 569);
+				Class42_Sub1.method14563(class282_sub15_sub2_4, (short) 569);
 			}
 			Class11.method13400(IndexLoaders.INDEX_11, i_0, 0, i_2, false, (byte) -50);
 			Class150.method2580(-1, 255, (byte) -39);
@@ -270,7 +270,7 @@ public class Class117 {
 		return Class468_Sub8.INTERFACES[interfaceId].getComponent(hash);
 	}
 
-	static void method1982(int i_0, int i_1) {
+	static void method1982(int i_0) {
 		Class13.anInt128 = i_0;
 		SoftCache softcache_2 = Class13.aClass229_127;
 		synchronized (Class13.aClass229_127) {

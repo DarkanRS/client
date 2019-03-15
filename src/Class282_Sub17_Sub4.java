@@ -16,14 +16,14 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 		class61_1.method1212(-31291083 * this.anInt9937 * 339755293, -1425966289 * this.anInt9938 * 1183558607, this.anInt9939 * 2031642257 * -53470607, this.anInt9936 * -1979650293 * 2126963875, (byte) 86);
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.anInt9937 = rsbytebuffer_1.readInt();
 		this.anInt9938 = rsbytebuffer_1.readInt();
 		this.anInt9939 = rsbytebuffer_1.readUnsignedByte();
 		this.anInt9936 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1212(this.anInt9937, this.anInt9938, this.anInt9939, this.anInt9936, (byte) 62);
 	}
 

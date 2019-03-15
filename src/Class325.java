@@ -6,11 +6,11 @@ public class Class325 {
 		throw new Error();
 	}
 
-	public static Class199 method5787(Component component_0, int i_1) {
+	public static Class199 method5787(Component component_0) {
 		return new Class199_Sub1(component_0);
 	}
 
-	static boolean method5789(int i_0, int i_1) {
+	static boolean method5789(int i_0) {
 		return i_0 == 0 || i_0 == 7;
 	}
 

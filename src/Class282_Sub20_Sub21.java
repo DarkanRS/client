@@ -6,23 +6,23 @@ public class Class282_Sub20_Sub21 extends Class282_Sub20 {
 
 	Class282_Sub20_Sub21(int i_1) {
 		super(0, false);
-		this.method15378(i_1, -175309299);
+		this.method15378(i_1);
 	}
 
 	public Class282_Sub20_Sub21() {
 		this(0);
 	}
 
-	void method15378(int i_1, int i_2) {
+	void method15378(int i_1) {
 		this.anInt9869 = (i_1 & 0xff) << 4;
 		this.anInt9870 = (i_1 & 0xff00) >> 4;
 		this.anInt9871 = (i_1 & 0xff0000) >> 12;
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
-			this.method15378(rsbytebuffer_2.read24BitUnsignedInteger(), -175309299);
+			this.method15378(rsbytebuffer_2.read24BitUnsignedInteger());
 		default:
 		}
 	}

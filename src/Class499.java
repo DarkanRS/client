@@ -6,8 +6,8 @@ public class Class499 {
 		throw new Error();
 	}
 
-	static final void method8333(int i_0, int i_1) {
-		LinkedNodeList.method7887(-1685527133);
+	static final void method8333(int i_0) {
+		LinkedNodeList.method7887();
 		int i_2 = IndexLoaders.aClass377_1065.method6384(i_0, -822529502).anInt4327;
 		if (i_2 != 0) {
 			int i_3 = Class158_Sub1.PLAYER_VAR_PROVIDER.anIntArray26[i_0];
@@ -22,7 +22,7 @@ public class Class499 {
 
 	}
 
-	static void method8334(File file_0, int i_1) {
+	static void method8334(File file_0) {
 		Class271.aFile3327 = file_0;
 		if (!Class271.aFile3327.exists()) {
 			throw new RuntimeException("");

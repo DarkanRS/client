@@ -3,7 +3,7 @@ public class Class468_Sub20 extends Preference {
 	static int[] anIntArray7920;
 
 	int method7787() {
-		return this.manager.method13504((byte) 1).method7721(1185241423) < 245 ? 0 : 2;
+		return this.manager.method13504().method7721(1185241423) < 245 ? 0 : 2;
 	}
 
 	public Class468_Sub20(int i_1, Class282_Sub54 class282_sub54_2) {
@@ -11,8 +11,8 @@ public class Class468_Sub20 extends Preference {
 		Class15.method540(this.anInt5578, (byte) 115);
 	}
 
-	public void method12793(int i_1) {
-		if (this.manager.method13504((byte) 1).method7721(-1348501274) < 245) {
+	public void method12793() {
+		if (this.manager.method13504().method7721(-1348501274) < 245) {
 			this.anInt5578 = 0;
 		}
 		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
@@ -21,18 +21,18 @@ public class Class468_Sub20 extends Preference {
 	}
 
 	int method7781(int i_1) {
-		return this.manager.method13504((byte) 1).method7721(-1989714120) < 245 ? 0 : 2;
+		return this.manager.method13504().method7721(-1989714120) < 245 ? 0 : 2;
 	}
 
-	public int method12794(int i_1) {
+	public int method12794() {
 		return this.anInt5578;
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return this.manager.method13504((byte) 1).method7721(1512170398) < 245 ? 3 : 1;
+		return this.manager.method13504().method7721(1512170398) < 245 ? 3 : 1;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 		Class15.method540(this.anInt5578, (byte) 23);
 	}
@@ -43,15 +43,15 @@ public class Class468_Sub20 extends Preference {
 	}
 
 	int method7786() {
-		return this.manager.method13504((byte) 1).method7721(1353747708) < 245 ? 0 : 2;
+		return this.manager.method13504().method7721(1353747708) < 245 ? 0 : 2;
 	}
 
-	public boolean method12797(byte b_1) {
-		return this.manager.method13504((byte) 1).method7721(335245917) >= 245;
+	public boolean method12797() {
+		return this.manager.method13504().method7721(335245917) >= 245;
 	}
 
 	public int method7784(int i_1) {
-		return this.manager.method13504((byte) 1).method7721(-672863929) < 245 ? 3 : 1;
+		return this.manager.method13504().method7721(-672863929) < 245 ? 3 : 1;
 	}
 
 	public Class468_Sub20(Class282_Sub54 class282_sub54_1) {
@@ -59,7 +59,7 @@ public class Class468_Sub20 extends Preference {
 		Class15.method540(this.anInt5578, (byte) 39);
 	}
 
-	static short[][] method12805(float[][] floats_0, short[][] shorts_1, int i_2) {
+	static short[][] method12805(float[][] floats_0, short[][] shorts_1) {
 		for (int i_3 = 0; i_3 < floats_0.length; i_3++) {
 			for (int i_4 = 0; i_4 < shorts_1[i_3].length; i_4++) {
 				shorts_1[i_3][i_4] = (short) ((int) (16383.0F * floats_0[i_3][i_4]));
@@ -68,7 +68,7 @@ public class Class468_Sub20 extends Preference {
 		return shorts_1;
 	}
 
-	public static void method12806(Index index_0, byte b_1) {
+	public static void method12806(Index index_0) {
 		Class165.anInt2035 = index_0.getArchiveId("headicons_pk");
 		Class475.anInt5622 = index_0.getArchiveId("headicons_prayer");
 		Class16.anInt135 = index_0.getArchiveId("hint_headicons");
@@ -87,9 +87,9 @@ public class Class468_Sub20 extends Preference {
 		return Class282_Sub17.lobbyState(client.gameState, -1194987033) ? client.aClass184_7218 : client.aClass184_7475;
 	}
 
-	public static void method12808(int i_0) {
+	public static void method12808() {
 		if (Class302.aClass387Array3557 == null) {
-			Class302.aClass387Array3557 = LoadingStage.method6676(926734878);
+			Class302.aClass387Array3557 = LoadingStage.method6676();
 			IndexLoaders.LOADING_STAGE = Class302.aClass387Array3557[0];
 			Class302.aLong3562 = Class169.time();
 		}
@@ -97,7 +97,7 @@ public class Class468_Sub20 extends Preference {
 			Class165.method2852(-536830752);
 		}
 		LoadingStage xloadingstage_1 = IndexLoaders.LOADING_STAGE;
-		int i_2 = IndexLoaders.initializeGame((byte) 82);
+		int i_2 = IndexLoaders.initializeGame();
 		if (xloadingstage_1 == IndexLoaders.LOADING_STAGE) {
 			Class380.aString4636 = IndexLoaders.LOADING_STAGE.aClass433_4711.translate(Class223.CURRENT_LANGUAGE, -1559474593);
 			if (IndexLoaders.LOADING_STAGE.aBool4718) {
@@ -123,14 +123,14 @@ public class Class468_Sub20 extends Preference {
 			Class328.aClass306_3771.method5422(Class302.aLong3562, Class380.aString4636, Class302.anInt3563, IndexLoaders.LOADING_STAGE, -361143334);
 			if (Class302.anInterface27Array3559 != null) {
 				for (int i_3 = Class302.anInt3560 + 1; i_3 < Class302.anInterface27Array3559.length; i_3++) {
-					if (Class302.anInterface27Array3559[i_3].method191(1666965000) >= 100 && i_3 - 1 == Class302.anInt3560 && client.gameState != 4 && Class328.aClass306_3771.method5450(1945339550)) {
+					if (Class302.anInterface27Array3559[i_3].method191(1666965000) >= 100 && i_3 - 1 == Class302.anInt3560 && client.gameState != 4 && Class328.aClass306_3771.method5450()) {
 						try {
-							Class302.anInterface27Array3559[i_3].method161(-1145558933);
+							Class302.anInterface27Array3559[i_3].method161();
 						} catch (Exception exception_5) {
 							Class302.anInterface27Array3559 = null;
 							break;
 						}
-						Class328.aClass306_3771.method5445(Class302.anInterface27Array3559[i_3], (byte) 64);
+						Class328.aClass306_3771.method5445(Class302.anInterface27Array3559[i_3]);
 						++Class302.anInt3560;
 						if (Class302.anInt3560 >= Class302.anInterface27Array3559.length - 1 && Class302.anInterface27Array3559.length > 1) {
 							Class302.anInt3560 = Class275_Sub7.aClass400_7862.method6790(512238595) ? 0 : -1;

@@ -1,12 +1,12 @@
 public class Class468_Sub6 extends Preference {
 
-	public void method12653(int i_1) {
+	public void method12653() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 4) {
 			this.anInt5578 = this.method7781(1866918213);
 		}
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -22,7 +22,7 @@ public class Class468_Sub6 extends Preference {
 		return 1;
 	}
 
-	public int method12654(int i_1) {
+	public int method12654() {
 		return this.anInt5578;
 	}
 
@@ -51,6 +51,6 @@ public class Class468_Sub6 extends Preference {
 	}
 
 	static boolean method12661(String string_0, int i_1, byte b_2) {
-		return Class186.method3082(string_0, i_1, "openjs", 145298920);
+		return Class186.method3082(string_0, i_1, "openjs");
 	}
 }

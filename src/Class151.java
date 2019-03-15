@@ -5,13 +5,13 @@ public class Class151 {
 
 	public Class464 aClass464_1961 = new Class464();
 
-	public static void method2589(boolean bool_0, byte[] bytes_1, int i_2) {
+	public static void method2589(boolean bool_0, byte[] bytes_1) {
 		if (Class96_Sub20.aClass282_Sub35_9415 == null) {
 			Class96_Sub20.aClass282_Sub35_9415 = new RsByteBuffer(20000);
 		}
 		Class96_Sub20.aClass282_Sub35_9415.writeBytes(bytes_1, 0, bytes_1.length);
 		if (bool_0) {
-			Class468_Sub10.method12695(Class96_Sub20.aClass282_Sub35_9415.buffer, (byte) 1);
+			Class468_Sub10.method12695(Class96_Sub20.aClass282_Sub35_9415.buffer);
 			Class448.aClass217_Sub1Array5426 = new Class217_Sub1[Class4.anInt34];
 			int i_3 = 0;
 			for (int i_4 = Class485.anInt5740; i_4 <= Class244.anInt3003; i_4++) {
@@ -26,7 +26,7 @@ public class Class151 {
 		}
 	}
 
-	static void method2590(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
+	static void method2590(IComponentDefinitions icomponentdefinitions_0) {
 		if (client.aBool7344) {
 			if (icomponentdefinitions_0.anObjectArray1393 != null) {
 				IComponentDefinitions icomponentdefinitions_2 = Index.method5694(Class7.anInt56, client.anInt7345, -1264111799);
@@ -39,11 +39,11 @@ public class Class151 {
 				}
 			}
 			TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4573, client.aClass184_7475.isaac, 891007251);
-			tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288, -1183932171);
+			tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
 			tcpmessage_4.buffer.writeShortLE(client.anInt7345, (short) -9723);
-			tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426, -1183932171);
+			tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 			tcpmessage_4.buffer.writeLEInt(icomponentdefinitions_0.idHash, (byte) 89);
-			tcpmessage_4.buffer.writeIntV2(Class7.anInt56, (byte) 104);
+			tcpmessage_4.buffer.writeIntV2(Class7.anInt56);
 			tcpmessage_4.buffer.writeShortLE(client.anInt7346, (short) -1117);
 			client.aClass184_7475.method3049(tcpmessage_4, 656208756);
 		}
@@ -86,7 +86,7 @@ public class Class151 {
 	}
 
 	static final void method2592(byte b_0) {
-		if (!Class282_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState, 1908805257)) {
+		if (!Class282_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState)) {
 			Class233.aClass202_2883 = client.aClass184_7475.getConnection();
 			client.aClass184_7475.method3061(-1872117357);
 			Class365.setGameState(10);
@@ -108,7 +108,7 @@ public class Class151 {
 		try {
 			String str_3 = "";
 			if (throwable_1 != null) {
-				str_3 = Class96_Sub3.method13787(throwable_1, (byte) -73);
+				str_3 = Class96_Sub3.method13787(throwable_1);
 			}
 			if (string_0 != null) {
 				if (throwable_1 != null) {
@@ -116,7 +116,7 @@ public class Class151 {
 				}
 				str_3 = str_3 + string_0;
 			}
-			CS2Executor.method11251(str_3, -16686792);
+			CS2Executor.method11251(str_3);
 			str_3 = Class475.method7926(str_3, -53160653);
 			if (RuntimeException_Sub3.anApplet10460 != null) {
 				String str_4 = "Unknown";

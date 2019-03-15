@@ -28,7 +28,7 @@ public class Class107 {
 		return null;
 	}
 
-	void method1821(int i_1, short s_2) {
+	void method1821(int i_1) {
 		Class282_Sub21 class282_sub21_3 = this.method1823(i_1, 1887501575);
 		if (class282_sub21_3 != null) {
 			class282_sub21_3.remove();
@@ -36,12 +36,12 @@ public class Class107 {
 		}
 	}
 
-	public void method1822(int i_1, String string_2, Class282_Sub21 class282_sub21_3, int i_4) {
+	public void method1822(int i_1, String string_2, Class282_Sub21 class282_sub21_3) {
 		Class282_Sub21 class282_sub21_5 = this.method1820(string_2, -2129504033);
 		if (class282_sub21_5 != null && class282_sub21_5.anInt7675 != i_1) {
 			throw new IllegalArgumentException(string_2);
 		} else {
-			this.method1821(i_1, (short) -24232);
+			this.method1821(i_1);
 			if (i_1 >= this.aClass282_Sub21Array1079.length) {
 				int i_6;
 				for (i_6 = this.aClass282_Sub21Array1079.length; i_1 >= i_6; i_6 += i_6) {
@@ -72,7 +72,7 @@ public class Class107 {
 	}
 
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
-		CS2Script cs2script_5 = Class225_Sub1.method12792(class397_0, i_1, i_2, 856735933);
+		CS2Script cs2script_5 = Class225_Sub1.method12792(class397_0, i_1, i_2);
 		if (cs2script_5 == null) {
 			Shadow.method15509(282059094);
 		} else {
@@ -90,13 +90,13 @@ public class Class107 {
 					i_7 = Class282_Sub20_Sub24.aClass118_9884.anInt1428;
 				}
 				cs2executor_3.intLocals[0] = Class163.mouseRecorder.method3569(2102959757) - i_6;
-				cs2executor_3.intLocals[1] = Class163.mouseRecorder.method3570(756095591) - i_7;
+				cs2executor_3.intLocals[1] = Class163.mouseRecorder.method3570() - i_7;
 			}
 			Class51.method1068(cs2script_5, 200000, cs2executor_3, 223631814);
 		}
 	}
 
-	static final void method1838(IComponentDefinitions icomponentdefinitions_0, byte[] bytes_1, byte[] bytes_2, CS2Executor cs2executor_3, int i_4) {
+	static final void method1838(IComponentDefinitions icomponentdefinitions_0, byte[] bytes_1, byte[] bytes_2, CS2Executor cs2executor_3) {
 		int i_5 = cs2executor_3.intStack[--cs2executor_3.intStackPtr] - 1;
 		if (i_5 >= 0 && i_5 <= 9) {
 			Class445.method7429(icomponentdefinitions_0, i_5, bytes_1, bytes_2, cs2executor_3, -1172279897);

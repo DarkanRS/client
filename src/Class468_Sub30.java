@@ -4,12 +4,12 @@ public class Class468_Sub30 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public void method13415(byte b_1) {
+	public void method13415() {
 		if (this.anInt5578 != 0 && this.manager.aClass468_Sub17_8200.method12762(1488967501) != 1) {
 			this.anInt5578 = 0;
 		}
 
-		if (this.anInt5578 != 0 && this.manager.aClass468_Sub29_8201.method13050(519629067) == 2) {
+		if (this.anInt5578 != 0 && this.manager.aClass468_Sub29_8201.method13050() == 2) {
 			this.anInt5578 = 0;
 		}
 
@@ -28,7 +28,7 @@ public class Class468_Sub30 extends Preference {
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return i_1 != 0 && this.manager.aClass468_Sub29_8201.method13050(519629067) == 2 ? 3 : (i_1 != 0 && this.manager.aClass468_Sub17_8200.method12762(410905125) != 1 ? 2 : 1);
+		return i_1 != 0 && this.manager.aClass468_Sub29_8201.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.aClass468_Sub17_8200.method12762(410905125) != 1 ? 2 : 1);
 	}
 
 	public int method13417(int i_1) {
@@ -36,7 +36,7 @@ public class Class468_Sub30 extends Preference {
 	}
 
 	public int method7784(int i_1) {
-		return i_1 != 0 && this.manager.aClass468_Sub29_8201.method13050(519629067) == 2 ? 3 : (i_1 != 0 && this.manager.aClass468_Sub17_8200.method12762(-1758430035) != 1 ? 2 : 1);
+		return i_1 != 0 && this.manager.aClass468_Sub29_8201.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.aClass468_Sub17_8200.method12762(-1758430035) != 1 ? 2 : 1);
 	}
 
 	void method7780(int i_1) {
@@ -51,15 +51,15 @@ public class Class468_Sub30 extends Preference {
 		return 1;
 	}
 
-	public boolean method13421(int i_1) {
+	public boolean method13421() {
 		return true;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
-	static int method13422(char var_0, Language xlanguage_1, int i_2) {
+	static int method13422(char var_0, Language xlanguage_1) {
 		int i_3 = var_0 << 4;
 		if (Character.isUpperCase(var_0) || Character.isTitleCase(var_0)) {
 			char var_4 = Character.toLowerCase(var_0);

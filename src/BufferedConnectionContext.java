@@ -52,7 +52,7 @@ public class BufferedConnectionContext {
 			while (true) {
 				TCPMessage tcpmessage_2 = (TCPMessage) this.queuedPackets.head((byte) 41);
 				if (tcpmessage_2 == null || tcpmessage_2.anInt7680 > this.aClass282_Sub35_2282.buffer.length - this.aClass282_Sub35_2282.index) {
-					this.aClass202_2281.write(this.aClass282_Sub35_2282.buffer, 0, this.aClass282_Sub35_2282.index, -771843978);
+					this.aClass202_2281.write(this.aClass282_Sub35_2282.buffer, this.aClass282_Sub35_2282.index, -771843978);
 					this.anInt2297 += this.aClass282_Sub35_2282.index;
 					this.anInt2290 = 0;
 					break;
@@ -60,8 +60,8 @@ public class BufferedConnectionContext {
 				this.aClass282_Sub35_2282.writeBytes(tcpmessage_2.buffer.buffer, 0, tcpmessage_2.anInt7680);
 				this.anInt2279 -= tcpmessage_2.anInt7680;
 				tcpmessage_2.remove();
-				tcpmessage_2.buffer.method13059(1420319429);
-				tcpmessage_2.method12360(-923048057);
+				tcpmessage_2.buffer.method13059();
+				tcpmessage_2.method12360();
 			}
 		}
 	}

@@ -72,7 +72,7 @@ public class Class51 implements Interface2 {
 		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
-	public void method22(int i_1) {
+	public void method22() {
 		FontMetrics fontmetrics_2 = Class163.method2845(this.aClass317_486, this.aClass62_485.anInt658, (byte) 81);
 		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1534(this.aClass317_487, this.aClass62_485.anInt658), true);
 	}

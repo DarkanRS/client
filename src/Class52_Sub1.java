@@ -5,7 +5,7 @@ public class Class52_Sub1 extends Class52 {
 	NativeSprite aClass160_9150;
 
 	public void method23() {
-		super.method22(1273546148);
+		super.method22();
 		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -171983138);
 	}
 
@@ -27,8 +27,8 @@ public class Class52_Sub1 extends Class52 {
 		return !super.method10(2015288079) ? false : this.aClass317_493.loadCutscene(((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769 * -2099828279);
 	}
 
-	public void method22(int i_1) {
-		super.method22(1273546148);
+	public void method22() {
+		super.method22();
 		this.aClass160_9150 = Class152.method2600(this.aClass317_493, ((Class350_Sub1) this.aClass350_489).anInt7756, -1723466442);
 	}
 
@@ -41,22 +41,22 @@ public class Class52_Sub1 extends Class52 {
 	}
 
 	public void method16() {
-		super.method22(1273546148);
+		super.method22();
 		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, 682283144);
 	}
 
 	public void method18() {
-		super.method22(1273546148);
+		super.method22();
 		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -1248848887);
 	}
 
 	public void method15() {
-		super.method22(1273546148);
+		super.method22();
 		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, 419167438);
 	}
 
 	public void method19() {
-		super.method22(1273546148);
+		super.method22();
 		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -2039268926);
 	}
 

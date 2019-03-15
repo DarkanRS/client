@@ -2,16 +2,16 @@ public class Class282_Sub26_Sub1_Sub2 extends Class282_Sub26_Sub1 {
 
 	byte[] aByteArray10470;
 
-	Class282_Sub26_Sub1_Sub2(int i_1, byte[] bytes_2, int i_3, int i_4) {
-		this.anInt9750 = i_1;
+	Class282_Sub26_Sub1_Sub2(byte[] bytes_2, int i_3, int i_4) {
+		this.anInt9750 = 22050;
 		this.aByteArray10470 = bytes_2;
 		this.anInt9749 = i_3;
 		this.anInt9751 = i_4;
 	}
 
 	public Class282_Sub26_Sub1_Sub2 method16062(Class344 class344_1) {
-		this.aByteArray10470 = class344_1.method6102(this.aByteArray10470, 80551698);
-		this.anInt9750 = class344_1.method6112(this.anInt9750, 934243412);
+		this.aByteArray10470 = class344_1.method6102(this.aByteArray10470);
+		this.anInt9750 = class344_1.method6112(this.anInt9750);
 		if (this.anInt9749 == this.anInt9751) {
 			this.anInt9749 = this.anInt9751 = class344_1.method6114(this.anInt9749, 750841507);
 		} else {

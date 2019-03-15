@@ -16,7 +16,7 @@ public class Queue implements Iterable {
 		}
 	}
 
-	public void method7936(CacheableNode cacheablenode_1, int i_2) {
+	public void method7936(CacheableNode cacheablenode_1) {
 		if (cacheablenode_1.current != null) {
 			cacheablenode_1.method13452();
 		}
@@ -49,11 +49,11 @@ public class Queue implements Iterable {
 		this.aClass282_Sub50_5629.current = this.aClass282_Sub50_5629;
 	}
 
-	public CacheableNode method7941(byte b_1) {
-		return this.method7946((CacheableNode) null, -2037217557);
+	public CacheableNode method7941() {
+		return this.method7946((CacheableNode) null);
 	}
 
-	CacheableNode method7946(CacheableNode cacheablenode_1, int i_2) {
+	CacheableNode method7946(CacheableNode cacheablenode_1) {
 		CacheableNode cacheablenode_3;
 		if (cacheablenode_1 == null) {
 			cacheablenode_3 = this.aClass282_Sub50_5629.aClass282_Sub50_8119;
@@ -84,7 +84,7 @@ public class Queue implements Iterable {
 		return new Class469(this);
 	}
 
-	public static void method7960(Index index_0, byte b_1) {
+	public static void method7960(Index index_0) {
 		Class16.p11FullIndex = index_0.getArchiveId("p11_full");
 		Class16.anInt136 = index_0.getArchiveId("p12_full");
 		Class395.anInt4788 = index_0.getArchiveId("b12_full");

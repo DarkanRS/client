@@ -54,7 +54,7 @@ public class Class46 implements Interface2 {
 	public void method16() {
 	}
 
-	public void method22(int i_1) {
+	public void method22() {
 	}
 
 	public boolean method13() {
@@ -72,7 +72,7 @@ public class Class46 implements Interface2 {
 		return true;
 	}
 
-	static final boolean performCalculationS2(int i_0, int i_1, RouteStrategy routestrategy_2, ClipMap clipmap_3, int i_4) {
+	static final boolean performCalculationS2(int i_0, int i_1, RouteStrategy routestrategy_2, ClipMap clipmap_3) {
 		int i_5 = i_0;
 		int i_6 = i_1;
 		byte b_7 = 64;
@@ -164,7 +164,7 @@ public class Class46 implements Interface2 {
 		return false;
 	}
 
-	static final boolean performCalculationSX(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4, byte b_5) {
+	static final boolean performCalculationSX(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4) {
 		int i_6 = i_0;
 		int i_7 = i_1;
 		byte b_8 = 64;
@@ -335,10 +335,10 @@ public class Class46 implements Interface2 {
 		return new Class252[] { Class252.aClass252_3111, Class252.aClass252_3110, Class252.aClass252_3113, Class252.aClass252_3108, Class252.aClass252_3105, Class252.aClass252_3109, Class252.aClass252_3107, Class252.aClass252_3106 };
 	}
 
-	public static int method932(int i_0) {
+	public static int method932() {
 		SoftCache softcache_1 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			int i_2 = PlayerAppearance.aClass229_2920.method3862((byte) 2);
+			int i_2 = PlayerAppearance.aClass229_2920.method3862();
 			return i_2;
 		}
 	}

@@ -6,7 +6,7 @@ public class Class359 {
 		throw new Error();
 	}
 
-	static void method6241(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static void method6241(RsByteBuffer rsbytebuffer_0) {
 		for (int i_2 = 0; i_2 < Class4.anInt34; i_2++) {
 			int i_3 = rsbytebuffer_0.readUnsignedSmart(1888630053);
 			int i_4 = rsbytebuffer_0.readUnsignedShort();
@@ -24,7 +24,7 @@ public class Class359 {
 		icomponentdefinitions_0.anInt1289 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1375 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 14);
-		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
 		if (icomponentdefinitions_0.type == 0) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1114649951);
 		}

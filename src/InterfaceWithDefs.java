@@ -3,7 +3,7 @@ public class InterfaceWithDefs {
 	Interface aClass98_5885;
 	IComponentDefinitions aClass118_5886;
 
-	boolean method8764(int i_1, int i_2, int i_3) {
+	boolean method8764(int i_1, int i_2) {
 		IComponentDefinitions icomponentdefinitions_4 = Index.method5694(i_1, i_2, -1661012661);
 		if (icomponentdefinitions_4 != null) {
 			this.aClass98_5885 = Class468_Sub8.INTERFACES[i_1 >> 16];
@@ -15,7 +15,7 @@ public class InterfaceWithDefs {
 		}
 	}
 
-	boolean method8766(Interface interface_1, int i_2, int i_3, byte b_4) {
+	boolean method8766(Interface interface_1, int i_2, int i_3) {
 		if (interface_1 != null) {
 			IComponentDefinitions icomponentdefinitions_5 = interface_1.getComponent(i_2);
 			if (icomponentdefinitions_5 != null) {
@@ -34,13 +34,13 @@ public class InterfaceWithDefs {
 		this.aClass118_5886 = null;
 	}
 
-	IComponentDefinitions method8772(int i_1) {
+	IComponentDefinitions method8772() {
 		return this.aClass98_5885.getComponent(this.aClass118_5886.idHash);
 	}
 
 	static final void method8777(int i_0, byte b_1) {
 		if (Class456_Sub3.isInterfaceLoaded(i_0, (int[]) null, -1514339264)) {
-			Class464.method7743(Class468_Sub8.INTERFACES[i_0].components, -1, (byte) 10);
+			Class464.method7743(Class468_Sub8.INTERFACES[i_0].components, -1);
 		}
 
 	}

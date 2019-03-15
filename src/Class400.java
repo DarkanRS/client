@@ -17,10 +17,10 @@ public class Class400 {
 		}
 	}
 
-	public Class393 method6785(int i_1, int i_2) {
+	public Class393 method6785(int i_1) {
 		byte[] bytes_3 = this.aClass317_4817.getFile(i_1, 0);
 		Class393 class393_4 = new Class393();
-		class393_4.method6743(new RsByteBuffer(bytes_3), -1754311806);
+		class393_4.method6743(new RsByteBuffer(bytes_3));
 		return class393_4;
 	}
 
@@ -62,7 +62,7 @@ public class Class400 {
 			this.anInt4820 = -1;
 		} else {
 			int i_6 = rsbytebuffer_4.readUnsignedByte();
-			Class60[] arr_7 = Class112.method1870(-738775405);
+			Class60[] arr_7 = Class112.method1870();
 			boolean bool_8 = true;
 			int i_9;
 			int i_10;
@@ -144,7 +144,7 @@ public class Class400 {
 
 	}
 
-	static String method6793(String string_0, byte b_1) {
+	static String method6793(String string_0) {
 		String string_2 = null;
 		int i_3 = string_0.indexOf("--> ");
 		if (i_3 >= 0) {
@@ -251,7 +251,7 @@ public class Class400 {
 		}
 
 		try {
-			Class361.aClass361_4173.method6256(new Object[] { Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.windowedMode()), Integer.valueOf(Class393.preferences.aClass468_Sub7_8210.method12666(1852404651)) }, 2140026236);
+			Class361.aClass361_4173.method6256(new Object[] { Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.windowedMode()), Integer.valueOf(Class393.preferences.aClass468_Sub7_8210.method12666(1852404651)) });
 		} catch (Throwable throwable_4) {
 			;
 		}

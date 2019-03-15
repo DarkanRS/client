@@ -3,38 +3,38 @@ final class Class82 implements Interface11 {
 	public static Class75[] aClass75Array804;
 
 	public long method78(String string_1) {
-		return Class254.method4379(string_1, 1048776146);
+		return Class254.method4379(string_1);
 	}
 
 	public long method79(String string_1, int i_2) {
-		return Class254.method4379(string_1, 1048776146);
+		return Class254.method4379(string_1);
 	}
 
 	public long method81(String string_1) {
-		return Class254.method4379(string_1, 1048776146);
+		return Class254.method4379(string_1);
 	}
 
 	public long method80(String string_1) {
-		return Class254.method4379(string_1, 1048776146);
+		return Class254.method4379(string_1);
 	}
 
 	public long method82(String string_1) {
-		return Class254.method4379(string_1, 1048776146);
+		return Class254.method4379(string_1);
 	}
 
 	static final void method1454(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		cs2executor_2.intStackPtr -= 2;
 		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
+		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4);
 		if (i_5 != attributedefault_6.defaultInt) {
 			icomponentdefinitions_0.method1999(i_4, i_5, 146446242);
 		} else {
-			icomponentdefinitions_0.method1995(i_4, -1265527536);
+			icomponentdefinitions_0.method1995(i_4);
 		}
 	}
 
-	static final void method1455(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method1455(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 4;
 		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1339 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
@@ -53,7 +53,7 @@ final class Class82 implements Interface11 {
 		}
 	}
 
-	static void method1457(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class455 class455_3, int i_4, int i_5, int i_6) {
+	static void method1457(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class455 class455_3, int i_4, int i_5) {
 		int i_7 = Class197.NUM_PLAYER_INDICES;
 		int[] ints_8 = Class197.PLAYER_INDICES;
 		for (int i_9 = 0; i_9 < i_7; i_9++) {

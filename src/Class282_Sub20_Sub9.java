@@ -119,7 +119,7 @@ public class Class282_Sub20_Sub9 extends Class282_Sub20 {
 		super(0, true);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9782 = rsbytebuffer_2.readUnsignedByte();
@@ -154,10 +154,10 @@ public class Class282_Sub20_Sub9 extends Class282_Sub20 {
 	void method12321(int i_1) {
 	}
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -1227771715);
 		if (this.aClass320_7667.aBool3722) {
-			int[][] ints_4 = this.aClass320_7667.method5722((byte) 1);
+			int[][] ints_4 = this.aClass320_7667.method5722();
 			int i_5 = 0;
 			int i_6 = 0;
 			int i_7 = 0;

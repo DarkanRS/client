@@ -29,11 +29,11 @@ public class Class253 {
 		this.aClass282_Sub15_3122 = class282_sub15_1;
 	}
 
-	public static final void method4330(int i_0, boolean bool_1, int i_2) {
-		if (i_0 >= 8000 && i_0 <= 48000) {
-			anInt3129 = i_0;
+	public static final void method4330(boolean bool_1) {
+		if (22050 >= 8000 && 22050 <= 48000) {
+			anInt3129 = 22050;
 			aBool3115 = bool_1;
-			anInt3139 = i_2;
+			anInt3139 = 2;
 		} else {
 			throw new IllegalArgumentException();
 		}
@@ -93,7 +93,7 @@ public class Class253 {
 				}
 
 				while (long_1 > this.aLong3124 + 5000L) {
-					this.method4373(256);
+					this.method4373();
 					this.aLong3124 += (long) (256000 / anInt3129);
 					long_1 = Class169.time();
 				}
@@ -140,7 +140,7 @@ public class Class253 {
 					}
 
 					while (i_5 < i_4) {
-						this.method4337(this.anIntArray3140, 256);
+						this.method4337(this.anIntArray3140);
 						this.method4342();
 						i_5 += 256;
 					}
@@ -215,14 +215,14 @@ public class Class253 {
 		this.aBool3135 = true;
 	}
 
-	final void method4337(int[] ints_1, int i_2) {
-		int i_3 = i_2;
+	final void method4337(int[] ints_1) {
+		int i_3 = 256;
 		if (aBool3115) {
-			i_3 = i_2 << 1;
+			i_3 = 256 << 1;
 		}
 
 		Arrays.fill(ints_1, 0, i_3, 0);
-		this.anInt3117 -= i_2;
+		this.anInt3117 -= 256;
 		if (this.aClass282_Sub15_3122 != null && this.anInt3117 <= 0) {
 			this.anInt3117 += anInt3129 >> 4;
 			method4338(this.aClass282_Sub15_3122);
@@ -319,7 +319,7 @@ public class Class253 {
 		}
 
 		if (this.aClass282_Sub15_3122 != null) {
-			this.aClass282_Sub15_3122.method12230(ints_1, 0, i_2);
+			this.aClass282_Sub15_3122.method12230(ints_1, 0, 256);
 		}
 
 		this.aLong3124 = Class169.time();
@@ -369,14 +369,14 @@ public class Class253 {
 	void method4370(Component component_1) throws Exception {
 	}
 
-	final void method4373(int i_1) {
-		this.anInt3117 -= i_1;
+	final void method4373() {
+		this.anInt3117 -= 256;
 		if (this.anInt3117 < 0) {
 			this.anInt3117 = 0;
 		}
 
 		if (this.aClass282_Sub15_3122 != null) {
-			this.aClass282_Sub15_3122.method12231(i_1);
+			this.aClass282_Sub15_3122.method12231(256);
 		}
 
 	}

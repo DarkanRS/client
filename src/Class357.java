@@ -10,7 +10,7 @@ public class Class357 implements Interface3 {
 
 	public int anInt4120;
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_606;
 	}
 
@@ -26,7 +26,7 @@ public class Class357 implements Interface3 {
 		return Class60.aClass60_606;
 	}
 
-	static final void method6233(byte b_0) {
+	static final void method6233() {
 		int[] ints_1 = Class197.PLAYER_INDICES;
 		int i_2;
 		for (i_2 = 0; i_2 < Class197.NUM_PLAYER_INDICES; i_2++) {

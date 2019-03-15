@@ -33,7 +33,7 @@ public class Class7 implements Runnable {
 
 	public void run() {
 		while (this.aBool55) {
-			this.method354(2084342034);
+			this.method354();
 		}
 	}
 
@@ -41,7 +41,7 @@ public class Class7 implements Runnable {
 		return this.aLong52;
 	}
 
-	void method354(int i_1) {
+	void method354() {
 		if (this.anInetAddress54 != null) {
 			try {
 				byte[] bytes_2 = this.anInetAddress54.getAddress();

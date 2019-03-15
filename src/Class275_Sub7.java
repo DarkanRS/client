@@ -8,8 +8,8 @@ public class Class275_Sub7 extends Class275 {
 		this.aClass198_7863 = hitbardefinitions_1;
 	}
 
-	public Class275_Sub3 method12600(int i_1, short s_2) {
-		Class275_Sub3 class275_sub3_3 = (Class275_Sub3) this.aClass457_7861.method7659(301908602);
+	public Class275_Sub3 method12600(int i_1) {
+		Class275_Sub3 class275_sub3_3 = (Class275_Sub3) this.aClass457_7861.method7659();
 		if (class275_sub3_3 != null && class275_sub3_3.anInt7811 <= i_1) {
 			for (Class275_Sub3 class275_sub3_4 = (Class275_Sub3) this.aClass457_7861.method7650((byte) 12); class275_sub3_4 != null && class275_sub3_4.anInt7811 <= i_1; class275_sub3_4 = (Class275_Sub3) this.aClass457_7861.method7650((byte) 86)) {
 				class275_sub3_3.method4887((byte) 3);
@@ -31,10 +31,10 @@ public class Class275_Sub7 extends Class275 {
 		Class275_Sub3 class275_sub3_6 = null;
 		int i_7 = 0;
 
-		for (Class275_Sub3 class275_sub3_8 = (Class275_Sub3) this.aClass457_7861.method7659(301908602); class275_sub3_8 != null; class275_sub3_8 = (Class275_Sub3) this.aClass457_7861.method7650((byte) 78)) {
+		for (Class275_Sub3 class275_sub3_8 = (Class275_Sub3) this.aClass457_7861.method7659(); class275_sub3_8 != null; class275_sub3_8 = (Class275_Sub3) this.aClass457_7861.method7650((byte) 78)) {
 			++i_7;
 			if (class275_sub3_8.anInt7811 == i_1) {
-				class275_sub3_8.method12566(i_1, i_2, i_3, i_4, (byte) 53);
+				class275_sub3_8.method12566(i_1, i_2, i_3, i_4);
 				return;
 			}
 
@@ -50,13 +50,13 @@ public class Class275_Sub7 extends Class275 {
 		} else {
 			Class516.method8866(new Class275_Sub3(i_1, i_2, i_3, i_4), class275_sub3_6, -653430478);
 			if (i_7 >= Class58.aClass529_527.anInt7030) {
-				this.aClass457_7861.method7659(301908602).method4887((byte) -101);
+				this.aClass457_7861.method7659().method4887((byte) -101);
 			}
 		}
 
 	}
 
-	public boolean method12602(int i_1) {
+	public boolean method12602() {
 		return this.aClass457_7861.method7666(1726407188);
 	}
 

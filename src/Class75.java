@@ -36,7 +36,7 @@ public final class Class75 {
 			}
 		}
 		if (this.anInt739 >= 0) {
-			this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i_3, i_1, i_2, true, this.aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -1440996136);
+			this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i_3, i_1, i_2, true, this.aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(), -1440996136);
 			this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method15791(i_4, true, (byte) -89);
 		} else {
 			this.aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = this.aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i_3;
@@ -51,24 +51,24 @@ public final class Class75 {
 		this.aBool742 = false;
 	}
 
-	void method1338(int i_1, int i_2, int i_3, int i_4) {
+	void method1338(int i_1, int i_2, int i_3) {
 		if (this.aClass521_Sub1_Sub1_Sub2_Sub2_741 != null) {
-			this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i_1, i_2, i_3, true, this.aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -1226948828);
+			this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i_1, i_2, i_3, true, this.aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(), -1226948828);
 		} else {
 			this.aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = this.aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i_1;
 			this.aClass521_Sub1_Sub1_Sub2_Sub1_744.method16130(i_2, i_3, -909985689);
 		}
 	}
 
-	boolean method1339(short s_1) {
+	boolean method1339() {
 		if (this.anInt739 < 0) {
 			return true;
 		} else {
 			NPCDefinitions npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.anInt739, (byte) 53);
-			boolean bool_3 = npcdefinitions_2.method6881(-1593262415);
+			boolean bool_3 = npcdefinitions_2.method6881();
 			if (this.anIntArray745 == null) {
 				RenderAnimDefs renderanimdefs_4 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(npcdefinitions_2.anInt4898, (byte) -42);
-				this.anIntArray745 = renderanimdefs_4.method3828(163665015);
+				this.anIntArray745 = renderanimdefs_4.method3828();
 			}
 			int[] ints_7 = this.anIntArray745;
 			for (int i_5 = 0; i_5 < ints_7.length; i_5++) {
@@ -99,7 +99,7 @@ public final class Class75 {
 		rsbytebuffer_1.readString();
 	}
 
-	public static String method1353(String string_0, int i_1) {
+	public static String method1353(String string_0) {
 		StringBuilder stringbuilder_2 = new StringBuilder();
 		int i_3 = string_0.length();
 		for (int i_4 = 0; i_4 < i_3; i_4++) {
@@ -132,7 +132,7 @@ public final class Class75 {
 					}
 					i_7 += var_8 + 10 - 65;
 				}
-				if (i_7 != 0 && Class209.method3600((byte) i_7, 1053306035)) {
+				if (i_7 != 0 && Class209.method3600((byte) i_7)) {
 					stringbuilder_2.append(Class11.getChar((byte) i_7, -847887616));
 				}
 				i_4 += 2;
@@ -145,7 +145,7 @@ public final class Class75 {
 		return stringbuilder_2.toString();
 	}
 
-	static String method1354(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1) {
-		return class282_sub50_sub15_0.aString9771 + ParticleProducerDefinition.method1163(16777215, 619010179) + " >";
+	static String method1354(Class282_Sub50_Sub15 class282_sub50_sub15_0) {
+		return class282_sub50_sub15_0.aString9771 + ParticleProducerDefinition.method1163(16777215) + " >";
 	}
 }

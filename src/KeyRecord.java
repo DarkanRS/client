@@ -6,9 +6,9 @@ public interface KeyRecord {
 
 	int method4();
 
-	int getType(int var1);
+	int getType();
 
-	int method92(int var1);
+	int method92();
 
 	long method119(int var1);
 

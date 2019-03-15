@@ -49,7 +49,7 @@ public final class HashTable {
 		node_1.data = long_2;
 	}
 
-	public int method7540(int i_1) {
+	public int method7540() {
 		int i_2 = 0;
 
 		for (int i_3 = 0; i_3 < this.anInt5445; i_3++) {

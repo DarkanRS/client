@@ -10,7 +10,7 @@ public class Class438 {
 
 	Index aClass317_5341;
 
-	public void method7324(int i_1) {
+	public void method7324() {
 		SoftCache softcache_2 = this.aClass229_5344;
 		synchronized (this.aClass229_5344) {
 			this.aClass229_5344.method3859(1982287383);
@@ -21,7 +21,7 @@ public class Class438 {
 		}
 	}
 
-	public Class419 method7325(int i_1, int i_2) {
+	public Class419 method7325(int i_1) {
 		SoftCache softcache_4 = this.aClass229_5344;
 		Class419 class419_3;
 		synchronized (this.aClass229_5344) {
@@ -38,7 +38,7 @@ public class Class438 {
 			class419_3 = new Class419();
 			class419_3.aClass438_5001 = this;
 			if (bytes_10 != null) {
-				class419_3.method7024(new RsByteBuffer(bytes_10), 2098733573);
+				class419_3.method7024(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_5344;
 			synchronized (this.aClass229_5344) {
@@ -48,18 +48,18 @@ public class Class438 {
 		}
 	}
 
-	public void method7326(int i_1, int i_2) {
+	public void method7326() {
 		SoftCache softcache_3 = this.aClass229_5344;
 		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3858(i_1, (byte) -55);
+			this.aClass229_5344.method3858(5, (byte) -55);
 		}
 		softcache_3 = this.aClass229_5342;
 		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3858(i_1, (byte) 18);
+			this.aClass229_5342.method3858(5, (byte) 18);
 		}
 	}
 
-	public void method7327(int i_1) {
+	public void method7327() {
 		SoftCache softcache_2 = this.aClass229_5344;
 		synchronized (this.aClass229_5344) {
 			this.aClass229_5344.method3863(1594658345);
@@ -87,18 +87,18 @@ public class Class438 {
 			}
 			class184_4.method3051((byte) -59);
 		}
-		JS5StandardRequester.method5558(-500941691);
+		JS5StandardRequester.method5558();
 		Class356.method6227(false, (byte) -48);
 		IndexLoaders.MAP_REGION_DECODER.method4444(1869336559);
 		IndexLoaders.MAP_REGION_DECODER.method4485(-756888037);
-		Class122.method2111(false, 662490589);
-		Class358.method6240(2, 1510969650);
+		Class122.method2111(false);
+		Class358.method6240(1510969650);
 		Class260.anInt3223 = -1;
 		Class260.aBool3220 = false;
 		Class468_Sub6.method12658(-111108219);
-		ClipMap.method6008(true, (byte) 8);
+		ClipMap.method6008(true);
 		Class459.method7678(-1273832193);
-		Class204.method3367(-2146743661);
+		Class204.method3367();
 		Class42_Sub1.method14562(1915286568);
 		if (bool_0) {
 			Class365.setGameState(12);
@@ -112,7 +112,7 @@ public class Class438 {
 		}
 	}
 
-	static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14, int i_15) {
+	static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14) {
 		if (i_1 != 0 && i_3 != -1) {
 			Object obj_16 = null;
 			int i_17;
@@ -131,7 +131,7 @@ public class Class438 {
 				}
 			}
 			if (obj_16 != null) {
-				RenderAnimDefs renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs((byte) -17);
+				RenderAnimDefs renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs();
 				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
 					i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
 				}
@@ -141,7 +141,7 @@ public class Class438 {
 			}
 		}
 		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1810939972), i_0, Class272.anInt3331, Class272.anInt3331, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
-		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.anInt3331, (byte) 65) - i_5, i_10 + client.cycles, -209443166);
+		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.anInt3331, (byte) 65) - i_5, i_10 + client.cycles);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_20), -1750493342);
 	}
 }

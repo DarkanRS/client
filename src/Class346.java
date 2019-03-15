@@ -11,7 +11,7 @@ public class Class346 {
 
 	static NodeCollection aClass482_4049;
 
-	public static byte[] method6154(Object object_0, boolean bool_1, byte b_2) {
+	public static byte[] method6154(Object object_0, boolean bool_1) {
 		if (object_0 == null) {
 			return null;
 		} else if (object_0 instanceof byte[]) {
@@ -28,7 +28,7 @@ public class Class346 {
 		}
 	}
 
-	static boolean method6155(RsBitsBuffer rsbitsbuffer_0, int i_1, short s_2) {
+	static boolean method6155(RsBitsBuffer rsbitsbuffer_0, int i_1) {
 		int i_3 = rsbitsbuffer_0.readBits(2, (byte) -19);
 		int i_4;
 		int i_5;
@@ -37,7 +37,7 @@ public class Class346 {
 		int i_11;
 		if (i_3 == 0) {
 			if (rsbitsbuffer_0.readBits(1, (byte) 91) != 0) {
-				method6155(rsbitsbuffer_0, i_1, (short) 371);
+				method6155(rsbitsbuffer_0, i_1);
 			}
 			i_4 = rsbitsbuffer_0.readBits(6, (byte) 50);
 			i_5 = rsbitsbuffer_0.readBits(6, (byte) -76);
@@ -67,7 +67,7 @@ public class Class346 {
 				player_8.aBool10550 = class4_7.aBool33;
 				player_8.aByteArray10365[0] = Class197.playerMovementTypes[i_1];
 				player_8.plane = player_8.aByte7968 = (byte) i_10;
-				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_14, i_15, 1509882915)) {
+				if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_14, i_15, 1509882915)) {
 					player_8.aByte7968 = (byte) (player_8.aByte7968 + 1);
 				}
 				player_8.method16130(i_14, i_15, -2001556911);
@@ -137,8 +137,8 @@ public class Class346 {
 		}
 	}
 
-	public static Class411 method6156(int i_0, int i_1) {
-		Class411[] arr_2 = HashTableIterator.method7519((short) 19418);
+	public static Class411 method6156(int i_0) {
+		Class411[] arr_2 = HashTableIterator.method7519();
 		Class411[] arr_3 = arr_2;
 		for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class411 class411_5 = arr_3[i_4];
@@ -167,10 +167,10 @@ public class Class346 {
 		int i_7 = i_3 - i_1;
 		if (i_6 == 0) {
 			if (i_7 != 0) {
-				Class468_Sub15.method12746(i_0, i_1, i_3, i_4, 1519996212);
+				Class468_Sub15.method12746(i_0, i_1, i_3, i_4);
 			}
 		} else if (i_7 == 0) {
-			CS2Executor.method11250(i_0, i_2, i_1, i_4, -789142799);
+			CS2Executor.method11250(i_0, i_2, i_1, i_4);
 		} else {
 			int i_8 = (i_7 << 12) / i_6;
 			int i_9 = i_1 - (i_0 * i_8 >> 12);
@@ -216,7 +216,7 @@ public class Class346 {
 		}
 	}
 
-	static void method6160(int i_0) {
+	static void method6160() {
 		Class9.lobbyStage = 140;
 		Class9.aClass184_73 = client.aClass184_7218;
 		if (client.aByteArray7152 != null) {
@@ -231,7 +231,7 @@ public class Class346 {
 		}
 	}
 
-	static void method6161(boolean bool_0, int i_1) {
+	static void method6161(boolean bool_0) {
 		if (bool_0) {
 			if (client.anInt7349 != -1) {
 				Class337.unloadInterface(client.anInt7349, -650534239);
@@ -249,8 +249,8 @@ public class Class346 {
 			client.aClass465_7442 = new IterableNodeMap(8);
 			MeshModifier.method7041((byte) -97);
 			client.anInt7349 = Class58.aClass529_527.anInt7027;
-			Class516.method8867(false, -905479502);
-			IncomingPacket.method6378(-1538407760);
+			Class516.method8867(false);
+			IncomingPacket.method6378();
 			Class150.method2582(client.anInt7349, (int[]) null, -1429871398);
 		}
 		Class9.aBool71 = true;

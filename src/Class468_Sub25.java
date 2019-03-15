@@ -12,7 +12,7 @@ public class Class468_Sub25 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -20,7 +20,7 @@ public class Class468_Sub25 extends Preference {
 		return 1;
 	}
 
-	public void method12928(byte b_1) {
+	public void method12928() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
 			this.anInt5578 = this.method7781(1979417411);
 		}

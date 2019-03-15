@@ -22,7 +22,7 @@ public abstract class Class504 {
 			int i_5 = i_1 >> 9;
 			if (i_4 >= 0 && i_5 >= 0 && i_4 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(-868401346) - 1 && i_5 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1411185573) - 1) {
 				int i_6 = i_2;
-				if (i_2 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).tileMasks[1][i_4][i_5] & 0x2) != 0) {
+				if (i_2 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_4][i_5] & 0x2) != 0) {
 					i_6 = i_2 + 1;
 				}
 
@@ -33,7 +33,7 @@ public abstract class Class504 {
 		}
 	}
 
-	static final void method8390(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method8390(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (i_4 != icomponentdefinitions_0.anInt1320) {
 			icomponentdefinitions_0.anInt1320 = i_4;
@@ -41,7 +41,7 @@ public abstract class Class504 {
 		}
 
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class105.method1807(icomponentdefinitions_0.idHash, (byte) 68);
+			Class105.method1807(icomponentdefinitions_0.idHash);
 		}
 
 	}

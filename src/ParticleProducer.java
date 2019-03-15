@@ -49,7 +49,7 @@ public class ParticleProducer {
 
 		this.particleCount = 0;
 
-		for (Particle class275_sub1_sub1_sub1_7 = (Particle) this.particles.method7659(301908602); class275_sub1_sub1_sub1_7 != null; class275_sub1_sub1_sub1_7 = (Particle) this.particles.method7650((byte) 88)) {
+		for (Particle class275_sub1_sub1_sub1_7 = (Particle) this.particles.method7659(); class275_sub1_sub1_sub1_7 != null; class275_sub1_sub1_sub1_7 = (Particle) this.particles.method7650((byte) 88)) {
 			class275_sub1_sub1_sub1_7.method15967(long_2, i_4);
 			++this.particleCount;
 		}
@@ -186,7 +186,7 @@ public class ParticleProducer {
 			}
 		}
 
-		if (!this.current.equals(this.aClass234_7109, (byte) 15)) {
+		if (!this.current.equals(this.aClass234_7109)) {
 			ParticleTriangle triangle = this.aClass234_7109;
 			this.aClass234_7109 = this.current;
 			this.current = triangle;
@@ -235,7 +235,7 @@ public class ParticleProducer {
 	}
 
 	void method11496(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2, long long_3) {
-		for (Particle class275_sub1_sub1_sub1_5 = (Particle) this.particles.method7659(301908602); class275_sub1_sub1_sub1_5 != null; class275_sub1_sub1_sub1_5 = (Particle) this.particles.method7650((byte) 108)) {
+		for (Particle class275_sub1_sub1_sub1_5 = (Particle) this.particles.method7659(); class275_sub1_sub1_sub1_5 != null; class275_sub1_sub1_sub1_5 = (Particle) this.particles.method7650((byte) 108)) {
 			class275_sub1_sub1_sub1_5.method15965(sceneobjectmanager_1, graphicalrenderer_2, long_3);
 		}
 
@@ -245,9 +245,9 @@ public class ParticleProducer {
 		this.aClass87_7110 = class87_2;
 		this.parent = class539_3;
 		this.startTime = long_4;
-		this.definition = this.aClass87_7110.method1485(228843304);
+		this.definition = this.aClass87_7110.method1485();
 		if (!graphicalrenderer_1.method8406() && this.definition.anInt573 != -1) {
-			this.definition = Class282_Sub11_Sub1.getParticleProducerDefs(this.definition.anInt573, (byte) 14);
+			this.definition = Class282_Sub11_Sub1.getParticleProducerDefs(this.definition.anInt573);
 		}
 
 		this.particles = new EntityList();
@@ -264,7 +264,7 @@ public class ParticleProducer {
 		this.aClass234_7109.anInt2884 = this.current.anInt2884;
 	}
 
-	public static void method11500(int i_0, boolean bool_1, byte b_2) {
+	public static void method11500(int i_0, boolean bool_1) {
 		Class231.method3914(i_0, Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -929025713), bool_1, (byte) 104);
 	}
 
@@ -297,7 +297,7 @@ public class ParticleProducer {
 			i_1 = client.anInt7340;
 		}
 
-		UnderlayIndexLoader.method8036(i_1, (byte) 4);
+		UnderlayIndexLoader.method8036(i_1);
 		client.anInt7261 = 0;
 	}
 

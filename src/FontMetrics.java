@@ -17,7 +17,7 @@ public class FontMetrics {
 		return this.characters[i_1] & 0xff;
 	}
 
-	public int getWidthNoSprites(String string_1, int i_2) {
+	public int getWidthNoSprites(String string_1) {
 		return this.getWidth(string_1, (Sprite[]) null);
 	}
 
@@ -85,8 +85,8 @@ public class FontMetrics {
 		}
 	}
 
-	public int method6949(String string_1, int i_2, Sprite[] arr_3, int i_4) {
-		return this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_3, (byte) 0);
+	public int method6949(String string_1, int i_2, Sprite[] arr_3) {
+		return this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_3);
 	}
 
 	int method6950(String string_1, int[] ints_2, String[] arr_3, Sprite[] arr_4, boolean bool_5, byte b_6) {
@@ -264,7 +264,7 @@ public class FontMetrics {
 	}
 
 	public int method6951(String string_1, int i_2, Sprite[] arr_3, byte b_4) {
-		int i_5 = this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_3, (byte) 0);
+		int i_5 = this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_3);
 		int i_6 = 0;
 
 		for (int i_7 = 0; i_7 < i_5; i_7++) {
@@ -277,7 +277,7 @@ public class FontMetrics {
 		return i_6;
 	}
 
-	public Point method6954(String string_1, int i_2, int i_3, int i_4, Sprite[] arr_5, int i_6) {
+	public Point method6954(String string_1, int i_2, int i_3, int i_4, Sprite[] arr_5) {
 		if (i_4 <= 0) {
 			return new Point(0, i_3 + this.anInt4978);
 		} else {
@@ -314,12 +314,12 @@ public class FontMetrics {
 		}
 	}
 
-	public int method6956(String string_1, int i_2, int i_3, int i_4, int i_5, Sprite[] arr_6, int i_7) {
+	public int method6956(String string_1, int i_2, int i_3, int i_4, int i_5, Sprite[] arr_6) {
 		if (i_3 == 0) {
 			i_3 = this.anInt4975;
 		}
 
-		int i_8 = this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_6, (byte) 0);
+		int i_8 = this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_6);
 		if (i_8 == 0) {
 			return 0;
 		} else {
@@ -412,7 +412,7 @@ public class FontMetrics {
 					if (i_14 != 32 && i_14 != 160) {
 						for (i_10 = 0; i_10 < 256; i_10++) {
 							if (i_10 != 32 && i_10 != 160) {
-								this.kerning[i_14][i_10] = (byte) Class254.method4380(bytes_12, bytes_13, ints_6, this.characters, ints_5, i_14, i_10, 6313355);
+								this.kerning[i_14][i_10] = (byte) Class254.method4380(bytes_12, bytes_13, ints_6, this.characters, ints_5, i_14, i_10);
 							}
 						}
 					}
@@ -430,7 +430,7 @@ public class FontMetrics {
 		}
 	}
 
-	public String method6959(String string_1, int i_2, Sprite[] arr_3, int i_4) {
+	public String method6959(String string_1, int i_2, Sprite[] arr_3) {
 		if (this.getWidth(string_1, arr_3) <= i_2) {
 			return string_1;
 		} else {
@@ -516,16 +516,16 @@ public class FontMetrics {
 			i_3 = this.anInt4975;
 		}
 
-		int i_6 = this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_4, (byte) 0);
+		int i_6 = this.method6987(string_1, new int[] { i_2 }, aStringArray4980, arr_4);
 		int i_7 = i_3 * (i_6 - 1);
 		return i_7 + this.anInt4979 + this.anInt4978;
 	}
 
-	public int method6987(String string_1, int[] ints_2, String[] arr_3, Sprite[] arr_4, byte b_5) {
+	public int method6987(String string_1, int[] ints_2, String[] arr_3, Sprite[] arr_4) {
 		return this.method6950(string_1, ints_2, arr_3, arr_4, true, (byte) -40);
 	}
 
-	static final void method6989(int i_0) {
+	static final void method6989() {
 		client.CURRENT_CUTSCENE = -1;
 		client.anInt7341 = 1;
 		NativeLibraryLoader.anIntArrayArray3239 = null;

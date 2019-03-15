@@ -21,8 +21,8 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	Class199_Sub1(Component component_1) {
-		Class430.method7221(-1695618125);
-		this.method13397(component_1, -1670677200);
+		Class430.method7221();
+		this.method13397(component_1);
 	}
 
 	void method13375(int i_1, char var_2, int i_3, int i_4) {
@@ -38,7 +38,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		return i_1 >= 0 && i_1 < 112 ? this.aBoolArray8048[i_1] : false;
 	}
 
-	public synchronized void method3235(byte b_1) {
+	public synchronized void method3235() {
 		this.aClass482_8046.method8118(-1343308861);
 		for (Class282_Sub52 class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead((byte) -120); class282_sub52_2 != null; class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead((byte) -23)) {
 			class282_sub52_2.anInt8174 = this.method13398((byte) 124);
@@ -124,7 +124,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		return (KeyRecord) this.aClass482_8046.popHead((byte) -43);
 	}
 
-	void method13387(byte b_1) {
+	void method13387() {
 		if (this.aComponent8050 != null) {
 			this.aComponent8050.removeKeyListener(this);
 			this.aComponent8050.removeFocusListener(this);
@@ -146,7 +146,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	public void method3245() {
-		this.method13387((byte) 1);
+		this.method13387();
 	}
 
 	public boolean method3244(int i_1) {
@@ -200,33 +200,33 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 
 	public synchronized void keyTyped(KeyEvent keyevent_1) {
 		char var_2 = keyevent_1.getKeyChar();
-		if (var_2 != 65535 && Class175.method2962(var_2, -16711936)) {
+		if (var_2 != 65535 && Class175.method2962(var_2)) {
 			this.method13375(3, var_2, -1, -1446580970);
 			keyevent_1.consume();
 		}
 	}
 
-	public void method3238(int i_1) {
-		this.method13387((byte) 1);
+	public void method3238() {
+		this.method13387();
 	}
 
 	public void method3247() {
-		this.method13387((byte) 1);
+		this.method13387();
 	}
 
-	void method13397(Component component_1, int i_2) {
-		this.method13387((byte) 1);
+	void method13397(Component component_1) {
+		this.method13387();
 		this.aComponent8050 = component_1;
 		this.aComponent8050.addKeyListener(this);
 		this.aComponent8050.addFocusListener(this);
 	}
 
 	public void method3248() {
-		this.method13387((byte) 1);
+		this.method13387();
 	}
 
 	public void method3249() {
-		this.method13387((byte) 1);
+		this.method13387();
 	}
 
 	int method13398(byte b_1) {

@@ -89,16 +89,16 @@ public class Class316 {
 	public static void method5594() {
 		Class404.method6810(1208455577);
 		Class20.aBool161 = false;
-		Class292.method5201(Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, (byte) 12);
+		Class292.method5201(Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104);
 		Class96_Sub23.aClass282_Sub50_Sub7_9445 = null;
 		Class20.aClass282_Sub50_Sub7_168 = null;
 	}
 
 	static String method5596(long long_0) {
-		return Class78.method1372(new Date(long_0), "EEE dd-MMM-yyyy HH:mm:ss zzz", 1899008598);
+		return Class78.method1372(new Date(long_0), "EEE dd-MMM-yyyy HH:mm:ss zzz");
 	}
 
-	static void method5599(int i_0, int i_1) {
+	static void method5599(int i_0) {
 		Class475.anInt5624 = i_0;
 		Class291_Sub1.anInt8016 = -1;
 		Class291_Sub1.anInt8016 = -1;

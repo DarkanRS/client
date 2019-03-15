@@ -30,8 +30,8 @@ public class Class540 {
 		client.anInt7216 = 0;
 		client.npcListSize = 0;
 		++client.anInt7332;
-		Exception_Sub2_Sub2.decodeAddRemove(-1738671867);
-		Class459.decodeUpdate(bool_0, 1344849031);
+		Exception_Sub2_Sub2.decodeAddRemove();
+		Class459.decodeUpdate(bool_0);
 		Class14.decodeMasks();
 		boolean bool_2 = false;
 		int i_3;
@@ -45,7 +45,7 @@ public class Class540 {
 					Class316.method5594();
 				}
 				if (npc_7.definitions.method6886(-1089073917)) {
-					Class169.method2876(npc_7, 1280406765);
+					Class169.method2876(npc_7);
 				}
 				npc_7.method16166((NPCDefinitions) null, -12061587);
 				class282_sub47_5.remove();

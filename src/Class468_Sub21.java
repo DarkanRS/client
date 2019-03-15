@@ -4,7 +4,7 @@ public class Class468_Sub21 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public void method12861(int i_1) {
+	public void method12861() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 4) {
 			this.anInt5578 = this.method7781(1833294862);
 		}
@@ -27,7 +27,7 @@ public class Class468_Sub21 extends Preference {
 		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
-	public int method12865(int i_1) {
+	public int method12865() {
 		return this.anInt5578;
 	}
 
@@ -35,7 +35,7 @@ public class Class468_Sub21 extends Preference {
 		return 3;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -54,7 +54,7 @@ public class Class468_Sub21 extends Preference {
 
 				for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 					Class96 class96_4 = arr_2[i_3];
-					class96_4.method1593((byte) 1);
+					class96_4.method1593();
 				}
 			}
 

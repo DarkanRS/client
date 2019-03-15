@@ -14,11 +14,11 @@ public class Class116 {
 
 	Class282_Sub7 aClass282_Sub7_1255;
 
-	Class282_Sub15_Sub2 method1954(int i_1) {
+	Class282_Sub15_Sub2 method1954() {
 		return this.aClass282_Sub15_Sub2_1256;
 	}
 
-	Class282_Sub7 method1955(int i_1) {
+	Class282_Sub7 method1955() {
 		return this.aClass282_Sub7_1255;
 	}
 
@@ -26,14 +26,14 @@ public class Class116 {
 		this.aClass317_1253 = index_1;
 		this.anInt1254 = i_2;
 		this.aClass282_Sub15_Sub2_1256 = new Class282_Sub15_Sub2();
-		this.aClass282_Sub15_Sub2_1256.method15137(9, 128, -1186547906);
+		this.aClass282_Sub15_Sub2_1256.method15137(-1186547906);
 	}
 
 	public boolean method1956(int i_1) {
 		return this.anInt1252 == 2;
 	}
 
-	public boolean method1963(int i_1) {
+	public boolean method1963() {
 		Class332.method5929(263587449);
 		if (this.anInt1252 == 0) {
 			this.aClass282_Sub7_1255 = Class282_Sub7.method12164(this.aClass317_1253, this.anInt1254, 0);
@@ -44,7 +44,7 @@ public class Class116 {
 			this.anInt1252 = 1;
 		}
 		if (this.anInt1252 == 1) {
-			if (!this.aClass282_Sub15_Sub2_1256.method15182(this.aClass282_Sub7_1255, Class148.aClass317_1737, this.aClass250_1257, 22050, 1813033404)) {
+			if (!this.aClass282_Sub15_Sub2_1256.method15182(this.aClass282_Sub7_1255, Class148.aClass317_1737, this.aClass250_1257, 1813033404)) {
 				return false;
 			}
 			this.anInt1252 = 2;
@@ -56,7 +56,7 @@ public class Class116 {
 		return Class148.anInt1730 != 0 ? true : Class148.aClass282_Sub15_Sub2_1735.method15103(1586124800);
 	}
 
-	public static MeshRasterizer method1969(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, MeshRasterizer meshrasterizer_6, int i_7, int i_8, int i_9, int i_10, Animation animation_11, int i_12) {
+	public static MeshRasterizer method1969(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, MeshRasterizer meshrasterizer_6, int i_7, int i_8, int i_9, int i_10, Animation animation_11) {
 		if (meshrasterizer_6 == null) {
 			return null;
 		} else {
@@ -134,7 +134,7 @@ public class Class116 {
 				meshrasterizer_16 = meshrasterizer_16.method11289((byte) 3, i_13, true);
 				meshrasterizer_16.oa(i_36 - i_39 >> 1, 128, i_33 - i_32 >> 1);
 				meshrasterizer_16.ia(i_36 + i_39 >> 1, 0, i_32 + i_33 >> 1);
-				animation_11.method7579(meshrasterizer_16, 1270030336);
+				animation_11.method7579(meshrasterizer_16);
 			} else {
 				meshrasterizer_16 = meshrasterizer_16.method11289((byte) 3, i_13, true);
 				meshrasterizer_16.oa(i_36 - i_39 >> 1, 128, i_33 - i_32 >> 1);

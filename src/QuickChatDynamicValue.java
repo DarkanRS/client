@@ -45,27 +45,27 @@ public class QuickChatDynamicValue {
 
 	static final void method4179(int i_0, int i_1, int i_2, int i_3, Class476 class476_4, byte b_5) {
 		if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(1811223828) - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1564374011) - 2 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1940602014) != null) {
-			SceneObject sceneobject_6 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i_0, i_1, i_2, i_3, 2009974413);
+			SceneObject sceneobject_6 = IndexLoaders.MAP_REGION_DECODER.method4441().method12467(i_0, i_1, i_2, i_3, 2009974413);
 			if (sceneobject_6 != null) {
 				if (sceneobject_6 instanceof InteractableObject) {
-					((InteractableObject) sceneobject_6).method16096(class476_4, -59212941);
+					((InteractableObject) sceneobject_6).method16096(class476_4);
 				} else if (sceneobject_6 instanceof GroundDecoration) {
-					((GroundDecoration) sceneobject_6).method16091(class476_4, -737324181);
+					((GroundDecoration) sceneobject_6).method16091(class476_4);
 				} else if (sceneobject_6 instanceof Wall) {
-					((Wall) sceneobject_6).method16108(class476_4, -2063213607);
+					((Wall) sceneobject_6).method16108(class476_4);
 				} else if (sceneobject_6 instanceof WallDecoration) {
-					((WallDecoration) sceneobject_6).method16082(class476_4, -449891505);
+					((WallDecoration) sceneobject_6).method16082(class476_4);
 				}
 			}
 		}
 	}
 
-	static boolean method4180(int i_0, byte b_1) {
+	static boolean method4180(int i_0) {
 		return i_0 == 7 || i_0 == 6;
 	}
 
 	public static QuickChatDynamicValue get(int i_0, byte b_1) {
-		QuickChatDynamicValue[] arr_2 = Class92.getQuickChatDynamicValueTypes((short) -10593);
+		QuickChatDynamicValue[] arr_2 = Class92.getQuickChatDynamicValueTypes();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			if (i_0 == arr_2[i_3].id) {
 				return arr_2[i_3];

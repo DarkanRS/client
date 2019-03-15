@@ -4,7 +4,7 @@ public class Class497 {
 		throw new Error();
 	}
 
-	static void method8316(long[] longs_0, int[] ints_1, int i_2, int i_3, int i_4) {
+	static void method8316(long[] longs_0, int[] ints_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_5 = (i_3 + i_2) / 2;
 			int i_6 = i_2;
@@ -31,8 +31,8 @@ public class Class497 {
 			longs_0[i_6] = long_7;
 			ints_1[i_3] = ints_1[i_6];
 			ints_1[i_6] = i_9;
-			method8316(longs_0, ints_1, i_2, i_6 - 1, -1763921861);
-			method8316(longs_0, ints_1, i_6 + 1, i_3, -1763921861);
+			method8316(longs_0, ints_1, i_2, i_6 - 1);
+			method8316(longs_0, ints_1, i_6 + 1, i_3);
 		}
 
 	}

@@ -171,9 +171,9 @@ public class Class282_Sub7 extends Node {
 		RsByteBuffer rsbytebuffer_51 = new RsByteBuffer(this.aByteArray7522);
 		rsbytebuffer_51.writeInt(1297377380);
 		rsbytebuffer_51.writeInt(6);
-		rsbytebuffer_51.writeShort(i_2 > 1 ? 1 : 0, 1417031095);
-		rsbytebuffer_51.writeShort(i_2, 1417031095);
-		rsbytebuffer_51.writeShort(i_3, 1417031095);
+		rsbytebuffer_51.writeShort(i_2 > 1 ? 1 : 0);
+		rsbytebuffer_51.writeShort(i_2);
+		rsbytebuffer_51.writeShort(i_3);
 		rsbytebuffer_1.index = i_13;
 		int i_52 = 0;
 		int i_53 = 0;
@@ -205,7 +205,7 @@ public class Class282_Sub7 extends Node {
 
 						rsbytebuffer_51.writeByte(47);
 						rsbytebuffer_51.writeByte(0);
-						rsbytebuffer_51.method13073(rsbytebuffer_51.index - i_61, -1648709449);
+						rsbytebuffer_51.method13073(rsbytebuffer_51.index - i_61);
 						continue label228;
 					}
 

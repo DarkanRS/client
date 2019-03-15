@@ -7,7 +7,7 @@ public class Class374 {
 			boolean bool_5 = Class505_Sub2.method13893();
 			if (!bool_5) {
 				throw new RuntimeException("");
-			} else if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1240220089)) {
+			} else if (!Class362.getNativeLibraryLoader().loadLibrary("jagdx", -1240220089)) {
 				throw new RuntimeException("");
 			} else {
 				GraphicalRenderer graphicalrenderer_4 = Class505_Sub2_Sub2.method15638(canvas_0, interface22_1, index_2, Integer.valueOf(i_3));

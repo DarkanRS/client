@@ -3,7 +3,7 @@ import java.util.Iterator;
 public class ChatLine {
 
 	public static String aString1093;
-	public int anInt1085 = Class282_Sub20_Sub28.method15396((byte) 0);
+	public int anInt1085 = Class282_Sub20_Sub28.method15396();
 	public int anInt1084;
 	public int type;
 	public int anInt1086;
@@ -15,7 +15,7 @@ public class ChatLine {
 	public String message;
 
 	void set(int i_1, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
-		this.anInt1085 = Class282_Sub20_Sub28.method15396((byte) 0);
+		this.anInt1085 = Class282_Sub20_Sub28.method15396();
 		this.anInt1084 = client.cycles;
 		this.type = i_1;
 		this.anInt1086 = i_2;
@@ -59,11 +59,11 @@ public class ChatLine {
 		rsbytebuffer_0.writeString(Class9.aString102);
 		rsbytebuffer_0.writeLong(Class9.aLong86);
 		rsbytebuffer_0.writeLong(client.aLong7409);
-		rsbytebuffer_0.applyRSA(Loader.RSA_PUBLIC_EXPONENT, Loader.RSA_PUBLIC_MODULUS);
+		rsbytebuffer_0.applyRSA();
 		return rsbytebuffer_0;
 	}
 
-	public static void method1848(SceneObjectManager sceneobjectmanager_0, GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public static void method1848(SceneObjectManager sceneobjectmanager_0, GraphicalRenderer graphicalrenderer_1) {
 		Iterator iterator_3 = Class235.aList2896.iterator();
 
 		while (iterator_3.hasNext()) {

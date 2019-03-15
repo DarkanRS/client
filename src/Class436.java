@@ -21,7 +21,7 @@ public class Class436 {
 
 			class416_3 = new Class416();
 			if (bytes_10 != null) {
-				class416_3.method6999(new RsByteBuffer(bytes_10), -1640531527);
+				class416_3.method6999(new RsByteBuffer(bytes_10));
 			}
 
 			SoftCache softcache_9 = this.aClass229_5334;
@@ -32,21 +32,21 @@ public class Class436 {
 		}
 	}
 
-	public void method7306(int i_1) {
+	public void method7306() {
 		SoftCache softcache_2 = this.aClass229_5334;
 		synchronized (this.aClass229_5334) {
 			this.aClass229_5334.method3859(1100969051);
 		}
 	}
 
-	public void method7307(int i_1, int i_2) {
+	public void method7307() {
 		SoftCache softcache_3 = this.aClass229_5334;
 		synchronized (this.aClass229_5334) {
-			this.aClass229_5334.method3858(i_1, (byte) 12);
+			this.aClass229_5334.method3858(5, (byte) 12);
 		}
 	}
 
-	public void method7308(byte b_1) {
+	public void method7308() {
 		SoftCache softcache_2 = this.aClass229_5334;
 		synchronized (this.aClass229_5334) {
 			this.aClass229_5334.method3863(1784570586);
@@ -60,7 +60,7 @@ public class Class436 {
 
 	static final void method7313(Class282_Sub44 class282_sub44_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, byte b_10) {
 		if (Class456_Sub3.isInterfaceLoaded(i_1, (int[]) null, -149079200)) {
-			if (class282_sub44_0 != null && !class282_sub44_0.method13401((byte) -110)) {
+			if (class282_sub44_0 != null && !class282_sub44_0.method13401()) {
 				Class351.closeChildren(class282_sub44_0, true, false, -1434411886);
 			} else {
 				Interface interface_11 = Class468_Sub8.INTERFACES[i_1];

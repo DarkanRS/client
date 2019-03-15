@@ -77,9 +77,9 @@ public abstract class Class137 {
 	}
 
 	static void method2359(int i_0, int i_1, int i_2, int i_3, Class150 class150_4, byte[] bytes_5) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2, 1942118537)) {
+		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3, 1942118537)) {
+		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_6 = class150_4.anInt1959;
@@ -136,9 +136,9 @@ public abstract class Class137 {
 	}
 
 	static void method2361(int i_0, int i_1, int i_2, int i_3, Class150 class150_4, float[] floats_5) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2, 1942118537)) {
+		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3, 1942118537)) {
+		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_6 = class150_4.anInt1959;
@@ -211,12 +211,12 @@ public abstract class Class137 {
 		this.method2357(0);
 	}
 
-	static void method2371(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2, 1942118537)) {
+	static void method2371(int i_0, int i_1, int i_2, int i_3, int i_5, int[] ints_6) {
+		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3, 1942118537)) {
+		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
-		} else if (i_4 != 32993) {
+		} else if (32993 != 32993) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_7 = 0;
@@ -227,7 +227,7 @@ public abstract class Class137 {
 			int[] ints_12 = new int[i_9 * i_10];
 
 			while (true) {
-				OpenGL.glTexImage2Di(i_0, i_7, i_1, i_2, i_3, 0, i_4, i_5, ints_11, 0);
+				OpenGL.glTexImage2Di(i_0, i_7, i_1, i_2, i_3, 0, 32993, i_5, ints_11, 0);
 				if (i_8 <= 1) {
 					return;
 				}

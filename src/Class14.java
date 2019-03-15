@@ -10,7 +10,7 @@ public class Class14 {
 		throw new Error();
 	}
 
-	static void method537(int i_0) {
+	static void method537() {
 		Class9.lobbyStage = 273;
 		Class9.aClass184_73 = client.aClass184_7475;
 		Class455.method7558(Class9.aLong77 == -1L, true, "", "", Class9.aLong77);
@@ -115,7 +115,7 @@ public class Class14 {
 				for (i_6 = 0; i_6 < i_14; i_6++) {
 					i_7 = rsbitsbuffer_0.readUnsignedShortLE128();
 					i_8 = rsbitsbuffer_0.readIntV1();
-					npc_3.aClass153_10579.method2614(i_7, i_8, (short) 768);
+					npc_3.aClass153_10579.method2614(i_7, i_8);
 				}
 			}
 			int i_9;
@@ -203,16 +203,16 @@ public class Class14 {
 							i_10 = rsbitsbuffer_0.readUnsignedSmart(1675414519);
 							i_11 = rsbitsbuffer_0.readUnsigned128Byte();
 							i_12 = i_9 > 0 ? rsbitsbuffer_0.readUnsignedByte128() : i_11;
-							npc_3.displayHitbar(i_8, client.cycles, i_9, i_10, i_11, i_12, (byte) 0);
+							npc_3.displayHitbar(i_8, client.cycles, i_9, i_10, i_11, i_12);
 						} else {
-							npc_3.method15857(i_8, 1885735347);
+							npc_3.method15857(i_8);
 						}
 					}
 				}
 			}
 			if ((i_4 & 0x8) != 0) {
 				if (npc_3.definitions.method6886(-1543379642)) {
-					Class169.method2876(npc_3, 1280406765);
+					Class169.method2876(npc_3);
 				}
 				npc_3.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_0.readBigSmart(), (byte) 45), 332217631);
 				npc_3.method15836(npc_3.definitions.anInt4858, (byte) -91);
@@ -241,8 +241,8 @@ public class Class14 {
 				for (i_6 = 0; i_6 < i_14; i_6++) {
 					i_7 = rsbitsbuffer_0.readUnsignedByte128();
 					i_8 = rsbitsbuffer_0.readInt();
-					i_9 = rsbitsbuffer_0.method13132(-458827259);
-					npc_3.method16179(i_7, i_8, i_9, (byte) -110);
+					i_9 = rsbitsbuffer_0.method13132();
+					npc_3.method16179(i_7, i_8, i_9);
 				}
 			}
 			if ((i_4 & 0x40000) != 0) {
@@ -289,12 +289,12 @@ public class Class14 {
 				}
 			}
 			if ((i_4 & 0x400000) != 0) {
-				npc_3.aClass153_10579.method2607((byte) -33);
+				npc_3.aClass153_10579.method2607();
 				i_14 = rsbitsbuffer_0.buffer[++rsbitsbuffer_0.index - 1] & 0xff;
 				for (i_6 = 0; i_6 < i_14; i_6++) {
 					i_7 = rsbitsbuffer_0.readUnsignedShort();
 					i_8 = rsbitsbuffer_0.readIntV1();
-					npc_3.aClass153_10579.method2614(i_7, i_8, (short) 768);
+					npc_3.aClass153_10579.method2614(i_7, i_8);
 				}
 			}
 			if ((i_4 & 0x4) != 0) {
@@ -316,7 +316,7 @@ public class Class14 {
 				}
 			}
 			if ((i_4 & 0x2) != 0) {
-				npc_3.method16164(rsbitsbuffer_0.readString(), 0, 0, (byte) -84);
+				npc_3.method16164(rsbitsbuffer_0.readString());
 			}
 			if ((i_4 & 0x4000) != 0) {
 				i_14 = rsbitsbuffer_0.readUnsigned128Byte();
@@ -332,7 +332,7 @@ public class Class14 {
 					}
 					ints_16[i_8] = rsbitsbuffer_0.readUnsignedShortLE128();
 				}
-				npc_3.method15797(ints_15, ints_16, -1858199952);
+				npc_3.method15797(ints_15, ints_16);
 			}
 			if ((i_4 & 0x20) != 0) {
 				i_14 = rsbitsbuffer_0.readUnsignedShort();

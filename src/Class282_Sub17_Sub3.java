@@ -4,11 +4,11 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 
 	Class348 this$0;
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.aString622 = this.aString9935;
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.aString9935 = rsbytebuffer_1.readString();
 		rsbytebuffer_1.readInt();
 	}
@@ -52,7 +52,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 		class61_1.aString622 = this.aString9935;
 	}
 
-	static void method15405(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	static void method15405(int i_0, int i_1, int i_2, int i_3, int i_4) {
 		int i_6 = 0;
 		int i_7 = i_3;
 		int i_8 = i_2 * i_2;

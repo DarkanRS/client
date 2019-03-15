@@ -30,7 +30,7 @@ public class Class4 {
 			int i_20 = (int) f_18 >> 9;
 			if (i_19 > 0 && i_20 > 0 && i_19 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-964294290) && i_20 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1282893956)) {
 				int i_21 = Class84.myPlayer.plane;
-				if (i_21 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).tileMasks[1][i_19][i_20] & 0x2) != 0) {
+				if (i_21 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_19][i_20] & 0x2) != 0) {
 					++i_21;
 				}
 				int i_22 = sceneobjectmanager_15.aClass390Array2607[i_21].averageHeight((int) f_16, (int) f_18, 1453959191);

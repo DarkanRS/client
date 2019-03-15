@@ -30,9 +30,9 @@ public class Class264 {
 
 	}
 
-	public static byte[] method4782(int i_0, int i_1, int i_2, int i_3, Class261 class261_4, float f_5, float f_6, float f_7, float f_8, float f_9) {
-		byte[] bytes_10 = new byte[i_0 * i_2 * i_1];
-		method4783(i_0, i_1, i_2, i_3, class261_4, f_5, f_6, f_7, f_8, f_9, bytes_10, 0);
+	public static byte[] method4782(Class261 class261_4) {
+		byte[] bytes_10 = new byte[128 * 16 * 128];
+		method4783(128, 128, 16, 8, class261_4, (float) 4.0, (float) 4.0, (float) 16.0, (float) 0.5, (float) 0.6, bytes_10, 0);
 		return bytes_10;
 	}
 

@@ -79,8 +79,8 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1672(this.anIntArray9233[13], this.aClass385_464, (byte) 8);
 		this.aClass101_9257.method1672(this.anIntArray9233[14], this.aClass385_461, (byte) 98);
 		if (i_1 > 0) {
-			this.aClass101_9257.method1673(this.anIntArray9233[1], this.aFloatArray463, i_1 * 4, -513105283);
-			this.aClass101_9257.method1673(this.anIntArray9233[0], this.aFloatArray450, i_1 * 4, -513105283);
+			this.aClass101_9257.method1673(this.anIntArray9233[1], this.aFloatArray463, i_1 * 4);
+			this.aClass101_9257.method1673(this.anIntArray9233[0], this.aFloatArray450, i_1 * 4);
 		}
 
 		this.aClass505_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467, this.anInt468, this.anInt469, this.anInt470);
@@ -106,7 +106,7 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1655(this.aClass115Array9254[i_1 + 12]);
 		this.anIntArray9233 = this.anIntArrayArray9258[this.aClass101_9257.method1714(-1924915864)];
 		this.aClass101_9257.method1646();
-		this.aClass101_9257.method1674(this.anIntArray9233[15], this.aClass384_465, -899265256);
+		this.aClass101_9257.method1674(this.anIntArray9233[15], this.aClass384_465);
 		this.aClass101_9257.method1670(this.anIntArray9233[6], this.aClass385_455.x, this.aClass385_455.y, this.aClass385_455.z, 703628895);
 		this.aClass101_9257.method1677(this.anIntArray9233[3], 1, this.anInterface31_451, -432714576);
 		this.method14564(i_1, 1162635311);
@@ -202,7 +202,7 @@ public class Class48_Sub2 extends Class48 {
 
 	public Class48_Sub2(Class505_Sub2 class505_sub2_1) throws Exception_Sub2 {
 		super(class505_sub2_1);
-		this.method14567(-2029794295);
+		this.method14567();
 	}
 
 	public void method947(int i_1) {
@@ -227,13 +227,13 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1655(this.aClass115Array9254[12 + i_1]);
 		this.anIntArray9233 = this.anIntArrayArray9258[this.aClass101_9257.method1714(-2017240700)];
 		this.aClass101_9257.method1646();
-		this.aClass101_9257.method1674(this.anIntArray9233[15], this.aClass384_465, -899265256);
+		this.aClass101_9257.method1674(this.anIntArray9233[15], this.aClass384_465);
 		this.aClass101_9257.method1670(this.anIntArray9233[6], this.aClass385_455.x, this.aClass385_455.y, this.aClass385_455.z, 1067202636);
 		this.aClass101_9257.method1677(this.anIntArray9233[3], 1, this.anInterface31_451, 2108931514);
 		this.method14564(i_1, -1921268776);
 	}
 
-	boolean method14567(int i_1) throws Exception_Sub2 {
+	boolean method14567() throws Exception_Sub2 {
 		this.aClass101_9257 = this.aClass505_Sub2_449.method13890("Model");
 		Class282_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9257.method1691("DiffuseSampler", (short) 32201);
 		Class282_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9257.method1691("EnvironmentSampler", (short) 32001);
@@ -307,7 +307,7 @@ public class Class48_Sub2 extends Class48 {
 		this.method14564(i_1, -1082037904);
 	}
 
-	public static final void method14571(byte b_0) {
+	public static final void method14571() {
 		Class282_Sub31 class282_sub31_1;
 		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 86); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-18046490)) {
 			if (!class282_sub31_1.aBool7774) {
@@ -330,7 +330,7 @@ public class Class48_Sub2 extends Class48 {
 
 	}
 
-	static void method14572(int i_0, int i_1, int i_2, int i_3, int i_4, short s_5) {
+	static void method14572(int i_0, int i_1, int i_2, int i_3, int i_4) {
 		Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_2++], i_0, i_1, i_4, (byte) -27);
 		Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_3--], i_0, i_1, i_4, (byte) -74);
 

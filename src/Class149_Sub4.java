@@ -18,15 +18,15 @@ public class Class149_Sub4 extends Class149 {
 		Class395.method6772(i_3, i_4, i_5, i_6, 1340859839 * this.anInt1743 * 440863295, -1670932530);
 	}
 
-	void method2561(int i_1, int i_2, int i_3) {
+	void method2561(int i_1, int i_2) {
 		int i_4 = this.anInt9391 * i_1 >> 12;
 		int i_5 = this.anInt9392 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9393 >> 12;
 		int i_7 = i_2 * this.anInt9394 >> 12;
-		Class105.method1805(i_4, i_5, i_6, i_7, this.anInt1741, this.anInt1742, (byte) 9);
+		Class105.method1805(i_4, i_5, i_6, i_7, this.anInt1741, this.anInt1742);
 	}
 
-	void method2556(int i_1, int i_2, int i_3) {
+	void method2556(int i_1, int i_2) {
 		int i_4 = this.anInt9391 * i_1 >> 12;
 		int i_5 = this.anInt9392 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9393 >> 12;
@@ -34,7 +34,7 @@ public class Class149_Sub4 extends Class149 {
 		Class395.method6772(i_4, i_5, i_6, i_7, this.anInt1743, -975151690);
 	}
 
-	void method2557(int i_1, int i_2, byte b_3) {
+	void method2557(int i_1, int i_2) {
 		int i_4 = this.anInt9391 * i_1 >> 12;
 		int i_5 = this.anInt9392 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9393 >> 12;
@@ -47,7 +47,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_4 = this.anInt9392 * 50986485 * 232719965 * i_1 >> 12;
 		int i_5 = i_2 * -1685653473 * this.anInt9393 * -724925473 >> 12;
 		int i_6 = this.anInt9394 * 954206695 * -1856308777 * i_2 >> 12;
-		Class105.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331, (byte) 9);
+		Class105.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331);
 	}
 
 	void method2559(int i_1, int i_2) {
@@ -55,7 +55,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_4 = this.anInt9392 * 50986485 * 232719965 * i_1 >> 12;
 		int i_5 = i_2 * -1685653473 * this.anInt9393 * -724925473 >> 12;
 		int i_6 = this.anInt9394 * 954206695 * -1856308777 * i_2 >> 12;
-		Class105.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331, (byte) 9);
+		Class105.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331);
 	}
 
 	void method2562(int i_1, int i_2) {
@@ -82,32 +82,32 @@ public class Class149_Sub4 extends Class149 {
 		this.anInt9394 = i_4;
 	}
 
-	static final void method14661(byte b_0) {
+	static final void method14661() {
 		Iterator iterator_1 = client.aClass465_7334.iterator();
 		while (iterator_1.hasNext()) {
 			Class282_Sub50_Sub10 class282_sub50_sub10_2 = (Class282_Sub50_Sub10) iterator_1.next();
 			Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_3 = class282_sub50_sub10_2.aClass521_Sub1_Sub1_Sub4_9636;
-			class521_sub1_sub1_sub4_3.method15926(1, (byte) 16);
-			if (class521_sub1_sub1_sub4_3.method15928((short) 11184)) {
+			class521_sub1_sub1_sub4_3.method15926();
+			if (class521_sub1_sub1_sub4_3.method15928()) {
 				class282_sub50_sub10_2.remove();
 				class521_sub1_sub1_sub4_3.method15931(-2018214290);
 			}
 		}
 	}
 
-	static String method14662(int i_0, int i_1, boolean bool_2, int i_3) {
-		if (i_1 >= 2 && i_1 <= 36) {
+	static String method14662(int i_0, boolean bool_2) {
+		if (10 >= 2 && 10 <= 36) {
 			if (bool_2 && i_0 >= 0) {
 				int i_4 = 2;
-				for (int i_5 = i_0 / i_1; i_5 != 0; i_4++) {
-					i_5 /= i_1;
+				for (int i_5 = i_0 / 10; i_5 != 0; i_4++) {
+					i_5 /= 10;
 				}
 				char[] arr_6 = new char[i_4];
 				arr_6[0] = 43;
 				for (int i_7 = i_4 - 1; i_7 > 0; --i_7) {
 					int i_8 = i_0;
-					i_0 /= i_1;
-					int i_9 = i_8 - i_0 * i_1;
+					i_0 /= 10;
+					int i_9 = i_8 - i_0 * 10;
 					if (i_9 >= 10) {
 						arr_6[i_7] = (char) (i_9 + 87);
 					} else {
@@ -116,10 +116,10 @@ public class Class149_Sub4 extends Class149 {
 				}
 				return new String(arr_6);
 			} else {
-				return Integer.toString(i_0, i_1);
+				return Integer.toString(i_0, 10);
 			}
 		} else {
-			throw new IllegalArgumentException("" + i_1);
+			throw new IllegalArgumentException("" + 10);
 		}
 	}
 }

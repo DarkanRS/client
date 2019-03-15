@@ -16,9 +16,9 @@ public abstract class Class149 {
 		this.anInt1742 = i_3;
 	}
 
-	abstract void method2556(int var1, int var2, int var3);
+	abstract void method2556(int var1, int var2);
 
-	abstract void method2557(int var1, int var2, byte var3);
+	abstract void method2557(int var1, int var2);
 
 	abstract void method2558(int var1, int var2);
 
@@ -26,11 +26,11 @@ public abstract class Class149 {
 
 	abstract void method2560(int var1, int var2);
 
-	abstract void method2561(int var1, int var2, int var3);
+	abstract void method2561(int var1, int var2);
 
 	abstract void method2562(int var1, int var2);
 
-	static int method2565(CharSequence charsequence_0, char var_1, int i_2) {
+	static int method2565(CharSequence charsequence_0, char var_1) {
 		int i_3 = 0;
 		int i_4 = charsequence_0.length();
 		for (int i_5 = 0; i_5 < i_4; i_5++) {

@@ -6,10 +6,10 @@ public class Class58 implements Interface19 {
 
 	public String method135(QuickChatDynamicValue quickchatdynamicvalue_1, int[] ints_2, long long_3) {
 		if (quickchatdynamicvalue_1 == QuickChatDynamicValue.LISTDIALOG) {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0]);
 			return enumdefinitions_6.getStringValue((int) long_3, -64424168);
 		} else if (quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJDIALOG && quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJTRADEDIALOG) {
-			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_STATBASE ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 2106456977);
+			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_STATBASE ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0]).getStringValue((int) long_3, 2106456977);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 1575511012);
 			return itemdefinitions_5.name;
@@ -18,10 +18,10 @@ public class Class58 implements Interface19 {
 
 	public String method136(QuickChatDynamicValue quickchatdynamicvalue_1, int[] ints_2, long long_3) {
 		if (quickchatdynamicvalue_1 == QuickChatDynamicValue.LISTDIALOG) {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0]);
 			return enumdefinitions_6.getStringValue((int) long_3, -451172927);
 		} else if (quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJDIALOG && quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJTRADEDIALOG) {
-			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 579863966);
+			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0]).getStringValue((int) long_3, 579863966);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 1001383169);
 			return itemdefinitions_5.name;
@@ -30,10 +30,10 @@ public class Class58 implements Interface19 {
 
 	public String method137(QuickChatDynamicValue quickchatdynamicvalue_1, int[] ints_2, long long_3) {
 		if (quickchatdynamicvalue_1 == QuickChatDynamicValue.LISTDIALOG) {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0]);
 			return enumdefinitions_6.getStringValue((int) long_3, 1807301402);
 		} else if (quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJDIALOG && quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJTRADEDIALOG) {
-			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 870502499);
+			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0]).getStringValue((int) long_3, 870502499);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 980580063);
 			return itemdefinitions_5.name;
@@ -58,7 +58,7 @@ public class Class58 implements Interface19 {
 			} else {
 				FontMetrics fontmetrics_1 = Class114.method1887(466263588);
 				int i_2 = Class163.mouseRecorder.method3569(1973979950);
-				int i_3 = Class163.mouseRecorder.method3570(756095591);
+				int i_3 = Class163.mouseRecorder.method3570();
 				int i_4;
 				int i_5;
 				Class282_Sub50_Sub7 class282_sub50_sub7_7;
@@ -109,7 +109,7 @@ public class Class58 implements Interface19 {
 						if (i_4 != -1) {
 							i_5 = 0;
 							class469_9 = new Class469(Class20.aClass477_182);
-							for (Class282_Sub50_Sub15 class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.method7790(1832486278); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.next()) {
+							for (Class282_Sub50_Sub15 class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.method7790(); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.next()) {
 								if (i_5++ == i_4) {
 									return ((Class282_Sub50_Sub7) class282_sub50_sub15_10.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119).anInt9578;
 								}
@@ -133,7 +133,7 @@ public class Class58 implements Interface19 {
 						if (i_4 != -1) {
 							i_5 = 0;
 							class469_9 = new Class469(Class20.aClass282_Sub50_Sub15_163.aClass477_9770);
-							for (class282_sub50_sub7_7 = (Class282_Sub50_Sub7) class469_9.method7790(1832486278); class282_sub50_sub7_7 != null; class282_sub50_sub7_7 = (Class282_Sub50_Sub7) class469_9.next()) {
+							for (class282_sub50_sub7_7 = (Class282_Sub50_Sub7) class469_9.method7790(); class282_sub50_sub7_7 != null; class282_sub50_sub7_7 = (Class282_Sub50_Sub7) class469_9.next()) {
 								if (i_5++ == i_4) {
 									return class282_sub50_sub7_7.anInt9578;
 								}

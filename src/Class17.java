@@ -6,7 +6,7 @@ final class Class17 implements Interface25 {
 		return class521_sub1_sub1_1 instanceof SceneObject;
 	}
 
-	public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1_1, int i_2) {
+	public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1_1) {
 		return class521_sub1_sub1_1 instanceof SceneObject;
 	}
 
@@ -15,7 +15,7 @@ final class Class17 implements Interface25 {
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 60);
 	}
 
-	static final void method570(int i_0) {
+	static final void method570() {
 		int i_1 = 0;
 		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1483143416);
 

@@ -18,17 +18,17 @@ public class Class347 {
 
 	public boolean aBool4059 = false;
 
-	void method6163(RsByteBuffer rsbytebuffer_1, int i_2, short s_3) {
+	void method6163(RsByteBuffer rsbytebuffer_1, int i_2) {
 		while (true) {
 			int i_4 = rsbytebuffer_1.readUnsignedByte();
 			if (i_4 == 0) {
 				return;
 			}
-			this.method6164(rsbytebuffer_1, i_4, i_2, Integer.MAX_VALUE);
+			this.method6164(rsbytebuffer_1, i_4, i_2);
 		}
 	}
 
-	void method6164(RsByteBuffer rsbytebuffer_1, int i_2, int i_3, int i_4) {
+	void method6164(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
 		if (i_2 == 1) {
 			this.anInt4055 = rsbytebuffer_1.readUnsignedShort();
 			if (this.anInt4055 == 65535) {
@@ -50,7 +50,7 @@ public class Class347 {
 		}
 	}
 
-	static final void method6170(int i_0, int i_1, int i_2) {
+	static final void method6170(int i_0, int i_1) {
 		if (Class291_Sub1.aFloat3468 < Class291_Sub1.aFloat3462) {
 			Class291_Sub1.aFloat3468 = (float) ((double) Class291_Sub1.aFloat3468 + (double) Class291_Sub1.aFloat3468 / 30.0D);
 			if (Class291_Sub1.aFloat3468 > Class291_Sub1.aFloat3462) {
@@ -58,7 +58,7 @@ public class Class347 {
 			}
 			Class89.method1502(-463679465);
 			Class291_Sub1.anInt3469 = (int) Class291_Sub1.aFloat3468 >> 1;
-			Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469, (short) 8192);
+			Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469);
 		} else if (Class291_Sub1.aFloat3468 > Class291_Sub1.aFloat3462) {
 			Class291_Sub1.aFloat3468 = (float) ((double) Class291_Sub1.aFloat3468 - (double) Class291_Sub1.aFloat3468 / 30.0D);
 			if (Class291_Sub1.aFloat3468 < Class291_Sub1.aFloat3462) {
@@ -66,7 +66,7 @@ public class Class347 {
 			}
 			Class89.method1502(372349674);
 			Class291_Sub1.anInt3469 = (int) Class291_Sub1.aFloat3468 >> 1;
-			Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469, (short) 8192);
+			Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469);
 		}
 		if (Class291_Sub1.anInt8014 != -1 && Class291_Sub1.anInt8016 != -1) {
 			int i_3 = Class291_Sub1.anInt8014 - Class427.anInt5123;
@@ -98,7 +98,7 @@ public class Class347 {
 		if (Class291_Sub1.aBool8022 && Class346.aClass482_4049 != null) {
 			for (Class282_Sub33 class282_sub33_5 = (Class282_Sub33) Class346.aClass482_4049.head((byte) 117); class282_sub33_5 != null; class282_sub33_5 = (Class282_Sub33) Class346.aClass482_4049.next(-731653338)) {
 				WorldMapAreaDefs worldmapareadefs_6 = Class291_Sub1.aClass218_3456.getWorldMapDefs(class282_sub33_5.aClass282_Sub36_7835.anInt7991, 1327385371);
-				if (class282_sub33_5.method12577(i_0, i_1, -1474454985)) {
+				if (class282_sub33_5.method12577(i_0, i_1)) {
 					if (worldmapareadefs_6.aStringArray2740 != null) {
 						if (worldmapareadefs_6.aStringArray2740[4] != null) {
 							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[4], worldmapareadefs_6.aString2732, -1, 1012, -1, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, false, -1941866254);

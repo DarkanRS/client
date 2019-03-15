@@ -2,7 +2,7 @@ public class Class282_Sub20_Sub26 extends Class282_Sub20 {
 
 	int anInt9886 = 4096;
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, 798975247);
 		if (this.aClass320_7667.aBool3722) {
 			int[] ints_4 = this.method12317(0, i_1 - 1 & Class316.anInt3673, 2146057922);
@@ -25,7 +25,7 @@ public class Class282_Sub20_Sub26 extends Class282_Sub20 {
 		return ints_3;
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		if (i_1 == 0) {
 			this.anInt9886 = rsbytebuffer_2.readUnsignedShort();
 		}
@@ -36,9 +36,9 @@ public class Class282_Sub20_Sub26 extends Class282_Sub20 {
 		super(1, true);
 	}
 
-	static void lobbyLogin(String string_0, String string_1, byte b_2) {
+	static void lobbyLogin(String string_0, String string_1) {
 		if (!Loader.LOBBY_ENABLED) {
-			Class345.worldLogin(string_0, string_1, b_2);
+			Class345.worldLogin(string_0, string_1, (byte) -8);
 			return;
 		}
 		Class9.lobbyStage = 140;

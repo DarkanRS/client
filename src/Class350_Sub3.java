@@ -21,14 +21,14 @@ public class Class350_Sub3 extends Class350 {
 		return Class60.aClass60_608;
 	}
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_608;
 	}
 
-	static void method12590(TCPMessage tcpmessage_0, int i_1, int i_2, int i_3, int i_4) {
+	static void method12590(TCPMessage tcpmessage_0, int i_1, int i_2, int i_3) {
 		tcpmessage_0.buffer.writeLEInt(i_1, (byte) -5);
-		tcpmessage_0.buffer.writeShort(i_3, 1417031095);
-		tcpmessage_0.buffer.writeShort128(i_2, -800257688);
+		tcpmessage_0.buffer.writeShort(i_3);
+		tcpmessage_0.buffer.writeShort128(i_2);
 	}
 
 }

@@ -26,7 +26,7 @@ public class Class96_Sub19 extends Class96 {
 
 	int anInt9399;
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		int i_2;
 		int i_3;
 		int i_4;
@@ -57,7 +57,7 @@ public class Class96_Sub19 extends Class96 {
 		}
 		int i_7 = this.anInt9399 << 2;
 		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_12 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1436448746), this.anInt9410, i_4, i_4, i_2, i_3, this.anInt9405 << 2, client.cycles, this.anInt9409 + client.cycles, this.anInt9412, i_7, this.anInt9402 + 1, this.anInt9400 + 1, this.anInt9413 << 2, false, 0);
-		class521_sub1_sub1_sub3_12.method15904(i_5, i_6, this.anInt9413 << 2, this.anInt9409 + client.cycles, -209443166);
+		class521_sub1_sub1_sub3_12.method15904(i_5, i_6, this.anInt9413 << 2, this.anInt9409 + client.cycles);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_12), 1701018076);
 	}
 
@@ -92,11 +92,11 @@ public class Class96_Sub19 extends Class96 {
 		}
 		int i_6 = -716833811 * this.anInt9399 * 2139724261 << 2;
 		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_11 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2009786094), this.anInt9410 * 2035189521 * 899631601, i_3, i_3, i_1, i_2, this.anInt9405 * 2127134041 * -1118504215 << 2, client.cycles * 1968179203 * -1809259861, -1809259861 * client.cycles * 1968179203 + this.anInt9409 * -229470439 * -511484631, this.anInt9412 * -1446164009 * 1829419495, i_6, 1 + this.anInt9402 * -37939787 * -772738915, this.anInt9400 * 857868507 * 1060287315 + 1, -209777139 * this.anInt9413 * 885452997 << 2, false, 0);
-		class521_sub1_sub1_sub3_11.method15904(i_4, i_5, -209777139 * this.anInt9413 * 885452997 << 2, -511484631 * this.anInt9409 * -229470439 + client.cycles * 1968179203 * -1809259861, -209443166);
+		class521_sub1_sub1_sub3_11.method15904(i_4, i_5, -209777139 * this.anInt9413 * 885452997 << 2, -511484631 * this.anInt9409 * -229470439 + client.cycles * 1968179203 * -1809259861);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_11), -1862724150);
 	}
 
-	boolean method1599(int i_1) {
+	boolean method1599() {
 		SpotAnimDefinitions spotanimdefinitions_2 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt9410, (byte) 46);
 		boolean bool_3 = spotanimdefinitions_2.method11230(-583697397);
 		AnimationDefinitions animationdefinitions_4 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_2.animationId, (byte) 7);
@@ -140,14 +140,14 @@ public class Class96_Sub19 extends Class96 {
 		this.anInt9399 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	public static final void method14665(String string_0, int i_1) {
+	public static final void method14665(String string_0) {
 		if (string_0 != null) {
-			String string_2 = Class383.method6515(string_0, 1942118537);
+			String string_2 = Class383.method6515(string_0);
 			if (string_2 != null) {
 				for (int i_3 = 0; i_3 < client.anInt7373; i_3++) {
 					Class10 class10_4 = client.aClass10Array7456[i_3];
 					String string_5 = class10_4.aString115;
-					String string_6 = Class383.method6515(string_5, 1942118537);
+					String string_6 = Class383.method6515(string_5);
 					if (Class159.method2734(string_0, string_2, string_5, string_6, (byte) -110)) {
 						--client.anInt7373;
 						for (int i_7 = i_3; i_7 < client.anInt7373; i_7++) {
@@ -166,7 +166,7 @@ public class Class96_Sub19 extends Class96 {
 		}
 	}
 
-	public static void method14666(String string_0, boolean bool_1, int i_2, String string_3, int i_4) {
-		Class215.method3673(string_0, bool_1, i_2, -1, string_3, true, -857703512);
+	public static void method14666(String string_0, boolean bool_1, int i_2, String string_3) {
+		Class215.method3673(string_0, bool_1, i_2, -1, string_3, true);
 	}
 }

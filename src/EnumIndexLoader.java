@@ -6,7 +6,7 @@ public class EnumIndexLoader {
 
 	Index configIndex;
 
-	public EnumDefinitions getEnumDefinitions(int enumId, byte b_2) {
+	public EnumDefinitions getEnumDefinitions(int enumId) {
 		EnumDefinitions enumdefinitions_3;
 		synchronized (this.aClass229_5377) {
 			enumdefinitions_3 = (EnumDefinitions) this.aClass229_5377.get((long) enumId);
@@ -17,7 +17,7 @@ public class EnumIndexLoader {
 			byte[] bytes_8 = this.configIndex.getFile(SharedConfigsType.ENUMS.containerId(enumId), SharedConfigsType.ENUMS.fileId(enumId));
 			enumdefinitions_3 = new EnumDefinitions();
 			if (bytes_8 != null) {
-				enumdefinitions_3.method7227(new RsByteBuffer(bytes_8), (byte) 104);
+				enumdefinitions_3.method7227(new RsByteBuffer(bytes_8));
 			}
 			synchronized (this.aClass229_5377) {
 				this.aClass229_5377.put(enumdefinitions_3, (long) enumId);
@@ -37,7 +37,7 @@ public class EnumIndexLoader {
 
 	public static boolean method7426(int i_0, byte b_1) {
 		for (Class282_Sub50_Sub7 class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 75); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1043628930)) {
-			if (Class237.method3989(class282_sub50_sub7_2.anInt9587, (byte) 0) && (long) i_0 == class282_sub50_sub7_2.aLong9584) {
+			if (Class237.method3989(class282_sub50_sub7_2.anInt9587) && (long) i_0 == class282_sub50_sub7_2.aLong9584) {
 				return true;
 			}
 		}

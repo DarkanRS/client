@@ -17,7 +17,7 @@ public class Class282_Sub20_Sub37 extends Class282_Sub20 {
 	int[][] anIntArrayArray9979;
 	int[][] anIntArrayArray9992;
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -318596352);
 		if (this.aClass320_7667.aBool3722) {
 			int i_4 = 0;
@@ -78,7 +78,7 @@ public class Class282_Sub20_Sub37 extends Class282_Sub20 {
 		super(0, true);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9982 = rsbytebuffer_2.readUnsignedByte();
@@ -107,7 +107,7 @@ public class Class282_Sub20_Sub37 extends Class282_Sub20 {
 
 	}
 
-	void method15422(int i_1) {
+	void method15422() {
 		Random random_2 = new Random((long) this.anInt9994);
 		this.anInt9993 = this.anInt9991 / 2;
 		this.anInt9988 = 4096 / this.anInt9982;
@@ -149,7 +149,7 @@ public class Class282_Sub20_Sub37 extends Class282_Sub20 {
 	}
 
 	void method12321(int i_1) {
-		this.method15422(-333836282);
+		this.method15422();
 	}
 
 }

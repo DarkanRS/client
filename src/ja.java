@@ -147,7 +147,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	public native int za();
 
 	public NativeSprite method8442(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-		return new fa(this, ints_1, i_2, i_3, i_4, i_5, false);
+		return new fa(this, ints_1, i_2, i_3, i_4, i_5);
 	}
 
 	public boolean method8465() {
@@ -256,7 +256,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void N(int var1, int var2, int var3, int var4, int var5, int var6, byte[] var7, int var8, int var9);
 
-	public void method8658(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
+	public void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
 		throw new IllegalStateException();
 	}
 
@@ -272,17 +272,17 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return true;
 	}
 
-	native void CA(int var1, int var2, int var3, int var4, int var5);
+	native void CA(int var1, int var2, int var3, int var4);
 
 	public void method8496(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		this.nx().method311(this, i_1, i_2, i_3, i_4, i_5, i_6, i_7);
 	}
 
-	public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
-		this.R(i_1, i_2, i_3, i_4, i_5, i_6, class455_7, i_8, i_9);
+	public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9) {
+		this.R(i_1, i_2, i_3, i_4, i_5, 1, class455_7, i_8, i_9);
 	}
 
-	public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+	public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_7, int i_8, int i_9) {
 	}
 
 	public int method8437(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -383,7 +383,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return false;
 	}
 
-	public native void DA(int var1, Class455 var2, int var3, int var4);
+	public native void DA(Class455 var2, int var3, int var4);
 
 	public FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
@@ -411,13 +411,13 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		}
 	}
 
-	public void method8459(int i_1) {
-		this.ac = this.at = i_1;
+	public void method8459() {
+		this.ac = this.at = 10000;
 		if (this.as > 1) {
 			throw new IllegalStateException();
 		} else {
 			this.nu(this.as);
-			this.ni(0);
+			this.ni();
 		}
 	}
 
@@ -455,8 +455,8 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	}
 
-	void ni(int i_1) {
-		this.ai[i_1].method307();
+	void ni() {
+		this.ai[0].method307();
 	}
 
 	a nx() {
@@ -471,7 +471,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public void method8456(Class151 class151_1) {
 		if (class151_1.aClass464_1961.method7736(-1292124716) != 0) {
-			this.ny(class151_1, false);
+			this.ny(class151_1);
 			this.nx().method309(this, bi, bw, bx, bz, class151_1.aClass464_1961.method7736(-1336234189));
 		}
 
@@ -515,9 +515,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
 			aq[i_3++] = arr_2[i_4].method12368((byte) -85);
-			aq[i_3++] = arr_2[i_4].method12369(1534020223);
+			aq[i_3++] = arr_2[i_4].method12369();
 			aq[i_3++] = arr_2[i_4].method12394(1398342512);
-			aq[i_3++] = arr_2[i_4].method12370(-789603523);
+			aq[i_3++] = arr_2[i_4].method12370();
 			av[i_4] = arr_2[i_4].method12395(314107586);
 			aq[i_3++] = arr_2[i_4].method12371(-2144091834);
 		}
@@ -525,7 +525,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		this.Q(i_1, aq, av);
 	}
 
-	public void method8568(boolean bool_1) {
+	public void method8568() {
 	}
 
 	public Class152 method8466(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -548,7 +548,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	public void method8477(Class152 class152_1) {
 	}
 
-	public void method8525(int i_1, int i_2, int i_3, int i_4) {
+	public void method8525(int i_3, int i_4) {
 	}
 
 	public boolean method8469() {
@@ -562,7 +562,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return false;
 	}
 
-	void method8592(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+	void method8592(float f_1, float f_2, float f_3) {
 	}
 
 	public native int di();
@@ -571,8 +571,8 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void M(int var1, int var2, int var3, int var4);
 
-	public final void method8475(int i_1, Class90 class90_2) {
-		this.M(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
+	public final void method8475(Class90 class90_2) {
+		this.M(-1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
 	public Class455 method8553(int i_1, int i_2, int[] ints_3, int[] ints_4) {
@@ -636,12 +636,12 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
-	void method8555(int i_1, int i_2) throws Exception_Sub3 {
+	void method8555() throws Exception_Sub3 {
 		za za_3 = (za) this.method8460(-323567179);
 		if (za_3 == null) {
 			throw new IllegalStateException();
 		} else {
-			za_3.method14353(i_1, i_2);
+			za_3.method14353(0, 0);
 			if (this.anInterface22_5834 != null) {
 				this.anInterface22_5834.method161(-2129499905);
 			}
@@ -663,11 +663,11 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		super(interface22_2);
 
 		try {
-			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("sw3d", -1251324674)) {
+			if (!Class362.getNativeLibraryLoader().loadLibrary("sw3d", -1251324674)) {
 				throw new RuntimeException("");
 			} else {
-				Class156.method2643((byte) 53);
-				this.q(this.anInterface22_5834, this.anInterface22_5834.method84(-670973656), 0);
+				Class156.method2643();
+				this.q(this.anInterface22_5834, this.anInterface22_5834.method84(), 0);
 				Class38.method854(false, true, -1602514184);
 				this.bm = true;
 				this.af = new Matrix44Arr();
@@ -680,13 +680,13 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				this.method8457(new Matrix44Var());
 				this.method8424(new Matrix44Arr());
 				this.nu(1);
-				this.ni(0);
+				this.ni();
 				if (canvas_1 != null) {
 					this.method8524(canvas_1, i_3, i_4, (byte) -69);
-					this.method8412(canvas_1, (byte) 8);
+					this.method8412(canvas_1);
 				}
 
-				int i_5 = this.anInterface22_5834.method84(-670973656);
+				int i_5 = this.anInterface22_5834.method84();
 
 				for (short s_6 = 0; s_6 < i_5; s_6++) {
 					Class169 class169_7 = this.anInterface22_5834.method144(s_6, -2075826193);
@@ -849,19 +849,19 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void fu(int var1, int var2);
 
-	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
+	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
 	}
 
 	public native void ma(boolean var1);
 
-	void ny(Class151 class151_1, boolean bool_2) {
+	void ny(Class151 class151_1) {
 		int i_3 = 0;
 		int i_4 = 0;
 		int i_5 = 0;
 		int i_6 = 0;
 		boolean bool_7 = false;
 
-		for (PointEntity class275_sub1_sub1_8 = (PointEntity) class151_1.aClass464_1961.method7731(1278936127); class275_sub1_sub1_8 != null; class275_sub1_sub1_8 = (PointEntity) class151_1.aClass464_1961.method7734((byte) -107)) {
+		for (PointEntity class275_sub1_sub1_8 = (PointEntity) class151_1.aClass464_1961.method7731(); class275_sub1_sub1_8 != null; class275_sub1_sub1_8 = (PointEntity) class151_1.aClass464_1961.method7734()) {
 			bi[i_3++] = class275_sub1_sub1_8.x;
 			bi[i_3++] = class275_sub1_sub1_8.z;
 			bi[i_3++] = class275_sub1_sub1_8.y;
@@ -1128,28 +1128,28 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		this.n(class282_sub1_1);
 	}
 
-	public native void GA(float var1, float var2);
+	public native void GA();
 
 	public NativeSprite method8577(int i_1, int i_2, boolean bool_3, boolean bool_4) {
 		return new fa(this, i_1, i_2, bool_4);
 	}
 
 	public NativeSprite method8543(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-		return new fa(this, ints_1, i_2, i_3, i_4, i_5, false);
+		return new fa(this, ints_1, i_2, i_3, i_4, i_5);
 	}
 
 	public NativeSprite method8548(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-		return new fa(this, ints_1, i_2, i_3, i_4, i_5, false);
+		return new fa(this, ints_1, i_2, i_3, i_4, i_5);
 	}
 
 	public NativeSprite method8612(Class91 class91_1, boolean bool_2) {
-		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, 0, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
+		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
 		fa_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
 		return fa_3;
 	}
 
 	public NativeSprite method8518(Class91 class91_1, boolean bool_2) {
-		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, 0, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
+		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
 		fa_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
 		return fa_3;
 	}
@@ -1229,7 +1229,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			throw new IllegalStateException();
 		} else {
 			this.nu(this.as);
-			this.ni(0);
+			this.ni();
 		}
 	}
 
@@ -1239,7 +1239,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			throw new IllegalStateException();
 		} else {
 			this.nu(this.as);
-			this.ni(0);
+			this.ni();
 		}
 	}
 
@@ -1316,9 +1316,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
 			aq[i_3++] = arr_2[i_4].method12368((byte) -43);
-			aq[i_3++] = arr_2[i_4].method12369(1534020223);
+			aq[i_3++] = arr_2[i_4].method12369();
 			aq[i_3++] = arr_2[i_4].method12394(1467681691);
-			aq[i_3++] = arr_2[i_4].method12370(-789603523);
+			aq[i_3++] = arr_2[i_4].method12370();
 			av[i_4] = arr_2[i_4].method12395(-608600459);
 			aq[i_3++] = arr_2[i_4].method12371(-2146406856);
 		}
@@ -1331,9 +1331,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
 			aq[i_3++] = arr_2[i_4].method12368((byte) -50);
-			aq[i_3++] = arr_2[i_4].method12369(1534020223);
+			aq[i_3++] = arr_2[i_4].method12369();
 			aq[i_3++] = arr_2[i_4].method12394(1428101811);
-			aq[i_3++] = arr_2[i_4].method12370(-789603523);
+			aq[i_3++] = arr_2[i_4].method12370();
 			av[i_4] = arr_2[i_4].method12395(434198990);
 			aq[i_3++] = arr_2[i_4].method12371(-2135372215);
 		}
@@ -1347,7 +1347,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public void method8580(Class151 class151_1) {
 		if (class151_1.aClass464_1961.method7736(-756134032) != 0) {
-			this.ny(class151_1, false);
+			this.ny(class151_1);
 			this.nx().method309(this, bi, bw, bx, bz, class151_1.aClass464_1961.method7736(-1766385205));
 		}
 
@@ -1355,7 +1355,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public void method8581(Class151 class151_1) {
 		if (class151_1.aClass464_1961.method7736(-419803619) != 0) {
-			this.ny(class151_1, false);
+			this.ny(class151_1);
 			this.nx().method309(this, bi, bw, bx, bz, class151_1.aClass464_1961.method7736(-1679034596));
 		}
 
@@ -1444,8 +1444,8 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void fw(int var1, int var2, int var3, int var4, int var5);
 
-	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new i(this, this.z, i_1, i_2, ints_3, ints_4, i_5, i_6, i_7);
+	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_6, int i_7) {
+		return new i(this, this.z, i_1, i_2, ints_3, ints_4, 512, i_6, i_7);
 	}
 
 	public boolean method8628() {
@@ -1457,7 +1457,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	}
 
 	public NativeSprite method8444(Class91 class91_1, boolean bool_2) {
-		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, 0, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
+		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
 		fa_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
 		return fa_3;
 	}
@@ -1614,9 +1614,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
 			aq[i_3++] = arr_2[i_4].method12368((byte) 98);
-			aq[i_3++] = arr_2[i_4].method12369(1534020223);
+			aq[i_3++] = arr_2[i_4].method12369();
 			aq[i_3++] = arr_2[i_4].method12394(1424765190);
-			aq[i_3++] = arr_2[i_4].method12370(-789603523);
+			aq[i_3++] = arr_2[i_4].method12370();
 			av[i_4] = arr_2[i_4].method12395(-1021578073);
 			aq[i_3++] = arr_2[i_4].method12371(-2136942824);
 		}

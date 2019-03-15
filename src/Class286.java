@@ -90,11 +90,11 @@ public class Class286 implements Runnable {
 		}
 	}
 
-	void method5031(int i_1) {
+	void method5031() {
 		this.anInputStream3396 = new InputStream_Sub1();
 	}
 
-	int method5034(int i_1) throws IOException {
+	int method5034() throws IOException {
 		synchronized (this) {
 			int i_3;
 			if (this.anInt3395 <= this.anInt3400) {
@@ -166,7 +166,7 @@ public class Class286 implements Runnable {
 		}
 	}
 
-	static Class194 method5048(int i_0, byte b_1) {
+	static Class194 method5048(int i_0) {
 		if (i_0 == 0) {
 			if ((double) Class291_Sub1.aFloat3468 == 3.0D) {
 				return Class494.aClass194_5794;

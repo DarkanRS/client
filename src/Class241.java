@@ -17,7 +17,7 @@ public final class Class241 {
 		long long_3 = Class169.time();
 		int i_5;
 		for (i_5 = 0; i_5 < 10000; i_5++) {
-			graphicalrenderer_2.method8658(5, 10, 100.0F, 75, 50, 100.0F, 15, 90, 100.0F, -65536, -65536, -65536, 1);
+			graphicalrenderer_2.method8658(5, 10, 75, 50, 15, 90);
 		}
 		i_5 = (int) (Class169.time() - long_3);
 		graphicalrenderer_2.method8425(0, 0, 100, 100, -16777216, (byte) -29);
@@ -25,14 +25,14 @@ public final class Class241 {
 		return i_5;
 	}
 
-	static final int method4151(int i_0, int i_1, int i_2) {
+	static final int method4151(int i_0, int i_1) {
 		int i_3 = Class260.method4632(i_0 - 1, i_1 - 1, -560937725) + Class260.method4632(1 + i_0, i_1 - 1, -402539305) + Class260.method4632(i_0 - 1, 1 + i_1, -1473619628) + Class260.method4632(i_0 + 1, 1 + i_1, -1104539338);
 		int i_4 = Class260.method4632(i_0 - 1, i_1, -1635186787) + Class260.method4632(1 + i_0, i_1, -482415462) + Class260.method4632(i_0, i_1 - 1, -455733899) + Class260.method4632(i_0, i_1 + 1, -1506173110);
 		int i_5 = Class260.method4632(i_0, i_1, -145642612);
 		return i_3 / 16 + i_4 / 8 + i_5 / 4;
 	}
 
-	static void method4152(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, int i_6, String string_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10, int i_11) {
+	static void method4152(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, int i_6, String string_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10) {
 		int i_12;
 		if (NativeLibraryLoader.anInt3240 == 4) {
 			i_12 = (int) client.aFloat7365 & 0x3fff;

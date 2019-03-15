@@ -2,7 +2,7 @@ public class Class468_Sub8 extends Preference {
 
 	public static Interface[] INTERFACES;
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -18,14 +18,14 @@ public class Class468_Sub8 extends Preference {
 		return 1;
 	}
 
-	public void method12674(int i_1) {
+	public void method12674() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
 			this.anInt5578 = this.method7781(2014665921);
 		}
 
 	}
 
-	public int method12675(int i_1) {
+	public int method12675() {
 		return this.anInt5578;
 	}
 
@@ -49,7 +49,7 @@ public class Class468_Sub8 extends Preference {
 		this.anInt5578 = i_1 * -754033619 * -859024475;
 	}
 
-	public static void method12679(int i_0) {
+	public static void method12679() {
 		SoftCache softcache_1 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
 			PlayerAppearance.aClass229_2920.method3859(1287149735);

@@ -14,7 +14,7 @@ public final class Class47_Sub1 extends Class47 {
 		this.method14476((byte) -60);
 	}
 
-	boolean method14475(byte b_1) throws Exception_Sub2 {
+	boolean method14475() throws Exception_Sub2 {
 		this.aClass101_9124 = this.aClass505_Sub2_439.method13890("Sprite");
 		Class282_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9124.method1691("WVPMatrix", (short) 15174);
 		Class282_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9124.method1691("SpriteSampler", (short) 14030);
@@ -149,7 +149,7 @@ public final class Class47_Sub1 extends Class47 {
 
 	public Class47_Sub1(Class505_Sub2 class505_sub2_1) throws Exception_Sub2 {
 		super(class505_sub2_1);
-		this.method14475((byte) 0);
+		this.method14475();
 	}
 
 	public void method942() {
@@ -164,7 +164,7 @@ public final class Class47_Sub1 extends Class47 {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		int i_5 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (i_5 >= 1 && i_5 <= 10) {
-			icomponentdefinitions_0.method2039(i_5 - 1, i_4, 1711719581);
+			icomponentdefinitions_0.method2039(i_5 - 1, i_4);
 		}
 
 	}

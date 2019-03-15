@@ -3,18 +3,18 @@ public class Class372 implements Definition {
 	public char aChar4328;
 	public int anInt4327 = 0;
 
-	void method6356(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method6356(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method6357(rsbytebuffer_1, i_3, (byte) 7);
+			this.method6357(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method6357(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method6357(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aChar4328 = Class11.getChar(rsbytebuffer_1.readByte(), -385178071);
 		} else if (i_2 == 5) {

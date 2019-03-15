@@ -28,7 +28,7 @@ public abstract class Class534 {
 		return (int) long_4;
 	}
 
-	void method11409(int i_1) {
+	void method11409() {
 		this.aClass482_7077.method8118(839183612);
 		this.aLong7074 = -1L;
 		this.aLong7076 = -1L;
@@ -36,22 +36,22 @@ public abstract class Class534 {
 		this.anInt7078 = -1;
 	}
 
-	void method11410(MouseRecord class282_sub53_1, byte b_2) {
+	void method11410(MouseRecord class282_sub53_1) {
 		this.aClass482_7077.append(class282_sub53_1, -1396840421);
 	}
 
-	abstract int method11412(int var1);
+	abstract int method11412();
 
-	abstract void method11413(RsByteBuffer var1, MouseRecord var2, int var3);
+	abstract void method11413(RsByteBuffer var1, MouseRecord var2);
 
-	abstract void method11414(int var1);
+	abstract void method11414();
 
 	abstract int method11415();
 
-	abstract TCPMessage method11416(byte var1);
+	abstract TCPMessage method11416();
 
 	void method11417(int i_1) {
-		if (this.method11423(-1420677067)) {
+		if (this.method11423()) {
 			TCPMessage tcpmessage_2 = null;
 			int i_3 = 0;
 			int i_4 = 0;
@@ -63,7 +63,7 @@ public abstract class Class534 {
 						break label105;
 					}
 					MouseRecord class282_sub53_13 = (MouseRecord) iterator_6.next();
-					if (tcpmessage_2 != null && tcpmessage_2.buffer.index - i_3 >= 252 - (6 + this.method11412(919512464))) {
+					if (tcpmessage_2 != null && tcpmessage_2.buffer.index - i_3 >= 252 - (6 + this.method11412())) {
 						break label105;
 					}
 					class282_sub53_13.remove();
@@ -83,7 +83,7 @@ public abstract class Class534 {
 						class282_sub53_13.cache(-894194576);
 					} else {
 						if (tcpmessage_2 == null) {
-							tcpmessage_2 = this.method11416((byte) -81);
+							tcpmessage_2 = this.method11416();
 							tcpmessage_2.buffer.writeByte(0);
 							i_3 = tcpmessage_2.buffer.index;
 							tcpmessage_2.buffer.index += 2;
@@ -108,12 +108,12 @@ public abstract class Class534 {
 						if (i_12 < 8 && i_10 >= -32 && i_10 <= 31 && i_11 >= -32 && i_11 <= 31) {
 							i_10 += 32;
 							i_11 += 32;
-							tcpmessage_2.buffer.writeShort((i_12 << 12) + i_11 + (i_10 << 6), 1417031095);
+							tcpmessage_2.buffer.writeShort((i_12 << 12) + i_11 + (i_10 << 6));
 						} else if (i_12 < 32 && i_10 >= -128 && i_10 <= 127 && i_11 >= -128 && i_11 <= 127) {
 							i_10 += 128;
 							i_11 += 128;
 							tcpmessage_2.buffer.writeByte(i_12 + 128);
-							tcpmessage_2.buffer.writeShort(i_11 + (i_10 << 8), 1417031095);
+							tcpmessage_2.buffer.writeShort(i_11 + (i_10 << 8));
 						} else if (i_12 < 32) {
 							tcpmessage_2.buffer.writeByte(i_12 + 192);
 							if (i_9 != -1 && i_8 != -1) {
@@ -122,7 +122,7 @@ public abstract class Class534 {
 								tcpmessage_2.buffer.writeInt(Integer.MIN_VALUE);
 							}
 						} else {
-							tcpmessage_2.buffer.writeShort((i_12 & 0x1fff) + 57344, 1417031095);
+							tcpmessage_2.buffer.writeShort((i_12 & 0x1fff) + 57344);
 							if (i_9 != -1 && i_8 != -1) {
 								tcpmessage_2.buffer.writeInt(i_9 | i_8 << 16);
 							} else {
@@ -130,7 +130,7 @@ public abstract class Class534 {
 							}
 						}
 						++i_5;
-						this.method11413(tcpmessage_2.buffer, class282_sub53_13, 1351568696);
+						this.method11413(tcpmessage_2.buffer, class282_sub53_13);
 						this.aLong7076 = class282_sub53_13.method13471(1014804991);
 						class282_sub53_13.cache(684754110);
 					}
@@ -146,7 +146,7 @@ public abstract class Class534 {
 				client.aClass184_7475.method3049(tcpmessage_2, 1392403393);
 			}
 		}
-		this.method11414(-1167987838);
+		this.method11414();
 	}
 
 	abstract void method11418();
@@ -157,7 +157,7 @@ public abstract class Class534 {
 
 	abstract TCPMessage method11422();
 
-	abstract boolean method11423(int var1);
+	abstract boolean method11423();
 
 	abstract int method11424();
 

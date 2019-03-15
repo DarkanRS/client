@@ -352,7 +352,7 @@ public class Message {
 		this.aMap5279.put(Language.aClass495_5797, string_4);
 	}
 
-	public static Class282_Sub15_Sub2 method7272(byte b_0) {
+	public static Class282_Sub15_Sub2 method7272() {
 		return Class148.aClass282_Sub15_Sub2_1735;
 	}
 
@@ -360,16 +360,16 @@ public class Message {
 		return (String) this.aMap5279.get(xlanguage_1);
 	}
 
-	static void method7275(GraphicalRenderer graphicalrenderer_0, int i_1) {
+	static void method7275(GraphicalRenderer graphicalrenderer_0) {
 		if (Class187.anInt2351 != Class84.myPlayer.plane && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1864995825) != null) {
 			Class169.time();
-			if (Class289.method5097(graphicalrenderer_0, Class84.myPlayer.plane, 17547042)) {
+			if (Class289.method5097(graphicalrenderer_0, Class84.myPlayer.plane)) {
 				Class187.anInt2351 = Class84.myPlayer.plane;
 			}
 		}
 	}
 
-	public static void method7278(int i_0, int i_1) {
+	public static void method7278(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(21, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 33);
 	}

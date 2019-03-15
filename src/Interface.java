@@ -32,8 +32,8 @@ public class Interface {
 		this.aBool999 = bool_1;
 	}
 
-	public static final void method1623(int i_0) {
-		Class216.method3675(1786345593);
+	public static final void method1623() {
+		Class216.method3675();
 		for (int i_1 = 0; i_1 < Class260.anInt3219; i_1++) {
 			Class268 class268_2 = Class260.aClass268Array3232[i_1];
 			boolean bool_3 = false;
@@ -68,7 +68,7 @@ public class Interface {
 							int i_6 = class268_2.anInt3298 >> 24 & 0x3;
 							if (i_6 == Class84.myPlayer.plane) {
 								int i_7 = (class268_2.anInt3298 & 0xff) << 9;
-								int i_8 = Class84.myPlayer.getSize(828768449) << 8;
+								int i_8 = Class84.myPlayer.getSize() << 8;
 								Vector3 vector3_9 = Class84.myPlayer.method11166().aClass385_3595;
 								int i_10 = class268_2.anInt3298 >> 16 & 0xff;
 								int i_11 = (i_10 << 9) + 256 - (int) vector3_9.x + i_8;
@@ -116,7 +116,7 @@ public class Interface {
 							} else if (class268_2.method4793((byte) -6)) {
 								class268_2.aClass282_Sub15_Sub5_3304 = class268_2.aClass282_Sub26_Sub1_Sub1_3296.method15225(class268_2.anInt3295, i_5, i_4);
 							}
-							class268_2.aClass282_Sub15_Sub5_3304.method15325(class268_2.anInt3302 - 1, (byte) 8);
+							class268_2.aClass282_Sub15_Sub5_3304.method15325(class268_2.anInt3302 - 1);
 							Class79.aClass282_Sub15_Sub4_783.method15275(class268_2.aClass282_Sub15_Sub5_3304);
 						}
 					}
@@ -137,7 +137,7 @@ public class Interface {
 		if (Class260.aBool3220 && !Class116.method1966(1117518618)) {
 			if (Class393.preferences.aClass468_Sub13_8228.method12714(-1550374075) != 0 && Class260.anInt3223 != -1) {
 				if (Class260.aClass282_Sub15_Sub2_3231 != null) {
-					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.preferences.aClass468_Sub13_8228.method12714(1791834725), false, Class260.aClass282_Sub15_Sub2_3231, 62181845);
+					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aClass468_Sub13_8228.method12714(1791834725), Class260.aClass282_Sub15_Sub2_3231);
 				} else {
 					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, 0, Class393.preferences.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
 				}
@@ -152,7 +152,7 @@ public class Interface {
 		}
 	}
 
-	public static AccountCreationResponseOpcodes[] method1626(int i_0) {
+	public static AccountCreationResponseOpcodes[] method1626() {
 		return new AccountCreationResponseOpcodes[] { AccountCreationResponseOpcodes.aClass483_5729, AccountCreationResponseOpcodes.CLIENT_HAS_BEEN_UPDATED, AccountCreationResponseOpcodes.CONTINUE, AccountCreationResponseOpcodes.aClass483_5733, AccountCreationResponseOpcodes.aClass483_5730, AccountCreationResponseOpcodes.aClass483_5735, AccountCreationResponseOpcodes.aClass483_5732, AccountCreationResponseOpcodes.aClass483_5736, AccountCreationResponseOpcodes.aClass483_5737, AccountCreationResponseOpcodes.aClass483_5731 };
 	}
 }

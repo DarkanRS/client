@@ -44,11 +44,11 @@ public class TilestreamPacket {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method6292(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static final void method6292(int i_0, int i_1, int i_2, int i_3) {
 		if (i_0 - i_2 >= Class532_Sub3.anInt7071 && i_0 + i_2 <= Class532_Sub3.anInt7069 && i_1 - i_2 >= Class532_Sub3.anInt7070 && i_2 + i_1 <= Class532_Sub3.anInt7068) {
-			Class31.method813(i_0, i_1, i_2, i_3, -990721076);
+			Class31.method813(i_0, i_1, i_2, i_3);
 		} else {
-			Class273.method4866(i_0, i_1, i_2, i_3, -1855958867);
+			Class273.method4866(i_0, i_1, i_2, i_3);
 		}
 	}
 }

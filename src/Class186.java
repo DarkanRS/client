@@ -9,7 +9,7 @@ public class Class186 {
 		throw new Error();
 	}
 
-	public static boolean method3082(String string_0, int i_1, String string_2, int i_3) {
+	public static boolean method3082(String string_0, int i_1, String string_2) {
 		boolean bool_4;
 		if (i_1 == 0) {
 			try {
@@ -76,7 +76,7 @@ public class Class186 {
 		Class9.aClass184_73.thirdLastPacket = null;
 		Class9.aClass184_73.idleReadPulses = 0;
 		client.anInt7178 = 0;
-		Class209_Sub1.method12916((byte) 16);
+		Class209_Sub1.method12916();
 		client.anInt7434 = 0;
 		client.anInt7449 = 0;
 		client.aString7426 = null;
@@ -84,7 +84,7 @@ public class Class186 {
 		Class467.aClass173Array5575 = null;
 		Class282_Sub13.aClass61_7587 = null;
 		Class58.aClass61_528 = null;
-		Class237.method3990(1060559975);
+		Class237.method3990();
 
 		for (int i_1 = 0; i_1 < 25; i_1++) {
 			client.anIntArray7336[i_1] = 0;
@@ -94,7 +94,7 @@ public class Class186 {
 
 	}
 
-	static void method3084(short s_0) {
+	static void method3084() {
 		Class197.NUM_PLAYER_INDICES = 0;
 
 		for (int i_1 = 0; i_1 < 2048; i_1++) {

@@ -29,13 +29,13 @@ public abstract class JS5StandardRequester {
 				throw new RuntimeException();
 			}
 
-			this.priorities.method7936(request, -1738910950);
+			this.priorities.method7936(request);
 		} else {
 			if (this.extras(-1983883069) >= 20) {
 				throw new RuntimeException();
 			}
 
-			this.extras.method7936(request, -1738910950);
+			this.extras.method7936(request);
 		}
 
 		return request;
@@ -55,9 +55,9 @@ public abstract class JS5StandardRequester {
 
 	abstract void method5520(byte var1);
 
-	public abstract boolean method5521(byte var1);
+	public abstract boolean method5521();
 
-	public abstract void init(Object var1, boolean var2, int var3);
+	public abstract void init(Object var1, boolean var2);
 
 	public abstract void method5523(boolean var1, byte var2);
 
@@ -65,7 +65,7 @@ public abstract class JS5StandardRequester {
 
 	public abstract void method5525(int var1);
 
-	public abstract void method5526(int var1);
+	public abstract void method5526();
 
 	public abstract void method5527();
 
@@ -85,7 +85,7 @@ public abstract class JS5StandardRequester {
 
 	public abstract boolean method5542();
 
-	public abstract void method5543(byte var1);
+	public abstract void method5543();
 
 	public abstract void method5544(Object var1, boolean var2);
 
@@ -111,17 +111,17 @@ public abstract class JS5StandardRequester {
 
 	public abstract boolean method5557();
 
-	public static final void method5558(int i_0) {
+	public static final void method5558() {
 		Class9.loginStage = 2;
 		Class9.anInt106 = -2;
 		Class9.anInt72 = -2;
 	}
 
-	public static void method5559(Index index_0, int i_1) {
+	public static void method5559(Index index_0) {
 		Class347.aClass317_4053 = index_0;
 	}
 
-	public static void method5560(RsByteBuffer rsbytebuffer_0, int i_1, int i_2) {
+	public static void method5560(RsByteBuffer rsbytebuffer_0, int i_1) {
 		Class282_Sub42 class282_sub42_3 = new Class282_Sub42();
 		class282_sub42_3.anInt8033 = rsbytebuffer_0.readUnsignedByte();
 		class282_sub42_3.anInt8038 = rsbytebuffer_0.readInt();

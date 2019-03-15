@@ -8,7 +8,7 @@ public class Class96_Sub10_Sub2 extends Class96_Sub10 {
 		int i_1 = 256 + this.anInt10223 * -979961597 * 611538432;
 		int i_2 = 256 + this.anInt10222 * -1994093411 * -55350784;
 		int i_3 = -387189251 * this.anInt10224 * -51671211;
-		if (i_3 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(this.anInt10223 * -979961597 * 563231147, this.anInt10222 * -1994093411 * -344041035, 1522246231)) {
+		if (i_3 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(this.anInt10223 * -979961597 * 563231147, this.anInt10222 * -1994093411 * -344041035, 1522246231)) {
 			++i_3;
 		}
 
@@ -16,11 +16,11 @@ public class Class96_Sub10_Sub2 extends Class96_Sub10 {
 		client.aClass465_7334.put(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4_4), (long) (this.anInt10223 * -979961597 * 563231147 << 16 | -344041035 * this.anInt10222 * -1994093411));
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		int i_2 = this.anInt10223 * 512 + 256;
 		int i_3 = this.anInt10222 * 512 + 256;
 		int i_4 = this.anInt10224;
-		if (i_4 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(this.anInt10223, this.anInt10222, 1968806525)) {
+		if (i_4 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(this.anInt10223, this.anInt10222, 1968806525)) {
 			++i_4;
 		}
 

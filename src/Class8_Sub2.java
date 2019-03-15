@@ -384,12 +384,12 @@ public class Class8_Sub2 extends FontRenderer {
 		ItemContainer.CONTAINER_MAP.method7749(-1390768924);
 	}
 
-	public static void method14263(int i_0, int i_1, byte b_2) {
+	public static void method14263(int i_0, int i_1) {
 		Class291_Sub1.anInt8014 = i_0 - Class291_Sub1.anInt3472;
 		Class291_Sub1.anInt8016 = i_1 - Class291_Sub1.anInt3473;
 	}
 
-	public static void method14264(RsBitsBuffer rsbitsbuffer_0, int i_1) {
+	public static void method14264(RsBitsBuffer rsbitsbuffer_0) {
 		Class282_Sub42 class282_sub42_2 = (Class282_Sub42) Class435.aClass482_5332.head((byte) 121);
 		if (class282_sub42_2 != null) {
 			int i_3 = rsbitsbuffer_0.index;
@@ -478,7 +478,7 @@ public class Class8_Sub2 extends FontRenderer {
 				}
 			}
 
-			rsbitsbuffer_0.method13104(i_3, -419087977);
+			rsbitsbuffer_0.method13104(i_3);
 			class282_sub42_2.remove();
 		}
 

@@ -13,7 +13,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 	int[][] method12320(int i_1, int i_2) {
 		int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1739849302);
 		if (this.aClass308_7670.aBool3619) {
-			int[][] ints_4 = this.method12333(0, i_1, (byte) 3);
+			int[][] ints_4 = this.method12333(0, i_1);
 			int[] ints_5 = ints_4[0];
 			int[] ints_6 = ints_4[1];
 			int[] ints_7 = ints_4[2];
@@ -22,7 +22,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 			int[] ints_10 = ints_3[2];
 
 			for (int i_11 = 0; i_11 < Class316.anInt3670; i_11++) {
-				this.method15400(ints_5[i_11], ints_6[i_11], ints_7[i_11], 2137436885);
+				this.method15400(ints_5[i_11], ints_6[i_11], ints_7[i_11]);
 				this.anInt9922 += this.anInt9918;
 				this.anInt9925 += this.anInt9919;
 
@@ -50,7 +50,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 					this.anInt9926 = 4096;
 				}
 
-				this.method15401(this.anInt9922, this.anInt9925, this.anInt9926, (byte) 101);
+				this.method15401(this.anInt9922, this.anInt9925, this.anInt9926);
 				ints_8[i_11] = this.anInt9927;
 				ints_9[i_11] = this.anInt9921;
 				ints_10[i_11] = this.anInt9924;
@@ -64,7 +64,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 		super(1, false);
 	}
 
-	void method15400(int i_1, int i_2, int i_3, int i_4) {
+	void method15400(int i_1, int i_2, int i_3) {
 		int i_5 = i_1 > i_2 ? i_1 : i_2;
 		i_5 = i_3 > i_5 ? i_3 : i_5;
 		int i_6 = i_1 < i_2 ? i_1 : i_2;
@@ -96,7 +96,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 
 	}
 
-	void method15401(int i_1, int i_2, int i_3, byte b_4) {
+	void method15401(int i_1, int i_2, int i_3) {
 		int i_5 = i_3 <= 2048 ? i_3 * (i_2 + 4096) >> 12 : i_3 + i_2 - (i_3 * i_2 >> 12);
 		if (i_5 > 0) {
 			i_1 *= 6;
@@ -146,7 +146,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9918 = rsbytebuffer_2.readShort();

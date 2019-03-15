@@ -91,7 +91,7 @@ public abstract class Class158 {
 							i_14 = i_16;
 							i_16 = i_17;
 						}
-						graphicalrenderer_0.method8563(i_13, i_14, i_15, i_16, worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[i_12] & 0xff], 1, class455_1, i_3, i_4, worldmapareadefs_9.anInt2748, worldmapareadefs_9.anInt2749, worldmapareadefs_9.anInt2756);
+						graphicalrenderer_0.method8563(i_13, i_14, i_15, i_16, worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[i_12] & 0xff], class455_1, i_3, i_4, worldmapareadefs_9.anInt2748, worldmapareadefs_9.anInt2749, worldmapareadefs_9.anInt2756);
 					}
 					i_12 = ints_10[ints_10.length - 2];
 					i_13 = ints_10[ints_10.length - 1];
@@ -109,17 +109,17 @@ public abstract class Class158 {
 						i_13 = i_15;
 						i_15 = i_16;
 					}
-					graphicalrenderer_0.method8563(i_12, i_13, i_14, i_15, worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[worldmapareadefs_9.aByteArray2754.length - 1] & 0xff], 1, class455_1, i_3, i_4, worldmapareadefs_9.anInt2748, worldmapareadefs_9.anInt2749, worldmapareadefs_9.anInt2756);
+					graphicalrenderer_0.method8563(i_12, i_13, i_14, i_15, worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[worldmapareadefs_9.aByteArray2754.length - 1] & 0xff], class455_1, i_3, i_4, worldmapareadefs_9.anInt2748, worldmapareadefs_9.anInt2749, worldmapareadefs_9.anInt2756);
 				} else {
 					for (i_12 = 0; i_12 < ints_10.length / 2 - 1; i_12++) {
-						graphicalrenderer_0.method8669(ints_10[i_12 * 2], ints_10[i_12 * 2 + 1], ints_10[(i_12 + 1) * 2], ints_10[(i_12 + 1) * 2 + 1], worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[i_12] & 0xff], 1, class455_1, i_3, i_4);
+						graphicalrenderer_0.method8669(ints_10[i_12 * 2], ints_10[i_12 * 2 + 1], ints_10[(i_12 + 1) * 2], ints_10[(i_12 + 1) * 2 + 1], worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[i_12] & 0xff], class455_1, i_3, i_4);
 					}
-					graphicalrenderer_0.method8669(ints_10[ints_10.length - 2], ints_10[ints_10.length - 1], ints_10[0], ints_10[1], worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[worldmapareadefs_9.aByteArray2754.length - 1] & 0xff], 1, class455_1, i_3, i_4);
+					graphicalrenderer_0.method8669(ints_10[ints_10.length - 2], ints_10[ints_10.length - 1], ints_10[0], ints_10[1], worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[worldmapareadefs_9.aByteArray2754.length - 1] & 0xff], class455_1, i_3, i_4);
 				}
 			}
 			NativeSprite nativesprite_22 = null;
 			if (worldmapareadefs_9.anInt2719 != -1) {
-				nativesprite_22 = worldmapareadefs_9.renderIcons(graphicalrenderer_0, false, (byte) 8);
+				nativesprite_22 = worldmapareadefs_9.renderIcons(graphicalrenderer_0, false);
 				if (nativesprite_22 != null) {
 					Class190.method3149(icomponentdefinitions_2, class455_1, i_3, i_4, i_5, i_6, nativesprite_22, -1909602202);
 				}
@@ -139,7 +139,7 @@ public abstract class Class158 {
 					fontrenderer_20 = Class285.aClass8_3394;
 					fontmetrics_21 = Class288.aClass414_3438;
 				}
-				Class241.method4152(icomponentdefinitions_2, class455_1, i_3, i_4, i_5, i_6, i_11, worldmapareadefs_9.areaName, fontrenderer_20, fontmetrics_21, worldmapareadefs_9.anInt2720, -1590332940);
+				Class241.method4152(icomponentdefinitions_2, class455_1, i_3, i_4, i_5, i_6, i_11, worldmapareadefs_9.areaName, fontrenderer_20, fontmetrics_21, worldmapareadefs_9.anInt2720);
 			}
 		}
 	}
@@ -151,7 +151,7 @@ public abstract class Class158 {
 			Class109.redrawComponent(icomponentdefinitions_0, (byte) 79);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			RenderAnimIndexLoader.method3631(icomponentdefinitions_0.idHash, -1844455774);
+			RenderAnimIndexLoader.method3631(icomponentdefinitions_0.idHash);
 		}
 	}
 }

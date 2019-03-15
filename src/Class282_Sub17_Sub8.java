@@ -3,7 +3,7 @@ public class Class282_Sub17_Sub8 extends Class282_Sub17 {
 	int anInt10021;
 	Class348 this$0;
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.anInt10021 = rsbytebuffer_1.readUnsignedShort();
 	}
 
@@ -11,7 +11,7 @@ public class Class282_Sub17_Sub8 extends Class282_Sub17 {
 		this.anInt10021 = rsbytebuffer_1.readUnsignedShort() * 86059087 * 1415900847;
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1208(this.anInt10021, 2131947597);
 	}
 

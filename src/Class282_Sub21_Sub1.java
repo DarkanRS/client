@@ -8,7 +8,7 @@ public abstract class Class282_Sub21_Sub1 extends Class282_Sub21 {
 
 	public abstract int method15453(int var1);
 
-	String method15454(int i_1) {
+	String method15454() {
 		return this.aString10057;
 	}
 
@@ -22,7 +22,7 @@ public abstract class Class282_Sub21_Sub1 extends Class282_Sub21 {
 		return this.aClass111_10060;
 	}
 
-	public int method15459(short s_1) {
+	public int method15459() {
 		if (this.aClass111_10058 != Class111.aClass111_1109) {
 			throw new IllegalArgumentException_Sub1(this, this.aClass111_10058.toString().toLowerCase());
 		} else {

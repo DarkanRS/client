@@ -6,7 +6,7 @@ public class RegionMap {
 
 	public byte[][][] tileMasks;
 
-	public void reset(int i_1) {
+	public void reset() {
 		for (int i_2 = 0; i_2 < this.tileMasks.length; i_2++) {
 			for (int i_3 = 0; i_3 < this.tileMasks[0].length; i_3++) {
 				for (int i_4 = 0; i_4 < this.tileMasks[0][0].length; i_4++) {
@@ -21,18 +21,18 @@ public class RegionMap {
 	}
 
 	public boolean method5498(int i_1, int i_2, int i_3, int i_4, short s_5) {
-		return (this.tileMasks[0][i_3][i_4] & 0x2) != 0 ? true : ((this.tileMasks[i_2][i_3][i_4] & 0x10) != 0 ? false : this.method5499(i_2, i_3, i_4, (short) -9790) == i_1);
+		return (this.tileMasks[0][i_3][i_4] & 0x2) != 0 ? true : ((this.tileMasks[i_2][i_3][i_4] & 0x10) != 0 ? false : this.method5499(i_2, i_3, i_4) == i_1);
 	}
 
-	int method5499(int i_1, int i_2, int i_3, short s_4) {
+	int method5499(int i_1, int i_2, int i_3) {
 		return (this.tileMasks[i_1][i_2][i_3] & 0x8) != 0 ? 0 : (i_1 > 0 && (this.tileMasks[1][i_2][i_3] & 0x2) != 0 ? i_1 - 1 : i_1);
 	}
 
-	public RegionMap(int i_1, int i_2, int i_3) {
-		this.tileMasks = new byte[i_1][i_2][i_3];
+	public RegionMap(int i_2, int i_3) {
+		this.tileMasks = new byte[4][i_2][i_3];
 	}
 
-	public static void method5513(int i_0, int i_1, byte b_2) {
+	public static void method5513(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(18, (long) i_1 << 32 | (long) i_0);
 		class282_sub50_sub12_3.method14965((byte) -18);
 	}

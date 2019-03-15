@@ -22,17 +22,17 @@ public class Class287 {
 
 	int anInt3432;
 
-	public Class287(GraphicalRenderer graphicalrenderer_1, int i_2, RsByteBuffer rsbytebuffer_3, int i_4) {
+	public Class287(GraphicalRenderer graphicalrenderer_1, int i_2, RsByteBuffer rsbytebuffer_3) {
 		if (Class468_Sub20.anIntArray7920 == null) {
-			Class8_Sub1.method13783(-1231486985);
+			Class8_Sub1.method13783();
 		}
 		this.anInt3419 = rsbytebuffer_3.readUnsignedByte();
 		this.aBool3426 = (this.anInt3419 & 0x8) != 0;
 		this.aBool3427 = (this.anInt3419 & 0x10) != 0;
 		this.anInt3419 &= 0x7;
-		int i_5 = rsbytebuffer_3.readUnsignedShort() << i_4;
-		int i_6 = rsbytebuffer_3.readUnsignedShort() << i_4;
-		int i_7 = rsbytebuffer_3.readUnsignedShort() << i_4;
+		int i_5 = rsbytebuffer_3.readUnsignedShort() << 2;
+		int i_6 = rsbytebuffer_3.readUnsignedShort() << 2;
+		int i_7 = rsbytebuffer_3.readUnsignedShort() << 2;
 		int i_8 = rsbytebuffer_3.readUnsignedByte();
 		int i_9 = i_8 * 2 + 1;
 		this.aShortArray3429 = new short[i_9];
@@ -55,16 +55,16 @@ public class Class287 {
 		this.anInt3430 = i_14 & 0x1f;
 		this.anInt3433 = (i_14 & 0xe0) << 3;
 		if (this.anInt3430 != 31) {
-			this.method5052((byte) -17);
+			this.method5052();
 		}
-		this.method5050(graphicalrenderer_1, i_5, i_7, i_6, i_8, i_10, 1680062514);
+		this.method5050(graphicalrenderer_1, i_5, i_7, i_6, i_8, i_10);
 	}
 
-	void method5050(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-		this.aClass282_Sub24_3425 = graphicalrenderer_1.method8593(i_2, i_3, i_4, i_5, i_6, 1.0F);
+	void method5050(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+		this.aClass282_Sub24_3425 = graphicalrenderer_1.method8593(i_2, i_3, i_4, i_5, i_6);
 	}
 
-	void method5052(byte b_1) {
+	void method5052() {
 		switch (this.anInt3430) {
 		case 2:
 			this.anInt3431 = 1;
@@ -164,7 +164,7 @@ public class Class287 {
 		}
 	}
 
-	void method5053(int i_1, boolean bool_2, int i_3) {
+	void method5053(int i_1, boolean bool_2) {
 		int i_4;
 		if (!bool_2) {
 			int i_5 = this.anInt3432 * i_1 / 50 + this.anInt3433 & 0x7ff;
@@ -190,10 +190,10 @@ public class Class287 {
 		} else {
 			i_4 = 2048;
 		}
-		this.aClass282_Sub24_3425.method12373((float) ((i_4 * this.anInt3409 >> 11) + this.anInt3435) / 2048.0F, 2036382095);
+		this.aClass282_Sub24_3425.method12373((float) ((i_4 * this.anInt3409 >> 11) + this.anInt3435) / 2048.0F);
 	}
 
-	public void method5061(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	public void method5061(int i_1, int i_2, int i_3, int i_4) {
 		this.anInt3431 = i_1;
 		this.anInt3435 = i_4;
 		this.anInt3409 = i_3;

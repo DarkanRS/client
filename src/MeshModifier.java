@@ -42,7 +42,7 @@ public class MeshModifier {
 		WorldMapIndexLoader.INTERFACES_LOADED = new boolean[Class388.INTERFACE_INDEX.containersCount()];
 	}
 
-	public static void method7042(byte b_0) {
+	public static void method7042() {
 		int i_1 = Class337.aLinkedList3969.size();
 		Iterator iterator_2 = Class337.aLinkedList3969.iterator();
 		while (iterator_2.hasNext()) {

@@ -39,7 +39,7 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
 		for (int i_6 = 0; i_6 < 6; i_6++) {
 			int i_7 = i_6 + 34069;
-			class158_sub1_sub4_5.method13759(0, this.aClass137_Sub2_10124.method14458(i_7, 0));
+			class158_sub1_sub4_5.method13759(0, this.aClass137_Sub2_10124.method14458(i_7));
 			class158_sub1_sub4_5.method15628(0);
 			if (!class158_sub1_sub4_5.method13764()) {
 				bool_4 = false;

@@ -4,7 +4,7 @@ public class Class366 implements Interface3 {
 
 	public int anInt4231;
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_609;
 	}
 
@@ -16,7 +16,7 @@ public class Class366 implements Interface3 {
 		return Class60.aClass60_609;
 	}
 
-	static void method6301(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, int i_4, int i_5) {
+	static void method6301(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, int i_4) {
 		for (int i_6 = 7; i_6 >= 0; --i_6) {
 			for (int i_7 = 127; i_7 >= 0; --i_7) {
 				int i_8 = (i_4 & 0x3f) << 10 | (i_6 & 0x7) << 7 | i_7 & 0x7f;
@@ -28,7 +28,7 @@ public class Class366 implements Interface3 {
 		}
 	}
 
-	static long method6302(CharSequence charsequence_0, byte b_1) {
+	static long method6302(CharSequence charsequence_0) {
 		long long_2 = 0L;
 		int i_4 = charsequence_0.length();
 		for (int i_5 = 0; i_5 < i_4; i_5++) {
@@ -51,10 +51,10 @@ public class Class366 implements Interface3 {
 		return long_2;
 	}
 
-	public static Class365 method6303(RsByteBuffer rsbytebuffer_0, byte b_1) {
+	public static Class365 method6303(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
 		Class356 class356_3 = Class350_Sub3_Sub1.method15558(-41327107)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_4 = AccountCreationResponseOpcodes.method8155(152314627)[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_4 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readShort();
 		int i_7 = rsbytebuffer_0.readUnsignedShort();

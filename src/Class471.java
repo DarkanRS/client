@@ -2,11 +2,11 @@ public final class Class471 {
 
 	static Class459 aClass459_5588 = new Class459();
 
-	public static int method7828(byte[] bytes_0, int i_1, byte[] bytes_2, int i_3, int i_4) {
+	public static int method7828(byte[] bytes_0, int i_1, byte[] bytes_2, int i_3) {
 		Class459 class459_5 = aClass459_5588;
 		synchronized (aClass459_5588) {
 			aClass459_5588.aByteArray5502 = bytes_2;
-			aClass459_5588.anInt5503 = i_4;
+			aClass459_5588.anInt5503 = 9;
 			aClass459_5588.aByteArray5526 = bytes_0;
 			aClass459_5588.anInt5506 = 0;
 			aClass459_5588.anInt5507 = i_1;

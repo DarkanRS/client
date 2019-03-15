@@ -50,7 +50,7 @@ public class EntityList {
 		}
 	}
 
-	public void method7651(byte b_1) {
+	public void method7651() {
 		while (true) {
 			Class275 class275_2 = this.aClass275_5468.aClass275_3339;
 			if (class275_2 == this.aClass275_5468) {
@@ -61,7 +61,7 @@ public class EntityList {
 		}
 	}
 
-	public Class275 method7659(int i_1) {
+	public Class275 method7659() {
 		Class275 class275_2 = this.aClass275_5468.aClass275_3339;
 		if (class275_2 == this.aClass275_5468) {
 			this.aClass275_5469 = null;
@@ -85,7 +85,7 @@ public class EntityList {
 			icomponentdefinitions_0.method2007(i_4, s_5, s_6, -1261332787);
 			Class109.redrawComponent(icomponentdefinitions_0, (byte) -93);
 			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-				RegionMap.method5513(icomponentdefinitions_0.idHash, i_4, (byte) -1);
+				RegionMap.method5513(icomponentdefinitions_0.idHash, i_4);
 			}
 		}
 	}

@@ -23,7 +23,7 @@ public class PulseEvent extends CacheableNode {
 
 	void method14965(byte b_1) {
 		this.key = this.key & ~0x7fffffffffffffffL | Class169.time() + 500L;
-		aClass477_9655.method7936(this, -1738910950);
+		aClass477_9655.method7936(this);
 	}
 
 	long method14967() {
@@ -33,7 +33,7 @@ public class PulseEvent extends CacheableNode {
 	void immediate() {
 		this.key |= ~0x7fffffffffffffffL;
 		if (this.method14955(-1539167546) == 0L) {
-			aClass477_9666.method7936(this, -1738910950);
+			aClass477_9666.method7936(this);
 		}
 	}
 
@@ -48,7 +48,7 @@ public class PulseEvent extends CacheableNode {
 
 	static final void processPulseEvents() {
 		for (int i_1 = Class158_Sub1.PLAYER_VAR_PROVIDER.poll(true); i_1 != -1; i_1 = Class158_Sub1.PLAYER_VAR_PROVIDER.poll(false)) {
-			Class499.method8333(i_1, 1768744786);
+			Class499.method8333(i_1);
 			client.anIntArray7379[++client.anInt7453 - 1 & 0x1f] = i_1;
 		}
 		for (PulseEvent event = ObjectDefinitions.nextPulseEvent(); event != null; event = ObjectDefinitions.nextPulseEvent()) {
@@ -200,20 +200,20 @@ public class PulseEvent extends CacheableNode {
 		}
 	}
 
-	static void method7917(int i_0, int i_1, byte b_2) {
+	static void method7917(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = createPulseEvent(14, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
 	}
 
-	static void method11155(int i_0, int i_1, int i_2) {
+	static void method11155(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = createPulseEvent(15, 0L);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_0;
 		class282_sub50_sub12_3.secondary = i_1;
 	}
 
-	static void setComponentItem(int i_0, int i_1, int i_2, short s_3) {
+	static void setComponentItem(int i_0, int i_1, int i_2) {
 		PulseEvent class282_sub50_sub12_4 = createPulseEvent(9, (long) i_0);
 		class282_sub50_sub12_4.immediate();
 		class282_sub50_sub12_4.primary = i_1;
@@ -235,14 +235,14 @@ public class PulseEvent extends CacheableNode {
 		event.secondary = y;
 	}
 
-	static void method8722(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static void method8722(int i_0, int i_1, int i_2, int i_3) {
 		PulseEvent class282_sub50_sub12_5 = PulseEvent.createPulseEvent(18, (long) i_1 << 32 | (long) i_0);
 		class282_sub50_sub12_5.immediate();
 		class282_sub50_sub12_5.primary = i_2;
 		class282_sub50_sub12_5.secondary = i_3;
 	}
 
-	static void method7374(int i_0, int i_1, int i_2) {
+	static void method7374(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(6, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
@@ -254,32 +254,32 @@ public class PulseEvent extends CacheableNode {
 		class282_sub50_sub12_3.primary = i_1;
 	}
 
-	static void method5924(int i_0, boolean bool_1, int i_2) {
+	static void method5924(int i_0, boolean bool_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(21, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = bool_1 ? 1 : 0;
 	}
 
-	static void method12420(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static void method12420(int i_0, int i_1, int i_2, int i_3) {
 		PulseEvent class282_sub50_sub12_5 = PulseEvent.createPulseEvent(19, (long) i_1 << 32 | (long) i_0);
 		class282_sub50_sub12_5.immediate();
 		class282_sub50_sub12_5.primary = i_2;
 		class282_sub50_sub12_5.secondary = i_3;
 	}
 
-	static void method15381(int i_0, int i_1, int i_2) {
+	static void method15381(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(17, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
 	}
 
-	static void method15435(int i_0, int i_1, byte b_2) {
+	static void method15435(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(16, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
 	}
 
-	static void method778(int i_0, int i_1, int i_2, int i_3, byte b_4) {
+	static void method778(int i_0, int i_1, int i_2, int i_3) {
 		PulseEvent class282_sub50_sub12_5 = PulseEvent.createPulseEvent(10, (long) i_0);
 		class282_sub50_sub12_5.immediate();
 		class282_sub50_sub12_5.primary = i_1;
@@ -287,25 +287,25 @@ public class PulseEvent extends CacheableNode {
 		class282_sub50_sub12_5.tertiary = i_3;
 	}
 
-	static void method12882(int i_0, int i_1, int i_2) {
+	static void method12882(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(13, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
 	}
 
-	static void method3252(int i_0, boolean bool_1, int i_2) {
+	static void method3252(int i_0, boolean bool_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(22, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = bool_1 ? 1 : 0;
 	}
 
-	static void method2966(int i_0, int i_1, short s_2) {
+	static void method2966(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(12, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
 	}
 
-	static void method14663(int i_0, int i_1, byte b_2) {
+	static void method14663(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(7, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;
@@ -319,7 +319,7 @@ public class PulseEvent extends CacheableNode {
 		event.tertiary = scale;
 	}
 
-	static void method3069(int i_0, int i_1, int i_2) {
+	static void method3069(int i_0, int i_1) {
 		PulseEvent class282_sub50_sub12_3 = PulseEvent.createPulseEvent(5, (long) i_0);
 		class282_sub50_sub12_3.immediate();
 		class282_sub50_sub12_3.primary = i_1;

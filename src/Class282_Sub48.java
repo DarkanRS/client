@@ -62,7 +62,7 @@ public class Class282_Sub48 extends Node {
 
 	int anInt8091 = 0;
 
-	void method13426(byte b_1) {
+	void method13426() {
 		int i_2 = this.anInt8095;
 		boolean bool_3 = this.aBool8098;
 		if (this.aClass478_8104 != null) {
@@ -92,12 +92,12 @@ public class Class282_Sub48 extends Node {
 				this.anInt8081 = 0;
 			}
 		} else if (this.aClass521_Sub1_Sub1_Sub2_Sub2_8085 != null) {
-			int i_6 = Class282_Sub11_Sub1.method15433(this.aClass521_Sub1_Sub1_Sub2_Sub2_8085, 912866554);
+			int i_6 = Class282_Sub11_Sub1.method15433(this.aClass521_Sub1_Sub1_Sub2_Sub2_8085);
 			if (i_2 != i_6) {
 				this.anInt8095 = i_6;
 				NPCDefinitions npcdefinitions_5 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions;
 				if (npcdefinitions_5.anIntArray4886 != null) {
-					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
+					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				}
 				if (npcdefinitions_5 != null) {
 					this.anInt8105 = npcdefinitions_5.anInt4907 << 9;

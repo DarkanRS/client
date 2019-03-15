@@ -90,11 +90,11 @@ public class Class185 {
 
 	int[] anIntArray2329;
 
-	void method3070(Runnable runnable_1, int i_2) {
+	void method3070(Runnable runnable_1) {
 		this.aRunnable2343 = runnable_1;
 	}
 
-	void method3071(int i_1) {
+	void method3071() {
 		this.aClass144_2310 = new ChoppyItemFixClass(this.aClass505_Sub3_2320, this);
 	}
 
@@ -146,7 +146,7 @@ public class Class185 {
 		}
 	}
 
-	public static void method3077(int i_0) {
+	public static void method3077() {
 		for (int i_1 = 0; i_1 < Class260.anInt3219; i_1++) {
 			Class268 class268_2 = Class260.aClass268Array3232[i_1];
 			if (class268_2.aByte3300 == 3) {

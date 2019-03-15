@@ -83,29 +83,29 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		Class282_Sub44.anApplet8065 = applet_1;
 	}
 
-	final void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8, int i_9) {
+	final void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8, int i_9) {
 		try {
-			this.method4683(Class279.aClass279_3369, bool_8, 1311506683);
-			Class45.anInt434 = Class349.anInt4083 = class274_1.method4871(16711680);
-			int i_10000 = class274_1.method4877((byte) 14);
+			this.method4683(Class279.aClass279_3369, bool_8);
+			Class45.anInt434 = Class349.anInt4083 = class274_1.method4871();
+			int i_10000 = class274_1.method4877();
 			anInt3243 = i_10000 * -1929118563;
 			Class107.anInt1082 = i_10000;
 			anInt3250 = 0;
 			anInt3251 = 0;
 			if (NamedFileReference.method867(-1097326159) == Class279.aClass279_3367) {
-				Class45.anInt434 += 2 * class274_1.method4868((short) 128);
-				Class107.anInt1082 += 2 * class274_1.method4872((byte) -78);
-				this.method4661(class274_1.method4870(1701502832), (short) 2048);
+				Class45.anInt434 += 2 * class274_1.method4868();
+				Class107.anInt1082 += 2 * class274_1.method4872();
+				this.method4661(class274_1.method4870());
 			}
 			RuntimeException_Sub3.anApplet10460 = Class282_Sub44.anApplet8065;
-			this.method4656(string_2, string_3, i_4, i_5, i_6, i_7, 311924431);
+			this.method4656(string_2, string_3, i_4, i_5, 727, 1);
 		} catch (Throwable throwable_11) {
 			Class151.method2594((String) null, throwable_11, (byte) -115);
 			this.method4680("crash", -1314193107);
 		}
 	}
 
-	final void method4656(String string_1, String string_2, int i_3, int i_4, int i_5, int i_6, int i_7) throws Exception {
+	final void method4656(String string_1, String string_2, int i_3, int i_4, int i_5, int i_6) throws Exception {
 		Class290.anInt3451 = i_4;
 		Class514.anInt5887 = i_3;
 		RuntimeException_Sub3.anInt10457 = i_5;
@@ -168,7 +168,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		Class106.aStringArray1077 = new String[] { ".dk_cache_" + Class514.anInt5887, ".file_store_" + Class514.anInt5887 };
 		int i_13 = 0;
 		label131: while (i_13 < 4) {
-			aFile3264 = this.method4657(string_1, string_2, i_13, (byte) 75);
+			aFile3264 = this.method4657(string_1, string_2, i_13);
 			if (!aFile3264.exists()) {
 				aFile3264.mkdirs();
 			}
@@ -190,13 +190,13 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				++i_11;
 			}
 		}
-		Class499.method8334(aFile3264, 1977794836);
-		Class328.method5827((short) -23494);
-		aClass440_3270 = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.dat2", 1605505802), "rw", 524288000L), 5200, 0);
-		aClass440_3271 = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.idx255", 526140284), "rw", 1048576L), 6000, 0);
+		Class499.method8334(aFile3264);
+		Class328.method5827();
+		aClass440_3270 = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.dat2", 1605505802), 524288000L), 5200);
+		aClass440_3271 = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.idx255", 526140284), 1048576L), 6000);
 		Class97.aClass440Array996 = new Class440[Class290.anInt3451];
 		for (i_13 = 0; i_13 < Class290.anInt3451; i_13++) {
-			Class97.aClass440Array996[i_13] = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.idx" + i_13, 535964137), "rw", 1048576L), 6000, 0);
+			Class97.aClass440Array996[i_13] = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.idx" + i_13, 535964137), 1048576L), 6000);
 		}
 		try {
 			Class274.aClass470_3336 = new Class470();
@@ -221,7 +221,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		thread_25.setPriority(1);
 	}
 
-	File method4657(String string_1, String string_2, int i_3, byte b_4) {
+	File method4657(String string_1, String string_2, int i_3) {
 		String str_5 = i_3 == 0 ? "" : "" + i_3;
 		Canvas_Sub1.aFile9453 = new File(Class110.aString1103, "dk_cl_" + string_1 + "_" + string_2 + str_5 + ".dat");
 		String string_6 = null;
@@ -231,9 +231,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		File file_22;
 		if (Canvas_Sub1.aFile9453.exists()) {
 			try {
-				Class442 class442_9 = new Class442(Canvas_Sub1.aFile9453, "rw", 10000L);
+				Class442 class442_9 = new Class442(Canvas_Sub1.aFile9453, 10000L);
 				RsByteBuffer rsbytebuffer_11;
-				for (rsbytebuffer_11 = new RsByteBuffer((int) class442_9.method7388(-273347477)); rsbytebuffer_11.index < rsbytebuffer_11.buffer.length; rsbytebuffer_11.index += i_10) {
+				for (rsbytebuffer_11 = new RsByteBuffer((int) class442_9.method7388()); rsbytebuffer_11.index < rsbytebuffer_11.buffer.length; rsbytebuffer_11.index += i_10) {
 					i_10 = class442_9.method7389(rsbytebuffer_11.buffer, rsbytebuffer_11.index, rsbytebuffer_11.buffer.length - rsbytebuffer_11.index, (byte) -53);
 					if (i_10 == -1) {
 						throw new IOException();
@@ -317,7 +317,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		return new File(string_6);
 	}
 
-	public boolean method4658(File file_1, int i_2) {
+	public boolean method4658(File file_1) {
 		if (file_1 == null) {
 			return false;
 		} else if (!file_1.exists()) {
@@ -336,7 +336,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	void method4659(File file_1, File file_2, int i_3) {
 		try {
-			Class442 class442_4 = new Class442(Canvas_Sub1.aFile9453, "rw", 10000L);
+			Class442 class442_4 = new Class442(Canvas_Sub1.aFile9453, 10000L);
 			RsByteBuffer rsbytebuffer_5 = new RsByteBuffer(500);
 			rsbytebuffer_5.writeByte(3);
 			rsbytebuffer_5.writeByte(file_2 != null ? 1 : 0);
@@ -351,7 +351,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	synchronized void method4661(String string_1, short s_2) {
+	synchronized void method4661(String string_1) {
 		engineFrame = new Frame();
 		engineFrame.setTitle(string_1);
 		engineFrame.setResizable(true);
@@ -363,11 +363,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		engineFrame.setSize(insets_3.right + insets_3.left + Class45.anInt434, insets_3.top + insets_3.bottom + Class107.anInt1082);
 	}
 
-	public boolean method4662(byte b_1) {
-		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jagtheora", -1470478737);
+	public boolean method4662() {
+		return Class362.getNativeLibraryLoader().loadLibrary("jagtheora", -1470478737);
 	}
 
-	void method4663(Container container_1, int i_2) {
+	void method4663(Container container_1) {
 		container_1.setBackground(Color.black);
 		container_1.setLayout((LayoutManager) null);
 		container_1.add(Class351.gameCanvas);
@@ -421,7 +421,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public void run() {
 		try {
 			try {
-				this.method4745((byte) -64);
+				this.method4745();
 			} catch (ThreadDeath threaddeath_2) {
 				throw threaddeath_2;
 			} catch (Throwable throwable_3) {
@@ -436,7 +436,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	void method4667(int i_1) {
+	void method4667() {
 		long long_2 = Class169.time();
 		long long_4 = aLongArray3247[Class75.anInt747];
 		aLongArray3247[Class75.anInt747] = long_2;
@@ -447,10 +447,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		synchronized (this) {
 			Class530.aBool7050 = aBool3275;
 		}
-		this.method4677(1918859196);
+		this.method4677();
 	}
 
-	void method4668(int i_1) {
+	void method4668() {
 		long long_2 = Class169.time();
 		long long_4 = aLongArray3246[Class165.anInt2036];
 		aLongArray3246[Class165.anInt2036] = long_2;
@@ -471,7 +471,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				Class351.gameCanvas.setLocation(anInt3250, anInt3251);
 			}
 		}
-		this.method4678(-2093077702);
+		this.method4678();
 	}
 
 	String method4669(int i_1) {
@@ -532,17 +532,17 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			aBool3276 = true;
 		}
 		try {
-			this.method4714(-1254177397);
+			this.method4714();
 		} catch (Exception exception_7) {
 			;
 		}
 		try {
-			aClass440_3270.method7346(65280);
+			aClass440_3270.method7346();
 			for (int i_4 = 0; i_4 < Class290.anInt3451; i_4++) {
-				Class97.aClass440Array996[i_4].method7346(65280);
+				Class97.aClass440Array996[i_4].method7346();
 			}
-			aClass440_3271.method7346(65280);
-			aClass440_3269.method7346(65280);
+			aClass440_3271.method7346();
+			aClass440_3269.method7346();
 		} catch (Exception exception_8) {
 			;
 		}
@@ -553,9 +553,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				;
 			}
 		}
-		Class156.method2645(true, 985239898);
-		if (Class187.method3118((byte) 80)) {
-			Class362.getNativeLibraryLoader(616047582).method219(1291104911);
+		Class156.method2645();
+		if (Class187.method3118()) {
+			Class362.getNativeLibraryLoader().method219(1291104911);
 		}
 		if (Class351.gameCanvas != null) {
 			try {
@@ -577,11 +577,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	public abstract void init();
 
-	abstract void method4676(byte var1);
+	abstract void method4676();
 
-	abstract void method4677(int var1);
+	abstract void method4677();
 
-	abstract void method4678(int var1);
+	abstract void method4678();
 
 	void method4680(String string_1, int i_2) {
 		if (!this.aBool3254) {
@@ -600,8 +600,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	public boolean method4681(byte b_1) {
-		this.aBool3268 = Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", -938566175);
+	public boolean method4681() {
+		this.aBool3268 = Class362.getNativeLibraryLoader().loadLibrary("jaclib", -938566175);
 		if (this.aBool3268) {
 			try {
 				QueryPerformanceCounter.init();
@@ -612,7 +612,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		return this.aBool3268;
 	}
 
-	void method4683(Class279 class279_1, boolean bool_2, int i_3) {
+	void method4683(Class279 class279_1, boolean bool_2) {
 		if (class279_1 == null) {
 			throw new NullPointerException();
 		} else if (class279_1 != Class279.aClass279_3369 && class279_1 != Class279.aClass279_3368) {
@@ -647,10 +647,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	synchronized void method4704(int i_1) {
-		this.method4729((byte) 23);
-		Container container_2 = Class371.getActiveContainer((byte) 1);
+		this.method4729();
+		Container container_2 = Class371.getActiveContainer();
 		Class351.gameCanvas = new Canvas_Sub1(container_2);
-		this.method4663(container_2, 135642590);
+		this.method4663(container_2);
 	}
 
 	public final synchronized void method180(Graphics graphics_1) {
@@ -665,7 +665,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	abstract void method4714(int var1);
+	abstract void method4714();
 
 	boolean method4720(File file_1, boolean bool_2, byte b_3) {
 		try {
@@ -685,7 +685,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	void method4729(byte b_1) {
+	void method4729() {
 		if (Class351.gameCanvas != null) {
 			Class351.gameCanvas.removeFocusListener(this);
 			Class351.gameCanvas.getParent().setBackground(Color.black);
@@ -773,7 +773,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 	}
 
-	void method4745(byte b_1) {
+	void method4745() {
 		if (Class282_Sub20_Sub34.aString9967 != null) {
 			String string_2 = Class282_Sub20_Sub34.aString9967.toLowerCase();
 			if (string_2.indexOf("sun") != -1 || string_2.indexOf("apple") != -1) {
@@ -795,18 +795,18 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				}
 			}
 		}
-		Class371.getActiveContainer((byte) 1).setFocusCycleRoot(true);
+		Class371.getActiveContainer().setFocusCycleRoot(true);
 		MAX_MEMORY = (int) (Runtime.getRuntime().maxMemory() / 1048576L) + 1;
 		AVAILABLE_PROCESSORS = Runtime.getRuntime().availableProcessors();
 		this.method4704(1996724901);
-		this.method4676((byte) 58);
-		aClass273_3244 = Class84.method1461(192179911);
+		this.method4676();
+		aClass273_3244 = Class84.method1461();
 		while (aLong3255 == 0L || Class169.time() < aLong3255) {
 			anInt3279 = aClass273_3244.method4842(aLong3242);
 			for (int i_6 = 0; i_6 < anInt3279; i_6++) {
-				this.method4667(981410915);
+				this.method4667();
 			}
-			this.method4668(-1781025052);
+			this.method4668();
 			Class282_Sub20_Sub27.method15395(Class351.gameCanvas, -859332556);
 		}
 	}
@@ -840,11 +840,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static int method4777(int i_0, int i_1, byte b_2) {
+	static int method4777(int i_0, int i_1) {
 		return i_0 != SceneObjectType.WALL_DIAGONAL_CORNER.type && i_0 != SceneObjectType.WALL_STRAIGHT_CORNER.type ? Wall.anIntArray10531[i_1 & 0x3] : Wall.anIntArray10533[i_1 & 0x3];
 	}
 
-	static void method4779(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, byte b_9) {
+	static void method4779(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
 			Class346.method6159(i_0, i_1, i_6, i_7, i_8, -1028676957);
 		} else {

@@ -47,11 +47,11 @@ public class QuickchatDefinitionsLoader {
 			quickchatdefinitions_3 = new QuickchatDefinitions();
 			quickchatdefinitions_3.aClass429_9623 = this;
 			if (bytes_4 != null) {
-				quickchatdefinitions_3.method14913(new RsByteBuffer(bytes_4), -421624337);
+				quickchatdefinitions_3.method14913(new RsByteBuffer(bytes_4));
 			}
 
 			if (i_1 >= 32768) {
-				quickchatdefinitions_3.method14912(923886463);
+				quickchatdefinitions_3.method14912();
 			}
 
 			this.aClass229_5131.put(quickchatdefinitions_3, (long) i_1);
@@ -59,9 +59,9 @@ public class QuickchatDefinitionsLoader {
 		}
 	}
 
-	static final void method7215(byte b_0) {
+	static final void method7215() {
 		if (Class393.preferences.aClass468_Sub27_8209.method12952((byte) 89) == 2) {
-			byte[][][] bytes_1 = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
+			byte[][][] bytes_1 = IndexLoaders.MAP_REGION_DECODER.method4532();
 			byte b_2 = (byte) (client.anInt7286 - 4 & 0xff);
 			int i_3 = client.anInt7286 % IndexLoaders.MAP_REGION_DECODER.getSizeX(575613336);
 
@@ -85,7 +85,7 @@ public class QuickchatDefinitionsLoader {
 				Vector3 vector3_17 = Class84.myPlayer.method11166().aClass385_3595;
 				i_5 = (int) vector3_17.x;
 				int i_6 = (int) vector3_17.z;
-				RegionMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+				RegionMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.method4433();
 				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1591290583);
 				int i_9;
 				if (NativeLibraryLoader.anInt3240 != 2 && Class508.anInt5864 == -1) {

@@ -186,7 +186,7 @@ public class IComponentDefinitions {
 	short[] aShortArray1349;
 	short[] aShortArray1317;
 
-	void readValues(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void readValues(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 == 255) {
 			i_3 = -1;
@@ -398,37 +398,37 @@ public class IComponentDefinitions {
 				this.aClass465_1365.put(new Class282_Sub47(string_15), (long) i_14);
 			}
 		}
-		this.scriptParams = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1390 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1392 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1396 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1400 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1397 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1342 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1387 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1409 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.params = this.method1990(rsbytebuffer_1, 1419316481);
+		this.scriptParams = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1390 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1392 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1396 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1400 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1397 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1342 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1387 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1409 = this.method1990(rsbytebuffer_1);
+		this.params = this.method1990(rsbytebuffer_1);
 		if (i_3 >= 0) {
-			this.anObjectArray1393 = this.method1990(rsbytebuffer_1, 1419316481);
+			this.anObjectArray1393 = this.method1990(rsbytebuffer_1);
 		}
-		this.anObjectArray1278 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1386 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1319 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1302 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1389 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1451 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1394 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1412 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1403 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anObjectArray1405 = this.method1990(rsbytebuffer_1, 1419316481);
-		this.anIntArray1401 = this.method1986(rsbytebuffer_1, 1942118537);
-		this.anIntArray1398 = this.method1986(rsbytebuffer_1, 1942118537);
-		this.anIntArray1402 = this.method1986(rsbytebuffer_1, 1942118537);
-		this.anIntArray1315 = this.method1986(rsbytebuffer_1, 1942118537);
-		this.anIntArray1406 = this.method1986(rsbytebuffer_1, 1942118537);
+		this.anObjectArray1278 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1386 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1319 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1302 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1389 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1451 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1394 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1412 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1403 = this.method1990(rsbytebuffer_1);
+		this.anObjectArray1405 = this.method1990(rsbytebuffer_1);
+		this.anIntArray1401 = this.method1986(rsbytebuffer_1);
+		this.anIntArray1398 = this.method1986(rsbytebuffer_1);
+		this.anIntArray1402 = this.method1986(rsbytebuffer_1);
+		this.anIntArray1315 = this.method1986(rsbytebuffer_1);
+		this.anIntArray1406 = this.method1986(rsbytebuffer_1);
 	}
 
-	int[] method1986(RsByteBuffer rsbytebuffer_1, int i_2) {
+	int[] method1986(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 == 0) {
 			return null;
@@ -441,7 +441,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public void method1987(int i_1) {
+	public void method1987() {
 		this.scriptParams = null;
 		this.anObjectArray1386 = null;
 		this.anObjectArray1319 = null;
@@ -487,13 +487,13 @@ public class IComponentDefinitions {
 		return fontrenderer_4;
 	}
 
-	public FontMetrics method1989(Class378 class378_1, Interface35 interface35_2, int i_3) {
+	public FontMetrics method1989(Class378 class378_1, Interface35 interface35_2) {
 		FontMetrics fontmetrics_4 = class378_1.method6415(interface35_2, this.anInt1277, -717286606);
 		aBool1399 = fontmetrics_4 == null;
 		return fontmetrics_4;
 	}
 
-	Object[] method1990(RsByteBuffer rsbytebuffer_1, int i_2) {
+	Object[] method1990(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 == 0) {
 			return null;
@@ -512,7 +512,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public void method1991(GraphicalRenderer graphicalrenderer_1, MeshRasterizer meshrasterizer_2, Matrix44Var matrix44var_3, int i_4, byte b_5) {
+	public void method1991(GraphicalRenderer graphicalrenderer_1, MeshRasterizer meshrasterizer_2, Matrix44Var matrix44var_3, int i_4) {
 		meshrasterizer_2.method11273(matrix44var_3);
 		Class87[] arr_6 = meshrasterizer_2.method11253();
 		Class172[] arr_7 = meshrasterizer_2.method11274();
@@ -520,11 +520,11 @@ public class IComponentDefinitions {
 			this.particleSystem = ParticleSystem.method11557(i_4, false);
 		}
 		if (this.particleSystem != null) {
-			this.particleSystem.method11511(graphicalrenderer_1, (long) i_4, arr_6, arr_7, false);
+			this.particleSystem.method11511(graphicalrenderer_1, (long) i_4, arr_6, arr_7);
 		}
 	}
 
-	public void method1994(int i_1, String string_2, byte b_3) {
+	public void method1994(int i_1, String string_2) {
 		if (this.aStringArray1352 == null || this.aStringArray1352.length <= i_1) {
 			String[] arr_4 = new String[i_1 + 1];
 			if (this.aStringArray1352 != null) {
@@ -537,7 +537,7 @@ public class IComponentDefinitions {
 		this.aStringArray1352[i_1] = string_2;
 	}
 
-	public void method1995(int i_1, int i_2) {
+	public void method1995(int i_1) {
 		if (this.aClass465_1365 != null) {
 			Node node_3 = this.aClass465_1365.get((long) i_1);
 			if (node_3 != null) {
@@ -555,7 +555,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public String method1998(int i_1, String string_2, int i_3) {
+	public String method1998(int i_1, String string_2) {
 		if (this.aClass465_1365 == null) {
 			return string_2;
 		} else {
@@ -578,7 +578,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public void method2000(int i_1, String string_2, int i_3) {
+	public void method2000(int i_1, String string_2) {
 		if (this.aClass465_1365 == null) {
 			this.aClass465_1365 = new IterableNodeMap(16);
 			this.aClass465_1365.put(new Class282_Sub47(string_2), (long) i_1);
@@ -591,7 +591,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Class31 class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, Interface42 interface42_8, Animation animation_9, PlayerAppearance playerappearance_10, int i_11) {
+	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Class31 class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, Interface42 interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
 		aBool1399 = false;
 		if (this.anInt1329 == 0) {
 			return null;
@@ -628,13 +628,13 @@ public class IComponentDefinitions {
 				if (meshrasterizer_18 != null) {
 					i_2 = graphicalrenderer_1.method8546(i_2, meshrasterizer_18.m());
 				}
-				RSMesh rsmesh_19 = RSMesh.decodeMesh(Class488.MESH_INDEX, this.anInt1330, 0);
+				RSMesh rsmesh_19 = RSMesh.decodeMesh(Class488.MESH_INDEX, this.anInt1330);
 				if (rsmesh_19 == null) {
 					aBool1399 = true;
 					return null;
 				}
 				if (rsmesh_19.version < 13) {
-					rsmesh_19.upscale(2);
+					rsmesh_19.upscale();
 				}
 				meshrasterizer_18 = graphicalrenderer_1.createMeshRasterizer(rsmesh_19, i_2, Class282_Sub14.anInt7597, 64, 768);
 				int i_20;
@@ -652,7 +652,7 @@ public class IComponentDefinitions {
 			}
 			if (animation_9 != null) {
 				meshrasterizer_18 = meshrasterizer_18.method11289((byte) 1, i_2, true);
-				animation_9.rasterize(meshrasterizer_18, 0, 16711935);
+				animation_9.rasterize(meshrasterizer_18, 0);
 			}
 			meshrasterizer_18.KA(i_2);
 			return meshrasterizer_18;
@@ -670,7 +670,7 @@ public class IComponentDefinitions {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
-					meshrasterizer_23 = playerappearance_10.method4021(graphicalrenderer_1, i_2, class31_4, npcindexloader_5, itemindexloader_6, animationindexloader_7, interface42_8, animation_9, -357069148);
+					meshrasterizer_23 = playerappearance_10.method4021(graphicalrenderer_1, i_2, class31_4, npcindexloader_5, itemindexloader_6, animationindexloader_7, interface42_8, animation_9);
 					if (meshrasterizer_23 == null) {
 						aBool1399 = true;
 						return null;
@@ -680,7 +680,7 @@ public class IComponentDefinitions {
 				}
 			} else if (this.anInt1329 == 4) {
 				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.anInt1330, 1323169498);
-				MeshRasterizer meshrasterizer_24 = itemdefinitions_27.method7084(graphicalrenderer_1, i_2, 10, playerappearance_10, animation_9, 0, 0, 0, 0, (byte) 0);
+				MeshRasterizer meshrasterizer_24 = itemdefinitions_27.method7084(graphicalrenderer_1, i_2, 10, playerappearance_10, animation_9, 0, 0, 0, 0);
 				if (meshrasterizer_24 == null) {
 					aBool1399 = true;
 					return null;
@@ -702,7 +702,7 @@ public class IComponentDefinitions {
 					int i_12 = this.anInt1330 >>> 16;
 					int i_25 = this.anInt1330 & 0xffff;
 					int i_14 = this.anInt1339;
-					MeshRasterizer meshrasterizer_15 = playerappearance_10.method3999(graphicalrenderer_1, i_2, class31_4, animationindexloader_7, animation_9, i_12, i_25, i_14, -2116038358);
+					MeshRasterizer meshrasterizer_15 = playerappearance_10.method3999(graphicalrenderer_1, i_2, class31_4, animationindexloader_7, animation_9, i_12, i_25, i_14);
 					if (meshrasterizer_15 == null) {
 						aBool1399 = true;
 						return null;
@@ -782,7 +782,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public void method2039(int i_1, int i_2, int i_3) {
+	public void method2039(int i_1, int i_2) {
 		if (this.anIntArray1284 == null || this.anIntArray1284.length <= i_1) {
 			int[] ints_4 = new int[i_1 + 1];
 			if (this.anIntArray1284 != null) {
@@ -849,7 +849,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public NativeSprite method2048(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public NativeSprite method2048(GraphicalRenderer graphicalrenderer_1) {
 		aBool1399 = false;
 		long long_3 = ((this.aBool1351 ? 1L : 0L) << 39) + ((this.aBool1327 ? 1L : 0L) << 35) + (long) this.anInt1320 + ((long) this.anInt1323 << 36) + ((this.aBool1325 ? 1L : 0L) << 38) + ((long) this.anInt1324 << 40);
 		NativeSprite nativesprite_5 = (NativeSprite) aClass229_1280.get(long_3);

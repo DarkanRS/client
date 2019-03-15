@@ -40,9 +40,9 @@ public class Class123 {
 
 	Animation aClass456_1545;
 
-	public void animate(int i_1, int i_2) {
+	public void animate(int i_1) {
 		this.aBool1546 = true;
-		this.method2124(false, i_1, 1, 1157413618);
+		this.method2124(false, i_1, 1);
 	}
 
 	int method2115(int i_1) {
@@ -71,7 +71,7 @@ public class Class123 {
 		Class87[] arr_10 = meshrasterizer_2.method11253();
 		Class172[] arr_11 = meshrasterizer_2.method11274();
 		if ((this.aClass539_1538 == null || this.aClass539_1538.aBool7132) && (arr_10 != null || arr_11 != null)) {
-			ObjectDefinitions objectdefinitions_12 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
+			ObjectDefinitions objectdefinitions_12 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 			if (objectdefinitions_12.toObjectIds != null) {
 				objectdefinitions_12 = objectdefinitions_12.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) -36);
 			}
@@ -82,7 +82,7 @@ public class Class123 {
 		if (this.aClass539_1538 != null) {
 			meshrasterizer_2.method11273(matrix44var_3);
 			if (bool_8) {
-				this.aClass539_1538.method11511(graphicalrenderer_1, (long) client.cycles, arr_10, arr_11, false);
+				this.aClass539_1538.method11511(graphicalrenderer_1, (long) client.cycles, arr_10, arr_11);
 			} else {
 				this.aClass539_1538.method11512((long) client.cycles);
 			}
@@ -90,15 +90,15 @@ public class Class123 {
 		}
 	}
 
-	int method2121(byte b_1) {
+	int method2121() {
 		return -this.method2115(-771412764);
 	}
 
-	void method2124(boolean bool_1, int i_2, int i_3, int i_4) {
+	void method2124(boolean bool_1, int i_2, int i_3) {
 		int i_5 = i_2;
 		boolean bool_6 = false;
 		if (i_2 == -1) {
-			ObjectDefinitions objectdefinitions_7 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
+			ObjectDefinitions objectdefinitions_7 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 			ObjectDefinitions objectdefinitions_8 = objectdefinitions_7;
 			if (objectdefinitions_7.toObjectIds != null) {
 				objectdefinitions_7 = objectdefinitions_7.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 4);
@@ -117,7 +117,7 @@ public class Class123 {
 					bool_6 = objectdefinitions_7.aBool5702;
 				}
 				i_5 = objectdefinitions_7.method7977((byte) -48);
-				if (objectdefinitions_7.method7976((short) 8704)) {
+				if (objectdefinitions_7.method7976()) {
 					i_3 = 0;
 				} else {
 					i_3 = 1;
@@ -130,7 +130,7 @@ public class Class123 {
 					bool_6 = objectdefinitions_8.aBool5702;
 				}
 				i_5 = objectdefinitions_8.method7977((byte) 33);
-				if (objectdefinitions_8.method7976((short) 8704)) {
+				if (objectdefinitions_8.method7976()) {
 					i_3 = 0;
 				} else {
 					i_3 = 1;
@@ -138,7 +138,7 @@ public class Class123 {
 			}
 		}
 		if (i_5 == -1) {
-			this.aClass456_1545.method7569(-1, false, -2029510144);
+			this.aClass456_1545.method7569();
 		} else {
 			this.aClass456_1545.method7571(i_5, 0, i_3, bool_6, -1486563257);
 			this.anInt1548 = client.cycles;
@@ -158,12 +158,12 @@ public class Class123 {
 		this.aByte1549 = (byte) i_7;
 		this.aBool1543 = bool_9;
 		this.aBool1550 = graphicalrenderer_1.method8402() && objectdefinitions_3.aBool5703 && !this.aBool1543;
-		this.aClass456_1545 = new Class456_Sub2(class521_sub1_8, false);
-		this.method2124(false, i_10, 1, 1157413618);
+		this.aClass456_1545 = new Class456_Sub2(class521_sub1_8);
+		this.method2124(false, i_10, 1);
 	}
 
-	final MeshRasterizer method2132(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, boolean bool_4, int i_5) {
-		ObjectDefinitions objectdefinitions_6 = this.aClass474_1536.getObjectDefinitions(this.anInt1540, 65280);
+	final MeshRasterizer method2132(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, boolean bool_4) {
+		ObjectDefinitions objectdefinitions_6 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 		if (objectdefinitions_6.toObjectIds != null) {
 			objectdefinitions_6 = objectdefinitions_6.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 31);
 		}
@@ -173,11 +173,11 @@ public class Class123 {
 			return null;
 		} else {
 			if (!this.aBool1546 && this.anInt1547 != objectdefinitions_6.id) {
-				this.method2124(true, -1, 0, 1157413618);
+				this.method2124(true, -1, 0);
 				this.aBool1552 = false;
 				this.aClass528_1544 = null;
 			}
-			this.method2133(this.aClass521_Sub1_1539, 1031248161);
+			this.method2133(this.aClass521_Sub1_1539);
 			if (bool_4) {
 				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.preferences.aClass468_Sub2_8205.method12624((byte) -25) != 0;
 			}
@@ -203,7 +203,7 @@ public class Class123 {
 					if (bool_4) {
 						i_2 |= 0x40000;
 					}
-					meshrasterizer_11 = objectdefinitions_6.method8012(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2124588555), (int) vector3_7.z, this.aClass456_1545, this.aClass476_1541, 1502121981);
+					meshrasterizer_11 = objectdefinitions_6.method8012(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2124588555), (int) vector3_7.z, this.aClass456_1545, this.aClass476_1541);
 					if (meshrasterizer_11 != null) {
 						if (bool_4) {
 							if (this.aBoolArray1553 == null) {
@@ -251,7 +251,7 @@ public class Class123 {
 		}
 	}
 
-	void method2133(Class521_Sub1 class521_sub1_1, int i_2) {
+	void method2133(Class521_Sub1 class521_sub1_1) {
 		if (this.aClass456_1545.hasDefs()) {
 			if (this.aClass456_1545.method7627(client.cycles - this.anInt1548, -1604815652)) {
 				if (Class393.preferences.aClass468_Sub2_8205.method12624((byte) -127) == 2) {
@@ -260,22 +260,22 @@ public class Class123 {
 				if (this.aClass456_1545.method7580(487845582)) {
 					this.aClass456_1545.update(-1);
 					this.aBool1546 = false;
-					this.method2124(false, -1, 0, 1157413618);
+					this.method2124(false, -1, 0);
 				}
 			}
 		} else {
-			this.method2124(false, -1, 0, 1157413618);
+			this.method2124(false, -1, 0);
 		}
 		this.anInt1548 = client.cycles;
 	}
 
 	void method2136(GraphicalRenderer graphicalrenderer_1, byte b_2) {
-		this.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		this.method2132(graphicalrenderer_1, 262144, true, true);
 	}
 
-	public static int method2149(int i_0) {
+	public static int method2149() {
 		if (IndexReference.anInt1039 == -1) {
-			IndexReference[] arr_1 = Class158_Sub1.method13767(-1513831265);
+			IndexReference[] arr_1 = Class158_Sub1.method13767();
 			for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 				IndexReference indexreference_3 = arr_1[i_2];
 				if (indexreference_3.indexId > IndexReference.anInt1039) {
@@ -291,7 +291,7 @@ public class Class123 {
 		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.aBool7995 = !class282_sub37_2.aBool7995;
-			class282_sub37_2.aClass278_Sub1_8001.method4924(class282_sub37_2.aBool7995, -1401371611);
+			class282_sub37_2.aClass278_Sub1_8001.method4924(class282_sub37_2.aBool7995);
 		}
 	}
 }

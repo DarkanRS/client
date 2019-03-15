@@ -57,10 +57,10 @@ public class LoadingStage {
 		aClass387_4702 = new LoadingStage(3, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 3, 4);
 		aClass387_4708 = new LoadingStage(4, Message.CHECKING_FOR_UPDATES, 4);
 		aClass387_4699 = new LoadingStage(5, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 4, 5);
-		aClass387_4700 = new LoadingStage(6, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 5, 98, true, true);
+		aClass387_4700 = new LoadingStage(6, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 5, 98, true);
 		aClass387_4717 = new LoadingStage(7, Message.CHECKING_FOR_UPDATES, 99);
 		aClass387_4709 = new LoadingStage(8, Message.CHECKING_FOR_UPDATES, 100);
-		aClass387_4716 = new LoadingStage(9, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 0, 92, true, true);
+		aClass387_4716 = new LoadingStage(9, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 0, 92, true);
 		aClass387_4704 = new LoadingStage(10, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 92, 93);
 		aClass387_4705 = new LoadingStage(11, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 94, 95);
 		aClass387_4706 = new LoadingStage(12, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 96, 97);
@@ -71,29 +71,29 @@ public class LoadingStage {
 		aClass387_4701 = new LoadingStage(17, Message.FETCHING_UPDATES, 100);
 	}
 
-	LoadingStage(int i_1, Message message_2, Message message_3, int i_4, int i_5, boolean bool_6, boolean bool_7) {
+	LoadingStage(int i_1, Message message_2, Message message_3, int i_4, int i_5, boolean bool_7) {
 		this.anInt4712 = i_1;
 		this.aClass433_4711 = message_2;
 		this.aClass433_4714 = message_3;
 		this.anInt4715 = i_4;
 		this.anInt4703 = i_5;
-		this.aBool4694 = bool_6;
+		this.aBool4694 = true;
 		this.aBool4718 = bool_7;
 	}
 
 	LoadingStage(int i_1, Message message_2, int i_3) {
-		this(i_1, message_2, message_2, i_3, i_3, true, false);
+		this(i_1, message_2, message_2, i_3, i_3, false);
 	}
 
 	LoadingStage(int i_1, Message message_2, Message message_3, int i_4, int i_5) {
-		this(i_1, message_2, message_3, i_4, i_5, true, false);
+		this(i_1, message_2, message_3, i_4, i_5, false);
 	}
 
-	static LoadingStage[] method6676(int i_0) {
+	static LoadingStage[] method6676() {
 		return new LoadingStage[] { aClass387_4697, aClass387_4695, aClass387_4696, aClass387_4702, aClass387_4708, aClass387_4699, aClass387_4700, aClass387_4717, aClass387_4709, aClass387_4716, aClass387_4704, aClass387_4705, aClass387_4706, aClass387_4707, aClass387_4713, aClass387_4698, aClass387_4710, aClass387_4701 };
 	}
 
-	static final void decodeUpdate(RsBitsBuffer rsbitsbuffer_0, int i_1) {
+	static final void decodeUpdate(RsBitsBuffer rsbitsbuffer_0) {
 		int i_2 = 0;
 		rsbitsbuffer_0.initBitAccess((byte) 8);
 		int i_3;
@@ -108,7 +108,7 @@ public class LoadingStage {
 				} else {
 					i_5 = rsbitsbuffer_0.readBits(1, (byte) 65);
 					if (i_5 == 0) {
-						i_2 = Class399.decodeSkip(rsbitsbuffer_0, -1089696060);
+						i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 						Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 					} else {
 						Class105.method1806(rsbitsbuffer_0, i_4, 1605181338);
@@ -130,7 +130,7 @@ public class LoadingStage {
 					} else {
 						i_5 = rsbitsbuffer_0.readBits(1, (byte) -13);
 						if (i_5 == 0) {
-							i_2 = Class399.decodeSkip(rsbitsbuffer_0, -1089696060);
+							i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 							Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 						} else {
 							Class105.method1806(rsbitsbuffer_0, i_4, 1591127292);
@@ -152,9 +152,9 @@ public class LoadingStage {
 						} else {
 							i_5 = rsbitsbuffer_0.readBits(1, (byte) -39);
 							if (i_5 == 0) {
-								i_2 = Class399.decodeSkip(rsbitsbuffer_0, -1089696060);
+								i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 								Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
-							} else if (Class346.method6155(rsbitsbuffer_0, i_4, (short) 371)) {
+							} else if (Class346.method6155(rsbitsbuffer_0, i_4)) {
 								Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 							}
 						}
@@ -174,9 +174,9 @@ public class LoadingStage {
 							} else {
 								i_5 = rsbitsbuffer_0.readBits(1, (byte) 28);
 								if (i_5 == 0) {
-									i_2 = Class399.decodeSkip(rsbitsbuffer_0, -1089696060);
+									i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 									Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
-								} else if (Class346.method6155(rsbitsbuffer_0, i_4, (short) 371)) {
+								} else if (Class346.method6155(rsbitsbuffer_0, i_4)) {
 									Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 								}
 							}
@@ -203,11 +203,11 @@ public class LoadingStage {
 		}
 	}
 
-	public static void method6681(int i_0, String string_1, byte b_2) {
-		Class191.method3167(i_0, 0, "", "", "", string_1, 146573843);
+	public static void method6681(String string_1, byte b_2) {
+		Class191.method3167(4, 0, "", "", "", string_1, 146573843);
 	}
 
-	static final void renderMiniMiniMap(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, short s_5) {
+	static final void renderMiniMiniMap(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4) {
 		graphicalrenderer_0.r(i_1, i_2, i_3 + i_1, i_2 + i_4);
 		graphicalrenderer_0.method8425(i_1, i_2, i_3, i_4, -16777216, (byte) -58);
 		if (Class291_Sub1.anInt8015 >= 100) {
@@ -294,7 +294,7 @@ public class LoadingStage {
 		Class121.anInt1525 = 0;
 	}
 
-	public static boolean method6684(int i_0, byte b_1) {
+	public static boolean method6684(int i_0) {
 		if (i_0 != Class86.anInt831 || Class282_Sub42.aClass85_8039 == null) {
 			Class79.method1390(769951591);
 			Class282_Sub42.aClass85_8039 = Class85.aClass85_815;
@@ -309,7 +309,7 @@ public class LoadingStage {
 				return false;
 			}
 			RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(bytes_2);
-			Class176.method2976(rsbytebuffer_3, -1081790752);
+			Class176.method2976(rsbytebuffer_3);
 			i_4 = rsbytebuffer_3.readUnsignedByte();
 			for (i_5 = 0; i_5 < i_4; i_5++) {
 				Class86.aClass482_827.append(new Class282_Sub2(rsbytebuffer_3), -1970601217);
@@ -340,7 +340,7 @@ public class LoadingStage {
 			i_9 = rsbytebuffer_3.readUnsignedSmart(2014961540);
 			Class86.aClass96Array822 = new Class96[i_9];
 			for (int i_10 = 0; i_10 < i_9; i_10++) {
-				Class86.aClass96Array822[i_10] = Class16.method562(rsbytebuffer_3, 1972468902);
+				Class86.aClass96Array822[i_10] = Class16.method562(rsbytebuffer_3);
 			}
 			Class282_Sub42.aClass85_8039 = Class85.aClass85_816;
 		}
@@ -349,21 +349,21 @@ public class LoadingStage {
 			Class75[] arr_16 = Class82.aClass75Array804;
 			for (i_4 = 0; i_4 < arr_16.length; i_4++) {
 				Class75 class75_13 = arr_16[i_4];
-				if (!class75_13.method1339((short) -5159)) {
+				if (!class75_13.method1339()) {
 					bool_11 = false;
 				}
 			}
 			Class96[] arr_12 = Class86.aClass96Array822;
 			for (i_5 = 0; i_5 < arr_12.length; i_5++) {
 				Class96 class96_15 = arr_12[i_5];
-				if (!class96_15.method1599(-161742461)) {
+				if (!class96_15.method1599()) {
 					bool_11 = false;
 				}
 			}
 			Class92[] arr_17 = Class86.aClass92Array820;
 			for (i_6 = 0; i_6 < arr_17.length; i_6++) {
 				Class92 class92_7 = arr_17[i_6];
-				if (!class92_7.method1557(-1863501604)) {
+				if (!class92_7.method1557()) {
 					bool_11 = false;
 				}
 			}
@@ -375,7 +375,7 @@ public class LoadingStage {
 		return true;
 	}
 
-	static void method6686(GraphicalRenderer graphicalrenderer_0, byte[][][] bytes_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
+	static void method6686(GraphicalRenderer graphicalrenderer_0, byte[][][] bytes_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11) {
 		if (i_9 != 0 && i_2 != 0) {
 			if (i_9 == 9) {
 				i_9 = 1;

@@ -30,11 +30,11 @@ public class Class187 {
 		throw new Error();
 	}
 
-	public static boolean method3118(byte b_0) {
+	public static boolean method3118() {
 		return Class404.LIBRARY_LOADER != null;
 	}
 
 	public static void method3121(int i_0, short s_1) {
-		Class148.aClass282_Sub15_Sub2_1735.method15094(i_0 >> 8, 1679991202);
+		Class148.aClass282_Sub15_Sub2_1735.method15094(i_0 >> 8);
 	}
 }

@@ -16,7 +16,7 @@ public class Class164 {
 		return this.aClass128_2032 != null;
 	}
 
-	boolean method2848(Class137_Sub4 class137_sub4_1, Class137_Sub4 class137_sub4_2, float f_3) {
+	boolean method2848(Class137_Sub4 class137_sub4_1, Class137_Sub4 class137_sub4_2) {
 		if (!this.method2847()) {
 			return false;
 		} else {
@@ -36,7 +36,7 @@ public class Class164 {
 				OpenGL.glViewport(0, 0, class137_sub4_1.anInt9116, class137_sub4_1.anInt9117);
 				OpenGL.glUseProgram(this.aClass128_2032.anInt1583);
 				OpenGL.glUniform1i(OpenGL.glGetUniformLocation(this.aClass128_2032.anInt1583, "heightMap"), 0);
-				OpenGL.glUniform1f(OpenGL.glGetUniformLocation(this.aClass128_2032.anInt1583, "rcpRelief"), 1.0F / f_3);
+				OpenGL.glUniform1f(OpenGL.glGetUniformLocation(this.aClass128_2032.anInt1583, "rcpRelief"), 1.0F / (float) 2.0);
 				OpenGL.glUniform2f(OpenGL.glGetUniformLocation(this.aClass128_2032.anInt1583, "sampleSize"), 1.0F / (float) class137_sub4_2.anInt9116, 1.0F / (float) class137_sub4_2.anInt9117);
 
 				for (int i_7 = 0; i_7 < class137_sub4_1.anInt9118; i_7++) {
@@ -52,7 +52,7 @@ public class Class164 {
 					OpenGL.glTexCoord3f(0.0F, 1.0F, f_8);
 					OpenGL.glVertex2f(0.0F, 1.0F);
 					OpenGL.glEnd();
-					class137_sub4_1.method14465(0, 0, i_7, class137_sub4_1.anInt9116, class137_sub4_1.anInt9117, 0, 0);
+					class137_sub4_1.method14465(i_7, class137_sub4_1.anInt9116, class137_sub4_1.anInt9117);
 				}
 
 				OpenGL.glUseProgram(0);

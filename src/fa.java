@@ -7,8 +7,8 @@ public class fa extends NativeSprite implements Interface40, Interface9 {
 		return this.WA(this.nativeid);
 	}
 
-	fa(ja ja_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
-		this.RA(ja_1, ints_2, i_3, i_4, i_5, i_6, bool_7);
+	fa(ja ja_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6) {
+		this.RA(ja_1, ints_2, i_3, i_4, i_5, i_6, false);
 	}
 
 	public int method2788() {
@@ -94,8 +94,8 @@ public class fa extends NativeSprite implements Interface40, Interface9 {
 
 	native void ea(long var1, int var3, int var4, int var5, int var6, int var7, int var8);
 
-	public void method2751(int i_1, int i_2, int i_3) {
-		this.j(this.nativeid, i_1, i_2, i_3);
+	public void method2751() {
+		this.j(this.nativeid, 0, 0, 3);
 	}
 
 	native void j(long var1, int var3, int var4, int var5);
@@ -112,8 +112,8 @@ public class fa extends NativeSprite implements Interface40, Interface9 {
 
 	native void o(long var1, int var3, int var4, long var5, int var7, int var8);
 
-	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-		this.ha(this.nativeid, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8);
+	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+		this.ha(this.nativeid, i_1, i_2, i_3, i_4, i_5, i_6, i_7, 1);
 	}
 
 	native void eo(long var1, int var3, int var4, int var5);
@@ -209,8 +209,8 @@ public class fa extends NativeSprite implements Interface40, Interface9 {
 		this.U(this.nativeid, i_1, i_2, i_3, i_4);
 	}
 
-	fa(ja ja_1, int[] ints_2, byte[] bytes_3, byte[] bytes_4, int i_5, int i_6, int i_7, int i_8) {
-		this.EA(ja_1, ints_2, bytes_3, bytes_4, i_5, i_6, i_7, i_8);
+	fa(ja ja_1, int[] ints_2, byte[] bytes_3, byte[] bytes_4, int i_6, int i_7, int i_8) {
+		this.EA(ja_1, ints_2, bytes_3, bytes_4, 0, i_6, i_7, i_8);
 	}
 
 	public int method2793() {
@@ -326,8 +326,8 @@ public class fa extends NativeSprite implements Interface40, Interface9 {
 
 	native void dy(long var1, boolean var3);
 
-	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9, int i_10) {
-		this.e(this.nativeid, f_1, f_2, f_3, f_4, f_5, f_6, i_7, i_8, i_9, i_10);
+	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9) {
+		this.e(this.nativeid, f_1, f_2, f_3, f_4, f_5, f_6, i_7, i_8, i_9, 1);
 	}
 
 	native void EA(ja var1, int[] var2, byte[] var3, byte[] var4, int var5, int var6, int var7, int var8);

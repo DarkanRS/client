@@ -20,12 +20,12 @@ public final class Stream {
 	}
 
 	public Stream(Buffer buffer) {
-		this(buffer, 0, buffer.method1());
+		this(buffer, buffer.method1());
 	}
 
-	public Stream(Buffer buffer, int i, int i_0_) {
+	public Stream(Buffer buffer, int i_0_) {
 		this(buffer.method1() < 4096 ? buffer.method1() : 4096);
-		method2917(buffer, i, i_0_);
+		method2917(buffer, 0, i_0_);
 	}
 
 	private void method2917(Buffer buffer, int i, int i_1_) {

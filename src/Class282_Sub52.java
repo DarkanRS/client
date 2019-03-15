@@ -10,7 +10,7 @@ public final class Class282_Sub52 extends Node implements KeyRecord {
 		return this.anInt8173 * -461318909 * -921682517;
 	}
 
-	public int getType(int i_1) {
+	public int getType() {
 		return this.anInt8173;
 	}
 
@@ -18,7 +18,7 @@ public final class Class282_Sub52 extends Node implements KeyRecord {
 		return this.aChar8171;
 	}
 
-	public int method92(int i_1) {
+	public int method92() {
 		return this.anInt8172;
 	}
 
@@ -70,11 +70,11 @@ public final class Class282_Sub52 extends Node implements KeyRecord {
 		return 656472737 * this.anInt8174 * 110455137;
 	}
 
-	static final void method13468(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method13468(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.aBool1328 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 6);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Message.method7278(icomponentdefinitions_0.idHash, -157670118);
+			Message.method7278(icomponentdefinitions_0.idHash);
 		}
 
 	}

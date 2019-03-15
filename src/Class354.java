@@ -15,23 +15,23 @@ public final class Class354 {
 		this.anInt4108 = i_2;
 	}
 
-	public static int method6214(int i_0, int i_1, int i_2, int i_3) {
+	public static int method6214(int i_0, int i_1, int i_2) {
 		i_2 &= 0x3;
 		return i_2 == 0 ? i_1 : (i_2 == 1 ? 4095 - i_0 : (i_2 == 2 ? 4095 - i_1 : i_0));
 	}
 
-	static void method6215(byte b_0) {
+	static void method6215() {
 		SoftCache softcache_1 = Class13.aClass229_127;
 		synchronized (Class13.aClass229_127) {
 			Class13.aClass229_127.method3863(1545219371);
 		}
 	}
 
-	static void method6216(GraphicalRenderer graphicalrenderer_0, int i_1) {
+	static void method6216(GraphicalRenderer graphicalrenderer_0) {
 		if (!Class20.aBool187) {
-			Class277.method4908(graphicalrenderer_0, 1349821918);
+			Class277.method4908(graphicalrenderer_0);
 		} else {
-			Class38.method857(graphicalrenderer_0, -1937681851);
+			Class38.method857(graphicalrenderer_0);
 		}
 	}
 }

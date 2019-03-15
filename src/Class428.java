@@ -32,7 +32,7 @@ public final class Class428 {
 		}
 	}
 
-	public void method7191(Object object_1, byte b_2) {
+	public void method7191(Object object_1) {
 		if (object_1 == null) {
 			throw new NullPointerException();
 		} else {
@@ -62,7 +62,7 @@ public final class Class428 {
 		}
 	}
 
-	public ArrayList method7193(byte b_1) {
+	public ArrayList method7193() {
 		this.method7190((byte) -69);
 		ArrayList arraylist_2 = new ArrayList(this.anInt5125);
 		WeakReference_Sub1[] arr_3 = this.aWeakReference_Sub1Array5124;
@@ -92,7 +92,7 @@ public final class Class428 {
 		}
 	}
 
-	public void method7201(Object object_1, Object object_2, int i_3) {
+	public void method7201(Object object_1, Object object_2) {
 		if (object_1 == null) {
 			throw new NullPointerException();
 		} else {

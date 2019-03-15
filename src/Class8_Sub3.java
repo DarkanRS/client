@@ -483,13 +483,13 @@ public class Class8_Sub3 extends FontRenderer {
 		Class210.method3612(class521_sub1_0.plane, i_4, i_5, 0, i_1, bool_2, (byte) 29);
 	}
 
-	public static int method14337(int i_0, int i_1, int i_2, int i_3) {
+	public static int method14337(int i_0, int i_1, int i_2) {
 		int i_4 = 255 - i_2;
 		i_1 = ((i_1 & 0xff00ff) * i_2 & ~0xff00ff | (i_1 & 0xff00) * i_2 & 0xff0000) >>> 8;
 		return ((i_4 * (i_0 & 0xff00ff) & ~0xff00ff | (i_0 & 0xff00) * i_4 & 0xff0000) >>> 8) + i_1;
 	}
 
-	static final boolean method14338(BufferedConnectionContext class184_0, byte b_1) {
+	static final boolean method14338(BufferedConnectionContext class184_0) {
 		try {
 			boolean bool_2 = PacketsDecoder.method14433(class184_0);
 			return bool_2;
@@ -517,7 +517,7 @@ public class Class8_Sub3 extends FontRenderer {
 		return new Class249[] { Class249.aClass249_3082, Class249.aClass249_3084, Class249.aClass249_3086, Class249.aClass249_3083 };
 	}
 
-	static void method14341(int i_0) {
+	static void method14341() {
 		PulseEvent.aClass465_9667.method7749(207048647);
 		PulseEvent.aClass477_9655.method7935((byte) -65);
 		PulseEvent.aClass477_9666.method7935((byte) -9);

@@ -54,7 +54,7 @@ public class Class232 implements Interface17 {
 		this.anIntArray2877 = ints_1;
 	}
 
-	static final void method3920(int i_0, int i_1) {
+	static final void method3920(int i_0) {
 		int i_2 = client.cycles - client.anInt7429;
 		if (i_2 >= 100) {
 			NativeLibraryLoader.anInt3240 = 2;

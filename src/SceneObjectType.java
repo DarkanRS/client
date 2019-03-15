@@ -82,7 +82,7 @@ public class SceneObjectType implements Interface43 {
 		return 1109376893 * this.type * 2087055829;
 	}
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.type;
 	}
 

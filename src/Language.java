@@ -75,7 +75,7 @@ public class Language implements Interface43 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt5804;
 	}
 
@@ -91,7 +91,7 @@ public class Language implements Interface43 {
 		return -1324357023 * this.anInt5804 * 411974049;
 	}
 
-	public Locale method8293(int i_1) {
+	public Locale method8293() {
 		return this.aLocale5805;
 	}
 

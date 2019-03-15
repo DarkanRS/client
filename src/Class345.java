@@ -41,53 +41,53 @@ public class Class345 {
 
 	public long aLong4044;
 
-	void method6124(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	void method6124(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method6125(rsbytebuffer_1, i_3, (byte) 45);
+			this.method6125(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method6125(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method6125(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			if (b_3 == -1) {
+			if ((byte) 45 == -1) {
 				throw new IllegalStateException();
 			}
 			this.anInt4034 = rsbytebuffer_1.readUnsignedShort();
 		} else if (i_2 == 2) {
 			rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 3) {
-			if (b_3 == -1) {
+			if ((byte) 45 == -1) {
 				throw new IllegalStateException();
 			}
 			this.anInt4027 = rsbytebuffer_1.readInt();
 			this.anInt4036 = rsbytebuffer_1.readInt();
 			this.anInt4037 = rsbytebuffer_1.readInt();
 		} else if (i_2 == 4) {
-			if (b_3 == -1)
+			if ((byte) 45 == -1)
 				this.anInt4038 = rsbytebuffer_1.readUnsignedByte();
 			this.anInt4035 = rsbytebuffer_1.readInt();
 		} else if (i_2 == 6) {
-			if (b_3 == -1) {
+			if ((byte) 45 == -1) {
 				throw new IllegalStateException();
 			}
 			this.anInt4041 = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 8) {
-			if (b_3 != -1) {
+			if ((byte) 45 != -1) {
 				this.anInt4040 = 1;
 			}
 		} else if (i_2 == 9) {
 			this.anInt4039 = 1;
 		} else if (i_2 == 10) {
-			if (b_3 == -1)
+			if ((byte) 45 == -1)
 				this.aBool4042 = true;
 		}
 	}
 
-	void method6128(byte b_1) {
+	void method6128() {
 		this.anInt4024 = Class382.anIntArray4661[this.anInt4034 << 3];
 		long long_2 = (long) this.anInt4027;
 		long long_4 = (long) this.anInt4036;
@@ -109,11 +109,11 @@ public class Class345 {
 		}
 	}
 
-	public static Class442 method6137(String string_0, String string_1, boolean bool_2, byte b_3) {
+	public static Class442 method6137(String string_0, String string_1, boolean bool_2) {
 		File file_4 = new File(Engine.aFile3264, "preferences" + string_0 + ".dat");
 		if (file_4.exists()) {
 			try {
-				Class442 class442_12 = new Class442(file_4, "rw", 10000L);
+				Class442 class442_12 = new Class442(file_4, 10000L);
 				return class442_12;
 			} catch (IOException ioexception_11) {
 				;
@@ -129,25 +129,25 @@ public class Class345 {
 		Class442 class442_8;
 		if (!bool_2 && file_6.exists()) {
 			try {
-				class442_8 = new Class442(file_6, "rw", 10000L);
+				class442_8 = new Class442(file_6, 10000L);
 				return class442_8;
 			} catch (IOException ioexception_10) {
 				;
 			}
 		}
 		try {
-			class442_8 = new Class442(file_4, "rw", 10000L);
+			class442_8 = new Class442(file_4, 10000L);
 			return class442_8;
 		} catch (IOException ioexception_9) {
 			throw new RuntimeException();
 		}
 	}
 
-	public static boolean method6140(int i_0) {
+	public static boolean method6140() {
 		return Class148.anInt1730 != 0;
 	}
 
-	static void method6143(int i_0, int i_1) {
+	static void method6143(int i_0) {
 		Class105.anInt1069 = i_0;
 		ItemContainer.aClass229_7712.method3859(-1205784337);
 	}

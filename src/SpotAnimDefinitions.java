@@ -34,17 +34,17 @@ public class SpotAnimDefinitions {
 
 	int anInt6969;
 
-	void method11226(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method11226(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method11227(rsbytebuffer_1, i_3, (byte) 106);
+			this.method11227(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method11227(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method11227(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.defaultModel = rsbytebuffer_1.readBigSmart();
 		} else if (i_2 == 2) {
@@ -141,12 +141,12 @@ public class SpotAnimDefinitions {
 			if (this.aShortArray6974 != null) {
 				i_17 |= 0x8000;
 			}
-			RSMesh rsmesh_15 = RSMesh.decodeMesh(this.aClass515_6973.aClass317_5889, this.defaultModel, 0);
+			RSMesh rsmesh_15 = RSMesh.decodeMesh(this.aClass515_6973.aClass317_5889, this.defaultModel);
 			if (rsmesh_15 == null) {
 				return null;
 			}
 			if (rsmesh_15.version < 13) {
-				rsmesh_15.upscale(2);
+				rsmesh_15.upscale();
 			}
 			meshrasterizer_13 = graphicalrenderer_1.createMeshRasterizer(rsmesh_15, i_17, this.aClass515_6973.anInt5892, this.anInt6979 + 64, this.anInt6981 + 850);
 			int i_16;
@@ -168,7 +168,7 @@ public class SpotAnimDefinitions {
 		}
 		MeshRasterizer meshrasterizer_21 = meshrasterizer_13.method11289(b_10, i_12, true);
 		if (animation_9 != null) {
-			animation_9.rasterize(meshrasterizer_21, 0, 16711935);
+			animation_9.rasterize(meshrasterizer_21, 0);
 		}
 		if (this.anInt6976 != 128 || this.anInt6971 != 128) {
 			meshrasterizer_21.oa(this.anInt6976, this.anInt6971, this.anInt6976);
@@ -191,7 +191,7 @@ public class SpotAnimDefinitions {
 		return meshrasterizer_21;
 	}
 
-	static void method11243(int i_0) {
+	static void method11243() {
 		if (Class298.method5303((byte) 39)) {
 			if (Class13.aStringArray129 == null) {
 				FontRenderer.method402(-26055309);

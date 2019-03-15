@@ -8,7 +8,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 		this(string_1, false);
 	}
 
-	static final void decodeAddRemove(int i_0) {
+	static final void decodeAddRemove() {
 		RsBitsBuffer rsbitsbuffer_1 = client.aClass184_7475.recievedBuffer;
 		rsbitsbuffer_1.initBitAccess((byte) 104);
 		int i_2 = rsbitsbuffer_1.readBits(8, (byte) -33);

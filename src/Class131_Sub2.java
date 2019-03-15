@@ -1,6 +1,6 @@
 public class Class131_Sub2 extends Class131 implements Interface15 {
 
-	public void method111(int i_1, byte[] bytes_2, int i_3) {
+	public void method111(byte[] bytes_2, int i_3) {
 		this.method2319(bytes_2, i_3);
 	}
 

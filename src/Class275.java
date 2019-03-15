@@ -30,7 +30,7 @@ public class Class275 {
 			int i_4 = Class107.anInt1082 - client.anInt3243 * -969250379 - i_2;
 			if (i_1 > 0 || i_3 > 0 || i_2 > 0 || i_4 > 0) {
 				try {
-					Container container_5 = Class371.getActiveContainer((byte) 1);
+					Container container_5 = Class371.getActiveContainer();
 					int i_6 = 0;
 					int i_7 = 0;
 					if (container_5 == client.engineFrame) {

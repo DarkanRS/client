@@ -26,7 +26,7 @@ public class Class176 {
 
 	int anInt2194;
 
-	void method2968(Class176 class176_1, int i_2) {
+	void method2968(Class176 class176_1) {
 		this.aFloat2190 = class176_1.aFloat2190;
 		this.aFloat2191 = class176_1.aFloat2191;
 		this.anInt2192 = class176_1.anInt2192;
@@ -48,11 +48,11 @@ public class Class176 {
 		this.anInt2199 = i_1;
 	}
 
-	Class176 method2972(int i_1) {
+	Class176 method2972() {
 		return new Class176(this.anInt2199, this.aFloat2190, this.aFloat2191, this.anInt2192, this.anInt2189, this.anInt2194);
 	}
 
-	static void method2976(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static void method2976(RsByteBuffer rsbytebuffer_0) {
 		while (true) {
 			int i_2 = rsbytebuffer_0.readUnsignedByte();
 			switch (i_2) {
@@ -67,11 +67,11 @@ public class Class176 {
 	}
 
 	public static void method2977(int i_0) {
-		Class96_Sub5.method14243((short) 31899);
+		Class96_Sub5.method14243();
 	}
 
 	static long method2979(int i_0) {
-		return Engine.aClass273_3244.method4852(1483747562);
+		return Engine.aClass273_3244.method4852();
 	}
 
 	static boolean method2980(int i_0, int i_1) {

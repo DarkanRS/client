@@ -16,14 +16,14 @@ public class Class90 {
 
 	public int anInt951;
 
-	public Class90(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	public Class90(int i_1) {
 		this.color = i_1;
-		this.scale = i_2;
-		this.intensity = i_3;
-		this.anInt948 = i_4;
-		this.anInt949 = i_5;
-		this.anInt950 = i_6;
-		this.anInt951 = i_7;
+		this.scale = 40;
+		this.intensity = 127;
+		this.anInt948 = 63;
+		this.anInt949 = 0;
+		this.anInt950 = 0;
+		this.anInt951 = 0;
 	}
 
 	public boolean method1506(Class90 class90_1, int i_2) {

@@ -14,12 +14,12 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 				do {
 					if (i_6 <= 1985703289 * class282_sub13_4.anInt7584 * -431461175) {
-						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5, 286364982);
+						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5);
 						class282_sub13_4.anInt7584 = (class282_sub13_4.anInt7584 * -431461175 - i_6 * -431461175) * 1985703289;
 						break;
 					}
 
-					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584 * -431461175 * 1985703289, i_5 + i_6, 286364982);
+					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584 * -431461175 * 1985703289, i_5 + i_6);
 					i_5 += class282_sub13_4.anInt7584 * -431461175 * 1985703289;
 					i_6 -= 1985703289 * class282_sub13_4.anInt7584 * -431461175;
 				} while (!this.aClass282_Sub15_Sub2_9753.method15128(class282_sub13_4, ints_1, i_5, i_6, -1639993540));
@@ -47,12 +47,12 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 				do {
 					if (i_6 <= class282_sub13_4.anInt7584) {
-						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5, 286364982);
+						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5);
 						class282_sub13_4.anInt7584 -= i_6;
 						break;
 					}
 
-					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584, i_5 + i_6, 286364982);
+					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584, i_5 + i_6);
 					i_5 += class282_sub13_4.anInt7584;
 					i_6 -= class282_sub13_4.anInt7584;
 				} while (!this.aClass282_Sub15_Sub2_9753.method15128(class282_sub13_4, ints_1, i_5, i_6, -465224323));
@@ -81,7 +81,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 				}
 
 				if (class282_sub13_1.aClass282_Sub14_7566.aShortArray7590[class282_sub13_1.anInt7569] < 0) {
-					class282_sub13_1.aClass282_Sub15_Sub5_7568.method15325(-1, (byte) 8);
+					class282_sub13_1.aClass282_Sub15_Sub5_7568.method15325(-1);
 				}
 
 				i_2 = class282_sub13_1.anInt7583 / i_4;
@@ -96,7 +96,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 		return (Class282_Sub15) (class282_sub13_1 == null ? null : (class282_sub13_1.aClass282_Sub15_Sub5_7568 != null ? class282_sub13_1.aClass282_Sub15_Sub5_7568 : this.method12239()));
 	}
 
-	void method15234(Class282_Sub13 class282_sub13_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6) {
+	void method15234(Class282_Sub13 class282_sub13_1, int[] ints_2, int i_3, int i_4, int i_5) {
 		if ((this.aClass282_Sub15_Sub2_9753.anIntArray9707[class282_sub13_1.anInt7582] & 0x4) != 0 && class282_sub13_1.anInt7579 < 0) {
 			int i_7 = this.aClass282_Sub15_Sub2_9753.anIntArray9712[class282_sub13_1.anInt7582] / Class253.anInt3129;
 
@@ -123,16 +123,16 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 				} else {
 					class282_sub13_1.aClass282_Sub15_Sub5_7568 = class282_sub13_1.aClass282_Sub26_Sub1_7565.method15225(class282_sub15_sub5_11.method15323(-1801069434), 0, class282_sub15_sub5_11.method15316(696166910));
 					this.aClass282_Sub15_Sub2_9753.method15099(class282_sub13_1, class282_sub13_1.aClass282_Sub14_7566.aShortArray7590[class282_sub13_1.anInt7569] < 0, (byte) 17);
-					class282_sub13_1.aClass282_Sub15_Sub5_7568.method15320(i_9, class282_sub15_sub5_11.method15315(-1596806100), -1351786987);
+					class282_sub13_1.aClass282_Sub15_Sub5_7568.method15320(i_9, class282_sub15_sub5_11.method15315(-1596806100));
 				}
 
 				if (class282_sub13_1.aClass282_Sub14_7566.aShortArray7590[class282_sub13_1.anInt7569] < 0) {
-					class282_sub13_1.aClass282_Sub15_Sub5_7568.method15325(-1, (byte) 8);
+					class282_sub13_1.aClass282_Sub15_Sub5_7568.method15325(-1);
 				}
 
 				class282_sub15_sub5_11.method15322(i_9, (byte) -5);
 				class282_sub15_sub5_11.method12230(ints_2, i_3, i_5 - i_3);
-				if (class282_sub15_sub5_11.method15311((byte) 33)) {
+				if (class282_sub15_sub5_11.method15311()) {
 					this.aClass282_Sub15_Sub4_9755.method15275(class282_sub15_sub5_11);
 				}
 			}
@@ -203,12 +203,12 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 				do {
 					if (i_6 <= 1985703289 * class282_sub13_4.anInt7584 * -431461175) {
-						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5, 286364982);
+						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5);
 						class282_sub13_4.anInt7584 = (class282_sub13_4.anInt7584 * -431461175 - i_6 * -431461175) * 1985703289;
 						break;
 					}
 
-					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584 * -431461175 * 1985703289, i_5 + i_6, 286364982);
+					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584 * -431461175 * 1985703289, i_5 + i_6);
 					i_5 += class282_sub13_4.anInt7584 * -431461175 * 1985703289;
 					i_6 -= 1985703289 * class282_sub13_4.anInt7584 * -431461175;
 				} while (!this.aClass282_Sub15_Sub2_9753.method15128(class282_sub13_4, ints_1, i_5, i_6, -579260816));
@@ -309,12 +309,12 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 				do {
 					if (i_6 <= 1985703289 * class282_sub13_4.anInt7584 * -431461175) {
-						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5, 286364982);
+						this.method15234(class282_sub13_4, ints_1, i_5, i_6, i_6 + i_5);
 						class282_sub13_4.anInt7584 = (class282_sub13_4.anInt7584 * -431461175 - i_6 * -431461175) * 1985703289;
 						break;
 					}
 
-					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584 * -431461175 * 1985703289, i_5 + i_6, 286364982);
+					this.method15234(class282_sub13_4, ints_1, i_5, class282_sub13_4.anInt7584 * -431461175 * 1985703289, i_5 + i_6);
 					i_5 += class282_sub13_4.anInt7584 * -431461175 * 1985703289;
 					i_6 -= 1985703289 * class282_sub13_4.anInt7584 * -431461175;
 				} while (!this.aClass282_Sub15_Sub2_9753.method15128(class282_sub13_4, ints_1, i_5, i_6, 76289834));
@@ -323,7 +323,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	}
 
-	public static void method15239(Class356 class356_0, Class353 class353_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, byte b_11) {
+	public static void method15239(Class356 class356_0, Class353 class353_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
 		Class174.aClass356_2139 = class356_0;
 		Class174.aClass353_2140 = class353_1;
 		Class174.anInt2134 = i_2;

@@ -27,7 +27,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 			}
 			inventorydef_3 = new ItemContainerDefinitions();
 			if (bytes_10 != null) {
-				inventorydef_3.method15690(new RsByteBuffer(bytes_10), 1939942716);
+				inventorydef_3.method15690(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.cached;
 			synchronized (this.cached) {
@@ -37,14 +37,14 @@ public class InventoriesIndexLoader implements IndexLoader {
 		}
 	}
 
-	static void renderAreaText(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2, int i_3, int i_4, int i_5, int i_6, Class194 class194_7, byte b_8) {
+	static void renderAreaText(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2, int i_3, int i_4, int i_5, int i_6, Class194 class194_7) {
 		int i_9 = i_4 - i_6 / 2 - 5;
 		int i_10 = i_5 + 2;
 		if (worldmapareadefs_2.anInt2726 != 0) {
 			graphicalrenderer_0.method8425(i_9, i_10, i_6 + 10, i_5 + i_3 * class194_7.method3173() - i_10 + 1, worldmapareadefs_2.anInt2726, (byte) -128);
 		}
 		if (worldmapareadefs_2.anInt2727 != 0) {
-			graphicalrenderer_0.method8562(i_9, i_10, i_6 + 10, i_5 + i_3 * class194_7.method3173() - i_10 + 1, worldmapareadefs_2.anInt2727, (byte) 4);
+			graphicalrenderer_0.method8562(i_9, i_10, i_6 + 10, i_5 + i_3 * class194_7.method3173() - i_10 + 1, worldmapareadefs_2.anInt2727);
 		}
 		int i_11 = worldmapareadefs_2.anInt2720;
 		if (class282_sub36_1.aBool7989 && worldmapareadefs_2.anInt2721 != -1) {
@@ -55,12 +55,12 @@ public class InventoriesIndexLoader implements IndexLoader {
 			if (i_12 < i_3 - 1) {
 				string_13 = string_13.substring(0, string_13.length() - 4);
 			}
-			class194_7.method3178(graphicalrenderer_0, string_13, i_4, i_5, i_11, true);
+			class194_7.method3178(graphicalrenderer_0, string_13, i_4, i_5, i_11);
 			i_5 += class194_7.method3173();
 		}
 	}
 
-	public static void method6740(Class117 class117_0, int i_1) {
+	public static void method6740(Class117 class117_0) {
 		Class113.aClass117_1234 = class117_0;
 	}
 }

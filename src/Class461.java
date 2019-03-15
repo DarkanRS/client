@@ -14,15 +14,15 @@ public class Class461 {
 		this.anInt5541 = i_1;
 	}
 
-	public static int method7702(int i_0) {
+	public static int method7702() {
 		if (Class296.anInt3532 == 0) {
 			Class446.aClass446_5412.initializeIndexLoader(new Class301("jaclib"), (byte) -15);
-			if (Class446.aClass446_5412.method7443(1803519499).getCompletion(-477828346) != 100) {
+			if (Class446.aClass446_5412.method7443(1803519499).getCompletion() != 100) {
 				return 1;
 			}
 			if (!((Class301) Class446.aClass446_5412.method7443(954726291)).method5328((byte) -93)) {
-				Class308.aclient3620.method4681((byte) 1);
-				Class223.method3770((byte) 1);
+				Class308.aclient3620.method4681();
+				Class223.method3770();
 				try {
 					Ping.init();
 				} catch (Throwable throwable_12) {
@@ -34,7 +34,7 @@ public class Class461 {
 		int i_5;
 		int i_9;
 		if (Class296.anInt3532 == 1) {
-			Class296.aClass446Array3531 = Class446.method7436((byte) 24);
+			Class296.aClass446Array3531 = Class446.method7436();
 			Class446.aClass446_5386.initializeIndexLoader(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -56);
 			Class446.aClass446_5387.initializeIndexLoader(new Class301("jaggl"), (byte) 11);
 			Class446.aClass446_5388.initializeIndexLoader(new Class301("jagdx"), (byte) -60);
@@ -56,11 +56,11 @@ public class Class461 {
 			Class446.TEXTURE_INDEX_LOADER.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) 75);
 			Class446.aClass446_5405.initializeIndexLoader(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 60);
 			Class446.aClass446_5410.initializeIndexLoader(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -44);
-			Class446.aClass446_5407.initializeIndexLoader(new Class383(IndexLoaders.HUFFMAN_INDEX, "huffman"), (byte) -27);
+			Class446.aClass446_5407.initializeIndexLoader(new Class383(IndexLoaders.HUFFMAN_INDEX), (byte) -27);
 			Class446.aClass446_5391.initializeIndexLoader(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) -5);
 			Class446.aClass446_5409.initializeIndexLoader(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) -83);
 			Class446.aClass446_5398.initializeIndexLoader(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -104);
-			Class446.aClass446_5411.initializeIndexLoader(new Class388(IndexLoaders.WORLD_MAP_INDEX, "details"), (byte) -79);
+			Class446.aClass446_5411.initializeIndexLoader(new Class388(IndexLoaders.WORLD_MAP_INDEX), (byte) -79);
 			for (i_9 = 0; i_9 < Class296.aClass446Array3531.length; i_9++) {
 				if (Class296.aClass446Array3531[i_9].method7443(-1578202194) == null) {
 					throw new RuntimeException();
@@ -70,8 +70,8 @@ public class Class461 {
 			Class446[] arr_2 = Class296.aClass446Array3531;
 			for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 				Class446 class446_4 = arr_2[i_3];
-				i_5 = class446_4.method7432((byte) 66);
-				int i_6 = class446_4.method7443(1059684891).getCompletion(-477828346);
+				i_5 = class446_4.method7432();
+				int i_6 = class446_4.method7443(1059684891).getCompletion();
 				i_9 += i_6 * i_5 / 100;
 			}
 			Class296.anInt3533 = i_9;
@@ -86,8 +86,8 @@ public class Class461 {
 			Class446[] arr_14 = Class296.aClass446Array3531;
 			for (i_5 = 0; i_5 < arr_14.length; i_5++) {
 				Class446 class446_11 = arr_14[i_5];
-				int i_7 = class446_11.method7432((byte) 66);
-				int i_8 = class446_11.method7443(-673812975).getCompletion(-477828346);
+				int i_7 = class446_11.method7432();
+				int i_8 = class446_11.method7443(-673812975).getCompletion();
 				if (i_8 < 100) {
 					bool_13 = false;
 				}
@@ -96,7 +96,7 @@ public class Class461 {
 			}
 			if (bool_13) {
 				if (!((Class301) Class446.aClass446_5385.method7443(98634719)).method5328((byte) -96)) {
-					client.aBool7393 = Class308.aclient3620.method4662((byte) 44);
+					client.aBool7393 = Class308.aclient3620.method4662();
 				}
 				Class296.aClass446Array3531 = null;
 			}
@@ -110,7 +110,7 @@ public class Class461 {
 		}
 	}
 
-	static void method7703(int i_0) {
+	static void method7703() {
 		if (client.CURRENT_CUTSCENE < 0) {
 			FontMetrics fontmetrics_1 = Class114.method1887(-785695641);
 			if (!Class20.aBool161) {
@@ -130,8 +130,8 @@ public class Class461 {
 					}
 				}
 			}
-			Class20.aClass482_174.method8063(Class20.aClass482_171, -1553248551);
-			Class20.aClass482_175.method8063(Class20.aClass482_171, -1553248551);
+			Class20.aClass482_174.method8063(Class20.aClass482_171);
+			Class20.aClass482_175.method8063(Class20.aClass482_171);
 			if (Class20.anInt169 <= 1) {
 				Class96_Sub23.aClass282_Sub50_Sub7_9445 = null;
 				Class1.aClass282_Sub50_Sub7_12 = null;
@@ -156,7 +156,7 @@ public class Class461 {
 				i_4 = class282_sub53_14.method13469(-1321812289);
 			} else {
 				i_3 = Class163.mouseRecorder.method3569(1994441818);
-				i_4 = Class163.mouseRecorder.method3570(756095591);
+				i_4 = Class163.mouseRecorder.method3570();
 			}
 			boolean bool_16;
 			if (Class20.aBool161) {
@@ -184,7 +184,7 @@ public class Class461 {
 						if (i_5 != -1) {
 							i_6 = 0;
 							class469_15 = new Class469(Class20.aClass282_Sub50_Sub15_163.aClass477_9770);
-							for (class282_sub50_sub7_8 = (Class282_Sub50_Sub7) class469_15.method7790(1832486278); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (Class282_Sub50_Sub7) class469_15.next()) {
+							for (class282_sub50_sub7_8 = (Class282_Sub50_Sub7) class469_15.method7790(); class282_sub50_sub7_8 != null; class282_sub50_sub7_8 = (Class282_Sub50_Sub7) class469_15.next()) {
 								if (i_5 == i_6) {
 									Class96_Sub4.method13789(class282_sub50_sub7_8, i_3, i_4, 951380502);
 									break;
@@ -241,7 +241,7 @@ public class Class461 {
 							if (i_5 != -1) {
 								i_6 = 0;
 								class469_15 = new Class469(Class20.aClass477_182);
-								for (Class282_Sub50_Sub15 class282_sub50_sub15_17 = (Class282_Sub50_Sub15) class469_15.method7790(1832486278); class282_sub50_sub15_17 != null; class282_sub50_sub15_17 = (Class282_Sub50_Sub15) class469_15.next()) {
+								for (Class282_Sub50_Sub15 class282_sub50_sub15_17 = (Class282_Sub50_Sub15) class469_15.method7790(); class282_sub50_sub15_17 != null; class282_sub50_sub15_17 = (Class282_Sub50_Sub15) class469_15.next()) {
 									if (i_5 == i_6) {
 										Class96_Sub4.method13789((Class282_Sub50_Sub7) class282_sub50_sub15_17.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, i_3, i_4, 1026140504);
 										Class316.method5594();
@@ -288,10 +288,10 @@ public class Class461 {
 								if (i_6 != -1) {
 									i_12 = 0;
 									Class469 class469_9 = new Class469(Class20.aClass477_182);
-									for (Class282_Sub50_Sub15 class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.method7790(1832486278); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.next()) {
+									for (Class282_Sub50_Sub15 class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.method7790(); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.next()) {
 										if (i_6 == i_12) {
 											if (class282_sub50_sub15_10.anInt9769 > 1) {
-												AnimationFrameBase.method12212(class282_sub50_sub15_10, i_11, -67980547);
+												AnimationFrameBase.method12212(class282_sub50_sub15_10, i_11);
 											}
 											break;
 										}
@@ -324,7 +324,7 @@ public class Class461 {
 				} else if (bool_16) {
 					if (Class96_Sub23.aClass282_Sub50_Sub7_9445 == null) {
 						if (client.aBool7344) {
-							Class60.method1170(-609337146);
+							Class60.method1170();
 						}
 					} else {
 						boolean bool_19 = client.aClass118_7257 != null || client.anInt7184 > 0;
@@ -344,7 +344,7 @@ public class Class461 {
 		}
 	}
 
-	static byte method7705(int i_0, int i_1, byte b_2) {
+	static byte method7705(int i_0, int i_1) {
 		return (byte) (i_0 != SceneObjectType.WALL_INTERACT.type ? 0 : ((i_1 & 0x1) == 0 ? 1 : 2));
 	}
 }

@@ -12,7 +12,7 @@ public class Class103_Sub1 extends Class103 {
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9146;
 	Matrix44Arr aClass384_9147 = new Matrix44Arr();
 
-	boolean method14483(int i_1) throws Exception_Sub2 {
+	boolean method14483() throws Exception_Sub2 {
 		this.aClass101_9148 = this.aClass505_Sub2_1057.method13890("Particle");
 		this.aClass282_Sub21_Sub1_9144 = this.aClass101_9148.method1691("WVPMatrix", (short) 22417);
 		this.aClass282_Sub21_Sub1_9145 = this.aClass101_9148.method1691("DiffuseSampler", (short) 26058);
@@ -65,15 +65,15 @@ public class Class103_Sub1 extends Class103 {
 	void method14486(int i_1) {
 		this.aClass101_9148.method1655(this.aClass101_9148.method1654(96252371));
 		this.aClass101_9148.method1646();
-		this.aClass101_9148.method1671(this.aClass282_Sub21_Sub1_9145, 0, this.anInterface6_1059, (byte) 0);
+		this.aClass101_9148.method1671(this.aClass282_Sub21_Sub1_9145, 0, this.anInterface6_1059);
 		this.aClass101_9148.method1668(this.aClass282_Sub21_Sub1_9144, this.aClass384_9147, (byte) -104);
 		this.aClass101_9148.method1667(this.aClass282_Sub21_Sub1_9149, this.aClass384_1058, -262849390);
-		this.aClass101_9148.method1696(this.aClass282_Sub21_Sub1_9146, this.anInt1056, 1511000822);
+		this.aClass101_9148.method1696(this.aClass282_Sub21_Sub1_9146, this.anInt1056);
 	}
 
 	public Class103_Sub1(Class505_Sub2 class505_sub2_1) throws Exception_Sub2 {
 		super(class505_sub2_1);
-		this.method14483(1614437421);
+		this.method14483();
 	}
 
 	static NativeSprite method14490(byte[] bytes_0, byte b_1) {
@@ -92,7 +92,7 @@ public class Class103_Sub1 extends Class103 {
 						int[] ints_7 = new int[i_5 * i_6];
 						PixelGrabber pixelgrabber_8 = new PixelGrabber(image_3, 0, 0, i_5, i_6, ints_7, 0, i_5);
 						pixelgrabber_8.grabPixels();
-						NativeSprite nativesprite_2 = Renderers.SOFTWARE_RENDERER.createNativeSprite(ints_7, 0, i_5, i_5, i_6, 194479026);
+						NativeSprite nativesprite_2 = Renderers.SOFTWARE_RENDERER.createNativeSprite(ints_7, i_5, i_5, i_6, 194479026);
 						return nativesprite_2;
 					}
 

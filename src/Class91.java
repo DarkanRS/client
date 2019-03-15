@@ -10,8 +10,8 @@ public class Class91 {
 	public byte[] aByteArray960;
 	public byte[] aByteArray961;
 
-	public static Class91[] method1514(Index index_0, int i_1, int i_2) {
-		byte[] bytes_3 = index_0.getFile(i_1, i_2);
+	public static Class91[] method1514(Index index_0, int i_1) {
+		byte[] bytes_3 = index_0.getFile(i_1, 0);
 		return bytes_3 == null ? null : method1517(bytes_3);
 	}
 

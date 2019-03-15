@@ -10,7 +10,7 @@ public class Class427 {
 
 	Index aClass317_5118;
 
-	public Class418 method7172(int i_1, int i_2) {
+	public Class418 method7172(int i_1) {
 		SoftCache softcache_4 = this.aClass229_5117;
 		Class418 class418_3;
 		synchronized (this.aClass229_5117) {
@@ -27,7 +27,7 @@ public class Class427 {
 			class418_3 = new Class418();
 			class418_3.aClass427_4998 = this;
 			if (bytes_10 != null) {
-				class418_3.method7008(new RsByteBuffer(bytes_10), 1761998604);
+				class418_3.method7008(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_5117;
 			synchronized (this.aClass229_5117) {
@@ -37,14 +37,14 @@ public class Class427 {
 		}
 	}
 
-	public void method7173(int i_1, int i_2) {
+	public void method7173() {
 		SoftCache softcache_3 = this.aClass229_5117;
 		synchronized (this.aClass229_5117) {
-			this.aClass229_5117.method3858(i_1, (byte) 14);
+			this.aClass229_5117.method3858(5, (byte) 14);
 		}
 		softcache_3 = this.aClass229_5122;
 		synchronized (this.aClass229_5122) {
-			this.aClass229_5122.method3858(i_1, (byte) 47);
+			this.aClass229_5122.method3858(5, (byte) 47);
 		}
 	}
 
@@ -58,7 +58,7 @@ public class Class427 {
 		Math.random();
 	}
 
-	public void method7174(int i_1) {
+	public void method7174() {
 		SoftCache softcache_2 = this.aClass229_5117;
 		synchronized (this.aClass229_5117) {
 			this.aClass229_5117.method3859(764081943);
@@ -74,7 +74,7 @@ public class Class427 {
 		this.aClass229_5122 = new SoftCache(i_2);
 	}
 
-	public void method7177(short s_1) {
+	public void method7177() {
 		SoftCache softcache_2 = this.aClass229_5117;
 		synchronized (this.aClass229_5117) {
 			this.aClass229_5117.method3863(1392803983);
@@ -85,7 +85,7 @@ public class Class427 {
 		}
 	}
 
-	static final int method7188(Animable animable_0, int i_1) {
+	static final int method7188(Animable animable_0) {
 		if (animable_0.anInt10340 == 0) {
 			return 0;
 		} else {
@@ -129,15 +129,15 @@ public class Class427 {
 					npc_10.anInt10578 = -1;
 				}
 			}
-			return animable_0.method15796((byte) 1);
+			return animable_0.method15796();
 		}
 	}
 
 	public static int method7189(RsByteBuffer rsbytebuffer_0, String string_1, int i_2) {
 		int i_3 = rsbytebuffer_0.index;
 		byte[] bytes_4 = LinkedNodeList.method7885(string_1, (byte) -70);
-		rsbytebuffer_0.method13076(bytes_4.length, 2140409411);
-		rsbytebuffer_0.index += Class113.aClass117_1234.method1971(bytes_4, 0, bytes_4.length, rsbytebuffer_0.buffer, rsbytebuffer_0.index, -130174544);
+		rsbytebuffer_0.method13076(bytes_4.length);
+		rsbytebuffer_0.index += Class113.aClass117_1234.method1971(bytes_4, 0, bytes_4.length, rsbytebuffer_0.buffer, rsbytebuffer_0.index);
 		return rsbytebuffer_0.index - i_3;
 	}
 }

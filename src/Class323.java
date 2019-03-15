@@ -26,7 +26,7 @@ public class Class323 implements Interface22 {
 		}
 	}
 
-	public int method84(int i_1) {
+	public int method84() {
 		return this.textureDefSize;
 	}
 
@@ -150,13 +150,13 @@ public class Class323 implements Interface22 {
 		}
 	}
 
-	public int[] method141(int i_1, float f_2, int i_3, int i_4, boolean bool_5, int i_6) {
-		int[] ints_7 = this.method5770(i_1, 1098624376).method14719(this.spriteIndex, this, (double) f_2, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, (byte) -5);
+	public int[] method141(int i_1, int i_3, int i_4, boolean bool_5, int i_6) {
+		int[] ints_7 = this.method5770(i_1, 1098624376).method14719(this.spriteIndex, this, (double) (float) 0.7, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, (byte) -5);
 		return ints_7;
 	}
 
-	public float[] method145(int i_1, float f_2, int i_3, int i_4, boolean bool_5, int i_6) {
-		float[] floats_7 = this.method5770(i_1, 409452943).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, -1771156117);
+	public float[] method145(int i_1, int i_3, int i_4) {
+		float[] floats_7 = this.method5770(i_1, 409452943).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
 		return floats_7;
 	}
 
@@ -180,7 +180,7 @@ public class Class323 implements Interface22 {
 	}
 
 	public float[] method143(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 1967689599).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, -1771156117);
+		float[] floats_6 = this.method5770(i_1, 1967689599).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
 		return floats_6;
 	}
 
@@ -215,17 +215,17 @@ public class Class323 implements Interface22 {
 	}
 
 	public float[] method152(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 795042789).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, -1771156117);
+		float[] floats_6 = this.method5770(i_1, 795042789).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
 		return floats_6;
 	}
 
 	public float[] method154(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 1535419542).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, -1771156117);
+		float[] floats_6 = this.method5770(i_1, 1535419542).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
 		return floats_6;
 	}
 
 	public float[] method155(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 777010049).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, -1771156117);
+		float[] floats_6 = this.method5770(i_1, 777010049).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
 		return floats_6;
 	}
 
@@ -249,7 +249,7 @@ public class Class323 implements Interface22 {
 	}
 
 	public float[] method153(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 1019867788).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, -1771156117);
+		float[] floats_6 = this.method5770(i_1, 1019867788).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
 		return floats_6;
 	}
 

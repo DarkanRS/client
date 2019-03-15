@@ -36,10 +36,10 @@ public class Class86 {
 		throw new Error();
 	}
 
-	public static final void method1478(int i_0) {
+	public static final void method1478() {
 		if (Class9.loginStage != 2) {
 			Class9.aClass184_73.method3051((byte) -81);
-			JS5StandardRequester.method5558(-500941691);
+			JS5StandardRequester.method5558();
 			Class361.method6270((byte) 39);
 		}
 	}
@@ -54,7 +54,7 @@ public class Class86 {
 
 	static void method1482(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
 		if (icomponentdefinitions_0.type == 5 && icomponentdefinitions_0.anInt1426 != -1) {
-			Class415.method6996(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_0, -585931804);
+			Class415.method6996(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_0);
 		}
 	}
 }

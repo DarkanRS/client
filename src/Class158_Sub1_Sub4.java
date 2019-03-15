@@ -87,8 +87,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 		return i_1 == 36053;
 	}
 
-	void method15624(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8) {
-		if (bool_7 | bool_8) {
+	void method15624(int i_3, int i_4, boolean bool_8) {
+		if (true | bool_8) {
 			int i_9 = this.anInt10230;
 			int i_10 = this.aClass505_Sub1_10227.method8523((byte) 123).method2716();
 			int i_11 = 0;
@@ -96,12 +96,12 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 				i_11 |= 0x100;
 			}
 
-			if (bool_7) {
+			if (true) {
 				i_11 |= 0x4000;
 			}
 
 			OpenGL.glBindFramebufferEXT(36008, this.anInt10228);
-			OpenGL.glBlitFramebufferEXT(i_1, i_9 - i_2 - i_4, i_3 + i_1, i_9 - i_2, i_5, i_10 - i_6 - i_4, i_3 + i_5, i_10 - i_6, i_11, 9728);
+			OpenGL.glBlitFramebufferEXT(0, i_9 - 0 - i_4, i_3 + 0, i_9 - 0, 0, i_10 - 0 - i_4, i_3 + 0, i_10 - 0, i_11, 9728);
 			OpenGL.glBindFramebufferEXT(36008, 0);
 		}
 

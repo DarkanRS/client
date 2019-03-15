@@ -37,13 +37,13 @@ public final class NativeHeapBuffer implements Buffer, Source {
 	}
 
 	public final void method1176(Source source) {
-		method1177(source, 0L, 0L, source.method1());
+		method1177(source, source.method1());
 	}
 
-	private final synchronized void method1177(Source source, long l, long l_3_, int i) {
+	private final synchronized void method1177(Source source, int i) {
 		if (source.method2() == 0L || method2() == 0L)
 			throw new NullPointerException();
-		aNativeHeap614.copy(method2() + l_3_, source.method2() + l, i);
+		aNativeHeap614.copy(method2() + (long) 0, source.method2() + (long) 0, i);
 	}
 
 	public final synchronized void method1178() {
@@ -102,19 +102,19 @@ public final class NativeHeapBuffer implements Buffer, Source {
 	}
 
 	public final void method1182(Source source) {
-		method1177(source, 0L, 0L, source.method1());
+		method1177(source, source.method1());
 	}
 
 	public final void method1183(Source source) {
-		method1177(source, 0L, 0L, source.method1());
+		method1177(source, source.method1());
 	}
 
 	public final void method1184(Source source) {
-		method1177(source, 0L, 0L, source.method1());
+		method1177(source, source.method1());
 	}
 
 	public final void method1185(Source source) {
-		method1177(source, 0L, 0L, source.method1());
+		method1177(source, source.method1());
 	}
 
 	private final synchronized void method1186(Source source, long l, long l_6_, int i) {

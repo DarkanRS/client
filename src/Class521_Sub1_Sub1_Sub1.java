@@ -7,7 +7,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		return false;
 	}
 
@@ -29,9 +29,9 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 	void method12984(int i_1) {
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aClass528_10310 == null) {
-			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
 		}
 
 		if (this.aClass528_10310 != null) {
@@ -94,7 +94,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aClass528_10310 == null) {
-			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
 		}
 
 		if (this.aClass528_10310 != null) {
@@ -119,7 +119,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aClass528_10310 == null) {
-			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
 		}
 
 		if (this.aClass528_10310 != null) {
@@ -155,7 +155,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aClass528_10310 == null) {
-			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
 		}
 
 		if (this.aClass528_10310 != null) {

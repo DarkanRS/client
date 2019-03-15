@@ -8,7 +8,7 @@ public class Class506 {
 		throw new Error();
 	}
 
-	public static MeshModifier decodeItemEffects(ItemDefinitions itemdefinitions_0, RsByteBuffer rsbytebuffer_1, int i_2) {
+	public static MeshModifier decodeItemEffects(ItemDefinitions itemdefinitions_0, RsByteBuffer rsbytebuffer_1) {
 		MeshModifier meshmodifier_3 = new MeshModifier(itemdefinitions_0);
 		int i_4 = rsbytebuffer_1.readUnsignedByte();
 		boolean bool_5 = (i_4 & 0x1) != 0;

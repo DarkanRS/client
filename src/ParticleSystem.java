@@ -102,10 +102,10 @@ public class ParticleSystem {
 		}
 	}
 
-	public void method11511(GraphicalRenderer graphicalrenderer_1, long long_2, Class87[] arr_4, Class172[] arr_5, boolean bool_6) {
+	public void method11511(GraphicalRenderer graphicalrenderer_1, long long_2, Class87[] arr_4, Class172[] arr_5) {
 		if (!this.aBool7132) {
-			this.method11541(graphicalrenderer_1, arr_4, bool_6);
-			this.method11513(arr_5, bool_6);
+			this.method11541(graphicalrenderer_1, arr_4, false);
+			this.method11513(arr_5, false);
 			this.aLong7124 = long_2;
 		}
 
@@ -175,7 +175,7 @@ public class ParticleSystem {
 	}
 
 	void method11516(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2) {
-		this.aClass151_7131.aClass464_1961.method7740(493536965);
+		this.aClass151_7131.aClass464_1961.method7740();
 		Iterator iterator_3 = this.aList7129.iterator();
 
 		while (iterator_3.hasNext()) {
@@ -194,7 +194,7 @@ public class ParticleSystem {
 	}
 
 	public Class151 method11533() {
-		this.aClass151_7131.aClass464_1961.method7740(493536965);
+		this.aClass151_7131.aClass464_1961.method7740();
 
 		for (int i_1 = 0; i_1 < this.particles.length; i_1++) {
 			if (this.particles[i_1] != null && this.particles[i_1].producer != null) {

@@ -12,7 +12,7 @@ public class Class350_Sub2 extends Class350 {
 		return Class60.aClass60_602;
 	}
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_602;
 	}
 
@@ -24,14 +24,14 @@ public class Class350_Sub2 extends Class350 {
 
 	static void method12571(int i_0) {
 		if (Renderers.SOFTWARE_RENDERER.method8407()) {
-			Renderers.SOFTWARE_RENDERER.method8410(Class351.gameCanvas, -796091411);
+			Renderers.SOFTWARE_RENDERER.method8410(Class351.gameCanvas);
 			Class250.method4297(-1109644708);
 			Dimension dimension_1 = Class351.gameCanvas.getSize();
 			Renderers.SOFTWARE_RENDERER.method8524(Class351.gameCanvas, dimension_1.width, dimension_1.height, (byte) -5);
-			Renderers.SOFTWARE_RENDERER.method8412(Class351.gameCanvas, (byte) 8);
+			Renderers.SOFTWARE_RENDERER.method8412(Class351.gameCanvas);
 		} else {
-			ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(-1386089693), false, (byte) 24);
+			ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(-1386089693), false);
 		}
-		IncomingPacket.method6378(-1538407760);
+		IncomingPacket.method6378();
 	}
 }

@@ -6,7 +6,7 @@ public class Class45 {
 
 	Index aClass317_433;
 
-	public Class38 method914(int i_1, int i_2) {
+	public Class38 method914(int i_1) {
 		SoftCache softcache_4 = this.aClass229_432;
 		Class38 class38_3;
 		synchronized (this.aClass229_432) {
@@ -22,7 +22,7 @@ public class Class45 {
 			}
 			class38_3 = new Class38();
 			if (bytes_10 != null) {
-				class38_3.method850(new RsByteBuffer(bytes_10), -50150458);
+				class38_3.method850(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_432;
 			synchronized (this.aClass229_432) {
@@ -32,21 +32,21 @@ public class Class45 {
 		}
 	}
 
-	public void method916(byte b_1) {
+	public void method916() {
 		SoftCache softcache_2 = this.aClass229_432;
 		synchronized (this.aClass229_432) {
 			this.aClass229_432.method3859(-1765413444);
 		}
 	}
 
-	public void method917(int i_1, int i_2) {
+	public void method917() {
 		SoftCache softcache_3 = this.aClass229_432;
 		synchronized (this.aClass229_432) {
-			this.aClass229_432.method3858(i_1, (byte) 1);
+			this.aClass229_432.method3858(5, (byte) 1);
 		}
 	}
 
-	public void method918(int i_1) {
+	public void method918() {
 		SoftCache softcache_2 = this.aClass229_432;
 		synchronized (this.aClass229_432) {
 			this.aClass229_432.method3863(1208180587);

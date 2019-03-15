@@ -27,7 +27,7 @@ public class Class76 {
 		this.anInt748 = i_2;
 	}
 
-	static int method1356(int i_0, int i_1, int i_2) {
+	static int method1356(int i_0, int i_1) {
 		double d_3 = Math.log((double) i_1) / Math.log(2.0D);
 		double d_5 = Math.log((double) i_0) / Math.log(2.0D);
 		double d_7 = Math.random() * (d_3 - d_5) + d_5;
@@ -38,7 +38,7 @@ public class Class76 {
 		return "<img=" + i_0 + ">";
 	}
 
-	public static void method1360(String string_0, boolean bool_1, byte b_2) {
+	public static void method1360(String string_0, boolean bool_1) {
 		string_0 = string_0.toLowerCase();
 		short[] shorts_3 = new short[16];
 		int i_4 = 0;

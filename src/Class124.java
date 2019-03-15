@@ -16,7 +16,7 @@ public class Class124 {
 	}
 
 	void method2156(byte[] bytes_1, int i_2) {
-		this.aClass131_Sub2_1567.method111(5123, bytes_1, i_2 * 2);
+		this.aClass131_Sub2_1567.method111(bytes_1, i_2 * 2);
 		this.method2165(this.aClass131_Sub2_1567, i_2);
 	}
 
@@ -57,7 +57,7 @@ public class Class124 {
 						shorts_17 = class390_sub2_3.materialIndices[i_15++];
 						if (shorts_17 != null) {
 							for (i_18 = 0; i_18 < shorts_17.length; i_18++) {
-								rsbytebuffer_19.writeShort(shorts_17[i_18] & 0xffff, 1417031095);
+								rsbytebuffer_19.writeShort(shorts_17[i_18] & 0xffff);
 							}
 						}
 					}
@@ -77,7 +77,7 @@ public class Class124 {
 				}
 			}
 
-			this.anInterface15_1565 = this.aClass505_Sub1_1558.method13598(5123, rsbytebuffer_19.buffer, rsbytebuffer_19.index, false);
+			this.anInterface15_1565 = this.aClass505_Sub1_1558.method13598(rsbytebuffer_19.buffer, rsbytebuffer_19.index, false);
 			this.aClass131_Sub2_1567 = new Class131_Sub2(this.aClass505_Sub1_1558, 5123, (byte[]) null, 1);
 		} else {
 			this.aClass137_Sub1_1560 = null;
@@ -151,7 +151,7 @@ public class Class124 {
 					this.aClass137_Sub1_1560.method14445(false, false);
 					this.aClass137_Sub1_1560.method2351(true);
 				} else {
-					this.aClass137_Sub1_1560.method14455(0, 0, 128, 128, this.aClass505_Sub1_1558.aByteArray8503, Class150.aClass150_1951, 0, 0, false);
+					this.aClass137_Sub1_1560.method14455(0, 128, 128, this.aClass505_Sub1_1558.aByteArray8503, Class150.aClass150_1951, 0, false);
 				}
 			}
 		}
@@ -162,7 +162,7 @@ public class Class124 {
 		if (i_2 != 0) {
 			this.method2157();
 			this.aClass505_Sub1_1558.method13654(this.aClass137_Sub1_1560);
-			this.aClass505_Sub1_1558.method13611(interface15_1, 4, 0, i_2);
+			this.aClass505_Sub1_1558.method13611(interface15_1, 0, i_2);
 		}
 
 	}

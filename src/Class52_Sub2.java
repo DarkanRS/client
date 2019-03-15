@@ -16,8 +16,8 @@ public class Class52_Sub2 extends Class52 {
 		}
 	}
 
-	public void method22(int i_1) {
-		super.method22(1273546148);
+	public void method22() {
+		super.method22();
 		Class350_Sub3 class350_sub3_2 = (Class350_Sub3) this.aClass350_489;
 		this.aClass160_9162 = Class152.method2600(this.aClass317_493, class350_sub3_2.anInt7844, 599471730);
 		this.aClass160_9161 = Class152.method2600(this.aClass317_493, class350_sub3_2.anInt7840, -1085155495);
@@ -74,7 +74,7 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	public void method15() {
-		super.method22(1273546148);
+		super.method22();
 		Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
 		this.aClass160_9162 = Class152.method2600(this.aClass317_493, -1642545265 * class350_sub3_1.anInt7844 * 1903394671, -1714686011);
 		this.aClass160_9161 = Class152.method2600(this.aClass317_493, -733628077 * class350_sub3_1.anInt7840 * 2096034523, -1339795032);
@@ -85,7 +85,7 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	public void method23() {
-		super.method22(1273546148);
+		super.method22();
 		Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
 		this.aClass160_9162 = Class152.method2600(this.aClass317_493, -1642545265 * class350_sub3_1.anInt7844 * 1903394671, -477197305);
 		this.aClass160_9161 = Class152.method2600(this.aClass317_493, -733628077 * class350_sub3_1.anInt7840 * 2096034523, -1609543131);
@@ -96,7 +96,7 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	public void method16() {
-		super.method22(1273546148);
+		super.method22();
 		Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
 		this.aClass160_9162 = Class152.method2600(this.aClass317_493, -1642545265 * class350_sub3_1.anInt7844 * 1903394671, -1400576392);
 		this.aClass160_9161 = Class152.method2600(this.aClass317_493, -733628077 * class350_sub3_1.anInt7840 * 2096034523, 1375081552);
@@ -128,7 +128,7 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	public void method19() {
-		super.method22(1273546148);
+		super.method22();
 		Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
 		this.aClass160_9162 = Class152.method2600(this.aClass317_493, -1642545265 * class350_sub3_1.anInt7844 * 1903394671, 2007279420);
 		this.aClass160_9161 = Class152.method2600(this.aClass317_493, -733628077 * class350_sub3_1.anInt7840 * 2096034523, 1043309008);
@@ -166,7 +166,7 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	public void method18() {
-		super.method22(1273546148);
+		super.method22();
 		Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
 		this.aClass160_9162 = Class152.method2600(this.aClass317_493, -1642545265 * class350_sub3_1.anInt7844 * 1903394671, -372136841);
 		this.aClass160_9161 = Class152.method2600(this.aClass317_493, -733628077 * class350_sub3_1.anInt7840 * 2096034523, 48908422);
@@ -236,7 +236,7 @@ public class Class52_Sub2 extends Class52 {
 		}
 	}
 
-	public static void method14501(int i_0, int i_1, int i_2) {
+	public static void method14501(int i_0, int i_1) {
 		Class150.method2580(i_0, i_1, (byte) -40);
 	}
 

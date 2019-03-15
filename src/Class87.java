@@ -30,11 +30,11 @@ public class Class87 {
 
 	public byte aByte839;
 
-	public ParticleProducerDefinition method1485(int i_1) {
-		return Class282_Sub11_Sub1.getParticleProducerDefs(this.anInt842, (byte) 14);
+	public ParticleProducerDefinition method1485() {
+		return Class282_Sub11_Sub1.getParticleProducerDefs(this.anInt842);
 	}
 
-	Class87 method1488(int i_1, int i_2, int i_3, byte b_4) {
+	Class87 method1488(int i_1, int i_2, int i_3) {
 		return new Class87(this.anInt842, i_1, i_2, i_3, this.aByte839);
 	}
 
@@ -46,7 +46,7 @@ public class Class87 {
 		this.aByte839 = b_5;
 	}
 
-	public static AccountCreationResponseOpcodes method1489(int i_0) {
+	public static AccountCreationResponseOpcodes method1489() {
 		return Class96_Sub9.RECIEVED_RESPONSE == null ? AccountCreationResponseOpcodes.aClass483_5730 : Class96_Sub9.RECIEVED_RESPONSE;
 	}
 

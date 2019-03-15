@@ -14,8 +14,8 @@ public class Class261_Sub1 extends Class261 {
 		return floats_4[0] * f_1 + floats_4[1] * f_2 + floats_4[2] * f_3;
 	}
 
-	public Class261_Sub1(int i_1) {
-		Random random_2 = new Random((long) i_1);
+	public Class261_Sub1() {
+		Random random_2 = new Random((long) 419684);
 
 		int i_3;
 		for (i_3 = 0; i_3 < 256; i_3++) {

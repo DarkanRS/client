@@ -18,7 +18,7 @@ public abstract class RouteStrategy {
 
 	public abstract boolean method3789(int var1, int var2, int var3, ClipMap var4);
 
-	public static final void method3794(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5, byte b_6) {
+	public static final void method3794(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
 		Class296.anInt3534 = i_0;
 		Class282_Sub44.anInt8064 = i_1;
 		SpotAnimDefinitions.anInt6985 = i_2;

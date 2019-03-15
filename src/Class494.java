@@ -17,7 +17,7 @@ public class Class494 implements Interface43 {
 	static Class494 aClass494_5791 = new Class494(38);
 	int anInt5793;
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt5793;
 	}
 

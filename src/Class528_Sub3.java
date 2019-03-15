@@ -1054,7 +1054,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 			this.aBool8903 |= class169_65 != null && (class169_65.aByte2081 != 0 || class169_65.aByte2090 != 0);
 		}
 
-		Class159.method2736(longs_63, ints_8, (byte) 8);
+		Class159.method2736(longs_63, ints_8);
 		this.anInt8899 = rsmesh_2.vertexCount;
 		this.anInt8910 = rsmesh_2.anInt1999;
 		this.anIntArray8901 = rsmesh_2.vertexX;
@@ -3130,7 +3130,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 							class48_2.aFloatArray463[i_6 * 4 + 0] = vector3_13.x;
 							class48_2.aFloatArray463[i_6 * 4 + 1] = vector3_13.y;
 							class48_2.aFloatArray463[i_6 * 4 + 2] = vector3_13.z;
-							class48_2.aFloatArray463[i_6 * 4 + 3] = (float) (class282_sub24_14.method12370(-789603523) * class282_sub24_14.method12370(-789603523));
+							class48_2.aFloatArray463[i_6 * 4 + 3] = (float) (class282_sub24_14.method12370() * class282_sub24_14.method12370());
 							float f_9 = class282_sub24_14.method12395(-208549702) / 255.0F;
 							class48_2.aFloatArray450[i_6 * 4 + 0] = (float) (i_15 >> 16 & 0xff) * f_9;
 							class48_2.aFloatArray450[i_6 * 4 + 1] = (float) (i_15 >> 8 & 0xff) * f_9;
@@ -3179,7 +3179,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 						if (!this.aClass505_Sub2_8917.aBool8692) {
 							Class41_Sub1_Sub2 class41_sub1_sub2_21 = this.aClass505_Sub2_8917.aClass41_Sub1_Sub2_8798;
 							Class169 class169_11 = this.aClass505_Sub2_8917.anInterface22_5834.method144(i_15, -1952578778);
-							class41_sub1_sub2_21.method15550(class169_11.aByte2076, class169_11.anInt2077, 720267839);
+							class41_sub1_sub2_21.method15550(class169_11.aByte2076, class169_11.anInt2077);
 							class41_sub1_sub2_21.aClass384_10146.fromVarMatrix44(matrix44var_1);
 							class41_sub1_sub2_21.aClass384_10138.fromVarMatrix44(matrix44var_1);
 							class41_sub1_sub2_21.aClass384_10138.method6523(this.aClass505_Sub2_8917.aClass384_8729);
@@ -3187,7 +3187,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 							class41_sub1_sub2_21.anInt10153 = this.anIntArray8946[i_5];
 							class41_sub1_sub2_21.anInt10142 = i_6 * 3;
 							class41_sub1_sub2_21.anInt10155 = i_7 - i_6;
-							class41_sub1_sub2_21.method15549((short) 27284);
+							class41_sub1_sub2_21.method15549();
 						} else {
 							class48_2.method965(i_4);
 						}
@@ -4075,7 +4075,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
-				if (class390_3.method6722(i_8, i_10, 65280) == i_6 && class390_3.method6722(i_9, i_10, 65280) == i_6 && class390_3.method6722(i_8, i_11, 65280) == i_6 && class390_3.method6722(i_9, i_11, 65280) == i_6) {
+				if (class390_3.method6722(i_8, i_10) == i_6 && class390_3.method6722(i_9, i_10) == i_6 && class390_3.method6722(i_8, i_11) == i_6 && class390_3.method6722(i_9, i_11) == i_6) {
 					return;
 				}
 			} else if (class390_4 == null || i_8 < 0 || class390_4.tileUnits + i_9 >> class390_4.tileScale >= class390_4.width || i_10 < 0 || class390_4.tileUnits + i_11 >> class390_4.tileScale >= class390_4.length) {
@@ -4404,7 +4404,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
-				if (class390_3.method6722(i_8, i_10, 65280) == i_6 && class390_3.method6722(i_9, i_10, 65280) == i_6 && class390_3.method6722(i_8, i_11, 65280) == i_6 && class390_3.method6722(i_9, i_11, 65280) == i_6) {
+				if (class390_3.method6722(i_8, i_10) == i_6 && class390_3.method6722(i_9, i_10) == i_6 && class390_3.method6722(i_8, i_11) == i_6 && class390_3.method6722(i_9, i_11) == i_6) {
 					return;
 				}
 			} else if (class390_4 == null || i_8 < 0 || i_9 + class390_4.tileUnits >> class390_4.tileScale >= class390_4.width || i_10 < 0 || i_11 + class390_4.tileUnits >> class390_4.tileScale >= class390_4.length) {

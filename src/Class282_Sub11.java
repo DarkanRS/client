@@ -1,8 +1,8 @@
 public abstract class Class282_Sub11 extends Node {
 
-	abstract void method12203(RsByteBuffer var1, int var2);
+	abstract void method12203(RsByteBuffer var1);
 
-	abstract void method12204(ClanChannel var1, int var2);
+	abstract void method12204(ClanChannel var1);
 
 	abstract void method12205(ClanChannel var1);
 
@@ -12,7 +12,7 @@ public abstract class Class282_Sub11 extends Node {
 
 	abstract void method12208(RsByteBuffer var1);
 
-	static final void method12209(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method12209(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 2;
 		byte b_4 = 10;
 		byte[] bytes_5 = new byte[] { (byte) cs2executor_2.intStack[cs2executor_2.intStackPtr] };
@@ -23,13 +23,13 @@ public abstract class Class282_Sub11 extends Node {
 	public static void method12211(int i_0) {
 		Class442 class442_1 = null;
 		try {
-			class442_1 = Class345.method6137("2", client.CURRENT_GAME.aString5748, true, (byte) -1);
+			class442_1 = Class345.method6137("2", client.CURRENT_GAME.aString5748, true);
 			RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(client.anInt7399 * 6 + 3);
 			rsbytebuffer_2.writeByte(1);
-			rsbytebuffer_2.writeShort(client.anInt7399, 1417031095);
+			rsbytebuffer_2.writeShort(client.anInt7399);
 			for (int i_3 = 0; i_3 < Class320.anIntArray3724.length; i_3++) {
 				if (Class282_Sub17_Sub2.aBoolArray9934[i_3]) {
-					rsbytebuffer_2.writeShort(i_3, 1417031095);
+					rsbytebuffer_2.writeShort(i_3);
 					rsbytebuffer_2.writeInt(Class320.anIntArray3724[i_3]);
 				}
 			}

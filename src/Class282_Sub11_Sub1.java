@@ -5,7 +5,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	byte aByte10000;
 	Class349 this$0;
 
-	void method12204(ClanChannel class282_sub4_1, int i_2) {
+	void method12204(ClanChannel class282_sub4_1) {
 		class282_sub4_1.clanName = this.aString10001;
 		if (this.aString10001 != null) {
 			class282_sub4_1.guestsTalk = this.aByte9999;
@@ -14,7 +14,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 
 	}
 
-	void method12203(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12203(RsByteBuffer rsbytebuffer_1) {
 		this.aString10001 = rsbytebuffer_1.readNullString();
 		if (this.aString10001 != null) {
 			rsbytebuffer_1.readUnsignedByte();
@@ -67,17 +67,17 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		this.this$0 = class349_1;
 	}
 
-	static int method15433(NPC npc_0, int i_1) {
+	static int method15433(NPC npc_0) {
 		NPCDefinitions npcdefinitions_2 = npc_0.definitions;
 		if (npcdefinitions_2.anIntArray4886 != null) {
-			npcdefinitions_2 = npcdefinitions_2.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
+			npcdefinitions_2 = npcdefinitions_2.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_2 == null) {
 				return -1;
 			}
 		}
 
 		int i_3 = npcdefinitions_2.anInt4876;
-		RenderAnimDefs renderanimdefs_4 = npc_0.getRenderAnimDefs((byte) -17);
+		RenderAnimDefs renderanimdefs_4 = npc_0.getRenderAnimDefs();
 		int i_5 = npc_0.aClass456_Sub3_10337.method7597(-693790395);
 		if (i_5 != -1 && !npc_0.aClass456_Sub3_10337.aBool7891) {
 			if (i_5 != renderanimdefs_4.anInt2797 && i_5 != renderanimdefs_4.walkDir6 && i_5 != renderanimdefs_4.anInt2800 && i_5 != renderanimdefs_4.anInt2799) {
@@ -94,7 +94,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		return i_3;
 	}
 
-	public static ParticleProducerDefinition getParticleProducerDefs(int i_0, byte b_1) {
+	public static ParticleProducerDefinition getParticleProducerDefs(int i_0) {
 		ParticleProducerDefinition defs = (ParticleProducerDefinition) ParticleProducerDefinition.aClass229_533.get((long) i_0);
 		if (defs != null) {
 			return defs;
@@ -102,10 +102,10 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 			byte[] bytes_3 = CoordGrid.PARTICLE_INDEX.getFile(0, i_0);
 			defs = new ParticleProducerDefinition();
 			if (bytes_3 != null) {
-				defs.decode(new RsByteBuffer(bytes_3), -1621727040);
+				defs.decode(new RsByteBuffer(bytes_3));
 			}
 
-			defs.init((byte) 1);
+			defs.init();
 			ParticleProducerDefinition.aClass229_533.put(defs, (long) i_0);
 			return defs;
 		}

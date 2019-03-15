@@ -10,7 +10,7 @@ public class Class52_Sub2_Sub1 extends Class52_Sub2 {
 		this.aClass160_9162.method2756(i_7 + (i_1 - i_6), i_2, i_3 + i_6 - i_7, i_4);
 	}
 
-	static Class104[] method15631(int i_0) {
+	static Class104[] method15631() {
 		return new Class104[] { Class104.aClass104_1062, Class104.aClass104_1061, Class104.aClass104_1060 };
 	}
 

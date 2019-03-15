@@ -15,8 +15,8 @@ public class Class272 {
 		return i_3;
 	}
 
-	static boolean method4841(CharSequence charsequence_0, int i_1, boolean bool_2, int i_3) {
-		if (i_1 >= 2 && i_1 <= 36) {
+	static boolean method4841(CharSequence charsequence_0) {
+		if (10 >= 2 && 10 <= 36) {
 			boolean bool_4 = false;
 			boolean bool_5 = false;
 			int i_6 = 0;
@@ -43,14 +43,14 @@ public class Class272 {
 					}
 					i_11 = var_9 - 87;
 				}
-				if (i_11 >= i_1) {
+				if (i_11 >= 10) {
 					return false;
 				}
 				if (bool_4) {
 					i_11 = -i_11;
 				}
-				int i_10 = i_11 + i_6 * i_1;
-				if (i_10 / i_1 != i_6) {
+				int i_10 = i_11 + i_6 * 10;
+				if (i_10 / 10 != i_6) {
 					return false;
 				}
 				i_6 = i_10;
@@ -58,7 +58,7 @@ public class Class272 {
 			}
 			return bool_5;
 		} else {
-			throw new IllegalArgumentException("" + i_1);
+			throw new IllegalArgumentException("" + 10);
 		}
 	}
 }

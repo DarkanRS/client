@@ -24,7 +24,7 @@ public final class Class251 {
 		throw new Error();
 	}
 
-	public static void handleCommand(String string_0, boolean bool_1, boolean bool_2, int i_3) {
+	public static void handleCommand(String string_0, boolean bool_1, boolean bool_2) {
 		try {
 			label381: {
 				if (!string_0.equalsIgnoreCase("commands") && !string_0.equalsIgnoreCase("help")) {
@@ -106,7 +106,7 @@ public final class Class251 {
 					return;
 				}
 				if (string_0.startsWith("clipmask")) {
-					Class209.printConsoleMessage("[" + Class84.myPlayer.localX + ", " + Class84.myPlayer.localY + "]:" + IndexLoaders.MAP_REGION_DECODER.getClipMap(Class84.myPlayer.plane, 1801793645).map[Class84.myPlayer.localX][Class84.myPlayer.localY], i_3);
+					Class209.printConsoleMessage("[" + Class84.myPlayer.localX + ", " + Class84.myPlayer.localY + "]:" + IndexLoaders.MAP_REGION_DECODER.getClipMap(Class84.myPlayer.plane).map[Class84.myPlayer.localX][Class84.myPlayer.localY], -354697449);
 				}
 				int i_6;
 				int i_10;
@@ -149,12 +149,12 @@ public final class Class251 {
 						return;
 					}
 					String string_7 = string_0.substring(i_6 + 1).trim() + ".runescape.com";
-					Class496.method8314(string_7, i_10, -1852846838);
+					Class496.method8314(string_7, i_10);
 					Class209.printConsoleMessage("Success", -226741800);
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk0")) {
-					ParticleProducer.method11500(0, false, (byte) 24);
+					ParticleProducer.method11500(0, false);
 					if (Class393.preferences.currentToolkit.getValue(-491393282) == 0) {
 						Class209.printConsoleMessage("Success", -1340836055);
 						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, -1122635532);
@@ -166,7 +166,7 @@ public final class Class251 {
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk1")) {
-					ParticleProducer.method11500(1, false, (byte) 24);
+					ParticleProducer.method11500(1, false);
 					if (Class393.preferences.currentToolkit.getValue(-1821997083) == 1) {
 						Class209.printConsoleMessage("Success", -364086081);
 						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 1, -1690467164);
@@ -178,7 +178,7 @@ public final class Class251 {
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk2")) {
-					ParticleProducer.method11500(2, false, (byte) 24);
+					ParticleProducer.method11500(2, false);
 					if (Class393.preferences.currentToolkit.getValue(2070272351) == 2) {
 						Class209.printConsoleMessage("Success", -1794668716);
 						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 2, -259704912);
@@ -190,7 +190,7 @@ public final class Class251 {
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk3")) {
-					ParticleProducer.method11500(3, false, (byte) 24);
+					ParticleProducer.method11500(3, false);
 					if (Class393.preferences.currentToolkit.getValue(389435618) == 3) {
 						Class209.printConsoleMessage("Success", -832737067);
 						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 3, 1626226442);
@@ -202,7 +202,7 @@ public final class Class251 {
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk5")) {
-					ParticleProducer.method11500(5, false, (byte) 24);
+					ParticleProducer.method11500(5, false);
 					if (Class393.preferences.currentToolkit.getValue(-889180352) == 5) {
 						Class209.printConsoleMessage("Success", -1022184236);
 						Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 5, -1654618197);
@@ -230,7 +230,7 @@ public final class Class251 {
 							class184_28.getConnection().method3320((byte) 52);
 						}
 					}
-					Class119.JS5_STANDARD_REQUESTER.method5543((byte) 48);
+					Class119.JS5_STANDARD_REQUESTER.method5543();
 					return;
 				}
 				if (string_0.startsWith("getclientvarpbit")) {
@@ -245,16 +245,16 @@ public final class Class251 {
 				}
 				String[] arr_24;
 				if (string_0.startsWith("directlogin")) {
-					arr_24 = Class456_Sub3.method12681(string_0.substring(12), ' ', 229848533);
+					arr_24 = Class456_Sub3.method12681(string_0.substring(12), ' ');
 					if (arr_24.length == 2) {
-						Class2.method257(arr_24[0], arr_24[1], 1942118537);
+						Class2.method257(arr_24[0], arr_24[1]);
 					}
 					return;
 				}
 				if (string_0.startsWith("snlogin ")) {
-					arr_24 = Class456_Sub3.method12681(string_0.substring(8), ' ', 229848533);
+					arr_24 = Class456_Sub3.method12681(string_0.substring(8), ' ');
 					i_13 = Integer.parseInt(arr_24[0]);
-					Class282_Sub1.method11614(i_13, 143389073);
+					Class282_Sub1.method11614(i_13);
 					return;
 				}
 				File file_20;
@@ -298,7 +298,7 @@ public final class Class251 {
 						Class209.printConsoleMessage("Failed to read file", -1589533875);
 						return;
 					}
-					String[] arr_12 = Class456_Sub3.method12681(Class122.method2110(Class282_Sub17_Sub7.method15439(bytes_5, 198480512), '\r', "", -601284203), '\n', 229848533);
+					String[] arr_12 = Class456_Sub3.method12681(Class122.method2110(Class282_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
 					Class341.method6074(arr_12, 1579654554);
 				}
 				if (client.gameState == 13) {
@@ -319,7 +319,7 @@ public final class Class251 {
 		}
 	}
 
-	public static final int decodeLandscapeData(ObjectIndexLoader objectindexloader_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5, short s_6) {
+	public static final int decodeLandscapeData(ObjectIndexLoader objectindexloader_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5) {
 		int i_7 = 0;
 		RsByteBuffer rsbytebuffer_8 = new RsByteBuffer(bytes_1);
 		int i_9 = -1;
@@ -345,9 +345,9 @@ public final class Class251 {
 					int i_17 = i_15 + i_2;
 					int i_18 = i_3 + i_14;
 					if (i_17 > 0 && i_18 > 0 && i_17 < i_4 - 1 && i_18 < i_5 - 1) {
-						ObjectDefinitions objectdefinitions_19 = objectindexloader_0.getObjectDefinitions(i_9, 65280);
+						ObjectDefinitions objectdefinitions_19 = objectindexloader_0.getObjectDefinitions(i_9);
 						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.aClass468_Sub23_8202.method12897((byte) 59) != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
-							if (!objectdefinitions_19.method7968(-2090294731)) {
+							if (!objectdefinitions_19.method7968()) {
 								++i_7;
 							}
 							bool_12 = true;

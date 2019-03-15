@@ -12,10 +12,10 @@ public class Class99 {
 
 	public Class121[] aClass121Array1004;
 
-	void method1628(Class100 class100_1, int i_2) {
-		this.aString1003 = class100_1.method1633(16711935);
-		this.aString1001 = class100_1.method1633(16711935);
-		this.aString1002 = class100_1.method1633(16711935);
+	void method1628(Class100 class100_1) {
+		this.aString1003 = class100_1.method1633();
+		this.aString1001 = class100_1.method1633();
+		this.aString1002 = class100_1.method1633();
 		int i_3 = class100_1.method1632((byte) -36);
 		int i_4 = class100_1.method1632((byte) -58);
 		this.aClass121Array1000 = i_3 == 0 ? null : new Class121[i_3];
@@ -35,7 +35,7 @@ public class Class99 {
 		if (i_0 > i_2 && i_0 < i_2 + i_4 && i_1 > i_6 - fontmetrics_9.anInt4978 - 1 && i_1 < fontmetrics_9.anInt4979 + i_6) {
 			i_10 = i_11;
 		}
-		String string_13 = Class75.method1354(class282_sub50_sub15_7, -938758900);
-		fontrenderer_8.method386(string_13, i_2 + 3, i_6, i_10, 0, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aClass160Array1248, Class20.anIntArray177, 701039409);
+		String string_13 = Class75.method1354(class282_sub50_sub15_7);
+		fontrenderer_8.method386(string_13, i_2 + 3, i_6, i_10, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aClass160Array1248, Class20.anIntArray177, 701039409);
 	}
 }

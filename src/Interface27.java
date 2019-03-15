@@ -2,11 +2,11 @@ public interface Interface27 {
 
 	void method186();
 
-	void method161(int var1);
+	void method161();
 
-	void method187(boolean var1, int var2);
+	void method187(boolean var1);
 
-	void method188(byte var1);
+	void method188();
 
 	boolean method189(long var1);
 

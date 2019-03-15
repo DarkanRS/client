@@ -22,11 +22,11 @@ public class Game {
 		this.anInt5746 = i_3;
 	}
 
-	public static void method8204(int i_0, int i_1) {
+	public static void method8204(int i_0) {
 		Class281.anInt3376 = i_0;
 	}
 
-	public static void method8207(int i_0, int i_1) {
+	public static void method8207(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(16, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -1);
 	}

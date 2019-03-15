@@ -17,11 +17,11 @@ public class EnumDefinitions {
 	Object[] anObjectArray5145;
 	HashMap aHashMap5147;
 
-	public int method7222(int i_1) {
+	public int method7222() {
 		return this.anInt5141;
 	}
 
-	void method7224(RsByteBuffer stream, int opcode, int i_3) {
+	void method7224(RsByteBuffer stream, int opcode) {
 		if (opcode == 1) {
 			this.aChar5146 = Class11.getChar(stream.readByte(), -1589762239);
 		} else if (opcode == 2) {
@@ -68,23 +68,23 @@ public class EnumDefinitions {
 
 	}
 
-	Object getValue(int key, byte b_2) {
+	Object getValue(int key) {
 		return this.anObjectArray5145 != null ? (key >= 0 && key < this.anObjectArray5145.length ? this.anObjectArray5145[key] : null) : (this.aMap5144 != null ? this.aMap5144.get(new Integer(key)) : null);
 	}
 
 	public String getStringValue(int i_1, int i_2) {
-		Object object_3 = this.getValue(i_1, (byte) 1);
+		Object object_3 = this.getValue(i_1);
 		return object_3 == null ? this.aString5142 : (String) object_3;
 	}
 
-	void method7227(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	void method7227(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method7224(rsbytebuffer_1, i_3, -1155102640);
+			this.method7224(rsbytebuffer_1, i_3);
 		}
 	}
 
@@ -93,19 +93,19 @@ public class EnumDefinitions {
 			return false;
 		} else {
 			if (this.aHashMap5147 == null) {
-				this.method7233(1243120329);
+				this.method7233();
 			}
 
 			return this.aHashMap5147.containsKey(object_1);
 		}
 	}
 
-	public int getIntValue(int i_1, int i_2) {
-		Object object_3 = this.getValue(i_1, (byte) 1);
+	public int getIntValue(int i_1) {
+		Object object_3 = this.getValue(i_1);
 		return object_3 == null ? this.anInt5143 : ((Integer) object_3).intValue();
 	}
 
-	void method7233(int i_1) {
+	void method7233() {
 		HashMap hashmap_2 = new HashMap();
 		Object obj_5;
 		Iterator iterator_10;
@@ -166,14 +166,14 @@ public class EnumDefinitions {
 			return null;
 		} else {
 			if (this.aHashMap5147 == null) {
-				this.method7233(1243120329);
+				this.method7233();
 			}
 
 			return (int[]) this.aHashMap5147.get(object_1);
 		}
 	}
 
-	static boolean method7252(int i_0, byte b_1) {
+	static boolean method7252(int i_0) {
 		return i_0 != 3 && i_0 != 4 && i_0 != 5 && i_0 != 6 && i_0 != 1001 && i_0 != 1002 ? i_0 == 2 : true;
 	}
 

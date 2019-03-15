@@ -5,7 +5,7 @@ public class Class468_Sub27 extends Preference {
 	}
 
 	public void method12950(int i_1) {
-		if (this.manager.aClass468_Sub29_8201.method13050(519629067) == 2 && this.anInt5578 == 2) {
+		if (this.manager.aClass468_Sub29_8201.method13050() == 2 && this.anInt5578 == 2) {
 			this.anInt5578 = 1;
 		}
 
@@ -23,7 +23,7 @@ public class Class468_Sub27 extends Preference {
 		return 1;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -51,7 +51,7 @@ public class Class468_Sub27 extends Preference {
 		return 2;
 	}
 
-	static void method12958(int i_0) {
+	static void method12958() {
 		Class180.aClass229_2245.method3859(-1655793483);
 	}
 

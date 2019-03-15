@@ -60,7 +60,7 @@ public class Class169 {
 		return i_0 == 13 || i_0 == 18 || i_0 == 12;
 	}
 
-	public static void method2876(NPC npc_0, int i_1) {
+	public static void method2876(NPC npc_0) {
 		for (Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 123); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1114732326)) {
 			if (class282_sub48_2.aClass521_Sub1_Sub1_Sub2_Sub2_8085 == npc_0) {
 				if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
@@ -73,7 +73,7 @@ public class Class169 {
 		}
 	}
 
-	public static void method2877(Interface45 interface45_0, byte b_1) {
+	public static void method2877(Interface45 interface45_0) {
 		if (IcmpService_Sub1.anIcmpService_Sub1_7964 == null) {
 			throw new IllegalStateException("");
 		} else {

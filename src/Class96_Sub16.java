@@ -13,7 +13,7 @@ public class Class96_Sub16 extends Class96 {
 		}
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class282_Sub38 class282_sub38_2 = (Class282_Sub38) Class86.aClass465_823.get(this.aLong9382);
 		if (class282_sub38_2 != null) {
 			class282_sub38_2.anInt8002 = this.anInt9381;

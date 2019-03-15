@@ -33,7 +33,7 @@ public class Class377 implements IndexLoader {
 			}
 			class372_3 = new Class372();
 			if (bytes_10 != null) {
-				class372_3.method6356(new RsByteBuffer(bytes_10), 1810955787);
+				class372_3.method6356(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_4517;
 			synchronized (this.aClass229_4517) {
@@ -43,34 +43,34 @@ public class Class377 implements IndexLoader {
 		}
 	}
 
-	public void method6386(int i_1, byte b_2) {
+	public void method6386() {
 		SoftCache softcache_3 = this.aClass229_4517;
 		synchronized (this.aClass229_4517) {
-			this.aClass229_4517.method3858(i_1, (byte) -47);
+			this.aClass229_4517.method3858(5, (byte) -47);
 		}
 	}
 
-	public void method6388(byte b_1) {
+	public void method6388() {
 		SoftCache softcache_2 = this.aClass229_4517;
 		synchronized (this.aClass229_4517) {
 			this.aClass229_4517.method3859(-2056634706);
 		}
 	}
 
-	public void method6390(int i_1) {
+	public void method6390() {
 		SoftCache softcache_2 = this.aClass229_4517;
 		synchronized (this.aClass229_4517) {
 			this.aClass229_4517.method3863(2135815187);
 		}
 	}
 
-	static void method6394(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	static void method6394(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_7) {
 		graphicalrenderer_0.method8425(i_1, i_2, i_3, i_4, i_5, (byte) -74);
-		graphicalrenderer_0.method8425(i_1 + 1, i_2 + 1, i_3 - 2, 16, i_6, (byte) -67);
-		graphicalrenderer_0.method8562(i_1 + 1, i_2 + 18, i_3 - 2, i_4 - 19, i_6, (byte) 4);
+		graphicalrenderer_0.method8425(i_1 + 1, i_2 + 1, i_3 - 2, 16, -16777216, (byte) -67);
+		graphicalrenderer_0.method8562(i_1 + 1, i_2 + 18, i_3 - 2, i_4 - 19, -16777216);
 	}
 
-	public static String method6398(Object[] arr_0, int i_1, int i_2, int i_3) {
+	public static String method6398(Object[] arr_0, int i_1, int i_2) {
 		if (i_2 == 0) {
 			return "";
 		} else if (i_2 == 1) {
@@ -100,10 +100,10 @@ public class Class377 implements IndexLoader {
 		}
 	}
 
-	public static Class62 method6401(RsByteBuffer rsbytebuffer_0, byte b_1) {
+	public static Class62 method6401(RsByteBuffer rsbytebuffer_0) {
 		String string_2 = rsbytebuffer_0.readString();
 		Class356 class356_3 = Class350_Sub3_Sub1.method15558(180670091)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_4 = AccountCreationResponseOpcodes.method8155(152314627)[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_4 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readShort();
 		int i_7 = rsbytebuffer_0.readUnsignedByte();

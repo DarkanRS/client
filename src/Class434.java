@@ -15,19 +15,19 @@ public abstract class Class434 {
 
 	public abstract Socket method7287() throws IOException;
 
-	Socket method7291(int i) throws IOException {
+	Socket method7291() throws IOException {
 		return new Socket(Loader.IP_ADDRESS, Loader.LOBBY_PORT);
 	}
 
-	public static void method7292(byte b_0) {
-		Class373.method6365(283616673);
+	public static void method7292() {
+		Class373.method6365();
 		Class236.aClass534_Sub2_2911.method11417(-2118478860);
 		Class236.aClass534_Sub1_2913.method11417(-2125512068);
 		TCPMessage tcpmessage_1;
 		int i_2;
 		if (client.maximumHeldKeys > 0) {
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4555, client.aClass184_7475.isaac, 1297366609);
-			tcpmessage_1.buffer.writeShort(client.maximumHeldKeys * 4, 1417031095);
+			tcpmessage_1.buffer.writeShort(client.maximumHeldKeys * 4);
 
 			for (i_2 = 0; i_2 < client.maximumHeldKeys; i_2++) {
 				KeyRecord interface16_3 = client.anInterface16Array7298[i_2];
@@ -37,8 +37,8 @@ public abstract class Class434 {
 				}
 
 				Class236.aLong2910 = interface16_3.method119(941918410);
-				tcpmessage_1.buffer.writeByte(interface16_3.method92(317240429));
-				tcpmessage_1.buffer.write24BitInt((int) long_4, (byte) 14);
+				tcpmessage_1.buffer.writeByte(interface16_3.method92());
+				tcpmessage_1.buffer.write24BitInt((int) long_4);
 			}
 
 			client.aClass184_7475.method3049(tcpmessage_1, 394731592);
@@ -52,8 +52,8 @@ public abstract class Class434 {
 			Class236.anInt2912 = 20;
 			client.aBool7371 = false;
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4593, client.aClass184_7475.isaac, 672473203);
-			tcpmessage_1.buffer.writeShortLE128((int) client.aFloat7146 >> 3, -1183932171);
-			tcpmessage_1.buffer.writeShort128((int) client.aFloat7365 >> 3, -800257688);
+			tcpmessage_1.buffer.writeShortLE128((int) client.aFloat7146 >> 3);
+			tcpmessage_1.buffer.writeShort128((int) client.aFloat7365 >> 3);
 			client.aClass184_7475.method3049(tcpmessage_1, 645991437);
 		}
 
@@ -68,7 +68,7 @@ public abstract class Class434 {
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4537, client.aClass184_7475.isaac, 1548432137);
 			tcpmessage_1.buffer.writeByte(0);
 			i_2 = tcpmessage_1.buffer.index;
-			RsByteBuffer rsbytebuffer_6 = Class393.preferences.method13499(-1147561842);
+			RsByteBuffer rsbytebuffer_6 = Class393.preferences.method13499();
 			tcpmessage_1.buffer.writeBytes(rsbytebuffer_6.buffer, 0, rsbytebuffer_6.index);
 			tcpmessage_1.buffer.method13061(tcpmessage_1.buffer.index - i_2, -1036471531);
 			client.aClass184_7475.method3049(tcpmessage_1, 1020342841);

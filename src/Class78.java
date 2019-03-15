@@ -13,34 +13,34 @@ public final class Class78 {
 	static Map aMap766;
 
 	static {
-		Calendar.getInstance(method1375("Europe/London", 184912342));
+		Calendar.getInstance(method1375(184912342));
 	}
 
-	public static String method1372(Date date_0, String string_1, int i_2) {
-		return method1382(date_0, string_1, method1373(-1860849890), Language.aClass495_5795, (short) 16433);
+	public static String method1372(Date date_0, String string_1) {
+		return method1382(date_0, string_1, method1373(), Language.aClass495_5795);
 	}
 
-	static TimeZone method1373(int i_0) {
-		return method1375("Europe/London", -669580467);
+	static TimeZone method1373() {
+		return method1375(-669580467);
 	}
 
 	Class78() throws Throwable {
 		throw new Error();
 	}
 
-	static TimeZone method1375(String string_0, int i_1) {
+	static TimeZone method1375(int i_1) {
 		HashMap hashmap_2 = aHashMap768;
 		synchronized (aHashMap768) {
-			TimeZone timezone_3 = (TimeZone) aHashMap768.get(string_0);
+			TimeZone timezone_3 = (TimeZone) aHashMap768.get("Europe/London");
 			if (timezone_3 == null) {
-				timezone_3 = TimeZone.getTimeZone(string_0);
-				aHashMap768.put(string_0, timezone_3);
+				timezone_3 = TimeZone.getTimeZone("Europe/London");
+				aHashMap768.put("Europe/London", timezone_3);
 			}
 			return timezone_3;
 		}
 	}
 
-	static String method1382(Date date_0, String string_1, TimeZone timezone_2, Language xlanguage_3, short s_4) {
+	static String method1382(Date date_0, String string_1, TimeZone timezone_2, Language xlanguage_3) {
 		if (aMap766 == null) {
 			aMap766 = new HashMap(6);
 			Language[] arr_5 = Language.method8294(-15971239);
@@ -52,7 +52,7 @@ public final class Class78 {
 		ConcurrentLinkedQueue concurrentlinkedqueue_9 = (ConcurrentLinkedQueue) aMap766.get(xlanguage_3);
 		SimpleDateFormat simpledateformat_8 = (SimpleDateFormat) concurrentlinkedqueue_9.poll();
 		if (simpledateformat_8 == null) {
-			simpledateformat_8 = new SimpleDateFormat(string_1, xlanguage_3.method8293(-216671097));
+			simpledateformat_8 = new SimpleDateFormat(string_1, xlanguage_3.method8293());
 		} else {
 			simpledateformat_8.applyPattern(string_1);
 		}
@@ -62,17 +62,17 @@ public final class Class78 {
 		return string_10;
 	}
 
-	static void method1384(int i_0) {
+	static void method1384() {
 		if (client.aByteArray7152 != null) {
-			Class418.method7022((byte) -30);
+			Class418.method7022();
 		} else if (Class9.anInt76 != -1) {
-			Class14.method537(1442363159);
+			Class14.method537();
 		} else {
 			Class345.worldLogin(Class9.aString99, Class9.aString102, 2140005303);
 		}
 	}
 
-	static final int method1386(Class413 class413_0, int i_1) {
+	static final int method1386(Class413 class413_0) {
 		if (class413_0 == null) {
 			return 12;
 		} else {
@@ -85,7 +85,7 @@ public final class Class78 {
 		}
 	}
 
-	static void method1388(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	static void method1388(int i_0, int i_1, int i_2, int i_3, int i_4) {
 		if (i_2 <= Class532_Sub1.anInt7068 && i_3 >= Class532_Sub1.anInt7070) {
 			boolean bool_6;
 			if (i_0 < Class532_Sub1.anInt7071) {
@@ -135,7 +135,7 @@ public final class Class78 {
 		}
 	}
 
-	public static void method1389(int i_0, int i_1) {
+	public static void method1389(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(7, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 5);
 	}

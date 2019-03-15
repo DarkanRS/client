@@ -47,12 +47,12 @@ public class Class273_Sub1 extends Class273 {
 
 	}
 
-	long method4844(int i_1) {
+	long method4844() {
 		this.aLong7730 += this.method12493(-1471253742);
 		return this.aLong7727 > this.aLong7730 ? (this.aLong7727 - this.aLong7730) / 1000000L : 0L;
 	}
 
-	long method4852(int i_1) {
+	long method4852() {
 		return this.aLong7730;
 	}
 
@@ -147,7 +147,7 @@ public class Class273_Sub1 extends Class273 {
 		return this.aLong7727 * -8556059690873681827L * -2348106799190078475L > this.aLong7730 * 2254354703093819015L * 891199445578317623L ? (this.aLong7727 * -8556059690873681827L * -2348106799190078475L - this.aLong7730 * 2254354703093819015L * 891199445578317623L) / 1000000L : 0L;
 	}
 
-	void method4853(int i_1) {
+	void method4853() {
 		this.aLong7729 = 0L;
 		if (this.aLong7727 > this.aLong7730) {
 			this.aLong7730 += this.aLong7727 - this.aLong7730;

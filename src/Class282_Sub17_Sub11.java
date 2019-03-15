@@ -6,11 +6,11 @@ public class Class282_Sub17_Sub11 extends Class282_Sub17 {
 
 	Class348 this$0;
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1213(this.anInt10050, this.aLong10049);
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.anInt10050 = rsbytebuffer_1.readInt();
 		this.aLong10049 = rsbytebuffer_1.readLong();
 	}

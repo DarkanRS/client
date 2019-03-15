@@ -4,7 +4,7 @@ public class ItemIndexLoader implements IndexLoader {
 	int anInt5116;
 	SoftCache cache = new SoftCache(64);
 	SoftCache aClass229_5115 = new SoftCache(50);
-	public Class212 aClass212_5114 = new Class212(250);
+	public Class212 aClass212_5114 = new Class212();
 	SoftwareItemRender softwareItemRender = new SoftwareItemRender();
 	Game game;
 	Language language;
@@ -37,20 +37,20 @@ public class ItemIndexLoader implements IndexLoader {
 			itemdefinitions_3.groundOptions = (String[]) this.defaultGroundOptions.clone();
 			itemdefinitions_3.inventoryOptions = (String[]) this.defaultInventoryOptions.clone();
 			if (bytes_12 != null) {
-				itemdefinitions_3.decode(new RsByteBuffer(bytes_12), -176434754);
+				itemdefinitions_3.decode(new RsByteBuffer(bytes_12));
 			}
 
-			itemdefinitions_3.postDecode(-1924179762);
+			itemdefinitions_3.postDecode();
 			if (itemdefinitions_3.certTemplateId != -1) {
-				itemdefinitions_3.generateCert(this.getItemDefinitions(itemdefinitions_3.certTemplateId, 1167906942), this.getItemDefinitions(itemdefinitions_3.certId, 1245595517), -1715219620);
+				itemdefinitions_3.generateCert(this.getItemDefinitions(itemdefinitions_3.certTemplateId, 1167906942), this.getItemDefinitions(itemdefinitions_3.certId, 1245595517));
 			}
 
 			if (itemdefinitions_3.lendTemplateId != -1) {
-				itemdefinitions_3.generateLend(this.getItemDefinitions(itemdefinitions_3.lendTemplateId, 294444778), this.getItemDefinitions(itemdefinitions_3.lendId, 1908925068), -1404615542);
+				itemdefinitions_3.generateLend(this.getItemDefinitions(itemdefinitions_3.lendTemplateId, 294444778), this.getItemDefinitions(itemdefinitions_3.lendId, 1908925068));
 			}
 
 			if (itemdefinitions_3.bindTemplateId != -1) {
-				itemdefinitions_3.generateBind(this.getItemDefinitions(itemdefinitions_3.bindTemplateId, 828359432), this.getItemDefinitions(itemdefinitions_3.bindId, 1928714230), 1201532175);
+				itemdefinitions_3.generateBind(this.getItemDefinitions(itemdefinitions_3.bindTemplateId, 828359432), this.getItemDefinitions(itemdefinitions_3.bindId, 1928714230));
 			}
 
 			if (!this.membersOnly && itemdefinitions_3.membersOnly) {
@@ -63,7 +63,7 @@ public class ItemIndexLoader implements IndexLoader {
 					boolean bool_8 = false;
 
 					for (Node node_6 = itemdefinitions_3.cs2Map.method7750(-778830741); node_6 != null; node_6 = itemdefinitions_3.cs2Map.method7751((byte) 57)) {
-						ParamDefinitions attributedefault_7 = this.attrDefaults.method7069((int) node_6.data, (byte) 0);
+						ParamDefinitions attributedefault_7 = this.attrDefaults.method7069((int) node_6.data);
 						if (attributedefault_7.autoDisable) {
 							node_6.remove();
 						} else {
@@ -87,7 +87,7 @@ public class ItemIndexLoader implements IndexLoader {
 
 	public NativeSprite getSprite(GraphicalRenderer graphicalrenderer_1, GraphicalRenderer graphicalrenderer_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8, int i_9, FontRenderer fontrenderer_10, PlayerAppearance playerappearance_11, byte b_12) {
 		if (!bool_8) {
-			NativeSprite nativesprite_13 = this.softwareRender(graphicalrenderer_2, i_3, i_4, i_5, i_6, i_9, playerappearance_11, 206421629);
+			NativeSprite nativesprite_13 = this.softwareRender(graphicalrenderer_2, i_3, i_4, i_5, i_6, i_9, playerappearance_11);
 			if (nativesprite_13 != null) {
 				return nativesprite_13;
 			}
@@ -114,9 +114,9 @@ public class ItemIndexLoader implements IndexLoader {
 		} else {
 			NativeSprite nativesprite_18;
 			if (bool_8) {
-				nativesprite_18 = graphicalrenderer_1.createNativeSprite(ints_17, 0, 36, 36, 32, -1903449230);
+				nativesprite_18 = graphicalrenderer_1.createNativeSprite(ints_17, 36, 36, 32, -1903449230);
 			} else {
-				nativesprite_18 = graphicalrenderer_2.createNativeSprite(ints_17, 0, 36, 36, 32, -923043708);
+				nativesprite_18 = graphicalrenderer_2.createNativeSprite(ints_17, 36, 36, 32, -923043708);
 			}
 
 			if (!bool_8) {
@@ -135,7 +135,7 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public void method7148(boolean bool_1, int i_2) {
+	public void method7148(boolean bool_1) {
 		if (this.membersOnly != bool_1) {
 			this.membersOnly = bool_1;
 			this.method7150(-2095377821);
@@ -167,14 +167,14 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public void method7152(int i_1) {
+	public void method7152() {
 		SoftCache softcache_2 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
 			this.aClass229_5115.method3859(1371574931);
 		}
 	}
 
-	public void method7153(int i_1, int i_2) {
+	public void method7153(int i_1) {
 		this.anInt5116 = i_1;
 		SoftCache softcache_3 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
@@ -182,27 +182,27 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public void method7156(int i_1, byte b_2) {
+	public void method7156() {
 		SoftCache softcache_3 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3858(i_1, (byte) -11);
+			this.cache.method3858(5, (byte) -11);
 		}
 
 		softcache_3 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
-			this.aClass229_5115.method3858(i_1, (byte) -73);
+			this.aClass229_5115.method3858(5, (byte) -73);
 		}
 
 		Class212 class212_7 = this.aClass212_5114;
 		synchronized (this.aClass212_5114) {
-			this.aClass212_5114.method3639(i_1);
+			this.aClass212_5114.method3639(5);
 		}
 	}
 
-	public ItemIndexLoader(Game game_1, Language xlanguage_2, boolean bool_3, ParamDefinitionsLoader itemdefaultsloader_4, Index index_5, Index index_6) {
+	public ItemIndexLoader(Game game_1, Language xlanguage_2, ParamDefinitionsLoader itemdefaultsloader_4, Index index_5, Index index_6) {
 		this.game = game_1;
 		this.language = xlanguage_2;
-		this.membersOnly = bool_3;
+		this.membersOnly = true;
 		this.attrDefaults = itemdefaultsloader_4;
 		this.fs19 = index_5;
 		this.meshIndex = index_6;
@@ -222,7 +222,7 @@ public class ItemIndexLoader implements IndexLoader {
 		this.defaultInventoryOptions = new String[] { null, null, null, null, Message.DROP.translate(this.language, -1623734133) };
 	}
 
-	public NativeSprite softwareRender(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, PlayerAppearance playerappearance_7, int i_8) {
+	public NativeSprite softwareRender(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, PlayerAppearance playerappearance_7) {
 		this.softwareItemRender.rendererId = graphicalrenderer_1.rendererId;
 		this.softwareItemRender.itemId = i_2;
 		this.softwareItemRender.itemAmount = i_3;
@@ -233,7 +233,7 @@ public class ItemIndexLoader implements IndexLoader {
 		return (NativeSprite) this.aClass212_5114.method3654(this.softwareItemRender);
 	}
 
-	public void method7166(int i_1) {
+	public void method7166() {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
 			this.cache.method3863(1688795020);
@@ -252,10 +252,10 @@ public class ItemIndexLoader implements IndexLoader {
 
 	static String method7169(int i_0, int i_1, int i_2) {
 		int i_3 = i_1 - i_0;
-		return i_3 < -9 ? ParticleProducerDefinition.method1163(16711680, 619010179) : (i_3 < -6 ? ParticleProducerDefinition.method1163(16723968, 619010179) : (i_3 < -3 ? ParticleProducerDefinition.method1163(16740352, 619010179) : (i_3 < 0 ? ParticleProducerDefinition.method1163(16756736, 619010179) : (i_3 > 9 ? ParticleProducerDefinition.method1163(65280, 619010179) : (i_3 > 6 ? ParticleProducerDefinition.method1163(4259584, 619010179) : (i_3 > 3 ? ParticleProducerDefinition.method1163(8453888, 619010179) : (i_3 > 0 ? ParticleProducerDefinition.method1163(12648192, 619010179) : ParticleProducerDefinition.method1163(16776960, 619010179))))))));
+		return i_3 < -9 ? ParticleProducerDefinition.method1163(16711680) : (i_3 < -6 ? ParticleProducerDefinition.method1163(16723968) : (i_3 < -3 ? ParticleProducerDefinition.method1163(16740352) : (i_3 < 0 ? ParticleProducerDefinition.method1163(16756736) : (i_3 > 9 ? ParticleProducerDefinition.method1163(65280) : (i_3 > 6 ? ParticleProducerDefinition.method1163(4259584) : (i_3 > 3 ? ParticleProducerDefinition.method1163(8453888) : (i_3 > 0 ? ParticleProducerDefinition.method1163(12648192) : ParticleProducerDefinition.method1163(16776960))))))));
 	}
 
-	static void method7170(int i_0, int i_1) {
+	static void method7170(int i_0) {
 		if (Class5.anIntArray36 == null || Class5.anIntArray36.length < i_0) {
 			Class5.anIntArray36 = new int[i_0];
 		}

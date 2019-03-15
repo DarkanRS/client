@@ -50,7 +50,7 @@ public class Class61 {
 
 	public byte aByte628;
 
-	public int method1197(String string_1, int i_2) {
+	public int method1197(String string_1) {
 		if (string_1 != null && string_1.length() != 0) {
 			for (int i_3 = 0; i_3 < this.anInt632; i_3++) {
 				if (this.aStringArray639[i_3].equals(string_1)) {
@@ -63,12 +63,12 @@ public class Class61 {
 		}
 	}
 
-	public int method1198(int i_1, int i_2, int i_3, int i_4) {
+	public int method1198(int i_1, int i_2, int i_3) {
 		int i_5 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
 		return (this.anIntArray633[i_1] & i_5) >>> i_2;
 	}
 
-	public Integer method1199(int i_1, int i_2) {
+	public Integer method1199(int i_1) {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
@@ -77,7 +77,7 @@ public class Class61 {
 		}
 	}
 
-	public Long method1201(int i_1, int i_2) {
+	public Long method1201(int i_1) {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
@@ -86,7 +86,7 @@ public class Class61 {
 		}
 	}
 
-	public String method1202(int i_1, int i_2) {
+	public String method1202(int i_1) {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
@@ -132,7 +132,7 @@ public class Class61 {
 			throw new RuntimeException("");
 		} else {
 			if (long_1 > 0L && (this.aLongArray638 == null || this.anInt641 >= this.aLongArray638.length) || string_3 != null && (this.aStringArray617 == null || this.anInt641 >= this.aStringArray617.length)) {
-				this.method1211(this.anInt641 + 5, (short) 2920);
+				this.method1211(this.anInt641 + 5);
 			}
 			if (this.aLongArray638 != null) {
 				this.aLongArray638[this.anInt641] = long_1;
@@ -191,7 +191,7 @@ public class Class61 {
 		}
 	}
 
-	void method1211(int i_1, short s_2) {
+	void method1211(int i_1) {
 		if (this.aBool618) {
 			if (this.aLongArray638 != null) {
 				Class503.method8351(this.aLongArray638, 0, this.aLongArray638 = new long[i_1], 0, this.anInt641);
@@ -256,7 +256,7 @@ public class Class61 {
 		return true;
 	}
 
-	public int[] method1215(byte b_1) {
+	public int[] method1215() {
 		if (this.anIntArray621 == null) {
 			String[] arr_2 = new String[this.anInt632];
 			this.anIntArray621 = new int[this.anInt632];
@@ -278,7 +278,7 @@ public class Class61 {
 			throw new RuntimeException("");
 		} else {
 			if (long_1 > 0L && (this.aLongArray630 == null || this.anInt632 >= this.aLongArray630.length) || string_3 != null && (this.aStringArray639 == null || this.anInt632 >= this.aStringArray639.length)) {
-				this.method1232(this.anInt632 + 5, (byte) 123);
+				this.method1232(this.anInt632 + 5);
 			}
 			if (this.aLongArray630 != null) {
 				this.aLongArray630[this.anInt632] = long_1;
@@ -300,7 +300,7 @@ public class Class61 {
 	}
 
 	public Class61(RsByteBuffer rsbytebuffer_1) {
-		this.method1234(rsbytebuffer_1, 901446116);
+		this.method1234(rsbytebuffer_1);
 	}
 
 	boolean method1222(int i_1, int i_2, int i_3) {
@@ -354,7 +354,7 @@ public class Class61 {
 		return true;
 	}
 
-	public Integer method1225(int i_1, int i_2, int i_3, byte b_4) {
+	public Integer method1225(int i_1, int i_2, int i_3) {
 		if (this.aClass465_629 == null) {
 			return null;
 		} else {
@@ -368,7 +368,7 @@ public class Class61 {
 		}
 	}
 
-	void method1232(int i_1, byte b_2) {
+	void method1232(int i_1) {
 		if (this.aBool618) {
 			if (this.aLongArray630 != null) {
 				Class503.method8351(this.aLongArray630, 0, this.aLongArray630 = new long[i_1], 0, this.anInt632);
@@ -431,7 +431,7 @@ public class Class61 {
 		}
 	}
 
-	void method1234(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method1234(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 >= 1 && i_3 <= 5) {
 			int i_4 = rsbytebuffer_1.readUnsignedByte();

@@ -55,7 +55,7 @@ public class Class396 {
 		throw new Error();
 	}
 
-	public static void method6774(int i_0, byte b_1) {
+	public static void method6774(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(11, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 58);
 	}

@@ -97,7 +97,7 @@ public final class Class115_Sub1 extends Class115 {
 					int i_10 = 1;
 					if (class111_9 == Class111.aClass111_1109) {
 						class111_9 = class282_sub21_sub1_sub1_8.method15458((byte) -103);
-						i_10 = class282_sub21_sub1_sub1_8.method15459((short) 3553);
+						i_10 = class282_sub21_sub1_sub1_8.method15459();
 					}
 
 					switch (class111_9.anInt1232 * 1002380705 * -278657439) {
@@ -441,7 +441,7 @@ public final class Class115_Sub1 extends Class115 {
 					int i_10 = 1;
 					if (class111_9 == Class111.aClass111_1109) {
 						class111_9 = class282_sub21_sub1_sub1_8.method15458((byte) -41);
-						i_10 = class282_sub21_sub1_sub1_8.method15459((short) 3553);
+						i_10 = class282_sub21_sub1_sub1_8.method15459();
 					}
 
 					switch (class111_9.anInt1232 * 1002380705 * -278657439) {
@@ -1015,7 +1015,7 @@ public final class Class115_Sub1 extends Class115 {
 					int i_10 = 1;
 					if (class111_9 == Class111.aClass111_1109) {
 						class111_9 = class282_sub21_sub1_sub1_8.method15458((byte) -56);
-						i_10 = class282_sub21_sub1_sub1_8.method15459((short) 3553);
+						i_10 = class282_sub21_sub1_sub1_8.method15459();
 					}
 
 					switch (class111_9.anInt1232) {

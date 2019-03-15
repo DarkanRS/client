@@ -69,7 +69,7 @@ public class TextureDefinition extends CacheableNode {
 			int[] ints_17;
 			int[] ints_18;
 			if (this.aClass282_Sub20_9476.aBool7669) {
-				int[] ints_19 = this.aClass282_Sub20_9476.method12319(i_15, 752457538);
+				int[] ints_19 = this.aClass282_Sub20_9476.method12319(i_15);
 				ints_16 = ints_19;
 				ints_17 = ints_19;
 				ints_18 = ints_19;
@@ -128,7 +128,7 @@ public class TextureDefinition extends CacheableNode {
 		}
 
 		for (i_15 = 0; i_15 < this.aClass282_Sub20Array9478.length; i_15++) {
-			this.aClass282_Sub20Array9478[i_15].method12326(984017845);
+			this.aClass282_Sub20Array9478[i_15].method12326();
 		}
 
 		return ints_24;
@@ -154,7 +154,7 @@ public class TextureDefinition extends CacheableNode {
 			int[] ints_14;
 			int[] ints_15;
 			if (this.aClass282_Sub20_9476.aBool7669) {
-				ints_15 = this.aClass282_Sub20_9476.method12319(i_11, 752457538);
+				ints_15 = this.aClass282_Sub20_9476.method12319(i_11);
 				ints_12 = ints_15;
 				ints_13 = ints_15;
 				ints_14 = ints_15;
@@ -166,7 +166,7 @@ public class TextureDefinition extends CacheableNode {
 			}
 
 			if (this.aClass282_Sub20_9477.aBool7669) {
-				ints_15 = this.aClass282_Sub20_9477.method12319(i_11, 752457538);
+				ints_15 = this.aClass282_Sub20_9477.method12319(i_11);
 			} else {
 				ints_15 = this.aClass282_Sub20_9477.method12320(i_11, 1766478944)[0];
 			}
@@ -228,7 +228,7 @@ public class TextureDefinition extends CacheableNode {
 		}
 
 		for (i_11 = 0; i_11 < this.aClass282_Sub20Array9478.length; i_11++) {
-			this.aClass282_Sub20Array9478[i_11].method12326(984017845);
+			this.aClass282_Sub20Array9478[i_11].method12326();
 		}
 
 		return ints_21;
@@ -246,8 +246,8 @@ public class TextureDefinition extends CacheableNode {
 		int i_8;
 		int i_9;
 		for (i_6 = 0; i_6 < i_2; i_6++) {
-			class282_sub20_7 = Class278.method4963(rsbytebuffer_1, (byte) -7);
-			if (class282_sub20_7.method12323(1338991452) >= 0) {
+			class282_sub20_7 = Class278.method4963(rsbytebuffer_1);
+			if (class282_sub20_7.method12323() >= 0) {
 				++i_3;
 			}
 
@@ -278,7 +278,7 @@ public class TextureDefinition extends CacheableNode {
 				class282_sub20_7.aClass282_Sub20Array7671[i_9] = this.aClass282_Sub20Array9478[ints_5[i_6][i_9]];
 			}
 
-			i_9 = class282_sub20_7.method12323(1338991452);
+			i_9 = class282_sub20_7.method12323();
 			int i_10 = class282_sub20_7.method12324((byte) 117);
 			if (i_9 > 0) {
 				this.anIntArray9475[i_3++] = i_9;
@@ -297,7 +297,7 @@ public class TextureDefinition extends CacheableNode {
 		Object obj_11 = null;
 	}
 
-	float[] method14723(Index index_1, Interface22 interface22_2, int i_3, int i_4, boolean bool_5, int i_6) {
+	float[] method14723(Index index_1, Interface22 interface22_2, int i_3, int i_4, boolean bool_5) {
 		Class532_Sub2.aClass317_7925 = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
@@ -316,7 +316,7 @@ public class TextureDefinition extends CacheableNode {
 			int[] ints_12;
 			int[] ints_13;
 			if (this.aClass282_Sub20_9476.aBool7669) {
-				ints_13 = this.aClass282_Sub20_9476.method12319(i_9, 752457538);
+				ints_13 = this.aClass282_Sub20_9476.method12319(i_9);
 				ints_10 = ints_13;
 				ints_11 = ints_13;
 				ints_12 = ints_13;
@@ -328,14 +328,14 @@ public class TextureDefinition extends CacheableNode {
 			}
 
 			if (this.aClass282_Sub20_9477.aBool7669) {
-				ints_13 = this.aClass282_Sub20_9477.method12319(i_9, 752457538);
+				ints_13 = this.aClass282_Sub20_9477.method12319(i_9);
 			} else {
 				ints_13 = this.aClass282_Sub20_9477.method12320(i_9, -1071831227)[0];
 			}
 
 			int[] ints_14;
 			if (this.aClass282_Sub20_9480.aBool7669) {
-				ints_14 = this.aClass282_Sub20_9480.method12319(i_9, 752457538);
+				ints_14 = this.aClass282_Sub20_9480.method12319(i_9);
 			} else {
 				ints_14 = this.aClass282_Sub20_9480.method12320(i_9, -1302016809)[0];
 			}
@@ -364,7 +364,7 @@ public class TextureDefinition extends CacheableNode {
 		}
 
 		for (i_9 = 0; i_9 < this.aClass282_Sub20Array9478.length; i_9++) {
-			this.aClass282_Sub20Array9478[i_9].method12326(984017845);
+			this.aClass282_Sub20Array9478[i_9].method12326();
 		}
 
 		return floats_18;

@@ -14,10 +14,10 @@ public class Class105 {
 		this.aString1068 = string_3;
 	}
 
-	static void method1804(int i_0, String string_1, String string_2, byte b_3) {
+	static void method1804(int i_0, String string_1, String string_2) {
 		if (client.aClass184_7475 != null) {
 			TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4533, client.aClass184_7475.isaac, -368168097);
-			tcpmessage_4.buffer.writeShort(1 + ParticleTriangle.method3952(string_1, 1356057931) + ParticleTriangle.method3952(string_2, 876996155), 1417031095);
+			tcpmessage_4.buffer.writeShort(1 + ParticleTriangle.method3952(string_1, 1356057931) + ParticleTriangle.method3952(string_2, 876996155));
 			tcpmessage_4.buffer.writeByte(i_0);
 			tcpmessage_4.buffer.writeJagString(string_2, 2115936374);
 			tcpmessage_4.buffer.writeJagString(string_1, 2111937462);
@@ -25,17 +25,17 @@ public class Class105 {
 		}
 	}
 
-	public static final void method1805(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
+	public static final void method1805(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if (i_0 >= Class532_Sub1.anInt7071 && i_1 <= Class532_Sub1.anInt7069 && i_2 >= Class532_Sub1.anInt7070 && i_3 <= Class532_Sub1.anInt7068) {
 			if (i_5 == 1) {
-				Class48_Sub2.method14572(i_0, i_1, i_2, i_3, i_4, (short) 26000);
+				Class48_Sub2.method14572(i_0, i_1, i_2, i_3, i_4);
 			} else {
-				MapRegion.method4561(i_0, i_1, i_2, i_3, i_4, i_5, -939335267);
+				MapRegion.method4561(i_0, i_1, i_2, i_3, i_4, i_5);
 			}
 		} else if (i_5 == 1) {
-			Class78.method1388(i_0, i_1, i_2, i_3, i_4, (byte) 36);
+			Class78.method1388(i_0, i_1, i_2, i_3, i_4);
 		} else {
-			Class20.method744(i_0, i_1, i_2, i_3, i_4, i_5, -2073679556);
+			Class20.method744(i_0, i_1, i_2, i_3, i_4, i_5);
 		}
 	}
 
@@ -59,17 +59,17 @@ public class Class105 {
 				if (player_6.faceDirection != -1) {
 					class4_14.anInt30 = player_6.faceDirection;
 				} else {
-					class4_14.anInt30 = player_6.aClass19_10359.method578((byte) 2);
+					class4_14.anInt30 = player_6.aClass19_10359.method578();
 				}
 				class4_14.anInt32 = player_6.faceEntity;
 				class4_14.aBool29 = player_6.aBool10571;
 				class4_14.aBool33 = player_6.aBool10550;
 				if (player_6.isNpc > 0) {
-					Class149_Sub2.method14609(player_6, -1660310904);
+					Class149_Sub2.method14609(player_6);
 				}
 				client.players[i_1] = null;
 				if (rsbitsbuffer_0.readBits(1, (byte) -34) != 0) {
-					Class346.method6155(rsbitsbuffer_0, i_1, (short) 371);
+					Class346.method6155(rsbitsbuffer_0, i_1);
 				}
 			}
 		} else {
@@ -191,7 +191,7 @@ public class Class105 {
 						player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1], -1262996328);
 					}
 					player_6.plane = player_6.aByte7968 = (byte) (i_9 + player_6.plane & 0x3);
-					if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_12, i_13, 1753987250)) {
+					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1753987250)) {
 						player_6.aByte7968 = (byte) (player_6.aByte7968 + 1);
 					}
 					if (client.anInt7315 == i_1 && player_6.plane != Class4.anInt35) {
@@ -212,7 +212,7 @@ public class Class105 {
 						player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1], -106492270);
 					}
 					player_6.plane = player_6.aByte7968 = (byte) (i_9 + player_6.plane & 0x3);
-					if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_12, i_13, 1539369664)) {
+					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1539369664)) {
 						player_6.aByte7968 = (byte) (player_6.aByte7968 + 1);
 					}
 					if (client.anInt7315 == i_1) {
@@ -223,7 +223,7 @@ public class Class105 {
 		}
 	}
 
-	public static void method1807(int i_0, byte b_1) {
+	public static void method1807(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(14, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 94);
 	}

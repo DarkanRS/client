@@ -17,7 +17,7 @@ public class Class43 implements Interface2 {
 		this.aClass351_418 = class351_2;
 	}
 
-	public void method22(int i_1) {
+	public void method22() {
 		this.aClass160_417 = Class152.method2600(this.aClass317_419, this.aClass351_418.anInt4095, 104726423);
 	}
 

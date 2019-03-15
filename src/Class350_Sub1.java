@@ -9,7 +9,7 @@ public class Class350_Sub1 extends Class350 {
 		this.anInt7756 = i_12;
 	}
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_603;
 	}
 
@@ -17,14 +17,14 @@ public class Class350_Sub1 extends Class350 {
 		return Class60.aClass60_603;
 	}
 
-	static final void method12516(int i_0) {
+	static final void method12516() {
 		Class282_Sub31 class282_sub31_1;
 		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 85); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(486596704)) {
-			IterableNodeMap.method7772(class282_sub31_1, false, 1535779425);
+			IterableNodeMap.method7772(class282_sub31_1, false);
 		}
 
 		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 127); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(2087235894)) {
-			IterableNodeMap.method7772(class282_sub31_1, true, 1535779425);
+			IterableNodeMap.method7772(class282_sub31_1, true);
 		}
 
 	}

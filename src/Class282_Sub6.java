@@ -184,7 +184,7 @@ public class Class282_Sub6 extends Node {
 
 	void method12150(int i_1) {
 		this.aNativeHeapBuffer7520 = this.aClass505_Sub2_7518.method13910(i_1 * 4, true);
-		this.aStream7513 = new Stream(this.aNativeHeapBuffer7520, 0, i_1 * 4);
+		this.aStream7513 = new Stream(this.aNativeHeapBuffer7520, i_1 * 4);
 	}
 
 	void method12152(int i_1, int i_2, int i_3) {

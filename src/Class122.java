@@ -23,8 +23,8 @@ public class Class122 {
 			this.aClass111_1533 = NPCIndexLoader.method6852(-2096161358)[i_4];
 			this.anInt1528 = class100_1.method1632((byte) -88);
 		}
-		this.aString1530 = class100_1.method1633(16711935);
-		this.aString1532 = class100_1.method1633(16711935);
+		this.aString1530 = class100_1.method1633();
+		this.aString1532 = class100_1.method1633();
 		i_4 = class100_1.method1632((byte) -35);
 		this.anIntArray1531 = new int[i_4];
 		this.anIntArray1534 = new int[i_4];
@@ -48,7 +48,7 @@ public class Class122 {
 		}
 	}
 
-	public static String method2110(String string_0, char var_1, String string_2, int i_3) {
+	public static String method2110(String string_0, char var_1, String string_2) {
 		int i_4 = string_0.length();
 		int i_5 = string_2.length();
 		int i_6 = i_4;
@@ -78,7 +78,7 @@ public class Class122 {
 		}
 	}
 
-	public static void method2111(boolean bool_0, int i_1) {
+	public static void method2111(boolean bool_0) {
 		if (bool_0 && Class291_Sub1.aClass282_Sub50_Sub6_3491 != null) {
 			Class51.anInt488 = Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9536;
 		} else {
@@ -103,15 +103,15 @@ public class Class122 {
 		Class251.aClass194_3103 = null;
 		Class521_Sub1_Sub5_Sub1.aClass194_10527 = null;
 		if (Class291_Sub1.aClass218_3456 != null) {
-			Class291_Sub1.aClass218_3456.method3699((byte) 1);
+			Class291_Sub1.aClass218_3456.method3699();
 			Class291_Sub1.aClass218_3456.method3697(128, 64, 1766469976);
 		}
 		if (Class291_Sub1.aClass427_3457 != null) {
 			Class291_Sub1.aClass427_3457.method7175(64, 64, 1145501351);
 		}
 		if (Class291_Sub1.aClass474_3455 != null) {
-			Class291_Sub1.aClass474_3455.method7899(256, -2034610586);
+			Class291_Sub1.aClass474_3455.method7899(256);
 		}
-		IndexLoaders.aClass230_147.method3906(64, (short) 727);
+		IndexLoaders.aClass230_147.method3906(64);
 	}
 }

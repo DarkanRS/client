@@ -2,9 +2,9 @@ public abstract class Class455 {
 
 	public static short[] aShortArray5452;
 
-	static void method7553(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
+	static void method7553(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
 		if (client.aBool7344) {
-			ParamDefinitions attributedefault_4 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
+			ParamDefinitions attributedefault_4 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319) : null;
 			if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.anInt5858 & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.anInt9319, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
 				PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.aString1369, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1704442537);
 			}
@@ -79,7 +79,7 @@ public abstract class Class455 {
 		}
 	}
 
-	public static int method7557(CharSequence charsequence_0, CharSequence charsequence_1, Language xlanguage_2, int i_3) {
+	public static int method7557(CharSequence charsequence_0, CharSequence charsequence_1, Language xlanguage_2) {
 		int i_4 = charsequence_0.length();
 		int i_5 = charsequence_1.length();
 		int i_6 = 0;
@@ -109,13 +109,13 @@ public abstract class Class455 {
 			}
 			var_8 = Class466.method7778(var_10, -1430101456);
 			var_9 = Class466.method7778(var_15, 1240929738);
-			var_10 = Class152.method2599(var_10, xlanguage_2, 32768);
-			var_15 = Class152.method2599(var_15, xlanguage_2, 32768);
+			var_10 = Class152.method2599(var_10, xlanguage_2);
+			var_15 = Class152.method2599(var_15, xlanguage_2);
 			if (var_10 != var_15 && Character.toUpperCase(var_10) != Character.toUpperCase(var_15)) {
 				var_10 = Character.toLowerCase(var_10);
 				var_15 = Character.toLowerCase(var_15);
 				if (var_15 != var_10) {
-					return Class468_Sub30.method13422(var_10, xlanguage_2, -556732263) - Class468_Sub30.method13422(var_15, xlanguage_2, -556732263);
+					return Class468_Sub30.method13422(var_10, xlanguage_2) - Class468_Sub30.method13422(var_15, xlanguage_2);
 				}
 			}
 		}
@@ -136,7 +136,7 @@ public abstract class Class455 {
 				var_17 = Character.toLowerCase(var_17);
 				var_13 = Character.toLowerCase(var_13);
 				if (var_17 != var_13) {
-					return Class468_Sub30.method13422(var_17, xlanguage_2, -556732263) - Class468_Sub30.method13422(var_13, xlanguage_2, -556732263);
+					return Class468_Sub30.method13422(var_17, xlanguage_2) - Class468_Sub30.method13422(var_13, xlanguage_2);
 				}
 			}
 		}
@@ -148,7 +148,7 @@ public abstract class Class455 {
 				var_13 = charsequence_0.charAt(i_19);
 				char var_14 = charsequence_1.charAt(i_19);
 				if (var_13 != var_14) {
-					return Class468_Sub30.method13422(var_13, xlanguage_2, -556732263) - Class468_Sub30.method13422(var_14, xlanguage_2, -556732263);
+					return Class468_Sub30.method13422(var_13, xlanguage_2) - Class468_Sub30.method13422(var_14, xlanguage_2);
 				}
 			}
 			return 0;

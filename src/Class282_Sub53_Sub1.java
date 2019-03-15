@@ -14,7 +14,7 @@ public class Class282_Sub53_Sub1 extends MouseRecord {
 
 	int anInt9517;
 
-	public int method14729(int i_1) {
+	public int method14729() {
 		return this.anInt9514;
 	}
 
@@ -35,7 +35,7 @@ public class Class282_Sub53_Sub1 extends MouseRecord {
 		return this.anInt9513;
 	}
 
-	public boolean method14731(int i_1) {
+	public boolean method14731() {
 		switch (this.anInt9513) {
 		case 160:
 		case 161:
@@ -60,7 +60,7 @@ public class Class282_Sub53_Sub1 extends MouseRecord {
 		}
 	}
 
-	public int getMeta(byte b_1) {
+	public int getMeta() {
 		switch (this.anInt9513) {
 		case 160:
 		case 512:
@@ -83,7 +83,7 @@ public class Class282_Sub53_Sub1 extends MouseRecord {
 		return this.aLong9515;
 	}
 
-	public void method14732(Point point_1, int i_2) {
+	public void method14732(Point point_1) {
 		this.anInt9516 -= point_1.x;
 		this.anInt9517 -= point_1.y;
 	}

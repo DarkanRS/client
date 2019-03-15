@@ -97,7 +97,7 @@ public class Class41_Sub1_Sub1 extends Class41_Sub1 {
 		this.aClass505_Sub2_413.aFloat8770 = f_3;
 	}
 
-	void method15517(int i_1) {
+	void method15517() {
 		this.aFloat10114 = 2.4414062E-4F;
 		short s_2 = 256;
 		float f_3 = 0.3F;
@@ -111,11 +111,11 @@ public class Class41_Sub1_Sub1 extends Class41_Sub1 {
 	}
 
 	public void method15520(int i_1) {
-		this.method15517(-1407827048);
+		this.method15517();
 		this.aClass101_9218.method1655(this.aClass101_9218.method1654(558838248));
 		this.aClass101_9218.method1646();
-		this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10087, 0, this.aClass49_10092.anInterface1_480, (byte) 0);
-		this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10088, 1, this.aClass505_Sub2_413.method13965(), (byte) 0);
+		this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10087, 0, this.aClass49_10092.anInterface1_480);
+		this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10088, 1, this.aClass505_Sub2_413.method13965());
 		this.aClass101_9218.method1668(this.aClass282_Sub21_Sub1_10105, this.aClass384_10090, (byte) -102);
 		this.aClass101_9218.method1667(this.aClass282_Sub21_Sub1_10101, this.aClass384_10091, 1269356236);
 		int i_2 = 1 << (this.anInt10095 & 0x3);
@@ -130,11 +130,11 @@ public class Class41_Sub1_Sub1 extends Class41_Sub1 {
 		this.aClass505_Sub2_413.method14002(Class352.aClass352_4098, this.anInt10110, this.anInt10111, this.anInt10094, this.anInt10112);
 	}
 
-	public Class41_Sub1_Sub1(Class505_Sub2 class505_sub2_1, Class49 class49_2, boolean bool_3) throws Exception_Sub2 {
+	public Class41_Sub1_Sub1(Class505_Sub2 class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
 		super(class505_sub2_1);
 		new Matrix44Arr();
 		this.aClass49_10092 = class49_2;
-		this.aBool10097 = bool_3;
+		this.aBool10097 = true;
 		if (class505_sub2_1.method13887() && class505_sub2_1.method13888()) {
 			this.method14523("EnvMappedWater");
 		}
@@ -184,7 +184,7 @@ public class Class41_Sub1_Sub1 extends Class41_Sub1 {
 		}
 	}
 
-	public static int method15524(byte b_0) {
+	public static int method15524() {
 		return Class81.NUM_CHAT_LINES;
 	}
 }

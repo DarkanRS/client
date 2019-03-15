@@ -2,7 +2,7 @@ public class Class282_Sub20_Sub29_Sub1 extends Class282_Sub20_Sub29 {
 
 	int[][] method12320(int i_1, int i_2) {
 		int[][] ints_3 = this.aClass308_7670.method5463(i_1, 2115111278);
-		if (this.aClass308_7670.aBool3619 && this.method15398(1057936106)) {
+		if (this.aClass308_7670.aBool3619 && this.method15398()) {
 			int[] ints_4 = ints_3[0];
 			int[] ints_5 = ints_3[1];
 			int[] ints_6 = ints_3[2];

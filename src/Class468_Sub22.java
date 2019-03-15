@@ -4,7 +4,7 @@ public class Class468_Sub22 extends Preference {
 		return 1;
 	}
 
-	public void method12871(byte b_1) {
+	public void method12871() {
 		if (this.manager.method13514((byte) 28) != Game.darkan) {
 			this.anInt5578 = 1;
 		}
@@ -19,7 +19,7 @@ public class Class468_Sub22 extends Preference {
 		return 1;
 	}
 
-	public boolean method12872(int i_1) {
+	public boolean method12872() {
 		return this.manager.method13514((byte) 119) == Game.darkan;
 	}
 
@@ -47,7 +47,7 @@ public class Class468_Sub22 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -55,7 +55,7 @@ public class Class468_Sub22 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	static IComponentDefinitions method12880(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
+	static IComponentDefinitions method12880(IComponentDefinitions icomponentdefinitions_0) {
 		IComponentDefinitions icomponentdefinitions_2 = client.method11634(icomponentdefinitions_0);
 		if (icomponentdefinitions_2 == null) {
 			icomponentdefinitions_2 = icomponentdefinitions_0.aClass118_1379;

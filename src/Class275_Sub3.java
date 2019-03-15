@@ -12,7 +12,7 @@ public class Class275_Sub3 extends Class275 {
 		this.anInt7812 = i_4;
 	}
 
-	void method12566(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	void method12566(int i_1, int i_2, int i_3, int i_4) {
 		this.anInt7811 = i_1;
 		this.anInt7810 = i_2;
 		this.anInt7809 = i_3;

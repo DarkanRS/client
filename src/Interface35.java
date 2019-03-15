@@ -4,6 +4,6 @@ public interface Interface35 {
 
 	Object method215(byte[] var1, FontMetrics var2, boolean var3);
 
-	Object method216(byte[] var1, FontMetrics var2, boolean var3, int var4);
+	Object method216(byte[] var1, FontMetrics var2, boolean var3);
 
 }

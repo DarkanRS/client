@@ -51,7 +51,7 @@ public class Whirlpool {
 		}
 	}
 
-	void method7406(int i_1) {
+	void method7406() {
 		int i_2;
 		for (i_2 = 0; i_2 < 32; i_2++) {
 			this.aByteArray5375[i_2] = 0;
@@ -117,7 +117,7 @@ public class Whirlpool {
 		}
 	}
 
-	void method7408(byte[] bytes_1, int i_2, int i_3) {
+	void method7408(byte[] bytes_1) {
 		this.aByteArray5368[this.anInt5370 * 1101767573 * -1706520643] = (byte) (this.aByteArray5368[this.anInt5370 * 1101767573 * -1706520643] | 128 >>> (this.anInt5369 & 0x7));
 		++this.anInt5370;
 		if (this.anInt5370 > 32) {
@@ -136,7 +136,7 @@ public class Whirlpool {
 		System.arraycopy(this.aByteArray5375, 0, this.aByteArray5368, 32, 32);
 		this.method7410((byte) -57);
 		int i_4 = 0;
-		for (int i_5 = i_2; i_4 < 8; i_5 += 8) {
+		for (int i_5 = 0; i_4 < 8; i_5 += 8) {
 			long long_6 = this.aLongArray5361[i_4];
 			bytes_1[i_5] = (byte) ((int) (long_6 >>> 56));
 			bytes_1[i_5 + 1] = (byte) ((int) (long_6 >>> 48));
@@ -192,7 +192,7 @@ public class Whirlpool {
 		}
 	}
 
-	static void method7421(int i_0, int i_1) {
+	static void method7421(int i_0) {
 		if (i_0 == 17) {
 			throw new Error();
 		} else if (i_0 == 25) {
@@ -211,13 +211,13 @@ public class Whirlpool {
 				} else if (i_0 == 4) {
 					client.aBool7176 = false;
 				} else if (i_0 == 14) {
-					client.aClass457_7335.method7651((byte) 5);
+					client.aClass457_7335.method7651();
 				} else {
 					int i_3;
 					int i_5;
 					Runtime runtime_7;
 					if (i_0 == 21) {
-						Class357_Sub1.method12565(-1890847709);
+						Class357_Sub1.method12565();
 						for (i_5 = 0; i_5 < 10; i_5++) {
 							System.gc();
 						}
@@ -225,15 +225,15 @@ public class Whirlpool {
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
 						Class209.printConsoleMessage("" + i_3, -1844000265);
 					} else if (i_0 == 9) {
-						Class357_Sub1.method12565(-1890847709);
+						Class357_Sub1.method12565();
 						for (i_5 = 0; i_5 < 10; i_5++) {
 							System.gc();
 						}
 						runtime_7 = Runtime.getRuntime();
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
 						Class209.printConsoleMessage("" + i_3, -1847953573);
-						JS5CacheFile.method3359(-1275511493);
-						Class357_Sub1.method12565(-1890847709);
+						JS5CacheFile.method3359();
+						Class357_Sub1.method12565();
 						for (int i_4 = 0; i_4 < 10; i_4++) {
 							System.gc();
 						}
@@ -246,7 +246,7 @@ public class Whirlpool {
 					} else if (i_0 == 22) {
 						Class119.JS5_STANDARD_REQUESTER.method5525(-115621470);
 					} else if (i_0 == 3) {
-						Class119.JS5_STANDARD_REQUESTER.method5526(-1851671444);
+						Class119.JS5_STANDARD_REQUESTER.method5526();
 					} else if (i_0 == 13) {
 						Class351.gameCanvas.setLocation(50, 50);
 					} else if (i_0 == 1) {
@@ -264,17 +264,17 @@ public class Whirlpool {
 							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9), -1980423440);
 						} else if (i_0 == 2) {
 							vector3_8 = Class84.myPlayer.method11166().aClass385_3595;
-							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[Class84.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9, 65280), -1193762995);
+							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[Class84.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9), -1193762995);
 						} else if (i_0 == 23) {
-							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861((byte) 1) + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53), -622119201);
-							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861((byte) 1) + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119), -632491603);
+							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53), -622119201);
+							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119), -632491603);
 							Class209.printConsoleMessage(IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3632(), -1389047879);
 						} else if (i_0 == 16) {
 							Class356.method6227(false, (byte) 37);
 						} else if (i_0 == 15) {
 							client.aBool7177 = !client.aBool7177;
 							Renderers.SOFTWARE_RENDERER.method8480(client.aBool7177);
-							Class282_Sub14.method12222(-1129309560);
+							Class282_Sub14.method12222();
 						} else if (i_0 == 10) {
 							client.anInt7240 = 0;
 							IndexLoaders.MAP_REGION_DECODER.method4547((byte) -123);

@@ -8,7 +8,7 @@ public class Class282_Sub50_Sub1_Sub2 extends Class282_Sub50_Sub1 {
 		return true;
 	}
 
-	Object method14692(int i_1) {
+	Object method14692() {
 		return this.aSoftReference10403.get();
 	}
 

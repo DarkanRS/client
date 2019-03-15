@@ -55,8 +55,8 @@ public class Class282_Sub40 extends Node {
 		Class323.method5777(1459972295);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 1, 100643539);
 		Class393.preferences.setValue(Class393.preferences.graphics, 3, -1425167451);
-		Class94.method1589((short) 255);
-		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(2045600476);
+		Class94.method1589();
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(2045600476);
 		client.aBool7185 = true;
 	}
 }

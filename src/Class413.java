@@ -23,10 +23,10 @@ public class Class413 implements Interface43 {
 	String aString4974;
 
 	static {
-		aClass413_4966 = new Class413(2, -1, "", "", true, new Class413[] { aClass413_4971, aClass413_4965, aClass413_4968, aClass413_4970, aClass413_4967 });
+		aClass413_4966 = new Class413("", "", new Class413[] { aClass413_4971, aClass413_4965, aClass413_4968, aClass413_4970, aClass413_4967 });
 	}
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt4973;
 	}
 
@@ -40,9 +40,9 @@ public class Class413 implements Interface43 {
 		this.aString4974 = string_4;
 	}
 
-	Class413(int i_1, int i_2, String string_3, String string_4, boolean bool_5, Class413[] arr_6) {
-		this.anInt4972 = i_1;
-		this.anInt4973 = i_2;
+	Class413(String string_3, String string_4, Class413[] arr_6) {
+		this.anInt4972 = 2;
+		this.anInt4973 = -1;
 		this.aString4974 = string_4;
 	}
 
@@ -54,7 +54,7 @@ public class Class413 implements Interface43 {
 		return this.anInt4973 * -1733059543 * -1048592359;
 	}
 
-	static void method6939(byte b_0) {
+	static void method6939() {
 		ItemContainer.aClass229_7712.method3859(1403175614);
 	}
 

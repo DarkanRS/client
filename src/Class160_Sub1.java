@@ -92,7 +92,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 
 	abstract void method14246(int var1, int var2);
 
-	abstract void method14247(boolean var1, boolean var2, boolean var3, int var4, int var5, float var6, int var7, int var8, int var9, int var10, int var11, int var12, boolean var13);
+	abstract void method14247(boolean var1, boolean var2, boolean var3, int var4, int var5, float var6, int var7, int var8, int var9, int var10, int var11, boolean var13);
 
 	public void method2772(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		if (this.aClass505_Sub3_8875.method14408()) {
@@ -250,7 +250,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 		}
 	}
 
-	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9, int i_10) {
+	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9) {
 		if (this.aClass505_Sub3_8875.method14408()) {
 			throw new IllegalStateException();
 		} else {
@@ -353,7 +353,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 
 	abstract void method14253(int var1, int var2);
 
-	abstract void method2755(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8);
+	abstract void method2755(int var1, int var2, int var3, int var4, int var5, int var6, int var7);
 
 	public abstract void method2749(int var1, int var2, int var3, int var4, int var5);
 

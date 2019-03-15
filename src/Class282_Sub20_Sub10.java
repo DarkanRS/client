@@ -9,7 +9,7 @@ public class Class282_Sub20_Sub10 extends Class282_Sub20 {
 	int anInt9799 = 0;
 	short[] aShortArray9801 = new short[257];
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -2005829703);
 		if (this.aClass320_7667.aBool3722) {
 			int[] ints_4 = this.method12317(0, i_1, 2064121299);
@@ -44,15 +44,15 @@ public class Class282_Sub20_Sub10 extends Class282_Sub20 {
 			throw new RuntimeException();
 		} else {
 			if (this.anInt9799 == 2) {
-				this.method15259(-938643914);
+				this.method15259();
 			}
 
 			Class316.method5586((byte) -8);
-			this.method15258((byte) 16);
+			this.method15258();
 		}
 	}
 
-	void method15258(byte b_1) {
+	void method15258() {
 		int i_2;
 		int i_3;
 		int i_4;
@@ -151,7 +151,7 @@ public class Class282_Sub20_Sub10 extends Class282_Sub20 {
 		}
 	}
 
-	final void method15259(int i_1) {
+	final void method15259() {
 		int[] ints_2 = this.anIntArrayArray9800[0];
 		int[] ints_3 = this.anIntArrayArray9800[1];
 		int[] ints_4 = this.anIntArrayArray9800[this.anIntArrayArray9800.length - 2];
@@ -160,7 +160,7 @@ public class Class282_Sub20_Sub10 extends Class282_Sub20 {
 		this.anIntArray9796 = new int[] { ints_4[0] - ints_5[0] + ints_4[0], ints_4[1] - ints_5[1] + ints_4[1] };
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		if (i_1 == 0) {
 			this.anInt9799 = rsbytebuffer_2.readUnsignedByte();
 			this.anIntArrayArray9800 = new int[rsbytebuffer_2.readUnsignedByte()][2];
@@ -179,11 +179,11 @@ public class Class282_Sub20_Sub10 extends Class282_Sub20 {
 
 	static Class282_Sub15_Sub2 method15262(Class282_Sub15_Sub2 class282_sub15_sub2_0, int i_1) {
 		Class282_Sub15_Sub2 class282_sub15_sub2_2 = class282_sub15_sub2_0 == null ? new Class282_Sub15_Sub2() : new Class282_Sub15_Sub2(class282_sub15_sub2_0);
-		class282_sub15_sub2_2.method15137(9, 128, -240032763);
+		class282_sub15_sub2_2.method15137(-240032763);
 		return class282_sub15_sub2_2;
 	}
 
-	public static void method15263(int i_0, byte b_1) {
+	public static void method15263(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(2, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 22);
 	}

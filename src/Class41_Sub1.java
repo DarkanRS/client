@@ -65,10 +65,10 @@ public abstract class Class41_Sub1 extends Class41 {
 				this.aClass282_Sub21_Sub1_9205 = null;
 				return false;
 			} else {
-				if (this.aClass101_9218.method1656(413496416) == null) {
+				if (this.aClass101_9218.method1656() == null) {
 					Class115 class115_2 = this.aClass101_9218.method1654(604973216);
 					if (class115_2 == null) {
-						throw new Exception_Sub2(this.aClass101_9218.method1717(40421350) + "");
+						throw new Exception_Sub2(this.aClass101_9218.method1717() + "");
 					}
 
 					this.aClass101_9218.method1655(class115_2);
@@ -199,7 +199,7 @@ public abstract class Class41_Sub1 extends Class41 {
 			}
 
 			if (this.aClass282_Sub21_Sub1_9217 != null) {
-				this.aClass101_9218.method1659(this.aClass282_Sub21_Sub1_9217, 64.0F + Math.abs(this.aClass505_Sub2_413.aFloatArray8747[1]) * 928.0F, (short) 25645);
+				this.aClass101_9218.method1659(this.aClass282_Sub21_Sub1_9217, 64.0F + Math.abs(this.aClass505_Sub2_413.aFloatArray8747[1]) * 928.0F);
 			}
 		}
 
@@ -237,7 +237,7 @@ public abstract class Class41_Sub1 extends Class41 {
 	void method888() {
 		this.aClass101_9218.method1646();
 		this.anIntArray9201[this.aClass101_9218.method1714(-1896522085)] = -1;
-		this.method14550(0);
+		this.method14550();
 		this.method14526();
 	}
 
@@ -259,7 +259,7 @@ public abstract class Class41_Sub1 extends Class41 {
 	void method873() {
 		this.aClass101_9218.method1646();
 		this.anIntArray9201[this.aClass101_9218.method1714(-2118159907)] = -1;
-		this.method14550(0);
+		this.method14550();
 		this.method14526();
 	}
 
@@ -283,9 +283,9 @@ public abstract class Class41_Sub1 extends Class41 {
 
 	}
 
-	void method14550(int i_1) {
+	void method14550() {
 		this.aClass384Array9227[0].identity();
-		this.method14536(i_1);
+		this.method14536(0);
 	}
 
 }

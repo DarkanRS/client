@@ -8,11 +8,11 @@ public class Class332 {
 		this.anInt3876 = i_1;
 	}
 
-	static void method5927(int i_0, byte b_1) {
-		Class180.aClass229_2245.method3858(i_0, (byte) 12);
+	static void method5927() {
+		Class180.aClass229_2245.method3858(5, (byte) 12);
 	}
 
-	public static Class350 method5928(RsByteBuffer rsbytebuffer_0, int i_1) {
+	public static Class350 method5928(RsByteBuffer rsbytebuffer_0) {
 		Class350_Sub3 class350_sub3_2 = (Class350_Sub3) Class163.method2843(rsbytebuffer_0, 653185943);
 		int i_3 = rsbytebuffer_0.readShort();
 		return new Class350_Sub3_Sub1(class350_sub3_2.aClass356_4094, class350_sub3_2.aClass353_4087, class350_sub3_2.anInt4090, class350_sub3_2.anInt4089, class350_sub3_2.anInt4093, class350_sub3_2.anInt4088, class350_sub3_2.anInt4092, class350_sub3_2.anInt4086, class350_sub3_2.anInt4091, class350_sub3_2.anInt7844, class350_sub3_2.anInt7840, class350_sub3_2.anInt7842, class350_sub3_2.anInt7843, class350_sub3_2.anInt7841, class350_sub3_2.anInt7845, i_3);
@@ -26,7 +26,7 @@ public class Class332 {
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 	}
 
-	public static void method5930(int i_0, byte b_1) {
+	public static void method5930(int i_0) {
 		TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, 220366407);
 		tcpmessage_2.buffer.writeInt(-1);
 		client.aClass184_7475.method3049(tcpmessage_2, 916919130);

@@ -11,7 +11,7 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 	float aFloat9465;
 	String aString9470;
 
-	void method13362(OggPacket oggpacket_1, int i_2) {
+	void method13362(OggPacket oggpacket_1) {
 		if (this.anInt8031 <= 0 || "SUB".equals(this.aString9469)) {
 			RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(oggpacket_1.getData());
 			int i_4 = rsbytebuffer_3.readUnsignedByte();
@@ -46,7 +46,7 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 							this.aFloat9465 = (float) ((long) this.anInt9467 * (long_7 + long_5)) / (float) this.anInt9464;
 							int i_11 = rsbytebuffer_3.method13085(737852969);
 							if (i_11 >= 0 && i_11 <= rsbytebuffer_3.buffer.length - rsbytebuffer_3.index) {
-								this.aString9470 = Class271.method4824(rsbytebuffer_3.buffer, rsbytebuffer_3.index, i_11, 336004634);
+								this.aString9470 = Class271.method4824(rsbytebuffer_3.buffer, rsbytebuffer_3.index, i_11);
 								break label64;
 							}
 
@@ -65,7 +65,7 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 
 	}
 
-	public float method14702(int i_1) {
+	public float method14702() {
 		return this.aFloat9462;
 	}
 
@@ -104,7 +104,7 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 							this.aFloat9465 = (float) ((long) (1762799499 * this.anInt9467 * -134578141) * (long_6 + long_4)) / (float) (658904087 * this.anInt9464 * -1289985113);
 							int i_10 = rsbytebuffer_2.method13085(-458972533);
 							if (i_10 >= 0 && i_10 <= rsbytebuffer_2.buffer.length - -1990677291 * rsbytebuffer_2.index * -1115476867) {
-								this.aString9470 = Class271.method4824(rsbytebuffer_2.buffer, rsbytebuffer_2.index * -1115476867 * -1990677291, i_10, 336004634);
+								this.aString9470 = Class271.method4824(rsbytebuffer_2.buffer, rsbytebuffer_2.index * -1115476867 * -1990677291, i_10);
 								break label64;
 							}
 
@@ -127,11 +127,11 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 		return this.aString9466;
 	}
 
-	public String method14704(int i_1) {
+	public String method14704() {
 		return this.aString9470;
 	}
 
-	void method13360(int i_1) {
+	void method13360() {
 	}
 
 	void method13363(OggPacket oggpacket_1) {
@@ -169,7 +169,7 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 							this.aFloat9465 = (float) ((long) (1762799499 * this.anInt9467 * -134578141) * (long_6 + long_4)) / (float) (658904087 * this.anInt9464 * -1289985113);
 							int i_10 = rsbytebuffer_2.method13085(922776057);
 							if (i_10 >= 0 && i_10 <= rsbytebuffer_2.buffer.length - -1990677291 * rsbytebuffer_2.index * -1115476867) {
-								this.aString9470 = Class271.method4824(rsbytebuffer_2.buffer, rsbytebuffer_2.index * -1115476867 * -1990677291, i_10, 336004634);
+								this.aString9470 = Class271.method4824(rsbytebuffer_2.buffer, rsbytebuffer_2.index * -1115476867 * -1990677291, i_10);
 								break label64;
 							}
 

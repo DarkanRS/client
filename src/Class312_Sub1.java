@@ -4,7 +4,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 	Connection aClass202_7778;
 
-	public void init(Object object_1, boolean bool_2, int i_3) {
+	public void init(Object object_1, boolean bool_2) {
 		if (this.aClass202_7778 != null) {
 			try {
 				this.aClass202_7778.method3318(83456367);
@@ -33,7 +33,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								this.aClass282_Sub35_3655.writeByte(4);
 								this.aClass282_Sub35_3655.writeByte(this.aByte3656);
 								this.aClass282_Sub35_3655.writeInt(0);
-								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1775828673);
+								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -1775828673);
 							} catch (IOException ioexception_7) {
 								try {
 									this.aClass202_7778.method3318(1779285831);
@@ -52,11 +52,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						return;
 					}
 
-					this.extras.method7936(class282_sub50_sub11_sub1_4, -1738910950);
+					this.extras.method7936(class282_sub50_sub11_sub1_4);
 				}
 			}
 
-			this.priorities.method7936(class282_sub50_sub11_sub1_4, -1738910950);
+			this.priorities.method7936(class282_sub50_sub11_sub1_4);
 		}
 	}
 
@@ -66,7 +66,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(bool_1 ? 2 : 3);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -443418120);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -443418120);
 			} catch (IOException ioexception_5) {
 				try {
 					this.aClass202_7778.method3318(-1183746217);
@@ -102,7 +102,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0;
 				this.aClass282_Sub35_3655.writeByte(bool_1 ? 2 : 3);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -585768342);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -585768342);
 			} catch (IOException ioexception_6) {
 				try {
 					this.aClass202_7778.method3318(1946895320);
@@ -118,13 +118,13 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 	}
 
-	public void method5526(int i_1) {
+	public void method5526() {
 		if (this.aClass202_7778 != null) {
 			try {
 				this.aClass282_Sub35_3655.index = 0;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1373474989);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -1373474989);
 			} catch (IOException ioexception_5) {
 				try {
 					this.aClass202_7778.method3318(-1489776443);
@@ -147,7 +147,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 	}
 
-	public void method5543(byte b_1) {
+	public void method5543() {
 		if (this.aClass202_7778 != null) {
 			this.aClass202_7778.method3320((byte) 30);
 		}
@@ -220,20 +220,20 @@ public class Class312_Sub1 extends JS5StandardRequester {
 		} else {
 			try {
 				PaddedJS5Request class282_sub50_sub11_sub1_2;
-				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7941((byte) 4); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7955(-301602175)) {
+				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7955(-301602175)) {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2053652444);
-					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_2, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -2053652444);
+					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_2);
 				}
 
-				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7941((byte) 4); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7955(1146835721)) {
+				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7955(1146835721)) {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1058968042);
-					this.waitingExtras.method7936(class282_sub50_sub11_sub1_2, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -1058968042);
+					this.waitingExtras.method7936(class282_sub50_sub11_sub1_2);
 				}
 
 				for (int i_17 = 0; i_17 < 100; i_17++) {
@@ -284,11 +284,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								Object obj_14 = null;
 								PaddedJS5Request class282_sub50_sub11_sub1_15;
 								if (bool_11) {
-									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7941((byte) 4); class282_sub50_sub11_sub1_15 != null && class282_sub50_sub11_sub1_15.key * 5418180015864004923L * -7883876913471066125L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7955(-261946030)) {
+									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7941(); class282_sub50_sub11_sub1_15 != null && class282_sub50_sub11_sub1_15.key * 5418180015864004923L * -7883876913471066125L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7955(-261946030)) {
 										;
 									}
 								} else {
-									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7941((byte) 4); class282_sub50_sub11_sub1_15 != null && -7883876913471066125L * class282_sub50_sub11_sub1_15.key * 5418180015864004923L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7955(-43331753)) {
+									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7941(); class282_sub50_sub11_sub1_15 != null && -7883876913471066125L * class282_sub50_sub11_sub1_15.key * 5418180015864004923L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7955(-43331753)) {
 										;
 									}
 								}
@@ -391,20 +391,20 @@ public class Class312_Sub1 extends JS5StandardRequester {
 		} else {
 			try {
 				PaddedJS5Request class282_sub50_sub11_sub1_2;
-				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7941((byte) 4); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7955(572445941)) {
+				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7955(572445941)) {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 1134264052);
-					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_2, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, 1134264052);
+					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_2);
 				}
 
-				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7941((byte) 4); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7955(-792632663)) {
+				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7955(-792632663)) {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2080680995);
-					this.waitingExtras.method7936(class282_sub50_sub11_sub1_2, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -2080680995);
+					this.waitingExtras.method7936(class282_sub50_sub11_sub1_2);
 				}
 
 				for (int i_17 = 0; i_17 < 100; i_17++) {
@@ -455,11 +455,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								Object obj_14 = null;
 								PaddedJS5Request class282_sub50_sub11_sub1_15;
 								if (bool_11) {
-									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7941((byte) 4); class282_sub50_sub11_sub1_15 != null && class282_sub50_sub11_sub1_15.key * 5418180015864004923L * -7883876913471066125L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7955(464344065)) {
+									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7941(); class282_sub50_sub11_sub1_15 != null && class282_sub50_sub11_sub1_15.key * 5418180015864004923L * -7883876913471066125L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7955(464344065)) {
 										;
 									}
 								} else {
-									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7941((byte) 4); class282_sub50_sub11_sub1_15 != null && -7883876913471066125L * class282_sub50_sub11_sub1_15.key * 5418180015864004923L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7955(-1933263300)) {
+									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7941(); class282_sub50_sub11_sub1_15 != null && -7883876913471066125L * class282_sub50_sub11_sub1_15.key * 5418180015864004923L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7955(-1933263300)) {
 										;
 									}
 								}
@@ -540,9 +540,9 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			try {
 				this.aClass282_Sub35_3655.index = 0;
 				this.aClass282_Sub35_3655.writeByte(6);
-				this.aClass282_Sub35_3655.write24BitInt(3, (byte) 14);
-				this.aClass282_Sub35_3655.writeShort(0, 1417031095);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 810595372);
+				this.aClass282_Sub35_3655.write24BitInt(3);
+				this.aClass282_Sub35_3655.writeShort(0);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, 810595372);
 			} catch (IOException ioexception_5) {
 				try {
 					this.aClass202_7778.method3318(192003951);
@@ -587,7 +587,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								this.aClass282_Sub35_3655.writeByte(4);
 								this.aClass282_Sub35_3655.writeByte(this.aByte3656);
 								this.aClass282_Sub35_3655.writeInt(0);
-								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1020594054);
+								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -1020594054);
 							} catch (IOException ioexception_6) {
 								try {
 									this.aClass202_7778.method3318(684361654);
@@ -606,11 +606,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						return;
 					}
 
-					this.extras.method7936(class282_sub50_sub11_sub1_3, -1738910950);
+					this.extras.method7936(class282_sub50_sub11_sub1_3);
 				}
 			}
 
-			this.priorities.method7936(class282_sub50_sub11_sub1_3, -1738910950);
+			this.priorities.method7936(class282_sub50_sub11_sub1_3);
 		}
 	}
 
@@ -643,7 +643,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								this.aClass282_Sub35_3655.writeByte(4);
 								this.aClass282_Sub35_3655.writeByte(this.aByte3656);
 								this.aClass282_Sub35_3655.writeInt(0);
-								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 1101181210);
+								this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, 1101181210);
 							} catch (IOException ioexception_6) {
 								try {
 									this.aClass202_7778.method3318(1984653342);
@@ -662,15 +662,15 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						return;
 					}
 
-					this.extras.method7936(class282_sub50_sub11_sub1_3, -1738910950);
+					this.extras.method7936(class282_sub50_sub11_sub1_3);
 				}
 			}
 
-			this.priorities.method7936(class282_sub50_sub11_sub1_3, -1738910950);
+			this.priorities.method7936(class282_sub50_sub11_sub1_3);
 		}
 	}
 
-	public boolean method5521(byte b_1) {
+	public boolean method5521() {
 		int i_4;
 		if (this.aClass202_7778 != null) {
 			long long_2 = Class169.time();
@@ -697,20 +697,20 @@ public class Class312_Sub1 extends JS5StandardRequester {
 		} else {
 			try {
 				PaddedJS5Request class282_sub50_sub11_sub1_3;
-				for (class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.priorities.method7941((byte) 4); class282_sub50_sub11_sub1_3 != null; class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.priorities.method7955(-302687935)) {
+				for (class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.priorities.method7941(); class282_sub50_sub11_sub1_3 != null; class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.priorities.method7955(-302687935)) {
 					this.aClass282_Sub35_3655.index = 0;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_3.key);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -1323919760);
-					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_3, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -1323919760);
+					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_3);
 				}
 
-				for (class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.extras.method7941((byte) 4); class282_sub50_sub11_sub1_3 != null; class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.extras.method7955(-1021577303)) {
+				for (class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.extras.method7941(); class282_sub50_sub11_sub1_3 != null; class282_sub50_sub11_sub1_3 = (PaddedJS5Request) this.extras.method7955(-1021577303)) {
 					this.aClass282_Sub35_3655.index = 0;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_3.key);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 5845484);
-					this.waitingExtras.method7936(class282_sub50_sub11_sub1_3, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, 5845484);
+					this.waitingExtras.method7936(class282_sub50_sub11_sub1_3);
 				}
 
 				for (int i_18 = 0; i_18 < 100; i_18++) {
@@ -761,11 +761,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								Object obj_15 = null;
 								PaddedJS5Request class282_sub50_sub11_sub1_16;
 								if (bool_12) {
-									for (class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingExtras.method7941((byte) 4); class282_sub50_sub11_sub1_16 != null && class282_sub50_sub11_sub1_16.key != long_13; class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingExtras.method7955(-257563362)) {
+									for (class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingExtras.method7941(); class282_sub50_sub11_sub1_16 != null && class282_sub50_sub11_sub1_16.key != long_13; class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingExtras.method7955(-257563362)) {
 										;
 									}
 								} else {
-									for (class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingPriorities.method7941((byte) 4); class282_sub50_sub11_sub1_16 != null && class282_sub50_sub11_sub1_16.key != long_13; class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingPriorities.method7955(-691952599)) {
+									for (class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingPriorities.method7941(); class282_sub50_sub11_sub1_16 != null && class282_sub50_sub11_sub1_16.key != long_13; class282_sub50_sub11_sub1_16 = (PaddedJS5Request) this.waitingPriorities.method7955(-691952599)) {
 										;
 									}
 								}
@@ -875,20 +875,20 @@ public class Class312_Sub1 extends JS5StandardRequester {
 		} else {
 			try {
 				PaddedJS5Request class282_sub50_sub11_sub1_2;
-				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7941((byte) 4); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7955(-1980128000)) {
+				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.priorities.method7955(-1980128000)) {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(1);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -943163618);
-					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_2, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -943163618);
+					this.waitingPriorities.method7936(class282_sub50_sub11_sub1_2);
 				}
 
-				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7941((byte) 4); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7955(-676569028)) {
+				for (class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7941(); class282_sub50_sub11_sub1_2 != null; class282_sub50_sub11_sub1_2 = (PaddedJS5Request) this.extras.method7955(-676569028)) {
 					this.aClass282_Sub35_3655.index = 0 * -1990677291;
 					this.aClass282_Sub35_3655.writeByte(0);
 					this.aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1_2.key * 5418180015864004923L * -7883876913471066125L);
-					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -477727140);
-					this.waitingExtras.method7936(class282_sub50_sub11_sub1_2, -1738910950);
+					this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -477727140);
+					this.waitingExtras.method7936(class282_sub50_sub11_sub1_2);
 				}
 
 				for (int i_17 = 0; i_17 < 100; i_17++) {
@@ -939,11 +939,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 								Object obj_14 = null;
 								PaddedJS5Request class282_sub50_sub11_sub1_15;
 								if (bool_11) {
-									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7941((byte) 4); class282_sub50_sub11_sub1_15 != null && class282_sub50_sub11_sub1_15.key * 5418180015864004923L * -7883876913471066125L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7955(-693904973)) {
+									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7941(); class282_sub50_sub11_sub1_15 != null && class282_sub50_sub11_sub1_15.key * 5418180015864004923L * -7883876913471066125L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingExtras.method7955(-693904973)) {
 										;
 									}
 								} else {
-									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7941((byte) 4); class282_sub50_sub11_sub1_15 != null && -7883876913471066125L * class282_sub50_sub11_sub1_15.key * 5418180015864004923L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7955(-1904114468)) {
+									for (class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7941(); class282_sub50_sub11_sub1_15 != null && -7883876913471066125L * class282_sub50_sub11_sub1_15.key * 5418180015864004923L != long_12; class282_sub50_sub11_sub1_15 = (PaddedJS5Request) this.waitingPriorities.method7955(-1904114468)) {
 										;
 									}
 								}
@@ -1025,7 +1025,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -533636623);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -533636623);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(2071907403);
@@ -1061,7 +1061,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -199994614);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -199994614);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(-800915699);
@@ -1083,7 +1083,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, 391543029);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, 391543029);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(855871609);
@@ -1105,7 +1105,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 				this.aClass282_Sub35_3655.index = 0 * -1990677291;
 				this.aClass282_Sub35_3655.writeByte(7);
 				this.aClass282_Sub35_3655.method13204(0L);
-				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, 0, this.aClass282_Sub35_3655.buffer.length, -2081026700);
+				this.aClass202_7778.write(this.aClass282_Sub35_3655.buffer, this.aClass282_Sub35_3655.buffer.length, -2081026700);
 			} catch (IOException ioexception_4) {
 				try {
 					this.aClass202_7778.method3318(198330451);
@@ -1155,9 +1155,9 @@ public class Class312_Sub1 extends JS5StandardRequester {
 
 	}
 
-	public static Class282_Sub36 method12538(byte b_0) {
+	public static Class282_Sub36 method12538() {
 		if (Class291_Sub1.aClass482_3459 != null && Class291_Sub1.aClass460_8030 != null) {
-			Class291_Sub1.aClass460_8030.method7684(Class291_Sub1.aClass482_3459, (byte) 74);
+			Class291_Sub1.aClass460_8030.method7684(Class291_Sub1.aClass482_3459);
 			Class282_Sub36 class282_sub36_1 = (Class282_Sub36) Class291_Sub1.aClass460_8030.method7683(1601520946);
 			if (class282_sub36_1 == null) {
 				return null;
@@ -1169,5 +1169,4 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			return null;
 		}
 	}
-
 }

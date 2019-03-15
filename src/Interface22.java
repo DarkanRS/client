@@ -6,19 +6,19 @@ public interface Interface22 {
 
 	int[] method140(int var1, float var2, int var3, int var4, boolean var5, byte var6);
 
-	int[] method141(int var1, float var2, int var3, int var4, boolean var5, int var6);
+	int[] method141(int var1, int var3, int var4, boolean var5, int var6);
 
 	int[] method142(int var1, float var2, int var3, int var4, boolean var5);
 
 	float[] method143(int var1, float var2, int var3, int var4, boolean var5);
 
-	int method84(int var1);
+	int method84();
 
 	int method76();
 
 	Class169 method144(int var1, int var2);
 
-	float[] method145(int var1, float var2, int var3, int var4, boolean var5, int var6);
+	float[] method145(int var1, int var3, int var4);
 
 	boolean method146(int var1);
 

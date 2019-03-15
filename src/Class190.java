@@ -10,8 +10,8 @@ public class Class190 {
 		Class442 class442_1 = null;
 
 		try {
-			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, true, (byte) -1);
-			RsByteBuffer rsbytebuffer_2 = Class393.preferences.method13499(-1147561842);
+			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, true);
+			RsByteBuffer rsbytebuffer_2 = Class393.preferences.method13499();
 			class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index, -1686459180);
 		} catch (Exception exception_4) {
 			;
@@ -54,16 +54,16 @@ public class Class190 {
 
 	}
 
-	public static RouteStrategy method3150(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	public static RouteStrategy method3150(int i_0, int i_1, int i_2, int i_3) {
 		Class224.aClass225_Sub2_2778.approxDestinationX = i_0;
 		Class224.aClass225_Sub2_2778.approxDestinationY = i_1;
 		Class224.aClass225_Sub2_2778.approxDestinationSizeX = i_2;
 		Class224.aClass225_Sub2_2778.approxDestinationSizeY = i_3;
-		Class224.aClass225_Sub2_2778.anInt7928 = i_4;
+		Class224.aClass225_Sub2_2778.anInt7928 = 0;
 		return Class224.aClass225_Sub2_2778;
 	}
 
-	static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5, int i_6) {
+	static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
 		Class180[] arr_7 = client.aClass180Array7348;
 
 		for (int i_8 = 0; i_8 < arr_7.length; i_8++) {
@@ -103,7 +103,7 @@ public class Class190 {
 
 	}
 
-	static void method3152(byte b_0) {
+	static void method3152() {
 		if (client.gameState == 17) {
 			Class42_Sub1.method14562(733346392);
 		}
@@ -111,7 +111,7 @@ public class Class190 {
 		Class186.method3083(619410098);
 		client.aClass184_7218.method3051((byte) -99);
 		Class530.aBool7050 = true;
-		Class250.method4296(-1751136048);
+		Class250.method4296();
 
 		int i_1;
 		for (i_1 = 0; i_1 < client.aClass180Array7348.length; i_1++) {
@@ -126,7 +126,7 @@ public class Class190 {
 		client.anInt7255 = (int) (Math.random() * 120.0D) - 60;
 		client.anInt7203 = (int) (Math.random() * 30.0D) - 20;
 		client.aFloat7365 = (float) ((int) (Math.random() * 160.0D) - 80 & 0x3fff);
-		Class394.method6763((byte) 68);
+		Class394.method6763();
 
 		for (i_1 = 0; i_1 < 2048; i_1++) {
 			client.players[i_1] = null;
@@ -138,12 +138,12 @@ public class Class190 {
 		client.NPCS.method7749(1966305284);
 		client.aClass482_7333.method8118(1024989967);
 		client.aClass465_7334.method7749(1935752602);
-		client.aClass457_7335.method7651((byte) 5);
+		client.aClass457_7335.method7651();
 		client.aClass465_7414.method7749(828403909);
 		Class282_Sub31.aClass482_7775 = new NodeCollection();
 		Class282_Sub31.aClass482_7776 = new NodeCollection();
 		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(-1043684196);
-		Class8_Sub3.method14341(1480679080);
+		Class8_Sub3.method14341();
 		Class296.anInt3534 = 0;
 		Class282_Sub44.anInt8064 = 0;
 		SpotAnimDefinitions.anInt6985 = 0;
@@ -198,7 +198,7 @@ public class Class190 {
 			client.GRAND_EXCHANGE_SLOTS[i_1] = new GrandExchangeSlot();
 		}
 
-		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(117803918);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(117803918);
 		client.aBool7371 = true;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1420130584);

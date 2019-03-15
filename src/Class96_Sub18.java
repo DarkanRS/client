@@ -16,7 +16,7 @@ public class Class96_Sub18 extends Class96 {
 		this.anInt9398 = rsbytebuffer_1.readInt();
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Animable animable_2 = Class82.aClass75Array804[this.anInt9395].method1342((byte) 62);
 		if (this.anInt9398 == 0) {
 			Class20.animate(animable_2, this.anIntArray9397, 0, false, (byte) -103);
@@ -26,7 +26,7 @@ public class Class96_Sub18 extends Class96 {
 
 	}
 
-	boolean method1599(int i_1) {
+	boolean method1599() {
 		AnimationDefinitions animationdefinitions_2 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(this.anInt9396, (byte) -29);
 		return animationdefinitions_2.ready();
 	}
@@ -46,7 +46,7 @@ public class Class96_Sub18 extends Class96 {
 		int i_6 = cs2executor_4.intStack[cs2executor_4.intStackPtr];
 		int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class411.method6914(icomponentdefinitions_0.idHash, (short) 887);
+			Class411.method6914(icomponentdefinitions_0.idHash);
 			Class106.method1818(icomponentdefinitions_0.idHash, 209948825);
 			Item.method12575(icomponentdefinitions_0.idHash, (byte) 59);
 		}

@@ -10,11 +10,11 @@ public class Class341 {
 
 	public int anInt3995;
 
-	Class341(int i_1, int i_2, int i_3, int i_4) {
+	Class341(int i_1) {
 		this.anInt3992 = i_1;
-		this.anInt3993 = i_2;
-		this.anInt3994 = i_3;
-		this.anInt3995 = i_4;
+		this.anInt3993 = 0;
+		this.anInt3994 = 0;
+		this.anInt3995 = 0;
 	}
 
 	Class341() {

@@ -5,7 +5,7 @@ public class Class395 {
 	static int anInt4788;
 	Inflater anInflater4787;
 
-	public byte[] method6764(byte[] bytes_1, byte b_2) {
+	public byte[] method6764(byte[] bytes_1) {
 		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(bytes_1);
 		rsbytebuffer_3.index = bytes_1.length - 4;
 		int i_4 = rsbytebuffer_3.method13085(-605901708);
@@ -36,17 +36,17 @@ public class Class395 {
 	}
 
 	public Class395() {
-		this(-1, 1000000, 1000000);
+		this(-1);
 	}
 
-	Class395(int i_1, int i_2, int i_3) {
+	Class395(int i_1) {
 	}
 
 	public static final void method6772(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if (i_0 >= Class532_Sub1.anInt7071 && i_1 <= Class532_Sub1.anInt7069 && i_2 >= Class532_Sub1.anInt7070 && i_3 <= Class532_Sub1.anInt7068) {
-			Class92.method1564(i_0, i_1, i_2, i_3, i_4, (byte) -36);
+			Class92.method1564(i_0, i_1, i_2, i_3, i_4);
 		} else {
-			Class463.method7728(i_0, i_1, i_2, i_3, i_4, 2064042619);
+			Class463.method7728(i_0, i_1, i_2, i_3, i_4);
 		}
 
 	}

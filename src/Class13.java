@@ -31,7 +31,7 @@ public class Class13 {
 	static void method503(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1) {
 		boolean bool_2 = false;
 		class282_sub50_sub15_0.method13452();
-		for (Class282_Sub50_Sub15 class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_3 != null; class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1642244739)) {
+		for (Class282_Sub50_Sub15 class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_3 != null; class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1642244739)) {
 			if (Class301.method5334(class282_sub50_sub15_0.method15244((byte) 107), class282_sub50_sub15_3.method15244((byte) 59), 993157847)) {
 				Class224.method3782(class282_sub50_sub15_0, class282_sub50_sub15_3, -1979656463);
 				bool_2 = true;
@@ -39,18 +39,18 @@ public class Class13 {
 			}
 		}
 		if (!bool_2) {
-			Class20.aClass477_182.method7936(class282_sub50_sub15_0, -1738910950);
+			Class20.aClass477_182.method7936(class282_sub50_sub15_0);
 		}
 	}
 
-	static final void method505(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+	static final void method505(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		String string_5 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4, (byte) 0);
+		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4);
 		if (!attributedefault_6.typeName.equals(string_5)) {
-			icomponentdefinitions_0.method2000(i_4, string_5, 2122573770);
+			icomponentdefinitions_0.method2000(i_4, string_5);
 		} else {
-			icomponentdefinitions_0.method1995(i_4, -1265527536);
+			icomponentdefinitions_0.method1995(i_4);
 		}
 	}
 
@@ -68,7 +68,7 @@ public class Class13 {
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-888508075) == null) {
 			return 0;
 		} else if (i_4 < 3) {
-			RegionMap regionmap_6 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+			RegionMap regionmap_6 = IndexLoaders.MAP_REGION_DECODER.method4433();
 			int i_7 = i_0 >> 9;
 			int i_8 = i_1 >> 9;
 			if (i_2 >= 0 && i_3 >= 0 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(1440924603) - 1 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1516017407) - 1) {

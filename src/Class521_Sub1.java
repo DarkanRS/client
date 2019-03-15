@@ -14,7 +14,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract int method12982(Class282_Sub24[] var1);
 
-	abstract boolean method12983(GraphicalRenderer var1, int var2, int var3, int var4);
+	abstract boolean method12983(GraphicalRenderer var1, int var2, int var3);
 
 	abstract void method12984(int var1);
 
@@ -28,7 +28,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract Class285 method12989(GraphicalRenderer var1);
 
-	abstract Class285 method12990(GraphicalRenderer var1, int var2);
+	abstract Class285 method12990(GraphicalRenderer var1);
 
 	abstract void method12991(GraphicalRenderer var1, int var2);
 
@@ -42,11 +42,11 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	public abstract int method12995(int var1);
 
-	int method12996(int i_1) {
+	int method12996() {
 		return 0;
 	}
 
-	public int method12997(int i_1) {
+	public int method12997() {
 		return -this.method12995(-812710006);
 	}
 
@@ -62,7 +62,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	public abstract int method13003();
 
-	int method13004(int i_1, int i_2, Class282_Sub24[] arr_3, int i_4) {
+	int method13004(int i_1, int i_2, Class282_Sub24[] arr_3) {
 		long long_5 = this.aClass206_7970.aLongArrayArrayArray2645[this.plane][i_1][i_2];
 		long long_7 = 0L;
 		int i_9;
@@ -137,7 +137,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract boolean method13034();
 
-	abstract int method13036(Class282_Sub24[] var1, int var2);
+	abstract int method13036(Class282_Sub24[] var1);
 
 	abstract boolean method13037(GraphicalRenderer var1, int var2);
 }

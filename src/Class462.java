@@ -20,12 +20,12 @@ public class Class462 {
 				return false;
 			} else {
 				this.anInt5542 = ints_5[i_3];
-				this.aClass282_Sub50_Sub13_5545 = animationindexloader_1.getAnimationFrame(this.anInt5542 >> 16, -1536383536);
+				this.aClass282_Sub50_Sub13_5545 = animationindexloader_1.getAnimationFrame(this.anInt5542 >> 16);
 				this.anInt5542 &= 0xffff;
 				if (this.aClass282_Sub50_Sub13_5545 != null) {
 					if (animationdefinitions_2.tweened && i_4 != -1 && i_4 < ints_5.length) {
 						this.anInt5547 = ints_5[i_4];
-						this.aClass282_Sub50_Sub13_5546 = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16, -1536383536);
+						this.aClass282_Sub50_Sub13_5546 = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16);
 						this.anInt5547 &= 0xffff;
 					}
 					if (animationdefinitions_2.aBool5923) {
@@ -34,20 +34,20 @@ public class Class462 {
 					if (this.aClass282_Sub50_Sub13_5545.method15080(this.anInt5542, -1144516636)) {
 						this.anInt5543 |= 0x80;
 					}
-					if (this.aClass282_Sub50_Sub13_5545.method15079(this.anInt5542, 61802721)) {
+					if (this.aClass282_Sub50_Sub13_5545.method15079(this.anInt5542)) {
 						this.anInt5543 |= 0x100;
 					}
-					if (this.aClass282_Sub50_Sub13_5545.method15081(this.anInt5542, -752356381)) {
+					if (this.aClass282_Sub50_Sub13_5545.method15081(this.anInt5542)) {
 						this.anInt5543 |= 0x400;
 					}
 					if (this.aClass282_Sub50_Sub13_5546 != null) {
 						if (this.aClass282_Sub50_Sub13_5546.method15080(this.anInt5547, -2104215933)) {
 							this.anInt5543 |= 0x80;
 						}
-						if (this.aClass282_Sub50_Sub13_5546.method15079(this.anInt5547, 61802721)) {
+						if (this.aClass282_Sub50_Sub13_5546.method15079(this.anInt5547)) {
 							this.anInt5543 |= 0x100;
 						}
-						if (this.aClass282_Sub50_Sub13_5546.method15081(this.anInt5547, -752356381)) {
+						if (this.aClass282_Sub50_Sub13_5546.method15081(this.anInt5547)) {
 							this.anInt5543 |= 0x400;
 						}
 					}
@@ -63,7 +63,7 @@ public class Class462 {
 		}
 	}
 
-	final void method7708(int i_1) {
+	final void method7708() {
 		this.aBool5544 = false;
 		this.anInt5543 = 0;
 		this.aClass282_Sub50_Sub13_5546 = null;

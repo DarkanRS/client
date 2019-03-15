@@ -3,15 +3,15 @@ public class Class456_Sub2 extends Animation {
 	Class521_Sub1 aClass521_Sub1_7890;
 
 	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
-		Class213.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_7890, (short) 255);
+		Class213.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_7890);
 	}
 
-	Class456_Sub2(Class521_Sub1 class521_sub1_1, boolean bool_2) {
-		super(bool_2);
+	Class456_Sub2(Class521_Sub1 class521_sub1_1) {
+		super(false);
 		this.aClass521_Sub1_7890 = class521_sub1_1;
 	}
 
-	static void method12680(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, FontRenderer fontrenderer_6, FontMetrics fontmetrics_7, String string_8, int i_9) {
+	static void method12680(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, FontRenderer fontrenderer_6, FontMetrics fontmetrics_7, String string_8) {
 		int i_10 = 255 - Class301.anInt3556 - Class20.anInt156;
 		if (i_10 < 0) {
 			i_10 = 0;
@@ -40,7 +40,7 @@ public class Class456_Sub2 extends Animation {
 			Class60.aClass160_612.method2752(i_3 + i_1 - Class60.aClass160_612.method2747(), i_2);
 		}
 
-		fontrenderer_6.renderText(string_8, i_1 + 3, (20 - fontmetrics_7.anInt4978) / 2 + i_2 + fontmetrics_7.anInt4978, Class388.anInt4722 | ~0xffffff, -1, -418109423);
+		fontrenderer_6.renderText(string_8, i_1 + 3, (20 - fontmetrics_7.anInt4978) / 2 + i_2 + fontmetrics_7.anInt4978, Class388.anInt4722 | ~0xffffff, -1);
 		graphicalrenderer_0.B(i_1, i_5 + i_2, i_3, i_4 - i_5, i_10 << 24 | Class282_Sub20_Sub9.anInt9792, 1);
 	}
 

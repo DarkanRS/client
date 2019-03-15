@@ -32,23 +32,23 @@ public class OverlayDef {
 
 	public int anInt7067 = 64;
 
-	void method11356(byte b_1) {
+	void method11356() {
 		this.anInt7052 = this.anInt7052 << 8 | this.anInt7053;
 	}
 
-	void method11357(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method11357(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method11364(rsbytebuffer_1, i_3, (byte) 14);
+			this.method11364(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method11364(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method11364(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.primaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger(), 2117926535);
+			this.primaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
 		} else if (i_2 == 2) {
 			this.texture = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 3) {
@@ -59,7 +59,7 @@ public class OverlayDef {
 		} else if (i_2 == 5) {
 			this.aBool7056 = false;
 		} else if (i_2 == 7) {
-			this.secondaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger(), 2117926535);
+			this.secondaryRGB = IdentikitDefinition.method912(rsbytebuffer_1.read24BitUnsignedInteger());
 		} else if (i_2 == 8) {
 			this.aClass536_7062.anInt7093 = this.anInt7053;
 		} else if (i_2 == 9) {

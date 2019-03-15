@@ -570,20 +570,20 @@ public class RSMesh {
 		return this.faceCount++;
 	}
 
-	public byte method2664(short s_1, short s_2, short s_3, short s_4, short s_5, short s_6, byte b_7, byte b_8, byte b_9) {
+	public byte method2664() {
 		if (this.numTextureTriangles >= 255) {
 			throw new IllegalStateException();
 		} else {
 			this.textureRenderTypes[this.numTextureTriangles] = 3;
-			this.texTriX[this.numTextureTriangles] = s_1;
-			this.texTriY[this.numTextureTriangles] = s_2;
-			this.texTriZ[this.numTextureTriangles] = s_3;
-			this.anIntArray1989[this.numTextureTriangles] = s_4;
-			this.anIntArray2000[this.numTextureTriangles] = s_5;
-			this.anIntArray2001[this.numTextureTriangles] = s_6;
-			this.aByteArray2005[this.numTextureTriangles] = b_7;
-			this.aByteArray1990[this.numTextureTriangles] = b_8;
-			this.anIntArray1992[this.numTextureTriangles] = b_9;
+			this.texTriX[this.numTextureTriangles] = (short) 0;
+			this.texTriY[this.numTextureTriangles] = (short) 32767;
+			this.texTriZ[this.numTextureTriangles] = (short) 0;
+			this.anIntArray1989[this.numTextureTriangles] = (short) 1024;
+			this.anIntArray2000[this.numTextureTriangles] = (short) 1024;
+			this.anIntArray2001[this.numTextureTriangles] = (short) 1024;
+			this.aByteArray2005[this.numTextureTriangles] = (byte) 0;
+			this.aByteArray1990[this.numTextureTriangles] = (byte) 0;
+			this.anIntArray1992[this.numTextureTriangles] = (byte) 0;
 			return (byte) (this.numTextureTriangles++);
 		}
 	}
@@ -1037,28 +1037,28 @@ public class RSMesh {
 
 	}
 
-	public void upscale(int i_1) {
+	public void upscale() {
 		int i_2;
 		for (i_2 = 0; i_2 < this.vertexCount; i_2++) {
-			this.vertexX[i_2] <<= i_1;
-			this.vertexY[i_2] <<= i_1;
-			this.vertexZ[i_2] <<= i_1;
+			this.vertexX[i_2] <<= 2;
+			this.vertexY[i_2] <<= 2;
+			this.vertexZ[i_2] <<= 2;
 		}
 
 		if (this.numTextureTriangles > 0 && this.anIntArray1989 != null) {
 			for (i_2 = 0; i_2 < this.anIntArray1989.length; i_2++) {
-				this.anIntArray1989[i_2] <<= i_1;
-				this.anIntArray2000[i_2] <<= i_1;
+				this.anIntArray1989[i_2] <<= 2;
+				this.anIntArray2000[i_2] <<= 2;
 				if (this.textureRenderTypes[i_2] != 1) {
-					this.anIntArray2001[i_2] <<= i_1;
+					this.anIntArray2001[i_2] <<= 2;
 				}
 			}
 		}
 
 	}
 
-	public static RSMesh decodeMesh(Index index_0, int i_1, int i_2) {
-		byte[] bytes_3 = index_0.getFile(i_1, i_2);
+	public static RSMesh decodeMesh(Index index_0, int i_1) {
+		byte[] bytes_3 = index_0.getFile(i_1, 0);
 		return bytes_3 == null ? null : new RSMesh(bytes_3);
 	}
 
@@ -1193,7 +1193,7 @@ public class RSMesh {
 				if (rsmesh_14.aClass84Array2009 != null) {
 					for (i_15 = 0; i_15 < rsmesh_14.aClass84Array2009.length; i_15++) {
 						Class84 class84_21 = rsmesh_14.aClass84Array2009[i_15];
-						this.aClass84Array2009[i_5++] = class84_21.method1459(class84_21.anInt809 + this.faceCount, 482846070);
+						this.aClass84Array2009[i_5++] = class84_21.method1459(class84_21.anInt809 + this.faceCount);
 					}
 				}
 
@@ -1243,7 +1243,7 @@ public class RSMesh {
 						i_16 = this.method2657(rsmesh_14, rsmesh_14.aClass87Array2007[i_15].anInt836, s_13);
 						int i_17 = this.method2657(rsmesh_14, rsmesh_14.aClass87Array2007[i_15].anInt837, s_13);
 						int i_18 = this.method2657(rsmesh_14, rsmesh_14.aClass87Array2007[i_15].anInt838, s_13);
-						this.aClass87Array2007[i_3] = rsmesh_14.aClass87Array2007[i_15].method1488(i_16, i_17, i_18, (byte) 98);
+						this.aClass87Array2007[i_3] = rsmesh_14.aClass87Array2007[i_15].method1488(i_16, i_17, i_18);
 						++i_3;
 					}
 				}
@@ -1251,7 +1251,7 @@ public class RSMesh {
 				if (rsmesh_14.aClass172Array2008 != null) {
 					for (i_15 = 0; i_15 < rsmesh_14.aClass172Array2008.length; i_15++) {
 						i_16 = this.method2657(rsmesh_14, rsmesh_14.aClass172Array2008[i_15].anInt2119, s_13);
-						this.aClass172Array2008[i_4] = rsmesh_14.aClass172Array2008[i_15].method2911(i_16, -546330898);
+						this.aClass172Array2008[i_4] = rsmesh_14.aClass172Array2008[i_15].method2911(i_16);
 						++i_4;
 					}
 				}

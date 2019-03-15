@@ -18,7 +18,7 @@ public class Class353 {
 		return this == aClass353_4107 ? 0 : (this == aClass353_4106 ? i_4 - i_1 : (this == aClass353_4105 ? (i_4 - i_1) / 2 : 0));
 	}
 
-	static void method6208(File file_0, byte[] bytes_1, int i_2, int i_3) throws IOException {
+	static void method6208(File file_0, byte[] bytes_1, int i_2) throws IOException {
 		DataInputStream datainputstream_4 = new DataInputStream(new BufferedInputStream(new FileInputStream(file_0)));
 		try {
 			datainputstream_4.readFully(bytes_1, 0, i_2);

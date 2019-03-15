@@ -12,7 +12,7 @@ public class Class412 {
 		throw new Error();
 	}
 
-	static void method6934(Matrix44Var matrix44var_0, Matrix44Arr matrix44arr_1, int i_2, int i_3, byte b_4) {
+	static void method6934(Matrix44Var matrix44var_0, Matrix44Arr matrix44arr_1, int i_2, int i_3) {
 		if (Class20.aClass384_158 == null) {
 			Class20.aClass384_158 = new Matrix44Arr(matrix44arr_1);
 		} else {

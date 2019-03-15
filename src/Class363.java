@@ -57,11 +57,11 @@ public class Class363 {
 		int i_3 = Class249.aClass249_3083.aByte3085;
 		int i_4 = 0;
 		if (animable_0.anInt10342 > client.cycles) {
-			Class249.method4281(animable_0, -1503548002);
+			Class249.method4281(animable_0);
 		} else if (animable_0.anInt10345 >= client.cycles) {
-			Class463.method7727(animable_0, -1790074477);
+			Class463.method7727(animable_0);
 		} else {
-			SystemInfo.method13466(animable_0, bool_1, 141891001);
+			SystemInfo.method13466(animable_0, bool_1);
 			i_3 = IdentikitDefinition.anInt430;
 			i_4 = Class8_Sub1.anInt8515;
 		}
@@ -78,8 +78,8 @@ public class Class363 {
 			animable_0.anInt10345 = 0;
 			i_3 = Class249.aClass249_3083.aByte3085;
 			i_4 = 0;
-			animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize(828768449) * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize(828768449) * 256));
-			animable_0.method15801(-1972620165);
+			animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
+			animable_0.method15801();
 		}
 		if (Class84.myPlayer == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(723986373) - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY(-806842262) - 12) * 512)) {
 			animable_0.currentAnimation.update(-1);
@@ -92,16 +92,16 @@ public class Class363 {
 			animable_0.anInt10345 = 0;
 			i_3 = Class249.aClass249_3083.aByte3085;
 			i_4 = 0;
-			animable_0.method11172((float) (animable_0.regionBaseX[0] * 512 + animable_0.getSize(828768449) * 256), vector3_5.y, (float) (512 * animable_0.regionBaseY[0] + animable_0.getSize(828768449) * 256));
-			animable_0.method15801(-1972620165);
+			animable_0.method11172((float) (animable_0.regionBaseX[0] * 512 + animable_0.getSize() * 256), vector3_5.y, (float) (512 * animable_0.regionBaseY[0] + animable_0.getSize() * 256));
+			animable_0.method15801();
 		}
-		i_6 = Class427.method7188(animable_0, 1919547361);
-		WallDecoration.method16087(animable_0, -702995784);
+		i_6 = Class427.method7188(animable_0);
+		WallDecoration.method16087(animable_0);
 		Class302.method5361(animable_0, i_3, i_4, i_6, 1792753982);
 		Class236.method3985(animable_0, i_3, (byte) -27);
 		Class150.method2581(animable_0, -1454383651);
 		Quaternion quaternion_7 = Quaternion.create();
-		quaternion_7.romYawPitchRoll(Class382.method6508(animable_0.aClass19_10359.method578((byte) 2)), Class382.method6508(animable_0.aClass19_10330.method578((byte) 2)), Class382.method6508(animable_0.aClass19_10360.method578((byte) 2)));
+		quaternion_7.romYawPitchRoll(Class382.method6508(animable_0.aClass19_10359.method578()), Class382.method6508(animable_0.aClass19_10330.method578()), Class382.method6508(animable_0.aClass19_10360.method578()));
 		animable_0.method11187(quaternion_7);
 		quaternion_7.cache();
 	}

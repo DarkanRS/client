@@ -12,11 +12,11 @@ public class Class468_Sub15 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
-	public int getValue(int i_1) {
+	public int getValue() {
 		return this.anInt5578;
 	}
 
@@ -28,7 +28,7 @@ public class Class468_Sub15 extends Preference {
 		return 1;
 	}
 
-	public void method12741(int i_1) {
+	public void method12741() {
 		if (this.manager.method13514((byte) 95) == Game.stellarDawn) {
 			this.anInt5578 = 2;
 		}
@@ -51,7 +51,7 @@ public class Class468_Sub15 extends Preference {
 		return 1;
 	}
 
-	static final void method12746(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static final void method12746(int i_0, int i_1, int i_2, int i_3) {
 		if (i_0 >= Class532_Sub2.anInt7071 && i_0 <= Class532_Sub2.anInt7069) {
 			i_1 = Class275.method4890(i_1, Class532_Sub2.anInt7070, Class532_Sub2.anInt7068, 2018185590);
 			i_2 = Class275.method4890(i_2, Class532_Sub2.anInt7070, Class532_Sub2.anInt7068, 1691480210);

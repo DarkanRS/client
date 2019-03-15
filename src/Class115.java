@@ -14,7 +14,7 @@ public abstract class Class115 implements Interface7 {
 
 	abstract void method1891(Class282_Sub21_Sub1 var1, Matrix44Arr var2);
 
-	String method1892(byte b_1) {
+	String method1892() {
 		return this.aString1245;
 	}
 
@@ -129,7 +129,7 @@ public abstract class Class115 implements Interface7 {
 	abstract void method1948(int var1, int var2, Interface30 var3);
 
 	public static boolean method1950(CharSequence charsequence_0, int i_1) {
-		return Class272.method4841(charsequence_0, 10, true, 547705693);
+		return Class272.method4841(charsequence_0);
 	}
 
 	public static boolean method1952(boolean bool_0, int i_1) {

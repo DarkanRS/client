@@ -16,7 +16,7 @@ public class Class135_Sub1 extends Class135 implements Interface15 {
 		this.aClass505_Sub1_1620.method13663(this);
 	}
 
-	public void method111(int i_1, byte[] bytes_2, int i_3) {
+	public void method111(byte[] bytes_2, int i_3) {
 		this.method2342(bytes_2, i_3);
 	}
 

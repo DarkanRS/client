@@ -8,16 +8,16 @@ public class Class282_Sub39 extends Node {
 		this.aDouble8004 = d_2;
 	}
 
-	long method13294(int i_1) {
+	long method13294() {
 		return (long) (this.aShortArrayArray8003.length << 32 | this.aShortArrayArray8003[0].length);
 	}
 
-	static void method13296(Matrix44Arr matrix44arr_0, int i_1) {
+	static void method13296(Matrix44Arr matrix44arr_0) {
 		Class20.aClass384_185.method6562(matrix44arr_0);
 	}
 
-	static void method13297(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2, int i_3) {
-		NativeSprite nativesprite_4 = worldmapareadefs_2.method3729(graphicalrenderer_0, 216702129);
+	static void method13297(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2) {
+		NativeSprite nativesprite_4 = worldmapareadefs_2.method3729(graphicalrenderer_0);
 		if (nativesprite_4 != null) {
 			int i_5 = nativesprite_4.method2747();
 			if (nativesprite_4.method2793() > i_5) {
@@ -33,7 +33,7 @@ public class Class282_Sub39 extends Node {
 			int i_12;
 			int i_14;
 			if (worldmapareadefs_2.areaName != null) {
-				i_9 = Class282_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, (int[]) null, Class291_Sub1.aStringArray8024, (Sprite[]) null, (byte) 0);
+				i_9 = Class282_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, (int[]) null, Class291_Sub1.aStringArray8024, (Sprite[]) null);
 
 				for (i_12 = 0; i_12 < i_9; i_12++) {
 					String string_22 = Class291_Sub1.aStringArray8024[i_12];
@@ -84,7 +84,7 @@ public class Class282_Sub39 extends Node {
 				}
 
 				if (worldmapareadefs_2.anInt2727 != 0) {
-					graphicalrenderer_0.method8562(i_15, i_13, i_17 - i_15, i_18 - i_13, worldmapareadefs_2.anInt2727, (byte) 4);
+					graphicalrenderer_0.method8562(i_15, i_13, i_17 - i_15, i_18 - i_13, worldmapareadefs_2.anInt2727);
 				}
 
 				for (int i_19 = 0; i_19 < i_9; i_19++) {
@@ -93,7 +93,7 @@ public class Class282_Sub39 extends Node {
 						string_20 = string_20.substring(0, string_20.length() - 4);
 					}
 
-					Class291_Sub1.aClass194_8023.method3178(graphicalrenderer_0, string_20, i_12, i_13, worldmapareadefs_2.anInt2720, true);
+					Class291_Sub1.aClass194_8023.method3178(graphicalrenderer_0, string_20, i_12, i_13, worldmapareadefs_2.anInt2720);
 					i_13 += Class291_Sub1.aClass194_8023.method3173();
 				}
 			}

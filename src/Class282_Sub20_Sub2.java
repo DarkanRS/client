@@ -3,7 +3,7 @@ public class Class282_Sub20_Sub2 extends Class282_Sub20 {
 	int anInt9673 = 4;
 	int anInt9674 = 4;
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -46775186);
 		if (this.aClass320_7667.aBool3722) {
 			int i_4 = Class316.anInt3670 / this.anInt9673;
@@ -38,9 +38,9 @@ public class Class282_Sub20_Sub2 extends Class282_Sub20 {
 			int[][] ints_6;
 			if (i_5 > 0) {
 				int i_7 = i_1 % i_5;
-				ints_6 = this.method12333(0, i_7 * Class316.anInt3671 / i_5, (byte) 3);
+				ints_6 = this.method12333(0, i_7 * Class316.anInt3671 / i_5);
 			} else {
-				ints_6 = this.method12333(0, 0, (byte) 3);
+				ints_6 = this.method12333(0, 0);
 			}
 
 			int[] ints_16 = ints_6[0];
@@ -68,7 +68,7 @@ public class Class282_Sub20_Sub2 extends Class282_Sub20 {
 		return ints_3;
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9673 = rsbytebuffer_2.readUnsignedByte();

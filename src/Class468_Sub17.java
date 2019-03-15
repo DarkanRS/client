@@ -34,7 +34,7 @@ public class Class468_Sub17 extends Preference {
 		return 1;
 	}
 
-	public boolean method12761(int i_1) {
+	public boolean method12761() {
 		return this.manager.method13514((byte) 119) == Game.darkan;
 	}
 
@@ -42,7 +42,7 @@ public class Class468_Sub17 extends Preference {
 		return this.anInt5578;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -76,7 +76,7 @@ public class Class468_Sub17 extends Preference {
 		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
-	public void method12767(byte b_1) {
+	public void method12767() {
 		if (this.manager.method13514((byte) 98) != Game.darkan) {
 			this.anInt5578 = 1;
 		}

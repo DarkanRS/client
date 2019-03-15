@@ -12,7 +12,7 @@ public class Class217_Sub1 extends Class217 {
 		return Class354.aClass213Array4111[this.anInt2696];
 	}
 
-	public static void method13056(int i_0) {
+	public static void method13056() {
 		Class334.method5940();
 	}
 }

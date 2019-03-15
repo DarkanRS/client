@@ -6,18 +6,18 @@ public class Class419 {
 	public int anInt5002;
 	public int anInt5000;
 
-	void method7024(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method7024(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method7025(rsbytebuffer_1, i_3, 1938961128);
+			this.method7025(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method7025(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method7025(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.anInt5003 = rsbytebuffer_1.readBigSmart();
 		} else if (i_2 == 2) {
@@ -27,7 +27,7 @@ public class Class419 {
 
 	}
 
-	public synchronized Class91 method7026(int i_1) {
+	public synchronized Class91 method7026() {
 		Class91 class91_2 = (Class91) this.aClass438_5001.aClass229_5342.get((long) this.anInt5003);
 		if (class91_2 != null) {
 			return class91_2;

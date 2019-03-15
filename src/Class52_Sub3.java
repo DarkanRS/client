@@ -38,9 +38,9 @@ public class Class52_Sub3 extends Class52 {
 		Renderers.SOFTWARE_RENDERER.method8430(i_2 - 1, 1 + i_3, 2 + 329542577 * this.aClass350_489.anInt4093 * -229835439, 323608093 * this.aClass350_489.anInt4088 * 1707725877, 0, 0);
 	}
 
-	static final void method14519(short s_0) {
+	static final void method14519() {
 		for (Class275_Sub2 class275_sub2_1 = (Class275_Sub2) client.aClass457_7290.method7648(1998226533); class275_sub2_1 != null; class275_sub2_1 = (Class275_Sub2) client.aClass457_7290.method7648(1129303155)) {
-			GraphicalRenderer.method8695(class275_sub2_1, 131934272);
+			GraphicalRenderer.method8695(class275_sub2_1);
 		}
 		byte b_4 = 0;
 		byte b_2 = 3;
@@ -62,7 +62,7 @@ public class Class52_Sub3 extends Class52 {
 		}
 	}
 
-	public static int[] method14522(int i_0) {
+	public static int[] method14522() {
 		return new int[] { Class16.p11FullIndex, Class16.anInt136, Class395.anInt4788 };
 	}
 }

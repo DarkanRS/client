@@ -12,7 +12,7 @@ public class Class202_Sub1 extends Connection {
 	Class289 aClass289_8185;
 
 	public int method3312(int i_1) throws IOException {
-		return this.aClass286_8183.method5034(675588453);
+		return this.aClass286_8183.method5034();
 	}
 
 	public boolean available(int i_1, byte b_2) throws IOException {
@@ -33,8 +33,8 @@ public class Class202_Sub1 extends Connection {
 		return this.aClass286_8183.method5043(bytes_1, i_2, i_3, -1812586359);
 	}
 
-	public void write(byte[] bytes_1, int i_2, int i_3, int i_4) throws IOException {
-		this.aClass289_8185.method5087(bytes_1, i_2, i_3, -2123189080);
+	public void write(byte[] bytes_1, int i_3, int i_4) throws IOException {
+		this.aClass289_8185.method5087(bytes_1, 0, i_3, -2123189080);
 	}
 
 	public void finalize() {
@@ -42,7 +42,7 @@ public class Class202_Sub1 extends Connection {
 	}
 
 	public void method3320(byte b_1) {
-		this.aClass286_8183.method5031(-358652405);
+		this.aClass286_8183.method5031();
 		this.aClass289_8185.method5089((byte) 93);
 	}
 
@@ -61,12 +61,12 @@ public class Class202_Sub1 extends Connection {
 	}
 
 	public void method3332() {
-		this.aClass286_8183.method5031(-358652405);
+		this.aClass286_8183.method5031();
 		this.aClass289_8185.method5089((byte) 109);
 	}
 
 	public void method3333() {
-		this.aClass286_8183.method5031(-358652405);
+		this.aClass286_8183.method5031();
 		this.aClass289_8185.method5089((byte) 11);
 	}
 
@@ -79,11 +79,11 @@ public class Class202_Sub1 extends Connection {
 	}
 
 	public int method3322() throws IOException {
-		return this.aClass286_8183.method5034(675588453);
+		return this.aClass286_8183.method5034();
 	}
 
 	public int method3323() throws IOException {
-		return this.aClass286_8183.method5034(675588453);
+		return this.aClass286_8183.method5034();
 	}
 
 	public int method3324(byte[] bytes_1, int i_2, int i_3) throws IOException {
@@ -131,7 +131,7 @@ public class Class202_Sub1 extends Connection {
 	}
 
 	public void method3331() {
-		this.aClass286_8183.method5031(-358652405);
+		this.aClass286_8183.method5031();
 		this.aClass289_8185.method5089((byte) 69);
 	}
 

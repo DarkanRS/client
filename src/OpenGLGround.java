@@ -78,7 +78,7 @@ public class OpenGLGround extends Ground {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
 		int i_16 = ints_10.length;
 		int[] ints_17 = new int[i_16 * 3];
 		int[] ints_18 = new int[i_16 * 3];
@@ -150,7 +150,7 @@ public class OpenGLGround extends Ground {
 			++i_25;
 		}
 
-		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, bool_15);
+		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, false);
 	}
 
 	public void method6716(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
@@ -212,7 +212,7 @@ public class OpenGLGround extends Ground {
 				((Class282_Sub3) this.aClass282Array8666[i_16]).method12085(ints_15, i_14);
 			}
 
-			if (!this.aClass473_8673.method7861(141891001)) {
+			if (!this.aClass473_8673.method7861()) {
 				i_16 = this.renderer.anInt8441;
 				int i_17 = this.renderer.anInt8358;
 				this.renderer.c(0, i_17, this.renderer.anInt8378);
@@ -223,7 +223,7 @@ public class OpenGLGround extends Ground {
 				this.renderer.method13654(this.renderer.aClass137_Sub1_8460);
 				this.renderer.method13717(8448, 7681);
 				this.renderer.method13595(0, 34166, 770);
-				this.renderer.method13616(0, 34167, 770);
+				this.renderer.method13616(0, 34167);
 
 				for (Node node_18 = this.aClass473_8673.getBack(); node_18 != null; node_18 = this.aClass473_8673.getPrevious()) {
 					Class282_Sub19 class282_sub19_19 = (Class282_Sub19) node_18;
@@ -231,7 +231,7 @@ public class OpenGLGround extends Ground {
 				}
 
 				this.renderer.method13595(0, 5890, 768);
-				this.renderer.method13616(0, 5890, 770);
+				this.renderer.method13616(0, 5890);
 				this.renderer.method13654((Class137) null);
 				this.renderer.c(i_16, i_17, this.renderer.anInt8378);
 			}
@@ -258,7 +258,7 @@ public class OpenGLGround extends Ground {
 				}
 			}
 
-			this.aClass282Array8666 = new Node[this.materialTable.method7540(-975751825)];
+			this.aClass282Array8666 = new Node[this.materialTable.method7540()];
 			this.materialTable.method7532(this.aClass282Array8666, (byte) 45);
 
 			for (i_2 = 0; i_2 < this.aClass282Array8666.length; i_2++) {
@@ -581,7 +581,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			stream_4.method2925();
-			this.data = this.renderer.createArrayBuffer(i_2, nativeheapbuffer_3, stream_4.written(), false);
+			this.data = this.renderer.createArrayBuffer(i_2, nativeheapbuffer_3, stream_4.written());
 			if (this.data instanceof Class135_Sub2) {
 				nativeheapbuffer_3.method1178();
 			}
@@ -634,7 +634,7 @@ public class OpenGLGround extends Ground {
 		this.lightingX = null;
 	}
 
-	public void method6715(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
+	public void method6715(int i_1, int i_2, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
 		Class158 class158_9 = this.renderer.method8523((byte) 123);
 		if (this.anInt8672 > 0 && class158_9 != null) {
 			this.renderer.method13586();
@@ -645,20 +645,20 @@ public class OpenGLGround extends Ground {
 			this.renderer.method13624(0);
 			this.renderer.method13581(-2);
 			this.renderer.method13654((Class137) null);
-			GROUND_MATRIX[0] = (float) i_3 / (128.0F * (float) this.tileUnits * (float) class158_9.method2714());
+			GROUND_MATRIX[0] = (float) 1024 / (128.0F * (float) this.tileUnits * (float) class158_9.method2714());
 			GROUND_MATRIX[1] = 0.0F;
 			GROUND_MATRIX[2] = 0.0F;
 			GROUND_MATRIX[3] = 0.0F;
 			GROUND_MATRIX[4] = 0.0F;
-			GROUND_MATRIX[5] = (float) i_3 / (128.0F * (float) this.tileUnits * (float) class158_9.method2716());
+			GROUND_MATRIX[5] = (float) 1024 / (128.0F * (float) this.tileUnits * (float) class158_9.method2716());
 			GROUND_MATRIX[6] = 0.0F;
 			GROUND_MATRIX[7] = 0.0F;
 			GROUND_MATRIX[8] = 0.0F;
 			GROUND_MATRIX[9] = 0.0F;
 			GROUND_MATRIX[10] = 0.0F;
 			GROUND_MATRIX[11] = 0.0F;
-			GROUND_MATRIX[12] = -1.0F - ((float) (i_3 * i_4) / 128.0F - (float) (i_1 * 2)) / (float) class158_9.method2714();
-			GROUND_MATRIX[13] = 1.0F - ((float) (i_2 * 2) + (float) (i_3 * i_7) / 128.0F) / (float) class158_9.method2716();
+			GROUND_MATRIX[12] = -1.0F - ((float) (1024 * i_4) / 128.0F - (float) (i_1 * 2)) / (float) class158_9.method2714();
+			GROUND_MATRIX[13] = 1.0F - ((float) (i_2 * 2) + (float) (1024 * i_7) / 128.0F) / (float) class158_9.method2716();
 			GROUND_MATRIX[14] = 0.0F;
 			GROUND_MATRIX[15] = 1.0F;
 			OpenGL.glMatrixMode(5889);
@@ -711,7 +711,7 @@ public class OpenGLGround extends Ground {
 							shorts_15 = this.materialIndices[i_13];
 							if (shorts_15 != null) {
 								for (i_16 = 0; i_16 < shorts_15.length; i_16++) {
-									class282_sub35_sub1_11.writeShort(shorts_15[i_16] & 0xffff, 1417031095);
+									class282_sub35_sub1_11.writeShort(shorts_15[i_16] & 0xffff);
 									++i_10;
 								}
 							}
@@ -742,13 +742,13 @@ public class OpenGLGround extends Ground {
 
 			if (i_10 > 0) {
 				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, 5123, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
-				this.renderer.method13611(class131_sub2_17, 4, 0, i_10);
+				this.renderer.method13611(class131_sub2_17, 0, i_10);
 			}
 		}
 
 	}
 
-	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass130_8664 != null && class282_sub50_sub17_1 != null) {
 			int i_7 = i_2 - (i_3 * this.renderer.anInt8438 >> 8) >> this.renderer.anInt8473;
 			int i_8 = i_4 - (i_3 * this.renderer.anInt8439 >> 8) >> this.renderer.anInt8473;
@@ -757,7 +757,7 @@ public class OpenGLGround extends Ground {
 
 	}
 
-	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass130_8664 != null && class282_sub50_sub17_1 != null) {
 			int i_7 = i_2 - (i_3 * this.renderer.anInt8438 >> 8) >> this.renderer.anInt8473;
 			int i_8 = i_4 - (i_3 * this.renderer.anInt8439 >> 8) >> this.renderer.anInt8473;
@@ -767,7 +767,7 @@ public class OpenGLGround extends Ground {
 		}
 	}
 
-	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass130_8664 != null && class282_sub50_sub17_1 != null) {
 			int i_7 = i_2 - (i_3 * this.renderer.anInt8438 >> 8) >> this.renderer.anInt8473;
 			int i_8 = i_4 - (i_3 * this.renderer.anInt8439 >> 8) >> this.renderer.anInt8473;
@@ -995,7 +995,7 @@ public class OpenGLGround extends Ground {
 				}
 			}
 
-			this.aClass282Array8666 = new Node[this.materialTable.method7540(-975751825)];
+			this.aClass282Array8666 = new Node[this.materialTable.method7540()];
 			this.materialTable.method7532(this.aClass282Array8666, (byte) 58);
 
 			for (i_2 = 0; i_2 < this.aClass282Array8666.length; i_2++) {
@@ -1318,7 +1318,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			stream_4.method2925();
-			this.data = this.renderer.createArrayBuffer(i_2, nativeheapbuffer_3, stream_4.written(), false);
+			this.data = this.renderer.createArrayBuffer(i_2, nativeheapbuffer_3, stream_4.written());
 			if (this.data instanceof Class135_Sub2) {
 				nativeheapbuffer_3.method1178();
 			}
@@ -1382,7 +1382,7 @@ public class OpenGLGround extends Ground {
 				}
 			}
 
-			this.aClass282Array8666 = new Node[this.materialTable.method7540(-975751825)];
+			this.aClass282Array8666 = new Node[this.materialTable.method7540()];
 			this.materialTable.method7532(this.aClass282Array8666, (byte) 41);
 
 			for (i_2 = 0; i_2 < this.aClass282Array8666.length; i_2++) {
@@ -1705,7 +1705,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			stream_4.method2925();
-			this.data = this.renderer.createArrayBuffer(i_2, nativeheapbuffer_3, stream_4.written(), false);
+			this.data = this.renderer.createArrayBuffer(i_2, nativeheapbuffer_3, stream_4.written());
 			if (this.data instanceof Class135_Sub2) {
 				nativeheapbuffer_3.method1178();
 			}
@@ -1940,7 +1940,7 @@ public class OpenGLGround extends Ground {
 							shorts_15 = this.materialIndices[i_13];
 							if (shorts_15 != null) {
 								for (i_16 = 0; i_16 < shorts_15.length; i_16++) {
-									class282_sub35_sub1_11.writeShort(shorts_15[i_16] & 0xffff, 1417031095);
+									class282_sub35_sub1_11.writeShort(shorts_15[i_16] & 0xffff);
 									++i_10;
 								}
 							}
@@ -1971,7 +1971,7 @@ public class OpenGLGround extends Ground {
 
 			if (i_10 > 0) {
 				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, 5123, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
-				this.renderer.method13611(class131_sub2_17, 4, 0, i_10);
+				this.renderer.method13611(class131_sub2_17, 0, i_10);
 			}
 		}
 
@@ -2095,7 +2095,7 @@ public class OpenGLGround extends Ground {
 							shorts_15 = this.materialIndices[i_13];
 							if (shorts_15 != null) {
 								for (i_16 = 0; i_16 < shorts_15.length; i_16++) {
-									class282_sub35_sub1_11.writeShort(shorts_15[i_16] & 0xffff, 1417031095);
+									class282_sub35_sub1_11.writeShort(shorts_15[i_16] & 0xffff);
 									++i_10;
 								}
 							}
@@ -2126,7 +2126,7 @@ public class OpenGLGround extends Ground {
 
 			if (i_10 > 0) {
 				Class131_Sub2 class131_sub2_17 = new Class131_Sub2(this.renderer, 5123, class282_sub35_sub1_11.buffer, class282_sub35_sub1_11.index);
-				this.renderer.method13611(class131_sub2_17, 4, 0, i_10);
+				this.renderer.method13611(class131_sub2_17, 0, i_10);
 			}
 		}
 

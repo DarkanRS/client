@@ -44,14 +44,14 @@ public class AnimationFrameBase extends Node {
 
 	}
 
-	static void method12212(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1, int i_2) {
+	static void method12212(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1) {
 		if (Class20.aBool161) {
 			FontMetrics fontmetrics_3 = Class114.method1887(-1200220753);
 			int i_4 = 0;
 
 			int i_6;
-			for (Class282_Sub50_Sub7 class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7941((byte) 4); class282_sub50_sub7_5 != null; class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7955(-726833918)) {
-				i_6 = Shadow.method15507(class282_sub50_sub7_5, fontmetrics_3, 943671530);
+			for (Class282_Sub50_Sub7 class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7941(); class282_sub50_sub7_5 != null; class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7955(-726833918)) {
+				i_6 = Shadow.method15507(class282_sub50_sub7_5, fontmetrics_3);
 				if (i_6 > i_4) {
 					i_4 = i_6;
 				}

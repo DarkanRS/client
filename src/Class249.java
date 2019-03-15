@@ -7,11 +7,11 @@ public class Class249 implements Interface43 {
 
 	public byte aByte3085;
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.aByte3085;
 	}
 
-	public int method4268(int i_1) {
+	public int method4268() {
 		return this.aByte3085 + 1;
 	}
 
@@ -53,17 +53,17 @@ public class Class249 implements Interface43 {
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 40);
 	}
 
-	static final void method4281(Animable animable_0, int i_1) {
+	static final void method4281(Animable animable_0) {
 		int i_2 = animable_0.anInt10342 - client.cycles;
-		int i_3 = animable_0.anInt10326 * 512 + animable_0.getSize(828768449) * 256;
-		int i_4 = animable_0.anInt10328 * 512 + animable_0.getSize(828768449) * 256;
+		int i_3 = animable_0.anInt10326 * 512 + animable_0.getSize() * 256;
+		int i_4 = animable_0.anInt10328 * 512 + animable_0.getSize() * 256;
 		Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
 		animable_0.method11172((float) ((int) vector3_5.x + (i_3 - (int) vector3_5.x) / i_2), (float) ((int) vector3_5.y), (float) ((int) vector3_5.z + (i_4 - (int) vector3_5.z) / i_2));
 		animable_0.anInt10366 = 0;
 		animable_0.method15863(animable_0.anInt10346, 1692779087);
 	}
 
-	public static boolean method4282(String string_0, byte b_1) {
+	public static boolean method4282(String string_0) {
 		if (string_0 == null) {
 			return false;
 		} else {

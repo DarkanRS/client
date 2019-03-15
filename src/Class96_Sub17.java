@@ -19,7 +19,7 @@ public class Class96_Sub17 extends Class96 {
 		this.anInt9389 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		ParticleProducerDefinition.method1161(Class4.anInt35, this.anInt9385, this.anInt9386, Class504.method8389(this.anInt9385, this.anInt9386, Class4.anInt35, (byte) 47), this.anInt9389, this.anInt9388, this.aString9387, (short) 12244);
 	}
 
@@ -36,7 +36,7 @@ public class Class96_Sub17 extends Class96 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final boolean performCalculationS1(int i_0, int i_1, RouteStrategy routestrategy_2, ClipMap clipmap_3, int i_4) {
+	static final boolean performCalculationS1(int i_0, int i_1, RouteStrategy routestrategy_2, ClipMap clipmap_3) {
 		int i_5 = i_0;
 		int i_6 = i_1;
 		byte b_7 = 64;
@@ -128,7 +128,7 @@ public class Class96_Sub17 extends Class96 {
 		return false;
 	}
 
-	public static void method14656(int i_0, int i_1) {
+	public static void method14656(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(20, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 40);
 	}

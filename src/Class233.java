@@ -8,10 +8,10 @@ public class Class233 {
 
 	Index aClass317_2882;
 
-	public void method3923(int i_1, int i_2) {
+	public void method3923() {
 		SoftCache softcache_3 = this.aClass229_2881;
 		synchronized (this.aClass229_2881) {
-			this.aClass229_2881.method3858(i_1, (byte) -46);
+			this.aClass229_2881.method3858(5, (byte) -46);
 		}
 	}
 
@@ -22,14 +22,14 @@ public class Class233 {
 		}
 	}
 
-	public void method3924(int i_1) {
+	public void method3924() {
 		SoftCache softcache_2 = this.aClass229_2881;
 		synchronized (this.aClass229_2881) {
 			this.aClass229_2881.method3859(122018948);
 		}
 	}
 
-	public void method3926(byte b_1) {
+	public void method3926() {
 		SoftCache softcache_2 = this.aClass229_2881;
 		synchronized (this.aClass229_2881) {
 			this.aClass229_2881.method3863(733385638);
@@ -52,7 +52,7 @@ public class Class233 {
 			}
 			class537_3 = new Class537();
 			if (bytes_10 != null) {
-				class537_3.method11487(new RsByteBuffer(bytes_10), (byte) -105);
+				class537_3.method11487(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_2881;
 			synchronized (this.aClass229_2881) {
@@ -62,7 +62,7 @@ public class Class233 {
 		}
 	}
 
-	public static void method3936(int[][] ints_0, int i_1) {
+	public static void method3936(int[][] ints_0) {
 		Class532.anIntArrayArray7072 = ints_0;
 	}
 }

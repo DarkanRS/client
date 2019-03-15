@@ -6,7 +6,7 @@ public class Class468_Sub2 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public boolean method12622(int i_1) {
+	public boolean method12622() {
 		return this.manager.textures.method12873(-767175327) != 0;
 	}
 
@@ -18,7 +18,7 @@ public class Class468_Sub2 extends Preference {
 		return this.manager.textures.method12873(547920845) == 0 ? 3 : 1;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -46,7 +46,7 @@ public class Class468_Sub2 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	public void method12627(byte b_1) {
+	public void method12627() {
 		if (this.manager.textures.method12873(-503019853) == 0) {
 			this.anInt5578 = 0;
 		}
@@ -57,13 +57,13 @@ public class Class468_Sub2 extends Preference {
 
 	}
 
-	public static Class217_Sub1 method12629(int i_0) {
+	public static Class217_Sub1 method12629() {
 		Class448.anInt5427 = 0;
 		return Class77.method1368(46486061);
 	}
 
-	static final void method12630(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.method1987(-231818102);
+	static final void method12630(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.method1987();
 	}
 
 }

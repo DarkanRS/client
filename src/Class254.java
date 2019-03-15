@@ -8,7 +8,7 @@ public abstract class Class254 implements Runnable {
 
 	volatile boolean aBool3144 = false;
 
-	public static long method4379(CharSequence charsequence_0, int i_1) {
+	public static long method4379(CharSequence charsequence_0) {
 		int i_2 = charsequence_0.length();
 		long long_3 = 0L;
 		for (int i_5 = 0; i_5 < i_2; i_5++) {
@@ -17,7 +17,7 @@ public abstract class Class254 implements Runnable {
 		return long_3;
 	}
 
-	static int method4380(byte[][] bytes_0, byte[][] bytes_1, int[] ints_2, byte[] bytes_3, int[] ints_4, int i_5, int i_6, int i_7) {
+	static int method4380(byte[][] bytes_0, byte[][] bytes_1, int[] ints_2, byte[] bytes_3, int[] ints_4, int i_5, int i_6) {
 		int i_8 = ints_2[i_5];
 		int i_9 = i_8 + ints_4[i_5];
 		int i_10 = ints_2[i_6];

@@ -12,7 +12,7 @@ public class Class315 {
 			boolean bool_5 = Class505_Sub2.method13893();
 			if (!bool_5) {
 				throw new RuntimeException("");
-			} else if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jaggl", -8022122)) {
+			} else if (!Class362.getNativeLibraryLoader().loadLibrary("jaggl", -8022122)) {
 				throw new RuntimeException("");
 			} else {
 				Class459.method7679(canvas_0, 1663051494);

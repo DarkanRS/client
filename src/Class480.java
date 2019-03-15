@@ -57,7 +57,7 @@ public class Class480 {
 	}
 
 	public static final void method8043(int i_0) {
-		String string_1 = Class445.aString5384 != null ? Class445.aString5384 : WorldMapAreaDefs.method3741((byte) -1);
+		String string_1 = Class445.aString5384 != null ? Class445.aString5384 : WorldMapAreaDefs.method3741();
 		Class282_Sub50_Sub6.method14788(string_1, false, Class393.preferences.currentToolkit.getValue(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
 	}
 
@@ -93,7 +93,7 @@ public class Class480 {
 	}
 
 	public static Class106 method8046(int i_0, byte b_1) {
-		Class106[] arr_2 = Class530.method11352(-2059272885);
+		Class106[] arr_2 = Class530.method11352();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Class106 class106_4 = arr_2[i_3];
 			if (i_0 == class106_4.anInt1071) {

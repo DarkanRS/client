@@ -6,14 +6,14 @@ public abstract class Class282_Sub41 extends Node {
 	int anInt8031;
 	OggStreamState anOggStreamState8032;
 
-	abstract void method13360(int var1);
+	abstract void method13360();
 
-	void method13361(OggPacket oggpacket_1, byte b_2) {
-		this.method13362(oggpacket_1, -1309691662);
+	void method13361(OggPacket oggpacket_1) {
+		this.method13362(oggpacket_1);
 		++this.anInt8031;
 	}
 
-	abstract void method13362(OggPacket var1, int var2);
+	abstract void method13362(OggPacket var1);
 
 	Class282_Sub41(OggStreamState oggstreamstate_1) {
 		this.anOggStreamState8032 = oggstreamstate_1;

@@ -23,7 +23,7 @@ public abstract class GraphicalRenderer {
 	public abstract Class168 method8392();
 
 	public final void method8393(short s_1) throws Exception_Sub3 {
-		this.method8555(0, 0);
+		this.method8555();
 	}
 
 	public abstract void method8394(int var1, Class282_Sub24[] var2);
@@ -81,7 +81,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void iw(int var1, float var2, float var3, float var4, float var5, float var6);
 
-	public final void method8410(Canvas canvas_1, int i_2) {
+	public final void method8410(Canvas canvas_1) {
 		if (this.aHashtable5855.containsKey(canvas_1)) {
 			Class158_Sub2 class158_sub2_3 = (Class158_Sub2) this.aHashtable5855.get(canvas_1);
 			class158_sub2_3.method212();
@@ -89,7 +89,7 @@ public abstract class GraphicalRenderer {
 		}
 	}
 
-	final void method8411(Canvas canvas_1, Class158_Sub2 class158_sub2_2, int i_3) {
+	final void method8411(Canvas canvas_1, Class158_Sub2 class158_sub2_2) {
 		if (class158_sub2_2 == null) {
 			throw new RuntimeException();
 		} else {
@@ -97,7 +97,7 @@ public abstract class GraphicalRenderer {
 		}
 	}
 
-	public final void method8412(Canvas canvas_1, byte b_2) {
+	public final void method8412(Canvas canvas_1) {
 		Class158_Sub2 class158_sub2_3 = (Class158_Sub2) this.aHashtable5855.get(canvas_1);
 		if (class158_sub2_3 == null) {
 			throw new RuntimeException();
@@ -154,7 +154,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8421();
 
-	public abstract void GA(float var1, float var2);
+	public abstract void GA();
 
 	public abstract void L();
 
@@ -176,7 +176,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract Class455 method8427(int var1, int var2, int[] var3, int[] var4);
 
-	public final void method8428(int i_1, int i_2, int i_3, int i_4, int i_5) {
+	public final void method8428(int i_1, int i_2, int i_3, int i_4) {
 		this.G(i_1, i_2, i_3, i_4, 1);
 	}
 
@@ -205,7 +205,7 @@ public abstract class GraphicalRenderer {
 		}
 	}
 
-	abstract void CA(int var1, int var2, int var3, int var4, int var5);
+	abstract void CA(int var1, int var2, int var3, int var4);
 
 	public abstract void XA(int var1, int var2, int var3, int var4, int var5);
 
@@ -215,7 +215,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract int method8434(int var1, int var2);
 
-	public abstract void method8435(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9);
+	public abstract void method8435(int var1, int var2, int var3, int var4, int var5, int var7, int var8, int var9);
 
 	public abstract void fk(int var1, int var2, int var3, int var4);
 
@@ -225,8 +225,8 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8439(Class282_Sub1 var1);
 
-	public NativeSprite method8440(int i_1, int i_2, boolean bool_3, int i_4) {
-		return this.method8654(i_1, i_2, bool_3, false);
+	public NativeSprite method8440(int i_1, int i_2) {
+		return this.method8654(i_1, i_2, true, false);
 	}
 
 	public abstract NativeSprite method8442(int[] var1, int var2, int var3, int var4, int var5, boolean var6);
@@ -267,7 +267,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void RA(boolean var1);
 
-	public abstract void method8459(int var1);
+	public abstract void method8459();
 
 	final Class158_Sub2 method8460(int i_1) {
 		return this.aClass158_Sub2_5841;
@@ -294,28 +294,28 @@ public abstract class GraphicalRenderer {
 	public abstract Class152 method8467(Class152 var1, Class152 var2, float var3, Class152 var4);
 
 	public final void method8468(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		this.CA(i_1, i_2, i_3, i_4, 1);
+		this.CA(i_1, i_2, i_3, i_4);
 	}
 
 	public abstract boolean method8469();
 
 	public abstract boolean method8471();
 
-	public void method8472(float f_1, float f_2, float f_3, byte b_4) {
-		this.method8592(f_1, f_2, f_3, 0.0F, 1.0F, 1.0F);
+	public void method8472(float f_1, float f_2, float f_3) {
+		this.method8592(f_1, f_2, f_3);
 	}
 
 	public abstract void hz(int var1, Class455 var2, int var3, int var4);
 
 	public abstract void method8474();
 
-	public abstract void method8475(int var1, Class90 var2);
+	public abstract void method8475(Class90 var2);
 
 	public abstract void method8476(int var1, Class90 var2);
 
 	public abstract void method8477(Class152 var1);
 
-	public abstract Ground createGround(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
+	public abstract Ground createGround(int var1, int var2, int[][] var3, int[][] var4, int var6, int var7);
 
 	public abstract void method8479(float var1, float var2, float var3, float[] var4);
 
@@ -438,13 +438,13 @@ public abstract class GraphicalRenderer {
 	public final void method8524(Canvas canvas_1, int i_2, int i_3, byte b_4) {
 		if (!this.aHashtable5855.containsKey(canvas_1)) {
 			Class459.method7679(canvas_1, -88346532);
-			this.method8411(canvas_1, this.method8417(canvas_1, i_2, i_3), 316223525);
+			this.method8411(canvas_1, this.method8417(canvas_1, i_2, i_3));
 		}
 	}
 
 	public abstract void fq(int var1, int var2, int var3, int var4, int var5);
 
-	public abstract void method8525(int var1, int var2, int var3, int var4);
+	public abstract void method8525(int var3, int var4);
 
 	public abstract void fl(int var1, int var2, int var3, int var4, int var5);
 
@@ -478,7 +478,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract int method8540(int var1, int var2, int var3, int var4, int var5, int var6);
 
-	public abstract void DA(int var1, Class455 var2, int var3, int var4);
+	public abstract void DA(Class455 var2, int var3, int var4);
 
 	public abstract Class282_Sub1 method8541(int var1);
 
@@ -494,8 +494,8 @@ public abstract class GraphicalRenderer {
 
 	public abstract NativeSprite method8548(int[] var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public NativeSprite createNativeSprite(int[] ints_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		return this.method8442(ints_1, i_2, i_3, i_4, i_5, true);
+	public NativeSprite createNativeSprite(int[] ints_1, int i_3, int i_4, int i_5, int i_6) {
+		return this.method8442(ints_1, 0, i_3, i_4, i_5, true);
 	}
 
 	public abstract NativeSprite method8552(int var1, int var2, int var3, int var4, boolean var5);
@@ -504,7 +504,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract Class455 method8554(int var1, int var2, int[] var3, int[] var4);
 
-	abstract void method8555(int var1, int var2) throws Exception_Sub3;
+	abstract void method8555() throws Exception_Sub3;
 
 	public abstract Class455 method8556(int var1, int var2, int[] var3, int[] var4);
 
@@ -524,11 +524,11 @@ public abstract class GraphicalRenderer {
 
 	public abstract MeshRasterizer method8561(RSMesh var1, int var2, int var3, int var4, int var5);
 
-	public final void method8562(int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
+	public final void method8562(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		this.method8430(i_1, i_2, i_3, i_4, i_5, 1);
 	}
 
-	public abstract void method8563(int var1, int var2, int var3, int var4, int var5, int var6, Class455 var7, int var8, int var9, int var10, int var11, int var12);
+	public abstract void method8563(int var1, int var2, int var3, int var4, int var5, Class455 var7, int var8, int var9, int var10, int var11, int var12);
 
 	public abstract MeshRasterizer method8564(RSMesh var1, int var2, int var3, int var4, int var5);
 
@@ -538,7 +538,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract int method8567(int var1, int var2);
 
-	public abstract void method8568(boolean var1);
+	public abstract void method8568();
 
 	public abstract Ground method8569(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
 
@@ -592,12 +592,12 @@ public abstract class GraphicalRenderer {
 
 	public abstract void il(int var1);
 
-	abstract void method8592(float var1, float var2, float var3, float var4, float var5, float var6);
+	abstract void method8592(float var1, float var2, float var3);
 
 	public abstract int[] ke(int var1, int var2, int var3, int var4);
 
-	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5, float f_6) {
-		return new Class282_Sub24(i_1, i_2, i_3, i_4, i_5, f_6);
+	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
+		return new Class282_Sub24(i_1, i_2, i_3, i_4, i_5, (float) 1.0);
 	}
 
 	public abstract void ib(int var1, int var2, int var3);
@@ -708,7 +708,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract NativeSprite method8654(int var1, int var2, boolean var3, boolean var4);
 
-	public abstract void method8658(int var1, int var2, float var3, int var4, int var5, float var6, int var7, int var8, float var9, int var10, int var11, int var12, int var13);
+	public abstract void method8658(int var1, int var2, int var4, int var5, int var7, int var8);
 
 	public final void method8659(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		this.XA(i_1, i_2, i_3, i_4, 1);
@@ -728,7 +728,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void fv(int var1, int var2, int var3, int var4, int var5, int var6, byte[] var7, int var8, int var9);
 
-	public abstract void method8669(int var1, int var2, int var3, int var4, int var5, int var6, Class455 var7, int var8, int var9);
+	public abstract void method8669(int var1, int var2, int var3, int var4, int var5, Class455 var7, int var8, int var9);
 
 	public abstract void method8673(int var1, int var2, int var3, int var4);
 
@@ -744,7 +744,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8691();
 
-	static void method8695(Class275_Sub2 class275_sub2_0, int i_1) {
+	static void method8695(Class275_Sub2 class275_sub2_0) {
 		class275_sub2_0.aClass521_Sub1_Sub1_Sub2_7739 = null;
 		if (Class275_Sub2.anInt7741 < 20) {
 			Class275_Sub2.aClass457_7745.offer(class275_sub2_0, 1876581083);
@@ -761,7 +761,7 @@ public abstract class GraphicalRenderer {
 		return i_3;
 	}
 
-	public static Class282_Sub50_Sub7 method8697(int i_0) {
+	public static Class282_Sub50_Sub7 method8697() {
 		return Class96_Sub23.aClass282_Sub50_Sub7_9445;
 	}
 

@@ -55,17 +55,17 @@ public class Class231 {
 
 	static void method3914(int i_0, String string_1, boolean bool_2, byte b_3) {
 		Class28.method772((byte) 14);
-		ParamDefinitions.method7323((byte) -45);
+		ParamDefinitions.method7323();
 		Class250.method4297(620530459);
 		Class282_Sub17_Sub1.method15402(i_0, string_1, bool_2, 1568129445);
-		Class487.aClass378_5752.method6433(-1648322777);
-		Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
+		Class487.aClass378_5752.method6433();
+		Class487.aClass378_5752.method6403(client.anInterface35_7206);
 		Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 2105795024);
-		Class188.method3139(Renderers.SOFTWARE_RENDERER, IndexLoaders.SPRITES_INDEX, -814245885);
+		Class188.method3139(Renderers.SOFTWARE_RENDERER, IndexLoaders.SPRITES_INDEX);
 		Class76.method1361((byte) -31);
 		Class122.method2109(Class182.aClass160Array2261, (byte) 8);
-		IncomingPacket.method6378(-1538407760);
-		Class94.method1589((short) 255);
+		IncomingPacket.method6378();
+		Class94.method1589();
 		if (client.gameState == 5) {
 			Class365.setGameState(11);
 		} else if (client.gameState == 0) {

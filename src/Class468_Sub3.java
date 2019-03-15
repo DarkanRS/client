@@ -1,12 +1,12 @@
 public class Class468_Sub3 extends Preference {
 
-	public void method12631(int i_1) {
+	public void method12631() {
 		int i_2 = this.manager.aClass468_Sub18_8214.getValue(1989130239);
 		if (i_2 != 3 && i_2 != 5) {
 			this.anInt5578 = 0;
 		}
 
-		if (this.manager.method13504((byte) 1).method7720(-1889821573) < 2) {
+		if (this.manager.method13504().method7720(-1889821573) < 2) {
 			this.anInt5578 = 0;
 		}
 
@@ -32,7 +32,7 @@ public class Class468_Sub3 extends Preference {
 	int method7785(int i_1, int i_2) {
 		if (i_1 == 0) {
 			return 1;
-		} else if (this.manager.method13504((byte) 1).method7720(-1519832970) < 2) {
+		} else if (this.manager.method13504().method7720(-1519832970) < 2) {
 			return 3;
 		} else {
 			int i_3 = this.manager.aClass468_Sub18_8214.getValue(-1012176870);
@@ -40,7 +40,7 @@ public class Class468_Sub3 extends Preference {
 		}
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -51,7 +51,7 @@ public class Class468_Sub3 extends Preference {
 	int method7784(int i_1) {
 		if (i_1 == 0) {
 			return 1;
-		} else if (this.manager.method13504((byte) 1).method7720(-1940049758) < 2) {
+		} else if (this.manager.method13504().method7720(-1940049758) < 2) {
 			return 3;
 		} else {
 			int i_2 = this.manager.aClass468_Sub18_8214.getValue(-1120904037);

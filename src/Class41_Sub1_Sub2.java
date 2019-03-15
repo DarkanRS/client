@@ -70,7 +70,7 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 		return true;
 	}
 
-	public void method15549(short s_1) {
+	public void method15549() {
 		if (this.aClass49_10147.aBool474) {
 			this.aClass101_9218.method1655(this.aClass115_10141);
 		} else {
@@ -78,7 +78,7 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 		}
 		this.aClass101_9218.method1646();
 		if (this.aClass49_10147.aBool474) {
-			this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10140, 0, this.aClass49_10147.anInterface1_479, (byte) 0);
+			this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10140, 0, this.aClass49_10147.anInterface1_479);
 		}
 		this.aClass101_9218.method1668(this.aClass282_Sub21_Sub1_10145, this.aClass384_10146, (byte) -98);
 		this.aClass101_9218.method1668(this.aClass282_Sub21_Sub1_10154, this.aClass384_10138, (byte) -57);
@@ -113,7 +113,7 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 		return true;
 	}
 
-	public void method15550(int i_1, int i_2, int i_3) {
+	public void method15550(int i_1, int i_2) {
 		float f_4 = (float) ((i_1 & 0x3) + 1) * -5.0E-4F;
 		float f_5 = (float) ((i_1 >> 3 & 0x3) + 1) * 5.0E-4F;
 		float f_6 = (i_1 & 0x40) == 0 ? 4.8828125E-4F : 9.765625E-4F;

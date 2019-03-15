@@ -7,8 +7,8 @@ public class Class469 implements Iterator {
 	Queue aClass477_5584;
 	CacheableNode aClass282_Sub50_5583;
 
-	public CacheableNode method7790(int i_1) {
-		this.method7800((short) 255);
+	public CacheableNode method7790() {
+		this.method7800();
 		return (CacheableNode) this.next();
 	}
 
@@ -44,12 +44,12 @@ public class Class469 implements Iterator {
 		}
 	}
 
-	void method7800(short s_1) {
+	void method7800() {
 		this.aClass282_Sub50_5583 = this.aClass477_5584.aClass282_Sub50_5629.aClass282_Sub50_8119;
 		this.aClass282_Sub50_5582 = null;
 	}
 
-	static void method7805(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6, int i_7) {
+	static void method7805(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6) {
 		for (int i_8 = 0; i_8 < client.anInt7211; i_8++) {
 			Class282_Sub47 class282_sub47_9 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_8]);
 			if (class282_sub47_9 != null) {
@@ -57,7 +57,7 @@ public class Class469 implements Iterator {
 				if (npc_10.hasDefinition(-438666523) && npc_10.plane == Class84.myPlayer.plane) {
 					NPCDefinitions npcdefinitions_11 = npc_10.definitions;
 					if (npcdefinitions_11 != null && npcdefinitions_11.anIntArray4886 != null) {
-						npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
+						npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 					}
 
 					if (npcdefinitions_11 != null && npcdefinitions_11.aBool4864 && npcdefinitions_11.aBool4893) {

@@ -28,12 +28,12 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 		return this.aClass123_10507.method2115(560819680);
 	}
 
-	public int method12997(int i_1) {
-		return this.aClass123_10507.method2121((byte) 1);
+	public int method12997() {
+		return this.aClass123_10507.method2121();
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
+		MeshRasterizer meshrasterizer_3 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_3 == null) {
 			return null;
 		} else {
@@ -59,7 +59,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.aClass123_10507.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		MeshRasterizer meshrasterizer_3 = this.aClass123_10507.method2132(graphicalrenderer_1, 262144, true, true);
 		if (meshrasterizer_3 != null) {
 			Vector3 vector3_4 = this.method11166().aClass385_3595;
 			int i_5 = (int) vector3_4.x >> 9;
@@ -68,8 +68,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 		}
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
-		MeshRasterizer meshrasterizer_5 = this.aClass123_10507.method2132(graphicalrenderer_1, 131072, false, false, -1384937123);
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
+		MeshRasterizer meshrasterizer_5 = this.aClass123_10507.method2132(graphicalrenderer_1, 131072, false, false);
 		return meshrasterizer_5 == null ? false : meshrasterizer_5.method11270(i_2, i_3, this.method11168(), false, 0);
 	}
 
@@ -93,18 +93,18 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 		return this.aClass123_10507.anInt1542;
 	}
 
-	public void method16091(Class476 class476_1, int i_2) {
+	public void method16091(Class476 class476_1) {
 		this.aClass123_10507.method2116(class476_1, -1448472118);
 	}
 
-	public void method85(byte b_1) {
+	public void method85() {
 	}
 
 	public boolean method86(int i_1) {
 		return this.aClass123_10507.method2117(-1218985167);
 	}
 
-	public void method87(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method87(GraphicalRenderer graphicalrenderer_1) {
 		this.aClass123_10507.method2136(graphicalrenderer_1, (byte) -38);
 	}
 
@@ -121,7 +121,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	boolean method13020(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		MeshRasterizer meshrasterizer_4 = this.aClass123_10507.method2132(graphicalrenderer_1, 131072, false, false, -1384937123);
+		MeshRasterizer meshrasterizer_4 = this.aClass123_10507.method2132(graphicalrenderer_1, 131072, false, false);
 		return meshrasterizer_4 == null ? false : meshrasterizer_4.method11270(i_2, i_3, this.method11168(), false, 0);
 	}
 
@@ -148,7 +148,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -174,7 +174,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	void method13023(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 262144, true, true);
 		if (meshrasterizer_2 != null) {
 			Vector3 vector3_3 = this.method11166().aClass385_3595;
 			int i_4 = (int) vector3_3.x >> 9;
@@ -235,7 +235,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -261,7 +261,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -287,7 +287,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	}
 
 	void method13012(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10507.method2132(graphicalrenderer_1, 262144, true, true);
 		if (meshrasterizer_2 != null) {
 			Vector3 vector3_3 = this.method11166().aClass385_3595;
 			int i_4 = (int) vector3_3.x >> 9;
@@ -316,7 +316,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 		return this.aClass200_10505;
 	}
 
-	public void method88(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method88(GraphicalRenderer graphicalrenderer_1) {
 		this.aClass123_10507.method2118(graphicalrenderer_1, 2063033359);
 	}
 
@@ -339,7 +339,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 		return this.aClass200_10505;
 	}
 
-	public static final void method16094(IComponentDefinitions[] arr_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9, byte b_10) {
+	public static final void method16094(IComponentDefinitions[] arr_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9) {
 		Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 		for (int i_11 = 0; i_11 < arr_0.length; i_11++) {
 			IComponentDefinitions icomponentdefinitions_12 = arr_0[i_11];
@@ -355,7 +355,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 				icomponentdefinitions_12.anInt1450 = client.cycles;
 				if (!client.method11651(icomponentdefinitions_12)) {
 					if (icomponentdefinitions_12.contentType != 0) {
-						Class28.method776(icomponentdefinitions_12, (byte) 119);
+						Class28.method776(icomponentdefinitions_12);
 					}
 					int i_14 = icomponentdefinitions_12.anInt1299 + i_6;
 					int i_15 = i_7 + icomponentdefinitions_12.anInt1428;
@@ -374,7 +374,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						}
 						if (client.aBool7364 && client.aBool7403) {
 							i_17 = Class163.mouseRecorder.method3569(2098527627);
-							i_18 = Class163.mouseRecorder.method3570(756095591);
+							i_18 = Class163.mouseRecorder.method3570();
 							i_17 -= client.anInt7361;
 							i_18 -= client.anInt7362;
 							if (i_17 < client.anInt7432) {
@@ -390,7 +390,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								i_18 = client.anInt7476 + client.anInt7265 - icomponentdefinitions_12.anInt1429;
 							}
 							if (client.method11633(icomponentdefinitions_12).bit23Enabled()) {
-								Class292.method5201(i_17, i_18, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, (byte) 12);
+								Class292.method5201(i_17, i_18, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
 							}
 							i_14 = i_17;
 							i_15 = i_18;
@@ -423,8 +423,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					if (i_17 < i_19 && i_18 < i_20) {
 						if (icomponentdefinitions_12.contentType != 0) {
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1372 || icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436) {
-								HitbarDefinitions.method3231(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436, 72550989);
-								TCPMessage.method12366(i_13, i_17, i_18, i_19, i_20, i_14, i_15, -368732775);
+								HitbarDefinitions.method3231(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436);
+								TCPMessage.method12366(i_13, i_17, i_18, i_19, i_20, i_14, i_15);
 								Renderers.SOFTWARE_RENDERER.method8421();
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								client.aBoolArray7443[i_13] = true;
@@ -433,41 +433,41 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1269 && client.anInt7341 == 1) {
 								if (icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, -890940576) != null) {
 									Class282_Sub20_Sub24.method15391(-165186170);
-									Item.method12574(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12, i_14, i_15, -1198677116);
+									Item.method12574(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12, i_14, i_15);
 									Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								}
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1276) {
-								Shadow.method15506(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, 1138717057);
+								Shadow.method15506(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12);
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1300) {
-								Class366.method6301(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, icomponentdefinitions_12.color % 64, -16711936);
+								Class366.method6301(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12, icomponentdefinitions_12.color % 64);
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1270) {
 								if (icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, -1781031351) != null) {
-									Class278_Sub1.method13448(icomponentdefinitions_12, i_14, i_15, 1237889366);
+									Class278_Sub1.method13448(icomponentdefinitions_12, i_14, i_15);
 									Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								}
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1313) {
-								Class282_Sub46.method13407(Renderers.SOFTWARE_RENDERER, IndexLoaders.IMAGE_LOADER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, (byte) 85);
+								Class282_Sub46.method13407(Renderers.SOFTWARE_RENDERER, IndexLoaders.IMAGE_LOADER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
 								client.aBoolArray7443[i_13] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1272) {
-								LoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, (short) 20938);
+								LoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
 								client.aBoolArray7443[i_13] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1273) {
 								if (client.aBool7176 || client.aBool7177) {
-									Class252.method4326(i_14, i_15, icomponentdefinitions_12, -2019729413);
+									Class252.method4326(i_14, i_15, icomponentdefinitions_12);
 									client.aBoolArray7443[i_13] = true;
 								}
 								continue;
@@ -478,11 +478,11 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						int i_25;
 						if (icomponentdefinitions_12.type == 0) {
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1275 && Renderers.SOFTWARE_RENDERER.method8471()) {
-								Renderers.SOFTWARE_RENDERER.method8525(0, 0, Class349.anInt4083, client.anInt3243 * -969250379);
+								Renderers.SOFTWARE_RENDERER.method8525(Class349.anInt4083, client.anInt3243 * -969250379);
 							}
-							method16094(arr_0, icomponentdefinitions_12.idHash, i_17, i_18, i_19, i_20, i_14 - icomponentdefinitions_12.anInt1311, i_15 - icomponentdefinitions_12.anInt1312, i_13, bool_9, (byte) 6);
+							method16094(arr_0, icomponentdefinitions_12.idHash, i_17, i_18, i_19, i_20, i_14 - icomponentdefinitions_12.anInt1311, i_15 - icomponentdefinitions_12.anInt1312, i_13, bool_9);
 							if (icomponentdefinitions_12.aClass118Array1439 != null) {
-								method16094(icomponentdefinitions_12.aClass118Array1439, icomponentdefinitions_12.idHash, i_17, i_18, i_19, i_20, i_14 - icomponentdefinitions_12.anInt1311, i_15 - icomponentdefinitions_12.anInt1312, i_13, bool_9, (byte) 6);
+								method16094(icomponentdefinitions_12.aClass118Array1439, icomponentdefinitions_12.idHash, i_17, i_18, i_19, i_20, i_14 - icomponentdefinitions_12.anInt1311, i_15 - icomponentdefinitions_12.anInt1312, i_13, bool_9);
 							}
 							Class282_Sub44 class282_sub44_33 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_12.idHash);
 							if (class282_sub44_33 != null) {
@@ -542,11 +542,11 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												string_35 = "null";
 											}
 											if ((itemdefinitions_36.stackable == 1 || icomponentdefinitions_12.anInt1427 != 1) && icomponentdefinitions_12.anInt1427 != -1) {
-												string_35 = ParticleProducerDefinition.method1163(16748608, 619010179) + string_35 + "</col>" + " x" + Class488.method8210(icomponentdefinitions_12.anInt1427, -518631775);
+												string_35 = ParticleProducerDefinition.method1163(16748608) + string_35 + "</col>" + " x" + Class488.method8210(icomponentdefinitions_12.anInt1427);
 											}
 										}
 										if (icomponentdefinitions_12.anInt1435 != -1) {
-											string_35 = Class148.method2550(icomponentdefinitions_12.anInt1435, -1624079582);
+											string_35 = Class148.method2550(icomponentdefinitions_12.anInt1435);
 											if (string_35 == null) {
 												string_35 = "";
 											}
@@ -561,7 +561,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										if (icomponentdefinitions_12.aBool1363) {
 											fontrenderer_43.method367(string_35, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | i_22, icomponentdefinitions_12.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, icomponentdefinitions_12.anInt1359, icomponentdefinitions_12.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class182.aClass160Array2261, (int[]) null, 1113506161);
 										} else {
-											fontrenderer_43.method373(string_35, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | i_22, icomponentdefinitions_12.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, icomponentdefinitions_12.anInt1359, icomponentdefinitions_12.anInt1360, icomponentdefinitions_12.anInt1358, icomponentdefinitions_12.anInt1362, Class182.aClass160Array2261, (int[]) null, (Class455) null, 0, 0, (byte) 0);
+											fontrenderer_43.method373(string_35, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, 255 - (i_16 & 0xff) << 24 | i_22, icomponentdefinitions_12.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, icomponentdefinitions_12.anInt1359, icomponentdefinitions_12.anInt1360, icomponentdefinitions_12.anInt1358, icomponentdefinitions_12.anInt1362, Class182.aClass160Array2261, (int[]) null, (Class455) null, 0, 0);
 										}
 										if (client.aBool7358) {
 											Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
@@ -572,16 +572,16 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									int i_39;
 									if (icomponentdefinitions_12.type == 5) {
 										if (icomponentdefinitions_12.anInt1404 >= 0) {
-											icomponentdefinitions_12.method2027(IndexLoaders.aClass288_1746, IndexLoaders.aClass45_5759, -1984245878).method4214(Renderers.SOFTWARE_RENDERER, 0, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.anInt1430 << 3, icomponentdefinitions_12.anInt1431 << 3, 0, 0, -789260204);
+											icomponentdefinitions_12.method2027(IndexLoaders.aClass288_1746, IndexLoaders.aClass45_5759, -1984245878).method4214(Renderers.SOFTWARE_RENDERER, i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.anInt1430 << 3, icomponentdefinitions_12.anInt1431 << 3);
 										} else {
 											NativeSprite nativesprite_41;
 											if (icomponentdefinitions_12.anInt1426 != -1) {
 												PlayerAppearance playerappearance_34 = icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null;
-												nativesprite_41 = IndexLoaders.ITEM_INDEX_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1426, icomponentdefinitions_12.anInt1427, icomponentdefinitions_12.anInt1323, ~0xffffff | icomponentdefinitions_12.anInt1324, icomponentdefinitions_12.anInt1335, playerappearance_34, 206421629);
+												nativesprite_41 = IndexLoaders.ITEM_INDEX_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1426, icomponentdefinitions_12.anInt1427, icomponentdefinitions_12.anInt1323, ~0xffffff | icomponentdefinitions_12.anInt1324, icomponentdefinitions_12.anInt1335, playerappearance_34);
 											} else if (icomponentdefinitions_12.anInt1435 != -1) {
-												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1435, 1570194813);
+												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1435);
 											} else {
-												nativesprite_41 = icomponentdefinitions_12.method2048(Renderers.SOFTWARE_RENDERER, 1499865683);
+												nativesprite_41 = icomponentdefinitions_12.method2048(Renderers.SOFTWARE_RENDERER);
 											}
 											if (nativesprite_41 != null) {
 												i_22 = nativesprite_41.method228();
@@ -597,7 +597,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 															nativesprite_41.method2789(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
 														}
 													} else if (icomponentdefinitions_12.anInt1423 != 0) {
-														nativesprite_41.method2790((float) icomponentdefinitions_12.anInt1301 / 2.0F + (float) i_14, (float) icomponentdefinitions_12.anInt1429 / 2.0F + (float) i_15, icomponentdefinitions_12.anInt1301 * 4096 / i_22, icomponentdefinitions_12.anInt1423, 0, i_24, 1);
+														nativesprite_41.method2790((float) icomponentdefinitions_12.anInt1301 / 2.0F + (float) i_14, (float) icomponentdefinitions_12.anInt1429 / 2.0F + (float) i_15, icomponentdefinitions_12.anInt1301 * 4096 / i_22, icomponentdefinitions_12.anInt1423, i_24);
 													} else if (i_22 == icomponentdefinitions_12.anInt1301 && i_23 == icomponentdefinitions_12.anInt1429) {
 														nativesprite_41.method2742(i_14, i_15, 0, i_24, 1);
 													} else {
@@ -611,7 +611,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 														for (i_27 = 0; i_27 < i_25; i_27++) {
 															for (int i_28 = 0; i_28 < i_39; i_28++) {
 																if (icomponentdefinitions_12.color != 0) {
-																	nativesprite_41.method2790((float) (i_14 + i_27 * i_22) + (float) i_22 / 2.0F, (float) i_23 / 2.0F + (float) (i_15 + i_23 * i_28), 4096, icomponentdefinitions_12.anInt1423, 0, i_24, 1);
+																	nativesprite_41.method2790((float) (i_14 + i_27 * i_22) + (float) i_22 / 2.0F, (float) i_23 / 2.0F + (float) (i_15 + i_23 * i_28), 4096, icomponentdefinitions_12.anInt1423, i_24);
 																} else {
 																	nativesprite_41.method2758((float) (i_14 + i_22 * i_27) + (float) i_22 / 2.0F, (float) (i_15 + i_23 * i_28) + (float) i_23 / 2.0F, 4096, icomponentdefinitions_12.anInt1423);
 																}
@@ -629,7 +629,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											}
 										}
 									} else if (icomponentdefinitions_12.type == 6) {
-										IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4052((byte) 1);
+										IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
 										MeshRasterizer meshrasterizer_40 = null;
 										i_22 = 2048;
 										if (icomponentdefinitions_12.anInt1354 != 0) {
@@ -639,8 +639,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										if (icomponentdefinitions_12.anInt1426 != -1) {
 											itemdefinitions_36 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(icomponentdefinitions_12.anInt1426, 202135928);
 											if (itemdefinitions_36 != null) {
-												itemdefinitions_36 = itemdefinitions_36.method7090(icomponentdefinitions_12.anInt1427, (byte) 107);
-												meshrasterizer_40 = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null, icomponentdefinitions_12.aClass456_1437, 0, 0, 0, 0, (byte) 0);
+												itemdefinitions_36 = itemdefinitions_36.method7090(icomponentdefinitions_12.anInt1427);
+												meshrasterizer_40 = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null, icomponentdefinitions_12.aClass456_1437, 0, 0, 0, 0);
 												if (meshrasterizer_40 != null) {
 													i_23 = -meshrasterizer_40.YA() >> 1;
 												} else {
@@ -654,7 +654,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 111) == icomponentdefinitions_12.anInt1339)) {
-														meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, player_37.playerAppearance, -1254103030);
+														meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, player_37.playerAppearance);
 														if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 															Class109.redrawComponent(icomponentdefinitions_12, (byte) -76);
 														}
@@ -665,17 +665,17 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 17) == icomponentdefinitions_12.anInt1339)) {
-														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357);
+														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357);
 													}
 												}
 											} else if (icomponentdefinitions_12.anInt1329 != 8 && icomponentdefinitions_12.anInt1329 != 9) {
 												if (icomponentdefinitions_12.aClass456_1437 != null && icomponentdefinitions_12.aClass456_1437.hasDefs()) {
-													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, Class84.myPlayer.playerAppearance, -1254103030);
+													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, Class84.myPlayer.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 														Class109.redrawComponent(icomponentdefinitions_12, (byte) -7);
 													}
 												} else {
-													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, Class84.myPlayer.playerAppearance, -1254103030);
+													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, Class84.myPlayer.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 														Class109.redrawComponent(icomponentdefinitions_12, (byte) -35);
 													}
@@ -683,7 +683,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											} else {
 												ItemContainer class282_sub30_42 = CS2Runner.getItemContainer(icomponentdefinitions_12.anInt1330, false);
 												if (class282_sub30_42 != null) {
-													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, icomponentdefinitions_12.aClass456_1437, icomponentdefinitions_12.anInt1339, icomponentdefinitions_12.anInt1329 == 9, icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null, -1983093950);
+													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, icomponentdefinitions_12.aClass456_1437, icomponentdefinitions_12.anInt1339, icomponentdefinitions_12.anInt1329 == 9, icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null);
 												}
 											}
 										}
@@ -740,7 +740,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												client.aClass294_7169.method5219((float) (icomponentdefinitions_12.anInt1293 << 2), (float) (i_31 + i_23 + (icomponentdefinitions_12.anInt1334 << 2)), (float) (i_32 + (icomponentdefinitions_12.anInt1334 << 2)));
 												client.aClass294_7169.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spritePitch << 3));
 											}
-											icomponentdefinitions_12.method1991(Renderers.SOFTWARE_RENDERER, meshrasterizer_40, client.aClass294_7169, client.cycles, (byte) -118);
+											icomponentdefinitions_12.method1991(Renderers.SOFTWARE_RENDERER, meshrasterizer_40, client.aClass294_7169, client.cycles);
 											if (client.aBool7358) {
 												Renderers.SOFTWARE_RENDERER.o(i_14, i_15, i_14 + icomponentdefinitions_12.anInt1301, i_15 + icomponentdefinitions_12.anInt1429);
 											}

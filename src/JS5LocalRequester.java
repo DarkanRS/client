@@ -42,7 +42,7 @@ public class JS5LocalRequester implements Runnable {
 
 			try {
 				if (class282_sub50_sub11_sub2_1.anInt10467 == 2) {
-					class282_sub50_sub11_sub2_1.aClass203_10464.method3348((int) class282_sub50_sub11_sub2_1.key, class282_sub50_sub11_sub2_1.aByteArray10469, class282_sub50_sub11_sub2_1.aByteArray10469.length, -2009158934);
+					class282_sub50_sub11_sub2_1.aClass203_10464.method3348((int) class282_sub50_sub11_sub2_1.key, class282_sub50_sub11_sub2_1.aByteArray10469, class282_sub50_sub11_sub2_1.aByteArray10469.length);
 				} else if (class282_sub50_sub11_sub2_1.anInt10467 == 3) {
 					class282_sub50_sub11_sub2_1.aByteArray10469 = class282_sub50_sub11_sub2_1.aClass203_10464.method3350((int) class282_sub50_sub11_sub2_1.key, (byte) 25);
 				}
@@ -71,7 +71,7 @@ public class JS5LocalRequester implements Runnable {
 		this.aThread3663 = null;
 	}
 
-	Class282_Sub50_Sub11_Sub2 method5567(int i_1, JS5CacheFile js5cachefile_2, int i_3) {
+	Class282_Sub50_Sub11_Sub2 method5567(int i_1, JS5CacheFile js5cachefile_2) {
 		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_4 = new Class282_Sub50_Sub11_Sub2();
 		class282_sub50_sub11_sub2_4.anInt10467 = 3;
 		class282_sub50_sub11_sub2_4.key = (long) i_1;
@@ -84,7 +84,7 @@ public class JS5LocalRequester implements Runnable {
 	void method5569(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_1, int i_2) {
 		Queue class477_3 = this.aClass477_3664;
 		synchronized (this.aClass477_3664) {
-			this.aClass477_3664.method7936(class282_sub50_sub11_sub2_1, -1738910950);
+			this.aClass477_3664.method7936(class282_sub50_sub11_sub2_1);
 			++this.anInt3662;
 			this.aClass477_3664.notifyAll();
 		}
@@ -95,7 +95,7 @@ public class JS5LocalRequester implements Runnable {
 		class282_sub50_sub11_sub2_4.anInt10467 = 1;
 		Queue class477_5 = this.aClass477_3664;
 		synchronized (this.aClass477_3664) {
-			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_6 = (Class282_Sub50_Sub11_Sub2) this.aClass477_3664.method7941((byte) 4);
+			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_6 = (Class282_Sub50_Sub11_Sub2) this.aClass477_3664.method7941();
 
 			while (true) {
 				if (class282_sub50_sub11_sub2_6 == null) {
@@ -118,7 +118,7 @@ public class JS5LocalRequester implements Runnable {
 		return class282_sub50_sub11_sub2_4;
 	}
 
-	public static void method5581(int i_0, byte b_1) {
+	public static void method5581(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(17, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 13);
 	}

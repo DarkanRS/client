@@ -22,7 +22,7 @@ public class Class308 {
 
 	int anInt3613;
 
-	final void method5462(byte b_1) {
+	final void method5462() {
 		for (int i_2 = 0; i_2 < this.anInt3613; i_2++) {
 			this.anIntArrayArrayArray3614[i_2][0] = null;
 			this.anIntArrayArrayArray3614[i_2][1] = null;
@@ -68,7 +68,7 @@ public class Class308 {
 		}
 	}
 
-	public final int[][][] method5464(int i_1) {
+	public final int[][][] method5464() {
 		if (this.anInt3613 != this.anInt3611) {
 			throw new RuntimeException();
 		} else {

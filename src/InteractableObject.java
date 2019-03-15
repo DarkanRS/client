@@ -17,7 +17,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	void method13023(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 262144, true, true);
 		if (meshrasterizer_2 != null) {
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, this.method11168(), this.aShort9458, this.localX, this.aShort9456, this.localY, false, 1109367296);
 		}
@@ -35,8 +35,8 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		return this.aClass123_10509.method2117(1835275443);
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
+		MeshRasterizer meshrasterizer_3 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_3 == null) {
 			return null;
 		} else {
@@ -60,18 +60,18 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.aClass123_10509.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		MeshRasterizer meshrasterizer_3 = this.aClass123_10509.method2132(graphicalrenderer_1, 262144, true, true);
 		if (meshrasterizer_3 != null) {
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_3, this.method11168(), this.aShort9458, this.localX, this.aShort9456, this.localY, false, 985528873);
 		}
 	}
 
-	public void method16096(Class476 class476_1, int i_2) {
+	public void method16096(Class476 class476_1) {
 		this.aClass123_10509.method2116(class476_1, 501867772);
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
-		MeshRasterizer meshrasterizer_5 = this.aClass123_10509.method2132(graphicalrenderer_1, 131072, false, false, -1384937123);
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
+		MeshRasterizer meshrasterizer_5 = this.aClass123_10509.method2132(graphicalrenderer_1, 131072, false, false);
 		return meshrasterizer_5 == null ? false : meshrasterizer_5.method11270(i_2, i_3, this.method11168(), false, 0);
 	}
 
@@ -99,18 +99,18 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		return this.aClass123_10509.anInt1542;
 	}
 
-	public void method85(byte b_1) {
+	public void method85() {
 	}
 
 	public boolean method86(int i_1) {
 		return this.aClass123_10509.method2117(-566540955);
 	}
 
-	public void method87(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method87(GraphicalRenderer graphicalrenderer_1) {
 		this.aClass123_10509.method2136(graphicalrenderer_1, (byte) -107);
 	}
 
-	public void method88(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method88(GraphicalRenderer graphicalrenderer_1) {
 		this.aClass123_10509.method2118(graphicalrenderer_1, 1860248692);
 	}
 
@@ -127,7 +127,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	public InteractableObject(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2, ObjectIndexLoader objectindexloader_3, ObjectDefinitions objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, int i_13, int i_14, int i_15, int i_16, int i_17) {
-		super(sceneobjectmanager_1, i_5, i_6, i_7, i_8, i_9, i_11, i_12, i_13, i_14, objectdefinitions_4.supportsItems == 1, Class461.method7705(i_15, i_16, (byte) -22));
+		super(sceneobjectmanager_1, i_5, i_6, i_7, i_8, i_9, i_11, i_12, i_13, i_14, objectdefinitions_4.supportsItems == 1, Class461.method7705(i_15, i_16));
 		this.aClass123_10509 = new Class123(graphicalrenderer_2, objectindexloader_3, objectdefinitions_4, i_15, i_16, this.plane, i_6, this, bool_10, i_17);
 		this.aBool10511 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.method13008(1, (byte) -22);
@@ -160,7 +160,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -220,7 +220,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -247,7 +247,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -271,7 +271,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	void method13012(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 262144, true, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10509.method2132(graphicalrenderer_1, 262144, true, true);
 		if (meshrasterizer_2 != null) {
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, this.method11168(), this.aShort9458, this.localX, this.aShort9456, this.localY, false, 1583997112);
 		}
@@ -310,12 +310,12 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	boolean method13020(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		MeshRasterizer meshrasterizer_4 = this.aClass123_10509.method2132(graphicalrenderer_1, 131072, false, false, -1384937123);
+		MeshRasterizer meshrasterizer_4 = this.aClass123_10509.method2132(graphicalrenderer_1, 131072, false, false);
 		return meshrasterizer_4 == null ? false : meshrasterizer_4.method11270(i_2, i_3, this.method11168(), false, 0);
 	}
 
-	public int method12997(int i_1) {
-		return this.aClass123_10509.method2121((byte) 1);
+	public int method12997() {
+		return this.aClass123_10509.method2121();
 	}
 
 	final void method13015() {

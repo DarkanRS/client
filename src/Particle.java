@@ -64,10 +64,10 @@ public class Particle extends PointEntity {
 				i_11 = class293_12.aByte3507;
 			}
 
-			int i_13 = arr_10[i_11].method6722(i_5, i_6, 65280);
+			int i_13 = arr_10[i_11].method6722(i_5, i_6);
 			int i_14;
 			if (i_11 < sceneobjectmanager_1.anInt2601 - 1) {
-				i_14 = arr_10[i_11 + 1].method6722(i_5, i_6, 65280);
+				i_14 = arr_10[i_11 + 1].method6722(i_5, i_6);
 			} else {
 				i_14 = i_13 - (8 << sceneobjectmanager_1.anInt2592);
 			}
@@ -78,7 +78,7 @@ public class Particle extends PointEntity {
 					return;
 				}
 
-				if (class59_9.anInt591 >= 0 && i_7 > arr_10[class59_9.anInt591].method6722(i_5, i_6, 65280)) {
+				if (class59_9.anInt591 >= 0 && i_7 > arr_10[class59_9.anInt591].method6722(i_5, i_6)) {
 					this.kill();
 					return;
 				}
@@ -88,20 +88,20 @@ public class Particle extends PointEntity {
 					return;
 				}
 
-				if (class59_9.anInt600 >= 0 && i_7 < arr_10[class59_9.anInt600 + 1].method6722(i_5, i_6, 65280)) {
+				if (class59_9.anInt600 >= 0 && i_7 < arr_10[class59_9.anInt600 + 1].method6722(i_5, i_6)) {
 					this.kill();
 					return;
 				}
 			}
 
 			int i_15;
-			for (i_15 = sceneobjectmanager_1.anInt2601 - 1; i_15 > 0 && i_7 > arr_10[i_15].method6722(i_5, i_6, 65280); --i_15) {
+			for (i_15 = sceneobjectmanager_1.anInt2601 - 1; i_15 > 0 && i_7 > arr_10[i_15].method6722(i_5, i_6); --i_15) {
 				;
 			}
 
-			if (class59_9.aBool541 && i_15 == 0 && i_7 > arr_10[0].method6722(i_5, i_6, 65280)) {
+			if (class59_9.aBool541 && i_15 == 0 && i_7 > arr_10[0].method6722(i_5, i_6)) {
 				this.kill();
-			} else if (i_15 == sceneobjectmanager_1.anInt2601 - 1 && arr_10[i_15].method6722(i_5, i_6, 65280) - i_7 > 8 << sceneobjectmanager_1.anInt2592) {
+			} else if (i_15 == sceneobjectmanager_1.anInt2601 - 1 && arr_10[i_15].method6722(i_5, i_6) - i_7 > 8 << sceneobjectmanager_1.anInt2592) {
 				this.kill();
 			} else {
 				class293_12 = sceneobjectmanager_1.aClass293ArrayArrayArray2604[i_15][i_5][i_6];
@@ -421,7 +421,7 @@ public class Particle extends PointEntity {
 					definition.anIntArray562 = new int[definition.anIntArray561.length];
 
 					for (dx = 0; dx < definition.anIntArray561.length; dx++) {
-						Class423.method7065(definition.anIntArray561[dx], -1229346850);
+						Class423.method7065(definition.anIntArray561[dx]);
 						definition.anIntArray562[dx] = ((Class282_Sub38) Class345.aClass465_4029.get((long) definition.anIntArray561[dx])).anInt8002;
 					}
 				}

@@ -5,7 +5,7 @@ public class ItemContainer extends Node {
 	int[] itemIds = new int[] { -1 };
 	int[] amounts = new int[1];
 
-	final MeshRasterizer method12429(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, int i_4, boolean bool_5, PlayerAppearance playerappearance_6, int i_7) {
+	final MeshRasterizer method12429(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, int i_4, boolean bool_5, PlayerAppearance playerappearance_6) {
 		MeshRasterizer meshrasterizer_8 = null;
 		int i_9 = i_2;
 		RenderAnimDefs renderanimdefs_10 = null;
@@ -31,7 +31,7 @@ public class ItemContainer extends Node {
 			i_9 = i_2 | animation_3.method7640(-1290274733);
 		}
 
-		long long_24 = this.method12444(ints_11, i_4, playerappearance_6 != null ? playerappearance_6.colors : null, bool_5, 583894637);
+		long long_24 = this.method12444(ints_11, i_4, playerappearance_6 != null ? playerappearance_6.colors : null, bool_5);
 		if (aClass229_7712 != null) {
 			meshrasterizer_8 = (MeshRasterizer) aClass229_7712.get(long_24);
 		}
@@ -111,12 +111,12 @@ public class ItemContainer extends Node {
 			return meshrasterizer_8;
 		} else {
 			MeshRasterizer meshrasterizer_14 = meshrasterizer_8.method11289((byte) 1, i_9, true);
-			animation_3.rasterize(meshrasterizer_14, 0, 16711935);
+			animation_3.rasterize(meshrasterizer_14, 0);
 			return meshrasterizer_14;
 		}
 	}
 
-	long method12444(int[] ints_1, int i_2, int[] ints_3, boolean bool_4, int i_5) {
+	long method12444(int[] ints_1, int i_2, int[] ints_3, boolean bool_4) {
 		long[] longs_6 = RsByteBuffer.aLongArray7979;
 		long long_7 = -1L;
 		long_7 = long_7 >>> 8 ^ longs_6[(int) ((long_7 ^ (long) (i_2 >> 8)) & 0xffL)];

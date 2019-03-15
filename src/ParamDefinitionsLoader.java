@@ -6,17 +6,17 @@ public class ParamDefinitionsLoader {
 
 	Index aClass317_5027;
 
-	public void method7067(int i_1) {
+	public void method7067() {
 		SoftCache softcache_2 = this.aClass229_5028;
 		synchronized (this.aClass229_5028) {
 			this.aClass229_5028.method3863(1684780970);
 		}
 	}
 
-	public void method7068(int i_1, int i_2) {
+	public void method7068() {
 		SoftCache softcache_3 = this.aClass229_5028;
 		synchronized (this.aClass229_5028) {
-			this.aClass229_5028.method3858(i_1, (byte) -89);
+			this.aClass229_5028.method3858(5, (byte) -89);
 		}
 	}
 
@@ -27,7 +27,7 @@ public class ParamDefinitionsLoader {
 		}
 	}
 
-	public ParamDefinitions method7069(int i_1, byte b_2) {
+	public ParamDefinitions method7069(int i_1) {
 		SoftCache softcache_4 = this.aClass229_5028;
 		ParamDefinitions attributedefault_3;
 		synchronized (this.aClass229_5028) {
@@ -43,7 +43,7 @@ public class ParamDefinitionsLoader {
 			}
 			attributedefault_3 = new ParamDefinitions();
 			if (bytes_10 != null) {
-				attributedefault_3.method7315(new RsByteBuffer(bytes_10), 864887749);
+				attributedefault_3.method7315(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_5028;
 			synchronized (this.aClass229_5028) {
@@ -53,14 +53,14 @@ public class ParamDefinitionsLoader {
 		}
 	}
 
-	public void method7070(int i_1) {
+	public void method7070() {
 		SoftCache softcache_2 = this.aClass229_5028;
 		synchronized (this.aClass229_5028) {
 			this.aClass229_5028.method3859(-299334668);
 		}
 	}
 
-	static char method7080(char c, int i) {
+	static char method7080(char c) {
 		switch (c) {
 		case '\u00d2':
 		case '\u00d3':

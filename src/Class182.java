@@ -19,7 +19,7 @@ public class Class182 {
 	}
 
 	public static Class472 method3040(int i_0, byte b_1) {
-		Class472[] arr_2 = Class275_Sub6.method12598(-1242125969);
+		Class472[] arr_2 = Class275_Sub6.method12598();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Class472 class472_4 = arr_2[i_3];
 			if (i_0 == class472_4.anInt5602) {
@@ -29,7 +29,7 @@ public class Class182 {
 		return null;
 	}
 
-	public static String method3044(String string_0, int i_1) {
+	public static String method3044(String string_0) {
 		int i_2 = string_0.length();
 		int i_3 = 0;
 		for (int i_4 = 0; i_4 < i_2; i_4++) {

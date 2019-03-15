@@ -4,7 +4,7 @@ public class Class175 {
 		throw new Error();
 	}
 
-	public static Class346 method2958(RsByteBuffer rsbytebuffer_0, int i_1) {
+	public static Class346 method2958(RsByteBuffer rsbytebuffer_0) {
 		Class346 class346_2 = new Class346();
 		class346_2.anInt4048 = rsbytebuffer_0.readUnsignedShort();
 		class346_2.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(class346_2.anInt4048, -1825001188);
@@ -15,11 +15,11 @@ public class Class175 {
 		icomponentdefinitions_0.aBool1363 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 9);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class244.method4196(icomponentdefinitions_0.idHash, (byte) 0);
+			Class244.method4196(icomponentdefinitions_0.idHash);
 		}
 	}
 
-	public static boolean method2962(char var_0, int i_1) {
+	public static boolean method2962(char var_0) {
 		if ((var_0 <= 0 || var_0 >= 128) && (var_0 < 160 || var_0 > 255)) {
 			if (var_0 != 0) {
 				char[] arr_2 = Class490.aCharArray5766;
@@ -64,7 +64,7 @@ public class Class175 {
 				if (i_10 > 0 && i_8 > 0) {
 					i_9 = i_7 * (i_8 - i_10) / i_8;
 				}
-				Class84.myPlayer.getSize(828768449);
+				Class84.myPlayer.getSize();
 				int i_11 = 8192;
 				int i_12 = (class282_sub48_0.anInt8107 + class282_sub48_0.anInt8079) / 2 - i_2;
 				int i_13 = (class282_sub48_0.anInt8078 + class282_sub48_0.anInt8077) / 2 - i_3;
@@ -89,7 +89,7 @@ public class Class175 {
 				Class343 class343_19;
 				if (class282_sub48_0.aClass282_Sub15_Sub5_8099 == null) {
 					if (class282_sub48_0.anInt8095 >= 0) {
-						i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : Class76.method1356(class282_sub48_0.anInt8093, class282_sub48_0.anInt8094, -1021175029);
+						i_12 = class282_sub48_0.anInt8094 == 256 && class282_sub48_0.anInt8093 == 256 ? 256 : Class76.method1356(class282_sub48_0.anInt8093, class282_sub48_0.anInt8094);
 						if (class282_sub48_0.aBool8098) {
 							if (class282_sub48_0.aClass282_Sub18_8097 == null) {
 								class282_sub48_0.aClass282_Sub18_8097 = Class282_Sub18.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, class282_sub48_0.anInt8095);
@@ -100,7 +100,7 @@ public class Class175 {
 								}
 								if (class282_sub48_0.aClass282_Sub26_Sub1_Sub1_8082 != null) {
 									class282_sub15_sub5_sub1_14 = (Class282_Sub15_Sub5_Sub1) class282_sub48_0.aClass282_Sub26_Sub1_Sub1_8082.method15225(i_12, i_9 << 6, i_11);
-									class282_sub15_sub5_sub1_14.method15325(-1, (byte) 8);
+									class282_sub15_sub5_sub1_14.method15325(-1);
 									Class79.aClass282_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub1_14);
 									class282_sub48_0.aClass282_Sub15_Sub5_8099 = class282_sub15_sub5_sub1_14;
 								}
@@ -110,7 +110,7 @@ public class Class175 {
 							if (class343_19 != null) {
 								class282_sub26_sub1_sub2_15 = class343_19.method6089().method16062(Class119.aClass344_1460);
 								class282_sub15_sub5_sub2_16 = (Class282_Sub15_Sub5_Sub2) class282_sub26_sub1_sub2_15.method15225(i_12, i_9 << 6, i_11);
-								class282_sub15_sub5_sub2_16.method15325(-1, (byte) 8);
+								class282_sub15_sub5_sub2_16.method15325(-1);
 								Class79.aClass282_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub2_16);
 								class282_sub48_0.aClass282_Sub15_Sub5_8099 = class282_sub15_sub5_sub2_16;
 							}
@@ -134,7 +134,7 @@ public class Class175 {
 								}
 								if (class282_sub48_0.aClass282_Sub26_Sub1_Sub1_8106 != null) {
 									class282_sub15_sub5_sub1_14 = (Class282_Sub15_Sub5_Sub1) class282_sub48_0.aClass282_Sub26_Sub1_Sub1_8106.method15225(i_12, i_9 << 6, i_11);
-									class282_sub15_sub5_sub1_14.method15325(0, (byte) 8);
+									class282_sub15_sub5_sub1_14.method15325(0);
 									Class79.aClass282_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub1_14);
 									class282_sub48_0.aClass282_Sub15_Sub5_8096 = class282_sub15_sub5_sub1_14;
 									class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (double) (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));
@@ -146,7 +146,7 @@ public class Class175 {
 							if (class343_19 != null) {
 								class282_sub26_sub1_sub2_15 = class343_19.method6089().method16062(Class119.aClass344_1460);
 								class282_sub15_sub5_sub2_16 = (Class282_Sub15_Sub5_Sub2) class282_sub26_sub1_sub2_15.method15225(i_12, i_9 << 6, i_11);
-								class282_sub15_sub5_sub2_16.method15325(0, (byte) 8);
+								class282_sub15_sub5_sub2_16.method15325(0);
 								Class79.aClass282_Sub15_Sub4_783.method15275(class282_sub15_sub5_sub2_16);
 								class282_sub48_0.aClass282_Sub15_Sub5_8096 = class282_sub15_sub5_sub2_16;
 								class282_sub48_0.anInt8080 = class282_sub48_0.anInt8072 + (int) (Math.random() * (double) (class282_sub48_0.anInt8101 - class282_sub48_0.anInt8072));

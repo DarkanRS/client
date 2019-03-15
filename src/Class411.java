@@ -71,7 +71,7 @@ public class Class411 {
 		this.anInt4957 = i_2;
 	}
 
-	static void method6912(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static void method6912(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readUnsignedSmart(1492689351);
 		Class354.aClass213Array4111 = new Class213[i_2];
 		int i_3;
@@ -97,13 +97,13 @@ public class Class411 {
 		Class244.aBool3007 = true;
 	}
 
-	public static void method6914(int i_0, short s_1) {
+	public static void method6914(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(9, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -16);
 	}
 
-	public static Class350 method6915(RsByteBuffer rsbytebuffer_0, int i_1) {
-		Class350 class350_2 = Class383.method6512(rsbytebuffer_0, 88062096);
+	public static Class350 method6915(RsByteBuffer rsbytebuffer_0) {
+		Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
 		int i_3 = rsbytebuffer_0.readInt();
 		int i_4 = rsbytebuffer_0.readInt();
 		return new Class350_Sub2(class350_2.aClass356_4094, class350_2.aClass353_4087, class350_2.anInt4090, class350_2.anInt4089, class350_2.anInt4093, class350_2.anInt4088, class350_2.anInt4092, class350_2.anInt4086, class350_2.anInt4091, i_3, i_4);

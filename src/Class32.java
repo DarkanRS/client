@@ -76,11 +76,11 @@ public class Class32 {
 
 		this.aClass158_Sub1_374 = this.aClass505_Sub2_371.method8418();
 		this.anInterface29_363 = this.aClass505_Sub2_371.method14064(Class150.aClass150_1949, this.aClass76_373, this.anInt367, this.anInt365);
-		this.anInterface9_364 = this.anInterface29_363.method200(0);
+		this.anInterface9_364 = this.anInterface29_363.method200();
 		this.anInterface29_372 = this.aClass505_Sub2_371.method14064(Class150.aClass150_1949, this.aClass76_373, this.anInt367, this.anInt365);
-		this.anInterface9_368 = this.anInterface29_372.method200(0);
+		this.anInterface9_368 = this.anInterface29_372.method200();
 		this.anInterface29_366 = this.aClass505_Sub2_371.method14064(Class150.aClass150_1949, this.aClass76_373, this.anInt367, this.anInt365);
-		this.anInterface9_369 = this.anInterface29_366.method200(0);
+		this.anInterface9_369 = this.anInterface29_366.method200();
 		this.anInterface8_362 = this.aClass505_Sub2_371.method8419(this.anInt367, this.anInt365);
 		int i_1 = this.aVector375.size();
 
@@ -133,7 +133,7 @@ public class Class32 {
 		this.aClass505_Sub2_371.method13947(1);
 		this.aClass505_Sub2_371.L();
 		this.aClass158_Sub1_374.method13765((Interface8) null);
-		this.aClass505_Sub2_371.method13919(0, 0);
+		this.aClass505_Sub2_371.method13919();
 		int i_1 = this.aVector375.size();
 		this.anInterface29_366.method54();
 
@@ -189,7 +189,7 @@ public class Class32 {
 			this.aClass505_Sub2_371.method8637(this.aClass158_Sub1_374, -712324126);
 			this.aClass505_Sub2_371.ba(3, -16777216);
 			this.aClass505_Sub2_371.method13986(15);
-			this.aClass505_Sub2_371.method13985(0);
+			this.aClass505_Sub2_371.method13985();
 			if (!this.aClass158_Sub1_374.method13764()) {
 				throw new RuntimeException("");
 			} else {

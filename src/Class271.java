@@ -15,7 +15,7 @@ public class Class271 {
 		throw new Error();
 	}
 
-	public static String method4824(byte[] bytes_0, int i_1, int i_2, int i_3) {
+	public static String method4824(byte[] bytes_0, int i_1, int i_2) {
 		char[] arr_4 = new char[i_2];
 		int i_5 = 0;
 		int i_6 = i_1;
@@ -66,12 +66,12 @@ public class Class271 {
 		return new String(arr_4, 0, i_5);
 	}
 
-	static void method4827(Index index_0, int i_1, int i_2, int i_3, boolean bool_4, long long_5) {
-		Class109.method1859(index_0, i_1, i_2, i_3, bool_4, long_5, 0, 2065437582);
+	static void method4827(Index index_0, int i_1, int i_2, int i_3, boolean bool_4) {
+		Class109.method1859(index_0, i_1, i_2, i_3, bool_4, (long) 0);
 	}
 
 	public static TCPMessage method4828(OutgoingPacket outgoingpacket_0, IsaacCipher isaaccipher_1, int i_2) {
-		TCPMessage tcpmessage_3 = Class158_Sub2.method14356((short) 2048);
+		TCPMessage tcpmessage_3 = Class158_Sub2.method14356();
 		tcpmessage_3.packet = outgoingpacket_0;
 		tcpmessage_3.anInt7678 = outgoingpacket_0.anInt4632;
 		if (tcpmessage_3.anInt7678 == -1) {

@@ -17,7 +17,7 @@ public class Class455_Sub2 extends Class455 {
 	}
 
 	Class455_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, byte[] bytes_4) {
-		this.aClass137_Sub1_Sub1_8974 = Class137_Sub1_Sub1.method15540(class505_sub1_1, Class150.aClass150_1951, Class76.aClass76_751, i_2, i_3, false, bytes_4, Class150.aClass150_1951);
+		this.aClass137_Sub1_Sub1_8974 = Class137_Sub1_Sub1.method15540(class505_sub1_1, Class150.aClass150_1951, Class76.aClass76_751, i_2, i_3, bytes_4, Class150.aClass150_1951);
 		this.aClass137_Sub1_Sub1_8974.method14445(false, false);
 	}
 

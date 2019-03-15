@@ -24,7 +24,7 @@ public class IcmpService_Sub1 extends IcmpService {
 
 		while (iterator_4.hasNext()) {
 			Interface45 interface45_5 = (Interface45) iterator_4.next();
-			interface45_5.method245(i_1, i_2, i_3, 53718982);
+			interface45_5.method245(i_1, i_2, i_3);
 		}
 
 	}
@@ -54,7 +54,7 @@ public class IcmpService_Sub1 extends IcmpService {
 
 		while (iterator_4.hasNext()) {
 			Interface45 interface45_5 = (Interface45) iterator_4.next();
-			interface45_5.method245(i_1, i_2, i_3, 53718982);
+			interface45_5.method245(i_1, i_2, i_3);
 		}
 
 	}
@@ -64,7 +64,7 @@ public class IcmpService_Sub1 extends IcmpService {
 
 		while (iterator_4.hasNext()) {
 			Interface45 interface45_5 = (Interface45) iterator_4.next();
-			interface45_5.method245(i_1, i_2, i_3, 53718982);
+			interface45_5.method245(i_1, i_2, i_3);
 		}
 
 	}

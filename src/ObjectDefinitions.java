@@ -170,17 +170,17 @@ public class ObjectDefinitions {
 		}
 	}
 
-	void method7964(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	void method7964(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method7965(rsbytebuffer_1, i_3, -421182854);
+			this.method7965(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method7965(RsByteBuffer buffer, int opcode, int i_3) {
+	void method7965(RsByteBuffer buffer, int opcode) {
 		int i_4;
 		int i_5;
 		int i_6;
@@ -427,7 +427,7 @@ public class ObjectDefinitions {
 		}
 	}
 
-	void method7966(int i_1) {
+	void method7966() {
 		if (this.interactable == -1) {
 			this.interactable = 0;
 			if (this.types != null && this.types.length == 1 && this.types[0] == SceneObjectType.SCENERY_INTERACT.type) {
@@ -452,7 +452,7 @@ public class ObjectDefinitions {
 		return this.animations != null;
 	}
 
-	public final boolean method7968(int i_1) {
+	public final boolean method7968() {
 		if (this.modelIds == null) {
 			return true;
 		} else {
@@ -525,14 +525,14 @@ public class ObjectDefinitions {
 					synchronized (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass157Array5616) {
 						for (int i_46_ = 0; i_46_ < i_43_; i_46_++) {
 							synchronized (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).meshIndex) {
-								class157 = RSMesh.decodeMesh((((ObjectIndexLoader) (((ObjectDefinitions) this).loader)).meshIndex), is[i_46_], 0);
+								class157 = RSMesh.decodeMesh((((ObjectIndexLoader) (((ObjectDefinitions) this).loader)).meshIndex), is[i_46_]);
 							}
 							if (null == class157) {
 								MeshRasterizer class528_47_ = null;
 								return class528_47_;
 							}
 							if (class157.version < 13)
-								class157.upscale(2);
+								class157.upscale();
 							if (i_43_ > 1)
 								((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass157Array5616[i_46_] = class157;
 						}
@@ -598,7 +598,7 @@ public class ObjectDefinitions {
 		return class528_48_;
 	}
 
-	public String method7973(int i_1, String string_2, byte b_3) {
+	public String method7973(int i_1, String string_2) {
 		if (this.aClass465_5668 == null) {
 			return string_2;
 		} else {
@@ -613,7 +613,7 @@ public class ObjectDefinitions {
 		} else {
 			for (int i_2 = 0; i_2 < this.toObjectIds.length; i_2++) {
 				if (this.toObjectIds[i_2] != -1) {
-					ObjectDefinitions objectdefinitions_3 = this.loader.getObjectDefinitions(this.toObjectIds[i_2], 65280);
+					ObjectDefinitions objectdefinitions_3 = this.loader.getObjectDefinitions(this.toObjectIds[i_2]);
 					if (objectdefinitions_3.ambientSoundId != -1 || objectdefinitions_3.audioTracks != null) {
 						return true;
 					}
@@ -623,7 +623,7 @@ public class ObjectDefinitions {
 		}
 	}
 
-	public boolean method7976(short s_1) {
+	public boolean method7976() {
 		return this.animations != null && this.animations.length > 1;
 	}
 
@@ -675,12 +675,12 @@ public class ObjectDefinitions {
 		}
 	}
 
-	public int[] method8008(int i_1) {
+	public int[] method8008() {
 		return this.animations;
 	}
 
 	public final synchronized Class452 method8010(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, boolean bool_10, Class476 class476_11, int i_12) {
-		if (Class485.method8201(i_3, -159499065)) {
+		if (Class485.method8201(i_3)) {
 			i_3 = SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
 		}
 		long long_13 = (long) ((i_3 << 3) + i_4 + (this.id << 10));
@@ -761,8 +761,8 @@ public class ObjectDefinitions {
 		return this.loader.aClass452_5620;
 	}
 
-	public final synchronized MeshRasterizer method8012(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, Animation animation_10, Class476 class476_11, int i_12) {
-		if (Class485.method8201(i_3, -159499065)) {
+	public final synchronized MeshRasterizer method8012(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, Ground class390_5, Ground class390_6, int i_7, int i_8, int i_9, Animation animation_10, Class476 class476_11) {
+		if (Class485.method8201(i_3)) {
 			i_3 = SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
 		}
 		long long_13 = (long) ((i_3 << 3) + i_4 + (this.id << 10));
@@ -811,7 +811,7 @@ public class ObjectDefinitions {
 		if (animation_10 != null) {
 			meshrasterizer_16 = meshrasterizer_16.method11289((byte) 1, i_2, true);
 			bool_18 = true;
-			animation_10.rasterize(meshrasterizer_16, i_4 & 0x3, 16711935);
+			animation_10.rasterize(meshrasterizer_16, i_4 & 0x3);
 		}
 		if (i_3 == SceneObjectType.SCENERY_INTERACT.type && i_4 > 3) {
 			if (!bool_18) {
@@ -848,29 +848,29 @@ public class ObjectDefinitions {
 			i_3 = interface42_1.method240(this.configId, 426606861);
 		}
 		if (i_3 >= 0 && i_3 < this.toObjectIds.length - 1 && this.toObjectIds[i_3] != -1) {
-			return this.loader.getObjectDefinitions(this.toObjectIds[i_3], 65280);
+			return this.loader.getObjectDefinitions(this.toObjectIds[i_3]);
 		} else {
 			int i_4 = this.toObjectIds[this.toObjectIds.length - 1];
-			return i_4 != -1 ? this.loader.getObjectDefinitions(i_4, 65280) : null;
+			return i_4 != -1 ? this.loader.getObjectDefinitions(i_4) : null;
 		}
 	}
 
-	public static void method8020(int i_0) {
-		MeshModifier.method7042((byte) 2);
-		Class282_Sub20_Sub36.method15420((byte) -32);
+	public static void method8020() {
+		MeshModifier.method7042();
+		Class282_Sub20_Sub36.method15420();
 		Class282_Sub20_Sub24.method15391(792930354);
-		Class335.method5961(1418471735);
+		Class335.method5961();
 	}
 
 	static PulseEvent nextPulseEvent() {
-		PulseEvent class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9666.method7941((byte) 4);
+		PulseEvent class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9666.method7941();
 		if (class282_sub50_sub12_1 != null) {
 			class282_sub50_sub12_1.remove();
 			class282_sub50_sub12_1.method13452();
 			return class282_sub50_sub12_1;
 		} else {
 			do {
-				class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9655.method7941((byte) 4);
+				class282_sub50_sub12_1 = (PulseEvent) PulseEvent.aClass477_9655.method7941();
 				if (class282_sub50_sub12_1 == null) {
 					return null;
 				}
@@ -884,10 +884,10 @@ public class ObjectDefinitions {
 		}
 	}
 
-	static byte[] method8023(File file_0, int i_1, byte b_2) {
+	static byte[] method8023(File file_0, int i_1) {
 		try {
 			byte[] bytes_4 = new byte[i_1];
-			Class353.method6208(file_0, bytes_4, i_1, 108704305);
+			Class353.method6208(file_0, bytes_4, i_1);
 			return bytes_4;
 		} catch (IOException ioexception_5) {
 			return null;

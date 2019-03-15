@@ -14,7 +14,7 @@ public class AbstractQueue_Sub1 extends AbstractQueue {
 	Comparator aComparator10071;
 	int anInt10070;
 
-	void method15479(int i_1) {
+	void method15479() {
 		int i_2 = (this.aClass354Array10072.length << 1) + 1;
 		this.aClass354Array10072 = (Class354[]) Arrays.copyOf(this.aClass354Array10072, i_2);
 	}
@@ -148,7 +148,7 @@ public class AbstractQueue_Sub1 extends AbstractQueue {
 			++this.anInt10073;
 			int i_2 = this.anInt10070;
 			if (i_2 >= this.aClass354Array10072.length) {
-				this.method15479(766737653);
+				this.method15479();
 			}
 
 			++this.anInt10070;

@@ -11,7 +11,7 @@ public class Class335 {
 		this.buffer = rsbitsbuffer_2;
 	}
 
-	static void method5961(int i_0) {
+	static void method5961() {
 		if (Class260.aClass277_3221 != null) {
 			Vector3 vector3_1 = Vector3.popVectorStackTo(Class84.myPlayer.method11166().aClass385_3595);
 			CoordGrid coordgrid_2 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -33,7 +33,7 @@ public class Class335 {
 		}
 	}
 
-	public static Class466[] method5963(int i_0) {
+	public static Class466[] method5963() {
 		return new Class466[] { Class466.aClass466_5564, Class466.aClass466_5567, Class466.aClass466_5568, Class466.aClass466_5563, Class466.aClass466_5569, Class466.aClass466_5565 };
 	}
 }

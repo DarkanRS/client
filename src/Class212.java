@@ -30,31 +30,31 @@ public class Class212 {
 
 	}
 
-	final void method3637(Object object_1, Interface18 interface18_2, int i_3) {
-		if (i_3 > this.anInt2678) {
+	final void method3637(Object object_1, Interface18 interface18_2) {
+		if (1 > this.anInt2678) {
 			throw new IllegalStateException();
 		} else {
 			this.method3634(interface18_2);
-			this.anInt2676 -= i_3;
+			this.anInt2676 -= 1;
 
 			while (this.anInt2676 < 0) {
 				Class282_Sub50_Sub8 class282_sub50_sub8_4 = (Class282_Sub50_Sub8) this.aClass477_2675.method7937(712410989);
 				this.method3635(class282_sub50_sub8_4);
 			}
 
-			Class282_Sub50_Sub8_Sub1 class282_sub50_sub8_sub1_5 = new Class282_Sub50_Sub8_Sub1(interface18_2, object_1, i_3);
+			Class282_Sub50_Sub8_Sub1 class282_sub50_sub8_sub1_5 = new Class282_Sub50_Sub8_Sub1(interface18_2, object_1, 1);
 			this.aClass465_2677.put(class282_sub50_sub8_sub1_5, interface18_2.method130());
-			this.aClass477_2675.method7936(class282_sub50_sub8_sub1_5, -1738910950);
+			this.aClass477_2675.method7936(class282_sub50_sub8_sub1_5);
 			class282_sub50_sub8_sub1_5.key = 0L;
 		}
 	}
 
-	public Class212(int i_1) {
-		this.anInt2678 = i_1;
-		this.anInt2676 = i_1;
+	public Class212() {
+		this.anInt2678 = 250;
+		this.anInt2676 = 250;
 
 		int i_2;
-		for (i_2 = 1; i_2 + i_2 < i_1; i_2 += i_2) {
+		for (i_2 = 1; i_2 + i_2 < 250; i_2 += i_2) {
 			;
 		}
 
@@ -68,7 +68,7 @@ public class Class212 {
 	}
 
 	public final void method3639(int i_1) {
-		for (Class282_Sub50_Sub8 class282_sub50_sub8_2 = (Class282_Sub50_Sub8) this.aClass477_2675.method7941((byte) 4); class282_sub50_sub8_2 != null; class282_sub50_sub8_2 = (Class282_Sub50_Sub8) this.aClass477_2675.method7955(450272970)) {
+		for (Class282_Sub50_Sub8 class282_sub50_sub8_2 = (Class282_Sub50_Sub8) this.aClass477_2675.method7941(); class282_sub50_sub8_2 != null; class282_sub50_sub8_2 = (Class282_Sub50_Sub8) this.aClass477_2675.method7955(450272970)) {
 			if (class282_sub50_sub8_2.method14865()) {
 				if (class282_sub50_sub8_2.method14860() == null) {
 					class282_sub50_sub8_2.remove();
@@ -91,7 +91,7 @@ public class Class212 {
 	}
 
 	public final void method3641() {
-		for (Class282_Sub50_Sub8 class282_sub50_sub8_1 = (Class282_Sub50_Sub8) this.aClass477_2675.method7941((byte) 4); class282_sub50_sub8_1 != null; class282_sub50_sub8_1 = (Class282_Sub50_Sub8) this.aClass477_2675.method7955(-1434558615)) {
+		for (Class282_Sub50_Sub8 class282_sub50_sub8_1 = (Class282_Sub50_Sub8) this.aClass477_2675.method7941(); class282_sub50_sub8_1 != null; class282_sub50_sub8_1 = (Class282_Sub50_Sub8) this.aClass477_2675.method7955(-1434558615)) {
 			if (class282_sub50_sub8_1.method14865()) {
 				class282_sub50_sub8_1.remove();
 				class282_sub50_sub8_1.method13452();
@@ -102,7 +102,7 @@ public class Class212 {
 	}
 
 	public final void method3644(Object object_1, Interface18 interface18_2) {
-		this.method3637(object_1, interface18_2, 1);
+		this.method3637(object_1, interface18_2);
 	}
 
 	public final Object method3654(Interface18 interface18_1) {
@@ -115,12 +115,12 @@ public class Class212 {
 					if (class282_sub50_sub8_4.method14865()) {
 						Class282_Sub50_Sub8_Sub1 class282_sub50_sub8_sub1_6 = new Class282_Sub50_Sub8_Sub1(interface18_1, object_5, class282_sub50_sub8_4.anInt9606);
 						this.aClass465_2677.put(class282_sub50_sub8_sub1_6, class282_sub50_sub8_4.data);
-						this.aClass477_2675.method7936(class282_sub50_sub8_sub1_6, -1738910950);
+						this.aClass477_2675.method7936(class282_sub50_sub8_sub1_6);
 						class282_sub50_sub8_sub1_6.key = 0L;
 						class282_sub50_sub8_4.remove();
 						class282_sub50_sub8_4.method13452();
 					} else {
-						this.aClass477_2675.method7936(class282_sub50_sub8_4, -1738910950);
+						this.aClass477_2675.method7936(class282_sub50_sub8_4);
 						class282_sub50_sub8_4.key = 0L;
 					}
 

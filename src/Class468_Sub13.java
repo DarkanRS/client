@@ -18,7 +18,7 @@ public class Class468_Sub13 extends Preference {
 		return 1;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 

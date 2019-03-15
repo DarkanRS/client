@@ -26,7 +26,7 @@ public class Class137_Sub1 extends Class137 {
 
 		this.aClass505_Sub1_1646.method13654(this);
 		if (this.anInt1648 != 34037 && bool_5 && i_7 == 0 && i_8 == 0) {
-			method2371(this.anInt1648, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), this.anInt9087, this.anInt9086, 32993, this.aClass505_Sub1_1646.anInt8410, ints_6);
+			method2371(this.anInt1648, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), this.anInt9087, this.anInt9086, this.aClass505_Sub1_1646.anInt8410, ints_6);
 			this.method2354(true);
 		} else {
 			OpenGL.glPixelStorei(3314, i_7);
@@ -86,13 +86,13 @@ public class Class137_Sub1 extends Class137 {
 		this.method2351(true);
 	}
 
-	Class137_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, float[] floats_8, Class150 class150_9) {
-		super(class505_sub1_1, i_2, class150_3, class76_4, i_5 * i_6, bool_7);
+	Class137_Sub1(OpenGLGraphicalRenderer class505_sub1_1, Class150 class150_3, Class76 class76_4, int i_5, int i_6, boolean bool_7, float[] floats_8, Class150 class150_9) {
+		super(class505_sub1_1, 3553, class150_3, class76_4, i_5 * i_6, bool_7);
 		this.anInt9087 = i_5;
 		this.anInt9086 = i_6;
 		this.aClass505_Sub1_1646.method13654(this);
 		if (bool_7 && this.anInt1648 != 34037) {
-			method2361(i_2, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), i_5, i_6, class150_9, floats_8);
+			method2361(3553, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), i_5, i_6, class150_9, floats_8);
 			this.method2354(true);
 		} else {
 			OpenGL.glTexImage2Df(this.anInt1648, 0, OpenGLGraphicalRenderer.method13630(this.aClass150_1650, this.aClass76_1651), this.anInt9087, this.anInt9086, 0, OpenGLGraphicalRenderer.method13629(class150_9), 5126, floats_8, 0);
@@ -113,12 +113,12 @@ public class Class137_Sub1 extends Class137 {
 
 	}
 
-	Interface8 method14440(int i_1) {
-		return new Class154(this, i_1);
+	Interface8 method14440() {
+		return new Class154(this, 0);
 	}
 
-	Interface9 method14441(int i_1) {
-		return new Class154(this, i_1);
+	Interface9 method14441() {
+		return new Class154(this, 0);
 	}
 
 	void method14445(boolean bool_1, boolean bool_2) {
@@ -139,7 +139,7 @@ public class Class137_Sub1 extends Class137 {
 		this.method2351(true);
 	}
 
-	void method14452(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6, int i_7, boolean bool_8) {
+	void method14452(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6, int i_7) {
 		if (i_7 == 0) {
 			i_7 = i_3;
 		}
@@ -167,7 +167,7 @@ public class Class137_Sub1 extends Class137 {
 
 	}
 
-	void method14455(int i_1, int i_2, int i_3, int i_4, byte[] bytes_5, Class150 class150_6, int i_7, int i_8, boolean bool_9) {
+	void method14455(int i_2, int i_3, int i_4, byte[] bytes_5, Class150 class150_6, int i_8, boolean bool_9) {
 		if (i_8 == 0) {
 			i_8 = i_3;
 		}
@@ -180,7 +180,7 @@ public class Class137_Sub1 extends Class137 {
 
 			for (int i_14 = 0; i_14 < i_4; i_14++) {
 				int i_15 = i_14 * i_11;
-				int i_16 = i_12 * (i_4 - i_14 - 1) + i_7;
+				int i_16 = i_12 * (i_4 - i_14 - 1) + 0;
 
 				for (int i_17 = 0; i_17 < i_11; i_17++) {
 					bytes_13[i_15++] = bytes_5[i_16++];
@@ -196,7 +196,7 @@ public class Class137_Sub1 extends Class137 {
 			OpenGL.glPixelStorei(3314, i_8);
 		}
 
-		OpenGL.glTexSubImage2Dub(this.anInt1648, 0, i_1, this.anInt9086 - i_2 - i_4, i_3, i_4, OpenGLGraphicalRenderer.method13629(class150_6), 5121, bytes_5, i_7);
+		OpenGL.glTexSubImage2Dub(this.anInt1648, 0, 0, this.anInt9086 - i_2 - i_4, i_3, i_4, OpenGLGraphicalRenderer.method13629(class150_6), 5121, bytes_5, 0);
 		if (i_3 != i_8) {
 			OpenGL.glPixelStorei(3314, 0);
 		}

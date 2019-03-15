@@ -31,7 +31,7 @@ public class Class282_Sub20_Sub13 extends Class282_Sub20 {
 		return ints_3;
 	}
 
-	void method15268(int i_1) {
+	void method15268() {
 		int i_2 = this.anIntArrayArray9822.length;
 		if (i_2 > 0) {
 			for (int i_3 = 0; i_3 < 257; i_3++) {
@@ -299,14 +299,14 @@ public class Class282_Sub20_Sub13 extends Class282_Sub20 {
 			this.method15269(1, -1434032930);
 		}
 
-		this.method15268(2048648154);
+		this.method15268();
 	}
 
 	public Class282_Sub20_Sub13() {
 		super(1, false);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		if (i_1 == 0) {
 			int i_4 = rsbytebuffer_2.readUnsignedByte();
 			if (i_4 == 0) {

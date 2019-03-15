@@ -19,7 +19,7 @@ public class Class282_Sub21_Sub1_Sub2 extends Class282_Sub21_Sub1 {
 		}
 
 		Class115_Sub2 class115_sub2_2 = (Class115_Sub2) this.aClass101_Sub1_10309.method1652(i_1, (byte) 117);
-		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454(363103679));
+		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454());
 		return this.anIntArray10308[i_1] != -1;
 	}
 
@@ -37,7 +37,7 @@ public class Class282_Sub21_Sub1_Sub2 extends Class282_Sub21_Sub1 {
 		}
 
 		Class115_Sub2 class115_sub2_2 = (Class115_Sub2) this.aClass101_Sub1_10309.method1652(i_1, (byte) 36);
-		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454(363103679));
+		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454());
 		return this.anIntArray10308[i_1] != -1;
 	}
 
@@ -47,7 +47,7 @@ public class Class282_Sub21_Sub1_Sub2 extends Class282_Sub21_Sub1 {
 		}
 
 		Class115_Sub2 class115_sub2_2 = (Class115_Sub2) this.aClass101_Sub1_10309.method1652(i_1, (byte) 86);
-		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454(363103679));
+		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454());
 		return this.anIntArray10308[i_1] != -1;
 	}
 
@@ -57,7 +57,7 @@ public class Class282_Sub21_Sub1_Sub2 extends Class282_Sub21_Sub1 {
 		}
 
 		Class115_Sub2 class115_sub2_2 = (Class115_Sub2) this.aClass101_Sub1_10309.method1652(i_1, (byte) 105);
-		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454(363103679));
+		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454());
 		return this.anIntArray10308[i_1] != -1;
 	}
 
@@ -80,7 +80,7 @@ public class Class282_Sub21_Sub1_Sub2 extends Class282_Sub21_Sub1 {
 		}
 
 		Class115_Sub2 class115_sub2_2 = (Class115_Sub2) this.aClass101_Sub1_10309.method1652(i_1, (byte) 46);
-		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454(363103679));
+		this.anIntArray10308[i_1] = OpenGL.glGetUniformLocation(class115_sub2_2.anInt9423, this.method15454());
 		return this.anIntArray10308[i_1] != -1;
 	}
 

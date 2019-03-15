@@ -6,7 +6,7 @@ public class Class280 implements Interface25 {
 		return class521_sub1_sub1_1 == this.aClass521_Sub1_Sub1_Sub1_3371;
 	}
 
-	public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1_1, int i_2) {
+	public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1_1) {
 		return class521_sub1_sub1_1 == this.aClass521_Sub1_Sub1_Sub1_3371;
 	}
 

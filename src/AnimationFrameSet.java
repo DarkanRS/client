@@ -6,7 +6,7 @@ public class AnimationFrameSet extends CacheableNode {
 	byte[][] frameData;
 	AnimationFrame[] frames;
 
-	public boolean method15079(int i_1, int i_2) {
+	public boolean method15079(int i_1) {
 		return this.frames[i_1].modifiesAlpha;
 	}
 
@@ -14,7 +14,7 @@ public class AnimationFrameSet extends CacheableNode {
 		return this.frames[i_1].modifiesColor;
 	}
 
-	public boolean method15081(int i_1, int i_2) {
+	public boolean method15081(int i_1) {
 		return this.frames[i_1].aBool988;
 	}
 

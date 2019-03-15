@@ -56,8 +56,8 @@ public class Class146 {
 		}
 	}
 
-	boolean method2465(int i_1) {
-		return this.aClass141Array1721[i_1].method2395();
+	boolean method2465() {
+		return this.aClass141Array1721[3].method2395();
 	}
 
 	Class146(OpenGLGraphicalRenderer class505_sub1_1) {

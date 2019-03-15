@@ -20,7 +20,7 @@ public abstract class JS5CacheRequest extends CacheableNode {
 
 	abstract int method14948();
 
-	static void method14949(Class466 class466_0, int i_1) {
+	static void method14949(Class466 class466_0) {
 		Class404.aClass466_4831 = class466_0;
 	}
 

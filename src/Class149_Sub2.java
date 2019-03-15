@@ -15,10 +15,10 @@ public class Class149_Sub2 extends Class149 {
 	void method2560(int i_1, int i_2) {
 	}
 
-	void method2556(int i_1, int i_2, int i_3) {
+	void method2556(int i_1, int i_2) {
 	}
 
-	void method2557(int i_1, int i_2, byte b_3) {
+	void method2557(int i_1, int i_2) {
 	}
 
 	Class149_Sub2(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
@@ -33,7 +33,7 @@ public class Class149_Sub2 extends Class149 {
 		this.anInt9313 = i_8;
 	}
 
-	void method2561(int i_1, int i_2, int i_3) {
+	void method2561(int i_1, int i_2) {
 		int i_4 = this.anInt9306 * i_1 >> 12;
 		int i_5 = i_2 * this.anInt9307 >> 12;
 		int i_6 = this.anInt9305 * i_1 >> 12;
@@ -75,7 +75,7 @@ public class Class149_Sub2 extends Class149 {
 		Class282_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * this.anInt1741 * -1378640425, -2131700490);
 	}
 
-	public static void method14609(Player player_0, int i_1) {
+	public static void method14609(Player player_0) {
 		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.anInt10314);
 		if (class282_sub48_2 != null) {
 			if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
@@ -90,7 +90,7 @@ public class Class149_Sub2 extends Class149 {
 
 	static int method14610(Player player_0, int i_1) {
 		int i_2 = player_0.anInt10572;
-		RenderAnimDefs renderanimdefs_3 = player_0.getRenderAnimDefs((byte) -17);
+		RenderAnimDefs renderanimdefs_3 = player_0.getRenderAnimDefs();
 		int i_4 = player_0.aClass456_Sub3_10337.method7597(-1192629729);
 		if (i_4 != -1 && !player_0.aClass456_Sub3_10337.aBool7891) {
 			if (i_4 != renderanimdefs_3.anInt2797 && i_4 != renderanimdefs_3.walkDir6 && i_4 != renderanimdefs_3.anInt2800 && i_4 != renderanimdefs_3.anInt2799) {

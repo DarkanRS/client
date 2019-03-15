@@ -14,7 +14,7 @@ public class Class282_Sub11_Sub2 extends Class282_Sub11 {
 
 	}
 
-	void method12203(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12203(RsByteBuffer rsbytebuffer_1) {
 		this.anInt10002 = rsbytebuffer_1.readUnsignedShort();
 		rsbytebuffer_1.readUnsignedByte();
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
@@ -24,12 +24,12 @@ public class Class282_Sub11_Sub2 extends Class282_Sub11 {
 
 	}
 
-	void method12204(ClanChannel class282_sub4_1, int i_2) {
-		class282_sub4_1.method12096(this.anInt10002, (byte) 2);
+	void method12204(ClanChannel class282_sub4_1) {
+		class282_sub4_1.method12096(this.anInt10002);
 	}
 
 	void method12205(ClanChannel class282_sub4_1) {
-		class282_sub4_1.method12096(1942169437 * this.anInt10002 * -1617468171, (byte) 2);
+		class282_sub4_1.method12096(1942169437 * this.anInt10002 * -1617468171);
 	}
 
 	void method12207(RsByteBuffer rsbytebuffer_1) {

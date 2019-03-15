@@ -24,7 +24,7 @@ public final class Class282_Sub53_Sub2 extends MouseRecord {
 		return this.anInt9631 * 516361889 * -608676511;
 	}
 
-	public int getMeta(byte b_1) {
+	public int getMeta() {
 		return this.anInt9635;
 	}
 

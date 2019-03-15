@@ -22,7 +22,7 @@ public class Class282_Sub19 extends Node {
 
 	void method12305(short s_1) {
 		if (this.aClass505_Sub1_7650.aBool8467) {
-			this.aClass282_Sub35_7655.writeShort(s_1, 1417031095);
+			this.aClass282_Sub35_7655.writeShort(s_1);
 		} else {
 			this.aClass282_Sub35_7655.writeLEShort(s_1, (byte) -40);
 		}
@@ -96,14 +96,14 @@ public class Class282_Sub19 extends Node {
 		}
 
 		f_16 = (float) (this.aClass282_Sub24_7641.method12368((byte) 74) - i_9);
-		f_17 = (float) (this.aClass282_Sub24_7641.method12369(1534020223) - i_11);
+		f_17 = (float) (this.aClass282_Sub24_7641.method12369() - i_11);
 		f_18 = (float) (this.aClass282_Sub24_7641.method12394(2101145954) - i_10);
 		f_19 = (float) Math.sqrt((double) (f_16 * f_16 + f_17 * f_17 + f_18 * f_18));
 		f_20 = 1.0F / f_19;
 		f_16 *= f_20;
 		f_17 *= f_20;
 		f_18 *= f_20;
-		f_21 = f_19 / (float) this.aClass282_Sub24_7641.method12370(-789603523);
+		f_21 = f_19 / (float) this.aClass282_Sub24_7641.method12370();
 		f_22 = 1.0F - f_21 * f_21;
 		if (f_22 < 0.0F) {
 			f_22 = 0.0F;
@@ -156,7 +156,7 @@ public class Class282_Sub19 extends Node {
 		this.aClass505_Sub1_7650 = class505_sub1_1;
 		this.aClass282_Sub24_7641 = class282_sub24_3;
 		this.aClass390_Sub2_7654 = class390_sub2_2;
-		int i_5 = this.aClass282_Sub24_7641.method12370(-789603523) - (class390_sub2_2.tileUnits >> 1);
+		int i_5 = this.aClass282_Sub24_7641.method12370() - (class390_sub2_2.tileUnits >> 1);
 		this.anInt7642 = this.aClass282_Sub24_7641.method12368((byte) -10) - i_5 >> class390_sub2_2.tileScale;
 		this.anInt7653 = this.aClass282_Sub24_7641.method12368((byte) -55) + i_5 >> class390_sub2_2.tileScale;
 		this.anInt7644 = this.aClass282_Sub24_7641.method12394(1027318121) - i_5 >> class390_sub2_2.tileScale;
@@ -179,8 +179,8 @@ public class Class282_Sub19 extends Node {
 				for (i_10 = 0; i_10 <= i_6; i_10++) {
 					i_11 = i_10 + this.anInt7642;
 					if (i_11 > 0 && i_11 < this.aClass390_Sub2_7654.width - 1) {
-						i_12 = class390_sub2_2.method6722(i_11 + 1, i_9, 65280) - class390_sub2_2.method6722(i_11 - 1, i_9, 65280);
-						i_13 = class390_sub2_2.method6722(i_11, i_9 + 1, 65280) - class390_sub2_2.method6722(i_11, i_9 - 1, 65280);
+						i_12 = class390_sub2_2.method6722(i_11 + 1, i_9) - class390_sub2_2.method6722(i_11 - 1, i_9);
+						i_13 = class390_sub2_2.method6722(i_11, i_9 + 1) - class390_sub2_2.method6722(i_11, i_9 - 1);
 						float f_14 = (float) (1.0D / Math.sqrt((double) (i_12 * i_12 + i_13 * i_13 + 65536)));
 						this.aFloatArrayArray7652[i_10][i_8] = (float) i_12 * f_14;
 						this.aFloatArrayArray7648[i_10][i_8] = -256.0F * f_14;
@@ -291,7 +291,7 @@ public class Class282_Sub19 extends Node {
 				++i_9;
 			}
 
-			this.anInterface15_7639 = this.aClass505_Sub1_7650.method13598(5123, this.aClass282_Sub35_7655.buffer, this.aClass282_Sub35_7655.index, false);
+			this.anInterface15_7639 = this.aClass505_Sub1_7650.method13598(this.aClass282_Sub35_7655.buffer, this.aClass282_Sub35_7655.index, false);
 			this.anInterface14_7649 = this.aClass505_Sub1_7650.method13599(16, this.aClass282_Sub35_Sub1_7651.buffer, this.aClass282_Sub35_Sub1_7651.index, false);
 			this.aClass143_7647 = new OpenGlArrayBufferPointer(this.anInterface14_7649, 5126, 3, 0);
 			this.aClass143_7643 = new OpenGlArrayBufferPointer(this.anInterface14_7649, 5121, 4, 12);
@@ -319,7 +319,7 @@ public class Class282_Sub19 extends Node {
 					if (i_7 > -i_3 && i_7 < i_3 && i_8 > -i_3 && i_8 < i_3 && bools_4[i_3 + i_7][i_3 + i_8]) {
 						this.aClass505_Sub1_7650.method13617((int) (this.aClass282_Sub24_7641.method12395(-86790079) * 255.0F) << 24);
 						this.aClass505_Sub1_7650.method13647(this.aClass143_7647, (OpenGlArrayBufferPointer) null, this.aClass143_7643, (OpenGlArrayBufferPointer) null);
-						this.aClass505_Sub1_7650.method13611(this.anInterface15_7639, 4, 0, this.anInt7640);
+						this.aClass505_Sub1_7650.method13611(this.anInterface15_7639, 0, this.anInt7640);
 						return;
 					}
 				}

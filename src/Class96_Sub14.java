@@ -10,7 +10,7 @@ public class Class96_Sub14 extends Class96 {
 
 	int anInt9372;
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Animable animable_2 = Class82.aClass75Array804[this.anInt9369].method1342((byte) 83);
 		animable_2.applyHit(this.anInt9370, this.anInt9371, this.anInt9373, this.anInt9372, client.cycles, 0, 288203406);
 	}
@@ -48,7 +48,7 @@ public class Class96_Sub14 extends Class96 {
 		animable_1.applyHit(-2146354133 * this.anInt9370 * 1355915907, 2002383587 * this.anInt9371 * 1673585355, this.anInt9373 * 306986489 * 117044297, this.anInt9372 * -491483183 * 1810377009, client.cycles * 1968179203 * -1809259861, 0, 2138718580);
 	}
 
-	public static int method14641(int i_0) {
+	public static int method14641() {
 		boolean bool_1 = true;
 		boolean bool_2 = false;
 		boolean bool_3 = false;
@@ -71,7 +71,7 @@ public class Class96_Sub14 extends Class96 {
 			bool_3 = false;
 		}
 		if (!bool_1 && !bool_2 && !bool_3) {
-			return Class496.method8313((byte) 1);
+			return Class496.method8313();
 		} else {
 			int i_4 = -1;
 			int i_5 = -1;
@@ -109,11 +109,11 @@ public class Class96_Sub14 extends Class96 {
 				}
 			}
 			if (i_4 == -1 && i_5 == -1 && i_6 == -1) {
-				return Class496.method8313((byte) 1);
+				return Class496.method8313();
 			} else {
 				i_6 = (int) ((float) i_6 * 1.1F);
 				i_5 = (int) ((float) i_5 * 1.1F);
-				return i_4 > i_6 && i_4 > i_5 ? Class470.method7823(i_4, -395691636) : (i_6 > i_5 ? Class8_Sub1.method13782(3, i_6, -2005172435) : Class8_Sub1.method13782(1, i_5, -2005172435));
+				return i_4 > i_6 && i_4 > i_5 ? Class470.method7823(i_4) : (i_6 > i_5 ? Class8_Sub1.method13782(3, i_6) : Class8_Sub1.method13782(1, i_5));
 			}
 		}
 	}

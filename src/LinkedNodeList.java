@@ -56,7 +56,7 @@ public class LinkedNodeList {
 		this.head.prev = this.head;
 	}
 
-	public boolean method7861(int i_1) {
+	public boolean method7861() {
 		return this.head.next == this.head;
 	}
 
@@ -159,7 +159,7 @@ public class LinkedNodeList {
 		return bytes_3;
 	}
 
-	public static final void method7886(boolean bool_0, int i_1) {
+	public static final void method7886() {
 		TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4587, client.aClass184_7475.isaac, 1209499491);
 		client.aClass184_7475.method3049(tcpmessage_2, 2048910350);
 		for (Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 30)) {
@@ -170,7 +170,7 @@ public class LinkedNodeList {
 				}
 			}
 			if (class282_sub44_3.anInt8062 == 0) {
-				Class351.closeChildren(class282_sub44_3, true, bool_0, -1206109982);
+				Class351.closeChildren(class282_sub44_3, true, true, -1206109982);
 			}
 		}
 		if (client.aClass118_7352 != null) {
@@ -179,21 +179,21 @@ public class LinkedNodeList {
 		}
 	}
 
-	public static void method7887(int i_0) {
+	public static void method7887() {
 		Class282_Sub48 class282_sub48_1;
 		for (class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 94); class282_sub48_1 != null; class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-1229768145)) {
 			if (class282_sub48_1.aBool8092) {
-				class282_sub48_1.method13426((byte) 1);
+				class282_sub48_1.method13426();
 			}
 		}
 		for (class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 66); class282_sub48_1 != null; class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(893135123)) {
 			if (class282_sub48_1.aBool8092) {
-				class282_sub48_1.method13426((byte) 1);
+				class282_sub48_1.method13426();
 			}
 		}
 	}
 
-	static final void method7889(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method7889(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1390174253) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);

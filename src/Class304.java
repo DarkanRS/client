@@ -68,19 +68,19 @@ public class Class304 implements Interface27 {
 		return this.aBool3584 ? (Engine.anInt3243 * -969250379 - i_1) / 2 : 0;
 	}
 
-	public void method188(byte b_1) {
-		Class362.method6276(-1874192750);
+	public void method188() {
+		Class362.method6276();
 	}
 
 	public void method186() {
-		Class362.method6276(-1874192750);
+		Class362.method6276();
 	}
 
-	void method5398(byte b_1) {
-		Class158_Sub1_Sub2.method15535(Class328.aClass306_3771.method5424((byte) 89), Class328.aClass306_3771.method5425(-1675493228), client.aColorArray7186[client.anInt7447], client.aColorArray7199[client.anInt7447], client.aColorArray7200[client.anInt7447], -25955957);
+	void method5398() {
+		Class158_Sub1_Sub2.method15535(Class328.aClass306_3771.method5424((byte) 89), Class328.aClass306_3771.method5425(-1675493228), client.aColorArray7186[client.anInt7447], client.aColorArray7199[client.anInt7447], client.aColorArray7200[client.anInt7447]);
 	}
 
-	Image method5399(String string_1, byte b_2) throws IOException {
+	Image method5399(String string_1) throws IOException {
 		try {
 			InputStream inputstream_4 = Class282_Sub44.anApplet8065.getClass().getClassLoader().getResourceAsStream(string_1);
 			byte[] bytes_5 = new byte[4000];
@@ -95,7 +95,7 @@ public class Class304 implements Interface27 {
 		}
 	}
 
-	public void method161(int i_1) {
+	public void method161() {
 	}
 
 	public int method191(int i_1) {
@@ -116,7 +116,7 @@ public class Class304 implements Interface27 {
 	public void method192(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',', 229848533);
+				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',');
 				if (arr_2.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -132,28 +132,28 @@ public class Class304 implements Interface27 {
 				this.anInt3592 = Class328.parseInt(arr_2[9], -1007765739) * -29425429 * -2097436733;
 				String string_3 = arr_2[10];
 				int i_4 = Class328.parseInt(arr_2[11], -2144581898);
-				int i_5 = Class285.method5026(arr_2[12].substring(2), 16, (byte) -78);
+				int i_5 = Class285.method5026(arr_2[12].substring(2), (byte) -78);
 				this.aFont3573 = new Font(string_3, 0, i_4);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
 				this.aColor3582 = new Color(i_5);
 				MediaTracker mediatracker_6 = new MediaTracker(Class351.gameCanvas);
-				this.anImage3575 = this.method5399(arr_2[13], (byte) 0);
+				this.anImage3575 = this.method5399(arr_2[13]);
 				mediatracker_6.addImage(this.anImage3575, 0);
-				this.anImage3574 = this.method5399(arr_2[14], (byte) 0);
+				this.anImage3574 = this.method5399(arr_2[14]);
 				mediatracker_6.addImage(this.anImage3574, 1);
-				this.anImage3589 = this.method5399(arr_2[15], (byte) 0);
+				this.anImage3589 = this.method5399(arr_2[15]);
 				mediatracker_6.addImage(this.anImage3589, 2);
-				this.anImage3576 = this.method5399(arr_2[16], (byte) 0);
+				this.anImage3576 = this.method5399(arr_2[16]);
 				mediatracker_6.addImage(this.anImage3576, 3);
-				this.anImage3577 = this.method5399(arr_2[17], (byte) 0);
+				this.anImage3577 = this.method5399(arr_2[17]);
 				mediatracker_6.addImage(this.anImage3577, 4);
-				this.anImage3578 = this.method5399(arr_2[18], (byte) 0);
+				this.anImage3578 = this.method5399(arr_2[18]);
 				mediatracker_6.addImage(this.anImage3578, 5);
-				this.anImage3579 = this.method5399(arr_2[19], (byte) 0);
+				this.anImage3579 = this.method5399(arr_2[19]);
 				mediatracker_6.addImage(this.anImage3579, 6);
-				this.anImage3580 = this.method5399(arr_2[20], (byte) 0);
+				this.anImage3580 = this.method5399(arr_2[20]);
 				mediatracker_6.addImage(this.anImage3580, 7);
-				this.anImage3581 = this.method5399(arr_2[21], (byte) 0);
+				this.anImage3581 = this.method5399(arr_2[21]);
 				mediatracker_6.addImage(this.anImage3581, 8);
 				mediatracker_6.waitForAll();
 				this.anInt3593 = Class328.parseInt(arr_2[22], -949578085) * -1517908233 * -493710649;
@@ -162,7 +162,7 @@ public class Class304 implements Interface27 {
 			}
 		}
 		if (this.aBool3572) {
-			this.method5398((byte) 0);
+			this.method5398();
 		} else {
 			Graphics graphics_43 = Class351.gameCanvas.getGraphics();
 			if (graphics_43 != null) {
@@ -258,7 +258,7 @@ public class Class304 implements Interface27 {
 	public void x(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',', 229848533);
+				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',');
 				if (arr_2.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -274,28 +274,28 @@ public class Class304 implements Interface27 {
 				this.anInt3592 = Class328.parseInt(arr_2[9], -971832079) * -29425429 * -2097436733;
 				String string_3 = arr_2[10];
 				int i_4 = Class328.parseInt(arr_2[11], -716552025);
-				int i_5 = Class285.method5026(arr_2[12].substring(2), 16, (byte) -48);
+				int i_5 = Class285.method5026(arr_2[12].substring(2), (byte) -48);
 				this.aFont3573 = new Font(string_3, 0, i_4);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
 				this.aColor3582 = new Color(i_5);
 				MediaTracker mediatracker_6 = new MediaTracker(Class351.gameCanvas);
-				this.anImage3575 = this.method5399(arr_2[13], (byte) 0);
+				this.anImage3575 = this.method5399(arr_2[13]);
 				mediatracker_6.addImage(this.anImage3575, 0);
-				this.anImage3574 = this.method5399(arr_2[14], (byte) 0);
+				this.anImage3574 = this.method5399(arr_2[14]);
 				mediatracker_6.addImage(this.anImage3574, 1);
-				this.anImage3589 = this.method5399(arr_2[15], (byte) 0);
+				this.anImage3589 = this.method5399(arr_2[15]);
 				mediatracker_6.addImage(this.anImage3589, 2);
-				this.anImage3576 = this.method5399(arr_2[16], (byte) 0);
+				this.anImage3576 = this.method5399(arr_2[16]);
 				mediatracker_6.addImage(this.anImage3576, 3);
-				this.anImage3577 = this.method5399(arr_2[17], (byte) 0);
+				this.anImage3577 = this.method5399(arr_2[17]);
 				mediatracker_6.addImage(this.anImage3577, 4);
-				this.anImage3578 = this.method5399(arr_2[18], (byte) 0);
+				this.anImage3578 = this.method5399(arr_2[18]);
 				mediatracker_6.addImage(this.anImage3578, 5);
-				this.anImage3579 = this.method5399(arr_2[19], (byte) 0);
+				this.anImage3579 = this.method5399(arr_2[19]);
 				mediatracker_6.addImage(this.anImage3579, 6);
-				this.anImage3580 = this.method5399(arr_2[20], (byte) 0);
+				this.anImage3580 = this.method5399(arr_2[20]);
 				mediatracker_6.addImage(this.anImage3580, 7);
-				this.anImage3581 = this.method5399(arr_2[21], (byte) 0);
+				this.anImage3581 = this.method5399(arr_2[21]);
 				mediatracker_6.addImage(this.anImage3581, 8);
 				mediatracker_6.waitForAll();
 				this.anInt3593 = Class328.parseInt(arr_2[22], -60073066) * -1517908233 * -493710649;
@@ -304,7 +304,7 @@ public class Class304 implements Interface27 {
 			}
 		}
 		if (this.aBool3572) {
-			this.method5398((byte) 0);
+			this.method5398();
 		} else {
 			Graphics graphics_43 = Class351.gameCanvas.getGraphics();
 			if (graphics_43 != null) {
@@ -393,10 +393,10 @@ public class Class304 implements Interface27 {
 		}
 	}
 
-	public void method187(boolean bool_1, int i_2) {
+	public void method187(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_3 = Class456_Sub3.method12681(client.aString7157, ',', 229848533);
+				String[] arr_3 = Class456_Sub3.method12681(client.aString7157, ',');
 				if (arr_3.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -412,28 +412,28 @@ public class Class304 implements Interface27 {
 				this.anInt3592 = Class328.parseInt(arr_3[9], -2066543129);
 				String string_4 = arr_3[10];
 				int i_5 = Class328.parseInt(arr_3[11], 60349585);
-				int i_6 = Class285.method5026(arr_3[12].substring(2), 16, (byte) 113);
+				int i_6 = Class285.method5026(arr_3[12].substring(2), (byte) 113);
 				this.aFont3573 = new Font(string_4, 0, i_5);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
 				this.aColor3582 = new Color(i_6);
 				MediaTracker mediatracker_7 = new MediaTracker(Class351.gameCanvas);
-				this.anImage3575 = this.method5399(arr_3[13], (byte) 0);
+				this.anImage3575 = this.method5399(arr_3[13]);
 				mediatracker_7.addImage(this.anImage3575, 0);
-				this.anImage3574 = this.method5399(arr_3[14], (byte) 0);
+				this.anImage3574 = this.method5399(arr_3[14]);
 				mediatracker_7.addImage(this.anImage3574, 1);
-				this.anImage3589 = this.method5399(arr_3[15], (byte) 0);
+				this.anImage3589 = this.method5399(arr_3[15]);
 				mediatracker_7.addImage(this.anImage3589, 2);
-				this.anImage3576 = this.method5399(arr_3[16], (byte) 0);
+				this.anImage3576 = this.method5399(arr_3[16]);
 				mediatracker_7.addImage(this.anImage3576, 3);
-				this.anImage3577 = this.method5399(arr_3[17], (byte) 0);
+				this.anImage3577 = this.method5399(arr_3[17]);
 				mediatracker_7.addImage(this.anImage3577, 4);
-				this.anImage3578 = this.method5399(arr_3[18], (byte) 0);
+				this.anImage3578 = this.method5399(arr_3[18]);
 				mediatracker_7.addImage(this.anImage3578, 5);
-				this.anImage3579 = this.method5399(arr_3[19], (byte) 0);
+				this.anImage3579 = this.method5399(arr_3[19]);
 				mediatracker_7.addImage(this.anImage3579, 6);
-				this.anImage3580 = this.method5399(arr_3[20], (byte) 0);
+				this.anImage3580 = this.method5399(arr_3[20]);
 				mediatracker_7.addImage(this.anImage3580, 7);
-				this.anImage3581 = this.method5399(arr_3[21], (byte) 0);
+				this.anImage3581 = this.method5399(arr_3[21]);
 				mediatracker_7.addImage(this.anImage3581, 8);
 				mediatracker_7.waitForAll();
 				this.anInt3593 = Class328.parseInt(arr_3[22], 651937374);
@@ -442,7 +442,7 @@ public class Class304 implements Interface27 {
 			}
 		}
 		if (this.aBool3572) {
-			this.method5398((byte) 0);
+			this.method5398();
 		} else {
 			Graphics graphics_44 = Class351.gameCanvas.getGraphics();
 			if (graphics_44 != null) {
@@ -534,7 +534,7 @@ public class Class304 implements Interface27 {
 	public void method194(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',', 229848533);
+				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',');
 				if (arr_2.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -550,28 +550,28 @@ public class Class304 implements Interface27 {
 				this.anInt3592 = Class328.parseInt(arr_2[9], -221145728) * -29425429 * -2097436733;
 				String string_3 = arr_2[10];
 				int i_4 = Class328.parseInt(arr_2[11], 962870203);
-				int i_5 = Class285.method5026(arr_2[12].substring(2), 16, (byte) 87);
+				int i_5 = Class285.method5026(arr_2[12].substring(2), (byte) 87);
 				this.aFont3573 = new Font(string_3, 0, i_4);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
 				this.aColor3582 = new Color(i_5);
 				MediaTracker mediatracker_6 = new MediaTracker(Class351.gameCanvas);
-				this.anImage3575 = this.method5399(arr_2[13], (byte) 0);
+				this.anImage3575 = this.method5399(arr_2[13]);
 				mediatracker_6.addImage(this.anImage3575, 0);
-				this.anImage3574 = this.method5399(arr_2[14], (byte) 0);
+				this.anImage3574 = this.method5399(arr_2[14]);
 				mediatracker_6.addImage(this.anImage3574, 1);
-				this.anImage3589 = this.method5399(arr_2[15], (byte) 0);
+				this.anImage3589 = this.method5399(arr_2[15]);
 				mediatracker_6.addImage(this.anImage3589, 2);
-				this.anImage3576 = this.method5399(arr_2[16], (byte) 0);
+				this.anImage3576 = this.method5399(arr_2[16]);
 				mediatracker_6.addImage(this.anImage3576, 3);
-				this.anImage3577 = this.method5399(arr_2[17], (byte) 0);
+				this.anImage3577 = this.method5399(arr_2[17]);
 				mediatracker_6.addImage(this.anImage3577, 4);
-				this.anImage3578 = this.method5399(arr_2[18], (byte) 0);
+				this.anImage3578 = this.method5399(arr_2[18]);
 				mediatracker_6.addImage(this.anImage3578, 5);
-				this.anImage3579 = this.method5399(arr_2[19], (byte) 0);
+				this.anImage3579 = this.method5399(arr_2[19]);
 				mediatracker_6.addImage(this.anImage3579, 6);
-				this.anImage3580 = this.method5399(arr_2[20], (byte) 0);
+				this.anImage3580 = this.method5399(arr_2[20]);
 				mediatracker_6.addImage(this.anImage3580, 7);
-				this.anImage3581 = this.method5399(arr_2[21], (byte) 0);
+				this.anImage3581 = this.method5399(arr_2[21]);
 				mediatracker_6.addImage(this.anImage3581, 8);
 				mediatracker_6.waitForAll();
 				this.anInt3593 = Class328.parseInt(arr_2[22], -1276931523) * -1517908233 * -493710649;
@@ -580,7 +580,7 @@ public class Class304 implements Interface27 {
 			}
 		}
 		if (this.aBool3572) {
-			this.method5398((byte) 0);
+			this.method5398();
 		} else {
 			Graphics graphics_43 = Class351.gameCanvas.getGraphics();
 			if (graphics_43 != null) {
@@ -670,7 +670,7 @@ public class Class304 implements Interface27 {
 	}
 
 	public void method157() {
-		Class362.method6276(-1874192750);
+		Class362.method6276();
 	}
 
 	public void method159() {
@@ -699,7 +699,7 @@ public class Class304 implements Interface27 {
 		return 0;
 	}
 
-	static String method5407(int i_0, Language xlanguage_1, byte b_2) {
+	static String method5407(int i_0, Language xlanguage_1) {
 		return i_0 < 100000 ? "<col=ffff00>" + i_0 + "</col>" : (i_0 < 10000000 ? "<col=ffffff>" + i_0 / 1000 + Message.aClass433_5297.translate(xlanguage_1, -664620101) + "</col>" : "<col=00ff80>" + i_0 / 1000000 + Message.aClass433_5304.translate(xlanguage_1, -1313761048) + "</col>");
 	}
 
@@ -723,18 +723,18 @@ public class Class304 implements Interface27 {
 		}
 	}
 
-	public static int[][] method5410(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, float f_6, boolean bool_7, int i_8) {
-		int[][] ints_9 = new int[i_1][i_0];
+	public static int[][] method5410(int i_2, int i_8) {
+		int[][] ints_9 = new int[256][64];
 		Class282_Sub20_Sub4 class282_sub20_sub4_10 = new Class282_Sub20_Sub4();
-		class282_sub20_sub4_10.aBool9726 = bool_7;
-		class282_sub20_sub4_10.anInt9725 = i_3;
-		class282_sub20_sub4_10.anInt9735 = i_4;
-		class282_sub20_sub4_10.anInt9736 = i_5;
-		class282_sub20_sub4_10.anInt9737 = (int) (4096.0F * f_6);
+		class282_sub20_sub4_10.aBool9726 = false;
+		class282_sub20_sub4_10.anInt9725 = 4;
+		class282_sub20_sub4_10.anInt9735 = 4;
+		class282_sub20_sub4_10.anInt9736 = 3;
+		class282_sub20_sub4_10.anInt9737 = (int) (4096.0F * (float) 0.4);
 		class282_sub20_sub4_10.method12321(1816098804);
-		Class316.method5593(i_0, i_1, 85508155);
-		for (int i_11 = 0; i_11 < i_1; i_11++) {
-			class282_sub20_sub4_10.method15197(i_11, ints_9[i_11], 915556346);
+		Class316.method5593(64, 256, 85508155);
+		for (int i_11 = 0; i_11 < 256; i_11++) {
+			class282_sub20_sub4_10.method15197(i_11, ints_9[i_11]);
 		}
 		return ints_9;
 	}

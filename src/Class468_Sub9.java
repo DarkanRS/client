@@ -16,7 +16,7 @@ public class Class468_Sub9 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -29,11 +29,11 @@ public class Class468_Sub9 extends Preference {
 	}
 
 	int method7786() {
-		return this.manager.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
+		return this.manager.method13504().method7719() ? 3 : 2;
 	}
 
 	int method7787() {
-		return this.manager.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
+		return this.manager.method13504().method7719() ? 3 : 2;
 	}
 
 	public int method12687(int i_1) {
@@ -41,7 +41,7 @@ public class Class468_Sub9 extends Preference {
 	}
 
 	int method7781(int i_1) {
-		return this.manager.method13504((byte) 1).method7719(1662258599) ? 3 : 2;
+		return this.manager.method13504().method7719() ? 3 : 2;
 	}
 
 	int method7785(int i_1, int i_2) {

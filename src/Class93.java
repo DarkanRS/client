@@ -19,7 +19,7 @@ public class Class93 {
 
 	void method1566(Class75 class75_1, int i_2, int i_3) {
 		int i_4 = this.anIntArray968[0];
-		class75_1.method1338(i_2, i_4 >>> 16, i_4 & 0xffff, 307993512);
+		class75_1.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
 		Animable animable_5 = class75_1.method1342((byte) 51);
 		animable_5.anInt10355 = 0;
 		for (int i_6 = this.anIntArray971.length - 1; i_6 >= 0; --i_6) {
@@ -38,7 +38,7 @@ public class Class93 {
 		}
 	}
 
-	public static void method1568(int i_0) {
+	public static void method1568() {
 		SoftCache softcache_1 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
 			PlayerAppearance.aClass229_2920.method3863(1281693706);
@@ -49,19 +49,19 @@ public class Class93 {
 		}
 	}
 
-	public static void method1575(int i_0, int i_1, boolean bool_2, int i_3) {
+	public static void method1575(int i_0, int i_1, boolean bool_2) {
 		if (Class492.aClass465_5774.get((long) i_0) == null) {
 			if (!client.aBool7393) {
 				Class62.method1260(i_0, bool_2, 860609292);
 			} else {
-				Class282_Sub37 class282_sub37_4 = new Class282_Sub37(i_0, new Class278_Sub1(4096, IndexLoaders.aClass317_2663, i_0), i_1, bool_2);
+				Class282_Sub37 class282_sub37_4 = new Class282_Sub37(i_0, new Class278_Sub1(IndexLoaders.aClass317_2663, i_0), i_1, bool_2);
 				class282_sub37_4.aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
 				Class492.aClass465_5774.put(class282_sub37_4, (long) i_0);
 			}
 		}
 	}
 
-	public static boolean method1576(int i_0) {
+	public static boolean method1576() {
 		try {
 			if (!IcmpService_Sub1.available()) {
 				boolean bool_1 = false;
@@ -82,16 +82,16 @@ public class Class93 {
 	}
 
 	static boolean method1577(SceneObject sceneobject_0, int i_1) {
-		ObjectDefinitions objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(sceneobject_0.getId(-1594739949), 65280);
+		ObjectDefinitions objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(sceneobject_0.getId(-1594739949));
 		if (objectdefinitions_2.mapSpriteId == -1) {
 			return true;
 		} else {
-			Class418 class418_3 = IndexLoaders.aClass427_995.method7172(objectdefinitions_2.mapSpriteId, -1014703371);
-			return class418_3.anInt4995 == -1 ? true : class418_3.method7015(65280);
+			Class418 class418_3 = IndexLoaders.aClass427_995.method7172(objectdefinitions_2.mapSpriteId);
+			return class418_3.anInt4995 == -1 ? true : class418_3.method7015();
 		}
 	}
 
-	static String method1578(long long_0, int i_2, byte b_3) {
+	static String method1578(long long_0, int i_2) {
 		Class155.method2634(long_0);
 		int i_4 = Class407.aCalendar4848.get(5);
 		int i_5 = Class407.aCalendar4848.get(2) + 1;

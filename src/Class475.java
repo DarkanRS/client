@@ -46,7 +46,7 @@ public final class Class475 {
 		int i_3 = cs2executor_1.intStack[cs2executor_1.intStackPtr] - 1;
 		int i_4 = cs2executor_1.intStack[cs2executor_1.intStackPtr + 1];
 		if (i_3 >= 0 && i_3 <= 9) {
-			Class274.method4883(icomponentdefinitions_0, i_3, i_4, cs2executor_1, -838566564);
+			Class274.method4883(icomponentdefinitions_0, i_3, i_4, cs2executor_1);
 		} else {
 			throw new RuntimeException();
 		}

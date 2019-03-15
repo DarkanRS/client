@@ -8,7 +8,7 @@ public class OverlayIndexLoader {
 
 	public int anInt7094;
 
-	public OverlayDef getOverlayDef(int i_1, byte b_2) {
+	public OverlayDef getOverlayDef(int i_1) {
 		SoftCache softcache_4 = this.aClass229_7092;
 		OverlayDef overlaydef_3;
 		synchronized (this.aClass229_7092) {
@@ -26,9 +26,9 @@ public class OverlayIndexLoader {
 			overlaydef_3.aClass536_7062 = this;
 			overlaydef_3.anInt7053 = i_1;
 			if (bytes_10 != null) {
-				overlaydef_3.method11357(new RsByteBuffer(bytes_10), 1338105221);
+				overlaydef_3.method11357(new RsByteBuffer(bytes_10));
 			}
-			overlaydef_3.method11356((byte) -46);
+			overlaydef_3.method11356();
 			SoftCache softcache_9 = this.aClass229_7092;
 			synchronized (this.aClass229_7092) {
 				this.aClass229_7092.put(overlaydef_3, (long) i_1);
@@ -37,21 +37,21 @@ public class OverlayIndexLoader {
 		}
 	}
 
-	public void method11476(byte b_1) {
+	public void method11476() {
 		SoftCache softcache_2 = this.aClass229_7092;
 		synchronized (this.aClass229_7092) {
 			this.aClass229_7092.method3859(2009928513);
 		}
 	}
 
-	public void method11477(int i_1, byte b_2) {
+	public void method11477() {
 		SoftCache softcache_3 = this.aClass229_7092;
 		synchronized (this.aClass229_7092) {
-			this.aClass229_7092.method3858(i_1, (byte) 14);
+			this.aClass229_7092.method3858(5, (byte) 14);
 		}
 	}
 
-	public void method11478(int i_1) {
+	public void method11478() {
 		SoftCache softcache_2 = this.aClass229_7092;
 		synchronized (this.aClass229_7092) {
 			this.aClass229_7092.method3863(1398711796);

@@ -47,12 +47,12 @@ public class Class282_Sub20_Sub24 extends Class282_Sub20 {
 
 	}
 
-	void method12326(int i_1) {
-		super.method12326(984017845);
+	void method12326() {
+		super.method12326();
 		this.anIntArray9881 = null;
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		if (i_1 == 0) {
 			this.anInt9882 = rsbytebuffer_2.readUnsignedShort();
 		}

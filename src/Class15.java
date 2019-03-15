@@ -1,6 +1,6 @@
 final class Class15 implements Interface35 {
 
-	public Object method216(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3, int i_4) {
+	public Object method216(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
 		return Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
@@ -41,7 +41,7 @@ final class Class15 implements Interface35 {
 		StringBuilder stringbuilder_2 = new StringBuilder();
 		int i_3 = Class20.anInt186;
 		for (int i_4 = 0; i_4 < ints_0.length; i_4++) {
-			QuestDefinitions questdefinitions_5 = IndexLoaders.aClass242_4922.method4156(ints_0[i_4], -1396181317);
+			QuestDefinitions questdefinitions_5 = IndexLoaders.aClass242_4922.method4156(ints_0[i_4]);
 			if (questdefinitions_5.anInt2977 != -1) {
 				NativeSprite nativesprite_6 = (NativeSprite) Class20.aClass229_191.get((long) questdefinitions_5.anInt2977);
 				if (nativesprite_6 == null) {
@@ -61,10 +61,10 @@ final class Class15 implements Interface35 {
 		return stringbuilder_2.toString();
 	}
 
-	public static void method549(Class397 class397_0, int i_1, int i_2, SceneObject sceneobject_3, int i_4) {
+	public static void method549(Class397 class397_0, int i_1, SceneObject sceneobject_3) {
 		CS2Executor cs2executor_5 = Class125.getNextScriptExecutor(1408358423);
 		cs2executor_5.anInterface12_7013 = sceneobject_3;
-		Class107.method1834(class397_0, i_1, i_2, cs2executor_5, (byte) 23);
+		Class107.method1834(class397_0, i_1, -1, cs2executor_5, (byte) 23);
 		cs2executor_5.anInterface12_7013 = null;
 	}
 }

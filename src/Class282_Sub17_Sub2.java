@@ -9,7 +9,7 @@ public class Class282_Sub17_Sub2 extends Class282_Sub17 {
 		class61_1.method1233(-518396991 * this.anInt9932 * 390605889, -1611815264);
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.anInt9932 = rsbytebuffer_1.readUnsignedShort();
 	}
 
@@ -46,7 +46,7 @@ public class Class282_Sub17_Sub2 extends Class282_Sub17 {
 		class61_1.method1233(-518396991 * this.anInt9932 * 390605889, -1307878943);
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1233(this.anInt9932, -1765056942);
 	}
 

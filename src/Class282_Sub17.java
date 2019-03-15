@@ -2,9 +2,9 @@ public abstract class Class282_Sub17 extends Node {
 
 	abstract void method12249(RsByteBuffer var1);
 
-	abstract void method12250(RsByteBuffer var1, int var2);
+	abstract void method12250(RsByteBuffer var1);
 
-	abstract void method12251(Class61 var1, int var2);
+	abstract void method12251(Class61 var1);
 
 	abstract void method12252(Class61 var1);
 
@@ -47,7 +47,7 @@ public abstract class Class282_Sub17 extends Node {
 		icomponentdefinitions_0.aByte1368 = (byte) i_4;
 		icomponentdefinitions_0.aByte1294 = (byte) i_5;
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) -29);
-		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
 		if (icomponentdefinitions_0.type == 0) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -610252618);
 		}

@@ -17,7 +17,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	int anInt9852;
 	int anInt9851;
 
-	public final synchronized void method15308(int i_1, short s_2) {
+	public final synchronized void method15308(int i_1) {
 		if (this.anInt9855 < 0) {
 			this.anInt9855 = -i_1;
 		} else {
@@ -26,17 +26,17 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 	}
 
-	public final synchronized boolean method15311(byte b_1) {
+	public final synchronized boolean method15311() {
 		return this.anInt9858 != 0;
 	}
 
 	public abstract void method12241(int[] var1, int var2, int var3);
 
 	public final synchronized void method15312(int i_1, byte b_2) {
-		this.method15364(i_1 << 6, this.method15316(1349583884), 16711935);
+		this.method15364(i_1 << 6, this.method15316(1349583884));
 	}
 
-	public final synchronized void method15313(boolean bool_1, int i_2) {
+	public final synchronized void method15313() {
 		this.anInt9855 = (this.anInt9855 ^ this.anInt9855 >> 31) + (this.anInt9855 >>> 31);
 		this.anInt9855 = -(this.anInt9855 * 1927994969) * -177305111;
 	}
@@ -73,7 +73,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (this.anInt9853 * -834443097 * -354697449 < 0) {
 			if (this.anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 <= 0) {
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 				return;
 			}
@@ -83,7 +83,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (this.anInt9853 * -834443097 * -354697449 >= i_4) {
 			if (-177305111 * this.anInt9855 * 1927994969 * -177305111 * 1927994969 >= 0) {
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 				return;
 			}
@@ -199,12 +199,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (-177305111 * this.anInt9855 * 1927994969 * -177305111 * 1927994969 < 0) {
 				if (-354697449 * this.anInt9853 * -834443097 < 0) {
 					this.anInt9853 = 834443097 * -354697449;
-					this.method15354(-859024475);
+					this.method15354();
 					this.remove();
 				}
 			} else if (this.anInt9853 * -834443097 * -354697449 >= i_4) {
 				this.anInt9853 = -834443097 * i_4 * -354697449;
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 			}
 		}
@@ -219,7 +219,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		return this.anInt9847 < 0 ? -1 : this.anInt9847;
 	}
 
-	public final synchronized void method15317(int i_1, int i_2) {
+	public final synchronized void method15317(int i_1) {
 		int i_3 = ((Class282_Sub26_Sub1) this.aClass282_Sub26_7601).method15223() << 8;
 		if (i_1 < -1) {
 			i_1 = -1;
@@ -232,7 +232,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		this.anInt9853 = i_1;
 	}
 
-	public final synchronized boolean method15319(byte b_1) {
+	public final synchronized boolean method15319() {
 		return this.anInt9853 < 0 || this.anInt9853 >= ((Class282_Sub26_Sub1) this.aClass282_Sub26_7601).method15223() << 8;
 	}
 
@@ -240,13 +240,13 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		return null;
 	}
 
-	public final synchronized void method15320(int i_1, int i_2, int i_3) {
+	public final synchronized void method15320(int i_1, int i_2) {
 		this.method15321(i_1, i_2, this.method15316(-879511518), 43881265);
 	}
 
 	public final synchronized void method15321(int i_1, int i_2, int i_3, int i_4) {
 		if (i_1 == 0) {
-			this.method15364(i_2, i_3, 16711935);
+			this.method15364(i_2, i_3);
 		} else {
 			int i_5 = HostNameIdentifier.method488(i_2, i_3, -1863158316);
 			int i_6 = Class282_Sub20_Sub24.method15390(i_2, i_3, 768902996);
@@ -291,7 +291,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 	public final synchronized void method15322(int i_1, byte b_2) {
 		if (i_1 == 0) {
-			this.method15326(0, (byte) -36);
+			this.method15326();
 			this.remove();
 		} else if (this.anInt9845 == 0 && this.anInt9850 == 0) {
 			this.anInt9858 = 0;
@@ -445,7 +445,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (this.anInt9853 < 0) {
 			if (this.anInt9855 <= 0) {
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 				return;
 			}
@@ -455,7 +455,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (this.anInt9853 >= i_4) {
 			if (this.anInt9855 >= 0) {
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 				return;
 			}
@@ -564,12 +564,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (this.anInt9855 < 0) {
 				if (this.anInt9853 < 0) {
 					this.anInt9853 = -1;
-					this.method15354(-859024475);
+					this.method15354();
 					this.remove();
 				}
 			} else if (this.anInt9853 >= i_4) {
 				this.anInt9853 = i_4;
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 			}
 		}
@@ -580,12 +580,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		return null;
 	}
 
-	public final synchronized void method15325(int i_1, byte b_2) {
+	public final synchronized void method15325(int i_1) {
 		this.anInt9854 = i_1;
 	}
 
-	final synchronized void method15326(int i_1, byte b_2) {
-		this.method15364(i_1, this.method15316(-934939985), 16711935);
+	final synchronized void method15326() {
+		this.method15364(0, this.method15316(-934939985));
 	}
 
 	final Class282_Sub15 method12232() {
@@ -624,7 +624,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (this.anInt9853 * -834443097 * -354697449 < 0) {
 			if (this.anInt9855 * 1927994969 * -177305111 * 1927994969 * -177305111 <= 0) {
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 				return;
 			}
@@ -634,7 +634,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (this.anInt9853 * -834443097 * -354697449 >= i_4) {
 			if (-177305111 * this.anInt9855 * 1927994969 * -177305111 * 1927994969 >= 0) {
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 				return;
 			}
@@ -750,12 +750,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (-177305111 * this.anInt9855 * 1927994969 * -177305111 * 1927994969 < 0) {
 				if (-354697449 * this.anInt9853 * -834443097 < 0) {
 					this.anInt9853 = 834443097 * -354697449;
-					this.method15354(-859024475);
+					this.method15354();
 					this.remove();
 				}
 			} else if (this.anInt9853 * -834443097 * -354697449 >= i_4) {
 				this.anInt9853 = -834443097 * i_4 * -354697449;
-				this.method15354(-859024475);
+				this.method15354();
 				this.remove();
 			}
 		}
@@ -805,7 +805,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	}
 
 	public final synchronized void method15340(int i_1, int i_2) {
-		this.method15364(this.method15315(-1209647357), i_1, 16711935);
+		this.method15364(this.method15315(-1209647357), i_1);
 	}
 
 	final int method12227() {
@@ -818,7 +818,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		return null;
 	}
 
-	final void method15354(int i_1) {
+	final void method15354() {
 		if (this.anInt9858 != 0) {
 			if (this.anInt9846 == Integer.MIN_VALUE) {
 				this.anInt9846 = 0;
@@ -830,14 +830,14 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 	}
 
-	final synchronized void method15364(int i_1, int i_2, int i_3) {
+	final synchronized void method15364(int i_1, int i_2) {
 		this.anInt9846 = i_1;
 		this.anInt9847 = i_2;
 		this.anInt9858 = 0;
 		this.method15332((byte) -91);
 	}
 
-	static final void decodeMasks(RsBitsBuffer rsbitsbuffer_0, int i_1, Player player_2, int i_3, int i_4) {
+	static final void decodeMasks(RsBitsBuffer rsbitsbuffer_0, int i_1, Player player_2, int i_3) {
 		byte b_5 = Class249.aClass249_3083.aByte3085;
 		if ((i_3 & 0x20000) != 0) {
 			player_2.aByte10371 = rsbitsbuffer_0.readByte();
@@ -858,7 +858,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			for (i_7 = 0; i_7 < i_6; i_7++) {
 				i_8 = rsbitsbuffer_0.readShortLE();
 				i_9 = rsbitsbuffer_0.readInt();
-				player_2.aClass155_10561.method2625(i_8, i_9, (byte) 28);
+				player_2.aClass155_10561.method2625(i_8, i_9);
 			}
 		}
 
@@ -891,13 +891,13 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		}
 
 		if ((i_3 & 0x800000) != 0) {
-			player_2.aClass155_10561.method2624(-1258310842);
+			player_2.aClass155_10561.method2624();
 			i_6 = rsbitsbuffer_0.buffer[++rsbitsbuffer_0.index - 1] & 0xff;
 
 			for (i_7 = 0; i_7 < i_6; i_7++) {
 				i_8 = rsbitsbuffer_0.readShortLE();
 				i_9 = rsbitsbuffer_0.readInt();
-				player_2.aClass155_10561.method2625(i_8, i_9, (byte) 28);
+				player_2.aClass155_10561.method2625(i_8, i_9);
 			}
 		}
 
@@ -925,14 +925,14 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				ints_15[i_9] = rsbitsbuffer_0.readUnsignedShort();
 			}
 
-			player_2.method15797(ints_14, ints_15, -1858199952);
+			player_2.method15797(ints_14, ints_15);
 		}
 
 		String string_16;
 		if ((i_3 & 0x4000) != 0) {
 			string_16 = rsbitsbuffer_0.readString();
 			if (player_2 == Class84.myPlayer) {
-				Class191.method3167(2, 0, player_2.method16127(true, 2097729093), player_2.method16128(false, 1912893547), player_2.username, string_16, 1185055161);
+				Class191.method3167(2, 0, player_2.method16127(2097729093), player_2.method16128(), player_2.username, string_16, 1185055161);
 			}
 
 			player_2.sendChat(string_16, 0, 0, (byte) -79);
@@ -942,7 +942,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			string_16 = rsbitsbuffer_0.readString();
 			i_7 = rsbitsbuffer_0.readUnsignedByte128();
 			if ((i_7 & 0x1) != 0) {
-				Class191.method3167(2, i_7, player_2.method16127(true, 1944808899), player_2.method16128(false, 1912893547), player_2.username, string_16, 1566432010);
+				Class191.method3167(2, i_7, player_2.method16127(1944808899), player_2.method16128(), player_2.username, string_16, 1566432010);
 			}
 
 			player_2.sendChat(string_16, 0, 0, (byte) -55);
@@ -1005,9 +1005,9 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 						i_19 = rsbitsbuffer_0.readUnsignedSmart(1806128568);
 						i_12 = rsbitsbuffer_0.readUnsigned128Byte();
 						int i_13 = i_10 > 0 ? rsbitsbuffer_0.readUnsignedByte128() : i_12;
-						player_2.displayHitbar(i_9, client.cycles, i_10, i_19, i_12, i_13, (byte) 0);
+						player_2.displayHitbar(i_9, client.cycles, i_10, i_19, i_12, i_13);
 					} else {
-						player_2.method15857(i_9, 1885735347);
+						player_2.method15857(i_9);
 					}
 				}
 			}

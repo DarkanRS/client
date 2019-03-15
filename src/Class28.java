@@ -27,15 +27,15 @@ public class Class28 implements Interface2 {
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * this.aClass365_349.anInt4227 * 1984931449, this.aClass365_349.anInt4228 * -1733557607 * 1416311209, this.aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
 			}
-			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1067, i_3, i_4, 5, -2023522211) * 12;
+			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1067, i_3, i_4, -2023522211) * 12;
 			i_4 += 8;
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8433(i_3, i_4, this.aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * this.aClass365_349.anInt4220 * -965307251, 0);
 			}
 			++i_4;
-			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1066, i_3, i_4, 5, -2109162483) * 12;
+			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1066, i_3, i_4, -2109162483) * 12;
 			i_4 += 5;
-			int i_10000 = i_4 + this.method770(Class285.aClass8_3394, class105_2.aString1068, i_3, i_4, 5, 282496799) * 12;
+			int i_10000 = i_4 + this.method770(Class285.aClass8_3394, class105_2.aString1068, i_3, i_4, 282496799) * 12;
 		}
 	}
 
@@ -47,15 +47,15 @@ public class Class28 implements Interface2 {
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8430(i_4, i_5, this.aClass365_349.anInt4227, this.aClass365_349.anInt4228, this.aClass365_349.anInt4220, 0);
 			}
-			i_5 += this.method770(Class285.aClass8_3394, class105_3.aString1067, i_4, i_5, 5, -945681217) * 12;
+			i_5 += this.method770(Class285.aClass8_3394, class105_3.aString1067, i_4, i_5, -945681217) * 12;
 			i_5 += 8;
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8433(i_4, i_5, this.aClass365_349.anInt4227 + i_4 - 1, i_5, this.aClass365_349.anInt4220, 0);
 			}
 			++i_5;
-			i_5 += this.method770(Class285.aClass8_3394, class105_3.aString1066, i_4, i_5, 5, -2057271844) * 12;
+			i_5 += this.method770(Class285.aClass8_3394, class105_3.aString1066, i_4, i_5, -2057271844) * 12;
 			i_5 += 5;
-			int i_10000 = i_5 + this.method770(Class285.aClass8_3394, class105_3.aString1068, i_4, i_5, 5, 34451052) * 12;
+			int i_10000 = i_5 + this.method770(Class285.aClass8_3394, class105_3.aString1068, i_4, i_5, 34451052) * 12;
 		}
 	}
 
@@ -67,20 +67,20 @@ public class Class28 implements Interface2 {
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * this.aClass365_349.anInt4227 * 1984931449, this.aClass365_349.anInt4228 * -1733557607 * 1416311209, this.aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
 			}
-			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1067, i_3, i_4, 5, -1904326509) * 12;
+			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1067, i_3, i_4, -1904326509) * 12;
 			i_4 += 8;
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8433(i_3, i_4, this.aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * this.aClass365_349.anInt4220 * -965307251, 0);
 			}
 			++i_4;
-			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1066, i_3, i_4, 5, 141561560) * 12;
+			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1066, i_3, i_4, 141561560) * 12;
 			i_4 += 5;
-			int i_10000 = i_4 + this.method770(Class285.aClass8_3394, class105_2.aString1068, i_3, i_4, 5, -279930969) * 12;
+			int i_10000 = i_4 + this.method770(Class285.aClass8_3394, class105_2.aString1068, i_3, i_4, -279930969) * 12;
 		}
 	}
 
-	int method770(FontRenderer fontrenderer_1, String string_2, int i_3, int i_4, int i_5, int i_6) {
-		return fontrenderer_1.method378(string_2, i_3 + i_5, i_5 + i_4, this.aClass365_349.anInt4227 - i_5 * 2, this.aClass365_349.anInt4228 - i_5 * 2, this.aClass365_349.anInt4224, this.aClass365_349.anInt4222, 0, 0, 0, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 76);
+	int method770(FontRenderer fontrenderer_1, String string_2, int i_3, int i_4, int i_6) {
+		return fontrenderer_1.method378(string_2, i_3 + 5, 5 + i_4, this.aClass365_349.anInt4227 - 5 * 2, this.aClass365_349.anInt4228 - 5 * 2, this.aClass365_349.anInt4224, this.aClass365_349.anInt4222, 0, 0, 0, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 76);
 	}
 
 	public void method14(boolean bool_1) {
@@ -91,19 +91,19 @@ public class Class28 implements Interface2 {
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * this.aClass365_349.anInt4227 * 1984931449, this.aClass365_349.anInt4228 * -1733557607 * 1416311209, this.aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
 			}
-			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1067, i_3, i_4, 5, 1283831250) * 12;
+			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1067, i_3, i_4, 1283831250) * 12;
 			i_4 += 8;
 			if (this.aClass365_349.aBool4230) {
 				Renderers.SOFTWARE_RENDERER.method8433(i_3, i_4, this.aClass365_349.anInt4227 * 1984931449 * -547232823 + i_3 - 1, i_4, -1214034363 * this.aClass365_349.anInt4220 * -965307251, 0);
 			}
 			++i_4;
-			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1066, i_3, i_4, 5, -318852891) * 12;
+			i_4 += this.method770(Class285.aClass8_3394, class105_2.aString1066, i_3, i_4, -318852891) * 12;
 			i_4 += 5;
-			int i_10000 = i_4 + this.method770(Class285.aClass8_3394, class105_2.aString1068, i_3, i_4, 5, -633571226) * 12;
+			int i_10000 = i_4 + this.method770(Class285.aClass8_3394, class105_2.aString1068, i_3, i_4, -633571226) * 12;
 		}
 	}
 
-	public void method22(int i_1) {
+	public void method22() {
 	}
 
 	public void method16() {
@@ -149,12 +149,12 @@ public class Class28 implements Interface2 {
 		}
 	}
 
-	static final void method774(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method774(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.aBool1351 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 44);
 	}
 
-	static final void method776(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
+	static final void method776(IComponentDefinitions icomponentdefinitions_0) {
 		if (icomponentdefinitions_0.contentType == IComponentDefinitions.anInt1266) {
 			if (Class84.myPlayer.displayName == null) {
 				icomponentdefinitions_0.anInt1330 = 0;
@@ -171,7 +171,7 @@ public class Class28 implements Interface2 {
 						icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
 					}
 					icomponentdefinitions_0.animation = class456_sub3_2.method7597(-486545120);
-					icomponentdefinitions_0.aClass456_1437.method7563(class456_sub3_2, -887916681);
+					icomponentdefinitions_0.aClass456_1437.method7563(class456_sub3_2);
 				} else {
 					icomponentdefinitions_0.aClass456_1437 = null;
 				}

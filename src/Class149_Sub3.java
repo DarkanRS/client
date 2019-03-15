@@ -9,7 +9,7 @@ public class Class149_Sub3 extends Class149 {
 	void method2558(int i_1, int i_2) {
 	}
 
-	void method2561(int i_1, int i_2, int i_3) {
+	void method2561(int i_1, int i_2) {
 		int i_4 = this.anInt9376 * i_1 >> 12;
 		int i_5 = this.anInt9377 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9375 >> 12;
@@ -25,7 +25,7 @@ public class Class149_Sub3 extends Class149 {
 		Class346.method6159(i_3, i_5, i_4, i_6, this.anInt1741 * -1378640425 * -1525176857, -1432674157);
 	}
 
-	void method2556(int i_1, int i_2, int i_3) {
+	void method2556(int i_1, int i_2) {
 	}
 
 	void method2562(int i_1, int i_2) {
@@ -50,7 +50,7 @@ public class Class149_Sub3 extends Class149 {
 	void method2560(int i_1, int i_2) {
 	}
 
-	void method2557(int i_1, int i_2, byte b_3) {
+	void method2557(int i_1, int i_2) {
 	}
 
 }

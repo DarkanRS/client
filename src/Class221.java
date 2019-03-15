@@ -16,7 +16,7 @@ public class Class221 {
 		this.anInt2758 = i_1;
 	}
 
-	static void method3751(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	static void method3751(int i_0, int i_1, int i_2, int i_3, int i_4) {
 		int i_6 = 0;
 		int i_7 = i_3;
 		int i_8 = i_2 * i_2;

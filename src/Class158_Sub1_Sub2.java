@@ -285,7 +285,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 		}
 	}
 
-	public static final void method15535(int i_0, String string_1, Color color_2, Color color_3, Color color_4, int i_5) {
+	public static final void method15535(int i_0, String string_1, Color color_2, Color color_3, Color color_4) {
 		try {
 			Graphics graphics_6 = Class351.gameCanvas.getGraphics();
 			if (SpotAnimIndexLoader.aFont5893 == null) {
@@ -361,26 +361,26 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 
 	}
 
-	public static void method15536(int i_0) {
+	public static void method15536() {
 		for (Class282_Sub37 class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7751((byte) 17)) {
-			if (class282_sub37_1.aClass278_Sub1_8001.method4921((byte) -124)) {
-				Class92.method1563(class282_sub37_1.anInt7999, 1917715893);
+			if (class282_sub37_1.aClass278_Sub1_8001.method4921()) {
+				Class92.method1563(class282_sub37_1.anInt7999);
 			} else {
 				class282_sub37_1.aClass278_Sub1_8001.method13447(-947293525);
 
 				try {
-					class282_sub37_1.aClass278_Sub1_8001.method4932(-1422369242);
+					class282_sub37_1.aClass278_Sub1_8001.method4932();
 				} catch (Exception exception_4) {
 					Class151.method2594("" + class282_sub37_1.anInt7999, exception_4, (byte) -82);
-					Class92.method1563(class282_sub37_1.anInt7999, 1917715893);
+					Class92.method1563(class282_sub37_1.anInt7999);
 				}
 
 				if (!class282_sub37_1.aBool8000 && !class282_sub37_1.aBool7995) {
-					Class282_Sub41_Sub4 class282_sub41_sub4_2 = class282_sub37_1.aClass278_Sub1_8001.method4914(-1341767433);
+					Class282_Sub41_Sub4 class282_sub41_sub4_2 = class282_sub37_1.aClass278_Sub1_8001.method4914();
 					if (class282_sub41_sub4_2 != null) {
 						Class282_Sub15_Sub1 class282_sub15_sub1_3 = class282_sub41_sub4_2.method14845(2048602056);
 						if (class282_sub15_sub1_3 != null) {
-							class282_sub15_sub1_3.method14820(class282_sub37_1.anInt7997, 1903554942);
+							class282_sub15_sub1_3.method14820(class282_sub37_1.anInt7997);
 							Class79.aClass282_Sub15_Sub4_783.method15275(class282_sub15_sub1_3);
 							class282_sub37_1.aBool8000 = true;
 						}

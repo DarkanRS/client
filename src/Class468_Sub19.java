@@ -1,6 +1,6 @@
 public class Class468_Sub19 extends Preference {
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -8,7 +8,7 @@ public class Class468_Sub19 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public void method12785(int i_1) {
+	public void method12785() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
 			this.anInt5578 = this.method7781(1848490325);
 		}
@@ -27,7 +27,7 @@ public class Class468_Sub19 extends Preference {
 		return 1;
 	}
 
-	public int method12786(int i_1) {
+	public int method12786() {
 		return this.anInt5578;
 	}
 
@@ -47,7 +47,7 @@ public class Class468_Sub19 extends Preference {
 		return 1;
 	}
 
-	public static final void method12790(boolean bool_0, int i_1, int i_2) {
+	public static final void method12790(boolean bool_0, int i_1) {
 		ClanChannel class282_sub4_3 = bool_0 ? Class113.CLAN_CHANNEL : Class202_Sub1.GUEST_CLAN_CHANNEL;
 		if (class282_sub4_3 != null && i_1 >= 0 && i_1 < class282_sub4_3.numPlayers) {
 			ClanChannelPlayer class57_4 = class282_sub4_3.players[i_1];
@@ -57,7 +57,7 @@ public class Class468_Sub19 extends Preference {
 				TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4617, class184_6.isaac, 1070287495);
 				tcpmessage_7.buffer.writeByte(3 + ChatLine.getLength(string_5));
 				tcpmessage_7.buffer.writeByte(bool_0 ? 1 : 0);
-				tcpmessage_7.buffer.writeShort(i_1, 1417031095);
+				tcpmessage_7.buffer.writeShort(i_1);
 				tcpmessage_7.buffer.writeString(string_5);
 				class184_6.method3049(tcpmessage_7, -920214831);
 			}

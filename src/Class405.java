@@ -5,7 +5,7 @@ public class Class405 {
 	public int anInt4834;
 	public int anInt4835;
 
-	void method6814(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method6814(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aChar4832 = Class11.getChar(rsbytebuffer_1.readByte(), 1372393939);
 		} else if (i_2 == 3) {
@@ -16,27 +16,27 @@ public class Class405 {
 
 	}
 
-	void method6816(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method6816(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method6814(rsbytebuffer_1, i_3, 1617452174);
+			this.method6814(rsbytebuffer_1, i_3);
 		}
 	}
 
-	public static final void method6823(int i_0) {
+	public static final void method6823() {
 		int i_1 = Class393.preferences.aClass468_Sub27_8209.method12952((byte) 47);
 		if (i_1 == 0) {
-			IndexLoaders.MAP_REGION_DECODER.method4440((byte[][][]) null, (byte) 2);
+			IndexLoaders.MAP_REGION_DECODER.method4440((byte[][][]) null);
 			Class534_Sub2.method12847(0, (byte) 57);
 		} else if (i_1 == 1) {
 			Class510.method8744((byte) 0, -1832206339);
 			Class534_Sub2.method12847(512, (byte) 105);
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-987741607) != null) {
-				Class17.method570(-1664759987);
+				Class17.method570();
 			}
 		} else {
 			Class510.method8744((byte) (client.anInt7286 - 4 & 0xff), 688949228);
@@ -46,7 +46,7 @@ public class Class405 {
 		client.anInt7472 = Class4.anInt35;
 	}
 
-	static void method6824(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	static void method6824(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		int i_8 = 0;
 		int i_9 = i_3;
 		int i_10 = 0;
@@ -213,7 +213,7 @@ public class Class405 {
 				ints_9[i_6] = class467_7.anInt5574 * class467_7.anInt5571;
 			}
 
-			Class30.method796(ints_9, Class149_Sub3.aClass467Array9380, -769727466);
+			Class30.method796(ints_9, Class149_Sub3.aClass467Array9380);
 		}
 
 		return Class149_Sub3.aClass467Array9380;

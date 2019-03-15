@@ -8,7 +8,7 @@ public class Class208 {
 
 	public Class208 aClass208_2660;
 
-	void method3560(int i_1) {
+	void method3560() {
 		if (anInt2661 < 500) {
 			this.aClass521_Sub1_Sub1_2659 = null;
 			this.aClass208_2660 = Class507.aClass208_5860;

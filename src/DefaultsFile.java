@@ -24,7 +24,7 @@ public class DefaultsFile {
 		this.fileId = i_1;
 	}
 
-	static final void method11221(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method11221(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1482833983) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);

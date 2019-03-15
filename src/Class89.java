@@ -8,7 +8,7 @@ public class Class89 {
 		throw new Error();
 	}
 
-	static void method1496(byte[] bytes_0, int i_1) {
+	static void method1496(byte[] bytes_0) {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
 		while (true) {
 			int i_3 = rsbytebuffer_2.readUnsignedByte();
@@ -47,7 +47,7 @@ public class Class89 {
 		}
 	}
 
-	static void method1503(int i_0, int i_1) {
+	static void method1503(int i_0) {
 		Class427.anInt5123 = i_0;
 		Class291_Sub1.anInt8014 = -1;
 		Class291_Sub1.anInt8016 = -1;

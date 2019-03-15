@@ -6,11 +6,11 @@ public class Class1 {
 
 	static Class1 RESPONSE = new Class1();
 
-	public static void method252(Class397 class397_0, int i_1, int i_2, Animable animable_3, int i_4, int i_5) {
+	public static void method252(Class397 class397_0, int i_1, Animable animable_3, int i_4, int i_5) {
 		CS2Executor cs2executor_6 = Class125.getNextScriptExecutor(1590618390);
 		cs2executor_6.animable = animable_3;
 		cs2executor_6.anInt7004 = i_4;
-		Class107.method1834(class397_0, i_1, i_2, cs2executor_6, (byte) 104);
+		Class107.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 104);
 		cs2executor_6.animable = null;
 		cs2executor_6.anInt7004 = -1;
 	}

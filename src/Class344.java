@@ -6,7 +6,7 @@ public class Class344 {
 
 	int[][] anIntArrayArray4017;
 
-	byte[] method6102(byte[] bytes_1, int i_2) {
+	byte[] method6102(byte[] bytes_1) {
 		if (this.anIntArrayArray4017 != null) {
 			int i_3 = (int) ((long) this.anInt4012 * (long) bytes_1.length / (long) this.anInt4015) + 14;
 			int[] ints_4 = new int[i_3];
@@ -42,7 +42,7 @@ public class Class344 {
 
 	public Class344(int i_1, int i_2) {
 		if (i_2 != i_1) {
-			int i_3 = Class96_Sub15.method14645(i_1, i_2, 1499248528);
+			int i_3 = Class96_Sub15.method14645(i_1, i_2);
 			i_1 /= i_3;
 			i_2 /= i_3;
 			this.anInt4015 = i_1;
@@ -72,7 +72,7 @@ public class Class344 {
 		}
 	}
 
-	public short[] method6111(short[] shorts_1, int i_2) {
+	public short[] method6111(short[] shorts_1) {
 		if (this.anIntArrayArray4017 != null) {
 			int i_3 = (int) ((long) shorts_1.length * (long) this.anInt4012 / (long) this.anInt4015) + 14;
 			int[] ints_4 = new int[i_3];
@@ -106,7 +106,7 @@ public class Class344 {
 		return shorts_1;
 	}
 
-	int method6112(int i_1, int i_2) {
+	int method6112(int i_1) {
 		if (this.anIntArrayArray4017 != null) {
 			i_1 = (int) ((long) this.anInt4012 * (long) i_1 / (long) this.anInt4015);
 		}
@@ -120,12 +120,12 @@ public class Class344 {
 		return i_1;
 	}
 
-	public static RouteStrategy method6115(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+	public static RouteStrategy method6115(int i_0, int i_1, int i_2, int i_3) {
 		Class224.aClass225_Sub3_2773.approxDestinationX = i_0;
 		Class224.aClass225_Sub3_2773.approxDestinationY = i_1;
 		Class224.aClass225_Sub3_2773.approxDestinationSizeX = i_2;
 		Class224.aClass225_Sub3_2773.approxDestinationSizeY = i_3;
-		Class224.aClass225_Sub3_2773.anInt7929 = i_4;
+		Class224.aClass225_Sub3_2773.anInt7929 = 0;
 		return Class224.aClass225_Sub3_2773;
 	}
 
@@ -148,7 +148,7 @@ public class Class344 {
 		return new String(arr_4, 0, i_5);
 	}
 
-	public static final void method6119(String string_0, int i_1) {
+	public static final void method6119(String string_0) {
 		if (Class467.aClass173Array5575 != null) {
 			BufferedConnectionContext class184_2 = Class468_Sub20.method12807(978713855);
 			TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4618, class184_2.isaac, 808752825);
@@ -158,7 +158,7 @@ public class Class344 {
 		}
 	}
 
-	static final void method6122(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method6122(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.aString1369 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 }

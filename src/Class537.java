@@ -8,17 +8,17 @@ public class Class537 {
 
 	public int anInt7099;
 
-	void method11487(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	void method11487(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method11488(rsbytebuffer_1, i_3, 1650259972);
+			this.method11488(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method11488(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method11488(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aChar7096 = Class11.getChar(rsbytebuffer_1.readByte(), 276039281);
 		} else if (i_2 == 2) {

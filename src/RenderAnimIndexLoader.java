@@ -10,10 +10,10 @@ public class RenderAnimIndexLoader {
 
 	Defaults6Loader aClass526_2672;
 
-	public void method3615(int i_1, int i_2) {
+	public void method3615() {
 		SoftCache softcache_3 = this.renderAnimCache;
 		synchronized (this.renderAnimCache) {
-			this.renderAnimCache.method3858(i_1, (byte) 19);
+			this.renderAnimCache.method3858(5, (byte) 19);
 		}
 	}
 
@@ -36,7 +36,7 @@ public class RenderAnimIndexLoader {
 			renderanimdefs_3.renderAnimId = i_1;
 			renderanimdefs_3.aClass211_2788 = this;
 			if (bytes_10 != null) {
-				renderanimdefs_3.method3821(new RsByteBuffer(bytes_10), -1552501501);
+				renderanimdefs_3.method3821(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.renderAnimCache;
 			synchronized (this.renderAnimCache) {
@@ -46,14 +46,14 @@ public class RenderAnimIndexLoader {
 		}
 	}
 
-	public void method3617(int i_1) {
+	public void method3617() {
 		SoftCache softcache_2 = this.renderAnimCache;
 		synchronized (this.renderAnimCache) {
 			this.renderAnimCache.method3859(-2032720796);
 		}
 	}
 
-	public void method3618(byte b_1) {
+	public void method3618() {
 		SoftCache softcache_2 = this.renderAnimCache;
 		synchronized (this.renderAnimCache) {
 			this.renderAnimCache.method3863(1249794319);
@@ -76,11 +76,11 @@ public class RenderAnimIndexLoader {
 				}
 			}
 		} else {
-			GroundDecoration.method16094(Class468_Sub8.INTERFACES[i_0].method1616(2127300382), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0, (byte) 6);
+			GroundDecoration.method16094(Class468_Sub8.INTERFACES[i_0].method1616(2127300382), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0);
 		}
 	}
 
-	public static void method3630(int i_0) {
+	public static void method3630() {
 		Queue queue_1 = Class236.aQueue2914;
 		synchronized (Class236.aQueue2914) {
 			while (true) {
@@ -93,7 +93,7 @@ public class RenderAnimIndexLoader {
 		}
 	}
 
-	public static void method3631(int i_0, int i_1) {
+	public static void method3631(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(3, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -28);
 	}

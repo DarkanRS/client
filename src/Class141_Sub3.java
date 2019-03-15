@@ -144,8 +144,8 @@ public class Class141_Sub3 extends Class141 {
 		super(class505_sub1_1);
 		this.aClass136_9044 = class136_2;
 		this.method14423();
-		this.aClass137_Sub3_9047 = new Class137_Sub3(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, 2, new byte[] { (byte) 0, (byte) -1 }, Class150.aClass150_1951);
-		this.aClass137_Sub3_9047.method14460(false);
+		this.aClass137_Sub3_9047 = new Class137_Sub3(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, new byte[] { (byte) 0, (byte) -1 }, Class150.aClass150_1951);
+		this.aClass137_Sub3_9047.method14460();
 	}
 
 	void method2414(Class137 class137_1, int i_2) {

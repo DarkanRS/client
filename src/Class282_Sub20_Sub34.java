@@ -20,7 +20,7 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 
 	int anInt9949 = 1;
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -956244470);
 		if (this.aClass320_7667.aBool3722) {
 			int i_4 = Class316.anIntArray3668[i_1] * this.anInt9962 + 2048;
@@ -107,10 +107,10 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 
 	void method12321(int i_1) {
 		this.aByteArray9965 = Class316.method5588(this.anInt9959, -602501951);
-		this.method15412(957138741);
+		this.method15412();
 	}
 
-	void method15412(int i_1) {
+	void method15412() {
 		Random random_2 = new Random((long) this.anInt9959);
 		this.aShortArray9966 = new short[512];
 		if (this.anInt9960 > 0) {
@@ -124,7 +124,7 @@ public class Class282_Sub20_Sub34 extends Class282_Sub20 {
 		super(0, true);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9961 = this.anInt9962 = rsbytebuffer_2.readUnsignedByte();

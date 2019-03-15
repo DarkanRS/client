@@ -108,10 +108,10 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 				class505_sub2_sub2_4 = new Class505_Sub2_Sub2(b_6, b_7, long_8, long_13, d3dpresent_parameters_11, d3dcaps_10, interface22_1, index_2, integer_3.intValue());
 				if (!class505_sub2_sub2_4.aHashtable5855.containsKey(canvas_0)) {
 					Class459.method7679(canvas_0, 902386492);
-					class505_sub2_sub2_4.method8411(canvas_0, new Class158_Sub2_Sub2_Sub2(class505_sub2_sub2_4, canvas_0, canvas_0.getWidth(), canvas_0.getHeight(), true), 316223525);
+					class505_sub2_sub2_4.method8411(canvas_0, new Class158_Sub2_Sub2_Sub2(class505_sub2_sub2_4, canvas_0, canvas_0.getWidth(), canvas_0.getHeight(), true));
 				}
 
-				class505_sub2_sub2_4.method8412(canvas_0, (byte) 8);
+				class505_sub2_sub2_4.method8412(canvas_0);
 				class505_sub2_sub2_4.method14147();
 				return class505_sub2_sub2_4;
 			}
@@ -250,7 +250,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return new Class168(d3dadapter_identifier_1.VendorID, "Direct3D", 9, d3dadapter_identifier_1.Description, d3dadapter_identifier_1.DriverVersion);
 	}
 
-	void method8555(int i_1, int i_2) throws Exception_Sub3 {
+	void method8555() throws Exception_Sub3 {
 		IDirect3DDevice.EndScene(this.aLong10252);
 		int i_3 = this.aClass158_Sub2_5841.method14344();
 		if (Class25.method750(i_3)) {
@@ -372,7 +372,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		IDirect3DDevice.SetScissorRect(this.aLong10252, this.anInt8823 + this.anInt8743, this.anInt8754 + this.anInt8822, this.anInt8744, this.anInt8742);
 	}
 
-	final void method13968(int i_1, Class67 class67_2, boolean bool_3, boolean bool_4) {
+	final void method13968(int i_1, Class67 class67_2) {
 		if (this.aBool8692) {
 			byte b_5 = 0;
 			byte b_6;
@@ -457,10 +457,10 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 			int i_3 = i_1 + 2;
 			int i_4 = class282_sub24_2.method12371(-2141155828);
 			float f_5 = class282_sub24_2.method12395(1596693490) / 255.0F;
-			D3DLIGHT.SetPosition(this.aLong10253, (float) class282_sub24_2.method12368((byte) -85), (float) class282_sub24_2.method12369(1534020223), (float) class282_sub24_2.method12394(1027065931));
+			D3DLIGHT.SetPosition(this.aLong10253, (float) class282_sub24_2.method12368((byte) -85), (float) class282_sub24_2.method12369(), (float) class282_sub24_2.method12394(1027065931));
 			D3DLIGHT.SetDiffuse(this.aLong10253, (float) (i_4 >> 16 & 0xff) * f_5, (float) (i_4 >> 8 & 0xff) * f_5, (float) (i_4 & 0xff) * f_5, 0.0F);
-			D3DLIGHT.SetAttenuation(this.aLong10253, 0.0F, 0.0F, 1.0F / (float) (class282_sub24_2.method12370(-789603523) * class282_sub24_2.method12370(-789603523)));
-			D3DLIGHT.SetRange(this.aLong10253, (float) class282_sub24_2.method12370(-789603523));
+			D3DLIGHT.SetAttenuation(this.aLong10253, 0.0F, 0.0F, 1.0F / (float) (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
+			D3DLIGHT.SetRange(this.aLong10253, (float) class282_sub24_2.method12370());
 			IDirect3DDevice.SetLight(this.aLong10252, i_3, this.aLong10253);
 			IDirect3DDevice.LightEnable(this.aLong10252, i_3, true);
 		}
@@ -494,8 +494,8 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return new Class360_Sub1(this, class150_1, i_2, i_3, i_4, bool_5, bytes_6);
 	}
 
-	Interface6 method13961(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5, int i_6, int i_7) {
-		return new Class360_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, i_6, i_7);
+	Interface6 method13961(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5) {
+		return new Class360_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, 0, 0);
 	}
 
 	void method14188() {
@@ -510,8 +510,8 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return new Class360_Sub3(this, i_1, bool_2, ints_3);
 	}
 
-	Interface1 method13962(Class150 class150_1, int i_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6) {
-		return new Class360_Sub1(this, class150_1, i_2, i_3, i_4, bool_5, bytes_6);
+	Interface1 method13962(Class150 class150_1, byte[] bytes_6) {
+		return new Class360_Sub1(this, class150_1, 128, 128, 16, true, bytes_6);
 	}
 
 	Interface1 method13917(Class150 class150_1, int i_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6) {
@@ -609,7 +609,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		IDirect3DDevice.method14471(this.aLong10252, 7, this.aBool8757);
 	}
 
-	final void method13970(int i_1, Class67 class67_2, boolean bool_3) {
+	final void method13970(int i_1, Class67 class67_2) {
 		if (this.aBool8692) {
 			byte b_4 = 0;
 			byte b_5;
@@ -678,10 +678,10 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 			int i_3 = i_1 + 2;
 			int i_4 = class282_sub24_2.method12371(-2135463998);
 			float f_5 = class282_sub24_2.method12395(-2014514150) / 255.0F;
-			D3DLIGHT.SetPosition(this.aLong10253, (float) class282_sub24_2.method12368((byte) 11), (float) class282_sub24_2.method12369(1534020223), (float) class282_sub24_2.method12394(1899159240));
+			D3DLIGHT.SetPosition(this.aLong10253, (float) class282_sub24_2.method12368((byte) 11), (float) class282_sub24_2.method12369(), (float) class282_sub24_2.method12394(1899159240));
 			D3DLIGHT.SetDiffuse(this.aLong10253, (float) (i_4 >> 16 & 0xff) * f_5, (float) (i_4 >> 8 & 0xff) * f_5, (float) (i_4 & 0xff) * f_5, 0.0F);
-			D3DLIGHT.SetAttenuation(this.aLong10253, 0.0F, 0.0F, 1.0F / (float) (class282_sub24_2.method12370(-789603523) * class282_sub24_2.method12370(-789603523)));
-			D3DLIGHT.SetRange(this.aLong10253, (float) class282_sub24_2.method12370(-789603523));
+			D3DLIGHT.SetAttenuation(this.aLong10253, 0.0F, 0.0F, 1.0F / (float) (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
+			D3DLIGHT.SetRange(this.aLong10253, (float) class282_sub24_2.method12370());
 			IDirect3DDevice.SetLight(this.aLong10252, i_3, this.aLong10253);
 			IDirect3DDevice.LightEnable(this.aLong10252, i_3, true);
 		}
@@ -1099,8 +1099,8 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		IDirect3DDevice.SetRenderState(this.aLong10252, 8, i_2);
 	}
 
-	Interface6 method14143(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5, int i_6, int i_7) {
-		return new Class360_Sub2(this, class150_1, i_2, i_3, bool_4, bytes_5, i_6, i_7);
+	Interface6 method14143(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5) {
+		return new Class360_Sub2(this, class150_1, i_2, i_3, bool_4, bytes_5, 0, 0);
 	}
 
 	public Class158_Sub1 method8620() {
@@ -1343,10 +1343,10 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 			int i_3 = i_1 + 2;
 			int i_4 = class282_sub24_2.method12371(-2144308312);
 			float f_5 = class282_sub24_2.method12395(-747591590) / 255.0F;
-			D3DLIGHT.SetPosition(this.aLong10253, (float) class282_sub24_2.method12368((byte) -50), (float) class282_sub24_2.method12369(1534020223), (float) class282_sub24_2.method12394(1436724778));
+			D3DLIGHT.SetPosition(this.aLong10253, (float) class282_sub24_2.method12368((byte) -50), (float) class282_sub24_2.method12369(), (float) class282_sub24_2.method12394(1436724778));
 			D3DLIGHT.SetDiffuse(this.aLong10253, (float) (i_4 >> 16 & 0xff) * f_5, (float) (i_4 >> 8 & 0xff) * f_5, (float) (i_4 & 0xff) * f_5, 0.0F);
-			D3DLIGHT.SetAttenuation(this.aLong10253, 0.0F, 0.0F, 1.0F / (float) (class282_sub24_2.method12370(-789603523) * class282_sub24_2.method12370(-789603523)));
-			D3DLIGHT.SetRange(this.aLong10253, (float) class282_sub24_2.method12370(-789603523));
+			D3DLIGHT.SetAttenuation(this.aLong10253, 0.0F, 0.0F, 1.0F / (float) (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
+			D3DLIGHT.SetRange(this.aLong10253, (float) class282_sub24_2.method12370());
 			IDirect3DDevice.SetLight(this.aLong10252, i_3, this.aLong10253);
 			IDirect3DDevice.LightEnable(this.aLong10252, i_3, true);
 		}

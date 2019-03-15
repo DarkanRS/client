@@ -12,7 +12,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, -945684518);
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1209(this.anInt10019, this.aByte10020, -1275006341);
 	}
 
@@ -35,7 +35,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, 942889455);
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.anInt10019 = rsbytebuffer_1.readUnsignedShort();
 		this.aByte10020 = rsbytebuffer_1.readByte();
 	}
@@ -53,7 +53,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, -278776208);
 	}
 
-	public static String method15439(byte[] bytes_0, int i_1) {
+	public static String method15439(byte[] bytes_0) {
 		return Class344.method6118(bytes_0, 0, bytes_0.length, (byte) -114);
 	}
 

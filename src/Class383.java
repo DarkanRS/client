@@ -12,17 +12,17 @@ public class Class383 implements Interface41 {
 		return Class445.aClass445_5380;
 	}
 
-	public int getCompletion(int i_1) {
-		return this.aClass317_4663.method5628(this.aString4662, 433021340) ? 100 : 0;
+	public int getCompletion() {
+		return this.aClass317_4663.method5628(this.aString4662) ? 100 : 0;
 	}
 
-	Class383(Index index_1, String string_2) {
+	Class383(Index index_1) {
 		this.aClass317_4663 = index_1;
-		this.aString4662 = string_2;
+		this.aString4662 = "huffman";
 	}
 
 	public int method231() {
-		return this.aClass317_4663.method5628(this.aString4662, 433021340) ? 100 : 0;
+		return this.aClass317_4663.method5628(this.aString4662) ? 100 : 0;
 	}
 
 	public Class445 method235() {
@@ -37,11 +37,11 @@ public class Class383 implements Interface41 {
 		return Class445.aClass445_5380;
 	}
 
-	public Class445 method232(byte b_1) {
+	public Class445 method232() {
 		return Class445.aClass445_5380;
 	}
 
-	public static Class268 method6509(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
+	public static Class268 method6509(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if (Class393.preferences.aClass468_Sub13_8225.method12714(-784920848) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
 			Class268 class268_7 = new Class268((byte) 1, i_0, i_1, i_2, i_3, i_4, i_5, (Class521_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
@@ -51,19 +51,19 @@ public class Class383 implements Interface41 {
 		}
 	}
 
-	public static void method6511(int i_0) {
+	public static void method6511() {
 		for (Class282_Sub37 class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7750(76127195); class282_sub37_1 != null; class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7751((byte) 48)) {
 			if (!class282_sub37_1.aBool7996) {
-				Class92.method1563(class282_sub37_1.anInt7999, 1917715893);
+				Class92.method1563(class282_sub37_1.anInt7999);
 			} else {
 				class282_sub37_1.aBool7996 = false;
 			}
 		}
 	}
 
-	static Class350 method6512(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static Class350 method6512(RsByteBuffer rsbytebuffer_0) {
 		Class356 class356_2 = Class350_Sub3_Sub1.method15558(-535190719)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_3 = AccountCreationResponseOpcodes.method8155(152314627)[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_3 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
 		int i_4 = rsbytebuffer_0.readShort();
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readUnsignedShort();
@@ -87,7 +87,7 @@ public class Class383 implements Interface41 {
 			try {
 				Dimension dimension_4 = Class351.gameCanvas.getSize();
 				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
-				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, Class58.aClass529_527.anInt7034, 0);
+				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, Class58.aClass529_527.anInt7034);
 				long long_6 = Class169.time();
 				Renderers.SOFTWARE_RENDERER.L();
 				client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
@@ -130,7 +130,7 @@ public class Class383 implements Interface41 {
 		}
 	}
 
-	public static String method6515(CharSequence charsequence_0, int i_1) {
-		return Class222.method3754(charsequence_0, (Class413) null, -198017552);
+	public static String method6515(CharSequence charsequence_0) {
+		return Class222.method3754(charsequence_0, (Class413) null);
 	}
 }

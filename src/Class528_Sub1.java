@@ -213,7 +213,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 			this.aBool8246 |= class169_65 != null && (class169_65.aByte2081 != 0 || class169_65.aByte2090 != 0);
 		}
 
-		Class159.method2736(longs_63, ints_8, (byte) 8);
+		Class159.method2736(longs_63, ints_8);
 		this.anInt8303 = rsmesh_2.vertexCount;
 		this.anInt8248 = rsmesh_2.anInt1999;
 		this.anIntArray8249 = rsmesh_2.vertexX;
@@ -1430,7 +1430,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
-				if (class390_3.method6722(i_8, i_10, 65280) == i_6 && class390_3.method6722(i_9, i_10, 65280) == i_6 && class390_3.method6722(i_8, i_11, 65280) == i_6 && class390_3.method6722(i_9, i_11, 65280) == i_6) {
+				if (class390_3.method6722(i_8, i_10) == i_6 && class390_3.method6722(i_9, i_10) == i_6 && class390_3.method6722(i_8, i_11) == i_6 && class390_3.method6722(i_9, i_11) == i_6) {
 					return;
 				}
 			} else if (class390_4 == null || i_8 < 0 || class390_4.tileUnits + i_9 >> class390_4.tileScale >= class390_4.width || i_10 < 0 || class390_4.tileUnits + i_11 >> class390_4.tileScale >= class390_4.length) {
@@ -3865,7 +3865,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 						}
 
 						this.aClass505_Sub1_8239.method13608(i_5, this.aClass143_8274 != null);
-						this.aClass505_Sub1_8239.method13611(this.aClass132_8276.anInterface15_1595, 4, i_3 * 3, (i_4 - i_3) * 3);
+						this.aClass505_Sub1_8239.method13611(this.aClass132_8276.anInterface15_1595, i_3 * 3, (i_4 - i_3) * 3);
 					}
 				}
 			}
@@ -3900,7 +3900,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 					OpenGL.glColor4ub((byte) (i_13 >> 16), (byte) (i_13 >> 8), (byte) i_13, (byte) (i_13 >> 24));
 					this.aClass505_Sub1_8239.method13581(class162_4.aShort2022);
 					this.aClass505_Sub1_8239.method13624(class162_4.aByte2024);
-					this.aClass505_Sub1_8239.method13603(7, 0, 4);
+					this.aClass505_Sub1_8239.method13603(4);
 				}
 			}
 
@@ -3921,9 +3921,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_3;
 		if (this.aClass505_Sub1_8239.aBool8467) {
 			for (i_3 = 0; i_3 < this.anInt8302; i_3++) {
-				class282_sub35_sub1_2.writeShort(this.aShortArray8266[i_3], 1417031095);
-				class282_sub35_sub1_2.writeShort(this.aShortArray8267[i_3], 1417031095);
-				class282_sub35_sub1_2.writeShort(this.aShortArray8256[i_3], 1417031095);
+				class282_sub35_sub1_2.writeShort(this.aShortArray8266[i_3]);
+				class282_sub35_sub1_2.writeShort(this.aShortArray8267[i_3]);
+				class282_sub35_sub1_2.writeShort(this.aShortArray8256[i_3]);
 			}
 		} else {
 			for (i_3 = 0; i_3 < this.anInt8302; i_3++) {
@@ -3936,14 +3936,14 @@ public class Class528_Sub1 extends MeshRasterizer {
 		if (class282_sub35_sub1_2.index != 0) {
 			if (bool_1) {
 				if (this.anInterface15_8277 == null) {
-					this.anInterface15_8277 = this.aClass505_Sub1_8239.method13598(5123, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index, true);
+					this.anInterface15_8277 = this.aClass505_Sub1_8239.method13598(class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index, true);
 				} else {
-					this.anInterface15_8277.method111(5123, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index);
+					this.anInterface15_8277.method111(class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index);
 				}
 
 				this.aClass132_8276.anInterface15_1595 = this.anInterface15_8277;
 			} else {
-				this.aClass132_8276.anInterface15_1595 = this.aClass505_Sub1_8239.method13598(5123, class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index, false);
+				this.aClass132_8276.anInterface15_1595 = this.aClass505_Sub1_8239.method13598(class282_sub35_sub1_2.buffer, class282_sub35_sub1_2.index, false);
 			}
 
 			if (!bool_1) {
@@ -7113,7 +7113,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
-				if (class390_3.method6722(i_8, i_10, 65280) == i_6 && class390_3.method6722(i_9, i_10, 65280) == i_6 && class390_3.method6722(i_8, i_11, 65280) == i_6 && class390_3.method6722(i_9, i_11, 65280) == i_6) {
+				if (class390_3.method6722(i_8, i_10) == i_6 && class390_3.method6722(i_9, i_10) == i_6 && class390_3.method6722(i_8, i_11) == i_6 && class390_3.method6722(i_9, i_11) == i_6) {
 					return;
 				}
 			} else if (class390_4 == null || i_8 < 0 || class390_4.tileUnits + i_9 >> class390_4.tileScale >= class390_4.width || i_10 < 0 || class390_4.tileUnits + i_11 >> class390_4.tileScale >= class390_4.length) {

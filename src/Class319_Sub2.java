@@ -71,10 +71,10 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
 		return this.anInt9158;
 	}
 
-	void method14494(int i_1, int i_2, int i_3, int i_4, float[] floats_5, Class150 class150_6, int i_7, int i_8) {
+	void method14494(int i_3, int i_4, float[] floats_5, Class150 class150_6, int i_7, int i_8) {
 		this.aClass505_Sub2_Sub1_3700.method14035(this);
 		OpenGL.glPixelStorei(3314, i_8);
-		OpenGL.glTexSubImage2Df(this.anInt3707, 0, i_1, i_2, i_3, i_4, Class505_Sub2_Sub1.method15575(class150_6), 5121, floats_5, i_7);
+		OpenGL.glTexSubImage2Df(this.anInt3707, 0, 0, 0, i_3, i_4, Class505_Sub2_Sub1.method15575(class150_6), 5121, floats_5, i_7);
 		OpenGL.glPixelStorei(3314, 0);
 	}
 
@@ -116,8 +116,8 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
 		return f_1 / (float) this.anInt9159;
 	}
 
-	public Interface9 method200(int i_1) {
-		return new Class324(this, i_1);
+	public Interface9 method200() {
+		return new Class324(this, 0);
 	}
 
 	public int method55() {
@@ -183,13 +183,13 @@ public class Class319_Sub2 extends Class319 implements Interface29 {
 		return f_1 / (float) this.anInt9158;
 	}
 
-	public void method53(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6) {
+	public void method53(int i_3, int i_4, int[] ints_5) {
 		int[] ints_7 = new int[this.anInt9159 * this.anInt9158];
 		this.aClass505_Sub2_Sub1_3700.method14035(this);
 		OpenGL.glGetTexImagei(this.anInt3707, 0, 32993, 5121, ints_7, 0);
 
 		for (int i_8 = 0; i_8 < i_4; i_8++) {
-			System.arraycopy(ints_7, this.anInt9159 * (i_2 + (i_4 - 1) - i_8), ints_5, i_3 * i_8 + i_6, i_3);
+			System.arraycopy(ints_7, this.anInt9159 * (0 + (i_4 - 1) - i_8), ints_5, i_3 * i_8 + 0, i_3);
 		}
 
 	}

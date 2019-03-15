@@ -47,7 +47,7 @@ public class Class268 {
 		}
 	}
 
-	public static int[] method4799(int i_0, int i_1) {
+	public static int[] method4799(int i_0) {
 		int[] ints_2 = new int[3];
 		Class155.method2634(Class302.method5363(i_0, 1155387046));
 		ints_2[0] = Class407.aCalendar4848.get(5);
@@ -56,7 +56,7 @@ public class Class268 {
 		return ints_2;
 	}
 
-	static void method4800(GraphicalRenderer graphicalrenderer_0, byte b_1) {
+	static void method4800(GraphicalRenderer graphicalrenderer_0) {
 		if ((Class20.anInt169 >= 2 || client.aBool7344) && client.aClass118_7257 == null) {
 			String string_2;
 			if (client.aBool7344 && Class20.anInt169 < 2) {
@@ -75,7 +75,7 @@ public class Class268 {
 				}
 			}
 			if (Class20.anInt169 > 2) {
-				string_2 = string_2 + ParticleProducerDefinition.method1163(16777215, 619010179) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
+				string_2 = string_2 + ParticleProducerDefinition.method1163(16777215) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
 			}
 			if (Class20.aClass118_183 != null) {
 				FontRenderer fontrenderer_5 = Class20.aClass118_183.method1988(Class487.aClass378_5752, client.anInterface35_7206, -208417273);
@@ -83,7 +83,7 @@ public class Class268 {
 					fontrenderer_5 = Class285.aClass8_3394;
 				}
 				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.anInt1301, Class20.aClass118_183.anInt1429, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aClass160Array1248, Class20.anIntArray177, 1750233370);
-				Class292.method5201(client.anIntArray7438[0], client.anIntArray7438[1], client.anIntArray7438[2], client.anIntArray7438[3], (byte) 12);
+				Class292.method5201(client.anIntArray7438[0], client.anIntArray7438[1], client.anIntArray7438[2], client.anIntArray7438[3]);
 			}
 		}
 	}

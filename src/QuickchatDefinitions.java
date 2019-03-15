@@ -7,9 +7,9 @@ public class QuickchatDefinitions extends CacheableNode {
 	int[][] anIntArrayArray9626;
 	public boolean aBool9628 = true;
 
-	void decode(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void decode(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.messages = Class456_Sub3.method12681(rsbytebuffer_1.readString(), '<', 229848533);
+			this.messages = Class456_Sub3.method12681(rsbytebuffer_1.readString(), '<');
 		} else {
 			int i_4;
 			int i_5;
@@ -49,19 +49,19 @@ public class QuickchatDefinitions extends CacheableNode {
 			for (int i_4 = 0; i_4 < this.dynamicValueTypes.length && i_4 < ints_2.length; i_4++) {
 				int i_5 = this.method14918(i_4, -218667909).clientTransmitSize;
 				if (i_5 > 0) {
-					rsbytebuffer_1.method13068((long) ints_2[i_4], i_5, 1986683793);
+					rsbytebuffer_1.method13068((long) ints_2[i_4], i_5);
 				}
 			}
 		}
 
 	}
 
-	public String fillDynamicValues(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	public String fillDynamicValues(RsByteBuffer rsbytebuffer_1) {
 		StringBuilder stringbuilder_3 = new StringBuilder(80);
 		if (this.dynamicValueTypes != null) {
 			for (int i_4 = 0; i_4 < this.dynamicValueTypes.length; i_4++) {
 				stringbuilder_3.append(this.messages[i_4]);
-				stringbuilder_3.append(this.aClass429_9623.method7212(this.method14918(i_4, 12195822), this.anIntArrayArray9626[i_4], rsbytebuffer_1.method13089(QuickChatDynamicValue.get(this.dynamicValueTypes[i_4], (byte) -21).serverTransmitSize, 1911535403)));
+				stringbuilder_3.append(this.aClass429_9623.method7212(this.method14918(i_4, 12195822), this.anIntArrayArray9626[i_4], rsbytebuffer_1.method13089(QuickChatDynamicValue.get(this.dynamicValueTypes[i_4], (byte) -21).serverTransmitSize)));
 			}
 		}
 
@@ -88,11 +88,11 @@ public class QuickchatDefinitions extends CacheableNode {
 		}
 	}
 
-	public int method14901(int i_1, int i_2, int i_3) {
+	public int method14901(int i_1, int i_2) {
 		return this.dynamicValueTypes != null && i_1 >= 0 && i_1 <= this.dynamicValueTypes.length ? (this.anIntArrayArray9626[i_1] != null && i_2 >= 0 && i_2 <= this.anIntArrayArray9626[i_1].length ? this.anIntArrayArray9626[i_1][i_2] : -1) : -1;
 	}
 
-	void method14912(int i_1) {
+	void method14912() {
 		if (this.anIntArray9624 != null) {
 			for (int i_2 = 0; i_2 < this.anIntArray9624.length; i_2++) {
 				this.anIntArray9624[i_2] |= 0x8000;
@@ -101,14 +101,14 @@ public class QuickchatDefinitions extends CacheableNode {
 
 	}
 
-	void method14913(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method14913(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.decode(rsbytebuffer_1, i_3, -1464850620);
+			this.decode(rsbytebuffer_1, i_3);
 		}
 	}
 
@@ -120,7 +120,7 @@ public class QuickchatDefinitions extends CacheableNode {
 		return this.dynamicValueTypes != null && i_1 >= 0 && i_1 <= this.dynamicValueTypes.length ? QuickChatDynamicValue.get(this.dynamicValueTypes[i_1], (byte) -128) : null;
 	}
 
-	static boolean method14921(int i_0, int i_1, int i_2, byte b_3) {
+	static boolean method14921(int i_0, int i_1, int i_2) {
 		SceneObjectManager sceneobjectmanager_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1536948250);
 		boolean bool_5 = true;
 		SceneObject sceneobject_6 = (SceneObject) sceneobjectmanager_4.getWall(i_0, i_1, i_2, (byte) -61);
@@ -128,12 +128,12 @@ public class QuickchatDefinitions extends CacheableNode {
 			bool_5 &= Class93.method1577(sceneobject_6, -1691371970);
 		}
 
-		sceneobject_6 = (SceneObject) sceneobjectmanager_4.getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446, -233664382);
+		sceneobject_6 = (SceneObject) sceneobjectmanager_4.getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446);
 		if (sceneobject_6 != null) {
 			bool_5 &= Class93.method1577(sceneobject_6, -1754652045);
 		}
 
-		sceneobject_6 = (SceneObject) sceneobjectmanager_4.getGroundDecoration(i_0, i_1, i_2, -387297653);
+		sceneobject_6 = (SceneObject) sceneobjectmanager_4.getGroundDecoration(i_0, i_1, i_2);
 		if (sceneobject_6 != null) {
 			bool_5 &= Class93.method1577(sceneobject_6, -1776795369);
 		}

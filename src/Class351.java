@@ -16,7 +16,7 @@ public class Class351 implements Interface3 {
 		this.anInt4095 = i_1;
 	}
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_601;
 	}
 
@@ -48,7 +48,7 @@ public class Class351 implements Interface3 {
 		if (unload) {
 			Class337.unloadInterface(i_4, -775991491);
 		}
-		Class109_Sub1.method14650(i_4, 185452428);
+		Class109_Sub1.method14650(i_4);
 		IComponentDefinitions component = Class117.getInterfaceComponent(interfaceHash);
 		if (component != null) {
 			Class109.redrawComponent(component, (byte) -15);
@@ -74,7 +74,7 @@ public class Class351 implements Interface3 {
 		}
 	}
 
-	public static synchronized void method6197(byte[] data, int i_1) {
+	public static synchronized void method6197(byte[] data) {
 		if (data.length == 100 && CircularBuffer.anInt5768 < 1000) {
 			CircularBuffer.aByteArrayArray5767[++CircularBuffer.anInt5768 - 1] = data;
 		} else if (data.length == 5000 && CircularBuffer.anInt5769 < 250) {

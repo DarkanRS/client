@@ -18,7 +18,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 	boolean aBool10516;
 	MeshRasterizer aClass528_10513;
 
-	public void method88(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method88(GraphicalRenderer graphicalrenderer_1) {
 		Object obj_3 = null;
 		Shadow class282_sub50_sub17_4;
 		if (this.aClass282_Sub50_Sub17_10517 == null && this.aBool10516) {
@@ -41,7 +41,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 	}
 
 	Class452 method16101(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, int i_4) {
-		ObjectDefinitions objectdefinitions_5 = this.aClass474_10515.getObjectDefinitions(this.anInt10514, 65280);
+		ObjectDefinitions objectdefinitions_5 = this.aClass474_10515.getObjectDefinitions(this.anInt10514);
 		Ground class390_6;
 		Ground class390_7;
 		if (this.aBool10525) {
@@ -107,7 +107,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		return this.aClass200_10519;
 	}
 
-	public void method85(byte b_1) {
+	public void method85() {
 		if (this.aClass528_10513 != null) {
 			this.aClass528_10513.method11259();
 		}
@@ -182,7 +182,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		return this.aBool10516;
 	}
 
-	public void method87(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method87(GraphicalRenderer graphicalrenderer_1) {
 		Object obj_3 = null;
 		Shadow class282_sub50_sub17_4;
 		if (this.aClass282_Sub50_Sub17_10517 == null && this.aBool10516) {
@@ -297,7 +297,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 	}
 
 	public Class521_Sub1_Sub5_Sub1(SceneObjectManager sceneobjectmanager_1, GraphicalRenderer graphicalrenderer_2, ObjectIndexLoader objectindexloader_3, ObjectDefinitions objectdefinitions_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11, int i_12, boolean bool_13) {
-		super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, Class235.method3967(i_11, i_12, -1066763061));
+		super(sceneobjectmanager_1, i_7, i_8, i_9, i_5, i_6, Class235.method3967(i_11, i_12));
 		this.aClass474_10515 = objectindexloader_3;
 		this.anInt10514 = objectdefinitions_4.id;
 		this.aBool10525 = bool_10;
@@ -331,7 +331,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		this.method13008(1, (byte) -117);
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aClass528_10513 == null) {
 			return null;
 		} else {
@@ -471,7 +471,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		MeshRasterizer meshrasterizer_5 = this.method16102(graphicalrenderer_1, 131072, 1136432980);
 		if (meshrasterizer_5 != null) {
 			Matrix44Var matrix44var_6 = this.method11168();
@@ -481,7 +481,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		}
 	}
 
-	static void handleAccountCreationStart(int i_0) {
+	static void handleAccountCreationStart() {
 		if (Class192.ACCOUNT_CREATION_STAGE != null) {
 			try {
 				short s_1;
@@ -502,17 +502,17 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 					client.aClass184_7218.method3054((short) 8665);
 					TCPMessage tcpmessage_2 = Class207.method3558((byte) 87);
 					tcpmessage_2.buffer.writeByte(OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
-					tcpmessage_2.buffer.writeShort(0, 1417031095);
+					tcpmessage_2.buffer.writeShort(0);
 					i_3 = tcpmessage_2.buffer.index;
-					tcpmessage_2.buffer.writeShort(727, 1417031095);
-					tcpmessage_2.buffer.writeShort(1, 1417031095);
-					Class14.LOGIN_XTEAS = Class463.method7725(tcpmessage_2, (byte) -61);
+					tcpmessage_2.buffer.writeShort(727);
+					tcpmessage_2.buffer.writeShort(1);
+					Class14.LOGIN_XTEAS = Class463.method7725(tcpmessage_2);
 					int i_4 = tcpmessage_2.buffer.index;
 					tcpmessage_2.buffer.writeString(client.aString7164);
-					tcpmessage_2.buffer.writeShort(client.anInt7149, 1417031095);
+					tcpmessage_2.buffer.writeShort(client.anInt7149);
 					tcpmessage_2.buffer.writeLong(client.aLong7153);
 					tcpmessage_2.buffer.writeString(Class464.aString5555);
-					tcpmessage_2.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					tcpmessage_2.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243());
 					tcpmessage_2.buffer.writeByte(client.CURRENT_GAME.anInt5746);
 					Class31.method809(tcpmessage_2.buffer, -1671456029);
 					String string_5 = client.aString7156;
@@ -521,10 +521,10 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 						tcpmessage_2.buffer.writeString(string_5);
 					}
 
-					Class11.SYSTEM_INFO.writeMachineInformation(tcpmessage_2.buffer, 419814551);
+					Class11.SYSTEM_INFO.writeMachineInformation(tcpmessage_2.buffer);
 					tcpmessage_2.buffer.index += 7;
 					tcpmessage_2.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_4, tcpmessage_2.buffer.index, 1645773158);
-					tcpmessage_2.buffer.method13281(tcpmessage_2.buffer.index - i_3, 1201423895);
+					tcpmessage_2.buffer.method13281(tcpmessage_2.buffer.index - i_3);
 					client.aClass184_7218.method3049(tcpmessage_2, -1007484142);
 					client.aClass184_7218.method3047(557990439);
 					Class192.ACCOUNT_CREATION_STAGE = Class1.RESPONSE;
@@ -535,7 +535,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 						Class5.method297(2055895853);
 					} else if (client.aClass184_7218.getConnection().available(1, (byte) 85)) {
 						client.aClass184_7218.getConnection().read(client.aClass184_7218.recievedBuffer.buffer, 0, 1, -1181691571);
-						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.method6672(Interface.method1626(1186080710), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff, -865772612);
+						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.method6672(Interface.method1626(), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff, -865772612);
 						if (AccountCreationResponseOpcodes.CONTINUE != Class96_Sub9.RECIEVED_RESPONSE) {
 							client.aClass184_7218.method3051((byte) -45);
 						} else {
@@ -567,5 +567,4 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		}
 
 	}
-
 }

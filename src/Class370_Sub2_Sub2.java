@@ -3,12 +3,12 @@ public class Class370_Sub2_Sub2 extends Class370_Sub2 {
 	byte[] aByteArray10219;
 
 	Class370_Sub2_Sub2() {
-		super(12, 5, 16, 2, 2, 0.45F);
+		super();
 	}
 
-	byte[] method15617(int i_1, int i_2, int i_3) {
-		this.aByteArray10219 = new byte[i_3 * i_2 * i_1 * 2];
-		this.method6322(i_1, i_2, i_3);
+	byte[] method15617() {
+		this.aByteArray10219 = new byte[16 * 128 * 128 * 2];
+		this.method6322(128, 128, 16);
 		return this.aByteArray10219;
 	}
 

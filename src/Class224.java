@@ -26,7 +26,7 @@ public final class Class224 {
 		cacheablenode_0.aClass282_Sub50_8119.current = cacheablenode_0;
 	}
 
-	public static Class366 method3784(RsByteBuffer rsbytebuffer_0, int i_1) {
+	public static Class366 method3784(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readInt();
 		return new Class366(i_2);
 	}

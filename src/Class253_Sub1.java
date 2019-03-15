@@ -41,7 +41,7 @@ public class Class253_Sub1 extends Class253 {
 			this.aSourceDataLine7822.start();
 			this.anInt7823 = i_1;
 		} catch (LineUnavailableException lineunavailableexception_3) {
-			if (Class179.method3019(i_1, (short) 20963) == 1) {
+			if (Class179.method3019(i_1) == 1) {
 				this.aSourceDataLine7822 = null;
 				throw lineunavailableexception_3;
 			}

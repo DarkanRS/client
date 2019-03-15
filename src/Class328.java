@@ -25,10 +25,10 @@ public final class Class328 implements Comparable {
 	}
 
 	public int compareTo(Object object_1) {
-		return this.method5822((Class328) object_1, (byte) 39);
+		return this.method5822((Class328) object_1);
 	}
 
-	int method5822(Class328 class328_1, byte b_2) {
+	int method5822(Class328 class328_1) {
 		return this.aLong3769 < class328_1.aLong3769 ? -1 : (this.aLong3769 > class328_1.aLong3769 ? 1 : 0);
 	}
 
@@ -37,18 +37,18 @@ public final class Class328 implements Comparable {
 		this.anObject3770 = object_2;
 	}
 
-	static void method5827(short s_0) {
+	static void method5827() {
 		try {
 			File file_1 = new File(Class110.aString1103, "random.dat");
 			int i_3;
 			if (file_1.exists()) {
-				Engine.aClass440_3269 = new Class440(new Class442(file_1, "rw", 25L), 24, 0);
+				Engine.aClass440_3269 = new Class440(new Class442(file_1, 25L), 24);
 			} else {
 				label34: for (int i_2 = 0; i_2 < Class106.aStringArray1077.length; i_2++) {
 					for (i_3 = 0; i_3 < Class246.aStringArray3028.length; i_3++) {
 						File file_4 = new File(Class246.aStringArray3028[i_3] + Class106.aStringArray1077[i_2] + File.separatorChar + "random.dat");
 						if (file_4.exists()) {
-							Engine.aClass440_3269 = new Class440(new Class442(file_4, "rw", 25L), 24, 0);
+							Engine.aClass440_3269 = new Class440(new Class442(file_4, 25L), 24);
 							break label34;
 						}
 					}
@@ -61,7 +61,7 @@ public final class Class328 implements Comparable {
 				randomaccessfile_5.write(i_3);
 				randomaccessfile_5.seek(0L);
 				randomaccessfile_5.close();
-				Engine.aClass440_3269 = new Class440(new Class442(file_1, "rw", 25L), 24, 0);
+				Engine.aClass440_3269 = new Class440(new Class442(file_1, 25L), 24);
 			}
 		} catch (IOException ioexception_6) {
 			;
@@ -69,6 +69,6 @@ public final class Class328 implements Comparable {
 	}
 
 	public static int parseInt(CharSequence charsequence_0, int i_1) {
-		return Class356.parseInt(charsequence_0, 10, true, 2038427942);
+		return Class356.parseInt(charsequence_0, 10);
 	}
 }

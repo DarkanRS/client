@@ -16,17 +16,17 @@ public class Class133 {
 		super.finalize();
 	}
 
-	static Class133 method2321(OpenGLGraphicalRenderer class505_sub1_0, int i_1, String string_2) {
+	static Class133 method2321(OpenGLGraphicalRenderer class505_sub1_0, String string_2) {
 		int i_3 = OpenGL.glGenProgramARB();
-		OpenGL.glBindProgramARB(i_1, i_3);
-		OpenGL.glProgramStringARB(i_1, 34933, string_2);
+		OpenGL.glBindProgramARB(34336, i_3);
+		OpenGL.glProgramStringARB(34336, 34933, string_2);
 		OpenGL.glGetIntegerv(34379, anIntArray1599, 0);
 		if (anIntArray1599[0] != -1) {
-			OpenGL.glBindProgramARB(i_1, 0);
+			OpenGL.glBindProgramARB(34336, 0);
 			return null;
 		} else {
-			OpenGL.glBindProgramARB(i_1, 0);
-			return new Class133(class505_sub1_0, i_1, i_3);
+			OpenGL.glBindProgramARB(34336, 0);
+			return new Class133(class505_sub1_0, 34336, i_3);
 		}
 	}
 

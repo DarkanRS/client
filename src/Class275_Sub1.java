@@ -13,7 +13,7 @@ public class Class275_Sub1 extends Class275 {
 
 	}
 
-	public static void method12424(int i_0, int i_1) {
+	public static void method12424(int i_0) {
 		Class149.anInt1744 = i_0;
 		SoftCache softcache_2 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {

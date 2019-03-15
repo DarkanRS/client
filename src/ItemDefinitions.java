@@ -140,7 +140,7 @@ public class ItemDefinitions implements Definition {
 
 	public int bindTemplateId = -1;
 
-	public final MeshRasterizer method7084(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, PlayerAppearance playerappearance_4, Animation animation_5, int i_6, int i_7, int i_8, int i_9, byte b_10) {
+	public final MeshRasterizer method7084(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, PlayerAppearance playerappearance_4, Animation animation_5, int i_6, int i_7, int i_8, int i_9) {
 		int i_11;
 		if (this.stackIds != null && i_3 > 1) {
 			i_11 = -1;
@@ -150,7 +150,7 @@ public class ItemDefinitions implements Definition {
 				}
 			}
 			if (i_11 != -1) {
-				return this.loader.getItemDefinitions(i_11, 1094056584).method7084(graphicalrenderer_1, i_2, 1, playerappearance_4, animation_5, i_6, i_7, i_8, i_9, (byte) 0);
+				return this.loader.getItemDefinitions(i_11, 1094056584).method7084(graphicalrenderer_1, i_2, 1, playerappearance_4, animation_5, i_6, i_7, i_8, i_9);
 			}
 		}
 		i_11 = i_2;
@@ -182,12 +182,12 @@ public class ItemDefinitions implements Definition {
 			if (this.resizeX != 128) {
 				i_18 |= 0x4;
 			}
-			RSMesh rsmesh_14 = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId, 0);
+			RSMesh rsmesh_14 = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId);
 			if (rsmesh_14 == null) {
 				return null;
 			}
 			if (rsmesh_14.version < 13) {
-				rsmesh_14.upscale(2);
+				rsmesh_14.upscale();
 			}
 			meshrasterizer_17 = graphicalrenderer_1.createMeshRasterizer(rsmesh_14, i_18, this.loader.anInt5116, this.ambient + 64, this.contrast * 5 + 850);
 			if (this.resizeX != 128 || this.resizeY != 128 || this.resizeZ != 128) {
@@ -226,7 +226,7 @@ public class ItemDefinitions implements Definition {
 		if (animation_5 != null || i_9 != 0) {
 			meshrasterizer_17 = meshrasterizer_17.method11289((byte) 1, i_11, true);
 			if (animation_5 != null) {
-				animation_5.rasterize(meshrasterizer_17, 0, 16711935);
+				animation_5.rasterize(meshrasterizer_17, 0);
 			}
 			if (i_9 != 0) {
 				meshrasterizer_17.PA(i_6, i_7, i_8, i_9);
@@ -236,10 +236,10 @@ public class ItemDefinitions implements Definition {
 		return meshrasterizer_17;
 	}
 
-	void postDecode(int i_1) {
+	void postDecode() {
 	}
 
-	void decode(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void decode(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
@@ -249,7 +249,7 @@ public class ItemDefinitions implements Definition {
 		}
 	}
 
-	void generateBind(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
+	void generateBind(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2) {
 		this.value = 0;
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
@@ -297,7 +297,7 @@ public class ItemDefinitions implements Definition {
 		this.inventoryOptions[4] = Message.DISCARD_2.translate(this.loader.language, -2102685104);
 	}
 
-	void generateCert(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
+	void generateCert(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2) {
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
 		this.modelRotationX = itemdefinitions_1.modelRotationX;
@@ -489,7 +489,7 @@ public class ItemDefinitions implements Definition {
 		}
 	}
 
-	public ItemDefinitions method7090(int i_1, byte b_2) {
+	public ItemDefinitions method7090(int i_1) {
 		if (this.stackIds != null && i_1 > 1) {
 			int i_3 = -1;
 			for (int i_4 = 0; i_4 < 10; i_4++) {
@@ -505,12 +505,12 @@ public class ItemDefinitions implements Definition {
 	}
 
 	int[] getSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int renderAmounts, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short s_10) {
-		RSMesh inventoryMesh = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId, 0);
+		RSMesh inventoryMesh = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId);
 		if (inventoryMesh == null) {
 			return null;
 		} else {
 			if (inventoryMesh.version < 13) {
-				inventoryMesh.upscale(2);
+				inventoryMesh.upscale();
 			}
 			int i;
 			if (this.originalModelColors != null) {
@@ -602,19 +602,19 @@ public class ItemDefinitions implements Definition {
 					}
 				}
 				if (shadowColor != 0) {
-					this.addShadow(ints_21, shadowColor, (byte) -34);
+					this.addShadow(ints_21, shadowColor);
 				}
 				if (this.lendTemplateId != -1) {
 					sprite.method2752(0, 0);
 				} else if (this.bindTemplateId != -1) {
 					sprite.method2752(0, 0);
 				}
-				hardwareRenderer.createNativeSprite(ints_21, 0, 36, 36, 32, 1982525260).method2752(0, 0);
+				hardwareRenderer.createNativeSprite(ints_21, 36, 36, 32, 1982525260).method2752(0, 0);
 				if (this.certTemplateId != -1) {
 					sprite.method2752(0, 0);
 				}
 				if (renderAmounts == 1 || renderAmounts == 2 && (this.stackable == 1 || amount != 1) && amount != -1) {
-					fontRenderer.renderText(Class304.method5407(amount, this.loader.language, (byte) 47), 0, 9, -256, -16777215, -418109423);
+					fontRenderer.renderText(Class304.method5407(amount, this.loader.language), 0, 9, -256, -16777215);
 				}
 				ints_21 = hardwareRenderer.ab(0, 0, 36, 32);
 				for (int i_22 = 0; i_22 < ints_21.length; i_22++) {
@@ -629,7 +629,7 @@ public class ItemDefinitions implements Definition {
 		}
 	}
 
-	void addShadow(int[] ints_1, int i_2, byte b_3) {
+	void addShadow(int[] ints_1, int i_2) {
 		for (int i_4 = 31; i_4 > 0; --i_4) {
 			int i_5 = i_4 * 36;
 			for (int i_6 = 35; i_6 > 0; --i_6) {
@@ -706,22 +706,22 @@ public class ItemDefinitions implements Definition {
 		if (i_4 == -1) {
 			return null;
 		} else {
-			RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_4, 0);
+			RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_4);
 			if (rsmesh_7 == null) {
 				return null;
 			} else {
 				if (rsmesh_7.version < 13) {
-					rsmesh_7.upscale(2);
+					rsmesh_7.upscale();
 				}
 				if (i_5 != -1) {
-					RSMesh rsmesh_8 = RSMesh.decodeMesh(this.loader.meshIndex, i_5, 0);
+					RSMesh rsmesh_8 = RSMesh.decodeMesh(this.loader.meshIndex, i_5);
 					if (rsmesh_8.version < 13) {
-						rsmesh_8.upscale(2);
+						rsmesh_8.upscale();
 					}
 					if (i_6 != -1) {
-						RSMesh rsmesh_9 = RSMesh.decodeMesh(this.loader.meshIndex, i_6, 0);
+						RSMesh rsmesh_9 = RSMesh.decodeMesh(this.loader.meshIndex, i_6);
 						if (rsmesh_9.version < 13) {
-							rsmesh_9.upscale(2);
+							rsmesh_9.upscale();
 						}
 						RSMesh[] arr_10 = new RSMesh[] { rsmesh_7, rsmesh_8, rsmesh_9 };
 						rsmesh_7 = new RSMesh(arr_10, 3);
@@ -763,7 +763,7 @@ public class ItemDefinitions implements Definition {
 		}
 	}
 
-	public final boolean headMeshesReady(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+	public final boolean headMeshesReady(boolean bool_1, MeshModifier meshmodifier_2) {
 		int i_4;
 		int i_5;
 		if (bool_1) {
@@ -836,7 +836,7 @@ public class ItemDefinitions implements Definition {
 		return ints_3;
 	}
 
-	public final RSMesh getHeadMesh(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+	public final RSMesh getHeadMesh(boolean bool_1, MeshModifier meshmodifier_2) {
 		int i_4;
 		int i_5;
 		if (bool_1) {
@@ -857,14 +857,14 @@ public class ItemDefinitions implements Definition {
 		if (i_4 == -1) {
 			return null;
 		} else {
-			RSMesh rsmesh_6 = RSMesh.decodeMesh(this.loader.meshIndex, i_4, 0);
+			RSMesh rsmesh_6 = RSMesh.decodeMesh(this.loader.meshIndex, i_4);
 			if (rsmesh_6.version < 13) {
-				rsmesh_6.upscale(2);
+				rsmesh_6.upscale();
 			}
 			if (i_5 != -1) {
-				RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_5, 0);
+				RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_5);
 				if (rsmesh_7.version < 13) {
-					rsmesh_7.upscale(2);
+					rsmesh_7.upscale();
 				}
 				RSMesh[] arr_8 = new RSMesh[] { rsmesh_6, rsmesh_7 };
 				rsmesh_6 = new RSMesh(arr_8, 2);
@@ -895,7 +895,7 @@ public class ItemDefinitions implements Definition {
 		}
 	}
 
-	void generateLend(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
+	void generateLend(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2) {
 		this.value = 0;
 		this.modelId = itemdefinitions_1.modelId;
 		this.modelZoom = itemdefinitions_1.modelZoom;
@@ -942,12 +942,12 @@ public class ItemDefinitions implements Definition {
 		this.inventoryOptions[4] = Message.DISCARD.translate(this.loader.language, -898798531);
 	}
 
-	static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, byte b_9) {
+	static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		int i_10 = animable_1.method15899(-525246876);
 		if (i_10 != -1) {
 			NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get((long) i_10);
 			if (nativesprite_11 == null) {
-				Class91[] arr_12 = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_10, 0);
+				Class91[] arr_12 = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_10);
 				if (arr_12 == null) {
 					return;
 				}
@@ -955,16 +955,16 @@ public class ItemDefinitions implements Definition {
 				client.aClass229_7204.put(nativesprite_11, (long) i_10);
 			}
 			Vector3 vector3_16 = animable_0.method11166().aClass385_3595;
-			Class210.method3612(animable_0.plane, (int) vector3_16.x, (int) vector3_16.z, animable_0.getSize(828768449) * 256, 0, false, (byte) 2);
+			Class210.method3612(animable_0.plane, (int) vector3_16.x, (int) vector3_16.z, animable_0.getSize() * 256, 0, false, (byte) 2);
 			int i_13 = (int) ((float) i_3 + client.aFloatArray7292[0] - 18.0F);
 			int i_14 = (int) ((float) i_4 + client.aFloatArray7292[1] - 16.0F - 54.0F);
 			i_13 += i_2 / 4 * 18;
 			i_14 += i_2 % 4 * 18;
 			nativesprite_11.method2752(i_13, i_14);
 			if (animable_1 == animable_0) {
-				Renderers.SOFTWARE_RENDERER.method8562(i_13 - 1, i_14 - 1, 18, 18, -256, (byte) 4);
+				Renderers.SOFTWARE_RENDERER.method8562(i_13 - 1, i_14 - 1, 18, 18, -256);
 			}
-			Class275_Sub2 class275_sub2_15 = Class3.method286(2086923872);
+			Class275_Sub2 class275_sub2_15 = Class3.method286();
 			class275_sub2_15.aClass521_Sub1_Sub1_Sub2_7739 = animable_1;
 			class275_sub2_15.anInt7742 = i_13;
 			class275_sub2_15.anInt7743 = i_14;
@@ -974,8 +974,8 @@ public class ItemDefinitions implements Definition {
 		}
 	}
 
-	public static void method7141(int i_0, byte b_1) {
-		Class329.method5906(i_0, -464275916);
+	public static void method7141(byte b_1) {
+		Class329.method5906(100);
 	}
 
 	static final void method7142(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

@@ -37,7 +37,7 @@ public class Class96_Sub11 extends Class96 {
 		this.anInt9304 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class86.aClass77Array818[this.anInt9299].method1363(0, 556897359);
 		Class86.aClass77Array818[this.anInt9300].method1363(1, -1985151600);
 		client.anInt7277 = 0;

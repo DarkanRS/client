@@ -32,7 +32,7 @@ public class Class293 {
 		this.aByte3507 = (byte) i_1;
 	}
 
-	public static int method5206(int i_0) {
+	public static int method5206() {
 		return Class235.anInt2906;
 	}
 }

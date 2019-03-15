@@ -68,7 +68,7 @@ public class Class160_Sub2 extends NativeSprite {
 
 	Class160_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int[] ints_4, int i_5, int i_6) {
 		this.aClass505_Sub1_9032 = class505_sub1_1;
-		this.aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_2, i_3, false, ints_4, i_6, i_5);
+		this.aClass137_Sub1_Sub1_9033 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_2, i_3, ints_4, i_6, i_5);
 	}
 
 	public void method2743(int i_1, int i_2, int i_3, int i_4) {
@@ -87,7 +87,7 @@ public class Class160_Sub2 extends NativeSprite {
 					ints_7[i_8] |= ~0xffffff;
 				}
 
-				this.method14414(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+				this.method14414(i_1, i_2, i_3, i_4, ints_7, i_3);
 			}
 		} else {
 			this.aClass137_Sub1_Sub1_9033.method14439(i_1, i_2, i_3, i_4, i_5, i_6);
@@ -127,7 +127,7 @@ public class Class160_Sub2 extends NativeSprite {
 					ints_7[i_8] |= ~0xffffff;
 				}
 
-				this.method14414(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+				this.method14414(i_1, i_2, i_3, i_4, ints_7, i_3);
 			}
 		} else {
 			this.aClass137_Sub1_Sub1_9033.method14439(i_1, i_2, i_3, i_4, i_5, i_6);
@@ -135,15 +135,15 @@ public class Class160_Sub2 extends NativeSprite {
 
 	}
 
-	public void method2751(int i_1, int i_2, int i_3) {
+	public void method2751() {
 		OpenGL.glPixelTransferf(3348, 0.5F);
 		OpenGL.glPixelTransferf(3349, 0.499F);
 		OpenGL.glPixelTransferf(3352, 0.5F);
 		OpenGL.glPixelTransferf(3353, 0.499F);
 		OpenGL.glPixelTransferf(3354, 0.5F);
 		OpenGL.glPixelTransferf(3355, 0.499F);
-		this.aClass137_Sub1_Sub1_9029 = Class137_Sub1_Sub1.method15538(this.aClass505_Sub1_9032, i_1, i_2, this.aClass137_Sub1_Sub1_9033.anInt10136, this.aClass137_Sub1_Sub1_9033.anInt10133);
-		this.anInt9031 = i_3;
+		this.aClass137_Sub1_Sub1_9029 = Class137_Sub1_Sub1.method15538(this.aClass505_Sub1_9032, 0, 0, this.aClass137_Sub1_Sub1_9033.anInt10136, this.aClass137_Sub1_Sub1_9033.anInt10133);
+		this.anInt9031 = 3;
 		OpenGL.glPixelTransferf(3348, 1.0F);
 		OpenGL.glPixelTransferf(3349, 0.0F);
 		OpenGL.glPixelTransferf(3352, 1.0F);
@@ -152,8 +152,8 @@ public class Class160_Sub2 extends NativeSprite {
 		OpenGL.glPixelTransferf(3355, 0.0F);
 	}
 
-	void method14414(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6, int i_7) {
-		this.aClass137_Sub1_Sub1_9033.method14452(i_1, i_2, i_3, i_4, ints_5, i_6, i_7, true);
+	void method14414(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_7) {
+		this.aClass137_Sub1_Sub1_9033.method14452(i_1, i_2, i_3, i_4, ints_5, 0, i_7);
 	}
 
 	public void method2772(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
@@ -259,7 +259,7 @@ public class Class160_Sub2 extends NativeSprite {
 		this.aClass505_Sub1_9032.method13654((Class137) null);
 		this.aClass505_Sub1_9032.method13717(8448, 8448);
 		this.aClass505_Sub1_9032.method13595(1, 34168, 768);
-		this.aClass505_Sub1_9032.method13616(0, 5890, 770);
+		this.aClass505_Sub1_9032.method13616(0, 5890);
 		this.aClass505_Sub1_9032.method13610(0);
 		this.aClass505_Sub1_9032.method13595(1, 34168, 768);
 	}
@@ -349,8 +349,8 @@ public class Class160_Sub2 extends NativeSprite {
 		this.aClass505_Sub1_9032.method13610(0);
 	}
 
-	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-		this.aClass137_Sub1_Sub1_9033.method2351((i_8 & 0x1) != 0);
+	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+		this.aClass137_Sub1_Sub1_9033.method2351((1 & 0x1) != 0);
 		this.aClass505_Sub1_9032.method13637();
 		this.aClass505_Sub1_9032.method13624(i_7);
 		OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
@@ -428,7 +428,7 @@ public class Class160_Sub2 extends NativeSprite {
 
 	}
 
-	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9, int i_10) {
+	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9) {
 		float f_11;
 		float f_12;
 		if (this.aBool9028) {
@@ -456,7 +456,7 @@ public class Class160_Sub2 extends NativeSprite {
 
 		f_11 = f_5 + (f_3 - f_1);
 		f_12 = f_4 + (f_6 - f_2);
-		this.aClass137_Sub1_Sub1_9033.method2351((i_10 & 0x1) != 0);
+		this.aClass137_Sub1_Sub1_9033.method2351((1 & 0x1) != 0);
 		this.aClass505_Sub1_9032.method13637();
 		this.aClass505_Sub1_9032.method13654(this.aClass137_Sub1_Sub1_9033);
 		this.aClass505_Sub1_9032.method13624(i_9);
@@ -589,7 +589,7 @@ public class Class160_Sub2 extends NativeSprite {
 					ints_7[i_8] |= ~0xffffff;
 				}
 
-				this.method14414(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+				this.method14414(i_1, i_2, i_3, i_4, ints_7, i_3);
 			}
 		} else {
 			this.aClass137_Sub1_Sub1_9033.method14439(i_1, i_2, i_3, i_4, i_5, i_6);
@@ -678,7 +678,7 @@ public class Class160_Sub2 extends NativeSprite {
 	}
 
 	public Interface9 method2801() {
-		return this.aClass137_Sub1_Sub1_9033.method14441(0);
+		return this.aClass137_Sub1_Sub1_9033.method14441();
 	}
 
 	public void method2784(int i_1, int i_2, Class455 class455_3, int i_4, int i_5) {
@@ -1020,7 +1020,7 @@ public class Class160_Sub2 extends NativeSprite {
 	}
 
 	public Interface9 method2808() {
-		return this.aClass137_Sub1_Sub1_9033.method14441(0);
+		return this.aClass137_Sub1_Sub1_9033.method14441();
 	}
 
 	public void method2777(int[] ints_1) {
@@ -1293,7 +1293,7 @@ public class Class160_Sub2 extends NativeSprite {
 					ints_7[i_8] |= ~0xffffff;
 				}
 
-				this.method14414(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+				this.method14414(i_1, i_2, i_3, i_4, ints_7, i_3);
 			}
 		} else {
 			this.aClass137_Sub1_Sub1_9033.method14439(i_1, i_2, i_3, i_4, i_5, i_6);
@@ -1369,7 +1369,7 @@ public class Class160_Sub2 extends NativeSprite {
 		this.aClass505_Sub1_9032.method13654(this.aClass137_Sub1_Sub1_9033);
 		this.aClass505_Sub1_9032.method13717(this.aClass505_Sub1_9032.method13613(i_1), 7681);
 		this.aClass505_Sub1_9032.method13595(1, 34167, 768);
-		this.aClass505_Sub1_9032.method13616(0, 34168, 770);
+		this.aClass505_Sub1_9032.method13616(0, 34168);
 		this.aClass505_Sub1_9032.method13610(0);
 		this.aClass505_Sub1_9032.method13654(this.aClass137_Sub1_Sub1_9029);
 		this.aClass505_Sub1_9032.method13717(34479, 7681);

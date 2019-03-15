@@ -52,14 +52,14 @@ public final class Index {
 
 	synchronized void requestArchive(int i_1) {
 		if (this.aBool3685) {
-			this.archives[i_1] = this.aClass327_3690.method5804(i_1, 1942118537);
+			this.archives[i_1] = this.aClass327_3690.method5804(i_1);
 		} else {
-			this.archives[i_1] = JS5Manager.method5493(this.aClass327_3690.method5804(i_1, 1942118537), false, (byte) 47);
+			this.archives[i_1] = JS5Manager.method5493(this.aClass327_3690.method5804(i_1), (byte) 47);
 		}
 	}
 
-	void method5606(int i_1, int i_2) {
-		this.aClass327_3690.method5805(i_1, 1941193995);
+	void method5606(int i_1) {
+		this.aClass327_3690.method5805(i_1);
 	}
 
 	public byte[] getFile(int i_1, int i_2) {
@@ -105,7 +105,7 @@ public final class Index {
 	}
 
 	synchronized int method5613(int i_1, byte b_2) {
-		return !this.archiveExists(i_1) ? 0 : (this.archives[i_1] != null ? 100 : this.aClass327_3690.method5806(i_1, (byte) 49));
+		return !this.archiveExists(i_1) ? 0 : (this.archives[i_1] != null ? 100 : this.aClass327_3690.method5806(i_1));
 	}
 
 	public synchronized int getCompletion() {
@@ -169,7 +169,7 @@ public final class Index {
 		}
 	}
 
-	public int method5623(int i_1, byte b_2) {
+	public int method5623(int i_1) {
 		if (!this.referenceTableLoaded()) {
 			return -1;
 		} else {
@@ -182,7 +182,7 @@ public final class Index {
 		return !this.archiveExists(i_1) ? 0 : this.referenceTable.fileCounts[i_1];
 	}
 
-	public boolean method5625(String string_1, String string_2, byte b_3) {
+	public boolean method5625(String string_1, String string_2) {
 		if (!this.referenceTableLoaded()) {
 			return false;
 		} else {
@@ -198,7 +198,7 @@ public final class Index {
 		}
 	}
 
-	public synchronized byte[] method5626(String string_1, String string_2, byte b_3) {
+	public synchronized byte[] method5626(String string_1, String string_2) {
 		if (!this.referenceTableLoaded()) {
 			return null;
 		} else {
@@ -230,12 +230,12 @@ public final class Index {
 		}
 	}
 
-	public boolean method5628(String string_1, int i_2) {
+	public boolean method5628(String string_1) {
 		int i_3 = this.getArchiveId("");
 		return i_3 != -1 ? this.method5627("", string_1, (byte) -29) : this.method5627(string_1, "", (byte) 31);
 	}
 
-	public boolean method5629(String string_1, int i_2) {
+	public boolean method5629(String string_1) {
 		if (!this.referenceTableLoaded()) {
 			return false;
 		} else {
@@ -249,7 +249,7 @@ public final class Index {
 		if (this.referenceTableLoaded()) {
 			string_1 = string_1.toLowerCase();
 			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, 320473901), -2076023188);
-			this.method5606(i_3, 831904871);
+			this.method5606(i_3);
 		}
 	}
 
@@ -305,11 +305,11 @@ public final class Index {
 			} else {
 				byte[] bytes_22;
 				if (ints_3 == null || ints_3[0] == 0 && ints_3[1] == 0 && ints_3[2] == 0 && ints_3[3] == 0) {
-					bytes_22 = Class346.method6154(this.archives[i_1], false, (byte) 1);
+					bytes_22 = Class346.method6154(this.archives[i_1], false);
 				} else {
-					bytes_22 = Class346.method6154(this.archives[i_1], true, (byte) 1);
+					bytes_22 = Class346.method6154(this.archives[i_1], true);
 					RsByteBuffer rsbytebuffer_23 = new RsByteBuffer(bytes_22);
-					rsbytebuffer_23.method13249(ints_3, 5, rsbytebuffer_23.buffer.length, -429400691);
+					rsbytebuffer_23.method13249(ints_3, rsbytebuffer_23.buffer.length);
 				}
 				byte[] bytes_27 = Class282_Sub17_Sub6.method15438(bytes_22, (byte) 43);
 				if (this.aBool3685) {
@@ -362,7 +362,7 @@ public final class Index {
 								i_18 = ints_6[i_17];
 							}
 							if (this.anInt3683 == 0) {
-								arr_7[i_18] = JS5Manager.method5493(bytes_24[i_17], false, (byte) 5);
+								arr_7[i_18] = JS5Manager.method5493(bytes_24[i_17], (byte) 5);
 							} else {
 								arr_7[i_18] = bytes_24[i_17];
 							}
@@ -424,7 +424,7 @@ public final class Index {
 						i_11 = ints_6[0];
 					}
 					if (this.anInt3683 == 0) {
-						arr_7[i_11] = JS5Manager.method5493(bytes_27, false, (byte) 109);
+						arr_7[i_11] = JS5Manager.method5493(bytes_27, (byte) 109);
 					} else {
 						arr_7[i_11] = bytes_27;
 					}
@@ -453,7 +453,7 @@ public final class Index {
 				throw new RuntimeException("");
 			} else {
 				if (this.archiveFiles[i_1][i_2] != null) {
-					bytes_4 = Class346.method6154(this.archiveFiles[i_1][i_2], false, (byte) 1);
+					bytes_4 = Class346.method6154(this.archiveFiles[i_1][i_2], false);
 					if (bytes_4 == null) {
 						throw new RuntimeException("");
 					}
@@ -508,7 +508,7 @@ public final class Index {
 		}
 	}
 
-	public void method5676(boolean bool_1, boolean bool_2, byte b_3) {
+	public void method5676(boolean bool_1) {
 		if (this.referenceTableLoaded()) {
 			if (bool_1) {
 				this.referenceTable.nameHashes = null;
@@ -532,10 +532,10 @@ public final class Index {
 		}
 	}
 
-	public static int method5693(CharSequence charsequence_0, int i_1, int i_2, byte[] bytes_3, int i_4, int i_5) {
-		int i_6 = i_2 - i_1;
+	public static int method5693(CharSequence charsequence_0, int i_2, byte[] bytes_3, int i_4) {
+		int i_6 = i_2 - 0;
 		for (int i_7 = 0; i_7 < i_6; i_7++) {
-			char var_8 = charsequence_0.charAt(i_7 + i_1);
+			char var_8 = charsequence_0.charAt(i_7 + 0);
 			if (var_8 > 0 && var_8 < 128 || var_8 >= 160 && var_8 <= 255) {
 				bytes_3[i_7 + i_4] = (byte) var_8;
 			} else if (var_8 == 8364) {

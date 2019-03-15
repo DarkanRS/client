@@ -9,7 +9,7 @@ public class StructIndexLoader {
 		return i_1 < 0 ? new Class282_Sub50_Sub4() : this.aClass282_Sub50_Sub4Array5012[i_1];
 	}
 
-	public StructIndexLoader(Game game_1, Language xlanguage_2, Index index_3, boolean bool_4) {
+	public StructIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5014 = index_3;
 		this.anInt5013 = this.aClass317_5014.filesCount(SharedConfigsType.aClass120_1473.id);
 		this.aClass282_Sub50_Sub4Array5012 = new Class282_Sub50_Sub4[this.anInt5013];
@@ -23,7 +23,7 @@ public class StructIndexLoader {
 
 			Class282_Sub50_Sub4 class282_sub50_sub4_9 = new Class282_Sub50_Sub4();
 			if (bytes_6 != null) {
-				class282_sub50_sub4_9.method14748(new RsByteBuffer(bytes_6), (byte) 1);
+				class282_sub50_sub4_9.method14748(new RsByteBuffer(bytes_6));
 			}
 
 			this.aClass282_Sub50_Sub4Array5012[i_5] = class282_sub50_sub4_9;
@@ -50,7 +50,7 @@ public class StructIndexLoader {
 				i_9 = client.aClass118_7247.anInt1449;
 			}
 
-			GroundDecoration.method16094(arr_1, i_2, b_3, b_4, i_5, i_6, i_7, i_8, i_9, true, (byte) 6);
+			GroundDecoration.method16094(arr_1, i_2, b_3, b_4, i_5, i_6, i_7, i_8, i_9, true);
 			Class328.aClass118Array3772 = null;
 		}
 

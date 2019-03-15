@@ -42,11 +42,11 @@ public class Class361 {
 		return Class441.method7375(Class282_Sub44.anApplet8065, this.method6253((byte) -103), arr_1, -864782771);
 	}
 
-	public Object method6255(short s_1) throws Throwable {
+	public Object method6255() throws Throwable {
 		return Class441.method7377(Class282_Sub44.anApplet8065, this.method6253((byte) -29), 2107704152);
 	}
 
-	public void method6256(Object[] arr_1, int i_2) {
+	public void method6256(Object[] arr_1) {
 		try {
 			this.method6254(arr_1, (byte) 14);
 		} catch (Throwable throwable_4) {
@@ -56,7 +56,7 @@ public class Class361 {
 
 	public void method6257(int i_1) {
 		try {
-			this.method6255((short) 7681);
+			this.method6255();
 		} catch (Throwable throwable_3) {
 			;
 		}
@@ -66,7 +66,7 @@ public class Class361 {
 		this.anInt4184 = i_1;
 	}
 
-	static void method6269(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1) {
+	static void method6269(Class282_Sub50_Sub7 class282_sub50_sub7_0) {
 		if (class282_sub50_sub7_0 != null) {
 			Class20.aClass482_171.append(class282_sub50_sub7_0, 1886689844);
 			++Class20.anInt169;
@@ -92,14 +92,14 @@ public class Class361 {
 				class282_sub50_sub15_3 = new Class282_Sub50_Sub15(class282_sub50_sub7_0.aString9588);
 				++Class20.anInt170;
 			}
-			if (class282_sub50_sub15_3.method15245(class282_sub50_sub7_0, -792005966)) {
+			if (class282_sub50_sub15_3.method15245(class282_sub50_sub7_0)) {
 				Class13.method503(class282_sub50_sub15_3, 1768390484);
 			}
 		}
 	}
 
 	static void method6270(byte b_0) {
-		if (QuickChatDynamicValue.method4180(client.gameState, (byte) -11)) {
+		if (QuickChatDynamicValue.method4180(client.gameState)) {
 			if (client.aClass184_7218.getConnection() == null) {
 				Class365.setGameState(14);
 			} else {
@@ -125,10 +125,10 @@ public class Class361 {
 			bytes_3 = bytes_0;
 		}
 		Whirlpool whirlpool_6 = new Whirlpool();
-		whirlpool_6.method7406(1953997400);
+		whirlpool_6.method7406();
 		whirlpool_6.method7407(bytes_3, (long) (i_2 * 8));
 		byte[] bytes_5 = new byte[64];
-		whirlpool_6.method7408(bytes_5, 0, -979792487);
+		whirlpool_6.method7408(bytes_5);
 		return bytes_5;
 	}
 

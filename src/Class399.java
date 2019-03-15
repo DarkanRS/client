@@ -10,7 +10,7 @@ public class Class399 {
 		this.anInt4816 = i_3;
 	}
 
-	static int decodeSkip(RsBitsBuffer rsbitsbuffer_0, int i_1) {
+	static int decodeSkip(RsBitsBuffer rsbitsbuffer_0) {
 		int i_2 = rsbitsbuffer_0.readBits(2, (byte) 28);
 		int i_3;
 		if (i_2 == 0) {

@@ -58,6 +58,6 @@ public class Class11 {
 	}
 
 	public static void method13400(Index index_0, int i_1, int i_2, int i_3, boolean bool_4, byte b_5) {
-		Class271.method4827(index_0, i_1, i_2, i_3, bool_4, 0L);
+		Class271.method4827(index_0, i_1, i_2, i_3, bool_4);
 	}
 }

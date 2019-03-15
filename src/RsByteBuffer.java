@@ -46,9 +46,9 @@ public class RsByteBuffer extends Node {
 		this.index = 0;
 	}
 
-	public void method13059(int i_1) {
+	public void method13059() {
 		if (this.buffer != null) {
-			Class351.method6197(this.buffer, -1154101175);
+			Class351.method6197(this.buffer);
 		}
 
 		this.buffer = null;
@@ -90,7 +90,7 @@ public class RsByteBuffer extends Node {
 		this.buffer[++this.index - 1] = (byte) ((int) long_1);
 	}
 
-	public void method13068(long long_1, int i_3, int i_4) {
+	public void method13068(long long_1, int i_3) {
 		--i_3;
 		if (i_3 >= 0 && i_3 <= 7) {
 			for (int i_5 = i_3 * 8; i_5 >= 0; i_5 -= 8) {
@@ -108,7 +108,7 @@ public class RsByteBuffer extends Node {
 			throw new IllegalArgumentException("");
 		} else {
 			this.buffer[++this.index - 1] = 0;
-			this.index += Index.method5693(string_1, 0, string_1.length(), this.buffer, this.index, -74015201);
+			this.index += Index.method5693(string_1, string_1.length(), this.buffer, this.index);
 			this.buffer[++this.index - 1] = 0;
 		}
 	}
@@ -130,7 +130,7 @@ public class RsByteBuffer extends Node {
 
 		this.buffer[++this.index - 1] = 0;
 		this.method13077(i_4, 1646116683);
-		this.index += GrandExchangeSlot.method5914(this.buffer, this.index, charsequence_1, -1772783727);
+		this.index += GrandExchangeSlot.method5914(this.buffer, this.index, charsequence_1);
 	}
 
 	public void writeBytes(byte[] bytes_1, int i_2, int i_3) {
@@ -140,7 +140,7 @@ public class RsByteBuffer extends Node {
 
 	}
 
-	public void method13073(int i_1, int i_2) {
+	public void method13073(int i_1) {
 		this.buffer[this.index - i_1 - 4] = (byte) (i_1 >> 24);
 		this.buffer[this.index - i_1 - 3] = (byte) (i_1 >> 16);
 		this.buffer[this.index - i_1 - 2] = (byte) (i_1 >> 8);
@@ -156,7 +156,7 @@ public class RsByteBuffer extends Node {
 		this.buffer[++this.index - 1] = (byte) (i_1 + 128);
 	}
 
-	public void method13076(int i_1, int i_2) {
+	public void method13076(int i_1) {
 		if (i_1 >= 0 && i_1 < 128) {
 			this.writeByte(i_1);
 		} else {
@@ -164,7 +164,7 @@ public class RsByteBuffer extends Node {
 				throw new IllegalArgumentException();
 			}
 
-			this.writeShort(i_1 + 32768, 1417031095);
+			this.writeShort(i_1 + 32768);
 		}
 
 	}
@@ -234,12 +234,12 @@ public class RsByteBuffer extends Node {
 		return long_4 + (long_2 << 32);
 	}
 
-	public void writeShort(int i_1, int i_2) {
+	public void writeShort(int i_1) {
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
 		this.buffer[++this.index - 1] = (byte) i_1;
 	}
 
-	public long method13089(int i_1, int i_2) {
+	public long method13089(int i_1) {
 		--i_1;
 		if (i_1 >= 0 && i_1 <= 7) {
 			int i_3 = i_1 * 8;
@@ -265,7 +265,7 @@ public class RsByteBuffer extends Node {
 	}
 
 	public RsByteBuffer(int i_1) {
-		this.buffer = CircularBuffer.createBuffer(i_1, 1959390720);
+		this.buffer = CircularBuffer.createBuffer(i_1);
 		this.index = 0;
 	}
 
@@ -363,33 +363,33 @@ public class RsByteBuffer extends Node {
 		this.index = i_5;
 	}
 
-	public void applyRSA(BigInteger biginteger_1, BigInteger biginteger_2) {
+	public void applyRSA() {
 		int i_3 = this.index;
 		this.index = 0;
 		byte[] bytes_4 = new byte[i_3];
 		this.readBytes(bytes_4, 0, i_3);
 		BigInteger biginteger_5 = new BigInteger(bytes_4);
-		BigInteger biginteger_6 = biginteger_5.modPow(biginteger_1, biginteger_2);
+		BigInteger biginteger_6 = biginteger_5.modPow(Loader.RSA_PUBLIC_EXPONENT, Loader.RSA_PUBLIC_MODULUS);
 		byte[] bytes_7 = biginteger_6.toByteArray();
 		this.index = 0;
-		this.writeShort(bytes_7.length, 1417031095);
+		this.writeShort(bytes_7.length);
 		this.writeBytes(bytes_7, 0, bytes_7.length);
 	}
 
-	public int method13104(int i_1, int i_2) {
+	public int method13104(int i_1) {
 		int i_3 = Class455.getCRC(this.buffer, i_1, this.index);
 		this.writeInt(i_3);
 		return i_3;
 	}
 
-	public boolean method13105(byte b_1) {
+	public boolean method13105() {
 		this.index -= 4;
 		int i_2 = Class455.getCRC(this.buffer, 0, this.index);
 		int i_3 = this.readInt();
 		return i_2 == i_3;
 	}
 
-	public void writeByteC(int i_1, int i_2) {
+	public void writeByteC(int i_1) {
 		this.buffer[++this.index - 1] = (byte) (0 - i_1);
 	}
 
@@ -409,12 +409,12 @@ public class RsByteBuffer extends Node {
 		return (byte) (128 - this.buffer[++this.index - 1]);
 	}
 
-	public void writeShort128(int i_1, int i_2) {
+	public void writeShort128(int i_1) {
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
 		this.buffer[++this.index - 1] = (byte) (i_1 + 128);
 	}
 
-	public void writeShortLE128(int i_1, int i_2) {
+	public void writeShortLE128(int i_1) {
 		this.buffer[++this.index - 1] = (byte) (i_1 + 128);
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
 	}
@@ -429,7 +429,7 @@ public class RsByteBuffer extends Node {
 		return ((this.buffer[this.index - 1] & 0xff) << 8) + (this.buffer[this.index - 2] - 128 & 0xff);
 	}
 
-	public int method13121(int i_1) {
+	public int method13121() {
 		this.index += 2;
 		int i_2 = ((this.buffer[this.index - 1] & 0xff) << 8) + (this.buffer[this.index - 2] & 0xff);
 		if (i_2 > 32767) {
@@ -466,7 +466,7 @@ public class RsByteBuffer extends Node {
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 24);
 	}
 
-	public void writeIntV2(int i_1, byte b_2) {
+	public void writeIntV2(int i_1) {
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 16);
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 24);
 		this.buffer[++this.index - 1] = (byte) i_1;
@@ -488,7 +488,7 @@ public class RsByteBuffer extends Node {
 		return ((this.buffer[this.index - 1] & 0xff) << 8) + ((this.buffer[this.index - 4] & 0xff) << 16) + (this.buffer[this.index - 2] & 0xff) + ((this.buffer[this.index - 3] & 0xff) << 24);
 	}
 
-	public int method13132(int i_1) {
+	public int method13132() {
 		this.index += 3;
 		return ((this.buffer[this.index - 1] & 0xff) << 8) + ((this.buffer[this.index - 3] & 0xff) << 16) + (this.buffer[this.index - 2] & 0xff);
 	}
@@ -510,7 +510,7 @@ public class RsByteBuffer extends Node {
 		if (i_2 >= 0) {
 			throw new IllegalArgumentException("");
 		} else {
-			this.index += Index.method5693(string_1, 0, string_1.length(), this.buffer, this.index, -74015201);
+			this.index += Index.method5693(string_1, string_1.length(), this.buffer, this.index);
 			this.buffer[++this.index - 1] = 0;
 		}
 	}
@@ -536,13 +536,13 @@ public class RsByteBuffer extends Node {
 		return i_2 < 128 ? this.readUnsignedByte() : this.readUnsignedShort() - 32768;
 	}
 
-	public long read5ByteInteger(int i_1) {
+	public long read5ByteInteger() {
 		long long_2 = (long) this.readUnsignedByte() & 0xffffffffL;
 		long long_4 = (long) this.readInt() & 0xffffffffL;
 		return (long_2 << 32) + long_4;
 	}
 
-	public void write24BitInt(int i_1, byte b_2) {
+	public void write24BitInt(int i_1) {
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 16);
 		this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
 		this.buffer[++this.index - 1] = (byte) i_1;
@@ -591,17 +591,17 @@ public class RsByteBuffer extends Node {
 			if (i_3 + this.index > this.buffer.length) {
 				throw new IllegalStateException("");
 			} else {
-				String string_4 = Class271.method4824(this.buffer, this.index, i_3, 336004634);
+				String string_4 = Class271.method4824(this.buffer, this.index, i_3);
 				this.index += i_3;
 				return string_4;
 			}
 		}
 	}
 
-	public void method13249(int[] ints_1, int i_2, int i_3, int i_4) {
+	public void method13249(int[] ints_1, int i_3) {
 		int i_5 = this.index;
-		this.index = i_2;
-		int i_6 = (i_3 - i_2) / 8;
+		this.index = 5;
+		int i_6 = (i_3 - 5) / 8;
 
 		for (int i_7 = 0; i_7 < i_6; i_7++) {
 			int i_8 = this.readInt();
@@ -636,12 +636,12 @@ public class RsByteBuffer extends Node {
 		return long_2 + (long_4 << 32);
 	}
 
-	public void method13281(int i_1, int i_2) {
+	public void method13281(int i_1) {
 		this.buffer[this.index - i_1 - 2] = (byte) (i_1 >> 8);
 		this.buffer[this.index - i_1 - 1] = (byte) i_1;
 	}
 
-	static final void method13292(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+	static final void method13292(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 2;
 		icomponentdefinitions_0.anInt1441 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1263 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];

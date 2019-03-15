@@ -89,10 +89,10 @@ public class HardwareGround extends Ground {
 				float f_23 = (float) this.aClass505_Sub2_8528.method8523((byte) 127).method2716();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
-				matrix44var_24.method5214(1.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F);
+				matrix44var_24.method5214();
 				matrix44var_18.method5259((float) i_3 / (256.0F * (float) (this.tileUnits)), (float) (-i_3) / (256.0F * (float) (this.tileUnits)), 1.0F / (this.aFloat8544 - this.aFloat8535));
 				matrix44var_18.method5219((float) i_1 - (float) (i_4 * i_3) / 256.0F, (float) i_2 + (float) (i_7 * i_3) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
-				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23, 1.0F);
+				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23);
 				matrix44var_18.method5219(-1.0F, -1.0F, 0.0F);
 				this.aClass505_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
 				this.aClass505_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aClass505_Sub2_8528.aClass294_8713);
@@ -191,7 +191,7 @@ public class HardwareGround extends Ground {
 
 	}
 
-	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
 			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
 			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
@@ -211,7 +211,7 @@ public class HardwareGround extends Ground {
 		}
 	}
 
-	public void method6715(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
+	public void method6715(int i_1, int i_2, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
 		if (this.anInt8542 > 0) {
 			Interface32 interface32_9 = this.aClass505_Sub2_8528.method13911(this.anInt8527);
 			int i_10 = 0;
@@ -260,10 +260,10 @@ public class HardwareGround extends Ground {
 				float f_23 = (float) this.aClass505_Sub2_8528.method8523((byte) 122).method2716();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
-				matrix44var_24.method5214(1.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F);
-				matrix44var_18.method5259((float) i_3 / (256.0F * (float) this.tileUnits), (float) (-i_3) / (256.0F * (float) this.tileUnits), 1.0F / (this.aFloat8544 - this.aFloat8535));
-				matrix44var_18.method5219((float) i_1 - (float) (i_3 * i_4) / 256.0F, (float) i_2 + (float) (i_3 * i_7) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
-				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23, 1.0F);
+				matrix44var_24.method5214();
+				matrix44var_18.method5259((float) 1024 / (256.0F * (float) this.tileUnits), (float) (-1024) / (256.0F * (float) this.tileUnits), 1.0F / (this.aFloat8544 - this.aFloat8535));
+				matrix44var_18.method5219((float) i_1 - (float) (1024 * i_4) / 256.0F, (float) i_2 + (float) (1024 * i_7) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
+				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23);
 				matrix44var_18.method5219(-1.0F, -1.0F, 0.0F);
 				this.aClass505_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
 				this.aClass505_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aClass505_Sub2_8528.aClass294_8713);
@@ -573,7 +573,7 @@ public class HardwareGround extends Ground {
 
 	}
 
-	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
 			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
 			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
@@ -740,7 +740,7 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			Node[] arr_67 = new Node[this.aClass453_8537.method7540(-975751825)];
+			Node[] arr_67 = new Node[this.aClass453_8537.method7540()];
 			this.aClass453_8537.method7532(arr_67, (byte) 122);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
@@ -1135,7 +1135,7 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			Node[] arr_67 = new Node[this.aClass453_8537.method7540(-975751825)];
+			Node[] arr_67 = new Node[this.aClass453_8537.method7540()];
 			this.aClass453_8537.method7532(arr_67, (byte) 32);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
@@ -1530,7 +1530,7 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			Node[] arr_67 = new Node[this.aClass453_8537.method7540(-975751825)];
+			Node[] arr_67 = new Node[this.aClass453_8537.method7540()];
 			this.aClass453_8537.method7532(arr_67, (byte) 55);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
@@ -2223,7 +2223,7 @@ public class HardwareGround extends Ground {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
 		int i_16 = ints_10.length;
 		int[] ints_17 = new int[i_16 * 3];
 		int[] ints_18 = new int[i_16 * 3];
@@ -2286,7 +2286,7 @@ public class HardwareGround extends Ground {
 			++i_25;
 		}
 
-		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, bool_15);
+		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, false);
 	}
 
 	public void method6713(Class282_Sub24 class282_sub24_1, int[] ints_2) {
@@ -2297,7 +2297,7 @@ public class HardwareGround extends Ground {
 		this.aClass473_8546.insertBack(new Class282_Sub8(this.aClass505_Sub2_8528, this, class282_sub24_1, ints_2));
 	}
 
-	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
 			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
 			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
@@ -2355,10 +2355,10 @@ public class HardwareGround extends Ground {
 				float f_23 = (float) this.aClass505_Sub2_8528.method8523((byte) 126).method2716();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
-				matrix44var_24.method5214(1.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 1.0F, 0.0F);
+				matrix44var_24.method5214();
 				matrix44var_18.method5259((float) i_3 / (256.0F * (float) (this.tileUnits)), (float) (-i_3) / (256.0F * (float) (this.tileUnits)), 1.0F / (this.aFloat8544 - this.aFloat8535));
 				matrix44var_18.method5219((float) i_1 - (float) (i_4 * i_3) / 256.0F, (float) i_2 + (float) (i_7 * i_3) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
-				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23, 1.0F);
+				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23);
 				matrix44var_18.method5219(-1.0F, -1.0F, 0.0F);
 				this.aClass505_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
 				this.aClass505_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aClass505_Sub2_8528.aClass294_8713);

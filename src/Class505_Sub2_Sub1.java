@@ -72,7 +72,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			this.aString10200 = OpenGL.glGetString(7937).toLowerCase();
 			if (this.aString10185.indexOf("microsoft") == -1 && this.aString10185.indexOf("brian paul") == -1 && this.aString10185.indexOf("mesa") == -1) {
 				String string_9 = OpenGL.glGetString(7938);
-				String[] arr_10 = Class456_Sub3.method12681(string_9.replace('.', ' '), ' ', 229848533);
+				String[] arr_10 = Class456_Sub3.method12681(string_9.replace('.', ' '), ' ');
 				if (arr_10.length >= 2) {
 					int i_11;
 					try {
@@ -122,7 +122,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 								i_11 = 0;
 								boolean bool_23 = false;
 								boolean bool_13 = false;
-								String[] arr_14 = Class456_Sub3.method12681(this.aString10200.replace('/', ' '), ' ', 229848533);
+								String[] arr_14 = Class456_Sub3.method12681(this.aString10200.replace('/', ' '), ' ');
 
 								for (int i_15 = 0; i_15 < arr_14.length; i_15++) {
 									String string_16 = arr_14[i_15];
@@ -176,8 +176,8 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 								}
 							}
 
-							this.method8411(canvas_2, new Class158_Sub2_Sub2_Sub1(this, canvas_2, long_3), 316223525);
-							this.method8412(canvas_2, (byte) 8);
+							this.method8411(canvas_2, new Class158_Sub2_Sub2_Sub1(this, canvas_2, long_3));
+							this.method8412(canvas_2);
 							this.method13910(32768, false);
 							this.method13910(32768, false);
 						}
@@ -200,12 +200,12 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface6 method14145(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5, int i_6, int i_7) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2, 1942118537) || !Class96_Sub9.method14585(i_3, 1942118537))) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2) || !Class96_Sub9.method14585(i_3))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, i_6, i_7);
 			} else {
 				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, Class323.nextPowerOfTwo(i_2, 258691248), Class323.nextPowerOfTwo(i_3, 787226616));
-				class319_sub2_8.method14494(0, 0, i_2, i_3, floats_5, class150_1, i_6, i_7);
+				class319_sub2_8.method14494(i_2, i_3, floats_5, class150_1, i_6, i_7);
 				return class319_sub2_8;
 			}
 		} else {
@@ -491,7 +491,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			int i_4 = i_1 + 16386;
 			float f_5 = class282_sub24_2.method12395(-671405195) / 255.0F;
 			this.aFloatArray10172[0] = (float) class282_sub24_2.method12368((byte) -1);
-			this.aFloatArray10172[1] = (float) class282_sub24_2.method12369(1534020223);
+			this.aFloatArray10172[1] = (float) class282_sub24_2.method12369();
 			this.aFloatArray10172[2] = (float) class282_sub24_2.method12394(1631595924);
 			this.aFloatArray10172[3] = 1.0F;
 			OpenGL.glLightfv(i_4, 4611, this.aFloatArray10172, 0);
@@ -500,7 +500,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			this.aFloatArray10172[2] = (float) (i_3 & 0xff) * f_5;
 			this.aFloatArray10172[3] = 1.0F;
 			OpenGL.glLightfv(i_4, 4609, this.aFloatArray10172, 0);
-			OpenGL.glLightf(i_4, 4617, 1.0F / (float) (class282_sub24_2.method12370(-789603523) * class282_sub24_2.method12370(-789603523)));
+			OpenGL.glLightf(i_4, 4617, 1.0F / (float) (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
 			OpenGL.glEnable(i_4);
 		}
 
@@ -540,30 +540,30 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		OpenGL.glLightfv(16385, 4609, this.aFloatArray10172, 0);
 	}
 
-	Interface6 method13961(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5, int i_6, int i_7) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2, 1942118537) || !Class96_Sub9.method14585(i_3, 1942118537))) {
+	Interface6 method13961(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2) || !Class96_Sub9.method14585(i_3))) {
 			if (this.aBool10194) {
-				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, i_6, i_7);
+				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, 0, 0);
 			} else {
 				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, Class323.nextPowerOfTwo(i_2, 1029457431), Class323.nextPowerOfTwo(i_3, 411015837));
-				class319_sub2_8.method14494(0, 0, i_2, i_3, floats_5, class150_1, i_6, i_7);
+				class319_sub2_8.method14494(i_2, i_3, floats_5, class150_1, 0, 0);
 				return class319_sub2_8;
 			}
 		} else {
-			return new Class319_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, i_6, i_7);
+			return new Class319_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, 0, 0);
 		}
 	}
 
 	Interface29 method14064(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, -509744092), Class323.nextPowerOfTwo(i_4, 139344255))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, -509744092), Class323.nextPowerOfTwo(i_4, 139344255))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	Interface31 method14034(int i_1, boolean bool_2, int[][] ints_3) {
 		return new Class319_Sub4(this, i_1, bool_2, ints_3);
 	}
 
-	Interface1 method13962(Class150 class150_1, int i_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6) {
-		return new Class319_Sub1(this, class150_1, i_2, i_3, i_4, bool_5, bytes_6);
+	Interface1 method13962(Class150 class150_1, byte[] bytes_6) {
+		return new Class319_Sub1(this, class150_1, 128, 128, 16, true, bytes_6);
 	}
 
 	static final int method15567(Class67 class67_0) {
@@ -619,7 +619,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		OpenGL.glTexEnvfv(8960, 8705, this.aFloatArray10172, 0);
 	}
 
-	final void method13970(int i_1, Class67 class67_2, boolean bool_3) {
+	final void method13970(int i_1, Class67 class67_2) {
 		OpenGL.glTexEnvi(8960, i_1 + 34184, method15567(class67_2));
 		OpenGL.glTexEnvi(8960, i_1 + 34200, 770);
 	}
@@ -831,7 +831,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		i_1 &= 0x7fffffff;
 
 		Class282_Sub38 class282_sub38_4;
-		while (!this.aClass473_10174.method7861(141891001)) {
+		while (!this.aClass473_10174.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10174.popTail();
 			this.anIntArray10184[i_2++] = (int) class282_sub38_4.data;
 			this.anInt8702 -= class282_sub38_4.anInt8002;
@@ -846,7 +846,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10175.method7861(141891001)) {
+		while (!this.aClass473_10175.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10175.popTail();
 			this.anIntArray10184[i_2++] = (int) class282_sub38_4.data;
 			this.anInt8701 -= class282_sub38_4.anInt8002;
@@ -861,7 +861,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10176.method7861(141891001)) {
+		while (!this.aClass473_10176.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10176.popTail();
 			this.anIntArray10184[i_2++] = class282_sub38_4.anInt8002;
 			if (i_2 == 1000) {
@@ -875,7 +875,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10195.method7861(141891001)) {
+		while (!this.aClass473_10195.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10195.popTail();
 			this.anIntArray10184[i_2++] = (int) class282_sub38_4.data;
 			this.anInt8761 -= class282_sub38_4.anInt8002;
@@ -890,23 +890,23 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			boolean bool_3 = false;
 		}
 
-		while (!this.aClass473_10173.method7861(141891001)) {
+		while (!this.aClass473_10173.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10173.popTail();
 			OpenGL.glDeleteLists((int) class282_sub38_4.data, class282_sub38_4.anInt8002);
 		}
 
 		Node node_5;
-		while (!this.aClass473_10178.method7861(141891001)) {
+		while (!this.aClass473_10178.method7861()) {
 			node_5 = this.aClass473_10178.popTail();
 			OpenGL.glDeleteProgram((int) node_5.data);
 		}
 
-		while (!this.aClass473_10179.method7861(141891001)) {
+		while (!this.aClass473_10179.method7861()) {
 			node_5 = this.aClass473_10179.popTail();
 			OpenGL.glDeleteShader((int) node_5.data);
 		}
 
-		while (!this.aClass473_10173.method7861(141891001)) {
+		while (!this.aClass473_10173.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10173.popTail();
 			OpenGL.glDeleteLists((int) class282_sub38_4.data, class282_sub38_4.anInt8002);
 		}
@@ -1134,7 +1134,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		i_1 &= 0x7fffffff;
 
 		Class282_Sub38 class282_sub38_4;
-		while (!this.aClass473_10174.method7861(141891001)) {
+		while (!this.aClass473_10174.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10174.popTail();
 			this.anIntArray10184[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8702 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
@@ -1149,7 +1149,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10175.method7861(141891001)) {
+		while (!this.aClass473_10175.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10175.popTail();
 			this.anIntArray10184[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8701 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
@@ -1164,7 +1164,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10176.method7861(141891001)) {
+		while (!this.aClass473_10176.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10176.popTail();
 			this.anIntArray10184[i_2++] = class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -1178,7 +1178,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10195.method7861(141891001)) {
+		while (!this.aClass473_10195.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10195.popTail();
 			this.anIntArray10184[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8761 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
@@ -1193,23 +1193,23 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			boolean bool_3 = false;
 		}
 
-		while (!this.aClass473_10173.method7861(141891001)) {
+		while (!this.aClass473_10173.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10173.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
 		Node node_5;
-		while (!this.aClass473_10178.method7861(141891001)) {
+		while (!this.aClass473_10178.method7861()) {
 			node_5 = this.aClass473_10178.popTail();
 			OpenGL.glDeleteProgram((int) (node_5.data * -1253863389874800229L * -3442165056282524525L));
 		}
 
-		while (!this.aClass473_10179.method7861(141891001)) {
+		while (!this.aClass473_10179.method7861()) {
 			node_5 = this.aClass473_10179.popTail();
 			OpenGL.glDeleteShader((int) (node_5.data * -1253863389874800229L * -3442165056282524525L));
 		}
 
-		while (!this.aClass473_10173.method7861(141891001)) {
+		while (!this.aClass473_10173.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10173.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
@@ -1606,7 +1606,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	public void method8491(boolean bool_1) {
 	}
 
-	void method8555(int i_1, int i_2) throws Exception_Sub3 {
+	void method8555() throws Exception_Sub3 {
 		this.aClass158_Sub2_5841.method14344();
 		if (this.anInterface22_5834 != null) {
 			this.anInterface22_5834.method161(-1879314244);
@@ -1657,7 +1657,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			int i_4 = 16386 + i_1;
 			float f_5 = class282_sub24_2.method12395(-1367391140) / 255.0F;
 			this.aFloatArray10172[0] = (float) class282_sub24_2.method12368((byte) 48);
-			this.aFloatArray10172[1] = (float) class282_sub24_2.method12369(1534020223);
+			this.aFloatArray10172[1] = (float) class282_sub24_2.method12369();
 			this.aFloatArray10172[2] = (float) class282_sub24_2.method12394(1329997001);
 			this.aFloatArray10172[3] = 1.0F;
 			OpenGL.glLightfv(i_4, 4611, this.aFloatArray10172, 0);
@@ -1666,7 +1666,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			this.aFloatArray10172[2] = (float) (i_3 & 0xff) * f_5;
 			this.aFloatArray10172[3] = 1.0F;
 			OpenGL.glLightfv(i_4, 4609, this.aFloatArray10172, 0);
-			OpenGL.glLightf(i_4, 4617, 1.0F / (float) (class282_sub24_2.method12370(-789603523) * class282_sub24_2.method12370(-789603523)));
+			OpenGL.glLightf(i_4, 4617, 1.0F / (float) (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
 			OpenGL.glEnable(i_4);
 		}
 
@@ -1688,7 +1688,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			int i_4 = 16386 + i_1;
 			float f_5 = class282_sub24_2.method12395(656103016) / 255.0F;
 			this.aFloatArray10172[0] = (float) class282_sub24_2.method12368((byte) 82);
-			this.aFloatArray10172[1] = (float) class282_sub24_2.method12369(1534020223);
+			this.aFloatArray10172[1] = (float) class282_sub24_2.method12369();
 			this.aFloatArray10172[2] = (float) class282_sub24_2.method12394(1976918511);
 			this.aFloatArray10172[3] = 1.0F;
 			OpenGL.glLightfv(i_4, 4611, this.aFloatArray10172, 0);
@@ -1697,7 +1697,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			this.aFloatArray10172[2] = (float) (i_3 & 0xff) * f_5;
 			this.aFloatArray10172[3] = 1.0F;
 			OpenGL.glLightfv(i_4, 4609, this.aFloatArray10172, 0);
-			OpenGL.glLightf(i_4, 4617, 1.0F / (float) (class282_sub24_2.method12370(-789603523) * class282_sub24_2.method12370(-789603523)));
+			OpenGL.glLightf(i_4, 4617, 1.0F / (float) (class282_sub24_2.method12370() * class282_sub24_2.method12370()));
 			OpenGL.glEnable(i_4);
 		}
 
@@ -1849,7 +1849,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface6 method14144(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5, int i_6, int i_7) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2, 1942118537) || !Class96_Sub9.method14585(i_3, 1942118537))) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2) || !Class96_Sub9.method14585(i_3))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, bytes_5, i_6, i_7);
 			} else {
@@ -1863,12 +1863,12 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface6 method14090(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5, int i_6, int i_7) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2, 1942118537) || !Class96_Sub9.method14585(i_3, 1942118537))) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2) || !Class96_Sub9.method14585(i_3))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, i_6, i_7);
 			} else {
 				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, Class323.nextPowerOfTwo(i_2, 86710193), Class323.nextPowerOfTwo(i_3, -962187680));
-				class319_sub2_8.method14494(0, 0, i_2, i_3, floats_5, class150_1, i_6, i_7);
+				class319_sub2_8.method14494(i_2, i_3, floats_5, class150_1, i_6, i_7);
 				return class319_sub2_8;
 			}
 		} else {
@@ -1887,7 +1887,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface6 method14008(int i_1, int i_2, boolean bool_3, int[] ints_4, int i_5, int i_6) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_1, 1942118537) || !Class96_Sub9.method14585(i_2, 1942118537))) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_1) || !Class96_Sub9.method14585(i_2))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, i_1, i_2, ints_4, i_5, i_6);
 			} else {
@@ -1901,7 +1901,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface6 method14048(int i_1, int i_2, boolean bool_3, int[] ints_4, int i_5, int i_6) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_1, 1942118537) || !Class96_Sub9.method14585(i_2, 1942118537))) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_1) || !Class96_Sub9.method14585(i_2))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, i_1, i_2, ints_4, i_5, i_6);
 			} else {
@@ -1946,15 +1946,15 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface29 method14022(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, 2046359812), Class323.nextPowerOfTwo(i_4, -1483303534))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, 2046359812), Class323.nextPowerOfTwo(i_4, -1483303534))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	Interface29 method14148(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, 622988125), Class323.nextPowerOfTwo(i_4, -1774275791))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, 622988125), Class323.nextPowerOfTwo(i_4, -1774275791))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	Interface29 method14149(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3, 1942118537) || !Class96_Sub9.method14585(i_4, 1942118537)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, -196167688), Class323.nextPowerOfTwo(i_4, -1962177193))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Class323.nextPowerOfTwo(i_3, -196167688), Class323.nextPowerOfTwo(i_4, -1962177193))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	public void method14153() {
@@ -2057,17 +2057,17 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		return new Class168(i_1, "OpenGL", this.anInt10196, this.aString10200, 0L);
 	}
 
-	Interface6 method14143(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5, int i_6, int i_7) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2, 1942118537) || !Class96_Sub9.method14585(i_3, 1942118537))) {
+	Interface6 method14143(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_2) || !Class96_Sub9.method14585(i_3))) {
 			if (this.aBool10194) {
-				return new Class319_Sub3(this, class150_1, i_2, i_3, bytes_5, i_6, i_7);
+				return new Class319_Sub3(this, class150_1, i_2, i_3, bytes_5, 0, 0);
 			} else {
 				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_751, Class323.nextPowerOfTwo(i_2, -1588026691), Class323.nextPowerOfTwo(i_3, 191823312));
-				class319_sub2_8.method52(0, 0, i_2, i_3, bytes_5, class150_1, i_6, i_7);
+				class319_sub2_8.method52(0, 0, i_2, i_3, bytes_5, class150_1, 0, 0);
 				return class319_sub2_8;
 			}
 		} else {
-			return new Class319_Sub2(this, class150_1, i_2, i_3, bool_4, bytes_5, i_6, i_7);
+			return new Class319_Sub2(this, class150_1, i_2, i_3, bool_4, bytes_5, 0, 0);
 		}
 	}
 
@@ -2225,7 +2225,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		i_1 &= 0x7fffffff;
 
 		Class282_Sub38 class282_sub38_4;
-		while (!this.aClass473_10174.method7861(141891001)) {
+		while (!this.aClass473_10174.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10174.popTail();
 			this.anIntArray10184[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8702 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
@@ -2240,7 +2240,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10175.method7861(141891001)) {
+		while (!this.aClass473_10175.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10175.popTail();
 			this.anIntArray10184[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8701 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
@@ -2255,7 +2255,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10176.method7861(141891001)) {
+		while (!this.aClass473_10176.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10176.popTail();
 			this.anIntArray10184[i_2++] = class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2269,7 +2269,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			i_2 = 0;
 		}
 
-		while (!this.aClass473_10195.method7861(141891001)) {
+		while (!this.aClass473_10195.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10195.popTail();
 			this.anIntArray10184[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8761 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
@@ -2284,23 +2284,23 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			boolean bool_3 = false;
 		}
 
-		while (!this.aClass473_10173.method7861(141891001)) {
+		while (!this.aClass473_10173.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10173.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
 		Node node_5;
-		while (!this.aClass473_10178.method7861(141891001)) {
+		while (!this.aClass473_10178.method7861()) {
 			node_5 = this.aClass473_10178.popTail();
 			OpenGL.glDeleteProgram((int) (node_5.data * -1253863389874800229L * -3442165056282524525L));
 		}
 
-		while (!this.aClass473_10179.method7861(141891001)) {
+		while (!this.aClass473_10179.method7861()) {
 			node_5 = this.aClass473_10179.popTail();
 			OpenGL.glDeleteShader((int) (node_5.data * -1253863389874800229L * -3442165056282524525L));
 		}
 
-		while (!this.aClass473_10173.method7861(141891001)) {
+		while (!this.aClass473_10173.method7861()) {
 			class282_sub38_4 = (Class282_Sub38) this.aClass473_10173.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
@@ -2535,7 +2535,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		return ints_5;
 	}
 
-	final void method13968(int i_1, Class67 class67_2, boolean bool_3, boolean bool_4) {
+	final void method13968(int i_1, Class67 class67_2) {
 		OpenGL.glTexEnvi(8960, i_1 + 34176, method15567(class67_2));
 		OpenGL.glTexEnvi(8960, i_1 + 34192, 768);
 	}
@@ -2606,7 +2606,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface6 method14094(int i_1, int i_2, boolean bool_3, int[] ints_4, int i_5, int i_6) {
-		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_1, 1942118537) || !Class96_Sub9.method14585(i_2, 1942118537))) {
+		if (!this.aBool10197 && (!Class96_Sub9.method14585(i_1) || !Class96_Sub9.method14585(i_2))) {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, i_1, i_2, ints_4, i_5, i_6);
 			} else {

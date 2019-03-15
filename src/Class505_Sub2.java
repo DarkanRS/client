@@ -171,11 +171,11 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public void method13885(Interface7 interface7_1) {
-		this.aClass428_8772.method7191(interface7_1, (byte) 7);
+		this.aClass428_8772.method7191(interface7_1);
 	}
 
 	void method13886() {
-		ArrayList arraylist_1 = this.aClass428_8772.method7193((byte) 66);
+		ArrayList arraylist_1 = this.aClass428_8772.method7193();
 		Iterator iterator_2 = arraylist_1.iterator();
 
 		while (iterator_2.hasNext()) {
@@ -220,7 +220,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	public abstract void method13892(Matrix44Arr var1, Matrix44Arr var2, Matrix44Arr var3);
 
 	public static boolean method13893() {
-		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", 879905383);
+		return Class362.getNativeLibraryLoader().loadLibrary("jaclib", 879905383);
 	}
 
 	Class505_Sub2(Interface22 interface22_1, Index index_2, int i_3, int i_4) {
@@ -364,7 +364,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			this.aClass48_8794 = new Class48_Sub2(this);
 			this.aClass47_8698 = new Class47_Sub1(this);
 			this.aClass103_8796 = new Class103_Sub1(this);
-			this.aClass41_Sub1_Sub1_8691 = new Class41_Sub1_Sub1(this, this.aClass49_8694, true);
+			this.aClass41_Sub1_Sub1_8691 = new Class41_Sub1_Sub1(this, this.aClass49_8694);
 			this.aClass41_Sub1_Sub2_8798 = new Class41_Sub1_Sub2(this, this.aClass49_8694);
 		} catch (Exception exception_4) {
 			exception_4.printStackTrace();
@@ -525,7 +525,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public void method13901(Interface7 interface7_1) {
-		this.aClass428_8772.method7201(interface7_1, anObject8711, 1933309391);
+		this.aClass428_8772.method7201(interface7_1, anObject8711);
 	}
 
 	public final boolean method8664() {
@@ -686,21 +686,21 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return this.aClass55Array8802[1] != null && this.aClass55Array8802[1].method1107();
 	}
 
-	final void method8592(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+	final void method8592(float f_1, float f_2, float f_3) {
 		Class55_Sub1.aFloat9188 = f_1;
 		Class55_Sub1.aFloat9184 = f_2;
 		Class55_Sub1.aFloat9189 = f_3;
-		Class55_Sub1.aFloat9186 = f_6;
+		Class55_Sub1.aFloat9186 = (float) 1.0;
 	}
 
-	boolean method13908(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+	boolean method13908(float f_1, float f_2, float f_4, float f_5) {
 		this.aByteBuffer8838.clear();
 		this.aByteBuffer8838.putFloat(f_1);
 		this.aByteBuffer8838.putFloat(f_2);
-		this.aByteBuffer8838.putFloat(f_3);
+		this.aByteBuffer8838.putFloat((float) 0.0);
 		this.aByteBuffer8838.putFloat(f_4);
 		this.aByteBuffer8838.putFloat(f_5);
-		this.aByteBuffer8838.putFloat(f_6);
+		this.aByteBuffer8838.putFloat((float) 0.0);
 		return this.anInterface4_8682.method42(0, this.aByteBuffer8838.position(), this.aLong8695);
 	}
 
@@ -760,9 +760,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			nativesprite_3 = this.createNativeSprite(ints_4, 0, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 228280722);
+			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 228280722);
 		} else {
-			nativesprite_3 = this.createNativeSprite(new int[1], 0, 1, 1, 1, -51231437);
+			nativesprite_3 = this.createNativeSprite(new int[1], 1, 1, 1, -51231437);
 		}
 
 		nativesprite_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
@@ -797,8 +797,8 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return i_1 | i_2;
 	}
 
-	public final Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new HardwareGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+	public final Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_6, int i_7) {
+		return new HardwareGround(this, i_6, i_7, i_1, i_2, ints_3, ints_4, 512);
 	}
 
 	abstract void method13915();
@@ -923,9 +923,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	}
 
-	final void method13919(int i_1, int i_2) {
-		this.anInt8823 = i_1;
-		this.anInt8754 = i_2;
+	final void method13919() {
+		this.anInt8823 = 0;
+		this.anInt8754 = 0;
 		this.method13920();
 		this.method13921();
 	}
@@ -1357,11 +1357,11 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	abstract void method13956();
 
 	final Interface6 method13957(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5) {
-		return this.method14143(class150_1, i_2, i_3, bool_4, bytes_5, 0, 0);
+		return this.method14143(class150_1, i_2, i_3, bool_4, bytes_5);
 	}
 
-	final Interface6 method13958(Class150 class150_1, int i_2, int i_3, boolean bool_4, float[] floats_5) {
-		return this.method13961(class150_1, i_2, i_3, bool_4, floats_5, 0, 0);
+	final Interface6 method13958(Class150 class150_1, int i_2, int i_3, float[] floats_5) {
+		return this.method13961(class150_1, i_2, i_3, true, floats_5);
 	}
 
 	public abstract void method13959(Class352 var1, int var2, int var3);
@@ -1375,7 +1375,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	}
 
-	abstract Interface6 method13961(Class150 var1, int var2, int var3, boolean var4, float[] var5, int var6, int var7);
+	abstract Interface6 method13961(Class150 var1, int var2, int var3, boolean var4, float[] var5);
 
 	public Matrix44Var method8458() {
 		return this.aClass294_8706;
@@ -1389,7 +1389,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		this.anInt8775 = 1 << this.anInt8806;
 	}
 
-	abstract Interface1 method13962(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);
+	abstract Interface1 method13962(Class150 var1, byte[] var6);
 
 	public final void method8426(int i_1, Class282_Sub24[] arr_2) {
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
@@ -1403,7 +1403,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	}
 
-	public final void method8568(boolean bool_1) {
+	public final void method8568() {
 	}
 
 	public final int method13963() {
@@ -1444,16 +1444,16 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public final void method13967(int i_1, Class67 class67_2) {
-		this.method13968(i_1, class67_2, false, false);
+		this.method13968(i_1, class67_2);
 	}
 
-	abstract void method13968(int var1, Class67 var2, boolean var3, boolean var4);
+	abstract void method13968(int var1, Class67 var2);
 
 	public final void method13969(int i_1, Class67 class67_2) {
-		this.method13970(i_1, class67_2, false);
+		this.method13970(i_1, class67_2);
 	}
 
-	abstract void method13970(int var1, Class67 var2, boolean var3);
+	abstract void method13970(int var1, Class67 var2);
 
 	public void method13971(int i_1) {
 		if (this.anInt8758 != i_1) {
@@ -1513,8 +1513,8 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method13980();
 
-	public final void method8475(int i_1, Class90 class90_2) {
-		this.anInt8739 = i_1;
+	public final void method8475(Class90 class90_2) {
+		this.anInt8739 = -1;
 		this.aClass90_8807 = class90_2;
 		this.aBool8779 = true;
 	}
@@ -1523,9 +1523,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public abstract void method13983(Class352 var1, int var2, int var3, int var4, int var5);
 
-	final void method13985(int i_1) {
-		if (this.anInt8844 != i_1) {
-			this.anInt8844 = i_1;
+	final void method13985() {
+		if (this.anInt8844 != 0) {
+			this.anInt8844 = 0;
 			this.method13894();
 		}
 
@@ -1600,7 +1600,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public abstract void method13996(Class70 var1);
 
-	public final void DA(int i_1, Class455 class455_2, int i_3, int i_4) {
+	public final void DA(Class455 class455_2, int i_3, int i_4) {
 		this.RA(false);
 		this.aClass160_Sub3_8791.method2766(0.0F, 0.0F, (float) this.method8523((byte) 111).method2714(), 0.0F, 0.0F, (float) this.method8523((byte) 117).method2716(), 0, class455_2, i_3, i_4);
 		this.RA(true);
@@ -1625,10 +1625,10 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	public final void N(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte[] bytes_7, int i_8, int i_9) {
 	}
 
-	public final void method8658(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
+	public final void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
 	}
 
-	final void CA(int i_1, int i_2, int i_3, int i_4, int i_5) {
+	final void CA(int i_1, int i_2, int i_3, int i_4) {
 	}
 
 	public final void fo(int i_1, int i_2, int i_3, int i_4, int i_5) {
@@ -1659,7 +1659,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		this.method8496(i_1, i_2, i_3, i_4, i_5, 1, i_6);
 	}
 
-	public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+	public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_7, int i_8, int i_9) {
 		float f_10 = (float) i_3 - (float) i_1;
 		float f_11 = (float) i_4 - (float) i_2;
 		if (f_10 == 0.0F && f_11 == 0.0F) {
@@ -1674,7 +1674,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		Class41 class41_12 = this.aClass41Array8793[13];
 		class41_12.method873();
 		class41_12.method875(i_5);
-		this.method13904(i_6);
+		this.method13904(1);
 		class41_12.method879();
 		this.method13992(false);
 		i_9 %= i_8 + i_7;
@@ -1734,7 +1734,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			if (!this.method13908(f_19, f_20, 0.0F, f_19 + f_17, f_20 + f_18, 0.0F)) {
+			if (!this.method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
 				return;
 			}
 
@@ -1749,7 +1749,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		class41_12.method885();
 	}
 
-	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
+	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
 	}
 
 	abstract void method13999();
@@ -1788,10 +1788,10 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		this.RA(true);
 	}
 
-	final void method14001(Class352 class352_1, int i_2) {
+	final void method14001(Class352 class352_1) {
 		this.method14161(0, this.anInterface4_8746);
 		this.method13996(this.aClass70_8786);
-		this.method13923(class352_1, 0, i_2);
+		this.method13923(class352_1, 0, 2);
 	}
 
 	public void method8619(float f_1, float f_2, float f_3, float[] floats_4) {
@@ -2298,7 +2298,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			if (!this.method13908(f_19, f_20, 0.0F, f_19 + f_17, f_20 + f_18, 0.0F)) {
+			if (!this.method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
 				return;
 			}
 
@@ -2392,7 +2392,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			if (!this.method13908(f_19, f_20, 0.0F, f_19 + f_17, f_20 + f_18, 0.0F)) {
+			if (!this.method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
 				return;
 			}
 
@@ -2482,7 +2482,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			if (!this.method13908(f_19, f_20, 0.0F, f_19 + f_17, f_20 + f_18, 0.0F)) {
+			if (!this.method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
 				return;
 			}
 
@@ -2705,9 +2705,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			nativesprite_3 = this.createNativeSprite(ints_4, 0, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 243468915);
+			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 243468915);
 		} else {
-			nativesprite_3 = this.createNativeSprite(new int[1], 0, 1, 1, 1, -1837569571);
+			nativesprite_3 = this.createNativeSprite(new int[1], 1, 1, 1, -1837569571);
 		}
 
 		nativesprite_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
@@ -2738,9 +2738,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			nativesprite_3 = this.createNativeSprite(ints_4, 0, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 216802714);
+			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 216802714);
 		} else {
-			nativesprite_3 = this.createNativeSprite(new int[1], 0, 1, 1, 1, 1578248610);
+			nativesprite_3 = this.createNativeSprite(new int[1], 1, 1, 1, 1578248610);
 		}
 
 		nativesprite_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
@@ -2811,9 +2811,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return true;
 	}
 
-	public void GA(float f_1, float f_2) {
-		this.aFloat8737 = f_1;
-		this.aFloat8738 = f_2;
+	public void GA() {
+		this.aFloat8737 = (float) 0.0;
+		this.aFloat8738 = (float) 1.0;
 		this.method13918();
 	}
 
@@ -3318,8 +3318,8 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return i_1 & i_2 ^ i_2;
 	}
 
-	public final void method8525(int i_1, int i_2, int i_3, int i_4) {
-		this.aClass32_8714.method830(i_1, i_2, i_3, i_4);
+	public final void method8525(int i_3, int i_4) {
+		this.aClass32_8714.method830(0, 0, i_3, i_4);
 	}
 
 	public void method8494(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
@@ -3397,7 +3397,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				}
 			}
 
-			if (!this.method13908(f_19, f_20, 0.0F, f_19 + f_17, f_20 + f_18, 0.0F)) {
+			if (!this.method13908(f_19, f_20, f_19 + f_17, f_20 + f_18)) {
 				return;
 			}
 
@@ -3431,7 +3431,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	abstract Interface6 method14072(Class150 var1, Class76 var2, int var3, int var4);
 
 	byte[] method14075(String string_1, String string_2) {
-		return this.aClass317_8789.method5626(string_1, string_2, (byte) 1);
+		return this.aClass317_8789.method5626(string_1, string_2);
 	}
 
 	abstract Interface1 method14077(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);
@@ -3500,7 +3500,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public abstract void method14101(Class352 var1, int var2, int var3, int var4, int var5);
 
-	public final void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
+	public final void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9) {
 	}
 
 	public abstract void method14107(Matrix44Arr var1);
@@ -3610,7 +3610,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return true;
 	}
 
-	public final void method8459(int i_1) {
+	public final void method8459() {
 	}
 
 	Matrix44Var method14130() {
@@ -3658,7 +3658,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract Interface6 method14142(Class150 var1, Class76 var2, int var3, int var4);
 
-	abstract Interface6 method14143(Class150 var1, int var2, int var3, boolean var4, byte[] var5, int var6, int var7);
+	abstract Interface6 method14143(Class150 var1, int var2, int var3, boolean var4, byte[] var5);
 
 	abstract Interface6 method14144(Class150 var1, int var2, int var3, boolean var4, byte[] var5, int var6, int var7);
 
@@ -3731,7 +3731,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	abstract Interface29 method14149(Class150 var1, Class76 var2, int var3, int var4);
 
 	public final void method14150() {
-		this.method14001(Class352.aClass352_4104, 2);
+		this.method14001(Class352.aClass352_4104);
 	}
 
 	public abstract void method14153();

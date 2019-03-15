@@ -14,11 +14,11 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	public int anInt10411 = -1;
 	public int anInt10415 = -1;
 
-	public int method12997(int i_1) {
+	public int method12997() {
 		return this.anInt10422 - this.method12995(-2133263456);
 	}
 
-	void method15947(int i_1) {
+	void method15947() {
 		this.anInt10420 = 32 + (int) (Math.random() * 4.0D);
 		this.anInt10421 = 3 + (int) (Math.random() * 2.0D);
 		this.anInt10413 = 16 + (int) (Math.random() * 3.0D);
@@ -61,23 +61,23 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return false;
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		Matrix44Var matrix44var_5 = graphicalrenderer_1.method8450();
 		matrix44var_5.method5210(this.method11166());
 		matrix44var_5.method5219(0.0F, -10.0F, 0.0F);
-		MeshRasterizer meshrasterizer_6 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 1970157841).method7084(graphicalrenderer_1, 131072, this.anInt10416, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0, (byte) 0);
+		MeshRasterizer meshrasterizer_6 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 1970157841).method7084(graphicalrenderer_1, 131072, this.anInt10416, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0);
 		if (meshrasterizer_6 != null && meshrasterizer_6.method11270(i_2, i_3, matrix44var_5, true, 0)) {
 			return true;
 		} else {
 			if (this.anInt10411 != -1) {
-				meshrasterizer_6 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411, 1550672616).method7084(graphicalrenderer_1, 131072, this.anInt10414, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0, (byte) 0);
+				meshrasterizer_6 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411, 1550672616).method7084(graphicalrenderer_1, 131072, this.anInt10414, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0);
 				if (meshrasterizer_6 != null && meshrasterizer_6.method11270(i_2, i_3, matrix44var_5, true, 0)) {
 					return true;
 				}
 			}
 
 			if (this.anInt10415 != -1) {
-				meshrasterizer_6 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415, 2022809096).method7084(graphicalrenderer_1, 131072, this.anInt10412, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0, (byte) 0);
+				meshrasterizer_6 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415, 2022809096).method7084(graphicalrenderer_1, 131072, this.anInt10412, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0);
 				if (meshrasterizer_6 != null && meshrasterizer_6.method11270(i_2, i_3, matrix44var_5, true, 0)) {
 					return true;
 				}
@@ -102,7 +102,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) -112);
-		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, -387297653);
+		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9);
 		int i_5 = 0;
 		if (class208_3 != null && class208_3.aClass521_Sub1_Sub1_2659.aBool9459) {
 			i_5 = class208_3.aClass521_Sub1_Sub1_2659.method12995(21913800);
@@ -176,7 +176,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		this.anInt10418 = 0 * 599728753;
 		MeshRasterizer meshrasterizer_32;
 		if (-503986647 * this.anInt10415 * 100349465 != -1) {
-			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465, 1566081376).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465, 1566081376).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
 				meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[2], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
@@ -185,7 +185,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		}
 
 		if (this.anInt10411 * -1841858001 * 313920719 != -1) {
-			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719, 627296952).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719, 627296952).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
 				meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[1], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
@@ -195,7 +195,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479, 1397021511).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+		meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479, 1397021511).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 		if (meshrasterizer_32 != null) {
 			meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[0], 0);
 			this.aBool10419 |= meshrasterizer_32.i();
@@ -215,7 +215,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return -10;
 	}
 
-	int method12996(int i_1) {
+	int method12996() {
 		ItemDefinitions itemdefinitions_2 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 688788238);
 		int i_3 = itemdefinitions_2.pickSizeShift;
 		ItemDefinitions itemdefinitions_4;
@@ -239,7 +239,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	public Class521_Sub1_Sub2_Sub1(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		super(sceneobjectmanager_1, i_2, i_3, i_4, i_5, i_6);
 		this.method13008(3, (byte) -104);
-		this.method15947(1890677127);
+		this.method15947();
 	}
 
 	boolean method13000() {
@@ -249,7 +249,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) 62);
-		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, -387297653);
+		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9);
 		int i_5 = 0;
 		if (class208_3 != null && class208_3.aClass521_Sub1_Sub1_2659.aBool9459) {
 			i_5 = class208_3.aClass521_Sub1_Sub1_2659.method12995(-2077263748);
@@ -323,7 +323,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		this.anInt10418 = 0 * 599728753;
 		MeshRasterizer meshrasterizer_32;
 		if (-503986647 * this.anInt10415 * 100349465 != -1) {
-			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465, 1810214014).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465, 1810214014).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
 				meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[2], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
@@ -332,7 +332,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		}
 
 		if (this.anInt10411 * -1841858001 * 313920719 != -1) {
-			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719, 208623712).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719, 208623712).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
 				meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[1], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
@@ -342,7 +342,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479, 1591407655).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+		meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479, 1591407655).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 		if (meshrasterizer_32 != null) {
 			meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[0], 0);
 			this.aBool10419 |= meshrasterizer_32.i();
@@ -357,7 +357,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) 88);
-		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, -387297653);
+		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9);
 		int i_5 = 0;
 		if (class208_3 != null && class208_3.aClass521_Sub1_Sub1_2659.aBool9459) {
 			i_5 = class208_3.aClass521_Sub1_Sub1_2659.method12995(-1830209037);
@@ -431,7 +431,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		this.anInt10418 = 0 * 599728753;
 		MeshRasterizer meshrasterizer_32;
 		if (-503986647 * this.anInt10415 * 100349465 != -1) {
-			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465, 1568687750).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465, 1568687750).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
 				meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[2], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
@@ -440,7 +440,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		}
 
 		if (this.anInt10411 * -1841858001 * 313920719 != -1) {
-			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719, 849121032).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+			meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719, 849121032).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
 				meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[1], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
@@ -450,7 +450,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479, 1958359567).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999, (byte) 0);
+		meshrasterizer_32 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479, 1958359567).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 		if (meshrasterizer_32 != null) {
 			meshrasterizer_32.method11282(matrix44var_6, this.aClass275_Sub5Array7965[0], 0);
 			this.aBool10419 |= meshrasterizer_32.i();
@@ -472,19 +472,19 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 		matrix44var_4.method5210(this.method11166());
 		matrix44var_4.method5219(0.0F, -10.0F, 0.0F);
-		MeshRasterizer meshrasterizer_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423 * -1511570479 * -876219087, 1772986804).method7084(graphicalrenderer_1, 131072, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0, (byte) 0);
+		MeshRasterizer meshrasterizer_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423 * -1511570479 * -876219087, 1772986804).method7084(graphicalrenderer_1, 131072, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0);
 		if (meshrasterizer_5 != null && meshrasterizer_5.method11270(i_2, i_3, matrix44var_4, true, 0)) {
 			return true;
 		} else {
 			if (this.anInt10411 * -1841858001 * 313920719 != -1) {
-				meshrasterizer_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(313920719 * this.anInt10411 * -1841858001, 505864410).method7084(graphicalrenderer_1, 131072, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0, (byte) 0);
+				meshrasterizer_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(313920719 * this.anInt10411 * -1841858001, 505864410).method7084(graphicalrenderer_1, 131072, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0);
 				if (meshrasterizer_5 != null && meshrasterizer_5.method11270(i_2, i_3, matrix44var_4, true, 0)) {
 					return true;
 				}
 			}
 
 			if (this.anInt10415 * 100349465 * -503986647 != -1) {
-				meshrasterizer_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415 * 100349465 * -503986647, 1589292457).method7084(graphicalrenderer_1, 131072, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0, (byte) 0);
+				meshrasterizer_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415 * 100349465 * -503986647, 1589292457).method7084(graphicalrenderer_1, 131072, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, 0, 0, 0, 0);
 				if (meshrasterizer_5 != null && meshrasterizer_5.method11270(i_2, i_3, matrix44var_4, true, 0)) {
 					return true;
 				}
@@ -502,10 +502,10 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return null;
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_3 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		Class208 class208_4 = this.aClass206_7970.method3507(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9, (byte) -92);
-		SceneObjectNode sceneobjectnode_5 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9, -387297653);
+		SceneObjectNode sceneobjectnode_5 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9);
 		int i_6 = 0;
 		if (class208_4 != null && class208_4.aClass521_Sub1_Sub1_2659.aBool9459) {
 			i_6 = class208_4.aClass521_Sub1_Sub1_2659.method12995(-1954899292);
@@ -579,7 +579,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		this.anInt10418 = 0;
 		MeshRasterizer meshrasterizer_33;
 		if (this.anInt10415 != -1) {
-			meshrasterizer_33 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415, 2123092777).method7084(graphicalrenderer_1, 526336, this.anInt10412, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417, (byte) 0);
+			meshrasterizer_33 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10415, 2123092777).method7084(graphicalrenderer_1, 526336, this.anInt10412, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417);
 			if (meshrasterizer_33 != null) {
 				meshrasterizer_33.method11282(matrix44var_7, this.aClass275_Sub5Array7965[2], 0);
 				this.aBool10419 |= meshrasterizer_33.i();
@@ -588,7 +588,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		}
 
 		if (this.anInt10411 != -1) {
-			meshrasterizer_33 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411, 687184901).method7084(graphicalrenderer_1, 526336, this.anInt10414, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417, (byte) 0);
+			meshrasterizer_33 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10411, 687184901).method7084(graphicalrenderer_1, 526336, this.anInt10414, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417);
 			if (meshrasterizer_33 != null) {
 				meshrasterizer_33.method11282(matrix44var_7, this.aClass275_Sub5Array7965[1], 0);
 				this.aBool10419 |= meshrasterizer_33.i();
@@ -598,7 +598,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 
-		meshrasterizer_33 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 994725585).method7084(graphicalrenderer_1, 526336, this.anInt10416, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417, (byte) 0);
+		meshrasterizer_33 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(this.anInt10423, 994725585).method7084(graphicalrenderer_1, 526336, this.anInt10416, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417);
 		if (meshrasterizer_33 != null) {
 			meshrasterizer_33.method11282(matrix44var_7, this.aClass275_Sub5Array7965[0], 0);
 			this.aBool10419 |= meshrasterizer_33.i();

@@ -34,11 +34,11 @@ public class AccountCreationResponseOpcodes implements Interface43 {
 		this.anInt5739 = i_1;
 	}
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt5739;
 	}
 
-	public static Class353[] method8155(int i_0) {
+	public static Class353[] method8155() {
 		return new Class353[] { Class353.aClass353_4107, Class353.aClass353_4105, Class353.aClass353_4106 };
 	}
 }

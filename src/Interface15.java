@@ -4,7 +4,7 @@ public interface Interface15 {
 
 	void method110(int var1, byte[] var2, int var3);
 
-	void method111(int var1, byte[] var2, int var3);
+	void method111(byte[] var2, int var3);
 
 	int method74();
 

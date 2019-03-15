@@ -10,16 +10,16 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 	boolean aBool9726 = true;
 	short[] aShortArray9731;
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -818239034);
 		if (this.aClass320_7667.aBool3722) {
-			this.method15197(i_1, ints_3, 915556346);
+			this.method15197(i_1, ints_3);
 		}
 
 		return ints_3;
 	}
 
-	void method15197(int i_1, int[] ints_2, int i_3) {
+	void method15197(int i_1, int[] ints_2) {
 		int i_4 = Class316.anIntArray3668[i_1] * this.anInt9735;
 		short s_5;
 		int i_6;
@@ -177,7 +177,7 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 
 	void method12321(int i_1) {
 		this.aByteArray9732 = Class316.method5588(this.anInt9733, -1401827913);
-		this.method15199(-884893671);
+		this.method15199();
 
 		for (int i_2 = this.anInt9736 - 1; i_2 >= 1; --i_2) {
 			short s_3 = this.aShortArray9730[i_2];
@@ -190,7 +190,7 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.aBool9726 = rsbytebuffer_2.readUnsignedByte() == 1;
@@ -223,7 +223,7 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 
 	}
 
-	void method15199(int i_1) {
+	void method15199() {
 		int i_2;
 		if (this.anInt9737 > 0) {
 			this.aShortArray9730 = new short[this.anInt9736];

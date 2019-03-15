@@ -395,7 +395,7 @@ public class Class134 {
 		if (this.aClass282_Sub35_Sub1_1601.index != 0) {
 			this.anInterface14_1602.method106(24, this.aClass282_Sub35_Sub1_1601.buffer, this.aClass282_Sub35_Sub1_1601.index);
 			class505_sub1_1.method13647(this.aClass143_1603, (OpenGlArrayBufferPointer) null, this.aClass143_1605, this.aClass143_1617);
-			class505_sub1_1.method13603(7, 0, this.aClass282_Sub35_Sub1_1601.index / 24);
+			class505_sub1_1.method13603(this.aClass282_Sub35_Sub1_1601.index / 24);
 		}
 
 	}

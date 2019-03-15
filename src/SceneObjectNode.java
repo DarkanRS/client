@@ -2,9 +2,9 @@ public abstract class SceneObjectNode extends Class521_Sub1 {
 
 	public short aShort9561;
 
-	int method13036(Class282_Sub24[] arr_1, int i_2) {
+	int method13036(Class282_Sub24[] arr_1) {
 		Vector3 vector3_3 = this.method11166().aClass385_3595;
-		return this.method13004((int) vector3_3.x >> this.aClass206_7970.anInt2592, (int) vector3_3.z >> this.aClass206_7970.anInt2592, arr_1, 868144561);
+		return this.method13004((int) vector3_3.x >> this.aClass206_7970.anInt2592, (int) vector3_3.z >> this.aClass206_7970.anInt2592, arr_1);
 	}
 
 	boolean method13030(GraphicalRenderer graphicalrenderer_1) {
@@ -24,12 +24,12 @@ public abstract class SceneObjectNode extends Class521_Sub1 {
 
 	int method13024(Class282_Sub24[] arr_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1, 868144561);
+		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1);
 	}
 
 	int method13025(Class282_Sub24[] arr_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1, 868144561);
+		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1);
 	}
 
 	SceneObjectNode(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
@@ -42,7 +42,7 @@ public abstract class SceneObjectNode extends Class521_Sub1 {
 
 	int method12982(Class282_Sub24[] arr_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1, 868144561);
+		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1);
 	}
 
 	boolean method13022(GraphicalRenderer graphicalrenderer_1) {
@@ -57,7 +57,7 @@ public abstract class SceneObjectNode extends Class521_Sub1 {
 
 	int method13031(Class282_Sub24[] arr_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1, 868144561);
+		return this.method13004((int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, arr_1);
 	}
 
 	boolean method12998(GraphicalRenderer graphicalrenderer_1) {

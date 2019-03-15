@@ -2,8 +2,8 @@ public class Class468_Sub12 extends Preference {
 
 	static int anInt7899;
 
-	public void method12703(int i_1) {
-		if (this.manager.currentToolkit.method12777(284817815) && !Class60.method1166(this.manager.currentToolkit.getValue(-1858254285), -1873449120)) {
+	public void method12703() {
+		if (this.manager.currentToolkit.method12777() && !Class60.method1166(this.manager.currentToolkit.getValue(-1858254285), -1873449120)) {
 			this.anInt5578 = 0;
 		}
 
@@ -25,7 +25,7 @@ public class Class468_Sub12 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -49,7 +49,7 @@ public class Class468_Sub12 extends Preference {
 		return 0;
 	}
 
-	public boolean method12707(int i_1) {
+	public boolean method12707() {
 		return Class60.method1166(this.manager.currentToolkit.getValue(-1301268154), -1253259438);
 	}
 
@@ -57,17 +57,17 @@ public class Class468_Sub12 extends Preference {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(-2032316540), -1020408311) ? 3 : 1;
 	}
 
-	static void method12708(int i_0) {
+	static void method12708() {
 		Class9.aString102 = "";
 		Class9.aString99 = "";
 	}
 
-	public static void method12709(int i_0, byte b_1) {
+	public static void method12709(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(12, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) 7);
 	}
 
-	public static void method12710(int i_0, byte b_1) {
+	public static void method12710(int i_0) {
 		Class282_Sub14.anInt7597 = i_0;
 		IComponentDefinitions.aClass229_1341.method3859(-1043512499);
 	}

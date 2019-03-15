@@ -38,7 +38,7 @@ public class HostNameIdentifier implements Runnable {
 		Class480.method8044(interface_0.components, icomponentdefinitions_1, bool_2, (byte) 4);
 	}
 
-	public static void method486(int i_0, int i_1, int i_2, int i_3) {
+	public static void method486(int i_0, int i_1, int i_2) {
 		i_0 <<= 3;
 		i_1 <<= 3;
 		i_2 <<= 3;
@@ -53,13 +53,13 @@ public class HostNameIdentifier implements Runnable {
 		client.aBool7371 = true;
 	}
 
-	public static void method487(Class116 class116_0, int i_1, int i_2) {
+	public static void method487(Class116 class116_0, int i_1) {
 		Class148.aClass282_Sub15_Sub2_1735.method15101((short) 21815);
-		Class282_Sub15_Sub2 class282_sub15_sub2_3 = class116_0.method1954(-1993733847);
+		Class282_Sub15_Sub2 class282_sub15_sub2_3 = class116_0.method1954();
 		if (class282_sub15_sub2_3 != null) {
 			Class502.aClass253_5830.method4334();
 			Class148.aClass282_Sub15_Sub2_1735 = class282_sub15_sub2_3;
-			Class148.aClass282_Sub15_Sub2_1735.method15098(class116_0.method1955(1251820980), false, 355198113);
+			Class148.aClass282_Sub15_Sub2_1735.method15098(class116_0.method1955(), false, 355198113);
 			Class148.aClass282_Sub15_Sub2_1735.method15144(i_1, -216399579);
 			if (Class502.aClass253_5830 != null) {
 				Class502.aClass253_5830.method4329(Class148.aClass282_Sub15_Sub2_1735);

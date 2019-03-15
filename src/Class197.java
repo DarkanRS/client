@@ -26,9 +26,9 @@ public class Class197 {
 		throw new Error();
 	}
 
-	public static Interface17 method3202(RsByteBuffer rsbytebuffer_0, int i_1) {
-		Class221 class221_2 = Class100.method1640(rsbytebuffer_0.readUnsignedByte(), (byte) -96);
-		return (Interface17) (class221_2 == Class221.aClass221_2759 ? SceneObjectManager.method3545(rsbytebuffer_0, -532578452) : (class221_2 == Class221.aClass221_2761 ? Class97.method1614(rsbytebuffer_0, 1268954246) : (class221_2 == Class221.aClass221_2760 ? ClipMap.method6009(rsbytebuffer_0, -1710988237) : null)));
+	public static Interface17 method3202(RsByteBuffer rsbytebuffer_0) {
+		Class221 class221_2 = Class100.method1640(rsbytebuffer_0.readUnsignedByte());
+		return (Interface17) (class221_2 == Class221.aClass221_2759 ? SceneObjectManager.method3545(rsbytebuffer_0) : (class221_2 == Class221.aClass221_2761 ? Class97.method1614(rsbytebuffer_0) : (class221_2 == Class221.aClass221_2760 ? ClipMap.method6009(rsbytebuffer_0) : null)));
 	}
 
 	static final void method3203(RsBitsBuffer rsbitsbuffer_0, byte b_1) {
@@ -43,9 +43,9 @@ public class Class197 {
 		CoordGrid coordgrid_8 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		player_3.regionBaseX[0] = i_6 - coordgrid_8.x;
 		player_3.regionBaseY[0] = i_7 - coordgrid_8.y;
-		player_3.method11172((float) ((player_3.regionBaseX[0] << 9) + (player_3.getSize(828768449) << 8)), player_3.method11165().aClass385_3595.y, (float) ((player_3.regionBaseY[0] << 9) + (player_3.getSize(828768449) << 8)));
+		player_3.method11172((float) ((player_3.regionBaseX[0] << 9) + (player_3.getSize() << 8)), player_3.method11165().aClass385_3595.y, (float) ((player_3.regionBaseY[0] << 9) + (player_3.getSize() << 8)));
 		Class4.anInt35 = player_3.plane = player_3.aByte7968 = b_5;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(player_3.regionBaseX[0], player_3.regionBaseY[0], 1664929780)) {
+		if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(player_3.regionBaseX[0], player_3.regionBaseY[0], 1664929780)) {
 			player_3.aByte7968 = (byte) (player_3.aByte7968 + 1);
 		}
 		if (aClass282_Sub35Array2428[i_2] != null) {

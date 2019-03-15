@@ -19,10 +19,10 @@ public class Class331 {
 			}
 			class282_sub50_sub14_3 = new Class282_Sub50_Sub14();
 			if (bytes_4 != null) {
-				class282_sub50_sub14_3.method15209(new RsByteBuffer(bytes_4), 625561470);
+				class282_sub50_sub14_3.method15209(new RsByteBuffer(bytes_4));
 			}
 			if (i_1 >= 32768) {
-				class282_sub50_sub14_3.method15213(707027607);
+				class282_sub50_sub14_3.method15213();
 			}
 			this.aClass229_3871.put(class282_sub50_sub14_3, (long) i_1);
 			return class282_sub50_sub14_3;
@@ -40,13 +40,13 @@ public class Class331 {
 		}
 	}
 
-	static void method5921(byte b_0) {
+	static void method5921() {
 		if (client.aByteArray7152 != null) {
-			Class346.method6160(1908586920);
+			Class346.method6160();
 		} else if (Class9.anInt76 != -1) {
-			Class279.method4964(-1370855311);
+			Class279.method4964();
 		} else {
-			Class282_Sub20_Sub26.lobbyLogin(Class9.aString99, Class9.aString102, (byte) -8);
+			Class282_Sub20_Sub26.lobbyLogin(Class9.aString99, Class9.aString102);
 		}
 	}
 

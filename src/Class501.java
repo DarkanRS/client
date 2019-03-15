@@ -12,7 +12,7 @@ public class Class501 {
 		throw new Error();
 	}
 
-	static void method8350(int i_0) {
+	static void method8350() {
 		Class9.aClass184_73.method3054((short) 1653);
 		Class9.aClass184_73.recievedBuffer.index = 0;
 		Class9.aClass184_73.currentPacket = null;
@@ -23,7 +23,7 @@ public class Class501 {
 		Class9.aClass184_73.idleReadPulses = 0;
 		client.anInt7178 = 0;
 		Class350.method6189((byte) 111);
-		Class256.method4416((byte) -105);
+		Class256.method4416();
 
 		int i_1;
 		for (i_1 = 0; i_1 < 2048; i_1++) {
@@ -52,7 +52,7 @@ public class Class501 {
 		Class388.method6692(1016678349);
 		Class496.aClass510_5816 = null;
 		Class28.aLong351 = 0L;
-		FontMetrics.method6989(1407669515);
+		FontMetrics.method6989();
 	}
 
 }

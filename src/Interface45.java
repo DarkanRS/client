@@ -2,7 +2,7 @@ public interface Interface45 {
 
 	void method244(int var1, int var2, int var3);
 
-	void method245(int var1, int var2, int var3, int var4);
+	void method245(int var1, int var2, int var3);
 
 	void method246(int var1, int var2, int var3);
 

@@ -75,7 +75,7 @@ public class Class130 {
 										int i_19;
 										if (this.aClass505_Sub1_1592.aBool8467) {
 											for (i_19 = 0; i_19 < shorts_18.length; i_19++) {
-												class282_sub35_sub1_14.writeShort(shorts_18[i_19] & 0xffff, 1417031095);
+												class282_sub35_sub1_14.writeShort(shorts_18[i_19] & 0xffff);
 												++i_11;
 											}
 										} else {

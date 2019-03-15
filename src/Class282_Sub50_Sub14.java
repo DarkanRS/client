@@ -6,18 +6,18 @@ public class Class282_Sub50_Sub14 extends CacheableNode {
 	public int[] anIntArray9747;
 	public char[] aCharArray9748;
 
-	void method15209(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method15209(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method15210(rsbytebuffer_1, i_3, (byte) -71);
+			this.method15210(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method15210(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method15210(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aString9744 = rsbytebuffer_1.readString();
 		} else {
@@ -51,7 +51,7 @@ public class Class282_Sub50_Sub14 extends CacheableNode {
 
 	}
 
-	public int method15211(char var_1, int i_2) {
+	public int method15211(char var_1) {
 		if (this.anIntArray9746 == null) {
 			return -1;
 		} else {
@@ -65,7 +65,7 @@ public class Class282_Sub50_Sub14 extends CacheableNode {
 		}
 	}
 
-	public int method15212(char var_1, byte b_2) {
+	public int method15212(char var_1) {
 		if (this.anIntArray9747 == null) {
 			return -1;
 		} else {
@@ -79,7 +79,7 @@ public class Class282_Sub50_Sub14 extends CacheableNode {
 		}
 	}
 
-	void method15213(int i_1) {
+	void method15213() {
 		int i_2;
 		if (this.anIntArray9747 != null) {
 			for (i_2 = 0; i_2 < this.anIntArray9747.length; i_2++) {

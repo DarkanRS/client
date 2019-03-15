@@ -9,7 +9,7 @@ public class Class468_Sub4 extends Preference {
 	}
 
 	public void method12639(byte b_1) {
-		if (this.manager.currentToolkit.method12777(284817815) && !Class60.method1166(this.manager.currentToolkit.getValue(61504612), 166435291)) {
+		if (this.manager.currentToolkit.method12777() && !Class60.method1166(this.manager.currentToolkit.getValue(61504612), 166435291)) {
 			this.anInt5578 = 0;
 		}
 
@@ -27,7 +27,7 @@ public class Class468_Sub4 extends Preference {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(340724503), -757986233) ? 3 : 1;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -47,7 +47,7 @@ public class Class468_Sub4 extends Preference {
 		return 0;
 	}
 
-	public boolean method12646(int i_1) {
+	public boolean method12646() {
 		return Class60.method1166(this.manager.currentToolkit.getValue(-655051522), -271241654);
 	}
 

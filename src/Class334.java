@@ -84,7 +84,7 @@ public class Class334 {
 	}
 
 	void method5939(GraphicalRenderer graphicalrenderer_1, Class334 class334_2) {
-		RSMesh rsmesh_3 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3893, 0);
+		RSMesh rsmesh_3 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3893);
 		if (rsmesh_3 != null) {
 			graphicalrenderer_1.qa(anIntArray3884);
 			graphicalrenderer_1.r(0, 0, this.anInt3902, this.anInt3902);
@@ -145,7 +145,7 @@ public class Class334 {
 			matrix44var_15.method5223(0.0F, 0.0F, (float) (50 - meshrasterizer_16.AA()));
 			meshrasterizer_16.method11282(matrix44var_15, (Class275_Sub5) null, 1);
 			this.aClass160_3910 = graphicalrenderer_1.method8668(0, 0, this.anInt3902, this.anInt3902, true);
-			this.aClass160_3910.method2751(0, 0, 3);
+			this.aClass160_3910.method2751();
 			graphicalrenderer_1.method8424(matrix44arr_12);
 			graphicalrenderer_1.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 		}
@@ -161,8 +161,8 @@ public class Class334 {
 		if (this.aClass160_3910 == null) {
 			if (this.anInt3887 == 0) {
 				if (Class247.anInterface22_3046.method139(this.anInt3893, -725088114)) {
-					int[] ints_3 = Class247.anInterface22_3046.method141(this.anInt3893, 0.7F, this.anInt3902, this.anInt3902, false, 1606527906);
-					this.aClass160_3910 = graphicalrenderer_1.createNativeSprite(ints_3, 0, this.anInt3902, this.anInt3902, this.anInt3902, -1804968029);
+					int[] ints_3 = Class247.anInterface22_3046.method141(this.anInt3893, this.anInt3902, this.anInt3902, false, 1606527906);
+					this.aClass160_3910 = graphicalrenderer_1.createNativeSprite(ints_3, this.anInt3902, this.anInt3902, this.anInt3902, -1804968029);
 				}
 			} else if (this.anInt3887 == 2) {
 				this.method5939(graphicalrenderer_1, class334_2);
@@ -177,7 +177,7 @@ public class Class334 {
 	static void method5943(GraphicalRenderer graphicalrenderer_0) {
 		if (aClass528_3905 == null) {
 			RSMesh rsmesh_1 = new RSMesh(580, 1104, 1);
-			rsmesh_1.method2664((short) 0, (short) 32767, (short) 0, (short) 1024, (short) 1024, (short) 1024, (byte) 0, (byte) 0, (byte) 0);
+			rsmesh_1.method2664();
 			rsmesh_1.method2662(0, 128, 0);
 			rsmesh_1.method2662(0, -128, 0);
 
@@ -291,7 +291,7 @@ public class Class334 {
 		graphicalrenderer_1.ba(2, 0);
 		graphicalrenderer_1.B(0, 0, this.anInt3902, this.anInt3902, 0, 0);
 		aClass160_3912.method2754(0, 0, this.anInt3902, this.anInt3902, 1, 0, 0);
-		this.aClass160_3910.method2751(0, 0, 3);
+		this.aClass160_3910.method2751();
 		graphicalrenderer_1.method8424(matrix44arr_14);
 		graphicalrenderer_1.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 	}
@@ -326,8 +326,8 @@ public class Class334 {
 				}
 			}
 
-			aClass160_3912 = graphicalrenderer_0.createNativeSprite(ints_2, 0, 128, 128, 128, -1206625053);
-			aClass160_3895 = graphicalrenderer_0.createNativeSprite(ints_1, 0, 128, 128, 128, 501003044);
+			aClass160_3912 = graphicalrenderer_0.createNativeSprite(ints_2, 128, 128, 128, -1206625053);
+			aClass160_3895 = graphicalrenderer_0.createNativeSprite(ints_1, 128, 128, 128, 501003044);
 		}
 
 	}

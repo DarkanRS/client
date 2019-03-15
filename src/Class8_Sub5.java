@@ -189,7 +189,7 @@ public class Class8_Sub5 extends FontRenderer {
 				}
 			}
 
-			this.aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15540(class505_sub1_1, Class150.aClass150_1951, Class76.aClass76_751, i_6, i_6, false, bytes_28, Class150.aClass150_1951);
+			this.aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15540(class505_sub1_1, Class150.aClass150_1951, Class76.aClass76_751, i_6, i_6, bytes_28, Class150.aClass150_1951);
 			this.aBool9326 = true;
 		} else {
 			int[] ints_29 = new int[i_6 * i_6];
@@ -232,7 +232,7 @@ public class Class8_Sub5 extends FontRenderer {
 				}
 			}
 
-			this.aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_6, i_6, false, ints_29, 0, 0);
+			this.aClass137_Sub1_Sub1_9325 = Class137_Sub1_Sub1.method15537(class505_sub1_1, i_6, i_6, ints_29, 0, 0);
 			this.aBool9326 = false;
 		}
 

@@ -44,18 +44,18 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	public final void method15926(int i_1, byte b_2) {
+	public final void method15926() {
 		if (this.aClass456_10404 != null && !this.aClass456_10404.method7580(1671019519)) {
-			this.aClass456_10404.method7627(i_1, 360110199);
+			this.aClass456_10404.method7627(1, 360110199);
 		}
 
 	}
 
-	public final boolean method15927(int i_1) {
+	public final boolean method15927() {
 		return this.aClass456_10404 != null && !this.aClass456_10404.hasSpeed(-432924037);
 	}
 
-	public final boolean method15928(short s_1) {
+	public final boolean method15928() {
 		return this.aClass456_10404 == null || this.aClass456_10404.method7580(283387313);
 	}
 
@@ -99,7 +99,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		SpotAnimDefinitions spotanimdefinitions_15 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt10406, (byte) -53);
 		int i_16 = spotanimdefinitions_15.animationId;
 		if (i_16 != -1) {
-			this.aClass456_10404 = new Class456_Sub2(this, false);
+			this.aClass456_10404 = new Class456_Sub2(this);
 			int i_17 = spotanimdefinitions_15.aBool6968 ? 0 : 2;
 			if (bool_14) {
 				i_17 = 1;
@@ -120,7 +120,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		}
 
 		if (this.aClass539_10409 != null) {
-			this.aClass539_10409.method11511(graphicalrenderer_1, (long) client.cycles, arr_5, arr_6, false);
+			this.aClass539_10409.method11511(graphicalrenderer_1, (long) client.cycles, arr_5, arr_6);
 			this.aClass539_10409.method11515(this.plane, this.aShort9458, this.localX, this.aShort9456, this.localY);
 		}
 
@@ -133,7 +133,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		return false;
 	}
 
@@ -202,7 +202,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		MeshRasterizer meshrasterizer_3 = this.method15929(graphicalrenderer_1, 0x800 | (this.anInt10408 != 0 ? 5 : 0), this.anInt10406, (short) -28146);
 		if (meshrasterizer_3 == null) {
 			return null;

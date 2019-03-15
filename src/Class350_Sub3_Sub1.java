@@ -7,7 +7,7 @@ public class Class350_Sub3_Sub1 extends Class350_Sub3 {
 		this.anInt10160 = i_16;
 	}
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_610;
 	}
 

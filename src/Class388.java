@@ -14,17 +14,17 @@ public class Class388 implements Interface41 {
 		return Class445.aClass445_5382;
 	}
 
-	public Class445 method232(byte b_1) {
+	public Class445 method232() {
 		return Class445.aClass445_5382;
 	}
 
-	Class388(Index index_1, String string_2) {
+	Class388(Index index_1) {
 		this.aClass317_4720 = index_1;
-		this.aString4719 = string_2;
+		this.aString4719 = "details";
 	}
 
 	public int method231() {
-		return this.aClass317_4720.method5629(this.aString4719, 71472045) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 58);
+		return this.aClass317_4720.method5629(this.aString4719) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 58);
 	}
 
 	public Class445 method230() {
@@ -35,8 +35,8 @@ public class Class388 implements Interface41 {
 		return Class445.aClass445_5382;
 	}
 
-	public int getCompletion(int i_1) {
-		return this.aClass317_4720.method5629(this.aString4719, 71472045) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 25);
+	public int getCompletion() {
+		return this.aClass317_4720.method5629(this.aString4719) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 25);
 	}
 
 	public Class445 method235() {
@@ -66,8 +66,8 @@ public class Class388 implements Interface41 {
 	static void method6692(int i_0) {
 		TCPMessage tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
 		tcpmessage_1.buffer.writeByte(Class158.windowedMode());
-		tcpmessage_1.buffer.writeShort(Class349.anInt4083, 1417031095);
-		tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379, 1417031095);
+		tcpmessage_1.buffer.writeShort(Class349.anInt4083);
+		tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
 		tcpmessage_1.buffer.writeByte(Class393.preferences.aClass468_Sub4_8223.method12641(-965992195));
 		client.aClass184_7475.method3049(tcpmessage_1, 664640946);
 	}

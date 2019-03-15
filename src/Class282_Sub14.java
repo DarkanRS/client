@@ -10,7 +10,7 @@ public class Class282_Sub14 extends Node {
 	byte[] aByteArray7595 = new byte[128];
 	int anInt7593;
 
-	boolean method12216(Class250 class250_1, byte[] bytes_2, int[] ints_3, int i_4) {
+	boolean method12216(Class250 class250_1, byte[] bytes_2, int[] ints_3) {
 		boolean bool_5 = true;
 		int i_6 = 0;
 		Object obj_7 = null;
@@ -22,9 +22,9 @@ public class Class282_Sub14 extends Node {
 					if (i_9 != i_6) {
 						i_6 = i_9--;
 						if ((i_9 & 0x1) == 0) {
-							obj_7 = class250_1.method4290(i_9 >> 2, ints_3, (byte) 36);
+							obj_7 = class250_1.method4290(i_9 >> 2, ints_3);
 						} else {
-							obj_7 = class250_1.method4287(i_9 >> 2, ints_3, -2001370194);
+							obj_7 = class250_1.method4287(i_9 >> 2, ints_3);
 						}
 
 						if (obj_7 == null) {
@@ -43,7 +43,7 @@ public class Class282_Sub14 extends Node {
 		return bool_5;
 	}
 
-	void method12217(short s_1) {
+	void method12217() {
 		this.anIntArray7596 = null;
 	}
 
@@ -487,7 +487,7 @@ public class Class282_Sub14 extends Node {
 	public static final void method12221(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
 		if (client.aClass118_7257 == null && !Class20.aBool161 && icomponentdefinitions_0 != null && Class96_Sub14.method14643(icomponentdefinitions_0, 735931958)) {
 			client.aClass118_7257 = icomponentdefinitions_0;
-			client.aClass118_7247 = Class468_Sub22.method12880(icomponentdefinitions_0, (byte) 34);
+			client.aClass118_7247 = Class468_Sub22.method12880(icomponentdefinitions_0);
 			client.anInt7361 = i_1;
 			client.anInt7362 = i_2;
 			Class96_Sub1.anInt8308 = 0;
@@ -496,10 +496,10 @@ public class Class282_Sub14 extends Node {
 
 	}
 
-	static void method12222(int i_0) {
+	static void method12222() {
 	}
 
-	public static void method12223(int i_0, byte b_1) {
+	public static void method12223(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(6, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -46);
 	}

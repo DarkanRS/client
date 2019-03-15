@@ -8,7 +8,7 @@ public final class Class464 {
 
 	public Class275_Sub1 aClass275_Sub1_5554 = new Class275_Sub1();
 
-	public Class275_Sub1 method7731(int i_1) {
+	public Class275_Sub1 method7731() {
 		Class275_Sub1 class275_sub1_2 = this.aClass275_Sub1_5554.aClass275_Sub1_7706;
 		if (class275_sub1_2 == this.aClass275_Sub1_5554) {
 			this.aClass275_Sub1_5553 = null;
@@ -19,7 +19,7 @@ public final class Class464 {
 		}
 	}
 
-	public Class275_Sub1 method7734(byte b_1) {
+	public Class275_Sub1 method7734() {
 		Class275_Sub1 class275_sub1_2 = this.aClass275_Sub1_5553;
 		if (class275_sub1_2 == this.aClass275_Sub1_5554) {
 			this.aClass275_Sub1_5553 = null;
@@ -48,7 +48,7 @@ public final class Class464 {
 		return i_2;
 	}
 
-	public void method7740(int i_1) {
+	public void method7740() {
 		while (true) {
 			Class275_Sub1 class275_sub1_2 = this.aClass275_Sub1_5554.aClass275_Sub1_7706;
 			if (class275_sub1_2 == this.aClass275_Sub1_5554) {
@@ -68,14 +68,14 @@ public final class Class464 {
 		return i_0 == 11 || i_0 == 2 || i_0 == 18 || i_0 == 6 || i_0 == 9;
 	}
 
-	static final void method7743(IComponentDefinitions[] arr_0, int i_1, byte b_2) {
+	static final void method7743(IComponentDefinitions[] arr_0, int i_1) {
 		for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
 			IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
 			if (icomponentdefinitions_4 != null && icomponentdefinitions_4.parent == i_1 && !client.method11651(icomponentdefinitions_4)) {
 				if (icomponentdefinitions_4.type == 0) {
-					method7743(arr_0, icomponentdefinitions_4.idHash, (byte) 10);
+					method7743(arr_0, icomponentdefinitions_4.idHash);
 					if (icomponentdefinitions_4.aClass118Array1439 != null) {
-						method7743(icomponentdefinitions_4.aClass118Array1439, icomponentdefinitions_4.idHash, (byte) 10);
+						method7743(icomponentdefinitions_4.aClass118Array1439, icomponentdefinitions_4.idHash);
 					}
 					Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
 					if (class282_sub44_5 != null) {

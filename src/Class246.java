@@ -8,8 +8,8 @@ public class Class246 {
 		throw new Error();
 	}
 
-	public static Class461 method4203(int i_0, byte b_1) {
-		Class461[] arr_2 = Connection.method3343(-757707497);
+	public static Class461 method4203(int i_0) {
+		Class461[] arr_2 = Connection.method3343();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Class461 class461_4 = arr_2[i_3];
 			if (i_0 == class461_4.anInt5541) {

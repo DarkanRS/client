@@ -19,14 +19,14 @@ final class Class512 implements Runnable {
 		}
 	}
 
-	public static final void method8762(Player player_0, int i_1, int i_2, byte b_3, byte b_4) {
+	public static final void method8762(Player player_0, int i_1, int i_2, byte b_3) {
 		int i_5 = player_0.regionBaseX[0];
 		int i_6 = player_0.regionBaseY[0];
 		if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1757338570) && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-701853905) && i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(66898442) && i_2 >= 0 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-890656908)) {
-			int i_7 = Class112.findRoute(i_5, i_6, player_0.getSize(828768449), Class38.method853(i_1, i_2, 1356660525), IndexLoaders.MAP_REGION_DECODER.getClipMap(player_0.plane, 1801793645), true, client.walkStepsX, client.walkStepsY, -1498716878);
+			int i_7 = Class112.findRoute(i_5, i_6, player_0.getSize(), Class38.method853(i_1, i_2, 1356660525), IndexLoaders.MAP_REGION_DECODER.getClipMap(player_0.plane), true, client.walkStepsX, client.walkStepsY, -1498716878);
 			if (i_7 >= 1 && i_7 <= 3) {
 				for (int i_8 = 0; i_8 < i_7 - 1; i_8++) {
-					player_0.method16132(client.walkStepsX[i_8], client.walkStepsY[i_8], b_3, (short) 255);
+					player_0.method16132(client.walkStepsX[i_8], client.walkStepsY[i_8], b_3);
 				}
 			}
 		}

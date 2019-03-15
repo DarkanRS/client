@@ -30,7 +30,7 @@ public abstract class Class101 {
 		Class115[] arr_3 = this.aClass115Array1010;
 		for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class115 class115_5 = arr_3[i_4];
-			String string_6 = class115_5.method1892((byte) -1);
+			String string_6 = class115_5.method1892();
 			if (string_6 != null && string_6.equals(string_1)) {
 				if (!class115_5.method1899()) {
 					throw new Exception_Sub2_Sub1(string_1);
@@ -47,12 +47,12 @@ public abstract class Class101 {
 		this.aClass107_1013 = new Class107(this.anInt1009, anInterface11_1012);
 		int i_3;
 		for (i_3 = 0; i_3 < this.anInt1009; i_3++) {
-			this.aClass107_1013.method1822(i_3, class114_2.aClass122Array1236[i_3].aString1530, this.method1765(class114_2.aClass122Array1236[i_3]), 2010834409);
+			this.aClass107_1013.method1822(i_3, class114_2.aClass122Array1236[i_3].aString1530, this.method1765(class114_2.aClass122Array1236[i_3]));
 		}
 		this.anInt1016 = class114_2.aClass122Array1240.length;
 		this.aClass107_1011 = new Class107(this.anInt1016, anInterface11_1012);
 		for (i_3 = 0; i_3 < this.anInt1016; i_3++) {
-			this.aClass107_1011.method1822(i_3, class114_2.aClass122Array1240[i_3].aString1530, this.method1765(class114_2.aClass122Array1240[i_3]), 2010834409);
+			this.aClass107_1011.method1822(i_3, class114_2.aClass122Array1240[i_3].aString1530, this.method1765(class114_2.aClass122Array1240[i_3]));
 		}
 		this.aClass115Array1010 = new Class115[class114_2.aClass99Array1241.length];
 		for (i_3 = 0; i_3 < class114_2.aClass99Array1241.length; i_3++) {
@@ -86,7 +86,7 @@ public abstract class Class101 {
 
 	public abstract boolean method1655(Class115 var1);
 
-	public final Class115 method1656(int i_1) {
+	public final Class115 method1656() {
 		return this.anInt1015 >= 0 ? this.aClass115Array1010[this.anInt1015] : null;
 	}
 
@@ -94,7 +94,7 @@ public abstract class Class101 {
 		this.aClass115Array1010[this.anInt1015].method1923(class282_sub21_sub1_1, f_2, f_3);
 	}
 
-	public final void method1659(Class282_Sub21_Sub1 class282_sub21_sub1_1, float f_2, short s_3) {
+	public final void method1659(Class282_Sub21_Sub1 class282_sub21_sub1_1, float f_2) {
 		this.aClass115Array1010[this.anInt1015].method1894(class282_sub21_sub1_1, f_2);
 	}
 
@@ -126,7 +126,7 @@ public abstract class Class101 {
 		this.aClass115Array1010[this.anInt1015].method1893(i_1, f_2, f_3, f_4);
 	}
 
-	public final void method1671(Class282_Sub21_Sub1 class282_sub21_sub1_1, int i_2, Interface30 interface30_3, byte b_4) {
+	public final void method1671(Class282_Sub21_Sub1 class282_sub21_sub1_1, int i_2, Interface30 interface30_3) {
 		this.aClass115Array1010[this.anInt1015].method1896(class282_sub21_sub1_1, i_2, interface30_3);
 	}
 
@@ -134,11 +134,11 @@ public abstract class Class101 {
 		this.aClass115Array1010[this.anInt1015].method1893(i_1, vector3_2.x, vector3_2.y, vector3_2.z);
 	}
 
-	public final void method1673(int i_1, float[] floats_2, int i_3, int i_4) {
+	public final void method1673(int i_1, float[] floats_2, int i_3) {
 		this.aClass115Array1010[this.anInt1015].method1904(i_1, floats_2, i_3);
 	}
 
-	public final void method1674(int i_1, Matrix44Arr matrix44arr_2, int i_3) {
+	public final void method1674(int i_1, Matrix44Arr matrix44arr_2) {
 		this.aClass115Array1010[this.anInt1015].method1905(i_1, matrix44arr_2);
 	}
 
@@ -204,7 +204,7 @@ public abstract class Class101 {
 
 	abstract Class282_Sub21_Sub1 method1694(Class122 var1);
 
-	public final void method1696(Class282_Sub21_Sub1 class282_sub21_sub1_1, int i_2, int i_3) {
+	public final void method1696(Class282_Sub21_Sub1 class282_sub21_sub1_1, int i_2) {
 		float f_4 = (float) (i_2 >> 16 & 0xff) / 255.0F;
 		float f_5 = (float) (i_2 >> 8 & 0xff) / 255.0F;
 		float f_6 = (float) (i_2 & 0xff) / 255.0F;
@@ -230,7 +230,7 @@ public abstract class Class101 {
 		return this.anInt1015;
 	}
 
-	public String method1717(int i_1) {
+	public String method1717() {
 		return this.aString1014;
 	}
 
@@ -248,7 +248,7 @@ public abstract class Class101 {
 
 	abstract Class282_Sub21_Sub1 method1765(Class122 var1);
 
-	static void method1773(String[] arr_0, int[] ints_1, int i_2, int i_3, int i_4) {
+	static void method1773(String[] arr_0, int[] ints_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_5 = (i_3 + i_2) / 2;
 			int i_6 = i_2;
@@ -272,22 +272,22 @@ public abstract class Class101 {
 			arr_0[i_6] = string_7;
 			ints_1[i_3] = ints_1[i_6];
 			ints_1[i_6] = i_8;
-			method1773(arr_0, ints_1, i_2, i_6 - 1, 698486595);
-			method1773(arr_0, ints_1, i_6 + 1, i_3, 698486595);
+			method1773(arr_0, ints_1, i_2, i_6 - 1);
+			method1773(arr_0, ints_1, i_6 + 1, i_3);
 		}
 	}
 
-	public static void method1774(byte b_0) {
+	public static void method1774() {
 		if (Class9.loginStage == 105) {
 			Class9.loginStage = 115;
 		}
 	}
 
-	public static int method1776(int i_0, boolean bool_1, int i_2) {
-		if (bool_1) {
+	public static int method1776(int i_0) {
+		if (false) {
 			return 0;
 		} else {
-			ItemContainer class282_sub30_3 = CS2Runner.getItemContainer(i_0, bool_1);
+			ItemContainer class282_sub30_3 = CS2Runner.getItemContainer(i_0, false);
 			if (class282_sub30_3 == null) {
 				return IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
 			} else {

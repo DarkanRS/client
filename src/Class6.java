@@ -22,7 +22,7 @@ public class Class6 {
 		return interface17_0 != null && interface17_0.method127(class282_sub53_1, client.anInterface16Array7298, client.maximumHeldKeys, Class96_Sub21.keyRecorder, (byte) 2);
 	}
 
-	static void method303(int i_0, int i_1, int i_2, int i_3) {
+	static void method303(int i_0, int i_1, int i_2) {
 		if (i_0 == 1008) {
 			Class210.method3614(Class397.aClass397_4801, i_1, i_2, (byte) 87);
 		} else if (i_0 == 1009) {
@@ -36,7 +36,7 @@ public class Class6 {
 		}
 	}
 
-	public static int method304(int i_0) {
+	public static int method304() {
 		return (double) Class291_Sub1.aFloat3462 == 3.0D ? 37 : ((double) Class291_Sub1.aFloat3462 == 4.0D ? 50 : ((double) Class291_Sub1.aFloat3462 == 6.0D ? 75 : ((double) Class291_Sub1.aFloat3462 == 8.0D ? 100 : 200)));
 	}
 }

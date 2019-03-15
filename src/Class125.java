@@ -67,7 +67,7 @@ public class Class125 implements Interface8 {
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) -42);
 	}
 
-	static final void method2170(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method2170(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1404763010) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
@@ -76,7 +76,7 @@ public class Class125 implements Interface8 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final int method2172(int i_0, int i_1) {
+	static final int method2172(int i_0) {
 		int i_2 = i_0 & 0x3f;
 		int i_3 = i_0 >> 6 & 0x3;
 		if (i_2 == 18) {

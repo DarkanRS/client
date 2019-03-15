@@ -12,7 +12,7 @@ public class CircularBuffer {
 		throw new Error();
 	}
 
-	public static synchronized byte[] createBuffer(int size, int i_1) {
+	public static synchronized byte[] createBuffer(int size) {
 		byte[] bytes_2;
 		if (size == 100 && anInt5768 > 0) {
 			bytes_2 = aByteArrayArray5767[--anInt5768];
@@ -41,7 +41,7 @@ public class CircularBuffer {
 		}
 	}
 
-	public static byte[][][] method8246(int i_0, short s_1) {
+	public static byte[][][] method8246(int i_0) {
 		byte[][][] bytes_2 = new byte[8][4][];
 		int i_3 = i_0;
 		int i_4 = i_0;

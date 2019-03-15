@@ -24,7 +24,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		Object obj_2 = null;
 		Shadow class282_sub50_sub17_3;
 		if (this.aClass282_Sub50_Sub17_10491 == null && this.aBool10500) {
-			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true, 750971439);
+			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true);
 			class282_sub50_sub17_3 = (Shadow) (class452_4 != null ? class452_4.anObject5444 : null);
 		} else {
 			class282_sub50_sub17_3 = this.aClass282_Sub50_Sub17_10491;
@@ -50,7 +50,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		return this.aClass528_10499 != null ? this.aClass528_10499.YA() : 0;
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aClass528_10499 == null) {
 			return null;
 		} else {
@@ -61,8 +61,8 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		}
 	}
 
-	Class452 method16074(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, int i_4) {
-		ObjectDefinitions objectdefinitions_5 = this.aClass474_10492.getObjectDefinitions(this.anInt10495, 65280);
+	Class452 method16074(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3) {
+		ObjectDefinitions objectdefinitions_5 = this.aClass474_10492.getObjectDefinitions(this.anInt10495);
 		Ground class390_6;
 		Ground class390_7;
 		if (this.aBool10493) {
@@ -95,11 +95,11 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
 	}
 
-	public void method88(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method88(GraphicalRenderer graphicalrenderer_1) {
 		Object obj_3 = null;
 		Shadow class282_sub50_sub17_4;
 		if (this.aClass282_Sub50_Sub17_10491 == null && this.aBool10500) {
-			Class452 class452_5 = this.method16074(graphicalrenderer_1, 262144, true, 750971439);
+			Class452 class452_5 = this.method16074(graphicalrenderer_1, 262144, true);
 			class282_sub50_sub17_4 = (Shadow) (class452_5 != null ? class452_5.anObject5444 : null);
 		} else {
 			class282_sub50_sub17_4 = this.aClass282_Sub50_Sub17_10491;
@@ -146,7 +146,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		if (this.aClass528_10499 != null && graphicalrenderer_1.method8452(this.aClass528_10499.m(), i_2) == 0) {
 			return this.aClass528_10499;
 		} else {
-			Class452 class452_4 = this.method16074(graphicalrenderer_1, i_2, false, 750971439);
+			Class452 class452_4 = this.method16074(graphicalrenderer_1, i_2, false);
 			return class452_4 != null ? (MeshRasterizer) class452_4.anObject5443 : null;
 		}
 	}
@@ -167,7 +167,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		Object obj_2 = null;
 		Shadow class282_sub50_sub17_3;
 		if (this.aClass282_Sub50_Sub17_10491 == null && this.aBool10500) {
-			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true, 750971439);
+			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true);
 			class282_sub50_sub17_3 = (Shadow) (class452_4 != null ? class452_4.anObject5444 : null);
 		} else {
 			class282_sub50_sub17_3 = this.aClass282_Sub50_Sub17_10491;
@@ -199,11 +199,11 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		return this.aBool10500;
 	}
 
-	public void method87(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method87(GraphicalRenderer graphicalrenderer_1) {
 		Object obj_3 = null;
 		Shadow class282_sub50_sub17_4;
 		if (this.aClass282_Sub50_Sub17_10491 == null && this.aBool10500) {
-			Class452 class452_5 = this.method16074(graphicalrenderer_1, 262144, true, 750971439);
+			Class452 class452_5 = this.method16074(graphicalrenderer_1, 262144, true);
 			class282_sub50_sub17_4 = (Shadow) (class452_5 != null ? class452_5.anObject5444 : null);
 		} else {
 			class282_sub50_sub17_4 = this.aClass282_Sub50_Sub17_10491;
@@ -232,7 +232,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		return this.aBool10500;
 	}
 
-	public void method85(byte b_1) {
+	public void method85() {
 		if (this.aClass528_10499 != null) {
 			this.aClass528_10499.method11259();
 		}
@@ -242,7 +242,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		Object obj_2 = null;
 		Shadow class282_sub50_sub17_3;
 		if (this.aClass282_Sub50_Sub17_10491 == null && this.aBool10500) {
-			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true, 750971439);
+			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true);
 			class282_sub50_sub17_3 = (Shadow) (class452_4 != null ? class452_4.anObject5444 : null);
 		} else {
 			class282_sub50_sub17_3 = this.aClass282_Sub50_Sub17_10491;
@@ -258,7 +258,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		Object obj_2 = null;
 		Shadow class282_sub50_sub17_3;
 		if (this.aClass282_Sub50_Sub17_10491 == null && this.aBool10500) {
-			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true, 750971439);
+			Class452 class452_4 = this.method16074(graphicalrenderer_1, 262144, true);
 			class282_sub50_sub17_3 = (Shadow) (class452_4 != null ? class452_4.anObject5444 : null);
 		} else {
 			class282_sub50_sub17_3 = this.aClass282_Sub50_Sub17_10491;
@@ -356,7 +356,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		if (objectdefinitions_4.aBool5711) {
 			i_13 |= 0x80000;
 		}
-		Class452 class452_14 = this.method16074(graphicalrenderer_2, i_13, this.aBool10500, 750971439);
+		Class452 class452_14 = this.method16074(graphicalrenderer_2, i_13, this.aBool10500);
 		if (class452_14 != null) {
 			this.aClass528_10499 = (MeshRasterizer) class452_14.anObject5443;
 			this.aClass282_Sub50_Sub17_10491 = (Shadow) class452_14.anObject5444;
@@ -433,7 +433,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		}
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		MeshRasterizer meshrasterizer_5 = this.method16075(graphicalrenderer_1, 131072, 1304391023);
 		if (meshrasterizer_5 != null) {
 			Matrix44Var matrix44var_6 = this.method11168();
@@ -451,7 +451,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		}
 	}
 
-	static Class282_Sub53_Sub2 method16080(int i_0, int i_1, int i_2, long long_3, int i_5, int i_6) {
+	static Class282_Sub53_Sub2 method16080(int i_0, int i_1, int i_2, long long_3, int i_5) {
 		Class282_Sub53_Sub2[] arr_7 = Class282_Sub53_Sub2.aClass282_Sub53_Sub2Array9633;
 		synchronized (Class282_Sub53_Sub2.aClass282_Sub53_Sub2Array9633) {
 			Class282_Sub53_Sub2 class282_sub53_sub2_8;
@@ -469,7 +469,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		}
 	}
 
-	static boolean method16081(int i_0) {
+	static boolean method16081() {
 		return Class179.aBool2229;
 	}
 }

@@ -12,27 +12,27 @@ public class Class96_Sub9 extends Class96 {
 		this.anInt9279 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	boolean method1599(int i_1) {
+	boolean method1599() {
 		if (this.aClass116_9281 == null) {
 			this.aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, this.anInt9280);
 		}
 
-		return this.aClass116_9281.method1963(1418683997);
+		return this.aClass116_9281.method1963();
 	}
 
 	public void method1601() {
 		Class256.method4412(this.aClass116_9281, 68269153 * this.anInt9279 * -321392735, 1541193543);
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class256.method4412(this.aClass116_9281, this.anInt9279, 1212110524);
 	}
 
-	public static boolean method14585(int i_0, int i_1) {
+	public static boolean method14585(int i_0) {
 		return i_0 == (i_0 & -i_0);
 	}
 
-	static final void method14586(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method14586(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, -159099843) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);

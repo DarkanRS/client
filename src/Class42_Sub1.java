@@ -35,7 +35,7 @@ public class Class42_Sub1 extends Class42 {
 	}
 
 	static final void method14562(int i_0) {
-		FontMetrics.method6989(1407669515);
+		FontMetrics.method6989();
 		IndexLoaders.MAP_REGION_DECODER.method4485(-617728645);
 
 		int i_1;
@@ -47,7 +47,7 @@ public class Class42_Sub1 extends Class42 {
 			client.aClass281Array7180[i_1] = null;
 		}
 
-		Class186.method3084((short) 2795);
+		Class186.method3084();
 
 		for (i_1 = 0; i_1 < 2048; i_1++) {
 			client.players[i_1] = null;
@@ -70,9 +70,9 @@ public class Class42_Sub1 extends Class42 {
 		HitsplatDefinitions.method3851();
 	}
 
-	static void method14563(boolean bool_0, Class282_Sub15_Sub2 class282_sub15_sub2_1, short s_2) {
+	static void method14563(Class282_Sub15_Sub2 class282_sub15_sub2_1, short s_2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2_1);
-		SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2_1, Class320.aClass253_3723, -1541261130);
+		SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2_1, Class320.aClass253_3723);
 	}
 
 }

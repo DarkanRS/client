@@ -20,7 +20,7 @@ public class Class215 implements Interface17 {
 				return false;
 			}
 
-			if (this.anInt2684 > class282_sub53_1.getMeta((byte) 1)) {
+			if (this.anInt2684 > class282_sub53_1.getMeta()) {
 				return false;
 			}
 
@@ -47,7 +47,7 @@ public class Class215 implements Interface17 {
 				return false;
 			}
 
-			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta((byte) 1)) {
+			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta()) {
 				return false;
 			}
 
@@ -74,7 +74,7 @@ public class Class215 implements Interface17 {
 				return false;
 			}
 
-			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta((byte) 1)) {
+			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta()) {
 				return false;
 			}
 
@@ -101,7 +101,7 @@ public class Class215 implements Interface17 {
 				return false;
 			}
 
-			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta((byte) 1)) {
+			if (-1099480527 * this.anInt2684 * 1924060881 > class282_sub53_1.getMeta()) {
 				return false;
 			}
 
@@ -128,13 +128,13 @@ public class Class215 implements Interface17 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static void method3673(String string_0, boolean bool_1, int i_2, int i_3, String string_4, boolean bool_5, int i_6) {
+	static void method3673(String string_0, boolean bool_1, int i_2, int i_3, String string_4, boolean bool_5) {
 		string_0 = string_0.toLowerCase();
 		short[] shorts_7 = new short[16];
 		int i_8 = -1;
 		String string_9 = null;
 		if (i_2 != -1) {
-			ParamDefinitions attributedefault_10 = IndexLoaders.ITEM_DEFAULTS.method7069(i_2, (byte) 0);
+			ParamDefinitions attributedefault_10 = IndexLoaders.ITEM_DEFAULTS.method7069(i_2);
 			if (attributedefault_10 == null || attributedefault_10.method7319(1591846177) != bool_5) {
 				return;
 			}

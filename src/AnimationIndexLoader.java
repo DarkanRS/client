@@ -6,7 +6,7 @@ public class AnimationIndexLoader {
 
 	Index sequenceIndex;
 
-	public void method11204(int i_1) {
+	public void method11204() {
 		SoftCache softcache_2 = this.aClass229_6955;
 		synchronized (this.aClass229_6955) {
 			this.aClass229_6955.method3859(1867962972);
@@ -35,9 +35,9 @@ public class AnimationIndexLoader {
 			animationdefinitions_3.anInt5909 = i_1;
 			animationdefinitions_3.animationIndexLoader = this;
 			if (bytes_10 != null) {
-				animationdefinitions_3.method11130(new RsByteBuffer(bytes_10), -2068474756);
+				animationdefinitions_3.method11130(new RsByteBuffer(bytes_10));
 			}
-			animationdefinitions_3.method11143((byte) -115);
+			animationdefinitions_3.method11143();
 			SoftCache softcache_9 = this.aClass229_6955;
 			synchronized (this.aClass229_6955) {
 				this.aClass229_6955.put(animationdefinitions_3, (long) i_1);
@@ -53,10 +53,10 @@ public class AnimationIndexLoader {
 			SharedConfigsType.SEQUENCES.filesPerContainer(-1584727313);
 			this.sequenceIndex.filesCount(i_6);
 		}
-		Class96_Sub10_Sub1.setAnimationIndices(index_4, index_5, 2, -1736051925);
+		Class96_Sub10_Sub1.setAnimationIndices(index_4, index_5);
 	}
 
-	public AnimationFrameSet getAnimationFrame(int i_1, int i_2) {
+	public AnimationFrameSet getAnimationFrame(int i_1) {
 		SoftCache softcache_4 = this.cache;
 		synchronized (this.cache) {
 			AnimationFrameSet animationskeleton_3 = (AnimationFrameSet) this.cache.get((long) i_1);
@@ -68,7 +68,7 @@ public class AnimationIndexLoader {
 		}
 	}
 
-	public void method11208(int i_1) {
+	public void method11208() {
 		SoftCache softcache_2 = this.aClass229_6955;
 		synchronized (this.aClass229_6955) {
 			this.aClass229_6955.method3863(2031071202);
@@ -79,14 +79,14 @@ public class AnimationIndexLoader {
 		}
 	}
 
-	public void method11210(int i_1, byte b_2) {
+	public void method11210() {
 		SoftCache softcache_3 = this.aClass229_6955;
 		synchronized (this.aClass229_6955) {
-			this.aClass229_6955.method3858(i_1, (byte) -49);
+			this.aClass229_6955.method3858(5, (byte) -49);
 		}
 		softcache_3 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3858(i_1, (byte) -26);
+			this.cache.method3858(5, (byte) -26);
 		}
 	}
 
@@ -102,7 +102,7 @@ public class AnimationIndexLoader {
 				Class225_Sub6.method13411(i_0, i_1, i_3, i_4, (byte) -83);
 			}
 		} else if (i_6 == 0) {
-			Class16.method568(i_0, i_2, i_1, i_4, (short) 128);
+			Class16.method568(i_0, i_2, i_1, i_4);
 		} else {
 			if (i_6 < 0) {
 				i_6 = -i_6;

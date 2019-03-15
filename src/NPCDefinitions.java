@@ -132,13 +132,13 @@ public class NPCDefinitions {
 
 	IterableNodeMap aClass465_4896;
 
-	void method6874(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method6874(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method6896(rsbytebuffer_1, i_3, 88392628);
+			this.method6896(rsbytebuffer_1, i_3);
 		}
 	}
 
@@ -155,7 +155,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	void method6877(int i_1) {
+	void method6877() {
 		if (this.anIntArray4859 == null) {
 			this.anIntArray4859 = new int[0];
 		}
@@ -170,7 +170,7 @@ public class NPCDefinitions {
 
 	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Interface42 interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11, boolean bool_12, int i_13) {
 		if (this.anIntArray4886 != null) {
-			NPCDefinitions npcdefinitions_14 = this.method6884(interface42_4, 265881693);
+			NPCDefinitions npcdefinitions_14 = this.method6884(interface42_4);
 			return npcdefinitions_14 == null ? null : npcdefinitions_14.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12, 1208445516);
 		} else {
 			int i_32 = i_2;
@@ -249,11 +249,11 @@ public class NPCDefinitions {
 					if (ints_22[i_25] != -1) {
 						Index index_26 = this.aClass406_4855.aClass317_4842;
 						synchronized (this.aClass406_4855.aClass317_4842) {
-							arr_47[i_25] = RSMesh.decodeMesh(this.aClass406_4855.aClass317_4842, ints_22[i_25], 0);
+							arr_47[i_25] = RSMesh.decodeMesh(this.aClass406_4855.aClass317_4842, ints_22[i_25]);
 						}
 						if (arr_47[i_25] != null) {
 							if (arr_47[i_25].version < 13) {
-								arr_47[i_25].upscale(2);
+								arr_47[i_25].upscale();
 							}
 							if (this.anIntArrayArray4895 != null && this.anIntArrayArray4895[i_25] != null) {
 								arr_47[i_25].translate(this.anIntArrayArray4895[i_25][0], this.anIntArrayArray4895[i_25][1], this.anIntArrayArray4895[i_25][2]);
@@ -356,7 +356,7 @@ public class NPCDefinitions {
 				i_40 = 0;
 				for (i_25 = 1; i_40 < i_16; i_25 <<= 1) {
 					if (arr_7[i_40] != null) {
-						arr_7[i_40].method7578(meshrasterizer_37, 0, i_25, 1091009708);
+						arr_7[i_40].method7578(meshrasterizer_37, i_25, 1091009708);
 					}
 					++i_40;
 				}
@@ -381,9 +381,9 @@ public class NPCDefinitions {
 				if (animation_5 != null && animation_6 != null) {
 					Class521_Sub1_Sub3_Sub1.method16078(meshrasterizer_37, animation_5, animation_6, 407704915);
 				} else if (animation_5 != null) {
-					animation_5.rasterize(meshrasterizer_37, 0, 16711935);
+					animation_5.rasterize(meshrasterizer_37, 0);
 				} else if (animation_6 != null) {
-					animation_6.rasterize(meshrasterizer_37, 0, 16711935);
+					animation_6.rasterize(meshrasterizer_37, 0);
 				}
 				if (this.anInt4880 != 128 || this.anInt4881 != 128) {
 					meshrasterizer_37.oa(this.anInt4880, this.anInt4881, this.anInt4880);
@@ -396,7 +396,7 @@ public class NPCDefinitions {
 
 	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, Interface42 interface42_3, Animation animation_4, Class417 class417_5, int i_6) {
 		if (this.anIntArray4886 != null) {
-			NPCDefinitions npcdefinitions_7 = this.method6884(interface42_3, 265881693);
+			NPCDefinitions npcdefinitions_7 = this.method6884(interface42_3);
 			return npcdefinitions_7 == null ? null : npcdefinitions_7.method6880(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5, 1382303105);
 		} else if (this.anIntArray4860 == null && (class417_5 == null || class417_5.anIntArray4992 == null)) {
 			return null;
@@ -451,12 +451,12 @@ public class NPCDefinitions {
 				Index index_20 = this.aClass406_4855.aClass317_4842;
 				synchronized (this.aClass406_4855.aClass317_4842) {
 					for (int i_16 = 0; i_16 < ints_12.length; i_16++) {
-						arr_26[i_16] = RSMesh.decodeMesh(this.aClass406_4855.aClass317_4842, ints_12[i_16], 0);
+						arr_26[i_16] = RSMesh.decodeMesh(this.aClass406_4855.aClass317_4842, ints_12[i_16]);
 					}
 				}
 				for (i_15 = 0; i_15 < ints_12.length; i_15++) {
 					if (arr_26[i_15] != null && arr_26[i_15].version < 13) {
-						arr_26[i_15].upscale(2);
+						arr_26[i_15].upscale();
 					}
 				}
 				RSMesh rsmesh_27;
@@ -503,14 +503,14 @@ public class NPCDefinitions {
 			}
 			if (animation_4 != null) {
 				meshrasterizer_10 = meshrasterizer_10.method11289((byte) 1, i_18, true);
-				animation_4.rasterize(meshrasterizer_10, 0, 16711935);
+				animation_4.rasterize(meshrasterizer_10, 0);
 			}
 			meshrasterizer_10.KA(i_2);
 			return meshrasterizer_10;
 		}
 	}
 
-	public final boolean method6881(int i_1) {
+	public final boolean method6881() {
 		if (this.anIntArray4859 == null) {
 			return true;
 		} else {
@@ -526,7 +526,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public String method6882(int i_1, String string_2, int i_3) {
+	public String method6882(int i_1, String string_2) {
 		if (this.aClass465_4896 == null) {
 			return string_2;
 		} else {
@@ -535,7 +535,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final NPCDefinitions method6884(Interface42 interface42_1, int i_2) {
+	public final NPCDefinitions method6884(Interface42 interface42_1) {
 		int i_3 = -1;
 		if (this.anInt4891 != -1) {
 			i_3 = interface42_1.method241(this.anInt4891, -578283448);
@@ -550,7 +550,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public boolean method6885(Interface42 interface42_1, byte b_2) {
+	public boolean method6885(Interface42 interface42_1) {
 		if (this.anIntArray4886 == null) {
 			return true;
 		} else {
@@ -596,7 +596,7 @@ public class NPCDefinitions {
 		this.aBool4920 = true;
 	}
 
-	void method6896(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method6896(RsByteBuffer rsbytebuffer_1, int i_2) {
 		int i_4;
 		int i_5;
 		if (i_2 == 1) {
@@ -808,7 +808,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	static void method6907(int i_0) {
+	static void method6907() {
 		IndexLoaders.MAP_REGION_DECODER.method4444(1050660585);
 		Class58.method1139(-2058483007);
 		Class356.method6227(true, (byte) -37);

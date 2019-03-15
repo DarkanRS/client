@@ -20,7 +20,7 @@ public class Class476 {
 	public static int method7931(Random random_0, int i_1, int i_2) {
 		if (i_1 <= 0) {
 			throw new IllegalArgumentException();
-		} else if (Class96_Sub9.method14585(i_1, 1942118537)) {
+		} else if (Class96_Sub9.method14585(i_1)) {
 			return (int) (((long) random_0.nextInt() & 0xffffffffL) * (long) i_1 >> 32);
 		} else {
 			int i_3 = Integer.MIN_VALUE - (int) (4294967296L % (long) i_1);
@@ -28,7 +28,7 @@ public class Class476 {
 			do {
 				i_4 = random_0.nextInt();
 			} while (i_4 >= i_3);
-			return Class302.method5360(i_4, i_1, -120645567);
+			return Class302.method5360(i_4, i_1);
 		}
 	}
 }

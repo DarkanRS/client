@@ -12,11 +12,11 @@ public class Class96_Sub13 extends Class96 {
 
 	int anInt9366;
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		this.aClass268_9367 = Class153.method2618(this.anInt9363, this.anInt9366, 0, this.anInt9365, this.anInt9364, 1753039442);
 	}
 
-	void method1593(byte b_1) {
+	void method1593() {
 		if (this.aClass268_9367 != null) {
 			Class58.method1142(this.aClass268_9367, 1890417673);
 			this.aClass268_9367 = null;

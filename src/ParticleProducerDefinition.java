@@ -134,7 +134,7 @@ public class ParticleProducerDefinition {
 
 	public int sizeChangeStep;
 
-	void readValues(RsByteBuffer buffer, int opcode, int i_3) {
+	void readValues(RsByteBuffer buffer, int opcode) {
 		if (opcode == 1) {
 			this.minimumAngleH = (short) buffer.readUnsignedShort();
 			this.maximumAngleH = (short) buffer.readUnsignedShort();
@@ -237,7 +237,7 @@ public class ParticleProducerDefinition {
 		}
 	}
 
-	void init(byte b_1) {
+	void init() {
 		if (this.anInt591 > -2 || this.anInt600 > -2) {
 			this.aBool578 = true;
 		}
@@ -287,17 +287,17 @@ public class ParticleProducerDefinition {
 		}
 	}
 
-	void decode(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void decode(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.readValues(rsbytebuffer_1, i_3, -762162667);
+			this.readValues(rsbytebuffer_1, i_3);
 		}
 	}
 
-	public static int method1159(Index index_0, int i_1) {
+	public static int method1159(Index index_0) {
 		int i_2 = 0;
 		if (index_0.loadCutscene(Class165.anInt2035)) {
 			++i_2;
@@ -340,7 +340,7 @@ public class ParticleProducerDefinition {
 
 	public static void method1160(int i_0) {
 		if (Class51.anInt488 != -1) {
-			SpotAnimIndexLoader.method8862(Class51.anInt488, -1, -1, false, -1732540658);
+			SpotAnimIndexLoader.method8862(Class51.anInt488, -1, -1, false);
 			Class51.anInt488 = -1;
 		}
 	}
@@ -357,7 +357,7 @@ public class ParticleProducerDefinition {
 		client.aClass457_7335.offer(class275_sub6_8, 1112580220);
 	}
 
-	public static String method1163(int i_0, int i_1) {
+	public static String method1163(int i_0) {
 		return "<col=" + Integer.toHexString(i_0) + ">";
 	}
 }

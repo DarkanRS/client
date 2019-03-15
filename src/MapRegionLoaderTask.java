@@ -10,7 +10,7 @@ public class MapRegionLoaderTask implements Runnable {
 
 	LinkedList aLinkedList3990 = new LinkedList();
 
-	public void method6049(Class335 class335_1, int i_2) {
+	public void method6049(Class335 class335_1) {
 		LinkedList linkedlist_3 = this.aLinkedList3990;
 		synchronized (this.aLinkedList3990) {
 			this.aLinkedList3990.add(class335_1);
@@ -18,11 +18,11 @@ public class MapRegionLoaderTask implements Runnable {
 		}
 	}
 
-	void method6050(MapRegion mapregion_1, byte b_2) {
+	void method6050(MapRegion mapregion_1) {
 		this.region = mapregion_1;
 	}
 
-	public boolean method6051(int i_1) {
+	public boolean method6051() {
 		return this.aBool3989;
 	}
 
@@ -30,7 +30,7 @@ public class MapRegionLoaderTask implements Runnable {
 		return this.region;
 	}
 
-	void method6054(byte b_1) {
+	void method6054() {
 		Object obj_2 = null;
 		LinkedList linkedlist_4 = this.aLinkedList3990;
 		Class335 class335_3;
@@ -46,7 +46,7 @@ public class MapRegionLoaderTask implements Runnable {
 			try {
 				if (class335_3 != null) {
 					this.aBool3989 = true;
-					this.method6055(class335_3, -1292482767);
+					this.method6055(class335_3);
 				}
 			} catch (Exception exception_8) {
 				this.aBool3989 = false;
@@ -58,7 +58,7 @@ public class MapRegionLoaderTask implements Runnable {
 		}
 	}
 
-	void method6055(Class335 class335_1, int i_2) {
+	void method6055(Class335 class335_1) {
 		if (Class256.aClass256_3152 == class335_1.aClass256_3915) {
 			this.region.method4547((byte) -52);
 		} else {
@@ -71,13 +71,13 @@ public class MapRegionLoaderTask implements Runnable {
 		IndexLoaders.MAP_REGION_DECODER.method4445((byte) -40);
 	}
 
-	public void setObjectIndexLoader(ObjectIndexLoader objectindexloader_1, int i_2) {
-		this.region.setObjectIndexLoader(objectindexloader_1, -834443097);
+	public void setObjectIndexLoader(ObjectIndexLoader objectindexloader_1) {
+		this.region.setObjectIndexLoader(objectindexloader_1);
 	}
 
 	public void run() {
 		while (true) {
-			this.method6054((byte) 2);
+			this.method6054();
 		}
 	}
 

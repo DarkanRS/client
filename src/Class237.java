@@ -16,7 +16,7 @@ final class Class237 implements Interface45 {
 		}
 	}
 
-	public void method245(int i_1, int i_2, int i_3, int i_4) {
+	public void method245(int i_1, int i_2, int i_3) {
 		int i_5 = i_1 >> 16;
 		int i_6 = i_1 & 0xffff;
 		Queue queue_7 = Class236.aQueue2914;
@@ -67,13 +67,13 @@ final class Class237 implements Interface45 {
 		}
 	}
 
-	static boolean method3989(int i_0, byte b_1) {
+	static boolean method3989(int i_0) {
 		return i_0 != 9 && i_0 != 10 && i_0 != 11 && i_0 != 12 && i_0 != 13 && i_0 != 1003 ? i_0 == 8 : true;
 	}
 
-	public static void method3990(int i_0) {
-		Class236.aClass534_Sub2_2911.method11409(-277742763);
-		Class236.aClass534_Sub1_2913.method11409(-277742763);
+	public static void method3990() {
+		Class236.aClass534_Sub2_2911.method11409();
+		Class236.aClass534_Sub1_2913.method11409();
 		Class236.aLong2910 = -1L;
 		Class236.aBool2909 = true;
 	}

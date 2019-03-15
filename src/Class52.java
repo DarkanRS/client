@@ -16,7 +16,7 @@ public abstract class Class52 implements Interface2 {
 
 	abstract void method1076(boolean var1, int var2, int var3);
 
-	public void method22(int i_1) {
+	public void method22() {
 		FontMetrics fontmetrics_2 = Class163.method2845(this.aClass317_490, this.aClass350_489.anInt4086, (byte) 32);
 		this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086), true);
 	}
@@ -41,7 +41,7 @@ public abstract class Class52 implements Interface2 {
 		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-1441344140).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
-		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1, 768492991);
+		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
 	}
 
 	abstract void method1077(boolean var1, int var2, int var3, int var4);
@@ -50,9 +50,9 @@ public abstract class Class52 implements Interface2 {
 		int i_2 = Class328.aClass306_3771.method5424((byte) 103);
 		int i_3 = i_2 * 100;
 		if (i_2 == this.anInt494 && i_2 != 0) {
-			int i_4 = Class328.aClass306_3771.method5423(866989648);
+			int i_4 = Class328.aClass306_3771.method5423();
 			if (i_4 > i_2) {
-				long long_5 = this.aLong491 - Class328.aClass306_3771.method5439(2121936553);
+				long long_5 = this.aLong491 - Class328.aClass306_3771.method5439();
 				if (long_5 > 0L) {
 					long long_7 = 10000L * long_5 / (long) i_2 * (long) (i_4 - i_2);
 					long long_9 = (Class169.time() - this.aLong491) * 10000L;
@@ -90,7 +90,7 @@ public abstract class Class52 implements Interface2 {
 		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-588033146).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
-		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1, 768492991);
+		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
 	}
 
 	abstract void method1079(boolean var1, int var2, int var3);
@@ -157,7 +157,7 @@ public abstract class Class52 implements Interface2 {
 		if (Class169.time() - this.aLong491 > 10000L) {
 			string_5 = string_5 + " (" + Class328.aClass306_3771.method5427(-260598892).anInt4712 + ")";
 		}
-		this.aClass8_492.method360(string_5, this.aClass350_489.anInt4093 / 2 + i_3, this.aClass350_489.anInt4088 / 2 + this.aClass350_489.anInt4092 + i_4 + 4, this.aClass350_489.anInt4091, -1, 768492991);
+		this.aClass8_492.method360(string_5, this.aClass350_489.anInt4093 / 2 + i_3, this.aClass350_489.anInt4088 / 2 + this.aClass350_489.anInt4092 + i_4 + 4, this.aClass350_489.anInt4091, -1);
 	}
 
 	abstract void method1080(boolean var1, int var2, int var3);
@@ -184,10 +184,10 @@ public abstract class Class52 implements Interface2 {
 		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(396217824).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
-		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1, 768492991);
+		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
 	}
 
-	static final void method1083(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void method1083(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1248172600) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
@@ -204,7 +204,7 @@ public abstract class Class52 implements Interface2 {
 			Class448.aClass217_Sub1Array5426[i_7] = Class448.aClass217_Sub1Array5426[i_1];
 			Class448.aClass217_Sub1Array5426[i_1] = class217_sub1_9;
 			for (int i_10 = i_0; i_10 < i_1; i_10++) {
-				if (Class252.method4325(Class448.aClass217_Sub1Array5426[i_10], class217_sub1_9, i_2, bool_3, i_4, bool_5, -1553952364) <= 0) {
+				if (Class252.method4325(Class448.aClass217_Sub1Array5426[i_10], class217_sub1_9, i_2, bool_3, i_4, bool_5) <= 0) {
 					Class217_Sub1 class217_sub1_11 = Class448.aClass217_Sub1Array5426[i_10];
 					Class448.aClass217_Sub1Array5426[i_10] = Class448.aClass217_Sub1Array5426[i_8];
 					Class448.aClass217_Sub1Array5426[i_8++] = class217_sub1_11;
@@ -217,14 +217,14 @@ public abstract class Class52 implements Interface2 {
 		}
 	}
 
-	static Class282_Sub50_Sub6 method1087(Index index_0, int i_1, int i_2, int i_3) {
+	static Class282_Sub50_Sub6 method1087(Index index_0, int i_1, int i_2) {
 		RsByteBuffer rsbytebuffer_4 = new RsByteBuffer(index_0.getFile(i_1, i_2));
 		Class282_Sub50_Sub6 class282_sub50_sub6_5 = new Class282_Sub50_Sub6(i_2, rsbytebuffer_4.readString(), rsbytebuffer_4.readString(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readUnsignedByte() == 1, rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedByte());
 		int i_6 = rsbytebuffer_4.readUnsignedByte();
 		for (int i_7 = 0; i_7 < i_6; i_7++) {
 			class282_sub50_sub6_5.aClass482_9537.append(new Class282_Sub28(rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort()), 1886479392);
 		}
-		class282_sub50_sub6_5.method14779((byte) 7);
+		class282_sub50_sub6_5.method14779();
 		return class282_sub50_sub6_5;
 	}
 }

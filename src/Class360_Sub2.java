@@ -171,12 +171,12 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 		this(class505_sub2_sub2_1, class150_2, class76_3, i_4, i_5, 0, 1);
 	}
 
-	public void method53(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6) {
+	public void method53(int i_3, int i_4, int[] ints_5) {
 		if (this.aClass150_4167 == Class150.aClass150_1949 && this.aClass76_4164 == Class76.aClass76_751) {
 			ByteBuffer bytebuffer_7 = this.aClass505_Sub2_Sub2_4165.aByteBuffer8838;
 			bytebuffer_7.clear();
-			IDirect3DTexture.Download(this.aLong4168, 0, i_1, i_2, i_3, i_4, i_3 * 4, 0, this.aClass505_Sub2_Sub2_4165.aLong8695);
-			bytebuffer_7.asIntBuffer().get(ints_5, i_6, i_3 * i_4);
+			IDirect3DTexture.Download(this.aLong4168, 0, 0, 0, i_3, i_4, i_3 * 4, 0, this.aClass505_Sub2_Sub2_4165.aLong8695);
+			bytebuffer_7.asIntBuffer().get(ints_5, 0, i_3 * i_4);
 		} else {
 			throw new RuntimeException();
 		}

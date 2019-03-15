@@ -30,7 +30,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	public void method15903(int i_1) {
+	public void method15903() {
 		if (!this.aBool10398 && this.anInt10389 != 0) {
 			Object obj_2 = null;
 			if (client.anInt7341 == 4) {
@@ -57,7 +57,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 				Vector3 vector3_3 = ((Animable) obj_2).method11166().aClass385_3595;
 				this.method11172(vector3_3.x, (float) (Class504.method8389((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.anInt10383), vector3_3.z);
 				if (this.anInt10391 >= 0) {
-					RenderAnimDefs renderanimdefs_15 = ((Animable) obj_2).getRenderAnimDefs((byte) -17);
+					RenderAnimDefs renderanimdefs_15 = ((Animable) obj_2).getRenderAnimDefs();
 					int i_5 = 0;
 					int i_6 = 0;
 					if (renderanimdefs_15.anIntArrayArray2802 != null && renderanimdefs_15.anIntArrayArray2802[this.anInt10391] != null) {
@@ -71,7 +71,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					}
 
 					if (i_5 != 0 || i_6 != 0) {
-						int i_7 = ((Animable) obj_2).aClass19_10359.method578((byte) 2);
+						int i_7 = ((Animable) obj_2).aClass19_10359.method578();
 						int i_8 = i_7;
 						if (((Animable) obj_2).anIntArray10362 != null && ((Animable) obj_2).anIntArray10362[this.anInt10391] != -1) {
 							i_8 = ((Animable) obj_2).anIntArray10362[this.anInt10391];
@@ -98,7 +98,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	public final void method15904(int i_1, int i_2, int i_3, int i_4, int i_5) {
+	public final void method15904(int i_1, int i_2, int i_3, int i_4) {
 		Vector3 vector3_6 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
 		if (!this.aBool10398) {
 			float f_7 = (float) i_1 - vector3_6.x;
@@ -145,7 +145,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		MeshRasterizer meshrasterizer_3 = this.method15907(graphicalrenderer_1, 2048, 288666020);
 		if (meshrasterizer_3 == null) {
 			return null;
@@ -192,20 +192,20 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		}
 
 		if (this.aClass539_10402 != null) {
-			this.aClass539_10402.method11511(graphicalrenderer_1, (long) client.cycles, arr_5, arr_6, false);
+			this.aClass539_10402.method11511(graphicalrenderer_1, (long) client.cycles, arr_5, arr_6);
 			this.aClass539_10402.method11515(this.plane, this.aShort9458, this.localX, this.aShort9456, this.localY);
 		}
 
 	}
 
-	public void method15906(int i_1) {
+	public void method15906() {
 		if (this.aClass539_10402 != null) {
 			this.aClass539_10402.method11527();
 		}
 
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		return false;
 	}
 
@@ -303,7 +303,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		this.aBool10398 = false;
 		this.anInt10391 = i_16;
 		int i_17 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -8).animationId;
-		this.aClass456_10399 = new Class456_Sub2(this, false);
+		this.aClass456_10399 = new Class456_Sub2(this);
 		this.aClass456_10399.update(i_17);
 		this.method13008(1, (byte) -89);
 	}
@@ -346,7 +346,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	public final void method15910(int i_1, short s_2) {
+	public final void method15910(int i_1) {
 		this.aBool10398 = true;
 		Class305 class305_3 = new Class305(this.method11166());
 		class305_3.aClass385_3595.x = (float) ((double) class305_3.aClass385_3595.x + this.aDouble10394 * (double) i_1);

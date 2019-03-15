@@ -13,7 +13,7 @@ public class Class96_Sub23 extends Class96 {
 		this.anInt9444 = rsbytebuffer_1.readInt();
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		client.anInt7236 = client.cycles;
 		client.anInt7237 = this.anInt9443 + client.cycles;
 		Class468_Sub2.anInt7868 = client.anInt7238;
@@ -80,7 +80,7 @@ public class Class96_Sub23 extends Class96 {
 		}
 	}
 
-	public static final IComponentDefinitions method14682(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, int i_2) {
+	public static final IComponentDefinitions method14682(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
 		if (icomponentdefinitions_1.parent != -1) {
 			return interface_0.getComponent(icomponentdefinitions_1.parent);
 		} else {

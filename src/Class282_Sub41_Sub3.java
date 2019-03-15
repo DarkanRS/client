@@ -25,7 +25,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 	TheoraInfo aTheoraInfo9546 = new TheoraInfo();
 	TheoraComment aTheoraComment9552 = new TheoraComment();
 
-	void method13362(OggPacket oggpacket_1, int i_2) {
+	void method13362(OggPacket oggpacket_1) {
 		int i_3;
 		if (!this.aBool9554) {
 			i_3 = this.aSetupInfo9559.decodeHeader(this.aTheoraInfo9546, this.aTheoraComment9552, oggpacket_1);
@@ -39,7 +39,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 				this.aGranulePos9550 = new GranulePos();
 				this.aFrame9551 = new Frame(this.aTheoraInfo9546.frameWidth, this.aTheoraInfo9546.frameHeight);
 				this.anInt9556 = this.aDecoderContext9549.getMaxPostProcessingLevel();
-				this.method14790(this.anInt9557, -1590545486);
+				this.method14790(this.anInt9557);
 			} else if (i_3 < 0) {
 				throw new IllegalStateException("" + i_3);
 			}
@@ -72,7 +72,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 
 	}
 
-	void method14790(int i_1, int i_2) {
+	void method14790(int i_1) {
 		this.anInt9557 = i_1;
 		if (this.aBool9554) {
 			if (this.anInt9557 > this.anInt9556) {
@@ -88,23 +88,23 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 
 	}
 
-	float method14791(int i_1) {
+	float method14791() {
 		return this.aBool9554 && !this.aTheoraInfo9546.method6698() ? (float) this.aTheoraInfo9546.fpsNumerator / (float) this.aTheoraInfo9546.fpsDenominator : 0.0F;
 	}
 
-	double method14792(short s_1) {
+	double method14792() {
 		return this.aDouble9547;
 	}
 
-	long method14793(int i_1) {
+	long method14793() {
 		return this.aLong9553;
 	}
 
-	boolean method14794(int i_1) {
+	boolean method14794() {
 		return this.aBool9554;
 	}
 
-	void method13360(int i_1) {
+	void method13360() {
 		if (this.aFrame9551 != null) {
 			this.aFrame9551.method6699();
 		}
@@ -124,13 +124,13 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 		this.aSetupInfo9559.method6699();
 	}
 
-	public Object method14795(Interface23 interface23_1, int i_2) {
+	public Object method14795(Interface23 interface23_1) {
 		if (this.aFrame9551 == null) {
 			return null;
 		} else if (!this.aBool9560 && this.anObject9544 != null) {
 			return this.anObject9544;
 		} else {
-			this.anObject9544 = interface23_1.method162(this.aFrame9551.pixels, 0, this.aFrame9551.anInt9119, this.aFrame9551.anInt9119, this.aFrame9551.anInt9120, false, 2093100819);
+			this.anObject9544 = interface23_1.method162(this.aFrame9551.pixels, this.aFrame9551.anInt9119, this.aFrame9551.anInt9119, this.aFrame9551.anInt9120);
 			this.aBool9560 = false;
 			return this.anObject9544;
 		}
@@ -154,7 +154,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 				this.aGranulePos9550 = new GranulePos();
 				this.aFrame9551 = new Frame(this.aTheoraInfo9546.frameWidth, this.aTheoraInfo9546.frameHeight);
 				this.anInt9556 = this.aDecoderContext9549.getMaxPostProcessingLevel() * 1525465231 * -1692639633;
-				this.method14790(351513665 * this.anInt9557 * -986815551, -1590545486);
+				this.method14790(351513665 * this.anInt9557 * -986815551);
 			} else if (i_2 < 0) {
 				throw new IllegalStateException("" + i_2);
 			}
@@ -201,7 +201,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 				this.aGranulePos9550 = new GranulePos();
 				this.aFrame9551 = new Frame(this.aTheoraInfo9546.frameWidth, this.aTheoraInfo9546.frameHeight);
 				this.anInt9556 = this.aDecoderContext9549.getMaxPostProcessingLevel() * 1525465231 * -1692639633;
-				this.method14790(351513665 * this.anInt9557 * -986815551, -1590545486);
+				this.method14790(351513665 * this.anInt9557 * -986815551);
 			} else if (i_2 < 0) {
 				throw new IllegalStateException("" + i_2);
 			}
@@ -274,9 +274,9 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 		this.aSetupInfo9559.method6699();
 	}
 
-	public static void method14807(int i_0, int i_1) {
-		Class268.anInt3307 = i_0;
-		Class282_Sub53_Sub1.aClass282_Sub53_Sub1Array9497 = new Class282_Sub53_Sub1[i_0];
+	public static void method14807(int i_1) {
+		Class268.anInt3307 = 100;
+		Class282_Sub53_Sub1.aClass282_Sub53_Sub1Array9497 = new Class282_Sub53_Sub1[100];
 		Class81.anInt803 = 0;
 	}
 

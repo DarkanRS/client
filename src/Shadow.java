@@ -5,7 +5,7 @@ public abstract class Shadow extends CacheableNode {
 
 	static EventQueue anEventQueue10074;
 
-	static void method15506(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, int i_4) {
+	static void method15506(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3) {
 		byte b_5 = 63;
 		byte b_6 = 7;
 		for (int i_7 = 63; i_7 >= 0; --i_7) {
@@ -17,7 +17,7 @@ public abstract class Shadow extends CacheableNode {
 		}
 	}
 
-	static int method15507(Class282_Sub50_Sub7 class282_sub50_sub7_0, FontMetrics fontmetrics_1, int i_2) {
+	static int method15507(Class282_Sub50_Sub7 class282_sub50_sub7_0, FontMetrics fontmetrics_1) {
 		String string_3 = IncomingPacket.method6380(class282_sub50_sub7_0, 594489701);
 		int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_0, -1355601435);
 		if (ints_4 != null) {

@@ -14,7 +14,7 @@ public class Class466 implements Interface43 {
 
 	int anInt5566;
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt5566;
 	}
 
@@ -30,13 +30,13 @@ public class Class466 implements Interface43 {
 		return 1856682733 * this.anInt5566 * -1731808539;
 	}
 
-	static void method7776(int i_0) {
+	static void method7776() {
 		TCPMessage tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4582, client.aClass184_7475.isaac, -384952781);
 		tcpmessage_1.buffer.writeInt(client.anInt7221);
 		client.aClass184_7475.method3049(tcpmessage_1, -226174867);
 	}
 
-	public static void method7777(int i_0) {
+	public static void method7777() {
 		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) -101) && !Class85.method1466(-873027647)) {
 			Class365.setGameState(7);
 		}

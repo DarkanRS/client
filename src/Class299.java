@@ -23,11 +23,11 @@ public class Class299 implements Interface27 {
 		this.anInt3544 = i_3;
 		this.anInterface2Array3539 = new Interface2[this.aClass393_3541.anInterface3Array4782.length];
 		for (int i_5 = 0; i_5 < this.anInterface2Array3539.length; i_5++) {
-			this.anInterface2Array3539[i_5] = class29_4.method781(this.aClass393_3541.anInterface3Array4782[i_5], -1285211063);
+			this.anInterface2Array3539[i_5] = class29_4.method781(this.aClass393_3541.anInterface3Array4782[i_5]);
 		}
 	}
 
-	public void method161(int i_1) {
+	public void method161() {
 		if (this.aClass505_3542 != Renderers.SOFTWARE_RENDERER) {
 			this.aClass505_3542 = Renderers.SOFTWARE_RENDERER;
 			this.aBool3546 = true;
@@ -37,12 +37,12 @@ public class Class299 implements Interface27 {
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Interface2 interface2_4 = arr_2[i_3];
 			if (interface2_4 != null) {
-				interface2_4.method22(1273546148);
+				interface2_4.method22();
 			}
 		}
 	}
 
-	public void method187(boolean bool_1, int i_2) {
+	public void method187(boolean bool_1) {
 		bool_1 = true;
 		Interface2[] arr_3 = this.anInterface2Array3539;
 		for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
@@ -58,7 +58,7 @@ public class Class299 implements Interface27 {
 		return -1024317477 * this.anInt3544 * 1396538451;
 	}
 
-	public void method188(byte b_1) {
+	public void method188() {
 	}
 
 	public boolean method189(long long_1) {
@@ -121,7 +121,7 @@ public class Class299 implements Interface27 {
 		for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 			Interface2 interface2_3 = arr_1[i_2];
 			if (interface2_3 != null) {
-				interface2_3.method22(1273546148);
+				interface2_3.method22();
 			}
 		}
 	}
@@ -136,7 +136,7 @@ public class Class299 implements Interface27 {
 		for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 			Interface2 interface2_3 = arr_1[i_2];
 			if (interface2_3 != null) {
-				interface2_3.method22(1273546148);
+				interface2_3.method22();
 			}
 		}
 	}
@@ -151,7 +151,7 @@ public class Class299 implements Interface27 {
 		for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 			Interface2 interface2_3 = arr_1[i_2];
 			if (interface2_3 != null) {
-				interface2_3.method22(1273546148);
+				interface2_3.method22();
 			}
 		}
 	}
@@ -212,7 +212,7 @@ public class Class299 implements Interface27 {
 		this.aBool3546 = false;
 	}
 
-	public static void method5313(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	public static void method5313(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		Class282_Sub31 class282_sub31_8 = null;
 		for (Class282_Sub31 class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 122); class282_sub31_9 != null; class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-848062278)) {
 			if (i_0 == class282_sub31_9.anInt7764 && class282_sub31_9.anInt7762 == i_1 && i_2 == class282_sub31_9.anInt7763 && i_3 == class282_sub31_9.anInt7766) {
@@ -240,11 +240,11 @@ public class Class299 implements Interface27 {
 
 	public static void method5316(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, short s_7) {
 		if (i_3 == i_2) {
-			Class532_Sub1.method12838(i_0, i_1, i_2, i_4, i_5, i_6, (short) 4096);
+			Class532_Sub1.method12838(i_0, i_1, i_2, i_4, i_5, i_6);
 		} else if (i_0 - i_2 >= Class532_Sub3_Sub1.anInt7071 && i_0 + i_2 <= Class532_Sub3_Sub1.anInt7069 && i_1 - i_3 >= Class532_Sub3_Sub1.anInt7070 && i_3 + i_1 <= Class532_Sub3_Sub1.anInt7068) {
-			Class282_Sub20_Sub7.method15241(i_0, i_1, i_2, i_3, i_4, i_5, i_6, (byte) 61);
+			Class282_Sub20_Sub7.method15241(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 		} else {
-			Class405.method6824(i_0, i_1, i_2, i_3, i_4, i_5, i_6, -424326901);
+			Class405.method6824(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 		}
 	}
 }

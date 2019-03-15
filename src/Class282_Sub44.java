@@ -7,7 +7,7 @@ public class Class282_Sub44 extends Node {
 	public int anInt8063;
 	public int anInt8062;
 
-	public boolean method13401(byte b_1) {
+	public boolean method13401() {
 		return true;
 	}
 

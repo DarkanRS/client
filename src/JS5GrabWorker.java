@@ -58,7 +58,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	int method5806(int i_1, byte b_2) {
+	int method5806(int i_1) {
 		JS5CacheRequest js5cacherequest_3 = (JS5CacheRequest) this.aClass465_7796.get((long) i_1);
 		return js5cacherequest_3 != null ? js5cacherequest_3.getCompletion(-1369977403) : 0;
 	}
@@ -104,7 +104,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	byte[] method5804(int i_1, int i_2) {
+	byte[] method5804(int i_1) {
 		JS5CacheRequest js5cacherequest_3 = this.method12546(i_1, 0, 242482231);
 		if (js5cacherequest_3 == null) {
 			return null;
@@ -115,7 +115,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	void processCheck(byte b_1) {
+	void processCheck() {
 		if (this.coll != null && this.getReferenceTable(-2030640343) != null) {
 			for (Node node_2 = this.aClass482_7807.head((byte) 69); node_2 != null; node_2 = this.aClass482_7807.next(-235017563)) {
 				int i_3 = (int) node_2.data;
@@ -136,7 +136,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	void method5805(int i_1, int i_2) {
+	void method5805(int i_1) {
 		if (this.dataFile != null) {
 			Node node_3;
 			for (node_3 = this.aClass482_7807.head((byte) 115); node_3 != null; node_3 = this.aClass482_7807.next(-1039604534)) {
@@ -150,11 +150,11 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	public int method12541(int i_1) {
+	public int method12541() {
 		return this.table == null ? 0 : this.table.numValidArchives;
 	}
 
-	public int method12542(int i_1) {
+	public int method12542() {
 		return this.anInt7793;
 	}
 
@@ -162,7 +162,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		return this.getReferenceTable(-122167082) == null ? (this.refTableReq == null ? 0 : this.refTableReq.getCompletion(-1790040248)) : 100;
 	}
 
-	public void method12544(short s_1) {
+	public void method12544() {
 		if (this.dataFile != null) {
 			this.aBool7795 = true;
 			if (this.coll == null) {
@@ -191,7 +191,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				if (this.dataFile == null) {
 					throw new RuntimeException();
 				}
-				obj_4 = this.localRequester.method5567(i_1, this.dataFile, 1246338163);
+				obj_4 = this.localRequester.method5567(i_1, this.dataFile);
 			} else {
 				if (i_2 != 2) {
 					throw new RuntimeException();
@@ -411,7 +411,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	void method12552(int i_1) {
+	void method12552() {
 		if (this.coll != null) {
 			if (this.getReferenceTable(418724601) == null) {
 				return;
@@ -514,7 +514,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		}
 	}
 
-	public int method12559(int i_1) {
+	public int method12559() {
 		if (this.table == null) {
 			return 0;
 		} else if (!this.hasDataFile) {

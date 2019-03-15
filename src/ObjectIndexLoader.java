@@ -26,7 +26,7 @@ public class ObjectIndexLoader {
 
 	String[] defaultOptions;
 
-	public ObjectDefinitions getObjectDefinitions(int i_1, int i_2) {
+	public ObjectDefinitions getObjectDefinitions(int i_1) {
 		SoftCache softcache_4 = this.softCache;
 		ObjectDefinitions objectdefinitions_3;
 		synchronized (this.softCache) {
@@ -45,9 +45,9 @@ public class ObjectIndexLoader {
 			objectdefinitions_3.loader = this;
 			objectdefinitions_3.options = (String[]) this.defaultOptions.clone();
 			if (bytes_9 != null) {
-				objectdefinitions_3.method7964(new RsByteBuffer(bytes_9), (byte) 43);
+				objectdefinitions_3.method7964(new RsByteBuffer(bytes_9));
 			}
-			objectdefinitions_3.method7966(787748525);
+			objectdefinitions_3.method7966();
 			if (objectdefinitions_3.gateway) {
 				objectdefinitions_3.clipType = 0;
 				objectdefinitions_3.projectileClipped = false;
@@ -101,26 +101,26 @@ public class ObjectIndexLoader {
 		this.aClass452_5620 = new Class452((Object) null, (Object) null);
 	}
 
-	public void method7896(int i_1, byte b_2) {
+	public void method7896() {
 		SoftCache softcache_3 = this.softCache;
 		synchronized (this.softCache) {
-			this.softCache.method3858(i_1, (byte) -81);
+			this.softCache.method3858(5, (byte) -81);
 		}
 		softcache_3 = this.aClass229_5614;
 		synchronized (this.aClass229_5614) {
-			this.aClass229_5614.method3858(i_1, (byte) -26);
+			this.aClass229_5614.method3858(5, (byte) -26);
 		}
 		softcache_3 = this.aClass229_5615;
 		synchronized (this.aClass229_5615) {
-			this.aClass229_5615.method3858(i_1, (byte) 77);
+			this.aClass229_5615.method3858(5, (byte) 77);
 		}
 		softcache_3 = this.aClass229_5619;
 		synchronized (this.aClass229_5619) {
-			this.aClass229_5619.method3858(i_1, (byte) 63);
+			this.aClass229_5619.method3858(5, (byte) 63);
 		}
 	}
 
-	public void method7897(int i_1) {
+	public void method7897() {
 		SoftCache softcache_2 = this.softCache;
 		synchronized (this.softCache) {
 			this.softCache.method3863(1368757759);
@@ -139,10 +139,10 @@ public class ObjectIndexLoader {
 		}
 	}
 
-	public ObjectIndexLoader(Game game_1, Language xlanguage_2, boolean bool_3, Index index_4, Index index_5) {
+	public ObjectIndexLoader(Game game_1, Language xlanguage_2, Index index_4, Index index_5) {
 		this.game = game_1;
 		this.aClass495_5608 = xlanguage_2;
-		this.showOptions = bool_3;
+		this.showOptions = true;
 		this.objectIndex = index_4;
 		this.meshIndex = index_5;
 		if (this.objectIndex != null) {
@@ -157,11 +157,11 @@ public class ObjectIndexLoader {
 		}
 	}
 
-	public void method7899(int i_1, int i_2) {
+	public void method7899(int i_1) {
 		this.softCache = new SoftCache(i_1);
 	}
 
-	public void method7912(boolean bool_1, int i_2) {
+	public void method7912(boolean bool_1) {
 		if (this.showOptions != bool_1) {
 			this.showOptions = bool_1;
 			this.method7895((byte) 107);

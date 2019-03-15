@@ -20,7 +20,7 @@ public class Class343 {
 
 	public Class282_Sub26_Sub1_Sub2 method6089() {
 		byte[] bytes_1 = this.method6091();
-		return new Class282_Sub26_Sub1_Sub2(22050, bytes_1, this.anInt4011 * 22050 / 1000, this.anInt4008 * 22050 / 1000);
+		return new Class282_Sub26_Sub1_Sub2(bytes_1, this.anInt4011 * 22050 / 1000, this.anInt4008 * 22050 / 1000);
 	}
 
 	public final int method6090() {

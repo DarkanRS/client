@@ -1,6 +1,6 @@
 public class Class468_Sub29 extends Preference {
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -8,7 +8,7 @@ public class Class468_Sub29 extends Preference {
 		return i_1 == 2 ? 2 : 1;
 	}
 
-	public void method13048(int i_1) {
+	public void method13048() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
 			this.anInt5578 = this.method7781(2080539463);
 		}
@@ -19,7 +19,7 @@ public class Class468_Sub29 extends Preference {
 		return 0;
 	}
 
-	public boolean method13049(int i_1) {
+	public boolean method13049() {
 		return true;
 	}
 
@@ -31,7 +31,7 @@ public class Class468_Sub29 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public int method13050(int i_1) {
+	public int method13050() {
 		return this.anInt5578;
 	}
 

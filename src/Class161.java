@@ -11,7 +11,7 @@ public class Class161 {
 	public Animation animation;
 
 	Class161(Animable animable_1) {
-		this.animation = new Class456_Sub2(animable_1, false);
+		this.animation = new Class456_Sub2(animable_1);
 	}
 
 	static final void method2827(int i_0) {
@@ -19,7 +19,7 @@ public class Class161 {
 		++Class96_Sub1.anInt8308;
 		if (client.aBool7369 && client.aBool7403) {
 			int i_1 = Class163.mouseRecorder.method3569(2003806769);
-			int i_2 = Class163.mouseRecorder.method3570(756095591);
+			int i_2 = Class163.mouseRecorder.method3570();
 			i_1 -= client.anInt7361;
 			i_2 -= client.anInt7362;
 			if (i_1 < client.anInt7432) {
@@ -44,9 +44,9 @@ public class Class161 {
 				i_4 = i_2 - client.anInt7265 + client.aClass118_7247.anInt1312;
 			}
 			HookRequest hookrequest_5;
-			if (!Class163.mouseRecorder.method3568((short) -19628)) {
+			if (!Class163.mouseRecorder.method3568()) {
 				if (client.aBool7364) {
-					Class60.method1170(-609337146);
+					Class60.method1170();
 					if (client.aClass118_7257.anObjectArray1394 != null) {
 						hookrequest_5 = new HookRequest();
 						hookrequest_5.iComponentDefs = client.aClass118_7257;
@@ -57,7 +57,7 @@ public class Class161 {
 						Class96_Sub4.executeHookInner200k(hookrequest_5, 79466209);
 					}
 					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null) {
-						Class119.method2076(client.aClass118_7257, client.aClass118_7370, 1527549411);
+						Class119.method2076(client.aClass118_7257, client.aClass118_7370);
 					}
 				} else if ((client.anInt7339 == 1 || JS5GrabWorker.method12562(-285174833)) && Class20.anInt169 > 2) {
 					Class242.method4164(client.anInt7361 + client.anInt7252, client.anInt7215 + client.anInt7362, -85284222);

@@ -13,7 +13,7 @@ public class Class242 {
 	int method4154(Interface42 interface42_1, int i_2) {
 		int i_3 = 0;
 		for (int i_4 = 0; i_4 < this.size; i_4++) {
-			QuestDefinitions questdefinitions_5 = this.method4156(i_4, -1396181317);
+			QuestDefinitions questdefinitions_5 = this.method4156(i_4);
 			if (questdefinitions_5.method4099(interface42_1, 490029588)) {
 				i_3 += questdefinitions_5.anInt2963;
 			}
@@ -21,7 +21,7 @@ public class Class242 {
 		return i_3;
 	}
 
-	public Class242(Game game_1, Language xlanguage_2, Index index_3, boolean bool_4) {
+	public Class242(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_2979 = index_3;
 		if (this.aClass317_2979 != null) {
 			this.size = this.aClass317_2979.filesCount(SharedConfigsType.aClass120_1498.id);
@@ -37,15 +37,15 @@ public class Class242 {
 			}
 			QuestDefinitions questdefinitions_9 = new QuestDefinitions();
 			if (bytes_6 != null) {
-				questdefinitions_9.method4119(new RsByteBuffer(bytes_6), -1345439646);
+				questdefinitions_9.method4119(new RsByteBuffer(bytes_6));
 			}
-			questdefinitions_9.method4095((byte) 43);
+			questdefinitions_9.method4095();
 			this.questDefinitions[i_5] = questdefinitions_9;
 			this.questDefinitions[i_5].aClass242_2976 = this;
 		}
 	}
 
-	public QuestDefinitions method4156(int i_1, int i_2) {
+	public QuestDefinitions method4156(int i_1) {
 		return this.questDefinitions[i_1];
 	}
 
@@ -160,11 +160,11 @@ public class Class242 {
 		Class46.aClass282_Sub50_Sub7_438 = null;
 	}
 
-	static Class149_Sub3 method4165(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static Class149_Sub3 method4165(RsByteBuffer rsbytebuffer_0) {
 		return new Class149_Sub3(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 
-	public static final void method4166(int i_0) {
+	public static final void method4166() {
 		if (!client.aBool7331) {
 			client.aFloat7284 += (12.0F - client.aFloat7284) / 2.0F;
 			client.aBool7371 = true;
@@ -172,7 +172,7 @@ public class Class242 {
 		}
 	}
 
-	public static void method4167(String string_0, int i_1) {
+	public static void method4167(String string_0) {
 		if (client.aBool7344 && (Class506.anInt5858 & 0x18) != 0) {
 			boolean bool_2 = false;
 			int i_3 = Class197.NUM_PLAYER_INDICES;
@@ -181,23 +181,23 @@ public class Class242 {
 				Player player_6 = client.players[ints_4[i_5]];
 				if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == Class84.myPlayer && (Class506.anInt5858 & 0x10) != 0 || (Class506.anInt5858 & 0x8) != 0)) {
 					TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4540, client.aClass184_7475.isaac, 623584347);
-					tcpmessage_7.buffer.writeShort(client.anInt7345, 1417031095);
+					tcpmessage_7.buffer.writeShort(client.anInt7345);
 					tcpmessage_7.buffer.writeShortLE(ints_4[i_5], (short) -11612);
 					tcpmessage_7.buffer.write128Byte(0, -2130241701);
-					tcpmessage_7.buffer.writeIntV2(Class7.anInt56, (byte) 104);
+					tcpmessage_7.buffer.writeIntV2(Class7.anInt56);
 					tcpmessage_7.buffer.writeShortLE(client.anInt7346, (short) -16837);
 					client.aClass184_7475.method3049(tcpmessage_7, 2109181627);
-					int i_8 = player_6.getSize(828768449);
-					MapRegion.routeTo(player_6.regionBaseX[0], player_6.regionBaseY[0], true, Class344.method6115(player_6.regionBaseX[0], player_6.regionBaseY[0], i_8, i_8, 0, 971339209), 1352975566);
+					int i_8 = player_6.getSize();
+					MapRegion.routeTo(player_6.regionBaseX[0], player_6.regionBaseY[0], true, Class344.method6115(player_6.regionBaseX[0], player_6.regionBaseY[0], i_8, i_8), 1352975566);
 					bool_2 = true;
 					break;
 				}
 			}
 			if (!bool_2) {
-				LoadingStage.method6681(4, Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -1621273158) + string_0, (byte) -49);
+				LoadingStage.method6681(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -1621273158) + string_0, (byte) -49);
 			}
 			if (client.aBool7344) {
-				Class60.method1170(-609337146);
+				Class60.method1170();
 			}
 		}
 	}

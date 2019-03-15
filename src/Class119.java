@@ -30,10 +30,10 @@ public class Class119 {
 		this.anInt1459 = i_6;
 	}
 
-	public static void method2074(String string_0, String string_1, int i_2, boolean bool_3, byte b_4) {
+	public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
 		if (client.gameState == 3) {
 			TCPMessage tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.isaac, 94516093);
-			tcpmessage_5.buffer.writeShort(0, 1417031095);
+			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_0);
 			tcpmessage_5.buffer.writeString(string_1);
@@ -41,7 +41,7 @@ public class Class119 {
 			tcpmessage_5.buffer.writeByte(bool_3 ? 1 : 0);
 			tcpmessage_5.buffer.index += 7;
 			tcpmessage_5.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_6, tcpmessage_5.buffer.index, 1773448479);
-			tcpmessage_5.buffer.method13281(tcpmessage_5.buffer.index - i_6, 1201423895);
+			tcpmessage_5.buffer.method13281(tcpmessage_5.buffer.index - i_6);
 			client.aClass184_7218.method3049(tcpmessage_5, -593132534);
 			if (i_2 < 13) {
 				client.aBool7189 = true;
@@ -53,7 +53,7 @@ public class Class119 {
 
 	}
 
-	public static void method2075(int i_0, String string_1, byte b_2) {
+	public static void method2075(int i_0, String string_1) {
 		int i_3 = Class197.NUM_PLAYER_INDICES;
 		int[] ints_4 = Class197.PLAYER_INDICES;
 		boolean bool_5 = false;
@@ -78,7 +78,7 @@ public class Class119 {
 
 				if (outgoingpacket_8 != null) {
 					TCPMessage tcpmessage_9 = Class271.method4828(outgoingpacket_8, client.aClass184_7475.isaac, -147657643);
-					tcpmessage_9.buffer.writeShort(ints_4[i_6], 1417031095);
+					tcpmessage_9.buffer.writeShort(ints_4[i_6]);
 					tcpmessage_9.buffer.write128Byte(0, 1653548844);
 					client.aClass184_7475.method3049(tcpmessage_9, 669327577);
 				}
@@ -89,17 +89,17 @@ public class Class119 {
 		}
 
 		if (!bool_5) {
-			LoadingStage.method6681(4, Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111) + string_1, (byte) -65);
+			LoadingStage.method6681(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111) + string_1, (byte) -65);
 		}
 
 	}
 
-	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1, int i_2) {
+	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
 		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4601, client.aClass184_7475.isaac, -3887603);
-		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288, -1183932171);
+		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
 		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288, (short) -28348);
-		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426, 1417031095);
-		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426, -1183932171);
+		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);
+		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 		tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);
 		tcpmessage_3.buffer.writeLEInt(icomponentdefinitions_1.idHash, (byte) 77);
 		client.aClass184_7475.method3049(tcpmessage_3, -683028728);
@@ -127,8 +127,8 @@ public class Class119 {
 		Class323.method5777(1139653705);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, 2126000152);
 		Class393.preferences.setValue(Class393.preferences.graphics, 2, -761948866);
-		Class94.method1589((short) 255);
-		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(572282036);
+		Class94.method1589();
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(572282036);
 		client.aBool7185 = true;
 	}
 

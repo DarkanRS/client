@@ -67,7 +67,7 @@ public class Class42 implements Interface2 {
 		this.aClass160_414 = Class152.method2600(this.aClass317_415, -1847374165 * this.aClass357_416.anInt4124 * -206423037, -1296629447);
 	}
 
-	public void method22(int i_1) {
+	public void method22() {
 		this.aClass160_414 = Class152.method2600(this.aClass317_415, this.aClass357_416.anInt4124, -787343378);
 	}
 
@@ -99,9 +99,9 @@ public class Class42 implements Interface2 {
 		} else {
 			i_1 = i_1 * Class393.preferences.aClass468_Sub13_8228.method12714(-1100344734) >> 8;
 			if (i_0 == -1 && !Class260.aBool3220) {
-				Class226.method3805(-1719520107);
+				Class226.method3805();
 			} else if (i_0 != -1 && (i_0 != Class260.anInt3223 || !Class116.method1966(1943151089)) && i_1 != 0 && !Class260.aBool3220) {
-				Class282_Sub1.method11615(i_2, IndexLoaders.MUSIC_INDEX, i_0, 0, i_1, false, new Class109_Sub1(), -752307268);
+				Class282_Sub1.method11615(i_2, IndexLoaders.MUSIC_INDEX, i_0, i_1, new Class109_Sub1());
 				Class468_Sub6.method12658(-406997007);
 			}
 			if (i_0 != Class260.anInt3223) {
@@ -112,9 +112,9 @@ public class Class42 implements Interface2 {
 		}
 	}
 
-	public static long method891(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	public static long method891(int i_3, int i_4, int i_5) {
 		Class407.aCalendar4846.clear();
-		Class407.aCalendar4846.set(i_5, i_4, i_3, i_2, i_1, i_0);
+		Class407.aCalendar4846.set(i_5, i_4, i_3, 12, 0, 0);
 		return Class407.aCalendar4846.getTime().getTime();
 	}
 }

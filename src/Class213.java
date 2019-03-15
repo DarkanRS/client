@@ -4,7 +4,7 @@ public class Class213 {
 	public int anInt2680;
 
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-		CS2Script cs2script_4 = Class225_Sub1.method12792(Class397.aClass397_4792, i_0, -1, 856735933);
+		CS2Script cs2script_4 = Class225_Sub1.method12792(Class397.aClass397_4792, i_0, -1);
 		if (cs2script_4 != null) {
 			CS2Executor cs2executor_5 = Class125.getNextScriptExecutor(2125481004);
 			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];
@@ -16,7 +16,7 @@ public class Class213 {
 
 	}
 
-	public static void method3662(AnimationDefinitions animationdefinitions_0, int i_1, Class521_Sub1 class521_sub1_2, short s_3) {
+	public static void method3662(AnimationDefinitions animationdefinitions_0, int i_1, Class521_Sub1 class521_sub1_2) {
 		if (Class260.anInt3219 < 50 && animationdefinitions_0 != null && animationdefinitions_0.anIntArrayArray5913 != null && i_1 < animationdefinitions_0.anIntArrayArray5913.length && animationdefinitions_0.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == Class84.myPlayer.plane) {
 			int i_4 = animationdefinitions_0.anIntArrayArray5913[i_1][0];
 			int i_5 = i_4 >> 8;
@@ -39,7 +39,7 @@ public class Class213 {
 			if (i_7 == 0) {
 				if (class521_sub1_2 == Class84.myPlayer) {
 					if (animationdefinitions_0.aBool5928) {
-						Class435.method7300(i_5, i_6, 0, i_9, false, i_8, 1449989045);
+						Class435.method7300(i_5, i_6, 0, i_9, false, i_8);
 					} else {
 						Class153.method2618(i_5, i_6, 0, i_9, i_8, 1889559384);
 					}

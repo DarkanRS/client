@@ -22,13 +22,13 @@ public class Class225_Sub1 extends RouteStrategy {
 		return i_2 == -1440558477 * this.approxDestinationX * -726719813 && i_3 == 1732585867 * this.approxDestinationY * 1767388707;
 	}
 
-	static Class282_Sub54 method12791(int i_0) {
+	static Class282_Sub54 method12791() {
 		Class442 class442_1 = null;
-		Class282_Sub54 class282_sub54_2 = new Class282_Sub54(client.CURRENT_GAME, 0);
+		Class282_Sub54 class282_sub54_2 = new Class282_Sub54(client.CURRENT_GAME);
 
 		try {
-			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, false, (byte) -1);
-			byte[] bytes_3 = new byte[(int) class442_1.method7388(-273347477)];
+			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, false);
+			byte[] bytes_3 = new byte[(int) class442_1.method7388()];
 
 			int i_4;
 			for (int i_5 = 0; i_5 < bytes_3.length; i_5 += i_4) {
@@ -38,7 +38,7 @@ public class Class225_Sub1 extends RouteStrategy {
 				}
 			}
 
-			class282_sub54_2 = new Class282_Sub54(new RsByteBuffer(bytes_3), client.CURRENT_GAME, 0);
+			class282_sub54_2 = new Class282_Sub54(new RsByteBuffer(bytes_3), client.CURRENT_GAME);
 		} catch (Exception exception_7) {
 			;
 		}
@@ -54,13 +54,13 @@ public class Class225_Sub1 extends RouteStrategy {
 		return class282_sub54_2;
 	}
 
-	static CS2Script method12792(Class397 class397_0, int i_1, int i_2, int i_3) {
+	static CS2Script method12792(Class397 class397_0, int i_1, int i_2) {
 		int i_4 = class397_0.anInt4802 | i_1 << 10;
 		CS2Script cs2script_5 = (CS2Script) Class506.aClass223_5857.method3758((long) i_4 << 16);
 		if (cs2script_5 != null) {
 			return cs2script_5;
 		} else {
-			byte[] bytes_6 = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_4, (byte) 4));
+			byte[] bytes_6 = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_4));
 			if (bytes_6 != null) {
 				if (bytes_6.length <= 1) {
 					return null;
@@ -81,7 +81,7 @@ public class Class225_Sub1 extends RouteStrategy {
 				if (cs2script_5 != null) {
 					return cs2script_5;
 				} else {
-					bytes_6 = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_4, (byte) 4));
+					bytes_6 = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_4));
 					if (bytes_6 != null) {
 						if (bytes_6.length <= 1) {
 							return null;
@@ -102,7 +102,7 @@ public class Class225_Sub1 extends RouteStrategy {
 						if (cs2script_5 != null) {
 							return cs2script_5;
 						} else {
-							bytes_6 = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_4, (byte) 4));
+							bytes_6 = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_4));
 							if (bytes_6 != null) {
 								if (bytes_6.length <= 1) {
 									return null;

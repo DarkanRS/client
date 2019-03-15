@@ -6,11 +6,11 @@ public class Class88 {
 		throw new Error();
 	}
 
-	static synchronized GraphicalRenderer method1493(int i_0, Canvas canvas_1, Interface22 interface22_2, Index index_3, int i_4, int i_5, int i_6, byte b_7) {
+	static synchronized GraphicalRenderer method1493(int i_0, Canvas canvas_1, Interface22 interface22_2, Index index_3, int i_4, int i_5, int i_6) {
 		if (i_0 == 0) {
-			return Class109_Sub1.method14652(canvas_1, interface22_2, i_5, i_6, (byte) -124);
+			return Class109_Sub1.method14652(canvas_1, interface22_2, i_5, i_6);
 		} else if (i_0 == 2) {
-			return FontRenderer.method404(canvas_1, interface22_2, i_5, i_6, 596227505);
+			return FontRenderer.method404(canvas_1, interface22_2, i_5, i_6);
 		} else if (i_0 == 1) {
 			return Class171.method2909(canvas_1, interface22_2, i_4);
 		} else if (i_0 == 5) {

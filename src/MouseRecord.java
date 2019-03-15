@@ -8,7 +8,7 @@ public abstract class MouseRecord extends Node {
 
 	public abstract int method13472();
 
-	public abstract int getMeta(byte var1);
+	public abstract int getMeta();
 
 	public abstract void cache(int var1);
 

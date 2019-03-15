@@ -10,8 +10,8 @@ public class Class492 {
 		throw new Error();
 	}
 
-	static final boolean method8264(ObjectIndexLoader objectindexloader_0, int i_1, int i_2, int i_3) {
-		ObjectDefinitions objectdefinitions_4 = objectindexloader_0.getObjectDefinitions(i_1, 65280);
+	static final boolean method8264(ObjectIndexLoader objectindexloader_0, int i_1, int i_2) {
+		ObjectDefinitions objectdefinitions_4 = objectindexloader_0.getObjectDefinitions(i_1);
 		if (i_2 == 11) {
 			i_2 = 10;
 		}
@@ -77,18 +77,18 @@ public class Class492 {
 		client.anInt7440 = (short) i_3;
 	}
 
-	public static int[] method8266(int i_0, int i_1, int i_2, int i_3, int i_4, float f_5, boolean bool_6, byte b_7) {
-		int[] ints_8 = new int[i_0];
+	public static int[] method8266() {
+		int[] ints_8 = new int[2048];
 		Class282_Sub20_Sub4 class282_sub20_sub4_9 = new Class282_Sub20_Sub4();
-		class282_sub20_sub4_9.anInt9733 = i_1;
-		class282_sub20_sub4_9.aBool9726 = bool_6;
-		class282_sub20_sub4_9.anInt9725 = i_2;
-		class282_sub20_sub4_9.anInt9735 = i_3;
-		class282_sub20_sub4_9.anInt9736 = i_4;
-		class282_sub20_sub4_9.anInt9737 = (int) (4096.0F * f_5);
+		class282_sub20_sub4_9.anInt9733 = 35;
+		class282_sub20_sub4_9.aBool9726 = true;
+		class282_sub20_sub4_9.anInt9725 = 8;
+		class282_sub20_sub4_9.anInt9735 = 8;
+		class282_sub20_sub4_9.anInt9736 = 4;
+		class282_sub20_sub4_9.anInt9737 = (int) (4096.0F * (float) 0.4);
 		class282_sub20_sub4_9.method12321(1061037797);
-		Class316.method5593(i_0, 1, -383407250);
-		class282_sub20_sub4_9.method15197(0, ints_8, 915556346);
+		Class316.method5593(2048, 1, -383407250);
+		class282_sub20_sub4_9.method15197(0, ints_8);
 		return ints_8;
 	}
 }

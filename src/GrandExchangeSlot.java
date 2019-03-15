@@ -14,7 +14,7 @@ public class GrandExchangeSlot {
 		return this.progress & 0x7;
 	}
 
-	public int method5909(int i_1) {
+	public int method5909() {
 		return (this.progress & 0x8) == 8 ? 1 : 0;
 	}
 
@@ -27,14 +27,14 @@ public class GrandExchangeSlot {
 		this.totalPrice = buffer.readInt();
 	}
 
-	public static void method5913(int i_0) {
+	public static void method5913() {
 		IComponentDefinitions.aClass229_1280.method3863(1550469296);
 		IComponentDefinitions.aClass229_1341.method3863(986985015);
 		IComponentDefinitions.aClass229_1303.method3863(759496379);
 		IComponentDefinitions.aClass229_1282.method3863(726939878);
 	}
 
-	public static int method5914(byte[] bytes_0, int i_1, CharSequence charsequence_2, int i_3) {
+	public static int method5914(byte[] bytes_0, int i_1, CharSequence charsequence_2) {
 		int i_4 = charsequence_2.length();
 		int i_5 = i_1;
 		for (int i_6 = 0; i_6 < i_4; i_6++) {
@@ -53,7 +53,7 @@ public class GrandExchangeSlot {
 		return i_5 - i_1;
 	}
 
-	static final void method5916(int i_0) {
+	static final void method5916() {
 		for (int i_1 = 0; i_1 < client.anInt7211; i_1++) {
 			int i_2 = client.anIntArray7212[i_1];
 			Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.NPCS.get((long) i_2);

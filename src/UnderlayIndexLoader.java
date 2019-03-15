@@ -22,7 +22,7 @@ public class UnderlayIndexLoader {
 			}
 			underlaydef_3 = new UnderlayDef();
 			if (bytes_10 != null) {
-				underlaydef_3.method8050(new RsByteBuffer(bytes_10), -341633442);
+				underlaydef_3.method8050(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.cache;
 			synchronized (this.cache) {
@@ -32,7 +32,7 @@ public class UnderlayIndexLoader {
 		}
 	}
 
-	public void method8026(int i_1) {
+	public void method8026() {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
 			this.cache.method3859(-62537234);
@@ -44,28 +44,28 @@ public class UnderlayIndexLoader {
 		this.configIndex.filesCount(SharedConfigsType.FLO1.id);
 	}
 
-	public void method8030(int i_1, int i_2) {
+	public void method8030() {
 		SoftCache softcache_3 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3858(i_1, (byte) -26);
+			this.cache.method3858(5, (byte) -26);
 		}
 	}
 
-	public void method8032(int i_1) {
+	public void method8032() {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
 			this.cache.method3863(977235767);
 		}
 	}
 
-	static void method8036(int i_0, byte b_1) {
-		if (Class393.preferences.customCursors.method12675(-1589433086) == 0) {
+	static void method8036(int i_0) {
+		if (Class393.preferences.customCursors.method12675() == 0) {
 			i_0 = -1;
 		}
 		if (i_0 != client.anInt7190) {
 			if (i_0 != -1) {
-				Class419 class419_2 = IndexLoaders.aClass438_7932.method7325(i_0, -962986657);
-				Class91 class91_3 = class419_2.method7026(-890527904);
+				Class419 class419_2 = IndexLoaders.aClass438_7932.method7325(i_0);
+				Class91 class91_3 = class419_2.method7026();
 				if (class91_3 != null) {
 					MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, class91_3.method1528(), class91_3.method1519(), class91_3.method1520(), new Point(class419_2.anInt5002, class419_2.anInt5000));
 					client.anInt7190 = i_0;
@@ -80,7 +80,7 @@ public class UnderlayIndexLoader {
 		}
 	}
 
-	public static Class494[] method8038(byte b_0) {
+	public static Class494[] method8038() {
 		return new Class494[] { Class494.aClass494_5784, Class494.aClass494_5792, Class494.aClass494_5787, Class494.aClass494_5789, Class494.aClass494_5786, Class494.aClass494_5782, Class494.aClass494_5788, Class494.aClass494_5779, Class494.aClass494_5790, Class494.aClass494_5783, Class494.aClass494_5791, Class494.aClass494_5781, Class494.aClass494_5785, Class494.aClass494_5780 };
 	}
 }

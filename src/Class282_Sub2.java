@@ -23,7 +23,7 @@ public class Class282_Sub2 extends Node {
 		this.anInt7486 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	static TCPMessage method12078(int i_0, int i_1, int i_2, int i_3) {
+	static TCPMessage method12078(int i_0, int i_1, int i_2) {
 		TCPMessage tcpmessage_4 = null;
 		if (i_2 == 0) {
 			tcpmessage_4 = Class271.method4828(OutgoingPacket.WALK, client.aClass184_7475.isaac, 1058999201);
@@ -35,7 +35,7 @@ public class Class282_Sub2 extends Node {
 
 		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		tcpmessage_4.buffer.writeByte(Class84.method1465(-2046314159) ? 1 : 0);
-		tcpmessage_4.buffer.writeShort(i_0 + coordgrid_5.x, 1417031095);
+		tcpmessage_4.buffer.writeShort(i_0 + coordgrid_5.x);
 		tcpmessage_4.buffer.writeShortLE(coordgrid_5.y + i_1, (short) -23988);
 		Class187.anInt2361 = i_0;
 		Class187.anInt2359 = i_1;

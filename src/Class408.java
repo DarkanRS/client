@@ -22,7 +22,7 @@ public class Class408 {
 
 			class415_3 = new Class415();
 			if (bytes_10 != null) {
-				class415_3.method6990(new RsByteBuffer(bytes_10), -2121705498);
+				class415_3.method6990(new RsByteBuffer(bytes_10));
 			}
 
 			SoftCache softcache_9 = this.aClass229_4850;

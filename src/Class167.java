@@ -18,14 +18,14 @@ public class Class167 {
 
 			Class137_Sub1 class137_sub1_5;
 			if (class169_4.aBool2089 && this.aClass505_Sub1_2042.method8471()) {
-				float[] floats_7 = this.anInterface22_2043.method145(i_1, 0.7F, i_2, i_2, false, -1102656224);
-				class137_sub1_5 = new Class137_Sub1(this.aClass505_Sub1_2042, 3553, Class150.aClass150_1949, Class76.aClass76_755, i_2, i_2, class169_4.aByte2088 != 0, floats_7, Class150.aClass150_1949);
+				float[] floats_7 = this.anInterface22_2043.method145(i_1, i_2, i_2);
+				class137_sub1_5 = new Class137_Sub1(this.aClass505_Sub1_2042, Class150.aClass150_1949, Class76.aClass76_755, i_2, i_2, class169_4.aByte2088 != 0, floats_7, Class150.aClass150_1949);
 			} else {
 				int[] ints_6;
 				if (class169_4.anInt2074 != 2 && Class282_Sub41.method13367(class169_4.aByte2064, (short) 8231)) {
 					ints_6 = this.anInterface22_2043.method140(i_1, 0.7F, i_2, i_2, true, (byte) 47);
 				} else {
-					ints_6 = this.anInterface22_2043.method141(i_1, 0.7F, i_2, i_2, false, 1544969950);
+					ints_6 = this.anInterface22_2043.method141(i_1, i_2, i_2, false, 1544969950);
 				}
 
 				class137_sub1_5 = new Class137_Sub1(this.aClass505_Sub1_2042, 3553, i_2, i_2, class169_4.aByte2088 != 0, ints_6, 0, 0, false);

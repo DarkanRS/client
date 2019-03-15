@@ -88,10 +88,10 @@ public class Class170 {
 				this.aClass158_Sub1_Sub4_2092.method13765((Interface8) null);
 				this.aClass158_Sub1_Sub4_2092.method13759(0, (Interface9) null);
 				this.aClass158_Sub1_Sub4_2092.method13759(1, (Interface9) null);
-				this.aClass158_Sub1_Sub4_2092.method13759(0, this.aClass137_Sub1Array2106[0].method14441(0));
-				this.aClass158_Sub1_Sub4_2092.method13759(1, this.anInt2111 > 1 ? this.aClass137_Sub1Array2106[1].method14441(0) : null);
+				this.aClass158_Sub1_Sub4_2092.method13759(0, this.aClass137_Sub1Array2106[0].method14441());
+				this.aClass158_Sub1_Sub4_2092.method13759(1, this.anInt2111 > 1 ? this.aClass137_Sub1Array2106[1].method14441() : null);
 				if (this.aBool2110) {
-					this.aClass158_Sub1_Sub4_2092.method13765(this.aClass137_Sub1_2104.method14440(0));
+					this.aClass158_Sub1_Sub4_2092.method13765(this.aClass137_Sub1_2104.method14440());
 				}
 
 				this.aClass505_Sub1_2112.method8416(this.aClass158_Sub1_Sub4_2092, (byte) -62);
@@ -106,10 +106,10 @@ public class Class170 {
 				this.aClass158_Sub1_Sub4_2092.method13765((Interface8) null);
 				this.aClass158_Sub1_Sub4_2092.method13759(0, (Interface9) null);
 				this.aClass158_Sub1_Sub4_2092.method13759(1, (Interface9) null);
-				this.aClass158_Sub1_Sub4_2092.method13759(0, this.aClass137_Sub1Array2106[0].method14441(0));
-				this.aClass158_Sub1_Sub4_2092.method13759(1, this.anInt2111 > 1 ? this.aClass137_Sub1Array2106[1].method14441(0) : null);
+				this.aClass158_Sub1_Sub4_2092.method13759(0, this.aClass137_Sub1Array2106[0].method14441());
+				this.aClass158_Sub1_Sub4_2092.method13759(1, this.anInt2111 > 1 ? this.aClass137_Sub1Array2106[1].method14441() : null);
 				if (this.aBool2110) {
-					this.aClass158_Sub1_Sub4_2092.method13765(this.aClass137_Sub1_2104.method14440(0));
+					this.aClass158_Sub1_Sub4_2092.method13765(this.aClass137_Sub1_2104.method14440());
 				} else {
 					this.aClass158_Sub1_Sub4_2092.method13765(this.aClass282_Sub50_Sub19_2093);
 				}
@@ -136,7 +136,7 @@ public class Class170 {
 				this.aClass505_Sub1_2112.method8416(this.aClass158_Sub1_Sub4_2101, (byte) -56);
 				this.aClass505_Sub1_2112.method8637(this.aClass158_Sub1_Sub4_2092, 1705377997);
 				this.aClass158_Sub1_Sub4_2092.method15628(0);
-				this.aClass158_Sub1_Sub4_2101.method15624(0, 0, this.anInt2098, this.anInt2099, 0, 0, true, this.aBool2110);
+				this.aClass158_Sub1_Sub4_2101.method15624(this.anInt2098, this.anInt2099, this.aBool2110);
 			}
 
 			this.aClass505_Sub1_2112.method13637();
@@ -200,7 +200,7 @@ public class Class170 {
 	}
 
 	boolean method2884(int i_1, int i_2, int i_3, int i_4) {
-		if (this.aClass158_Sub1_Sub4_2095 != null && !this.aClass473_2108.method7861(141891001)) {
+		if (this.aClass158_Sub1_Sub4_2095 != null && !this.aClass473_2108.method7861()) {
 			if (i_3 != this.anInt2098 || i_4 != this.anInt2099) {
 				this.anInt2098 = i_3;
 				this.anInt2099 = i_4;
@@ -297,7 +297,7 @@ public class Class170 {
 		this.aClass137_Sub1_2104 = null;
 		this.aClass137_Sub1Array2106 = null;
 		this.aClass282_Sub50_Sub19_2107 = null;
-		if (!this.aClass473_2108.method7861(141891001)) {
+		if (!this.aClass473_2108.method7861()) {
 			for (Node node_1 = this.aClass473_2108.getBack(); node_1 != this.aClass473_2108.head; node_1 = node_1.next) {
 				((Class282_Sub5) node_1).method12120();
 			}

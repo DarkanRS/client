@@ -120,7 +120,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	void method14697(byte b_1) {
 	}
 
-	int method13036(Class282_Sub24[] arr_1, int i_2) {
+	int method13036(Class282_Sub24[] arr_1) {
 		int i_3 = 0;
 
 		int i_4;

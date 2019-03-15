@@ -22,10 +22,10 @@ public class Class275_Sub4 extends Class275 {
 				sceneobject_3 = (SceneObject) sceneobjectmanager_2.getWallDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, (byte) -42);
 			}
 			if (class282_sub31_0.anInt7766 == 2) {
-				sceneobject_3 = (SceneObject) sceneobjectmanager_2.getInteractableObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, client.anInterface25_7446, -233664382);
+				sceneobject_3 = (SceneObject) sceneobjectmanager_2.getInteractableObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, client.anInterface25_7446);
 			}
 			if (class282_sub31_0.anInt7766 == 3) {
-				sceneobject_3 = (SceneObject) sceneobjectmanager_2.getGroundDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, -387297653);
+				sceneobject_3 = (SceneObject) sceneobjectmanager_2.getGroundDecoration(class282_sub31_0.anInt7764, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763);
 			}
 			if (sceneobject_3 != null) {
 				class282_sub31_0.anInt7765 = sceneobject_3.getId(109923272);

@@ -10,7 +10,7 @@ public class Class84 {
 
 	public int anInt810;
 
-	Class84 method1459(int i_1, int i_2) {
+	Class84 method1459(int i_1) {
 		return new Class84(this.anInt812, i_1, this.anInt811, this.anInt810);
 	}
 
@@ -21,7 +21,7 @@ public class Class84 {
 		this.anInt810 = i_4;
 	}
 
-	public static Class273 method1461(int i_0) {
+	public static Class273 method1461() {
 		try {
 			Class273_Sub1 class273_sub1_1 = new Class273_Sub1();
 			return class273_sub1_1;

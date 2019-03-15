@@ -51,7 +51,7 @@ public class SystemInfo extends Node {
 
 	int anInt8164;
 
-	public int method13454(int i_1) {
+	public int method13454() {
 		byte b_2 = 38;
 		int i_3 = b_2 + ParticleTriangle.method3952(this.aString8157, -696675148);
 		i_3 += ParticleTriangle.method3952(this.aString8160, 1704970825);
@@ -62,7 +62,7 @@ public class SystemInfo extends Node {
 		return i_3;
 	}
 
-	void method13455(int i_1) {
+	void method13455() {
 		if (this.aString8157.length() > 40) {
 			this.aString8157 = this.aString8157.substring(0, 40);
 		}
@@ -77,7 +77,7 @@ public class SystemInfo extends Node {
 		}
 	}
 
-	public void writeMachineInformation(RsByteBuffer rsbytebuffer_1, int i_2) {
+	public void writeMachineInformation(RsByteBuffer rsbytebuffer_1) {
 		rsbytebuffer_1.writeByte(6);
 		rsbytebuffer_1.writeByte(this.anInt8126);
 		rsbytebuffer_1.writeByte(this.aBool8142 ? 1 : 0);
@@ -87,16 +87,16 @@ public class SystemInfo extends Node {
 		rsbytebuffer_1.writeByte(this.anInt8148);
 		rsbytebuffer_1.writeByte(this.javaUpdate);
 		rsbytebuffer_1.writeByte(this.aBool8150 ? 1 : 0);
-		rsbytebuffer_1.writeShort(this.anInt8151, 1417031095);
+		rsbytebuffer_1.writeShort(this.anInt8151);
 		rsbytebuffer_1.writeByte(this.anInt8146);
-		rsbytebuffer_1.write24BitInt(this.anInt8167, (byte) 14);
-		rsbytebuffer_1.writeShort(this.anInt8156, 1417031095);
+		rsbytebuffer_1.write24BitInt(this.anInt8167);
+		rsbytebuffer_1.writeShort(this.anInt8156);
 		rsbytebuffer_1.writeJagString(this.aString8157, 2145026142);
 		rsbytebuffer_1.writeJagString(this.aString8160, 2128264250);
 		rsbytebuffer_1.writeJagString(this.aString8159, 2122985674);
 		rsbytebuffer_1.writeJagString(this.aString8153, 2114964752);
 		rsbytebuffer_1.writeByte(this.anInt8162);
-		rsbytebuffer_1.writeShort(this.anInt8164, 1417031095);
+		rsbytebuffer_1.writeShort(this.anInt8164);
 		rsbytebuffer_1.writeJagString(this.aString8165, 2113125400);
 		rsbytebuffer_1.writeJagString(this.aString8166, 2132826460);
 		rsbytebuffer_1.writeByte(this.anInt8163);
@@ -107,7 +107,7 @@ public class SystemInfo extends Node {
 		rsbytebuffer_1.writeInt(this.anInt8168);
 	}
 
-	public SystemInfo(boolean bool_1) {
+	public SystemInfo() {
 		if (Class225_Sub6.aString8069.startsWith("win")) {
 			this.anInt8126 = 1;
 		} else if (Class225_Sub6.aString8069.startsWith("mac")) {
@@ -328,11 +328,11 @@ public class SystemInfo extends Node {
 		if (this.aString8166 == null) {
 			this.aString8166 = "";
 		}
-		this.method13455(998850218);
+		this.method13455();
 	}
 
-	static final void method13466(Animable animable_0, boolean bool_1, int i_2) {
-		RenderAnimDefs renderanimdefs_3 = animable_0.getRenderAnimDefs((byte) -17);
+	static final void method13466(Animable animable_0, boolean bool_1) {
+		RenderAnimDefs renderanimdefs_3 = animable_0.getRenderAnimDefs();
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;
 			IdentikitDefinition.anInt430 = Class249.aClass249_3083.aByte3085;
@@ -376,8 +376,8 @@ public class SystemInfo extends Node {
 			Vector3 vector3_21 = Vector3.popVectorStackTo(animable_0.method11166().aClass385_3595);
 			int i_5 = (int) vector3_21.x;
 			int i_6 = (int) vector3_21.z;
-			int i_7 = 512 * animable_0.regionBaseX[animable_0.anInt10355 - 1] + animable_0.getSize(828768449) * 256;
-			int i_8 = animable_0.regionBaseY[animable_0.anInt10355 - 1] * 512 + animable_0.getSize(828768449) * 256;
+			int i_7 = 512 * animable_0.regionBaseX[animable_0.anInt10355 - 1] + animable_0.getSize() * 256;
+			int i_8 = animable_0.regionBaseY[animable_0.anInt10355 - 1] * 512 + animable_0.getSize() * 256;
 			if (i_5 < i_7) {
 				if (i_6 < i_8) {
 					animable_0.method15863(10240, 1808111864);

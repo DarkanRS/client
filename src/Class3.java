@@ -95,7 +95,7 @@ public class Class3 implements Interface42 {
 		return this.anIntArray26[i_1];
 	}
 
-	public void method280(int i_1, int i_2, int i_3) {
+	public void method280(int i_1, int i_2) {
 		Class226 class226_4 = IndexLoaders.aClass230_147.method3897(i_1, (byte) 58);
 		int i_5 = class226_4.anInt2784;
 		int i_6 = class226_4.anInt2785;
@@ -133,7 +133,7 @@ public class Class3 implements Interface42 {
 		}
 	}
 
-	public static int method282(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	public static int method282(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if ((i_5 & 0x1) == 1) {
 			int i_7 = i_3;
 			i_3 = i_4;
@@ -143,7 +143,7 @@ public class Class3 implements Interface42 {
 		return i_2 == 0 ? i_1 : (i_2 == 1 ? 7 - i_0 - (i_3 - 1) : (i_2 == 2 ? 7 - i_1 - (i_4 - 1) : i_0));
 	}
 
-	public static int method285(int i_0, int i_1, int i_2) {
+	public static int method285(int i_0, int i_1) {
 		int i_3;
 		for (i_3 = 0; i_1 > 0; --i_1) {
 			i_3 = i_3 << 1 | i_0 & 0x1;
@@ -152,7 +152,7 @@ public class Class3 implements Interface42 {
 		return i_3;
 	}
 
-	static Class275_Sub2 method286(int i_0) {
+	static Class275_Sub2 method286() {
 		Class275_Sub2 class275_sub2_1 = (Class275_Sub2) Class275_Sub2.aClass457_7745.method7648(1622132188);
 		if (class275_sub2_1 != null) {
 			--Class275_Sub2.anInt7741;

@@ -21,7 +21,7 @@ public class Class434_Sub1 extends Class434 {
 
 	Socket method12755(Proxy proxy_1, byte b_2) throws IOException {
 		if (proxy_1.type() == Type.DIRECT) {
-			return this.method7291(1580851004);
+			return this.method7291();
 		} else {
 			SocketAddress socketaddress_3 = proxy_1.address();
 			if (!(socketaddress_3 instanceof InetSocketAddress)) {
@@ -53,7 +53,7 @@ public class Class434_Sub1 extends Class434 {
 						;
 					}
 
-					return this.method12756(inetsocketaddress_4.getHostName(), inetsocketaddress_4.getPort(), string_15, (byte) -81);
+					return this.method12756(inetsocketaddress_4.getHostName(), inetsocketaddress_4.getPort(), string_15);
 				} else if (proxy_1.type() == Type.SOCKS) {
 					Socket socket_5 = new Socket(proxy_1);
 					socket_5.connect(new InetSocketAddress(this.aString5330, 877634459 * this.anInt5331));
@@ -65,7 +65,7 @@ public class Class434_Sub1 extends Class434 {
 		}
 	}
 
-	Socket method12756(String string_1, int i_2, String string_3, byte b_4) throws IOException {
+	Socket method12756(String string_1, int i_2, String string_3) throws IOException {
 		Socket socket_5 = new Socket(string_1, i_2);
 		socket_5.setSoTimeout(10000);
 		OutputStream outputstream_6 = socket_5.getOutputStream();
@@ -125,7 +125,7 @@ public class Class434_Sub1 extends Class434 {
 			list_3 = this.aProxySelector7909.select(new URI((bool_2 ? "https" : "http") + "://" + this.aString5330));
 			list_4 = this.aProxySelector7909.select(new URI((bool_2 ? "http" : "https") + "://" + this.aString5330));
 		} catch (URISyntaxException urisyntaxexception_15) {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 
 		list_3.addAll(list_4);
@@ -152,7 +152,7 @@ public class Class434_Sub1 extends Class434 {
 		if (ioexception_sub1_6 != null) {
 			throw ioexception_sub1_6;
 		} else {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 	}
 
@@ -170,7 +170,7 @@ public class Class434_Sub1 extends Class434 {
 			list_3 = this.aProxySelector7909.select(new URI((bool_2 ? "https" : "http") + "://" + this.aString5330));
 			list_4 = this.aProxySelector7909.select(new URI((bool_2 ? "http" : "https") + "://" + this.aString5330));
 		} catch (URISyntaxException urisyntaxexception_15) {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 
 		list_3.addAll(list_4);
@@ -197,7 +197,7 @@ public class Class434_Sub1 extends Class434 {
 		if (ioexception_sub1_6 != null) {
 			throw ioexception_sub1_6;
 		} else {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 	}
 
@@ -215,7 +215,7 @@ public class Class434_Sub1 extends Class434 {
 			list_3 = this.aProxySelector7909.select(new URI((bool_2 ? "https" : "http") + "://" + this.aString5330));
 			list_4 = this.aProxySelector7909.select(new URI((bool_2 ? "http" : "https") + "://" + this.aString5330));
 		} catch (URISyntaxException urisyntaxexception_15) {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 
 		list_3.addAll(list_4);
@@ -242,7 +242,7 @@ public class Class434_Sub1 extends Class434 {
 		if (ioexception_sub1_6 != null) {
 			throw ioexception_sub1_6;
 		} else {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 	}
 
@@ -260,7 +260,7 @@ public class Class434_Sub1 extends Class434 {
 			list_4 = this.aProxySelector7909.select(new URI((bool_3 ? "https" : "http") + "://" + this.aString5330));
 			list_5 = this.aProxySelector7909.select(new URI((bool_3 ? "http" : "https") + "://" + this.aString5330));
 		} catch (URISyntaxException urisyntaxexception_16) {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 
 		list_4.addAll(list_5);
@@ -287,11 +287,11 @@ public class Class434_Sub1 extends Class434 {
 		if (ioexception_sub1_7 != null) {
 			throw ioexception_sub1_7;
 		} else {
-			return this.method7291(1580851004);
+			return this.method7291();
 		}
 	}
 
-	public static void method12760(int i_0, int i_1, int i_2, int i_3) {
+	public static void method12760(int i_0, int i_1, int i_2) {
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = coordgrid_4.x + i_1;
 		int i_6 = i_2 + coordgrid_4.y;
@@ -307,7 +307,7 @@ public class Class434_Sub1 extends Class434 {
 				} else {
 					Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_11 = (Class521_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-892645216).method3405(i_0, i_1, i_2, -211748464);
 					if (class521_sub1_sub2_sub1_11 == null) {
-						class521_sub1_sub2_sub1_11 = new Class521_Sub1_Sub2_Sub1(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1434674634), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1839771352).aClass390Array2591[i_0].method6722(i_1, i_2, 65280), i_2 << 265, i_0, i_0);
+						class521_sub1_sub2_sub1_11 = new Class521_Sub1_Sub2_Sub1(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1434674634), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1839771352).aClass390Array2591[i_0].method6722(i_1, i_2), i_2 << 265, i_0, i_0);
 					} else {
 						class521_sub1_sub2_sub1_11.anInt10415 = -1;
 						class521_sub1_sub2_sub1_11.anInt10411 = -1;
@@ -346,11 +346,11 @@ public class Class434_Sub1 extends Class434 {
 					class521_sub1_sub2_sub1_11.anInt10422 = 0;
 					class521_sub1_sub2_sub1_11.plane = (byte) i_0;
 					class521_sub1_sub2_sub1_11.aByte7968 = (byte) i_0;
-					if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_1, i_2, 1619505196)) {
+					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_1, i_2, 1619505196)) {
 						class521_sub1_sub2_sub1_11.aByte7968 = (byte) (class521_sub1_sub2_sub1_11.aByte7968 + 1);
 					}
 
-					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1499506351).method3394(i_0, i_1, i_2, i_14, class521_sub1_sub2_sub1_11, (byte) -119);
+					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1499506351).method3394(i_0, i_1, i_2, i_14, class521_sub1_sub2_sub1_11);
 				}
 			}
 		}

@@ -16,7 +16,7 @@ public class Item extends Node {
 		this.hasPlayerAppearance = bool_6;
 	}
 
-	static void method12574(GraphicalRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1, int i_2, int i_3, int i_4) {
+	static void method12574(GraphicalRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1, int i_2, int i_3) {
 		Class119 class119_5 = icomponentdefinitions_1.method2046(graphicalrenderer_0, 1273435241);
 		if (class119_5 != null) {
 			Class455 class455_6 = class119_5.aClass455_1456;
@@ -67,7 +67,7 @@ public class Item extends Node {
 				for (i_21 = 0; i_21 < Class187.anInt2353; i_21++) {
 					i_16 = Class187.anIntArray2354[i_21] * 4 + 2 - i_8 / 128;
 					i_17 = Class187.anIntArray2355[i_21] * 4 + 2 - i_9 / 128;
-					ObjectDefinitions objectdefinitions_23 = IndexLoaders.MAP_REGION_DECODER.method4436(-1953311803).getObjectDefinitions(Class187.anIntArray2357[i_21], 65280);
+					ObjectDefinitions objectdefinitions_23 = IndexLoaders.MAP_REGION_DECODER.method4436(-1953311803).getObjectDefinitions(Class187.anIntArray2357[i_21]);
 					if (objectdefinitions_23.toObjectIds != null) {
 						objectdefinitions_23 = objectdefinitions_23.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) -58);
 						if (objectdefinitions_23 == null || objectdefinitions_23.mapIcon == -1) {
@@ -89,13 +89,13 @@ public class Item extends Node {
 					}
 				}
 
-				Class469.method7805(graphicalrenderer_0, i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3, 2063184307);
-				Class82.method1457(i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3, 1942118537);
-				Class190.method3151(i_8, i_9, icomponentdefinitions_1, class119_5, i_2, i_3, 848202629);
+				Class469.method7805(graphicalrenderer_0, i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3);
+				Class82.method1457(i_8, i_9, icomponentdefinitions_1, class455_6, i_2, i_3);
+				Class190.method3151(i_8, i_9, icomponentdefinitions_1, class119_5, i_2, i_3);
 				if (NativeLibraryLoader.anInt3240 != 4) {
 					if (Class187.anInt2361 != 0) {
-						i_21 = Class187.anInt2361 * 4 + 2 - i_8 / 128 + (Class84.myPlayer.getSize(828768449) - 1) * 2;
-						i_16 = 2 + Class187.anInt2359 * 4 - i_9 / 128 + (Class84.myPlayer.getSize(828768449) - 1) * 2;
+						i_21 = Class187.anInt2361 * 4 + 2 - i_8 / 128 + (Class84.myPlayer.getSize() - 1) * 2;
+						i_16 = 2 + Class187.anInt2359 * 4 - i_9 / 128 + (Class84.myPlayer.getSize() - 1) * 2;
 						Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_21, i_16, Class16.aClass160Array145[Class187.aBool2360 ? 1 : 0], 1471010271);
 					}
 
@@ -104,7 +104,7 @@ public class Item extends Node {
 					}
 				}
 			} else {
-				graphicalrenderer_0.DA(-16777216, class455_6, i_2, i_3);
+				graphicalrenderer_0.DA(class455_6, i_2, i_3);
 			}
 		}
 

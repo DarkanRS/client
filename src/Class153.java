@@ -8,7 +8,7 @@ public final class Class153 {
 
 	IterableNodeMap aClass465_1963;
 
-	public void method2607(byte b_1) {
+	public void method2607() {
 		if (this.aClass465_1963 != null) {
 			this.aClass465_1963.method7749(1241970145);
 		}
@@ -19,32 +19,32 @@ public final class Class153 {
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {
-			Class449 class449_4 = IndexLoaders.aClass447_435.method7450(i_1, (byte) -118);
+			Class449 class449_4 = IndexLoaders.aClass447_435.method7450(i_1);
 			return class449_4.aChar5431 != 105 ? -1 : 0;
 		}
 	}
 
-	public int method2610(int i_1, short s_2) {
-		Class489 class489_3 = IndexLoaders.aClass498_3001.method8322(i_1, (short) 4986);
+	public int method2610(int i_1) {
+		Class489 class489_3 = IndexLoaders.aClass498_3001.method8322(i_1);
 		int i_4 = class489_3.anInt5764;
 		int i_5 = class489_3.anInt5762 == 31 ? -1 : (1 << class489_3.anInt5762 + 1) - 1;
 		return (this.method2609(i_4, (byte) 117) & i_5) >>> class489_3.anInt5763;
 	}
 
-	Class153(int i_1) {
-		this.anInt1964 = i_1;
+	Class153() {
+		this.anInt1964 = 32;
 	}
 
-	public void method2614(int i_1, int i_2, short s_3) {
+	public void method2614(int i_1, int i_2) {
 		if (this.aClass465_1963 == null) {
-			if (s_3 != 768) {
+			if ((short) 768 != 768) {
 				return;
 			}
 			this.aClass465_1963 = new IterableNodeMap(this.anInt1964);
 		}
 		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1963.get((long) i_1);
 		if (class282_sub38_4 != null) {
-			if (s_3 == 768) {
+			if ((short) 768 == 768) {
 				class282_sub38_4.anInt8002 = i_2;
 			}
 		} else {
@@ -82,10 +82,10 @@ public final class Class153 {
 	}
 
 	public static byte[] method2621(File file_0, int i_1) {
-		return ObjectDefinitions.method8023(file_0, (int) file_0.length(), (byte) 0);
+		return ObjectDefinitions.method8023(file_0, (int) file_0.length());
 	}
 
-	static Class208 method2622(Class521_Sub1_Sub1 class521_sub1_sub1_0, int i_1) {
+	static Class208 method2622(Class521_Sub1_Sub1 class521_sub1_sub1_0) {
 		Class208 class208_2;
 		if (Class507.aClass208_5860 == null) {
 			class208_2 = new Class208();

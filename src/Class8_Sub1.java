@@ -487,7 +487,7 @@ public class Class8_Sub1 extends FontRenderer {
 
 	}
 
-	static int method13782(int i_0, int i_1, int i_2) {
+	static int method13782(int i_0, int i_1) {
 		byte b_3;
 		if (i_1 > 20077) {
 			Defaults6Loader.method11248(1158077099);
@@ -499,13 +499,13 @@ public class Class8_Sub1 extends FontRenderer {
 			Class119.method2077(213665049);
 			b_3 = 2;
 		} else {
-			Class282_Sub20_Sub25.method15393(true, 2142081761);
+			Class282_Sub20_Sub25.method15393(2142081761);
 			b_3 = 1;
 		}
 
 		if (Class393.preferences.currentToolkit.getValue(-1837910677) != i_0) {
 			Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, i_0, -1336804214);
-			ParticleProducer.method11500(i_0, false, (byte) 24);
+			ParticleProducer.method11500(i_0, false);
 		} else {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, -1708960758);
 		}
@@ -514,8 +514,8 @@ public class Class8_Sub1 extends FontRenderer {
 		return b_3;
 	}
 
-	static void method13783(int i_0) {
-		Class468_Sub20.anIntArray7920 = Class492.method8266(2048, 35, 8, 8, 4, 0.4F, true, (byte) -23);
+	static void method13783() {
+		Class468_Sub20.anIntArray7920 = Class492.method8266();
 	}
 
 	static void method13784(int i_0, int i_1) {

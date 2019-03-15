@@ -41,7 +41,7 @@ public class Class508 implements Runnable {
 		}
 	}
 
-	public void method8733(int i_1) {
+	public void method8733() {
 		if (this.aThread5861 != null) {
 			this.method8730(this.anObject5862, -2004280805);
 			try {
@@ -95,7 +95,7 @@ public class Class508 implements Runnable {
 			if (Class225_Sub6.aString8069.startsWith("win") && !bool_4) {
 				Class468_Sub6.method12661(string_0, 0, (byte) -25);
 			} else if (Class225_Sub6.aString8069.startsWith("mac")) {
-				Class186.method3082(string_0, 1, string_3, 145298920);
+				Class186.method3082(string_0, 1, string_3);
 			} else {
 				Class468_Sub6.method12661(string_0, 2, (byte) -47);
 			}
@@ -104,7 +104,7 @@ public class Class508 implements Runnable {
 		}
 	}
 
-	static final void decodeMasks(RsBitsBuffer rsbitsbuffer_0, int i_1) {
+	static final void decodeMasks(RsBitsBuffer rsbitsbuffer_0) {
 		for (int i_2 = 0; i_2 < Class197.anInt2434; i_2++) {
 			int i_3 = Class197.anIntArray2435[i_2];
 			Player player_4 = client.players[i_3];
@@ -115,7 +115,7 @@ public class Class508 implements Runnable {
 			if ((i_5 & 0x100) != 0) {
 				i_5 += rsbitsbuffer_0.readUnsignedByte() << 16;
 			}
-			Class282_Sub15_Sub5.decodeMasks(rsbitsbuffer_0, i_3, player_4, i_5, -303630036);
+			Class282_Sub15_Sub5.decodeMasks(rsbitsbuffer_0, i_3, player_4, i_5);
 		}
 	}
 }

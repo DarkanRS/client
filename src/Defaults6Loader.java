@@ -10,7 +10,7 @@ public class Defaults6Loader {
 
 	public int[] anIntArray6993;
 
-	void method11245(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method11245(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
@@ -46,7 +46,7 @@ public class Defaults6Loader {
 
 	public Defaults6Loader(Index index_1) {
 		byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_6.fileId);
-		this.method11245(new RsByteBuffer(bytes_2), -672057910);
+		this.method11245(new RsByteBuffer(bytes_2));
 		if (this.equipmentSlots == null) {
 			throw new RuntimeException("");
 		}
@@ -74,8 +74,8 @@ public class Defaults6Loader {
 		Class323.method5777(1560410818);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 0, -231227368);
 		Class393.preferences.setValue(Class393.preferences.graphics, 4, -702190975);
-		Class94.method1589((short) 255);
-		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(1356336946);
+		Class94.method1589();
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(1356336946);
 		client.aBool7185 = true;
 	}
 }

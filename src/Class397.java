@@ -74,7 +74,7 @@ public class Class397 implements Interface38 {
 			class282_sub48_8.anInt8081 = objectdefinitions_4.anInt5694 << 9;
 			if (objectdefinitions_4.toObjectIds != null) {
 				class282_sub48_8.aBool8092 = true;
-				class282_sub48_8.method13426((byte) 1);
+				class282_sub48_8.method13426();
 			}
 			if (class282_sub48_8.anIntArray8102 != null) {
 				class282_sub48_8.anInt8080 = class282_sub48_8.anInt8072 + (int) (Math.random() * (double) (class282_sub48_8.anInt8101 - class282_sub48_8.anInt8072));
@@ -85,12 +85,12 @@ public class Class397 implements Interface38 {
 			NPCDefinitions npcdefinitions_11 = npc_5.definitions;
 			if (npcdefinitions_11.anIntArray4886 != null) {
 				class282_sub48_8.aBool8092 = true;
-				npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER, 265881693);
+				npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			}
 			if (npcdefinitions_11 != null) {
 				class282_sub48_8.anInt8079 = npcdefinitions_11.anInt4858 + i_1 << 9;
 				class282_sub48_8.anInt8077 = i_2 + npcdefinitions_11.anInt4858 << 9;
-				class282_sub48_8.anInt8095 = Class282_Sub11_Sub1.method15433(npc_5, 912866554);
+				class282_sub48_8.anInt8095 = Class282_Sub11_Sub1.method15433(npc_5);
 				class282_sub48_8.aBool8098 = npcdefinitions_11.aBool4872;
 				class282_sub48_8.anInt8105 = npcdefinitions_11.anInt4907 << 9;
 				class282_sub48_8.anInt8089 = npcdefinitions_11.anInt4909;
@@ -101,8 +101,8 @@ public class Class397 implements Interface38 {
 			Class282_Sub48.aClass482_8074.append(class282_sub48_8, 1710217984);
 		} else if (player_6 != null) {
 			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub1_8086 = player_6;
-			class282_sub48_8.anInt8079 = i_1 + player_6.getSize(828768449) << 9;
-			class282_sub48_8.anInt8077 = i_2 + player_6.getSize(828768449) << 9;
+			class282_sub48_8.anInt8079 = i_1 + player_6.getSize() << 9;
+			class282_sub48_8.anInt8077 = i_2 + player_6.getSize() << 9;
 			class282_sub48_8.anInt8095 = Class149_Sub2.method14610(player_6, 1888639983);
 			class282_sub48_8.aBool8098 = player_6.isTransformedNPC;
 			class282_sub48_8.anInt8105 = player_6.isNpc << 9;

@@ -20,7 +20,7 @@ public class Class440 {
 		return this.aLong5355;
 	}
 
-	public void method7346(int i_1) throws IOException {
+	public void method7346() throws IOException {
 		this.method7353((byte) -31);
 		this.aClass442_5346.method7385((short) 14390);
 	}
@@ -74,7 +74,7 @@ public class Class440 {
 					i_2 += i_9;
 				}
 			} else if (i_3 > 0) {
-				this.method7363(-1494569111);
+				this.method7363();
 				i_9 = i_3;
 				if (i_3 > this.anInt5349) {
 					i_9 = this.anInt5349;
@@ -133,11 +133,11 @@ public class Class440 {
 		}
 	}
 
-	public void method7351(byte[] bytes_1, int i_2) throws IOException {
+	public void method7351(byte[] bytes_1) throws IOException {
 		this.method7350(bytes_1, 0, bytes_1.length, 79386718);
 	}
 
-	public void method7352(byte[] bytes_1, int i_2, int i_3, int i_4) throws IOException {
+	public void method7352(byte[] bytes_1, int i_2, int i_3) throws IOException {
 		try {
 			if ((long) i_3 + this.aLong5353 > this.aLong5355) {
 				this.aLong5355 = this.aLong5353 + (long) i_3;
@@ -245,15 +245,15 @@ public class Class440 {
 
 	}
 
-	public Class440(Class442 class442_1, int i_2, int i_3) throws IOException {
+	public Class440(Class442 class442_1, int i_2) throws IOException {
 		this.aClass442_5346 = class442_1;
-		this.aLong5355 = this.aLong5354 = class442_1.method7388(-273347477);
+		this.aLong5355 = this.aLong5354 = class442_1.method7388();
 		this.aByteArray5350 = new byte[i_2];
-		this.aByteArray5348 = new byte[i_3];
+		this.aByteArray5348 = new byte[0];
 		this.aLong5353 = 0L;
 	}
 
-	void method7363(int i_1) throws IOException {
+	void method7363() throws IOException {
 		this.anInt5349 = 0;
 		if (this.aLong5353 != this.aLong5351) {
 			this.aClass442_5346.method7390(this.aLong5353);
@@ -288,7 +288,7 @@ public class Class440 {
 			bool_3 = true;
 		}
 
-		Class507.method8725(i_5, i_0, i_1, i_2, bool_3, -1040786933);
+		Class507.method8725(i_5, i_0, i_1, i_2, bool_3);
 	}
 
 }

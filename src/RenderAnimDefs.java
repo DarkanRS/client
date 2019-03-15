@@ -96,7 +96,7 @@ public class RenderAnimDefs {
 
 	Matrix44Var[] aClass294Array2805;
 
-	void method3808(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method3808(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.defaultStandAnimation = rsbytebuffer_1.readBigSmart();
 			this.walkAnimation = rsbytebuffer_1.readBigSmart();
@@ -235,7 +235,7 @@ public class RenderAnimDefs {
 		}
 	}
 
-	public boolean method3810(int i_1, int i_2) {
+	public boolean method3810(int i_1) {
 		if (i_1 == -1) {
 			return false;
 		} else if (this.defaultStandAnimation == i_1) {
@@ -292,17 +292,17 @@ public class RenderAnimDefs {
 		}
 	}
 
-	void method3821(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method3821(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method3808(rsbytebuffer_1, i_3, -374840735);
+			this.method3808(rsbytebuffer_1, i_3);
 		}
 	}
 
-	public int[] method3828(int i_1) {
+	public int[] method3828() {
 		IterableNodeMap iterablenodemap_2 = new IterableNodeMap(16);
 		Class1.method253(this.defaultStandAnimation, iterablenodemap_2, 1339333196);
 		int[] ints_3;

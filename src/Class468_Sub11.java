@@ -1,6 +1,6 @@
 public class Class468_Sub11 extends Preference {
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -20,7 +20,7 @@ public class Class468_Sub11 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public void method12698(byte b_1) {
+	public void method12698() {
 	}
 
 	public int method12699(byte b_1) {
@@ -43,7 +43,7 @@ public class Class468_Sub11 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	public static int method12702(int i_0, int i_1, int i_2, int i_3) {
+	public static int method12702(int i_0, int i_1, int i_2) {
 		if (Class291_Sub1.anInt8015 < 100) {
 			return -2;
 		} else {

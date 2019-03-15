@@ -8,12 +8,12 @@ public class Class282_Sub17_Sub13 extends Class282_Sub17 {
 		class61_1.method1222(-1921394989 * this.anInt10213 * 322761051, this.anInt10214 * 551899093 * 1495232893, -1495337462);
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.anInt10213 = rsbytebuffer_1.readInt();
 		this.anInt10214 = rsbytebuffer_1.readInt();
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1222(this.anInt10213, this.anInt10214, -1574841788);
 	}
 

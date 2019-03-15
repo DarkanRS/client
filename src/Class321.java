@@ -15,7 +15,7 @@ public final class Class321 {
 
 	AbstractQueue_Sub1 anAbstractQueue_Sub1_3727;
 
-	public Object method5737(Object object_1, int i_2) {
+	public Object method5737(Object object_1) {
 		synchronized (this) {
 			if (this.aLong3726 != -1L) {
 				this.method5745((byte) 57);
@@ -24,7 +24,7 @@ public final class Class321 {
 			Object object_5;
 			if (class328_4 != null) {
 				this.anAbstractQueue_Sub1_3725.remove(class328_4);
-				if (this.method5738(16711680)) {
+				if (this.method5738()) {
 					this.anAbstractQueue_Sub1_3727.remove(class328_4);
 				}
 				object_5 = class328_4.anObject3768;
@@ -36,8 +36,8 @@ public final class Class321 {
 		}
 	}
 
-	Class321(long long_1, int i_3, Class332 class332_4) {
-		this.aLong3726 = long_1;
+	Class321(int i_3, Class332 class332_4) {
+		this.aLong3726 = (long) -1;
 		this.anInt3730 = i_3;
 		this.aClass332_3729 = class332_4;
 		if (this.anInt3730 == -1) {
@@ -54,11 +54,11 @@ public final class Class321 {
 		}
 	}
 
-	boolean method5738(int i_1) {
+	boolean method5738() {
 		return this.anInt3730 != -1;
 	}
 
-	public Object method5739(Object object_1, byte b_2) {
+	public Object method5739(Object object_1) {
 		synchronized (this) {
 			if (this.aLong3726 != -1L) {
 				this.method5745((byte) 81);
@@ -76,7 +76,7 @@ public final class Class321 {
 		}
 	}
 
-	public Object method5740(Object object_1, Object object_2, int i_3) {
+	public Object method5740(Object object_1, Object object_2) {
 		synchronized (this) {
 			if (this.aLong3726 != -1L) {
 				this.method5745((byte) 119);
@@ -89,7 +89,7 @@ public final class Class321 {
 				return object_9;
 			} else {
 				Class328 class328_6;
-				if (this.method5738(16711680) && this.aMap3728.size() == this.anInt3730) {
+				if (this.method5738() && this.aMap3728.size() == this.anInt3730) {
 					class328_6 = (Class328) this.anAbstractQueue_Sub1_3727.remove();
 					this.aMap3728.remove(class328_6.anObject3770);
 					this.anAbstractQueue_Sub1_3725.remove(class328_6);
@@ -106,12 +106,12 @@ public final class Class321 {
 	void method5742(Class328 class328_1, boolean bool_2, byte b_3) {
 		if (!bool_2) {
 			this.anAbstractQueue_Sub1_3725.remove(class328_1);
-			if (this.method5738(16711680) && !this.anAbstractQueue_Sub1_3727.remove(class328_1)) {
+			if (this.method5738() && !this.anAbstractQueue_Sub1_3727.remove(class328_1)) {
 				throw new IllegalStateException("");
 			}
 		}
 		class328_1.aLong3767 = System.currentTimeMillis();
-		if (this.method5738(16711680)) {
+		if (this.method5738()) {
 			switch (this.aClass332_3729.anInt3876) {
 			case 0:
 				++class328_1.aLong3769;
@@ -128,7 +128,7 @@ public final class Class321 {
 		synchronized (this) {
 			this.aMap3728.clear();
 			this.anAbstractQueue_Sub1_3725.clear();
-			if (this.method5738(16711680)) {
+			if (this.method5738()) {
 				this.anAbstractQueue_Sub1_3727.clear();
 			}
 		}
@@ -146,18 +146,18 @@ public final class Class321 {
 				}
 				this.aMap3728.remove(class328_4.anObject3770);
 				this.anAbstractQueue_Sub1_3725.remove(class328_4);
-				if (this.method5738(16711680)) {
+				if (this.method5738()) {
 					this.anAbstractQueue_Sub1_3727.remove(class328_4);
 				}
 			}
 		}
 	}
 
-	public Class321(int i_1, Class332 class332_2) {
-		this(-1L, i_1, class332_2);
+	public Class321(Class332 class332_2) {
+		this(64, class332_2);
 	}
 
-	public static void method5757(int i_0) {
+	public static void method5757() {
 		Class345.aClass229_4031.method3859(1719265419);
 	}
 }

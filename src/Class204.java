@@ -10,7 +10,7 @@ public class Class204 implements Interface43 {
 		this.anInt2580 = i_1;
 	}
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt2580;
 	}
 
@@ -44,12 +44,12 @@ public class Class204 implements Interface43 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static void method3367(int i_0) {
+	static void method3367() {
 		Class291_Sub1.aClass465_8025.method7749(-916385240);
 		Class291_Sub1.aClass465_8029.method7749(894891319);
 	}
 
-	static final void method3369(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+	static final void method3369(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.aString1338 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 }

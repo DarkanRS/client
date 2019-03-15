@@ -8,14 +8,14 @@ public class Class288 {
 
 	Index aClass317_3436;
 
-	public void method5068(int i_1, byte b_2) {
+	public void method5068() {
 		SoftCache softcache_3 = this.aClass229_3437;
 		synchronized (this.aClass229_3437) {
-			this.aClass229_3437.method3858(i_1, (byte) -51);
+			this.aClass229_3437.method3858(5, (byte) -51);
 		}
 	}
 
-	public void method5070(int i_1) {
+	public void method5070() {
 		SoftCache softcache_2 = this.aClass229_3437;
 		synchronized (this.aClass229_3437) {
 			this.aClass229_3437.method3859(1722121730);
@@ -27,14 +27,14 @@ public class Class288 {
 		this.aClass317_3436.filesCount(SharedConfigsType.aClass120_1469.id);
 	}
 
-	public void method5071(int i_1) {
+	public void method5071() {
 		SoftCache softcache_2 = this.aClass229_3437;
 		synchronized (this.aClass229_3437) {
 			this.aClass229_3437.method3863(2056846713);
 		}
 	}
 
-	Class207 method5072(int i_1, int i_2) {
+	Class207 method5072(int i_1) {
 		SoftCache softcache_4 = this.aClass229_3437;
 		Class207 class207_3;
 		synchronized (this.aClass229_3437) {
@@ -50,7 +50,7 @@ public class Class288 {
 			}
 			class207_3 = new Class207();
 			if (bytes_10 != null) {
-				class207_3.method3549(new RsByteBuffer(bytes_10), -2145124357);
+				class207_3.method3549(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_3437;
 			synchronized (this.aClass229_3437) {
@@ -62,11 +62,11 @@ public class Class288 {
 
 	public Class247 method5077(int i_1, int i_2, int i_3, int i_4, Class45 class45_5, int i_6) {
 		Class334[] arr_7 = null;
-		Class207 class207_8 = this.method5072(i_1, -2042609292);
+		Class207 class207_8 = this.method5072(i_1);
 		if (class207_8.anIntArray2655 != null) {
 			arr_7 = new Class334[class207_8.anIntArray2655.length];
 			for (int i_9 = 0; i_9 < arr_7.length; i_9++) {
-				Class38 class38_10 = class45_5.method914(class207_8.anIntArray2655[i_9], -1040824349);
+				Class38 class38_10 = class45_5.method914(class207_8.anIntArray2655[i_9]);
 				arr_7[i_9] = new Class334(class38_10.anInt395, class38_10.anInt402, class38_10.anInt401, class38_10.anInt397, class38_10.anInt399, class38_10.anInt396, class38_10.anInt404, class38_10.aBool400, class38_10.anInt403, class38_10.anInt398, class38_10.anInt405);
 			}
 		}
@@ -102,7 +102,7 @@ public class Class288 {
 					if (bytes_8 != null) {
 						IComponentDefinitions component = interface_2.components[i] = new IComponentDefinitions();
 						component.idHash = i + (interfaceId << 16);
-						component.readValues(new RsByteBuffer(bytes_8), 1943098120);
+						component.readValues(new RsByteBuffer(bytes_8));
 					}
 				}
 			}

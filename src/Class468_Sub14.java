@@ -8,14 +8,14 @@ public class Class468_Sub14 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public void method12725(int i_1) {
+	public void method12725() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 1) {
 			this.anInt5578 = this.method7781(1719006425);
 		}
 
 	}
 
-	public boolean method12727(int i_1) {
+	public boolean method12727() {
 		return Class60.method1166(this.manager.currentToolkit.getValue(-1914029751), -830025324);
 	}
 
@@ -23,7 +23,7 @@ public class Class468_Sub14 extends Preference {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(1687107728), 131652836) ? 3 : 1;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -35,7 +35,7 @@ public class Class468_Sub14 extends Preference {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(1589425094), -1916831439) ? 3 : 1;
 	}
 
-	public int method12728(int i_1) {
+	public int method12728() {
 		return this.anInt5578;
 	}
 

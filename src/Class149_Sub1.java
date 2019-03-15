@@ -8,10 +8,10 @@ public class Class149_Sub1 extends Class149 {
 	void method2559(int i_1, int i_2) {
 	}
 
-	void method2561(int i_1, int i_2, int i_3) {
+	void method2561(int i_1, int i_2) {
 	}
 
-	void method2556(int i_1, int i_2, int i_3) {
+	void method2556(int i_1, int i_2) {
 		int i_4 = this.anInt9274 * i_1 >> 12;
 		int i_5 = this.anInt9276 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9273 >> 12;
@@ -30,7 +30,7 @@ public class Class149_Sub1 extends Class149 {
 	void method2555(int i_1, int i_2) {
 	}
 
-	void method2557(int i_1, int i_2, byte b_3) {
+	void method2557(int i_1, int i_2) {
 		int i_4 = this.anInt9274 * i_1 >> 12;
 		int i_5 = this.anInt9276 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9273 >> 12;
@@ -62,18 +62,18 @@ public class Class149_Sub1 extends Class149 {
 		Class299.method5316(i_3, i_5, i_4, i_6, this.anInt1743 * 440863295 * 1340859839, -1525176857 * this.anInt1741 * -1378640425, -1125689331 * this.anInt1742 * 383825605, (short) 16743);
 	}
 
-	public static void method14582(int i_0, int i_1) {
+	public static void method14582(int i_0) {
 		PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(5, (long) i_0);
 		class282_sub50_sub12_2.method14965((byte) -51);
 	}
 
 	public static void method14584(int i_0, int i_1, int i_2, int i_3, int i_4, short s_5) {
 		if (i_3 == i_2) {
-			TilestreamPacket.method6292(i_0, i_1, i_2, i_4, -1428254942);
+			TilestreamPacket.method6292(i_0, i_1, i_2, i_4);
 		} else if (i_0 - i_2 >= Class532_Sub3_Sub1.anInt7071 && i_0 + i_2 <= Class532_Sub3_Sub1.anInt7069 && i_1 - i_3 >= Class532_Sub3_Sub1.anInt7070 && i_3 + i_1 <= Class532_Sub3_Sub1.anInt7068) {
-			Class221.method3751(i_0, i_1, i_2, i_3, i_4, (byte) 61);
+			Class221.method3751(i_0, i_1, i_2, i_3, i_4);
 		} else {
-			Class282_Sub17_Sub3.method15405(i_0, i_1, i_2, i_3, i_4, (byte) 0);
+			Class282_Sub17_Sub3.method15405(i_0, i_1, i_2, i_3, i_4);
 		}
 
 	}

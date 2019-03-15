@@ -1,5 +1,3 @@
-import java.io.File;
-
 public class Class418 {
 
 	Class427 aClass427_4998;
@@ -12,17 +10,17 @@ public class Class418 {
 
 	public boolean aBool4996 = false;
 
-	void method7008(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method7008(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method7009(rsbytebuffer_1, i_3, -1539480331);
+			this.method7009(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method7009(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method7009(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.anInt4995 = rsbytebuffer_1.readBigSmart();
 		} else if (i_2 == 2) {
@@ -63,11 +61,11 @@ public class Class418 {
 		}
 	}
 
-	public boolean method7015(int i_1) {
+	public boolean method7015() {
 		return this.aClass427_4998.aClass317_5118.loadCutscene(this.anInt4995);
 	}
 
-	static void method7022(byte b_0) {
+	static void method7022() {
 		Class9.lobbyStage = 273;
 		Class9.aClass184_73 = client.aClass184_7475;
 		if (client.aByteArray7152 != null) {

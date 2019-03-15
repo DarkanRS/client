@@ -20,10 +20,10 @@ public abstract class Class282_Sub20 extends Node {
 	}
 
 	final int[] method12317(int i_1, int i_2, int i_3) {
-		return !this.aClass282_Sub20Array7671[i_1].aBool7669 ? this.aClass282_Sub20Array7671[i_1].method12320(i_2, -1507861387)[0] : this.aClass282_Sub20Array7671[i_1].method12319(i_2, 752457538);
+		return !this.aClass282_Sub20Array7671[i_1].aBool7669 ? this.aClass282_Sub20Array7671[i_1].method12320(i_2, -1507861387)[0] : this.aClass282_Sub20Array7671[i_1].method12319(i_2);
 	}
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		throw new IllegalStateException();
 	}
 
@@ -34,10 +34,10 @@ public abstract class Class282_Sub20 extends Node {
 	void method12321(int i_1) {
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 	}
 
-	int method12323(int i_1) {
+	int method12323() {
 		return -1;
 	}
 
@@ -45,19 +45,19 @@ public abstract class Class282_Sub20 extends Node {
 		return -1;
 	}
 
-	void method12326(int i_1) {
+	void method12326() {
 		if (this.aBool7669) {
-			this.aClass320_7667.method5720((byte) 8);
+			this.aClass320_7667.method5720();
 			this.aClass320_7667 = null;
 		} else {
-			this.aClass308_7670.method5462((byte) 0);
+			this.aClass308_7670.method5462();
 			this.aClass308_7670 = null;
 		}
 	}
 
-	final int[][] method12333(int i_1, int i_2, byte b_3) {
+	final int[][] method12333(int i_1, int i_2) {
 		if (this.aClass282_Sub20Array7671[i_1].aBool7669) {
-			int[] ints_4 = this.aClass282_Sub20Array7671[i_1].method12319(i_2, 752457538);
+			int[] ints_4 = this.aClass282_Sub20Array7671[i_1].method12319(i_2);
 			int[][] ints_5 = new int[][] { ints_4, ints_4, ints_4 };
 			return ints_5;
 		} else {

@@ -28,7 +28,7 @@ public class Class535 {
 		this.method11468(rsbytebuffer_1, class239_2, -1150790406);
 	}
 
-	void method11443(int i_1) {
+	void method11443() {
 		this.anInt7083 = Class239.anInt2935;
 		this.aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		this.aFloat7081 = 1.1523438F;
@@ -43,7 +43,7 @@ public class Class535 {
 		this.aClass247_7091 = Class239.aClass247_2940;
 	}
 
-	void method11444(Class535 class535_1, int i_2) {
+	void method11444(Class535 class535_1) {
 		this.anInt7083 = class535_1.anInt7083;
 		this.aFloat7081 = class535_1.aFloat7081;
 		this.aFloat7082 = class535_1.aFloat7082;
@@ -58,15 +58,15 @@ public class Class535 {
 		this.aClass247_7091 = class535_1.aClass247_7091;
 	}
 
-	void method11445(GraphicalRenderer graphicalrenderer_1, Class535 class535_2, Class535 class535_3, float f_4, byte b_5) {
-		this.anInt7083 = Class302.method5364(class535_2.anInt7083, class535_3.anInt7083, 255.0F * f_4, 833509259);
+	void method11445(GraphicalRenderer graphicalrenderer_1, Class535 class535_2, Class535 class535_3, float f_4) {
+		this.anInt7083 = Class302.method5364(class535_2.anInt7083, class535_3.anInt7083, 255.0F * f_4);
 		this.aFloat7082 = class535_2.aFloat7082 + (class535_3.aFloat7082 - class535_2.aFloat7082) * f_4;
 		this.aFloat7090 = class535_2.aFloat7090 + f_4 * (class535_3.aFloat7090 - class535_2.aFloat7090);
 		this.aFloat7081 = f_4 * (class535_3.aFloat7081 - class535_2.aFloat7081) + class535_2.aFloat7081;
 		this.aFloat7080 = class535_2.aFloat7080 + (class535_3.aFloat7080 - class535_2.aFloat7080) * f_4;
 		this.aFloat7088 = class535_2.aFloat7088 + (class535_3.aFloat7088 - class535_2.aFloat7088) * f_4;
 		this.aFloat7089 = class535_2.aFloat7089 + f_4 * (class535_3.aFloat7089 - class535_2.aFloat7089);
-		this.anInt7085 = Class302.method5364(class535_2.anInt7085, class535_3.anInt7085, 255.0F * f_4, 833509259);
+		this.anInt7085 = Class302.method5364(class535_2.anInt7085, class535_3.anInt7085, 255.0F * f_4);
 		this.anInt7086 = (int) ((float) (class535_3.anInt7086 - class535_2.anInt7086) * f_4 + (float) class535_2.anInt7086);
 		if (class535_2.aClass152_7087 != class535_3.aClass152_7087) {
 			this.aClass152_7087 = graphicalrenderer_1.method8467(class535_2.aClass152_7087, class535_3.aClass152_7087, f_4, this.aClass152_7087);
@@ -75,36 +75,36 @@ public class Class535 {
 			if (class535_2.aClass247_7091 == null) {
 				this.aClass247_7091 = class535_3.aClass247_7091;
 				if (this.aClass247_7091 != null) {
-					this.aClass247_7091.method4207((int) (f_4 * 255.0F), 0, 65280);
+					this.aClass247_7091.method4207((int) (f_4 * 255.0F), 0);
 				}
 			} else {
 				this.aClass247_7091 = class535_2.aClass247_7091;
 				if (this.aClass247_7091 != null) {
-					this.aClass247_7091.method4207((int) (f_4 * 255.0F), 255, 65280);
+					this.aClass247_7091.method4207((int) (f_4 * 255.0F), 255);
 				}
 			}
 		}
 	}
 
-	boolean method11449(Class535 class535_1, int i_2) {
+	boolean method11449(Class535 class535_1) {
 		return this.anInt7083 == class535_1.anInt7083 && class535_1.aFloat7081 == this.aFloat7081 && this.aFloat7082 == class535_1.aFloat7082 && class535_1.aFloat7090 == this.aFloat7090 && class535_1.aFloat7089 == this.aFloat7089 && class535_1.aFloat7088 == this.aFloat7088 && this.aFloat7080 == class535_1.aFloat7080 && this.anInt7085 == class535_1.anInt7085 && this.anInt7086 == class535_1.anInt7086 && this.aClass152_7087 == class535_1.aClass152_7087 && this.aClass247_7091 == class535_1.aClass247_7091;
 	}
 
-	public int method11450(int i_1) {
+	public int method11450() {
 		return this.anInt7085;
 	}
 
-	public Class247 method11451(int i_1) {
+	public Class247 method11451() {
 		return this.aClass247_7091;
 	}
 
 	public Class535() {
-		this.method11443(2115357726);
+		this.method11443();
 	}
 
 	public void method11468(RsByteBuffer rsbytebuffer_1, Class239 class239_2, int i_3) {
 		int i_4 = rsbytebuffer_1.readUnsignedByte();
-		if (Class393.preferences.aClass468_Sub19_8204.method12786(-399420695) == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
+		if (Class393.preferences.aClass468_Sub19_8204.method12786() == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
 			if ((i_4 & 0x1) != 0) {
 				this.anInt7083 = rsbytebuffer_1.readInt();
 			} else {
@@ -177,13 +177,13 @@ public class Class535 {
 		this.aFloat7080 = (float) (rsbytebuffer_1.readUnsignedByte() * 8) / 255.0F;
 	}
 
-	public void method11472(RsByteBuffer rsbytebuffer_1, Class239 class239_2, int i_3) {
+	public void method11472(RsByteBuffer rsbytebuffer_1, Class239 class239_2) {
 		int i_4 = rsbytebuffer_1.readUnsignedShort();
 		int i_5 = rsbytebuffer_1.readShort();
 		int i_6 = rsbytebuffer_1.readShort();
 		int i_7 = rsbytebuffer_1.readShort();
 		int i_8 = rsbytebuffer_1.readUnsignedShort();
 		Class388.anInt4723 = i_8;
-		this.aClass247_7091 = class239_2.method4050(i_4, i_5, i_6, i_7, (byte) 15);
+		this.aClass247_7091 = class239_2.method4050(i_4, i_5, i_6, i_7);
 	}
 }

@@ -29,7 +29,7 @@ public class Class290 {
 			hitbardefinitions_3 = new HitbarDefinitions();
 			hitbardefinitions_3.aClass290_2437 = this;
 			if (bytes_10 != null) {
-				hitbardefinitions_3.method3210(new RsByteBuffer(bytes_10), 1208743415);
+				hitbardefinitions_3.method3210(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_3449;
 			synchronized (this.aClass229_3449) {
@@ -39,7 +39,7 @@ public class Class290 {
 		}
 	}
 
-	public void method5103(int i_1) {
+	public void method5103() {
 		SoftCache softcache_2 = this.aClass229_3449;
 		synchronized (this.aClass229_3449) {
 			this.aClass229_3449.method3859(-2093187724);
@@ -56,18 +56,18 @@ public class Class290 {
 		this.aClass317_3450.filesCount(SharedConfigsType.HITBARS.id);
 	}
 
-	public void method5107(int i_1, byte b_2) {
+	public void method5107() {
 		SoftCache softcache_3 = this.aClass229_3449;
 		synchronized (this.aClass229_3449) {
-			this.aClass229_3449.method3858(i_1, (byte) -95);
+			this.aClass229_3449.method3858(5, (byte) -95);
 		}
 		softcache_3 = this.aClass229_3447;
 		synchronized (this.aClass229_3447) {
-			this.aClass229_3447.method3858(i_1, (byte) 84);
+			this.aClass229_3447.method3858(5, (byte) 84);
 		}
 	}
 
-	public void method5109(int i_1) {
+	public void method5109() {
 		SoftCache softcache_2 = this.aClass229_3449;
 		synchronized (this.aClass229_3449) {
 			this.aClass229_3449.method3863(1288912888);
@@ -85,14 +85,14 @@ public class Class290 {
 	}
 
 	public static String method5120(int i_0, boolean bool_1, int i_2) {
-		return bool_1 && i_0 >= 0 ? Class149_Sub4.method14662(i_0, 10, bool_1, 16711680) : Integer.toString(i_0);
+		return bool_1 && i_0 >= 0 ? Class149_Sub4.method14662(i_0, bool_1) : Integer.toString(i_0);
 	}
 
-	static final void method5121(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+	static final void method5121(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.color = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 103);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class282_Sub14.method12223(icomponentdefinitions_0.idHash, (byte) -48);
+			Class282_Sub14.method12223(icomponentdefinitions_0.idHash);
 		}
 	}
 }

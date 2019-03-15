@@ -8,7 +8,7 @@ public final class IsaacCipher {
 	int[] anIntArray5149 = new int[256];
 	int[] anIntArray5150 = new int[256];
 
-	final void method7253(byte b_1) {
+	final void method7253() {
 		int i_2 = -1640531527;
 		int i_3 = -1640531527;
 		int i_4 = -1640531527;
@@ -132,13 +132,13 @@ public final class IsaacCipher {
 			this.anIntArray5149[i_10 + 7] = i_2;
 		}
 
-		this.method7256(420526674);
+		this.method7256();
 		this.anInt5152 = 256;
 	}
 
 	public final int nextInt() {
 		if (this.anInt5152 == 0) {
-			this.method7256(420526674);
+			this.method7256();
 			this.anInt5152 = 256;
 		}
 		if (!Loader.USING_ISAAC) {
@@ -149,7 +149,7 @@ public final class IsaacCipher {
 
 	public final int method7255() {
 		if (this.anInt5152 == 0) {
-			this.method7256(420526674);
+			this.method7256();
 			this.anInt5152 = 256;
 		}
 		if (!Loader.USING_ISAAC) {
@@ -158,7 +158,7 @@ public final class IsaacCipher {
 		return (this.anIntArray5150[this.anInt5152 - 1]);
 	}
 
-	final void method7256(int i_1) {
+	final void method7256() {
 		this.anInt5155 += ++this.anInt5156;
 
 		for (int i_2 = 0; i_2 < 256; i_2++) {
@@ -188,10 +188,10 @@ public final class IsaacCipher {
 			this.anIntArray5150[i_2] = ints_1[i_2];
 		}
 
-		this.method7253((byte) -97);
+		this.method7253();
 	}
 
-	public static Class217_Sub1 method7266(int i_0) {
+	public static Class217_Sub1 method7266() {
 		return ObjectIndexLoader.method7916(Class159.GAME_CONNECTION_INFO.worldId, 1371284314);
 	}
 
@@ -217,7 +217,7 @@ public final class IsaacCipher {
 			client.aFloat7365 += 16384.0F;
 		}
 
-		RegionMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		RegionMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.method4433();
 		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1812615457);
 		int i_3 = Class11.anInt122 >> 9;
 		int i_4 = Class266.anInt3289 >> 9;
@@ -233,13 +233,13 @@ public final class IsaacCipher {
 					}
 
 					int i_10 = 0;
-					byte[][] bytes_11 = IndexLoaders.MAP_REGION_DECODER.method4507(i_9, (byte) 27);
+					byte[][] bytes_11 = IndexLoaders.MAP_REGION_DECODER.method4507(i_9);
 					if (bytes_11 != null) {
 						i_10 = (bytes_11[i_7][i_8] & 0xff) * 8 << 2;
 					}
 
 					if (sceneobjectmanager_2.aClass390Array2591 != null && sceneobjectmanager_2.aClass390Array2591[i_9] != null) {
-						int i_12 = i_5 - (sceneobjectmanager_2.aClass390Array2591[i_9].method6722(i_7, i_8, 65280) - i_10);
+						int i_12 = i_5 - (sceneobjectmanager_2.aClass390Array2591[i_9].method6722(i_7, i_8) - i_10);
 						if (i_12 > i_6) {
 							i_6 = i_12;
 						}

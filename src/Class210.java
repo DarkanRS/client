@@ -10,18 +10,18 @@ public class Class210 {
 
 	Index aClass317_2665;
 
-	public void method3602(int i_1, int i_2) {
+	public void method3602() {
 		SoftCache softcache_3 = this.aClass229_2667;
 		synchronized (this.aClass229_2667) {
-			this.aClass229_2667.method3858(i_1, (byte) -65);
+			this.aClass229_2667.method3858(5, (byte) -65);
 		}
 		softcache_3 = this.aClass229_2664;
 		synchronized (this.aClass229_2664) {
-			this.aClass229_2664.method3858(i_1, (byte) 47);
+			this.aClass229_2664.method3858(5, (byte) 47);
 		}
 	}
 
-	public HitsplatDefinitions getDefinitions(int i_1, int i_2) {
+	public HitsplatDefinitions getDefinitions(int i_1) {
 		SoftCache softcache_4 = this.aClass229_2667;
 		HitsplatDefinitions hitsplatdefinitions_3;
 		synchronized (this.aClass229_2667) {
@@ -38,7 +38,7 @@ public class Class210 {
 			hitsplatdefinitions_3 = new HitsplatDefinitions();
 			hitsplatdefinitions_3.aClass210_2850 = this;
 			if (bytes_10 != null) {
-				hitsplatdefinitions_3.method3837(new RsByteBuffer(bytes_10), 738101655);
+				hitsplatdefinitions_3.method3837(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_2667;
 			synchronized (this.aClass229_2667) {
@@ -48,7 +48,7 @@ public class Class210 {
 		}
 	}
 
-	public void method3604(short s_1) {
+	public void method3604() {
 		SoftCache softcache_2 = this.aClass229_2667;
 		synchronized (this.aClass229_2667) {
 			this.aClass229_2667.method3859(1876702995);
@@ -65,7 +65,7 @@ public class Class210 {
 		this.aClass317_2665.filesCount(SharedConfigsType.aClass120_1509.id);
 	}
 
-	public void method3608(int i_1) {
+	public void method3608() {
 		SoftCache softcache_2 = this.aClass229_2667;
 		synchronized (this.aClass229_2667) {
 			this.aClass229_2667.method3863(994543412);

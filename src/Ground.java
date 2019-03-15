@@ -18,7 +18,7 @@ public abstract class Ground {
 
 	public abstract void method6707(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, Class90 var11, boolean var12);
 
-	public abstract void method6708(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, Class90 var14, boolean var15);
+	public abstract void method6708(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, Class90 var14);
 
 	public abstract void SA();
 
@@ -44,11 +44,11 @@ public abstract class Ground {
 
 	public abstract void method6711(Class282_Sub24 var1, int[] var2);
 
-	public abstract void UA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void UA(Shadow var1, int var2, int var3, int var4);
 
-	public abstract void NA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract void NA(Shadow var1, int var2, int var3, int var4);
 
-	public abstract boolean method6712(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
+	public abstract boolean method6712(Shadow var1, int var2, int var3, int var4);
 
 	public abstract void method6713(Class282_Sub24 var1, int[] var2);
 
@@ -58,7 +58,7 @@ public abstract class Ground {
 
 	public abstract void b(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract void method6715(int var1, int var2, int var3, int var4, int var5, int var6, int var7, boolean[][] var8);
+	public abstract void method6715(int var1, int var2, int var4, int var5, int var6, int var7, boolean[][] var8);
 
 	public abstract void e();
 
@@ -94,7 +94,7 @@ public abstract class Ground {
 
 	public abstract void method6721(Class282_Sub24 var1, int[] var2);
 
-	public final int method6722(int i_1, int i_2, int i_3) {
+	public final int method6722(int i_1, int i_2) {
 		return this.tileHeights[i_1][i_2];
 	}
 
@@ -141,9 +141,9 @@ public abstract class Ground {
 
 	public static final void method6731(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		if (i_0 >= Class532_Sub1.anInt7071 && i_1 <= Class532_Sub1.anInt7069 && i_2 >= Class532_Sub1.anInt7070 && i_3 <= Class532_Sub1.anInt7068) {
-			HitbarDefinitions.method3230(i_0, i_1, i_2, i_3, i_4, i_5, i_6, (byte) 89);
+			HitbarDefinitions.method3230(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 		} else {
-			PlayerAppearance.method4034(i_0, i_1, i_2, i_3, i_4, i_5, i_6, (byte) -84);
+			PlayerAppearance.method4034(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 		}
 	}
 }

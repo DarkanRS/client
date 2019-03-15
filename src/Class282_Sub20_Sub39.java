@@ -12,7 +12,7 @@ public class Class282_Sub20_Sub39 extends Class282_Sub20 {
 		Class316.method5586((byte) -8);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt10009 = rsbytebuffer_2.readUnsignedByte();
@@ -32,11 +32,11 @@ public class Class282_Sub20_Sub39 extends Class282_Sub20 {
 
 	}
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, 347419032);
 		if (this.aClass320_7667.aBool3722) {
 			int i_4 = this.anInt10011 >> 1;
-			int[][] ints_5 = this.aClass320_7667.method5722((byte) 1);
+			int[][] ints_5 = this.aClass320_7667.method5722();
 			Random random_6 = new Random((long) this.anInt10009);
 
 			for (int i_7 = 0; i_7 < this.anInt10013; i_7++) {
@@ -116,7 +116,7 @@ public class Class282_Sub20_Sub39 extends Class282_Sub20 {
 		super(0, true);
 	}
 
-	public static int method15436(int i_0, int i_1, int i_2, int i_3) {
+	public static int method15436(int i_0, int i_1, int i_2) {
 		i_2 &= 0x3;
 		return i_2 == 0 ? i_0 : (i_2 == 1 ? i_1 : (i_2 == 2 ? 4095 - i_0 : 4095 - i_1));
 	}

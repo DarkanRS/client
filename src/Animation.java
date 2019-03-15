@@ -36,7 +36,7 @@ public class Animation {
 		}
 	}
 
-	public final void method7563(Animation animation_1, int i_2) {
+	public final void method7563(Animation animation_1) {
 		this.defs = animation_1.defs;
 		this.aBool5462 = animation_1.aBool5462;
 		this.aBool5463 = animation_1.aBool5463;
@@ -60,12 +60,12 @@ public class Animation {
 		this.method7571(i_1, 0, 0, false, -629553578);
 	}
 
-	public final void method7569(int i_1, boolean bool_2, int i_3) {
-		this.method7571(i_1, 0, 0, bool_2, -731012703);
+	public final void method7569() {
+		this.method7571(-1, 0, 0, false, -731012703);
 	}
 
-	public final void method7570(int i_1, boolean bool_2, boolean bool_3, int i_4) {
-		this.method7572(i_1, 0, 0, bool_2, bool_3, (byte) 104);
+	public final void method7570(int i_1, int i_4) {
+		this.method7572(i_1, 0, 0, false, true, (byte) 104);
 	}
 
 	public final void method7571(int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
@@ -120,7 +120,7 @@ public class Animation {
 		this.speed = i_1;
 	}
 
-	public final void rasterize(MeshRasterizer meshrasterizer_1, int i_2, int i_3) {
+	public final void rasterize(MeshRasterizer meshrasterizer_1, int i_2) {
 		if (this.defs != null && this.defs.frames != null && this.method7562(2049608469)) {
 			meshrasterizer_1.method11262(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
@@ -129,16 +129,16 @@ public class Animation {
 		}
 	}
 
-	public final void method7578(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4) {
+	public final void method7578(MeshRasterizer meshrasterizer_1, int i_3, int i_4) {
 		if (this.defs.frames != null && this.method7562(1399567490)) {
-			meshrasterizer_1.method11258(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, i_3, this.defs.aBool5923, (int[]) null);
+			meshrasterizer_1.method11258(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], 0, i_3, this.defs.aBool5923, (int[]) null);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
-				meshrasterizer_1.method11258(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, i_3, this.defs.aBool5923, (int[]) null);
+				meshrasterizer_1.method11258(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], 0, i_3, this.defs.aBool5923, (int[]) null);
 			}
 		}
 	}
 
-	public final void method7579(MeshRasterizer meshrasterizer_1, int i_2) {
+	public final void method7579(MeshRasterizer meshrasterizer_1) {
 		if (this.defs.frames != null && this.method7562(1730078988)) {
 			meshrasterizer_1.method11284(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
@@ -152,10 +152,10 @@ public class Animation {
 	}
 
 	public final void method7582(byte b_1) {
-		this.method7583(0, (byte) 0);
+		this.method7583(0);
 	}
 
-	public final void method7583(int i_1, byte b_2) {
+	public final void method7583(int i_1) {
 		this.anInt5460 = 0;
 		this.anInt5466 = this.defs.frames.length > 1 ? 1 : -1;
 		this.anInt5457 = 0;
@@ -172,7 +172,7 @@ public class Animation {
 		this.anInt5459 = 0;
 	}
 
-	public final boolean method7585(int i_1, int i_2) {
+	public final boolean method7585(int i_1) {
 		return this.defs == null | (i_1 -= this.speed) <= 0 ? false : this.defs.tweened | this.anInt5457 + i_1 > this.defs.frameDurations[this.anInt5460];
 	}
 
@@ -180,9 +180,9 @@ public class Animation {
 	}
 
 	final void method7588(byte b_1) {
-		this.aClass462_5464.method7708(13720241);
+		this.aClass462_5464.method7708();
 		if (this.aBool5463) {
-			this.aClass462_5467.method7708(13720241);
+			this.aClass462_5467.method7708();
 		}
 	}
 
@@ -200,7 +200,7 @@ public class Animation {
 		}
 	}
 
-	public final void method7615(int i_1, int i_2, int i_3) {
+	public final void method7615(int i_1, int i_2) {
 		this.method7571(i_1, i_2, 0, false, 1549105687);
 	}
 
@@ -298,7 +298,7 @@ public class Animation {
 		}
 	}
 
-	static Class149_Sub1 method7644(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static Class149_Sub1 method7644(RsByteBuffer rsbytebuffer_0) {
 		return new Class149_Sub1(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 }

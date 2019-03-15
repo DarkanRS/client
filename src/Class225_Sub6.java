@@ -35,7 +35,7 @@ public class Class225_Sub6 extends RouteStrategy {
 		}
 	}
 
-	static void method13413(int i_0) {
+	static void method13413() {
 		Renderers.FONT_RENDERER = null;
 		Class16.aClass8_144 = null;
 		Class285.aClass8_3394 = null;

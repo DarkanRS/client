@@ -126,13 +126,13 @@ public class SceneObjectManager {
 
 	public Login aClass284_2648;
 
-	public void method3378(int i_1, int i_2) {
+	public void method3378(int i_1) {
 	}
 
 	public void method3379(FontRenderer fontrenderer_1, byte b_2) {
 	}
 
-	public void method3380(boolean bool_1, int i_2) {
+	public void method3380(boolean bool_1) {
 		if (bool_1) {
 			this.aClass293ArrayArrayArray2604 = this.waterRelatedClassArray1;
 			this.aClass390Array2591 = this.aClass390Array2614;
@@ -148,7 +148,7 @@ public class SceneObjectManager {
 		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub5_3505;
 	}
 
-	public void method3382(int i_1, int i_2, int i_3) {
+	public void method3382(int i_1, int i_2) {
 		Class293 class293_4 = this.aClass293ArrayArrayArray2604[0][i_1][i_2];
 		for (int i_5 = 0; i_5 < 3; i_5++) {
 			Class293 class293_6 = this.aClass293ArrayArrayArray2604[i_5][i_1][i_2] = this.aClass293ArrayArrayArray2604[i_5 + 1][i_1][i_2];
@@ -196,7 +196,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3385(int i_1, Ground class390_2, int i_3) {
+	public void method3385(int i_1, Ground class390_2) {
 		this.aClass390Array2591[i_1] = class390_2;
 	}
 
@@ -233,7 +233,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3393(int i_1, int i_2, int i_3, SceneObjectNode sceneobjectnode_4, int i_5) {
+	public void method3393(int i_1, int i_2, int i_3, SceneObjectNode sceneobjectnode_4) {
 		Class293 class293_6 = this.method3459(i_1, i_2, i_3, -204527757);
 		if (class293_6 != null) {
 			class293_6.aClass521_Sub1_Sub3_3499 = sceneobjectnode_4;
@@ -253,7 +253,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3394(int i_1, int i_2, int i_3, int i_4, Class521_Sub1_Sub2 class521_sub1_sub2_5, byte b_6) {
+	public void method3394(int i_1, int i_2, int i_3, int i_4, Class521_Sub1_Sub2 class521_sub1_sub2_5) {
 		Class293 class293_7 = this.method3459(i_1, i_2, i_3, 546259933);
 		if (class293_7 != null) {
 			class521_sub1_sub2_5.method11171(new Vector3((float) ((i_2 << this.anInt2592) + this.anInt2594), (float) i_4, (float) ((i_3 << this.anInt2592) + this.anInt2594)));
@@ -309,7 +309,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3396(int i_1, int i_2, int i_3, Class521_Sub1_Sub4 class521_sub1_sub4_4, Class521_Sub1_Sub4 class521_sub1_sub4_5, byte b_6) {
+	public void method3396(int i_1, int i_2, int i_3, Class521_Sub1_Sub4 class521_sub1_sub4_4, Class521_Sub1_Sub4 class521_sub1_sub4_5) {
 		Class293 class293_7 = this.method3459(i_1, i_2, i_3, -144176397);
 		if (class293_7 != null) {
 			class293_7.aClass521_Sub1_Sub4_3503 = class521_sub1_sub4_4;
@@ -358,7 +358,7 @@ public class SceneObjectManager {
 				for (i_10 = class521_sub1_sub1_1.aShort9456; i_10 <= class521_sub1_sub1_1.localY; i_10++) {
 					Class293 class293_11 = this.method3459(class521_sub1_sub1_1.plane, i_9, i_10, 123590531);
 					if (class293_11 != null) {
-						Class208 class208_12 = Class153.method2622(class521_sub1_sub1_1, -2120940003);
+						Class208 class208_12 = Class153.method2622(class521_sub1_sub1_1);
 						Class208 class208_13 = class293_11.aClass208_3504;
 						if (class208_13 == null) {
 							class293_11.aClass208_3504 = class208_12;
@@ -436,10 +436,10 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3399(byte b_1) {
+	public void method3399() {
 		for (int i_2 = 0; i_2 < this.anInt2616; i_2++) {
 			Class521_Sub1_Sub1 class521_sub1_sub1_3 = this.aClass521_Sub1_Sub1Array2627[i_2];
-			this.method3407(class521_sub1_sub1_3, true, -1696604087);
+			this.method3407(class521_sub1_sub1_3, true);
 			this.aClass521_Sub1_Sub1Array2627[i_2] = null;
 		}
 		this.anInt2616 = 0;
@@ -471,7 +471,7 @@ public class SceneObjectManager {
 						}
 						SceneObjectNode sceneobjectnode_9 = class293_4.aClass521_Sub1_Sub3_3499;
 						if (sceneobjectnode_9 != null && sceneobjectnode_9.method12985(-1912639539)) {
-							this.method3417(sceneobjectnode_9, i_1, i_2, i_3, 1236537030);
+							this.method3417(sceneobjectnode_9, i_1, i_2, i_3);
 							sceneobjectnode_9.method12984(107766505);
 						}
 					}
@@ -480,7 +480,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub4 method3402(int i_1, int i_2, int i_3, byte b_4) {
+	public Class521_Sub1_Sub4 method3402(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
 			this.method3408(class293_5.aClass521_Sub1_Sub4_3503, 1327771301);
@@ -493,7 +493,7 @@ public class SceneObjectManager {
 		return null;
 	}
 
-	public SceneObjectNode method3404(int i_1, int i_2, int i_3, int i_4) {
+	public SceneObjectNode method3404(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 == null) {
 			return null;
@@ -521,7 +521,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	void method3407(Class521_Sub1_Sub1 class521_sub1_sub1_1, boolean bool_2, int i_3) {
+	void method3407(Class521_Sub1_Sub1 class521_sub1_sub1_1, boolean bool_2) {
 		for (int i_4 = class521_sub1_sub1_1.aShort9458; i_4 <= class521_sub1_sub1_1.localX; i_4++) {
 			for (int i_5 = class521_sub1_sub1_1.aShort9456; i_5 <= class521_sub1_sub1_1.localY; i_5++) {
 				Class293 class293_6 = this.aClass293ArrayArrayArray2604[class521_sub1_sub1_1.plane][i_4][i_5];
@@ -534,7 +534,7 @@ public class SceneObjectManager {
 							} else {
 								class293_6.aClass208_3504 = class208_7.aClass208_2660;
 							}
-							class208_7.method3560(508246192);
+							class208_7.method3560();
 							break;
 						}
 						class208_8 = class208_7;
@@ -592,19 +592,19 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub5 getWall2(int i_1, int i_2, int i_3, int i_4) {
+	public Class521_Sub1_Sub5 getWall2(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub5_3502;
 	}
 
-	public Class521_Sub1_Sub1 getInteractableObject(int i_1, int i_2, int i_3, Interface25 interface25_4, int i_5) {
+	public Class521_Sub1_Sub1 getInteractableObject(int i_1, int i_2, int i_3, Interface25 interface25_4) {
 		Class293 class293_6 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_6 == null) {
 			return null;
 		} else {
 			for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
 				Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
-				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8, 1956908464)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456) {
+				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456) {
 					return class521_sub1_sub1_8;
 				}
 			}
@@ -612,12 +612,12 @@ public class SceneObjectManager {
 		}
 	}
 
-	public SceneObjectNode getGroundDecoration(int i_1, int i_2, int i_3, int i_4) {
+	public SceneObjectNode getGroundDecoration(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		return class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null ? class293_5.aClass521_Sub1_Sub3_3499 : null;
 	}
 
-	void method3417(Class521_Sub1 class521_sub1_1, int i_2, int i_3, int i_4, int i_5) {
+	void method3417(Class521_Sub1 class521_sub1_1, int i_2, int i_3, int i_4) {
 		Class293 class293_6;
 		if (i_3 < this.anInt2617) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4];
@@ -651,7 +651,7 @@ public class SceneObjectManager {
 		class521_sub1_1.anInt7969 = (int) this.aFloatArray2639[2];
 	}
 
-	public Class521_Sub1_Sub5 method3422(int i_1, int i_2, int i_3, short s_4) {
+	public Class521_Sub1_Sub5 method3422(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
 			this.method3408(class293_5.aClass521_Sub1_Sub5_3505, 1587735516);
@@ -714,12 +714,12 @@ public class SceneObjectManager {
 				if (class390_10 != null) {
 					int i_11 = i_8 - class390_10.averageHeight(i_3, i_4, 1885983541);
 					if (bools_5 != null) {
-						bools_5[i_9] = class390_10.method6712(class282_sub50_sub17_1, i_3, i_11, i_4, 0, false);
+						bools_5[i_9] = class390_10.method6712(class282_sub50_sub17_1, i_3, i_11, i_4);
 						if (!bools_5[i_9]) {
 							continue;
 						}
 					}
-					class390_10.UA(class282_sub50_sub17_1, i_3, i_11, i_4, 0, false);
+					class390_10.UA(class282_sub50_sub17_1, i_3, i_11, i_4);
 					bool_7 = true;
 				}
 			}
@@ -734,14 +734,14 @@ public class SceneObjectManager {
 				if (bools_5 == null || bools_5[i_8]) {
 					Ground class390_9 = this.aClass390Array2607[i_8];
 					if (class390_9 != null) {
-						class390_9.NA(class282_sub50_sub17_1, i_3, i_7 - class390_9.averageHeight(i_3, i_4, 159261886), i_4, 0, false);
+						class390_9.NA(class282_sub50_sub17_1, i_3, i_7 - class390_9.averageHeight(i_3, i_4, 159261886), i_4);
 					}
 				}
 			}
 		}
 	}
 
-	public void method3428(int i_1) {
+	public void method3428() {
 		for (int i_2 = 0; i_2 < this.anInt2617; i_2++) {
 			for (int i_3 = 0; i_3 < this.anInt2603; i_3++) {
 				if (this.aClass293ArrayArrayArray2604[0][i_2][i_3] == null) {
@@ -751,11 +751,11 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3429(int i_1) {
-		this.method3486(1, this.anInt2601, 1563160205);
+	public void method3429() {
+		this.method3486(this.anInt2601);
 	}
 
-	public void method3430(Class287 class287_1, byte b_2) {
+	public void method3430(Class287 class287_1) {
 		if (this.anInt2615 < 65361) {
 			Class282_Sub24 class282_sub24_3 = class287_1.aClass282_Sub24_3425;
 			this.aClass287Array2646[this.anInt2615] = class287_1;
@@ -771,18 +771,18 @@ public class SceneObjectManager {
 			}
 			for (int i_6 = i_4; i_6 <= i_5; i_6++) {
 				int i_7 = 0;
-				int i_8 = class282_sub24_3.method12394(997046092) - class282_sub24_3.method12370(-789603523) + this.anInt2594 >> this.anInt2592;
+				int i_8 = class282_sub24_3.method12394(997046092) - class282_sub24_3.method12370() + this.anInt2594 >> this.anInt2592;
 				if (i_8 < 0) {
 					i_7 -= i_8;
 					i_8 = 0;
 				}
-				int i_9 = class282_sub24_3.method12394(1086113153) + class282_sub24_3.method12370(-789603523) - this.anInt2594 >> this.anInt2592;
+				int i_9 = class282_sub24_3.method12394(1086113153) + class282_sub24_3.method12370() - this.anInt2594 >> this.anInt2592;
 				if (i_9 >= this.anInt2603) {
 					i_9 = this.anInt2603 - 1;
 				}
 				for (int i_10 = i_8; i_10 <= i_9; i_10++) {
 					short s_11 = class287_1.aShortArray3429[i_7++];
-					int i_12 = (class282_sub24_3.method12368((byte) 47) - class282_sub24_3.method12370(-789603523) + this.anInt2594 >> this.anInt2592) + (s_11 >>> 8);
+					int i_12 = (class282_sub24_3.method12368((byte) 47) - class282_sub24_3.method12370() + this.anInt2594 >> this.anInt2592) + (s_11 >>> 8);
 					int i_13 = (s_11 & 0xff) + i_12 - 1;
 					if (i_12 < 0) {
 						i_12 = 0;
@@ -807,13 +807,13 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3431(int i_1) {
+	public void method3431() {
 		for (int i_2 = 0; i_2 < this.anInt2615; i_2++) {
 			if (!this.aBoolArray2647[i_2]) {
 				Class287 class287_3 = this.aClass287Array2646[i_2];
 				Class282_Sub24 class282_sub24_4 = class287_3.aClass282_Sub24_3425;
 				int i_5 = class287_3.anInt3419;
-				int i_6 = class282_sub24_4.method12370(-789603523) - this.anInt2594;
+				int i_6 = class282_sub24_4.method12370() - this.anInt2594;
 				int i_7 = (i_6 * 2 >> this.anInt2592) + 1;
 				int i_8 = 0;
 				int[] ints_9 = new int[i_7 * i_7];
@@ -842,7 +842,7 @@ public class SceneObjectManager {
 					}
 					for (int i_19 = i_17; i_19 <= i_18; i_19++) {
 						byte b_20 = 1;
-						Class521_Sub1_Sub1 class521_sub1_sub1_21 = this.getInteractableObject(i_5, i_19, i_13, (Interface25) null, -233664382);
+						Class521_Sub1_Sub1 class521_sub1_sub1_21 = this.getInteractableObject(i_5, i_19, i_13, (Interface25) null);
 						if (class521_sub1_sub1_21 != null && class521_sub1_sub1_21.aByte9454 != 0) {
 							boolean bool_22;
 							boolean bool_23;
@@ -903,16 +903,16 @@ public class SceneObjectManager {
 		}
 	}
 
-	public int method3432(int i_1, int i_2, byte b_3) {
+	public int method3432(int i_1, int i_2) {
 		return this.waterRelatedArray4 != null ? this.waterRelatedArray4[i_1][i_2] & 0xff : 0;
 	}
 
-	public Class521_Sub1_Sub2 method3437(int i_1, int i_2, int i_3, short s_4) {
+	public Class521_Sub1_Sub2 method3437(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub2_3506;
 	}
 
-	public Class521_Sub1_Sub4 method3439(int i_1, int i_2, int i_3, int i_4) {
+	public Class521_Sub1_Sub4 method3439(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
 			this.method3408(class293_5.aClass521_Sub1_Sub4_3500, 1336618461);
@@ -1053,9 +1053,9 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3447(int i_1, int i_2, int i_3, int i_4, byte[][][] bytes_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int i_11, byte b_12, int i_13, int i_14, boolean bool_15, boolean bool_16, int i_17, boolean bool_18) {
+	public void method3447(int i_1, int i_2, int i_3, int i_4, byte[][][] bytes_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int i_11, byte b_12, int i_13, int i_14, boolean bool_15) {
 		this.aClass201_2600.aBool2542 = true;
-		this.aBool2599 = bool_16;
+		this.aBool2599 = true;
 		this.anInt2628 = i_2 >> this.anInt2592;
 		this.anInt2629 = i_4 >> this.anInt2592;
 		this.anInt2630 = i_2;
@@ -1102,8 +1102,8 @@ public class SceneObjectManager {
 					if (i_25 >= 0 && i_26 >= 0 && i_25 < this.anInt2617 && i_26 < this.anInt2603) {
 						i_27 = i_25 << this.anInt2592;
 						int i_28 = i_26 << this.anInt2592;
-						int i_29 = this.aClass390Array2607[this.aClass390Array2607.length - 1].method6722(i_25, i_26, 65280) - (1000 << this.anInt2592 - 7);
-						int i_30 = (this.aClass390Array2614 != null ? this.aClass390Array2614[0].method6722(i_25, i_26, 65280) + this.anInt2593 : this.aClass390Array2607[0].method6722(i_25, i_26, 65280) + this.anInt2593) + (1000 << this.anInt2592 - 7);
+						int i_29 = this.aClass390Array2607[this.aClass390Array2607.length - 1].method6722(i_25, i_26) - (1000 << this.anInt2592 - 7);
+						int i_30 = (this.aClass390Array2614 != null ? this.aClass390Array2614[0].method6722(i_25, i_26) + this.anInt2593 : this.aClass390Array2607[0].method6722(i_25, i_26) + this.anInt2593) + (1000 << this.anInt2592 - 7);
 						i_23 = this.aClass505_2596.method8437(i_27, i_29, i_28, i_27, i_30, i_28);
 						this.aBoolArrayArray2635[i_21][i_24] = i_23 == 0;
 					} else {
@@ -1141,28 +1141,28 @@ public class SceneObjectManager {
 			this.anInt2640 = this.anInt2603;
 			this.aClass201_2600.aBool2542 = false;
 		}
-		ChatLine.method1848(this, this.aClass505_2596, 437446404);
+		ChatLine.method1848(this, this.aClass505_2596);
 		if (!this.aClass284_2648.aBool3386) {
 			Iterator iterator_31 = this.aClass284_2648.aList3388.iterator();
 			while (iterator_31.hasNext()) {
 				Class285 class285_32 = (Class285) iterator_31.next();
 				iterator_31.remove();
-				Class279.method4969(class285_32, 1362412061);
+				Class279.method4969(class285_32);
 			}
 		}
 		if (this.aBool2598) {
 			for (i_21 = 0; i_21 < this.anInt2615; i_21++) {
-				this.aClass287Array2646[i_21].method5053(i_1, bool_15, -1826281531);
+				this.aClass287Array2646[i_21].method5053(i_1, bool_15);
 			}
 		}
 		if (this.waterRelatedClassArray1 != null) {
-			this.method3380(true, -914334995);
-			this.aClass505_2596.method8475(-1, new Class90(1583160, 40, 127, 63, 0, 0, 0));
-			this.method3441(true, bytes_5, i_11, b_12, i_17);
+			this.method3380(true);
+			this.aClass505_2596.method8475(new Class90(1583160));
+			this.method3441(true, bytes_5, i_11, b_12, 0);
 			this.aClass505_2596.O();
-			this.method3380(false, -914334995);
+			this.method3380(false);
 		}
-		this.method3441(false, bytes_5, i_11, b_12, i_17);
+		this.method3441(false, bytes_5, i_11, b_12, 0);
 		if (!this.aBool2599) {
 			this.aBoolArrayArray2651 = bools_19;
 			this.aBoolArrayArray2635 = bools_20;
@@ -1183,7 +1183,7 @@ public class SceneObjectManager {
 							if (i_14 >= 0 && i_14 < this.anInt2603 && (!bool_7 || i_13 >= i_9 || i_14 >= i_11 || i_14 < i_4 && i_3 != i_13)) {
 								Class293 class293_15 = this.aClass293ArrayArrayArray2604[i_12][i_13][i_14];
 								if (class293_15 != null) {
-									int i_16 = (this.aClass390Array2591[i_12].method6722(i_13, i_14, 65280) + this.aClass390Array2591[i_12].method6722(1 + i_13, i_14, 65280) + this.aClass390Array2591[i_12].method6722(i_13, 1 + i_14, 65280) + this.aClass390Array2591[i_12].method6722(1 + i_13, 1 + i_14, 65280)) / 4 - (this.aClass390Array2591[i_2].method6722(i_3, i_4, 65280) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4, 65280) + this.aClass390Array2591[i_2].method6722(i_3, i_4 + 1, 65280) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4 + 1, 65280)) / 4;
+									int i_16 = (this.aClass390Array2591[i_12].method6722(i_13, i_14) + this.aClass390Array2591[i_12].method6722(1 + i_13, i_14) + this.aClass390Array2591[i_12].method6722(i_13, 1 + i_14) + this.aClass390Array2591[i_12].method6722(1 + i_13, 1 + i_14)) / 4 - (this.aClass390Array2591[i_2].method6722(i_3, i_4) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4) + this.aClass390Array2591[i_2].method6722(i_3, i_4 + 1) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4 + 1)) / 4;
 									Class521_Sub1_Sub5 class521_sub1_sub5_17 = class293_15.aClass521_Sub1_Sub5_3505;
 									Class521_Sub1_Sub5 class521_sub1_sub5_18 = class293_15.aClass521_Sub1_Sub5_3502;
 									if (class521_sub1_sub5_17 != null && class521_sub1_sub5_17.method12985(-2063907301)) {
@@ -1222,7 +1222,7 @@ public class SceneObjectManager {
 		return this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 	}
 
-	public Class521_Sub1_Sub5 method3460(int i_1, int i_2, int i_3, byte b_4) {
+	public Class521_Sub1_Sub5 method3460(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
 			this.method3408(class293_5.aClass521_Sub1_Sub5_3502, 936233239);
@@ -1261,9 +1261,9 @@ public class SceneObjectManager {
 		}
 	}
 
-	void method3486(int i_1, int i_2, int i_3) {
+	void method3486(int i_2) {
 		Shadow class282_sub50_sub17_4 = null;
-		for (int i_5 = i_1; i_5 < i_2; i_5++) {
+		for (int i_5 = 1; i_5 < i_2; i_5++) {
 			Ground class390_6 = this.aClass390Array2607[i_5];
 			if (class390_6 != null) {
 				for (int i_7 = 0; i_7 < this.anInt2603; i_7++) {
@@ -1275,11 +1275,11 @@ public class SceneObjectManager {
 							for (int i_11 = i_5 - 1; i_11 >= 0; --i_11) {
 								Ground class390_12 = this.aClass390Array2607[i_11];
 								if (class390_12 != null) {
-									int i_13 = class390_6.method6722(i_8, i_7, 65280) - class390_12.method6722(i_8, i_7, 65280);
-									int i_14 = class390_6.method6722(i_8 + 1, i_7, 65280) - class390_12.method6722(i_8 + 1, i_7, 65280);
-									int i_15 = class390_6.method6722(i_8 + 1, i_7 + 1, 65280) - class390_12.method6722(i_8 + 1, i_7 + 1, 65280);
-									int i_16 = class390_6.method6722(i_8, i_7 + 1, 65280) - class390_12.method6722(i_8, i_7 + 1, 65280);
-									class390_12.UA(class282_sub50_sub17_4, i_9, (i_16 + i_15 + i_14 + i_13) / 4, i_10, 0, false);
+									int i_13 = class390_6.method6722(i_8, i_7) - class390_12.method6722(i_8, i_7);
+									int i_14 = class390_6.method6722(i_8 + 1, i_7) - class390_12.method6722(i_8 + 1, i_7);
+									int i_15 = class390_6.method6722(i_8 + 1, i_7 + 1) - class390_12.method6722(i_8 + 1, i_7 + 1);
+									int i_16 = class390_6.method6722(i_8, i_7 + 1) - class390_12.method6722(i_8, i_7 + 1);
+									class390_12.UA(class282_sub50_sub17_4, i_9, (i_16 + i_15 + i_14 + i_13) / 4, i_10);
 								}
 							}
 						}
@@ -1318,7 +1318,7 @@ public class SceneObjectManager {
 
 	void method3508(Class521_Sub1 class521_sub1_1, Class282_Sub24[] arr_2) {
 		if (this.aBool2598) {
-			int i_3 = class521_sub1_1.method13036(arr_2, -827011094);
+			int i_3 = class521_sub1_1.method13036(arr_2);
 			this.aClass505_2596.method8547(i_3, arr_2);
 		}
 		if (this.aClass390Array2614 == this.aClass390Array2591) {
@@ -1337,19 +1337,19 @@ public class SceneObjectManager {
 			Class90 class90_8 = new Class90();
 			class90_8.color = this.getColor(i_6, i_7, (byte) 102);
 			class90_8.scale = this.getScale(i_6, i_7, 1481885588);
-			class90_8.intensity = this.getIntensities(i_6, i_7, -575094789);
-			class90_8.anInt949 = this.method3432(i_6, i_7, (byte) 1);
+			class90_8.intensity = this.getIntensities(i_6, i_7);
+			class90_8.anInt949 = this.method3432(i_6, i_7);
 			class90_8.anInt950 = this.method3464(i_6, i_7, 1819707800);
 			class90_8.anInt951 = this.method3391(i_6, i_7, 2124895018);
 			this.aClass505_2596.method8476(this.aClass390Array2607[0].averageHeight((int) vector3_5.x, (int) vector3_5.z, -402315089), class90_8);
 		}
-		Class285 class285_9 = class521_sub1_1.method12990(this.aClass505_2596, 389193782);
+		Class285 class285_9 = class521_sub1_1.method12990(this.aClass505_2596);
 		if (class285_9 != null) {
 			if (class285_9.aBool3392) {
 				class285_9.aClass521_Sub1_3391 = class521_sub1_1;
-				this.aClass284_2648.method5013(class285_9, 414101686);
+				this.aClass284_2648.method5013(class285_9);
 			} else {
-				Class279.method4969(class285_9, 1362412061);
+				Class279.method4969(class285_9);
 			}
 		}
 	}
@@ -1359,7 +1359,7 @@ public class SceneObjectManager {
 		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub4_3503;
 	}
 
-	public SceneObjectManager(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean highDetailWater, boolean bool_8) {
+	public SceneObjectManager(GraphicalRenderer graphicalrenderer_1, int i_4, int i_5, int i_6, boolean highDetailWater, boolean bool_8) {
 		this.anInt2634 = 10072;
 		this.anInt2618 = 5015;
 		this.anInt2619 = 5040;
@@ -1368,17 +1368,17 @@ public class SceneObjectManager {
 		this.anInt2643 = 1;
 		this.aClass505_2596 = graphicalrenderer_1;
 		this.aBool2598 = this.aClass505_2596.method8463() > 0;
-		this.anInt2592 = i_2;
+		this.anInt2592 = 9;
 		this.anInt2593 = 1 << this.anInt2592;
 		this.anInt2594 = this.anInt2593 >> 1;
-		this.anInt2601 = i_3;
+		this.anInt2601 = 4;
 		this.anInt2617 = i_4;
 		this.anInt2603 = i_5;
 		this.anInt2652 = i_6;
 		this.aClass454_2597 = new Class454();
 		this.aClass201_2600 = new Class201(this);
-		this.aClass293ArrayArrayArray2610 = new Class293[i_3][this.anInt2617][this.anInt2603];
-		this.aClass390Array2607 = new Ground[i_3];
+		this.aClass293ArrayArrayArray2610 = new Class293[4][this.anInt2617][this.anInt2603];
+		this.aClass390Array2607 = new Ground[4];
 		if (highDetailWater) {
 			this.colors = new int[this.anInt2617][this.anInt2603];
 			this.intensities = new byte[this.anInt2617][this.anInt2603];
@@ -1390,12 +1390,12 @@ public class SceneObjectManager {
 			this.aClass390Array2614 = new Ground[1];
 		}
 		if (bool_8) {
-			this.aLongArrayArrayArray2645 = new long[i_3][i_4][i_5];
+			this.aLongArrayArrayArray2645 = new long[4][i_4][i_5];
 			this.aClass287Array2646 = new Class287[65361];
 			this.aBoolArray2647 = new boolean[65361];
 			this.anInt2615 = 0;
 		}
-		this.method3380(false, -914334995);
+		this.method3380(false);
 		this.aClass521_Sub1Array2605 = new Class521_Sub1[2];
 		this.aClass521_Sub1Array2633 = new Class521_Sub1[2];
 		this.aClass521_Sub1Array2649 = new Class521_Sub1[2];
@@ -1408,7 +1408,7 @@ public class SceneObjectManager {
 		this.aBoolArrayArray2651 = new boolean[this.anInt2652 + this.anInt2652 + 1][this.anInt2652 + this.anInt2652 + 1];
 		this.aBoolArrayArray2635 = new boolean[this.anInt2652 + this.anInt2652 + 2][this.anInt2652 + this.anInt2652 + 2];
 		this.anIntArray2641 = new int[this.anInt2652 + this.anInt2652 + 2];
-		this.aClass284_2648 = new Login(false);
+		this.aClass284_2648 = new Login();
 	}
 
 	public Class521_Sub1_Sub1 method3530(int i_1, int i_2, int i_3, Interface25 interface25_4, int i_5) {
@@ -1418,8 +1418,8 @@ public class SceneObjectManager {
 		} else {
 			for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
 				Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
-				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8, 1956908464)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456) {
-					this.method3407(class521_sub1_sub1_8, false, -1696604087);
+				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456) {
+					this.method3407(class521_sub1_sub1_8, false);
 					return class521_sub1_sub1_8;
 				}
 			}
@@ -1427,11 +1427,11 @@ public class SceneObjectManager {
 		}
 	}
 
-	public int getIntensities(int i_1, int i_2, int i_3) {
+	public int getIntensities(int i_1, int i_2) {
 		return this.intensities != null ? this.intensities[i_1][i_2] & 0xff : 0;
 	}
 
-	static Class215 method3545(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static Class215 method3545(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
 		int i_3 = rsbytebuffer_0.readUnsignedByte();
 		int i_4 = rsbytebuffer_0.readUnsignedByte();

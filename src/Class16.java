@@ -28,9 +28,9 @@ public class Class16 {
 		throw new Error();
 	}
 
-	static Class96 method562(RsByteBuffer rsbytebuffer_0, int i_1) {
+	static Class96 method562(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
-		Class411 class411_3 = Class346.method6156(i_2, 2101068179);
+		Class411 class411_3 = Class346.method6156(i_2);
 		Object obj_4 = null;
 		switch (class411_3.anInt4956) {
 		case 0:
@@ -132,45 +132,45 @@ public class Class16 {
 	public static final void method567(String string_0, boolean bool_1, byte b_2) {
 		if (string_0 != null) {
 			if (client.anInt7373 >= 100) {
-				LoadingStage.method6681(4, Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE, -927458536), (byte) 0);
+				LoadingStage.method6681(Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE, -927458536), (byte) 0);
 			} else {
-				String string_3 = Class383.method6515(string_0, 1942118537);
+				String string_3 = Class383.method6515(string_0);
 				if (string_3 != null) {
 					int i_4;
 					String string_6;
 					String string_7;
 					for (i_4 = 0; i_4 < client.anInt7373; i_4++) {
 						Class10 class10_5 = client.aClass10Array7456[i_4];
-						string_6 = Class383.method6515(class10_5.aString115, 1942118537);
+						string_6 = Class383.method6515(class10_5.aString115);
 						if (string_6 != null && string_6.equals(string_3)) {
-							LoadingStage.method6681(4, string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -794034411), (byte) 6);
+							LoadingStage.method6681(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -794034411), (byte) 6);
 							return;
 						}
 						if (class10_5.aString116 != null) {
-							string_7 = Class383.method6515(class10_5.aString116, 1942118537);
+							string_7 = Class383.method6515(class10_5.aString116);
 							if (string_7 != null && string_7.equals(string_3)) {
-								LoadingStage.method6681(4, string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -1228902826), (byte) 24);
+								LoadingStage.method6681(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -1228902826), (byte) 24);
 								return;
 							}
 						}
 					}
 					for (i_4 = 0; i_4 < client.anInt7449; i_4++) {
 						Class6 class6_9 = client.aClass6Array7452[i_4];
-						string_6 = Class383.method6515(class6_9.aString37, 1942118537);
+						string_6 = Class383.method6515(class6_9.aString37);
 						if (string_6 != null && string_6.equals(string_3)) {
-							LoadingStage.method6681(4, Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1154046234) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -627858057), (byte) 53);
+							LoadingStage.method6681(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1154046234) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -627858057), (byte) 53);
 							return;
 						}
 						if (class6_9.aString43 != null) {
-							string_7 = Class383.method6515(class6_9.aString43, 1942118537);
+							string_7 = Class383.method6515(class6_9.aString43);
 							if (string_7 != null && string_7.equals(string_3)) {
-								LoadingStage.method6681(4, Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1770440532) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -695950851), (byte) 47);
+								LoadingStage.method6681(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1770440532) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -695950851), (byte) 47);
 								return;
 							}
 						}
 					}
-					if (Class383.method6515(Class84.myPlayer.displayName, 1942118537).equals(string_3)) {
-						LoadingStage.method6681(4, Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
+					if (Class383.method6515(Class84.myPlayer.displayName).equals(string_3)) {
+						LoadingStage.method6681(Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
 					} else {
 						BufferedConnectionContext class184_8 = Class468_Sub20.method12807(1039135585);
 						TCPMessage tcpmessage_10 = Class271.method4828(OutgoingPacket.aClass379_4578, class184_8.isaac, 732263274);
@@ -184,7 +184,7 @@ public class Class16 {
 		}
 	}
 
-	static final void method568(int i_0, int i_1, int i_2, int i_3, short s_4) {
+	static final void method568(int i_0, int i_1, int i_2, int i_3) {
 		if (i_0 > i_1) {
 			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_1, i_0, i_3, (byte) -16);
 		} else {

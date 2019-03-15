@@ -6,13 +6,13 @@ public final class Class155 {
 
 	int anInt1968;
 
-	public void method2624(int i_1) {
+	public void method2624() {
 		if (this.aClass465_1969 != null) {
 			this.aClass465_1969.method7749(-1100560301);
 		}
 	}
 
-	public void method2625(int i_1, int i_2, byte b_3) {
+	public void method2625(int i_1, int i_2) {
 		if (this.aClass465_1969 == null) {
 			this.aClass465_1969 = new IterableNodeMap(this.anInt1968);
 		}
@@ -35,22 +35,22 @@ public final class Class155 {
 		}
 	}
 
-	public int method2627(int i_1, int i_2) {
+	public int method2627(int i_1) {
 		Class226 class226_3 = IndexLoaders.aClass230_147.method3897(i_1, (byte) 48);
 		int i_4 = class226_3.anInt2784;
 		int i_5 = class226_3.anInt2783 == 31 ? -1 : (1 << class226_3.anInt2783 + 1) - 1;
 		return (this.method2626(i_4, (byte) 17) & i_5) >>> class226_3.anInt2785;
 	}
 
-	Class155(int i_1) {
-		this.anInt1968 = i_1;
+	Class155() {
+		this.anInt1968 = 16;
 	}
 
 	static void method2634(long long_0) {
 		Class407.aCalendar4848.setTime(new Date(long_0));
 	}
 
-	public static void method2635(String string_0, String string_1, int i_2) {
+	public static void method2635(String string_0, String string_1) {
 		if (string_0.length() <= 320 && Class388.method6693(1569311303)) {
 			client.aClass184_7218.method3051((byte) -71);
 			Class290.method5118((byte) -126);
@@ -60,7 +60,7 @@ public final class Class155 {
 		}
 	}
 
-	static final void method2636(byte b_0) {
+	static final void method2636() {
 		int i_1 = Class197.NUM_PLAYER_INDICES;
 		int[] ints_2 = Class197.PLAYER_INDICES;
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
@@ -71,8 +71,8 @@ public final class Class155 {
 		}
 	}
 
-	static final void method2637(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
-		ItemIndexLoader.method7170(i_2, 377314002);
+	static final void method2637(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+		ItemIndexLoader.method7170(i_2);
 		int i_7 = 0;
 		int i_8 = i_2 - i_5;
 		if (i_8 < 0) {
@@ -155,7 +155,7 @@ public final class Class155 {
 		}
 	}
 
-	static Animable method2640(int i_0, int i_1, int i_2, int i_3) {
+	static Animable method2640(int i_0, int i_1, int i_2) {
 		Class293 class293_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-913455840).aClass293ArrayArrayArray2604[i_0][i_1][i_2];
 		if (class293_4 == null) {
 			return null;
@@ -166,7 +166,7 @@ public final class Class155 {
 				Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
 				if (class521_sub1_sub1_8 instanceof Animable) {
 					Animable animable_9 = (Animable) class521_sub1_sub1_8;
-					int i_10 = (animable_9.getSize(828768449) - 1) * 256 + 252;
+					int i_10 = (animable_9.getSize() - 1) * 256 + 252;
 					Vector3 vector3_11 = animable_9.method11166().aClass385_3595;
 					int i_12 = (int) vector3_11.x - i_10 >> 9;
 					int i_13 = (int) vector3_11.z - i_10 >> 9;

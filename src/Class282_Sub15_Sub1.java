@@ -21,7 +21,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	boolean aBool9574;
 
 	static {
-		aClass321_9573 = new Class321(64, Class332.aClass332_3875);
+		aClass321_9573 = new Class321(Class332.aClass332_3875);
 	}
 
 	synchronized void method14808(byte b_1) {
@@ -30,7 +30,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	synchronized void method12230(int[] ints_1, int i_2, int i_3) {
 		if (!this.aBool9574) {
-			if (this.method14812(1416311209) == null) {
+			if (this.method14812() == null) {
 				if (this.aBool9571) {
 					this.remove();
 					aClass321_9573.method5744((byte) 56);
@@ -46,7 +46,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 					b_6 = 1;
 				}
 				while (i_2 < i_4) {
-					Class282_Sub39 class282_sub39_7 = this.method14812(1416311209);
+					Class282_Sub39 class282_sub39_7 = this.method14812();
 					if (class282_sub39_7 == null) {
 						break;
 					}
@@ -68,30 +68,30 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		}
 	}
 
-	synchronized int method14811(int i_1) {
+	synchronized int method14811() {
 		return this.anInt9569;
 	}
 
-	synchronized Class282_Sub39 method14812(int i_1) {
+	synchronized Class282_Sub39 method14812() {
 		return (Class282_Sub39) this.aClass482_9568.head((byte) 60);
 	}
 
 	synchronized void method14813(int i_1) {
-		Class282_Sub39 class282_sub39_2 = this.method14812(1416311209);
+		Class282_Sub39 class282_sub39_2 = this.method14812();
 		if (class282_sub39_2 != null) {
 			class282_sub39_2.remove();
 			this.anInt9570 = 0;
 			--this.anInt9569;
-			aClass321_9573.method5740(Long.valueOf(class282_sub39_2.method13294(108092461)), class282_sub39_2, -1742340748);
+			aClass321_9573.method5740(Long.valueOf(class282_sub39_2.method13294()), class282_sub39_2);
 		}
 	}
 
 	Class282_Sub39 method14814(int i_1, double d_2) {
 		long long_4 = (long) (this.anInt9567 << 32 | i_1);
-		Class282_Sub39 class282_sub39_6 = (Class282_Sub39) aClass321_9573.method5739(Long.valueOf(long_4), (byte) 0);
+		Class282_Sub39 class282_sub39_6 = (Class282_Sub39) aClass321_9573.method5739(Long.valueOf(long_4));
 		if (class282_sub39_6 != null) {
 			class282_sub39_6.aDouble8004 = d_2;
-			aClass321_9573.method5737(Long.valueOf(long_4), -1701862442);
+			aClass321_9573.method5737(Long.valueOf(long_4));
 		} else {
 			class282_sub39_6 = new Class282_Sub39(new short[this.anInt9567][i_1], d_2);
 		}
@@ -115,7 +115,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		this.anInt9567 = i_1;
 	}
 
-	synchronized void method14816(boolean bool_1, int i_2) {
+	synchronized void method14816(boolean bool_1) {
 		this.aBool9574 = bool_1;
 	}
 
@@ -126,7 +126,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized void method12231(int i_1) {
 		if (!this.aBool9574) {
 			while (true) {
-				Class282_Sub39 class282_sub39_2 = this.method14812(1416311209);
+				Class282_Sub39 class282_sub39_2 = this.method14812();
 				if (class282_sub39_2 == null) {
 					if (this.aBool9571) {
 						this.remove();
@@ -146,7 +146,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	synchronized void method12242(int[] ints_1, int i_2, int i_3) {
 		if (!this.aBool9574) {
-			if (this.method14812(1416311209) == null) {
+			if (this.method14812() == null) {
 				if (this.aBool9571) {
 					this.remove();
 					aClass321_9573.method5744((byte) 102);
@@ -162,7 +162,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 					b_6 = 1;
 				}
 				while (i_2 < i_4) {
-					Class282_Sub39 class282_sub39_7 = this.method14812(1416311209);
+					Class282_Sub39 class282_sub39_7 = this.method14812();
 					if (class282_sub39_7 == null) {
 						break;
 					}
@@ -204,7 +204,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		return null;
 	}
 
-	static Game[] method14817(int i_0) {
+	static Game[] method14817() {
 		return new Game[] { Game.aClass486_5745, Game.aClass486_5743, Game.stellarDawn, Game.aClass486_5747, Game.darkan };
 	}
 
@@ -218,7 +218,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	synchronized void method12240(int[] ints_1, int i_2, int i_3) {
 		if (!this.aBool9574) {
-			if (this.method14812(1416311209) == null) {
+			if (this.method14812() == null) {
 				if (this.aBool9571) {
 					this.remove();
 					aClass321_9573.method5744((byte) 18);
@@ -234,7 +234,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 					b_6 = 1;
 				}
 				while (i_2 < i_4) {
-					Class282_Sub39 class282_sub39_7 = this.method14812(1416311209);
+					Class282_Sub39 class282_sub39_7 = this.method14812();
 					if (class282_sub39_7 == null) {
 						break;
 					}
@@ -258,7 +258,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	synchronized void method12241(int[] ints_1, int i_2, int i_3) {
 		if (!this.aBool9574) {
-			if (this.method14812(1416311209) == null) {
+			if (this.method14812() == null) {
 				if (this.aBool9571) {
 					this.remove();
 					aClass321_9573.method5744((byte) 11);
@@ -274,7 +274,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 					b_6 = 1;
 				}
 				while (i_2 < i_4) {
-					Class282_Sub39 class282_sub39_7 = this.method14812(1416311209);
+					Class282_Sub39 class282_sub39_7 = this.method14812();
 					if (class282_sub39_7 == null) {
 						break;
 					}
@@ -296,7 +296,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		}
 	}
 
-	synchronized double method14819(int i_1) {
+	synchronized double method14819() {
 		if (this.anInt9569 < 1) {
 			return -1.0D;
 		} else {
@@ -305,7 +305,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		}
 	}
 
-	public void method14820(int i_1, int i_2) {
+	public void method14820(int i_1) {
 		this.anInt9565 = i_1;
 		this.anInt9572 = i_1;
 	}
@@ -313,7 +313,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized void method12234(int i_1) {
 		if (!this.aBool9574) {
 			while (true) {
-				Class282_Sub39 class282_sub39_2 = this.method14812(1416311209);
+				Class282_Sub39 class282_sub39_2 = this.method14812();
 				if (class282_sub39_2 == null) {
 					if (this.aBool9571) {
 						this.remove();
@@ -342,7 +342,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized void method12243(int i_1) {
 		if (!this.aBool9574) {
 			while (true) {
-				Class282_Sub39 class282_sub39_2 = this.method14812(1416311209);
+				Class282_Sub39 class282_sub39_2 = this.method14812();
 				if (class282_sub39_2 == null) {
 					if (this.aBool9571) {
 						this.remove();
@@ -365,7 +365,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	public static final void method14840(byte b_0) {
-		Engine.aClass273_3244.method4853(-1473028742);
+		Engine.aClass273_3244.method4853();
 		int i_1;
 		for (i_1 = 0; i_1 < 32; i_1++) {
 			Engine.aLongArray3246[i_1] = 0L;

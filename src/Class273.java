@@ -1,14 +1,14 @@
 public abstract class Class273 {
 
 	final int method4842(long long_1) {
-		long long_3 = this.method4844(-1314444349);
+		long long_3 = this.method4844();
 		if (long_3 > 0L) {
 			Class89.sleep(long_3);
 		}
 		return this.method4845(long_1);
 	}
 
-	abstract long method4844(int var1);
+	abstract long method4844();
 
 	abstract int method4845(long var1);
 
@@ -22,9 +22,9 @@ public abstract class Class273 {
 
 	abstract long method4851();
 
-	abstract long method4852(int var1);
+	abstract long method4852();
 
-	abstract void method4853(int var1);
+	abstract void method4853();
 
 	abstract int method4854(long var1);
 
@@ -38,7 +38,7 @@ public abstract class Class273 {
 
 	abstract int method4862(long var1);
 
-	static final void method4866(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static final void method4866(int i_0, int i_1, int i_2, int i_3) {
 		int i_5 = 0;
 		int i_6 = i_2;
 		int i_7 = -i_2;

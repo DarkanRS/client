@@ -147,14 +147,14 @@ public class Class289 implements Runnable {
 		this.aThread3445.start();
 	}
 
-	static boolean method5097(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
+	static boolean method5097(GraphicalRenderer graphicalrenderer_0, int i_1) {
 		Class169.time();
 		if (!graphicalrenderer_0.method8455(1890093661)) {
 			return false;
 		} else {
 			int i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX(-1338331391);
 			int i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-663161868);
-			RegionMap regionmap_5 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+			RegionMap regionmap_5 = IndexLoaders.MAP_REGION_DECODER.method4433();
 			SceneObjectManager sceneobjectmanager_6 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1741761339);
 			int i_7 = i_3 / 2;
 			byte b_8 = 0;
@@ -171,7 +171,7 @@ public class Class289 implements Runnable {
 								i_14 = i_13 - 1;
 							}
 							if (i_14 >= 0) {
-								bool_10 &= QuickchatDefinitions.method14921(i_14, i_11, i_12, (byte) 95);
+								bool_10 &= QuickchatDefinitions.method14921(i_14, i_11, i_12);
 							}
 						}
 					}
@@ -200,9 +200,9 @@ public class Class289 implements Runnable {
 					b_15 = 48;
 					graphicalrenderer_0.ba(1, 0);
 				} else {
-					Class419.aClass160_5004 = graphicalrenderer_0.createNativeSprite(ints_35, 0, i_11, i_11, i_11, 1063937715);
+					Class419.aClass160_5004 = graphicalrenderer_0.createNativeSprite(ints_35, i_11, i_11, i_11, 1063937715);
 				}
-				IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4052((byte) 1);
+				IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
 				int i_37 = ~0xffffff | (238 + (int) (Math.random() * 20.0D) - 10 << 16) + (238 + (int) (Math.random() * 20.0D) - 10 << 8) + (238 + (int) (Math.random() * 20.0D) - 10);
 				int i_17 = ~0xffffff | 238 + (int) (Math.random() * 20.0D) - 10 << 16;
 				int i_18 = (int) (Math.random() * 8.0D) << 16 | (int) (Math.random() * 8.0D) << 8 | (int) (Math.random() * 8.0D);
@@ -259,7 +259,7 @@ public class Class289 implements Runnable {
 									bools_19[i_30][i_31] = regionmap_5.method5498(i_1, i_29, i_24 + i_30, i_31 + i_25, (short) 11199);
 								}
 							}
-							sceneobjectmanager_6.aClass390Array2607[i_29].method6715(b_49, b_15, 1024, i_24, i_25, i_26, i_27, bools_19);
+							sceneobjectmanager_6.aClass390Array2607[i_29].method6715(b_49, b_15, i_24, i_25, i_26, i_27, bools_19);
 							if (!Class187.aBool2356) {
 								for (i_30 = -4; i_30 < i_7; i_30++) {
 									for (i_31 = -4; i_31 < i_7; i_31++) {
@@ -271,7 +271,7 @@ public class Class289 implements Runnable {
 												i_34 = i_29 - 1;
 											}
 											if (i_34 >= 0) {
-												Class225_Sub5.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17, 1677446637);
+												Class225_Sub5.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
 											}
 										}
 									}
@@ -279,7 +279,7 @@ public class Class289 implements Runnable {
 							}
 						}
 						if (Class187.aBool2356) {
-							ClipMap clipmap_38 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_1, 1801793645);
+							ClipMap clipmap_38 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_1);
 							for (i_30 = 0; i_30 < i_7; i_30++) {
 								for (i_31 = 0; i_31 < i_7; i_31++) {
 									i_32 = i_20 + i_30;
@@ -290,11 +290,11 @@ public class Class289 implements Runnable {
 									} else if ((i_34 & 0x800000) != 0) {
 										graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622, -113850245);
 									} else if ((i_34 & 0x2000000) != 0) {
-										graphicalrenderer_0.method8428(i_22 + i_30 * 4 + 3, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622, -1796764807);
+										graphicalrenderer_0.method8428(i_22 + i_30 * 4 + 3, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
 									} else if ((i_34 & 0x8000000) != 0) {
 										graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4 + 3, 4, -1713569622, 1008017075);
 									} else if ((i_34 & 0x20000000) != 0) {
-										graphicalrenderer_0.method8428(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622, -1796764807);
+										graphicalrenderer_0.method8428(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
 									}
 								}
 							}
@@ -328,7 +328,7 @@ public class Class289 implements Runnable {
 				}
 				graphicalrenderer_0.L();
 				graphicalrenderer_0.ba(1, 1);
-				IncomingPacket.method6378(-1538407760);
+				IncomingPacket.method6378();
 				ObjectIndexLoader objectindexloader_39 = IndexLoaders.MAP_REGION_DECODER.method4436(-1461590672);
 				Class187.anInt2353 = 0;
 				Class187.aClass482_2350.method8118(862321870);
@@ -337,9 +337,9 @@ public class Class289 implements Runnable {
 						for (i_22 = b_9; i_22 < i_4 + b_9; i_22++) {
 							for (i_23 = i_1; i_23 <= i_1 + 1 && i_23 <= 3; i_23++) {
 								if (regionmap_5.method5498(i_1, i_23, i_21, i_22, (short) -2270)) {
-									SceneObject sceneobject_40 = (SceneObject) sceneobjectmanager_6.getGroundDecoration(i_23, i_21, i_22, -387297653);
+									SceneObject sceneobject_40 = (SceneObject) sceneobjectmanager_6.getGroundDecoration(i_23, i_21, i_22);
 									if (sceneobject_40 == null) {
-										sceneobject_40 = (SceneObject) sceneobjectmanager_6.getInteractableObject(i_23, i_21, i_22, client.anInterface25_7446, -233664382);
+										sceneobject_40 = (SceneObject) sceneobjectmanager_6.getInteractableObject(i_23, i_21, i_22, client.anInterface25_7446);
 									}
 									if (sceneobject_40 == null) {
 										sceneobject_40 = (SceneObject) sceneobjectmanager_6.getWall(i_23, i_21, i_22, (byte) -90);
@@ -348,13 +348,13 @@ public class Class289 implements Runnable {
 										sceneobject_40 = (SceneObject) sceneobjectmanager_6.getWallDecoration(i_23, i_21, i_22, (byte) 98);
 									}
 									if (sceneobject_40 != null) {
-										ObjectDefinitions objectdefinitions_41 = objectindexloader_39.getObjectDefinitions(sceneobject_40.getId(905574000), 65280);
+										ObjectDefinitions objectdefinitions_41 = objectindexloader_39.getObjectDefinitions(sceneobject_40.getId(905574000));
 										if (!objectdefinitions_41.members || client.membersWorld) {
 											i_26 = objectdefinitions_41.mapIcon;
 											if (objectdefinitions_41.toObjectIds != null) {
 												for (i_27 = 0; i_27 < objectdefinitions_41.toObjectIds.length; i_27++) {
 													if (objectdefinitions_41.toObjectIds[i_27] != -1) {
-														ObjectDefinitions objectdefinitions_42 = objectindexloader_39.getObjectDefinitions(objectdefinitions_41.toObjectIds[i_27], 65280);
+														ObjectDefinitions objectdefinitions_42 = objectindexloader_39.getObjectDefinitions(objectdefinitions_41.toObjectIds[i_27]);
 														if (objectdefinitions_42.mapIcon >= 0) {
 															i_26 = objectdefinitions_42.mapIcon;
 														}
@@ -372,9 +372,9 @@ public class Class289 implements Runnable {
 												i_28 = i_21;
 												i_29 = i_22;
 												if (bool_50) {
-													int[][] ints_43 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23, 1801793645).map;
-													i_31 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23, 1801793645).offsetX;
-													i_32 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23, 1801793645).offsetY;
+													int[][] ints_43 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23).map;
+													i_31 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23).offsetX;
+													i_32 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23).offsetY;
 													for (i_33 = 0; i_33 < 10; i_33++) {
 														i_34 = (int) (Math.random() * 4.0D);
 														if (i_34 == 0 && i_28 > b_8 && i_28 > i_21 - 3 && (ints_43[i_28 - 1 - i_31][i_29 - i_32] & 0x2c0108) == 0) {

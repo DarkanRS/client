@@ -36,7 +36,7 @@ public class Class371 {
 		return (i_0 + i_3) / i_1 - i_3;
 	}
 
-	static void method6351(int i_0) {
+	static void method6351() {
 		if (Class335.anIntArray3916 == null) {
 			Class335.anIntArray3916 = new int[65536];
 			double d_1 = 0.7D + (Math.random() * 0.03D - 0.015D);
@@ -94,22 +94,22 @@ public class Class371 {
 		}
 	}
 
-	public static RouteStrategy method6352(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	public static RouteStrategy method6352(int i_0, int i_1, int i_4) {
 		Class224.aClass225_Sub6_2774.approxDestinationX = i_0;
 		Class224.aClass225_Sub6_2774.approxDestinationY = i_1;
-		Class224.aClass225_Sub6_2774.approxDestinationSizeX = i_2;
-		Class224.aClass225_Sub6_2774.approxDestinationSizeY = i_3;
+		Class224.aClass225_Sub6_2774.approxDestinationSizeX = 1;
+		Class224.aClass225_Sub6_2774.approxDestinationSizeY = 1;
 		return Class224.aClass225_Sub6_2774;
 	}
 
-	public static final void method6353(short s_0) {
+	public static final void method6353() {
 		BufferedConnectionContext class184_1 = Class468_Sub20.method12807(2071524191);
 		TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_1.isaac, -585449353);
 		tcpmessage_2.buffer.writeByte(0);
 		class184_1.method3049(tcpmessage_2, 963665082);
 	}
 
-	public static Container getActiveContainer(byte b_0) {
+	public static Container getActiveContainer() {
 		return (Container) (Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : Class282_Sub44.anApplet8065));
 	}
 }

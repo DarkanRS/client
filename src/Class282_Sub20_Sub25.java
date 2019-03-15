@@ -2,7 +2,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 
 	int anInt9885 = 585;
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9885 = rsbytebuffer_2.readUnsignedShort();
@@ -10,7 +10,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		}
 	}
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, 633392158);
 		if (this.aClass320_7667.aBool3722) {
 			int i_4 = Class316.anIntArray3668[i_1];
@@ -55,7 +55,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		super(0, true);
 	}
 
-	public static void method15393(boolean bool_0, int i_1) {
+	public static void method15393(int i_1) {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8208, 1, 62287602);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, 1, 463702183);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, 0, -1779797403);
@@ -77,8 +77,8 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		Class323.method5777(1755856105);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, -1469341129);
 		Class393.preferences.setValue(Class393.preferences.graphics, 1, -971375585);
-		Class94.method1589((short) 255);
-		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-462453553);
+		Class94.method1589();
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-462453553);
 		client.aBool7185 = true;
 	}
 }

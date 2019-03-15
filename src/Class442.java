@@ -28,7 +28,7 @@ public final class Class442 {
 		}
 	}
 
-	public final long method7388(int i_1) throws IOException {
+	public final long method7388() throws IOException {
 		return this.aRandomAccessFile5359.length();
 	}
 
@@ -49,7 +49,7 @@ public final class Class442 {
 
 	}
 
-	public Class442(File file_1, String string_2, long long_3) throws IOException {
+	public Class442(File file_1, long long_3) throws IOException {
 		if (long_3 == -1L) {
 			long_3 = Long.MAX_VALUE;
 		}
@@ -58,11 +58,11 @@ public final class Class442 {
 			file_1.delete();
 		}
 
-		this.aRandomAccessFile5359 = new RandomAccessFile(file_1, string_2);
+		this.aRandomAccessFile5359 = new RandomAccessFile(file_1, "rw");
 		this.aLong5358 = long_3;
 		this.aLong5360 = 0L;
 		int i_5 = this.aRandomAccessFile5359.read();
-		if (i_5 != -1 && !string_2.equals("r")) {
+		if (i_5 != -1 && !"rw".equals("r")) {
 			this.aRandomAccessFile5359.seek(0L);
 			this.aRandomAccessFile5359.write(i_5);
 		}

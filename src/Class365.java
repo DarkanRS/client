@@ -16,7 +16,7 @@ public class Class365 implements Interface3 {
 		return Class60.aClass60_605;
 	}
 
-	public Class60 method24(int i_1) {
+	public Class60 method24() {
 		return Class60.aClass60_605;
 	}
 
@@ -38,7 +38,7 @@ public class Class365 implements Interface3 {
 		if (state != client.gameState) {
 			client.anInt7396 = 0;
 			if (state == 10 || state == 17) {
-				Class78.method1384(949776087);
+				Class78.method1384();
 			}
 
 			if (state != 10 && Class233.aClass202_2883 != null) {
@@ -51,43 +51,43 @@ public class Class365 implements Interface3 {
 			}
 
 			if (state == 0) {
-				Class346.method6161(client.anInt7349 != Class58.aClass529_527.anInt7027, -56849347);
+				Class346.method6161(client.anInt7349 != Class58.aClass529_527.anInt7027);
 			}
 
 			if (state != 14 && state != 12) {
 				if (state == 19 || state == 7 && client.gameState != 6) {
-					Class78.method1384(949776087);
+					Class78.method1384();
 				} else if (state == 8) {
-					Class247.method4251((short) 17247);
+					Class247.method4251();
 				}
 			} else {
-				Class331.method5921((byte) 81);
+				Class331.method5921();
 			}
 
 			if (Class464.method7742(state, (byte) 74)) {
 				IndexLoaders.MAP_REGION_DECODER.method4445((byte) -22);
-				Class122.method2111(true, 662490589);
+				Class122.method2111(true);
 			}
 
 			if (state == 18 || state == 5) {
 				Class60.method1172(280036334);
 			}
 
-			boolean bool_2 = state == 1 || Class97.loggedOutState(state, 1908805257) || Class282_Sub17.lobbyState(state, -2143190341);
-			boolean bool_3 = client.gameState == 1 || Class97.loggedOutState(client.gameState, 1908805257) || Class282_Sub17.lobbyState(client.gameState, -2129908537);
+			boolean bool_2 = state == 1 || Class97.loggedOutState(state) || Class282_Sub17.lobbyState(state, -2143190341);
+			boolean bool_3 = client.gameState == 1 || Class97.loggedOutState(client.gameState) || Class282_Sub17.lobbyState(client.gameState, -2129908537);
 			if (bool_2 != bool_3) {
 				if (bool_2) {
 					Class260.anInt3223 = Class260.anInt3228;
 					if (Class393.preferences.aClass468_Sub13_8229.method12714(-1591414492) != 0) {
-						Class339.method6047(2, IndexLoaders.MUSIC_INDEX, Class260.anInt3228, 0, Class393.preferences.aClass468_Sub13_8229.method12714(695261258), false, 500361678);
+						Class339.method6047(IndexLoaders.MUSIC_INDEX, Class260.anInt3228, Class393.preferences.aClass468_Sub13_8229.method12714(695261258));
 						Class468_Sub6.method12658(935417586);
 					} else {
-						Class358.method6240(2, 1276678940);
+						Class358.method6240(1276678940);
 					}
 
 					Class119.JS5_STANDARD_REQUESTER.method5523(false, (byte) 123);
 				} else {
-					Class358.method6240(2, 1962133181);
+					Class358.method6240(1962133181);
 					Class119.JS5_STANDARD_REQUESTER.method5523(true, (byte) 44);
 				}
 			}
@@ -101,7 +101,7 @@ public class Class365 implements Interface3 {
 
 	}
 
-	public static void method6299(int i_0, boolean bool_1, int i_2, boolean bool_3, byte b_4) {
+	public static void method6299(int i_0, boolean bool_1, int i_2, boolean bool_3) {
 		Class52.method1086(0, Class448.aClass217_Sub1Array5426.length - 1, i_0, bool_1, i_2, bool_3, (byte) -100);
 		Class448.anInt5430 = 0;
 		Class448.aClass510_5423 = null;

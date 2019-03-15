@@ -6,7 +6,7 @@ public class Class282_Sub50_Sub1_Sub1 extends Class282_Sub50_Sub1 {
 		return false;
 	}
 
-	Object method14692(int i_1) {
+	Object method14692() {
 		return this.anObject10380;
 	}
 

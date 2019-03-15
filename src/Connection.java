@@ -4,7 +4,7 @@ public abstract class Connection {
 
 	public abstract void method3310();
 
-	public abstract void write(byte[] var1, int var2, int var3, int var4) throws IOException;
+	public abstract void write(byte[] var1, int var3, int var4) throws IOException;
 
 	public abstract int method3312(int var1) throws IOException;
 
@@ -48,7 +48,7 @@ public abstract class Connection {
 
 	public abstract void method3333();
 
-	public static void runIComponentScripts(IComponentDefinitions[] arr_0, int i_1) {
+	public static void runIComponentScripts(IComponentDefinitions[] arr_0) {
 		for (int i_2 = 0; i_2 < arr_0.length; i_2++) {
 			IComponentDefinitions icomponentdefinitions_3 = arr_0[i_2];
 			if (icomponentdefinitions_3.scriptParams != null) {
@@ -117,11 +117,11 @@ public abstract class Connection {
 		}
 	}
 
-	static Class461[] method3343(int i_0) {
+	static Class461[] method3343() {
 		return new Class461[] { Class461.aClass461_5539, Class461.aClass461_5538, Class461.aClass461_5540 };
 	}
 
-	public static final void method3345(String string_0, int i_1) {
+	public static final void method3345(String string_0) {
 		if (!string_0.equals("")) {
 			BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1721172592);
 			TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_2.isaac, 595380659);

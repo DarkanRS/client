@@ -28,7 +28,7 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 		class61_1.aByte628 = this.aByte10018;
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.aBool624 = this.aBool10016;
 		class61_1.aByte619 = this.aByte10015;
 		class61_1.aByte626 = this.aByte10014;
@@ -52,7 +52,7 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 		this.aByte10018 = rsbytebuffer_1.readByte();
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		this.aBool10016 = rsbytebuffer_1.readUnsignedByte() == 1;
 		this.aByte10015 = rsbytebuffer_1.readByte();
 		this.aByte10014 = rsbytebuffer_1.readByte();
@@ -113,7 +113,7 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 					} else {
 						byte[] bytes_6 = new byte[i_8];
 						if (i_3 == 1) {
-							Class471.method7828(bytes_6, i_8, data, i_4, 9);
+							Class471.method7828(bytes_6, i_8, data, i_4);
 						} else {
 							Class395 class395_7 = Index.aClass395_3684;
 							synchronized (Index.aClass395_3684) {

@@ -64,22 +64,22 @@ public class Class174 {
 		return bool_1;
 	}
 
-	static final void method2955(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+	static final void method2955(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.anInt1309 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 	}
 
 	static final void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(607754892) - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1534289910) - 2) {
 			int i_9 = i_0;
-			if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_2, i_3, 2056160372)) {
+			if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3, 2056160372)) {
 				i_9 = i_0 + 1;
 			}
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1735262041) != null) {
-				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0, 1801793645), -1251785888);
+				IndexLoaders.MAP_REGION_DECODER.method4441().method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0));
 				if (i_4 >= 0) {
 					int i_10 = Class393.preferences.aClass468_Sub23_8202.method12897((byte) 28);
 					Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, 1, -1662895154);
-					IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0, 1801793645), i_7, -1045787010);
+					IndexLoaders.MAP_REGION_DECODER.method4441().method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0), i_7, -1045787010);
 					Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, i_10, -1533283163);
 				}
 			}

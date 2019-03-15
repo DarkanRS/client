@@ -56,7 +56,7 @@ public class Class179 {
 		}
 	}
 
-	public static int method3019(int i_0, short s_1) {
+	public static int method3019(int i_0) {
 		i_0 = (i_0 & 0x55555555) + (i_0 >>> 1 & 0x55555555);
 		i_0 = (i_0 >>> 2 & 0x33333333) + (i_0 & 0x33333333);
 		i_0 = i_0 + (i_0 >>> 4) & 0xf0f0f0f;

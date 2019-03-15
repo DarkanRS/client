@@ -468,7 +468,7 @@ public class Class160_Sub1_Sub2 extends Class160_Sub1 {
 		this.anIntArray10220 = ints_3;
 	}
 
-	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		if (this.aClass505_Sub3_8875.method14408()) {
 			throw new IllegalStateException();
 		} else {
@@ -1292,11 +1292,11 @@ public class Class160_Sub1_Sub2 extends Class160_Sub1 {
 		}
 	}
 
-	public void method2751(int i_1, int i_2, int i_3) {
+	public void method2751() {
 		throw new IllegalStateException();
 	}
 
-	void method14247(boolean bool_1, boolean bool_2, boolean bool_3, int i_4, int i_5, float f_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, boolean bool_13) {
+	void method14247(boolean bool_1, boolean bool_2, boolean bool_3, int i_4, int i_5, float f_6, int i_7, int i_8, int i_9, int i_10, int i_11, boolean bool_13) {
 		if (i_7 > 0 && i_8 > 0 && (bool_1 || bool_2)) {
 			int i_14 = 0;
 			int i_15 = 0;

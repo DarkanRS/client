@@ -37,11 +37,11 @@ public class Class60 {
 				IncomingPacket.aClass375_4459 };
 	}
 
-	public static boolean method1169(char var_0, byte b_1) {
+	public static boolean method1169(char var_0) {
 		return var_0 >= 65 && var_0 <= 90 || var_0 >= 97 && var_0 <= 122;
 	}
 
-	public static void method1170(int i_0) {
+	public static void method1170() {
 		if (client.aBool7344) {
 			IComponentDefinitions icomponentdefinitions_1 = Index.method5694(Class7.anInt56, client.anInt7345, 1160609713);
 			if (icomponentdefinitions_1 != null && icomponentdefinitions_1.anObjectArray1396 != null) {
@@ -65,8 +65,8 @@ public class Class60 {
 		}
 	}
 
-	static final void method1174(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		ItemIndexLoader.method7170(i_2, 377314002);
+	static final void method1174(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+		ItemIndexLoader.method7170(i_2);
 		int i_7 = 0;
 		int i_8 = i_2 - i_5;
 		if (i_8 < 0) {

@@ -40,7 +40,7 @@ public class SpotAnimIndexLoader {
 			spotanimdefinitions_3.aClass515_6973 = this;
 			spotanimdefinitions_3.anInt6969 = i_1;
 			if (bytes_10 != null) {
-				spotanimdefinitions_3.method11226(new RsByteBuffer(bytes_10), 91916290);
+				spotanimdefinitions_3.method11226(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_5891;
 			synchronized (this.aClass229_5891) {
@@ -50,7 +50,7 @@ public class SpotAnimIndexLoader {
 		}
 	}
 
-	public void method8846(int i_1, byte b_2) {
+	public void method8846(int i_1) {
 		this.anInt5892 = i_1;
 		SoftCache softcache_3 = this.aClass229_5890;
 		synchronized (this.aClass229_5890) {
@@ -58,18 +58,18 @@ public class SpotAnimIndexLoader {
 		}
 	}
 
-	public void method8847(int i_1, int i_2) {
+	public void method8847() {
 		SoftCache softcache_3 = this.aClass229_5891;
 		synchronized (this.aClass229_5891) {
-			this.aClass229_5891.method3858(i_1, (byte) 28);
+			this.aClass229_5891.method3858(5, (byte) 28);
 		}
 		softcache_3 = this.aClass229_5890;
 		synchronized (this.aClass229_5890) {
-			this.aClass229_5890.method3858(i_1, (byte) 23);
+			this.aClass229_5890.method3858(5, (byte) 23);
 		}
 	}
 
-	public void method8848(int i_1) {
+	public void method8848() {
 		SoftCache softcache_2 = this.aClass229_5891;
 		synchronized (this.aClass229_5891) {
 			this.aClass229_5891.method3859(128096981);
@@ -80,7 +80,7 @@ public class SpotAnimIndexLoader {
 		}
 	}
 
-	public void method8849(short s_1) {
+	public void method8849() {
 		SoftCache softcache_2 = this.aClass229_5891;
 		synchronized (this.aClass229_5891) {
 			this.aClass229_5891.method3863(1832676736);
@@ -91,14 +91,14 @@ public class SpotAnimIndexLoader {
 		}
 	}
 
-	public static NativeSprite method8858(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
+	public static NativeSprite method8858(GraphicalRenderer graphicalrenderer_0, int i_1) {
 		Class282_Sub37 class282_sub37_3 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_1);
 		if (class282_sub37_3 != null) {
-			Class282_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918(1179079332);
+			Class282_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918();
 			class282_sub37_3.aBool7996 = true;
 			if (class282_sub41_sub3_4 != null) {
 				Class492.aClass502_5776.aClass505_5829 = graphicalrenderer_0;
-				return (NativeSprite) class282_sub41_sub3_4.method14795(Class492.aClass502_5776, -1234291023);
+				return (NativeSprite) class282_sub41_sub3_4.method14795(Class492.aClass502_5776);
 			}
 		}
 		return null;
@@ -170,12 +170,12 @@ public class SpotAnimIndexLoader {
 		return container == null ? -1 : (slot >= 0 && slot < container.itemIds.length ? container.itemIds[slot] : -1);
 	}
 
-	public static void method8862(int i_0, int i_1, int i_2, boolean bool_3, int i_4) {
+	public static void method8862(int i_0, int i_1, int i_2, boolean bool_3) {
 		if (Class393.preferences.currentToolkit.getValue(1767720477) != 0) {
 			Class291_Sub1.anInt8021 = Class393.preferences.currentToolkit.getValue(-124335836);
-			ParticleProducer.method11500(0, true, (byte) 24);
+			ParticleProducer.method11500(0, true);
 		} else {
-			Class122.method2111(false, 662490589);
+			Class122.method2111(false);
 		}
 		Class291_Sub1.anInt8019 = i_1;
 		Class291_Sub1.anInt8020 = i_2;

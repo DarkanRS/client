@@ -10,17 +10,17 @@ public class ParamDefinitions {
 
 	public String typeName;
 
-	void method7315(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method7315(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method7316(rsbytebuffer_1, i_3, (byte) 87);
+			this.method7316(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method7316(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method7316(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.typeChar = Class11.getChar(rsbytebuffer_1.readByte(), 1486768413);
 		} else if (i_2 == 2) {
@@ -36,17 +36,17 @@ public class ParamDefinitions {
 		return this.typeChar == 115;
 	}
 
-	static void method7323(byte b_0) {
+	static void method7323() {
 		if (Renderers.SOFTWARE_RENDERER != null) {
 			IndexLoaders.MAP_REGION_DECODER.method4444(1684896059);
 			Class58.method1139(-1956740427);
 			Class76.method1361((byte) -9);
 			Defaults8Loader.method11156(-1284329582);
 			IndexLoaders.MAP_REGION_DECODER.method4446((byte) -33);
-			Class217_Sub1.method13056(-1395275172);
+			Class217_Sub1.method13056();
 			Class356.method6227(false, (byte) -17);
-			Class225_Sub6.method13413(-1756133525);
-			Class122.method2111(true, 662490589);
+			Class225_Sub6.method13413();
+			Class122.method2111(true);
 			ParticleProducerDefinition.method1160(-319039192);
 			Class386.method6673(326422820);
 			int i_1;

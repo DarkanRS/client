@@ -18,7 +18,7 @@ public class Class282_Sub20_Sub12 extends Class282_Sub20 {
 
 	}
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -1267538320);
 		if (this.aClass320_7667.aBool3722) {
 			int i_4 = this.anInt9810 * Class316.anInt3678 >> 12;
@@ -62,10 +62,10 @@ public class Class282_Sub20_Sub12 extends Class282_Sub20 {
 	}
 
 	void method12321(int i_1) {
-		this.method15266((byte) 0);
+		this.method15266();
 	}
 
-	void method15266(byte b_1) {
+	void method15266() {
 		double d_2 = Math.cos((double) ((float) this.anInt9807 / 4096.0F));
 		this.anIntArray9808[0] = (int) (Math.sin((double) ((float) this.anInt9813 / 4096.0F)) * d_2 * 4096.0D);
 		this.anIntArray9808[1] = (int) (Math.cos((double) ((float) this.anInt9813 / 4096.0F)) * d_2 * 4096.0D);
@@ -86,7 +86,7 @@ public class Class282_Sub20_Sub12 extends Class282_Sub20 {
 		super(1, true);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9810 = rsbytebuffer_2.readUnsignedShort();

@@ -17,10 +17,10 @@ public class ClanChannel extends Node {
 	}
 
 	public ClanChannel(RsByteBuffer buffer) {
-		this.decode(buffer, 1015432776);
+		this.decode(buffer);
 	}
 
-	public int[] method12095(int i_1) {
+	public int[] method12095() {
 		if (this.anIntArray7500 == null) {
 			String[] arr_2 = new String[this.numPlayers];
 			this.anIntArray7500 = new int[this.numPlayers];
@@ -32,7 +32,7 @@ public class ClanChannel extends Node {
 		return this.anIntArray7500;
 	}
 
-	void method12096(int i_1, byte b_2) {
+	void method12096(int i_1) {
 		--this.numPlayers;
 		if (this.numPlayers == 0) {
 			this.players = null;
@@ -42,7 +42,7 @@ public class ClanChannel extends Node {
 		this.anIntArray7500 = null;
 	}
 
-	public int method12098(String string_1, int i_2) {
+	public int method12098(String string_1) {
 		for (int i_3 = 0; i_3 < this.numPlayers; i_3++) {
 			if (this.players[i_3].name.equalsIgnoreCase(string_1)) {
 				return i_3;
@@ -51,7 +51,7 @@ public class ClanChannel extends Node {
 		return -1;
 	}
 
-	void decode(RsByteBuffer buffer, int i_2) {
+	void decode(RsByteBuffer buffer) {
 		int nameTypeFlag = buffer.readUnsignedByte();
 		if ((nameTypeFlag & 0x1) != 0) {
 			this.namesAsLong = true;
@@ -83,15 +83,15 @@ public class ClanChannel extends Node {
 		}
 	}
 
-	void method12105(ClanChannelPlayer class57_1, byte b_2) {
+	void method12105(ClanChannelPlayer class57_1) {
 		if (this.players == null || this.numPlayers >= this.players.length) {
-			this.method12112(this.numPlayers + 5, (byte) 1);
+			this.method12112(this.numPlayers + 5);
 		}
 		this.players[++this.numPlayers - 1] = class57_1;
 		this.anIntArray7500 = null;
 	}
 
-	void method12112(int i_1, byte b_2) {
+	void method12112(int i_1) {
 		if (this.players != null) {
 			Class503.method8359(this.players, 0, this.players = new ClanChannelPlayer[i_1], 0, this.numPlayers);
 		} else {
@@ -99,7 +99,7 @@ public class ClanChannel extends Node {
 		}
 	}
 
-	public static void method12114(int i_0, int i_1) {
+	public static void method12114(int i_0) {
 		if (i_0 == 37) {
 			Class291_Sub1.aFloat3462 = 3.0F;
 		} else if (i_0 == 50) {
@@ -115,7 +115,7 @@ public class ClanChannel extends Node {
 		Class291_Sub1.anInt8016 = -1;
 	}
 
-	static void method12117(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+	static void method12117(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
 			AnimationIndexLoader.method11220(i_0, i_1, i_6, i_7, i_8, (byte) 47);
 		} else {

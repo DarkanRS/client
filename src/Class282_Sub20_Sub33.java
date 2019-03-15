@@ -1,6 +1,6 @@
 public class Class282_Sub20_Sub33 extends Class282_Sub20 {
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, 802505758);
 		if (this.aClass320_7667.aBool3722) {
 			int[] ints_4 = this.method12317(0, i_1, 1932693607);
@@ -26,8 +26,8 @@ public class Class282_Sub20_Sub33 extends Class282_Sub20 {
 		int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1830498780);
 		if (this.aClass308_7670.aBool3619) {
 			int[] ints_4 = this.method12317(2, i_1, 2002951059);
-			int[][] ints_5 = this.method12333(0, i_1, (byte) 3);
-			int[][] ints_6 = this.method12333(1, i_1, (byte) 3);
+			int[][] ints_5 = this.method12333(0, i_1);
+			int[][] ints_6 = this.method12333(1, i_1);
 			int[] ints_7 = ints_3[0];
 			int[] ints_8 = ints_3[1];
 			int[] ints_9 = ints_3[2];
@@ -60,7 +60,7 @@ public class Class282_Sub20_Sub33 extends Class282_Sub20 {
 		return ints_3;
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		if (i_1 == 0) {
 			this.aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
 		}
@@ -73,9 +73,9 @@ public class Class282_Sub20_Sub33 extends Class282_Sub20 {
 
 	static void method15411(GraphicalRenderer graphicalrenderer_0, byte b_1) {
 		if (Class20.aBool161) {
-			Class354.method6216(graphicalrenderer_0, 399148987);
+			Class354.method6216(graphicalrenderer_0);
 		} else {
-			Class268.method4800(graphicalrenderer_0, (byte) 122);
+			Class268.method4800(graphicalrenderer_0);
 		}
 
 	}

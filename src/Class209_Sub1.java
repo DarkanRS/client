@@ -33,13 +33,13 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 			i_2 = this.anInt7944;
 		}
 		if ((i_2 & 0x1) != 0) {
-			this.method12909(3, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+			this.method12909(3, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount());
 		}
 		if ((i_2 & 0x4) != 0) {
-			this.method12909(5, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+			this.method12909(5, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount());
 		}
 		if ((i_2 & 0x2) != 0) {
-			this.method12909(4, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+			this.method12909(4, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount());
 		}
 		this.anInt7944 &= ~i_2;
 		if (mouseevent_1.isPopupTrigger()) {
@@ -54,11 +54,11 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	Class209_Sub1(Component component_1, boolean bool_2) {
-		this.method12906(component_1, 1883441347);
+		this.method12906(component_1);
 		this.aBool7946 = bool_2;
 	}
 
-	public synchronized void method3589(byte b_1) {
+	public synchronized void method3589() {
 		this.anInt7938 = this.anInt7942;
 		this.anInt7939 = this.anInt7943;
 		this.anInt7940 = this.anInt7944;
@@ -72,11 +72,11 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.anInt7942 = i_1;
 		this.anInt7943 = i_2;
 		if (this.aBool7946) {
-			this.method12909(-1, i_1, i_2, 0, -1931505233);
+			this.method12909(-1, i_1, i_2, 0);
 		}
 	}
 
-	public boolean method3566(int i_1) {
+	public boolean method3566() {
 		return (this.anInt7940 & 0x2) != 0;
 	}
 
@@ -96,7 +96,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		return (this.anInt7940 & 0x4) != 0;
 	}
 
-	void method12906(Component component_1, int i_2) {
+	void method12906(Component component_1) {
 		this.method12907((short) 12335);
 		this.aComponent7935 = component_1;
 		this.aComponent7935.addMouseListener(this);
@@ -108,7 +108,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		return this.anInt7938;
 	}
 
-	public void method3584(int i_1) {
+	public void method3584() {
 		this.method12907((short) 14669);
 	}
 
@@ -144,11 +144,11 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	public synchronized void mousePressed(MouseEvent mouseevent_1) {
 		int i_2 = this.method12908(mouseevent_1, -1413980906);
 		if (i_2 == 1) {
-			this.method12909(0, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+			this.method12909(0, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount());
 		} else if (i_2 == 4) {
-			this.method12909(2, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+			this.method12909(2, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount());
 		} else if (i_2 == 2) {
-			this.method12909(1, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+			this.method12909(1, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount());
 		}
 		this.anInt7944 |= i_2;
 		if (mouseevent_1.isPopupTrigger()) {
@@ -156,8 +156,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		}
 	}
 
-	void method12909(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		Class282_Sub53_Sub2 class282_sub53_sub2_6 = Class521_Sub1_Sub3_Sub1.method16080(i_1, i_2, i_3, Class169.time(), i_4, 1660805972);
+	void method12909(int i_1, int i_2, int i_3, int i_4) {
+		Class282_Sub53_Sub2 class282_sub53_sub2_6 = Class521_Sub1_Sub3_Sub1.method16080(i_1, i_2, i_3, Class169.time(), i_4);
 		this.aClass482_7945.append(class282_sub53_sub2_6, 335888371);
 	}
 
@@ -187,7 +187,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 				HitbarDefinitions.CAMERA_ZOOM += 30;
 			}
 		}
-		this.method12909(6, i_2, i_3, i_4, -1931505233);
+		this.method12909(6, i_2, i_3, i_4);
 		mousewheelevent_1.consume();
 	}
 
@@ -229,7 +229,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		return 1002227073 * this.anInt7938 * -901678463;
 	}
 
-	public int method3570(int i_1) {
+	public int method3570() {
 		return this.anInt7939;
 	}
 
@@ -261,7 +261,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.method12907((short) 31873);
 	}
 
-	public static void method12916(byte b_0) {
+	public static void method12916() {
 		for (int i_1 = 0; i_1 < 100; i_1++) {
 			Class81.CHAT_LINES[i_1] = null;
 		}

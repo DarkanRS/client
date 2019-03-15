@@ -27,7 +27,7 @@ public class Class31 implements IndexLoader {
 			class44_3 = new IdentikitDefinition();
 			class44_3.aClass31_429 = this;
 			if (bytes_10 != null) {
-				class44_3.method909(new RsByteBuffer(bytes_10), -1148034067);
+				class44_3.method909(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_360;
 			synchronized (this.aClass229_360) {
@@ -37,21 +37,21 @@ public class Class31 implements IndexLoader {
 		}
 	}
 
-	public void method801(int i_1) {
+	public void method801() {
 		SoftCache softcache_2 = this.aClass229_360;
 		synchronized (this.aClass229_360) {
 			this.aClass229_360.method3859(-1013964419);
 		}
 	}
 
-	public void method802(int i_1, int i_2) {
+	public void method802() {
 		SoftCache softcache_3 = this.aClass229_360;
 		synchronized (this.aClass229_360) {
-			this.aClass229_360.method3858(i_1, (byte) -3);
+			this.aClass229_360.method3858(5, (byte) -3);
 		}
 	}
 
-	public void method803(byte b_1) {
+	public void method803() {
 		SoftCache softcache_2 = this.aClass229_360;
 		synchronized (this.aClass229_360) {
 			this.aClass229_360.method3863(903388454);
@@ -68,7 +68,7 @@ public class Class31 implements IndexLoader {
 		byte[] bytes_2 = new byte[24];
 		try {
 			Engine.aClass440_3269.method7347(0L);
-			Engine.aClass440_3269.method7351(bytes_2, -991225250);
+			Engine.aClass440_3269.method7351(bytes_2);
 			int i_3;
 			for (i_3 = 0; i_3 < 24 && bytes_2[i_3] == 0; i_3++) {
 				;
@@ -112,7 +112,7 @@ public class Class31 implements IndexLoader {
 		return class282_sub44_1;
 	}
 
-	static final void method813(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	static final void method813(int i_0, int i_1, int i_2, int i_3) {
 		int i_5 = 0;
 		int i_6 = i_2;
 		int i_7 = -i_2;

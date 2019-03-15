@@ -60,7 +60,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8398(int i_1) {
 		int i_2 = i_1 - this.anInt8977;
 
-		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(1886478674); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867(297413420)) {
+		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(1886478674); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867()) {
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -85,7 +85,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return i_1 & i_2 ^ i_2;
 	}
 
-	void method8592(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
+	void method8592(float f_1, float f_2, float f_3) {
 	}
 
 	int[] method14359(int i) {
@@ -99,7 +99,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				}
 				Class169 class169 = anInterface22_5834.method144(i, -1891491096);
 				int i_29_ = (class169.aBool2065 || ((HardwareRenderer) this).aBool8997 ? 64 : ((HardwareRenderer) this).anInt9005);
-				class282_sub27 = (new Class282_Sub27(i, i_29_, anInterface22_5834.method141(i, 0.7F, i_29_, i_29_, true, 1334254083), 1 != class169.anInt2074));
+				class282_sub27 = (new Class282_Sub27(i, i_29_, anInterface22_5834.method141(i, i_29_, i_29_, true, 1334254083), 1 != class169.anInt2074));
 				((HardwareRenderer) this).aClass229_9006.put(class282_sub27, (long) i | ~0x7fffffffffffffffL);
 			}
 		}
@@ -126,7 +126,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8598(Class152 class152_1) {
 	}
 
-	void method14363(boolean bool_1, boolean bool_2, boolean bool_3, Class151 class151_4) {
+	void method14363(boolean bool_1, boolean bool_2, Class151 class151_4) {
 		Class185 class185_5 = this.method14370(Thread.currentThread());
 		Class275_Sub1 class275_sub1_6 = class151_4.aClass464_1961.aClass275_Sub1_5554;
 
@@ -149,7 +149,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						float f_20 = this.aFloat9003 + f_15 * this.aFloat8976 / f_13;
 						float f_21 = this.aFloat9004 * f_16 / f_13 + this.aFloat8982;
 						float f_22 = this.aFloat9003 + f_18 * this.aFloat8976 / f_19;
-						this.method14371(bool_1, bool_2, bool_3, class275_sub1_sub1_8, (int) f_20, (int) f_21, f_14, (int) (f_22 < f_20 ? f_20 - f_22 : f_22 - f_20));
+						this.method14371(bool_1, bool_2, false, class275_sub1_sub1_8, (int) f_20, (int) f_21, f_14, (int) (f_22 < f_20 ? f_20 - f_22 : f_22 - f_20));
 					}
 				}
 			}
@@ -651,7 +651,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	void CA(int i_1, int i_2, int i_3, int i_4, int i_5) {
+	void CA(int i_1, int i_2, int i_3, int i_4) {
 		if (this.anIntArray8979 != null) {
 			if (i_3 < 0) {
 				i_3 = -i_3;
@@ -682,10 +682,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i_16;
 			int i_17;
 			int i_18;
-			if (i_5 != 0 && (i_5 != 1 || i_14 != 255)) {
+			if (1 != 0 && (1 != 1 || i_14 != 255)) {
 				int i_19;
 				int i_20;
-				if (i_5 == 1) {
+				if (1 == 1) {
 					i_4 = (i_14 * (i_4 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_4 & 0xff00) >> 8 & 0xff00) + (i_14 << 24);
 
 					for (i_15 = 256 - i_14; i_8 < i_2; i_13 -= i_11 + i_11) {
@@ -749,7 +749,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_13 = i_13 + i_11 + i_11;
 					}
 				} else {
-					if (i_5 != 2) {
+					if (1 != 2) {
 						throw new IllegalArgumentException();
 					}
 
@@ -1167,7 +1167,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return class185_1.aClass384_2346;
 	}
 
-	public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
+	public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
 			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
@@ -1208,7 +1208,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				}
 
 				i_16 = i_5 >>> 24;
-				if (i_6 == 0 || i_6 == 1 && i_16 == 255) {
+				if (1 == 0 || 1 == 1 && i_16 == 255) {
 					while (i_1 <= i_3) {
 						i_17 = i_2 >> 16;
 						i_18 = i_17 - i_9;
@@ -1222,7 +1222,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_2 += i_15;
 						++i_1;
 					}
-				} else if (i_6 == 1) {
+				} else if (1 == 1) {
 					i_5 = (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_16 << 24);
 
 					for (i_17 = 256 - i_16; i_1 <= i_3; i_1++) {
@@ -1241,7 +1241,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_2 += i_15;
 					}
 				} else {
-					if (i_6 != 2) {
+					if (1 != 2) {
 						throw new IllegalArgumentException();
 					}
 
@@ -1280,8 +1280,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 				}
 
 				i_16 = i_5 >>> 24;
-				if (i_6 != 0 && (i_6 != 1 || i_16 != 255)) {
-					if (i_6 == 1) {
+				if (1 != 0 && (1 != 1 || i_16 != 255)) {
+					if (1 == 1) {
 						i_5 = (i_16 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_16 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_16 << 24);
 
 						for (i_17 = 256 - i_16; i_2 <= i_4; i_2++) {
@@ -1298,7 +1298,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_1 += i_15;
 						}
 					} else {
-						if (i_6 != 2) {
+						if (1 != 2) {
 							throw new IllegalArgumentException();
 						}
 
@@ -1337,7 +1337,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
+	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
 		if (this.anIntArray8979 != null) {
 			PacketsDecoder packetsdecoder_13 = (PacketsDecoder) class455_7;
 			int[] ints_14 = packetsdecoder_13.anIntArray9077;
@@ -1383,7 +1383,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				i_3 += i_1;
 				i_20 = i_5 >>> 24;
 				i_21 = (int) Math.sqrt((double) ((i_19 >> 8) * (i_19 >> 8) + 65536));
-				if (i_6 == 0 || i_6 == 1 && i_20 == 255) {
+				if (1 == 0 || 1 == 1 && i_20 == 255) {
 					while (i_1 <= i_3) {
 						i_22 = i_2 >> 16;
 						i_23 = i_22 - i_9;
@@ -1399,7 +1399,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_12 += i_21;
 						i_12 %= i_18;
 					}
-				} else if (i_6 == 1) {
+				} else if (1 == 1) {
 					i_5 = (i_20 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_20 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_20 << 24);
 
 					for (i_22 = 256 - i_20; i_1 <= i_3; i_12 %= i_18) {
@@ -1420,7 +1420,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_12 += i_21;
 					}
 				} else {
-					if (i_6 != 2) {
+					if (1 != 2) {
 						throw new IllegalArgumentException();
 					}
 
@@ -1453,7 +1453,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				i_20 = (int) Math.sqrt((double) ((i_19 >> 8) * (i_19 >> 8) + 65536));
 				i_4 += i_2;
 				i_21 = i_5 >>> 24;
-				if (i_6 == 0 || i_6 == 1 && i_21 == 255) {
+				if (1 == 0 || 1 == 1 && i_21 == 255) {
 					while (i_2 <= i_4) {
 						i_22 = i_1 >> 16;
 						i_23 = i_2 - i_9;
@@ -1466,7 +1466,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_12 += i_20;
 						i_12 %= i_18;
 					}
-				} else if (i_6 == 1) {
+				} else if (1 == 1) {
 					i_5 = (i_21 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_21 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_21 << 24);
 
 					for (i_22 = 256 - i_21; i_2 <= i_4; i_12 %= i_18) {
@@ -1484,7 +1484,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_12 += i_20;
 					}
 				} else {
-					if (i_6 != 2) {
+					if (1 != 2) {
 						throw new IllegalArgumentException();
 					}
 
@@ -1819,9 +1819,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.method14374();
 	}
 
-	public void GA(float f_1, float f_2) {
-		this.aFloat8978 = f_2 - f_1;
-		this.aFloat8985 = f_2 + f_1 - 1.0F;
+	public void GA() {
+		this.aFloat8978 = (float) 1.0 - (float) 0.0;
+		this.aFloat8985 = (float) 1.0 + (float) 0.0 - 1.0F;
 
 		for (int i_3 = 0; i_3 < this.anInt9008; i_3++) {
 			Class185 class185_4 = this.aClass185Array8984[i_3];
@@ -1840,8 +1840,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return i_1 | i_2;
 	}
 
-	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new Class390_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_6, int i_7) {
+		return new Class390_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, 512);
 	}
 
 	public void method8634() {
@@ -2068,7 +2068,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8456(Class151 class151_1) {
-		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, false, class151_1);
+		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, class151_1);
 	}
 
 	public void method8611() {
@@ -2090,7 +2090,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 
 					int i_13 = this.method14377(i_9) ? 64 : this.anInt9005;
-					nativesprite_11 = this.createNativeSprite(ints_12, 0, i_13, i_13, i_13, 1598794306);
+					nativesprite_11 = this.createNativeSprite(ints_12, i_13, i_13, i_13, 1598794306);
 					this.aClass229_9013.put(nativesprite_11, (long) i_9);
 				}
 
@@ -2099,7 +2099,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			++i_8;
-			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, 1, false);
+			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, false);
 		}
 
 	}
@@ -2118,7 +2118,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 							}
 
 							int i_16 = this.method14377(i_9) ? 64 : this.anInt9005;
-							nativesprite_14 = this.createNativeSprite(ints_15, 0, i_16, i_16, i_16, -1270335849);
+							nativesprite_14 = this.createNativeSprite(ints_15, i_16, i_16, i_16, -1270335849);
 							this.aClass229_9013.put(nativesprite_14, (long) i_9);
 						}
 
@@ -2126,7 +2126,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						this.aClass160_8987 = nativesprite_14;
 					}
 
-					((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, 1, class169_13.anInt2074 != 2);
+					((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, class169_13.anInt2074 != 2);
 					return;
 				}
 			}
@@ -2436,7 +2436,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			this.aClass384_8995 = new Matrix44Arr();
 			this.aClass384_8996 = new Matrix44Arr();
 			this.method14369(1);
-			this.method14409(0);
+			this.method14409();
 			Class38.method854(true, true, -1425832759);
 			this.aBool9012 = true;
 			this.anInt8977 = (int) Class169.time();
@@ -2488,8 +2488,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8568(boolean bool_1) {
-		this.aBool8997 = bool_1;
+	public void method8568() {
+		this.aBool8997 = false;
 		this.aClass229_9006.method3859(-1268608854);
 	}
 
@@ -2602,7 +2602,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8525(int i_1, int i_2, int i_3, int i_4) {
+	public void method8525(int i_3, int i_4) {
 	}
 
 	public boolean method8528() {
@@ -2616,7 +2616,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.aFloatArray9010 = floats_4;
 
 		for (int i_5 = 0; i_5 < this.anInt9008; i_5++) {
-			this.aClass185Array8984[i_5].method3071(2077515708);
+			this.aClass185Array8984[i_5].method3071();
 		}
 
 		this.L();
@@ -2638,7 +2638,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8658(int i_1, int i_2, float f_3, int i_4, int i_5, float f_6, int i_7, int i_8, float f_9, int i_10, int i_11, int i_12, int i_13) {
+	public void method8658(int i_1, int i_2, int i_4, int i_5, int i_7, int i_8) {
 		boolean bool_14 = this.anIntArray8979 != null;
 		boolean bool_15 = this.aFloatArray9010 != null;
 		if (bool_14 || bool_15) {
@@ -2652,23 +2652,23 @@ public class HardwareRenderer extends GraphicalRenderer {
 			i_5 -= this.anInt9009;
 			i_8 -= this.anInt9009;
 			choppyitemfixclass_17.aBool1708 = i_1 < 0 || i_1 > choppyitemfixclass_17.anInt1684 || i_4 < 0 || i_4 > choppyitemfixclass_17.anInt1684 || i_7 < 0 || i_7 > choppyitemfixclass_17.anInt1684;
-			int i_18 = i_10 >>> 24;
-			if (i_13 == 0 || i_13 == 1 && i_18 == 255) {
+			int i_18 = -65536 >>> 24;
+			if (1 == 0 || 1 == 1 && i_18 == 255) {
 				choppyitemfixclass_17.anInt1674 = 0;
 				choppyitemfixclass_17.aBool1672 = false;
-				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, f_3, f_6, f_9, i_10, i_11, i_12);
-			} else if (i_13 == 1) {
+				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
+			} else if (1 == 1) {
 				choppyitemfixclass_17.anInt1674 = 255 - i_18;
 				choppyitemfixclass_17.aBool1672 = false;
-				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, f_3, f_6, f_9, i_10, i_11, i_12);
+				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
 			} else {
-				if (i_13 != 2) {
+				if (1 != 2) {
 					throw new IllegalArgumentException();
 				}
 
 				choppyitemfixclass_17.anInt1674 = 128;
 				choppyitemfixclass_17.aBool1672 = true;
-				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, f_3, f_6, f_9, i_10, i_11, i_12);
+				choppyitemfixclass_17.method2425(bool_14, bool_15, false, (float) i_2, (float) i_5, (float) i_8, (float) i_1, (float) i_4, (float) i_7, (float) 100.0, (float) 100.0, (float) 100.0, -65536, -65536, -65536);
 			}
 
 			choppyitemfixclass_17.aBool1675 = true;
@@ -2739,14 +2739,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8459(int i_1) {
-		Class528_Sub2.anInt8644 = i_1;
-		Class528_Sub2.anInt8562 = i_1;
+	public void method8459() {
+		Class528_Sub2.anInt8644 = 10000;
+		Class528_Sub2.anInt8562 = 10000;
 		if (this.anInt9008 > 1) {
 			throw new IllegalStateException();
 		} else {
 			this.method14369(this.anInt9008);
-			this.method14409(0);
+			this.method14409();
 		}
 	}
 
@@ -2803,7 +2803,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void DA(int i_1, Class455 class455_2, int i_3, int i_4) {
+	public void DA(Class455 class455_2, int i_3, int i_4) {
 		if (this.anIntArray8979 != null) {
 			PacketsDecoder packetsdecoder_5 = (PacketsDecoder) class455_2;
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
@@ -2841,7 +2841,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_12 += i_10;
 
 					for (int i_14 = -i_13; i_14 < 0; i_14++) {
-						this.anIntArray8979[i_12++] = i_1;
+						this.anIntArray8979[i_12++] = -16777216;
 					}
 
 					i_10 += this.anInt8980;
@@ -2858,7 +2858,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8487(int i_1) {
 		int i_2 = i_1 - 1426154545 * this.anInt8977;
 
-		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(863387437); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867(297413420)) {
+		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(863387437); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867()) {
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -3245,8 +3245,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return null;
 	}
 
-	void method8555(int i_1, int i_2) throws Exception_Sub3 {
-		this.aClass158_Sub2_5841.method14353(i_1, i_2);
+	void method8555() throws Exception_Sub3 {
+		this.aClass158_Sub2_5841.method14353(0, 0);
 		if (this.anInterface22_5834 != null) {
 			this.anInterface22_5834.method161(-1661310222);
 		}
@@ -3261,10 +3261,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return false;
 	}
 
-	public void method8475(int i_1, Class90 class90_2) {
+	public void method8475(Class90 class90_2) {
 		for (int i_3 = 0; i_3 < this.aClass185Array8984.length; i_3++) {
 			this.aClass185Array8984[i_3].anInt2336 = this.aClass185Array8984[i_3].anInt2307;
-			this.aClass185Array8984[i_3].anInt2306 = i_1;
+			this.aClass185Array8984[i_3].anInt2306 = -1;
 			this.aClass185Array8984[i_3].anInt2307 = class90_2.color;
 			this.aClass185Array8984[i_3].anInt2313 = class90_2.scale;
 			this.aClass185Array8984[i_3].aBool2309 = true;
@@ -3291,7 +3291,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			throw new IllegalStateException();
 		} else {
 			this.method14369(this.anInt9008);
-			this.method14409(0);
+			this.method14409();
 		}
 	}
 
@@ -3343,7 +3343,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			throw new IllegalStateException();
 		} else {
 			this.method14369(this.anInt9008);
-			this.method14409(0);
+			this.method14409();
 		}
 	}
 
@@ -6088,7 +6088,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 		try {
 			this.method8524(canvas_1, i_3, i_4, (byte) -11);
-			this.method8412(canvas_1, (byte) 8);
+			this.method8412(canvas_1);
 		} catch (Throwable throwable_6) {
 			throwable_6.printStackTrace();
 			this.method8396(1612503193);
@@ -6460,7 +6460,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8581(Class151 class151_1) {
-		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, false, class151_1);
+		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, class151_1);
 	}
 
 	public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
@@ -6478,7 +6478,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8580(Class151 class151_1) {
-		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, false, class151_1);
+		this.method14363(this.anIntArray8979 != null, this.aFloatArray9010 != null, class151_1);
 	}
 
 	public Matrix44Var method8626() {
@@ -6907,14 +6907,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
+	public void method8435(int i_1, int i_2, int i_3, int i_4, int i_5, int i_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
 			i_3 -= i_1;
 			i_4 -= i_2;
 			int i_10;
 			if (i_4 == 0) {
 				if (i_3 >= 0) {
-					this.method14366(i_1, i_2, i_3 + 1, i_5, i_6, i_7, i_8, i_9);
+					this.method14366(i_1, i_2, i_3 + 1, i_5, 1, i_7, i_8, i_9);
 				} else {
 					i_10 = i_8 + i_7;
 					i_9 %= i_10;
@@ -6924,11 +6924,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_9 += i_10;
 					}
 
-					this.method14366(i_3 + i_1, i_2, -i_3 + 1, i_5, i_6, i_7, i_8, i_9);
+					this.method14366(i_3 + i_1, i_2, -i_3 + 1, i_5, 1, i_7, i_8, i_9);
 				}
 			} else if (i_3 == 0) {
 				if (i_4 >= 0) {
-					this.method14399(i_1, i_2, i_4 + 1, i_5, i_6, i_7, i_8, i_9);
+					this.method14399(i_1, i_2, i_4 + 1, i_5, 1, i_7, i_8, i_9);
 				} else {
 					i_10 = i_8 + i_7;
 					i_9 %= i_10;
@@ -6938,7 +6938,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						i_9 += i_10;
 					}
 
-					this.method14399(i_1, i_2 + i_4, -i_4 + 1, i_5, i_6, i_7, i_8, i_9);
+					this.method14399(i_1, i_2 + i_4, -i_4 + 1, i_5, 1, i_7, i_8, i_9);
 				}
 			} else {
 				i_9 <<= 8;
@@ -6977,7 +6977,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_3 += i_1;
 					i_12 = i_5 >>> 24;
 					i_13 = (int) Math.sqrt((double) ((i_11 >> 8) * (i_11 >> 8) + 65536));
-					if (i_6 == 0 || i_6 == 1 && i_12 == 255) {
+					if (1 == 0 || 1 == 1 && i_12 == 255) {
 						while (i_1 <= i_3) {
 							i_14 = i_2 >> 16;
 							if (i_1 >= this.anInt8983 && i_1 < this.anInt9002 && i_14 >= this.anInt9009 && i_14 < this.anInt8986 && i_9 < i_7) {
@@ -6989,7 +6989,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_9 += i_13;
 							i_9 %= i_10;
 						}
-					} else if (i_6 == 1) {
+					} else if (1 == 1) {
 						i_5 = (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_12 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_12 << 24);
 
 						for (i_14 = 256 - i_12; i_1 <= i_3; i_9 %= i_10) {
@@ -7006,7 +7006,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 							i_9 += i_13;
 						}
 					} else {
-						if (i_6 != 2) {
+						if (1 != 2) {
 							throw new IllegalArgumentException();
 						}
 
@@ -7035,8 +7035,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 					i_4 += i_2;
 					i_12 = i_5 >>> 24;
 					i_13 = (int) Math.sqrt((double) ((i_11 >> 8) * (i_11 >> 8) + 65536));
-					if (i_6 != 0 && (i_6 != 1 || i_12 != 255)) {
-						if (i_6 == 1) {
+					if (1 != 0 && (1 != 1 || i_12 != 255)) {
+						if (1 == 1) {
 							i_5 = (i_12 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_12 * (i_5 & 0xff00) >> 8 & 0xff00) + (i_12 << 24);
 
 							for (i_14 = 256 - i_12; i_2 <= i_4; i_9 %= i_10) {
@@ -7053,7 +7053,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 								i_9 += i_13;
 							}
 						} else {
-							if (i_6 != 2) {
+							if (1 != 2) {
 								throw new IllegalArgumentException();
 							}
 
@@ -7122,7 +7122,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5, float f_6) {
+	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		return null;
 	}
 
@@ -7251,7 +7251,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8488(int i_1) {
 		int i_2 = i_1 - 1426154545 * this.anInt8977;
 
-		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(514216110); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867(297413420)) {
+		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(514216110); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867()) {
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -7340,8 +7340,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		ints_1[3] = this.anInt8986;
 	}
 
-	void method14409(int i_1) {
-		this.aClass185Array8984[i_1].method3070(Thread.currentThread(), 1036854416);
+	void method14409() {
+		this.aClass185Array8984[0].method3070(Thread.currentThread());
 	}
 
 	public int[] kf(int i_1, int i_2, int i_3, int i_4) {

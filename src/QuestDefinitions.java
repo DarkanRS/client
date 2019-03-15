@@ -46,7 +46,7 @@ public class QuestDefinitions {
 
 	IterableNodeMap aClass465_2972;
 
-	public boolean method4093(Interface42 interface42_1, int[] ints_2, int i_3) {
+	public boolean method4093(Interface42 interface42_1, int[] ints_2) {
 		if (this.aClass242_2976.method4154(interface42_1, 1765999661) < this.anInt2973) {
 			return false;
 		} else {
@@ -60,7 +60,7 @@ public class QuestDefinitions {
 			}
 			if (this.anIntArray2968 != null) {
 				for (i_4 = 0; i_4 < this.anIntArray2968.length; i_4++) {
-					if (!this.aClass242_2976.method4156(this.anIntArray2968[i_4], -1396181317).method4099(interface42_1, -2060810176)) {
+					if (!this.aClass242_2976.method4156(this.anIntArray2968[i_4]).method4099(interface42_1, -2060810176)) {
 						return false;
 					}
 				}
@@ -86,7 +86,7 @@ public class QuestDefinitions {
 		}
 	}
 
-	void method4094(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method4094(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.name = rsbytebuffer_1.readGJString(-1054894786);
 		} else if (i_2 == 2) {
@@ -190,13 +190,13 @@ public class QuestDefinitions {
 		}
 	}
 
-	void method4095(byte b_1) {
+	void method4095() {
 		if (this.altName == null) {
 			this.altName = this.name;
 		}
 	}
 
-	public boolean method4098(Interface42 interface42_1, byte b_2) {
+	public boolean method4098(Interface42 interface42_1) {
 		int i_3;
 		if (this.varValues != null) {
 			for (i_3 = 0; i_3 < this.varValues.length; i_3++) {
@@ -234,15 +234,15 @@ public class QuestDefinitions {
 		return false;
 	}
 
-	public boolean method4101(Interface42 interface42_1, byte b_2) {
+	public boolean method4101(Interface42 interface42_1) {
 		return this.aClass242_2976.method4154(interface42_1, 2095145584) >= this.anInt2973;
 	}
 
-	public boolean method4103(Interface42 interface42_1, int i_2, int i_3) {
-		return this.anIntArray2968 != null && i_2 >= 0 && i_2 < this.anIntArray2968.length ? this.aClass242_2976.method4156(this.anIntArray2968[i_2], -1396181317).method4099(interface42_1, 1001789983) : false;
+	public boolean method4103(Interface42 interface42_1, int i_2) {
+		return this.anIntArray2968 != null && i_2 >= 0 && i_2 < this.anIntArray2968.length ? this.aClass242_2976.method4156(this.anIntArray2968[i_2]).method4099(interface42_1, 1001789983) : false;
 	}
 
-	public boolean method4104(Interface42 interface42_1, int i_2, short s_3) {
+	public boolean method4104(Interface42 interface42_1, int i_2) {
 		if (this.anIntArray2961 != null && i_2 >= 0 && i_2 < this.anIntArray2961.length) {
 			int i_4 = interface42_1.method240(this.anIntArray2961[i_2], 1497520500);
 			return i_4 >= this.anIntArray2969[i_2] && i_4 <= this.anIntArray2970[i_2];
@@ -251,7 +251,7 @@ public class QuestDefinitions {
 		}
 	}
 
-	public boolean method4105(Interface42 interface42_1, int i_2, int i_3) {
+	public boolean method4105(Interface42 interface42_1, int i_2) {
 		if (this.anIntArray2964 != null && i_2 >= 0 && i_2 < this.anIntArray2964.length) {
 			int i_4 = interface42_1.method241(this.anIntArray2964[i_2], 1488898797);
 			return i_4 >= this.anIntArray2967[i_2] && i_4 <= this.anIntArray2974[i_2];
@@ -260,7 +260,7 @@ public class QuestDefinitions {
 		}
 	}
 
-	public String method4110(int i_1, String string_2, byte b_3) {
+	public String method4110(int i_1, String string_2) {
 		if (this.aClass465_2972 == null) {
 			return string_2;
 		} else {
@@ -269,21 +269,21 @@ public class QuestDefinitions {
 		}
 	}
 
-	public boolean method4111(int[] ints_1, int i_2, int i_3) {
+	public boolean method4111(int[] ints_1, int i_2) {
 		return this.anIntArrayArray2966 != null && i_2 >= 0 && i_2 < this.anIntArrayArray2966.length ? ints_1[this.anIntArrayArray2966[i_2][0]] >= this.anIntArrayArray2966[i_2][1] : false;
 	}
 
-	void method4119(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method4119(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method4094(rsbytebuffer_1, i_3, -379084068);
+			this.method4094(rsbytebuffer_1, i_3);
 		}
 	}
 
-	public int method4135(int i_1, int i_2, byte b_3) {
+	public int method4135(int i_1, int i_2) {
 		if (this.aClass465_2972 == null) {
 			return i_2;
 		} else {
@@ -338,8 +338,8 @@ public class QuestDefinitions {
 		rsbitsbuffer_0.writeInt(IndexLoaders.BILLBOARD_INDEX.getCrc());
 		rsbitsbuffer_0.writeInt(IndexLoaders.NATIVE_LIBRARY_INDEX.getCrc());
 		rsbitsbuffer_0.writeInt(IndexLoaders.SHADER_INDEX.getCrc());
-		rsbitsbuffer_0.writeInt(Class378.method6435(-1443123937));
-		rsbitsbuffer_0.writeInt(Class468_Sub7.method12672((byte) 0));
+		rsbitsbuffer_0.writeInt(Class378.method6435());
+		rsbitsbuffer_0.writeInt(Class468_Sub7.method12672());
 		rsbitsbuffer_0.writeInt(IndexLoaders.CUTSCENE_INDEX.getCrc());
 		rsbitsbuffer_0.writeInt(IndexLoaders.aClass317_2663.getCrc());
 	}

@@ -19,9 +19,9 @@ public class Class282_Sub25 extends Node {
 			string_14 = string_14 + Class15.method547(ints_13, 1953018919);
 		}
 
-		fontrenderer_8.method386(string_14, i_2 + 3, i_6, i_10, 0, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aClass160Array1248, Class20.anIntArray177, -1905511896);
+		fontrenderer_8.method386(string_14, i_2 + 3, i_6, i_10, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aClass160Array1248, Class20.anIntArray177, -1905511896);
 		if (class282_sub50_sub7_7.aBool9577) {
-			Exception_Sub1.aClass160_10075.method2752(5 + i_2 + fontmetrics_9.getWidthNoSprites(string_14, -1967833701), i_6 - fontmetrics_9.anInt4978);
+			Exception_Sub1.aClass160_10075.method2752(5 + i_2 + fontmetrics_9.getWidthNoSprites(string_14), i_6 - fontmetrics_9.anInt4978);
 		}
 
 	}
@@ -36,7 +36,7 @@ public class Class282_Sub25 extends Node {
 
 	}
 
-	public static boolean method12402(char var_0, byte b_1) {
+	public static boolean method12402(char var_0) {
 		return var_0 >= 32 && var_0 <= 126 ? true : (var_0 >= 160 && var_0 <= 255 ? true : var_0 == 8364 || var_0 == 338 || var_0 == 8212 || var_0 == 339 || var_0 == 376);
 	}
 

@@ -8,7 +8,7 @@ public class Class389 {
 		icomponentdefinitions_0.aBool1356 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 17);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class96_Sub17.method14656(icomponentdefinitions_0.idHash, -768470784);
+			Class96_Sub17.method14656(icomponentdefinitions_0.idHash);
 		}
 	}
 }

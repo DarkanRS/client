@@ -16,7 +16,7 @@ public class Class156 {
 
 	}
 
-	static synchronized void method2643(byte b_0) {
+	static synchronized void method2643() {
 		++anInt1972;
 	}
 
@@ -28,8 +28,8 @@ public class Class156 {
 
 	}
 
-	public static synchronized void method2645(boolean bool_0, int i_1) {
-		aBool1970 = bool_0;
+	public static synchronized void method2645() {
+		aBool1970 = true;
 	}
 
 	static synchronized void method2652(byte b_0) {

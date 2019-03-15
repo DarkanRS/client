@@ -104,23 +104,23 @@ public class Class446 {
 		node_0.next.prev = node_0;
 	}
 
-	public int method7432(byte b_1) {
+	public int method7432() {
 		return this.anInt5408;
 	}
 
 	public void initializeIndexLoader(Interface41 interface41_1, byte b_2) {
-		if (interface41_1.method232((byte) -115) != this.aClass445_5406) {
+		if (interface41_1.method232() != this.aClass445_5406) {
 			throw new IllegalArgumentException();
 		} else {
 			this.anInterface41_5414 = interface41_1;
 		}
 	}
 
-	public static Class446[] method7436(byte b_0) {
+	public static Class446[] method7436() {
 		return new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, TEXTURE_INDEX_LOADER, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 };
 	}
 
-	public void method7439(int i_1, short s_2) {
+	public void method7439(int i_1) {
 		this.anInt5408 = i_1;
 	}
 
@@ -175,17 +175,17 @@ public class Class446 {
 				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + Class174.aClass91_2141.anInt957, i_8 + i_12 - i_15, i_7 - Class174.aClass91_2141.anInt957 * 2, i_15);
 				Class174.aClass91_2138.method1527();
 				fontrenderer_3.method378(string_0, i_11 + i_10, i_12 + i_10, i_7 - i_10 * 2, i_8 - i_10 * 2, Class434.anInt5329 | ~0xffffff, -1, 1, 1, 0, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 36);
-				Class292.method5201(i_11, i_12, i_7, i_8, (byte) 12);
+				Class292.method5201(i_11, i_12, i_7, i_8);
 			} else {
 				i_7 = fontmetrics_4.method6951(string_0, 250, (Sprite[]) null, (byte) 107);
-				i_8 = fontmetrics_4.method6949(string_0, 250, (Sprite[]) null, 437013959) * 13;
+				i_8 = fontmetrics_4.method6949(string_0, 250, (Sprite[]) null) * 13;
 				byte b_9 = 4;
 				i_10 = b_9 + 6;
 				i_11 = b_9 + 6;
 				graphicalrenderer_2.B(i_10 - b_9, i_11 - b_9, b_9 + i_7 + b_9, i_8 + b_9 + b_9, -16777216, 0);
 				graphicalrenderer_2.method8430(i_10 - b_9, i_11 - b_9, b_9 + i_7 + b_9, b_9 + i_8 + b_9, -1, 0);
 				fontrenderer_3.method378(string_0, i_10, i_11, i_7, i_8, -1, -1, 1, 1, 0, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 14);
-				Class292.method5201(i_10 - b_9, i_11 - b_9, b_9 + i_7 + b_9, b_9 + i_8 + b_9, (byte) 12);
+				Class292.method5201(i_10 - b_9, i_11 - b_9, b_9 + i_7 + b_9, b_9 + i_8 + b_9);
 			}
 			if (bool_1) {
 				try {

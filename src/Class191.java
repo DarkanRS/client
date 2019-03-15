@@ -14,7 +14,7 @@ public class Class191 implements Runnable {
 	boolean aBool2386;
 
 	public void run() {
-		Container container_1 = Class371.getActiveContainer((byte) 1);
+		Container container_1 = Class371.getActiveContainer();
 		Frame frame_2 = null;
 		if (Engine.engineFrame != null) {
 			frame_2 = Engine.engineFrame;
@@ -43,13 +43,13 @@ public class Class191 implements Runnable {
 		}
 	}
 
-	public Class191(String string_1, boolean bool_2) {
+	public Class191(String string_1) {
 		this.aString2384 = string_1;
-		this.aBool2386 = bool_2;
+		this.aBool2386 = true;
 		(new Thread(this)).start();
 	}
 
-	public boolean method3154(byte b_1) {
+	public boolean method3154() {
 		return this.aBool2387;
 	}
 
@@ -57,11 +57,11 @@ public class Class191 implements Runnable {
 		return this.aBool2386;
 	}
 
-	public File method3161(int i_1) {
+	public File method3161() {
 		return this.aFile2385;
 	}
 
-	public static void method3166(int i_0) {
+	public static void method3166() {
 		ParticleProducerDefinition.aClass229_533.method3859(1570831832);
 	}
 

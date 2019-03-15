@@ -54,7 +54,7 @@ public class Class30 implements Runnable {
 		this.aBool356 = true;
 	}
 
-	public static void method795(byte b_0) {
+	public static void method795() {
 		Class235.aClass465_2904 = new IterableNodeMap(8);
 		Class235.anInt2898 = 0;
 		Iterator iterator_1 = Class235.aList2896.iterator();
@@ -64,7 +64,7 @@ public class Class30 implements Runnable {
 		}
 	}
 
-	public static void method796(int[] ints_0, Object[] arr_1, int i_2) {
+	public static void method796(int[] ints_0, Object[] arr_1) {
 		Class51.method1074(ints_0, arr_1, 0, ints_0.length - 1, -990491051);
 	}
 
@@ -83,7 +83,7 @@ public class Class30 implements Runnable {
 			Class109.redrawComponent(icomponentdefinitions_0, (byte) 39);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class149_Sub1.method14582(icomponentdefinitions_0.idHash, -370064085);
+			Class149_Sub1.method14582(icomponentdefinitions_0.idHash);
 		}
 	}
 }

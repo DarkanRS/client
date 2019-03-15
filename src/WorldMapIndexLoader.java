@@ -6,19 +6,19 @@ public class WorldMapIndexLoader {
 	Index aClass317_2705;
 	Index aClass317_2703;
 
-	public void method3695(int i_1, int i_2) {
+	public void method3695() {
 		SoftCache softcache_3 = this.aClass229_2707;
 		synchronized (this.aClass229_2707) {
-			this.aClass229_2707.method3858(i_1, (byte) 71);
+			this.aClass229_2707.method3858(5, (byte) 71);
 		}
 
 		softcache_3 = this.aClass229_2708;
 		synchronized (this.aClass229_2708) {
-			this.aClass229_2708.method3858(i_1, (byte) -60);
+			this.aClass229_2708.method3858(5, (byte) -60);
 		}
 	}
 
-	public void method3696(byte b_1) {
+	public void method3696() {
 		SoftCache softcache_2 = this.aClass229_2707;
 		synchronized (this.aClass229_2707) {
 			this.aClass229_2707.method3863(2127164020);
@@ -35,7 +35,7 @@ public class WorldMapIndexLoader {
 		this.aClass229_2708 = new SoftCache(i_2);
 	}
 
-	public void method3699(byte b_1) {
+	public void method3699() {
 		SoftCache softcache_2 = this.aClass229_2707;
 		synchronized (this.aClass229_2707) {
 			this.aClass229_2707.method3859(-1557275586);
@@ -67,10 +67,10 @@ public class WorldMapIndexLoader {
 			worldmapareadefs_3.anInt2753 = i_1;
 			worldmapareadefs_3.aClass218_2716 = this;
 			if (bytes_10 != null) {
-				worldmapareadefs_3.method3716(new RsByteBuffer(bytes_10), -141546823);
+				worldmapareadefs_3.method3716(new RsByteBuffer(bytes_10));
 			}
 
-			worldmapareadefs_3.method3718(-1915876048);
+			worldmapareadefs_3.method3718();
 			SoftCache softcache_9 = this.aClass229_2707;
 			synchronized (this.aClass229_2707) {
 				this.aClass229_2707.put(worldmapareadefs_3, (long) i_1);
@@ -85,19 +85,19 @@ public class WorldMapIndexLoader {
 		this.aClass317_2705.filesCount(SharedConfigsType.WORLD_MAP_DEFS.id);
 	}
 
-	public static void method3709(int i_0, short s_1) {
+	public static void method3709() {
 		SoftCache softcache_2 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			PlayerAppearance.aClass229_2920.method3858(i_0, (byte) 86);
+			PlayerAppearance.aClass229_2920.method3858(5, (byte) 86);
 		}
 
 		softcache_2 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {
-			PlayerAppearance.aClass229_2930.method3858(i_0, (byte) 15);
+			PlayerAppearance.aClass229_2930.method3858(5, (byte) 15);
 		}
 	}
 
-	static void method3710(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, int i_2) {
+	static void method3710(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
 		if (icomponentdefinitions_1 != null) {
 			int i_4;
 			if (icomponentdefinitions_1.anInt1288 != -1) {

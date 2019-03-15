@@ -1,6 +1,6 @@
 public class Class468_Sub16 extends Preference {
 
-	public void method12749(int i_1) {
+	public void method12749() {
 		if (this.anInt5578 < Class104.aClass104_1061.id || this.anInt5578 > Class104.aClass104_1062.id) {
 			this.anInt5578 = this.method7781(1820963129);
 		}
@@ -19,11 +19,11 @@ public class Class468_Sub16 extends Preference {
 		return 1;
 	}
 
-	public int method12750(byte b_1) {
+	public int method12750() {
 		return this.anInt5578;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.anInt5578 = i_1;
 	}
 

@@ -2,11 +2,11 @@ public class Class298 implements Interface41 {
 
 	Index index;
 
-	public Class445 method232(byte b_1) {
+	public Class445 method232() {
 		return Class445.aClass445_5381;
 	}
 
-	public int getCompletion(int i_1) {
+	public int getCompletion() {
 		return this.index.isValid() ? 100 : this.index.getCompletion();
 	}
 

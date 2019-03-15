@@ -6,7 +6,7 @@ public class Class96_Sub15 extends Class96 {
 		Class86.aClass92Array820[1690922955 * this.anInt9374 * -1871987229].method1558((byte) -79);
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class86.aClass92Array820[this.anInt9374].method1558((byte) -21);
 	}
 
@@ -15,7 +15,7 @@ public class Class96_Sub15 extends Class96 {
 		this.anInt9374 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	public static int method14645(int i_0, int i_1, int i_2) {
+	public static int method14645(int i_0, int i_1) {
 		int i_3;
 		if (i_1 > i_0) {
 			i_3 = i_0;

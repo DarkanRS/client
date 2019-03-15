@@ -203,10 +203,10 @@ public class ReferenceTable {
 		}
 	}
 
-	static void method5768(int i_0, byte b_1) {
+	static void method5768() {
 		SoftCache softcache_2 = Class13.aClass229_127;
 		synchronized (Class13.aClass229_127) {
-			Class13.aClass229_127.method3858(i_0, (byte) -14);
+			Class13.aClass229_127.method3858(5, (byte) -14);
 		}
 	}
 }

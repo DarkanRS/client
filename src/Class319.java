@@ -61,9 +61,9 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	void method5702(int i_1, int i_2, int i_3, float[] floats_4) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2, 1942118537)) {
+		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3, 1942118537)) {
+		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_5 = this.aClass150_3708.anInt1959;
@@ -133,9 +133,9 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	void method5707(int i_1, int i_2, int i_3, byte[] bytes_4) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2, 1942118537)) {
+		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3, 1942118537)) {
+		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_5 = this.aClass150_3708.anInt1959;
@@ -254,9 +254,9 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	void method5714(int i_1, int i_2, int i_3, int[] ints_4) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2, 1942118537)) {
+		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3, 1942118537)) {
+		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else if (this.aClass150_3708 != Class150.aClass150_1949) {
 			throw new IllegalArgumentException("");

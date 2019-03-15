@@ -46,7 +46,7 @@ public class Class150 {
 		Class456_Sub3 class456_sub3_2 = animable_0.aClass456_Sub3_10337;
 		if (class456_sub3_2.hasDefs() && class456_sub3_2.method7627(1, -1365163818) && class456_sub3_2.method7580(952228354)) {
 			if (class456_sub3_2.aBool7891) {
-				class456_sub3_2.method7570(animable_0.getRenderAnimDefs((byte) -17).method3809(386342083), false, true, -321228583);
+				class456_sub3_2.method7570(animable_0.getRenderAnimDefs().method3809(386342083), -321228583);
 				class456_sub3_2.aBool7891 = class456_sub3_2.hasDefs();
 			}
 			class456_sub3_2.method7582((byte) -126);
@@ -113,14 +113,14 @@ public class Class150 {
 	public static void method2582(int i_0, int[] ints_1, int i_2) {
 		if (i_0 != -1 && Class456_Sub3.isInterfaceLoaded(i_0, ints_1, -1943227865)) {
 			IComponentDefinitions[] arr_3 = Class468_Sub8.INTERFACES[i_0].components;
-			Connection.runIComponentScripts(arr_3, 2088119296);
+			Connection.runIComponentScripts(arr_3);
 		}
 	}
 
-	public static void method2583(Class397 class397_0, int i_1, int i_2, Class520 class520_3, Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4, int i_5) {
+	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4) {
 		CS2Executor cs2executor_6 = Class125.getNextScriptExecutor(1132906159);
 		cs2executor_6.aClass521_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1_4;
-		Class107.method1834(class397_0, i_1, i_2, cs2executor_6, (byte) 35);
+		Class107.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 35);
 		cs2executor_6.aClass521_Sub1_Sub2_Sub1_7014 = null;
 	}
 }

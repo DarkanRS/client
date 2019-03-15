@@ -38,21 +38,21 @@ public class Class236 {
 		icomponentdefinitions_0.aByte1333 = (byte) i_4;
 		icomponentdefinitions_0.aByte1355 = (byte) i_5;
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) -75);
-		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0, (byte) 1);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
 		if (icomponentdefinitions_0.type == 0) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1665129520);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class396.method6774(icomponentdefinitions_0.idHash, (byte) -43);
+			Class396.method6774(icomponentdefinitions_0.idHash);
 		}
 	}
 
 	static void method3985(Animable animable_0, int i_1, byte b_2) {
 		if (animable_0.currentAnimations != null) {
 			Class249 class249_3 = (Class249) Class386.method6672(Class8_Sub3.method14339(), i_1, -1950936431);
-			int i_4 = animable_0.currentAnimations[class249_3.method4268(306106666)];
+			int i_4 = animable_0.currentAnimations[class249_3.method4268()];
 			if (i_4 != animable_0.currentAnimation.method7597(-886146530)) {
-				animable_0.currentAnimation.method7615(i_4, animable_0.currentAnimation.getSpeed(), 405438357);
+				animable_0.currentAnimation.method7615(i_4, animable_0.currentAnimation.getSpeed());
 				animable_0.anInt10367 = animable_0.anInt10355;
 			}
 		}

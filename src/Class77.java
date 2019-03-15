@@ -49,7 +49,7 @@ public class Class77 {
 		}
 	}
 
-	static void method1365(int i_0) {
+	static void method1365() {
 		if (Class540.anIntArray7136 == null) {
 			Class540.anIntArray7136 = new int[65536];
 			EnumIndexLoader.anIntArray5379 = new int[65536];
@@ -123,7 +123,7 @@ public class Class77 {
 		return Class448.anInt5427 < Class448.aClass217_Sub1Array5426.length ? Class448.aClass217_Sub1Array5426[++Class448.anInt5427 - 1] : null;
 	}
 
-	public static void method1369(AnimationIndexLoader animationindexloader_0, int i_1) {
+	public static void method1369(AnimationIndexLoader animationindexloader_0) {
 		NamedFileReference.aClass523_411 = animationindexloader_0;
 	}
 }

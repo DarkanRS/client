@@ -6,13 +6,13 @@ public interface SceneObject {
 
 	int getId(int var1);
 
-	void method85(byte var1);
+	void method85();
 
 	boolean method86(int var1);
 
-	void method87(GraphicalRenderer var1, int var2);
+	void method87(GraphicalRenderer var1);
 
-	void method88(GraphicalRenderer var1, int var2);
+	void method88(GraphicalRenderer var1);
 
 	int method76();
 

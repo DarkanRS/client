@@ -206,7 +206,7 @@ public class Class255 {
 
 	static int method4397(int i_0, int i_1) {
 		int i_2;
-		for (i_2 = (int) Math.pow((double) i_0, 1.0D / (double) i_1) + 1; Class277.method4906(i_2, i_1, (byte) -59) > i_0; --i_2) {
+		for (i_2 = (int) Math.pow((double) i_0, 1.0D / (double) i_1) + 1; Class277.method4906(i_2, i_1) > i_0; --i_2) {
 			;
 		}
 

@@ -11,7 +11,7 @@ public class Class470 {
 
 	GraphicsDevice aGraphicsDevice5586;
 
-	int[] method7807(byte b_1) {
+	int[] method7807() {
 		DisplayMode[] arr_2 = this.aGraphicsDevice5586.getDisplayModes();
 		int[] ints_3 = new int[arr_2.length << 2];
 		for (int i_4 = 0; i_4 < arr_2.length; i_4++) {
@@ -23,7 +23,7 @@ public class Class470 {
 		return ints_3;
 	}
 
-	void method7808(Frame frame_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	void method7808(Frame frame_1, int i_2, int i_3, int i_4, int i_5) {
 		this.aDisplayMode5587 = this.aGraphicsDevice5586.getDisplayMode();
 		if (this.aDisplayMode5587 == null) {
 			throw new NullPointerException();
@@ -105,7 +105,7 @@ public class Class470 {
 		}
 	}
 
-	void method7820(byte b_1) {
+	void method7820() {
 		if (this.aDisplayMode5587 != null) {
 			DisplayMode[] arr_2 = this.aGraphicsDevice5586.getDisplayModes();
 			boolean bool_3 = false;
@@ -132,7 +132,7 @@ public class Class470 {
 		this.method7809((Frame) null, -987965964);
 	}
 
-	static int method7823(int i_0, int i_1) {
+	static int method7823(int i_0) {
 		byte b_2;
 		if (i_0 > 12097) {
 			Defaults6Loader.method11248(101206847);
@@ -144,12 +144,12 @@ public class Class470 {
 			Class119.method2077(1657485946);
 			b_2 = 2;
 		} else {
-			Class282_Sub20_Sub25.method15393(true, 1578234856);
+			Class282_Sub20_Sub25.method15393(1578234856);
 			b_2 = 1;
 		}
 		if (Class393.preferences.currentToolkit.getValue(-1022441189) != 2) {
 			Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 2, -676897118);
-			ParticleProducer.method11500(2, false, (byte) 24);
+			ParticleProducer.method11500(2, false);
 		} else {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, 861454749);
 		}

@@ -14,7 +14,7 @@ public class Class468_Sub18 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public boolean method12774(byte b_1) {
+	public boolean method12774() {
 		return true;
 	}
 
@@ -23,20 +23,20 @@ public class Class468_Sub18 extends Preference {
 		return 2;
 	}
 
-	void method7783(int i_1, int i_2) {
+	void method7783(int i_1) {
 		this.aBool7914 = false;
 		this.anInt5578 = i_1;
 	}
 
 	public int method7785(int i_1, int i_2) {
-		return i_1 == 3 && !Class362.getNativeLibraryLoader(616047582).method218("jagdx", -369170770) ? 3 : 2;
+		return i_1 == 3 && !Class362.getNativeLibraryLoader().method218() ? 3 : 2;
 	}
 
 	public int getValue(int i_1) {
 		return this.anInt5578;
 	}
 
-	boolean method12777(int i_1) {
+	boolean method12777() {
 		return this.aBool7913;
 	}
 
@@ -46,7 +46,7 @@ public class Class468_Sub18 extends Preference {
 	}
 
 	public int method7784(int i_1) {
-		return i_1 == 3 && !Class362.getNativeLibraryLoader(616047582).method218("jagdx", -369170770) ? 3 : 2;
+		return i_1 == 3 && !Class362.getNativeLibraryLoader().method218() ? 3 : 2;
 	}
 
 	void method7780(int i_1) {
@@ -63,7 +63,7 @@ public class Class468_Sub18 extends Preference {
 		super(class282_sub54_1);
 	}
 
-	public void method12783(boolean bool_1, byte b_2) {
+	public void method12783(boolean bool_1) {
 		this.aBool7913 = bool_1;
 	}
 

@@ -38,10 +38,10 @@ public class Class529 {
 
 	public Class529(Index index_1) {
 		byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_3.fileId);
-		this.method11335(new RsByteBuffer(bytes_2), (byte) 63);
+		this.method11335(new RsByteBuffer(bytes_2));
 	}
 
-	void method11335(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	void method11335(RsByteBuffer rsbytebuffer_1) {
 		boolean bool_3 = false;
 		while (true) {
 			while (true) {

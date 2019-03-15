@@ -12,19 +12,19 @@ public class Class96_Sub3 extends Class96 {
 
 	int anInt8517;
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class92 class92_2 = Class86.aClass92Array820[this.anInt8516];
-		Class9.animateObject(class92_2.anInt965, class92_2.anInt962, class92_2.anInt966, class92_2.aClass458_963.anInt5494, class92_2.aClass458_963.type, class92_2.anInt967, this.anInt8517, (byte) 1);
+		Class9.animateObject(class92_2.anInt965, class92_2.anInt962, class92_2.anInt966, class92_2.aClass458_963.anInt5494, class92_2.aClass458_963.type, class92_2.anInt967, this.anInt8517);
 	}
 
-	boolean method1599(int i_1) {
+	boolean method1599() {
 		AnimationDefinitions animationdefinitions_2 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(this.anInt8517, (byte) 45);
 		return animationdefinitions_2.ready();
 	}
 
 	public void method1601() {
 		Class92 class92_1 = Class86.aClass92Array820[this.anInt8516 * 834292573 * -1978703627];
-		Class9.animateObject(-1318859227 * class92_1.anInt965 * 1968020909, class92_1.anInt962 * 1631065949 * -76417803, -987984923 * class92_1.anInt966 * -1041057299, class92_1.aClass458_963.anInt5494 * -259002495 * 480268417, class92_1.aClass458_963.type * 2087055829 * 1109376893, -71092145 * class92_1.anInt967 * 1405673135, this.anInt8517 * 450467189 * -45034787, (byte) 1);
+		Class9.animateObject(-1318859227 * class92_1.anInt965 * 1968020909, class92_1.anInt962 * 1631065949 * -76417803, -987984923 * class92_1.anInt966 * -1041057299, class92_1.aClass458_963.anInt5494 * -259002495 * 480268417, class92_1.aClass458_963.type * 2087055829 * 1109376893, -71092145 * class92_1.anInt967 * 1405673135, this.anInt8517 * 450467189 * -45034787);
 	}
 
 	Class96_Sub3(RsByteBuffer rsbytebuffer_1) {
@@ -33,7 +33,7 @@ public class Class96_Sub3 extends Class96 {
 		this.anInt8517 = rsbytebuffer_1.readBigSmart();
 	}
 
-	static String method13787(Throwable throwable_0, byte b_1) throws IOException {
+	static String method13787(Throwable throwable_0) throws IOException {
 		String str_2;
 		if (throwable_0 instanceof RuntimeException_Sub3) {
 			RuntimeException_Sub3 runtimeexception_sub3_3 = (RuntimeException_Sub3) throwable_0;

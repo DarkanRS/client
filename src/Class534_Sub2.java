@@ -11,18 +11,18 @@ public class Class534_Sub2 extends Class534 {
 	void method11427(RsByteBuffer rsbytebuffer_1, MouseRecord class282_sub53_2) {
 	}
 
-	boolean method11423(int i_1) {
+	boolean method11423() {
 		return this.method12842(1070936564) != null || this.aLong7076 < Class169.time() - 2000L;
 	}
 
-	TCPMessage method11416(byte b_1) {
+	TCPMessage method11416() {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, -490942131);
 	}
 
-	void method11413(RsByteBuffer rsbytebuffer_1, MouseRecord class282_sub53_2, int i_3) {
+	void method11413(RsByteBuffer rsbytebuffer_1, MouseRecord class282_sub53_2) {
 	}
 
-	int method11412(int i_1) {
+	int method11412() {
 		return 0;
 	}
 
@@ -48,7 +48,7 @@ public class Class534_Sub2 extends Class534 {
 			}
 			TCPMessage tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, -109776879);
 			tcpmessage_6.buffer.writeLEInt(i_4 | i_3 << 16, (byte) -37);
-			tcpmessage_6.buffer.writeShort(i_2 | b_5 << 15, 1417031095);
+			tcpmessage_6.buffer.writeShort(i_2 | b_5 << 15);
 			client.aClass184_7475.method3049(tcpmessage_6, 1544869711);
 		}
 	}
@@ -75,7 +75,7 @@ public class Class534_Sub2 extends Class534 {
 			}
 			TCPMessage tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, -423212520);
 			tcpmessage_6.buffer.writeLEInt(i_4 | i_3 << 16, (byte) 76);
-			tcpmessage_6.buffer.writeShort(i_2 | b_5 << 15, 1417031095);
+			tcpmessage_6.buffer.writeShort(i_2 | b_5 << 15);
 			client.aClass184_7475.method3049(tcpmessage_6, 1417972816);
 		}
 	}
@@ -96,7 +96,7 @@ public class Class534_Sub2 extends Class534 {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, -202968975);
 	}
 
-	void method11414(int i_1) {
+	void method11414() {
 		MouseRecord class282_sub53_2 = this.method12842(500103661);
 		if (class282_sub53_2 != null) {
 			int i_3 = this.method11408(class282_sub53_2, 32767, -102422024);
@@ -118,7 +118,7 @@ public class Class534_Sub2 extends Class534 {
 			}
 			TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, 417641867);
 			tcpmessage_7.buffer.writeLEInt(i_5 | i_4 << 16, (byte) -3);
-			tcpmessage_7.buffer.writeShort(i_3 | b_6 << 15, 1417031095);
+			tcpmessage_7.buffer.writeShort(i_3 | b_6 << 15);
 			client.aClass184_7475.method3049(tcpmessage_7, -990587266);
 		}
 	}

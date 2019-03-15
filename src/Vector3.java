@@ -77,7 +77,7 @@ public class Vector3 {
 	}
 
 	final void method6634(Quaternion quaternion_1) {
-		Quaternion quaternion_2 = Quaternion.method6485(this.x, this.y, this.z, 0.0F);
+		Quaternion quaternion_2 = Quaternion.method6485(this.x, this.y, this.z);
 		Quaternion quaternion_3 = Quaternion.method6465(quaternion_1);
 		Quaternion quaternion_4 = Quaternion.method6497(quaternion_3, quaternion_2);
 		quaternion_4.multiply(quaternion_1);
@@ -111,9 +111,9 @@ public class Vector3 {
 		}
 	}
 
-	public static void initVectorStack(int size) {
-		vectorStackSize = size;
-		vectorStack = new Vector3[size];
+	public static void initVectorStack() {
+		vectorStackSize = 100;
+		vectorStack = new Vector3[100];
 		vecStackIdx = 0;
 	}
 

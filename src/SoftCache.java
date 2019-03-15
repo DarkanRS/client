@@ -35,21 +35,21 @@ public final class SoftCache {
 			}
 			Class282_Sub50_Sub1_Sub1 class282_sub50_sub1_sub1_7 = new Class282_Sub50_Sub1_Sub1(object_1, i_4);
 			this.aClass465_2854.put(class282_sub50_sub1_sub1_7, long_2);
-			this.aClass477_2855.method7936(class282_sub50_sub1_sub1_7, -1738910950);
+			this.aClass477_2855.method7936(class282_sub50_sub1_sub1_7);
 			class282_sub50_sub1_sub1_7.key = 0L;
 		}
 	}
 
 	public void method3858(int i_1, byte b_2) {
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941((byte) 4); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-1108267960)) {
+		for (Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-1108267960)) {
 			if (class282_sub50_sub1_3.method14691(-436752315)) {
-				if (class282_sub50_sub1_3.method14692(-264417270) == null) {
+				if (class282_sub50_sub1_3.method14692() == null) {
 					class282_sub50_sub1_3.remove();
 					class282_sub50_sub1_3.method13452();
 					this.anInt2852 += class282_sub50_sub1_3.anInt9451;
 				}
 			} else if (++class282_sub50_sub1_3.key > (long) i_1) {
-				Class282_Sub50_Sub1_Sub2 class282_sub50_sub1_sub2_4 = new Class282_Sub50_Sub1_Sub2(class282_sub50_sub1_3.method14692(-264417270), class282_sub50_sub1_3.anInt9451);
+				Class282_Sub50_Sub1_Sub2 class282_sub50_sub1_sub2_4 = new Class282_Sub50_Sub1_Sub2(class282_sub50_sub1_3.method14692(), class282_sub50_sub1_3.anInt9451);
 				this.aClass465_2854.put(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3.data);
 				Class224.method3782(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3, -782987779);
 				class282_sub50_sub1_3.remove();
@@ -68,13 +68,13 @@ public final class SoftCache {
 		return this.anInt2853;
 	}
 
-	public int method3861(byte b_1) {
+	public int method3861() {
 		return this.anInt2852;
 	}
 
-	public int method3862(byte b_1) {
+	public int method3862() {
 		int i_2 = 0;
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941((byte) 4); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-124475022)) {
+		for (Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-124475022)) {
 			if (!class282_sub50_sub1_3.method14691(-1137158918)) {
 				++i_2;
 			}
@@ -83,7 +83,7 @@ public final class SoftCache {
 	}
 
 	public void method3863(int i_1) {
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941((byte) 4); class282_sub50_sub1_2 != null; class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-586582507)) {
+		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_2 != null; class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-586582507)) {
 			if (class282_sub50_sub1_2.method14691(1940847824)) {
 				class282_sub50_sub1_2.remove();
 				class282_sub50_sub1_2.method13452();
@@ -105,7 +105,7 @@ public final class SoftCache {
 		if (class282_sub50_sub1_3 == null) {
 			return null;
 		} else {
-			Object object_4 = class282_sub50_sub1_3.method14692(-264417270);
+			Object object_4 = class282_sub50_sub1_3.method14692();
 			if (object_4 == null) {
 				class282_sub50_sub1_3.remove();
 				class282_sub50_sub1_3.method13452();
@@ -115,12 +115,12 @@ public final class SoftCache {
 				if (class282_sub50_sub1_3.method14691(279512561)) {
 					Class282_Sub50_Sub1_Sub1 class282_sub50_sub1_sub1_5 = new Class282_Sub50_Sub1_Sub1(object_4, class282_sub50_sub1_3.anInt9451);
 					this.aClass465_2854.put(class282_sub50_sub1_sub1_5, class282_sub50_sub1_3.data);
-					this.aClass477_2855.method7936(class282_sub50_sub1_sub1_5, -1738910950);
+					this.aClass477_2855.method7936(class282_sub50_sub1_sub1_5);
 					class282_sub50_sub1_sub1_5.key = 0L;
 					class282_sub50_sub1_3.remove();
 					class282_sub50_sub1_3.method13452();
 				} else {
-					this.aClass477_2855.method7936(class282_sub50_sub1_3, -1738910950);
+					this.aClass477_2855.method7936(class282_sub50_sub1_3);
 					class282_sub50_sub1_3.key = 0L;
 				}
 				return object_4;
@@ -135,7 +135,7 @@ public final class SoftCache {
 	public Object method3866(int i_1) {
 		Class282_Sub50_Sub1 class282_sub50_sub1_4;
 		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass465_2854.method7750(426226201); class282_sub50_sub1_2 != null; this.anInt2852 += class282_sub50_sub1_4.anInt9451) {
-			Object object_3 = class282_sub50_sub1_2.method14692(-264417270);
+			Object object_3 = class282_sub50_sub1_2.method14692();
 			if (object_3 != null) {
 				return object_3;
 			}
@@ -147,10 +147,10 @@ public final class SoftCache {
 		return null;
 	}
 
-	public Object method3867(int i_1) {
+	public Object method3867() {
 		Class282_Sub50_Sub1 class282_sub50_sub1_4;
 		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass465_2854.method7751((byte) 50); class282_sub50_sub1_2 != null; this.anInt2852 += class282_sub50_sub1_4.anInt9451) {
-			Object object_3 = class282_sub50_sub1_2.method14692(-264417270);
+			Object object_3 = class282_sub50_sub1_2.method14692();
 			if (object_3 != null) {
 				return object_3;
 			}

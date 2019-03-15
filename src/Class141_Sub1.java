@@ -28,11 +28,11 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass505_Sub1_1664.method13717(260, 7681);
 			this.aClass505_Sub1_1664.method13595(0, 34168, 768);
 			this.aClass505_Sub1_1664.method13595(1, 34168, 770);
-			this.aClass505_Sub1_1664.method13616(0, 34167, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34167);
 		} else {
 			this.aClass505_Sub1_1664.method13717(260, 7681);
 			this.aClass505_Sub1_1664.method13595(0, 5890, 770);
-			this.aClass505_Sub1_1664.method13616(0, 34167, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34167);
 		}
 
 		this.aClass505_Sub1_1664.method13610(0);
@@ -52,11 +52,11 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass505_Sub1_1664.method13717(8448, 8448);
 			this.aClass505_Sub1_1664.method13595(0, 5890, 768);
 			this.aClass505_Sub1_1664.method13595(1, 34168, 768);
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 		} else {
 			this.aClass505_Sub1_1664.method13717(8448, 8448);
 			this.aClass505_Sub1_1664.method13595(0, 5890, 768);
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 		}
 
 		this.aClass505_Sub1_1664.method13610(0);
@@ -82,7 +82,7 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass138_9022.method2379('\u0000');
 			this.aBool9020 = true;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 34168, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34168);
 		}
 
 	}
@@ -104,7 +104,7 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass138_9022.method2379('\u0001');
 			this.aBool9020 = false;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 		}
 
 		this.aClass505_Sub1_1664.method13717(8448, 8448);
@@ -153,7 +153,7 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass138_9022.method2379('\u0000');
 			this.aBool9020 = true;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 34168, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34168);
 		}
 
 	}
@@ -175,7 +175,7 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass138_9022.method2379('\u0001');
 			this.aBool9020 = false;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 		}
 
 		this.aClass505_Sub1_1664.method13717(8448, 8448);
@@ -219,7 +219,7 @@ public class Class141_Sub1 extends Class141 {
 			this.aClass138_9022.method2379('\u0000');
 			this.aBool9020 = true;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 34168, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34168);
 		}
 
 	}
@@ -295,9 +295,9 @@ public class Class141_Sub1 extends Class141 {
 			}
 
 			this.aClass137_Sub2Array9027 = new Class137_Sub2[3];
-			this.aClass137_Sub2Array9027[0] = new Class137_Sub2(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, 64, false, bytes_4, Class150.aClass150_1951);
-			this.aClass137_Sub2Array9027[1] = new Class137_Sub2(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, 64, false, bytes_5, Class150.aClass150_1951);
-			this.aClass137_Sub2Array9027[2] = new Class137_Sub2(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, 64, false, bytes_3, Class150.aClass150_1951);
+			this.aClass137_Sub2Array9027[0] = new Class137_Sub2(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, bytes_4, Class150.aClass150_1951);
+			this.aClass137_Sub2Array9027[1] = new Class137_Sub2(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, bytes_5, Class150.aClass150_1951);
+			this.aClass137_Sub2Array9027[2] = new Class137_Sub2(this.aClass505_Sub1_1664, Class150.aClass150_1951, Class76.aClass76_751, bytes_3, Class150.aClass150_1951);
 			this.method14411();
 		}
 

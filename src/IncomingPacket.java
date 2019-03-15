@@ -171,7 +171,7 @@ public class IncomingPacket {
 		this.size = size;
 	}
 
-	static int method6375(String string_0, byte[] bytes_1, int i_2, int i_3) {
+	static int method6375(String string_0, byte[] bytes_1, int i_2) {
 		int i_4 = i_2;
 		int i_5 = string_0.length();
 		for (int i_6 = 0; i_6 < i_5; i_6 += 4) {
@@ -192,8 +192,8 @@ public class IncomingPacket {
 		return i_2 - i_4;
 	}
 
-	public static Game method6376(int i_0, int i_1) {
-		Game[] arr_2 = Class282_Sub15_Sub1.method14817(1926642479);
+	public static Game method6376(int i_0) {
+		Game[] arr_2 = Class282_Sub15_Sub1.method14817();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Game game_4 = arr_2[i_3];
 			if (i_0 == game_4.anInt5746) {
@@ -203,22 +203,22 @@ public class IncomingPacket {
 		return null;
 	}
 
-	static void method6377(int i_0) {
+	static void method6377() {
 		Class186.method3083(925085944);
 	}
 
-	public static void method6378(int i_0) {
+	public static void method6378() {
 		for (int i_1 = 0; i_1 < 107; i_1++) {
 			client.aBoolArray7443[i_1] = true;
 		}
 	}
 
-	public static void method6379(Player player_0, int i_1) {
+	public static void method6379(Player player_0) {
 		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.anInt10314);
 		if (class282_sub48_2 == null) {
 			Class397.method6775(player_0.plane, player_0.regionBaseX[0], player_0.regionBaseY[0], 0, (ObjectDefinitions) null, (NPC) null, player_0, 77262483);
 		} else {
-			class282_sub48_2.method13426((byte) 1);
+			class282_sub48_2.method13426();
 		}
 	}
 

@@ -70,7 +70,7 @@ public class Class20 {
 		throw new Error();
 	}
 
-	static void method744(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	static void method744(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		int i_7 = Class275.method4890(i_2, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -109837866);
 		int i_8 = Class275.method4890(i_3, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -766812485);
 		int i_9 = Class275.method4890(i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1790568603);
@@ -109,7 +109,7 @@ public class Class20 {
 				AnimationDefinitions animationdefinitions_7 = animable_0.currentAnimation.getDefs();
 				int speedType = animationdefinitions_7.replayMode;
 				if (speedType == 1) {
-					animation_9.method7583(speed, (byte) 0);
+					animation_9.method7583(speed);
 				}
 				if (speedType == 2) {
 					animation_9.method7584(-272427166);

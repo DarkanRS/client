@@ -48,7 +48,7 @@ public class AnimationDefinitions {
 
 	IterableNodeMap aClass465_5910;
 
-	public String method11129(int i_1, String string_2, int i_3) {
+	public String method11129(int i_1, String string_2) {
 		if (this.aClass465_5910 == null) {
 			return string_2;
 		} else {
@@ -57,17 +57,17 @@ public class AnimationDefinitions {
 		}
 	}
 
-	void method11130(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method11130(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method11131(rsbytebuffer_1, i_3, 1214881169);
+			this.method11131(rsbytebuffer_1, i_3);
 		}
 	}
 
-	void method11131(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	void method11131(RsByteBuffer rsbytebuffer_1, int i_2) {
 		int i_4;
 		int i_5;
 		if (i_2 == 1) {
@@ -186,7 +186,7 @@ public class AnimationDefinitions {
 			int[] ints_2 = this.frames;
 			for (int i_3 = 0; i_3 < ints_2.length; i_3++) {
 				int i_4 = ints_2[i_3];
-				if (this.animationIndexLoader.getAnimationFrame(i_4 >>> 16, -1536383536) == null) {
+				if (this.animationIndexLoader.getAnimationFrame(i_4 >>> 16) == null) {
 					bool_1 = false;
 				}
 			}
@@ -194,7 +194,7 @@ public class AnimationDefinitions {
 		}
 	}
 
-	public int method11133(int i_1, int i_2, int i_3) {
+	public int method11133(int i_1, int i_2) {
 		if (this.aClass465_5910 == null) {
 			return i_2;
 		} else {
@@ -203,7 +203,7 @@ public class AnimationDefinitions {
 		}
 	}
 
-	void method11143(byte b_1) {
+	void method11143() {
 		if (this.animatingPrecedence == -1) {
 			if (this.aBoolArray5915 != null) {
 				this.animatingPrecedence = 2;

@@ -125,11 +125,11 @@ public class Class282_Sub3 extends Node {
 
 					while (i_10 < shorts_7.length) {
 						if ((i_8 & 1 << i_9++) != 0) {
-							class282_sub35_sub1_4.writeShort(shorts_7[i_10++] & 0xffff, 1417031095);
+							class282_sub35_sub1_4.writeShort(shorts_7[i_10++] & 0xffff);
 							++i_3;
-							class282_sub35_sub1_4.writeShort(shorts_7[i_10++] & 0xffff, 1417031095);
+							class282_sub35_sub1_4.writeShort(shorts_7[i_10++] & 0xffff);
 							++i_3;
-							class282_sub35_sub1_4.writeShort(shorts_7[i_10++] & 0xffff, 1417031095);
+							class282_sub35_sub1_4.writeShort(shorts_7[i_10++] & 0xffff);
 							++i_3;
 						} else {
 							i_10 += 3;
@@ -163,7 +163,7 @@ public class Class282_Sub3 extends Node {
 		}
 
 		if (i_3 > 0) {
-			this.aClass131_Sub2_7491.method111(5123, class282_sub35_sub1_4.buffer, class282_sub35_sub1_4.index);
+			this.aClass131_Sub2_7491.method111(class282_sub35_sub1_4.buffer, class282_sub35_sub1_4.index);
 			this.aClass505_Sub1_7494.method13647(this.aClass390_Sub2_7488.vertexPointer, this.aClass390_Sub2_7488.normalPointer, this.aClass143_7492, this.aClass390_Sub2_7488.texturePointer);
 			this.aClass505_Sub1_7494.method13609(this.anInt7493, (this.aClass390_Sub2_7488.flags & 0x7) != 0, (this.aClass390_Sub2_7488.flags & 0x8) != 0);
 			if (this.aClass505_Sub1_7494.aBool8448) {
@@ -175,7 +175,7 @@ public class Class282_Sub3 extends Node {
 			OpenGL.glScalef(1.0F / this.aFloat7490, 1.0F / this.aFloat7490, 1.0F);
 			OpenGL.glMatrixMode(5888);
 			this.aClass505_Sub1_7494.method13647(this.aClass390_Sub2_7488.vertexPointer, this.aClass390_Sub2_7488.normalPointer, this.aClass143_7492, this.aClass390_Sub2_7488.texturePointer);
-			this.aClass505_Sub1_7494.method13611(this.aClass131_Sub2_7491, 4, 0, i_3);
+			this.aClass505_Sub1_7494.method13611(this.aClass131_Sub2_7491, 0, i_3);
 			OpenGL.glMatrixMode(5890);
 			OpenGL.glPopMatrix();
 			OpenGL.glMatrixMode(5888);
@@ -185,7 +185,7 @@ public class Class282_Sub3 extends Node {
 
 	void method12087(int i_1) {
 		this.aStream7489.method2925();
-		Interface14 interface14_2 = this.aClass505_Sub1_7494.createArrayBuffer(4, this.aNativeHeapBuffer7495, i_1 * 4, false);
+		Interface14 interface14_2 = this.aClass505_Sub1_7494.createArrayBuffer(4, this.aNativeHeapBuffer7495, i_1 * 4);
 		if (interface14_2 instanceof Class135_Sub2) {
 			this.aNativeHeapBuffer7495.method1178();
 		}

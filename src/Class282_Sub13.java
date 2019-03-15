@@ -46,7 +46,7 @@ public class Class282_Sub13 extends Node {
 
 	Class282_Sub15_Sub5 aClass282_Sub15_Sub5_7568;
 
-	void method12213(int i_1) {
+	void method12213() {
 		this.aClass282_Sub14_7566 = null;
 		this.aClass282_Sub26_Sub1_7565 = null;
 		this.aClass110_7586 = null;

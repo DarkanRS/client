@@ -6,7 +6,7 @@ public class Class348 {
 
 	NodeCollection aClass482_4062 = new NodeCollection();
 
-	void method6171(RsByteBuffer rsbytebuffer_1, byte b_2) {
+	void method6171(RsByteBuffer rsbytebuffer_1) {
 		this.aLong4073 = rsbytebuffer_1.readLong();
 		this.anInt4060 = rsbytebuffer_1.readInt();
 		for (int i_3 = rsbytebuffer_1.readUnsignedByte(); i_3 != 0; i_3 = rsbytebuffer_1.readUnsignedByte()) {
@@ -41,15 +41,15 @@ public class Class348 {
 				}
 				obj_4 = new Class282_Sub17_Sub3(this);
 			}
-			((Class282_Sub17) obj_4).method12250(rsbytebuffer_1, -1771896031);
+			((Class282_Sub17) obj_4).method12250(rsbytebuffer_1);
 			this.aClass482_4062.append((Node) obj_4, -575060880);
 		}
 	}
 
-	public void method6173(Class61 class61_1, int i_2) {
+	public void method6173(Class61 class61_1) {
 		if (class61_1.aLong631 == this.aLong4073 && this.anInt4060 == class61_1.anInt637) {
 			for (Class282_Sub17 class282_sub17_3 = (Class282_Sub17) this.aClass482_4062.head((byte) 23); class282_sub17_3 != null; class282_sub17_3 = (Class282_Sub17) this.aClass482_4062.next(983749552)) {
-				class282_sub17_3.method12251(class61_1, -429954850);
+				class282_sub17_3.method12251(class61_1);
 			}
 			++class61_1.anInt637;
 		} else {
@@ -58,7 +58,7 @@ public class Class348 {
 	}
 
 	public Class348(RsByteBuffer rsbytebuffer_1) {
-		this.method6171(rsbytebuffer_1, (byte) 46);
+		this.method6171(rsbytebuffer_1);
 	}
 
 	public static void method6175(boolean bool_0, int i_1) {
@@ -79,15 +79,15 @@ public class Class348 {
 			client.aClass465_7442 = new IterableNodeMap(8);
 			MeshModifier.method7041((byte) -6);
 			client.anInt7349 = Class58.aClass529_527.anInt7036;
-			Class516.method8867(false, -905479502);
-			IncomingPacket.method6378(-1538407760);
+			Class516.method8867(false);
+			IncomingPacket.method6378();
 			Class150.method2582(client.anInt7349, (int[]) null, -1484331524);
 		}
-		Class468_Sub12.method12708(1506818197);
+		Class468_Sub12.method12708();
 		Class9.aBool71 = false;
-		Class509.method8739(900001069);
+		Class509.method8739();
 		client.anInt7427 = -1;
-		UnderlayIndexLoader.method8036(client.anInt7340, (byte) 4);
+		UnderlayIndexLoader.method8036(client.anInt7340);
 		Class84.myPlayer = new Player((SceneObjectManager) null);
 		Class84.myPlayer.method11172((float) (IndexLoaders.MAP_REGION_DECODER.getSizeX(1639359144) * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.getSizeY(-1549308154) * 512 / 2));
 		Class84.myPlayer.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.getSizeX(-1586336378) / 2;
@@ -100,10 +100,10 @@ public class Class348 {
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);
 		}
-		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-367591790);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-367591790);
 	}
 
-	static boolean method6176(int i_0, int i_1) {
+	static boolean method6176(int i_0) {
 		return i_0 == 44 || i_0 == 45 || i_0 == 46 || i_0 == 47 || i_0 == 48 || i_0 == 49 || i_0 == 50 || i_0 == 51 || i_0 == 52 || i_0 == 53 || i_0 == 15;
 	}
 }

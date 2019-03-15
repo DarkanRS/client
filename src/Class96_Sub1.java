@@ -7,7 +7,7 @@ public class Class96_Sub1 extends Class96 {
 		Class468_Sub21.method12869(true, 594187291);
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class468_Sub21.method12869(true, -748080019);
 	}
 

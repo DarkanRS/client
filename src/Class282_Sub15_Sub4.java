@@ -15,7 +15,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	}
 
 	public final synchronized void method15275(Class282_Sub15 class282_sub15_1) {
-		this.aClass482_9824.method8098(class282_sub15_1, (byte) 34);
+		this.aClass482_9824.method8098(class282_sub15_1);
 	}
 
 	public final synchronized void method15276(Class282_Sub15 class282_sub15_1) {

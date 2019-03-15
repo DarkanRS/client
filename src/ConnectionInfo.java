@@ -12,7 +12,7 @@ public class ConnectionInfo {
 	public int anInt5437 = 1;
 	public int anInt5434 = -190419398;
 
-	public boolean equals(ConnectionInfo class450_1, int i_2) {
+	public boolean equals(ConnectionInfo class450_1) {
 		return class450_1 == null ? false : this.worldId == class450_1.worldId && this.host.equals(class450_1.host);
 	}
 
@@ -31,7 +31,7 @@ public class ConnectionInfo {
 		return new Socket(this.host, 5555);
 	}
 
-	static String method7499(long long_0, int i_2, boolean bool_3, int i_4) {
+	static String method7499(long long_0, int i_2, boolean bool_3) {
 		Calendar calendar_5;
 		if (bool_3) {
 			Class288.method5083(long_0);

@@ -126,18 +126,18 @@ public class Matrix44Var {
 
 	}
 
-	public void method5214(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9) {
-		this.aFloat3519 = f_1;
-		this.aFloat3517 = f_4;
-		this.aFloat3520 = f_7;
+	public void method5214() {
+		this.aFloat3519 = (float) 1.0;
+		this.aFloat3517 = (float) 0.0;
+		this.aFloat3520 = (float) 0.0;
 		this.aFloat3515 = 0.0F;
-		this.aFloat3514 = f_2;
-		this.aFloat3523 = f_5;
-		this.aFloat3513 = f_8;
+		this.aFloat3514 = (float) 0.0;
+		this.aFloat3523 = (float) 0.0;
+		this.aFloat3513 = (float) 1.0;
 		this.aFloat3524 = 0.0F;
-		this.aFloat3516 = f_3;
-		this.aFloat3522 = f_6;
-		this.aFloat3521 = f_9;
+		this.aFloat3516 = (float) 0.0;
+		this.aFloat3522 = (float) 1.0;
+		this.aFloat3521 = (float) 0.0;
 		this.aFloat3525 = 0.0F;
 	}
 
@@ -281,7 +281,7 @@ public class Matrix44Var {
 		floats_1[2] = (float) ((int) (this.aFloat3520 * f_2 + this.aFloat3513 * f_3 + this.aFloat3521 * f_4));
 	}
 
-	public void method5247(float f_1, float f_2, float f_3) {
+	public void method5247(float f_1, float f_2) {
 		this.aFloat3519 *= f_1;
 		this.aFloat3517 *= f_1;
 		this.aFloat3520 *= f_1;
@@ -290,10 +290,10 @@ public class Matrix44Var {
 		this.aFloat3523 *= f_2;
 		this.aFloat3513 *= f_2;
 		this.aFloat3524 *= f_2;
-		this.aFloat3516 *= f_3;
-		this.aFloat3522 *= f_3;
-		this.aFloat3521 *= f_3;
-		this.aFloat3525 *= f_3;
+		this.aFloat3516 *= (float) 1.0;
+		this.aFloat3522 *= (float) 1.0;
+		this.aFloat3521 *= (float) 1.0;
+		this.aFloat3525 *= (float) 1.0;
 	}
 
 	public void method5259(float f_1, float f_2, float f_3) {

@@ -13,7 +13,7 @@ public class Class96_Sub7 extends Class96 {
 		this.anInt9174 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		Class82.aClass75Array804[this.anInt9177].method1342((byte) 110).method15875(this.aString9175, this.anInt9176, 0, this.anInt9174, 1801324989);
 	}
 

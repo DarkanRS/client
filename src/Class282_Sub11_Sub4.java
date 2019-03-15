@@ -8,12 +8,12 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 
 	byte aByte10217;
 
-	void method12204(ClanChannel class282_sub4_1, int i_2) {
+	void method12204(ClanChannel class282_sub4_1) {
 		ClanChannelPlayer class57_3 = new ClanChannelPlayer();
 		class57_3.name = this.aString10218;
 		class57_3.world = this.anInt10216;
 		class57_3.rank = this.aByte10217;
-		class282_sub4_1.method12105(class57_3, (byte) 92);
+		class282_sub4_1.method12105(class57_3);
 	}
 
 	void method12205(ClanChannel class282_sub4_1) {
@@ -21,7 +21,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 		class57_2.name = this.aString10218;
 		class57_2.world = this.anInt10216 * 1097857565 * -1982781809 * -1097296133;
 		class57_2.rank = this.aByte10217;
-		class282_sub4_1.method12105(class57_2, (byte) 92);
+		class282_sub4_1.method12105(class57_2);
 	}
 
 	Class282_Sub11_Sub4(Class349 class349_1) {
@@ -29,7 +29,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 		this.aString10218 = null;
 	}
 
-	void method12203(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12203(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			--rsbytebuffer_1.index;
 			rsbytebuffer_1.readLong();

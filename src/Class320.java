@@ -25,7 +25,7 @@ public class Class320 {
 
 	int anInt3716;
 
-	final void method5720(byte b_1) {
+	final void method5720() {
 		for (int i_2 = 0; i_2 < this.anInt3716; i_2++) {
 			this.anIntArrayArray3717[i_2] = null;
 		}
@@ -68,7 +68,7 @@ public class Class320 {
 		}
 	}
 
-	public final int[][] method5722(byte b_1) {
+	public final int[][] method5722() {
 		if (this.anInt3716 != this.anInt3715) {
 			throw new RuntimeException();
 		} else {
@@ -86,7 +86,7 @@ public class Class320 {
 		this.aClass282_Sub25Array3720 = new Class282_Sub25[this.anInt3715];
 	}
 
-	public static void method5731(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	public static void method5731(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		Class42.method890(i_5, i_6, 100, (byte) -118);
 		Class260.aClass277_3234 = new Class277(i_0, i_1 << 9, i_2 << 9, i_3 << 8, i_4 * 8);
 	}
@@ -99,6 +99,6 @@ public class Class320 {
 			i_6 = dimension_8.width;
 			i_7 = dimension_8.height;
 		}
-		return Class88.method1493(i_0, canvas_1, interface22_2, index_3, i_4, i_6, i_7, (byte) 73);
+		return Class88.method1493(i_0, canvas_1, interface22_2, index_3, i_4, i_6, i_7);
 	}
 }

@@ -12,7 +12,7 @@ public class ClipMap {
 
 	static int anInt3968;
 
-	public void method5965(byte b_1) {
+	public void method5965() {
 		for (int i_2 = 0; i_2 < this.sizeX; i_2++) {
 			for (int i_3 = 0; i_3 < this.sizeY; i_3++) {
 				if (i_2 != 0 && i_3 != 0 && i_2 < this.sizeX - 5 && i_3 < this.sizeY - 5) {
@@ -45,13 +45,13 @@ public class ClipMap {
 		}
 	}
 
-	public void addBlockFloorDeco(int i_1, int i_2, int i_3) {
+	public void addBlockFloorDeco(int i_1, int i_2) {
 		i_1 -= this.offsetX;
 		i_2 -= this.offsetY;
 		this.map[i_1][i_2] |= 0x40000;
 	}
 
-	public void method5970(int i_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6, boolean bool_7, int i_8) {
+	public void method5970(int i_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6, boolean bool_7) {
 		int i_9 = 256;
 		if (bool_6) {
 			i_9 |= 0x20000;
@@ -78,7 +78,7 @@ public class ClipMap {
 		}
 	}
 
-	public void method5971(int i_1, int i_2, int i_3, int i_4, boolean bool_5, boolean bool_6, int i_7) {
+	public void method5971(int i_1, int i_2, int i_3, int i_4, boolean bool_5, boolean bool_6) {
 		i_1 -= this.offsetX;
 		i_2 -= this.offsetY;
 		if (i_3 == 0) {
@@ -261,7 +261,7 @@ public class ClipMap {
 		}
 	}
 
-	public void addUnwalkable(int i_1, int i_2, int i_3) {
+	public void addUnwalkable(int i_1, int i_2) {
 		i_1 -= this.offsetX;
 		i_2 -= this.offsetY;
 		this.map[i_1][i_2] |= 0x200000;
@@ -271,7 +271,7 @@ public class ClipMap {
 		this.map[i_1][i_2] &= ~i_3;
 	}
 
-	public void method5974(int i_1, int i_2, int i_3) {
+	public void method5974(int i_1, int i_2) {
 		i_1 -= this.offsetX;
 		i_2 -= this.offsetY;
 		this.map[i_1][i_2] &= ~0x200000;
@@ -574,13 +574,13 @@ public class ClipMap {
 		}
 	}
 
-	public void method5991(int i_1, int i_2, byte b_3) {
+	public void method5991(int i_1, int i_2) {
 		i_1 -= this.offsetX;
 		i_2 -= this.offsetY;
 		this.map[i_1][i_2] &= ~0x40000;
 	}
 
-	public void method5992(int i_1, int i_2, int i_3, int i_4, boolean bool_5, boolean bool_6, byte b_7) {
+	public void method5992(int i_1, int i_2, int i_3, int i_4, boolean bool_5, boolean bool_6) {
 		i_1 -= this.offsetX;
 		i_2 -= this.offsetY;
 		if (i_3 == 0) {
@@ -775,7 +775,7 @@ public class ClipMap {
 		}
 	}
 
-	public static void method6008(boolean bool_0, byte b_1) {
+	public static void method6008(boolean bool_0) {
 		Class282_Sub48 class282_sub48_2;
 		for (class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 38); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-128319020)) {
 			if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
@@ -806,7 +806,7 @@ public class ClipMap {
 		}
 	}
 
-	public static Class232 method6009(RsByteBuffer rsbytebuffer_0, int i_1) {
+	public static Class232 method6009(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
 		int[] ints_3 = new int[i_2];
 		for (int i_4 = 0; i_4 < i_2; i_4++) {
@@ -824,7 +824,7 @@ public class ClipMap {
 			icomponentdefinitions_0.method2013(i_4, s_5, s_6, (byte) 11);
 			Class109.redrawComponent(icomponentdefinitions_0, (byte) -78);
 			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-				Class276.method4903(icomponentdefinitions_0.idHash, i_4, -1379026024);
+				Class276.method4903(icomponentdefinitions_0.idHash, i_4);
 			}
 		}
 	}

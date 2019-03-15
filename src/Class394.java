@@ -22,7 +22,7 @@ public class Class394 {
 			}
 			class405_3 = new Class405();
 			if (bytes_10 != null) {
-				class405_3.method6816(new RsByteBuffer(bytes_10), 45839007);
+				class405_3.method6816(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_4786;
 			synchronized (this.aClass229_4786) {
@@ -32,21 +32,21 @@ public class Class394 {
 		}
 	}
 
-	public void method6754(int i_1) {
+	public void method6754() {
 		SoftCache softcache_2 = this.aClass229_4786;
 		synchronized (this.aClass229_4786) {
 			this.aClass229_4786.method3859(-51654906);
 		}
 	}
 
-	public void method6755(int i_1, byte b_2) {
+	public void method6755() {
 		SoftCache softcache_3 = this.aClass229_4786;
 		synchronized (this.aClass229_4786) {
-			this.aClass229_4786.method3858(i_1, (byte) -24);
+			this.aClass229_4786.method3858(5, (byte) -24);
 		}
 	}
 
-	public void method6756(int i_1) {
+	public void method6756() {
 		SoftCache softcache_2 = this.aClass229_4786;
 		synchronized (this.aClass229_4786) {
 			this.aClass229_4786.method3863(1671454169);
@@ -62,7 +62,7 @@ public class Class394 {
 		}
 	}
 
-	static void method6763(byte b_0) {
+	static void method6763() {
 		Class187.anInt2363 = 0;
 		Class187.anInt2351 = -1;
 		Class187.anInt2361 = -1;

@@ -9,7 +9,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	boolean aBool10502;
 
 	void method13012(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 262144, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 262144, false, true);
 		if (meshrasterizer_2 != null) {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class305 class305_4 = this.method11166();
@@ -35,16 +35,16 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		return this.aClass123_10501.method2115(-2054050626);
 	}
 
-	public int method12997(int i_1) {
-		return this.aClass123_10501.method2121((byte) 1);
+	public int method12997() {
+		return this.aClass123_10501.method2121();
 	}
 
-	public void method16082(Class476 class476_1, int i_2) {
+	public void method16082(Class476 class476_1) {
 		this.aClass123_10501.method2116(class476_1, -786129672);
 	}
 
-	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
+		MeshRasterizer meshrasterizer_3 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_3 == null) {
 			return null;
 		} else {
@@ -72,7 +72,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.aClass123_10501.method2132(graphicalrenderer_1, 262144, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_3 = this.aClass123_10501.method2132(graphicalrenderer_1, 262144, false, true);
 		if (meshrasterizer_3 != null) {
 			Matrix44Var matrix44var_4 = this.method11168();
 			Class305 class305_5 = this.method11166();
@@ -82,13 +82,13 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		}
 	}
 
-	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
-		MeshRasterizer meshrasterizer_5 = this.aClass123_10501.method2132(graphicalrenderer_1, 131072, false, false, -1384937123);
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
+		MeshRasterizer meshrasterizer_5 = this.aClass123_10501.method2132(graphicalrenderer_1, 131072, false, false);
 		return meshrasterizer_5 == null ? false : meshrasterizer_5.method11270(i_2, i_3, this.method11168(), false, 0);
 	}
 
 	void method13023(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 262144, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 262144, false, true);
 		if (meshrasterizer_2 != null) {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class305 class305_4 = this.method11166();
@@ -106,18 +106,18 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		return -515017769 * this.aClass123_10501.anInt1542 * -2132267033;
 	}
 
-	public void method85(byte b_1) {
+	public void method85() {
 	}
 
 	public boolean method86(int i_1) {
 		return this.aClass123_10501.method2117(-48783891);
 	}
 
-	public void method87(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method87(GraphicalRenderer graphicalrenderer_1) {
 		this.aClass123_10501.method2136(graphicalrenderer_1, (byte) -53);
 	}
 
-	public void method88(GraphicalRenderer graphicalrenderer_1, int i_2) {
+	public void method88(GraphicalRenderer graphicalrenderer_1) {
 		this.aClass123_10501.method2118(graphicalrenderer_1, 1878976654);
 	}
 
@@ -198,7 +198,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -234,7 +234,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -262,7 +262,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true, -1384937123);
+		MeshRasterizer meshrasterizer_2 = this.aClass123_10501.method2132(graphicalrenderer_1, 2048, false, true);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
@@ -306,7 +306,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	boolean method13020(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		MeshRasterizer meshrasterizer_4 = this.aClass123_10501.method2132(graphicalrenderer_1, 131072, false, false, -1384937123);
+		MeshRasterizer meshrasterizer_4 = this.aClass123_10501.method2132(graphicalrenderer_1, 131072, false, false);
 		return meshrasterizer_4 == null ? false : meshrasterizer_4.method11270(i_2, i_3, this.method11168(), false, 0);
 	}
 
@@ -318,14 +318,14 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		return false;
 	}
 
-	public static void method16086(int i_0, int i_1, int i_2, int i_3, int i_4) {
-		Class532.anInt7071 = i_0;
+	public static void method16086(int i_2, int i_3) {
+		Class532.anInt7071 = 0;
 		Class532.anInt7069 = i_2;
-		Class532.anInt7070 = i_1;
+		Class532.anInt7070 = 0;
 		Class532.anInt7068 = i_3;
 	}
 
-	static final void method16087(Animable animable_0, int i_1) {
+	static final void method16087(Animable animable_0) {
 		if (animable_0.anIntArray10335 != null || animable_0.anIntArray10362 != null) {
 			boolean bool_2 = true;
 			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -335,7 +335,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 					i_5 = animable_0.anIntArray10335[i_4];
 				}
 				if (i_5 == -1) {
-					if (!animable_0.method15798(i_4, -1, (short) 256)) {
+					if (!animable_0.method15798(i_4, -1)) {
 						bool_2 = false;
 					}
 				} else {
@@ -358,7 +358,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 							i_11 = i_5 & 0x7fff;
 							Player player_14 = client.players[i_11];
 							if (player_14 == null) {
-								animable_0.method15798(i_4, -1, (short) 256);
+								animable_0.method15798(i_4, -1);
 								continue;
 							}
 							vector3_15 = player_14.method11166().aClass385_3595;
@@ -367,7 +367,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 						} else {
 							Class282_Sub47 class282_sub47_16 = (Class282_Sub47) client.NPCS.get((long) i_5);
 							if (class282_sub47_16 == null) {
-								animable_0.method15798(i_4, -1, (short) 256);
+								animable_0.method15798(i_4, -1);
 								continue;
 							}
 							NPC npc_17 = (NPC) class282_sub47_16.anObject8068;
@@ -377,7 +377,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 						}
 					}
 					if (i_9 != 0 || i_10 != 0) {
-						animable_0.method15798(i_4, (int) (Math.atan2((double) i_9, (double) i_10) * 2607.5945876176133D) & 0x3fff, (short) 256);
+						animable_0.method15798(i_4, (int) (Math.atan2((double) i_9, (double) i_10) * 2607.5945876176133D) & 0x3fff);
 					}
 				}
 			}
@@ -388,7 +388,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		}
 	}
 
-	public static void method16088(int i_0, byte b_1) {
+	public static void method16088(int i_0) {
 		if (client.gameState == 3) {
 			TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.isaac, -396054970);
 			tcpmessage_2.buffer.writeByte(i_0);

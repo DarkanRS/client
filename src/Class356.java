@@ -11,7 +11,7 @@ public class Class356 {
 		return this == aClass356_4117 ? 0 : (this == aClass356_4119 ? i_4 - i_1 : (this == aClass356_4118 ? (i_4 - i_1) / 2 : 0));
 	}
 
-	static int parseInt(CharSequence charsequence_0, int i_1, boolean bool_2, int i_3) {
+	static int parseInt(CharSequence charsequence_0, int i_1) {
 		if (i_1 >= 2 && i_1 <= 36) {
 			boolean bool_4 = false;
 			boolean bool_5 = false;
@@ -64,50 +64,50 @@ public class Class356 {
 
 	public static final void method6227(boolean bool_0, byte b_1) {
 		if (!bool_0) {
-			IndexLoaders.OVERLAY_INDEX_LOADER.method11476((byte) -55);
-			IndexLoaders.UNDERLAY_INDEX_LOADER.method8026(113468323);
-			IndexLoaders.aClass31_204.method801(-1911445195);
+			IndexLoaders.OVERLAY_INDEX_LOADER.method11476();
+			IndexLoaders.UNDERLAY_INDEX_LOADER.method8026();
+			IndexLoaders.aClass31_204.method801();
 			IndexLoaders.MAP_REGION_DECODER.method4436(-1471749977).method7895((byte) 113);
 			IndexLoaders.NPC_INDEX_LOADER.method6836((byte) -66);
 			IndexLoaders.ITEM_INDEX_LOADER.method7150(-1855693683);
-			IndexLoaders.ANIMATION_INDEX_LOADER.method11204(-2125784469);
-			IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8848(-1321298853);
-			IndexLoaders.aClass230_147.method3903((byte) -72);
-			IndexLoaders.aClass377_1065.method6388((byte) -38);
-			IndexLoaders.aClass447_435.method7458(1914523860);
-			IndexLoaders.aClass498_3001.method8319(-835963973);
-			IndexLoaders.CLAN_VAR_LOADER.method6754(-1473374430);
-			IndexLoaders.aClass233_5822.method3924(-1007220233);
-			IndexLoaders.RENDER_ANIMS.method3617(-1794100621);
-			IndexLoaders.aClass427_995.method7174(-504359816);
-			IndexLoaders.WORLD_MAP_INDEX_LOADER.method3699((byte) 1);
-			IndexLoaders.ITEM_DEFAULTS.method7070(1503444365);
-			IndexLoaders.aClass288_1746.method5070(1894841222);
-			IndexLoaders.aClass45_5759.method916((byte) 60);
-			IndexLoaders.aClass436_7683.method7306(362287177);
-			IndexLoaders.aClass438_7932.method7324(1300086915);
-			IndexLoaders.HITSPLAT_INDEX_LOADER.method3604((short) 256);
-			IndexLoaders.HITBAR_INDEX.method5103(-901972718);
-			Class468_Sub8.method12679(2008833833);
-			Class520.method11161((byte) 1);
-			Class487.aClass378_5752.method6410((short) 25980);
-			Class413.method6939((byte) -12);
+			IndexLoaders.ANIMATION_INDEX_LOADER.method11204();
+			IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8848();
+			IndexLoaders.aClass230_147.method3903();
+			IndexLoaders.aClass377_1065.method6388();
+			IndexLoaders.aClass447_435.method7458();
+			IndexLoaders.aClass498_3001.method8319();
+			IndexLoaders.CLAN_VAR_LOADER.method6754();
+			IndexLoaders.aClass233_5822.method3924();
+			IndexLoaders.RENDER_ANIMS.method3617();
+			IndexLoaders.aClass427_995.method7174();
+			IndexLoaders.WORLD_MAP_INDEX_LOADER.method3699();
+			IndexLoaders.ITEM_DEFAULTS.method7070();
+			IndexLoaders.aClass288_1746.method5070();
+			IndexLoaders.aClass45_5759.method916();
+			IndexLoaders.aClass436_7683.method7306();
+			IndexLoaders.aClass438_7932.method7324();
+			IndexLoaders.HITSPLAT_INDEX_LOADER.method3604();
+			IndexLoaders.HITBAR_INDEX.method5103();
+			Class468_Sub8.method12679();
+			Class520.method11161();
+			Class487.aClass378_5752.method6410();
+			Class413.method6939();
 			if (Class90.aClass496_952 != Class496.aClass496_5813) {
 				for (int i_2 = 0; i_2 < Class339.aByteArrayArray3986.length; i_2++) {
 					Class339.aByteArrayArray3986[i_2] = null;
 				}
 				client.anInt7173 = 0;
 			}
-			IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4040(-297960469);
-			Class468_Sub27.method12958(-449406429);
-			Class188.method3140((byte) -62);
-			Class191.method3166(-96454499);
-			Class321.method5757(1880031383);
+			IndexLoaders.MAP_REGION_DECODER.method4435().method4040();
+			Class468_Sub27.method12958();
+			Class188.method3140();
+			Class191.method3166();
+			Class321.method5757();
 			CS2Runner.aClass229_5901.method3859(876370296);
 			client.aClass229_7204.method3859(-1910455391);
 			Class20.aClass229_191.method3859(-1112414148);
 		}
-		Class430.method7217(953478712);
+		Class430.method7217();
 		HostNameIdentifier.method482((byte) 38);
 	}
 }

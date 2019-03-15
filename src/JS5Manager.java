@@ -18,7 +18,7 @@ public class JS5Manager {
 
 	BigInteger updateServerModulus;
 
-	public boolean init(byte b_1) {
+	public boolean init() {
 		if (this.buffer != null) {
 			return true;
 		} else {
@@ -82,17 +82,17 @@ public class JS5Manager {
 		}
 	}
 
-	public JS5Manager(JS5StandardRequester js5standardrequester_1, JS5LocalRequester js5localrequester_2, BigInteger biginteger_3, BigInteger biginteger_4) {
+	public JS5Manager(JS5StandardRequester js5standardrequester_1, JS5LocalRequester js5localrequester_2) {
 		this.standardRequester = js5standardrequester_1;
 		this.localRequester = js5localrequester_2;
-		this.updateServerExponent = biginteger_3;
-		this.updateServerModulus = biginteger_4;
+		this.updateServerExponent = Loader.RSA_PUBLIC_EXPONENT;
+		this.updateServerModulus = Loader.RSA_PUBLIC_MODULUS;
 		if (!this.standardRequester.priorityUnavailable(-630500434)) {
 			this.tableRequest = this.standardRequester.request(255, 255, (byte) 0, true, (byte) 58);
 		}
 	}
 
-	JS5GrabWorker method5478(int i_1, JS5CacheFile js5cachefile_2, JS5CacheFile js5cachefile_3, boolean bool_4, int i_5) {
+	JS5GrabWorker method5478(int i_1, JS5CacheFile js5cachefile_2, JS5CacheFile js5cachefile_3) {
 		if (this.buffer == null) {
 			throw new RuntimeException();
 		} else if (i_1 >= 0 && i_1 < this.grabWorkers.length) {
@@ -104,7 +104,7 @@ public class JS5Manager {
 				int i_7 = this.buffer.readInt();
 				byte[] bytes_8 = new byte[64];
 				this.buffer.readBytes(bytes_8, 0, 64);
-				JS5GrabWorker js5grabworker_9 = new JS5GrabWorker(i_1, js5cachefile_2, js5cachefile_3, this.standardRequester, this.localRequester, i_6, bytes_8, i_7, bool_4);
+				JS5GrabWorker js5grabworker_9 = new JS5GrabWorker(i_1, js5cachefile_2, js5cachefile_3, this.standardRequester, this.localRequester, i_6, bytes_8, i_7, true);
 				this.grabWorkers[i_1] = js5grabworker_9;
 				return js5grabworker_9;
 			}
@@ -113,27 +113,27 @@ public class JS5Manager {
 		}
 	}
 
-	public JS5GrabWorker method5480(int i_1, JS5CacheFile js5cachefile_2, JS5CacheFile js5cachefile_3, byte b_4) {
-		return this.method5478(i_1, js5cachefile_2, js5cachefile_3, true, -84077622);
+	public JS5GrabWorker method5480(int i_1, JS5CacheFile js5cachefile_2, JS5CacheFile js5cachefile_3) {
+		return this.method5478(i_1, js5cachefile_2, js5cachefile_3);
 	}
 
-	public void pulse(int i_1) {
+	public void pulse() {
 		if (this.grabWorkers != null) {
 			int i_2;
 			for (i_2 = 0; i_2 < this.grabWorkers.length; i_2++) {
 				if (this.grabWorkers[i_2] != null) {
-					this.grabWorkers[i_2].processCheck((byte) -47);
+					this.grabWorkers[i_2].processCheck();
 				}
 			}
 			for (i_2 = 0; i_2 < this.grabWorkers.length; i_2++) {
 				if (this.grabWorkers[i_2] != null) {
-					this.grabWorkers[i_2].method12552(808893293);
+					this.grabWorkers[i_2].method12552();
 				}
 			}
 		}
 	}
 
-	static final boolean method5491(char var_0, int i_1) {
+	static final boolean method5491(char var_0) {
 		if (Character.isISOControl(var_0)) {
 			return false;
 		} else if (Class380.method6450(var_0, 1746553260)) {
@@ -160,12 +160,12 @@ public class JS5Manager {
 	}
 
 	static final boolean method5492(Class293[][][] arr_0, int i_1, int i_2, int i_3, boolean bool_4, byte b_5) {
-		byte[][][] bytes_6 = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
+		byte[][][] bytes_6 = IndexLoaders.MAP_REGION_DECODER.method4532();
 		byte b_7 = bool_4 ? 1 : (byte) (client.anInt7286 & 0xff);
 		if (bytes_6[Class4.anInt35][i_2][i_3] == b_7) {
 			return false;
 		} else {
-			RegionMap regionmap_8 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+			RegionMap regionmap_8 = IndexLoaders.MAP_REGION_DECODER.method4433();
 			if ((regionmap_8.tileMasks[Class4.anInt35][i_2][i_3] & 0x4) == 0) {
 				return false;
 			} else {
@@ -199,18 +199,18 @@ public class JS5Manager {
 								Class208 class208_27;
 								if (bool_16 && arr_0[i_18][i_11][i_14] != null) {
 									if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505 != null) {
-										i_19 = Class125.method2172(i_12, 2134977651);
+										i_19 = Class125.method2172(i_12);
 										if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505.aShort9615 == i_19 || arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502.aShort9615 == i_19) {
 											continue;
 										}
 										if (i_13 != 0) {
-											i_20 = Class125.method2172(i_13, 2134977651);
+											i_20 = Class125.method2172(i_13);
 											if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505.aShort9615 == i_20 || arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502.aShort9615 == i_20) {
 												continue;
 											}
 										}
 										if (i_15 != 0) {
-											i_20 = Class125.method2172(i_15, 2134977651);
+											i_20 = Class125.method2172(i_15);
 											if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505.aShort9615 == i_20 || arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502.aShort9615 == i_20) {
 												continue;
 											}
@@ -254,7 +254,7 @@ public class JS5Manager {
 						}
 					}
 					if (bool_17) {
-						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1297702822).aClass390Array2591[Class4.anInt35 + 1].method6722(i_11, i_14, 65280);
+						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1297702822).aClass390Array2591[Class4.anInt35 + 1].method6722(i_11, i_14);
 						if (client.anIntArray7198[i_1] < i_18) {
 							client.anIntArray7198[i_1] = i_18;
 						}
@@ -341,7 +341,7 @@ public class JS5Manager {
 		}
 	}
 
-	public static Object method5493(byte[] bytes_0, boolean bool_1, byte b_2) {
+	public static Object method5493(byte[] bytes_0, byte b_2) {
 		if (bytes_0 == null) {
 			return null;
 		} else if (bytes_0.length > 136) {

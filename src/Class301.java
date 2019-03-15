@@ -35,7 +35,7 @@ public class Class301 implements Interface41 {
 		}
 	}
 
-	public Class445 method232(byte b_1) {
+	public Class445 method232() {
 		return Class445.aClass445_5383;
 	}
 
@@ -51,7 +51,7 @@ public class Class301 implements Interface41 {
 		return this.aBool3554;
 	}
 
-	public int getCompletion(int i_1) {
+	public int getCompletion() {
 		if (this.aBool3554) {
 			return 100;
 		} else {
@@ -69,7 +69,7 @@ public class Class301 implements Interface41 {
 		this.aString3553 = string_1;
 	}
 
-	public static Class283 method5331(Index index_0, String string_1, boolean bool_2, int i_3) {
+	public static Class283 method5331(Index index_0, String string_1, boolean bool_2) {
 		int i_4 = index_0.getArchiveId(string_1);
 		if (i_4 == -1) {
 			return new Class283(0);
@@ -97,7 +97,7 @@ public class Class301 implements Interface41 {
 		}
 	}
 
-	static void method5333(int i_0) {
+	static void method5333() {
 		if (Class179.anInt2221 < 102) {
 			Class179.anInt2221 += 6;
 		}
@@ -133,7 +133,7 @@ public class Class301 implements Interface41 {
 		}
 		for (i_1 = 0; i_1 < client.anInt7193; i_1++) {
 			KeyRecord interface16_9 = client.anInterface16Array7154[i_1];
-			int i_10 = interface16_9.method92(317240429);
+			int i_10 = interface16_9.method92();
 			char var_4 = interface16_9.getCode(-63648913);
 			int i_5 = interface16_9.method125(1713705553);
 			if (i_10 == 84) {
@@ -158,7 +158,7 @@ public class Class301 implements Interface41 {
 						if (transferable_6 != null) {
 							String string_11 = (String) transferable_6.getTransferData(DataFlavor.stringFlavor);
 							if (string_11 != null) {
-								String[] arr_8 = Class456_Sub3.method12681(string_11, '\n', 229848533);
+								String[] arr_8 = Class456_Sub3.method12681(string_11, '\n');
 								Class341.method6074(arr_8, 1068148827);
 							}
 						}
@@ -194,7 +194,7 @@ public class Class301 implements Interface41 {
 		}
 		client.anInt7193 = 0;
 		client.maximumHeldKeys = 0;
-		IncomingPacket.method6378(-1538407760);
+		IncomingPacket.method6378();
 	}
 
 	static boolean method5334(int i_0, int i_1, int i_2) {

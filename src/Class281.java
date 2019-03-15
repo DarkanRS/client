@@ -15,25 +15,25 @@ public class Class281 {
 
 	int[] anIntArray3373;
 
-	MeshRasterizer method4977(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		RSMesh rsmesh_3 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, this.anInt3372, 0);
+	MeshRasterizer method4977(GraphicalRenderer graphicalrenderer_1) {
+		RSMesh rsmesh_3 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, this.anInt3372);
 		if (rsmesh_3 == null) {
 			return null;
 		} else {
 			if (rsmesh_3.version < 13) {
-				rsmesh_3.upscale(2);
+				rsmesh_3.upscale();
 			}
 			return graphicalrenderer_1.createMeshRasterizer(rsmesh_3, 2048, anInt3376, 64, 768);
 		}
 	}
 
-	public void method4978(SceneObjectManager sceneobjectmanager_1, byte b_2) {
+	public void method4978(SceneObjectManager sceneobjectmanager_1) {
 		if (sceneobjectmanager_1 != null) {
-			if (b_2 != -1)
-				if (this.anInt3374 > 0 && b_2 == -1) {
-					this.method4983(sceneobjectmanager_1, -199147692);
+			if ((byte) -1 != -1)
+				if (this.anInt3374 > 0 && (byte) -1 == -1) {
+					this.method4983(sceneobjectmanager_1);
 					Iterator iterator_3 = this.aLinkedList3377.iterator();
-					while (iterator_3.hasNext() && b_2 == -1) {
+					while (iterator_3.hasNext() && (byte) -1 == -1) {
 						Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Class521_Sub1_Sub1_Sub1) iterator_3.next();
 						sceneobjectmanager_1.method3397(class521_sub1_sub1_sub1_4, false, 1630649491);
 					}
@@ -41,7 +41,7 @@ public class Class281 {
 		}
 	}
 
-	public void method4979(SceneObjectManager sceneobjectmanager_1, int i_2) {
+	public void method4979(SceneObjectManager sceneobjectmanager_1) {
 		if (sceneobjectmanager_1 != null && this.aLinkedList3377 != null) {
 			Iterator iterator_3 = this.aLinkedList3377.iterator();
 			while (iterator_3.hasNext()) {
@@ -51,9 +51,9 @@ public class Class281 {
 		}
 	}
 
-	void method4983(SceneObjectManager sceneobjectmanager_1, int i_2) {
+	void method4983(SceneObjectManager sceneobjectmanager_1) {
 		this.aLinkedList3377 = new LinkedList();
-		RegionMap regionmap_3 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		RegionMap regionmap_3 = IndexLoaders.MAP_REGION_DECODER.method4433();
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		CoordGrid coordgrid_5 = new CoordGrid(Class4.anInt35, this.anIntArray3375[0], this.anIntArray3373[0]);
 		for (int i_6 = 1; i_6 < this.anInt3374; i_6++) {
@@ -96,6 +96,6 @@ public class Class281 {
 			this.anIntArray3375[i_6] = i_4 + rsbytebuffer_2.readByte();
 			this.anIntArray3373[i_6] = i_5 + rsbytebuffer_2.readByte();
 		}
-		this.method4977(graphicalrenderer_1, 546105467);
+		this.method4977(graphicalrenderer_1);
 	}
 }

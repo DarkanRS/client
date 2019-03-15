@@ -39,7 +39,7 @@ public class Class282_Sub18 extends Node {
 	int anInt7638 = 0;
 
 	static void method12261(byte[] bytes_0) {
-		method12262(bytes_0, 0);
+		method12262(bytes_0);
 		anInt7635 = 1 << method12264(4);
 		anInt7637 = 1 << method12264(4);
 		aFloatArray7612 = new float[anInt7637];
@@ -79,7 +79,7 @@ public class Class282_Sub18 extends Node {
 			int i_10 = Class159.method2739(i_5 - 1, 548668392);
 
 			for (int i_11 = 0; i_11 < i_5; i_11++) {
-				ints_15[i_11] = Class3.method285(i_11, i_10, 1788302958);
+				ints_15[i_11] = Class3.method285(i_11, i_10);
 			}
 
 			if (i_1 != 0) {
@@ -143,9 +143,9 @@ public class Class282_Sub18 extends Node {
 		aBool7611 = true;
 	}
 
-	static void method12262(byte[] bytes_0, int i_1) {
+	static void method12262(byte[] bytes_0) {
 		aByteArray7607 = bytes_0;
-		anInt7614 = i_1;
+		anInt7614 = 0;
 		anInt7613 = 0;
 	}
 
@@ -215,7 +215,7 @@ public class Class282_Sub18 extends Node {
 	}
 
 	float[] method12267(int i_1) {
-		method12262(this.aByteArrayArray7606[i_1], 0);
+		method12262(this.aByteArrayArray7606[i_1]);
 		method12263();
 		int i_2 = method12264(Class159.method2739(anIntArray7621.length - 1, -908362072));
 		boolean bool_3 = aBoolArray7619[i_2];
@@ -523,7 +523,7 @@ public class Class282_Sub18 extends Node {
 	}
 
 	public Class282_Sub26_Sub1_Sub1 method12272() {
-		Class2.method263(this, (byte) 24);
+		Class2.method263(this);
 		return !this.method12276() || this.anInt7636 > this.anInt7605 && this.anInt7638 > this.anInt7605 / Class204.method3363(1396511710) ? new Class282_Sub26_Sub1_Sub1(this.anInt7605, this, this.aFloatArray7608, this.anInt7616, this.anInt7604, this.aBool7609) : null;
 	}
 

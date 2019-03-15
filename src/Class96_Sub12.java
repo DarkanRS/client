@@ -8,7 +8,7 @@ public class Class96_Sub12 extends Class96 {
 
 	int anInt9317;
 
-	public void method1592(int i_1) {
+	public void method1592() {
 		if (client.CURRENT_CUTSCENE != -1) {
 			Class213.method3661(client.CURRENT_CUTSCENE, this.aString9318, this.anInt9317, (byte) -117);
 		}
@@ -26,7 +26,7 @@ public class Class96_Sub12 extends Class96 {
 		this.anInt9317 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	static final void method14612(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	static final void method14612(int i_0, int i_1, int i_2, int i_3) {
 		Class180[] arr_7 = client.aClass180Array7348;
 		for (int i_8 = 0; i_8 < arr_7.length; i_8++) {
 			Class180 class180_9 = arr_7[i_8];
@@ -42,14 +42,14 @@ public class Class96_Sub12 extends Class96 {
 		}
 	}
 
-	public static int method14613(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1) {
+	public static int method14613(Class282_Sub50_Sub7 class282_sub50_sub7_0) {
 		if (Class20.aBool161) {
 			return 6;
 		} else if (class282_sub50_sub7_0 == null) {
 			return 0;
 		} else {
 			int i_2 = class282_sub50_sub7_0.anInt9587;
-			return Class14.method539(i_2, 85195047) ? 1 : (Class38.method859(i_2, -1682057624) ? 2 : (EnumDefinitions.method7252(i_2, (byte) 0) ? 3 : (Class237.method3989(i_2, (byte) 0) ? 4 : (Class348.method6176(i_2, -1754643726) ? 7 : (i_2 == 16 ? 8 : 5)))));
+			return Class14.method539(i_2, 85195047) ? 1 : (Class38.method859(i_2, -1682057624) ? 2 : (EnumDefinitions.method7252(i_2) ? 3 : (Class237.method3989(i_2) ? 4 : (Class348.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
 		}
 	}
 

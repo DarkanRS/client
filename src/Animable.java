@@ -64,7 +64,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	int anInt10363;
 
 	public void method15791(int i_1, boolean bool_2, byte b_3) {
-		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs((byte) -17);
+		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs();
 		if (bool_2 || renderanimdefs_4.anInt2820 != 0 || this.anInt10340 != 0) {
 			this.anInt10361 = i_1 & 0x3fff;
 			this.aClass19_10359.method577(this.anInt10361, 836947093);
@@ -80,7 +80,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return this.aBool10312;
 	}
 
-	public abstract int method15794(int var1);
+	public abstract int method15794();
 
 	public void method15795(int i_1, int i_2, boolean bool_3, byte b_4) {
 		if (this.initInterface()) {
@@ -89,8 +89,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public int method15796(byte b_1) {
-		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs((byte) -17);
+	public int method15796() {
+		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs();
 		int i_3 = this.aClass19_10359.anInt153;
 		boolean bool_4;
 		if (renderanimdefs_2.anInt2820 != 0) {
@@ -136,7 +136,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return i_5;
 	}
 
-	public void method15797(int[] ints_1, int[] ints_2, int i_3) {
+	public void method15797(int[] ints_1, int[] ints_2) {
 		if (this.anIntArray10335 == null && ints_1 != null) {
 			this.anIntArray10335 = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
 		} else if (ints_1 == null) {
@@ -163,7 +163,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public boolean method15798(int i_1, int i_2, short s_3) {
+	public boolean method15798(int i_1, int i_2) {
 		if (this.anIntArray10362 == null) {
 			if (i_2 == -1) {
 				return true;
@@ -176,7 +176,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 		}
 
-		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs((byte) -17);
+		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs();
 		int i_5 = 256;
 		if (renderanimdefs_4.anIntArray2818 != null && renderanimdefs_4.anIntArray2818[i_1] > 0) {
 			i_5 = renderanimdefs_4.anIntArray2818[i_1];
@@ -188,7 +188,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			if (this.anIntArray10362[i_1] == -1) {
 				return true;
 			} else {
-				i_6 = this.aClass19_10359.method578((byte) 2);
+				i_6 = this.aClass19_10359.method578();
 				i_7 = this.anIntArray10362[i_1];
 				int i_8 = i_6 - i_7;
 				if (i_8 >= -i_5 && i_8 <= i_5) {
@@ -214,7 +214,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 		} else {
 			if (this.anIntArray10362[i_1] == -1) {
-				this.anIntArray10362[i_1] = this.aClass19_10359.method578((byte) 2);
+				this.anIntArray10362[i_1] = this.aClass19_10359.method578();
 			}
 
 			i_6 = this.anIntArray10362[i_1];
@@ -301,7 +301,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 
-				this.aClass539_10369.method11511(graphicalrenderer_1, (long) client.cycles, arr_15, arr_17, false);
+				this.aClass539_10369.method11511(graphicalrenderer_1, (long) client.cycles, arr_15, arr_17);
 				this.aBool10370 = true;
 			}
 		} else if (this.aClass539_10369 != null) {
@@ -362,7 +362,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		class161_8.animation.method7571(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
 	}
 
-	public final void method15801(int i_1) {
+	public final void method15801() {
 		this.anInt10355 = 0;
 		this.anInt10367 = 0;
 	}
@@ -384,7 +384,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_11 = -1;
 		int i_12 = 0;
 		if (i_1 >= 0) {
-			HitsplatDefinitions hitsplatdefinitions_13 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i_1, 1856651955);
+			HitsplatDefinitions hitsplatdefinitions_13 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i_1);
 			i_11 = hitsplatdefinitions_13.anInt2839;
 			i_12 = hitsplatdefinitions_13.anInt2841;
 		}
@@ -443,7 +443,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public final void displayHitbar(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte b_7) {
+	public final void displayHitbar(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		HitbarDefinitions hitbardefinitions_8 = IndexLoaders.HITBAR_INDEX.getDefinitions(i_1, -133815568);
 		Class275_Sub7 class275_sub7_9 = null;
 		Class275_Sub7 class275_sub7_10 = null;
@@ -451,7 +451,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_12 = 0;
 
 		Class275_Sub7 class275_sub7_13;
-		for (class275_sub7_13 = (Class275_Sub7) this.aClass457_10333.method7659(301908602); class275_sub7_13 != null; class275_sub7_13 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 105)) {
+		for (class275_sub7_13 = (Class275_Sub7) this.aClass457_10333.method7659(); class275_sub7_13 != null; class275_sub7_13 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 105)) {
 			++i_12;
 			if (hitbardefinitions_8 == class275_sub7_13.aClass198_7863) {
 				class275_sub7_13.method12601(i_2 + i_4, i_5, i_6, i_3, -555582799);
@@ -488,8 +488,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return this.aBool10312;
 	}
 
-	public int method12997(int i_1) {
-		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs((byte) -17);
+	public int method12997() {
+		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs();
 		int i_3;
 		if (renderanimdefs_2.anInt2798 != -1) {
 			i_3 = renderanimdefs_2.anInt2798;
@@ -514,7 +514,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public abstract int method15804();
 
-	public int getSize(int i_1) {
+	public int getSize() {
 		return this.anInt10315;
 	}
 
@@ -537,7 +537,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	abstract int getRenderAnimation(int var1);
+	abstract int getRenderAnimation();
 
 	public abstract Class163 method15809();
 
@@ -553,9 +553,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public void method15813(int i_1, byte b_2) {
+	public void method15813(int i_1) {
 		if (this.interfaceIdToLoad != this.loadedInterfaceId) {
-			this.method15816((byte) 106);
+			this.method15816();
 		}
 
 		this.interfaceIdToLoad = i_1;
@@ -563,7 +563,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public abstract boolean method15814();
 
-	boolean initInterface(int i_1, int i_2) {
+	boolean initInterface(int i_1) {
 		if (this.loadedInterfaceId == i_1) {
 			return true;
 		} else {
@@ -572,13 +572,13 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				return false;
 			} else {
 				this.loadedInterfaceId = i_1;
-				Connection.runIComponentScripts(this.inter.components, 2088119296);
+				Connection.runIComponentScripts(this.inter.components);
 				return true;
 			}
 		}
 	}
 
-	void method15816(byte b_1) {
+	void method15816() {
 		if (this.loadedInterfaceId != -1) {
 			HostNameIdentifier.clearComponents(this.loadedInterfaceId, -1658723672);
 			this.inter = null;
@@ -597,12 +597,12 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				}
 			}
 		} else {
-			GroundDecoration.method16094(this.inter.method1616(2115136308), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_1, false, (byte) 6);
+			GroundDecoration.method16094(this.inter.method1616(2115136308), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_1, false);
 		}
 
 	}
 
-	void method15819(MeshRasterizer meshrasterizer_1, int i_2) {
+	void method15819(MeshRasterizer meshrasterizer_1) {
 		int i_3 = this.aClass19_10360.anInt153;
 		int i_4 = this.aClass19_10330.anInt153;
 		if (i_3 != 0 || i_4 != 0) {
@@ -639,7 +639,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.anInt10315 = i_1;
 	}
 
-	void method15837(GraphicalRenderer graphicalrenderer_1, RenderAnimDefs renderanimdefs_2, int i_3, int i_4, int i_5, int i_6, byte b_7) {
+	void method15837(GraphicalRenderer graphicalrenderer_1, RenderAnimDefs renderanimdefs_2, int i_3, int i_4, int i_5, int i_6) {
 		for (int i_8 = 0; i_8 < this.aClass161Array10339.length; i_8++) {
 			byte b_9 = 0;
 			if (i_8 == 0) {
@@ -741,15 +741,15 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public abstract Class163 method15852();
 
-	public RenderAnimDefs getRenderAnimDefs(byte b_1) {
-		int i_2 = this.getRenderAnimation(635765286);
+	public RenderAnimDefs getRenderAnimDefs() {
+		int i_2 = this.getRenderAnimation();
 		return i_2 == -1 ? RenderAnimIndexLoader.aClass227_2669 : IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_2, (byte) -2);
 	}
 
-	public final void method15857(int i_1, int i_2) {
+	public final void method15857(int i_1) {
 		HitbarDefinitions hitbardefinitions_3 = IndexLoaders.HITBAR_INDEX.getDefinitions(i_1, 757267285);
 
-		for (Class275_Sub7 class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7659(301908602); class275_sub7_4 != null; class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 67)) {
+		for (Class275_Sub7 class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7659(); class275_sub7_4 != null; class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 67)) {
 			if (hitbardefinitions_3 == class275_sub7_4.aClass198_7863) {
 				class275_sub7_4.method4887((byte) -33);
 				break;
@@ -759,9 +759,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public void method15863(int i_1, int i_2) {
-		RenderAnimDefs renderanimdefs_3 = this.getRenderAnimDefs((byte) -17);
+		RenderAnimDefs renderanimdefs_3 = this.getRenderAnimDefs();
 		if (renderanimdefs_3.anInt2820 != 0 || this.anInt10340 != 0) {
-			this.aClass19_10359.method579(73676429);
+			this.aClass19_10359.method579();
 			int i_4 = i_1 - this.aClass19_10359.anInt153 & 0x3fff;
 			if (i_4 > 8192) {
 				this.anInt10361 = this.aClass19_10359.anInt153 - (16384 - i_4);
@@ -794,8 +794,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.aClass457_10333 = new EntityList();
 		this.faceEntity = -1;
 		this.currentAnimations = null;
-		this.aClass456_Sub3_10337 = new Class456_Sub3(this, false);
-		this.currentAnimation = new Class456_Sub2(this, false);
+		this.aClass456_Sub3_10337 = new Class456_Sub3(this);
+		this.currentAnimation = new Class456_Sub2(this);
 		this.anInt10347 = -1;
 		this.anInt10348 = -1;
 		this.aByte10352 = 0;
@@ -856,7 +856,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public abstract boolean method15887(int var1);
+	public abstract boolean method15887();
 
 	public int method13006() {
 		return this.anInt10317 * -358839357 * 296631531 == -32768 ? 0 : 296631531 * this.anInt10317 * -358839357;
@@ -864,7 +864,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public abstract int method15892();
 
-	void method15895(int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
+	void method15895(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		Vector3 vector3_7 = this.method11166().aClass385_3595;
 		int i_8 = this.aShort9458 + this.localX >> 1;
 		int i_9 = this.localY + this.aShort9456 >> 1;
@@ -938,7 +938,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	boolean initInterface() {
-		return this.interfaceIdToLoad == -1 ? false : this.initInterface(this.interfaceIdToLoad, -1081352448);
+		return this.interfaceIdToLoad == -1 ? false : this.initInterface(this.interfaceIdToLoad);
 	}
 
 }

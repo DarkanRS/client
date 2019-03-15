@@ -13,13 +13,13 @@ public class Class282_Sub50_Sub15 extends CacheableNode {
 		this.aClass477_9770 = new Queue();
 	}
 
-	boolean method15245(Class282_Sub50_Sub7 class282_sub50_sub7_1, int i_2) {
+	boolean method15245(Class282_Sub50_Sub7 class282_sub50_sub7_1) {
 		boolean bool_3 = true;
 		class282_sub50_sub7_1.method13452();
 
-		for (Class282_Sub50_Sub7 class282_sub50_sub7_4 = (Class282_Sub50_Sub7) this.aClass477_9770.method7941((byte) 4); class282_sub50_sub7_4 != null; bool_3 = false) {
+		for (Class282_Sub50_Sub7 class282_sub50_sub7_4 = (Class282_Sub50_Sub7) this.aClass477_9770.method7941(); class282_sub50_sub7_4 != null; bool_3 = false) {
 			if (Class301.method5334(class282_sub50_sub7_1.anInt9587, class282_sub50_sub7_4.anInt9587, 82678317)) {
-				Defaults7Loader.method8751(class282_sub50_sub7_1, class282_sub50_sub7_4, 1144604728);
+				Defaults7Loader.method8751(class282_sub50_sub7_1, class282_sub50_sub7_4);
 				++this.anInt9769;
 				return !bool_3;
 			}
@@ -27,7 +27,7 @@ public class Class282_Sub50_Sub15 extends CacheableNode {
 			class282_sub50_sub7_4 = (Class282_Sub50_Sub7) this.aClass477_9770.method7955(466135695);
 		}
 
-		this.aClass477_9770.method7936(class282_sub50_sub7_1, -1738910950);
+		this.aClass477_9770.method7936(class282_sub50_sub7_1);
 		++this.anInt9769;
 		return bool_3;
 	}

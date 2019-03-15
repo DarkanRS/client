@@ -2,13 +2,13 @@ public abstract class Class199 {
 
 	public abstract KeyRecord method3234();
 
-	public abstract void method3235(byte var1);
+	public abstract void method3235();
 
 	public abstract boolean method3236(int var1, int var2);
 
 	public abstract KeyRecord getNext(int var1);
 
-	public abstract void method3238(int var1);
+	public abstract void method3238();
 
 	public abstract KeyRecord method3239();
 

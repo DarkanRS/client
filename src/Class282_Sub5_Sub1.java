@@ -35,7 +35,7 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 			int i_6;
 			for (i_6 = 0; i_4 > 256 || i_5 > 256; i_6++) {
 				OpenGL.glViewport(0, 0, i_4, i_5);
-				this.aClass158_Sub1_Sub4_10032.method13759(0, this.aClass137_Sub1Array10028[i_6].method14441(0));
+				this.aClass158_Sub1_Sub4_10032.method13759(0, this.aClass137_Sub1Array10028[i_6].method14441());
 				if (i_6 == 0) {
 					this.aClass505_Sub1_7507.method13654(class137_sub1_2);
 					OpenGL.glBegin(7);
@@ -171,8 +171,8 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 			this.aClass137_Sub1_10034 = new Class137_Sub1(this.aClass505_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
 			this.aClass137_Sub1_10034.method14445(false, false);
 			this.aClass505_Sub1_7507.method8637(this.aClass158_Sub1_Sub4_10031, 184932253);
-			this.aClass158_Sub1_Sub4_10031.method13759(0, this.aClass137_Sub1_10038.method14441(0));
-			this.aClass158_Sub1_Sub4_10031.method13759(1, this.aClass137_Sub1_10034.method14441(0));
+			this.aClass158_Sub1_Sub4_10031.method13759(0, this.aClass137_Sub1_10038.method14441());
+			this.aClass158_Sub1_Sub4_10031.method13759(1, this.aClass137_Sub1_10034.method14441());
 			this.aClass158_Sub1_Sub4_10031.method15628(0);
 			if (!this.aClass158_Sub1_Sub4_10031.method13764()) {
 				this.aClass505_Sub1_7507.method8416(this.aClass158_Sub1_Sub4_10031, (byte) -55);
@@ -288,7 +288,7 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 			int i_6;
 			for (i_6 = 0; i_4 > 256 || i_5 > 256; i_6++) {
 				OpenGL.glViewport(0, 0, i_4, i_5);
-				this.aClass158_Sub1_Sub4_10032.method13759(0, this.aClass137_Sub1Array10028[i_6].method14441(0));
+				this.aClass158_Sub1_Sub4_10032.method13759(0, this.aClass137_Sub1Array10028[i_6].method14441());
 				if (i_6 == 0) {
 					this.aClass505_Sub1_7507.method13654(class137_sub1_2);
 					OpenGL.glBegin(7);
@@ -420,8 +420,8 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 			this.aClass137_Sub1_10034 = new Class137_Sub1(this.aClass505_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
 			this.aClass137_Sub1_10034.method14445(false, false);
 			this.aClass505_Sub1_7507.method8637(this.aClass158_Sub1_Sub4_10031, -894627004);
-			this.aClass158_Sub1_Sub4_10031.method13759(0, this.aClass137_Sub1_10038.method14441(0));
-			this.aClass158_Sub1_Sub4_10031.method13759(1, this.aClass137_Sub1_10034.method14441(0));
+			this.aClass158_Sub1_Sub4_10031.method13759(0, this.aClass137_Sub1_10038.method14441());
+			this.aClass158_Sub1_Sub4_10031.method13759(1, this.aClass137_Sub1_10034.method14441());
 			this.aClass158_Sub1_Sub4_10031.method15628(0);
 			if (!this.aClass158_Sub1_Sub4_10031.method13764()) {
 				this.aClass505_Sub1_7507.method8416(this.aClass158_Sub1_Sub4_10031, (byte) -73);
@@ -447,8 +447,8 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 			this.aClass137_Sub1_10034 = new Class137_Sub1(this.aClass505_Sub1_7507, 3553, Class150.aClass150_1949, Class76.aClass76_755, 256, 256);
 			this.aClass137_Sub1_10034.method14445(false, false);
 			this.aClass505_Sub1_7507.method8637(this.aClass158_Sub1_Sub4_10031, -1603683082);
-			this.aClass158_Sub1_Sub4_10031.method13759(0, this.aClass137_Sub1_10038.method14441(0));
-			this.aClass158_Sub1_Sub4_10031.method13759(1, this.aClass137_Sub1_10034.method14441(0));
+			this.aClass158_Sub1_Sub4_10031.method13759(0, this.aClass137_Sub1_10038.method14441());
+			this.aClass158_Sub1_Sub4_10031.method13759(1, this.aClass137_Sub1_10034.method14441());
 			this.aClass158_Sub1_Sub4_10031.method15628(0);
 			if (!this.aClass158_Sub1_Sub4_10031.method13764()) {
 				this.aClass505_Sub1_7507.method8416(this.aClass158_Sub1_Sub4_10031, (byte) -117);
@@ -584,7 +584,7 @@ public class Class282_Sub5_Sub1 extends Class282_Sub5 {
 			int i_6;
 			for (i_6 = 0; i_4 > 256 || i_5 > 256; i_6++) {
 				OpenGL.glViewport(0, 0, i_4, i_5);
-				this.aClass158_Sub1_Sub4_10032.method13759(0, this.aClass137_Sub1Array10028[i_6].method14441(0));
+				this.aClass158_Sub1_Sub4_10032.method13759(0, this.aClass137_Sub1Array10028[i_6].method14441());
 				if (i_6 == 0) {
 					this.aClass505_Sub1_7507.method13654(class137_sub1_2);
 					OpenGL.glBegin(7);

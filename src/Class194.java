@@ -61,11 +61,11 @@ public class Class194 {
 		return i_2;
 	}
 
-	void method3178(GraphicalRenderer graphicalrenderer_1, String string_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	void method3178(GraphicalRenderer graphicalrenderer_1, String string_2, int i_3, int i_4, int i_5) {
 		int i_7 = this.method3177(string_2) / 2;
 		graphicalrenderer_1.qa(this.anIntArray2409);
 		if (i_3 - i_7 <= this.anIntArray2409[2] && i_3 + i_7 >= this.anIntArray2409[0] && i_4 - this.anInt2407 <= this.anIntArray2409[3] && i_4 + this.anInt2408 >= this.anIntArray2409[1]) {
-			this.method3175(graphicalrenderer_1, string_2, this.anIntArray2409, i_3 - i_7, i_4, i_5, bool_6);
+			this.method3175(graphicalrenderer_1, string_2, this.anIntArray2409, i_3 - i_7, i_4, i_5, true);
 		}
 
 	}
@@ -134,18 +134,18 @@ public class Class194 {
 		this.anInt2407 = i_21 - i_17;
 		this.anInt2408 = i_11;
 		this.anIntArray2403[i_5] = i_8;
-		this.aClass160Array2405[i_5] = graphicalrenderer_1.createNativeSprite(ints_14, 0, i_7, i_7, i_10, -829104519);
+		this.aClass160Array2405[i_5] = graphicalrenderer_1.createNativeSprite(ints_14, i_7, i_7, i_10, -829104519);
 	}
 
-	Class194(GraphicalRenderer class505, int i, boolean bool, Component component) {
+	Class194(GraphicalRenderer class505, int i, Component component) {
 		((Class194) this).aBool2404 = false;
 		((Class194) this).aClass160Array2405 = new NativeSprite[256];
 		((Class194) this).anIntArray2403 = new int[256];
-		Font font = new Font("Helvetica", bool ? 1 : 0, i);
+		Font font = new Font("Helvetica", true ? 1 : 0, i);
 		FontMetrics fontmetrics = component.getFontMetrics(font);
 		for (int i_53_ = 0; i_53_ < anInt2402; i_53_++)
 			method3179(class505, font, fontmetrics, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\u00a3$%^&*()-_=+[{]};:'@#~,<.>/?\\| \u00c4\u00cb\u00cf\u00d6\u00dc\u00e4\u00eb\u00ef\u00f6\u00fc\u00ff\u00df\u00c1\u00c0\u00c9\u00c8\u00cd\u00cc\u00d3\u00d2\u00da\u00d9\u00e1\u00e0\u00e9\u00e8\u00ed\u00ec\u00f3\u00f2\u00fa\u00f9\u00c2\u00ca\u00ce\u00d4\u00db\u00e2\u00ea\u00ee\u00f4\u00fb\u00c6\u00e6\u00e3\u00c3\u00f5\u00d5\u00e7\u00c7".charAt(i_53_), i_53_, false);
-		if (bool && ((Class194) this).aBool2404) {
+		if (true && ((Class194) this).aBool2404) {
 			((Class194) this).aBool2404 = false;
 			font = new Font("Helvetica", 0, i);
 			fontmetrics = component.getFontMetrics(font);

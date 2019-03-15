@@ -50,7 +50,7 @@ public class Class282_Sub20_Sub36 extends Class282_Sub20 {
 		super(1, false);
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		switch (i_1) {
 		case 0:
 			this.anInt9975 = rsbytebuffer_2.readUnsignedShort();
@@ -60,20 +60,20 @@ public class Class282_Sub20_Sub36 extends Class282_Sub20 {
 		}
 	}
 
-	public static void method15418(int i_0) {
+	public static void method15418() {
 		Class278_Sub1.method13449((byte) -118);
-		Class253.method4330(22050, Class393.preferences.aClass468_Sub10_8215.method12691(-490218326) == 1, 2);
+		Class253.method4330(Class393.preferences.aClass468_Sub10_8215.method12691(-490218326) == 1);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
-		Class42_Sub1.method14563(true, Class282_Sub20_Sub10.method15262((Class282_Sub15_Sub2) null, 1928117026), (short) 11196);
+		Class42_Sub1.method14563(Class282_Sub20_Sub10.method15262((Class282_Sub15_Sub2) null, 1928117026), (short) 11196);
 		Class100.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
 		Class100.aClass253_1008.method4329(Class79.aClass282_Sub15_Sub4_783);
 	}
 
-	public static void method15419(String string_0, boolean bool_1, int i_2) {
+	public static void method15419(String string_0, boolean bool_1) {
 		Class282_Sub20_Sub8.method15242(string_0, bool_1, -1, -1, -1618689115);
 	}
 
-	public static void method15420(byte b_0) {
+	public static void method15420() {
 		try {
 			int i_1;
 			if (Class148.anInt1730 == 1) {
@@ -87,7 +87,7 @@ public class Class282_Sub20_Sub36 extends Class282_Sub20 {
 					return;
 				}
 				Class148.aClass282_Sub15_Sub2_1735.method15101((short) 15315);
-				Class148.aClass282_Sub15_Sub2_1735.method15097((short) 256);
+				Class148.aClass282_Sub15_Sub2_1735.method15097();
 				if (Class75.aClass317_746 != null) {
 					Class148.anInt1730 = 2;
 				} else {

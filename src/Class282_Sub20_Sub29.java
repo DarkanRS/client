@@ -6,12 +6,12 @@ public class Class282_Sub20_Sub29 extends Class282_Sub20 {
 	int anInt9915;
 	int anInt9912 = -1;
 
-	void method12326(int i_1) {
-		super.method12326(984017845);
+	void method12326() {
+		super.method12326();
 		this.anIntArray9916 = null;
 	}
 
-	boolean method15398(int i_1) {
+	boolean method15398() {
 		if (this.anIntArray9916 != null) {
 			return true;
 		} else if (this.anInt9912 >= 0) {
@@ -26,7 +26,7 @@ public class Class282_Sub20_Sub29 extends Class282_Sub20 {
 		}
 	}
 
-	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
 		if (i_1 == 0) {
 			this.anInt9912 = rsbytebuffer_2.readUnsignedShort();
 		}
@@ -37,13 +37,13 @@ public class Class282_Sub20_Sub29 extends Class282_Sub20 {
 		super(0, false);
 	}
 
-	int method12323(int i_1) {
+	int method12323() {
 		return this.anInt9912;
 	}
 
 	int[][] method12320(int i_1, int i_2) {
 		int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1580670333);
-		if (this.aClass308_7670.aBool3619 && this.method15398(1057936106)) {
+		if (this.aClass308_7670.aBool3619 && this.method15398()) {
 			int[] ints_4 = ints_3[0];
 			int[] ints_5 = ints_3[1];
 			int[] ints_6 = ints_3[2];

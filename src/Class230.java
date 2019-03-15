@@ -20,7 +20,7 @@ public class Class230 implements IndexLoader {
 			}
 			class226_3 = new Class226();
 			if (bytes_10 != null) {
-				class226_3.method3795(new RsByteBuffer(bytes_10), 631437425);
+				class226_3.method3795(new RsByteBuffer(bytes_10));
 			}
 			SoftCache softcache_9 = this.aClass229_2856;
 			synchronized (this.aClass229_2856) {
@@ -39,28 +39,28 @@ public class Class230 implements IndexLoader {
 		}
 	}
 
-	public void method3898(int i_1, int i_2) {
+	public void method3898() {
 		SoftCache softcache_3 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
-			this.aClass229_2856.method3858(i_1, (byte) -17);
+			this.aClass229_2856.method3858(5, (byte) -17);
 		}
 	}
 
-	public void method3899(short s_1) {
+	public void method3899() {
 		SoftCache softcache_2 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
 			this.aClass229_2856.method3863(1268003404);
 		}
 	}
 
-	public void method3903(byte b_1) {
+	public void method3903() {
 		SoftCache softcache_2 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
 			this.aClass229_2856.method3859(891629452);
 		}
 	}
 
-	public void method3906(int i_1, short s_2) {
+	public void method3906(int i_1) {
 		SoftCache softcache_3 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
 			this.aClass229_2856.method3859(1117502683);
@@ -68,7 +68,7 @@ public class Class230 implements IndexLoader {
 		}
 	}
 
-	public static final int method3910(String string_0, int i_1) {
+	public static final int method3910(String string_0) {
 		if (string_0 == null) {
 			return -1;
 		} else {
@@ -81,7 +81,7 @@ public class Class230 implements IndexLoader {
 		}
 	}
 
-	static void method3912(byte b_0) {
+	static void method3912() {
 		if (Class260.aClass277_3221 != null) {
 			Class260.aClass277_3221 = null;
 			Class187.method3121(256, (short) -575);

@@ -12,7 +12,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 		class61_1.method1207(5650566354848839815L * this.aLong10047 * 4560744686503677239L, this.aString10048, -386642241);
 	}
 
-	void method12251(Class61 class61_1, int i_2) {
+	void method12251(Class61 class61_1) {
 		class61_1.method1207(this.aLong10047, this.aString10048, -2047603654);
 	}
 
@@ -61,7 +61,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 		this.aString10048 = null;
 	}
 
-	void method12250(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method12250(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1.readUnsignedByte() != 255) {
 			--rsbytebuffer_1.index;
 			this.aLong10047 = rsbytebuffer_1.readLong();

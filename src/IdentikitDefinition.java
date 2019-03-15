@@ -34,14 +34,14 @@ public class IdentikitDefinition implements Definition {
 					break;
 				}
 				if (this.headModels[i_5] != -1) {
-					arr_2[i_3++] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.headModels[i_5], 0);
+					arr_2[i_3++] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.headModels[i_5]);
 				}
 				++i_5;
 			}
 		}
 		for (int i_6 = 0; i_6 < 5; i_6++) {
 			if (arr_2[i_6] != null && arr_2[i_6].version < 13) {
-				arr_2[i_6].upscale(2);
+				arr_2[i_6].upscale();
 			}
 		}
 		RSMesh rsmesh_8 = new RSMesh(arr_2, i_3);
@@ -58,7 +58,7 @@ public class IdentikitDefinition implements Definition {
 		return rsmesh_8;
 	}
 
-	void method897(RsByteBuffer buffer, int opcode, int i_3) {
+	void method897(RsByteBuffer buffer, int opcode) {
 		if (opcode == 1) {
 			buffer.readUnsignedByte();
 		} else {
@@ -94,7 +94,7 @@ public class IdentikitDefinition implements Definition {
 		}
 	}
 
-	public boolean method898(int i_1) {
+	public boolean method898() {
 		if (this.modelIds == null) {
 			return true;
 		} else {
@@ -111,7 +111,7 @@ public class IdentikitDefinition implements Definition {
 		}
 	}
 
-	public RSMesh method899(int i_1) {
+	public RSMesh method899() {
 		if (this.modelIds == null) {
 			return null;
 		} else {
@@ -124,13 +124,13 @@ public class IdentikitDefinition implements Definition {
 					if (i_4 >= this.modelIds.length) {
 						break;
 					}
-					arr_2[i_4] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.modelIds[i_4], 0);
+					arr_2[i_4] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.modelIds[i_4]);
 					++i_4;
 				}
 			}
 			for (int i_5 = 0; i_5 < this.modelIds.length; i_5++) {
 				if (arr_2[i_5].version < 13) {
-					arr_2[i_5].upscale(2);
+					arr_2[i_5].upscale();
 				}
 			}
 			RSMesh rsmesh_7;
@@ -157,7 +157,7 @@ public class IdentikitDefinition implements Definition {
 		}
 	}
 
-	public boolean method900(int i_1) {
+	public boolean method900() {
 		boolean bool_2 = true;
 		Index index_3 = this.aClass31_429.aClass317_359;
 		synchronized (this.aClass31_429.aClass317_359) {
@@ -170,13 +170,13 @@ public class IdentikitDefinition implements Definition {
 		}
 	}
 
-	void method909(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method909(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
-			this.method897(rsbytebuffer_1, i_3, -2093049019);
+			this.method897(rsbytebuffer_1, i_3);
 		}
 	}
 
@@ -189,12 +189,12 @@ public class IdentikitDefinition implements Definition {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static int method912(int i_0, int i_1) {
+	static int method912(int i_0) {
 		return i_0 == 16711935 ? -1 : Class5.method294(i_0, (byte) -81);
 	}
 
-	public static void method913(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, byte b_2) {
-		IComponentDefinitions icomponentdefinitions_3 = Class96_Sub23.method14682(interface_0, icomponentdefinitions_1, -838454718);
+	public static void method913(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
+		IComponentDefinitions icomponentdefinitions_3 = Class96_Sub23.method14682(interface_0, icomponentdefinitions_1);
 		int i_4;
 		int i_5;
 		if (icomponentdefinitions_3 == null) {

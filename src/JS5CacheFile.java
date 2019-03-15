@@ -15,7 +15,7 @@ public final class JS5CacheFile {
 
 	int anInt2575;
 
-	public boolean method3348(int i_1, byte[] bytes_2, int i_3, int i_4) {
+	public boolean method3348(int i_1, byte[] bytes_2, int i_3) {
 		Class440 class440_5 = this.aClass440_2573;
 		synchronized (this.aClass440_2573) {
 			if (i_3 >= 0 && i_3 <= this.anInt2572) {
@@ -64,7 +64,7 @@ public final class JS5CacheFile {
 				aByteArray2576[4] = (byte) (i_8 >> 8);
 				aByteArray2576[5] = (byte) i_8;
 				this.aClass440_2574.method7347((long) (i_1 * 6));
-				this.aClass440_2574.method7352(aByteArray2576, 0, 6, 1942118537);
+				this.aClass440_2574.method7352(aByteArray2576, 0, 6);
 				int i_22 = 0;
 				int i_10 = 0;
 				while (true) {
@@ -134,12 +134,12 @@ public final class JS5CacheFile {
 								aByteArray2576[8] = (byte) i_11;
 								aByteArray2576[9] = (byte) this.anInt2575;
 								this.aClass440_2573.method7347((long) (i_8 * 520));
-								this.aClass440_2573.method7352(aByteArray2576, 0, 10, 1942118537);
+								this.aClass440_2573.method7352(aByteArray2576, 0, 10);
 								i_12 = i_3 - i_22;
 								if (i_12 > 510) {
 									i_12 = 510;
 								}
-								this.aClass440_2573.method7352(bytes_2, i_22, i_12, 1942118537);
+								this.aClass440_2573.method7352(bytes_2, i_22, i_12);
 								i_22 += i_12;
 							} else {
 								aByteArray2576[0] = (byte) (i_1 >> 8);
@@ -151,12 +151,12 @@ public final class JS5CacheFile {
 								aByteArray2576[6] = (byte) i_11;
 								aByteArray2576[7] = (byte) this.anInt2575;
 								this.aClass440_2573.method7347((long) (i_8 * 520));
-								this.aClass440_2573.method7352(aByteArray2576, 0, 8, 1942118537);
+								this.aClass440_2573.method7352(aByteArray2576, 0, 8);
 								i_12 = i_3 - i_22;
 								if (i_12 > 512) {
 									i_12 = 512;
 								}
-								this.aClass440_2573.method7352(bytes_2, i_22, i_12, 1942118537);
+								this.aClass440_2573.method7352(bytes_2, i_22, i_12);
 								i_22 += i_12;
 							}
 							i_8 = i_11;
@@ -268,22 +268,22 @@ public final class JS5CacheFile {
 		return "" + this.anInt2575;
 	}
 
-	public JS5CacheFile(int i_1, Class440 class440_2, Class440 class440_3, int i_4) {
+	public JS5CacheFile(int i_1, Class440 class440_2, Class440 class440_3) {
 		this.anInt2575 = i_1;
 		this.aClass440_2573 = class440_2;
 		this.aClass440_2574 = class440_3;
-		this.anInt2572 = i_4;
+		this.anInt2572 = 1500000;
 	}
 
-	public static void record(MouseRecord class282_sub53_0, int i_1) {
+	public static void record(MouseRecord class282_sub53_0) {
 		if (!Class169.method2875(client.gameState, -1927229770)) {
 			class282_sub53_0.cache(-485901681);
 		} else {
-			Class236.aClass534_Sub2_2911.method11410(class282_sub53_0, (byte) 24);
+			Class236.aClass534_Sub2_2911.method11410(class282_sub53_0);
 		}
 	}
 
-	public static RouteStrategy method3354(int i_0, int i_1, int i_2, int i_3, SceneObjectType sceneobjecttype_4, int i_5, int i_6) {
+	public static RouteStrategy method3354(int i_0, int i_1, int i_2, int i_3, SceneObjectType sceneobjecttype_4, int i_5) {
 		Class224.aClass225_Sub4_2777.approxDestinationX = i_0;
 		Class224.aClass225_Sub4_2777.approxDestinationY = i_1;
 		Class224.aClass225_Sub4_2777.approxDestinationSizeX = i_2;
@@ -293,7 +293,7 @@ public final class JS5CacheFile {
 		return Class224.aClass225_Sub4_2777;
 	}
 
-	public static void method3359(int i_0) {
+	public static void method3359() {
 		if (!Class190.aBool2383) {
 			Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1518927169).aClass293ArrayArrayArray2610, (byte) 90);
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2093053436).waterRelatedClassArray1 != null) {

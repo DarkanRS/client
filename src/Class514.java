@@ -23,7 +23,7 @@ public final class Class514 {
 		Class508.anInt5864 = -1;
 	}
 
-	static Class149_Sub2 method8842(RsByteBuffer rsbytebuffer_0, byte b_1) {
+	static Class149_Sub2 method8842(RsByteBuffer rsbytebuffer_0) {
 		return new Class149_Sub2(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 }

@@ -9,7 +9,7 @@ public class NodeIterator implements Iterator {
 	NodeCollection collection;
 
 	public Node method7683(int i_1) {
-		this.method7697((short) -14367);
+		this.method7697();
 		return (Node) this.next();
 	}
 
@@ -29,7 +29,7 @@ public class NodeIterator implements Iterator {
 		return this.collection.tail != this.aClass282_5536;
 	}
 
-	public void method7684(NodeCollection nodecollection_1, byte b_2) {
+	public void method7684(NodeCollection nodecollection_1) {
 		this.collection = nodecollection_1;
 		this.aClass282_5536 = this.collection.tail.next;
 		this.aClass282_5537 = null;
@@ -50,7 +50,7 @@ public class NodeIterator implements Iterator {
 		}
 	}
 
-	void method7697(short s_1) {
+	void method7697() {
 		this.aClass282_5536 = this.collection.tail.next;
 		this.aClass282_5537 = null;
 	}

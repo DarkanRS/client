@@ -6,7 +6,7 @@ public class i extends Ground implements Interface40 {
 
 	public void method6721(Class282_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1, -128323671);
-		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -66), class282_sub24_1.method12369(1534020223), class282_sub24_1.method12394(1778675317), class282_sub24_1.method12370(-789603523), class282_sub24_1.method12371(-2137870600), ints_2);
+		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -66), class282_sub24_1.method12369(), class282_sub24_1.method12394(1778675317), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2137870600), ints_2);
 	}
 
 	native void G(ja var1, ba var2, int var3, int var4, int[][] var5, int[][] var6, int var7, int var8, int var9);
@@ -116,7 +116,7 @@ public class i extends Ground implements Interface40 {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
 		boolean bool_16 = false;
 		if (ints_10 != null) {
 			int[] ints_17 = ints_10;
@@ -202,7 +202,7 @@ public class i extends Ground implements Interface40 {
 		}
 
 		if (bool_16 || ints_23 != null) {
-			this.ya(i_1, i_2, ints_32, ints_24, ints_19, ints_25, ints_20, ints_23, ints_21, ints_22, class90_14.color, class90_14.scale, class90_14.intensity, bool_15);
+			this.ya(i_1, i_2, ints_32, ints_24, ints_19, ints_25, ints_20, ints_23, ints_21, ints_22, class90_14.color, class90_14.scale, class90_14.intensity, false);
 		}
 
 	}
@@ -231,21 +231,21 @@ public class i extends Ground implements Interface40 {
 
 	}
 
-	public void method6715(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
-		this.aja7144.nx().method318(this, i_1, i_2, i_3, i_4, i_5, i_6, i_7, bools_8);
+	public void method6715(int i_1, int i_2, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
+		this.aja7144.nx().method318(this, i_1, i_2, 1024, i_4, i_5, i_6, i_7, bools_8);
 	}
 
 	public native Shadow w(int var1, int var2, Shadow var3);
 
-	public native void UA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void UA(Shadow var1, int var2, int var3, int var4);
 
-	public native void NA(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
+	public native void NA(Shadow var1, int var2, int var3, int var4);
 
 	public native void u(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
 	public void method6713(Class282_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1, 806761388);
-		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -36), class282_sub24_1.method12369(1534020223), class282_sub24_1.method12394(1367026999), class282_sub24_1.method12370(-789603523), class282_sub24_1.method12371(-2137393590), ints_2);
+		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -36), class282_sub24_1.method12369(), class282_sub24_1.method12394(1367026999), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2137393590), ints_2);
 	}
 
 	native void A(int var1, int var2, int var3, int var4, int var5, int var6, int[] var7);
@@ -299,7 +299,7 @@ public class i extends Ground implements Interface40 {
 
 	native void ya(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int var11, int var12, int var13, boolean var14);
 
-	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		return true;
 	}
 
@@ -317,14 +317,14 @@ public class i extends Ground implements Interface40 {
 
 	public void method6720(Class282_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1, 93021309);
-		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -36), class282_sub24_1.method12369(1534020223), class282_sub24_1.method12394(1861802480), class282_sub24_1.method12370(-789603523), class282_sub24_1.method12371(-2141041870), ints_2);
+		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -36), class282_sub24_1.method12369(), class282_sub24_1.method12394(1861802480), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2141041870), ints_2);
 	}
 
 	public native void x(boolean var1);
 
 	public void method6711(Class282_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1, -1497714438);
-		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -75), class282_sub24_1.method12369(1534020223), class282_sub24_1.method12394(1800255406), class282_sub24_1.method12370(-789603523), class282_sub24_1.method12371(-2136043298), ints_2);
+		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -75), class282_sub24_1.method12369(), class282_sub24_1.method12394(1800255406), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2136043298), ints_2);
 	}
 
 	public void method6723(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {

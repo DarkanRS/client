@@ -7,14 +7,14 @@ public class TCPMessage extends Node {
 	static TCPMessage[] OUTGOING_PACKETS = new TCPMessage[300];
 	static int index = 0;
 
-	public void method12360(int i_1) {
+	public void method12360() {
 		if (index < OUTGOING_PACKETS.length) {
 			OUTGOING_PACKETS[++index - 1] = this;
 		}
 
 	}
 
-	static final void method12366(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	static final void method12366(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		if (client.anInt7341 == 1) {
 			int i_8 = Class197.NUM_PLAYER_INDICES;
 			int[] ints_9 = Class197.PLAYER_INDICES;

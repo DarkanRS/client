@@ -22,7 +22,7 @@ public class Class160_Sub3 extends NativeSprite {
 				ints_7[i_8] |= ~0xffffff;
 			}
 
-			this.method14425(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+			this.method14425(i_1, i_2, i_3, i_4, ints_7, i_3);
 		}
 
 	}
@@ -53,7 +53,7 @@ public class Class160_Sub3 extends NativeSprite {
 		this.aClass505_Sub2_9052.method13896(12);
 	}
 
-	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+	void method2755(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		this.aClass505_Sub2_9052.method13935();
 		this.aClass505_Sub2_9052.method13904(i_7);
 		Class47 class47_9 = this.aClass505_Sub2_9052.aClass47_8698;
@@ -79,14 +79,14 @@ public class Class160_Sub3 extends NativeSprite {
 		class47_9.method936();
 	}
 
-	public void method2751(int i_1, int i_2, int i_3) {
-		int[] ints_4 = this.aClass505_Sub2_9052.ab(i_1, i_2, this.anInt9060, this.anInt9053);
+	public void method2751() {
+		int[] ints_4 = this.aClass505_Sub2_9052.ab(0, 0, this.anInt9060, this.anInt9053);
 		int[] ints_5 = new int[this.anInt9060 * this.anInt9053];
-		this.anInterface6_9050.method53(0, 0, this.anInt9060, this.anInt9053, ints_5, 0);
+		this.anInterface6_9050.method53(this.anInt9060, this.anInt9053, ints_5);
 		int i_6;
 		int i_7;
 		int i_8;
-		if (i_3 == 0) {
+		if (3 == 0) {
 			for (i_6 = 0; i_6 < this.anInt9053; i_6++) {
 				i_7 = i_6 * this.anInt9060;
 
@@ -94,7 +94,7 @@ public class Class160_Sub3 extends NativeSprite {
 					ints_5[i_7 + i_8] = ints_5[i_7 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 8 & ~0xffffff;
 				}
 			}
-		} else if (i_3 == 1) {
+		} else if (3 == 1) {
 			for (i_6 = 0; i_6 < this.anInt9053; i_6++) {
 				i_7 = i_6 * this.anInt9060;
 
@@ -102,7 +102,7 @@ public class Class160_Sub3 extends NativeSprite {
 					ints_5[i_7 + i_8] = ints_5[i_7 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 16 & ~0xffffff;
 				}
 			}
-		} else if (i_3 == 2) {
+		} else if (3 == 2) {
 			for (i_6 = 0; i_6 < this.anInt9053; i_6++) {
 				i_7 = i_6 * this.anInt9060;
 
@@ -110,7 +110,7 @@ public class Class160_Sub3 extends NativeSprite {
 					ints_5[i_7 + i_8] = ints_5[i_7 + i_8] & 0xffffff | ints_4[i_7 + i_8] << 24 & ~0xffffff;
 				}
 			}
-		} else if (i_3 == 3) {
+		} else if (3 == 3) {
 			for (i_6 = 0; i_6 < this.anInt9053; i_6++) {
 				i_7 = i_6 * this.anInt9060;
 
@@ -120,7 +120,7 @@ public class Class160_Sub3 extends NativeSprite {
 			}
 		}
 
-		this.method14425(0, 0, this.anInt9060, this.anInt9053, ints_5, 0, this.anInt9060);
+		this.method14425(0, 0, this.anInt9060, this.anInt9053, ints_5, this.anInt9060);
 	}
 
 	void method2798(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9, int i_10) {
@@ -178,7 +178,7 @@ public class Class160_Sub3 extends NativeSprite {
 				ints_7[i_8] |= ~0xffffff;
 			}
 
-			this.method14425(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+			this.method14425(i_1, i_2, i_3, i_4, ints_7, i_3);
 		}
 
 	}
@@ -195,7 +195,7 @@ public class Class160_Sub3 extends NativeSprite {
 		return this.anInt9053;
 	}
 
-	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9, int i_10) {
+	void method2764(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6, int i_7, int i_8, int i_9) {
 		this.aClass505_Sub2_9052.method13935();
 		this.aClass505_Sub2_9052.method13904(i_9);
 		float f_12;
@@ -254,7 +254,7 @@ public class Class160_Sub3 extends NativeSprite {
 				ints_7[i_8] |= ~0xffffff;
 			}
 
-			this.method14425(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+			this.method14425(i_1, i_2, i_3, i_4, ints_7, i_3);
 		}
 
 	}
@@ -671,7 +671,7 @@ public class Class160_Sub3 extends NativeSprite {
 				ints_7[i_8] |= ~0xffffff;
 			}
 
-			this.method14425(i_1, i_2, i_3, i_4, ints_7, 0, i_3);
+			this.method14425(i_1, i_2, i_3, i_4, ints_7, i_3);
 		}
 
 	}
@@ -679,7 +679,7 @@ public class Class160_Sub3 extends NativeSprite {
 	public void method2770(int i_1, int i_2, int i_3) {
 		int[] ints_4 = this.aClass505_Sub2_9052.ab(i_1, i_2, this.anInt9060, this.anInt9053);
 		int[] ints_5 = new int[this.anInt9060 * this.anInt9053];
-		this.anInterface6_9050.method53(0, 0, this.anInt9060, this.anInt9053, ints_5, 0);
+		this.anInterface6_9050.method53(this.anInt9060, this.anInt9053, ints_5);
 		int i_6;
 		int i_7;
 		int i_8;
@@ -717,7 +717,7 @@ public class Class160_Sub3 extends NativeSprite {
 			}
 		}
 
-		this.method14425(0, 0, this.anInt9060, this.anInt9053, ints_5, 0, this.anInt9060);
+		this.method14425(0, 0, this.anInt9060, this.anInt9053, ints_5, this.anInt9060);
 	}
 
 	public void method2783(int i_1, int i_2, int i_3, int i_4) {
@@ -728,8 +728,8 @@ public class Class160_Sub3 extends NativeSprite {
 		this.aBool9051 = this.anInt9055 != 0 || this.anInt9057 != 0 || this.anInt9058 != 0 || this.anInt9049 != 0;
 	}
 
-	void method14425(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6, int i_7) {
-		this.anInterface6_9050.method48(i_1, i_2, i_3, i_4, ints_5, i_6, i_7);
+	void method14425(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_7) {
+		this.anInterface6_9050.method48(i_1, i_2, i_3, i_4, ints_5, 0, i_7);
 	}
 
 	public void method2784(int i_1, int i_2, Class455 class455_3, int i_4, int i_5) {
@@ -941,7 +941,7 @@ public class Class160_Sub3 extends NativeSprite {
 	public void method2771(int i_1, int i_2, int i_3) {
 		int[] ints_4 = this.aClass505_Sub2_9052.ab(i_1, i_2, this.anInt9060, this.anInt9053);
 		int[] ints_5 = new int[this.anInt9060 * this.anInt9053];
-		this.anInterface6_9050.method53(0, 0, this.anInt9060, this.anInt9053, ints_5, 0);
+		this.anInterface6_9050.method53(this.anInt9060, this.anInt9053, ints_5);
 		int i_6;
 		int i_7;
 		int i_8;
@@ -979,7 +979,7 @@ public class Class160_Sub3 extends NativeSprite {
 			}
 		}
 
-		this.method14425(0, 0, this.anInt9060, this.anInt9053, ints_5, 0, this.anInt9060);
+		this.method14425(0, 0, this.anInt9060, this.anInt9053, ints_5, this.anInt9060);
 	}
 
 	public int method226() {
@@ -1210,7 +1210,7 @@ public class Class160_Sub3 extends NativeSprite {
 		this.anInt9053 = i_3;
 		if (bool_5) {
 			Interface29 interface29_6 = class505_sub2_1.method14064(bool_4 ? Class150.aClass150_1949 : Class150.aClass150_1950, Class76.aClass76_751, i_2, i_3);
-			this.anInterface9_9054 = interface29_6.method200(0);
+			this.anInterface9_9054 = interface29_6.method200();
 			this.anInterface6_9050 = interface29_6;
 		} else {
 			this.anInterface6_9050 = class505_sub2_1.method14072(bool_4 ? Class150.aClass150_1949 : Class150.aClass150_1950, Class76.aClass76_751, i_2, i_3);

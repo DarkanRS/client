@@ -33,7 +33,7 @@ public class Class390_Sub3 extends Ground {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
 		if (this.aClass178ArrayArray9352 == null) {
 			this.aClass178ArrayArray9352 = new Class178[this.width][this.length];
 			this.aClass183ArrayArray9332 = new Class183[this.width][this.length];
@@ -312,7 +312,7 @@ public class Class390_Sub3 extends Ground {
 							i_34 = -1694498816;
 						}
 
-						class181_29.anIntArray2251[i_15] = i_34 | Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, i_19), class90_11.color, i_22, 1385119855);
+						class181_29.anIntArray2251[i_15] = i_34 | Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, i_19), class90_11.color, i_22);
 						if (ints_8 != null) {
 							class181_29.aByteArray2256[i_15] = (byte) i_19;
 						}
@@ -434,7 +434,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2209 |= 255 - (this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]) << 25;
 						}
@@ -450,7 +450,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2204 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]) << 25;
 						}
@@ -466,7 +466,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2211 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]) << 25;
 						}
@@ -482,7 +482,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22);
 						class177_30.aShort2212 = (short) i_21;
 					} else {
 						if (ints_6 != null && class90_11.scale != 0) {
@@ -496,7 +496,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2209 |= 255 - (this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]) << 25;
 						}
@@ -512,7 +512,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2204 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]) << 25;
 						}
@@ -528,7 +528,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2211 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]) << 25;
 						}
@@ -544,7 +544,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2206 |= 255 - (this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]) << 25;
 						}
@@ -623,7 +623,7 @@ public class Class390_Sub3 extends Ground {
 								}
 							}
 
-							class196_38.anIntArray2420[i_20] = Class8_Sub3.method14337(method14616(ints_7[i_20] >> 8, i_24), class90_11.color, i_27, 1385119855);
+							class196_38.anIntArray2420[i_20] = Class8_Sub3.method14337(method14616(ints_7[i_20] >> 8, i_24), class90_11.color, i_27);
 							if (ints_8 != null) {
 								class196_38.anIntArray2420[i_20] |= i_24 << 25;
 							}
@@ -1240,7 +1240,7 @@ public class Class390_Sub3 extends Ground {
 							if (f_24 < 3.0F) {
 								if (f_24 > 0.0F) {
 									if ((class196_54.anIntArray2420[i_15] & 0xffffff) != 0) {
-										choppyitemfixclass_5.method2425(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], Class302.method5364(class196_54.anIntArray2420[i_15], class185_4.anInt2307, floats_10[i_15] * 255.0F, 833509259), Class302.method5364(class196_54.anIntArray2420[i_16], class185_4.anInt2307, floats_10[i_16] * 255.0F, 833509259), Class302.method5364(class196_54.anIntArray2420[i_55], class185_4.anInt2307, floats_10[i_55] * 255.0F, 833509259));
+										choppyitemfixclass_5.method2425(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], Class302.method5364(class196_54.anIntArray2420[i_15], class185_4.anInt2307, floats_10[i_15] * 255.0F), Class302.method5364(class196_54.anIntArray2420[i_16], class185_4.anInt2307, floats_10[i_16] * 255.0F), Class302.method5364(class196_54.anIntArray2420[i_55], class185_4.anInt2307, floats_10[i_55] * 255.0F));
 									}
 								} else if ((class196_54.anIntArray2420[i_15] & 0xffffff) != 0) {
 									choppyitemfixclass_5.method2425(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], class196_54.anIntArray2420[i_15], class196_54.anIntArray2420[i_16], class196_54.anIntArray2420[i_55]);
@@ -1478,7 +1478,7 @@ public class Class390_Sub3 extends Ground {
 							if (class181_12.aShortArray2253[i_15] == class181_12.aShortArray2253[i_16] && class181_12.aShortArray2253[i_15] == class181_12.aShortArray2253[i_27] && class181_12.aShortArray2254[i_15] == class181_12.aShortArray2254[i_16] && class181_12.aShortArray2254[i_15] == class181_12.aShortArray2254[i_27]) {
 								choppyitemfixclass_5.method2424(true, true, false, f_21, f_22, f_23, f_18, f_19, f_28, floats_8[i_15], floats_8[i_16], floats_8[i_27], floats_9[i_15], floats_9[i_16], floats_9[i_27], (float) (class181_12.aShortArray2249[i_15] + i_24) / (float) class181_12.aShortArray2254[i_15], (float) (class181_12.aShortArray2249[i_16] + i_24) / (float) class181_12.aShortArray2254[i_16], (float) (class181_12.aShortArray2249[i_27] + i_24) / (float) class181_12.aShortArray2254[i_27], (float) (class181_12.aShortArray2247[i_15] + i_25) / (float) class181_12.aShortArray2254[i_15], (float) (class181_12.aShortArray2247[i_16] + i_25) / (float) class181_12.aShortArray2254[i_16], (float) (class181_12.aShortArray2247[i_27] + i_25) / (float) class181_12.aShortArray2254[i_27], class181_12.anIntArray2251[i_15], class181_12.anIntArray2251[i_16], class181_12.anIntArray2251[i_27], class185_4.anInt2307, floats_10[i_15] * 255.0F, floats_10[i_16] * 255.0F, floats_10[i_27] * 255.0F, class181_12.aShortArray2253[i_15]);
 							} else {
-								choppyitemfixclass_5.method2421(true, true, false, f_21, f_22, f_23, f_18, f_19, f_28, floats_8[i_15], floats_8[i_16], floats_8[i_27], floats_9[i_15], floats_9[i_16], floats_9[i_27], (float) (class181_12.aShortArray2249[i_15] + i_24) / f_26, (float) (class181_12.aShortArray2249[i_16] + i_24) / f_26, (float) (class181_12.aShortArray2249[i_27] + i_24) / f_26, (float) (class181_12.aShortArray2247[i_15] + i_25) / f_26, (float) (class181_12.aShortArray2247[i_16] + i_25) / f_26, (float) (class181_12.aShortArray2247[i_27] + i_25) / f_26, class181_12.anIntArray2251[i_15], class181_12.anIntArray2251[i_16], class181_12.anIntArray2251[i_27], class185_4.anInt2307, floats_10[i_15] * 255.0F, floats_10[i_16] * 255.0F, floats_10[i_27] * 255.0F, class181_12.aShortArray2253[i_15], f_26 / (float) class181_12.aShortArray2254[i_15], class181_12.aShortArray2253[i_16], f_26 / (float) class181_12.aShortArray2254[i_16], class181_12.aShortArray2253[i_27], f_26 / (float) class181_12.aShortArray2254[i_27]);
+								choppyitemfixclass_5.method2421(f_21, f_22, f_23, f_18, f_19, f_28, floats_8[i_15], floats_8[i_16], floats_8[i_27], floats_9[i_15], floats_9[i_16], floats_9[i_27], (float) (class181_12.aShortArray2249[i_15] + i_24) / f_26, (float) (class181_12.aShortArray2249[i_16] + i_24) / f_26, (float) (class181_12.aShortArray2249[i_27] + i_24) / f_26, (float) (class181_12.aShortArray2247[i_15] + i_25) / f_26, (float) (class181_12.aShortArray2247[i_16] + i_25) / f_26, (float) (class181_12.aShortArray2247[i_27] + i_25) / f_26, class181_12.anIntArray2251[i_15], class181_12.anIntArray2251[i_16], class181_12.anIntArray2251[i_27], class185_4.anInt2307, floats_10[i_15] * 255.0F, floats_10[i_16] * 255.0F, floats_10[i_27] * 255.0F, class181_12.aShortArray2253[i_15], f_26 / (float) class181_12.aShortArray2254[i_15], class181_12.aShortArray2253[i_16], f_26 / (float) class181_12.aShortArray2254[i_16], class181_12.aShortArray2253[i_27], f_26 / (float) class181_12.aShortArray2254[i_27]);
 							}
 						}
 					} else {
@@ -1607,10 +1607,10 @@ public class Class390_Sub3 extends Ground {
 		return null;
 	}
 
-	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 	}
 
-	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		return false;
 	}
 
@@ -1733,7 +1733,7 @@ public class Class390_Sub3 extends Ground {
 							i_34 = -1694498816;
 						}
 
-						class181_29.anIntArray2251[i_15] = i_34 | Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, i_19), class90_11.color, i_22, 1385119855);
+						class181_29.anIntArray2251[i_15] = i_34 | Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, i_19), class90_11.color, i_22);
 						if (ints_8 != null) {
 							class181_29.aByteArray2256[i_15] = (byte) i_19;
 						}
@@ -1855,7 +1855,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2209 |= 255 - (this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]) << 25;
 						}
@@ -1871,7 +1871,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2204 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]) << 25;
 						}
@@ -1887,7 +1887,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2211 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]) << 25;
 						}
@@ -1903,7 +1903,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22);
 						class177_30.aShort2212 = (short) i_21;
 					} else {
 						if (ints_6 != null && class90_11.scale != 0) {
@@ -1917,7 +1917,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2209 = Class8_Sub3.method14337(method14616(ints_7[i_15] >> 8, this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2209 |= 255 - (this.aByteArrayArray9355[i_1][i_2] - this.aByteArrayArray9356[i_1][i_2]) << 25;
 						}
@@ -1933,7 +1933,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2204 = Class8_Sub3.method14337(method14616(ints_7[i_16] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2204 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2] - this.aByteArrayArray9356[i_1 + 1][i_2]) << 25;
 						}
@@ -1949,7 +1949,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2211 = Class8_Sub3.method14337(method14616(ints_7[i_17] >> 8, this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2211 |= 255 - (this.aByteArrayArray9355[i_1 + 1][i_2 + 1] - this.aByteArrayArray9356[i_1 + 1][i_2 + 1]) << 25;
 						}
@@ -1965,7 +1965,7 @@ public class Class390_Sub3 extends Ground {
 							i_22 = 0;
 						}
 
-						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22, 1385119855);
+						class177_30.anInt2206 = Class8_Sub3.method14337(method14616(ints_7[i_32] >> 8, this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]), class90_11.color, i_22);
 						if (class177_30.anInt2203 != 0) {
 							class177_30.anInt2206 |= 255 - (this.aByteArrayArray9355[i_1][i_2 + 1] - this.aByteArrayArray9356[i_1][i_2 + 1]) << 25;
 						}
@@ -2044,7 +2044,7 @@ public class Class390_Sub3 extends Ground {
 								}
 							}
 
-							class196_38.anIntArray2420[i_20] = Class8_Sub3.method14337(method14616(ints_7[i_20] >> 8, i_24), class90_11.color, i_27, 1385119855);
+							class196_38.anIntArray2420[i_20] = Class8_Sub3.method14337(method14616(ints_7[i_20] >> 8, i_24), class90_11.color, i_27);
 							if (ints_8 != null) {
 								class196_38.anIntArray2420[i_20] |= i_24 << 25;
 							}
@@ -2162,7 +2162,7 @@ public class Class390_Sub3 extends Ground {
 
 	}
 
-	public void method6715(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
+	public void method6715(int i_1, int i_2, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
 		Class185 class185_9 = this.aClass505_Sub3_9353.method14370(Thread.currentThread());
 		ChoppyItemFixClass choppyitemfixclass_10 = class185_9.aClass144_2310;
 		choppyitemfixclass_10.anInt1674 = 0;
@@ -2170,10 +2170,10 @@ public class Class390_Sub3 extends Ground {
 		this.aClass505_Sub3_9353.method14410();
 		if (this.aClass177ArrayArray9336 == null && this.aClass181ArrayArray9335 == null) {
 			if (this.aClass178ArrayArray9352 != null) {
-				this.method14622(i_1, i_2, i_3, i_4, i_5, i_6, i_7, bools_8, class185_9, choppyitemfixclass_10, class185_9.aFloatArray2315, class185_9.aFloatArray2342);
+				this.method14622(i_1, i_2, 1024, i_4, i_5, i_6, i_7, bools_8, class185_9, choppyitemfixclass_10, class185_9.aFloatArray2315, class185_9.aFloatArray2342);
 			}
 		} else {
-			this.method14618(i_1, i_2, i_3, i_4, i_5, i_6, i_7, bools_8, class185_9, choppyitemfixclass_10, class185_9.aFloatArray2315, class185_9.aFloatArray2342);
+			this.method14618(i_1, i_2, 1024, i_4, i_5, i_6, i_7, bools_8, class185_9, choppyitemfixclass_10, class185_9.aFloatArray2315, class185_9.aFloatArray2342);
 		}
 
 	}
@@ -2182,7 +2182,7 @@ public class Class390_Sub3 extends Ground {
 		return false;
 	}
 
-	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 	}
 
 	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {

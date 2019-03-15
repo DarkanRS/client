@@ -16,7 +16,7 @@ public interface Interface6 extends Interface30 {
 
 	void method52(int var1, int var2, int var3, int var4, byte[] var5, Class150 var6, int var7, int var8);
 
-	void method53(int var1, int var2, int var3, int var4, int[] var5, int var6);
+	void method53(int var3, int var4, int[] var5);
 
 	boolean method54();
 

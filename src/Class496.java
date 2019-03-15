@@ -21,7 +21,7 @@ public class Class496 implements Interface43 {
 	int anInt5814;
 
 	static {
-		method8299(1459523387);
+		method8299();
 	}
 
 	Class496(String string_1, String string_2, int i_3) {
@@ -29,7 +29,7 @@ public class Class496 implements Interface43 {
 		this.anInt5814 = i_3;
 	}
 
-	public static Class496[] method8299(int i_0) {
+	public static Class496[] method8299() {
 		return new Class496[] { aClass496_5807, aClass496_5810, aClass496_5813, aClass496_5812, aClass496_5809, aClass496_5811, aClass496_5808 };
 	}
 
@@ -41,7 +41,7 @@ public class Class496 implements Interface43 {
 		return -2013930027 * this.anInt5814 * -887327875;
 	}
 
-	public int method243(byte b_1) {
+	public int method243() {
 		return this.anInt5814;
 	}
 
@@ -49,11 +49,11 @@ public class Class496 implements Interface43 {
 		return aClass496_5811 == class496_0 || aClass496_5808 == class496_0 || aClass496_5807 == class496_0 || aClass496_5809 == class496_0 || aClass496_5812 == class496_0;
 	}
 
-	static void method8309(RsByteBuffer rsbytebuffer_0, int i_1, int i_2) {
+	static void method8309(RsByteBuffer rsbytebuffer_0, int i_1) {
 		if (Engine.aClass440_3269 != null) {
 			try {
 				Engine.aClass440_3269.method7347(0L);
-				Engine.aClass440_3269.method7352(rsbytebuffer_0.buffer, i_1, 24, 1942118537);
+				Engine.aClass440_3269.method7352(rsbytebuffer_0.buffer, i_1, 24);
 			} catch (Exception exception_4) {
 				;
 			}
@@ -65,7 +65,7 @@ public class Class496 implements Interface43 {
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) -17);
 	}
 
-	static int method8313(byte b_0) {
+	static int method8313() {
 		byte b_1;
 		if (Engine.MAX_MEMORY >= 96) {
 			int i_2 = Class241.method4150(1219422368);
@@ -79,16 +79,16 @@ public class Class496 implements Interface43 {
 				Class119.method2077(240785770);
 				b_1 = 2;
 			} else {
-				Class282_Sub20_Sub25.method15393(true, 1945296321);
+				Class282_Sub20_Sub25.method15393(1945296321);
 				b_1 = 1;
 			}
 		} else {
-			Class282_Sub20_Sub25.method15393(true, 1593170502);
+			Class282_Sub20_Sub25.method15393(1593170502);
 			b_1 = 1;
 		}
 		if (Class393.preferences.currentToolkit.getValue(-1431790545) != 0) {
 			Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, -1334212843);
-			ParticleProducer.method11500(0, false, (byte) 24);
+			ParticleProducer.method11500(0, false);
 		} else {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, -1824777589);
 		}
@@ -96,7 +96,7 @@ public class Class496 implements Interface43 {
 		return b_1;
 	}
 
-	public static void method8314(String string_0, int port, int i_2) {
+	public static void method8314(String string_0, int port) {
 		if (Class448.lobbyConnectionInfo == null) {
 			Class448.lobbyConnectionInfo = new ConnectionInfo();
 		}
@@ -109,7 +109,7 @@ public class Class496 implements Interface43 {
 	static final void method8315(int i_0) {
 		if (client.anInt7349 != -1) {
 			int i_1 = Class163.mouseRecorder.method3569(2131144344);
-			int i_2 = Class163.mouseRecorder.method3570(756095591);
+			int i_2 = Class163.mouseRecorder.method3570();
 			MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head((byte) 28);
 			if (class282_sub53_3 != null) {
 				i_1 = class282_sub53_3.method13481(1154972064);
@@ -124,7 +124,7 @@ public class Class496 implements Interface43 {
 			}
 			Class436.method7313((Class282_Sub44) null, client.anInt7349, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
 			if (Class282_Sub20_Sub24.aClass118_9884 != null) {
-				Class347.method6170(i_1, i_2, -2001373224);
+				Class347.method6170(i_1, i_2);
 			}
 		}
 	}

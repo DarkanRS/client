@@ -117,15 +117,15 @@ public final class Quaternion {
 		quaternion_4.cache();
 	}
 
-	static Quaternion method6485(float f_0, float f_1, float f_2, float f_3) {
+	static Quaternion method6485(float f_0, float f_1, float f_2) {
 		Quaternion[] arr_4 = aClass381Array4641;
 		synchronized (aClass381Array4641) {
 			Quaternion quaternion_5;
 			if (anInt4639 == 0) {
-				quaternion_5 = new Quaternion(f_0, f_1, f_2, f_3);
+				quaternion_5 = new Quaternion(f_0, f_1, f_2, (float) 0.0);
 				return quaternion_5;
 			} else {
-				aClass381Array4641[--anInt4639].set(f_0, f_1, f_2, f_3);
+				aClass381Array4641[--anInt4639].set(f_0, f_1, f_2, (float) 0.0);
 				quaternion_5 = aClass381Array4641[anInt4639];
 				return quaternion_5;
 			}
@@ -139,9 +139,9 @@ public final class Quaternion {
 		this.scalar = quaternion_1.scalar;
 	}
 
-	public static void method6493(int i_0) {
-		anInt4638 = i_0;
-		aClass381Array4641 = new Quaternion[i_0];
+	public static void method6493() {
+		anInt4638 = 10;
+		aClass381Array4641 = new Quaternion[10];
 		anInt4639 = 0;
 	}
 

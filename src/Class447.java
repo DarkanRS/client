@@ -4,7 +4,7 @@ public class Class447 {
 
 	Index aClass317_5418;
 
-	public Class449 method7450(int i_1, byte b_2) {
+	public Class449 method7450(int i_1) {
 		SoftCache softcache_4 = this.aClass229_5417;
 		Class449 class449_3;
 		synchronized (this.aClass229_5417) {
@@ -16,7 +16,7 @@ public class Class447 {
 			byte[] bytes_8 = this.aClass317_5418.getFile(SharedConfigsType.aClass120_1522.id, i_1);
 			class449_3 = new Class449();
 			if (bytes_8 != null) {
-				class449_3.method7487(new RsByteBuffer(bytes_8), -267873948);
+				class449_3.method7487(new RsByteBuffer(bytes_8));
 			}
 			SoftCache softcache_5 = this.aClass229_5417;
 			synchronized (this.aClass229_5417) {
@@ -26,14 +26,14 @@ public class Class447 {
 		}
 	}
 
-	public void method7452(int i_1, byte b_2) {
+	public void method7452() {
 		SoftCache softcache_3 = this.aClass229_5417;
 		synchronized (this.aClass229_5417) {
-			this.aClass229_5417.method3858(i_1, (byte) -19);
+			this.aClass229_5417.method3858(5, (byte) -19);
 		}
 	}
 
-	public void method7453(byte b_1) {
+	public void method7453() {
 		SoftCache softcache_2 = this.aClass229_5417;
 		synchronized (this.aClass229_5417) {
 			this.aClass229_5417.method3863(972747632);
@@ -47,7 +47,7 @@ public class Class447 {
 		}
 	}
 
-	public void method7458(int i_1) {
+	public void method7458() {
 		SoftCache softcache_2 = this.aClass229_5417;
 		synchronized (this.aClass229_5417) {
 			this.aClass229_5417.method3859(1246806514);
@@ -56,6 +56,6 @@ public class Class447 {
 
 	static final void method7460(int i_0, int i_1, int i_2, int i_3) {
 		String string_4 = "tele " + i_0 + "," + (i_1 >> 6) + "," + (i_2 >> 6) + "," + (i_1 & 0x3f) + "," + (i_2 & 0x3f);
-		Class251.handleCommand(string_4, true, false, -354697449);
+		Class251.handleCommand(string_4, true, false);
 	}
 }

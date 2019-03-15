@@ -29,25 +29,25 @@ public class Class159 {
 		return false;
 	}
 
-	static final int method2735(int i_0, int i_1, int i_2, int i_3) {
+	static final int method2735(int i_0, int i_1, int i_2) {
 		int i_4 = i_0 / i_2;
 		int i_5 = i_0 & i_2 - 1;
 		int i_6 = i_1 / i_2;
 		int i_7 = i_1 & i_2 - 1;
-		int i_8 = Class241.method4151(i_4, i_6, 1156456439);
-		int i_9 = Class241.method4151(i_4 + 1, i_6, 1156456439);
-		int i_10 = Class241.method4151(i_4, i_6 + 1, 1156456439);
-		int i_11 = Class241.method4151(i_4 + 1, i_6 + 1, 1156456439);
+		int i_8 = Class241.method4151(i_4, i_6);
+		int i_9 = Class241.method4151(i_4 + 1, i_6);
+		int i_10 = Class241.method4151(i_4, i_6 + 1);
+		int i_11 = Class241.method4151(i_4 + 1, i_6 + 1);
 		int i_12 = Class430.method7220(i_8, i_9, i_5, i_2, -1918782622);
 		int i_13 = Class430.method7220(i_10, i_11, i_5, i_2, -1190208643);
 		return Class430.method7220(i_12, i_13, i_7, i_2, -1754820522);
 	}
 
-	public static void method2736(long[] longs_0, int[] ints_1, byte b_2) {
-		Class497.method8316(longs_0, ints_1, 0, longs_0.length - 1, -1763921861);
+	public static void method2736(long[] longs_0, int[] ints_1) {
+		Class497.method8316(longs_0, ints_1, 0, longs_0.length - 1);
 	}
 
-	static void method2738(Interface interface_0, int i_1, int i_2, int i_3, boolean bool_4, CS2Executor cs2executor_5, int i_6) {
+	static void method2738(Interface interface_0, int i_1, int i_2, int i_3, boolean bool_4, CS2Executor cs2executor_5) {
 		if (i_2 == 0) {
 			throw new RuntimeException();
 		} else {
@@ -124,7 +124,7 @@ public class Class159 {
 		return i_0 + i_2;
 	}
 
-	public static void setNativeLibraryLoader(Interface36 interface36_0, int i_1) {
+	public static void setNativeLibraryLoader(Interface36 interface36_0) {
 		if (Class404.LIBRARY_LOADER != null) {
 			throw new IllegalStateException("");
 		} else {

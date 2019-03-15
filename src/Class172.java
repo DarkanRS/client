@@ -19,15 +19,15 @@ public class Class172 {
 		this.anInt2119 = i_2;
 	}
 
-	Class172 method2911(int i_1, int i_2) {
+	Class172 method2911(int i_1) {
 		return new Class172(this.anInt2115, i_1);
 	}
 
 	public Class345 method2913(int i_1) {
-		return Class423.method7065(this.anInt2115, -1229346850);
+		return Class423.method7065(this.anInt2115);
 	}
 
-	static final void method2915(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+	static final void method2915(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.anInt1324 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0, (byte) 15);
 	}

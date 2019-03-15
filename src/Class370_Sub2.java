@@ -18,12 +18,12 @@ public class Class370_Sub2 extends Class370 {
 		this.anInt7760 = 0;
 	}
 
-	Class370_Sub2(int i_1, int i_2, int i_3, int i_4, int i_5, float f_6) {
-		super(i_1, i_2, i_3, i_4, i_5);
+	Class370_Sub2() {
+		super(12, 5, 16, 2, 2);
 		this.anIntArray7761 = new int[this.anInt4290];
 
 		for (int i_7 = 0; i_7 < this.anInt4290; i_7++) {
-			this.anIntArray7761[i_7] = (short) ((int) (Math.pow((double) f_6, (double) i_7) * 4096.0D));
+			this.anIntArray7761[i_7] = (short) ((int) (Math.pow((double) (float) 0.45, (double) i_7) * 4096.0D));
 		}
 
 	}

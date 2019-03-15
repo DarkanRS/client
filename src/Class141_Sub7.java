@@ -17,7 +17,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13610(0);
 			this.aBool9090 = true;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 34168, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34168);
 		}
 
 	}
@@ -34,7 +34,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13610(0);
 			this.aBool9090 = true;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 34168, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34168);
 		}
 
 	}
@@ -47,7 +47,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13610(1);
 			this.aClass505_Sub1_1664.method13717(34165, 7681);
 			this.aClass505_Sub1_1664.method13595(2, 34168, 770);
-			this.aClass505_Sub1_1664.method13616(0, 34167, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34167);
 			OpenGL.glTexGeni(8192, 9472, 34066);
 			OpenGL.glTexGeni(8193, 9472, 34066);
 			OpenGL.glTexGeni(8194, 9472, 34066);
@@ -60,7 +60,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13610(1);
 			this.aClass505_Sub1_1664.method13717(8448, 8448);
 			this.aClass505_Sub1_1664.method13595(2, 34166, 770);
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 			OpenGL.glDisable(3168);
 			OpenGL.glDisable(3169);
 			OpenGL.glDisable(3170);
@@ -85,7 +85,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13654((Class137) null);
 			this.aClass505_Sub1_1664.method13610(0);
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 		}
 
 		this.aClass505_Sub1_1664.method13717(8448, 8448);
@@ -107,7 +107,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13654((Class137) null);
 			this.aClass505_Sub1_1664.method13610(0);
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 5890, 770);
+			this.aClass505_Sub1_1664.method13616(0, 5890);
 		}
 
 		this.aClass505_Sub1_1664.method13717(8448, 8448);
@@ -163,7 +163,7 @@ public class Class141_Sub7 extends Class141 {
 			this.aClass505_Sub1_1664.method13610(0);
 			this.aBool9090 = true;
 		} else {
-			this.aClass505_Sub1_1664.method13616(0, 34168, 770);
+			this.aClass505_Sub1_1664.method13616(0, 34168);
 		}
 
 	}

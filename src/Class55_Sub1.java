@@ -73,7 +73,7 @@ public class Class55_Sub1 extends Class55 {
 		} else if (i_1 == 3) {
 			this.aClass101_9187.method1655(this.aClass115_9191);
 			interface6_9 = interface6_5;
-			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3, (byte) 0);
+			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3);
 			this.aClass101_9187.method1646();
 		}
 
@@ -86,7 +86,7 @@ public class Class55_Sub1 extends Class55 {
 		floats_10[10] *= f_17;
 		floats_10[7] *= f_18;
 		this.aClass101_9187.method1688(this.aClass282_Sub21_Sub1_9198, floats_10, 1193588147);
-		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9, (byte) 0);
+		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9);
 		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -70);
 		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -98);
 		this.aClass505_Sub2_514.method8617(0, 0, i_11, i_12);
@@ -202,7 +202,7 @@ public class Class55_Sub1 extends Class55 {
 		} else if (i_1 == 3) {
 			this.aClass101_9187.method1655(this.aClass115_9191);
 			interface6_9 = interface6_5;
-			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3, (byte) 0);
+			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3);
 			this.aClass101_9187.method1646();
 		}
 
@@ -215,7 +215,7 @@ public class Class55_Sub1 extends Class55 {
 		floats_10[10] *= f_17;
 		floats_10[7] *= f_18;
 		this.aClass101_9187.method1688(this.aClass282_Sub21_Sub1_9198, floats_10, 749671414);
-		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9, (byte) 0);
+		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9);
 		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -3);
 		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -95);
 		this.aClass505_Sub2_514.method8617(0, 0, i_11, i_12);
@@ -256,7 +256,7 @@ public class Class55_Sub1 extends Class55 {
 		} else if (i_1 == 3) {
 			this.aClass101_9187.method1655(this.aClass115_9191);
 			interface6_9 = interface6_5;
-			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3, (byte) 0);
+			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3);
 			this.aClass101_9187.method1646();
 		}
 
@@ -269,7 +269,7 @@ public class Class55_Sub1 extends Class55 {
 		floats_10[10] *= f_17;
 		floats_10[7] *= f_18;
 		this.aClass101_9187.method1688(this.aClass282_Sub21_Sub1_9198, floats_10, 92267019);
-		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9, (byte) 0);
+		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9);
 		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -2);
 		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -95);
 		this.aClass505_Sub2_514.method8617(0, 0, i_11, i_12);

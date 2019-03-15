@@ -1,9 +1,9 @@
 public class Class282_Sub20_Sub30 extends Class282_Sub20 {
 
-	int[] method12319(int i_1, int i_2) {
+	int[] method12319(int i_1) {
 		int[] ints_3 = this.aClass320_7667.method5721(i_1, -1856155747);
 		if (this.aClass320_7667.aBool3722) {
-			int[][] ints_4 = this.method12333(0, i_1, (byte) 3);
+			int[][] ints_4 = this.method12333(0, i_1);
 			int[] ints_5 = ints_4[0];
 			int[] ints_6 = ints_4[1];
 			int[] ints_7 = ints_4[2];

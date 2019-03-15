@@ -74,11 +74,11 @@ public class Class358 {
 		this.aString4159 = string_2;
 	}
 
-	static void method6234(byte b_0) {
+	static void method6234() {
 		Class299.aClass229_3545.method3859(-1558417289);
 	}
 
-	static void method6235(byte[] bytes_0, byte b_1) {
+	static void method6235(byte[] bytes_0) {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
 		while (true) {
 			int i_3 = rsbytebuffer_2.readUnsignedByte();
@@ -97,7 +97,7 @@ public class Class358 {
 		}
 	}
 
-	public static void method6240(int i_0, int i_1) {
+	public static void method6240(int i_1) {
 		Class148.anInt1730 = 1;
 		Class75.aClass317_746 = null;
 		Class6.anInt46 = -1;
@@ -105,7 +105,7 @@ public class Class358 {
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 		Class158_Sub2_Sub3.anInt10243 = 0;
 		Class152.aBool1962 = false;
-		Class96_Sub22.anInt9440 = i_0;
+		Class96_Sub22.anInt9440 = 2;
 		Class11.aClass109_121 = null;
 	}
 }

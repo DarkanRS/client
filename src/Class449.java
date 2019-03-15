@@ -2,25 +2,25 @@ public class Class449 {
 
 	public char aChar5431;
 
-	void method7485(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+	void method7485(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aChar5431 = Class11.getChar(rsbytebuffer_1.readByte(), -232268203);
 		}
 
 	}
 
-	void method7487(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method7487(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
 				return;
 			}
 
-			this.method7485(rsbytebuffer_1, i_3, (byte) 18);
+			this.method7485(rsbytebuffer_1, i_3);
 		}
 	}
 
-	public static void method7490(byte b_0) {
+	public static void method7490() {
 		if (Class448.aBool5419) {
 			if (Class448.anInt5430 < Class485.anInt5740) {
 				Class448.anInt5430 = Class485.anInt5740;
