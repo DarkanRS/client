@@ -1371,9 +1371,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && Class169.time() > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && TextureDetails.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = Class169.time();
+			this.aLong8316 = TextureDetails.time();
 		}
 
 		this.anInt8368 = i_1;
@@ -1926,20 +1926,20 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 				this.method13618();
 			} else {
 				class137_sub1_4 = this.aClass167_8481.method2858(i_1);
-				Class169 class169_9 = this.anInterface22_5834.method144(i_1, -1790477491);
-				if (class169_9.aByte2081 == 0 && class169_9.aByte2090 == 0) {
+				TextureDetails class169_9 = this.anInterface22_5834.method144(i_1, -1790477491);
+				if (class169_9.textureSpeedU == 0 && class169_9.textureSpeedV == 0) {
 					this.method13618();
 				} else {
-					this.method13602((float) (this.anInt8368 % 128000) / 1000.0F * (float) class169_9.aByte2081 / 64.0F % 1.0F, (float) (this.anInt8368 % 128000) / 1000.0F * (float) class169_9.aByte2090 / 64.0F % 1.0F);
+					this.method13602((float) (this.anInt8368 % 128000) / 1000.0F * (float) class169_9.textureSpeedU / 64.0F % 1.0F, (float) (this.anInt8368 % 128000) / 1000.0F * (float) class169_9.textureSpeedV / 64.0F % 1.0F);
 				}
 
 				if (!this.aBool8448) {
-					b_6 = class169_9.aByte2076;
-					i_7 = class169_9.anInt2077;
-					i_8 = class169_9.aByte2064;
+					b_6 = class169_9.effectParam1;
+					i_7 = class169_9.effectParam2;
+					i_8 = class169_9.effectId;
 				}
 
-				i_5 = class169_9.anInt2091;
+				i_5 = class169_9.combineMode;
 			}
 
 			this.aClass146_8356.method2462(i_8, b_6, i_7, bool_2, bool_3);
@@ -2098,9 +2098,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && Class169.time() > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && TextureDetails.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = Class169.time();
+			this.aLong8316 = TextureDetails.time();
 		}
 
 		this.anInt8368 = i_1;
@@ -3020,9 +3020,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && Class169.time() > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && TextureDetails.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = Class169.time();
+			this.aLong8316 = TextureDetails.time();
 		}
 
 		this.anInt8368 = i_1;

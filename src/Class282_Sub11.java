@@ -44,7 +44,7 @@ public abstract class Class282_Sub11 extends Node {
 		} catch (Exception exception_4) {
 			;
 		}
-		client.aLong7401 = Class169.time();
+		client.aLong7401 = TextureDetails.time();
 		client.aBool7400 = false;
 	}
 }

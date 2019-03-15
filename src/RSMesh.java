@@ -2,7 +2,7 @@ public class RSMesh {
 
 	public int version = 12;
 	public int vertexCount = 0;
-	public int anInt1999 = 0;
+	public int maxDepth = 0;
 	public int faceCount = 0;
 	public byte priority = 0;
 	public int numTextureTriangles = 0;
@@ -24,17 +24,17 @@ public class RSMesh {
 	public short[] texTriX;
 	public short[] texTriY;
 	public short[] texTriZ;
-	public int[] anIntArray1989;
-	public int[] anIntArray2000;
-	public int[] anIntArray2001;
-	public byte[] aByteArray2005;
-	public byte[] aByteArray1990;
-	public int[] anIntArray1992;
-	public int[] anIntArray1997;
-	public int[] anIntArray2004;
-	public Class87[] aClass87Array2007;
-	public Class172[] aClass172Array2008;
-	public Class84[] aClass84Array2009;
+	public int[] particleDirectionX;
+	public int[] particleDirectionY;
+	public int[] particleDirectionZ;
+	public byte[] particleLifespanX;
+	public byte[] particleLifespanY;
+	public int[] particleLifespanZ;
+	public int[] texturePrimaryColor;
+	public int[] textureSecondaryColor;
+	public Surface[] surfaces;
+	public SurfaceSkin[] surfaceSkins;
+	public VertexNormal[] isolatedVertexNormals;
 	public short[] aShortArray1980;
 	public short[] aShortArray1981;
 
@@ -232,17 +232,17 @@ public class RSMesh {
 			this.texTriY = new short[this.numTextureTriangles];
 			this.texTriZ = new short[this.numTextureTriangles];
 			if (i_25 > 0) {
-				this.anIntArray1989 = new int[i_25];
-				this.anIntArray2000 = new int[i_25];
-				this.anIntArray2001 = new int[i_25];
-				this.aByteArray2005 = new byte[i_25];
-				this.aByteArray1990 = new byte[i_25];
-				this.anIntArray1992 = new int[i_25];
+				this.particleDirectionX = new int[i_25];
+				this.particleDirectionY = new int[i_25];
+				this.particleDirectionZ = new int[i_25];
+				this.particleLifespanX = new byte[i_25];
+				this.particleLifespanY = new byte[i_25];
+				this.particleLifespanZ = new int[i_25];
 			}
 
 			if (i_26 > 0) {
-				this.anIntArray1997 = new int[i_26];
-				this.anIntArray2004 = new int[i_26];
+				this.texturePrimaryColor = new int[i_26];
+				this.textureSecondaryColor = new int[i_26];
 			}
 		}
 
@@ -327,22 +327,22 @@ public class RSMesh {
 			}
 		}
 
-		this.anInt1999 = -1;
+		this.maxDepth = -1;
 		buffer.index = i_35;
 		rsbytebuffer_3.index = i_30;
-		this.method2659(buffer, rsbytebuffer_3);
+		this.calculateMaxDepth(buffer, rsbytebuffer_3);
 		buffer.index = i_42;
 		rsbytebuffer_3.index = i_43;
 		rsbytebuffer_4.index = i_45;
 		rsbytebuffer_5.index = i_46;
 		rsbytebuffer_6.index = i_47;
 		rsbytebuffer_7.index = i_48;
-		this.method2660(buffer, rsbytebuffer_3, rsbytebuffer_4, rsbytebuffer_5, rsbytebuffer_6, rsbytebuffer_7);
+		this.decodeTexturedTriangles(buffer, rsbytebuffer_3, rsbytebuffer_4, rsbytebuffer_5, rsbytebuffer_6, rsbytebuffer_7);
 		buffer.index = i_27;
 		if (bool_11) {
 			i_53 = buffer.readUnsignedByte();
 			if (i_53 > 0) {
-				this.aClass87Array2007 = new Class87[i_53];
+				this.surfaces = new Surface[i_53];
 
 				for (flags = 0; flags < i_53; flags++) {
 					vertextOffsetX = buffer.readUnsignedShort();
@@ -354,18 +354,18 @@ public class RSMesh {
 						b_60 = (byte) modelPriority;
 					}
 
-					this.aClass87Array2007[flags] = new Class87(vertextOffsetX, this.triangleX[vertextOffsetY], this.triangleY[vertextOffsetY], this.triangleZ[vertextOffsetY], b_60);
+					this.surfaces[flags] = new Surface(vertextOffsetX, this.triangleX[vertextOffsetY], this.triangleY[vertextOffsetY], this.triangleZ[vertextOffsetY], b_60);
 				}
 			}
 
 			flags = buffer.readUnsignedByte();
 			if (flags > 0) {
-				this.aClass172Array2008 = new Class172[flags];
+				this.surfaceSkins = new SurfaceSkin[flags];
 
 				for (vertextOffsetX = 0; vertextOffsetX < flags; vertextOffsetX++) {
 					vertextOffsetY = buffer.readUnsignedShort();
 					vertetxOffsetZ = buffer.readUnsignedShort();
-					this.aClass172Array2008[vertextOffsetX] = new Class172(vertextOffsetY, vertetxOffsetZ);
+					this.surfaceSkins[vertextOffsetX] = new SurfaceSkin(vertextOffsetY, vertetxOffsetZ);
 				}
 			}
 		}
@@ -373,21 +373,21 @@ public class RSMesh {
 		if (bool_12) {
 			i_53 = buffer.readUnsignedByte();
 			if (i_53 > 0) {
-				this.aClass84Array2009 = new Class84[i_53];
+				this.isolatedVertexNormals = new VertexNormal[i_53];
 
 				for (flags = 0; flags < i_53; flags++) {
 					vertextOffsetX = buffer.readUnsignedShort();
 					vertextOffsetY = buffer.readUnsignedShort();
 					vertetxOffsetZ = buffer.readUnsignedByte();
 					byte b_58 = buffer.readByte();
-					this.aClass84Array2009[flags] = new Class84(vertextOffsetX, vertextOffsetY, vertetxOffsetZ, b_58);
+					this.isolatedVertexNormals[flags] = new VertexNormal(vertextOffsetX, vertextOffsetY, vertetxOffsetZ, b_58);
 				}
 			}
 		}
 
 	}
 
-	void method2659(RsByteBuffer rsbytebuffer_1, RsByteBuffer rsbytebuffer_2) {
+	void calculateMaxDepth(RsByteBuffer rsbytebuffer_1, RsByteBuffer rsbytebuffer_2) {
 		short s_3 = 0;
 		short s_4 = 0;
 		short s_5 = 0;
@@ -403,16 +403,16 @@ public class RSMesh {
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_4;
 				this.triangleZ[i_7] = s_5;
-				if (s_3 > this.anInt1999) {
-					this.anInt1999 = s_3;
+				if (s_3 > this.maxDepth) {
+					this.maxDepth = s_3;
 				}
 
-				if (s_4 > this.anInt1999) {
-					this.anInt1999 = s_4;
+				if (s_4 > this.maxDepth) {
+					this.maxDepth = s_4;
 				}
 
-				if (s_5 > this.anInt1999) {
-					this.anInt1999 = s_5;
+				if (s_5 > this.maxDepth) {
+					this.maxDepth = s_5;
 				}
 			}
 
@@ -423,8 +423,8 @@ public class RSMesh {
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_4;
 				this.triangleZ[i_7] = s_5;
-				if (s_5 > this.anInt1999) {
-					this.anInt1999 = s_5;
+				if (s_5 > this.maxDepth) {
+					this.maxDepth = s_5;
 				}
 			}
 
@@ -435,8 +435,8 @@ public class RSMesh {
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_4;
 				this.triangleZ[i_7] = s_5;
-				if (s_5 > this.anInt1999) {
-					this.anInt1999 = s_5;
+				if (s_5 > this.maxDepth) {
+					this.maxDepth = s_5;
 				}
 			}
 
@@ -449,16 +449,16 @@ public class RSMesh {
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_9;
 				this.triangleZ[i_7] = s_5;
-				if (s_5 > this.anInt1999) {
-					this.anInt1999 = s_5;
+				if (s_5 > this.maxDepth) {
+					this.maxDepth = s_5;
 				}
 			}
 		}
 
-		++this.anInt1999;
+		++this.maxDepth;
 	}
 
-	void method2660(RsByteBuffer rsbytebuffer_1, RsByteBuffer rsbytebuffer_2, RsByteBuffer rsbytebuffer_3, RsByteBuffer rsbytebuffer_4, RsByteBuffer rsbytebuffer_5, RsByteBuffer rsbytebuffer_6) {
+	void decodeTexturedTriangles(RsByteBuffer rsbytebuffer_1, RsByteBuffer rsbytebuffer_2, RsByteBuffer rsbytebuffer_3, RsByteBuffer rsbytebuffer_4, RsByteBuffer rsbytebuffer_5, RsByteBuffer rsbytebuffer_6) {
 		for (int i_7 = 0; i_7 < this.numTextureTriangles; i_7++) {
 			int i_8 = this.textureRenderTypes[i_7] & 0xff;
 			if (i_8 == 0) {
@@ -472,23 +472,23 @@ public class RSMesh {
 				this.texTriY[i_7] = (short) rsbytebuffer_2.readUnsignedShort();
 				this.texTriZ[i_7] = (short) rsbytebuffer_2.readUnsignedShort();
 				if (this.version < 15) {
-					this.anIntArray1989[i_7] = rsbytebuffer_3.readUnsignedShort();
+					this.particleDirectionX[i_7] = rsbytebuffer_3.readUnsignedShort();
 					if (this.version < 14) {
-						this.anIntArray2000[i_7] = rsbytebuffer_3.readUnsignedShort();
+						this.particleDirectionY[i_7] = rsbytebuffer_3.readUnsignedShort();
 					} else {
-						this.anIntArray2000[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+						this.particleDirectionY[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
 					}
 
-					this.anIntArray2001[i_7] = rsbytebuffer_3.readUnsignedShort();
+					this.particleDirectionZ[i_7] = rsbytebuffer_3.readUnsignedShort();
 				} else {
-					this.anIntArray1989[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
-					this.anIntArray2000[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
-					this.anIntArray2001[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionX[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionY[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionZ[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
 				}
 
-				this.aByteArray2005[i_7] = rsbytebuffer_4.readByte();
-				this.aByteArray1990[i_7] = rsbytebuffer_5.readByte();
-				this.anIntArray1992[i_7] = rsbytebuffer_6.readByte();
+				this.particleLifespanX[i_7] = rsbytebuffer_4.readByte();
+				this.particleLifespanY[i_7] = rsbytebuffer_5.readByte();
+				this.particleLifespanZ[i_7] = rsbytebuffer_6.readByte();
 			}
 
 			if (i_8 == 2) {
@@ -496,25 +496,25 @@ public class RSMesh {
 				this.texTriY[i_7] = (short) rsbytebuffer_2.readUnsignedShort();
 				this.texTriZ[i_7] = (short) rsbytebuffer_2.readUnsignedShort();
 				if (this.version < 15) {
-					this.anIntArray1989[i_7] = rsbytebuffer_3.readUnsignedShort();
+					this.particleDirectionX[i_7] = rsbytebuffer_3.readUnsignedShort();
 					if (this.version < 14) {
-						this.anIntArray2000[i_7] = rsbytebuffer_3.readUnsignedShort();
+						this.particleDirectionY[i_7] = rsbytebuffer_3.readUnsignedShort();
 					} else {
-						this.anIntArray2000[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+						this.particleDirectionY[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
 					}
 
-					this.anIntArray2001[i_7] = rsbytebuffer_3.readUnsignedShort();
+					this.particleDirectionZ[i_7] = rsbytebuffer_3.readUnsignedShort();
 				} else {
-					this.anIntArray1989[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
-					this.anIntArray2000[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
-					this.anIntArray2001[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionX[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionY[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionZ[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
 				}
 
-				this.aByteArray2005[i_7] = rsbytebuffer_4.readByte();
-				this.aByteArray1990[i_7] = rsbytebuffer_5.readByte();
-				this.anIntArray1992[i_7] = rsbytebuffer_6.readByte();
-				this.anIntArray1997[i_7] = rsbytebuffer_6.readByte();
-				this.anIntArray2004[i_7] = rsbytebuffer_6.readByte();
+				this.particleLifespanX[i_7] = rsbytebuffer_4.readByte();
+				this.particleLifespanY[i_7] = rsbytebuffer_5.readByte();
+				this.particleLifespanZ[i_7] = rsbytebuffer_6.readByte();
+				this.texturePrimaryColor[i_7] = rsbytebuffer_6.readByte();
+				this.textureSecondaryColor[i_7] = rsbytebuffer_6.readByte();
 			}
 
 			if (i_8 == 3) {
@@ -522,23 +522,23 @@ public class RSMesh {
 				this.texTriY[i_7] = (short) rsbytebuffer_2.readUnsignedShort();
 				this.texTriZ[i_7] = (short) rsbytebuffer_2.readUnsignedShort();
 				if (this.version < 15) {
-					this.anIntArray1989[i_7] = rsbytebuffer_3.readUnsignedShort();
+					this.particleDirectionX[i_7] = rsbytebuffer_3.readUnsignedShort();
 					if (this.version < 14) {
-						this.anIntArray2000[i_7] = rsbytebuffer_3.readUnsignedShort();
+						this.particleDirectionY[i_7] = rsbytebuffer_3.readUnsignedShort();
 					} else {
-						this.anIntArray2000[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+						this.particleDirectionY[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
 					}
 
-					this.anIntArray2001[i_7] = rsbytebuffer_3.readUnsignedShort();
+					this.particleDirectionZ[i_7] = rsbytebuffer_3.readUnsignedShort();
 				} else {
-					this.anIntArray1989[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
-					this.anIntArray2000[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
-					this.anIntArray2001[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionX[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionY[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
+					this.particleDirectionZ[i_7] = rsbytebuffer_3.read24BitUnsignedInteger();
 				}
 
-				this.aByteArray2005[i_7] = rsbytebuffer_4.readByte();
-				this.aByteArray1990[i_7] = rsbytebuffer_5.readByte();
-				this.anIntArray1992[i_7] = rsbytebuffer_6.readByte();
+				this.particleLifespanX[i_7] = rsbytebuffer_4.readByte();
+				this.particleLifespanY[i_7] = rsbytebuffer_5.readByte();
+				this.particleLifespanZ[i_7] = rsbytebuffer_6.readByte();
 			}
 		}
 
@@ -554,7 +554,7 @@ public class RSMesh {
 		this.vertexX[this.vertexCount] = i_1;
 		this.vertexY[this.vertexCount] = i_2;
 		this.vertexZ[this.vertexCount] = i_3;
-		this.anInt1999 = this.vertexCount + 1;
+		this.maxDepth = this.vertexCount + 1;
 		return this.vertexCount++;
 	}
 
@@ -578,12 +578,12 @@ public class RSMesh {
 			this.texTriX[this.numTextureTriangles] = (short) 0;
 			this.texTriY[this.numTextureTriangles] = (short) 32767;
 			this.texTriZ[this.numTextureTriangles] = (short) 0;
-			this.anIntArray1989[this.numTextureTriangles] = (short) 1024;
-			this.anIntArray2000[this.numTextureTriangles] = (short) 1024;
-			this.anIntArray2001[this.numTextureTriangles] = (short) 1024;
-			this.aByteArray2005[this.numTextureTriangles] = (byte) 0;
-			this.aByteArray1990[this.numTextureTriangles] = (byte) 0;
-			this.anIntArray1992[this.numTextureTriangles] = (byte) 0;
+			this.particleDirectionX[this.numTextureTriangles] = (short) 1024;
+			this.particleDirectionY[this.numTextureTriangles] = (short) 1024;
+			this.particleDirectionZ[this.numTextureTriangles] = (short) 1024;
+			this.particleLifespanX[this.numTextureTriangles] = (byte) 0;
+			this.particleLifespanY[this.numTextureTriangles] = (byte) 0;
+			this.particleLifespanZ[this.numTextureTriangles] = (byte) 0;
 			return (byte) (this.numTextureTriangles++);
 		}
 	}
@@ -591,7 +591,7 @@ public class RSMesh {
 	public int[][] method2665(boolean bool_1) {
 		int[] ints_2 = new int[256];
 		int i_3 = 0;
-		int i_4 = bool_1 ? this.vertexCount : this.anInt1999;
+		int i_4 = bool_1 ? this.vertexCount : this.maxDepth;
 
 		int i_6;
 		for (int i_5 = 0; i_5 < i_4; i_5++) {
@@ -658,8 +658,8 @@ public class RSMesh {
 		int i_2 = 0;
 
 		int i_4;
-		for (int i_3 = 0; i_3 < this.aClass84Array2009.length; i_3++) {
-			i_4 = this.aClass84Array2009[i_3].anInt811;
+		for (int i_3 = 0; i_3 < this.isolatedVertexNormals.length; i_3++) {
+			i_4 = this.isolatedVertexNormals[i_3].anInt811;
 			if (i_4 >= 0) {
 				++ints_1[i_4];
 				if (i_4 > i_2) {
@@ -675,8 +675,8 @@ public class RSMesh {
 			ints_1[i_4] = 0;
 		}
 
-		for (i_4 = 0; i_4 < this.aClass84Array2009.length; i_4++) {
-			int i_5 = this.aClass84Array2009[i_4].anInt811;
+		for (i_4 = 0; i_4 < this.isolatedVertexNormals.length; i_4++) {
+			int i_5 = this.isolatedVertexNormals[i_4].anInt811;
 			if (i_5 >= 0) {
 				ints_6[i_5][ints_1[i_5]++] = i_4;
 			}
@@ -927,7 +927,7 @@ public class RSMesh {
 			}
 		}
 
-		this.anInt1999 = -1;
+		this.maxDepth = -1;
 		rsbytebuffer_4.index = i_26;
 		rsbytebuffer_5.index = i_20;
 		short s_43 = 0;
@@ -946,16 +946,16 @@ public class RSMesh {
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_44;
 				this.triangleZ[i_39] = s_45;
-				if (s_43 > this.anInt1999) {
-					this.anInt1999 = s_43;
+				if (s_43 > this.maxDepth) {
+					this.maxDepth = s_43;
 				}
 
-				if (s_44 > this.anInt1999) {
-					this.anInt1999 = s_44;
+				if (s_44 > this.maxDepth) {
+					this.maxDepth = s_44;
 				}
 
-				if (s_45 > this.anInt1999) {
-					this.anInt1999 = s_45;
+				if (s_45 > this.maxDepth) {
+					this.maxDepth = s_45;
 				}
 			}
 
@@ -966,8 +966,8 @@ public class RSMesh {
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_44;
 				this.triangleZ[i_39] = s_45;
-				if (s_45 > this.anInt1999) {
-					this.anInt1999 = s_45;
+				if (s_45 > this.maxDepth) {
+					this.maxDepth = s_45;
 				}
 			}
 
@@ -978,8 +978,8 @@ public class RSMesh {
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_44;
 				this.triangleZ[i_39] = s_45;
-				if (s_45 > this.anInt1999) {
-					this.anInt1999 = s_45;
+				if (s_45 > this.maxDepth) {
+					this.maxDepth = s_45;
 				}
 			}
 
@@ -992,13 +992,13 @@ public class RSMesh {
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_41;
 				this.triangleZ[i_39] = s_45;
-				if (s_45 > this.anInt1999) {
-					this.anInt1999 = s_45;
+				if (s_45 > this.maxDepth) {
+					this.maxDepth = s_45;
 				}
 			}
 		}
 
-		++this.anInt1999;
+		++this.maxDepth;
 		rsbytebuffer_4.index = i_28;
 
 		for (i_39 = 0; i_39 < this.numTextureTriangles; i_39++) {
@@ -1045,12 +1045,12 @@ public class RSMesh {
 			this.vertexZ[i_2] <<= 2;
 		}
 
-		if (this.numTextureTriangles > 0 && this.anIntArray1989 != null) {
-			for (i_2 = 0; i_2 < this.anIntArray1989.length; i_2++) {
-				this.anIntArray1989[i_2] <<= 2;
-				this.anIntArray2000[i_2] <<= 2;
+		if (this.numTextureTriangles > 0 && this.particleDirectionX != null) {
+			for (i_2 = 0; i_2 < this.particleDirectionX.length; i_2++) {
+				this.particleDirectionX[i_2] <<= 2;
+				this.particleDirectionY[i_2] <<= 2;
 				if (this.textureRenderTypes[i_2] != 1) {
-					this.anIntArray2001[i_2] <<= 2;
+					this.particleDirectionZ[i_2] <<= 2;
 				}
 			}
 		}
@@ -1084,16 +1084,16 @@ public class RSMesh {
 				this.vertexCount += rsmesh_22.vertexCount;
 				this.faceCount += rsmesh_22.faceCount;
 				this.numTextureTriangles += rsmesh_22.numTextureTriangles;
-				if (rsmesh_22.aClass87Array2007 != null) {
-					i_3 += rsmesh_22.aClass87Array2007.length;
+				if (rsmesh_22.surfaces != null) {
+					i_3 += rsmesh_22.surfaces.length;
 				}
 
-				if (rsmesh_22.aClass172Array2008 != null) {
-					i_4 += rsmesh_22.aClass172Array2008.length;
+				if (rsmesh_22.surfaceSkins != null) {
+					i_4 += rsmesh_22.surfaceSkins.length;
 				}
 
-				if (rsmesh_22.aClass84Array2009 != null) {
-					i_5 += rsmesh_22.aClass84Array2009.length;
+				if (rsmesh_22.isolatedVertexNormals != null) {
+					i_5 += rsmesh_22.isolatedVertexNormals.length;
 				}
 
 				bool_6 |= rsmesh_22.faceType != null;
@@ -1155,26 +1155,26 @@ public class RSMesh {
 			this.texTriX = new short[this.numTextureTriangles];
 			this.texTriY = new short[this.numTextureTriangles];
 			this.texTriZ = new short[this.numTextureTriangles];
-			this.anIntArray1989 = new int[this.numTextureTriangles];
-			this.anIntArray2000 = new int[this.numTextureTriangles];
-			this.anIntArray2001 = new int[this.numTextureTriangles];
-			this.aByteArray2005 = new byte[this.numTextureTriangles];
-			this.aByteArray1990 = new byte[this.numTextureTriangles];
-			this.anIntArray1992 = new int[this.numTextureTriangles];
-			this.anIntArray1997 = new int[this.numTextureTriangles];
-			this.anIntArray2004 = new int[this.numTextureTriangles];
+			this.particleDirectionX = new int[this.numTextureTriangles];
+			this.particleDirectionY = new int[this.numTextureTriangles];
+			this.particleDirectionZ = new int[this.numTextureTriangles];
+			this.particleLifespanX = new byte[this.numTextureTriangles];
+			this.particleLifespanY = new byte[this.numTextureTriangles];
+			this.particleLifespanZ = new int[this.numTextureTriangles];
+			this.texturePrimaryColor = new int[this.numTextureTriangles];
+			this.textureSecondaryColor = new int[this.numTextureTriangles];
 		}
 
 		if (i_5 > 0) {
-			this.aClass84Array2009 = new Class84[i_5];
+			this.isolatedVertexNormals = new VertexNormal[i_5];
 		}
 
 		if (i_3 > 0) {
-			this.aClass87Array2007 = new Class87[i_3];
+			this.surfaces = new Surface[i_3];
 		}
 
 		if (i_4 > 0) {
-			this.aClass172Array2008 = new Class172[i_4];
+			this.surfaceSkins = new SurfaceSkin[i_4];
 		}
 
 		this.vertexCount = 0;
@@ -1190,10 +1190,10 @@ public class RSMesh {
 			RSMesh rsmesh_14 = arr_1[i_12];
 			if (rsmesh_14 != null) {
 				int i_15;
-				if (rsmesh_14.aClass84Array2009 != null) {
-					for (i_15 = 0; i_15 < rsmesh_14.aClass84Array2009.length; i_15++) {
-						Class84 class84_21 = rsmesh_14.aClass84Array2009[i_15];
-						this.aClass84Array2009[i_5++] = class84_21.method1459(class84_21.anInt809 + this.faceCount);
+				if (rsmesh_14.isolatedVertexNormals != null) {
+					for (i_15 = 0; i_15 < rsmesh_14.isolatedVertexNormals.length; i_15++) {
+						VertexNormal class84_21 = rsmesh_14.isolatedVertexNormals[i_15];
+						this.isolatedVertexNormals[i_5++] = class84_21.method1459(class84_21.anInt809 + this.faceCount);
 					}
 				}
 
@@ -1238,20 +1238,20 @@ public class RSMesh {
 					++this.faceCount;
 				}
 
-				if (rsmesh_14.aClass87Array2007 != null) {
-					for (i_15 = 0; i_15 < rsmesh_14.aClass87Array2007.length; i_15++) {
-						i_16 = this.method2657(rsmesh_14, rsmesh_14.aClass87Array2007[i_15].anInt836, s_13);
-						int i_17 = this.method2657(rsmesh_14, rsmesh_14.aClass87Array2007[i_15].anInt837, s_13);
-						int i_18 = this.method2657(rsmesh_14, rsmesh_14.aClass87Array2007[i_15].anInt838, s_13);
-						this.aClass87Array2007[i_3] = rsmesh_14.aClass87Array2007[i_15].method1488(i_16, i_17, i_18);
+				if (rsmesh_14.surfaces != null) {
+					for (i_15 = 0; i_15 < rsmesh_14.surfaces.length; i_15++) {
+						i_16 = this.method2657(rsmesh_14, rsmesh_14.surfaces[i_15].anInt836, s_13);
+						int i_17 = this.method2657(rsmesh_14, rsmesh_14.surfaces[i_15].anInt837, s_13);
+						int i_18 = this.method2657(rsmesh_14, rsmesh_14.surfaces[i_15].anInt838, s_13);
+						this.surfaces[i_3] = rsmesh_14.surfaces[i_15].method1488(i_16, i_17, i_18);
 						++i_3;
 					}
 				}
 
-				if (rsmesh_14.aClass172Array2008 != null) {
-					for (i_15 = 0; i_15 < rsmesh_14.aClass172Array2008.length; i_15++) {
-						i_16 = this.method2657(rsmesh_14, rsmesh_14.aClass172Array2008[i_15].anInt2119, s_13);
-						this.aClass172Array2008[i_4] = rsmesh_14.aClass172Array2008[i_15].method2911(i_16);
+				if (rsmesh_14.surfaceSkins != null) {
+					for (i_15 = 0; i_15 < rsmesh_14.surfaceSkins.length; i_15++) {
+						i_16 = this.method2657(rsmesh_14, rsmesh_14.surfaceSkins[i_15].anInt2119, s_13);
+						this.surfaceSkins[i_4] = rsmesh_14.surfaceSkins[i_15].method2911(i_16);
 						++i_4;
 					}
 				}
@@ -1259,7 +1259,7 @@ public class RSMesh {
 		}
 
 		i_12 = 0;
-		this.anInt1999 = this.vertexCount;
+		this.maxDepth = this.vertexCount;
 
 		for (int i_23 = 0; i_23 < i_2; i_23++) {
 			short s_19 = (short) (1 << i_23);
@@ -1283,17 +1283,17 @@ public class RSMesh {
 						this.texTriX[this.numTextureTriangles] = rsmesh_20.texTriX[i_16];
 						this.texTriY[this.numTextureTriangles] = rsmesh_20.texTriY[i_16];
 						this.texTriZ[this.numTextureTriangles] = rsmesh_20.texTriZ[i_16];
-						this.anIntArray1989[this.numTextureTriangles] = rsmesh_20.anIntArray1989[i_16];
-						this.anIntArray2000[this.numTextureTriangles] = rsmesh_20.anIntArray2000[i_16];
-						this.anIntArray2001[this.numTextureTriangles] = rsmesh_20.anIntArray2001[i_16];
-						this.aByteArray2005[this.numTextureTriangles] = rsmesh_20.aByteArray2005[i_16];
-						this.aByteArray1990[this.numTextureTriangles] = rsmesh_20.aByteArray1990[i_16];
-						this.anIntArray1992[this.numTextureTriangles] = rsmesh_20.anIntArray1992[i_16];
+						this.particleDirectionX[this.numTextureTriangles] = rsmesh_20.particleDirectionX[i_16];
+						this.particleDirectionY[this.numTextureTriangles] = rsmesh_20.particleDirectionY[i_16];
+						this.particleDirectionZ[this.numTextureTriangles] = rsmesh_20.particleDirectionZ[i_16];
+						this.particleLifespanX[this.numTextureTriangles] = rsmesh_20.particleLifespanX[i_16];
+						this.particleLifespanY[this.numTextureTriangles] = rsmesh_20.particleLifespanY[i_16];
+						this.particleLifespanZ[this.numTextureTriangles] = rsmesh_20.particleLifespanZ[i_16];
 					}
 
 					if (b_24 == 2) {
-						this.anIntArray1997[this.numTextureTriangles] = rsmesh_20.anIntArray1997[i_16];
-						this.anIntArray2004[this.numTextureTriangles] = rsmesh_20.anIntArray2004[i_16];
+						this.texturePrimaryColor[this.numTextureTriangles] = rsmesh_20.texturePrimaryColor[i_16];
+						this.textureSecondaryColor[this.numTextureTriangles] = rsmesh_20.textureSecondaryColor[i_16];
 					}
 
 					++this.numTextureTriangles;
@@ -1323,14 +1323,14 @@ public class RSMesh {
 			this.texTriX = new short[i_3];
 			this.texTriY = new short[i_3];
 			this.texTriZ = new short[i_3];
-			this.anIntArray1989 = new int[i_3];
-			this.anIntArray2000 = new int[i_3];
-			this.anIntArray2001 = new int[i_3];
-			this.aByteArray2005 = new byte[i_3];
-			this.aByteArray1990 = new byte[i_3];
-			this.anIntArray1992 = new int[i_3];
-			this.anIntArray1997 = new int[i_3];
-			this.anIntArray2004 = new int[i_3];
+			this.particleDirectionX = new int[i_3];
+			this.particleDirectionY = new int[i_3];
+			this.particleDirectionZ = new int[i_3];
+			this.particleLifespanX = new byte[i_3];
+			this.particleLifespanY = new byte[i_3];
+			this.particleLifespanZ = new int[i_3];
+			this.texturePrimaryColor = new int[i_3];
+			this.textureSecondaryColor = new int[i_3];
 		}
 
 	}

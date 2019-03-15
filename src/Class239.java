@@ -38,9 +38,9 @@ public class Class239 {
 		if (!Class97.loggedOutState(client.gameState) && !Class282_Sub17.lobbyState(client.gameState, -1116602507)) {
 			int i_3 = -1;
 			int i_4 = -1;
-			if (Class84.myPlayer != null) {
-				i_3 = Class84.myPlayer.regionBaseX[0] >> 3;
-				i_4 = Class84.myPlayer.regionBaseY[0] >> 3;
+			if (VertexNormal.myPlayer != null) {
+				i_3 = VertexNormal.myPlayer.regionBaseX[0] >> 3;
+				i_4 = VertexNormal.myPlayer.regionBaseY[0] >> 3;
 			}
 			if (i_3 >= 0 && i_3 < mapregion_1.getSizeX(-1174933270) >> 3 && i_4 >= 0 && i_4 < mapregion_1.getSizeY(-1872557951) >> 3) {
 				this.method4072(i_3, i_4, anInt2942, -1945601333);
@@ -139,7 +139,7 @@ public class Class239 {
 
 	void method4065() {
 		if (this.anInt2945 >= 0) {
-			long long_2 = Class169.time();
+			long long_2 = TextureDetails.time();
 			this.anInt2945 = (int) ((long) (this.anInt2945 * 824774497) - (long_2 - this.aLong2936) * 824774497L) * 1863439521;
 			if (this.anInt2945 > 0) {
 				this.aClass535_2951.method11445(this.aClass505_2944, this.aClass535_2937, this.aClass535_2931, (float) (this.anInt2946 - this.anInt2945) / (float) this.anInt2946);
@@ -165,7 +165,7 @@ public class Class239 {
 		}
 		if (!this.aClass535_2931.method11449(class535_5)) {
 			this.aClass535_2931.method11444(class535_5);
-			this.aLong2936 = Class169.time();
+			this.aLong2936 = TextureDetails.time();
 			this.anInt2946 = this.anInt2945 = i_3;
 			if (this.anInt2946 != 0) {
 				this.aClass535_2937.method11444(this.aClass535_2951);

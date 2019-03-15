@@ -29,7 +29,7 @@ public class Class4 {
 			int i_19 = (int) f_16 >> 9;
 			int i_20 = (int) f_18 >> 9;
 			if (i_19 > 0 && i_20 > 0 && i_19 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-964294290) && i_20 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1282893956)) {
-				int i_21 = Class84.myPlayer.plane;
+				int i_21 = VertexNormal.myPlayer.plane;
 				if (i_21 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_19][i_20] & 0x2) != 0) {
 					++i_21;
 				}

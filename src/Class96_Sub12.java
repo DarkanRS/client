@@ -56,7 +56,7 @@ public class Class96_Sub12 extends Class96 {
 	public static void method14614(GraphicalRenderer graphicalrenderer_0, long long_1) {
 		Class235.anInt2903 = Class235.anInt2900;
 		Class235.anInt2900 = 0;
-		Class169.time();
+		TextureDetails.time();
 		Iterator iterator_3 = Class235.aList2896.iterator();
 		while (iterator_3.hasNext()) {
 			ParticleSystem class539_4 = (ParticleSystem) iterator_3.next();

@@ -180,7 +180,7 @@ public class WorldMapAreaDefs {
 				} else if (i_2 == 249) {
 					i_4 = rsbytebuffer_1.readUnsignedByte();
 					if (this.aClass465_2737 == null) {
-						i_5 = Class323.nextPowerOfTwo(i_4, -417308135);
+						i_5 = Texture.nextPowerOfTwo(i_4, -417308135);
 						this.aClass465_2737 = new IterableNodeMap(i_5);
 					}
 					for (i_5 = 0; i_5 < i_4; i_5++) {
@@ -308,7 +308,7 @@ public class WorldMapAreaDefs {
 			if (npcdefinitions_3.aBool4893) {
 				if (npc_0.anInt10582 != 0) {
 					String string_5 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE, -834706251) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE, -2066176113);
-					string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, Class84.myPlayer.anInt10565, -1957998512) + " (" + string_5 + npc_0.anInt10582 + ")";
+					string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.myPlayer.anInt10565, -1957998512) + " (" + string_5 + npc_0.anInt10582 + ")";
 				}
 				if (client.aBool7344 && !bool_1) {
 					ParamDefinitions attributedefault_10 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319) : null;
@@ -359,7 +359,7 @@ public class WorldMapAreaDefs {
 							for (i_6 = 0; i_6 < arr_11.length; i_6++) {
 								if (arr_11[i_6] != null && (arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -436851003)) || arr_11[i_6].equalsIgnoreCase(Message.EXAMINE.translate(Class223.CURRENT_LANGUAGE, -473516287)))) {
 									s_7 = 0;
-									if (npc_0.anInt10582 > Class84.myPlayer.anInt10565) {
+									if (npc_0.anInt10582 > VertexNormal.myPlayer.anInt10565) {
 										s_7 = 2000;
 									}
 									short s_12 = 0;

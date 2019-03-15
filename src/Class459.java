@@ -127,7 +127,7 @@ public final class Class459 {
 			client.anIntArray7212[++client.anInt7211 - 1] = i_3;
 			npc_6.anInt10353 = client.anInt7332;
 			if (npc_6.definitions != null && npc_6.definitions.method6886(-1639112398)) {
-				Class169.method2876(npc_6);
+				TextureDetails.method2876(npc_6);
 			}
 			int i_7 = rsbitsbuffer_2.readBits(1, (byte) -14);
 			if (i_7 == 1) {
@@ -166,7 +166,7 @@ public final class Class459 {
 			if (bool_4) {
 				npc_6.method15791(i_9, true, (byte) -43);
 			}
-			npc_6.method16159(i_12, Class84.myPlayer.regionBaseX[0] + i_10, Class84.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize(), -1655892623);
+			npc_6.method16159(i_12, VertexNormal.myPlayer.regionBaseX[0] + i_10, VertexNormal.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize(), -1655892623);
 			if (npc_6.definitions.method6886(-1862040818)) {
 				Class397.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
 			}

@@ -1,4 +1,4 @@
-public class Class84 {
+public class VertexNormal {
 
 	public static Player myPlayer;
 
@@ -10,11 +10,11 @@ public class Class84 {
 
 	public int anInt810;
 
-	Class84 method1459(int i_1) {
-		return new Class84(this.anInt812, i_1, this.anInt811, this.anInt810);
+	VertexNormal method1459(int i_1) {
+		return new VertexNormal(this.anInt812, i_1, this.anInt811, this.anInt810);
 	}
 
-	Class84(int i_1, int i_2, int i_3, int i_4) {
+	VertexNormal(int i_1, int i_2, int i_3, int i_4) {
 		this.anInt812 = i_1;
 		this.anInt809 = i_2;
 		this.anInt811 = i_3;

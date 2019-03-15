@@ -576,7 +576,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										} else {
 											NativeSprite nativesprite_41;
 											if (icomponentdefinitions_12.anInt1426 != -1) {
-												PlayerAppearance playerappearance_34 = icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null;
+												PlayerAppearance playerappearance_34 = icomponentdefinitions_12.aBool1388 ? VertexNormal.myPlayer.playerAppearance : null;
 												nativesprite_41 = IndexLoaders.ITEM_INDEX_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1426, icomponentdefinitions_12.anInt1427, icomponentdefinitions_12.anInt1323, ~0xffffff | icomponentdefinitions_12.anInt1324, icomponentdefinitions_12.anInt1335, playerappearance_34);
 											} else if (icomponentdefinitions_12.anInt1435 != -1) {
 												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1435);
@@ -640,7 +640,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											itemdefinitions_36 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(icomponentdefinitions_12.anInt1426, 202135928);
 											if (itemdefinitions_36 != null) {
 												itemdefinitions_36 = itemdefinitions_36.method7090(icomponentdefinitions_12.anInt1427);
-												meshrasterizer_40 = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null, icomponentdefinitions_12.aClass456_1437, 0, 0, 0, 0);
+												meshrasterizer_40 = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, icomponentdefinitions_12.aBool1388 ? VertexNormal.myPlayer.playerAppearance : null, icomponentdefinitions_12.aClass456_1437, 0, 0, 0, 0);
 												if (meshrasterizer_40 != null) {
 													i_23 = -meshrasterizer_40.YA() >> 1;
 												} else {
@@ -670,12 +670,12 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												}
 											} else if (icomponentdefinitions_12.anInt1329 != 8 && icomponentdefinitions_12.anInt1329 != 9) {
 												if (icomponentdefinitions_12.aClass456_1437 != null && icomponentdefinitions_12.aClass456_1437.hasDefs()) {
-													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, Class84.myPlayer.playerAppearance);
+													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, VertexNormal.myPlayer.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 														Class109.redrawComponent(icomponentdefinitions_12, (byte) -7);
 													}
 												} else {
-													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, Class84.myPlayer.playerAppearance);
+													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, VertexNormal.myPlayer.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
 														Class109.redrawComponent(icomponentdefinitions_12, (byte) -35);
 													}
@@ -683,7 +683,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											} else {
 												ItemContainer class282_sub30_42 = CS2Runner.getItemContainer(icomponentdefinitions_12.anInt1330, false);
 												if (class282_sub30_42 != null) {
-													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, icomponentdefinitions_12.aClass456_1437, icomponentdefinitions_12.anInt1339, icomponentdefinitions_12.anInt1329 == 9, icomponentdefinitions_12.aBool1388 ? Class84.myPlayer.playerAppearance : null);
+													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, icomponentdefinitions_12.aClass456_1437, icomponentdefinitions_12.anInt1339, icomponentdefinitions_12.anInt1329 == 9, icomponentdefinitions_12.aBool1388 ? VertexNormal.myPlayer.playerAppearance : null);
 												}
 											}
 										}

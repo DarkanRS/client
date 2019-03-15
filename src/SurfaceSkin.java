@@ -1,8 +1,8 @@
-public class Class172 {
+public class SurfaceSkin {
 
 	public int anInt2113;
 
-	public Class172 aClass172_2114;
+	public SurfaceSkin aClass172_2114;
 
 	public Matrix44Arr aClass384_2116;
 
@@ -14,13 +14,13 @@ public class Class172 {
 
 	public int anInt2119;
 
-	Class172(int i_1, int i_2) {
+	SurfaceSkin(int i_1, int i_2) {
 		this.anInt2115 = i_1;
 		this.anInt2119 = i_2;
 	}
 
-	Class172 method2911(int i_1) {
-		return new Class172(this.anInt2115, i_1);
+	SurfaceSkin method2911(int i_1) {
+		return new SurfaceSkin(this.anInt2115, i_1);
 	}
 
 	public Class345 method2913(int i_1) {

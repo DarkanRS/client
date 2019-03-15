@@ -181,10 +181,10 @@ public class za extends Class158_Sub2 implements Interface40 {
 
 	void method15706(Exception exception_1) {
 		if (!aBool10291) {
-			aLong10286 = Class169.time();
+			aLong10286 = TextureDetails.time();
 			aBool10291 = true;
 		} else {
-			if (Class169.time() - aLong10286 >= 30000L) {
+			if (TextureDetails.time() - aLong10286 >= 30000L) {
 				throw new RuntimeException(exception_1.getMessage());
 			}
 

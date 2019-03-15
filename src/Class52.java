@@ -38,7 +38,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_2, i_3, 1585240849);
 		this.method1077(bool_1, i_2, i_3, 338046880);
 		String string_4 = Class328.aClass306_3771.method5425(-665821973);
-		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
+		if (TextureDetails.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-1441344140).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
 		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
@@ -55,7 +55,7 @@ public abstract class Class52 implements Interface2 {
 				long long_5 = this.aLong491 - Class328.aClass306_3771.method5439();
 				if (long_5 > 0L) {
 					long long_7 = 10000L * long_5 / (long) i_2 * (long) (i_4 - i_2);
-					long long_9 = (Class169.time() - this.aLong491) * 10000L;
+					long long_9 = (TextureDetails.time() - this.aLong491) * 10000L;
 					if (long_9 < long_7) {
 						i_3 = (int) (100L * long_9 * (long) (i_4 - i_2) / long_7 + (long) (i_2 * 100));
 					} else {
@@ -65,7 +65,7 @@ public abstract class Class52 implements Interface2 {
 			}
 		} else {
 			this.anInt494 = i_2;
-			this.aLong491 = Class169.time();
+			this.aLong491 = TextureDetails.time();
 		}
 		return i_3;
 	}
@@ -87,7 +87,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_2, i_3, 1820160042);
 		this.method1077(bool_1, i_2, i_3, -656602947);
 		String string_4 = Class328.aClass306_3771.method5425(-101176994);
-		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
+		if (TextureDetails.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-588033146).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
 		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
@@ -154,7 +154,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_3, i_4, 213494325);
 		this.method1077(bool_1, i_3, i_4, -281773092);
 		String string_5 = Class328.aClass306_3771.method5425(661479168);
-		if (Class169.time() - this.aLong491 > 10000L) {
+		if (TextureDetails.time() - this.aLong491 > 10000L) {
 			string_5 = string_5 + " (" + Class328.aClass306_3771.method5427(-260598892).anInt4712 + ")";
 		}
 		this.aClass8_492.method360(string_5, this.aClass350_489.anInt4093 / 2 + i_3, this.aClass350_489.anInt4088 / 2 + this.aClass350_489.anInt4092 + i_4 + 4, this.aClass350_489.anInt4091, -1);
@@ -181,7 +181,7 @@ public abstract class Class52 implements Interface2 {
 		this.method1081(bool_1, i_2, i_3, 217412171);
 		this.method1077(bool_1, i_2, i_3, -688757760);
 		String string_4 = Class328.aClass306_3771.method5425(1074452204);
-		if (Class169.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
+		if (TextureDetails.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
 			string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(396217824).anInt4712 * 2061403819 * -1763884029 + ")";
 		}
 		this.aClass8_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);

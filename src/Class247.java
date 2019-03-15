@@ -54,14 +54,14 @@ public class Class247 {
 			graphicalrenderer_1.ba(2, 0);
 			i_8 = i_8 + i_2 & 0x3fff;
 			if (this.anInt3031 != -1 && this.anInt3034 != 0) {
-				Class169 class169_16 = anInterface22_3046.method144(this.anInt3031, -1768391150);
+				TextureDetails class169_16 = anInterface22_3046.method144(this.anInt3031, -1768391150);
 				if (this.aClass160_3030 == null && anInterface22_3046.method139(this.anInt3031, -408857237)) {
-					int[] ints_17 = class169_16.anInt2074 == 2 ? anInterface22_3046.method141(this.anInt3031, this.anInt3034, this.anInt3034, false, -1509054197) : anInterface22_3046.method140(this.anInt3031, 0.7F, this.anInt3034, this.anInt3034, false, (byte) 127);
+					int[] ints_17 = class169_16.blendType == 2 ? anInterface22_3046.method141(this.anInt3031, this.anInt3034, this.anInt3034, false, -1509054197) : anInterface22_3046.method140(this.anInt3031, 0.7F, this.anInt3034, this.anInt3034, false, (byte) 127);
 					this.anInt3053 = ints_17[0];
 					this.anInt3044 = ints_17[ints_17.length - 1];
 					this.aClass160_3030 = graphicalrenderer_1.createNativeSprite(ints_17, this.anInt3034, this.anInt3034, this.anInt3034, 1367570399);
 				}
-				int i_22 = i_15 == 255 ? (class169_16.anInt2074 == 2 ? 1 : 0) : 1;
+				int i_22 = i_15 == 255 ? (class169_16.blendType == 2 ? 1 : 0) : 1;
 				if (i_22 == 1 && bool_11) {
 					graphicalrenderer_1.B(i_3, i_4, i_5, i_6, i_10, 0);
 				}

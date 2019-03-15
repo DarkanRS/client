@@ -922,7 +922,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if ((flags & 0x4000) != 0) {
 			String string_16 = stream.readString();
-			if (player == Class84.myPlayer) {
+			if (player == VertexNormal.myPlayer) {
 				Class191.method3167(2, 0, player.method16127(2097729093), player.method16128(), player.username, string_16, 1185055161);
 			}
 

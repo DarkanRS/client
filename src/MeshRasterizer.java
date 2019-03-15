@@ -4,7 +4,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void bc(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
-	public abstract Class87[] method11253();
+	public abstract Surface[] method11253();
 
 	public abstract int o();
 
@@ -147,7 +147,7 @@ public abstract class MeshRasterizer {
 					float f_25;
 					float f_26;
 					if (b_23 == 1) {
-						i_20 = rsmesh_1.anIntArray1989[i_15];
+						i_20 = rsmesh_1.particleDirectionX[i_15];
 						if (i_20 == 0) {
 							f_24 = 1.0F;
 							f_26 = 1.0F;
@@ -159,18 +159,18 @@ public abstract class MeshRasterizer {
 							f_24 = (float) (-i_20) / 1024.0F;
 						}
 
-						f_25 = 64.0F / (float) rsmesh_1.anIntArray2000[i_15];
+						f_25 = 64.0F / (float) rsmesh_1.particleDirectionY[i_15];
 					} else if (b_23 == 2) {
-						f_24 = 64.0F / (float) rsmesh_1.anIntArray1989[i_15];
-						f_25 = 64.0F / (float) rsmesh_1.anIntArray2000[i_15];
-						f_26 = 64.0F / (float) rsmesh_1.anIntArray2001[i_15];
+						f_24 = 64.0F / (float) rsmesh_1.particleDirectionX[i_15];
+						f_25 = 64.0F / (float) rsmesh_1.particleDirectionY[i_15];
+						f_26 = 64.0F / (float) rsmesh_1.particleDirectionZ[i_15];
 					} else {
-						f_24 = (float) rsmesh_1.anIntArray1989[i_15] / 1024.0F;
-						f_25 = (float) rsmesh_1.anIntArray2000[i_15] / 1024.0F;
-						f_26 = (float) rsmesh_1.anIntArray2001[i_15] / 1024.0F;
+						f_24 = (float) rsmesh_1.particleDirectionX[i_15] / 1024.0F;
+						f_25 = (float) rsmesh_1.particleDirectionY[i_15] / 1024.0F;
+						f_26 = (float) rsmesh_1.particleDirectionZ[i_15] / 1024.0F;
 					}
 
-					floats_7[i_15] = this.method11257(rsmesh_1.texTriX[i_15], rsmesh_1.texTriY[i_15], rsmesh_1.texTriZ[i_15], rsmesh_1.aByteArray2005[i_15] & 0xff, f_24, f_25, f_26);
+					floats_7[i_15] = this.method11257(rsmesh_1.texTriX[i_15], rsmesh_1.texTriY[i_15], rsmesh_1.texTriZ[i_15], rsmesh_1.particleLifespanX[i_15] & 0xff, f_24, f_25, f_26);
 				}
 			}
 		}
@@ -649,7 +649,7 @@ public abstract class MeshRasterizer {
 
 	public abstract int cw();
 
-	public abstract Class172[] method11274();
+	public abstract SurfaceSkin[] method11274();
 
 	abstract void method11275(int var1, int[] var2, int var3, int var4, int var5, int var6, boolean var7);
 
@@ -745,7 +745,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void bx(int var1);
 
-	public abstract Class172[] method11283();
+	public abstract SurfaceSkin[] method11283();
 
 	public abstract int ya();
 
@@ -860,13 +860,13 @@ public abstract class MeshRasterizer {
 
 	public abstract void cy(int var1, int var2, int var3, int var4);
 
-	public abstract Class87[] method11300();
+	public abstract Surface[] method11300();
 
 	public abstract void p(int var1);
 
 	abstract void method11301();
 
-	public abstract Class172[] method11302();
+	public abstract SurfaceSkin[] method11302();
 
 	public abstract boolean method11303();
 
@@ -949,6 +949,6 @@ public abstract class MeshRasterizer {
 
 	public abstract void bi(int var1);
 
-	public abstract Class172[] method11331();
+	public abstract SurfaceSkin[] method11331();
 
 }

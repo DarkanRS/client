@@ -72,7 +72,7 @@ public class Class249 implements Interface43 {
 					return true;
 				}
 			}
-			return string_0.equalsIgnoreCase(Class84.myPlayer.displayName);
+			return string_0.equalsIgnoreCase(VertexNormal.myPlayer.displayName);
 		}
 	}
 }

@@ -132,7 +132,7 @@ public class Class190 {
 			client.players[i_1] = null;
 		}
 
-		Class84.myPlayer = null;
+		VertexNormal.myPlayer = null;
 		client.anInt7211 = 0;
 		client.anInt7210 = 0;
 		client.NPCS.method7749(1966305284);

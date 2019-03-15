@@ -200,7 +200,7 @@ public class Class188 {
 						i_23 = rsbitsbuffer_2.readUnsignedShort();
 						if (IndexLoaders.MAP_REGION_DECODER.method4419(-1875813222) != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1714570873) && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1820425054)) {
 							i_24 = i_8 + 1;
-							if (Class84.myPlayer.regionBaseX[0] >= i_21 - i_24 && Class84.myPlayer.regionBaseX[0] <= i_21 + i_24 && Class84.myPlayer.regionBaseY[0] >= i_5 - i_24 && Class84.myPlayer.regionBaseY[0] <= i_24 + i_5) {
+							if (VertexNormal.myPlayer.regionBaseX[0] >= i_21 - i_24 && VertexNormal.myPlayer.regionBaseX[0] <= i_21 + i_24 && VertexNormal.myPlayer.regionBaseY[0] >= i_5 - i_24 && VertexNormal.myPlayer.regionBaseY[0] <= i_24 + i_5) {
 								Class383.method6509(i_6, i_9, i_10, i_11, i_8 + (Class272.anInt3331 << 24) + (i_5 << 8) + (i_21 << 16), i_23);
 							}
 						}
@@ -348,7 +348,7 @@ public class Class188 {
 							boolean bool_41 = rsbitsbuffer_2.readUnsignedByte() == 1;
 							if (IndexLoaders.MAP_REGION_DECODER.method4419(-2004979271) != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-274697283) && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1740682056)) {
 								i_14 = i_8 + 1;
-								if (Class84.myPlayer.regionBaseX[0] >= i_21 - i_14 && Class84.myPlayer.regionBaseX[0] <= i_21 + i_14 && Class84.myPlayer.regionBaseY[0] >= i_5 - i_14 && Class84.myPlayer.regionBaseY[0] <= i_14 + i_5) {
+								if (VertexNormal.myPlayer.regionBaseX[0] >= i_21 - i_14 && VertexNormal.myPlayer.regionBaseX[0] <= i_21 + i_14 && VertexNormal.myPlayer.regionBaseY[0] >= i_5 - i_14 && VertexNormal.myPlayer.regionBaseY[0] <= i_14 + i_5) {
 									Class256.method4414(i_6, i_9, i_10, i_11, i_8 + (Class272.anInt3331 << 24) + (i_5 << 8) + (i_21 << 16), bool_41, i_23);
 								}
 							}
@@ -443,7 +443,7 @@ public class Class188 {
 		if (NamedFileReference.method867(1523656747) != Class279.aClass279_3368) {
 			try {
 				String string_1 = Class282_Sub44.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
-				int i_2 = (int) (Class169.time() / 86400000L) - 11745;
+				int i_2 = (int) (TextureDetails.time() / 86400000L) - 11745;
 				String string_3 = "usrdob=" + i_2 + "; version=1; path=/; domain=" + string_1;
 				Class441.method7376(Class282_Sub44.anApplet8065, "document.cookie=\"" + string_3 + "\"", (byte) 18);
 			} catch (Throwable throwable_4) {

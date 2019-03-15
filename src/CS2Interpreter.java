@@ -3163,8 +3163,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method5408(CS2Executor executor) {
-		byte b_2 = Class84.myPlayer.plane;
-		Vector3 vector3_3 = Class84.myPlayer.method11166().aClass385_3595;
+		byte b_2 = VertexNormal.myPlayer.plane;
+		Vector3 vector3_3 = VertexNormal.myPlayer.method11166().aClass385_3595;
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = ((int) vector3_3.x >> 9) + coordgrid_4.x;
 		int i_6 = ((int) vector3_3.z >> 9) + coordgrid_4.y;
@@ -3325,8 +3325,8 @@ public class CS2Interpreter {
 
 	static final void method8717(CS2Executor executor) {
 		String string_2;
-		if (Class84.myPlayer != null && Class84.myPlayer.username != null) {
-			string_2 = Class84.myPlayer.method16127(2008342545);
+		if (VertexNormal.myPlayer != null && VertexNormal.myPlayer.username != null) {
+			string_2 = VertexNormal.myPlayer.method16127(2008342545);
 		} else {
 			string_2 = "";
 		}
@@ -3498,7 +3498,7 @@ public class CS2Interpreter {
 		boolean bool_2 = false;
 		if (client.aBool7310) {
 			try {
-				Object object_3 = Class361.aClass361_4178.method6254(new Object[] { Integer.valueOf(Class504.anInt5832), Boolean.valueOf(Class84.myPlayer.male == 1), Integer.valueOf(executor.intStack[--executor.intStackPtr]) }, (byte) 69);
+				Object object_3 = Class361.aClass361_4178.method6254(new Object[] { Integer.valueOf(Class504.anInt5832), Boolean.valueOf(VertexNormal.myPlayer.male == 1), Integer.valueOf(executor.intStack[--executor.intStackPtr]) }, (byte) 69);
 				if (object_3 != null) {
 					bool_2 = ((Boolean) object_3).booleanValue();
 				}
@@ -3607,7 +3607,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15696(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class84.myPlayer.playerAppearance != null && Class84.myPlayer.playerAppearance.aBool2929 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.myPlayer.playerAppearance != null && VertexNormal.myPlayer.playerAppearance.aBool2929 ? 1 : 0;
 	}
 
 	static final void method4881(CS2Executor executor) {
@@ -4245,8 +4245,8 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (Class84.myPlayer.playerAppearance != null) {
-			Class84.myPlayer.playerAppearance.method3995(i_2, i_3, IndexLoaders.ITEM_INDEX_LOADER);
+		if (VertexNormal.myPlayer.playerAppearance != null) {
+			VertexNormal.myPlayer.playerAppearance.method3995(i_2, i_3, IndexLoaders.ITEM_INDEX_LOADER);
 		}
 	}
 
@@ -4867,17 +4867,17 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (Class84.myPlayer.playerAppearance != null) {
+		if (VertexNormal.myPlayer.playerAppearance != null) {
 			int i_4;
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray428.length; i_4++) {
 				if (IdentikitDefinition.anIntArray428[i_4] == i_2) {
-					Class84.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, -1891661545);
+					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, -1891661545);
 					return;
 				}
 			}
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray422.length; i_4++) {
 				if (IdentikitDefinition.anIntArray422[i_4] == i_2) {
-					Class84.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, 938562628);
+					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, 938562628);
 					break;
 				}
 			}
@@ -5285,7 +5285,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5299(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class282_Sub45.method13405(Class169.time());
+		executor.intStack[++executor.intStackPtr - 1] = Class282_Sub45.method13405(TextureDetails.time());
 	}
 
 	static final void method13040(CS2Executor executor) {
@@ -5360,7 +5360,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6317(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class169.method2875(client.gameState, -2059083211) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = TextureDetails.method2875(client.gameState, -2059083211) ? 1 : 0;
 	}
 
 	static final void method6318(CS2Executor executor) {
@@ -5820,8 +5820,8 @@ public class CS2Interpreter {
 
 	static final void method7771(CS2Executor executor) {
 		String string_2;
-		if (Class84.myPlayer != null && Class84.myPlayer.username != null) {
-			string_2 = Class84.myPlayer.method16128();
+		if (VertexNormal.myPlayer != null && VertexNormal.myPlayer.username != null) {
+			string_2 = VertexNormal.myPlayer.method16128();
 		} else {
 			string_2 = "";
 		}
@@ -6454,7 +6454,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method287(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = (int) (Class169.time() / 86400000L) - 11745;
+		executor.intStack[++executor.intStackPtr - 1] = (int) (TextureDetails.time() / 86400000L) - 11745;
 	}
 
 	static final void method481(CS2Executor executor) {
@@ -6718,7 +6718,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		int i_3 = Class393.preferences.aClass468_Sub13_8228.method12714(1677203613);
 		if (i_2 != i_3) {
-			if (Class169.method2875(client.gameState, -2096796884)) {
+			if (TextureDetails.method2875(client.gameState, -2096796884)) {
 				if (i_3 == 0 && Class260.anInt3223 != -1) {
 					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2, (byte) -40);
 					Class468_Sub6.method12658(1298761444);
@@ -6727,7 +6727,7 @@ public class CS2Interpreter {
 					Class226.method3805();
 					Class260.aBool3220 = false;
 				} else {
-					Class87.method1491(i_2, (byte) -25);
+					Surface.method1491(i_2, (byte) -25);
 				}
 			}
 			Class393.preferences.setValue(Class393.preferences.aClass468_Sub13_8228, i_2, 1268885388);
@@ -7175,7 +7175,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		int i_3 = Class393.preferences.aClass468_Sub13_8229.method12714(2130279532);
 		if (i_3 != i_2 && Class260.anInt3228 == Class260.anInt3223) {
-			if (!Class169.method2875(client.gameState, -2119377821)) {
+			if (!TextureDetails.method2875(client.gameState, -2119377821)) {
 				if (i_3 == 0) {
 					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, i_2, (byte) -58);
 					Class468_Sub6.method12658(173344706);
@@ -7184,7 +7184,7 @@ public class CS2Interpreter {
 					Class226.method3805();
 					Class260.aBool3220 = false;
 				} else {
-					Class87.method1491(i_2, (byte) -14);
+					Surface.method1491(i_2, (byte) -14);
 				}
 			}
 			Class393.preferences.setValue(Class393.preferences.aClass468_Sub13_8229, i_2, 1044638020);
@@ -7212,7 +7212,7 @@ public class CS2Interpreter {
 		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 56)) {
 			if (Class448.aBool5422) {
 				executor.intStack[++executor.intStackPtr - 1] = 0;
-			} else if (Class448.aLong5425 > Class169.time() - 1000L) {
+			} else if (Class448.aLong5425 > TextureDetails.time() - 1000L) {
 				executor.intStack[++executor.intStackPtr - 1] = 1;
 			} else {
 				Class448.aBool5422 = true;
@@ -7303,7 +7303,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class172.method2915(icomponentdefinitions_3, interface_4, executor);
+		SurfaceSkin.method2915(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1498(CS2Executor executor) {
@@ -7314,7 +7314,7 @@ public class CS2Interpreter {
 
 	static final void method1499(CS2Executor executor) {
 		executor.intStack[++executor.intStackPtr - 1] = (int) (Class116.aLong1259 / 60000L);
-		executor.intStack[++executor.intStackPtr - 1] = (int) ((Class116.aLong1259 - Class169.time() - Class43.aLong420) / 60000L);
+		executor.intStack[++executor.intStackPtr - 1] = (int) ((Class116.aLong1259 - TextureDetails.time() - Class43.aLong420) / 60000L);
 		executor.intStack[++executor.intStackPtr - 1] = Class509.aBool5870 ? 1 : 0;
 	}
 
@@ -8322,7 +8322,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3340(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class84.myPlayer.aClass19_10359.method578() >> 3;
+		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.myPlayer.aClass19_10359.method578() >> 3;
 	}
 
 	static final void method3341(CS2Executor executor) {
@@ -8374,7 +8374,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5205(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class87.method1489().method243();
+		executor.intStack[++executor.intStackPtr - 1] = Surface.method1489().method243();
 	}
 
 	static final void modInt(CS2Executor executor) {
@@ -8600,7 +8600,7 @@ public class CS2Interpreter {
 
 	static final void method1608(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (Class467.aClass173Array5575 != null && i_2 < Class459.anInt5534 && Class467.aClass173Array5575[i_2].aString2127.equalsIgnoreCase(Class84.myPlayer.displayName)) {
+		if (Class467.aClass173Array5575 != null && i_2 < Class459.anInt5534 && Class467.aClass173Array5575[i_2].aString2127.equalsIgnoreCase(VertexNormal.myPlayer.displayName)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -8889,8 +8889,8 @@ public class CS2Interpreter {
 
 	static final void method4310(CS2Executor executor) {
 		boolean bool_2 = executor.intStack[--executor.intStackPtr] != 0;
-		if (Class84.myPlayer.playerAppearance != null) {
-			Class84.myPlayer.playerAppearance.method4003(bool_2);
+		if (VertexNormal.myPlayer.playerAppearance != null) {
+			VertexNormal.myPlayer.playerAppearance.method4003(bool_2);
 		}
 	}
 
@@ -9188,7 +9188,7 @@ public class CS2Interpreter {
 		executor.stringStackPtr -= 2;
 		String string_2 = (String) executor.stringStack[executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
-		if (Class84.myPlayer.playerAppearance != null && Class84.myPlayer.playerAppearance.aBool2929) {
+		if (VertexNormal.myPlayer.playerAppearance != null && VertexNormal.myPlayer.playerAppearance.aBool2929) {
 			executor.stringStack[++executor.stringStackPtr - 1] = string_3;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = string_2;
@@ -9588,7 +9588,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6916(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class84.myPlayer.anInt10565;
+		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.myPlayer.anInt10565;
 	}
 
 	static final void loadClanVarLong(CS2Executor executor) {
@@ -9739,7 +9739,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class169.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 3);
+		TextureDetails.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 3);
 	}
 
 	static final void method5512(CS2Executor executor) {
@@ -9752,7 +9752,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class172.method2915(icomponentdefinitions_3, interface_4, executor);
+		SurfaceSkin.method2915(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method4961(CS2Executor executor) {
@@ -10071,14 +10071,14 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (Class84.myPlayer.playerAppearance != null) {
-			Class84.myPlayer.playerAppearance.method4029(i_2, i_3);
+		if (VertexNormal.myPlayer.playerAppearance != null) {
+			VertexNormal.myPlayer.playerAppearance.method4029(i_2, i_3);
 		}
 	}
 
 	static final void method1836(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		Class329_Sub1.method12491(Class84.myPlayer, executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1]);
+		Class329_Sub1.method12491(VertexNormal.myPlayer, executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1]);
 	}
 
 	static final void method1837(CS2Executor executor) {
@@ -10086,7 +10086,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7551(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = (int) (Class169.time() / 60000L);
+		executor.intStack[++executor.intStackPtr - 1] = (int) (TextureDetails.time() / 60000L);
 	}
 
 	static final void method7552(CS2Executor executor) {
@@ -10264,7 +10264,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class169.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 11);
+		TextureDetails.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 11);
 	}
 
 	static final void method4798(CS2Executor executor) {

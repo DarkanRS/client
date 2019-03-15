@@ -66,10 +66,10 @@ public class Interface {
 						int i_5;
 						if (class268_2.anInt3298 != 0) {
 							int i_6 = class268_2.anInt3298 >> 24 & 0x3;
-							if (i_6 == Class84.myPlayer.plane) {
+							if (i_6 == VertexNormal.myPlayer.plane) {
 								int i_7 = (class268_2.anInt3298 & 0xff) << 9;
-								int i_8 = Class84.myPlayer.getSize() << 8;
-								Vector3 vector3_9 = Class84.myPlayer.method11166().aClass385_3595;
+								int i_8 = VertexNormal.myPlayer.getSize() << 8;
+								Vector3 vector3_9 = VertexNormal.myPlayer.method11166().aClass385_3595;
 								int i_10 = class268_2.anInt3298 >> 16 & 0xff;
 								int i_11 = (i_10 << 9) + 256 - (int) vector3_9.x + i_8;
 								int i_12 = class268_2.anInt3298 >> 8 & 0xff;

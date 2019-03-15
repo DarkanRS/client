@@ -37,7 +37,7 @@ public abstract class Class278 {
 			return !this.aClass282_Sub41_Sub3_3363.method14794() || this.method4923(24293549) > this.aClass282_Sub41_Sub3_3363.method14792();
 		} else {
 			double d_2 = (double) this.aClass282_Sub41_Sub3_3363.method14791();
-			return d_2 == 0.0D || (double) Class169.time() >= (double) this.aClass282_Sub41_Sub3_3363.method14793() + 1000.0D / d_2;
+			return d_2 == 0.0D || (double) TextureDetails.time() >= (double) this.aClass282_Sub41_Sub3_3363.method14793() + 1000.0D / d_2;
 		}
 	}
 

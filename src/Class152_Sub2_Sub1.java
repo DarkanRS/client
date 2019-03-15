@@ -29,13 +29,13 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
 					return null;
 				}
 
-				Class169 class169_5 = interface22_1.method144(anIntArray10169[i_4], -2057048740);
-				int i_6 = class169_5.aBool2065 ? 64 : 128;
+				TextureDetails class169_5 = interface22_1.method144(anIntArray10169[i_4], -2057048740);
+				int i_6 = class169_5.isHalfSize ? 64 : 128;
 				if (i_6 > i_3) {
 					i_3 = i_6;
 				}
 
-				if (class169_5.aByte2088 > 0) {
+				if (class169_5.useMipmaps > 0) {
 					bool_2 = true;
 				}
 			}
@@ -68,13 +68,13 @@ public class Class152_Sub2_Sub1 extends Class152_Sub2 {
 					return null;
 				}
 
-				Class169 class169_5 = interface22_1.method144(anIntArray10169[i_4], -2054347841);
-				int i_6 = class169_5.aBool2065 ? 64 : 128;
+				TextureDetails class169_5 = interface22_1.method144(anIntArray10169[i_4], -2054347841);
+				int i_6 = class169_5.isHalfSize ? 64 : 128;
 				if (i_6 > i_3) {
 					i_3 = i_6;
 				}
 
-				if (class169_5.aByte2088 > 0) {
+				if (class169_5.useMipmaps > 0) {
 					bool_2 = true;
 				}
 			}

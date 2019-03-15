@@ -12,7 +12,7 @@ public class Class282_Sub40 extends Node {
 
 	float aFloat8012;
 
-	Class172 aClass172_8009;
+	SurfaceSkin aClass172_8009;
 
 	Class345 aClass345_8007;
 
@@ -27,7 +27,7 @@ public class Class282_Sub40 extends Node {
 		this.aFloat8012 = aFloatArray8013[2];
 	}
 
-	Class282_Sub40(Class172 class172_1, ParticleSystem class539_2) {
+	Class282_Sub40(SurfaceSkin class172_1, ParticleSystem class539_2) {
 		this.aClass172_8009 = class172_1;
 		this.aClass345_8007 = this.aClass172_8009.method2913(-1334854713);
 		this.method13298((byte) -35);
@@ -52,7 +52,7 @@ public class Class282_Sub40 extends Node {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, 259124869);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, 1402342862);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 1, -1616300201);
-		Class323.method5777(1459972295);
+		Texture.method5777(1459972295);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 1, 100643539);
 		Class393.preferences.setValue(Class393.preferences.graphics, 3, -1425167451);
 		Class94.method1589();

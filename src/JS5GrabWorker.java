@@ -497,7 +497,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				this.coll = null;
 			}
 		}
-		if (this.aBool7801 && Class169.time() >= this.aLong7785) {
+		if (this.aBool7801 && TextureDetails.time() >= this.aLong7785) {
 			for (JS5CacheRequest js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7750(-556717169); js5cacherequest_2 != null; js5cacherequest_2 = (JS5CacheRequest) this.aClass465_7796.method7751((byte) 47)) {
 				if (!js5cacherequest_2.waiting) {
 					if (js5cacherequest_2.aBool9638) {
@@ -510,7 +510,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 					}
 				}
 			}
-			this.aLong7785 = Class169.time() + 1000L;
+			this.aLong7785 = TextureDetails.time() + 1000L;
 		}
 	}
 

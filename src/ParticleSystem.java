@@ -102,7 +102,7 @@ public class ParticleSystem {
 		}
 	}
 
-	public void method11511(GraphicalRenderer graphicalrenderer_1, long long_2, Class87[] arr_4, Class172[] arr_5) {
+	public void method11511(GraphicalRenderer graphicalrenderer_1, long long_2, Surface[] arr_4, SurfaceSkin[] arr_5) {
 		if (!this.aBool7132) {
 			this.method11541(graphicalrenderer_1, arr_4);
 			this.method11513(arr_5);
@@ -115,7 +115,7 @@ public class ParticleSystem {
 		this.aLong7124 = long_1;
 	}
 
-	void method11513(Class172[] arr_1) {
+	void method11513(SurfaceSkin[] arr_1) {
 		for (int i_3 = 0; i_3 < 8; i_3++) {
 			aBoolArray7134[i_3] = false;
 		}
@@ -209,7 +209,7 @@ public class ParticleSystem {
 		this.method11504(i_1, bool_2);
 	}
 
-	void method11541(GraphicalRenderer graphicalrenderer_1, Class87[] arr_2) {
+	void method11541(GraphicalRenderer graphicalrenderer_1, Surface[] arr_2) {
 		for (int i_4 = 0; i_4 < 32; i_4++) {
 			aBoolArray7133[i_4] = false;
 		}

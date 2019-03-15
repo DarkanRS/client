@@ -223,7 +223,7 @@ public class Class282_Sub19 extends Node {
 		if (this.anInt7640 > 0) {
 			this.aClass282_Sub35_7655 = new RsByteBuffer(this.anInt7640 * 2);
 			this.aClass282_Sub35_Sub1_7651 = new Class282_Sub35_Sub1(this.anInt7640 * 16);
-			this.aClass453_7657 = new HashTable(Class323.nextPowerOfTwo(this.anInt7640, 1055590190));
+			this.aClass453_7657 = new HashTable(Texture.nextPowerOfTwo(this.anInt7640, 1055590190));
 			i_9 = 0;
 			i_8 = 0;
 

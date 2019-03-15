@@ -726,7 +726,7 @@ public class Class291 {
 			return 0;
 		} else {
 			int i_5 = overlaydef_4.texture;
-			if (i_5 >= 0 && interface22_0.method144(i_5, -1948706533).aBool2056) {
+			if (i_5 >= 0 && interface22_0.method144(i_5, -1948706533).isGroundMesh) {
 				i_5 = -1;
 			}
 
@@ -746,7 +746,7 @@ public class Class291 {
 				i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
 				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(i_9, 96, (byte) -73), 475535484) & 0xffff];
 			} else if (i_5 >= 0) {
-				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(interface22_0.method144(i_5, -1979012450).aShort2073, 96, (byte) -53), 390293203) & 0xffff];
+				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(interface22_0.method144(i_5, -1979012450).color, 96, (byte) -53), 390293203) & 0xffff];
 			} else if (overlaydef_4.primaryRGB == -1) {
 				i_6 = 0;
 			} else {

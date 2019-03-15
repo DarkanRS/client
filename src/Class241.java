@@ -14,12 +14,12 @@ public final class Class241 {
 		Canvas canvas_1 = new Canvas();
 		canvas_1.setSize(100, 100);
 		GraphicalRenderer graphicalrenderer_2 = Class320.createRenderer(0, canvas_1, (Interface22) null, (Index) null, 0, -2017555063);
-		long long_3 = Class169.time();
+		long long_3 = TextureDetails.time();
 		int i_5;
 		for (i_5 = 0; i_5 < 10000; i_5++) {
 			graphicalrenderer_2.method8658();
 		}
-		i_5 = (int) (Class169.time() - long_3);
+		i_5 = (int) (TextureDetails.time() - long_3);
 		graphicalrenderer_2.method8425(0, 0, 100, 100, -16777216, (byte) -29);
 		graphicalrenderer_2.method8396(-2143467944);
 		return i_5;

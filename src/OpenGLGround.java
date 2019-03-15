@@ -807,7 +807,7 @@ public class OpenGLGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -2043005984).aBool2056) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -2043005984).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
@@ -950,7 +950,7 @@ public class OpenGLGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -1841281080).aBool2056) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -1841281080).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}

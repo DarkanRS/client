@@ -58,7 +58,7 @@ final class Class82 implements Interface11 {
 		int[] ints_8 = Class197.PLAYER_INDICES;
 		for (int i_9 = 0; i_9 < i_7; i_9++) {
 			Player player_10 = client.players[ints_8[i_9]];
-			if (player_10 != null && player_10.hasAppearance((byte) 69) && !player_10.hidden && player_10 != Class84.myPlayer && player_10.plane == Class84.myPlayer.plane) {
+			if (player_10 != null && player_10.hasAppearance((byte) 69) && !player_10.hidden && player_10 != VertexNormal.myPlayer && player_10.plane == VertexNormal.myPlayer.plane) {
 				Vector3 vector3_11 = player_10.method11166().aClass385_3595;
 				int i_12 = (int) vector3_11.x / 128 - i_0 / 128;
 				int i_13 = (int) vector3_11.z / 128 - i_1 / 128;
@@ -78,7 +78,7 @@ final class Class82 implements Interface11 {
 					}
 				}
 				boolean bool_19 = false;
-				if (Class84.myPlayer.teamId != 0 && player_10.teamId != 0 && player_10.teamId == Class84.myPlayer.teamId) {
+				if (VertexNormal.myPlayer.teamId != 0 && player_10.teamId != 0 && player_10.teamId == VertexNormal.myPlayer.teamId) {
 					bool_19 = true;
 				}
 				if (player_10.aBool10571) {

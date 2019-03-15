@@ -689,9 +689,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				int i_5 = this.anInterface22_5834.method84();
 
 				for (short s_6 = 0; s_6 < i_5; s_6++) {
-					Class169 class169_7 = this.anInterface22_5834.method144(s_6, -2075826193);
+					TextureDetails class169_7 = this.anInterface22_5834.method144(s_6, -2075826193);
 					if (class169_7 != null) {
-						this.V(s_6, class169_7.aShort2073, class169_7.anInt2074, class169_7.aByte2064, class169_7.aByte2076, class169_7.anInt2077, class169_7.aBool2065, class169_7.aByte2079, class169_7.aByte2080, class169_7.aByte2081, class169_7.aByte2090, class169_7.aBool2056, class169_7.aBool2072, class169_7.aBool2087, class169_7.aBool2086, class169_7.aBool2059, class169_7.aByte2088, class169_7.aBool2089, class169_7.aBool2082, class169_7.anInt2091);
+						this.V(s_6, class169_7.color, class169_7.blendType, class169_7.effectId, class169_7.effectParam1, class169_7.effectParam2, class169_7.isHalfSize, class169_7.shadowFactor, class169_7.brightness, class169_7.textureSpeedU, class169_7.textureSpeedV, class169_7.isGroundMesh, class169_7.skipTriangles, class169_7.aBool2087, class169_7.repeatS, class169_7.repeatT, class169_7.useMipmaps, class169_7.hdr, class169_7.isBrickTile, class169_7.combineMode);
 					}
 				}
 

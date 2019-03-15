@@ -28,10 +28,10 @@ public class Class282_Sub3 extends Node {
 		int i_6;
 		int i_7;
 		if (this.anInt7493 != -1) {
-			Class169 class169_5 = this.aClass505_Sub1_7494.anInterface22_5834.method144(this.anInt7493, -2121726716);
-			i_6 = class169_5.aByte2079 & 0xff;
+			TextureDetails class169_5 = this.aClass505_Sub1_7494.anInterface22_5834.method144(this.anInt7493, -2121726716);
+			i_6 = class169_5.shadowFactor & 0xff;
 			int i_9;
-			if (i_6 != 0 && class169_5.aByte2064 != 4) {
+			if (i_6 != 0 && class169_5.effectId != 4) {
 				if (i_3 < 0) {
 					i_7 = 0;
 				} else if (i_3 > 127) {
@@ -48,7 +48,7 @@ public class Class282_Sub3 extends Node {
 				}
 			}
 
-			i_7 = class169_5.aByte2080 & 0xff;
+			i_7 = class169_5.brightness & 0xff;
 			if (i_7 != 0) {
 				i_7 += 256;
 				int i_8 = ((i_2 & 0xff0000) >> 16) * i_7;

@@ -169,7 +169,7 @@ public class Class16 {
 							}
 						}
 					}
-					if (Class383.method6515(Class84.myPlayer.displayName).equals(string_3)) {
+					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_3)) {
 						LoadingStage.method6681(Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
 					} else {
 						BufferedConnectionContext class184_8 = Class468_Sub20.method12807(1039135585);

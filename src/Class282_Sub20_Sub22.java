@@ -110,9 +110,9 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						tcpmessage_6.buffer.writeShort(Class496.aClass510_5816.anInt5872);
 						client.aClass184_7475.method3049(tcpmessage_6, 496271189);
 						Class496.aClass510_5816 = null;
-						Class28.aLong351 = Class169.time() + 30000L;
+						Class28.aLong351 = TextureDetails.time() + 30000L;
 					}
-				} else if (Class169.time() >= Class28.aLong351) {
+				} else if (TextureDetails.time() >= Class28.aLong351) {
 					Class496.aClass510_5816 = client.aClass508_7223.method8729(Class159.GAME_CONNECTION_INFO.host, (short) 5418);
 				}
 				Class434.method7292();
@@ -241,23 +241,23 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 															}
 															Class461.method7703();
 															if (client.rights > 0 && Class96_Sub21.keyRecorder.method3236(82, -1802639112) && Class96_Sub21.keyRecorder.method3236(81, -1439970687) && client.anInt7191 != 0) {
-																i_2 = Class84.myPlayer.plane - client.anInt7191;
+																i_2 = VertexNormal.myPlayer.plane - client.anInt7191;
 																if (i_2 < 0) {
 																	i_2 = 0;
 																} else if (i_2 > 3) {
 																	i_2 = 3;
 																}
 																CoordGrid coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-																Class447.method7460(i_2, Class84.myPlayer.regionBaseX[0] + coordgrid_12.x, Class84.myPlayer.regionBaseY[0] + coordgrid_12.y, -1104014965);
+																Class447.method7460(i_2, VertexNormal.myPlayer.regionBaseX[0] + coordgrid_12.x, VertexNormal.myPlayer.regionBaseY[0] + coordgrid_12.y, -1104014965);
 															}
 															for (i_2 = 0; i_2 < 5; i_2++) {
 																++client.anIntArray7435[i_2];
 															}
-															if (client.aBool7400 && client.aLong7401 < Class169.time() - 60000L) {
+															if (client.aBool7400 && client.aLong7401 < TextureDetails.time() - 60000L) {
 																Class282_Sub11.method12211(375713564);
 															}
 															for (Class275_Sub4 class275_sub4_15 = (Class275_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (Class275_Sub4) client.aClass457_7350.method7650((byte) 20)) {
-																if ((long) class275_sub4_15.anInt7838 < Class169.time() / 1000L - 5L) {
+																if ((long) class275_sub4_15.anInt7838 < TextureDetails.time() / 1000L - 5L) {
 																	if (class275_sub4_15.aShort7839 > 0) {
 																		Class191.method3167(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE, -1783066271), 442373563);
 																	}

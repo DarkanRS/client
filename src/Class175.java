@@ -64,7 +64,7 @@ public class Class175 {
 				if (i_10 > 0 && i_8 > 0) {
 					i_9 = i_7 * (i_8 - i_10) / i_8;
 				}
-				Class84.myPlayer.getSize();
+				VertexNormal.myPlayer.getSize();
 				int i_11 = 8192;
 				int i_12 = (class282_sub48_0.anInt8107 + class282_sub48_0.anInt8079) / 2 - i_2;
 				int i_13 = (class282_sub48_0.anInt8078 + class282_sub48_0.anInt8077) / 2 - i_3;

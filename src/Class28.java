@@ -156,7 +156,7 @@ public class Class28 implements Interface2 {
 
 	static final void method776(IComponentDefinitions icomponentdefinitions_0) {
 		if (icomponentdefinitions_0.contentType == IComponentDefinitions.anInt1266) {
-			if (Class84.myPlayer.displayName == null) {
+			if (VertexNormal.myPlayer.displayName == null) {
 				icomponentdefinitions_0.anInt1330 = 0;
 				icomponentdefinitions_0.anInt1339 = 0;
 			} else {
@@ -164,8 +164,8 @@ public class Class28 implements Interface2 {
 				icomponentdefinitions_0.spriteRoll = (int) (Math.sin((double) client.cycles / 40.0D) * 256.0D) & 0x7ff;
 				icomponentdefinitions_0.anInt1329 = 5;
 				icomponentdefinitions_0.anInt1330 = client.anInt7315;
-				icomponentdefinitions_0.anInt1339 = Class272.method4840(Class84.myPlayer.displayName, (byte) 15);
-				Class456_Sub3 class456_sub3_2 = Class84.myPlayer.aClass456_Sub3_10337;
+				icomponentdefinitions_0.anInt1339 = Class272.method4840(VertexNormal.myPlayer.displayName, (byte) 15);
+				Class456_Sub3 class456_sub3_2 = VertexNormal.myPlayer.aClass456_Sub3_10337;
 				if (class456_sub3_2 != null) {
 					if (icomponentdefinitions_0.aClass456_1437 == null) {
 						icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();

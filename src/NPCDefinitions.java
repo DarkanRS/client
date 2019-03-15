@@ -764,7 +764,7 @@ public class NPCDefinitions {
 				} else if (i_2 == 249) {
 					i_4 = rsbytebuffer_1.readUnsignedByte();
 					if (this.aClass465_4896 == null) {
-						i_5 = Class323.nextPowerOfTwo(i_4, -597233692);
+						i_5 = Texture.nextPowerOfTwo(i_4, -597233692);
 						this.aClass465_4896 = new IterableNodeMap(i_5);
 					}
 					for (i_5 = 0; i_5 < i_4; i_5++) {

@@ -45,7 +45,7 @@ public class Class540 {
 					Class316.method5594();
 				}
 				if (npc_7.definitions.method6886(-1089073917)) {
-					Class169.method2876(npc_7);
+					TextureDetails.method2876(npc_7);
 				}
 				npc_7.method16166((NPCDefinitions) null, -12061587);
 				class282_sub47_5.remove();

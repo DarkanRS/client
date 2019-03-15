@@ -21,7 +21,7 @@ public class Class151 {
 				}
 			}
 			Class448.aBool5422 = false;
-			Class448.aLong5425 = Class169.time();
+			Class448.aLong5425 = TextureDetails.time();
 			Class96_Sub20.aClass282_Sub35_9415 = null;
 		}
 	}

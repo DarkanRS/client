@@ -27,9 +27,9 @@ public class Class282_Sub6 extends Node {
 		this.anIntArray7515 = new int[this.aClass390_Sub1_7509.width * this.aClass390_Sub1_7509.length];
 		byte b_5 = 10;
 		if (i_2 >= 0) {
-			Class169 class169_6 = this.aClass505_Sub2_7518.anInterface22_5834.method144(i_2, -1808049505);
-			if (class169_6.aByte2064 > 0) {
-				b_5 = class169_6.aByte2064;
+			TextureDetails class169_6 = this.aClass505_Sub2_7518.anInterface22_5834.method144(i_2, -1808049505);
+			if (class169_6.effectId > 0) {
+				b_5 = class169_6.effectId;
 			}
 		}
 
@@ -46,10 +46,10 @@ public class Class282_Sub6 extends Node {
 		int i_6;
 		int i_7;
 		if (this.anInt7510 != -1) {
-			Class169 class169_5 = this.aClass505_Sub2_7518.anInterface22_5834.method144(this.anInt7510, -1820378147);
-			i_6 = class169_5.aByte2079 & 0xff;
+			TextureDetails class169_5 = this.aClass505_Sub2_7518.anInterface22_5834.method144(this.anInt7510, -1820378147);
+			i_6 = class169_5.shadowFactor & 0xff;
 			int i_9;
-			if (i_6 != 0 && class169_5.aByte2064 != 4) {
+			if (i_6 != 0 && class169_5.effectId != 4) {
 				if (i_3 < 0) {
 					i_7 = 0;
 				} else if (i_3 > 127) {
@@ -66,7 +66,7 @@ public class Class282_Sub6 extends Node {
 				}
 			}
 
-			i_7 = class169_5.aByte2080 & 0xff;
+			i_7 = class169_5.brightness & 0xff;
 			if (i_7 != 0) {
 				i_7 += 256;
 				int i_8 = ((i_2 & 0xff0000) >> 16) * i_7;

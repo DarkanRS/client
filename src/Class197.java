@@ -34,7 +34,7 @@ public class Class197 {
 	static final void method3203(RsBitsBuffer rsbitsbuffer_0, byte b_1) {
 		rsbitsbuffer_0.initBitAccess((byte) -47);
 		int i_2 = client.anInt7315;
-		Player player_3 = Class84.myPlayer = client.players[i_2] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2015513411));
+		Player player_3 = VertexNormal.myPlayer = client.players[i_2] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2015513411));
 		player_3.anInt10314 = i_2;
 		int i_4 = rsbitsbuffer_0.readBits(30, (byte) -49);
 		byte b_5 = (byte) (i_4 >> 28);

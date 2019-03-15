@@ -68,8 +68,8 @@ public class Class123 {
 	}
 
 	void method2119(GraphicalRenderer graphicalrenderer_1, MeshRasterizer meshrasterizer_2, Matrix44Var matrix44var_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8, int i_9) {
-		Class87[] arr_10 = meshrasterizer_2.method11253();
-		Class172[] arr_11 = meshrasterizer_2.method11274();
+		Surface[] arr_10 = meshrasterizer_2.method11253();
+		SurfaceSkin[] arr_11 = meshrasterizer_2.method11274();
 		if ((this.aClass539_1538 == null || this.aClass539_1538.aBool7132) && (arr_10 != null || arr_11 != null)) {
 			ObjectDefinitions objectdefinitions_12 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 			if (objectdefinitions_12.toObjectIds != null) {

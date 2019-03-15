@@ -1,42 +1,24 @@
-public class Class169 {
+public class TextureDetails {
 
-	public boolean aBool2056;
-
-	public boolean aBool2059;
-
-	public byte aByte2064;
-
-	public boolean aBool2065;
-
-	public boolean aBool2072;
-
-	public short aShort2073;
-
-	public int anInt2074;
-
-	public byte aByte2076;
-
-	public int anInt2077;
-
-	public byte aByte2079;
-
-	public byte aByte2080;
-
-	public byte aByte2081;
-
-	public boolean aBool2082;
-
-	public boolean aBool2086;
-
+	public boolean isGroundMesh;
+	public boolean repeatT;
+	public byte effectId;
+	public boolean isHalfSize;
+	public boolean skipTriangles;
+	public short color;
+	public int blendType;
+	public byte effectParam1;
+	public int effectParam2;
+	public byte shadowFactor;
+	public byte brightness;
+	public byte textureSpeedU;
+	public boolean isBrickTile;
+	public boolean repeatS;
 	public boolean aBool2087;
-
-	public byte aByte2088;
-
-	public boolean aBool2089;
-
-	public byte aByte2090;
-
-	public int anInt2091;
+	public byte useMipmaps;
+	public boolean hdr;
+	public byte textureSpeedV;
+	public int combineMode;
 
 	public static final synchronized long time() {
 		long long_1 = System.currentTimeMillis();

@@ -33,7 +33,7 @@ public class Class534_Sub1 extends Class534 {
 	}
 
 	boolean method11423() {
-		return !this.aQueue7921.isEmpty() || this.aLong7076 < Class169.time() - 2000L;
+		return !this.aQueue7921.isEmpty() || this.aLong7076 < TextureDetails.time() - 2000L;
 	}
 
 	int method11412() {
@@ -73,7 +73,7 @@ public class Class534_Sub1 extends Class534 {
 	}
 
 	boolean method11434() {
-		return !this.aQueue7921.isEmpty() || 2966128844247041579L * this.aLong7076 * 1203484888895588483L < Class169.time() - 2000L;
+		return !this.aQueue7921.isEmpty() || 2966128844247041579L * this.aLong7076 * 1203484888895588483L < TextureDetails.time() - 2000L;
 	}
 
 	TCPMessage method11416() {

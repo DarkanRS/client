@@ -32,7 +32,7 @@ public class Class279 {
 			Item item_2;
 			if (Class393.preferences.currentToolkit.getValue(1853603888) == 0) {
 				for (item_2 = (Item) Class182.ITEMS.head((byte) 98); item_2 != null; item_2 = (Item) Class182.ITEMS.next(471077510)) {
-					IndexLoaders.ITEM_INDEX_LOADER.getSprite(graphicalrenderer_0, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Renderers.FONT_RENDERER, item_2.hasPlayerAppearance ? Class84.myPlayer.playerAppearance : null, (byte) 77);
+					IndexLoaders.ITEM_INDEX_LOADER.getSprite(graphicalrenderer_0, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Renderers.FONT_RENDERER, item_2.hasPlayerAppearance ? VertexNormal.myPlayer.playerAppearance : null, (byte) 77);
 					item_2.remove();
 				}
 				IncomingPacket.method6378();
@@ -44,7 +44,7 @@ public class Class279 {
 					Class182.aClass8_2259 = Class182.HARDWARE_RENDERER.createFont(Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.p11FullIndex, 2062772930), Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.p11FullIndex), true);
 				}
 				for (item_2 = (Item) Class182.ITEMS.head((byte) 59); item_2 != null; item_2 = (Item) Class182.ITEMS.next(-468135531)) {
-					IndexLoaders.ITEM_INDEX_LOADER.getSprite(Class182.HARDWARE_RENDERER, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Class182.aClass8_2259, item_2.hasPlayerAppearance ? Class84.myPlayer.playerAppearance : null, (byte) 0);
+					IndexLoaders.ITEM_INDEX_LOADER.getSprite(Class182.HARDWARE_RENDERER, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Class182.aClass8_2259, item_2.hasPlayerAppearance ? VertexNormal.myPlayer.playerAppearance : null, (byte) 0);
 					item_2.remove();
 				}
 			}

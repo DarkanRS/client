@@ -48,7 +48,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						}
 
 						this.anInt3653 = 0;
-						this.aLong3648 = Class169.time();
+						this.aLong3648 = TextureDetails.time();
 						return;
 					}
 
@@ -196,7 +196,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5524() {
 		int i_3;
 		if (this.aClass202_7778 != null) {
-			long long_1 = Class169.time();
+			long long_1 = TextureDetails.time();
 			i_3 = (int) (long_1 - 3280542953542993467L * this.aLong3648 * 4647288634594403059L);
 			this.aLong3648 = 4647288634594403059L * long_1 * 3280542953542993467L;
 			if (i_3 > 200) {
@@ -367,7 +367,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5542() {
 		int i_3;
 		if (this.aClass202_7778 != null) {
-			long long_1 = Class169.time();
+			long long_1 = TextureDetails.time();
 			i_3 = (int) (long_1 - 3280542953542993467L * this.aLong3648 * 4647288634594403059L);
 			this.aLong3648 = 4647288634594403059L * long_1 * 3280542953542993467L;
 			if (i_3 > 200) {
@@ -602,7 +602,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						}
 
 						this.anInt3653 = 0 * -1846332317;
-						this.aLong3648 = Class169.time() * 4647288634594403059L * 3280542953542993467L;
+						this.aLong3648 = TextureDetails.time() * 4647288634594403059L * 3280542953542993467L;
 						return;
 					}
 
@@ -658,7 +658,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 						}
 
 						this.anInt3653 = 0 * -1846332317;
-						this.aLong3648 = Class169.time() * 4647288634594403059L * 3280542953542993467L;
+						this.aLong3648 = TextureDetails.time() * 4647288634594403059L * 3280542953542993467L;
 						return;
 					}
 
@@ -673,7 +673,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5521() {
 		int i_4;
 		if (this.aClass202_7778 != null) {
-			long long_2 = Class169.time();
+			long long_2 = TextureDetails.time();
 			i_4 = (int) (long_2 - this.aLong3648);
 			this.aLong3648 = long_2;
 			if (i_4 > 200) {
@@ -851,7 +851,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 	public boolean method5557() {
 		int i_3;
 		if (this.aClass202_7778 != null) {
-			long long_1 = Class169.time();
+			long long_1 = TextureDetails.time();
 			i_3 = (int) (long_1 - 3280542953542993467L * this.aLong3648 * 4647288634594403059L);
 			this.aLong3648 = 4647288634594403059L * long_1 * 3280542953542993467L;
 			if (i_3 > 200) {

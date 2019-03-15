@@ -3,8 +3,8 @@ public class h extends MeshRasterizer implements Interface40 {
 	long nativeid;
 	ja aja7140;
 	ba aba7141;
-	Class87[] aClass87Array7139;
-	Class172[] aClass172Array7142;
+	Surface[] aClass87Array7139;
+	SurfaceSkin[] aClass172Array7142;
 
 	public void method11299(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4, boolean bool_5) {
 		this.aja7140.nx().method313(this, meshrasterizer_1, i_2, i_3, i_4, bool_5);
@@ -31,7 +31,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		int i_3;
 		if (this.aClass87Array7139 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
-				Class87 class87_4 = this.aClass87Array7139[i_3];
+				Surface class87_4 = this.aClass87Array7139[i_3];
 				class87_4.anInt844 = ja.aa[i_2++];
 				class87_4.anInt841 = ja.aa[i_2++];
 				class87_4.anInt847 = ja.aa[i_2++];
@@ -46,8 +46,8 @@ public class h extends MeshRasterizer implements Interface40 {
 
 		if (this.aClass172Array7142 != null) {
 			for (i_3 = 0; i_3 < this.aClass172Array7142.length; i_3++) {
-				Class172 class172_6 = this.aClass172Array7142[i_3];
-				Class172 class172_5 = class172_6;
+				SurfaceSkin class172_6 = this.aClass172Array7142[i_3];
+				SurfaceSkin class172_5 = class172_6;
 				if (class172_6.aClass172_2114 != null) {
 					class172_5 = class172_6.aClass172_2114;
 				}
@@ -122,10 +122,10 @@ public class h extends MeshRasterizer implements Interface40 {
 	h(ja ja_1, ba ba_2, RSMesh rsmesh_3, int i_4, int i_5, int i_6, int i_7) {
 		this.aja7140 = ja_1;
 		this.aba7141 = ba_2;
-		this.aClass87Array7139 = rsmesh_3.aClass87Array2007;
-		this.aClass172Array7142 = rsmesh_3.aClass172Array2008;
-		int i_8 = rsmesh_3.aClass87Array2007 == null ? 0 : rsmesh_3.aClass87Array2007.length;
-		int i_9 = rsmesh_3.aClass172Array2008 == null ? 0 : rsmesh_3.aClass172Array2008.length;
+		this.aClass87Array7139 = rsmesh_3.surfaces;
+		this.aClass172Array7142 = rsmesh_3.surfaceSkins;
+		int i_8 = rsmesh_3.surfaces == null ? 0 : rsmesh_3.surfaces.length;
+		int i_9 = rsmesh_3.surfaceSkins == null ? 0 : rsmesh_3.surfaceSkins.length;
 		int i_10 = 0;
 		int[] ints_11 = new int[i_9 + i_8 * 3];
 
@@ -140,14 +140,14 @@ public class h extends MeshRasterizer implements Interface40 {
 			ints_11[i_10++] = this.aClass172Array7142[i_12].anInt2119;
 		}
 
-		i_12 = rsmesh_3.aClass84Array2009 == null ? 0 : rsmesh_3.aClass84Array2009.length;
+		i_12 = rsmesh_3.isolatedVertexNormals == null ? 0 : rsmesh_3.isolatedVertexNormals.length;
 		int[] ints_13 = new int[i_12 * 8];
 		int i_14 = 0;
 
 		int i_15;
-		Class84 class84_16;
+		VertexNormal class84_16;
 		for (i_15 = 0; i_15 < i_12; i_15++) {
-			class84_16 = rsmesh_3.aClass84Array2009[i_15];
+			class84_16 = rsmesh_3.isolatedVertexNormals[i_15];
 			Class347 class347_17 = Class417.method7005(class84_16.anInt812, -1672643937);
 			ints_13[i_14++] = class84_16.anInt809;
 			ints_13[i_14++] = class347_17.anInt4054;
@@ -159,11 +159,11 @@ public class h extends MeshRasterizer implements Interface40 {
 		}
 
 		for (i_15 = 0; i_15 < i_12; i_15++) {
-			class84_16 = rsmesh_3.aClass84Array2009[i_15];
+			class84_16 = rsmesh_3.isolatedVertexNormals[i_15];
 			ints_13[i_14++] = class84_16.anInt811;
 		}
 
-		this.U(this.aja7140, this.aba7141, rsmesh_3.vertexCount, rsmesh_3.anInt1999, rsmesh_3.vertexX, rsmesh_3.vertexY, rsmesh_3.vertexZ, rsmesh_3.vertexSkins, rsmesh_3.aShortArray1980, rsmesh_3.faceCount, rsmesh_3.triangleX, rsmesh_3.triangleY, rsmesh_3.triangleZ, rsmesh_3.faceType, rsmesh_3.facePriorities, rsmesh_3.faceAlphas, rsmesh_3.texturePos, rsmesh_3.faceColor, rsmesh_3.faceTextures, rsmesh_3.skinValues, rsmesh_3.priority, rsmesh_3.aShortArray1981, rsmesh_3.numTextureTriangles, rsmesh_3.textureRenderTypes, rsmesh_3.texTriX, rsmesh_3.texTriY, rsmesh_3.texTriZ, rsmesh_3.anIntArray1989, rsmesh_3.anIntArray2000, rsmesh_3.anIntArray2001, rsmesh_3.aByteArray2005, rsmesh_3.aByteArray1990, rsmesh_3.anIntArray1992, rsmesh_3.anIntArray1997, rsmesh_3.anIntArray2004, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
+		this.U(this.aja7140, this.aba7141, rsmesh_3.vertexCount, rsmesh_3.maxDepth, rsmesh_3.vertexX, rsmesh_3.vertexY, rsmesh_3.vertexZ, rsmesh_3.vertexSkins, rsmesh_3.aShortArray1980, rsmesh_3.faceCount, rsmesh_3.triangleX, rsmesh_3.triangleY, rsmesh_3.triangleZ, rsmesh_3.faceType, rsmesh_3.facePriorities, rsmesh_3.faceAlphas, rsmesh_3.texturePos, rsmesh_3.faceColor, rsmesh_3.faceTextures, rsmesh_3.skinValues, rsmesh_3.priority, rsmesh_3.aShortArray1981, rsmesh_3.numTextureTriangles, rsmesh_3.textureRenderTypes, rsmesh_3.texTriX, rsmesh_3.texTriY, rsmesh_3.texTriZ, rsmesh_3.particleDirectionX, rsmesh_3.particleDirectionY, rsmesh_3.particleDirectionZ, rsmesh_3.particleLifespanX, rsmesh_3.particleLifespanY, rsmesh_3.particleLifespanZ, rsmesh_3.texturePrimaryColor, rsmesh_3.textureSecondaryColor, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
 	}
 
 	native void J(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
@@ -202,7 +202,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native int AA();
 
-	public Class172[] method11331() {
+	public SurfaceSkin[] method11331() {
 		return this.aClass172Array7142;
 	}
 
@@ -248,17 +248,17 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native boolean u();
 
-	public Class87[] method11253() {
+	public Surface[] method11253() {
 		return this.aClass87Array7139;
 	}
 
-	public Class172[] method11274() {
+	public SurfaceSkin[] method11274() {
 		return this.aClass172Array7142;
 	}
 
 	native boolean bv();
 
-	public Class172[] method11302() {
+	public SurfaceSkin[] method11302() {
 		return this.aClass172Array7142;
 	}
 
@@ -403,7 +403,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		int i_3;
 		if (this.aClass87Array7139 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
-				Class87 class87_4 = this.aClass87Array7139[i_3];
+				Surface class87_4 = this.aClass87Array7139[i_3];
 				class87_4.anInt844 = ja.aa[i_2++] * -1929058355 * -75866875;
 				class87_4.anInt841 = ja.aa[i_2++] * 996785411 * 1618253227;
 				class87_4.anInt847 = ja.aa[i_2++] * 976806429 * -489230283;
@@ -418,8 +418,8 @@ public class h extends MeshRasterizer implements Interface40 {
 
 		if (this.aClass172Array7142 != null) {
 			for (i_3 = 0; i_3 < this.aClass172Array7142.length; i_3++) {
-				Class172 class172_6 = this.aClass172Array7142[i_3];
-				Class172 class172_5 = class172_6;
+				SurfaceSkin class172_6 = this.aClass172Array7142[i_3];
+				SurfaceSkin class172_5 = class172_6;
 				if (class172_6.aClass172_2114 != null) {
 					class172_5 = class172_6.aClass172_2114;
 				}
@@ -502,13 +502,13 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void cy(int var1, int var2, int var3, int var4);
 
-	public Class87[] method11300() {
+	public Surface[] method11300() {
 		return this.aClass87Array7139;
 	}
 
 	public native void bf(int var1);
 
-	public Class172[] method11283() {
+	public SurfaceSkin[] method11283() {
 		return this.aClass172Array7142;
 	}
 
@@ -601,7 +601,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		int i_3;
 		if (this.aClass87Array7139 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
-				Class87 class87_4 = this.aClass87Array7139[i_3];
+				Surface class87_4 = this.aClass87Array7139[i_3];
 				class87_4.anInt844 = ja.aa[i_2++] * -1929058355 * -75866875;
 				class87_4.anInt841 = ja.aa[i_2++] * 996785411 * 1618253227;
 				class87_4.anInt847 = ja.aa[i_2++] * 976806429 * -489230283;
@@ -616,8 +616,8 @@ public class h extends MeshRasterizer implements Interface40 {
 
 		if (this.aClass172Array7142 != null) {
 			for (i_3 = 0; i_3 < this.aClass172Array7142.length; i_3++) {
-				Class172 class172_6 = this.aClass172Array7142[i_3];
-				Class172 class172_5 = class172_6;
+				SurfaceSkin class172_6 = this.aClass172Array7142[i_3];
+				SurfaceSkin class172_5 = class172_6;
 				if (class172_6.aClass172_2114 != null) {
 					class172_5 = class172_6.aClass172_2114;
 				}

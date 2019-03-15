@@ -7,7 +7,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 			int i_4 = rsbytebuffer_1.readUnsignedByte();
 			int i_5;
 			if (this.aClass465_9518 == null) {
-				i_5 = Class323.nextPowerOfTwo(i_4, -1925062571);
+				i_5 = Texture.nextPowerOfTwo(i_4, -1925062571);
 				this.aClass465_9518 = new IterableNodeMap(i_5);
 			}
 

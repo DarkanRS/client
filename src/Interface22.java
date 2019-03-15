@@ -16,7 +16,7 @@ public interface Interface22 {
 
 	int method76();
 
-	Class169 method144(int var1, int var2);
+	TextureDetails method144(int var1, int var2);
 
 	float[] method145(int var1, int var3, int var4);
 
@@ -42,7 +42,7 @@ public interface Interface22 {
 
 	float[] method155(int var1, float var2, int var3, int var4, boolean var5);
 
-	Class169 method156(int var1);
+	TextureDetails method156(int var1);
 
 	void method157();
 
@@ -50,7 +50,7 @@ public interface Interface22 {
 
 	void method159();
 
-	Class169 method160(int var1);
+	TextureDetails method160(int var1);
 
 	void method161(int var1);
 

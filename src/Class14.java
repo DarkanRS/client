@@ -212,7 +212,7 @@ public class Class14 {
 			}
 			if ((i_4 & 0x8) != 0) {
 				if (npc_3.definitions.method6886(-1543379642)) {
-					Class169.method2876(npc_3);
+					TextureDetails.method2876(npc_3);
 				}
 				npc_3.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_0.readBigSmart(), (byte) 45), 332217631);
 				npc_3.method15836(npc_3.definitions.anInt4858, (byte) -91);

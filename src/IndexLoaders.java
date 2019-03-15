@@ -261,7 +261,7 @@ public class IndexLoaders {
 				return 99;
 			}
 
-			IMAGE_LOADER = new Class323(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
+			IMAGE_LOADER = new Texture(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
 			ITEM_DEFAULTS = new ParamDefinitionsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			RENDER_ANIMS = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.DEFAULTS_LOADER_6);
 			aClass438_7932 = new Class438(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
@@ -305,7 +305,7 @@ public class IndexLoaders {
 			Class173.method2943(MESH_INDEX, IMAGE_LOADER);
 			Class117 class117_11 = new Class117(HUFFMAN_INDEX.method5626("huffman", ""));
 			InventoriesIndexLoader.method6740(class117_11);
-			Engine.aClass273_3244 = Class84.method1461();
+			Engine.aClass273_3244 = VertexNormal.method1461();
 			Class11.SYSTEM_INFO = new SystemInfo();
 		}
 

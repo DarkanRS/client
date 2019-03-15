@@ -25,8 +25,8 @@ public abstract class Class48 {
 
 	public abstract void method943();
 
-	public void method944(Class169 class169_1) {
-		switch (class169_1.aByte2076) {
+	public void method944(TextureDetails class169_1) {
+		switch (class169_1.effectParam1) {
 		case 1:
 			this.aFloat456 = 32.0F;
 			this.aFloat453 = 0.5F;

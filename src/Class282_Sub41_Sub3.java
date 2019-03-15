@@ -44,7 +44,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 				throw new IllegalStateException("" + i_3);
 			}
 		} else {
-			this.aLong9553 = Class169.time();
+			this.aLong9553 = TextureDetails.time();
 			i_3 = this.aDecoderContext9549.decodePacketIn(oggpacket_1, this.aGranulePos9550);
 			if (i_3 < 0) {
 				throw new IllegalStateException("" + i_3);
@@ -159,7 +159,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 				throw new IllegalStateException("" + i_2);
 			}
 		} else {
-			this.aLong9553 = Class169.time() * -3822562485386198145L * 4278118698289560703L;
+			this.aLong9553 = TextureDetails.time() * -3822562485386198145L * 4278118698289560703L;
 			i_2 = this.aDecoderContext9549.decodePacketIn(oggpacket_1, this.aGranulePos9550);
 			if (i_2 < 0) {
 				throw new IllegalStateException("" + i_2);
@@ -206,7 +206,7 @@ public class Class282_Sub41_Sub3 extends Class282_Sub41 {
 				throw new IllegalStateException("" + i_2);
 			}
 		} else {
-			this.aLong9553 = Class169.time() * -3822562485386198145L * 4278118698289560703L;
+			this.aLong9553 = TextureDetails.time() * -3822562485386198145L * 4278118698289560703L;
 			i_2 = this.aDecoderContext9549.decodePacketIn(oggpacket_1, this.aGranulePos9550);
 			if (i_2 < 0) {
 				throw new IllegalStateException("" + i_2);

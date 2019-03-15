@@ -138,9 +138,9 @@ public abstract class Class152 {
 			i_2 = client.anInt7340;
 		}
 		UnderlayIndexLoader.method8036(i_2);
-		int i_3 = Class84.myPlayer.getSize() << 8;
-		Vector3 vector3_4 = Class84.myPlayer.method11166().aClass385_3595;
-		Class96_Sub21.method14675(Class84.myPlayer.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
+		int i_3 = VertexNormal.myPlayer.getSize() << 8;
+		Vector3 vector3_4 = VertexNormal.myPlayer.method11166().aClass385_3595;
+		Class96_Sub21.method14675(VertexNormal.myPlayer.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
 		client.anInt7261 = 0;
 	}
 
@@ -182,7 +182,7 @@ public abstract class Class152 {
 							}
 						}
 					}
-					if (Class383.method6515(Class84.myPlayer.displayName).equals(string_2)) {
+					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_2)) {
 						LoadingStage.method6681(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592), (byte) 58);
 					} else {
 						BufferedConnectionContext class184_7 = Class468_Sub20.method12807(1188178835);

@@ -29,7 +29,7 @@ public class Class96_Sub22 extends Class96 {
 
 	static void method14678(Player player_0, boolean bool_1) {
 		if (Class20.anInt169 < 412) {
-			if (Class84.myPlayer == player_0) {
+			if (VertexNormal.myPlayer == player_0) {
 				if (client.aBool7344 && (Class506.anInt5858 & 0x10) != 0) {
 					PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.anInt10314, false, -1931180359);
 				}
@@ -37,9 +37,9 @@ public class Class96_Sub22 extends Class96 {
 				String string_3;
 				if (player_0.anInt10556 == 0) {
 					boolean bool_4 = true;
-					if (Class84.myPlayer.anInt10555 != -1 && player_0.anInt10555 != -1) {
-						int i_5 = Class84.myPlayer.anInt10555 < player_0.anInt10555 ? Class84.myPlayer.anInt10555 : player_0.anInt10555;
-						int i_6 = Class84.myPlayer.anInt10565 - player_0.anInt10565;
+					if (VertexNormal.myPlayer.anInt10555 != -1 && player_0.anInt10555 != -1) {
+						int i_5 = VertexNormal.myPlayer.anInt10555 < player_0.anInt10555 ? VertexNormal.myPlayer.anInt10555 : player_0.anInt10555;
+						int i_6 = VertexNormal.myPlayer.anInt10565 - player_0.anInt10565;
 						if (i_6 < 0) {
 							i_6 = -i_6;
 						}
@@ -49,9 +49,9 @@ public class Class96_Sub22 extends Class96 {
 					}
 					String string_8 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE, -1209944287) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE, -1303103497);
 					if (player_0.anInt10565 >= player_0.anInt10554) {
-						string_3 = player_0.method16127(2054627302) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, Class84.myPlayer.anInt10565, -1737457030) : ParticleProducerDefinition.method1163(16777215)) + " (" + string_8 + player_0.anInt10565 + ")";
+						string_3 = player_0.method16127(2054627302) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, VertexNormal.myPlayer.anInt10565, -1737457030) : ParticleProducerDefinition.method1163(16777215)) + " (" + string_8 + player_0.anInt10565 + ")";
 					} else {
-						string_3 = player_0.method16127(2144417480) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, Class84.myPlayer.anInt10565, -1524250646) : ParticleProducerDefinition.method1163(16777215)) + " (" + string_8 + player_0.anInt10565 + "+" + (player_0.anInt10554 - player_0.anInt10565) + ")";
+						string_3 = player_0.method16127(2144417480) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, VertexNormal.myPlayer.anInt10565, -1524250646) : ParticleProducerDefinition.method1163(16777215)) + " (" + string_8 + player_0.anInt10565 + "+" + (player_0.anInt10554 - player_0.anInt10565) + ")";
 					}
 				} else if (player_0.anInt10556 == -1) {
 					string_3 = player_0.method16127(2137901539);
@@ -68,11 +68,11 @@ public class Class96_Sub22 extends Class96 {
 						if (client.PLAYER_OPTIONS[i_10] != null) {
 							short s_11 = 0;
 							if (Game.darkan == client.CURRENT_GAME && client.PLAYER_OPTIONS[i_10].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -440996695))) {
-								if (client.aBool7454 && player_0.anInt10565 > Class84.myPlayer.anInt10565) {
+								if (client.aBool7454 && player_0.anInt10565 > VertexNormal.myPlayer.anInt10565) {
 									s_11 = 2000;
 								}
-								if (Class84.myPlayer.teamId != 0 && player_0.teamId != 0) {
-									if (player_0.teamId == Class84.myPlayer.teamId) {
+								if (VertexNormal.myPlayer.teamId != 0 && player_0.teamId != 0) {
+									if (player_0.teamId == VertexNormal.myPlayer.teamId) {
 										s_11 = 2000;
 									} else {
 										s_11 = 0;

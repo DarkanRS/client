@@ -179,7 +179,7 @@ public class Class242 {
 			int[] ints_4 = Class197.PLAYER_INDICES;
 			for (int i_5 = 0; i_5 < i_3; i_5++) {
 				Player player_6 = client.players[ints_4[i_5]];
-				if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == Class84.myPlayer && (Class506.anInt5858 & 0x10) != 0 || (Class506.anInt5858 & 0x8) != 0)) {
+				if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == VertexNormal.myPlayer && (Class506.anInt5858 & 0x10) != 0 || (Class506.anInt5858 & 0x8) != 0)) {
 					TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4540, client.aClass184_7475.isaac, 623584347);
 					tcpmessage_7.buffer.writeShort(client.anInt7345);
 					tcpmessage_7.buffer.writeShortLE(ints_4[i_5], (short) -11612);

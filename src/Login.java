@@ -466,11 +466,11 @@ public class Login {
 							client.anInt7319 = rsbitsbuffer_19.readUnsignedByte();
 							client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
 							Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(979570289);
-							Class84.myPlayer.male = (byte) rsbitsbuffer_19.readUnsignedByte();
+							VertexNormal.myPlayer.male = (byte) rsbitsbuffer_19.readUnsignedByte();
 							client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
 							client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
 							Class116.aLong1259 = rsbitsbuffer_19.readLong();
-							Class43.aLong420 = Class116.aLong1259 - Class169.time() - rsbitsbuffer_19.read5ByteInteger();
+							Class43.aLong420 = Class116.aLong1259 - TextureDetails.time() - rsbitsbuffer_19.read5ByteInteger();
 							i_3 = rsbitsbuffer_19.readUnsignedByte();
 							client.aBool7316 = (i_3 & 0x1) != 0;
 							Class509.aBool5870 = (i_3 & 0x2) != 0;
@@ -487,7 +487,7 @@ public class Login {
 							Class96_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
 							Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
 							Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;
-							Class84.myPlayer.displayName = Class84.myPlayer.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString(540818903);
+							VertexNormal.myPlayer.displayName = VertexNormal.myPlayer.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString(540818903);
 							RegionMap.anInt3644 = rsbitsbuffer_19.readUnsignedByte();
 							Class121.anInt1526 = rsbitsbuffer_19.readInt();
 							client.aBool7323 = rsbitsbuffer_19.readUnsignedByte() == 1;

@@ -124,9 +124,9 @@ public class MapRegion {
 		int i_3 = this.coordGrid.y;
 		int i_4 = (Class31.anInt361 >> 12) + (i_2 >> 3);
 		int i_5 = (Class246.anInt3029 >> 12) + (i_3 >> 3);
-		Class84.myPlayer.plane = 0;
+		VertexNormal.myPlayer.plane = 0;
 		Class4.anInt35 = 0;
-		Class84.myPlayer.method16130(8, 8, 210697228);
+		VertexNormal.myPlayer.method16130(8, 8, 210697228);
 		byte b_6 = 18;
 		this.xteas = new int[b_6][4];
 		this.regionIds = new int[b_6];
@@ -924,7 +924,7 @@ public class MapRegion {
 				}
 				this.sceneObjectManager.method3428();
 				if (this.aBool3171) {
-					Class169.time();
+					TextureDetails.time();
 					while (!Renderers.SOFTWARE_RENDERER.method8455(-203069693)) {
 						this.method4462(1, (byte) -98);
 					}
@@ -935,7 +935,7 @@ public class MapRegion {
 					this.method4418(mapregion_12);
 					IndexLoaders.MAP_REGION_LOADER_THREAD.method6050(mapregion_12);
 					bool_21 = true;
-					Class169.time();
+					TextureDetails.time();
 					Object object_13 = client.anObject7227;
 					synchronized (client.anObject7227) {
 						client.aBool7225 = true;
@@ -1008,7 +1008,7 @@ public class MapRegion {
 				}
 				ParticleProducerDefinition.method1160(-1437458578);
 				if (this.aBool3206) {
-					Class209.printConsoleMessage(Long.toString(Class169.time() - this.aLong3183), -1857188149);
+					Class209.printConsoleMessage(Long.toString(TextureDetails.time() - this.aLong3183), -1857188149);
 					this.aBool3206 = false;
 				}
 				if (bool_21) {
@@ -1386,11 +1386,11 @@ public class MapRegion {
 	}
 
 	static final boolean routeTo(int i_0, int i_1, boolean bool_2, RouteStrategy routestrategy_3, int i_4) {
-		int i_5 = Class84.myPlayer.regionBaseX[0];
-		int i_6 = Class84.myPlayer.regionBaseY[0];
+		int i_5 = VertexNormal.myPlayer.regionBaseX[0];
+		int i_6 = VertexNormal.myPlayer.regionBaseY[0];
 		if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-988054561) && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-525068831)) {
 			if (i_0 >= 0 && i_0 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-914892622) && i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1924417648)) {
-				int i_7 = Class112.findRoute(i_5, i_6, Class84.myPlayer.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(Class84.myPlayer.plane), bool_2, client.walkStepsX, client.walkStepsY, -1311698246);
+				int i_7 = Class112.findRoute(i_5, i_6, VertexNormal.myPlayer.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.myPlayer.plane), bool_2, client.walkStepsX, client.walkStepsY, -1311698246);
 				if (i_7 < 1) {
 					return false;
 				} else {

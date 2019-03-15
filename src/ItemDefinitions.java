@@ -471,7 +471,7 @@ public class ItemDefinitions implements Definition {
 			} else if (opcode == 249) {
 				i_4 = stream.readUnsignedByte();
 				if (this.cs2Map == null) {
-					i_5 = Class323.nextPowerOfTwo(i_4, -1837166011);
+					i_5 = Texture.nextPowerOfTwo(i_4, -1837166011);
 					this.cs2Map = new IterableNodeMap(i_5);
 				}
 				for (i_5 = 0; i_5 < i_4; i_5++) {

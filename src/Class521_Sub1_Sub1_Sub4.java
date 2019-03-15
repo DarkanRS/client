@@ -113,8 +113,8 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 
 	void method15930(GraphicalRenderer graphicalrenderer_1, MeshRasterizer meshrasterizer_2, Matrix44Var matrix44var_3, byte b_4) {
 		meshrasterizer_2.method11273(matrix44var_3);
-		Class87[] arr_5 = meshrasterizer_2.method11253();
-		Class172[] arr_6 = meshrasterizer_2.method11274();
+		Surface[] arr_5 = meshrasterizer_2.method11253();
+		SurfaceSkin[] arr_6 = meshrasterizer_2.method11274();
 		if ((this.aClass539_10409 == null || this.aClass539_10409.aBool7132) && (arr_5 != null || arr_6 != null)) {
 			this.aClass539_10409 = ParticleSystem.method11557(client.cycles, true);
 		}

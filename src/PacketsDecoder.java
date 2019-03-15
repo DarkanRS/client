@@ -429,7 +429,7 @@ public class PacketsDecoder extends Class455 {
 				int i_35 = i_8 & 0xffff;
 				Player player_117;
 				if (i_35 == client.anInt7315) {
-					player_117 = Class84.myPlayer;
+					player_117 = VertexNormal.myPlayer;
 				} else {
 					player_117 = client.players[i_35];
 				}
@@ -680,7 +680,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort();
 			Player player_119;
 			if (key == client.anInt7315) {
-				player_119 = Class84.myPlayer;
+				player_119 = VertexNormal.myPlayer;
 			} else {
 				player_119 = client.players[key];
 			}
@@ -803,7 +803,7 @@ public class PacketsDecoder extends Class455 {
 						arr_136[i_9].anInt2131 = buffer.readUnsignedShort();
 						arr_136[i_9].aByte2126 = buffer.readByte();
 						arr_136[i_9].aString2130 = buffer.readString();
-						if (arr_136[i_9].aString2127.equals(Class84.myPlayer.displayName)) {
+						if (arr_136[i_9].aString2127.equals(VertexNormal.myPlayer.displayName)) {
 							Class48_Sub2.aByte9263 = arr_136[i_9].aByte2126;
 						}
 					}
@@ -1464,7 +1464,7 @@ public class PacketsDecoder extends Class455 {
 						Class467.aClass173Array5575[i_12].anInt2131 = i_7;
 						Class467.aClass173Array5575[i_12].aByte2126 = b_72;
 						Class467.aClass173Array5575[i_12].aString2130 = str_25;
-						if (str_92.equals(Class84.myPlayer.displayName)) {
+						if (str_92.equals(VertexNormal.myPlayer.displayName)) {
 							Class48_Sub2.aByte9263 = b_72;
 						}
 						client.anInt7179 = client.anInt7347;
@@ -1487,7 +1487,7 @@ public class PacketsDecoder extends Class455 {
 				}
 				Class467.aClass173Array5575[i_12 + 1] = class173_138;
 				++Class459.anInt5534;
-				if (str_92.equals(Class84.myPlayer.displayName)) {
+				if (str_92.equals(VertexNormal.myPlayer.displayName)) {
 					Class48_Sub2.aByte9263 = b_72;
 				}
 			}

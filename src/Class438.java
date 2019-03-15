@@ -119,7 +119,7 @@ public class Class438 {
 			if (i_1 < 0) {
 				i_17 = -i_1 - 1;
 				if (i_17 == client.anInt7315) {
-					obj_16 = Class84.myPlayer;
+					obj_16 = VertexNormal.myPlayer;
 				} else {
 					obj_16 = client.players[i_17];
 				}

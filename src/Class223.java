@@ -56,7 +56,7 @@ public final class Class223 {
 
 	public static void method3770() {
 		if (Class93.method1576()) {
-			Class169.method2877(new Class237());
+			TextureDetails.method2877(new Class237());
 		}
 	}
 }

@@ -37,7 +37,7 @@ public class Item extends Node {
 					i_10 = (int) (-client.aFloat7365) & 0x3fff;
 					i_11 = 4096;
 				} else {
-					Vector3 vector3_22 = Class84.myPlayer.method11166().aClass385_3595;
+					Vector3 vector3_22 = VertexNormal.myPlayer.method11166().aClass385_3595;
 					i_8 = (int) vector3_22.x;
 					i_9 = (int) vector3_22.z;
 					i_10 = (int) (-client.aFloat7365) + client.anInt7255 & 0x3fff;
@@ -94,12 +94,12 @@ public class Item extends Node {
 				Class190.method3151(i_8, i_9, icomponentdefinitions_1, class119_5, i_2, i_3);
 				if (NativeLibraryLoader.anInt3240 != 4) {
 					if (Class187.anInt2361 != 0) {
-						i_21 = Class187.anInt2361 * 4 + 2 - i_8 / 128 + (Class84.myPlayer.getSize() - 1) * 2;
-						i_16 = 2 + Class187.anInt2359 * 4 - i_9 / 128 + (Class84.myPlayer.getSize() - 1) * 2;
+						i_21 = Class187.anInt2361 * 4 + 2 - i_8 / 128 + (VertexNormal.myPlayer.getSize() - 1) * 2;
+						i_16 = 2 + Class187.anInt2359 * 4 - i_9 / 128 + (VertexNormal.myPlayer.getSize() - 1) * 2;
 						Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_21, i_16, Class16.aClass160Array145[Class187.aBool2360 ? 1 : 0], 1471010271);
 					}
 
-					if (!Class84.myPlayer.hidden) {
+					if (!VertexNormal.myPlayer.hidden) {
 						graphicalrenderer_0.method8425(i_2 + icomponentdefinitions_1.anInt1301 / 2 - 1, i_3 + icomponentdefinitions_1.anInt1429 / 2 - 1, 3, 3, -1, (byte) -117);
 					}
 				}

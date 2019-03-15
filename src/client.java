@@ -807,7 +807,7 @@ public final class client extends Engine {
 			Class96_Sub21.keyRecorder.method3235();
 			Class163.mouseRecorder.method3589();
 			if (Renderers.SOFTWARE_RENDERER != null) {
-				Renderers.SOFTWARE_RENDERER.method8398((int) Class169.time());
+				Renderers.SOFTWARE_RENDERER.method8398((int) TextureDetails.time());
 			}
 
 			anInt7193 = 0;
@@ -876,7 +876,7 @@ public final class client extends Engine {
 				Login.method5018();
 			} else if (gameState == 12) {
 				Login.method5018();
-			} else if (Class169.method2875(gameState, -1980250019) && !Class464.method7742(gameState, (byte) 45)) {
+			} else if (TextureDetails.method2875(gameState, -1980250019) && !Class464.method7742(gameState, (byte) 45)) {
 				Class282_Sub20_Sub22.method15386();
 			} else if (gameState == 10 || gameState == 17) {
 				Login.method5018();
@@ -961,7 +961,7 @@ public final class client extends Engine {
 			}
 
 			if (Class176.method2980(gameState, -997270926)) {
-				if (aLong7307 != 0L && Class169.time() > aLong7307) {
+				if (aLong7307 != 0L && TextureDetails.time() > aLong7307) {
 					Class440.method7373(Class158.windowedMode(), -1, -1, false, (byte) 23);
 				} else if (!Renderers.SOFTWARE_RENDERER.method8465() && aBool3257) {
 					Class350_Sub2.method12571(757549008);
@@ -987,7 +987,7 @@ public final class client extends Engine {
 						Class532_Sub1.method12840(865941395);
 					}
 
-					aLong7307 = Class169.time() + 500L;
+					aLong7307 = TextureDetails.time() + 500L;
 					aBool7185 = false;
 				}
 			}
@@ -1088,8 +1088,8 @@ public final class client extends Engine {
 		try {
 			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			str_2 = str_2 + coordgrid_3.x + "," + coordgrid_3.y + "," + IndexLoaders.MAP_REGION_DECODER.getSizeX(-2095875527) + "," + IndexLoaders.MAP_REGION_DECODER.getSizeY(-1882387528) + " ";
-			if (Class84.myPlayer != null) {
-				str_2 = str_2 + Class4.anInt35 + "," + (Class84.myPlayer.regionBaseX[0] + coordgrid_3.x) + "," + (Class84.myPlayer.regionBaseY[0] + coordgrid_3.y) + " ";
+			if (VertexNormal.myPlayer != null) {
+				str_2 = str_2 + Class4.anInt35 + "," + (VertexNormal.myPlayer.regionBaseX[0] + coordgrid_3.x) + "," + (VertexNormal.myPlayer.regionBaseY[0] + coordgrid_3.y) + " ";
 			} else {
 				str_2 = str_2 + Class4.anInt35 + "," + Class4.anInt35 + "," + Class4.anInt35 + "," + " ";
 			}
@@ -1235,7 +1235,7 @@ public final class client extends Engine {
 					stream.writeString(aString7164);
 					Class47_Sub1.updateConnection.write(stream.buffer, length + 2, -2102703988);
 					++updateStage;
-					JS5CacheFile.aLong2577 = Class169.time();
+					JS5CacheFile.aLong2577 = TextureDetails.time();
 				}
 
 				int reponse;
@@ -1253,7 +1253,7 @@ public final class client extends Engine {
 						}
 
 						++updateStage;
-					} else if (Class169.time() - JS5CacheFile.aLong2577 > 30000L) {
+					} else if (TextureDetails.time() - JS5CacheFile.aLong2577 > 30000L) {
 						this.updateNetStatus(1001);
 						return;
 					}
@@ -1310,7 +1310,7 @@ public final class client extends Engine {
 				player_5.method14697((byte) 56);
 				if (player_5.aShort9458 >= 0 && player_5.aShort9456 >= 0 && player_5.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1249546922) && player_5.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1946809228)) {
 					player_5.aBool10573 = player_5.aClass456_Sub3_10337.aBool7891 ? animate : false;
-					if (player_5 == Class84.myPlayer) {
+					if (player_5 == VertexNormal.myPlayer) {
 						player_5.drawPriority = Integer.MAX_VALUE;
 					} else {
 						i_8 = 0;
@@ -1400,7 +1400,7 @@ public final class client extends Engine {
 					}
 				} else if (class180_10.anInt2236 == 10) {
 					Player player_11 = players[class180_10.anInt2238];
-					if (player_11 != null && player_11 != Class84.myPlayer && player_11.drawPriority >= 0) {
+					if (player_11 != null && player_11 != VertexNormal.myPlayer && player_11.drawPriority >= 0) {
 						player_11.drawPriority += 2048;
 					}
 				}
@@ -2155,8 +2155,8 @@ public final class client extends Engine {
 										i_33 = (i_31 >> 2) + (anInt7262 >> 9);
 										i_34 = (anInt7376 >> 9) - (i_32 >> 2);
 									} else {
-										int i_45 = (Class84.myPlayer.getSize() - 1) * 256;
-										Vector3 vector3_36 = Class84.myPlayer.method11166().aClass385_3595;
+										int i_45 = (VertexNormal.myPlayer.getSize() - 1) * 256;
+										Vector3 vector3_36 = VertexNormal.myPlayer.method11166().aClass385_3595;
 										i_33 = ((int) vector3_36.x - i_45 >> 9) + (i_31 >> 2);
 										i_34 = ((int) vector3_36.z - i_45 >> 9) - (i_32 >> 2);
 									}
@@ -3082,12 +3082,12 @@ public final class client extends Engine {
 											}
 
 											Class449.method7490();
-											if (aBool7400 && aLong7401 < Class169.time() - 60000L) {
+											if (aBool7400 && aLong7401 < TextureDetails.time() - 60000L) {
 												Class282_Sub11.method12211(133515669);
 											}
 
 											for (Class275_Sub4 class275_sub4_17 = (Class275_Sub4) aClass457_7350.method7659(); class275_sub4_17 != null; class275_sub4_17 = (Class275_Sub4) aClass457_7350.method7650((byte) 99)) {
-												if ((long) class275_sub4_17.anInt7838 < Class169.time() / 1000L - 5L) {
+												if ((long) class275_sub4_17.anInt7838 < TextureDetails.time() / 1000L - 5L) {
 													if (class275_sub4_17.aShort7839 > 0) {
 														Class191.method3167(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE, -1495775612), 1096465682);
 													}

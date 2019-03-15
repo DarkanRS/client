@@ -1,4 +1,4 @@
-public class Class323 implements Interface22 {
+public class Texture implements Interface22 {
 
 	Class223 aClass223_3754 = new Class223(256);
 
@@ -8,7 +8,7 @@ public class Class323 implements Interface22 {
 
 	int textureDefSize;
 
-	Class169[] aClass169Array3753;
+	TextureDetails[] textures;
 
 	TextureDefinition method5770(int i_1, int i_2) {
 		CacheableNode cacheablenode_3 = this.aClass223_3754.method3758((long) i_1);
@@ -34,129 +34,129 @@ public class Class323 implements Interface22 {
 		return 821306191 * this.textureDefSize * 309531567;
 	}
 
-	public Class169 method144(int i_1, int i_2) {
-		return this.aClass169Array3753[i_1];
+	public TextureDetails method144(int i_1, int i_2) {
+		return this.textures[i_1];
 	}
 
 	public void method161(int i_1) {
 	}
 
-	public Class323(Index index_1, Index index_2, Index index_3) {
-		this.textureIndex = index_2;
-		this.spriteIndex = index_3;
-		RsByteBuffer rsbytebuffer_4 = new RsByteBuffer(index_1.getFile(0, 0));
-		this.textureDefSize = rsbytebuffer_4.readUnsignedShort();
-		this.aClass169Array3753 = new Class169[this.textureDefSize];
+	public Texture(Index textureDefIndex, Index textureIndex, Index spriteIndex) {
+		this.textureIndex = textureIndex;
+		this.spriteIndex = spriteIndex;
+		RsByteBuffer stream = new RsByteBuffer(textureDefIndex.getFile(0, 0));
+		this.textureDefSize = stream.readUnsignedShort();
+		this.textures = new TextureDetails[this.textureDefSize];
 		int i_5;
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (rsbytebuffer_4.readUnsignedByte() == 1) {
-				this.aClass169Array3753[i_5] = new Class169();
+			if (stream.readUnsignedByte() == 1) {
+				this.textures[i_5] = new TextureDetails();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2056 = rsbytebuffer_4.readUnsignedByte() == 0;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].isGroundMesh = stream.readUnsignedByte() == 0;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2065 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].isHalfSize = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2072 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].skipTriangles = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2080 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].brightness = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2079 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].shadowFactor = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2064 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].effectId = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2076 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].effectParam1 = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aShort2073 = (short) rsbytebuffer_4.readUnsignedShort();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].color = (short) stream.readUnsignedShort();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2081 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].textureSpeedU = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2090 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].textureSpeedV = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2087 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].aBool2087 = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2082 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].isBrickTile = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aByte2088 = rsbytebuffer_4.readByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].useMipmaps = stream.readByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2086 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].repeatS = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2059 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].repeatT = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].aBool2089 = rsbytebuffer_4.readUnsignedByte() == 1;
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].hdr = stream.readUnsignedByte() == 1;
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].anInt2091 = rsbytebuffer_4.readUnsignedByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].combineMode = stream.readUnsignedByte();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].anInt2077 = rsbytebuffer_4.readInt();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].effectParam2 = stream.readInt();
 			}
 		}
 		for (i_5 = 0; i_5 < this.textureDefSize; i_5++) {
-			if (this.aClass169Array3753[i_5] != null) {
-				this.aClass169Array3753[i_5].anInt2074 = rsbytebuffer_4.readUnsignedByte();
+			if (this.textures[i_5] != null) {
+				this.textures[i_5].blendType = stream.readUnsignedByte();
 			}
 		}
 	}
 
 	public int[] method141(int i_1, int i_3, int i_4, boolean bool_5, int i_6) {
-		int[] ints_7 = this.method5770(i_1, 1098624376).method14719(this.spriteIndex, this, (double) (float) 0.7, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, (byte) -5);
+		int[] ints_7 = this.method5770(i_1, 1098624376).method14719(this.spriteIndex, this, (double) (float) 0.7, i_3, i_4, this.textures[i_1].isBrickTile, (byte) -5);
 		return ints_7;
 	}
 
 	public float[] method145(int i_1, int i_3, int i_4) {
-		float[] floats_7 = this.method5770(i_1, 409452943).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
+		float[] floats_7 = this.method5770(i_1, 409452943).method14723(this.spriteIndex, this, i_3, i_4, this.textures[i_1].isBrickTile);
 		return floats_7;
 	}
 
@@ -180,7 +180,7 @@ public class Class323 implements Interface22 {
 	}
 
 	public float[] method143(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 1967689599).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
+		float[] floats_6 = this.method5770(i_1, 1967689599).method14723(this.spriteIndex, this, i_3, i_4, this.textures[i_1].isBrickTile);
 		return floats_6;
 	}
 
@@ -190,17 +190,17 @@ public class Class323 implements Interface22 {
 	}
 
 	public int[] method151(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		int[] ints_6 = this.method5770(i_1, 1578123890).method14719(this.spriteIndex, this, (double) f_2, i_3, i_4, this.aClass169Array3753[i_1].aBool2082, (byte) -42);
+		int[] ints_6 = this.method5770(i_1, 1578123890).method14719(this.spriteIndex, this, (double) f_2, i_3, i_4, this.textures[i_1].isBrickTile, (byte) -42);
 		return ints_6;
 	}
 
 	public int[] method149(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		int[] ints_6 = this.method5770(i_1, 131429824).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.aClass169Array3753[i_1].aBool2082, 1932199605);
+		int[] ints_6 = this.method5770(i_1, 131429824).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.textures[i_1].isBrickTile, 1932199605);
 		return ints_6;
 	}
 
 	public int[] method142(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		int[] ints_6 = this.method5770(i_1, 1541756935).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.aClass169Array3753[i_1].aBool2082, 1245157724);
+		int[] ints_6 = this.method5770(i_1, 1541756935).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.textures[i_1].isBrickTile, 1245157724);
 		return ints_6;
 	}
 
@@ -210,46 +210,46 @@ public class Class323 implements Interface22 {
 	}
 
 	public int[] method138(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		int[] ints_6 = this.method5770(i_1, 638861447).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.aClass169Array3753[i_1].aBool2082, 733021009);
+		int[] ints_6 = this.method5770(i_1, 638861447).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.textures[i_1].isBrickTile, 733021009);
 		return ints_6;
 	}
 
 	public float[] method152(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 795042789).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
+		float[] floats_6 = this.method5770(i_1, 795042789).method14723(this.spriteIndex, this, i_3, i_4, this.textures[i_1].isBrickTile);
 		return floats_6;
 	}
 
 	public float[] method154(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 1535419542).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
+		float[] floats_6 = this.method5770(i_1, 1535419542).method14723(this.spriteIndex, this, i_3, i_4, this.textures[i_1].isBrickTile);
 		return floats_6;
 	}
 
 	public float[] method155(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 777010049).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
+		float[] floats_6 = this.method5770(i_1, 777010049).method14723(this.spriteIndex, this, i_3, i_4, this.textures[i_1].isBrickTile);
 		return floats_6;
 	}
 
-	public Class169 method156(int i_1) {
-		return this.aClass169Array3753[i_1];
+	public TextureDetails method156(int i_1) {
+		return this.textures[i_1];
 	}
 
 	public void method157() {
 	}
 
 	public int[] method140(int i_1, float f_2, int i_3, int i_4, boolean bool_5, byte b_6) {
-		int[] ints_7 = this.method5770(i_1, 531210835).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.aClass169Array3753[i_1].aBool2082, 112593463);
+		int[] ints_7 = this.method5770(i_1, 531210835).method14718(this.spriteIndex, this, (double) f_2, i_3, i_4, bool_5, this.textures[i_1].isBrickTile, 112593463);
 		return ints_7;
 	}
 
 	public void method159() {
 	}
 
-	public Class169 method160(int i_1) {
-		return this.aClass169Array3753[i_1];
+	public TextureDetails method160(int i_1) {
+		return this.textures[i_1];
 	}
 
 	public float[] method153(int i_1, float f_2, int i_3, int i_4, boolean bool_5) {
-		float[] floats_6 = this.method5770(i_1, 1019867788).method14723(this.spriteIndex, this, i_3, i_4, this.aClass169Array3753[i_1].aBool2082);
+		float[] floats_6 = this.method5770(i_1, 1019867788).method14723(this.spriteIndex, this, i_3, i_4, this.textures[i_1].isBrickTile);
 		return floats_6;
 	}
 

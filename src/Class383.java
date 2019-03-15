@@ -88,7 +88,7 @@ public class Class383 implements Interface41 {
 				Dimension dimension_4 = Class351.gameCanvas.getSize();
 				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
 				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, Class58.aClass529_527.anInt7034);
-				long long_6 = Class169.time();
+				long long_6 = TextureDetails.time();
 				Renderers.SOFTWARE_RENDERER.L();
 				client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
 				Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
@@ -106,14 +106,14 @@ public class Class383 implements Interface41 {
 							client.aClass294_7169.method5223((float) ((int) (512.0F * ((float) i_13 - (float) i_12 / 2.0F))), 0.0F, (float) ((i_12 + 1) * 512));
 							meshrasterizer_9.method11282(client.aClass294_7169, (Class275_Sub5) null, 0);
 							++i_10;
-							if (Class169.time() - long_6 >= (long) i_1) {
+							if (TextureDetails.time() - long_6 >= (long) i_1) {
 								break label43;
 							}
 						}
 					}
 				}
 				Renderers.SOFTWARE_RENDERER.method8395();
-				long long_14 = (long) (i_10 * 1000) / (Class169.time() - long_6);
+				long long_14 = (long) (i_10 * 1000) / (TextureDetails.time() - long_6);
 				Renderers.SOFTWARE_RENDERER.ba(3, 0);
 				int i_3 = (int) long_14;
 				return i_3;

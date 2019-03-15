@@ -49,8 +49,8 @@ public final class Class251 {
 						}
 						if (string_0.equalsIgnoreCase("getcamerapos")) {
 							CoordGrid coordgrid_27 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-							Class209.printConsoleMessage("Pos: " + Class84.myPlayer.plane + "," + ((Class31.anInt361 >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y >> 6) + "," + ((Class31.anInt361 >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.method8389(Class31.anInt361, Class246.anInt3029, Class84.myPlayer.plane, (byte) 22) - Class109_Sub1.anInt9384), -2096324041);
-							Class209.printConsoleMessage("Look: " + Class84.myPlayer.plane + "," + (coordgrid_27.x + Class96_Sub13.anInt9368 >> 6) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 >> 6) + "," + (coordgrid_27.x + Class96_Sub13.anInt9368 & 0x3f) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 & 0x3f) + " Height: " + (Class504.method8389(Class96_Sub13.anInt9368, OutgoingLoginPacket.anInt4280, Class84.myPlayer.plane, (byte) 2) - Class121.anInt1527), -2049086171);
+							Class209.printConsoleMessage("Pos: " + VertexNormal.myPlayer.plane + "," + ((Class31.anInt361 >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y >> 6) + "," + ((Class31.anInt361 >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.method8389(Class31.anInt361, Class246.anInt3029, VertexNormal.myPlayer.plane, (byte) 22) - Class109_Sub1.anInt9384), -2096324041);
+							Class209.printConsoleMessage("Look: " + VertexNormal.myPlayer.plane + "," + (coordgrid_27.x + Class96_Sub13.anInt9368 >> 6) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 >> 6) + "," + (coordgrid_27.x + Class96_Sub13.anInt9368 & 0x3f) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 & 0x3f) + " Height: " + (Class504.method8389(Class96_Sub13.anInt9368, OutgoingLoginPacket.anInt4280, VertexNormal.myPlayer.plane, (byte) 2) - Class121.anInt1527), -2049086171);
 							return;
 						}
 						break label381;
@@ -106,13 +106,13 @@ public final class Class251 {
 					return;
 				}
 				if (string_0.startsWith("clipmask")) {
-					Class209.printConsoleMessage("[" + Class84.myPlayer.localX + ", " + Class84.myPlayer.localY + "]:" + IndexLoaders.MAP_REGION_DECODER.getClipMap(Class84.myPlayer.plane).map[Class84.myPlayer.localX][Class84.myPlayer.localY], -354697449);
+					Class209.printConsoleMessage("[" + VertexNormal.myPlayer.localX + ", " + VertexNormal.myPlayer.localY + "]:" + IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.myPlayer.plane).map[VertexNormal.myPlayer.localX][VertexNormal.myPlayer.localY], -354697449);
 				}
 				int i_6;
 				int i_10;
 				if (string_0.startsWith("dumpitems")) {
 					for (i_10 = 0; i_10 < 24806; i_10++) {
-						int[] ints_23 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_10, 1).getSprite(Class182.HARDWARE_RENDERER, Renderers.SOFTWARE_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, Class84.myPlayer.playerAppearance, (short) 1);
+						int[] ints_23 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_10, 1).getSprite(Class182.HARDWARE_RENDERER, Renderers.SOFTWARE_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, VertexNormal.myPlayer.playerAppearance, (short) 1);
 						try {
 							i_6 = (int) Math.sqrt((double) ints_23.length) - 1;
 							BufferedImage bufferedimage_25 = new BufferedImage(36, 32, 2);
@@ -261,7 +261,7 @@ public final class Class251 {
 				if (string_0.startsWith("setoutput ")) {
 					file_20 = new File(string_0.substring(10));
 					if (file_20.exists()) {
-						file_20 = new File(string_0.substring(10) + "." + Class169.time() + ".log");
+						file_20 = new File(string_0.substring(10) + "." + TextureDetails.time() + ".log");
 						if (file_20.exists()) {
 							Class209.printConsoleMessage("file already exists!", -2041307357);
 							return;

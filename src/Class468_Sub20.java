@@ -91,7 +91,7 @@ public class Class468_Sub20 extends Preference {
 		if (Class302.aClass387Array3557 == null) {
 			Class302.aClass387Array3557 = LoadingStage.method6676();
 			IndexLoaders.LOADING_STAGE = Class302.aClass387Array3557[0];
-			Class302.aLong3562 = Class169.time();
+			Class302.aLong3562 = TextureDetails.time();
 		}
 		if (Class328.aClass306_3771 == null) {
 			Class165.method2852(-536830752);
@@ -116,7 +116,7 @@ public class Class468_Sub20 extends Preference {
 			}
 			Class302.anInt3563 = xloadingstage_1.anInt4703;
 			if (IndexLoaders.LOADING_STAGE.aBool4718 || xloadingstage_1.aBool4718) {
-				Class302.aLong3562 = Class169.time();
+				Class302.aLong3562 = TextureDetails.time();
 			}
 		}
 		if (Class328.aClass306_3771 != null) {

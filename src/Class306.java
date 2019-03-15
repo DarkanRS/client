@@ -58,14 +58,14 @@ public class Class306 implements Runnable {
 
 	public void run() {
 		while (!this.aBool3599) {
-			long long_1 = Class169.time();
+			long long_1 = TextureDetails.time();
 			synchronized (this) {
 				try {
 					++this.anInt3600;
 					if (this.anInterface27_3598 instanceof Class304) {
 						this.anInterface27_3598.method187(this.aBool3597);
 					} else {
-						long long_4 = Class169.time();
+						long long_4 = TextureDetails.time();
 						if (Renderers.SOFTWARE_RENDERER != null && this.anInterface27_3604 != null && this.anInterface27_3604.method190(1422459894) != 0 && this.aLong3601 >= long_4 - (long) this.anInterface27_3604.method190(1006889549)) {
 							int i_6 = (int) (255L * (long_4 - this.aLong3601) / (long) this.anInterface27_3604.method190(908741626));
 							int i_7 = 255 - i_6;
@@ -116,7 +116,7 @@ public class Class306 implements Runnable {
 					continue;
 				}
 			}
-			long long_12 = Class169.time();
+			long long_12 = TextureDetails.time();
 			int i_5 = (int) (20L - (long_12 - long_1));
 			if (i_5 > 0) {
 				Class89.sleep((long) i_5);
@@ -135,7 +135,7 @@ public class Class306 implements Runnable {
 	synchronized void method5445(Interface27 interface27_1) {
 		this.anInterface27_3604 = this.anInterface27_3598;
 		this.anInterface27_3598 = interface27_1;
-		this.aLong3601 = Class169.time();
+		this.aLong3601 = TextureDetails.time();
 	}
 
 	synchronized boolean method5450() {

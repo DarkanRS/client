@@ -520,7 +520,7 @@ public class Class61 {
 			if (i_3 >= 3) {
 				i_5 = rsbytebuffer_1.readUnsignedShort();
 				if (i_5 > 0) {
-					this.aClass465_629 = new IterableNodeMap(i_5 < 16 ? Class323.nextPowerOfTwo(i_5, 1744507894) : 16);
+					this.aClass465_629 = new IterableNodeMap(i_5 < 16 ? Texture.nextPowerOfTwo(i_5, 1744507894) : 16);
 					while (i_5-- > 0) {
 						int i_6 = rsbytebuffer_1.readInt();
 						int i_7 = i_6 & 0x3fffffff;

@@ -159,7 +159,7 @@ public class Class250 {
 						}
 					}
 				}
-				if (((Animable) obj_12).drawPriority < 0 || ((Animable) obj_12).anInt10349 != client.anInt7286 && ((Animable) obj_12).plane != Class84.myPlayer.plane) {
+				if (((Animable) obj_12).drawPriority < 0 || ((Animable) obj_12).anInt10349 != client.anInt7286 && ((Animable) obj_12).plane != VertexNormal.myPlayer.plane) {
 					continue;
 				}
 			}

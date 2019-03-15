@@ -210,7 +210,7 @@ public class Class282_Sub8 extends Node {
 		}
 
 		if (this.anInt7532 > 0) {
-			this.aClass453_7537 = new HashTable(Class323.nextPowerOfTwo(this.anInt7532, 1669854752));
+			this.aClass453_7537 = new HashTable(Texture.nextPowerOfTwo(this.anInt7532, 1669854752));
 			ByteBuffer bytebuffer_20 = this.aClass505_Sub2_7533.aByteBuffer8838;
 			bytebuffer_20.clear();
 			bytebuffer_20.position(2097152);

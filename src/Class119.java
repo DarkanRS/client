@@ -60,7 +60,7 @@ public class Class119 {
 
 		for (int i_6 = 0; i_6 < i_3; i_6++) {
 			Player player_7 = client.players[ints_4[i_6]];
-			if (player_7 != null && player_7 != Class84.myPlayer && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
+			if (player_7 != null && player_7 != VertexNormal.myPlayer && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
 				OutgoingPacket outgoingpacket_8 = null;
 				if (i_0 == 1) {
 					outgoingpacket_8 = OutgoingPacket.aClass379_4539;
@@ -124,7 +124,7 @@ public class Class119 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -1298876886);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, -1771298616);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 0, -1247353645);
-		Class323.method5777(1139653705);
+		Texture.method5777(1139653705);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, 2126000152);
 		Class393.preferences.setValue(Class393.preferences.graphics, 2, -761948866);
 		Class94.method1589();

@@ -254,17 +254,17 @@ public class Whirlpool {
 					} else if (i_0 == 27) {
 						Preference.method7789(-838440375);
 					} else if (i_0 == 6) {
-						IndexLoaders.MAP_REGION_DECODER.aLong3183 = Class169.time();
+						IndexLoaders.MAP_REGION_DECODER.aLong3183 = TextureDetails.time();
 						IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
 						Preference.method7789(620089057);
 					} else {
 						Vector3 vector3_8;
 						if (i_0 == 26) {
-							vector3_8 = Class84.myPlayer.method11166().aClass385_3595;
+							vector3_8 = VertexNormal.myPlayer.method11166().aClass385_3595;
 							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9), -1980423440);
 						} else if (i_0 == 2) {
-							vector3_8 = Class84.myPlayer.method11166().aClass385_3595;
-							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[Class84.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9), -1193762995);
+							vector3_8 = VertexNormal.myPlayer.method11166().aClass385_3595;
+							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[VertexNormal.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9), -1193762995);
 						} else if (i_0 == 23) {
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53), -622119201);
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119), -632491603);

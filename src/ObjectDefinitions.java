@@ -390,7 +390,7 @@ public class ObjectDefinitions {
 			} else if (opcode == 249) {
 				i_4 = buffer.readUnsignedByte();
 				if (this.aClass465_5668 == null) {
-					i_5 = Class323.nextPowerOfTwo(i_4, -1920576994);
+					i_5 = Texture.nextPowerOfTwo(i_4, -1920576994);
 					this.aClass465_5668 = new IterableNodeMap(i_5);
 				}
 				for (i_5 = 0; i_5 < i_4; i_5++) {
@@ -874,7 +874,7 @@ public class ObjectDefinitions {
 				if (class282_sub50_sub12_1 == null) {
 					return null;
 				}
-				if (class282_sub50_sub12_1.method14955(31148025) > Class169.time()) {
+				if (class282_sub50_sub12_1.method14955(31148025) > TextureDetails.time()) {
 					return null;
 				}
 				class282_sub50_sub12_1.remove();

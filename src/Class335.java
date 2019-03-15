@@ -13,7 +13,7 @@ public class Class335 {
 
 	static void method5961() {
 		if (Class260.aClass277_3221 != null) {
-			Vector3 vector3_1 = Vector3.popVectorStackTo(Class84.myPlayer.method11166().aClass385_3595);
+			Vector3 vector3_1 = Vector3.popVectorStackTo(VertexNormal.myPlayer.method11166().aClass385_3595);
 			CoordGrid coordgrid_2 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			vector3_1.x += (float) (coordgrid_2.x << 9);
 			vector3_1.z += (float) (coordgrid_2.y << 9);

@@ -71,7 +71,7 @@ public class Defaults6Loader {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -1318681666);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, 1179600345);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 1, 991235937);
-		Class323.method5777(1560410818);
+		Texture.method5777(1560410818);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 0, -231227368);
 		Class393.preferences.setValue(Class393.preferences.graphics, 4, -702190975);
 		Class94.method1589();

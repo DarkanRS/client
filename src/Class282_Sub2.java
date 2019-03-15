@@ -34,7 +34,7 @@ public class Class282_Sub2 extends Node {
 		}
 
 		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-		tcpmessage_4.buffer.writeByte(Class84.method1465(-2046314159) ? 1 : 0);
+		tcpmessage_4.buffer.writeByte(VertexNormal.method1465(-2046314159) ? 1 : 0);
 		tcpmessage_4.buffer.writeShort(i_0 + coordgrid_5.x);
 		tcpmessage_4.buffer.writeShortLE(coordgrid_5.y + i_1, (short) -23988);
 		Class187.anInt2361 = i_0;

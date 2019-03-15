@@ -65,9 +65,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
 				if (i_4 > 0) {
-					Class169 class169_5 = this.anInterface22_5834.method144(class282_sub27_3.anInt7695, -2103446080);
-					float f_6 = class169_5.aBool2065 ? 64.0F : 128.0F;
-					class282_sub27_3.method12403((int) (f_6 * ((float) class169_5.aByte2081 * ((float) i_2 / 1000.0F) / 64.0F)), (int) ((float) class169_5.aByte2090 * ((float) i_2 / 1000.0F) / 64.0F * f_6));
+					TextureDetails class169_5 = this.anInterface22_5834.method144(class282_sub27_3.anInt7695, -2103446080);
+					float f_6 = class169_5.isHalfSize ? 64.0F : 128.0F;
+					class282_sub27_3.method12403((int) (f_6 * ((float) class169_5.textureSpeedU * ((float) i_2 / 1000.0F) / 64.0F)), (int) ((float) class169_5.textureSpeedV * ((float) i_2 / 1000.0F) / 64.0F * f_6));
 					class282_sub27_3.anInt7692 -= i_4 * 50;
 				}
 
@@ -97,9 +97,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 					int[] is = null;
 					return is;
 				}
-				Class169 class169 = anInterface22_5834.method144(i, -1891491096);
-				int i_29_ = (class169.aBool2065 || ((HardwareRenderer) this).aBool8997 ? 64 : ((HardwareRenderer) this).anInt9005);
-				class282_sub27 = (new Class282_Sub27(i, i_29_, anInterface22_5834.method141(i, i_29_, i_29_, true, 1334254083), 1 != class169.anInt2074));
+				TextureDetails class169 = anInterface22_5834.method144(i, -1891491096);
+				int i_29_ = (class169.isHalfSize || ((HardwareRenderer) this).aBool8997 ? 64 : ((HardwareRenderer) this).anInt9005);
+				class282_sub27 = (new Class282_Sub27(i, i_29_, anInterface22_5834.method141(i, i_29_, i_29_, true, 1334254083), 1 != class169.blendType));
 				((HardwareRenderer) this).aClass229_9006.put(class282_sub27, (long) i | ~0x7fffffffffffffffL);
 			}
 		}
@@ -116,11 +116,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	int method14361(int i_1) {
-		return this.anInterface22_5834.method144(i_1, -1867342657).anInt2074;
+		return this.anInterface22_5834.method144(i_1, -1867342657).blendType;
 	}
 
 	int method14362(int i_1) {
-		return this.anInterface22_5834.method144(i_1, -1888622730).aShort2073 & 0xffff;
+		return this.anInterface22_5834.method144(i_1, -1888622730).color & 0xffff;
 	}
 
 	public void method8598(Class152 class152_1) {
@@ -2107,8 +2107,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 	void method14372(boolean bool_1, boolean bool_2, boolean bool_3, int i_4, int i_5, float f_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
 		if (i_7 != 0 && i_8 != 0) {
 			if (i_9 != 65535) {
-				Class169 class169_13 = this.anInterface22_5834.method144(i_9, -1758221080);
-				if (!class169_13.aBool2056) {
+				TextureDetails class169_13 = this.anInterface22_5834.method144(i_9, -1758221080);
+				if (!class169_13.isGroundMesh) {
 					if (i_9 != this.anInt9015) {
 						NativeSprite nativesprite_14 = (NativeSprite) this.aClass229_9013.get((long) i_9);
 						if (nativesprite_14 == null) {
@@ -2126,7 +2126,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 						this.aClass160_8987 = nativesprite_14;
 					}
 
-					((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, class169_13.anInt2074 != 2);
+					((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, class169_13.blendType != 2);
 					return;
 				}
 			}
@@ -2439,7 +2439,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			this.method14409();
 			Class38.method854(true, true, -1425832759);
 			this.aBool9012 = true;
-			this.anInt8977 = (int) Class169.time();
+			this.anInt8977 = (int) TextureDetails.time();
 		} catch (Throwable throwable_3) {
 			throwable_3.printStackTrace();
 			this.method8396(-752657427);
@@ -2838,7 +2838,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	boolean method14377(int i_1) {
-		return this.aBool8997 || this.anInterface22_5834.method144(i_1, -1984056091).aBool2065;
+		return this.aBool8997 || this.anInterface22_5834.method144(i_1, -1984056091).isHalfSize;
 	}
 
 	public void method8487(int i_1) {
@@ -2849,9 +2849,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
 				if (i_4 > 0) {
-					Class169 class169_5 = this.anInterface22_5834.method144(class282_sub27_3.anInt7695, -1866470607);
-					float f_6 = class169_5.aBool2065 ? 64.0F : 128.0F;
-					class282_sub27_3.method12403((int) (f_6 * ((float) class169_5.aByte2081 * ((float) i_2 / 1000.0F) / 64.0F)), (int) ((float) class169_5.aByte2090 * ((float) i_2 / 1000.0F) / 64.0F * f_6));
+					TextureDetails class169_5 = this.anInterface22_5834.method144(class282_sub27_3.anInt7695, -1866470607);
+					float f_6 = class169_5.isHalfSize ? 64.0F : 128.0F;
+					class282_sub27_3.method12403((int) (f_6 * ((float) class169_5.textureSpeedU * ((float) i_2 / 1000.0F) / 64.0F)), (int) ((float) class169_5.textureSpeedV * ((float) i_2 / 1000.0F) / 64.0F * f_6));
 					class282_sub27_3.anInt7692 -= 50 * i_4;
 				}
 
@@ -6577,7 +6577,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	boolean method14403(int i_1) {
-		return this.anInterface22_5834.method144(i_1, -1887414575).aBool2086 || this.anInterface22_5834.method144(i_1, -2055266628).aBool2059;
+		return this.anInterface22_5834.method144(i_1, -1887414575).repeatS || this.anInterface22_5834.method144(i_1, -2055266628).repeatT;
 	}
 
 	public void method8430(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -7242,9 +7242,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
 				if (i_4 > 0) {
-					Class169 class169_5 = this.anInterface22_5834.method144(class282_sub27_3.anInt7695, -1956198689);
-					float f_6 = class169_5.aBool2065 ? 64.0F : 128.0F;
-					class282_sub27_3.method12403((int) (f_6 * ((float) class169_5.aByte2081 * ((float) i_2 / 1000.0F) / 64.0F)), (int) ((float) class169_5.aByte2090 * ((float) i_2 / 1000.0F) / 64.0F * f_6));
+					TextureDetails class169_5 = this.anInterface22_5834.method144(class282_sub27_3.anInt7695, -1956198689);
+					float f_6 = class169_5.isHalfSize ? 64.0F : 128.0F;
+					class282_sub27_3.method12403((int) (f_6 * ((float) class169_5.textureSpeedU * ((float) i_2 / 1000.0F) / 64.0F)), (int) ((float) class169_5.textureSpeedV * ((float) i_2 / 1000.0F) / 64.0F * f_6));
 					class282_sub27_3.anInt7692 -= 50 * i_4;
 				}
 

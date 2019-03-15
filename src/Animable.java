@@ -242,8 +242,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_9 = 0;
 			int i_10 = -1;
 			int i_11 = -1;
-			Class87[][] arr_12 = new Class87[arr_2.length][];
-			Class172[][] arr_13 = new Class172[arr_2.length][];
+			Surface[][] arr_12 = new Surface[arr_2.length][];
+			SurfaceSkin[][] arr_13 = new SurfaceSkin[arr_2.length][];
 
 			for (int i_14 = 0; i_14 < arr_2.length; i_14++) {
 				if (arr_2[i_14] != null) {
@@ -270,11 +270,11 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 			if (this.aClass539_10369 != null) {
 				Object obj_20 = null;
-				Class87[] arr_15;
+				Surface[] arr_15;
 				if (i_7 == 1) {
 					arr_15 = arr_12[i_10];
 				} else {
-					arr_15 = new Class87[i_6];
+					arr_15 = new Surface[i_6];
 					int i_21 = 0;
 
 					for (int i_22 = 0; i_22 < arr_2.length; i_22++) {
@@ -286,11 +286,11 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				}
 
 				Object obj_16 = null;
-				Class172[] arr_17;
+				SurfaceSkin[] arr_17;
 				if (i_9 == 1) {
 					arr_17 = arr_13[i_11];
 				} else {
-					arr_17 = new Class172[i_8];
+					arr_17 = new SurfaceSkin[i_8];
 					int i_18 = 0;
 
 					for (int i_19 = 0; i_19 < arr_2.length; i_19++) {

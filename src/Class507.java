@@ -78,7 +78,7 @@ public class Class507 {
 			if (client.anInt7349 != -1) {
 				Class516.method8867(true);
 			}
-			if (client.aClass184_7475.getConnection() != null && Class169.method2875(client.gameState, -2070106492)) {
+			if (client.aClass184_7475.getConnection() != null && TextureDetails.method2875(client.gameState, -2070106492)) {
 				Class388.method6692(529242177);
 			}
 			for (int i_8 = 0; i_8 < 107; i_8++) {

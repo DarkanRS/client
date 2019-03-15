@@ -74,7 +74,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -273525452);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, 1196949747);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 0, -1623251899);
-		Class323.method5777(1755856105);
+		Texture.method5777(1755856105);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, -1469341129);
 		Class393.preferences.setValue(Class393.preferences.graphics, 1, -971375585);
 		Class94.method1589();

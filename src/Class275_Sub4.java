@@ -1,6 +1,6 @@
 public class Class275_Sub4 extends Class275 {
 
-	int anInt7838 = (int) (Class169.time() / 1000L);
+	int anInt7838 = (int) (TextureDetails.time() / 1000L);
 
 	String aString7837;
 

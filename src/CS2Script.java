@@ -53,7 +53,7 @@ public class CS2Script extends CacheableNode {
 
 			for (int i_6 = 0; i_6 < i_5; i_6++) {
 				int i_7 = stream.readUnsignedShort();
-				IterableNodeMap iterablenodemap_8 = new IterableNodeMap(Class323.nextPowerOfTwo(i_7, -234379644));
+				IterableNodeMap iterablenodemap_8 = new IterableNodeMap(Texture.nextPowerOfTwo(i_7, -234379644));
 				this.switchMaps[i_6] = iterablenodemap_8;
 
 				while (i_7-- > 0) {

@@ -148,7 +148,7 @@ public class HardwareGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -1764984087).aBool2056) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -1764984087).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
@@ -431,7 +431,7 @@ public class HardwareGround extends Ground {
 				int i_18;
 				int i_19;
 				Class282_Sub6 class282_sub6_20;
-				Class169 class169_22;
+				TextureDetails class169_22;
 				if ((this.flags & 0x37) == 0) {
 					i_18 = 0;
 
@@ -452,7 +452,7 @@ public class HardwareGround extends Ground {
 							if (class282_sub6_20.anInt7510 != -1) {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -2012208347);
-								bool_30 = !Class282_Sub41.method13367(class169_22.aByte2064, (short) 16046);
+								bool_30 = !Class282_Sub41.method13367(class169_22.effectId, (short) 16046);
 							} else {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
 							}
@@ -491,7 +491,7 @@ public class HardwareGround extends Ground {
 							byte b_29 = 11;
 							if (class282_sub6_20.anInt7510 != -1) {
 								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1968208071);
-								b_29 = class169_22.aByte2064;
+								b_29 = class169_22.effectId;
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class48_27.method944(class169_22);
 							} else {
@@ -519,8 +519,8 @@ public class HardwareGround extends Ground {
 									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);
 									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.aClass90_7512.anInt949)), 1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.aClass90_7512.anInt949)), 1.0F, 1.0F);
 									class41_sub1_sub1_31.aClass385_10089.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
-									Class169 class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1774392494);
-									class41_sub1_sub1_31.anInt10095 = class169_23.aByte2076;
+									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1774392494);
+									class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
 									class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
 									class41_sub1_sub1_31.anInt10111 = (class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1);
 									class41_sub1_sub1_31.anInt10094 = i_18;
@@ -695,7 +695,7 @@ public class HardwareGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -2017855605).aBool2056) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -2017855605).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
@@ -2001,7 +2001,7 @@ public class HardwareGround extends Ground {
 				int i_18;
 				int i_19;
 				Class282_Sub6 class282_sub6_20;
-				Class169 class169_22;
+				TextureDetails class169_22;
 				if ((this.flags & 0x37) == 0) {
 					i_18 = 0;
 
@@ -2022,7 +2022,7 @@ public class HardwareGround extends Ground {
 							if (class282_sub6_20.anInt7510 != -1) {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1934981615);
-								bool_30 = !Class282_Sub41.method13367(class169_22.aByte2064, (short) 17932);
+								bool_30 = !Class282_Sub41.method13367(class169_22.effectId, (short) 17932);
 							} else {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
 							}
@@ -2061,7 +2061,7 @@ public class HardwareGround extends Ground {
 							byte b_29 = 11;
 							if (class282_sub6_20.anInt7510 != -1) {
 								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1784475659);
-								b_29 = class169_22.aByte2064;
+								b_29 = class169_22.effectId;
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class48_27.method944(class169_22);
 							} else {
@@ -2090,8 +2090,8 @@ public class HardwareGround extends Ground {
 									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);
 									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.aClass90_7512.anInt949), 1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.aClass90_7512.anInt949), 1.0F, 1.0F);
 									class41_sub1_sub1_31.aClass385_10089.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
-									Class169 class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -2062913457);
-									class41_sub1_sub1_31.anInt10095 = class169_23.aByte2076;
+									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -2062913457);
+									class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
 									class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
 									class41_sub1_sub1_31.anInt10111 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
 									class41_sub1_sub1_31.anInt10094 = i_18;

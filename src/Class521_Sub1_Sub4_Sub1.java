@@ -450,9 +450,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 					float f_20 = f_17 - f_14;
 					i_21 = (int) (f_19 * f_18 + f_12);
 					i_22 = (int) (f_18 * f_20 + f_14);
-					i_8 = i_21 + (Class84.myPlayer.getSize() - 1 << 8) >> 9;
-					i_9 = i_22 + (Class84.myPlayer.getSize() - 1 << 8) >> 9;
-					byte b_23 = Class84.myPlayer.plane;
+					i_8 = i_21 + (VertexNormal.myPlayer.getSize() - 1 << 8) >> 9;
+					i_9 = i_22 + (VertexNormal.myPlayer.getSize() - 1 << 8) >> 9;
+					byte b_23 = VertexNormal.myPlayer.plane;
 					if (b_23 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_21 >> 9][i_22 >> 9] & 0x2) != 0) {
 						i_51 = b_23 + 1;
 					}
@@ -508,7 +508,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 												}
 
 												class285_34 = (Class285) iterator_33.next();
-											} while (!client.aBool7372 && class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
+											} while (!client.aBool7372 && class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane);
 										} while (!class285_34.method5019(graphicalrenderer_0, i_9, i_43));
 
 										boolean bool_44 = false;
@@ -542,7 +542,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 														i_41 = (int) vector3_26.x - (npc_40.definitions.anInt4858 - 1 << 8);
 														i_28 = (int) vector3_26.z - (npc_40.definitions.anInt4858 - 1 << 8);
 														if (i_41 >= i_21 && npc_40.definitions.anInt4858 <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.anInt4858 <= player_58.getSize() - (i_28 - i_22 >> 9)) {
-															WorldMapAreaDefs.method3736(npc_40, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane, 1752430415);
+															WorldMapAreaDefs.method3736(npc_40, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1752430415);
 															npc_40.anInt10375 = client.cycles;
 														}
 													}
@@ -559,7 +559,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 													i_28 = (int) vector3_27.x - (player_55.getSize() - 1 << 8);
 													int i_29 = (int) vector3_27.z - (player_55.getSize() - 1 << 8);
 													if (i_28 >= i_21 && player_55.getSize() <= player_58.getSize() - (i_28 - i_21 >> 9) && i_29 >= i_22 && player_55.getSize() <= player_58.getSize() - (i_29 - i_22 >> 9)) {
-														Class96_Sub22.method14678(player_55, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
+														Class96_Sub22.method14678(player_55, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane);
 														player_55.anInt10375 = client.cycles;
 													}
 												}
@@ -567,7 +567,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 										}
 
 										if (player_58.anInt10375 != client.cycles) {
-											Class96_Sub22.method14678(player_58, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
+											Class96_Sub22.method14678(player_58, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane);
 											player_58.anInt10375 = client.cycles;
 											break;
 										}
@@ -596,7 +596,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 													i_42 = (int) vector3_66.x - (npc_54.definitions.anInt4858 - 1 << 8);
 													i_41 = (int) vector3_66.z - (npc_54.definitions.anInt4858 - 1 << 8);
 													if (i_42 >= i_50 && npc_54.definitions.anInt4858 <= npc_59.definitions.anInt4858 - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.anInt4858 <= npc_59.definitions.anInt4858 - (i_41 - i_21 >> 9)) {
-														WorldMapAreaDefs.method3736(npc_54, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane, 1644654446);
+														WorldMapAreaDefs.method3736(npc_54, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1644654446);
 														npc_54.anInt10375 = client.cycles;
 													}
 												}
@@ -613,7 +613,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 												i_41 = (int) vector3_26.x - (player_67.getSize() - 1 << 8);
 												i_28 = (int) vector3_26.z - (player_67.getSize() - 1 << 8);
 												if (i_41 >= i_50 && player_67.getSize() <= npc_59.definitions.anInt4858 - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize() <= npc_59.definitions.anInt4858 - (i_28 - i_21 >> 9)) {
-													Class96_Sub22.method14678(player_67, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
+													Class96_Sub22.method14678(player_67, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane);
 													player_67.anInt10375 = client.cycles;
 												}
 											}
@@ -621,7 +621,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 									}
 
 									if (npc_59.anInt10375 != client.cycles) {
-										WorldMapAreaDefs.method3736(npc_59, class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane, 1776503457);
+										WorldMapAreaDefs.method3736(npc_59, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1776503457);
 										npc_59.anInt10375 = client.cycles;
 										break;
 									}
@@ -644,14 +644,14 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 												i_38 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881;
 											}
 
-											if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == Class84.myPlayer.plane) {
+											if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == VertexNormal.myPlayer.plane) {
 												ParamDefinitions attributedefault_68 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319) : null;
 												if ((Class506.anInt5858 & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.method7099(Class96_Sub12.anInt9319, attributedefault_68.defaultInt, -1083542144) != attributedefault_68.defaultInt)) {
 													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
 												}
 											}
 
-											if (class285_34.aClass521_Sub1_3391.plane == Class84.myPlayer.plane) {
+											if (class285_34.aClass521_Sub1_3391.plane == VertexNormal.myPlayer.plane) {
 												String[] arr_69 = itemdefinitions_65.groundOptions;
 
 												for (i_42 = arr_69.length - 1; i_42 >= 0; --i_42) {
@@ -708,13 +708,13 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 							}
 						} while (objectdefinitions_57 == null);
 
-						if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == Class84.myPlayer.plane) {
+						if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == VertexNormal.myPlayer.plane) {
 							ParamDefinitions attributedefault_62 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319) : null;
 							if ((Class506.anInt5858 & 0x4) != 0 && (attributedefault_62 == null || objectdefinitions_57.method7963(Class96_Sub12.anInt9319, attributedefault_62.defaultInt, -2052450472) != attributedefault_62.defaultInt)) {
 								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(65535) + objectdefinitions_57.name, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
 							}
 						}
-					} while (class285_34.aClass521_Sub1_3391.plane != Class84.myPlayer.plane);
+					} while (class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane);
 
 					arr_63 = objectdefinitions_57.options;
 				} while (arr_63 == null);

@@ -1,8 +1,8 @@
-public class Class87 {
+public class Surface {
 
 	public int anInt834;
 
-	public Class87 aClass87_835;
+	public Surface aClass87_835;
 
 	public int anInt840;
 
@@ -34,11 +34,11 @@ public class Class87 {
 		return Class282_Sub11_Sub1.getParticleProducerDefs(this.anInt842);
 	}
 
-	Class87 method1488(int i_1, int i_2, int i_3) {
-		return new Class87(this.anInt842, i_1, i_2, i_3, this.aByte839);
+	Surface method1488(int i_1, int i_2, int i_3) {
+		return new Surface(this.anInt842, i_1, i_2, i_3, this.aByte839);
 	}
 
-	Class87(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+	Surface(int i_1, int i_2, int i_3, int i_4, byte b_5) {
 		this.anInt842 = i_1;
 		this.anInt836 = i_2;
 		this.anInt837 = i_3;

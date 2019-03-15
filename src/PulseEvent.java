@@ -22,7 +22,7 @@ public class PulseEvent extends CacheableNode {
 	}
 
 	void method14965(byte b_1) {
-		this.key = this.key & ~0x7fffffffffffffffL | Class169.time() + 500L;
+		this.key = this.key & ~0x7fffffffffffffffL | TextureDetails.time() + 500L;
 		aClass477_9655.method7936(this);
 	}
 

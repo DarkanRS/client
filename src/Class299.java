@@ -62,7 +62,7 @@ public class Class299 implements Interface27 {
 	}
 
 	public boolean method189(long long_1) {
-		return Class169.time() >= long_1 + (long) this.anInt3540;
+		return TextureDetails.time() >= long_1 + (long) this.anInt3540;
 	}
 
 	public int method190(int i_1) {
@@ -181,7 +181,7 @@ public class Class299 implements Interface27 {
 	}
 
 	public boolean method193(long long_1) {
-		return Class169.time() >= long_1 + (long) (this.anInt3540 * -239238277 * 2055594931);
+		return TextureDetails.time() >= long_1 + (long) (this.anInt3540 * -239238277 * 2055594931);
 	}
 
 	public int method197() {
