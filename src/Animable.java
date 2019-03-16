@@ -12,8 +12,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public int anInt10349;
 	public byte aByte10364;
 	public byte aByte10371;
-	public int anInt10361;
-	public int anInt10357;
+	public int turnDirection;
+	public int turningTicks;
 	public int[] anIntArray10335;
 	public int[] anIntArray10362;
 	ParticleSystem aClass539_10369;
@@ -39,7 +39,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public EntityList aClass457_10333;
 	public int faceEntity;
 	public int[] currentAnimations;
-	public Class456_Sub3 aClass456_Sub3_10337;
+	public MovingAnimation aClass456_Sub3_10337;
 	public Animation currentAnimation;
 	public int anInt10347;
 	public int anInt10348;
@@ -54,7 +54,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	boolean aBool10312;
 	public int[] regionBaseX;
 	public int[] regionBaseY;
-	public byte[] aByteArray10365;
+	public byte[] walkTypes;
 	public MeshRasterizer[] aClass528Array10372;
 	public Class161[] aClass161Array10339;
 	public Class456_Sub2_Sub1[] aClass456_Sub2_Sub1Array10354;
@@ -66,8 +66,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public void method15791(int i_1, boolean bool_2, byte b_3) {
 		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs();
 		if (bool_2 || renderanimdefs_4.anInt2820 != 0 || this.anInt10340 != 0) {
-			this.anInt10361 = i_1 & 0x3fff;
-			this.aClass19_10359.method577(this.anInt10361, 836947093);
+			this.turnDirection = i_1 & 0x3fff;
+			this.aClass19_10359.method577(this.turnDirection, 836947093);
 		}
 
 	}
@@ -91,20 +91,20 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public int method15796() {
 		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs();
-		int i_3 = this.aClass19_10359.anInt153;
+		int i_3 = this.aClass19_10359.turnDirection;
 		boolean bool_4;
 		if (renderanimdefs_2.anInt2820 != 0) {
-			bool_4 = this.aClass19_10359.method576(this.anInt10361, renderanimdefs_2.anInt2820, renderanimdefs_2.anInt2804, 1656393893);
+			bool_4 = this.aClass19_10359.method576(this.turnDirection, renderanimdefs_2.anInt2820, renderanimdefs_2.anInt2804, 1656393893);
 		} else {
-			bool_4 = this.aClass19_10359.method576(this.anInt10361, this.anInt10340, this.anInt10340, 1676023529);
+			bool_4 = this.aClass19_10359.method576(this.turnDirection, this.anInt10340, this.anInt10340, 1676023529);
 		}
 
-		int i_5 = this.aClass19_10359.anInt153 - i_3;
+		int i_5 = this.aClass19_10359.turnDirection - i_3;
 		if (i_5 != 0) {
-			++this.anInt10357;
+			++this.turningTicks;
 		} else {
-			this.anInt10357 = 0;
-			this.aClass19_10359.method577(this.anInt10361, 2019707046);
+			this.turningTicks = 0;
+			this.aClass19_10359.method577(this.turnDirection, 2019707046);
 		}
 
 		if (bool_4) {
@@ -603,8 +603,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	void method15819(MeshRasterizer meshrasterizer_1) {
-		int i_3 = this.aClass19_10360.anInt153;
-		int i_4 = this.aClass19_10330.anInt153;
+		int i_3 = this.aClass19_10360.turnDirection;
+		int i_4 = this.aClass19_10330.turnDirection;
 		if (i_3 != 0 || i_4 != 0) {
 			int i_5 = meshrasterizer_1.YA() / 2;
 			meshrasterizer_1.ia(0, -i_5, 0);
@@ -762,11 +762,11 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		RenderAnimDefs renderanimdefs_3 = this.getRenderAnimDefs();
 		if (renderanimdefs_3.anInt2820 != 0 || this.anInt10340 != 0) {
 			this.aClass19_10359.method579();
-			int i_4 = i_1 - this.aClass19_10359.anInt153 & 0x3fff;
+			int i_4 = i_1 - this.aClass19_10359.turnDirection & 0x3fff;
 			if (i_4 > 8192) {
-				this.anInt10361 = this.aClass19_10359.anInt153 - (16384 - i_4);
+				this.turnDirection = this.aClass19_10359.turnDirection - (16384 - i_4);
 			} else {
-				this.anInt10361 = this.aClass19_10359.anInt153 + i_4;
+				this.turnDirection = this.aClass19_10359.turnDirection + i_4;
 			}
 		}
 
@@ -794,13 +794,13 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.aClass457_10333 = new EntityList();
 		this.faceEntity = -1;
 		this.currentAnimations = null;
-		this.aClass456_Sub3_10337 = new Class456_Sub3(this);
+		this.aClass456_Sub3_10337 = new MovingAnimation(this);
 		this.currentAnimation = new Class456_Sub2(this);
 		this.anInt10347 = -1;
 		this.anInt10348 = -1;
 		this.aByte10352 = 0;
 		this.anInt10353 = 0;
-		this.anInt10357 = 0;
+		this.turningTicks = 0;
 		this.anInt10340 = 256;
 		this.aClass19_10359 = new Class19();
 		this.aClass19_10360 = new Class19();
@@ -815,7 +815,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.interfaceIdToLoad = -1;
 		this.regionBaseX = new int[i_2];
 		this.regionBaseY = new int[i_2];
-		this.aByteArray10365 = new byte[i_2];
+		this.walkTypes = new byte[i_2];
 		this.aClass528Array10372 = new MeshRasterizer[5];
 		this.aClass161Array10339 = new Class161[4];
 

@@ -513,8 +513,8 @@ public class Class8_Sub3 extends FontRenderer {
 		}
 	}
 
-	public static Class249[] method14339() {
-		return new Class249[] { Class249.MOVE_TYPE_0, Class249.MOVE_TYPE_1, Class249.MOVE_TYPE_2, Class249.MOVE_TYPE_DEFAULT };
+	public static MovementType[] method14339() {
+		return new MovementType[] { MovementType.TELEPORTING, MovementType.WALKING, MovementType.RUNNING, MovementType.STATIONARY };
 	}
 
 	static void method14341() {

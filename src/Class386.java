@@ -18,12 +18,12 @@ public class Class386 {
 		return arr_3;
 	}
 
-	public static Interface43 method6672(Interface43[] arr_0, int i_1, int i_2) {
-		Interface43[] arr_3 = arr_0;
-		for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
-			Interface43 interface43_5 = arr_3[i_4];
-			if (i_1 == interface43_5.method243()) {
-				return interface43_5;
+	public static Identifiable identify(Identifiable[] identifiables, int value) {
+		Identifiable[] identifiablesArray = identifiables;
+		for (int i_4 = 0; i_4 < identifiablesArray.length; i_4++) {
+			Identifiable identifiable = identifiablesArray[i_4];
+			if (value == identifiable.getValue()) {
+				return identifiable;
 			}
 		}
 		return null;

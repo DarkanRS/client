@@ -108,7 +108,7 @@ public final class Class459 {
 	static final void decodeUpdate(boolean bool_0) {
 		RsBitsBuffer rsbitsbuffer_2 = client.aClass184_7475.recievedBuffer;
 		while (rsbitsbuffer_2.readableBits(client.aClass184_7475.currentPacketSize) >= 15) {
-			int i_3 = rsbitsbuffer_2.readBits(15, (byte) -53);
+			int i_3 = rsbitsbuffer_2.readBits(15);
 			if (i_3 == 32767) {
 				break;
 			}
@@ -124,43 +124,43 @@ public final class Class459 {
 				bool_4 = true;
 			}
 			npc_6 = (NPC) class282_sub47_5.anObject8068;
-			client.anIntArray7212[++client.anInt7211 - 1] = i_3;
+			client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_3;
 			npc_6.anInt10353 = client.anInt7332;
 			if (npc_6.definitions != null && npc_6.definitions.method6886(-1639112398)) {
 				TextureDetails.method2876(npc_6);
 			}
-			int i_7 = rsbitsbuffer_2.readBits(1, (byte) -14);
+			int i_7 = rsbitsbuffer_2.readBits(1);
 			if (i_7 == 1) {
 				client.NPC_INDICES[++client.npcListSize - 1] = i_3;
 			}
 			int i_8;
 			if (bool_0) {
-				i_8 = rsbitsbuffer_2.readBits(8, (byte) 53);
+				i_8 = rsbitsbuffer_2.readBits(8);
 				if (i_8 > 127) {
 					i_8 -= 256;
 				}
 			} else {
-				i_8 = rsbitsbuffer_2.readBits(5, (byte) -4);
+				i_8 = rsbitsbuffer_2.readBits(5);
 				if (i_8 > 15) {
 					i_8 -= 32;
 				}
 			}
-			int i_9 = rsbitsbuffer_2.readBits(3, (byte) -25) + 4 << 11 & 0x3fff;
-			npc_6.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_2.readBits(15, (byte) 78), (byte) -40), -1917205540);
+			int i_9 = rsbitsbuffer_2.readBits(3) + 4 << 11 & 0x3fff;
+			npc_6.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_2.readBits(15), (byte) -40), -1917205540);
 			int i_10;
 			if (bool_0) {
-				i_10 = rsbitsbuffer_2.readBits(8, (byte) -6);
+				i_10 = rsbitsbuffer_2.readBits(8);
 				if (i_10 > 127) {
 					i_10 -= 256;
 				}
 			} else {
-				i_10 = rsbitsbuffer_2.readBits(5, (byte) 32);
+				i_10 = rsbitsbuffer_2.readBits(5);
 				if (i_10 > 15) {
 					i_10 -= 32;
 				}
 			}
-			int i_11 = rsbitsbuffer_2.readBits(1, (byte) 80);
-			int i_12 = rsbitsbuffer_2.readBits(2, (byte) 49);
+			int i_11 = rsbitsbuffer_2.readBits(1);
+			int i_12 = rsbitsbuffer_2.readBits(2);
 			npc_6.method15836(npc_6.definitions.anInt4858, (byte) -107);
 			npc_6.anInt10340 = npc_6.definitions.anInt4889 << 3;
 			if (bool_4) {

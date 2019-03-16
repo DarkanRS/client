@@ -32,10 +32,10 @@ public class Class96_Sub21 extends Class96 {
 		for (class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 64); class282_sub48_5 != null; class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1161440846)) {
 			b_6 = 1;
 			renderanimdefs_7 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs();
-			i_8 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597(-1141371259);
+			i_8 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597();
 			if (i_8 != -1 && !class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.aBool7891) {
-				if (i_8 != renderanimdefs_7.anInt2797 && i_8 != renderanimdefs_7.walkDir6 && i_8 != renderanimdefs_7.anInt2800 && i_8 != renderanimdefs_7.anInt2799) {
-					if (i_8 == renderanimdefs_7.anInt2801 || i_8 == renderanimdefs_7.anInt2828 || i_8 == renderanimdefs_7.anInt2812 || i_8 == renderanimdefs_7.anInt2803) {
+				if (i_8 != renderanimdefs_7.runningAnimation && i_8 != renderanimdefs_7.runDir3 && i_8 != renderanimdefs_7.runDir1 && i_8 != renderanimdefs_7.runDir2) {
+					if (i_8 == renderanimdefs_7.teleportingAnimation || i_8 == renderanimdefs_7.teleDir3 || i_8 == renderanimdefs_7.teleDir1 || i_8 == renderanimdefs_7.teleDir2) {
 						b_6 = 3;
 					}
 				} else {
@@ -97,10 +97,10 @@ public class Class96_Sub21 extends Class96 {
 		for (class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass465_8075.method7750(524790011); class282_sub48_5 != null; class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass465_8075.method7751((byte) 99)) {
 			b_6 = 1;
 			renderanimdefs_7 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs();
-			i_8 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.method7597(-527861768);
+			i_8 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.method7597();
 			if (i_8 != -1 && !class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.aBool7891) {
-				if (i_8 != renderanimdefs_7.anInt2797 && i_8 != renderanimdefs_7.walkDir6 && i_8 != renderanimdefs_7.anInt2800 && i_8 != renderanimdefs_7.anInt2799) {
-					if (i_8 == renderanimdefs_7.anInt2801 || i_8 == renderanimdefs_7.anInt2828 || i_8 == renderanimdefs_7.anInt2812 || i_8 == renderanimdefs_7.anInt2803) {
+				if (i_8 != renderanimdefs_7.runningAnimation && i_8 != renderanimdefs_7.runDir3 && i_8 != renderanimdefs_7.runDir1 && i_8 != renderanimdefs_7.runDir2) {
+					if (i_8 == renderanimdefs_7.teleportingAnimation || i_8 == renderanimdefs_7.teleDir3 || i_8 == renderanimdefs_7.teleDir1 || i_8 == renderanimdefs_7.teleDir2) {
 						b_6 = 3;
 					}
 				} else {

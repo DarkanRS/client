@@ -1,13 +1,13 @@
-public class Class249 implements Interface43 {
+public class MovementType implements Identifiable {
 
-	public static Class249 MOVE_TYPE_DEFAULT = new Class249((byte) -1);
-	public static Class249 MOVE_TYPE_0 = new Class249((byte) 0);
-	public static Class249 MOVE_TYPE_1 = new Class249((byte) 1);
-	public static Class249 MOVE_TYPE_2 = new Class249((byte) 2);
+	public static MovementType STATIONARY = new MovementType((byte) -1);
+	public static MovementType TELEPORTING = new MovementType((byte) 0);
+	public static MovementType WALKING = new MovementType((byte) 1);
+	public static MovementType RUNNING = new MovementType((byte) 2);
 
 	public byte id;
 
-	public int method243() {
+	public int getValue() {
 		return this.id;
 	}
 
@@ -23,7 +23,7 @@ public class Class249 implements Interface43 {
 		return this.id;
 	}
 
-	Class249(byte b_1) {
+	MovementType(byte b_1) {
 		this.id = b_1;
 	}
 

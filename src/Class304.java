@@ -116,7 +116,7 @@ public class Class304 implements Interface27 {
 	public void method192(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',');
+				String[] arr_2 = MovingAnimation.method12681(client.aString7157, ',');
 				if (arr_2.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -258,7 +258,7 @@ public class Class304 implements Interface27 {
 	public void x(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',');
+				String[] arr_2 = MovingAnimation.method12681(client.aString7157, ',');
 				if (arr_2.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -396,7 +396,7 @@ public class Class304 implements Interface27 {
 	public void method187(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_3 = Class456_Sub3.method12681(client.aString7157, ',');
+				String[] arr_3 = MovingAnimation.method12681(client.aString7157, ',');
 				if (arr_3.length != 23) {
 					this.aBool3572 = true;
 				}
@@ -534,7 +534,7 @@ public class Class304 implements Interface27 {
 	public void method194(boolean bool_1) {
 		if (!this.aBool3572 && this.aFont3573 == null) {
 			try {
-				String[] arr_2 = Class456_Sub3.method12681(client.aString7157, ',');
+				String[] arr_2 = MovingAnimation.method12681(client.aString7157, ',');
 				if (arr_2.length != 23) {
 					this.aBool3572 = true;
 				}

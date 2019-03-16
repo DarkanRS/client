@@ -278,9 +278,9 @@ public class MapRegion {
 		for (i_9 = 0; i_9 < 4; i_9++) {
 			for (i_10 = 0; i_10 < this.sizeX >> 3; i_10++) {
 				for (i_11 = 0; i_11 < this.sizeY >> 3; i_11++) {
-					i_12 = rsbitsbuffer_1.readBits(1, (byte) 74);
+					i_12 = rsbitsbuffer_1.readBits(1);
 					if (i_12 == 1) {
-						this.anIntArrayArrayArray3205[i_9][i_10][i_11] = rsbitsbuffer_1.readBits(26, (byte) 1);
+						this.anIntArrayArrayArray3205[i_9][i_10][i_11] = rsbitsbuffer_1.readBits(26);
 					} else {
 						this.anIntArrayArrayArray3205[i_9][i_10][i_11] = -1;
 					}
@@ -460,7 +460,7 @@ public class MapRegion {
 	void method4457(int i_1) {
 		if (this.aClass256_3163 != Class256.aClass256_3153 && this.aClass256_3164 != Class256.aClass256_3153) {
 			if (this.aClass256_3163 == Class256.aClass256_3155 || this.aClass256_3163 == Class256.aClass256_3157 || this.aClass256_3164 != this.aClass256_3163 && (this.aClass256_3163 == Class256.aClass256_3158 || this.aClass256_3164 == Class256.aClass256_3158)) {
-				client.anInt7211 = 0;
+				client.NPC_UPDATE_INDEX = 0;
 				client.anInt7210 = 0;
 				client.NPCS.method7749(-1318045853);
 			}
@@ -522,7 +522,7 @@ public class MapRegion {
 			}
 		} else {
 			boolean bool_21 = false;
-			client.anInt7211 = 0;
+			client.NPC_UPDATE_INDEX = 0;
 			i_6 = this.sizeX * 512 - 512;
 			i_16 = this.sizeY * 512 - 512;
 			for (i_8 = 0; i_8 < client.anInt7210; i_8++) {
@@ -543,7 +543,7 @@ public class MapRegion {
 							}
 						}
 						if (bool_12) {
-							client.anIntArray7212[++client.anInt7211 - 1] = npc_18.anInt10314;
+							client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = npc_18.anInt10314;
 						} else {
 							npc_18.method16166((NPCDefinitions) null, -163238630);
 							class282_sub47_9.remove();
@@ -1143,7 +1143,7 @@ public class MapRegion {
 				}
 				RsByteBuffer rsbytebuffer_18 = new RsByteBuffer(this.npcSpawnBuffer[i_3]);
 				int i_6 = 0;
-				while (rsbytebuffer_18.index < this.npcSpawnBuffer[i_3].length && i_6 < 511 && client.anInt7211 < 1023) {
+				while (rsbytebuffer_18.index < this.npcSpawnBuffer[i_3].length && i_6 < 511 && client.NPC_UPDATE_INDEX < 1023) {
 					int i_7 = i_4 | i_6++ << 6;
 					int i_8 = rsbytebuffer_18.readUnsignedShort();
 					int i_9 = i_8 >> 14;
@@ -1159,12 +1159,12 @@ public class MapRegion {
 						Class282_Sub47 class282_sub47_17 = new Class282_Sub47(npc_16);
 						client.NPCS.put(class282_sub47_17, (long) i_7);
 						client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_17;
-						client.anIntArray7212[++client.anInt7211 - 1] = i_7;
+						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;
 						npc_16.anInt10353 = client.cycles;
 						npc_16.method16166(npcdefinitions_14, 2038282269);
 						npc_16.method15836(npc_16.definitions.anInt4858, (byte) -20);
 						npc_16.anInt10340 = npc_16.definitions.anInt4889 << 3;
-						npc_16.method15791(npc_16.definitions.aClass252_4910.method4317().method243() << 11 & 0x3fff, true, (byte) -122);
+						npc_16.method15791(npc_16.definitions.aClass252_4910.method4317().getValue() << 11 & 0x3fff, true, (byte) -122);
 						npc_16.method16159(i_9, i_12, i_13, true, npc_16.getSize(), -1215667141);
 					}
 				}

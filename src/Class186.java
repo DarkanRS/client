@@ -99,7 +99,7 @@ public class Class186 {
 
 		for (int i_1 = 0; i_1 < 2048; i_1++) {
 			Class197.aClass282_Sub35Array2428[i_1] = null;
-			Class197.playerMovementTypes[i_1] = Class249.MOVE_TYPE_1.id;
+			Class197.playerMovementTypes[i_1] = MovementType.WALKING.id;
 			Class197.aClass4Array2430[i_1] = null;
 		}
 

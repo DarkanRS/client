@@ -36,7 +36,7 @@ public class Class207 {
 		} else if (i_2 == 3) {
 			this.anInt2654 = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 4) {
-			this.aClass204_2656 = (Class204) Class386.method6672(Class530.method11353(), rsbytebuffer_1.readUnsignedByte(), -1538541275);
+			this.aClass204_2656 = (Class204) Class386.identify(Class530.method11353(), rsbytebuffer_1.readUnsignedByte());
 		} else if (i_2 == 5) {
 			this.anInt2657 = rsbytebuffer_1.readBigSmart();
 		}

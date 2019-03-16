@@ -36,7 +36,7 @@ public class Class197 {
 		int i_2 = client.anInt7315;
 		Player player_3 = VertexNormal.myPlayer = client.players[i_2] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2015513411));
 		player_3.anInt10314 = i_2;
-		int i_4 = rsbitsbuffer_0.readBits(30, (byte) -49);
+		int i_4 = rsbitsbuffer_0.readBits(30);
 		byte b_5 = (byte) (i_4 >> 28);
 		int i_6 = i_4 >> 14 & 0x3fff;
 		int i_7 = i_4 & 0x3fff;
@@ -57,7 +57,7 @@ public class Class197 {
 		anInt2431 = 0;
 		for (int i_9 = 1; i_9 < 2048; i_9++) {
 			if (i_2 != i_9) {
-				int i_10 = rsbitsbuffer_0.readBits(18, (byte) -45);
+				int i_10 = rsbitsbuffer_0.readBits(18);
 				int i_11 = i_10 >> 16;
 				int i_12 = i_10 >> 8 & 0xff;
 				int i_13 = i_10 & 0xff;

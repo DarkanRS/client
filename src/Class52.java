@@ -204,7 +204,7 @@ public abstract class Class52 implements Interface2 {
 			Class448.aClass217_Sub1Array5426[i_7] = Class448.aClass217_Sub1Array5426[i_1];
 			Class448.aClass217_Sub1Array5426[i_1] = class217_sub1_9;
 			for (int i_10 = i_0; i_10 < i_1; i_10++) {
-				if (Class252.method4325(Class448.aClass217_Sub1Array5426[i_10], class217_sub1_9, i_2, bool_3, i_4, bool_5) <= 0) {
+				if (NPCDirection.method4325(Class448.aClass217_Sub1Array5426[i_10], class217_sub1_9, i_2, bool_3, i_4, bool_5) <= 0) {
 					Class217_Sub1 class217_sub1_11 = Class448.aClass217_Sub1Array5426[i_10];
 					Class448.aClass217_Sub1Array5426[i_10] = Class448.aClass217_Sub1Array5426[i_8];
 					Class448.aClass217_Sub1Array5426[i_8++] = class217_sub1_11;

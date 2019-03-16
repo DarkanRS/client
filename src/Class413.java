@@ -1,4 +1,4 @@
-public class Class413 implements Interface43 {
+public class Class413 implements Identifiable {
 
 	static Class413 aClass413_4971 = new Class413(1, 0, "", "");
 
@@ -26,7 +26,7 @@ public class Class413 implements Interface43 {
 		aClass413_4966 = new Class413("", "", new Class413[] { aClass413_4971, aClass413_4965, aClass413_4968, aClass413_4970, aClass413_4967 });
 	}
 
-	public int method243() {
+	public int getValue() {
 		return this.anInt4973;
 	}
 

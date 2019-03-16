@@ -124,6 +124,6 @@ public class Class77 {
 	}
 
 	public static void method1369(AnimationIndexLoader animationindexloader_0) {
-		NamedFileReference.aClass523_411 = animationindexloader_0;
+		NamedFileReference.ANIMATION_INDEX_LOADER = animationindexloader_0;
 	}
 }

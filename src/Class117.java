@@ -262,7 +262,7 @@ public class Class117 {
 	public static IComponentDefinitions getInterfaceComponent(int hash) {
 		int interfaceId = hash >> 16;
 		if (Class468_Sub8.INTERFACES[interfaceId] == null || Class468_Sub8.INTERFACES[interfaceId].getComponent(hash) == null) {
-			boolean bool_3 = Class456_Sub3.isInterfaceLoaded(interfaceId, (int[]) null, -1161112150);
+			boolean bool_3 = MovingAnimation.isInterfaceLoaded(interfaceId, (int[]) null, -1161112150);
 			if (!bool_3) {
 				return null;
 			}

@@ -838,7 +838,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	}
 
 	static final void decodeMasks(RsBitsBuffer stream, int i_1, Player player, int flags) {
-		byte tempMoveType = Class249.MOVE_TYPE_DEFAULT.id;
+		byte tempMoveType = MovementType.STATIONARY.id;
 		
 		if ((flags & 0x20000) != 0) {
 			player.aByte10371 = stream.readByte();
@@ -1123,7 +1123,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				player.method16130(player.anInt10569, player.anInt10570, -166177247);
 			} else {
 				byte b_20;
-				if (tempMoveType != Class249.MOVE_TYPE_DEFAULT.id) {
+				if (tempMoveType != MovementType.STATIONARY.id) {
 					b_20 = tempMoveType;
 				} else {
 					b_20 = Class197.playerMovementTypes[i_1];

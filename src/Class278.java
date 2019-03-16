@@ -297,7 +297,7 @@ public abstract class Class278 {
 	static Class282_Sub20 method4963(RsByteBuffer rsbytebuffer_0) {
 		rsbytebuffer_0.readUnsignedByte();
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
-		Class282_Sub20 class282_sub20_3 = Class252.method4328(i_2);
+		Class282_Sub20 class282_sub20_3 = NPCDirection.method4328(i_2);
 		class282_sub20_3.anInt7668 = rsbytebuffer_0.readUnsignedByte();
 		int i_4 = rsbytebuffer_0.readUnsignedByte();
 		for (int i_5 = 0; i_5 < i_4; i_5++) {

@@ -9,7 +9,7 @@ public class QuickchatDefinitions extends CacheableNode {
 
 	void decode(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.messages = Class456_Sub3.method12681(rsbytebuffer_1.readString(), '<');
+			this.messages = MovingAnimation.method12681(rsbytebuffer_1.readString(), '<');
 		} else {
 			int i_4;
 			int i_5;

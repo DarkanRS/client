@@ -43,10 +43,10 @@ public class Class150 {
 	}
 
 	static final void method2581(Animable animable_0, int i_1) {
-		Class456_Sub3 class456_sub3_2 = animable_0.aClass456_Sub3_10337;
+		MovingAnimation class456_sub3_2 = animable_0.aClass456_Sub3_10337;
 		if (class456_sub3_2.hasDefs() && class456_sub3_2.method7627(1, -1365163818) && class456_sub3_2.method7580(952228354)) {
 			if (class456_sub3_2.aBool7891) {
-				class456_sub3_2.method7570(animable_0.getRenderAnimDefs().method3809(386342083), -321228583);
+				class456_sub3_2.animate(animable_0.getRenderAnimDefs().getStandAnimation());
 				class456_sub3_2.aBool7891 = class456_sub3_2.hasDefs();
 			}
 			class456_sub3_2.method7582((byte) -126);
@@ -111,7 +111,7 @@ public class Class150 {
 	}
 
 	public static void method2582(int i_0, int[] ints_1, int i_2) {
-		if (i_0 != -1 && Class456_Sub3.isInterfaceLoaded(i_0, ints_1, -1943227865)) {
+		if (i_0 != -1 && MovingAnimation.isInterfaceLoaded(i_0, ints_1, -1943227865)) {
 			IComponentDefinitions[] arr_3 = Class468_Sub8.INTERFACES[i_0].components;
 			Connection.runIComponentScripts(arr_3);
 		}

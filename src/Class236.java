@@ -49,9 +49,9 @@ public class Class236 {
 
 	static void method3985(Animable animable_0, int i_1, byte b_2) {
 		if (animable_0.currentAnimations != null) {
-			Class249 class249_3 = (Class249) Class386.method6672(Class8_Sub3.method14339(), i_1, -1950936431);
+			MovementType class249_3 = (MovementType) Class386.identify(Class8_Sub3.method14339(), i_1);
 			int i_4 = animable_0.currentAnimations[class249_3.method4268()];
-			if (i_4 != animable_0.currentAnimation.method7597(-886146530)) {
+			if (i_4 != animable_0.currentAnimation.method7597()) {
 				animable_0.currentAnimation.method7615(i_4, animable_0.currentAnimation.getSpeed());
 				animable_0.anInt10367 = animable_0.anInt10355;
 			}

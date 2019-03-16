@@ -245,14 +245,14 @@ public final class Class251 {
 				}
 				String[] arr_24;
 				if (string_0.startsWith("directlogin")) {
-					arr_24 = Class456_Sub3.method12681(string_0.substring(12), ' ');
+					arr_24 = MovingAnimation.method12681(string_0.substring(12), ' ');
 					if (arr_24.length == 2) {
 						Class2.method257(arr_24[0], arr_24[1]);
 					}
 					return;
 				}
 				if (string_0.startsWith("snlogin ")) {
-					arr_24 = Class456_Sub3.method12681(string_0.substring(8), ' ');
+					arr_24 = MovingAnimation.method12681(string_0.substring(8), ' ');
 					i_13 = Integer.parseInt(arr_24[0]);
 					Class282_Sub1.method11614(i_13);
 					return;
@@ -298,7 +298,7 @@ public final class Class251 {
 						Class209.printConsoleMessage("Failed to read file", -1589533875);
 						return;
 					}
-					String[] arr_12 = Class456_Sub3.method12681(Class122.method2110(Class282_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
+					String[] arr_12 = MovingAnimation.method12681(Class122.method2110(Class282_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
 					Class341.method6074(arr_12, 1579654554);
 				}
 				if (client.gameState == 13) {

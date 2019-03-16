@@ -533,8 +533,8 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 											i_21 = (int) vector3_36.x - (player_58.getSize() - 1 << 8);
 											i_22 = (int) vector3_36.z - (player_58.getSize() - 1 << 8);
 
-											for (i_51 = 0; i_51 < client.anInt7211; i_51++) {
-												Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_51]);
+											for (i_51 = 0; i_51 < client.NPC_UPDATE_INDEX; i_51++) {
+												Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_51]);
 												if (class282_sub47_24 != null) {
 													NPC npc_40 = (NPC) class282_sub47_24.anObject8068;
 													if (npc_40.anInt10375 != client.cycles && npc_40.aBool10318) {
@@ -587,8 +587,8 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 										int i_50 = (int) vector3_56.x - (npc_59.definitions.anInt4858 - 1 << 8);
 										i_21 = (int) vector3_56.z - (npc_59.definitions.anInt4858 - 1 << 8);
 
-										for (i_22 = 0; i_22 < client.anInt7211; i_22++) {
-											Class282_Sub47 class282_sub47_37 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_22]);
+										for (i_22 = 0; i_22 < client.NPC_UPDATE_INDEX; i_22++) {
+											Class282_Sub47 class282_sub47_37 = (Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_22]);
 											if (class282_sub47_37 != null) {
 												NPC npc_54 = (NPC) class282_sub47_37.anObject8068;
 												if (npc_54.anInt10375 != client.cycles && npc_59 != npc_54 && npc_54.aBool10318) {

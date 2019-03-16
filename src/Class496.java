@@ -1,4 +1,4 @@
-public class Class496 implements Interface43 {
+public class Class496 implements Identifiable {
 
 	static Class510 aClass510_5816;
 
@@ -41,7 +41,7 @@ public class Class496 implements Interface43 {
 		return -2013930027 * this.anInt5814 * -887327875;
 	}
 
-	public int method243() {
+	public int getValue() {
 		return this.anInt5814;
 	}
 

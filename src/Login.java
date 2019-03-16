@@ -127,7 +127,7 @@ public class Login {
 						RsByteBuffer rsbytebuffer_4 = Class94.method1587((byte) -40);
 						rsbytebuffer_4.writeByte(Class9.anInt76);
 						rsbytebuffer_4.writeShort((int) (Math.random() * 9.9999999E7D));
-						rsbytebuffer_4.writeByte(Class223.CURRENT_LANGUAGE.method243());
+						rsbytebuffer_4.writeByte(Class223.CURRENT_LANGUAGE.getValue());
 						rsbytebuffer_4.writeInt(client.anInt7149);
 						for (i_5 = 0; i_5 < 6; i_5++) {
 							rsbytebuffer_4.writeInt((int) (Math.random() * 9.9999999E7D));
@@ -301,7 +301,7 @@ public class Login {
 							}
 						}
 						rsbitsbuffer_22.writeByte(client.CURRENT_GAME.anInt5746);
-						rsbitsbuffer_22.writeByte(Class223.CURRENT_LANGUAGE.method243());
+						rsbitsbuffer_22.writeByte(Class223.CURRENT_LANGUAGE.getValue());
 						Class31.method809(rsbitsbuffer_22, -378154884);
 						rsbitsbuffer_22.writeString(client.aString7281);
 						rsbytebuffer_7 = Class393.preferences.method13499();

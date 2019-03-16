@@ -50,8 +50,8 @@ public class Class469 implements Iterator {
 	}
 
 	static void method7805(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6) {
-		for (int i_8 = 0; i_8 < client.anInt7211; i_8++) {
-			Class282_Sub47 class282_sub47_9 = (Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_8]);
+		for (int i_8 = 0; i_8 < client.NPC_UPDATE_INDEX; i_8++) {
+			Class282_Sub47 class282_sub47_9 = (Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_8]);
 			if (class282_sub47_9 != null) {
 				NPC npc_10 = (NPC) class282_sub47_9.anObject8068;
 				if (npc_10.hasDefinition(-438666523) && npc_10.plane == VertexNormal.myPlayer.plane) {

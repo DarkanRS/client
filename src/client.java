@@ -80,8 +80,8 @@ public final class client extends Engine {
 	public static IterableNodeMap NPCS = new IterableNodeMap(64);
 	public static Class282_Sub47[] aClass282_Sub47Array7209 = new Class282_Sub47[1024];
 	public static int anInt7210 = 0;
-	public static int anInt7211 = 0;
-	public static int[] anIntArray7212 = new int[1024];
+	public static int NPC_UPDATE_INDEX = 0;
+	public static int[] NPC_UPDATE_INDICES = new int[1024];
 	static int npcListSize = 0;
 	static int[] NPC_INDICES = new int[261];
 	static int anInt7332 = 0;
@@ -114,7 +114,7 @@ public final class client extends Engine {
 	static int[] anIntArray7425;
 	static int[] walkStepsX;
 	static int[] walkStepsY;
-	static int[] anIntArray7380;
+	static int[] NPC_TURN_DIRECTIONS;
 	static int anInt7248;
 	static int anInt7249;
 	static int anInt7250;
@@ -350,7 +350,7 @@ public final class client extends Engine {
 		anIntArray7425 = new int[4096];
 		walkStepsX = new int[50];
 		walkStepsY = new int[50];
-		anIntArray7380 = new int[] { -1, 8192, 0, -1, 12288, 10240, 14336, -1, 4096, 6144, 2048 };
+		NPC_TURN_DIRECTIONS = new int[] { -1, 8192, 0, -1, 12288, 10240, 14336, -1, 4096, 6144, 2048 };
 		anInt7248 = 0;
 		anInt7249 = 2;
 		anInt7250 = 0;
@@ -675,7 +675,7 @@ public final class client extends Engine {
 						anInt7149 = Integer.parseInt(string_7);
 						break;
 					case 24:
-						Class90.aClass496_952 = (Class496) Class386.method6672(Class496.method8299(), Integer.parseInt(string_7), -1573621925);
+						Class90.aClass496_952 = (Class496) Class386.identify(Class496.method8299(), Integer.parseInt(string_7));
 						if (Class496.aClass496_5810 == Class90.aClass496_952) {
 							Class90.aClass496_952 = Class496.aClass496_5807;
 						} else if (!Class496.method8308(Class90.aClass496_952, 1201911871) && Class496.aClass496_5813 != Class90.aClass496_952) {
@@ -911,7 +911,7 @@ public final class client extends Engine {
 		if (anInt7341 == 4) {
 			i_2 = Class82.aClass75Array804.length;
 		} else {
-			i_2 = aBool7241 ? i_0 : i_0 + anInt7211;
+			i_2 = aBool7241 ? i_0 : i_0 + NPC_UPDATE_INDEX;
 		}
 
 		for (int i_3 = 0; i_3 < i_2; i_3++) {
@@ -927,7 +927,7 @@ public final class client extends Engine {
 				if (i_3 < i_0) {
 					obj_4 = players[ints_1[i_3]];
 				} else {
-					obj_4 = (Animable) ((Class282_Sub47) NPCS.get((long) anIntArray7212[i_3 - i_0])).anObject8068;
+					obj_4 = (Animable) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_3 - i_0])).anObject8068;
 				}
 
 				if (((Animable) obj_4).drawPriority < 0) {
@@ -1343,8 +1343,8 @@ public final class client extends Engine {
 			}
 		}
 
-		for (i_4 = 0; i_4 < anInt7211; i_4++) {
-			NPC npc_9 = (NPC) ((Class282_Sub47) NPCS.get((long) anIntArray7212[i_4])).anObject8068;
+		for (i_4 = 0; i_4 < NPC_UPDATE_INDEX; i_4++) {
+			NPC npc_9 = (NPC) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_4])).anObject8068;
 			if (npc_9.hasDefinition(1233643385) && npc_9.definitions.method6885(Class158_Sub1.PLAYER_VAR_PROVIDER)) {
 				npc_9.method14697((byte) 71);
 				if (npc_9.aShort9458 >= 0 && npc_9.aShort9456 >= 0 && npc_9.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX(1367636803) && npc_9.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY(-831632780)) {
@@ -1433,7 +1433,7 @@ public final class client extends Engine {
 		if (anInt7341 == 4) {
 			i_5 = Class82.aClass75Array804.length;
 		} else {
-			i_5 = i_1 + anInt7211;
+			i_5 = i_1 + NPC_UPDATE_INDEX;
 		}
 
 		for (int i_6 = 0; i_6 < i_5; i_6++) {
@@ -1449,7 +1449,7 @@ public final class client extends Engine {
 				if (i_6 < i_1) {
 					obj_7 = players[ints_2[i_6]];
 				} else {
-					obj_7 = (Animable) ((Class282_Sub47) NPCS.get((long) anIntArray7212[i_6 - i_1])).anObject8068;
+					obj_7 = (Animable) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 				}
 
 				if (i_0 != ((Animable) obj_7).plane || ((Animable) obj_7).drawPriority < 0) {
@@ -1509,7 +1509,7 @@ public final class client extends Engine {
 		if (anInt7341 == 4) {
 			i_5 = Class82.aClass75Array804.length;
 		} else {
-			i_5 = aBool7241 ? i_1 : i_1 + anInt7211;
+			i_5 = aBool7241 ? i_1 : i_1 + NPC_UPDATE_INDEX;
 		}
 
 		for (int i_6 = 0; i_6 < i_5; i_6++) {
@@ -1525,7 +1525,7 @@ public final class client extends Engine {
 				if (i_6 < i_1) {
 					obj_7 = players[ints_2[i_6]];
 				} else {
-					obj_7 = (Animable) ((Class282_Sub47) NPCS.get((long) anIntArray7212[i_6 - i_1])).anObject8068;
+					obj_7 = (Animable) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 				}
 
 				if (i_0 != ((Animable) obj_7).plane) {
@@ -1752,8 +1752,8 @@ public final class client extends Engine {
 	static final void method11750() {
 		anInt7304 = 0;
 
-		for (int i_0 = 0; i_0 < anInt7211; i_0++) {
-			NPC npc_1 = (NPC) ((Class282_Sub47) NPCS.get((long) anIntArray7212[i_0])).anObject8068;
+		for (int i_0 = 0; i_0 < NPC_UPDATE_INDEX; i_0++) {
+			NPC npc_1 = (NPC) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_0])).anObject8068;
 			if (npc_1.aBool10318 && npc_1.method15899(1588256325) != -1) {
 				int i_2 = (npc_1.getSize() - 1) * 256 + 252;
 				Vector3 vector3_3 = npc_1.method11166().aClass385_3595;
@@ -2108,8 +2108,8 @@ public final class client extends Engine {
 										}
 									}
 
-									for (i_27 = 0; i_27 < anInt7211; i_27++) {
-										i_52 = anIntArray7212[i_27];
+									for (i_27 = 0; i_27 < NPC_UPDATE_INDEX; i_27++) {
+										i_52 = NPC_UPDATE_INDICES[i_27];
 										Class282_Sub47 class282_sub47_56 = (Class282_Sub47) NPCS.get((long) i_52);
 										if (class282_sub47_56 != null) {
 											Class1.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.anInt4856, (Animable) class282_sub47_56.anObject8068, i_52, 1492205273);
@@ -2711,7 +2711,7 @@ public final class client extends Engine {
 						anInt7149 = Integer.parseInt(string_7) * 1564360473 * -1543197399;
 						break;
 					case 24:
-						Class90.aClass496_952 = (Class496) Class386.method6672(Class496.method8299(), Integer.parseInt(string_7), -1375315920);
+						Class90.aClass496_952 = (Class496) Class386.identify(Class496.method8299(), Integer.parseInt(string_7));
 						if (Class496.aClass496_5810 == Class90.aClass496_952) {
 							Class90.aClass496_952 = Class496.aClass496_5807;
 						} else if (!Class496.method8308(Class90.aClass496_952, 1812698195) && Class496.aClass496_5813 != Class90.aClass496_952) {
@@ -3020,7 +3020,7 @@ public final class client extends Engine {
 								for (int i_11 = 0; i_11 < i_10; i_11++) {
 									npc_3.regionBaseX[i_11] = walkStepsX[i_10 - i_11 - 1];
 									npc_3.regionBaseY[i_11] = walkStepsY[i_10 - i_11 - 1];
-									npc_3.aByteArray10365[i_11] = Class249.MOVE_TYPE_1.id;
+									npc_3.walkTypes[i_11] = MovementType.WALKING.id;
 								}
 
 								npc_3.anInt10355 = i_10;
@@ -3031,7 +3031,7 @@ public final class client extends Engine {
 					SystemInfo.method13466(npc_3, true);
 					i_6 = Class427.method7188(npc_3);
 					WallDecoration.method16087(npc_3);
-					Class302.method5361(npc_3, IdentikitDefinition.anInt430, Class8_Sub1.anInt8515, i_6, 852225468);
+					Class302.handleMovementAnimations(npc_3, IdentikitDefinition.anInt430, Class8_Sub1.anInt8515, i_6, 852225468);
 					Class236.method3985(npc_3, IdentikitDefinition.anInt430, (byte) -74);
 					Class150.method2581(npc_3, 818834728);
 					Quaternion quaternion_12 = Quaternion.create();
@@ -3280,7 +3280,7 @@ public final class client extends Engine {
 						anInt7149 = Integer.parseInt(string_7) * 1564360473 * -1543197399;
 						break;
 					case 24:
-						Class90.aClass496_952 = (Class496) Class386.method6672(Class496.method8299(), Integer.parseInt(string_7), -1989115689);
+						Class90.aClass496_952 = (Class496) Class386.identify(Class496.method8299(), Integer.parseInt(string_7));
 						if (Class496.aClass496_5810 == Class90.aClass496_952) {
 							Class90.aClass496_952 = Class496.aClass496_5807;
 						} else if (!Class496.method8308(Class90.aClass496_952, 1676029063) && Class496.aClass496_5813 != Class90.aClass496_952) {

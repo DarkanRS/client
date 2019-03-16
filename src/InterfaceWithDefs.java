@@ -39,7 +39,7 @@ public class InterfaceWithDefs {
 	}
 
 	static final void method8777(int i_0, byte b_1) {
-		if (Class456_Sub3.isInterfaceLoaded(i_0, (int[]) null, -1514339264)) {
+		if (MovingAnimation.isInterfaceLoaded(i_0, (int[]) null, -1514339264)) {
 			Class464.method7743(Class468_Sub8.INTERFACES[i_0].components, -1);
 		}
 

@@ -1,34 +1,23 @@
 public class Animation {
 
 	AnimationDefinitions defs;
-
 	boolean aBool5462 = false;
-
 	boolean aBool5463 = false;
-
 	int speed;
-
 	int anInt5459;
-
 	int anInt5460;
-
 	int anInt5466;
-
 	int anInt5457;
-
 	int anInt5461 = 0;
-
 	boolean aBool5456 = false;
-
 	Class462 aClass462_5464;
-
 	Class462 aClass462_5467;
 
 	final boolean method7562(int i_1) {
 		if (this.defs != null) {
-			boolean bool_2 = this.aClass462_5464.method7707(NamedFileReference.aClass523_411, this.defs, this.anInt5460, this.anInt5466, this.defs.frames, -514647052);
+			boolean bool_2 = this.aClass462_5464.method7707(NamedFileReference.ANIMATION_INDEX_LOADER, this.defs, this.anInt5460, this.anInt5466, this.defs.frames, -514647052);
 			if (bool_2 && this.aBool5463 && this.defs.anIntArray5911 != null) {
-				this.aClass462_5467.method7707(NamedFileReference.aClass523_411, this.defs, this.anInt5460, this.anInt5466, this.defs.anIntArray5911, -1635915089);
+				this.aClass462_5467.method7707(NamedFileReference.ANIMATION_INDEX_LOADER, this.defs, this.anInt5460, this.anInt5466, this.defs.anIntArray5911, -1635915089);
 			}
 			return bool_2;
 		} else {
@@ -64,25 +53,25 @@ public class Animation {
 		this.method7571(-1, 0, 0, false, -731012703);
 	}
 
-	public final void method7570(int i_1, int i_4) {
-		this.method7572(i_1, 0, 0, false, true, (byte) 104);
+	public final void animate(int animationId) {
+		this.animate(animationId, 0, 0, false, true, (byte) 104);
 	}
 
 	public final void method7571(int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
-		this.method7572(i_1, i_2, i_3, bool_4, false, (byte) 62);
+		this.animate(i_1, i_2, i_3, bool_4, false, (byte) 62);
 	}
 
-	final void method7572(int i_1, int i_2, int i_3, boolean bool_4, boolean bool_5, byte b_6) {
-		if (i_1 != this.method7597(-1779648283)) {
-			if (i_1 == -1) {
+	final void animate(int animationId, int i_2, int i_3, boolean bool_4, boolean bool_5, byte b_6) {
+		if (animationId != this.method7597()) {
+			if (animationId == -1) {
 				this.defs = null;
 			} else {
-				if (this.defs != null && this.defs.anInt5909 == i_1) {
+				if (this.defs != null && this.defs.anInt5909 == animationId) {
 					if (this.defs.replayMode == 0) {
 						return;
 					}
 				} else {
-					this.defs = NamedFileReference.aClass523_411.getAnimDefs(i_1, (byte) 11);
+					this.defs = NamedFileReference.ANIMATION_INDEX_LOADER.getAnimDefs(animationId, (byte) 11);
 				}
 				this.anInt5459 = 0;
 				this.speed = i_2;
@@ -186,7 +175,7 @@ public class Animation {
 		}
 	}
 
-	public final int method7597(int i_1) {
+	public final int method7597() {
 		return this.defs != null ? this.defs.anInt5909 : -1;
 	}
 

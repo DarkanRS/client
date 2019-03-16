@@ -67,13 +67,13 @@ public class Class540 {
 		if (client.aClass184_7475.recievedBuffer.index != client.aClass184_7475.currentPacketSize) {
 			throw new RuntimeException(client.aClass184_7475.recievedBuffer.index + " " + client.aClass184_7475.currentPacketSize);
 		} else {
-			for (i_3 = 0; i_3 < client.anInt7211; i_3++) {
-				if (client.NPCS.get((long) client.anIntArray7212[i_3]) == null) {
-					throw new RuntimeException(i_3 + " " + client.anInt7211);
+			for (i_3 = 0; i_3 < client.NPC_UPDATE_INDEX; i_3++) {
+				if (client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_3]) == null) {
+					throw new RuntimeException(i_3 + " " + client.NPC_UPDATE_INDEX);
 				}
 			}
-			if (client.anInt7210 - client.anInt7211 != 0) {
-				throw new RuntimeException("" + (client.anInt7210 - client.anInt7211));
+			if (client.anInt7210 - client.NPC_UPDATE_INDEX != 0) {
+				throw new RuntimeException("" + (client.anInt7210 - client.NPC_UPDATE_INDEX));
 			} else {
 				for (i_3 = 0; i_3 < client.anInt7210; i_3++) {
 					if (((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).anInt10353 != client.anInt7332) {

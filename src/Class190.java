@@ -133,7 +133,7 @@ public class Class190 {
 		}
 
 		VertexNormal.myPlayer = null;
-		client.anInt7211 = 0;
+		client.NPC_UPDATE_INDEX = 0;
 		client.anInt7210 = 0;
 		client.NPCS.method7749(1966305284);
 		client.aClass482_7333.method8118(1024989967);

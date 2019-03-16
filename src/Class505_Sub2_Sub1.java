@@ -72,7 +72,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			this.aString10200 = OpenGL.glGetString(7937).toLowerCase();
 			if (this.aString10185.indexOf("microsoft") == -1 && this.aString10185.indexOf("brian paul") == -1 && this.aString10185.indexOf("mesa") == -1) {
 				String string_9 = OpenGL.glGetString(7938);
-				String[] arr_10 = Class456_Sub3.method12681(string_9.replace('.', ' '), ' ');
+				String[] arr_10 = MovingAnimation.method12681(string_9.replace('.', ' '), ' ');
 				if (arr_10.length >= 2) {
 					int i_11;
 					try {
@@ -122,7 +122,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 								i_11 = 0;
 								boolean bool_23 = false;
 								boolean bool_13 = false;
-								String[] arr_14 = Class456_Sub3.method12681(this.aString10200.replace('/', ' '), ' ');
+								String[] arr_14 = MovingAnimation.method12681(this.aString10200.replace('/', ' '), ' ');
 
 								for (int i_15 = 0; i_15 < arr_14.length; i_15++) {
 									String string_16 = arr_14[i_15];

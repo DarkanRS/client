@@ -1,6 +1,6 @@
 import java.util.Locale;
 
-public class Language implements Interface43 {
+public class Language implements Identifiable {
 
 	public static Language aClass495_5795;
 
@@ -75,7 +75,7 @@ public class Language implements Interface43 {
 		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	public int method243() {
+	public int getValue() {
 		return this.anInt5804;
 	}
 

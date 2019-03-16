@@ -412,7 +412,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 							int i_7 = 0;
 							boolean bool_8 = false;
 							boolean bool_9 = false;
-							String[] arr_10 = Class456_Sub3.method12681(this.aString8464.replace('/', ' '), ' ');
+							String[] arr_10 = MovingAnimation.method12681(this.aString8464.replace('/', ' '), ' ');
 
 							for (int i_11 = 0; i_11 < arr_10.length; i_11++) {
 								String string_12 = arr_10[i_11];
@@ -4232,7 +4232,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		String string_2 = OpenGL.glGetString(7938);
-		String[] arr_3 = Class456_Sub3.method12681(string_2.replace('.', ' '), ' ');
+		String[] arr_3 = MovingAnimation.method12681(string_2.replace('.', ' '), ' ');
 		if (arr_3.length >= 2) {
 			try {
 				int i_4 = Class328.parseInt(arr_3[0], 242232953);

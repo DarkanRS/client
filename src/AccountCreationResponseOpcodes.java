@@ -1,4 +1,4 @@
-public class AccountCreationResponseOpcodes implements Interface43 {
+public class AccountCreationResponseOpcodes implements Identifiable {
 
 	static AccountCreationResponseOpcodes aClass483_5737 = new AccountCreationResponseOpcodes(-1);
 
@@ -34,7 +34,7 @@ public class AccountCreationResponseOpcodes implements Interface43 {
 		this.anInt5739 = i_1;
 	}
 
-	public int method243() {
+	public int getValue() {
 		return this.anInt5739;
 	}
 

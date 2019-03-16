@@ -64,7 +64,7 @@ public abstract class Class209 {
 		int i_3 = client.aCalendar7278.get(12);
 		int i_4 = client.aCalendar7278.get(13);
 		String string_5 = Integer.toString(i_2 / 10) + i_2 % 10 + ":" + i_3 / 10 + i_3 % 10 + ":" + i_4 / 10 + i_4 % 10;
-		String[] arr_6 = Class456_Sub3.method12681(string_0, '\n');
+		String[] arr_6 = MovingAnimation.method12681(string_0, '\n');
 		for (int i_7 = 0; i_7 < arr_6.length; i_7++) {
 			for (int i_8 = Class179.anInt2227; i_8 > 0; --i_8) {
 				Class13.aStringArray129[i_8] = Class13.aStringArray129[i_8 - 1];

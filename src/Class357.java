@@ -35,8 +35,8 @@ public class Class357 implements Interface3 {
 				player_3.method15812(-942538273);
 			}
 		}
-		for (i_2 = 0; i_2 < client.anInt7211; i_2++) {
-			long long_6 = (long) client.anIntArray7212[i_2];
+		for (i_2 = 0; i_2 < client.NPC_UPDATE_INDEX; i_2++) {
+			long long_6 = (long) client.NPC_UPDATE_INDICES[i_2];
 			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get(long_6);
 			if (class282_sub47_5 != null) {
 				((Animable) class282_sub47_5.anObject8068).method15812(655110500);

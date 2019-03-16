@@ -15,7 +15,7 @@ public final class Class439 {
 		int i_4 = (int) long_2 >> 14 & 0x1f;
 		int i_5 = (int) long_2 >> 20 & 0x3;
 		int i_6 = (int) (long_2 >>> 32) & 0x7fffffff;
-		SceneObjectType sceneobjecttype_7 = (SceneObjectType) Class386.method6672(Class2.method262(), i_4, -917234900);
+		SceneObjectType sceneobjecttype_7 = (SceneObjectType) Class386.identify(Class2.method262(), i_4);
 		RouteStrategy routestrategy_8;
 		if (sceneobjecttype_7 != SceneObjectType.SCENERY_INTERACT && sceneobjecttype_7 != SceneObjectType.GROUND_INTERACT && sceneobjecttype_7 != SceneObjectType.GROUND_DECORATION) {
 			if (Class308.isWall(sceneobjecttype_7.type, 1861080465)) {

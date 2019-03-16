@@ -125,7 +125,7 @@ public class Class383 implements Interface41 {
 	}
 
 	static final void method6514(int i_0, int i_1, int i_2) {
-		if (Class456_Sub3.isInterfaceLoaded(i_0, (int[]) null, -1336109157)) {
+		if (MovingAnimation.isInterfaceLoaded(i_0, (int[]) null, -1336109157)) {
 			Class151.method2591(Class468_Sub8.INTERFACES[i_0].components, i_1, (byte) -17);
 		}
 	}

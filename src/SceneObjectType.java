@@ -1,4 +1,4 @@
-public class SceneObjectType implements Interface43 {
+public class SceneObjectType implements Identifiable {
 
 	static int anInt5495;
 
@@ -82,7 +82,7 @@ public class SceneObjectType implements Interface43 {
 		return 1109376893 * this.type * 2087055829;
 	}
 
-	public int method243() {
+	public int getValue() {
 		return this.type;
 	}
 

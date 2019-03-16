@@ -1604,7 +1604,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4352) {
 			int key = buffer.readUnsignedByte();
-			Class466 class466_98 = (Class466) Class386.method6672(Class335.method5963(), key, -2108912489);
+			Class466 class466_98 = (Class466) Class386.identify(Class335.method5963(), key);
 			if (class466_98 == null) {
 				class466_98 = Class466.aClass466_5563;
 			}
@@ -1677,7 +1677,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4438) {
 			int key = buffer.readUnsignedByte();
-			Class494 class494_96 = (Class494) Class386.method6672(UnderlayIndexLoader.method8038(), key, -1560493235);
+			Class494 class494_96 = (Class494) Class386.identify(UnderlayIndexLoader.method8038(), key);
 			if (class494_96 == null) {
 				class494_96 = Class494.aClass494_5782;
 			}

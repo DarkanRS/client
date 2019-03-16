@@ -32,7 +32,7 @@ public class Class92 {
 
 	Class92(RsByteBuffer rsbytebuffer_1) {
 		this.anInt964 = rsbytebuffer_1.readBigSmart();
-		this.aClass458_963 = (SceneObjectType) Class386.method6672(Class2.method262(), rsbytebuffer_1.readUnsignedByte(), -859737548);
+		this.aClass458_963 = (SceneObjectType) Class386.identify(Class2.method262(), rsbytebuffer_1.readUnsignedByte());
 	}
 
 	void method1558(byte b_1) {

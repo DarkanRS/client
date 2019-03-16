@@ -114,7 +114,7 @@ public class Class250 {
 		if (client.anInt7341 == 4) {
 			i_9 = Class82.aClass75Array804.length;
 		} else {
-			i_9 = i_7 + client.anInt7211;
+			i_9 = i_7 + client.NPC_UPDATE_INDEX;
 		}
 		int i_10;
 		Object obj_12;
@@ -150,7 +150,7 @@ public class Class250 {
 				if (i_10 < i_7) {
 					obj_12 = client.players[ints_8[i_10]];
 				} else {
-					obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) client.anIntArray7212[i_10 - i_7])).anObject8068;
+					obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_10 - i_7])).anObject8068;
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.anIntArray4886 != null) {
 						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
@@ -294,7 +294,7 @@ public class Class250 {
 					arr_113 = client.aClass180Array7348;
 					for (i_17 = 0; i_17 < arr_113.length; i_17++) {
 						class180_121 = arr_113[i_17];
-						if (class180_121 != null && class180_121.anInt2236 == 1 && client.anIntArray7212[i_10 - i_7] == class180_121.anInt2238) {
+						if (class180_121 != null && class180_121.anInt2236 == 1 && client.NPC_UPDATE_INDICES[i_10 - i_7] == class180_121.anInt2238) {
 							nativesprite_98 = Class391.aClass160Array4778[class180_121.anInt2240];
 							if (nativesprite_98.method2793() > i_15) {
 								i_15 = nativesprite_98.method2793();

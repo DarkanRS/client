@@ -64,7 +64,7 @@ public class Class331 {
 						int i_11 = animationdefinitions_10.replayMode;
 						Class456_Sub2_Sub1 class456_sub2_sub1_12 = animable.aClass456_Sub2_Sub1Array10354[i_9];
 						if (class456_sub2_sub1_12 != null && class456_sub2_sub1_12.hasDefs()) {
-							if (i_6 == class456_sub2_sub1_12.method7597(-1055922469)) {
+							if (i_6 == class456_sub2_sub1_12.method7597()) {
 								if (i_11 == 0) {
 									animable.aClass456_Sub2_Sub1Array10354[i_9] = null;
 									class456_sub2_sub1_12 = null;

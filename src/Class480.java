@@ -82,8 +82,8 @@ public class Class480 {
 					player_12.method15795(i_4, i_5, bool_2, (byte) 27);
 				}
 			}
-			for (i_9 = 0; i_9 < client.anInt7211; i_9++) {
-				int i_10 = client.anIntArray7212[i_9];
+			for (i_9 = 0; i_9 < client.NPC_UPDATE_INDEX; i_9++) {
+				int i_10 = client.NPC_UPDATE_INDICES[i_9];
 				Class282_Sub47 class282_sub47_11 = (Class282_Sub47) client.NPCS.get((long) i_10);
 				if (class282_sub47_11 != null) {
 					((Animable) class282_sub47_11.anObject8068).method15795(i_4, i_5, bool_2, (byte) -94);

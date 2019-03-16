@@ -54,8 +54,8 @@ public class GrandExchangeSlot {
 	}
 
 	static final void method5916() {
-		for (int i_1 = 0; i_1 < client.anInt7211; i_1++) {
-			int i_2 = client.anIntArray7212[i_1];
+		for (int i_1 = 0; i_1 < client.NPC_UPDATE_INDEX; i_1++) {
+			int i_2 = client.NPC_UPDATE_INDICES[i_1];
 			Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.NPCS.get((long) i_2);
 			if (class282_sub47_3 != null) {
 				NPC npc_4 = (NPC) class282_sub47_3.anObject8068;

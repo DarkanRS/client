@@ -1,63 +1,55 @@
-public class Class252 implements Interface43 {
+public class NPCDirection implements Identifiable {
+	public static NPCDirection NORTH = new NPCDirection(0, 0);
+	public static NPCDirection EAST = new NPCDirection(2, 1);
+	public static NPCDirection SOUTH_EAST = new NPCDirection(3, 2);
+	public static NPCDirection NORTH_WEST = new NPCDirection(7, 3);
+	public static NPCDirection SOUTH = new NPCDirection(6, 4);
+	public static NPCDirection WEST = new NPCDirection(4, 5);
+	public static NPCDirection NORTH_EAST = new NPCDirection(5, 6);
+	public static NPCDirection SOUTH_WEST = new NPCDirection(1, 7);
+	
+	public int value;
 
-	static Class252 aClass252_3106 = new Class252(0, 0);
+	int direction;
 
-	static Class252 aClass252_3105 = new Class252(2, 1);
-
-	static Class252 aClass252_3111 = new Class252(3, 2);
-
-	static Class252 aClass252_3107 = new Class252(7, 3);
-
-	public static Class252 aClass252_3108 = new Class252(6, 4);
-
-	static Class252 aClass252_3109 = new Class252(4, 5);
-
-	static Class252 aClass252_3110 = new Class252(5, 6);
-
-	static Class252 aClass252_3113 = new Class252(1, 7);
-
-	public int anInt3104;
-
-	int anInt3112;
-
-	public Class252 method4317() {
-		switch (this.anInt3104) {
+	public NPCDirection method4317() {
+		switch (this.value) {
 		case 0:
-			return aClass252_3108;
+			return SOUTH;
 		case 1:
-			return aClass252_3107;
+			return NORTH_WEST;
 		case 2:
-			return aClass252_3109;
+			return WEST;
 		case 3:
-			return aClass252_3110;
+			return NORTH_EAST;
 		case 4:
-			return aClass252_3105;
+			return EAST;
 		case 5:
-			return aClass252_3111;
+			return SOUTH_EAST;
 		case 6:
-			return aClass252_3106;
+			return NORTH;
 		case 7:
-			return aClass252_3113;
+			return SOUTH_WEST;
 		default:
 			throw new IllegalStateException();
 		}
 	}
 
-	Class252(int i_1, int i_2) {
-		this.anInt3104 = i_1;
-		this.anInt3112 = i_2;
+	NPCDirection(int i_1, int i_2) {
+		this.value = i_1;
+		this.direction = i_2;
 	}
 
-	public int method243() {
-		return this.anInt3112;
+	public int getValue() {
+		return this.direction;
 	}
 
 	public int method75() {
-		return 764906751 * this.anInt3112 * 431977215;
+		return 764906751 * this.direction * 431977215;
 	}
 
 	public int method76() {
-		return 764906751 * this.anInt3112 * 431977215;
+		return 764906751 * this.direction * 431977215;
 	}
 
 	static int method4325(Class217_Sub1 class217_sub1_0, Class217_Sub1 class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5) {

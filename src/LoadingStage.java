@@ -106,7 +106,7 @@ public class LoadingStage {
 					--i_2;
 					Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 				} else {
-					i_5 = rsbitsbuffer_0.readBits(1, (byte) 65);
+					i_5 = rsbitsbuffer_0.readBits(1);
 					if (i_5 == 0) {
 						i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 						Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
@@ -128,7 +128,7 @@ public class LoadingStage {
 						--i_2;
 						Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 					} else {
-						i_5 = rsbitsbuffer_0.readBits(1, (byte) -13);
+						i_5 = rsbitsbuffer_0.readBits(1);
 						if (i_5 == 0) {
 							i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 							Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
@@ -150,7 +150,7 @@ public class LoadingStage {
 							--i_2;
 							Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 						} else {
-							i_5 = rsbitsbuffer_0.readBits(1, (byte) -39);
+							i_5 = rsbitsbuffer_0.readBits(1);
 							if (i_5 == 0) {
 								i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 								Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
@@ -172,7 +172,7 @@ public class LoadingStage {
 								--i_2;
 								Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 							} else {
-								i_5 = rsbitsbuffer_0.readBits(1, (byte) 28);
+								i_5 = rsbitsbuffer_0.readBits(1);
 								if (i_5 == 0) {
 									i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 									Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);

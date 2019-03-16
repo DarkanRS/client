@@ -1,6 +1,6 @@
 public class NamedFileReference {
 
-	static AnimationIndexLoader aClass523_411;
+	static AnimationIndexLoader ANIMATION_INDEX_LOADER;
 
 	int[] anIntArray410;
 

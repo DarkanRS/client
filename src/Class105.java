@@ -41,11 +41,11 @@ public class Class105 {
 
 	static void method1806(RsBitsBuffer rsbitsbuffer_0, int i_1, int i_2) {
 		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-		boolean bool_4 = rsbitsbuffer_0.readBits(1, (byte) 56) == 1;
+		boolean bool_4 = rsbitsbuffer_0.readBits(1) == 1;
 		if (bool_4) {
 			Class197.anIntArray2435[++Class197.anInt2434 - 1] = i_1;
 		}
-		int i_5 = rsbitsbuffer_0.readBits(2, (byte) 38);
+		int i_5 = rsbitsbuffer_0.readBits(2);
 		Player player_6 = client.players[i_1];
 		if (i_5 == 0) {
 			if (bool_4) {
@@ -68,7 +68,7 @@ public class Class105 {
 					Class149_Sub2.method14609(player_6);
 				}
 				client.players[i_1] = null;
-				if (rsbitsbuffer_0.readBits(1, (byte) -34) != 0) {
+				if (rsbitsbuffer_0.readBits(1) != 0) {
 					Class346.method6155(rsbitsbuffer_0, i_1);
 				}
 			}
@@ -77,7 +77,7 @@ public class Class105 {
 			int i_8;
 			int i_9;
 			if (i_5 == 1) {
-				i_7 = rsbitsbuffer_0.readBits(3, (byte) -56);
+				i_7 = rsbitsbuffer_0.readBits(3);
 				i_8 = player_6.regionBaseX[0];
 				i_9 = player_6.regionBaseY[0];
 				if (i_7 == 0) {
@@ -109,7 +109,7 @@ public class Class105 {
 					player_6.method16129(i_8, i_9, Class197.playerMovementTypes[i_1], 750897153);
 				}
 			} else if (i_5 == 2) {
-				i_7 = rsbitsbuffer_0.readBits(4, (byte) 80);
+				i_7 = rsbitsbuffer_0.readBits(4);
 				i_8 = player_6.regionBaseX[0];
 				i_9 = player_6.regionBaseY[0];
 				if (i_7 == 0) {
@@ -165,13 +165,13 @@ public class Class105 {
 					player_6.method16129(i_8, i_9, Class197.playerMovementTypes[i_1], -1678489989);
 				}
 			} else {
-				i_7 = rsbitsbuffer_0.readBits(1, (byte) -12);
+				i_7 = rsbitsbuffer_0.readBits(1);
 				int i_10;
 				int i_11;
 				int i_12;
 				int i_13;
 				if (i_7 == 0) {
-					i_8 = rsbitsbuffer_0.readBits(12, (byte) 17);
+					i_8 = rsbitsbuffer_0.readBits(12);
 					i_9 = i_8 >> 10;
 					i_10 = i_8 >> 5 & 0x1f;
 					if (i_10 > 15) {
@@ -198,7 +198,7 @@ public class Class105 {
 						Class4.anInt35 = player_6.plane;
 					}
 				} else {
-					i_8 = rsbitsbuffer_0.readBits(30, (byte) -84);
+					i_8 = rsbitsbuffer_0.readBits(30);
 					i_9 = i_8 >> 28;
 					i_10 = i_8 >> 14 & 0x3fff;
 					i_11 = i_8 & 0x3fff;

@@ -165,12 +165,12 @@ public class Class28 implements Interface2 {
 				icomponentdefinitions_0.anInt1329 = 5;
 				icomponentdefinitions_0.anInt1330 = client.anInt7315;
 				icomponentdefinitions_0.anInt1339 = Class272.method4840(VertexNormal.myPlayer.displayName, (byte) 15);
-				Class456_Sub3 class456_sub3_2 = VertexNormal.myPlayer.aClass456_Sub3_10337;
+				MovingAnimation class456_sub3_2 = VertexNormal.myPlayer.aClass456_Sub3_10337;
 				if (class456_sub3_2 != null) {
 					if (icomponentdefinitions_0.aClass456_1437 == null) {
 						icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
 					}
-					icomponentdefinitions_0.animation = class456_sub3_2.method7597(-486545120);
+					icomponentdefinitions_0.animation = class456_sub3_2.method7597();
 					icomponentdefinitions_0.aClass456_1437.method7563(class456_sub3_2);
 				} else {
 					icomponentdefinitions_0.aClass456_1437 = null;

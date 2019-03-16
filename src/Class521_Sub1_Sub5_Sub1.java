@@ -512,7 +512,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 					tcpmessage_2.buffer.writeShort(client.anInt7149);
 					tcpmessage_2.buffer.writeLong(client.aLong7153);
 					tcpmessage_2.buffer.writeString(Class464.aString5555);
-					tcpmessage_2.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243());
+					tcpmessage_2.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
 					tcpmessage_2.buffer.writeByte(client.CURRENT_GAME.anInt5746);
 					Class31.method809(tcpmessage_2.buffer, -1671456029);
 					String string_5 = client.aString7156;
@@ -535,7 +535,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 						Class5.method297(2055895853);
 					} else if (client.aClass184_7218.getConnection().available(1)) {
 						client.aClass184_7218.getConnection().read(client.aClass184_7218.recievedBuffer.buffer, 0, 1);
-						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.method6672(Interface.method1626(), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff, -865772612);
+						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(Interface.method1626(), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff);
 						if (AccountCreationResponseOpcodes.CONTINUE != Class96_Sub9.RECIEVED_RESPONSE) {
 							client.aClass184_7218.method3051((byte) -45);
 						} else {

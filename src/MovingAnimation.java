@@ -1,4 +1,4 @@
-public class Class456_Sub3 extends Animation {
+public class MovingAnimation extends Animation {
 
 	public boolean aBool7891 = false;
 	Animable aClass521_Sub1_Sub1_Sub2_7892;
@@ -10,7 +10,7 @@ public class Class456_Sub3 extends Animation {
 
 	}
 
-	Class456_Sub3(Animable animable_1) {
+	MovingAnimation(Animable animable_1) {
 		super(false);
 		this.aClass521_Sub1_Sub1_Sub2_7892 = animable_1;
 	}

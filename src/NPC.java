@@ -50,7 +50,7 @@ public class NPC extends Animable {
 		int i_4 = i_2;
 		RenderAnimDefs renderanimdefs_5 = this.getRenderAnimDefs();
 		Animation animation_6 = this.currentAnimation.hasDefs() && !this.currentAnimation.hasSpeed(-1119795377) ? this.currentAnimation : null;
-		Class456_Sub3 class456_sub3_7 = this.aClass456_Sub3_10337.hasDefs() && (!this.aClass456_Sub3_10337.aBool7891 || animation_6 == null) ? this.aClass456_Sub3_10337 : null;
+		MovingAnimation class456_sub3_7 = this.aClass456_Sub3_10337.hasDefs() && (!this.aClass456_Sub3_10337.aBool7891 || animation_6 == null) ? this.aClass456_Sub3_10337 : null;
 		int i_8 = renderanimdefs_5.anInt2786;
 		int i_9 = renderanimdefs_5.anInt2829;
 		if (i_8 != 0 || i_9 != 0 || renderanimdefs_5.anInt2824 != 0 || renderanimdefs_5.anInt2827 != 0) {
@@ -147,12 +147,12 @@ public class NPC extends Animable {
 				for (int i_9 = this.anInt10355; i_9 > 0; --i_9) {
 					this.regionBaseX[i_9] = this.regionBaseX[i_9 - 1];
 					this.regionBaseY[i_9] = this.regionBaseY[i_9 - 1];
-					this.aByteArray10365[i_9] = this.aByteArray10365[i_9 - 1];
+					this.walkTypes[i_9] = this.walkTypes[i_9 - 1];
 				}
 
 				this.regionBaseX[0] = i_2;
 				this.regionBaseY[0] = i_3;
-				this.aByteArray10365[0] = Class249.MOVE_TYPE_1.id;
+				this.walkTypes[0] = MovementType.WALKING.id;
 				return;
 			}
 		}
@@ -192,37 +192,37 @@ public class NPC extends Animable {
 		}
 	}
 
-	public final void method16161(Class252 class252_1, int i_2, int i_3) {
-		int i_4 = this.regionBaseX[0];
-		int i_5 = this.regionBaseY[0];
-		switch (class252_1.anInt3104) {
+	public final void move(NPCDirection direction, int walkType) {
+		int baseX = this.regionBaseX[0];
+		int baseY = this.regionBaseY[0];
+		switch (direction.value) {
 		case 0:
-			++i_5;
+			++baseY;
 			break;
 		case 1:
-			--i_4;
-			++i_5;
+			--baseX;
+			++baseY;
 			break;
 		case 2:
-			++i_4;
-			++i_5;
+			++baseX;
+			++baseY;
 			break;
 		case 3:
-			++i_4;
+			++baseX;
 			break;
 		case 4:
-			--i_4;
-			--i_5;
+			--baseX;
+			--baseY;
 			break;
 		case 5:
-			--i_4;
+			--baseX;
 			break;
 		case 6:
-			--i_5;
+			--baseY;
 			break;
 		case 7:
-			++i_4;
-			--i_5;
+			++baseX;
+			--baseY;
 		}
 
 		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().walkingPrecedence == 1) {
@@ -248,12 +248,12 @@ public class NPC extends Animable {
 		for (i_6 = this.anInt10355; i_6 > 0; --i_6) {
 			this.regionBaseX[i_6] = this.regionBaseX[i_6 - 1];
 			this.regionBaseY[i_6] = this.regionBaseY[i_6 - 1];
-			this.aByteArray10365[i_6] = this.aByteArray10365[i_6 - 1];
+			this.walkTypes[i_6] = this.walkTypes[i_6 - 1];
 		}
 
-		this.regionBaseX[0] = i_4;
-		this.regionBaseY[0] = i_5;
-		this.aByteArray10365[0] = (byte) i_2;
+		this.regionBaseX[0] = baseX;
+		this.regionBaseY[0] = baseY;
+		this.walkTypes[0] = (byte) walkType;
 	}
 
 	public int method12997() {
@@ -388,7 +388,7 @@ public class NPC extends Animable {
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1080298347) ? this.currentAnimation : null;
-				Class456_Sub3 class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
+				MovingAnimation class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.anInt4858 * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
@@ -475,7 +475,7 @@ public class NPC extends Animable {
 			Class285 class285_10 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
 				Animation animation_11 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-539713016) ? this.currentAnimation : null;
-				Class456_Sub3 class456_sub3_12 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aClass456_Sub3_10337;
+				MovingAnimation class456_sub3_12 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aClass456_Sub3_10337;
 				MeshRasterizer meshrasterizer_13 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.anInt4858, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
 				if (meshrasterizer_13 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length + 1) {
@@ -557,7 +557,7 @@ public class NPC extends Animable {
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1093777602) ? this.currentAnimation : null;
-				Class456_Sub3 class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
+				MovingAnimation class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.anInt4858 * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
@@ -844,7 +844,7 @@ public class NPC extends Animable {
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(2108774285) ? this.currentAnimation : null;
-				Class456_Sub3 class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
+				MovingAnimation class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.anInt4858 * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {

@@ -1,4 +1,4 @@
-public class Class204 implements Interface43 {
+public class Class204 implements Identifiable {
 
 	static Class204 aClass204_2579 = new Class204(0);
 
@@ -10,7 +10,7 @@ public class Class204 implements Interface43 {
 		this.anInt2580 = i_1;
 	}
 
-	public int method243() {
+	public int getValue() {
 		return this.anInt2580;
 	}
 

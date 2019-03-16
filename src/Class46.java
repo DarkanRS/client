@@ -331,8 +331,8 @@ public class Class46 implements Interface2 {
 		return false;
 	}
 
-	public static Class252[] method931(int i_0) {
-		return new Class252[] { Class252.aClass252_3111, Class252.aClass252_3110, Class252.aClass252_3113, Class252.aClass252_3108, Class252.aClass252_3105, Class252.aClass252_3109, Class252.aClass252_3107, Class252.aClass252_3106 };
+	public static NPCDirection[] getDirections() {
+		return new NPCDirection[] { NPCDirection.SOUTH_EAST, NPCDirection.NORTH_EAST, NPCDirection.SOUTH_WEST, NPCDirection.SOUTH, NPCDirection.EAST, NPCDirection.WEST, NPCDirection.NORTH_WEST, NPCDirection.NORTH };
 	}
 
 	public static int method932() {

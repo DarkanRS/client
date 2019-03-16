@@ -53,7 +53,7 @@ public class Class42_Sub1 extends Class42 {
 			client.players[i_1] = null;
 		}
 
-		client.anInt7211 = 0;
+		client.NPC_UPDATE_INDEX = 0;
 		client.NPCS.method7749(299866501);
 		client.anInt7210 = 0;
 		client.aClass465_7414.method7749(-156011970);

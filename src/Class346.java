@@ -29,19 +29,19 @@ public class Class346 {
 	}
 
 	static boolean method6155(RsBitsBuffer rsbitsbuffer_0, int i_1) {
-		int i_3 = rsbitsbuffer_0.readBits(2, (byte) -19);
+		int i_3 = rsbitsbuffer_0.readBits(2);
 		int i_4;
 		int i_5;
 		int i_9;
 		int i_10;
 		int i_11;
 		if (i_3 == 0) {
-			if (rsbitsbuffer_0.readBits(1, (byte) 91) != 0) {
+			if (rsbitsbuffer_0.readBits(1) != 0) {
 				method6155(rsbitsbuffer_0, i_1);
 			}
-			i_4 = rsbitsbuffer_0.readBits(6, (byte) 50);
-			i_5 = rsbitsbuffer_0.readBits(6, (byte) -76);
-			boolean bool_18 = rsbitsbuffer_0.readBits(1, (byte) 68) == 1;
+			i_4 = rsbitsbuffer_0.readBits(6);
+			i_5 = rsbitsbuffer_0.readBits(6);
+			boolean bool_18 = rsbitsbuffer_0.readBits(1) == 1;
 			if (bool_18) {
 				Class197.anIntArray2435[++Class197.anInt2434 - 1] = i_1;
 			}
@@ -65,7 +65,7 @@ public class Class346 {
 				int i_15 = i_5 + (i_12 << 6) - coordgrid_13.y;
 				player_8.aBool10571 = class4_7.aBool29;
 				player_8.aBool10550 = class4_7.aBool33;
-				player_8.aByteArray10365[0] = Class197.playerMovementTypes[i_1];
+				player_8.walkTypes[0] = Class197.playerMovementTypes[i_1];
 				player_8.plane = player_8.aByte7968 = (byte) i_10;
 				if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_14, i_15, 1509882915)) {
 					player_8.aByte7968 = (byte) (player_8.aByte7968 + 1);
@@ -76,7 +76,7 @@ public class Class346 {
 				return true;
 			}
 		} else if (i_3 == 1) {
-			i_4 = rsbitsbuffer_0.readBits(2, (byte) -68);
+			i_4 = rsbitsbuffer_0.readBits(2);
 			i_5 = Class197.aClass4Array2430[i_1].anInt31;
 			Class197.aClass4Array2430[i_1].anInt31 = (i_5 & 0xfffffff) + (((i_5 >> 28) + i_4 & 0x3) << 28);
 			return false;
@@ -85,7 +85,7 @@ public class Class346 {
 			int i_16;
 			int i_17;
 			if (i_3 == 2) {
-				i_4 = rsbitsbuffer_0.readBits(5, (byte) 14);
+				i_4 = rsbitsbuffer_0.readBits(5);
 				i_5 = i_4 >> 3;
 				i_6 = i_4 & 0x7;
 				i_16 = Class197.aClass4Array2430[i_1].anInt31;
@@ -123,7 +123,7 @@ public class Class346 {
 				Class197.aClass4Array2430[i_1].anInt31 = (i_9 << 14) + i_10 + (i_17 << 28);
 				return false;
 			} else {
-				i_4 = rsbitsbuffer_0.readBits(18, (byte) -11);
+				i_4 = rsbitsbuffer_0.readBits(18);
 				i_5 = i_4 >> 16;
 				i_6 = i_4 >> 8 & 0xff;
 				i_16 = i_4 & 0xff;

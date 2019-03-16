@@ -90,7 +90,7 @@ public class NPCDefinitions {
 
 	public int anInt4902 = -1;
 
-	public Class252 aClass252_4910;
+	public NPCDirection aClass252_4910;
 
 	public int anInt4914;
 
@@ -586,7 +586,7 @@ public class NPCDefinitions {
 	}
 
 	NPCDefinitions() {
-		this.aClass252_4910 = Class252.aClass252_3108;
+		this.aClass252_4910 = NPCDirection.SOUTH;
 		this.anInt4914 = -1;
 		this.aByte4916 = -1;
 		this.anInt4917 = -1;
@@ -687,11 +687,11 @@ public class NPCDefinitions {
 				} else if (i_2 == 123) {
 					this.anInt4902 = rsbytebuffer_1.readUnsignedShort();
 				} else if (i_2 == 125) {
-					this.aClass252_4910 = (Class252) Class386.method6672(Class46.method931(-1178887780), rsbytebuffer_1.readByte(), -1522622422);
+					this.aClass252_4910 = (NPCDirection) Class386.identify(Class46.getDirections(), rsbytebuffer_1.readByte());
 				} else if (i_2 == 127) {
 					this.anInt4898 = rsbytebuffer_1.readUnsignedShort();
 				} else if (i_2 == 128) {
-					Class386.method6672(Class8_Sub3.method14339(), rsbytebuffer_1.readUnsignedByte(), -1112541696);
+					Class386.identify(Class8_Sub3.method14339(), rsbytebuffer_1.readUnsignedByte());
 				} else if (i_2 == 134) {
 					this.anInt4903 = rsbytebuffer_1.readUnsignedShort();
 					if (this.anInt4903 == 65535) {

@@ -345,7 +345,7 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4713) {
-			if (!Class456_Sub3.isInterfaceLoaded(Class58.aClass529_527.anInt7036, (int[]) null, -402984376)) {
+			if (!MovingAnimation.isInterfaceLoaded(Class58.aClass529_527.anInt7036, (int[]) null, -402984376)) {
 				return 0;
 			}
 

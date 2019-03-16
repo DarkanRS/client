@@ -110,7 +110,7 @@ public class Class123 {
 				objectdefinitions_8 = null;
 			}
 			if (objectdefinitions_7.method7967((byte) 82)) {
-				if (bool_1 && this.aClass456_1545.hasDefs() && objectdefinitions_7.method7979(this.aClass456_1545.method7597(-2131313079), -1433895387)) {
+				if (bool_1 && this.aClass456_1545.hasDefs() && objectdefinitions_7.method7979(this.aClass456_1545.method7597(), -1433895387)) {
 					return;
 				}
 				if (objectdefinitions_7.id != this.anInt1547) {
@@ -123,7 +123,7 @@ public class Class123 {
 					i_3 = 1;
 				}
 			} else if (objectdefinitions_8 != null && objectdefinitions_8.method7967((byte) 72)) {
-				if (bool_1 && this.aClass456_1545.hasDefs() && objectdefinitions_8.method7979(this.aClass456_1545.method7597(-693467586), 512535535)) {
+				if (bool_1 && this.aClass456_1545.hasDefs() && objectdefinitions_8.method7979(this.aClass456_1545.method7597(), 512535535)) {
 					return;
 				}
 				if (this.anInt1547 != objectdefinitions_7.id) {

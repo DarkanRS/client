@@ -18,7 +18,7 @@ public class RsBitsBuffer extends RsByteBuffer {
 		return i_1 < 128 ? i_1 : (i_1 - 128 << 8) + (this.buffer[++this.index - 1] - this.isaac.nextInt() & 0xff);
 	}
 
-	public int readBits(int i_1, byte b_2) {
+	public int readBits(int i_1) {
 		int i_3 = this.anInt9608 >> 3;
 		int i_4 = 8 - (this.anInt9608 & 0x7);
 		int i_5 = 0;

@@ -335,20 +335,20 @@ public class SystemInfo extends Node {
 		RenderAnimDefs renderanimdefs_3 = animable_0.getRenderAnimDefs();
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;
-			IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+			IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 			Class8_Sub1.anInt8515 = 0;
 		} else {
 			if (animable_0.currentAnimation.hasDefs() && !animable_0.currentAnimation.hasSpeed(584514311)) {
 				AnimationDefinitions animationdefinitions_4 = animable_0.currentAnimation.getDefs();
 				if (animable_0.anInt10367 > 0 && animationdefinitions_4.animatingPrecedence == 0) {
 					++animable_0.anInt10366;
-					IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+					IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
 				if (animable_0.anInt10367 <= 0 && animationdefinitions_4.walkingPrecedence == 0) {
 					++animable_0.anInt10366;
-					IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+					IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
@@ -360,13 +360,13 @@ public class SystemInfo extends Node {
 						AnimationDefinitions animationdefinitions_20 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_19.animationId, (byte) -10);
 						if (animable_0.anInt10367 > 0 && animationdefinitions_20.animatingPrecedence == 0) {
 							++animable_0.anInt10366;
-							IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+							IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
 						if (animable_0.anInt10367 <= 0 && animationdefinitions_20.walkingPrecedence == 0) {
 							++animable_0.anInt10366;
-							IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+							IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
@@ -399,7 +399,7 @@ public class SystemInfo extends Node {
 			} else if (i_6 > i_8) {
 				animable_0.method15863(0, 1630860423);
 			}
-			byte b_9 = animable_0.aByteArray10365[animable_0.anInt10355 - 1];
+			byte b_9 = animable_0.walkTypes[animable_0.anInt10355 - 1];
 			if (bool_1 || i_7 - i_5 <= 1024 && i_7 - i_5 >= -1024 && i_8 - i_6 <= 1024 && i_8 - i_6 >= -1024) {
 				int i_10 = 16;
 				boolean bool_11 = true;
@@ -408,7 +408,7 @@ public class SystemInfo extends Node {
 				}
 				int i_12;
 				if (bool_11) {
-					i_12 = animable_0.anInt10361 - animable_0.aClass19_10359.anInt153;
+					i_12 = animable_0.turnDirection - animable_0.aClass19_10359.turnDirection;
 					if (i_12 != 0 && animable_0.faceEntity == -1 && animable_0.anInt10340 != 0) {
 						i_10 = 8;
 					}
@@ -430,9 +430,9 @@ public class SystemInfo extends Node {
 					i_10 = 32;
 					--animable_0.anInt10366;
 				}
-				if (b_9 == Class249.MOVE_TYPE_2.id) {
+				if (b_9 == MovementType.RUNNING.id) {
 					i_10 <<= 1;
-				} else if (b_9 == Class249.MOVE_TYPE_0.id) {
+				} else if (b_9 == MovementType.TELEPORTING.id) {
 					i_10 >>= 1;
 				}
 				if (renderanimdefs_3.anInt2826 != -1) {
@@ -474,7 +474,7 @@ public class SystemInfo extends Node {
 				}
 				Class8_Sub1.anInt8515 = 0;
 				if (i_7 == i_5 && i_8 == i_6) {
-					IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+					IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 				} else {
 					if (i_5 < i_7) {
 						vector3_21.x += (float) i_10;
@@ -504,7 +504,7 @@ public class SystemInfo extends Node {
 					}
 					animable_0.method11171(vector3_21);
 					if (i_10 >= 32) {
-						IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_2.id;
+						IdentikitDefinition.anInt430 = MovementType.RUNNING.id;
 					} else {
 						IdentikitDefinition.anInt430 = b_9;
 					}
@@ -518,12 +518,12 @@ public class SystemInfo extends Node {
 				vector3_21.pushVectorStack();
 			} else {
 				animable_0.method11172((float) i_7, vector3_21.y, (float) i_8);
-				animable_0.method15791(animable_0.anInt10361, false, (byte) -111);
+				animable_0.method15791(animable_0.turnDirection, false, (byte) -111);
 				--animable_0.anInt10355;
 				if (animable_0.anInt10367 > 0) {
 					--animable_0.anInt10367;
 				}
-				IdentikitDefinition.anInt430 = Class249.MOVE_TYPE_DEFAULT.id;
+				IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
 				Class8_Sub1.anInt8515 = 0;
 				vector3_21.pushVectorStack();
 			}

@@ -1,4 +1,4 @@
-public class Class494 implements Interface43 {
+public class Class494 implements Identifiable {
 
 	static Class194 aClass194_5794;
 	public static Class494 aClass494_5786 = new Class494(-2);
@@ -17,7 +17,7 @@ public class Class494 implements Interface43 {
 	static Class494 aClass494_5791 = new Class494(38);
 	int anInt5793;
 
-	public int method243() {
+	public int getValue() {
 		return this.anInt5793;
 	}
 
