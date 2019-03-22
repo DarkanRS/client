@@ -8,54 +8,51 @@ public class Class506 {
 		throw new Error();
 	}
 
-	public static MeshModifier decodeItemEffects(ItemDefinitions itemdefinitions_0, RsByteBuffer rsbytebuffer_1) {
-		MeshModifier meshmodifier_3 = new MeshModifier(itemdefinitions_0);
-		int i_4 = rsbytebuffer_1.readUnsignedByte();
-		boolean bool_5 = (i_4 & 0x1) != 0;
-		boolean bool_6 = (i_4 & 0x2) != 0;
-		boolean bool_7 = (i_4 & 0x4) != 0;
-		boolean bool_8 = (i_4 & 0x8) != 0;
-		if (bool_5) {
-			meshmodifier_3.maleBody[0] = rsbytebuffer_1.readBigSmart();
-			meshmodifier_3.femaleBody[0] = rsbytebuffer_1.readBigSmart();
-			if (itemdefinitions_0.maleEquip2 != -1 || itemdefinitions_0.femaleEquip2 != -1) {
-				meshmodifier_3.maleBody[1] = rsbytebuffer_1.readBigSmart();
-				meshmodifier_3.femaleBody[1] = rsbytebuffer_1.readBigSmart();
+	public static MeshModifier decodeItemEffects(ItemDefinitions defs, RsByteBuffer stream) {
+		MeshModifier meshModifier = new MeshModifier(defs);
+		int flags = stream.readUnsignedByte();
+		boolean bodyModels = (flags & 0x1) != 0;
+		boolean headModels = (flags & 0x2) != 0;
+		boolean colors = (flags & 0x4) != 0;
+		boolean textures = (flags & 0x8) != 0;
+		if (bodyModels) {
+			meshModifier.maleBody[0] = stream.readBigSmart();
+			meshModifier.femaleBody[0] = stream.readBigSmart();
+			if (defs.maleEquip2 != -1 || defs.femaleEquip2 != -1) {
+				meshModifier.maleBody[1] = stream.readBigSmart();
+				meshModifier.femaleBody[1] = stream.readBigSmart();
 			}
-			if (itemdefinitions_0.maleEquip3 != -1 || itemdefinitions_0.femaleEquip3 != -1) {
-				meshmodifier_3.maleBody[2] = rsbytebuffer_1.readBigSmart();
-				meshmodifier_3.femaleBody[2] = rsbytebuffer_1.readBigSmart();
-			}
-		}
-		if (bool_6) {
-			meshmodifier_3.maleHeads[0] = rsbytebuffer_1.readBigSmart();
-			meshmodifier_3.femaleHeads[0] = rsbytebuffer_1.readBigSmart();
-			if (itemdefinitions_0.maleHead2 != -1 || itemdefinitions_0.femaleHead2 != -1) {
-				meshmodifier_3.maleHeads[1] = rsbytebuffer_1.readBigSmart();
-				meshmodifier_3.femaleHeads[1] = rsbytebuffer_1.readBigSmart();
+			if (defs.maleEquip3 != -1 || defs.femaleEquip3 != -1) {
+				meshModifier.maleBody[2] = stream.readBigSmart();
+				meshModifier.femaleBody[2] = stream.readBigSmart();
 			}
 		}
-		int i_9;
-		int[] ints_10;
-		int i_11;
-		if (bool_7) {
-			i_9 = rsbytebuffer_1.readUnsignedShort();
-			ints_10 = new int[] { i_9 & 0xf, i_9 >> 4 & 0xf, i_9 >> 8 & 0xf, i_9 >> 12 & 0xf };
-			for (i_11 = 0; i_11 < 4; i_11++) {
-				if (ints_10[i_11] != 15) {
-					meshmodifier_3.modifiedColors[ints_10[i_11]] = (short) rsbytebuffer_1.readUnsignedShort();
+		if (headModels) {
+			meshModifier.maleHeads[0] = stream.readBigSmart();
+			meshModifier.femaleHeads[0] = stream.readBigSmart();
+			if (defs.maleHead2 != -1 || defs.femaleHead2 != -1) {
+				meshModifier.maleHeads[1] = stream.readBigSmart();
+				meshModifier.femaleHeads[1] = stream.readBigSmart();
+			}
+		}
+		if (colors) {
+			int slotHash = stream.readUnsignedShort();
+			int[] slots = new int[] { slotHash & 0xf, slotHash >> 4 & 0xf, slotHash >> 8 & 0xf, slotHash >> 12 & 0xf };
+			for (int i = 0; i < 4; i++) {
+				if (slots[i] != 15) {
+					meshModifier.modifiedColors[slots[i]] = (short) stream.readUnsignedShort();
 				}
 			}
 		}
-		if (bool_8) {
-			i_9 = rsbytebuffer_1.readUnsignedByte();
-			ints_10 = new int[] { i_9 & 0xf, i_9 >> 4 & 0xf };
-			for (i_11 = 0; i_11 < 2; i_11++) {
-				if (ints_10[i_11] != 15) {
-					meshmodifier_3.modifiedTextures[ints_10[i_11]] = (short) rsbytebuffer_1.readUnsignedShort();
+		if (textures) {
+			int slotHash = stream.readUnsignedByte();
+			int[] slots = new int[] { slotHash & 0xf, slotHash >> 4 & 0xf };
+			for (int i = 0; i < 2; i++) {
+				if (slots[i] != 15) {
+					meshModifier.modifiedTextures[slots[i]] = (short) stream.readUnsignedShort();
 				}
 			}
 		}
-		return meshmodifier_3;
+		return meshModifier;
 	}
 }

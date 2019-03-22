@@ -3,37 +3,31 @@ import java.util.Iterator;
 public class MeshModifier {
 
 	protected static Class267 aClass267_5026;
-
 	public int[] maleBody = new int[3];
-
 	public int[] femaleBody = new int[3];
-
 	public int[] maleHeads = new int[2];
-
 	public int[] femaleHeads = new int[2];
-
 	public short[] modifiedColors;
-
 	public short[] modifiedTextures;
-
-	MeshModifier(ItemDefinitions itemdefinitions_1) {
-		this.maleBody[0] = itemdefinitions_1.maleEquip1;
-		this.maleBody[1] = itemdefinitions_1.maleEquip2;
-		this.maleBody[2] = itemdefinitions_1.maleEquip3;
-		this.femaleBody[0] = itemdefinitions_1.femaleEquip1;
-		this.femaleBody[1] = itemdefinitions_1.femaleEquip2;
-		this.femaleBody[2] = itemdefinitions_1.femaleEquip3;
-		this.maleHeads[0] = itemdefinitions_1.maleHead1;
-		this.maleHeads[1] = itemdefinitions_1.maleHead2;
-		this.femaleHeads[0] = itemdefinitions_1.femaleHead1;
-		this.femaleHeads[1] = itemdefinitions_1.femaleHead2;
-		if (itemdefinitions_1.modifiedModelColors != null) {
-			this.modifiedColors = new short[itemdefinitions_1.modifiedModelColors.length];
-			System.arraycopy(itemdefinitions_1.modifiedModelColors, 0, this.modifiedColors, 0, this.modifiedColors.length);
+	
+	MeshModifier(ItemDefinitions defs) {
+		this.maleBody[0] = defs.maleEquip1;
+		this.maleBody[1] = defs.maleEquip2;
+		this.maleBody[2] = defs.maleEquip3;
+		this.femaleBody[0] = defs.femaleEquip1;
+		this.femaleBody[1] = defs.femaleEquip2;
+		this.femaleBody[2] = defs.femaleEquip3;
+		this.maleHeads[0] = defs.maleHead1;
+		this.maleHeads[1] = defs.maleHead2;
+		this.femaleHeads[0] = defs.femaleHead1;
+		this.femaleHeads[1] = defs.femaleHead2;
+		if (defs.modifiedModelColors != null) {
+			this.modifiedColors = new short[defs.modifiedModelColors.length];
+			System.arraycopy(defs.modifiedModelColors, 0, this.modifiedColors, 0, this.modifiedColors.length);
 		}
-		if (itemdefinitions_1.modifiedTextureIds != null) {
-			this.modifiedTextures = new short[itemdefinitions_1.modifiedTextureIds.length];
-			System.arraycopy(itemdefinitions_1.modifiedTextureIds, 0, this.modifiedTextures, 0, this.modifiedTextures.length);
+		if (defs.modifiedTextureIds != null) {
+			this.modifiedTextures = new short[defs.modifiedTextureIds.length];
+			System.arraycopy(defs.modifiedTextureIds, 0, this.modifiedTextures, 0, this.modifiedTextures.length);
 		}
 	}
 
