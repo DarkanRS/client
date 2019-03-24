@@ -87,7 +87,7 @@ public final class client extends Engine {
 	static int anInt7332 = 0;
 	static int anInt7216 = 0;
 	static int[] anIntArray7421 = new int[1005];
-	public static BufferedConnectionContext aClass184_7218 = new BufferedConnectionContext();
+	public static BufferedConnectionContext connectionContext = new BufferedConnectionContext();
 	public static BufferedConnectionContext aClass184_7475 = new BufferedConnectionContext();
 	public static BufferedConnectionContext[] aClass184Array7220;
 	static int anInt7221;
@@ -324,7 +324,7 @@ public final class client extends Engine {
 	}
 
 	static {
-		aClass184Array7220 = new BufferedConnectionContext[] { aClass184_7475, aClass184_7218 };
+		aClass184Array7220 = new BufferedConnectionContext[] { aClass184_7475, connectionContext };
 		anInt7221 = 0;
 		aBool7459 = false;
 		aClass508_7223 = new Class508();
@@ -796,7 +796,7 @@ public final class client extends Engine {
 			}
 
 			aClass184_7475.method3059(-1650964006);
-			aClass184_7218.method3059(-1386724833);
+			connectionContext.method3059(-1386724833);
 			this.method11622();
 			if (Class468_Sub9.JS5_MANAGER != null) {
 				Class468_Sub9.JS5_MANAGER.pulse();
@@ -2821,8 +2821,8 @@ public final class client extends Engine {
 
 		aClass184_7475.method3051((byte) -122);
 		aClass184_7475.aClass7_2299.method347(-669506484);
-		aClass184_7218.method3051((byte) -84);
-		aClass184_7218.aClass7_2299.method347(1264741540);
+		connectionContext.method3051((byte) -84);
+		connectionContext.aClass7_2299.method347(1264741540);
 		Class278_Sub1.method13449((byte) -20);
 		Class119.JS5_STANDARD_REQUESTER.method5525(1906332744);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 68);
@@ -2931,8 +2931,8 @@ public final class client extends Engine {
 
 		aClass184_7475.method3051((byte) -43);
 		aClass184_7475.aClass7_2299.method347(2071949527);
-		aClass184_7218.method3051((byte) -77);
-		aClass184_7218.aClass7_2299.method347(-1713928547);
+		connectionContext.method3051((byte) -77);
+		connectionContext.aClass7_2299.method347(-1713928547);
 		Class278_Sub1.method13449((byte) 10);
 		Class119.JS5_STANDARD_REQUESTER.method5525(-411822521);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 4);
@@ -2973,7 +2973,7 @@ public final class client extends Engine {
 				HitsplatDefinitions.method3851();
 			}
 
-			for (i_2 = 0; i_2 < 100 && Class8_Sub3.method14338(aClass184_7218); i_2++) {
+			for (i_2 = 0; i_2 < 100 && Class8_Sub3.method14338(connectionContext); i_2++) {
 				;
 			}
 		}
@@ -3101,20 +3101,20 @@ public final class client extends Engine {
 											}
 
 											if (gameState == 0 && !JS5CacheFile.method3360((byte) 17) || gameState == 7 && Class9.anInt106 == 42 || gameState == 3) {
-												if (gameState != 7 && aClass184_7218.getConnection() == null) {
+												if (gameState != 7 && connectionContext.getConnection() == null) {
 													Class438.method7333(false, 2142128542);
-												} else if (aClass184_7218 != null) {
-													++aClass184_7218.anInt2290;
-													if (aClass184_7218.anInt2290 > 50) {
-														TCPMessage tcpmessage_18 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, aClass184_7218.isaac, 241462938);
-														aClass184_7218.method3049(tcpmessage_18, -494100424);
+												} else if (connectionContext != null) {
+													++connectionContext.anInt2290;
+													if (connectionContext.anInt2290 > 50) {
+														TCPPacket tcpmessage_18 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, connectionContext.isaac, 241462938);
+														connectionContext.queuePacket(tcpmessage_18);
 													}
 
 													try {
-														aClass184_7218.method3047(1630204206);
+														connectionContext.method3047(1630204206);
 													} catch (IOException ioexception_15) {
 														if (gameState == 7) {
-															aClass184_7218.method3051((byte) -106);
+															connectionContext.method3051((byte) -106);
 														} else {
 															Class438.method7333(false, 2058327064);
 														}

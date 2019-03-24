@@ -424,7 +424,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						if (icomponentdefinitions_12.contentType != 0) {
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1372 || icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436) {
 								HitbarDefinitions.method3231(i_14, i_15, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436);
-								TCPMessage.method12366(i_13, i_17, i_18, i_19, i_20, i_14, i_15);
+								TCPPacket.method12366(i_13, i_17, i_18, i_19, i_20, i_14, i_15);
 								Renderers.SOFTWARE_RENDERER.method8421();
 								Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								client.aBoolArray7443[i_13] = true;

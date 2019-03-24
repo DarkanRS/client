@@ -54,9 +54,9 @@ public class Class62 implements Interface3 {
 
 	static void method1260(int i_0, boolean bool_1, int i_2) {
 		if (bool_1) {
-			TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4556, client.aClass184_7475.isaac, -341537070);
+			TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4556, client.aClass184_7475.isaac, -341537070);
 			tcpmessage_3.buffer.writeShort(i_0);
-			client.aClass184_7475.method3049(tcpmessage_3, 684083045);
+			client.aClass184_7475.queuePacket(tcpmessage_3);
 		} else {
 			Class210.method3614(Class397.aClass397_4800, i_0, -1, (byte) 69);
 		}

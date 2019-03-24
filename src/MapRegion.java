@@ -969,11 +969,11 @@ public class MapRegion {
 				}
 				Class405.method6823();
 				Class48_Sub2.method14571();
-				TCPMessage tcpmessage_22;
+				TCPPacket tcpmessage_22;
 				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.getConnection() != null && client.gameState == 18) {
 					tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4609, client.aClass184_7475.isaac, 582872651);
 					tcpmessage_22.buffer.writeInt(1057001181);
-					client.aClass184_7475.method3049(tcpmessage_22, 278728590);
+					client.aClass184_7475.queuePacket(tcpmessage_22);
 				}
 				if (!this.aClass256_3163.method4410((byte) 29)) {
 					i_5 = (this.anInt3170 - (this.sizeX >> 4)) / 8;
@@ -1003,7 +1003,7 @@ public class MapRegion {
 					Class365.setGameState(13);
 					if (client.aClass184_7475.getConnection() != null) {
 						tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.isaac, 1466063096);
-						client.aClass184_7475.method3049(tcpmessage_22, 1512043524);
+						client.aClass184_7475.queuePacket(tcpmessage_22);
 					}
 				}
 				ParticleProducerDefinition.method1160(-1437458578);

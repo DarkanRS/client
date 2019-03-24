@@ -9,11 +9,11 @@ public class Class404 {
 
 	public static final void method6809(String string_0, int i_1) {
 		BufferedConnectionContext class184_3 = Class468_Sub20.method12807(-19463532);
-		TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4534, class184_3.isaac, -295409729);
+		TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4534, class184_3.isaac, -295409729);
 		tcpmessage_4.buffer.writeByte(1 + ChatLine.getLength(string_0));
 		tcpmessage_4.buffer.write128Byte(i_1, 2009148363);
 		tcpmessage_4.buffer.writeString(string_0);
-		class184_3.method3049(tcpmessage_4, -116955034);
+		class184_3.queuePacket(tcpmessage_4);
 	}
 
 	static void method6810(int i_0) {
@@ -29,11 +29,11 @@ public class Class404 {
 			ClanChannelPlayer class57_2 = Class113.CLAN_CHANNEL.players[i_0];
 			if (class57_2.rank == -1) {
 				BufferedConnectionContext class184_3 = Class468_Sub20.method12807(2122526956);
-				TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4630, class184_3.isaac, -301971618);
+				TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4630, class184_3.isaac, -301971618);
 				tcpmessage_4.buffer.writeByte(2 + ChatLine.getLength(class57_2.name));
 				tcpmessage_4.buffer.writeShort(i_0);
 				tcpmessage_4.buffer.writeString(class57_2.name);
-				class184_3.method3049(tcpmessage_4, 1522960717);
+				class184_3.queuePacket(tcpmessage_4);
 			}
 		}
 

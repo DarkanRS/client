@@ -218,7 +218,7 @@ public class Class346 {
 
 	static void method6160() {
 		Class9.lobbyStage = 140;
-		Class9.aClass184_73 = client.aClass184_7218;
+		Class9.aClass184_73 = client.connectionContext;
 		if (client.aByteArray7152 != null) {
 			RsByteBuffer rsbytebuffer_1 = new RsByteBuffer(client.aByteArray7152);
 			Class9.aLong77 = rsbytebuffer_1.readLong();

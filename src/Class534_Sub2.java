@@ -15,7 +15,7 @@ public class Class534_Sub2 extends Class534 {
 		return this.method12842(1070936564) != null || this.aLong7076 < TextureDetails.time() - 2000L;
 	}
 
-	TCPMessage method11416() {
+	TCPPacket method11416() {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, -490942131);
 	}
 
@@ -46,10 +46,10 @@ public class Class534_Sub2 extends Class534 {
 			if (class282_sub53_1.getClickType(-959652469) == 2) {
 				b_5 = 1;
 			}
-			TCPMessage tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, -109776879);
+			TCPPacket tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, -109776879);
 			tcpmessage_6.buffer.writeLEInt(i_4 | i_3 << 16, (byte) -37);
 			tcpmessage_6.buffer.writeShort(i_2 | b_5 << 15);
-			client.aClass184_7475.method3049(tcpmessage_6, 1544869711);
+			client.aClass184_7475.queuePacket(tcpmessage_6);
 		}
 	}
 
@@ -73,10 +73,10 @@ public class Class534_Sub2 extends Class534 {
 			if (class282_sub53_1.getClickType(-956354647) == 2) {
 				b_5 = 1;
 			}
-			TCPMessage tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, -423212520);
+			TCPPacket tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, -423212520);
 			tcpmessage_6.buffer.writeLEInt(i_4 | i_3 << 16, (byte) 76);
 			tcpmessage_6.buffer.writeShort(i_2 | b_5 << 15);
-			client.aClass184_7475.method3049(tcpmessage_6, 1417972816);
+			client.aClass184_7475.queuePacket(tcpmessage_6);
 		}
 	}
 
@@ -84,15 +84,15 @@ public class Class534_Sub2 extends Class534 {
 		return 0;
 	}
 
-	TCPMessage method11421() {
+	TCPPacket method11421() {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, -83522349);
 	}
 
-	TCPMessage method11420() {
+	TCPPacket method11420() {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, 1010735429);
 	}
 
-	TCPMessage method11428() {
+	TCPPacket method11428() {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, -202968975);
 	}
 
@@ -116,10 +116,10 @@ public class Class534_Sub2 extends Class534 {
 			if (class282_sub53_2.getClickType(-235884507) == 2) {
 				b_6 = 1;
 			}
-			TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, 417641867);
+			TCPPacket tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4586, client.aClass184_7475.isaac, 417641867);
 			tcpmessage_7.buffer.writeLEInt(i_5 | i_4 << 16, (byte) -3);
 			tcpmessage_7.buffer.writeShort(i_3 | b_6 << 15);
-			client.aClass184_7475.method3049(tcpmessage_7, -990587266);
+			client.aClass184_7475.queuePacket(tcpmessage_7);
 		}
 	}
 
@@ -131,7 +131,7 @@ public class Class534_Sub2 extends Class534 {
 		return 0;
 	}
 
-	TCPMessage method11422() {
+	TCPPacket method11422() {
 		return Class271.method4828(OutgoingPacket.aClass379_4600, client.aClass184_7475.isaac, 1192447706);
 	}
 

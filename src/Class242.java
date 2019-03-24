@@ -180,13 +180,13 @@ public class Class242 {
 			for (int i_5 = 0; i_5 < i_3; i_5++) {
 				Player player_6 = client.players[ints_4[i_5]];
 				if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == VertexNormal.myPlayer && (Class506.anInt5858 & 0x10) != 0 || (Class506.anInt5858 & 0x8) != 0)) {
-					TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4540, client.aClass184_7475.isaac, 623584347);
+					TCPPacket tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4540, client.aClass184_7475.isaac, 623584347);
 					tcpmessage_7.buffer.writeShort(client.anInt7345);
 					tcpmessage_7.buffer.writeShortLE(ints_4[i_5], (short) -11612);
 					tcpmessage_7.buffer.write128Byte(0, -2130241701);
 					tcpmessage_7.buffer.writeIntV2(Class7.anInt56);
 					tcpmessage_7.buffer.writeShortLE(client.anInt7346, (short) -16837);
-					client.aClass184_7475.method3049(tcpmessage_7, 2109181627);
+					client.aClass184_7475.queuePacket(tcpmessage_7);
 					int i_8 = player_6.getSize();
 					MapRegion.routeTo(player_6.regionBaseX[0], player_6.regionBaseY[0], true, Class344.method6115(player_6.regionBaseX[0], player_6.regionBaseY[0], i_8, i_8), 1352975566);
 					bool_2 = true;

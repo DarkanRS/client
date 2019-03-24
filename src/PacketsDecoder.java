@@ -1127,11 +1127,11 @@ public class PacketsDecoder extends Class455 {
 		} else if (context.currentPacket == IncomingPacket.aClass375_4405) {
 			int key = buffer.readInt();
 			int flags = buffer.readInt();
-			TCPMessage tcpmessage_111 = Class271.method4828(OutgoingPacket.aClass379_4595, context.isaac, 2042092);
+			TCPPacket tcpmessage_111 = Class271.method4828(OutgoingPacket.aClass379_4595, context.isaac, 2042092);
 			tcpmessage_111.buffer.writeIntV2(key);
 			tcpmessage_111.buffer.writeIntV1(flags, -1650869516);
 			tcpmessage_111.buffer.write128Byte(client.FPS, -826747048);
-			context.method3049(tcpmessage_111, -917310259);
+			context.queuePacket(tcpmessage_111);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4464) {

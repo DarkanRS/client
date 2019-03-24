@@ -160,8 +160,8 @@ public class LinkedNodeList {
 	}
 
 	public static final void method7886() {
-		TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4587, client.aClass184_7475.isaac, 1209499491);
-		client.aClass184_7475.method3049(tcpmessage_2, 2048910350);
+		TCPPacket tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4587, client.aClass184_7475.isaac, 1209499491);
+		client.aClass184_7475.queuePacket(tcpmessage_2);
 		for (Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 30)) {
 			if (!class282_sub44_3.isLinked()) {
 				class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(861555487);

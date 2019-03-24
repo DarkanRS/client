@@ -302,12 +302,12 @@ public final class Class251 {
 					Class341.method6074(arr_12, 1579654554);
 				}
 				if (client.gameState == 13) {
-					TCPMessage tcpmessage_21 = Class271.method4828(OutgoingPacket.aClass379_4612, client.aClass184_7475.isaac, 704086040);
+					TCPPacket tcpmessage_21 = Class271.method4828(OutgoingPacket.aClass379_4612, client.aClass184_7475.isaac, 704086040);
 					tcpmessage_21.buffer.writeByte(string_0.length() + 3);
 					tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
 					tcpmessage_21.buffer.writeByte(bool_2 ? 1 : 0);
 					tcpmessage_21.buffer.writeString(string_0);
-					client.aClass184_7475.method3049(tcpmessage_21, -273447008);
+					client.aClass184_7475.queuePacket(tcpmessage_21);
 				}
 			} catch (Exception exception_18) {
 				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1449846660), -1151783606);

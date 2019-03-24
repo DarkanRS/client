@@ -390,9 +390,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 
 	public static void method16088(int i_0) {
 		if (client.gameState == 3) {
-			TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.isaac, -396054970);
+			TCPPacket tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4606, client.connectionContext.isaac, -396054970);
 			tcpmessage_2.buffer.writeByte(i_0);
-			client.aClass184_7218.method3049(tcpmessage_2, 820598049);
+			client.connectionContext.queuePacket(tcpmessage_2);
 		}
 	}
 }

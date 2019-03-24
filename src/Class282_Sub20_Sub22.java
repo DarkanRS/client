@@ -95,20 +95,20 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 			}
 			if (client.gameState == 13) {
 				int i_2;
-				TCPMessage tcpmessage_6;
+				TCPPacket tcpmessage_6;
 				while (HashTableIterator.method7517()) {
 					tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4563, client.aClass184_7475.isaac, 780391787);
 					tcpmessage_6.buffer.writeByte(0);
 					i_2 = tcpmessage_6.buffer.index;
 					Class8_Sub2.method14264(tcpmessage_6.buffer);
 					tcpmessage_6.buffer.method13061(tcpmessage_6.buffer.index - i_2, 788141162);
-					client.aClass184_7475.method3049(tcpmessage_6, -467156881);
+					client.aClass184_7475.queuePacket(tcpmessage_6);
 				}
 				if (Class496.aClass510_5816 != null) {
 					if (Class496.aClass510_5816.anInt5872 != -1) {
 						tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4615, client.aClass184_7475.isaac, 312457209);
 						tcpmessage_6.buffer.writeShort(Class496.aClass510_5816.anInt5872);
-						client.aClass184_7475.method3049(tcpmessage_6, 496271189);
+						client.aClass184_7475.queuePacket(tcpmessage_6);
 						Class496.aClass510_5816 = null;
 						Class28.aLong351 = TextureDetails.time() + 30000L;
 					}
@@ -211,11 +211,11 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						}
 						Class496.method8315(-472472191);
 						++client.anInt7347;
-						TCPMessage tcpmessage_8;
+						TCPPacket tcpmessage_8;
 						if (client.aBool7375) {
 							tcpmessage_8 = Class271.method4828(OutgoingPacket.aClass379_4549, client.aClass184_7475.isaac, 771698207);
 							tcpmessage_8.buffer.writeLEInt(Class282_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015, (byte) -22);
-							client.aClass184_7475.method3049(tcpmessage_8, -1247398056);
+							client.aClass184_7475.queuePacket(tcpmessage_8);
 							client.aBool7375 = false;
 						}
 						while (true) {
@@ -325,7 +325,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 															++client.aClass184_7475.anInt2290;
 															if (client.aClass184_7475.anInt2290 > 50) {
 																tcpmessage_8 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, client.aClass184_7475.isaac, -169588500);
-																client.aClass184_7475.method3049(tcpmessage_8, -57681873);
+																client.aClass184_7475.queuePacket(tcpmessage_8);
 															}
 															if (client.aBool7459) {
 																Class466.method7776();

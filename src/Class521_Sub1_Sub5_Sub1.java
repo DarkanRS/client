@@ -498,66 +498,66 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 				int i_3;
 				if (Class192.ACCOUNT_CREATION_STAGE == Class1.REQUEST) {
-					client.aClass184_7218.method3050(Class38.createAsyncConnection(Class448.lobbyConnectionInfo.createSocket((byte) 121), 15000, 1038176780), Class448.lobbyConnectionInfo.host, (byte) -47);
-					client.aClass184_7218.method3054((short) 8665);
-					TCPMessage tcpmessage_2 = Class207.method3558((byte) 87);
-					tcpmessage_2.buffer.writeByte(OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
-					tcpmessage_2.buffer.writeShort(0);
-					i_3 = tcpmessage_2.buffer.index;
-					tcpmessage_2.buffer.writeShort(727);
-					tcpmessage_2.buffer.writeShort(1);
-					Class14.LOGIN_XTEAS = Class463.method7725(tcpmessage_2);
-					int i_4 = tcpmessage_2.buffer.index;
-					tcpmessage_2.buffer.writeString(client.aString7164);
-					tcpmessage_2.buffer.writeShort(client.anInt7149);
-					tcpmessage_2.buffer.writeLong(client.aLong7153);
-					tcpmessage_2.buffer.writeString(Class464.aString5555);
-					tcpmessage_2.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
-					tcpmessage_2.buffer.writeByte(client.CURRENT_GAME.anInt5746);
-					Class31.method809(tcpmessage_2.buffer, -1671456029);
+					client.connectionContext.method3050(Class38.createAsyncConnection(Class448.lobbyConnectionInfo.createSocket((byte) 121), 15000, 1038176780), Class448.lobbyConnectionInfo.host, (byte) -47);
+					client.connectionContext.method3054((short) 8665);
+					TCPPacket packet = Class207.method3558((byte) 87);
+					packet.buffer.writeByte(OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
+					packet.buffer.writeShort(0);
+					i_3 = packet.buffer.index;
+					packet.buffer.writeShort(727);
+					packet.buffer.writeShort(1);
+					Class14.LOGIN_XTEAS = Class463.method7725(packet);
+					int i_4 = packet.buffer.index;
+					packet.buffer.writeString(client.aString7164);
+					packet.buffer.writeShort(client.anInt7149);
+					packet.buffer.writeLong(client.aLong7153);
+					packet.buffer.writeString(Class464.aString5555);
+					packet.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
+					packet.buffer.writeByte(client.CURRENT_GAME.anInt5746);
+					Class31.method809(packet.buffer, -1671456029);
 					String string_5 = client.aString7156;
-					tcpmessage_2.buffer.writeByte(string_5 == null ? 0 : 1);
+					packet.buffer.writeByte(string_5 == null ? 0 : 1);
 					if (string_5 != null) {
-						tcpmessage_2.buffer.writeString(string_5);
+						packet.buffer.writeString(string_5);
 					}
 
-					Class11.SYSTEM_INFO.writeMachineInformation(tcpmessage_2.buffer);
-					tcpmessage_2.buffer.index += 7;
-					tcpmessage_2.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_4, tcpmessage_2.buffer.index, 1645773158);
-					tcpmessage_2.buffer.method13281(tcpmessage_2.buffer.index - i_3);
-					client.aClass184_7218.method3049(tcpmessage_2, -1007484142);
-					client.aClass184_7218.method3047(557990439);
+					Class11.SYSTEM_INFO.writeMachineInformation(packet.buffer);
+					packet.buffer.index += 7;
+					packet.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_4, packet.buffer.index);
+					packet.buffer.method13281(packet.buffer.index - i_3);
+					client.connectionContext.queuePacket(packet);
+					client.connectionContext.method3047(557990439);
 					Class192.ACCOUNT_CREATION_STAGE = Class1.RESPONSE;
 				}
 
 				if (Class1.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
-					if (client.aClass184_7218.getConnection() == null) {
+					if (client.connectionContext.getConnection() == null) {
 						Class5.method297(2055895853);
-					} else if (client.aClass184_7218.getConnection().available(1)) {
-						client.aClass184_7218.getConnection().read(client.aClass184_7218.recievedBuffer.buffer, 0, 1);
-						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(Interface.method1626(), client.aClass184_7218.recievedBuffer.buffer[0] & 0xff);
+					} else if (client.connectionContext.getConnection().available(1)) {
+						client.connectionContext.getConnection().read(client.connectionContext.recievedBuffer.buffer, 0, 1);
+						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(Interface.method1626(), client.connectionContext.recievedBuffer.buffer[0] & 0xff);
 						if (AccountCreationResponseOpcodes.CONTINUE != Class96_Sub9.RECIEVED_RESPONSE) {
-							client.aClass184_7218.method3051((byte) -45);
+							client.connectionContext.method3051((byte) -45);
 						} else {
-							client.aClass184_7218.isaac = new IsaacCipher(Class14.LOGIN_XTEAS);
+							client.connectionContext.isaac = new IsaacCipher(Class14.LOGIN_XTEAS);
 							int[] ints_8 = new int[4];
 
 							for (i_3 = 0; i_3 < 4; i_3++) {
 								ints_8[i_3] = Class14.LOGIN_XTEAS[i_3] + 50;
 							}
 
-							client.aClass184_7218.aClass432_2295 = new IsaacCipher(ints_8);
-							client.aClass184_7218.recievedBuffer.setIsaacCipher(client.aClass184_7218.aClass432_2295, 1577326429);
+							client.connectionContext.aClass432_2295 = new IsaacCipher(ints_8);
+							client.connectionContext.recievedBuffer.setIsaacCipher(client.connectionContext.aClass432_2295, 1577326429);
 							Class365.setGameState(3);
-							client.aClass184_7218.method3054((short) -8634);
-							client.aClass184_7218.recievedBuffer.index = 0;
-							client.aClass184_7218.lastPacket = null;
-							client.aClass184_7218.secondLastPacket = null;
-							client.aClass184_7218.thirdLastPacket = null;
-							client.aClass184_7218.idleReadPulses = 0;
+							client.connectionContext.method3054((short) -8634);
+							client.connectionContext.recievedBuffer.index = 0;
+							client.connectionContext.lastPacket = null;
+							client.connectionContext.secondLastPacket = null;
+							client.connectionContext.thirdLastPacket = null;
+							client.connectionContext.idleReadPulses = 0;
 						}
 
-						client.aClass184_7218.currentPacket = null;
+						client.connectionContext.currentPacket = null;
 						Class192.ACCOUNT_CREATION_STAGE = null;
 					}
 				}

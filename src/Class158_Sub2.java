@@ -25,14 +25,14 @@ public abstract class Class158_Sub2 extends Class158 {
 	abstract void method14354(int var1, int var2);
 
 	public static void method14355(int i_0, int i_1, int i_2) {
-		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4548, client.aClass184_7475.isaac, -184524303);
+		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4548, client.aClass184_7475.isaac, -184524303);
 		tcpmessage_3.buffer.writeIntV1(i_0, 834716715);
 		tcpmessage_3.buffer.writeShortLE128(i_1);
-		client.aClass184_7475.method3049(tcpmessage_3, 1272182727);
+		client.aClass184_7475.queuePacket(tcpmessage_3);
 	}
 
-	static TCPMessage method14356() {
-		return TCPMessage.index == 0 ? new TCPMessage() : TCPMessage.OUTGOING_PACKETS[--TCPMessage.index];
+	static TCPPacket method14356() {
+		return TCPPacket.index == 0 ? new TCPPacket() : TCPPacket.OUTGOING_PACKETS[--TCPPacket.index];
 	}
 
 }

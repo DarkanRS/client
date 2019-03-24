@@ -32,7 +32,7 @@ public class Class119 {
 
 	public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
 		if (client.gameState == 3) {
-			TCPMessage tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.isaac, 94516093);
+			TCPPacket tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4628, client.connectionContext.isaac, 94516093);
 			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_0);
@@ -40,9 +40,9 @@ public class Class119 {
 			tcpmessage_5.buffer.writeByte(i_2);
 			tcpmessage_5.buffer.writeByte(bool_3 ? 1 : 0);
 			tcpmessage_5.buffer.index += 7;
-			tcpmessage_5.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_6, tcpmessage_5.buffer.index, 1773448479);
+			tcpmessage_5.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_6, tcpmessage_5.buffer.index);
 			tcpmessage_5.buffer.method13281(tcpmessage_5.buffer.index - i_6);
-			client.aClass184_7218.method3049(tcpmessage_5, -593132534);
+			client.connectionContext.queuePacket(tcpmessage_5);
 			if (i_2 < 13) {
 				client.aBool7189 = true;
 				Class188.method3142(-1273118938);
@@ -77,10 +77,10 @@ public class Class119 {
 				}
 
 				if (outgoingpacket_8 != null) {
-					TCPMessage tcpmessage_9 = Class271.method4828(outgoingpacket_8, client.aClass184_7475.isaac, -147657643);
+					TCPPacket tcpmessage_9 = Class271.method4828(outgoingpacket_8, client.aClass184_7475.isaac, -147657643);
 					tcpmessage_9.buffer.writeShort(ints_4[i_6]);
 					tcpmessage_9.buffer.write128Byte(0, 1653548844);
-					client.aClass184_7475.method3049(tcpmessage_9, 669327577);
+					client.aClass184_7475.queuePacket(tcpmessage_9);
 				}
 
 				bool_5 = true;
@@ -95,14 +95,14 @@ public class Class119 {
 	}
 
 	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-		TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4601, client.aClass184_7475.isaac, -3887603);
+		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4601, client.aClass184_7475.isaac, -3887603);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
 		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288, (short) -28348);
 		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 		tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);
 		tcpmessage_3.buffer.writeLEInt(icomponentdefinitions_1.idHash, (byte) 77);
-		client.aClass184_7475.method3049(tcpmessage_3, -683028728);
+		client.aClass184_7475.queuePacket(tcpmessage_3);
 	}
 
 	public static void method2077(int i_0) {

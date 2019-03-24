@@ -100,7 +100,7 @@ public class Class361 {
 
 	static void method6270(byte b_0) {
 		if (QuickChatDynamicValue.method4180(client.gameState)) {
-			if (client.aClass184_7218.getConnection() == null) {
+			if (client.connectionContext.getConnection() == null) {
 				Class365.setGameState(14);
 			} else {
 				Class365.setGameState(0);

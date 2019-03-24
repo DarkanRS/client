@@ -93,9 +93,9 @@ public class Class42 implements Interface2 {
 			Class260.anInt3223 = i_0;
 			Class260.aClass116_3229 = null;
 			Class260.aClass282_Sub15_Sub2_3231 = null;
-			TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, -228003010);
+			TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, -228003010);
 			tcpmessage_4.buffer.writeInt(-1);
-			client.aClass184_7475.method3049(tcpmessage_4, 1617512289);
+			client.aClass184_7475.queuePacket(tcpmessage_4);
 		} else {
 			i_1 = i_1 * Class393.preferences.aClass468_Sub13_8228.method12714(-1100344734) >> 8;
 			if (i_0 == -1 && !Class260.aBool3220) {

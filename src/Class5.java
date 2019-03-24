@@ -80,7 +80,7 @@ public class Class5 {
 	}
 
 	static void method297(int i_0) {
-		client.aClass184_7218.method3051((byte) -37);
+		client.connectionContext.method3051((byte) -37);
 		if (Class14.anInt134 < 2) {
 			Class448.lobbyConnectionInfo.swap(876652608);
 			Class14.anInt133 = 0;

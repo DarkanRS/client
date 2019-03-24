@@ -1,10 +1,10 @@
-public class TCPMessage extends Node {
+public class TCPPacket extends Node {
 
 	int anInt7678;
 	public int anInt7680;
 	OutgoingPacket packet;
 	public RsBitsBuffer buffer;
-	static TCPMessage[] OUTGOING_PACKETS = new TCPMessage[300];
+	static TCPPacket[] OUTGOING_PACKETS = new TCPPacket[300];
 	static int index = 0;
 
 	public void method12360() {

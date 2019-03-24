@@ -124,10 +124,10 @@ public abstract class Connection {
 	public static final void method3345(String string_0) {
 		if (!string_0.equals("")) {
 			BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1721172592);
-			TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_2.isaac, 595380659);
+			TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_2.isaac, 595380659);
 			tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
 			tcpmessage_3.buffer.writeString(string_0);
-			class184_2.method3049(tcpmessage_3, 1755458135);
+			class184_2.queuePacket(tcpmessage_3);
 		}
 	}
 }

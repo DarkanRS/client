@@ -64,12 +64,12 @@ public class Class388 implements Interface41 {
 	}
 
 	static void method6692(int i_0) {
-		TCPMessage tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
+		TCPPacket tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
 		tcpmessage_1.buffer.writeByte(Class158.windowedMode());
 		tcpmessage_1.buffer.writeShort(Class349.anInt4083);
 		tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
 		tcpmessage_1.buffer.writeByte(Class393.preferences.aClass468_Sub4_8223.method12641(-965992195));
-		client.aClass184_7475.method3049(tcpmessage_1, 664640946);
+		client.aClass184_7475.queuePacket(tcpmessage_1);
 	}
 
 	static boolean method6693(int i_0) {

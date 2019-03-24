@@ -339,10 +339,10 @@ public class RsByteBuffer extends Node {
 
 	}
 
-	public void encryptWithXtea(int[] ints_1, int i_2, int i_3, int i_4) {
+	public void encryptWithXtea(int[] keys, int start, int end) {
 		int i_5 = this.index;
-		this.index = i_2;
-		int i_6 = (i_3 - i_2) / 8;
+		this.index = start;
+		int i_6 = (end - start) / 8;
 
 		for (int i_7 = 0; i_7 < i_6; i_7++) {
 			int i_8 = this.readInt();
@@ -350,8 +350,8 @@ public class RsByteBuffer extends Node {
 			int i_10 = 0;
 			int i_11 = -1640531527;
 
-			for (int i_12 = 32; i_12-- > 0; i_9 += i_8 + (i_8 << 4 ^ i_8 >>> 5) ^ ints_1[i_10 >>> 11 & 0x3] + i_10) {
-				i_8 += i_9 + (i_9 << 4 ^ i_9 >>> 5) ^ i_10 + ints_1[i_10 & 0x3];
+			for (int i_12 = 32; i_12-- > 0; i_9 += i_8 + (i_8 << 4 ^ i_8 >>> 5) ^ keys[i_10 >>> 11 & 0x3] + i_10) {
+				i_8 += i_9 + (i_9 << 4 ^ i_9 >>> 5) ^ i_10 + keys[i_10 & 0x3];
 				i_10 += i_11;
 			}
 

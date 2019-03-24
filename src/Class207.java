@@ -42,8 +42,8 @@ public class Class207 {
 		}
 	}
 
-	public static TCPMessage method3558(byte b_0) {
-		TCPMessage tcpmessage_1 = Class158_Sub2.method14356();
+	public static TCPPacket method3558(byte b_0) {
+		TCPPacket tcpmessage_1 = Class158_Sub2.method14356();
 		tcpmessage_1.packet = null;
 		tcpmessage_1.anInt7678 = 0;
 		tcpmessage_1.buffer = new RsBitsBuffer(5000);

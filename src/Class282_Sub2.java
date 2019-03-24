@@ -23,8 +23,8 @@ public class Class282_Sub2 extends Node {
 		this.anInt7486 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	static TCPMessage method12078(int i_0, int i_1, int i_2) {
-		TCPMessage tcpmessage_4 = null;
+	static TCPPacket method12078(int i_0, int i_1, int i_2) {
+		TCPPacket tcpmessage_4 = null;
 		if (i_2 == 0) {
 			tcpmessage_4 = Class271.method4828(OutgoingPacket.WALK, client.aClass184_7475.isaac, 1058999201);
 		}

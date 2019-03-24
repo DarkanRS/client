@@ -48,11 +48,11 @@ public abstract class Class534 {
 
 	abstract int method11415();
 
-	abstract TCPMessage method11416();
+	abstract TCPPacket method11416();
 
 	void method11417(int i_1) {
 		if (this.method11423()) {
-			TCPMessage tcpmessage_2 = null;
+			TCPPacket tcpmessage_2 = null;
 			int i_3 = 0;
 			int i_4 = 0;
 			int i_5 = 0;
@@ -143,7 +143,7 @@ public abstract class Class534 {
 				tcpmessage_2.buffer.writeByte(i_4 / i_5);
 				tcpmessage_2.buffer.writeByte(i_4 % i_5);
 				tcpmessage_2.buffer.index = i_7;
-				client.aClass184_7475.method3049(tcpmessage_2, 1392403393);
+				client.aClass184_7475.queuePacket(tcpmessage_2);
 			}
 		}
 		this.method11414();
@@ -151,11 +151,11 @@ public abstract class Class534 {
 
 	abstract void method11418();
 
-	abstract TCPMessage method11420();
+	abstract TCPPacket method11420();
 
-	abstract TCPMessage method11421();
+	abstract TCPPacket method11421();
 
-	abstract TCPMessage method11422();
+	abstract TCPPacket method11422();
 
 	abstract boolean method11423();
 
@@ -167,7 +167,7 @@ public abstract class Class534 {
 
 	abstract void method11427(RsByteBuffer var1, MouseRecord var2);
 
-	abstract TCPMessage method11428();
+	abstract TCPPacket method11428();
 
 	abstract void method11431();
 

@@ -35,56 +35,56 @@ public abstract class Class96_Sub10 extends Class96 {
 			if (client.method11633(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
 				BufferedConnectionContext class184_8 = Class468_Sub20.method12807(870102038);
 				if (client.gameState == 0 || client.gameState == 13) {
-					TCPMessage tcpmessage_7;
+					TCPPacket tcpmessage_7;
 					if (i_0 == 1) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4574, class184_8.isaac, 440245011);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, 1677489806);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 2) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4554, class184_8.isaac, -209568629);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, -641320368);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 3) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4527, class184_8.isaac, 67534413);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, 34641642);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 4) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4536, class184_8.isaac, 941336151);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, 1717133549);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 5) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4562, class184_8.isaac, -519873323);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, 1443340985);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 6) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4546, class184_8.isaac, 516854951);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, 1118744569);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 7) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4550, class184_8.isaac, 216995585);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, 1074910390);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 8) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4605, class184_8.isaac, 1816324678);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, -358596995);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 9) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4604, class184_8.isaac, 868991635);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, -986323584);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 					if (i_0 == 10) {
 						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4608, class184_8.isaac, 486801259);
 						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
-						class184_8.method3049(tcpmessage_7, -28228352);
+						class184_8.queuePacket(tcpmessage_7);
 					}
 				}
 			}

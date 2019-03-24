@@ -16,8 +16,8 @@ public class Exception_Sub3 extends Exception {
 
 				class184_4.anInt2290 = 0;
 				if (!class184_4.aBool2298 && class184_4.getConnection() != null) {
-					TCPMessage tcpmessage_5 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, class184_4.isaac, -105520716);
-					class184_4.method3049(tcpmessage_5, 1142654187);
+					TCPPacket tcpmessage_5 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, class184_4.isaac, -105520716);
+					class184_4.queuePacket(tcpmessage_5);
 
 					try {
 						class184_4.method3047(168161979);

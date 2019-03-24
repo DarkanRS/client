@@ -42,7 +42,7 @@ public class Class282_Sub20_Sub26 extends Class282_Sub20 {
 			return;
 		}
 		Class9.lobbyStage = 140;
-		Class9.aClass184_73 = client.aClass184_7218;
+		Class9.aClass184_73 = client.connectionContext;
 		Class455.method7558(false, false, string_0, string_1, -1L);
 	}
 

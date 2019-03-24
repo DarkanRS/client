@@ -109,7 +109,7 @@ public class Class190 {
 		}
 
 		Class186.method3083(619410098);
-		client.aClass184_7218.method3051((byte) -99);
+		client.connectionContext.method3051((byte) -99);
 		Class530.aBool7050 = true;
 		Class250.method4296();
 

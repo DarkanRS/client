@@ -93,7 +93,7 @@ public class NPCDirection implements Identifiable {
 			}
 			Class16.aClass8_144.method359("Game: In:" + client.aClass184_7475.anInt2294 + "B/s " + "Out:" + client.aClass184_7475.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
 			i_5 += 15;
-			long long_16 = client.aClass184_7218.aClass7_2299.method349((byte) -81);
+			long long_16 = client.connectionContext.aClass7_2299.method349((byte) -81);
 			String str_18 = "N/A";
 			if (long_16 != -1L) {
 				str_18 = long_16 + "ms";
@@ -101,7 +101,7 @@ public class NPCDirection implements Identifiable {
 					str_18 = ParticleProducerDefinition.method1163(16711680) + str_18 + ParticleProducerDefinition.method1163(16776960);
 				}
 			}
-			Class16.aClass8_144.method359("Lobby: In:" + client.aClass184_7218.anInt2294 + "B/s " + "Out:" + client.aClass184_7218.anInt2293 + "B/s " + "Ping:" + str_18, i_4, i_5, -256, -1);
+			Class16.aClass8_144.method359("Lobby: In:" + client.connectionContext.anInt2294 + "B/s " + "Out:" + client.connectionContext.anInt2293 + "B/s " + "Ping:" + str_18, i_4, i_5, -256, -1);
 			i_5 += 15;
 			int i_19 = Renderers.SOFTWARE_RENDERER.za() / 1024;
 			Class16.aClass8_144.method359("Offheap:" + i_19 + "k", i_4, i_5, i_19 > 65536 ? -65536 : -256, -1);

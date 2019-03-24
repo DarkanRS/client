@@ -64,7 +64,7 @@ public class Class96_Sub4 extends Class96 {
 			}
 
 			Player player_12;
-			TCPMessage tcpmessage_13;
+			TCPPacket tcpmessage_13;
 			if (outgoingpacket_11 != null) {
 				player_12 = client.players[i_7];
 				if (player_12 != null) {
@@ -75,12 +75,12 @@ public class Class96_Sub4 extends Class96 {
 					tcpmessage_13 = Class271.method4828(outgoingpacket_11, client.aClass184_7475.isaac, -38973320);
 					tcpmessage_13.buffer.writeShort(i_7);
 					tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-1893602887) ? 1 : 0, -1708065557);
-					client.aClass184_7475.method3049(tcpmessage_13, 67860298);
+					client.aClass184_7475.queuePacket(tcpmessage_13);
 					MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, Class344.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()), 1593350845);
 				}
 			}
 
-			TCPMessage tcpmessage_17;
+			TCPPacket tcpmessage_17;
 			if (i_6 == 16) {
 				client.anInt7293 = i_1;
 				client.anInt7294 = i_2;
@@ -92,7 +92,7 @@ public class Class96_Sub4 extends Class96 {
 				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1700744259) ? 1 : 0, 2138987650);
 				tcpmessage_17.buffer.writeIntV2(Class7.anInt56);
 				tcpmessage_17.buffer.writeShortLE(client.anInt7346, (short) -21214);
-				client.aClass184_7475.method3049(tcpmessage_17, -436533109);
+				client.aClass184_7475.queuePacket(tcpmessage_17);
 			}
 
 			if (i_6 == 57 || i_6 == 1007) {
@@ -112,7 +112,7 @@ public class Class96_Sub4 extends Class96 {
 					tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-1642883449) ? 1 : 0, -1169068214);
 					tcpmessage_13.buffer.writeIntV2(Class7.anInt56);
 					tcpmessage_13.buffer.writeShortLE(client.anInt7346, (short) -2375);
-					client.aClass184_7475.method3049(tcpmessage_13, -111115308);
+					client.aClass184_7475.queuePacket(tcpmessage_13);
 					MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, Class344.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()), 1255775546);
 				}
 			}
@@ -130,7 +130,7 @@ public class Class96_Sub4 extends Class96 {
 				tcpmessage_17.buffer.writeShortLE(client.anInt7346, (short) -20075);
 				tcpmessage_17.buffer.writeShort128(client.anInt7345);
 				tcpmessage_17.buffer.writeShortLE(i_5 + coordgrid_10.y, (short) -19304);
-				client.aClass184_7475.method3049(tcpmessage_17, -886113840);
+				client.aClass184_7475.queuePacket(tcpmessage_17);
 				Class439.routeToSceneObject(i_4, i_5, long_8);
 			}
 
@@ -149,7 +149,7 @@ public class Class96_Sub4 extends Class96 {
 				outgoingpacket_18 = OutgoingPacket.aClass379_4530;
 			}
 
-			TCPMessage tcpmessage_15;
+			TCPPacket tcpmessage_15;
 			if (outgoingpacket_18 != null) {
 				Class282_Sub47 class282_sub47_19 = (Class282_Sub47) client.NPCS.get((long) i_7);
 				if (class282_sub47_19 != null) {
@@ -161,7 +161,7 @@ public class Class96_Sub4 extends Class96 {
 					tcpmessage_15 = Class271.method4828(outgoingpacket_18, client.aClass184_7475.isaac, 1353629602);
 					tcpmessage_15.buffer.writeShort(i_7);
 					tcpmessage_15.buffer.writeByte(VertexNormal.method1465(-1762610857) ? 1 : 0);
-					client.aClass184_7475.method3049(tcpmessage_15, -688965453);
+					client.aClass184_7475.queuePacket(tcpmessage_15);
 					MapRegion.routeTo(npc_14.regionBaseX[0], npc_14.regionBaseY[0], true, Class344.method6115(npc_14.regionBaseX[0], npc_14.regionBaseY[0], npc_14.getSize(), npc_14.getSize()), 907331887);
 				}
 			}
@@ -177,7 +177,7 @@ public class Class96_Sub4 extends Class96 {
 					tcpmessage_13 = Class271.method4828(OutgoingPacket.aClass379_4590, client.aClass184_7475.isaac, 340096638);
 					tcpmessage_13.buffer.writeShort128(i_4 + coordgrid_10.x);
 					tcpmessage_13.buffer.writeShort(i_5 + coordgrid_10.y);
-					client.aClass184_7475.method3049(tcpmessage_13, -258838494);
+					client.aClass184_7475.queuePacket(tcpmessage_13);
 				}
 			}
 
@@ -205,7 +205,7 @@ public class Class96_Sub4 extends Class96 {
 						client.anInt7295 = 0;
 					}
 
-					client.aClass184_7475.method3049(tcpmessage_13, -1144629676);
+					client.aClass184_7475.queuePacket(tcpmessage_13);
 					MapRegion.routeTo(i_4, i_5, true, Class38.method853(i_4, i_5, 1597401587), 1072484880);
 				}
 			}
@@ -223,7 +223,7 @@ public class Class96_Sub4 extends Class96 {
 				tcpmessage_13.buffer.writeShortLE128(client.anInt7345);
 				tcpmessage_13.buffer.writeShortLE128(i_5 + coordgrid_10.y);
 				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x, (short) -574);
-				client.aClass184_7475.method3049(tcpmessage_13, 1026705629);
+				client.aClass184_7475.queuePacket(tcpmessage_13);
 				client.method12073(i_4, i_5, 693787765);
 			}
 
@@ -238,7 +238,7 @@ public class Class96_Sub4 extends Class96 {
 				tcpmessage_13.buffer.writeIntV1(Class7.anInt56, 362432766);
 				tcpmessage_13.buffer.writeShort128(client.anInt7345);
 				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x, (short) -8634);
-				client.aClass184_7475.method3049(tcpmessage_13, -311032746);
+				client.aClass184_7475.queuePacket(tcpmessage_13);
 				MapRegion.routeTo(i_4, i_5, true, Class38.method853(i_4, i_5, -795317623), 1870869554);
 			}
 
@@ -292,12 +292,12 @@ public class Class96_Sub4 extends Class96 {
 					client.anInt7294 = i_2;
 					client.anInt7296 = 2;
 					client.anInt7295 = 0;
-					TCPMessage tcpmessage_22 = Class271.method4828(outgoingpacket_27, client.aClass184_7475.isaac, 934209488);
+					TCPPacket tcpmessage_22 = Class271.method4828(outgoingpacket_27, client.aClass184_7475.isaac, 934209488);
 					tcpmessage_22.buffer.writeShortLE128(i_7);
 					tcpmessage_22.buffer.writeByteC(VertexNormal.method1465(-1708313818) ? 1 : 0);
 					tcpmessage_22.buffer.writeShort(i_5 + coordgrid_10.y);
 					tcpmessage_22.buffer.writeShort128(i_4 + coordgrid_10.x);
-					client.aClass184_7475.method3049(tcpmessage_22, 1582161852);
+					client.aClass184_7475.queuePacket(tcpmessage_22);
 					client.method12073(i_4, i_5, 633151820);
 				}
 
@@ -309,13 +309,13 @@ public class Class96_Sub4 extends Class96 {
 						client.anInt7294 = i_2;
 						client.anInt7296 = 2;
 						client.anInt7295 = 0;
-						TCPMessage tcpmessage_16 = Class271.method4828(OutgoingPacket.aClass379_4568, client.aClass184_7475.isaac, -608363088);
+						TCPPacket tcpmessage_16 = Class271.method4828(OutgoingPacket.aClass379_4568, client.aClass184_7475.isaac, -608363088);
 						tcpmessage_16.buffer.writeIntV2(Class7.anInt56);
 						tcpmessage_16.buffer.writeShortLE128(i_7);
 						tcpmessage_16.buffer.write128Byte(VertexNormal.method1465(-1846955130) ? 1 : 0, 1376249266);
 						tcpmessage_16.buffer.writeShortLE128(client.anInt7346);
 						tcpmessage_16.buffer.writeShort128(client.anInt7345);
-						client.aClass184_7475.method3049(tcpmessage_16, -86724265);
+						client.aClass184_7475.queuePacket(tcpmessage_16);
 						MapRegion.routeTo(npc_25.regionBaseX[0], npc_25.regionBaseY[0], true, Class344.method6115(npc_25.regionBaseX[0], npc_25.regionBaseY[0], npc_25.getSize(), npc_25.getSize()), 1130929855);
 					}
 				}
@@ -345,7 +345,7 @@ public class Class96_Sub4 extends Class96 {
 					tcpmessage_15.buffer.writeShort(i_4 + coordgrid_10.x);
 					tcpmessage_15.buffer.writeInt((int) (long_8 >>> 32) & 0x7fffffff);
 					tcpmessage_15.buffer.writeByte128(VertexNormal.method1465(-1734216598) ? 1 : 0, 784835211);
-					client.aClass184_7475.method3049(tcpmessage_15, -1242179380);
+					client.aClass184_7475.queuePacket(tcpmessage_15);
 					Class439.routeToSceneObject(i_4, i_5, long_8);
 				}
 

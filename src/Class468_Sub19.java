@@ -54,12 +54,12 @@ public class Class468_Sub19 extends Preference {
 			if (class57_4.rank == -1) {
 				String string_5 = class57_4.name;
 				BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-1321489648);
-				TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4617, class184_6.isaac, 1070287495);
+				TCPPacket tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4617, class184_6.isaac, 1070287495);
 				tcpmessage_7.buffer.writeByte(3 + ChatLine.getLength(string_5));
 				tcpmessage_7.buffer.writeByte(bool_0 ? 1 : 0);
 				tcpmessage_7.buffer.writeShort(i_1);
 				tcpmessage_7.buffer.writeString(string_5);
-				class184_6.method3049(tcpmessage_7, -920214831);
+				class184_6.queuePacket(tcpmessage_7);
 			}
 		}
 

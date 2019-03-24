@@ -38,14 +38,14 @@ public class Class151 {
 					Class96_Sub4.executeHookInner200k(hookrequest_3, 1791224764);
 				}
 			}
-			TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4573, client.aClass184_7475.isaac, 891007251);
+			TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4573, client.aClass184_7475.isaac, 891007251);
 			tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
 			tcpmessage_4.buffer.writeShortLE(client.anInt7345, (short) -9723);
 			tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 			tcpmessage_4.buffer.writeLEInt(icomponentdefinitions_0.idHash, (byte) 89);
 			tcpmessage_4.buffer.writeIntV2(Class7.anInt56);
 			tcpmessage_4.buffer.writeShortLE(client.anInt7346, (short) -1117);
-			client.aClass184_7475.method3049(tcpmessage_4, 656208756);
+			client.aClass184_7475.queuePacket(tcpmessage_4);
 		}
 	}
 

@@ -23,7 +23,7 @@ public abstract class Class434 {
 		Class373.method6365();
 		Class236.aClass534_Sub2_2911.method11417(-2118478860);
 		Class236.aClass534_Sub1_2913.method11417(-2125512068);
-		TCPMessage tcpmessage_1;
+		TCPPacket tcpmessage_1;
 		int i_2;
 		if (client.maximumHeldKeys > 0) {
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4555, client.aClass184_7475.isaac, 1297366609);
@@ -41,7 +41,7 @@ public abstract class Class434 {
 				tcpmessage_1.buffer.write24BitInt((int) long_4);
 			}
 
-			client.aClass184_7475.method3049(tcpmessage_1, 394731592);
+			client.aClass184_7475.queuePacket(tcpmessage_1);
 		}
 
 		if (Class236.anInt2912 > 0) {
@@ -54,14 +54,14 @@ public abstract class Class434 {
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4593, client.aClass184_7475.isaac, 672473203);
 			tcpmessage_1.buffer.writeShortLE128((int) client.aFloat7146 >> 3);
 			tcpmessage_1.buffer.writeShort128((int) client.aFloat7365 >> 3);
-			client.aClass184_7475.method3049(tcpmessage_1, 645991437);
+			client.aClass184_7475.queuePacket(tcpmessage_1);
 		}
 
 		if (Class236.aBool2909 != Class530.aBool7050) {
 			Class236.aBool2909 = Class530.aBool7050;
 			tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4597, client.aClass184_7475.isaac, 108556182);
 			tcpmessage_1.buffer.writeByte(Class530.aBool7050 ? 1 : 0);
-			client.aClass184_7475.method3049(tcpmessage_1, 1669261400);
+			client.aClass184_7475.queuePacket(tcpmessage_1);
 		}
 
 		if (!client.aBool7175) {
@@ -71,7 +71,7 @@ public abstract class Class434 {
 			RsByteBuffer rsbytebuffer_6 = Class393.preferences.method13499();
 			tcpmessage_1.buffer.writeBytes(rsbytebuffer_6.buffer, 0, rsbytebuffer_6.index);
 			tcpmessage_1.buffer.method13061(tcpmessage_1.buffer.index - i_2, -1036471531);
-			client.aClass184_7475.method3049(tcpmessage_1, 1020342841);
+			client.aClass184_7475.queuePacket(tcpmessage_1);
 			client.aBool7175 = true;
 		}
 

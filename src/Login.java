@@ -104,7 +104,7 @@ public class Login {
 					++Class9.anInt104;
 					Class9.loginStage = 18;
 				}
-				TCPMessage tcpmessage_2;
+				TCPPacket tcpmessage_2;
 				int i_3;
 				int i_5;
 				if (Class9.loginStage == 18) {
@@ -141,7 +141,7 @@ public class Login {
 					} else {
 						tcpmessage_2.buffer.writeByte(OutgoingLoginPacket.INIT_GAME_CONNECTION.id);
 					}
-					Class9.aClass184_73.method3049(tcpmessage_2, 1846695910);
+					Class9.aClass184_73.queuePacket(tcpmessage_2);
 					Class9.aClass184_73.method3047(146720590);
 					Class9.loginStage = 35;
 				}
@@ -275,7 +275,7 @@ public class Login {
 						int i_9 = Class159.GAME_CONNECTION_INFO.worldId;
 						rsbitsbuffer_22.writeInt(i_9);
 						QuestDefinitions.writeCRCs(rsbitsbuffer_22, 1259367589);
-						rsbitsbuffer_22.encryptWithXtea(Class500.anIntArray5827, i_6, rsbitsbuffer_22.index, 1754334967);
+						rsbitsbuffer_22.encryptWithXtea(Class500.anIntArray5827, i_6, rsbitsbuffer_22.index);
 						rsbitsbuffer_22.method13281(rsbitsbuffer_22.index - i_5);
 					} else {
 						if (Class9.socialNetworkLogin) {
@@ -312,10 +312,10 @@ public class Login {
 						rsbitsbuffer_22.writeInt(client.anInt7163);
 						rsbitsbuffer_22.writeString(client.aString7164);
 						QuestDefinitions.writeCRCs(rsbitsbuffer_22, 860014211);
-						rsbitsbuffer_22.encryptWithXtea(Class500.anIntArray5827, i_6, rsbitsbuffer_22.index, 1203865118);
+						rsbitsbuffer_22.encryptWithXtea(Class500.anIntArray5827, i_6, rsbitsbuffer_22.index);
 						rsbitsbuffer_22.method13281(rsbitsbuffer_22.index - i_5);
 					}
-					Class9.aClass184_73.method3049(tcpmessage_2, 96752034);
+					Class9.aClass184_73.queuePacket(tcpmessage_2);
 					Class9.aClass184_73.method3047(124172931);
 					Class9.aClass184_73.isaac = new IsaacCipher(Class500.anIntArray5827);
 					for (int i_12 = 0; i_12 < 4; i_12++) {
@@ -384,7 +384,7 @@ public class Login {
 					rsbitsbuffer_22 = tcpmessage_2.buffer;
 					rsbitsbuffer_22.setIsaacCipher(Class9.aClass184_73.isaac, 271369997);
 					rsbitsbuffer_22.writeIsaacByte(OutgoingLoginPacket.GAMELOGIN_CONTINUE.id, 264695091);
-					Class9.aClass184_73.method3049(tcpmessage_2, 132701015);
+					Class9.aClass184_73.queuePacket(tcpmessage_2);
 					Class9.aClass184_73.method3047(-692056530);
 					Class9.loginStage = 97;
 				} else if (Class9.loginStage == 128) {
