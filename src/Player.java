@@ -799,13 +799,13 @@ public class Player extends Animable {
 		this.method11171(vecSize);
 		vecSize.pushVectorStack();
 		if (titleBefore) {
-			this.prefixTitle = buffer.readGJString(-441737398);
+			this.prefixTitle = buffer.readGJString();
 		} else {
 			this.prefixTitle = null;
 		}
 
 		if (titleAfter) {
-			this.postfixTitle = buffer.readGJString(-1660604826);
+			this.postfixTitle = buffer.readGJString();
 		} else {
 			this.postfixTitle = null;
 		}

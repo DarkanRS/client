@@ -1,7 +1,7 @@
-public class Class213 {
+public class World {
 
-	public String aString2679;
-	public int anInt2680;
+	public String activity;
+	public int countryId;
 
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
 		CS2Script cs2script_4 = Class225_Sub1.method12792(Class397.aClass397_4792, i_0, -1);

@@ -2,7 +2,7 @@ public final class Class354 {
 
 	public static NativeSprite aClass160_4110;
 
-	static Class213[] aClass213Array4111;
+	static World[] WORLDS;
 
 	public static int anInt4112;
 

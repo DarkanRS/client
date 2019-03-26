@@ -305,7 +305,7 @@ public class Class329_Sub1 extends Class329 {
 			i_8 += i_9;
 			int i_10 = 0;
 			while (true) {
-				int i_11 = rsbytebuffer_7.readUnsignedSmart(2017450653);
+				int i_11 = rsbytebuffer_7.readUnsignedSmart();
 				if (i_11 == 0) {
 					break;
 				}
@@ -346,7 +346,7 @@ public class Class329_Sub1 extends Class329 {
 			i_13 += i_14;
 			int i_15 = 0;
 			while (true) {
-				int i_16 = rsbytebuffer_12.readUnsignedSmart(2010932473);
+				int i_16 = rsbytebuffer_12.readUnsignedSmart();
 				if (i_16 == 0) {
 					break;
 				}

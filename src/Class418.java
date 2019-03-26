@@ -2,7 +2,7 @@ public class Class418 {
 
 	Class427 aClass427_4998;
 
-	public static int anInt4999;
+	public static int WORLD_LIST_IDK;
 
 	public int anInt4995;
 

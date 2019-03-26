@@ -10,7 +10,7 @@ public class Class4 {
 
 	boolean aBool33;
 
-	public static int anInt34;
+	public static int WORLD_LIST_SIZE;
 
 	public static int anInt35;
 

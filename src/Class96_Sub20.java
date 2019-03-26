@@ -1,6 +1,6 @@
 public class Class96_Sub20 extends Class96 {
 
-	static RsByteBuffer aClass282_Sub35_9415;
+	static RsByteBuffer WORLD_LIST_BUFFER;
 
 	int anInt9414;
 

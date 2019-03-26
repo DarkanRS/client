@@ -30,7 +30,7 @@ public class Class77 {
 	}
 
 	Class77(RsByteBuffer rsbytebuffer_1) {
-		int i_2 = rsbytebuffer_1.readUnsignedSmart(1773086739);
+		int i_2 = rsbytebuffer_1.readUnsignedSmart();
 		this.anIntArray763 = new int[i_2];
 		this.anIntArray760 = new int[i_2];
 		this.anIntArray762 = new int[i_2];
@@ -119,8 +119,8 @@ public class Class77 {
 		}
 	}
 
-	public static Class217_Sub1 method1368(int i_0) {
-		return Class448.anInt5427 < Class448.aClass217_Sub1Array5426.length ? Class448.aClass217_Sub1Array5426[++Class448.anInt5427 - 1] : null;
+	public static WorldDescriptor method1368(int i_0) {
+		return Class448.anInt5427 < Class448.WORLD_DESCRIPTORS_BYID.length ? Class448.WORLD_DESCRIPTORS_BYID[++Class448.anInt5427 - 1] : null;
 	}
 
 	public static void method1369(AnimationIndexLoader animationindexloader_0) {

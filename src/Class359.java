@@ -6,15 +6,15 @@ public class Class359 {
 		throw new Error();
 	}
 
-	static void method6241(RsByteBuffer rsbytebuffer_0) {
-		for (int i_2 = 0; i_2 < Class4.anInt34; i_2++) {
-			int i_3 = rsbytebuffer_0.readUnsignedSmart(1888630053);
-			int i_4 = rsbytebuffer_0.readUnsignedShort();
-			if (i_4 == 65535) {
-				i_4 = -1;
+	static void decodePlayerCounts(RsByteBuffer rsbytebuffer_0) {
+		for (int i_2 = 0; i_2 < Class4.WORLD_LIST_SIZE; i_2++) {
+			int worldId = rsbytebuffer_0.readUnsignedSmart();
+			int playerCount = rsbytebuffer_0.readUnsignedShort();
+			if (playerCount == 65535) {
+				playerCount = -1;
 			}
-			if (Class244.aClass217_Sub1Array3006[i_3] != null) {
-				Class244.aClass217_Sub1Array3006[i_3].anInt2701 = i_4;
+			if (Class244.WORLD_LIST_DESCRIPTORS[worldId] != null) {
+				Class244.WORLD_LIST_DESCRIPTORS[worldId].playerCount = playerCount;
 			}
 		}
 	}

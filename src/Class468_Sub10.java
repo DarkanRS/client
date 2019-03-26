@@ -47,18 +47,18 @@ public class Class468_Sub10 extends Preference {
 		return 1;
 	}
 
-	public static boolean method12695(byte[] bytes_0) {
-		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
-		int i_3 = rsbytebuffer_2.readUnsignedByte();
-		if (i_3 != 2) {
+	public static boolean decodeWorldList(byte[] data) {
+		RsByteBuffer buffer = new RsByteBuffer(data);
+		int two = buffer.readUnsignedByte();
+		if (two != 2) {
 			return false;
 		} else {
-			boolean bool_4 = rsbytebuffer_2.readUnsignedByte() == 1;
-			if (bool_4) {
-				Class411.method6912(rsbytebuffer_2);
+			boolean create = buffer.readUnsignedByte() == 1;
+			if (create) {
+				Class411.decodeWorldList(buffer);
 			}
 
-			Class359.method6241(rsbytebuffer_2);
+			Class359.decodePlayerCounts(buffer);
 			return true;
 		}
 	}

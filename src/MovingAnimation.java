@@ -5,7 +5,7 @@ public class MovingAnimation extends Animation {
 
 	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
 		if (!this.aBool7891 || !this.aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || this.aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187)) {
-			Class213.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_Sub1_Sub2_7892);
+			World.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_Sub1_Sub2_7892);
 		}
 
 	}

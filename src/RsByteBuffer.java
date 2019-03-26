@@ -269,7 +269,7 @@ public class RsByteBuffer extends Node {
 		this.index = 0;
 	}
 
-	public String readGJString(int i_1) {
+	public String readGJString() {
 		byte b_2 = this.buffer[++this.index - 1];
 		if (b_2 != 0) {
 			throw new IllegalStateException("");
@@ -294,7 +294,7 @@ public class RsByteBuffer extends Node {
 		int i_2 = 0;
 
 		int i_3;
-		for (i_3 = this.readUnsignedSmart(2017494920); i_3 == 32767; i_3 = this.readUnsignedSmart(1731195561)) {
+		for (i_3 = this.readUnsignedSmart(); i_3 == 32767; i_3 = this.readUnsignedSmart()) {
 			i_2 += 32767;
 		}
 
@@ -531,7 +531,7 @@ public class RsByteBuffer extends Node {
 		}
 	}
 
-	public int readUnsignedSmart(int i_1) {
+	public int readUnsignedSmart() {
 		int i_2 = this.buffer[this.index] & 0xff;
 		return i_2 < 128 ? this.readUnsignedByte() : this.readUnsignedShort() - 32768;
 	}

@@ -43,7 +43,7 @@ public class ParamDefinitions {
 			Class76.method1361((byte) -9);
 			Defaults8Loader.method11156(-1284329582);
 			IndexLoaders.MAP_REGION_DECODER.method4446((byte) -33);
-			Class217_Sub1.method13056();
+			WorldDescriptor.method13056();
 			Class356.method6227(false, (byte) -17);
 			Class225_Sub6.method13413();
 			Class122.method2111(true);

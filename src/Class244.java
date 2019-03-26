@@ -1,8 +1,8 @@
 public class Class244 {
 
-	public static int anInt3003;
+	public static int WORLD_LIST_SIZEPLUS1;
 
-	static Class217_Sub1[] aClass217_Sub1Array3006;
+	static WorldDescriptor[] WORLD_LIST_DESCRIPTORS;
 
 	static int anInt3008;
 

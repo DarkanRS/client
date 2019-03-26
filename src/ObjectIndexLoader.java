@@ -172,7 +172,7 @@ public class ObjectIndexLoader {
 		return (int) (long_0 / 86400000L) - 11745;
 	}
 
-	public static Class217_Sub1 method7916(int i_0, int i_1) {
-		return Class244.aBool3007 && i_0 >= Class485.anInt5740 && i_0 <= Class244.anInt3003 ? Class244.aClass217_Sub1Array3006[i_0 - Class485.anInt5740] : null;
+	public static WorldDescriptor method7916(int i_0, int i_1) {
+		return Class244.aBool3007 && i_0 >= Class485.WORLD_LIST_START && i_0 <= Class244.WORLD_LIST_SIZEPLUS1 ? Class244.WORLD_LIST_DESCRIPTORS[i_0 - Class485.WORLD_LIST_START] : null;
 	}
 }

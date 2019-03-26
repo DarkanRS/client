@@ -103,7 +103,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4451 = new IncomingPacket(100, 0);
 	public static IncomingPacket aClass375_4452 = new IncomingPacket(101, 0);
 	public static IncomingPacket SYSTEM_UPDATE = new IncomingPacket(102, 2);
-	public static IncomingPacket aClass375_4358 = new IncomingPacket(103, -2);
+	public static IncomingPacket WORLD_LIST = new IncomingPacket(103, -2);
 	public static IncomingPacket SOUND_IDX15 = new IncomingPacket(104, 6);
 	public static IncomingPacket aClass375_4456 = new IncomingPacket(105, 6);
 	public static IncomingPacket aClass375_4457 = new IncomingPacket(106, 2);

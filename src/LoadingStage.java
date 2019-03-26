@@ -314,30 +314,30 @@ public class LoadingStage {
 			for (i_5 = 0; i_5 < i_4; i_5++) {
 				Class86.aClass482_827.append(new Class282_Sub2(rsbytebuffer_3), -1970601217);
 			}
-			i_5 = rsbytebuffer_3.readUnsignedSmart(2048992685);
+			i_5 = rsbytebuffer_3.readUnsignedSmart();
 			Class86.aClass77Array818 = new Class77[i_5];
 			for (i_6 = 0; i_6 < i_5; i_6++) {
 				Class86.aClass77Array818[i_6] = new Class77(rsbytebuffer_3);
 			}
-			i_6 = rsbytebuffer_3.readUnsignedSmart(1675978634);
+			i_6 = rsbytebuffer_3.readUnsignedSmart();
 			Class82.aClass75Array804 = new Class75[i_6];
 			int i_14;
 			for (i_14 = 0; i_14 < i_6; i_14++) {
 				Class82.aClass75Array804[i_14] = new Class75(rsbytebuffer_3, i_14);
 			}
-			i_14 = rsbytebuffer_3.readUnsignedSmart(1640275890);
+			i_14 = rsbytebuffer_3.readUnsignedSmart();
 			Class86.aClass92Array820 = new Class92[i_14];
 			int i_8;
 			for (i_8 = 0; i_8 < i_14; i_8++) {
 				Class86.aClass92Array820[i_8] = new Class92(rsbytebuffer_3);
 			}
-			i_8 = rsbytebuffer_3.readUnsignedSmart(1483471350);
+			i_8 = rsbytebuffer_3.readUnsignedSmart();
 			Class86.aClass93Array821 = new Class93[i_8];
 			int i_9;
 			for (i_9 = 0; i_9 < i_8; i_9++) {
 				Class86.aClass93Array821[i_9] = new Class93(rsbytebuffer_3);
 			}
-			i_9 = rsbytebuffer_3.readUnsignedSmart(2014961540);
+			i_9 = rsbytebuffer_3.readUnsignedSmart();
 			Class86.aClass96Array822 = new Class96[i_9];
 			for (int i_10 = 0; i_10 < i_9; i_10++) {
 				Class86.aClass96Array822[i_10] = Class16.method562(rsbytebuffer_3);

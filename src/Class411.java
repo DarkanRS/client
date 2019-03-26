@@ -71,29 +71,28 @@ public class Class411 {
 		this.anInt4957 = i_2;
 	}
 
-	static void method6912(RsByteBuffer rsbytebuffer_0) {
-		int i_2 = rsbytebuffer_0.readUnsignedSmart(1492689351);
-		Class354.aClass213Array4111 = new Class213[i_2];
-		int i_3;
-		for (i_3 = 0; i_3 < i_2; i_3++) {
-			Class354.aClass213Array4111[i_3] = new Class213();
-			Class354.aClass213Array4111[i_3].anInt2680 = rsbytebuffer_0.readUnsignedSmart(1678784961);
-			Class354.aClass213Array4111[i_3].aString2679 = rsbytebuffer_0.readGJString(-25640017);
+	static void decodeWorldList(RsByteBuffer buffer) {
+		int size = buffer.readUnsignedSmart();
+		Class354.WORLDS = new World[size];
+		for (int i = 0; i < size; i++) {
+			Class354.WORLDS[i] = new World();
+			Class354.WORLDS[i].countryId = buffer.readUnsignedSmart();
+			Class354.WORLDS[i].activity = buffer.readGJString();
 		}
-		Class485.anInt5740 = rsbytebuffer_0.readUnsignedSmart(1537539293);
-		Class244.anInt3003 = rsbytebuffer_0.readUnsignedSmart(1477928184);
-		Class4.anInt34 = rsbytebuffer_0.readUnsignedSmart(2033196684);
-		Class244.aClass217_Sub1Array3006 = new Class217_Sub1[Class244.anInt3003 - Class485.anInt5740 + 1];
-		for (i_3 = 0; i_3 < Class4.anInt34; i_3++) {
-			int i_4 = rsbytebuffer_0.readUnsignedSmart(1627362556);
-			Class217_Sub1 class217_sub1_5 = Class244.aClass217_Sub1Array3006[i_4] = new Class217_Sub1();
-			class217_sub1_5.anInt2696 = rsbytebuffer_0.readUnsignedByte();
-			class217_sub1_5.anInt2700 = rsbytebuffer_0.readInt();
-			class217_sub1_5.anInt7975 = i_4 + Class485.anInt5740;
-			class217_sub1_5.aString7977 = rsbytebuffer_0.readGJString(-1607231726);
-			class217_sub1_5.aString7976 = rsbytebuffer_0.readGJString(-157018561);
+		Class485.WORLD_LIST_START = buffer.readUnsignedSmart();
+		Class244.WORLD_LIST_SIZEPLUS1 = buffer.readUnsignedSmart();
+		Class4.WORLD_LIST_SIZE = buffer.readUnsignedSmart();
+		Class244.WORLD_LIST_DESCRIPTORS = new WorldDescriptor[Class244.WORLD_LIST_SIZEPLUS1 - Class485.WORLD_LIST_START + 1];
+		for (int i = 0; i < Class4.WORLD_LIST_SIZE; i++) {
+			int id = buffer.readUnsignedSmart();
+			WorldDescriptor world = Class244.WORLD_LIST_DESCRIPTORS[id] = new WorldDescriptor();
+			world.worldIndex = buffer.readUnsignedByte();
+			world.flags = buffer.readInt();
+			world.worldNumber = id + Class485.WORLD_LIST_START;
+			world.unknown = buffer.readGJString();
+			world.ipAddress = buffer.readGJString();
 		}
-		Class418.anInt4999 = rsbytebuffer_0.readInt();
+		Class418.WORLD_LIST_IDK = buffer.readInt();
 		Class244.aBool3007 = true;
 	}
 

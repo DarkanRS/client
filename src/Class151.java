@@ -5,24 +5,24 @@ public class Class151 {
 
 	public Class464 aClass464_1961 = new Class464();
 
-	public static void method2589(boolean bool_0, byte[] bytes_1) {
-		if (Class96_Sub20.aClass282_Sub35_9415 == null) {
-			Class96_Sub20.aClass282_Sub35_9415 = new RsByteBuffer(20000);
+	public static void decodeWorldList(boolean refresh, byte[] data) {
+		if (Class96_Sub20.WORLD_LIST_BUFFER == null) {
+			Class96_Sub20.WORLD_LIST_BUFFER = new RsByteBuffer(20000);
 		}
-		Class96_Sub20.aClass282_Sub35_9415.writeBytes(bytes_1, 0, bytes_1.length);
-		if (bool_0) {
-			Class468_Sub10.method12695(Class96_Sub20.aClass282_Sub35_9415.buffer);
-			Class448.aClass217_Sub1Array5426 = new Class217_Sub1[Class4.anInt34];
+		Class96_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
+		if (refresh) {
+			Class468_Sub10.decodeWorldList(Class96_Sub20.WORLD_LIST_BUFFER.buffer);
+			Class448.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
 			int i_3 = 0;
-			for (int i_4 = Class485.anInt5740; i_4 <= Class244.anInt3003; i_4++) {
-				Class217_Sub1 class217_sub1_5 = ObjectIndexLoader.method7916(i_4, 241978983);
-				if (class217_sub1_5 != null) {
-					Class448.aClass217_Sub1Array5426[i_3++] = class217_sub1_5;
+			for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {
+				WorldDescriptor world = ObjectIndexLoader.method7916(i_4, 241978983);
+				if (world != null) {
+					Class448.WORLD_DESCRIPTORS_BYID[i_3++] = world;
 				}
 			}
 			Class448.aBool5422 = false;
 			Class448.aLong5425 = TextureDetails.time();
-			Class96_Sub20.aClass282_Sub35_9415 = null;
+			Class96_Sub20.WORLD_LIST_BUFFER = null;
 		}
 	}
 

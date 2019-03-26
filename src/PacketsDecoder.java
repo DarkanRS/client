@@ -504,7 +504,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.GAME_MESSAGE) {
-			int key = buffer.readUnsignedSmart(1685842544);
+			int key = buffer.readUnsignedSmart();
 			int flags = buffer.readInt();
 			int i_6 = buffer.readUnsignedByte();
 			String string_42 = "";
@@ -1326,11 +1326,11 @@ public class PacketsDecoder extends Class455 {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.aClass375_4358) {
-			boolean bool_91 = buffer.readUnsignedByte() == 1;
-			byte[] bytes_107 = new byte[context.currentPacketSize - 1];
-			buffer.readBytes(bytes_107, 0, context.currentPacketSize - 1);
-			Class151.method2589(bool_91, bytes_107);
+		} else if (context.currentPacket == IncomingPacket.WORLD_LIST) {
+			boolean refresh = buffer.readUnsignedByte() == 1;
+			byte[] data = new byte[context.currentPacketSize - 1];
+			buffer.readBytes(data, 0, context.currentPacketSize - 1);
+			Class151.decodeWorldList(refresh, data);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.VARPBIT_2) {
@@ -1376,7 +1376,7 @@ public class PacketsDecoder extends Class455 {
 			int flags = buffer.readUnsignedByte();
 			int i_7, i_8, i_9;
 			for (boolean isNegativeKey = (flags & 0x1) == 1; buffer.index < context.currentPacketSize; Class282_Sub21.setItemInContainer(key, i_7, i_8 - 1, i_9, isNegativeKey)) {
-				i_7 = buffer.readUnsignedSmart(1532067241);
+				i_7 = buffer.readUnsignedSmart();
 				i_8 = buffer.readUnsignedShort();
 				i_9 = 0;
 				if (i_8 != 0) {

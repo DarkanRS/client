@@ -394,7 +394,7 @@ public class IComponentDefinitions {
 			i_12 = rsbytebuffer_1.readUnsignedByte();
 			for (i_13 = 0; i_13 < i_12; i_13++) {
 				i_14 = rsbytebuffer_1.read24BitUnsignedInteger();
-				String string_15 = rsbytebuffer_1.readGJString(162017967);
+				String string_15 = rsbytebuffer_1.readGJString();
 				this.aClass465_1365.put(new Class282_Sub47(string_15), (long) i_14);
 			}
 		}

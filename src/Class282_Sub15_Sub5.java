@@ -970,20 +970,20 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 					boolean bool_18 = true;
 					int i_10 = -1;
 					int i_9 = -1;
-					int i_19 = stream.readUnsignedSmart(1634249310);
+					int i_19 = stream.readUnsignedSmart();
 					if (i_19 == 32767) {
-						i_19 = stream.readUnsignedSmart(1927514283);
-						i_9 = stream.readUnsignedSmart(1968115481);
-						i_8 = stream.readUnsignedSmart(1841145813);
-						i_10 = stream.readUnsignedSmart(2133803964);
+						i_19 = stream.readUnsignedSmart();
+						i_9 = stream.readUnsignedSmart();
+						i_8 = stream.readUnsignedSmart();
+						i_10 = stream.readUnsignedSmart();
 					} else if (i_19 == 32766) {
 						i_19 = -1;
 						i_9 = stream.readUnsignedByteC();
 					} else {
-						i_9 = stream.readUnsignedSmart(2072861558);
+						i_9 = stream.readUnsignedSmart();
 					}
 
-					i_12 = stream.readUnsignedSmart(2132556063);
+					i_12 = stream.readUnsignedSmart();
 					player.applyHit(i_19, i_9, i_8, i_10, client.cycles, i_12, 775732782);
 				}
 			}
@@ -991,10 +991,10 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			int i_7 = stream.readUnsignedByte();
 			if (i_7 > 0) {
 				for (int i_8 = 0; i_8 < i_7; i_8++) {
-					int i_9 = stream.readUnsignedSmart(1729379803);
-					int i_10 = stream.readUnsignedSmart(1506698812);
+					int i_9 = stream.readUnsignedSmart();
+					int i_10 = stream.readUnsignedSmart();
 					if (i_10 != 32767) {
-						int i_19 = stream.readUnsignedSmart(1806128568);
+						int i_19 = stream.readUnsignedSmart();
 						i_12 = stream.readUnsigned128Byte();
 						int i_13 = i_10 > 0 ? stream.readUnsignedByte128() : i_12;
 						player.displayHitbar(i_9, client.cycles, i_10, i_19, i_12, i_13);

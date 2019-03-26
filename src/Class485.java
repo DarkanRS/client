@@ -1,6 +1,6 @@
 public class Class485 {
 
-	public static int anInt5740;
+	public static int WORLD_LIST_START;
 
 	Class485() throws Throwable {
 		throw new Error();

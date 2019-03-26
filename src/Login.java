@@ -181,7 +181,7 @@ public class Login {
 					Class9.aClass184_73.getConnection().read(Class9.aClass184_73.recievedBuffer.buffer, 0, Class9.aClass184_73.recievedBuffer.index);
 					Class9.aClass184_73.recievedBuffer.method13100(Class500.anIntArray5827, 1168221158);
 					Class9.aClass184_73.recievedBuffer.index = 0;
-					String string_18 = Class9.aClass184_73.recievedBuffer.readGJString(-1864555618);
+					String string_18 = Class9.aClass184_73.recievedBuffer.readGJString();
 					Class9.aClass184_73.recievedBuffer.index = 0;
 					String string_11 = Class361.aClass361_4176.method6253((byte) -35);
 					if (!client.aBool7310 || !Class186.method3082(string_18, 1, string_11)) {
@@ -487,7 +487,7 @@ public class Login {
 							Class96_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
 							Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
 							Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;
-							VertexNormal.myPlayer.displayName = VertexNormal.myPlayer.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString(540818903);
+							VertexNormal.myPlayer.displayName = VertexNormal.myPlayer.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString();
 							RegionMap.anInt3644 = rsbitsbuffer_19.readUnsignedByte();
 							Class121.anInt1526 = rsbitsbuffer_19.readInt();
 							client.aBool7323 = rsbitsbuffer_19.readUnsignedByte() == 1;
@@ -496,7 +496,7 @@ public class Login {
 							if (Class448.aClass450_5421.worldId == 65535) {
 								Class448.aClass450_5421.worldId = -1;
 							}
-							Class448.aClass450_5421.host = rsbitsbuffer_19.readGJString(-1718279524);
+							Class448.aClass450_5421.host = rsbitsbuffer_19.readGJString();
 							if (Class90.aClass496_952 != Class496.aClass496_5813) {
 								Class448.aClass450_5421.anInt5434 = Class448.aClass450_5421.worldId * -1708079975 + 1140744768;
 								Class448.aClass450_5421.anInt5437 = Class448.aClass450_5421.worldId * -1473668237 + 1047080176;

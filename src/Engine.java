@@ -249,9 +249,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 					i_12 = rsbytebuffer_11.readUnsignedByte();
 				}
 				if (i_10 <= 2) {
-					string_6 = rsbytebuffer_11.readGJString(413750486);
+					string_6 = rsbytebuffer_11.readGJString();
 					if (i_12 == 1) {
-						string_7 = rsbytebuffer_11.readGJString(633964103);
+						string_7 = rsbytebuffer_11.readGJString();
 					}
 				} else {
 					string_6 = rsbytebuffer_11.method13248(-961534937);

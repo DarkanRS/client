@@ -1,25 +1,23 @@
 public abstract class Class217 {
 
-	int anInt2696;
+	int worldIndex;
+	public int flags;
+	public int playerCount;
 
-	public int anInt2700;
-
-	public int anInt2701;
-
-	public boolean method3680() {
-		return (this.anInt2700 & 0x1) != 0;
+	public boolean isMembers() {
+		return (this.flags & 0x1) != 0;
 	}
 
-	public boolean method3681(int i_1) {
-		return (this.anInt2700 & 0x2) != 0;
+	public boolean is0x2() {
+		return (this.flags & 0x2) != 0;
 	}
 
-	public boolean method3682(short s_1) {
-		return (this.anInt2700 & 0x4) != 0;
+	public boolean is0x4() {
+		return (this.flags & 0x4) != 0;
 	}
 
-	public boolean method3683() {
-		return (this.anInt2700 & 0x8) != 0;
+	public boolean isLootshare() {
+		return (this.flags & 0x8) != 0;
 	}
 
 	public static void method3690(Index index_0, int i_1, int i_3, Class282_Sub15_Sub2 class282_sub15_sub2_5) {

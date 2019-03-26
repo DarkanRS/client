@@ -10,13 +10,13 @@ public class Class96_Sub12 extends Class96 {
 
 	public void method1592() {
 		if (client.CURRENT_CUTSCENE != -1) {
-			Class213.method3661(client.CURRENT_CUTSCENE, this.aString9318, this.anInt9317, (byte) -117);
+			World.method3661(client.CURRENT_CUTSCENE, this.aString9318, this.anInt9317, (byte) -117);
 		}
 	}
 
 	public void method1601() {
 		if (-1638311881 * client.CURRENT_CUTSCENE * -593633913 != -1) {
-			Class213.method3661(-1638311881 * client.CURRENT_CUTSCENE * -593633913, this.aString9318, this.anInt9317 * 766796665 * 1635620553, (byte) -111);
+			World.method3661(-1638311881 * client.CURRENT_CUTSCENE * -593633913, this.aString9318, this.anInt9317 * 766796665 * 1635620553, (byte) -111);
 		}
 	}
 

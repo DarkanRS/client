@@ -88,9 +88,9 @@ public class QuestDefinitions {
 
 	void method4094(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.name = rsbytebuffer_1.readGJString(-1054894786);
+			this.name = rsbytebuffer_1.readGJString();
 		} else if (i_2 == 2) {
-			this.altName = rsbytebuffer_1.readGJString(-1501893281);
+			this.altName = rsbytebuffer_1.readGJString();
 		} else {
 			int i_4;
 			int i_5;

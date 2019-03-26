@@ -67,12 +67,12 @@ public class Class468_Sub1 extends Preference {
 		return Class86.method1481(Class149_Sub2.DEFAULTS_LOADER_7.aClass232_5877, (byte) 78);
 	}
 
-	static int method12620(Class217_Sub1 class217_sub1_0, Class217_Sub1 class217_sub1_1, int i_2, boolean bool_3, int i_4) {
+	static int method12620(WorldDescriptor world1, WorldDescriptor world2, int i_2, boolean bool_3, int i_4) {
 		int i_5;
 		int i_6;
 		if (i_2 == 1) {
-			i_5 = class217_sub1_0.anInt2701;
-			i_6 = class217_sub1_1.anInt2701;
+			i_5 = world1.playerCount;
+			i_6 = world2.playerCount;
 			if (!bool_3) {
 				if (i_5 == -1) {
 					i_5 = 2001;
@@ -85,20 +85,20 @@ public class Class468_Sub1 extends Preference {
 
 			return i_5 - i_6;
 		} else if (i_2 == 2) {
-			return Class455.method7557(class217_sub1_0.method13055((short) -16309).aString2679, class217_sub1_1.method13055((short) -9222).aString2679, Class223.CURRENT_LANGUAGE);
+			return Class455.method7557(world1.getWorld().activity, world2.getWorld().activity, Class223.CURRENT_LANGUAGE);
 		} else if (i_2 == 3) {
-			return class217_sub1_0.aString7977.equals("-") ? (class217_sub1_1.aString7977.equals("-") ? 0 : (bool_3 ? -1 : 1)) : (class217_sub1_1.aString7977.equals("-") ? (bool_3 ? 1 : -1) : Class455.method7557(class217_sub1_0.aString7977, class217_sub1_1.aString7977, Class223.CURRENT_LANGUAGE));
+			return world1.unknown.equals("-") ? (world2.unknown.equals("-") ? 0 : (bool_3 ? -1 : 1)) : (world2.unknown.equals("-") ? (bool_3 ? 1 : -1) : Class455.method7557(world1.unknown, world2.unknown, Class223.CURRENT_LANGUAGE));
 		} else if (i_2 == 4) {
-			return class217_sub1_0.method3683() ? (class217_sub1_1.method3683() ? 0 : 1) : (class217_sub1_1.method3683() ? -1 : 0);
+			return world1.isLootshare() ? (world2.isLootshare() ? 0 : 1) : (world2.isLootshare() ? -1 : 0);
 		} else if (i_2 == 5) {
-			return class217_sub1_0.method3681(-2014911671) ? (class217_sub1_1.method3681(279232100) ? 0 : 1) : (class217_sub1_1.method3681(-1241607378) ? -1 : 0);
+			return world1.is0x2() ? (world2.is0x2() ? 0 : 1) : (world2.is0x2() ? -1 : 0);
 		} else if (i_2 == 6) {
-			return class217_sub1_0.method3682((short) -32433) ? (class217_sub1_1.method3682((short) -19177) ? 0 : 1) : (class217_sub1_1.method3682((short) -3375) ? -1 : 0);
+			return world1.is0x4() ? (world2.is0x4() ? 0 : 1) : (world2.is0x4() ? -1 : 0);
 		} else if (i_2 == 7) {
-			return class217_sub1_0.method3680() ? (class217_sub1_1.method3680() ? 0 : 1) : (class217_sub1_1.method3680() ? -1 : 0);
+			return world1.isMembers() ? (world2.isMembers() ? 0 : 1) : (world2.isMembers() ? -1 : 0);
 		} else if (i_2 == 8) {
-			i_5 = class217_sub1_0.anInt7978;
-			i_6 = class217_sub1_1.anInt7978;
+			i_5 = world1.anInt7978;
+			i_6 = world2.anInt7978;
 			if (bool_3) {
 				if (i_5 == 1000) {
 					i_5 = -1;
@@ -119,7 +119,7 @@ public class Class468_Sub1 extends Preference {
 
 			return i_5 - i_6;
 		} else {
-			return class217_sub1_0.anInt7975 - class217_sub1_1.anInt7975;
+			return world1.worldNumber - world2.worldNumber;
 		}
 	}
 

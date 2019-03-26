@@ -178,29 +178,29 @@ public class Class14 {
 						i_7 = -1;
 						boolean bool_23 = true;
 						i_9 = -1;
-						i_10 = buffer.readUnsignedSmart(1828814034);
+						i_10 = buffer.readUnsignedSmart();
 						if (i_10 == 32767) {
-							i_10 = buffer.readUnsignedSmart(1784037348);
-							i_8 = buffer.readUnsignedSmart(1685424814);
-							i_7 = buffer.readUnsignedSmart(1522141109);
-							i_9 = buffer.readUnsignedSmart(1916421564);
+							i_10 = buffer.readUnsignedSmart();
+							i_8 = buffer.readUnsignedSmart();
+							i_7 = buffer.readUnsignedSmart();
+							i_9 = buffer.readUnsignedSmart();
 						} else if (i_10 != 32766) {
-							i_8 = buffer.readUnsignedSmart(2083838398);
+							i_8 = buffer.readUnsignedSmart();
 						} else {
 							i_10 = -1;
 							i_8 = buffer.readUnsignedByte();
 						}
-						i_11 = buffer.readUnsignedSmart(1905070758);
+						i_11 = buffer.readUnsignedSmart();
 						npc.applyHit(i_10, i_8, i_7, i_9, client.cycles, i_11, 1810678734);
 					}
 				}
 				i_6 = buffer.readUnsignedByte128();
 				if (i_6 > 0) {
 					for (i_7 = 0; i_7 < i_6; i_7++) {
-						i_8 = buffer.readUnsignedSmart(2098648600);
-						i_9 = buffer.readUnsignedSmart(2076092492);
+						i_8 = buffer.readUnsignedSmart();
+						i_9 = buffer.readUnsignedSmart();
 						if (i_9 != 32767) {
-							i_10 = buffer.readUnsignedSmart(1675414519);
+							i_10 = buffer.readUnsignedSmart();
 							i_11 = buffer.readUnsigned128Byte();
 							i_12 = i_9 > 0 ? buffer.readUnsignedByte128() : i_11;
 							npc.displayHitbar(i_8, client.cycles, i_9, i_10, i_11, i_12);

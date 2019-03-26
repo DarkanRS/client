@@ -5,7 +5,7 @@ public class Class93 {
 	int[] anIntArray968;
 
 	Class93(RsByteBuffer rsbytebuffer_1) {
-		int i_2 = rsbytebuffer_1.readUnsignedSmart(1738391980);
+		int i_2 = rsbytebuffer_1.readUnsignedSmart();
 		this.anIntArray971 = new int[i_2];
 		this.anIntArray968 = new int[i_2];
 		for (int i_3 = 0; i_3 < i_2; i_3++) {

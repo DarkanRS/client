@@ -375,9 +375,9 @@ public class ObjectDefinitions {
 			} else if (opcode == 169) {
 				this.aBool5700 = true;
 			} else if (opcode == 170) {
-				this.anInt5684 = buffer.readUnsignedSmart(1632519186);
+				this.anInt5684 = buffer.readUnsignedSmart();
 			} else if (opcode == 171) {
-				this.anInt5658 = buffer.readUnsignedSmart(1916118902);
+				this.anInt5658 = buffer.readUnsignedSmart();
 			} else if (opcode == 173) {
 				this.anInt5708 = buffer.readUnsignedShort();
 				this.anInt5709 = buffer.readUnsignedShort();

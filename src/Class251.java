@@ -334,7 +334,7 @@ public final class Class251 {
 			while (true) {
 				int i_13;
 				while (!bool_12) {
-					i_13 = rsbytebuffer_8.readUnsignedSmart(1841377249);
+					i_13 = rsbytebuffer_8.readUnsignedSmart();
 					if (i_13 == 0) {
 						continue label56;
 					}
@@ -354,7 +354,7 @@ public final class Class251 {
 						}
 					}
 				}
-				i_13 = rsbytebuffer_8.readUnsignedSmart(1964048281);
+				i_13 = rsbytebuffer_8.readUnsignedSmart();
 				if (i_13 == 0) {
 					break;
 				}

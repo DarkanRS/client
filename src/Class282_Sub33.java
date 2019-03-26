@@ -30,7 +30,7 @@ public class Class282_Sub33 extends Node {
 
 	static String method12582(RsByteBuffer rsbytebuffer_0) {
 		try {
-			int i_4 = rsbytebuffer_0.readUnsignedSmart(1694471636);
+			int i_4 = rsbytebuffer_0.readUnsignedSmart();
 			if (i_4 > 32767) {
 				i_4 = 32767;
 			}

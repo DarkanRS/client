@@ -52,7 +52,7 @@ public class NPCDirection implements Identifiable {
 		return 764906751 * this.direction * 431977215;
 	}
 
-	static int method4325(Class217_Sub1 class217_sub1_0, Class217_Sub1 class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5) {
+	static int method4325(WorldDescriptor class217_sub1_0, WorldDescriptor class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5) {
 		int i_7 = Class468_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_2, bool_3, -1139598282);
 		if (i_7 != 0) {
 			return bool_3 ? -i_7 : i_7;

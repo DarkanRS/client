@@ -3,7 +3,7 @@ public class Class456_Sub2 extends Animation {
 	Class521_Sub1 aClass521_Sub1_7890;
 
 	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
-		Class213.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_7890);
+		World.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_7890);
 	}
 
 	Class456_Sub2(Class521_Sub1 class521_sub1_1) {

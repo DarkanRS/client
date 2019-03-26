@@ -47,7 +47,7 @@ public class HitsplatDefinitions {
 		} else if (i_2 == 7) {
 			this.anInt2846 = rsbytebuffer_1.readShort();
 		} else if (i_2 == 8) {
-			this.aString2840 = rsbytebuffer_1.readGJString(-474041225);
+			this.aString2840 = rsbytebuffer_1.readGJString();
 		} else if (i_2 == 9) {
 			this.anInt2841 = rsbytebuffer_1.readUnsignedShort();
 		} else if (i_2 == 10) {

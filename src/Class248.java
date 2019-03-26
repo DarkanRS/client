@@ -288,18 +288,18 @@ public class Class248 {
 		}
 
 		for (int i_3 = 0; i_3 < 10; i_3++) {
-			int i_4 = rsbytebuffer_1.readUnsignedSmart(1540376060);
+			int i_4 = rsbytebuffer_1.readUnsignedSmart();
 			if (i_4 == 0) {
 				break;
 			}
 
 			this.anIntArray3063[i_3] = i_4;
 			this.anIntArray3064[i_3] = rsbytebuffer_1.readSmart();
-			this.anIntArray3065[i_3] = rsbytebuffer_1.readUnsignedSmart(1861176061);
+			this.anIntArray3065[i_3] = rsbytebuffer_1.readUnsignedSmart();
 		}
 
-		this.anInt3069 = rsbytebuffer_1.readUnsignedSmart(1985177971);
-		this.anInt3067 = rsbytebuffer_1.readUnsignedSmart(1862978797);
+		this.anInt3069 = rsbytebuffer_1.readUnsignedSmart();
+		this.anInt3067 = rsbytebuffer_1.readUnsignedSmart();
 		this.anInt3055 = rsbytebuffer_1.readUnsignedShort();
 		this.anInt3076 = rsbytebuffer_1.readUnsignedShort();
 		this.aClass270_3068 = new Class270();

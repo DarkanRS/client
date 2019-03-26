@@ -4423,16 +4423,16 @@ public class CS2Interpreter {
 
 	static final void method1387(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class217_Sub1 class217_sub1_3 = ObjectIndexLoader.method7916(i_2, 1517040496);
+		WorldDescriptor class217_sub1_3 = ObjectIndexLoader.method7916(i_2, 1517040496);
 		if (class217_sub1_3 != null) {
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.anInt2700;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.aString7977;
-			Class213 class213_4 = class217_sub1_3.method13055((short) -22599);
-			executor.intStack[++executor.intStackPtr - 1] = class213_4.anInt2680;
-			executor.stringStack[++executor.stringStackPtr - 1] = class213_4.aString2679;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.anInt2701;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.flags;
+			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.unknown;
+			World class213_4 = class217_sub1_3.getWorld();
+			executor.intStack[++executor.intStackPtr - 1] = class213_4.countryId;
+			executor.stringStack[++executor.stringStackPtr - 1] = class213_4.activity;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.playerCount;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.anInt7978;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.aString7976;
+			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
@@ -7217,7 +7217,7 @@ public class CS2Interpreter {
 			} else {
 				Class448.aBool5422 = true;
 				TCPPacket tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4613, client.connectionContext.isaac, 1318116976);
-				tcpmessage_2.buffer.writeInt(Class418.anInt4999);
+				tcpmessage_2.buffer.writeInt(Class418.WORLD_LIST_IDK);
 				client.connectionContext.queuePacket(tcpmessage_2);
 				executor.intStack[++executor.intStackPtr - 1] = 0;
 			}
@@ -7983,17 +7983,17 @@ public class CS2Interpreter {
 	}
 
 	static final void method11244(CS2Executor executor) {
-		Class217_Sub1 class217_sub1_2 = Class77.method1368(1851142340);
+		WorldDescriptor class217_sub1_2 = Class77.method1368(1851142340);
 		if (class217_sub1_2 != null) {
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt7975;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt2700;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.aString7977;
-			Class213 class213_3 = class217_sub1_2.method13055((short) -24683);
-			executor.intStack[++executor.intStackPtr - 1] = class213_3.anInt2680;
-			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.aString2679;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt2701;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.worldNumber;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.flags;
+			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.unknown;
+			World class213_3 = class217_sub1_2.getWorld();
+			executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
+			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt7978;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.aString7976;
+			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -8087,8 +8087,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method3039(CS2Executor executor) {
-		Class217_Sub1 class217_sub1_2 = IsaacCipher.method7266();
-		executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2 == null ? 0 : class217_sub1_2.anInt2700;
+		WorldDescriptor class217_sub1_2 = IsaacCipher.method7266();
+		executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2 == null ? 0 : class217_sub1_2.flags;
 	}
 
 	static final void method3041(CS2Executor executor) {
@@ -8170,17 +8170,17 @@ public class CS2Interpreter {
 	}
 
 	static final void method6374(CS2Executor executor) {
-		Class217_Sub1 class217_sub1_2 = Class468_Sub2.method12629();
+		WorldDescriptor class217_sub1_2 = Class468_Sub2.method12629();
 		if (class217_sub1_2 != null) {
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt7975;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt2700;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.aString7977;
-			Class213 class213_3 = class217_sub1_2.method13055((short) -23628);
-			executor.intStack[++executor.intStackPtr - 1] = class213_3.anInt2680;
-			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.aString2679;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt2701;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.worldNumber;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.flags;
+			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.unknown;
+			World class213_3 = class217_sub1_2.getWorld();
+			executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
+			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt7978;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.aString7976;
+			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 			executor.intStack[++executor.intStackPtr - 1] = 0;
