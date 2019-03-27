@@ -61,7 +61,7 @@ public class Class397 implements Interface38 {
 			}
 			class282_sub48_8.anInt8079 = i_9 + i_1 << 9;
 			class282_sub48_8.anInt8077 = i_10 + i_2 << 9;
-			class282_sub48_8.anInt8095 = objectdefinitions_4.ambientSoundId;
+			class282_sub48_8.soundEffectId = objectdefinitions_4.ambientSoundId;
 			class282_sub48_8.aBool8098 = objectdefinitions_4.aBool5696;
 			class282_sub48_8.anInt8105 = objectdefinitions_4.ambientSoundHearDistance << 9;
 			class282_sub48_8.anInt8089 = objectdefinitions_4.ambientSoundVolume;
@@ -90,7 +90,7 @@ public class Class397 implements Interface38 {
 			if (npcdefinitions_11 != null) {
 				class282_sub48_8.anInt8079 = npcdefinitions_11.anInt4858 + i_1 << 9;
 				class282_sub48_8.anInt8077 = i_2 + npcdefinitions_11.anInt4858 << 9;
-				class282_sub48_8.anInt8095 = Class282_Sub11_Sub1.method15433(npc_5);
+				class282_sub48_8.soundEffectId = Class282_Sub11_Sub1.method15433(npc_5);
 				class282_sub48_8.aBool8098 = npcdefinitions_11.aBool4872;
 				class282_sub48_8.anInt8105 = npcdefinitions_11.anInt4907 << 9;
 				class282_sub48_8.anInt8089 = npcdefinitions_11.anInt4909;
@@ -103,7 +103,7 @@ public class Class397 implements Interface38 {
 			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub1_8086 = player_6;
 			class282_sub48_8.anInt8079 = i_1 + player_6.getSize() << 9;
 			class282_sub48_8.anInt8077 = i_2 + player_6.getSize() << 9;
-			class282_sub48_8.anInt8095 = Class149_Sub2.method14610(player_6, 1888639983);
+			class282_sub48_8.soundEffectId = Class149_Sub2.method14610(player_6, 1888639983);
 			class282_sub48_8.aBool8098 = player_6.isTransformedNPC;
 			class282_sub48_8.anInt8105 = player_6.isNpc << 9;
 			class282_sub48_8.anInt8089 = player_6.anInt10566;

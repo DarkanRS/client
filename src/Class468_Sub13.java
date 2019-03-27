@@ -22,7 +22,7 @@ public class Class468_Sub13 extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	public int method12714(int i_1) {
+	public int method12714() {
 		return this.anInt5578;
 	}
 

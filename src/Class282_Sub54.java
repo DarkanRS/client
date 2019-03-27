@@ -319,7 +319,7 @@ public class Class282_Sub54 extends Node {
 		if (i_2 >= 20) {
 			this.aClass468_Sub13_8227 = new Class468_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
 		} else {
-			this.aClass468_Sub13_8227 = new Class468_Sub13(this.aClass468_Sub13_8225.method12714(1536477085), this);
+			this.aClass468_Sub13_8227 = new Class468_Sub13(this.aClass468_Sub13_8225.method12714(), this);
 		}
 
 		this.aClass468_Sub13_8228 = new Class468_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
@@ -327,7 +327,7 @@ public class Class282_Sub54 extends Node {
 		if (i_2 >= 21) {
 			this.aClass468_Sub13_8229 = new Class468_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
 		} else {
-			this.aClass468_Sub13_8229 = new Class468_Sub13(this.aClass468_Sub13_8228.method12714(1602734923), this);
+			this.aClass468_Sub13_8229 = new Class468_Sub13(this.aClass468_Sub13_8228.method12714(), this);
 		}
 
 		if (i_2 >= 1) {
@@ -434,11 +434,11 @@ public class Class282_Sub54 extends Node {
 		rsbytebuffer_2.writeByte(this.aClass468_Sub11_8217.method12699((byte) -71));
 		rsbytebuffer_2.writeByte(this.safeMode.getValue((byte) -54));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub3_8199.method12632(793302253));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8225.method12714(1537092634));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8193.method12714(-2033162521));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8227.method12714(-1613359935));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8228.method12714(-416727286));
-		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8229.method12714(1813865542));
+		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8225.method12714());
+		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8193.method12714());
+		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8227.method12714());
+		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8228.method12714());
+		rsbytebuffer_2.writeByte(this.aClass468_Sub13_8229.method12714());
 		rsbytebuffer_2.writeByte(this.aClass468_Sub10_8215.method12691(-1240240085));
 		return rsbytebuffer_2;
 	}

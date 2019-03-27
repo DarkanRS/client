@@ -348,7 +348,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 
 	public final void method15910(int i_1) {
 		this.aBool10398 = true;
-		Class305 class305_3 = new Class305(this.method11166());
+		Position class305_3 = new Position(this.method11166());
 		class305_3.aClass385_3595.x = (float) ((double) class305_3.aClass385_3595.x + this.aDouble10394 * (double) i_1);
 		class305_3.aClass385_3595.z = (float) ((double) class305_3.aClass385_3595.z + this.aDouble10395 * (double) i_1);
 		if (this.aBool10400) {

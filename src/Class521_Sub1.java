@@ -1,4 +1,4 @@
-public abstract class Class521_Sub1 extends Class521 {
+public abstract class Class521_Sub1 extends Transform {
 
 	Class521_Sub1 aClass521_Sub1_7966;
 

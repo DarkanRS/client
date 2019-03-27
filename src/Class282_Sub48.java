@@ -14,7 +14,7 @@ public class Class282_Sub48 extends Node {
 
 	Player aClass521_Sub1_Sub1_Sub2_Sub1_8086;
 
-	Class282_Sub18 aClass282_Sub18_8087;
+	MIDIInstrument aClass282_Sub18_8087;
 
 	boolean aBool8092;
 
@@ -32,7 +32,7 @@ public class Class282_Sub48 extends Node {
 
 	static IterableNodeMap aClass465_8075 = new IterableNodeMap(16);
 
-	int anInt8095;
+	int soundEffectId;
 
 	boolean aBool8098;
 
@@ -58,17 +58,17 @@ public class Class282_Sub48 extends Node {
 
 	Class282_Sub26_Sub1_Sub1 aClass282_Sub26_Sub1_Sub1_8082;
 
-	Class282_Sub18 aClass282_Sub18_8097;
+	MIDIInstrument aClass282_Sub18_8097;
 
 	int anInt8091 = 0;
 
 	void method13426() {
-		int i_2 = this.anInt8095;
+		int i_2 = this.soundEffectId;
 		boolean bool_3 = this.aBool8098;
 		if (this.aClass478_8104 != null) {
 			ObjectDefinitions objectdefinitions_4 = this.aClass478_8104.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 46);
 			if (objectdefinitions_4 != null) {
-				this.anInt8095 = objectdefinitions_4.ambientSoundId;
+				this.soundEffectId = objectdefinitions_4.ambientSoundId;
 				this.aBool8098 = objectdefinitions_4.aBool5696;
 				this.anInt8105 = objectdefinitions_4.ambientSoundHearDistance << 9;
 				this.anInt8089 = objectdefinitions_4.ambientSoundVolume;
@@ -79,7 +79,7 @@ public class Class282_Sub48 extends Node {
 				this.anInt8094 = objectdefinitions_4.anInt5709;
 				this.anInt8093 = objectdefinitions_4.anInt5708;
 			} else {
-				this.anInt8095 = -1;
+				this.soundEffectId = -1;
 				this.aBool8098 = false;
 				this.anInt8105 = 0;
 				this.anInt8089 = 0;
@@ -94,7 +94,7 @@ public class Class282_Sub48 extends Node {
 		} else if (this.aClass521_Sub1_Sub1_Sub2_Sub2_8085 != null) {
 			int i_6 = Class282_Sub11_Sub1.method15433(this.aClass521_Sub1_Sub1_Sub2_Sub2_8085);
 			if (i_2 != i_6) {
-				this.anInt8095 = i_6;
+				this.soundEffectId = i_6;
 				NPCDefinitions npcdefinitions_5 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions;
 				if (npcdefinitions_5.anIntArray4886 != null) {
 					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
@@ -116,7 +116,7 @@ public class Class282_Sub48 extends Node {
 				}
 			}
 		} else if (this.aClass521_Sub1_Sub1_Sub2_Sub1_8086 != null) {
-			this.anInt8095 = Class149_Sub2.method14610(this.aClass521_Sub1_Sub1_Sub2_Sub1_8086, 2122332185);
+			this.soundEffectId = Class149_Sub2.method14610(this.aClass521_Sub1_Sub1_Sub2_Sub1_8086, 2122332185);
 			this.aBool8098 = this.aClass521_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC;
 			this.anInt8105 = this.aClass521_Sub1_Sub1_Sub2_Sub1_8086.isNpc << 9;
 			this.anInt8081 = 0;
@@ -124,7 +124,7 @@ public class Class282_Sub48 extends Node {
 			this.anInt8094 = 256;
 			this.anInt8093 = 256;
 		}
-		if ((i_2 != this.anInt8095 || bool_3 != this.aBool8098) && this.aClass282_Sub15_Sub5_8099 != null) {
+		if ((i_2 != this.soundEffectId || bool_3 != this.aBool8098) && this.aClass282_Sub15_Sub5_8099 != null) {
 			Class79.aClass282_Sub15_Sub4_783.method15276(this.aClass282_Sub15_Sub5_8099);
 			this.aClass282_Sub15_Sub5_8099 = null;
 			this.aClass282_Sub26_Sub1_Sub1_8082 = null;

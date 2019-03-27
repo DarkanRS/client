@@ -38,7 +38,7 @@ public class Class282_Sub26_Sub1_Sub1 extends Class282_Sub26_Sub1 {
 		return this.aFloatArray10304 != null && this.aFloatArray10304.length != 0 ? new Class282_Sub15_Sub5_Sub1(this, i_1, i_2, i_3) : null;
 	}
 
-	Class282_Sub26_Sub1_Sub1(int i_1, Class282_Sub18 class282_sub18_2, float[] floats_3, int i_4, int i_5, boolean bool_6) {
+	Class282_Sub26_Sub1_Sub1(int i_1, MIDIInstrument class282_sub18_2, float[] floats_3, int i_4, int i_5, boolean bool_6) {
 		this.anInt9750 = i_1;
 		this.aFloatArray10304 = floats_3;
 		this.anInt9749 = i_4;

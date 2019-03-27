@@ -3,19 +3,12 @@ public class DefaultsFile {
 	static Class194 aClass194_6967;
 
 	public static DefaultsFile FILE_1 = new DefaultsFile(1);
-
 	static DefaultsFile FILE_2 = new DefaultsFile(2);
-
 	static DefaultsFile FILE_3 = new DefaultsFile(3);
-
 	public static DefaultsFile FILE_4 = new DefaultsFile(4);
-
 	static DefaultsFile FILE_5 = new DefaultsFile(5);
-
 	static DefaultsFile FILE_6 = new DefaultsFile(6);
-
 	static DefaultsFile FILE_7 = new DefaultsFile(7);
-
 	static DefaultsFile FILE_8 = new DefaultsFile(8);
 
 	public int fileId;

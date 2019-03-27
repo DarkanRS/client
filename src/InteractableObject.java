@@ -49,7 +49,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 				graphicalrenderer_1.method8456(class151_6);
 			}
 			this.aBool10512 = meshrasterizer_3.i() || this.aClass123_10509.aClass539_1538 != null;
-			Class305 class305_7 = this.method11166();
+			Position class305_7 = this.method11166();
 			if (this.aClass200_10510 == null) {
 				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_7.aClass385_3595.x, (int) class305_7.aClass385_3595.y, (int) class305_7.aClass385_3595.z, meshrasterizer_3, (byte) -19);
 			} else {
@@ -173,7 +173,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 				graphicalrenderer_1.method8456(class151_5);
 			}
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
-			Class305 class305_6 = this.method11166();
+			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
 				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 1);
 			} else {
@@ -233,7 +233,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 				graphicalrenderer_1.method8456(class151_5);
 			}
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
-			Class305 class305_6 = this.method11166();
+			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
 				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 4);
 			} else {
@@ -260,7 +260,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 				graphicalrenderer_1.method8456(class151_5);
 			}
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
-			Class305 class305_6 = this.method11166();
+			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
 				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) -21);
 			} else {

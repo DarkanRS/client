@@ -42,7 +42,7 @@ public class Class383 implements Interface41 {
 	}
 
 	public static Class268 method6509(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (Class393.preferences.aClass468_Sub13_8225.method12714(-784920848) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+		if (Class393.preferences.aClass468_Sub13_8225.method12714() != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
 			Class268 class268_7 = new Class268((byte) 1, i_0, i_1, i_2, i_3, i_4, i_5, (Class521_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
 			return class268_7;

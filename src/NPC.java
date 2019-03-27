@@ -369,7 +369,7 @@ public class NPC extends Animable {
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
 		if (this.definitions != null && this.method16158(graphicalrenderer_1, 526336, (byte) -27)) {
 			Matrix44Var matrix44var_2 = this.method11168();
-			Class305 class305_3 = this.method11166();
+			Position class305_3 = this.method11166();
 			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 			int i_5 = this.aClass19_10359.method578();
 			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
@@ -456,7 +456,7 @@ public class NPC extends Animable {
 	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		if (this.definitions != null && this.method16158(graphicalrenderer_1, 526336, (byte) 26)) {
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			Matrix44Var matrix44var_5 = graphicalrenderer_1.method8450();
 			int i_6 = this.aClass19_10359.method578();
 			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
@@ -538,7 +538,7 @@ public class NPC extends Animable {
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
 		if (this.definitions != null && this.method16158(graphicalrenderer_1, 526336, (byte) -14)) {
 			Matrix44Var matrix44var_2 = this.method11168();
-			Class305 class305_3 = this.method11166();
+			Position class305_3 = this.method11166();
 			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 			int i_5 = this.aClass19_10359.method578();
 			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
@@ -825,7 +825,7 @@ public class NPC extends Animable {
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
 		if (this.definitions != null && this.method16158(graphicalrenderer_1, 526336, (byte) 37)) {
 			Matrix44Var matrix44var_2 = this.method11168();
-			Class305 class305_3 = this.method11166();
+			Position class305_3 = this.method11166();
 			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 			int i_5 = this.aClass19_10359.method578();
 			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];

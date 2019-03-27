@@ -24,11 +24,11 @@ public class Class250 {
 		} else if (ints_3 != null && ints_3[0] <= 0) {
 			return null;
 		} else {
-			Class343 class343_9 = Class343.method6094(this.aClass317_3091, i_1, i_2);
+			SoundEffect class343_9 = SoundEffect.getSoundEffect(this.aClass317_3091, i_1, i_2);
 			if (class343_9 == null) {
 				return null;
 			} else {
-				class282_sub26_sub1_sub2_8 = class343_9.method6089();
+				class282_sub26_sub1_sub2_8 = class343_9.getMixedAudio();
 				this.aClass465_3089.put(class282_sub26_sub1_sub2_8, long_6);
 				if (ints_3 != null) {
 					ints_3[0] -= class282_sub26_sub1_sub2_8.aByteArray10470.length;
@@ -48,9 +48,9 @@ public class Class250 {
 		} else if (ints_3 != null && ints_3[0] <= 0) {
 			return null;
 		} else {
-			Class282_Sub18 class282_sub18_9 = (Class282_Sub18) this.aClass465_3087.get(long_6);
+			MIDIInstrument class282_sub18_9 = (MIDIInstrument) this.aClass465_3087.get(long_6);
 			if (class282_sub18_9 == null) {
-				class282_sub18_9 = Class282_Sub18.method12271(this.aClass317_3088, i_1, i_2);
+				class282_sub18_9 = MIDIInstrument.method12271(this.aClass317_3088, i_1, i_2);
 				if (class282_sub18_9 == null) {
 					return null;
 				}

@@ -499,7 +499,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			i_3 = -this.anInt10317;
 		}
 
-		Class305 class305_4 = this.method11166();
+		Position class305_4 = this.method11166();
 		int i_5 = (int) class305_4.aClass385_3595.x >> 9;
 		int i_6 = (int) class305_4.aClass385_3595.z >> 9;
 		if (this.aClass206_7970 != null && i_5 >= 1 && i_6 >= 1 && i_5 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(2033491837) - 1 && i_6 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-2135239532) - 1) {

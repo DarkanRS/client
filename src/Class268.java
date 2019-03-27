@@ -1,10 +1,10 @@
 public class Class268 {
 
-	Class282_Sub18 aClass282_Sub18_3294;
+	MIDIInstrument aClass282_Sub18_3294;
 
 	Class282_Sub26_Sub1_Sub1 aClass282_Sub26_Sub1_Sub1_3296;
 
-	Class343 aClass343_3303;
+	SoundEffect soundEffect;
 
 	Class282_Sub15_Sub5 aClass282_Sub15_Sub5_3304;
 
@@ -14,9 +14,9 @@ public class Class268 {
 
 	int anInt3306 = -1;
 
-	byte aByte3300;
+	byte type;
 
-	int anInt3291;
+	int soundId;
 
 	int anInt3302;
 
@@ -29,12 +29,12 @@ public class Class268 {
 	int anInt3295;
 
 	boolean method4793(byte b_1) {
-		return this.aByte3300 == 2 || this.aByte3300 == 3;
+		return this.type == 2 || this.type == 3;
 	}
 
-	Class268(byte b_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, Class521_Sub1 class521_sub1_8) {
-		this.aByte3300 = b_1;
-		this.anInt3291 = i_2;
+	Class268(byte b_1, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, Class521_Sub1 class521_sub1_8) {
+		this.type = b_1;
+		this.soundId = soundId;
 		this.anInt3302 = i_3;
 		this.anInt3297 = i_4;
 		this.anInt3299 = i_5;

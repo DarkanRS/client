@@ -12,43 +12,43 @@ public class Class255 {
 	}
 
 	Class255() {
-		Class282_Sub18.method12264(24);
-		this.anInt3147 = Class282_Sub18.method12264(16);
-		this.anInt3148 = Class282_Sub18.method12264(24);
+		MIDIInstrument.method12264(24);
+		this.anInt3147 = MIDIInstrument.method12264(16);
+		this.anInt3148 = MIDIInstrument.method12264(24);
 		this.anIntArray3146 = new int[this.anInt3148];
-		boolean bool_1 = Class282_Sub18.method12263() != 0;
+		boolean bool_1 = MIDIInstrument.method12263() != 0;
 		int i_2;
 		int i_3;
 		int i_5;
 		if (bool_1) {
 			i_2 = 0;
 
-			for (i_3 = Class282_Sub18.method12264(5) + 1; i_2 < this.anInt3148; i_3++) {
-				int i_4 = Class282_Sub18.method12264(Class159.method2739(this.anInt3148 - i_2, 2063492992));
+			for (i_3 = MIDIInstrument.method12264(5) + 1; i_2 < this.anInt3148; i_3++) {
+				int i_4 = MIDIInstrument.method12264(Class159.method2739(this.anInt3148 - i_2, 2063492992));
 
 				for (i_5 = 0; i_5 < i_4; i_5++) {
 					this.anIntArray3146[i_2++] = i_3;
 				}
 			}
 		} else {
-			boolean bool_14 = Class282_Sub18.method12263() != 0;
+			boolean bool_14 = MIDIInstrument.method12263() != 0;
 
 			for (i_3 = 0; i_3 < this.anInt3148; i_3++) {
-				if (bool_14 && Class282_Sub18.method12263() == 0) {
+				if (bool_14 && MIDIInstrument.method12263() == 0) {
 					this.anIntArray3146[i_3] = 0;
 				} else {
-					this.anIntArray3146[i_3] = Class282_Sub18.method12264(5) + 1;
+					this.anIntArray3146[i_3] = MIDIInstrument.method12264(5) + 1;
 				}
 			}
 		}
 
 		this.method4383();
-		i_2 = Class282_Sub18.method12264(4);
+		i_2 = MIDIInstrument.method12264(4);
 		if (i_2 > 0) {
-			float f_15 = Class282_Sub18.method12300(Class282_Sub18.method12264(32));
-			float f_16 = Class282_Sub18.method12300(Class282_Sub18.method12264(32));
-			i_5 = Class282_Sub18.method12264(4) + 1;
-			boolean bool_6 = Class282_Sub18.method12263() != 0;
+			float f_15 = MIDIInstrument.method12300(MIDIInstrument.method12264(32));
+			float f_16 = MIDIInstrument.method12300(MIDIInstrument.method12264(32));
+			i_5 = MIDIInstrument.method12264(4) + 1;
+			boolean bool_6 = MIDIInstrument.method12263() != 0;
 			int i_7;
 			if (i_2 == 1) {
 				i_7 = method4397(this.anInt3148, this.anInt3147);
@@ -60,7 +60,7 @@ public class Class255 {
 
 			int i_8;
 			for (i_8 = 0; i_8 < i_7; i_8++) {
-				this.anIntArray3149[i_8] = Class282_Sub18.method12264(i_5);
+				this.anIntArray3149[i_8] = MIDIInstrument.method12264(i_5);
 			}
 
 			this.aFloatArrayArray3150 = new float[this.anInt3148][this.anInt3147];
@@ -197,7 +197,7 @@ public class Class255 {
 
 	int method4384() {
 		int i_1;
-		for (i_1 = 0; this.anIntArray3151[i_1] >= 0; i_1 = Class282_Sub18.method12263() != 0 ? this.anIntArray3151[i_1] : i_1 + 1) {
+		for (i_1 = 0; this.anIntArray3151[i_1] >= 0; i_1 = MIDIInstrument.method12263() != 0 ? this.anIntArray3151[i_1] : i_1 + 1) {
 			;
 		}
 

@@ -73,7 +73,7 @@ public class Matrix44Var {
 		this.aFloat3525 = matrix44var_1.aFloat3525;
 	}
 
-	public void method5210(Class305 class305_1) {
+	public void method5210(Position class305_1) {
 		this.method5242(class305_1.aClass381_3594);
 		this.method5263(class305_1.aClass385_3595);
 	}
@@ -362,7 +362,7 @@ public class Matrix44Var {
 		this.aFloat3515 = 0.0F;
 	}
 
-	public void method5279(Class305 class305_1) {
+	public void method5279(Position class305_1) {
 		float f_2 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.scalar;
 		float f_3 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.i;
 		float f_4 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.j;

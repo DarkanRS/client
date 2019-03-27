@@ -1,21 +1,21 @@
-public class Class521 {
+public class Transform {
 
 	boolean aBool5938 = true;
 	boolean aBool5945 = true;
 	boolean aBool5942;
-	Class521 aClass521_5944;
-	Class521 aClass521_5943;
-	Class521 aClass521_5940;
-	Class305 aClass305_5936 = new Class305();
-	Class305 aClass305_5937 = new Class305();
-	Class305 aClass305_5939 = new Class305();
+	Transform aClass521_5944;
+	Transform aClass521_5943;
+	Transform aClass521_5940;
+	Position aClass305_5936 = new Position();
+	Position aClass305_5937 = new Position();
+	Position aClass305_5939 = new Position();
 	Matrix44Var aClass294_5941;
 
-	public final Class305 method11165() {
+	public final Position method11165() {
 		return this.aClass305_5936;
 	}
 
-	public final Class305 method11166() {
+	public final Position method11166() {
 		if (this.aBool5938) {
 			this.aBool5938 = false;
 			if (this.aClass521_5943 != null) {
@@ -29,7 +29,7 @@ public class Class521 {
 		return this.aClass305_5937;
 	}
 
-	final Class305 method11167() {
+	final Position method11167() {
 		if (this.aBool5945) {
 			this.aBool5945 = false;
 			this.aClass305_5939.method5411(this.method11166());
@@ -72,7 +72,7 @@ public class Class521 {
 		this.aBool5942 = true;
 	}
 
-	final void method11175(Class305 class305_1) {
+	final void method11175(Position class305_1) {
 		this.aClass305_5936.method5411(class305_1);
 		this.method11174();
 		if (this.aClass521_5944 != null) {
@@ -82,7 +82,7 @@ public class Class521 {
 	}
 
 	public final void method11176() {
-		Class521 class521_1;
+		Transform class521_1;
 		if (this.aClass521_5943 != null) {
 			class521_1 = this.aClass521_5943.aClass521_5944;
 			if (class521_1 == this) {
@@ -140,7 +140,7 @@ public class Class521 {
 
 	}
 
-	Class521() {
+	Transform() {
 		new Matrix44Arr();
 		new Matrix44Arr();
 		this.aClass294_5941 = new Matrix44Var();
@@ -150,9 +150,9 @@ public class Class521 {
 		this.aClass521_5940 = null;
 	}
 
-	final void method11191(Class305 class305_1) {
+	final void method11191(Position class305_1) {
 		if (this.aClass521_5943 != null) {
-			Class305 class305_2 = new Class305(class305_1);
+			Position class305_2 = new Position(class305_1);
 			class305_2.method5414(this.aClass521_5943.method11167());
 			this.method11175(class305_2);
 		} else {

@@ -7,7 +7,7 @@ public class Class435 {
 	}
 
 	public static Class268 method7300(int i_0, int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
-		if ((bool_4 ? Class393.preferences.aClass468_Sub13_8227.method12714(1497954665) : Class393.preferences.aClass468_Sub13_8225.method12714(346781978)) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+		if ((bool_4 ? Class393.preferences.aClass468_Sub13_8227.method12714() : Class393.preferences.aClass468_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
 			Class268 class268_7 = new Class268((byte) (bool_4 ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Class521_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
 			return class268_7;

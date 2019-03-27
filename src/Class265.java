@@ -1,11 +1,11 @@
 public class Class265 {
 
-	int anInt3285 = Class282_Sub18.method12264(16);
-	int anInt3283 = Class282_Sub18.method12264(24);
-	int anInt3281 = Class282_Sub18.method12264(24);
-	int anInt3282 = Class282_Sub18.method12264(24) + 1;
-	int anInt3284 = Class282_Sub18.method12264(6) + 1;
-	int anInt3286 = Class282_Sub18.method12264(8);
+	int anInt3285 = MIDIInstrument.method12264(16);
+	int anInt3283 = MIDIInstrument.method12264(24);
+	int anInt3281 = MIDIInstrument.method12264(24);
+	int anInt3282 = MIDIInstrument.method12264(24) + 1;
+	int anInt3284 = MIDIInstrument.method12264(6) + 1;
+	int anInt3286 = MIDIInstrument.method12264(8);
 	int[] anIntArray3287;
 
 	void method4790(float[] floats_1, int i_2, boolean bool_3) {
@@ -15,7 +15,7 @@ public class Class265 {
 		}
 
 		if (!bool_3) {
-			i_4 = Class282_Sub18.aClass255Array7615[this.anInt3286].anInt3147;
+			i_4 = MIDIInstrument.aClass255Array7615[this.anInt3286].anInt3147;
 			int i_5 = this.anInt3281 - this.anInt3283;
 			int i_6 = i_5 / this.anInt3282;
 			int[] ints_7 = new int[i_6];
@@ -27,7 +27,7 @@ public class Class265 {
 					int i_10;
 					int i_11;
 					if (i_8 == 0) {
-						i_10 = Class282_Sub18.aClass255Array7615[this.anInt3286].method4384();
+						i_10 = MIDIInstrument.aClass255Array7615[this.anInt3286].method4384();
 
 						for (i_11 = i_4 - 1; i_11 >= 0; --i_11) {
 							if (i_9 + i_11 < i_6) {
@@ -43,7 +43,7 @@ public class Class265 {
 						int i_12 = this.anIntArray3287[i_8 + i_11 * 8];
 						if (i_12 >= 0) {
 							int i_13 = i_9 * this.anInt3282 + this.anInt3283;
-							Class255 class255_14 = Class282_Sub18.aClass255Array7615[i_12];
+							Class255 class255_14 = MIDIInstrument.aClass255Array7615[i_12];
 							int i_15;
 							if (this.anInt3285 == 0) {
 								i_15 = this.anInt3282 / class255_14.anInt3147;
@@ -86,10 +86,10 @@ public class Class265 {
 		int i_2;
 		for (i_2 = 0; i_2 < this.anInt3284; i_2++) {
 			int i_3 = 0;
-			int i_4 = Class282_Sub18.method12264(3);
-			boolean bool_5 = Class282_Sub18.method12263() != 0;
+			int i_4 = MIDIInstrument.method12264(3);
+			boolean bool_5 = MIDIInstrument.method12263() != 0;
 			if (bool_5) {
-				i_3 = Class282_Sub18.method12264(5);
+				i_3 = MIDIInstrument.method12264(5);
 			}
 
 			ints_1[i_2] = i_3 << 3 | i_4;
@@ -98,7 +98,7 @@ public class Class265 {
 		this.anIntArray3287 = new int[this.anInt3284 * 8];
 
 		for (i_2 = 0; i_2 < this.anInt3284 * 8; i_2++) {
-			this.anIntArray3287[i_2] = (ints_1[i_2 >> 3] & 1 << (i_2 & 0x7)) != 0 ? Class282_Sub18.method12264(8) : -1;
+			this.anIntArray3287[i_2] = (ints_1[i_2 >> 3] & 1 << (i_2 & 0x7)) != 0 ? MIDIInstrument.method12264(8) : -1;
 		}
 
 	}

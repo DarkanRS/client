@@ -228,7 +228,7 @@ public class Class117 {
 	}
 
 	public static void method1978(int i_0, int i_1, int i_2) {
-		i_2 = i_2 * Class393.preferences.aClass468_Sub13_8228.method12714(-964271083) >> 8;
+		i_2 = i_2 * Class393.preferences.aClass468_Sub13_8228.method12714() >> 8;
 		if (i_2 != 0 && i_0 != -1) {
 			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && Class116.method1966(1048199259) && !Class345.method6140()) {
 				Class260.aClass282_Sub15_Sub2_3231 = Message.method7272();

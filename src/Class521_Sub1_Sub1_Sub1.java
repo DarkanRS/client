@@ -37,7 +37,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (this.aClass528_10310 != null) {
 			Matrix44Var matrix44var_3 = graphicalrenderer_1.method8450();
 			Matrix44Var matrix44var_4 = this.method11168();
-			Class305 class305_5 = this.method11166();
+			Position class305_5 = this.method11166();
 			matrix44var_3.method5209(matrix44var_4);
 			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_5.aClass385_3595.x >> 9][(int) class305_5.aClass385_3595.z >> 9];
 			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null) {
@@ -100,7 +100,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (this.aClass528_10310 != null) {
 			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			matrix44var_2.method5209(matrix44var_3);
 			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
 			if (class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null) {
@@ -125,7 +125,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (this.aClass528_10310 != null) {
 			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			matrix44var_2.method5209(matrix44var_3);
 			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
 			if (class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null) {
@@ -161,7 +161,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (this.aClass528_10310 != null) {
 			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			matrix44var_2.method5209(matrix44var_3);
 			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
 			if (class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null) {

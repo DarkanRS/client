@@ -1205,15 +1205,15 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.SOUND_IDX14) {
-			int key = buffer.readUnsignedShort();
-			if (key == 65535) {
-				key = -1;
+			int soundId = buffer.readUnsignedShort();
+			if (soundId == 65535) {
+				soundId = -1;
 			}
 			int flags = buffer.readUnsignedByte();
 			int i_6 = buffer.readUnsignedShort();
-			int i_7 = buffer.readUnsignedByte();
+			int delay = buffer.readUnsignedByte();
 			int i_8 = buffer.readUnsignedShort();
-			Class153.method2618(key, flags, i_6, i_7, i_8, 1278035776);
+			Class153.method2618(soundId, flags, i_6, delay, i_8, 1278035776);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4372) {

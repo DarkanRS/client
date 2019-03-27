@@ -3611,7 +3611,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4881(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8225.method12714(858005822);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8225.method12714();
 	}
 
 	static final void method4882(CS2Executor executor) {
@@ -4341,7 +4341,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7143(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8229.method12714(-988664751);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8229.method12714();
 	}
 
 	static final void method6282(CS2Executor executor) {
@@ -5033,7 +5033,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5734(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8227.method12714(1068541972);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8227.method12714();
 	}
 
 	static final void method5735(CS2Executor executor) {
@@ -5716,7 +5716,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3692(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8228.method12714(-1998684386);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8228.method12714();
 	}
 
 	static final void method3693(CS2Executor executor) {
@@ -6716,7 +6716,7 @@ public class CS2Interpreter {
 
 	static final void method2554(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = Class393.preferences.aClass468_Sub13_8228.method12714(1677203613);
+		int i_3 = Class393.preferences.aClass468_Sub13_8228.method12714();
 		if (i_2 != i_3) {
 			if (TextureDetails.method2875(client.gameState, -2096796884)) {
 				if (i_3 == 0 && Class260.anInt3223 != -1) {
@@ -7173,7 +7173,7 @@ public class CS2Interpreter {
 
 	static final void method4899(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = Class393.preferences.aClass468_Sub13_8229.method12714(2130279532);
+		int i_3 = Class393.preferences.aClass468_Sub13_8229.method12714();
 		if (i_3 != i_2 && Class260.anInt3228 == Class260.anInt3223) {
 			if (!TextureDetails.method2875(client.gameState, -2119377821)) {
 				if (i_3 == 0) {
@@ -10432,7 +10432,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method13404(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8193.method12714(-1211117361);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aClass468_Sub13_8193.method12714();
 	}
 
 	static final void method8152(CS2Executor executor) {

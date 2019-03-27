@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Class282_Sub18 extends Node {
+public class MIDIInstrument extends Node {
 
 	static boolean aBool7611 = false;
 	static int anInt7635;
@@ -478,7 +478,7 @@ public class Class282_Sub18 extends Node {
 		return true;
 	}
 
-	public static Class282_Sub18 method12270(Index index_0, int i_1) {
+	public static MIDIInstrument method12270(Index index_0, int i_1) {
 		if (!method12268(index_0)) {
 			index_0.loadCutscene(i_1);
 			return null;
@@ -487,10 +487,10 @@ public class Class282_Sub18 extends Node {
 			if (bytes_2 == null) {
 				return null;
 			} else {
-				Class282_Sub18 class282_sub18_3 = null;
+				MIDIInstrument class282_sub18_3 = null;
 
 				try {
-					class282_sub18_3 = new Class282_Sub18(bytes_2);
+					class282_sub18_3 = new MIDIInstrument(bytes_2);
 				} catch (IOException ioexception_5) {
 					ioexception_5.printStackTrace();
 				}
@@ -500,7 +500,7 @@ public class Class282_Sub18 extends Node {
 		}
 	}
 
-	static Class282_Sub18 method12271(Index index_0, int i_1, int i_2) {
+	static MIDIInstrument method12271(Index index_0, int i_1, int i_2) {
 		if (!method12268(index_0)) {
 			index_0.load(i_1, i_2);
 			return null;
@@ -509,10 +509,10 @@ public class Class282_Sub18 extends Node {
 			if (bytes_3 == null) {
 				return null;
 			} else {
-				Class282_Sub18 class282_sub18_4 = null;
+				MIDIInstrument class282_sub18_4 = null;
 
 				try {
-					class282_sub18_4 = new Class282_Sub18(bytes_3);
+					class282_sub18_4 = new MIDIInstrument(bytes_3);
 				} catch (IOException ioexception_6) {
 					ioexception_6.printStackTrace();
 				}
@@ -570,7 +570,7 @@ public class Class282_Sub18 extends Node {
 		return this.anInt7605;
 	}
 
-	Class282_Sub18(byte[] bytes_1) throws IOException {
+	MIDIInstrument(byte[] bytes_1) throws IOException {
 		this.method12265(bytes_1);
 	}
 

@@ -40,7 +40,7 @@ public class MeshModifier {
 		int i_1 = Class337.aLinkedList3969.size();
 		Iterator iterator_2 = Class337.aLinkedList3969.iterator();
 		while (iterator_2.hasNext()) {
-			Class282_Sub18 class282_sub18_3 = (Class282_Sub18) iterator_2.next();
+			MIDIInstrument class282_sub18_3 = (MIDIInstrument) iterator_2.next();
 			class282_sub18_3.method12296(class282_sub18_3.method12275() + class282_sub18_3.method12277() / (2 * i_1));
 			if (!class282_sub18_3.method12276()) {
 				iterator_2.remove();

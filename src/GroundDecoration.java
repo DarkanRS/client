@@ -38,7 +38,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 			return null;
 		} else {
 			Matrix44Var matrix44var_4 = this.method11168();
-			Class305 class305_5 = this.method11166();
+			Position class305_5 = this.method11166();
 			Class285 class285_6 = Class470.method7824(this.aBool10506, (byte) -122);
 			int i_7 = (int) class305_5.aClass385_3595.x >> 9;
 			int i_8 = (int) class305_5.aClass385_3595.z >> 9;
@@ -153,7 +153,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 			return null;
 		} else {
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			Class285 class285_5 = Class470.method7824(this.aBool10506, (byte) -111);
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
@@ -240,7 +240,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 			return null;
 		} else {
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			Class285 class285_5 = Class470.method7824(this.aBool10506, (byte) -77);
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
@@ -266,7 +266,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 			return null;
 		} else {
 			Matrix44Var matrix44var_3 = this.method11168();
-			Class305 class305_4 = this.method11166();
+			Position class305_4 = this.method11166();
 			Class285 class285_5 = Class470.method7824(this.aBool10506, (byte) -86);
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;

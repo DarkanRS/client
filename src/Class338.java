@@ -83,18 +83,18 @@ public class Class338 {
 	}
 
 	Class338() {
-		int i_1 = Class282_Sub18.method12264(16);
+		int i_1 = MIDIInstrument.method12264(16);
 		if (i_1 != 1) {
 			throw new RuntimeException();
 		} else {
-			int i_2 = Class282_Sub18.method12264(5);
+			int i_2 = MIDIInstrument.method12264(5);
 			int i_3 = 0;
 			this.anIntArray3970 = new int[i_2];
 
 			int i_4;
 			int i_5;
 			for (i_4 = 0; i_4 < i_2; i_4++) {
-				i_5 = Class282_Sub18.method12264(4);
+				i_5 = MIDIInstrument.method12264(4);
 				this.anIntArray3970[i_4] = i_5;
 				if (i_5 >= i_3) {
 					i_3 = i_5 + 1;
@@ -108,10 +108,10 @@ public class Class338 {
 
 			int i_7;
 			for (i_4 = 0; i_4 < i_3; i_4++) {
-				this.anIntArray3975[i_4] = Class282_Sub18.method12264(3) + 1;
-				i_5 = this.anIntArray3976[i_4] = Class282_Sub18.method12264(2);
+				this.anIntArray3975[i_4] = MIDIInstrument.method12264(3) + 1;
+				i_5 = this.anIntArray3976[i_4] = MIDIInstrument.method12264(2);
 				if (i_5 != 0) {
-					this.anIntArray3980[i_4] = Class282_Sub18.method12264(8);
+					this.anIntArray3980[i_4] = MIDIInstrument.method12264(8);
 				}
 
 				i_5 = 1 << i_5;
@@ -119,12 +119,12 @@ public class Class338 {
 				this.anIntArrayArray3977[i_4] = ints_9;
 
 				for (i_7 = 0; i_7 < i_5; i_7++) {
-					ints_9[i_7] = Class282_Sub18.method12264(8) - 1;
+					ints_9[i_7] = MIDIInstrument.method12264(8) - 1;
 				}
 			}
 
-			this.anInt3978 = Class282_Sub18.method12264(2) + 1;
-			i_4 = Class282_Sub18.method12264(4);
+			this.anInt3978 = MIDIInstrument.method12264(2) + 1;
+			i_4 = MIDIInstrument.method12264(4);
 			i_5 = 2;
 
 			int i_6;
@@ -141,7 +141,7 @@ public class Class338 {
 				i_7 = this.anIntArray3970[i_6];
 
 				for (int i_8 = 0; i_8 < this.anIntArray3975[i_7]; i_8++) {
-					this.anIntArray3972[i_5++] = Class282_Sub18.method12264(i_4);
+					this.anIntArray3972[i_5++] = MIDIInstrument.method12264(i_4);
 				}
 			}
 
@@ -155,7 +155,7 @@ public class Class338 {
 	}
 
 	boolean method6024() {
-		boolean bool_1 = Class282_Sub18.method12263() != 0;
+		boolean bool_1 = MIDIInstrument.method12263() != 0;
 		if (!bool_1) {
 			return false;
 		} else {
@@ -168,8 +168,8 @@ public class Class338 {
 
 			i_3 = anIntArray3973[this.anInt3978 - 1];
 			int i_4 = Class159.method2739(i_3 - 1, -985364582);
-			anIntArray3981[0] = Class282_Sub18.method12264(i_4);
-			anIntArray3981[1] = Class282_Sub18.method12264(i_4);
+			anIntArray3981[0] = MIDIInstrument.method12264(i_4);
+			anIntArray3981[1] = MIDIInstrument.method12264(i_4);
 			int i_5 = 2;
 
 			for (int i_6 = 0; i_6 < this.anIntArray3970.length; i_6++) {
@@ -179,13 +179,13 @@ public class Class338 {
 				int i_10 = (1 << i_9) - 1;
 				int i_11 = 0;
 				if (i_9 > 0) {
-					i_11 = Class282_Sub18.aClass255Array7615[this.anIntArray3980[i_7]].method4384();
+					i_11 = MIDIInstrument.aClass255Array7615[this.anIntArray3980[i_7]].method4384();
 				}
 
 				for (int i_12 = 0; i_12 < i_8; i_12++) {
 					int i_13 = this.anIntArrayArray3977[i_7][i_11 & i_10];
 					i_11 >>>= i_9;
-					anIntArray3981[i_5++] = i_13 >= 0 ? Class282_Sub18.aClass255Array7615[i_13].method4384() : 0;
+					anIntArray3981[i_5++] = i_13 >= 0 ? MIDIInstrument.aClass255Array7615[i_13].method4384() : 0;
 				}
 			}
 
