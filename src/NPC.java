@@ -181,14 +181,14 @@ public class NPC extends Animable {
 		if (this.anInt10575 != -1) {
 			return this.anInt10575;
 		} else {
-			if (this.definitions.anIntArray4886 != null) {
+			if (this.definitions.transformTo != null) {
 				NPCDefinitions npcdefinitions_2 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
-				if (npcdefinitions_2 != null && npcdefinitions_2.anInt4898 != -1) {
-					return npcdefinitions_2.anInt4898;
+				if (npcdefinitions_2 != null && npcdefinitions_2.renderEmote != -1) {
+					return npcdefinitions_2.renderEmote;
 				}
 			}
 
-			return this.definitions.anInt4898;
+			return this.definitions.renderEmote;
 		}
 	}
 
@@ -257,7 +257,7 @@ public class NPC extends Animable {
 	}
 
 	public int method12997() {
-		if (this.definitions.anIntArray4886 != null) {
+		if (this.definitions.transformTo != null) {
 			NPCDefinitions npcdefinitions_2 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_2 != null && npcdefinitions_2.anInt4902 != -1) {
 				return npcdefinitions_2.anInt4902;
@@ -272,7 +272,7 @@ public class NPC extends Animable {
 	}
 
 	public int method15898() {
-		if (this.definitions.anIntArray4886 != null) {
+		if (this.definitions.transformTo != null) {
 			NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
 				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
@@ -329,7 +329,7 @@ public class NPC extends Animable {
 						if (this.definitions.anInt4913 <= 0) {
 							label56: {
 								if (this.definitions.anInt4917 == -1) {
-									if (this.definitions.anInt4858 == 1) {
+									if (this.definitions.size == 1) {
 										break label56;
 									}
 								} else if (this.definitions.anInt4917 == 1) {
@@ -383,13 +383,13 @@ public class NPC extends Animable {
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
 			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_8 = this.definitions.anIntArray4886 != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1080298347) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
-				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.anInt4858 * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
 						this.method13008(this.aClass528Array10372.length + 1, (byte) -19);
@@ -470,13 +470,13 @@ public class NPC extends Animable {
 			matrix44var_5.method5209(matrix44var_3);
 			matrix44var_5.method5219(0.0F, (float) (-20 - this.anInt10325), 0.0F);
 			RenderAnimDefs renderanimdefs_14 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_9 = this.definitions.anIntArray4886 != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_9 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_10 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
 				Animation animation_11 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-539713016) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_12 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aClass456_Sub3_10337;
-				MeshRasterizer meshrasterizer_13 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.anInt4858, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
+				MeshRasterizer meshrasterizer_13 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.size, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
 				if (meshrasterizer_13 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length + 1) {
 						this.method13008(this.aClass528Array10372.length + 1, (byte) -107);
@@ -552,13 +552,13 @@ public class NPC extends Animable {
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
 			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_8 = this.definitions.anIntArray4886 != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1093777602) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
-				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.anInt4858 * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
 						this.method13008(this.aClass528Array10372.length + 1, (byte) -114);
@@ -614,7 +614,7 @@ public class NPC extends Animable {
 	}
 
 	public int method15897() {
-		if (this.definitions.anIntArray4886 != null) {
+		if (this.definitions.transformTo != null) {
 			NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
 				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
@@ -643,8 +643,8 @@ public class NPC extends Animable {
 
 		this.definitions = npcdefinitions_1;
 		if (this.definitions != null) {
-			this.aString10584 = this.definitions.aString4857;
-			this.anInt10582 = this.definitions.anInt4879;
+			this.aString10584 = this.definitions.name;
+			this.anInt10582 = this.definitions.combatLevel;
 		}
 
 		if (this.aClass539_10369 != null) {
@@ -657,14 +657,14 @@ public class NPC extends Animable {
 		if (-343399559 * this.anInt10575 * -1914841399 != -1) {
 			return this.anInt10575 * -1914841399 * -343399559;
 		} else {
-			if (this.definitions.anIntArray4886 != null) {
+			if (this.definitions.transformTo != null) {
 				NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
-				if (npcdefinitions_1 != null && npcdefinitions_1.anInt4898 * -318852007 * -490908695 != -1) {
-					return -490908695 * npcdefinitions_1.anInt4898 * -318852007;
+				if (npcdefinitions_1 != null && npcdefinitions_1.renderEmote * -318852007 * -490908695 != -1) {
+					return -490908695 * npcdefinitions_1.renderEmote * -318852007;
 				}
 			}
 
-			return this.definitions.anInt4898 * -318852007 * -490908695;
+			return this.definitions.renderEmote * -318852007 * -490908695;
 		}
 	}
 
@@ -704,14 +704,14 @@ public class NPC extends Animable {
 		if (-343399559 * this.anInt10575 * -1914841399 != -1) {
 			return this.anInt10575 * -1914841399 * -343399559;
 		} else {
-			if (this.definitions.anIntArray4886 != null) {
+			if (this.definitions.transformTo != null) {
 				NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
-				if (npcdefinitions_1 != null && npcdefinitions_1.anInt4898 * -318852007 * -490908695 != -1) {
-					return -490908695 * npcdefinitions_1.anInt4898 * -318852007;
+				if (npcdefinitions_1 != null && npcdefinitions_1.renderEmote * -318852007 * -490908695 != -1) {
+					return -490908695 * npcdefinitions_1.renderEmote * -318852007;
 				}
 			}
 
-			return this.definitions.anInt4898 * -318852007 * -490908695;
+			return this.definitions.renderEmote * -318852007 * -490908695;
 		}
 	}
 
@@ -728,7 +728,7 @@ public class NPC extends Animable {
 						if (-1894935519 * this.definitions.anInt4913 * 1057419233 <= 0) {
 							label56: {
 								if (1419481733 * this.definitions.anInt4917 * -832596403 == -1) {
-									if (this.definitions.anInt4858 * -1156523463 * 1203434505 == 1) {
+									if (this.definitions.size * -1156523463 * 1203434505 == 1) {
 										break label56;
 									}
 								} else if (this.definitions.anInt4917 * -832596403 * 1419481733 == 1) {
@@ -770,7 +770,7 @@ public class NPC extends Animable {
 	}
 
 	public int method15804() {
-		if (this.definitions.anIntArray4886 != null) {
+		if (this.definitions.transformTo != null) {
 			NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
 				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
@@ -798,7 +798,7 @@ public class NPC extends Animable {
 	}
 
 	public int method15899(int i_1) {
-		if (this.definitions.anIntArray4886 != null) {
+		if (this.definitions.transformTo != null) {
 			NPCDefinitions npcdefinitions_2 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_2 != null && npcdefinitions_2.anInt4918 != -1) {
 				return npcdefinitions_2.anInt4918;
@@ -839,13 +839,13 @@ public class NPC extends Animable {
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
 			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_8 = this.definitions.anIntArray4886 != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(2108774285) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
-				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.anInt4858 * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aClass528Array10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
 						this.method13008(this.aClass528Array10372.length + 1, (byte) -124);

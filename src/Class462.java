@@ -10,7 +10,7 @@ public class Class462 {
 
 	int anInt5547;
 
-	AnimationFrameSet aClass282_Sub50_Sub13_5546;
+	AnimationFrameSet animationFrameSet;
 
 	boolean aBool5544 = false;
 
@@ -25,7 +25,7 @@ public class Class462 {
 				if (this.aClass282_Sub50_Sub13_5545 != null) {
 					if (animationdefinitions_2.tweened && i_4 != -1 && i_4 < ints_5.length) {
 						this.anInt5547 = ints_5[i_4];
-						this.aClass282_Sub50_Sub13_5546 = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16);
+						this.animationFrameSet = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16);
 						this.anInt5547 &= 0xffff;
 					}
 					if (animationdefinitions_2.aBool5923) {
@@ -40,14 +40,14 @@ public class Class462 {
 					if (this.aClass282_Sub50_Sub13_5545.method15081(this.anInt5542)) {
 						this.anInt5543 |= 0x400;
 					}
-					if (this.aClass282_Sub50_Sub13_5546 != null) {
-						if (this.aClass282_Sub50_Sub13_5546.method15080(this.anInt5547, -2104215933)) {
+					if (this.animationFrameSet != null) {
+						if (this.animationFrameSet.method15080(this.anInt5547, -2104215933)) {
 							this.anInt5543 |= 0x80;
 						}
-						if (this.aClass282_Sub50_Sub13_5546.method15079(this.anInt5547)) {
+						if (this.animationFrameSet.method15079(this.anInt5547)) {
 							this.anInt5543 |= 0x100;
 						}
-						if (this.aClass282_Sub50_Sub13_5546.method15081(this.anInt5547)) {
+						if (this.animationFrameSet.method15081(this.anInt5547)) {
 							this.anInt5543 |= 0x400;
 						}
 					}
@@ -66,7 +66,7 @@ public class Class462 {
 	final void method7708() {
 		this.aBool5544 = false;
 		this.anInt5543 = 0;
-		this.aClass282_Sub50_Sub13_5546 = null;
+		this.animationFrameSet = null;
 		this.aClass282_Sub50_Sub13_5545 = null;
 	}
 }

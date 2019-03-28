@@ -514,7 +514,7 @@ public class Class8_Sub3 extends FontRenderer {
 	}
 
 	public static MovementType[] method14339() {
-		return new MovementType[] { MovementType.TELEPORTING, MovementType.WALKING, MovementType.RUNNING, MovementType.STATIONARY };
+		return new MovementType[] { MovementType.HALF_WALK, MovementType.WALKING, MovementType.RUNNING, MovementType.TELEPORT };
 	}
 
 	static void method14341() {

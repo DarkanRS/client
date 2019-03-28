@@ -224,7 +224,7 @@ public final class IsaacCipher {
 		int i_5 = Class504.method8389(Class11.anInt122, Class266.anInt3289, Class4.anInt35, (byte) 58);
 		int i_6 = 0;
 		int i_7;
-		if (i_3 > 3 && i_4 > 3 && i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-61399020) - 4 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1849222129) - 4) {
+		if (i_3 > 3 && i_4 > 3 && i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 4 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 4) {
 			for (i_7 = i_3 - 4; i_7 <= i_3 + 4; i_7++) {
 				for (int i_8 = i_4 - 4; i_8 <= i_4 + 4; i_8++) {
 					int i_9 = Class4.anInt35;

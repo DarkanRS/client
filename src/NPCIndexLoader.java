@@ -37,7 +37,7 @@ public class NPCIndexLoader {
 			npcdefinitions_3 = new NPCDefinitions();
 			npcdefinitions_3.anInt4856 = i_1;
 			npcdefinitions_3.aClass406_4855 = this;
-			npcdefinitions_3.aStringArray4882 = (String[]) this.aStringArray4840.clone();
+			npcdefinitions_3.options = (String[]) this.aStringArray4840.clone();
 			if (bytes_10 != null) {
 				npcdefinitions_3.method6874(new RsByteBuffer(bytes_10));
 			}

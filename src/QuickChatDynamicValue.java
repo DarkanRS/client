@@ -44,7 +44,7 @@ public class QuickChatDynamicValue {
 	}
 
 	static final void method4179(int i_0, int i_1, int i_2, int i_3, Class476 class476_4, byte b_5) {
-		if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(1811223828) - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1564374011) - 2 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1940602014) != null) {
+		if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1940602014) != null) {
 			SceneObject sceneobject_6 = IndexLoaders.MAP_REGION_DECODER.method4441().method12467(i_0, i_1, i_2, i_3, 2009974413);
 			if (sceneobject_6 != null) {
 				if (sceneobject_6 instanceof InteractableObject) {

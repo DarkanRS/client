@@ -335,20 +335,20 @@ public class SystemInfo extends Node {
 		RenderAnimDefs renderanimdefs_3 = animable_0.getRenderAnimDefs();
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;
-			IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+			IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 			Class8_Sub1.anInt8515 = 0;
 		} else {
 			if (animable_0.currentAnimation.hasDefs() && !animable_0.currentAnimation.hasSpeed(584514311)) {
 				AnimationDefinitions animationdefinitions_4 = animable_0.currentAnimation.getDefs();
 				if (animable_0.anInt10367 > 0 && animationdefinitions_4.animatingPrecedence == 0) {
 					++animable_0.anInt10366;
-					IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+					IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
 				if (animable_0.anInt10367 <= 0 && animationdefinitions_4.walkingPrecedence == 0) {
 					++animable_0.anInt10366;
-					IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+					IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
@@ -360,13 +360,13 @@ public class SystemInfo extends Node {
 						AnimationDefinitions animationdefinitions_20 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_19.animationId, (byte) -10);
 						if (animable_0.anInt10367 > 0 && animationdefinitions_20.animatingPrecedence == 0) {
 							++animable_0.anInt10366;
-							IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+							IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
 						if (animable_0.anInt10367 <= 0 && animationdefinitions_20.walkingPrecedence == 0) {
 							++animable_0.anInt10366;
-							IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+							IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
@@ -432,7 +432,7 @@ public class SystemInfo extends Node {
 				}
 				if (b_9 == MovementType.RUNNING.id) {
 					i_10 <<= 1;
-				} else if (b_9 == MovementType.TELEPORTING.id) {
+				} else if (b_9 == MovementType.HALF_WALK.id) {
 					i_10 >>= 1;
 				}
 				if (renderanimdefs_3.anInt2826 != -1) {
@@ -474,7 +474,7 @@ public class SystemInfo extends Node {
 				}
 				Class8_Sub1.anInt8515 = 0;
 				if (i_7 == i_5 && i_8 == i_6) {
-					IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+					IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 				} else {
 					if (i_5 < i_7) {
 						vector3_21.x += (float) i_10;
@@ -523,7 +523,7 @@ public class SystemInfo extends Node {
 				if (animable_0.anInt10367 > 0) {
 					--animable_0.anInt10367;
 				}
-				IdentikitDefinition.anInt430 = MovementType.STATIONARY.id;
+				IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 				Class8_Sub1.anInt8515 = 0;
 				vector3_21.pushVectorStack();
 			}

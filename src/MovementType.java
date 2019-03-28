@@ -1,7 +1,7 @@
 public class MovementType implements Identifiable {
 
-	public static MovementType STATIONARY = new MovementType((byte) -1);
-	public static MovementType TELEPORTING = new MovementType((byte) 0);
+	public static MovementType TELEPORT = new MovementType((byte) -1);
+	public static MovementType HALF_WALK = new MovementType((byte) 0);
 	public static MovementType WALKING = new MovementType((byte) 1);
 	public static MovementType RUNNING = new MovementType((byte) 2);
 

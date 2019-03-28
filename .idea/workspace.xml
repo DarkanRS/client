@@ -2,96 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44367fc0-184d-4606-880a-51a966b04f4c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CS2Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CS2Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChoppyItemFixClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChoppyItemFixClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class109.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class109.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class117.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class117.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class124.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class124.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class131_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class131_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class133.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class133.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class135.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class135.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class135_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class135_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class135_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class135_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class137.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class137.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class137_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class137_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class137_Sub1_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class137_Sub1_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class137_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class137_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class139.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class139.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class147.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class147.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class154.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class154.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class160_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class160_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class18.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class209_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class209_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class212.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class212.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class217.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class217.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class241.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class241.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class247.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class247.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class250.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class250.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class261.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class261.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class261_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class261_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class264.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class264.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class271.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class271.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class278.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class278.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class278_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class278_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub15_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub15_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub17_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub17_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub20_Sub17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub20_Sub17.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub20_Sub21.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub20_Sub21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub24.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub24.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class282_Sub3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class282_Sub3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class291.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class291.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class321.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class321.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class329.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class329.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class341.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class341.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370_Sub1_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370_Sub1_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370_Sub1_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370_Sub1_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370_Sub2_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370_Sub2_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class370_Sub2_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class370_Sub2_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class390_Sub3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class390_Sub3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class395.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class395.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class41_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class41_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class505_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class505_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class505_Sub2_Sub1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class505_Sub2_Sub1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class505_Sub2_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class505_Sub2_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class75.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class75.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class90.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class90.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectionInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception_Sub2_Sub2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exception_Sub2_Sub2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FontRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FontRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphicalRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphicalRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ground.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HardwareGround.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HardwareGround.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HardwareRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HardwareRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemIndexLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemIndexLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JS5GrabWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JS5GrabWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JS5Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JS5Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MapRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class469.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class469.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MeshRasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MeshRasterizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NativeSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NativeSprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenGLGraphicalRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenGLGraphicalRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenGLGround.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenGLGround.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PacketsDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PacketsDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParticleSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParticleSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Preference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Preference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quaternion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quaternion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RsBitsBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RsBitsBuffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SceneObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SceneObjectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NPCDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NPCDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NPCIndexLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NPCIndexLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Surface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Surface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SurfaceSkin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SurfaceSkin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VertexNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VertexNormal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WorldMapAreaDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorldMapAreaDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/i.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jaclib/memory/Stream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jaclib/memory/Stream.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,17 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Class90.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Class90.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,6 +40,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,11 +57,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../darkan-727-server" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -223,59 +135,59 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32943678" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18541667" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32943678" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18541667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32943678" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32943678" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32943678" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info id="Image Layers" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32943678" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32943678" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info id="Capture Tool" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info id="Image Layers" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
@@ -284,6 +196,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Class90.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Class28.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1020">
@@ -295,17 +214,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Class90.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        <state relative-caret-position="306">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>

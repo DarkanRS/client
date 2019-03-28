@@ -1,13 +1,9 @@
 public class VertexNormal {
 
 	public static Player myPlayer;
-
 	public int anInt812;
-
 	public int anInt809;
-
 	public int anInt811;
-
 	public int anInt810;
 
 	VertexNormal method1459(int i_1) {

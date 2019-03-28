@@ -29,7 +29,7 @@ public class Class302 {
 		RenderAnimDefs renderAnim = animable.getRenderAnimDefs();
 		MovingAnimation animation = animable.aClass456_Sub3_10337;
 		int turnDirection = animable.turnDirection - animable.aClass19_10359.turnDirection & 0x3fff;
-		if (moveType == MovementType.STATIONARY.id) {
+		if (moveType == MovementType.TELEPORT.id) {
 			if (turnDirection == 0 && animable.turningTicks <= 25) {
 				if (!animation.aBool7891 || !renderAnim.method3810(animation.method7597())) {
 					animation.animate(renderAnim.getStandAnimation());
@@ -49,7 +49,7 @@ public class Class302 {
 			if (turnDirection == 0 && animable.turningTicks <= 25) {
 				if (moveType == MovementType.RUNNING.id && renderAnim.runningAnimation != -1) {
 					animation.animate(renderAnim.runningAnimation);
-				} else if (moveType == MovementType.TELEPORTING.id && renderAnim.teleportingAnimation != -1) {
+				} else if (moveType == MovementType.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
 					animation.animate(renderAnim.teleportingAnimation);
 				} else {
 					animation.animate(renderAnim.walkAnimation);
@@ -64,7 +64,7 @@ public class Class302 {
 					} else {
 						animation.animate(renderAnim.runningAnimation);
 					}
-				} else if (moveType == MovementType.TELEPORTING.id && renderAnim.teleportingAnimation != -1) {
+				} else if (moveType == MovementType.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
 					if (i_3 < 0 && renderAnim.teleTurn1 != -1) {
 						animation.animate(renderAnim.teleTurn1);
 					} else if (i_3 > 0 && renderAnim.teleTurn2 != -1) {
@@ -93,7 +93,7 @@ public class Class302 {
 				} else {
 					animation.animate(renderAnim.runningAnimation);
 				}
-			} else if (moveType == MovementType.TELEPORTING.id && renderAnim.teleportingAnimation != -1) {
+			} else if (moveType == MovementType.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
 				if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.teleDir1 != -1) {
 					animation.animate(renderAnim.teleDir1);
 				} else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.teleDir2 != -1) {

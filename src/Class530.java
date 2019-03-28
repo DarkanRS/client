@@ -28,7 +28,7 @@ public class Class530 {
 		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_4 = this.aClass219_7048.x - coordgrid_3.x;
 		int i_5 = this.aClass219_7048.y - coordgrid_3.y;
-		if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-444629403) && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-343963365)) {
+		if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 			switch (this.method11343()) {
 			case 0:
 				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1288178726).getWall(i_2, i_4, i_5, (byte) -33);

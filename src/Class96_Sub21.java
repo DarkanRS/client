@@ -48,7 +48,7 @@ public class Class96_Sub21 extends Class96 {
 			if (b_6 != class282_sub48_5.anInt8091) {
 				i_9 = Class282_Sub11_Sub1.method15433(class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085);
 				NPCDefinitions npcdefinitions_10 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions;
-				if (npcdefinitions_10.anIntArray4886 != null) {
+				if (npcdefinitions_10.transformTo != null) {
 					npcdefinitions_10 = npcdefinitions_10.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				}
 

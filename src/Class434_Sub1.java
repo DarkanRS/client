@@ -295,7 +295,7 @@ public class Class434_Sub1 extends Class434 {
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = coordgrid_4.x + i_1;
 		int i_6 = i_2 + coordgrid_4.y;
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153 && i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1612887157) && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1255966708)) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153 && i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 			long long_7 = (long) (i_0 << 28 | i_6 << 14 | i_5);
 			Class282_Sub29 class282_sub29_9 = (Class282_Sub29) client.aClass465_7414.get(long_7);
 			if (class282_sub29_9 == null) {

@@ -11,7 +11,7 @@ public class Class520 {
 			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int i_4 = this.aClass219_5934.x - coordgrid_3.x;
 			int i_5 = this.aClass219_5934.y - coordgrid_3.y;
-			if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX(453899598) && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1973666054)) {
+			if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				for (Class282_Sub34 class282_sub34_6 = (Class282_Sub34) class282_sub29_2.aClass482_7708.head((byte) 54); class282_sub34_6 != null; class282_sub34_6 = (Class282_Sub34) class282_sub29_2.aClass482_7708.next(184260692)) {
 					if (class282_sub34_6.anInt7853 == this.anInt5933) {
 						return (Class521_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1373135935).method3437(this.aClass219_5934.level, i_4, i_5);

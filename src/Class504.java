@@ -20,7 +20,7 @@ public abstract class Class504 {
 		} else {
 			int i_4 = i_0 >> 9;
 			int i_5 = i_1 >> 9;
-			if (i_4 >= 0 && i_5 >= 0 && i_4 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(-868401346) - 1 && i_5 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1411185573) - 1) {
+			if (i_4 >= 0 && i_5 >= 0 && i_4 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_5 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) {
 				int i_6 = i_2;
 				if (i_2 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_4][i_5] & 0x2) != 0) {
 					i_6 = i_2 + 1;

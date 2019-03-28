@@ -111,18 +111,18 @@ public class Animation {
 
 	public final void rasterize(MeshRasterizer meshrasterizer_1, int i_2) {
 		if (this.defs != null && this.defs.frames != null && this.method7562(2049608469)) {
-			meshrasterizer_1.method11262(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
+			meshrasterizer_1.method11262(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.animationFrameSet, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
-				meshrasterizer_1.method11262(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
+				meshrasterizer_1.method11262(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.animationFrameSet, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
 			}
 		}
 	}
 
 	public final void method7578(MeshRasterizer meshrasterizer_1, int i_3, int i_4) {
 		if (this.defs.frames != null && this.method7562(1399567490)) {
-			meshrasterizer_1.method11258(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_3, this.defs.aBool5923, (int[]) null);
+			meshrasterizer_1.method11258(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.animationFrameSet, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_3, this.defs.aBool5923, (int[]) null);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
-				meshrasterizer_1.method11258(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_3, this.defs.aBool5923, (int[]) null);
+				meshrasterizer_1.method11258(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.animationFrameSet, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_3, this.defs.aBool5923, (int[]) null);
 			}
 		}
 	}

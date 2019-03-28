@@ -19,8 +19,8 @@ final class Class17 implements Interface25 {
 		int i_1 = 0;
 		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1483143416);
 
-		for (int i_3 = 0; i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1126202391); i_3++) {
-			for (int i_4 = 0; i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1126245004); i_4++) {
+		for (int i_3 = 0; i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX(); i_3++) {
+			for (int i_4 = 0; i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY(); i_4++) {
 				if (JS5Manager.method5492(sceneobjectmanager_2.aClass293ArrayArrayArray2604, i_1, i_3, i_4, true, (byte) 56)) {
 					++i_1;
 				}

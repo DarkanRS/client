@@ -29,7 +29,7 @@ public class Class93 {
 			animable_5.regionBaseY[animable_5.anInt10355] = i_8 & 0xffff;
 			byte b_9 = MovementType.WALKING.id;
 			if (i_7 == 0) {
-				b_9 = MovementType.TELEPORTING.id;
+				b_9 = MovementType.HALF_WALK.id;
 			} else if (i_7 == 2) {
 				b_9 = MovementType.RUNNING.id;
 			}

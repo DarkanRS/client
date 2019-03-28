@@ -69,7 +69,7 @@ public class Class174 {
 	}
 
 	static final void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-		if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(607754892) - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1534289910) - 2) {
+		if (i_2 >= 1 && i_3 >= 1 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2) {
 			int i_9 = i_0;
 			if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3, 2056160372)) {
 				i_9 = i_0 + 1;

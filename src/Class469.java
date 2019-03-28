@@ -56,11 +56,11 @@ public class Class469 implements Iterator {
 				NPC npc_10 = (NPC) class282_sub47_9.anObject8068;
 				if (npc_10.hasDefinition(-438666523) && npc_10.plane == VertexNormal.myPlayer.plane) {
 					NPCDefinitions npcdefinitions_11 = npc_10.definitions;
-					if (npcdefinitions_11 != null && npcdefinitions_11.anIntArray4886 != null) {
+					if (npcdefinitions_11 != null && npcdefinitions_11.transformTo != null) {
 						npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 					}
 
-					if (npcdefinitions_11 != null && npcdefinitions_11.aBool4864 && npcdefinitions_11.aBool4893) {
+					if (npcdefinitions_11 != null && npcdefinitions_11.isVisibleOnMap && npcdefinitions_11.aBool4893) {
 						Vector3 vector3_12 = npc_10.method11166().aClass385_3595;
 						int i_13 = (int) vector3_12.x / 128 - i_1 / 128;
 						int i_14 = (int) vector3_12.z / 128 - i_2 / 128;

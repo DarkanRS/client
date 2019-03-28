@@ -69,7 +69,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 
 	static int method15433(NPC npc_0) {
 		NPCDefinitions npcdefinitions_2 = npc_0.definitions;
-		if (npcdefinitions_2.anIntArray4886 != null) {
+		if (npcdefinitions_2.transformTo != null) {
 			npcdefinitions_2 = npcdefinitions_2.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_2 == null) {
 				return -1;

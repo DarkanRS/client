@@ -161,7 +161,7 @@ public class HitbarDefinitions {
 				if (!client.aBool7321) {
 					bool_7 = true;
 				}
-			} else if ((int) vector3_6.x < 0 || (int) vector3_6.x >= IndexLoaders.MAP_REGION_DECODER.getSizeX(56329418) * 512 || (int) vector3_6.z < 0 || (int) vector3_6.z >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-639715489) * 512) {
+			} else if ((int) vector3_6.x < 0 || (int) vector3_6.x >= IndexLoaders.MAP_REGION_DECODER.getSizeX() * 512 || (int) vector3_6.z < 0 || (int) vector3_6.z >= IndexLoaders.MAP_REGION_DECODER.getSizeY() * 512) {
 				bool_7 = true;
 			}
 			if (bool_7) {

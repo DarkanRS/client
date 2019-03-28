@@ -183,7 +183,7 @@ public class MapRegion {
 		this.method4458(i_4, i_5, b_11, false);
 	}
 
-	public int getSizeX(int i_1) {
+	public int getSizeX() {
 		return this.sizeX;
 	}
 
@@ -381,7 +381,7 @@ public class MapRegion {
 		this.zFar += 3072;
 	}
 
-	public int getSizeY(int i_1) {
+	public int getSizeY() {
 		return this.sizeY;
 	}
 
@@ -1153,7 +1153,7 @@ public class MapRegion {
 					int i_13 = (this.regionIds[i_3] & 0xff) * 64 - this.coordGrid.y + i_11;
 					NPCDefinitions npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbytebuffer_18.readUnsignedShort(), (byte) -4);
 					Class282_Sub47 class282_sub47_15 = (Class282_Sub47) client.NPCS.get((long) i_7);
-					if (class282_sub47_15 == null && (npcdefinitions_14.aByte4900 & 0x1) > 0 && i_12 >= 0 && i_12 + npcdefinitions_14.anInt4858 < this.sizeX && i_13 >= 0 && i_13 + npcdefinitions_14.anInt4858 < this.sizeY) {
+					if (class282_sub47_15 == null && (npcdefinitions_14.walkMask & 0x1) > 0 && i_12 >= 0 && i_12 + npcdefinitions_14.size < this.sizeX && i_13 >= 0 && i_13 + npcdefinitions_14.size < this.sizeY) {
 						NPC npc_16 = new NPC(this.sceneObjectManager);
 						npc_16.anInt10314 = i_7;
 						Class282_Sub47 class282_sub47_17 = new Class282_Sub47(npc_16);
@@ -1162,9 +1162,9 @@ public class MapRegion {
 						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;
 						npc_16.anInt10353 = client.cycles;
 						npc_16.method16166(npcdefinitions_14, 2038282269);
-						npc_16.method15836(npc_16.definitions.anInt4858, (byte) -20);
+						npc_16.method15836(npc_16.definitions.size, (byte) -20);
 						npc_16.anInt10340 = npc_16.definitions.anInt4889 << 3;
-						npc_16.method15791(npc_16.definitions.aClass252_4910.method4317().getValue() << 11 & 0x3fff, true, (byte) -122);
+						npc_16.method15791(npc_16.definitions.respawnDirection.method4317().getValue() << 11 & 0x3fff, true, (byte) -122);
 						npc_16.method16159(i_9, i_12, i_13, true, npc_16.getSize(), -1215667141);
 					}
 				}
@@ -1388,8 +1388,8 @@ public class MapRegion {
 	static final boolean routeTo(int i_0, int i_1, boolean bool_2, RouteStrategy routestrategy_3, int i_4) {
 		int i_5 = VertexNormal.myPlayer.regionBaseX[0];
 		int i_6 = VertexNormal.myPlayer.regionBaseY[0];
-		if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-988054561) && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-525068831)) {
-			if (i_0 >= 0 && i_0 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-914892622) && i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1924417648)) {
+		if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+			if (i_0 >= 0 && i_0 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				int i_7 = Class112.findRoute(i_5, i_6, VertexNormal.myPlayer.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.myPlayer.plane), bool_2, client.walkStepsX, client.walkStepsY, -1311698246);
 				if (i_7 < 1) {
 					return false;

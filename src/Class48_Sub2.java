@@ -312,7 +312,7 @@ public class Class48_Sub2 extends Class48 {
 		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 86); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-18046490)) {
 			if (!class282_sub31_1.aBool7774) {
 				class282_sub31_1.aBool7773 = true;
-				if (class282_sub31_1.anInt7762 >= 0 && class282_sub31_1.anInt7763 >= 0 && class282_sub31_1.anInt7762 < IndexLoaders.MAP_REGION_DECODER.getSizeX(111719128) && class282_sub31_1.anInt7763 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1330125890)) {
+				if (class282_sub31_1.anInt7762 >= 0 && class282_sub31_1.anInt7763 >= 0 && class282_sub31_1.anInt7762 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && class282_sub31_1.anInt7763 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					Class275_Sub4.method12585(class282_sub31_1, -1279772486);
 				}
 			} else {

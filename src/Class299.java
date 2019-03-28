@@ -226,7 +226,7 @@ public class Class299 implements Interface27 {
 			class282_sub31_8.anInt7766 = i_3;
 			class282_sub31_8.anInt7762 = i_1;
 			class282_sub31_8.anInt7763 = i_2;
-			if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1083484093) && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-978246056)) {
+			if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				Class275_Sub4.method12585(class282_sub31_8, -1988647724);
 			}
 			Class282_Sub31.aClass482_7775.append(class282_sub31_8, 1387539500);

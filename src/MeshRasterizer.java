@@ -357,25 +357,25 @@ public abstract class MeshRasterizer {
 
 	}
 
-	void method11266(AnimationFrameBase animationskinnode_1, AnimationFrame animationskin_2, AnimationFrame animationskin_3, int i_4, int i_5, int i_6, boolean[] bools_7, boolean bool_8, boolean bool_9, int i_10, int[] ints_11) {
+	void method11266(AnimationFrameBase animFrameBase, AnimationFrame animFrame1, AnimationFrame animFrame2, int i_4, int i_5, int i_6, boolean[] bools_7, boolean bool_8, boolean bool_9, int modelIndex, int[] ints_11) {
 		int i_12;
-		if (animationskin_3 != null && i_4 != 0) {
+		if (animFrame2 != null && i_4 != 0) {
 			i_12 = 0;
 			int i_35 = 0;
 
-			for (int i_36 = 0; i_36 < animationskinnode_1.count; i_36++) {
+			for (int i_36 = 0; i_36 < animFrameBase.count; i_36++) {
 				boolean bool_15 = false;
-				if (i_12 < animationskin_2.transformationCount && i_36 == animationskin_2.transformationIndices[i_12]) {
+				if (i_12 < animFrame1.transformationCount && i_36 == animFrame1.transformationIndices[i_12]) {
 					bool_15 = true;
 				}
 
 				boolean bool_16 = false;
-				if (i_35 < animationskin_3.transformationCount && i_36 == animationskin_3.transformationIndices[i_35]) {
+				if (i_35 < animFrame2.transformationCount && i_36 == animFrame2.transformationIndices[i_35]) {
 					bool_16 = true;
 				}
 
 				if (bool_15 || bool_16) {
-					if (bools_7 != null && bools_7[i_36] != bool_8 && animationskinnode_1.transformationTypes[i_36] != 0) {
+					if (bools_7 != null && bools_7[i_36] != bool_8 && animFrameBase.transformationTypes[i_36] != 0) {
 						if (bool_15) {
 							++i_12;
 						}
@@ -385,7 +385,7 @@ public abstract class MeshRasterizer {
 						}
 					} else {
 						short s_17 = 0;
-						int i_18 = animationskinnode_1.transformationTypes[i_36];
+						int i_18 = animFrameBase.transformationTypes[i_36];
 						if (i_18 == 3 || i_18 == 10) {
 							s_17 = 128;
 						}
@@ -393,20 +393,20 @@ public abstract class MeshRasterizer {
 						short s_19;
 						short s_20;
 						short s_21;
-						short s_22;
+						short primaryVertexSkin;
 						byte b_23;
 						if (bool_15) {
-							s_19 = animationskin_2.transformationX[i_12];
-							s_20 = animationskin_2.transformationY[i_12];
-							s_21 = animationskin_2.transformationZ[i_12];
-							s_22 = animationskin_2.skippedReferences[i_12];
-							b_23 = animationskin_2.transformationFlags[i_12];
+							s_19 = animFrame1.transformationX[i_12];
+							s_20 = animFrame1.transformationY[i_12];
+							s_21 = animFrame1.transformationZ[i_12];
+							primaryVertexSkin = animFrame1.skippedReferences[i_12];
+							b_23 = animFrame1.transformationFlags[i_12];
 							++i_12;
 						} else {
 							s_19 = s_17;
 							s_20 = s_17;
 							s_21 = s_17;
-							s_22 = -1;
+							primaryVertexSkin = -1;
 							b_23 = 0;
 						}
 
@@ -416,11 +416,11 @@ public abstract class MeshRasterizer {
 						short s_27;
 						byte b_28;
 						if (bool_16) {
-							s_24 = animationskin_3.transformationX[i_35];
-							s_25 = animationskin_3.transformationY[i_35];
-							s_26 = animationskin_3.transformationZ[i_35];
-							s_27 = animationskin_3.skippedReferences[i_35];
-							b_28 = animationskin_3.transformationFlags[i_35];
+							s_24 = animFrame2.transformationX[i_35];
+							s_25 = animFrame2.transformationY[i_35];
+							s_26 = animFrame2.transformationZ[i_35];
+							s_27 = animFrame2.skippedReferences[i_35];
+							b_28 = animFrame2.transformationFlags[i_35];
 							++i_35;
 						} else {
 							s_24 = s_17;
@@ -483,26 +483,26 @@ public abstract class MeshRasterizer {
 							i_31 = s_21;
 						}
 
-						if (s_22 != -1) {
-							this.method11267(0, animationskinnode_1.labels[s_22], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_22], ints_11);
+						if (primaryVertexSkin != -1) {
+							this.method11267(0, animFrameBase.labels[primaryVertexSkin], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[primaryVertexSkin], ints_11);
 						} else if (s_27 != -1) {
-							this.method11267(0, animationskinnode_1.labels[s_27], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_27], ints_11);
+							this.method11267(0, animFrameBase.labels[s_27], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_27], ints_11);
 						}
 
-						this.method11267(i_18, animationskinnode_1.labels[i_36], i_29, i_30, i_31, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[i_36], ints_11);
+						this.method11267(i_18, animFrameBase.labels[i_36], i_29, i_30, i_31, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[i_36], ints_11);
 					}
 				}
 			}
 		} else {
-			for (i_12 = 0; i_12 < animationskin_2.transformationCount; i_12++) {
-				short s_13 = animationskin_2.transformationIndices[i_12];
-				if (bools_7 == null || bools_7[s_13] == bool_8 || animationskinnode_1.transformationTypes[s_13] == 0) {
-					short s_14 = animationskin_2.skippedReferences[i_12];
+			for (i_12 = 0; i_12 < animFrame1.transformationCount; i_12++) {
+				short s_13 = animFrame1.transformationIndices[i_12];
+				if (bools_7 == null || bools_7[s_13] == bool_8 || animFrameBase.transformationTypes[s_13] == 0) {
+					short s_14 = animFrame1.skippedReferences[i_12];
 					if (s_14 != -1) {
-						this.method11267(0, animationskinnode_1.labels[s_14], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_14], ints_11);
+						this.method11267(0, animFrameBase.labels[s_14], 0, 0, 0, i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_14], ints_11);
 					}
 
-					this.method11267(animationskinnode_1.transformationTypes[s_13], animationskinnode_1.labels[s_13], animationskin_2.transformationX[i_12], animationskin_2.transformationY[i_12], animationskin_2.transformationZ[i_12], i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_13], ints_11);
+					this.method11267(animFrameBase.transformationTypes[s_13], animFrameBase.labels[s_13], animFrame1.transformationX[i_12], animFrame1.transformationY[i_12], animFrame1.transformationZ[i_12], i_6, bool_9, modelIndex & animFrameBase.anIntArray7561[s_13], ints_11);
 				}
 			}
 		}

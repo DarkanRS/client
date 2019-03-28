@@ -6563,10 +6563,10 @@ public class Class528_Sub2 extends MeshRasterizer {
 		}
 
 		if (rsmesh_2.vertexSkins != null && (this.anInt8575 & 0x20) != 0) {
-			this.anIntArrayArray8568 = rsmesh_2.method2665(true);
+			this.anIntArrayArray8568 = rsmesh_2.getBones(true);
 		}
 
-		if (rsmesh_2.skinValues != null && (this.anInt8575 & 0x180) != 0) {
+		if (rsmesh_2.textureSkins != null && (this.anInt8575 & 0x180) != 0) {
 			this.anIntArrayArray8608 = rsmesh_2.method2666();
 		}
 

@@ -539,9 +539,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 													NPC npc_40 = (NPC) class282_sub47_24.anObject8068;
 													if (npc_40.anInt10375 != client.cycles && npc_40.aBool10318) {
 														vector3_26 = npc_40.method11166().aClass385_3595;
-														i_41 = (int) vector3_26.x - (npc_40.definitions.anInt4858 - 1 << 8);
-														i_28 = (int) vector3_26.z - (npc_40.definitions.anInt4858 - 1 << 8);
-														if (i_41 >= i_21 && npc_40.definitions.anInt4858 <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.anInt4858 <= player_58.getSize() - (i_28 - i_22 >> 9)) {
+														i_41 = (int) vector3_26.x - (npc_40.definitions.size - 1 << 8);
+														i_28 = (int) vector3_26.z - (npc_40.definitions.size - 1 << 8);
+														if (i_41 >= i_21 && npc_40.definitions.size <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.size <= player_58.getSize() - (i_28 - i_22 >> 9)) {
 															WorldMapAreaDefs.method3736(npc_40, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1752430415);
 															npc_40.anInt10375 = client.cycles;
 														}
@@ -583,9 +583,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 									}
 
 									Vector3 vector3_56 = npc_59.method11166().aClass385_3595;
-									if ((npc_59.definitions.anInt4858 & 0x1) == 0 && ((int) vector3_56.x & 0x1ff) == 0 && ((int) vector3_56.z & 0x1ff) == 0 || (npc_59.definitions.anInt4858 & 0x1) == 1 && ((int) vector3_56.x & 0x1ff) == 256 && ((int) vector3_56.z & 0x1ff) == 256) {
-										int i_50 = (int) vector3_56.x - (npc_59.definitions.anInt4858 - 1 << 8);
-										i_21 = (int) vector3_56.z - (npc_59.definitions.anInt4858 - 1 << 8);
+									if ((npc_59.definitions.size & 0x1) == 0 && ((int) vector3_56.x & 0x1ff) == 0 && ((int) vector3_56.z & 0x1ff) == 0 || (npc_59.definitions.size & 0x1) == 1 && ((int) vector3_56.x & 0x1ff) == 256 && ((int) vector3_56.z & 0x1ff) == 256) {
+										int i_50 = (int) vector3_56.x - (npc_59.definitions.size - 1 << 8);
+										i_21 = (int) vector3_56.z - (npc_59.definitions.size - 1 << 8);
 
 										for (i_22 = 0; i_22 < client.NPC_UPDATE_INDEX; i_22++) {
 											Class282_Sub47 class282_sub47_37 = (Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_22]);
@@ -593,9 +593,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 												NPC npc_54 = (NPC) class282_sub47_37.anObject8068;
 												if (npc_54.anInt10375 != client.cycles && npc_59 != npc_54 && npc_54.aBool10318) {
 													Vector3 vector3_66 = npc_54.method11166().aClass385_3595;
-													i_42 = (int) vector3_66.x - (npc_54.definitions.anInt4858 - 1 << 8);
-													i_41 = (int) vector3_66.z - (npc_54.definitions.anInt4858 - 1 << 8);
-													if (i_42 >= i_50 && npc_54.definitions.anInt4858 <= npc_59.definitions.anInt4858 - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.anInt4858 <= npc_59.definitions.anInt4858 - (i_41 - i_21 >> 9)) {
+													i_42 = (int) vector3_66.x - (npc_54.definitions.size - 1 << 8);
+													i_41 = (int) vector3_66.z - (npc_54.definitions.size - 1 << 8);
+													if (i_42 >= i_50 && npc_54.definitions.size <= npc_59.definitions.size - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.size <= npc_59.definitions.size - (i_41 - i_21 >> 9)) {
 														WorldMapAreaDefs.method3736(npc_54, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1644654446);
 														npc_54.anInt10375 = client.cycles;
 													}
@@ -612,7 +612,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 												vector3_26 = player_67.method11166().aClass385_3595;
 												i_41 = (int) vector3_26.x - (player_67.getSize() - 1 << 8);
 												i_28 = (int) vector3_26.z - (player_67.getSize() - 1 << 8);
-												if (i_41 >= i_50 && player_67.getSize() <= npc_59.definitions.anInt4858 - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize() <= npc_59.definitions.anInt4858 - (i_28 - i_21 >> 9)) {
+												if (i_41 >= i_50 && player_67.getSize() <= npc_59.definitions.size - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize() <= npc_59.definitions.size - (i_28 - i_21 >> 9)) {
 													Class96_Sub22.method14678(player_67, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane);
 													player_67.anInt10375 = client.cycles;
 												}

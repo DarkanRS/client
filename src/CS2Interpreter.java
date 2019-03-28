@@ -5517,7 +5517,7 @@ public class CS2Interpreter {
 		NPC npc_2 = (NPC) executor.animable;
 		boolean bool_3 = false;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
-		if (npcdefinitions_4.anIntArray4886 != null) {
+		if (npcdefinitions_4.transformTo != null) {
 			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 		}
 		if (npcdefinitions_4 != null) {
@@ -6113,14 +6113,14 @@ public class CS2Interpreter {
 		i_3 -= coordgrid_5.x;
 		if (i_3 < 0) {
 			i_3 = 0;
-		} else if (i_3 >= IndexLoaders.MAP_REGION_DECODER.getSizeX(1745707366)) {
-			i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX(564190904);
+		} else if (i_3 >= IndexLoaders.MAP_REGION_DECODER.getSizeX()) {
+			i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
 		}
 		i_4 -= coordgrid_5.y;
 		if (i_4 < 0) {
 			i_4 = 0;
-		} else if (i_4 >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-500504359)) {
-			i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-160695726);
+		} else if (i_4 >= IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+			i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 		}
 		client.anInt7262 = (i_3 << 9) + 256;
 		client.anInt7376 = (i_4 << 9) + 256;
@@ -8069,14 +8069,14 @@ public class CS2Interpreter {
 			i_3 -= coordgrid_5.x;
 			if (i_3 < 0) {
 				i_3 = 0;
-			} else if (i_3 >= IndexLoaders.MAP_REGION_DECODER.getSizeX(-1010474219)) {
-				i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX(-751193521);
+			} else if (i_3 >= IndexLoaders.MAP_REGION_DECODER.getSizeX()) {
+				i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
 			}
 			i_4 -= coordgrid_5.y;
 			if (i_4 < 0) {
 				i_4 = 0;
-			} else if (i_4 >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-281530054)) {
-				i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-206286214);
+			} else if (i_4 >= IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+				i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 			}
 			Class508.anInt5864 = (i_3 << 9) + 256;
 			Class86.anInt833 = (i_4 << 9) + 256;
@@ -9058,12 +9058,12 @@ public class CS2Interpreter {
 		NPC npc_2 = (NPC) executor.animable;
 		String string_3 = npc_2.aString10584;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
-		if (npcdefinitions_4.anIntArray4886 != null) {
+		if (npcdefinitions_4.transformTo != null) {
 			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_4 == null) {
 				string_3 = "";
 			} else {
-				string_3 = npcdefinitions_4.aString4857;
+				string_3 = npcdefinitions_4.name;
 			}
 		}
 		if (string_3 == null) {
@@ -9255,7 +9255,7 @@ public class CS2Interpreter {
 	static final void method3740(CS2Executor executor) {
 		NPC npc_2 = (NPC) executor.animable;
 		NPCDefinitions npcdefinitions_3 = npc_2.definitions;
-		if (npcdefinitions_3.anIntArray4886 != null) {
+		if (npcdefinitions_3.transformTo != null) {
 			npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 		}
 		executor.intStack[++executor.intStackPtr - 1] = npcdefinitions_3 != null ? 1 : 0;

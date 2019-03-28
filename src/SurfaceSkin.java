@@ -1,17 +1,11 @@
 public class SurfaceSkin {
 
 	public int anInt2113;
-
 	public SurfaceSkin aClass172_2114;
-
 	public Matrix44Arr aClass384_2116;
-
 	public int anInt2117;
-
 	public int anInt2118;
-
 	public int anInt2115;
-
 	public int anInt2119;
 
 	SurfaceSkin(int i_1, int i_2) {

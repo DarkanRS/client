@@ -42,10 +42,10 @@ public class Class239 {
 				i_3 = VertexNormal.myPlayer.regionBaseX[0] >> 3;
 				i_4 = VertexNormal.myPlayer.regionBaseY[0] >> 3;
 			}
-			if (i_3 >= 0 && i_3 < mapregion_1.getSizeX(-1174933270) >> 3 && i_4 >= 0 && i_4 < mapregion_1.getSizeY(-1872557951) >> 3) {
+			if (i_3 >= 0 && i_3 < mapregion_1.getSizeX() >> 3 && i_4 >= 0 && i_4 < mapregion_1.getSizeY() >> 3) {
 				this.method4072(i_3, i_4, anInt2942, -1945601333);
 			} else {
-				this.method4072(mapregion_1.getSizeX(-848412942) >> 4, mapregion_1.getSizeY(-1591004572) >> 4, 0, -1860642378);
+				this.method4072(mapregion_1.getSizeX() >> 4, mapregion_1.getSizeY() >> 4, 0, -1860642378);
 			}
 		} else {
 			this.method4072(Class31.anInt361 >> 12, Class246.anInt3029 >> 12, anInt2942, -1959454932);

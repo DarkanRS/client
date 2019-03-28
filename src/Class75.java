@@ -24,7 +24,7 @@ public final class Class75 {
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10314 = this.anInt740;
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10353 = client.cycles;
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.anInt739, (byte) 5), 687087501);
-				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method15836(this.aClass521_Sub1_Sub1_Sub2_Sub2_741.definitions.anInt4858, (byte) -96);
+				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.method15836(this.aClass521_Sub1_Sub1_Sub2_Sub2_741.definitions.size, (byte) -96);
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10340 = this.aClass521_Sub1_Sub1_Sub2_Sub2_741.definitions.anInt4889 << 3;
 				this.aClass521_Sub1_Sub1_Sub2_Sub2_741.drawPriority = ++Class86.anInt819 - 1;
 			} else {
@@ -67,7 +67,7 @@ public final class Class75 {
 			NPCDefinitions npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.anInt739, (byte) 53);
 			boolean bool_3 = npcdefinitions_2.method6881();
 			if (this.anIntArray745 == null) {
-				RenderAnimDefs renderanimdefs_4 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(npcdefinitions_2.anInt4898, (byte) -42);
+				RenderAnimDefs renderanimdefs_4 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(npcdefinitions_2.renderEmote, (byte) -42);
 				this.anIntArray745 = renderanimdefs_4.method3828();
 			}
 			int[] ints_7 = this.anIntArray745;

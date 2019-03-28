@@ -279,7 +279,7 @@ public class JS5Manager {
 							bytes_6[Class4.anInt35][i_11 - 1][i_14] = b_7;
 						}
 						++i_14;
-						if (i_14 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-333277529)) {
+						if (i_14 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 							if (i_11 - 1 >= 0 && b_7 != bytes_6[Class4.anInt35][i_11 - 1][i_14] && (regionmap_8.tileMasks[Class4.anInt35][i_11][i_14] & 0x4) == 0 && (regionmap_8.tileMasks[Class4.anInt35][i_11 - 1][i_14 - 1] & 0x4) == 0) {
 								client.anIntArray7243[i_29] = i_11 - 1 | 0x120000 | 0x52000000;
 								client.anIntArray7425[i_29] = i_14 | 0x130000;
@@ -292,7 +292,7 @@ public class JS5Manager {
 								i_29 = i_29 + 1 & 0xfff;
 								bytes_6[Class4.anInt35][i_11][i_14] = b_7;
 							}
-							if (i_11 + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1412257249) && bytes_6[Class4.anInt35][i_11 + 1][i_14] != b_7 && (regionmap_8.tileMasks[Class4.anInt35][i_11][i_14] & 0x4) == 0 && (regionmap_8.tileMasks[Class4.anInt35][i_11 + 1][i_14 - 1] & 0x4) == 0) {
+							if (i_11 + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && bytes_6[Class4.anInt35][i_11 + 1][i_14] != b_7 && (regionmap_8.tileMasks[Class4.anInt35][i_11][i_14] & 0x4) == 0 && (regionmap_8.tileMasks[Class4.anInt35][i_11 + 1][i_14 - 1] & 0x4) == 0) {
 								client.anIntArray7243[i_29] = i_11 + 1 | 0x520000 | ~0x6dffffff;
 								client.anIntArray7425[i_29] = i_14 | 0x530000;
 								i_29 = i_29 + 1 & 0xfff;
@@ -300,7 +300,7 @@ public class JS5Manager {
 							}
 						}
 						--i_14;
-						if (i_11 + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1831553983) && b_7 != bytes_6[Class4.anInt35][i_11 + 1][i_14]) {
+						if (i_11 + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && b_7 != bytes_6[Class4.anInt35][i_11 + 1][i_14]) {
 							client.anIntArray7243[i_29] = i_11 + 1 | 0x920000 | 0x53000000;
 							client.anIntArray7425[i_29] = i_14 | 0x930000;
 							i_29 = i_29 + 1 & 0xfff;
@@ -320,7 +320,7 @@ public class JS5Manager {
 								i_29 = i_29 + 1 & 0xfff;
 								bytes_6[Class4.anInt35][i_11][i_14] = b_7;
 							}
-							if (i_11 + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1761187382) && bytes_6[Class4.anInt35][i_11 + 1][i_14] != b_7 && (regionmap_8.tileMasks[Class4.anInt35][i_11][i_14] & 0x4) == 0 && (regionmap_8.tileMasks[Class4.anInt35][i_11 + 1][i_14 + 1] & 0x4) == 0) {
+							if (i_11 + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && bytes_6[Class4.anInt35][i_11 + 1][i_14] != b_7 && (regionmap_8.tileMasks[Class4.anInt35][i_11][i_14] & 0x4) == 0 && (regionmap_8.tileMasks[Class4.anInt35][i_11 + 1][i_14 + 1] & 0x4) == 0) {
 								client.anIntArray7243[i_29] = i_11 + 1 | 0x920000 | ~0x2dffffff;
 								client.anIntArray7425[i_29] = i_14 | 0x930000;
 								i_29 = i_29 + 1 & 0xfff;

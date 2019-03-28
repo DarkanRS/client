@@ -51,7 +51,7 @@ public class Class14 {
 			short[] shorts_20;
 			long long_21;
 			if ((i_4 & 0x100) != 0) {
-				i_14 = npc.definitions.anIntArray4859.length;
+				i_14 = npc.definitions.modelIds.length;
 				i_6 = 0;
 				if (npc.definitions.aShortArray4892 != null) {
 					i_6 = npc.definitions.aShortArray4892.length;
@@ -215,7 +215,7 @@ public class Class14 {
 					TextureDetails.method2876(npc);
 				}
 				npc.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBigSmart(), (byte) 45), 332217631);
-				npc.method15836(npc.definitions.anInt4858, (byte) -91);
+				npc.method15836(npc.definitions.size, (byte) -91);
 				npc.anInt10340 = npc.definitions.anInt4889 << 3;
 				if (npc.definitions.method6886(-1928423029)) {
 					Class397.method6775(npc.plane, npc.regionBaseX[0], npc.regionBaseY[0], 0, (ObjectDefinitions) null, npc, (Player) null, 352984427);
@@ -285,7 +285,7 @@ public class Class14 {
 			if ((i_4 & 0x10000) != 0) {
 				npc.anInt10582 = buffer.readUnsignedShort128();
 				if (npc.anInt10582 == 65535) {
-					npc.anInt10582 = npc.definitions.anInt4879;
+					npc.anInt10582 = npc.definitions.combatLevel;
 				}
 			}
 			if ((i_4 & 0x400000) != 0) {
@@ -311,8 +311,8 @@ public class Class14 {
 			}
 			if ((i_4 & 0x800000) != 0) {
 				npc.aString10584 = buffer.readString();
-				if ("".equals(npc.aString10584) || npc.aString10584.equals(npc.definitions.aString4857)) {
-					npc.aString10584 = npc.definitions.aString4857;
+				if ("".equals(npc.aString10584) || npc.aString10584.equals(npc.definitions.name)) {
+					npc.aString10584 = npc.definitions.name;
 				}
 			}
 			if ((i_4 & 0x2) != 0) {

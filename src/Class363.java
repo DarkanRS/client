@@ -54,7 +54,7 @@ public class Class363 {
 	}
 
 	static final void method6287(Animable animable_0, boolean bool_1, int i_2) {
-		int moveType = MovementType.STATIONARY.id;
+		int moveType = MovementType.TELEPORT.id;
 		int i_4 = 0;
 		if (animable_0.anInt10342 > client.cycles) {
 			MovementType.method4281(animable_0);
@@ -67,7 +67,7 @@ public class Class363 {
 		}
 		Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
 		int i_6;
-		if ((int) vector3_5.x < 512 || (int) vector3_5.z < 512 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(735172073) - 1) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY(-1048165287) - 1) * 512) {
+		if ((int) vector3_5.x < 512 || (int) vector3_5.z < 512 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) * 512) {
 			animable_0.currentAnimation.update(-1);
 			for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
 				animable_0.aClass161Array10339[i_6].spotAnimId = -1;
@@ -76,12 +76,12 @@ public class Class363 {
 			animable_0.currentAnimations = null;
 			animable_0.anInt10342 = 0;
 			animable_0.anInt10345 = 0;
-			moveType = MovementType.STATIONARY.id;
+			moveType = MovementType.TELEPORT.id;
 			i_4 = 0;
 			animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
 			animable_0.method15801();
 		}
-		if (VertexNormal.myPlayer == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(723986373) - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY(-806842262) - 12) * 512)) {
+		if (VertexNormal.myPlayer == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 12) * 512)) {
 			animable_0.currentAnimation.update(-1);
 			for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
 				animable_0.aClass161Array10339[i_6].spotAnimId = -1;
@@ -90,7 +90,7 @@ public class Class363 {
 			animable_0.currentAnimations = null;
 			animable_0.anInt10342 = 0;
 			animable_0.anInt10345 = 0;
-			moveType = MovementType.STATIONARY.id;
+			moveType = MovementType.TELEPORT.id;
 			i_4 = 0;
 			animable_0.method11172((float) (animable_0.regionBaseX[0] * 512 + animable_0.getSize() * 256), vector3_5.y, (float) (512 * animable_0.regionBaseY[0] + animable_0.getSize() * 256));
 			animable_0.method15801();

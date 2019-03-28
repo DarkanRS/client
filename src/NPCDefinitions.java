@@ -1,135 +1,70 @@
 public class NPCDefinitions {
 
 	NPCIndexLoader aClass406_4855;
-
 	public int anInt4856;
-
-	public String[] aStringArray4882;
-
+	public String[] options;
 	public static short[] aShortArray4862 = new short[256];
-
-	public int[] anIntArray4859;
-
+	public int[] modelIds;
 	public byte aByte4916;
-
-	public String aString4857 = "null";
-
-	public int anInt4858 = 1;
-
-	public int anInt4898 = -1;
-
+	public String name = "null";
+	public int size = 1;
+	public int renderEmote = -1;
 	byte aByte4871 = 0;
-
 	public int anInt4873 = -1;
-
 	public int anInt4861 = -1;
-
 	public int anInt4875 = -1;
-
 	public int anInt4854 = -1;
-
 	public int anInt4877 = -1;
-
-	public boolean aBool4864 = true;
-
-	public int anInt4879 = -1;
-
+	public boolean isVisibleOnMap = true;
+	public int combatLevel = -1;
 	int anInt4880 = 128;
-
 	int anInt4881 = 128;
-
 	public boolean aBool4904 = false;
-
 	public boolean aBool4890 = false;
-
 	public boolean aBool4884 = false;
-
 	int anInt4885 = 0;
-
 	int anInt4888 = 0;
-
-	public int anInt4887 = -1;
-
+	public int headIcons = -1;
 	public int anInt4918 = -1;
-
 	public int anInt4889 = 32;
-
-	int anInt4891 = -1;
-
-	int anInt4878 = -1;
-
+	int varpBit = -1;
+	int varp = -1;
 	public boolean aBool4893 = true;
-
 	public boolean aBool4894 = true;
-
 	public boolean aBool4912 = true;
-
 	public short aShort4874 = 0;
-
 	public short aShort4897 = 0;
-
 	public byte aByte4883 = -96;
-
 	public byte aByte4899 = -16;
-
-	public byte aByte4900 = 0;
-
+	public byte walkMask = 0;
 	public int anInt4903 = -1;
-
 	public int anInt4921 = -1;
-
 	public int anInt4876 = -1;
-
 	public int anInt4906 = -1;
-
 	public int anInt4907 = 0;
-
 	public int anInt4908 = 0;
-
 	public int anInt4909 = 255;
-
 	public int anInt4902 = -1;
-
-	public NPCDirection aClass252_4910;
-
+	public NPCDirection respawnDirection;
 	public int anInt4914;
-
 	public int anInt4917;
-
 	public int anInt4911;
-
 	public int anInt4919;
-
 	public int anInt4913;
-
 	public boolean aBool4920;
-
 	short[] aShortArray4863;
-
 	public short[] aShortArray4892;
-
 	short[] aShortArray4866;
-
 	public short[] aShortArray4867;
-
 	byte[] aByteArray4865;
-
 	public int[] anIntArray4860;
-
-	public int[] anIntArray4886;
-
+	public int[] transformTo;
 	int[][] anIntArrayArray4895;
-
 	byte aByte4868;
-
 	byte aByte4869;
-
 	byte aByte4905;
-
 	public int[] anIntArray4915;
-
 	public boolean aBool4872;
-
 	IterableNodeMap aClass465_4896;
 
 	void method6874(RsByteBuffer rsbytebuffer_1) {
@@ -138,12 +73,12 @@ public class NPCDefinitions {
 			if (i_3 == 0) {
 				return;
 			}
-			this.method6896(rsbytebuffer_1, i_3);
+			this.decode(rsbytebuffer_1, i_3);
 		}
 	}
 
 	public final MeshRasterizer method6875(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Interface42 interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11) {
-		return this.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, this.anInt4898, true, 1493042037);
+		return this.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, this.renderEmote, true, 1493042037);
 	}
 
 	public int method6876(int i_1, int i_2, int i_3) {
@@ -156,8 +91,8 @@ public class NPCDefinitions {
 	}
 
 	void method6877() {
-		if (this.anIntArray4859 == null) {
-			this.anIntArray4859 = new int[0];
+		if (this.modelIds == null) {
+			this.modelIds = new int[0];
 		}
 		if (this.aByte4916 == -1) {
 			if (this.aClass406_4855.aClass486_4844 == Game.darkan) {
@@ -169,7 +104,7 @@ public class NPCDefinitions {
 	}
 
 	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Interface42 interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11, boolean bool_12, int i_13) {
-		if (this.anIntArray4886 != null) {
+		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_14 = this.method6884(interface42_4);
 			return npcdefinitions_14 == null ? null : npcdefinitions_14.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12, 1208445516);
 		} else {
@@ -208,8 +143,8 @@ public class NPCDefinitions {
 			RenderAnimDefs renderanimdefs_45 = null;
 			if (!bool_12 && i_11 != -1) {
 				renderanimdefs_45 = renderanimindexloader_3.getRenderAnimDefs(i_11, (byte) 22);
-			} else if (this.anInt4898 != -1) {
-				renderanimdefs_45 = renderanimindexloader_3.getRenderAnimDefs(this.anInt4898, (byte) 85);
+			} else if (this.renderEmote != -1) {
+				renderanimdefs_45 = renderanimindexloader_3.getRenderAnimDefs(this.renderEmote, (byte) 85);
 			}
 			int i_25;
 			if (meshrasterizer_19 == null || (meshrasterizer_19.m() & i_32) != i_32) {
@@ -226,7 +161,7 @@ public class NPCDefinitions {
 				if (this.aByte4871 != 0) {
 					i_21 |= 0x80000;
 				}
-				int[] ints_22 = class417_10 != null && class417_10.anIntArray4992 != null ? class417_10.anIntArray4992 : this.anIntArray4859;
+				int[] ints_22 = class417_10 != null && class417_10.anIntArray4992 != null ? class417_10.anIntArray4992 : this.modelIds;
 				boolean bool_23 = false;
 				Index index_24 = this.aClass406_4855.aClass317_4842;
 				synchronized (this.aClass406_4855.aClass317_4842) {
@@ -395,7 +330,7 @@ public class NPCDefinitions {
 	}
 
 	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, Interface42 interface42_3, Animation animation_4, Class417 class417_5, int i_6) {
-		if (this.anIntArray4886 != null) {
+		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_7 = this.method6884(interface42_3);
 			return npcdefinitions_7 == null ? null : npcdefinitions_7.method6880(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5, 1382303105);
 		} else if (this.anIntArray4860 == null && (class417_5 == null || class417_5.anIntArray4992 == null)) {
@@ -511,11 +446,11 @@ public class NPCDefinitions {
 	}
 
 	public final boolean method6881() {
-		if (this.anIntArray4859 == null) {
+		if (this.modelIds == null) {
 			return true;
 		} else {
 			boolean bool_2 = true;
-			int[] ints_3 = this.anIntArray4859;
+			int[] ints_3 = this.modelIds;
 			for (int i_4 = 0; i_4 < ints_3.length; i_4++) {
 				int i_5 = ints_3[i_4];
 				if (!this.aClass406_4855.aClass317_4842.load(i_5, 0)) {
@@ -537,45 +472,45 @@ public class NPCDefinitions {
 
 	public final NPCDefinitions method6884(Interface42 interface42_1) {
 		int i_3 = -1;
-		if (this.anInt4891 != -1) {
-			i_3 = interface42_1.method241(this.anInt4891, -578283448);
-		} else if (this.anInt4878 != -1) {
-			i_3 = interface42_1.method240(this.anInt4878, 817995491);
+		if (this.varpBit != -1) {
+			i_3 = interface42_1.method241(this.varpBit, -578283448);
+		} else if (this.varp != -1) {
+			i_3 = interface42_1.method240(this.varp, 817995491);
 		}
-		if (i_3 >= 0 && i_3 < this.anIntArray4886.length - 1 && this.anIntArray4886[i_3] != -1) {
-			return this.aClass406_4855.getNPCDefinitions(this.anIntArray4886[i_3], (byte) 43);
+		if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
+			return this.aClass406_4855.getNPCDefinitions(this.transformTo[i_3], (byte) 43);
 		} else {
-			int i_4 = this.anIntArray4886[this.anIntArray4886.length - 1];
+			int i_4 = this.transformTo[this.transformTo.length - 1];
 			return i_4 != -1 ? this.aClass406_4855.getNPCDefinitions(i_4, (byte) -44) : null;
 		}
 	}
 
 	public boolean method6885(Interface42 interface42_1) {
-		if (this.anIntArray4886 == null) {
+		if (this.transformTo == null) {
 			return true;
 		} else {
 			int i_3 = -1;
-			if (this.anInt4891 != -1) {
-				i_3 = interface42_1.method241(this.anInt4891, -2139197647);
-			} else if (this.anInt4878 != -1) {
-				i_3 = interface42_1.method240(this.anInt4878, -332269014);
+			if (this.varpBit != -1) {
+				i_3 = interface42_1.method241(this.varpBit, -2139197647);
+			} else if (this.varp != -1) {
+				i_3 = interface42_1.method240(this.varp, -332269014);
 			}
-			if (i_3 >= 0 && i_3 < this.anIntArray4886.length - 1 && this.anIntArray4886[i_3] != -1) {
+			if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
 				return true;
 			} else {
-				int i_4 = this.anIntArray4886[this.anIntArray4886.length - 1];
+				int i_4 = this.transformTo[this.transformTo.length - 1];
 				return i_4 != -1;
 			}
 		}
 	}
 
 	public boolean method6886(int i_1) {
-		if (this.anIntArray4886 == null) {
+		if (this.transformTo == null) {
 			return this.anInt4903 != -1 || this.anInt4876 != -1 || this.anInt4906 != -1;
 		} else {
-			for (int i_2 = 0; i_2 < this.anIntArray4886.length; i_2++) {
-				if (this.anIntArray4886[i_2] != -1) {
-					NPCDefinitions npcdefinitions_3 = this.aClass406_4855.getNPCDefinitions(this.anIntArray4886[i_2], (byte) -70);
+			for (int i_2 = 0; i_2 < this.transformTo.length; i_2++) {
+				if (this.transformTo[i_2] != -1) {
+					NPCDefinitions npcdefinitions_3 = this.aClass406_4855.getNPCDefinitions(this.transformTo[i_2], (byte) -70);
 					if (npcdefinitions_3.anInt4903 != -1 || npcdefinitions_3.anInt4876 != -1 || npcdefinitions_3.anInt4906 != -1) {
 						return true;
 					}
@@ -586,7 +521,7 @@ public class NPCDefinitions {
 	}
 
 	NPCDefinitions() {
-		this.aClass252_4910 = NPCDirection.SOUTH;
+		this.respawnDirection = NPCDirection.SOUTH;
 		this.anInt4914 = -1;
 		this.aByte4916 = -1;
 		this.anInt4917 = -1;
@@ -596,214 +531,207 @@ public class NPCDefinitions {
 		this.aBool4920 = true;
 	}
 
-	void method6896(RsByteBuffer rsbytebuffer_1, int i_2) {
-		int i_4;
-		int i_5;
-		if (i_2 == 1) {
-			i_4 = rsbytebuffer_1.readUnsignedByte();
-			this.anIntArray4859 = new int[i_4];
-			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.anIntArray4859[i_5] = rsbytebuffer_1.readBigSmart();
+	void decode(RsByteBuffer stream, int opcode) {
+		if (opcode == 1) {
+			int i_4 = stream.readUnsignedByte();
+			this.modelIds = new int[i_4];
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				this.modelIds[i_5] = stream.readBigSmart();
 			}
-		} else if (i_2 == 2) {
-			this.aString4857 = rsbytebuffer_1.readString();
-		} else if (i_2 == 12) {
-			this.anInt4858 = rsbytebuffer_1.readUnsignedByte();
-		} else if (i_2 >= 30 && i_2 < 35) {
-			this.aStringArray4882[i_2 - 30] = rsbytebuffer_1.readString();
-		} else if (i_2 == 40) {
-			i_4 = rsbytebuffer_1.readUnsignedByte();
+		} else if (opcode == 2) {
+			this.name = stream.readString();
+		} else if (opcode == 12) {
+			this.size = stream.readUnsignedByte();
+		} else if (opcode >= 30 && opcode < 35) {
+			this.options[opcode - 30] = stream.readString();
+		} else if (opcode == 40) {
+			int i_4 = stream.readUnsignedByte();
 			this.aShortArray4863 = new short[i_4];
 			this.aShortArray4892 = new short[i_4];
-			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.aShortArray4863[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
-				this.aShortArray4892[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				this.aShortArray4863[i_5] = (short) stream.readUnsignedShort();
+				this.aShortArray4892[i_5] = (short) stream.readUnsignedShort();
 			}
-		} else if (i_2 == 41) {
-			i_4 = rsbytebuffer_1.readUnsignedByte();
+		} else if (opcode == 41) {
+			int i_4 = stream.readUnsignedByte();
 			this.aShortArray4866 = new short[i_4];
 			this.aShortArray4867 = new short[i_4];
-			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.aShortArray4866[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
-				this.aShortArray4867[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				this.aShortArray4866[i_5] = (short) stream.readUnsignedShort();
+				this.aShortArray4867[i_5] = (short) stream.readUnsignedShort();
 			}
-		} else if (i_2 == 42) {
-			i_4 = rsbytebuffer_1.readUnsignedByte();
+		} else if (opcode == 42) {
+			int i_4 = stream.readUnsignedByte();
 			this.aByteArray4865 = new byte[i_4];
-			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.aByteArray4865[i_5] = rsbytebuffer_1.readByte();
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				this.aByteArray4865[i_5] = stream.readByte();
 			}
-		} else if (i_2 == 60) {
-			i_4 = rsbytebuffer_1.readUnsignedByte();
+		} else if (opcode == 60) {
+			int i_4 = stream.readUnsignedByte();
 			this.anIntArray4860 = new int[i_4];
-			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.anIntArray4860[i_5] = rsbytebuffer_1.readBigSmart();
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				this.anIntArray4860[i_5] = stream.readBigSmart();
 			}
-		} else if (i_2 == 93) {
-			this.aBool4864 = false;
-		} else if (i_2 == 95) {
-			this.anInt4879 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 97) {
-			this.anInt4880 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 98) {
-			this.anInt4881 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 99) {
+		} else if (opcode == 93) {
+			this.isVisibleOnMap = false;
+		} else if (opcode == 95) {
+			this.combatLevel = stream.readUnsignedShort();
+		} else if (opcode == 97) {
+			this.anInt4880 = stream.readUnsignedShort();
+		} else if (opcode == 98) {
+			this.anInt4881 = stream.readUnsignedShort();
+		} else if (opcode == 99) {
 			this.aBool4904 = true;
-		} else if (i_2 == 100) {
-			this.anInt4885 = rsbytebuffer_1.readByte();
-		} else if (i_2 == 101) {
-			this.anInt4888 = rsbytebuffer_1.readByte();
-		} else if (i_2 == 102) {
-			this.anInt4887 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 103) {
-			this.anInt4889 = rsbytebuffer_1.readUnsignedShort();
-		} else {
-			int i_6;
-			if (i_2 != 106 && i_2 != 118) {
-				if (i_2 == 107) {
-					this.aBool4893 = false;
-				} else if (i_2 == 109) {
-					this.aBool4894 = false;
-				} else if (i_2 == 111) {
-					this.aBool4912 = false;
-				} else if (i_2 == 113) {
-					this.aShort4874 = (short) rsbytebuffer_1.readUnsignedShort();
-					this.aShort4897 = (short) rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 114) {
-					this.aByte4883 = rsbytebuffer_1.readByte();
-					this.aByte4899 = rsbytebuffer_1.readByte();
-				} else if (i_2 == 119) {
-					this.aByte4900 = rsbytebuffer_1.readByte();
-				} else if (i_2 == 121) {
-					this.anIntArrayArray4895 = new int[this.anIntArray4859.length][];
-					i_4 = rsbytebuffer_1.readUnsignedByte();
-					for (i_5 = 0; i_5 < i_4; i_5++) {
-						i_6 = rsbytebuffer_1.readUnsignedByte();
-						int[] ints_7 = this.anIntArrayArray4895[i_6] = new int[3];
-						ints_7[0] = rsbytebuffer_1.readByte();
-						ints_7[1] = rsbytebuffer_1.readByte();
-						ints_7[2] = rsbytebuffer_1.readByte();
-					}
-				} else if (i_2 == 123) {
-					this.anInt4902 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 125) {
-					this.aClass252_4910 = (NPCDirection) Class386.identify(Class46.getDirections(), rsbytebuffer_1.readByte());
-				} else if (i_2 == 127) {
-					this.anInt4898 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 128) {
-					Class386.identify(Class8_Sub3.method14339(), rsbytebuffer_1.readUnsignedByte());
-				} else if (i_2 == 134) {
-					this.anInt4903 = rsbytebuffer_1.readUnsignedShort();
-					if (this.anInt4903 == 65535) {
-						this.anInt4903 = -1;
-					}
-					this.anInt4921 = rsbytebuffer_1.readUnsignedShort();
-					if (this.anInt4921 == 65535) {
-						this.anInt4921 = -1;
-					}
-					this.anInt4876 = rsbytebuffer_1.readUnsignedShort();
-					if (this.anInt4876 == 65535) {
-						this.anInt4876 = -1;
-					}
-					this.anInt4906 = rsbytebuffer_1.readUnsignedShort();
-					if (this.anInt4906 == 65535) {
-						this.anInt4906 = -1;
-					}
-					this.anInt4907 = rsbytebuffer_1.readUnsignedByte();
-				} else if (i_2 == 135) {
-					this.anInt4875 = rsbytebuffer_1.readUnsignedByte();
-					this.anInt4873 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 136) {
-					this.anInt4854 = rsbytebuffer_1.readUnsignedByte();
-					this.anInt4861 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 137) {
-					this.anInt4877 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 138) {
-					this.anInt4918 = rsbytebuffer_1.readBigSmart();
-				} else if (i_2 == 140) {
-					this.anInt4909 = rsbytebuffer_1.readUnsignedByte();
-				} else if (i_2 == 141) {
-					this.aBool4884 = true;
-				} else if (i_2 == 142) {
-					this.anInt4914 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 143) {
-					this.aBool4890 = true;
-				} else if (i_2 >= 150 && i_2 < 155) {
-					this.aStringArray4882[i_2 - 150] = rsbytebuffer_1.readString();
-					if (!this.aClass406_4855.aBool4838) {
-						this.aStringArray4882[i_2 - 150] = null;
-					}
-				} else if (i_2 == 155) {
-					this.aByte4868 = rsbytebuffer_1.readByte();
-					this.aByte4869 = rsbytebuffer_1.readByte();
-					this.aByte4905 = rsbytebuffer_1.readByte();
-					this.aByte4871 = rsbytebuffer_1.readByte();
-				} else if (i_2 == 158) {
-					this.aByte4916 = 1;
-				} else if (i_2 == 159) {
-					this.aByte4916 = 0;
-				} else if (i_2 == 160) {
-					i_4 = rsbytebuffer_1.readUnsignedByte();
-					this.anIntArray4915 = new int[i_4];
-					for (i_5 = 0; i_5 < i_4; i_5++) {
-						this.anIntArray4915[i_5] = rsbytebuffer_1.readUnsignedShort();
-					}
-				} else if (i_2 == 162) {
-					this.aBool4872 = true;
-				} else if (i_2 == 163) {
-					this.anInt4917 = rsbytebuffer_1.readUnsignedByte();
-				} else if (i_2 == 164) {
-					this.anInt4911 = rsbytebuffer_1.readUnsignedShort();
-					this.anInt4919 = rsbytebuffer_1.readUnsignedShort();
-				} else if (i_2 == 165) {
-					this.anInt4913 = rsbytebuffer_1.readUnsignedByte();
-				} else if (i_2 == 168) {
-					this.anInt4908 = rsbytebuffer_1.readUnsignedByte();
-				} else if (i_2 == 169) {
-					this.aBool4920 = false;
-				} else if (i_2 == 249) {
-					i_4 = rsbytebuffer_1.readUnsignedByte();
-					if (this.aClass465_4896 == null) {
-						i_5 = Texture.nextPowerOfTwo(i_4, -597233692);
-						this.aClass465_4896 = new IterableNodeMap(i_5);
-					}
-					for (i_5 = 0; i_5 < i_4; i_5++) {
-						boolean bool_10 = rsbytebuffer_1.readUnsignedByte() == 1;
-						int i_9 = rsbytebuffer_1.read24BitUnsignedInteger();
-						Object obj_8;
-						if (bool_10) {
-							obj_8 = new Class282_Sub47(rsbytebuffer_1.readString());
-						} else {
-							obj_8 = new Class282_Sub38(rsbytebuffer_1.readInt());
-						}
-						this.aClass465_4896.put((Node) obj_8, (long) i_9);
-					}
+		} else if (opcode == 100) {
+			this.anInt4885 = stream.readByte();
+		} else if (opcode == 101) {
+			this.anInt4888 = stream.readByte();
+		} else if (opcode == 102) {
+			this.headIcons = stream.readUnsignedShort();
+		} else if (opcode == 103) {
+			this.anInt4889 = stream.readUnsignedShort();
+		} else if (opcode == 106 || opcode == 118) {
+			this.varpBit = stream.readUnsignedShort();
+			if (this.varpBit == 65535) {
+				this.varpBit = -1;
+			}
+			this.varp = stream.readUnsignedShort();
+			if (this.varp == 65535) {
+				this.varp = -1;
+			}
+			int i_4 = -1;
+			if (opcode == 118) {
+				i_4 = stream.readUnsignedShort();
+				if (i_4 == 65535) {
+					i_4 = -1;
 				}
-			} else {
-				this.anInt4891 = rsbytebuffer_1.readUnsignedShort();
-				if (this.anInt4891 == 65535) {
-					this.anInt4891 = -1;
+			}
+			int i_5 = stream.readUnsignedByte();
+			this.transformTo = new int[i_5 + 2];
+			for (int i_6 = 0; i_6 <= i_5; i_6++) {
+				this.transformTo[i_6] = stream.readUnsignedShort();
+				if (this.transformTo[i_6] == 65535) {
+					this.transformTo[i_6] = -1;
 				}
-				this.anInt4878 = rsbytebuffer_1.readUnsignedShort();
-				if (this.anInt4878 == 65535) {
-					this.anInt4878 = -1;
+			}
+			this.transformTo[i_5 + 1] = i_4;
+		} else if (opcode == 107) {
+			this.aBool4893 = false;
+		} else if (opcode == 109) {
+			this.aBool4894 = false;
+		} else if (opcode == 111) {
+			this.aBool4912 = false;
+		} else if (opcode == 113) {
+			this.aShort4874 = (short) stream.readUnsignedShort();
+			this.aShort4897 = (short) stream.readUnsignedShort();
+		} else if (opcode == 114) {
+			this.aByte4883 = stream.readByte();
+			this.aByte4899 = stream.readByte();
+		} else if (opcode == 119) {
+			this.walkMask = stream.readByte();
+		} else if (opcode == 121) {
+			this.anIntArrayArray4895 = new int[this.modelIds.length][];
+			int i_4 = stream.readUnsignedByte();
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				int i_6 = stream.readUnsignedByte();
+				int[] ints_7 = this.anIntArrayArray4895[i_6] = new int[3];
+				ints_7[0] = stream.readByte();
+				ints_7[1] = stream.readByte();
+				ints_7[2] = stream.readByte();
+			}
+		} else if (opcode == 123) {
+			this.anInt4902 = stream.readUnsignedShort();
+		} else if (opcode == 125) {
+			this.respawnDirection = (NPCDirection) Class386.identify(Class46.getDirections(), stream.readByte());
+		} else if (opcode == 127) {
+			this.renderEmote = stream.readUnsignedShort();
+		} else if (opcode == 128) {
+			Class386.identify(Class8_Sub3.method14339(), stream.readUnsignedByte());
+		} else if (opcode == 134) {
+			this.anInt4903 = stream.readUnsignedShort();
+			if (this.anInt4903 == 65535) {
+				this.anInt4903 = -1;
+			}
+			this.anInt4921 = stream.readUnsignedShort();
+			if (this.anInt4921 == 65535) {
+				this.anInt4921 = -1;
+			}
+			this.anInt4876 = stream.readUnsignedShort();
+			if (this.anInt4876 == 65535) {
+				this.anInt4876 = -1;
+			}
+			this.anInt4906 = stream.readUnsignedShort();
+			if (this.anInt4906 == 65535) {
+				this.anInt4906 = -1;
+			}
+			this.anInt4907 = stream.readUnsignedByte();
+		} else if (opcode == 135) {
+			this.anInt4875 = stream.readUnsignedByte();
+			this.anInt4873 = stream.readUnsignedShort();
+		} else if (opcode == 136) {
+			this.anInt4854 = stream.readUnsignedByte();
+			this.anInt4861 = stream.readUnsignedShort();
+		} else if (opcode == 137) {
+			this.anInt4877 = stream.readUnsignedShort();
+		} else if (opcode == 138) {
+			this.anInt4918 = stream.readBigSmart();
+		} else if (opcode == 140) {
+			this.anInt4909 = stream.readUnsignedByte();
+		} else if (opcode == 141) {
+			this.aBool4884 = true;
+		} else if (opcode == 142) {
+			this.anInt4914 = stream.readUnsignedShort();
+		} else if (opcode == 143) {
+			this.aBool4890 = true;
+		} else if (opcode >= 150 && opcode < 155) {
+			this.options[opcode - 150] = stream.readString();
+			if (!this.aClass406_4855.aBool4838) {
+				this.options[opcode - 150] = null;
+			}
+		} else if (opcode == 155) {
+			this.aByte4868 = stream.readByte();
+			this.aByte4869 = stream.readByte();
+			this.aByte4905 = stream.readByte();
+			this.aByte4871 = stream.readByte();
+		} else if (opcode == 158) {
+			this.aByte4916 = 1;
+		} else if (opcode == 159) {
+			this.aByte4916 = 0;
+		} else if (opcode == 160) {
+			int i_4 = stream.readUnsignedByte();
+			this.anIntArray4915 = new int[i_4];
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				this.anIntArray4915[i_5] = stream.readUnsignedShort();
+			}
+		} else if (opcode == 162) {
+			this.aBool4872 = true;
+		} else if (opcode == 163) {
+			this.anInt4917 = stream.readUnsignedByte();
+		} else if (opcode == 164) {
+			this.anInt4911 = stream.readUnsignedShort();
+			this.anInt4919 = stream.readUnsignedShort();
+		} else if (opcode == 165) {
+			this.anInt4913 = stream.readUnsignedByte();
+		} else if (opcode == 168) {
+			this.anInt4908 = stream.readUnsignedByte();
+		} else if (opcode == 169) {
+			this.aBool4920 = false;
+		} else if (opcode == 249) {
+			int i_4 = stream.readUnsignedByte();
+			if (this.aClass465_4896 == null) {
+				int i_5 = Texture.nextPowerOfTwo(i_4, -597233692);
+				this.aClass465_4896 = new IterableNodeMap(i_5);
+			}
+			for (int i_5 = 0; i_5 < i_4; i_5++) {
+				boolean bool_10 = stream.readUnsignedByte() == 1;
+				int i_9 = stream.read24BitUnsignedInteger();
+				Object obj_8;
+				if (bool_10) {
+					obj_8 = new Class282_Sub47(stream.readString());
+				} else {
+					obj_8 = new Class282_Sub38(stream.readInt());
 				}
-				i_4 = -1;
-				if (i_2 == 118) {
-					i_4 = rsbytebuffer_1.readUnsignedShort();
-					if (i_4 == 65535) {
-						i_4 = -1;
-					}
-				}
-				i_5 = rsbytebuffer_1.readUnsignedByte();
-				this.anIntArray4886 = new int[i_5 + 2];
-				for (i_6 = 0; i_6 <= i_5; i_6++) {
-					this.anIntArray4886[i_6] = rsbytebuffer_1.readUnsignedShort();
-					if (this.anIntArray4886[i_6] == 65535) {
-						this.anIntArray4886[i_6] = -1;
-					}
-				}
-				this.anIntArray4886[i_5 + 1] = i_4;
+				this.aClass465_4896.put((Node) obj_8, (long) i_9);
 			}
 		}
 	}

@@ -1,51 +1,28 @@
 public class AnimationDefinitions {
 
 	AnimationIndexLoader animationIndexLoader;
-
 	public int anInt5909;
-
 	public static int anInt5930;
-
 	public static boolean aBool5925 = false;
-
 	public int[] frameDurations;
-
 	public int loopDelay = -1;
-
 	public boolean[] aBoolArray5915;
-
 	public int[] frames;
-
 	public int priority = 5;
-
 	public int leftHandItem = -1;
-
 	public int rightHandItem = -1;
-
 	public int maxLoops = 99;
-
 	public int animatingPrecedence = -1;
-
 	public int walkingPrecedence = -1;
-
 	public int replayMode = 2;
-
 	public int[] anIntArray5911;
-
 	public int[][] anIntArrayArray5913;
-
 	public boolean aBool5923 = false;
-
 	public boolean tweened = false;
-
 	public boolean aBool5928 = false;
-
 	public int[] anIntArray5926;
-
 	public int[] anIntArray5927;
-
 	public int[] anIntArray5919;
-
 	IterableNodeMap aClass465_5910;
 
 	public String method11129(int i_1, String string_2) {

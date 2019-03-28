@@ -71,8 +71,8 @@ public class Class13 {
 			RegionMap regionmap_6 = IndexLoaders.MAP_REGION_DECODER.method4433();
 			int i_7 = i_0 >> 9;
 			int i_8 = i_1 >> 9;
-			if (i_2 >= 0 && i_3 >= 0 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(1440924603) - 1 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1516017407) - 1) {
-				if (i_7 >= 1 && i_8 >= 1 && i_7 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(645551626) - 1 && i_8 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-608520237) - 1) {
+			if (i_2 >= 0 && i_3 >= 0 && i_2 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_3 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) {
+				if (i_7 >= 1 && i_8 >= 1 && i_7 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_8 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) {
 					boolean bool_9 = (regionmap_6.tileMasks[1][i_0 >> 9][i_1 >> 9] & 0x2) != 0;
 					boolean bool_10;
 					boolean bool_11;

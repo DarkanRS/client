@@ -354,7 +354,7 @@ public class PacketsDecoder extends Class455 {
 				int i_77 = i_8 >> 28 & 0x3;
 				int i_15 = (i_8 >> 14 & 0x3fff) - coordgrid_33.x;
 				int i_81 = (i_8 & 0x3fff) - coordgrid_33.y;
-				if (i_15 >= 0 && i_81 >= 0 && i_15 < IndexLoaders.MAP_REGION_DECODER.getSizeX(388459650) && i_81 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1824277921)) {
+				if (i_15 >= 0 && i_81 >= 0 && i_15 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_81 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					if (flags == -1) {
 						Class282_Sub50_Sub10 class282_sub50_sub10_80 = (Class282_Sub50_Sub10) client.aClass465_7334.get((long) (i_15 << 16 | i_81));
 						if (class282_sub50_sub10_80 != null) {
@@ -903,14 +903,14 @@ public class PacketsDecoder extends Class455 {
 				i_6 -= coordgrid_114.x;
 				if (i_6 < 0) {
 					i_6 = 0;
-				} else if (i_6 >= IndexLoaders.MAP_REGION_DECODER.getSizeX(2001969663)) {
-					i_6 = IndexLoaders.MAP_REGION_DECODER.getSizeX(1292734123);
+				} else if (i_6 >= IndexLoaders.MAP_REGION_DECODER.getSizeX()) {
+					i_6 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
 				}
 				i_7 -= coordgrid_114.y;
 				if (i_7 < 0) {
 					i_7 = 0;
-				} else if (i_7 >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-446292147)) {
-					i_7 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-1249519564);
+				} else if (i_7 >= IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+					i_7 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 				}
 				Class508.anInt5864 = (i_6 << 9) + 256;
 				Class86.anInt833 = (i_7 << 9) + 256;
@@ -1186,7 +1186,7 @@ public class PacketsDecoder extends Class455 {
 				int i_10 = i_9 - coordgrid_67.y;
 				if (i_6 == Class272.anInt3331 && i_8 >= SceneObjectType.anInt5495 && i_8 < SceneObjectType.anInt5495 + 8 && i_10 >= Class158_Sub1_Sub2.anInt10131 && i_10 < Class158_Sub1_Sub2.anInt10131 + 8) {
 					class282_sub29_109.remove();
-					if (i_8 >= 0 && i_10 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-359634463) && i_10 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-542957162)) {
+					if (i_8 >= 0 && i_10 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_10 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 						Class434_Sub1.method12760(Class272.anInt3331, i_8, i_10);
 					}
 				}
@@ -1314,7 +1314,7 @@ public class PacketsDecoder extends Class455 {
 			int i_23 = i_9 - coordgrid_39.y * 2;
 			int i_77 = b_75 + i_59;
 			int i_15 = b_79 + i_23;
-			if (i_59 >= 0 && i_23 >= 0 && i_59 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1885615957) * 2 && i_23 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1685736884) * 2 && i_77 >= 0 && i_15 >= 0 && i_77 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1422128606) * 2 && i_15 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1745798122) * 2 && i_12 != 65535) {
+			if (i_59 >= 0 && i_23 >= 0 && i_59 < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && i_23 < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && i_77 >= 0 && i_15 >= 0 && i_77 < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && i_15 < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && i_12 != 65535) {
 				i_59 *= 256;
 				i_23 *= 256;
 				i_77 *= 256;

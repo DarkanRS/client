@@ -225,8 +225,8 @@ public class Player extends Animable {
 		}
 
 		this.faceDirection = -1;
-		if (i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1727502065) && i_2 >= 0 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1374799853)) {
-			if (this.regionBaseX[0] >= 0 && this.regionBaseX[0] < IndexLoaders.MAP_REGION_DECODER.getSizeX(1713910486) && this.regionBaseY[0] >= 0 && this.regionBaseY[0] < IndexLoaders.MAP_REGION_DECODER.getSizeY(-499497479)) {
+		if (i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 >= 0 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+			if (this.regionBaseX[0] >= 0 && this.regionBaseX[0] < IndexLoaders.MAP_REGION_DECODER.getSizeX() && this.regionBaseY[0] >= 0 && this.regionBaseY[0] < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				if (b_3 == MovementType.RUNNING.id) {
 					Class512.method8762(this, i_1, i_2, MovementType.RUNNING.id);
 				}
@@ -268,7 +268,7 @@ public class Player extends Animable {
 	}
 
 	public int getSize() {
-		return this.playerAppearance != null && this.playerAppearance.anInt2928 != -1 ? IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928, (byte) -115).anInt4858 : super.getSize();
+		return this.playerAppearance != null && this.playerAppearance.anInt2928 != -1 ? IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928, (byte) -115).size : super.getSize();
 	}
 
 	int getRenderAnimation() {

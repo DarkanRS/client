@@ -45,7 +45,7 @@ public class Item extends Node {
 				}
 
 				int i_12 = i_8 / 128 + 48;
-				int i_13 = 48 + IndexLoaders.MAP_REGION_DECODER.getSizeY(-1005893088) * 4 - i_9 / 128;
+				int i_13 = 48 + IndexLoaders.MAP_REGION_DECODER.getSizeY() * 4 - i_9 / 128;
 				Class419.aClass160_5004.method2762((float) i_2 + (float) icomponentdefinitions_1.anInt1301 / 2.0F, (float) i_3 + (float) icomponentdefinitions_1.anInt1429 / 2.0F, (float) i_12, (float) i_13, i_11, i_10 << 2, class455_6, i_2, i_3);
 				Class283 class283_14 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 38);
 

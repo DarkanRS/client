@@ -58,7 +58,7 @@ public class Class9 {
 	}
 
 	public static void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-593501496) - 1 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-763762693) - 1 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-931426590) != null) {
+		if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-931426590) != null) {
 			SceneObject sceneobject_8;
 			if (i_3 == 0) {
 				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2007440796).getWall(i_0, i_1, i_2, (byte) -24);

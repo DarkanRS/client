@@ -139,7 +139,7 @@ public class Class250 {
 				}
 				if (class75_13.anInt739 >= 0) {
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
-					if (npcdefinitions_91.anIntArray4886 != null) {
+					if (npcdefinitions_91.transformTo != null) {
 						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 						if (npcdefinitions_91 == null) {
 							continue;
@@ -152,7 +152,7 @@ public class Class250 {
 				} else {
 					obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_10 - i_7])).anObject8068;
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
-					if (npcdefinitions_91.anIntArray4886 != null) {
+					if (npcdefinitions_91.transformTo != null) {
 						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 						if (npcdefinitions_91 == null) {
 							continue;
@@ -260,8 +260,8 @@ public class Class250 {
 							nativesprite_111.method2752((int) (client.aFloatArray7292[0] + (float) i_0 - 12.0F), i_92);
 							i_92 -= 2;
 						}
-					} else if (npcdefinitions_91.anInt4887 >= 0 && npcdefinitions_91.anInt4887 < Class16.aClass160Array138.length) {
-						NativeSprite nativesprite_120 = Class16.aClass160Array138[npcdefinitions_91.anInt4887];
+					} else if (npcdefinitions_91.headIcons >= 0 && npcdefinitions_91.headIcons < Class16.aClass160Array138.length) {
+						NativeSprite nativesprite_120 = Class16.aClass160Array138[npcdefinitions_91.headIcons];
 						i_92 -= nativesprite_120.method2793();
 						nativesprite_120.method2752((int) ((float) i_0 + client.aFloatArray7292[0] - (float) (nativesprite_120.method2747() >> 1)), i_92);
 						i_92 -= 2;

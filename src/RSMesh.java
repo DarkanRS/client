@@ -17,7 +17,7 @@ public class RSMesh {
 	public byte[] faceType;
 	public byte[] facePriorities;
 	public byte[] faceAlphas;
-	public int[] skinValues;
+	public int[] textureSkins;
 	public short[] faceTextures;
 	public short[] faceColor;
 	public byte[] texturePos;
@@ -215,7 +215,7 @@ public class RSMesh {
 		}
 
 		if (i_16 == 1) {
-			this.skinValues = new int[this.faceCount];
+			this.textureSkins = new int[this.faceCount];
 		}
 
 		if (i_17 == 1) {
@@ -311,7 +311,7 @@ public class RSMesh {
 			}
 
 			if (i_16 == 1) {
-				this.skinValues[i_53] = rsbytebuffer_6.readUnsignedByte();
+				this.textureSkins[i_53] = rsbytebuffer_6.readUnsignedByte();
 			}
 
 			if (i_17 == 1) {
@@ -588,7 +588,7 @@ public class RSMesh {
 		}
 	}
 
-	public int[][] method2665(boolean bool_1) {
+	public int[][] getBones(boolean bool_1) {
 		int[] ints_2 = new int[256];
 		int i_3 = 0;
 		int i_4 = bool_1 ? this.vertexCount : this.maxDepth;
@@ -627,7 +627,7 @@ public class RSMesh {
 
 		int i_4;
 		for (int i_3 = 0; i_3 < this.faceCount; i_3++) {
-			i_4 = this.skinValues[i_3];
+			i_4 = this.textureSkins[i_3];
 			if (i_4 >= 0) {
 				++ints_1[i_4];
 				if (i_4 > i_2) {
@@ -644,7 +644,7 @@ public class RSMesh {
 		}
 
 		for (i_4 = 0; i_4 < this.faceCount; i_4++) {
-			int i_5 = this.skinValues[i_4];
+			int i_5 = this.textureSkins[i_4];
 			if (i_5 >= 0) {
 				ints_6[i_5][ints_1[i_5]++] = i_4;
 			}
@@ -840,7 +840,7 @@ public class RSMesh {
 		}
 
 		if (i_12 == 1) {
-			this.skinValues = new int[this.faceCount];
+			this.textureSkins = new int[this.faceCount];
 		}
 
 		this.faceColor = new short[this.faceCount];
@@ -923,7 +923,7 @@ public class RSMesh {
 			}
 
 			if (i_12 == 1) {
-				this.skinValues[i_35] = rsbytebuffer_8.readUnsignedByte();
+				this.textureSkins[i_35] = rsbytebuffer_8.readUnsignedByte();
 			}
 		}
 
@@ -1112,7 +1112,7 @@ public class RSMesh {
 				bool_8 |= rsmesh_22.faceAlphas != null;
 				bool_9 |= rsmesh_22.texturePos != null;
 				bool_10 |= rsmesh_22.faceTextures != null;
-				bool_11 |= rsmesh_22.skinValues != null;
+				bool_11 |= rsmesh_22.textureSkins != null;
 			}
 		}
 
@@ -1146,7 +1146,7 @@ public class RSMesh {
 		}
 
 		if (bool_11) {
-			this.skinValues = new int[this.faceCount];
+			this.textureSkins = new int[this.faceCount];
 		}
 
 		this.aShortArray1981 = new short[this.faceCount];
@@ -1223,10 +1223,10 @@ public class RSMesh {
 					}
 
 					if (bool_11) {
-						if (rsmesh_14.skinValues != null) {
-							this.skinValues[this.faceCount] = rsmesh_14.skinValues[i_15];
+						if (rsmesh_14.textureSkins != null) {
+							this.textureSkins[this.faceCount] = rsmesh_14.textureSkins[i_15];
 						} else {
-							this.skinValues[this.faceCount] = -1;
+							this.textureSkins[this.faceCount] = -1;
 						}
 					}
 
@@ -1317,7 +1317,7 @@ public class RSMesh {
 		this.texturePos = new byte[i_2];
 		this.faceColor = new short[i_2];
 		this.faceTextures = new short[i_2];
-		this.skinValues = new int[i_2];
+		this.textureSkins = new int[i_2];
 		if (i_3 > 0) {
 			this.textureRenderTypes = new byte[i_3];
 			this.texTriX = new short[i_3];

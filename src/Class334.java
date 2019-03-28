@@ -218,7 +218,7 @@ public class Class334 {
 			}
 
 			rsmesh_1.maxDepth = rsmesh_1.vertexCount;
-			rsmesh_1.skinValues = null;
+			rsmesh_1.textureSkins = null;
 			rsmesh_1.vertexSkins = null;
 			rsmesh_1.facePriorities = null;
 			aClass528_3905 = graphicalrenderer_0.createMeshRasterizer(rsmesh_1, 51200, 33, 64, 768);

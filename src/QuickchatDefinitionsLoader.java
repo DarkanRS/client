@@ -63,12 +63,12 @@ public class QuickchatDefinitionsLoader {
 		if (Class393.preferences.aClass468_Sub27_8209.method12952((byte) 89) == 2) {
 			byte[][][] bytes_1 = IndexLoaders.MAP_REGION_DECODER.method4532();
 			byte b_2 = (byte) (client.anInt7286 - 4 & 0xff);
-			int i_3 = client.anInt7286 % IndexLoaders.MAP_REGION_DECODER.getSizeX(575613336);
+			int i_3 = client.anInt7286 % IndexLoaders.MAP_REGION_DECODER.getSizeX();
 
 			int i_4;
 			int i_5;
 			for (i_4 = 0; i_4 < 4; i_4++) {
-				for (i_5 = 0; i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-694905456); i_5++) {
+				for (i_5 = 0; i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY(); i_5++) {
 					bytes_1[i_4][i_3][i_5] = b_2;
 				}
 			}
@@ -120,7 +120,7 @@ public class QuickchatDefinitionsLoader {
 							i_14 = i_10 - i_12;
 						}
 
-						if ((i_13 != 0 || i_14 != 0) && i_13 > -IndexLoaders.MAP_REGION_DECODER.getSizeX(-1429776362) && i_13 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-898722517) && i_14 > -IndexLoaders.MAP_REGION_DECODER.getSizeY(-1279637264) && i_14 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1629693049)) {
+						if ((i_13 != 0 || i_14 != 0) && i_13 > -IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_13 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_14 > -IndexLoaders.MAP_REGION_DECODER.getSizeY() && i_14 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 							int i_16;
 							int i_18;
 							if (i_13 > i_14) {

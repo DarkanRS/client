@@ -161,7 +161,7 @@ public final class Class459 {
 			}
 			int i_11 = rsbitsbuffer_2.readBits(1);
 			int i_12 = rsbitsbuffer_2.readBits(2);
-			npc_6.method15836(npc_6.definitions.anInt4858, (byte) -107);
+			npc_6.method15836(npc_6.definitions.size, (byte) -107);
 			npc_6.anInt10340 = npc_6.definitions.anInt4889 << 3;
 			if (bool_4) {
 				npc_6.method15791(i_9, true, (byte) -43);

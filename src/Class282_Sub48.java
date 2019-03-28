@@ -96,7 +96,7 @@ public class Class282_Sub48 extends Node {
 			if (i_2 != i_6) {
 				this.soundEffectId = i_6;
 				NPCDefinitions npcdefinitions_5 = this.aClass521_Sub1_Sub1_Sub2_Sub2_8085.definitions;
-				if (npcdefinitions_5.anIntArray4886 != null) {
+				if (npcdefinitions_5.transformTo != null) {
 					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				}
 				if (npcdefinitions_5 != null) {

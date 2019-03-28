@@ -1087,7 +1087,7 @@ public final class client extends Engine {
 
 		try {
 			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-			str_2 = str_2 + coordgrid_3.x + "," + coordgrid_3.y + "," + IndexLoaders.MAP_REGION_DECODER.getSizeX(-2095875527) + "," + IndexLoaders.MAP_REGION_DECODER.getSizeY(-1882387528) + " ";
+			str_2 = str_2 + coordgrid_3.x + "," + coordgrid_3.y + "," + IndexLoaders.MAP_REGION_DECODER.getSizeX() + "," + IndexLoaders.MAP_REGION_DECODER.getSizeY() + " ";
 			if (VertexNormal.myPlayer != null) {
 				str_2 = str_2 + Class4.anInt35 + "," + (VertexNormal.myPlayer.regionBaseX[0] + coordgrid_3.x) + "," + (VertexNormal.myPlayer.regionBaseY[0] + coordgrid_3.y) + " ";
 			} else {
@@ -1308,7 +1308,7 @@ public final class client extends Engine {
 				player_5.drawPriority = -1;
 			} else {
 				player_5.method14697((byte) 56);
-				if (player_5.aShort9458 >= 0 && player_5.aShort9456 >= 0 && player_5.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1249546922) && player_5.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1946809228)) {
+				if (player_5.aShort9458 >= 0 && player_5.aShort9456 >= 0 && player_5.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && player_5.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					player_5.aBool10573 = player_5.aClass456_Sub3_10337.aBool7891 ? animate : false;
 					if (player_5 == VertexNormal.myPlayer) {
 						player_5.drawPriority = Integer.MAX_VALUE;
@@ -1347,7 +1347,7 @@ public final class client extends Engine {
 			NPC npc_9 = (NPC) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_4])).anObject8068;
 			if (npc_9.hasDefinition(1233643385) && npc_9.definitions.method6885(Class158_Sub1.PLAYER_VAR_PROVIDER)) {
 				npc_9.method14697((byte) 71);
-				if (npc_9.aShort9458 >= 0 && npc_9.aShort9456 >= 0 && npc_9.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX(1367636803) && npc_9.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY(-831632780)) {
+				if (npc_9.aShort9458 >= 0 && npc_9.aShort9456 >= 0 && npc_9.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && npc_9.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					i_8 = 0;
 					if (!npc_9.aBool10318) {
 						++i_8;
@@ -1411,8 +1411,8 @@ public final class client extends Engine {
 
 	static final void method11627() {
 		int[][] ints_0 = IndexLoaders.MAP_REGION_DECODER.method4437((byte) -47);
-		int i_1 = IndexLoaders.MAP_REGION_DECODER.getSizeX(-1706901294);
-		int i_2 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-1291370646);
+		int i_1 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
+		int i_2 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
 			int[] ints_4 = ints_0[i_3];
@@ -2989,7 +2989,7 @@ public final class client extends Engine {
 		for (i_2 = 0; i_2 < anInt7210; i_2++) {
 			NPC npc_3 = (NPC) aClass282_Sub47Array7209[i_2].anObject8068;
 			if (npc_3 != null) {
-				byte b_4 = npc_3.definitions.aByte4900;
+				byte b_4 = npc_3.definitions.walkMask;
 				if ((b_4 & 0x1) != 0) {
 					int i_5 = npc_3.getSize();
 					int i_6;
@@ -3001,14 +3001,14 @@ public final class client extends Engine {
 							int i_9 = i_7 + npc_3.regionBaseY[0];
 							if (i_8 < 0) {
 								i_8 = 0;
-							} else if (i_8 > IndexLoaders.MAP_REGION_DECODER.getSizeX(1372810716) - i_5 - 1) {
-								i_8 = IndexLoaders.MAP_REGION_DECODER.getSizeX(869728275) - i_5 - 1;
+							} else if (i_8 > IndexLoaders.MAP_REGION_DECODER.getSizeX() - i_5 - 1) {
+								i_8 = IndexLoaders.MAP_REGION_DECODER.getSizeX() - i_5 - 1;
 							}
 
 							if (i_9 < 0) {
 								i_9 = 0;
-							} else if (i_9 > IndexLoaders.MAP_REGION_DECODER.getSizeY(-158983735) - i_5 - 1) {
-								i_9 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-472284797) - i_5 - 1;
+							} else if (i_9 > IndexLoaders.MAP_REGION_DECODER.getSizeY() - i_5 - 1) {
+								i_9 = IndexLoaders.MAP_REGION_DECODER.getSizeY() - i_5 - 1;
 							}
 
 							int i_10 = Class112.findRoute(npc_3.regionBaseX[0], npc_3.regionBaseY[0], i_5, Class190.method3150(i_8, i_9, i_5, i_5), IndexLoaders.MAP_REGION_DECODER.getClipMap(npc_3.plane), true, walkStepsX, walkStepsY, -22174447);
@@ -3049,7 +3049,7 @@ public final class client extends Engine {
 				SpotAnimIndexLoader.method8860((byte) -121);
 			}
 
-			if (Class31.anInt361 >> 9 < 14 || Class31.anInt361 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX(676914845) - 14 || Class246.anInt3029 >> 9 < 14 || Class246.anInt3029 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1158968215) - 14) {
+			if (Class31.anInt361 >> 9 < 14 || Class31.anInt361 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Class246.anInt3029 >> 9 < 14 || Class246.anInt3029 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14) {
 				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3154, (RsBitsBuffer) null), 919170648);
 			}
 		}

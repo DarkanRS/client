@@ -52,7 +52,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 							npc.move(class252_10, MovementType.RUNNING.id);
 						} else {
 							NPCDirection class252_8 = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
-							npc.move(class252_8, MovementType.TELEPORTING.id);
+							npc.move(class252_8, MovementType.HALF_WALK.id);
 						}
 
 						int i_11 = buffer.readBits(1);

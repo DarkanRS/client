@@ -19,8 +19,8 @@ public class Class417 {
 
 	public Class417(NPCDefinitions npcdefinitions_1, boolean bool_2) {
 		if (bool_2) {
-			this.anIntArray4992 = new int[npcdefinitions_1.anIntArray4859.length];
-			System.arraycopy(npcdefinitions_1.anIntArray4859, 0, this.anIntArray4992, 0, this.anIntArray4992.length);
+			this.anIntArray4992 = new int[npcdefinitions_1.modelIds.length];
+			System.arraycopy(npcdefinitions_1.modelIds, 0, this.anIntArray4992, 0, this.anIntArray4992.length);
 		} else {
 			this.anIntArray4992 = new int[npcdefinitions_1.anIntArray4860.length];
 			System.arraycopy(npcdefinitions_1.anIntArray4860, 0, this.anIntArray4992, 0, this.anIntArray4992.length);

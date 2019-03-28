@@ -1,33 +1,19 @@
 public class Surface {
 
 	public int anInt834;
-
 	public Surface aClass87_835;
-
 	public int anInt840;
-
 	public int anInt841;
-
 	public int anInt843;
-
 	public int anInt844;
-
 	public int anInt845;
-
 	public int anInt846;
-
 	public int anInt847;
-
 	public int anInt848;
-
 	int anInt842;
-
 	public int anInt836;
-
 	public int anInt837;
-
 	public int anInt838;
-
 	public byte aByte839;
 
 	public ParticleProducerDefinition method1485() {

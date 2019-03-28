@@ -298,12 +298,12 @@ public class WorldMapAreaDefs {
 		if (Class20.anInt169 < 412) {
 			NPCDefinitions npcdefinitions_3 = npc_0.definitions;
 			String string_4 = npc_0.aString10584;
-			if (npcdefinitions_3.anIntArray4886 != null) {
+			if (npcdefinitions_3.transformTo != null) {
 				npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				if (npcdefinitions_3 == null) {
 					return;
 				}
-				string_4 = npcdefinitions_3.aString4857;
+				string_4 = npcdefinitions_3.name;
 			}
 			if (npcdefinitions_3.aBool4893) {
 				if (npc_0.anInt10582 != 0) {
@@ -317,7 +317,7 @@ public class WorldMapAreaDefs {
 					}
 				}
 				if (!bool_1) {
-					String[] arr_11 = npcdefinitions_3.aStringArray4882;
+					String[] arr_11 = npcdefinitions_3.options;
 					if (client.aBool7264) {
 						arr_11 = Class362.method6277(arr_11);
 					}

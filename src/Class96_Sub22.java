@@ -112,7 +112,7 @@ public class Class96_Sub22 extends Class96 {
 				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, true);
 			}
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(-610795534);
-			if (i_4 >= 0 && i_4 < npcdefinitions_5.anIntArray4859.length) {
+			if (i_4 >= 0 && i_4 < npcdefinitions_5.modelIds.length) {
 				icomponentdefinitions_0.aClass417_1308.anIntArray4992[i_4] = i_3;
 				Class109.redrawComponent(icomponentdefinitions_0, (byte) -65);
 			} else {

@@ -54,7 +54,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 	int anInt8893;
 	int anInt8942;
 	int anInt8943;
-	int[][] anIntArrayArray8966;
+	int[][] vertexSkinBones;
 	int[][] anIntArrayArray8924;
 	int[][] anIntArrayArray8954;
 	short[] aShortArray8948;
@@ -530,7 +530,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 			class528_sub3_1.aBool8937 = false;
 		}
 
-		class528_sub3_1.anIntArrayArray8966 = this.anIntArrayArray8966;
+		class528_sub3_1.vertexSkinBones = this.vertexSkinBones;
 		class528_sub3_1.anIntArrayArray8924 = this.anIntArrayArray8924;
 		class528_sub3_1.anIntArrayArray8954 = this.anIntArrayArray8954;
 		class528_sub3_1.aShortArray8948 = this.aShortArray8948;
@@ -1533,19 +1533,19 @@ public class Class528_Sub3 extends MeshRasterizer {
 		this.aFloatArray8892 = method14286(this.aFloatArray8892, this.anInt8906);
 		this.aFloatArray8914 = method14286(this.aFloatArray8914, this.anInt8906);
 		if (rsmesh_2.vertexSkins != null && Class50.method1007(i_3, this.anInt8896)) {
-			this.anIntArrayArray8966 = rsmesh_2.method2665(false);
+			this.vertexSkinBones = rsmesh_2.getBones(false);
 		}
 
 		if (rsmesh_2.isolatedVertexNormals != null && Class50.method1008(i_3, this.anInt8896)) {
 			this.anIntArrayArray8954 = rsmesh_2.method2667();
 		}
 
-		if (rsmesh_2.skinValues != null && Class50.method1006(i_3, this.anInt8896)) {
+		if (rsmesh_2.textureSkins != null && Class50.method1006(i_3, this.anInt8896)) {
 			i_79 = 0;
 			int[] ints_68 = new int[256];
 
 			for (i_85 = 0; i_85 < this.anInt8916; i_85++) {
-				i_19 = rsmesh_2.skinValues[ints_8[i_85]];
+				i_19 = rsmesh_2.textureSkins[ints_8[i_85]];
 				if (i_19 >= 0) {
 					++ints_68[i_19];
 					if (i_19 > i_79) {
@@ -1562,7 +1562,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 			}
 
 			for (i_85 = 0; i_85 < this.anInt8916; i_85++) {
-				i_19 = rsmesh_2.skinValues[ints_8[i_85]];
+				i_19 = rsmesh_2.textureSkins[ints_8[i_85]];
 				if (i_19 >= 0) {
 					this.anIntArrayArray8924[i_19][ints_68[i_19]++] = i_85;
 				}
@@ -1893,8 +1893,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 				this.aShortArray8925 = null;
 			}
 
-			if (this.anIntArrayArray8966 != null && !Class50.method1007(this.anInt8895, this.anInt8896)) {
-				this.anIntArrayArray8966 = null;
+			if (this.vertexSkinBones != null && !Class50.method1007(this.anInt8895, this.anInt8896)) {
+				this.vertexSkinBones = null;
 				this.aShortArray8905 = null;
 			}
 
@@ -2274,8 +2274,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 			for (i_10 = 0; i_10 < i_8; i_10++) {
 				i_11 = ints_2[i_10];
-				if (i_11 < this.anIntArrayArray8966.length) {
-					ints_12 = this.anIntArrayArray8966[i_11];
+				if (i_11 < this.vertexSkinBones.length) {
+					ints_12 = this.vertexSkinBones[i_11];
 
 					for (i_13 = 0; i_13 < ints_12.length; i_13++) {
 						i_14 = ints_12[i_13];
@@ -2306,8 +2306,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 				for (i_9 = 0; i_9 < i_8; i_9++) {
 					i_10 = ints_2[i_9];
-					if (i_10 < this.anIntArrayArray8966.length) {
-						ints_21 = this.anIntArrayArray8966[i_10];
+					if (i_10 < this.vertexSkinBones.length) {
+						ints_21 = this.vertexSkinBones[i_10];
 
 						for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 							i_13 = ints_21[i_22];
@@ -2325,8 +2325,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 				if (i_1 == 2) {
 					for (i_9 = 0; i_9 < i_8; i_9++) {
 						i_10 = ints_2[i_9];
-						if (i_10 < this.anIntArrayArray8966.length) {
-							ints_21 = this.anIntArrayArray8966[i_10];
+						if (i_10 < this.vertexSkinBones.length) {
+							ints_21 = this.vertexSkinBones[i_10];
 							if ((i_6 & 0x1) == 0) {
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
@@ -2402,8 +2402,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 					if (bool_7) {
 						for (i_9 = 0; i_9 < i_8; i_9++) {
 							i_10 = ints_2[i_9];
-							if (i_10 < this.anIntArrayArray8966.length) {
-								ints_21 = this.anIntArrayArray8966[i_10];
+							if (i_10 < this.vertexSkinBones.length) {
+								ints_21 = this.vertexSkinBones[i_10];
 
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
@@ -2451,8 +2451,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 				} else if (i_1 == 3) {
 					for (i_9 = 0; i_9 < i_8; i_9++) {
 						i_10 = ints_2[i_9];
-						if (i_10 < this.anIntArrayArray8966.length) {
-							ints_21 = this.anIntArrayArray8966[i_10];
+						if (i_10 < this.vertexSkinBones.length) {
+							ints_21 = this.vertexSkinBones[i_10];
 
 							for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 								i_13 = ints_21[i_22];
@@ -3229,8 +3229,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 			for (i_10 = 0; i_10 < i_8; i_10++) {
 				i_11 = ints_2[i_10];
-				if (i_11 < this.anIntArrayArray8966.length) {
-					ints_12 = this.anIntArrayArray8966[i_11];
+				if (i_11 < this.vertexSkinBones.length) {
+					ints_12 = this.vertexSkinBones[i_11];
 
 					for (i_13 = 0; i_13 < ints_12.length; i_13++) {
 						i_14 = ints_12[i_13];
@@ -3261,8 +3261,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 				for (i_9 = 0; i_9 < i_8; i_9++) {
 					i_10 = ints_2[i_9];
-					if (i_10 < this.anIntArrayArray8966.length) {
-						ints_21 = this.anIntArrayArray8966[i_10];
+					if (i_10 < this.vertexSkinBones.length) {
+						ints_21 = this.vertexSkinBones[i_10];
 
 						for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 							i_13 = ints_21[i_22];
@@ -3280,8 +3280,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 				if (i_1 == 2) {
 					for (i_9 = 0; i_9 < i_8; i_9++) {
 						i_10 = ints_2[i_9];
-						if (i_10 < this.anIntArrayArray8966.length) {
-							ints_21 = this.anIntArrayArray8966[i_10];
+						if (i_10 < this.vertexSkinBones.length) {
+							ints_21 = this.vertexSkinBones[i_10];
 							if ((i_6 & 0x1) == 0) {
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
@@ -3357,8 +3357,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 					if (bool_7) {
 						for (i_9 = 0; i_9 < i_8; i_9++) {
 							i_10 = ints_2[i_9];
-							if (i_10 < this.anIntArrayArray8966.length) {
-								ints_21 = this.anIntArrayArray8966[i_10];
+							if (i_10 < this.vertexSkinBones.length) {
+								ints_21 = this.vertexSkinBones[i_10];
 
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
@@ -3406,8 +3406,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 				} else if (i_1 == 3) {
 					for (i_9 = 0; i_9 < i_8; i_9++) {
 						i_10 = ints_2[i_9];
-						if (i_10 < this.anIntArrayArray8966.length) {
-							ints_21 = this.anIntArrayArray8966[i_10];
+						if (i_10 < this.vertexSkinBones.length) {
+							ints_21 = this.vertexSkinBones[i_10];
 
 							for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 								i_13 = ints_21[i_22];
@@ -3566,7 +3566,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 	}
 
 	boolean ea() {
-		if (this.anIntArrayArray8966 == null) {
+		if (this.vertexSkinBones == null) {
 			return false;
 		} else {
 			for (int i_1 = 0; i_1 < this.anInt8899; i_1++) {
@@ -4497,8 +4497,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 			for (i_11 = 0; i_11 < i_9; i_11++) {
 				i_12 = ints_2[i_11];
-				if (i_12 < this.anIntArrayArray8966.length) {
-					ints_13 = this.anIntArrayArray8966[i_12];
+				if (i_12 < this.vertexSkinBones.length) {
+					ints_13 = this.vertexSkinBones[i_12];
 
 					for (i_14 = 0; i_14 < ints_13.length; i_14++) {
 						i_15 = ints_13[i_14];
@@ -4541,8 +4541,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 				for (i_10 = 0; i_10 < i_9; i_10++) {
 					i_11 = ints_2[i_10];
-					if (i_11 < this.anIntArrayArray8966.length) {
-						ints_47 = this.anIntArrayArray8966[i_11];
+					if (i_11 < this.vertexSkinBones.length) {
+						ints_47 = this.vertexSkinBones[i_11];
 
 						for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 							i_14 = ints_47[i_48];
@@ -4665,8 +4665,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 						for (i_39 = 0; i_39 < i_9; i_39++) {
 							i_40 = ints_2[i_39];
-							if (i_40 < this.anIntArrayArray8966.length) {
-								int[] ints_41 = this.anIntArrayArray8966[i_40];
+							if (i_40 < this.vertexSkinBones.length) {
+								int[] ints_41 = this.vertexSkinBones[i_40];
 
 								for (int i_42 = 0; i_42 < ints_41.length; i_42++) {
 									int i_43 = ints_41[i_42];
@@ -4687,8 +4687,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 					} else {
 						for (i_10 = 0; i_10 < i_9; i_10++) {
 							i_11 = ints_2[i_10];
-							if (i_11 < this.anIntArrayArray8966.length) {
-								ints_47 = this.anIntArrayArray8966[i_11];
+							if (i_11 < this.vertexSkinBones.length) {
+								ints_47 = this.vertexSkinBones[i_11];
 
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
@@ -4731,8 +4731,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 						if (bool_6) {
 							for (i_10 = 0; i_10 < i_9; i_10++) {
 								i_11 = ints_2[i_10];
-								if (i_11 < this.anIntArrayArray8966.length) {
-									ints_47 = this.anIntArrayArray8966[i_11];
+								if (i_11 < this.vertexSkinBones.length) {
+									ints_47 = this.vertexSkinBones[i_11];
 
 									for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 										i_14 = ints_47[i_48];
@@ -4839,8 +4839,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 						for (i_33 = 0; i_33 < i_9; i_33++) {
 							i_34 = ints_2[i_33];
-							if (i_34 < this.anIntArrayArray8966.length) {
-								ints_35 = this.anIntArrayArray8966[i_34];
+							if (i_34 < this.vertexSkinBones.length) {
+								ints_35 = this.vertexSkinBones[i_34];
 
 								for (i_36 = 0; i_36 < ints_35.length; i_36++) {
 									i_37 = ints_35[i_36];
@@ -4861,8 +4861,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 					} else {
 						for (i_10 = 0; i_10 < i_9; i_10++) {
 							i_11 = ints_2[i_10];
-							if (i_11 < this.anIntArrayArray8966.length) {
-								ints_47 = this.anIntArrayArray8966[i_11];
+							if (i_11 < this.vertexSkinBones.length) {
+								ints_47 = this.vertexSkinBones[i_11];
 
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
@@ -5037,7 +5037,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 	}
 
 	boolean bv() {
-		if (this.anIntArrayArray8966 == null) {
+		if (this.vertexSkinBones == null) {
 			return false;
 		} else {
 			for (int i_1 = 0; i_1 < this.anInt8899; i_1++) {
@@ -5973,7 +5973,7 @@ public class Class528_Sub3 extends MeshRasterizer {
 	}
 
 	boolean bh() {
-		if (this.anIntArrayArray8966 == null) {
+		if (this.vertexSkinBones == null) {
 			return false;
 		} else {
 			for (int i_1 = 0; i_1 < this.anInt8899; i_1++) {
@@ -6074,8 +6074,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 			for (i_11 = 0; i_11 < i_9; i_11++) {
 				i_12 = ints_2[i_11];
-				if (i_12 < this.anIntArrayArray8966.length) {
-					ints_13 = this.anIntArrayArray8966[i_12];
+				if (i_12 < this.vertexSkinBones.length) {
+					ints_13 = this.vertexSkinBones[i_12];
 
 					for (i_14 = 0; i_14 < ints_13.length; i_14++) {
 						i_15 = ints_13[i_14];
@@ -6118,8 +6118,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 				for (i_10 = 0; i_10 < i_9; i_10++) {
 					i_11 = ints_2[i_10];
-					if (i_11 < this.anIntArrayArray8966.length) {
-						ints_47 = this.anIntArrayArray8966[i_11];
+					if (i_11 < this.vertexSkinBones.length) {
+						ints_47 = this.vertexSkinBones[i_11];
 
 						for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 							i_14 = ints_47[i_48];
@@ -6242,8 +6242,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 						for (i_39 = 0; i_39 < i_9; i_39++) {
 							i_40 = ints_2[i_39];
-							if (i_40 < this.anIntArrayArray8966.length) {
-								int[] ints_41 = this.anIntArrayArray8966[i_40];
+							if (i_40 < this.vertexSkinBones.length) {
+								int[] ints_41 = this.vertexSkinBones[i_40];
 
 								for (int i_42 = 0; i_42 < ints_41.length; i_42++) {
 									int i_43 = ints_41[i_42];
@@ -6264,8 +6264,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 					} else {
 						for (i_10 = 0; i_10 < i_9; i_10++) {
 							i_11 = ints_2[i_10];
-							if (i_11 < this.anIntArrayArray8966.length) {
-								ints_47 = this.anIntArrayArray8966[i_11];
+							if (i_11 < this.vertexSkinBones.length) {
+								ints_47 = this.vertexSkinBones[i_11];
 
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
@@ -6308,8 +6308,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 						if (bool_6) {
 							for (i_10 = 0; i_10 < i_9; i_10++) {
 								i_11 = ints_2[i_10];
-								if (i_11 < this.anIntArrayArray8966.length) {
-									ints_47 = this.anIntArrayArray8966[i_11];
+								if (i_11 < this.vertexSkinBones.length) {
+									ints_47 = this.vertexSkinBones[i_11];
 
 									for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 										i_14 = ints_47[i_48];
@@ -6416,8 +6416,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 
 						for (i_33 = 0; i_33 < i_9; i_33++) {
 							i_34 = ints_2[i_33];
-							if (i_34 < this.anIntArrayArray8966.length) {
-								ints_35 = this.anIntArrayArray8966[i_34];
+							if (i_34 < this.vertexSkinBones.length) {
+								ints_35 = this.vertexSkinBones[i_34];
 
 								for (i_36 = 0; i_36 < ints_35.length; i_36++) {
 									i_37 = ints_35[i_36];
@@ -6438,8 +6438,8 @@ public class Class528_Sub3 extends MeshRasterizer {
 					} else {
 						for (i_10 = 0; i_10 < i_9; i_10++) {
 							i_11 = ints_2[i_10];
-							if (i_11 < this.anIntArrayArray8966.length) {
-								ints_47 = this.anIntArrayArray8966[i_11];
+							if (i_11 < this.vertexSkinBones.length) {
+								ints_47 = this.vertexSkinBones[i_11];
 
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];

@@ -9,7 +9,6 @@ public class NPCDirection implements Identifiable {
 	public static NPCDirection SOUTH_WEST = new NPCDirection(1, 7);
 	
 	public int value;
-
 	int direction;
 
 	public NPCDirection method4317() {

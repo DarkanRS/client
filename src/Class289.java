@@ -152,8 +152,8 @@ public class Class289 implements Runnable {
 		if (!graphicalrenderer_0.method8455(1890093661)) {
 			return false;
 		} else {
-			int i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX(-1338331391);
-			int i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY(-663161868);
+			int i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
+			int i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 			RegionMap regionmap_5 = IndexLoaders.MAP_REGION_DECODER.method4433();
 			SceneObjectManager sceneobjectmanager_6 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1741761339);
 			int i_7 = i_3 / 2;

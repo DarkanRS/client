@@ -10,8 +10,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 	boolean aBool8254 = false;
 	boolean aBool8245 = false;
 	boolean aBool8246 = false;
-	int anInt8303 = 0;
-	int anInt8248 = 0;
+	int vertexCount = 0;
+	int maxDepth = 0;
 	int anInt8300 = 0;
 	int anInt8262 = 0;
 	int anInt8302 = 0;
@@ -25,9 +25,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 	OpenGlArrayBufferPointer aClass143_8273;
 	Class132 aClass132_8276;
 	int[] anIntArray8290;
-	int[] anIntArray8249;
-	int[] anIntArray8250;
-	int[] anIntArray8251;
+	int[] verticesX;
+	int[] verticesY;
+	int[] verticesZ;
 	short[] aShortArray8253;
 	Surface[] aClass87Array8252;
 	SurfaceSkin[] aClass172Array8244;
@@ -76,10 +76,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8251[i_4] * i_2 + this.anIntArray8249[i_4] * i_3 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8251[i_4] * i_3 - this.anIntArray8249[i_4] * i_2 >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesZ[i_4] * i_2 + this.verticesX[i_4] * i_3 >> 14;
+			this.verticesZ[i_4] = this.verticesZ[i_4] * i_3 - this.verticesX[i_4] * i_2 >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -214,13 +214,13 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 
 		Class159.method2736(longs_63, ints_8);
-		this.anInt8303 = rsmesh_2.vertexCount;
-		this.anInt8248 = rsmesh_2.maxDepth;
-		this.anIntArray8249 = rsmesh_2.vertexX;
-		this.anIntArray8250 = rsmesh_2.vertexY;
-		this.anIntArray8251 = rsmesh_2.vertexZ;
+		this.vertexCount = rsmesh_2.vertexCount;
+		this.maxDepth = rsmesh_2.maxDepth;
+		this.verticesX = rsmesh_2.vertexX;
+		this.verticesY = rsmesh_2.vertexY;
+		this.verticesZ = rsmesh_2.vertexZ;
 		this.aShortArray8253 = rsmesh_2.aShortArray1980;
-		Class126[] arr_64 = new Class126[this.anInt8248];
+		Class126[] arr_64 = new Class126[this.maxDepth];
 		this.aClass87Array8252 = rsmesh_2.surfaces;
 		this.aClass172Array8244 = rsmesh_2.surfaceSkins;
 		int i_79;
@@ -294,12 +294,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 			s_80 = rsmesh_2.triangleX[i_79];
 			s_82 = rsmesh_2.triangleY[i_79];
 			s_84 = rsmesh_2.triangleZ[i_79];
-			i_20 = this.anIntArray8249[s_82] - this.anIntArray8249[s_80];
-			i_21 = this.anIntArray8250[s_82] - this.anIntArray8250[s_80];
-			int i_22 = this.anIntArray8251[s_82] - this.anIntArray8251[s_80];
-			int i_23 = this.anIntArray8249[s_84] - this.anIntArray8249[s_80];
-			int i_24 = this.anIntArray8250[s_84] - this.anIntArray8250[s_80];
-			int i_25 = this.anIntArray8251[s_84] - this.anIntArray8251[s_80];
+			i_20 = this.verticesX[s_82] - this.verticesX[s_80];
+			i_21 = this.verticesY[s_82] - this.verticesY[s_80];
+			int i_22 = this.verticesZ[s_82] - this.verticesZ[s_80];
+			int i_23 = this.verticesX[s_84] - this.verticesX[s_80];
+			int i_24 = this.verticesY[s_84] - this.verticesY[s_80];
+			int i_25 = this.verticesZ[s_84] - this.verticesZ[s_80];
 			int i_26 = i_21 * i_25 - i_24 * i_22;
 			int i_27 = i_22 * i_23 - i_25 * i_20;
 
@@ -645,19 +645,19 @@ public class Class528_Sub1 extends MeshRasterizer {
 		this.aFloatArray8297 = method13523(this.aFloatArray8297, this.anInt8300);
 		this.aFloatArray8292 = method13523(this.aFloatArray8292, this.anInt8300);
 		if (rsmesh_2.vertexSkins != null && Class129.method2226(i_3, this.anInt8241)) {
-			this.anIntArrayArray8263 = rsmesh_2.method2665(false);
+			this.anIntArrayArray8263 = rsmesh_2.getBones(false);
 		}
 
 		if (rsmesh_2.isolatedVertexNormals != null && Class129.method2260(i_3, this.anInt8241)) {
 			this.anIntArrayArray8278 = rsmesh_2.method2667();
 		}
 
-		if (rsmesh_2.skinValues != null && Class129.method2208(i_3, this.anInt8241)) {
+		if (rsmesh_2.textureSkins != null && Class129.method2208(i_3, this.anInt8241)) {
 			i_85 = 0;
 			int[] ints_68 = new int[256];
 
 			for (i_20 = 0; i_20 < this.anInt8262; i_20++) {
-				i_21 = rsmesh_2.skinValues[ints_8[i_20]];
+				i_21 = rsmesh_2.textureSkins[ints_8[i_20]];
 				if (i_21 >= 0) {
 					++ints_68[i_21];
 					if (i_21 > i_85) {
@@ -674,7 +674,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 			}
 
 			for (i_20 = 0; i_20 < this.anInt8262; i_20++) {
-				i_21 = rsmesh_2.skinValues[ints_8[i_20]];
+				i_21 = rsmesh_2.textureSkins[ints_8[i_20]];
 				if (i_21 >= 0) {
 					this.anIntArrayArray8282[i_21][ints_68[i_21]++] = i_20;
 				}
@@ -687,10 +687,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8251[i_4] * i_2 + this.anIntArray8249[i_4] * i_3 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8251[i_4] * i_3 - this.anIntArray8249[i_4] * i_2 >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesZ[i_4] * i_2 + this.verticesX[i_4] * i_3 >> 14;
+			this.verticesZ[i_4] = this.verticesZ[i_4] * i_3 - this.verticesX[i_4] * i_2 >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -716,9 +716,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_8;
 		int i_9;
 		int i_10;
-		for (i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			i_5 = (this.anIntArray8249[i_4] - (this.aClass505_Sub1_8239.anInt8438 * this.anIntArray8250[i_4] >> 8) >> this.aClass505_Sub1_8239.anInt8473) - class282_sub50_sub17_sub1_1.anInt10293;
-			i_6 = (this.anIntArray8251[i_4] - (this.aClass505_Sub1_8239.anInt8439 * this.anIntArray8250[i_4] >> 8) >> this.aClass505_Sub1_8239.anInt8473) - class282_sub50_sub17_sub1_1.anInt10295;
+		for (i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			i_5 = (this.verticesX[i_4] - (this.aClass505_Sub1_8239.anInt8438 * this.verticesY[i_4] >> 8) >> this.aClass505_Sub1_8239.anInt8473) - class282_sub50_sub17_sub1_1.anInt10293;
+			i_6 = (this.verticesZ[i_4] - (this.aClass505_Sub1_8239.anInt8439 * this.verticesY[i_4] >> 8) >> this.aClass505_Sub1_8239.anInt8473) - class282_sub50_sub17_sub1_1.anInt10295;
 			i_7 = this.anIntArray8290[i_4];
 			i_8 = this.anIntArray8290[i_4 + 1];
 
@@ -771,12 +771,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			float[] floats_5 = new float[3];
 
-			for (int i_6 = 0; i_6 < this.anInt8248; i_6++) {
+			for (int i_6 = 0; i_6 < this.maxDepth; i_6++) {
 				if ((i_2 & this.aShortArray8253[i_6]) != 0) {
-					matrix44var_4.method5226((float) this.anIntArray8249[i_6], (float) this.anIntArray8250[i_6], (float) this.anIntArray8251[i_6], floats_5);
-					this.anIntArray8249[i_6] = (int) floats_5[0];
-					this.anIntArray8250[i_6] = (int) floats_5[1];
-					this.anIntArray8251[i_6] = (int) floats_5[2];
+					matrix44var_4.method5226((float) this.verticesX[i_6], (float) this.verticesY[i_6], (float) this.verticesZ[i_6], floats_5);
+					this.verticesX[i_6] = (int) floats_5[0];
+					this.verticesY[i_6] = (int) floats_5[1];
+					this.verticesZ[i_6] = (int) floats_5[2];
 				}
 			}
 		}
@@ -818,8 +818,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 		class528_sub1_1.anInt8241 = this.anInt8241;
 		class528_sub1_1.aShort8243 = this.aShort8243;
 		class528_sub1_1.aShort8257 = this.aShort8257;
-		class528_sub1_1.anInt8303 = this.anInt8303;
-		class528_sub1_1.anInt8248 = this.anInt8248;
+		class528_sub1_1.vertexCount = this.vertexCount;
+		class528_sub1_1.maxDepth = this.maxDepth;
 		class528_sub1_1.anInt8300 = this.anInt8300;
 		class528_sub1_1.anInt8262 = this.anInt8262;
 		class528_sub1_1.anInt8302 = this.anInt8302;
@@ -838,52 +838,52 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_10;
 		if (bool_9) {
 			if (bool_6) {
-				if (class528_sub1_2.anIntArray8249 != null && class528_sub1_2.anIntArray8249.length >= this.anInt8303) {
-					class528_sub1_1.anIntArray8249 = class528_sub1_2.anIntArray8249;
+				if (class528_sub1_2.verticesX != null && class528_sub1_2.verticesX.length >= this.vertexCount) {
+					class528_sub1_1.verticesX = class528_sub1_2.verticesX;
 				} else {
-					class528_sub1_1.anIntArray8249 = class528_sub1_2.anIntArray8249 = new int[this.anInt8303];
+					class528_sub1_1.verticesX = class528_sub1_2.verticesX = new int[this.vertexCount];
 				}
 			} else {
-				class528_sub1_1.anIntArray8249 = this.anIntArray8249;
+				class528_sub1_1.verticesX = this.verticesX;
 			}
 
 			if (bool_7) {
-				if (class528_sub1_2.anIntArray8250 != null && class528_sub1_2.anIntArray8250.length >= this.anInt8303) {
-					class528_sub1_1.anIntArray8250 = class528_sub1_2.anIntArray8250;
+				if (class528_sub1_2.verticesY != null && class528_sub1_2.verticesY.length >= this.vertexCount) {
+					class528_sub1_1.verticesY = class528_sub1_2.verticesY;
 				} else {
-					class528_sub1_1.anIntArray8250 = class528_sub1_2.anIntArray8250 = new int[this.anInt8303];
+					class528_sub1_1.verticesY = class528_sub1_2.verticesY = new int[this.vertexCount];
 				}
 			} else {
-				class528_sub1_1.anIntArray8250 = this.anIntArray8250;
+				class528_sub1_1.verticesY = this.verticesY;
 			}
 
 			if (bool_8) {
-				if (class528_sub1_2.anIntArray8251 != null && class528_sub1_2.anIntArray8251.length >= this.anInt8303) {
-					class528_sub1_1.anIntArray8251 = class528_sub1_2.anIntArray8251;
+				if (class528_sub1_2.verticesZ != null && class528_sub1_2.verticesZ.length >= this.vertexCount) {
+					class528_sub1_1.verticesZ = class528_sub1_2.verticesZ;
 				} else {
-					class528_sub1_1.anIntArray8251 = class528_sub1_2.anIntArray8251 = new int[this.anInt8303];
+					class528_sub1_1.verticesZ = class528_sub1_2.verticesZ = new int[this.vertexCount];
 				}
 			} else {
-				class528_sub1_1.anIntArray8251 = this.anIntArray8251;
+				class528_sub1_1.verticesZ = this.verticesZ;
 			}
 
-			for (i_10 = 0; i_10 < this.anInt8303; i_10++) {
+			for (i_10 = 0; i_10 < this.vertexCount; i_10++) {
 				if (bool_6) {
-					class528_sub1_1.anIntArray8249[i_10] = this.anIntArray8249[i_10];
+					class528_sub1_1.verticesX[i_10] = this.verticesX[i_10];
 				}
 
 				if (bool_7) {
-					class528_sub1_1.anIntArray8250[i_10] = this.anIntArray8250[i_10];
+					class528_sub1_1.verticesY[i_10] = this.verticesY[i_10];
 				}
 
 				if (bool_8) {
-					class528_sub1_1.anIntArray8251[i_10] = this.anIntArray8251[i_10];
+					class528_sub1_1.verticesZ[i_10] = this.verticesZ[i_10];
 				}
 			}
 		} else {
-			class528_sub1_1.anIntArray8249 = this.anIntArray8249;
-			class528_sub1_1.anIntArray8250 = this.anIntArray8250;
-			class528_sub1_1.anIntArray8251 = this.anIntArray8251;
+			class528_sub1_1.verticesX = this.verticesX;
+			class528_sub1_1.verticesY = this.verticesY;
+			class528_sub1_1.verticesZ = this.verticesZ;
 		}
 
 		if (Class129.method2197(i_3, this.anInt8241)) {
@@ -1147,7 +1147,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 				boolean bool_1 = false;
 				boolean bool_2 = false;
 				boolean bool_3 = false;
-				if (this.anIntArray8249 != null && !Class129.method2202(this.anInt8240, this.anInt8241)) {
+				if (this.verticesX != null && !Class129.method2202(this.anInt8240, this.anInt8241)) {
 					if (this.aClass143_8272 != null && this.aClass143_8272.anInterface14_1667 == null) {
 						this.aBool8279 = true;
 					} else {
@@ -1159,7 +1159,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 					}
 				}
 
-				if (this.anIntArray8250 != null && !Class129.method2229(this.anInt8240, this.anInt8241)) {
+				if (this.verticesY != null && !Class129.method2229(this.anInt8240, this.anInt8241)) {
 					if (this.aClass143_8272 != null && this.aClass143_8272.anInterface14_1667 == null) {
 						this.aBool8279 = true;
 					} else {
@@ -1171,7 +1171,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 					}
 				}
 
-				if (this.anIntArray8251 != null && !Class129.method2252(this.anInt8240, this.anInt8241)) {
+				if (this.verticesZ != null && !Class129.method2252(this.anInt8240, this.anInt8241)) {
 					if (this.aClass143_8272 != null && this.aClass143_8272.anInterface14_1667 == null) {
 						this.aBool8279 = true;
 					} else {
@@ -1184,19 +1184,19 @@ public class Class528_Sub1 extends MeshRasterizer {
 				}
 
 				if (bool_1) {
-					this.anIntArray8249 = null;
+					this.verticesX = null;
 				}
 
 				if (bool_2) {
-					this.anIntArray8250 = null;
+					this.verticesY = null;
 				}
 
 				if (bool_3) {
-					this.anIntArray8251 = null;
+					this.verticesZ = null;
 				}
 			}
 
-			if (this.aShortArray8288 != null && this.anIntArray8249 == null && this.anIntArray8250 == null && this.anIntArray8251 == null) {
+			if (this.aShortArray8288 != null && this.verticesX == null && this.verticesY == null && this.verticesZ == null) {
 				this.aShortArray8288 = null;
 				this.anIntArray8290 = null;
 			}
@@ -1289,10 +1289,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = i_2 * this.anIntArray8251[i_4] + i_3 * this.anIntArray8249[i_4] >> 14;
-			this.anIntArray8251[i_4] = i_3 * this.anIntArray8251[i_4] - i_2 * this.anIntArray8249[i_4] >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = i_2 * this.verticesZ[i_4] + i_3 * this.verticesX[i_4] >> 14;
+			this.verticesZ[i_4] = i_3 * this.verticesZ[i_4] - i_2 * this.verticesX[i_4] >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -1308,10 +1308,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 		int i_4;
 		int i_5;
-		for (i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			i_5 = i_2 * this.anIntArray8251[i_4] + i_3 * this.anIntArray8249[i_4] >> 14;
-			this.anIntArray8251[i_4] = i_3 * this.anIntArray8251[i_4] - i_2 * this.anIntArray8249[i_4] >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			i_5 = i_2 * this.verticesZ[i_4] + i_3 * this.verticesX[i_4] >> 14;
+			this.verticesZ[i_4] = i_3 * this.verticesZ[i_4] - i_2 * this.verticesX[i_4] >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		for (i_4 = 0; i_4 < this.anInt8300; i_4++) {
@@ -1339,10 +1339,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = i_3 * this.anIntArray8250[i_4] - i_2 * this.anIntArray8251[i_4] >> 14;
-			this.anIntArray8251[i_4] = i_2 * this.anIntArray8250[i_4] + i_3 * this.anIntArray8251[i_4] >> 14;
-			this.anIntArray8250[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = i_3 * this.verticesY[i_4] - i_2 * this.verticesZ[i_4] >> 14;
+			this.verticesZ[i_4] = i_2 * this.verticesY[i_4] + i_3 * this.verticesZ[i_4] >> 14;
+			this.verticesY[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -1360,8 +1360,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 	public void wa() {
 		int i_1;
-		for (i_1 = 0; i_1 < this.anInt8248; i_1++) {
-			this.anIntArray8251[i_1] = -this.anIntArray8251[i_1];
+		for (i_1 = 0; i_1 < this.maxDepth; i_1++) {
+			this.verticesZ[i_1] = -this.verticesZ[i_1];
 		}
 
 		for (i_1 = 0; i_1 < this.anInt8300; i_1++) {
@@ -1394,17 +1394,17 @@ public class Class528_Sub1 extends MeshRasterizer {
 	}
 
 	public void oa(int i_1, int i_2, int i_3) {
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
 			if (i_1 != 128) {
-				this.anIntArray8249[i_4] = this.anIntArray8249[i_4] * i_1 >> 7;
+				this.verticesX[i_4] = this.verticesX[i_4] * i_1 >> 7;
 			}
 
 			if (i_2 != 128) {
-				this.anIntArray8250[i_4] = i_2 * this.anIntArray8250[i_4] >> 7;
+				this.verticesY[i_4] = i_2 * this.verticesY[i_4] >> 7;
 			}
 
 			if (i_3 != 128) {
-				this.anIntArray8251[i_4] = i_3 * this.anIntArray8251[i_4] >> 7;
+				this.verticesZ[i_4] = i_3 * this.verticesZ[i_4] >> 7;
 			}
 		}
 
@@ -1439,8 +1439,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			int i_12;
 			if (i_1 == 1) {
-				for (i_12 = 0; i_12 < this.anInt8248; i_12++) {
-					this.anIntArray8250[i_12] = this.anIntArray8250[i_12] + class390_3.averageHeight(this.anIntArray8249[i_12] + i_5, this.anIntArray8251[i_12] + i_7, -1387107702) - i_6;
+				for (i_12 = 0; i_12 < this.maxDepth; i_12++) {
+					this.verticesY[i_12] = this.verticesY[i_12] + class390_3.averageHeight(this.verticesX[i_12] + i_5, this.verticesZ[i_12] + i_7, -1387107702) - i_6;
 				}
 			} else {
 				int i_13;
@@ -1451,10 +1451,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 						return;
 					}
 
-					for (i_13 = 0; i_13 < this.anInt8248; i_13++) {
-						i_14 = (this.anIntArray8250[i_13] << 16) / s_19;
+					for (i_13 = 0; i_13 < this.maxDepth; i_13++) {
+						i_14 = (this.verticesY[i_13] << 16) / s_19;
 						if (i_14 < i_2) {
-							this.anIntArray8250[i_13] += (class390_3.averageHeight(this.anIntArray8249[i_13] + i_5, this.anIntArray8251[i_13] + i_7, -1521723837) - i_6) * (i_2 - i_14) / i_2;
+							this.verticesY[i_13] += (class390_3.averageHeight(this.verticesX[i_13] + i_5, this.verticesZ[i_13] + i_7, -1521723837) - i_6) * (i_2 - i_14) / i_2;
 						}
 					}
 				} else {
@@ -1472,19 +1472,19 @@ public class Class528_Sub1 extends MeshRasterizer {
 					} else if (i_1 == 4) {
 						i_12 = this.aShort8284 - this.aShort8283;
 
-						for (i_13 = 0; i_13 < this.anInt8248; i_13++) {
-							this.anIntArray8250[i_13] = this.anIntArray8250[i_13] + (class390_4.averageHeight(this.anIntArray8249[i_13] + i_5, this.anIntArray8251[i_13] + i_7, -1198373770) - i_6) + i_12;
+						for (i_13 = 0; i_13 < this.maxDepth; i_13++) {
+							this.verticesY[i_13] = this.verticesY[i_13] + (class390_4.averageHeight(this.verticesX[i_13] + i_5, this.verticesZ[i_13] + i_7, -1198373770) - i_6) + i_12;
 						}
 					} else if (i_1 == 5) {
 						i_12 = this.aShort8284 - this.aShort8283;
 
-						for (i_13 = 0; i_13 < this.anInt8248; i_13++) {
-							i_14 = i_5 + this.anIntArray8249[i_13];
-							i_15 = i_7 + this.anIntArray8251[i_13];
+						for (i_13 = 0; i_13 < this.maxDepth; i_13++) {
+							i_14 = i_5 + this.verticesX[i_13];
+							i_15 = i_7 + this.verticesZ[i_13];
 							int i_16 = class390_3.averageHeight(i_14, i_15, 1985293645);
 							int i_17 = class390_4.averageHeight(i_14, i_15, -1040497678);
 							int i_18 = i_16 - i_17 - i_2;
-							this.anIntArray8250[i_13] = (i_18 * ((this.anIntArray8250[i_13] << 8) / i_12) >> 8) - (i_6 - i_16);
+							this.verticesY[i_13] = (i_18 * ((this.verticesY[i_13] << 8) / i_12) >> 8) - (i_6 - i_16);
 						}
 					}
 				}
@@ -1509,10 +1509,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_7 = 0;
 		int i_8 = 0;
 
-		for (int i_9 = 0; i_9 < this.anInt8248; i_9++) {
-			int i_10 = this.anIntArray8249[i_9];
-			int i_11 = this.anIntArray8250[i_9];
-			int i_12 = this.anIntArray8251[i_9];
+		for (int i_9 = 0; i_9 < this.maxDepth; i_9++) {
+			int i_10 = this.verticesX[i_9];
+			int i_11 = this.verticesY[i_9];
+			int i_12 = this.verticesZ[i_9];
 			if (i_10 < i_1) {
 				i_1 = i_10;
 			}
@@ -1595,15 +1595,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 					class87_5 = class87_4.aClass87_835;
 				}
 
-				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt836 * 1502404273 * -1572033967]) * -1929058355 * -75866875;
-				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt836 * 1502404273 * -1572033967]) * 996785411 * 1618253227;
-				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt836 * 1502404273 * -1572033967]) * 976806429 * -489230283;
-				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt837 * -2021469179 * -1955014451]) * -458323579 * 1747322701;
-				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt837 * -2021469179 * -1955014451]) * 543149547 * -174394685;
-				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt837 * -2021469179 * -1955014451]) * 1054448197 * 305293453;
-				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt838 * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
-				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt838 * -1292195173 * -2135413869]) * -1652520905 * 950906247;
-				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt838 * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
+				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt836 * 1502404273 * -1572033967]) * -1929058355 * -75866875;
+				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt836 * 1502404273 * -1572033967]) * 996785411 * 1618253227;
+				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt836 * 1502404273 * -1572033967]) * 976806429 * -489230283;
+				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt837 * -2021469179 * -1955014451]) * -458323579 * 1747322701;
+				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt837 * -2021469179 * -1955014451]) * 543149547 * -174394685;
+				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt837 * -2021469179 * -1955014451]) * 1054448197 * 305293453;
+				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt838 * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
+				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt838 * -1292195173 * -2135413869]) * -1652520905 * 950906247;
+				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt838 * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
 			}
 		}
 
@@ -1621,9 +1621,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					class172_6.aClass384_2116 = new Matrix44Arr(matrix44arr_2);
 				}
 
-				class172_7.anInt2113 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class172_6.anInt2119 * 702737761 * -1382123871]) * 959663283 * -48479621;
-				class172_7.anInt2117 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class172_6.anInt2119 * 702737761 * -1382123871]) * -1084180847 * 1018284657;
-				class172_7.anInt2118 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class172_6.anInt2119 * 702737761 * -1382123871]) * -1221574613 * 1898872451;
+				class172_7.anInt2113 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[4] * (float) this.verticesY[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[8] * (float) this.verticesZ[class172_6.anInt2119 * 702737761 * -1382123871]) * 959663283 * -48479621;
+				class172_7.anInt2117 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[5] * (float) this.verticesY[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[9] * (float) this.verticesZ[class172_6.anInt2119 * 702737761 * -1382123871]) * -1084180847 * 1018284657;
+				class172_7.anInt2118 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[6] * (float) this.verticesY[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[10] * (float) this.verticesZ[class172_6.anInt2119 * 702737761 * -1382123871]) * -1221574613 * 1898872451;
 			}
 		}
 
@@ -1656,10 +1656,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 	public void method11269(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4, boolean bool_5) {
 		Class528_Sub1 class528_sub1_6 = (Class528_Sub1) meshrasterizer_1;
 		if (this.anInt8262 != 0 && class528_sub1_6.anInt8262 != 0) {
-			int i_7 = class528_sub1_6.anInt8248;
-			int[] ints_8 = class528_sub1_6.anIntArray8249;
-			int[] ints_9 = class528_sub1_6.anIntArray8250;
-			int[] ints_10 = class528_sub1_6.anIntArray8251;
+			int i_7 = class528_sub1_6.maxDepth;
+			int[] ints_8 = class528_sub1_6.verticesX;
+			int[] ints_9 = class528_sub1_6.verticesY;
+			int[] ints_10 = class528_sub1_6.verticesZ;
 			short[] shorts_11 = class528_sub1_6.aShortArray8255;
 			short[] shorts_12 = class528_sub1_6.aShortArray8270;
 			short[] shorts_13 = class528_sub1_6.aShortArray8261;
@@ -1709,12 +1709,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 			short s_29 = class528_sub1_6.aShort8287;
 			short s_30 = class528_sub1_6.aShort8306;
 
-			for (int i_31 = 0; i_31 < this.anInt8248; i_31++) {
-				int i_32 = this.anIntArray8250[i_31] - i_3;
+			for (int i_31 = 0; i_31 < this.maxDepth; i_31++) {
+				int i_32 = this.verticesY[i_31] - i_3;
 				if (i_32 >= s_25 && i_32 <= s_26) {
-					int i_33 = this.anIntArray8249[i_31] - i_2;
+					int i_33 = this.verticesX[i_31] - i_2;
 					if (i_33 >= s_27 && i_33 <= s_28) {
-						int i_34 = this.anIntArray8251[i_31] - i_4;
+						int i_34 = this.verticesZ[i_31] - i_4;
 						if (i_34 >= s_29 && i_34 <= s_30) {
 							int i_35 = -1;
 							int i_36 = this.anIntArray8290[i_31];
@@ -1866,15 +1866,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 					class87_5 = class87_4.aClass87_835;
 				}
 
-				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt836 * 1502404273 * -1572033967]) * -1929058355 * -75866875;
-				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt836 * 1502404273 * -1572033967]) * 996785411 * 1618253227;
-				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt836 * 1502404273 * -1572033967]) * 976806429 * -489230283;
-				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt837 * -2021469179 * -1955014451]) * -458323579 * 1747322701;
-				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt837 * -2021469179 * -1955014451]) * 543149547 * -174394685;
-				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt837 * -2021469179 * -1955014451]) * 1054448197 * 305293453;
-				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt838 * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
-				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt838 * -1292195173 * -2135413869]) * -1652520905 * 950906247;
-				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt838 * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
+				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt836 * 1502404273 * -1572033967]) * -1929058355 * -75866875;
+				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt836 * 1502404273 * -1572033967]) * 996785411 * 1618253227;
+				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt836 * 1502404273 * -1572033967]) * 976806429 * -489230283;
+				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt837 * -2021469179 * -1955014451]) * -458323579 * 1747322701;
+				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt837 * -2021469179 * -1955014451]) * 543149547 * -174394685;
+				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt837 * -2021469179 * -1955014451]) * 1054448197 * 305293453;
+				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt838 * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
+				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt838 * -1292195173 * -2135413869]) * -1652520905 * 950906247;
+				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt838 * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
 			}
 		}
 
@@ -1892,9 +1892,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					class172_6.aClass384_2116 = new Matrix44Arr(matrix44arr_2);
 				}
 
-				class172_7.anInt2113 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class172_6.anInt2119 * 702737761 * -1382123871]) * 959663283 * -48479621;
-				class172_7.anInt2117 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class172_6.anInt2119 * 702737761 * -1382123871]) * -1084180847 * 1018284657;
-				class172_7.anInt2118 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class172_6.anInt2119 * 702737761 * -1382123871]) * -1221574613 * 1898872451;
+				class172_7.anInt2113 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[4] * (float) this.verticesY[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[8] * (float) this.verticesZ[class172_6.anInt2119 * 702737761 * -1382123871]) * 959663283 * -48479621;
+				class172_7.anInt2117 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[5] * (float) this.verticesY[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[9] * (float) this.verticesZ[class172_6.anInt2119 * 702737761 * -1382123871]) * -1084180847 * 1018284657;
+				class172_7.anInt2118 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[6] * (float) this.verticesY[class172_6.anInt2119 * 702737761 * -1382123871] + matrix44arr_2.buf[10] * (float) this.verticesZ[class172_6.anInt2119 * 702737761 * -1382123871]) * -1221574613 * 1898872451;
 			}
 		}
 
@@ -2012,9 +2012,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 					for (i_13 = 0; i_13 < ints_12.length; i_13++) {
 						i_14 = ints_12[i_13];
-						anInt8271 += this.anIntArray8249[i_14];
-						anInt8247 += this.anIntArray8250[i_14];
-						anInt8232 += this.anIntArray8251[i_14];
+						anInt8271 += this.verticesX[i_14];
+						anInt8247 += this.verticesY[i_14];
+						anInt8232 += this.verticesZ[i_14];
 						++i_9;
 					}
 				}
@@ -2044,9 +2044,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 						for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 							i_13 = ints_21[i_22];
-							this.anIntArray8249[i_13] += i_3;
-							this.anIntArray8250[i_13] += i_4;
-							this.anIntArray8251[i_13] += i_5;
+							this.verticesX[i_13] += i_3;
+							this.verticesY[i_13] += i_4;
+							this.verticesZ[i_13] += i_5;
 						}
 					}
 				}
@@ -2062,70 +2062,70 @@ public class Class528_Sub1 extends MeshRasterizer {
 							if ((i_6 & 0x1) == 0) {
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
-									this.anIntArray8249[i_13] -= anInt8271;
-									this.anIntArray8250[i_13] -= anInt8247;
-									this.anIntArray8251[i_13] -= anInt8232;
+									this.verticesX[i_13] -= anInt8271;
+									this.verticesY[i_13] -= anInt8247;
+									this.verticesZ[i_13] -= anInt8232;
 									if (i_5 != 0) {
 										i_14 = Class382.anIntArray4657[i_5];
 										i_15 = Class382.anIntArray4661[i_5];
-										i_16 = this.anIntArray8250[i_13] * i_14 + this.anIntArray8249[i_13] * i_15 + 16383 >> 14;
-										this.anIntArray8250[i_13] = this.anIntArray8250[i_13] * i_15 - this.anIntArray8249[i_13] * i_14 + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = this.verticesY[i_13] * i_14 + this.verticesX[i_13] * i_15 + 16383 >> 14;
+										this.verticesY[i_13] = this.verticesY[i_13] * i_15 - this.verticesX[i_13] * i_14 + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
 									if (i_3 != 0) {
 										i_14 = Class382.anIntArray4657[i_3];
 										i_15 = Class382.anIntArray4661[i_3];
-										i_16 = this.anIntArray8250[i_13] * i_15 - this.anIntArray8251[i_13] * i_14 + 16383 >> 14;
-										this.anIntArray8251[i_13] = this.anIntArray8250[i_13] * i_14 + this.anIntArray8251[i_13] * i_15 + 16383 >> 14;
-										this.anIntArray8250[i_13] = i_16;
+										i_16 = this.verticesY[i_13] * i_15 - this.verticesZ[i_13] * i_14 + 16383 >> 14;
+										this.verticesZ[i_13] = this.verticesY[i_13] * i_14 + this.verticesZ[i_13] * i_15 + 16383 >> 14;
+										this.verticesY[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
 										i_14 = Class382.anIntArray4657[i_4];
 										i_15 = Class382.anIntArray4661[i_4];
-										i_16 = this.anIntArray8251[i_13] * i_14 + this.anIntArray8249[i_13] * i_15 + 16383 >> 14;
-										this.anIntArray8251[i_13] = this.anIntArray8251[i_13] * i_15 - this.anIntArray8249[i_13] * i_14 + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = this.verticesZ[i_13] * i_14 + this.verticesX[i_13] * i_15 + 16383 >> 14;
+										this.verticesZ[i_13] = this.verticesZ[i_13] * i_15 - this.verticesX[i_13] * i_14 + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
-									this.anIntArray8249[i_13] += anInt8271;
-									this.anIntArray8250[i_13] += anInt8247;
-									this.anIntArray8251[i_13] += anInt8232;
+									this.verticesX[i_13] += anInt8271;
+									this.verticesY[i_13] += anInt8247;
+									this.verticesZ[i_13] += anInt8232;
 								}
 							} else {
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
-									this.anIntArray8249[i_13] -= anInt8271;
-									this.anIntArray8250[i_13] -= anInt8247;
-									this.anIntArray8251[i_13] -= anInt8232;
+									this.verticesX[i_13] -= anInt8271;
+									this.verticesY[i_13] -= anInt8247;
+									this.verticesZ[i_13] -= anInt8232;
 									if (i_3 != 0) {
 										i_14 = Class382.anIntArray4657[i_3];
 										i_15 = Class382.anIntArray4661[i_3];
-										i_16 = this.anIntArray8250[i_13] * i_15 - this.anIntArray8251[i_13] * i_14 + 16383 >> 14;
-										this.anIntArray8251[i_13] = this.anIntArray8250[i_13] * i_14 + this.anIntArray8251[i_13] * i_15 + 16383 >> 14;
-										this.anIntArray8250[i_13] = i_16;
+										i_16 = this.verticesY[i_13] * i_15 - this.verticesZ[i_13] * i_14 + 16383 >> 14;
+										this.verticesZ[i_13] = this.verticesY[i_13] * i_14 + this.verticesZ[i_13] * i_15 + 16383 >> 14;
+										this.verticesY[i_13] = i_16;
 									}
 
 									if (i_5 != 0) {
 										i_14 = Class382.anIntArray4657[i_5];
 										i_15 = Class382.anIntArray4661[i_5];
-										i_16 = this.anIntArray8250[i_13] * i_14 + this.anIntArray8249[i_13] * i_15 + 16383 >> 14;
-										this.anIntArray8250[i_13] = this.anIntArray8250[i_13] * i_15 - this.anIntArray8249[i_13] * i_14 + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = this.verticesY[i_13] * i_14 + this.verticesX[i_13] * i_15 + 16383 >> 14;
+										this.verticesY[i_13] = this.verticesY[i_13] * i_15 - this.verticesX[i_13] * i_14 + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
 										i_14 = Class382.anIntArray4657[i_4];
 										i_15 = Class382.anIntArray4661[i_4];
-										i_16 = this.anIntArray8251[i_13] * i_14 + this.anIntArray8249[i_13] * i_15 + 16383 >> 14;
-										this.anIntArray8251[i_13] = this.anIntArray8251[i_13] * i_15 - this.anIntArray8249[i_13] * i_14 + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = this.verticesZ[i_13] * i_14 + this.verticesX[i_13] * i_15 + 16383 >> 14;
+										this.verticesZ[i_13] = this.verticesZ[i_13] * i_15 - this.verticesX[i_13] * i_14 + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
-									this.anIntArray8249[i_13] += anInt8271;
-									this.anIntArray8250[i_13] += anInt8247;
-									this.anIntArray8251[i_13] += anInt8232;
+									this.verticesX[i_13] += anInt8271;
+									this.verticesY[i_13] += anInt8247;
+									this.verticesZ[i_13] += anInt8232;
 								}
 							}
 						}
@@ -2195,15 +2195,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 							for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 								i_13 = ints_21[i_22];
-								this.anIntArray8249[i_13] -= anInt8271;
-								this.anIntArray8250[i_13] -= anInt8247;
-								this.anIntArray8251[i_13] -= anInt8232;
-								this.anIntArray8249[i_13] = this.anIntArray8249[i_13] * i_3 >> 7;
-								this.anIntArray8250[i_13] = this.anIntArray8250[i_13] * i_4 >> 7;
-								this.anIntArray8251[i_13] = this.anIntArray8251[i_13] * i_5 >> 7;
-								this.anIntArray8249[i_13] += anInt8271;
-								this.anIntArray8250[i_13] += anInt8247;
-								this.anIntArray8251[i_13] += anInt8232;
+								this.verticesX[i_13] -= anInt8271;
+								this.verticesY[i_13] -= anInt8247;
+								this.verticesZ[i_13] -= anInt8232;
+								this.verticesX[i_13] = this.verticesX[i_13] * i_3 >> 7;
+								this.verticesY[i_13] = this.verticesY[i_13] * i_4 >> 7;
+								this.verticesZ[i_13] = this.verticesZ[i_13] * i_5 >> 7;
+								this.verticesX[i_13] += anInt8271;
+								this.verticesY[i_13] += anInt8247;
+								this.verticesZ[i_13] += anInt8232;
 							}
 						}
 					}
@@ -2362,10 +2362,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		if (this.anIntArrayArray8263 == null) {
 			return false;
 		} else {
-			for (int i_1 = 0; i_1 < this.anInt8303; i_1++) {
-				this.anIntArray8249[i_1] <<= 4;
-				this.anIntArray8250[i_1] <<= 4;
-				this.anIntArray8251[i_1] <<= 4;
+			for (int i_1 = 0; i_1 < this.vertexCount; i_1++) {
+				this.verticesX[i_1] <<= 4;
+				this.verticesY[i_1] <<= 4;
+				this.verticesZ[i_1] <<= 4;
 			}
 
 			anInt8271 = 0;
@@ -2399,9 +2399,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					for (i_14 = 0; i_14 < ints_13.length; i_14++) {
 						i_15 = ints_13[i_14];
 						if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_15]) != 0) {
-							anInt8271 += this.anIntArray8249[i_15];
-							anInt8247 += this.anIntArray8250[i_15];
-							anInt8232 += this.anIntArray8251[i_15];
+							anInt8271 += this.verticesX[i_15];
+							anInt8247 += this.verticesY[i_15];
+							anInt8232 += this.verticesZ[i_15];
 							++i_10;
 						}
 					}
@@ -2443,9 +2443,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 						for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 							i_14 = ints_47[i_48];
 							if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_14]) != 0) {
-								this.anIntArray8249[i_14] += i_3;
-								this.anIntArray8250[i_14] += i_4;
-								this.anIntArray8251[i_14] += i_5;
+								this.verticesX[i_14] += i_3;
+								this.verticesY[i_14] += i_4;
+								this.verticesZ[i_14] += i_5;
 							}
 						}
 					}
@@ -2567,15 +2567,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (int i_42 = 0; i_42 < ints_41.length; i_42++) {
 									int i_43 = ints_41[i_42];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_43]) != 0) {
-										int i_44 = ints_35[0] * this.anIntArray8249[i_43] + ints_35[2] * this.anIntArray8251[i_43] + ints_35[1] * this.anIntArray8250[i_43] + 8192 >> 14;
-										int i_45 = ints_35[4] * this.anIntArray8250[i_43] + ints_35[5] * this.anIntArray8251[i_43] + ints_35[3] * this.anIntArray8249[i_43] + 8192 >> 14;
-										int i_46 = ints_35[6] * this.anIntArray8249[i_43] + ints_35[7] * this.anIntArray8250[i_43] + ints_35[8] * this.anIntArray8251[i_43] + 8192 >> 14;
+										int i_44 = ints_35[0] * this.verticesX[i_43] + ints_35[2] * this.verticesZ[i_43] + ints_35[1] * this.verticesY[i_43] + 8192 >> 14;
+										int i_45 = ints_35[4] * this.verticesY[i_43] + ints_35[5] * this.verticesZ[i_43] + ints_35[3] * this.verticesX[i_43] + 8192 >> 14;
+										int i_46 = ints_35[6] * this.verticesX[i_43] + ints_35[7] * this.verticesY[i_43] + ints_35[8] * this.verticesZ[i_43] + 8192 >> 14;
 										i_44 += i_36;
 										i_45 += i_37;
 										i_46 += i_38;
-										this.anIntArray8249[i_43] = i_44;
-										this.anIntArray8250[i_43] = i_45;
-										this.anIntArray8251[i_43] = i_46;
+										this.verticesX[i_43] = i_44;
+										this.verticesY[i_43] = i_45;
+										this.verticesZ[i_43] = i_46;
 									}
 								}
 							}
@@ -2589,36 +2589,36 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_14]) != 0) {
-										this.anIntArray8249[i_14] -= anInt8271;
-										this.anIntArray8250[i_14] -= anInt8247;
-										this.anIntArray8251[i_14] -= anInt8232;
+										this.verticesX[i_14] -= anInt8271;
+										this.verticesY[i_14] -= anInt8247;
+										this.verticesZ[i_14] -= anInt8232;
 										if (i_5 != 0) {
 											i_15 = Class382.anIntArray4657[i_5];
 											i_16 = Class382.anIntArray4661[i_5];
-											i_17 = i_15 * this.anIntArray8250[i_14] + i_16 * this.anIntArray8249[i_14] + 16383 >> 14;
-											this.anIntArray8250[i_14] = i_16 * this.anIntArray8250[i_14] - i_15 * this.anIntArray8249[i_14] + 16383 >> 14;
-											this.anIntArray8249[i_14] = i_17;
+											i_17 = i_15 * this.verticesY[i_14] + i_16 * this.verticesX[i_14] + 16383 >> 14;
+											this.verticesY[i_14] = i_16 * this.verticesY[i_14] - i_15 * this.verticesX[i_14] + 16383 >> 14;
+											this.verticesX[i_14] = i_17;
 										}
 
 										if (i_3 != 0) {
 											i_15 = Class382.anIntArray4657[i_3];
 											i_16 = Class382.anIntArray4661[i_3];
-											i_17 = i_16 * this.anIntArray8250[i_14] - i_15 * this.anIntArray8251[i_14] + 16383 >> 14;
-											this.anIntArray8251[i_14] = i_15 * this.anIntArray8250[i_14] + i_16 * this.anIntArray8251[i_14] + 16383 >> 14;
-											this.anIntArray8250[i_14] = i_17;
+											i_17 = i_16 * this.verticesY[i_14] - i_15 * this.verticesZ[i_14] + 16383 >> 14;
+											this.verticesZ[i_14] = i_15 * this.verticesY[i_14] + i_16 * this.verticesZ[i_14] + 16383 >> 14;
+											this.verticesY[i_14] = i_17;
 										}
 
 										if (i_4 != 0) {
 											i_15 = Class382.anIntArray4657[i_4];
 											i_16 = Class382.anIntArray4661[i_4];
-											i_17 = i_15 * this.anIntArray8251[i_14] + i_16 * this.anIntArray8249[i_14] + 16383 >> 14;
-											this.anIntArray8251[i_14] = i_16 * this.anIntArray8251[i_14] - i_15 * this.anIntArray8249[i_14] + 16383 >> 14;
-											this.anIntArray8249[i_14] = i_17;
+											i_17 = i_15 * this.verticesZ[i_14] + i_16 * this.verticesX[i_14] + 16383 >> 14;
+											this.verticesZ[i_14] = i_16 * this.verticesZ[i_14] - i_15 * this.verticesX[i_14] + 16383 >> 14;
+											this.verticesX[i_14] = i_17;
 										}
 
-										this.anIntArray8249[i_14] += anInt8271;
-										this.anIntArray8250[i_14] += anInt8247;
-										this.anIntArray8251[i_14] += anInt8232;
+										this.verticesX[i_14] += anInt8271;
+										this.verticesY[i_14] += anInt8247;
+										this.verticesZ[i_14] += anInt8232;
 									}
 								}
 							}
@@ -2747,15 +2747,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (i_36 = 0; i_36 < ints_35.length; i_36++) {
 									i_37 = ints_35[i_36];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_37]) != 0) {
-										i_38 = ints_51[0] * this.anIntArray8249[i_37] + ints_51[2] * this.anIntArray8251[i_37] + ints_51[1] * this.anIntArray8250[i_37] + 8192 >> 14;
-										i_39 = ints_51[4] * this.anIntArray8250[i_37] + ints_51[5] * this.anIntArray8251[i_37] + ints_51[3] * this.anIntArray8249[i_37] + 8192 >> 14;
-										i_40 = ints_51[6] * this.anIntArray8249[i_37] + ints_51[7] * this.anIntArray8250[i_37] + ints_51[8] * this.anIntArray8251[i_37] + 8192 >> 14;
+										i_38 = ints_51[0] * this.verticesX[i_37] + ints_51[2] * this.verticesZ[i_37] + ints_51[1] * this.verticesY[i_37] + 8192 >> 14;
+										i_39 = ints_51[4] * this.verticesY[i_37] + ints_51[5] * this.verticesZ[i_37] + ints_51[3] * this.verticesX[i_37] + 8192 >> 14;
+										i_40 = ints_51[6] * this.verticesX[i_37] + ints_51[7] * this.verticesY[i_37] + ints_51[8] * this.verticesZ[i_37] + 8192 >> 14;
 										i_38 += i_30;
 										i_39 += i_52;
 										i_40 += i_32;
-										this.anIntArray8249[i_37] = i_38;
-										this.anIntArray8250[i_37] = i_39;
-										this.anIntArray8251[i_37] = i_40;
+										this.verticesX[i_37] = i_38;
+										this.verticesY[i_37] = i_39;
+										this.verticesZ[i_37] = i_40;
 									}
 								}
 							}
@@ -2769,15 +2769,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_14]) != 0) {
-										this.anIntArray8249[i_14] -= anInt8271;
-										this.anIntArray8250[i_14] -= anInt8247;
-										this.anIntArray8251[i_14] -= anInt8232;
-										this.anIntArray8249[i_14] = i_3 * this.anIntArray8249[i_14] >> 7;
-										this.anIntArray8250[i_14] = i_4 * this.anIntArray8250[i_14] >> 7;
-										this.anIntArray8251[i_14] = i_5 * this.anIntArray8251[i_14] >> 7;
-										this.anIntArray8249[i_14] += anInt8271;
-										this.anIntArray8250[i_14] += anInt8247;
-										this.anIntArray8251[i_14] += anInt8232;
+										this.verticesX[i_14] -= anInt8271;
+										this.verticesY[i_14] -= anInt8247;
+										this.verticesZ[i_14] -= anInt8232;
+										this.verticesX[i_14] = i_3 * this.verticesX[i_14] >> 7;
+										this.verticesY[i_14] = i_4 * this.verticesY[i_14] >> 7;
+										this.verticesZ[i_14] = i_5 * this.verticesZ[i_14] >> 7;
+										this.verticesX[i_14] += anInt8271;
+										this.verticesY[i_14] += anInt8247;
+										this.verticesZ[i_14] += anInt8232;
 									}
 								}
 							}
@@ -2927,10 +2927,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 			anInt8247 = 0;
 			anInt8232 = 0;
 
-			for (i_6 = 0; i_6 < this.anInt8248; i_6++) {
-				anInt8271 += this.anIntArray8249[i_6];
-				anInt8247 += this.anIntArray8250[i_6];
-				anInt8232 += this.anIntArray8251[i_6];
+			for (i_6 = 0; i_6 < this.maxDepth; i_6++) {
+				anInt8271 += this.verticesX[i_6];
+				anInt8247 += this.verticesY[i_6];
+				anInt8232 += this.verticesZ[i_6];
 				++i_5;
 			}
 
@@ -2944,58 +2944,58 @@ public class Class528_Sub1 extends MeshRasterizer {
 				anInt8232 = i_4;
 			}
 		} else if (i_1 == 1) {
-			for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-				this.anIntArray8249[i_5] += i_2;
-				this.anIntArray8250[i_5] += i_3;
-				this.anIntArray8251[i_5] += i_4;
+			for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+				this.verticesX[i_5] += i_2;
+				this.verticesY[i_5] += i_3;
+				this.verticesZ[i_5] += i_4;
 			}
 		} else {
 			int i_7;
 			int i_8;
 			if (i_1 == 2) {
-				for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-					this.anIntArray8249[i_5] -= anInt8271;
-					this.anIntArray8250[i_5] -= anInt8247;
-					this.anIntArray8251[i_5] -= anInt8232;
+				for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+					this.verticesX[i_5] -= anInt8271;
+					this.verticesY[i_5] -= anInt8247;
+					this.verticesZ[i_5] -= anInt8232;
 					if (i_4 != 0) {
 						i_6 = Class382.anIntArray4657[i_4];
 						i_7 = Class382.anIntArray4661[i_4];
-						i_8 = i_6 * this.anIntArray8250[i_5] + i_7 * this.anIntArray8249[i_5] + 16383 >> 14;
-						this.anIntArray8250[i_5] = i_7 * this.anIntArray8250[i_5] - i_6 * this.anIntArray8249[i_5] + 16383 >> 14;
-						this.anIntArray8249[i_5] = i_8;
+						i_8 = i_6 * this.verticesY[i_5] + i_7 * this.verticesX[i_5] + 16383 >> 14;
+						this.verticesY[i_5] = i_7 * this.verticesY[i_5] - i_6 * this.verticesX[i_5] + 16383 >> 14;
+						this.verticesX[i_5] = i_8;
 					}
 
 					if (i_2 != 0) {
 						i_6 = Class382.anIntArray4657[i_2];
 						i_7 = Class382.anIntArray4661[i_2];
-						i_8 = i_7 * this.anIntArray8250[i_5] - i_6 * this.anIntArray8251[i_5] + 16383 >> 14;
-						this.anIntArray8251[i_5] = i_6 * this.anIntArray8250[i_5] + i_7 * this.anIntArray8251[i_5] + 16383 >> 14;
-						this.anIntArray8250[i_5] = i_8;
+						i_8 = i_7 * this.verticesY[i_5] - i_6 * this.verticesZ[i_5] + 16383 >> 14;
+						this.verticesZ[i_5] = i_6 * this.verticesY[i_5] + i_7 * this.verticesZ[i_5] + 16383 >> 14;
+						this.verticesY[i_5] = i_8;
 					}
 
 					if (i_3 != 0) {
 						i_6 = Class382.anIntArray4657[i_3];
 						i_7 = Class382.anIntArray4661[i_3];
-						i_8 = i_6 * this.anIntArray8251[i_5] + i_7 * this.anIntArray8249[i_5] + 16383 >> 14;
-						this.anIntArray8251[i_5] = i_7 * this.anIntArray8251[i_5] - i_6 * this.anIntArray8249[i_5] + 16383 >> 14;
-						this.anIntArray8249[i_5] = i_8;
+						i_8 = i_6 * this.verticesZ[i_5] + i_7 * this.verticesX[i_5] + 16383 >> 14;
+						this.verticesZ[i_5] = i_7 * this.verticesZ[i_5] - i_6 * this.verticesX[i_5] + 16383 >> 14;
+						this.verticesX[i_5] = i_8;
 					}
 
-					this.anIntArray8249[i_5] += anInt8271;
-					this.anIntArray8250[i_5] += anInt8247;
-					this.anIntArray8251[i_5] += anInt8232;
+					this.verticesX[i_5] += anInt8271;
+					this.verticesY[i_5] += anInt8247;
+					this.verticesZ[i_5] += anInt8232;
 				}
 			} else if (i_1 == 3) {
-				for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-					this.anIntArray8249[i_5] -= anInt8271;
-					this.anIntArray8250[i_5] -= anInt8247;
-					this.anIntArray8251[i_5] -= anInt8232;
-					this.anIntArray8249[i_5] = i_2 * this.anIntArray8249[i_5] / 128;
-					this.anIntArray8250[i_5] = i_3 * this.anIntArray8250[i_5] / 128;
-					this.anIntArray8251[i_5] = i_4 * this.anIntArray8251[i_5] / 128;
-					this.anIntArray8249[i_5] += anInt8271;
-					this.anIntArray8250[i_5] += anInt8247;
-					this.anIntArray8251[i_5] += anInt8232;
+				for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+					this.verticesX[i_5] -= anInt8271;
+					this.verticesY[i_5] -= anInt8247;
+					this.verticesZ[i_5] -= anInt8232;
+					this.verticesX[i_5] = i_2 * this.verticesX[i_5] / 128;
+					this.verticesY[i_5] = i_3 * this.verticesY[i_5] / 128;
+					this.verticesZ[i_5] = i_4 * this.verticesZ[i_5] / 128;
+					this.verticesX[i_5] += anInt8271;
+					this.verticesY[i_5] += anInt8247;
+					this.verticesZ[i_5] += anInt8232;
 				}
 			} else {
 				Class162 class162_10;
@@ -3106,9 +3106,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 					for (i_13 = 0; i_13 < ints_12.length; i_13++) {
 						i_14 = ints_12[i_13];
-						anInt8271 += this.anIntArray8249[i_14];
-						anInt8247 += this.anIntArray8250[i_14];
-						anInt8232 += this.anIntArray8251[i_14];
+						anInt8271 += this.verticesX[i_14];
+						anInt8247 += this.verticesY[i_14];
+						anInt8232 += this.verticesZ[i_14];
 						++i_9;
 					}
 				}
@@ -3138,9 +3138,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 						for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 							i_13 = ints_21[i_22];
-							this.anIntArray8249[i_13] += i_3;
-							this.anIntArray8250[i_13] += i_4;
-							this.anIntArray8251[i_13] += i_5;
+							this.verticesX[i_13] += i_3;
+							this.verticesY[i_13] += i_4;
+							this.verticesZ[i_13] += i_5;
 						}
 					}
 				}
@@ -3156,70 +3156,70 @@ public class Class528_Sub1 extends MeshRasterizer {
 							if ((i_6 & 0x1) == 0) {
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
-									this.anIntArray8249[i_13] -= anInt8271;
-									this.anIntArray8250[i_13] -= anInt8247;
-									this.anIntArray8251[i_13] -= anInt8232;
+									this.verticesX[i_13] -= anInt8271;
+									this.verticesY[i_13] -= anInt8247;
+									this.verticesZ[i_13] -= anInt8232;
 									if (i_5 != 0) {
 										i_14 = Class382.anIntArray4657[i_5];
 										i_15 = Class382.anIntArray4661[i_5];
-										i_16 = i_14 * this.anIntArray8250[i_13] + i_15 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8250[i_13] = i_15 * this.anIntArray8250[i_13] - i_14 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = i_14 * this.verticesY[i_13] + i_15 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesY[i_13] = i_15 * this.verticesY[i_13] - i_14 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
 									if (i_3 != 0) {
 										i_14 = Class382.anIntArray4657[i_3];
 										i_15 = Class382.anIntArray4661[i_3];
-										i_16 = i_15 * this.anIntArray8250[i_13] - i_14 * this.anIntArray8251[i_13] + 16383 >> 14;
-										this.anIntArray8251[i_13] = i_14 * this.anIntArray8250[i_13] + i_15 * this.anIntArray8251[i_13] + 16383 >> 14;
-										this.anIntArray8250[i_13] = i_16;
+										i_16 = i_15 * this.verticesY[i_13] - i_14 * this.verticesZ[i_13] + 16383 >> 14;
+										this.verticesZ[i_13] = i_14 * this.verticesY[i_13] + i_15 * this.verticesZ[i_13] + 16383 >> 14;
+										this.verticesY[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
 										i_14 = Class382.anIntArray4657[i_4];
 										i_15 = Class382.anIntArray4661[i_4];
-										i_16 = i_14 * this.anIntArray8251[i_13] + i_15 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8251[i_13] = i_15 * this.anIntArray8251[i_13] - i_14 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = i_14 * this.verticesZ[i_13] + i_15 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesZ[i_13] = i_15 * this.verticesZ[i_13] - i_14 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
-									this.anIntArray8249[i_13] += anInt8271;
-									this.anIntArray8250[i_13] += anInt8247;
-									this.anIntArray8251[i_13] += anInt8232;
+									this.verticesX[i_13] += anInt8271;
+									this.verticesY[i_13] += anInt8247;
+									this.verticesZ[i_13] += anInt8232;
 								}
 							} else {
 								for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 									i_13 = ints_21[i_22];
-									this.anIntArray8249[i_13] -= anInt8271;
-									this.anIntArray8250[i_13] -= anInt8247;
-									this.anIntArray8251[i_13] -= anInt8232;
+									this.verticesX[i_13] -= anInt8271;
+									this.verticesY[i_13] -= anInt8247;
+									this.verticesZ[i_13] -= anInt8232;
 									if (i_3 != 0) {
 										i_14 = Class382.anIntArray4657[i_3];
 										i_15 = Class382.anIntArray4661[i_3];
-										i_16 = i_15 * this.anIntArray8250[i_13] - i_14 * this.anIntArray8251[i_13] + 16383 >> 14;
-										this.anIntArray8251[i_13] = i_14 * this.anIntArray8250[i_13] + i_15 * this.anIntArray8251[i_13] + 16383 >> 14;
-										this.anIntArray8250[i_13] = i_16;
+										i_16 = i_15 * this.verticesY[i_13] - i_14 * this.verticesZ[i_13] + 16383 >> 14;
+										this.verticesZ[i_13] = i_14 * this.verticesY[i_13] + i_15 * this.verticesZ[i_13] + 16383 >> 14;
+										this.verticesY[i_13] = i_16;
 									}
 
 									if (i_5 != 0) {
 										i_14 = Class382.anIntArray4657[i_5];
 										i_15 = Class382.anIntArray4661[i_5];
-										i_16 = i_14 * this.anIntArray8250[i_13] + i_15 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8250[i_13] = i_15 * this.anIntArray8250[i_13] - i_14 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = i_14 * this.verticesY[i_13] + i_15 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesY[i_13] = i_15 * this.verticesY[i_13] - i_14 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
 										i_14 = Class382.anIntArray4657[i_4];
 										i_15 = Class382.anIntArray4661[i_4];
-										i_16 = i_14 * this.anIntArray8251[i_13] + i_15 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8251[i_13] = i_15 * this.anIntArray8251[i_13] - i_14 * this.anIntArray8249[i_13] + 16383 >> 14;
-										this.anIntArray8249[i_13] = i_16;
+										i_16 = i_14 * this.verticesZ[i_13] + i_15 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesZ[i_13] = i_15 * this.verticesZ[i_13] - i_14 * this.verticesX[i_13] + 16383 >> 14;
+										this.verticesX[i_13] = i_16;
 									}
 
-									this.anIntArray8249[i_13] += anInt8271;
-									this.anIntArray8250[i_13] += anInt8247;
-									this.anIntArray8251[i_13] += anInt8232;
+									this.verticesX[i_13] += anInt8271;
+									this.verticesY[i_13] += anInt8247;
+									this.verticesZ[i_13] += anInt8232;
 								}
 							}
 						}
@@ -3289,15 +3289,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 							for (i_22 = 0; i_22 < ints_21.length; i_22++) {
 								i_13 = ints_21[i_22];
-								this.anIntArray8249[i_13] -= anInt8271;
-								this.anIntArray8250[i_13] -= anInt8247;
-								this.anIntArray8251[i_13] -= anInt8232;
-								this.anIntArray8249[i_13] = i_3 * this.anIntArray8249[i_13] >> 7;
-								this.anIntArray8250[i_13] = i_4 * this.anIntArray8250[i_13] >> 7;
-								this.anIntArray8251[i_13] = i_5 * this.anIntArray8251[i_13] >> 7;
-								this.anIntArray8249[i_13] += anInt8271;
-								this.anIntArray8250[i_13] += anInt8247;
-								this.anIntArray8251[i_13] += anInt8232;
+								this.verticesX[i_13] -= anInt8271;
+								this.verticesY[i_13] -= anInt8247;
+								this.verticesZ[i_13] -= anInt8232;
+								this.verticesX[i_13] = i_3 * this.verticesX[i_13] >> 7;
+								this.verticesY[i_13] = i_4 * this.verticesY[i_13] >> 7;
+								this.verticesZ[i_13] = i_5 * this.verticesZ[i_13] >> 7;
+								this.verticesX[i_13] += anInt8271;
+								this.verticesY[i_13] += anInt8247;
+								this.verticesZ[i_13] += anInt8232;
 							}
 						}
 					}
@@ -3435,10 +3435,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 	}
 
 	void ka() {
-		for (int i_1 = 0; i_1 < this.anInt8303; i_1++) {
-			this.anIntArray8249[i_1] = this.anIntArray8249[i_1] + 7 >> 4;
-			this.anIntArray8250[i_1] = this.anIntArray8250[i_1] + 7 >> 4;
-			this.anIntArray8251[i_1] = this.anIntArray8251[i_1] + 7 >> 4;
+		for (int i_1 = 0; i_1 < this.vertexCount; i_1++) {
+			this.verticesX[i_1] = this.verticesX[i_1] + 7 >> 4;
+			this.verticesY[i_1] = this.verticesY[i_1] + 7 >> 4;
+			this.verticesZ[i_1] = this.verticesZ[i_1] + 7 >> 4;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -3458,12 +3458,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			float[] floats_5 = new float[3];
 
-			for (int i_6 = 0; i_6 < this.anInt8248; i_6++) {
+			for (int i_6 = 0; i_6 < this.maxDepth; i_6++) {
 				if ((i_2 & this.aShortArray8253[i_6]) != 0) {
-					matrix44var_4.method5226((float) this.anIntArray8249[i_6], (float) this.anIntArray8250[i_6], (float) this.anIntArray8251[i_6], floats_5);
-					this.anIntArray8249[i_6] = (int) floats_5[0];
-					this.anIntArray8250[i_6] = (int) floats_5[1];
-					this.anIntArray8251[i_6] = (int) floats_5[2];
+					matrix44var_4.method5226((float) this.verticesX[i_6], (float) this.verticesY[i_6], (float) this.verticesZ[i_6], floats_5);
+					this.verticesX[i_6] = (int) floats_5[0];
+					this.verticesY[i_6] = (int) floats_5[1];
+					this.verticesZ[i_6] = (int) floats_5[2];
 				}
 			}
 		}
@@ -3490,15 +3490,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 					class87_5 = class87_4.aClass87_835;
 				}
 
-				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt836] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt836] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt836]);
-				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt836] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt836] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt836]);
-				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt836] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt836] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt836]);
-				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt837] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt837] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt837]);
-				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt837] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt837] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt837]);
-				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt837] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt837] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt837]);
-				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class87_4.anInt838] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class87_4.anInt838] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class87_4.anInt838]);
-				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class87_4.anInt838] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class87_4.anInt838] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class87_4.anInt838]);
-				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class87_4.anInt838] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class87_4.anInt838] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class87_4.anInt838]);
+				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt836] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt836] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt836]);
+				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt836] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt836] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt836]);
+				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt836] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt836] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt836]);
+				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt837] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt837] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt837]);
+				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt837] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt837] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt837]);
+				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt837] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt837] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt837]);
+				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class87_4.anInt838] + matrix44arr_2.buf[4] * (float) this.verticesY[class87_4.anInt838] + matrix44arr_2.buf[8] * (float) this.verticesZ[class87_4.anInt838]);
+				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class87_4.anInt838] + matrix44arr_2.buf[5] * (float) this.verticesY[class87_4.anInt838] + matrix44arr_2.buf[9] * (float) this.verticesZ[class87_4.anInt838]);
+				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class87_4.anInt838] + matrix44arr_2.buf[6] * (float) this.verticesY[class87_4.anInt838] + matrix44arr_2.buf[10] * (float) this.verticesZ[class87_4.anInt838]);
 			}
 		}
 
@@ -3516,9 +3516,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					class172_6.aClass384_2116 = new Matrix44Arr(matrix44arr_2);
 				}
 
-				class172_7.anInt2113 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8249[class172_6.anInt2119] + matrix44arr_2.buf[4] * (float) this.anIntArray8250[class172_6.anInt2119] + matrix44arr_2.buf[8] * (float) this.anIntArray8251[class172_6.anInt2119]);
-				class172_7.anInt2117 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8249[class172_6.anInt2119] + matrix44arr_2.buf[5] * (float) this.anIntArray8250[class172_6.anInt2119] + matrix44arr_2.buf[9] * (float) this.anIntArray8251[class172_6.anInt2119]);
-				class172_7.anInt2118 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8249[class172_6.anInt2119] + matrix44arr_2.buf[6] * (float) this.anIntArray8250[class172_6.anInt2119] + matrix44arr_2.buf[10] * (float) this.anIntArray8251[class172_6.anInt2119]);
+				class172_7.anInt2113 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.verticesX[class172_6.anInt2119] + matrix44arr_2.buf[4] * (float) this.verticesY[class172_6.anInt2119] + matrix44arr_2.buf[8] * (float) this.verticesZ[class172_6.anInt2119]);
+				class172_7.anInt2117 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.verticesX[class172_6.anInt2119] + matrix44arr_2.buf[5] * (float) this.verticesY[class172_6.anInt2119] + matrix44arr_2.buf[9] * (float) this.verticesZ[class172_6.anInt2119]);
+				class172_7.anInt2118 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.verticesX[class172_6.anInt2119] + matrix44arr_2.buf[6] * (float) this.verticesY[class172_6.anInt2119] + matrix44arr_2.buf[10] * (float) this.verticesZ[class172_6.anInt2119]);
 			}
 		}
 
@@ -3624,10 +3624,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 			int[] ints_38 = this.aClass505_Sub1_8239.anIntArray8500;
 			int[] ints_25 = this.aClass505_Sub1_8239.anIntArray8501;
 
-			for (i_26 = 0; i_26 < this.anInt8248; i_26++) {
-				i_27 = this.anIntArray8249[i_26];
-				int i_40 = this.anIntArray8250[i_26];
-				int i_41 = this.anIntArray8251[i_26];
+			for (i_26 = 0; i_26 < this.maxDepth; i_26++) {
+				i_27 = this.verticesX[i_26];
+				int i_40 = this.verticesY[i_26];
+				int i_41 = this.verticesZ[i_26];
 				f_30 = matrix44arr_6.buf[2] * (float) i_27 + matrix44arr_6.buf[6] * (float) i_40 + matrix44arr_6.buf[10] * (float) i_41 + matrix44arr_6.buf[14];
 				f_31 = matrix44arr_6.buf[3] * (float) i_27 + matrix44arr_6.buf[7] * (float) i_40 + matrix44arr_6.buf[11] * (float) i_41 + matrix44arr_6.buf[15];
 				int i_34;
@@ -3887,9 +3887,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 				Class162 class162_4 = this.aClass162Array8295[i_3];
 				Class145 class145_5 = this.aClass145Array8258[i_3];
 				if (!class162_4.aBool2018 || !this.aClass505_Sub1_8239.method8471()) {
-					float f_6 = (float) (this.anIntArray8249[class162_4.anInt2017] + this.anIntArray8249[class162_4.anInt2019] + this.anIntArray8249[class162_4.anInt2021]) * 0.3333333F;
-					float f_7 = (float) (this.anIntArray8250[class162_4.anInt2017] + this.anIntArray8250[class162_4.anInt2019] + this.anIntArray8250[class162_4.anInt2021]) * 0.3333333F;
-					float f_8 = (float) (this.anIntArray8251[class162_4.anInt2017] + this.anIntArray8251[class162_4.anInt2019] + this.anIntArray8251[class162_4.anInt2021]) * 0.3333333F;
+					float f_6 = (float) (this.verticesX[class162_4.anInt2017] + this.verticesX[class162_4.anInt2019] + this.verticesX[class162_4.anInt2021]) * 0.3333333F;
+					float f_7 = (float) (this.verticesY[class162_4.anInt2017] + this.verticesY[class162_4.anInt2019] + this.verticesY[class162_4.anInt2021]) * 0.3333333F;
+					float f_8 = (float) (this.verticesZ[class162_4.anInt2017] + this.verticesZ[class162_4.anInt2019] + this.verticesZ[class162_4.anInt2021]) * 0.3333333F;
 					float f_9 = matrix44arr_1.buf[0] * f_6 + matrix44arr_1.buf[4] * f_7 + matrix44arr_1.buf[8] * f_8 + matrix44arr_1.buf[12];
 					float f_10 = matrix44arr_1.buf[1] * f_6 + matrix44arr_1.buf[5] * f_7 + matrix44arr_1.buf[9] * f_8 + matrix44arr_1.buf[13];
 					float f_11 = matrix44arr_1.buf[2] * f_6 + matrix44arr_1.buf[6] * f_7 + matrix44arr_1.buf[10] * f_8 + matrix44arr_1.buf[14];
@@ -4008,10 +4008,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				int i_16;
 				int i_17;
 				if (this.aClass505_Sub1_8239.aBool8467) {
-					for (i_12 = 0; i_12 < this.anInt8248; i_12++) {
-						i_13 = Stream.floatToRawIntBits((float) this.anIntArray8249[i_12]);
-						i_14 = Stream.floatToRawIntBits((float) this.anIntArray8250[i_12]);
-						i_15 = Stream.floatToRawIntBits((float) this.anIntArray8251[i_12]);
+					for (i_12 = 0; i_12 < this.maxDepth; i_12++) {
+						i_13 = Stream.floatToRawIntBits((float) this.verticesX[i_12]);
+						i_14 = Stream.floatToRawIntBits((float) this.verticesY[i_12]);
+						i_15 = Stream.floatToRawIntBits((float) this.verticesZ[i_12]);
 						i_16 = this.anIntArray8290[i_12];
 						i_17 = this.anIntArray8290[i_12 + 1];
 
@@ -4028,10 +4028,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 						}
 					}
 				} else {
-					for (i_12 = 0; i_12 < this.anInt8248; i_12++) {
-						i_13 = Stream.floatToRawIntBits((float) this.anIntArray8249[i_12]);
-						i_14 = Stream.floatToRawIntBits((float) this.anIntArray8250[i_12]);
-						i_15 = Stream.floatToRawIntBits((float) this.anIntArray8251[i_12]);
+					for (i_12 = 0; i_12 < this.maxDepth; i_12++) {
+						i_13 = Stream.floatToRawIntBits((float) this.verticesX[i_12]);
+						i_14 = Stream.floatToRawIntBits((float) this.verticesY[i_12]);
+						i_15 = Stream.floatToRawIntBits((float) this.verticesZ[i_12]);
 						i_16 = this.anIntArray8290[i_12];
 						i_17 = this.anIntArray8290[i_12 + 1];
 
@@ -4339,12 +4339,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			float[] floats_5 = new float[3];
 
-			for (int i_6 = 0; i_6 < this.anInt8248; i_6++) {
+			for (int i_6 = 0; i_6 < this.maxDepth; i_6++) {
 				if ((i_2 & this.aShortArray8253[i_6]) != 0) {
-					matrix44var_4.method5226((float) this.anIntArray8249[i_6], (float) this.anIntArray8250[i_6], (float) this.anIntArray8251[i_6], floats_5);
-					this.anIntArray8249[i_6] = (int) floats_5[0];
-					this.anIntArray8250[i_6] = (int) floats_5[1];
-					this.anIntArray8251[i_6] = (int) floats_5[2];
+					matrix44var_4.method5226((float) this.verticesX[i_6], (float) this.verticesY[i_6], (float) this.verticesZ[i_6], floats_5);
+					this.verticesX[i_6] = (int) floats_5[0];
+					this.verticesY[i_6] = (int) floats_5[1];
+					this.verticesZ[i_6] = (int) floats_5[2];
 				}
 			}
 		}
@@ -4369,10 +4369,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 	public void method11299(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4, boolean bool_5) {
 		Class528_Sub1 class528_sub1_6 = (Class528_Sub1) meshrasterizer_1;
 		if (this.anInt8262 * 3 * -1431655765 != 0 && class528_sub1_6.anInt8262 * 3 * -1431655765 != 0) {
-			int i_7 = class528_sub1_6.anInt8248;
-			int[] ints_8 = class528_sub1_6.anIntArray8249;
-			int[] ints_9 = class528_sub1_6.anIntArray8250;
-			int[] ints_10 = class528_sub1_6.anIntArray8251;
+			int i_7 = class528_sub1_6.maxDepth;
+			int[] ints_8 = class528_sub1_6.verticesX;
+			int[] ints_9 = class528_sub1_6.verticesY;
+			int[] ints_10 = class528_sub1_6.verticesZ;
 			short[] shorts_11 = class528_sub1_6.aShortArray8255;
 			short[] shorts_12 = class528_sub1_6.aShortArray8270;
 			short[] shorts_13 = class528_sub1_6.aShortArray8261;
@@ -4422,12 +4422,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 			short s_29 = class528_sub1_6.aShort8287;
 			short s_30 = class528_sub1_6.aShort8306;
 
-			for (int i_31 = 0; i_31 < this.anInt8248; i_31++) {
-				int i_32 = this.anIntArray8250[i_31] - i_3;
+			for (int i_31 = 0; i_31 < this.maxDepth; i_31++) {
+				int i_32 = this.verticesY[i_31] - i_3;
 				if (i_32 >= s_25 && i_32 <= s_26) {
-					int i_33 = this.anIntArray8249[i_31] - i_2;
+					int i_33 = this.verticesX[i_31] - i_2;
 					if (i_33 >= s_27 && i_33 <= s_28) {
-						int i_34 = this.anIntArray8251[i_31] - i_4;
+						int i_34 = this.verticesZ[i_31] - i_4;
 						if (i_34 >= s_29 && i_34 <= s_30) {
 							int i_35 = -1;
 							int i_36 = this.anIntArray8290[i_31];
@@ -4562,10 +4562,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8250[i_4] * i_3 - this.anIntArray8251[i_4] * i_2 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8250[i_4] * i_2 + this.anIntArray8251[i_4] * i_3 >> 14;
-			this.anIntArray8250[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesY[i_4] * i_3 - this.verticesZ[i_4] * i_2 >> 14;
+			this.verticesZ[i_4] = this.verticesY[i_4] * i_2 + this.verticesZ[i_4] * i_3 >> 14;
+			this.verticesY[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -4621,10 +4621,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		if (this.anIntArrayArray8263 == null) {
 			return false;
 		} else {
-			for (int i_1 = 0; i_1 < this.anInt8303; i_1++) {
-				this.anIntArray8249[i_1] <<= 4;
-				this.anIntArray8250[i_1] <<= 4;
-				this.anIntArray8251[i_1] <<= 4;
+			for (int i_1 = 0; i_1 < this.vertexCount; i_1++) {
+				this.verticesX[i_1] <<= 4;
+				this.verticesY[i_1] <<= 4;
+				this.verticesZ[i_1] <<= 4;
 			}
 
 			anInt8271 = 0;
@@ -4660,10 +4660,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 		int i_4;
 		int i_5;
-		for (i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			i_5 = this.anIntArray8251[i_4] * i_2 + this.anIntArray8249[i_4] * i_3 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8251[i_4] * i_3 - this.anIntArray8249[i_4] * i_2 >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			i_5 = this.verticesZ[i_4] * i_2 + this.verticesX[i_4] * i_3 >> 14;
+			this.verticesZ[i_4] = this.verticesZ[i_4] * i_3 - this.verticesX[i_4] * i_2 >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		for (i_4 = 0; i_4 < this.anInt8300; i_4++) {
@@ -4693,10 +4693,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 		int i_4;
 		int i_5;
-		for (i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			i_5 = this.anIntArray8251[i_4] * i_2 + this.anIntArray8249[i_4] * i_3 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8251[i_4] * i_3 - this.anIntArray8249[i_4] * i_2 >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			i_5 = this.verticesZ[i_4] * i_2 + this.verticesX[i_4] * i_3 >> 14;
+			this.verticesZ[i_4] = this.verticesZ[i_4] * i_3 - this.verticesX[i_4] * i_2 >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		for (i_4 = 0; i_4 < this.anInt8300; i_4++) {
@@ -4724,10 +4724,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8250[i_4] * i_3 - this.anIntArray8251[i_4] * i_2 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8250[i_4] * i_2 + this.anIntArray8251[i_4] * i_3 >> 14;
-			this.anIntArray8250[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesY[i_4] * i_3 - this.verticesZ[i_4] * i_2 >> 14;
+			this.verticesZ[i_4] = this.verticesY[i_4] * i_2 + this.verticesZ[i_4] * i_3 >> 14;
+			this.verticesY[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -4741,10 +4741,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8250[i_4] * i_3 - this.anIntArray8251[i_4] * i_2 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8250[i_4] * i_2 + this.anIntArray8251[i_4] * i_3 >> 14;
-			this.anIntArray8250[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesY[i_4] * i_3 - this.verticesZ[i_4] * i_2 >> 14;
+			this.verticesZ[i_4] = this.verticesY[i_4] * i_2 + this.verticesZ[i_4] * i_3 >> 14;
+			this.verticesY[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -4758,10 +4758,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8250[i_4] * i_3 - this.anIntArray8251[i_4] * i_2 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8250[i_4] * i_2 + this.anIntArray8251[i_4] * i_3 >> 14;
-			this.anIntArray8250[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesY[i_4] * i_3 - this.verticesZ[i_4] * i_2 >> 14;
+			this.verticesZ[i_4] = this.verticesY[i_4] * i_2 + this.verticesZ[i_4] * i_3 >> 14;
+			this.verticesY[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -4773,8 +4773,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 	public void be() {
 		int i_1;
-		for (i_1 = 0; i_1 < this.anInt8248; i_1++) {
-			this.anIntArray8251[i_1] = -this.anIntArray8251[i_1];
+		for (i_1 = 0; i_1 < this.maxDepth; i_1++) {
+			this.verticesZ[i_1] = -this.verticesZ[i_1];
 		}
 
 		for (i_1 = 0; i_1 < this.anInt8300; i_1++) {
@@ -4822,8 +4822,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 	public void bq() {
 		int i_1;
-		for (i_1 = 0; i_1 < this.anInt8248; i_1++) {
-			this.anIntArray8251[i_1] = -this.anIntArray8251[i_1];
+		for (i_1 = 0; i_1 < this.maxDepth; i_1++) {
+			this.verticesZ[i_1] = -this.verticesZ[i_1];
 		}
 
 		for (i_1 = 0; i_1 < this.anInt8300; i_1++) {
@@ -4856,17 +4856,17 @@ public class Class528_Sub1 extends MeshRasterizer {
 	}
 
 	public void dk(int i_1, int i_2, int i_3) {
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
 			if (i_1 != 0) {
-				this.anIntArray8249[i_4] += i_1;
+				this.verticesX[i_4] += i_1;
 			}
 
 			if (i_2 != 0) {
-				this.anIntArray8250[i_4] += i_2;
+				this.verticesY[i_4] += i_2;
 			}
 
 			if (i_3 != 0) {
-				this.anIntArray8251[i_4] += i_3;
+				this.verticesZ[i_4] += i_3;
 			}
 		}
 
@@ -4912,10 +4912,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		if (this.anIntArrayArray8263 == null) {
 			return false;
 		} else {
-			for (int i_1 = 0; i_1 < this.anInt8303; i_1++) {
-				this.anIntArray8249[i_1] <<= 4;
-				this.anIntArray8250[i_1] <<= 4;
-				this.anIntArray8251[i_1] <<= 4;
+			for (int i_1 = 0; i_1 < this.vertexCount; i_1++) {
+				this.verticesX[i_1] <<= 4;
+				this.verticesY[i_1] <<= 4;
+				this.verticesZ[i_1] <<= 4;
 			}
 
 			anInt8271 = 0;
@@ -4930,10 +4930,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 	}
 
 	void bp() {
-		for (int i_1 = 0; i_1 < this.anInt8303; i_1++) {
-			this.anIntArray8249[i_1] = this.anIntArray8249[i_1] + 7 >> 4;
-			this.anIntArray8250[i_1] = this.anIntArray8250[i_1] + 7 >> 4;
-			this.anIntArray8251[i_1] = this.anIntArray8251[i_1] + 7 >> 4;
+		for (int i_1 = 0; i_1 < this.vertexCount; i_1++) {
+			this.verticesX[i_1] = this.verticesX[i_1] + 7 >> 4;
+			this.verticesY[i_1] = this.verticesY[i_1] + 7 >> 4;
+			this.verticesZ[i_1] = this.verticesZ[i_1] + 7 >> 4;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -4944,17 +4944,17 @@ public class Class528_Sub1 extends MeshRasterizer {
 	}
 
 	public void ia(int i_1, int i_2, int i_3) {
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
 			if (i_1 != 0) {
-				this.anIntArray8249[i_4] += i_1;
+				this.verticesX[i_4] += i_1;
 			}
 
 			if (i_2 != 0) {
-				this.anIntArray8250[i_4] += i_2;
+				this.verticesY[i_4] += i_2;
 			}
 
 			if (i_3 != 0) {
-				this.anIntArray8251[i_4] += i_3;
+				this.verticesZ[i_4] += i_3;
 			}
 		}
 
@@ -4989,9 +4989,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					for (i_14 = 0; i_14 < ints_13.length; i_14++) {
 						i_15 = ints_13[i_14];
 						if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_15]) != 0) {
-							anInt8271 += this.anIntArray8249[i_15];
-							anInt8247 += this.anIntArray8250[i_15];
-							anInt8232 += this.anIntArray8251[i_15];
+							anInt8271 += this.verticesX[i_15];
+							anInt8247 += this.verticesY[i_15];
+							anInt8232 += this.verticesZ[i_15];
 							++i_10;
 						}
 					}
@@ -5033,9 +5033,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 						for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 							i_14 = ints_47[i_48];
 							if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_14]) != 0) {
-								this.anIntArray8249[i_14] += i_3;
-								this.anIntArray8250[i_14] += i_4;
-								this.anIntArray8251[i_14] += i_5;
+								this.verticesX[i_14] += i_3;
+								this.verticesY[i_14] += i_4;
+								this.verticesZ[i_14] += i_5;
 							}
 						}
 					}
@@ -5157,15 +5157,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (int i_42 = 0; i_42 < ints_41.length; i_42++) {
 									int i_43 = ints_41[i_42];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_43]) != 0) {
-										int i_44 = ints_35[0] * this.anIntArray8249[i_43] + ints_35[1] * this.anIntArray8250[i_43] + ints_35[2] * this.anIntArray8251[i_43] + 8192 >> 14;
-										int i_45 = ints_35[3] * this.anIntArray8249[i_43] + ints_35[4] * this.anIntArray8250[i_43] + ints_35[5] * this.anIntArray8251[i_43] + 8192 >> 14;
-										int i_46 = ints_35[6] * this.anIntArray8249[i_43] + ints_35[7] * this.anIntArray8250[i_43] + ints_35[8] * this.anIntArray8251[i_43] + 8192 >> 14;
+										int i_44 = ints_35[0] * this.verticesX[i_43] + ints_35[1] * this.verticesY[i_43] + ints_35[2] * this.verticesZ[i_43] + 8192 >> 14;
+										int i_45 = ints_35[3] * this.verticesX[i_43] + ints_35[4] * this.verticesY[i_43] + ints_35[5] * this.verticesZ[i_43] + 8192 >> 14;
+										int i_46 = ints_35[6] * this.verticesX[i_43] + ints_35[7] * this.verticesY[i_43] + ints_35[8] * this.verticesZ[i_43] + 8192 >> 14;
 										i_44 += i_36;
 										i_45 += i_37;
 										i_46 += i_38;
-										this.anIntArray8249[i_43] = i_44;
-										this.anIntArray8250[i_43] = i_45;
-										this.anIntArray8251[i_43] = i_46;
+										this.verticesX[i_43] = i_44;
+										this.verticesY[i_43] = i_45;
+										this.verticesZ[i_43] = i_46;
 									}
 								}
 							}
@@ -5179,36 +5179,36 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_14]) != 0) {
-										this.anIntArray8249[i_14] -= anInt8271;
-										this.anIntArray8250[i_14] -= anInt8247;
-										this.anIntArray8251[i_14] -= anInt8232;
+										this.verticesX[i_14] -= anInt8271;
+										this.verticesY[i_14] -= anInt8247;
+										this.verticesZ[i_14] -= anInt8232;
 										if (i_5 != 0) {
 											i_15 = Class382.anIntArray4657[i_5];
 											i_16 = Class382.anIntArray4661[i_5];
-											i_17 = this.anIntArray8250[i_14] * i_15 + this.anIntArray8249[i_14] * i_16 + 16383 >> 14;
-											this.anIntArray8250[i_14] = this.anIntArray8250[i_14] * i_16 - this.anIntArray8249[i_14] * i_15 + 16383 >> 14;
-											this.anIntArray8249[i_14] = i_17;
+											i_17 = this.verticesY[i_14] * i_15 + this.verticesX[i_14] * i_16 + 16383 >> 14;
+											this.verticesY[i_14] = this.verticesY[i_14] * i_16 - this.verticesX[i_14] * i_15 + 16383 >> 14;
+											this.verticesX[i_14] = i_17;
 										}
 
 										if (i_3 != 0) {
 											i_15 = Class382.anIntArray4657[i_3];
 											i_16 = Class382.anIntArray4661[i_3];
-											i_17 = this.anIntArray8250[i_14] * i_16 - this.anIntArray8251[i_14] * i_15 + 16383 >> 14;
-											this.anIntArray8251[i_14] = this.anIntArray8250[i_14] * i_15 + this.anIntArray8251[i_14] * i_16 + 16383 >> 14;
-											this.anIntArray8250[i_14] = i_17;
+											i_17 = this.verticesY[i_14] * i_16 - this.verticesZ[i_14] * i_15 + 16383 >> 14;
+											this.verticesZ[i_14] = this.verticesY[i_14] * i_15 + this.verticesZ[i_14] * i_16 + 16383 >> 14;
+											this.verticesY[i_14] = i_17;
 										}
 
 										if (i_4 != 0) {
 											i_15 = Class382.anIntArray4657[i_4];
 											i_16 = Class382.anIntArray4661[i_4];
-											i_17 = this.anIntArray8251[i_14] * i_15 + this.anIntArray8249[i_14] * i_16 + 16383 >> 14;
-											this.anIntArray8251[i_14] = this.anIntArray8251[i_14] * i_16 - this.anIntArray8249[i_14] * i_15 + 16383 >> 14;
-											this.anIntArray8249[i_14] = i_17;
+											i_17 = this.verticesZ[i_14] * i_15 + this.verticesX[i_14] * i_16 + 16383 >> 14;
+											this.verticesZ[i_14] = this.verticesZ[i_14] * i_16 - this.verticesX[i_14] * i_15 + 16383 >> 14;
+											this.verticesX[i_14] = i_17;
 										}
 
-										this.anIntArray8249[i_14] += anInt8271;
-										this.anIntArray8250[i_14] += anInt8247;
-										this.anIntArray8251[i_14] += anInt8232;
+										this.verticesX[i_14] += anInt8271;
+										this.verticesY[i_14] += anInt8247;
+										this.verticesZ[i_14] += anInt8232;
 									}
 								}
 							}
@@ -5337,15 +5337,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (i_36 = 0; i_36 < ints_35.length; i_36++) {
 									i_37 = ints_35[i_36];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_37]) != 0) {
-										i_38 = ints_51[0] * this.anIntArray8249[i_37] + ints_51[1] * this.anIntArray8250[i_37] + ints_51[2] * this.anIntArray8251[i_37] + 8192 >> 14;
-										i_39 = ints_51[3] * this.anIntArray8249[i_37] + ints_51[4] * this.anIntArray8250[i_37] + ints_51[5] * this.anIntArray8251[i_37] + 8192 >> 14;
-										i_40 = ints_51[6] * this.anIntArray8249[i_37] + ints_51[7] * this.anIntArray8250[i_37] + ints_51[8] * this.anIntArray8251[i_37] + 8192 >> 14;
+										i_38 = ints_51[0] * this.verticesX[i_37] + ints_51[1] * this.verticesY[i_37] + ints_51[2] * this.verticesZ[i_37] + 8192 >> 14;
+										i_39 = ints_51[3] * this.verticesX[i_37] + ints_51[4] * this.verticesY[i_37] + ints_51[5] * this.verticesZ[i_37] + 8192 >> 14;
+										i_40 = ints_51[6] * this.verticesX[i_37] + ints_51[7] * this.verticesY[i_37] + ints_51[8] * this.verticesZ[i_37] + 8192 >> 14;
 										i_38 += i_30;
 										i_39 += i_52;
 										i_40 += i_32;
-										this.anIntArray8249[i_37] = i_38;
-										this.anIntArray8250[i_37] = i_39;
-										this.anIntArray8251[i_37] = i_40;
+										this.verticesX[i_37] = i_38;
+										this.verticesY[i_37] = i_39;
+										this.verticesZ[i_37] = i_40;
 									}
 								}
 							}
@@ -5359,15 +5359,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 								for (i_48 = 0; i_48 < ints_47.length; i_48++) {
 									i_14 = ints_47[i_48];
 									if (this.aShortArray8253 == null || (i_7 & this.aShortArray8253[i_14]) != 0) {
-										this.anIntArray8249[i_14] -= anInt8271;
-										this.anIntArray8250[i_14] -= anInt8247;
-										this.anIntArray8251[i_14] -= anInt8232;
-										this.anIntArray8249[i_14] = this.anIntArray8249[i_14] * i_3 >> 7;
-										this.anIntArray8250[i_14] = this.anIntArray8250[i_14] * i_4 >> 7;
-										this.anIntArray8251[i_14] = this.anIntArray8251[i_14] * i_5 >> 7;
-										this.anIntArray8249[i_14] += anInt8271;
-										this.anIntArray8250[i_14] += anInt8247;
-										this.anIntArray8251[i_14] += anInt8232;
+										this.verticesX[i_14] -= anInt8271;
+										this.verticesY[i_14] -= anInt8247;
+										this.verticesZ[i_14] -= anInt8232;
+										this.verticesX[i_14] = this.verticesX[i_14] * i_3 >> 7;
+										this.verticesY[i_14] = this.verticesY[i_14] * i_4 >> 7;
+										this.verticesZ[i_14] = this.verticesZ[i_14] * i_5 >> 7;
+										this.verticesX[i_14] += anInt8271;
+										this.verticesY[i_14] += anInt8247;
+										this.verticesZ[i_14] += anInt8232;
 									}
 								}
 							}
@@ -5517,10 +5517,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 			anInt8247 = 0;
 			anInt8232 = 0;
 
-			for (i_6 = 0; i_6 < this.anInt8248; i_6++) {
-				anInt8271 += this.anIntArray8249[i_6];
-				anInt8247 += this.anIntArray8250[i_6];
-				anInt8232 += this.anIntArray8251[i_6];
+			for (i_6 = 0; i_6 < this.maxDepth; i_6++) {
+				anInt8271 += this.verticesX[i_6];
+				anInt8247 += this.verticesY[i_6];
+				anInt8232 += this.verticesZ[i_6];
 				++i_5;
 			}
 
@@ -5534,58 +5534,58 @@ public class Class528_Sub1 extends MeshRasterizer {
 				anInt8232 = i_4;
 			}
 		} else if (i_1 == 1) {
-			for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-				this.anIntArray8249[i_5] += i_2;
-				this.anIntArray8250[i_5] += i_3;
-				this.anIntArray8251[i_5] += i_4;
+			for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+				this.verticesX[i_5] += i_2;
+				this.verticesY[i_5] += i_3;
+				this.verticesZ[i_5] += i_4;
 			}
 		} else {
 			int i_7;
 			int i_8;
 			if (i_1 == 2) {
-				for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-					this.anIntArray8249[i_5] -= anInt8271;
-					this.anIntArray8250[i_5] -= anInt8247;
-					this.anIntArray8251[i_5] -= anInt8232;
+				for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+					this.verticesX[i_5] -= anInt8271;
+					this.verticesY[i_5] -= anInt8247;
+					this.verticesZ[i_5] -= anInt8232;
 					if (i_4 != 0) {
 						i_6 = Class382.anIntArray4657[i_4];
 						i_7 = Class382.anIntArray4661[i_4];
-						i_8 = this.anIntArray8250[i_5] * i_6 + this.anIntArray8249[i_5] * i_7 + 16383 >> 14;
-						this.anIntArray8250[i_5] = this.anIntArray8250[i_5] * i_7 - this.anIntArray8249[i_5] * i_6 + 16383 >> 14;
-						this.anIntArray8249[i_5] = i_8;
+						i_8 = this.verticesY[i_5] * i_6 + this.verticesX[i_5] * i_7 + 16383 >> 14;
+						this.verticesY[i_5] = this.verticesY[i_5] * i_7 - this.verticesX[i_5] * i_6 + 16383 >> 14;
+						this.verticesX[i_5] = i_8;
 					}
 
 					if (i_2 != 0) {
 						i_6 = Class382.anIntArray4657[i_2];
 						i_7 = Class382.anIntArray4661[i_2];
-						i_8 = this.anIntArray8250[i_5] * i_7 - this.anIntArray8251[i_5] * i_6 + 16383 >> 14;
-						this.anIntArray8251[i_5] = this.anIntArray8250[i_5] * i_6 + this.anIntArray8251[i_5] * i_7 + 16383 >> 14;
-						this.anIntArray8250[i_5] = i_8;
+						i_8 = this.verticesY[i_5] * i_7 - this.verticesZ[i_5] * i_6 + 16383 >> 14;
+						this.verticesZ[i_5] = this.verticesY[i_5] * i_6 + this.verticesZ[i_5] * i_7 + 16383 >> 14;
+						this.verticesY[i_5] = i_8;
 					}
 
 					if (i_3 != 0) {
 						i_6 = Class382.anIntArray4657[i_3];
 						i_7 = Class382.anIntArray4661[i_3];
-						i_8 = this.anIntArray8251[i_5] * i_6 + this.anIntArray8249[i_5] * i_7 + 16383 >> 14;
-						this.anIntArray8251[i_5] = this.anIntArray8251[i_5] * i_7 - this.anIntArray8249[i_5] * i_6 + 16383 >> 14;
-						this.anIntArray8249[i_5] = i_8;
+						i_8 = this.verticesZ[i_5] * i_6 + this.verticesX[i_5] * i_7 + 16383 >> 14;
+						this.verticesZ[i_5] = this.verticesZ[i_5] * i_7 - this.verticesX[i_5] * i_6 + 16383 >> 14;
+						this.verticesX[i_5] = i_8;
 					}
 
-					this.anIntArray8249[i_5] += anInt8271;
-					this.anIntArray8250[i_5] += anInt8247;
-					this.anIntArray8251[i_5] += anInt8232;
+					this.verticesX[i_5] += anInt8271;
+					this.verticesY[i_5] += anInt8247;
+					this.verticesZ[i_5] += anInt8232;
 				}
 			} else if (i_1 == 3) {
-				for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-					this.anIntArray8249[i_5] -= anInt8271;
-					this.anIntArray8250[i_5] -= anInt8247;
-					this.anIntArray8251[i_5] -= anInt8232;
-					this.anIntArray8249[i_5] = this.anIntArray8249[i_5] * i_2 / 128;
-					this.anIntArray8250[i_5] = this.anIntArray8250[i_5] * i_3 / 128;
-					this.anIntArray8251[i_5] = this.anIntArray8251[i_5] * i_4 / 128;
-					this.anIntArray8249[i_5] += anInt8271;
-					this.anIntArray8250[i_5] += anInt8247;
-					this.anIntArray8251[i_5] += anInt8232;
+				for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+					this.verticesX[i_5] -= anInt8271;
+					this.verticesY[i_5] -= anInt8247;
+					this.verticesZ[i_5] -= anInt8232;
+					this.verticesX[i_5] = this.verticesX[i_5] * i_2 / 128;
+					this.verticesY[i_5] = this.verticesY[i_5] * i_3 / 128;
+					this.verticesZ[i_5] = this.verticesZ[i_5] * i_4 / 128;
+					this.verticesX[i_5] += anInt8271;
+					this.verticesY[i_5] += anInt8247;
+					this.verticesZ[i_5] += anInt8232;
 				}
 			} else {
 				Class162 class162_10;
@@ -5683,10 +5683,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 			anInt8247 = 0;
 			anInt8232 = 0;
 
-			for (i_6 = 0; i_6 < this.anInt8248; i_6++) {
-				anInt8271 += this.anIntArray8249[i_6];
-				anInt8247 += this.anIntArray8250[i_6];
-				anInt8232 += this.anIntArray8251[i_6];
+			for (i_6 = 0; i_6 < this.maxDepth; i_6++) {
+				anInt8271 += this.verticesX[i_6];
+				anInt8247 += this.verticesY[i_6];
+				anInt8232 += this.verticesZ[i_6];
 				++i_5;
 			}
 
@@ -5700,58 +5700,58 @@ public class Class528_Sub1 extends MeshRasterizer {
 				anInt8232 = i_4;
 			}
 		} else if (i_1 == 1) {
-			for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-				this.anIntArray8249[i_5] += i_2;
-				this.anIntArray8250[i_5] += i_3;
-				this.anIntArray8251[i_5] += i_4;
+			for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+				this.verticesX[i_5] += i_2;
+				this.verticesY[i_5] += i_3;
+				this.verticesZ[i_5] += i_4;
 			}
 		} else {
 			int i_7;
 			int i_8;
 			if (i_1 == 2) {
-				for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-					this.anIntArray8249[i_5] -= anInt8271;
-					this.anIntArray8250[i_5] -= anInt8247;
-					this.anIntArray8251[i_5] -= anInt8232;
+				for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+					this.verticesX[i_5] -= anInt8271;
+					this.verticesY[i_5] -= anInt8247;
+					this.verticesZ[i_5] -= anInt8232;
 					if (i_4 != 0) {
 						i_6 = Class382.anIntArray4657[i_4];
 						i_7 = Class382.anIntArray4661[i_4];
-						i_8 = this.anIntArray8250[i_5] * i_6 + this.anIntArray8249[i_5] * i_7 + 16383 >> 14;
-						this.anIntArray8250[i_5] = this.anIntArray8250[i_5] * i_7 - this.anIntArray8249[i_5] * i_6 + 16383 >> 14;
-						this.anIntArray8249[i_5] = i_8;
+						i_8 = this.verticesY[i_5] * i_6 + this.verticesX[i_5] * i_7 + 16383 >> 14;
+						this.verticesY[i_5] = this.verticesY[i_5] * i_7 - this.verticesX[i_5] * i_6 + 16383 >> 14;
+						this.verticesX[i_5] = i_8;
 					}
 
 					if (i_2 != 0) {
 						i_6 = Class382.anIntArray4657[i_2];
 						i_7 = Class382.anIntArray4661[i_2];
-						i_8 = this.anIntArray8250[i_5] * i_7 - this.anIntArray8251[i_5] * i_6 + 16383 >> 14;
-						this.anIntArray8251[i_5] = this.anIntArray8250[i_5] * i_6 + this.anIntArray8251[i_5] * i_7 + 16383 >> 14;
-						this.anIntArray8250[i_5] = i_8;
+						i_8 = this.verticesY[i_5] * i_7 - this.verticesZ[i_5] * i_6 + 16383 >> 14;
+						this.verticesZ[i_5] = this.verticesY[i_5] * i_6 + this.verticesZ[i_5] * i_7 + 16383 >> 14;
+						this.verticesY[i_5] = i_8;
 					}
 
 					if (i_3 != 0) {
 						i_6 = Class382.anIntArray4657[i_3];
 						i_7 = Class382.anIntArray4661[i_3];
-						i_8 = this.anIntArray8251[i_5] * i_6 + this.anIntArray8249[i_5] * i_7 + 16383 >> 14;
-						this.anIntArray8251[i_5] = this.anIntArray8251[i_5] * i_7 - this.anIntArray8249[i_5] * i_6 + 16383 >> 14;
-						this.anIntArray8249[i_5] = i_8;
+						i_8 = this.verticesZ[i_5] * i_6 + this.verticesX[i_5] * i_7 + 16383 >> 14;
+						this.verticesZ[i_5] = this.verticesZ[i_5] * i_7 - this.verticesX[i_5] * i_6 + 16383 >> 14;
+						this.verticesX[i_5] = i_8;
 					}
 
-					this.anIntArray8249[i_5] += anInt8271;
-					this.anIntArray8250[i_5] += anInt8247;
-					this.anIntArray8251[i_5] += anInt8232;
+					this.verticesX[i_5] += anInt8271;
+					this.verticesY[i_5] += anInt8247;
+					this.verticesZ[i_5] += anInt8232;
 				}
 			} else if (i_1 == 3) {
-				for (i_5 = 0; i_5 < this.anInt8248; i_5++) {
-					this.anIntArray8249[i_5] -= anInt8271;
-					this.anIntArray8250[i_5] -= anInt8247;
-					this.anIntArray8251[i_5] -= anInt8232;
-					this.anIntArray8249[i_5] = this.anIntArray8249[i_5] * i_2 / 128;
-					this.anIntArray8250[i_5] = this.anIntArray8250[i_5] * i_3 / 128;
-					this.anIntArray8251[i_5] = this.anIntArray8251[i_5] * i_4 / 128;
-					this.anIntArray8249[i_5] += anInt8271;
-					this.anIntArray8250[i_5] += anInt8247;
-					this.anIntArray8251[i_5] += anInt8232;
+				for (i_5 = 0; i_5 < this.maxDepth; i_5++) {
+					this.verticesX[i_5] -= anInt8271;
+					this.verticesY[i_5] -= anInt8247;
+					this.verticesZ[i_5] -= anInt8232;
+					this.verticesX[i_5] = this.verticesX[i_5] * i_2 / 128;
+					this.verticesY[i_5] = this.verticesY[i_5] * i_3 / 128;
+					this.verticesZ[i_5] = this.verticesZ[i_5] * i_4 / 128;
+					this.verticesX[i_5] += anInt8271;
+					this.verticesY[i_5] += anInt8247;
+					this.verticesZ[i_5] += anInt8232;
 				}
 			} else {
 				Class162 class162_10;
@@ -5850,12 +5850,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			float[] floats_5 = new float[3];
 
-			for (int i_6 = 0; i_6 < this.anInt8248; i_6++) {
+			for (int i_6 = 0; i_6 < this.maxDepth; i_6++) {
 				if ((i_2 & this.aShortArray8253[i_6]) != 0) {
-					matrix44var_4.method5226((float) this.anIntArray8249[i_6], (float) this.anIntArray8250[i_6], (float) this.anIntArray8251[i_6], floats_5);
-					this.anIntArray8249[i_6] = (int) floats_5[0];
-					this.anIntArray8250[i_6] = (int) floats_5[1];
-					this.anIntArray8251[i_6] = (int) floats_5[2];
+					matrix44var_4.method5226((float) this.verticesX[i_6], (float) this.verticesY[i_6], (float) this.verticesZ[i_6], floats_5);
+					this.verticesX[i_6] = (int) floats_5[0];
+					this.verticesY[i_6] = (int) floats_5[1];
+					this.verticesZ[i_6] = (int) floats_5[2];
 				}
 			}
 		}
@@ -5872,12 +5872,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			float[] floats_5 = new float[3];
 
-			for (int i_6 = 0; i_6 < this.anInt8248; i_6++) {
+			for (int i_6 = 0; i_6 < this.maxDepth; i_6++) {
 				if ((i_2 & this.aShortArray8253[i_6]) != 0) {
-					matrix44var_4.method5226((float) this.anIntArray8249[i_6], (float) this.anIntArray8250[i_6], (float) this.anIntArray8251[i_6], floats_5);
-					this.anIntArray8249[i_6] = (int) floats_5[0];
-					this.anIntArray8250[i_6] = (int) floats_5[1];
-					this.anIntArray8251[i_6] = (int) floats_5[2];
+					matrix44var_4.method5226((float) this.verticesX[i_6], (float) this.verticesY[i_6], (float) this.verticesZ[i_6], floats_5);
+					this.verticesX[i_6] = (int) floats_5[0];
+					this.verticesY[i_6] = (int) floats_5[1];
+					this.verticesZ[i_6] = (int) floats_5[2];
 				}
 			}
 		}
@@ -6014,10 +6014,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = i_2 * this.anIntArray8250[i_4] + i_3 * this.anIntArray8249[i_4] >> 14;
-			this.anIntArray8250[i_4] = i_3 * this.anIntArray8250[i_4] - i_2 * this.anIntArray8249[i_4] >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = i_2 * this.verticesY[i_4] + i_3 * this.verticesX[i_4] >> 14;
+			this.verticesY[i_4] = i_3 * this.verticesY[i_4] - i_2 * this.verticesX[i_4] >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -6367,10 +6367,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8250[i_4] * i_3 - this.anIntArray8251[i_4] * i_2 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8250[i_4] * i_2 + this.anIntArray8251[i_4] * i_3 >> 14;
-			this.anIntArray8250[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesY[i_4] * i_3 - this.verticesZ[i_4] * i_2 >> 14;
+			this.verticesZ[i_4] = this.verticesY[i_4] * i_2 + this.verticesZ[i_4] * i_3 >> 14;
+			this.verticesY[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -6423,10 +6423,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8250[i_4] * i_2 + this.anIntArray8249[i_4] * i_3 >> 14;
-			this.anIntArray8250[i_4] = this.anIntArray8250[i_4] * i_3 - this.anIntArray8249[i_4] * i_2 >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesY[i_4] * i_2 + this.verticesX[i_4] * i_3 >> 14;
+			this.verticesY[i_4] = this.verticesY[i_4] * i_3 - this.verticesX[i_4] * i_2 >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -6455,10 +6455,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 		int i_2 = Class382.anIntArray4657[i_1];
 		int i_3 = Class382.anIntArray4661[i_1];
 
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
-			int i_5 = this.anIntArray8251[i_4] * i_2 + this.anIntArray8249[i_4] * i_3 >> 14;
-			this.anIntArray8251[i_4] = this.anIntArray8251[i_4] * i_3 - this.anIntArray8249[i_4] * i_2 >> 14;
-			this.anIntArray8249[i_4] = i_5;
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
+			int i_5 = this.verticesZ[i_4] * i_2 + this.verticesX[i_4] * i_3 >> 14;
+			this.verticesZ[i_4] = this.verticesZ[i_4] * i_3 - this.verticesX[i_4] * i_2 >> 14;
+			this.verticesX[i_4] = i_5;
 		}
 
 		if (this.aClass143_8272 != null) {
@@ -6712,10 +6712,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 			int[] ints_38 = this.aClass505_Sub1_8239.anIntArray8500;
 			int[] ints_25 = this.aClass505_Sub1_8239.anIntArray8501;
 
-			for (i_26 = 0; i_26 < this.anInt8248; i_26++) {
-				i_27 = this.anIntArray8249[i_26];
-				int i_40 = this.anIntArray8250[i_26];
-				int i_41 = this.anIntArray8251[i_26];
+			for (i_26 = 0; i_26 < this.maxDepth; i_26++) {
+				i_27 = this.verticesX[i_26];
+				int i_40 = this.verticesY[i_26];
+				int i_41 = this.verticesZ[i_26];
 				f_30 = matrix44arr_6.buf[2] * (float) i_27 + matrix44arr_6.buf[6] * (float) i_40 + matrix44arr_6.buf[10] * (float) i_41 + matrix44arr_6.buf[14];
 				f_31 = matrix44arr_6.buf[3] * (float) i_27 + matrix44arr_6.buf[7] * (float) i_40 + matrix44arr_6.buf[11] * (float) i_41 + matrix44arr_6.buf[15];
 				int i_34;
@@ -6917,10 +6917,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 			int[] ints_38 = this.aClass505_Sub1_8239.anIntArray8500;
 			int[] ints_25 = this.aClass505_Sub1_8239.anIntArray8501;
 
-			for (i_26 = 0; i_26 < this.anInt8248; i_26++) {
-				i_27 = this.anIntArray8249[i_26];
-				int i_40 = this.anIntArray8250[i_26];
-				int i_41 = this.anIntArray8251[i_26];
+			for (i_26 = 0; i_26 < this.maxDepth; i_26++) {
+				i_27 = this.verticesX[i_26];
+				int i_40 = this.verticesY[i_26];
+				int i_41 = this.verticesZ[i_26];
 				f_30 = matrix44arr_6.buf[2] * (float) i_27 + matrix44arr_6.buf[6] * (float) i_40 + matrix44arr_6.buf[10] * (float) i_41 + matrix44arr_6.buf[14];
 				f_31 = matrix44arr_6.buf[3] * (float) i_27 + matrix44arr_6.buf[7] * (float) i_40 + matrix44arr_6.buf[11] * (float) i_41 + matrix44arr_6.buf[15];
 				int i_34;
@@ -7065,8 +7065,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 	public void by() {
 		int i_1;
-		for (i_1 = 0; i_1 < this.anInt8248; i_1++) {
-			this.anIntArray8251[i_1] = -this.anIntArray8251[i_1];
+		for (i_1 = 0; i_1 < this.maxDepth; i_1++) {
+			this.verticesZ[i_1] = -this.verticesZ[i_1];
 		}
 
 		for (i_1 = 0; i_1 < this.anInt8300; i_1++) {
@@ -7122,8 +7122,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			int i_12;
 			if (i_1 == 1) {
-				for (i_12 = 0; i_12 < this.anInt8248; i_12++) {
-					this.anIntArray8250[i_12] = this.anIntArray8250[i_12] + class390_3.averageHeight(this.anIntArray8249[i_12] + i_5, this.anIntArray8251[i_12] + i_7, -1387107702) - i_6;
+				for (i_12 = 0; i_12 < this.maxDepth; i_12++) {
+					this.verticesY[i_12] = this.verticesY[i_12] + class390_3.averageHeight(this.verticesX[i_12] + i_5, this.verticesZ[i_12] + i_7, -1387107702) - i_6;
 				}
 			} else {
 				int i_13;
@@ -7134,10 +7134,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 						return;
 					}
 
-					for (i_13 = 0; i_13 < this.anInt8248; i_13++) {
-						i_14 = (this.anIntArray8250[i_13] << 16) / s_19;
+					for (i_13 = 0; i_13 < this.maxDepth; i_13++) {
+						i_14 = (this.verticesY[i_13] << 16) / s_19;
 						if (i_14 < i_2) {
-							this.anIntArray8250[i_13] += (class390_3.averageHeight(this.anIntArray8249[i_13] + i_5, this.anIntArray8251[i_13] + i_7, -1521723837) - i_6) * (i_2 - i_14) / i_2;
+							this.verticesY[i_13] += (class390_3.averageHeight(this.verticesX[i_13] + i_5, this.verticesZ[i_13] + i_7, -1521723837) - i_6) * (i_2 - i_14) / i_2;
 						}
 					}
 				} else {
@@ -7155,19 +7155,19 @@ public class Class528_Sub1 extends MeshRasterizer {
 					} else if (i_1 == 4) {
 						i_12 = this.aShort8284 - this.aShort8283;
 
-						for (i_13 = 0; i_13 < this.anInt8248; i_13++) {
-							this.anIntArray8250[i_13] = this.anIntArray8250[i_13] + (class390_4.averageHeight(this.anIntArray8249[i_13] + i_5, this.anIntArray8251[i_13] + i_7, -1198373770) - i_6) + i_12;
+						for (i_13 = 0; i_13 < this.maxDepth; i_13++) {
+							this.verticesY[i_13] = this.verticesY[i_13] + (class390_4.averageHeight(this.verticesX[i_13] + i_5, this.verticesZ[i_13] + i_7, -1198373770) - i_6) + i_12;
 						}
 					} else if (i_1 == 5) {
 						i_12 = this.aShort8284 - this.aShort8283;
 
-						for (i_13 = 0; i_13 < this.anInt8248; i_13++) {
-							i_14 = i_5 + this.anIntArray8249[i_13];
-							i_15 = i_7 + this.anIntArray8251[i_13];
+						for (i_13 = 0; i_13 < this.maxDepth; i_13++) {
+							i_14 = i_5 + this.verticesX[i_13];
+							i_15 = i_7 + this.verticesZ[i_13];
 							int i_16 = class390_3.averageHeight(i_14, i_15, 1985293645);
 							int i_17 = class390_4.averageHeight(i_14, i_15, -1040497678);
 							int i_18 = i_16 - i_17 - i_2;
-							this.anIntArray8250[i_13] = (i_18 * ((this.anIntArray8250[i_13] << 8) / i_12) >> 8) - (i_6 - i_16);
+							this.verticesY[i_13] = (i_18 * ((this.verticesY[i_13] << 8) / i_12) >> 8) - (i_6 - i_16);
 						}
 					}
 				}
@@ -7195,17 +7195,17 @@ public class Class528_Sub1 extends MeshRasterizer {
 	}
 
 	public void ep(int i_1, int i_2, int i_3) {
-		for (int i_4 = 0; i_4 < this.anInt8248; i_4++) {
+		for (int i_4 = 0; i_4 < this.maxDepth; i_4++) {
 			if (i_1 != 128) {
-				this.anIntArray8249[i_4] = this.anIntArray8249[i_4] * i_1 >> 7;
+				this.verticesX[i_4] = this.verticesX[i_4] * i_1 >> 7;
 			}
 
 			if (i_2 != 128) {
-				this.anIntArray8250[i_4] = this.anIntArray8250[i_4] * i_2 >> 7;
+				this.verticesY[i_4] = this.verticesY[i_4] * i_2 >> 7;
 			}
 
 			if (i_3 != 128) {
-				this.anIntArray8251[i_4] = this.anIntArray8251[i_4] * i_3 >> 7;
+				this.verticesZ[i_4] = this.verticesZ[i_4] * i_3 >> 7;
 			}
 		}
 

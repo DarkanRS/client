@@ -77,7 +77,7 @@ public class Class210 {
 	}
 
 	static final void method3612(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5, byte b_6) {
-		if (!bool_5 && (i_1 < 512 || i_2 < 512 || i_1 > (IndexLoaders.MAP_REGION_DECODER.getSizeX(112357923) - 2) * 512 || i_2 > (IndexLoaders.MAP_REGION_DECODER.getSizeY(-200996261) - 2) * 512)) {
+		if (!bool_5 && (i_1 < 512 || i_2 < 512 || i_1 > (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2) * 512 || i_2 > (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2) * 512)) {
 			float[] floats_7 = client.aFloatArray7292;
 			client.aFloatArray7292[1] = -1.0F;
 			floats_7[0] = -1.0F;
