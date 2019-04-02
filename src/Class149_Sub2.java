@@ -76,7 +76,7 @@ public class Class149_Sub2 extends Class149 {
 	}
 
 	public static void method14609(Player player_0) {
-		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.anInt10314);
+		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.index);
 		if (class282_sub48_2 != null) {
 			if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
 				Class79.aClass282_Sub15_Sub4_783.method15276(class282_sub48_2.aClass282_Sub15_Sub5_8099);

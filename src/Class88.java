@@ -28,7 +28,7 @@ public class Class88 {
 		if (icomponentdefinitions_0.anInt1329 != 2) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330, (byte) -49);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
 				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, false);
 			}

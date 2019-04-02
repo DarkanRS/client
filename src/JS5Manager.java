@@ -254,7 +254,7 @@ public class JS5Manager {
 						}
 					}
 					if (bool_17) {
-						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1297702822).aClass390Array2591[Class4.anInt35 + 1].method6722(i_11, i_14);
+						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[Class4.anInt35 + 1].method6722(i_11, i_14);
 						if (client.anIntArray7198[i_1] < i_18) {
 							client.anIntArray7198[i_1] = i_18;
 						}

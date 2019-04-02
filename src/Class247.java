@@ -54,7 +54,7 @@ public class Class247 {
 			graphicalrenderer_1.ba(2, 0);
 			i_8 = i_8 + i_2 & 0x3fff;
 			if (this.anInt3031 != -1 && this.anInt3034 != 0) {
-				TextureDetails class169_16 = anInterface22_3046.method144(this.anInt3031, -1768391150);
+				TextureDetails class169_16 = anInterface22_3046.method144(this.anInt3031);
 				if (this.aClass160_3030 == null && anInterface22_3046.method139(this.anInt3031, -408857237)) {
 					int[] ints_17 = class169_16.blendType == 2 ? anInterface22_3046.method141(this.anInt3031, this.anInt3034, this.anInt3034, false, -1509054197) : anInterface22_3046.method140(this.anInt3031, 0.7F, this.anInt3034, this.anInt3034, false, (byte) 127);
 					this.anInt3053 = ints_17[0];

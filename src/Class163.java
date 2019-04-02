@@ -33,7 +33,7 @@ public class Class163 {
 	}
 
 	static int method2840(Class282_Sub50_Sub15 class282_sub50_sub15_0, FontMetrics fontmetrics_1) {
-		String string_3 = Class75.method1354(class282_sub50_sub15_0);
+		String string_3 = CutsceneEntity.method1354(class282_sub50_sub15_0);
 		return fontmetrics_1.getWidth(string_3, Class115.aClass160Array1248);
 	}
 

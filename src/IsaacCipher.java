@@ -218,7 +218,7 @@ public final class IsaacCipher {
 		}
 
 		RegionMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.method4433();
-		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1812615457);
+		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 		int i_3 = Class11.anInt122 >> 9;
 		int i_4 = Class266.anInt3289 >> 9;
 		int i_5 = Class504.method8389(Class11.anInt122, Class266.anInt3289, Class4.anInt35, (byte) 58);

@@ -1,26 +1,26 @@
-public class Class282_Sub2 extends Node {
+public class CutsceneArea extends Node {
 
-	public int anInt7478;
-	public int anInt7479;
-	public int anInt7482;
-	public int anInt7484;
-	public int anInt7485;
+	public int plane;
+	public int regionX;
+	public int regionY;
+	public int width;
+	public int length;
 	public int anInt7481;
 	public int anInt7480;
 	public int anInt7483;
 	public int anInt7486;
 
-	Class282_Sub2(RsByteBuffer rsbytebuffer_1) {
-		int i_2 = rsbytebuffer_1.readInt();
-		this.anInt7478 = i_2 >>> 28;
-		this.anInt7479 = i_2 >>> 14 & 0x3fff;
-		this.anInt7482 = i_2 & 0x3fff;
-		this.anInt7484 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt7485 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt7481 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt7480 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt7483 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt7486 = rsbytebuffer_1.readUnsignedByte();
+	CutsceneArea(RsByteBuffer buffer) {
+		int position = buffer.readInt();
+		this.plane = position >>> 28;
+		this.regionX = position >>> 14 & 0x3fff;
+		this.regionY = position & 0x3fff;
+		this.width = buffer.readUnsignedByte();
+		this.length = buffer.readUnsignedByte();
+		this.anInt7481 = buffer.readUnsignedByte();
+		this.anInt7480 = buffer.readUnsignedByte();
+		this.anInt7483 = buffer.readUnsignedByte();
+		this.anInt7486 = buffer.readUnsignedByte();
 	}
 
 	static TCPPacket method12078(int i_0, int i_1, int i_2) {

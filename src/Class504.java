@@ -15,7 +15,7 @@ public abstract class Class504 {
 	}
 
 	public static final int method8389(int i_0, int i_1, int i_2, byte b_3) {
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1437330098) == null) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
 			return 0;
 		} else {
 			int i_4 = i_0 >> 9;
@@ -26,7 +26,7 @@ public abstract class Class504 {
 					i_6 = i_2 + 1;
 				}
 
-				return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1489528047).aClass390Array2591[i_6].averageHeight(i_0, i_1, 1879647652);
+				return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[i_6].averageHeight(i_0, i_1, 1879647652);
 			} else {
 				return 0;
 			}

@@ -231,7 +231,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method13037(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		return this.aClass206_7970.aClass201_2600.method3274(this.aByte7968, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -128));
+		return this.aClass206_7970.aClass201_2600.method3274(this.collisionPlane, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -128));
 	}
 
 	boolean method13029(byte b_1) {
@@ -361,7 +361,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method13022(GraphicalRenderer graphicalrenderer_1) {
-		return this.aClass206_7970.aClass201_2600.method3274(this.aByte7968, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -106));
+		return this.aClass206_7970.aClass201_2600.method3274(this.collisionPlane, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -106));
 	}
 
 	boolean method13032() {
@@ -491,11 +491,11 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method13030(GraphicalRenderer graphicalrenderer_1) {
-		return this.aClass206_7970.aClass201_2600.method3274(this.aByte7968, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -58));
+		return this.aClass206_7970.aClass201_2600.method3274(this.collisionPlane, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -58));
 	}
 
 	boolean method12988(GraphicalRenderer graphicalrenderer_1) {
-		return this.aClass206_7970.aClass201_2600.method3274(this.aByte7968, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -101));
+		return this.aClass206_7970.aClass201_2600.method3274(this.collisionPlane, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -101));
 	}
 
 	int method13025(Class282_Sub24[] arr_1) {
@@ -609,7 +609,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method12998(GraphicalRenderer graphicalrenderer_1) {
-		return this.aClass206_7970.aClass201_2600.method3274(this.aByte7968, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -56));
+		return this.aClass206_7970.aClass201_2600.method3274(this.collisionPlane, this.aShort9458, this.localX, this.aShort9456, this.localY, this.method12992(graphicalrenderer_1, (byte) -56));
 	}
 
 	boolean method13033() {
@@ -631,7 +631,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	Class521_Sub1_Sub1(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, boolean bool_11, byte b_12) {
 		super(sceneobjectmanager_1);
 		this.plane = (byte) i_2;
-		this.aByte7968 = (byte) i_3;
+		this.collisionPlane = (byte) i_3;
 		this.method11171(new Vector3((float) i_4, (float) i_5, (float) i_6));
 		this.aShort9458 = (short) i_7;
 		this.localX = (short) i_8;

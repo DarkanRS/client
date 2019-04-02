@@ -26,16 +26,16 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 				int needsUpdate = buffer.readBits(1);
 				if (needsUpdate == 0) {
 					client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;
-					npc.anInt10353 = client.anInt7332;
+					npc.lastUpdate = client.anInt7332;
 				} else {
 					int moveSpeed = buffer.readBits(2);
 					if (moveSpeed == 0) {
 						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;
-						npc.anInt10353 = client.anInt7332;
+						npc.lastUpdate = client.anInt7332;
 						client.NPC_INDICES[++client.npcListSize - 1] = key;
 					} else if (moveSpeed == 1) {
 						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;
-						npc.anInt10353 = client.anInt7332;
+						npc.lastUpdate = client.anInt7332;
 						NPCDirection class252_8 = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
 						npc.move(class252_8, MovementType.WALKING.id);
 						int i_9 = buffer.readBits(1);
@@ -44,7 +44,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 						}
 					} else if (moveSpeed == 2) {
 						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;
-						npc.anInt10353 = client.anInt7332;
+						npc.lastUpdate = client.anInt7332;
 						if (buffer.readBits(1) == 1) {
 							NPCDirection direction = (NPCDirection) Class386.identify(Class46.getDirections(), buffer.readBits(3));
 							npc.move(direction, MovementType.RUNNING.id);

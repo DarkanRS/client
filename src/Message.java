@@ -361,7 +361,7 @@ public class Message {
 	}
 
 	static void method7275(GraphicalRenderer graphicalrenderer_0) {
-		if (Class187.anInt2351 != VertexNormal.myPlayer.plane && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1864995825) != null) {
+		if (Class187.anInt2351 != VertexNormal.myPlayer.plane && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 			TextureDetails.time();
 			if (Class289.method5097(graphicalrenderer_0, VertexNormal.myPlayer.plane)) {
 				Class187.anInt2351 = VertexNormal.myPlayer.plane;

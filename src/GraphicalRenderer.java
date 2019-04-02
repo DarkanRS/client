@@ -309,9 +309,9 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8474();
 
-	public abstract void method8475(Class90 var2);
+	public abstract void method8475(HDWaterTile var2);
 
-	public abstract void method8476(int var1, Class90 var2);
+	public abstract void method8476(int var1, HDWaterTile var2);
 
 	public abstract void method8477(Class152 var1);
 
@@ -570,7 +570,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8584(Class152 var1);
 
-	public abstract void method8585(int var1, Class90 var2);
+	public abstract void method8585(int var1, HDWaterTile var2);
 
 	public abstract void method8586(Matrix44Arr var1);
 
@@ -640,9 +640,9 @@ public abstract class GraphicalRenderer {
 
 	public abstract boolean method8614();
 
-	public abstract void method8615(int var1, Class90 var2);
+	public abstract void method8615(int var1, HDWaterTile var2);
 
-	public abstract void method8616(int var1, Class90 var2);
+	public abstract void method8616(int var1, HDWaterTile var2);
 
 	public abstract void jf();
 

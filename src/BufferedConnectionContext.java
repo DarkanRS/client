@@ -67,7 +67,7 @@ public class BufferedConnectionContext {
 	}
 
 	public final void queuePacket(TCPPacket tcpmessage_1) {
-		this.queuedPackets.append(tcpmessage_1, 1467393733);
+		this.queuedPackets.append(tcpmessage_1);
 		tcpmessage_1.anInt7680 = tcpmessage_1.buffer.index;
 		tcpmessage_1.buffer.index = 0;
 		this.anInt2279 += tcpmessage_1.anInt7680;

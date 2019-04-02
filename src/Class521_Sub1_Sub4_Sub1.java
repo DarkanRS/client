@@ -44,12 +44,12 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 		Ground class390_6;
 		Ground class390_7;
 		if (this.aBool10488) {
-			class390_6 = this.aClass206_7970.aClass390Array2614[this.aByte7968];
+			class390_6 = this.aClass206_7970.aClass390Array2614[this.collisionPlane];
 			class390_7 = this.aClass206_7970.aClass390Array2607[0];
 		} else {
-			class390_6 = this.aClass206_7970.aClass390Array2607[this.aByte7968];
-			if (this.aByte7968 < 3) {
-				class390_7 = this.aClass206_7970.aClass390Array2607[this.aByte7968 + 1];
+			class390_6 = this.aClass206_7970.aClass390Array2607[this.collisionPlane];
+			if (this.collisionPlane < 3) {
+				class390_7 = this.aClass206_7970.aClass390Array2607[this.collisionPlane + 1];
 			} else {
 				class390_7 = null;
 			}
@@ -163,7 +163,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 		Vector3 vector3_6 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_4 != null) {
-			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.aByte7968, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -33);
+			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -33);
 		}
 
 	}
@@ -181,7 +181,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 		Vector3 vector3_6 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_4 != null) {
-			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.aByte7968, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -18);
+			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -18);
 		}
 
 	}
@@ -250,7 +250,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -19);
+			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -19);
 		}
 
 	}
@@ -268,7 +268,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -64);
+			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -64);
 		}
 
 	}
@@ -286,7 +286,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 44);
+			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 44);
 		}
 
 	}
@@ -308,7 +308,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -74);
+			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -74);
 		}
 
 	}
@@ -431,7 +431,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			int i_21;
 			int i_22;
 			int i_51;
-			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-955165498) != null && (!client.aBool7344 || (Class506.anInt5858 & 0x40) != 0)) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && (!client.aBool7344 || (Class506.anInt5858 & 0x40) != 0)) {
 				int i_8 = -1;
 				i_9 = -1;
 				float f_10 = 2.0F * (float) i_6 / (float) Class20.anInt176 - 1.0F;
@@ -476,7 +476,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 				}
 			}
 
-			Login xlogin_31 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1644964406).aClass284_2648;
+			Login xlogin_31 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass284_2648;
 			i_9 = i_1;
 			int i_43 = i_2;
 			List list_32 = xlogin_31.aList3388;

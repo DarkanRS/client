@@ -16,13 +16,13 @@ public class Class96_Sub22 extends Class96 {
 	}
 
 	public void method1592() {
-		Class75 class75_2 = Class82.aClass75Array804[this.anInt9442];
+		CutsceneEntity class75_2 = Class82.aClass75Array804[this.anInt9442];
 		Class93 class93_3 = Class86.aClass93Array821[this.anInt9439];
 		class93_3.method1566(class75_2, this.anInt9441, 682382660);
 	}
 
 	public void method1601() {
-		Class75 class75_1 = Class82.aClass75Array804[-1738900237 * this.anInt9442 * 1623391291];
+		CutsceneEntity class75_1 = Class82.aClass75Array804[-1738900237 * this.anInt9442 * 1623391291];
 		Class93 class93_2 = Class86.aClass93Array821[588964331 * this.anInt9439 * 1017986755];
 		class93_2.method1566(class75_1, this.anInt9441 * 579947685 * -851068115, -1235876637);
 	}
@@ -31,7 +31,7 @@ public class Class96_Sub22 extends Class96 {
 		if (Class20.anInt169 < 412) {
 			if (VertexNormal.myPlayer == player_0) {
 				if (client.aBool7344 && (Class506.anInt5858 & 0x10) != 0) {
-					PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.anInt10314, false, -1931180359);
+					PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.index, false, -1931180359);
 				}
 			} else {
 				String string_3;
@@ -59,10 +59,10 @@ public class Class96_Sub22 extends Class96 {
 					string_3 = player_0.method16127(1967945336) + " (" + Message.SKILL_.translate(Class223.CURRENT_LANGUAGE, -871379797) + player_0.anInt10556 + ")";
 				}
 				if (client.aBool7344 && !bool_1 && (Class506.anInt5858 & 0x8) != 0) {
-					PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, (long) player_0.anInt10314, 0, 0, true, false, (long) player_0.anInt10314, false, -1521566355);
+					PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1521566355);
 				}
 				if (bool_1) {
-					PlayerAppearance.method4032(ParticleProducerDefinition.method1163(13421772) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, (long) player_0.anInt10314, false, -1005059728);
+					PlayerAppearance.method4032(ParticleProducerDefinition.method1163(13421772) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, (long) player_0.index, false, -1005059728);
 				} else {
 					for (int i_10 = 7; i_10 >= 0; --i_10) {
 						if (client.PLAYER_OPTIONS[i_10] != null) {
@@ -85,7 +85,7 @@ public class Class96_Sub22 extends Class96 {
 							}
 							short s_12 = (short) (client.aShortArray7239[i_10] + s_11);
 							int i_7 = client.PLAYER_OPTION_CURSORS[i_10] != -1 ? client.PLAYER_OPTION_CURSORS[i_10] : client.anInt7342;
-							PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], ParticleProducerDefinition.method1163(16777215) + string_3, i_7, s_12, -1, (long) player_0.anInt10314, 0, 0, true, false, (long) player_0.anInt10314, false, -1621747030);
+							PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], ParticleProducerDefinition.method1163(16777215) + string_3, i_7, s_12, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1621747030);
 						}
 					}
 				}
@@ -107,7 +107,7 @@ public class Class96_Sub22 extends Class96 {
 		if (icomponentdefinitions_0.anInt1329 != 6) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330, (byte) 52);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
 				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, true);
 			}

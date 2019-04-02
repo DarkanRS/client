@@ -20,7 +20,7 @@ public class NPCIndexLoader {
 
 	String[] aStringArray4840;
 
-	public NPCDefinitions getNPCDefinitions(int i_1, byte b_2) {
+	public NPCDefinitions getNPCDefinitions(int i_1) {
 		SoftCache softcache_4 = this.aClass229_4841;
 		NPCDefinitions npcdefinitions_3;
 		synchronized (this.aClass229_4841) {

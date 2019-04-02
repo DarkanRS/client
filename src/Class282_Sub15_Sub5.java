@@ -1120,7 +1120,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 
 		if (player.aBool10568) {
 			if (tempMoveType == 127) {
-				player.method16130(player.anInt10569, player.anInt10570, -166177247);
+				player.move(player.anInt10569, player.anInt10570);
 			} else {
 				byte b_20;
 				if (tempMoveType != MovementType.TELEPORT.id) {

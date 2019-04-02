@@ -12,13 +12,13 @@ public abstract class Ground {
 
 	public int[][] tileHeights;
 
-	public abstract void method6706(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, Class90 var11, boolean var12);
+	public abstract void method6706(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, HDWaterTile var11, boolean var12);
 
 	public abstract void LA(int var1, int var2, int var3);
 
-	public abstract void method6707(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, Class90 var11, boolean var12);
+	public abstract void method6707(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, HDWaterTile var11, boolean var12);
 
-	public abstract void method6708(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, Class90 var14);
+	public abstract void method6708(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, HDWaterTile var14);
 
 	public abstract void SA();
 
@@ -54,7 +54,7 @@ public abstract class Ground {
 
 	public abstract void m(int var1, int var2, int var3);
 
-	public abstract void method6714(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, Class90 var14, boolean var15);
+	public abstract void method6714(int var1, int var2, int[] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12, int[] var13, HDWaterTile var14, boolean var15);
 
 	public abstract void b(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 

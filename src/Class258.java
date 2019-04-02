@@ -11,8 +11,8 @@ public class Class258 {
 		while (iterator_1.hasNext()) {
 			Class282_Sub50_Sub10 class282_sub50_sub10_2 = (Class282_Sub50_Sub10) iterator_1.next();
 			Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_3 = class282_sub50_sub10_2.aClass521_Sub1_Sub1_Sub4_9636;
-			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-831174311) != null && class521_sub1_sub1_sub4_3.method15927()) {
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1442376239).method3397(class521_sub1_sub1_sub4_3, true, 402306072);
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && class521_sub1_sub1_sub4_3.method15927()) {
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397(class521_sub1_sub1_sub4_3, true, 402306072);
 			}
 		}
 	}

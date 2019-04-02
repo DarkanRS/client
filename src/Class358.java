@@ -66,7 +66,7 @@ public class Class358 {
 
 	public static void method6240(int i_1) {
 		Class148.anInt1730 = 1;
-		Class75.aClass317_746 = null;
+		CutsceneEntity.aClass317_746 = null;
 		Class6.anInt46 = -1;
 		Class148.anInt1738 = -1;
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;

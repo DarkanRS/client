@@ -14,7 +14,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method12988(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3273(this.aByte7968, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(-949503051));
+		return this.aClass206_7970.aClass201_2600.method3273(this.collisionPlane, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(-949503051));
 	}
 
 	boolean method13029(byte b_1) {
@@ -33,7 +33,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method13037(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		Vector3 vector3_3 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3273(this.aByte7968, (int) vector3_3.x >> this.aClass206_7970.anInt2592, (int) vector3_3.z >> this.aClass206_7970.anInt2592, this.method12995(-1991070986));
+		return this.aClass206_7970.aClass201_2600.method3273(this.collisionPlane, (int) vector3_3.x >> this.aClass206_7970.anInt2592, (int) vector3_3.z >> this.aClass206_7970.anInt2592, this.method12995(-1991070986));
 	}
 
 	final boolean method13026() {
@@ -78,13 +78,13 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method13022(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3273(this.aByte7968, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(-1441304110));
+		return this.aClass206_7970.aClass201_2600.method3273(this.collisionPlane, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(-1441304110));
 	}
 
 	Class521_Sub1_Sub4(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
 		super(sceneobjectmanager_1);
 		this.plane = (byte) i_5;
-		this.aByte7968 = (byte) i_6;
+		this.collisionPlane = (byte) i_6;
 		this.aShort9611 = (short) i_7;
 		this.aShort9612 = (short) i_8;
 		this.method11171(new Vector3((float) i_2, (float) i_3, (float) i_4));
@@ -96,7 +96,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method12998(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3273(this.aByte7968, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(-308469814));
+		return this.aClass206_7970.aClass201_2600.method3273(this.collisionPlane, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(-308469814));
 	}
 
 	boolean method13032() {
@@ -111,7 +111,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method13030(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3273(this.aByte7968, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(815041790));
+		return this.aClass206_7970.aClass201_2600.method3273(this.collisionPlane, (int) vector3_2.x >> -1928575293 * this.aClass206_7970.anInt2592 * -2000283157, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, this.method12995(815041790));
 	}
 
 	static final void method14892(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {

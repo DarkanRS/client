@@ -86,7 +86,7 @@ public class QuickchatDefinitionsLoader {
 				i_5 = (int) vector3_17.x;
 				int i_6 = (int) vector3_17.z;
 				RegionMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.method4433();
-				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1591290583);
+				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 				int i_9;
 				if (NativeLibraryLoader.anInt3240 != 2 && Class508.anInt5864 == -1) {
 					i_9 = Class504.method8389(Class31.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 111);

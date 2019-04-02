@@ -497,11 +497,11 @@ public class Login {
 								Class448.aClass450_5421.worldId = -1;
 							}
 							Class448.aClass450_5421.host = rsbitsbuffer_19.readGJString();
-							if (Class90.aClass496_952 != Class496.aClass496_5813) {
+							if (HDWaterTile.aClass496_952 != Class496.aClass496_5813) {
 								Class448.aClass450_5421.anInt5434 = Class448.aClass450_5421.worldId * -1708079975 + 1140744768;
 								Class448.aClass450_5421.anInt5437 = Class448.aClass450_5421.worldId * -1473668237 + 1047080176;
 							}
-							if (Class90.aClass496_952 != Class496.aClass496_5810 && (Class90.aClass496_952 != Class496.aClass496_5808 || client.rights < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
+							if (HDWaterTile.aClass496_952 != Class496.aClass496_5810 && (HDWaterTile.aClass496_952 != Class496.aClass496_5808 || client.rights < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
 								Class274.method4884((byte) 74);
 							}
 						}
@@ -524,7 +524,7 @@ public class Login {
 								}
 							}
 						}
-						if (Class496.aClass496_5813 == Class90.aClass496_952) {
+						if (Class496.aClass496_5813 == HDWaterTile.aClass496_952) {
 							Class361.aClass361_4170.method6257(1331971946);
 						}
 						if (Class9.lobbyStage != 273) {

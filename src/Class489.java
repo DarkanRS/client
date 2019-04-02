@@ -40,7 +40,7 @@ public class Class489 {
 			class282_sub31_8.anInt7766 = i_3;
 			class282_sub31_8.anInt7762 = i_1;
 			class282_sub31_8.anInt7763 = i_2;
-			Class282_Sub31.aClass482_7776.append(class282_sub31_8, -373570573);
+			Class282_Sub31.aClass482_7776.append(class282_sub31_8);
 		}
 		class282_sub31_8.anInt7769 = i_4;
 		class282_sub31_8.anInt7771 = i_5;

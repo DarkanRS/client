@@ -3,95 +3,50 @@ import java.util.Iterator;
 public class MapRegion {
 
 	public long aLong3183;
-
 	boolean aBool3171;
-
 	Class256 aClass256_3164;
-
 	CoordGrid aClass219_3169 = new CoordGrid();
-
 	int[][] xteas;
-
 	int[] regionIds;
-
 	int[] mapDataArchiveIds;
-
 	int[] landscapeDataArchiveIds;
-
 	int[] npcSpawnArchiveIds;
-
 	byte[][] mapDataBuffer;
-
 	byte[][] landscapeDataBuffer;
-
 	byte[][] npcSpawnBuffer;
-
-	int[] mapDataUnderlayArchiveIds;
-
-	int[] landscapeDataUnderlayArchiveIds;
-
-	byte[][] highDetailWaterMapDataBuffer;
-
-	byte[][] highDetailWaterLandscapeDataBuffer;
-
+	int[] hdWaterMapDataArchiveIds;
+	int[] hdWaterLandscapeDataArchiveIds;
+	byte[][] hdWaterMapDataBuffer;
+	byte[][] hdWaterLandscapeDataBuffer;
 	Class256 aClass256_3163;
-
 	byte[][][] aByteArrayArrayArray3162;
-
 	ObjectIndexLoader objectDefsLoader;
-
 	SceneObjectManager sceneObjectManager;
-
 	Class339 aClass339_3188;
-
 	int missingMapCount = 0;
-
 	int anInt3190 = 1;
-
 	int anInt3191 = 0;
-
 	int anInt3192 = 1;
-
 	Class239 aClass239_3175;
-
 	int anInt3177;
-
 	int zFar;
-
 	int sizeY;
-
 	int sizeX;
-
 	int[][][] anIntArrayArrayArray3205;
-
 	int[][] anIntArrayArray3185;
-
 	int[][] anIntArrayArray3186;
-
 	RegionMap aClass311_3202;
-
 	Class106 aClass106_3165;
-
 	int anInt3170;
-
 	int anInt3207;
-
 	CoordGrid coordGrid = new CoordGrid();
-
 	Class282_Sub50_Sub6 aClass282_Sub50_Sub6_3176;
-
 	Class283 aClass283_3180;
-
 	Class329_Sub1 highDetailWaterPlane;
-
 	Class329_Sub1 aClass329_Sub1_3167;
-
 	Class341 aClass341_3181 = new Class341();
-
 	float aFloat3173;
-
 	public boolean aBool3206 = false;
-
 	ClipMap[] clipMaps = new ClipMap[4];
 
 	void method4418(MapRegion mapregion_1) {
@@ -122,50 +77,49 @@ public class MapRegion {
 		this.method4456(Class480.method8046(Class393.preferences.aClass468_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
 		int i_2 = this.coordGrid.x;
 		int i_3 = this.coordGrid.y;
-		int i_4 = (Class31.anInt361 >> 12) + (i_2 >> 3);
-		int i_5 = (Class246.anInt3029 >> 12) + (i_3 >> 3);
+		int mapBaseX = (Class31.anInt361 >> 12) + (i_2 >> 3);
+		int mapBaseY = (Class246.anInt3029 >> 12) + (i_3 >> 3);
 		VertexNormal.myPlayer.plane = 0;
 		Class4.anInt35 = 0;
-		VertexNormal.myPlayer.method16130(8, 8, 210697228);
-		byte b_6 = 18;
-		this.xteas = new int[b_6][4];
-		this.regionIds = new int[b_6];
-		this.mapDataArchiveIds = new int[b_6];
-		this.landscapeDataArchiveIds = new int[b_6];
-		this.npcSpawnArchiveIds = new int[b_6];
-		this.mapDataBuffer = new byte[b_6][];
-		this.landscapeDataBuffer = new byte[b_6][];
-		this.npcSpawnBuffer = new byte[b_6][];
-		this.mapDataUnderlayArchiveIds = new int[b_6];
-		this.landscapeDataUnderlayArchiveIds = new int[b_6];
-		this.highDetailWaterMapDataBuffer = new byte[b_6][];
-		this.highDetailWaterLandscapeDataBuffer = new byte[b_6][];
-		int i_10 = 0;
-		int i_7;
-		for (i_7 = (i_4 - (this.sizeX >> 4)) / 8; i_7 <= (i_4 + (this.sizeX >> 4)) / 8; i_7++) {
-			for (int i_8 = (i_5 - (this.sizeY >> 4)) / 8; i_8 <= (i_5 + (this.sizeY >> 4)) / 8; i_8++) {
-				int i_9 = i_8 + (i_7 << 8);
-				this.regionIds[i_10] = i_9;
-				this.mapDataArchiveIds[i_10] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, false, i_7, i_8));
-				this.landscapeDataArchiveIds[i_10] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, false, i_7, i_8));
-				this.npcSpawnArchiveIds[i_10] = IndexLoaders.MAP_INDEX.getArchiveId("n" + i_7 + '_' + i_8);
-				this.mapDataUnderlayArchiveIds[i_10] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_7, i_8));
-				this.landscapeDataUnderlayArchiveIds[i_10] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_7, i_8));
-				if (this.npcSpawnArchiveIds[i_10] == -1) {
-					this.mapDataArchiveIds[i_10] = -1;
-					this.landscapeDataArchiveIds[i_10] = -1;
-					this.mapDataUnderlayArchiveIds[i_10] = -1;
-					this.landscapeDataUnderlayArchiveIds[i_10] = -1;
+		VertexNormal.myPlayer.move(8, 8);
+		byte regionSize = 18;
+		this.xteas = new int[regionSize][4];
+		this.regionIds = new int[regionSize];
+		this.mapDataArchiveIds = new int[regionSize];
+		this.landscapeDataArchiveIds = new int[regionSize];
+		this.npcSpawnArchiveIds = new int[regionSize];
+		this.mapDataBuffer = new byte[regionSize][];
+		this.landscapeDataBuffer = new byte[regionSize][];
+		this.npcSpawnBuffer = new byte[regionSize][];
+		this.hdWaterMapDataArchiveIds = new int[regionSize];
+		this.hdWaterLandscapeDataArchiveIds = new int[regionSize];
+		this.hdWaterMapDataBuffer = new byte[regionSize][];
+		this.hdWaterLandscapeDataBuffer = new byte[regionSize][];
+		int i = 0;
+		for (int regionX = (mapBaseX - (this.sizeX >> 4)) / 8; regionX <= (mapBaseX + (this.sizeX >> 4)) / 8; regionX++) {
+			for (int regionY = (mapBaseY - (this.sizeY >> 4)) / 8; regionY <= (mapBaseY + (this.sizeY >> 4)) / 8; regionY++) {
+				int regionId = regionY + (regionX << 8);
+				this.regionIds[i] = regionId;
+				this.mapDataArchiveIds[i] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, false, regionX, regionY));
+				this.landscapeDataArchiveIds[i] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, false, regionX, regionY));
+				this.npcSpawnArchiveIds[i] = IndexLoaders.MAP_INDEX.getArchiveId("n" + regionX + '_' + regionY);
+				this.hdWaterMapDataArchiveIds[i] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, regionX, regionY));
+				this.hdWaterLandscapeDataArchiveIds[i] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, regionX, regionY));
+				if (this.npcSpawnArchiveIds[i] == -1) {
+					this.mapDataArchiveIds[i] = -1;
+					this.landscapeDataArchiveIds[i] = -1;
+					this.hdWaterMapDataArchiveIds[i] = -1;
+					this.hdWaterLandscapeDataArchiveIds[i] = -1;
 				}
-				++i_10;
+				++i;
 			}
 		}
-		for (i_7 = i_10; i_7 < this.npcSpawnArchiveIds.length; i_7++) {
-			this.npcSpawnArchiveIds[i_7] = -1;
-			this.mapDataArchiveIds[i_7] = -1;
-			this.landscapeDataArchiveIds[i_7] = -1;
-			this.mapDataUnderlayArchiveIds[i_7] = -1;
-			this.landscapeDataUnderlayArchiveIds[i_7] = -1;
+		for (int regionId = i; regionId < this.npcSpawnArchiveIds.length; regionId++) {
+			this.npcSpawnArchiveIds[regionId] = -1;
+			this.mapDataArchiveIds[regionId] = -1;
+			this.landscapeDataArchiveIds[regionId] = -1;
+			this.hdWaterMapDataArchiveIds[regionId] = -1;
+			this.hdWaterLandscapeDataArchiveIds[regionId] = -1;
 		}
 		byte b_11;
 		if (client.gameState == 5) {
@@ -180,7 +134,7 @@ public class MapRegion {
 			}
 			b_11 = 9;
 		}
-		this.method4458(i_4, i_5, b_11, false);
+		this.method4458(mapBaseX, mapBaseY, b_11, false);
 	}
 
 	public int getSizeX() {
@@ -195,7 +149,7 @@ public class MapRegion {
 		return this.aFloat3173;
 	}
 
-	public SceneObjectManager getSceneObjectManager(int i_1) {
+	public SceneObjectManager getSceneObjectManager() {
 		return this.sceneObjectManager;
 	}
 
@@ -302,10 +256,10 @@ public class MapRegion {
 		this.mapDataBuffer = new byte[i_9][];
 		this.landscapeDataBuffer = new byte[i_9][];
 		this.npcSpawnBuffer = null;
-		this.mapDataUnderlayArchiveIds = new int[i_9];
-		this.landscapeDataUnderlayArchiveIds = new int[i_9];
-		this.highDetailWaterMapDataBuffer = new byte[i_9][];
-		this.highDetailWaterLandscapeDataBuffer = new byte[i_9][];
+		this.hdWaterMapDataArchiveIds = new int[i_9];
+		this.hdWaterLandscapeDataArchiveIds = new int[i_9];
+		this.hdWaterMapDataBuffer = new byte[i_9][];
+		this.hdWaterLandscapeDataBuffer = new byte[i_9][];
 		i_9 = 0;
 		for (i_10 = 0; i_10 < 4; i_10++) {
 			for (i_11 = 0; i_11 < this.sizeX >> 3; i_11++) {
@@ -328,8 +282,8 @@ public class MapRegion {
 							int i_18 = i_16 & 0xff;
 							this.mapDataArchiveIds[i_9] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, false, i_17, i_18));
 							this.landscapeDataArchiveIds[i_9] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, false, i_17, i_18));
-							this.mapDataUnderlayArchiveIds[i_9] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_17, i_18));
-							this.landscapeDataUnderlayArchiveIds[i_9] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_17, i_18));
+							this.hdWaterMapDataArchiveIds[i_9] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_17, i_18));
+							this.hdWaterLandscapeDataArchiveIds[i_9] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_17, i_18));
 							++i_9;
 						}
 					}
@@ -410,35 +364,35 @@ public class MapRegion {
 		this.mapDataBuffer = new byte[i_6][];
 		this.landscapeDataBuffer = new byte[i_6][];
 		this.npcSpawnBuffer = null;
-		this.mapDataUnderlayArchiveIds = new int[i_6];
-		this.landscapeDataUnderlayArchiveIds = new int[i_6];
-		this.highDetailWaterMapDataBuffer = new byte[i_6][];
-		this.highDetailWaterLandscapeDataBuffer = new byte[i_6][];
+		this.hdWaterMapDataArchiveIds = new int[i_6];
+		this.hdWaterLandscapeDataArchiveIds = new int[i_6];
+		this.hdWaterMapDataBuffer = new byte[i_6][];
+		this.hdWaterLandscapeDataBuffer = new byte[i_6][];
 		i_6 = 0;
 		for (i_7 = (i_3 - (this.sizeX >> 4)) / 8; i_7 <= (i_3 + (this.sizeX >> 4)) / 8; i_7++) {
 			for (i_8 = (i_4 - (this.sizeY >> 4)) / 8; i_8 <= (i_4 + (this.sizeY >> 4)) / 8; i_8++) {
 				this.regionIds[i_6] = i_8 + (i_7 << 8);
 				this.mapDataArchiveIds[i_6] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, false, i_7, i_8));
 				this.landscapeDataArchiveIds[i_6] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, false, i_7, i_8));
-				this.mapDataUnderlayArchiveIds[i_6] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_7, i_8));
-				this.landscapeDataUnderlayArchiveIds[i_6] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_7, i_8));
+				this.hdWaterMapDataArchiveIds[i_6] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_7, i_8));
+				this.hdWaterLandscapeDataArchiveIds[i_6] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_7, i_8));
 				++i_6;
 			}
 		}
 		this.method4458(i_3, i_4, 18, bool_5);
 	}
 
-	String getArchiveName(boolean bool_1, boolean bool_2, int i_3, int i_4) {
-		String str_5 = "";
-		if (bool_1) {
-			str_5 = str_5 + "m" + i_3 + '_' + i_4;
+	String getArchiveName(boolean mapData, boolean hdWater, int regionX, int regionY) {
+		String name = "";
+		if (mapData) {
+			name = name + "m" + regionX + '_' + regionY;
 		} else {
-			str_5 = str_5 + "l" + i_3 + '_' + i_4;
+			name = name + "l" + regionX + '_' + regionY;
 		}
-		if (bool_2) {
-			str_5 = str_5 + 'u';
+		if (hdWater) {
+			name = name + 'u';
 		}
-		return str_5;
+		return name;
 	}
 
 	void method4456(Class106 class106_1, int i_2) {
@@ -543,14 +497,14 @@ public class MapRegion {
 							}
 						}
 						if (bool_12) {
-							client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = npc_18.anInt10314;
+							client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = npc_18.index;
 						} else {
-							npc_18.method16166((NPCDefinitions) null, -163238630);
+							npc_18.setDefinition((NPCDefinitions) null);
 							class282_sub47_9.remove();
 							bool_21 = true;
 						}
 					} else {
-						npc_18.method16166((NPCDefinitions) null, -1796042830);
+						npc_18.setDefinition((NPCDefinitions) null);
 						class282_sub47_9.remove();
 						bool_21 = true;
 					}
@@ -610,7 +564,7 @@ public class MapRegion {
 			int i_10 = (int) (class282_sub29_27.data >> 14 & 0x3fffL);
 			int i_11 = i_10 - this.coordGrid.y;
 			if (this.sceneObjectManager != null) {
-				if (i_17 >= 0 && i_11 >= 0 && i_17 < this.sizeX && i_11 < this.sizeY && i_17 < this.sceneObjectManager.anInt2617 && i_11 < this.sceneObjectManager.anInt2603) {
+				if (i_17 >= 0 && i_11 >= 0 && i_17 < this.sizeX && i_11 < this.sizeY && i_17 < this.sceneObjectManager.sizeX && i_11 < this.sceneObjectManager.sizeY) {
 					if (this.sceneObjectManager.aClass293ArrayArrayArray2604 != null) {
 						this.sceneObjectManager.method3405(i_16, i_17, i_11, -1311217260);
 					}
@@ -693,15 +647,15 @@ public class MapRegion {
 					++this.missingMapCount;
 				}
 			}
-			if (this.mapDataUnderlayArchiveIds[i_2] != -1 && this.highDetailWaterMapDataBuffer[i_2] == null) {
-				this.highDetailWaterMapDataBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.mapDataUnderlayArchiveIds[i_2], 0);
-				if (this.highDetailWaterMapDataBuffer[i_2] == null) {
+			if (this.hdWaterMapDataArchiveIds[i_2] != -1 && this.hdWaterMapDataBuffer[i_2] == null) {
+				this.hdWaterMapDataBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.hdWaterMapDataArchiveIds[i_2], 0);
+				if (this.hdWaterMapDataBuffer[i_2] == null) {
 					++this.missingMapCount;
 				}
 			}
-			if (this.landscapeDataUnderlayArchiveIds[i_2] != -1 && this.highDetailWaterLandscapeDataBuffer[i_2] == null) {
-				this.highDetailWaterLandscapeDataBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.landscapeDataUnderlayArchiveIds[i_2], 0);
-				if (this.highDetailWaterLandscapeDataBuffer[i_2] == null) {
+			if (this.hdWaterLandscapeDataArchiveIds[i_2] != -1 && this.hdWaterLandscapeDataBuffer[i_2] == null) {
+				this.hdWaterLandscapeDataBuffer[i_2] = IndexLoaders.MAP_INDEX.getFile(this.hdWaterLandscapeDataArchiveIds[i_2], 0);
+				if (this.hdWaterLandscapeDataBuffer[i_2] == null) {
 					++this.missingMapCount;
 				}
 			}
@@ -748,7 +702,7 @@ public class MapRegion {
 						this.anInt3191 += i_6;
 					}
 				}
-				bytes_3 = this.highDetailWaterLandscapeDataBuffer[i_2];
+				bytes_3 = this.hdWaterLandscapeDataBuffer[i_2];
 				if (bytes_3 != null) {
 					i_4 = (this.regionIds[i_2] >> 8) * 64 - this.coordGrid.x;
 					i_5 = (this.regionIds[i_2] & 0xff) * 64 - this.coordGrid.y;
@@ -797,22 +751,22 @@ public class MapRegion {
 					Class247.method4250((byte) -72);
 				}
 				boolean highDetailWater = false;
-				int i_11;
+				int chunkSize;
 				if (Class393.preferences.water.getValue(-2143596575) == 2) {
-					for (i_11 = 0; i_11 < this.mapDataBuffer.length; i_11++) {
-						if (this.highDetailWaterLandscapeDataBuffer[i_11] != null || this.highDetailWaterMapDataBuffer[i_11] != null) {
+					for (chunkSize = 0; chunkSize < this.mapDataBuffer.length; chunkSize++) {
+						if (this.hdWaterLandscapeDataBuffer[chunkSize] != null || this.hdWaterMapDataBuffer[chunkSize] != null) {
 							highDetailWater = true;
 							break;
 						}
 					}
 				}
-				i_11 = Class5.method295(Class393.preferences.aClass468_Sub16_8198.method12750()).chunkSize * 8;
+				chunkSize = Class5.method295(Class393.preferences.aClass468_Sub16_8198.method12750()).chunkSize * 8;
 				if (Renderers.SOFTWARE_RENDERER.method8454()) {
-					++i_11;
+					++chunkSize;
 				}
 				this.method4447(1045268791);
 				this.method4460();
-				this.sceneObjectManager = new SceneObjectManager(Renderers.SOFTWARE_RENDERER, this.sizeX, this.sizeY, i_11, highDetailWater, Renderers.SOFTWARE_RENDERER.method8463() > 0);
+				this.sceneObjectManager = new SceneObjectManager(Renderers.SOFTWARE_RENDERER, this.sizeX, this.sizeY, chunkSize, highDetailWater, Renderers.SOFTWARE_RENDERER.method8463() > 0);
 				this.sceneObjectManager.method3380(false);
 				this.sceneObjectManager.method3378(client.anInt7240);
 				if (client.anInt7240 != 0) {
@@ -849,12 +803,12 @@ public class MapRegion {
 					this.highDetailWaterPlane.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(1666715266) == 1;
 					this.highDetailWaterPlane.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;
 					if (!this.aClass256_3163.method4410((byte) 46)) {
-						this.decodeUnderlayMasks(this.highDetailWaterPlane, this.highDetailWaterMapDataBuffer, 500096938);
+						this.decodeUnderlayMasks(this.highDetailWaterPlane, this.hdWaterMapDataBuffer, 500096938);
 						if (!this.aBool3171) {
 							Exception_Sub3.method15619(true, -1068785077);
 						}
 					} else {
-						this.method4464(this.highDetailWaterPlane, this.highDetailWaterMapDataBuffer, 1544003060);
+						this.method4464(this.highDetailWaterPlane, this.hdWaterMapDataBuffer, 1544003060);
 						if (!this.aBool3171) {
 							Exception_Sub3.method15619(true, -466489103);
 						}
@@ -901,9 +855,9 @@ public class MapRegion {
 						Exception_Sub3.method15619(true, 1689569657);
 					}
 					if (!this.aClass256_3163.method4410((byte) -69)) {
-						this.method4465(this.highDetailWaterPlane, this.highDetailWaterLandscapeDataBuffer);
+						this.method4465(this.highDetailWaterPlane, this.hdWaterLandscapeDataBuffer);
 					} else {
-						this.method4432(this.highDetailWaterPlane, this.highDetailWaterLandscapeDataBuffer, 346534701);
+						this.method4432(this.highDetailWaterPlane, this.hdWaterLandscapeDataBuffer, 346534701);
 					}
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, -1264882543);
@@ -1151,21 +1105,21 @@ public class MapRegion {
 					int i_11 = i_8 & 0x3f;
 					int i_12 = (this.regionIds[i_3] >> 8) * 64 - this.coordGrid.x + i_10;
 					int i_13 = (this.regionIds[i_3] & 0xff) * 64 - this.coordGrid.y + i_11;
-					NPCDefinitions npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbytebuffer_18.readUnsignedShort(), (byte) -4);
+					NPCDefinitions npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbytebuffer_18.readUnsignedShort());
 					Class282_Sub47 class282_sub47_15 = (Class282_Sub47) client.NPCS.get((long) i_7);
 					if (class282_sub47_15 == null && (npcdefinitions_14.walkMask & 0x1) > 0 && i_12 >= 0 && i_12 + npcdefinitions_14.size < this.sizeX && i_13 >= 0 && i_13 + npcdefinitions_14.size < this.sizeY) {
 						NPC npc_16 = new NPC(this.sceneObjectManager);
-						npc_16.anInt10314 = i_7;
+						npc_16.index = i_7;
 						Class282_Sub47 class282_sub47_17 = new Class282_Sub47(npc_16);
 						client.NPCS.put(class282_sub47_17, (long) i_7);
 						client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_17;
 						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;
-						npc_16.anInt10353 = client.cycles;
-						npc_16.method16166(npcdefinitions_14, 2038282269);
-						npc_16.method15836(npc_16.definitions.size, (byte) -20);
-						npc_16.anInt10340 = npc_16.definitions.anInt4889 << 3;
-						npc_16.method15791(npc_16.definitions.respawnDirection.method4317().getValue() << 11 & 0x3fff, true, (byte) -122);
-						npc_16.method16159(i_9, i_12, i_13, true, npc_16.getSize(), -1215667141);
+						npc_16.lastUpdate = client.cycles;
+						npc_16.setDefinition(npcdefinitions_14);
+						npc_16.setBoundSize(npc_16.definitions.size);
+						npc_16.anInt10340 = npc_16.definitions.contrast << 3;
+						npc_16.turn(npc_16.definitions.respawnDirection.method4317().getValue() << 11 & 0x3fff, true);
+						npc_16.move(i_9, i_12, i_13, true, npc_16.getSize());
 					}
 				}
 			}
@@ -1198,17 +1152,17 @@ public class MapRegion {
 		int i_9;
 		int i_10;
 		int i_11;
-		for (Class282_Sub2 class282_sub2_20 = (Class282_Sub2) Class86.aClass482_827.head((byte) 76); class282_sub2_20 != null; class282_sub2_20 = (Class282_Sub2) Class86.aClass482_827.next(832197045)) {
+		for (CutsceneArea class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.head((byte) 76); class282_sub2_20 != null; class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(832197045)) {
 			i_21 = class282_sub2_20.anInt7486;
 			boolean bool_22 = (i_21 & 0x1) == 1;
-			i_5 = class282_sub2_20.anInt7479 >> 3;
-			i_6 = class282_sub2_20.anInt7482 >> 3;
+			i_5 = class282_sub2_20.regionX >> 3;
+			i_6 = class282_sub2_20.regionY >> 3;
 			i_7 = class282_sub2_20.anInt7480;
 			i_8 = class282_sub2_20.anInt7483;
-			i_9 = class282_sub2_20.anInt7478;
+			i_9 = class282_sub2_20.plane;
 			i_10 = class282_sub2_20.anInt7481;
-			i_11 = class282_sub2_20.anInt7484;
-			int i_12 = class282_sub2_20.anInt7485;
+			i_11 = class282_sub2_20.width;
+			int i_12 = class282_sub2_20.length;
 			int i_13 = 0;
 			int i_14 = 0;
 			byte b_15 = 1;
@@ -1247,20 +1201,20 @@ public class MapRegion {
 		this.mapDataBuffer = new byte[i_2][];
 		this.landscapeDataBuffer = new byte[i_2][];
 		this.npcSpawnBuffer = null;
-		this.mapDataUnderlayArchiveIds = new int[i_2];
-		this.landscapeDataUnderlayArchiveIds = new int[i_2];
-		this.highDetailWaterMapDataBuffer = new byte[i_2][];
-		this.highDetailWaterLandscapeDataBuffer = new byte[i_2][];
+		this.hdWaterMapDataArchiveIds = new int[i_2];
+		this.hdWaterLandscapeDataArchiveIds = new int[i_2];
+		this.hdWaterMapDataBuffer = new byte[i_2][];
+		this.hdWaterLandscapeDataBuffer = new byte[i_2][];
 		i_2 = 0;
-		for (Class282_Sub2 class282_sub2_3 = (Class282_Sub2) Class86.aClass482_827.head((byte) 29); class282_sub2_3 != null; class282_sub2_3 = (Class282_Sub2) Class86.aClass482_827.next(2076366148)) {
-			i_4 = class282_sub2_3.anInt7479 >>> 3;
-			i_5 = class282_sub2_3.anInt7482 >>> 3;
-			i_6 = i_4 + class282_sub2_3.anInt7484;
+		for (CutsceneArea class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.head((byte) 29); class282_sub2_3 != null; class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(2076366148)) {
+			i_4 = class282_sub2_3.regionX >>> 3;
+			i_5 = class282_sub2_3.regionY >>> 3;
+			i_6 = i_4 + class282_sub2_3.width;
 			if ((i_6 & 0x7) == 0) {
 				--i_6;
 			}
 			i_6 >>>= 3;
-			i_7 = i_5 + class282_sub2_3.anInt7485;
+			i_7 = i_5 + class282_sub2_3.length;
 			if ((i_7 & 0x7) == 0) {
 				--i_7;
 			}
@@ -1276,8 +1230,8 @@ public class MapRegion {
 					this.regionIds[i_2] = i_10;
 					this.mapDataArchiveIds[i_2] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, false, i_8, i_9));
 					this.landscapeDataArchiveIds[i_2] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, false, i_8, i_9));
-					this.mapDataUnderlayArchiveIds[i_2] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_8, i_9));
-					this.landscapeDataUnderlayArchiveIds[i_2] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_8, i_9));
+					this.hdWaterMapDataArchiveIds[i_2] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(true, true, i_8, i_9));
+					this.hdWaterLandscapeDataArchiveIds[i_2] = IndexLoaders.MAP_INDEX.getArchiveId(this.getArchiveName(false, true, i_8, i_9));
 					++i_2;
 				}
 			}
@@ -1341,14 +1295,14 @@ public class MapRegion {
 			this.mapDataArchiveIds = mapregion_2.mapDataArchiveIds;
 			this.landscapeDataArchiveIds = mapregion_2.landscapeDataArchiveIds;
 			this.npcSpawnArchiveIds = mapregion_2.npcSpawnArchiveIds;
-			this.mapDataUnderlayArchiveIds = mapregion_2.mapDataUnderlayArchiveIds;
-			this.landscapeDataUnderlayArchiveIds = mapregion_2.landscapeDataUnderlayArchiveIds;
+			this.hdWaterMapDataArchiveIds = mapregion_2.hdWaterMapDataArchiveIds;
+			this.hdWaterLandscapeDataArchiveIds = mapregion_2.hdWaterLandscapeDataArchiveIds;
 			this.xteas = mapregion_2.xteas;
 			this.mapDataBuffer = mapregion_2.mapDataBuffer;
 			this.landscapeDataBuffer = mapregion_2.landscapeDataBuffer;
 			this.npcSpawnBuffer = mapregion_2.npcSpawnBuffer;
-			this.highDetailWaterMapDataBuffer = mapregion_2.highDetailWaterMapDataBuffer;
-			this.highDetailWaterLandscapeDataBuffer = mapregion_2.highDetailWaterLandscapeDataBuffer;
+			this.hdWaterMapDataBuffer = mapregion_2.hdWaterMapDataBuffer;
+			this.hdWaterLandscapeDataBuffer = mapregion_2.hdWaterLandscapeDataBuffer;
 			this.clipMaps = mapregion_2.clipMaps;
 			this.aClass311_3202 = mapregion_2.aClass311_3202;
 			this.aClass239_3175 = mapregion_2.aClass239_3175;

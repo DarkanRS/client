@@ -26,7 +26,7 @@ public class NPCDefinitions {
 	int anInt4888 = 0;
 	public int headIcons = -1;
 	public int anInt4918 = -1;
-	public int anInt4889 = 32;
+	public int contrast = 32;
 	int varpBit = -1;
 	int varp = -1;
 	public boolean aBool4893 = true;
@@ -478,10 +478,10 @@ public class NPCDefinitions {
 			i_3 = interface42_1.method240(this.varp, 817995491);
 		}
 		if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
-			return this.aClass406_4855.getNPCDefinitions(this.transformTo[i_3], (byte) 43);
+			return this.aClass406_4855.getNPCDefinitions(this.transformTo[i_3]);
 		} else {
 			int i_4 = this.transformTo[this.transformTo.length - 1];
-			return i_4 != -1 ? this.aClass406_4855.getNPCDefinitions(i_4, (byte) -44) : null;
+			return i_4 != -1 ? this.aClass406_4855.getNPCDefinitions(i_4) : null;
 		}
 	}
 
@@ -510,7 +510,7 @@ public class NPCDefinitions {
 		} else {
 			for (int i_2 = 0; i_2 < this.transformTo.length; i_2++) {
 				if (this.transformTo[i_2] != -1) {
-					NPCDefinitions npcdefinitions_3 = this.aClass406_4855.getNPCDefinitions(this.transformTo[i_2], (byte) -70);
+					NPCDefinitions npcdefinitions_3 = this.aClass406_4855.getNPCDefinitions(this.transformTo[i_2]);
 					if (npcdefinitions_3.anInt4903 != -1 || npcdefinitions_3.anInt4876 != -1 || npcdefinitions_3.anInt4906 != -1) {
 						return true;
 					}
@@ -589,7 +589,7 @@ public class NPCDefinitions {
 		} else if (opcode == 102) {
 			this.headIcons = stream.readUnsignedShort();
 		} else if (opcode == 103) {
-			this.anInt4889 = stream.readUnsignedShort();
+			this.contrast = stream.readUnsignedShort();
 		} else if (opcode == 106 || opcode == 118) {
 			this.varpBit = stream.readUnsignedShort();
 			if (this.varpBit == 65535) {

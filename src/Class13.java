@@ -65,7 +65,7 @@ public class Class13 {
 	}
 
 	public static final int method507(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-888508075) == null) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
 			return 0;
 		} else if (i_4 < 3) {
 			RegionMap regionmap_6 = IndexLoaders.MAP_REGION_DECODER.method4433();
@@ -93,7 +93,7 @@ public class Class13 {
 					if (bool_9) {
 						++i_4;
 					}
-					return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_4].averageHeight(i_0, i_1, -1580541166);
+					return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[i_4].averageHeight(i_0, i_1, -1580541166);
 				} else {
 					return 0;
 				}
@@ -101,7 +101,7 @@ public class Class13 {
 				return 0;
 			}
 		} else {
-			return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_4].averageHeight(i_0, i_1, -1580541166);
+			return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[i_4].averageHeight(i_0, i_1, -1580541166);
 		}
 	}
 

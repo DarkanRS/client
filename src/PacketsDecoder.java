@@ -368,7 +368,7 @@ public class PacketsDecoder extends Class455 {
 						if (i_77 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_15, i_81, 1765906120)) {
 							i_83 = i_77 + 1;
 						}
-						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_20 = new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1893689656), flags, i_7, i_77, i_83, i_34, Class504.method8389(i_34, i_82, i_77, (byte) 74) - i_9, i_82, i_15, i_15, i_81, i_81, i_10, bool_78);
+						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_20 = new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), flags, i_7, i_77, i_83, i_34, Class504.method8389(i_34, i_82, i_77, (byte) 74) - i_9, i_82, i_15, i_15, i_81, i_81, i_10, bool_78);
 						client.aClass465_7334.put(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4_20), (long) (i_15 << 16 | i_81));
 					}
 				}
@@ -1111,12 +1111,12 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readBigSmart();
 			if (client.aClass281Array7180[key] != null) {
-				client.aClass281Array7180[key].method4979(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1999339488));
+				client.aClass281Array7180[key].method4979(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
 				client.aClass281Array7180[key] = null;
 			}
 			if (flags != -1) {
 				client.aClass281Array7180[key] = new Class281(Renderers.SOFTWARE_RENDERER, buffer, flags);
-				client.aClass281Array7180[key].method4978(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1306272287));
+				client.aClass281Array7180[key].method4978(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
 			}
 			context.currentPacket = null;
 			return true;

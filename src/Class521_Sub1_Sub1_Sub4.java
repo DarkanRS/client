@@ -62,7 +62,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 	MeshRasterizer method15929(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, short s_4) {
 		SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_3, (byte) -22);
 		Ground class390_6 = this.aClass206_7970.aClass390Array2607[this.plane];
-		Ground class390_7 = this.aByte7968 < 3 ? this.aClass206_7970.aClass390Array2607[this.aByte7968 + 1] : null;
+		Ground class390_7 = this.collisionPlane < 3 ? this.aClass206_7970.aClass390Array2607[this.collisionPlane + 1] : null;
 		Vector3 vector3_8 = this.method11166().aClass385_3595;
 		return this.aClass456_10404 != null && !this.aClass456_10404.method7580(1923086864) ? spotanimdefinitions_5.rasterize(graphicalrenderer_1, i_2, true, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, this.aClass456_10404, (byte) 2, -2029487974) : spotanimdefinitions_5.rasterize(graphicalrenderer_1, i_2, true, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, (Animation) null, (byte) 2, -379915283);
 	}

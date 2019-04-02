@@ -31,7 +31,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		class282_sub52_5.aChar8171 = var_2;
 		class282_sub52_5.anInt8172 = i_3;
 		class282_sub52_5.aLong8169 = TextureDetails.time();
-		this.aClass482_8047.append(class282_sub52_5, 1868756852);
+		this.aClass482_8047.append(class282_sub52_5);
 	}
 
 	public boolean method3240(int i_1) {
@@ -50,14 +50,14 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 					class282_sub52_3.anInt8172 = class282_sub52_2.anInt8172;
 					class282_sub52_3.aLong8169 = class282_sub52_2.aLong8169;
 					class282_sub52_3.anInt8174 = class282_sub52_2.anInt8174;
-					this.aClass482_8046.append(class282_sub52_3, 1312996857);
+					this.aClass482_8046.append(class282_sub52_3);
 					this.aBoolArray8048[class282_sub52_2.anInt8172] = true;
 				}
 				class282_sub52_2.anInt8173 = 2;
-				this.aClass482_8046.append(class282_sub52_2, -924649078);
+				this.aClass482_8046.append(class282_sub52_2);
 			} else if (class282_sub52_2.anInt8173 == 1) {
 				if (this.aBoolArray8048[class282_sub52_2.anInt8172]) {
-					this.aClass482_8046.append(class282_sub52_2, -317129171);
+					this.aClass482_8046.append(class282_sub52_2);
 					this.aBoolArray8048[class282_sub52_2.anInt8172] = false;
 				}
 			} else if (class282_sub52_2.anInt8173 == -1) {
@@ -69,12 +69,12 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 						class282_sub52_4.anInt8172 = i_5;
 						class282_sub52_4.aLong8169 = class282_sub52_2.aLong8169;
 						class282_sub52_4.anInt8174 = class282_sub52_2.anInt8174;
-						this.aClass482_8046.append(class282_sub52_4, -1107804482);
+						this.aClass482_8046.append(class282_sub52_4);
 						this.aBoolArray8048[i_5] = false;
 					}
 				}
 			} else if (class282_sub52_2.anInt8173 == 3) {
-				this.aClass482_8046.append(class282_sub52_2, -1098300070);
+				this.aClass482_8046.append(class282_sub52_2);
 			}
 		}
 	}
@@ -165,14 +165,14 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 					class282_sub52_2.anInt8172 = 1 * class282_sub52_1.anInt8172 * -1618834677 * -581998429;
 					class282_sub52_2.aLong8169 = 1L * class282_sub52_1.aLong8169 * 5617785483754464897L * 3568855149896161665L;
 					class282_sub52_2.anInt8174 = 1 * class282_sub52_1.anInt8174 * 110455137 * 656472737;
-					this.aClass482_8046.append(class282_sub52_2, -807358565);
+					this.aClass482_8046.append(class282_sub52_2);
 					this.aBoolArray8048[-581998429 * class282_sub52_1.anInt8172 * -1618834677] = true;
 				}
 				class282_sub52_1.anInt8173 = -922637818 * -921682517;
-				this.aClass482_8046.append(class282_sub52_1, 269297613);
+				this.aClass482_8046.append(class282_sub52_1);
 			} else if (class282_sub52_1.anInt8173 * -461318909 * -921682517 == 1) {
 				if (this.aBoolArray8048[-581998429 * class282_sub52_1.anInt8172 * -1618834677]) {
-					this.aClass482_8046.append(class282_sub52_1, -790183134);
+					this.aClass482_8046.append(class282_sub52_1);
 					this.aBoolArray8048[-581998429 * class282_sub52_1.anInt8172 * -1618834677] = false;
 				}
 			} else if (class282_sub52_1.anInt8173 * -461318909 * -921682517 == -1) {
@@ -184,12 +184,12 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 						class282_sub52_3.anInt8172 = -1618834677 * i_4 * -581998429;
 						class282_sub52_3.aLong8169 = class282_sub52_1.aLong8169 * 5617785483754464897L * 1L * 3568855149896161665L;
 						class282_sub52_3.anInt8174 = 1 * class282_sub52_1.anInt8174 * 110455137 * 656472737;
-						this.aClass482_8046.append(class282_sub52_3, 716991282);
+						this.aClass482_8046.append(class282_sub52_3);
 						this.aBoolArray8048[i_4] = false;
 					}
 				}
 			} else if (-921682517 * class282_sub52_1.anInt8173 * -461318909 == 3) {
-				this.aClass482_8046.append(class282_sub52_1, 382193306);
+				this.aClass482_8046.append(class282_sub52_1);
 			}
 		}
 	}

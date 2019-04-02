@@ -12,7 +12,7 @@ public class Class275_Sub4 extends Class275 {
 	}
 
 	static final void method12585(Class282_Sub31 class282_sub31_0, int i_1) {
-		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1869632062);
+		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 		if (sceneobjectmanager_2 != null) {
 			SceneObject sceneobject_3 = null;
 			if (class282_sub31_0.anInt7766 == 0) {

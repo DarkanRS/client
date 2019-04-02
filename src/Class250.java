@@ -129,15 +129,15 @@ public class Class250 {
 		for (i_10 = 0; i_10 < i_9; i_10++) {
 			NPCDefinitions npcdefinitions_91 = null;
 			if (client.anInt7341 == 4) {
-				Class75 class75_13 = Class82.aClass75Array804[i_10];
-				if (!class75_13.aBool742) {
+				CutsceneEntity class75_13 = Class82.aClass75Array804[i_10];
+				if (!class75_13.initialized) {
 					continue;
 				}
 				obj_12 = class75_13.method1342((byte) 112);
 				if (((Animable) obj_12).anInt10349 != client.anInt7286) {
 					continue;
 				}
-				if (class75_13.anInt739 >= 0) {
+				if (class75_13.id >= 0) {
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.transformTo != null) {
 						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);

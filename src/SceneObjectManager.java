@@ -74,9 +74,9 @@ public class SceneObjectManager {
 
 	int anInt2594;
 
-	public int anInt2617;
+	public int sizeX;
 
-	public int anInt2603;
+	public int sizeY;
 
 	int anInt2652;
 
@@ -200,19 +200,19 @@ public class SceneObjectManager {
 		this.aClass390Array2591[i_1] = class390_2;
 	}
 
-	public int getScale(int i_1, int i_2, int i_3) {
+	public int getScale(int i_1, int i_2) {
 		return this.scales != null ? this.scales[i_1][i_2] & 0xffff : 0;
 	}
 
-	public int getColor(int i_1, int i_2, byte b_3) {
+	public int getColor(int i_1, int i_2) {
 		return this.colors != null ? this.colors[i_1][i_2] & 0xffffff : 0;
 	}
 
-	public int method3391(int i_1, int i_2, int i_3) {
+	public int method3391(int i_1, int i_2) {
 		return this.waterRelatedArray6 != null ? this.waterRelatedArray6[i_1][i_2] & 0xff : 0;
 	}
 
-	public void method3392(int x, int y, int waterColor, int waterScale, int waterIntensity, int i_6, int i_7, int i_8, short s_9) {
+	public void setTileData(int x, int y, int waterColor, int waterScale, int waterIntensity, int i_6, int i_7, int i_8) {
 		if (this.colors != null) {
 			this.colors[x][y] = ~0xffffff | waterColor;
 		}
@@ -350,7 +350,7 @@ public class SceneObjectManager {
 		short s_6 = 0;
 		byte b_7 = 0;
 		class521_sub1_sub1_1.method14697((byte) 115);
-		if (class521_sub1_sub1_1.aShort9458 >= 0 && class521_sub1_sub1_1.aShort9456 >= 0 && class521_sub1_sub1_1.localX < this.anInt2617 && class521_sub1_sub1_1.localY < this.anInt2603) {
+		if (class521_sub1_sub1_1.aShort9458 >= 0 && class521_sub1_sub1_1.aShort9456 >= 0 && class521_sub1_sub1_1.localX < this.sizeX && class521_sub1_sub1_1.localY < this.sizeY) {
 			short s_8 = 0;
 			int i_9;
 			int i_10;
@@ -447,8 +447,8 @@ public class SceneObjectManager {
 
 	public void method3400() {
 		for (int i_1 = 0; i_1 < this.anInt2601; i_1++) {
-			for (int i_2 = 0; i_2 < this.anInt2617; i_2++) {
-				for (int i_3 = 0; i_3 < this.anInt2603; i_3++) {
+			for (int i_2 = 0; i_2 < this.sizeX; i_2++) {
+				for (int i_3 = 0; i_3 < this.sizeY; i_3++) {
 					Class293 class293_4 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 					if (class293_4 != null) {
 						Class521_Sub1_Sub5 class521_sub1_sub5_5 = class293_4.aClass521_Sub1_Sub5_3505;
@@ -619,25 +619,25 @@ public class SceneObjectManager {
 
 	void method3417(Class521_Sub1 class521_sub1_1, int i_2, int i_3, int i_4) {
 		Class293 class293_6;
-		if (i_3 < this.anInt2617) {
+		if (i_3 < this.sizeX) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4];
 			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-1157326636)) {
 				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, this.anInt2593, 0, 0, true, -2061518556);
 			}
 		}
-		if (i_4 < this.anInt2617) {
+		if (i_4 < this.sizeX) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3][i_4 + 1];
 			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-1529728389)) {
 				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, 0, 0, this.anInt2593, true, -1951339273);
 			}
 		}
-		if (i_3 < this.anInt2617 && i_4 < this.anInt2603) {
+		if (i_3 < this.sizeX && i_4 < this.sizeY) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4 + 1];
 			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-1925311637)) {
 				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, this.anInt2593, 0, this.anInt2593, true, -1913658819);
 			}
 		}
-		if (i_3 < this.anInt2617 && i_4 > 0) {
+		if (i_3 < this.sizeX && i_4 > 0) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4 - 1];
 			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-883899381)) {
 				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, this.anInt2593, 0, -this.anInt2593, true, -1779065543);
@@ -674,7 +674,7 @@ public class SceneObjectManager {
 			short s_9 = ((Class521_Sub1_Sub1) class521_sub1_1).aShort9456;
 			for (int i_10 = s_14; i_10 <= s_6; i_10++) {
 				for (int i_11 = s_9; i_11 <= s_13; i_11++) {
-					if (class521_sub1_1.aByte7968 < this.anInt2601 && i_10 >= this.anInt2637 && i_10 < this.anInt2638 && i_11 >= this.anInt2621 && i_11 < this.anInt2640) {
+					if (class521_sub1_1.collisionPlane < this.anInt2601 && i_10 >= this.anInt2637 && i_10 < this.anInt2638 && i_11 >= this.anInt2621 && i_11 < this.anInt2640) {
 						if ((bytes_3 == null || class521_sub1_1.plane < i_4 || b_5 != bytes_3[class521_sub1_1.plane][i_10][i_11]) && class521_sub1_1.method13029((byte) 1) && !class521_sub1_1.method13037(this.aClass505_2596, 1922998214)) {
 							return false;
 						}
@@ -690,7 +690,7 @@ public class SceneObjectManager {
 			Vector3 vector3_12 = class521_sub1_1.method11166().aClass385_3595;
 			int i_7 = (int) vector3_12.x >> this.anInt2592;
 			int i_8 = (int) vector3_12.z >> this.anInt2592;
-			if (class521_sub1_1.aByte7968 < this.anInt2601 && i_7 >= this.anInt2637 && i_7 < this.anInt2638 && i_8 >= this.anInt2621 && i_8 < this.anInt2640) {
+			if (class521_sub1_1.collisionPlane < this.anInt2601 && i_7 >= this.anInt2637 && i_7 < this.anInt2638 && i_8 >= this.anInt2621 && i_8 < this.anInt2640) {
 				if ((bytes_3 == null || class521_sub1_1.plane < i_4 || b_5 != bytes_3[class521_sub1_1.plane][i_7][i_8]) && class521_sub1_1.method13029((byte) -39) && !class521_sub1_1.method13037(this.aClass505_2596, -53758878)) {
 					return false;
 				} else {
@@ -742,8 +742,8 @@ public class SceneObjectManager {
 	}
 
 	public void method3428() {
-		for (int i_2 = 0; i_2 < this.anInt2617; i_2++) {
-			for (int i_3 = 0; i_3 < this.anInt2603; i_3++) {
+		for (int i_2 = 0; i_2 < this.sizeX; i_2++) {
+			for (int i_3 = 0; i_3 < this.sizeY; i_3++) {
 				if (this.aClass293ArrayArrayArray2604[0][i_2][i_3] == null) {
 					this.aClass293ArrayArrayArray2604[0][i_2][i_3] = new Class293(0);
 				}
@@ -777,8 +777,8 @@ public class SceneObjectManager {
 					i_8 = 0;
 				}
 				int i_9 = class282_sub24_3.method12394(1086113153) + class282_sub24_3.method12370() - this.anInt2594 >> this.anInt2592;
-				if (i_9 >= this.anInt2603) {
-					i_9 = this.anInt2603 - 1;
+				if (i_9 >= this.sizeY) {
+					i_9 = this.sizeY - 1;
 				}
 				for (int i_10 = i_8; i_10 <= i_9; i_10++) {
 					short s_11 = class287_1.aShortArray3429[i_7++];
@@ -787,8 +787,8 @@ public class SceneObjectManager {
 					if (i_12 < 0) {
 						i_12 = 0;
 					}
-					if (i_13 >= this.anInt2617) {
-						i_13 = this.anInt2617 - 1;
+					if (i_13 >= this.sizeX) {
+						i_13 = this.sizeX - 1;
 					}
 					for (int i_14 = i_12; i_14 <= i_13; i_14++) {
 						long long_15 = this.aLongArrayArrayArray2645[i_6][i_14][i_10];
@@ -824,8 +824,8 @@ public class SceneObjectManager {
 					i_8 -= i_11;
 					i_11 = 0;
 				}
-				if (i_12 >= this.anInt2603) {
-					i_12 = this.anInt2603 - 1;
+				if (i_12 >= this.sizeY) {
+					i_12 = this.sizeY - 1;
 				}
 				for (int i_13 = i_11; i_13 <= i_12; i_13++) {
 					short s_14 = class287_3.aShortArray3429[i_8];
@@ -837,8 +837,8 @@ public class SceneObjectManager {
 						i_16 -= i_17;
 						i_17 = 0;
 					}
-					if (i_18 >= this.anInt2617) {
-						i_18 = this.anInt2617 - 1;
+					if (i_18 >= this.sizeX) {
+						i_18 = this.sizeX - 1;
 					}
 					for (int i_19 = i_17; i_19 <= i_18; i_19++) {
 						byte b_20 = 1;
@@ -989,12 +989,12 @@ public class SceneObjectManager {
 				int i_13;
 				if (i_16 >= i_3 && bytes_2 != null) {
 					i_8 = this.aBoolArrayArray2651.length;
-					if (this.aBoolArrayArray2651.length + this.anInt2637 > this.anInt2617) {
-						i_8 -= this.aBoolArrayArray2651.length + this.anInt2637 - this.anInt2617;
+					if (this.aBoolArrayArray2651.length + this.anInt2637 > this.sizeX) {
+						i_8 -= this.aBoolArrayArray2651.length + this.anInt2637 - this.sizeX;
 					}
 					i_9 = this.aBoolArrayArray2651[0].length;
-					if (this.aBoolArrayArray2651[0].length + this.anInt2621 > this.anInt2603) {
-						i_9 -= this.aBoolArrayArray2651[0].length + this.anInt2621 - this.anInt2603;
+					if (this.aBoolArrayArray2651[0].length + this.anInt2621 > this.sizeY) {
+						i_9 -= this.aBoolArrayArray2651[0].length + this.anInt2621 - this.sizeY;
 					}
 					bools_10 = this.aBoolArrayArray2635;
 					if (this.aBool2599) {
@@ -1021,12 +1021,12 @@ public class SceneObjectManager {
 					this.aClass390Array2591[i_16].method6717(this.anInt2628, this.anInt2629, this.anInt2652, this.aBoolArrayArray2635, false);
 				} else {
 					i_8 = this.aBoolArrayArray2651.length;
-					if (this.aBoolArrayArray2651.length + this.anInt2637 > this.anInt2617) {
-						i_8 -= this.aBoolArrayArray2651.length + this.anInt2637 - this.anInt2617;
+					if (this.aBoolArrayArray2651.length + this.anInt2637 > this.sizeX) {
+						i_8 -= this.aBoolArrayArray2651.length + this.anInt2637 - this.sizeX;
 					}
 					i_9 = this.aBoolArrayArray2651[0].length;
-					if (this.aBoolArrayArray2651[0].length + this.anInt2621 > this.anInt2603) {
-						i_9 -= this.aBoolArrayArray2651[0].length + this.anInt2621 - this.anInt2603;
+					if (this.aBoolArrayArray2651[0].length + this.anInt2621 > this.sizeY) {
+						i_9 -= this.aBoolArrayArray2651[0].length + this.anInt2621 - this.sizeY;
 					}
 					bools_10 = this.aBoolArrayArray2635;
 					if (this.aBool2599) {
@@ -1076,12 +1076,12 @@ public class SceneObjectManager {
 			this.anInt2636 = 0;
 		}
 		this.anInt2638 = this.anInt2652 + this.anInt2628;
-		if (this.anInt2638 > this.anInt2617) {
-			this.anInt2638 = this.anInt2617;
+		if (this.anInt2638 > this.sizeX) {
+			this.anInt2638 = this.sizeX;
 		}
 		this.anInt2640 = this.anInt2652 + this.anInt2629;
-		if (this.anInt2640 > this.anInt2603) {
-			this.anInt2640 = this.anInt2603;
+		if (this.anInt2640 > this.sizeY) {
+			this.anInt2640 = this.sizeY;
 		}
 		boolean[][] bools_19 = this.aBoolArrayArray2651;
 		boolean[][] bools_20 = this.aBoolArrayArray2635;
@@ -1099,7 +1099,7 @@ public class SceneObjectManager {
 					int i_25 = i_21 + (this.anInt2628 - this.anInt2652);
 					int i_26 = i_24 + (this.anInt2629 - this.anInt2652);
 					int i_27;
-					if (i_25 >= 0 && i_26 >= 0 && i_25 < this.anInt2617 && i_26 < this.anInt2603) {
+					if (i_25 >= 0 && i_26 >= 0 && i_25 < this.sizeX && i_26 < this.sizeY) {
 						i_27 = i_25 << this.anInt2592;
 						int i_28 = i_26 << this.anInt2592;
 						int i_29 = this.aClass390Array2607[this.aClass390Array2607.length - 1].method6722(i_25, i_26) - (1000 << this.anInt2592 - 7);
@@ -1137,8 +1137,8 @@ public class SceneObjectManager {
 			this.aBoolArrayArray2651 = this.aBoolArrayArray2631;
 			this.anInt2637 = 0;
 			this.anInt2621 = 0;
-			this.anInt2638 = this.anInt2617;
-			this.anInt2640 = this.anInt2603;
+			this.anInt2638 = this.sizeX;
+			this.anInt2640 = this.sizeY;
 			this.aClass201_2600.aBool2542 = false;
 		}
 		ChatLine.method1848(this, this.aClass505_2596);
@@ -1157,7 +1157,7 @@ public class SceneObjectManager {
 		}
 		if (this.waterRelatedClassArray1 != null) {
 			this.method3380(true);
-			this.aClass505_2596.method8475(new Class90());
+			this.aClass505_2596.method8475(new HDWaterTile());
 			this.method3441(true, bytes_5, i_11, b_12);
 			this.aClass505_2596.O();
 			this.method3380(false);
@@ -1178,9 +1178,9 @@ public class SceneObjectManager {
 		for (int i_12 = i_2; i_12 <= i_2 + 1; i_12++) {
 			if (i_12 != this.anInt2601) {
 				for (int i_13 = i_8; i_13 <= i_9; i_13++) {
-					if (i_13 >= 0 && i_13 < this.anInt2617) {
+					if (i_13 >= 0 && i_13 < this.sizeX) {
 						for (int i_14 = i_10; i_14 <= i_11; i_14++) {
-							if (i_14 >= 0 && i_14 < this.anInt2603 && (!bool_7 || i_13 >= i_9 || i_14 >= i_11 || i_14 < i_4 && i_3 != i_13)) {
+							if (i_14 >= 0 && i_14 < this.sizeY && (!bool_7 || i_13 >= i_9 || i_14 >= i_11 || i_14 < i_4 && i_3 != i_13)) {
 								Class293 class293_15 = this.aClass293ArrayArrayArray2604[i_12][i_13][i_14];
 								if (class293_15 != null) {
 									int i_16 = (this.aClass390Array2591[i_12].method6722(i_13, i_14) + this.aClass390Array2591[i_12].method6722(1 + i_13, i_14) + this.aClass390Array2591[i_12].method6722(i_13, 1 + i_14) + this.aClass390Array2591[i_12].method6722(1 + i_13, 1 + i_14)) / 4 - (this.aClass390Array2591[i_2].method6722(i_3, i_4) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4) + this.aClass390Array2591[i_2].method6722(i_3, i_4 + 1) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4 + 1)) / 4;
@@ -1235,7 +1235,7 @@ public class SceneObjectManager {
 		return null;
 	}
 
-	public int method3464(int i_1, int i_2, int i_3) {
+	public int method3464(int i_1, int i_2) {
 		return this.waterRelatedArray5 != null ? this.waterRelatedArray5[i_1][i_2] & 0xff : 0;
 	}
 
@@ -1266,8 +1266,8 @@ public class SceneObjectManager {
 		for (int i_5 = 1; i_5 < i_2; i_5++) {
 			Ground class390_6 = this.aClass390Array2607[i_5];
 			if (class390_6 != null) {
-				for (int i_7 = 0; i_7 < this.anInt2603; i_7++) {
-					for (int i_8 = 0; i_8 < this.anInt2617; i_8++) {
+				for (int i_7 = 0; i_7 < this.sizeY; i_7++) {
+					for (int i_8 = 0; i_8 < this.sizeX; i_8++) {
 						class282_sub50_sub17_4 = class390_6.w(i_8, i_7, class282_sub50_sub17_4);
 						if (class282_sub50_sub17_4 != null) {
 							int i_9 = i_8 << this.anInt2592;
@@ -1334,13 +1334,13 @@ public class SceneObjectManager {
 				i_6 = (int) vector3_5.x >> this.anInt2592;
 				i_7 = (int) vector3_5.z >> this.anInt2592;
 			}
-			Class90 class90_8 = new Class90();
-			class90_8.color = this.getColor(i_6, i_7, (byte) 102);
-			class90_8.scale = this.getScale(i_6, i_7, 1481885588);
+			HDWaterTile class90_8 = new HDWaterTile();
+			class90_8.color = this.getColor(i_6, i_7);
+			class90_8.scale = this.getScale(i_6, i_7);
 			class90_8.intensity = this.getIntensities(i_6, i_7);
-			class90_8.anInt949 = this.method3432(i_6, i_7);
-			class90_8.anInt950 = this.method3464(i_6, i_7, 1819707800);
-			class90_8.anInt951 = this.method3391(i_6, i_7, 2124895018);
+			class90_8.hdWaterInt1 = this.method3432(i_6, i_7);
+			class90_8.hdWaterInt2 = this.method3464(i_6, i_7);
+			class90_8.hdWaterInt3 = this.method3391(i_6, i_7);
 			this.aClass505_2596.method8476(this.aClass390Array2607[0].averageHeight((int) vector3_5.x, (int) vector3_5.z, -402315089), class90_8);
 		}
 		Class285 class285_9 = class521_sub1_1.method12990(this.aClass505_2596);
@@ -1359,38 +1359,38 @@ public class SceneObjectManager {
 		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub4_3503;
 	}
 
-	public SceneObjectManager(GraphicalRenderer graphicalrenderer_1, int i_4, int i_5, int i_6, boolean highDetailWater, boolean bool_8) {
+	public SceneObjectManager(GraphicalRenderer renderer, int sizeX, int sizeY, int i_6, boolean highDetailWater, boolean bool_8) {
 		this.anInt2634 = 10072;
 		this.anInt2618 = 5015;
 		this.anInt2619 = 5040;
 		this.aFloatArray2639 = new float[3];
 		this.aClass282_Sub24Array2642 = new Class282_Sub24[8];
 		this.anInt2643 = 1;
-		this.aClass505_2596 = graphicalrenderer_1;
+		this.aClass505_2596 = renderer;
 		this.aBool2598 = this.aClass505_2596.method8463() > 0;
 		this.anInt2592 = 9;
 		this.anInt2593 = 1 << this.anInt2592;
 		this.anInt2594 = this.anInt2593 >> 1;
 		this.anInt2601 = 4;
-		this.anInt2617 = i_4;
-		this.anInt2603 = i_5;
+		this.sizeX = sizeX;
+		this.sizeY = sizeY;
 		this.anInt2652 = i_6;
 		this.aClass454_2597 = new Class454();
 		this.aClass201_2600 = new Class201(this);
-		this.aClass293ArrayArrayArray2610 = new Class293[4][this.anInt2617][this.anInt2603];
+		this.aClass293ArrayArrayArray2610 = new Class293[4][this.sizeX][this.sizeY];
 		this.aClass390Array2607 = new Ground[4];
 		if (highDetailWater) {
-			this.colors = new int[this.anInt2617][this.anInt2603];
-			this.intensities = new byte[this.anInt2617][this.anInt2603];
-			this.scales = new short[this.anInt2617][this.anInt2603];
-			this.waterRelatedArray4 = new byte[this.anInt2617][this.anInt2603];
-			this.waterRelatedArray5 = new byte[this.anInt2617][this.anInt2603];
-			this.waterRelatedArray6 = new byte[this.anInt2617][this.anInt2603];
-			this.waterRelatedClassArray1 = new Class293[1][this.anInt2617][this.anInt2603];
+			this.colors = new int[this.sizeX][this.sizeY];
+			this.intensities = new byte[this.sizeX][this.sizeY];
+			this.scales = new short[this.sizeX][this.sizeY];
+			this.waterRelatedArray4 = new byte[this.sizeX][this.sizeY];
+			this.waterRelatedArray5 = new byte[this.sizeX][this.sizeY];
+			this.waterRelatedArray6 = new byte[this.sizeX][this.sizeY];
+			this.waterRelatedClassArray1 = new Class293[1][this.sizeX][this.sizeY];
 			this.aClass390Array2614 = new Ground[1];
 		}
 		if (bool_8) {
-			this.aLongArrayArrayArray2645 = new long[4][i_4][i_5];
+			this.aLongArrayArrayArray2645 = new long[4][sizeX][sizeY];
 			this.aClass287Array2646 = new Class287[65361];
 			this.aBoolArray2647 = new boolean[65361];
 			this.anInt2615 = 0;
@@ -1427,8 +1427,8 @@ public class SceneObjectManager {
 		}
 	}
 
-	public int getIntensities(int i_1, int i_2) {
-		return this.intensities != null ? this.intensities[i_1][i_2] & 0xff : 0;
+	public int getIntensities(int x, int y) {
+		return this.intensities != null ? this.intensities[x][y] & 0xff : 0;
 	}
 
 	static Class215 method3545(RsByteBuffer rsbytebuffer_0) {

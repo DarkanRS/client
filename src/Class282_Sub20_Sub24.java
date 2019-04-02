@@ -39,7 +39,7 @@ public class Class282_Sub20_Sub24 extends Class282_Sub20 {
 	void method12315(int i_1, int i_2, byte b_3) {
 		super.method12315(i_1, i_2, (byte) 82);
 		if (this.anInt9882 >= 0 && Class532_Sub1.anInterface22_7922 != null) {
-			int i_4 = Class532_Sub1.anInterface22_7922.method144(this.anInt9882, -1755318475).isHalfSize ? 64 : 128;
+			int i_4 = Class532_Sub1.anInterface22_7922.method144(this.anInt9882).isHalfSize ? 64 : 128;
 			this.anIntArray9881 = Class532_Sub1.anInterface22_7922.method140(this.anInt9882, 1.0F, i_4, i_4, false, (byte) 63);
 			this.anInt9883 = i_4;
 			this.anInt9880 = i_4;

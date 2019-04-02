@@ -8,7 +8,7 @@ public class Class156 {
 		if (!aBool1970) {
 			if (anInt1972 > 0) {
 				Class282_Sub47 class282_sub47_2 = new Class282_Sub47(interface40_0);
-				aClass482_1971.append(class282_sub47_2, 1981054368);
+				aClass482_1971.append(class282_sub47_2);
 			} else {
 				interface40_0.ma(false);
 			}

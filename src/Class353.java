@@ -34,7 +34,7 @@ public class Class353 {
 		if (class282_sub29_7 == null) {
 			class282_sub29_7 = new Class282_Sub29();
 			client.aClass465_7414.put(class282_sub29_7, long_5);
-			class282_sub29_7.aClass482_7708.append(class282_sub34_3, 64810777);
+			class282_sub29_7.aClass482_7708.append(class282_sub34_3);
 		} else {
 			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_3.anInt7853, 1474868024);
 			int i_9 = itemdefinitions_8.value;
@@ -52,7 +52,7 @@ public class Class353 {
 					return;
 				}
 			}
-			class282_sub29_7.aClass482_7708.append(class282_sub34_3, -1833227399);
+			class282_sub29_7.aClass482_7708.append(class282_sub34_3);
 		}
 	}
 }

@@ -313,7 +313,7 @@ public class WorldMapAreaDefs {
 				if (client.aBool7344 && !bool_1) {
 					ParamDefinitions attributedefault_10 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319) : null;
 					if ((Class506.anInt5858 & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.anInt9319, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
-						PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1728725165);
+						PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1728725165);
 					}
 				}
 				if (!bool_1) {
@@ -352,7 +352,7 @@ public class WorldMapAreaDefs {
 								if (i_6 == npcdefinitions_3.anInt4854) {
 									i_8 = npcdefinitions_3.anInt4861;
 								}
-								PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1773453670);
+								PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1773453670);
 							}
 						}
 						if (npcdefinitions_3.aByte4916 == 1) {
@@ -391,7 +391,7 @@ public class WorldMapAreaDefs {
 									if (i_6 == npcdefinitions_3.anInt4854) {
 										i_9 = npcdefinitions_3.anInt4861;
 									}
-									PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.anInt10314, 0, 0, true, false, (long) npc_0.anInt10314, false, -1021673171);
+									PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1021673171);
 								}
 							}
 						}
@@ -414,13 +414,13 @@ public class WorldMapAreaDefs {
 
 	public static String method3741() {
 		String str_1 = "www";
-		if (Class496.aClass496_5811 == Class90.aClass496_952) {
+		if (Class496.aClass496_5811 == HDWaterTile.aClass496_952) {
 			str_1 = "www-wtrc";
-		} else if (Class496.aClass496_5808 == Class90.aClass496_952) {
+		} else if (Class496.aClass496_5808 == HDWaterTile.aClass496_952) {
 			str_1 = "www-wtqa";
-		} else if (Class496.aClass496_5807 == Class90.aClass496_952) {
+		} else if (Class496.aClass496_5807 == HDWaterTile.aClass496_952) {
 			str_1 = "www-wtwip";
-		} else if (Class90.aClass496_952 == Class496.aClass496_5809) {
+		} else if (HDWaterTile.aClass496_952 == Class496.aClass496_5809) {
 			str_1 = "www-wti";
 		}
 		String str_2 = "";
@@ -552,7 +552,7 @@ public class WorldMapAreaDefs {
 				class282_sub33_28.anInt7832 = i_21;
 				class282_sub33_28.anInt7831 = i_22;
 				class282_sub33_28.anInt7827 = i_23;
-				Class346.aClass482_4049.append(class282_sub33_28, -1280264944);
+				Class346.aClass482_4049.append(class282_sub33_28);
 			}
 			return false;
 		} else {

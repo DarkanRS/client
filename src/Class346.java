@@ -49,12 +49,12 @@ public class Class346 {
 				throw new RuntimeException();
 			} else {
 				Class4 class4_7 = Class197.aClass4Array2430[i_1];
-				Player player_8 = client.players[i_1] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1638773780));
-				player_8.anInt10314 = i_1;
+				Player player_8 = client.players[i_1] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+				player_8.index = i_1;
 				if (Class197.aClass282_Sub35Array2428[i_1] != null) {
 					player_8.decodeAppearance(Class197.aClass282_Sub35Array2428[i_1]);
 				}
-				player_8.method15791(class4_7.anInt30, true, (byte) -43);
+				player_8.turn(class4_7.anInt30, true);
 				player_8.faceEntity = class4_7.anInt32;
 				i_9 = class4_7.anInt31;
 				i_10 = i_9 >> 28;
@@ -66,11 +66,11 @@ public class Class346 {
 				player_8.aBool10571 = class4_7.aBool29;
 				player_8.aBool10550 = class4_7.aBool33;
 				player_8.walkTypes[0] = Class197.playerMovementTypes[i_1];
-				player_8.plane = player_8.aByte7968 = (byte) i_10;
+				player_8.plane = player_8.collisionPlane = (byte) i_10;
 				if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_14, i_15, 1509882915)) {
-					player_8.aByte7968 = (byte) (player_8.aByte7968 + 1);
+					player_8.collisionPlane = (byte) (player_8.collisionPlane + 1);
 				}
-				player_8.method16130(i_14, i_15, -2001556911);
+				player_8.move(i_14, i_15);
 				player_8.aBool10568 = false;
 				Class197.aClass4Array2430[i_1] = null;
 				return true;

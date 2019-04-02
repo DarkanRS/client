@@ -78,7 +78,7 @@ public class OpenGLGround extends Ground {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
+	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, HDWaterTile class90_14) {
 		int i_16 = ints_10.length;
 		int[] ints_17 = new int[i_16 * 3];
 		int[] ints_18 = new int[i_16 * 3];
@@ -259,7 +259,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			this.aClass282Array8666 = new Node[this.materialTable.method7540()];
-			this.materialTable.method7532(this.aClass282Array8666, (byte) 45);
+			this.materialTable.values(this.aClass282Array8666);
 
 			for (i_2 = 0; i_2 < this.aClass282Array8666.length; i_2++) {
 				((Class282_Sub3) this.aClass282Array8666[i_2]).method12092(this.anInt8672);
@@ -407,7 +407,7 @@ public class OpenGLGround extends Ground {
 
 							Node node_77 = null;
 							if ((i_37 & this.quartertileUnits - 1) == 0 && (i_38 & this.quartertileUnits - 1) == 0) {
-								node_77 = class453_7.method7530(long_44);
+								node_77 = class453_7.get(long_44);
 							}
 
 							int i_84;
@@ -501,7 +501,7 @@ public class OpenGLGround extends Ground {
 									arr_5[i_84] = arr_65[i_36];
 								}
 
-								class453_7.method7534(new Class282_Sub46(shorts_74[i_36]), long_44);
+								class453_7.put(new Class282_Sub46(shorts_74[i_36]), long_44);
 							} else {
 								shorts_74[i_36] = ((Class282_Sub46) node_77).aShort8067;
 								i_84 = shorts_74[i_36] & 0xffff;
@@ -780,7 +780,7 @@ public class OpenGLGround extends Ground {
 		this.aClass473_8673.insertBack(new Class282_Sub19(this.renderer, this, class282_sub24_1, ints_2));
 	}
 
-	public void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
+	public void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
 		Interface22 interface22_13 = this.renderer.anInterface22_5834;
 		if (ints_6 != null && this.anIntArrayArrayArray8662 == null) {
 			this.anIntArrayArrayArray8662 = new int[this.width][this.length][];
@@ -807,7 +807,7 @@ public class OpenGLGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -2043005984).isGroundMesh) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
@@ -815,16 +815,16 @@ public class OpenGLGround extends Ground {
 			long long_18 = (long) class90_11.intensity << 48 | (long) class90_11.scale << 42 | (long) class90_11.color << 28 | (long) (i_17 << 14) | (long) i_16;
 
 			Node node_20;
-			for (node_20 = this.materialTable.method7530(long_18); node_20 != null; node_20 = this.materialTable.method7544(1982653237)) {
+			for (node_20 = this.materialTable.get(long_18); node_20 != null; node_20 = this.materialTable.nextInBucket()) {
 				Class282_Sub3 class282_sub3_21 = (Class282_Sub3) node_20;
-				if (i_16 == class282_sub3_21.anInt7493 && class282_sub3_21.aFloat7490 == (float) i_17 && class282_sub3_21.aClass90_7487.method1506(class90_11, 1457774218)) {
+				if (i_16 == class282_sub3_21.anInt7493 && class282_sub3_21.aFloat7490 == (float) i_17 && class282_sub3_21.aClass90_7487.equals(class90_11)) {
 					break;
 				}
 			}
 
 			if (node_20 == null) {
 				arr_14[i_15] = new Class282_Sub3(this, i_16, i_17, class90_11);
-				this.materialTable.method7534(arr_14[i_15], long_18);
+				this.materialTable.put(arr_14[i_15], long_18);
 			} else {
 				arr_14[i_15] = (Class282_Sub3) node_20;
 			}
@@ -848,7 +848,7 @@ public class OpenGLGround extends Ground {
 
 	}
 
-	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, HDWaterTile class90_14, boolean bool_15) {
 		int i_16 = ints_10.length;
 		int[] ints_17 = new int[i_16 * 3];
 		int[] ints_18 = new int[i_16 * 3];
@@ -923,7 +923,7 @@ public class OpenGLGround extends Ground {
 		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, bool_15);
 	}
 
-	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
+	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
 		Interface22 interface22_13 = this.renderer.anInterface22_5834;
 		if (ints_6 != null && this.anIntArrayArrayArray8662 == null) {
 			this.anIntArrayArrayArray8662 = new int[this.width][this.length][];
@@ -950,7 +950,7 @@ public class OpenGLGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -1841281080).isGroundMesh) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
@@ -958,16 +958,16 @@ public class OpenGLGround extends Ground {
 			long long_18 = (long) (class90_11.intensity) << 48 | (long) (class90_11.scale) << 42 | (long) (class90_11.color) << 28 | (long) (i_17 << 14) | (long) i_16;
 
 			Node node_20;
-			for (node_20 = this.materialTable.method7530(long_18); node_20 != null; node_20 = this.materialTable.method7544(1204674199)) {
+			for (node_20 = this.materialTable.get(long_18); node_20 != null; node_20 = this.materialTable.nextInBucket()) {
 				Class282_Sub3 class282_sub3_21 = (Class282_Sub3) node_20;
-				if (class282_sub3_21.anInt7493 == i_16 && class282_sub3_21.aFloat7490 == (float) i_17 && class282_sub3_21.aClass90_7487.method1506(class90_11, 1785628838)) {
+				if (class282_sub3_21.anInt7493 == i_16 && class282_sub3_21.aFloat7490 == (float) i_17 && class282_sub3_21.aClass90_7487.equals(class90_11)) {
 					break;
 				}
 			}
 
 			if (node_20 == null) {
 				arr_14[i_15] = new Class282_Sub3(this, i_16, i_17, class90_11);
-				this.materialTable.method7534(arr_14[i_15], long_18);
+				this.materialTable.put(arr_14[i_15], long_18);
 			} else {
 				arr_14[i_15] = (Class282_Sub3) node_20;
 			}
@@ -996,7 +996,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			this.aClass282Array8666 = new Node[this.materialTable.method7540()];
-			this.materialTable.method7532(this.aClass282Array8666, (byte) 58);
+			this.materialTable.values(this.aClass282Array8666);
 
 			for (i_2 = 0; i_2 < this.aClass282Array8666.length; i_2++) {
 				((Class282_Sub3) this.aClass282Array8666[i_2]).method12092(this.anInt8672);
@@ -1144,7 +1144,7 @@ public class OpenGLGround extends Ground {
 
 							Node node_77 = null;
 							if ((i_37 & this.quartertileUnits - 1) == 0 && (i_38 & this.quartertileUnits - 1) == 0) {
-								node_77 = class453_7.method7530(long_44);
+								node_77 = class453_7.get(long_44);
 							}
 
 							int i_84;
@@ -1238,7 +1238,7 @@ public class OpenGLGround extends Ground {
 									arr_5[i_84] = arr_65[i_36];
 								}
 
-								class453_7.method7534(new Class282_Sub46(shorts_74[i_36]), long_44);
+								class453_7.put(new Class282_Sub46(shorts_74[i_36]), long_44);
 							} else {
 								shorts_74[i_36] = ((Class282_Sub46) node_77).aShort8067;
 								i_84 = shorts_74[i_36] & 0xffff;
@@ -1383,7 +1383,7 @@ public class OpenGLGround extends Ground {
 			}
 
 			this.aClass282Array8666 = new Node[this.materialTable.method7540()];
-			this.materialTable.method7532(this.aClass282Array8666, (byte) 41);
+			this.materialTable.values(this.aClass282Array8666);
 
 			for (i_2 = 0; i_2 < this.aClass282Array8666.length; i_2++) {
 				((Class282_Sub3) this.aClass282Array8666[i_2]).method12092(this.anInt8672);
@@ -1531,7 +1531,7 @@ public class OpenGLGround extends Ground {
 
 							Node node_77 = null;
 							if ((i_37 & this.quartertileUnits - 1) == 0 && (i_38 & this.quartertileUnits - 1) == 0) {
-								node_77 = class453_7.method7530(long_44);
+								node_77 = class453_7.get(long_44);
 							}
 
 							int i_84;
@@ -1625,7 +1625,7 @@ public class OpenGLGround extends Ground {
 									arr_5[i_84] = arr_65[i_36];
 								}
 
-								class453_7.method7534(new Class282_Sub46(shorts_74[i_36]), long_44);
+								class453_7.put(new Class282_Sub46(shorts_74[i_36]), long_44);
 							} else {
 								shorts_74[i_36] = ((Class282_Sub46) node_77).aShort8067;
 								i_84 = shorts_74[i_36] & 0xffff;

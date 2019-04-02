@@ -58,7 +58,7 @@ public final class Class153 {
 			return overlaydef_1.secondaryRGB;
 		} else {
 			if (overlaydef_1.texture != -1) {
-				TextureDetails class169_3 = graphicalrenderer_0.anInterface22_5834.method144(overlaydef_1.texture, -2032882535);
+				TextureDetails class169_3 = graphicalrenderer_0.anInterface22_5834.method144(overlaydef_1.texture);
 				if (!class169_3.isGroundMesh) {
 					return class169_3.color;
 				}

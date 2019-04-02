@@ -17,11 +17,11 @@ public class Class96_Sub4 extends Class96 {
 	}
 
 	public void method1592() {
-		Class82.aClass75Array804[this.anInt8520].method1336(this.anInt8519, this.anInt8521, this.anInt8522, this.anInt8523, 1433918687);
+		Class82.aClass75Array804[this.anInt8520].move(this.anInt8519, this.anInt8521, this.anInt8522, this.anInt8523);
 	}
 
 	public void method1601() {
-		Class82.aClass75Array804[this.anInt8520 * 2062001331 * 2144840315].method1336(1910720287 * this.anInt8519 * 517305567, this.anInt8521 * -1845072575 * -194698559, 1760322517 * this.anInt8522 * 1440988541, 1015183835 * this.anInt8523 * 1479203411, 1626481262);
+		Class82.aClass75Array804[this.anInt8520 * 2062001331 * 2144840315].move(1910720287 * this.anInt8519 * 517305567, this.anInt8521 * -1845072575 * -194698559, 1760322517 * this.anInt8522 * 1440988541, 1015183835 * this.anInt8523 * 1479203411);
 	}
 
 	static boolean method13788(int i_0, int i_1) {
@@ -88,7 +88,7 @@ public class Class96_Sub4 extends Class96 {
 				client.anInt7295 = 0;
 				tcpmessage_17 = Class271.method4828(OutgoingPacket.aClass379_4540, client.aClass184_7475.isaac, -70783895);
 				tcpmessage_17.buffer.writeShort(client.anInt7345);
-				tcpmessage_17.buffer.writeShortLE(VertexNormal.myPlayer.anInt10314, (short) -7319);
+				tcpmessage_17.buffer.writeShortLE(VertexNormal.myPlayer.index, (short) -7319);
 				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1700744259) ? 1 : 0, 2138987650);
 				tcpmessage_17.buffer.writeIntV2(Class7.anInt56);
 				tcpmessage_17.buffer.writeShortLE(client.anInt7346, (short) -21214);
@@ -185,7 +185,7 @@ public class Class96_Sub4 extends Class96 {
 				if (client.rights > 0 && Class96_Sub8.method14577()) {
 					Class447.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
 				} else {
-					tcpmessage_13 = Class282_Sub2.method12078(i_4, i_5, i_7);
+					tcpmessage_13 = CutsceneArea.method12078(i_4, i_5, i_7);
 					if (i_7 == 1) {
 						tcpmessage_13.buffer.writeByte(-1);
 						tcpmessage_13.buffer.writeByte(-1);

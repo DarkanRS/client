@@ -74,7 +74,7 @@ public class Class174 {
 			if (i_0 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3, 2056160372)) {
 				i_9 = i_0 + 1;
 			}
-			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1735262041) != null) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 				IndexLoaders.MAP_REGION_DECODER.method4441().method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0));
 				if (i_4 >= 0) {
 					int i_10 = Class393.preferences.aClass468_Sub23_8202.method12897((byte) 28);

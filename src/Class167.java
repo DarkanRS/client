@@ -11,7 +11,7 @@ public class Class167 {
 		} else if (!this.anInterface22_2043.method139(i_1, -1358664924)) {
 			return null;
 		} else {
-			TextureDetails class169_4 = this.anInterface22_2043.method144(i_1, -2078681696);
+			TextureDetails class169_4 = this.anInterface22_2043.method144(i_1);
 			if (i_2 == -1) {
 				i_2 = class169_4.isHalfSize ? 64 : this.aClass505_Sub1_2042.anInt8349;
 			}

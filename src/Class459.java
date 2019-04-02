@@ -116,8 +116,8 @@ public final class Class459 {
 			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get((long) i_3);
 			NPC npc_6;
 			if (class282_sub47_5 == null) {
-				npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1073098599));
-				npc_6.anInt10314 = i_3;
+				npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+				npc_6.index = i_3;
 				class282_sub47_5 = new Class282_Sub47(npc_6);
 				client.NPCS.put(class282_sub47_5, (long) i_3);
 				client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
@@ -125,7 +125,7 @@ public final class Class459 {
 			}
 			npc_6 = (NPC) class282_sub47_5.anObject8068;
 			client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_3;
-			npc_6.anInt10353 = client.anInt7332;
+			npc_6.lastUpdate = client.anInt7332;
 			if (npc_6.definitions != null && npc_6.definitions.method6886(-1639112398)) {
 				TextureDetails.method2876(npc_6);
 			}
@@ -146,7 +146,7 @@ public final class Class459 {
 				}
 			}
 			int i_9 = rsbitsbuffer_2.readBits(3) + 4 << 11 & 0x3fff;
-			npc_6.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_2.readBits(15), (byte) -40), -1917205540);
+			npc_6.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_2.readBits(15)));
 			int i_10;
 			if (bool_0) {
 				i_10 = rsbitsbuffer_2.readBits(8);
@@ -161,12 +161,12 @@ public final class Class459 {
 			}
 			int i_11 = rsbitsbuffer_2.readBits(1);
 			int i_12 = rsbitsbuffer_2.readBits(2);
-			npc_6.method15836(npc_6.definitions.size, (byte) -107);
-			npc_6.anInt10340 = npc_6.definitions.anInt4889 << 3;
+			npc_6.setBoundSize(npc_6.definitions.size);
+			npc_6.anInt10340 = npc_6.definitions.contrast << 3;
 			if (bool_4) {
-				npc_6.method15791(i_9, true, (byte) -43);
+				npc_6.turn(i_9, true);
 			}
-			npc_6.method16159(i_12, VertexNormal.myPlayer.regionBaseX[0] + i_10, VertexNormal.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize(), -1655892623);
+			npc_6.move(i_12, VertexNormal.myPlayer.regionBaseX[0] + i_10, VertexNormal.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize());
 			if (npc_6.definitions.method6886(-1862040818)) {
 				Class397.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
 			}

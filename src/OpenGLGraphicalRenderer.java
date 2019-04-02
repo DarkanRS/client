@@ -105,7 +105,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	OpenGlArrayBufferPointer aClass143_8494;
 	OpenGlArrayBufferPointer aClass143_8495;
 	int anInt8450;
-	Class90 aClass90_8423;
+	HDWaterTile aClass90_8423;
 	boolean aBool8448;
 	int anInt8417;
 	int anInt8418;
@@ -1131,13 +1131,13 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		this.aClass134_8359.method2329(this, class151_1);
 	}
 
-	public void method8475(Class90 class90_2) {
+	public void method8475(HDWaterTile class90_2) {
 		this.anInt8450 = -1;
 		this.aClass90_8423 = class90_2;
 		this.aBool8448 = true;
 	}
 
-	public void method8476(int i_1, Class90 class90_2) {
+	public void method8476(int i_1, HDWaterTile class90_2) {
 		if (!this.aBool8448) {
 			throw new RuntimeException("");
 		} else {
@@ -1926,7 +1926,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 				this.method13618();
 			} else {
 				class137_sub1_4 = this.aClass167_8481.method2858(i_1);
-				TextureDetails class169_9 = this.anInterface22_5834.method144(i_1, -1790477491);
+				TextureDetails class169_9 = this.anInterface22_5834.method144(i_1);
 				if (class169_9.textureSpeedU == 0 && class169_9.textureSpeedV == 0) {
 					this.method13618();
 				} else {
@@ -4638,13 +4638,13 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		this.aClass170_8357.method2883();
 	}
 
-	public void method8585(int i_1, Class90 class90_2) {
+	public void method8585(int i_1, HDWaterTile class90_2) {
 		this.anInt8450 = i_1;
 		this.aClass90_8423 = class90_2;
 		this.aBool8448 = true;
 	}
 
-	public void method8615(int i_1, Class90 class90_2) {
+	public void method8615(int i_1, HDWaterTile class90_2) {
 		if (!this.aBool8448) {
 			throw new RuntimeException("");
 		} else {
@@ -4658,7 +4658,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public void method8616(int i_1, Class90 class90_2) {
+	public void method8616(int i_1, HDWaterTile class90_2) {
 		if (!this.aBool8448) {
 			throw new RuntimeException("");
 		} else {

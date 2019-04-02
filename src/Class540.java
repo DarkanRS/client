@@ -40,14 +40,14 @@ public class Class540 {
 			i_4 = client.anIntArray7421[i_3];
 			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get((long) i_4);
 			NPC npc_7 = (NPC) class282_sub47_5.anObject8068;
-			if (npc_7.anInt10353 != client.anInt7332) {
+			if (npc_7.lastUpdate != client.anInt7332) {
 				if (Class20.aBool161 && EnumIndexLoader.method7426(i_4, (byte) -86)) {
 					Class316.method5594();
 				}
 				if (npc_7.definitions.method6886(-1089073917)) {
 					TextureDetails.method2876(npc_7);
 				}
-				npc_7.method16166((NPCDefinitions) null, -12061587);
+				npc_7.setDefinition((NPCDefinitions) null);
 				class282_sub47_5.remove();
 				bool_2 = true;
 			}
@@ -76,8 +76,8 @@ public class Class540 {
 				throw new RuntimeException("" + (client.anInt7210 - client.NPC_UPDATE_INDEX));
 			} else {
 				for (i_3 = 0; i_3 < client.anInt7210; i_3++) {
-					if (((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).anInt10353 != client.anInt7332) {
-						throw new RuntimeException("" + ((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).anInt10314);
+					if (((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).lastUpdate != client.anInt7332) {
+						throw new RuntimeException("" + ((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).index);
 					}
 				}
 			}

@@ -155,7 +155,7 @@ public class Class289 implements Runnable {
 			int i_3 = IndexLoaders.MAP_REGION_DECODER.getSizeX();
 			int i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 			RegionMap regionmap_5 = IndexLoaders.MAP_REGION_DECODER.method4433();
-			SceneObjectManager sceneobjectmanager_6 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1741761339);
+			SceneObjectManager sceneobjectmanager_6 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 			int i_7 = i_3 / 2;
 			byte b_8 = 0;
 			byte b_9 = 0;
@@ -412,11 +412,11 @@ public class Class289 implements Runnable {
 								i_25 = (i_24 >> 14 & 0x3fff) - coordgrid_45.x;
 								i_26 = (i_24 & 0x3fff) - coordgrid_45.y;
 								if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4) {
-									Class187.aClass482_2350.append(new Class282_Sub38(i_23), -2102160301);
+									Class187.aClass482_2350.append(new Class282_Sub38(i_23));
 								} else {
 									WorldMapAreaDefs worldmapareadefs_46 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23], 1792768149);
 									if (worldmapareadefs_46.anIntArray2717 != null && i_25 + worldmapareadefs_46.anInt2731 >= 0 && i_25 + worldmapareadefs_46.anInt2747 < i_3 && i_26 + worldmapareadefs_46.anInt2746 >= 0 && i_26 + worldmapareadefs_46.anInt2744 < i_4) {
-										Class187.aClass482_2350.append(new Class282_Sub38(i_23), -1057083252);
+										Class187.aClass482_2350.append(new Class282_Sub38(i_23));
 									}
 								}
 							}

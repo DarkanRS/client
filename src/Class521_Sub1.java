@@ -4,7 +4,7 @@ public abstract class Class521_Sub1 extends Transform {
 
 	public byte plane;
 
-	public byte aByte7968;
+	public byte collisionPlane;
 
 	int anInt7969;
 

@@ -5,31 +5,18 @@ public class OverlayDef {
 	OverlayIndexLoader aClass536_7062;
 
 	public int anInt7052 = 8;
-
 	public int primaryRGB = 0;
-
 	public int texture = -1;
-
 	public boolean aBool7056 = true;
-
 	public int secondaryRGB = -1;
-
 	public int anInt7057 = 512;
-
 	public boolean aBool7059 = true;
-
 	public boolean aBool7061 = false;
-
 	public int waterColour = 1190717;
-
 	public int waterScale = 512;
-
 	public int waterIntensity = 255;
-
 	public int anInt7065 = 63;
-
 	public int anInt7055 = 0;
-
 	public int anInt7067 = 64;
 
 	void method11356() {

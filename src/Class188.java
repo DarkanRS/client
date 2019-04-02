@@ -145,7 +145,7 @@ public class Class188 {
 							if (i_23 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_21, i_5, 1736872012)) {
 								++i_23;
 							}
-							Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_35 = new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1262511642), i_6, i_8, Class272.anInt3331, i_23, i_10, Class504.method8389(i_10, i_11, Class272.anInt3331, (byte) 59) - i_7, i_11, i_21, i_21, i_5, i_5, i_9, false);
+							Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_35 = new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_6, i_8, Class272.anInt3331, i_23, i_10, Class504.method8389(i_10, i_11, Class272.anInt3331, (byte) 59) - i_7, i_11, i_21, i_21, i_5, i_5, i_9, false);
 							client.aClass465_7334.put(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4_35), (long) (i_21 << 16 | i_5));
 						}
 					}
@@ -180,9 +180,9 @@ public class Class188 {
 							i_11 <<= 2;
 							i_23 <<= 2;
 							i_16 <<= 2;
-							Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_17 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1524809877), i_10, Class272.anInt3331, Class272.anInt3331, i_5, i_6, i_11, i_24 + client.cycles, i_14 + client.cycles, i_15, i_16, 0, i_9, i_23, bool_38, -1);
+							Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_17 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_10, Class272.anInt3331, Class272.anInt3331, i_5, i_6, i_11, i_24 + client.cycles, i_14 + client.cycles, i_15, i_16, 0, i_9, i_23, bool_38, -1);
 							class521_sub1_sub1_sub3_17.method15904(i_7, i_8, Class504.method8389(i_7, i_8, Class272.anInt3331, (byte) 20) - i_23, i_24 + client.cycles);
-							client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_17), -430462117);
+							client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_17));
 						}
 					} else if (TilestreamPacket.aClass364_4214 == tilestreampacket_0) {
 						i_3 = rsbitsbuffer_2.readUnsignedByte();

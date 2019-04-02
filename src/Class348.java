@@ -42,7 +42,7 @@ public class Class348 {
 				obj_4 = new Class282_Sub17_Sub3(this);
 			}
 			((Class282_Sub17) obj_4).method12250(rsbytebuffer_1);
-			this.aClass482_4062.append((Node) obj_4, -575060880);
+			this.aClass482_4062.append((Node) obj_4);
 		}
 	}
 

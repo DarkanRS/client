@@ -31,13 +31,13 @@ public class Class530 {
 		if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 			switch (this.method11343()) {
 			case 0:
-				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1288178726).getWall(i_2, i_4, i_5, (byte) -33);
+				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWall(i_2, i_4, i_5, (byte) -33);
 			case 1:
-				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2014086808).getWallDecoration(i_2, i_4, i_5, (byte) 45);
+				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWallDecoration(i_2, i_4, i_5, (byte) 45);
 			case 2:
-				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1571764476).getInteractableObject(i_2, i_4, i_5, client.anInterface25_7446);
+				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getInteractableObject(i_2, i_4, i_5, client.anInterface25_7446);
 			case 3:
-				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1684834400).getGroundDecoration(i_2, i_4, i_5);
+				return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getGroundDecoration(i_2, i_4, i_5);
 			default:
 				return null;
 			}

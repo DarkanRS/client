@@ -22,7 +22,7 @@ public class Class332 {
 		Class148.anInt1730 = 0;
 		Class282_Sub44_Sub3.aClass282_Sub7_9563 = null;
 		Class454.aClass250_5450 = null;
-		Class75.aClass317_746 = null;
+		CutsceneEntity.aClass317_746 = null;
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 	}
 

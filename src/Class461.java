@@ -124,9 +124,9 @@ public class Class461 {
 				if (i_3 < 1000) {
 					class282_sub50_sub7_2.remove();
 					if (i_3 != 59 && i_3 != 2 && i_3 != 8 && i_3 != 17 && i_3 != 15 && i_3 != 16 && i_3 != 58) {
-						Class20.aClass482_174.append(class282_sub50_sub7_2, -1768300501);
+						Class20.aClass482_174.append(class282_sub50_sub7_2);
 					} else {
-						Class20.aClass482_175.append(class282_sub50_sub7_2, 1626236688);
+						Class20.aClass482_175.append(class282_sub50_sub7_2);
 					}
 				}
 			}

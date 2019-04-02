@@ -5,7 +5,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	boolean method12988(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3275(this, this.aByte7968, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
+		return this.aClass206_7970.aClass201_2600.method3275(this, this.collisionPlane, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
 	}
 
 	int method13025(Class282_Sub24[] arr_1) {
@@ -30,19 +30,19 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 			return this.method13004(i_3, i_4, arr_1);
 		} else if (this.aShort9615 == 1 && i_3 > 0) {
 			return this.method13004(i_3 - 1, i_4, arr_1);
-		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.anInt2617 * 537410607 * -1912960305) {
+		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.sizeX * 537410607 * -1912960305) {
 			return this.method13004(i_3 + 1, i_4, arr_1);
 		} else if (this.aShort9615 == 8 && i_4 > 0) {
 			return this.method13004(i_3, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3, 1 + i_4, arr_1);
-		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.anInt2603 * 1850176157 * -18177099) {
+		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.sizeY * 1850176157 * -18177099) {
 			return this.method13004(i_3 - 1, i_4 + 1, arr_1);
-		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3 + 1, 1 + i_4, arr_1);
 		} else if (this.aShort9615 == 128 && i_3 > 0 && i_4 > 0) {
 			return this.method13004(i_3 - 1, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 > 0) {
+		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 > 0) {
 			return this.method13004(1 + i_3, i_4 - 1, arr_1);
 		} else {
 			throw new RuntimeException("");
@@ -51,7 +51,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	boolean method13037(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		Vector3 vector3_3 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3275(this, this.aByte7968, (int) vector3_3.x >> this.aClass206_7970.anInt2592, (int) vector3_3.z >> this.aClass206_7970.anInt2592);
+		return this.aClass206_7970.aClass201_2600.method3275(this, this.collisionPlane, (int) vector3_3.x >> this.aClass206_7970.anInt2592, (int) vector3_3.z >> this.aClass206_7970.anInt2592);
 	}
 
 	boolean method13029(byte b_1) {
@@ -81,19 +81,19 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 			return this.method13004(i_4, i_5, arr_1);
 		} else if (this.aShort9615 == 1 && i_4 > 0) {
 			return this.method13004(i_4 - 1, i_5, arr_1);
-		} else if (this.aShort9615 == 4 && i_4 <= this.aClass206_7970.anInt2617) {
+		} else if (this.aShort9615 == 4 && i_4 <= this.aClass206_7970.sizeX) {
 			return this.method13004(i_4 + 1, i_5, arr_1);
 		} else if (this.aShort9615 == 8 && i_5 > 0) {
 			return this.method13004(i_4, i_5 - 1, arr_1);
-		} else if (this.aShort9615 == 2 && i_5 <= this.aClass206_7970.anInt2603) {
+		} else if (this.aShort9615 == 2 && i_5 <= this.aClass206_7970.sizeY) {
 			return this.method13004(i_4, i_5 + 1, arr_1);
-		} else if (this.aShort9615 == 16 && i_4 > 0 && i_5 <= this.aClass206_7970.anInt2603) {
+		} else if (this.aShort9615 == 16 && i_4 > 0 && i_5 <= this.aClass206_7970.sizeY) {
 			return this.method13004(i_4 - 1, i_5 + 1, arr_1);
-		} else if (this.aShort9615 == 32 && i_4 <= this.aClass206_7970.anInt2617 && i_5 <= this.aClass206_7970.anInt2603) {
+		} else if (this.aShort9615 == 32 && i_4 <= this.aClass206_7970.sizeX && i_5 <= this.aClass206_7970.sizeY) {
 			return this.method13004(i_4 + 1, i_5 + 1, arr_1);
 		} else if (this.aShort9615 == 128 && i_4 > 0 && i_5 > 0) {
 			return this.method13004(i_4 - 1, i_5 - 1, arr_1);
-		} else if (this.aShort9615 == 64 && i_4 <= this.aClass206_7970.anInt2617 && i_5 > 0) {
+		} else if (this.aShort9615 == 64 && i_4 <= this.aClass206_7970.sizeX && i_5 > 0) {
 			return this.method13004(i_4 + 1, i_5 - 1, arr_1);
 		} else {
 			throw new RuntimeException("");
@@ -108,19 +108,19 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 	Class521_Sub1_Sub5(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		super(sceneobjectmanager_1);
 		this.plane = (byte) i_5;
-		this.aByte7968 = (byte) i_6;
+		this.collisionPlane = (byte) i_6;
 		this.aShort9615 = (short) i_7;
 		this.method11171(new Vector3((float) i_2, (float) i_3, (float) i_4));
 	}
 
 	boolean method12998(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3275(this, this.aByte7968, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
+		return this.aClass206_7970.aClass201_2600.method3275(this, this.collisionPlane, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
 	}
 
 	boolean method13022(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3275(this, this.aByte7968, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
+		return this.aClass206_7970.aClass201_2600.method3275(this, this.collisionPlane, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
 	}
 
 	int method13031(Class282_Sub24[] arr_1) {
@@ -145,19 +145,19 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 			return this.method13004(i_3, i_4, arr_1);
 		} else if (this.aShort9615 == 1 && i_3 > 0) {
 			return this.method13004(i_3 - 1, i_4, arr_1);
-		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.anInt2617 * 537410607 * -1912960305) {
+		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.sizeX * 537410607 * -1912960305) {
 			return this.method13004(i_3 + 1, i_4, arr_1);
 		} else if (this.aShort9615 == 8 && i_4 > 0) {
 			return this.method13004(i_3, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3, 1 + i_4, arr_1);
-		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.anInt2603 * 1850176157 * -18177099) {
+		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.sizeY * 1850176157 * -18177099) {
 			return this.method13004(i_3 - 1, i_4 + 1, arr_1);
-		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3 + 1, 1 + i_4, arr_1);
 		} else if (this.aShort9615 == 128 && i_3 > 0 && i_4 > 0) {
 			return this.method13004(i_3 - 1, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 > 0) {
+		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 > 0) {
 			return this.method13004(1 + i_3, i_4 - 1, arr_1);
 		} else {
 			throw new RuntimeException("");
@@ -166,7 +166,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	boolean method13030(GraphicalRenderer graphicalrenderer_1) {
 		Vector3 vector3_2 = this.method11166().aClass385_3595;
-		return this.aClass206_7970.aClass201_2600.method3275(this, this.aByte7968, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
+		return this.aClass206_7970.aClass201_2600.method3275(this, this.collisionPlane, (int) vector3_2.x >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293, (int) vector3_2.z >> this.aClass206_7970.anInt2592 * -2000283157 * -1928575293);
 	}
 
 	int method13024(Class282_Sub24[] arr_1) {
@@ -191,19 +191,19 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 			return this.method13004(i_3, i_4, arr_1);
 		} else if (this.aShort9615 == 1 && i_3 > 0) {
 			return this.method13004(i_3 - 1, i_4, arr_1);
-		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.anInt2617 * 537410607 * -1912960305) {
+		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.sizeX * 537410607 * -1912960305) {
 			return this.method13004(i_3 + 1, i_4, arr_1);
 		} else if (this.aShort9615 == 8 && i_4 > 0) {
 			return this.method13004(i_3, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3, 1 + i_4, arr_1);
-		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.anInt2603 * 1850176157 * -18177099) {
+		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.sizeY * 1850176157 * -18177099) {
 			return this.method13004(i_3 - 1, i_4 + 1, arr_1);
-		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3 + 1, 1 + i_4, arr_1);
 		} else if (this.aShort9615 == 128 && i_3 > 0 && i_4 > 0) {
 			return this.method13004(i_3 - 1, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 > 0) {
+		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 > 0) {
 			return this.method13004(1 + i_3, i_4 - 1, arr_1);
 		} else {
 			throw new RuntimeException("");
@@ -242,19 +242,19 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 			return this.method13004(i_3, i_4, arr_1);
 		} else if (this.aShort9615 == 1 && i_3 > 0) {
 			return this.method13004(i_3 - 1, i_4, arr_1);
-		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.anInt2617 * 537410607 * -1912960305) {
+		} else if (this.aShort9615 == 4 && i_3 <= this.aClass206_7970.sizeX * 537410607 * -1912960305) {
 			return this.method13004(i_3 + 1, i_4, arr_1);
 		} else if (this.aShort9615 == 8 && i_4 > 0) {
 			return this.method13004(i_3, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 2 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3, 1 + i_4, arr_1);
-		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.anInt2603 * 1850176157 * -18177099) {
+		} else if (this.aShort9615 == 16 && i_3 > 0 && i_4 <= this.aClass206_7970.sizeY * 1850176157 * -18177099) {
 			return this.method13004(i_3 - 1, i_4 + 1, arr_1);
-		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 <= -18177099 * this.aClass206_7970.anInt2603 * 1850176157) {
+		} else if (this.aShort9615 == 32 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 <= -18177099 * this.aClass206_7970.sizeY * 1850176157) {
 			return this.method13004(i_3 + 1, 1 + i_4, arr_1);
 		} else if (this.aShort9615 == 128 && i_3 > 0 && i_4 > 0) {
 			return this.method13004(i_3 - 1, i_4 - 1, arr_1);
-		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.anInt2617 * 537410607 && i_4 > 0) {
+		} else if (this.aShort9615 == 64 && i_3 <= -1912960305 * this.aClass206_7970.sizeX * 537410607 && i_4 > 0) {
 			return this.method13004(1 + i_3, i_4 - 1, arr_1);
 		} else {
 			throw new RuntimeException("");

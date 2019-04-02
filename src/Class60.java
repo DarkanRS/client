@@ -60,7 +60,7 @@ public class Class60 {
 	}
 
 	static void method1172(int i_0) {
-		if (Class90.aClass496_952 != Class496.aClass496_5810) {
+		if (HDWaterTile.aClass496_952 != Class496.aClass496_5810) {
 			Class361.aClass361_4174.method6257(-84783453);
 		}
 	}

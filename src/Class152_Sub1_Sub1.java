@@ -29,7 +29,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 					return null;
 				}
 
-				TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4], -2056544604);
+				TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4]);
 				int i_6 = class169_5.isHalfSize ? 64 : 128;
 				if (i_6 > i_3) {
 					i_3 = i_6;
@@ -78,7 +78,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 					return null;
 				}
 
-				TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4], -1803305965);
+				TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4]);
 				int i_6 = class169_5.isHalfSize ? 64 : 128;
 				if (i_6 > i_3) {
 					i_3 = i_6;
@@ -117,7 +117,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 					return null;
 				}
 
-				TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4], -1757106479);
+				TextureDetails class169_5 = interface22_1.method144(anIntArray10082[i_4]);
 				int i_6 = class169_5.isHalfSize ? 64 : 128;
 				if (i_6 > i_3) {
 					i_3 = i_6;

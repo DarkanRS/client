@@ -104,7 +104,7 @@ public abstract class Class152 {
 	}
 
 	static final void method2601(long long_0) {
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1572720493) != null) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 			if (NativeLibraryLoader.anInt3240 != 2 && NativeLibraryLoader.anInt3240 != 1) {
 				if (NativeLibraryLoader.anInt3240 == 4) {
 					Class280.method4974(long_0);

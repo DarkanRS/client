@@ -80,7 +80,7 @@ public abstract class Class521_Sub1_Sub2 extends Class521_Sub1 {
 	Class521_Sub1_Sub2(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		super(sceneobjectmanager_1);
 		this.plane = (byte) i_5;
-		this.aByte7968 = (byte) i_6;
+		this.collisionPlane = (byte) i_6;
 		this.method11171(new Vector3((float) i_2, (float) i_3, (float) i_4));
 	}
 

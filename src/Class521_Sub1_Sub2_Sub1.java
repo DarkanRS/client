@@ -124,7 +124,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_7 = false;
 			boolean bool_8 = false;
 			boolean bool_9 = false;
-			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.collisionPlane];
 			int i_11 = 599728753 * this.anInt10418 * -1885839727 << 1;
 			int i_13 = -i_11 / 2;
 			int i_14 = -i_11 / 2;
@@ -271,7 +271,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_7 = false;
 			boolean bool_8 = false;
 			boolean bool_9 = false;
-			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.collisionPlane];
 			int i_11 = 599728753 * this.anInt10418 * -1885839727 << 1;
 			int i_13 = -i_11 / 2;
 			int i_14 = -i_11 / 2;
@@ -379,7 +379,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_7 = false;
 			boolean bool_8 = false;
 			boolean bool_9 = false;
-			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_10 = this.aClass206_7970.aClass390Array2591[this.collisionPlane];
 			int i_11 = 599728753 * this.anInt10418 * -1885839727 << 1;
 			int i_13 = -i_11 / 2;
 			int i_14 = -i_11 / 2;
@@ -527,7 +527,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			boolean bool_8 = false;
 			boolean bool_9 = false;
 			boolean bool_10 = false;
-			Ground class390_11 = this.aClass206_7970.aClass390Array2591[this.aByte7968];
+			Ground class390_11 = this.aClass206_7970.aClass390Array2591[this.collisionPlane];
 			int i_12 = this.anInt10418 << 1;
 			int i_14 = -i_12 / 2;
 			int i_15 = -i_12 / 2;

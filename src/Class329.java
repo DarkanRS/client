@@ -3,149 +3,78 @@ import java.awt.Frame;
 public class Class329 {
 
 	public byte[][][] aByteArrayArrayArray3788;
-
 	static int[] OVERLAY_FACE_COUNT = new int[] { 2, 1, 1, 1, 2, 2, 2, 1, 3, 3, 3, 2, 0, 4, 0 };
-
 	static int[] UNDERLAY_FACE_COUNT = new int[] { 0, 1, 2, 2, 1, 1, 2, 3, 1, 3, 3, 4, 2, 0, 4 };
-
 	static int[] anIntArray3826 = new int[] { 4, 2, 1, 1, 2, 2, 3, 1, 3, 3, 3, 2, 0 };
-
 	static int[] anIntArray3847 = new int[] { 0, 2, 2, 2, 1, 1, 3, 3, 1, 3, 3, 4, 4 };
-
 	static int[] anIntArray3778 = new int[] { 4, 2, 1, 1, 2, 2, 3, 1, 3, 3, 3, 2, 0 };
-
 	static int[] anIntArray3819 = new int[] { 0, 4, 3, 3, 1, 1, 3, 5, 1, 5, 3, 6, 4 };
-
 	static int[] anIntArray3811 = new int[] { 0, 256, 512, 512, 512, 256, 0, 0, 128, 256, 128, 384, 256 };
-
 	static int[] anIntArray3800 = new int[] { 0, 0, 0, 256, 512, 512, 512, 256, 256, 384, 128, 128, 256 };
-
 	static boolean[][] aBoolArrayArray3822 = new boolean[][] { { true, true, true, true, true, true, true, true, true, true, true, true, true }, { true, true, true, false, false, false, true, true, false, false, false, false, true }, { true, false, false, false, false, true, true, true, false, false, false, false, false }, { false, false, true, true, true, true, false, false, false, false, false, false, false }, { true, true, true, true, true, true, false, false, false, false, false, false, false }, { true, true, true, false, false, true, true, true, false, false, false, false, false }, { true, true, false, false, false, true, true, true, false, false, false, false, true }, { true, true, false, false, false, false, false, true, false, false, false, false, false }, { false, true, true, true, true, true, true, true, false, false, false, false, false }, { true, false, false, false, true, true, true, true, true, true, false, false, false }, { true, true, true, true, true, false, false, false, true, true, false, false, false }, { true, true, true, false, false, false, false, false, false, false, true, true, false }, new boolean[13], { true, true, true, true, true, true, true, true, true, true, true, true, true }, new boolean[13] };
-
 	static boolean[][] aBoolArrayArray3823 = new boolean[][] { new boolean[13], { false, false, true, true, true, true, true, false, false, false, false, false, true }, { true, true, true, true, true, true, false, false, false, false, false, false, false }, { true, true, true, false, false, true, true, true, false, false, false, false, false }, { true, false, false, false, false, true, true, true, false, false, false, false, false }, { false, false, true, true, true, true, false, false, false, false, false, false, false }, { false, true, true, true, true, true, false, false, false, false, false, false, true }, { false, true, true, true, true, true, true, true, false, false, false, false, true }, { true, true, false, false, false, false, false, true, false, false, false, false, false }, { true, true, true, true, true, false, false, false, true, true, false, false, false }, { true, false, false, false, true, true, true, true, true, true, false, false, false }, { true, false, true, true, true, true, true, true, false, false, true, true, false }, { true, true, true, true, true, true, true, true, true, true, true, true, true }, new boolean[13], { true, true, true, true, true, true, true, true, true, true, true, true, true } };
-
 	static int[][] anIntArrayArray3824 = new int[][] { { 0, 2 }, { 0, 2 }, { 0, 0, 2 }, { 2, 0, 0 }, { 0, 2, 0 }, { 0, 0, 2 }, { 0, 5, 1, 4 }, { 0, 4, 4, 4 }, { 4, 4, 4, 0 }, { 6, 6, 6, 2, 2, 2 }, { 2, 2, 2, 6, 6, 6 }, { 0, 11, 6, 6, 6, 4 }, { 0, 2 }, { 0, 4, 4, 4 }, { 0, 4, 4, 4 } };
-
 	static int[][] anIntArrayArray3860 = new int[][] { { 2, 4 }, { 2, 4 }, { 5, 2, 4 }, { 4, 5, 2 }, { 2, 4, 5 }, { 5, 2, 4 }, { 1, 6, 2, 5 }, { 1, 6, 7, 1 }, { 6, 7, 1, 1 }, { 0, 8, 9, 8, 9, 4 }, { 8, 9, 4, 0, 8, 9 }, { 2, 10, 0, 10, 11, 11 }, { 2, 4 }, { 1, 6, 7, 1 }, { 1, 6, 7, 1 } };
-
 	static int[][] anIntArrayArray3815 = new int[][] { { 6, 6 }, { 6, 6 }, { 6, 5, 5 }, { 5, 6, 5 }, { 5, 5, 6 }, { 6, 5, 5 }, { 5, 0, 4, 1 }, { 7, 7, 1, 2 }, { 7, 1, 2, 7 }, { 8, 9, 4, 0, 8, 9 }, { 0, 8, 9, 8, 9, 4 }, { 11, 0, 10, 11, 4, 2 }, { 6, 6 }, { 7, 7, 1, 2 }, { 7, 7, 1, 2 } };
-
 	static boolean[][] aBoolArrayArray3816 = new boolean[][] { new boolean[4], new boolean[4], { false, false, true, false }, { false, false, true, false }, { false, false, true, false }, { false, false, true, false }, { true, false, true, false }, { true, false, false, true }, { true, false, false, true }, new boolean[4], new boolean[4], new boolean[4], new boolean[4] };
-
 	static int[][] anIntArrayArray3828 = new int[][] { { 0, 1, 2, 3 }, { 1, 2, 3, 0 }, { 1, 2, -1, 0 }, { 2, 0, -1, 1 }, { 0, 1, -1, 2 }, { 1, 2, -1, 0 }, { -1, 4, -1, 1 }, { -1, 1, 3, -1 }, { -1, 0, 2, -1 }, { 3, 5, 2, 0 }, { 0, 2, 5, 3 }, { 0, 2, 3, 5 }, { 0, 1, 2, 3 } };
-
 	static int[][] anIntArrayArray3774 = new int[][] { { 0, 2, 4, 6 }, { 6, 0, 2, 4 }, { 6, 0, 2 }, { 2, 6, 0 }, { 0, 2, 6 }, { 6, 0, 2 }, { 5, 6, 0, 1, 2, 4 }, { 7, 2, 4, 4 }, { 2, 4, 4, 7 }, { 6, 6, 4, 0, 2, 2 }, { 0, 2, 2, 6, 6, 4 }, { 0, 2, 2, 4, 6, 6 }, { 0, 2, 4, 6 } };
-
 	static int[][] anIntArrayArray3830 = new int[][] { { 2, 4, 6, 0 }, { 0, 2, 4, 6 }, { 0, 2, 4 }, { 4, 0, 2 }, { 2, 4, 0 }, { 0, 2, 4 }, { 6, 0, 1, 2, 4, 5 }, { 0, 4, 7, 6 }, { 4, 7, 6, 0 }, { 0, 8, 6, 2, 9, 4 }, { 2, 9, 4, 0, 8, 6 }, { 2, 11, 4, 6, 10, 0 }, { 2, 4, 6, 0 } };
-
 	static int[][] anIntArrayArray3831 = new int[][] { { 12, 12, 12, 12 }, { 12, 12, 12, 12 }, { 5, 5, 5 }, { 5, 5, 5 }, { 5, 5, 5 }, { 5, 5, 5 }, { 12, 12, 12, 12, 12, 12 }, { 1, 1, 1, 7 }, { 1, 1, 7, 1 }, { 8, 9, 9, 8, 8, 9 }, { 8, 8, 9, 8, 9, 9 }, { 10, 10, 11, 11, 11, 10 }, { 12, 12, 12, 12 } };
-
 	static boolean[][] aBoolArrayArray3793 = new boolean[][] { new boolean[4], { false, true, true, false }, { true, false, true, false }, { true, false, true, false }, { false, false, true, false }, { false, false, true, false }, { true, false, true, false }, { true, false, false, true }, { true, false, false, true }, { true, true, false, false }, new boolean[4], { false, true, false, true }, new boolean[4] };
-
 	static int[][] anIntArrayArray3833 = new int[][] { { 0, 1, 2, 3 }, { 1, -1, -1, 0 }, { -1, 2, -1, 0 }, { -1, 0, -1, 2 }, { 0, 1, -1, 2 }, { 1, 2, -1, 0 }, { -1, 4, -1, 1 }, { -1, 3, 4, -1 }, { -1, 0, 2, -1 }, { -1, -1, 2, 0 }, { 0, 2, 5, 3 }, { 0, -1, 6, -1 }, { 0, 1, 2, 3 } };
-
 	static int[][] anIntArrayArray3775 = new int[][] { { 0, 2, 4, 6 }, { 6, 0, 2, 3, 5, 3 }, { 6, 0, 2, 4 }, { 2, 5, 6, 1 }, { 0, 2, 6 }, { 6, 0, 2 }, { 5, 6, 0, 1, 2, 4 }, { 7, 7, 1, 2, 4, 6 }, { 2, 4, 4, 7 }, { 6, 6, 4, 0, 1, 1, 3, 3 }, { 0, 2, 2, 6, 6, 4 }, { 0, 2, 2, 3, 7, 0, 4, 3 }, { 0, 2, 4, 6 } };
-
 	static int[][] anIntArrayArray3821 = new int[][] { { 2, 4, 6, 0 }, { 0, 2, 3, 5, 6, 4 }, { 0, 1, 4, 5 }, { 4, 6, 0, 2 }, { 2, 4, 0 }, { 0, 2, 4 }, { 6, 0, 1, 2, 4, 5 }, { 0, 1, 2, 4, 6, 7 }, { 4, 7, 6, 0 }, { 0, 8, 6, 1, 9, 2, 9, 4 }, { 2, 9, 4, 0, 8, 6 }, { 2, 11, 3, 7, 10, 10, 6, 6 }, { 2, 4, 6, 0 } };
-
 	static int[][] anIntArrayArray3836 = new int[][] { { 12, 12, 12, 12 }, { 12, 12, 12, 12, 12, 5 }, { 5, 5, 1, 1 }, { 5, 1, 1, 5 }, { 5, 5, 5 }, { 5, 5, 5 }, { 12, 12, 12, 12, 12, 12 }, { 1, 12, 12, 12, 12, 12 }, { 1, 1, 7, 1 }, { 8, 9, 9, 8, 8, 3, 1, 9 }, { 8, 8, 9, 8, 9, 9 }, { 10, 10, 11, 11, 11, 7, 3, 7 }, { 12, 12, 12, 12 } };
-
+	
 	protected boolean aBool3773;
-
 	int[] anIntArray3795;
-
 	int[] anIntArray3796;
-
 	int[] anIntArray3797;
-
 	int[] anIntArray3798;
-
 	int[] anIntArray3799;
-
 	int underlayFaceCount;
-
 	int overlayFaceCount;
-
 	int anInt3781;
-
 	int anInt3848;
-
 	int anInt3844;
-
 	boolean aBool3851;
-
 	boolean aBool3810;
-
 	boolean aBool3853;
-
 	int anInt3846 = 0;
-
 	int index = 0;
-
 	int[] anIntArray3857;
-
 	int[] anIntArray3858;
-
 	int[] anIntArray3859;
-
 	int[] anIntArray3832 = null;
-
 	int anInt3850;
-
 	int anInt3849;
-
 	public int anInt3809 = 0;
-
 	public boolean highDetailWater = false;
-
 	public boolean aBool3780 = false;
-
 	public boolean aBool3820 = false;
-
 	public boolean aBool3782 = false;
-
 	int[] anIntArray3837 = new int[6];
-
 	int[] anIntArray3838 = new int[13];
-
 	int[] anIntArray3839 = new int[13];
-
 	int[] anIntArray3813 = new int[13];
-
 	int[] anIntArray3827 = new int[13];
-
 	int[] anIntArray3842 = new int[13];
-
 	int[] anIntArray3843 = new int[13];
-
-	protected SceneObjectManager aClass206_3776;
-
+	protected SceneObjectManager sceneObjectManager;
 	public int anInt3845;
-
 	protected int maxX;
-
 	protected int maxY;
-
 	public boolean overlayHidden;
-
 	OverlayIndexLoader aClass536_3834;
-
 	UnderlayIndexLoader aClass479_3789;
-
 	protected RegionMap regionMap;
-
 	byte[][][] underlayIds;
-
 	byte[][][] overlayIds;
-
 	byte[][][] overlayPathShapes;
-
 	byte[][][] overlayRotations;
-
 	public int[][][] tileHeights;
-
 	protected byte[][][] aByteArrayArrayArray3794;
-
 	boolean aBool3854;
 
 	public void method5835(int i_1) {
@@ -181,7 +110,7 @@ public class Class329 {
 					if (i_9 < this.maxX) {
 						i_10 = this.underlayIds[i_6][i_9][i_8] & 0xff;
 						if (i_10 > 0) {
-							UnderlayDef underlaydef_16 = this.aClass479_3789.getUnderlayDef(i_10 - 1, (byte) -26);
+							UnderlayDef underlaydef_16 = this.aClass479_3789.getUnderlayDef(i_10 - 1);
 							this.anIntArray3795[i_8] += underlaydef_16.r;
 							this.anIntArray3796[i_8] += underlaydef_16.g;
 							this.anIntArray3797[i_8] += underlaydef_16.b;
@@ -193,7 +122,7 @@ public class Class329 {
 					if (i_10 >= 0) {
 						i_11 = this.underlayIds[i_6][i_10][i_8] & 0xff;
 						if (i_11 > 0) {
-							UnderlayDef underlaydef_17 = this.aClass479_3789.getUnderlayDef(i_11 - 1, (byte) -111);
+							UnderlayDef underlaydef_17 = this.aClass479_3789.getUnderlayDef(i_11 - 1);
 							this.anIntArray3795[i_8] -= underlaydef_17.r;
 							this.anIntArray3796[i_8] -= underlaydef_17.g;
 							this.anIntArray3797[i_8] -= underlaydef_17.b;
@@ -232,9 +161,9 @@ public class Class329 {
 				}
 			}
 			if (this.aBool3820) {
-				this.method5846(graphicalrenderer_1, this.aClass206_3776.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
+				this.method5846(graphicalrenderer_1, this.sceneObjectManager.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
 			} else {
-				this.method5845(graphicalrenderer_1, this.aClass206_3776.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
+				this.method5845(graphicalrenderer_1, this.sceneObjectManager.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
 			}
 			this.underlayIds[i_6] = null;
 			this.overlayIds[i_6] = null;
@@ -243,14 +172,14 @@ public class Class329 {
 		}
 		if (!this.overlayHidden) {
 			if (this.anInt3809 != 0) {
-				this.aClass206_3776.method3429();
+				this.sceneObjectManager.method3429();
 			}
 			if (this.aBool3780) {
-				this.aClass206_3776.method3431();
+				this.sceneObjectManager.method3431();
 			}
 		}
 		for (i_6 = 0; i_6 < this.anInt3845; i_6++) {
-			this.aClass206_3776.aClass390Array2591[i_6].SA();
+			this.sceneObjectManager.aClass390Array2591[i_6].SA();
 		}
 	}
 
@@ -468,7 +397,7 @@ public class Class329 {
 				i_7 |= 0x20;
 			}
 			int[][] ints_8 = ints_2 != null && i_5 < ints_2.length ? ints_2[i_5] : this.tileHeights[i_5];
-			this.aClass206_3776.method3385(i_5, graphicalrenderer_1.createGround(this.maxX, this.maxY, this.tileHeights[i_5], ints_8, i_6, i_7));
+			this.sceneObjectManager.method3385(i_5, graphicalrenderer_1.createGround(this.maxX, this.maxY, this.tileHeights[i_5], ints_8, i_6, i_7));
 		}
 	}
 
@@ -480,7 +409,7 @@ public class Class329 {
 				int overlayId = this.overlayIds[plane][x][y] & 0xff;
 				int underlayId = this.underlayIds[plane][x][y] & 0xff;
 				OverlayDef overlay = overlayId != 0 ? this.aClass536_3834.getOverlayDef(overlayId - 1) : null;
-				UnderlayDef underlay = underlayId != 0 ? this.aClass479_3789.getUnderlayDef(underlayId - 1, (byte) -14) : null;
+				UnderlayDef underlay = underlayId != 0 ? this.aClass479_3789.getUnderlayDef(underlayId - 1) : null;
 				if (pathShape == 0 && overlay == null) {
 					pathShape = 12;
 				}
@@ -520,7 +449,7 @@ public class Class329 {
 							++this.anInt3781;
 						}
 						if (!this.overlayHidden && plane == 0) {
-							this.aClass206_3776.method3392(x, y, overlay.waterColour, overlay.waterScale, overlay.waterIntensity, overlay.anInt7065, overlay.anInt7055, overlay.anInt7067, (short) -10476);
+							this.sceneObjectManager.setTileData(x, y, overlay.waterColour, overlay.waterScale, overlay.waterIntensity, overlay.anInt7065, overlay.anInt7055, overlay.anInt7067);
 						}
 					} else {
 						this.anInt3781 += this.overlayFaceCount;
@@ -601,17 +530,17 @@ public class Class329 {
 							this.aByteArrayArrayArray3794[plane][x][y] = (byte) (this.aByteArrayArrayArray3794[plane][x][y] | 0x4);
 						}
 					}
-					Class90 class90_38 = new Class90();
+					HDWaterTile tile = new HDWaterTile();
 					if (this.overlayHidden) {
-						class90_38.color = this.aClass206_3776.getColor(x, y, (byte) 110);
-						class90_38.scale = this.aClass206_3776.getScale(x, y, 2091764285);
-						class90_38.intensity = this.aClass206_3776.getIntensities(x, y);
-						class90_38.anInt949 = this.aClass206_3776.method3432(x, y);
-						class90_38.anInt950 = this.aClass206_3776.method3464(x, y, -989916176);
-						class90_38.anInt951 = this.aClass206_3776.method3391(x, y, 2086149647);
+						tile.color = this.sceneObjectManager.getColor(x, y);
+						tile.scale = this.sceneObjectManager.getScale(x, y);
+						tile.intensity = this.sceneObjectManager.getIntensities(x, y);
+						tile.hdWaterInt1 = this.sceneObjectManager.method3432(x, y);
+						tile.hdWaterInt2 = this.sceneObjectManager.method3464(x, y);
+						tile.hdWaterInt3 = this.sceneObjectManager.method3391(x, y);
 					}
-					ground.method6708(x, y, ints_28, ints_30, ints_29, ints_31, ints_20, ints_21, ints_22, ints_23, ints_26, ints_24, ints_25, class90_38);
-					this.aClass206_3776.method3384(plane, x, y, (byte) 44);
+					ground.method6708(x, y, ints_28, ints_30, ints_29, ints_31, ints_20, ints_21, ints_22, ints_23, ints_26, ints_24, ints_25, tile);
+					this.sceneObjectManager.method3384(plane, x, y, (byte) 44);
 				}
 			}
 		}
@@ -633,7 +562,7 @@ public class Class329 {
 				int underlayId = bytes_10[i_13][i_15] & 0xff;
 				if (overlayId != 0 || underlayId != 0) {
 					OverlayDef overlaydef_19 = overlayId != 0 ? this.aClass536_3834.getOverlayDef(overlayId - 1) : null;
-					UnderlayDef underlaydef_20 = underlayId != 0 ? this.aClass479_3789.getUnderlayDef(underlayId - 1, (byte) -6) : null;
+					UnderlayDef underlaydef_20 = underlayId != 0 ? this.aClass479_3789.getUnderlayDef(underlayId - 1) : null;
 					if (this.anInt3844 == 0 && overlaydef_19 == null) {
 						this.anInt3844 = 12;
 					}
@@ -663,7 +592,7 @@ public class Class329 {
 					this.method5849(overlaydef_19, underlaydef_20);
 					i_25 = this.underlayFaceCount + this.overlayFaceCount;
 					if (i_25 <= 0) {
-						this.aClass206_3776.method3384(i_3, i_13, i_15, (byte) 7);
+						this.sceneObjectManager.method3384(i_3, i_13, i_15, (byte) 7);
 					} else {
 						if (bools_12[0]) {
 							++i_25;
@@ -694,17 +623,17 @@ public class Class329 {
 						int i_37 = bytes_10[i_14][i_15] & 0xff;
 						this.method5851(graphicalrenderer_1, i_3, i_13, i_15, i_14, i_16, underlaydef_20, underlayId, i_35, i_36, i_37, bools_12, ints_27, ints_28, ints_29, ints_30, ints_31, ints_32, ints_33, ints_34, ints_4, class390_2, class390_6, class390_5);
 						this.method5852(class390_2, underlaydef_20, overlaydef_24, i_3, i_13, i_15, i_14, i_16, underlayId, overlayId);
-						Class90 class90_38 = new Class90();
+						HDWaterTile class90_38 = new HDWaterTile();
 						if (this.overlayHidden) {
-							class90_38.color = this.aClass206_3776.getColor(i_13, i_15, (byte) 114);
-							class90_38.scale = this.aClass206_3776.getScale(i_13, i_15, 1952003657);
-							class90_38.intensity = this.aClass206_3776.getIntensities(i_13, i_15);
-							class90_38.anInt949 = this.aClass206_3776.method3432(i_13, i_15);
-							class90_38.anInt950 = this.aClass206_3776.method3464(i_13, i_15, -1127280692);
-							class90_38.anInt951 = this.aClass206_3776.method3391(i_13, i_15, 2048484597);
+							class90_38.color = this.sceneObjectManager.getColor(i_13, i_15);
+							class90_38.scale = this.sceneObjectManager.getScale(i_13, i_15);
+							class90_38.intensity = this.sceneObjectManager.getIntensities(i_13, i_15);
+							class90_38.hdWaterInt1 = this.sceneObjectManager.method3432(i_13, i_15);
+							class90_38.hdWaterInt2 = this.sceneObjectManager.method3464(i_13, i_15);
+							class90_38.hdWaterInt3 = this.sceneObjectManager.method3391(i_13, i_15);
 						}
 						class390_2.method6707(i_13, i_15, ints_28, ints_33, ints_29, ints_34, ints_30, ints_27, ints_31, ints_32, class90_38, this.aBool3851);
-						this.aClass206_3776.method3384(i_3, i_13, i_15, (byte) -7);
+						this.sceneObjectManager.method3384(i_3, i_13, i_15, (byte) -7);
 					}
 				}
 			}
@@ -974,26 +903,26 @@ public class Class329 {
 		}
 	}
 
-	void method5849(OverlayDef overlaydef_1, UnderlayDef underlaydef_2) {
+	void method5849(OverlayDef overlayDef, UnderlayDef underlayDef) {
 		if (this.aBool3853) {
 			this.anIntArray3857 = anIntArrayArray3824[this.anInt3844];
 			this.anIntArray3858 = anIntArrayArray3860[this.anInt3844];
 			this.anIntArray3859 = anIntArrayArray3815[this.anInt3844];
-			this.overlayFaceCount = overlaydef_1 != null ? OVERLAY_FACE_COUNT[this.anInt3844] : 0;
-			this.underlayFaceCount = underlaydef_2 != null ? UNDERLAY_FACE_COUNT[this.anInt3844] : 0;
+			this.overlayFaceCount = overlayDef != null ? OVERLAY_FACE_COUNT[this.anInt3844] : 0;
+			this.underlayFaceCount = underlayDef != null ? UNDERLAY_FACE_COUNT[this.anInt3844] : 0;
 		} else if (this.aBool3810) {
 			this.anIntArray3857 = anIntArrayArray3775[this.anInt3844];
 			this.anIntArray3858 = anIntArrayArray3821[this.anInt3844];
 			this.anIntArray3859 = anIntArrayArray3836[this.anInt3844];
-			this.overlayFaceCount = overlaydef_1 != null ? anIntArray3778[this.anInt3844] : 0;
-			this.underlayFaceCount = underlaydef_2 != null ? anIntArray3819[this.anInt3844] : 0;
+			this.overlayFaceCount = overlayDef != null ? anIntArray3778[this.anInt3844] : 0;
+			this.underlayFaceCount = underlayDef != null ? anIntArray3819[this.anInt3844] : 0;
 			this.anIntArray3832 = anIntArrayArray3833[this.anInt3844];
 		} else {
 			this.anIntArray3857 = anIntArrayArray3774[this.anInt3844];
 			this.anIntArray3858 = anIntArrayArray3830[this.anInt3844];
 			this.anIntArray3859 = anIntArrayArray3831[this.anInt3844];
-			this.overlayFaceCount = overlaydef_1 != null ? anIntArray3826[this.anInt3844] : 0;
-			this.underlayFaceCount = underlaydef_2 != null ? anIntArray3847[this.anInt3844] : 0;
+			this.overlayFaceCount = overlayDef != null ? anIntArray3826[this.anInt3844] : 0;
+			this.underlayFaceCount = underlayDef != null ? anIntArray3847[this.anInt3844] : 0;
 			this.anIntArray3832 = anIntArrayArray3828[this.anInt3844];
 		}
 	}
@@ -1109,7 +1038,7 @@ public class Class329 {
 				++this.anInt3846;
 			}
 			if (!this.overlayHidden && i_2 == 0) {
-				this.aClass206_3776.method3392(i_3, i_4, overlaydef_5.waterColour, overlaydef_5.waterScale, overlaydef_5.waterIntensity, overlaydef_5.anInt7065, overlaydef_5.anInt7055, overlaydef_5.anInt7067, (short) -30684);
+				this.sceneObjectManager.setTileData(i_3, i_4, overlaydef_5.waterColour, overlaydef_5.waterScale, overlaydef_5.waterIntensity, overlaydef_5.anInt7065, overlaydef_5.anInt7055, overlaydef_5.anInt7067);
 			}
 			if (this.anInt3844 != 12 && overlaydef_5.primaryRGB != -1 && overlaydef_5.aBool7059) {
 				this.aBool3851 = true;
@@ -1134,10 +1063,10 @@ public class Class329 {
 			if (i_11 == 0) {
 				i_11 = i_8;
 			}
-			UnderlayDef underlaydef_26 = this.aClass479_3789.getUnderlayDef(i_8 - 1, (byte) -96);
-			UnderlayDef underlaydef_27 = this.aClass479_3789.getUnderlayDef(i_9 - 1, (byte) -18);
-			UnderlayDef underlaydef_28 = this.aClass479_3789.getUnderlayDef(i_10 - 1, (byte) -95);
-			UnderlayDef underlaydef_29 = this.aClass479_3789.getUnderlayDef(i_11 - 1, (byte) -80);
+			UnderlayDef underlaydef_26 = this.aClass479_3789.getUnderlayDef(i_8 - 1);
+			UnderlayDef underlaydef_27 = this.aClass479_3789.getUnderlayDef(i_9 - 1);
+			UnderlayDef underlaydef_28 = this.aClass479_3789.getUnderlayDef(i_10 - 1);
+			UnderlayDef underlaydef_29 = this.aClass479_3789.getUnderlayDef(i_11 - 1);
 			for (int i_30 = 0; i_30 < this.underlayFaceCount; i_30++) {
 				boolean bool_31 = false;
 				byte b_32;
@@ -1312,7 +1241,7 @@ public class Class329 {
 	}
 
 	Class329(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, boolean bool_5, OverlayIndexLoader class536_6, UnderlayIndexLoader underlayindexloader_7, RegionMap regionmap_8) {
-		this.aClass206_3776 = sceneobjectmanager_1;
+		this.sceneObjectManager = sceneobjectmanager_1;
 		this.anInt3845 = i_2;
 		this.maxX = i_3;
 		this.maxY = i_4;

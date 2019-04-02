@@ -158,7 +158,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 
 	void method12909(int i_1, int i_2, int i_3, int i_4) {
 		Class282_Sub53_Sub2 class282_sub53_sub2_6 = Class521_Sub1_Sub3_Sub1.method16080(i_1, i_2, i_3, TextureDetails.time(), i_4);
-		this.aClass482_7945.append(class282_sub53_sub2_6, 335888371);
+		this.aClass482_7945.append(class282_sub53_sub2_6);
 	}
 
 	public synchronized void method3578() {

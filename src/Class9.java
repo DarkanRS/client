@@ -58,11 +58,11 @@ public class Class9 {
 	}
 
 	public static void animateObject(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-931426590) != null) {
+		if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1 && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 			SceneObject sceneobject_8;
 			if (i_3 == 0) {
-				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2007440796).getWall(i_0, i_1, i_2, (byte) -24);
-				SceneObject sceneobject_9 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-923571335).getWall2(i_0, i_1, i_2);
+				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWall(i_0, i_1, i_2, (byte) -24);
+				SceneObject sceneobject_9 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWall2(i_0, i_1, i_2);
 				if (sceneobject_8 != null && i_4 != 2) {
 					if (sceneobject_8 instanceof Wall) {
 						((Wall) sceneobject_8).aClass123_10532.animate(i_6);
@@ -78,7 +78,7 @@ public class Class9 {
 					}
 				}
 			} else if (i_3 == 1) {
-				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2074911720).getWallDecoration(i_0, i_1, i_2, (byte) 31);
+				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getWallDecoration(i_0, i_1, i_2, (byte) 31);
 				if (sceneobject_8 != null) {
 					if (sceneobject_8 instanceof WallDecoration) {
 						((WallDecoration) sceneobject_8).aClass123_10501.animate(i_6);
@@ -99,7 +99,7 @@ public class Class9 {
 					}
 				}
 			} else if (i_3 == 2) {
-				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-847129684).getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446);
+				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446);
 				if (sceneobject_8 != null) {
 					if (i_4 == 11) {
 						i_4 = 10;
@@ -111,7 +111,7 @@ public class Class9 {
 					}
 				}
 			} else if (i_3 == 3) {
-				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1134849254).getGroundDecoration(i_0, i_1, i_2);
+				sceneobject_8 = (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().getGroundDecoration(i_0, i_1, i_2);
 				if (sceneobject_8 != null) {
 					if (sceneobject_8 instanceof GroundDecoration) {
 						((GroundDecoration) sceneobject_8).aClass123_10507.animate(i_6);

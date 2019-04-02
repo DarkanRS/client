@@ -121,7 +121,7 @@ public class QuickchatDefinitions extends CacheableNode {
 	}
 
 	static boolean method14921(int i_0, int i_1, int i_2) {
-		SceneObjectManager sceneobjectmanager_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1536948250);
+		SceneObjectManager sceneobjectmanager_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 		boolean bool_5 = true;
 		SceneObject sceneobject_6 = (SceneObject) sceneobjectmanager_4.getWall(i_0, i_1, i_2, (byte) -61);
 		if (sceneobject_6 != null) {

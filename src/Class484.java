@@ -47,7 +47,7 @@ public final class Class484 {
 			HookRequest hookrequest_7 = new HookRequest();
 			hookrequest_7.iComponentDefs = icomponentdefinitions_0;
 			hookrequest_7.params = icomponentdefinitions_0.anObjectArray1271;
-			client.aClass482_7402.append(hookrequest_7, -1019002091);
+			client.aClass482_7402.append(hookrequest_7);
 		}
 	}
 }

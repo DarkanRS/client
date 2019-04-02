@@ -111,13 +111,13 @@ public class NPC extends Animable {
 	}
 
 	public int method15794() {
-		return this.anInt10314 + 1;
+		return this.index + 1;
 	}
 
-	public void method16159(int i_1, int i_2, int i_3, boolean bool_4, int i_5, int i_6) {
-		this.plane = this.aByte7968 = (byte) i_1;
+	public void move(int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
+		this.plane = this.collisionPlane = (byte) i_1;
 		if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_2, i_3, 1670715577)) {
-			++this.aByte7968;
+			++this.collisionPlane;
 		}
 
 		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().walkingPrecedence == 1) {
@@ -636,8 +636,8 @@ public class NPC extends Animable {
 		throw new IllegalStateException();
 	}
 
-	public void method16166(NPCDefinitions npcdefinitions_1, int i_2) {
-		if (npcdefinitions_1 != this.definitions && Class20.aBool161 && EnumIndexLoader.method7426(this.anInt10314, (byte) -83)) {
+	public void setDefinition(NPCDefinitions npcdefinitions_1) {
+		if (npcdefinitions_1 != this.definitions && Class20.aBool161 && EnumIndexLoader.method7426(this.index, (byte) -83)) {
 			Class316.method5594();
 		}
 
@@ -781,11 +781,11 @@ public class NPC extends Animable {
 	}
 
 	public int method15874() {
-		return 1 + this.anInt10314 * -1498872675 * -1691508299;
+		return 1 + this.index * -1498872675 * -1691508299;
 	}
 
 	public int method15892() {
-		return 1 + this.anInt10314 * -1498872675 * -1691508299;
+		return 1 + this.index * -1498872675 * -1691508299;
 	}
 
 	final boolean method13026() {
@@ -901,6 +901,6 @@ public class NPC extends Animable {
 	}
 
 	public int method15806() {
-		return 1 + this.anInt10314 * -1498872675 * -1691508299;
+		return 1 + this.index * -1498872675 * -1691508299;
 	}
 }

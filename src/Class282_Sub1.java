@@ -13,7 +13,7 @@ public abstract class Class282_Sub1 extends Node {
 	public static void method11615(int i_0, Index index_1, int i_2, int i_4, Class109 class109_6) {
 		if (i_0 > 0) {
 			Class148.anInt1730 = 1;
-			Class75.aClass317_746 = index_1;
+			CutsceneEntity.aClass317_746 = index_1;
 			Class6.anInt46 = i_2;
 			Class148.anInt1738 = 0;
 			Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;

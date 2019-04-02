@@ -145,7 +145,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	Class70 aClass70_8786;
 	protected int anInt8758;
 	int anInt8739;
-	Class90 aClass90_8807;
+	HDWaterTile aClass90_8807;
 	boolean aBool8779;
 	protected boolean aBool8808;
 	Interface4 anInterface4_8682;
@@ -419,7 +419,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		floats_4[2] = f_8;
 	}
 
-	Class90 method13898() {
+	HDWaterTile method13898() {
 		return this.aClass90_8807;
 	}
 
@@ -1474,7 +1474,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract boolean method13975(Class150 var1, Class76 var2);
 
-	public final void method8585(int i_1, Class90 class90_2) {
+	public final void method8585(int i_1, HDWaterTile class90_2) {
 		this.anInt8739 = i_1;
 		this.aClass90_8807 = class90_2;
 		this.aBool8779 = true;
@@ -1513,7 +1513,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method13980();
 
-	public final void method8475(Class90 class90_2) {
+	public final void method8475(HDWaterTile class90_2) {
 		this.anInt8739 = -1;
 		this.aClass90_8807 = class90_2;
 		this.aBool8779 = true;
@@ -3149,7 +3149,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return this.anInt8702 + this.anInt8701 + this.anInt8761;
 	}
 
-	public final void method8615(int i_1, Class90 class90_2) {
+	public final void method8615(int i_1, HDWaterTile class90_2) {
 		if (!this.aBool8779) {
 			throw new RuntimeException("");
 		} else {
@@ -3163,7 +3163,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	public final void method8616(int i_1, Class90 class90_2) {
+	public final void method8616(int i_1, HDWaterTile class90_2) {
 		if (!this.aBool8779) {
 			throw new RuntimeException("");
 		} else {
@@ -3441,7 +3441,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		this.method8433(i_1, i_2, i_1 + i_3, i_2, i_4, i_5);
 	}
 
-	public final void method8476(int i_1, Class90 class90_2) {
+	public final void method8476(int i_1, HDWaterTile class90_2) {
 		if (!this.aBool8779) {
 			throw new RuntimeException("");
 		} else {

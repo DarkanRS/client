@@ -36,7 +36,7 @@ public class Class282_Sub19 extends Node {
 		int i_11 = this.aClass390_Sub2_7654.averageHeight(i_9, i_10, 1957271969);
 		if ((i_5 & 0x7f) == 0 || (i_6 & 0x7f) == 0) {
 			long_7 = ((long) i_10 & 0xffffL) << 16 | (long) i_9 & 0xffffL;
-			Node node_29 = this.aClass453_7657.method7530(long_7);
+			Node node_29 = this.aClass453_7657.get(long_7);
 			if (node_29 != null) {
 				this.method12305(((Class282_Sub46) node_29).aShort8067);
 				return;
@@ -45,7 +45,7 @@ public class Class282_Sub19 extends Node {
 
 		short s_12 = (short) (this.anInt7646++);
 		if (long_7 != -1L) {
-			this.aClass453_7657.method7534(new Class282_Sub46(s_12), long_7);
+			this.aClass453_7657.put(new Class282_Sub46(s_12), long_7);
 		}
 
 		float f_13;

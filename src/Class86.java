@@ -16,7 +16,7 @@ public class Class86 {
 
 	public static int anInt833;
 
-	public static NodeCollection aClass482_827 = new NodeCollection();
+	public static NodeCollection CUTSCENE_AREAS = new NodeCollection();
 
 	public static IterableNodeMap aClass465_823 = new IterableNodeMap(32);
 

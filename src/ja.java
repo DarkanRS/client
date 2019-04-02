@@ -356,7 +356,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public Class282_Sub1 method8438(int i_1) {
 		ba ba_2 = new ba(this, i_1);
-		this.au.append(ba_2, 753628503);
+		this.au.append(ba_2);
 		return ba_2;
 	}
 
@@ -571,7 +571,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void M(int var1, int var2, int var3, int var4);
 
-	public final void method8475(Class90 class90_2) {
+	public final void method8475(HDWaterTile class90_2) {
 		this.M(-1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
@@ -632,7 +632,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	public void method8445() {
 	}
 
-	public final void method8476(int i_1, Class90 class90_2) {
+	public final void method8476(int i_1, HDWaterTile class90_2) {
 		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
@@ -689,7 +689,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				int i_5 = this.anInterface22_5834.method84();
 
 				for (short s_6 = 0; s_6 < i_5; s_6++) {
-					TextureDetails class169_7 = this.anInterface22_5834.method144(s_6, -2075826193);
+					TextureDetails class169_7 = this.anInterface22_5834.method144(s_6);
 					if (class169_7 != null) {
 						this.V(s_6, class169_7.color, class169_7.blendType, class169_7.effectId, class169_7.effectParam1, class169_7.effectParam2, class169_7.isHalfSize, class169_7.shadowFactor, class169_7.brightness, class169_7.textureSpeedU, class169_7.textureSpeedV, class169_7.isGroundMesh, class169_7.skipTriangles, class169_7.aBool2087, class169_7.repeatS, class169_7.repeatT, class169_7.useMipmaps, class169_7.hdr, class169_7.isBrickTile, class169_7.combineMode);
 					}
@@ -722,7 +722,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native int dv();
 
-	public final void method8616(int i_1, Class90 class90_2) {
+	public final void method8616(int i_1, HDWaterTile class90_2) {
 		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
@@ -780,7 +780,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public Class282_Sub1 method8570(int i_1) {
 		ba ba_2 = new ba(this, i_1);
-		this.au.append(ba_2, 486534140);
+		this.au.append(ba_2);
 		return ba_2;
 	}
 
@@ -819,7 +819,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void en(float var1, float var2);
 
-	public final void method8585(int i_1, Class90 class90_2) {
+	public final void method8585(int i_1, HDWaterTile class90_2) {
 		this.M(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 
@@ -1291,7 +1291,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public Class282_Sub1 method8541(int i_1) {
 		ba ba_2 = new ba(this, i_1);
-		this.au.append(ba_2, -818600578);
+		this.au.append(ba_2);
 		return ba_2;
 	}
 
@@ -1503,7 +1503,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void oi(int var1, int var2, int var3, int var4);
 
-	public final void method8615(int i_1, Class90 class90_2) {
+	public final void method8615(int i_1, HDWaterTile class90_2) {
 		this.JA(i_1, class90_2.color, class90_2.scale, class90_2.intensity);
 	}
 

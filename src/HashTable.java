@@ -1,93 +1,90 @@
 public final class HashTable {
 
 	static int[] anIntArray5449;
-	long aLong5447;
-	Node aClass282_5448;
-	int anInt5445;
-	Node[] aClass282Array5446;
+	long retrievalKey;
+	Node retrievableNode;
+	int size;
+	Node[] buckets;
 
-	public Node method7530(long long_1) {
-		this.aLong5447 = long_1;
-		Node node_3 = this.aClass282Array5446[(int) (long_1 & (long) (this.anInt5445 - 1))];
+	public Node get(long key) {
+		this.retrievalKey = key;
+		Node head = this.buckets[(int) (key & (long) (this.size - 1))];
 
-		for (this.aClass282_5448 = node_3.next; node_3 != this.aClass282_5448; this.aClass282_5448 = this.aClass282_5448.next) {
-			if (long_1 == this.aClass282_5448.data) {
-				Node node_4 = this.aClass282_5448;
-				this.aClass282_5448 = this.aClass282_5448.next;
-				return node_4;
+		for (this.retrievableNode = head.next; head != this.retrievableNode; this.retrievableNode = this.retrievableNode.next) {
+			if (key == this.retrievableNode.data) {
+				Node value = this.retrievableNode;
+				this.retrievableNode = this.retrievableNode.next;
+				return value;
 			}
 		}
 
-		this.aClass282_5448 = null;
+		this.retrievableNode = null;
 		return null;
 	}
 
-	public int method7532(Node[] arr_1, byte b_2) {
-		int i_3 = 0;
+	public int values(Node[] values) {
+		int count = 0;
 
-		for (int i_4 = 0; i_4 < this.anInt5445; i_4++) {
-			Node node_5 = this.aClass282Array5446[i_4];
-
-			for (Node node_6 = node_5.next; node_5 != node_6; node_6 = node_6.next) {
-				arr_1[i_3++] = node_6;
+		for (int i = 0; i < this.size; i++) {
+			Node head = this.buckets[i];
+			for (Node next = head.next; head != next; next = next.next) {
+				values[count++] = next;
 			}
 		}
 
-		return i_3;
+		return count;
 	}
 
-	public void method7534(Node node_1, long long_2) {
-		if (node_1.prev != null) {
-			node_1.remove();
+	public void put(Node value, long key) {
+		if (value.prev != null) {
+			value.remove();
 		}
 
-		Node node_4 = this.aClass282Array5446[(int) (long_2 & (long) (this.anInt5445 - 1))];
-		node_1.prev = node_4.prev;
-		node_1.next = node_4;
-		node_1.prev.next = node_1;
-		node_1.next.prev = node_1;
-		node_1.data = long_2;
+		Node node = this.buckets[(int) (key & (long) (this.size - 1))];
+		value.prev = node.prev;
+		value.next = node;
+		value.prev.next = value;
+		value.next.prev = value;
+		value.data = key;
 	}
 
 	public int method7540() {
 		int i_2 = 0;
 
-		for (int i_3 = 0; i_3 < this.anInt5445; i_3++) {
-			Node node_4 = this.aClass282Array5446[i_3];
+		for (int i_3 = 0; i_3 < this.size; i_3++) {
+			Node node_4 = this.buckets[i_3];
 
 			for (Node node_5 = node_4.next; node_4 != node_5; node_5 = node_5.next) {
 				++i_2;
 			}
 		}
-
 		return i_2;
 	}
 
-	public HashTable(int i_1) {
-		this.anInt5445 = i_1;
-		this.aClass282Array5446 = new Node[i_1];
+	public HashTable(int size) {
+		this.size = size;
+		this.buckets = new Node[size];
 
-		for (int i_2 = 0; i_2 < i_1; i_2++) {
-			Node node_3 = this.aClass282Array5446[i_2] = new Node();
-			node_3.next = node_3;
-			node_3.prev = node_3;
+		for (int i = 0; i < size; i++) {
+			Node node = this.buckets[i] = new Node();
+			node.next = node;
+			node.prev = node;
 		}
-
 	}
 
-	public Node method7544(int i_1) {
-		if (this.aClass282_5448 == null) {
+	public Node nextInBucket() {
+		if (this.retrievableNode == null) {
 			return null;
 		} else {
-			for (Node node_2 = this.aClass282Array5446[(int) (this.aLong5447 & (long) (this.anInt5445 - 1))]; node_2 != this.aClass282_5448; this.aClass282_5448 = this.aClass282_5448.next) {
-				if (this.aClass282_5448.data == this.aLong5447) {
-					Node node_3 = this.aClass282_5448;
-					this.aClass282_5448 = this.aClass282_5448.next;
-					return node_3;
+			for (Node node = this.buckets[(int) (this.retrievalKey & (long) (this.size - 1))]; node != this.retrievableNode; this.retrievableNode = this.retrievableNode.next) {
+				if (this.retrievableNode.data == this.retrievalKey) {
+					Node value = this.retrievableNode;
+					this.retrievableNode = this.retrievableNode.next;
+					return value;
 				}
 			}
 
-			this.aClass282_5448 = null;
+			this.retrievableNode = null;
 			return null;
 		}
 	}

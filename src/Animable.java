@@ -1,6 +1,6 @@
 public abstract class Animable extends Class521_Sub1_Sub1 {
 
-	public int anInt10314;
+	public int index;
 	public int anInt10326;
 	public byte aByte10327;
 	public int anInt10328;
@@ -44,7 +44,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public int anInt10347;
 	public int anInt10348;
 	public byte aByte10352;
-	public int anInt10353;
+	public int lastUpdate;
 	public int anInt10340;
 	public Class19 aClass19_10359;
 	public Class19 aClass19_10360;
@@ -63,7 +63,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	int anInt10323;
 	int anInt10363;
 
-	public void method15791(int i_1, boolean bool_2, byte b_3) {
+	public void turn(int i_1, boolean bool_2) {
 		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs();
 		if (bool_2 || renderanimdefs_4.anInt2820 != 0 || this.anInt10340 != 0) {
 			this.turnDirection = i_1 & 0x3fff;
@@ -635,7 +635,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return this.anInt10317 * -358839357 * 296631531 == -32768 ? 0 : 296631531 * this.anInt10317 * -358839357;
 	}
 
-	public void method15836(int i_1, byte b_2) {
+	public void setBoundSize(int i_1) {
 		this.anInt10315 = i_1;
 	}
 
@@ -799,7 +799,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.anInt10347 = -1;
 		this.anInt10348 = -1;
 		this.aByte10352 = 0;
-		this.anInt10353 = 0;
+		this.lastUpdate = 0;
 		this.turningTicks = 0;
 		this.anInt10340 = 256;
 		this.aClass19_10359 = new Class19();

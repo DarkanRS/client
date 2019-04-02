@@ -7,7 +7,7 @@ public class NodeCollection implements Iterable, Collection {
 
 	public Node tail = new Node();
 
-	public void append(Node node_1, int i_2) {
+	public void append(Node node_1) {
 		if (node_1.prev != null) {
 			node_1.remove();
 		}
@@ -137,7 +137,7 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	boolean add(Node node_1) {
-		this.append(node_1, 1651650132);
+		this.append(node_1);
 		return true;
 	}
 

@@ -33,7 +33,7 @@ public class Class390_Sub3 extends Ground {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
+	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, HDWaterTile class90_14) {
 		if (this.aClass178ArrayArray9352 == null) {
 			this.aClass178ArrayArray9352 = new Class178[this.width][this.length];
 			this.aClass183ArrayArray9332 = new Class183[this.width][this.length];
@@ -108,7 +108,7 @@ public class Class390_Sub3 extends Ground {
 
 				i_23 = ints_12[i_22];
 				if (i_23 != -1) {
-					TextureDetails class169_24 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_23, -1855515623);
+					TextureDetails class169_24 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_23);
 					if (!class169_24.isGroundMesh) {
 						bool_30 = true;
 						if (this.method14620(class169_24.effectId) || class169_24.textureSpeedU != 0 || class169_24.textureSpeedV != 0) {
@@ -151,7 +151,7 @@ public class Class390_Sub3 extends Ground {
 					class183_25.aShortArray2266[class183_25.aShort2269] = (short) ints_8[i_22];
 					class183_25.aShortArray2273[class183_25.aShort2269] = (short) ints_9[i_22];
 					if (bool_30) {
-						if (ints_12[i_22] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_12[i_22], -1965632762).isGroundMesh) {
+						if (ints_12[i_22] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_12[i_22]).isGroundMesh) {
 							class183_25.aShortArray2270[class183_25.aShort2269] = (short) ints_12[i_22];
 							class183_25.aShortArray2275[class183_25.aShort2269] = (short) ints_13[i_22];
 						} else {
@@ -181,7 +181,7 @@ public class Class390_Sub3 extends Ground {
 
 			TextureDetails class169_26 = null;
 			if (i_19 != -1) {
-				class169_26 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_19, -2054544452);
+				class169_26 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_19);
 			}
 
 			if (class169_26 != null && (class178_32.aByte2219 & 0x2) == 0 && !class169_26.isGroundMesh) {
@@ -207,7 +207,7 @@ public class Class390_Sub3 extends Ground {
 
 	}
 
-	public void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
+	public void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
 		boolean bool_13 = (this.anInt9345 & 0x20) == 0;
 		if (this.aClass177ArrayArray9336 == null && !bool_13) {
 			this.aClass177ArrayArray9336 = new Class177[this.width][this.length];
@@ -308,7 +308,7 @@ public class Class390_Sub3 extends Ground {
 						}
 
 						i_34 = -16777216;
-						if (ints_9[i_15] != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_15], -2116666161).effectId)) {
+						if (ints_9[i_15] != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_15]).effectId)) {
 							i_34 = -1694498816;
 						}
 
@@ -422,7 +422,7 @@ public class Class390_Sub3 extends Ground {
 						class177_30.aByte2210 = (byte) (class177_30.aByte2210 | 0x1);
 					}
 
-					if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_21, -2126168194).isGroundMesh) {
+					if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_21).isGroundMesh) {
 						if (ints_6 != null && class90_11.scale != 0) {
 							i_22 = ints_6[i_15] * 255 / class90_11.scale;
 							if (i_22 < 0) {
@@ -633,7 +633,7 @@ public class Class390_Sub3 extends Ground {
 					boolean bool_33 = false;
 
 					for (i_21 = 0; i_21 < class196_38.aShort2415; i_21++) {
-						if (ints_9[i_21 * 3] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_21 * 3], -2061377529).isGroundMesh) {
+						if (ints_9[i_21 * 3] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_21 * 3]).isGroundMesh) {
 							bool_33 = true;
 						}
 					}
@@ -659,21 +659,21 @@ public class Class390_Sub3 extends Ground {
 							boolean bool_36 = false;
 							boolean bool_37 = true;
 							i_27 = ints_9[i_22];
-							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2113458019).isGroundMesh) {
+							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
 								bool_36 = true;
 							} else {
 								bool_37 = false;
 							}
 
 							i_27 = ints_9[i_34];
-							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2138478760).isGroundMesh) {
+							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
 								bool_36 = true;
 							} else {
 								bool_37 = false;
 							}
 
 							i_27 = ints_9[i_24];
-							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1795000720).isGroundMesh) {
+							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
 								bool_36 = true;
 							} else {
 								bool_37 = false;
@@ -685,18 +685,18 @@ public class Class390_Sub3 extends Ground {
 							} else {
 								if (bool_36) {
 									i_27 = ints_9[i_22];
-									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2059619146).isGroundMesh) {
-										class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1772200789).color & 0xffff, 1039237710) & 0xffff];
+									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+										class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff, 1039237710) & 0xffff];
 									}
 
 									i_27 = ints_9[i_34];
-									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1826671319).isGroundMesh) {
-										class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2021150704).color & 0xffff, 197018698) & 0xffff];
+									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+										class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff, 197018698) & 0xffff];
 									}
 
 									i_27 = ints_9[i_24];
-									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1942303448).isGroundMesh) {
-										class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1884645239).color & 0xffff, 2122916828) & 0xffff];
+									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+										class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff, 2122916828) & 0xffff];
 									}
 								}
 
@@ -1027,7 +1027,7 @@ public class Class390_Sub3 extends Ground {
 					f_36 = choppyitemfixclass_5.aFloat1680 + choppyitemfixclass_5.aFloat1702 * f_52 / f_24;
 				}
 
-				boolean bool_59 = class177_12.aShort2212 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(class177_12.aShort2212, -1802866112).effectId);
+				boolean bool_59 = class177_12.aShort2212 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(class177_12.aShort2212).effectId);
 				f_60 = f_18 + f_19 + f_20;
 				if ((f_33 - f_35) * (f_32 - f_36) - (f_34 - f_36) * (f_31 - f_35) > 0.0F) {
 					choppyitemfixclass_5.aBool1708 = f_33 < 0.0F || f_35 < 0.0F || f_31 < 0.0F || f_33 > (float) choppyitemfixclass_5.anInt1684 || f_35 > (float) choppyitemfixclass_5.anInt1684 || f_31 > (float) choppyitemfixclass_5.anInt1684;
@@ -1190,13 +1190,13 @@ public class Class390_Sub3 extends Ground {
 								if (f_24 > 0.0F) {
 									if (s_57 != -1) {
 										i_58 = -16777216;
-										if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57, -1814071616).effectId)) {
+										if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
 											i_58 = -1694498816;
 										}
 
 										choppyitemfixclass_5.method2424(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], floats_9[i_15], floats_9[i_16], floats_9[i_55], (float) class196_54.aShortArray2416[i_15] / (float) this.tileUnits, (float) class196_54.aShortArray2416[i_16] / (float) this.tileUnits, (float) class196_54.aShortArray2416[i_55] / (float) this.tileUnits, (float) class196_54.aShortArray2418[i_15] / (float) this.tileUnits, (float) class196_54.aShortArray2418[i_16] / (float) this.tileUnits, (float) class196_54.aShortArray2418[i_55] / (float) this.tileUnits, i_58 | class196_54.anIntArray2420[i_15] & 0xffffff, i_58 | class196_54.anIntArray2420[i_16] & 0xffffff, i_58 | class196_54.anIntArray2420[i_55] & 0xffffff, class185_4.anInt2307, floats_10[i_15] * 255.0F, floats_10[i_16] * 255.0F, floats_10[i_55] * 255.0F, s_57);
 									} else if ((class196_54.anIntArray2420[i_15] & 0xffffff) != 0) {
-										if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57, -1754108994).effectId)) {
+										if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
 											choppyitemfixclass_5.anInt1674 = -1694498816;
 										}
 
@@ -1205,13 +1205,13 @@ public class Class390_Sub3 extends Ground {
 									}
 								} else if (s_57 != -1) {
 									i_58 = -16777216;
-									if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57, -1763683877).effectId)) {
+									if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
 										i_58 = -1694498816;
 									}
 
 									choppyitemfixclass_5.method2424(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], floats_9[i_15], floats_9[i_16], floats_9[i_55], (float) class196_54.aShortArray2416[i_15] / (float) this.tileUnits, (float) class196_54.aShortArray2416[i_16] / (float) this.tileUnits, (float) class196_54.aShortArray2416[i_55] / (float) this.tileUnits, (float) class196_54.aShortArray2418[i_15] / (float) this.tileUnits, (float) class196_54.aShortArray2418[i_16] / (float) this.tileUnits, (float) class196_54.aShortArray2418[i_55] / (float) this.tileUnits, i_58 | class196_54.anIntArray2420[i_15] & 0xffffff, i_58 | class196_54.anIntArray2420[i_16] & 0xffffff, i_58 | class196_54.anIntArray2420[i_55] & 0xffffff, 0, 0.0F, 0.0F, 0.0F, s_57);
 								} else if ((class196_54.anIntArray2420[i_15] & 0xffffff) != 0) {
-									if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57, -1995458323).effectId)) {
+									if (s_57 != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(s_57).effectId)) {
 										choppyitemfixclass_5.anInt1674 = -1694498816;
 									}
 
@@ -1628,7 +1628,7 @@ public class Class390_Sub3 extends Ground {
 
 	}
 
-	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
+	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
 		boolean bool_13 = (this.anInt9345 & 0x20) == 0;
 		if (this.aClass177ArrayArray9336 == null && !bool_13) {
 			this.aClass177ArrayArray9336 = new Class177[this.width][this.length];
@@ -1729,7 +1729,7 @@ public class Class390_Sub3 extends Ground {
 						}
 
 						i_34 = -16777216;
-						if (ints_9[i_15] != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_15], -2026986104).effectId)) {
+						if (ints_9[i_15] != -1 && this.method14620(this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_15]).effectId)) {
 							i_34 = -1694498816;
 						}
 
@@ -1843,7 +1843,7 @@ public class Class390_Sub3 extends Ground {
 						class177_30.aByte2210 = (byte) (class177_30.aByte2210 | 0x1);
 					}
 
-					if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_21, -1990349271).isGroundMesh) {
+					if (i_21 != -1 && (class177_30.aByte2210 & 0x2) == 0 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_21).isGroundMesh) {
 						if (ints_6 != null && class90_11.scale != 0) {
 							i_22 = 255 * ints_6[i_15] / (class90_11.scale);
 							if (i_22 < 0) {
@@ -2054,7 +2054,7 @@ public class Class390_Sub3 extends Ground {
 					boolean bool_33 = false;
 
 					for (i_21 = 0; i_21 < class196_38.aShort2415; i_21++) {
-						if (ints_9[i_21 * 3] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_21 * 3], -1859755304).isGroundMesh) {
+						if (ints_9[i_21 * 3] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_9[i_21 * 3]).isGroundMesh) {
 							bool_33 = true;
 						}
 					}
@@ -2080,21 +2080,21 @@ public class Class390_Sub3 extends Ground {
 							boolean bool_36 = false;
 							boolean bool_37 = true;
 							i_27 = ints_9[i_22];
-							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2131663479).isGroundMesh) {
+							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
 								bool_36 = true;
 							} else {
 								bool_37 = false;
 							}
 
 							i_27 = ints_9[i_34];
-							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2136397326).isGroundMesh) {
+							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
 								bool_36 = true;
 							} else {
 								bool_37 = false;
 							}
 
 							i_27 = ints_9[i_24];
-							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1845712049).isGroundMesh) {
+							if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
 								bool_36 = true;
 							} else {
 								bool_37 = false;
@@ -2106,18 +2106,18 @@ public class Class390_Sub3 extends Ground {
 							} else {
 								if (bool_36) {
 									i_27 = ints_9[i_22];
-									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2123006974).isGroundMesh) {
-										class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2041191674).color & 0xffff, 444597695) & 0xffff];
+									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+										class196_38.anIntArray2420[i_22] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff, 444597695) & 0xffff];
 									}
 
 									i_27 = ints_9[i_34];
-									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2063007331).isGroundMesh) {
-										class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -1779401981).color & 0xffff, 2037998587) & 0xffff];
+									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+										class196_38.anIntArray2420[i_34] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff, 2037998587) & 0xffff];
 									}
 
 									i_27 = ints_9[i_24];
-									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2085416975).isGroundMesh) {
-										class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27, -2141091437).color & 0xffff, 818648524) & 0xffff];
+									if (i_27 != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).isGroundMesh) {
+										class196_38.anIntArray2420[i_24] = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_9353.anInterface22_5834.method144(i_27).color & 0xffff, 818648524) & 0xffff];
 									}
 								}
 
@@ -2185,7 +2185,7 @@ public class Class390_Sub3 extends Ground {
 	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 	}
 
-	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, HDWaterTile class90_14, boolean bool_15) {
 		if (this.aClass178ArrayArray9352 == null) {
 			this.aClass178ArrayArray9352 = new Class178[this.width][this.length];
 			this.aClass183ArrayArray9332 = new Class183[this.width][this.length];
@@ -2260,7 +2260,7 @@ public class Class390_Sub3 extends Ground {
 
 				i_23 = ints_12[i_22];
 				if (i_23 != -1) {
-					TextureDetails class169_24 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_23, -1812974887);
+					TextureDetails class169_24 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_23);
 					if (!class169_24.isGroundMesh) {
 						bool_30 = true;
 						if (this.method14620(class169_24.effectId) || class169_24.textureSpeedU != 0 || class169_24.textureSpeedV != 0) {
@@ -2303,7 +2303,7 @@ public class Class390_Sub3 extends Ground {
 					class183_25.aShortArray2266[class183_25.aShort2269] = (short) ints_8[i_22];
 					class183_25.aShortArray2273[class183_25.aShort2269] = (short) ints_9[i_22];
 					if (bool_30) {
-						if (ints_12[i_22] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_12[i_22], -2128895777).isGroundMesh) {
+						if (ints_12[i_22] != -1 && !this.aClass505_Sub3_9353.anInterface22_5834.method144(ints_12[i_22]).isGroundMesh) {
 							class183_25.aShortArray2270[class183_25.aShort2269] = (short) ints_12[i_22];
 							class183_25.aShortArray2275[class183_25.aShort2269] = (short) ints_13[i_22];
 						} else {
@@ -2333,7 +2333,7 @@ public class Class390_Sub3 extends Ground {
 
 			TextureDetails class169_26 = null;
 			if (i_19 != -1) {
-				class169_26 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_19, -1908852297);
+				class169_26 = this.aClass505_Sub3_9353.anInterface22_5834.method144(i_19);
 			}
 
 			if (class169_26 != null && (class178_32.aByte2219 & 0x2) == 0 && !class169_26.isGroundMesh) {

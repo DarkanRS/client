@@ -156,7 +156,7 @@ public final class Class155 {
 	}
 
 	static Animable method2640(int i_0, int i_1, int i_2) {
-		Class293 class293_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-913455840).aClass293ArrayArrayArray2604[i_0][i_1][i_2];
+		Class293 class293_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass293ArrayArrayArray2604[i_0][i_1][i_2];
 		if (class293_4 == null) {
 			return null;
 		} else {

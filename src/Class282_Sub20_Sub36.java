@@ -88,7 +88,7 @@ public class Class282_Sub20_Sub36 extends Class282_Sub20 {
 				}
 				Class148.aClass282_Sub15_Sub2_1735.method15101((short) 15315);
 				Class148.aClass282_Sub15_Sub2_1735.method15097();
-				if (Class75.aClass317_746 != null) {
+				if (CutsceneEntity.aClass317_746 != null) {
 					Class148.anInt1730 = 2;
 				} else {
 					Class148.anInt1730 = 0;

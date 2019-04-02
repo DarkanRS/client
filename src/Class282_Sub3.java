@@ -11,7 +11,7 @@ public class Class282_Sub3 extends Node {
 	OpenGLGraphicalRenderer aClass505_Sub1_7494;
 	int anInt7493;
 	float aFloat7490;
-	Class90 aClass90_7487;
+	HDWaterTile aClass90_7487;
 	int[] anIntArray7496;
 	Class131_Sub2 aClass131_Sub2_7491;
 
@@ -28,7 +28,7 @@ public class Class282_Sub3 extends Node {
 		int i_6;
 		int i_7;
 		if (this.anInt7493 != -1) {
-			TextureDetails class169_5 = this.aClass505_Sub1_7494.anInterface22_5834.method144(this.anInt7493, -2121726716);
+			TextureDetails class169_5 = this.aClass505_Sub1_7494.anInterface22_5834.method144(this.anInt7493);
 			i_6 = class169_5.shadowFactor & 0xff;
 			int i_9;
 			if (i_6 != 0 && class169_5.effectId != 4) {
@@ -195,7 +195,7 @@ public class Class282_Sub3 extends Node {
 		this.aStream7489 = null;
 	}
 
-	Class282_Sub3(OpenGLGround class390_sub2_1, int i_2, int i_3, Class90 class90_4) {
+	Class282_Sub3(OpenGLGround class390_sub2_1, int i_2, int i_3, HDWaterTile class90_4) {
 		this.aClass390_Sub2_7488 = class390_sub2_1;
 		this.aClass505_Sub1_7494 = this.aClass390_Sub2_7488.renderer;
 		this.anInt7493 = i_2;

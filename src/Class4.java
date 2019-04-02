@@ -22,7 +22,7 @@ public class Class4 {
 		float f_12 = 0.0F;
 		float f_13 = 0.0F;
 		float f_14 = 0.0F;
-		for (SceneObjectManager sceneobjectmanager_15 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-956350211); f_8 < 1.1F; f_8 += 0.1F) {
+		for (SceneObjectManager sceneobjectmanager_15 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(); f_8 < 1.1F; f_8 += 0.1F) {
 			float f_16 = f_8 * f_9 + f_0;
 			float f_17 = f_10 * f_8 + f_1;
 			float f_18 = f_2 + f_8 * f_11;

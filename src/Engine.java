@@ -438,9 +438,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	void method4667() {
 		long long_2 = TextureDetails.time();
-		long long_4 = aLongArray3247[Class75.anInt747];
-		aLongArray3247[Class75.anInt747] = long_2;
-		Class75.anInt747 = Class75.anInt747 + 1 & 0x1f;
+		long long_4 = aLongArray3247[CutsceneEntity.anInt747];
+		aLongArray3247[CutsceneEntity.anInt747] = long_2;
+		CutsceneEntity.anInt747 = CutsceneEntity.anInt747 + 1 & 0x1f;
 		if (long_4 != 0L) {
 			;
 		}

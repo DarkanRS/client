@@ -31,7 +31,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 		Vector3 vector3_6 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_4 != null) {
-			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.aByte7968, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -17);
+			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -17);
 		}
 
 	}
@@ -45,12 +45,12 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		Ground class390_6;
 		Ground class390_7;
 		if (this.aBool10525) {
-			class390_6 = this.aClass206_7970.aClass390Array2614[this.aByte7968];
+			class390_6 = this.aClass206_7970.aClass390Array2614[this.collisionPlane];
 			class390_7 = this.aClass206_7970.aClass390Array2607[0];
 		} else {
-			class390_6 = this.aClass206_7970.aClass390Array2607[this.aByte7968];
-			if (this.aByte7968 < 3) {
-				class390_7 = this.aClass206_7970.aClass390Array2607[this.aByte7968 + 1];
+			class390_6 = this.aClass206_7970.aClass390Array2607[this.collisionPlane];
+			if (this.collisionPlane < 3) {
+				class390_7 = this.aClass206_7970.aClass390Array2607[this.collisionPlane + 1];
 			} else {
 				class390_7 = null;
 			}
@@ -73,7 +73,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -128);
+			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -128);
 		}
 
 	}
@@ -149,7 +149,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -90);
+			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -90);
 		}
 
 	}
@@ -195,7 +195,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 		Vector3 vector3_6 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_4 != null) {
-			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.aByte7968, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -39);
+			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -39);
 		}
 
 	}
@@ -273,7 +273,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 23);
+			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 23);
 		}
 
 	}
@@ -291,7 +291,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 		Vector3 vector3_5 = this.method11166().aClass385_3595;
 		if (class282_sub50_sub17_3 != null) {
-			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.aByte7968, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 45);
+			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 45);
 		}
 
 	}

@@ -190,9 +190,9 @@ public class Class105 {
 					} else {
 						player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1], -1262996328);
 					}
-					player_6.plane = player_6.aByte7968 = (byte) (i_9 + player_6.plane & 0x3);
+					player_6.plane = player_6.collisionPlane = (byte) (i_9 + player_6.plane & 0x3);
 					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1753987250)) {
-						player_6.aByte7968 = (byte) (player_6.aByte7968 + 1);
+						player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
 					}
 					if (client.anInt7315 == i_1 && player_6.plane != Class4.anInt35) {
 						Class4.anInt35 = player_6.plane;
@@ -211,9 +211,9 @@ public class Class105 {
 					} else {
 						player_6.method16129(i_12, i_13, Class197.playerMovementTypes[i_1], -106492270);
 					}
-					player_6.plane = player_6.aByte7968 = (byte) (i_9 + player_6.plane & 0x3);
+					player_6.plane = player_6.collisionPlane = (byte) (i_9 + player_6.plane & 0x3);
 					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1539369664)) {
-						player_6.aByte7968 = (byte) (player_6.aByte7968 + 1);
+						player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
 					}
 					if (client.anInt7315 == i_1) {
 						Class4.anInt35 = player_6.plane;

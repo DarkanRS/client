@@ -37,7 +37,7 @@ public abstract class Class534 {
 	}
 
 	void method11410(MouseRecord class282_sub53_1) {
-		this.aClass482_7077.append(class282_sub53_1, -1396840421);
+		this.aClass482_7077.append(class282_sub53_1);
 	}
 
 	abstract int method11412();

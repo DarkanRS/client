@@ -103,7 +103,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 			this.aClass482_9568.popHead((byte) -124);
 			--this.anInt9569;
 		}
-		this.aClass482_9568.append(class282_sub39_1, 1091702645);
+		this.aClass482_9568.append(class282_sub39_1);
 		++this.anInt9569;
 	}
 

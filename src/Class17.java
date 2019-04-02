@@ -17,7 +17,7 @@ final class Class17 implements Interface25 {
 
 	static final void method570() {
 		int i_1 = 0;
-		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1483143416);
+		SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 
 		for (int i_3 = 0; i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX(); i_3++) {
 			for (int i_4 = 0; i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY(); i_4++) {

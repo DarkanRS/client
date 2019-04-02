@@ -222,7 +222,7 @@ public abstract class Class52 implements Interface2 {
 		Class282_Sub50_Sub6 class282_sub50_sub6_5 = new Class282_Sub50_Sub6(i_2, rsbytebuffer_4.readString(), rsbytebuffer_4.readString(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readInt(), rsbytebuffer_4.readUnsignedByte() == 1, rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedByte());
 		int i_6 = rsbytebuffer_4.readUnsignedByte();
 		for (int i_7 = 0; i_7 < i_6; i_7++) {
-			class282_sub50_sub6_5.aClass482_9537.append(new Class282_Sub28(rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort()), 1886479392);
+			class282_sub50_sub6_5.aClass482_9537.append(new Class282_Sub28(rsbytebuffer_4.readUnsignedByte(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort(), rsbytebuffer_4.readUnsignedShort()));
 		}
 		class282_sub50_sub6_5.method14779();
 		return class282_sub50_sub6_5;

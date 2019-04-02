@@ -35,7 +35,7 @@ public class Class405 {
 		} else if (i_1 == 1) {
 			Class510.method8744((byte) 0, -1832206339);
 			Class534_Sub2.method12847(512, (byte) 105);
-			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-987741607) != null) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 				Class17.method570();
 			}
 		} else {

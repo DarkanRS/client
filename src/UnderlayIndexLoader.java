@@ -6,7 +6,7 @@ public class UnderlayIndexLoader {
 
 	Index configIndex;
 
-	public UnderlayDef getUnderlayDef(int i_1, byte b_2) {
+	public UnderlayDef getUnderlayDef(int i_1) {
 		SoftCache softcache_4 = this.cache;
 		UnderlayDef underlaydef_3;
 		synchronized (this.cache) {

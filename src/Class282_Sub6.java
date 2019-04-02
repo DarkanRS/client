@@ -12,22 +12,22 @@ public class Class282_Sub6 extends Node {
 	Class505_Sub2 aClass505_Sub2_7518;
 	int anInt7510;
 	float aFloat7511;
-	Class90 aClass90_7512;
+	HDWaterTile hdWaterTile;
 	int[] anIntArray7515;
 	Interface4 anInterface4_7516;
 	NativeHeapBuffer aNativeHeapBuffer7520;
 	Stream aStream7513;
 
-	Class282_Sub6(HardwareGround class390_sub1_1, int i_2, int i_3, Class90 class90_4) {
+	Class282_Sub6(HardwareGround class390_sub1_1, int i_2, int i_3, HDWaterTile class90_4) {
 		this.aClass390_Sub1_7509 = class390_sub1_1;
 		this.aClass505_Sub2_7518 = this.aClass390_Sub1_7509.aClass505_Sub2_8528;
 		this.anInt7510 = i_2;
 		this.aFloat7511 = (float) i_3;
-		this.aClass90_7512 = class90_4;
+		this.hdWaterTile = class90_4;
 		this.anIntArray7515 = new int[this.aClass390_Sub1_7509.width * this.aClass390_Sub1_7509.length];
 		byte b_5 = 10;
 		if (i_2 >= 0) {
-			TextureDetails class169_6 = this.aClass505_Sub2_7518.anInterface22_5834.method144(i_2, -1808049505);
+			TextureDetails class169_6 = this.aClass505_Sub2_7518.anInterface22_5834.method144(i_2);
 			if (class169_6.effectId > 0) {
 				b_5 = class169_6.effectId;
 			}
@@ -46,7 +46,7 @@ public class Class282_Sub6 extends Node {
 		int i_6;
 		int i_7;
 		if (this.anInt7510 != -1) {
-			TextureDetails class169_5 = this.aClass505_Sub2_7518.anInterface22_5834.method144(this.anInt7510, -1820378147);
+			TextureDetails class169_5 = this.aClass505_Sub2_7518.anInterface22_5834.method144(this.anInt7510);
 			i_6 = class169_5.shadowFactor & 0xff;
 			int i_9;
 			if (i_6 != 0 && class169_5.effectId != 4) {

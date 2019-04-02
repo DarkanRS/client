@@ -72,7 +72,7 @@ public class Class463 {
 			animable_0.method11172((float) ((i_7 * i_4 + i_5 * (i_3 - i_4)) / i_3), (float) ((int) vector3_9.y), (float) ((i_4 * i_8 + i_6 * (i_3 - i_4)) / i_3));
 		}
 		animable_0.anInt10366 = 0;
-		animable_0.method15791(animable_0.anInt10346, false, (byte) 9);
+		animable_0.turn(animable_0.anInt10346, false);
 	}
 
 	static void method7728(int i_0, int i_1, int i_2, int i_3, int i_4) {
@@ -96,7 +96,7 @@ public class Class463 {
 		try {
 			if (Class148.anInt1730 == 2) {
 				if (Class282_Sub44_Sub3.aClass282_Sub7_9563 == null) {
-					Class282_Sub44_Sub3.aClass282_Sub7_9563 = Class282_Sub7.method12164(Class75.aClass317_746, Class6.anInt46, Class148.anInt1738);
+					Class282_Sub44_Sub3.aClass282_Sub7_9563 = Class282_Sub7.method12164(CutsceneEntity.aClass317_746, Class6.anInt46, Class148.anInt1738);
 					if (Class282_Sub44_Sub3.aClass282_Sub7_9563 == null) {
 						return false;
 					}
@@ -142,7 +142,7 @@ public class Class463 {
 					}
 					Class282_Sub44_Sub3.aClass282_Sub7_9563 = null;
 					Class454.aClass250_5450 = null;
-					Class75.aClass317_746 = null;
+					CutsceneEntity.aClass317_746 = null;
 					Class148.aLong1740 = 0L;
 					Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 					Class11.aClass109_121 = null;

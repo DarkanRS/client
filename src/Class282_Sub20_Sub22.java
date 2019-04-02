@@ -117,7 +117,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 				}
 				Class434.method7292();
 				MouseRecord class282_sub53_13 = (MouseRecord) client.mouseRecords.head((byte) 106);
-				if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1135712280) != null) {
+				if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 					if (NativeLibraryLoader.anInt3240 == 5) {
 						Wall.method16113();
 					} else if (NativeLibraryLoader.anInt3240 == 3) {
@@ -175,8 +175,8 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 								}
 								if (client.anInt7341 == 4) {
 									for (int i_7 = 0; i_7 < Class82.aClass75Array804.length; i_7++) {
-										Class75 class75_4 = Class82.aClass75Array804[i_7];
-										if (class75_4.aBool742) {
+										CutsceneEntity class75_4 = Class82.aClass75Array804[i_7];
+										if (class75_4.initialized) {
 											Animable animable_5 = class75_4.method1342((byte) 112);
 											Class363.method6287(animable_5, true, -101184635);
 										}

@@ -140,8 +140,8 @@ public class Class438 {
 				}
 			}
 		}
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1810939972), i_0, Class272.anInt3331, Class272.anInt3331, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
+		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_0, Class272.anInt3331, Class272.anInt3331, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
 		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.anInt3331, (byte) 65) - i_5, i_10 + client.cycles);
-		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_20), -1750493342);
+		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_20));
 	}
 }

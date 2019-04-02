@@ -17,7 +17,7 @@ public class Class93 {
 		}
 	}
 
-	void method1566(Class75 class75_1, int i_2, int i_3) {
+	void method1566(CutsceneEntity class75_1, int i_2, int i_3) {
 		int i_4 = this.anIntArray968[0];
 		class75_1.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
 		Animable animable_5 = class75_1.method1342((byte) 51);

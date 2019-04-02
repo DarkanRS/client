@@ -294,74 +294,71 @@ public class LoadingStage {
 		Class121.anInt1525 = 0;
 	}
 
-	public static boolean method6684(int i_0) {
-		if (i_0 != Class86.anInt831 || Class282_Sub42.aClass85_8039 == null) {
+	public static boolean method6684(int cutsceneId) {
+		if (cutsceneId != Class86.anInt831 || Class282_Sub42.aClass85_8039 == null) {
 			Class79.method1390(769951591);
 			Class282_Sub42.aClass85_8039 = Class85.aClass85_815;
-			Class86.anInt831 = i_0;
+			Class86.anInt831 = cutsceneId;
 		}
-		int i_4;
-		int i_5;
-		int i_6;
 		if (Class282_Sub42.aClass85_8039 == Class85.aClass85_815) {
-			byte[] bytes_2 = IndexLoaders.CUTSCENE_INDEX.getFile(i_0);
-			if (bytes_2 == null) {
+			byte[] data = IndexLoaders.CUTSCENE_INDEX.getFile(cutsceneId);
+			if (data == null) {
 				return false;
 			}
-			RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(bytes_2);
-			Class176.method2976(rsbytebuffer_3);
-			i_4 = rsbytebuffer_3.readUnsignedByte();
-			for (i_5 = 0; i_5 < i_4; i_5++) {
-				Class86.aClass482_827.append(new Class282_Sub2(rsbytebuffer_3), -1970601217);
+			RsByteBuffer buffer = new RsByteBuffer(data);
+			Class176.method2976(buffer);
+			int areas = buffer.readUnsignedByte();
+			for (int i = 0; i < areas; i++) {
+				Class86.CUTSCENE_AREAS.append(new CutsceneArea(buffer));
 			}
-			i_5 = rsbytebuffer_3.readUnsignedSmart();
+			int i_5 = buffer.readUnsignedSmart();
 			Class86.aClass77Array818 = new Class77[i_5];
-			for (i_6 = 0; i_6 < i_5; i_6++) {
-				Class86.aClass77Array818[i_6] = new Class77(rsbytebuffer_3);
+			for (int i_6 = 0; i_6 < i_5; i_6++) {
+				Class86.aClass77Array818[i_6] = new Class77(buffer);
 			}
-			i_6 = rsbytebuffer_3.readUnsignedSmart();
-			Class82.aClass75Array804 = new Class75[i_6];
+			int i_6 = buffer.readUnsignedSmart();
+			Class82.aClass75Array804 = new CutsceneEntity[i_6];
 			int i_14;
 			for (i_14 = 0; i_14 < i_6; i_14++) {
-				Class82.aClass75Array804[i_14] = new Class75(rsbytebuffer_3, i_14);
+				Class82.aClass75Array804[i_14] = new CutsceneEntity(buffer, i_14);
 			}
-			i_14 = rsbytebuffer_3.readUnsignedSmart();
+			i_14 = buffer.readUnsignedSmart();
 			Class86.aClass92Array820 = new Class92[i_14];
 			int i_8;
 			for (i_8 = 0; i_8 < i_14; i_8++) {
-				Class86.aClass92Array820[i_8] = new Class92(rsbytebuffer_3);
+				Class86.aClass92Array820[i_8] = new Class92(buffer);
 			}
-			i_8 = rsbytebuffer_3.readUnsignedSmart();
+			i_8 = buffer.readUnsignedSmart();
 			Class86.aClass93Array821 = new Class93[i_8];
 			int i_9;
 			for (i_9 = 0; i_9 < i_8; i_9++) {
-				Class86.aClass93Array821[i_9] = new Class93(rsbytebuffer_3);
+				Class86.aClass93Array821[i_9] = new Class93(buffer);
 			}
-			i_9 = rsbytebuffer_3.readUnsignedSmart();
+			i_9 = buffer.readUnsignedSmart();
 			Class86.aClass96Array822 = new Class96[i_9];
 			for (int i_10 = 0; i_10 < i_9; i_10++) {
-				Class86.aClass96Array822[i_10] = Class16.method562(rsbytebuffer_3);
+				Class86.aClass96Array822[i_10] = Class16.method562(buffer);
 			}
 			Class282_Sub42.aClass85_8039 = Class85.aClass85_816;
 		}
 		if (Class85.aClass85_816 == Class282_Sub42.aClass85_8039) {
 			boolean bool_11 = true;
-			Class75[] arr_16 = Class82.aClass75Array804;
-			for (i_4 = 0; i_4 < arr_16.length; i_4++) {
-				Class75 class75_13 = arr_16[i_4];
-				if (!class75_13.method1339()) {
+			CutsceneEntity[] arr_16 = Class82.aClass75Array804;
+			for (int i_4 = 0; i_4 < arr_16.length; i_4++) {
+				CutsceneEntity class75_13 = arr_16[i_4];
+				if (!class75_13.ready()) {
 					bool_11 = false;
 				}
 			}
 			Class96[] arr_12 = Class86.aClass96Array822;
-			for (i_5 = 0; i_5 < arr_12.length; i_5++) {
+			for (int i_5 = 0; i_5 < arr_12.length; i_5++) {
 				Class96 class96_15 = arr_12[i_5];
 				if (!class96_15.method1599()) {
 					bool_11 = false;
 				}
 			}
 			Class92[] arr_17 = Class86.aClass92Array820;
-			for (i_6 = 0; i_6 < arr_17.length; i_6++) {
+			for (int i_6 = 0; i_6 < arr_17.length; i_6++) {
 				Class92 class92_7 = arr_17[i_6];
 				if (!class92_7.method1557()) {
 					bool_11 = false;

@@ -518,7 +518,7 @@ public class SystemInfo extends Node {
 				vector3_21.pushVectorStack();
 			} else {
 				animable_0.method11172((float) i_7, vector3_21.y, (float) i_8);
-				animable_0.method15791(animable_0.turnDirection, false, (byte) -111);
+				animable_0.turn(animable_0.turnDirection, false);
 				--animable_0.anInt10355;
 				if (animable_0.anInt10367 > 0) {
 					--animable_0.anInt10367;

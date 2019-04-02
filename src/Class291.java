@@ -351,7 +351,7 @@ public class Class291 {
 									Class282_Sub36 class282_sub36_7 = new Class282_Sub36(i_13);
 									class282_sub36_7.anInt7987 = i_0;
 									class282_sub36_7.anInt7993 = i_1;
-									aClass482_3459.append(class282_sub36_7, 1134203078);
+									aClass482_3459.append(class282_sub36_7);
 								}
 							}
 						}
@@ -370,7 +370,7 @@ public class Class291 {
 							Class282_Sub36 class282_sub36_6 = new Class282_Sub36(i_5);
 							class282_sub36_6.anInt7987 = i_0;
 							class282_sub36_6.anInt7993 = i_1;
-							aClass482_3459.append(class282_sub36_6, 1465536592);
+							aClass482_3459.append(class282_sub36_6);
 						}
 					}
 				}
@@ -408,7 +408,7 @@ public class Class291 {
 									Class282_Sub36 class282_sub36_9 = new Class282_Sub36(i_8);
 									class282_sub36_9.anInt7987 = ((anInt3472 >> 6) + i_1) * 64 + class269_18.aByte3311 - anInt3472;
 									class282_sub36_9.anInt7993 = ((anInt3473 >> 6) + i_11) * 64 + class269_18.aByte3309 - anInt3473;
-									aClass482_3459.append(class282_sub36_9, 1835494095);
+									aClass482_3459.append(class282_sub36_9);
 								}
 							}
 						}
@@ -548,7 +548,7 @@ public class Class291 {
 				Class282_Sub36 class282_sub36_3 = new Class282_Sub36(aClass283_3470.anIntArray3383[i_1]);
 				class282_sub36_3.anInt7987 = ints_0[1] - anInt3472;
 				class282_sub36_3.anInt7993 = ints_0[2] - anInt3473;
-				aClass482_3459.append(class282_sub36_3, -466469405);
+				aClass482_3459.append(class282_sub36_3);
 			}
 		}
 
@@ -726,7 +726,7 @@ public class Class291 {
 			return 0;
 		} else {
 			int i_5 = overlaydef_4.texture;
-			if (i_5 >= 0 && interface22_0.method144(i_5, -1948706533).isGroundMesh) {
+			if (i_5 >= 0 && interface22_0.method144(i_5).isGroundMesh) {
 				i_5 = -1;
 			}
 
@@ -746,7 +746,7 @@ public class Class291 {
 				i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
 				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(i_9, 96, (byte) -73), 475535484) & 0xffff];
 			} else if (i_5 >= 0) {
-				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(interface22_0.method144(i_5, -1979012450).color, 96, (byte) -53), 390293203) & 0xffff];
+				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(interface22_0.method144(i_5).color, 96, (byte) -53), 390293203) & 0xffff];
 			} else if (overlaydef_4.primaryRGB == -1) {
 				i_6 = 0;
 			} else {
@@ -949,7 +949,7 @@ public class Class291 {
 				if (i_11 < xLength) {
 					i_14 = bytes_0[i_11 + i_13 * xLength] & 0xff;
 					if (i_14 > 0) {
-						underlaydef_26 = UNDERLAY_DEF_LOADER.getUnderlayDef(i_14 - 1, (byte) -54);
+						underlaydef_26 = UNDERLAY_DEF_LOADER.getUnderlayDef(i_14 - 1);
 						ints_5[i_13] += underlaydef_26.r;
 						ints_6[i_13] += underlaydef_26.g;
 						ints_7[i_13] += underlaydef_26.b;
@@ -961,7 +961,7 @@ public class Class291 {
 				if (i_12 >= 0) {
 					i_14 = bytes_0[i_12 + i_13 * xLength] & 0xff;
 					if (i_14 > 0) {
-						underlaydef_26 = UNDERLAY_DEF_LOADER.getUnderlayDef(i_14 - 1, (byte) -86);
+						underlaydef_26 = UNDERLAY_DEF_LOADER.getUnderlayDef(i_14 - 1);
 						ints_5[i_13] -= underlaydef_26.r;
 						ints_6[i_13] -= underlaydef_26.g;
 						ints_7[i_13] -= underlaydef_26.b;

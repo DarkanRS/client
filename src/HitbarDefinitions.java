@@ -152,7 +152,7 @@ public class HitbarDefinitions {
 	}
 
 	static final void method3231(int i_0, int i_1, int i_2, int i_3, boolean bool_4) {
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2133910723) == null) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
 			Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_2, i_3, -16777216, (byte) -114);
 		} else {
 			Vector3 vector3_6 = VertexNormal.myPlayer.method11166().aClass385_3595;
@@ -243,14 +243,14 @@ public class HitbarDefinitions {
 				if (Class31.anInt361 < 0) {
 					Class31.anInt361 = 0;
 				}
-				if (Class31.anInt361 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2044226179).anInt2617 << 9) - 1) {
-					Class31.anInt361 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1540309436).anInt2617 << 9) - 1;
+				if (Class31.anInt361 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeX << 9) - 1) {
+					Class31.anInt361 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeX << 9) - 1;
 				}
 				if (Class246.anInt3029 < 0) {
 					Class246.anInt3029 = 0;
 				}
-				if (Class246.anInt3029 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1972336821).anInt2603 << 9) - 1) {
-					Class246.anInt3029 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1780427901).anInt2603 << 9) - 1;
+				if (Class246.anInt3029 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1) {
+					Class246.anInt3029 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1;
 				}
 				QuickchatDefinitionsLoader.method7215();
 				Renderers.SOFTWARE_RENDERER.method8617(i_0, i_1, i_2, i_3);
@@ -274,7 +274,7 @@ public class HitbarDefinitions {
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_2, i_3);
 				IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
 				byte b_15 = Class393.preferences.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(client.cycles, Class31.anInt361, Class109_Sub1.anInt9384, Class246.anInt3029, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.myPlayer.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aClass468_Sub26_8224.method12943(619789577) == 0);
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, Class31.anInt361, Class109_Sub1.anInt9384, Class246.anInt3029, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.myPlayer.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aClass468_Sub26_8224.method12943(619789577) == 0);
 				++client.anInt7396;
 				Class282_Sub20_Sub24.method15391(-1221353280);
 				if (client.gameState == 13) {
@@ -283,7 +283,7 @@ public class HitbarDefinitions {
 					Class96_Sub12.method14612(i_0, i_1, i_2, i_3);
 					Class163.method2844(i_0, i_1, i_2, i_3);
 				}
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1467332289).method3399();
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3399();
 				Class31.anInt361 = i_8;
 				Class109_Sub1.anInt9384 = i_9;
 				Class246.anInt3029 = i_10;

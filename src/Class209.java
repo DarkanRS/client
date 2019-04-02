@@ -97,7 +97,7 @@ public abstract class Class209 {
 		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330, (byte) 4);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
 				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
 			}

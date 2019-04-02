@@ -25,7 +25,7 @@ public class Class225_Sub5 extends RouteStrategy {
 	}
 
 	static void method13042(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-		SceneObjectManager sceneobjectmanager_9 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1053106228);
+		SceneObjectManager sceneobjectmanager_9 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 		SceneObject sceneobject_10 = (SceneObject) sceneobjectmanager_9.getWall(i_1, i_2, i_3, (byte) -80);
 		ObjectDefinitions objectdefinitions_11;
 		int i_12;

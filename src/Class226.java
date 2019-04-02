@@ -27,7 +27,7 @@ public class Class226 implements Definition {
 	public static void method3805() {
 		Class148.aClass282_Sub15_Sub2_1735.method15101((short) -11220);
 		Class148.anInt1730 = 1;
-		Class75.aClass317_746 = null;
+		CutsceneEntity.aClass317_746 = null;
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 	}
 }

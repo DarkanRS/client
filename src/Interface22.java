@@ -16,7 +16,7 @@ public interface Interface22 {
 
 	int method76();
 
-	TextureDetails method144(int var1, int var2);
+	TextureDetails method144(int var1);
 
 	float[] method145(int var1, int var3, int var4);
 

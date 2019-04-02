@@ -79,7 +79,7 @@ public class Class397 implements Interface38 {
 			if (class282_sub48_8.anIntArray8102 != null) {
 				class282_sub48_8.anInt8080 = class282_sub48_8.anInt8072 + (int) (Math.random() * (double) (class282_sub48_8.anInt8101 - class282_sub48_8.anInt8072));
 			}
-			Class282_Sub48.aClass482_8073.append(class282_sub48_8, -427234199);
+			Class282_Sub48.aClass482_8073.append(class282_sub48_8);
 		} else if (npc_5 != null) {
 			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub2_8085 = npc_5;
 			NPCDefinitions npcdefinitions_11 = npc_5.definitions;
@@ -98,7 +98,7 @@ public class Class397 implements Interface38 {
 				class282_sub48_8.anInt8093 = npcdefinitions_11.anInt4911;
 				class282_sub48_8.anInt8081 = npcdefinitions_11.anInt4908 << 9;
 			}
-			Class282_Sub48.aClass482_8074.append(class282_sub48_8, 1710217984);
+			Class282_Sub48.aClass482_8074.append(class282_sub48_8);
 		} else if (player_6 != null) {
 			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub1_8086 = player_6;
 			class282_sub48_8.anInt8079 = i_1 + player_6.getSize() << 9;
@@ -110,7 +110,7 @@ public class Class397 implements Interface38 {
 			class282_sub48_8.anInt8094 = 256;
 			class282_sub48_8.anInt8093 = 256;
 			class282_sub48_8.anInt8081 = 0;
-			Class282_Sub48.aClass465_8075.put(class282_sub48_8, (long) player_6.anInt10314);
+			Class282_Sub48.aClass465_8075.put(class282_sub48_8, (long) player_6.index);
 		}
 	}
 }

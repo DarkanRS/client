@@ -54,7 +54,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			}
 			node_2 = new Node();
 			node_2.data = (long) i_1 * -1253863389874800229L * -3442165056282524525L;
-			this.aClass482_7807.append(node_2, -1173351233);
+			this.aClass482_7807.append(node_2);
 		}
 	}
 
@@ -146,7 +146,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			}
 			node_3 = new Node();
 			node_3.data = (long) i_1;
-			this.aClass482_7807.append(node_3, 1037130654);
+			this.aClass482_7807.append(node_3);
 		}
 	}
 
@@ -396,7 +396,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			}
 			node_2 = new Node();
 			node_2.data = (long) i_1 * -1253863389874800229L * -3442165056282524525L;
-			this.aClass482_7807.append(node_2, 269471242);
+			this.aClass482_7807.append(node_2);
 		}
 	}
 
@@ -446,7 +446,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 						if (this.aByteArray7792[this.anInt7797 * 1482915297] == 0) {
 							node_3 = new Node();
 							node_3.data = (long) this.anInt7797 * 1482915297L;
-							this.coll.append(node_3, -1762683318);
+							this.coll.append(node_3);
 							bool_5 = false;
 						}
 						this.anInt7797 += -1503033823;
@@ -483,7 +483,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 						if (this.aByteArray7792[this.anInt7797 * 1482915297] != 1) {
 							node_3 = new Node();
 							node_3.data = (long) this.anInt7797 * 1482915297L;
-							this.coll.append(node_3, 720444419);
+							this.coll.append(node_3);
 							bool_5 = false;
 						}
 						this.anInt7797 += -1503033823;

@@ -54,7 +54,7 @@ public class Class507 {
 				client.anInt3243 = client.anInt7312 * -1929118563;
 				client.anInt3251 = 0;
 			}
-			if (Class90.aClass496_952 != Class496.aClass496_5813 && Class349.anInt4083 < 1024) {
+			if (HDWaterTile.aClass496_952 != Class496.aClass496_5813 && Class349.anInt4083 < 1024) {
 				int i_10000 = client.anInt3243;
 			}
 			if (!bool_4) {

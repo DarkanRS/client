@@ -542,7 +542,7 @@ public class Class201 {
 		this.anInt2556 = 0;
 		this.aClass231Array2559 = new Class231[1005];
 		this.anInt2564 = 0;
-		this.anIntArrayArrayArray2551 = new int[this.aClass206_2546.anInt2601][this.aClass206_2546.anInt2617 + 1][this.aClass206_2546.anInt2603 + 1];
+		this.anIntArrayArrayArray2551 = new int[this.aClass206_2546.anInt2601][this.aClass206_2546.sizeX + 1][this.aClass206_2546.sizeY + 1];
 		this.aBool2548 = false;
 		if (this.aClass206_2546.aClass505_2596 instanceof ja) {
 			this.aBool2552 = false;
@@ -568,8 +568,8 @@ public class Class201 {
 		int i_3;
 		Class293 class293_4;
 		for (i_1 = 0; i_1 < this.aClass206_2546.anInt2601; i_1++) {
-			for (i_2 = 0; i_2 < this.aClass206_2546.anInt2617; i_2++) {
-				for (i_3 = 0; i_3 < this.aClass206_2546.anInt2603; i_3++) {
+			for (i_2 = 0; i_2 < this.aClass206_2546.sizeX; i_2++) {
+				for (i_3 = 0; i_3 < this.aClass206_2546.sizeY; i_3++) {
 					class293_4 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_3][i_2];
 					if (class293_4 != null) {
 						if (class293_4.aShort3508 > 0) {
@@ -585,8 +585,8 @@ public class Class201 {
 		}
 
 		for (i_1 = 0; i_1 < this.aClass206_2546.anInt2601; i_1++) {
-			for (i_2 = 0; i_2 < this.aClass206_2546.anInt2617; i_2++) {
-				for (i_3 = 0; i_3 < this.aClass206_2546.anInt2603; i_3++) {
+			for (i_2 = 0; i_2 < this.aClass206_2546.sizeX; i_2++) {
+				for (i_3 = 0; i_3 < this.aClass206_2546.sizeY; i_3++) {
 					class293_4 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_3][i_2];
 					if (class293_4 != null) {
 						boolean bool_5 = this.aClass206_2546.aClass293ArrayArrayArray2604[0][i_3][i_2] != null && this.aClass206_2546.aClass293ArrayArrayArray2604[0][i_3][i_2].aClass293_3509 != null;
@@ -615,7 +615,7 @@ public class Class201 {
 								--i_6;
 							}
 
-							for (class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_3][i_7 + 1]; i_7 < this.aClass206_2546.anInt2603 && class293_10 != null && class293_10.aShort3508 < 0 && class293_10.aShort3508 == class293_4.aShort3508 && class293_10.aShort3501 == class293_4.aShort3501 && i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_3, i_7 + 1) && (i_7 + 1 >= this.aClass206_2546.anInt2603 || i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_3, i_7 + 2)) && i_7 - i_6 <= 10; class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_3][i_7 + 1]) {
+							for (class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_3][i_7 + 1]; i_7 < this.aClass206_2546.sizeY && class293_10 != null && class293_10.aShort3508 < 0 && class293_10.aShort3508 == class293_4.aShort3508 && class293_10.aShort3501 == class293_4.aShort3501 && i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_3, i_7 + 1) && (i_7 + 1 >= this.aClass206_2546.sizeY || i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_3, i_7 + 2)) && i_7 - i_6 <= 10; class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_3][i_7 + 1]) {
 								++i_7;
 							}
 
@@ -646,7 +646,7 @@ public class Class201 {
 								--i_6;
 							}
 
-							for (class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_7 + 1][i_2]; i_7 < this.aClass206_2546.anInt2617 && class293_10 != null && class293_10.aShort3510 < 0 && class293_10.aShort3510 == class293_4.aShort3510 && class293_10.aShort3511 == class293_4.aShort3511 && i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_7 + 1, i_2) && (i_7 + 1 >= this.aClass206_2546.anInt2617 || i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_7 + 2, i_2)) && i_7 - i_6 <= 10; class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_7 + 1][i_2]) {
+							for (class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_7 + 1][i_2]; i_7 < this.aClass206_2546.sizeX && class293_10 != null && class293_10.aShort3510 < 0 && class293_10.aShort3510 == class293_4.aShort3510 && class293_10.aShort3511 == class293_4.aShort3511 && i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_7 + 1, i_2) && (i_7 + 1 >= this.aClass206_2546.sizeX || i_11 == this.aClass206_2546.aClass390Array2607[i_1].method6722(i_7 + 2, i_2)) && i_7 - i_6 <= 10; class293_10 = this.aClass206_2546.aClass293ArrayArrayArray2604[i_1][i_7 + 1][i_2]) {
 								++i_7;
 							}
 

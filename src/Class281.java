@@ -72,7 +72,7 @@ public class Class281 {
 				int i_8 = Class4.anInt35;
 				int i_9 = coordgrid_5.x - coordgrid_4.x;
 				int i_10 = coordgrid_5.y - coordgrid_4.y;
-				if (i_9 >= 0 && i_9 < sceneobjectmanager_1.anInt2617 && i_10 >= 0 && i_10 < sceneobjectmanager_1.anInt2603) {
+				if (i_9 >= 0 && i_9 < sceneobjectmanager_1.sizeX && i_10 >= 0 && i_10 < sceneobjectmanager_1.sizeY) {
 					int i_11 = (i_9 << 9) + 256;
 					int i_12 = (i_10 << 9) + 256;
 					if (regionmap_3.is0x2(i_9, i_10, 1872595412)) {

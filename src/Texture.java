@@ -34,7 +34,7 @@ public class Texture implements Interface22 {
 		return 821306191 * this.textureDefSize * 309531567;
 	}
 
-	public TextureDetails method144(int i_1, int i_2) {
+	public TextureDetails method144(int i_1) {
 		return this.textures[i_1];
 	}
 

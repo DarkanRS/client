@@ -659,7 +659,7 @@ public class IComponentDefinitions {
 		} else {
 			MeshRasterizer meshrasterizer_23;
 			if (this.anInt1329 == 2) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330, (byte) -57).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.aClass417_1308, 1874491057);
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.aClass417_1308, 1874491057);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;
@@ -688,7 +688,7 @@ public class IComponentDefinitions {
 					return meshrasterizer_24;
 				}
 			} else if (this.anInt1329 == 6) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330, (byte) -29).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.aClass417_1308, -653193588);
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.aClass417_1308, -653193588);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;

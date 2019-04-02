@@ -214,9 +214,9 @@ public class Class14 {
 				if (npc.definitions.method6886(-1543379642)) {
 					TextureDetails.method2876(npc);
 				}
-				npc.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBigSmart(), (byte) 45), 332217631);
-				npc.method15836(npc.definitions.size, (byte) -91);
-				npc.anInt10340 = npc.definitions.anInt4889 << 3;
+				npc.setDefinition(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBigSmart()));
+				npc.setBoundSize(npc.definitions.size);
+				npc.anInt10340 = npc.definitions.contrast << 3;
 				if (npc.definitions.method6886(-1928423029)) {
 					Class397.method6775(npc.plane, npc.regionBaseX[0], npc.regionBaseY[0], 0, (ObjectDefinitions) null, npc, (Player) null, 352984427);
 				}

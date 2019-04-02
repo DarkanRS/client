@@ -76,7 +76,7 @@ public final class Class251 {
 			Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -927245115), -314816204);
 			return;
 		}
-		if (Class496.aClass496_5813 != Class90.aClass496_952 || client.rights >= 2) {
+		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952 || client.rights >= 2) {
 			try {
 				if (string_0.equalsIgnoreCase("wm1")) {
 					Class440.method7373(1, -1, -1, false, (byte) 111);

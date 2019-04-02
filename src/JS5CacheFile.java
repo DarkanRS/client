@@ -295,9 +295,9 @@ public final class JS5CacheFile {
 
 	public static void method3359() {
 		if (!Class190.aBool2383) {
-			Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1518927169).aClass293ArrayArrayArray2610, (byte) 90);
-			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2093053436).waterRelatedClassArray1 != null) {
-				Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1407673431).waterRelatedClassArray1, (byte) 112);
+			Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass293ArrayArrayArray2610, (byte) 90);
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().waterRelatedClassArray1 != null) {
+				Class435.method7301(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().waterRelatedClassArray1, (byte) 112);
 			}
 			Class190.aBool2383 = true;
 		}

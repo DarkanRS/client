@@ -34,8 +34,8 @@ public class Class197 {
 	static final void method3203(RsBitsBuffer rsbitsbuffer_0, byte b_1) {
 		rsbitsbuffer_0.initBitAccess((byte) -47);
 		int i_2 = client.anInt7315;
-		Player player_3 = VertexNormal.myPlayer = client.players[i_2] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2015513411));
-		player_3.anInt10314 = i_2;
+		Player player_3 = VertexNormal.myPlayer = client.players[i_2] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+		player_3.index = i_2;
 		int i_4 = rsbitsbuffer_0.readBits(30);
 		byte b_5 = (byte) (i_4 >> 28);
 		int i_6 = i_4 >> 14 & 0x3fff;
@@ -44,9 +44,9 @@ public class Class197 {
 		player_3.regionBaseX[0] = i_6 - coordgrid_8.x;
 		player_3.regionBaseY[0] = i_7 - coordgrid_8.y;
 		player_3.method11172((float) ((player_3.regionBaseX[0] << 9) + (player_3.getSize() << 8)), player_3.method11165().aClass385_3595.y, (float) ((player_3.regionBaseY[0] << 9) + (player_3.getSize() << 8)));
-		Class4.anInt35 = player_3.plane = player_3.aByte7968 = b_5;
+		Class4.anInt35 = player_3.plane = player_3.collisionPlane = b_5;
 		if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(player_3.regionBaseX[0], player_3.regionBaseY[0], 1664929780)) {
-			player_3.aByte7968 = (byte) (player_3.aByte7968 + 1);
+			player_3.collisionPlane = (byte) (player_3.collisionPlane + 1);
 		}
 		if (aClass282_Sub35Array2428[i_2] != null) {
 			player_3.decodeAppearance(aClass282_Sub35Array2428[i_2]);

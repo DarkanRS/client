@@ -1,6 +1,6 @@
 final class Class82 implements Interface11 {
 
-	public static Class75[] aClass75Array804;
+	public static CutsceneEntity[] aClass75Array804;
 
 	public long method78(String string_1) {
 		return Class254.method4379(string_1);

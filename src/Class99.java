@@ -35,7 +35,7 @@ public class Class99 {
 		if (i_0 > i_2 && i_0 < i_2 + i_4 && i_1 > i_6 - fontmetrics_9.anInt4978 - 1 && i_1 < fontmetrics_9.anInt4979 + i_6) {
 			i_10 = i_11;
 		}
-		String string_13 = Class75.method1354(class282_sub50_sub15_7);
+		String string_13 = CutsceneEntity.method1354(class282_sub50_sub15_7);
 		fontrenderer_8.method386(string_13, i_2 + 3, i_6, i_10, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aClass160Array1248, Class20.anIntArray177, 701039409);
 	}
 }

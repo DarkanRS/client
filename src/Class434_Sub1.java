@@ -295,23 +295,23 @@ public class Class434_Sub1 extends Class434 {
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = coordgrid_4.x + i_1;
 		int i_6 = i_2 + coordgrid_4.y;
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153 && i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153 && i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 			long long_7 = (long) (i_0 << 28 | i_6 << 14 | i_5);
 			Class282_Sub29 class282_sub29_9 = (Class282_Sub29) client.aClass465_7414.get(long_7);
 			if (class282_sub29_9 == null) {
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1670103274).method3405(i_0, i_1, i_2, -259717537);
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -259717537);
 			} else {
 				Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_9.aClass482_7708.head((byte) 115);
 				if (class282_sub34_10 == null) {
-					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1731204045).method3405(i_0, i_1, i_2, -237481476);
+					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -237481476);
 				} else {
-					Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_11 = (Class521_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-892645216).method3405(i_0, i_1, i_2, -211748464);
+					Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_11 = (Class521_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -211748464);
 					if (class521_sub1_sub2_sub1_11 == null) {
-						class521_sub1_sub2_sub1_11 = new Class521_Sub1_Sub2_Sub1(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1434674634), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1839771352).aClass390Array2591[i_0].method6722(i_1, i_2), i_2 << 265, i_0, i_0);
+						class521_sub1_sub2_sub1_11 = new Class521_Sub1_Sub2_Sub1(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[i_0].method6722(i_1, i_2), i_2 << 265, i_0, i_0);
 					} else {
 						class521_sub1_sub2_sub1_11.anInt10415 = -1;
 						class521_sub1_sub2_sub1_11.anInt10411 = -1;
-						class521_sub1_sub2_sub1_11.aClass206_7970 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1427831609);
+						class521_sub1_sub2_sub1_11.aClass206_7970 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 					}
 
 					class521_sub1_sub2_sub1_11.anInt10423 = class282_sub34_10.anInt7853;
@@ -345,12 +345,12 @@ public class Class434_Sub1 extends Class434 {
 					class521_sub1_sub2_sub1_11.method11172((float) (i_1 << 265), (float) i_14, (float) (i_2 << 265));
 					class521_sub1_sub2_sub1_11.anInt10422 = 0;
 					class521_sub1_sub2_sub1_11.plane = (byte) i_0;
-					class521_sub1_sub2_sub1_11.aByte7968 = (byte) i_0;
+					class521_sub1_sub2_sub1_11.collisionPlane = (byte) i_0;
 					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_1, i_2, 1619505196)) {
-						class521_sub1_sub2_sub1_11.aByte7968 = (byte) (class521_sub1_sub2_sub1_11.aByte7968 + 1);
+						class521_sub1_sub2_sub1_11.collisionPlane = (byte) (class521_sub1_sub2_sub1_11.collisionPlane + 1);
 					}
 
-					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1499506351).method3394(i_0, i_1, i_2, i_14, class521_sub1_sub2_sub1_11);
+					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3394(i_0, i_1, i_2, i_14, class521_sub1_sub2_sub1_11);
 				}
 			}
 		}

@@ -19,7 +19,7 @@ public class HardwareGround extends Ground {
 	int[][][] anIntArrayArrayArray8556;
 	Class282_Sub6[][][] aClass282_Sub6ArrayArrayArray8541;
 	byte[][] aByteArrayArray8553;
-	HashTable aClass453_8537;
+	HashTable tileMap;
 	float[][] aFloatArrayArray8549;
 	float[][] aFloatArrayArray8551;
 	float[][] aFloatArrayArray8554;
@@ -121,7 +121,7 @@ public class HardwareGround extends Ground {
 
 	}
 
-	public void method6707(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
+	public void method6707(int x, int y, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile hdWaterTile, boolean bool_12) {
 		Interface22 interface22_13 = this.aClass505_Sub2_8528.anInterface22_5834;
 		if (ints_6 != null && this.anIntArrayArrayArray8543 == null) {
 			this.anIntArrayArrayArray8543 = new int[this.width][this.length][];
@@ -131,48 +131,48 @@ public class HardwareGround extends Ground {
 			this.anIntArrayArrayArray8532 = new int[this.width][this.length][];
 		}
 
-		this.anIntArrayArrayArray8540[i_1][i_2] = ints_3;
-		this.anIntArrayArrayArray8533[i_1][i_2] = ints_5;
-		this.anIntArrayArrayArray8538[i_1][i_2] = ints_7;
-		this.anIntArrayArrayArray8556[i_1][i_2] = ints_8;
+		this.anIntArrayArrayArray8540[x][y] = ints_3;
+		this.anIntArrayArrayArray8533[x][y] = ints_5;
+		this.anIntArrayArrayArray8538[x][y] = ints_7;
+		this.anIntArrayArrayArray8556[x][y] = ints_8;
 		if (this.anIntArrayArrayArray8543 != null) {
-			this.anIntArrayArrayArray8543[i_1][i_2] = ints_6;
+			this.anIntArrayArrayArray8543[x][y] = ints_6;
 		}
 
 		if (this.anIntArrayArrayArray8532 != null) {
-			this.anIntArrayArrayArray8532[i_1][i_2] = ints_4;
+			this.anIntArrayArrayArray8532[x][y] = ints_4;
 		}
 
-		Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[i_1][i_2] = new Class282_Sub6[ints_7.length];
+		Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[x][y] = new Class282_Sub6[ints_7.length];
 
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -1764984087).isGroundMesh) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
 
-			long long_18 = (long) class90_11.intensity << 48 | (long) class90_11.scale << 42 | (long) class90_11.color << 28 | (long) (i_17 << 14) | (long) i_16;
+			long key = (long) hdWaterTile.intensity << 48 | (long) hdWaterTile.scale << 42 | (long) hdWaterTile.color << 28 | (long) (i_17 << 14) | (long) i_16;
 
-			Node node_20;
-			for (node_20 = this.aClass453_8537.method7530(long_18); node_20 != null; node_20 = this.aClass453_8537.method7544(1200593705)) {
-				Class282_Sub6 class282_sub6_21 = (Class282_Sub6) node_20;
-				if (i_16 == class282_sub6_21.anInt7510 && class282_sub6_21.aFloat7511 == (float) i_17 && class282_sub6_21.aClass90_7512.method1506(class90_11, -120742780)) {
+			Node node;
+			for (node = this.tileMap.get(key); node != null; node = this.tileMap.nextInBucket()) {
+				Class282_Sub6 class282_sub6_21 = (Class282_Sub6) node;
+				if (i_16 == class282_sub6_21.anInt7510 && class282_sub6_21.aFloat7511 == (float) i_17 && class282_sub6_21.hdWaterTile.equals(hdWaterTile)) {
 					break;
 				}
 			}
 
-			if (node_20 == null) {
-				arr_14[i_15] = new Class282_Sub6(this, i_16, i_17, class90_11);
-				this.aClass453_8537.method7534(arr_14[i_15], long_18);
+			if (node == null) {
+				arr_14[i_15] = new Class282_Sub6(this, i_16, i_17, hdWaterTile);
+				this.tileMap.put(arr_14[i_15], key);
 			} else {
-				arr_14[i_15] = (Class282_Sub6) node_20;
+				arr_14[i_15] = (Class282_Sub6) node;
 			}
 		}
 
 		if (bool_12) {
-			this.aByteArrayArray8531[i_1][i_2] = (byte) (this.aByteArrayArray8531[i_1][i_2] | 0x1);
+			this.aByteArrayArray8531[x][y] = (byte) (this.aByteArrayArray8531[x][y] | 0x1);
 		}
 
 		if (ints_7.length > this.anInt8552) {
@@ -439,10 +439,10 @@ public class HardwareGround extends Ground {
 						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
 						if (class282_sub6_20.anInt7514 != 0) {
 							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.aClass90_7512);
-								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aClass505_Sub2_8528.anInt8739 + (float) (class282_sub6_20.aClass90_7512.intensity) / 255.0F * (float) (class282_sub6_20.aClass90_7512.scale));
-								class48_27.aClass303_458.scale(1.0F / (float) (class282_sub6_20.aClass90_7512.scale));
-								class48_27.aClass385_459.set((float) (class282_sub6_20.aClass90_7512.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 0 & 0xff) / 255.0F);
+								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
+								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aClass505_Sub2_8528.anInt8739 + (float) (class282_sub6_20.hdWaterTile.intensity) / 255.0F * (float) (class282_sub6_20.hdWaterTile.scale));
+								class48_27.aClass303_458.scale(1.0F / (float) (class282_sub6_20.hdWaterTile.scale));
+								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
 							} else {
 								class48_27.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 								class48_27.aClass385_459.set(0.0F, 0.0F, 0.0F);
@@ -451,7 +451,7 @@ public class HardwareGround extends Ground {
 							boolean bool_30 = false;
 							if (class282_sub6_20.anInt7510 != -1) {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -2012208347);
+								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 								bool_30 = !Class282_Sub41.method13367(class169_22.effectId, (short) 16046);
 							} else {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
@@ -479,10 +479,10 @@ public class HardwareGround extends Ground {
 						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
 						if (class282_sub6_20.anInt7514 > 0) {
 							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.aClass90_7512);
+								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
 								float f_21 = 0.15F;
-								class48_27.aClass303_458.set(0.0F, 1.0F / ((float) (class282_sub6_20.aClass90_7512.scale) * f_21), 0.0F, 256.0F / ((float) (class282_sub6_20.aClass90_7512.scale) * f_21));
-								class48_27.aClass385_459.set((float) (class282_sub6_20.aClass90_7512.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 0 & 0xff) / 255.0F);
+								class48_27.aClass303_458.set(0.0F, 1.0F / ((float) (class282_sub6_20.hdWaterTile.scale) * f_21), 0.0F, 256.0F / ((float) (class282_sub6_20.hdWaterTile.scale) * f_21));
+								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
 							} else {
 								class48_27.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 								class48_27.aClass385_459.set(0.0F, 0.0F, 0.0F);
@@ -490,7 +490,7 @@ public class HardwareGround extends Ground {
 
 							byte b_29 = 11;
 							if (class282_sub6_20.anInt7510 != -1) {
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1968208071);
+								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 								b_29 = class169_22.effectId;
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class48_27.method944(class169_22);
@@ -517,9 +517,9 @@ public class HardwareGround extends Ground {
 								if (!this.aClass505_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
 									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aClass505_Sub2_8528.aClass41_Sub1_Sub1_8691;
 									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);
-									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.aClass90_7512.anInt949)), 1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.aClass90_7512.anInt949)), 1.0F, 1.0F);
+									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F, 1.0F);
 									class41_sub1_sub1_31.aClass385_10089.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
-									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1774392494);
+									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 									class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
 									class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
 									class41_sub1_sub1_31.anInt10111 = (class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1);
@@ -602,7 +602,7 @@ public class HardwareGround extends Ground {
 
 	}
 
-	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14, boolean bool_15) {
+	public void method6714(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, HDWaterTile class90_14, boolean bool_15) {
 		int i_16 = ints_10.length;
 		int[] ints_17 = new int[i_16 * 3];
 		int[] ints_18 = new int[i_16 * 3];
@@ -668,7 +668,7 @@ public class HardwareGround extends Ground {
 		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, bool_15);
 	}
 
-	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, Class90 class90_11, boolean bool_12) {
+	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
 		Interface22 interface22_13 = this.aClass505_Sub2_8528.anInterface22_5834;
 		if (ints_6 != null && this.anIntArrayArrayArray8543 == null) {
 			this.anIntArrayArrayArray8543 = new int[this.width][this.length][];
@@ -695,7 +695,7 @@ public class HardwareGround extends Ground {
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
 			int i_17 = ints_10[i_15];
-			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16, -2017855605).isGroundMesh) {
+			if ((this.flags & 0x20) != 0 && i_16 != -1 && interface22_13.method144(i_16).isGroundMesh) {
 				i_17 = 128;
 				i_16 = -1;
 			}
@@ -703,16 +703,16 @@ public class HardwareGround extends Ground {
 			long long_18 = (long) (class90_11.intensity) << 48 | (long) (class90_11.scale) << 42 | (long) (class90_11.color) << 28 | (long) (i_17 << 14) | (long) i_16;
 
 			Node node_20;
-			for (node_20 = this.aClass453_8537.method7530(long_18); node_20 != null; node_20 = this.aClass453_8537.method7544(2090773608)) {
+			for (node_20 = this.tileMap.get(long_18); node_20 != null; node_20 = this.tileMap.nextInBucket()) {
 				Class282_Sub6 class282_sub6_21 = (Class282_Sub6) node_20;
-				if (class282_sub6_21.anInt7510 == i_16 && class282_sub6_21.aFloat7511 == (float) i_17 && class282_sub6_21.aClass90_7512.method1506(class90_11, 224170917)) {
+				if (class282_sub6_21.anInt7510 == i_16 && class282_sub6_21.aFloat7511 == (float) i_17 && class282_sub6_21.hdWaterTile.equals(class90_11)) {
 					break;
 				}
 			}
 
 			if (node_20 == null) {
 				arr_14[i_15] = new Class282_Sub6(this, i_16, i_17, class90_11);
-				this.aClass453_8537.method7534(arr_14[i_15], long_18);
+				this.tileMap.put(arr_14[i_15], long_18);
 			} else {
 				arr_14[i_15] = (Class282_Sub6) node_20;
 			}
@@ -740,8 +740,8 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			Node[] arr_67 = new Node[this.aClass453_8537.method7540()];
-			this.aClass453_8537.method7532(arr_67, (byte) 122);
+			Node[] arr_67 = new Node[this.tileMap.method7540()];
+			this.tileMap.values(arr_67);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
 				((Class282_Sub6) arr_67[i_3]).method12150(this.anInt8542);
@@ -891,7 +891,7 @@ public class HardwareGround extends Ground {
 
 							Node node_80 = null;
 							if ((i_40 & this.anInt8529 - 1) == 0 && (i_41 & this.anInt8529 - 1) == 0) {
-								node_80 = class453_10.method7530(long_47);
+								node_80 = class453_10.get(long_47);
 							}
 
 							int i_86;
@@ -983,7 +983,7 @@ public class HardwareGround extends Ground {
 									arr_8[i_86] = arr_14[i_39];
 								}
 
-								class453_10.method7534(new Class282_Sub46(shorts_72[i_39]), long_47);
+								class453_10.put(new Class282_Sub46(shorts_72[i_39]), long_47);
 							} else {
 								shorts_72[i_39] = ((Class282_Sub46) node_80).aShort8067;
 								i_86 = shorts_72[i_39] & 0xffff;
@@ -1118,7 +1118,7 @@ public class HardwareGround extends Ground {
 		this.anIntArrayArrayArray8532 = null;
 		this.aClass282_Sub6ArrayArrayArray8541 = null;
 		this.aByteArrayArray8553 = null;
-		this.aClass453_8537 = null;
+		this.tileMap = null;
 		this.aFloatArrayArray8549 = null;
 		this.aFloatArrayArray8551 = null;
 		this.aFloatArrayArray8554 = null;
@@ -1135,8 +1135,8 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			Node[] arr_67 = new Node[this.aClass453_8537.method7540()];
-			this.aClass453_8537.method7532(arr_67, (byte) 32);
+			Node[] arr_67 = new Node[this.tileMap.method7540()];
+			this.tileMap.values(arr_67);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
 				((Class282_Sub6) arr_67[i_3]).method12150(this.anInt8542);
@@ -1286,7 +1286,7 @@ public class HardwareGround extends Ground {
 
 							Node node_80 = null;
 							if ((i_40 & this.anInt8529 - 1) == 0 && (i_41 & this.anInt8529 - 1) == 0) {
-								node_80 = class453_10.method7530(long_47);
+								node_80 = class453_10.get(long_47);
 							}
 
 							int i_86;
@@ -1378,7 +1378,7 @@ public class HardwareGround extends Ground {
 									arr_8[i_86] = arr_14[i_39];
 								}
 
-								class453_10.method7534(new Class282_Sub46(shorts_72[i_39]), long_47);
+								class453_10.put(new Class282_Sub46(shorts_72[i_39]), long_47);
 							} else {
 								shorts_72[i_39] = ((Class282_Sub46) node_80).aShort8067;
 								i_86 = shorts_72[i_39] & 0xffff;
@@ -1513,7 +1513,7 @@ public class HardwareGround extends Ground {
 		this.anIntArrayArrayArray8532 = null;
 		this.aClass282_Sub6ArrayArrayArray8541 = null;
 		this.aByteArrayArray8553 = null;
-		this.aClass453_8537 = null;
+		this.tileMap = null;
 		this.aFloatArrayArray8549 = null;
 		this.aFloatArrayArray8551 = null;
 		this.aFloatArrayArray8554 = null;
@@ -1530,8 +1530,8 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			Node[] arr_67 = new Node[this.aClass453_8537.method7540()];
-			this.aClass453_8537.method7532(arr_67, (byte) 55);
+			Node[] arr_67 = new Node[this.tileMap.method7540()];
+			this.tileMap.values(arr_67);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
 				((Class282_Sub6) arr_67[i_3]).method12150(this.anInt8542);
@@ -1681,7 +1681,7 @@ public class HardwareGround extends Ground {
 
 							Node node_80 = null;
 							if ((i_40 & this.anInt8529 - 1) == 0 && (i_41 & this.anInt8529 - 1) == 0) {
-								node_80 = class453_10.method7530(long_47);
+								node_80 = class453_10.get(long_47);
 							}
 
 							int i_86;
@@ -1773,7 +1773,7 @@ public class HardwareGround extends Ground {
 									arr_8[i_86] = arr_14[i_39];
 								}
 
-								class453_10.method7534(new Class282_Sub46(shorts_72[i_39]), long_47);
+								class453_10.put(new Class282_Sub46(shorts_72[i_39]), long_47);
 							} else {
 								shorts_72[i_39] = ((Class282_Sub46) node_80).aShort8067;
 								i_86 = shorts_72[i_39] & 0xffff;
@@ -1908,7 +1908,7 @@ public class HardwareGround extends Ground {
 		this.anIntArrayArrayArray8532 = null;
 		this.aClass282_Sub6ArrayArrayArray8541 = null;
 		this.aByteArrayArray8553 = null;
-		this.aClass453_8537 = null;
+		this.tileMap = null;
 		this.aFloatArrayArray8549 = null;
 		this.aFloatArrayArray8551 = null;
 		this.aFloatArrayArray8554 = null;
@@ -2009,10 +2009,10 @@ public class HardwareGround extends Ground {
 						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
 						if (class282_sub6_20.anInt7514 != 0) {
 							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.aClass90_7512);
-								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aClass505_Sub2_8528.anInt8739 + (float) class282_sub6_20.aClass90_7512.intensity / 255.0F * (float) class282_sub6_20.aClass90_7512.scale);
-								class48_27.aClass303_458.scale(1.0F / (float) class282_sub6_20.aClass90_7512.scale);
-								class48_27.aClass385_459.set((float) (class282_sub6_20.aClass90_7512.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 0 & 0xff) / 255.0F);
+								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
+								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aClass505_Sub2_8528.anInt8739 + (float) class282_sub6_20.hdWaterTile.intensity / 255.0F * (float) class282_sub6_20.hdWaterTile.scale);
+								class48_27.aClass303_458.scale(1.0F / (float) class282_sub6_20.hdWaterTile.scale);
+								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
 							} else {
 								class48_27.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 								class48_27.aClass385_459.set(0.0F, 0.0F, 0.0F);
@@ -2021,7 +2021,7 @@ public class HardwareGround extends Ground {
 							boolean bool_30 = false;
 							if (class282_sub6_20.anInt7510 != -1) {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1934981615);
+								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 								bool_30 = !Class282_Sub41.method13367(class169_22.effectId, (short) 17932);
 							} else {
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
@@ -2049,10 +2049,10 @@ public class HardwareGround extends Ground {
 						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
 						if (class282_sub6_20.anInt7514 > 0) {
 							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.aClass90_7512);
+								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
 								float f_21 = 0.15F;
-								class48_27.aClass303_458.set(0.0F, 1.0F / ((float) class282_sub6_20.aClass90_7512.scale * f_21), 0.0F, 256.0F / ((float) class282_sub6_20.aClass90_7512.scale * f_21));
-								class48_27.aClass385_459.set((float) (class282_sub6_20.aClass90_7512.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.aClass90_7512.color >> 0 & 0xff) / 255.0F);
+								class48_27.aClass303_458.set(0.0F, 1.0F / ((float) class282_sub6_20.hdWaterTile.scale * f_21), 0.0F, 256.0F / ((float) class282_sub6_20.hdWaterTile.scale * f_21));
+								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
 							} else {
 								class48_27.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 								class48_27.aClass385_459.set(0.0F, 0.0F, 0.0F);
@@ -2060,7 +2060,7 @@ public class HardwareGround extends Ground {
 
 							byte b_29 = 11;
 							if (class282_sub6_20.anInt7510 != -1) {
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -1784475659);
+								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 								b_29 = class169_22.effectId;
 								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class48_27.method944(class169_22);
@@ -2088,9 +2088,9 @@ public class HardwareGround extends Ground {
 								if (!this.aClass505_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
 									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aClass505_Sub2_8528.aClass41_Sub1_Sub1_8691;
 									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);
-									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.aClass90_7512.anInt949), 1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.aClass90_7512.anInt949), 1.0F, 1.0F);
+									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F, 1.0F);
 									class41_sub1_sub1_31.aClass385_10089.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
-									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510, -2062913457);
+									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 									class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
 									class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
 									class41_sub1_sub1_31.anInt10111 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
@@ -2198,7 +2198,7 @@ public class HardwareGround extends Ground {
 
 		--this.aFloat8535;
 		++this.aFloat8544;
-		this.aClass453_8537 = new HashTable(128);
+		this.tileMap = new HashTable(128);
 		if ((this.flags & 0x10) != 0) {
 			this.aClass74_8545 = new Class74(this.aClass505_Sub2_8528, this);
 		}
@@ -2223,7 +2223,7 @@ public class HardwareGround extends Ground {
 
 	}
 
-	public void method6708(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, Class90 class90_14) {
+	public void method6708(int x, int y, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, int[] ints_11, int[] ints_12, int[] ints_13, HDWaterTile hdWaterTile) {
 		int i_16 = ints_10.length;
 		int[] ints_17 = new int[i_16 * 3];
 		int[] ints_18 = new int[i_16 * 3];
@@ -2286,7 +2286,7 @@ public class HardwareGround extends Ground {
 			++i_25;
 		}
 
-		this.method6707(i_1, i_2, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, class90_14, false);
+		this.method6707(x, y, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, hdWaterTile, false);
 	}
 
 	public void method6713(Class282_Sub24 class282_sub24_1, int[] ints_2) {

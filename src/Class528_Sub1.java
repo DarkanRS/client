@@ -120,7 +120,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		for (int i_9 = 0; i_9 < rsmesh_2.faceCount; i_9++) {
 			if (rsmesh_2.faceType == null || rsmesh_2.faceType[i_9] != 2) {
 				if (rsmesh_2.faceTextures != null && rsmesh_2.faceTextures[i_9] != -1) {
-					TextureDetails class169_72 = interface22_7.method144(rsmesh_2.faceTextures[i_9] & 0xffff, -1871308532);
+					TextureDetails class169_72 = interface22_7.method144(rsmesh_2.faceTextures[i_9] & 0xffff);
 					if (((this.anInt8241 & 0x40) == 0 || !class169_72.isGroundMesh) && class169_72.skipTriangles) {
 						continue;
 					}
@@ -162,7 +162,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 						}
 
 						if (class347_70.anInt4055 != -1) {
-							class169_71 = interface22_7.method144(class347_70.anInt4055, -1845609255);
+							class169_71 = interface22_7.method144(class347_70.anInt4055);
 							if (class169_71.blendType == 2) {
 								this.aBool8245 = true;
 							}
@@ -181,7 +181,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 			if (rsmesh_2.faceTextures != null) {
 				s_82 = rsmesh_2.faceTextures[i_12];
 				if (s_82 != -1) {
-					class169_65 = interface22_7.method144(s_82 & 0xffff, -1964447414);
+					class169_65 = interface22_7.method144(s_82 & 0xffff);
 					if ((this.anInt8241 & 0x40) != 0 && class169_65.isGroundMesh) {
 						s_82 = -1;
 						class169_65 = null;
@@ -360,7 +360,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			short s_86 = rsmesh_2.faceTextures == null ? -1 : rsmesh_2.faceTextures[i_81];
 			if (s_86 != -1 && (this.anInt8241 & 0x40) != 0) {
-				class169_71 = interface22_7.method144(s_86 & 0xffff, -1997959177);
+				class169_71 = interface22_7.method144(s_86 & 0xffff);
 				if (class169_71.isGroundMesh) {
 					s_86 = -1;
 				}
@@ -1903,7 +1903,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 	int method13531(int i_1, short s_2, int i_3, byte b_4) {
 		int i_5 = Class540.anIntArray7136[method13538(i_1, i_3)];
 		if (s_2 != -1) {
-			TextureDetails class169_6 = this.aClass505_Sub1_8239.anInterface22_5834.method144(s_2 & 0xffff, -1794739592);
+			TextureDetails class169_6 = this.aClass505_Sub1_8239.anInterface22_5834.method144(s_2 & 0xffff);
 			int i_7 = class169_6.shadowFactor & 0xff;
 			int i_8;
 			int i_10;
@@ -6323,7 +6323,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		byte b_13 = 0;
 		byte b_5 = 0;
 		if (s_1 != -1) {
-			TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff, -1776053631);
+			TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff);
 			b_13 = class169_6.shadowFactor;
 			b_5 = class169_6.brightness;
 		}
@@ -6331,7 +6331,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		byte b_11 = 0;
 		byte b_7 = 0;
 		if (s_2 != -1) {
-			TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff, -1781439316);
+			TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff);
 			b_11 = class169_8.shadowFactor;
 			b_7 = class169_8.brightness;
 			if (class169_8.textureSpeedU != 0 || class169_8.textureSpeedV != 0) {
@@ -6526,7 +6526,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		byte b_13 = 0;
 		byte b_5 = 0;
 		if (s_1 != -1) {
-			TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff, -2130992347);
+			TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff);
 			b_13 = class169_6.shadowFactor;
 			b_5 = class169_6.brightness;
 		}
@@ -6534,7 +6534,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		byte b_11 = 0;
 		byte b_7 = 0;
 		if (s_2 != -1) {
-			TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff, -1975477169);
+			TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff);
 			b_11 = class169_8.shadowFactor;
 			b_7 = class169_8.brightness;
 			if (class169_8.textureSpeedU != 0 || class169_8.textureSpeedV != 0) {
@@ -6570,7 +6570,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		byte b_13 = 0;
 		byte b_5 = 0;
 		if (s_1 != -1) {
-			TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff, -1809598695);
+			TextureDetails class169_6 = interface22_3.method144(s_1 & 0xffff);
 			b_13 = class169_6.shadowFactor;
 			b_5 = class169_6.brightness;
 		}
@@ -6578,7 +6578,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		byte b_11 = 0;
 		byte b_7 = 0;
 		if (s_2 != -1) {
-			TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff, -2110622212);
+			TextureDetails class169_8 = interface22_3.method144(s_2 & 0xffff);
 			b_11 = class169_8.shadowFactor;
 			b_7 = class169_8.brightness;
 			if (class169_8.textureSpeedU != 0 || class169_8.textureSpeedV != 0) {

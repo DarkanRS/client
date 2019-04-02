@@ -401,7 +401,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 
 	int method13799(int i_1, short s_2, int i_3) {
 		int i_4 = Class540.anIntArray7136[this.method13855(i_1, i_3)];
-		TextureDetails class169_5 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff, -1944142308);
+		TextureDetails class169_5 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff);
 		int i_6 = class169_5.shadowFactor & 0xff;
 		int i_7;
 		int i_9;
@@ -5454,7 +5454,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	public void W(short s_1, short s_2) {
 		if (this.aShortArray8603 != null) {
 			if (!this.aBool8640 && s_2 >= 0) {
-				TextureDetails class169_3 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff, -1877330793);
+				TextureDetails class169_3 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff);
 				if (class169_3.textureSpeedU != 0 || class169_3.textureSpeedV != 0) {
 					this.aBool8640 = true;
 				}
@@ -6162,7 +6162,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	public void di(short s_1, short s_2) {
 		if (this.aShortArray8603 != null) {
 			if (!this.aBool8640 && s_2 >= 0) {
-				TextureDetails class169_3 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff, -2096330622);
+				TextureDetails class169_3 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff);
 				if (class169_3.textureSpeedU != 0 || class169_3.textureSpeedV != 0) {
 					this.aBool8640 = true;
 				}
@@ -6180,7 +6180,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	public void df(short s_1, short s_2) {
 		if (this.aShortArray8603 != null) {
 			if (!this.aBool8640 && s_2 >= 0) {
-				TextureDetails class169_3 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff, -2091368936);
+				TextureDetails class169_3 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_2 & 0xffff);
 				if (class169_3.textureSpeedU != 0 || class169_3.textureSpeedV != 0) {
 					this.aBool8640 = true;
 				}
@@ -6289,7 +6289,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 						}
 
 						if (class347_21.anInt4055 != -1) {
-							TextureDetails class169_22 = interface22_7.method144(class347_21.anInt4055, -1996466919);
+							TextureDetails class169_22 = interface22_7.method144(class347_21.anInt4055);
 							if (class169_22.blendType == 2) {
 								this.aBool8630 = true;
 							}
@@ -6306,7 +6306,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			if (rsmesh_2.faceTextures != null) {
 				s_68 = rsmesh_2.faceTextures[i_55];
 				if (s_68 != -1) {
-					class169_13 = interface22_7.method144(s_68 & 0xffff, -1793423627);
+					class169_13 = interface22_7.method144(s_68 & 0xffff);
 					if ((i_6 & 0x40) != 0 && class169_13.isGroundMesh) {
 						s_68 = -1;
 					} else {
@@ -6367,7 +6367,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 
 			s_68 = rsmesh_2.faceTextures == null ? -1 : rsmesh_2.faceTextures[i_67];
 			if (s_68 != -1 && (i_6 & 0x40) != 0) {
-				TextureDetails class169_57 = interface22_7.method144(s_68 & 0xffff, -1940118414);
+				TextureDetails class169_57 = interface22_7.method144(s_68 & 0xffff);
 				if (class169_57.isGroundMesh) {
 					s_68 = -1;
 				}
@@ -6581,7 +6581,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			for (i_67 = 0; i_67 < this.anInt8586; i_67++) {
 				short s_70 = rsmesh_2.faceTextures[i_67];
 				if (s_70 != -1) {
-					TextureDetails class169_56 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_70, -1981607530);
+					TextureDetails class169_56 = this.aClass505_Sub3_8638.anInterface22_5834.method144(s_70);
 					if ((i_6 & 0x40) != 0 && class169_56.isGroundMesh) {
 						this.aShortArray8603[i_67] = -1;
 					} else {
