@@ -22,7 +22,7 @@ public class Class427 {
 			Index index_5 = this.aClass317_5120;
 			byte[] bytes_10;
 			synchronized (this.aClass317_5120) {
-				bytes_10 = this.aClass317_5120.getFile(SharedConfigsType.aClass120_1497.id, i_1);
+				bytes_10 = this.aClass317_5120.getFile(SharedConfigsType.SCT_34.id, i_1);
 			}
 			class418_3 = new Class418();
 			class418_3.aClass427_4998 = this;
@@ -51,7 +51,7 @@ public class Class427 {
 	public Class427(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_5120 = index_3;
 		this.aClass317_5118 = index_4;
-		this.aClass317_5120.filesCount(SharedConfigsType.aClass120_1497.id);
+		this.aClass317_5120.filesCount(SharedConfigsType.SCT_34.id);
 		Math.random();
 		Math.random();
 		Math.random();

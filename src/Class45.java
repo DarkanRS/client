@@ -18,7 +18,7 @@ public class Class45 {
 			Index index_5 = this.aClass317_433;
 			byte[] bytes_10;
 			synchronized (this.aClass317_433) {
-				bytes_10 = this.aClass317_433.getFile(SharedConfigsType.aClass120_1489.id, i_1);
+				bytes_10 = this.aClass317_433.getFile(SharedConfigsType.SCT_30.id, i_1);
 			}
 			class38_3 = new Class38();
 			if (bytes_10 != null) {
@@ -55,6 +55,6 @@ public class Class45 {
 
 	public Class45(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_433 = index_3;
-		this.aClass317_433.filesCount(SharedConfigsType.aClass120_1489.id);
+		this.aClass317_433.filesCount(SharedConfigsType.SCT_30.id);
 	}
 }

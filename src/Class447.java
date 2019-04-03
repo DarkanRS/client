@@ -13,7 +13,7 @@ public class Class447 {
 		if (class449_3 != null) {
 			return class449_3;
 		} else {
-			byte[] bytes_8 = this.aClass317_5418.getFile(SharedConfigsType.aClass120_1522.id, i_1);
+			byte[] bytes_8 = this.aClass317_5418.getFile(SharedConfigsType.SCT_24.id, i_1);
 			class449_3 = new Class449();
 			if (bytes_8 != null) {
 				class449_3.method7487(new RsByteBuffer(bytes_8));
@@ -43,7 +43,7 @@ public class Class447 {
 	public Class447(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5418 = index_3;
 		if (this.aClass317_5418 != null) {
-			this.aClass317_5418.filesCount(SharedConfigsType.aClass120_1522.id);
+			this.aClass317_5418.filesCount(SharedConfigsType.SCT_24.id);
 		}
 	}
 

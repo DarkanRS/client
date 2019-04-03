@@ -1,118 +1,62 @@
 public class SharedConfigsType {
 
 	public static SharedConfigsType FLO1 = new SharedConfigsType(1);
-
-	static SharedConfigsType aClass120_1465 = new SharedConfigsType(2);
-
-	public static SharedConfigsType aClass120_1466 = new SharedConfigsType(3);
-
+	public static SharedConfigsType SCT_2 = new SharedConfigsType(2);
+	public static SharedConfigsType SCT_3 = new SharedConfigsType(3);
 	public static SharedConfigsType FLO2 = new SharedConfigsType(4);
-
 	public static SharedConfigsType INVENTORIES = new SharedConfigsType(5);
-
 	public static SharedConfigsType OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
-
-	static SharedConfigsType aClass120_1470 = new SharedConfigsType(7);
-
+	public static SharedConfigsType SCT_7 = new SharedConfigsType(7);
 	public static SharedConfigsType ENUMS = new SharedConfigsType(8, 8);
-
-	public static SharedConfigsType aClass120_1467 = new SharedConfigsType(9, 7);
-
+	public static SharedConfigsType SCT_9 = new SharedConfigsType(9, 7);
 	public static SharedConfigsType ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
-
 	public static SharedConfigsType PARAMS = new SharedConfigsType(11);
-
 	public static SharedConfigsType SEQUENCES = new SharedConfigsType(12, 7);
-
 	public static SharedConfigsType SPOT_ANIMS = new SharedConfigsType(13, 8);
-
-	public static SharedConfigsType aClass120_1477 = new SharedConfigsType(14, 10);
-
-	public static SharedConfigsType aClass120_1478 = new SharedConfigsType(15);
-
-	public static SharedConfigsType aClass120_1487 = new SharedConfigsType(16);
-
-	static SharedConfigsType aClass120_1480 = new SharedConfigsType(17);
-
-	static SharedConfigsType aClass120_1481 = new SharedConfigsType(18);
-
-	public static SharedConfigsType aClass120_1482 = new SharedConfigsType(19);
-
-	static SharedConfigsType aClass120_1472 = new SharedConfigsType(20);
-
-	static SharedConfigsType aClass120_1484 = new SharedConfigsType(21);
-
-	static SharedConfigsType aClass120_1485 = new SharedConfigsType(22);
-
-	static SharedConfigsType aClass120_1486 = new SharedConfigsType(23);
-
-	public static SharedConfigsType aClass120_1522 = new SharedConfigsType(24);
-
-	public static SharedConfigsType aClass120_1479 = new SharedConfigsType(25);
-
-	public static SharedConfigsType aClass120_1473 = new SharedConfigsType(26);
-
-	static SharedConfigsType aClass120_1490 = new SharedConfigsType(27);
-
-	static SharedConfigsType aClass120_1491 = new SharedConfigsType(28);
-
-	public static SharedConfigsType aClass120_1469 = new SharedConfigsType(29);
-
-	public static SharedConfigsType aClass120_1489 = new SharedConfigsType(30);
-
-	public static SharedConfigsType aClass120_1494 = new SharedConfigsType(31);
-
+	public static SharedConfigsType SCT_14 = new SharedConfigsType(14, 10);
+	public static SharedConfigsType SCT_15 = new SharedConfigsType(15);
+	public static SharedConfigsType SCT_16 = new SharedConfigsType(16);
+	public static SharedConfigsType SCT_17 = new SharedConfigsType(17);
+	public static SharedConfigsType SCT_18 = new SharedConfigsType(18);
+	public static SharedConfigsType SCT_19 = new SharedConfigsType(19);
+	public static SharedConfigsType SCT_20 = new SharedConfigsType(20);
+	public static SharedConfigsType SCT_21 = new SharedConfigsType(21);
+	public static SharedConfigsType SCT_22 = new SharedConfigsType(22);
+	public static SharedConfigsType SCT_23 = new SharedConfigsType(23);
+	public static SharedConfigsType SCT_24 = new SharedConfigsType(24);
+	public static SharedConfigsType SCT_25 = new SharedConfigsType(25);
+	public static SharedConfigsType SCT_26 = new SharedConfigsType(26);
+	public static SharedConfigsType SCT_27 = new SharedConfigsType(27);
+	public static SharedConfigsType SCT_28 = new SharedConfigsType(28);
+	public static SharedConfigsType SCT_29 = new SharedConfigsType(29);
+	public static SharedConfigsType SCT_30 = new SharedConfigsType(30);
+	public static SharedConfigsType SCT_31 = new SharedConfigsType(31);
 	public static SharedConfigsType RENDER_ANIMS = new SharedConfigsType(32);
-
-	public static SharedConfigsType aClass120_1496 = new SharedConfigsType(33);
-
-	public static SharedConfigsType aClass120_1497 = new SharedConfigsType(34);
-
-	public static SharedConfigsType aClass120_1498 = new SharedConfigsType(35);
-
+	public static SharedConfigsType SCT_33 = new SharedConfigsType(33);
+	public static SharedConfigsType SCT_34 = new SharedConfigsType(34);
+	public static SharedConfigsType SCT_35 = new SharedConfigsType(35);
 	public static SharedConfigsType WORLD_MAP_DEFS = new SharedConfigsType(36);
-
-	static SharedConfigsType aClass120_1500 = new SharedConfigsType(37);
-
-	static SharedConfigsType aClass120_1501 = new SharedConfigsType(38);
-
-	static SharedConfigsType aClass120_1502 = new SharedConfigsType(39);
-
-	static SharedConfigsType aClass120_1503 = new SharedConfigsType(40);
-
-	static SharedConfigsType aClass120_1468 = new SharedConfigsType(41);
-
-	static SharedConfigsType aClass120_1505 = new SharedConfigsType(42);
-
-	static SharedConfigsType aClass120_1506 = new SharedConfigsType(43);
-
-	static SharedConfigsType aClass120_1507 = new SharedConfigsType(44);
-
-	static SharedConfigsType aClass120_1508 = new SharedConfigsType(45);
-
-	public static SharedConfigsType aClass120_1509 = new SharedConfigsType(46);
-
-	public static SharedConfigsType aClass120_1510 = new SharedConfigsType(47);
-
-	static SharedConfigsType aClass120_1518 = new SharedConfigsType(48);
-
-	static SharedConfigsType aClass120_1499 = new SharedConfigsType(49);
-
-	static SharedConfigsType aClass120_1513 = new SharedConfigsType(50);
-
-	static SharedConfigsType aClass120_1516 = new SharedConfigsType(51);
-
-	static SharedConfigsType aClass120_1515 = new SharedConfigsType(53);
-
-	public static SharedConfigsType aClass120_1464 = new SharedConfigsType(54);
-
-	static SharedConfigsType aClass120_1517 = new SharedConfigsType(70);
-
+	public static SharedConfigsType SCT_37 = new SharedConfigsType(37);
+	public static SharedConfigsType SCT_38 = new SharedConfigsType(38);
+	public static SharedConfigsType SCT_39 = new SharedConfigsType(39);
+	public static SharedConfigsType SCT_40 = new SharedConfigsType(40);
+	public static SharedConfigsType SCT_41 = new SharedConfigsType(41);
+	public static SharedConfigsType SCT_42 = new SharedConfigsType(42);
+	public static SharedConfigsType SCT_43 = new SharedConfigsType(43);
+	public static SharedConfigsType SCT_44 = new SharedConfigsType(44);
+	public static SharedConfigsType SCT_45 = new SharedConfigsType(45);
+	public static SharedConfigsType SCT_46 = new SharedConfigsType(46);
+	public static SharedConfigsType SCT_47 = new SharedConfigsType(47);
+	public static SharedConfigsType SCT_48 = new SharedConfigsType(48);
+	public static SharedConfigsType SCT_49 = new SharedConfigsType(49);
+	public static SharedConfigsType SCT_50 = new SharedConfigsType(50);
+	public static SharedConfigsType SCT_51 = new SharedConfigsType(51);
+	public static SharedConfigsType SCT_53 = new SharedConfigsType(53);
+	public static SharedConfigsType SCT_54 = new SharedConfigsType(54);
+	public static SharedConfigsType SCT_70 = new SharedConfigsType(70);
 	public static SharedConfigsType HITBARS = new SharedConfigsType(72);
-
-	static SharedConfigsType aClass120_1519 = new SharedConfigsType(73);
-
-	static SharedConfigsType aClass120_1520 = new SharedConfigsType(74);
+	public static SharedConfigsType SCT_73 = new SharedConfigsType(73);
+	public static SharedConfigsType SCT_74 = new SharedConfigsType(74);
 
 	public int id;
 

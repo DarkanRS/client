@@ -18,7 +18,7 @@ public class Class394 {
 			Index index_5 = this.aClass317_4784;
 			byte[] bytes_10;
 			synchronized (this.aClass317_4784) {
-				bytes_10 = this.aClass317_4784.getFile(SharedConfigsType.aClass120_1510.id, i_1);
+				bytes_10 = this.aClass317_4784.getFile(SharedConfigsType.SCT_47.id, i_1);
 			}
 			class405_3 = new Class405();
 			if (bytes_10 != null) {
@@ -56,7 +56,7 @@ public class Class394 {
 	public Class394(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_4784 = index_3;
 		if (this.aClass317_4784 != null) {
-			this.clanVarSize = this.aClass317_4784.filesCount(SharedConfigsType.aClass120_1510.id);
+			this.clanVarSize = this.aClass317_4784.filesCount(SharedConfigsType.SCT_47.id);
 		} else {
 			this.clanVarSize = 0;
 		}

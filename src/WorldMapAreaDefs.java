@@ -219,23 +219,23 @@ public class WorldMapAreaDefs {
 	public boolean method3719(Interface42 interface42_1, int i_2) {
 		int i_3;
 		if (this.anInt2745 != -1) {
-			i_3 = interface42_1.method240(this.anInt2745, 1482918340);
+			i_3 = interface42_1.method240(this.anInt2745);
 		} else {
 			if (this.anInt2736 == -1) {
 				return true;
 			}
-			i_3 = interface42_1.method241(this.anInt2736, 1874672884);
+			i_3 = interface42_1.method241(this.anInt2736);
 		}
 		if (i_3 >= this.anInt2734 && i_3 <= this.anInt2735) {
 			boolean bool_4 = false;
 			int i_5;
 			if (this.anInt2741 != -1) {
-				i_5 = interface42_1.method240(this.anInt2741, 873480521);
+				i_5 = interface42_1.method240(this.anInt2741);
 			} else {
 				if (this.anInt2755 == -1) {
 					return true;
 				}
-				i_5 = interface42_1.method241(this.anInt2755, 1556323126);
+				i_5 = interface42_1.method241(this.anInt2755);
 			}
 			return i_5 >= this.anInt2743 && i_5 <= this.anInt2739;
 		} else {

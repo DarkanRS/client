@@ -22,7 +22,7 @@ public class ParamDefinitions {
 
 	void method7316(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.typeChar = Class11.getChar(rsbytebuffer_1.readByte(), 1486768413);
+			this.typeChar = Class11.getChar(rsbytebuffer_1.readByte());
 		} else if (i_2 == 2) {
 			this.defaultInt = rsbytebuffer_1.readInt();
 		} else if (i_2 == 4) {

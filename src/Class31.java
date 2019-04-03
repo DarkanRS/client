@@ -22,7 +22,7 @@ public class Class31 implements IndexLoader {
 			Index index_5 = this.aClass317_358;
 			byte[] bytes_10;
 			synchronized (this.aClass317_358) {
-				bytes_10 = this.aClass317_358.getFile(SharedConfigsType.aClass120_1466.id, i_1);
+				bytes_10 = this.aClass317_358.getFile(SharedConfigsType.SCT_3.id, i_1);
 			}
 			class44_3 = new IdentikitDefinition();
 			class44_3.aClass31_429 = this;
@@ -61,7 +61,7 @@ public class Class31 implements IndexLoader {
 	public Class31(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_358 = index_3;
 		this.aClass317_359 = index_4;
-		this.aClass317_358.filesCount(SharedConfigsType.aClass120_1466.id);
+		this.aClass317_358.filesCount(SharedConfigsType.SCT_3.id);
 	}
 
 	public static void method809(RsByteBuffer rsbytebuffer_0, int i_1) {

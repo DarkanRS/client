@@ -41,19 +41,19 @@ public class Class11 {
 		Class508.anInt5864 = -1;
 	}
 
-	public static char getChar(byte b_0, int i_1) {
-		int i_2 = b_0 & 0xff;
-		if (i_2 == 0) {
-			throw new IllegalArgumentException("" + Integer.toString(i_2, 16));
+	public static char getChar(byte b) {
+		int val = b & 0xff;
+		if (val == 0) {
+			throw new IllegalArgumentException("" + Integer.toString(val, 16));
 		} else {
-			if (i_2 >= 128 && i_2 < 160) {
-				char var_3 = Class490.aCharArray5766[i_2 - 128];
-				if (var_3 == 0) {
-					var_3 = 63;
+			if (val >= 128 && val < 160) {
+				char charValue = Class490.aCharArray5766[val - 128];
+				if (charValue == 0) {
+					charValue = 63;
 				}
-				i_2 = var_3;
+				val = charValue;
 			}
-			return (char) i_2;
+			return (char) val;
 		}
 	}
 

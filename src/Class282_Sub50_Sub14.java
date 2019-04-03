@@ -32,7 +32,7 @@ public class Class282_Sub50_Sub14 extends CacheableNode {
 				for (i_5 = 0; i_5 < i_4; i_5++) {
 					this.anIntArray9746[i_5] = rsbytebuffer_1.readUnsignedShort();
 					b_6 = rsbytebuffer_1.readByte();
-					this.aCharArray9745[i_5] = b_6 == 0 ? 0 : Class11.getChar(b_6, 1677278079);
+					this.aCharArray9745[i_5] = b_6 == 0 ? 0 : Class11.getChar(b_6);
 				}
 			} else if (i_2 == 3) {
 				i_4 = rsbytebuffer_1.readUnsignedByte();
@@ -42,7 +42,7 @@ public class Class282_Sub50_Sub14 extends CacheableNode {
 				for (i_5 = 0; i_5 < i_4; i_5++) {
 					this.anIntArray9747[i_5] = rsbytebuffer_1.readUnsignedShort();
 					b_6 = rsbytebuffer_1.readByte();
-					this.aCharArray9748[i_5] = b_6 == 0 ? 0 : Class11.getChar(b_6, -1266805306);
+					this.aCharArray9748[i_5] = b_6 == 0 ? 0 : Class11.getChar(b_6);
 				}
 			} else if (i_2 == 4) {
 				;

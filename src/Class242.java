@@ -24,7 +24,7 @@ public class Class242 {
 	public Class242(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_2979 = index_3;
 		if (this.aClass317_2979 != null) {
-			this.size = this.aClass317_2979.filesCount(SharedConfigsType.aClass120_1498.id);
+			this.size = this.aClass317_2979.filesCount(SharedConfigsType.SCT_35.id);
 		} else {
 			this.size = 0;
 		}
@@ -33,7 +33,7 @@ public class Class242 {
 			Index index_7 = this.aClass317_2979;
 			byte[] bytes_6;
 			synchronized (this.aClass317_2979) {
-				bytes_6 = this.aClass317_2979.getFile(SharedConfigsType.aClass120_1498.id, i_5);
+				bytes_6 = this.aClass317_2979.getFile(SharedConfigsType.SCT_35.id, i_5);
 			}
 			QuestDefinitions questdefinitions_9 = new QuestDefinitions();
 			if (bytes_6 != null) {

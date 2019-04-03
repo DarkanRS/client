@@ -68,7 +68,7 @@ public class QuestDefinitions {
 			int i_5;
 			if (this.anIntArray2961 != null) {
 				for (i_4 = 0; i_4 < this.anIntArray2961.length; i_4++) {
-					i_5 = interface42_1.method240(this.anIntArray2961[i_4], -853289836);
+					i_5 = interface42_1.method240(this.anIntArray2961[i_4]);
 					if (i_5 < this.anIntArray2969[i_4] || i_5 > this.anIntArray2970[i_4]) {
 						return false;
 					}
@@ -76,7 +76,7 @@ public class QuestDefinitions {
 			}
 			if (this.anIntArray2964 != null) {
 				for (i_4 = 0; i_4 < this.anIntArray2964.length; i_4++) {
-					i_5 = interface42_1.method241(this.anIntArray2964[i_4], -520349475);
+					i_5 = interface42_1.method241(this.anIntArray2964[i_4]);
 					if (i_5 < this.anIntArray2967[i_4] || i_5 > this.anIntArray2974[i_4]) {
 						return false;
 					}
@@ -200,14 +200,14 @@ public class QuestDefinitions {
 		int i_3;
 		if (this.varValues != null) {
 			for (i_3 = 0; i_3 < this.varValues.length; i_3++) {
-				if (interface42_1.method240(this.varValues[i_3][0], -409569082) >= this.varValues[i_3][1]) {
+				if (interface42_1.method240(this.varValues[i_3][0]) >= this.varValues[i_3][1]) {
 					return true;
 				}
 			}
 		}
 		if (this.varbitValues != null) {
 			for (i_3 = 0; i_3 < this.varbitValues.length; i_3++) {
-				if (interface42_1.method241(this.varbitValues[i_3][0], -1489106913) >= this.varbitValues[i_3][1]) {
+				if (interface42_1.method241(this.varbitValues[i_3][0]) >= this.varbitValues[i_3][1]) {
 					return true;
 				}
 			}
@@ -219,14 +219,14 @@ public class QuestDefinitions {
 		int i_3;
 		if (this.varValues != null) {
 			for (i_3 = 0; i_3 < this.varValues.length; i_3++) {
-				if (interface42_1.method240(this.varValues[i_3][0], -585739390) >= this.varValues[i_3][2]) {
+				if (interface42_1.method240(this.varValues[i_3][0]) >= this.varValues[i_3][2]) {
 					return true;
 				}
 			}
 		}
 		if (this.varbitValues != null) {
 			for (i_3 = 0; i_3 < this.varbitValues.length; i_3++) {
-				if (interface42_1.method241(this.varbitValues[i_3][0], -598279654) >= this.varbitValues[i_3][2]) {
+				if (interface42_1.method241(this.varbitValues[i_3][0]) >= this.varbitValues[i_3][2]) {
 					return true;
 				}
 			}
@@ -244,7 +244,7 @@ public class QuestDefinitions {
 
 	public boolean method4104(Interface42 interface42_1, int i_2) {
 		if (this.anIntArray2961 != null && i_2 >= 0 && i_2 < this.anIntArray2961.length) {
-			int i_4 = interface42_1.method240(this.anIntArray2961[i_2], 1497520500);
+			int i_4 = interface42_1.method240(this.anIntArray2961[i_2]);
 			return i_4 >= this.anIntArray2969[i_2] && i_4 <= this.anIntArray2970[i_2];
 		} else {
 			return false;
@@ -253,7 +253,7 @@ public class QuestDefinitions {
 
 	public boolean method4105(Interface42 interface42_1, int i_2) {
 		if (this.anIntArray2964 != null && i_2 >= 0 && i_2 < this.anIntArray2964.length) {
-			int i_4 = interface42_1.method241(this.anIntArray2964[i_2], 1488898797);
+			int i_4 = interface42_1.method241(this.anIntArray2964[i_2]);
 			return i_4 >= this.anIntArray2967[i_2] && i_4 <= this.anIntArray2974[i_2];
 		} else {
 			return false;

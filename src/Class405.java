@@ -7,7 +7,7 @@ public class Class405 {
 
 	void method6814(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.aChar4832 = Class11.getChar(rsbytebuffer_1.readByte(), 1372393939);
+			this.aChar4832 = Class11.getChar(rsbytebuffer_1.readByte());
 		} else if (i_2 == 3) {
 			this.anInt4833 = rsbytebuffer_1.readUnsignedShort();
 			this.anInt4834 = rsbytebuffer_1.readUnsignedByte();

@@ -33,7 +33,7 @@ public class Class210 {
 			Index index_5 = this.aClass317_2665;
 			byte[] bytes_10;
 			synchronized (this.aClass317_2665) {
-				bytes_10 = this.aClass317_2665.getFile(SharedConfigsType.aClass120_1509.id, i_1);
+				bytes_10 = this.aClass317_2665.getFile(SharedConfigsType.SCT_46.id, i_1);
 			}
 			hitsplatdefinitions_3 = new HitsplatDefinitions();
 			hitsplatdefinitions_3.aClass210_2850 = this;
@@ -62,7 +62,7 @@ public class Class210 {
 	public Class210(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_2666 = index_4;
 		this.aClass317_2665 = index_3;
-		this.aClass317_2665.filesCount(SharedConfigsType.aClass120_1509.id);
+		this.aClass317_2665.filesCount(SharedConfigsType.SCT_46.id);
 	}
 
 	public void method3608() {

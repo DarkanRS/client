@@ -33,7 +33,7 @@ public class Class438 {
 			Index index_5 = this.aClass317_5343;
 			byte[] bytes_10;
 			synchronized (this.aClass317_5343) {
-				bytes_10 = this.aClass317_5343.getFile(SharedConfigsType.aClass120_1496.id, i_1);
+				bytes_10 = this.aClass317_5343.getFile(SharedConfigsType.SCT_33.id, i_1);
 			}
 			class419_3 = new Class419();
 			class419_3.aClass438_5001 = this;
@@ -73,7 +73,7 @@ public class Class438 {
 	public Class438(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_5343 = index_3;
 		this.aClass317_5341 = index_4;
-		this.aClass317_5343.filesCount(SharedConfigsType.aClass120_1496.id);
+		this.aClass317_5343.filesCount(SharedConfigsType.SCT_33.id);
 	}
 
 	public static final void method7333(boolean bool_0, int i_1) {

@@ -4,161 +4,83 @@ import java.io.IOException;
 public class ObjectDefinitions {
 
 	public int id;
-
 	public String[] options;
-
 	ObjectIndexLoader loader;
-
 	public static short[] aShortArray5691 = new short[256];
-
 	public byte[] types;
-
 	public int[][] modelIds;
-
 	public String name = "null";
-
 	public int sizeX = 1;
-
 	public int sizeY = 1;
-
 	public int clipType = 2;
-
 	public boolean projectileClipped = true;
-
 	public int interactable = -1;
-
 	byte groundContoured = 0;
-
 	public boolean delayShading = false;
-
 	public int occludes = -1;
-
 	int[] animations = null;
-
 	public int decorDisplacement = 64;
-
 	int ambient = 0;
-
 	int contrast = 0;
-
 	short[] originalColors;
-
 	public short[] modifiedColors;
-
 	short[] originalTextures;
-
 	public short[] modifiedTextures;
-
 	byte[] aByteArray5641;
-
 	public boolean inverted = false;
-
 	public boolean castsShadow = true;
-
 	int scaleX = 128;
-
 	int scaleY = 128;
-
 	int scaleZ = 128;
-
 	int offsetX = 0;
-
 	int offsetY = 0;
-
 	int offsetZ = 0;
-
 	public boolean obstructsGround = false;
-
 	public boolean gateway = false;
-
 	public int supportsItems = -1;
-
 	int configFileId = -1;
-
 	int configId = -1;
-
 	public int ambientSoundId = -1;
-
 	public int ambientSoundHearDistance = 0;
-
 	public int anInt5667 = 0;
-
 	public int anInt5698 = 0;
-
 	public int[] audioTracks;
-
 	public int[] toObjectIds;
-
 	int anInt5654 = -1;
-
 	public boolean hidden = false;
-
 	public boolean aBool5703 = true;
-
 	public boolean aBool5702 = true;
-
 	public boolean members = false;
-
 	public boolean adjustMapSceneRotation = false;
-
 	public boolean hasAnimation = false;
-
 	public int anInt5705 = -1;
-
 	public int anInt5665 = -1;
-
 	public int anInt5670 = -1;
-
 	public int anInt5666 = -1;
-
 	public int mapSpriteRotation = 0;
-
 	public int mapSpriteId = -1;
-
 	public int ambientSoundVolume = 255;
-
 	public boolean flipMapSprite = false;
-
 	int[] animProbs = null;
-
 	public int mapIcon = -1;
-
 	public int[] anIntArray5707;
-
 	byte aByte5644;
-
 	byte aByte5642;
-
 	byte aByte5646;
-
 	byte aByte5634 = 0;
-
 	int anInt5682 = 0;
-
 	int anInt5683 = 0;
-
 	int anInt5710 = 0;
-
 	public int anInt5704 = 0;
-
 	public boolean aBool5696 = false;
-
 	public boolean aBool5700 = false;
-
 	public int anInt5684 = 960;
-
 	public int anInt5658 = 0;
-
 	public int anInt5708 = 256;
-
 	public int anInt5709 = 256;
-
 	public boolean aBool5699 = false;
-
 	public int anInt5694 = 0;
-
 	public boolean aBool5711 = false;
-
 	IterableNodeMap aClass465_5668;
 
 	public int method7963(int i_1, int i_2, int i_3) {
@@ -840,12 +762,12 @@ public class ObjectDefinitions {
 		return meshrasterizer_16;
 	}
 
-	public final ObjectDefinitions method8013(Interface42 interface42_1, byte b_2) {
+	public final ObjectDefinitions method8013(Interface42 varProvider, byte b_2) {
 		int i_3 = -1;
 		if (this.configFileId != -1) {
-			i_3 = interface42_1.method241(this.configFileId, 1655583167);
+			i_3 = varProvider.method241(this.configFileId);
 		} else if (this.configId != -1) {
-			i_3 = interface42_1.method240(this.configId, 426606861);
+			i_3 = varProvider.method240(this.configId);
 		}
 		if (i_3 >= 0 && i_3 < this.toObjectIds.length - 1 && this.toObjectIds[i_3] != -1) {
 			return this.loader.getObjectDefinitions(this.toObjectIds[i_3]);

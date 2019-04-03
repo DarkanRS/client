@@ -77,7 +77,7 @@ public class Class3 implements Interface42 {
 		this.method281(i_5, this.anIntArray25[i_5] & ~i_8 | i_2 << i_6 & i_8, (byte) 73);
 	}
 
-	public int method241(int i_1, int i_2) {
+	public int method241(int i_1) {
 		Class226 class226_3 = IndexLoaders.aClass230_147.method3897(i_1, (byte) 125);
 		int i_4 = class226_3.anInt2784;
 		int i_5 = class226_3.anInt2785;
@@ -116,7 +116,7 @@ public class Class3 implements Interface42 {
 		return this.anIntArray26[i_1];
 	}
 
-	public int method240(int i_1, int i_2) {
+	public int method240(int i_1) {
 		return this.anIntArray26[i_1];
 	}
 

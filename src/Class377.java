@@ -11,7 +11,7 @@ public class Class377 implements IndexLoader {
 	public Class377(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_4518 = index_3;
 		if (this.aClass317_4518 != null) {
-			this.anInt4519 = this.aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.id);
+			this.anInt4519 = this.aClass317_4518.filesCount(SharedConfigsType.SCT_16.id);
 		} else {
 			this.anInt4519 = 0;
 		}
@@ -29,7 +29,7 @@ public class Class377 implements IndexLoader {
 			Index index_5 = this.aClass317_4518;
 			byte[] bytes_10;
 			synchronized (this.aClass317_4518) {
-				bytes_10 = this.aClass317_4518.getFile(SharedConfigsType.aClass120_1487.id, i_1);
+				bytes_10 = this.aClass317_4518.getFile(SharedConfigsType.SCT_16.id, i_1);
 			}
 			class372_3 = new Class372();
 			if (bytes_10 != null) {

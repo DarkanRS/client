@@ -18,7 +18,7 @@ public class Class233 {
 	public Class233(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_2882 = index_3;
 		if (this.aClass317_2882 != null) {
-			this.aClass317_2882.filesCount(SharedConfigsType.aClass120_1464.id);
+			this.aClass317_2882.filesCount(SharedConfigsType.SCT_54.id);
 		}
 	}
 
@@ -48,7 +48,7 @@ public class Class233 {
 			Index index_5 = this.aClass317_2882;
 			byte[] bytes_10;
 			synchronized (this.aClass317_2882) {
-				bytes_10 = this.aClass317_2882.getFile(SharedConfigsType.aClass120_1464.id, i_1);
+				bytes_10 = this.aClass317_2882.getFile(SharedConfigsType.SCT_54.id, i_1);
 			}
 			class537_3 = new Class537();
 			if (bytes_10 != null) {

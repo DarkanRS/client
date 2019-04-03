@@ -16,7 +16,7 @@ public class Class230 implements IndexLoader {
 			Index index_5 = this.aClass317_2858;
 			byte[] bytes_10;
 			synchronized (this.aClass317_2858) {
-				bytes_10 = this.aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i_1), SharedConfigsType.aClass120_1477.fileId(i_1));
+				bytes_10 = this.aClass317_2858.getFile(SharedConfigsType.SCT_14.containerId(i_1), SharedConfigsType.SCT_14.fileId(i_1));
 			}
 			class226_3 = new Class226();
 			if (bytes_10 != null) {
@@ -34,7 +34,7 @@ public class Class230 implements IndexLoader {
 		this.aClass317_2858 = index_3;
 		if (this.aClass317_2858 != null) {
 			int i_4 = this.aClass317_2858.containersCount() - 1;
-			SharedConfigsType.aClass120_1477.filesPerContainer(-689743414);
+			SharedConfigsType.SCT_14.filesPerContainer(-689743414);
 			this.aClass317_2858.filesCount(i_4);
 		}
 	}

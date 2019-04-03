@@ -235,12 +235,12 @@ public final class Class251 {
 				}
 				if (string_0.startsWith("getclientvarpbit")) {
 					i_10 = Integer.parseInt(string_0.substring(17));
-					Class209.printConsoleMessage("varpbit=" + Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_10, -632025668), -1998632005);
+					Class209.printConsoleMessage("varpbit=" + Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_10), -1998632005);
 					return;
 				}
 				if (string_0.startsWith("getclientvarp")) {
 					i_10 = Integer.parseInt(string_0.substring(14));
-					Class209.printConsoleMessage("varp=" + Class158_Sub1.PLAYER_VAR_PROVIDER.method240(i_10, 127032296), -2108704386);
+					Class209.printConsoleMessage("varp=" + Class158_Sub1.PLAYER_VAR_PROVIDER.method240(i_10), -2108704386);
 					return;
 				}
 				String[] arr_24;

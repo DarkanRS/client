@@ -473,9 +473,9 @@ public class NPCDefinitions {
 	public final NPCDefinitions method6884(Interface42 interface42_1) {
 		int i_3 = -1;
 		if (this.varpBit != -1) {
-			i_3 = interface42_1.method241(this.varpBit, -578283448);
+			i_3 = interface42_1.method241(this.varpBit);
 		} else if (this.varp != -1) {
-			i_3 = interface42_1.method240(this.varp, 817995491);
+			i_3 = interface42_1.method240(this.varp);
 		}
 		if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
 			return this.aClass406_4855.getNPCDefinitions(this.transformTo[i_3]);
@@ -491,9 +491,9 @@ public class NPCDefinitions {
 		} else {
 			int i_3 = -1;
 			if (this.varpBit != -1) {
-				i_3 = interface42_1.method241(this.varpBit, -2139197647);
+				i_3 = interface42_1.method241(this.varpBit);
 			} else if (this.varp != -1) {
-				i_3 = interface42_1.method240(this.varp, -332269014);
+				i_3 = interface42_1.method240(this.varp);
 			}
 			if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
 				return true;

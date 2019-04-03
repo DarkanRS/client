@@ -11,14 +11,14 @@ public class StructIndexLoader {
 
 	public StructIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5014 = index_3;
-		this.anInt5013 = this.aClass317_5014.filesCount(SharedConfigsType.aClass120_1473.id);
+		this.anInt5013 = this.aClass317_5014.filesCount(SharedConfigsType.SCT_26.id);
 		this.aClass282_Sub50_Sub4Array5012 = new Class282_Sub50_Sub4[this.anInt5013];
 
 		for (int i_5 = 0; i_5 < this.anInt5013; i_5++) {
 			Index index_7 = this.aClass317_5014;
 			byte[] bytes_6;
 			synchronized (this.aClass317_5014) {
-				bytes_6 = this.aClass317_5014.getFile(SharedConfigsType.aClass120_1473.id, i_5);
+				bytes_6 = this.aClass317_5014.getFile(SharedConfigsType.SCT_26.id, i_5);
 			}
 
 			Class282_Sub50_Sub4 class282_sub50_sub4_9 = new Class282_Sub50_Sub4();

@@ -8356,7 +8356,7 @@ public class CS2Interpreter {
 
 	static final void loadVarpbit(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_2, 161109114);
+		executor.intStack[++executor.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_2);
 	}
 
 	static final void method5203(CS2Executor executor) {
