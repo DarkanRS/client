@@ -43,12 +43,12 @@ public class Class76 {
 		short[] shorts_3 = new short[16];
 		int i_4 = 0;
 		int i_5 = bool_1 ? 32768 : 0;
-		int i_6 = (bool_1 ? IndexLoaders.QUICK_CHAT_INDEX_LOADER2.anInt5133 : IndexLoaders.QUICK_CHAT_INDEX_LOADER2.anInt5130) + i_5;
+		int i_6 = (bool_1 ? IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.anInt5133 : IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.anInt5130) + i_5;
 		for (int i_7 = i_5; i_7 < i_6; i_7++) {
-			QuickchatDefinitions quickchatdefinitions_12 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_7, -1918466805);
-			if (quickchatdefinitions_12.aBool9628 && quickchatdefinitions_12.method14898(409119349).toLowerCase().indexOf(string_0) != -1) {
+			QuickchatMessageDefinitions quickchatdefinitions_12 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_7);
+			if (quickchatdefinitions_12.searchable && quickchatdefinitions_12.method14898(409119349).toLowerCase().indexOf(string_0) != -1) {
 				if (i_4 >= 50) {
-					Class415.anInt4985 = -1;
+					VarcDefinitions.anInt4985 = -1;
 					Class308.aShortArray3621 = null;
 					return;
 				}
@@ -64,10 +64,10 @@ public class Class76 {
 		}
 		Class308.aShortArray3621 = shorts_3;
 		Class283.anInt3384 = 0;
-		Class415.anInt4985 = i_4;
-		String[] arr_11 = new String[Class415.anInt4985];
-		for (int i_8 = 0; i_8 < Class415.anInt4985; i_8++) {
-			arr_11[i_8] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(shorts_3[i_8], -1792601455).method14898(-47369611);
+		VarcDefinitions.anInt4985 = i_4;
+		String[] arr_11 = new String[VarcDefinitions.anInt4985];
+		for (int i_8 = 0; i_8 < VarcDefinitions.anInt4985; i_8++) {
+			arr_11[i_8] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(shorts_3[i_8]).method14898(-47369611);
 		}
 		Class100.method1644(arr_11, Class308.aShortArray3621, (short) 30307);
 	}

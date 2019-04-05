@@ -171,7 +171,7 @@ public class Class329_Sub1 extends Class329 {
 								for (i_27 = 0; i_27 < i_16; i_27++) {
 									Class287 class287_25 = new Class287(graphicalrenderer_1, this.sceneObjectManager.anInt2592, rsbytebuffer_2);
 									if (class287_25.anInt3430 == 31) {
-										Class416 class416_19 = IndexLoaders.aClass436_7683.method7304(rsbytebuffer_2.readUnsignedShort(), (byte) -123);
+										LightIntensityDefinitions class416_19 = IndexLoaders.LIGHT_INTENSITY_LOADER.method7304(rsbytebuffer_2.readUnsignedShort(), (byte) -123);
 										class287_25.method5061(class416_19.anInt4986, class416_19.anInt4989, class416_19.anInt4988, class416_19.anInt4987);
 									}
 									if (graphicalrenderer_1.method8463() > 0) {
@@ -360,7 +360,7 @@ public class Class329_Sub1 extends Class329 {
 				if (i_19 == i_6 && i_18 >= i_7 && i_18 < i_7 + 8 && i_17 >= i_8 && i_17 < i_8 + 8) {
 					ObjectDefinitions objectdefinitions_23 = this.objectDefLoader.getObjectDefinitions(i_13);
 					int i_24 = i_4 + Class222.method3756(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
-					int i_25 = i_5 + Class3.method282(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
+					int i_25 = i_5 + PlayerVarProvider.method282(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
 					if (i_24 > 0 && i_25 > 0 && i_24 < this.maxX - 1 && i_25 < this.maxY - 1) {
 						ClipMap clipmap_26 = null;
 						if (!this.overlayHidden) {
@@ -775,7 +775,7 @@ public class Class329_Sub1 extends Class329 {
 								for (i_19 = 0; i_19 < i_9; i_19++) {
 									Class287 class287_17 = new Class287(graphicalrenderer_1, this.sceneObjectManager.anInt2592, rsbytebuffer_2);
 									if (class287_17.anInt3430 == 31) {
-										Class416 class416_18 = IndexLoaders.aClass436_7683.method7304(rsbytebuffer_2.readUnsignedShort(), (byte) 56);
+										LightIntensityDefinitions class416_18 = IndexLoaders.LIGHT_INTENSITY_LOADER.method7304(rsbytebuffer_2.readUnsignedShort(), (byte) 56);
 										class287_17.method5061(class416_18.anInt4986, class416_18.anInt4989, class416_18.anInt4988, class416_18.anInt4987);
 									}
 									if (graphicalrenderer_1.method8463() > 0) {
@@ -986,7 +986,7 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	public Class329_Sub1(SceneObjectManager sceneobjectmanager_1, ObjectIndexLoader objectindexloader_2, int i_3, int i_4, int i_5, boolean bool_6, RegionMap regionmap_7, Class239 class239_8) {
-		super(sceneobjectmanager_1, i_3, i_4, i_5, bool_6, IndexLoaders.OVERLAY_INDEX_LOADER, IndexLoaders.UNDERLAY_INDEX_LOADER, regionmap_7);
+		super(sceneobjectmanager_1, i_3, i_4, i_5, bool_6, IndexLoaders.OVERLAY_LOADER, IndexLoaders.UNDERLAY_LOADER, regionmap_7);
 		this.objectDefLoader = objectindexloader_2;
 		this.aClass239_7719 = class239_8;
 	}

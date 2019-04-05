@@ -52,7 +52,7 @@ public class Class282_Sub40 extends Node {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, 259124869);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, 1402342862);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 1, -1616300201);
-		Texture.method5777(1459972295);
+		ImageIndexLoader.method5777(1459972295);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 1, 100643539);
 		Class393.preferences.setValue(Class393.preferences.graphics, 3, -1425167451);
 		Class94.method1589();

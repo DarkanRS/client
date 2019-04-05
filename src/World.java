@@ -3,19 +3,6 @@ public class World {
 	public String activity;
 	public int countryId;
 
-	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-		CS2Script cs2script_4 = Class225_Sub1.method12792(Class397.aClass397_4792, i_0, -1);
-		if (cs2script_4 != null) {
-			CS2Executor cs2executor_5 = Class125.getNextScriptExecutor(2125481004);
-			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];
-			cs2executor_5.objectLocals = new String[cs2script_4.stringLocalsCount];
-			cs2executor_5.objectLocals[0] = string_1;
-			cs2executor_5.intLocals[0] = i_2;
-			Class51.method1068(cs2script_4, 200000, cs2executor_5, -625116466);
-		}
-
-	}
-
 	public static void method3662(AnimationDefinitions animDef, int i_1, Class521_Sub1 class521_sub1_2) {
 		if (Class260.anInt3219 < 50 && animDef != null && animDef.anIntArrayArray5913 != null && i_1 < animDef.anIntArrayArray5913.length && animDef.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == VertexNormal.myPlayer.plane) {
 			int i_4 = animDef.anIntArrayArray5913[i_1][0];

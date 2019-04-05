@@ -28,20 +28,20 @@ public class Class507 {
 			Container container_6 = Class371.getActiveContainer();
 			Insets insets_7;
 			if (client.fullScreenFrame != null) {
-				Class45.anInt434 = i_2;
+				SunIndexLoader.anInt434 = i_2;
 				Class107.anInt1082 = i_3;
 			} else if (client.engineFrame != null) {
 				insets_7 = client.engineFrame.getInsets();
 				int i_10001 = insets_7.left + insets_7.right;
-				Class45.anInt434 = client.engineFrame.getSize().width - i_10001;
+				SunIndexLoader.anInt434 = client.engineFrame.getSize().width - i_10001;
 				i_10001 = insets_7.bottom + insets_7.top;
 				Class107.anInt1082 = client.engineFrame.getSize().height - i_10001;
 			} else {
-				Class45.anInt434 = container_6.getSize().width;
+				SunIndexLoader.anInt434 = container_6.getSize().width;
 				Class107.anInt1082 = container_6.getSize().height;
 			}
-			if (Class45.anInt434 <= 0) {
-				Class45.anInt434 = 1;
+			if (SunIndexLoader.anInt434 <= 0) {
+				SunIndexLoader.anInt434 = 1;
 			}
 			if (Class107.anInt1082 <= 0) {
 				Class107.anInt1082 = 1;
@@ -50,7 +50,7 @@ public class Class507 {
 				Class46.method935((byte) -63);
 			} else {
 				Class349.anInt4083 = client.anInt7439;
-				client.anInt3250 = (Class45.anInt434 - client.anInt7439) / 2;
+				client.anInt3250 = (SunIndexLoader.anInt434 - client.anInt7439) / 2;
 				client.anInt3243 = client.anInt7312 * -1929118563;
 				client.anInt3251 = 0;
 			}

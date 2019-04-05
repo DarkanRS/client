@@ -31,7 +31,7 @@ public final class Class354 {
 		if (!Class20.aBool187) {
 			Class277.method4908(graphicalrenderer_0);
 		} else {
-			Class38.method857(graphicalrenderer_0);
+			SunDefinitions.method857(graphicalrenderer_0);
 		}
 	}
 }

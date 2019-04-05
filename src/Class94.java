@@ -43,12 +43,12 @@ public class Class94 {
 		Class468_Sub12.method12710(i_1);
 		IndexLoaders.MAP_REGION_DECODER.method4436(-2047295764).method7893(i_1, 2082493334);
 		IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -5779).method4436(-1603453217).method7893(i_1, -79480655);
-		IndexLoaders.ITEM_INDEX_LOADER.method7153(i_1);
+		IndexLoaders.ITEM_LOADER.method7153(i_1);
 		IndexLoaders.NPC_INDEX_LOADER.method6829(i_1);
-		IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8846(i_1);
-		Class38.method851(i_1);
+		IndexLoaders.SPOT_ANIM_LOADER.method8846(i_1);
+		SunDefinitions.method851(i_1);
 		Game.method8204(i_1);
-		Class117.method1982(i_1);
+		Huffman.method1982(i_1);
 		Class275_Sub1.method12424(i_1);
 		Class345.method6143(i_1);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -126);

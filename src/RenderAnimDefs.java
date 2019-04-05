@@ -258,36 +258,36 @@ public class RenderAnimDefs {
 
 	public int[] method3828() {
 		IterableNodeMap iterablenodemap_2 = new IterableNodeMap(16);
-		Class1.method253(this.standAnimation, iterablenodemap_2, 1339333196);
+		AccountCreationStage.method253(this.standAnimation, iterablenodemap_2, 1339333196);
 		int[] ints_3;
 		int i_4;
 		if (this.anIntArray2814 != null) {
 			ints_3 = this.anIntArray2814;
 			for (i_4 = 0; i_4 < ints_3.length; i_4++) {
 				int i_7 = ints_3[i_4];
-				Class1.method253(i_7, iterablenodemap_2, -371482637);
+				AccountCreationStage.method253(i_7, iterablenodemap_2, -371482637);
 			}
 		}
-		Class1.method253(this.standTurn1, iterablenodemap_2, 936766272);
-		Class1.method253(this.standTurn2, iterablenodemap_2, 617830168);
-		Class1.method253(this.walkAnimation, iterablenodemap_2, 622026359);
-		Class1.method253(this.walkDir3, iterablenodemap_2, -1286273225);
-		Class1.method253(this.walkDir2, iterablenodemap_2, 1136269352);
-		Class1.method253(this.walkDir1, iterablenodemap_2, 981784054);
-		Class1.method253(this.runningAnimation, iterablenodemap_2, -432276567);
-		Class1.method253(this.runDir3, iterablenodemap_2, -24099782);
-		Class1.method253(this.runDir2, iterablenodemap_2, -472783883);
-		Class1.method253(this.runDir1, iterablenodemap_2, 843907387);
-		Class1.method253(this.teleportingAnimation, iterablenodemap_2, -622930621);
-		Class1.method253(this.teleDir3, iterablenodemap_2, -405283185);
-		Class1.method253(this.teleDir2, iterablenodemap_2, -576014447);
-		Class1.method253(this.teleDir1, iterablenodemap_2, 1786049859);
-		Class1.method253(this.teleTurn1, iterablenodemap_2, 918825528);
-		Class1.method253(this.teleTurn2, iterablenodemap_2, 854789085);
-		Class1.method253(this.runTurn1, iterablenodemap_2, 230817910);
-		Class1.method253(this.runTurn2, iterablenodemap_2, -1749638);
-		Class1.method253(this.walkTurn1, iterablenodemap_2, 2115368709);
-		Class1.method253(this.walkTurn2, iterablenodemap_2, -1020829225);
+		AccountCreationStage.method253(this.standTurn1, iterablenodemap_2, 936766272);
+		AccountCreationStage.method253(this.standTurn2, iterablenodemap_2, 617830168);
+		AccountCreationStage.method253(this.walkAnimation, iterablenodemap_2, 622026359);
+		AccountCreationStage.method253(this.walkDir3, iterablenodemap_2, -1286273225);
+		AccountCreationStage.method253(this.walkDir2, iterablenodemap_2, 1136269352);
+		AccountCreationStage.method253(this.walkDir1, iterablenodemap_2, 981784054);
+		AccountCreationStage.method253(this.runningAnimation, iterablenodemap_2, -432276567);
+		AccountCreationStage.method253(this.runDir3, iterablenodemap_2, -24099782);
+		AccountCreationStage.method253(this.runDir2, iterablenodemap_2, -472783883);
+		AccountCreationStage.method253(this.runDir1, iterablenodemap_2, 843907387);
+		AccountCreationStage.method253(this.teleportingAnimation, iterablenodemap_2, -622930621);
+		AccountCreationStage.method253(this.teleDir3, iterablenodemap_2, -405283185);
+		AccountCreationStage.method253(this.teleDir2, iterablenodemap_2, -576014447);
+		AccountCreationStage.method253(this.teleDir1, iterablenodemap_2, 1786049859);
+		AccountCreationStage.method253(this.teleTurn1, iterablenodemap_2, 918825528);
+		AccountCreationStage.method253(this.teleTurn2, iterablenodemap_2, 854789085);
+		AccountCreationStage.method253(this.runTurn1, iterablenodemap_2, 230817910);
+		AccountCreationStage.method253(this.runTurn2, iterablenodemap_2, -1749638);
+		AccountCreationStage.method253(this.walkTurn1, iterablenodemap_2, 2115368709);
+		AccountCreationStage.method253(this.walkTurn2, iterablenodemap_2, -1020829225);
 		ints_3 = new int[iterablenodemap_2.method7748((short) 9430)];
 		i_4 = 0;
 		Node node_6;

@@ -288,7 +288,7 @@ public class ParticleProducer {
 
 		Renderers.SOFTWARE_RENDERER.L();
 		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 123);
-		i_1 = Class58.method1141(1515135830);
+		i_1 = QuickchatFiller.method1141(1515135830);
 		if (i_1 == -1) {
 			i_1 = client.anInt7427;
 		}

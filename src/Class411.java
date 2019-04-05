@@ -92,7 +92,7 @@ public class Class411 {
 			world.unknown = buffer.readGJString();
 			world.ipAddress = buffer.readGJString();
 		}
-		Class418.WORLD_LIST_IDK = buffer.readInt();
+		MapSpriteDefinitions.WORLD_LIST_IDK = buffer.readInt();
 		Class244.aBool3007 = true;
 	}
 

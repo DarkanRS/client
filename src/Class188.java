@@ -293,7 +293,7 @@ public class Class188 {
 								i_14 = objectdefinitions_32.modifiedTextures.length;
 							}
 							if ((i_8 & 0x1) == 1) {
-								Class489.method8217(Class272.anInt3331, i_10, i_11, i_7, i_3, i_6, (Class476) null, (byte) -37);
+								SCT25Definitions.method8217(Class272.anInt3331, i_10, i_11, i_7, i_3, i_6, (Class476) null, (byte) -37);
 							} else {
 								int[] ints_28 = null;
 								if ((i_8 & 0x2) == 2) {
@@ -316,7 +316,7 @@ public class Class188 {
 										shorts_37[i_18] = (short) rsbitsbuffer_2.readUnsignedShort();
 									}
 								}
-								Class489.method8217(Class272.anInt3331, i_10, i_11, i_7, i_3, i_6, new Class476(Class282_Sub31.aLong7777, ints_28, shorts_29, shorts_37), (byte) 79);
+								SCT25Definitions.method8217(Class272.anInt3331, i_10, i_11, i_7, i_3, i_6, new Class476(Class282_Sub31.aLong7777, ints_28, shorts_29, shorts_37), (byte) 79);
 								++Class282_Sub31.aLong7777;
 							}
 						} else if (TilestreamPacket.TILE_MESSAGE == tilestreampacket_0) {
@@ -415,7 +415,7 @@ public class Class188 {
 								i_15 <<= 2;
 								i_16 <<= 2;
 								i_20 <<= 2;
-								Class438.method7335(i_14, i_23, i_24, i_9, i_15, i_16, i_21, i_5, i_10, i_11, i_30, i_18, i_19, i_20, bool_33);
+								CursorIndexLoader.method7335(i_14, i_23, i_24, i_9, i_15, i_16, i_21, i_5, i_10, i_11, i_30, i_18, i_19, i_20, bool_33);
 							}
 						} else if (TilestreamPacket.aClass364_4208 == tilestreampacket_0) {
 							i_3 = rsbitsbuffer_2.readInt();
@@ -431,7 +431,7 @@ public class Class188 {
 							}
 						} else {
 							Class151.method2594("" + tilestreampacket_0, new RuntimeException(), (byte) -3);
-							Class438.method7333(false, 2095125734);
+							CursorIndexLoader.method7333(false, 2095125734);
 						}
 					}
 				}

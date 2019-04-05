@@ -355,9 +355,9 @@ public class SystemInfo extends Node {
 			}
 			for (int i_18 = 0; i_18 < animable_0.aClass161Array10339.length; i_18++) {
 				if (animable_0.aClass161Array10339[i_18].spotAnimId != -1 && animable_0.aClass161Array10339[i_18].animation.hasSpeed(-606649252)) {
-					SpotAnimDefinitions spotanimdefinitions_19 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_18].spotAnimId, (byte) 43);
+					SpotAnimDefinitions spotanimdefinitions_19 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_18].spotAnimId, (byte) 43);
 					if (spotanimdefinitions_19.aBool6968 && spotanimdefinitions_19.animationId != -1) {
-						AnimationDefinitions animationdefinitions_20 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_19.animationId, (byte) -10);
+						AnimationDefinitions animationdefinitions_20 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_19.animationId, (byte) -10);
 						if (animable_0.anInt10367 > 0 && animationdefinitions_20.animatingPrecedence == 0) {
 							++animable_0.anInt10366;
 							IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;

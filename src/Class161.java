@@ -54,15 +54,15 @@ public class Class161 {
 						hookrequest_5.anInt8055 = i_4;
 						hookrequest_5.aClass118_8057 = client.aClass118_7370;
 						hookrequest_5.params = client.aClass118_7257.anObjectArray1394;
-						Class96_Sub4.executeHookInner200k(hookrequest_5, 79466209);
+						CS2Executor.executeHookInner200k(hookrequest_5, 79466209);
 					}
 					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null) {
 						Class119.method2076(client.aClass118_7257, client.aClass118_7370);
 					}
 				} else if ((client.anInt7339 == 1 || JS5GrabWorker.method12562(-285174833)) && Class20.anInt169 > 2) {
-					Class242.method4164(client.anInt7361 + client.anInt7252, client.anInt7215 + client.anInt7362, -85284222);
+					QuestIndexLoader.method4164(client.anInt7361 + client.anInt7252, client.anInt7215 + client.anInt7362, -85284222);
 				} else if (Class216.method3677(575398960)) {
-					Class242.method4164(client.anInt7252 + client.anInt7361, client.anInt7215 + client.anInt7362, 405616760);
+					QuestIndexLoader.method4164(client.anInt7252 + client.anInt7361, client.anInt7215 + client.anInt7362, 405616760);
 				}
 				client.aClass118_7257 = null;
 				client.aClass118_7247 = null;
@@ -80,7 +80,7 @@ public class Class161 {
 					hookrequest_5.anInt8059 = i_3;
 					hookrequest_5.anInt8055 = i_4;
 					hookrequest_5.params = client.aClass118_7257.anObjectArray1451;
-					Class96_Sub4.executeHookInner200k(hookrequest_5, 814557204);
+					CS2Executor.executeHookInner200k(hookrequest_5, 814557204);
 				}
 			}
 		} else if (Class96_Sub1.anInt8308 > 1) {

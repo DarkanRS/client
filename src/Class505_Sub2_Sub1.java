@@ -204,7 +204,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, i_6, i_7);
 			} else {
-				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, Texture.nextPowerOfTwo(i_2, 258691248), Texture.nextPowerOfTwo(i_3, 787226616));
+				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, ImageIndexLoader.nextPowerOfTwo(i_2, 258691248), ImageIndexLoader.nextPowerOfTwo(i_3, 787226616));
 				class319_sub2_8.method14494(i_2, i_3, floats_5, class150_1, i_6, i_7);
 				return class319_sub2_8;
 			}
@@ -545,7 +545,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, 0, 0);
 			} else {
-				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, Texture.nextPowerOfTwo(i_2, 1029457431), Texture.nextPowerOfTwo(i_3, 411015837));
+				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, ImageIndexLoader.nextPowerOfTwo(i_2, 1029457431), ImageIndexLoader.nextPowerOfTwo(i_3, 411015837));
 				class319_sub2_8.method14494(i_2, i_3, floats_5, class150_1, 0, 0);
 				return class319_sub2_8;
 			}
@@ -555,7 +555,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface29 method14064(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Texture.nextPowerOfTwo(i_3, -509744092), Texture.nextPowerOfTwo(i_4, 139344255))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, ImageIndexLoader.nextPowerOfTwo(i_3, -509744092), ImageIndexLoader.nextPowerOfTwo(i_4, 139344255))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	Interface31 method14034(int i_1, boolean bool_2, int[][] ints_3) {
@@ -1853,7 +1853,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, bytes_5, i_6, i_7);
 			} else {
-				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_751, Texture.nextPowerOfTwo(i_2, -1427498963), Texture.nextPowerOfTwo(i_3, -1153726914));
+				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_751, ImageIndexLoader.nextPowerOfTwo(i_2, -1427498963), ImageIndexLoader.nextPowerOfTwo(i_3, -1153726914));
 				class319_sub2_8.method52(0, 0, i_2, i_3, bytes_5, class150_1, i_6, i_7);
 				return class319_sub2_8;
 			}
@@ -1867,7 +1867,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, floats_5, i_6, i_7);
 			} else {
-				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, Texture.nextPowerOfTwo(i_2, 86710193), Texture.nextPowerOfTwo(i_3, -962187680));
+				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_758, ImageIndexLoader.nextPowerOfTwo(i_2, 86710193), ImageIndexLoader.nextPowerOfTwo(i_3, -962187680));
 				class319_sub2_8.method14494(i_2, i_3, floats_5, class150_1, i_6, i_7);
 				return class319_sub2_8;
 			}
@@ -1891,7 +1891,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, i_1, i_2, ints_4, i_5, i_6);
 			} else {
-				Class319_Sub2 class319_sub2_7 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Texture.nextPowerOfTwo(i_1, -1060363007), Texture.nextPowerOfTwo(i_2, -1282480778));
+				Class319_Sub2 class319_sub2_7 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, ImageIndexLoader.nextPowerOfTwo(i_1, -1060363007), ImageIndexLoader.nextPowerOfTwo(i_2, -1282480778));
 				class319_sub2_7.method48(0, 0, i_1, i_2, ints_4, i_5, i_6);
 				return class319_sub2_7;
 			}
@@ -1905,7 +1905,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, i_1, i_2, ints_4, i_5, i_6);
 			} else {
-				Class319_Sub2 class319_sub2_7 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Texture.nextPowerOfTwo(i_1, 1023785634), Texture.nextPowerOfTwo(i_2, -747639178));
+				Class319_Sub2 class319_sub2_7 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, ImageIndexLoader.nextPowerOfTwo(i_1, 1023785634), ImageIndexLoader.nextPowerOfTwo(i_2, -747639178));
 				class319_sub2_7.method48(0, 0, i_1, i_2, ints_4, i_5, i_6);
 				return class319_sub2_7;
 			}
@@ -1946,15 +1946,15 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	}
 
 	Interface29 method14022(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Texture.nextPowerOfTwo(i_3, 2046359812), Texture.nextPowerOfTwo(i_4, -1483303534))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, ImageIndexLoader.nextPowerOfTwo(i_3, 2046359812), ImageIndexLoader.nextPowerOfTwo(i_4, -1483303534))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	Interface29 method14148(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Texture.nextPowerOfTwo(i_3, 622988125), Texture.nextPowerOfTwo(i_4, -1774275791))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, ImageIndexLoader.nextPowerOfTwo(i_3, 622988125), ImageIndexLoader.nextPowerOfTwo(i_4, -1774275791))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	Interface29 method14149(Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, Texture.nextPowerOfTwo(i_3, -196167688), Texture.nextPowerOfTwo(i_4, -1962177193))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
+		return (Interface29) (!this.aBool10197 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (this.aBool10194 ? new Class319_Sub3(this, class150_1, class76_2, i_3, i_4) : new Class319_Sub2(this, class150_1, class76_2, ImageIndexLoader.nextPowerOfTwo(i_3, -196167688), ImageIndexLoader.nextPowerOfTwo(i_4, -1962177193))) : new Class319_Sub2(this, class150_1, class76_2, i_3, i_4));
 	}
 
 	public void method14153() {
@@ -2062,7 +2062,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, class150_1, i_2, i_3, bytes_5, 0, 0);
 			} else {
-				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_751, Texture.nextPowerOfTwo(i_2, -1588026691), Texture.nextPowerOfTwo(i_3, 191823312));
+				Class319_Sub2 class319_sub2_8 = new Class319_Sub2(this, class150_1, Class76.aClass76_751, ImageIndexLoader.nextPowerOfTwo(i_2, -1588026691), ImageIndexLoader.nextPowerOfTwo(i_3, 191823312));
 				class319_sub2_8.method52(0, 0, i_2, i_3, bytes_5, class150_1, 0, 0);
 				return class319_sub2_8;
 			}
@@ -2610,7 +2610,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			if (this.aBool10194) {
 				return new Class319_Sub3(this, i_1, i_2, ints_4, i_5, i_6);
 			} else {
-				Class319_Sub2 class319_sub2_7 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Texture.nextPowerOfTwo(i_1, -874037324), Texture.nextPowerOfTwo(i_2, -2104244422));
+				Class319_Sub2 class319_sub2_7 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, ImageIndexLoader.nextPowerOfTwo(i_1, -874037324), ImageIndexLoader.nextPowerOfTwo(i_2, -2104244422));
 				class319_sub2_7.method48(0, 0, i_1, i_2, ints_4, i_5, i_6);
 				return class319_sub2_7;
 			}

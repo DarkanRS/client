@@ -668,7 +668,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			} else {
 				Class156.method2643();
 				this.q(this.anInterface22_5834, this.anInterface22_5834.method84(), 0);
-				Class38.method854(false, true, -1602514184);
+				SunDefinitions.method854(false, true, -1602514184);
 				this.bm = true;
 				this.af = new Matrix44Arr();
 				new Vector3();

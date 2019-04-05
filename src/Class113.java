@@ -1,6 +1,6 @@
 public class Class113 {
 
-	static Class117 aClass117_1234;
+	static Huffman HUFFMAN;
 
 	public static ClanChannel CLAN_CHANNEL;
 

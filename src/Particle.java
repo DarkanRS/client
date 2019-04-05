@@ -46,7 +46,7 @@ public class Particle extends PointEntity {
 		this.producer.parent.particles[this.aShort10425] = null;
 		Class235.aClass275_Sub1_Sub1_Sub1Array2897[Class235.anInt2905] = this;
 		Class235.anInt2905 = Class235.anInt2905 + 1 & 0x3ff;
-		this.method4887((byte) -14);
+		this.method4887();
 		this.method12423((byte) -115);
 	}
 

@@ -1,25 +1,15 @@
 public class Class197 {
 
 	static FontMetrics aClass414_2436;
-
 	static byte[] aByteArray2424 = new byte[2048];
-
 	static byte[] playerMovementTypes = new byte[2048];
-
 	static RsByteBuffer[] aClass282_Sub35Array2428 = new RsByteBuffer[2048];
-
 	static int NUM_PLAYER_INDICES = 0;
-
 	static int[] PLAYER_INDICES = new int[2048];
-
 	static int anInt2431 = 0;
-
 	static int[] anIntArray2426 = new int[2048];
-
 	static Class4[] aClass4Array2430 = new Class4[2048];
-
 	static int anInt2434 = 0;
-
 	static int[] anIntArray2435 = new int[2048];
 
 	Class197() throws Throwable {

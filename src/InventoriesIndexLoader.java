@@ -60,7 +60,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 		}
 	}
 
-	public static void method6740(Class117 class117_0) {
-		Class113.aClass117_1234 = class117_0;
+	public static void setHuffman(Huffman class117_0) {
+		Class113.HUFFMAN = class117_0;
 	}
 }

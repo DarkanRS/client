@@ -168,7 +168,7 @@ public class Class250 {
 				if (((Animable) obj_12).method15887()) {
 					Class163 class163_110 = ((Animable) obj_12).method15811(-709125350);
 					if (class163_110 != null && client.anInt7415 < client.anInt7366) {
-						client.anIntArray7263[client.anInt7415] = Class288.aClass414_3438.getWidthNoSprites(class163_110.method2829()) / 2;
+						client.anIntArray7263[client.anInt7415] = SkyboxIndexLoader.aClass414_3438.getWidthNoSprites(class163_110.method2829()) / 2;
 						client.anIntArray7420[client.anInt7415] = (int) client.aFloatArray7292[0];
 						client.anIntArray7417[client.anInt7415] = (int) client.aFloatArray7292[1];
 						client.aClass163Array7419[client.anInt7415] = class163_110;
@@ -176,7 +176,7 @@ public class Class250 {
 					}
 				}
 				i_92 = (int) ((float) i_1 + client.aFloatArray7292[1]);
-				i_92 -= Class288.aClass414_3438.anInt4978;
+				i_92 -= SkyboxIndexLoader.aClass414_3438.anInt4978;
 				boolean bool_94 = false;
 				int i_27;
 				int i_28;
@@ -186,7 +186,7 @@ public class Class250 {
 						Class275_Sub3 class275_sub3_16 = class275_sub7_95.method12600(client.cycles);
 						if (class275_sub3_16 == null) {
 							if (class275_sub7_95.method12602()) {
-								class275_sub7_95.method4887((byte) -66);
+								class275_sub7_95.method4887();
 							}
 						} else {
 							HitbarDefinitions hitbardefinitions_96 = class275_sub7_95.aClass198_7863;
@@ -242,7 +242,7 @@ public class Class250 {
 					}
 				}
 				if (!bool_94) {
-					i_92 -= Class58.aClass529_527.anInt7028 + 2;
+					i_92 -= QuickchatFiller.aClass529_527.anInt7028 + 2;
 				}
 				if (!((Animable) obj_12).aBool10318) {
 					if (npcdefinitions_91 == null) {
@@ -315,7 +315,7 @@ public class Class250 {
 						i_10000 = i_92 - (i_15 + 2);
 					}
 				}
-				for (i_15 = 0; i_15 < Class58.aClass529_527.anInt7026; i_15++) {
+				for (i_15 = 0; i_15 < QuickchatFiller.aClass529_527.anInt7026; i_15++) {
 					i_100 = ((Animable) obj_12).anIntArray10351[i_15];
 					i_17 = ((Animable) obj_12).anIntArray10316[i_15];
 					HitsplatDefinitions hitsplatdefinitions_122 = null;
@@ -324,7 +324,7 @@ public class Class250 {
 						if (i_100 <= client.cycles) {
 							continue;
 						}
-						hitsplatdefinitions_122 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(((Animable) obj_12).anIntArray10316[i_15]);
+						hitsplatdefinitions_122 = IndexLoaders.HITSPLAT_LOADER.getDefinitions(((Animable) obj_12).anIntArray10316[i_15]);
 						i_19 = hitsplatdefinitions_122.anInt2841;
 					} else if (i_100 < 0) {
 						continue;
@@ -332,7 +332,7 @@ public class Class250 {
 					i_115 = ((Animable) obj_12).anIntArray10331[i_15];
 					HitsplatDefinitions hitsplatdefinitions_101 = null;
 					if (i_115 >= 0) {
-						hitsplatdefinitions_101 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i_115);
+						hitsplatdefinitions_101 = IndexLoaders.HITSPLAT_LOADER.getDefinitions(i_115);
 					}
 					if (i_100 - i_19 <= client.cycles) {
 						if (hitsplatdefinitions_122 == null) {
@@ -341,8 +341,8 @@ public class Class250 {
 							i_116 = ((Animable) obj_12).method12997() / 2;
 							Class361.method6274((Class521_Sub1) obj_12, i_116, -1352747334);
 							if (client.aFloatArray7292[0] > -1.0F) {
-								client.aFloatArray7292[0] += (float) Class58.aClass529_527.anIntArray7042[i_15];
-								client.aFloatArray7292[1] += (float) Class58.aClass529_527.anIntArray7029[i_15];
+								client.aFloatArray7292[0] += (float) QuickchatFiller.aClass529_527.anIntArray7042[i_15];
+								client.aFloatArray7292[1] += (float) QuickchatFiller.aClass529_527.anIntArray7029[i_15];
 								Object obj_102 = null;
 								Object obj_103 = null;
 								Object obj_104 = null;
@@ -677,7 +677,7 @@ public class Class250 {
 			}
 			ItemDefinitions.method7140((Animable) obj_12, (Animable) obj_14, --((Animable) obj_12).anInt10319, i_0, i_1, i_2, i_3);
 		}
-		i_10 = Class288.aClass414_3438.anInt4979 + Class288.aClass414_3438.anInt4978 + 2;
+		i_10 = SkyboxIndexLoader.aClass414_3438.anInt4979 + SkyboxIndexLoader.aClass414_3438.anInt4978 + 2;
 		for (i_11 = 0; i_11 < client.anInt7415; i_11++) {
 			int i_93 = client.anIntArray7420[i_11];
 			i_92 = client.anIntArray7417[i_11];
@@ -756,7 +756,7 @@ public class Class250 {
 				}
 				if (i_115 == 4) {
 					i_21 = 150 - client.aClass163Array7419[i_11].method2833() * 150 / client.aClass163Array7419[i_11].method2832(744941042);
-					i_116 = i_21 * (Class288.aClass414_3438.getWidthNoSprites(string_114) + 100) / 150;
+					i_116 = i_21 * (SkyboxIndexLoader.aClass414_3438.getWidthNoSprites(string_114) + 100) / 150;
 					Renderers.SOFTWARE_RENDERER.o(i_0 + i_93 - 50, i_1, i_0 + i_93 + 50, i_3 + i_1);
 					Class285.aClass8_3394.renderText(string_114, i_0 + i_93 + 50 - i_116, i_92 + i_1, i_19, -16777216);
 					Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
@@ -769,7 +769,7 @@ public class Class250 {
 					} else if (i_21 > 125) {
 						i_116 = i_21 - 125;
 					}
-					i_23 = Class288.aClass414_3438.anInt4978 + Class288.aClass414_3438.anInt4979;
+					i_23 = SkyboxIndexLoader.aClass414_3438.anInt4978 + SkyboxIndexLoader.aClass414_3438.anInt4979;
 					Renderers.SOFTWARE_RENDERER.o(i_0, i_92 + i_1 - i_23 - 1, i_0 + i_2, i_92 + i_1 + 5);
 					Class285.aClass8_3394.method360(string_114, i_0 + i_93, i_116 + i_92 + i_1, i_19, -16777216);
 					Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);

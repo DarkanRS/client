@@ -1,3 +1,4 @@
+import java.awt.Point;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.io.File;
@@ -3043,7 +3044,7 @@ public class CS2Interpreter {
 
 	static final void method15553(boolean bool, CS2Executor executor) {
 		int i_3 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_4 = Class117.getInterfaceComponent(i_3);
+		IComponentDefinitions icomponentdefinitions_4 = IComponentDefinitions.getDefs(i_3);
 		Interface interface_5 = Class468_Sub8.INTERFACES[i_3 >> 16];
 		if (bool) {
 			Class455.method7554(interface_5, icomponentdefinitions_4, 1019153265);
@@ -3059,22 +3060,22 @@ public class CS2Interpreter {
 
 	static final void method5756(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class82.method1454(icomponentdefinitions_3, interface_4, executor, (byte) 50);
+		method1454(icomponentdefinitions_3, interface_4, executor, (byte) 50);
 	}
 
 	static final void method5758(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class475.method7927(icomponentdefinitions_3, executor, (byte) -98);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method7927(icomponentdefinitions_3, executor, (byte) -98);
 	}
 
 	static final void method3546(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Login.method5017(icomponentdefinitions_3, interface_4, executor);
+		method5017(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3547(CS2Executor executor) {
@@ -3098,7 +3099,7 @@ public class CS2Interpreter {
 
 	static final void loadClanVarbit(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Class405 class405_3 = IndexLoaders.CLAN_VAR_LOADER.method6753(i_2, -292141252);
+		ClanVarDefinitions class405_3 = IndexLoaders.CLAN_VAR_LOADER.method6753(i_2, -292141252);
 		if (class405_3.aChar4832 != 1) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -3136,7 +3137,7 @@ public class CS2Interpreter {
 
 	static final void method1255(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 676193293);
+		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 676193293);
 		executor.intStack[++executor.intStackPtr - 1] = worldmapareadefs_3.anInt2719;
 	}
 
@@ -3146,9 +3147,9 @@ public class CS2Interpreter {
 
 	static final void method7520(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub11.method12209(icomponentdefinitions_3, interface_4, executor);
+		method12209(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void getWaterPreference(CS2Executor executor) {
@@ -3159,7 +3160,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class344.method6122(icomponentdefinitions_3, interface_4, executor);
+		method6122(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method5408(CS2Executor executor) {
@@ -3173,9 +3174,9 @@ public class CS2Interpreter {
 
 	static final void method15510(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class13.method506(icomponentdefinitions_3, interface_4, executor, 73822298);
+		method506(icomponentdefinitions_3, interface_4, executor, 73822298);
 	}
 
 	static final void method15512(CS2Executor executor) {
@@ -3198,16 +3199,16 @@ public class CS2Interpreter {
 
 	static final void method15514(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class290.method5121(icomponentdefinitions_3, interface_4, executor);
+		method5121(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method2865(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class529.method11337(icomponentdefinitions_3, interface_4, executor, -1404316012);
+		method11337(icomponentdefinitions_3, interface_4, executor, -1404316012);
 	}
 
 	static final void method2866(CS2Executor executor) {
@@ -3227,7 +3228,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2868(CS2Executor executor) {
-		if (Class308.aShortArray3621 != null && Class283.anInt3384 < Class415.anInt4985) {
+		if (Class308.aShortArray3621 != null && Class283.anInt3384 < VarcDefinitions.anInt4985) {
 			executor.intStack[++executor.intStackPtr - 1] = Class308.aShortArray3621[++Class283.anInt3384 - 1] & 0xffff;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
@@ -3308,13 +3309,13 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class175.method2960(icomponentdefinitions_3, interface_4, executor, 1306300088);
+		method2960(icomponentdefinitions_3, interface_4, executor, 1306300088);
 	}
 
 	static final void method8715(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class199.method3251(icomponentdefinitions_3, executor, 1146866687);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method3251(icomponentdefinitions_3, executor, 1146866687);
 	}
 
 	static final void method8716(CS2Executor executor) {
@@ -3369,8 +3370,8 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		Class282_Sub50_Sub14 class282_sub50_sub14_4 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -2049190154);
-		int i_5 = class282_sub50_sub14_4.anIntArray9746[i_3];
+		QuickChatCategoryDefinitions class282_sub50_sub14_4 = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2);
+		int i_5 = class282_sub50_sub14_4.subCategories[i_3];
 		executor.intStack[++executor.intStackPtr - 1] = i_5;
 	}
 
@@ -3389,15 +3390,15 @@ public class CS2Interpreter {
 	}
 
 	static void method3553(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).aStringArray2971[executor.intStack[executor.intStackPtr - 1]];
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).aStringArray2971[executor.intStack[executor.intStackPtr - 1]];
 		executor.intStackPtr -= 2;
 	}
 
 	static final void method3554(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Defaults7Loader.method8754(icomponentdefinitions_3, interface_4, executor);
+		method8754(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3555(CS2Executor executor) {
@@ -3426,7 +3427,7 @@ public class CS2Interpreter {
 	}
 
 	static void method466(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).method4101(Class158_Sub1.PLAYER_VAR_PROVIDER) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).method4101(Class158_Sub1.PLAYER_VAR_PROVIDER) ? 1 : 0;
 	}
 
 	static final void longLessThan(CS2Executor executor) {
@@ -3487,7 +3488,7 @@ public class CS2Interpreter {
 
 	static final void method1590(CS2Executor executor) {
 		int i_2 = Class96_Sub14.method14641();
-		executor.intStack[++executor.intStackPtr - 1] = Class233.anInt2880 = Class393.preferences.currentToolkit.getValue(1802099431);
+		executor.intStack[++executor.intStackPtr - 1] = ClanVarSettingsIndexLoader.anInt2880 = Class393.preferences.currentToolkit.getValue(1802099431);
 		executor.intStack[++executor.intStackPtr - 1] = i_2;
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -112);
 		Class190.savePreferences((byte) 117);
@@ -3511,8 +3512,8 @@ public class CS2Interpreter {
 
 	static final void method3171(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class209.method3601(icomponentdefinitions_3, executor, -1995583516);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method3601(icomponentdefinitions_3, executor, -1995583516);
 	}
 
 	static final void method3172(CS2Executor executor) {
@@ -3540,7 +3541,7 @@ public class CS2Interpreter {
 
 	static final void method15616(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 461290146);
+		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 461290146);
 		if (worldmapareadefs_3.areaName == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
@@ -3550,16 +3551,16 @@ public class CS2Interpreter {
 
 	static final void method6016(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class521_Sub1_Sub4.method14892(icomponentdefinitions_3, interface_4, executor, (byte) 79);
+		method14892(icomponentdefinitions_3, interface_4, executor, (byte) 79);
 	}
 
 	static final void method13412(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub41_Sub1.method14700(icomponentdefinitions_3, interface_4, executor, 1949391932);
+		method14700(icomponentdefinitions_3, interface_4, executor, 1949391932);
 	}
 
 	static final void method8263(CS2Executor executor) {
@@ -3576,7 +3577,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(1555289189)) {
 			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2).method6882(i_3, attributedefault_4.typeName);
 		} else {
@@ -3595,7 +3596,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class185.method3078(icomponentdefinitions_3, interface_4, executor, 64340405);
+		method3078(icomponentdefinitions_3, interface_4, executor, 64340405);
 	}
 
 	static final void method3893(CS2Executor executor) {
@@ -3631,7 +3632,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class242.method4159(icomponentdefinitions_3, interface_4, executor, -1802550840);
+		method4159(icomponentdefinitions_3, interface_4, executor, -1802550840);
 	}
 
 	static final void method5100(CS2Executor executor) {
@@ -3640,9 +3641,9 @@ public class CS2Interpreter {
 
 	static final void method13408(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class100.method1642(icomponentdefinitions_3, interface_4, executor, -441010369);
+		method1642(icomponentdefinitions_3, interface_4, executor, -441010369);
 	}
 
 	static final void method12859(CS2Executor executor) {
@@ -3702,7 +3703,7 @@ public class CS2Interpreter {
 
 	static final void method7643(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		int i_4 = -1;
 		int i_5 = -1;
 		Class119 class119_6 = icomponentdefinitions_3.method2046(Renderers.SOFTWARE_RENDERER, 1740359651);
@@ -3732,7 +3733,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class158.method2732(icomponentdefinitions_3, interface_4, executor, -1950907302);
+		method2732(icomponentdefinitions_3, interface_4, executor, -1950907302);
 	}
 
 	static final void method13494(CS2Executor executor) {
@@ -3792,7 +3793,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub52.method13468(icomponentdefinitions_3, interface_4, executor);
+		method13468(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method12659(CS2Executor executor) {
@@ -3804,7 +3805,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		ItemDefinitions.method7142(icomponentdefinitions_4, interface_5, executor, -1755364676);
+		method7142(icomponentdefinitions_4, interface_5, executor, -1755364676);
 	}
 
 	static final void method12660(CS2Executor executor) {
@@ -3849,16 +3850,16 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class306.method5455(icomponentdefinitions_3, interface_4, executor, -869216999);
+		method5455(icomponentdefinitions_3, interface_4, executor, -869216999);
 	}
 
 	static final void method742(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class282_Sub50_Sub14 class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -572656458);
-		if (class282_sub50_sub14_3.anIntArray9746 == null) {
+		QuickChatCategoryDefinitions class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2);
+		if (class282_sub50_sub14_3.subCategories == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub14_3.anIntArray9746.length;
+			executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub14_3.subCategories.length;
 		}
 	}
 
@@ -3880,9 +3881,9 @@ public class CS2Interpreter {
 
 	static final void method8843(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class363.method6288(icomponentdefinitions_3, interface_4, executor, (short) 25412);
+		method6288(icomponentdefinitions_3, interface_4, executor, (short) 25412);
 	}
 
 	static final void method8844(CS2Executor executor) {
@@ -3893,11 +3894,11 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(1764887280)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_2, (byte) -22).method11129(i_3, attributedefault_4.typeName);
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_2, (byte) -22).method11129(i_3, attributedefault_4.typeName);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_2, (byte) -46).method11133(i_3, attributedefault_4.defaultInt);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_2, (byte) -46).method11133(i_3, attributedefault_4.defaultInt);
 		}
 	}
 
@@ -3905,7 +3906,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		LinkedNodeList.method7889(icomponentdefinitions_3, interface_4, executor);
+		method7889(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void longGreaterThan(CS2Executor executor) {
@@ -3939,14 +3940,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class468_Sub2.method12630(icomponentdefinitions_3, interface_4, executor);
+		method12630(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method15475(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class295.method5291(icomponentdefinitions_3, interface_4, executor, 464841858);
+		method5291(icomponentdefinitions_3, interface_4, executor, 464841858);
 	}
 
 	static final void method3079(CS2Executor executor) {
@@ -3960,11 +3961,11 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 2, executor, (byte) -57);
+		method14664(icomponentdefinitions_3, interface_4, false, 2, executor, (byte) -57);
 	}
 
 	static final void method15399(CS2Executor executor) {
-		Class242.method4167((String) executor.stringStack[--executor.stringStackPtr]);
+		QuestIndexLoader.method4167((String) executor.stringStack[--executor.stringStackPtr]);
 	}
 
 	static final void method6796(CS2Executor executor) {
@@ -4003,22 +4004,22 @@ public class CS2Interpreter {
 
 	static final void method4863(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		ReferenceTable.method5763(icomponentdefinitions_3, interface_4, executor, 258036500);
+		method5763(icomponentdefinitions_3, interface_4, executor, 258036500);
 	}
 
 	static final void method4864(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub21_Sub1.method15474(icomponentdefinitions_3, interface_4, executor, (byte) 126);
+		method15474(icomponentdefinitions_3, interface_4, executor, (byte) 126);
 	}
 
 	static final void method4865(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class88.method1494(icomponentdefinitions_3, executor, (byte) -2);
+		method1494(icomponentdefinitions_3, executor, (byte) -2);
 	}
 
 	static final void method4867(CS2Executor executor) {
@@ -4034,16 +4035,16 @@ public class CS2Interpreter {
 
 	static final void hideComp(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class29.method786(icomponentdefinitions_3, interface_4, executor);
+		method786(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method5302(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class109.method1852(icomponentdefinitions_3, interface_4, executor);
+		method1852(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method11125(CS2Executor executor) {
@@ -4054,9 +4055,9 @@ public class CS2Interpreter {
 
 	static final void method11126(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class82.method1455(icomponentdefinitions_3, interface_4, executor);
+		method1455(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method11128(CS2Executor executor) {
@@ -4076,7 +4077,7 @@ public class CS2Interpreter {
 		EnumDefinitions enumDefinitions = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_4);
 		if (i_2 == enumDefinitions.aChar5146 && i_3 == enumDefinitions.aChar5140) {
 			if (i_3 == 115) {
-				executor.stringStack[++executor.stringStackPtr - 1] = enumDefinitions.getStringValue(i_5, 870483820);
+				executor.stringStack[++executor.stringStackPtr - 1] = enumDefinitions.getStringValue(i_5);
 			} else {
 				executor.intStack[++executor.intStackPtr - 1] = enumDefinitions.getIntValue(i_5);
 			}
@@ -4113,15 +4114,15 @@ public class CS2Interpreter {
 
 	static final void method6669(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		MovementType.method4280(icomponentdefinitions_3, interface_4, executor, (byte) 114);
+		method4280(icomponentdefinitions_3, interface_4, executor, (byte) 114);
 	}
 
 	static final void method6670(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class96_Sub22.method14680(icomponentdefinitions_3, executor, 434841982);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method14680(icomponentdefinitions_3, executor, 434841982);
 	}
 
 	static final void method6674(CS2Executor executor) {
@@ -4145,14 +4146,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class295.method5291(icomponentdefinitions_3, interface_4, executor, 989451427);
+		method5291(icomponentdefinitions_3, interface_4, executor, 989451427);
 	}
 
 	static final void method4030(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class204.method3365(icomponentdefinitions_3, interface_4, executor, -296742554);
+		method3365(icomponentdefinitions_3, interface_4, executor, -296742554);
 	}
 
 	static final void method4031(CS2Executor executor) {
@@ -4163,9 +4164,9 @@ public class CS2Interpreter {
 
 	static final void method4033(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub17.method14653(icomponentdefinitions_3, interface_4, executor, -1617819065);
+		method14653(icomponentdefinitions_3, interface_4, executor, -1617819065);
 	}
 
 	static final void method4035(CS2Executor executor) {
@@ -4238,7 +4239,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		DefaultsFile.method11221(icomponentdefinitions_3, interface_4, executor);
+		method11221(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method773(CS2Executor executor) {
@@ -4246,16 +4247,16 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		if (VertexNormal.myPlayer.playerAppearance != null) {
-			VertexNormal.myPlayer.playerAppearance.method3995(i_2, i_3, IndexLoaders.ITEM_INDEX_LOADER);
+			VertexNormal.myPlayer.playerAppearance.method3995(i_2, i_3, IndexLoaders.ITEM_LOADER);
 		}
 	}
 
 	static final void method775(CS2Executor executor) {
-		Class438.method7333(false, 2001834911);
+		CursorIndexLoader.method7333(false, 2001834911);
 	}
 
 	static void method777(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).anIntArray2968[executor.intStack[executor.intStackPtr - 1]];
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).anIntArray2968[executor.intStack[executor.intStackPtr - 1]];
 		--executor.intStackPtr;
 	}
 
@@ -4284,20 +4285,20 @@ public class CS2Interpreter {
 
 	static final void method3064(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class175.method2960(icomponentdefinitions_3, interface_4, executor, 1289929299);
+		method2960(icomponentdefinitions_3, interface_4, executor, 1289929299);
 	}
 
 	static final void method3065(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1423;
 	}
 
 	static final void method3066(CS2Executor executor) {
 		if (Class475.supportsFullScreen) {
-			Class467[] arr_2 = Class405.method6825((byte) -71);
+			Class467[] arr_2 = ClanVarDefinitions.method6825((byte) -71);
 			executor.intStack[++executor.intStackPtr - 1] = arr_2.length;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -4305,7 +4306,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3067(CS2Executor executor) {
-		Class337.method6018(executor.animable, executor, 1557948152);
+		method6018(executor.animable, executor, 1557948152);
 	}
 
 	static final void method3068(CS2Executor executor) {
@@ -4317,7 +4318,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		DefaultsFile.method11223(icomponentdefinitions_3, interface_4, executor, 4317906);
+		method11223(icomponentdefinitions_3, interface_4, executor, 4317906);
 	}
 
 	static final void method5010(CS2Executor executor) {
@@ -4332,7 +4333,7 @@ public class CS2Interpreter {
 
 	static final void method12215(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 207092406);
+		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		if (itemdefinitions_3.certTemplateId == -1 && itemdefinitions_3.certId >= 0) {
 			executor.intStack[++executor.intStackPtr - 1] = itemdefinitions_3.certId;
 		} else {
@@ -4348,19 +4349,19 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class359.method6244(icomponentdefinitions_3, interface_4, executor, -1411462408);
+		method6244(icomponentdefinitions_3, interface_4, executor, -1411462408);
 	}
 
 	static final void method6283(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class287.method5066(icomponentdefinitions_3, interface_4, executor, 2045260236);
+		method5066(icomponentdefinitions_3, interface_4, executor, 2045260236);
 	}
 
 	static final void method6284(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1383536878).value;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).value;
 	}
 
 	static final void method6285(CS2Executor executor) {
@@ -4372,14 +4373,14 @@ public class CS2Interpreter {
 		if (string_2.startsWith(Class76.getCrown(0)) || string_2.startsWith(Class76.getCrown(1))) {
 			string_2 = string_2.substring(7);
 		}
-		executor.intStack[++executor.intStackPtr - 1] = Class230.method3910(string_2);
+		executor.intStack[++executor.intStackPtr - 1] = VarBitIndexLoader.method3910(string_2);
 	}
 
 	static final void hookMousePress(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub17_Sub4.method15409(icomponentdefinitions_3, interface_4, executor, -1219012115);
+		method15409(icomponentdefinitions_3, interface_4, executor, -1219012115);
 	}
 
 	static final void loadClanVarString(CS2Executor executor) {
@@ -4396,14 +4397,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		ReferenceTable.method5763(icomponentdefinitions_3, interface_4, executor, 2042314343);
+		method5763(icomponentdefinitions_3, interface_4, executor, 2042314343);
 	}
 
 	static final void method3357(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub9.method14586(icomponentdefinitions_3, interface_4, executor);
+		method14586(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3358(CS2Executor executor) {
@@ -4416,9 +4417,9 @@ public class CS2Interpreter {
 
 	static final void method1385(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class241.method4149(icomponentdefinitions_3, interface_4, executor, -1861412275);
+		method4149(icomponentdefinitions_3, interface_4, executor, -1861412275);
 	}
 
 	static final void method1387(CS2Executor executor) {
@@ -4466,7 +4467,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class29.method789(icomponentdefinitions_3, interface_4, executor);
+		method789(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6211(CS2Executor executor) {
@@ -4480,12 +4481,12 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class13.method506(icomponentdefinitions_3, interface_4, executor, -1252434200);
+		method506(icomponentdefinitions_3, interface_4, executor, -1252434200);
 	}
 
 	static final void getCompWidth(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1301;
 	}
 
@@ -4501,14 +4502,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class159.method2741(icomponentdefinitions_3, interface_4, executor, (byte) 5);
+		method2741(icomponentdefinitions_3, interface_4, executor, (byte) 5);
 	}
 
 	static final void method893(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		RsByteBuffer.method13292(icomponentdefinitions_3, interface_4, executor);
+		method13292(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method894(CS2Executor executor) {
@@ -4558,7 +4559,7 @@ public class CS2Interpreter {
 		int i_4 = executor.intStack[executor.intStackPtr + 1];
 		int i_5 = executor.intStack[executor.intStackPtr + 2];
 		Class282_Sub20_Sub8.method15242(string_2, i_3 == 1, i_4, i_5, 1920082068);
-		executor.intStack[++executor.intStackPtr - 1] = Class415.anInt4985;
+		executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.anInt4985;
 	}
 
 	static final void method4091(CS2Executor executor) {
@@ -4585,14 +4586,14 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub17.method14653(icomponentdefinitions_4, interface_5, executor, -1985356850);
+		method14653(icomponentdefinitions_4, interface_5, executor, -1985356850);
 	}
 
 	static final void method14342(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class29.method789(icomponentdefinitions_3, interface_4, executor);
+		method789(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method12933(CS2Executor executor) {
@@ -4611,9 +4612,9 @@ public class CS2Interpreter {
 
 	static final void method8750(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		OutgoingLoginPacket.method6313(icomponentdefinitions_3, interface_4, executor, 435475117);
+		method6313(icomponentdefinitions_3, interface_4, executor, 435475117);
 	}
 
 	static final void method8753(CS2Executor executor) {
@@ -4622,7 +4623,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_4 = executor.intStack[executor.intStackPtr];
 		int i_5 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_6 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4);
+		ParamDefinitions attributedefault_6 = IndexLoaders.PARAM_LOADER.getParam(i_4);
 		if (i_5 != attributedefault_6.defaultInt) {
 			icomponentdefinitions_3.method1999(i_4, i_5, -76076232);
 		} else {
@@ -4663,11 +4664,11 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(2036753920)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 882562729).method3722(i_3, attributedefault_4.typeName);
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 882562729).method3722(i_3, attributedefault_4.typeName);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 884887679).method3723(i_3, attributedefault_4.defaultInt);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 884887679).method3723(i_3, attributedefault_4.defaultInt);
 		}
 	}
 
@@ -4698,16 +4699,16 @@ public class CS2Interpreter {
 
 	static final void setCompPosition(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class236.method3983(icomponentdefinitions_3, interface_4, executor, -1297016434);
+		method3983(icomponentdefinitions_3, interface_4, executor, -1297016434);
 	}
 
 	static final void method6687(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class521_Sub1_Sub4.method14892(icomponentdefinitions_3, interface_4, executor, (byte) 121);
+		method14892(icomponentdefinitions_3, interface_4, executor, (byte) 121);
 	}
 
 	static final void method6688(CS2Executor executor) {
@@ -4719,7 +4720,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		ClipMap.method6010(icomponentdefinitions_4, interface_5, executor, -1956215078);
+		method6010(icomponentdefinitions_4, interface_5, executor, -1956215078);
 	}
 
 	static final void method6691(CS2Executor executor) {
@@ -4736,7 +4737,7 @@ public class CS2Interpreter {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = executor.intStack[--executor.intStackPtr];
 		Class282_Sub20_Sub36.method15419(string_2, i_3 == 1);
-		executor.intStack[++executor.intStackPtr - 1] = Class415.anInt4985;
+		executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.anInt4985;
 	}
 
 	static final void method5692(CS2Executor executor) {
@@ -4783,11 +4784,11 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		Class159.method2738(executor.animable.inter, i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor);
+		method2738(executor.animable.inter, i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor);
 	}
 
 	static void method12587(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).method4105(Class158_Sub1.PLAYER_VAR_PROVIDER, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).method4105(Class158_Sub1.PLAYER_VAR_PROVIDER, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
 		--executor.intStackPtr;
 	}
 
@@ -4855,7 +4856,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(1753438100)) {
 			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_2).method7973(i_3, attributedefault_4.typeName);
 		} else {
@@ -4871,13 +4872,13 @@ public class CS2Interpreter {
 			int i_4;
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray428.length; i_4++) {
 				if (IdentikitDefinition.anIntArray428[i_4] == i_2) {
-					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, -1891661545);
+					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, -1891661545);
 					return;
 				}
 			}
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray422.length; i_4++) {
 				if (IdentikitDefinition.anIntArray422[i_4] == i_2) {
-					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.aClass31_204, 938562628);
+					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, 938562628);
 					break;
 				}
 			}
@@ -4911,27 +4912,27 @@ public class CS2Interpreter {
 
 	static final void method4247(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1589162254).name;
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).name;
 	}
 
 	static void method4249(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(2105121793)) {
 			String string_5 = attributedefault_4.typeName;
 			if (i_2 == -1) {
 				executor.stringStack[++executor.stringStackPtr - 1] = string_5;
 			} else {
-				executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(i_2).method4110(i_3, string_5);
+				executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(i_2).method4110(i_3, string_5);
 			}
 		} else {
 			int i_6 = attributedefault_4.defaultInt;
 			if (i_2 == -1) {
 				executor.intStack[++executor.intStackPtr - 1] = i_6;
 			} else {
-				executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(i_2).method4135(i_3, i_6);
+				executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(i_2).method4135(i_3, i_6);
 			}
 		}
 	}
@@ -4962,7 +4963,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Defaults7Loader.method8754(icomponentdefinitions_3, interface_4, executor);
+		method8754(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3919(CS2Executor executor) {
@@ -4984,7 +4985,7 @@ public class CS2Interpreter {
 	static final void method6138(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Node.method5001(icomponentdefinitions_3, executor, -1847769999);
+		method5001(icomponentdefinitions_3, executor, -1847769999);
 	}
 
 	static final void method6139(CS2Executor executor) {
@@ -4994,26 +4995,26 @@ public class CS2Interpreter {
 
 	static final void method6141(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		HashTable.method7547(icomponentdefinitions_3, interface_4, executor, 1462639259);
+		method7547(icomponentdefinitions_3, interface_4, executor, 1462639259);
 	}
 
 	static final void method6142(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
 	}
 
 	static final void method289(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteScale;
 	}
 
 	static final void method290(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 174714290);
+		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 174714290);
 		executor.intStack[++executor.intStackPtr - 1] = worldmapareadefs_3.anInt2718;
 	}
 
@@ -5021,7 +5022,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -1111901377).aCharArray9745[i_3];
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2).subCategoryHotkeys[i_3];
 	}
 
 	static final void method292(CS2Executor executor) {
@@ -5046,7 +5047,7 @@ public class CS2Interpreter {
 	}
 
 	static void method5736(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[--executor.intStackPtr]).altName;
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]).altName;
 	}
 
 	static final void method504(CS2Executor executor) {
@@ -5054,22 +5055,22 @@ public class CS2Interpreter {
 	}
 
 	static void method1067(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).method4104(Class158_Sub1.PLAYER_VAR_PROVIDER, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).method4104(Class158_Sub1.PLAYER_VAR_PROVIDER, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
 		--executor.intStackPtr;
 	}
 
 	static final void method1069(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub52.method13468(icomponentdefinitions_3, interface_4, executor);
+		method13468(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1070(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
 		Class76.method1360(string_2, bool_3);
-		executor.intStack[++executor.intStackPtr - 1] = Class415.anInt4985;
+		executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.anInt4985;
 	}
 
 	static final void method1071(CS2Executor executor) {
@@ -5093,23 +5094,23 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -2012754494).anIntArray9624[i_3];
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_2).responses[i_3];
 	}
 
 	static final void method11252(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class159.method2741(icomponentdefinitions_3, interface_4, executor, (byte) 59);
+		method2741(icomponentdefinitions_3, interface_4, executor, (byte) 59);
 	}
 
 	static void method3753(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).anInt2973;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2973;
 	}
 
 	static final void method3755(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_2, 262031096);
+		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 262031096);
 		executor.intStack[++executor.intStackPtr - 1] = worldmapareadefs_3.anInt2722;
 	}
 
@@ -5117,7 +5118,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = Class117.method1980(i_2, i_3, false, 1448220048);
+		executor.intStack[++executor.intStackPtr - 1] = Huffman.method1980(i_2, i_3, false, 1448220048);
 	}
 
 	static final void method1562(CS2Executor executor) {
@@ -5127,7 +5128,7 @@ public class CS2Interpreter {
 	}
 
 	static void method2101(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[--executor.intStackPtr]).name;
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]).name;
 	}
 
 	static final void method2102(CS2Executor executor) {
@@ -5147,12 +5148,12 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class174.method2955(icomponentdefinitions_3, interface_4, executor);
+		method2955(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method5697(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -2062673980).method14898(1863942043);
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_2).method14898(1863942043);
 	}
 
 	static final void method4652(CS2Executor executor) {
@@ -5170,14 +5171,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 0, executor, (byte) -16);
+		method14664(icomponentdefinitions_3, interface_4, true, 0, executor, (byte) -16);
 	}
 
 	static final void method2564(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		IdentikitDefinition.method910(icomponentdefinitions_3, interface_4, executor, 1996171820);
+		method910(icomponentdefinitions_3, interface_4, executor, 1996171820);
 	}
 
 	static final void method2566(CS2Executor executor) {
@@ -5203,7 +5204,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class463.method7729(icomponentdefinitions_3, interface_4, executor, 1735506761);
+		method7729(icomponentdefinitions_3, interface_4, executor, 1735506761);
 	}
 
 	static final void method2568(CS2Executor executor) {
@@ -5214,9 +5215,9 @@ public class CS2Interpreter {
 
 	static final void method1349(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class174.method2955(icomponentdefinitions_3, interface_4, executor);
+		method2955(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1350(CS2Executor executor) {
@@ -5236,7 +5237,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		Class31.method812(i_2, new Class282_Sub44(i_3, 3), (int[]) null, true, (byte) 92);
+		IdentitiKitIndexLoader.method812(i_2, new Class282_Sub44(i_3, 3), (int[]) null, true, (byte) 92);
 	}
 
 	static final void method5962(CS2Executor executor) {
@@ -5244,8 +5245,8 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		Class117.getInterfaceComponent(i_2);
-		Class159.method2738(Class468_Sub8.INTERFACES[i_2 >>> 16], i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor);
+		IComponentDefinitions.getDefs(i_2);
+		method2738(Class468_Sub8.INTERFACES[i_2 >>> 16], i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor);
 	}
 
 	static final void method5296(CS2Executor executor) {
@@ -5257,7 +5258,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class204.method3366(icomponentdefinitions_4, interface_5, executor, (byte) -128);
+		method3366(icomponentdefinitions_4, interface_5, executor, (byte) -128);
 	}
 
 	static final void method5297(CS2Executor executor) {
@@ -5295,7 +5296,7 @@ public class CS2Interpreter {
 
 	static final void getCompText(CS2Executor executor) {
 		int component = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(component);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(component);
 		executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.text;
 	}
 
@@ -5303,14 +5304,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class306.method5453(icomponentdefinitions_3, interface_4, executor, -218121128);
+		method5453(icomponentdefinitions_3, interface_4, executor, -218121128);
 	}
 
 	static final void method5488(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub20_Sub9.method15256(icomponentdefinitions_3, interface_4, executor, -1115547958);
+		method15256(icomponentdefinitions_3, interface_4, executor, -1115547958);
 	}
 
 	static final void method5489(CS2Executor executor) {
@@ -5333,7 +5334,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = Class117.method1980(i_2, i_3, true, 1580023895);
+		executor.intStack[++executor.intStackPtr - 1] = Huffman.method1980(i_2, i_3, true, 1580023895);
 	}
 
 	static final void method6314(CS2Executor executor) {
@@ -5367,14 +5368,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 2, executor, (byte) -20);
+		method14664(icomponentdefinitions_3, interface_4, true, 2, executor, (byte) -20);
 	}
 
 	static final void setCompSprite(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class504.method8390(icomponentdefinitions_3, interface_4, executor);
+		method8390(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1137(CS2Executor executor) {
@@ -5398,9 +5399,9 @@ public class CS2Interpreter {
 
 	static final void method6310(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class344.method6122(icomponentdefinitions_3, interface_4, executor);
+		method6122(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method787(CS2Executor executor) {
@@ -5417,9 +5418,9 @@ public class CS2Interpreter {
 
 	static final void method11403(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class237.method3987(icomponentdefinitions_3, interface_4, executor, -599656695);
+		method3987(icomponentdefinitions_3, interface_4, executor, -599656695);
 	}
 
 	static final void method11405(CS2Executor executor) {
@@ -5430,27 +5431,27 @@ public class CS2Interpreter {
 
 	static final void method11406(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1937289773).stackable == 1 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).stackable == 1 ? 1 : 0;
 	}
 
 	static final void method4173(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class413.method6942(icomponentdefinitions_3, executor, -839720836);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method6942(icomponentdefinitions_3, executor, -839720836);
 	}
 
 	static final void method4174(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		EntityList.method7667(icomponentdefinitions_3, interface_4, executor, 668340664);
+		method7667(icomponentdefinitions_3, interface_4, executor, 668340664);
 	}
 
 	static final void method4175(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class125.method2170(icomponentdefinitions_3, interface_4, executor);
+		method2170(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method4176(CS2Executor executor) {
@@ -5490,7 +5491,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class504.method8390(icomponentdefinitions_3, interface_4, executor);
+		method8390(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6072(CS2Executor executor) {
@@ -5532,17 +5533,17 @@ public class CS2Interpreter {
 
 	static final void method305(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class349.method6186(icomponentdefinitions_3, interface_4, executor);
+		method6186(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6998(CS2Executor executor) {
-		if (Class233.anInt2880 == 2) {
+		if (ClanVarSettingsIndexLoader.anInt2880 == 2) {
 			Class188.aBool2378 = true;
-		} else if (Class233.anInt2880 == 1) {
+		} else if (ClanVarSettingsIndexLoader.anInt2880 == 1) {
 			Class188.aBool2377 = true;
-		} else if (Class233.anInt2880 == 3) {
+		} else if (ClanVarSettingsIndexLoader.anInt2880 == 3) {
 			Class188.aBool2372 = true;
 		}
 	}
@@ -5565,11 +5566,11 @@ public class CS2Interpreter {
 				bytes_5[i_6 / 2] = (byte) executor.intStack[i_6 + executor.intStackPtr + 1];
 			}
 		}
-		Class107.method1838(icomponentdefinitions_3, bytes_4, bytes_5, executor);
+		method1838(icomponentdefinitions_3, bytes_4, bytes_5, executor);
 	}
 
 	static final void method4201(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
+		IComponentDefinitions icomponentdefinitions_2 = IComponentDefinitions.getDefs(executor.intStack[--executor.intStackPtr]);
 		if (icomponentdefinitions_2.anInt1426 != -1) {
 			executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_2.anInt1427;
 		} else {
@@ -5581,7 +5582,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 173872175);
+		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		if (i_3 >= 1 && i_3 <= 5 && itemdefinitions_4.inventoryOptions[i_3 - 1] != null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = itemdefinitions_4.inventoryOptions[i_3 - 1];
 		} else {
@@ -5591,9 +5592,9 @@ public class CS2Interpreter {
 
 	static final void method4205(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class125.method2168(icomponentdefinitions_3, interface_4, executor, -1301648510);
+		method2168(icomponentdefinitions_3, interface_4, executor, -1301648510);
 	}
 
 	static final void method14611(CS2Executor executor) {
@@ -5612,14 +5613,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class237.method3987(icomponentdefinitions_3, interface_4, executor, -669419549);
+		method3987(icomponentdefinitions_3, interface_4, executor, -669419549);
 	}
 
 	static final void method8327(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class455.method7555(icomponentdefinitions_3, interface_4, executor, (byte) -121);
+		method7555(icomponentdefinitions_3, interface_4, executor, (byte) -121);
 	}
 
 	static final void storeLong(CS2Executor executor) {
@@ -5630,11 +5631,11 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		IsaacCipher.method7267(icomponentdefinitions_3, interface_4, executor, 1800659377);
+		method7267(icomponentdefinitions_3, interface_4, executor, 1800659377);
 	}
 
 	static void method5016(CS2Executor executor) {
-		QuestDefinitions questdefinitions_2 = IndexLoaders.aClass242_4922.method4156(executor.intStack[--executor.intStackPtr]);
+		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
 		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArray2968 == null ? 0 : questdefinitions_2.anIntArray2968.length;
 	}
 
@@ -5658,7 +5659,7 @@ public class CS2Interpreter {
 
 	static final void method5926(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1293;
 	}
 
@@ -5668,7 +5669,7 @@ public class CS2Interpreter {
 
 	static final void loadClanSettingVarbit(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Class537 class537_3 = IndexLoaders.aClass233_5822.method3933(i_2, 1537794608);
+		ClanVarSettingsDefinitions class537_3 = IndexLoaders.CLAN_VAR_SETTINGS_LOADER.method3933(i_2, 1537794608);
 		if (class537_3 == null) {
 			throw new RuntimeException();
 		} else {
@@ -5691,7 +5692,7 @@ public class CS2Interpreter {
 			underlaydefinition_2 = executor.aClass513_7007;
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
-		Class235.method3965(icomponentdefinitions_4, executor, -757819357);
+		method3965(icomponentdefinitions_4, executor, -757819357);
 	}
 
 	static final void method8863(CS2Executor executor) {
@@ -5727,7 +5728,7 @@ public class CS2Interpreter {
 	}
 
 	static final void clearCompChildren(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
+		IComponentDefinitions icomponentdefinitions_2 = IComponentDefinitions.getDefs(executor.intStack[--executor.intStackPtr]);
 		icomponentdefinitions_2.aClass118Array1438 = null;
 		icomponentdefinitions_2.aClass118Array1439 = null;
 		Class109.redrawComponent(icomponentdefinitions_2, (byte) -71);
@@ -5748,7 +5749,7 @@ public class CS2Interpreter {
 		if (i_3 == -1) {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -559215225).method15212((char) i_3);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2).method15212((char) i_3);
 		}
 	}
 
@@ -5764,7 +5765,7 @@ public class CS2Interpreter {
 	}
 
 	static void method2953(CS2Executor executor) {
-		QuestDefinitions questdefinitions_2 = IndexLoaders.aClass242_4922.method4156(executor.intStack[--executor.intStackPtr]);
+		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
 		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArrayArray2966 == null ? 0 : questdefinitions_2.anIntArrayArray2966.length;
 	}
 
@@ -5790,7 +5791,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4775(CS2Executor executor) {
-		Class242.method4166();
+		QuestIndexLoader.method4166();
 	}
 
 	static final void method4776(CS2Executor executor) {
@@ -5855,7 +5856,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class349.method6186(icomponentdefinitions_3, interface_4, executor);
+		method6186(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3802(CS2Executor executor) {
@@ -5884,13 +5885,13 @@ public class CS2Interpreter {
 
 	static final void method3806(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 1, executor, (byte) -9);
+		method14664(icomponentdefinitions_3, interface_4, true, 1, executor, (byte) -9);
 	}
 
 	static void method4556(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).method4093(Class158_Sub1.PLAYER_VAR_PROVIDER, client.anIntArray7337) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).method4093(Class158_Sub1.PLAYER_VAR_PROVIDER, client.anIntArray7337) ? 1 : 0;
 	}
 
 	static final void method4557(CS2Executor executor) {
@@ -5902,7 +5903,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class13.method505(icomponentdefinitions_3, interface_4, executor);
+		method505(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void stringEqual(CS2Executor executor) {
@@ -5917,7 +5918,7 @@ public class CS2Interpreter {
 
 	static final void method8215(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		if (icomponentdefinitions_3.aString1369 == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
@@ -5926,7 +5927,7 @@ public class CS2Interpreter {
 	}
 
 	static void method8216(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).method4098(Class158_Sub1.PLAYER_VAR_PROVIDER) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).isStarted(Class158_Sub1.PLAYER_VAR_PROVIDER) ? 1 : 0;
 	}
 
 	static final void method8218(CS2Executor executor) {
@@ -5941,7 +5942,7 @@ public class CS2Interpreter {
 
 	static final void method8220(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >>> 16];
 		IComponentDefinitions icomponentdefinitions_5 = Class96_Sub23.method14682(interface_4, icomponentdefinitions_3);
 		int[] ints_6 = executor.intStack;
@@ -5964,14 +5965,14 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub9.method14586(icomponentdefinitions_4, interface_5, executor);
+		method14586(icomponentdefinitions_4, interface_5, executor);
 	}
 
 	static final void method4838(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		WorldMapAreaDefs.method3738(icomponentdefinitions_3, interface_4, executor);
+		method3738(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method4839(CS2Executor executor) {
@@ -5992,7 +5993,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class283.method5009(icomponentdefinitions_4, interface_5, executor, -1781977981);
+		method5009(icomponentdefinitions_4, interface_5, executor, -1781977981);
 	}
 
 	static final void method6396(CS2Executor executor) {
@@ -6003,7 +6004,7 @@ public class CS2Interpreter {
 	static final void method6397(CS2Executor executor) {
 		int i_2 = Class393.preferences.aClass468_Sub27_8208.method12952((byte) 81);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, executor.intStack[--executor.intStackPtr] == 1 ? 0 : i_2, 2046929998);
-		Class405.method6823();
+		ClanVarDefinitions.method6823();
 	}
 
 	static final void method6399(CS2Executor executor) {
@@ -6018,7 +6019,7 @@ public class CS2Interpreter {
 		int i_4 = executor.intStack[executor.intStackPtr + 1];
 		String string_5 = (String) executor.stringStack[executor.stringStackPtr + 1];
 		Class96_Sub19.method14666(string_2, i_3 == 1, i_4, string_5);
-		executor.intStack[++executor.intStackPtr - 1] = Class415.anInt4985;
+		executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.anInt4985;
 	}
 
 	static final void method13044(CS2Executor executor) {
@@ -6060,7 +6061,7 @@ public class CS2Interpreter {
 
 	static final void method5765(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 200987173).wearPos2;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).wearPos2;
 	}
 
 	static final void method5766(CS2Executor executor) {
@@ -6076,7 +6077,7 @@ public class CS2Interpreter {
 	static final void method5769(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		if (Class475.supportsFullScreen) {
-			Class467[] arr_3 = Class405.method6825((byte) 57);
+			Class467[] arr_3 = ClanVarDefinitions.method6825((byte) 57);
 			executor.intStack[++executor.intStackPtr - 1] = arr_3[i_2].anInt5571;
 			executor.intStack[++executor.intStackPtr - 1] = arr_3[i_2].anInt5574;
 		} else {
@@ -6087,7 +6088,7 @@ public class CS2Interpreter {
 
 	static final void method6174(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteYaw;
 	}
 
@@ -6095,14 +6096,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class28.method774(icomponentdefinitions_3, interface_4, executor);
+		method774(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method11438(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class185.method3078(icomponentdefinitions_3, interface_4, executor, -1906837964);
+		method3078(icomponentdefinitions_3, interface_4, executor, -1906837964);
 	}
 
 	static final void method11439(CS2Executor executor) {
@@ -6141,7 +6142,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class242.method4160(icomponentdefinitions_3, interface_4, executor, (short) 14442);
+		method4160(icomponentdefinitions_3, interface_4, executor, (short) 14442);
 	}
 
 	static final void method4966(CS2Executor executor) {
@@ -6149,7 +6150,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		EnumDefinitions enumdefinitions_4 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_2);
-		executor.stringStack[++executor.stringStackPtr - 1] = enumdefinitions_4.getStringValue(i_3, 1017509768);
+		executor.stringStack[++executor.stringStackPtr - 1] = enumdefinitions_4.getStringValue(i_3);
 	}
 
 	static final void method4967(CS2Executor executor) {
@@ -6165,14 +6166,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		OutgoingLoginPacket.method6313(icomponentdefinitions_3, interface_4, executor, 172839480);
+		method6313(icomponentdefinitions_3, interface_4, executor, 172839480);
 	}
 
 	static final void method4971(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		IdentikitDefinition.method910(icomponentdefinitions_3, interface_4, executor, 2070102575);
+		method910(icomponentdefinitions_3, interface_4, executor, 2070102575);
 	}
 
 	static final void method5197(CS2Executor executor) {
@@ -6184,7 +6185,7 @@ public class CS2Interpreter {
 
 	static final void method5198(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1980153420).membersOnly ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).membersOnly ? 1 : 0;
 	}
 
 	static final void method5199(CS2Executor executor) {
@@ -6196,16 +6197,16 @@ public class CS2Interpreter {
 
 	static final void method563(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		RsByteBuffer.method13292(icomponentdefinitions_3, interface_4, executor);
+		method13292(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method564(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		NativeLibraryLoader.method4651(icomponentdefinitions_3, interface_4, executor, (byte) 59);
+		method4651(icomponentdefinitions_3, interface_4, executor, (byte) 59);
 	}
 
 	static final void method565(CS2Executor executor) {
@@ -6220,12 +6221,12 @@ public class CS2Interpreter {
 
 	static final void method6851(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class96_Sub10.method14605(icomponentdefinitions_3, executor, (byte) -34);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method14605(icomponentdefinitions_3, executor, (byte) -34);
 	}
 
 	static final void method1391(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class427.anInt5123 + Class291.anInt3472;
+		executor.intStack[++executor.intStackPtr - 1] = MapSpriteIndexLoader.anInt5123 + Class291.anInt3472;
 		executor.intStack[++executor.intStackPtr - 1] = Class475.anInt5624 + Class291.anInt3473;
 	}
 
@@ -6233,7 +6234,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class125.method2168(icomponentdefinitions_3, interface_4, executor, 539000010);
+		method2168(icomponentdefinitions_3, interface_4, executor, 539000010);
 	}
 
 	static final void method6272(CS2Executor executor) {
@@ -6256,9 +6257,9 @@ public class CS2Interpreter {
 
 	static final void method1624(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class17.method569(icomponentdefinitions_3, interface_4, executor, -575655435);
+		method569(icomponentdefinitions_3, interface_4, executor, -575655435);
 	}
 
 	static final void method1625(CS2Executor executor) {
@@ -6318,7 +6319,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class504.method8387(icomponentdefinitions_4, interface_5, executor, 2021162647);
+		method8387(icomponentdefinitions_4, interface_5, executor, 2021162647);
 	}
 
 	static final void method1802(CS2Executor executor) {
@@ -6334,7 +6335,7 @@ public class CS2Interpreter {
 	static final void method926(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = string_2 + Class290.method5120(i_3, true, -948271642);
+		executor.stringStack[++executor.stringStackPtr - 1] = string_2 + HitbarIndexLoader.method5120(i_3, true, -948271642);
 	}
 
 	static final void method927(CS2Executor executor) {
@@ -6369,9 +6370,9 @@ public class CS2Interpreter {
 
 	static final void method2595(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class380.method6453(icomponentdefinitions_3, interface_4, executor, -1649840188);
+		method6453(icomponentdefinitions_3, interface_4, executor, -1649840188);
 	}
 
 	static final void method6194(CS2Executor executor) {
@@ -6393,9 +6394,9 @@ public class CS2Interpreter {
 
 	static final void method2855(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Login.method5017(icomponentdefinitions_3, interface_4, executor);
+		method5017(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method2856(CS2Executor executor) {
@@ -6434,21 +6435,21 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -1207119465).anIntArray9747[i_3];
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2).messages[i_3];
 	}
 
 	static final void method283(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class359.method6244(icomponentdefinitions_3, interface_4, executor, 606535438);
+		method6244(icomponentdefinitions_3, interface_4, executor, 606535438);
 	}
 
 	static final void method284(CS2Executor executor) {
 		boolean bool_2 = executor.intStack[--executor.intStackPtr] == 1;
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8208, bool_2 ? 2 : 1, 681995550);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, bool_2 ? 2 : 1, -1225765043);
-		Class405.method6823();
+		ClanVarDefinitions.method6823();
 		Class190.savePreferences((byte) 111);
 		client.aBool7175 = false;
 	}
@@ -6463,9 +6464,9 @@ public class CS2Interpreter {
 
 	static final void method484(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class242.method4160(icomponentdefinitions_3, interface_4, executor, (short) 8078);
+		method4160(icomponentdefinitions_3, interface_4, executor, (short) 8078);
 	}
 
 	static final void method485(CS2Executor executor) {
@@ -6477,7 +6478,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class100.method1642(icomponentdefinitions_4, interface_5, executor, -107525091);
+		method1642(icomponentdefinitions_4, interface_5, executor, -107525091);
 	}
 
 	static final void method14606(CS2Executor executor) {
@@ -6485,21 +6486,21 @@ public class CS2Interpreter {
 	}
 
 	static final void method7322(CS2Executor executor) {
-		Class520.method11160(Class507.method8727(), executor);
+		method11160(Class507.method8727(), executor);
 	}
 
 	static final void method6762(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Connection.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 82);
+		method3338(icomponentdefinitions_3, interface_4, executor, (byte) 82);
 	}
 
 	static final void method8723(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Connection.method3338(icomponentdefinitions_3, interface_4, executor, (byte) 40);
+		method3338(icomponentdefinitions_3, interface_4, executor, (byte) 40);
 	}
 
 	static final void method8724(CS2Executor executor) {
@@ -6517,14 +6518,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class30.method797(icomponentdefinitions_3, interface_4, executor, 2104717291);
+		method797(icomponentdefinitions_3, interface_4, executor, 2104717291);
 	}
 
 	static final void method7270(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class13.method502(icomponentdefinitions_3, interface_4, executor, -787893593);
+		method502(icomponentdefinitions_3, interface_4, executor, -787893593);
 	}
 
 	static final void method7274(CS2Executor executor) {
@@ -6553,7 +6554,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		QuickchatDefinitions quickchatdefinitions_5 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -1670488027);
+		QuickchatMessageDefinitions quickchatdefinitions_5 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_2);
 		if (quickchatdefinitions_5.method14918(i_3, -1596809459).id != 0) {
 			throw new RuntimeException("");
 		} else {
@@ -6562,7 +6563,7 @@ public class CS2Interpreter {
 	}
 
 	static void method2092(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).anIntArrayArray2966[executor.intStack[executor.intStackPtr - 1]][0];
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).anIntArrayArray2966[executor.intStack[executor.intStackPtr - 1]][0];
 		--executor.intStackPtr;
 	}
 
@@ -6596,7 +6597,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class29.method786(icomponentdefinitions_4, interface_5, executor);
+		method786(icomponentdefinitions_4, interface_5, executor);
 	}
 
 	static final void method2639(CS2Executor executor) {
@@ -6610,9 +6611,9 @@ public class CS2Interpreter {
 
 	static final void animateComp(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class30.method797(icomponentdefinitions_3, interface_4, executor, 2057644852);
+		method797(icomponentdefinitions_3, interface_4, executor, 2057644852);
 	}
 
 	static final void method8742(CS2Executor executor) {
@@ -6656,7 +6657,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class290.method5121(icomponentdefinitions_4, interface_5, executor);
+		method5121(icomponentdefinitions_4, interface_5, executor);
 	}
 
 	static final void callCS2Script(CS2Executor executor) {
@@ -6724,7 +6725,7 @@ public class CS2Interpreter {
 					Class468_Sub6.method12658(1298761444);
 					Class260.aBool3220 = false;
 				} else if (i_2 == 0) {
-					Class226.method3805();
+					VarBitDefinitions.method3805();
 					Class260.aBool3220 = false;
 				} else {
 					Surface.method1491(i_2, (byte) -25);
@@ -6744,28 +6745,28 @@ public class CS2Interpreter {
 
 	static final void method14659(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1314;
 	}
 
 	static final void method14660(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class88.method1494(icomponentdefinitions_3, executor, (byte) -43);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method1494(icomponentdefinitions_3, executor, (byte) -43);
 	}
 
 	static final void setCompTransparency(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class306.method5453(icomponentdefinitions_3, interface_4, executor, 1925615787);
+		method5453(icomponentdefinitions_3, interface_4, executor, 1925615787);
 	}
 
 	static final void method1259(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class278_Sub1.method13450(icomponentdefinitions_3, interface_4, executor, -2236332);
+		method13450(icomponentdefinitions_3, interface_4, executor, -2236332);
 	}
 
 	static final void method3937(CS2Executor executor) {
@@ -6795,16 +6796,16 @@ public class CS2Interpreter {
 
 	static final void method3940(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class388.method6689(icomponentdefinitions_3, interface_4, executor, -1054634282);
+		method6689(icomponentdefinitions_3, interface_4, executor, -1054634282);
 	}
 
 	static final void method3941(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		WorldMapAreaDefs.method3738(icomponentdefinitions_3, interface_4, executor);
+		method3738(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3942(CS2Executor executor) {
@@ -6839,33 +6840,33 @@ public class CS2Interpreter {
 
 	static final void method2826(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub17.method12260(icomponentdefinitions_3, interface_4, executor, 456705608);
+		method12260(icomponentdefinitions_3, interface_4, executor, 456705608);
 	}
 
 	static final void method2728(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(2069262708)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 156724259).method7101(i_3, attributedefault_4.typeName, -1662195407);
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).method7101(i_3, attributedefault_4.typeName, -1662195407);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 221320768).method7099(i_3, attributedefault_4.defaultInt, -1410109564);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).method7099(i_3, attributedefault_4.defaultInt, -1410109564);
 		}
 	}
 
 	static final void method2729(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2, (short) 9738).maxSize;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_2, (short) 9738).maxSize;
 	}
 
 	static final void method3163(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		FontRenderer.method403(icomponentdefinitions_3, interface_4, executor, 1299404618);
+		method403(icomponentdefinitions_3, interface_4, executor, 1299404618);
 	}
 
 	static final void method3164(CS2Executor executor) {
@@ -6890,7 +6891,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub17.method12260(icomponentdefinitions_4, interface_5, executor, 603809090);
+		method12260(icomponentdefinitions_4, interface_5, executor, 603809090);
 	}
 
 	static final void method6117(CS2Executor executor) {
@@ -6907,7 +6908,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class52.method1083(icomponentdefinitions_3, interface_4, executor);
+		method1083(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6121(CS2Executor executor) {
@@ -6919,7 +6920,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class346.method6158(icomponentdefinitions_3, interface_4, executor, -1064421);
+		method6158(icomponentdefinitions_3, interface_4, executor, -1064421);
 	}
 
 	static final void method1085(CS2Executor executor) {
@@ -6950,7 +6951,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		NamedFileReference.method869(icomponentdefinitions_3, interface_4, executor, 1852179585);
+		method869(icomponentdefinitions_3, interface_4, executor, 1852179585);
 	}
 
 	static final void method2171(CS2Executor executor) {
@@ -6961,7 +6962,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		int i_4 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -1579462583).method14918(i_3, -1799645652).id;
+		int i_4 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_2).method14918(i_3, -1799645652).id;
 		executor.intStack[++executor.intStackPtr - 1] = i_4;
 	}
 
@@ -6985,7 +6986,7 @@ public class CS2Interpreter {
 
 	static final void method5045(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.parent;
 	}
 
@@ -7019,9 +7020,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method12881(CS2Executor executor) {
-		if (Class58.aClass61_528 != null) {
+		if (QuickchatFiller.aClass61_528 != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aClass61_7010 = Class58.aClass61_528;
+			executor.aClass61_7010 = QuickchatFiller.aClass61_528;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -7069,7 +7070,7 @@ public class CS2Interpreter {
 
 	static final void method6212(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1320;
 	}
 
@@ -7081,15 +7082,15 @@ public class CS2Interpreter {
 	}
 
 	static void method11592(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).aStringArray2975[executor.intStack[executor.intStackPtr - 1]];
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).aStringArray2975[executor.intStack[executor.intStackPtr - 1]];
 		executor.intStackPtr -= 2;
 	}
 
 	static final void method11593(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Engine.method4772(icomponentdefinitions_3, interface_4, executor, (byte) 88);
+		method4772(icomponentdefinitions_3, interface_4, executor, (byte) 88);
 	}
 
 	static final void method11594(CS2Executor executor) {
@@ -7109,7 +7110,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class496.method8310(icomponentdefinitions_3, interface_4, executor, (byte) -121);
+		method8310(icomponentdefinitions_3, interface_4, executor, (byte) -121);
 	}
 
 	static final void method5335(CS2Executor executor) {
@@ -7122,7 +7123,7 @@ public class CS2Interpreter {
 	}
 
 	static void method7083(CS2Executor executor) {
-		QuestDefinitions questdefinitions_2 = IndexLoaders.aClass242_4922.method4156(executor.intStack[--executor.intStackPtr]);
+		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
 		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArray2964 == null ? 0 : questdefinitions_2.anIntArray2964.length;
 	}
 
@@ -7146,7 +7147,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class17.method569(icomponentdefinitions_3, interface_4, executor, 2101137019);
+		method569(icomponentdefinitions_3, interface_4, executor, 2101137019);
 	}
 
 	static final void method1951(CS2Executor executor) {
@@ -7156,7 +7157,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4898(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
+		IComponentDefinitions icomponentdefinitions_2 = IComponentDefinitions.getDefs(executor.intStack[--executor.intStackPtr]);
 		if (icomponentdefinitions_2.aClass118Array1438 == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
@@ -7181,7 +7182,7 @@ public class CS2Interpreter {
 					Class468_Sub6.method12658(173344706);
 					Class260.aBool3220 = false;
 				} else if (i_2 == 0) {
-					Class226.method3805();
+					VarBitDefinitions.method3805();
 					Class260.aBool3220 = false;
 				} else {
 					Surface.method1491(i_2, (byte) -14);
@@ -7217,7 +7218,7 @@ public class CS2Interpreter {
 			} else {
 				Class448.aBool5422 = true;
 				TCPPacket tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4613, client.connectionContext.isaac, 1318116976);
-				tcpmessage_2.buffer.writeInt(Class418.WORLD_LIST_IDK);
+				tcpmessage_2.buffer.writeInt(MapSpriteDefinitions.WORLD_LIST_IDK);
 				client.connectionContext.queuePacket(tcpmessage_2);
 				executor.intStack[++executor.intStackPtr - 1] = 0;
 			}
@@ -7235,14 +7236,14 @@ public class CS2Interpreter {
 
 	static final void method3229(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1626966641).multiStackSize;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).multiStackSize;
 	}
 
 	static final void method3232(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub41_Sub1.method14700(icomponentdefinitions_3, interface_4, executor, -442383470);
+		method14700(icomponentdefinitions_3, interface_4, executor, -442383470);
 	}
 
 	static final void method3233(CS2Executor executor) {
@@ -7254,25 +7255,25 @@ public class CS2Interpreter {
 
 	static final void method11492(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		IsaacCipher.method7267(icomponentdefinitions_3, interface_4, executor, 1465963300);
+		method7267(icomponentdefinitions_3, interface_4, executor, 1465963300);
 	}
 
 	static final void method6304(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -2138128366).method14916(-235375245);
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_2).method14916(-235375245);
 	}
 
 	static final void method6305(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class475.method7927(icomponentdefinitions_3, executor, (byte) -27);
+		method7927(icomponentdefinitions_3, executor, (byte) -27);
 	}
 
 	static final void method11473(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1312;
 	}
 
@@ -7284,8 +7285,8 @@ public class CS2Interpreter {
 
 	static final void method3201(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class282_Sub20_Sub4.method15207(icomponentdefinitions_3, executor, 1765364986);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method15207(icomponentdefinitions_3, executor, 1765364986);
 	}
 
 	static final void method8147(CS2Executor executor) {
@@ -7303,7 +7304,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		SurfaceSkin.method2915(icomponentdefinitions_3, interface_4, executor);
+		method2915(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1498(CS2Executor executor) {
@@ -7334,7 +7335,7 @@ public class CS2Interpreter {
 
 	static final void method14602(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
 	}
 
@@ -7351,16 +7352,16 @@ public class CS2Interpreter {
 
 	static final void hookMouseHover(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Language.method8277(icomponentdefinitions_3, interface_4, executor, 1396779389);
+		method8277(icomponentdefinitions_3, interface_4, executor, 1396779389);
 	}
 
 	static final void method6738(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class278_Sub1.method13450(icomponentdefinitions_3, interface_4, executor, -51249694);
+		method13450(icomponentdefinitions_3, interface_4, executor, -51249694);
 	}
 
 	static final void method6741(CS2Executor executor) {
@@ -7372,7 +7373,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		HashTable.method7547(icomponentdefinitions_3, interface_4, executor, -996229805);
+		method7547(icomponentdefinitions_3, interface_4, executor, -996229805);
 	}
 
 	static final void method543(CS2Executor executor) {
@@ -7408,9 +7409,9 @@ public class CS2Interpreter {
 
 	static final void method8018(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		ItemDefinitions.method7142(icomponentdefinitions_3, interface_4, executor, -1447710686);
+		method7142(icomponentdefinitions_3, interface_4, executor, -1447710686);
 	}
 
 	static final void method8019(CS2Executor executor) {
@@ -7432,7 +7433,7 @@ public class CS2Interpreter {
 
 	static final void method8045(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		--i_4;
 		if (icomponentdefinitions_3.aStringArray1352 != null && i_4 < icomponentdefinitions_3.aStringArray1352.length && icomponentdefinitions_3.aStringArray1352[i_4] != null) {
@@ -7444,9 +7445,9 @@ public class CS2Interpreter {
 
 	static final void method1813(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		DefaultsFile.method11221(icomponentdefinitions_3, interface_4, executor);
+		method11221(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1814(CS2Executor executor) {
@@ -7481,7 +7482,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7332(CS2Executor executor) {
-		Class337.method6018((Class521_Sub1) executor.anInterface12_7013, executor, 1876481461);
+		method6018((Class521_Sub1) executor.anInterface12_7013, executor, 1876481461);
 	}
 
 	static final void method7334(CS2Executor executor) {
@@ -7492,7 +7493,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class389.method6697(icomponentdefinitions_3, interface_4, executor, 2102985161);
+		method6697(icomponentdefinitions_3, interface_4, executor, 2102985161);
 	}
 
 	static final void method7726(CS2Executor executor) {
@@ -7514,28 +7515,28 @@ public class CS2Interpreter {
 
 	static final void method1509(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class242.method4159(icomponentdefinitions_3, interface_4, executor, -710786215);
+		method4159(icomponentdefinitions_3, interface_4, executor, -710786215);
 	}
 
 	static final void method1510(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class287.method5066(icomponentdefinitions_3, interface_4, executor, 711806396);
+		method5066(icomponentdefinitions_3, interface_4, executor, 711806396);
 	}
 
 	static final void method1511(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class204.method3369(icomponentdefinitions_3, interface_4, executor);
+		method3369(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1512(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.anInt1330 : -1;
 	}
 
@@ -7552,9 +7553,9 @@ public class CS2Interpreter {
 
 	static final void method4904(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class204.method3365(icomponentdefinitions_3, interface_4, executor, -1548245230);
+		method3365(icomponentdefinitions_3, interface_4, executor, -1548245230);
 	}
 
 	static final void method4905(CS2Executor executor) {
@@ -7592,20 +7593,20 @@ public class CS2Interpreter {
 
 	static final void method2150(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		NamedFileReference.method869(icomponentdefinitions_3, interface_4, executor, -1209481120);
+		method869(icomponentdefinitions_3, interface_4, executor, -1209481120);
 	}
 
 	static final void getStructValue(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ParamDefinitions attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3);
+		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.method7319(1555061388)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.STRUCT_INDEX_LOADER.getStruct(i_2, -1979038944).method14751(i_3, attributedefault_4.typeName);
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.STRUCT_LOADER.getStruct(i_2, -1979038944).method14751(i_3, attributedefault_4.typeName);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.STRUCT_INDEX_LOADER.getStruct(i_2, 1053782715).method14750(i_3, attributedefault_4.defaultInt);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.STRUCT_LOADER.getStruct(i_2, 1053782715).method14750(i_3, attributedefault_4.defaultInt);
 		}
 	}
 
@@ -7619,7 +7620,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3986(CS2Executor executor) {
-		if (Class308.aShortArray3621 != null && Class283.anInt3384 < Class415.anInt4985) {
+		if (Class308.aShortArray3621 != null && Class283.anInt3384 < VarcDefinitions.anInt4985) {
 			executor.intStack[++executor.intStackPtr - 1] = Class308.aShortArray3621[++Class283.anInt3384 - 1] & 0xffff;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
@@ -7630,7 +7631,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub11.method12209(icomponentdefinitions_3, interface_4, executor);
+		method12209(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6733(CS2Executor executor) {
@@ -7722,7 +7723,7 @@ public class CS2Interpreter {
 
 	static final void method6232(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.hidden ? 1 : 0;
 	}
 
@@ -7787,9 +7788,9 @@ public class CS2Interpreter {
 
 	static final void hookMouseExit(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		DefaultsFile.method11223(icomponentdefinitions_3, interface_4, executor, 334837898);
+		method11223(icomponentdefinitions_3, interface_4, executor, 334837898);
 	}
 
 	static final void method3792(CS2Executor executor) {
@@ -7830,7 +7831,7 @@ public class CS2Interpreter {
 
 	static final void loadClanSettingVar(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Class537 class537_3 = IndexLoaders.aClass233_5822.method3933(i_2, 1715918723);
+		ClanVarSettingsDefinitions class537_3 = IndexLoaders.CLAN_VAR_SETTINGS_LOADER.method3933(i_2, 1715918723);
 		if (class537_3 == null) {
 			throw new RuntimeException();
 		} else {
@@ -7862,20 +7863,20 @@ public class CS2Interpreter {
 
 	static final void method7560(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		ClipMap.method6010(icomponentdefinitions_3, interface_4, executor, -298020679);
+		method6010(icomponentdefinitions_3, interface_4, executor, -298020679);
 	}
 
 	static final void method7561(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class236.method3983(icomponentdefinitions_3, interface_4, executor, -1010803403);
+		method3983(icomponentdefinitions_3, interface_4, executor, -1010803403);
 	}
 
 	static void method7434(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).anInt2960;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2960;
 	}
 
 	static final void method7444(CS2Executor executor) {
@@ -7885,7 +7886,7 @@ public class CS2Interpreter {
 
 	static final void method7445(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1828860210).wearPos;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).wearPos;
 	}
 
 	static final void method7448(CS2Executor executor) {
@@ -7894,14 +7895,14 @@ public class CS2Interpreter {
 
 	static final void method11246(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		QuestDefinitions.method4136(icomponentdefinitions_3, interface_4, executor, (byte) 78);
+		method4136(icomponentdefinitions_3, interface_4, executor, (byte) 78);
 	}
 
 	static final void method11247(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1453;
 	}
 
@@ -7951,7 +7952,7 @@ public class CS2Interpreter {
 	}
 
 	static void method356(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).anInt2958;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2958;
 	}
 
 	static final void method7218(CS2Executor executor) {
@@ -8036,16 +8037,16 @@ public class CS2Interpreter {
 
 	static final void method12492(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class463.method7729(icomponentdefinitions_3, interface_4, executor, 1544396395);
+		method7729(icomponentdefinitions_3, interface_4, executor, 1544396395);
 	}
 
 	static final void loadClanVar(CS2Executor executor) {
 		int param = executor.intOpValues[executor.instrPtr];
 		Integer integer_3 = (Integer) Class46.CLAN_VARS[param];
 		if (integer_3 == null) {
-			Class405 class405_4 = IndexLoaders.CLAN_VAR_LOADER.method6753(param, 908110130);
+			ClanVarDefinitions class405_4 = IndexLoaders.CLAN_VAR_LOADER.method6753(param, 908110130);
 			if (class405_4.aChar4832 != 105 && class405_4.aChar4832 != 49) {
 				executor.intStack[++executor.intStackPtr - 1] = -1;
 			} else {
@@ -8095,14 +8096,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		ChatLine.method1845(icomponentdefinitions_3, interface_4, executor, -1951994229);
+		method1845(icomponentdefinitions_3, interface_4, executor, -1951994229);
 	}
 
 	static final void method3042(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1029070809);
+		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		if (i_3 >= 1 && i_3 <= 5 && itemdefinitions_4.groundOptions[i_3 - 1] != null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = itemdefinitions_4.groundOptions[i_3 - 1];
 		} else {
@@ -8128,7 +8129,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15392(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = Class117.getInterfaceComponent(executor.intStack[--executor.intStackPtr]);
+		IComponentDefinitions icomponentdefinitions_2 = IComponentDefinitions.getDefs(executor.intStack[--executor.intStackPtr]);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_2.anInt1426;
 	}
 
@@ -8146,7 +8147,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class15.method542(icomponentdefinitions_3, interface_4, executor, -2005893492);
+		method542(icomponentdefinitions_3, interface_4, executor, -2005893492);
 	}
 
 	static final void method3966(CS2Executor executor) {
@@ -8159,9 +8160,9 @@ public class CS2Interpreter {
 
 	static final void method6372(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class15.method542(icomponentdefinitions_3, interface_4, executor, -1893429225);
+		method542(icomponentdefinitions_3, interface_4, executor, -1893429225);
 	}
 
 	static final void method6373(CS2Executor executor) {
@@ -8195,9 +8196,9 @@ public class CS2Interpreter {
 
 	static final void method6381(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 0, executor, (byte) -19);
+		method14664(icomponentdefinitions_3, interface_4, false, 0, executor, (byte) -19);
 	}
 
 	static final void method7915(CS2Executor executor) {
@@ -8214,7 +8215,7 @@ public class CS2Interpreter {
 
 	static final void method6781(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1029312854).wearPos3;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).wearPos3;
 	}
 
 	static final void method3017(CS2Executor executor) {
@@ -8223,9 +8224,9 @@ public class CS2Interpreter {
 
 	static final void method3020(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		MovementType.method4276(icomponentdefinitions_3, interface_4, executor, -724687188);
+		method4276(icomponentdefinitions_3, interface_4, executor, -724687188);
 	}
 
 	static final void method3021(CS2Executor executor) {
@@ -8271,7 +8272,7 @@ public class CS2Interpreter {
 	static final void mergeStrings(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
 		executor.stringStackPtr -= i_2;
-		String string_3 = Class377.method6398(executor.stringStack, executor.stringStackPtr, i_2);
+		String string_3 = VarDefinitionLoader.method6398(executor.stringStack, executor.stringStackPtr, i_2);
 		executor.stringStack[++executor.stringStackPtr - 1] = string_3;
 	}
 
@@ -8279,7 +8280,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class215.method3672(icomponentdefinitions_3, interface_4, executor, (short) 10267);
+		method3672(icomponentdefinitions_3, interface_4, executor, (short) 10267);
 	}
 
 	static final void method810(CS2Executor executor) {
@@ -8292,23 +8293,23 @@ public class CS2Interpreter {
 
 	static final void method814(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class282_Sub50_Sub14 class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, 1213236683);
-		if (class282_sub50_sub14_3.anIntArray9747 == null) {
+		QuickChatCategoryDefinitions class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2);
+		if (class282_sub50_sub14_3.messages == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub14_3.anIntArray9747.length;
+			executor.intStack[++executor.intStackPtr - 1] = class282_sub50_sub14_3.messages.length;
 		}
 	}
 
 	static final void method815(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class413.method6942(icomponentdefinitions_3, executor, 312854602);
+		method6942(icomponentdefinitions_3, executor, 312854602);
 	}
 
 	static final void method12689(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -2116649195).aString9744;
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2).name;
 	}
 
 	static final void method1452(CS2Executor executor) {
@@ -8356,14 +8357,14 @@ public class CS2Interpreter {
 
 	static final void loadVarpbit(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.method241(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.getVarBit(i_2);
 	}
 
 	static final void method5203(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class47_Sub1.method14482(icomponentdefinitions_3, interface_4, executor, -1228549407);
+		method14482(icomponentdefinitions_3, interface_4, executor, -1228549407);
 	}
 
 	static final void intLessOrEqual(CS2Executor executor) {
@@ -8398,9 +8399,9 @@ public class CS2Interpreter {
 
 	static final void method7208(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Shadow.method15511(icomponentdefinitions_3, interface_4, executor, (byte) 126);
+		method15511(icomponentdefinitions_3, interface_4, executor, (byte) 126);
 	}
 
 	static final void method7209(CS2Executor executor) {
@@ -8420,7 +8421,7 @@ public class CS2Interpreter {
 
 	static final void method3030(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 504897377);
+		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = itemdefinitions_3.hasTooltipColor ? 1 : 0;
 	}
 
@@ -8428,7 +8429,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class82.method1454(icomponentdefinitions_3, interface_4, executor, (byte) 111);
+		method1454(icomponentdefinitions_3, interface_4, executor, (byte) 111);
 	}
 
 	static final void method3033(CS2Executor executor) {
@@ -8447,16 +8448,16 @@ public class CS2Interpreter {
 
 	static final void method4629(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class306.method5455(icomponentdefinitions_3, interface_4, executor, 1919949252);
+		method5455(icomponentdefinitions_3, interface_4, executor, 1919949252);
 	}
 
 	static final void method4630(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1] - 1;
-		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1109098301);
+		ItemDefinitions itemdefinitions_4 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		if (i_3 == itemdefinitions_4.unknownInt22) {
 			executor.intStack[++executor.intStackPtr - 1] = itemdefinitions_4.unknownInt23;
 		} else if (i_3 == itemdefinitions_4.unknownInt27) {
@@ -8475,9 +8476,9 @@ public class CS2Interpreter {
 
 	static final void method4633(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class204.method3369(icomponentdefinitions_3, interface_4, executor);
+		method3369(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6938(CS2Executor executor) {
@@ -8485,8 +8486,8 @@ public class CS2Interpreter {
 		byte[] bytes_2 = new byte[] { (byte) executor.intStack[executor.intStackPtr] };
 		byte[] bytes_3 = new byte[] { (byte) executor.intStack[executor.intStackPtr + 1] };
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent(i_4);
-		Class107.method1838(icomponentdefinitions_5, bytes_2, bytes_3, executor);
+		IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs(i_4);
+		method1838(icomponentdefinitions_5, bytes_2, bytes_3, executor);
 	}
 
 	static final void method6940(CS2Executor executor) {
@@ -8499,8 +8500,8 @@ public class CS2Interpreter {
 
 	static final void method6941(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Node.method5001(icomponentdefinitions_3, executor, -11442386);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method5001(icomponentdefinitions_3, executor, -11442386);
 	}
 
 	static final void method451(CS2Executor executor) {
@@ -8526,7 +8527,7 @@ public class CS2Interpreter {
 
 	static final void method454(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.color;
 	}
 
@@ -8540,26 +8541,26 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class529.method11337(icomponentdefinitions_3, interface_4, executor, -2109817364);
+		method11337(icomponentdefinitions_3, interface_4, executor, -2109817364);
 	}
 
 	static final void loadVarp(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.anIntArray26[i_2];
+		executor.intStack[++executor.intStackPtr - 1] = Class158_Sub1.PLAYER_VAR_PROVIDER.vars[i_2];
 	}
 
 	static final void method6364(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		MovementType.method4276(icomponentdefinitions_3, interface_4, executor, 175430076);
+		method4276(icomponentdefinitions_3, interface_4, executor, 175430076);
 	}
 
 	static final void method3117(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class282_Sub25.method12401(icomponentdefinitions_3, interface_4, executor, 2018146774);
+		method12401(icomponentdefinitions_3, interface_4, executor, 2018146774);
 	}
 
 	static final void method3119(CS2Executor executor) {
@@ -8595,7 +8596,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub17_Sub4.method15409(icomponentdefinitions_3, interface_4, executor, -674550702);
+		method15409(icomponentdefinitions_3, interface_4, executor, -674550702);
 	}
 
 	static final void method1608(CS2Executor executor) {
@@ -8630,7 +8631,7 @@ public class CS2Interpreter {
 	static final void method12583(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class209.method3601(icomponentdefinitions_3, executor, -1856078763);
+		method3601(icomponentdefinitions_3, executor, -1856078763);
 	}
 
 	static final void method12584(CS2Executor executor) {
@@ -8671,27 +8672,27 @@ public class CS2Interpreter {
 
 	static final void method5024(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 2, executor, (byte) 56);
+		method14664(icomponentdefinitions_3, interface_4, false, 2, executor, (byte) 56);
 	}
 
 	static final void method5027(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		Class117.method1978(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], 255);
+		Huffman.method1978(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], 255);
 	}
 
 	static final void method5029(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class282_Sub20_Sub4.method15207(icomponentdefinitions_3, executor, -304097122);
+		method15207(icomponentdefinitions_3, executor, -304097122);
 	}
 
 	static final void method14746(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class151.method2593(icomponentdefinitions_3, interface_4, executor, -1669147013);
+		method2593(icomponentdefinitions_3, interface_4, executor, -1669147013);
 	}
 
 	static final void method8735(CS2Executor executor) {
@@ -8711,9 +8712,9 @@ public class CS2Interpreter {
 
 	static final void method3596(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class151.method2593(icomponentdefinitions_3, interface_4, executor, -1741314875);
+		method2593(icomponentdefinitions_3, interface_4, executor, -1741314875);
 	}
 
 	static final void method3597(CS2Executor executor) {
@@ -8733,8 +8734,8 @@ public class CS2Interpreter {
 
 	static final void method855(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
-		Class235.method3965(icomponentdefinitions_3, executor, -252931751);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
+		method3965(icomponentdefinitions_3, executor, -252931751);
 	}
 
 	static final void method856(CS2Executor executor) {
@@ -8749,12 +8750,12 @@ public class CS2Interpreter {
 
 	static final void method858(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1376;
 	}
 
 	static void method5290(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).method4099(Class158_Sub1.PLAYER_VAR_PROVIDER, 54222589) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).isComplete(Class158_Sub1.PLAYER_VAR_PROVIDER) ? 1 : 0;
 	}
 
 	static final void method5292(CS2Executor executor) {
@@ -8766,7 +8767,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		NativeLibraryLoader.method4651(icomponentdefinitions_3, interface_4, executor, (byte) 56);
+		method4651(icomponentdefinitions_3, interface_4, executor, (byte) 56);
 	}
 
 	static final void method12803(CS2Executor executor) {
@@ -8784,7 +8785,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class82.method1455(icomponentdefinitions_3, interface_4, executor);
+		method1455(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method2914(CS2Executor executor) {
@@ -8826,11 +8827,11 @@ public class CS2Interpreter {
 	}
 
 	static final void method15403(CS2Executor executor) {
-		ParamDefinitionsLoader.method7081((byte) -41);
+		ParamIndexLoader.method7081((byte) -41);
 	}
 
 	static final void method798(CS2Executor executor) {
-		Class337.method6018(executor.aClass521_Sub1_Sub2_Sub1_7014, executor, 1907071092);
+		method6018(executor.aClass521_Sub1_Sub2_Sub1_7014, executor, 1907071092);
 	}
 
 	static final void method7420(CS2Executor executor) {
@@ -8839,12 +8840,12 @@ public class CS2Interpreter {
 
 	static final void method7422(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1311;
 	}
 
 	static void method1799(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).anInt2963;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2963;
 	}
 
 	static final void pushString(CS2Executor executor) {
@@ -8852,14 +8853,14 @@ public class CS2Interpreter {
 	}
 
 	static final void method1801(CS2Executor executor) {
-		Class520.method11160(GraphicalRenderer.method8697(), executor);
+		method11160(GraphicalRenderer.method8697(), executor);
 	}
 
 	static final void method260(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Language.method8277(icomponentdefinitions_3, interface_4, executor, 1708366546);
+		method8277(icomponentdefinitions_3, interface_4, executor, 1708366546);
 	}
 
 	static final void method261(CS2Executor executor) {
@@ -8868,7 +8869,7 @@ public class CS2Interpreter {
 
 	static final void method11612(CS2Executor executor) {
 		executor.intStackPtr -= 3;
-		Class117.method1978(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2]);
+		Huffman.method1978(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2]);
 	}
 
 	static final void method11613(CS2Executor executor) {
@@ -8896,9 +8897,9 @@ public class CS2Interpreter {
 
 	static final void method4311(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class455.method7555(icomponentdefinitions_3, interface_4, executor, (byte) -54);
+		method7555(icomponentdefinitions_3, interface_4, executor, (byte) -54);
 	}
 
 	static final void method4312(CS2Executor executor) {
@@ -8910,7 +8911,7 @@ public class CS2Interpreter {
 	}
 
 	static void method4314(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).method4103(Class158_Sub1.PLAYER_VAR_PROVIDER, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).method4103(Class158_Sub1.PLAYER_VAR_PROVIDER, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
 		--executor.intStackPtr;
 	}
 
@@ -8933,7 +8934,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class388.method6689(icomponentdefinitions_3, interface_4, executor, -1325522232);
+		method6689(icomponentdefinitions_3, interface_4, executor, -1325522232);
 	}
 
 	static final void method5456(CS2Executor executor) {
@@ -8943,22 +8944,22 @@ public class CS2Interpreter {
 
 	static final void hookMouseEnter(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		TilestreamPacket.method6289(icomponentdefinitions_3, interface_4, executor, (byte) -46);
+		method6289(icomponentdefinitions_3, interface_4, executor, (byte) -46);
 	}
 
 	static final void method1492(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class28.method774(icomponentdefinitions_3, interface_4, executor);
+		method774(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method1967(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class96_Sub22.method14680(icomponentdefinitions_3, executor, -493402778);
+		method14680(icomponentdefinitions_3, executor, -493402778);
 	}
 
 	static final void method1968(CS2Executor executor) {
@@ -8993,30 +8994,30 @@ public class CS2Interpreter {
 		Class17.anInt148 = executor.intStack[executor.intStackPtr + 8];
 		Class388.anInt4722 = executor.intStack[executor.intStackPtr + 9];
 		Class99.anInt1005 = executor.intStack[executor.intStackPtr + 10];
-		Class242.anInt2982 = executor.intStack[executor.intStackPtr + 11];
+		QuestIndexLoader.anInt2982 = executor.intStack[executor.intStackPtr + 11];
 		IndexLoaders.SPRITES_INDEX.loadCutscene(ConnectionInfo.anInt5438);
 		IndexLoaders.SPRITES_INDEX.loadCutscene(Class373.anInt4350);
 		IndexLoaders.SPRITES_INDEX.loadCutscene(Class254.anInt3145);
 		IndexLoaders.SPRITES_INDEX.loadCutscene(Class446.anInt5396);
 		IndexLoaders.SPRITES_INDEX.loadCutscene(Class17.anInt148);
-		IndexLoaders.SPRITES_INDEX.loadCutscene(Class242.anInt2982);
-		IndexLoaders.FONT_METRICS_INDEX.loadCutscene(Class242.anInt2982);
+		IndexLoaders.SPRITES_INDEX.loadCutscene(QuestIndexLoader.anInt2982);
+		IndexLoaders.FONT_METRICS_INDEX.loadCutscene(QuestIndexLoader.anInt2982);
 		Class354.aClass160_4110 = null;
 		Class149_Sub2.aClass160_9315 = null;
 		Class125.aClass160_1571 = null;
 		Class60.aClass160_612 = null;
 		Class61.aClass160_647 = null;
 		Class467.aClass160_5576 = null;
-		Class290.aClass160_3452 = null;
+		HitbarIndexLoader.aClass160_3452 = null;
 		ParamDefinitions.aClass160_5339 = null;
 		Class20.aBool187 = true;
 	}
 
 	static final void method3250(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class13.method501(icomponentdefinitions_3, interface_4, executor, (byte) -2);
+		method501(icomponentdefinitions_3, interface_4, executor, (byte) -2);
 	}
 
 	static final void method8864(CS2Executor executor) {
@@ -9033,11 +9034,11 @@ public class CS2Interpreter {
 
 	static final void method8865(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		QuickchatDefinitions quickchatdefinitions_3 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -1707891446);
-		if (quickchatdefinitions_3.anIntArray9624 == null) {
+		QuickchatMessageDefinitions quickchatdefinitions_3 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_2);
+		if (quickchatdefinitions_3.responses == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = quickchatdefinitions_3.anIntArray9624.length;
+			executor.intStack[++executor.intStackPtr - 1] = quickchatdefinitions_3.responses.length;
 		}
 	}
 
@@ -9076,7 +9077,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, 1106724870).aCharArray9748[i_3];
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2).messageHotkeys[i_3];
 	}
 
 	static final void method12352(CS2Executor executor) {
@@ -9090,9 +9091,9 @@ public class CS2Interpreter {
 
 	static final void method5000(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class283.method5009(icomponentdefinitions_3, interface_4, executor, -1863768075);
+		method5009(icomponentdefinitions_3, interface_4, executor, -1863768075);
 	}
 
 	static final void method5002(CS2Executor executor) {
@@ -9108,7 +9109,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class388.method6690(icomponentdefinitions_3, interface_4, executor, (byte) 92);
+		method6690(icomponentdefinitions_3, interface_4, executor, (byte) 92);
 	}
 
 	static final void method15075(CS2Executor executor) {
@@ -9119,7 +9120,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Engine.method4772(icomponentdefinitions_3, interface_4, executor, (byte) 12);
+		method4772(icomponentdefinitions_3, interface_4, executor, (byte) 12);
 	}
 
 	static final void method14434(CS2Executor executor) {
@@ -9129,9 +9130,9 @@ public class CS2Interpreter {
 
 	static final void setCompText(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class158.method2732(icomponentdefinitions_3, interface_4, executor, 2144367938);
+		method2732(icomponentdefinitions_3, interface_4, executor, 2144367938);
 	}
 
 	static final void method6226(CS2Executor executor) {
@@ -9147,9 +9148,9 @@ public class CS2Interpreter {
 
 	static final void method7961(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class204.method3366(icomponentdefinitions_3, interface_4, executor, (byte) -87);
+		method3366(icomponentdefinitions_3, interface_4, executor, (byte) -87);
 	}
 
 	static final void method7962(CS2Executor executor) {
@@ -9274,7 +9275,7 @@ public class CS2Interpreter {
 
 	static final void method16089(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		ItemContainerDefinitions inventorydef_2 = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(executor.intStack[executor.intStackPtr], (short) 24055);
+		ItemContainerDefinitions inventorydef_2 = IndexLoaders.INVENTORY_LOADER.getInventoryDef(executor.intStack[executor.intStackPtr], (short) 24055);
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = -1;
 		for (int i_5 = 0; i_5 < inventorydef_2.contentSize; i_5++) {
@@ -9288,14 +9289,14 @@ public class CS2Interpreter {
 
 	static final void method6040(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class468_Sub2.method12630(icomponentdefinitions_3, interface_4, executor);
+		method12630(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6041(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = client.method11633(icomponentdefinitions_3).getUseOptionFlags();
 	}
 
@@ -9307,7 +9308,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class380.method6453(icomponentdefinitions_3, interface_4, executor, -258126680);
+		method6453(icomponentdefinitions_3, interface_4, executor, -258126680);
 	}
 
 	static final void method6044(CS2Executor executor) {
@@ -9333,21 +9334,21 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub18.method14664(icomponentdefinitions_4, interface_5, false, 0, executor, (byte) -113);
+		method14664(icomponentdefinitions_4, interface_5, false, 0, executor, (byte) -113);
 	}
 
 	static final void method8285(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		TilestreamPacket.method6289(icomponentdefinitions_3, interface_4, executor, (byte) 30);
+		method6289(icomponentdefinitions_3, interface_4, executor, (byte) 30);
 	}
 
 	static final void method8295(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 0, executor, (byte) -3);
+		method14664(icomponentdefinitions_3, interface_4, true, 0, executor, (byte) -3);
 	}
 
 	static final void method8296(CS2Executor executor) {
@@ -9380,11 +9381,11 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub21_Sub1.method15474(icomponentdefinitions_4, interface_5, executor, (byte) 66);
+		method15474(icomponentdefinitions_4, interface_5, executor, (byte) 66);
 	}
 
 	static void method868(CS2Executor executor) {
-		QuestDefinitions questdefinitions_2 = IndexLoaders.aClass242_4922.method4156(executor.intStack[--executor.intStackPtr]);
+		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
 		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArray2961 == null ? 0 : questdefinitions_2.anIntArray2961.length;
 	}
 
@@ -9393,7 +9394,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent(i_4);
+		IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs(i_4);
 		Class282_Sub14.method12221(icomponentdefinitions_5, i_2, i_3, 1698123949);
 	}
 
@@ -9417,7 +9418,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub25.method12401(icomponentdefinitions_4, interface_5, executor, 1213503004);
+		method12401(icomponentdefinitions_4, interface_5, executor, 1213503004);
 	}
 
 	static final void method14818(CS2Executor executor) {
@@ -9460,7 +9461,7 @@ public class CS2Interpreter {
 	}
 
 	static void method14841(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).method4111(client.anIntArray7337, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).method4111(client.anIntArray7337, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
 		--executor.intStackPtr;
 	}
 
@@ -9487,16 +9488,16 @@ public class CS2Interpreter {
 
 	static final void method6685(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class13.method502(icomponentdefinitions_3, interface_4, executor, 577432492);
+		method502(icomponentdefinitions_3, interface_4, executor, 577432492);
 	}
 
 	static final void method12839(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class13.method505(icomponentdefinitions_3, interface_4, executor);
+		method505(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method12841(CS2Executor executor) {
@@ -9521,28 +9522,28 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class109.method1852(icomponentdefinitions_3, interface_4, executor);
+		method1852(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method460(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class496.method8310(icomponentdefinitions_3, interface_4, executor, (byte) -108);
+		method8310(icomponentdefinitions_3, interface_4, executor, (byte) -108);
 	}
 
 	static final void method5774(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class13.method501(icomponentdefinitions_3, interface_4, executor, (byte) 22);
+		method501(icomponentdefinitions_3, interface_4, executor, (byte) 22);
 	}
 
 	static final void method5775(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class363.method6288(icomponentdefinitions_3, interface_4, executor, (short) 27570);
+		method6288(icomponentdefinitions_3, interface_4, executor, (short) 27570);
 	}
 
 	static final void method5776(CS2Executor executor) {
@@ -9581,7 +9582,7 @@ public class CS2Interpreter {
 			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_2);
-			Class427.method7189(tcpmessage_5.buffer, string_3, -1045149130);
+			MapSpriteIndexLoader.method7189(tcpmessage_5.buffer, string_3, -1045149130);
 			tcpmessage_5.buffer.method13281(tcpmessage_5.buffer.index - i_6);
 			class184_4.queuePacket(tcpmessage_5);
 		}
@@ -9624,7 +9625,7 @@ public class CS2Interpreter {
 
 	static final void method911(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1594974983);
+		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		int i_4;
 		if (itemdefinitions_3.hasTooltipColor) {
 			i_4 = itemdefinitions_3.tooltipColor;
@@ -9668,9 +9669,9 @@ public class CS2Interpreter {
 
 	static final void method1167(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		FontRenderer.method403(icomponentdefinitions_3, interface_4, executor, 2136495218);
+		method403(icomponentdefinitions_3, interface_4, executor, 2136495218);
 	}
 
 	static final void method1171(CS2Executor executor) {
@@ -9684,7 +9685,7 @@ public class CS2Interpreter {
 	static final void method401(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class199.method3251(icomponentdefinitions_3, executor, 1310130121);
+		method3251(icomponentdefinitions_3, executor, 1310130121);
 	}
 
 	static final void method12210(CS2Executor executor) {
@@ -9721,9 +9722,9 @@ public class CS2Interpreter {
 
 	static final void method3949(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class389.method6697(icomponentdefinitions_3, interface_4, executor, 1042468011);
+		method6697(icomponentdefinitions_3, interface_4, executor, 1042468011);
 	}
 
 	static final void method3950(CS2Executor executor) {
@@ -9737,55 +9738,55 @@ public class CS2Interpreter {
 
 	static final void method5511(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		TextureDetails.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 3);
+		method2874(icomponentdefinitions_3, interface_4, executor, (byte) 3);
 	}
 
 	static final void method5512(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
-		Class96_Sub10.method14605(icomponentdefinitions_3, executor, (byte) -77);
+		method14605(icomponentdefinitions_3, executor, (byte) -77);
 	}
 
 	static final void method4960(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		SurfaceSkin.method2915(icomponentdefinitions_3, interface_4, executor);
+		method2915(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method4961(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 2, executor, (byte) 71);
+		method14664(icomponentdefinitions_3, interface_4, true, 2, executor, (byte) 71);
 	}
 
 	static final void method4962(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 1, executor, (byte) 28);
+		method14664(icomponentdefinitions_3, interface_4, false, 1, executor, (byte) 28);
 	}
 
 	static final void method1569(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		MovementType.method4280(icomponentdefinitions_3, interface_4, executor, (byte) 60);
+		method4280(icomponentdefinitions_3, interface_4, executor, (byte) 60);
 	}
 
 	static final void method1570(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 1, executor, (byte) -4);
+		method14664(icomponentdefinitions_3, interface_4, true, 1, executor, (byte) -4);
 	}
 
 	static final void method1571(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteRoll;
 	}
 
@@ -9818,7 +9819,7 @@ public class CS2Interpreter {
 
 	static final void method12724(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 527591750);
+		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
 		if (itemdefinitions_3.certTemplateId >= 0 && itemdefinitions_3.certId >= 0) {
 			executor.intStack[++executor.intStackPtr - 1] = itemdefinitions_3.certId;
 		} else {
@@ -9839,7 +9840,7 @@ public class CS2Interpreter {
 	static final void method11154(CS2Executor executor) {
 		executor.aClass346_7009 = new Class346();
 		executor.aClass346_7009.anInt4048 = executor.intStack[--executor.intStackPtr];
-		executor.aClass346_7009.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(executor.aClass346_7009.anInt4048, -1711115203);
+		executor.aClass346_7009.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(executor.aClass346_7009.anInt4048);
 		executor.aClass346_7009.anIntArray4046 = new int[executor.aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
 	}
 
@@ -9857,7 +9858,7 @@ public class CS2Interpreter {
 		int i_3 = Engine.anInt3249;
 		int i_4 = -1;
 		if (Class475.supportsFullScreen) {
-			Class467[] arr_5 = Class405.method6825((byte) 55);
+			Class467[] arr_5 = ClanVarDefinitions.method6825((byte) 55);
 			for (int i_6 = 0; i_6 < arr_5.length; i_6++) {
 				Class467 class467_7 = arr_5[i_6];
 				if (i_2 == class467_7.anInt5571 && i_3 == class467_7.anInt5574) {
@@ -9873,7 +9874,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		EntityList.method7667(icomponentdefinitions_3, interface_4, executor, 1560441308);
+		method7667(icomponentdefinitions_3, interface_4, executor, 1560441308);
 	}
 
 	static final void method4825(CS2Executor executor) {
@@ -9903,7 +9904,7 @@ public class CS2Interpreter {
 	}
 
 	static void method7461(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 1]).aBool2962 ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).aBool2962 ? 1 : 0;
 	}
 
 	static final void method7462(CS2Executor executor) {
@@ -10048,7 +10049,7 @@ public class CS2Interpreter {
 			int i_8 = tcpmessage_7.buffer.index;
 			tcpmessage_7.buffer.writeByte(b_4);
 			tcpmessage_7.buffer.writeByte(b_5);
-			Class427.method7189(tcpmessage_7.buffer, string_2, 151728977);
+			MapSpriteIndexLoader.method7189(tcpmessage_7.buffer, string_2, 151728977);
 			tcpmessage_7.buffer.method13061(tcpmessage_7.buffer.index - i_8, -918882679);
 			class184_6.queuePacket(tcpmessage_7);
 		}
@@ -10057,8 +10058,8 @@ public class CS2Interpreter {
 	static final void method1861(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		Class455.aShortArray5452[executor.intStack[executor.intStackPtr]] = (short) Class5.method294(executor.intStack[executor.intStackPtr + 1], (byte) -4);
-		IndexLoaders.ITEM_INDEX_LOADER.method7152();
-		IndexLoaders.ITEM_INDEX_LOADER.method7151((byte) -24);
+		IndexLoaders.ITEM_LOADER.method7152();
+		IndexLoaders.ITEM_LOADER.method7151((byte) -24);
 		IndexLoaders.NPC_INDEX_LOADER.method6831();
 		IncomingPacket.method6378();
 	}
@@ -10105,7 +10106,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class125.method2170(icomponentdefinitions_3, interface_4, executor);
+		method2170(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method3562(CS2Executor executor) {
@@ -10138,7 +10139,7 @@ public class CS2Interpreter {
 
 	static final void method15408(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		RenderAnimDefs renderanimdefs_3 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_2, (byte) 12);
+		RenderAnimDefs renderanimdefs_3 = IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(i_2, (byte) 12);
 		if (renderanimdefs_3.anIntArray2814 != null && renderanimdefs_3.anIntArray2814.length > 0) {
 			int i_4 = 0;
 			int i_5 = renderanimdefs_3.standAnimations[0];
@@ -10162,14 +10163,14 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Shadow.method15511(icomponentdefinitions_3, interface_4, executor, (byte) 63);
+		method15511(icomponentdefinitions_3, interface_4, executor, (byte) 63);
 	}
 
 	static final void method12118(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class241.method4149(icomponentdefinitions_3, interface_4, executor, -799762783);
+		method4149(icomponentdefinitions_3, interface_4, executor, -799762783);
 	}
 
 	static final void method296(CS2Executor executor) {
@@ -10194,12 +10195,12 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
 		Interface interface_5 = underlaydefinition_2.aClass98_5885;
-		Class339.method6045(icomponentdefinitions_4, interface_5, executor, (byte) -37);
+		method6045(icomponentdefinitions_4, interface_5, executor, (byte) -37);
 	}
 
 	static final void method6151(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1428;
 	}
 
@@ -10246,7 +10247,7 @@ public class CS2Interpreter {
 	static final void method7043(CS2Executor executor) {
 		Class282_Sub50_Sub6 class282_sub50_sub6_2 = Class125.method2173(1468656099);
 		if (class282_sub50_sub6_2 != null) {
-			boolean bool_3 = class282_sub50_sub6_2.method14775(Class291.anInt3472 + Class427.anInt5123, Class291.anInt3473 + Class475.anInt5624, CS2Runner.anIntArray5900, -1687346032);
+			boolean bool_3 = class282_sub50_sub6_2.method14775(Class291.anInt3472 + MapSpriteIndexLoader.anInt5123, Class291.anInt3473 + Class475.anInt5624, CS2Runner.anIntArray5900, -1687346032);
 			if (bool_3) {
 				executor.intStack[++executor.intStackPtr - 1] = CS2Runner.anIntArray5900[1];
 				executor.intStack[++executor.intStackPtr - 1] = CS2Runner.anIntArray5900[2];
@@ -10264,7 +10265,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		TextureDetails.method2874(icomponentdefinitions_3, interface_4, executor, (byte) 11);
+		method2874(icomponentdefinitions_3, interface_4, executor, (byte) 11);
 	}
 
 	static final void method4798(CS2Executor executor) {
@@ -10275,7 +10276,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class282_Sub20_Sub9.method15256(icomponentdefinitions_3, interface_4, executor, -158517117);
+		method15256(icomponentdefinitions_3, interface_4, executor, -158517117);
 	}
 
 	static final void method4802(CS2Executor executor) {
@@ -10286,9 +10287,9 @@ public class CS2Interpreter {
 
 	static final void method11338(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class346.method6158(icomponentdefinitions_3, interface_4, executor, -1706086119);
+		method6158(icomponentdefinitions_3, interface_4, executor, -1706086119);
 	}
 
 	static final void method11339(CS2Executor executor) {
@@ -10335,16 +10336,16 @@ public class CS2Interpreter {
 
 	static final void method11372(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		LinkedNodeList.method7889(icomponentdefinitions_3, interface_4, executor);
+		method7889(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method11373(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class339.method6045(icomponentdefinitions_3, interface_4, executor, (byte) -2);
+		method6045(icomponentdefinitions_3, interface_4, executor, (byte) -2);
 	}
 
 	static final void method4565(CS2Executor executor) {
@@ -10381,9 +10382,9 @@ public class CS2Interpreter {
 
 	static final void method2071(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class52.method1083(icomponentdefinitions_3, interface_4, executor);
+		method1083(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method2072(CS2Executor executor) {
@@ -10400,7 +10401,7 @@ public class CS2Interpreter {
 
 	static final void method2945(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spritePitch;
 	}
 
@@ -10437,9 +10438,9 @@ public class CS2Interpreter {
 
 	static final void method8152(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class47_Sub1.method14482(icomponentdefinitions_3, interface_4, executor, -544899981);
+		method14482(icomponentdefinitions_3, interface_4, executor, -544899981);
 	}
 
 	static final void method8153(CS2Executor executor) {
@@ -10459,9 +10460,9 @@ public class CS2Interpreter {
 
 	static final void method8694(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class388.method6690(icomponentdefinitions_3, interface_4, executor, (byte) 95);
+		method6690(icomponentdefinitions_3, interface_4, executor, (byte) 95);
 	}
 
 	static final void method8698(CS2Executor executor) {
@@ -10511,18 +10512,18 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		QuestDefinitions.method4136(icomponentdefinitions_3, interface_4, executor, (byte) 55);
+		method4136(icomponentdefinitions_3, interface_4, executor, (byte) 55);
 	}
 
 	static final void method4146(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1299;
 	}
 
 	static final void getCompHeight(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1429;
 	}
 
@@ -10533,15 +10534,15 @@ public class CS2Interpreter {
 		if (i_3 == -1) {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, 230168792).method15211((char) i_3);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.QUICK_CHAT_CATEGORY_LOADER.getChat(i_2).method15211((char) i_3);
 		}
 	}
 
 	static final void method5595(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		ChatLine.method1845(icomponentdefinitions_3, interface_4, executor, -1020802647);
+		method1845(icomponentdefinitions_3, interface_4, executor, -1020802647);
 	}
 
 	static final void intNotEqual(CS2Executor executor) {
@@ -10558,7 +10559,7 @@ public class CS2Interpreter {
 	}
 
 	static void method2841(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(executor.intStack[executor.intStackPtr - 2]).anIntArrayArray2966[executor.intStack[executor.intStackPtr - 1]][1];
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).anIntArrayArray2966[executor.intStack[executor.intStackPtr - 1]][1];
 		--executor.intStackPtr;
 	}
 
@@ -10568,16 +10569,16 @@ public class CS2Interpreter {
 
 	static final void method14640(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class215.method3672(icomponentdefinitions_3, interface_4, executor, (short) 9324);
+		method3672(icomponentdefinitions_3, interface_4, executor, (short) 9324);
 	}
 
 	static final void method15552(CS2Executor executor) {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		Interface interface_4 = underlaydefinition_2.aClass98_5885;
-		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, false, 1, executor, (byte) 24);
+		method14664(icomponentdefinitions_3, interface_4, false, 1, executor, (byte) 24);
 	}
 
 	static final void method15555(CS2Executor executor) {
@@ -10594,9 +10595,9 @@ public class CS2Interpreter {
 
 	static final void method8208(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
-		Class504.method8387(icomponentdefinitions_3, interface_4, executor, 1918613827);
+		method8387(icomponentdefinitions_3, interface_4, executor, 1918613827);
 	}
 
 	static final void method7668(CS2Executor executor) {
@@ -10605,7 +10606,7 @@ public class CS2Interpreter {
 
 	static final void method6696(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_2);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1334;
 	}
 
@@ -10624,7 +10625,7 @@ public class CS2Interpreter {
 		InterfaceWithDefs underlaydefinition_2 = executor.aBool7022 ? executor.aClass513_6994 : executor.aClass513_7007;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		int i_4 = executor.intStack[--executor.intStackPtr];
-		ParamDefinitions attributedefault_5 = IndexLoaders.ITEM_DEFAULTS.method7069(i_4);
+		ParamDefinitions attributedefault_5 = IndexLoaders.PARAM_LOADER.getParam(i_4);
 		if (attributedefault_5.method7319(1933175608)) {
 			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.method1998(i_4, attributedefault_5.typeName);
 		} else {
@@ -10636,4 +10637,1265 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aByte628;
 	}
 
+	/**
+	 * START MULTI PARAMETER UTILITY METHODS
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+	static final void method15511(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 56);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class106.method1818(icomponentdefinitions_0.idHash, 438520847);
+		}
+	}
+
+	static final void method14680(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
+		if (icomponentdefinitions_0.anInt1329 != 6) {
+			throw new RuntimeException("");
+		} else {
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			if (icomponentdefinitions_0.aClass417_1308 == null) {
+				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, true);
+			}
+			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(-610795534);
+			if (i_4 >= 0 && i_4 < npcdefinitions_5.modelIds.length) {
+				icomponentdefinitions_0.aClass417_1308.anIntArray4992[i_4] = i_3;
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) -65);
+			} else {
+				throw new RuntimeException("" + i_4);
+			}
+		}
+	}
+
+	static final void method6018(Class521_Sub1 class521_sub1_0, CS2Executor cs2executor_1, int i_2) {
+		boolean bool_3 = false;
+		int i_4 = 0;
+		int i_5 = 0;
+		int i_6 = 0;
+		int i_7 = 0;
+		if (class521_sub1_0.aClass275_Sub5Array7965 != null) {
+			for (int i_8 = 0; i_8 < class521_sub1_0.aClass275_Sub5Array7965.length; i_8++) {
+				Class275_Sub5 class275_sub5_9 = class521_sub1_0.aClass275_Sub5Array7965[i_8];
+				if (class275_sub5_9.aBool7849) {
+					int i_10;
+					int i_11;
+					if (class275_sub5_9.anInt7850 < class275_sub5_9.anInt7847) {
+						i_10 = class275_sub5_9.anInt7850 - class275_sub5_9.anInt7851;
+						i_11 = class275_sub5_9.anInt7851 + class275_sub5_9.anInt7847;
+					} else {
+						i_10 = class275_sub5_9.anInt7847 - class275_sub5_9.anInt7851;
+						i_11 = class275_sub5_9.anInt7850 + class275_sub5_9.anInt7851;
+					}
+					int i_12;
+					int i_13;
+					if (class275_sub5_9.anInt7846 < class275_sub5_9.anInt7848) {
+						i_12 = class275_sub5_9.anInt7846 - class275_sub5_9.anInt7851;
+						i_13 = class275_sub5_9.anInt7851 + class275_sub5_9.anInt7848;
+					} else {
+						i_12 = class275_sub5_9.anInt7848 - class275_sub5_9.anInt7851;
+						i_13 = class275_sub5_9.anInt7846 + class275_sub5_9.anInt7851;
+					}
+					if (!bool_3 || i_10 < i_4) {
+						i_4 = i_10;
+					}
+					if (!bool_3 || i_12 < i_5) {
+						i_5 = i_12;
+					}
+					if (!bool_3 || i_11 > i_6) {
+						i_6 = i_11;
+					}
+					if (!bool_3 || i_13 > i_7) {
+						i_7 = i_13;
+					}
+					bool_3 = true;
+				}
+			}
+		}
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = bool_3 ? 1 : 0;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_4;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_5;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_6;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_7;
+	}
+
+	static final void method4883(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, CS2Executor cs2executor_3) {
+		if (icomponentdefinitions_0.anIntArray1267 == null) {
+			if (i_2 <= 0) {
+				return;
+			}
+			icomponentdefinitions_0.aByteArrayArray1366 = new byte[11][];
+			icomponentdefinitions_0.aByteArrayArray1367 = new byte[11][];
+			icomponentdefinitions_0.anIntArray1395 = new int[11];
+			icomponentdefinitions_0.anIntArray1267 = new int[11];
+		}
+		icomponentdefinitions_0.anIntArray1267[i_1] = i_2;
+		if (i_2 > 0) {
+			icomponentdefinitions_0.aBool1424 = true;
+		} else {
+			icomponentdefinitions_0.aBool1424 = false;
+			for (int i_5 = 0; i_5 < icomponentdefinitions_0.aByteArrayArray1366.length; i_5++) {
+				if (icomponentdefinitions_0.aByteArrayArray1366[i_5] != null || icomponentdefinitions_0.anIntArray1267[i_5] > 0) {
+					icomponentdefinitions_0.aBool1424 = true;
+					break;
+				}
+			}
+		}
+	}
+
+	static final void method15207(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
+		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
+			throw new RuntimeException("");
+		} else {
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			if (icomponentdefinitions_0.aClass417_1308 == null) {
+				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
+			}
+			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(976304204);
+			if (npcdefinitions_5.aShortArray4892 != null && i_4 >= 0 && i_4 < npcdefinitions_5.aShortArray4892.length) {
+				icomponentdefinitions_0.aClass417_1308.aShortArray4990[i_4] = (short) i_3;
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) 49);
+			} else {
+				throw new RuntimeException("");
+			}
+		}
+	}
+
+	static final void method1852(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		cs2executor_2.intStackPtr -= 2;
+		icomponentdefinitions_0.anInt1311 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		if (icomponentdefinitions_0.anInt1311 > icomponentdefinitions_0.anInt1376 - icomponentdefinitions_0.anInt1301) {
+			icomponentdefinitions_0.anInt1311 = icomponentdefinitions_0.anInt1376 - icomponentdefinitions_0.anInt1301;
+		}
+		if (icomponentdefinitions_0.anInt1311 < 0) {
+			icomponentdefinitions_0.anInt1311 = 0;
+		}
+		icomponentdefinitions_0.anInt1312 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		if (icomponentdefinitions_0.anInt1312 > icomponentdefinitions_0.anInt1314 - icomponentdefinitions_0.anInt1429) {
+			icomponentdefinitions_0.anInt1312 = icomponentdefinitions_0.anInt1314 - icomponentdefinitions_0.anInt1429;
+		}
+		if (icomponentdefinitions_0.anInt1312 < 0) {
+			icomponentdefinitions_0.anInt1312 = 0;
+		}
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 19);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class468_Sub12.method12709(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method6289(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, -14681089) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1390 = method6193(string_4, cs2executor_2, 289210792);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method7927(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, byte b_2) {
+		cs2executor_1.intStackPtr -= 2;
+		int i_3 = cs2executor_1.intStack[cs2executor_1.intStackPtr] - 1;
+		int i_4 = cs2executor_1.intStack[cs2executor_1.intStackPtr + 1];
+		if (i_3 >= 0 && i_3 <= 9) {
+			method4883(icomponentdefinitions_0, i_3, i_4, cs2executor_1);
+		} else {
+			throw new RuntimeException();
+		}
+	}
+
+	static final void method3078(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 198501911) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1389 = method6193(string_4, cs2executor_2, 81409636);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method3672(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, short s_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 394644224) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1412 = method6193(string_4, cs2executor_2, 1237376111);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method6453(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		int[] ints_5 = method14642(string_4, cs2executor_2, 1022957959);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1342 = method6193(string_4, cs2executor_2, 720778855);
+		icomponentdefinitions_0.anIntArray1398 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method7889(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1390174253) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1346 = method6193(string_4, cs2executor_2, 1483918243);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method774(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.aBool1351 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 44);
+	}
+
+	static final void method13292(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		cs2executor_2.intStackPtr -= 2;
+		icomponentdefinitions_0.anInt1441 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1263 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -27);
+	}
+
+	static final void method2874(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 69608151) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1319 = method6193(string_4, cs2executor_2, 1275110471);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method7267(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aBool1344 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 89);
+	}
+
+	static final void method5009(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1962956605) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1413 = method6193(string_4, cs2executor_2, 1097556379);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method7142(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aBool1420 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 53);
+	}
+
+	static final void method6288(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, short s_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		int[] ints_5 = method14642(string_4, cs2executor_2, -37726580);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1405 = method6193(string_4, cs2executor_2, 1676741238);
+		icomponentdefinitions_0.anIntArray1406 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method2915(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.anInt1324 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 15);
+	}
+
+	static final void method8754(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.aBool1316 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 19);
+	}
+
+	static final void method5121(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.color = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 103);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class282_Sub14.method12223(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method6689(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		int[] ints_5 = method14642(string_4, cs2executor_2, 1724948075);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1397 = method6193(string_4, cs2executor_2, 116060778);
+		icomponentdefinitions_0.anIntArray1401 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method6690(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 41262162) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1361 = method6193(string_4, cs2executor_2, -295691698);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method4159(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 4;
+		icomponentdefinitions_0.anInt1340 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1350 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.anInt1281 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		icomponentdefinitions_0.anInt1354 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -26);
+	}
+
+	static final void method4160(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, short s_3) {
+		icomponentdefinitions_0.anInt1323 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -6);
+	}
+
+	static final int[] method14642(String string_0, CS2Executor cs2executor_1, int i_2) {
+		int[] ints_3 = null;
+		if (string_0.length() > 0 && string_0.charAt(string_0.length() - 1) == 89) {
+			int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+			if (i_4 > 0) {
+				for (ints_3 = new int[i_4]; i_4-- > 0; ints_3[i_4] = cs2executor_1.intStack[--cs2executor_1.intStackPtr]) {
+					;
+				}
+			}
+		}
+		return ints_3;
+	}
+
+	static final void method11221(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1482833983) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1393 = method6193(string_4, cs2executor_2, -404986216);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method11223(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 382641837) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1392 = method6193(string_4, cs2executor_2, 1828799616);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method501(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.aBool1322 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -70);
+	}
+
+	static final void method502(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		int[] ints_5 = method14642(string_4, cs2executor_2, 2090816514);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1403 = method6193(string_4, cs2executor_2, 1107987835);
+		icomponentdefinitions_0.anIntArray1315 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method505(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		String string_5 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		ParamDefinitions attributedefault_6 = IndexLoaders.PARAM_LOADER.getParam(i_4);
+		if (!attributedefault_6.typeName.equals(string_5)) {
+			icomponentdefinitions_0.method2000(i_4, string_5);
+		} else {
+			icomponentdefinitions_0.method1995(i_4);
+		}
+	}
+
+	static final void method506(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 2;
+		icomponentdefinitions_0.anInt1376 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1314 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -10);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1735080264);
+		}
+	}
+
+	static void method2738(Interface interface_0, int i_1, int i_2, int i_3, boolean bool_4, CS2Executor cs2executor_5) {
+		if (i_2 == 0) {
+			throw new RuntimeException();
+		} else {
+			IComponentDefinitions icomponentdefinitions_7 = interface_0.components[i_1];
+			if (icomponentdefinitions_7.aClass118Array1438 == null) {
+				icomponentdefinitions_7.aClass118Array1438 = new IComponentDefinitions[i_3 + 1];
+				icomponentdefinitions_7.aClass118Array1439 = icomponentdefinitions_7.aClass118Array1438;
+			}
+			if (icomponentdefinitions_7.aClass118Array1438.length <= i_3) {
+				IComponentDefinitions[] arr_8;
+				if (icomponentdefinitions_7.aClass118Array1438 == icomponentdefinitions_7.aClass118Array1439) {
+					arr_8 = new IComponentDefinitions[i_3 + 1];
+					for (int i_9 = 0; i_9 < icomponentdefinitions_7.aClass118Array1438.length; i_9++) {
+						arr_8[i_9] = icomponentdefinitions_7.aClass118Array1438[i_9];
+					}
+					icomponentdefinitions_7.aClass118Array1438 = icomponentdefinitions_7.aClass118Array1439 = arr_8;
+				} else {
+					arr_8 = new IComponentDefinitions[i_3 + 1];
+					IComponentDefinitions[] arr_11 = new IComponentDefinitions[i_3 + 1];
+					for (int i_10 = 0; i_10 < icomponentdefinitions_7.aClass118Array1438.length; i_10++) {
+						arr_8[i_10] = icomponentdefinitions_7.aClass118Array1438[i_10];
+						arr_11[i_10] = icomponentdefinitions_7.aClass118Array1439[i_10];
+					}
+					icomponentdefinitions_7.aClass118Array1438 = arr_8;
+					icomponentdefinitions_7.aClass118Array1439 = arr_11;
+				}
+			}
+			if (i_3 > 0 && icomponentdefinitions_7.aClass118Array1438[i_3 - 1] == null) {
+				throw new RuntimeException("" + (i_3 - 1));
+			} else {
+				IComponentDefinitions icomponentdefinitions_12 = new IComponentDefinitions();
+				icomponentdefinitions_12.type = i_2;
+				icomponentdefinitions_12.parent = icomponentdefinitions_12.idHash = icomponentdefinitions_7.idHash;
+				icomponentdefinitions_12.anInt1288 = i_3;
+				icomponentdefinitions_7.aClass118Array1438[i_3] = icomponentdefinitions_12;
+				if (icomponentdefinitions_7.aClass118Array1438 != icomponentdefinitions_7.aClass118Array1439) {
+					icomponentdefinitions_7.aClass118Array1439[i_3] = icomponentdefinitions_12;
+				}
+				InterfaceWithDefs underlaydefinition_13;
+				if (bool_4) {
+					underlaydefinition_13 = cs2executor_5.aClass513_6994;
+				} else {
+					underlaydefinition_13 = cs2executor_5.aClass513_7007;
+				}
+				underlaydefinition_13.aClass98_5885 = interface_0;
+				underlaydefinition_13.aClass118_5886 = icomponentdefinitions_12;
+				Class109.redrawComponent(icomponentdefinitions_7, (byte) -95);
+			}
+		}
+	}
+
+	static final void method2741(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		boolean bool_5;
+		if (cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1) {
+			bool_5 = true;
+		} else {
+			bool_5 = false;
+		}
+		icomponentdefinitions_0.aBool1327 = bool_5;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 1);
+	}
+
+	static final void method8387(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1380 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+	}
+
+	static final void method8390(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (i_4 != icomponentdefinitions_0.anInt1320) {
+			icomponentdefinitions_0.anInt1320 = i_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 22);
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class105.method1807(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method15256(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1381 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+	}
+
+	static final void method4651(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1522252372) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1292 = method6193(string_4, cs2executor_2, 1736342439);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method6313(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 4;
+		icomponentdefinitions_0.anInt1404 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1432 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.anInt1433 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		icomponentdefinitions_0.anInt1434 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 33);
+	}
+
+	static final void method786(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		boolean bool_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		if (bool_4 != icomponentdefinitions_0.hidden) {
+			icomponentdefinitions_0.hidden = bool_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) -3);
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class78.method1389(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method789(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		if (icomponentdefinitions_0.type == 5) {
+			method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -1486072931);
+		}
+	}
+
+	static final void method5017(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, -305873852) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1383 = method6193(string_4, cs2executor_2, -186222410);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method2955(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.anInt1309 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+	}
+
+	static final void method4772(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1550392426) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1419 = method6193(string_4, cs2executor_2, 902561109);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method7429(IComponentDefinitions icomponentdefinitions_0, int i_1, byte[] bytes_2, byte[] bytes_3, CS2Executor cs2executor_4, int i_5) {
+		if (icomponentdefinitions_0.aByteArrayArray1366 == null) {
+			if (bytes_2 == null) {
+				return;
+			}
+			icomponentdefinitions_0.aByteArrayArray1366 = new byte[11][];
+			icomponentdefinitions_0.aByteArrayArray1367 = new byte[11][];
+			icomponentdefinitions_0.anIntArray1395 = new int[11];
+			icomponentdefinitions_0.anIntArray1267 = new int[11];
+		}
+		icomponentdefinitions_0.aByteArrayArray1366[i_1] = bytes_2;
+		if (bytes_2 != null) {
+			icomponentdefinitions_0.aBool1424 = true;
+		} else {
+			icomponentdefinitions_0.aBool1424 = false;
+			for (int i_6 = 0; i_6 < icomponentdefinitions_0.aByteArrayArray1366.length; i_6++) {
+				if (icomponentdefinitions_0.aByteArrayArray1366[i_6] != null || icomponentdefinitions_0.anIntArray1267[i_6] > 0) {
+					icomponentdefinitions_0.aBool1424 = true;
+					break;
+				}
+			}
+		}
+		icomponentdefinitions_0.aByteArrayArray1367[i_1] = bytes_3;
+	}
+
+	static final void method5763(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1329 = 2;
+		icomponentdefinitions_0.aClass417_1308 = null;
+		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, -1575336609);
+		}
+	}
+
+	static final void method2960(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aBool1363 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 9);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class244.method4196(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method11160(Class282_Sub50_Sub7 class282_sub50_sub7_0, CS2Executor cs2executor_1) {
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = Class96_Sub12.method14613(class282_sub50_sub7_0);
+		cs2executor_1.stringStack[++cs2executor_1.stringStackPtr - 1] = Class158_Sub1.method13768(class282_sub50_sub7_0);
+		cs2executor_1.stringStack[++cs2executor_1.stringStackPtr - 1] = Class435.method7303(class282_sub50_sub7_0);
+		cs2executor_1.stringStack[++cs2executor_1.stringStackPtr - 1] = Class9.method450(class282_sub50_sub7_0);
+	}
+
+	static final void method2593(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1647551269) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1394 = method6193(string_4, cs2executor_2, 1442904775);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final Object[] method6193(String string_0, CS2Executor cs2executor_1, int i_2) {
+		Object[] arr_3 = new Object[string_0.length() + 1];
+		int i_4;
+		for (i_4 = arr_3.length - 1; i_4 >= 1; --i_4) {
+			if (string_0.charAt(i_4 - 1) == 115) {
+				arr_3[i_4] = cs2executor_1.stringStack[--cs2executor_1.stringStackPtr];
+			} else if (string_0.charAt(i_4 - 1) == 167) {
+				arr_3[i_4] = new Long(cs2executor_1.longStack[--cs2executor_1.longStackPtr]);
+			} else {
+				arr_3[i_4] = new Integer(cs2executor_1.intStack[--cs2executor_1.intStackPtr]);
+			}
+		}
+		i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		if (i_4 != -1) {
+			arr_3[0] = new Integer(i_4);
+		} else {
+			arr_3 = null;
+		}
+		return arr_3;
+	}
+
+	static final void method13468(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.aBool1328 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 6);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Message.method7278(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method4136(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 718441711) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1409 = method6193(string_4, cs2executor_2, 1509347670);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method14664(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, boolean bool_2, int i_3, CS2Executor cs2executor_4, byte b_5) {
+		cs2executor_4.intStackPtr -= 2;
+		int i_6 = cs2executor_4.intStack[cs2executor_4.intStackPtr];
+		int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class411.method6914(icomponentdefinitions_0.idHash);
+			Class106.method1818(icomponentdefinitions_0.idHash, 209948825);
+			Item.method12575(icomponentdefinitions_0.idHash, (byte) 59);
+		}
+		if (i_6 == -1) {
+			icomponentdefinitions_0.anInt1329 = 1;
+			icomponentdefinitions_0.anInt1330 = -1;
+			icomponentdefinitions_0.anInt1426 = -1;
+		} else {
+			icomponentdefinitions_0.anInt1426 = i_6;
+			icomponentdefinitions_0.anInt1427 = i_7;
+			icomponentdefinitions_0.aBool1388 = bool_2;
+			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_6);
+			icomponentdefinitions_0.spritePitch = itemdefinitions_8.modelRotationX;
+			icomponentdefinitions_0.spriteRoll = itemdefinitions_8.modelRotationY;
+			icomponentdefinitions_0.spriteYaw = itemdefinitions_8.modelRotationZ;
+			icomponentdefinitions_0.anInt1293 = itemdefinitions_8.modelOffsetX;
+			icomponentdefinitions_0.anInt1334 = itemdefinitions_8.modelOffsetY;
+			icomponentdefinitions_0.spriteScale = itemdefinitions_8.modelZoom;
+			icomponentdefinitions_0.anInt1335 = i_3;
+			if (icomponentdefinitions_0.anInt1417 > 0) {
+				icomponentdefinitions_0.spriteScale = icomponentdefinitions_0.spriteScale * 32 / icomponentdefinitions_0.anInt1417;
+			} else if (icomponentdefinitions_0.baseWidth > 0) {
+				icomponentdefinitions_0.spriteScale = icomponentdefinitions_0.spriteScale * 32 / icomponentdefinitions_0.baseWidth;
+			}
+		}
+	}
+
+	static final void method2732(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (!string_4.equals(icomponentdefinitions_0.text)) {
+			icomponentdefinitions_0.text = string_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 79);
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			RenderAnimIndexLoader.method3631(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method6122(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.aString1369 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+	}
+
+	static final void method14482(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		int i_5 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (i_5 >= 1 && i_5 <= 10) {
+			icomponentdefinitions_0.method2039(i_5 - 1, i_4);
+		}
+	}
+
+	static final void method1083(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1248172600) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1451 = method6193(string_4, cs2executor_2, 537651905);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method2168(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 3;
+		icomponentdefinitions_0.anInt1359 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1360 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.anInt1358 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -42);
+	}
+
+	static final void method2170(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1404763010) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1421 = method6193(string_4, cs2executor_2, 930133882);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method14605(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, byte b_2) {
+		byte b_3 = 10;
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		method4883(icomponentdefinitions_0, b_3, i_4, cs2executor_1);
+	}
+
+	static final void method6186(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		if (icomponentdefinitions_0.type == 4) {
+			method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -2108209213);
+		}
+	}
+
+	static final void method8310(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.anInt1423 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -17);
+	}
+
+	static final void method542(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 876649685) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1407 = method6193(string_4, cs2executor_2, -479801764);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method14700(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1277 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 21);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Game.method8207(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method7729(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 2;
+		icomponentdefinitions_0.anInt1430 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1431 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 64);
+	}
+
+	static final void method3983(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 4;
+		icomponentdefinitions_0.basePositionX = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.basePositionY = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		if (i_4 < 0) {
+			i_4 = 0;
+		} else if (i_4 > 5) {
+			i_4 = 5;
+		}
+		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		if (i_5 < 0) {
+			i_5 = 0;
+		} else if (i_5 > 5) {
+			i_5 = 5;
+		}
+		icomponentdefinitions_0.aByte1333 = (byte) i_4;
+		icomponentdefinitions_0.aByte1355 = (byte) i_5;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -75);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1665129520);
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class396.method6774(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method1454(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		cs2executor_2.intStackPtr -= 2;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		ParamDefinitions attributedefault_6 = IndexLoaders.PARAM_LOADER.getParam(i_4);
+		if (i_5 != attributedefault_6.defaultInt) {
+			icomponentdefinitions_0.method1999(i_4, i_5, 146446242);
+		} else {
+			icomponentdefinitions_0.method1995(i_4);
+		}
+	}
+
+	static final void method1455(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		cs2executor_2.intStackPtr -= 4;
+		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1339 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 2] == 1) {
+			icomponentdefinitions_0.anInt1329 = 9;
+		} else {
+			icomponentdefinitions_0.anInt1329 = 8;
+		}
+		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 3] == 1) {
+			icomponentdefinitions_0.aBool1388 = true;
+		} else {
+			icomponentdefinitions_0.aBool1388 = false;
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, -940537484);
+		}
+	}
+
+	static final void method14653(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, -271288407) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1353 = method6193(string_4, cs2executor_2, 1245386660);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method12260(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 4;
+		icomponentdefinitions_0.baseWidth = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.baseHeight = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.anInt1417 = 0;
+		icomponentdefinitions_0.anInt1326 = 0;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		if (i_4 < 0) {
+			i_4 = 0;
+		} else if (i_4 > 4) {
+			i_4 = 4;
+		}
+		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		if (i_5 < 0) {
+			i_5 = 0;
+		} else if (i_5 > 4) {
+			i_5 = 4;
+		}
+		icomponentdefinitions_0.aByte1368 = (byte) i_4;
+		icomponentdefinitions_0.aByte1294 = (byte) i_5;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -29);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -610252618);
+		}
+	}
+
+	static final void method7555(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.anInt1329 = 1;
+		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -15);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, -624586705);
+		}
+	}
+
+	static final void method6010(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 3;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		short s_5 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		short s_6 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		if (i_4 >= 0 && i_4 < 5) {
+			icomponentdefinitions_0.method2013(i_4, s_5, s_6, (byte) 11);
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) -78);
+			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+				Class276.method4903(icomponentdefinitions_0.idHash, i_4);
+			}
+		}
+	}
+
+	static final void method1845(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 122183599) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1271 = method6193(string_4, cs2executor_2, 350429453);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method3365(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1659229843) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1302 = method6193(string_4, cs2executor_2, -80213268);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method3366(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 570698140) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1416 = method6193(string_4, cs2executor_2, -422636898);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method3369(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.aString1338 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+	}
+
+	static final void method3965(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		FontMetrics fontmetrics_3 = icomponentdefinitions_0.method1989(Class487.aClass378_5752, client.anInterface35_7206);
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		int i_5 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		int i_6 = fontmetrics_3.method6956(icomponentdefinitions_0.text, icomponentdefinitions_0.anInt1301, icomponentdefinitions_0.anInt1358, i_5, i_4, Class182.aClass160Array2261);
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_6;
+	}
+
+	static final void method3987(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1329 = 3;
+		icomponentdefinitions_0.anInt1330 = client.anInt7315;
+		icomponentdefinitions_0.anInt1339 = 0;
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, -1355203883);
+		}
+	}
+
+	static final void method1494(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, byte b_2) {
+		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
+		if (icomponentdefinitions_0.anInt1329 != 2) {
+			throw new RuntimeException("");
+		} else {
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			if (icomponentdefinitions_0.aClass417_1308 == null) {
+				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, false);
+			}
+			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(1471250768);
+			if (i_4 >= 0 && i_4 < npcdefinitions_5.anIntArray4860.length) {
+				icomponentdefinitions_0.aClass417_1308.anIntArray4992[i_4] = i_3;
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) 54);
+			} else {
+				throw new RuntimeException("");
+			}
+		}
+	}
+
+	static final void method7547(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aString1348 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+	}
+
+	static final void method12401(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1329 = 5;
+		icomponentdefinitions_0.anInt1330 = client.anInt7315;
+		icomponentdefinitions_0.anInt1339 = 0;
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, -2001727659);
+		}
+	}
+
+	static final void method14892(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.anInt1377 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) -21);
+	}
+
+	static final void method4276(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 6;
+		icomponentdefinitions_0.anInt1293 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1334 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.spritePitch = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		icomponentdefinitions_0.spriteRoll = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		icomponentdefinitions_0.spriteYaw = cs2executor_2.intStack[cs2executor_2.intStackPtr + 4];
+		icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[cs2executor_2.intStackPtr + 5];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 60);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class106.method1818(icomponentdefinitions_0.idHash, -1101705065);
+			Item.method12575(icomponentdefinitions_0.idHash, (byte) 9);
+		}
+	}
+
+	static final void method4280(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		boolean bool_5;
+		if (cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1) {
+			bool_5 = true;
+		} else {
+			bool_5 = false;
+		}
+		icomponentdefinitions_0.aBool1325 = bool_5;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 40);
+	}
+
+	static final void method12630(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		icomponentdefinitions_0.method1987();
+	}
+
+	static final void method5066(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1329 = 5;
+		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, 1743541888);
+		}
+	}
+
+	static final void method13450(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.aBool1357 = i_4 == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 41);
+	}
+
+	static final void method6942(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		if (client.method11633(icomponentdefinitions_0).continueOptionEnabled() && client.aClass118_7352 == null) {
+			Class158_Sub2.method14355(icomponentdefinitions_0.idHash, icomponentdefinitions_0.anInt1288, -946546687);
+			client.aClass118_7352 = Index.method5694(icomponentdefinitions_0.idHash, icomponentdefinitions_0.anInt1288, -1963750401);
+			Class109.redrawComponent(client.aClass118_7352, (byte) -38);
+		}
+	}
+
+	static final void method3601(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
+		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
+			throw new RuntimeException("");
+		} else {
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			if (icomponentdefinitions_0.aClass417_1308 == null) {
+				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
+			}
+			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(1488415195);
+			if (npcdefinitions_5.aShortArray4867 != null && i_4 >= 0 && i_4 < npcdefinitions_5.aShortArray4867.length) {
+				icomponentdefinitions_0.aClass417_1308.aShortArray4991[i_4] = (short) i_3;
+				Class109.redrawComponent(icomponentdefinitions_0, (byte) 25);
+			} else {
+				throw new RuntimeException("");
+			}
+		}
+	}
+
+	static final void method5291(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] - 1;
+		if (i_4 >= 0 && i_4 <= 9) {
+			icomponentdefinitions_0.method1994(i_4, (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr]);
+		} else {
+			--cs2executor_2.stringStackPtr;
+		}
+	}
+
+	static final void method797(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (i_4 != icomponentdefinitions_0.animation) {
+			if (i_4 != -1) {
+				if (icomponentdefinitions_0.aClass456_1437 == null) {
+					icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
+				}
+				icomponentdefinitions_0.aClass456_1437.update(i_4);
+			} else {
+				icomponentdefinitions_0.aClass456_1437 = null;
+			}
+			icomponentdefinitions_0.animation = i_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 39);
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class149_Sub1.method14582(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method5453(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1453 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 38);
+	}
+
+	static final void method5455(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1521695883) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1418 = method6193(string_4, cs2executor_2, 570621267);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method5459(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (i_4 != icomponentdefinitions_0.anInt1435) {
+			icomponentdefinitions_0.anInt1435 = i_4;
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) 77);
+		}
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			JS5LocalRequester.method5581(icomponentdefinitions_0.idHash);
+		}
+	}
+
+	static final void method569(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1362 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 60);
+	}
+
+	static final void method3251(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		if (cs2executor_1.anInt7015 >= 10) {
+			throw new RuntimeException();
+		} else {
+			if (icomponentdefinitions_0.anObjectArray1271 != null) {
+				HookRequest hookrequest_3 = new HookRequest();
+				hookrequest_3.iComponentDefs = icomponentdefinitions_0;
+				hookrequest_3.params = icomponentdefinitions_0.anObjectArray1271;
+				hookrequest_3.anInt8061 = cs2executor_1.anInt7015 + 1;
+				client.aClass482_7402.append(hookrequest_3);
+			}
+		}
+	}
+
+	static final void method5001(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+		FontMetrics fontmetrics_3 = icomponentdefinitions_0.method1989(Class487.aClass378_5752, client.anInterface35_7206);
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		Point point_5 = fontmetrics_3.method6954(icomponentdefinitions_0.text, icomponentdefinitions_0.anInt1301, icomponentdefinitions_0.anInt1358, i_4, Class182.aClass160Array2261);
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = point_5.x;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = point_5.y;
+	}
+
+	static final void method3338(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		int[] ints_5 = method14642(string_4, cs2executor_2, 510066471);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1387 = method6193(string_4, cs2executor_2, 1621483934);
+		icomponentdefinitions_0.anIntArray1402 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method6244(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 2;
+		icomponentdefinitions_0.anInt1289 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1375 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 14);
+		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
+		if (icomponentdefinitions_0.type == 0) {
+			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1114649951);
+		}
+	}
+
+	static final void method3738(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		cs2executor_2.intStackPtr -= 2;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		if (i_4 == -1 && i_5 == -1) {
+			icomponentdefinitions_0.aClass118_1379 = null;
+		} else {
+			icomponentdefinitions_0.aClass118_1379 = Index.method5694(i_4, i_5, 551266570);
+		}
+	}
+
+	static final void method14586(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, -159099843) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1396 = method6193(string_4, cs2executor_2, -448612500);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method6045(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.anInt1310 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1307 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+	}
+
+	static final void method8277(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1293603558) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1278 = method6193(string_4, cs2executor_2, -34782350);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method869(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (i_4 == IComponentDefinitions.anInt1283 || i_4 == IComponentDefinitions.anInt1373 || i_4 == IComponentDefinitions.anInt1265) {
+			icomponentdefinitions_0.anInt1382 = i_4;
+		}
+	}
+
+	static final void method910(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 513538858) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.params = method6193(string_4, cs2executor_2, 240682174);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method403(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.disableHover = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+	}
+
+	static final void method12209(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2) {
+		cs2executor_2.intStackPtr -= 2;
+		byte b_4 = 10;
+		byte[] bytes_5 = new byte[] { (byte) cs2executor_2.intStack[cs2executor_2.intStackPtr] };
+		byte[] bytes_6 = new byte[] { (byte) cs2executor_2.intStack[cs2executor_2.intStackPtr + 1] };
+		method7429(icomponentdefinitions_0, b_4, bytes_5, bytes_6, cs2executor_2, -2033836462);
+	}
+
+	static final void method1838(IComponentDefinitions icomponentdefinitions_0, byte[] bytes_1, byte[] bytes_2, CS2Executor cs2executor_3) {
+		int i_5 = cs2executor_3.intStack[--cs2executor_3.intStackPtr] - 1;
+		if (i_5 >= 0 && i_5 <= 9) {
+			method7429(icomponentdefinitions_0, i_5, bytes_1, bytes_2, cs2executor_3, -1172279897);
+		} else {
+			throw new RuntimeException();
+		}
+	}
+
+	static final void method15409(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1686354780) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1386 = method6193(string_4, cs2executor_2, 1189927775);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method6158(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 908211513) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1415 = method6193(string_4, cs2executor_2, 1001457907);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method11337(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1329 = 6;
+		icomponentdefinitions_0.aClass417_1308 = null;
+		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class92.method1565(icomponentdefinitions_0.idHash, -515297121);
+		}
+	}
+
+	static final void method15474(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		icomponentdefinitions_0.aStringArray1352 = null;
+	}
+
+	static final void method1642(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (method14642(string_4, cs2executor_2, 1421907667) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+		icomponentdefinitions_0.anObjectArray1400 = method6193(string_4, cs2executor_2, 1475160400);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method4149(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1378 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+	}
+
+	static final void method7667(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 3;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		short s_5 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		short s_6 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		if (i_4 >= 0 && i_4 < 5) {
+			icomponentdefinitions_0.method2007(i_4, s_5, s_6, -1261332787);
+			Class109.redrawComponent(icomponentdefinitions_0, (byte) -93);
+			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+				RegionMap.method5513(icomponentdefinitions_0.idHash, i_4);
+			}
+		}
+	}
+
+	static final void method6697(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aBool1356 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.redrawComponent(icomponentdefinitions_0, (byte) 17);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class96_Sub17.method14656(icomponentdefinitions_0.idHash);
+		}
+	}
 }

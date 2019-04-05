@@ -1,6 +1,6 @@
 public class HitsplatDefinitions {
 
-	Class210 aClass210_2850;
+	HitsplatIndexLoader aClass210_2850;
 	public int anInt2849 = -1;
 	public int anInt2844 = 16777215;
 	public boolean aBool2838 = false;
@@ -151,7 +151,7 @@ public class HitsplatDefinitions {
 				return string_3;
 			}
 
-			string_3 = string_3.substring(0, i_4) + Class290.method5120(i_1, false, 147527358) + string_3.substring(i_4 + 2);
+			string_3 = string_3.substring(0, i_4) + HitbarIndexLoader.method5120(i_1, false, 147527358) + string_3.substring(i_4 + 2);
 		}
 	}
 

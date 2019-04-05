@@ -497,10 +497,10 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				}
 
 				int i_3;
-				if (Class192.ACCOUNT_CREATION_STAGE == Class1.REQUEST) {
-					client.connectionContext.method3050(Class38.createAsyncConnection(Class448.lobbyConnectionInfo.createSocket((byte) 121), 15000, 1038176780), Class448.lobbyConnectionInfo.host, (byte) -47);
+				if (Class192.ACCOUNT_CREATION_STAGE == AccountCreationStage.REQUEST) {
+					client.connectionContext.method3050(SunDefinitions.createAsyncConnection(Class448.lobbyConnectionInfo.createSocket((byte) 121), 15000, 1038176780), Class448.lobbyConnectionInfo.host, (byte) -47);
 					client.connectionContext.method3054((short) 8665);
-					TCPPacket packet = Class207.method3558((byte) 87);
+					TCPPacket packet = SkyboxDefinitions.method3558((byte) 87);
 					packet.buffer.writeByte(OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
 					packet.buffer.writeShort(0);
 					i_3 = packet.buffer.index;
@@ -514,7 +514,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 					packet.buffer.writeString(Class464.aString5555);
 					packet.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
 					packet.buffer.writeByte(client.CURRENT_GAME.anInt5746);
-					Class31.method809(packet.buffer, -1671456029);
+					IdentitiKitIndexLoader.method809(packet.buffer, -1671456029);
 					String string_5 = client.aString7156;
 					packet.buffer.writeByte(string_5 == null ? 0 : 1);
 					if (string_5 != null) {
@@ -527,10 +527,10 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 					packet.buffer.method13281(packet.buffer.index - i_3);
 					client.connectionContext.queuePacket(packet);
 					client.connectionContext.method3047(557990439);
-					Class192.ACCOUNT_CREATION_STAGE = Class1.RESPONSE;
+					Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.RESPONSE;
 				}
 
-				if (Class1.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
+				if (AccountCreationStage.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
 					if (client.connectionContext.getConnection() == null) {
 						Class5.method297(2055895853);
 					} else if (client.connectionContext.getConnection().available(1)) {

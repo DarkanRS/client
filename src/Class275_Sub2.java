@@ -1,4 +1,4 @@
-public class Class275_Sub2 extends Class275 {
+public class Class275_Sub2 extends EntityNode {
 
 	Animable aClass521_Sub1_Sub1_Sub2_7739;
 

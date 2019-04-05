@@ -752,11 +752,11 @@ public abstract class GraphicalRenderer {
 		}
 	}
 
-	public static int method8696(CharSequence charsequence_0, int i_1) {
+	public static int method8696(CharSequence charsequence_0) {
 		int i_2 = charsequence_0.length();
 		int i_3 = 0;
 		for (int i_4 = 0; i_4 < i_2; i_4++) {
-			i_3 = (i_3 << 5) - i_3 + Class242.getByteForChar(charsequence_0.charAt(i_4));
+			i_3 = (i_3 << 5) - i_3 + QuestIndexLoader.getByteForChar(charsequence_0.charAt(i_4));
 		}
 		return i_3;
 	}

@@ -60,13 +60,13 @@ public final class CutsceneEntity {
 			NPCDefinitions npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.id);
 			boolean bool_3 = npcdefinitions_2.method6881();
 			if (this.animations == null) {
-				RenderAnimDefs renderanimdefs_4 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(npcdefinitions_2.renderEmote, (byte) -42);
+				RenderAnimDefs renderanimdefs_4 = IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(npcdefinitions_2.renderEmote, (byte) -42);
 				this.animations = renderanimdefs_4.method3828();
 			}
 			int[] ints_7 = this.animations;
 			for (int i_5 = 0; i_5 < ints_7.length; i_5++) {
 				int i_6 = ints_7[i_5];
-				bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_6, (byte) 91).ready();
+				bool_3 &= IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_6, (byte) 91).ready();
 			}
 			return bool_3;
 		}

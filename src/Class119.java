@@ -124,7 +124,7 @@ public class Class119 {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -1298876886);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, -1771298616);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 0, -1247353645);
-		Texture.method5777(1139653705);
+		ImageIndexLoader.method5777(1139653705);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 2, 2126000152);
 		Class393.preferences.setValue(Class393.preferences.graphics, 2, -761948866);
 		Class94.method1589();

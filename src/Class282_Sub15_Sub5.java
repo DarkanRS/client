@@ -1050,7 +1050,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				ints_17[i_10] = stream.readUnsignedShortLE128();
 			}
 
-			Class331.method5923(player, animationIds, ints_15, ints_17, 263851655);
+			QuickchatCategoryLoader.method5923(player, animationIds, ints_15, ints_17, 263851655);
 		}
 
 		if ((flags & 0x4) != 0) {

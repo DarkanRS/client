@@ -72,7 +72,7 @@ public class EnumDefinitions {
 		return this.anObjectArray5145 != null ? (key >= 0 && key < this.anObjectArray5145.length ? this.anObjectArray5145[key] : null) : (this.aMap5144 != null ? this.aMap5144.get(new Integer(key)) : null);
 	}
 
-	public String getStringValue(int i_1, int i_2) {
+	public String getStringValue(int i_1) {
 		Object object_3 = this.getValue(i_1);
 		return object_3 == null ? this.aString5142 : (String) object_3;
 	}

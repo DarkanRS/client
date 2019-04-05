@@ -36,13 +36,13 @@ public class Class353 {
 			client.aClass465_7414.put(class282_sub29_7, long_5);
 			class282_sub29_7.aClass482_7708.append(class282_sub34_3);
 		} else {
-			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_3.anInt7853, 1474868024);
+			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_3.anInt7853);
 			int i_9 = itemdefinitions_8.value;
 			if (itemdefinitions_8.stackable == 1) {
 				i_9 *= class282_sub34_3.anInt7852 + 1;
 			}
 			for (Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_7.aClass482_7708.head((byte) 33); class282_sub34_10 != null; class282_sub34_10 = (Class282_Sub34) class282_sub29_7.aClass482_7708.next(1444311005)) {
-				itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub34_10.anInt7853, 1449282948);
+				itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_10.anInt7853);
 				int i_11 = itemdefinitions_8.value;
 				if (itemdefinitions_8.stackable == 1) {
 					i_11 *= class282_sub34_10.anInt7852 + 1;

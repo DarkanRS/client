@@ -42,7 +42,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 	final void method15372(int[][] ints_1) {
 		int i_3 = Class316.anInt3670;
 		int i_4 = Class316.anInt3671;
-		Class233.method3936(ints_1);
+		ClanVarSettingsIndexLoader.method3936(ints_1);
 		WallDecoration.method16086(Class316.anInt3669, Class316.anInt3673);
 		if (this.aClass149Array9862 != null) {
 			for (int i_5 = 0; i_5 < this.aClass149Array9862.length; i_5++) {
@@ -69,7 +69,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 				int i_5 = rsbytebuffer_2.readUnsignedByte();
 				switch (i_5) {
 				case 0:
-					this.aClass149Array9862[i_4] = Class242.method4165(rsbytebuffer_2);
+					this.aClass149Array9862[i_4] = QuestIndexLoader.method4165(rsbytebuffer_2);
 					break;
 				case 1:
 					this.aClass149Array9862[i_4] = Class514.method8842(rsbytebuffer_2);

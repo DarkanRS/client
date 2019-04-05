@@ -317,7 +317,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			this.aClass317_8789 = index_2;
 			this.anInt8709 = i_3;
 			this.anInt8824 = i_4;
-			Class38.method854(false, true, -1368886840);
+			SunDefinitions.method854(false, true, -1368886840);
 			if (this.anInterface22_5834 != null) {
 				this.aClass66_8787 = new Class66(this, this.anInterface22_5834);
 			} else {
@@ -3432,7 +3432,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	abstract Interface6 method14072(Class150 var1, Class76 var2, int var3, int var4);
 
 	byte[] method14075(String string_1, String string_2) {
-		return this.aClass317_8789.method5626(string_1, string_2);
+		return this.aClass317_8789.getFileByName(string_1, string_2);
 	}
 
 	abstract Interface1 method14077(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);

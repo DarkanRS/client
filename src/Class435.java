@@ -89,12 +89,12 @@ public class Class435 {
 				if (!Class291_Sub1.aBool8028 && i_4 >= 0 && i_4 < Class291_Sub1.xLength && i_5 >= 0 && i_5 < Class291_Sub1.yLength) {
 					i_4 += (int) (Math.random() * 10.0D) - 5;
 					i_5 += (int) (Math.random() * 10.0D) - 5;
-					Class427.anInt5123 = i_4;
+					MapSpriteIndexLoader.anInt5123 = i_4;
 					Class475.anInt5624 = i_5;
 				} else if (Class291_Sub1.anInt8019 != -1 && Class291_Sub1.anInt8020 != -1) {
 					Class291_Sub1.aClass282_Sub50_Sub6_3491.method14777(Class291_Sub1.anInt8019, Class291_Sub1.anInt8020, ints_3, -1997642770);
 					if (ints_3 != null) {
-						Class427.anInt5123 = ints_3[1] - Class291_Sub1.anInt3472;
+						MapSpriteIndexLoader.anInt5123 = ints_3[1] - Class291_Sub1.anInt3472;
 						Class475.anInt5624 = ints_3[2] - Class291_Sub1.anInt3473;
 					}
 
@@ -103,7 +103,7 @@ public class Class435 {
 					Class291_Sub1.aBool8028 = false;
 				} else {
 					Class291_Sub1.aClass282_Sub50_Sub6_3491.method14777(Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9532 >> 14 & 0x3fff, Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9532 & 0x3fff, ints_3, -2052252503);
-					Class427.anInt5123 = ints_3[1] - Class291_Sub1.anInt3472;
+					MapSpriteIndexLoader.anInt5123 = ints_3[1] - Class291_Sub1.anInt3472;
 					Class475.anInt5624 = ints_3[2] - Class291_Sub1.anInt3473;
 				}
 
@@ -154,7 +154,7 @@ public class Class435 {
 				Class291_Sub1.aClass218_3456.method3697(1024, 256, 2137741394);
 				Class291_Sub1.aClass427_3457.method7175(256, 256, 993879963);
 				Class291_Sub1.aClass474_3455.method7899(4096);
-				IndexLoaders.aClass230_147.method3906(256);
+				IndexLoaders.VARBIT_LOADER.method3906(256);
 				Class291_Sub1.anInt8015 = 20;
 			} else if (Class291_Sub1.anInt8015 == 20) {
 				Exception_Sub3.method15619(true, -484129587);

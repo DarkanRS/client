@@ -5,7 +5,7 @@ public class Class96_Sub21 extends Class96 {
 	int anInt9436;
 
 	public void method1592() {
-		Class117.method1978(this.anInt9437, 0, this.anInt9436);
+		Huffman.method1978(this.anInt9437, 0, this.anInt9436);
 	}
 
 	Class96_Sub21(RsByteBuffer rsbytebuffer_1) {
@@ -15,7 +15,7 @@ public class Class96_Sub21 extends Class96 {
 	}
 
 	public void method1601() {
-		Class117.method1978(this.anInt9437 * -576205695 * 865366913, 0, 1859517477 * this.anInt9436 * -1281245267);
+		Huffman.method1978(this.anInt9437 * -576205695 * 865366913, 0, 1859517477 * this.anInt9436 * -1281245267);
 	}
 
 	public static void method14675(int i_0, int i_1, int i_2, int i_3) {

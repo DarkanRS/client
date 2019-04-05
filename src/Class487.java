@@ -11,7 +11,7 @@ public class Class487 {
 			Class91 class91_10 = Class91.method1522(IndexLoaders.SPRITES_INDEX, Class446.anInt5396, 0);
 			ParamDefinitions.aClass160_5339 = graphicalrenderer_0.method8444(class91_10, true);
 			class91_10.method1525();
-			Class290.aClass160_3452 = graphicalrenderer_0.method8444(class91_10, true);
+			HitbarIndexLoader.aClass160_3452 = graphicalrenderer_0.method8444(class91_10, true);
 			Class354.aClass160_4110 = graphicalrenderer_0.method8444(Class91.method1522(IndexLoaders.SPRITES_INDEX, Class254.anInt3145, 0), true);
 			Class91 class91_11 = Class91.method1522(IndexLoaders.SPRITES_INDEX, Class17.anInt148, 0);
 			Class125.aClass160_1571 = graphicalrenderer_0.method8444(class91_11, true);
@@ -27,7 +27,7 @@ public class Class487 {
 			i_8 = (i_4 - i_5 - Class125.aClass160_1571.method2793()) / ParamDefinitions.aClass160_5339.method2793();
 			for (int i_9 = 0; i_9 < i_8; i_9++) {
 				ParamDefinitions.aClass160_5339.method2752(i_1, i_5 + i_2 + i_9 * ParamDefinitions.aClass160_5339.method2793());
-				Class290.aClass160_3452.method2752(i_3 + i_1 - Class290.aClass160_3452.method2747(), i_5 + i_2 + i_9 * ParamDefinitions.aClass160_5339.method2793());
+				HitbarIndexLoader.aClass160_3452.method2752(i_3 + i_1 - HitbarIndexLoader.aClass160_3452.method2747(), i_5 + i_2 + i_9 * ParamDefinitions.aClass160_5339.method2793());
 			}
 			Class125.aClass160_1571.method2752(i_1, i_2 + i_4 - Class125.aClass160_1571.method2793());
 			Class149_Sub2.aClass160_9315.method2752(i_3 + i_1 - Class125.aClass160_1571.method2747(), i_2 + i_4 - Class125.aClass160_1571.method2793());

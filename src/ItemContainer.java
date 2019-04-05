@@ -10,7 +10,7 @@ public class ItemContainer extends Node {
 		int i_9 = i_2;
 		RenderAnimDefs renderanimdefs_10 = null;
 		if (i_4 != -1) {
-			renderanimdefs_10 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_4, (byte) 66);
+			renderanimdefs_10 = IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(i_4, (byte) 66);
 		}
 
 		int[] ints_11 = this.itemIds;
@@ -45,7 +45,7 @@ public class ItemContainer extends Node {
 			boolean bool_15 = false;
 
 			for (int i_16 = 0; i_16 < ints_11.length; i_16++) {
-				if (ints_11[i_16] != -1 && !IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(ints_11[i_16], 1950538416).bodyMeshesReady(bool_5, (MeshModifier) null, -763899504)) {
+				if (ints_11[i_16] != -1 && !IndexLoaders.ITEM_LOADER.getItemDefinitions(ints_11[i_16]).bodyMeshesReady(bool_5, (MeshModifier) null, -763899504)) {
 					bool_15 = true;
 				}
 			}
@@ -59,7 +59,7 @@ public class ItemContainer extends Node {
 			int i_17;
 			for (i_17 = 0; i_17 < ints_11.length; i_17++) {
 				if (ints_11[i_17] != -1) {
-					arr_27[i_17] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(ints_11[i_17], 584500075).getBodyMesh(bool_5, (MeshModifier) null, 2085001887);
+					arr_27[i_17] = IndexLoaders.ITEM_LOADER.getItemDefinitions(ints_11[i_17]).getBodyMesh(bool_5, (MeshModifier) null, 2085001887);
 				}
 			}
 

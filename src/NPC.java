@@ -63,7 +63,7 @@ public class NPC extends Animable {
 		}
 
 		int i_11 = this.aClass19_10359.method578();
-		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.definitions.method6879(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIMS, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.aClass417_10581, this.getRenderAnimation(), false, -1676394010);
+		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.definitions.method6879(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.aClass417_10581, this.getRenderAnimation(), false, -1676394010);
 		if (meshrasterizer_12 == null) {
 			return false;
 		} else {
@@ -128,8 +128,8 @@ public class NPC extends Animable {
 		int i_7;
 		for (i_7 = 0; i_7 < this.aClass161Array10339.length; i_7++) {
 			if (this.aClass161Array10339[i_7].spotAnimId != -1) {
-				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_7].spotAnimId, (byte) -95);
-				if (spotanimdefinitions_11.aBool6968 && spotanimdefinitions_11.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_11.animationId, (byte) 7).walkingPrecedence == 1) {
+				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_7].spotAnimId, (byte) -95);
+				if (spotanimdefinitions_11.aBool6968 && spotanimdefinitions_11.animationId != -1 && IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_11.animationId, (byte) 7).walkingPrecedence == 1) {
 					this.aClass161Array10339[i_7].animation.update(-1);
 					this.aClass161Array10339[i_7].spotAnimId = -1;
 				}
@@ -233,8 +233,8 @@ public class NPC extends Animable {
 		int i_6;
 		for (i_6 = 0; i_6 < this.aClass161Array10339.length; i_6++) {
 			if (this.aClass161Array10339[i_6].spotAnimId != -1) {
-				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_6].spotAnimId, (byte) -12);
-				if (spotanimdefinitions_7.aBool6968 && spotanimdefinitions_7.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_7.animationId, (byte) -9).walkingPrecedence == 1) {
+				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_6].spotAnimId, (byte) -12);
+				if (spotanimdefinitions_7.aBool6968 && spotanimdefinitions_7.animationId != -1 && IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_7.animationId, (byte) -9).walkingPrecedence == 1) {
 					this.aClass161Array10339[i_6].animation.update(-1);
 					this.aClass161Array10339[i_6].spotAnimId = -1;
 				}
@@ -313,7 +313,7 @@ public class NPC extends Animable {
 	}
 
 	public boolean method15871() {
-		return Class58.aClass529_527.aBool7041;
+		return QuickchatFiller.aClass529_527.aBool7041;
 	}
 
 	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
@@ -445,7 +445,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16164(String string_1) {
-		int i_5 = Class204.method3363(1027745545) * Class58.aClass529_527.anInt7038;
+		int i_5 = Class204.method3363(1027745545) * QuickchatFiller.aClass529_527.anInt7038;
 		this.method15875(string_1, 0, 0, i_5, 1930642006);
 	}
 
@@ -625,7 +625,7 @@ public class NPC extends Animable {
 	}
 
 	public boolean method15887() {
-		return Class58.aClass529_527.aBool7041;
+		return QuickchatFiller.aClass529_527.aBool7041;
 	}
 
 	public Class163 method15811(int i_1) {
@@ -673,15 +673,15 @@ public class NPC extends Animable {
 	}
 
 	public boolean method15872() {
-		return Class58.aClass529_527.aBool7041;
+		return QuickchatFiller.aClass529_527.aBool7041;
 	}
 
 	public boolean method15873() {
-		return Class58.aClass529_527.aBool7041;
+		return QuickchatFiller.aClass529_527.aBool7041;
 	}
 
 	public boolean method15814() {
-		return Class58.aClass529_527.aBool7041;
+		return QuickchatFiller.aClass529_527.aBool7041;
 	}
 
 	public Class163 method15809() {

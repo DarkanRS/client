@@ -131,9 +131,9 @@ public class NPCDirection implements Identifiable {
 		} else {
 			int i_6 = 0;
 			for (int i_7 = 0; i_7 < class282_sub30_5.itemIds.length; i_7++) {
-				if (class282_sub30_5.itemIds[i_7] >= 0 && class282_sub30_5.itemIds[i_7] < IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount) {
-					ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub30_5.itemIds[i_7], 1670357313);
-					int i_9 = itemdefinitions_8.method7099(i_1, IndexLoaders.ITEM_DEFAULTS.method7069(i_1).defaultInt, -304171855);
+				if (class282_sub30_5.itemIds[i_7] >= 0 && class282_sub30_5.itemIds[i_7] < IndexLoaders.ITEM_LOADER.maxItemsCount) {
+					ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub30_5.itemIds[i_7]);
+					int i_9 = itemdefinitions_8.method7099(i_1, IndexLoaders.PARAM_LOADER.getParam(i_1).defaultInt, -304171855);
 					if (bool_2) {
 						i_6 += i_9 * class282_sub30_5.amounts[i_7];
 					} else {

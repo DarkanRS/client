@@ -320,9 +320,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (spotAnimId != -1 && currSpotAnimId != -1) {
 			SpotAnimDefinitions spotAnimDefs;
 			if (currSpotAnimId == spotAnimId) {
-				spotAnimDefs = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) -32);
+				spotAnimDefs = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -32);
 				if (spotAnimDefs.aBool6968 && spotAnimDefs.animationId != -1) {
-					AnimationDefinitions animationdefinitions_11 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotAnimDefs.animationId, (byte) 21);
+					AnimationDefinitions animationdefinitions_11 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotAnimDefs.animationId, (byte) 21);
 					int i_12 = animationdefinitions_11.replayMode;
 					if (i_12 == 0) {
 						return;
@@ -334,11 +334,11 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 			} else {
-				spotAnimDefs = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) 36);
-				SpotAnimDefinitions currSpotAnimDefs = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(currSpotAnimId, (byte) -6);
+				spotAnimDefs = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) 36);
+				SpotAnimDefinitions currSpotAnimDefs = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(currSpotAnimId, (byte) -6);
 				if (spotAnimDefs.animationId != -1 && currSpotAnimDefs.animationId != -1) {
-					AnimationDefinitions animationdefinitions_15 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotAnimDefs.animationId, (byte) -33);
-					AnimationDefinitions animationdefinitions_13 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(currSpotAnimDefs.animationId, (byte) 13);
+					AnimationDefinitions animationdefinitions_15 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotAnimDefs.animationId, (byte) -33);
+					AnimationDefinitions animationdefinitions_13 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(currSpotAnimDefs.animationId, (byte) 13);
 					if (animationdefinitions_15.priority < animationdefinitions_13.priority) {
 						return;
 					}
@@ -347,7 +347,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 
 		byte b_14 = 0;
-		if (spotAnimId != -1 && !IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) 62).aBool6968) {
+		if (spotAnimId != -1 && !IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) 62).aBool6968) {
 			b_14 = 2;
 		}
 
@@ -359,7 +359,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		class161_8.anInt2011 = i_4;
 		class161_8.anInt2013 = i_2 >> 16;
 		class161_8.anInt2015 = i_3;
-		class161_8.animation.method7571(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
+		class161_8.animation.method7571(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
 	}
 
 	public final void method15801() {
@@ -372,7 +372,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		boolean bool_9 = true;
 
 		int i_10;
-		for (i_10 = 0; i_10 < Class58.aClass529_527.anInt7026; i_10++) {
+		for (i_10 = 0; i_10 < QuickchatFiller.aClass529_527.anInt7026; i_10++) {
 			if (this.anIntArray10351[i_10] > i_5) {
 				bool_8 = false;
 			} else {
@@ -384,7 +384,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_11 = -1;
 		int i_12 = 0;
 		if (i_1 >= 0) {
-			HitsplatDefinitions hitsplatdefinitions_13 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i_1);
+			HitsplatDefinitions hitsplatdefinitions_13 = IndexLoaders.HITSPLAT_LOADER.getDefinitions(i_1);
 			i_11 = hitsplatdefinitions_13.anInt2839;
 			i_12 = hitsplatdefinitions_13.anInt2841;
 		}
@@ -403,7 +403,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_15 = this.anIntArray10329[0];
 			}
 
-			for (int i_14 = 1; i_14 < Class58.aClass529_527.anInt7026; i_14++) {
+			for (int i_14 = 1; i_14 < QuickchatFiller.aClass529_527.anInt7026; i_14++) {
 				if (i_11 == 0) {
 					if (this.anIntArray10351[i_14] < i_15) {
 						i_10 = i_14;
@@ -423,9 +423,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				this.aByte10358 = 0;
 			}
 
-			for (i_15 = 0; i_15 < Class58.aClass529_527.anInt7026; i_15++) {
+			for (i_15 = 0; i_15 < QuickchatFiller.aClass529_527.anInt7026; i_15++) {
 				byte b_16 = this.aByte10358;
-				this.aByte10358 = (byte) ((this.aByte10358 + 1) % Class58.aClass529_527.anInt7026);
+				this.aByte10358 = (byte) ((this.aByte10358 + 1) % QuickchatFiller.aClass529_527.anInt7026);
 				if (this.anIntArray10351[b_16] <= i_5) {
 					i_10 = b_16;
 					break;
@@ -444,7 +444,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public final void displayHitbar(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		HitbarDefinitions hitbardefinitions_8 = IndexLoaders.HITBAR_INDEX.getDefinitions(i_1, -133815568);
+		HitbarDefinitions hitbardefinitions_8 = IndexLoaders.HITBAR_LOADER.getDefinitions(i_1, -133815568);
 		Class275_Sub7 class275_sub7_9 = null;
 		Class275_Sub7 class275_sub7_10 = null;
 		int i_11 = hitbardefinitions_8.anInt2440;
@@ -468,7 +468,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 		}
 
-		if (class275_sub7_10 != null || i_12 < Class58.aClass529_527.anInt7032) {
+		if (class275_sub7_10 != null || i_12 < QuickchatFiller.aClass529_527.anInt7032) {
 			class275_sub7_13 = new Class275_Sub7(hitbardefinitions_8);
 			if (class275_sub7_9 == null) {
 				this.aClass457_10333.method7647(class275_sub7_13, -1998416604);
@@ -477,8 +477,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 
 			class275_sub7_13.method12601(i_2 + i_4, i_5, i_6, i_3, -1371931787);
-			if (i_12 >= Class58.aClass529_527.anInt7032) {
-				class275_sub7_10.method4887((byte) -33);
+			if (i_12 >= QuickchatFiller.aClass529_527.anInt7032) {
+				class275_sub7_10.method4887();
 			}
 		}
 
@@ -567,7 +567,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (this.loadedInterfaceId == i_1) {
 			return true;
 		} else {
-			this.inter = Class288.getInterface(i_1, (int[]) null, (Interface) null, true, (byte) -56);
+			this.inter = SkyboxIndexLoader.getInterface(i_1, (int[]) null, (Interface) null, true, (byte) -56);
 			if (this.inter == null) {
 				return false;
 			} else {
@@ -654,7 +654,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 			Class161 class161_10 = this.aClass161Array10339[i_8];
 			if (class161_10.spotAnimId != -1 && !class161_10.animation.hasSpeed(-544447199)) {
-				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(class161_10.spotAnimId, (byte) 62);
+				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(class161_10.spotAnimId, (byte) 62);
 				boolean bool_12 = spotanimdefinitions_11.aByte6982 == 3 && (i_4 != 0 || i_5 != 0);
 				int i_13 = i_3;
 				if (bool_12) {
@@ -743,15 +743,15 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public RenderAnimDefs getRenderAnimDefs() {
 		int i_2 = this.getRenderAnimation();
-		return i_2 == -1 ? RenderAnimIndexLoader.aClass227_2669 : IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_2, (byte) -2);
+		return i_2 == -1 ? RenderAnimIndexLoader.aClass227_2669 : IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(i_2, (byte) -2);
 	}
 
 	public final void method15857(int i_1) {
-		HitbarDefinitions hitbardefinitions_3 = IndexLoaders.HITBAR_INDEX.getDefinitions(i_1, 757267285);
+		HitbarDefinitions hitbardefinitions_3 = IndexLoaders.HITBAR_LOADER.getDefinitions(i_1, 757267285);
 
 		for (Class275_Sub7 class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7659(); class275_sub7_4 != null; class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 67)) {
 			if (hitbardefinitions_3 == class275_sub7_4.aClass198_7863) {
-				class275_sub7_4.method4887((byte) -33);
+				class275_sub7_4.method4887();
 				break;
 			}
 		}
@@ -786,11 +786,11 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.drawPriority = 0;
 		this.anInt10325 = 0;
 		this.aByte10358 = 0;
-		this.anIntArray10316 = new int[Class58.aClass529_527.anInt7026];
-		this.anIntArray10329 = new int[Class58.aClass529_527.anInt7026];
-		this.anIntArray10351 = new int[Class58.aClass529_527.anInt7026];
-		this.anIntArray10331 = new int[Class58.aClass529_527.anInt7026];
-		this.anIntArray10332 = new int[Class58.aClass529_527.anInt7026];
+		this.anIntArray10316 = new int[QuickchatFiller.aClass529_527.anInt7026];
+		this.anIntArray10329 = new int[QuickchatFiller.aClass529_527.anInt7026];
+		this.anIntArray10351 = new int[QuickchatFiller.aClass529_527.anInt7026];
+		this.anIntArray10331 = new int[QuickchatFiller.aClass529_527.anInt7026];
+		this.anIntArray10332 = new int[QuickchatFiller.aClass529_527.anInt7026];
 		this.aClass457_10333 = new EntityList();
 		this.faceEntity = -1;
 		this.currentAnimations = null;

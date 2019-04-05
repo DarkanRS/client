@@ -77,7 +77,7 @@ public class MapRegion {
 		this.method4456(Class480.method8046(Class393.preferences.aClass468_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
 		int i_2 = this.coordGrid.x;
 		int i_3 = this.coordGrid.y;
-		int mapBaseX = (Class31.anInt361 >> 12) + (i_2 >> 3);
+		int mapBaseX = (IdentitiKitIndexLoader.anInt361 >> 12) + (i_2 >> 3);
 		int mapBaseY = (Class246.anInt3029 >> 12) + (i_3 >> 3);
 		VertexNormal.myPlayer.plane = 0;
 		Class4.anInt35 = 0;
@@ -594,14 +594,14 @@ public class MapRegion {
 			Class282_Sub44.anInt8064 -= i_4;
 			Class96_Sub13.anInt9368 -= i_3;
 			OutgoingLoginPacket.anInt4280 -= i_4;
-			Class31.anInt361 -= i_3 * 512;
+			IdentitiKitIndexLoader.anInt361 -= i_3 * 512;
 			Class246.anInt3029 -= i_4 * 512;
 			if (Math.abs(i_3) > this.sizeX || Math.abs(i_4) > this.sizeY) {
 				this.aClass239_3175.method4048(1347425088);
 			}
 		}
 		Class350.method6189((byte) 120);
-		Class58.method1139(-1725445379);
+		QuickchatFiller.method1139(-1725445379);
 		client.aClass465_7334.method7749(189639583);
 		client.aClass482_7333.method8118(-886454007);
 		client.aClass457_7335.method7651();
@@ -921,7 +921,7 @@ public class MapRegion {
 						client.aClass281Array7180[i_5].method4978(this.sceneObjectManager);
 					}
 				}
-				Class405.method6823();
+				ClanVarDefinitions.method6823();
 				Class48_Sub2.method14571();
 				TCPPacket tcpmessage_22;
 				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.getConnection() != null && client.gameState == 18) {

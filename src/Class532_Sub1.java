@@ -23,16 +23,16 @@ public class Class532_Sub1 extends Class532 {
 			if (client.fullScreenFrame == null) {
 				Container container_2 = Class371.getActiveContainer();
 				if (container_2 != null) {
-					Class45.anInt434 = container_2.getSize().width;
+					SunIndexLoader.anInt434 = container_2.getSize().width;
 					Class107.anInt1082 = container_2.getSize().height;
 					Insets insets_3;
 					if (container_2 == client.engineFrame) {
 						insets_3 = client.engineFrame.getInsets();
-						Class45.anInt434 -= insets_3.left + insets_3.right;
+						SunIndexLoader.anInt434 -= insets_3.left + insets_3.right;
 						Class107.anInt1082 -= insets_3.bottom + insets_3.top;
 					}
-					if (Class45.anInt434 <= 0) {
-						Class45.anInt434 = 1;
+					if (SunIndexLoader.anInt434 <= 0) {
+						SunIndexLoader.anInt434 = 1;
 					}
 					if (Class107.anInt1082 <= 0) {
 						Class107.anInt1082 = 1;
@@ -41,7 +41,7 @@ public class Class532_Sub1 extends Class532 {
 						Class46.method935((byte) 0);
 					} else {
 						Class349.anInt4083 = client.anInt7439;
-						client.anInt3250 = (Class45.anInt434 - client.anInt7439) / 2;
+						client.anInt3250 = (SunIndexLoader.anInt434 - client.anInt7439) / 2;
 						client.anInt3243 = client.anInt7312 * -1929118563;
 						client.anInt3251 = 0;
 					}
@@ -62,7 +62,7 @@ public class Class532_Sub1 extends Class532 {
 					if (client.anInt7349 != -1) {
 						Class516.method8867(true);
 					}
-					Class275.method4891((byte) -40);
+					EntityNode.method4891((byte) -40);
 				}
 			}
 		}

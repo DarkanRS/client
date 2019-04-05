@@ -55,7 +55,7 @@ public class Class150 {
 			if (animable_0.aClass161Array10339[i_3].spotAnimId != -1) {
 				Animation animation_4 = animable_0.aClass161Array10339[i_3].animation;
 				if (animation_4.hasSpeed(1176831971)) {
-					SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_3].spotAnimId, (byte) 52);
+					SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_3].spotAnimId, (byte) 52);
 					AnimationDefinitions animationdefinitions_6 = animation_4.getDefs();
 					if (spotanimdefinitions_5.aBool6968) {
 						if (animationdefinitions_6.animatingPrecedence == 3) {
@@ -118,9 +118,9 @@ public class Class150 {
 	}
 
 	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4) {
-		CS2Executor cs2executor_6 = Class125.getNextScriptExecutor(1132906159);
+		CS2Executor cs2executor_6 = Class125.getNextScriptExecutor();
 		cs2executor_6.aClass521_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1_4;
-		Class107.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 35);
+		CS2Executor.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 35);
 		cs2executor_6.aClass521_Sub1_Sub2_Sub1_7014 = null;
 	}
 }

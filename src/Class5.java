@@ -85,7 +85,7 @@ public class Class5 {
 			Class448.lobbyConnectionInfo.swap(876652608);
 			Class14.anInt133 = 0;
 			++Class14.anInt134;
-			Class192.ACCOUNT_CREATION_STAGE = Class1.REQUEST;
+			Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.REQUEST;
 		} else {
 			Class192.ACCOUNT_CREATION_STAGE = null;
 			Class96_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5731;

@@ -480,7 +480,7 @@ public class Class8_Sub3 extends FontRenderer {
 			i_4 = (int) vector3_6.x;
 			i_5 = (int) vector3_6.z;
 		}
-		Class210.method3612(class521_sub1_0.plane, i_4, i_5, 0, i_1, bool_2, (byte) 29);
+		HitsplatIndexLoader.method3612(class521_sub1_0.plane, i_4, i_5, 0, i_1, bool_2, (byte) 29);
 	}
 
 	public static int method14337(int i_0, int i_1, int i_2) {
@@ -508,7 +508,7 @@ public class Class8_Sub3 extends FontRenderer {
 				string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";
 			}
 			Class151.method2594(string_5, exception_8, (byte) -124);
-			Class438.method7333(false, 2019589827);
+			CursorIndexLoader.method7333(false, 2019589827);
 			return true;
 		}
 	}

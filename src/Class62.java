@@ -58,7 +58,7 @@ public class Class62 implements Interface3 {
 			tcpmessage_3.buffer.writeShort(i_0);
 			client.aClass184_7475.queuePacket(tcpmessage_3);
 		} else {
-			Class210.method3614(Class397.aClass397_4800, i_0, -1, (byte) 69);
+			HitsplatIndexLoader.method3614(Class397.aClass397_4800, i_0, -1, (byte) 69);
 		}
 	}
 

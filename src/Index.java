@@ -1,21 +1,13 @@
 public final class Index {
 
 	static Class395 aClass395_3684 = new Class395();
-
 	static boolean aBool3692 = false;
-
 	static int anInt3689 = 0;
-
 	ReferenceTable referenceTable = null;
-
 	Object[] archives;
-
 	Object[][] archiveFiles;
-
 	JS5FileWorker aClass327_3690;
-
 	boolean aBool3685;
-
 	int anInt3683;
 
 	public int getCrc() {
@@ -71,7 +63,7 @@ public final class Index {
 			return false;
 		} else {
 			string_1 = string_1.toLowerCase();
-			int i_2 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -746218156), -1797692054);
+			int i_2 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -1797692054);
 			return i_2 >= 0;
 		}
 	}
@@ -81,7 +73,7 @@ public final class Index {
 			return -1;
 		} else {
 			string_1 = string_1.toLowerCase();
-			int i_2 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -221631935), -1537354695);
+			int i_2 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -1537354695);
 			return !this.archiveExists(i_2) ? -1 : i_2;
 		}
 	}
@@ -188,27 +180,27 @@ public final class Index {
 		} else {
 			string_1 = string_1.toLowerCase();
 			string_2 = string_2.toLowerCase();
-			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1816008366), -1883190493);
+			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -1883190493);
 			if (i_4 < 0) {
 				return false;
 			} else {
-				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2, -92083175), -1658700496);
+				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2), -1658700496);
 				return i_5 >= 0;
 			}
 		}
 	}
 
-	public synchronized byte[] method5626(String string_1, String string_2) {
+	public synchronized byte[] getFileByName(String string_1, String string_2) {
 		if (!this.referenceTableLoaded()) {
 			return null;
 		} else {
 			string_1 = string_1.toLowerCase();
 			string_2 = string_2.toLowerCase();
-			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1702952082), -1918848832);
+			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -1918848832);
 			if (!this.archiveExists(i_4)) {
 				return null;
 			} else {
-				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2, -1819598468), -1926581994);
+				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2), -1926581994);
 				return this.getFile(i_4, i_5);
 			}
 		}
@@ -220,11 +212,11 @@ public final class Index {
 		} else {
 			string_1 = string_1.toLowerCase();
 			string_2 = string_2.toLowerCase();
-			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, 639316649), -1994003594);
+			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -1994003594);
 			if (!this.archiveExists(i_4)) {
 				return false;
 			} else {
-				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2, -316679725), -1542672707);
+				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2), -1542672707);
 				return this.load(i_4, i_5);
 			}
 		}
@@ -240,7 +232,7 @@ public final class Index {
 			return false;
 		} else {
 			string_1 = string_1.toLowerCase();
-			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1032103959), -2031296285);
+			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -2031296285);
 			return this.loadArchive(i_3);
 		}
 	}
@@ -248,7 +240,7 @@ public final class Index {
 	public void method5630(String string_1, int i_2) {
 		if (this.referenceTableLoaded()) {
 			string_1 = string_1.toLowerCase();
-			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, 320473901), -2076023188);
+			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -2076023188);
 			this.method5606(i_3);
 		}
 	}
@@ -258,7 +250,7 @@ public final class Index {
 			return 0;
 		} else {
 			string_1 = string_1.toLowerCase();
-			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1627018596), -1645709178);
+			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1), -1645709178);
 			return this.method5613(i_3, (byte) -6);
 		}
 	}
@@ -600,7 +592,7 @@ public final class Index {
 	}
 
 	public static IComponentDefinitions method5694(int i_0, int i_1, int i_2) {
-		IComponentDefinitions icomponentdefinitions_3 = Class117.getInterfaceComponent(i_0);
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_0);
 		return i_1 == -1 ? icomponentdefinitions_3 : (icomponentdefinitions_3 != null && icomponentdefinitions_3.aClass118Array1438 != null && i_1 < icomponentdefinitions_3.aClass118Array1438.length ? icomponentdefinitions_3.aClass118Array1438[i_1] : null);
 	}
 }

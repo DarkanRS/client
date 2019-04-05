@@ -1,16 +1,12 @@
 public class Defaults6Loader {
 
 	public int[] equipmentSlots;
-
 	public int anInt6990 = -1;
-
 	public int anInt6991 = -1;
-
 	public int[] anIntArray6992;
-
 	public int[] anIntArray6993;
 
-	void method11245(RsByteBuffer rsbytebuffer_1) {
+	void decode(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 == 0) {
@@ -46,7 +42,7 @@ public class Defaults6Loader {
 
 	public Defaults6Loader(Index index_1) {
 		byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_6.fileId);
-		this.method11245(new RsByteBuffer(bytes_2));
+		this.decode(new RsByteBuffer(bytes_2));
 		if (this.equipmentSlots == null) {
 			throw new RuntimeException("");
 		}
@@ -71,7 +67,7 @@ public class Defaults6Loader {
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub1_8197, Class106.aClass106_1075.anInt1071, -1318681666);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub12_8195, 0, 1179600345);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub14_8211, 1, 991235937);
-		Texture.method5777(1560410818);
+		ImageIndexLoader.method5777(1560410818);
 		Class393.preferences.setValue(Class393.preferences.aClass468_Sub7_8210, 0, -231227368);
 		Class393.preferences.setValue(Class393.preferences.graphics, 4, -702190975);
 		Class94.method1589();

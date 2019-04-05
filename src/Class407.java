@@ -12,7 +12,7 @@ public class Class407 {
 	}
 
 	static final void method6871(int i_0, int i_1, int i_2, int i_3, int i_4) {
-		Class210.method3612(i_0, i_1, i_2, 0, i_3, false, (byte) -68);
+		HitsplatIndexLoader.method3612(i_0, i_1, i_2, 0, i_3, false, (byte) -68);
 	}
 
 }

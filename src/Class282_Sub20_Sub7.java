@@ -63,7 +63,7 @@ public class Class282_Sub20_Sub7 extends Class282_Sub20 {
 	static final void method15240() {
 		Message.method7275(Renderers.SOFTWARE_RENDERER);
 		if (client.anInt7472 != Class4.anInt35) {
-			Class405.method6823();
+			ClanVarDefinitions.method6823();
 		}
 
 	}

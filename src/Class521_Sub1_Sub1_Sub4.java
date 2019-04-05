@@ -60,7 +60,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15929(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, short s_4) {
-		SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_3, (byte) -22);
+		SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(i_3, (byte) -22);
 		Ground class390_6 = this.aClass206_7970.aClass390Array2607[this.plane];
 		Ground class390_7 = this.collisionPlane < 3 ? this.aClass206_7970.aClass390Array2607[this.collisionPlane + 1] : null;
 		Vector3 vector3_8 = this.method11166().aClass385_3595;
@@ -96,7 +96,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		super(sceneobjectmanager_1, i_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, i_12, false, (byte) 0);
 		this.anInt10406 = i_2;
 		this.anInt10408 = i_13;
-		SpotAnimDefinitions spotanimdefinitions_15 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt10406, (byte) -53);
+		SpotAnimDefinitions spotanimdefinitions_15 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.anInt10406, (byte) -53);
 		int i_16 = spotanimdefinitions_15.animationId;
 		if (i_16 != -1) {
 			this.aClass456_10404 = new Class456_Sub2(this);

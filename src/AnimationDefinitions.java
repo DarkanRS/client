@@ -136,7 +136,7 @@ public class AnimationDefinitions {
 				} else if (i_2 == 249) {
 					i_4 = rsbytebuffer_1.readUnsignedByte();
 					if (this.aClass465_5910 == null) {
-						i_5 = Texture.nextPowerOfTwo(i_4, 1720003752);
+						i_5 = ImageIndexLoader.nextPowerOfTwo(i_4, 1720003752);
 						this.aClass465_5910 = new IterableNodeMap(i_5);
 					}
 					for (i_5 = 0; i_5 < i_4; i_5++) {

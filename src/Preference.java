@@ -39,7 +39,7 @@ public abstract class Preference {
 	public static String method7788(long long_0, int i_2) {
 		Calendar calendar_5;
 		if (true) {
-			Class288.method5083(long_0);
+			SkyboxIndexLoader.method5083(long_0);
 			calendar_5 = Class407.aCalendar4846;
 		} else {
 			Class155.method2634(long_0);
@@ -59,7 +59,7 @@ public abstract class Preference {
 			IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3152, (RsBitsBuffer) null));
 		} else {
 			IndexLoaders.MAP_REGION_DECODER.method4547((byte) -107);
-			Class58.method1139(-1771275616);
+			QuickchatFiller.method1139(-1771275616);
 		}
 
 	}

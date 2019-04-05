@@ -36,7 +36,7 @@ public class Class225_Sub5 extends RouteStrategy {
 			i_12 = sceneobject_10.method92(-401484615) & 0x3;
 			i_13 = sceneobject_10.method89(2041579125);
 			if (objectdefinitions_11.mapSpriteId != -1) {
-				Class415.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, -1222879504);
+				VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, -1222879504);
 			} else {
 				i_14 = i_6;
 				if (objectdefinitions_11.interactable > 0) {
@@ -83,7 +83,7 @@ public class Class225_Sub5 extends RouteStrategy {
 			i_12 = sceneobject_10.method92(-763690677) & 0x3;
 			i_13 = sceneobject_10.method89(1162036783);
 			if (objectdefinitions_11.mapSpriteId != -1) {
-				Class415.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1089913418);
+				VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1089913418);
 			} else if (i_13 == SceneObjectType.WALL_INTERACT.type) {
 				i_14 = -1118482;
 				if (objectdefinitions_11.interactable > 0) {
@@ -101,7 +101,7 @@ public class Class225_Sub5 extends RouteStrategy {
 			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1659848045).getObjectDefinitions(sceneobject_10.getId(-1741343457));
 			i_12 = sceneobject_10.method92(-1014923705) & 0x3;
 			if (objectdefinitions_11.mapSpriteId != -1) {
-				Class415.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1254236729);
+				VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1254236729);
 			}
 		}
 	}

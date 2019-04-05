@@ -154,7 +154,7 @@ public class Class14 {
 					ints_16[i_9] = buffer.readUnsignedByte();
 					ints_17[i_9] = buffer.readShortLE();
 				}
-				Class331.method5923(npc, ints_15, ints_16, ints_17, -125170497);
+				QuickchatCategoryLoader.method5923(npc, ints_15, ints_16, ints_17, -125170497);
 			}
 			if ((i_4 & 0x800) != 0) {
 				i_14 = buffer.readShortLE();

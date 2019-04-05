@@ -1,4 +1,4 @@
-public class Class275_Sub4 extends Class275 {
+public class Class275_Sub4 extends EntityNode {
 
 	int anInt7838 = (int) (TextureDetails.time() / 1000L);
 

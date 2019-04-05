@@ -20,7 +20,7 @@ public class Class366 implements Interface3 {
 		for (int i_6 = 7; i_6 >= 0; --i_6) {
 			for (int i_7 = 127; i_7 >= 0; --i_7) {
 				int i_8 = (i_4 & 0x3f) << 10 | (i_6 & 0x7) << 7 | i_7 & 0x7f;
-				Class38.method854(false, true, -1039964582);
+				SunDefinitions.method854(false, true, -1039964582);
 				int i_9 = Class540.anIntArray7136[i_8];
 				Class13.method508(false, true, -1893866080);
 				graphicalrenderer_0.B((i_7 * icomponentdefinitions_3.anInt1301 >> 7) + i_1, i_2 + ((7 - i_6) * icomponentdefinitions_3.anInt1429 >> 3), (icomponentdefinitions_3.anInt1301 >> 7) + 1, (icomponentdefinitions_3.anInt1429 >> 3) + 1, i_9, 0);

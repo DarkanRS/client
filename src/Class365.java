@@ -41,17 +41,17 @@ public class Class365 implements Interface3 {
 				Class78.method1384();
 			}
 
-			if (state != 10 && Class233.aClass202_2883 != null) {
-				Class233.aClass202_2883.method3318(1798206755);
-				Class233.aClass202_2883 = null;
+			if (state != 10 && ClanVarSettingsIndexLoader.aClass202_2883 != null) {
+				ClanVarSettingsIndexLoader.aClass202_2883.method3318(1798206755);
+				ClanVarSettingsIndexLoader.aClass202_2883 = null;
 			}
 
 			if (state == 5) {
-				Class348.method6175(client.gameState == 3 || client.gameState == 8 || client.anInt7349 != Class58.aClass529_527.anInt7036, 618699905);
+				Class348.method6175(client.gameState == 3 || client.gameState == 8 || client.anInt7349 != QuickchatFiller.aClass529_527.anInt7036, 618699905);
 			}
 
 			if (state == 0) {
-				Class346.method6161(client.anInt7349 != Class58.aClass529_527.anInt7027);
+				Class346.method6161(client.anInt7349 != QuickchatFiller.aClass529_527.anInt7027);
 			}
 
 			if (state != 14 && state != 12) {
@@ -61,7 +61,7 @@ public class Class365 implements Interface3 {
 					Class247.method4251();
 				}
 			} else {
-				Class331.method5921();
+				QuickchatCategoryLoader.method5921();
 			}
 
 			if (Class464.method7742(state, (byte) 74)) {

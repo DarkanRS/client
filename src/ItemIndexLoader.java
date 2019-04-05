@@ -8,14 +8,14 @@ public class ItemIndexLoader implements IndexLoader {
 	SoftwareItemRender softwareItemRender = new SoftwareItemRender();
 	Game game;
 	Language language;
-	ParamDefinitionsLoader attrDefaults;
+	ParamIndexLoader attrDefaults;
 	Index fs19;
 	Index meshIndex;
 	public int maxItemsCount;
 	String[] defaultGroundOptions;
 	String[] defaultInventoryOptions;
 
-	public ItemDefinitions getItemDefinitions(int i_1, int i_2) {
+	public ItemDefinitions getItemDefinitions(int i_1) {
 		SoftCache softcache_4 = this.cache;
 		ItemDefinitions itemdefinitions_3;
 		synchronized (this.cache) {
@@ -42,15 +42,15 @@ public class ItemIndexLoader implements IndexLoader {
 
 			itemdefinitions_3.postDecode();
 			if (itemdefinitions_3.certTemplateId != -1) {
-				itemdefinitions_3.generateCert(this.getItemDefinitions(itemdefinitions_3.certTemplateId, 1167906942), this.getItemDefinitions(itemdefinitions_3.certId, 1245595517));
+				itemdefinitions_3.generateCert(this.getItemDefinitions(itemdefinitions_3.certTemplateId), this.getItemDefinitions(itemdefinitions_3.certId));
 			}
 
 			if (itemdefinitions_3.lendTemplateId != -1) {
-				itemdefinitions_3.generateLend(this.getItemDefinitions(itemdefinitions_3.lendTemplateId, 294444778), this.getItemDefinitions(itemdefinitions_3.lendId, 1908925068));
+				itemdefinitions_3.generateLend(this.getItemDefinitions(itemdefinitions_3.lendTemplateId), this.getItemDefinitions(itemdefinitions_3.lendId));
 			}
 
 			if (itemdefinitions_3.bindTemplateId != -1) {
-				itemdefinitions_3.generateBind(this.getItemDefinitions(itemdefinitions_3.bindTemplateId, 828359432), this.getItemDefinitions(itemdefinitions_3.bindId, 1928714230));
+				itemdefinitions_3.generateBind(this.getItemDefinitions(itemdefinitions_3.bindTemplateId), this.getItemDefinitions(itemdefinitions_3.bindId));
 			}
 
 			if (!this.membersOnly && itemdefinitions_3.membersOnly) {
@@ -61,10 +61,9 @@ public class ItemIndexLoader implements IndexLoader {
 				itemdefinitions_3.quests = null;
 				if (itemdefinitions_3.cs2Map != null) {
 					boolean bool_8 = false;
-
 					for (Node node_6 = itemdefinitions_3.cs2Map.method7750(-778830741); node_6 != null; node_6 = itemdefinitions_3.cs2Map.method7751((byte) 57)) {
-						ParamDefinitions attributedefault_7 = this.attrDefaults.method7069((int) node_6.data);
-						if (attributedefault_7.autoDisable) {
+						ParamDefinitions param = this.attrDefaults.getParam((int) node_6.data);
+						if (param.autoDisable) {
 							node_6.remove();
 						} else {
 							bool_8 = true;
@@ -93,7 +92,7 @@ public class ItemIndexLoader implements IndexLoader {
 			}
 		}
 
-		ItemDefinitions itemdefinitions_19 = this.getItemDefinitions(i_3, 1779200762);
+		ItemDefinitions itemdefinitions_19 = this.getItemDefinitions(i_3);
 		if (i_4 > 1 && itemdefinitions_19.stackIds != null) {
 			int i_14 = -1;
 
@@ -104,7 +103,7 @@ public class ItemIndexLoader implements IndexLoader {
 			}
 
 			if (i_14 != -1) {
-				itemdefinitions_19 = this.getItemDefinitions(i_14, 486684892);
+				itemdefinitions_19 = this.getItemDefinitions(i_14);
 			}
 		}
 
@@ -199,7 +198,7 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public ItemIndexLoader(Game game_1, Language xlanguage_2, ParamDefinitionsLoader itemdefaultsloader_4, Index index_5, Index index_6) {
+	public ItemIndexLoader(Game game_1, Language xlanguage_2, ParamIndexLoader itemdefaultsloader_4, Index index_5, Index index_6) {
 		this.game = game_1;
 		this.language = xlanguage_2;
 		this.membersOnly = true;

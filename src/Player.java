@@ -216,8 +216,8 @@ public class Player extends Animable {
 
 		for (int i_5 = 0; i_5 < this.aClass161Array10339.length; i_5++) {
 			if (this.aClass161Array10339[i_5].spotAnimId != -1) {
-				SpotAnimDefinitions spotanimdefinitions_6 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_5].spotAnimId, (byte) 55);
-				if (spotanimdefinitions_6.aBool6968 && spotanimdefinitions_6.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_6.animationId, (byte) -26).walkingPrecedence == 1) {
+				SpotAnimDefinitions spotanimdefinitions_6 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_5].spotAnimId, (byte) 55);
+				if (spotanimdefinitions_6.aBool6968 && spotanimdefinitions_6.animationId != -1 && IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_6.animationId, (byte) -26).walkingPrecedence == 1) {
 					this.aClass161Array10339[i_5].animation.update(-1);
 					this.aClass161Array10339[i_5].spotAnimId = -1;
 				}
@@ -264,7 +264,7 @@ public class Player extends Animable {
 	}
 
 	public boolean method15887() {
-		return Class58.aClass529_527.aBool7035;
+		return QuickchatFiller.aClass529_527.aBool7035;
 	}
 
 	public int getSize() {
@@ -347,7 +347,7 @@ public class Player extends Animable {
 			i_2 |= 0x80000;
 		}
 
-		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.playerAppearance.method3998(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_10, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437);
+		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.playerAppearance.method3998(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_10, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437);
 		int i_13 = Class46.method932();
 		if (Engine.MAX_MEMORY < 96 && i_13 > 50) {
 			JS5CacheFile.method3359();
@@ -404,7 +404,7 @@ public class Player extends Animable {
 	}
 
 	public void sendChat(String string_1, int i_2, int i_3, byte b_4) {
-		this.method15875(string_1, i_2, i_3, Class204.method3363(592406309) * Class58.aClass529_527.anInt7043, 1858323003);
+		this.method15875(string_1, i_2, i_3, Class204.method3363(592406309) * QuickchatFiller.aClass529_527.anInt7043, 1858323003);
 	}
 
 	public int method15794() {
@@ -656,7 +656,7 @@ public class Player extends Animable {
 	}
 
 	public boolean method15871() {
-		return Class58.aClass529_527.aBool7035;
+		return QuickchatFiller.aClass529_527.aBool7035;
 	}
 
 	final boolean method13026() {
@@ -698,15 +698,15 @@ public class Player extends Animable {
 	}
 
 	public boolean method15872() {
-		return Class58.aClass529_527.aBool7035;
+		return QuickchatFiller.aClass529_527.aBool7035;
 	}
 
 	public boolean method15873() {
-		return Class58.aClass529_527.aBool7035;
+		return QuickchatFiller.aClass529_527.aBool7035;
 	}
 
 	public boolean method15814() {
-		return Class58.aClass529_527.aBool7035;
+		return QuickchatFiller.aClass529_527.aBool7035;
 	}
 
 	public Class163 method15809() {
@@ -845,7 +845,7 @@ public class Player extends Animable {
 					if (itemId >= 16384) {
 						itemId -= 16384;
 						bodyAppearances[i] = itemId | 0x40000000;
-						wornItems[i] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(itemId, 233758785);
+						wornItems[i] = IndexLoaders.ITEM_LOADER.getItemDefinitions(itemId);
 						i_18 = wornItems[i].teamId;
 						if (i_18 != 0) {
 							this.teamId = i_18;
@@ -946,7 +946,7 @@ public class Player extends Animable {
 		if (this.index == client.anInt7315 && ints_22 != null) {
 			for (i_18 = 0; i_18 < ints_21.length; i_18++) {
 				if (ints_21[i_18] != ints_22[i_18]) {
-					IndexLoaders.ITEM_INDEX_LOADER.method7151((byte) -16);
+					IndexLoaders.ITEM_LOADER.method7151((byte) -16);
 					break;
 				}
 			}

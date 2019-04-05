@@ -218,7 +218,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15907(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		SpotAnimDefinitions spotanimdefinitions_4 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -54);
+		SpotAnimDefinitions spotanimdefinitions_4 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -54);
 		return spotanimdefinitions_4.method11228(graphicalrenderer_1, i_2, this.aClass456_10399, (byte) 2, (byte) 57);
 	}
 
@@ -302,7 +302,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		this.aBool10400 = bool_15;
 		this.aBool10398 = false;
 		this.anInt10391 = i_16;
-		int i_17 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -8).animationId;
+		int i_17 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -8).animationId;
 		this.aClass456_10399 = new Class456_Sub2(this);
 		this.aClass456_10399.update(i_17);
 		this.method13008(1, (byte) -89);

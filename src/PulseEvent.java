@@ -62,19 +62,19 @@ public class PulseEvent extends CacheableNode {
 				Class462.aStringArray5548[(int) value] = event.string;
 				client.anIntArray7387[++client.anInt7388 - 1 & 0x1f] = (int) value;
 			} else if (type == 3) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (!event.string.equals(icomponentdefinitions_5.text)) {
 					icomponentdefinitions_5.text = event.string;
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) -73);
 				}
 			} else if (type == 22) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (event.primary == 1 != icomponentdefinitions_5.aBool1363) {
 					icomponentdefinitions_5.aBool1363 = event.primary == 1;
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) -26);
 				}
 			} else if (type == 4) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = event.primary;
 				int i_7 = event.secondary;
 				int i_8 = event.tertiary;
@@ -86,7 +86,7 @@ public class PulseEvent extends CacheableNode {
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) 2);
 				}
 			} else if (type == 5) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (event.primary != icomponentdefinitions_5.animation) {
 					if (event.primary != -1) {
 						if (icomponentdefinitions_5.aClass456_1437 == null) {
@@ -105,20 +105,20 @@ public class PulseEvent extends CacheableNode {
 				int i_7 = i_12 >> 5 & 0x1f;
 				int i_8 = i_12 & 0x1f;
 				int i_9 = (i_7 << 11) + (i_6 << 19) + (i_8 << 3);
-				IComponentDefinitions icomponentdefinitions_10 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_10 = IComponentDefinitions.getDefs((int) value);
 				if (i_9 != icomponentdefinitions_10.color) {
 					icomponentdefinitions_10.color = i_9;
 					Class109.redrawComponent(icomponentdefinitions_10, (byte) 85);
 				}
 			} else if (type == 7) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				boolean bool_13 = event.primary == 1;
 				if (bool_13 != icomponentdefinitions_5.hidden) {
 					icomponentdefinitions_5.hidden = bool_13;
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) -2);
 				}
 			} else if (type == 8) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (event.primary != icomponentdefinitions_5.spritePitch || event.secondary != icomponentdefinitions_5.spriteRoll || icomponentdefinitions_5.spriteScale != event.tertiary) {
 					icomponentdefinitions_5.spritePitch = event.primary;
 					icomponentdefinitions_5.spriteRoll = event.secondary;
@@ -133,14 +133,14 @@ public class PulseEvent extends CacheableNode {
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) -89);
 				}
 			} else if (type == 9) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (icomponentdefinitions_5.anInt1426 != event.primary || event.secondary != icomponentdefinitions_5.anInt1427) {
 					icomponentdefinitions_5.anInt1426 = event.primary;
 					icomponentdefinitions_5.anInt1427 = event.secondary;
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) -62);
 				}
 			} else if (type == 10) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (event.primary != icomponentdefinitions_5.anInt1293 || event.secondary != icomponentdefinitions_5.anInt1334 || event.tertiary != icomponentdefinitions_5.spriteYaw) {
 					icomponentdefinitions_5.anInt1293 = event.primary;
 					icomponentdefinitions_5.anInt1334 = event.secondary;
@@ -148,14 +148,14 @@ public class PulseEvent extends CacheableNode {
 					Class109.redrawComponent(icomponentdefinitions_5, (byte) -28);
 				}
 			} else if (type == 11) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.aByte1333 = 0;
 				icomponentdefinitions_5.anInt1299 = icomponentdefinitions_5.basePositionX = event.primary;
 				icomponentdefinitions_5.aByte1355 = 0;
 				icomponentdefinitions_5.anInt1428 = icomponentdefinitions_5.basePositionY = event.secondary;
 				Class109.redrawComponent(icomponentdefinitions_5, (byte) 30);
 			} else if (type == 12) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = event.primary;
 				if (icomponentdefinitions_5 != null && icomponentdefinitions_5.type == 0) {
 					if (i_6 > icomponentdefinitions_5.anInt1314 - icomponentdefinitions_5.anInt1429) {
@@ -170,30 +170,30 @@ public class PulseEvent extends CacheableNode {
 					}
 				}
 			} else if (type == 14) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.anInt1320 = event.primary;
 			} else if (type == 15) {
 				Class187.aBool2360 = true;
 				Class187.anInt2361 = event.primary;
 				Class187.anInt2359 = event.secondary;
 			} else if (type == 16) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.anInt1277 = event.primary;
 			} else if (type == 20) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.aBool1356 = event.primary == 1;
 			} else if (type == 21) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.aBool1328 = event.primary == 1;
 			} else if (type == 17) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.anInt1435 = event.primary;
 			} else if (type == 18) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = (int) (value >> 32);
 				icomponentdefinitions_5.method2007(i_6, (short) event.primary, (short) event.secondary, -328591291);
 			} else if (type == 19) {
-				IComponentDefinitions icomponentdefinitions_5 = Class117.getInterfaceComponent((int) value);
+				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = (int) (value >> 32);
 				icomponentdefinitions_5.method2013(i_6, (short) event.primary, (short) event.secondary, (byte) 69);
 			}

@@ -63,7 +63,7 @@ public class Class334 {
 			this.aClass160_3910 = null;
 			return false;
 		} else {
-			int i_9 = Texture.nextPowerOfTwo(this.anInt3899, -191000314);
+			int i_9 = ImageIndexLoader.nextPowerOfTwo(this.anInt3899, -191000314);
 			if (i_9 > i_4) {
 				i_9 = Class51.method1072(i_4, 1488609644);
 			}

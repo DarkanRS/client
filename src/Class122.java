@@ -112,6 +112,6 @@ public class Class122 {
 		if (Class291_Sub1.aClass474_3455 != null) {
 			Class291_Sub1.aClass474_3455.method7899(256);
 		}
-		IndexLoaders.aClass230_147.method3906(64);
+		IndexLoaders.VARBIT_LOADER.method3906(64);
 	}
 }

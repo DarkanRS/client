@@ -6,7 +6,7 @@ public class Class2 {
 
 	public static void method257(String string_0, String string_1) {
 		if (string_0.length() <= 320 && Class388.method6693(1589792436)) {
-			Class290.method5118((byte) -52);
+			HitbarIndexLoader.method5118((byte) -52);
 			Class9.aString99 = string_0;
 			Class9.aString102 = string_1;
 			Class365.setGameState(19);

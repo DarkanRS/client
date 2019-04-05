@@ -1,53 +1,29 @@
 public class LoadingStage {
-
+	
 	static LoadingStage aClass387_4697;
-
 	static LoadingStage aClass387_4695;
-
 	static LoadingStage aClass387_4696;
-
 	static LoadingStage aClass387_4702;
-
 	static LoadingStage aClass387_4708;
-
 	static LoadingStage aClass387_4699;
-
 	static LoadingStage aClass387_4700;
-
 	static LoadingStage aClass387_4717;
-
 	static LoadingStage aClass387_4709;
-
 	static LoadingStage aClass387_4716;
-
 	static LoadingStage aClass387_4704;
-
 	static LoadingStage aClass387_4705;
-
 	static LoadingStage aClass387_4706;
-
 	static LoadingStage aClass387_4707;
-
 	static LoadingStage aClass387_4713;
-
 	static LoadingStage aClass387_4698;
-
 	static LoadingStage aClass387_4710;
-
 	static LoadingStage aClass387_4701;
-
 	public int anInt4712;
-
 	Message aClass433_4711;
-
 	Message aClass433_4714;
-
 	int anInt4715;
-
 	int anInt4703;
-
 	boolean aBool4694;
-
 	boolean aBool4718;
 
 	static {
@@ -230,7 +206,7 @@ public class LoadingStage {
 			int i_9 = i_7 * Class488.anInt5760 / Class291_Sub1.xLength;
 			int i_10 = i_8 * Class351.anInt4097 / Class291_Sub1.yLength;
 			int i_11 = i_7 * MapRegionLoaderTask.anInt3991 / Class291_Sub1.xLength + i_1;
-			int i_12 = i_8 + i_2 - i_8 * Class489.anInt5765 / Class291_Sub1.yLength - i_10;
+			int i_12 = i_8 + i_2 - i_8 * SCT25Definitions.anInt5765 / Class291_Sub1.yLength - i_10;
 			int i_13 = -1996554240;
 			if (Game.stellarDawn == client.CURRENT_GAME) {
 				i_13 = -1996488705;
@@ -286,7 +262,7 @@ public class LoadingStage {
 			i_12 = Class382.anIntArray4657[i_11] * i_14 >> 14;
 			i_14 = Class382.anIntArray4661[i_11] * i_14 >> 14;
 		}
-		Class31.anInt361 = i_0 - i_12;
+		IdentitiKitIndexLoader.anInt361 = i_0 - i_12;
 		Class109_Sub1.anInt9384 = i_1 - i_13;
 		Class246.anInt3029 = i_2 - i_14;
 		Class293.anInt3512 = i_3;

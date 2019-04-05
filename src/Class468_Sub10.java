@@ -72,7 +72,7 @@ public class Class468_Sub10 extends Preference {
 					for (int i_4 = 0; i_4 < i_3; i_4++) {
 						int i_5 = rsbytebuffer_0.readUnsignedShort();
 						int i_6 = rsbytebuffer_0.readInt();
-						if (i_5 < Class320.anIntArray3724.length && Class282_Sub17_Sub2.aBoolArray9934[i_5] && (IndexLoaders.aClass408_7207.method6873(i_5, (byte) 37).aChar4984 != 49 || i_6 >= -1 && i_6 <= 1)) {
+						if (i_5 < Class320.anIntArray3724.length && Class282_Sub17_Sub2.aBoolArray9934[i_5] && (IndexLoaders.VARC_LOADER.method6873(i_5, (byte) 37).aChar4984 != 49 || i_6 >= -1 && i_6 <= 1)) {
 							Class320.anIntArray3724[i_5] = i_6;
 						}
 					}

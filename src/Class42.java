@@ -99,7 +99,7 @@ public class Class42 implements Interface2 {
 		} else {
 			i_1 = i_1 * Class393.preferences.aClass468_Sub13_8228.method12714() >> 8;
 			if (i_0 == -1 && !Class260.aBool3220) {
-				Class226.method3805();
+				VarBitDefinitions.method3805();
 			} else if (i_0 != -1 && (i_0 != Class260.anInt3223 || !Class116.method1966(1943151089)) && i_1 != 0 && !Class260.aBool3220) {
 				Class282_Sub1.method11615(i_2, IndexLoaders.MUSIC_INDEX, i_0, i_1, new Class109_Sub1());
 				Class468_Sub6.method12658(-406997007);

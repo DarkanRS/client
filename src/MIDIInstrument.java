@@ -79,7 +79,7 @@ public class MIDIInstrument extends Node {
 			int i_10 = Class159.method2739(i_5 - 1, 548668392);
 
 			for (int i_11 = 0; i_11 < i_5; i_11++) {
-				ints_15[i_11] = Class3.method285(i_11, i_10);
+				ints_15[i_11] = PlayerVarProvider.method285(i_11, i_10);
 			}
 
 			if (i_1 != 0) {

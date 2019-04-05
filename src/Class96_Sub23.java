@@ -90,7 +90,7 @@ public class Class96_Sub23 extends Class96 {
 
 				for (Class282_Sub44 class282_sub44_5 = (Class282_Sub44) class451_4.first(); class282_sub44_5 != null; class282_sub44_5 = (Class282_Sub44) class451_4.next()) {
 					if (i_3 == class282_sub44_5.anInt8063) {
-						return Class117.getInterfaceComponent((int) class282_sub44_5.data);
+						return IComponentDefinitions.getDefs((int) class282_sub44_5.data);
 					}
 				}
 			}

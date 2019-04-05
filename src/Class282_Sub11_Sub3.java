@@ -67,6 +67,6 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		Class16.aClass8_144 = (FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, Class16.anInt136, true, true, -2070045915);
 		Class16.aClass414_139 = Class487.aClass378_5752.method6415(client.anInterface35_7206, Class16.anInt136, -1782944110);
 		Class285.aClass8_3394 = (FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, Class395.anInt4788, true, true, -2089957930);
-		Class288.aClass414_3438 = Class487.aClass378_5752.method6415(client.anInterface35_7206, Class395.anInt4788, -989172290);
+		SkyboxIndexLoader.aClass414_3438 = Class487.aClass378_5752.method6415(client.anInterface35_7206, Class395.anInt4788, -989172290);
 	}
 }

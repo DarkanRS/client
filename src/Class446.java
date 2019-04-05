@@ -157,7 +157,7 @@ public class Class446 {
 				}
 				i_11 = Class174.aClass356_2139.method6221(i_7, client.anInt7439, 1961089623) + Class174.anInt2134;
 				int i_12 = Class174.aClass353_2140.method6198(i_8, client.anInt7312, 1070310069) + Class174.anInt2133;
-				graphicalrenderer_2.method8444(Class242.aClass91_2981, false).method2772(i_11 + Class174.aClass91_2141.anInt957, i_12 + Class174.aClass91_2141.anInt954, i_7 - Class174.aClass91_2141.anInt957 * 2, i_8 - Class174.aClass91_2141.anInt954 * 2, 1, 0, 0);
+				graphicalrenderer_2.method8444(QuestIndexLoader.aClass91_2981, false).method2772(i_11 + Class174.aClass91_2141.anInt957, i_12 + Class174.aClass91_2141.anInt954, i_7 - Class174.aClass91_2141.anInt957 * 2, i_8 - Class174.aClass91_2141.anInt954 * 2, 1, 0, 0);
 				graphicalrenderer_2.method8444(Class174.aClass91_2141, true).method2752(i_11, i_12);
 				Class174.aClass91_2141.method1525();
 				graphicalrenderer_2.method8444(Class174.aClass91_2141, true).method2752(i_7 + i_11 - i_15, i_12);

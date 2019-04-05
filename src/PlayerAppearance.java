@@ -92,7 +92,7 @@ public class PlayerAppearance {
 		this.method3991();
 	}
 
-	public void method3993(int i_1, int i_2, Class31 class31_3, int i_4) {
+	public void method3993(int i_1, int i_2, IdentitiKitIndexLoader class31_3, int i_4) {
 		int i_5 = anIntArray2917[i_1];
 		if (class31_3.method800(i_2, 1435454406) != null) {
 			this.anIntArray2921[i_5] = i_2 | ~0x7fffffff;
@@ -103,13 +103,13 @@ public class PlayerAppearance {
 	public void method3995(int i_1, int i_2, ItemIndexLoader itemindexloader_3) {
 		if (i_2 == -1) {
 			this.anIntArray2921[i_1] = 0;
-		} else if (itemindexloader_3.getItemDefinitions(i_2, 115625832) != null) {
+		} else if (itemindexloader_3.getItemDefinitions(i_2) != null) {
 			this.anIntArray2921[i_1] = i_2 | 0x40000000;
 			this.method3991();
 		}
 	}
 
-	public MeshRasterizer method3998(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Class31 class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, Interface42 interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, Defaults6Loader defaults6loader_15, short s_16) {
+	public MeshRasterizer method3998(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, Defaults6Loader defaults6loader_15, short s_16) {
 		if (this.anInt2928 != -1) {
 			return npcindexloader_5.getNPCDefinitions(this.anInt2928).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, animation_10, arr_11, ints_12, i_13, (Class417) null, 2039422694);
 		} else {
@@ -227,7 +227,7 @@ public class PlayerAppearance {
 									if (!bool_55 && this.aClass422Array2922 != null && this.aClass422Array2922[i_31] != null) {
 										meshmodifier_42 = this.aClass422Array2922[i_31];
 									}
-									rsmesh_35 = itemindexloader_6.getItemDefinitions(i_41 & 0x3fffffff, 489246789).getBodyMesh(this.aBool2929, meshmodifier_42, 710746900);
+									rsmesh_35 = itemindexloader_6.getItemDefinitions(i_41 & 0x3fffffff).getBodyMesh(this.aBool2929, meshmodifier_42, 710746900);
 									if (rsmesh_35 != null) {
 										arr_56[i_31] = rsmesh_35;
 									}
@@ -315,7 +315,7 @@ public class PlayerAppearance {
 						if (!bool_33 && this.aClass422Array2922 != null && this.aClass422Array2922[i_30] != null) {
 							meshmodifier_32 = this.aClass422Array2922[i_30];
 						}
-						if (!itemindexloader_6.getItemDefinitions(i_31 & 0x3fffffff, 865631179).bodyMeshesReady(this.aBool2929, meshmodifier_32, -1830991961)) {
+						if (!itemindexloader_6.getItemDefinitions(i_31 & 0x3fffffff).bodyMeshesReady(this.aBool2929, meshmodifier_32, -1830991961)) {
 							bool_29 = true;
 						}
 					} else if ((i_31 & ~0x7fffffff) != 0 && !class31_4.method800(i_31 & 0x3fffffff, 1122652918).method898()) {
@@ -376,7 +376,7 @@ public class PlayerAppearance {
 		}
 	}
 
-	public MeshRasterizer method3999(GraphicalRenderer graphicalrenderer_1, int i_2, Class31 class31_3, AnimationIndexLoader animationindexloader_4, Animation animation_5, int i_6, int i_7, int i_8) {
+	public MeshRasterizer method3999(GraphicalRenderer graphicalrenderer_1, int i_2, IdentitiKitIndexLoader class31_3, AnimationIndexLoader animationindexloader_4, Animation animation_5, int i_6, int i_7, int i_8) {
 		int i_10 = animation_5 != null ? i_2 | animation_5.method7640(-1959438084) : i_2;
 		long long_11 = (long) i_8 << 32 | (long) (i_7 << 16) | (long) i_6;
 		SoftCache softcache_14 = aClass229_2930;
@@ -435,7 +435,7 @@ public class PlayerAppearance {
 		this.method3991();
 	}
 
-	public MeshRasterizer method4021(GraphicalRenderer graphicalrenderer_1, int i_2, Class31 class31_3, NPCIndexLoader npcindexloader_4, ItemIndexLoader itemindexloader_5, AnimationIndexLoader animationindexloader_6, Interface42 interface42_7, Animation animation_8) {
+	public MeshRasterizer method4021(GraphicalRenderer graphicalrenderer_1, int i_2, IdentitiKitIndexLoader class31_3, NPCIndexLoader npcindexloader_4, ItemIndexLoader itemindexloader_5, AnimationIndexLoader animationindexloader_6, VarProvider interface42_7, Animation animation_8) {
 		if (this.anInt2928 != -1) {
 			return npcindexloader_4.getNPCDefinitions(this.anInt2928).method6880(graphicalrenderer_1, i_2, interface42_7, animation_8, (Class417) null, 1135826867);
 		} else {
@@ -458,7 +458,7 @@ public class PlayerAppearance {
 						if (this.aClass422Array2922 != null && this.aClass422Array2922[i_14] != null) {
 							meshmodifier_16 = this.aClass422Array2922[i_14];
 						}
-						if (!itemindexloader_5.getItemDefinitions(i_15 & 0x3fffffff, 1258535408).headMeshesReady(this.aBool2929, meshmodifier_16)) {
+						if (!itemindexloader_5.getItemDefinitions(i_15 & 0x3fffffff).headMeshesReady(this.aBool2929, meshmodifier_16)) {
 							bool_13 = true;
 						}
 					} else if ((i_15 & ~0x7fffffff) != 0 && !class31_3.method800(i_15 & 0x3fffffff, 745327343).method900()) {
@@ -479,7 +479,7 @@ public class PlayerAppearance {
 						if (this.aClass422Array2922 != null && this.aClass422Array2922[i_22] != null) {
 							meshmodifier_18 = this.aClass422Array2922[i_22];
 						}
-						rsmesh_19 = itemindexloader_5.getItemDefinitions(i_17 & 0x3fffffff, 393457333).getHeadMesh(this.aBool2929, meshmodifier_18);
+						rsmesh_19 = itemindexloader_5.getItemDefinitions(i_17 & 0x3fffffff).getHeadMesh(this.aBool2929, meshmodifier_18);
 						if (rsmesh_19 != null) {
 							arr_21[i_15++] = rsmesh_19;
 						}
@@ -530,12 +530,12 @@ public class PlayerAppearance {
 	}
 
 	static void method4034(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		int i_8 = Class275.method4890(i_2, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, 843506601);
-		int i_9 = Class275.method4890(i_3, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -196621682);
-		int i_10 = Class275.method4890(i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 1641610688);
-		int i_11 = Class275.method4890(i_1, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 444789004);
-		int i_12 = Class275.method4890(i_2 + i_6, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, 995356010);
-		int i_13 = Class275.method4890(i_3 - i_6, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -1579133308);
+		int i_8 = EntityNode.method4890(i_2, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, 843506601);
+		int i_9 = EntityNode.method4890(i_3, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -196621682);
+		int i_10 = EntityNode.method4890(i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 1641610688);
+		int i_11 = EntityNode.method4890(i_1, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 444789004);
+		int i_12 = EntityNode.method4890(i_2 + i_6, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, 995356010);
+		int i_13 = EntityNode.method4890(i_3 - i_6, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -1579133308);
 		int i_14;
 		for (i_14 = i_8; i_14 < i_12; i_14++) {
 			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_14], i_10, i_11, i_5, (byte) 47);
@@ -543,8 +543,8 @@ public class PlayerAppearance {
 		for (i_14 = i_9; i_14 > i_13; --i_14) {
 			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_14], i_10, i_11, i_5, (byte) -32);
 		}
-		i_14 = Class275.method4890(i_0 + i_6, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1513727224);
-		int i_15 = Class275.method4890(i_1 - i_6, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1346060806);
+		i_14 = EntityNode.method4890(i_0 + i_6, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1513727224);
+		int i_15 = EntityNode.method4890(i_1 - i_6, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1346060806);
 		for (int i_16 = i_12; i_16 <= i_13; i_16++) {
 			int[] ints_17 = Class532_Sub1.anIntArrayArray7072[i_16];
 			Class232.method3922(ints_17, i_10, i_14, i_5, (byte) 87);

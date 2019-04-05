@@ -25,13 +25,13 @@ public class Class89 {
 	}
 
 	static void method1502(int i_0) {
-		if (Class427.anInt5123 < 0) {
-			Class427.anInt5123 = 0;
+		if (MapSpriteIndexLoader.anInt5123 < 0) {
+			MapSpriteIndexLoader.anInt5123 = 0;
 			Class291_Sub1.anInt8014 = -1;
 			Class291_Sub1.anInt8016 = -1;
 		}
-		if (Class427.anInt5123 > Class291_Sub1.xLength) {
-			Class427.anInt5123 = Class291_Sub1.xLength;
+		if (MapSpriteIndexLoader.anInt5123 > Class291_Sub1.xLength) {
+			MapSpriteIndexLoader.anInt5123 = Class291_Sub1.xLength;
 			Class291_Sub1.anInt8014 = -1;
 			Class291_Sub1.anInt8016 = -1;
 		}
@@ -48,7 +48,7 @@ public class Class89 {
 	}
 
 	static void method1503(int i_0) {
-		Class427.anInt5123 = i_0;
+		MapSpriteIndexLoader.anInt5123 = i_0;
 		Class291_Sub1.anInt8014 = -1;
 		Class291_Sub1.anInt8016 = -1;
 		method1502(-1202375965);

@@ -72,17 +72,17 @@ public class Class232 implements Interface17 {
 			Vector3 vector3_5 = VertexNormal.myPlayer.method11166().aClass385_3595;
 			LoadingStage.method6683(Class11.anInt122, Class504.method8389((int) vector3_5.x, (int) vector3_5.z, Class4.anInt35, (byte) 51) - 200, Class266.anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0, 1500551332);
 			float f_6 = 1.0F - (float) ((100 - i_2) * (100 - i_2) * (100 - i_2)) / 1000000.0F;
-			Class31.anInt361 = (int) ((float) Class186.anInt2349 + f_6 * (float) (Class31.anInt361 - Class186.anInt2349));
+			IdentitiKitIndexLoader.anInt361 = (int) ((float) Class186.anInt2349 + f_6 * (float) (IdentitiKitIndexLoader.anInt361 - Class186.anInt2349));
 			Class109_Sub1.anInt9384 = (int) ((float) Class521_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.anInt9384 - Class521_Sub1_Sub2.anInt9461));
 			Class246.anInt3029 = (int) ((float) (Class246.anInt3029 - Class282_Sub15_Sub1.anInt9575) * f_6 + (float) Class282_Sub15_Sub1.anInt9575);
 			Class293.anInt3512 = (int) ((float) ClipMap.anInt3968 + f_6 * (float) (Class293.anInt3512 - ClipMap.anInt3968));
-			int i_7 = AnimationDefinitions.anInt5930 - ParamDefinitionsLoader.anInt5029;
+			int i_7 = AnimationDefinitions.anInt5930 - ParamIndexLoader.anInt5029;
 			if (i_7 > 8192) {
 				i_7 -= 16384;
 			} else if (i_7 < -8192) {
 				i_7 += 16384;
 			}
-			AnimationDefinitions.anInt5930 = (int) ((float) ParamDefinitionsLoader.anInt5029 + f_6 * (float) i_7);
+			AnimationDefinitions.anInt5930 = (int) ((float) ParamIndexLoader.anInt5029 + f_6 * (float) i_7);
 			AnimationDefinitions.anInt5930 &= 0x3fff;
 		}
 	}

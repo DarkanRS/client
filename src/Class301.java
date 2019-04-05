@@ -132,7 +132,7 @@ public class Class301 implements Interface41 {
 			client.anInt7191 = 0;
 		}
 		for (i_1 = 0; i_1 < client.anInt7193; i_1++) {
-			KeyRecord interface16_9 = client.anInterface16Array7154[i_1];
+			KeyRecord interface16_9 = client.KEYS_PRESSED[i_1];
 			int i_10 = interface16_9.method92();
 			char var_4 = interface16_9.getCode(-63648913);
 			int i_5 = interface16_9.method125(1713705553);
@@ -188,7 +188,7 @@ public class Class301 implements Interface41 {
 				Class534.method11441((byte) -128);
 				Class179.anInt2220 = Class179.aString2225.length();
 			} else if (Class380.method6450(var_4, -803297917) || "\\/.:, _-+[]~@".indexOf(var_4) != -1) {
-				Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.anInterface16Array7154[i_1].getCode(-890560120) + Class179.aString2225.substring(Class179.anInt2220);
+				Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.KEYS_PRESSED[i_1].getCode(-890560120) + Class179.aString2225.substring(Class179.anInt2220);
 				++Class179.anInt2220;
 			}
 		}

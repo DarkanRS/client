@@ -16,14 +16,14 @@ public class Class92 {
 		if (this.anInt964 < 0) {
 			return true;
 		} else {
-			ObjectDefinitions objectdefinitions_2 = IndexLoaders.OBJECT_INDEX_LOADER.getObjectDefinitions(this.anInt964);
+			ObjectDefinitions objectdefinitions_2 = IndexLoaders.OBJECT_LOADER.getObjectDefinitions(this.anInt964);
 			boolean bool_3 = objectdefinitions_2.method7987(this.aClass458_963.type, 792891536);
 			int[] ints_4 = objectdefinitions_2.method8008();
 			if (ints_4 != null) {
 				int[] ints_5 = ints_4;
 				for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 					int i_7 = ints_5[i_6];
-					bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_7, (byte) 92).ready();
+					bool_3 &= IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_7, (byte) 92).ready();
 				}
 			}
 			return bool_3;
@@ -58,8 +58,8 @@ public class Class92 {
 		return i_3;
 	}
 
-	static QuickChatDynamicValue[] getQuickChatDynamicValueTypes() {
-		return new QuickChatDynamicValue[] { QuickChatDynamicValue.ENUM_STRING, QuickChatDynamicValue.ACC_GETCOUNT_WORLD, QuickChatDynamicValue.STAT_BASE, QuickChatDynamicValue.ACTIVECOMBATLEVEL, QuickChatDynamicValue.OBJTRADEDIALOG, QuickChatDynamicValue.ENUM_STRING_CLAN, QuickChatDynamicValue.COUNTDIALOG, QuickChatDynamicValue.TOSTRING_VARBIT, QuickChatDynamicValue.TOSTRING_VARP, QuickChatDynamicValue.LISTDIALOG, QuickChatDynamicValue.ACC_GETMEANCOMBATLEVEL, QuickChatDynamicValue.TOSTRING_SHARED, QuickChatDynamicValue.OBJDIALOG, QuickChatDynamicValue.ENUM_STRING_STATBASE };
+	static QuickChatValueType[] getQuickChatDynamicValueTypes() {
+		return new QuickChatValueType[] { QuickChatValueType.ENUM_STRING, QuickChatValueType.ACC_GETCOUNT_WORLD, QuickChatValueType.STAT_BASE, QuickChatValueType.ACTIVECOMBATLEVEL, QuickChatValueType.OBJTRADEDIALOG, QuickChatValueType.ENUM_STRING_CLAN, QuickChatValueType.COUNTDIALOG, QuickChatValueType.TOSTRING_VARBIT, QuickChatValueType.TOSTRING_VARP, QuickChatValueType.LISTDIALOG, QuickChatValueType.ACC_GETMEANCOMBATLEVEL, QuickChatValueType.TOSTRING_SHARED, QuickChatValueType.OBJDIALOG, QuickChatValueType.ENUM_STRING_STATBASE };
 	}
 
 	public static void method1563(int i_0) {

@@ -1,13 +1,9 @@
 public class ParamDefinitions {
 
 	public static NativeSprite aClass160_5339;
-
 	char typeChar;
-
 	public int defaultInt;
-
 	public boolean autoDisable = true;
-
 	public String typeName;
 
 	void method7315(RsByteBuffer rsbytebuffer_1) {
@@ -39,7 +35,7 @@ public class ParamDefinitions {
 	static void method7323() {
 		if (Renderers.SOFTWARE_RENDERER != null) {
 			IndexLoaders.MAP_REGION_DECODER.method4444(1684896059);
-			Class58.method1139(-1956740427);
+			QuickchatFiller.method1139(-1956740427);
 			Class76.method1361((byte) -9);
 			Defaults8Loader.method11156(-1284329582);
 			IndexLoaders.MAP_REGION_DECODER.method4446((byte) -33);

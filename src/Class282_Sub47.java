@@ -32,13 +32,13 @@ public class Class282_Sub47 extends Node {
 		Renderers.FONT_RENDERER.method359("727 1", Class349.anInt4083 - 25, 330, -1, -16777216);
 		graphicalrenderer_0.r(0, 0, Class349.anInt4083, 350);
 		graphicalrenderer_0.method8659(0, 350 - Class179.anInt2230, Class349.anInt4083, -1, -51892104);
-		Class285.aClass8_3394.renderText("--> " + Class400.method6793(Class179.aString2225), 10, 350 - Class288.aClass414_3438.anInt4979 - 1, -1, -16777216);
+		Class285.aClass8_3394.renderText("--> " + Class400.method6793(Class179.aString2225), 10, 350 - SkyboxIndexLoader.aClass414_3438.anInt4979 - 1, -1, -16777216);
 		if (Class530.aBool7050) {
 			i_3 = -1;
 			if (client.cycles % 30 > 15) {
 				i_3 = 16777215;
 			}
-			graphicalrenderer_0.method8428(10 + Class288.aClass414_3438.getWidthNoSprites("--> " + Class400.method6793(Class179.aString2225).substring(0, Class179.anInt2220)), 350 - Class288.aClass414_3438.anInt4979 - 11, 12, i_3);
+			graphicalrenderer_0.method8428(10 + SkyboxIndexLoader.aClass414_3438.getWidthNoSprites("--> " + Class400.method6793(Class179.aString2225).substring(0, Class179.anInt2220)), 350 - SkyboxIndexLoader.aClass414_3438.anInt4979 - 11, 12, i_3);
 		}
 		graphicalrenderer_0.L();
 		Class18.method574();

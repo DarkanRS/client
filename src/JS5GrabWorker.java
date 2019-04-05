@@ -526,13 +526,13 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	static boolean method12562(int i_0) {
-		if (Class1.aClass282_Sub50_Sub7_12 == null) {
+		if (AccountCreationStage.aClass282_Sub50_Sub7_12 == null) {
 			return false;
 		} else {
-			if (Class1.aClass282_Sub50_Sub7_12.anInt9587 >= 2000) {
-				Class1.aClass282_Sub50_Sub7_12.anInt9587 -= 2000;
+			if (AccountCreationStage.aClass282_Sub50_Sub7_12.anInt9587 >= 2000) {
+				AccountCreationStage.aClass282_Sub50_Sub7_12.anInt9587 -= 2000;
 			}
-			return Class1.aClass282_Sub50_Sub7_12.anInt9587 == 1007;
+			return AccountCreationStage.aClass282_Sub50_Sub7_12.anInt9587 == 1007;
 		}
 	}
 }

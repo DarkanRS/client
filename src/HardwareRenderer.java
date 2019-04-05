@@ -2437,7 +2437,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			this.aClass384_8996 = new Matrix44Arr();
 			this.method14369(1);
 			this.method14409();
-			Class38.method854(true, true, -1425832759);
+			SunDefinitions.method854(true, true, -1425832759);
 			this.aBool9012 = true;
 			this.anInt8977 = (int) TextureDetails.time();
 		} catch (Throwable throwable_3) {

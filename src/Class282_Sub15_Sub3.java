@@ -335,7 +335,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 		Class359.anInt4163 = i_8;
 		Class174.aClass91_2141 = null;
 		Class174.aClass91_2138 = null;
-		Class242.aClass91_2981 = null;
+		QuestIndexLoader.aClass91_2981 = null;
 		Class434.anInt5329 = i_9;
 		Class174.anInt2137 = i_10;
 		Class174.method2954(305406486);

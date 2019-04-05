@@ -167,83 +167,11 @@ public class Class400 {
 		return string_2 != null ? string_2 + string_0 : string_0;
 	}
 
-	static void executeHookInner(HookRequest hookrequest_0, int i_1, byte b_2) {
-		Object[] arr_3 = hookrequest_0.params;
-		int i_4 = ((Integer) arr_3[0]).intValue();
-		CS2Script cs2script_5 = Class286.getCS2Script(i_4);
-		if (cs2script_5 != null) {
-			CS2Executor cs2executor_6 = Class125.getNextScriptExecutor(-444057050);
-			cs2executor_6.intLocals = new int[cs2script_5.intLocalsCount];
-			int i_7 = 0;
-			cs2executor_6.objectLocals = new String[cs2script_5.stringLocalsCount];
-			int i_8 = 0;
-			cs2executor_6.longLocals = new long[cs2script_5.longLocalsCount];
-			int i_9 = 0;
-
-			for (int i_10 = 1; i_10 < arr_3.length; i_10++) {
-				if (arr_3[i_10] instanceof Integer) {
-					int i_11 = ((Integer) arr_3[i_10]).intValue();
-					if (i_11 == -2147483647) {
-						i_11 = hookrequest_0.anInt8059;
-					}
-
-					if (i_11 == -2147483646) {
-						i_11 = hookrequest_0.anInt8055;
-					}
-
-					if (i_11 == -2147483645) {
-						i_11 = hookrequest_0.iComponentDefs != null ? hookrequest_0.iComponentDefs.idHash : -1;
-					}
-
-					if (i_11 == -2147483644) {
-						i_11 = hookrequest_0.anInt8051;
-					}
-
-					if (i_11 == -2147483643) {
-						i_11 = hookrequest_0.iComponentDefs != null ? hookrequest_0.iComponentDefs.anInt1288 : -1;
-					}
-
-					if (i_11 == -2147483642) {
-						i_11 = hookrequest_0.aClass118_8057 != null ? hookrequest_0.aClass118_8057.idHash : -1;
-					}
-
-					if (i_11 == -2147483641) {
-						i_11 = hookrequest_0.aClass118_8057 != null ? hookrequest_0.aClass118_8057.anInt1288 : -1;
-					}
-
-					if (i_11 == -2147483640) {
-						i_11 = hookrequest_0.anInt8058;
-					}
-
-					if (i_11 == -2147483639) {
-						i_11 = hookrequest_0.anInt8056;
-					}
-
-					cs2executor_6.intLocals[i_7++] = i_11;
-				} else if (arr_3[i_10] instanceof String) {
-					String string_13 = (String) arr_3[i_10];
-					if (string_13.equals("event_opbase")) {
-						string_13 = hookrequest_0.opName;
-					}
-
-					cs2executor_6.objectLocals[i_8++] = string_13;
-				} else if (arr_3[i_10] instanceof Long) {
-					long long_14 = ((Long) arr_3[i_10]).longValue();
-					cs2executor_6.longLocals[i_9++] = long_14;
-				}
-			}
-
-			cs2executor_6.anInt7015 = hookrequest_0.anInt8061;
-			Class51.method1068(cs2script_5, i_1, cs2executor_6, 564283341);
-		}
-
-	}
-
 	static void method6795(int i_0) {
 		int i_1 = Class349.anInt4083;
 		int i_2 = client.anInt3243 * -969250379;
-		if (Class45.anInt434 < i_1) {
-			i_1 = Class45.anInt434;
+		if (SunIndexLoader.anInt434 < i_1) {
+			i_1 = SunIndexLoader.anInt434;
 		}
 
 		if (Class107.anInt1082 < i_2) {

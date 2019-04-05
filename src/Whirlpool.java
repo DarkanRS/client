@@ -268,7 +268,7 @@ public class Whirlpool {
 						} else if (i_0 == 23) {
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53), -622119201);
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119), -632491603);
-							Class209.printConsoleMessage(IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3632(), -1389047879);
+							Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_LOADER.aClass212_5114.method3632(), -1389047879);
 						} else if (i_0 == 16) {
 							Class356.method6227(false, (byte) 37);
 						} else if (i_0 == 15) {

@@ -10,13 +10,13 @@ public class Class96_Sub12 extends Class96 {
 
 	public void method1592() {
 		if (client.CURRENT_CUTSCENE != -1) {
-			World.method3661(client.CURRENT_CUTSCENE, this.aString9318, this.anInt9317, (byte) -117);
+			CS2Executor.method3661(client.CURRENT_CUTSCENE, this.aString9318, this.anInt9317, (byte) -117);
 		}
 	}
 
 	public void method1601() {
-		if (-1638311881 * client.CURRENT_CUTSCENE * -593633913 != -1) {
-			World.method3661(-1638311881 * client.CURRENT_CUTSCENE * -593633913, this.aString9318, this.anInt9317 * 766796665 * 1635620553, (byte) -111);
+		if (client.CURRENT_CUTSCENE != -1) {
+			CS2Executor.method3661(client.CURRENT_CUTSCENE, this.aString9318, this.anInt9317, (byte) -111);
 		}
 	}
 
@@ -49,7 +49,7 @@ public class Class96_Sub12 extends Class96 {
 			return 0;
 		} else {
 			int i_2 = class282_sub50_sub7_0.anInt9587;
-			return Class14.method539(i_2, 85195047) ? 1 : (Class38.method859(i_2, -1682057624) ? 2 : (EnumDefinitions.method7252(i_2) ? 3 : (Class237.method3989(i_2) ? 4 : (Class348.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
+			return Class14.method539(i_2, 85195047) ? 1 : (SunDefinitions.method859(i_2, -1682057624) ? 2 : (EnumDefinitions.method7252(i_2) ? 3 : (Class237.method3989(i_2) ? 4 : (Class348.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
 		}
 	}
 

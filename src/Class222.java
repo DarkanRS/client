@@ -67,7 +67,7 @@ public class Class222 implements Interface17 {
 				for (int i_7 = i_3; i_7 < i_4; i_7++) {
 					char var_8 = charsequence_0.charAt(i_7);
 					if (JS5Manager.method5491(var_8)) {
-						char var_9 = ParamDefinitionsLoader.method7080(var_8);
+						char var_9 = ParamIndexLoader.method7080(var_8);
 						if (var_9 != 0) {
 							stringbuilder_6.append(var_9);
 						}

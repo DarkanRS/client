@@ -65,7 +65,7 @@ public final class client extends Engine {
 	public static NodeCollection mouseRecords = new NodeCollection();
 	static int anInt7191 = 0;
 	public static int anInt7193 = 0;
-	public static KeyRecord[] anInterface16Array7154 = new KeyRecord[131];
+	public static KeyRecord[] KEYS_PRESSED = new KeyRecord[131];
 	public static int maximumHeldKeys = 0;
 	public static KeyRecord[] anInterface16Array7298 = new KeyRecord[75];
 	public static Color[] aColorArray7186 = new Color[] { new Color(9179409), new Color(3289650), new Color(3289650), new Color(3289650) };
@@ -830,7 +830,7 @@ public final class client extends Engine {
 							SpotAnimDefinitions.method11243();
 						}
 					} else if (anInt7193 < 131) {
-						anInterface16Array7154[anInt7193] = record;
+						KEYS_PRESSED[anInt7193] = record;
 						++anInt7193;
 					}
 				}
@@ -890,10 +890,10 @@ public final class client extends Engine {
 							aClass184_7475.method3061(-1506150960);
 							Class365.setGameState(10);
 						} else {
-							Class438.method7333(Class9.aBool71, 2069442218);
+							CursorIndexLoader.method7333(Class9.aBool71, 2069442218);
 						}
 					} else {
-						Class438.method7333(false, 2035320841);
+						CursorIndexLoader.method7333(false, 2035320841);
 					}
 				}
 			}
@@ -979,9 +979,9 @@ public final class client extends Engine {
 					height -= insets_8.bottom + insets_8.top;
 				}
 
-				if (width != Class45.anInt434 || height != Class107.anInt1082 || aBool7185) {
+				if (width != SunIndexLoader.anInt434 || height != Class107.anInt1082 || aBool7185) {
 					if (Renderers.SOFTWARE_RENDERER != null && !Renderers.SOFTWARE_RENDERER.method8664()) {
-						Class45.anInt434 = width;
+						SunIndexLoader.anInt434 = width;
 						Class107.anInt1082 = height;
 					} else {
 						Class532_Sub1.method12840(865941395);
@@ -1003,7 +1003,7 @@ public final class client extends Engine {
 			}
 
 			if (bool_9) {
-				Class275.method4891((byte) -93);
+				EntityNode.method4891((byte) -93);
 			}
 
 			if (Renderers.SOFTWARE_RENDERER != null && Renderers.SOFTWARE_RENDERER.method8465() || Class158.windowedMode() != 1) {
@@ -1224,7 +1224,7 @@ public final class client extends Engine {
 				}
 
 				if (updateStage == 1) {
-					Class47_Sub1.updateConnection = Class38.createAsyncConnection(Class282_Sub20_Sub10.clientSocket, 125000, 165252847);
+					Class47_Sub1.updateConnection = SunDefinitions.createAsyncConnection(Class282_Sub20_Sub10.clientSocket, 125000, 165252847);
 					int length = 13 + aString7164.length();
 					RsByteBuffer stream = new RsByteBuffer(length + 4);
 					stream.writeByte(OutgoingLoginPacket.INIT_JS5REMOTE_CONNECTION.id);
@@ -1981,7 +1981,7 @@ public final class client extends Engine {
 								boolean bool_51 = false;
 								if (icomponentdefinitions_12.anIntArray1267[i_24] > 0) {
 									for (i_27 = 0; i_27 < anInt7193; i_27++) {
-										if (icomponentdefinitions_12.anIntArray1267[i_24] == anInterface16Array7154[i_27].getCode(-1744878171)) {
+										if (icomponentdefinitions_12.anIntArray1267[i_24] == KEYS_PRESSED[i_27].getCode(-1744878171)) {
 											bool_50 = true;
 											if (icomponentdefinitions_12.anIntArray1425 == null || icomponentdefinitions_12.anIntArray1425[i_24] <= cycles) {
 												bool_51 = true;
@@ -2103,7 +2103,7 @@ public final class client extends Engine {
 									for (i_27 = 0; i_27 < i_25; i_27++) {
 										Player player_55 = players[ints_46[i_27]];
 										if (player_55 != null) {
-											Class1.method252(Class397.aClass397_4806, -1, player_55, ints_46[i_27], 1912850737);
+											AccountCreationStage.method252(Class397.aClass397_4806, -1, player_55, ints_46[i_27], 1912850737);
 											player_55.method15880(i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10, (byte) 91);
 										}
 									}
@@ -2112,7 +2112,7 @@ public final class client extends Engine {
 										i_52 = NPC_UPDATE_INDICES[i_27];
 										Class282_Sub47 class282_sub47_56 = (Class282_Sub47) NPCS.get((long) i_52);
 										if (class282_sub47_56 != null) {
-											Class1.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.anInt4856, (Animable) class282_sub47_56.anObject8068, i_52, 1492205273);
+											AccountCreationStage.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.anInt4856, (Animable) class282_sub47_56.anObject8068, i_52, 1492205273);
 											((Animable) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10, (byte) 77);
 										}
 									}
@@ -2188,7 +2188,7 @@ public final class client extends Engine {
 									if (bool_49) {
 										i_24 = (int) ((double) (class282_sub53_39.method13481(1215503828) - i_13 - icomponentdefinitions_12.anInt1301 / 2) * 2.0D / (double) Class291.aFloat3468);
 										i_25 = (int) (-((double) (class282_sub53_39.method13469(11142405) - i_14 - icomponentdefinitions_12.anInt1429 / 2) * 2.0D / (double) Class291.aFloat3468));
-										i_26 = i_24 + Class291.anInt3472 + Class427.anInt5123;
+										i_26 = i_24 + Class291.anInt3472 + MapSpriteIndexLoader.anInt5123;
 										i_27 = i_25 + Class291.anInt3473 + Class475.anInt5624;
 										Class282_Sub50_Sub6 class282_sub50_sub6_42 = Class125.method2173(1504861114);
 										if (class282_sub50_sub6_42 == null) {
@@ -2199,7 +2199,7 @@ public final class client extends Engine {
 										class282_sub50_sub6_42.method14775(i_26, i_27, ints_43, -1788209952);
 										if (ints_43 != null) {
 											if (Class96_Sub21.keyRecorder.method3236(82, -1914297424) && rights > 0) {
-												Class447.method7460(ints_43[0], ints_43[1], ints_43[2], -952047234);
+												SCT24IndexLoader.method7460(ints_43[0], ints_43[1], ints_43[2], -952047234);
 												continue;
 											}
 
@@ -2218,7 +2218,7 @@ public final class client extends Engine {
 
 									if (bool_38 && anInt7184 > 0) {
 										if (anInt7184 == 1 && (anInt7361 != Class163.mouseRecorder.method3569(2088913466) || anInt7362 != Class163.mouseRecorder.method3570())) {
-											Class244.anInt3008 = Class427.anInt5123;
+											Class244.anInt3008 = MapSpriteIndexLoader.anInt5123;
 											Class11.anInt123 = Class475.anInt5624;
 											anInt7184 = 2;
 										}
@@ -2233,9 +2233,9 @@ public final class client extends Engine {
 
 									if (anInt7184 > 0 && !aBool7374) {
 										if ((anInt7339 == 1 || JS5GrabWorker.method12562(-1506814013)) && Class20.anInt169 > 2) {
-											Class242.method4164(anInt7361, anInt7362, -1135712207);
+											QuestIndexLoader.method4164(anInt7361, anInt7362, -1135712207);
 										} else if (Class216.method3677(116247147)) {
-											Class242.method4164(anInt7361, anInt7362, -603230978);
+											QuestIndexLoader.method4164(anInt7361, anInt7362, -603230978);
 										}
 									}
 
@@ -2550,8 +2550,8 @@ public final class client extends Engine {
 								for (i_24 = 0; i_24 < anInt7193; i_24++) {
 									HookRequest hookrequest_44 = new HookRequest();
 									hookrequest_44.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_44.anInt8058 = anInterface16Array7154[i_24].method92();
-									hookrequest_44.anInt8056 = anInterface16Array7154[i_24].getCode(-1306556341);
+									hookrequest_44.anInt8058 = KEYS_PRESSED[i_24].method92();
+									hookrequest_44.anInt8056 = KEYS_PRESSED[i_24].getCode(-1306556341);
 									hookrequest_44.params = icomponentdefinitions_12.anObjectArray1292;
 									aClass482_7402.append(hookrequest_44);
 								}
@@ -2566,7 +2566,7 @@ public final class client extends Engine {
 						}
 
 						if (icomponentdefinitions_12.type == 5 && icomponentdefinitions_12.anInt1404 != -1) {
-							icomponentdefinitions_12.method2027(IndexLoaders.aClass288_1746, IndexLoaders.aClass45_5759, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1429, Class393.preferences.aClass468_Sub14_8211.method12728());
+							icomponentdefinitions_12.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1429, Class393.preferences.aClass468_Sub14_8211.method12728());
 						}
 
 						Class86.method1482(icomponentdefinitions_12, (byte) 9);
@@ -2582,7 +2582,7 @@ public final class client extends Engine {
 									HitsplatDefinitions.method3851();
 								}
 
-								Class436.method7313(class282_sub44_58, class282_sub44_58.anInt8063, i_15, i_16, i_17, i_18, i_13, i_14, i_9, i_10, (byte) -89);
+								LightIntensityIndexLoader.method7313(class282_sub44_58, class282_sub44_58.anInt8063, i_15, i_16, i_17, i_18, i_13, i_14, i_9, i_10, (byte) -89);
 							}
 						}
 					}
@@ -3029,7 +3029,7 @@ public final class client extends Engine {
 					}
 
 					SystemInfo.method13466(npc_3, true);
-					i_6 = Class427.method7188(npc_3);
+					i_6 = MapSpriteIndexLoader.method7188(npc_3);
 					WallDecoration.method16087(npc_3);
 					Class302.handleMovementAnimations(npc_3, IdentikitDefinition.anInt430, Class8_Sub1.anInt8515, i_6, 852225468);
 					Class236.method3985(npc_3, IdentikitDefinition.anInt430, (byte) -74);
@@ -3049,7 +3049,7 @@ public final class client extends Engine {
 				SpotAnimIndexLoader.method8860((byte) -121);
 			}
 
-			if (Class31.anInt361 >> 9 < 14 || Class31.anInt361 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Class246.anInt3029 >> 9 < 14 || Class246.anInt3029 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14) {
+			if (IdentitiKitIndexLoader.anInt361 >> 9 < 14 || IdentitiKitIndexLoader.anInt361 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Class246.anInt3029 >> 9 < 14 || Class246.anInt3029 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14) {
 				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3154, (RsBitsBuffer) null), 919170648);
 			}
 		}
@@ -3081,7 +3081,7 @@ public final class client extends Engine {
 												Class461.method7703();
 											}
 
-											Class449.method7490();
+											SCT24Definitions.method7490();
 											if (aBool7400 && aLong7401 < TextureDetails.time() - 60000L) {
 												Class282_Sub11.method12211(133515669);
 											}
@@ -3096,13 +3096,13 @@ public final class client extends Engine {
 														Class191.method3167(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE, -737324095), 1209993360);
 													}
 
-													class275_sub4_17.method4887((byte) -82);
+													class275_sub4_17.method4887();
 												}
 											}
 
 											if (gameState == 0 && !JS5CacheFile.method3360((byte) 17) || gameState == 7 && Class9.anInt106 == 42 || gameState == 3) {
 												if (gameState != 7 && connectionContext.getConnection() == null) {
-													Class438.method7333(false, 2142128542);
+													CursorIndexLoader.method7333(false, 2142128542);
 												} else if (connectionContext != null) {
 													++connectionContext.anInt2290;
 													if (connectionContext.anInt2290 > 50) {
@@ -3116,7 +3116,7 @@ public final class client extends Engine {
 														if (gameState == 7) {
 															connectionContext.method3051((byte) -106);
 														} else {
-															Class438.method7333(false, 2058327064);
+															CursorIndexLoader.method7333(false, 2058327064);
 														}
 													}
 												}
@@ -3130,10 +3130,10 @@ public final class client extends Engine {
 											break;
 										}
 
-										icomponentdefinitions_14 = Class117.getInterfaceComponent(icomponentdefinitions_16.parent);
+										icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
 									} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
 
-									Class96_Sub4.executeHookInner200k(hookrequest_13, 970362287);
+									CS2Executor.executeHookInner200k(hookrequest_13, 970362287);
 								}
 							}
 
@@ -3142,10 +3142,10 @@ public final class client extends Engine {
 								break;
 							}
 
-							icomponentdefinitions_14 = Class117.getInterfaceComponent(icomponentdefinitions_16.parent);
+							icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
 						} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
 
-						Class96_Sub4.executeHookInner200k(hookrequest_13, 433740759);
+						CS2Executor.executeHookInner200k(hookrequest_13, 433740759);
 					}
 				}
 
@@ -3154,10 +3154,10 @@ public final class client extends Engine {
 					break;
 				}
 
-				icomponentdefinitions_14 = Class117.getInterfaceComponent(icomponentdefinitions_16.parent);
+				icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
 			} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
 
-			Class96_Sub4.executeHookInner200k(hookrequest_13, 60192385);
+			CS2Executor.executeHookInner200k(hookrequest_13, 60192385);
 		}
 	}
 

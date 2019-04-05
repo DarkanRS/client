@@ -1,47 +1,26 @@
 public class Class9 {
 
 	static BufferedConnectionContext aClass184_73;
-
 	static int lobbyStage;
-
 	static boolean aBool74 = false;
-
 	static boolean socialNetworkLogin = false;
-
 	static int anInt76 = -1;
-
 	static long aLong77 = -1L;
-
 	static int loginStage = 2;
-
 	static long aLong86 = 0L;
-
 	static String aString99 = "";
-
 	static String aString102 = "";
-
 	static int anInt90 = 0;
-
 	static int anInt104 = 0;
-
 	public static int anInt72 = -2;
-
 	public static int anInt106 = -2;
-
 	public static int anInt107 = -2;
-
 	public static int anInt108 = -1;
-
 	public static int anInt109 = -1;
-
 	public static int anInt103 = 0;
-
 	public static int anInt94 = -1;
-
 	public static int anInt112 = -1;
-
 	public static int anInt113 = 0;
-
 	static boolean aBool71 = false;
 
 	Class9() throws Throwable {

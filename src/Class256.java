@@ -36,10 +36,10 @@ public class Class256 {
 	public static void method4412(Class116 class116_0, int i_1, int i_2) {
 		i_1 = i_1 * Class393.preferences.aClass468_Sub13_8228.method12714() >> 8;
 		if (class116_0 == null) {
-			Class226.method3805();
+			VarBitDefinitions.method3805();
 		} else {
 			HostNameIdentifier.method487(class116_0, i_1);
-			Class230.method3912();
+			VarBitIndexLoader.method3912();
 		}
 	}
 

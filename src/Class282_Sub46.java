@@ -22,12 +22,12 @@ public class Class282_Sub46 extends Node {
 			graphicalrenderer_0.B(i_8 - 150, i_9 + 2, Class291_Sub1.anInt8015 * 3, 30, client.aColorArray7186[client.anInt7447].getRGB(), 0);
 			Class285.aClass8_3394.method360(Message.LOADING.translate(Class223.CURRENT_LANGUAGE, -895351629), i_8, b_7 + i_9, client.aColorArray7200[client.anInt7447].getRGB(), -1);
 		} else {
-			int i_17 = Class427.anInt5123 - (int) ((float) i_4 / Class291_Sub1.aFloat3468);
+			int i_17 = MapSpriteIndexLoader.anInt5123 - (int) ((float) i_4 / Class291_Sub1.aFloat3468);
 			i_8 = (int) ((float) i_5 / Class291_Sub1.aFloat3468) + Class475.anInt5624;
-			i_9 = (int) ((float) i_4 / Class291_Sub1.aFloat3468) + Class427.anInt5123;
+			i_9 = (int) ((float) i_4 / Class291_Sub1.aFloat3468) + MapSpriteIndexLoader.anInt5123;
 			int i_10 = Class475.anInt5624 - (int) ((float) i_5 / Class291_Sub1.aFloat3468);
-			MapRegionLoaderTask.anInt3991 = Class427.anInt5123 - (int) ((float) i_4 / Class291_Sub1.aFloat3468);
-			Class489.anInt5765 = Class475.anInt5624 - (int) ((float) i_5 / Class291_Sub1.aFloat3468);
+			MapRegionLoaderTask.anInt3991 = MapSpriteIndexLoader.anInt5123 - (int) ((float) i_4 / Class291_Sub1.aFloat3468);
+			SCT25Definitions.anInt5765 = Class475.anInt5624 - (int) ((float) i_5 / Class291_Sub1.aFloat3468);
 			Class488.anInt5760 = (int) ((float) (i_4 * 2) / Class291_Sub1.aFloat3468);
 			Class351.anInt4097 = (int) ((float) (i_5 * 2) / Class291_Sub1.aFloat3468);
 			Class291_Sub1.method5139(i_17 + Class291_Sub1.anInt3472, i_8 + Class291_Sub1.anInt3473, i_9 + Class291_Sub1.anInt3472, i_10 + Class291_Sub1.anInt3473, i_2, i_3, i_2 + i_4, i_3 + i_5 + 1);

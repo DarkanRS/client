@@ -168,7 +168,7 @@ public class Class96_Sub4 extends Class96 {
 
 			if (i_6 == 60) {
 				if (client.rights > 0 && Class96_Sub8.method14577()) {
-					Class447.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1797867076);
+					SCT24IndexLoader.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1797867076);
 				} else {
 					client.anInt7293 = i_1;
 					client.anInt7294 = i_2;
@@ -183,7 +183,7 @@ public class Class96_Sub4 extends Class96 {
 
 			if (i_6 == 23) {
 				if (client.rights > 0 && Class96_Sub8.method14577()) {
-					Class447.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
+					SCT24IndexLoader.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
 				} else {
 					tcpmessage_13 = CutsceneArea.method12078(i_4, i_5, i_7);
 					if (i_7 == 1) {
@@ -206,7 +206,7 @@ public class Class96_Sub4 extends Class96 {
 					}
 
 					client.aClass184_7475.queuePacket(tcpmessage_13);
-					MapRegion.routeTo(i_4, i_5, true, Class38.method853(i_4, i_5, 1597401587), 1072484880);
+					MapRegion.routeTo(i_4, i_5, true, SunDefinitions.method853(i_4, i_5, 1597401587), 1072484880);
 				}
 			}
 
@@ -239,7 +239,7 @@ public class Class96_Sub4 extends Class96 {
 				tcpmessage_13.buffer.writeShort128(client.anInt7345);
 				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x, (short) -8634);
 				client.aClass184_7475.queuePacket(tcpmessage_13);
-				MapRegion.routeTo(i_4, i_5, true, Class38.method853(i_4, i_5, -795317623), 1870869554);
+				MapRegion.routeTo(i_4, i_5, true, SunDefinitions.method853(i_4, i_5, -795317623), 1870869554);
 			}
 
 			if (i_6 == 30 && client.aClass118_7352 == null) {
@@ -357,16 +357,11 @@ public class Class96_Sub4 extends Class96 {
 					Class60.method1170();
 				}
 
-				if (Class401.aClass118_4825 != null && client.anInt7297 == 0) {
-					Class109.redrawComponent(Class401.aClass118_4825, (byte) -103);
+				if (VarcStringIndexLoader.aClass118_4825 != null && client.anInt7297 == 0) {
+					Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825, (byte) -103);
 				}
 			}
 		}
 
 	}
-
-	public static void executeHookInner200k(HookRequest hookrequest_0, int i_1) {
-		Class400.executeHookInner(hookrequest_0, 200000, (byte) 44);
-	}
-
 }

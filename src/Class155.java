@@ -30,16 +30,16 @@ public final class Class155 {
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {
-			Class372 class372_4 = IndexLoaders.aClass377_1065.method6384(i_1, 1420964828);
+			Class372 class372_4 = IndexLoaders.VAR_LOADER.method6384(i_1, 1420964828);
 			return class372_4.aChar4328 != 105 ? -1 : 0;
 		}
 	}
 
 	public int method2627(int i_1) {
-		Class226 class226_3 = IndexLoaders.aClass230_147.method3897(i_1, (byte) 48);
-		int i_4 = class226_3.anInt2784;
-		int i_5 = class226_3.anInt2783 == 31 ? -1 : (1 << class226_3.anInt2783 + 1) - 1;
-		return (this.method2626(i_4, (byte) 17) & i_5) >>> class226_3.anInt2785;
+		VarBitDefinitions class226_3 = IndexLoaders.VARBIT_LOADER.getVarBit(i_1, (byte) 48);
+		int i_4 = class226_3.baseVar;
+		int i_5 = class226_3.endBit == 31 ? -1 : (1 << class226_3.endBit + 1) - 1;
+		return (this.method2626(i_4, (byte) 17) & i_5) >>> class226_3.startBit;
 	}
 
 	Class155() {
@@ -53,7 +53,7 @@ public final class Class155 {
 	public static void method2635(String string_0, String string_1) {
 		if (string_0.length() <= 320 && Class388.method6693(1569311303)) {
 			client.connectionContext.method3051((byte) -71);
-			Class290.method5118((byte) -126);
+			HitbarIndexLoader.method5118((byte) -126);
 			Class9.aString99 = string_0;
 			Class9.aString102 = string_1;
 			Class365.setGameState(14);

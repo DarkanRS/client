@@ -126,7 +126,7 @@ public class Class190 {
 		client.anInt7255 = (int) (Math.random() * 120.0D) - 60;
 		client.anInt7203 = (int) (Math.random() * 30.0D) - 20;
 		client.aFloat7365 = (float) ((int) (Math.random() * 160.0D) - 80 & 0x3fff);
-		Class394.method6763();
+		ClanVarIndexLoader.method6763();
 
 		for (i_1 = 0; i_1 < 2048; i_1++) {
 			client.players[i_1] = null;

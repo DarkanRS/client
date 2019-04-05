@@ -14,8 +14,8 @@ public class Class165 {
 		if (IndexLoaders.LOADING_STAGE != null) {
 			Class328.aClass306_3771 = new Class306();
 			Class328.aClass306_3771.method5422(Class302.aLong3562, IndexLoaders.LOADING_STAGE.aClass433_4711.translate(Class223.CURRENT_LANGUAGE, -1960746007), IndexLoaders.LOADING_STAGE.anInt4715, IndexLoaders.LOADING_STAGE, 2034622208);
-			Class377.aThread4520 = new Thread(Class328.aClass306_3771, "");
-			Class377.aThread4520.start();
+			VarDefinitionLoader.aThread4520 = new Thread(Class328.aClass306_3771, "");
+			VarDefinitionLoader.aThread4520.start();
 		}
 	}
 

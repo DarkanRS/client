@@ -1,6 +1,6 @@
 public class Class192 implements Interface9 {
 
-	static Class1 ACCOUNT_CREATION_STAGE;
+	static AccountCreationStage ACCOUNT_CREATION_STAGE;
 
 	int anInt2388;
 

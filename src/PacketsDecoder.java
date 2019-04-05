@@ -130,7 +130,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.LOGOUT_FULL) {
-			Class438.method7333(false, 2061848059);
+			CursorIndexLoader.method7333(false, 2061848059);
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4446) {
@@ -181,7 +181,7 @@ public class PacketsDecoder extends Class455 {
 			String string_63 = buffer.readString();
 			int flags = buffer.readIntV1();
 			Class470.method7825();
-			Class38.setComponentText(flags, string_63);
+			SunDefinitions.setComponentText(flags, string_63);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.WINDOW_PANE_PACKET) {
@@ -193,7 +193,7 @@ public class PacketsDecoder extends Class455 {
 			int i_9 = buffer.readInt();
 			Class470.method7825();
 			if (i_7 == 2) {
-				ParamDefinitionsLoader.method7081((byte) 18);
+				ParamIndexLoader.method7081((byte) 18);
 			}
 			int[] ints_93 = new int[] { i_9, i_8, key, flags };
 			client.anInt7349 = i_6;
@@ -289,7 +289,7 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_73) {
 				client.aLongArray7424[client.anInt7389] = long_13;
 				client.anInt7389 = (client.anInt7389 + 1) % 100;
-				String string_101 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_12, -2078154753).fillDynamicValues(buffer);
+				String string_101 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_12).fillDynamicValues(buffer);
 				if (i_11 == 2) {
 					MapRegionLoaderTask.appendMessage(18, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_101, (String) null, i_12);
 				} else if (i_11 == 1) {
@@ -385,9 +385,9 @@ public class PacketsDecoder extends Class455 {
 					int i_82 = class161_104.spotAnimId;
 					if (flags != -1 && i_82 != -1) {
 						if (flags == i_82) {
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(flags, (byte) -4);
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -4);
 							if (spotanimdefinitions_38.aBool6968 && spotanimdefinitions_38.animationId != -1) {
-								AnimationDefinitions animationdefinitions_86 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) -4);
+								AnimationDefinitions animationdefinitions_86 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) -4);
 								int i_21 = animationdefinitions_86.replayMode;
 								if (i_21 != 0 && i_21 != 2) {
 									if (i_21 == 1) {
@@ -398,11 +398,11 @@ public class PacketsDecoder extends Class455 {
 								}
 							}
 						} else {
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(flags, (byte) 50);
-							SpotAnimDefinitions spotanimdefinitions_85 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_82, (byte) 100);
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) 50);
+							SpotAnimDefinitions spotanimdefinitions_85 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(i_82, (byte) 100);
 							if (spotanimdefinitions_38.animationId != -1 && spotanimdefinitions_85.animationId != -1) {
-								AnimationDefinitions animationdefinitions_123 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) 15);
-								AnimationDefinitions animationdefinitions_22 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_85.animationId, (byte) 19);
+								AnimationDefinitions animationdefinitions_123 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) 15);
+								AnimationDefinitions animationdefinitions_22 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_85.animationId, (byte) 19);
 								if (animationdefinitions_123.priority < animationdefinitions_22.priority) {
 									bool_115 = false;
 								}
@@ -414,7 +414,7 @@ public class PacketsDecoder extends Class455 {
 						class161_104.anInt2013 = i_9;
 						class161_104.anInt2011 = i_11;
 						if (flags != -1) {
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(flags, (byte) -65);
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -65);
 							int i_40 = spotanimdefinitions_38.aBool6968 ? 0 : 2;
 							if (bool_78) {
 								i_40 = 1;
@@ -442,9 +442,9 @@ public class PacketsDecoder extends Class455 {
 					int i_34 = class161_121.spotAnimId;
 					if (flags != -1 && i_34 != -1) {
 						if (i_34 == flags) {
-							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(flags, (byte) 39);
+							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) 39);
 							if (spotanimdefinitions_125.aBool6968 && spotanimdefinitions_125.animationId != -1) {
-								AnimationDefinitions animationdefinitions_124 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) 36);
+								AnimationDefinitions animationdefinitions_124 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) 36);
 								int i_40 = animationdefinitions_124.replayMode;
 								if (i_40 != 0 && i_40 != 2) {
 									if (i_40 == 1) {
@@ -455,11 +455,11 @@ public class PacketsDecoder extends Class455 {
 								}
 							}
 						} else {
-							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(flags, (byte) -86);
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_34, (byte) -10);
+							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -86);
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(i_34, (byte) -10);
 							if (spotanimdefinitions_125.animationId != -1 && spotanimdefinitions_38.animationId != -1) {
-								AnimationDefinitions animationdefinitions_86 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) -12);
-								AnimationDefinitions animationdefinitions_123 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) 15);
+								AnimationDefinitions animationdefinitions_86 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) -12);
+								AnimationDefinitions animationdefinitions_123 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) 15);
 								if (animationdefinitions_86.priority < animationdefinitions_123.priority) {
 									bool_16 = false;
 								}
@@ -472,7 +472,7 @@ public class PacketsDecoder extends Class455 {
 						class161_121.anInt2011 = i_11;
 						class161_121.anInt2015 = i_10;
 						if (flags != -1) {
-							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(flags, (byte) -15);
+							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -15);
 							i_83 = spotanimdefinitions_125.aBool6968 ? 0 : 2;
 							if (bool_78) {
 								i_83 = 1;
@@ -615,7 +615,7 @@ public class PacketsDecoder extends Class455 {
 				bool_69 = true;
 			}
 			if (!bool_69) {
-				String str_25 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_8, -1821075949).fillDynamicValues(buffer);
+				String str_25 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_8).fillDynamicValues(buffer);
 				if (i_7 == 2) {
 					MapRegionLoaderTask.appendMessage(25, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, str_25, (String) null, i_8);
 				} else if (i_7 == 1) {
@@ -741,7 +741,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == IncomingPacket.LOGOUT_LOBBY) {
-			Class438.method7333(Class9.aBool71, 2100753515);
+			CursorIndexLoader.method7333(Class9.aBool71, 2100753515);
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == IncomingPacket.GLOBAL_CONFIG_1) {
@@ -762,7 +762,7 @@ public class PacketsDecoder extends Class455 {
 			int i_11 = buffer.readIntV1();
 			int i_12 = buffer.readUnsignedShortLE128();
 			Class470.method7825();
-			Class31.method812(key, new Class282_Sub44_Sub3(i_6, i_9, new Class520(coordgrid_90, i_12)), new int[] { i_8, i_11, flags, i_7 }, false, (byte) 121);
+			IdentitiKitIndexLoader.method812(key, new Class282_Sub44_Sub3(i_6, i_9, new Class520(coordgrid_90, i_12)), new int[] { i_8, i_11, flags, i_7 }, false, (byte) 121);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.FRIENDS_CHAT_CHANNEL) {
@@ -838,7 +838,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort();
 			String string_88 = buffer.readString();
 			if (Class46.CLAN_VARS == null) {
-				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
+				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
 			}
 			Class46.CLAN_VARS[key] = string_88;
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
@@ -868,7 +868,7 @@ public class PacketsDecoder extends Class455 {
 			if (i_6 == 65535) {
 				i_6 = -1;
 			}
-			Class117.method1978(i_6, key, flags);
+			Huffman.method1978(i_6, key, flags);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.GAME_BAR_SETTINGS) {
@@ -958,7 +958,7 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_14) {
 				client.aLongArray7424[client.anInt7389] = long_53;
 				client.anInt7389 = (client.anInt7389 + 1) % 100;
-				String string_17 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_11, -1887115838).fillDynamicValues(buffer);
+				String string_17 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_11).fillDynamicValues(buffer);
 				int i_82 = bool_91 ? 42 : 45;
 				if (i_10 != 2 && i_10 != 3) {
 					if (i_10 == 1) {
@@ -976,7 +976,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort();
 			long long_47 = buffer.readLong();
 			if (Class46.CLAN_VARS == null) {
-				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
+				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
 			}
 			Class46.CLAN_VARS[key] = new Long(long_47);
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
@@ -1013,7 +1013,7 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_115) {
 				client.aLongArray7424[client.anInt7389] = long_57;
 				client.anInt7389 = (client.anInt7389 + 1) % 100;
-				String string_41 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_77, -1839082633).fillDynamicValues(buffer);
+				String string_41 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_77).fillDynamicValues(buffer);
 				if (i_35 == 2) {
 					MapRegionLoaderTask.appendMessage(20, 0, Class76.getCrown(1) + string_88, Class76.getCrown(1) + str_92, string_88, string_41, Class179.method3018(long_28), i_77);
 				} else if (i_35 == 1) {
@@ -1027,7 +1027,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (context.currentPacket == IncomingPacket.SEND_PRIVATE_QUICKCHAT) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readUnsignedShort();
-			String str_92 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(flags, -1726302200).fillDynamicValues(buffer);
+			String str_92 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(flags).fillDynamicValues(buffer);
 			MapRegionLoaderTask.appendMessage(19, 0, string_63, string_63, string_63, str_92, (String) null, flags);
 			context.currentPacket = null;
 			return true;
@@ -1035,7 +1035,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readInt();
 			if (Class46.CLAN_VARS == null) {
-				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
+				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
 			}
 			Class46.CLAN_VARS[key] = new Integer(flags);
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
@@ -1065,7 +1065,7 @@ public class PacketsDecoder extends Class455 {
 				IComponentSettings newSettings;
 				if (currentSettings == null) {
 					if (slot == -1) {
-						newSettings = new IComponentSettings(settings, Class117.getInterfaceComponent(interfaceHash).settings.interfaceId);
+						newSettings = new IComponentSettings(settings, IComponentDefinitions.getDefs(interfaceHash).settings.interfaceId);
 					} else {
 						newSettings = new IComponentSettings(settings, -1);
 					}
@@ -1095,7 +1095,7 @@ public class PacketsDecoder extends Class455 {
 				IComponentSettings newSettings;
 				if (currentSettings == null) {
 					if (slot == -1) {
-						newSettings = new IComponentSettings(Class117.getInterfaceComponent(interfaceHash).settings.settingsHash, interfaceId);
+						newSettings = new IComponentSettings(IComponentDefinitions.getDefs(interfaceHash).settings.settingsHash, interfaceId);
 					} else {
 						newSettings = new IComponentSettings(0, interfaceId);
 					}
@@ -1142,7 +1142,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readUnsignedShort();
 			byte b_84 = buffer.readByte();
 			if (Class46.CLAN_VARS == null) {
-				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
+				Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
 			}
 			Class46.CLAN_VARS[key] = new Integer(b_84);
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
@@ -1322,7 +1322,7 @@ public class PacketsDecoder extends Class455 {
 				i_34 <<= 2;
 				key <<= 2;
 				i_10 <<= 2;
-				Class438.method7335(i_12, flags, i_7, i_40, i_34, key, i_59, i_23, i_77, i_15, i_11, i_6, i_35, i_10, bool_18);
+				CursorIndexLoader.method7335(i_12, flags, i_7, i_40, i_34, key, i_59, i_23, i_77, i_15, i_11, i_6, i_35, i_10, bool_18);
 			}
 			context.currentPacket = null;
 			return true;
@@ -1350,7 +1350,7 @@ public class PacketsDecoder extends Class455 {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			if (context.currentPacketSize == 1) {
 				if (bool_91) {
-					Class58.aClass61_528 = null;
+					QuickchatFiller.aClass61_528 = null;
 				} else {
 					Class282_Sub13.aClass61_7587 = null;
 				}
@@ -1358,7 +1358,7 @@ public class PacketsDecoder extends Class455 {
 				return true;
 			} else {
 				if (bool_91) {
-					Class58.aClass61_528 = new Class61(buffer);
+					QuickchatFiller.aClass61_528 = new Class61(buffer);
 				} else {
 					Class282_Sub13.aClass61_7587 = new Class61(buffer);
 				}
@@ -1583,7 +1583,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4440) {
-			Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.clanVarSize];
+			Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4495) {
@@ -1626,7 +1626,7 @@ public class PacketsDecoder extends Class455 {
 			int i_10 = buffer.readIntV1();
 			int i_11 = buffer.readShortLE();
 			Class470.method7825();
-			Class31.method812(i_9, new Class282_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
+			IdentitiKitIndexLoader.method812(i_9, new Class282_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4502) {
@@ -1635,7 +1635,7 @@ public class PacketsDecoder extends Class455 {
 			Class348 class348_97 = new Class348(buffer);
 			Class61 class61_99;
 			if (bool_91) {
-				class61_99 = Class58.aClass61_528;
+				class61_99 = QuickchatFiller.aClass61_528;
 			} else {
 				class61_99 = Class282_Sub13.aClass61_7587;
 			}
@@ -1672,7 +1672,7 @@ public class PacketsDecoder extends Class455 {
 			int i_9 = buffer.readInt();
 			int i_10 = buffer.readUnsignedByteC();
 			Class470.method7825();
-			Class31.method812(i_9, new Class282_Sub44(i_7, i_10), new int[] { key, i_6, flags, i_8 }, false, (byte) 25);
+			IdentitiKitIndexLoader.method812(i_9, new Class282_Sub44(i_7, i_10), new int[] { key, i_6, flags, i_8 }, false, (byte) 25);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4438) {
@@ -1711,7 +1711,7 @@ public class PacketsDecoder extends Class455 {
 			int amount = buffer.readIntV2();
 			Class470.method7825();
 			PulseEvent.setComponentItem(interfaceHash, itemId, amount);
-			ItemDefinitions defs = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(itemId, 985436598);
+			ItemDefinitions defs = IndexLoaders.ITEM_LOADER.getItemDefinitions(itemId);
 			PulseEvent.rotateComponentSprite(interfaceHash, defs.modelRotationX, defs.modelRotationY, defs.modelZoom);
 			PulseEvent.method778(interfaceHash, defs.modelOffsetX, defs.modelOffsetY, defs.modelRotationZ);
 			context.currentPacket = null;
@@ -1777,7 +1777,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readIntLE();
 			if (key != Class354.anInt4112) {
 				Class354.anInt4112 = key;
-				Class210.method3614(Class397.aClass397_4812, -1, -1, (byte) 95);
+				HitsplatIndexLoader.method3614(Class397.aClass397_4812, -1, -1, (byte) 95);
 			}
 			context.currentPacket = null;
 			return true;
@@ -1989,10 +1989,10 @@ public class PacketsDecoder extends Class455 {
 								for (Class275_Sub4 class275_sub4_32 = (Class275_Sub4) client.aClass457_7350.method7659(); class275_sub4_32 != null; class275_sub4_32 = (Class275_Sub4) client.aClass457_7350.method7650((byte) 73)) {
 									if (class275_sub4_32.aString7837.equals(string_88)) {
 										if (i_7 != 0 && class275_sub4_32.aShort7839 == 0) {
-											class275_sub4_32.method4887((byte) 2);
+											class275_sub4_32.method4887();
 											bool_73 = false;
 										} else if (i_7 == 0 && class275_sub4_32.aShort7839 != 0) {
-											class275_sub4_32.method4887((byte) -38);
+											class275_sub4_32.method4887();
 											bool_73 = false;
 										}
 									}
@@ -2086,11 +2086,11 @@ public class PacketsDecoder extends Class455 {
 				class282_sub44_95.remove();
 				client.aClass465_7442.put(class282_sub44_95, (long) interfaceHash);
 			}
-			IComponentDefinitions icomponentdefinitions_130 = Class117.getInterfaceComponent(flags);
+			IComponentDefinitions icomponentdefinitions_130 = IComponentDefinitions.getDefs(flags);
 			if (icomponentdefinitions_130 != null) {
 				Class109.redrawComponent(icomponentdefinitions_130, (byte) -6);
 			}
-			icomponentdefinitions_130 = Class117.getInterfaceComponent(interfaceHash);
+			icomponentdefinitions_130 = IComponentDefinitions.getDefs(interfaceHash);
 			if (icomponentdefinitions_130 != null) {
 				Class109.redrawComponent(icomponentdefinitions_130, (byte) 22);
 				HostNameIdentifier.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
@@ -2131,7 +2131,7 @@ public class PacketsDecoder extends Class455 {
 			if (bool_66 != Class469.aBool5585 || key != Class232.anInt2879) {
 				Class469.aBool5585 = bool_66;
 				Class232.anInt2879 = key;
-				Class210.method3614(Class397.aClass397_4803, -1, -1, (byte) 27);
+				HitsplatIndexLoader.method3614(Class397.aClass397_4803, -1, -1, (byte) 27);
 			}
 			context.currentPacket = null;
 			return true;
@@ -2145,7 +2145,7 @@ public class PacketsDecoder extends Class455 {
 			int i_10 = buffer.readInt();
 			int i_11 = buffer.readInt();
 			Class470.method7825();
-			Class31.method812(i_7, new Class282_Sub44_Sub1(i_9, i_6, key), new int[] { i_11, flags, i_10, i_8 }, false, (byte) 46);
+			IdentitiKitIndexLoader.method812(i_7, new Class282_Sub44_Sub1(i_9, i_6, key), new int[] { i_11, flags, i_10, i_8 }, false, (byte) 46);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.ADD_IGNORE) {
@@ -2299,7 +2299,7 @@ public class PacketsDecoder extends Class455 {
 			CoordGrid coordgrid_36 = new CoordGrid(buffer.readIntV2());
 			int i_15 = buffer.readInt();
 			Class470.method7825();
-			Class31.method812(key, new Class282_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
+			IdentitiKitIndexLoader.method812(key, new Class282_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4445) {
@@ -2341,7 +2341,7 @@ public class PacketsDecoder extends Class455 {
 			Class470.method7825();
 			HookRequest hookrequest_27 = new HookRequest();
 			hookrequest_27.params = arr_26;
-			Class96_Sub4.executeHookInner200k(hookrequest_27, 502538057);
+			CS2Executor.executeHookInner200k(hookrequest_27, 502538057);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.NPC_UPDATE_LARGE) {
@@ -2350,7 +2350,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else {
 			Class151.method2594((context.currentPacket != null ? context.currentPacket.opcode : -1) + "," + (context.secondLastPacket != null ? context.secondLastPacket.opcode : -1) + "," + (context.thirdLastPacket != null ? context.thirdLastPacket.opcode : -1) + " " + context.currentPacketSize, new RuntimeException(), (byte) -73);
-			Class438.method7333(false, 2095335662);
+			CursorIndexLoader.method7333(false, 2095335662);
 			return true;
 		}
 	}

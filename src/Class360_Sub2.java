@@ -46,8 +46,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, byte[] bytes_6, int i_7, int i_8) {
 		super(class505_sub2_sub2_1, class150_2, Class76.aClass76_751, bool_5 && class505_sub2_sub2_1.aBool10263, i_3 * i_4);
 		if (!this.aClass505_Sub2_Sub2_4165.aBool10265) {
-			this.anInt9154 = Texture.nextPowerOfTwo(i_3, -401816318);
-			this.anInt9157 = Texture.nextPowerOfTwo(i_4, -1632403262);
+			this.anInt9154 = ImageIndexLoader.nextPowerOfTwo(i_3, -401816318);
+			this.anInt9157 = ImageIndexLoader.nextPowerOfTwo(i_4, -1632403262);
 		} else {
 			this.anInt9154 = i_3;
 			this.anInt9157 = i_4;
@@ -91,8 +91,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5, int i_6, int i_7) {
 		super(class505_sub2_sub2_1, class150_2, class76_3, false, i_5 * i_4);
 		if (!this.aClass505_Sub2_Sub2_4165.aBool10265) {
-			this.anInt9154 = Texture.nextPowerOfTwo(i_4, 72788545);
-			this.anInt9157 = Texture.nextPowerOfTwo(i_5, -1380222378);
+			this.anInt9154 = ImageIndexLoader.nextPowerOfTwo(i_4, 72788545);
+			this.anInt9157 = ImageIndexLoader.nextPowerOfTwo(i_5, -1380222378);
 		} else {
 			this.anInt9154 = i_4;
 			this.anInt9157 = i_5;
@@ -116,8 +116,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class150 class150_2, int i_3, int i_4, boolean bool_5, float[] floats_6, int i_7, int i_8) {
 		super(class505_sub2_sub2_1, class150_2, Class76.aClass76_751, bool_5 && class505_sub2_sub2_1.aBool10263, i_3 * i_4);
 		if (!this.aClass505_Sub2_Sub2_4165.aBool10265) {
-			this.anInt9154 = Texture.nextPowerOfTwo(i_3, 98224599);
-			this.anInt9157 = Texture.nextPowerOfTwo(i_4, -1607346569);
+			this.anInt9154 = ImageIndexLoader.nextPowerOfTwo(i_3, 98224599);
+			this.anInt9157 = ImageIndexLoader.nextPowerOfTwo(i_4, -1607346569);
 		} else {
 			this.anInt9154 = i_3;
 			this.anInt9157 = i_4;
@@ -197,8 +197,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2_1, int i_2, int i_3, boolean bool_4, int[] ints_5, int i_6, int i_7) {
 		super(class505_sub2_sub2_1, Class150.aClass150_1949, Class76.aClass76_751, bool_4 && class505_sub2_sub2_1.aBool10263, i_2 * i_3);
 		if (!this.aClass505_Sub2_Sub2_4165.aBool10265) {
-			this.anInt9154 = Texture.nextPowerOfTwo(i_2, 1990331952);
-			this.anInt9157 = Texture.nextPowerOfTwo(i_3, -173988631);
+			this.anInt9154 = ImageIndexLoader.nextPowerOfTwo(i_2, 1990331952);
+			this.anInt9157 = ImageIndexLoader.nextPowerOfTwo(i_3, -173988631);
 		} else {
 			this.anInt9154 = i_2;
 			this.anInt9157 = i_3;

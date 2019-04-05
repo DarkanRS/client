@@ -130,7 +130,7 @@ public abstract class Class152 {
 		}
 		Renderers.SOFTWARE_RENDERER.L();
 		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 23);
-		i_2 = Class58.method1141(563483982);
+		i_2 = QuickchatFiller.method1141(563483982);
 		if (i_2 == -1) {
 			i_2 = client.anInt7427;
 		}

@@ -71,7 +71,7 @@ public class FontMetrics {
 					}
 
 					if (i_3 == -1) {
-						i_5 += this.characters[Class242.getByteForChar(var_8) & 0xff] & 0xff;
+						i_5 += this.characters[QuestIndexLoader.getByteForChar(var_8) & 0xff] & 0xff;
 						if (this.kerning != null && i_4 != -1) {
 							i_5 += this.kerning[i_4][var_8];
 						}
@@ -104,7 +104,7 @@ public class FontMetrics {
 			int i_15 = string_1.length();
 
 			for (int i_16 = 0; i_16 < i_15; i_16++) {
-				int i_17 = Class242.getByteForChar(string_1.charAt(i_16)) & 0xff;
+				int i_17 = QuestIndexLoader.getByteForChar(string_1.charAt(i_16)) & 0xff;
 				int i_18 = 0;
 				if (i_17 == 60) {
 					i_12 = i_16;
@@ -487,7 +487,7 @@ public class FontMetrics {
 					}
 
 					if (i_5 == -1) {
-						i_7 += this.characters[Class242.getByteForChar(var_11) & 0xff] & 0xff;
+						i_7 += this.characters[QuestIndexLoader.getByteForChar(var_11) & 0xff] & 0xff;
 						if (this.kerning != null && i_6 != -1) {
 							i_7 += this.kerning[i_6][var_11];
 						}

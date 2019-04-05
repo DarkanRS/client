@@ -3,7 +3,6 @@ import java.util.Stack;
 public class Defaults8Loader {
 
 	static int anInt5932;
-
 	public Interface17 anInterface17_5931;
 
 	public Defaults8Loader(Index index_1) {

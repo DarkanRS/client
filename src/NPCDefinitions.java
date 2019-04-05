@@ -77,7 +77,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6875(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Interface42 interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11) {
+	public final MeshRasterizer method6875(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11) {
 		return this.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, this.renderEmote, true, 1493042037);
 	}
 
@@ -103,7 +103,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Interface42 interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11, boolean bool_12, int i_13) {
+	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11, boolean bool_12, int i_13) {
 		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_14 = this.method6884(interface42_4);
 			return npcdefinitions_14 == null ? null : npcdefinitions_14.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12, 1208445516);
@@ -329,7 +329,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, Interface42 interface42_3, Animation animation_4, Class417 class417_5, int i_6) {
+	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, VarProvider interface42_3, Animation animation_4, Class417 class417_5, int i_6) {
 		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_7 = this.method6884(interface42_3);
 			return npcdefinitions_7 == null ? null : npcdefinitions_7.method6880(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5, 1382303105);
@@ -470,12 +470,12 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final NPCDefinitions method6884(Interface42 interface42_1) {
+	public final NPCDefinitions method6884(VarProvider interface42_1) {
 		int i_3 = -1;
 		if (this.varpBit != -1) {
-			i_3 = interface42_1.method241(this.varpBit);
+			i_3 = interface42_1.getVarBit(this.varpBit);
 		} else if (this.varp != -1) {
-			i_3 = interface42_1.method240(this.varp);
+			i_3 = interface42_1.getVar(this.varp);
 		}
 		if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
 			return this.aClass406_4855.getNPCDefinitions(this.transformTo[i_3]);
@@ -485,15 +485,15 @@ public class NPCDefinitions {
 		}
 	}
 
-	public boolean method6885(Interface42 interface42_1) {
+	public boolean method6885(VarProvider interface42_1) {
 		if (this.transformTo == null) {
 			return true;
 		} else {
 			int i_3 = -1;
 			if (this.varpBit != -1) {
-				i_3 = interface42_1.method241(this.varpBit);
+				i_3 = interface42_1.getVarBit(this.varpBit);
 			} else if (this.varp != -1) {
-				i_3 = interface42_1.method240(this.varp);
+				i_3 = interface42_1.getVar(this.varp);
 			}
 			if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
 				return true;
@@ -719,7 +719,7 @@ public class NPCDefinitions {
 		} else if (opcode == 249) {
 			int i_4 = stream.readUnsignedByte();
 			if (this.aClass465_4896 == null) {
-				int i_5 = Texture.nextPowerOfTwo(i_4, -597233692);
+				int i_5 = ImageIndexLoader.nextPowerOfTwo(i_4, -597233692);
 				this.aClass465_4896 = new IterableNodeMap(i_5);
 			}
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
@@ -738,7 +738,7 @@ public class NPCDefinitions {
 
 	static void method6907() {
 		IndexLoaders.MAP_REGION_DECODER.method4444(1050660585);
-		Class58.method1139(-2058483007);
+		QuickchatFiller.method1139(-2058483007);
 		Class356.method6227(true, (byte) -37);
 		Class247.method4250((byte) -91);
 		System.gc();

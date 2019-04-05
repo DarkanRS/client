@@ -39,7 +39,7 @@ public class MovingAnimation extends Animation {
 		if (WorldMapIndexLoader.INTERFACES_LOADED[interfaceId]) {
 			return true;
 		} else {
-			Class468_Sub8.INTERFACES[interfaceId] = Class288.getInterface(interfaceId, xteas, Class468_Sub8.INTERFACES[interfaceId], false, (byte) -15);
+			Class468_Sub8.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, Class468_Sub8.INTERFACES[interfaceId], false, (byte) -15);
 			if (Class468_Sub8.INTERFACES[interfaceId] == null) {
 				return false;
 			} else {

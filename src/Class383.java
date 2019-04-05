@@ -75,7 +75,7 @@ public class Class383 implements Interface41 {
 	}
 
 	public static int method6513(int i_0, int i_1, int i_2) {
-		if (Class58.aClass529_527.anInt7034 == -1) {
+		if (QuickchatFiller.aClass529_527.anInt7034 == -1) {
 			return 1;
 		} else {
 			if (i_0 != Class393.preferences.currentToolkit.getValue(-408744518)) {
@@ -87,7 +87,7 @@ public class Class383 implements Interface41 {
 			try {
 				Dimension dimension_4 = Class351.gameCanvas.getSize();
 				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
-				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, Class58.aClass529_527.anInt7034);
+				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, QuickchatFiller.aClass529_527.anInt7034);
 				long long_6 = TextureDetails.time();
 				Renderers.SOFTWARE_RENDERER.L();
 				client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);

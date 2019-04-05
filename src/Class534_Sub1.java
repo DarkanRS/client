@@ -110,10 +110,10 @@ public class Class534_Sub1 extends Class534 {
 
 	static int[] method12815(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1) {
 		int[] ints_2 = null;
-		if (Class38.method859(class282_sub50_sub7_0.anInt9587, 219826890)) {
-			ints_2 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) class282_sub50_sub7_0.aLong9584, 327237779).quests;
+		if (SunDefinitions.method859(class282_sub50_sub7_0.anInt9587, 219826890)) {
+			ints_2 = IndexLoaders.ITEM_LOADER.getItemDefinitions((int) class282_sub50_sub7_0.aLong9584).quests;
 		} else if (class282_sub50_sub7_0.anInt9579 != -1) {
-			ints_2 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(class282_sub50_sub7_0.anInt9579, 616869394).quests;
+			ints_2 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub50_sub7_0.anInt9579).quests;
 		} else if (Class237.method3989(class282_sub50_sub7_0.anInt9587)) {
 			Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.NPCS.get((long) ((int) class282_sub50_sub7_0.aLong9584));
 			if (class282_sub47_3 != null) {

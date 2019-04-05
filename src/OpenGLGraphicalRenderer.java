@@ -476,7 +476,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 							}
 						}
 
-						Class38.method854(false, true, -930172525);
+						SunDefinitions.method854(false, true, -930172525);
 						this.aBool8367 = true;
 						this.aClass167_8481 = new Class167(this, this.anInterface22_5834);
 						this.method13572();

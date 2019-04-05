@@ -24,15 +24,15 @@ public class Class6 {
 
 	static void method303(int i_0, int i_1, int i_2) {
 		if (i_0 == 1008) {
-			Class210.method3614(Class397.aClass397_4801, i_1, i_2, (byte) 87);
+			HitsplatIndexLoader.method3614(Class397.aClass397_4801, i_1, i_2, (byte) 87);
 		} else if (i_0 == 1009) {
-			Class210.method3614(Class397.aClass397_4793, i_1, i_2, (byte) 9);
+			HitsplatIndexLoader.method3614(Class397.aClass397_4793, i_1, i_2, (byte) 9);
 		} else if (i_0 == 1010) {
-			Class210.method3614(Class397.aClass397_4794, i_1, i_2, (byte) 89);
+			HitsplatIndexLoader.method3614(Class397.aClass397_4794, i_1, i_2, (byte) 89);
 		} else if (i_0 == 1011) {
-			Class210.method3614(Class397.aClass397_4795, i_1, i_2, (byte) 66);
+			HitsplatIndexLoader.method3614(Class397.aClass397_4795, i_1, i_2, (byte) 66);
 		} else if (i_0 == 1012) {
-			Class210.method3614(Class397.aClass397_4796, i_1, i_2, (byte) 21);
+			HitsplatIndexLoader.method3614(Class397.aClass397_4796, i_1, i_2, (byte) 21);
 		}
 	}
 

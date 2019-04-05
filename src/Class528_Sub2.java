@@ -6283,7 +6283,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 				for (int i_19 = 0; i_19 < rsmesh_2.isolatedVertexNormals.length; i_19++) {
 					VertexNormal class84_20 = rsmesh_2.isolatedVertexNormals[i_19];
 					if (i_55 == class84_20.anInt809) {
-						Class347 class347_21 = Class417.method7005(class84_20.anInt812, -1951471035);
+						BillboardDefinitions class347_21 = Class417.getBillboardDefinitions(class84_20.anInt812);
 						if (class347_21.aBool4059) {
 							bool_18 = true;
 						}
@@ -6341,7 +6341,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 
 			for (i_11 = 0; i_11 < rsmesh_2.isolatedVertexNormals.length; i_11++) {
 				VertexNormal class84_12 = rsmesh_2.isolatedVertexNormals[i_11];
-				Class347 class347_62 = Class417.method7005(class84_12.anInt812, -1147106415);
+				BillboardDefinitions class347_62 = Class417.getBillboardDefinitions(class84_12.anInt812);
 				i_14 = Class335.anIntArray3916[rsmesh_2.faceColor[class84_12.anInt809] & 0xffff] & 0xffffff;
 				i_14 |= 255 - (rsmesh_2.faceAlphas != null ? rsmesh_2.faceAlphas[class84_12.anInt809] & 0xff : 0) << 24;
 				this.aClass193Array8618[i_11] = new Class193(class84_12.anInt809, rsmesh_2.triangleX[class84_12.anInt809], rsmesh_2.triangleY[class84_12.anInt809], rsmesh_2.triangleZ[class84_12.anInt809], class347_62.anInt4054, class347_62.anInt4050, class347_62.anInt4055, class347_62.anInt4057, class347_62.anInt4051, class347_62.aBool4059, class84_12.anInt810);

@@ -171,7 +171,7 @@ public class Class289 implements Runnable {
 								i_14 = i_13 - 1;
 							}
 							if (i_14 >= 0) {
-								bool_10 &= QuickchatDefinitions.method14921(i_14, i_11, i_12);
+								bool_10 &= QuickchatMessageDefinitions.method14921(i_14, i_11, i_12);
 							}
 						}
 					}
@@ -189,9 +189,9 @@ public class Class289 implements Runnable {
 				byte b_49 = 0;
 				byte b_15 = 0;
 				if (Class187.aBool2352) {
-					Class419.aClass160_5004 = graphicalrenderer_0.method8654(i_11, i_11, false, true);
+					CursorDefintions.aClass160_5004 = graphicalrenderer_0.method8654(i_11, i_11, false, true);
 					class158_sub1_36 = graphicalrenderer_0.method8418();
-					class158_sub1_36.method13759(0, Class419.aClass160_5004.method2808());
+					class158_sub1_36.method13759(0, CursorDefintions.aClass160_5004.method2808());
 					Interface8 interface8_16 = graphicalrenderer_0.method8419(i_11, i_11);
 					class158_sub1_36.method13765(interface8_16);
 					graphicalrenderer_0.method8637(class158_sub1_36, -165772657);
@@ -200,7 +200,7 @@ public class Class289 implements Runnable {
 					b_15 = 48;
 					graphicalrenderer_0.ba(1, 0);
 				} else {
-					Class419.aClass160_5004 = graphicalrenderer_0.createNativeSprite(ints_35, i_11, i_11, i_11, 1063937715);
+					CursorDefintions.aClass160_5004 = graphicalrenderer_0.createNativeSprite(ints_35, i_11, i_11, i_11, 1063937715);
 				}
 				IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
 				int i_37 = ~0xffffff | (238 + (int) (Math.random() * 20.0D) - 10 << 16) + (238 + (int) (Math.random() * 20.0D) - 10 << 8) + (238 + (int) (Math.random() * 20.0D) - 10);
@@ -301,9 +301,9 @@ public class Class289 implements Runnable {
 						}
 						graphicalrenderer_0.B(i_22, i_23, i_7 * 4, i_7 * 4, i_18, 2);
 						if (!Class187.aBool2352) {
-							Class419.aClass160_5004.method2750((i_20 - b_8) * 4 + 48, i_4 * 4 + 48 - (i_21 - b_9) * 4 - i_7 * 4, i_7 * 4, i_7 * 4, i_22, i_23);
+							CursorDefintions.aClass160_5004.method2750((i_20 - b_8) * 4 + 48, i_4 * 4 + 48 - (i_21 - b_9) * 4 - i_7 * 4, i_7 * 4, i_7 * 4, i_22, i_23);
 							if (Class187.aBool2358) {
-								Class419.aClass160_5004.method2752(256, 0);
+								CursorDefintions.aClass160_5004.method2752(256, 0);
 								try {
 									graphicalrenderer_0.method8393((short) 3740);
 									Class89.sleep(2000L);
@@ -317,7 +317,7 @@ public class Class289 implements Runnable {
 				if (Class187.aBool2352) {
 					graphicalrenderer_0.method8416(class158_sub1_36, (byte) -88);
 					if (Class187.aBool2358) {
-						Class419.aClass160_5004.method2752(256, 0);
+						CursorDefintions.aClass160_5004.method2752(256, 0);
 						try {
 							graphicalrenderer_0.method8393((short) 11377);
 							Class89.sleep(2000L);
@@ -364,7 +364,7 @@ public class Class289 implements Runnable {
 											if (i_26 >= 0) {
 												boolean bool_50 = false;
 												if (i_26 >= 0) {
-													WorldMapAreaDefs worldmapareadefs_51 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_26, 537535478);
+													WorldMapAreaDefs worldmapareadefs_51 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_26, 537535478);
 													if (worldmapareadefs_51 != null && worldmapareadefs_51.aBool2730) {
 														bool_50 = true;
 													}
@@ -404,7 +404,7 @@ public class Class289 implements Runnable {
 					}
 					Class283 class283_44 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 79);
 					if (class283_44 != null) {
-						IndexLoaders.WORLD_MAP_INDEX_LOADER.method3697(1024, 64, -2093693613);
+						IndexLoaders.WORLD_MAP_LOADER.method3697(1024, 64, -2093693613);
 						CoordGrid coordgrid_45 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 						for (i_23 = 0; i_23 < class283_44.anInt3382; i_23++) {
 							i_24 = class283_44.anIntArray3381[i_23];
@@ -414,14 +414,14 @@ public class Class289 implements Runnable {
 								if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4) {
 									Class187.aClass482_2350.append(new Class282_Sub38(i_23));
 								} else {
-									WorldMapAreaDefs worldmapareadefs_46 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23], 1792768149);
+									WorldMapAreaDefs worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23], 1792768149);
 									if (worldmapareadefs_46.anIntArray2717 != null && i_25 + worldmapareadefs_46.anInt2731 >= 0 && i_25 + worldmapareadefs_46.anInt2747 < i_3 && i_26 + worldmapareadefs_46.anInt2746 >= 0 && i_26 + worldmapareadefs_46.anInt2744 < i_4) {
 										Class187.aClass482_2350.append(new Class282_Sub38(i_23));
 									}
 								}
 							}
 						}
-						IndexLoaders.WORLD_MAP_INDEX_LOADER.method3697(128, 64, -1572860391);
+						IndexLoaders.WORLD_MAP_LOADER.method3697(128, 64, -1572860391);
 					}
 				}
 				return true;

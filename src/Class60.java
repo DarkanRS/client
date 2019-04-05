@@ -48,7 +48,7 @@ public class Class60 {
 				HookRequest hookrequest_2 = new HookRequest();
 				hookrequest_2.iComponentDefs = icomponentdefinitions_1;
 				hookrequest_2.params = icomponentdefinitions_1.anObjectArray1396;
-				Class96_Sub4.executeHookInner200k(hookrequest_2, 1386646091);
+				CS2Executor.executeHookInner200k(hookrequest_2, 1386646091);
 			}
 			client.anInt7427 = -1;
 			client.anInt7346 = -1;
@@ -84,10 +84,10 @@ public class Class60 {
 		int i_19;
 		if (i_1 >= Class532_Sub3.anInt7070 && i_1 <= Class532_Sub3.anInt7068) {
 			int[] ints_15 = Class532_Sub3.anIntArrayArray7072[i_1];
-			i_16 = Class275.method4890(i_0 - i_2, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 1149911370);
-			i_17 = Class275.method4890(i_0 + i_2, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -1752676227);
-			i_18 = Class275.method4890(i_0 - i_8, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 543795752);
-			i_19 = Class275.method4890(i_0 + i_8, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 1403864905);
+			i_16 = EntityNode.method4890(i_0 - i_2, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 1149911370);
+			i_17 = EntityNode.method4890(i_0 + i_2, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -1752676227);
+			i_18 = EntityNode.method4890(i_0 - i_8, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 543795752);
+			i_19 = EntityNode.method4890(i_0 + i_8, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 1403864905);
 			Class232.method3922(ints_15, i_16, i_18, i_4, (byte) -39);
 			Class232.method3922(ints_15, i_18, i_19, i_3, (byte) -10);
 			Class232.method3922(ints_15, i_19, i_17, i_4, (byte) -23);
@@ -114,8 +114,8 @@ public class Class60 {
 				i_16 = i_9 + i_1;
 				if (i_16 >= Class532_Sub3.anInt7070 && i_23 <= Class532_Sub3.anInt7068) {
 					if (i_9 >= i_8) {
-						i_17 = Class275.method4890(i_0 + i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -617603444);
-						i_18 = Class275.method4890(i_0 - i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -1801446753);
+						i_17 = EntityNode.method4890(i_0 + i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -617603444);
+						i_18 = EntityNode.method4890(i_0 - i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -1801446753);
 						if (i_16 <= Class532_Sub3.anInt7068) {
 							Class232.method3922(Class532_Sub3.anIntArrayArray7072[i_16], i_18, i_17, i_4, (byte) -23);
 						}
@@ -124,10 +124,10 @@ public class Class60 {
 						}
 					} else {
 						i_17 = Class5.anIntArray36[i_9];
-						i_18 = Class275.method4890(i_0 + i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 877789143);
-						i_19 = Class275.method4890(i_0 - i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 58227539);
-						i_20 = Class275.method4890(i_0 + i_17, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -1073712474);
-						i_21 = Class275.method4890(i_0 - i_17, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 87726144);
+						i_18 = EntityNode.method4890(i_0 + i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 877789143);
+						i_19 = EntityNode.method4890(i_0 - i_7, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 58227539);
+						i_20 = EntityNode.method4890(i_0 + i_17, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -1073712474);
+						i_21 = EntityNode.method4890(i_0 - i_17, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 87726144);
 						if (i_16 <= Class532_Sub3.anInt7068) {
 							ints_22 = Class532_Sub3.anIntArrayArray7072[i_16];
 							Class232.method3922(ints_22, i_19, i_21, i_4, (byte) 31);
@@ -149,12 +149,12 @@ public class Class60 {
 				i_17 = i_0 + i_9;
 				i_18 = i_0 - i_9;
 				if (i_17 >= Class532_Sub3.anInt7071 && i_18 <= Class532_Sub3.anInt7069) {
-					i_17 = Class275.method4890(i_17, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 686110117);
-					i_18 = Class275.method4890(i_18, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -716811882);
+					i_17 = EntityNode.method4890(i_17, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, 686110117);
+					i_18 = EntityNode.method4890(i_18, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -716811882);
 					if (i_7 < i_8) {
 						i_19 = i_11 < i_7 ? Class5.anIntArray36[i_7] : i_11;
-						i_20 = Class275.method4890(i_0 + i_19, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -569174694);
-						i_21 = Class275.method4890(i_0 - i_19, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -277030614);
+						i_20 = EntityNode.method4890(i_0 + i_19, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -569174694);
+						i_21 = EntityNode.method4890(i_0 - i_19, Class532_Sub3.anInt7071, Class532_Sub3.anInt7069, -277030614);
 						if (i_16 <= Class532_Sub3.anInt7068) {
 							ints_22 = Class532_Sub3.anIntArrayArray7072[i_16];
 							Class232.method3922(ints_22, i_18, i_21, i_4, (byte) -20);

@@ -53,7 +53,7 @@ public class Class358 {
 				return;
 			}
 			if (i_3 == 1) {
-				int[] ints_4 = Class210.anIntArray2668 = new int[6];
+				int[] ints_4 = HitsplatIndexLoader.anIntArray2668 = new int[6];
 				ints_4[0] = rsbytebuffer_2.readUnsignedShort();
 				ints_4[1] = rsbytebuffer_2.readUnsignedShort();
 				ints_4[2] = rsbytebuffer_2.readUnsignedShort();

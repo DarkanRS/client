@@ -117,8 +117,8 @@ public abstract class JS5StandardRequester {
 		Class9.anInt72 = -2;
 	}
 
-	public static void method5559(Index index_0) {
-		Class347.aClass317_4053 = index_0;
+	public static void setBillboardIndex(Index index_0) {
+		BillboardDefinitions.BILLBOARD_INDEX = index_0;
 	}
 
 	public static void method5560(RsByteBuffer rsbytebuffer_0, int i_1) {

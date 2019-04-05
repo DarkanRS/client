@@ -23,8 +23,8 @@ public class Class291 {
 	static UnderlayIndexLoader UNDERLAY_DEF_LOADER;
 	protected static ObjectIndexLoader aClass474_3455;
 	protected static WorldMapIndexLoader aClass218_3456;
-	protected static Class427 aClass427_3457;
-	protected static Interface42 anInterface42_3458;
+	protected static MapSpriteIndexLoader aClass427_3457;
+	protected static VarProvider anInterface42_3458;
 	static byte[] underlayData;
 	static byte[] aByteArray3453;
 	static byte[] aByteArray3487;
@@ -44,7 +44,7 @@ public class Class291 {
 	protected static int anInt3476;
 	protected static int anInt3492;
 
-	public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, WorldMapIndexLoader worldmapindexloader_4, Class427 class427_5, Interface42 interface42_6) {
+	public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, WorldMapIndexLoader worldmapindexloader_4, MapSpriteIndexLoader class427_5, VarProvider interface42_6) {
 		aClass317_3460 = index_0;
 		aClass536_3482 = class536_1;
 		UNDERLAY_DEF_LOADER = underlayindexloader_2;
@@ -62,7 +62,7 @@ public class Class291 {
 			}
 		}
 
-		Class38.method854(true, false, -1938566313);
+		SunDefinitions.method854(true, false, -1938566313);
 	}
 
 	static void method5126() {
@@ -744,9 +744,9 @@ public class Class291 {
 				}
 
 				i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
-				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(i_9, 96, (byte) -73), 475535484) & 0xffff];
+				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96, (byte) -73), 475535484) & 0xffff];
 			} else if (i_5 >= 0) {
-				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(interface22_0.method144(i_5).color, 96, (byte) -53), 390293203) & 0xffff];
+				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(interface22_0.method144(i_5).color, 96, (byte) -53), 390293203) & 0xffff];
 			} else if (overlaydef_4.primaryRGB == -1) {
 				i_6 = 0;
 			} else {
@@ -759,7 +759,7 @@ public class Class291 {
 				}
 
 				i_9 = i_8 + (i_7 + i_2 & 0xfc00) + (i_7 & 0x380);
-				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(Class242.method4162(i_9, 96, (byte) -9), 941984440) & 0xffff];
+				i_6 = ~0xffffff | Class335.anIntArray3916[Class372.method6362(QuestIndexLoader.method4162(i_9, 96, (byte) -9), 941984440) & 0xffff];
 			}
 
 			return i_6;
@@ -772,7 +772,7 @@ public class Class291 {
 				ObjectDefinitions objectdefinitions_8 = aClass474_3455.getObjectDefinitions(ints_5[i_7]);
 				int i_9 = objectdefinitions_8.mapSpriteId;
 				if (i_9 != -1) {
-					Class418 class418_10 = aClass427_3457.method7172(i_9);
+					MapSpriteDefinitions class418_10 = aClass427_3457.method7172(i_9);
 					NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.adjustMapSceneRotation ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.flipMapSprite ? objectdefinitions_8.inverted : false, (byte) 70);
 					if (nativesprite_11 != null) {
 						int i_12 = i_3 * nativesprite_11.method228() >> 2;
@@ -831,7 +831,7 @@ public class Class291 {
 	}
 
 	static void method5183(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(aClass317_3460.method5626(aClass282_Sub50_Sub6_3491.aString9533, "area"));
+		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(aClass317_3460.getFileByName(aClass282_Sub50_Sub6_3491.aString9533, "area"));
 		int i_4 = rsbytebuffer_3.readUnsignedByte();
 		int[] ints_5 = new int[i_4];
 

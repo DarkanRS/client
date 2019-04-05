@@ -709,7 +709,7 @@ public class Class304 implements Interface27 {
 				HookRequest hookrequest_4 = new HookRequest();
 				hookrequest_4.iComponentDefs = icomponentdefinitions_0;
 				hookrequest_4.params = icomponentdefinitions_0.anObjectArray1400;
-				Class96_Sub4.executeHookInner200k(hookrequest_4, 1699733120);
+				CS2Executor.executeHookInner200k(hookrequest_4, 1699733120);
 			}
 			client.aBool7344 = true;
 			Class7.anInt56 = icomponentdefinitions_0.idHash;

@@ -48,7 +48,7 @@ public class Class239 {
 				this.method4072(mapregion_1.getSizeX() >> 4, mapregion_1.getSizeY() >> 4, 0, -1860642378);
 			}
 		} else {
-			this.method4072(Class31.anInt361 >> 12, Class246.anInt3029 >> 12, anInt2942, -1959454932);
+			this.method4072(IdentitiKitIndexLoader.anInt361 >> 12, Class246.anInt3029 >> 12, anInt2942, -1959454932);
 		}
 		this.method4065();
 		this.method4049((byte) 97);
@@ -104,7 +104,7 @@ public class Class239 {
 		long long_6 = ((long) i_2 & 0xffffL) << 48 | ((long) i_3 & 0xffffL) << 32 | ((long) i_4 & 0xffffL) << 16 | (long) i_1 & 0xffffL;
 		Class247 class247_8 = (Class247) this.aClass229_2954.get(long_6);
 		if (class247_8 == null) {
-			class247_8 = IndexLoaders.aClass288_1746.method5077(i_1, i_2, i_3, i_4, IndexLoaders.aClass45_5759, 1868752196);
+			class247_8 = IndexLoaders.SKYBOX_LOADER.method5077(i_1, i_2, i_3, i_4, IndexLoaders.SUN_LOADER, 1868752196);
 			this.aClass229_2954.put(class247_8, long_6);
 		}
 		return class247_8;
@@ -190,8 +190,8 @@ public class Class239 {
 	public Class239(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		this.aClass505_2944 = graphicalrenderer_1;
 		this.aClass535ArrayArray2943 = new Class535[i_2][i_3];
-		if (Class210.anIntArray2668 != null) {
-			Class81.aClass152_802 = this.method4064(Class210.anIntArray2668[0], Class210.anIntArray2668[1], Class210.anIntArray2668[2], Class210.anIntArray2668[3], Class210.anIntArray2668[4], Class210.anIntArray2668[5], 106789318);
+		if (HitsplatIndexLoader.anIntArray2668 != null) {
+			Class81.aClass152_802 = this.method4064(HitsplatIndexLoader.anIntArray2668[0], HitsplatIndexLoader.anIntArray2668[1], HitsplatIndexLoader.anIntArray2668[2], HitsplatIndexLoader.anIntArray2668[3], HitsplatIndexLoader.anIntArray2668[4], HitsplatIndexLoader.anIntArray2668[5], 106789318);
 		}
 		aClass247_2940 = null;
 		this.aClass535_2948 = new Class535();

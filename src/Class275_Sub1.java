@@ -1,4 +1,4 @@
-public class Class275_Sub1 extends Class275 {
+public class Class275_Sub1 extends EntityNode {
 
 	public Class275_Sub1 aClass275_Sub1_7706;
 	public Class275_Sub1 aClass275_Sub1_7707;

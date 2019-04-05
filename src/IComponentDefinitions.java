@@ -591,7 +591,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, Class31 class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, Interface42 interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
+	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
 		aBool1399 = false;
 		if (this.anInt1329 == 0) {
 			return null;
@@ -679,7 +679,7 @@ public class IComponentDefinitions {
 					}
 				}
 			} else if (this.anInt1329 == 4) {
-				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.anInt1330, 1323169498);
+				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.anInt1330);
 				MeshRasterizer meshrasterizer_24 = itemdefinitions_27.method7084(graphicalrenderer_1, i_2, 10, playerappearance_10, animation_9, 0, 0, 0, 0);
 				if (meshrasterizer_24 == null) {
 					aBool1399 = true;
@@ -768,7 +768,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public Class247 method2027(Class288 class288_1, Class45 class45_2, int i_3) {
+	public Class247 method2027(SkyboxIndexLoader class288_1, SunIndexLoader class45_2, int i_3) {
 		if (this.anInt1404 == -1) {
 			return null;
 		} else {
@@ -886,5 +886,16 @@ public class IComponentDefinitions {
 				return nativesprite_5;
 			}
 		}
+	}
+
+	public static IComponentDefinitions getDefs(int hash) {
+		int interfaceId = hash >> 16;
+		if (Class468_Sub8.INTERFACES[interfaceId] == null || Class468_Sub8.INTERFACES[interfaceId].getComponent(hash) == null) {
+			boolean bool_3 = MovingAnimation.isInterfaceLoaded(interfaceId, (int[]) null, -1161112150);
+			if (!bool_3) {
+				return null;
+			}
+		}
+		return Class468_Sub8.INTERFACES[interfaceId].getComponent(hash);
 	}
 }

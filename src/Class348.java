@@ -78,7 +78,7 @@ public class Class348 {
 			client.anInt7349 = -1;
 			client.aClass465_7442 = new IterableNodeMap(8);
 			MeshModifier.method7041((byte) -6);
-			client.anInt7349 = Class58.aClass529_527.anInt7036;
+			client.anInt7349 = QuickchatFiller.aClass529_527.anInt7036;
 			Class516.method8867(false);
 			IncomingPacket.method6378();
 			Class150.method2582(client.anInt7349, (int[]) null, -1484331524);
@@ -93,9 +93,9 @@ public class Class348 {
 		VertexNormal.myPlayer.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.getSizeX() / 2;
 		VertexNormal.myPlayer.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.getSizeY() / 2;
 		Class246.anInt3029 = 0;
-		Class31.anInt361 = 0;
+		IdentitiKitIndexLoader.anInt361 = 0;
 		if (NativeLibraryLoader.anInt3240 == 5) {
-			Class31.anInt361 = Class296.anInt3534 << 9;
+			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 << 9;
 			Class246.anInt3029 = Class282_Sub44.anInt8064 << 9;
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);

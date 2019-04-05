@@ -66,7 +66,7 @@ public class Class282_Sub48 extends Node {
 		int i_2 = this.soundEffectId;
 		boolean bool_3 = this.aBool8098;
 		if (this.aClass478_8104 != null) {
-			ObjectDefinitions objectdefinitions_4 = this.aClass478_8104.method8013((Interface42) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 46);
+			ObjectDefinitions objectdefinitions_4 = this.aClass478_8104.method8013((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 46);
 			if (objectdefinitions_4 != null) {
 				this.soundEffectId = objectdefinitions_4.ambientSoundId;
 				this.aBool8098 = objectdefinitions_4.aBool5696;

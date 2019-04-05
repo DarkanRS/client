@@ -24,7 +24,7 @@ public class Class96_Sub8 extends Class96 {
 
 	void method1593() {
 		if (this.aClass268_9271 != null) {
-			Class58.method1142(this.aClass268_9271, 1303678782);
+			QuickchatFiller.method1142(this.aClass268_9271, 1303678782);
 			this.aClass268_9271 = null;
 		}
 	}

@@ -34,7 +34,7 @@ public class ConnectionInfo {
 	static String method7499(long long_0, int i_2) {
 		Calendar calendar_5;
 		if (true) {
-			Class288.method5083(long_0);
+			SkyboxIndexLoader.method5083(long_0);
 			calendar_5 = Class407.aCalendar4846;
 		} else {
 			Class155.method2634(long_0);

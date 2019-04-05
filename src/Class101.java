@@ -289,7 +289,7 @@ public abstract class Class101 {
 		} else {
 			ItemContainer class282_sub30_3 = CS2Runner.getItemContainer(i_0, false);
 			if (class282_sub30_3 == null) {
-				return IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
+				return IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
 			} else {
 				int i_4 = 0;
 				for (int i_5 = 0; i_5 < class282_sub30_3.itemIds.length; i_5++) {
@@ -297,7 +297,7 @@ public abstract class Class101 {
 						++i_4;
 					}
 				}
-				i_4 += IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_0, (short) 24410).maxSize - class282_sub30_3.itemIds.length;
+				i_4 += IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 24410).maxSize - class282_sub30_3.itemIds.length;
 				return i_4;
 			}
 		}

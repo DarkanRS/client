@@ -46,10 +46,10 @@ public class Class114 {
 			if (Class186.aClass8_2348 != null && Class176.aClass414_2200 != null) {
 				fontmetrics_1 = Class176.aClass414_2200;
 			} else {
-				fontmetrics_1 = Class288.aClass414_3438;
+				fontmetrics_1 = SkyboxIndexLoader.aClass414_3438;
 			}
 		} else {
-			fontmetrics_1 = Class288.aClass414_3438;
+			fontmetrics_1 = SkyboxIndexLoader.aClass414_3438;
 		}
 		Class20.anInt178 = fontmetrics_1.anInt4979 + fontmetrics_1.anInt4978;
 		return fontmetrics_1;

@@ -1,25 +1,16 @@
 public abstract class Class158_Sub1 extends Class158 {
 
-	public static Class3 PLAYER_VAR_PROVIDER;
-
+	public static PlayerVarProvider PLAYER_VAR_PROVIDER;
+	
 	public abstract void method13757(Interface8 var1);
-
 	public abstract void method13758(Interface8 var1);
-
 	public abstract void method13759(int var1, Interface9 var2);
-
 	public abstract void method13760(int var1, Interface9 var2);
-
 	public abstract void method13761(int var1, Interface9 var2);
-
 	public abstract void method13762(int var1, Interface9 var2);
-
 	public abstract void method13763(Interface8 var1);
-
 	public abstract boolean method13764();
-
 	public abstract void method13765(Interface8 var1);
-
 	public abstract boolean method13766();
 
 	static IndexReference[] method13767() {

@@ -35,7 +35,7 @@ public class Class282_Sub33 extends Node {
 				i_4 = 32767;
 			}
 			byte[] bytes_5 = new byte[i_4];
-			rsbytebuffer_0.index += Class113.aClass117_1234.method1973(rsbytebuffer_0.buffer, rsbytebuffer_0.index, bytes_5, 0, i_4);
+			rsbytebuffer_0.index += Class113.HUFFMAN.method1973(rsbytebuffer_0.buffer, rsbytebuffer_0.index, bytes_5, 0, i_4);
 			String string_6 = Class344.method6118(bytes_5, 0, i_4, (byte) -71);
 			return string_6;
 		} catch (Exception exception_8) {

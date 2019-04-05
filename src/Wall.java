@@ -357,21 +357,21 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 		int i_2 = Class282_Sub44.anInt8064 * 512 + 256;
 		int i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 102) - SpotAnimDefinitions.anInt6985;
 		if (Class115.anInt1249 >= 100) {
-			Class31.anInt361 = Class296.anInt3534 * 512 + 256;
+			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
 			Class246.anInt3029 = Class282_Sub44.anInt8064 * 512 + 256;
-			Class109_Sub1.anInt9384 = Class504.method8389(Class31.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 84) - SpotAnimDefinitions.anInt6985;
+			Class109_Sub1.anInt9384 = Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 84) - SpotAnimDefinitions.anInt6985;
 		} else {
-			if (Class31.anInt361 < i_1) {
-				Class31.anInt361 = (i_1 - Class31.anInt361) * Class115.anInt1249 / 1000 + Class31.anInt361 + Class454.anInt5451;
-				if (Class31.anInt361 > i_1) {
-					Class31.anInt361 = i_1;
+			if (IdentitiKitIndexLoader.anInt361 < i_1) {
+				IdentitiKitIndexLoader.anInt361 = (i_1 - IdentitiKitIndexLoader.anInt361) * Class115.anInt1249 / 1000 + IdentitiKitIndexLoader.anInt361 + Class454.anInt5451;
+				if (IdentitiKitIndexLoader.anInt361 > i_1) {
+					IdentitiKitIndexLoader.anInt361 = i_1;
 				}
 			}
 
-			if (Class31.anInt361 > i_1) {
-				Class31.anInt361 -= Class115.anInt1249 * (Class31.anInt361 - i_1) / 1000 + Class454.anInt5451;
-				if (Class31.anInt361 < i_1) {
-					Class31.anInt361 = i_1;
+			if (IdentitiKitIndexLoader.anInt361 > i_1) {
+				IdentitiKitIndexLoader.anInt361 -= Class115.anInt1249 * (IdentitiKitIndexLoader.anInt361 - i_1) / 1000 + Class454.anInt5451;
+				if (IdentitiKitIndexLoader.anInt361 < i_1) {
+					IdentitiKitIndexLoader.anInt361 = i_1;
 				}
 			}
 
@@ -407,7 +407,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 		i_1 = Class96_Sub13.anInt9368 * 512 + 256;
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
 		i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 54) - Class121.anInt1527;
-		int i_4 = i_1 - Class31.anInt361;
+		int i_4 = i_1 - IdentitiKitIndexLoader.anInt361;
 		int i_5 = i_3 - Class109_Sub1.anInt9384;
 		int i_6 = i_2 - Class246.anInt3029;
 		int i_7 = (int) Math.sqrt((double) (i_6 * i_6 + i_4 * i_4));

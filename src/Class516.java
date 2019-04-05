@@ -18,9 +18,9 @@ public class Class516 {
 		throw new Error();
 	}
 
-	public static void method8866(Class275 class275_0, Class275 class275_1, int i_2) {
+	public static void method8866(EntityNode class275_0, EntityNode class275_1, int i_2) {
 		if (class275_0.aClass275_3340 != null) {
-			class275_0.method4887((byte) -120);
+			class275_0.method4887();
 		}
 		class275_0.aClass275_3340 = class275_1;
 		class275_0.aClass275_3339 = class275_1.aClass275_3339;

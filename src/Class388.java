@@ -1,84 +1,64 @@
 public class Class388 implements Interface41 {
 
-	static Index INTERFACE_INDEX;
+    static Index INTERFACE_INDEX;
 
-	public static int anInt4722;
+    public static int anInt4722;
 
-	public static int anInt4723;
+    public static int anInt4723;
 
-	Index aClass317_4720;
+    Index aClass317_4720;
 
-	String aString4719;
+    String aString4719;
 
-	public Class445 method234() {
-		return Class445.aClass445_5382;
-	}
+    public Class445 method234() {
+        return Class445.aClass445_5382;
+    }
 
-	public Class445 method232() {
-		return Class445.aClass445_5382;
-	}
+    public Class445 method232() {
+        return Class445.aClass445_5382;
+    }
 
-	Class388(Index index_1) {
-		this.aClass317_4720 = index_1;
-		this.aString4719 = "details";
-	}
+    Class388(Index index_1) {
+        this.aClass317_4720 = index_1;
+        this.aString4719 = "details";
+    }
 
-	public int method231() {
-		return this.aClass317_4720.method5629(this.aString4719) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 58);
-	}
+    public int method231() {
+        return this.aClass317_4720.method5629(this.aString4719) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 58);
+    }
 
-	public Class445 method230() {
-		return Class445.aClass445_5382;
-	}
+    public Class445 method230() {
+        return Class445.aClass445_5382;
+    }
 
-	public Class445 method233() {
-		return Class445.aClass445_5382;
-	}
+    public Class445 method233() {
+        return Class445.aClass445_5382;
+    }
 
-	public int getCompletion() {
-		return this.aClass317_4720.method5629(this.aString4719) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 25);
-	}
+    public int getCompletion() {
+        return this.aClass317_4720.method5629(this.aString4719) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 25);
+    }
 
-	public Class445 method235() {
-		return Class445.aClass445_5382;
-	}
+    public Class445 method235() {
+        return Class445.aClass445_5382;
+    }
 
-	static final void method6689(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		int[] ints_5 = Class96_Sub14.method14642(string_4, cs2executor_2, 1724948075);
-		if (ints_5 != null) {
-			string_4 = string_4.substring(0, string_4.length() - 1);
-		}
-		icomponentdefinitions_0.anObjectArray1397 = Class351.method6193(string_4, cs2executor_2, 116060778);
-		icomponentdefinitions_0.anIntArray1401 = ints_5;
-		icomponentdefinitions_0.aBool1384 = true;
-	}
+    static void method6692(int i_0) {
+        TCPPacket tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
+        tcpmessage_1.buffer.writeByte(Class158.windowedMode());
+        tcpmessage_1.buffer.writeShort(Class349.anInt4083);
+        tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
+        tcpmessage_1.buffer.writeByte(Class393.preferences.aClass468_Sub4_8223.method12641(-965992195));
+        client.aClass184_7475.queuePacket(tcpmessage_1);
+    }
 
-	static final void method6690(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (Class96_Sub14.method14642(string_4, cs2executor_2, 41262162) != null) {
-			string_4 = string_4.substring(0, string_4.length() - 1);
-		}
-		icomponentdefinitions_0.anObjectArray1361 = Class351.method6193(string_4, cs2executor_2, -295691698);
-		icomponentdefinitions_0.aBool1384 = true;
-	}
+    static boolean method6693(int i_0) {
+        return client.gameState != 5 ? false : !JS5CacheFile.method3360((byte) 103) && !Class85.method1466(-611019435);
+    }
 
-	static void method6692(int i_0) {
-		TCPPacket tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
-		tcpmessage_1.buffer.writeByte(Class158.windowedMode());
-		tcpmessage_1.buffer.writeShort(Class349.anInt4083);
-		tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
-		tcpmessage_1.buffer.writeByte(Class393.preferences.aClass468_Sub4_8223.method12641(-965992195));
-		client.aClass184_7475.queuePacket(tcpmessage_1);
-	}
-
-	static boolean method6693(int i_0) {
-		return client.gameState != 5 ? false : !JS5CacheFile.method3360((byte) 103) && !Class85.method1466(-611019435);
-	}
-
-	static void method6694(Class200 class200_0, int i_1, int i_2, int i_3, MeshRasterizer meshrasterizer_4, int i_5) {
-		if (meshrasterizer_4 != null) {
-			class200_0.method3253(i_1, i_2, i_3, meshrasterizer_4.N(), meshrasterizer_4.RA(), meshrasterizer_4.ya(), meshrasterizer_4.YA(), meshrasterizer_4.o(), meshrasterizer_4.AA(), meshrasterizer_4.ha());
-		}
-	}
+    static void method6694(Class200 class200_0, int i_1, int i_2, int i_3, MeshRasterizer meshrasterizer_4, int i_5) {
+        if (meshrasterizer_4 != null) {
+            class200_0.method3253(i_1, i_2, i_3, meshrasterizer_4.N(), meshrasterizer_4.RA(), meshrasterizer_4.ya(), meshrasterizer_4.YA(), meshrasterizer_4.o(), meshrasterizer_4.AA(), meshrasterizer_4.ha());
+        }
+    }
 }

@@ -194,11 +194,11 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 								client.anInt7296 = 0;
 							}
 						}
-						if (Class401.aClass118_4825 != null) {
+						if (VarcStringIndexLoader.aClass118_4825 != null) {
 							++client.anInt7297;
 							if (client.anInt7297 >= 15) {
-								Class109.redrawComponent(Class401.aClass118_4825, (byte) 51);
-								Class401.aClass118_4825 = null;
+								Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825, (byte) 51);
+								VarcStringIndexLoader.aClass118_4825 = null;
 							}
 						}
 						client.aClass118_7370 = null;
@@ -248,7 +248,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 																	i_2 = 3;
 																}
 																CoordGrid coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-																Class447.method7460(i_2, VertexNormal.myPlayer.regionBaseX[0] + coordgrid_12.x, VertexNormal.myPlayer.regionBaseY[0] + coordgrid_12.y, -1104014965);
+																SCT24IndexLoader.method7460(i_2, VertexNormal.myPlayer.regionBaseX[0] + coordgrid_12.x, VertexNormal.myPlayer.regionBaseY[0] + coordgrid_12.y, -1104014965);
 															}
 															for (i_2 = 0; i_2 < 5; i_2++) {
 																++client.anIntArray7435[i_2];
@@ -264,7 +264,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 																	if (class275_sub4_15.aShort7839 == 0) {
 																		Class191.method3167(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE, -805981058), 1499607134);
 																	}
-																	class275_sub4_15.method4887((byte) -28);
+																	class275_sub4_15.method4887();
 																}
 															}
 															++client.anInt7418;
@@ -342,27 +342,27 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 														if (icomponentdefinitions_10.anInt1288 < 0) {
 															break;
 														}
-														icomponentdefinitions_11 = Class117.getInterfaceComponent(icomponentdefinitions_10.parent);
+														icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
 													} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
-													Class96_Sub4.executeHookInner200k(hookrequest_14, 2146300541);
+													CS2Executor.executeHookInner200k(hookrequest_14, 2146300541);
 												}
 											}
 											icomponentdefinitions_10 = hookrequest_14.iComponentDefs;
 											if (icomponentdefinitions_10.anInt1288 < 0) {
 												break;
 											}
-											icomponentdefinitions_11 = Class117.getInterfaceComponent(icomponentdefinitions_10.parent);
+											icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
 										} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
-										Class96_Sub4.executeHookInner200k(hookrequest_14, 690549551);
+										CS2Executor.executeHookInner200k(hookrequest_14, 690549551);
 									}
 								}
 								icomponentdefinitions_10 = hookrequest_14.iComponentDefs;
 								if (icomponentdefinitions_10.anInt1288 < 0) {
 									break;
 								}
-								icomponentdefinitions_11 = Class117.getInterfaceComponent(icomponentdefinitions_10.parent);
+								icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
 							} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
-							Class96_Sub4.executeHookInner200k(hookrequest_14, 859874447);
+							CS2Executor.executeHookInner200k(hookrequest_14, 859874447);
 						}
 					}
 				}

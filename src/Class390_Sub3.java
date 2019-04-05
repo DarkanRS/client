@@ -1045,7 +1045,7 @@ public class Class390_Sub3 extends Ground {
 									choppyitemfixclass_5.anInt1674 = 100;
 								}
 
-								choppyitemfixclass_5.method2425(true, true, false, f_34, f_36, f_32, f_33, f_35, f_31, f_27, f_28, f_26, Texture.method5773(class177_12.anInt2211, (int) (f_19 * 255.0F) << 24 | class185_4.anInt2307, (byte) -102), Texture.method5773(class177_12.anInt2206, (int) (f_20 * 255.0F) << 24 | class185_4.anInt2307, (byte) -111), Texture.method5773(class177_12.anInt2204, (int) (f_18 * 255.0F) << 24 | class185_4.anInt2307, (byte) -88));
+								choppyitemfixclass_5.method2425(true, true, false, f_34, f_36, f_32, f_33, f_35, f_31, f_27, f_28, f_26, ImageIndexLoader.method5773(class177_12.anInt2211, (int) (f_19 * 255.0F) << 24 | class185_4.anInt2307, (byte) -102), ImageIndexLoader.method5773(class177_12.anInt2206, (int) (f_20 * 255.0F) << 24 | class185_4.anInt2307, (byte) -111), ImageIndexLoader.method5773(class177_12.anInt2204, (int) (f_18 * 255.0F) << 24 | class185_4.anInt2307, (byte) -88));
 								choppyitemfixclass_5.anInt1674 = 0;
 							}
 						} else if (class177_12.aShort2212 >= 0) {
@@ -1089,7 +1089,7 @@ public class Class390_Sub3 extends Ground {
 									choppyitemfixclass_5.anInt1674 = 100;
 								}
 
-								choppyitemfixclass_5.method2425(true, true, false, f_30, f_32, f_36, f_29, f_31, f_35, f_25, f_26, f_28, Texture.method5773(class177_12.anInt2209, (int) (f_17 * 255.0F) << 24 | class185_4.anInt2307, (byte) -124), Texture.method5773(class177_12.anInt2204, (int) (f_18 * 255.0F) << 24 | class185_4.anInt2307, (byte) -78), Texture.method5773(class177_12.anInt2206, (int) (f_20 * 255.0F) << 24 | class185_4.anInt2307, (byte) -113));
+								choppyitemfixclass_5.method2425(true, true, false, f_30, f_32, f_36, f_29, f_31, f_35, f_25, f_26, f_28, ImageIndexLoader.method5773(class177_12.anInt2209, (int) (f_17 * 255.0F) << 24 | class185_4.anInt2307, (byte) -124), ImageIndexLoader.method5773(class177_12.anInt2204, (int) (f_18 * 255.0F) << 24 | class185_4.anInt2307, (byte) -78), ImageIndexLoader.method5773(class177_12.anInt2206, (int) (f_20 * 255.0F) << 24 | class185_4.anInt2307, (byte) -113));
 								choppyitemfixclass_5.anInt1674 = 0;
 							}
 						} else if (class177_12.aShort2212 >= 0) {
@@ -1200,7 +1200,7 @@ public class Class390_Sub3 extends Ground {
 											choppyitemfixclass_5.anInt1674 = -1694498816;
 										}
 
-										choppyitemfixclass_5.method2425(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], Texture.method5773(class196_54.anIntArray2420[i_15], (int) (floats_10[i_15] * 255.0F) << 24 | class185_4.anInt2307, (byte) -96), Texture.method5773(class196_54.anIntArray2420[i_16], (int) (floats_10[i_16] * 255.0F) << 24 | class185_4.anInt2307, (byte) -18), Texture.method5773(class196_54.anIntArray2420[i_55], (int) (floats_10[i_55] * 255.0F) << 24 | class185_4.anInt2307, (byte) -1));
+										choppyitemfixclass_5.method2425(true, true, false, f_21, f_22, f_23, f_18, f_19, f_20, floats_8[i_15], floats_8[i_16], floats_8[i_55], ImageIndexLoader.method5773(class196_54.anIntArray2420[i_15], (int) (floats_10[i_15] * 255.0F) << 24 | class185_4.anInt2307, (byte) -96), ImageIndexLoader.method5773(class196_54.anIntArray2420[i_16], (int) (floats_10[i_16] * 255.0F) << 24 | class185_4.anInt2307, (byte) -18), ImageIndexLoader.method5773(class196_54.anIntArray2420[i_55], (int) (floats_10[i_55] * 255.0F) << 24 | class185_4.anInt2307, (byte) -1));
 										choppyitemfixclass_5.anInt1674 = 0;
 									}
 								} else if (s_57 != -1) {
@@ -1332,8 +1332,8 @@ public class Class390_Sub3 extends Ground {
 								choppyitemfixclass_10.method2425(true, true, false, (float) i_17, (float) i_17, (float) (i_17 - i_14), (float) i_16, (float) (i_16 + i_14), (float) i_16, 100.0F, 100.0F, 100.0F, class177_33.anInt2209, class177_33.anInt2204, class177_33.anInt2206);
 							} else {
 								i_21 = class177_33.anInt2203;
-								choppyitemfixclass_10.method2425(true, true, false, (float) (i_17 - i_14), (float) (i_17 - i_14), (float) i_17, (float) (i_16 + i_14), (float) i_16, (float) (i_16 + i_14), 100.0F, 100.0F, 100.0F, Texture.method5773(i_21, class177_33.anInt2211 & ~0xffffff, (byte) -24), Texture.method5773(i_21, class177_33.anInt2206 & ~0xffffff, (byte) -11), Texture.method5773(i_21, class177_33.anInt2204 & ~0xffffff, (byte) -36));
-								choppyitemfixclass_10.method2425(true, true, false, (float) i_17, (float) i_17, (float) (i_17 - i_14), (float) i_16, (float) (i_16 + i_14), (float) i_16, 100.0F, 100.0F, 100.0F, Texture.method5773(i_21, class177_33.anInt2209 & ~0xffffff, (byte) -41), Texture.method5773(i_21, class177_33.anInt2204 & ~0xffffff, (byte) -120), Texture.method5773(i_21, class177_33.anInt2206 & ~0xffffff, (byte) -105));
+								choppyitemfixclass_10.method2425(true, true, false, (float) (i_17 - i_14), (float) (i_17 - i_14), (float) i_17, (float) (i_16 + i_14), (float) i_16, (float) (i_16 + i_14), 100.0F, 100.0F, 100.0F, ImageIndexLoader.method5773(i_21, class177_33.anInt2211 & ~0xffffff, (byte) -24), ImageIndexLoader.method5773(i_21, class177_33.anInt2206 & ~0xffffff, (byte) -11), ImageIndexLoader.method5773(i_21, class177_33.anInt2204 & ~0xffffff, (byte) -36));
+								choppyitemfixclass_10.method2425(true, true, false, (float) i_17, (float) i_17, (float) (i_17 - i_14), (float) i_16, (float) (i_16 + i_14), (float) i_16, 100.0F, 100.0F, 100.0F, ImageIndexLoader.method5773(i_21, class177_33.anInt2209 & ~0xffffff, (byte) -41), ImageIndexLoader.method5773(i_21, class177_33.anInt2204 & ~0xffffff, (byte) -120), ImageIndexLoader.method5773(i_21, class177_33.anInt2206 & ~0xffffff, (byte) -105));
 							}
 						} else if (this.aClass196ArrayArray9337[i_18][i_19] != null) {
 							Class196 class196_32 = this.aClass196ArrayArray9337[i_18][i_19];
@@ -1362,7 +1362,7 @@ public class Class390_Sub3 extends Ground {
 									}
 								} else {
 									i_31 = class196_32.anIntArray2423[i_21];
-									choppyitemfixclass_10.method2425(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, Texture.method5773(i_31, -16777216 - (class196_32.anIntArray2420[i_22] & ~0xffffff), (byte) -12), Texture.method5773(i_31, -16777216 - (class196_32.anIntArray2420[i_23] & ~0xffffff), (byte) -34), Texture.method5773(i_31, -16777216 - (class196_32.anIntArray2420[i_24] & ~0xffffff), (byte) -58));
+									choppyitemfixclass_10.method2425(true, true, false, f_28, f_29, f_30, f_25, f_26, f_27, 100.0F, 100.0F, 100.0F, ImageIndexLoader.method5773(i_31, -16777216 - (class196_32.anIntArray2420[i_22] & ~0xffffff), (byte) -12), ImageIndexLoader.method5773(i_31, -16777216 - (class196_32.anIntArray2420[i_23] & ~0xffffff), (byte) -34), ImageIndexLoader.method5773(i_31, -16777216 - (class196_32.anIntArray2420[i_24] & ~0xffffff), (byte) -58));
 								}
 							}
 						}

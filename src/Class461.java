@@ -48,7 +48,7 @@ public class Class461 {
 			Class446.aClass446_5397.initializeIndexLoader(new Class298(IndexLoaders.ENUM_INDEX), (byte) -64);
 			Class446.aClass446_5393.initializeIndexLoader(new Class298(IndexLoaders.NPC_INDEX), (byte) 7);
 			Class446.aClass446_5413.initializeIndexLoader(new Class298(IndexLoaders.ITEM_INDEX), (byte) 16);
-			Class446.aClass446_5399.initializeIndexLoader(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) 16);
+			Class446.aClass446_5399.initializeIndexLoader(new Class298(IndexLoaders.ANIMATION_INDEX), (byte) 16);
 			Class446.aClass446_5400.initializeIndexLoader(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 4);
 			Class446.aClass446_5401.initializeIndexLoader(new Class298(IndexLoaders.VARBIT_INDEX), (byte) -28);
 			Class446.aClass446_5402.initializeIndexLoader(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) 9);
@@ -134,7 +134,7 @@ public class Class461 {
 			Class20.aClass482_175.method8063(Class20.aClass482_171);
 			if (Class20.anInt169 <= 1) {
 				Class96_Sub23.aClass282_Sub50_Sub7_9445 = null;
-				Class1.aClass282_Sub50_Sub7_12 = null;
+				AccountCreationStage.aClass282_Sub50_Sub7_12 = null;
 				Class20.aClass282_Sub50_Sub7_168 = null;
 			} else {
 				if (Class468_Sub1.method12619(694674525) && Class20.anInt169 > 2) {
@@ -142,9 +142,9 @@ public class Class461 {
 				} else {
 					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) Class20.aClass482_171.tail.prev;
 				}
-				Class1.aClass282_Sub50_Sub7_12 = (Class282_Sub50_Sub7) Class20.aClass482_171.tail.prev;
+				AccountCreationStage.aClass282_Sub50_Sub7_12 = (Class282_Sub50_Sub7) Class20.aClass482_171.tail.prev;
 				if (Class20.anInt169 > 2) {
-					Class20.aClass282_Sub50_Sub7_168 = (Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.prev;
+					Class20.aClass282_Sub50_Sub7_168 = (Class282_Sub50_Sub7) AccountCreationStage.aClass282_Sub50_Sub7_12.prev;
 				} else {
 					Class20.aClass282_Sub50_Sub7_168 = null;
 				}

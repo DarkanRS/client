@@ -64,7 +64,7 @@ public final class Class78 {
 
 	static void method1384() {
 		if (client.aByteArray7152 != null) {
-			Class418.method7022();
+			MapSpriteDefinitions.method7022();
 		} else if (Class9.anInt76 != -1) {
 			Class14.method537();
 		} else {

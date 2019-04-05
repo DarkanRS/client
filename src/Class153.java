@@ -19,13 +19,13 @@ public final class Class153 {
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {
-			Class449 class449_4 = IndexLoaders.aClass447_435.method7450(i_1);
+			SCT24Definitions class449_4 = IndexLoaders.SCT24_LOADER.method7450(i_1);
 			return class449_4.aChar5431 != 105 ? -1 : 0;
 		}
 	}
 
 	public int method2610(int i_1) {
-		Class489 class489_3 = IndexLoaders.aClass498_3001.method8322(i_1);
+		SCT25Definitions class489_3 = IndexLoaders.SCT25_LOADER.method8322(i_1);
 		int i_4 = class489_3.anInt5764;
 		int i_5 = class489_3.anInt5762 == 31 ? -1 : (1 << class489_3.anInt5762 + 1) - 1;
 		return (this.method2609(i_4, (byte) 117) & i_5) >>> class489_3.anInt5763;

@@ -35,18 +35,18 @@ public class Class417 {
 		}
 	}
 
-	public static Class347 method7005(int i_0, int i_1) {
-		Class347 class347_2 = (Class347) Class347.aClass229_4052.get((long) i_0);
-		if (class347_2 != null) {
-			return class347_2;
+	public static BillboardDefinitions getBillboardDefinitions(int id) {
+		BillboardDefinitions defs = (BillboardDefinitions) BillboardDefinitions.BILLBOARD_CACHE.get((long) id);
+		if (defs != null) {
+			return defs;
 		} else {
-			byte[] bytes_3 = Class347.aClass317_4053.getFile(0, i_0);
-			class347_2 = new Class347();
+			byte[] bytes_3 = BillboardDefinitions.BILLBOARD_INDEX.getFile(0, id);
+			defs = new BillboardDefinitions();
 			if (bytes_3 != null) {
-				class347_2.method6163(new RsByteBuffer(bytes_3), i_0);
+				defs.decode(new RsByteBuffer(bytes_3), id);
 			}
-			Class347.aClass229_4052.put(class347_2, (long) i_0);
-			return class347_2;
+			BillboardDefinitions.BILLBOARD_CACHE.put(defs, (long) id);
+			return defs;
 		}
 	}
 }
