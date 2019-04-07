@@ -22,7 +22,7 @@ public class SkyboxIndexLoader {
 
 	public SkyboxIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_3436 = index_3;
-		this.aClass317_3436.filesCount(SharedConfigsType.SCT_29.id);
+		this.aClass317_3436.filesCount(SharedConfigsType.SKYBOX.id);
 	}
 
 	public void method5071() {
@@ -44,7 +44,7 @@ public class SkyboxIndexLoader {
 			Index index_5 = this.aClass317_3436;
 			byte[] bytes_10;
 			synchronized (this.aClass317_3436) {
-				bytes_10 = this.aClass317_3436.getFile(SharedConfigsType.SCT_29.id, i_1);
+				bytes_10 = this.aClass317_3436.getFile(SharedConfigsType.SKYBOX.id, i_1);
 			}
 			class207_3 = new SkyboxDefinitions();
 			if (bytes_10 != null) {

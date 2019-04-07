@@ -16,7 +16,7 @@ public class Class372 implements Definition {
 
 	void method6357(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.aChar4328 = Class11.getChar(rsbytebuffer_1.readByte());
+			this.aChar4328 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
 		} else if (i_2 == 5) {
 			this.anInt4327 = rsbytebuffer_1.readUnsignedShort();
 		}

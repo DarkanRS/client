@@ -21,20 +21,20 @@ public class SkyboxDefinitions {
 		this.anInt2657 = -1;
 	}
 
-	void method3552(RsByteBuffer rsbytebuffer_1, int i_2) {
-		if (i_2 == 1) {
-			this.anInt2653 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 2) {
-			this.anIntArray2655 = new int[rsbytebuffer_1.readUnsignedByte()];
+	void method3552(RsByteBuffer buffer, int opcode) {
+		if (opcode == 1) {
+			this.anInt2653 = buffer.readUnsignedShort();
+		} else if (opcode == 2) {
+			this.anIntArray2655 = new int[buffer.readUnsignedByte()];
 			for (int i_4 = 0; i_4 < this.anIntArray2655.length; i_4++) {
-				this.anIntArray2655[i_4] = rsbytebuffer_1.readUnsignedShort();
+				this.anIntArray2655[i_4] = buffer.readUnsignedShort();
 			}
-		} else if (i_2 == 3) {
-			this.anInt2654 = rsbytebuffer_1.readUnsignedByte();
-		} else if (i_2 == 4) {
-			this.aClass204_2656 = (Class204) Class386.identify(Class530.method11353(), rsbytebuffer_1.readUnsignedByte());
-		} else if (i_2 == 5) {
-			this.anInt2657 = rsbytebuffer_1.readBigSmart();
+		} else if (opcode == 3) {
+			this.anInt2654 = buffer.readUnsignedByte();
+		} else if (opcode == 4) {
+			this.aClass204_2656 = (Class204) Class386.identify(Class530.method11353(), buffer.readUnsignedByte());
+		} else if (opcode == 5) {
+			this.anInt2657 = buffer.readBigSmart();
 		}
 	}
 

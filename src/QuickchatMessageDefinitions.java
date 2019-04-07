@@ -7,34 +7,34 @@ public class QuickchatMessageDefinitions extends CacheableNode {
 	int[][] configs;
 	public boolean searchable = true;
 
-	void decode(RsByteBuffer rsbytebuffer_1, int i_2) {
-		if (i_2 == 1) {
-			this.message = MovingAnimation.method12681(rsbytebuffer_1.readString(), '<');
-		} else if (i_2 == 2) {
-			int i_4 = rsbytebuffer_1.readUnsignedByte();
+	void decode(RsByteBuffer buffer, int opcode) {
+		if (opcode == 1) {
+			this.message = MovingAnimation.method12681(buffer.readString(), '<');
+		} else if (opcode == 2) {
+			int i_4 = buffer.readUnsignedByte();
 			this.responses = new int[i_4];
 
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
-				this.responses[i_5] = rsbytebuffer_1.readUnsignedShort();
+				this.responses[i_5] = buffer.readUnsignedShort();
 			}
-		} else if (i_2 == 3) {
-			int count = rsbytebuffer_1.readUnsignedByte();
+		} else if (opcode == 3) {
+			int count = buffer.readUnsignedByte();
 			this.types = new int[count];
 			this.configs = new int[count][];
 
 			for (int i = 0; i < count; i++) {
-				int typeId = rsbytebuffer_1.readUnsignedShort();
+				int typeId = buffer.readUnsignedShort();
 				QuickChatValueType type = QuickChatValueType.get(typeId);
 				if (type != null) {
 					this.types[i] = typeId;
 					this.configs[i] = new int[type.paramCount];
 
 					for (int config = 0; config < type.paramCount; config++) {
-						this.configs[i][config] = rsbytebuffer_1.readUnsignedShort();
+						this.configs[i][config] = buffer.readUnsignedShort();
 					}
 				}
 			}
-		} else if (i_2 == 4) {
+		} else if (opcode == 4) {
 			this.searchable = false;
 		}
 	}
@@ -56,7 +56,7 @@ public class QuickchatMessageDefinitions extends CacheableNode {
 		if (this.types != null) {
 			for (int i_4 = 0; i_4 < this.types.length; i_4++) {
 				stringbuilder_3.append(this.message[i_4]);
-				stringbuilder_3.append(this.aClass429_9623.method7212(this.method14918(i_4, 12195822), this.configs[i_4], rsbytebuffer_1.method13089(QuickChatValueType.get(this.types[i_4]).serverTransmitSize)));
+				stringbuilder_3.append(this.aClass429_9623.method7212(this.method14918(i_4, 12195822), this.configs[i_4], rsbytebuffer_1.readSize(QuickChatValueType.get(this.types[i_4]).serverTransmitSize)));
 			}
 		}
 

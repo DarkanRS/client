@@ -41,7 +41,7 @@ public class Class279 {
 					Canvas canvas_3 = new Canvas();
 					canvas_3.setSize(36, 32);
 					Class182.HARDWARE_RENDERER = Class320.createRenderer(0, canvas_3, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -2102871027);
-					Class182.aClass8_2259 = Class182.HARDWARE_RENDERER.createFont(Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.p11FullIndex, 2062772930), Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.p11FullIndex), true);
+					Class182.aClass8_2259 = Class182.HARDWARE_RENDERER.createFont(Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.p11FullIndex, 2062772930), SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p11FullIndex), true);
 				}
 				for (item_2 = (Item) Class182.ITEMS.head((byte) 59); item_2 != null; item_2 = (Item) Class182.ITEMS.next(-468135531)) {
 					IndexLoaders.ITEM_LOADER.getSprite(Class182.HARDWARE_RENDERER, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Class182.aClass8_2259, item_2.hasPlayerAppearance ? VertexNormal.myPlayer.playerAppearance : null, (byte) 0);

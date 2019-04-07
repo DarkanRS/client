@@ -2,7 +2,7 @@ public class SharedConfigsType {
 
 	public static SharedConfigsType FLO1 = new SharedConfigsType(1);
 	public static SharedConfigsType SCT_2 = new SharedConfigsType(2);
-	public static SharedConfigsType SCT_3 = new SharedConfigsType(3);
+	public static SharedConfigsType IDENTITIKIT = new SharedConfigsType(3);
 	public static SharedConfigsType FLO2 = new SharedConfigsType(4);
 	public static SharedConfigsType INVENTORIES = new SharedConfigsType(5);
 	public static SharedConfigsType OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
@@ -28,8 +28,8 @@ public class SharedConfigsType {
 	public static SharedConfigsType SCT_26 = new SharedConfigsType(26);
 	public static SharedConfigsType SCT_27 = new SharedConfigsType(27);
 	public static SharedConfigsType SCT_28 = new SharedConfigsType(28);
-	public static SharedConfigsType SCT_29 = new SharedConfigsType(29);
-	public static SharedConfigsType SCT_30 = new SharedConfigsType(30);
+	public static SharedConfigsType SKYBOX = new SharedConfigsType(29);
+	public static SharedConfigsType SUN = new SharedConfigsType(30);
 	public static SharedConfigsType SCT_31 = new SharedConfigsType(31);
 	public static SharedConfigsType RENDER_ANIMS = new SharedConfigsType(32);
 	public static SharedConfigsType CURSORS = new SharedConfigsType(33);

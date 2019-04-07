@@ -41,22 +41,6 @@ public class Class11 {
 		Class508.anInt5864 = -1;
 	}
 
-	public static char getChar(byte b) {
-		int val = b & 0xff;
-		if (val == 0) {
-			throw new IllegalArgumentException("" + Integer.toString(val, 16));
-		} else {
-			if (val >= 128 && val < 160) {
-				char charValue = Class490.aCharArray5766[val - 128];
-				if (charValue == 0) {
-					charValue = 63;
-				}
-				val = charValue;
-			}
-			return (char) val;
-		}
-	}
-
 	public static void method13400(Index index_0, int i_1, int i_3, byte b_5) {
 		Class271.method4827(index_0, i_1, 0, i_3, false);
 	}

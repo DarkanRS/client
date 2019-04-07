@@ -811,32 +811,32 @@ public class IComponentDefinitions {
 				return class119_5;
 			}
 		}
-		Class91 class91_6 = Class91.method1522(Class463.SPRITES_INDEX, this.anInt1320, 0);
+		SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(Class463.SPRITES_INDEX, this.anInt1320, 0);
 		if (class91_6 == null) {
 			return null;
 		} else {
-			int i_7 = class91_6.anInt957 + class91_6.anInt956 + class91_6.anInt958;
-			int i_8 = class91_6.anInt959 + class91_6.anInt954 + class91_6.anInt953;
+			int i_7 = class91_6.width + class91_6.minX + class91_6.anInt958;
+			int i_8 = class91_6.minY + class91_6.height + class91_6.anInt953;
 			int[] ints_9 = new int[i_8];
 			int[] ints_10 = new int[i_8];
-			for (int i_11 = 0; i_11 < class91_6.anInt954; i_11++) {
+			for (int i_11 = 0; i_11 < class91_6.height; i_11++) {
 				int i_12 = 0;
-				int i_13 = class91_6.anInt957;
+				int i_13 = class91_6.width;
 				int i_14;
-				for (i_14 = 0; i_14 < class91_6.anInt957; i_14++) {
-					if (class91_6.aByteArray960[i_14 + i_11 * class91_6.anInt957] != 0) {
+				for (i_14 = 0; i_14 < class91_6.width; i_14++) {
+					if (class91_6.pixels[i_14 + i_11 * class91_6.width] != 0) {
 						i_12 = i_14;
 						break;
 					}
 				}
-				for (i_14 = class91_6.anInt957 - 1; i_14 >= i_12; --i_14) {
-					if (class91_6.aByteArray960[i_14 + i_11 * class91_6.anInt957] != 0) {
+				for (i_14 = class91_6.width - 1; i_14 >= i_12; --i_14) {
+					if (class91_6.pixels[i_14 + i_11 * class91_6.width] != 0) {
 						i_13 = i_14 + 1;
 						break;
 					}
 				}
-				ints_9[i_11 + class91_6.anInt959] = i_12 + class91_6.anInt956;
-				ints_10[i_11 + class91_6.anInt959] = i_13 - i_12;
+				ints_9[i_11 + class91_6.minY] = i_12 + class91_6.minX;
+				ints_10[i_11 + class91_6.minY] = i_13 - i_12;
 			}
 			Class455 class455_15 = graphicalrenderer_1.method8624(i_7, i_8, ints_9, ints_10);
 			if (class455_15 == null) {
@@ -856,7 +856,7 @@ public class IComponentDefinitions {
 		if (nativesprite_5 != null) {
 			return nativesprite_5;
 		} else {
-			Class91 class91_6 = Class91.method1522(Class463.SPRITES_INDEX, this.anInt1320, 0);
+			SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(Class463.SPRITES_INDEX, this.anInt1320, 0);
 			if (class91_6 == null) {
 				aBool1399 = true;
 				return null;

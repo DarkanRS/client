@@ -361,7 +361,7 @@ public class Class8_Sub3 extends FontRenderer {
 		}
 	}
 
-	Class8_Sub3(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, Class91[] arr_3, int[] ints_4, int[] ints_5) {
+	Class8_Sub3(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
 		super(hardwarerenderer_1, fontmetrics_2);
 		this.aClass505_Sub3_8968 = hardwarerenderer_1;
 		this.aClass505_Sub3_8968 = hardwarerenderer_1;
@@ -371,11 +371,11 @@ public class Class8_Sub3 extends FontRenderer {
 		this.anIntArray8972 = new int[arr_3.length];
 		this.anIntArray8973 = new int[arr_3.length];
 		for (int i_6 = 0; i_6 < arr_3.length; i_6++) {
-			this.aByteArrayArray8967[i_6] = arr_3[i_6].aByteArray960;
-			this.anIntArray8972[i_6] = arr_3[i_6].anInt959;
-			this.anIntArray8973[i_6] = arr_3[i_6].anInt956;
+			this.aByteArrayArray8967[i_6] = arr_3[i_6].pixels;
+			this.anIntArray8972[i_6] = arr_3[i_6].minY;
+			this.anIntArray8973[i_6] = arr_3[i_6].minX;
 		}
-		this.anIntArray8970 = arr_3[0].anIntArray955;
+		this.anIntArray8970 = arr_3[0].pallete;
 	}
 
 	void t(char var_1, int i_2, int i_3, int i_4, boolean bool_5) {

@@ -2,7 +2,7 @@ public class ia extends FontRenderer implements Interface40 {
 
 	long nativeid;
 
-	ia(ja ja_1, ba ba_2, FontMetrics fontmetrics_3, Class91[] arr_4, NativeSprite[] arr_5) {
+	ia(ja ja_1, ba ba_2, FontMetrics fontmetrics_3, SpriteDefinitions[] arr_4, NativeSprite[] arr_5) {
 		super(ja_1, fontmetrics_3);
 		byte[][] bytes_6 = new byte[arr_4.length][];
 		int[] ints_7 = new int[arr_4.length];
@@ -11,14 +11,14 @@ public class ia extends FontRenderer implements Interface40 {
 		int[] ints_10 = new int[arr_4.length];
 
 		for (int i_11 = 0; i_11 < arr_4.length; i_11++) {
-			bytes_6[i_11] = arr_4[i_11].aByteArray960;
-			ints_7[i_11] = arr_4[i_11].anInt957;
-			ints_8[i_11] = arr_4[i_11].anInt954;
-			ints_9[i_11] = arr_4[i_11].anInt956;
-			ints_10[i_11] = arr_4[i_11].anInt959;
+			bytes_6[i_11] = arr_4[i_11].pixels;
+			ints_7[i_11] = arr_4[i_11].width;
+			ints_8[i_11] = arr_4[i_11].height;
+			ints_9[i_11] = arr_4[i_11].minX;
+			ints_10[i_11] = arr_4[i_11].minY;
 		}
 
-		this.EA(ja_1, ba_2, bytes_6, arr_4[0].anIntArray955, ints_7, ints_8, ints_9, ints_10);
+		this.EA(ja_1, ba_2, bytes_6, arr_4[0].pallete, ints_7, ints_8, ints_9, ints_10);
 	}
 
 	native void EA(ja var1, ba var2, byte[][] var3, int[] var4, int[] var5, int[] var6, int[] var7, int[] var8);

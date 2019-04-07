@@ -11,28 +11,28 @@ public class Class188 {
 	}
 
 	public static void method3139(GraphicalRenderer graphicalrenderer_0, Index index_1) {
-		Class91[] arr_3 = Class91.method1514(index_1, Class165.anInt2035);
+		SpriteDefinitions[] arr_3 = SpriteDefinitions.method1514(index_1, Class165.anInt2035);
 		Class282_Sub21.aClass160Array7673 = new NativeSprite[arr_3.length];
 		int i_4;
 		for (i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class282_Sub21.aClass160Array7673[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class475.anInt5622);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class475.anInt5622);
 		Class16.aClass160Array138 = new NativeSprite[arr_3.length];
 		for (i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class16.aClass160Array138[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class16.anInt135);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt135);
 		Class391.aClass160Array4778 = new NativeSprite[arr_3.length];
 		for (i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class391.aClass160Array4778[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class16.anInt142);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt142);
 		Class282_Sub20_Sub15.aClass160Array9838 = new NativeSprite[arr_3.length];
 		for (i_4 = 0; i_4 < arr_3.length; i_4++) {
 			Class282_Sub20_Sub15.aClass160Array9838[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class16.anInt137);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt137);
 		Class16.aClass160Array145 = new NativeSprite[arr_3.length];
 		byte b_6 = 25;
 		int i_5;
@@ -40,28 +40,28 @@ public class Class188 {
 			arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
 			Class16.aClass160Array145[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class468_Sub12.anInt7899);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class468_Sub12.anInt7899);
 		Class282_Sub36.aClass160Array7994 = new NativeSprite[arr_3.length];
 		for (i_5 = 0; i_5 < arr_3.length; i_5++) {
 			Class282_Sub36.aClass160Array7994[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class13.anInt130);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class13.anInt130);
 		Class250.aClass160Array3092 = new NativeSprite[arr_3.length];
 		b_6 = 12;
 		for (i_5 = 0; i_5 < arr_3.length; i_5++) {
 			arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
 			Class250.aClass160Array3092[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
 		}
-		arr_3 = Class91.method1514(index_1, Class16.anInt143);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt143);
 		Class182.aClass160Array2261 = new NativeSprite[arr_3.length];
 		b_6 = 12;
 		for (i_5 = 0; i_5 < arr_3.length; i_5++) {
 			arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
 			Class182.aClass160Array2261[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
 		}
-		Class16.aClass160_146 = graphicalrenderer_0.method8444(Class91.method1522(index_1, Class16.anInt141, 0), true);
-		Exception_Sub1.aClass160_10075 = graphicalrenderer_0.method8444(Class91.method1522(index_1, Class165.anInt2037, 0), true);
-		arr_3 = Class91.method1514(index_1, Class271.anInt3330);
+		Class16.aClass160_146 = graphicalrenderer_0.method8444(SpriteDefinitions.getSprite(index_1, Class16.anInt141, 0), true);
+		Exception_Sub1.aClass160_10075 = graphicalrenderer_0.method8444(SpriteDefinitions.getSprite(index_1, Class165.anInt2037, 0), true);
+		arr_3 = SpriteDefinitions.method1514(index_1, Class271.anInt3330);
 		Class245.aClass160Array3027 = new NativeSprite[arr_3.length];
 		for (i_5 = 0; i_5 < arr_3.length; i_5++) {
 			Class245.aClass160Array3027[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);

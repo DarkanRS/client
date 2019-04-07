@@ -19,8 +19,8 @@ public class Class456_Sub2 extends Animation {
 
 		if (Class467.aClass160_5576 == null || Class61.aClass160_647 == null) {
 			if (IndexLoaders.SPRITES_INDEX.loadCutscene(ConnectionInfo.anInt5438) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class373.anInt4350)) {
-				Class467.aClass160_5576 = graphicalrenderer_0.method8444(Class91.method1522(IndexLoaders.SPRITES_INDEX, ConnectionInfo.anInt5438, 0), true);
-				Class91 class91_13 = Class91.method1522(IndexLoaders.SPRITES_INDEX, Class373.anInt4350, 0);
+				Class467.aClass160_5576 = graphicalrenderer_0.method8444(SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, ConnectionInfo.anInt5438, 0), true);
+				SpriteDefinitions class91_13 = SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, Class373.anInt4350, 0);
 				Class61.aClass160_647 = graphicalrenderer_0.method8444(class91_13, true);
 				class91_13.method1525();
 				Class60.aClass160_612 = graphicalrenderer_0.method8444(class91_13, true);

@@ -1,6 +1,6 @@
 public class QuestIndexLoader {
 
-    static Class91 aClass91_2981;
+    static SpriteDefinitions aClass91_2981;
 
     public static int anInt2982;
 

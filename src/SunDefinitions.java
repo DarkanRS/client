@@ -15,25 +15,25 @@ public class SunDefinitions {
 	public int anInt398;
 	public int anInt405;
 
-	void method843(RsByteBuffer rsbytebuffer_1, int i_2) {
-		if (i_2 == 1) {
-			this.anInt396 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 2) {
+	void method843(RsByteBuffer stream, int opcode) {
+		if (opcode == 1) {
+			this.anInt396 = stream.readUnsignedShort();
+		} else if (opcode == 2) {
 			this.aBool400 = true;
-		} else if (i_2 == 3) {
-			this.anInt401 = rsbytebuffer_1.readShort();
-			this.anInt397 = rsbytebuffer_1.readShort();
-			this.anInt399 = rsbytebuffer_1.readShort();
-		} else if (i_2 == 4) {
-			this.anInt395 = rsbytebuffer_1.readUnsignedByte();
-		} else if (i_2 == 5) {
-			this.anInt402 = rsbytebuffer_1.readBigSmart();
-		} else if (i_2 == 6) {
-			this.anInt404 = rsbytebuffer_1.read24BitUnsignedInteger();
-		} else if (i_2 == 7) {
-			this.anInt403 = rsbytebuffer_1.readShort();
-			this.anInt398 = rsbytebuffer_1.readShort();
-			this.anInt405 = rsbytebuffer_1.readShort();
+		} else if (opcode == 3) {
+			this.anInt401 = stream.readShort();
+			this.anInt397 = stream.readShort();
+			this.anInt399 = stream.readShort();
+		} else if (opcode == 4) {
+			this.anInt395 = stream.readUnsignedByte();
+		} else if (opcode == 5) {
+			this.anInt402 = stream.readBigSmart();
+		} else if (opcode == 6) {
+			this.anInt404 = stream.read24BitUnsignedInteger();
+		} else if (opcode == 7) {
+			this.anInt403 = stream.readShort();
+			this.anInt398 = stream.readShort();
+			this.anInt405 = stream.readShort();
 		}
 	}
 

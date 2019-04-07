@@ -40,11 +40,11 @@ public class MapSpriteDefinitions {
 		} else if (!this.aClass427_4998.aClass317_5118.loadCutscene(this.anInt4995)) {
 			return null;
 		} else {
-			Class91 class91_8 = Class91.method1522(this.aClass427_4998.aClass317_5118, this.anInt4995, 0);
+			SpriteDefinitions class91_8 = SpriteDefinitions.getSprite(this.aClass427_4998.aClass317_5118, this.anInt4995, 0);
 			if (class91_8 != null) {
-				class91_8.anInt959 = 0;
+				class91_8.minY = 0;
 				class91_8.anInt958 = 0;
-				class91_8.anInt956 = 0;
+				class91_8.minX = 0;
 				class91_8.anInt953 = 0;
 				if (bool_3) {
 					class91_8.method1526();

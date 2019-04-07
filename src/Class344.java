@@ -129,25 +129,6 @@ public class Class344 {
         return Class224.aClass225_Sub3_2773;
     }
 
-    public static String method6118(byte[] bytes_0, int i_1, int i_2, byte b_3) {
-        char[] arr_4 = new char[i_2];
-        int i_5 = 0;
-        for (int i_6 = 0; i_6 < i_2; i_6++) {
-            int i_7 = bytes_0[i_6 + i_1] & 0xff;
-            if (i_7 != 0) {
-                if (i_7 >= 128 && i_7 < 160) {
-                    char var_8 = Class490.aCharArray5766[i_7 - 128];
-                    if (var_8 == 0) {
-                        var_8 = 63;
-                    }
-                    i_7 = var_8;
-                }
-                arr_4[i_5++] = (char) i_7;
-            }
-        }
-        return new String(arr_4, 0, i_5);
-    }
-
     public static final void method6119(String string_0) {
         if (Class467.aClass173Array5575 != null) {
             BufferedConnectionContext class184_2 = Class468_Sub20.method12807(978713855);

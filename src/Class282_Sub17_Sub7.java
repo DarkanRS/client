@@ -54,7 +54,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 	}
 
 	public static String method15439(byte[] bytes_0) {
-		return Class344.method6118(bytes_0, 0, bytes_0.length, (byte) -114);
+		return Utils.readString(bytes_0, 0, bytes_0.length);
 	}
 
 }

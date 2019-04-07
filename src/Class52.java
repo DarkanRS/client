@@ -18,7 +18,7 @@ public abstract class Class52 implements Interface2 {
 
     public void method22() {
         FontMetrics fontmetrics_2 = Class163.method2845(this.aClass317_490, this.aClass350_489.anInt4086, (byte) 32);
-        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086), true);
+        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_2, SpriteDefinitions.method1534(this.aClass317_493, this.aClass350_489.anInt4086), true);
     }
 
     public boolean method10(int i_1) {
@@ -97,27 +97,27 @@ public abstract class Class52 implements Interface2 {
 
     public void method15() {
         FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 91);
-        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, SpriteDefinitions.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
     }
 
     public void method16() {
         FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 27);
-        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, SpriteDefinitions.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
     }
 
     public void method23() {
         FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 126);
-        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, SpriteDefinitions.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
     }
 
     public void method18() {
         FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 51);
-        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, SpriteDefinitions.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
     }
 
     public void method19() {
         FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_490, 985690519 * this.aClass350_489.anInt4086 * -1988551129, (byte) 125);
-        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, Class91.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
+        this.aClass8_492 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_1, SpriteDefinitions.method1534(this.aClass317_493, this.aClass350_489.anInt4086 * -1988551129 * 985690519), true);
     }
 
     Class52(Index index_1, Index index_2, Class350 class350_3) {

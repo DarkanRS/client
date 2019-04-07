@@ -60,7 +60,7 @@ public class Class8_Sub1 extends FontRenderer {
 
 	}
 
-	Class8_Sub1(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, Class91[] arr_3, int[] ints_4, int[] ints_5) {
+	Class8_Sub1(HardwareRenderer hardwarerenderer_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, int[] ints_4, int[] ints_5) {
 		super(hardwarerenderer_1, fontmetrics_2);
 		this.aClass505_Sub3_8513 = hardwarerenderer_1;
 		this.anIntArray8511 = ints_4;
@@ -70,9 +70,9 @@ public class Class8_Sub1 extends FontRenderer {
 		this.anIntArray8514 = new int[arr_3.length];
 
 		for (int i_6 = 0; i_6 < arr_3.length; i_6++) {
-			this.aByteArrayArray8509[i_6] = arr_3[i_6].aByteArray960;
-			this.anIntArray8510[i_6] = arr_3[i_6].anInt959;
-			this.anIntArray8514[i_6] = arr_3[i_6].anInt956;
+			this.aByteArrayArray8509[i_6] = arr_3[i_6].pixels;
+			this.anIntArray8510[i_6] = arr_3[i_6].minY;
+			this.anIntArray8514[i_6] = arr_3[i_6].minX;
 		}
 
 	}

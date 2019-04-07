@@ -21,15 +21,15 @@ public class QuickchatMessageLoader {
 
 	}
 
-	String method7212(QuickChatValueType quickchatdynamicvalue_1, int[] ints_2, long long_3) {
+	String method7212(QuickChatValueType value, int[] configs, long data) {
 		if (this.anInterface19_5134 != null) {
-			String string_5 = this.anInterface19_5134.method135(quickchatdynamicvalue_1, ints_2, long_3);
+			String string_5 = this.anInterface19_5134.method135(value, configs, data);
 			if (string_5 != null) {
 				return string_5;
 			}
 		}
 
-		return Long.toString(long_3);
+		return Long.toString(data);
 	}
 
 	public QuickchatMessageDefinitions getMessageDefinitions(int id) {

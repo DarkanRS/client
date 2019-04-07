@@ -28,7 +28,7 @@ public class QuickChatCategoryDefinitions extends CacheableNode {
 			for (int i_5 = 0; i_5 < count; i_5++) {
 				this.subCategories[i_5] = buffer.readUnsignedShort();
 				byte b_6 = buffer.readByte();
-				this.subCategoryHotkeys[i_5] = b_6 == 0 ? 0 : Class11.getChar(b_6);
+				this.subCategoryHotkeys[i_5] = b_6 == 0 ? 0 : Utils.cp1252ToChar(b_6);
 			}
 		} else if (opcode == 3) {
 			int i_4 = buffer.readUnsignedByte();
@@ -38,7 +38,7 @@ public class QuickChatCategoryDefinitions extends CacheableNode {
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
 				this.messages[i_5] = buffer.readUnsignedShort();
 				byte b_6 = buffer.readByte();
-				this.messageHotkeys[i_5] = b_6 == 0 ? 0 : Class11.getChar(b_6);
+				this.messageHotkeys[i_5] = b_6 == 0 ? 0 : Utils.cp1252ToChar(b_6);
 			}
 		} else if (opcode == 4) {
 			return;
@@ -86,7 +86,6 @@ public class QuickChatCategoryDefinitions extends CacheableNode {
 				this.subCategories[i_2] |= 0x8000;
 			}
 		}
-
 	}
 
 }

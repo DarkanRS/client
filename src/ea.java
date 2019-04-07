@@ -8,7 +8,7 @@ public class ea extends FontRenderer implements Interface40 {
 
 	native void aq(char var1, int var2, int var3, int var4, boolean var5, Class455 var6, int var7, int var8);
 
-	ea(ja ja_1, ba ba_2, FontMetrics fontmetrics_3, Class91[] arr_4, NativeSprite[] arr_5) {
+	ea(ja ja_1, ba ba_2, FontMetrics fontmetrics_3, SpriteDefinitions[] arr_4, NativeSprite[] arr_5) {
 		super(ja_1, fontmetrics_3);
 		byte[][] bytes_6 = new byte[arr_4.length][];
 		int[] ints_7 = new int[arr_4.length];
@@ -17,11 +17,11 @@ public class ea extends FontRenderer implements Interface40 {
 		int[] ints_10 = new int[arr_4.length];
 
 		for (int i_11 = 0; i_11 < arr_4.length; i_11++) {
-			Class91 class91_12 = arr_4[i_11];
-			if (class91_12.aByteArray961 != null) {
-				bytes_6[i_11] = class91_12.aByteArray961;
+			SpriteDefinitions class91_12 = arr_4[i_11];
+			if (class91_12.alpha != null) {
+				bytes_6[i_11] = class91_12.alpha;
 			} else {
-				byte[] bytes_13 = class91_12.aByteArray960;
+				byte[] bytes_13 = class91_12.pixels;
 				byte[] bytes_14 = bytes_6[i_11] = new byte[bytes_13.length];
 
 				for (int i_15 = 0; i_15 < bytes_13.length; i_15++) {
@@ -29,10 +29,10 @@ public class ea extends FontRenderer implements Interface40 {
 				}
 			}
 
-			ints_7[i_11] = class91_12.anInt957;
-			ints_8[i_11] = class91_12.anInt954;
-			ints_9[i_11] = class91_12.anInt956;
-			ints_10[i_11] = class91_12.anInt959;
+			ints_7[i_11] = class91_12.width;
+			ints_8[i_11] = class91_12.height;
+			ints_9[i_11] = class91_12.minX;
+			ints_10[i_11] = class91_12.minY;
 		}
 
 		this.n(ja_1, ba_2, bytes_6, ints_7, ints_8, ints_9, ints_10);

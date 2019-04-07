@@ -36,7 +36,7 @@ public class Class282_Sub33 extends Node {
 			}
 			byte[] bytes_5 = new byte[i_4];
 			rsbytebuffer_0.index += Class113.HUFFMAN.method1973(rsbytebuffer_0.buffer, rsbytebuffer_0.index, bytes_5, 0, i_4);
-			String string_6 = Class344.method6118(bytes_5, 0, i_4, (byte) -71);
+			String string_6 = Utils.readString(bytes_5, 0, i_4);
 			return string_6;
 		} catch (Exception exception_8) {
 			return "Cabbage";

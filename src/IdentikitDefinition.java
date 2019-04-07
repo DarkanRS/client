@@ -50,39 +50,33 @@ public class IdentikitDefinition implements Definition {
     }
 
     void method897(RsByteBuffer buffer, int opcode) {
-        if (opcode == 1) {
-            buffer.readUnsignedByte();
-        } else {
-            int count;
-            int i_5;
-            if (opcode == 2) {
-                count = buffer.readUnsignedByte();
-                this.modelIds = new int[count];
-                for (i_5 = 0; i_5 < count; i_5++) {
-                    this.modelIds[i_5] = buffer.readBigSmart();
-                }
-            } else if (opcode != 3) {
-                if (opcode == 40) {
-                    count = buffer.readUnsignedByte();
-                    this.originalColours = new short[count];
-                    this.replacementColours = new short[count];
-                    for (i_5 = 0; i_5 < count; i_5++) {
-                        this.originalColours[i_5] = (short) buffer.readUnsignedShort();
-                        this.replacementColours[i_5] = (short) buffer.readUnsignedShort();
-                    }
-                } else if (opcode == 41) {
-                    count = buffer.readUnsignedByte();
-                    this.originalTextures = new short[count];
-                    this.replacementTextures = new short[count];
-                    for (i_5 = 0; i_5 < count; i_5++) {
-                        this.originalTextures[i_5] = (short) buffer.readUnsignedShort();
-                        this.replacementTextures[i_5] = (short) buffer.readUnsignedShort();
-                    }
-                } else if (opcode >= 60 && opcode < 70) {
-                    this.headModels[opcode - 60] = buffer.readBigSmart();
-                }
-            }
-        }
+    	if (opcode == 1) {
+    		buffer.readUnsignedByte();
+    	} else if (opcode == 2) {
+    		int count = buffer.readUnsignedByte();
+    		this.modelIds = new int[count];
+    		for (int i_5 = 0; i_5 < count; i_5++) {
+    			this.modelIds[i_5] = buffer.readBigSmart();
+    		}
+    	} else if (opcode == 40) {
+    		int count = buffer.readUnsignedByte();
+    		this.originalColours = new short[count];
+    		this.replacementColours = new short[count];
+    		for (int i_5 = 0; i_5 < count; i_5++) {
+    			this.originalColours[i_5] = (short) buffer.readUnsignedShort();
+    			this.replacementColours[i_5] = (short) buffer.readUnsignedShort();
+    		}
+    	} else if (opcode == 41) {
+    		int  count = buffer.readUnsignedByte();
+    		this.originalTextures = new short[count];
+    		this.replacementTextures = new short[count];
+    		for (int i_5 = 0; i_5 < count; i_5++) {
+    			this.originalTextures[i_5] = (short) buffer.readUnsignedShort();
+    			this.replacementTextures[i_5] = (short) buffer.readUnsignedShort();
+    		}
+    	} else if (opcode >= 60 && opcode < 70) {
+    		this.headModels[opcode - 60] = buffer.readBigSmart();
+    	}
     }
 
     public boolean method898() {

@@ -228,7 +228,7 @@ public class WorldMapAreaDefs {
             return nativesprite_3;
         } else {
             this.aClass218_2716.aClass317_2703.loadCutscene(this.anInt2733);
-            Class91 class91_4 = Class91.method1522(this.aClass218_2716.aClass317_2703, this.anInt2733, 0);
+            SpriteDefinitions class91_4 = SpriteDefinitions.getSprite(this.aClass218_2716.aClass317_2703, this.anInt2733, 0);
             if (class91_4 != null) {
                 nativesprite_3 = graphicalrenderer_1.method8444(class91_4, true);
                 this.aClass218_2716.aClass229_2708.put(nativesprite_3, (long) (this.anInt2733 | 0x20000 | graphicalrenderer_1.rendererId << 29));
@@ -246,7 +246,7 @@ public class WorldMapAreaDefs {
         } else if (!this.aClass218_2716.aClass317_2703.loadCutscene(i_4)) {
             return null;
         } else {
-            Class91 class91_7 = Class91.method1522(this.aClass218_2716.aClass317_2703, i_4, 0);
+            SpriteDefinitions class91_7 = SpriteDefinitions.getSprite(this.aClass218_2716.aClass317_2703, i_4, 0);
             if (class91_7 != null) {
                 nativesprite_6 = graphicalrenderer_1.method8444(class91_7, true);
                 this.aClass218_2716.aClass229_2708.put(nativesprite_6, (long) i_5);

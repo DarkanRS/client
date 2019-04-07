@@ -23,9 +23,9 @@ public class EnumDefinitions {
 
 	void method7224(RsByteBuffer stream, int opcode) {
 		if (opcode == 1) {
-			this.aChar5146 = Class11.getChar(stream.readByte());
+			this.aChar5146 = Utils.cp1252ToChar(stream.readByte());
 		} else if (opcode == 2) {
-			this.aChar5140 = Class11.getChar(stream.readByte());
+			this.aChar5140 = Utils.cp1252ToChar(stream.readByte());
 		} else if (opcode == 3) {
 			this.aString5142 = stream.readString();
 		} else if (opcode == 4) {

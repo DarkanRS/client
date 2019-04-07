@@ -385,15 +385,15 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void DA(Class455 var2, int var3, int var4);
 
-	public FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
 
 		for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-			ints_4[i_7] = arr_2[i_7].anInt957;
-			ints_5[i_7] = arr_2[i_7].anInt954;
-			if (arr_2[i_7].aByteArray961 != null) {
+			ints_4[i_7] = arr_2[i_7].width;
+			ints_5[i_7] = arr_2[i_7].height;
+			if (arr_2[i_7].alpha != null) {
 				bool_6 = true;
 			}
 		}
@@ -898,15 +898,15 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void fv(int var1, int var2, int var3, int var4, int var5, int var6, byte[] var7, int var8, int var9);
 
-	public FontRenderer method8660(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer method8660(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
 
 		for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-			ints_4[i_7] = arr_2[i_7].anInt957;
-			ints_5[i_7] = arr_2[i_7].anInt954;
-			if (arr_2[i_7].aByteArray961 != null) {
+			ints_4[i_7] = arr_2[i_7].width;
+			ints_5[i_7] = arr_2[i_7].height;
+			if (arr_2[i_7].alpha != null) {
 				bool_6 = true;
 			}
 		}
@@ -1142,15 +1142,15 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return new fa(this, ints_1, i_2, i_3, i_4, i_5);
 	}
 
-	public NativeSprite method8612(Class91 class91_1, boolean bool_2) {
-		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
-		fa_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+	public NativeSprite method8612(SpriteDefinitions class91_1, boolean bool_2) {
+		fa fa_3 = new fa(this, class91_1.pallete, class91_1.pixels, class91_1.alpha, class91_1.width, class91_1.width, class91_1.height);
+		fa_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return fa_3;
 	}
 
-	public NativeSprite method8518(Class91 class91_1, boolean bool_2) {
-		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
-		fa_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+	public NativeSprite method8518(SpriteDefinitions class91_1, boolean bool_2) {
+		fa fa_3 = new fa(this, class91_1.pallete, class91_1.pixels, class91_1.alpha, class91_1.width, class91_1.width, class91_1.height);
+		fa_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return fa_3;
 	}
 
@@ -1197,15 +1197,15 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return false;
 	}
 
-	public FontRenderer method8625(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer method8625(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
 
 		for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-			ints_4[i_7] = arr_2[i_7].anInt957;
-			ints_5[i_7] = arr_2[i_7].anInt954;
-			if (arr_2[i_7].aByteArray961 != null) {
+			ints_4[i_7] = arr_2[i_7].width;
+			ints_5[i_7] = arr_2[i_7].height;
+			if (arr_2[i_7].alpha != null) {
 				bool_6 = true;
 			}
 		}
@@ -1456,9 +1456,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return false;
 	}
 
-	public NativeSprite method8444(Class91 class91_1, boolean bool_2) {
-		fa fa_3 = new fa(this, class91_1.anIntArray955, class91_1.aByteArray960, class91_1.aByteArray961, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954);
-		fa_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+	public NativeSprite method8444(SpriteDefinitions class91_1, boolean bool_2) {
+		fa fa_3 = new fa(this, class91_1.pallete, class91_1.pixels, class91_1.alpha, class91_1.width, class91_1.width, class91_1.height);
+		fa_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return fa_3;
 	}
 

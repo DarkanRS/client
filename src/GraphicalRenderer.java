@@ -233,13 +233,13 @@ public abstract class GraphicalRenderer {
 
 	public abstract int method8443(int var1, int var2);
 
-	public abstract NativeSprite method8444(Class91 var1, boolean var2);
+	public abstract NativeSprite method8444(SpriteDefinitions var1, boolean var2);
 
 	public abstract void method8445();
 
 	public abstract void method8446(Matrix44Arr var1);
 
-	public abstract FontRenderer createFont(FontMetrics var1, Class91[] var2, boolean var3);
+	public abstract FontRenderer createFont(FontMetrics var1, SpriteDefinitions[] var2, boolean var3);
 
 	public abstract Matrix44Arr method8449();
 
@@ -413,7 +413,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void fd(int var1, int var2);
 
-	public abstract NativeSprite method8518(Class91 var1, boolean var2);
+	public abstract NativeSprite method8518(SpriteDefinitions var1, boolean var2);
 
 	public abstract void fi(int var1, int var2);
 
@@ -634,7 +634,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8611();
 
-	public abstract NativeSprite method8612(Class91 var1, boolean var2);
+	public abstract NativeSprite method8612(SpriteDefinitions var1, boolean var2);
 
 	public abstract void method8613();
 
@@ -662,7 +662,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract int[] kh(int var1, int var2, int var3, int var4);
 
-	public abstract FontRenderer method8625(FontMetrics var1, Class91[] var2, boolean var3);
+	public abstract FontRenderer method8625(FontMetrics var1, SpriteDefinitions[] var2, boolean var3);
 
 	public abstract Matrix44Var method8626();
 
@@ -716,7 +716,7 @@ public abstract class GraphicalRenderer {
 
 	abstract void fw(int var1, int var2, int var3, int var4, int var5);
 
-	public abstract FontRenderer method8660(FontMetrics var1, Class91[] var2, boolean var3);
+	public abstract FontRenderer method8660(FontMetrics var1, SpriteDefinitions[] var2, boolean var3);
 
 	public abstract boolean method8664();
 

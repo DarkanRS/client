@@ -732,40 +732,40 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return this.anInt8702 + this.anInt8701 + this.anInt8761;
 	}
 
-	public final FontRenderer method8660(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public final FontRenderer method8660(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		return new Class8_Sub4(this, fontmetrics_1, arr_2, bool_3);
 	}
 
-	public final NativeSprite method8444(Class91 class91_1, boolean bool_2) {
+	public final NativeSprite method8444(SpriteDefinitions class91_1, boolean bool_2) {
 		NativeSprite nativesprite_3;
-		if (class91_1.anInt957 != 0 && class91_1.anInt954 != 0) {
-			int[] ints_4 = new int[class91_1.anInt957 * class91_1.anInt954];
+		if (class91_1.width != 0 && class91_1.height != 0) {
+			int[] ints_4 = new int[class91_1.width * class91_1.height];
 			int i_5 = 0;
 			int i_6 = 0;
 			int i_7;
 			int i_8;
-			if (class91_1.aByteArray961 != null) {
-				for (i_7 = 0; i_7 < class91_1.anInt954; i_7++) {
-					for (i_8 = 0; i_8 < class91_1.anInt957; i_8++) {
-						ints_4[i_6++] = class91_1.aByteArray961[i_5] << 24 | class91_1.anIntArray955[class91_1.aByteArray960[i_5] & 0xff];
+			if (class91_1.alpha != null) {
+				for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+					for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+						ints_4[i_6++] = class91_1.alpha[i_5] << 24 | class91_1.pallete[class91_1.pixels[i_5] & 0xff];
 						++i_5;
 					}
 				}
 			} else {
-				for (i_7 = 0; i_7 < class91_1.anInt954; i_7++) {
-					for (i_8 = 0; i_8 < class91_1.anInt957; i_8++) {
-						int i_9 = class91_1.anIntArray955[class91_1.aByteArray960[i_5++] & 0xff];
+				for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+					for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+						int i_9 = class91_1.pallete[class91_1.pixels[i_5++] & 0xff];
 						ints_4[i_6++] = i_9 != 0 ? ~0xffffff | i_9 : 0;
 					}
 				}
 			}
 
-			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 228280722);
+			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.width, class91_1.width, class91_1.height, 228280722);
 		} else {
 			nativesprite_3 = this.createNativeSprite(new int[1], 1, 1, 1, -51231437);
 		}
 
-		nativesprite_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+		nativesprite_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return nativesprite_3;
 	}
 
@@ -2681,69 +2681,69 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method14026();
 
-	public final NativeSprite method8612(Class91 class91_1, boolean bool_2) {
+	public final NativeSprite method8612(SpriteDefinitions class91_1, boolean bool_2) {
 		NativeSprite nativesprite_3;
-		if (class91_1.anInt957 != 0 && class91_1.anInt954 != 0) {
-			int[] ints_4 = new int[class91_1.anInt957 * class91_1.anInt954];
+		if (class91_1.width != 0 && class91_1.height != 0) {
+			int[] ints_4 = new int[class91_1.width * class91_1.height];
 			int i_5 = 0;
 			int i_6 = 0;
 			int i_7;
 			int i_8;
-			if (class91_1.aByteArray961 != null) {
-				for (i_7 = 0; i_7 < class91_1.anInt954; i_7++) {
-					for (i_8 = 0; i_8 < class91_1.anInt957; i_8++) {
-						ints_4[i_6++] = class91_1.aByteArray961[i_5] << 24 | class91_1.anIntArray955[class91_1.aByteArray960[i_5] & 0xff];
+			if (class91_1.alpha != null) {
+				for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+					for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+						ints_4[i_6++] = class91_1.alpha[i_5] << 24 | class91_1.pallete[class91_1.pixels[i_5] & 0xff];
 						++i_5;
 					}
 				}
 			} else {
-				for (i_7 = 0; i_7 < class91_1.anInt954; i_7++) {
-					for (i_8 = 0; i_8 < class91_1.anInt957; i_8++) {
-						int i_9 = class91_1.anIntArray955[class91_1.aByteArray960[i_5++] & 0xff];
+				for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+					for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+						int i_9 = class91_1.pallete[class91_1.pixels[i_5++] & 0xff];
 						ints_4[i_6++] = i_9 != 0 ? ~0xffffff | i_9 : 0;
 					}
 				}
 			}
 
-			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 243468915);
+			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.width, class91_1.width, class91_1.height, 243468915);
 		} else {
 			nativesprite_3 = this.createNativeSprite(new int[1], 1, 1, 1, -1837569571);
 		}
 
-		nativesprite_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+		nativesprite_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return nativesprite_3;
 	}
 
-	public final NativeSprite method8518(Class91 class91_1, boolean bool_2) {
+	public final NativeSprite method8518(SpriteDefinitions class91_1, boolean bool_2) {
 		NativeSprite nativesprite_3;
-		if (class91_1.anInt957 != 0 && class91_1.anInt954 != 0) {
-			int[] ints_4 = new int[class91_1.anInt957 * class91_1.anInt954];
+		if (class91_1.width != 0 && class91_1.height != 0) {
+			int[] ints_4 = new int[class91_1.width * class91_1.height];
 			int i_5 = 0;
 			int i_6 = 0;
 			int i_7;
 			int i_8;
-			if (class91_1.aByteArray961 != null) {
-				for (i_7 = 0; i_7 < class91_1.anInt954; i_7++) {
-					for (i_8 = 0; i_8 < class91_1.anInt957; i_8++) {
-						ints_4[i_6++] = class91_1.aByteArray961[i_5] << 24 | class91_1.anIntArray955[class91_1.aByteArray960[i_5] & 0xff];
+			if (class91_1.alpha != null) {
+				for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+					for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+						ints_4[i_6++] = class91_1.alpha[i_5] << 24 | class91_1.pallete[class91_1.pixels[i_5] & 0xff];
 						++i_5;
 					}
 				}
 			} else {
-				for (i_7 = 0; i_7 < class91_1.anInt954; i_7++) {
-					for (i_8 = 0; i_8 < class91_1.anInt957; i_8++) {
-						int i_9 = class91_1.anIntArray955[class91_1.aByteArray960[i_5++] & 0xff];
+				for (i_7 = 0; i_7 < class91_1.height; i_7++) {
+					for (i_8 = 0; i_8 < class91_1.width; i_8++) {
+						int i_9 = class91_1.pallete[class91_1.pixels[i_5++] & 0xff];
 						ints_4[i_6++] = i_9 != 0 ? ~0xffffff | i_9 : 0;
 					}
 				}
 			}
 
-			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.anInt957, class91_1.anInt957, class91_1.anInt954, 216802714);
+			nativesprite_3 = this.createNativeSprite(ints_4, class91_1.width, class91_1.width, class91_1.height, 216802714);
 		} else {
 			nativesprite_3 = this.createNativeSprite(new int[1], 1, 1, 1, 1578248610);
 		}
 
-		nativesprite_3.method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+		nativesprite_3.method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return nativesprite_3;
 	}
 
@@ -3022,7 +3022,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		this.anInt8775 = 1 << this.anInt8806;
 	}
 
-	public final FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public final FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		return new Class8_Sub4(this, fontmetrics_1, arr_2, bool_3);
 	}
 
@@ -3256,7 +3256,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return true;
 	}
 
-	public final FontRenderer method8625(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public final FontRenderer method8625(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		return new Class8_Sub4(this, fontmetrics_1, arr_2, bool_3);
 	}
 

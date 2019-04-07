@@ -345,15 +345,15 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 	}
 
-	public FontRenderer createFont(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
 
 		for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-			ints_4[i_7] = arr_2[i_7].anInt957;
-			ints_5[i_7] = arr_2[i_7].anInt954;
-			if (arr_2[i_7].aByteArray961 != null) {
+			ints_4[i_7] = arr_2[i_7].width;
+			ints_5[i_7] = arr_2[i_7].height;
+			if (arr_2[i_7].alpha != null) {
 				bool_6 = true;
 			}
 		}
@@ -2924,15 +2924,15 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return 0;
 	}
 
-	public FontRenderer method8660(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer method8660(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
 
 		for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-			ints_4[i_7] = arr_2[i_7].anInt957;
-			ints_5[i_7] = arr_2[i_7].anInt954;
-			if (arr_2[i_7].aByteArray961 != null) {
+			ints_4[i_7] = arr_2[i_7].width;
+			ints_5[i_7] = arr_2[i_7].height;
+			if (arr_2[i_7].alpha != null) {
 				bool_6 = true;
 			}
 		}
@@ -3353,18 +3353,18 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return false;
 	}
 
-	public NativeSprite method8518(Class91 class91_1, boolean bool_2) {
-		int[] ints_3 = class91_1.anIntArray955;
-		byte[] bytes_4 = class91_1.aByteArray960;
-		int i_5 = class91_1.anInt957;
-		int i_6 = class91_1.anInt954;
+	public NativeSprite method8518(SpriteDefinitions class91_1, boolean bool_2) {
+		int[] ints_3 = class91_1.pallete;
+		byte[] bytes_4 = class91_1.pixels;
+		int i_5 = class91_1.width;
+		int i_6 = class91_1.height;
 		Object obj_7;
 		int[] ints_8;
 		byte[] bytes_9;
 		int i_10;
 		int i_11;
 		int i_12;
-		if (bool_2 && class91_1.aByteArray961 == null) {
+		if (bool_2 && class91_1.alpha == null) {
 			ints_8 = new int[ints_3.length];
 			bytes_9 = new byte[i_5 * i_6];
 
@@ -3383,7 +3383,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			obj_7 = new Class160_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
 		} else {
 			ints_8 = new int[i_6 * i_5];
-			bytes_9 = class91_1.aByteArray961;
+			bytes_9 = class91_1.alpha;
 			if (bytes_9 != null) {
 				for (i_10 = 0; i_10 < i_6; i_10++) {
 					i_11 = i_5 * i_10;
@@ -3408,7 +3408,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 		}
 
-		((Class160_Sub1) obj_7).method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+		((Class160_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return (NativeSprite) obj_7;
 	}
 
@@ -3428,18 +3428,18 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.method14364();
 	}
 
-	public NativeSprite method8444(Class91 class91_1, boolean bool_2) {
-		int[] ints_3 = class91_1.anIntArray955;
-		byte[] bytes_4 = class91_1.aByteArray960;
-		int i_5 = class91_1.anInt957;
-		int i_6 = class91_1.anInt954;
+	public NativeSprite method8444(SpriteDefinitions class91_1, boolean bool_2) {
+		int[] ints_3 = class91_1.pallete;
+		byte[] bytes_4 = class91_1.pixels;
+		int i_5 = class91_1.width;
+		int i_6 = class91_1.height;
 		Object obj_7;
 		int[] ints_8;
 		byte[] bytes_9;
 		int i_10;
 		int i_11;
 		int i_12;
-		if (bool_2 && class91_1.aByteArray961 == null) {
+		if (bool_2 && class91_1.alpha == null) {
 			ints_8 = new int[ints_3.length];
 			bytes_9 = new byte[i_5 * i_6];
 
@@ -3458,7 +3458,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			obj_7 = new Class160_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
 		} else {
 			ints_8 = new int[i_6 * i_5];
-			bytes_9 = class91_1.aByteArray961;
+			bytes_9 = class91_1.alpha;
 			if (bytes_9 != null) {
 				for (i_10 = 0; i_10 < i_6; i_10++) {
 					i_11 = i_5 * i_10;
@@ -3483,7 +3483,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 		}
 
-		((Class160_Sub1) obj_7).method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+		((Class160_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return (NativeSprite) obj_7;
 	}
 
@@ -6113,18 +6113,18 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8673(int i_1, int i_2, int i_3, int i_4) {
 	}
 
-	public NativeSprite method8612(Class91 class91_1, boolean bool_2) {
-		int[] ints_3 = class91_1.anIntArray955;
-		byte[] bytes_4 = class91_1.aByteArray960;
-		int i_5 = class91_1.anInt957;
-		int i_6 = class91_1.anInt954;
+	public NativeSprite method8612(SpriteDefinitions class91_1, boolean bool_2) {
+		int[] ints_3 = class91_1.pallete;
+		byte[] bytes_4 = class91_1.pixels;
+		int i_5 = class91_1.width;
+		int i_6 = class91_1.height;
 		Object obj_7;
 		int[] ints_8;
 		byte[] bytes_9;
 		int i_10;
 		int i_11;
 		int i_12;
-		if (bool_2 && class91_1.aByteArray961 == null) {
+		if (bool_2 && class91_1.alpha == null) {
 			ints_8 = new int[ints_3.length];
 			bytes_9 = new byte[i_5 * i_6];
 
@@ -6143,7 +6143,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			obj_7 = new Class160_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
 		} else {
 			ints_8 = new int[i_6 * i_5];
-			bytes_9 = class91_1.aByteArray961;
+			bytes_9 = class91_1.alpha;
 			if (bytes_9 != null) {
 				for (i_10 = 0; i_10 < i_6; i_10++) {
 					i_11 = i_5 * i_10;
@@ -6168,7 +6168,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 		}
 
-		((Class160_Sub1) obj_7).method2743(class91_1.anInt956, class91_1.anInt959, class91_1.anInt958, class91_1.anInt953);
+		((Class160_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return (NativeSprite) obj_7;
 	}
 
@@ -6375,15 +6375,15 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8601() {
 	}
 
-	public FontRenderer method8625(FontMetrics fontmetrics_1, Class91[] arr_2, boolean bool_3) {
+	public FontRenderer method8625(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
 		int[] ints_4 = new int[arr_2.length];
 		int[] ints_5 = new int[arr_2.length];
 		boolean bool_6 = false;
 
 		for (int i_7 = 0; i_7 < arr_2.length; i_7++) {
-			ints_4[i_7] = arr_2[i_7].anInt957;
-			ints_5[i_7] = arr_2[i_7].anInt954;
-			if (arr_2[i_7].aByteArray961 != null) {
+			ints_4[i_7] = arr_2[i_7].width;
+			ints_5[i_7] = arr_2[i_7].height;
+			if (arr_2[i_7].alpha != null) {
 				bool_6 = true;
 			}
 		}

@@ -126,7 +126,7 @@ public final class CutsceneEntity {
 					i_7 += var_8 + 10 - 65;
 				}
 				if (i_7 != 0 && Class209.method3600((byte) i_7)) {
-					stringbuilder_2.append(Class11.getChar((byte) i_7));
+					stringbuilder_2.append(Utils.cp1252ToChar((byte) i_7));
 				}
 				i_4 += 2;
 			} else if (var_5 == 43) {

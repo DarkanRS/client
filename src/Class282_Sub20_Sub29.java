@@ -15,11 +15,11 @@ public class Class282_Sub20_Sub29 extends Class282_Sub20 {
 		if (this.anIntArray9916 != null) {
 			return true;
 		} else if (this.anInt9912 >= 0) {
-			Class91 class91_2 = anInt9913 >= 0 ? Class91.method1522(Class532_Sub2.aClass317_7925, anInt9913, this.anInt9912) : Class91.method1515(Class532_Sub2.aClass317_7925, this.anInt9912);
+			SpriteDefinitions class91_2 = anInt9913 >= 0 ? SpriteDefinitions.getSprite(Class532_Sub2.aClass317_7925, anInt9913, this.anInt9912) : SpriteDefinitions.method1515(Class532_Sub2.aClass317_7925, this.anInt9912);
 			class91_2.method1523();
 			this.anIntArray9916 = class91_2.method1528();
-			this.anInt9914 = class91_2.anInt957;
-			this.anInt9915 = class91_2.anInt954;
+			this.anInt9914 = class91_2.width;
+			this.anInt9915 = class91_2.height;
 			return true;
 		} else {
 			return false;

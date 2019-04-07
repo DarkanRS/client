@@ -4,7 +4,7 @@ public class SCT24Definitions {
 
 	void method7485(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.aChar5431 = Class11.getChar(rsbytebuffer_1.readByte());
+			this.aChar5431 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
 		}
 
 	}

@@ -2,18 +2,18 @@ public class QuickChatValueType {
 
 	public static QuickChatValueType LISTDIALOG = new QuickChatValueType(0, 2, 2, 1);
 	public static QuickChatValueType OBJDIALOG = new QuickChatValueType(1, 2, 2, 0);
-	static QuickChatValueType COUNTDIALOG = new QuickChatValueType(2, 4, 4, 0);
-	static QuickChatValueType STAT_BASE = new QuickChatValueType(4, 1, 1, 1);
+	public static QuickChatValueType COUNTDIALOG = new QuickChatValueType(2, 4, 4, 0);
+	public static QuickChatValueType STAT_BASE = new QuickChatValueType(4, 1, 1, 1);
 	public static QuickChatValueType ENUM_STRING = new QuickChatValueType(6, 0, 4, 2);
 	public static QuickChatValueType ENUM_STRING_CLAN = new QuickChatValueType(7, 0, 1, 1);
-	static QuickChatValueType TOSTRING_VARP = new QuickChatValueType(8, 0, 4, 1);
-	static QuickChatValueType TOSTRING_VARBIT = new QuickChatValueType(9, 0, 4, 1);
+	public static QuickChatValueType TOSTRING_VARP = new QuickChatValueType(8, 0, 4, 1);
+	public static QuickChatValueType TOSTRING_VARBIT = new QuickChatValueType(9, 0, 4, 1);
 	public static QuickChatValueType OBJTRADEDIALOG = new QuickChatValueType(10, 2, 2, 0);
 	public static QuickChatValueType ENUM_STRING_STATBASE = new QuickChatValueType(11, 0, 1, 2);
-	static QuickChatValueType ACC_GETCOUNT_WORLD = new QuickChatValueType(12, 0, 1, 0);
-	static QuickChatValueType ACC_GETMEANCOMBATLEVEL = new QuickChatValueType(13, 0, 1, 0);
-	static QuickChatValueType TOSTRING_SHARED = new QuickChatValueType(14, 0, 4, 1);
-	static QuickChatValueType ACTIVECOMBATLEVEL = new QuickChatValueType(15, 0, 1, 0);
+	public static QuickChatValueType ACC_GETCOUNT_WORLD = new QuickChatValueType(12, 0, 1, 0);
+	public static QuickChatValueType ACC_GETMEANCOMBATLEVEL = new QuickChatValueType(13, 0, 1, 0);
+	public static QuickChatValueType TOSTRING_SHARED = new QuickChatValueType(14, 0, 4, 1);
+	public static QuickChatValueType ACTIVECOMBATLEVEL = new QuickChatValueType(15, 0, 1, 0);
 
 	public int id;
 	public int clientTransmitSize;

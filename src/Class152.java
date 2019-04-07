@@ -94,7 +94,7 @@ public abstract class Class152 {
 		NativeSprite nativesprite_3 = (NativeSprite) Class299.aClass229_3545.get((long) i_1);
 		if (nativesprite_3 == null) {
 			if (IndexLoaders.USING_JAGEX_IMAGE_FORMAT) {
-				nativesprite_3 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(index_0, i_1), true);
+				nativesprite_3 = Renderers.SOFTWARE_RENDERER.method8444(SpriteDefinitions.method1515(index_0, i_1), true);
 			} else {
 				nativesprite_3 = Class103_Sub1.method14490(index_0.getFile(i_1), (byte) -40);
 			}

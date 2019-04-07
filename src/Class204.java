@@ -1,7 +1,6 @@
 public class Class204 implements Identifiable {
 
     static Class204 aClass204_2579 = new Class204(0);
-
     public static Class204 aClass204_2578 = new Class204(1);
 
     int anInt2580;
@@ -15,11 +14,11 @@ public class Class204 implements Identifiable {
     }
 
     public int method75() {
-        return 1946072861 * this.anInt2580 * 849199925;
+        return this.anInt2580;
     }
 
     public int method76() {
-        return 1946072861 * this.anInt2580 * 849199925;
+        return this.anInt2580 ;
     }
 
     public static final int method3363(int i_0) {

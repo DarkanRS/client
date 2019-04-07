@@ -1942,7 +1942,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (context.currentPacket == IncomingPacket.aClass375_4507) {
 			byte[] bytes_64 = new byte[context.currentPacketSize];
 			buffer.readBytes(bytes_64, context.currentPacketSize);
-			String string_88 = Class344.method6118(bytes_64, 0, context.currentPacketSize, (byte) -124);
+			String string_88 = Utils.readString(bytes_64, 0, context.currentPacketSize);
 			if (client.aBool7310) {
 				try {
 					Class361.aClass361_4180.method6254(new Object[] { string_88 }, (byte) 51);
@@ -2312,7 +2312,7 @@ public class PacketsDecoder extends Class455 {
 			}
 			byte[] bytes_64 = new byte[context.currentPacketSize];
 			buffer.readBytes(bytes_64, context.currentPacketSize);
-			String string_88 = Class344.method6118(bytes_64, 0, context.currentPacketSize, (byte) -8);
+			String string_88 = Utils.readString(bytes_64, 0, context.currentPacketSize);
 			String str_92 = "opensn";
 			if (!client.aBool7310 || !Class186.method3082(string_88, 1, str_92)) {
 				Class508.method8736(string_88, true, Class393.preferences.currentToolkit.getValue(-780399145) == 5, str_92, client.aBool7158, client.aBool7159, (byte) -17);

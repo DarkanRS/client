@@ -878,7 +878,7 @@ public class ItemDefinitions implements Definition {
         if (i_10 != -1) {
             NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get((long) i_10);
             if (nativesprite_11 == null) {
-                Class91[] arr_12 = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_10);
+                SpriteDefinitions[] arr_12 = SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, i_10);
                 if (arr_12 == null) {
                     return;
                 }

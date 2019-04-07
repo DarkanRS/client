@@ -1,13 +1,9 @@
 public class HitsplatIndexLoader {
 
 	public static int[] anIntArray2668;
-
 	SoftCache aClass229_2664 = new SoftCache(20);
-
 	SoftCache aClass229_2667 = new SoftCache(64);
-
 	Index aClass317_2666;
-
 	Index aClass317_2665;
 
 	public void method3602() {

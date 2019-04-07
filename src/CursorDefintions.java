@@ -2,7 +2,7 @@ public class CursorDefintions {
 
 	CursorIndexLoader loader;
 	static NativeSprite aClass160_5004;
-	int anInt5003;
+	int spriteId;
 	public int anInt5002;
 	public int anInt5000;
 
@@ -19,7 +19,7 @@ public class CursorDefintions {
 
 	void method7025(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.anInt5003 = rsbytebuffer_1.readBigSmart();
+			this.spriteId = rsbytebuffer_1.readBigSmart();
 		} else if (i_2 == 2) {
 			this.anInt5002 = rsbytebuffer_1.readUnsignedByte();
 			this.anInt5000 = rsbytebuffer_1.readUnsignedByte();
@@ -27,14 +27,14 @@ public class CursorDefintions {
 
 	}
 
-	public synchronized Class91 method7026() {
-		Class91 class91_2 = (Class91) this.loader.aClass229_5342.get((long) this.anInt5003);
+	public synchronized SpriteDefinitions getSprite() {
+		SpriteDefinitions class91_2 = (SpriteDefinitions) this.loader.aClass229_5342.get((long) this.spriteId);
 		if (class91_2 != null) {
 			return class91_2;
 		} else {
-			class91_2 = Class91.method1522(this.loader.spritesIndex, this.anInt5003, 0);
+			class91_2 = SpriteDefinitions.getSprite(this.loader.spritesIndex, this.spriteId, 0);
 			if (class91_2 != null) {
-				this.loader.aClass229_5342.put(class91_2, (long) this.anInt5003);
+				this.loader.aClass229_5342.put(class91_2, (long) this.spriteId);
 			}
 
 			return class91_2;

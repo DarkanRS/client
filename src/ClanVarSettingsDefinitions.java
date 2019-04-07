@@ -17,7 +17,7 @@ public class ClanVarSettingsDefinitions {
 
 	void method11488(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			this.aChar7096 = Class11.getChar(rsbytebuffer_1.readByte());
+			this.aChar7096 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
 		} else if (i_2 == 2) {
 			this.anInt7097 = rsbytebuffer_1.readUnsignedShort();
 			this.anInt7098 = rsbytebuffer_1.readUnsignedByte();

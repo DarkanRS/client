@@ -1,50 +1,40 @@
 public class HitbarDefinitions {
 
 	HitbarIndexLoader aClass290_2437;
-
 	public static int CAMERA_ZOOM = 600;
-
 	public int anInt2446 = 255;
-
 	public int anInt2440 = 255;
-
 	public int anInt2439 = -1;
-
 	public int anInt2443 = 70;
-
 	int anInt2444 = -1;
-
 	int anInt2445 = -1;
-
 	int anInt2441 = -1;
-
 	int anInt2447 = -1;
-
 	public int anInt2442 = 1;
 
-	void method3206(RsByteBuffer rsbytebuffer_1, int i_2) {
-		if (i_2 == 1) {
-			rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 2) {
-			this.anInt2446 = rsbytebuffer_1.readUnsignedByte();
-		} else if (i_2 == 3) {
-			this.anInt2440 = rsbytebuffer_1.readUnsignedByte();
-		} else if (i_2 == 4) {
+	void method3206(RsByteBuffer stream, int opcode) {
+		if (opcode == 1) {
+			stream.readUnsignedShort();
+		} else if (opcode == 2) {
+			this.anInt2446 = stream.readUnsignedByte();
+		} else if (opcode == 3) {
+			this.anInt2440 = stream.readUnsignedByte();
+		} else if (opcode == 4) {
 			this.anInt2439 = 0;
-		} else if (i_2 == 5) {
-			this.anInt2443 = rsbytebuffer_1.readUnsignedShort();
-		} else if (i_2 == 6) {
-			rsbytebuffer_1.readUnsignedByte();
-		} else if (i_2 == 7) {
-			this.anInt2444 = rsbytebuffer_1.readBigSmart();
-		} else if (i_2 == 8) {
-			this.anInt2445 = rsbytebuffer_1.readBigSmart();
-		} else if (i_2 == 9) {
-			this.anInt2441 = rsbytebuffer_1.readBigSmart();
-		} else if (i_2 == 10) {
-			this.anInt2447 = rsbytebuffer_1.readBigSmart();
-		} else if (i_2 == 11) {
-			this.anInt2439 = rsbytebuffer_1.readUnsignedShort();
+		} else if (opcode == 5) {
+			this.anInt2443 = stream.readUnsignedShort();
+		} else if (opcode == 6) {
+			stream.readUnsignedByte();
+		} else if (opcode == 7) {
+			this.anInt2444 = stream.readBigSmart();
+		} else if (opcode == 8) {
+			this.anInt2445 = stream.readBigSmart();
+		} else if (opcode == 9) {
+			this.anInt2441 = stream.readBigSmart();
+		} else if (opcode == 10) {
+			this.anInt2447 = stream.readBigSmart();
+		} else if (opcode == 11) {
+			this.anInt2439 = stream.readUnsignedShort();
 		}
 	}
 
@@ -86,21 +76,21 @@ public class HitbarDefinitions {
 
 	void method3211(GraphicalRenderer graphicalrenderer_1, byte b_2) {
 		Index index_3 = this.aClass290_2437.aClass317_3448;
-		Class91 class91_4;
+		SpriteDefinitions class91_4;
 		if (this.anInt2444 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2444) == null && index_3.loadCutscene(this.anInt2444)) {
-			class91_4 = Class91.method1515(index_3, this.anInt2444);
+			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2444);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2444);
 		}
 		if (this.anInt2445 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2445) == null && index_3.loadCutscene(this.anInt2445)) {
-			class91_4 = Class91.method1515(index_3, this.anInt2445);
+			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2445);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2445);
 		}
 		if (this.anInt2441 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2441) == null && index_3.loadCutscene(this.anInt2441)) {
-			class91_4 = Class91.method1515(index_3, this.anInt2441);
+			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2441);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2441);
 		}
 		if (this.anInt2447 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2447) == null && index_3.loadCutscene(this.anInt2447)) {
-			class91_4 = Class91.method1515(index_3, this.anInt2447);
+			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2447);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2447);
 		}
 	}

@@ -14,10 +14,10 @@ public class VarcDefinitions {
 		}
 	}
 
-	void method6991(RsByteBuffer rsbytebuffer_1, int i_2) {
-		if (i_2 == 1) {
-			this.aChar4984 = Class11.getChar(rsbytebuffer_1.readByte());
-		} else if (i_2 == 2) {
+	void method6991(RsByteBuffer stream, int opcode) {
+		if (opcode == 1) {
+			this.aChar4984 = Utils.cp1252ToChar(stream.readByte());
+		} else if (opcode == 2) {
 			this.anInt4983 = 0;
 		}
 	}

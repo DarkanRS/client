@@ -222,7 +222,7 @@ public class RsByteBuffer extends Node {
         this.buffer[++this.index - 1] = (byte) i_1;
     }
 
-    public long method13089(int i_1) {
+    public long readSize(int i_1) {
         --i_1;
         if (i_1 >= 0 && i_1 <= 7) {
             int i_3 = i_1 * 8;
@@ -251,16 +251,16 @@ public class RsByteBuffer extends Node {
     }
 
     public String readGJString() {
-        byte b_2 = this.buffer[++this.index - 1];
-        if (b_2 != 0) {
+        byte b = this.buffer[++this.index - 1];
+        if (b != 0) {
             throw new IllegalStateException("");
         } else {
-            int i_3 = this.index;
+            int idx = this.index;
             while (this.buffer[++this.index - 1] != 0) {
                 ;
             }
-            int i_4 = this.index - i_3 - 1;
-            return i_4 == 0 ? "" : Class344.method6118(this.buffer, i_3, i_4, (byte) -81);
+            int i_4 = this.index - idx - 1;
+            return i_4 == 0 ? "" : Utils.readString(this.buffer, idx, i_4);
         }
     }
 
@@ -525,7 +525,7 @@ public class RsByteBuffer extends Node {
             ;
         }
         int i_2 = this.index - i_1 - 1;
-        return i_2 == 0 ? "" : Class344.method6118(this.buffer, i_1, i_2, (byte) -24);
+        return i_2 == 0 ? "" : Utils.readString(this.buffer, i_1, i_2);
     }
 
     public int readUnsignedByte128() {

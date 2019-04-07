@@ -25,20 +25,20 @@ public class Class8_Sub4 extends FontRenderer {
 		class47_6.method936();
 	}
 
-	Class8_Sub4(Class505_Sub2 class505_sub2_1, FontMetrics fontmetrics_2, Class91[] arr_3, boolean bool_4) {
+	Class8_Sub4(Class505_Sub2 class505_sub2_1, FontMetrics fontmetrics_2, SpriteDefinitions[] arr_3, boolean bool_4) {
 		super(class505_sub2_1, fontmetrics_2);
 		this.aClass505_Sub2_9321 = class505_sub2_1;
 		int i_5 = 0;
 
 		int i_6;
 		for (i_6 = 0; i_6 < 256; i_6++) {
-			Class91 class91_7 = arr_3[i_6];
-			if (class91_7.anInt954 > i_5) {
-				i_5 = class91_7.anInt954;
+			SpriteDefinitions class91_7 = arr_3[i_6];
+			if (class91_7.height > i_5) {
+				i_5 = class91_7.height;
 			}
 
-			if (class91_7.anInt957 > i_5) {
-				i_5 = class91_7.anInt957;
+			if (class91_7.width > i_5) {
+				i_5 = class91_7.width;
 			}
 		}
 
@@ -51,21 +51,21 @@ public class Class8_Sub4 extends FontRenderer {
 		int i_15;
 		int i_17;
 		int i_18;
-		Class91 class91_23;
+		SpriteDefinitions class91_23;
 		if (bool_4) {
 			byte[] bytes_28 = new byte[i_6 * i_6];
 
 			for (i_8 = 0; i_8 < 256; i_8++) {
 				class91_23 = arr_3[i_8];
-				i_10 = class91_23.anInt954;
-				int i_11 = class91_23.anInt957;
+				i_10 = class91_23.height;
+				int i_11 = class91_23.width;
 				i_12 = i_5 * (i_8 % 16);
 				i_13 = i_8 / 16 * i_5;
 				i_14 = i_12 + i_13 * i_6;
 				i_15 = 0;
 				byte[] bytes_16;
-				if (class91_23.aByteArray961 == null) {
-					bytes_16 = class91_23.aByteArray960;
+				if (class91_23.alpha == null) {
+					bytes_16 = class91_23.pixels;
 
 					for (i_17 = 0; i_17 < i_10; i_17++) {
 						for (i_18 = 0; i_18 < i_11; i_18++) {
@@ -75,7 +75,7 @@ public class Class8_Sub4 extends FontRenderer {
 						i_14 += i_6 - i_11;
 					}
 				} else {
-					bytes_16 = class91_23.aByteArray961;
+					bytes_16 = class91_23.alpha;
 
 					for (i_17 = 0; i_17 < i_10; i_17++) {
 						for (i_18 = 0; i_18 < i_11; i_18++) {
@@ -103,11 +103,11 @@ public class Class8_Sub4 extends FontRenderer {
 
 			for (i_8 = 0; i_8 < 256; i_8++) {
 				class91_23 = arr_3[i_8];
-				int[] ints_24 = class91_23.anIntArray955;
-				byte[] bytes_25 = class91_23.aByteArray961;
-				byte[] bytes_26 = class91_23.aByteArray960;
-				i_13 = class91_23.anInt954;
-				i_14 = class91_23.anInt957;
+				int[] ints_24 = class91_23.pallete;
+				byte[] bytes_25 = class91_23.alpha;
+				byte[] bytes_26 = class91_23.pixels;
+				i_13 = class91_23.height;
+				i_14 = class91_23.width;
 				i_15 = i_5 * (i_8 % 16);
 				int i_27 = i_8 / 16 * i_5;
 				i_17 = i_15 + i_27 * i_6;
@@ -151,11 +151,11 @@ public class Class8_Sub4 extends FontRenderer {
 		float f_32 = this.anInterface6_9322.method62((float) i_6) / (float) i_6;
 
 		for (i_10 = 0; i_10 < 256; i_10++) {
-			Class91 class91_38 = arr_3[i_10];
-			i_12 = class91_38.anInt954;
-			i_13 = class91_38.anInt957;
-			i_14 = class91_38.anInt959;
-			i_15 = class91_38.anInt956;
+			SpriteDefinitions class91_38 = arr_3[i_10];
+			i_12 = class91_38.height;
+			i_13 = class91_38.width;
+			i_14 = class91_38.minY;
+			i_15 = class91_38.minX;
 			float f_39 = (float) (i_5 * (i_10 % 16));
 			float f_33 = (float) (i_10 / 16 * i_5);
 			float f_34 = f_39 * f_31;

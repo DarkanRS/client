@@ -145,7 +145,7 @@ public class Class446 {
 				fontrenderer_3 = graphicalrenderer_2.createFont(fontmetrics_4, Class174.aClass91Array2132, true);
 				i_7 = fontmetrics_4.method6951(string_0, 250, (Sprite[]) null, (byte) 127);
 				i_8 = fontmetrics_4.method6972(string_0, 250, fontmetrics_4.anInt4975, (Sprite[]) null, 369575167);
-				int i_15 = Class174.aClass91_2138.anInt957;
+				int i_15 = Class174.aClass91_2138.width;
 				i_10 = i_15 + 4;
 				i_7 += i_10 * 2;
 				i_8 += i_10 * 2;
@@ -157,7 +157,7 @@ public class Class446 {
 				}
 				i_11 = Class174.aClass356_2139.method6221(i_7, client.anInt7439, 1961089623) + Class174.anInt2134;
 				int i_12 = Class174.aClass353_2140.method6198(i_8, client.anInt7312, 1070310069) + Class174.anInt2133;
-				graphicalrenderer_2.method8444(QuestIndexLoader.aClass91_2981, false).method2772(i_11 + Class174.aClass91_2141.anInt957, i_12 + Class174.aClass91_2141.anInt954, i_7 - Class174.aClass91_2141.anInt957 * 2, i_8 - Class174.aClass91_2141.anInt954 * 2, 1, 0, 0);
+				graphicalrenderer_2.method8444(QuestIndexLoader.aClass91_2981, false).method2772(i_11 + Class174.aClass91_2141.width, i_12 + Class174.aClass91_2141.height, i_7 - Class174.aClass91_2141.width * 2, i_8 - Class174.aClass91_2141.height * 2, 1, 0, 0);
 				graphicalrenderer_2.method8444(Class174.aClass91_2141, true).method2752(i_11, i_12);
 				Class174.aClass91_2141.method1525();
 				graphicalrenderer_2.method8444(Class174.aClass91_2141, true).method2752(i_7 + i_11 - i_15, i_12);
@@ -166,13 +166,13 @@ public class Class446 {
 				Class174.aClass91_2141.method1525();
 				graphicalrenderer_2.method8444(Class174.aClass91_2141, true).method2752(i_11, i_8 + i_12 - i_15);
 				Class174.aClass91_2141.method1526();
-				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11, i_12 + Class174.aClass91_2141.anInt954, i_15, i_8 - Class174.aClass91_2141.anInt954 * 2);
+				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11, i_12 + Class174.aClass91_2141.height, i_15, i_8 - Class174.aClass91_2141.height * 2);
 				Class174.aClass91_2138.method1527();
-				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + Class174.aClass91_2141.anInt957, i_12, i_7 - Class174.aClass91_2141.anInt957 * 2, i_15);
+				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + Class174.aClass91_2141.width, i_12, i_7 - Class174.aClass91_2141.width * 2, i_15);
 				Class174.aClass91_2138.method1527();
-				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + i_7 - i_15, i_12 + Class174.aClass91_2141.anInt954, i_15, i_8 - Class174.aClass91_2141.anInt954 * 2);
+				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + i_7 - i_15, i_12 + Class174.aClass91_2141.height, i_15, i_8 - Class174.aClass91_2141.height * 2);
 				Class174.aClass91_2138.method1527();
-				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + Class174.aClass91_2141.anInt957, i_8 + i_12 - i_15, i_7 - Class174.aClass91_2141.anInt957 * 2, i_15);
+				graphicalrenderer_2.method8444(Class174.aClass91_2138, true).method2756(i_11 + Class174.aClass91_2141.width, i_8 + i_12 - i_15, i_7 - Class174.aClass91_2141.width * 2, i_15);
 				Class174.aClass91_2138.method1527();
 				fontrenderer_3.method378(string_0, i_11 + i_10, i_12 + i_10, i_7 - i_10 * 2, i_8 - i_10 * 2, Class434.anInt5329 | ~0xffffff, -1, 1, 1, 0, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 36);
 				Class292.method5201(i_11, i_12, i_7, i_8);
