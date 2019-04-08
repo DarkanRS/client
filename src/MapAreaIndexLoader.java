@@ -1,4 +1,4 @@
-public class WorldMapIndexLoader {
+public class MapAreaIndexLoader {
 
 	static boolean[] INTERFACES_LOADED;
 	SoftCache aClass229_2707 = new SoftCache(128);
@@ -47,11 +47,11 @@ public class WorldMapIndexLoader {
 		}
 	}
 
-	public WorldMapAreaDefs getWorldMapDefs(int i_1, int i_2) {
+	public MapAreaDefinitions getWorldMapDefs(int i_1, int i_2) {
 		SoftCache softcache_4 = this.aClass229_2707;
-		WorldMapAreaDefs worldmapareadefs_3;
+		MapAreaDefinitions worldmapareadefs_3;
 		synchronized (this.aClass229_2707) {
-			worldmapareadefs_3 = (WorldMapAreaDefs) this.aClass229_2707.get((long) i_1);
+			worldmapareadefs_3 = (MapAreaDefinitions) this.aClass229_2707.get((long) i_1);
 		}
 
 		if (worldmapareadefs_3 != null) {
@@ -63,7 +63,7 @@ public class WorldMapIndexLoader {
 				bytes_10 = this.aClass317_2705.getFile(SharedConfigsType.WORLD_MAP_DEFS.id, i_1);
 			}
 
-			worldmapareadefs_3 = new WorldMapAreaDefs();
+			worldmapareadefs_3 = new MapAreaDefinitions();
 			worldmapareadefs_3.anInt2753 = i_1;
 			worldmapareadefs_3.aClass218_2716 = this;
 			if (bytes_10 != null) {
@@ -79,7 +79,7 @@ public class WorldMapIndexLoader {
 		}
 	}
 
-	public WorldMapIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+	public MapAreaIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_2705 = index_3;
 		this.aClass317_2703 = index_4;
 		this.aClass317_2705.filesCount(SharedConfigsType.WORLD_MAP_DEFS.id);

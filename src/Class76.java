@@ -73,7 +73,7 @@ public class Class76 {
 	}
 
 	public static void method1361(byte b_0) {
-		Class96.method1607((byte) 74);
+		CutsceneAction.method1607((byte) 74);
 		Class115.aClass160Array1248 = null;
 	}
 }

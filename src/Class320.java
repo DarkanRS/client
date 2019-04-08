@@ -5,7 +5,7 @@ public class Class320 {
 
 	public static Class253 aClass253_3723;
 
-	public static int[] anIntArray3724;
+	public static int[] VARC_INT;
 
 	static Class282_Sub25 aClass282_Sub25_3719 = new Class282_Sub25(0, 0);
 

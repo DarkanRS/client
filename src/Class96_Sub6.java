@@ -1,4 +1,4 @@
-public class Class96_Sub6 extends Class96 {
+public class Class96_Sub6 extends CutsceneAction {
 
 	static boolean aBool9173;
 

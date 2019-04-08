@@ -1,4 +1,4 @@
-public class Class96_Sub21 extends Class96 {
+public class Class96_Sub21 extends CutsceneAction {
 
 	public static Class199 keyRecorder;
 	int anInt9437;

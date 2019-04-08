@@ -55,11 +55,11 @@ public class PulseEvent extends CacheableNode {
 			int type = event.method14953();
 			long value = event.method14967();
 			if (type == 1) {
-				Class320.anIntArray3724[(int) value] = event.primary;
-				client.aBool7400 |= Class282_Sub17_Sub2.aBoolArray9934[(int) value];
+				Class320.VARC_INT[(int) value] = event.primary;
+				client.aBool7400 |= Class282_Sub17_Sub2.VARC_BOOL[(int) value];
 				client.anIntArray7150[++client.anInt7368 - 1 & 0x1f] = (int) value;
 			} else if (type == 2) {
-				Class462.aStringArray5548[(int) value] = event.string;
+				Class462.VARC_STRING[(int) value] = event.string;
 				client.anIntArray7387[++client.anInt7388 - 1 & 0x1f] = (int) value;
 			} else if (type == 3) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);

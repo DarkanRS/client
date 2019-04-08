@@ -102,15 +102,15 @@ public class Class122 {
 		DefaultsFile.aClass194_6967 = null;
 		Class251.aClass194_3103 = null;
 		Class521_Sub1_Sub5_Sub1.aClass194_10527 = null;
-		if (Class291_Sub1.aClass218_3456 != null) {
-			Class291_Sub1.aClass218_3456.method3699();
-			Class291_Sub1.aClass218_3456.method3697(128, 64, 1766469976);
+		if (Class291_Sub1.MAP_AREA_LOADER != null) {
+			Class291_Sub1.MAP_AREA_LOADER.method3699();
+			Class291_Sub1.MAP_AREA_LOADER.method3697(128, 64, 1766469976);
 		}
-		if (Class291_Sub1.aClass427_3457 != null) {
-			Class291_Sub1.aClass427_3457.method7175(64, 64, 1145501351);
+		if (Class291_Sub1.MAP_SPRITE_LOADER != null) {
+			Class291_Sub1.MAP_SPRITE_LOADER.method7175(64, 64, 1145501351);
 		}
-		if (Class291_Sub1.aClass474_3455 != null) {
-			Class291_Sub1.aClass474_3455.method7899(256);
+		if (Class291_Sub1.OBJECT_LOADER != null) {
+			Class291_Sub1.OBJECT_LOADER.method7899(256);
 		}
 		IndexLoaders.VARBIT_LOADER.method3906(64);
 	}

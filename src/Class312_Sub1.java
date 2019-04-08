@@ -1162,8 +1162,8 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			if (class282_sub36_1 == null) {
 				return null;
 			} else {
-				WorldMapAreaDefs worldmapareadefs_2 = Class291_Sub1.aClass218_3456.getWorldMapDefs(class282_sub36_1.anInt7991, 1419676338);
-				return worldmapareadefs_2 != null && worldmapareadefs_2.aBool2742 && worldmapareadefs_2.method3719(Class291_Sub1.anInterface42_3458, -305455176) ? class282_sub36_1 : Class540.method11595(1263609035);
+				MapAreaDefinitions worldmapareadefs_2 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_1.anInt7991, 1419676338);
+				return worldmapareadefs_2 != null && worldmapareadefs_2.aBool2742 && worldmapareadefs_2.method3719(Class291_Sub1.PLAYER_VAR_PROVIDER, -305455176) ? class282_sub36_1 : Class540.method11595(1263609035);
 			}
 		} else {
 			return null;

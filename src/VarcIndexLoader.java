@@ -2,7 +2,7 @@ public class VarcIndexLoader {
 
 	SoftCache aClass229_4850 = new SoftCache(64);
 	Index aClass317_4852;
-	public int anInt4851;
+	public int size;
 
 	public VarcDefinitions method6873(int i_1, byte b_2) {
 		SoftCache softcache_4 = this.aClass229_4850;
@@ -35,7 +35,7 @@ public class VarcIndexLoader {
 
 	public VarcIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_4852 = index_3;
-		this.anInt4851 = this.aClass317_4852.filesCount(SharedConfigsType.VARC.id);
+		this.size = this.aClass317_4852.filesCount(SharedConfigsType.VARC.id);
 	}
 
 }

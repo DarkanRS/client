@@ -54,7 +54,7 @@ public class IndexLoaders {
 	public static InventoriesIndexLoader INVENTORY_LOADER;
 	public static LightIntensityIndexLoader LIGHT_INTENSITY_LOADER;
 	public static ObjectIndexLoader OBJECT_LOADER;
-	public static WorldMapIndexLoader WORLD_MAP_LOADER;
+	public static MapAreaIndexLoader WORLD_MAP_LOADER;
 	public static MapSpriteIndexLoader MAP_SPRITE_LOADER;
 	public static NPCIndexLoader NPC_INDEX_LOADER;
 	public static ItemIndexLoader ITEM_LOADER;
@@ -276,7 +276,7 @@ public class IndexLoaders {
 			OBJECT_LOADER = new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX);
 			MAP_REGION_DECODER.setObjectIndexLoader(OBJECT_LOADER);
 			MAP_REGION_LOADER_THREAD.setObjectIndexLoader(new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX));
-			WORLD_MAP_LOADER = new WorldMapIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
+			WORLD_MAP_LOADER = new MapAreaIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			MAP_SPRITE_LOADER = new MapSpriteIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			NPC_INDEX_LOADER = new NPCIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, NPC_INDEX, MESH_INDEX);
 			ITEM_LOADER = new ItemIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, PARAM_LOADER, ITEM_INDEX, MESH_INDEX);
@@ -322,17 +322,17 @@ public class IndexLoaders {
 		}
 
 		if (LoadingStage.aClass387_4707 == LOADING_STAGE) {
-			Class320.anIntArray3724 = new int[VARC_LOADER.anInt4851];
-			Class282_Sub17_Sub2.aBoolArray9934 = new boolean[VARC_LOADER.anInt4851];
-			Class462.aStringArray5548 = new String[VARC_STRING_LOADER.size];
+			Class320.VARC_INT = new int[VARC_LOADER.size];
+			Class282_Sub17_Sub2.VARC_BOOL = new boolean[VARC_LOADER.size];
+			Class462.VARC_STRING = new String[VARC_STRING_LOADER.size];
 
-			for (i = 0; i < VARC_LOADER.anInt4851; i++) {
+			for (i = 0; i < VARC_LOADER.size; i++) {
 				if (VARC_LOADER.method6873(i, (byte) 124).anInt4983 == 0) {
-					Class282_Sub17_Sub2.aBoolArray9934[i] = true;
+					Class282_Sub17_Sub2.VARC_BOOL[i] = true;
 					++client.anInt7399;
 				}
 
-				Class320.anIntArray3724[i] = -1;
+				Class320.VARC_INT[i] = -1;
 			}
 
 			Class152.method2596();

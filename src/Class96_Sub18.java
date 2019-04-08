@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Class96_Sub18 extends Class96 {
+public class Class96_Sub18 extends CutsceneAction {
 
     int anInt9395;
 

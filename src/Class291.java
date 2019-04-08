@@ -18,13 +18,13 @@ public class Class291 {
 	static int[] anIntArray3466 = new int[1];
 	static byte[] aByteArray3467 = new byte[1];
 	protected static NodeCollection aClass482_3459 = new NodeCollection();
-	protected static Index aClass317_3460;
-	static OverlayIndexLoader aClass536_3482;
-	static UnderlayIndexLoader UNDERLAY_DEF_LOADER;
-	protected static ObjectIndexLoader aClass474_3455;
-	protected static WorldMapIndexLoader aClass218_3456;
-	protected static MapSpriteIndexLoader aClass427_3457;
-	protected static VarProvider anInterface42_3458;
+	protected static Index MAP_AREA_INDEX;
+	static OverlayIndexLoader OVERLAY_LOADER;
+	static UnderlayIndexLoader UNDERLAY_LOADER;
+	protected static ObjectIndexLoader OBJECT_LOADER;
+	protected static MapAreaIndexLoader MAP_AREA_LOADER;
+	protected static MapSpriteIndexLoader MAP_SPRITE_LOADER;
+	protected static VarProvider PLAYER_VAR_PROVIDER;
 	static byte[] underlayData;
 	static byte[] aByteArray3453;
 	static byte[] aByteArray3487;
@@ -44,20 +44,20 @@ public class Class291 {
 	protected static int anInt3476;
 	protected static int anInt3492;
 
-	public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, WorldMapIndexLoader worldmapindexloader_4, MapSpriteIndexLoader class427_5, VarProvider interface42_6) {
-		aClass317_3460 = index_0;
-		aClass536_3482 = class536_1;
-		UNDERLAY_DEF_LOADER = underlayindexloader_2;
-		aClass474_3455 = objectindexloader_3;
-		aClass218_3456 = worldmapindexloader_4;
-		aClass427_3457 = class427_5;
-		anInterface42_3458 = interface42_6;
+	public static void method5125(Index index_0, OverlayIndexLoader class536_1, UnderlayIndexLoader underlayindexloader_2, ObjectIndexLoader objectindexloader_3, MapAreaIndexLoader worldmapindexloader_4, MapSpriteIndexLoader class427_5, VarProvider interface42_6) {
+		MAP_AREA_INDEX = index_0;
+		OVERLAY_LOADER = class536_1;
+		UNDERLAY_LOADER = underlayindexloader_2;
+		OBJECT_LOADER = objectindexloader_3;
+		MAP_AREA_LOADER = worldmapindexloader_4;
+		MAP_SPRITE_LOADER = class427_5;
+		PLAYER_VAR_PROVIDER = interface42_6;
 		aClass465_3461.method7749(1876923510);
-		int i_7 = aClass317_3460.getArchiveId("details");
-		int[] ints_8 = aClass317_3460.getValidFileIds(i_7);
+		int i_7 = MAP_AREA_INDEX.getArchiveId("details");
+		int[] ints_8 = MAP_AREA_INDEX.getValidFileIds(i_7);
 		if (ints_8 != null) {
 			for (int i_9 = 0; i_9 < ints_8.length; i_9++) {
-				Class282_Sub50_Sub6 class282_sub50_sub6_10 = Class52.method1087(aClass317_3460, i_7, ints_8[i_9]);
+				Class282_Sub50_Sub6 class282_sub50_sub6_10 = Class52.method1087(MAP_AREA_INDEX, i_7, ints_8[i_9]);
 				aClass465_3461.put(class282_sub50_sub6_10, (long) class282_sub50_sub6_10.anInt9536);
 			}
 		}
@@ -72,7 +72,7 @@ public class Class291 {
 		anObjectArray3488 = new Object[xLength * yLength];
 		aByteArray3475 = new byte[xLength * yLength];
 		anArrayListArrayArrayArray3484 = new ArrayList[3][xLength >> 6][yLength >> 6];
-		anIntArray3481 = new int[aClass536_3482.anInt7094 + 1];
+		anIntArray3481 = new int[OVERLAY_LOADER.anInt7094 + 1];
 	}
 
 	public static Queue method5127(int i_0, int i_1) {
@@ -150,7 +150,7 @@ public class Class291 {
 								} else if ((i_7 + anInt3485 & 0x4) != (i_12 + anInt3486 & 0x4)) {
 									i_18 = -11840664;
 								} else {
-									i_18 = anIntArray3481[aClass536_3482.anInt7093 + 1];
+									i_18 = anIntArray3481[OVERLAY_LOADER.anInt7093 + 1];
 								}
 
 								if (i_18 == 0) {
@@ -185,7 +185,7 @@ public class Class291 {
 						} else if ((i_7 + anInt3485 & 0x4) != (i_12 + anInt3486 & 0x4)) {
 							i_16 = -11840664;
 						} else {
-							i_16 = anIntArray3481[aClass536_3482.anInt7093 + 1];
+							i_16 = anIntArray3481[OVERLAY_LOADER.anInt7093 + 1];
 						}
 
 						if (i_16 == 0) {
@@ -312,7 +312,7 @@ public class Class291 {
 	}
 
 	static void method5132(Interface22 interface22_0, int i_1, int i_2) {
-		for (int i_3 = 0; i_3 < aClass536_3482.anInt7094; i_3++) {
+		for (int i_3 = 0; i_3 < OVERLAY_LOADER.anInt7094; i_3++) {
 			anIntArray3481[i_3 + 1] = method5164(interface22_0, i_3, i_1, i_2);
 		}
 
@@ -338,10 +338,10 @@ public class Class291 {
 						Class282_Sub49 class282_sub49_14 = (Class282_Sub49) object_2;
 						if (class282_sub49_14 != null) {
 							for (int i_4 = 0; i_4 < class282_sub49_14.anIntArray8109.length; i_4++) {
-								ObjectDefinitions objectdefinitions_12 = aClass474_3455.getObjectDefinitions(class282_sub49_14.anIntArray8109[i_4]);
+								ObjectDefinitions objectdefinitions_12 = OBJECT_LOADER.getObjectDefinitions(class282_sub49_14.anIntArray8109[i_4]);
 								i_13 = objectdefinitions_12.mapIcon;
 								if (objectdefinitions_12.toObjectIds != null) {
-									objectdefinitions_12 = objectdefinitions_12.method8013(anInterface42_3458, (byte) -58);
+									objectdefinitions_12 = objectdefinitions_12.method8013(PLAYER_VAR_PROVIDER, (byte) -58);
 									if (objectdefinitions_12 != null) {
 										i_13 = objectdefinitions_12.mapIcon;
 									}
@@ -357,10 +357,10 @@ public class Class291 {
 						}
 					} else {
 						Integer integer_3 = (Integer) object_2;
-						ObjectDefinitions objectdefinitions_10 = aClass474_3455.getObjectDefinitions(integer_3.intValue());
+						ObjectDefinitions objectdefinitions_10 = OBJECT_LOADER.getObjectDefinitions(integer_3.intValue());
 						int i_5 = objectdefinitions_10.mapIcon;
 						if (objectdefinitions_10.toObjectIds != null) {
-							objectdefinitions_10 = objectdefinitions_10.method8013(anInterface42_3458, (byte) 19);
+							objectdefinitions_10 = objectdefinitions_10.method8013(PLAYER_VAR_PROVIDER, (byte) 19);
 							if (objectdefinitions_10 != null) {
 								i_5 = objectdefinitions_10.mapIcon;
 							}
@@ -395,10 +395,10 @@ public class Class291 {
 							} while (class269_18.anIntArray3313 == null);
 
 							for (i_13 = 0; i_13 < class269_18.anIntArray3313.length; i_13++) {
-								ObjectDefinitions objectdefinitions_16 = aClass474_3455.getObjectDefinitions(class269_18.anIntArray3313[i_13]);
+								ObjectDefinitions objectdefinitions_16 = OBJECT_LOADER.getObjectDefinitions(class269_18.anIntArray3313[i_13]);
 								int i_8 = objectdefinitions_16.mapIcon;
 								if (objectdefinitions_16.toObjectIds != null) {
-									objectdefinitions_16 = objectdefinitions_16.method8013(anInterface42_3458, (byte) -18);
+									objectdefinitions_16 = objectdefinitions_16.method8013(PLAYER_VAR_PROVIDER, (byte) -18);
 									if (objectdefinitions_16 != null) {
 										i_8 = objectdefinitions_16.mapIcon;
 									}
@@ -478,7 +478,7 @@ public class Class291 {
 			for (int i_13 = 0; i_13 < ints_8.length; i_13++) {
 				int i_14 = bytes_9[i_13] & 0x3f;
 				if (i_14 == SceneObjectType.WALL_STRAIGHT.type || i_14 == SceneObjectType.WALL_WHOLE_CORNER.type || i_14 == SceneObjectType.WALL_STRAIGHT_CORNER.type || i_14 == SceneObjectType.WALL_INTERACT.type) {
-					ObjectDefinitions objectdefinitions_15 = aClass474_3455.getObjectDefinitions(ints_8[i_13]);
+					ObjectDefinitions objectdefinitions_15 = OBJECT_LOADER.getObjectDefinitions(ints_8[i_13]);
 					if (objectdefinitions_15.mapSpriteId == -1) {
 						int i_16 = -3355444;
 						if (objectdefinitions_15.interactable == 1) {
@@ -559,7 +559,7 @@ public class Class291 {
 		class282_sub36_1.anInt7992 = anInt3492 - (0 + i_3 * (class282_sub36_1.anInt7993 - anInt3465) >> 16);
 	}
 
-	static void method5147(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2) {
+	static void method5147(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
 		if (worldmapareadefs_2.anIntArray2717 != null) {
 			int[] ints_3 = new int[worldmapareadefs_2.anIntArray2717.length];
 
@@ -721,7 +721,7 @@ public class Class291 {
 	}
 
 	static int method5164(Interface22 interface22_0, int i_1, int i_2, int i_3) {
-		OverlayDef overlaydef_4 = aClass536_3482.getOverlayDef(i_1);
+		OverlayDef overlaydef_4 = OVERLAY_LOADER.getOverlayDef(i_1);
 		if (overlaydef_4 == null) {
 			return 0;
 		} else {
@@ -769,10 +769,10 @@ public class Class291 {
 	static void renderObjectSprites(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int[] ints_5, byte[] bytes_6) {
 		if (ints_5 != null) {
 			for (int i_7 = 0; i_7 < ints_5.length; i_7++) {
-				ObjectDefinitions objectdefinitions_8 = aClass474_3455.getObjectDefinitions(ints_5[i_7]);
+				ObjectDefinitions objectdefinitions_8 = OBJECT_LOADER.getObjectDefinitions(ints_5[i_7]);
 				int i_9 = objectdefinitions_8.mapSpriteId;
 				if (i_9 != -1) {
-					MapSpriteDefinitions class418_10 = aClass427_3457.method7172(i_9);
+					MapSpriteDefinitions class418_10 = MAP_SPRITE_LOADER.method7172(i_9);
 					NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.adjustMapSceneRotation ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.flipMapSprite ? objectdefinitions_8.inverted : false, (byte) 70);
 					if (nativesprite_11 != null) {
 						int i_12 = i_3 * nativesprite_11.method228() >> 2;
@@ -831,7 +831,7 @@ public class Class291 {
 	}
 
 	static void method5183(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(aClass317_3460.getFileByName(aClass282_Sub50_Sub6_3491.aString9533, "area"));
+		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(MAP_AREA_INDEX.getFileByName(aClass282_Sub50_Sub6_3491.aString9533, "area"));
 		int i_4 = rsbytebuffer_3.readUnsignedByte();
 		int[] ints_5 = new int[i_4];
 
@@ -949,7 +949,7 @@ public class Class291 {
 				if (i_11 < xLength) {
 					i_14 = bytes_0[i_11 + i_13 * xLength] & 0xff;
 					if (i_14 > 0) {
-						underlaydef_26 = UNDERLAY_DEF_LOADER.getUnderlayDef(i_14 - 1);
+						underlaydef_26 = UNDERLAY_LOADER.getUnderlayDef(i_14 - 1);
 						ints_5[i_13] += underlaydef_26.r;
 						ints_6[i_13] += underlaydef_26.g;
 						ints_7[i_13] += underlaydef_26.b;
@@ -961,7 +961,7 @@ public class Class291 {
 				if (i_12 >= 0) {
 					i_14 = bytes_0[i_12 + i_13 * xLength] & 0xff;
 					if (i_14 > 0) {
-						underlaydef_26 = UNDERLAY_DEF_LOADER.getUnderlayDef(i_14 - 1);
+						underlaydef_26 = UNDERLAY_LOADER.getUnderlayDef(i_14 - 1);
 						ints_5[i_13] -= underlaydef_26.r;
 						ints_6[i_13] -= underlaydef_26.g;
 						ints_7[i_13] -= underlaydef_26.b;

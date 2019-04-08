@@ -155,9 +155,9 @@ public class Class190 {
 		LinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;
 
-		for (i_1 = 0; i_1 < Class320.anIntArray3724.length; i_1++) {
-			if (!Class282_Sub17_Sub2.aBoolArray9934[i_1]) {
-				Class320.anIntArray3724[i_1] = -1;
+		for (i_1 = 0; i_1 < Class320.VARC_INT.length; i_1++) {
+			if (!Class282_Sub17_Sub2.VARC_BOOL[i_1]) {
+				Class320.VARC_INT[i_1] = -1;
 			}
 		}
 

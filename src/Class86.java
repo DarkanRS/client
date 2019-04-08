@@ -6,7 +6,7 @@ public class Class86 {
 
 	static Class93[] aClass93Array821;
 
-	public static Class96[] aClass96Array822;
+	public static CutsceneAction[] aClass96Array822;
 
 	static short aShort828;
 

@@ -1,4 +1,4 @@
-public class Class96_Sub9 extends Class96 {
+public class Class96_Sub9 extends CutsceneAction {
 
     static AccountCreationResponseOpcodes RECIEVED_RESPONSE;
 

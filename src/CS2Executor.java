@@ -39,7 +39,7 @@ public class CS2Executor {
 	}
 
 	static final void method11251(String string_0) {
-		System.out.println("Error: " + Class96.method1609(string_0, "%0a", "\n"));
+		System.out.println("Error: " + CutsceneAction.method1609(string_0, "%0a", "\n"));
 	}
 
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {

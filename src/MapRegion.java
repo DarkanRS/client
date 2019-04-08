@@ -1339,7 +1339,7 @@ public class MapRegion {
 		return this.clipMaps[i_1];
 	}
 
-	static final boolean routeTo(int i_0, int i_1, boolean bool_2, RouteStrategy routestrategy_3, int i_4) {
+	static final boolean routeTo(int i_0, int i_1, boolean bool_2, RouteStrategy routestrategy_3) {
 		int i_5 = VertexNormal.myPlayer.regionBaseX[0];
 		int i_6 = VertexNormal.myPlayer.regionBaseY[0];
 		if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {

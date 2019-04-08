@@ -16,7 +16,7 @@ public class Class282_Sub39 extends Node {
 		Class20.aClass384_185.method6562(matrix44arr_0);
 	}
 
-	static void method13297(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2) {
+	static void method13297(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
 		NativeSprite nativesprite_4 = worldmapareadefs_2.method3729(graphicalrenderer_0);
 		if (nativesprite_4 != null) {
 			int i_5 = nativesprite_4.method2747();

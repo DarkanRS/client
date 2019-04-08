@@ -57,7 +57,7 @@ public class Class480 {
 	}
 
 	public static final void method8043(int i_0) {
-		String string_1 = Class445.aString5384 != null ? Class445.aString5384 : WorldMapAreaDefs.method3741();
+		String string_1 = Class445.aString5384 != null ? Class445.aString5384 : MapAreaDefinitions.method3741();
 		Class282_Sub50_Sub6.method14788(string_1, false, Class393.preferences.currentToolkit.getValue(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
 	}
 

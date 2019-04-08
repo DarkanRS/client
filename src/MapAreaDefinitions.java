@@ -1,6 +1,6 @@
-public class WorldMapAreaDefs {
+public class MapAreaDefinitions {
 
-    WorldMapIndexLoader aClass218_2716;
+    MapAreaIndexLoader aClass218_2716;
     public int anInt2753;
     public int anInt2719 = -1;
     public int anInt2757 = -1;
@@ -381,7 +381,7 @@ public class WorldMapAreaDefs {
         return "http://" + str_1 + "." + string_3 + "/l=" + Class223.CURRENT_LANGUAGE + "/a=" + client.anInt7149 + str_2 + "/";
     }
 
-    static boolean renderIconsAndNames(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2) {
+    static boolean renderIconsAndNames(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
         int i_6 = Integer.MAX_VALUE;
         int i_7 = Integer.MIN_VALUE;
         int i_8 = Integer.MAX_VALUE;

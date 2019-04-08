@@ -9,7 +9,7 @@ public class Class337 {
     }
 
     public static void unloadInterface(int i_0, int i_1) {
-        WorldMapIndexLoader.INTERFACES_LOADED[i_0] = false;
+        MapAreaIndexLoader.INTERFACES_LOADED[i_0] = false;
         HostNameIdentifier.clearComponents(i_0, -1495607995);
     }
 }

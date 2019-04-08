@@ -1,4 +1,4 @@
-public class Class96_Sub19 extends Class96 {
+public class ProjectileCutsceneAction extends CutsceneAction {
 
 	int anInt9403;
 
@@ -104,7 +104,7 @@ public class Class96_Sub19 extends Class96 {
 		return bool_3;
 	}
 
-	Class96_Sub19(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+	ProjectileCutsceneAction(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
 		super(rsbytebuffer_1);
 		int i_4;
 		if (i_2 == 0) {

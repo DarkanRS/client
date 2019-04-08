@@ -166,7 +166,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 								i_2 = client.cycles - client.anInt7357;
 								if (client.anInt7235 < Class86.aClass96Array822.length) {
 									do {
-										Class96 class96_3 = Class86.aClass96Array822[client.anInt7235];
+										CutsceneAction class96_3 = Class86.aClass96Array822[client.anInt7235];
 										if (class96_3.anInt992 > i_2) {
 											break;
 										}

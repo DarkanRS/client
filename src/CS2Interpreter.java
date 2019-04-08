@@ -3038,7 +3038,7 @@ public class CS2Interpreter {
 		if (bool) {
 			Class455.method7554(interface_5, icomponentdefinitions_4, 658695956);
 		} else {
-			WorldMapIndexLoader.method3710(interface_5, icomponentdefinitions_4);
+			MapAreaIndexLoader.method3710(interface_5, icomponentdefinitions_4);
 		}
 	}
 
@@ -3049,7 +3049,7 @@ public class CS2Interpreter {
 		if (bool) {
 			Class455.method7554(interface_5, icomponentdefinitions_4, 1019153265);
 		} else {
-			WorldMapIndexLoader.method3710(interface_5, icomponentdefinitions_4);
+			MapAreaIndexLoader.method3710(interface_5, icomponentdefinitions_4);
 		}
 
 	}
@@ -3137,7 +3137,7 @@ public class CS2Interpreter {
 
 	static final void method1255(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 676193293);
+		MapAreaDefinitions worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 676193293);
 		executor.intStack[++executor.intStackPtr - 1] = worldmapareadefs_3.anInt2719;
 	}
 
@@ -3541,7 +3541,7 @@ public class CS2Interpreter {
 
 	static final void method15616(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 461290146);
+		MapAreaDefinitions worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 461290146);
 		if (worldmapareadefs_3.areaName == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
@@ -3569,7 +3569,7 @@ public class CS2Interpreter {
 		}
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
-		String string_4 = WorldMapAreaDefs.method3741() + string_2;
+		String string_4 = MapAreaDefinitions.method3741() + string_2;
 		Class282_Sub50_Sub6.method14788(string_4, bool_3, Class393.preferences.currentToolkit.getValue(-1739196165) == 5, client.aBool7158, client.aBool7159, (byte) -52);
 	}
 
@@ -3623,9 +3623,9 @@ public class CS2Interpreter {
 
 	static final void storeVarc(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Class320.anIntArray3724[i_2] = executor.intStack[--executor.intStackPtr];
+		Class320.VARC_INT[i_2] = executor.intStack[--executor.intStackPtr];
 		Class282_Sub20_Sub11.method15264(i_2);
-		client.aBool7400 |= Class282_Sub17_Sub2.aBoolArray9934[i_2];
+		client.aBool7400 |= Class282_Sub17_Sub2.VARC_BOOL[i_2];
 	}
 
 	static final void method5099(CS2Executor executor) {
@@ -4029,7 +4029,7 @@ public class CS2Interpreter {
 
 	static final void storeVarcString(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Class462.aStringArray5548[i_2] = (String) executor.stringStack[--executor.stringStackPtr];
+		Class462.VARC_STRING[i_2] = (String) executor.stringStack[--executor.stringStackPtr];
 		Class282_Sub20_Sub10.method15263(i_2);
 	}
 
@@ -5014,7 +5014,7 @@ public class CS2Interpreter {
 
 	static final void method290(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 174714290);
+		MapAreaDefinitions worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 174714290);
 		executor.intStack[++executor.intStackPtr - 1] = worldmapareadefs_3.anInt2718;
 	}
 
@@ -5110,7 +5110,7 @@ public class CS2Interpreter {
 
 	static final void method3755(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldMapAreaDefs worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 262031096);
+		MapAreaDefinitions worldmapareadefs_3 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 262031096);
 		executor.intStack[++executor.intStackPtr - 1] = worldmapareadefs_3.anInt2722;
 	}
 
@@ -5141,7 +5141,7 @@ public class CS2Interpreter {
 	}
 
 	static final void loadVarc(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class320.anIntArray3724[executor.intOpValues[executor.instrPtr]];
+		executor.intStack[++executor.intStackPtr - 1] = Class320.VARC_INT[executor.intOpValues[executor.instrPtr]];
 	}
 
 	static final void method6776(CS2Executor executor) {
@@ -5484,7 +5484,7 @@ public class CS2Interpreter {
 
 	static final void method4181(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class96_Sub19.method14665(string_2);
+		ProjectileCutsceneAction.method14665(string_2);
 	}
 
 	static final void method6071(CS2Executor executor) {
@@ -5808,7 +5808,7 @@ public class CS2Interpreter {
 	}
 
 	static final void loadVarcString(CS2Executor executor) {
-		String string_2 = Class462.aStringArray5548[executor.intOpValues[executor.instrPtr]];
+		String string_2 = Class462.VARC_STRING[executor.intOpValues[executor.instrPtr]];
 		if (string_2 == null) {
 			string_2 = "";
 		}
@@ -6018,7 +6018,7 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr];
 		int i_4 = executor.intStack[executor.intStackPtr + 1];
 		String string_5 = (String) executor.stringStack[executor.stringStackPtr + 1];
-		Class96_Sub19.method14666(string_2, i_3 == 1, i_4, string_5);
+		ProjectileCutsceneAction.method14666(string_2, i_3 == 1, i_4, string_5);
 		executor.intStack[++executor.intStackPtr - 1] = VarcDefinitions.anInt4985;
 	}
 
@@ -8982,7 +8982,7 @@ public class CS2Interpreter {
 	static final void method8206(CS2Executor executor) {
 		executor.intStackPtr -= 12;
 		Class316.method5594();
-		Class96.method1607((byte) 35);
+		CutsceneAction.method1607((byte) 35);
 		Class282_Sub20_Sub9.anInt9792 = executor.intStack[executor.intStackPtr];
 		Class301.anInt3556 = executor.intStack[executor.intStackPtr + 1];
 		Class20.anInt188 = executor.intStack[executor.intStackPtr + 2];
@@ -11266,7 +11266,7 @@ public class CS2Interpreter {
 		int i_6 = cs2executor_4.intStack[cs2executor_4.intStackPtr];
 		int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class411.method6914(icomponentdefinitions_0.idHash);
+			CutsceneActionType.method6914(icomponentdefinitions_0.idHash);
 			Class106.method1818(icomponentdefinitions_0.idHash, 209948825);
 			Item.method12575(icomponentdefinitions_0.idHash, (byte) 59);
 		}

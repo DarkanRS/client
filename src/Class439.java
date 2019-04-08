@@ -38,7 +38,7 @@ public final class Class439 {
 			routestrategy_8 = JS5CacheFile.method3354(i_0, i_1, i_10, i_11, SceneObjectType.WALL_STRAIGHT, 0);
 		}
 
-		MapRegion.routeTo(i_0, i_1, true, routestrategy_8, 2130368133);
+		MapRegion.routeTo(i_0, i_1, true, routestrategy_8);
 	}
 
 }

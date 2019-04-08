@@ -221,7 +221,7 @@ public class LoadingStage {
 					i_14 = Class96_Sub9.anInt9282 * 5;
 				}
 				for (Class282_Sub36 class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 9); class282_sub36_15 != null; class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
-					WorldMapAreaDefs worldmapareadefs_16 = Class291_Sub1.aClass218_3456.getWorldMapDefs(class282_sub36_15.anInt7991, 1043671083);
+					MapAreaDefinitions worldmapareadefs_16 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_15.anInt7991, 1043671083);
 					if (Class282_Sub16.method12248(worldmapareadefs_16, -2066566460)) {
 						int i_17;
 						int i_18;
@@ -311,7 +311,7 @@ public class LoadingStage {
 				Class86.aClass93Array821[i_9] = new Class93(buffer);
 			}
 			i_9 = buffer.readUnsignedSmart();
-			Class86.aClass96Array822 = new Class96[i_9];
+			Class86.aClass96Array822 = new CutsceneAction[i_9];
 			for (int i_10 = 0; i_10 < i_9; i_10++) {
 				Class86.aClass96Array822[i_10] = Class16.method562(buffer);
 			}
@@ -326,9 +326,9 @@ public class LoadingStage {
 					bool_11 = false;
 				}
 			}
-			Class96[] arr_12 = Class86.aClass96Array822;
+			CutsceneAction[] arr_12 = Class86.aClass96Array822;
 			for (int i_5 = 0; i_5 < arr_12.length; i_5++) {
-				Class96 class96_15 = arr_12[i_5];
+				CutsceneAction class96_15 = arr_12[i_5];
 				if (!class96_15.method1599()) {
 					bool_11 = false;
 				}

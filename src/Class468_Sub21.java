@@ -50,10 +50,10 @@ public class Class468_Sub21 extends Preference {
 	public static void method12869(boolean bool_0, int i_1) {
 		if (client.anInt7341 != 2 && client.anInt7341 != 1) {
 			if (!bool_0) {
-				Class96[] arr_2 = Class86.aClass96Array822;
+				CutsceneAction[] arr_2 = Class86.aClass96Array822;
 
 				for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-					Class96 class96_4 = arr_2[i_3];
+					CutsceneAction class96_4 = arr_2[i_3];
 					class96_4.method1593();
 				}
 			}

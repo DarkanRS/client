@@ -37,7 +37,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 		}
 	}
 
-	static void renderAreaText(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, WorldMapAreaDefs worldmapareadefs_2, int i_3, int i_4, int i_5, int i_6, Class194 class194_7) {
+	static void renderAreaText(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2, int i_3, int i_4, int i_5, int i_6, Class194 class194_7) {
 		int i_9 = i_4 - i_6 / 2 - 5;
 		int i_10 = i_5 + 2;
 		if (worldmapareadefs_2.anInt2726 != 0) {

@@ -1,4 +1,4 @@
-public class Class96_Sub2 extends Class96 {
+public class Class96_Sub2 extends CutsceneAction {
 
 	int anInt8504;
 

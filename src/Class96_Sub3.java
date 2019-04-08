@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 
-public class Class96_Sub3 extends Class96 {
+public class Class96_Sub3 extends CutsceneAction {
 
 	static int anInt8518;
 

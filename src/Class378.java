@@ -180,7 +180,7 @@ public class Class378 {
 		IndexLoaders.CURSOR_LOADER.method7326();
 		IndexLoaders.HITSPLAT_LOADER.method3602();
 		IndexLoaders.HITBAR_LOADER.method5107();
-		WorldMapIndexLoader.method3709();
+		MapAreaIndexLoader.method3709();
 		Class439.method7343();
 		Class487.aClass378_5752.method6411();
 		Class332.method5927();

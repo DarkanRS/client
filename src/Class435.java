@@ -62,7 +62,7 @@ public class Class435 {
 			TextureDetails.time();
 			TextureDetails.time();
 			if (Class291_Sub1.anInt8015 < 10) {
-				if (!Class291_Sub1.aClass317_3460.method5629(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533)) {
+				if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533)) {
 					Class291_Sub1.anInt8015 = IndexLoaders.WORLD_MAP_INDEX.method5631(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533, (byte) 95) / 10;
 					return;
 				}
@@ -151,9 +151,9 @@ public class Class435 {
 				}
 
 				Class291_Sub1.method5132(interface22_1, Class291_Sub1.anInt3454 >> 2 << 10, Class291_Sub1.anInt3463 >> 1);
-				Class291_Sub1.aClass218_3456.method3697(1024, 256, 2137741394);
-				Class291_Sub1.aClass427_3457.method7175(256, 256, 993879963);
-				Class291_Sub1.aClass474_3455.method7899(4096);
+				Class291_Sub1.MAP_AREA_LOADER.method3697(1024, 256, 2137741394);
+				Class291_Sub1.MAP_SPRITE_LOADER.method7175(256, 256, 993879963);
+				Class291_Sub1.OBJECT_LOADER.method7899(4096);
 				IndexLoaders.VARBIT_LOADER.method3906(256);
 				Class291_Sub1.anInt8015 = 20;
 			} else if (Class291_Sub1.anInt8015 == 20) {
@@ -163,12 +163,12 @@ public class Class435 {
 				Exception_Sub3.method15619(true, 771628468);
 				Class282_Sub15_Sub1.method14840((byte) -59);
 			} else if (Class291_Sub1.anInt8015 == 60) {
-				if (Class291_Sub1.aClass317_3460.validFile(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533 + "_staticelements")) {
-					if (!Class291_Sub1.aClass317_3460.method5629(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533 + "_staticelements")) {
+				if (Class291_Sub1.MAP_AREA_INDEX.validFile(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533 + "_staticelements")) {
+					if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533 + "_staticelements")) {
 						return;
 					}
 
-					Class291_Sub1.aClass283_3470 = Class301.method5331(Class291_Sub1.aClass317_3460, Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533 + "_staticelements", client.membersWorld);
+					Class291_Sub1.aClass283_3470 = Class301.method5331(Class291_Sub1.MAP_AREA_INDEX, Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533 + "_staticelements", client.membersWorld);
 				} else {
 					Class291_Sub1.aClass283_3470 = new Class283(0);
 				}

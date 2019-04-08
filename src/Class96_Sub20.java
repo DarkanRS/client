@@ -1,4 +1,4 @@
-public class Class96_Sub20 extends Class96 {
+public class Class96_Sub20 extends CutsceneAction {
 
 	static RsByteBuffer WORLD_LIST_BUFFER;
 

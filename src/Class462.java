@@ -1,6 +1,6 @@
 public class Class462 {
 
-	public static String[] aStringArray5548;
+	public static String[] VARC_STRING;
 
 	int anInt5542;
 

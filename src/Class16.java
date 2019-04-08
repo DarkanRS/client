@@ -1,127 +1,116 @@
 public class Class16 {
 
 	static int anInt135;
-
 	static int anInt136;
-
 	static int anInt137;
-
 	static NativeSprite[] aClass160Array138;
-
 	public static FontMetrics aClass414_139;
-
 	static int p11FullIndex;
-
 	static int anInt141;
-
 	static int anInt142;
-
 	static int anInt143;
-
 	public static FontRenderer aClass8_144;
-
 	static NativeSprite[] aClass160Array145;
-
 	static NativeSprite aClass160_146;
 
 	Class16() throws Throwable {
 		throw new Error();
 	}
 
-	static Class96 method562(RsByteBuffer rsbytebuffer_0) {
-		int i_2 = rsbytebuffer_0.readUnsignedByte();
-		Class411 class411_3 = Class346.method6156(i_2);
-		Object obj_4 = null;
-		switch (class411_3.anInt4956) {
+	static CutsceneAction method562(RsByteBuffer buffer) {
+		int i_2 = buffer.readUnsignedByte();
+		CutsceneActionType type = Class346.method6156(i_2);
+		Object action = null;
+		switch (type.id) {
 		case 0:
-			obj_4 = new Class96_Sub15(rsbytebuffer_0);
+			action = new Class96_Sub15(buffer);
 			break;
 		case 1:
-			obj_4 = new Class96_Sub20(rsbytebuffer_0);
+			action = new Class96_Sub20(buffer);
 			break;
 		case 2:
-			obj_4 = new Class96_Sub14(rsbytebuffer_0);
+			action = new Class96_Sub14(buffer);
 		case 3:
 		case 7:
 		case 21:
 		default:
 			break;
 		case 4:
-			obj_4 = new Class96_Sub4(rsbytebuffer_0);
+			action = new Class96_Sub4(buffer);
 			break;
 		case 5:
-			obj_4 = new Class96_Sub21(rsbytebuffer_0);
+			action = new Class96_Sub21(buffer);
 			break;
 		case 6:
-			obj_4 = new Class96_Sub8(rsbytebuffer_0);
+			action = new Class96_Sub8(buffer);
 			break;
 		case 8:
-			obj_4 = new Class96_Sub5(rsbytebuffer_0);
+			action = new Class96_Sub5(buffer);
 			break;
 		case 9:
-			obj_4 = new Class96_Sub22(rsbytebuffer_0);
+			action = new Class96_Sub22(buffer);
 			break;
 		case 10:
-			obj_4 = new Class96_Sub16(rsbytebuffer_0, false);
+			action = new Class96_Sub16(buffer, false);
 			break;
 		case 11:
-			obj_4 = new Class96_Sub11(rsbytebuffer_0);
+			action = new Class96_Sub11(buffer);
 			break;
 		case 12:
-			obj_4 = new Class96_Sub7(rsbytebuffer_0);
+			action = new Class96_Sub7(buffer);
 			break;
 		case 13:
-			obj_4 = new Class96_Sub3(rsbytebuffer_0);
+			action = new Class96_Sub3(buffer);
 			break;
 		case 14:
-			obj_4 = new Class96_Sub10_Sub2(rsbytebuffer_0);
+			action = new Class96_Sub10_Sub2(buffer);
 			break;
 		case 15:
-			obj_4 = new Class96_Sub19(rsbytebuffer_0, 0, 0);
+			action = new ProjectileCutsceneAction(buffer, 0, 0);
 			break;
 		case 16:
-			obj_4 = new Class96_Sub1(rsbytebuffer_0);
+			action = new Class96_Sub1(buffer);
 			break;
 		case 17:
-			obj_4 = new Class96_Sub17(rsbytebuffer_0);
+			action = new Class96_Sub17(buffer);
 			break;
 		case 18:
-			obj_4 = new Class96_Sub9(rsbytebuffer_0);
+			action = new Class96_Sub9(buffer);
 			break;
 		case 19:
-			obj_4 = new Class96_Sub19(rsbytebuffer_0, 1, 0);
+			action = new ProjectileCutsceneAction(buffer, 1, 0);
 			break;
 		case 20:
-			obj_4 = new Class96_Sub6(rsbytebuffer_0);
+			action = new Class96_Sub6(buffer);
 			break;
 		case 22:
-			obj_4 = new Class96_Sub12(rsbytebuffer_0);
+			action = new Class96_Sub12(buffer);
 			break;
 		case 23:
-			obj_4 = new Class96_Sub13(rsbytebuffer_0);
+			action = new Class96_Sub13(buffer);
 			break;
 		case 24:
-			obj_4 = new Class96_Sub19(rsbytebuffer_0, 0, 1);
+			action = new ProjectileCutsceneAction(buffer, 0, 1);
 			break;
 		case 25:
-			obj_4 = new Class96_Sub10_Sub1(rsbytebuffer_0);
+			action = new Class96_Sub10_Sub1(buffer);
 			break;
 		case 26:
-			obj_4 = new Class96_Sub18(rsbytebuffer_0);
+			action = new Class96_Sub18(buffer);
 			break;
 		case 27:
-			obj_4 = new Class96_Sub16(rsbytebuffer_0, true);
+			action = new Class96_Sub16(buffer, true);
 			break;
 		case 28:
-			obj_4 = new Class96_Sub19(rsbytebuffer_0, 1, 1);
+			action = new ProjectileCutsceneAction(buffer, 1, 1);
 			break;
 		case 29:
-			obj_4 = new Class96_Sub2(rsbytebuffer_0);
+			action = new Class96_Sub2(buffer);
 			break;
 		case 30:
-			obj_4 = new Class96_Sub23(rsbytebuffer_0);
+			action = new Class96_Sub23(buffer);
 		}
-		return (Class96) obj_4;
+		return (CutsceneAction) action;
 	}
 
 	public static void method566(int i_0) {

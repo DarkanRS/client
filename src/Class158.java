@@ -43,7 +43,7 @@ public abstract class Class158 {
     }
 
     static void method2731(GraphicalRenderer graphicalrenderer_0, Class455 class455_1, IComponentDefinitions icomponentdefinitions_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
-        WorldMapAreaDefs worldmapareadefs_9 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_7, 2092552415);
+        MapAreaDefinitions worldmapareadefs_9 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_7, 2092552415);
         if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.method3719(Class158_Sub1.PLAYER_VAR_PROVIDER, -1138810540)) {
             int i_11;
             if (worldmapareadefs_9.anIntArray2717 != null) {

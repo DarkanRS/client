@@ -542,7 +542,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 														i_41 = (int) vector3_26.x - (npc_40.definitions.size - 1 << 8);
 														i_28 = (int) vector3_26.z - (npc_40.definitions.size - 1 << 8);
 														if (i_41 >= i_21 && npc_40.definitions.size <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.size <= player_58.getSize() - (i_28 - i_22 >> 9)) {
-															WorldMapAreaDefs.method3736(npc_40, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1752430415);
+															MapAreaDefinitions.method3736(npc_40, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1752430415);
 															npc_40.anInt10375 = client.cycles;
 														}
 													}
@@ -596,7 +596,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 													i_42 = (int) vector3_66.x - (npc_54.definitions.size - 1 << 8);
 													i_41 = (int) vector3_66.z - (npc_54.definitions.size - 1 << 8);
 													if (i_42 >= i_50 && npc_54.definitions.size <= npc_59.definitions.size - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.size <= npc_59.definitions.size - (i_41 - i_21 >> 9)) {
-														WorldMapAreaDefs.method3736(npc_54, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1644654446);
+														MapAreaDefinitions.method3736(npc_54, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1644654446);
 														npc_54.anInt10375 = client.cycles;
 													}
 												}
@@ -621,7 +621,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 									}
 
 									if (npc_59.anInt10375 != client.cycles) {
-										WorldMapAreaDefs.method3736(npc_59, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1776503457);
+										MapAreaDefinitions.method3736(npc_59, class285_34.aClass521_Sub1_3391.plane != VertexNormal.myPlayer.plane, 1776503457);
 										npc_59.anInt10375 = client.cycles;
 										break;
 									}

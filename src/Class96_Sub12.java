@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class Class96_Sub12 extends Class96 {
+public class Class96_Sub12 extends CutsceneAction {
 
 	static int anInt9319;
 

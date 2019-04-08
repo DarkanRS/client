@@ -364,7 +364,7 @@ public class Class289 implements Runnable {
 											if (i_26 >= 0) {
 												boolean bool_50 = false;
 												if (i_26 >= 0) {
-													WorldMapAreaDefs worldmapareadefs_51 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_26, 537535478);
+													MapAreaDefinitions worldmapareadefs_51 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_26, 537535478);
 													if (worldmapareadefs_51 != null && worldmapareadefs_51.aBool2730) {
 														bool_50 = true;
 													}
@@ -414,7 +414,7 @@ public class Class289 implements Runnable {
 								if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4) {
 									Class187.aClass482_2350.append(new Class282_Sub38(i_23));
 								} else {
-									WorldMapAreaDefs worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23], 1792768149);
+									MapAreaDefinitions worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23], 1792768149);
 									if (worldmapareadefs_46.anIntArray2717 != null && i_25 + worldmapareadefs_46.anInt2731 >= 0 && i_25 + worldmapareadefs_46.anInt2747 < i_3 && i_26 + worldmapareadefs_46.anInt2746 >= 0 && i_26 + worldmapareadefs_46.anInt2744 < i_4) {
 										Class187.aClass482_2350.append(new Class282_Sub38(i_23));
 									}

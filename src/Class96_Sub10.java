@@ -1,4 +1,4 @@
-public abstract class Class96_Sub10 extends Class96 {
+public abstract class Class96_Sub10 extends CutsceneAction {
 
     int anInt9296;
 

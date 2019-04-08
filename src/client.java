@@ -1610,7 +1610,7 @@ public final class client extends Engine {
 				return null;
 			} else {
 				for (int i_3 = 0; i_3 < i_2; i_3++) {
-					icomponentdefinitions_0 = Class96_Sub23.method14682(Class96.method1605(icomponentdefinitions_0.idHash), icomponentdefinitions_0);
+					icomponentdefinitions_0 = Class96_Sub23.method14682(CutsceneAction.method1605(icomponentdefinitions_0.idHash), icomponentdefinitions_0);
 					if (icomponentdefinitions_0 == null) {
 						return Class221.aClass118_2763;
 					}
@@ -3358,11 +3358,11 @@ public final class client extends Engine {
 
 	static final void method12073(int i_0, int i_1, int i_2) {
 		if (Game.stellarDawn != CURRENT_GAME) {
-			if (!MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1, -1423689712), 928803696)) {
-				MapRegion.routeTo(i_0, i_1, false, Class344.method6115(i_0, i_1, 1, 1), 1252373974);
+			if (!MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1))) {
+				MapRegion.routeTo(i_0, i_1, false, Class344.method6115(i_0, i_1, 1, 1));
 			}
-		} else if (!MapRegion.routeTo(i_0, i_1, false, Class344.method6115(i_0, i_1, 1, 1), 1016386097)) {
-			MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1, -1013496612), 1340706039);
+		} else if (!MapRegion.routeTo(i_0, i_1, false, Class344.method6115(i_0, i_1, 1, 1))) {
+			MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1));
 		}
 
 	}

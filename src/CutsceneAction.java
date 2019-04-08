@@ -1,4 +1,4 @@
-public abstract class Class96 {
+public abstract class CutsceneAction {
 
 	public int anInt992;
 
@@ -7,7 +7,7 @@ public abstract class Class96 {
 	void method1593() {
 	}
 
-	Class96(RsByteBuffer rsbytebuffer_1) {
+	CutsceneAction(RsByteBuffer rsbytebuffer_1) {
 		this.anInt992 = rsbytebuffer_1.readUnsignedShort();
 	}
 

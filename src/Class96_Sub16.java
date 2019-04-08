@@ -1,4 +1,4 @@
-public class Class96_Sub16 extends Class96 {
+public class Class96_Sub16 extends CutsceneAction {
 
 	long aLong9382;
 

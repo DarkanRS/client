@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.RandomAccessFile;
 
-public class Class96_Sub23 extends Class96 {
+public class Class96_Sub23 extends CutsceneAction {
 
 	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_9445;
 	int anInt9443;

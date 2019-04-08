@@ -1,7 +1,7 @@
 public class Class282_Sub17_Sub2 extends Class282_Sub17 {
 
 	static FontMetrics aClass414_9933;
-	public static boolean[] aBoolArray9934;
+	public static boolean[] VARC_BOOL;
 	int anInt9932;
 	Class348 this$0;
 

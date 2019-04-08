@@ -137,11 +137,11 @@ public class Class346 {
         }
     }
 
-    public static Class411 method6156(int i_0) {
-        Class411[] arr_2 = HashTableIterator.method7519();
-        Class411[] arr_3 = arr_2;
+    public static CutsceneActionType method6156(int i_0) {
+        CutsceneActionType[] arr_2 = HashTableIterator.method7519();
+        CutsceneActionType[] arr_3 = arr_2;
         for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
-            Class411 class411_5 = arr_3[i_4];
+            CutsceneActionType class411_5 = arr_3[i_4];
             if (i_0 == class411_5.anInt4957) {
                 return class411_5;
             }

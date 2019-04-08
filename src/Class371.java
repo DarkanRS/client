@@ -94,7 +94,7 @@ public class Class371 {
 		}
 	}
 
-	public static RouteStrategy method6352(int i_0, int i_1, int i_4) {
+	public static RouteStrategy method6352(int i_0, int i_1) {
 		Class224.aClass225_Sub6_2774.approxDestinationX = i_0;
 		Class224.aClass225_Sub6_2774.approxDestinationY = i_1;
 		Class224.aClass225_Sub6_2774.approxDestinationSizeX = 1;

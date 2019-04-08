@@ -36,14 +36,14 @@ public class MovingAnimation extends Animation {
 	}
 
 	public static boolean isInterfaceLoaded(int interfaceId, int[] xteas, int i_2) {
-		if (WorldMapIndexLoader.INTERFACES_LOADED[interfaceId]) {
+		if (MapAreaIndexLoader.INTERFACES_LOADED[interfaceId]) {
 			return true;
 		} else {
 			Class468_Sub8.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, Class468_Sub8.INTERFACES[interfaceId], false, (byte) -15);
 			if (Class468_Sub8.INTERFACES[interfaceId] == null) {
 				return false;
 			} else {
-				WorldMapIndexLoader.INTERFACES_LOADED[interfaceId] = true;
+				MapAreaIndexLoader.INTERFACES_LOADED[interfaceId] = true;
 				return true;
 			}
 		}

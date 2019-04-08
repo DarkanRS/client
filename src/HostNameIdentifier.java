@@ -20,7 +20,7 @@ public class HostNameIdentifier implements Runnable {
 	}
 
 	public static void clearComponents(int i_0, int i_1) {
-		if (i_0 != -1 && !WorldMapIndexLoader.INTERFACES_LOADED[i_0]) {
+		if (i_0 != -1 && !MapAreaIndexLoader.INTERFACES_LOADED[i_0]) {
 			Class388.INTERFACE_INDEX.clearFiles(i_0);
 			Class468_Sub8.INTERFACES[i_0] = null;
 		}
