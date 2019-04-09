@@ -52,7 +52,7 @@ public class Class468_Sub11 extends Preference {
 			int i_6 = i_1 - Class291_Sub1.anInt3472;
 			int i_7 = i_2 - Class291_Sub1.anInt3473;
 
-			for (Class282_Sub36 class282_sub36_8 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 56); class282_sub36_8 != null; class282_sub36_8 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(317938751)) {
+			for (Class282_Sub36 class282_sub36_8 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head(); class282_sub36_8 != null; class282_sub36_8 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(317938751)) {
 				if (i_0 == class282_sub36_8.anInt7991) {
 					int i_9 = class282_sub36_8.anInt7987;
 					int i_10 = class282_sub36_8.anInt7993;

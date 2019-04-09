@@ -32,7 +32,7 @@ public class Class119 {
 
 	public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
 		if (client.gameState == 3) {
-			TCPPacket tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4628, client.connectionContext.isaac, 94516093);
+			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.SEND_SIGN_UP_FORM, client.connectionContext.isaac);
 			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_0);
@@ -63,24 +63,24 @@ public class Class119 {
 			if (player_7 != null && player_7 != VertexNormal.myPlayer && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
 				OutgoingPacket outgoingpacket_8 = null;
 				if (i_0 == 1) {
-					outgoingpacket_8 = OutgoingPacket.aClass379_4539;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_1;
 				} else if (i_0 == 4) {
-					outgoingpacket_8 = OutgoingPacket.aClass379_4616;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_4;
 				} else if (i_0 == 5) {
-					outgoingpacket_8 = OutgoingPacket.aClass379_4610;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_5;
 				} else if (i_0 == 6) {
-					outgoingpacket_8 = OutgoingPacket.aClass379_4528;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_6;
 				} else if (i_0 == 7) {
-					outgoingpacket_8 = OutgoingPacket.aClass379_4594;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_7;
 				} else if (i_0 == 9) {
-					outgoingpacket_8 = OutgoingPacket.aClass379_4580;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_9;
 				}
 
 				if (outgoingpacket_8 != null) {
-					TCPPacket tcpmessage_9 = Class271.method4828(outgoingpacket_8, client.aClass184_7475.isaac, -147657643);
+					TCPPacket tcpmessage_9 = Class271.createPacket(outgoingpacket_8, client.outputContext.isaac);
 					tcpmessage_9.buffer.writeShort(ints_4[i_6]);
 					tcpmessage_9.buffer.write128Byte(0, 1653548844);
-					client.aClass184_7475.queuePacket(tcpmessage_9);
+					client.outputContext.queuePacket(tcpmessage_9);
 				}
 
 				bool_5 = true;
@@ -95,14 +95,14 @@ public class Class119 {
 	}
 
 	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4601, client.aClass184_7475.isaac, -3887603);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.ICOMPONENT_DRAG_ONTO_ICOMPONENT, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
 		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288, (short) -28348);
 		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 		tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);
 		tcpmessage_3.buffer.writeLEInt(icomponentdefinitions_1.idHash, (byte) 77);
-		client.aClass184_7475.queuePacket(tcpmessage_3);
+		client.outputContext.queuePacket(tcpmessage_3);
 	}
 
 	public static void method2077(int i_0) {

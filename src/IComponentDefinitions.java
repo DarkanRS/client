@@ -360,7 +360,7 @@ public class IComponentDefinitions {
 		this.anInt1382 = rsbytebuffer_1.readUnsignedByte();
 		this.aString1338 = rsbytebuffer_1.readString();
 		i_10 = -1;
-		if (Class96_Sub6.getUseOptionFlags(i_5) != 0) {
+		if (IComponentSettings.getUseOptionFlags(i_5) != 0) {
 			i_10 = rsbytebuffer_1.readUnsignedShort();
 			if (i_10 == 65535) {
 				i_10 = -1;

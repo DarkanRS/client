@@ -11,7 +11,7 @@ public class Class190 {
 
 		try {
 			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, true);
-			RsByteBuffer rsbytebuffer_2 = Class393.preferences.method13499();
+			RsByteBuffer rsbytebuffer_2 = Class393.preferences.encode();
 			class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index, -1686459180);
 		} catch (Exception exception_4) {
 			;
@@ -206,7 +206,7 @@ public class Class190 {
 		client.anInt7221 = 0;
 		Class350.method6189((byte) 111);
 		Class388.method6692(2043592347);
-		Class496.aClass510_5816 = null;
+		PingRequest.CURRENT_REQUEST = null;
 		Class28.aLong351 = 0L;
 	}
 

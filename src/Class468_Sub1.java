@@ -97,8 +97,8 @@ public class Class468_Sub1 extends Preference {
 		} else if (i_2 == 7) {
 			return world1.isMembers() ? (world2.isMembers() ? 0 : 1) : (world2.isMembers() ? -1 : 0);
 		} else if (i_2 == 8) {
-			i_5 = world1.anInt7978;
-			i_6 = world2.anInt7978;
+			i_5 = world1.ping;
+			i_6 = world2.ping;
 			if (bool_3) {
 				if (i_5 == 1000) {
 					i_5 = -1;

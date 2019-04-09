@@ -14,7 +14,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 	NodeCollection aClass482_9537;
 
 	public boolean method14775(int i_1, int i_2, int[] ints_3, int i_4) {
-		for (Class282_Sub28 class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.head((byte) 104); class282_sub28_5 != null; class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.next(756655030)) {
+		for (Class282_Sub28 class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.head(); class282_sub28_5 != null; class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.next(756655030)) {
 			if (class282_sub28_5.method12409(i_1, i_2)) {
 				class282_sub28_5.method12410(i_1, i_2, ints_3);
 				return true;
@@ -41,7 +41,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 	}
 
 	public boolean method14777(int i_1, int i_2, int[] ints_3, int i_4) {
-		for (Class282_Sub28 class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.head((byte) 72); class282_sub28_5 != null; class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.next(1143191300)) {
+		for (Class282_Sub28 class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.head(); class282_sub28_5 != null; class282_sub28_5 = (Class282_Sub28) this.aClass482_9537.next(1143191300)) {
 			if (class282_sub28_5.method12415(i_1, i_2, 2103169135)) {
 				class282_sub28_5.method12414(i_1, i_2, ints_3, -1628136570);
 				return true;
@@ -52,7 +52,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 	}
 
 	public boolean method14778(int i_1, int i_2, int i_3, int[] ints_4, int i_5) {
-		for (Class282_Sub28 class282_sub28_6 = (Class282_Sub28) this.aClass482_9537.head((byte) 96); class282_sub28_6 != null; class282_sub28_6 = (Class282_Sub28) this.aClass482_9537.next(-376153003)) {
+		for (Class282_Sub28 class282_sub28_6 = (Class282_Sub28) this.aClass482_9537.head(); class282_sub28_6 != null; class282_sub28_6 = (Class282_Sub28) this.aClass482_9537.next(-376153003)) {
 			if (class282_sub28_6.method12408(i_1, i_2, i_3)) {
 				class282_sub28_6.method12414(i_2, i_3, ints_4, 698012248);
 				return true;
@@ -68,7 +68,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 		this.anInt9541 = 12800;
 		this.anInt9535 = 0;
 
-		for (Class282_Sub28 class282_sub28_2 = (Class282_Sub28) this.aClass482_9537.head((byte) 91); class282_sub28_2 != null; class282_sub28_2 = (Class282_Sub28) this.aClass482_9537.next(361173732)) {
+		for (Class282_Sub28 class282_sub28_2 = (Class282_Sub28) this.aClass482_9537.head(); class282_sub28_2 != null; class282_sub28_2 = (Class282_Sub28) this.aClass482_9537.next(361173732)) {
 			if (class282_sub28_2.anInt7701 < this.anInt9539) {
 				this.anInt9539 = class282_sub28_2.anInt7701;
 			}
@@ -89,7 +89,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 	}
 
 	boolean method14784(int i_1, int i_2) {
-		for (Class282_Sub28 class282_sub28_4 = (Class282_Sub28) this.aClass482_9537.head((byte) 23); class282_sub28_4 != null; class282_sub28_4 = (Class282_Sub28) this.aClass482_9537.next(1597035848)) {
+		for (Class282_Sub28 class282_sub28_4 = (Class282_Sub28) this.aClass482_9537.head(); class282_sub28_4 != null; class282_sub28_4 = (Class282_Sub28) this.aClass482_9537.next(1597035848)) {
 			if (class282_sub28_4.method12415(i_1, i_2, 2088759506)) {
 				return true;
 			}
@@ -99,7 +99,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 	}
 
 	public static void method14788(String string_0, boolean bool_1, boolean bool_2, boolean bool_3, boolean bool_4, byte b_5) {
-		Class508.method8736(string_0, bool_1, bool_2, "openjs", bool_3, bool_4, (byte) 60);
+		PingRequester.method8736(string_0, bool_1, bool_2, "openjs", bool_3, bool_4, (byte) 60);
 	}
 
 }

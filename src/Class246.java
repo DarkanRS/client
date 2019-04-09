@@ -8,11 +8,11 @@ public class Class246 {
 		throw new Error();
 	}
 
-	public static Class461 method4203(int i_0) {
-		Class461[] arr_2 = Connection.method3343();
+	public static FriendStatus getFriendStatus(int i_0) {
+		FriendStatus[] arr_2 = Connection.method3343();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-			Class461 class461_4 = arr_2[i_3];
-			if (i_0 == class461_4.anInt5541) {
+			FriendStatus class461_4 = arr_2[i_3];
+			if (i_0 == class461_4.id) {
 				return class461_4;
 			}
 		}

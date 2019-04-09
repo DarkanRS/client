@@ -301,7 +301,7 @@ public class NativeLibraryLoader implements Interface36 {
             int i_5;
             int i_7;
             if (!Class20.aBool162) {
-                for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361)) {
+                for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361)) {
                     i_7 = Shadow.method15507(class282_sub50_sub7_9, fontmetrics_3);
                     if (i_7 > i_4) {
                         i_4 = i_7;

@@ -117,7 +117,7 @@ public class SunDefinitions {
 		Class282_Sub50_Sub15 class282_sub50_sub15_16;
 		if (!Class20.aBool162) {
 			i_12 = 0;
-			for (class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 108); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(-573495848)) {
+			for (class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(-573495848)) {
 				i_14 = i_3 + b_6 + (Class20.anInt169 - 1 - i_12) * Class20.anInt178 + fontmetrics_8.anInt4978 + 1;
 				if (i_10 > Class301.anInt3555 && i_10 < Class301.anInt3555 + Class158_Sub2.anInt8975 && i_11 > i_14 - fontmetrics_8.anInt4978 - 1 && i_11 < i_14 + fontmetrics_8.anInt4979 && class282_sub50_sub7_13.aBool9583) {
 					graphicalrenderer_0.B(Class301.anInt3555, i_14 - fontmetrics_8.anInt4978, Class158_Sub2.anInt8975, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
@@ -149,7 +149,7 @@ public class SunDefinitions {
 		Class487.method8209(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, (byte) -15);
 		if (!Class20.aBool162) {
 			i_12 = 0;
-			for (class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 123); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(-668033309)) {
+			for (class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(-668033309)) {
 				i_14 = i_3 + b_6 + (Class20.anInt169 - 1 - i_12) * Class20.anInt178 + fontmetrics_8.anInt4978 + 1;
 				Class282_Sub25.method12400(i_10, i_11, i_2, i_3, i_4, i_5, i_14, class282_sub50_sub7_13, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -162491799);
 				++i_12;

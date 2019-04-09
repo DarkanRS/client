@@ -172,7 +172,7 @@ public class ObjectIndexLoader {
 		return (int) (long_0 / 86400000L) - 11745;
 	}
 
-	public static WorldDescriptor method7916(int i_0, int i_1) {
-		return Class244.aBool3007 && i_0 >= Class485.WORLD_LIST_START && i_0 <= Class244.WORLD_LIST_SIZEPLUS1 ? Class244.WORLD_LIST_DESCRIPTORS[i_0 - Class485.WORLD_LIST_START] : null;
+	public static WorldDescriptor getWorld(int id) {
+		return Class244.aBool3007 && id >= Class485.WORLD_LIST_START && id <= Class244.WORLD_LIST_SIZEPLUS1 ? Class244.WORLD_LIST_DESCRIPTORS[id - Class485.WORLD_LIST_START] : null;
 	}
 }

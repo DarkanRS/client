@@ -176,7 +176,7 @@ public class Login {
                     Class9.aClass184_73.recievedBuffer.index = 0;
                     String string_11 = Class361.aClass361_4176.method6253((byte) -35);
                     if (!client.aBool7310 || !Class186.method3082(string_18, 1, string_11)) {
-                        Class508.method8736(string_18, true, Class393.preferences.currentToolkit.getValue(-778399292) == 5, string_11, client.aBool7158, client.aBool7159, (byte) -110);
+                        PingRequester.method8736(string_18, true, Class393.preferences.currentToolkit.getValue(-778399292) == 5, string_11, client.aBool7158, client.aBool7159, (byte) -110);
                     }
                     Class9.loginStage = 65;
                 }
@@ -242,7 +242,7 @@ public class Login {
                         IdentitiKitIndexLoader.method809(rsbitsbuffer_22, 972141670);
                         rsbitsbuffer_22.writeString(client.aString7281);
                         rsbitsbuffer_22.writeInt(client.anInt7149);
-                        rsbytebuffer_7 = Class393.preferences.method13499();
+                        rsbytebuffer_7 = Class393.preferences.encode();
                         rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
                         client.aBool7175 = true;
@@ -295,7 +295,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(Class223.CURRENT_LANGUAGE.getValue());
                         IdentitiKitIndexLoader.method809(rsbitsbuffer_22, -378154884);
                         rsbitsbuffer_22.writeString(client.aString7281);
-                        rsbytebuffer_7 = Class393.preferences.method13499();
+                        rsbytebuffer_7 = Class393.preferences.encode();
                         rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeString(Class464.aString5555);
@@ -488,11 +488,11 @@ public class Login {
                                 Class448.aClass450_5421.worldId = -1;
                             }
                             Class448.aClass450_5421.host = rsbitsbuffer_19.readGJString();
-                            if (HDWaterTile.aClass496_952 != Class496.aClass496_5813) {
+                            if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813) {
                                 Class448.aClass450_5421.anInt5434 = Class448.aClass450_5421.worldId * -1708079975 + 1140744768;
                                 Class448.aClass450_5421.anInt5437 = Class448.aClass450_5421.worldId * -1473668237 + 1047080176;
                             }
-                            if (HDWaterTile.aClass496_952 != Class496.aClass496_5810 && (HDWaterTile.aClass496_952 != Class496.aClass496_5808 || client.rights < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
+                            if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5810 && (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5808 || client.rights < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
                                 Class274.method4884((byte) 74);
                             }
                         }
@@ -515,7 +515,7 @@ public class Login {
                                 }
                             }
                         }
-                        if (Class496.aClass496_5813 == HDWaterTile.aClass496_952) {
+                        if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
                             Class361.aClass361_4170.method6257(1331971946);
                         }
                         if (Class9.lobbyStage != 273) {

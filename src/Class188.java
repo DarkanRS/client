@@ -76,7 +76,7 @@ public class Class188 {
 	}
 
 	static final void decodeTilestreamPacket(TilestreamPacket tilestreampacket_0, int i_1) {
-		RsBitsBuffer rsbitsbuffer_2 = client.aClass184_7475.recievedBuffer;
+		RsBitsBuffer rsbitsbuffer_2 = client.outputContext.recievedBuffer;
 		int i_3;
 		CoordGrid coordgrid_4;
 		int i_5;
@@ -99,7 +99,7 @@ public class Class188 {
 			if (client.aClass465_7414 != null) {
 				Class282_Sub29 class282_sub29_12 = (Class282_Sub29) client.aClass465_7414.get((long) (Class272.anInt3331 << 28 | i_6 << 14 | i_8));
 				if (class282_sub29_12 != null) {
-					for (Class282_Sub34 class282_sub34_13 = (Class282_Sub34) class282_sub29_12.aClass482_7708.head((byte) 55); class282_sub34_13 != null; class282_sub34_13 = (Class282_Sub34) class282_sub29_12.aClass482_7708.next(1296718058)) {
+					for (Class282_Sub34 class282_sub34_13 = (Class282_Sub34) class282_sub29_12.aClass482_7708.head(); class282_sub34_13 != null; class282_sub34_13 = (Class282_Sub34) class282_sub29_12.aClass482_7708.next(1296718058)) {
 						if ((i_9 & 0x7fff) == class282_sub34_13.anInt7853 && i_10 == class282_sub34_13.anInt7852) {
 							class282_sub34_13.remove();
 							class282_sub34_13.anInt7852 = i_11;
@@ -244,7 +244,7 @@ public class Class188 {
 						i_9 = rsbitsbuffer_2.readUnsignedShortLE128();
 						Class282_Sub29 class282_sub29_39 = (Class282_Sub29) client.aClass465_7414.get((long) (Class272.anInt3331 << 28 | i_6 << 14 | i_8));
 						if (class282_sub29_39 != null) {
-							for (Class282_Sub34 class282_sub34_26 = (Class282_Sub34) class282_sub29_39.aClass482_7708.head((byte) 19); class282_sub34_26 != null; class282_sub34_26 = (Class282_Sub34) class282_sub29_39.aClass482_7708.next(715558625)) {
+							for (Class282_Sub34 class282_sub34_26 = (Class282_Sub34) class282_sub29_39.aClass482_7708.head(); class282_sub34_26 != null; class282_sub34_26 = (Class282_Sub34) class282_sub29_39.aClass482_7708.next(715558625)) {
 								if ((i_9 & 0x7fff) == class282_sub34_26.anInt7853) {
 									class282_sub34_26.remove();
 									break;

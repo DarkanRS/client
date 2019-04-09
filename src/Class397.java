@@ -1,43 +1,24 @@
 public class Class397 implements Interface38 {
 
 	public static Class397 aClass397_4801 = new Class397("", 10);
-
 	public static Class397 aClass397_4793 = new Class397("", 11);
-
 	public static Class397 aClass397_4794 = new Class397("", 12);
-
 	public static Class397 aClass397_4795 = new Class397("", 13);
-
 	public static Class397 aClass397_4796 = new Class397("", 14);
-
 	public static Class397 aClass397_4797 = new Class397("", 15);
-
 	public static Class397 aClass397_4798 = new Class397("", 16);
-
 	public static Class397 aClass397_4805 = new Class397("", 17);
-
 	public static Class397 aClass397_4800 = new Class397("", 18);
-
 	public static Class397 aClass397_4812 = new Class397("", 19);
-
 	public static Class397 aClass397_4792 = new Class397("", 20);
-
 	public static Class397 aClass397_4803 = new Class397("", 21);
-
 	public static Class397 aClass397_4804 = new Class397("", 22);
-
 	public static Class397 aClass397_4806 = new Class397("", 23);
-
 	public static Class397 aClass397_4799 = new Class397("", 24);
-
 	public static Class397 aClass397_4807 = new Class397("", 25);
-
 	public static Class397 aClass397_4808 = new Class397("", 26);
-
 	public static Class397 aClass397_4809 = new Class397("", 27);
-
 	static Class397 aClass397_4810 = new Class397("", 73);
-
 	static Class397 aClass397_4811 = new Class397("", 76);
 
 	public int anInt4802;

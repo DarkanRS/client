@@ -45,7 +45,7 @@ public class Class7 implements Runnable {
 		if (this.anInetAddress54 != null) {
 			try {
 				byte[] bytes_2 = this.anInetAddress54.getAddress();
-				this.aLong52 = (long) Ping.method747(bytes_2[0], bytes_2[1], bytes_2[2], bytes_2[3], 10000L);
+				this.aLong52 = (long) Ping.ping(bytes_2[0], bytes_2[1], bytes_2[2], bytes_2[3], 10000L);
 			} catch (Throwable throwable_3) {
 				;
 			}

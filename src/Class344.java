@@ -132,7 +132,7 @@ public class Class344 {
     public static final void method6119(String string_0) {
         if (Class467.aClass173Array5575 != null) {
             BufferedConnectionContext class184_2 = Class468_Sub20.method12807(978713855);
-            TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4618, class184_2.isaac, 808752825);
+            TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.KICK_FRIENDS_CHAT, class184_2.isaac);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
             tcpmessage_3.buffer.writeString(string_0);
             class184_2.queuePacket(tcpmessage_3);

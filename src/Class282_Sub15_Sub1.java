@@ -73,7 +73,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	synchronized Class282_Sub39 method14812() {
-		return (Class282_Sub39) this.aClass482_9568.head((byte) 60);
+		return (Class282_Sub39) this.aClass482_9568.head();
 	}
 
 	synchronized void method14813(int i_1) {
@@ -300,7 +300,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		if (this.anInt9569 < 1) {
 			return -1.0D;
 		} else {
-			Class282_Sub39 class282_sub39_2 = (Class282_Sub39) this.aClass482_9568.head((byte) 95);
+			Class282_Sub39 class282_sub39_2 = (Class282_Sub39) this.aClass482_9568.head();
 			return class282_sub39_2 == null ? -1.0D : class282_sub39_2.aDouble8004 - (double) ((float) class282_sub39_2.aShortArrayArray8003[0].length / (float) Class253.anInt3129);
 		}
 	}

@@ -38,7 +38,7 @@ public class Class11 {
 		}
 		NativeLibraryLoader.anInt3240 = 5;
 		Class86.anInt833 = -1;
-		Class508.anInt5864 = -1;
+		PingRequester.anInt5864 = -1;
 	}
 
 	public static void method13400(Index index_0, int i_1, int i_3, byte b_5) {

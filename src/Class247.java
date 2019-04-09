@@ -295,8 +295,8 @@ public class Class247 {
 				IComponentDefinitions icomponentdefinitions_5 = Class468_Sub8.INTERFACES[i_3].components[i_4];
 				Class282_Sub50_Sub7 class282_sub50_sub7_6;
 				if (i_1 == -1 && icomponentdefinitions_5.type == 0) {
-					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 59); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1787533982)) {
-						if (class282_sub50_sub7_6.anInt9587 == 58 || class282_sub50_sub7_6.anInt9587 == 1007 || class282_sub50_sub7_6.anInt9587 == 25 || class282_sub50_sub7_6.anInt9587 == 57 || class282_sub50_sub7_6.anInt9587 == 30) {
+					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1787533982)) {
+						if (class282_sub50_sub7_6.clickType == 58 || class282_sub50_sub7_6.clickType == 1007 || class282_sub50_sub7_6.clickType == 25 || class282_sub50_sub7_6.clickType == 57 || class282_sub50_sub7_6.clickType == 30) {
 							for (IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(class282_sub50_sub7_6.anInt9582); icomponentdefinitions_7 != null; icomponentdefinitions_7 = Class96_Sub23.method14682(Class468_Sub8.INTERFACES[icomponentdefinitions_7.idHash >> 16], icomponentdefinitions_7)) {
 								if (icomponentdefinitions_7.idHash == icomponentdefinitions_5.idHash) {
 									return true;
@@ -305,8 +305,8 @@ public class Class247 {
 						}
 					}
 				} else {
-					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 31); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(2009173063)) {
-						if (class282_sub50_sub7_6.anInt9581 == i_1 && icomponentdefinitions_5.idHash == class282_sub50_sub7_6.anInt9582 && (class282_sub50_sub7_6.anInt9587 == 58 || class282_sub50_sub7_6.anInt9587 == 1007 || class282_sub50_sub7_6.anInt9587 == 25 || class282_sub50_sub7_6.anInt9587 == 57 || class282_sub50_sub7_6.anInt9587 == 30)) {
+					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(2009173063)) {
+						if (class282_sub50_sub7_6.anInt9581 == i_1 && icomponentdefinitions_5.idHash == class282_sub50_sub7_6.anInt9582 && (class282_sub50_sub7_6.clickType == 58 || class282_sub50_sub7_6.clickType == 1007 || class282_sub50_sub7_6.clickType == 25 || class282_sub50_sub7_6.clickType == 57 || class282_sub50_sub7_6.clickType == 30)) {
 							return true;
 						}
 					}

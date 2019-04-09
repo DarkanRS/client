@@ -10,7 +10,7 @@ public class Ping {
 
 	public static native boolean init();
 
-	public static int method747(byte i, byte i_0_, byte i_1_, byte i_2_, long l) throws Throwable {
+	public static int ping(byte i, byte i_0_, byte i_1_, byte i_2_, long l) throws Throwable {
 		int i_3_ = ping0(i, i_0_, i_1_, i_2_, l);
 		if (i_3_ < 0)
 			throw new Exception(String.valueOf(i_3_));

@@ -59,7 +59,7 @@ public class Class232 implements Interface17 {
 		if (i_2 >= 100) {
 			NativeLibraryLoader.anInt3240 = 2;
 			Class86.anInt833 = -1;
-			Class508.anInt5864 = -1;
+			PingRequester.anInt5864 = -1;
 		} else {
 			int i_3 = (int) client.aFloat7146;
 			if (client.anInt7273 >> 8 > i_3) {

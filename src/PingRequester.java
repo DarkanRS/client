@@ -6,62 +6,59 @@ import java.net.URI;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Class508 implements Runnable {
+public class PingRequester implements Runnable {
 
 	public static int anInt5864;
 
 	Object anObject5862 = new Object();
+	Queue requestQueue = new LinkedList();
+	Thread requestThread = new Thread(this);
 
-	Queue aQueue5863 = new LinkedList();
-
-	Thread aThread5861 = new Thread(this);
-
-	public Class510 method8729(String string_1, short s_2) {
-		if (this.aThread5861 == null) {
+	public PingRequest createPingRequest(String ip) {
+		if (this.requestThread == null) {
 			throw new IllegalStateException("");
-		} else if (string_1 == null) {
+		} else if (ip == null) {
 			throw new IllegalArgumentException("");
 		} else {
-			Class510 class510_3 = new Class510(string_1);
-			this.method8730(class510_3, -1763010472);
+			PingRequest class510_3 = new PingRequest(ip);
+			this.queueRequest(class510_3, -1763010472);
 			return class510_3;
 		}
 	}
 
-	public Class508() {
-		this.aThread5861.setDaemon(true);
-		this.aThread5861.start();
+	public PingRequester() {
+		this.requestThread.setDaemon(true);
+		this.requestThread.start();
 	}
 
-	void method8730(Object object_1, int i_2) {
-		Queue queue_3 = this.aQueue5863;
-		synchronized (this.aQueue5863) {
-			this.aQueue5863.add(object_1);
-			this.aQueue5863.notify();
+	void queueRequest(Object object_1, int i_2) {
+		Queue queue_3 = this.requestQueue;
+		synchronized (this.requestQueue) {
+			this.requestQueue.add(object_1);
+			this.requestQueue.notify();
 		}
 	}
 
 	public void method8733() {
-		if (this.aThread5861 != null) {
-			this.method8730(this.anObject5862, -2004280805);
+		if (this.requestThread != null) {
+			this.queueRequest(this.anObject5862, -2004280805);
 			try {
-				this.aThread5861.join();
+				this.requestThread.join();
 			} catch (InterruptedException interruptedexception_3) {
 				;
 			}
-			this.aThread5861 = null;
+			this.requestThread = null;
 		}
 	}
 
 	public void run() {
 		while (true) {
-			Queue queue_2 = this.aQueue5863;
-			Class510 class510_1;
-			synchronized (this.aQueue5863) {
+			PingRequest request;
+			synchronized (this.requestQueue) {
 				Object object_3;
-				for (object_3 = this.aQueue5863.poll(); object_3 == null; object_3 = this.aQueue5863.poll()) {
+				for (object_3 = this.requestQueue.poll(); object_3 == null; object_3 = this.requestQueue.poll()) {
 					try {
-						this.aQueue5863.wait();
+						this.requestQueue.wait();
 					} catch (InterruptedException interruptedexception_7) {
 						;
 					}
@@ -69,16 +66,16 @@ public class Class508 implements Runnable {
 				if (object_3 == this.anObject5862) {
 					return;
 				}
-				class510_1 = (Class510) object_3;
+				request = (PingRequest) object_3;
 			}
-			int i_5;
+			int ping;
 			try {
-				byte[] bytes_9 = InetAddress.getByName(class510_1.aString5871).getAddress();
-				i_5 = Ping.method747(bytes_9[0], bytes_9[1], bytes_9[2], bytes_9[3], 1000L);
+				byte[] addr = InetAddress.getByName(request.ip).getAddress();
+				ping = Ping.ping(addr[0], addr[1], addr[2], addr[3], 1000L);
 			} catch (Throwable throwable_6) {
-				i_5 = 1000;
+				ping = 1000;
 			}
-			class510_1.anInt5872 = i_5;
+			request.ping = ping;
 		}
 	}
 

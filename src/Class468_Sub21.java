@@ -63,9 +63,9 @@ public class Class468_Sub21 extends Preference {
 			Class276.aClass282_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(2119033925);
-			TCPPacket tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.isaac, 775399982);
+			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.aClass379_4572, client.outputContext.isaac);
 			tcpmessage_5.buffer.writeByte(bool_0 ? 1 : 0);
-			client.aClass184_7475.queuePacket(tcpmessage_5);
+			client.outputContext.queuePacket(tcpmessage_5);
 		}
 
 	}

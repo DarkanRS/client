@@ -30,11 +30,11 @@ public class Class463 {
         if (animable_0 instanceof NPC) {
             NPC npc_2 = (NPC) animable_0;
             if (npc_2.definitions != null) {
-                MapAreaDefinitions.method3736(npc_2, npc_2.plane != VertexNormal.myPlayer.plane, 2058310476);
+                MapAreaDefinitions.iComponentOnNPC(npc_2, npc_2.plane != VertexNormal.myPlayer.plane, 2058310476);
             }
         } else if (animable_0 instanceof Player) {
             Player player_3 = (Player) animable_0;
-            Class96_Sub22.method14678(player_3, player_3.plane != VertexNormal.myPlayer.plane);
+            Class96_Sub22.iComponentOnPlayer(player_3, player_3.plane != VertexNormal.myPlayer.plane);
         }
     }
 

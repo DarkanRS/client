@@ -25,12 +25,12 @@ public class Language implements Identifiable {
     Locale aLocale5805;
 
     static {
-        aClass495_5795 = new Language("EN", "en", "English", Class496.aClass496_5813, 0, "GB");
-        aClass495_5802 = new Language("DE", "de", "German", Class496.aClass496_5813, 1, "DE");
-        aClass495_5801 = new Language("FR", "fr", "French", Class496.aClass496_5813, 2, "FR");
-        aClass495_5797 = new Language("PT", "pt", "Portuguese", Class496.aClass496_5813, 3, "BR");
-        aClass495_5799 = new Language("NL", "nl", "Dutch", Class496.aClass496_5807, 4, "NL");
-        aClass495_5800 = new Language("ES", "es", "Spanish", Class496.aClass496_5807, 5, "ES");
+        aClass495_5795 = new Language("EN", "en", "English", ServerEnvironment.aClass496_5813, 0, "GB");
+        aClass495_5802 = new Language("DE", "de", "German", ServerEnvironment.aClass496_5813, 1, "DE");
+        aClass495_5801 = new Language("FR", "fr", "French", ServerEnvironment.aClass496_5813, 2, "FR");
+        aClass495_5797 = new Language("PT", "pt", "Portuguese", ServerEnvironment.aClass496_5813, 3, "BR");
+        aClass495_5799 = new Language("NL", "nl", "Dutch", ServerEnvironment.aClass496_5807, 4, "NL");
+        aClass495_5800 = new Language("ES", "es", "Spanish", ServerEnvironment.aClass496_5807, 5, "ES");
         Language[] arr_0 = method8294(135762264);
         aClass495Array5796 = new Language[arr_0.length];
         Language[] arr_1 = arr_0;
@@ -47,7 +47,7 @@ public class Language implements Identifiable {
         return -1324357023 * this.anInt5804 * 411974049;
     }
 
-    Language(String string_1, String string_2, String string_3, Class496 class496_4, int i_5, String string_6) {
+    Language(String string_1, String string_2, String string_3, ServerEnvironment class496_4, int i_5, String string_6) {
         this.aString5806 = string_1;
         this.aString5803 = string_2;
         this.anInt5804 = i_5;

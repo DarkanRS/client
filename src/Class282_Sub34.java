@@ -11,7 +11,7 @@ public class Class282_Sub34 extends Node {
 	static final void decodePlayerUpdate(RsBitsBuffer rsbitsbuffer_0, int i_1) {
 		Class197.anInt2434 = 0;
 		LoadingStage.decodeUpdate(rsbitsbuffer_0);
-		Class508.decodeMasks(rsbitsbuffer_0);
+		PingRequester.decodeMasks(rsbitsbuffer_0);
 		if (rsbitsbuffer_0.index != i_1) {
 			throw new RuntimeException(rsbitsbuffer_0.index + " " + i_1);
 		}

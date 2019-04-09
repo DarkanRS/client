@@ -64,8 +64,8 @@ public class Class540 {
 				client.aClass282_Sub47Array7209[i_6] = null;
 			}
 		}
-		if (client.aClass184_7475.recievedBuffer.index != client.aClass184_7475.currentPacketSize) {
-			throw new RuntimeException(client.aClass184_7475.recievedBuffer.index + " " + client.aClass184_7475.currentPacketSize);
+		if (client.outputContext.recievedBuffer.index != client.outputContext.currentPacketSize) {
+			throw new RuntimeException(client.outputContext.recievedBuffer.index + " " + client.outputContext.currentPacketSize);
 		} else {
 			for (i_3 = 0; i_3 < client.NPC_UPDATE_INDEX; i_3++) {
 				if (client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_3]) == null) {

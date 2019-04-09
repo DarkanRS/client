@@ -83,40 +83,40 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 			--client.anInt7178;
 			client.anInt7397 = client.anInt7347;
 		}
-		if (client.aClass184_7475.aBool2298) {
-			client.aClass184_7475.aBool2298 = false;
+		if (client.outputContext.aBool2298) {
+			client.outputContext.aBool2298 = false;
 			Class151.method2592((byte) 21);
 		} else {
 			if (!Class20.aBool161) {
 				HitsplatDefinitions.method3851();
 			}
-			for (int i_1 = 0; i_1 < 100 && Class8_Sub3.method14338(client.aClass184_7475); i_1++) {
+			for (int i_1 = 0; i_1 < 100 && Class8_Sub3.method14338(client.outputContext); i_1++) {
 				;
 			}
 			if (client.gameState == 13) {
 				int i_2;
 				TCPPacket tcpmessage_6;
-				while (HashTableIterator.method7517()) {
-					tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4563, client.aClass184_7475.isaac, 780391787);
+				while (HashTableIterator.hasValues()) {
+					tcpmessage_6 = Class271.createPacket(OutgoingPacket.REFLECTION_CHECK, client.outputContext.isaac);
 					tcpmessage_6.buffer.writeByte(0);
 					i_2 = tcpmessage_6.buffer.index;
 					Class8_Sub2.method14264(tcpmessage_6.buffer);
 					tcpmessage_6.buffer.method13061(tcpmessage_6.buffer.index - i_2, 788141162);
-					client.aClass184_7475.queuePacket(tcpmessage_6);
+					client.outputContext.queuePacket(tcpmessage_6);
 				}
-				if (Class496.aClass510_5816 != null) {
-					if (Class496.aClass510_5816.anInt5872 != -1) {
-						tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4615, client.aClass184_7475.isaac, 312457209);
-						tcpmessage_6.buffer.writeShort(Class496.aClass510_5816.anInt5872);
-						client.aClass184_7475.queuePacket(tcpmessage_6);
-						Class496.aClass510_5816 = null;
+				if (PingRequest.CURRENT_REQUEST != null) {
+					if (PingRequest.CURRENT_REQUEST.ping != -1) {
+						tcpmessage_6 = Class271.createPacket(OutgoingPacket.WRITE_PING, client.outputContext.isaac);
+						tcpmessage_6.buffer.writeShort(PingRequest.CURRENT_REQUEST.ping);
+						client.outputContext.queuePacket(tcpmessage_6);
+						PingRequest.CURRENT_REQUEST = null;
 						Class28.aLong351 = TextureDetails.time() + 30000L;
 					}
 				} else if (TextureDetails.time() >= Class28.aLong351) {
-					Class496.aClass510_5816 = client.aClass508_7223.method8729(Class159.GAME_CONNECTION_INFO.host, (short) 5418);
+					PingRequest.CURRENT_REQUEST = client.PING_REQUESTER.createPingRequest(Class159.GAME_CONNECTION_INFO.host);
 				}
 				Class434.method7292();
-				MouseRecord class282_sub53_13 = (MouseRecord) client.mouseRecords.head((byte) 106);
+				MouseRecord class282_sub53_13 = (MouseRecord) client.mouseRecords.head();
 				if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 					if (NativeLibraryLoader.anInt3240 == 5) {
 						Wall.method16113();
@@ -140,9 +140,9 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 					Class350_Sub1.method12516();
 					Interface.method1623();
 					if (client.anInt7396 > 10) {
-						++client.aClass184_7475.idleReadPulses;
+						++client.outputContext.idleReadPulses;
 					}
-					if (client.aClass184_7475.idleReadPulses > 2250) {
+					if (client.outputContext.idleReadPulses > 2250) {
 						Class151.method2592((byte) 35);
 					} else {
 						if (client.anInt7341 == 1) {
@@ -209,13 +209,13 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						if (!client.aBool7344) {
 							client.anInt7427 = -1;
 						}
-						Class496.method8315(-472472191);
+						ServerEnvironment.method8315(-472472191);
 						++client.anInt7347;
 						TCPPacket tcpmessage_8;
 						if (client.aBool7375) {
-							tcpmessage_8 = Class271.method4828(OutgoingPacket.aClass379_4549, client.aClass184_7475.isaac, 771698207);
+							tcpmessage_8 = Class271.createPacket(OutgoingPacket.WORLD_MAP_CLICK, client.outputContext.isaac);
 							tcpmessage_8.buffer.writeLEInt(Class282_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015, (byte) -22);
-							client.aClass184_7475.queuePacket(tcpmessage_8);
+							client.outputContext.queuePacket(tcpmessage_8);
 							client.aBool7375 = false;
 						}
 						while (true) {
@@ -239,7 +239,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 															if (client.aClass118_7257 != null) {
 																Class161.method2827(1342280577);
 															}
-															Class461.method7703();
+															FriendStatus.method7703();
 															if (client.rights > 0 && Class96_Sub21.keyRecorder.method3236(82, -1802639112) && Class96_Sub21.keyRecorder.method3236(81, -1439970687) && client.anInt7191 != 0) {
 																i_2 = VertexNormal.myPlayer.plane - client.anInt7191;
 																if (i_2 < 0) {
@@ -322,17 +322,17 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 															if (client.anInt7203 > 11) {
 																client.anInt7258 = -1;
 															}
-															++client.aClass184_7475.anInt2290;
-															if (client.aClass184_7475.anInt2290 > 50) {
-																tcpmessage_8 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, client.aClass184_7475.isaac, -169588500);
-																client.aClass184_7475.queuePacket(tcpmessage_8);
+															++client.outputContext.anInt2290;
+															if (client.outputContext.anInt2290 > 50) {
+																tcpmessage_8 = Class271.createPacket(OutgoingPacket.PING, client.outputContext.isaac);
+																client.outputContext.queuePacket(tcpmessage_8);
 															}
 															if (client.aBool7459) {
 																Class466.method7776();
 																client.aBool7459 = false;
 															}
 															try {
-																client.aClass184_7475.method3047(613912304);
+																client.outputContext.method3047(613912304);
 															} catch (IOException ioexception_9) {
 																Class151.method2592((byte) 40);
 															}

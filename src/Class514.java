@@ -20,7 +20,7 @@ public final class Class514 {
 		Class501.anInt5828 = 0;
 		NativeLibraryLoader.anInt3240 = 2;
 		Class86.anInt833 = -1;
-		Class508.anInt5864 = -1;
+		PingRequester.anInt5864 = -1;
 	}
 
 	static Class149_Sub2 method8842(RsByteBuffer rsbytebuffer_0) {

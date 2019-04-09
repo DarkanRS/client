@@ -13,7 +13,7 @@ public final class IComponentSettings extends Node {
 	}
 
 	public final int getUseOptionFlags() {
-		return Class96_Sub6.getUseOptionFlags(this.settingsHash);
+		return IComponentSettings.getUseOptionFlags(this.settingsHash);
 	}
 
 	public final int depthFlags() {
@@ -35,6 +35,10 @@ public final class IComponentSettings extends Node {
 
 	public final boolean bit23Enabled() {
 		return (this.settingsHash >> 23 & 0x1) != 0;
+	}
+
+	static final int getUseOptionFlags(int settings) {
+		return settings >> 11 & 0x7f;
 	}
 
 }

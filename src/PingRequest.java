@@ -1,11 +1,13 @@
-public final class Class510 {
+public final class PingRequest {
 
-	public volatile int anInt5872 = -1;
+	public volatile int ping = -1;
 
-	volatile String aString5871;
+	volatile String ip;
 
-	Class510(String string_1) {
-		this.aString5871 = string_1;
+	static PingRequest CURRENT_REQUEST;
+
+	PingRequest(String string_1) {
+		this.ip = string_1;
 	}
 
 	static final void method8744(byte b_0, int i_1) {

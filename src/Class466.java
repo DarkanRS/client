@@ -31,9 +31,9 @@ public class Class466 implements Identifiable {
 	}
 
 	static void method7776() {
-		TCPPacket tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4582, client.aClass184_7475.isaac, -384952781);
+		TCPPacket tcpmessage_1 = Class271.createPacket(OutgoingPacket.RECEIVE_PACKET_COUNT, client.outputContext.isaac);
 		tcpmessage_1.buffer.writeInt(client.anInt7221);
-		client.aClass184_7475.queuePacket(tcpmessage_1);
+		client.outputContext.queuePacket(tcpmessage_1);
 	}
 
 	public static void method7777() {

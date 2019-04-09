@@ -263,7 +263,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 		if (class282_sub13_5 != null) {
 			this.aClass282_Sub13ArrayArray9713[i_1][i_2] = null;
 			if ((this.anIntArray9707[i_1] & 0x2) != 0) {
-				for (Class282_Sub13 class282_sub13_6 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head((byte) 52); class282_sub13_6 != null; class282_sub13_6 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(1921958128)) {
+				for (Class282_Sub13 class282_sub13_6 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_6 != null; class282_sub13_6 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(1921958128)) {
 					if (class282_sub13_5.anInt7582 == class282_sub13_6.anInt7582 && class282_sub13_6.anInt7579 < 0 && class282_sub13_6 != class282_sub13_5) {
 						class282_sub13_5.anInt7579 = 0;
 						break;
@@ -277,7 +277,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 	}
 
 	void method15111(int i_1, byte b_2) {
-		for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head((byte) 78); class282_sub13_3 != null; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(-1020703673)) {
+		for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_3 != null; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(-1020703673)) {
 			if (i_1 < 0 || class282_sub13_3.anInt7582 == i_1) {
 				if (class282_sub13_3.aClass282_Sub15_Sub5_7568 != null) {
 					class282_sub13_3.aClass282_Sub15_Sub5_7568.method15322(Class253.anInt3129 / 100, (byte) -106);
@@ -358,7 +358,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 
 	void method15117(int i_1, int i_2) {
 		if ((this.anIntArray9707[i_1] & 0x2) != 0) {
-			for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head((byte) 108); class282_sub13_3 != null; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(1357849272)) {
+			for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_3 != null; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(1357849272)) {
 				if (class282_sub13_3.anInt7582 == i_1 && this.aClass282_Sub13ArrayArray9713[i_1][class282_sub13_3.anInt7569] == null && class282_sub13_3.anInt7579 < 0) {
 					class282_sub13_3.anInt7579 = 0;
 				}
@@ -369,7 +369,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 
 	void method15118(int i_1, byte b_2) {
 		if ((this.anIntArray9707[i_1] & 0x4) != 0 && b_2 > 1) {
-			for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head((byte) 107); class282_sub13_3 != null && b_2 > 1; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(1196631772)) {
+			for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_3 != null && b_2 > 1; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(1196631772)) {
 				if (class282_sub13_3.anInt7582 == i_1) {
 					if (b_2 <= 1) {
 						break;
@@ -1064,7 +1064,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 	}
 
 	void method15192(int i_1, int i_2) {
-		for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head((byte) 21); class282_sub13_3 != null; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(-250860907)) {
+		for (Class282_Sub13 class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.head(); class282_sub13_3 != null; class282_sub13_3 = (Class282_Sub13) this.aClass282_Sub15_Sub3_9721.aClass482_9754.next(-250860907)) {
 			if ((i_1 < 0 || class282_sub13_3.anInt7582 == i_1) && class282_sub13_3.anInt7579 < 0) {
 				this.aClass282_Sub13ArrayArray9713[class282_sub13_3.anInt7582][class282_sub13_3.anInt7569] = null;
 				class282_sub13_3.anInt7579 = 0;

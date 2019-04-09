@@ -159,20 +159,20 @@ public class QuestIndexLoader {
     }
 
     public static void method4167(String string_0) {
-        if (client.aBool7344 && (Class506.anInt5858 & 0x18) != 0) {
+        if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x18) != 0) {
             boolean bool_2 = false;
             int i_3 = Class197.NUM_PLAYER_INDICES;
             int[] ints_4 = Class197.PLAYER_INDICES;
             for (int i_5 = 0; i_5 < i_3; i_5++) {
                 Player player_6 = client.players[ints_4[i_5]];
-                if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == VertexNormal.myPlayer && (Class506.anInt5858 & 0x10) != 0 || (Class506.anInt5858 & 0x8) != 0)) {
-                    TCPPacket tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4540, client.aClass184_7475.isaac, 623584347);
+                if (player_6.displayName != null && player_6.displayName.equalsIgnoreCase(string_0) && (player_6 == VertexNormal.myPlayer && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0 || (Class506.USE_OPTIONS_FLAGS & 0x8) != 0)) {
+                    TCPPacket tcpmessage_7 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_PLAYER, client.outputContext.isaac);
                     tcpmessage_7.buffer.writeShort(client.anInt7345);
                     tcpmessage_7.buffer.writeShortLE(ints_4[i_5], (short) -11612);
                     tcpmessage_7.buffer.write128Byte(0, -2130241701);
                     tcpmessage_7.buffer.writeIntV2(Class7.anInt56);
                     tcpmessage_7.buffer.writeShortLE(client.anInt7346, (short) -16837);
-                    client.aClass184_7475.queuePacket(tcpmessage_7);
+                    client.outputContext.queuePacket(tcpmessage_7);
                     int i_8 = player_6.getSize();
                     MapRegion.routeTo(player_6.regionBaseX[0], player_6.regionBaseY[0], true, Class344.method6115(player_6.regionBaseX[0], player_6.regionBaseY[0], i_8, i_8));
                     bool_2 = true;

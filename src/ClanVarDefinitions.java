@@ -33,13 +33,13 @@ public class ClanVarDefinitions {
 			IndexLoaders.MAP_REGION_DECODER.method4440((byte[][][]) null);
 			Class534_Sub2.method12847(0, (byte) 57);
 		} else if (i_1 == 1) {
-			Class510.method8744((byte) 0, -1832206339);
+			PingRequest.method8744((byte) 0, -1832206339);
 			Class534_Sub2.method12847(512, (byte) 105);
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 				Class17.method570();
 			}
 		} else {
-			Class510.method8744((byte) (client.anInt7286 - 4 & 0xff), 688949228);
+			PingRequest.method8744((byte) (client.anInt7286 - 4 & 0xff), 688949228);
 			Class534_Sub2.method12847(2, (byte) 69);
 		}
 

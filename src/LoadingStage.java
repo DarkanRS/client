@@ -220,7 +220,7 @@ public class LoadingStage {
 				} else {
 					i_14 = Class96_Sub9.anInt9282 * 5;
 				}
-				for (Class282_Sub36 class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 9); class282_sub36_15 != null; class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
+				for (Class282_Sub36 class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head(); class282_sub36_15 != null; class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
 					MapAreaDefinitions worldmapareadefs_16 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_15.anInt7991, 1043671083);
 					if (Class282_Sub16.method12248(worldmapareadefs_16, -2066566460)) {
 						int i_17;
@@ -271,12 +271,12 @@ public class LoadingStage {
 	}
 
 	public static boolean method6684(int cutsceneId) {
-		if (cutsceneId != Class86.anInt831 || Class282_Sub42.aClass85_8039 == null) {
+		if (cutsceneId != Class86.anInt831 || ReflectionCheck.aClass85_8039 == null) {
 			Class79.method1390(769951591);
-			Class282_Sub42.aClass85_8039 = Class85.aClass85_815;
+			ReflectionCheck.aClass85_8039 = Class85.aClass85_815;
 			Class86.anInt831 = cutsceneId;
 		}
-		if (Class282_Sub42.aClass85_8039 == Class85.aClass85_815) {
+		if (ReflectionCheck.aClass85_8039 == Class85.aClass85_815) {
 			byte[] data = IndexLoaders.CUTSCENE_INDEX.getFile(cutsceneId);
 			if (data == null) {
 				return false;
@@ -315,9 +315,9 @@ public class LoadingStage {
 			for (int i_10 = 0; i_10 < i_9; i_10++) {
 				Class86.aClass96Array822[i_10] = Class16.method562(buffer);
 			}
-			Class282_Sub42.aClass85_8039 = Class85.aClass85_816;
+			ReflectionCheck.aClass85_8039 = Class85.aClass85_816;
 		}
-		if (Class85.aClass85_816 == Class282_Sub42.aClass85_8039) {
+		if (Class85.aClass85_816 == ReflectionCheck.aClass85_8039) {
 			boolean bool_11 = true;
 			CutsceneEntity[] arr_16 = Class82.aClass75Array804;
 			for (int i_4 = 0; i_4 < arr_16.length; i_4++) {
@@ -343,7 +343,7 @@ public class LoadingStage {
 			if (!bool_11) {
 				return false;
 			}
-			Class282_Sub42.aClass85_8039 = Class85.aClass85_814;
+			ReflectionCheck.aClass85_8039 = Class85.aClass85_814;
 		}
 		return true;
 	}

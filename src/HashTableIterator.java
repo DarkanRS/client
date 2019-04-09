@@ -70,9 +70,9 @@ public class HashTableIterator implements Iterator {
 		this.aClass282_5441 = null;
 	}
 
-	public static boolean method7517() {
-		Class282_Sub42 class282_sub42_1 = (Class282_Sub42) Class435.aClass482_5332.head((byte) 42);
-		return class282_sub42_1 != null;
+	public static boolean hasValues() {
+		ReflectionCheck checks = (ReflectionCheck) Class435.PENDING_REFLECTION_CHECKS.head();
+		return checks != null;
 	}
 
 	static CutsceneActionType[] method7519() {

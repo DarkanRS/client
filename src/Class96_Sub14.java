@@ -71,7 +71,7 @@ public class Class96_Sub14 extends CutsceneAction {
             bool_3 = false;
         }
         if (!bool_1 && !bool_2 && !bool_3) {
-            return Class496.method8313();
+            return ServerEnvironment.method8313();
         } else {
             int i_4 = -1;
             int i_5 = -1;
@@ -109,7 +109,7 @@ public class Class96_Sub14 extends CutsceneAction {
                 }
             }
             if (i_4 == -1 && i_5 == -1 && i_6 == -1) {
-                return Class496.method8313();
+                return ServerEnvironment.method8313();
             } else {
                 i_6 = (int) ((float) i_6 * 1.1F);
                 i_5 = (int) ((float) i_5 * 1.1F);

@@ -97,7 +97,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			this.z = null;
 			this.af = null;
 
-			for (ba ba_1 = (ba) this.au.head((byte) 89); ba_1 != null; ba_1 = (ba) this.au.next(-58113197)) {
+			for (ba ba_1 = (ba) this.au.head(); ba_1 != null; ba_1 = (ba) this.au.next(-58113197)) {
 				ba_1.ha();
 			}
 
@@ -128,7 +128,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		Class156.method2652((byte) 46);
 		this.Y(i_1);
 
-		for (ba ba_2 = (ba) this.au.head((byte) 32); ba_2 != null; ba_2 = (ba) this.au.next(-980125304)) {
+		for (ba ba_2 = (ba) this.au.head(); ba_2 != null; ba_2 = (ba) this.au.next(-980125304)) {
 			ba_2.u();
 		}
 
@@ -138,7 +138,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		Class156.method2652((byte) 42);
 		this.Y(i_1);
 
-		for (ba ba_2 = (ba) this.au.head((byte) 99); ba_2 != null; ba_2 = (ba) this.au.next(1815060892)) {
+		for (ba ba_2 = (ba) this.au.head(); ba_2 != null; ba_2 = (ba) this.au.next(1815060892)) {
 			ba_2.u();
 		}
 
@@ -611,7 +611,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			this.z = null;
 			this.af = null;
 
-			for (ba ba_1 = (ba) this.au.head((byte) 79); ba_1 != null; ba_1 = (ba) this.au.next(1077527555)) {
+			for (ba ba_1 = (ba) this.au.head(); ba_1 != null; ba_1 = (ba) this.au.next(1077527555)) {
 				ba_1.ha();
 			}
 
@@ -733,7 +733,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		Class156.method2652((byte) 4);
 		this.Y(i_1);
 
-		for (ba ba_2 = (ba) this.au.head((byte) 58); ba_2 != null; ba_2 = (ba) this.au.next(951552583)) {
+		for (ba ba_2 = (ba) this.au.head(); ba_2 != null; ba_2 = (ba) this.au.next(951552583)) {
 			ba_2.u();
 		}
 
@@ -799,7 +799,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			this.z = null;
 			this.af = null;
 
-			for (ba ba_1 = (ba) this.au.head((byte) 16); ba_1 != null; ba_1 = (ba) this.au.next(1772121447)) {
+			for (ba ba_1 = (ba) this.au.head(); ba_1 != null; ba_1 = (ba) this.au.next(1772121447)) {
 				ba_1.ha();
 			}
 
@@ -1641,7 +1641,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			this.z = null;
 			this.af = null;
 
-			for (ba ba_1 = (ba) this.au.head((byte) 41); ba_1 != null; ba_1 = (ba) this.au.next(476144881)) {
+			for (ba ba_1 = (ba) this.au.head(); ba_1 != null; ba_1 = (ba) this.au.next(476144881)) {
 				ba_1.ha();
 			}
 

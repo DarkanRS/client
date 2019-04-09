@@ -122,7 +122,7 @@ public abstract class JS5StandardRequester {
 	}
 
 	public static void method5560(RsByteBuffer rsbytebuffer_0, int i_1) {
-		Class282_Sub42 class282_sub42_3 = new Class282_Sub42();
+		ReflectionCheck class282_sub42_3 = new ReflectionCheck();
 		class282_sub42_3.anInt8033 = rsbytebuffer_0.readUnsignedByte();
 		class282_sub42_3.anInt8038 = rsbytebuffer_0.readInt();
 		class282_sub42_3.anIntArray8035 = new int[class282_sub42_3.anInt8033];
@@ -227,7 +227,7 @@ public abstract class JS5StandardRequester {
 			}
 		}
 
-		Class435.aClass482_5332.append(class282_sub42_3);
+		Class435.PENDING_REFLECTION_CHECKS.append(class282_sub42_3);
 	}
 
 }

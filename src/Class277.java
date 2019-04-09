@@ -57,7 +57,7 @@ public class Class277 {
 		int i_7;
 		if (!Class20.aBool162) {
 			i_5 = 0;
-			for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 45); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(980795881)) {
+			for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(980795881)) {
 				i_7 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 				Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub7_6, Class285.aClass8_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -786945772);
 				++i_5;

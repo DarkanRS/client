@@ -48,7 +48,7 @@ final class Class79 implements VarProvider {
 		Class86.anInt819 = 1;
 		Class86.anInt825 = 0;
 		Class86.anInt824 = 0;
-		Class282_Sub42.aClass85_8039 = null;
+		ReflectionCheck.aClass85_8039 = null;
 		Class86.anInt831 = -1;
 		if (Class86.aBool826) {
 			client.aShort7214 = Class86.aShort828;

@@ -543,14 +543,14 @@ public class MapRegion {
 			}
 		}
 		Class282_Sub31 class282_sub31_26;
-		for (class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 77); class282_sub31_26 != null; class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-298997053)) {
+		for (class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head(); class282_sub31_26 != null; class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-298997053)) {
 			class282_sub31_26.anInt7762 -= i_3;
 			class282_sub31_26.anInt7763 -= i_4;
 			if (this.aClass256_3163 != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= this.sizeX || class282_sub31_26.anInt7763 >= this.sizeY)) {
 				class282_sub31_26.remove();
 			}
 		}
-		for (class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 67); class282_sub31_26 != null; class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(270479135)) {
+		for (class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head(); class282_sub31_26 != null; class282_sub31_26 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(270479135)) {
 			class282_sub31_26.anInt7762 -= i_3;
 			class282_sub31_26.anInt7763 -= i_4;
 			if (this.aClass256_3163 != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= this.sizeX || class282_sub31_26.anInt7763 >= this.sizeY)) {
@@ -587,7 +587,7 @@ public class MapRegion {
 			if (NativeLibraryLoader.anInt3240 != 4) {
 				NativeLibraryLoader.anInt3240 = 2;
 				Class86.anInt833 = -1;
-				Class508.anInt5864 = -1;
+				PingRequester.anInt5864 = -1;
 			}
 		} else {
 			Class296.anInt3534 -= i_3;
@@ -924,10 +924,10 @@ public class MapRegion {
 				ClanVarDefinitions.method6823();
 				Class48_Sub2.method14571();
 				TCPPacket tcpmessage_22;
-				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.getConnection() != null && client.gameState == 18) {
-					tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4609, client.aClass184_7475.isaac, 582872651);
+				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.outputContext.getConnection() != null && client.gameState == 18) {
+					tcpmessage_22 = Class271.createPacket(OutgoingPacket.aClass379_4609, client.outputContext.isaac);
 					tcpmessage_22.buffer.writeInt(1057001181);
-					client.aClass184_7475.queuePacket(tcpmessage_22);
+					client.outputContext.queuePacket(tcpmessage_22);
 				}
 				if (!this.aClass256_3163.method4410((byte) 29)) {
 					i_5 = (this.anInt3170 - (this.sizeX >> 4)) / 8;
@@ -955,9 +955,9 @@ public class MapRegion {
 					Class365.setGameState(3);
 				} else {
 					Class365.setGameState(13);
-					if (client.aClass184_7475.getConnection() != null) {
-						tcpmessage_22 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.isaac, 1466063096);
-						client.aClass184_7475.queuePacket(tcpmessage_22);
+					if (client.outputContext.getConnection() != null) {
+						tcpmessage_22 = Class271.createPacket(OutgoingPacket.REGION_LOADED_CONFIRM, client.outputContext.isaac);
+						client.outputContext.queuePacket(tcpmessage_22);
 					}
 				}
 				ParticleProducerDefinition.method1160(-1437458578);
@@ -1152,7 +1152,7 @@ public class MapRegion {
 		int i_9;
 		int i_10;
 		int i_11;
-		for (CutsceneArea class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.head((byte) 76); class282_sub2_20 != null; class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(832197045)) {
+		for (CutsceneArea class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.head(); class282_sub2_20 != null; class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(832197045)) {
 			i_21 = class282_sub2_20.anInt7486;
 			boolean bool_22 = (i_21 & 0x1) == 1;
 			i_5 = class282_sub2_20.regionX >> 3;
@@ -1206,7 +1206,7 @@ public class MapRegion {
 		this.hdWaterMapDataBuffer = new byte[i_2][];
 		this.hdWaterLandscapeDataBuffer = new byte[i_2][];
 		i_2 = 0;
-		for (CutsceneArea class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.head((byte) 29); class282_sub2_3 != null; class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(2076366148)) {
+		for (CutsceneArea class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.head(); class282_sub2_3 != null; class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(2076366148)) {
 			i_4 = class282_sub2_3.regionX >>> 3;
 			i_5 = class282_sub2_3.regionY >>> 3;
 			i_6 = i_4 + class282_sub2_3.width;

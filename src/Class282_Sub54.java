@@ -402,7 +402,7 @@ public class Class282_Sub54 extends Node {
 
 	}
 
-	public RsByteBuffer method13499() {
+	public RsByteBuffer encode() {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(40);
 		rsbytebuffer_2.writeByte(27);
 		rsbytebuffer_2.writeByte(this.aClass468_Sub4_8187.method12641(1497480561));

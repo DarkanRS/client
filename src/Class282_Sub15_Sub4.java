@@ -24,7 +24,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 
 	void method15277() {
 		if (this.anInt9826 > 0) {
-			for (Class282_Sub22 class282_sub22_1 = (Class282_Sub22) this.aClass482_9825.head((byte) 96); class282_sub22_1 != null; class282_sub22_1 = (Class282_Sub22) this.aClass482_9825.next(1387776965)) {
+			for (Class282_Sub22 class282_sub22_1 = (Class282_Sub22) this.aClass482_9825.head(); class282_sub22_1 != null; class282_sub22_1 = (Class282_Sub22) this.aClass482_9825.next(1387776965)) {
 				class282_sub22_1.anInt7676 -= this.anInt9826;
 			}
 
@@ -47,7 +47,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	}
 
 	void method15280(int i_1) {
-		for (Class282_Sub15 class282_sub15_2 = (Class282_Sub15) this.aClass482_9824.head((byte) 41); class282_sub15_2 != null; class282_sub15_2 = (Class282_Sub15) this.aClass482_9824.next(2051746601)) {
+		for (Class282_Sub15 class282_sub15_2 = (Class282_Sub15) this.aClass482_9824.head(); class282_sub15_2 != null; class282_sub15_2 = (Class282_Sub15) this.aClass482_9824.next(2051746601)) {
 			class282_sub15_2.method12231(i_1);
 		}
 
@@ -71,7 +71,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_3 -= i_4;
 				this.anInt9826 += i_4;
 				this.method15277();
-				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head((byte) 60);
+				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_5) {
 					int i_7 = class282_sub22_5.method12354(this);
 					if (i_7 < 0) {
@@ -93,7 +93,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	}
 
 	void method15282(int[] ints_1, int i_2, int i_3) {
-		for (Class282_Sub15 class282_sub15_4 = (Class282_Sub15) this.aClass482_9824.head((byte) 34); class282_sub15_4 != null; class282_sub15_4 = (Class282_Sub15) this.aClass482_9824.next(-554485695)) {
+		for (Class282_Sub15 class282_sub15_4 = (Class282_Sub15) this.aClass482_9824.head(); class282_sub15_4 != null; class282_sub15_4 = (Class282_Sub15) this.aClass482_9824.next(-554485695)) {
 			class282_sub15_4.method12237(ints_1, i_2, i_3);
 		}
 
@@ -112,7 +112,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_1 -= i_2;
 				this.anInt9826 += i_2;
 				this.method15277();
-				Class282_Sub22 class282_sub22_3 = (Class282_Sub22) this.aClass482_9825.head((byte) 72);
+				Class282_Sub22 class282_sub22_3 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_3) {
 					int i_5 = class282_sub22_3.method12354(this);
 					if (i_5 < 0) {
@@ -151,7 +151,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_3 -= i_4;
 				this.anInt9826 += i_4;
 				this.method15277();
-				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head((byte) 17);
+				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_5) {
 					int i_7 = class282_sub22_5.method12354(this);
 					if (i_7 < 0) {
@@ -186,7 +186,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_3 -= i_4;
 				this.anInt9826 += i_4;
 				this.method15277();
-				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head((byte) 50);
+				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_5) {
 					int i_7 = class282_sub22_5.method12354(this);
 					if (i_7 < 0) {
@@ -220,7 +220,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12232() {
-		return (Class282_Sub15) this.aClass482_9824.head((byte) 126);
+		return (Class282_Sub15) this.aClass482_9824.head();
 	}
 
 	Class282_Sub15 method12239() {
@@ -240,7 +240,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12233() {
-		return (Class282_Sub15) this.aClass482_9824.head((byte) 42);
+		return (Class282_Sub15) this.aClass482_9824.head();
 	}
 
 	public final synchronized void method12243(int i_1) {
@@ -256,7 +256,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_1 -= i_2;
 				this.anInt9826 += i_2;
 				this.method15277();
-				Class282_Sub22 class282_sub22_3 = (Class282_Sub22) this.aClass482_9825.head((byte) 12);
+				Class282_Sub22 class282_sub22_3 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_3) {
 					int i_5 = class282_sub22_3.method12354(this);
 					if (i_5 < 0) {
@@ -290,7 +290,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_1 -= i_2;
 				this.anInt9826 += i_2;
 				this.method15277();
-				Class282_Sub22 class282_sub22_3 = (Class282_Sub22) this.aClass482_9825.head((byte) 67);
+				Class282_Sub22 class282_sub22_3 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_3) {
 					int i_5 = class282_sub22_3.method12354(this);
 					if (i_5 < 0) {
@@ -312,7 +312,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12226() {
-		return (Class282_Sub15) this.aClass482_9824.head((byte) 10);
+		return (Class282_Sub15) this.aClass482_9824.head();
 	}
 
 	public final synchronized void method12242(int[] ints_1, int i_2, int i_3) {
@@ -329,7 +329,7 @@ public class Class282_Sub15_Sub4 extends Class282_Sub15 {
 				i_3 -= i_4;
 				this.anInt9826 += i_4;
 				this.method15277();
-				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head((byte) 67);
+				Class282_Sub22 class282_sub22_5 = (Class282_Sub22) this.aClass482_9825.head();
 				synchronized (class282_sub22_5) {
 					int i_7 = class282_sub22_5.method12354(this);
 					if (i_7 < 0) {

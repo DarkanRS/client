@@ -2,7 +2,7 @@ public class Class149_Sub2 extends Class149 {
 
 	public static Defaults7Loader DEFAULTS_LOADER_7;
 	public static NativeSprite aClass160_9315;
-	public static Class461 aClass461_9316;
+	public static FriendStatus FRIEND_STATUS;
 	int anInt9306;
 	int anInt9307;
 	int anInt9305;

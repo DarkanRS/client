@@ -20,7 +20,7 @@ public class Class96_Sub21 extends CutsceneAction {
 
 	public static void method14675(int i_0, int i_1, int i_2, int i_3) {
 		Class282_Sub48 class282_sub48_5;
-		for (class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 76); class282_sub48_5 != null; class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(1744342009)) {
+		for (class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head(); class282_sub48_5 != null; class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(1744342009)) {
 			Class175.method2964(class282_sub48_5, i_0, i_1, i_2, i_3, -1230088474);
 		}
 
@@ -29,7 +29,7 @@ public class Class96_Sub21 extends CutsceneAction {
 		int i_8;
 		int i_9;
 		Vector3 vector3_12;
-		for (class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 64); class282_sub48_5 != null; class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1161440846)) {
+		for (class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head(); class282_sub48_5 != null; class282_sub48_5 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1161440846)) {
 			b_6 = 1;
 			renderanimdefs_7 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs();
 			i_8 = class282_sub48_5.aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597();

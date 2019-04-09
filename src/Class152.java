@@ -186,7 +186,7 @@ public abstract class Class152 {
 						LoadingStage.method6681(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592), (byte) 58);
 					} else {
 						BufferedConnectionContext class184_7 = Class468_Sub20.method12807(1188178835);
-						TCPPacket tcpmessage_9 = Class271.method4828(OutgoingPacket.aClass379_4553, class184_7.isaac, 564733792);
+						TCPPacket tcpmessage_9 = Class271.createPacket(OutgoingPacket.ADD_FRIEND, class184_7.isaac);
 						tcpmessage_9.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_9.buffer.writeString(string_0);
 						class184_7.queuePacket(tcpmessage_9);

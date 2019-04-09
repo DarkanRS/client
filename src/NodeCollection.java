@@ -185,7 +185,7 @@ public class NodeCollection implements Iterable, Collection {
 		return this.tail.next == this.tail;
 	}
 
-	public Node head(byte b_1) {
+	public Node head() {
 		return this.method8076((Node) null);
 	}
 

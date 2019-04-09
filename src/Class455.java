@@ -2,10 +2,10 @@ public abstract class Class455 {
 
     public static short[] aShortArray5452;
 
-    static void method7553(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
+    static void iComponentOnIComponent(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
         if (client.aBool7344) {
-            ParamDefinitions attributedefault_4 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.anInt9319) : null;
-            if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.anInt5858 & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.anInt9319, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
+            ParamDefinitions attributedefault_4 = Class96_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.USE_INTERFACE_ID) : null;
+            if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.USE_OPTIONS_FLAGS & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.USE_INTERFACE_ID, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
                 PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.aString1369, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1704442537);
             }
         }

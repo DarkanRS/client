@@ -15,7 +15,7 @@ public class Class151 {
             Class448.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
             int i_3 = 0;
             for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {
-                WorldDescriptor world = ObjectIndexLoader.method7916(i_4, 241978983);
+                WorldDescriptor world = ObjectIndexLoader.getWorld(i_4);
                 if (world != null) {
                     Class448.WORLD_DESCRIPTORS_BYID[i_3++] = world;
                 }
@@ -38,14 +38,14 @@ public class Class151 {
                     CS2Executor.executeHookInner200k(hookrequest_3, 1791224764);
                 }
             }
-            TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4573, client.aClass184_7475.isaac, 891007251);
+            TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_ICOMPONENT, client.outputContext.isaac);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345, (short) -9723);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
             tcpmessage_4.buffer.writeLEInt(icomponentdefinitions_0.idHash, (byte) 89);
             tcpmessage_4.buffer.writeIntV2(Class7.anInt56);
             tcpmessage_4.buffer.writeShortLE(client.anInt7346, (short) -1117);
-            client.aClass184_7475.queuePacket(tcpmessage_4);
+            client.outputContext.queuePacket(tcpmessage_4);
         }
     }
 
@@ -87,8 +87,8 @@ public class Class151 {
 
     static final void method2592(byte b_0) {
         if (!Class282_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState)) {
-            ClanVarSettingsIndexLoader.aClass202_2883 = client.aClass184_7475.getConnection();
-            client.aClass184_7475.method3061(-1872117357);
+            ClanVarSettingsIndexLoader.aClass202_2883 = client.outputContext.getConnection();
+            client.outputContext.method3061(-1872117357);
             Class365.setGameState(10);
         } else {
             CursorIndexLoader.method7333(false, 2084407063);

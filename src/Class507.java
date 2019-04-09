@@ -54,7 +54,7 @@ public class Class507 {
 				client.anInt3243 = client.anInt7312 * -1929118563;
 				client.anInt3251 = 0;
 			}
-			if (HDWaterTile.aClass496_952 != Class496.aClass496_5813 && Class349.anInt4083 < 1024) {
+			if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813 && Class349.anInt4083 < 1024) {
 				int i_10000 = client.anInt3243;
 			}
 			if (!bool_4) {
@@ -78,7 +78,7 @@ public class Class507 {
 			if (client.anInt7349 != -1) {
 				Class516.method8867(true);
 			}
-			if (client.aClass184_7475.getConnection() != null && TextureDetails.method2875(client.gameState, -2070106492)) {
+			if (client.outputContext.getConnection() != null && TextureDetails.method2875(client.gameState, -2070106492)) {
 				Class388.method6692(529242177);
 			}
 			for (int i_8 = 0; i_8 < 107; i_8++) {

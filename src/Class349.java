@@ -32,7 +32,7 @@ public class Class349 {
 
     public void method6179(ClanChannel class282_sub4_1) {
         if (class282_sub4_1.data == this.aLong4081 && class282_sub4_1.nextUpdateNumber == this.aLong4077) {
-            for (Class282_Sub11 class282_sub11_3 = (Class282_Sub11) this.aClass482_4076.head((byte) 71); class282_sub11_3 != null; class282_sub11_3 = (Class282_Sub11) this.aClass482_4076.next(2116443073)) {
+            for (Class282_Sub11 class282_sub11_3 = (Class282_Sub11) this.aClass482_4076.head(); class282_sub11_3 != null; class282_sub11_3 = (Class282_Sub11) this.aClass482_4076.next(2116443073)) {
                 class282_sub11_3.method12204(class282_sub4_1);
             }
             ++class282_sub4_1.nextUpdateNumber;

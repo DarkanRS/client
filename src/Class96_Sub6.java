@@ -1,15 +1,10 @@
 public class Class96_Sub6 extends CutsceneAction {
 
 	static boolean aBool9173;
-
 	int anInt9170;
-
 	int anInt9169;
-
 	int anInt9168;
-
 	int anInt9171;
-
 	int anInt9172;
 
 	Class96_Sub6(RsByteBuffer rsbytebuffer_1) {
@@ -28,9 +23,5 @@ public class Class96_Sub6 extends CutsceneAction {
 
 	public void method1601() {
 		Class86.aClass92Array820[848428857 * this.anInt9170 * 1418149641].method1559(this.anInt9171 * 10301909 * 376340349, -916997341 * this.anInt9169 * 1332038795, -1710403859 * this.anInt9168 * -2105065755, this.anInt9172 * -781329023 * -2066193791, (byte) 30);
-	}
-
-	static final int getUseOptionFlags(int settings) {
-		return settings >> 11 & 0x7f;
 	}
 }

@@ -214,7 +214,7 @@ public class Class299 implements Interface27 {
 
 	public static void method5313(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		Class282_Sub31 class282_sub31_8 = null;
-		for (Class282_Sub31 class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 122); class282_sub31_9 != null; class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-848062278)) {
+		for (Class282_Sub31 class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head(); class282_sub31_9 != null; class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-848062278)) {
 			if (i_0 == class282_sub31_9.anInt7764 && class282_sub31_9.anInt7762 == i_1 && i_2 == class282_sub31_9.anInt7763 && i_3 == class282_sub31_9.anInt7766) {
 				class282_sub31_8 = class282_sub31_9;
 				break;

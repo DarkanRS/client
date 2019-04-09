@@ -3262,7 +3262,7 @@ public class CS2Interpreter {
 						client.anInt7280 = i_5;
 						NativeLibraryLoader.anInt3240 = 3;
 						Class86.anInt833 = -1;
-						Class508.anInt5864 = -1;
+						PingRequester.anInt5864 = -1;
 					}
 				}
 			}
@@ -3439,7 +3439,7 @@ public class CS2Interpreter {
 
 	static final void method468(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(461566707);
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, 1283884802);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(2);
@@ -3758,7 +3758,7 @@ public class CS2Interpreter {
 		boolean bool_3 = executor.intStack[executor.intStackPtr] == 1;
 		boolean bool_4 = executor.intStack[executor.intStackPtr + 1] == 1;
 		boolean bool_5 = executor.intStack[executor.intStackPtr + 2] == 1;
-		TCPPacket tcpmessage_6 = Class271.method4828(OutgoingPacket.aClass379_4619, client.connectionContext.isaac, -685598433);
+		TCPPacket tcpmessage_6 = Class271.createPacket(OutgoingPacket.aClass379_4619, client.connectionContext.isaac);
 		tcpmessage_6.buffer.writeShort(ChatLine.getLength(string_2) + 1);
 		tcpmessage_6.buffer.writeString(string_2);
 		int i_7 = 0;
@@ -4424,7 +4424,7 @@ public class CS2Interpreter {
 
 	static final void method1387(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		WorldDescriptor class217_sub1_3 = ObjectIndexLoader.method7916(i_2, 1517040496);
+		WorldDescriptor class217_sub1_3 = ObjectIndexLoader.getWorld(i_2);
 		if (class217_sub1_3 != null) {
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.flags;
 			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.unknown;
@@ -4432,7 +4432,7 @@ public class CS2Interpreter {
 			executor.intStack[++executor.intStackPtr - 1] = class213_4.countryId;
 			executor.stringStack[++executor.stringStackPtr - 1] = class213_4.activity;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.playerCount;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.anInt7978;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_3.ping;
 			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_3.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
@@ -4835,9 +4835,9 @@ public class CS2Interpreter {
 		if (Class115.method1950(string_2, -1586612370)) {
 			i_3 = Class328.parseInt(string_2, 1827486792);
 		}
-		TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4585, client.aClass184_7475.isaac, 1022314002);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.INPUT_INTEGER, client.outputContext.isaac);
 		tcpmessage_4.buffer.writeInt(i_3);
-		client.aClass184_7475.queuePacket(tcpmessage_4);
+		client.outputContext.queuePacket(tcpmessage_4);
 	}
 
 	static final void pushLong(CS2Executor executor) {
@@ -4887,10 +4887,10 @@ public class CS2Interpreter {
 
 	static final void method2870(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4596, client.aClass184_7475.isaac, 1814841723);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4596, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
-		client.aClass184_7475.queuePacket(tcpmessage_3);
+		client.outputContext.queuePacket(tcpmessage_3);
 	}
 
 	static final void method2871(CS2Executor executor) {
@@ -4972,7 +4972,7 @@ public class CS2Interpreter {
 
 	static final void method3921(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1070075874);
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, 1590511706);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(1);
@@ -5188,7 +5188,7 @@ public class CS2Interpreter {
 				client.aByte7458 = -4;
 			} else {
 				client.aByte7458 = -1;
-				TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4624, client.connectionContext.isaac, 1473933655);
+				TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4624, client.connectionContext.isaac);
 				tcpmessage_3.buffer.writeByte(0);
 				int i_4 = tcpmessage_3.buffer.index;
 				tcpmessage_3.buffer.writeString(string_2);
@@ -5345,7 +5345,7 @@ public class CS2Interpreter {
 
 	static final void method6315(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1148731547);
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, 213013153);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(0);
@@ -5390,7 +5390,7 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_5 = Index.method5694(i_2 << 16 | i_3, i_4, -1458346299);
 		Class60.method1170();
 		IComponentSettings class282_sub10_6 = client.method11633(icomponentdefinitions_5);
-		Class304.method5409(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.interfaceId, (byte) -101);
+		Class304.setUseOptionFlags(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.interfaceId, (byte) -101);
 	}
 
 	static final void method1140(CS2Executor executor) {
@@ -6127,7 +6127,7 @@ public class CS2Interpreter {
 		client.anInt7376 = (i_4 << 9) + 256;
 		NativeLibraryLoader.anInt3240 = 4;
 		Class86.anInt833 = -1;
-		Class508.anInt5864 = -1;
+		PingRequester.anInt5864 = -1;
 	}
 
 	static final void method11440(CS2Executor executor) {
@@ -6991,10 +6991,10 @@ public class CS2Interpreter {
 	}
 
 	static final void method5046(CS2Executor executor) {
-		if (Class149_Sub2.aClass461_9316 == null) {
+		if (Class149_Sub2.FRIEND_STATUS == null) {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class149_Sub2.aClass461_9316.anInt5541;
+			executor.intStack[++executor.intStackPtr - 1] = Class149_Sub2.FRIEND_STATUS.id;
 		}
 	}
 
@@ -7095,7 +7095,7 @@ public class CS2Interpreter {
 
 	static final void method11594(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4579, client.connectionContext.isaac, 1692651039);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.INPUT_STRING, client.connectionContext.isaac);
 		tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_2));
 		tcpmessage_3.buffer.writeString(string_2);
 		client.connectionContext.queuePacket(tcpmessage_3);
@@ -7217,7 +7217,7 @@ public class CS2Interpreter {
 				executor.intStack[++executor.intStackPtr - 1] = 1;
 			} else {
 				Class448.aBool5422 = true;
-				TCPPacket tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4613, client.connectionContext.isaac, 1318116976);
+				TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.REQUEST_WORLD_LIST, client.connectionContext.isaac);
 				tcpmessage_2.buffer.writeInt(MapSpriteDefinitions.WORLD_LIST_IDK);
 				client.connectionContext.queuePacket(tcpmessage_2);
 				executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -7804,10 +7804,10 @@ public class CS2Interpreter {
 
 	static final void method4197(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4614, client.aClass184_7475.isaac, 1498065982);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.INPUT_LONG_TEXT, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
-		client.aClass184_7475.queuePacket(tcpmessage_3);
+		client.outputContext.queuePacket(tcpmessage_3);
 	}
 
 	static final void method1456(CS2Executor executor) {
@@ -7973,7 +7973,7 @@ public class CS2Interpreter {
 	static final void method6005(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		BufferedConnectionContext class184_3 = Class468_Sub20.method12807(-1949417532);
-		TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4557, class184_3.isaac, 502225021);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.CHAT_TYPE, class184_3.isaac);
 		tcpmessage_4.buffer.writeByte(i_2);
 		class184_3.queuePacket(tcpmessage_4);
 	}
@@ -7993,7 +7993,7 @@ public class CS2Interpreter {
 			executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
 			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt7978;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.ping;
 			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
@@ -8021,7 +8021,7 @@ public class CS2Interpreter {
 			string_3 = string_3.substring(0, 80);
 		}
 		BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-837831842);
-		TCPPacket tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4611, class184_6.isaac, -589637310);
+		TCPPacket tcpmessage_7 = Class271.createPacket(OutgoingPacket.REPORT_ABUSE, class184_6.isaac);
 		tcpmessage_7.buffer.writeByte(ChatLine.getLength(string_2) + 2 + ChatLine.getLength(string_3));
 		tcpmessage_7.buffer.writeString(string_2);
 		tcpmessage_7.buffer.writeByte(i_4 - 1);
@@ -8079,10 +8079,10 @@ public class CS2Interpreter {
 			} else if (i_4 >= IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				i_4 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 			}
-			Class508.anInt5864 = (i_3 << 9) + 256;
+			PingRequester.anInt5864 = (i_3 << 9) + 256;
 			Class86.anInt833 = (i_4 << 9) + 256;
 		} else {
-			Class508.anInt5864 = -1;
+			PingRequester.anInt5864 = -1;
 			Class86.anInt833 = -1;
 		}
 	}
@@ -8180,7 +8180,7 @@ public class CS2Interpreter {
 			executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
 			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.anInt7978;
+			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.ping;
 			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
@@ -8578,7 +8578,7 @@ public class CS2Interpreter {
 
 	static final void method1603(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-846822027);
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4591, class184_2.isaac, -312926267);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(3);
@@ -8610,10 +8610,10 @@ public class CS2Interpreter {
 
 	static final void method5786(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4607, client.aClass184_7475.isaac, 1863419528);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.INPUT_NAME, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
-		client.aClass184_7475.queuePacket(tcpmessage_3);
+		client.outputContext.queuePacket(tcpmessage_3);
 	}
 
 	static final void method5788(CS2Executor executor) {
@@ -9354,7 +9354,7 @@ public class CS2Interpreter {
 	static final void method8296(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		BufferedConnectionContext class184_3 = Class468_Sub20.method12807(-625511967);
-		TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4541, class184_3.isaac, 103463045);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.SEND_FRIENDS_QUICKCHAT, class184_3.isaac);
 		tcpmessage_4.buffer.writeByte(0);
 		int i_5 = tcpmessage_4.buffer.index;
 		tcpmessage_4.buffer.writeString(string_2);
@@ -9502,9 +9502,9 @@ public class CS2Interpreter {
 
 	static final void method12841(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4544, client.aClass184_7475.isaac, 443775606);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.GRAND_EXCHANGE_ITEM_SELECT, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeShort(i_2);
-		client.aClass184_7475.queuePacket(tcpmessage_3);
+		client.outputContext.queuePacket(tcpmessage_3);
 	}
 
 	static final void method456(CS2Executor executor) {
@@ -9578,7 +9578,7 @@ public class CS2Interpreter {
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
 		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
 			BufferedConnectionContext class184_4 = Class468_Sub20.method12807(65699692);
-			TCPPacket tcpmessage_5 = Class271.method4828(OutgoingPacket.aClass379_4542, class184_4.isaac, 1733219960);
+			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.SEND_FRIENDS_CHAT_MESSAGE, class184_4.isaac);
 			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_2);
@@ -9702,7 +9702,7 @@ public class CS2Interpreter {
 	static final void method7501(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4558, client.connectionContext.isaac, -375525383);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.aClass379_4558, client.connectionContext.isaac);
 		tcpmessage_4.buffer.writeShort(ChatLine.getLength(string_2) + ChatLine.getLength(string_3));
 		tcpmessage_4.buffer.writeString(string_2);
 		tcpmessage_4.buffer.writeString(string_3);
@@ -10044,7 +10044,7 @@ public class CS2Interpreter {
 				}
 			}
 			BufferedConnectionContext class184_6 = Class468_Sub20.method12807(-1317872697);
-			TCPPacket tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4538, class184_6.isaac, 1631130061);
+			TCPPacket tcpmessage_7 = Class271.createPacket(OutgoingPacket.CHAT, class184_6.isaac);
 			tcpmessage_7.buffer.writeByte(0);
 			int i_8 = tcpmessage_7.buffer.index;
 			tcpmessage_7.buffer.writeByte(b_4);
@@ -10321,15 +10321,15 @@ public class CS2Interpreter {
 	static final void method11371(CS2Executor executor) {
 		executor.intStackPtr -= 3;
 		client.anInt7416 = executor.intStack[executor.intStackPtr];
-		Class149_Sub2.aClass461_9316 = Class246.method4203(executor.intStack[executor.intStackPtr + 1]);
-		if (Class149_Sub2.aClass461_9316 == null) {
-			Class149_Sub2.aClass461_9316 = Class461.aClass461_5539;
+		Class149_Sub2.FRIEND_STATUS = Class246.getFriendStatus(executor.intStack[executor.intStackPtr + 1]);
+		if (Class149_Sub2.FRIEND_STATUS == null) {
+			Class149_Sub2.FRIEND_STATUS = FriendStatus.FRIENDS_ONLY;
 		}
 		client.anInt7422 = executor.intStack[executor.intStackPtr + 2];
 		BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-405485002);
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4547, class184_2.isaac, 984159932);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.UPDATE_FRIEND_STATUS, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(client.anInt7416);
-		tcpmessage_3.buffer.writeByte(Class149_Sub2.aClass461_9316.anInt5541);
+		tcpmessage_3.buffer.writeByte(Class149_Sub2.FRIEND_STATUS.id);
 		tcpmessage_3.buffer.writeByte(client.anInt7422);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -10389,9 +10389,9 @@ public class CS2Interpreter {
 
 	static final void method2072(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4566, client.aClass184_7475.isaac, 1473230180);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.COLOR_PICKER_RESULT, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeShort(i_2);
-		client.aClass184_7475.queuePacket(tcpmessage_3);
+		client.outputContext.queuePacket(tcpmessage_3);
 	}
 
 	static final void storeVarpbit(CS2Executor executor) {

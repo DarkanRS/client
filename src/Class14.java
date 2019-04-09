@@ -12,12 +12,12 @@ public class Class14 {
 
 	static void method537() {
 		Class9.lobbyStage = 273;
-		Class9.aClass184_73 = client.aClass184_7475;
+		Class9.aClass184_73 = client.outputContext;
 		Class455.method7558(Class9.aLong77 == -1L, true, "", "", Class9.aLong77);
 	}
 
 	static final void decodeMasks() {
-		RsBitsBuffer buffer = client.aClass184_7475.recievedBuffer;
+		RsBitsBuffer buffer = client.outputContext.recievedBuffer;
 		for (int i_1 = 0; i_1 < client.npcListSize; i_1++) {
 			int i_2 = client.NPC_INDICES[i_1];
 			NPC npc = (NPC) ((Class282_Sub47) client.NPCS.get((long) i_2)).anObject8068;

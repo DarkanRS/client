@@ -353,7 +353,7 @@ public class Player extends Animable {
 			JS5CacheFile.method3359();
 		}
 
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952 && i_13 < 50) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 && i_13 < 50) {
 			int i_14;
 			for (i_14 = 50 - i_13; i_14 > client.anInt7173; client.anInt7173++) {
 				Class339.aByteArrayArray3986[client.anInt7173] = new byte[102400];
@@ -363,7 +363,7 @@ public class Player extends Animable {
 				--client.anInt7173;
 				Class339.aByteArrayArray3986[client.anInt7173] = null;
 			}
-		} else if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 			client.anInt7173 = 0;
 		}
@@ -813,7 +813,7 @@ public class Player extends Animable {
 		this.skullId = buffer.readByte();
 		this.headIconId = buffer.readByte();
 		this.hidden = buffer.readByte() == 1;
-		if (Class496.aClass496_5813 == HDWaterTile.aClass496_952 && client.rights >= 2) {
+		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952 && client.rights >= 2) {
 			this.hidden = false;
 		}
 

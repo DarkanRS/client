@@ -7,7 +7,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12242(int[] ints_1, int i_2, int i_3) {
 		this.aClass282_Sub15_Sub4_9755.method12230(ints_1, i_2, i_3);
 
-		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head((byte) 9); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(170364017)) {
+		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(170364017)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_4, 2059938362)) {
 				int i_5 = i_2;
 				int i_6 = i_3;
@@ -29,7 +29,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12226() {
-		Class282_Sub13 class282_sub13_1 = (Class282_Sub13) this.aClass482_9754.head((byte) 120);
+		Class282_Sub13 class282_sub13_1 = (Class282_Sub13) this.aClass482_9754.head();
 		return (Class282_Sub15) (class282_sub13_1 == null ? null : (class282_sub13_1.aClass282_Sub15_Sub5_7568 != null ? class282_sub13_1.aClass282_Sub15_Sub5_7568 : this.method12239()));
 	}
 
@@ -40,7 +40,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12230(int[] ints_1, int i_2, int i_3) {
 		this.aClass282_Sub15_Sub4_9755.method12230(ints_1, i_2, i_3);
 
-		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head((byte) 60); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(-503729338)) {
+		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(-503729338)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_4, 2021322787)) {
 				int i_5 = i_2;
 				int i_6 = i_3;
@@ -62,7 +62,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12233() {
-		Class282_Sub13 class282_sub13_1 = (Class282_Sub13) this.aClass482_9754.head((byte) 41);
+		Class282_Sub13 class282_sub13_1 = (Class282_Sub13) this.aClass482_9754.head();
 		return (Class282_Sub15) (class282_sub13_1 == null ? null : (class282_sub13_1.aClass282_Sub15_Sub5_7568 != null ? class282_sub13_1.aClass282_Sub15_Sub5_7568 : this.method12239()));
 	}
 
@@ -92,7 +92,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12232() {
-		Class282_Sub13 class282_sub13_1 = (Class282_Sub13) this.aClass482_9754.head((byte) 77);
+		Class282_Sub13 class282_sub13_1 = (Class282_Sub13) this.aClass482_9754.head();
 		return (Class282_Sub15) (class282_sub13_1 == null ? null : (class282_sub13_1.aClass282_Sub15_Sub5_7568 != null ? class282_sub13_1.aClass282_Sub15_Sub5_7568 : this.method12239()));
 	}
 
@@ -196,7 +196,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12241(int[] ints_1, int i_2, int i_3) {
 		this.aClass282_Sub15_Sub4_9755.method12230(ints_1, i_2, i_3);
 
-		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head((byte) 61); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(1821407871)) {
+		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(1821407871)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_4, 1864764119)) {
 				int i_5 = i_2;
 				int i_6 = i_3;
@@ -232,7 +232,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12243(int i_1) {
 		this.aClass282_Sub15_Sub4_9755.method12231(i_1);
 
-		for (Class282_Sub13 class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.head((byte) 48); class282_sub13_2 != null; class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.next(-370103133)) {
+		for (Class282_Sub13 class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_2 != null; class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.next(-370103133)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_2, 2054111295)) {
 				int i_3 = i_1;
 
@@ -254,7 +254,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12234(int i_1) {
 		this.aClass282_Sub15_Sub4_9755.method12231(i_1);
 
-		for (Class282_Sub13 class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.head((byte) 61); class282_sub13_2 != null; class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.next(1963194555)) {
+		for (Class282_Sub13 class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_2 != null; class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.next(1963194555)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_2, 1966927188)) {
 				int i_3 = i_1;
 
@@ -280,7 +280,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12231(int i_1) {
 		this.aClass282_Sub15_Sub4_9755.method12231(i_1);
 
-		for (Class282_Sub13 class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.head((byte) 104); class282_sub13_2 != null; class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.next(1065777410)) {
+		for (Class282_Sub13 class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_2 != null; class282_sub13_2 = (Class282_Sub13) this.aClass482_9754.next(1065777410)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_2, 2094163441)) {
 				int i_3 = i_1;
 
@@ -302,7 +302,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	void method12240(int[] ints_1, int i_2, int i_3) {
 		this.aClass282_Sub15_Sub4_9755.method12230(ints_1, i_2, i_3);
 
-		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head((byte) 70); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(2023134706)) {
+		for (Class282_Sub13 class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.head(); class282_sub13_4 != null; class282_sub13_4 = (Class282_Sub13) this.aClass482_9754.next(2023134706)) {
 			if (!this.aClass282_Sub15_Sub2_9753.method15115(class282_sub13_4, 1817142568)) {
 				int i_5 = i_2;
 				int i_6 = i_3;

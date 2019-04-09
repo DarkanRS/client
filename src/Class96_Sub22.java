@@ -27,10 +27,10 @@ public class Class96_Sub22 extends CutsceneAction {
         class93_2.method1566(class75_1, this.anInt9441 * 579947685 * -851068115, -1235876637);
     }
 
-    static void method14678(Player player_0, boolean bool_1) {
+    static void iComponentOnPlayer(Player player_0, boolean bool_1) {
         if (Class20.anInt169 < 412) {
             if (VertexNormal.myPlayer == player_0) {
-                if (client.aBool7344 && (Class506.anInt5858 & 0x10) != 0) {
+                if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0) {
                     PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.index, false, -1931180359);
                 }
             } else {
@@ -58,7 +58,7 @@ public class Class96_Sub22 extends CutsceneAction {
                 } else {
                     string_3 = player_0.method16127(1967945336) + " (" + Message.SKILL_.translate(Class223.CURRENT_LANGUAGE, -871379797) + player_0.anInt10556 + ")";
                 }
-                if (client.aBool7344 && !bool_1 && (Class506.anInt5858 & 0x8) != 0) {
+                if (client.aBool7344 && !bool_1 && (Class506.USE_OPTIONS_FLAGS & 0x8) != 0) {
                     PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1521566355);
                 }
                 if (bool_1) {
@@ -90,8 +90,8 @@ public class Class96_Sub22 extends CutsceneAction {
                     }
                 }
                 if (!bool_1) {
-                    for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 114); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1246744595)) {
-                        if (class282_sub50_sub7_9.anInt9587 == 23) {
+                    for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1246744595)) {
+                        if (class282_sub50_sub7_9.clickType == 23) {
                             class282_sub50_sub7_9.aString9585 = ParticleProducerDefinition.method1163(16777215) + string_3;
                             break;
                         }

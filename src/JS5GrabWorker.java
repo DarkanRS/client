@@ -47,7 +47,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void method5812(int i_1) {
 		if (this.dataFile != null) {
 			Node node_2;
-			for (node_2 = this.aClass482_7807.head((byte) 23); node_2 != null; node_2 = this.aClass482_7807.next(290181019)) {
+			for (node_2 = this.aClass482_7807.head(); node_2 != null; node_2 = this.aClass482_7807.next(290181019)) {
 				if (-3442165056282524525L * node_2.data * -1253863389874800229L == (long) i_1) {
 					return;
 				}
@@ -117,7 +117,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 
 	void processCheck() {
 		if (this.coll != null && this.getReferenceTable(-2030640343) != null) {
-			for (Node node_2 = this.aClass482_7807.head((byte) 69); node_2 != null; node_2 = this.aClass482_7807.next(-235017563)) {
+			for (Node node_2 = this.aClass482_7807.head(); node_2 != null; node_2 = this.aClass482_7807.next(-235017563)) {
 				int i_3 = (int) node_2.data;
 				if (i_3 >= 0 && i_3 < this.table.archiveCount && this.table.validFileIdSizes[i_3] != 0) {
 					if (this.aByteArray7792[i_3] == 0) {
@@ -139,7 +139,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void method5805(int i_1) {
 		if (this.dataFile != null) {
 			Node node_3;
-			for (node_3 = this.aClass482_7807.head((byte) 115); node_3 != null; node_3 = this.aClass482_7807.next(-1039604534)) {
+			for (node_3 = this.aClass482_7807.head(); node_3 != null; node_3 = this.aClass482_7807.next(-1039604534)) {
 				if (node_3.data == (long) i_1) {
 					return;
 				}
@@ -389,7 +389,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void method5808(int i_1) {
 		if (this.dataFile != null) {
 			Node node_2;
-			for (node_2 = this.aClass482_7807.head((byte) 28); node_2 != null; node_2 = this.aClass482_7807.next(978707001)) {
+			for (node_2 = this.aClass482_7807.head(); node_2 != null; node_2 = this.aClass482_7807.next(978707001)) {
 				if (-3442165056282524525L * node_2.data * -1253863389874800229L == (long) i_1) {
 					return;
 				}
@@ -421,7 +421,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			boolean bool_5;
 			if (this.hasDataFile) {
 				bool_5 = true;
-				for (node_3 = this.coll.head((byte) 124); node_3 != null; node_3 = this.coll.next(328179980)) {
+				for (node_3 = this.coll.head(); node_3 != null; node_3 = this.coll.next(328179980)) {
 					i_4 = (int) node_3.data;
 					if (this.aByteArray7792[i_4] == 0) {
 						this.method12546(i_4, 1, -1048339107);
@@ -458,7 +458,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				}
 			} else if (this.aBool7795) {
 				bool_5 = true;
-				for (node_3 = this.coll.head((byte) 13); node_3 != null; node_3 = this.coll.next(392865935)) {
+				for (node_3 = this.coll.head(); node_3 != null; node_3 = this.coll.next(392865935)) {
 					i_4 = (int) node_3.data;
 					if (this.aByteArray7792[i_4] != 1) {
 						this.method12546(i_4, 2, -1651626518);
@@ -520,7 +520,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		} else if (!this.hasDataFile) {
 			return this.table.numValidArchives;
 		} else {
-			Node node_2 = this.coll.head((byte) 11);
+			Node node_2 = this.coll.head();
 			return node_2 == null ? 0 : (int) node_2.data;
 		}
 	}
@@ -529,10 +529,10 @@ public class JS5GrabWorker extends JS5FileWorker {
 		if (AccountCreationStage.aClass282_Sub50_Sub7_12 == null) {
 			return false;
 		} else {
-			if (AccountCreationStage.aClass282_Sub50_Sub7_12.anInt9587 >= 2000) {
-				AccountCreationStage.aClass282_Sub50_Sub7_12.anInt9587 -= 2000;
+			if (AccountCreationStage.aClass282_Sub50_Sub7_12.clickType >= 2000) {
+				AccountCreationStage.aClass282_Sub50_Sub7_12.clickType -= 2000;
 			}
-			return AccountCreationStage.aClass282_Sub50_Sub7_12.anInt9587 == 1007;
+			return AccountCreationStage.aClass282_Sub50_Sub7_12.clickType == 1007;
 		}
 	}
 }

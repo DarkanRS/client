@@ -159,7 +159,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4507 = new IncomingPacket(156, -2);
 	public static IncomingPacket aClass375_4508 = new IncomingPacket(157, 4);
 	public static IncomingPacket aClass375_4379 = new IncomingPacket(158, 10);
-	public static IncomingPacket aClass375_4405 = new IncomingPacket(159, 8);
+	public static IncomingPacket REQUEST_FPS = new IncomingPacket(159, 8);
 	public static IncomingPacket GAME_MESSAGE = new IncomingPacket(160, -1);
 	public static IncomingPacket aClass375_4459 = new IncomingPacket(161, -1);
 

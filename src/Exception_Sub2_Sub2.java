@@ -5,7 +5,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 	}
 
 	static final void decodeAddRemove() {
-		RsBitsBuffer buffer = client.aClass184_7475.recievedBuffer;
+		RsBitsBuffer buffer = client.outputContext.recievedBuffer;
 		buffer.initBitAccess((byte) 104);
 		int size = buffer.readBits(8);
 		int i;

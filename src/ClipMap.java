@@ -777,7 +777,7 @@ public class ClipMap {
 
     public static void method6008(boolean bool_0) {
         Class282_Sub48 class282_sub48_2;
-        for (class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 38); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-128319020)) {
+        for (class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head(); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-128319020)) {
             if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
                 Class79.aClass282_Sub15_Sub4_783.method15276(class282_sub48_2.aClass282_Sub15_Sub5_8099);
                 class282_sub48_2.aClass282_Sub15_Sub5_8099 = null;
@@ -789,7 +789,7 @@ public class ClipMap {
             class282_sub48_2.remove();
         }
         if (bool_0) {
-            for (class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 121); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(-938773769)) {
+            for (class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(-938773769)) {
                 if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
                     Class79.aClass282_Sub15_Sub4_783.method15276(class282_sub48_2.aClass282_Sub15_Sub5_8099);
                     class282_sub48_2.aClass282_Sub15_Sub5_8099 = null;

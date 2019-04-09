@@ -1,6 +1,6 @@
 public class Class435 {
 
-	static NodeCollection aClass482_5332 = new NodeCollection();
+	static NodeCollection PENDING_REFLECTION_CHECKS = new NodeCollection();
 
 	Class435() throws Throwable {
 		throw new Error();

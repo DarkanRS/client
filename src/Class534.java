@@ -143,7 +143,7 @@ public abstract class Class534 {
 				tcpmessage_2.buffer.writeByte(i_4 / i_5);
 				tcpmessage_2.buffer.writeByte(i_4 % i_5);
 				tcpmessage_2.buffer.index = i_7;
-				client.aClass184_7475.queuePacket(tcpmessage_2);
+				client.outputContext.queuePacket(tcpmessage_2);
 			}
 		}
 		this.method11414();

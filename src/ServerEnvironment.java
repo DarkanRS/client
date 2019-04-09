@@ -1,20 +1,12 @@
-public class Class496 implements Identifiable {
+public class ServerEnvironment implements Identifiable {
 
-    static Class510 aClass510_5816;
-
-    public static Class496 aClass496_5810 = new Class496("LOCAL", "", 4);
-
-    public static Class496 aClass496_5807 = new Class496("WTWIP", "", 3);
-
-    public static Class496 aClass496_5809 = new Class496("WTI", "", 5);
-
-    public static Class496 aClass496_5808 = new Class496("WTQA", "", 2);
-
-    public static Class496 aClass496_5811 = new Class496("WTRC", "", 1);
-
-    static Class496 aClass496_5812 = new Class496("INTBETA", "", 6);
-
-    public static Class496 aClass496_5813 = new Class496("LIVE", "", 0);
+    public static ServerEnvironment aClass496_5810 = new ServerEnvironment("LOCAL", "", 4);
+    public static ServerEnvironment aClass496_5807 = new ServerEnvironment("WTWIP", "", 3);
+    public static ServerEnvironment aClass496_5809 = new ServerEnvironment("WTI", "", 5);
+    public static ServerEnvironment aClass496_5808 = new ServerEnvironment("WTQA", "", 2);
+    public static ServerEnvironment aClass496_5811 = new ServerEnvironment("WTRC", "", 1);
+    public static ServerEnvironment aClass496_5812 = new ServerEnvironment("INTBETA", "", 6);
+    public static ServerEnvironment aClass496_5813 = new ServerEnvironment("LIVE", "", 0);
 
     String aString5815;
 
@@ -24,13 +16,13 @@ public class Class496 implements Identifiable {
         method8299();
     }
 
-    Class496(String string_1, String string_2, int i_3) {
+    ServerEnvironment(String string_1, String string_2, int i_3) {
         this.aString5815 = string_1;
         this.anInt5814 = i_3;
     }
 
-    public static Class496[] method8299() {
-        return new Class496[] { aClass496_5807, aClass496_5810, aClass496_5813, aClass496_5812, aClass496_5809, aClass496_5811, aClass496_5808 };
+    public static ServerEnvironment[] method8299() {
+        return new ServerEnvironment[] { aClass496_5807, aClass496_5810, aClass496_5813, aClass496_5812, aClass496_5809, aClass496_5811, aClass496_5808 };
     }
 
     public int method76() {
@@ -45,7 +37,7 @@ public class Class496 implements Identifiable {
         return this.anInt5814;
     }
 
-    public static boolean method8308(Class496 class496_0, int i_1) {
+    public static boolean method8308(ServerEnvironment class496_0, int i_1) {
         return aClass496_5811 == class496_0 || aClass496_5808 == class496_0 || aClass496_5807 == class496_0 || aClass496_5809 == class496_0 || aClass496_5812 == class496_0;
     }
 
@@ -105,7 +97,7 @@ public class Class496 implements Identifiable {
         if (client.anInt7349 != -1) {
             int i_1 = Class163.mouseRecorder.method3569(2131144344);
             int i_2 = Class163.mouseRecorder.method3570();
-            MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head((byte) 28);
+            MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head();
             if (class282_sub53_3 != null) {
                 i_1 = class282_sub53_3.method13481(1154972064);
                 i_2 = class282_sub53_3.method13469(1835497951);

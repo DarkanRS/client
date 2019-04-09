@@ -301,7 +301,7 @@ public class Class434_Sub1 extends Class434 {
 			if (class282_sub29_9 == null) {
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -259717537);
 			} else {
-				Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_9.aClass482_7708.head((byte) 115);
+				Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_9.aClass482_7708.head();
 				if (class282_sub34_10 == null) {
 					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -237481476);
 				} else {

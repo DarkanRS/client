@@ -15,13 +15,13 @@ public class Class105 {
 	}
 
 	static void method1804(int i_0, String string_1, String string_2) {
-		if (client.aClass184_7475 != null) {
-			TCPPacket tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4533, client.aClass184_7475.isaac, -368168097);
-			tcpmessage_4.buffer.writeShort(1 + ParticleTriangle.method3952(string_1, 1356057931) + ParticleTriangle.method3952(string_2, 876996155));
+		if (client.outputContext != null) {
+			TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.aClass379_4533, client.outputContext.isaac);
+			tcpmessage_4.buffer.writeShort(1 + Utils.stringLengthPlus2(string_1) + Utils.stringLengthPlus2(string_2));
 			tcpmessage_4.buffer.writeByte(i_0);
 			tcpmessage_4.buffer.writeJagString(string_2, 2115936374);
 			tcpmessage_4.buffer.writeJagString(string_1, 2111937462);
-			client.aClass184_7475.queuePacket(tcpmessage_4);
+			client.outputContext.queuePacket(tcpmessage_4);
 		}
 	}
 

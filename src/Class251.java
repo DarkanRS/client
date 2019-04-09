@@ -76,7 +76,7 @@ public final class Class251 {
 			Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -927245115), -314816204);
 			return;
 		}
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952 || client.rights >= 2) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 || client.rights >= 2) {
 			try {
 				if (string_0.equalsIgnoreCase("wm1")) {
 					Class440.method7373(1, -1, -1, false, (byte) 111);
@@ -149,7 +149,7 @@ public final class Class251 {
 						return;
 					}
 					String string_7 = string_0.substring(i_6 + 1).trim() + ".runescape.com";
-					Class496.method8314(string_7, i_10);
+					ServerEnvironment.method8314(string_7, i_10);
 					Class209.printConsoleMessage("Success", -226741800);
 					return;
 				}
@@ -217,7 +217,7 @@ public final class Class251 {
 					if (client.gameState == 13) {
 						Class151.method2592((byte) 34);
 					} else if (client.gameState == 18) {
-						client.aClass184_7475.aBool2298 = true;
+						client.outputContext.aBool2298 = true;
 					}
 					return;
 				}
@@ -302,12 +302,12 @@ public final class Class251 {
 					Class341.method6074(arr_12, 1579654554);
 				}
 				if (client.gameState == 13) {
-					TCPPacket tcpmessage_21 = Class271.method4828(OutgoingPacket.aClass379_4612, client.aClass184_7475.isaac, 704086040);
+					TCPPacket tcpmessage_21 = Class271.createPacket(OutgoingPacket.COMMAND, client.outputContext.isaac);
 					tcpmessage_21.buffer.writeByte(string_0.length() + 3);
 					tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
 					tcpmessage_21.buffer.writeByte(bool_2 ? 1 : 0);
 					tcpmessage_21.buffer.writeString(string_0);
-					client.aClass184_7475.queuePacket(tcpmessage_21);
+					client.outputContext.queuePacket(tcpmessage_21);
 				}
 			} catch (Exception exception_18) {
 				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1449846660), -1151783606);

@@ -1,35 +1,19 @@
 public class ParticleTriangle {
-
 	int anInt2884;
-
 	int anInt2885;
-
 	int anInt2886;
-
 	int centerZ;
-
 	int anInt2888;
-
 	int anInt2889;
-
 	int anInt2890;
-
 	int anInt2891;
-
 	int centerY;
-
 	int anInt2893;
-
 	int centerX;
-
 	int anInt2895;
 
 	boolean equals(ParticleTriangle class234_1) {
 		return this.centerX == class234_1.centerX && this.centerZ == class234_1.centerZ && this.centerY == class234_1.centerY;
-	}
-
-	public static int method3952(String string_0, int i_1) {
-		return string_0.length() + 2;
 	}
 
 	public static void method3953() {

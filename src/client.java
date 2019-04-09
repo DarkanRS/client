@@ -88,11 +88,11 @@ public final class client extends Engine {
 	static int anInt7216 = 0;
 	static int[] anIntArray7421 = new int[1005];
 	public static BufferedConnectionContext connectionContext = new BufferedConnectionContext();
-	public static BufferedConnectionContext aClass184_7475 = new BufferedConnectionContext();
+	public static BufferedConnectionContext outputContext = new BufferedConnectionContext();
 	public static BufferedConnectionContext[] aClass184Array7220;
 	static int anInt7221;
 	static boolean aBool7459;
-	public static Class508 aClass508_7223;
+	public static PingRequester PING_REQUESTER;
 	public static volatile boolean aBool7225;
 	public static Object anObject7226;
 	public static Object anObject7227;
@@ -324,10 +324,10 @@ public final class client extends Engine {
 	}
 
 	static {
-		aClass184Array7220 = new BufferedConnectionContext[] { aClass184_7475, connectionContext };
+		aClass184Array7220 = new BufferedConnectionContext[] { outputContext, connectionContext };
 		anInt7221 = 0;
 		aBool7459 = false;
-		aClass508_7223 = new Class508();
+		PING_REQUESTER = new PingRequester();
 		IndexLoaders.MAP_REGION_DECODER = new MapRegion(false);
 		aBool7225 = false;
 		anObject7226 = new Object();
@@ -675,11 +675,11 @@ public final class client extends Engine {
 						anInt7149 = Integer.parseInt(string_7);
 						break;
 					case 24:
-						HDWaterTile.aClass496_952 = (Class496) Class386.identify(Class496.method8299(), Integer.parseInt(string_7));
-						if (Class496.aClass496_5810 == HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = Class496.aClass496_5807;
-						} else if (!Class496.method8308(HDWaterTile.aClass496_952, 1201911871) && Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = Class496.aClass496_5813;
+						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
+						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
+							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
+						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1201911871) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5813;
 						}
 						break;
 					case 25:
@@ -795,7 +795,7 @@ public final class client extends Engine {
 				aRandom7260.setSeed((long) PacketsDecoder.anInt9079);
 			}
 
-			aClass184_7475.method3059(-1650964006);
+			outputContext.method3059(-1650964006);
 			connectionContext.method3059(-1386724833);
 			this.method11622();
 			if (Class468_Sub9.JS5_MANAGER != null) {
@@ -887,7 +887,7 @@ public final class client extends Engine {
 						Class9.anInt107 = Class9.anInt106;
 						if (Class448.aBool5428) {
 							Class62.setGameHost(Class448.aClass450_5429.worldId, Class448.aClass450_5429.host);
-							aClass184_7475.method3061(-1506150960);
+							outputContext.method3061(-1506150960);
 							Class365.setGameState(10);
 						} else {
 							CursorIndexLoader.method7333(Class9.aBool71, 2069442218);
@@ -1634,7 +1634,7 @@ public final class client extends Engine {
 		Quaternion.method6493();
 		ItemDefinitions.method7141((byte) -88);
 		Class282_Sub41_Sub3.method14807(649907715);
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
@@ -1643,15 +1643,15 @@ public final class client extends Engine {
 			SceneObjectManager.aBool2644 = false;
 		}
 
-		if (Class496.aClass496_5813 == HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
 			Class448.aClass450_5420.host = Class282_Sub44.anApplet8065.getCodeBase().getHost();
-		} else if (Class496.method8308(HDWaterTile.aClass496_952, 739431588)) {
+		} else if (ServerEnvironment.method8308(HDWaterTile.aClass496_952, 739431588)) {
 			Class448.aClass450_5420.host = Class282_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = 1140744768 + -58916693 * Class448.aClass450_5420.worldId * -1933199413;
 			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1933199413 * -58916693 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
 			Class448.lobbyConnectionInfo.anInt5437 = (Class448.lobbyConnectionInfo.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
-		} else if (Class496.aClass496_5810 == HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
 			Class448.aClass450_5420.host = "127.0.0.1";
 			Class448.lobbyConnectionInfo.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = -58916693 * Class448.aClass450_5420.worldId * -1933199413 + 1140744768;
@@ -1675,7 +1675,7 @@ public final class client extends Engine {
 
 		Class96_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -44);
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			aBool7176 = true;
 		}
 
@@ -1797,7 +1797,7 @@ public final class client extends Engine {
 		Quaternion.method6493();
 		ItemDefinitions.method7141((byte) -10);
 		Class282_Sub41_Sub3.method14807(702651669);
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
@@ -1806,15 +1806,15 @@ public final class client extends Engine {
 			SceneObjectManager.aBool2644 = false;
 		}
 
-		if (Class496.aClass496_5813 == HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
 			Class448.aClass450_5420.host = Class282_Sub44.anApplet8065.getCodeBase().getHost();
-		} else if (Class496.method8308(HDWaterTile.aClass496_952, 1401692729)) {
+		} else if (ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1401692729)) {
 			Class448.aClass450_5420.host = Class282_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = 1140744768 + -58916693 * Class448.aClass450_5420.worldId * -1933199413;
 			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1933199413 * -58916693 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
 			Class448.lobbyConnectionInfo.anInt5437 = (Class448.lobbyConnectionInfo.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
-		} else if (Class496.aClass496_5810 == HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
 			Class448.aClass450_5420.host = "127.0.0.1";
 			Class448.lobbyConnectionInfo.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = -58916693 * Class448.aClass450_5420.worldId * -1933199413 + 1140744768;
@@ -1838,7 +1838,7 @@ public final class client extends Engine {
 
 		Class96_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -9);
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			aBool7176 = true;
 		}
 
@@ -1889,7 +1889,7 @@ public final class client extends Engine {
 
 					if (icomponentdefinitions_12.aBool1424 || i_15 < i_17 && i_16 < i_18) {
 						if (icomponentdefinitions_12.disableHover && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
-							for (HookRequest hookrequest_37 = (HookRequest) aClass482_7402.head((byte) 111); hookrequest_37 != null; hookrequest_37 = (HookRequest) aClass482_7402.next(999668227)) {
+							for (HookRequest hookrequest_37 = (HookRequest) aClass482_7402.head(); hookrequest_37 != null; hookrequest_37 = (HookRequest) aClass482_7402.next(999668227)) {
 								if (hookrequest_37.aBool8052) {
 									hookrequest_37.remove();
 									hookrequest_37.iComponentDefs.aBool1440 = false;
@@ -1941,7 +1941,7 @@ public final class client extends Engine {
 						}
 
 						if (!Class20.aBool161 && bool_48 && !interface_0.aBool999) {
-							Class455.method7553(icomponentdefinitions_12, i_9 - i_13, i_10 - i_14);
+							Class455.iComponentOnIComponent(icomponentdefinitions_12, i_9 - i_13, i_10 - i_14);
 						}
 
 						boolean bool_38 = false;
@@ -1950,7 +1950,7 @@ public final class client extends Engine {
 						}
 
 						boolean bool_49 = false;
-						MouseRecord class282_sub53_39 = (MouseRecord) mouseRecords.head((byte) 119);
+						MouseRecord class282_sub53_39 = (MouseRecord) mouseRecords.head();
 						int i_25;
 						int i_26;
 						int i_27;
@@ -2014,7 +2014,7 @@ public final class client extends Engine {
 									} else if (i_24 == 10) {
 										Class60.method1170();
 										IComponentSettings class282_sub10_41 = method11633(icomponentdefinitions_12);
-										Class304.method5409(icomponentdefinitions_12, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
+										Class304.setUseOptionFlags(icomponentdefinitions_12, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
 										aString7275 = Class346.method6157(icomponentdefinitions_12, 1492565193);
 										if (aString7275 == null) {
 											aString7275 = "Null";
@@ -2087,7 +2087,7 @@ public final class client extends Engine {
 									}
 
 									if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1372 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
-										Class521_Sub1_Sub4_Sub1.method16073(Renderers.SOFTWARE_RENDERER, i_9, i_10);
+										Class521_Sub1_Sub4_Sub1.iComponentOnGroundTile(Renderers.SOFTWARE_RENDERER, i_9, i_10);
 
 										for (Class275_Sub2 class275_sub2_57 = (Class275_Sub2) aClass457_7290.method7659(); class275_sub2_57 != null; class275_sub2_57 = (Class275_Sub2) aClass457_7290.method7650((byte) 102)) {
 											if (i_9 >= class275_sub2_57.anInt7742 && i_9 < class275_sub2_57.anInt7744 && i_10 >= class275_sub2_57.anInt7743 && i_10 < class275_sub2_57.anInt7740) {
@@ -2161,7 +2161,7 @@ public final class client extends Engine {
 										i_34 = ((int) vector3_36.z - i_45 >> 9) - (i_32 >> 2);
 									}
 
-									if (aBool7344 && (Class506.anInt5858 & 0x40) != 0) {
+									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
 										IComponentDefinitions icomponentdefinitions_35 = Index.method5694(Class7.anInt56, anInt7345, 381428528);
 										if (icomponentdefinitions_35 != null) {
 											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, icomponentdefinitions_12.anInt1426, 1L, i_33, i_34, true, false, (long) (icomponentdefinitions_12.anInt1288 << 32 | icomponentdefinitions_12.idHash), true, -1033171513);
@@ -2711,11 +2711,11 @@ public final class client extends Engine {
 						anInt7149 = Integer.parseInt(string_7) * 1564360473 * -1543197399;
 						break;
 					case 24:
-						HDWaterTile.aClass496_952 = (Class496) Class386.identify(Class496.method8299(), Integer.parseInt(string_7));
-						if (Class496.aClass496_5810 == HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = Class496.aClass496_5807;
-						} else if (!Class496.method8308(HDWaterTile.aClass496_952, 1812698195) && Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = Class496.aClass496_5813;
+						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
+						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
+							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
+						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1812698195) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5813;
 						}
 						break;
 					case 25:
@@ -2819,16 +2819,16 @@ public final class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		aClass184_7475.method3051((byte) -122);
-		aClass184_7475.aClass7_2299.method347(-669506484);
+		outputContext.method3051((byte) -122);
+		outputContext.aClass7_2299.method347(-669506484);
 		connectionContext.method3051((byte) -84);
 		connectionContext.aClass7_2299.method347(1264741540);
 		Class278_Sub1.method13449((byte) -20);
 		Class119.JS5_STANDARD_REQUESTER.method5525(1906332744);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 68);
-		if (aClass508_7223 != null) {
-			aClass508_7223.method8733();
-			aClass508_7223 = null;
+		if (PING_REQUESTER != null) {
+			PING_REQUESTER.method8733();
+			PING_REQUESTER = null;
 		}
 
 		try {
@@ -2864,7 +2864,7 @@ public final class client extends Engine {
 		Quaternion.method6493();
 		ItemDefinitions.method7141((byte) -39);
 		Class282_Sub41_Sub3.method14807(-741497337);
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
@@ -2873,15 +2873,15 @@ public final class client extends Engine {
 			SceneObjectManager.aBool2644 = false;
 		}
 
-		if (Class496.aClass496_5813 == HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
 			Class448.aClass450_5420.host = Class282_Sub44.anApplet8065.getCodeBase().getHost();
-		} else if (Class496.method8308(HDWaterTile.aClass496_952, 1661844371)) {
+		} else if (ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1661844371)) {
 			Class448.aClass450_5420.host = Class282_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = Class448.aClass450_5420.worldId * -1708079975 + 1140744768;
 			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1708079975 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = Class448.aClass450_5420.worldId * -1473668237 + 1047080176;
 			Class448.lobbyConnectionInfo.anInt5437 = Class448.lobbyConnectionInfo.worldId * -1473668237 + 1047080176;
-		} else if (Class496.aClass496_5810 == HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
 			Class448.aClass450_5420.host = "127.0.0.1";
 			Class448.lobbyConnectionInfo.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = Class448.aClass450_5420.worldId * -1708079975 + 1140744768;
@@ -2905,7 +2905,7 @@ public final class client extends Engine {
 
 		Class96_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -76);
-		if (Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
 			aBool7176 = true;
 		}
 
@@ -2929,16 +2929,16 @@ public final class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		aClass184_7475.method3051((byte) -43);
-		aClass184_7475.aClass7_2299.method347(2071949527);
+		outputContext.method3051((byte) -43);
+		outputContext.aClass7_2299.method347(2071949527);
 		connectionContext.method3051((byte) -77);
 		connectionContext.aClass7_2299.method347(-1713928547);
 		Class278_Sub1.method13449((byte) 10);
 		Class119.JS5_STANDARD_REQUESTER.method5525(-411822521);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 4);
-		if (aClass508_7223 != null) {
-			aClass508_7223.method8733();
-			aClass508_7223 = null;
+		if (PING_REQUESTER != null) {
+			PING_REQUESTER.method8733();
+			PING_REQUESTER = null;
 		}
 
 		try {
@@ -2983,7 +2983,7 @@ public final class client extends Engine {
 		++anInt7261;
 		Class380.method6451(-1, -1, 703434359);
 		Class15.method544((IComponentDefinitions) null, -1, -1, 404067969);
-		Class496.method8315(-2122533779);
+		ServerEnvironment.method8315(-2122533779);
 		++anInt7347;
 
 		for (i_2 = 0; i_2 < anInt7210; i_2++) {
@@ -3078,10 +3078,10 @@ public final class client extends Engine {
 											}
 
 											if (gameState == 0 && !JS5CacheFile.method3360((byte) 10) || gameState == 7 && Class9.anInt106 == 42) {
-												Class461.method7703();
+												FriendStatus.method7703();
 											}
 
-											SCT24Definitions.method7490();
+											SCT24Definitions.pingWorlds();
 											if (aBool7400 && aLong7401 < TextureDetails.time() - 60000L) {
 												Class282_Sub11.method12211(133515669);
 											}
@@ -3106,7 +3106,7 @@ public final class client extends Engine {
 												} else if (connectionContext != null) {
 													++connectionContext.anInt2290;
 													if (connectionContext.anInt2290 > 50) {
-														TCPPacket tcpmessage_18 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, connectionContext.isaac, 241462938);
+														TCPPacket tcpmessage_18 = Class271.createPacket(OutgoingPacket.PING, connectionContext.isaac);
 														connectionContext.queuePacket(tcpmessage_18);
 													}
 
@@ -3280,11 +3280,11 @@ public final class client extends Engine {
 						anInt7149 = Integer.parseInt(string_7) * 1564360473 * -1543197399;
 						break;
 					case 24:
-						HDWaterTile.aClass496_952 = (Class496) Class386.identify(Class496.method8299(), Integer.parseInt(string_7));
-						if (Class496.aClass496_5810 == HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = Class496.aClass496_5807;
-						} else if (!Class496.method8308(HDWaterTile.aClass496_952, 1676029063) && Class496.aClass496_5813 != HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = Class496.aClass496_5813;
+						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
+						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
+							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
+						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1676029063) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5813;
 						}
 						break;
 					case 25:

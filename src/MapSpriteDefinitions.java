@@ -67,7 +67,7 @@ public class MapSpriteDefinitions {
 
 	static void method7022() {
 		Class9.lobbyStage = 273;
-		Class9.aClass184_73 = client.aClass184_7475;
+		Class9.aClass184_73 = client.outputContext;
 		if (client.aByteArray7152 != null) {
 			RsByteBuffer rsbytebuffer_1 = new RsByteBuffer(client.aByteArray7152);
 			Class9.aLong77 = rsbytebuffer_1.readLong();

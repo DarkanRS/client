@@ -50,7 +50,7 @@ public class BufferedConnectionContext {
 		if (this.aClass202_2281 != null && this.anInt2279 > 0) {
 			this.aClass282_Sub35_2282.index = 0;
 			while (true) {
-				TCPPacket tcpmessage_2 = (TCPPacket) this.queuedPackets.head((byte) 41);
+				TCPPacket tcpmessage_2 = (TCPPacket) this.queuedPackets.head();
 				if (tcpmessage_2 == null || tcpmessage_2.anInt7680 > this.aClass282_Sub35_2282.buffer.length - this.aClass282_Sub35_2282.index) {
 					this.aClass202_2281.write(this.aClass282_Sub35_2282.buffer, this.aClass282_Sub35_2282.index, -771843978);
 					this.anInt2297 += this.aClass282_Sub35_2282.index;

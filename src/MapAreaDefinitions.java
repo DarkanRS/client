@@ -255,7 +255,7 @@ public class MapAreaDefinitions {
         }
     }
 
-    static void method3736(NPC npc_0, boolean bool_1, int i_2) {
+    static void iComponentOnNPC(NPC npc_0, boolean bool_1, int i_2) {
         if (Class20.anInt169 < 412) {
             NPCDefinitions npcdefinitions_3 = npc_0.definitions;
             String string_4 = npc_0.aString10584;
@@ -272,8 +272,8 @@ public class MapAreaDefinitions {
                     string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.myPlayer.anInt10565, -1957998512) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
                 if (client.aBool7344 && !bool_1) {
-                    ParamDefinitions attributedefault_10 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.anInt9319) : null;
-                    if ((Class506.anInt5858 & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.anInt9319, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
+                    ParamDefinitions attributedefault_10 = Class96_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.USE_INTERFACE_ID) : null;
+                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
                         PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1728725165);
                     }
                 }
@@ -364,13 +364,13 @@ public class MapAreaDefinitions {
 
     public static String method3741() {
         String str_1 = "www";
-        if (Class496.aClass496_5811 == HDWaterTile.aClass496_952) {
+        if (ServerEnvironment.aClass496_5811 == HDWaterTile.aClass496_952) {
             str_1 = "www-wtrc";
-        } else if (Class496.aClass496_5808 == HDWaterTile.aClass496_952) {
+        } else if (ServerEnvironment.aClass496_5808 == HDWaterTile.aClass496_952) {
             str_1 = "www-wtqa";
-        } else if (Class496.aClass496_5807 == HDWaterTile.aClass496_952) {
+        } else if (ServerEnvironment.aClass496_5807 == HDWaterTile.aClass496_952) {
             str_1 = "www-wtwip";
-        } else if (HDWaterTile.aClass496_952 == Class496.aClass496_5809) {
+        } else if (HDWaterTile.aClass496_952 == ServerEnvironment.aClass496_5809) {
             str_1 = "www-wti";
         }
         String str_2 = "";

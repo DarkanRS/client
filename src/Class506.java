@@ -1,6 +1,6 @@
 public class Class506 {
 
-	static int anInt5858;
+	static int USE_OPTIONS_FLAGS;
 
 	static Class223 aClass223_5857 = new Class223(128);
 

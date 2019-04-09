@@ -106,14 +106,14 @@ public abstract class Connection {
         }
     }
 
-    static Class461[] method3343() {
-        return new Class461[] { Class461.aClass461_5539, Class461.aClass461_5538, Class461.aClass461_5540 };
+    static FriendStatus[] method3343() {
+        return new FriendStatus[] { FriendStatus.FRIENDS_ONLY, FriendStatus.ONLINE, FriendStatus.OFFLINE };
     }
 
     public static final void method3345(String string_0) {
         if (!string_0.equals("")) {
             BufferedConnectionContext class184_2 = Class468_Sub20.method12807(-1721172592);
-            TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_2.isaac, 595380659);
+            TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.JOIN_FRIENDS_CHAT, class184_2.isaac);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
             tcpmessage_3.buffer.writeString(string_0);
             class184_2.queuePacket(tcpmessage_3);

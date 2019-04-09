@@ -93,7 +93,7 @@ public class Class250 {
 	}
 
 	public static void method4296() {
-		Class435.aClass482_5332 = new NodeCollection();
+		Class435.PENDING_REFLECTION_CHECKS = new NodeCollection();
 	}
 
 	static void method4297(int i_0) {

@@ -84,7 +84,7 @@ public class Class468_Sub20 extends Preference {
 	}
 
 	public static BufferedConnectionContext method12807(int i_0) {
-		return Class282_Sub17.lobbyState(client.gameState, -1194987033) ? client.connectionContext : client.aClass184_7475;
+		return Class282_Sub17.lobbyState(client.gameState, -1194987033) ? client.connectionContext : client.outputContext;
 	}
 
 	public static void method12808() {

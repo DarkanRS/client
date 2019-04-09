@@ -31,6 +31,6 @@ public abstract class RouteStrategy {
 		}
 		NativeLibraryLoader.anInt3240 = 5;
 		Class86.anInt833 = -1;
-		Class508.anInt5864 = -1;
+		PingRequester.anInt5864 = -1;
 	}
 }

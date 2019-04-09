@@ -88,14 +88,14 @@ public class QuickchatMessageLoader {
 				RegionMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.method4433();
 				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 				int i_9;
-				if (NativeLibraryLoader.anInt3240 != 2 && Class508.anInt5864 == -1) {
+				if (NativeLibraryLoader.anInt3240 != 2 && PingRequester.anInt5864 == -1) {
 					i_9 = Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 111);
 					if (i_9 - Class109_Sub1.anInt9384 < 3200 && (regionmap_7.tileMasks[Class4.anInt35][IdentitiKitIndexLoader.anInt361 >> 9][Class246.anInt3029 >> 9] & 0x4) != 0) {
 						JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, IdentitiKitIndexLoader.anInt361 >> 9, Class246.anInt3029 >> 9, false, (byte) -37);
 					}
 				} else {
 					if (NativeLibraryLoader.anInt3240 != 2) {
-						i_5 = Class508.anInt5864;
+						i_5 = PingRequester.anInt5864;
 						i_6 = Class86.anInt833;
 					}
 

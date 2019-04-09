@@ -4,7 +4,7 @@ public class Class282_Sub50_Sub7 extends CacheableNode {
 	String aString9588;
 	String aString9576;
 	int anInt9578;
-	int anInt9587;
+	int clickType;
 	int anInt9579;
 	long aLong9584;
 	int anInt9581;
@@ -18,7 +18,7 @@ public class Class282_Sub50_Sub7 extends CacheableNode {
 		this.aString9588 = string_2;
 		this.aString9576 = string_1;
 		this.anInt9578 = i_3;
-		this.anInt9587 = i_4;
+		this.clickType = i_4;
 		this.anInt9579 = i_5;
 		this.aLong9584 = long_6;
 		this.anInt9581 = i_8;

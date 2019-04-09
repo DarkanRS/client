@@ -54,7 +54,7 @@ public class Item extends Node {
 				int i_18;
 				int i_19;
 				int i_20;
-				for (Class282_Sub38 class282_sub38_15 = (Class282_Sub38) Class187.aClass482_2350.head((byte) 120); class282_sub38_15 != null; class282_sub38_15 = (Class282_Sub38) Class187.aClass482_2350.next(1158642483)) {
+				for (Class282_Sub38 class282_sub38_15 = (Class282_Sub38) Class187.aClass482_2350.head(); class282_sub38_15 != null; class282_sub38_15 = (Class282_Sub38) Class187.aClass482_2350.next(1158642483)) {
 					i_16 = class282_sub38_15.anInt8002;
 					i_17 = (class283_14.anIntArray3381[i_16] >> 14 & 0x3fff) - coordgrid_7.x;
 					i_18 = (class283_14.anIntArray3381[i_16] & 0x3fff) - coordgrid_7.y;

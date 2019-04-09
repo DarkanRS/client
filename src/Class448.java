@@ -9,8 +9,8 @@ public class Class448 {
 	public static boolean aBool5422 = false;
 	static WorldDescriptor[] WORLD_DESCRIPTORS_BYID = new WorldDescriptor[0];
 	static int anInt5427 = 1000336;
-	static int anInt5430 = 0;
-	static Class510 aClass510_5423 = null;
+	static int currentWorldPingIdx = 0;
+	static PingRequest CURRENT_WORLD_PING_REQUEST = null;
 	public static boolean aBool5419 = false;
 
 	Class448() throws Throwable {

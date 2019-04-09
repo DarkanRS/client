@@ -158,7 +158,7 @@ public class Class345 {
 
 	static void worldLogin(String string_0, String string_1, int i_2) {
 		Class9.lobbyStage = 273;
-		Class9.aClass184_73 = client.aClass184_7475;
+		Class9.aClass184_73 = client.outputContext;
 		Class455.method7558(false, false, string_0, string_1, -1L);
 	}
 }

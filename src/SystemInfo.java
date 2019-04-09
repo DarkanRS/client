@@ -53,12 +53,12 @@ public class SystemInfo extends Node {
 
 	public int method13454() {
 		byte b_2 = 38;
-		int i_3 = b_2 + ParticleTriangle.method3952(this.aString8157, -696675148);
-		i_3 += ParticleTriangle.method3952(this.aString8160, 1704970825);
-		i_3 += ParticleTriangle.method3952(this.aString8159, 1902429767);
-		i_3 += ParticleTriangle.method3952(this.aString8153, 1087732237);
-		i_3 += ParticleTriangle.method3952(this.aString8165, -126400447);
-		i_3 += ParticleTriangle.method3952(this.aString8166, -276282908);
+		int i_3 = b_2 + Utils.stringLengthPlus2(this.aString8157);
+		i_3 += Utils.stringLengthPlus2(this.aString8160);
+		i_3 += Utils.stringLengthPlus2(this.aString8159);
+		i_3 += Utils.stringLengthPlus2(this.aString8153);
+		i_3 += Utils.stringLengthPlus2(this.aString8165);
+		i_3 += Utils.stringLengthPlus2(this.aString8166);
 		return i_3;
 	}
 

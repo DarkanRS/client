@@ -9,7 +9,7 @@ public class Class113 {
 	}
 
 	static final void method1883() {
-		for (Class282_Sub50_Sub16 class282_sub50_sub16_1 = (Class282_Sub50_Sub16) client.aClass482_7333.head((byte) 68); class282_sub50_sub16_1 != null; class282_sub50_sub16_1 = (Class282_Sub50_Sub16) client.aClass482_7333.next(380890791)) {
+		for (Class282_Sub50_Sub16 class282_sub50_sub16_1 = (Class282_Sub50_Sub16) client.aClass482_7333.head(); class282_sub50_sub16_1 != null; class282_sub50_sub16_1 = (Class282_Sub50_Sub16) client.aClass482_7333.next(380890791)) {
 			Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_2 = class282_sub50_sub16_1.aClass521_Sub1_Sub1_Sub3_9839;
 			if (client.cycles > class521_sub1_sub1_sub3_2.anInt10392) {
 				class282_sub50_sub16_1.remove();

@@ -1,17 +1,15 @@
 import jaclib.ping.Ping;
 
-public class Class461 {
+public class FriendStatus {
 
-	static Class461 aClass461_5538 = new Class461(0);
+	public static FriendStatus ONLINE = new FriendStatus(0);
+	public static FriendStatus FRIENDS_ONLY = new FriendStatus(1);
+	public static FriendStatus OFFLINE = new FriendStatus(2);
 
-	public static Class461 aClass461_5539 = new Class461(1);
+	public int id;
 
-	static Class461 aClass461_5540 = new Class461(2);
-
-	public int anInt5541;
-
-	Class461(int i_1) {
-		this.anInt5541 = i_1;
+	FriendStatus(int i_1) {
+		this.id = i_1;
 	}
 
 	public static int method7702() {
@@ -119,8 +117,8 @@ public class Class461 {
 			Class20.aClass482_174.method8118(1351673894);
 			Class20.aClass482_175.method8118(-1093691233);
 			int i_3;
-			for (Class282_Sub50_Sub7 class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 53); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1807139429)) {
-				i_3 = class282_sub50_sub7_2.anInt9587;
+			for (Class282_Sub50_Sub7 class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1807139429)) {
+				i_3 = class282_sub50_sub7_2.clickType;
 				if (i_3 < 1000) {
 					class282_sub50_sub7_2.remove();
 					if (i_3 != 59 && i_3 != 2 && i_3 != 8 && i_3 != 17 && i_3 != 15 && i_3 != 16 && i_3 != 58) {
@@ -149,7 +147,7 @@ public class Class461 {
 					Class20.aClass282_Sub50_Sub7_168 = null;
 				}
 			}
-			MouseRecord class282_sub53_14 = (MouseRecord) client.mouseRecords.head((byte) 32);
+			MouseRecord class282_sub53_14 = (MouseRecord) client.mouseRecords.head();
 			int i_4;
 			if (class282_sub53_14 != null) {
 				i_3 = class282_sub53_14.method13481(1796432776);

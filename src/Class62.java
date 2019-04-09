@@ -54,9 +54,9 @@ public class Class62 implements Interface3 {
 
 	static void method1260(int i_0, boolean bool_1, int i_2) {
 		if (bool_1) {
-			TCPPacket tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4556, client.aClass184_7475.isaac, -341537070);
+			TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4556, client.outputContext.isaac);
 			tcpmessage_3.buffer.writeShort(i_0);
-			client.aClass184_7475.queuePacket(tcpmessage_3);
+			client.outputContext.queuePacket(tcpmessage_3);
 		} else {
 			HitsplatIndexLoader.method3614(Class397.aClass397_4800, i_0, -1, (byte) 69);
 		}
@@ -78,7 +78,7 @@ public class Class62 implements Interface3 {
 		Class159.GAME_CONNECTION_INFO = new ConnectionInfo();
 		Class159.GAME_CONNECTION_INFO.worldId = i_0;
 		Class159.GAME_CONNECTION_INFO.host = string_1;
-		if (HDWaterTile.aClass496_952 != Class496.aClass496_5813) {
+		if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813) {
 			Class159.GAME_CONNECTION_INFO.anInt5434 = Class159.GAME_CONNECTION_INFO.worldId;
 			Class159.GAME_CONNECTION_INFO.anInt5437 = Class159.GAME_CONNECTION_INFO.worldId;
 		}

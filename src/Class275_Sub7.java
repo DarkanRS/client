@@ -71,7 +71,7 @@ public class Class275_Sub7 extends EntityNode {
 		Class501.anInt5828 = 0;
 		NativeLibraryLoader.anInt3240 = 1;
 		Class86.anInt833 = -1;
-		Class508.anInt5864 = -1;
+		PingRequester.anInt5864 = -1;
 		client.anInt7429 = client.cycles;
 		Class186.anInt2349 = IdentitiKitIndexLoader.anInt361;
 		Class521_Sub1_Sub2.anInt9461 = Class109_Sub1.anInt9384;

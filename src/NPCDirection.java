@@ -82,7 +82,7 @@ public class NPCDirection implements Identifiable {
 			}
 			Class16.aClass8_144.method359("Mem:" + long_10 + "/" + long_8 + "k", i_4, i_5, i_12, -1);
 			i_5 += 15;
-			long long_13 = client.aClass184_7475.aClass7_2299.method349((byte) 16);
+			long long_13 = client.outputContext.aClass7_2299.method349((byte) 16);
 			String str_15 = "N/A";
 			if (long_13 != -1L) {
 				str_15 = long_13 + "ms";
@@ -90,7 +90,7 @@ public class NPCDirection implements Identifiable {
 					str_15 = ParticleProducerDefinition.method1163(16711680) + str_15 + ParticleProducerDefinition.method1163(16776960);
 				}
 			}
-			Class16.aClass8_144.method359("Game: In:" + client.aClass184_7475.anInt2294 + "B/s " + "Out:" + client.aClass184_7475.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
+			Class16.aClass8_144.method359("Game: In:" + client.outputContext.anInt2294 + "B/s " + "Out:" + client.outputContext.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
 			i_5 += 15;
 			long long_16 = client.connectionContext.aClass7_2299.method349((byte) -81);
 			String str_18 = "N/A";

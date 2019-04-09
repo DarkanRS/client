@@ -211,7 +211,7 @@ public class i extends Ground implements Interface40 {
 		int i_7 = 0;
 		float[] floats_8 = new float[this.aClass482_7143.size()];
 
-		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head((byte) 78); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(89434836)) {
+		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(89434836)) {
 			floats_8[i_7++] = class282_sub24_9.method12395(-730968094);
 		}
 
@@ -275,7 +275,7 @@ public class i extends Ground implements Interface40 {
 		int i_7 = 0;
 		float[] floats_8 = new float[this.aClass482_7143.size()];
 
-		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head((byte) 81); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(-1062392884)) {
+		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(-1062392884)) {
 			floats_8[i_7++] = class282_sub24_9.method12395(1226134811);
 		}
 

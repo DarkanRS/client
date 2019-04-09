@@ -145,9 +145,9 @@ public class Interface {
 			Class260.aBool3220 = false;
 			Class260.aClass282_Sub15_Sub2_3231 = null;
 		} else if (Class393.preferences.aClass468_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1 && !Class116.method1966(1621182156)) {
-			TCPPacket tcpmessage_17 = Class271.method4828(OutgoingPacket.aClass379_4529, client.aClass184_7475.isaac, 61949935);
+			TCPPacket tcpmessage_17 = Class271.createPacket(OutgoingPacket.SOUND_EFFECT_MUSIC_ENDED, client.outputContext.isaac);
 			tcpmessage_17.buffer.writeInt(Class260.anInt3223);
-			client.aClass184_7475.queuePacket(tcpmessage_17);
+			client.outputContext.queuePacket(tcpmessage_17);
 			Class260.anInt3223 = -1;
 		}
 	}

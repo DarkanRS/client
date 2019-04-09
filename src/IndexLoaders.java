@@ -237,7 +237,7 @@ public class IndexLoaders {
 		}
 
 		if (LoadingStage.aClass387_4716 == LOADING_STAGE) {
-			i = Class461.method7702();
+			i = FriendStatus.method7702();
 			if (i < 100) {
 				return i;
 			}

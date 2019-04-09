@@ -627,7 +627,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.PRIVATE_GAME_BAR_SETTING) {
-			Class149_Sub2.aClass461_9316 = Class246.method4203(buffer.readUnsignedByte());
+			Class149_Sub2.FRIEND_STATUS = Class246.getFriendStatus(buffer.readUnsignedByte());
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.ANIMATE_NPC) {
@@ -894,7 +894,7 @@ public class PacketsDecoder extends Class455 {
 			int key = buffer.readIntLE();
 			Class470.method7825();
 			if (key == -1) {
-				Class508.anInt5864 = -1;
+				PingRequester.anInt5864 = -1;
 				Class86.anInt833 = -1;
 			} else {
 				CoordGrid coordgrid_114 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -912,7 +912,7 @@ public class PacketsDecoder extends Class455 {
 				} else if (i_7 >= IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					i_7 = IndexLoaders.MAP_REGION_DECODER.getSizeY();
 				}
-				Class508.anInt5864 = (i_6 << 9) + 256;
+				PingRequester.anInt5864 = (i_6 << 9) + 256;
 				Class86.anInt833 = (i_7 << 9) + 256;
 			}
 			context.currentPacket = null;
@@ -1124,10 +1124,10 @@ public class PacketsDecoder extends Class455 {
 			Class185.method3077();
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.aClass375_4405) {
+		} else if (context.currentPacket == IncomingPacket.REQUEST_FPS) {
 			int key = buffer.readInt();
 			int flags = buffer.readInt();
-			TCPPacket tcpmessage_111 = Class271.method4828(OutgoingPacket.aClass379_4595, context.isaac, 2042092);
+			TCPPacket tcpmessage_111 = Class271.createPacket(OutgoingPacket.SEND_FPS, context.isaac);
 			tcpmessage_111.buffer.writeIntV2(key);
 			tcpmessage_111.buffer.writeIntV1(flags, -1650869516);
 			tcpmessage_111.buffer.write128Byte(client.FPS, -826747048);
@@ -1192,12 +1192,12 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			Class282_Sub31 class282_sub31_110;
-			for (class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 94); class282_sub31_110 != null; class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-766641666)) {
+			for (class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head(); class282_sub31_110 != null; class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-766641666)) {
 				if (class282_sub31_110.anInt7762 >= SceneObjectType.anInt5495 && class282_sub31_110.anInt7762 < SceneObjectType.anInt5495 + 8 && class282_sub31_110.anInt7763 >= Class158_Sub1_Sub2.anInt10131 && class282_sub31_110.anInt7763 < Class158_Sub1_Sub2.anInt10131 + 8 && class282_sub31_110.anInt7764 == Class272.anInt3331) {
 					class282_sub31_110.aBool7774 = true;
 				}
 			}
-			for (class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 125); class282_sub31_110 != null; class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(804942724)) {
+			for (class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head(); class282_sub31_110 != null; class282_sub31_110 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(804942724)) {
 				if (class282_sub31_110.anInt7762 >= SceneObjectType.anInt5495 && class282_sub31_110.anInt7762 < SceneObjectType.anInt5495 + 8 && class282_sub31_110.anInt7763 >= Class158_Sub1_Sub2.anInt10131 && class282_sub31_110.anInt7763 < Class158_Sub1_Sub2.anInt10131 + 8 && class282_sub31_110.anInt7764 == Class272.anInt3331) {
 					class282_sub31_110.aBool7774 = true;
 				}
@@ -1225,7 +1225,7 @@ public class PacketsDecoder extends Class455 {
 		} else if (context.currentPacket == IncomingPacket.aClass375_4441) {
 			buffer.index += 28;
 			if (buffer.method13105()) {
-				Class496.method8309(buffer, buffer.index - 28);
+				ServerEnvironment.method8309(buffer, buffer.index - 28);
 			}
 			context.currentPacket = null;
 			return true;
@@ -2315,7 +2315,7 @@ public class PacketsDecoder extends Class455 {
 			String string_88 = Utils.readString(bytes_64, 0, context.currentPacketSize);
 			String str_92 = "opensn";
 			if (!client.aBool7310 || !Class186.method3082(string_88, 1, str_92)) {
-				Class508.method8736(string_88, true, Class393.preferences.currentToolkit.getValue(-780399145) == 5, str_92, client.aBool7158, client.aBool7159, (byte) -17);
+				PingRequester.method8736(string_88, true, Class393.preferences.currentToolkit.getValue(-780399145) == 5, str_92, client.aBool7158, client.aBool7159, (byte) -17);
 			}
 			context.currentPacket = null;
 			return true;

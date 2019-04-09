@@ -703,23 +703,23 @@ public class Class304 implements Interface27 {
 		return i_0 < 100000 ? "<col=ffff00>" + i_0 + "</col>" : (i_0 < 10000000 ? "<col=ffffff>" + i_0 / 1000 + Message.aClass433_5297.translate(xlanguage_1, -664620101) + "</col>" : "<col=00ff80>" + i_0 / 1000000 + Message.aClass433_5304.translate(xlanguage_1, -1313761048) + "</col>");
 	}
 
-	public static void method5409(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, byte b_3) {
-		if (icomponentdefinitions_0 != null) {
-			if (icomponentdefinitions_0.anObjectArray1400 != null) {
+	public static void setUseOptionFlags(IComponentDefinitions componentDefs, int flags, int interfaceId, byte b_3) {
+		if (componentDefs != null) {
+			if (componentDefs.anObjectArray1400 != null) {
 				HookRequest hookrequest_4 = new HookRequest();
-				hookrequest_4.iComponentDefs = icomponentdefinitions_0;
-				hookrequest_4.params = icomponentdefinitions_0.anObjectArray1400;
+				hookrequest_4.iComponentDefs = componentDefs;
+				hookrequest_4.params = componentDefs.anObjectArray1400;
 				CS2Executor.executeHookInner200k(hookrequest_4, 1699733120);
 			}
 			client.aBool7344 = true;
-			Class7.anInt56 = icomponentdefinitions_0.idHash;
-			client.anInt7345 = icomponentdefinitions_0.anInt1288;
-			Class506.anInt5858 = i_1;
-			Class96_Sub12.anInt9319 = i_2;
-			client.anInt7346 = icomponentdefinitions_0.anInt1426;
-			Defaults8Loader.anInt5932 = icomponentdefinitions_0.anInt1307;
-			client.anInt7427 = icomponentdefinitions_0.anInt1310;
-			Class109.redrawComponent(icomponentdefinitions_0, (byte) 35);
+			Class7.anInt56 = componentDefs.idHash;
+			client.anInt7345 = componentDefs.anInt1288;
+			Class506.USE_OPTIONS_FLAGS = flags;
+			Class96_Sub12.USE_INTERFACE_ID = interfaceId;
+			client.anInt7346 = componentDefs.anInt1426;
+			Defaults8Loader.anInt5932 = componentDefs.anInt1307;
+			client.anInt7427 = componentDefs.anInt1310;
+			Class109.redrawComponent(componentDefs, (byte) 35);
 		}
 	}
 

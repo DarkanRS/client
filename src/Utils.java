@@ -36,4 +36,8 @@ public class Utils {
 	    return new String(arr_4, 0, i_5);
 	}
 
+	public static int stringLengthPlus2(String string_0) {
+		return string_0.length() + 2;
+	}
+
 }

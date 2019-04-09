@@ -390,7 +390,7 @@ public class Class8_Sub2 extends FontRenderer {
 	}
 
 	public static void method14264(RsBitsBuffer rsbitsbuffer_0) {
-		Class282_Sub42 class282_sub42_2 = (Class282_Sub42) Class435.aClass482_5332.head((byte) 121);
+		ReflectionCheck class282_sub42_2 = (ReflectionCheck) Class435.PENDING_REFLECTION_CHECKS.head();
 		if (class282_sub42_2 != null) {
 			int i_3 = rsbitsbuffer_0.index;
 			rsbitsbuffer_0.writeInt(class282_sub42_2.anInt8038);

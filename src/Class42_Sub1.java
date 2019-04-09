@@ -64,7 +64,7 @@ public class Class42_Sub1 extends Class42 {
 		QuickchatFiller.aClass61_528 = null;
 		Class202_Sub1.GUEST_CLAN_CHANNEL = null;
 		Class113.CLAN_CHANNEL = null;
-		Class496.aClass510_5816 = null;
+		PingRequest.CURRENT_REQUEST = null;
 		Class28.aLong351 = 0L;
 		Class316.method5594();
 		HitsplatDefinitions.method3851();

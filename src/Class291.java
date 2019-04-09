@@ -815,7 +815,7 @@ public class Class291 {
 	}
 
 	static NodeCollection method5179(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		for (Class282_Sub36 class282_sub36_5 = (Class282_Sub36) aClass482_3459.head((byte) 82); class282_sub36_5 != null; class282_sub36_5 = (Class282_Sub36) aClass482_3459.next(-413792246)) {
+		for (Class282_Sub36 class282_sub36_5 = (Class282_Sub36) aClass482_3459.head(); class282_sub36_5 != null; class282_sub36_5 = (Class282_Sub36) aClass482_3459.next(-413792246)) {
 			method5146(graphicalrenderer_0, class282_sub36_5, i_1, i_2);
 		}
 

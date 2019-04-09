@@ -104,7 +104,7 @@ public class Class371 {
 
 	public static final void method6353() {
 		BufferedConnectionContext class184_1 = Class468_Sub20.method12807(2071524191);
-		TCPPacket tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_1.isaac, -585449353);
+		TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.JOIN_FRIENDS_CHAT, class184_1.isaac);
 		tcpmessage_2.buffer.writeByte(0);
 		class184_1.queuePacket(tcpmessage_2);
 	}

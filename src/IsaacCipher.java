@@ -190,7 +190,7 @@ public final class IsaacCipher {
     }
 
     public static WorldDescriptor method7266() {
-        return ObjectIndexLoader.method7916(Class159.GAME_CONNECTION_INFO.worldId, 1371284314);
+        return ObjectIndexLoader.getWorld(Class159.GAME_CONNECTION_INFO.worldId);
     }
 
     static final void method7268(int i_0) {

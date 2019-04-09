@@ -36,8 +36,8 @@ public class EnumIndexLoader {
 	}
 
 	public static boolean method7426(int i_0, byte b_1) {
-		for (Class282_Sub50_Sub7 class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 75); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1043628930)) {
-			if (Class237.method3989(class282_sub50_sub7_2.anInt9587) && (long) i_0 == class282_sub50_sub7_2.aLong9584) {
+		for (Class282_Sub50_Sub7 class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1043628930)) {
+			if (Class237.method3989(class282_sub50_sub7_2.clickType) && (long) i_0 == class282_sub50_sub7_2.aLong9584) {
 				return true;
 			}
 		}
