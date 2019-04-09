@@ -1,17 +1,17 @@
 public class SharedConfigsType {
 
-	public static SharedConfigsType FLO1 = new SharedConfigsType(1);
+	public static SharedConfigsType UNDERLAYS = new SharedConfigsType(1);
 	public static SharedConfigsType SCT_2 = new SharedConfigsType(2);
 	public static SharedConfigsType IDENTITIKIT = new SharedConfigsType(3);
-	public static SharedConfigsType FLO2 = new SharedConfigsType(4);
+	public static SharedConfigsType OVERLAYS = new SharedConfigsType(4);
 	public static SharedConfigsType INVENTORIES = new SharedConfigsType(5);
-	public static SharedConfigsType OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
+	public static SharedConfigsType OBJECTS = new SharedConfigsType(6, 8);
 	public static SharedConfigsType SCT_7 = new SharedConfigsType(7);
 	public static SharedConfigsType ENUMS = new SharedConfigsType(8, 8);
-	public static SharedConfigsType SCT_9 = new SharedConfigsType(9, 7);
-	public static SharedConfigsType ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
+	public static SharedConfigsType NPCS = new SharedConfigsType(9, 7);
+	public static SharedConfigsType ITEMS = new SharedConfigsType(10, 8);
 	public static SharedConfigsType PARAMS = new SharedConfigsType(11);
-	public static SharedConfigsType SEQUENCES = new SharedConfigsType(12, 7);
+	public static SharedConfigsType ANIMATIONS = new SharedConfigsType(12, 7);
 	public static SharedConfigsType SPOT_ANIMS = new SharedConfigsType(13, 8);
 	public static SharedConfigsType VARBITS = new SharedConfigsType(14, 10);
 	public static SharedConfigsType VARC_STRING = new SharedConfigsType(15);
@@ -25,17 +25,17 @@ public class SharedConfigsType {
 	public static SharedConfigsType SCT_23 = new SharedConfigsType(23);
 	public static SharedConfigsType SCT_24 = new SharedConfigsType(24);
 	public static SharedConfigsType SCT_25 = new SharedConfigsType(25);
-	public static SharedConfigsType SCT_26 = new SharedConfigsType(26);
+	public static SharedConfigsType STRUCTS = new SharedConfigsType(26);
 	public static SharedConfigsType SCT_27 = new SharedConfigsType(27);
 	public static SharedConfigsType SCT_28 = new SharedConfigsType(28);
 	public static SharedConfigsType SKYBOX = new SharedConfigsType(29);
 	public static SharedConfigsType SUN = new SharedConfigsType(30);
-	public static SharedConfigsType SCT_31 = new SharedConfigsType(31);
+	public static SharedConfigsType LIGHT_INTENSITIES = new SharedConfigsType(31);
 	public static SharedConfigsType RENDER_ANIMS = new SharedConfigsType(32);
 	public static SharedConfigsType CURSORS = new SharedConfigsType(33);
 	public static SharedConfigsType MAP_SPRITES = new SharedConfigsType(34);
 	public static SharedConfigsType QUESTS = new SharedConfigsType(35);
-	public static SharedConfigsType WORLD_MAP_DEFS = new SharedConfigsType(36);
+	public static SharedConfigsType MAP_AREAS = new SharedConfigsType(36);
 	public static SharedConfigsType SCT_37 = new SharedConfigsType(37);
 	public static SharedConfigsType SCT_38 = new SharedConfigsType(38);
 	public static SharedConfigsType SCT_39 = new SharedConfigsType(39);

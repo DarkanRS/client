@@ -60,7 +60,7 @@ public class MapAreaIndexLoader {
 			Index index_5 = this.aClass317_2705;
 			byte[] bytes_10;
 			synchronized (this.aClass317_2705) {
-				bytes_10 = this.aClass317_2705.getFile(SharedConfigsType.WORLD_MAP_DEFS.id, i_1);
+				bytes_10 = this.aClass317_2705.getFile(SharedConfigsType.MAP_AREAS.id, i_1);
 			}
 
 			worldmapareadefs_3 = new MapAreaDefinitions();
@@ -82,7 +82,7 @@ public class MapAreaIndexLoader {
 	public MapAreaIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_2705 = index_3;
 		this.aClass317_2703 = index_4;
-		this.aClass317_2705.filesCount(SharedConfigsType.WORLD_MAP_DEFS.id);
+		this.aClass317_2705.filesCount(SharedConfigsType.MAP_AREAS.id);
 	}
 
 	public static void method3709() {

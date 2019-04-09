@@ -16,7 +16,7 @@ public class LightIntensityIndexLoader {
 			Index index_5 = this.aClass317_5333;
 			byte[] bytes_10;
 			synchronized (this.aClass317_5333) {
-				bytes_10 = this.aClass317_5333.getFile(SharedConfigsType.SCT_31.id, i_1);
+				bytes_10 = this.aClass317_5333.getFile(SharedConfigsType.LIGHT_INTENSITIES.id, i_1);
 			}
 
 			class416_3 = new LightIntensityDefinitions();
@@ -55,7 +55,7 @@ public class LightIntensityIndexLoader {
 
 	public LightIntensityIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5333 = index_3;
-		this.aClass317_5333.filesCount(SharedConfigsType.SCT_31.id);
+		this.aClass317_5333.filesCount(SharedConfigsType.LIGHT_INTENSITIES.id);
 	}
 
 	static final void method7313(Class282_Sub44 class282_sub44_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, byte b_10) {

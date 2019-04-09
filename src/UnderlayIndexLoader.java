@@ -18,7 +18,7 @@ public class UnderlayIndexLoader {
 			Index index_5 = this.configIndex;
 			byte[] bytes_10;
 			synchronized (this.configIndex) {
-				bytes_10 = this.configIndex.getFile(SharedConfigsType.FLO1.id, i_1);
+				bytes_10 = this.configIndex.getFile(SharedConfigsType.UNDERLAYS.id, i_1);
 			}
 			underlaydef_3 = new UnderlayDef();
 			if (bytes_10 != null) {
@@ -41,7 +41,7 @@ public class UnderlayIndexLoader {
 
 	public UnderlayIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.configIndex = index_3;
-		this.configIndex.filesCount(SharedConfigsType.FLO1.id);
+		this.configIndex.filesCount(SharedConfigsType.UNDERLAYS.id);
 	}
 
 	public void method8030() {

@@ -28,7 +28,7 @@ public class ItemIndexLoader implements IndexLoader {
 			Index index_5 = this.fs19;
 			byte[] bytes_12;
 			synchronized (this.fs19) {
-				bytes_12 = this.fs19.getFile(SharedConfigsType.ITEM_DEFINITIONS.containerId(i_1), SharedConfigsType.ITEM_DEFINITIONS.fileId(i_1));
+				bytes_12 = this.fs19.getFile(SharedConfigsType.ITEMS.containerId(i_1), SharedConfigsType.ITEMS.fileId(i_1));
 			}
 
 			itemdefinitions_3 = new ItemDefinitions();
@@ -207,7 +207,7 @@ public class ItemIndexLoader implements IndexLoader {
 		this.meshIndex = index_6;
 		if (this.fs19 != null) {
 			int i_7 = this.fs19.containersCount() - 1;
-			this.maxItemsCount = i_7 * SharedConfigsType.ITEM_DEFINITIONS.filesPerContainer(-1077198554) + this.fs19.filesCount(i_7);
+			this.maxItemsCount = i_7 * SharedConfigsType.ITEMS.filesPerContainer(-1077198554) + this.fs19.filesCount(i_7);
 		} else {
 			this.maxItemsCount = 0;
 		}

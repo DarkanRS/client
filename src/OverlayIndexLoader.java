@@ -20,7 +20,7 @@ public class OverlayIndexLoader {
 			Index index_5 = this.aClass317_7095;
 			byte[] bytes_10;
 			synchronized (this.aClass317_7095) {
-				bytes_10 = this.aClass317_7095.getFile(SharedConfigsType.FLO2.id, i_1);
+				bytes_10 = this.aClass317_7095.getFile(SharedConfigsType.OVERLAYS.id, i_1);
 			}
 			overlaydef_3 = new OverlayDef();
 			overlaydef_3.aClass536_7062 = this;
@@ -60,6 +60,6 @@ public class OverlayIndexLoader {
 
 	public OverlayIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_7095 = index_3;
-		this.anInt7094 = this.aClass317_7095.filesCount(SharedConfigsType.FLO2.id);
+		this.anInt7094 = this.aClass317_7095.filesCount(SharedConfigsType.OVERLAYS.id);
 	}
 }

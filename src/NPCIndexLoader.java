@@ -32,7 +32,7 @@ public class NPCIndexLoader {
 			Index index_5 = this.aClass317_4839;
 			byte[] bytes_10;
 			synchronized (this.aClass317_4839) {
-				bytes_10 = this.aClass317_4839.getFile(SharedConfigsType.SCT_9.containerId(i_1), SharedConfigsType.SCT_9.fileId(i_1));
+				bytes_10 = this.aClass317_4839.getFile(SharedConfigsType.NPCS.containerId(i_1), SharedConfigsType.NPCS.fileId(i_1));
 			}
 			npcdefinitions_3 = new NPCDefinitions();
 			npcdefinitions_3.anInt4856 = i_1;
@@ -126,7 +126,7 @@ public class NPCIndexLoader {
 		this.aClass317_4842 = index_5;
 		if (this.aClass317_4839 != null) {
 			int i_6 = this.aClass317_4839.containersCount() - 1;
-			SharedConfigsType.SCT_9.filesPerContainer(-443341258);
+			SharedConfigsType.NPCS.filesPerContainer(-443341258);
 			this.aClass317_4839.filesCount(i_6);
 		}
 		if (this.aClass486_4844 == Game.darkan) {

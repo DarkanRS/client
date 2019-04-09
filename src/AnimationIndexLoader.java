@@ -29,7 +29,7 @@ public class AnimationIndexLoader {
 			Index index_5 = this.sequenceIndex;
 			byte[] bytes_10;
 			synchronized (this.sequenceIndex) {
-				bytes_10 = this.sequenceIndex.getFile(SharedConfigsType.SEQUENCES.containerId(i_1), SharedConfigsType.SEQUENCES.fileId(i_1));
+				bytes_10 = this.sequenceIndex.getFile(SharedConfigsType.ANIMATIONS.containerId(i_1), SharedConfigsType.ANIMATIONS.fileId(i_1));
 			}
 			animationdefinitions_3 = new AnimationDefinitions();
 			animationdefinitions_3.anInt5909 = i_1;
@@ -50,7 +50,7 @@ public class AnimationIndexLoader {
 		this.sequenceIndex = index_3;
 		if (this.sequenceIndex != null) {
 			int i_6 = this.sequenceIndex.containersCount() - 1;
-			SharedConfigsType.SEQUENCES.filesPerContainer(-1584727313);
+			SharedConfigsType.ANIMATIONS.filesPerContainer(-1584727313);
 			this.sequenceIndex.filesCount(i_6);
 		}
 		Class96_Sub10_Sub1.setAnimationIndices(index_4, index_5);

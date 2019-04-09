@@ -38,7 +38,7 @@ public class ObjectIndexLoader {
 			Index index_5 = this.objectIndex;
 			byte[] bytes_9;
 			synchronized (this.objectIndex) {
-				bytes_9 = this.objectIndex.getFile(SharedConfigsType.OBJECT_DEFINITIONS.containerId(i_1), SharedConfigsType.OBJECT_DEFINITIONS.fileId(i_1));
+				bytes_9 = this.objectIndex.getFile(SharedConfigsType.OBJECTS.containerId(i_1), SharedConfigsType.OBJECTS.fileId(i_1));
 			}
 			objectdefinitions_3 = new ObjectDefinitions();
 			objectdefinitions_3.id = i_1;
@@ -147,7 +147,7 @@ public class ObjectIndexLoader {
 		this.meshIndex = index_5;
 		if (this.objectIndex != null) {
 			int i_6 = this.objectIndex.containersCount() - 1;
-			SharedConfigsType.OBJECT_DEFINITIONS.filesPerContainer(-1090472574);
+			SharedConfigsType.OBJECTS.filesPerContainer(-1090472574);
 			this.objectIndex.filesCount(i_6);
 		}
 		if (this.game == Game.darkan) {
