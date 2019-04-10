@@ -368,7 +368,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					if (icomponentdefinitions_12 == client.aClass118_7257) {
 						if (i_1 != -1412584499 && (icomponentdefinitions_12.anInt1382 == IComponentDefinitions.anInt1265 || icomponentdefinitions_12.anInt1382 == IComponentDefinitions.anInt1283 || client.method11633(icomponentdefinitions_12).bit23Enabled())) {
 							Class328.aClass118Array3772 = arr_0;
-							Class400.anInt4822 = i_6;
+							GameTipsLoader.anInt4822 = i_6;
 							IsaacCipher.anInt5157 = i_7;
 							continue;
 						}

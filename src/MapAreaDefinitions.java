@@ -227,7 +227,7 @@ public class MapAreaDefinitions {
         if (nativesprite_3 != null) {
             return nativesprite_3;
         } else {
-            this.aClass218_2716.aClass317_2703.loadCutscene(this.anInt2733);
+            this.aClass218_2716.aClass317_2703.loadFile(this.anInt2733);
             SpriteDefinitions class91_4 = SpriteDefinitions.getSprite(this.aClass218_2716.aClass317_2703, this.anInt2733, 0);
             if (class91_4 != null) {
                 nativesprite_3 = graphicalrenderer_1.method8444(class91_4, true);
@@ -243,7 +243,7 @@ public class MapAreaDefinitions {
         NativeSprite nativesprite_6 = (NativeSprite) this.aClass218_2716.aClass229_2708.get((long) i_5);
         if (nativesprite_6 != null) {
             return nativesprite_6;
-        } else if (!this.aClass218_2716.aClass317_2703.loadCutscene(i_4)) {
+        } else if (!this.aClass218_2716.aClass317_2703.loadFile(i_4)) {
             return null;
         } else {
             SpriteDefinitions class91_7 = SpriteDefinitions.getSprite(this.aClass218_2716.aClass317_2703, i_4, 0);

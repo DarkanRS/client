@@ -58,7 +58,7 @@ public class Class532_Sub1 extends Class532 {
 					} else {
 						Class351.gameCanvas.setLocation(client.anInt3250, client.anInt3251);
 					}
-					Class400.method6795(-366853248);
+					GameTipsLoader.method6795(-366853248);
 					if (client.anInt7349 != -1) {
 						Class516.method8867(true);
 					}

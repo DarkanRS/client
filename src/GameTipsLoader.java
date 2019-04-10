@@ -1,10 +1,10 @@
 import java.util.Random;
 
-public class Class400 {
+public class GameTipsLoader {
 
 	static int anInt4821;
 	static int anInt4822;
-	Index aClass317_4817;
+	Index tipsIndex;
 	Class402[] aClass402Array4818;
 	int anInt4820;
 
@@ -18,7 +18,7 @@ public class Class400 {
 	}
 
 	public Class393 method6785(int i_1) {
-		byte[] bytes_3 = this.aClass317_4817.getFile(i_1, 0);
+		byte[] bytes_3 = this.tipsIndex.getFile(i_1, 0);
 		Class393 class393_4 = new Class393();
 		class393_4.method6743(new RsByteBuffer(bytes_3));
 		return class393_4;
@@ -53,15 +53,15 @@ public class Class400 {
 		return this.anInt4820 != -1;
 	}
 
-	public Class400(Game game_1, Language xlanguage_2, Index index_3) {
-		this.aClass317_4817 = index_3;
-		RsByteBuffer rsbytebuffer_4 = new RsByteBuffer(this.aClass317_4817.getFile(0, 0));
-		int i_5 = rsbytebuffer_4.buffer != null && rsbytebuffer_4.buffer.length >= 1 ? rsbytebuffer_4.readUnsignedByte() : -1;
+	public GameTipsLoader(Game game_1, Language xlanguage_2, Index index_3) {
+		this.tipsIndex = index_3;
+		RsByteBuffer buffer = new RsByteBuffer(this.tipsIndex.getFile(0, 0));
+		int i_5 = buffer.buffer != null && buffer.buffer.length >= 1 ? buffer.readUnsignedByte() : -1;
 		if (i_5 < 4) {
 			this.aClass402Array4818 = new Class402[0];
 			this.anInt4820 = -1;
 		} else {
-			int i_6 = rsbytebuffer_4.readUnsignedByte();
+			int i_6 = buffer.readUnsignedByte();
 			Class60[] arr_7 = Class112.method1870();
 			boolean bool_8 = true;
 			int i_9;
@@ -70,7 +70,7 @@ public class Class400 {
 				bool_8 = false;
 			} else {
 				for (i_9 = 0; i_9 < arr_7.length; i_9++) {
-					i_10 = rsbytebuffer_4.readUnsignedByte();
+					i_10 = buffer.readUnsignedByte();
 					if (i_10 != arr_7[i_9].anInt611) {
 						bool_8 = false;
 						break;
@@ -79,14 +79,14 @@ public class Class400 {
 			}
 
 			if (bool_8) {
-				i_9 = rsbytebuffer_4.readUnsignedByte();
-				i_10 = rsbytebuffer_4.readUnsignedByte();
+				i_9 = buffer.readUnsignedByte();
+				i_10 = buffer.readUnsignedByte();
 				int i_11;
 				int i_12;
 				if (i_5 > 2) {
-					this.anInt4820 = rsbytebuffer_4.readShort();
-					i_11 = rsbytebuffer_4.read24BitUnsignedInteger();
-					i_12 = rsbytebuffer_4.readUnsignedShort();
+					this.anInt4820 = buffer.readShort();
+					i_11 = buffer.read24BitUnsignedInteger();
+					i_12 = buffer.readUnsignedShort();
 				} else {
 					this.anInt4820 = -1;
 					i_11 = 0;
@@ -97,9 +97,9 @@ public class Class400 {
 
 				int i_13;
 				for (i_13 = 0; i_13 < i_9; i_13++) {
-					int i_14 = rsbytebuffer_4.readUnsignedByte();
-					boolean bool_15 = rsbytebuffer_4.readUnsignedByte() == 1;
-					int i_16 = rsbytebuffer_4.readUnsignedShort();
+					int i_14 = buffer.readUnsignedByte();
+					boolean bool_15 = buffer.readUnsignedByte() == 1;
+					int i_16 = buffer.readUnsignedShort();
 					Class399[] arr_17;
 					int i_18;
 					int i_19;
@@ -110,18 +110,18 @@ public class Class400 {
 						arr_17[0] = new Class399(this.anInt4820, i_11, i_12);
 
 						for (i_18 = 0; i_18 < i_16; i_18++) {
-							i_19 = rsbytebuffer_4.readUnsignedShort();
-							i_20 = rsbytebuffer_4.read24BitUnsignedInteger();
-							i_21 = rsbytebuffer_4.readUnsignedShort();
+							i_19 = buffer.readUnsignedShort();
+							i_20 = buffer.read24BitUnsignedInteger();
+							i_21 = buffer.readUnsignedShort();
 							arr_17[i_18 + 1] = new Class399(i_19, i_20, i_21);
 						}
 					} else {
 						arr_17 = new Class399[i_16];
 
 						for (i_18 = 0; i_18 < i_16; i_18++) {
-							i_19 = rsbytebuffer_4.readUnsignedShort();
-							i_20 = rsbytebuffer_4.read24BitUnsignedInteger();
-							i_21 = rsbytebuffer_4.readUnsignedShort();
+							i_19 = buffer.readUnsignedShort();
+							i_20 = buffer.read24BitUnsignedInteger();
+							i_21 = buffer.readUnsignedShort();
 							arr_17[i_18] = new Class399(i_19, i_20, i_21);
 						}
 

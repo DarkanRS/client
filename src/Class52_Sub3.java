@@ -62,7 +62,7 @@ public class Class52_Sub3 extends Class52 {
 		}
 	}
 
-	public static int[] method14522() {
-		return new int[] { Class16.p11FullIndex, Class16.anInt136, Class395.anInt4788 };
+	public static int[] getFontSpecifications() {
+		return new int[] { Class16.p11FullIndex, Class16.p12FullIndex, Class395.b12FullIndex };
 	}
 }

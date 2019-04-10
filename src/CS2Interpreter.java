@@ -3679,7 +3679,7 @@ public class CS2Interpreter {
 	static final void method1854(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = executor.intStack[--executor.intStackPtr];
-		FontMetrics fontmetrics_4 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, i_3, 1361822536);
+		FontMetrics fontmetrics_4 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, i_3, 1361822536);
 		executor.intStack[++executor.intStackPtr - 1] = fontmetrics_4.getWidth(string_2, Class182.aClass160Array2261);
 	}
 
@@ -5042,7 +5042,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_3 = executor.intStack[executor.intStackPtr];
 		int i_4 = executor.intStack[executor.intStackPtr + 1];
-		FontMetrics fontmetrics_5 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, i_4, 1444002710);
+		FontMetrics fontmetrics_5 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, i_4, 1444002710);
 		executor.intStack[++executor.intStackPtr - 1] = fontmetrics_5.method6951(string_2, i_3, Class182.aClass160Array2261, (byte) 76);
 	}
 
@@ -8351,7 +8351,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_3 = executor.intStack[executor.intStackPtr];
 		int i_4 = executor.intStack[executor.intStackPtr + 1];
-		FontMetrics fontmetrics_5 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, i_4, 1119085558);
+		FontMetrics fontmetrics_5 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, i_4, 1119085558);
 		executor.intStack[++executor.intStackPtr - 1] = fontmetrics_5.method6949(string_2, i_3, Class182.aClass160Array2261);
 	}
 
@@ -8995,13 +8995,13 @@ public class CS2Interpreter {
 		Class388.anInt4722 = executor.intStack[executor.intStackPtr + 9];
 		Class99.anInt1005 = executor.intStack[executor.intStackPtr + 10];
 		QuestIndexLoader.anInt2982 = executor.intStack[executor.intStackPtr + 11];
-		IndexLoaders.SPRITES_INDEX.loadCutscene(ConnectionInfo.anInt5438);
-		IndexLoaders.SPRITES_INDEX.loadCutscene(Class373.anInt4350);
-		IndexLoaders.SPRITES_INDEX.loadCutscene(Class254.anInt3145);
-		IndexLoaders.SPRITES_INDEX.loadCutscene(Class446.anInt5396);
-		IndexLoaders.SPRITES_INDEX.loadCutscene(Class17.anInt148);
-		IndexLoaders.SPRITES_INDEX.loadCutscene(QuestIndexLoader.anInt2982);
-		IndexLoaders.FONT_METRICS_INDEX.loadCutscene(QuestIndexLoader.anInt2982);
+		IndexLoaders.SPRITES_INDEX.loadFile(ConnectionInfo.anInt5438);
+		IndexLoaders.SPRITES_INDEX.loadFile(Class373.anInt4350);
+		IndexLoaders.SPRITES_INDEX.loadFile(Class254.anInt3145);
+		IndexLoaders.SPRITES_INDEX.loadFile(Class446.anInt5396);
+		IndexLoaders.SPRITES_INDEX.loadFile(Class17.anInt148);
+		IndexLoaders.SPRITES_INDEX.loadFile(QuestIndexLoader.anInt2982);
+		IndexLoaders.FONT_METRICS_INDEX.loadFile(QuestIndexLoader.anInt2982);
 		Class354.aClass160_4110 = null;
 		Class149_Sub2.aClass160_9315 = null;
 		Class125.aClass160_1571 = null;

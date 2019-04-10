@@ -299,40 +299,40 @@ public class ParticleProducerDefinition {
 
 	public static int method1159(Index index_0) {
 		int i_2 = 0;
-		if (index_0.loadCutscene(Class165.anInt2035)) {
+		if (index_0.loadFile(Class165.anInt2035)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class475.anInt5622)) {
+		if (index_0.loadFile(Class475.anInt5622)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class16.anInt135)) {
+		if (index_0.loadFile(Class16.anInt135)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class16.anInt142)) {
+		if (index_0.loadFile(Class16.anInt142)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class16.anInt137)) {
+		if (index_0.loadFile(Class16.anInt137)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class468_Sub12.anInt7899)) {
+		if (index_0.loadFile(Class468_Sub12.anInt7899)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class13.anInt130)) {
+		if (index_0.loadFile(Class13.anInt130)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class16.anInt143)) {
+		if (index_0.loadFile(Class16.anInt143)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class400.anInt4821)) {
+		if (index_0.loadFile(GameTipsLoader.anInt4821)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class16.anInt141)) {
+		if (index_0.loadFile(Class16.anInt141)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class165.anInt2037)) {
+		if (index_0.loadFile(Class165.anInt2037)) {
 			++i_2;
 		}
-		if (index_0.loadCutscene(Class271.anInt3330)) {
+		if (index_0.loadFile(Class271.anInt3330)) {
 			++i_2;
 		}
 		return i_2;

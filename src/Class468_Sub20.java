@@ -77,7 +77,7 @@ public class Class468_Sub20 extends Preference {
 		Class468_Sub12.anInt7899 = index_0.getArchiveId("cross");
 		Class13.anInt130 = index_0.getArchiveId("mapdots");
 		Class16.anInt143 = index_0.getArchiveId("name_icons");
-		Class400.anInt4821 = index_0.getArchiveId("floorshadows");
+		GameTipsLoader.anInt4821 = index_0.getArchiveId("floorshadows");
 		Class16.anInt141 = index_0.getArchiveId("compass");
 		Class165.anInt2037 = index_0.getArchiveId("otherlevel");
 		Class271.anInt3330 = index_0.getArchiveId("hint_mapedge");
@@ -133,7 +133,7 @@ public class Class468_Sub20 extends Preference {
 						Class328.aClass306_3771.method5445(Class302.anInterface27Array3559[i_3]);
 						++Class302.anInt3560;
 						if (Class302.anInt3560 >= Class302.anInterface27Array3559.length - 1 && Class302.anInterface27Array3559.length > 1) {
-							Class302.anInt3560 = Class275_Sub7.aClass400_7862.method6790(512238595) ? 0 : -1;
+							Class302.anInt3560 = Class275_Sub7.GAME_TIPS_LOADER.method6790(512238595) ? 0 : -1;
 						}
 					}
 				}

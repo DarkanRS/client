@@ -480,7 +480,7 @@ public class MIDIInstrument extends Node {
 
 	public static MIDIInstrument method12270(Index index_0, int i_1) {
 		if (!method12268(index_0)) {
-			index_0.loadCutscene(i_1);
+			index_0.loadFile(i_1);
 			return null;
 		} else {
 			byte[] bytes_2 = index_0.getFile(i_1);

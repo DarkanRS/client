@@ -23,10 +23,10 @@ public abstract class Class52 implements Interface2 {
 
     public boolean method10(int i_1) {
         boolean bool_2 = true;
-        if (!this.aClass317_493.loadCutscene(this.aClass350_489.anInt4086)) {
+        if (!this.aClass317_493.loadFile(this.aClass350_489.anInt4086)) {
             bool_2 = false;
         }
-        if (!this.aClass317_490.loadCutscene(this.aClass350_489.anInt4086)) {
+        if (!this.aClass317_490.loadFile(this.aClass350_489.anInt4086)) {
             bool_2 = false;
         }
         return bool_2;
@@ -72,10 +72,10 @@ public abstract class Class52 implements Interface2 {
 
     public boolean method17() {
         boolean bool_1 = true;
-        if (!this.aClass317_493.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_493.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
-        if (!this.aClass317_490.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_490.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
         return bool_1;
@@ -128,10 +128,10 @@ public abstract class Class52 implements Interface2 {
 
     public boolean method9() {
         boolean bool_1 = true;
-        if (!this.aClass317_493.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_493.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
-        if (!this.aClass317_490.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_490.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
         return bool_1;
@@ -139,10 +139,10 @@ public abstract class Class52 implements Interface2 {
 
     public boolean method21() {
         boolean bool_1 = true;
-        if (!this.aClass317_493.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_493.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
-        if (!this.aClass317_490.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_490.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
         return bool_1;
@@ -164,10 +164,10 @@ public abstract class Class52 implements Interface2 {
 
     public boolean method13() {
         boolean bool_1 = true;
-        if (!this.aClass317_493.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_493.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
-        if (!this.aClass317_490.loadCutscene(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
+        if (!this.aClass317_490.loadFile(985690519 * this.aClass350_489.anInt4086 * -1988551129)) {
             bool_1 = false;
         }
         return bool_1;

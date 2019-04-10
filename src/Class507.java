@@ -74,7 +74,7 @@ public class Class507 {
 			} else {
 				client.resizeableScreen = false;
 			}
-			Class400.method6795(2030703690);
+			GameTipsLoader.method6795(2030703690);
 			if (client.anInt7349 != -1) {
 				Class516.method8867(true);
 			}

@@ -2,7 +2,7 @@ import java.util.zip.Inflater;
 
 public class Class395 {
 
-	static int anInt4788;
+	static int b12FullIndex;
 	Inflater anInflater4787;
 
 	public byte[] method6764(byte[] bytes_1) {

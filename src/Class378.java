@@ -4,33 +4,29 @@ import java.util.Map;
 public class Class378 {
 
 	Map aMap4525 = null;
-
 	SoftCache aClass229_4524 = new SoftCache(20);
-
-	Index aClass317_4522;
-
-	Index aClass317_4523;
-
-	int[] anIntArray4521;
+	Index loadingFontIndex;
+	Index fontMetricIndex;
+	int[] indices;
 
 	public void method6403(Interface35 interface35_1) {
-		this.aMap4525 = new HashMap(this.anIntArray4521.length);
-		for (int i_3 = 0; i_3 < this.anIntArray4521.length; i_3++) {
-			int i_4 = this.anIntArray4521[i_3];
-			FontMetrics fontmetrics_5 = Class163.method2845(this.aClass317_4523, i_4, (byte) 31);
-			byte[] bytes_6 = this.aClass317_4522.getFile(i_4);
+		this.aMap4525 = new HashMap(this.indices.length);
+		for (int i_3 = 0; i_3 < this.indices.length; i_3++) {
+			int i_4 = this.indices[i_3];
+			FontMetrics fontmetrics_5 = Class163.method2845(this.fontMetricIndex, i_4, (byte) 31);
+			byte[] bytes_6 = this.loadingFontIndex.getFile(i_4);
 			Object object_7 = interface35_1.method216(bytes_6, fontmetrics_5, true);
 			this.aMap4525.put(Integer.valueOf(i_3), new Class452(object_7, fontmetrics_5));
 		}
 	}
 
-	public Class378(Index index_1, Index index_2, int[] ints_3) {
-		this.aClass317_4522 = index_1;
-		this.aClass317_4523 = index_2;
-		if (ints_3 != null) {
-			this.anIntArray4521 = ints_3;
+	public Class378(Index index_1, Index index_2, int[] fontSpecs) {
+		this.loadingFontIndex = index_1;
+		this.fontMetricIndex = index_2;
+		if (fontSpecs != null) {
+			this.indices = fontSpecs;
 		} else {
-			this.anIntArray4521 = null;
+			this.indices = null;
 		}
 	}
 
@@ -39,18 +35,18 @@ public class Class378 {
 	}
 
 	public int method6405(boolean bool_1, int i_2) {
-		if (this.anIntArray4521 == null) {
+		if (this.indices == null) {
 			return 0;
 		} else if (!bool_1 && this.aMap4525 != null) {
-			return this.anIntArray4521.length * 2;
+			return this.indices.length * 2;
 		} else {
 			int i_3 = 0;
-			for (int i_4 = 0; i_4 < this.anIntArray4521.length; i_4++) {
-				int i_5 = this.anIntArray4521[i_4];
-				if (this.aClass317_4522.loadCutscene(i_5)) {
+			for (int i_4 = 0; i_4 < this.indices.length; i_4++) {
+				int i_5 = this.indices[i_4];
+				if (this.loadingFontIndex.loadFile(i_5)) {
 					++i_3;
 				}
-				if (this.aClass317_4523.loadCutscene(i_5)) {
+				if (this.fontMetricIndex.loadFile(i_5)) {
 					++i_3;
 				}
 			}
@@ -62,9 +58,9 @@ public class Class378 {
 		if (i_2 == -1) {
 			return null;
 		} else {
-			if (this.anIntArray4521 != null) {
-				for (int i_6 = 0; i_6 < this.anIntArray4521.length; i_6++) {
-					if (i_2 == this.anIntArray4521[i_6]) {
+			if (this.indices != null) {
+				for (int i_6 = 0; i_6 < this.indices.length; i_6++) {
+					if (i_2 == this.indices[i_6]) {
 						return (Class452) this.aMap4525.get(Integer.valueOf(i_6));
 					}
 				}
@@ -72,7 +68,7 @@ public class Class378 {
 			Class452 class452_9 = (Class452) this.aClass229_4524.get((long) (i_2 << 1 | (bool_4 ? 1 : 0)));
 			if (class452_9 != null) {
 				if (bool_3 && class452_9.anObject5444 == null) {
-					FontMetrics fontmetrics_10 = Class163.method2845(this.aClass317_4523, i_2, (byte) 119);
+					FontMetrics fontmetrics_10 = Class163.method2845(this.fontMetricIndex, i_2, (byte) 119);
 					if (fontmetrics_10 == null) {
 						return null;
 					}
@@ -80,11 +76,11 @@ public class Class378 {
 				}
 				return class452_9;
 			} else {
-				byte[] bytes_7 = this.aClass317_4522.getFile(i_2);
+				byte[] bytes_7 = this.loadingFontIndex.getFile(i_2);
 				if (bytes_7 == null) {
 					return null;
 				} else {
-					FontMetrics fontmetrics_8 = Class163.method2845(this.aClass317_4523, i_2, (byte) 90);
+					FontMetrics fontmetrics_8 = Class163.method2845(this.fontMetricIndex, i_2, (byte) 90);
 					if (fontmetrics_8 == null) {
 						return null;
 					} else {
@@ -119,7 +115,7 @@ public class Class378 {
 	}
 
 	public int method6422(int i_1) {
-		return this.anIntArray4521 == null ? 0 : this.anIntArray4521.length * 2;
+		return this.indices == null ? 0 : this.indices.length * 2;
 	}
 
 	public Object method6426(Interface35 interface35_1, int i_2, boolean bool_3, boolean bool_4, int i_5) {

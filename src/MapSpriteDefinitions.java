@@ -37,7 +37,7 @@ public class MapSpriteDefinitions {
 		NativeSprite nativesprite_7 = (NativeSprite) this.aClass427_4998.aClass229_5122.get(long_5);
 		if (nativesprite_7 != null) {
 			return nativesprite_7;
-		} else if (!this.aClass427_4998.aClass317_5118.loadCutscene(this.anInt4995)) {
+		} else if (!this.aClass427_4998.aClass317_5118.loadFile(this.anInt4995)) {
 			return null;
 		} else {
 			SpriteDefinitions class91_8 = SpriteDefinitions.getSprite(this.aClass427_4998.aClass317_5118, this.anInt4995, 0);
@@ -62,7 +62,7 @@ public class MapSpriteDefinitions {
 	}
 
 	public boolean method7015() {
-		return this.aClass427_4998.aClass317_5118.loadCutscene(this.anInt4995);
+		return this.aClass427_4998.aClass317_5118.loadFile(this.anInt4995);
 	}
 
 	static void method7022() {

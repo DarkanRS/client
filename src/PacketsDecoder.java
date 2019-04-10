@@ -2105,7 +2105,7 @@ public class PacketsDecoder extends Class455 {
 			client.anInt7357 = -1;
 			client.CURRENT_CUTSCENE = key;
 			client.anInt7341 = 3;
-			IndexLoaders.CUTSCENE_INDEX.loadCutscene(client.CURRENT_CUTSCENE);
+			IndexLoaders.CUTSCENE_INDEX.loadFile(client.CURRENT_CUTSCENE);
 			Class316.method5594();
 			HitsplatDefinitions.method3851();
 			int flags = buffer.readUnsignedShort();

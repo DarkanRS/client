@@ -7,7 +7,7 @@ public class Class487 {
 	}
 
 	static void method8209(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, byte b_6) {
-		if ((Class354.aClass160_4110 == null || ParamDefinitions.aClass160_5339 == null || Class125.aClass160_1571 == null) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class254.anInt3145) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class446.anInt5396) && IndexLoaders.SPRITES_INDEX.loadCutscene(Class17.anInt148)) {
+		if ((Class354.aClass160_4110 == null || ParamDefinitions.aClass160_5339 == null || Class125.aClass160_1571 == null) && IndexLoaders.SPRITES_INDEX.loadFile(Class254.anInt3145) && IndexLoaders.SPRITES_INDEX.loadFile(Class446.anInt5396) && IndexLoaders.SPRITES_INDEX.loadFile(Class17.anInt148)) {
 			SpriteDefinitions class91_10 = SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, Class446.anInt5396, 0);
 			ParamDefinitions.aClass160_5339 = graphicalrenderer_0.method8444(class91_10, true);
 			class91_10.method1525();

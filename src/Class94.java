@@ -23,7 +23,7 @@ public class Class94 {
 		return rsbytebuffer_1;
 	}
 
-	public static FontMetrics createFontSpecification(Index index_0, int i_1, int i_3) {
+	public static FontMetrics getFontMetrics(Index index_0, int i_1, int i_3) {
 		byte[] bytes_4 = index_0.getFile(i_1, 0);
 		return bytes_4 == null ? null : new FontMetrics(bytes_4);
 	}

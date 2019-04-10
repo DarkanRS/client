@@ -1,7 +1,7 @@
 public class Class16 {
 
 	static int anInt135;
-	static int anInt136;
+	static int p12FullIndex;
 	static int anInt137;
 	static NativeSprite[] aClass160Array138;
 	public static FontMetrics aClass414_139;

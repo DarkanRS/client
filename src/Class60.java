@@ -3,23 +3,14 @@ public class Class60 {
 	public static NativeSprite aClass160_612;
 
 	public static Class60 aClass60_609 = new Class60(1);
-
 	public static Class60 aClass60_602 = new Class60(2);
-
 	public static Class60 aClass60_603 = new Class60(2);
-
 	public static Class60 aClass60_608 = new Class60(2);
-
 	public static Class60 aClass60_605 = new Class60(1);
-
 	public static Class60 aClass60_606 = new Class60(1);
-
 	public static Class60 aClass60_607 = new Class60(1);
-
 	public static Class60 aClass60_604 = new Class60(2);
-
 	public static Class60 aClass60_601 = new Class60(1);
-
 	public static Class60 aClass60_610 = new Class60(2);
 
 	public int anInt611;

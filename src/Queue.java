@@ -84,9 +84,9 @@ public class Queue implements Iterable {
 		return new Class469(this);
 	}
 
-	public static void method7960(Index index_0) {
+	public static void loadFontArchiveIds(Index index_0) {
 		Class16.p11FullIndex = index_0.getArchiveId("p11_full");
-		Class16.anInt136 = index_0.getArchiveId("p12_full");
-		Class395.anInt4788 = index_0.getArchiveId("b12_full");
+		Class16.p12FullIndex = index_0.getArchiveId("p12_full");
+		Class395.b12FullIndex = index_0.getArchiveId("b12_full");
 	}
 }

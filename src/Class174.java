@@ -27,35 +27,35 @@ public class Class174 {
     static boolean method2954(int i_0) {
         boolean bool_1 = true;
         if (aClass91_2141 == null) {
-            if (IndexLoaders.SPRITES_INDEX.loadCutscene(KeyHoldInputSubscriber.anInt2878)) {
+            if (IndexLoaders.SPRITES_INDEX.loadFile(KeyHoldInputSubscriber.anInt2878)) {
                 aClass91_2141 = SpriteDefinitions.method1515(IndexLoaders.SPRITES_INDEX, KeyHoldInputSubscriber.anInt2878);
             } else {
                 bool_1 = false;
             }
         }
         if (aClass91_2138 == null) {
-            if (IndexLoaders.SPRITES_INDEX.loadCutscene(Queue.anInt5630)) {
+            if (IndexLoaders.SPRITES_INDEX.loadFile(Queue.anInt5630)) {
                 aClass91_2138 = SpriteDefinitions.method1515(IndexLoaders.SPRITES_INDEX, Queue.anInt5630);
             } else {
                 bool_1 = false;
             }
         }
         if (QuestIndexLoader.aClass91_2981 == null) {
-            if (IndexLoaders.SPRITES_INDEX.loadCutscene(Class359.anInt4163)) {
+            if (IndexLoaders.SPRITES_INDEX.loadFile(Class359.anInt4163)) {
                 QuestIndexLoader.aClass91_2981 = SpriteDefinitions.method1515(IndexLoaders.SPRITES_INDEX, Class359.anInt4163);
             } else {
                 bool_1 = false;
             }
         }
         if (Class197.aClass414_2436 == null) {
-            if (IndexLoaders.FONT_METRICS_INDEX.loadCutscene(anInt2137)) {
+            if (IndexLoaders.FONT_METRICS_INDEX.loadFile(anInt2137)) {
                 Class197.aClass414_2436 = Class163.method2845(IndexLoaders.FONT_METRICS_INDEX, anInt2137, (byte) 18);
             } else {
                 bool_1 = false;
             }
         }
         if (aClass91Array2132 == null) {
-            if (IndexLoaders.SPRITES_INDEX.loadCutscene(anInt2137)) {
+            if (IndexLoaders.SPRITES_INDEX.loadFile(anInt2137)) {
                 aClass91Array2132 = SpriteDefinitions.method1534(IndexLoaders.SPRITES_INDEX, anInt2137);
             } else {
                 bool_1 = false;

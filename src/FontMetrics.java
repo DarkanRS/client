@@ -359,25 +359,25 @@ public class FontMetrics {
 	}
 
 	FontMetrics(byte[] bytes_1) {
-		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_1);
-		int i_3 = rsbytebuffer_2.readUnsignedByte();
+		RsByteBuffer stream = new RsByteBuffer(bytes_1);
+		int i_3 = stream.readUnsignedByte();
 		if (i_3 != 0) {
 			throw new RuntimeException("");
 		} else {
-			boolean bool_4 = rsbytebuffer_2.readUnsignedByte() == 1;
+			boolean bool_4 = stream.readUnsignedByte() == 1;
 			this.characters = new byte[256];
-			rsbytebuffer_2.readBytes(this.characters, 0, 256);
+			stream.readBytes(this.characters, 0, 256);
 			if (bool_4) {
 				int[] ints_5 = new int[256];
 				int[] ints_6 = new int[256];
 
 				int i_7;
 				for (i_7 = 0; i_7 < 256; i_7++) {
-					ints_5[i_7] = rsbytebuffer_2.readUnsignedByte();
+					ints_5[i_7] = stream.readUnsignedByte();
 				}
 
 				for (i_7 = 0; i_7 < 256; i_7++) {
-					ints_6[i_7] = rsbytebuffer_2.readUnsignedByte();
+					ints_6[i_7] = stream.readUnsignedByte();
 				}
 
 				byte[][] bytes_12 = new byte[256][];
@@ -388,7 +388,7 @@ public class FontMetrics {
 					byte b_9 = 0;
 
 					for (i_10 = 0; i_10 < bytes_12[i_8].length; i_10++) {
-						b_9 += rsbytebuffer_2.readByte();
+						b_9 += stream.readByte();
 						bytes_12[i_8][i_10] = b_9;
 					}
 				}
@@ -401,7 +401,7 @@ public class FontMetrics {
 					byte b_15 = 0;
 
 					for (int i_11 = 0; i_11 < bytes_13[i_14].length; i_11++) {
-						b_15 += rsbytebuffer_2.readByte();
+						b_15 += stream.readByte();
 						bytes_13[i_14][i_11] = b_15;
 					}
 				}
@@ -412,7 +412,7 @@ public class FontMetrics {
 					if (i_14 != 32 && i_14 != 160) {
 						for (i_10 = 0; i_10 < 256; i_10++) {
 							if (i_10 != 32 && i_10 != 160) {
-								this.kerning[i_14][i_10] = (byte) Class254.method4380(bytes_12, bytes_13, ints_6, this.characters, ints_5, i_14, i_10);
+								this.kerning[i_14][i_10] = (byte) Utils.calculateKerning(bytes_12, bytes_13, ints_6, this.characters, ints_5, i_14, i_10);
 							}
 						}
 					}
@@ -420,13 +420,13 @@ public class FontMetrics {
 
 				this.anInt4975 = ints_6[32] + ints_5[32];
 			} else {
-				this.anInt4975 = rsbytebuffer_2.readUnsignedByte();
+				this.anInt4975 = stream.readUnsignedByte();
 			}
 
-			rsbytebuffer_2.readUnsignedByte();
-			rsbytebuffer_2.readUnsignedByte();
-			this.anInt4978 = rsbytebuffer_2.readUnsignedByte();
-			this.anInt4979 = rsbytebuffer_2.readUnsignedByte();
+			stream.readUnsignedByte();
+			stream.readUnsignedByte();
+			this.anInt4978 = stream.readUnsignedByte();
+			this.anInt4979 = stream.readUnsignedByte();
 		}
 	}
 

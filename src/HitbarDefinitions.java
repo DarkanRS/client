@@ -77,19 +77,19 @@ public class HitbarDefinitions {
 	void method3211(GraphicalRenderer graphicalrenderer_1, byte b_2) {
 		Index index_3 = this.aClass290_2437.aClass317_3448;
 		SpriteDefinitions class91_4;
-		if (this.anInt2444 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2444) == null && index_3.loadCutscene(this.anInt2444)) {
+		if (this.anInt2444 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2444) == null && index_3.loadFile(this.anInt2444)) {
 			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2444);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2444);
 		}
-		if (this.anInt2445 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2445) == null && index_3.loadCutscene(this.anInt2445)) {
+		if (this.anInt2445 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2445) == null && index_3.loadFile(this.anInt2445)) {
 			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2445);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2445);
 		}
-		if (this.anInt2441 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2441) == null && index_3.loadCutscene(this.anInt2441)) {
+		if (this.anInt2441 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2441) == null && index_3.loadFile(this.anInt2441)) {
 			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2441);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2441);
 		}
-		if (this.anInt2447 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2447) == null && index_3.loadCutscene(this.anInt2447)) {
+		if (this.anInt2447 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2447) == null && index_3.loadFile(this.anInt2447)) {
 			class91_4 = SpriteDefinitions.method1515(index_3, this.anInt2447);
 			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2447);
 		}

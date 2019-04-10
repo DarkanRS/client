@@ -476,7 +476,7 @@ public final class Index {
 		}
 	}
 
-	public synchronized boolean loadCutscene(int i_1) {
+	public synchronized boolean loadFile(int i_1) {
 		if (!this.referenceTableLoaded()) {
 			return false;
 		} else if (this.referenceTable.fileCounts.length == 1) {

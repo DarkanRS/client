@@ -12,7 +12,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
+			return !this.aClass317_493.loadFile(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadFile(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadFile(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadFile(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadFile(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadFile(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 
@@ -143,7 +143,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
+			return !this.aClass317_493.loadFile(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadFile(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadFile(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadFile(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadFile(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadFile(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 
@@ -152,7 +152,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
+			return !this.aClass317_493.loadFile(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadFile(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadFile(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadFile(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadFile(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadFile(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 
@@ -161,7 +161,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_2 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.loadCutscene(class350_sub3_2.anInt7844) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7840) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7842) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7843) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_2.anInt7841) ? false : this.aClass317_493.loadCutscene(class350_sub3_2.anInt7845)))));
+			return !this.aClass317_493.loadFile(class350_sub3_2.anInt7844) ? false : (!this.aClass317_493.loadFile(class350_sub3_2.anInt7840) ? false : (!this.aClass317_493.loadFile(class350_sub3_2.anInt7842) ? false : (!this.aClass317_493.loadFile(class350_sub3_2.anInt7843) ? false : (!this.aClass317_493.loadFile(class350_sub3_2.anInt7841) ? false : this.aClass317_493.loadFile(class350_sub3_2.anInt7845)))));
 		}
 	}
 
@@ -232,7 +232,7 @@ public class Class52_Sub2 extends Class52 {
 			return false;
 		} else {
 			Class350_Sub3 class350_sub3_1 = (Class350_Sub3) this.aClass350_489;
-			return !this.aClass317_493.loadCutscene(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadCutscene(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadCutscene(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadCutscene(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadCutscene(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadCutscene(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
+			return !this.aClass317_493.loadFile(-1642545265 * class350_sub3_1.anInt7844 * 1903394671) ? false : (!this.aClass317_493.loadFile(-733628077 * class350_sub3_1.anInt7840 * 2096034523) ? false : (!this.aClass317_493.loadFile(class350_sub3_1.anInt7842 * -1010155381 * -821287133) ? false : (!this.aClass317_493.loadFile(-2050274227 * class350_sub3_1.anInt7843 * -1461400443) ? false : (!this.aClass317_493.loadFile(-485291629 * class350_sub3_1.anInt7841 * -141394789) ? false : this.aClass317_493.loadFile(class350_sub3_1.anInt7845 * 1560773125 * 657783501)))));
 		}
 	}
 

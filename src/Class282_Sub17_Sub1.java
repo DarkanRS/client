@@ -73,8 +73,8 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			Renderers.SOFTWARE_RENDERER = Class320.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aClass468_Sub4_8223.method12641(-1783373613) * 2, -1283280673);
 			if (string_1 != null) {
 				Renderers.SOFTWARE_RENDERER.ba(1, 0);
-				FontMetrics fontmetrics_4 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 1150997063);
-				FontRenderer fontrenderer_5 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_4, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136), true);
+				FontMetrics fontmetrics_4 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p12FullIndex, 1150997063);
+				FontRenderer fontrenderer_5 = Renderers.SOFTWARE_RENDERER.createFont(fontmetrics_4, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
 				EntityNode.method4891((byte) -128);
 				Class446.method7447(string_1, true, Renderers.SOFTWARE_RENDERER, fontrenderer_5, fontmetrics_4, (byte) -87);
 			}
@@ -85,8 +85,8 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			if (string_1 != null) {
 				graphicalrenderer_16 = Class320.createRenderer(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -603391790);
 				graphicalrenderer_16.ba(1, 0);
-				fontmetrics_17 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 1961117540);
-				fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136), true);
+				fontmetrics_17 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p12FullIndex, 1961117540);
+				fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
 				EntityNode.method4891((byte) -74);
 				Class446.method7447(string_1, true, graphicalrenderer_16, fontrenderer_6, fontmetrics_17, (byte) -82);
 			}
@@ -95,8 +95,8 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 					Renderers.SOFTWARE_RENDERER = Class320.createRenderer(i_0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.preferences.aClass468_Sub4_8223.method12641(169664234) * 2, -694595538);
 					if (string_1 != null) {
 						graphicalrenderer_16.ba(1, 0);
-						fontmetrics_17 = Class94.createFontSpecification(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136, 1716473063);
-						fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136), true);
+						fontmetrics_17 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, Class16.p12FullIndex, 1716473063);
+						fontrenderer_6 = graphicalrenderer_16.createFont(fontmetrics_17, SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, Class16.p12FullIndex), true);
 						EntityNode.method4891((byte) -30);
 						Class446.method7447(string_1, true, graphicalrenderer_16, fontrenderer_6, fontmetrics_17, (byte) -16);
 					}

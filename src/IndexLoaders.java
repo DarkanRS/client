@@ -117,12 +117,12 @@ public class IndexLoaders {
 
 			Class96_Sub10_Sub1.anInt10159 = LOADING_FONT_INDEX.getCrc();
 			Class302.anInt3561 = GAME_TIPS_INDEX.getCrc();
-			Queue.method7960(LOADING_FONT_INDEX);
+			Queue.loadFontArchiveIds(LOADING_FONT_INDEX);
 			int i_3 = Class393.preferences.aClass468_Sub11_8217.method12699((byte) -106);
-			Class275_Sub7.aClass400_7862 = new Class400(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
-			Class399[] arr_4 = Class275_Sub7.aClass400_7862.method6786(i_3, -1983202433);
+			Class275_Sub7.GAME_TIPS_LOADER = new GameTipsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
+			Class399[] arr_4 = Class275_Sub7.GAME_TIPS_LOADER.method6786(i_3, -1983202433);
 			if (arr_4.length == 0) {
-				arr_4 = Class275_Sub7.aClass400_7862.method6786(0, 462233129);
+				arr_4 = Class275_Sub7.GAME_TIPS_LOADER.method6786(0, 462233129);
 			}
 
 			Class29 class29_5 = new Class29(LOADING_FONT_INDEX, FONT_METRICS_INDEX);
@@ -130,13 +130,13 @@ public class IndexLoaders {
 				Class302.anInterface27Array3559 = new Interface27[arr_4.length];
 
 				for (int i_6 = 0; i_6 < Class302.anInterface27Array3559.length; i_6++) {
-					Class302.anInterface27Array3559[i_6] = new Class299(Class275_Sub7.aClass400_7862.method6785(arr_4[i_6].anInt4814), arr_4[i_6].anInt4815, arr_4[i_6].anInt4816, class29_5);
+					Class302.anInterface27Array3559[i_6] = new Class299(Class275_Sub7.GAME_TIPS_LOADER.method6785(arr_4[i_6].anInt4814), arr_4[i_6].anInt4815, arr_4[i_6].anInt4816, class29_5);
 				}
 			}
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4696) {
-			Class487.aClass378_5752 = new Class378(LOADING_FONT_INDEX, FONT_METRICS_INDEX, Class52_Sub3.method14522());
+			Class487.aClass378_5752 = new Class378(LOADING_FONT_INDEX, FONT_METRICS_INDEX, Class52_Sub3.getFontSpecifications());
 		}
 
 		if (LoadingStage.aClass387_4702 == LOADING_STAGE) {
@@ -153,7 +153,7 @@ public class IndexLoaders {
 					return 0;
 				}
 
-				if (Class302.anInterface27Array3559.length > 1 && Class275_Sub7.aClass400_7862.method6790(906509340) && Class302.anInterface27Array3559[1].method191(1471914500) < 100) {
+				if (Class302.anInterface27Array3559.length > 1 && Class275_Sub7.GAME_TIPS_LOADER.method6790(906509340) && Class302.anInterface27Array3559[1].method191(1471914500) < 100) {
 					return 0;
 				}
 			}
@@ -217,7 +217,7 @@ public class IndexLoaders {
 			}
 
 			Class468_Sub20.method12806(SPRITES_INDEX);
-			Class487.aClass378_5752 = new Class378(SPRITES_INDEX, FONT_METRICS_INDEX, Class52_Sub3.method14522());
+			Class487.aClass378_5752 = new Class378(SPRITES_INDEX, FONT_METRICS_INDEX, Class52_Sub3.getFontSpecifications());
 		}
 
 		if (LoadingStage.aClass387_4717 == LOADING_STAGE) {
@@ -380,7 +380,7 @@ public class IndexLoaders {
 			VarDefinitionLoader.aThread4520 = null;
 			LOADING_FONT_INDEX = null;
 			GAME_TIPS_INDEX = null;
-			Class275_Sub7.aClass400_7862 = null;
+			Class275_Sub7.GAME_TIPS_LOADER = null;
 			Class302.anInterface27Array3559 = null;
 			Class358.method6234();
 			client.aBool7465 = Class393.preferences.safeMode.getValue((byte) -77) == 1;

@@ -1,6 +1,6 @@
 public class Class275_Sub7 extends EntityNode {
 
-	static Class400 aClass400_7862;
+	static GameTipsLoader GAME_TIPS_LOADER;
 	EntityList aClass457_7861 = new EntityList();
 	public HitbarDefinitions aClass198_7863;
 

@@ -9,7 +9,7 @@ public class Class43 implements Interface2 {
 	NativeSprite aClass160_417;
 
 	public boolean method21() {
-		return this.aClass317_419.loadCutscene(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
+		return this.aClass317_419.loadFile(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
 	}
 
 	Class43(Index index_1, Class351 class351_2) {
@@ -22,7 +22,7 @@ public class Class43 implements Interface2 {
 	}
 
 	public boolean method10(int i_1) {
-		return this.aClass317_419.loadCutscene(this.aClass351_418.anInt4095);
+		return this.aClass317_419.loadFile(this.aClass351_418.anInt4095);
 	}
 
 	public void method12(boolean bool_1) {
@@ -122,11 +122,11 @@ public class Class43 implements Interface2 {
 	}
 
 	public boolean method13() {
-		return this.aClass317_419.loadCutscene(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
+		return this.aClass317_419.loadFile(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
 	}
 
 	public boolean method9() {
-		return this.aClass317_419.loadCutscene(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
+		return this.aClass317_419.loadFile(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
 	}
 
 	public void method18() {
@@ -134,6 +134,6 @@ public class Class43 implements Interface2 {
 	}
 
 	public boolean method17() {
-		return this.aClass317_419.loadCutscene(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
+		return this.aClass317_419.loadFile(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
 	}
 }
