@@ -73,7 +73,7 @@ public class Class92 {
 
 	static void method1564(int i_0, int i_1, int i_2, int i_3, int i_4) {
 		for (int i_6 = i_2; i_6 <= i_3; i_6++) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_6], i_0, i_1, i_4, (byte) -105);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_6], i_0, i_1, i_4, (byte) -105);
 		}
 	}
 

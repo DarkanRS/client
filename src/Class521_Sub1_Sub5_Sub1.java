@@ -513,7 +513,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 					packet.buffer.writeLong(client.aLong7153);
 					packet.buffer.writeString(Class464.aString5555);
 					packet.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
-					packet.buffer.writeByte(client.CURRENT_GAME.anInt5746);
+					packet.buffer.writeByte(client.CURRENT_GAME.id);
 					IdentitiKitIndexLoader.method809(packet.buffer, -1671456029);
 					String string_5 = client.aString7156;
 					packet.buffer.writeByte(string_5 == null ? 0 : 1);

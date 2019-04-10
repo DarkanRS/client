@@ -27,7 +27,7 @@ public class Class225_Sub1 extends RouteStrategy {
 		Class282_Sub54 class282_sub54_2 = new Class282_Sub54(client.CURRENT_GAME);
 
 		try {
-			class442_1 = Class345.method6137("", client.CURRENT_GAME.aString5748, false);
+			class442_1 = Class345.method6137("", client.CURRENT_GAME.name, false);
 			byte[] bytes_3 = new byte[(int) class442_1.method7388()];
 
 			int i_4;
@@ -54,7 +54,7 @@ public class Class225_Sub1 extends RouteStrategy {
 		return class282_sub54_2;
 	}
 
-	static CS2Script method12792(Class397 class397_0, int i_1, int i_2) {
+	static CS2Script getScript(Class397 class397_0, int i_1, int i_2) {
 		int i_4 = class397_0.anInt4802 | i_1 << 10;
 		CS2Script cs2script_5 = (CS2Script) Class506.aClass223_5857.method3758((long) i_4 << 16);
 		if (cs2script_5 != null) {

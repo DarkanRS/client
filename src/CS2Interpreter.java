@@ -3103,18 +3103,18 @@ public class CS2Interpreter {
 		if (class405_3.aChar4832 != 1) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
-		Integer integer_4 = (Integer) Class46.CLAN_VARS[class405_3.anInt4833];
+		Integer integer_4 = (Integer) Class46.CLAN_VARS[class405_3.baseVar];
 		if (integer_4 == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			int i_5 = class405_3.anInt4835 == 31 ? -1 : (1 << class405_3.anInt4835 + 1) - 1;
-			executor.intStack[++executor.intStackPtr - 1] = (integer_4.intValue() & i_5) >>> class405_3.anInt4834;
+			int i_5 = class405_3.endBit == 31 ? -1 : (1 << class405_3.endBit + 1) - 1;
+			executor.intStack[++executor.intStackPtr - 1] = (integer_4.intValue() & i_5) >>> class405_3.startBit;
 		}
 	}
 
 	static final void method2605(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Long long_3 = executor.aClass61_7010.method1201(client.CURRENT_GAME.anInt5746 << 16 | i_2);
+		Long long_3 = executor.aClass61_7010.method1201(client.CURRENT_GAME.id << 16 | i_2);
 		long long_4;
 		if (long_3 == null) {
 			long_4 = -1L;
@@ -3604,7 +3604,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3894(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class221.anInt2762;
+		executor.intStack[++executor.intStackPtr - 1] = InputSubscriberType.anInt2762;
 	}
 
 	static final void method15696(CS2Executor executor) {
@@ -5511,7 +5511,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method299(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.method3570();
+		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.getMouseY();
 	}
 
 	static final void method300(CS2Executor executor) {
@@ -5673,7 +5673,7 @@ public class CS2Interpreter {
 		if (class537_3 == null) {
 			throw new RuntimeException();
 		} else {
-			Integer integer_4 = executor.aClass61_7010.method1225(client.CURRENT_GAME.anInt5746 << 16 | class537_3.anInt7097, class537_3.anInt7098, class537_3.anInt7099);
+			Integer integer_4 = executor.aClass61_7010.method1225(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
 			int i_5;
 			if (integer_4 == null) {
 				i_5 = 0;
@@ -6347,7 +6347,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method928(CS2Executor executor) {
-		if (Class96_Sub21.keyRecorder.method3236(82, -2064164643)) {
+		if (Class96_Sub21.keyRecorder.held(82)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -7247,7 +7247,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3233(CS2Executor executor) {
-		Defaults6Loader.method11248(2004309168);
+		EquipmentDefaults.method11248(2004309168);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -90);
 		Class190.savePreferences((byte) 38);
 		client.aBool7175 = false;
@@ -7794,7 +7794,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3792(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.method3569(2029806925);
+		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.getMouseX();
 	}
 
 	static final void lowerString(CS2Executor executor) {
@@ -7835,7 +7835,7 @@ public class CS2Interpreter {
 		if (class537_3 == null) {
 			throw new RuntimeException();
 		} else {
-			Integer integer_4 = executor.aClass61_7010.method1199(client.CURRENT_GAME.anInt5746 << 16 | i_2);
+			Integer integer_4 = executor.aClass61_7010.method1199(client.CURRENT_GAME.id << 16 | i_2);
 			int i_5;
 			if (integer_4 == null) {
 				if (class537_3.aChar7096 != 105 && class537_3.aChar7096 != 49) {
@@ -8206,7 +8206,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3988(CS2Executor executor) {
-		if (Class96_Sub21.keyRecorder.method3236(86, -1402541861)) {
+		if (Class96_Sub21.keyRecorder.held(86)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -9022,7 +9022,7 @@ public class CS2Interpreter {
 
 	static final void method8864(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		String string_3 = executor.aClass61_7010.method1202(client.CURRENT_GAME.anInt5746 << 16 | i_2);
+		String string_3 = executor.aClass61_7010.method1202(client.CURRENT_GAME.id << 16 | i_2);
 		String string_4;
 		if (string_3 == null) {
 			string_4 = "";
@@ -9316,7 +9316,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6046(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class232.anInt2879;
+		executor.intStack[++executor.intStackPtr - 1] = KeyHoldInputSubscriber.anInt2879;
 	}
 
 	static final void method12718(CS2Executor executor) {
@@ -9365,7 +9365,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8297(CS2Executor executor) {
-		if (Class96_Sub21.keyRecorder.method3236(81, -2091776550)) {
+		if (Class96_Sub21.keyRecorder.held(81)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -9630,9 +9630,9 @@ public class CS2Interpreter {
 		if (itemdefinitions_3.hasTooltipColor) {
 			i_4 = itemdefinitions_3.tooltipColor;
 		} else if (itemdefinitions_3.membersOnly) {
-			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880;
+			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.membersTooltipColor;
 		} else {
-			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881;
+			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.f2pTooltipColor;
 		}
 		executor.intStack[++executor.intStackPtr - 1] = i_4;
 	}

@@ -1,6 +1,6 @@
 public class QuickchatFiller implements Interface19 {
 
-	public static Defaults3Loader aClass529_527;
+	public static EntityDefaults ENTITY_DEFAULTS;
 	public static Class61 aClass61_528;
 
 	public String method135(QuickChatValueType value, int[] configs, long data) {
@@ -56,8 +56,8 @@ public class QuickchatFiller implements Interface19 {
 				}
 			} else {
 				FontMetrics fontmetrics_1 = Class114.method1887(466263588);
-				int i_2 = Class163.mouseRecorder.method3569(1973979950);
-				int i_3 = Class163.mouseRecorder.method3570();
+				int i_2 = Class163.mouseRecorder.getMouseX();
+				int i_3 = Class163.mouseRecorder.getMouseY();
 				int i_4;
 				int i_5;
 				Class282_Sub50_Sub7 class282_sub50_sub7_7;

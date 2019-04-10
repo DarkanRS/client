@@ -22,7 +22,7 @@ public abstract class JS5FileWorker {
 
 	abstract byte[] method5813(int var1);
 
-	static Class221[] method5815() {
-		return new Class221[] { Class221.aClass221_2760, Class221.aClass221_2761, Class221.aClass221_2759 };
+	static InputSubscriberType[] method5815() {
+		return new InputSubscriberType[] { InputSubscriberType.KEY_HOLD, InputSubscriberType.KEY_PRESS, InputSubscriberType.COMBINED };
 	}
 }

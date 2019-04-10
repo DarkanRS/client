@@ -14,7 +14,7 @@ public class Class275_Sub6 extends EntityNode {
 
 	String aString7860;
 
-	static Class472[] method12598() {
-		return new Class472[] { Class472.aClass472_5596, Class472.aClass472_5599, Class472.aClass472_5597, Class472.aClass472_5600, Class472.aClass472_5598 };
+	static BuildEnvironment[] method12598() {
+		return new BuildEnvironment[] { BuildEnvironment.BUILD_LIVE, BuildEnvironment.WIP, BuildEnvironment.INT_BETA, BuildEnvironment.LIVE, BuildEnvironment.RC };
 	}
 }

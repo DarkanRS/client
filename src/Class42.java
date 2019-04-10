@@ -25,16 +25,16 @@ public class Class42 implements Interface2 {
 
 	public void method12(boolean bool_1) {
 		if (bool_1) {
-			int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.anInt7439 * 1426041429 * 765 * -1115795005 * 150480619, 2107635220) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
-			int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 649230584) + 177795463 * this.aClass357_416.anInt4120 * -818805705;
+			int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619, 2107635220) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+			int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 649230584) + 177795463 * this.aClass357_416.anInt4120 * -818805705;
 			this.aClass160_414.method2752(i_2, i_3);
 		}
 	}
 
 	public void method11(boolean bool_1) {
 		if (bool_1) {
-			int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.anInt7439 * 1426041429 * 765 * -1115795005 * 150480619, 1305006650) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
-			int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 2065837494) + 177795463 * this.aClass357_416.anInt4120 * -818805705;
+			int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619, 1305006650) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+			int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 2065837494) + 177795463 * this.aClass357_416.anInt4120 * -818805705;
 			this.aClass160_414.method2752(i_2, i_3);
 		}
 	}
@@ -57,8 +57,8 @@ public class Class42 implements Interface2 {
 
 	public void method14(boolean bool_1) {
 		if (bool_1) {
-			int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.anInt7439 * 1426041429 * 765 * -1115795005 * 150480619, 2114569725) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
-			int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 699445183) + 177795463 * this.aClass357_416.anInt4120 * -818805705;
+			int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619, 2114569725) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+			int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 699445183) + 177795463 * this.aClass357_416.anInt4120 * -818805705;
 			this.aClass160_414.method2752(i_2, i_3);
 		}
 	}
@@ -81,8 +81,8 @@ public class Class42 implements Interface2 {
 
 	public void method20(boolean bool_1, int i_2) {
 		if (bool_1) {
-			int i_3 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.anInt7439, 2066009749) + this.aClass357_416.anInt4123;
-			int i_4 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), client.anInt7312, 2002667061) + this.aClass357_416.anInt4120;
+			int i_3 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.GAME_WIDTH, 2066009749) + this.aClass357_416.anInt4123;
+			int i_4 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), client.GAME_HEIGHT, 2002667061) + this.aClass357_416.anInt4120;
 			this.aClass160_414.method2752(i_3, i_4);
 		}
 	}

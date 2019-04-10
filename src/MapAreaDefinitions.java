@@ -377,7 +377,7 @@ public class MapAreaDefinitions {
         if (client.aString7281 != null) {
             str_2 = "/p=" + client.aString7281;
         }
-        String string_3 = client.CURRENT_GAME.aString5748 + ".com";
+        String string_3 = client.CURRENT_GAME.name + ".com";
         return "http://" + str_1 + "." + string_3 + "/l=" + Class223.CURRENT_LANGUAGE + "/a=" + client.anInt7149 + str_2 + "/";
     }
 

@@ -27,8 +27,8 @@ public class Class174 {
     static boolean method2954(int i_0) {
         boolean bool_1 = true;
         if (aClass91_2141 == null) {
-            if (IndexLoaders.SPRITES_INDEX.loadCutscene(Class232.anInt2878)) {
-                aClass91_2141 = SpriteDefinitions.method1515(IndexLoaders.SPRITES_INDEX, Class232.anInt2878);
+            if (IndexLoaders.SPRITES_INDEX.loadCutscene(KeyHoldInputSubscriber.anInt2878)) {
+                aClass91_2141 = SpriteDefinitions.method1515(IndexLoaders.SPRITES_INDEX, KeyHoldInputSubscriber.anInt2878);
             } else {
                 bool_1 = false;
             }

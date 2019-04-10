@@ -79,17 +79,17 @@ public class Class20 {
 		int i_12 = EntityNode.method4890(i_3 - i_5, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -1696179527);
 		int i_13;
 		for (i_13 = i_7; i_13 < i_11; i_13++) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_13], i_9, i_10, i_4, (byte) 31);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_13], i_9, i_10, i_4, (byte) 31);
 		}
 		for (i_13 = i_8; i_13 > i_12; --i_13) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_13], i_9, i_10, i_4, (byte) 46);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_13], i_9, i_10, i_4, (byte) 46);
 		}
 		i_13 = EntityNode.method4890(i_5 + i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 2146581760);
 		int i_14 = EntityNode.method4890(i_1 - i_5, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 167924575);
 		for (int i_15 = i_11; i_15 <= i_12; i_15++) {
 			int[] ints_16 = Class532_Sub1.anIntArrayArray7072[i_15];
-			Class232.method3922(ints_16, i_9, i_13, i_4, (byte) -7);
-			Class232.method3922(ints_16, i_14, i_10, i_4, (byte) -37);
+			KeyHoldInputSubscriber.method3922(ints_16, i_9, i_13, i_4, (byte) -7);
+			KeyHoldInputSubscriber.method3922(ints_16, i_14, i_10, i_4, (byte) -37);
 		}
 	}
 

@@ -1367,17 +1367,17 @@ public class MapRegion {
 		int i_8 = i_3 - i_5;
 		int i_9;
 		for (i_9 = i_2; i_9 < i_7; i_9++) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_9], i_0, i_1, i_4, (byte) -10);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_9], i_0, i_1, i_4, (byte) -10);
 		}
 		for (i_9 = i_3; i_9 > i_8; --i_9) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_9], i_0, i_1, i_4, (byte) -46);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_9], i_0, i_1, i_4, (byte) -46);
 		}
 		i_9 = i_5 + i_0;
 		int i_10 = i_1 - i_5;
 		for (int i_11 = i_7; i_11 <= i_8; i_11++) {
 			int[] ints_12 = Class532_Sub1.anIntArrayArray7072[i_11];
-			Class232.method3922(ints_12, i_0, i_9, i_4, (byte) 79);
-			Class232.method3922(ints_12, i_10, i_1, i_4, (byte) 31);
+			KeyHoldInputSubscriber.method3922(ints_12, i_0, i_9, i_4, (byte) 79);
+			KeyHoldInputSubscriber.method3922(ints_12, i_10, i_1, i_4, (byte) 31);
 		}
 	}
 

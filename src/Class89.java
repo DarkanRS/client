@@ -1,7 +1,6 @@
 public class Class89 {
 
 	public static int[] anIntArray931 = new int[] { 3, 7, 15 };
-
 	public static int[] anIntArray934 = new int[] { 2047, 16383, 65535 };
 
 	Class89() throws Throwable {

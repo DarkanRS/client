@@ -805,13 +805,4 @@ public class ClipMap {
             }
         }
     }
-
-    public static Class232 method6009(RsByteBuffer rsbytebuffer_0) {
-        int i_2 = rsbytebuffer_0.readUnsignedByte();
-        int[] ints_3 = new int[i_2];
-        for (int i_4 = 0; i_4 < i_2; i_4++) {
-            ints_3[i_4] = rsbytebuffer_0.readUnsignedByte();
-        }
-        return new Class232(ints_3);
-    }
 }

@@ -1,6 +1,6 @@
 public class LinkedNodeList {
 
-    public static Defaults6Loader DEFAULTS_LOADER_6;
+    public static EquipmentDefaults EQUIPMENT_DEFAULTS;
 
     static int anInt5606;
 

@@ -109,8 +109,8 @@ public class SunDefinitions {
 		if (i_9 < 0) {
 			i_9 = 0;
 		}
-		int i_10 = Class163.mouseRecorder.method3569(2129837373);
-		int i_11 = Class163.mouseRecorder.method3570();
+		int i_10 = Class163.mouseRecorder.getMouseX();
+		int i_11 = Class163.mouseRecorder.getMouseY();
 		int i_12;
 		Class282_Sub50_Sub7 class282_sub50_sub7_13;
 		int i_14;

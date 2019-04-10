@@ -133,9 +133,9 @@ public class Class301 implements Interface41 {
 		}
 		for (i_1 = 0; i_1 < client.anInt7193; i_1++) {
 			KeyRecord interface16_9 = client.KEYS_PRESSED[i_1];
-			int i_10 = interface16_9.method92();
+			int i_10 = interface16_9.getCode();
 			char var_4 = interface16_9.getCode(-63648913);
-			int i_5 = interface16_9.method125(1713705553);
+			int i_5 = interface16_9.getFlags();
 			if (i_10 == 84) {
 				Class165.method2853(false, -2060132011);
 			}

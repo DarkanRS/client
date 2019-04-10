@@ -1,9 +1,9 @@
 public class ClanVarSettingsDefinitions {
 
 	public char aChar7096;
-	public int anInt7097;
-	public int anInt7098;
-	public int anInt7099;
+	public int baseVar;
+	public int startBit;
+	public int endBit;
 
 	void method11487(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
@@ -19,9 +19,9 @@ public class ClanVarSettingsDefinitions {
 		if (i_2 == 1) {
 			this.aChar7096 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
 		} else if (i_2 == 2) {
-			this.anInt7097 = rsbytebuffer_1.readUnsignedShort();
-			this.anInt7098 = rsbytebuffer_1.readUnsignedByte();
-			this.anInt7099 = rsbytebuffer_1.readUnsignedByte();
+			this.baseVar = rsbytebuffer_1.readUnsignedShort();
+			this.startBit = rsbytebuffer_1.readUnsignedByte();
+			this.endBit = rsbytebuffer_1.readUnsignedByte();
 		}
 	}
 }

@@ -78,7 +78,7 @@ public class RenderAnimDefs {
 			int i_5;
 			if (i_2 == 27) {
 				if (this.anIntArrayArray2802 == null) {
-					this.anIntArrayArray2802 = new int[this.aClass211_2788.aClass526_2672.equipmentSlots.length][];
+					this.anIntArrayArray2802 = new int[this.aClass211_2788.aClass526_2672.hidden.length][];
 				}
 				i_4 = rsbytebuffer_1.readUnsignedByte();
 				this.anIntArrayArray2802[i_4] = new int[6];
@@ -157,13 +157,13 @@ public class RenderAnimDefs {
 				this.anInt2790 = rsbytebuffer_1.readUnsignedByte() << 6;
 			} else if (i_2 == 55) {
 				if (this.anIntArray2818 == null) {
-					this.anIntArray2818 = new int[this.aClass211_2788.aClass526_2672.equipmentSlots.length];
+					this.anIntArray2818 = new int[this.aClass211_2788.aClass526_2672.hidden.length];
 				}
 				i_4 = rsbytebuffer_1.readUnsignedByte();
 				this.anIntArray2818[i_4] = rsbytebuffer_1.readUnsignedShort();
 			} else if (i_2 == 56) {
 				if (this.anIntArrayArray2791 == null) {
-					this.anIntArrayArray2791 = new int[this.aClass211_2788.aClass526_2672.equipmentSlots.length][];
+					this.anIntArrayArray2791 = new int[this.aClass211_2788.aClass526_2672.hidden.length][];
 				}
 				i_4 = rsbytebuffer_1.readUnsignedByte();
 				this.anIntArrayArray2791[i_4] = new int[3];

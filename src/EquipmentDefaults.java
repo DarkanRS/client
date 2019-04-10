@@ -1,49 +1,48 @@
-public class Defaults6Loader {
+public class EquipmentDefaults {
 
-	public int[] equipmentSlots;
-	public int anInt6990 = -1;
-	public int anInt6991 = -1;
-	public int[] anIntArray6992;
-	public int[] anIntArray6993;
+	public int[] hidden;
+	public int offhandSlot = -1;
+	public int weaponSlot = -1;
+	public int[] hiddenAnimationOffhandSlots;
+	public int[] hiddenAnimationWeaponSlots;
 
-	void decode(RsByteBuffer rsbytebuffer_1) {
+	void decode(RsByteBuffer buffer) {
 		while (true) {
-			int i_3 = rsbytebuffer_1.readUnsignedByte();
-			if (i_3 == 0) {
+			int opcode = buffer.readUnsignedByte();
+			if (opcode == 0) {
 				return;
 			}
-			int i_4;
-			if (i_3 == 1) {
-				i_4 = rsbytebuffer_1.readUnsignedByte();
-				this.equipmentSlots = new int[i_4];
-				for (int i_5 = 0; i_5 < this.equipmentSlots.length; i_5++) {
-					this.equipmentSlots[i_5] = rsbytebuffer_1.readUnsignedByte();
-					if (this.equipmentSlots[i_5] != 0) {
-						int i_10000 = this.equipmentSlots[i_5];
+			if (opcode == 1) {
+				int count = buffer.readUnsignedByte();
+				this.hidden = new int[count];
+				for (int i_5 = 0; i_5 < this.hidden.length; i_5++) {
+					this.hidden[i_5] = buffer.readUnsignedByte();
+					if (this.hidden[i_5] != 0) {
+						//int i_10000 = this.equipmentSlots[i_5];
 					}
 				}
-			} else if (i_3 == 3) {
-				this.anInt6990 = rsbytebuffer_1.readUnsignedByte();
-			} else if (i_3 == 4) {
-				this.anInt6991 = rsbytebuffer_1.readUnsignedByte();
-			} else if (i_3 == 5) {
-				this.anIntArray6992 = new int[rsbytebuffer_1.readUnsignedByte()];
-				for (i_4 = 0; i_4 < this.anIntArray6992.length; i_4++) {
-					this.anIntArray6992[i_4] = rsbytebuffer_1.readUnsignedByte();
+			} else if (opcode == 3) {
+				this.offhandSlot = buffer.readUnsignedByte();
+			} else if (opcode == 4) {
+				this.weaponSlot = buffer.readUnsignedByte();
+			} else if (opcode == 5) {
+				this.hiddenAnimationOffhandSlots = new int[buffer.readUnsignedByte()];
+				for (int i_4 = 0; i_4 < this.hiddenAnimationOffhandSlots.length; i_4++) {
+					this.hiddenAnimationOffhandSlots[i_4] = buffer.readUnsignedByte();
 				}
-			} else if (i_3 == 6) {
-				this.anIntArray6993 = new int[rsbytebuffer_1.readUnsignedByte()];
-				for (i_4 = 0; i_4 < this.anIntArray6993.length; i_4++) {
-					this.anIntArray6993[i_4] = rsbytebuffer_1.readUnsignedByte();
+			} else if (opcode == 6) {
+				this.hiddenAnimationWeaponSlots = new int[buffer.readUnsignedByte()];
+				for (int i_4 = 0; i_4 < this.hiddenAnimationWeaponSlots.length; i_4++) {
+					this.hiddenAnimationWeaponSlots[i_4] = buffer.readUnsignedByte();
 				}
 			}
 		}
 	}
 
-	public Defaults6Loader(Index index_1) {
-		byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_6.fileId);
+	public EquipmentDefaults(Index index_1) {
+		byte[] bytes_2 = index_1.getFile(DefaultsFile.EQUIPMENT.fileId);
 		this.decode(new RsByteBuffer(bytes_2));
-		if (this.equipmentSlots == null) {
+		if (this.hidden == null) {
 			throw new RuntimeException("");
 		}
 	}

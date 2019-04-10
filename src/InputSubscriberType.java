@@ -1,18 +1,16 @@
-public class Class221 {
+public class InputSubscriberType {
 
 	public static int anInt2762;
 
 	static IComponentDefinitions aClass118_2763;
 
-	static Class221 aClass221_2759 = new Class221(0);
-
-	static Class221 aClass221_2761 = new Class221(1);
-
-	static Class221 aClass221_2760 = new Class221(2);
+	static InputSubscriberType COMBINED = new InputSubscriberType(0);
+	static InputSubscriberType KEY_PRESS = new InputSubscriberType(1);
+	static InputSubscriberType KEY_HOLD = new InputSubscriberType(2);
 
 	int anInt2758;
 
-	Class221(int i_1) {
+	InputSubscriberType(int i_1) {
 		this.anInt2758 = i_1;
 	}
 
@@ -32,7 +30,7 @@ public class Class221 {
 		int i_18 = ((i_3 << 1) - 3) * i_11;
 		int i_19 = i_16 * (i_6 + 1);
 		int i_20 = i_15 * (i_3 - 1);
-		Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_4, (byte) 72);
+		KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_4, (byte) 72);
 		while (i_7 > 0) {
 			if (i_13 < 0) {
 				while (i_13 < 0) {
@@ -59,8 +57,19 @@ public class Class221 {
 			int i_22 = i_7 + i_1;
 			int i_23 = i_0 + i_6;
 			int i_24 = i_0 - i_6;
-			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 0);
-			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 13);
+			KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 0);
+			KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 13);
 		}
+	}
+
+	static InputSubscriberType valueOf(int i_0) {
+	    InputSubscriberType[] arr_2 = JS5FileWorker.method5815();
+	    for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
+	        InputSubscriberType class221_4 = arr_2[i_3];
+	        if (i_0 == class221_4.anInt2758) {
+	            return class221_4;
+	        }
+	    }
+	    return null;
 	}
 }

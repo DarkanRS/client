@@ -88,7 +88,7 @@ public class Class282_Sub53_Sub1 extends MouseRecord {
 		this.anInt9517 -= point_1.y;
 	}
 
-	public int getClickType(int i_1) {
+	public int getClickType() {
 		switch (this.anInt9513) {
 		case 160:
 		case 512:

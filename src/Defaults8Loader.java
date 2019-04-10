@@ -3,7 +3,7 @@ import java.util.Stack;
 public class Defaults8Loader {
 
 	static int anInt5932;
-	public Interface17 anInterface17_5931;
+	public InputSubscriber inputSubscriber;
 
 	public Defaults8Loader(Index index_1) {
 		byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_8.fileId);
@@ -17,7 +17,7 @@ public class Defaults8Loader {
 				return;
 			}
 			if (i_3 == 1) {
-				this.anInterface17_5931 = Class197.method3202(rsbytebuffer_1);
+				this.inputSubscriber = InputSubscriber.decode(rsbytebuffer_1);
 			}
 		}
 	}

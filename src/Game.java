@@ -6,14 +6,14 @@ public class Game {
 	static Game aClass486_5743 = new Game("game4", "Game 4", 3);
 	static Game aClass486_5747 = new Game("game5", "Game 5", 4);
 
-	public String aString5748;
-	public String aString5749;
-	public int anInt5746;
+	public String name;
+	public String formattedName;
+	public int id;
 
 	Game(String string_1, String string_2, int i_3) {
-		this.aString5748 = string_1;
-		this.aString5749 = string_2;
-		this.anInt5746 = i_3;
+		this.name = string_1;
+		this.formattedName = string_2;
+		this.id = i_3;
 	}
 
 	public static void method8204(int i_0) {

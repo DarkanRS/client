@@ -1,16 +1,16 @@
 public class Defaults7Loader {
 
     static NativeSprite aClass160_5883;
-    public Interface17 anInterface17_5878;
-    public Interface17 anInterface17_5874;
-    public Interface17 anInterface17_5875;
-    public Interface17 anInterface17_5882;
-    public Class232 aClass232_5877;
-    public Class232 aClass232_5873;
-    public Class232 aClass232_5879;
+    public InputSubscriber anInterface17_5878;
+    public InputSubscriber anInterface17_5874;
+    public InputSubscriber anInterface17_5875;
+    public InputSubscriber anInterface17_5882;
+    public KeyHoldInputSubscriber aClass232_5877;
+    public KeyHoldInputSubscriber aClass232_5873;
+    public KeyHoldInputSubscriber aClass232_5879;
     public boolean aBool5876;
-    public int anInt5880;
-    public int anInt5881;
+    public int membersTooltipColor;
+    public int f2pTooltipColor;
 
     public Defaults7Loader(Index index_1) {
         byte[] bytes_2 = index_1.getFile(DefaultsFile.FILE_7.fileId);
@@ -24,31 +24,31 @@ public class Defaults7Loader {
                 return;
             }
             if (i_3 == 1) {
-                this.anInterface17_5878 = Class197.method3202(rsbytebuffer_1);
+                this.anInterface17_5878 = InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 2) {
-                this.anInterface17_5874 = Class197.method3202(rsbytebuffer_1);
+                this.anInterface17_5874 = InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 3) {
-                this.anInterface17_5875 = Class197.method3202(rsbytebuffer_1);
+                this.anInterface17_5875 = InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 4) {
-                this.anInterface17_5882 = Class197.method3202(rsbytebuffer_1);
+                this.anInterface17_5882 = InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 5) {
-                this.aClass232_5877 = ClipMap.method6009(rsbytebuffer_1);
+                this.aClass232_5877 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 6) {
-                this.aClass232_5873 = ClipMap.method6009(rsbytebuffer_1);
+                this.aClass232_5873 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 7) {
-                this.aClass232_5879 = ClipMap.method6009(rsbytebuffer_1);
+                this.aClass232_5879 = KeyHoldInputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 8) {
-                Class197.method3202(rsbytebuffer_1);
+                InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 9) {
-                Class197.method3202(rsbytebuffer_1);
+                InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 10) {
-                Class197.method3202(rsbytebuffer_1);
+                InputSubscriber.decode(rsbytebuffer_1);
             } else if (i_3 == 11) {
                 this.aBool5876 = true;
             } else if (i_3 == 12) {
-                this.anInt5880 = rsbytebuffer_1.readInt();
+                this.membersTooltipColor = rsbytebuffer_1.readInt();
             } else if (i_3 == 13) {
-                this.anInt5881 = rsbytebuffer_1.readInt();
+                this.f2pTooltipColor = rsbytebuffer_1.readInt();
             }
         }
     }

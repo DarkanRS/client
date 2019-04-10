@@ -167,6 +167,6 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 	}
 
 	public static void method14666(String string_0, boolean bool_1, int i_2, String string_3) {
-		Class215.method3673(string_0, bool_1, i_2, -1, string_3, true);
+		CombinedInputSubscriber.method3673(string_0, bool_1, i_2, -1, string_3, true);
 	}
 }

@@ -15,9 +15,9 @@ public abstract class Class209 {
         return this.method3565((byte) -13) || this.method3566() || this.method3567((byte) 69);
     }
 
-    public abstract int method3569(int var1);
+    public abstract int getMouseX();
 
-    public abstract int method3570();
+    public abstract int getMouseY();
 
     public abstract MouseRecord nextSubmission(byte var1);
 

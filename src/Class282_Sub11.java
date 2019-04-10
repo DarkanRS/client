@@ -15,7 +15,7 @@ public abstract class Class282_Sub11 extends Node {
     public static void method12211(int i_0) {
         Class442 class442_1 = null;
         try {
-            class442_1 = Class345.method6137("2", client.CURRENT_GAME.aString5748, true);
+            class442_1 = Class345.method6137("2", client.CURRENT_GAME.name, true);
             RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(client.anInt7399 * 6 + 3);
             rsbytebuffer_2.writeByte(1);
             rsbytebuffer_2.writeShort(client.anInt7399);

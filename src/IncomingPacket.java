@@ -196,7 +196,7 @@ public class IncomingPacket {
 		Game[] arr_2 = Class282_Sub15_Sub1.method14817();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Game game_4 = arr_2[i_3];
-			if (i_0 == game_4.anInt5746) {
+			if (i_0 == game_4.id) {
 				return game_4;
 			}
 		}

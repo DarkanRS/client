@@ -75,7 +75,7 @@ public class Class282_Sub20_Sub8 extends Class282_Sub20 {
 	}
 
 	public static void method15242(String string_0, boolean bool_1, int i_2, int i_3, int i_4) {
-		Class215.method3673(string_0, bool_1, i_2, i_3, (String) null, false);
+		CombinedInputSubscriber.method3673(string_0, bool_1, i_2, i_3, (String) null, false);
 	}
 
 }

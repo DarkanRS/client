@@ -639,9 +639,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 											if (itemdefinitions_65.hasTooltipColor) {
 												i_38 = itemdefinitions_65.tooltipColor;
 											} else if (itemdefinitions_65.membersOnly) {
-												i_38 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880;
+												i_38 = Class149_Sub2.DEFAULTS_LOADER_7.membersTooltipColor;
 											} else {
-												i_38 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881;
+												i_38 = Class149_Sub2.DEFAULTS_LOADER_7.f2pTooltipColor;
 											}
 
 											if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == VertexNormal.myPlayer.plane) {

@@ -57,7 +57,7 @@ public class ServerEnvironment implements Identifiable {
         if (Engine.MAX_MEMORY >= 96) {
             int i_2 = Class241.method4150(1219422368);
             if (i_2 <= 104) {
-                Defaults6Loader.method11248(1422604274);
+                EquipmentDefaults.method11248(1422604274);
                 b_1 = 4;
             } else if (i_2 <= 504) {
                 Class282_Sub40.method13300(-273043210);
@@ -95,14 +95,14 @@ public class ServerEnvironment implements Identifiable {
 
     static final void method8315(int i_0) {
         if (client.anInt7349 != -1) {
-            int i_1 = Class163.mouseRecorder.method3569(2131144344);
-            int i_2 = Class163.mouseRecorder.method3570();
+            int i_1 = Class163.mouseRecorder.getMouseX();
+            int i_2 = Class163.mouseRecorder.getMouseY();
             MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head();
             if (class282_sub53_3 != null) {
                 i_1 = class282_sub53_3.method13481(1154972064);
                 i_2 = class282_sub53_3.method13469(1835497951);
             }
-            if (client.aClass118_7257 != null && Class221.aClass118_2763 == client.aClass118_7247) {
+            if (client.aClass118_7257 != null && InputSubscriberType.aClass118_2763 == client.aClass118_7247) {
                 client.aBool7403 = true;
                 client.anInt7432 = 0;
                 client.anInt7265 = 0;

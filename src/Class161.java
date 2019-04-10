@@ -18,8 +18,8 @@ public class Class161 {
 		Class109.redrawComponent(client.aClass118_7257, (byte) -8);
 		++Class96_Sub1.anInt8308;
 		if (client.aBool7369 && client.aBool7403) {
-			int i_1 = Class163.mouseRecorder.method3569(2003806769);
-			int i_2 = Class163.mouseRecorder.method3570();
+			int i_1 = Class163.mouseRecorder.getMouseX();
+			int i_2 = Class163.mouseRecorder.getMouseY();
 			i_1 -= client.anInt7361;
 			i_2 -= client.anInt7362;
 			if (i_1 < client.anInt7432) {
@@ -36,7 +36,7 @@ public class Class161 {
 			}
 			int i_3;
 			int i_4;
-			if (client.aClass118_7247 == Class221.aClass118_2763) {
+			if (client.aClass118_7247 == InputSubscriberType.aClass118_2763) {
 				i_3 = i_1;
 				i_4 = i_2;
 			} else {

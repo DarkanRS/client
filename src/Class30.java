@@ -33,7 +33,7 @@ public class Class30 implements Runnable {
     public void run() {
         try {
             int i_1 = HDWaterTile.aClass496_952 == ServerEnvironment.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId + 7000;
-            BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.host + ":" + i_1 + "/news.ws?game=" + client.CURRENT_GAME.anInt5746)).openStream())));
+            BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.host + ":" + i_1 + "/news.ws?game=" + client.CURRENT_GAME.id)).openStream())));
             String string_3 = bufferedreader_2.readLine();
             ArrayList arraylist_4;
             for (arraylist_4 = new ArrayList(); string_3 != null; string_3 = bufferedreader_2.readLine()) {

@@ -78,7 +78,7 @@ public class Class348 {
 			client.anInt7349 = -1;
 			client.aClass465_7442 = new IterableNodeMap(8);
 			MeshModifier.method7041((byte) -6);
-			client.anInt7349 = QuickchatFiller.aClass529_527.anInt7036;
+			client.anInt7349 = QuickchatFiller.ENTITY_DEFAULTS.loginWindow;
 			Class516.method8867(false);
 			IncomingPacket.method6378();
 			Class150.method2582(client.anInt7349, (int[]) null, -1484331524);

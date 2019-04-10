@@ -67,7 +67,7 @@ public final class client extends Engine {
 	public static int anInt7193 = 0;
 	public static KeyRecord[] KEYS_PRESSED = new KeyRecord[131];
 	public static int maximumHeldKeys = 0;
-	public static KeyRecord[] anInterface16Array7298 = new KeyRecord[75];
+	public static KeyRecord[] keyRecords = new KeyRecord[75];
 	public static Color[] aColorArray7186 = new Color[] { new Color(9179409), new Color(3289650), new Color(3289650), new Color(3289650) };
 	public static Color[] aColorArray7199 = new Color[] { new Color(9179409), new Color(16777215), new Color(16726277), new Color(16726277) };
 	public static Color[] aColorArray7200 = new Color[] { new Color(16777215), new Color(16777215), new Color(16741381), new Color(16741381) };
@@ -173,8 +173,8 @@ public final class client extends Engine {
 	static boolean resizeableScreen;
 	static int anInt7309;
 	static int anInt7205;
-	public static int anInt7439;
-	public static int anInt7312;
+	public static int GAME_WIDTH;
+	public static int GAME_HEIGHT;
 	public static Player[] players;
 	public static int anInt7315;
 	public static boolean aBool7316;
@@ -409,8 +409,8 @@ public final class client extends Engine {
 		resizeableScreen = true;
 		anInt7309 = 32;
 		anInt7205 = 16;
-		anInt7439 = 765;
-		anInt7312 = 553;
+		GAME_WIDTH = 765;
+		GAME_HEIGHT = 553;
 		players = new Player[2048];
 		anInt7315 = -1;
 		aBool7316 = false;
@@ -640,9 +640,9 @@ public final class client extends Engine {
 						Class448.lobbyConnectionInfo.worldId = Integer.parseInt(string_7);
 						break;
 					case 15:
-						Class176.aClass472_2201 = Class182.method3040(Integer.parseInt(string_7), (byte) -28);
-						if (Class176.aClass472_2201 != Class472.aClass472_5599 && Class472.aClass472_5598 != Class176.aClass472_2201 && Class176.aClass472_2201 != Class472.aClass472_5596 && Class176.aClass472_2201 != Class472.aClass472_5600) {
-							Class176.aClass472_2201 = Class472.aClass472_5600;
+						Class176.BUILD_ENVIRONMENT = Class182.method3040(Integer.parseInt(string_7), (byte) -28);
+						if (Class176.BUILD_ENVIRONMENT != BuildEnvironment.WIP && BuildEnvironment.RC != Class176.BUILD_ENVIRONMENT && Class176.BUILD_ENVIRONMENT != BuildEnvironment.BUILD_LIVE && Class176.BUILD_ENVIRONMENT != BuildEnvironment.LIVE) {
+							Class176.BUILD_ENVIRONMENT = BuildEnvironment.LIVE;
 						}
 						break;
 					case 16:
@@ -737,16 +737,16 @@ public final class client extends Engine {
 				aString7281 = "";
 			}
 
-			Class274 class274_6 = new Class274(anInt7439, anInt7312, anInt7309, anInt7205, CURRENT_GAME.aString5749);
+			Class274 class274_6 = new Class274(GAME_WIDTH, GAME_HEIGHT, anInt7309, anInt7205, CURRENT_GAME.formattedName);
 			Class308.aclient3620 = this;
-			String string_8 = Class176.aClass472_2201.aString5601;
-			int i_5 = Class176.aClass472_2201.anInt5602 + 32;
+			String string_8 = Class176.BUILD_ENVIRONMENT.name;
+			int i_5 = Class176.BUILD_ENVIRONMENT.id + 32;
 			if (!str_1.equals("")) {
 				string_8 = string_8 + "_" + str_1;
 				i_5 = 0;
 			}
 
-			this.method4655(class274_6, CURRENT_GAME.aString5748, string_8, i_5, Class123.method2149(), aBool7161, 1114711538);
+			this.method4655(class274_6, CURRENT_GAME.name, string_8, i_5, Class123.method2149(), aBool7161, 1114711538);
 		}
 
 	}
@@ -818,7 +818,7 @@ public final class client extends Engine {
 				type = record.getType();
 				if (type != 2 && type != 3) {
 					if (type == 0 && maximumHeldKeys < 75) {
-						anInterface16Array7298[maximumHeldKeys] = record;
+						keyRecords[maximumHeldKeys] = record;
 						++maximumHeldKeys;
 					}
 				} else {
@@ -839,7 +839,7 @@ public final class client extends Engine {
 			anInt7191 = 0;
 
 			for (MouseRecord record = Class163.mouseRecorder.nextSubmission((byte) 13); record != null; record = Class163.mouseRecorder.nextSubmission((byte) 69)) {
-				type = record.getClickType(1548872878);
+				type = record.getClickType();
 				if (type == -1) {
 					JS5CacheFile.record(record);
 				} else if (type == 6) {
@@ -1603,7 +1603,7 @@ public final class client extends Engine {
 	static IComponentDefinitions method11634(IComponentDefinitions icomponentdefinitions_0) {
 		IComponentSettings class282_sub10_1 = method11633(icomponentdefinitions_0);
 		if (class282_sub10_1.bit23Enabled()) {
-			return Class221.aClass118_2763;
+			return InputSubscriberType.aClass118_2763;
 		} else {
 			int i_2 = class282_sub10_1.depthFlags();
 			if (i_2 == 0) {
@@ -1612,7 +1612,7 @@ public final class client extends Engine {
 				for (int i_3 = 0; i_3 < i_2; i_3++) {
 					icomponentdefinitions_0 = Class96_Sub23.method14682(CutsceneAction.method1605(icomponentdefinitions_0.idHash), icomponentdefinitions_0);
 					if (icomponentdefinitions_0 == null) {
-						return Class221.aClass118_2763;
+						return InputSubscriberType.aClass118_2763;
 					}
 				}
 
@@ -1625,7 +1625,7 @@ public final class client extends Engine {
 		Frame frame_1 = new Frame(" ");
 		frame_1.pack();
 		frame_1.dispose();
-		Class221.aClass118_2763 = new IComponentDefinitions();
+		InputSubscriberType.aClass118_2763 = new IComponentDefinitions();
 		Class532_Sub1.method12840(1040254092);
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new Class312_Sub1();
@@ -1788,7 +1788,7 @@ public final class client extends Engine {
 		Frame frame_1 = new Frame(" ");
 		frame_1.pack();
 		frame_1.dispose();
-		Class221.aClass118_2763 = new IComponentDefinitions();
+		InputSubscriberType.aClass118_2763 = new IComponentDefinitions();
 		Class532_Sub1.method12840(-1015935879);
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new Class312_Sub1();
@@ -1955,7 +1955,7 @@ public final class client extends Engine {
 						int i_26;
 						int i_27;
 						Class119 class119_40;
-						if (class282_sub53_39 != null && class282_sub53_39.getClickType(1070950260) == 0 && class282_sub53_39.method13481(1581398490) >= i_15 && class282_sub53_39.method13469(523863332) >= i_16 && class282_sub53_39.method13481(1968714645) < i_17 && class282_sub53_39.method13469(1262935690) < i_18) {
+						if (class282_sub53_39 != null && class282_sub53_39.getClickType() == 0 && class282_sub53_39.method13481(1581398490) >= i_15 && class282_sub53_39.method13469(523863332) >= i_16 && class282_sub53_39.method13481(1968714645) < i_17 && class282_sub53_39.method13469(1262935690) < i_18) {
 							if (bool_47) {
 								class119_40 = icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, 854241922);
 								if (class119_40 != null && icomponentdefinitions_12.anInt1301 == class119_40.anInt1458 && icomponentdefinitions_12.anInt1429 == class119_40.anInt1454) {
@@ -1993,14 +1993,14 @@ public final class client extends Engine {
 
 								if (!bool_50 && icomponentdefinitions_12.aByteArrayArray1366[i_24] != null) {
 									for (i_27 = 0; i_27 < icomponentdefinitions_12.aByteArrayArray1366[i_24].length; i_27++) {
-										if (Class96_Sub21.keyRecorder.method3236(icomponentdefinitions_12.aByteArrayArray1366[i_24][i_27], -1446906824)) {
+										if (Class96_Sub21.keyRecorder.held(icomponentdefinitions_12.aByteArrayArray1366[i_24][i_27])) {
 											bool_50 = true;
 											if (icomponentdefinitions_12.anIntArray1425 != null && icomponentdefinitions_12.anIntArray1425[i_24] > cycles) {
 												break;
 											}
 
 											byte b_28 = icomponentdefinitions_12.aByteArrayArray1367[i_24][i_27];
-											if (b_28 == 0 || ((b_28 & 0x8) == 0 || !Class96_Sub21.keyRecorder.method3236(86, -2117949057) && !Class96_Sub21.keyRecorder.method3236(82, -1492987736) && !Class96_Sub21.keyRecorder.method3236(81, -1770217708)) && ((b_28 & 0x2) == 0 || Class96_Sub21.keyRecorder.method3236(86, -1478963287)) && ((b_28 & 0x1) == 0 || Class96_Sub21.keyRecorder.method3236(82, -1680703843)) && ((b_28 & 0x4) == 0 || Class96_Sub21.keyRecorder.method3236(81, -1805947277))) {
+											if (b_28 == 0 || ((b_28 & 0x8) == 0 || !Class96_Sub21.keyRecorder.held(86) && !Class96_Sub21.keyRecorder.held(82) && !Class96_Sub21.keyRecorder.held(81)) && ((b_28 & 0x2) == 0 || Class96_Sub21.keyRecorder.held(86)) && ((b_28 & 0x1) == 0 || Class96_Sub21.keyRecorder.held(82)) && ((b_28 & 0x4) == 0 || Class96_Sub21.keyRecorder.held(81))) {
 												bool_51 = true;
 												break;
 											}
@@ -2198,7 +2198,7 @@ public final class client extends Engine {
 										int[] ints_43 = new int[3];
 										class282_sub50_sub6_42.method14775(i_26, i_27, ints_43, -1788209952);
 										if (ints_43 != null) {
-											if (Class96_Sub21.keyRecorder.method3236(82, -1914297424) && rights > 0) {
+											if (Class96_Sub21.keyRecorder.held(82) && rights > 0) {
 												SCT24IndexLoader.method7460(ints_43[0], ints_43[1], ints_43[2], -952047234);
 												continue;
 											}
@@ -2211,13 +2211,13 @@ public final class client extends Engine {
 
 										anInt7184 = 1;
 										aBool7374 = false;
-										anInt7361 = Class163.mouseRecorder.method3569(2118752348);
-										anInt7362 = Class163.mouseRecorder.method3570();
+										anInt7361 = Class163.mouseRecorder.getMouseX();
+										anInt7362 = Class163.mouseRecorder.getMouseY();
 										continue;
 									}
 
 									if (bool_38 && anInt7184 > 0) {
-										if (anInt7184 == 1 && (anInt7361 != Class163.mouseRecorder.method3569(2088913466) || anInt7362 != Class163.mouseRecorder.method3570())) {
+										if (anInt7184 == 1 && (anInt7361 != Class163.mouseRecorder.getMouseX() || anInt7362 != Class163.mouseRecorder.getMouseY())) {
 											Class244.anInt3008 = MapSpriteIndexLoader.anInt5123;
 											Class11.anInt123 = Class475.anInt5624;
 											anInt7184 = 2;
@@ -2225,8 +2225,8 @@ public final class client extends Engine {
 
 										if (anInt7184 == 2) {
 											aBool7374 = true;
-											Class89.method1503(Class244.anInt3008 + (int) ((double) (anInt7361 - Class163.mouseRecorder.method3569(2080711871)) * 2.0D / (double) Class291.aFloat3462));
-											Class316.method5599(Class11.anInt123 - (int) ((double) (anInt7362 - Class163.mouseRecorder.method3570()) * 2.0D / (double) Class291.aFloat3462));
+											Class89.method1503(Class244.anInt3008 + (int) ((double) (anInt7361 - Class163.mouseRecorder.getMouseX()) * 2.0D / (double) Class291.aFloat3462));
+											Class316.method5599(Class11.anInt123 - (int) ((double) (anInt7362 - Class163.mouseRecorder.getMouseY()) * 2.0D / (double) Class291.aFloat3462));
 										}
 										continue;
 									}
@@ -2245,7 +2245,7 @@ public final class client extends Engine {
 
 								if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1272) {
 									if (bool_38) {
-										Class306.method5458(Class163.mouseRecorder.method3569(2133055748) - i_13, Class163.mouseRecorder.method3570() - i_14, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
+										Class306.method5458(Class163.mouseRecorder.getMouseX() - i_13, Class163.mouseRecorder.getMouseY() - i_14, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
 									}
 									continue;
 								}
@@ -2273,8 +2273,8 @@ public final class client extends Engine {
 								hookrequest_53 = new HookRequest();
 								hookrequest_53.aBool8052 = true;
 								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8059 = Class163.mouseRecorder.method3569(1948013292) - i_13;
-								hookrequest_53.anInt8055 = Class163.mouseRecorder.method3570() - i_14;
+								hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
+								hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
 								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1319;
 								aClass482_7402.append(hookrequest_53);
 							}
@@ -2285,8 +2285,8 @@ public final class client extends Engine {
 									hookrequest_53 = new HookRequest();
 									hookrequest_53.aBool8052 = true;
 									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = Class163.mouseRecorder.method3569(2071340926) - i_13;
-									hookrequest_53.anInt8055 = Class163.mouseRecorder.method3570() - i_14;
+									hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
+									hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
 									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1302;
 									aClass482_7404.append(hookrequest_53);
 								}
@@ -2296,8 +2296,8 @@ public final class client extends Engine {
 								hookrequest_53 = new HookRequest();
 								hookrequest_53.aBool8052 = true;
 								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8059 = Class163.mouseRecorder.method3569(2087662207) - i_13;
-								hookrequest_53.anInt8055 = Class163.mouseRecorder.method3570() - i_14;
+								hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
+								hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
 								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1389;
 								aClass482_7402.append(hookrequest_53);
 							}
@@ -2308,8 +2308,8 @@ public final class client extends Engine {
 									hookrequest_53 = new HookRequest();
 									hookrequest_53.aBool8052 = true;
 									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = Class163.mouseRecorder.method3569(1986967200) - i_13;
-									hookrequest_53.anInt8055 = Class163.mouseRecorder.method3570() - i_14;
+									hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
+									hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
 									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1390;
 									aClass482_7402.append(hookrequest_53);
 								}
@@ -2319,8 +2319,8 @@ public final class client extends Engine {
 								hookrequest_53 = new HookRequest();
 								hookrequest_53.aBool8052 = true;
 								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8059 = Class163.mouseRecorder.method3569(2139552091) - i_13;
-								hookrequest_53.anInt8055 = Class163.mouseRecorder.method3570() - i_14;
+								hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
+								hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
 								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1278;
 								aClass482_7402.append(hookrequest_53);
 							}
@@ -2331,8 +2331,8 @@ public final class client extends Engine {
 									hookrequest_53 = new HookRequest();
 									hookrequest_53.aBool8052 = true;
 									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = Class163.mouseRecorder.method3569(2027458621) - i_13;
-									hookrequest_53.anInt8055 = Class163.mouseRecorder.method3570() - i_14;
+									hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
+									hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
 									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1392;
 									aClass482_7404.append(hookrequest_53);
 								}
@@ -2550,7 +2550,7 @@ public final class client extends Engine {
 								for (i_24 = 0; i_24 < anInt7193; i_24++) {
 									HookRequest hookrequest_44 = new HookRequest();
 									hookrequest_44.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_44.anInt8058 = KEYS_PRESSED[i_24].method92();
+									hookrequest_44.anInt8058 = KEYS_PRESSED[i_24].getCode();
 									hookrequest_44.anInt8056 = KEYS_PRESSED[i_24].getCode(-1306556341);
 									hookrequest_44.params = icomponentdefinitions_12.anObjectArray1292;
 									aClass482_7402.append(hookrequest_44);
@@ -2588,201 +2588,6 @@ public final class client extends Engine {
 					}
 				}
 			}
-		}
-
-	}
-
-	public final void method166() {
-		if (this.method4665((byte) 92)) {
-			String str_1 = "";
-			Class358[] arr_2 = Class153.method2619(-239279481);
-
-			for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-				Class358 class358_4 = arr_2[i_3];
-				String string_7 = Class282_Sub44.anApplet8065.getParameter(class358_4.aString4159);
-				if (string_7 != null) {
-					switch (Integer.parseInt(class358_4.aString4159)) {
-					case 1:
-						if (string_7 != null) {
-							aByteArray7152 = Class378.method6436(CutsceneEntity.method1353(string_7), -1465976305);
-							if (aByteArray7152.length < 16) {
-								aByteArray7152 = null;
-							}
-						}
-						break;
-					case 2:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7158 = true;
-						} else {
-							aBool7158 = false;
-						}
-						break;
-					case 3:
-						aString7165 = string_7;
-						break;
-					case 4:
-						aString7156 = string_7;
-						if (aString7156.length() > 100) {
-							aString7156 = null;
-						}
-						break;
-					case 5:
-						if (Class448.lobbyConnectionInfo == null) {
-							Class448.lobbyConnectionInfo = new ConnectionInfo();
-						}
-
-						Class448.lobbyConnectionInfo.host = string_7;
-						break;
-					case 6:
-						TilestreamPacket.anInt4219 = Integer.parseInt(string_7) * -37116627 * -520818011;
-						break;
-					case 7:
-						str_1 = string_7;
-						break;
-					case 8:
-						CURRENT_GAME = IncomingPacket.method6376(Integer.parseInt(string_7));
-						break;
-					case 9:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7310 = true;
-						} else {
-							aBool7310 = false;
-						}
-						break;
-					case 10:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7147 = true;
-						} else {
-							aBool7147 = false;
-						}
-						break;
-					case 11:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7161 = true;
-						} else {
-							aBool7161 = false;
-						}
-					case 12:
-					case 21:
-						break;
-					case 13:
-						Class464.aString5555 = string_7;
-						break;
-					case 14:
-						if (Class448.lobbyConnectionInfo == null) {
-							Class448.lobbyConnectionInfo = new ConnectionInfo();
-						}
-
-						Class448.lobbyConnectionInfo.worldId = Integer.parseInt(string_7) * -1933199413 * -87869981;
-						break;
-					case 15:
-						Class176.aClass472_2201 = Class182.method3040(Integer.parseInt(string_7), (byte) -45);
-						if (Class176.aClass472_2201 != Class472.aClass472_5599 && Class472.aClass472_5598 != Class176.aClass472_2201 && Class176.aClass472_2201 != Class472.aClass472_5596 && Class176.aClass472_2201 != Class472.aClass472_5600) {
-							Class176.aClass472_2201 = Class472.aClass472_5600;
-						}
-						break;
-					case 16:
-						Class448.aClass450_5420 = new ConnectionInfo();
-						Class448.aClass450_5420.worldId = Integer.parseInt(string_7) * -1933199413 * -87869981;
-						break;
-					case 17:
-						aString7164 = string_7;
-						break;
-					case 18:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7316 = true;
-						}
-						break;
-					case 19:
-					default:
-						Class151.method2594("", new RuntimeException(), (byte) -45);
-						break;
-					case 20:
-						aString7157 = string_7;
-						break;
-					case 22:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7160 = true;
-						} else {
-							aBool7160 = false;
-						}
-						break;
-					case 23:
-						anInt7149 = Integer.parseInt(string_7) * 1564360473 * -1543197399;
-						break;
-					case 24:
-						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
-						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
-						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1812698195) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5813;
-						}
-						break;
-					case 25:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7159 = true;
-						} else {
-							aBool7159 = false;
-						}
-						break;
-					case 26:
-						aLong7153 = Long.parseLong(string_7) * -5626745816563543837L * -8972807970865466165L;
-						break;
-					case 27:
-						anInt7163 = Integer.parseInt(string_7) * -874138425 * 204524791;
-						break;
-					case 28:
-						if (string_7.equals("true")) {
-							aBool7189 = true;
-						} else {
-							aBool7189 = false;
-						}
-						break;
-					case 29:
-						if (string_7.equals("true")) {
-							aBool7151 = true;
-						} else {
-							aBool7151 = false;
-						}
-						break;
-					case 30:
-						RenderAnimDefs.anInt2831 = Integer.parseInt(string_7) * -917544917 * -1439277437;
-						break;
-					case 31:
-						Class223.CURRENT_LANGUAGE = Language.method8278(Integer.parseInt(string_7), 922881218);
-						break;
-					case 32:
-						RegionMap.aString3643 = string_7;
-						break;
-					case 33:
-						aString7281 = string_7;
-						break;
-					case 34:
-						Class445.aString5384 = string_7;
-						break;
-					case 35:
-						anInt7447 = Integer.parseInt(string_7) * 826882953 * 1920182969;
-						if (1920182969 * anInt7447 * 826882953 < 0 || anInt7447 * 826882953 * 1920182969 >= aColorArray7186.length) {
-							anInt7447 = 0 * 1920182969;
-						}
-					}
-				}
-			}
-
-			if (aString7281 == null) {
-				aString7281 = "";
-			}
-
-			Class274 class274_6 = new Class274(150480619 * anInt7439 * 1426041429 * 765 * -1115795005, 1176039023 * anInt7312 * -994133479 * 553 * -645779313, anInt7309 * -2059193329 * 1226390255, anInt7205 * 76833159 * 429626423, CURRENT_GAME.aString5749);
-			Class308.aclient3620 = this;
-			String string_8 = Class176.aClass472_2201.aString5601;
-			int i_5 = -2001827121 * Class176.aClass472_2201.anInt5602 * 886324271 + 32;
-			if (!str_1.equals("")) {
-				string_8 = string_8 + "_" + str_1;
-				i_5 = 0;
-			}
-
-			this.method4655(class274_6, CURRENT_GAME.aString5748, string_8, i_5, Class123.method2149(), aBool7161, 1826658639);
 		}
 
 	}
@@ -2855,7 +2660,7 @@ public final class client extends Engine {
 		Frame frame_2 = new Frame(" ");
 		frame_2.pack();
 		frame_2.dispose();
-		Class221.aClass118_2763 = new IComponentDefinitions();
+		InputSubscriberType.aClass118_2763 = new IComponentDefinitions();
 		Class532_Sub1.method12840(1319563672);
 		Whirlpool.JS5_LOCAL_REQUESTER = new JS5LocalRequester();
 		Class119.JS5_STANDARD_REQUESTER = new Class312_Sub1();
@@ -3161,201 +2966,6 @@ public final class client extends Engine {
 		}
 	}
 
-	public final void method165() {
-		if (this.method4665((byte) 79)) {
-			String str_1 = "";
-			Class358[] arr_2 = Class153.method2619(1235722465);
-
-			for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-				Class358 class358_4 = arr_2[i_3];
-				String string_7 = Class282_Sub44.anApplet8065.getParameter(class358_4.aString4159);
-				if (string_7 != null) {
-					switch (Integer.parseInt(class358_4.aString4159)) {
-					case 1:
-						if (string_7 != null) {
-							aByteArray7152 = Class378.method6436(CutsceneEntity.method1353(string_7), -2067601059);
-							if (aByteArray7152.length < 16) {
-								aByteArray7152 = null;
-							}
-						}
-						break;
-					case 2:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7158 = true;
-						} else {
-							aBool7158 = false;
-						}
-						break;
-					case 3:
-						aString7165 = string_7;
-						break;
-					case 4:
-						aString7156 = string_7;
-						if (aString7156.length() > 100) {
-							aString7156 = null;
-						}
-						break;
-					case 5:
-						if (Class448.lobbyConnectionInfo == null) {
-							Class448.lobbyConnectionInfo = new ConnectionInfo();
-						}
-
-						Class448.lobbyConnectionInfo.host = string_7;
-						break;
-					case 6:
-						TilestreamPacket.anInt4219 = Integer.parseInt(string_7) * -37116627 * -520818011;
-						break;
-					case 7:
-						str_1 = string_7;
-						break;
-					case 8:
-						CURRENT_GAME = IncomingPacket.method6376(Integer.parseInt(string_7));
-						break;
-					case 9:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7310 = true;
-						} else {
-							aBool7310 = false;
-						}
-						break;
-					case 10:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7147 = true;
-						} else {
-							aBool7147 = false;
-						}
-						break;
-					case 11:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7161 = true;
-						} else {
-							aBool7161 = false;
-						}
-					case 12:
-					case 21:
-						break;
-					case 13:
-						Class464.aString5555 = string_7;
-						break;
-					case 14:
-						if (Class448.lobbyConnectionInfo == null) {
-							Class448.lobbyConnectionInfo = new ConnectionInfo();
-						}
-
-						Class448.lobbyConnectionInfo.worldId = Integer.parseInt(string_7) * -1933199413 * -87869981;
-						break;
-					case 15:
-						Class176.aClass472_2201 = Class182.method3040(Integer.parseInt(string_7), (byte) -42);
-						if (Class176.aClass472_2201 != Class472.aClass472_5599 && Class472.aClass472_5598 != Class176.aClass472_2201 && Class176.aClass472_2201 != Class472.aClass472_5596 && Class176.aClass472_2201 != Class472.aClass472_5600) {
-							Class176.aClass472_2201 = Class472.aClass472_5600;
-						}
-						break;
-					case 16:
-						Class448.aClass450_5420 = new ConnectionInfo();
-						Class448.aClass450_5420.worldId = Integer.parseInt(string_7) * -1933199413 * -87869981;
-						break;
-					case 17:
-						aString7164 = string_7;
-						break;
-					case 18:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7316 = true;
-						}
-						break;
-					case 19:
-					default:
-						Class151.method2594("", new RuntimeException(), (byte) -46);
-						break;
-					case 20:
-						aString7157 = string_7;
-						break;
-					case 22:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7160 = true;
-						} else {
-							aBool7160 = false;
-						}
-						break;
-					case 23:
-						anInt7149 = Integer.parseInt(string_7) * 1564360473 * -1543197399;
-						break;
-					case 24:
-						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
-						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
-						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1676029063) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5813;
-						}
-						break;
-					case 25:
-						if (string_7.equalsIgnoreCase("true")) {
-							aBool7159 = true;
-						} else {
-							aBool7159 = false;
-						}
-						break;
-					case 26:
-						aLong7153 = Long.parseLong(string_7) * -5626745816563543837L * -8972807970865466165L;
-						break;
-					case 27:
-						anInt7163 = Integer.parseInt(string_7) * -874138425 * 204524791;
-						break;
-					case 28:
-						if (string_7.equals("true")) {
-							aBool7189 = true;
-						} else {
-							aBool7189 = false;
-						}
-						break;
-					case 29:
-						if (string_7.equals("true")) {
-							aBool7151 = true;
-						} else {
-							aBool7151 = false;
-						}
-						break;
-					case 30:
-						RenderAnimDefs.anInt2831 = Integer.parseInt(string_7) * -917544917 * -1439277437;
-						break;
-					case 31:
-						Class223.CURRENT_LANGUAGE = Language.method8278(Integer.parseInt(string_7), -1464008019);
-						break;
-					case 32:
-						RegionMap.aString3643 = string_7;
-						break;
-					case 33:
-						aString7281 = string_7;
-						break;
-					case 34:
-						Class445.aString5384 = string_7;
-						break;
-					case 35:
-						anInt7447 = Integer.parseInt(string_7) * 826882953 * 1920182969;
-						if (1920182969 * anInt7447 * 826882953 < 0 || anInt7447 * 826882953 * 1920182969 >= aColorArray7186.length) {
-							anInt7447 = 0 * 1920182969;
-						}
-					}
-				}
-			}
-
-			if (aString7281 == null) {
-				aString7281 = "";
-			}
-
-			Class274 class274_6 = new Class274(150480619 * anInt7439 * 1426041429 * 765 * -1115795005, 1176039023 * anInt7312 * -994133479 * 553 * -645779313, anInt7309 * -2059193329 * 1226390255, anInt7205 * 76833159 * 429626423, CURRENT_GAME.aString5749);
-			Class308.aclient3620 = this;
-			String string_8 = Class176.aClass472_2201.aString5601;
-			int i_5 = -2001827121 * Class176.aClass472_2201.anInt5602 * 886324271 + 32;
-			if (!str_1.equals("")) {
-				string_8 = string_8 + "_" + str_1;
-				i_5 = 0;
-			}
-
-			this.method4655(class274_6, CURRENT_GAME.aString5748, string_8, i_5, Class123.method2149(), aBool7161, -187113750);
-		}
-
-	}
-
 	static final void method12073(int i_0, int i_1, int i_2) {
 		if (Game.stellarDawn != CURRENT_GAME) {
 			if (!MapRegion.routeTo(i_0, i_1, false, Class371.method6352(i_0, i_1))) {
@@ -3367,4 +2977,15 @@ public final class client extends Engine {
 
 	}
 
+	@Override
+	public void method165() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void method166() {
+		// TODO Auto-generated method stub
+		
+	}
 }

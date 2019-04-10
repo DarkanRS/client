@@ -15,7 +15,7 @@ public class Class507 {
 			client.fullScreenFrame = null;
 		}
 		if (Class475.supportsFullScreen && i_1 == 3 && client.fullScreenFrame == null) {
-			client.fullScreenFrame = Class472.method7852(Class274.aClass470_3336, i_2, i_3, 0);
+			client.fullScreenFrame = BuildEnvironment.method7852(Class274.aClass470_3336, i_2, i_3, 0);
 			if (client.fullScreenFrame != null) {
 				Class363.anInt4203 = i_2;
 				client.anInt3249 = i_3;
@@ -49,9 +49,9 @@ public class Class507 {
 			if (i_1 != 1) {
 				Class46.method935((byte) -63);
 			} else {
-				Class349.anInt4083 = client.anInt7439;
-				client.anInt3250 = (SunIndexLoader.anInt434 - client.anInt7439) / 2;
-				client.anInt3243 = client.anInt7312 * -1929118563;
+				Class349.anInt4083 = client.GAME_WIDTH;
+				client.anInt3250 = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
+				client.anInt3243 = client.GAME_HEIGHT * -1929118563;
 				client.anInt3251 = 0;
 			}
 			if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813 && Class349.anInt4083 < 1024) {

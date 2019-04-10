@@ -1,43 +1,39 @@
 public class Class274 {
 
     protected static Class470 aClass470_3336;
-
-    int anInt3334;
-
-    int anInt3338;
-
+    
+    int width;
+    int height;
     int anInt3333;
-
     int anInt3335;
-
-    String aString3337;
+    String name;
 
     int method4868() {
         return this.anInt3333;
     }
 
-    String method4870() {
-        return this.aString3337;
+    String getName() {
+        return this.name;
     }
 
-    int method4871() {
-        return this.anInt3334;
+    int getWidth() {
+        return this.width;
     }
 
     int method4872() {
         return this.anInt3335;
     }
 
-    int method4877() {
-        return this.anInt3338;
+    int getHeight() {
+        return this.height;
     }
 
-    public Class274(int i_1, int i_2, int i_3, int i_4, String string_5) {
-        this.anInt3334 = i_1;
-        this.anInt3338 = i_2;
+    public Class274(int width, int height, int i_3, int i_4, String name) {
+        this.width = width;
+        this.height = height;
         this.anInt3333 = i_3;
         this.anInt3335 = i_4;
-        this.aString3337 = string_5;
+        this.name = name;
     }
 
     public static void method4884(byte b_0) {

@@ -175,9 +175,9 @@ public class Class16 {
 
 	static final void method568(int i_0, int i_1, int i_2, int i_3) {
 		if (i_0 > i_1) {
-			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_1, i_0, i_3, (byte) -16);
+			KeyHoldInputSubscriber.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_1, i_0, i_3, (byte) -16);
 		} else {
-			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_0, i_1, i_3, (byte) 7);
+			KeyHoldInputSubscriber.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_0, i_1, i_3, (byte) 7);
 		}
 	}
 }

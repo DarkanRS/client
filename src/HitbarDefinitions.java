@@ -126,18 +126,18 @@ public class HitbarDefinitions {
 		int i_9 = i_3 - i_6;
 		int i_10;
 		for (i_10 = i_2; i_10 < i_8; i_10++) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_0, i_1, i_5, (byte) 42);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_0, i_1, i_5, (byte) 42);
 		}
 		for (i_10 = i_3; i_10 > i_9; --i_10) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_0, i_1, i_5, (byte) 20);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_0, i_1, i_5, (byte) 20);
 		}
 		i_10 = i_0 + i_6;
 		int i_11 = i_1 - i_6;
 		for (int i_12 = i_8; i_12 <= i_9; i_12++) {
 			int[] ints_13 = Class532_Sub1.anIntArrayArray7072[i_12];
-			Class232.method3922(ints_13, i_0, i_10, i_5, (byte) -24);
-			Class232.method3922(ints_13, i_10, i_11, i_4, (byte) -35);
-			Class232.method3922(ints_13, i_11, i_1, i_5, (byte) -33);
+			KeyHoldInputSubscriber.method3922(ints_13, i_0, i_10, i_5, (byte) -24);
+			KeyHoldInputSubscriber.method3922(ints_13, i_10, i_11, i_4, (byte) -35);
+			KeyHoldInputSubscriber.method3922(ints_13, i_11, i_1, i_5, (byte) -33);
 		}
 	}
 
@@ -197,7 +197,7 @@ public class HitbarDefinitions {
 					i_9 = (int) client.aFloat7365 & 0x3fff;
 					LoadingStage.method6683(Class11.anInt122, Class504.method8389(client.anInt7262, client.anInt7376, Class4.anInt35, (byte) 101) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1318646026);
 				} else if (NativeLibraryLoader.anInt3240 == 1) {
-					Class232.method3920(i_3);
+					KeyHoldInputSubscriber.method3920(i_3);
 				}
 				i_8 = IdentitiKitIndexLoader.anInt361;
 				i_9 = Class109_Sub1.anInt9384;

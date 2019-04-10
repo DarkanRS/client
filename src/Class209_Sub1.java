@@ -104,7 +104,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.aComponent7935.addMouseWheelListener(this);
 	}
 
-	public int method3569(int i_1) {
+	public int getMouseX() {
 		return this.anInt7938;
 	}
 
@@ -229,7 +229,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		return 1002227073 * this.anInt7938 * -901678463;
 	}
 
-	public int method3570() {
+	public int getMouseY() {
 		return this.anInt7939;
 	}
 

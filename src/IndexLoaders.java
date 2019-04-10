@@ -243,27 +243,27 @@ public class IndexLoaders {
 			}
 
 			Class358.method6235(DEFAULTS_INDEX.getFile(DefaultsFile.FILE_1.fileId));
-			QuickchatFiller.aClass529_527 = new Defaults3Loader(DEFAULTS_INDEX);
-			AbstractQueue_Sub1.SKIN_COLORS = QuickchatFiller.aClass529_527.aShortArrayArray7039;
-			Class366.SKIN_COLORS = QuickchatFiller.aClass529_527.aShortArrayArrayArray7040;
-			if (QuickchatFiller.aClass529_527.anInt7045 != -1 && QuickchatFiller.aClass529_527.anInt7046 != -1) {
-				client.anInt7439 = QuickchatFiller.aClass529_527.anInt7045;
-				client.anInt7312 = QuickchatFiller.aClass529_527.anInt7046;
+			QuickchatFiller.ENTITY_DEFAULTS = new EntityDefaults(DEFAULTS_INDEX);
+			AbstractQueue_Sub1.SKIN_COLORS = QuickchatFiller.ENTITY_DEFAULTS.originalColours;
+			Class366.SKIN_COLORS = QuickchatFiller.ENTITY_DEFAULTS.replacementColours;
+			if (QuickchatFiller.ENTITY_DEFAULTS.anInt7045 != -1 && QuickchatFiller.ENTITY_DEFAULTS.anInt7046 != -1) {
+				client.GAME_WIDTH = QuickchatFiller.ENTITY_DEFAULTS.anInt7045;
+				client.GAME_HEIGHT = QuickchatFiller.ENTITY_DEFAULTS.anInt7046;
 			}
 
-			LinkedNodeList.DEFAULTS_LOADER_6 = new Defaults6Loader(DEFAULTS_INDEX);
+			LinkedNodeList.EQUIPMENT_DEFAULTS = new EquipmentDefaults(DEFAULTS_INDEX);
 			Class149_Sub2.DEFAULTS_LOADER_7 = new Defaults7Loader(DEFAULTS_INDEX);
 			Class282_Sub13.DEFAULTS_LOADER_8 = new Defaults8Loader(DEFAULTS_INDEX);
 		}
 
 		if (LoadingStage.aClass387_4704 == LOADING_STAGE) {
-			if (QuickchatFiller.aClass529_527.anInt7034 != -1 && !MESH_INDEX.load(QuickchatFiller.aClass529_527.anInt7034, 0)) {
+			if (QuickchatFiller.ENTITY_DEFAULTS.profilingModel != -1 && !MESH_INDEX.load(QuickchatFiller.ENTITY_DEFAULTS.profilingModel, 0)) {
 				return 99;
 			}
 
 			IMAGE_LOADER = new ImageIndexLoader(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
 			PARAM_LOADER = new ParamIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			RENDER_ANIM_LOADER = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.DEFAULTS_LOADER_6);
+			RENDER_ANIM_LOADER = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.EQUIPMENT_DEFAULTS);
 			CURSOR_LOADER = new CursorIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			ENUM_LOADER = new EnumIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
 			OVERLAY_LOADER = new OverlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
@@ -345,14 +345,14 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4713) {
-			if (!MovingAnimation.isInterfaceLoaded(QuickchatFiller.aClass529_527.anInt7036, (int[]) null, -402984376)) {
+			if (!MovingAnimation.isInterfaceLoaded(QuickchatFiller.ENTITY_DEFAULTS.loginWindow, (int[]) null, -402984376)) {
 				return 0;
 			}
 
 			bool_10 = true;
 
-			for (i_2 = 0; i_2 < Class468_Sub8.INTERFACES[QuickchatFiller.aClass529_527.anInt7036].components.length; i_2++) {
-				IComponentDefinitions icomponentdefinitions_8 = Class468_Sub8.INTERFACES[QuickchatFiller.aClass529_527.anInt7036].components[i_2];
+			for (i_2 = 0; i_2 < Class468_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
+				IComponentDefinitions icomponentdefinitions_8 = Class468_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
 				if (icomponentdefinitions_8.type == 5 && icomponentdefinitions_8.anInt1320 != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.anInt1320, 0)) {
 					bool_10 = false;
 				}

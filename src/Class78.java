@@ -108,12 +108,12 @@ public final class Class78 {
 				bool_7 = true;
 			}
 			if (i_2 >= Class532_Sub1.anInt7070) {
-				Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_2++], i_0, i_1, i_4, (byte) -14);
+				KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_2++], i_0, i_1, i_4, (byte) -14);
 			} else {
 				i_2 = Class532_Sub1.anInt7070;
 			}
 			if (i_3 <= Class532_Sub1.anInt7068) {
-				Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_3--], i_0, i_1, i_4, (byte) 40);
+				KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_3--], i_0, i_1, i_4, (byte) 40);
 			} else {
 				i_3 = Class532_Sub1.anInt7068;
 			}

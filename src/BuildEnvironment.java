@@ -1,18 +1,18 @@
 import java.awt.Frame;
 
-public class Class472 {
+public class BuildEnvironment {
 
-	public static Class472 aClass472_5600 = new Class472("LIVE", 0);
-	public static Class472 aClass472_5596 = new Class472("BUILDLIVE", 3);
-	public static Class472 aClass472_5598 = new Class472("RC", 1);
-	public static Class472 aClass472_5599 = new Class472("WIP", 2);
-	static Class472 aClass472_5597 = new Class472("INTBETA", 4);
-	public String aString5601;
-	public int anInt5602;
+	public static BuildEnvironment LIVE = new BuildEnvironment("LIVE", 0);
+	public static BuildEnvironment BUILD_LIVE = new BuildEnvironment("BUILDLIVE", 3);
+	public static BuildEnvironment RC = new BuildEnvironment("RC", 1);
+	public static BuildEnvironment WIP = new BuildEnvironment("WIP", 2);
+	static BuildEnvironment INT_BETA = new BuildEnvironment("INTBETA", 4);
+	public String name;
+	public int id;
 
-	Class472(String string_1, int i_2) {
-		this.aString5601 = string_1;
-		this.anInt5602 = i_2;
+	BuildEnvironment(String string_1, int i_2) {
+		this.name = string_1;
+		this.id = i_2;
 	}
 
 	public static Frame method7852(Class470 class470_0, int i_1, int i_2, int i_3) {

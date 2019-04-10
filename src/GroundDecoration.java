@@ -373,8 +373,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							continue;
 						}
 						if (client.aBool7364 && client.aBool7403) {
-							i_17 = Class163.mouseRecorder.method3569(2098527627);
-							i_18 = Class163.mouseRecorder.method3570();
+							i_17 = Class163.mouseRecorder.getMouseX();
+							i_18 = Class163.mouseRecorder.getMouseY();
 							i_17 -= client.anInt7361;
 							i_18 -= client.anInt7362;
 							if (i_17 < client.anInt7432) {
@@ -665,7 +665,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 17) == icomponentdefinitions_12.anInt1339)) {
-														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357);
+														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS, (short) -10357);
 													}
 												}
 											} else if (icomponentdefinitions_12.anInt1329 != 8 && icomponentdefinitions_12.anInt1329 != 9) {

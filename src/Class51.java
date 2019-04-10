@@ -12,8 +12,8 @@ public class Class51 implements Interface2 {
 
     public void method11(boolean bool_1) {
         if (bool_1) {
-            int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1034015325) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
-            int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1192108582) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
+            int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1034015325) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
+            int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1192108582) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
             this.aClass8_484.method378(this.aClass62_485.aString649, i_2, i_3, 2056525513 * this.aClass62_485.anInt652 * 1860559737, 38429607 * this.aClass62_485.anInt648 * 959976471, -1179509109 * this.aClass62_485.anInt659 * 1820776739, this.aClass62_485.anInt660 * -1985214661 * 1958427123, -533570239 * this.aClass62_485.anInt653 * -762236223, 1391502107 * this.aClass62_485.anInt656 * 533004051, -1240305753 * this.aClass62_485.anInt657 * 1235699735, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 60);
         }
     }
@@ -26,8 +26,8 @@ public class Class51 implements Interface2 {
 
     public void method20(boolean bool_1, int i_2) {
         if (bool_1) {
-            int i_3 = this.aClass62_485.aClass356_650.method6221(this.aClass62_485.anInt652, client.anInt7439, 1847576923) + this.aClass62_485.anInt651;
-            int i_4 = this.aClass62_485.aClass353_654.method6198(this.aClass62_485.anInt648, client.anInt7312, 1796559558) + this.aClass62_485.anInt655;
+            int i_3 = this.aClass62_485.aClass356_650.method6221(this.aClass62_485.anInt652, client.GAME_WIDTH, 1847576923) + this.aClass62_485.anInt651;
+            int i_4 = this.aClass62_485.aClass353_654.method6198(this.aClass62_485.anInt648, client.GAME_HEIGHT, 1796559558) + this.aClass62_485.anInt655;
             this.aClass8_484.method378(this.aClass62_485.aString649, i_3, i_4, this.aClass62_485.anInt652, this.aClass62_485.anInt648, this.aClass62_485.anInt659, this.aClass62_485.anInt660, this.aClass62_485.anInt653, this.aClass62_485.anInt656, this.aClass62_485.anInt657, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 28);
         }
     }
@@ -45,8 +45,8 @@ public class Class51 implements Interface2 {
 
     public void method12(boolean bool_1) {
         if (bool_1) {
-            int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 825441624) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
-            int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 2097685186) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
+            int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 825441624) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
+            int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 2097685186) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
             this.aClass8_484.method378(this.aClass62_485.aString649, i_2, i_3, 2056525513 * this.aClass62_485.anInt652 * 1860559737, 38429607 * this.aClass62_485.anInt648 * 959976471, -1179509109 * this.aClass62_485.anInt659 * 1820776739, this.aClass62_485.anInt660 * -1985214661 * 1958427123, -533570239 * this.aClass62_485.anInt653 * -762236223, 1391502107 * this.aClass62_485.anInt656 * 533004051, -1240305753 * this.aClass62_485.anInt657 * 1235699735, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 10);
         }
     }
@@ -116,8 +116,8 @@ public class Class51 implements Interface2 {
 
     public void method14(boolean bool_1) {
         if (bool_1) {
-            int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 2080844430) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
-            int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 879742369) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
+            int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 2080844430) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
+            int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 879742369) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
             this.aClass8_484.method378(this.aClass62_485.aString649, i_2, i_3, 2056525513 * this.aClass62_485.anInt652 * 1860559737, 38429607 * this.aClass62_485.anInt648 * 959976471, -1179509109 * this.aClass62_485.anInt659 * 1820776739, this.aClass62_485.anInt660 * -1985214661 * 1958427123, -533570239 * this.aClass62_485.anInt653 * -762236223, 1391502107 * this.aClass62_485.anInt656 * 533004051, -1240305753 * this.aClass62_485.anInt657 * 1235699735, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 30);
         }
     }

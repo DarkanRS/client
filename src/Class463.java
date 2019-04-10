@@ -81,7 +81,7 @@ public class Class463 {
         int i_8 = EntityNode.method4890(i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -63131658);
         int i_9 = EntityNode.method4890(i_1, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1596186955);
         for (int i_10 = i_6; i_10 <= i_7; i_10++) {
-            Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_8, i_9, i_4, (byte) 2);
+            KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_8, i_9, i_4, (byte) 2);
         }
     }
 

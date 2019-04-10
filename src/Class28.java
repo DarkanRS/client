@@ -22,8 +22,8 @@ public class Class28 implements Interface2 {
     public void method11(boolean bool_1) {
         Class105 class105_2 = this.aClass30_350.method791(this.aClass365_349.anInt4229 * 1551783443 * 778888219, (byte) -49);
         if (class105_2 != null) {
-            int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1460019555) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
-            int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1018239308) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
+            int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1460019555) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
+            int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1018239308) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
             if (this.aClass365_349.aBool4230) {
                 Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * this.aClass365_349.anInt4227 * 1984931449, this.aClass365_349.anInt4228 * -1733557607 * 1416311209, this.aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
             }
@@ -42,8 +42,8 @@ public class Class28 implements Interface2 {
     public void method20(boolean bool_1, int i_2) {
         Class105 class105_3 = this.aClass30_350.method791(this.aClass365_349.anInt4229, (byte) -61);
         if (class105_3 != null) {
-            int i_4 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227, client.anInt7439, 1591676659) + this.aClass365_349.anInt4221;
-            int i_5 = this.aClass365_349.aClass353_4226.method6198(this.aClass365_349.anInt4228, client.anInt7312, 1855171415) + this.aClass365_349.anInt4223;
+            int i_4 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227, client.GAME_WIDTH, 1591676659) + this.aClass365_349.anInt4221;
+            int i_5 = this.aClass365_349.aClass353_4226.method6198(this.aClass365_349.anInt4228, client.GAME_HEIGHT, 1855171415) + this.aClass365_349.anInt4223;
             if (this.aClass365_349.aBool4230) {
                 Renderers.SOFTWARE_RENDERER.method8430(i_4, i_5, this.aClass365_349.anInt4227, this.aClass365_349.anInt4228, this.aClass365_349.anInt4220, 0);
             }
@@ -62,8 +62,8 @@ public class Class28 implements Interface2 {
     public void method12(boolean bool_1) {
         Class105 class105_2 = this.aClass30_350.method791(this.aClass365_349.anInt4229 * 1551783443 * 778888219, (byte) -33);
         if (class105_2 != null) {
-            int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1607557191) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
-            int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1779448896) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
+            int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1607557191) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
+            int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1779448896) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
             if (this.aClass365_349.aBool4230) {
                 Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * this.aClass365_349.anInt4227 * 1984931449, this.aClass365_349.anInt4228 * -1733557607 * 1416311209, this.aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
             }
@@ -86,8 +86,8 @@ public class Class28 implements Interface2 {
     public void method14(boolean bool_1) {
         Class105 class105_2 = this.aClass30_350.method791(this.aClass365_349.anInt4229 * 1551783443 * 778888219, (byte) -70);
         if (class105_2 != null) {
-            int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1779044306) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
-            int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1414644446) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
+            int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1779044306) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
+            int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1414644446) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
             if (this.aClass365_349.aBool4230) {
                 Renderers.SOFTWARE_RENDERER.method8430(i_3, i_4, -547232823 * this.aClass365_349.anInt4227 * 1984931449, this.aClass365_349.anInt4228 * -1733557607 * 1416311209, this.aClass365_349.anInt4220 * -965307251 * -1214034363, 0);
             }

@@ -153,14 +153,14 @@ public class FriendStatus {
 				i_3 = class282_sub53_14.method13481(1796432776);
 				i_4 = class282_sub53_14.method13469(-1321812289);
 			} else {
-				i_3 = Class163.mouseRecorder.method3569(1994441818);
-				i_4 = Class163.mouseRecorder.method3570();
+				i_3 = Class163.mouseRecorder.getMouseX();
+				i_4 = Class163.mouseRecorder.getMouseY();
 			}
 			boolean bool_16;
 			if (Class20.aBool161) {
 				int i_6;
 				int i_11;
-				if (Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5882, class282_sub53_14, 1812867232)) {
+				if (Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5882, class282_sub53_14)) {
 					int i_5;
 					Class282_Sub50_Sub7 class282_sub50_sub7_8;
 					Class469 class469_15;
@@ -303,9 +303,9 @@ public class FriendStatus {
 					}
 				}
 			} else {
-				bool_16 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5878, class282_sub53_14, 2080768595);
-				boolean bool_18 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5874, class282_sub53_14, 369566995);
-				boolean bool_20 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5875, class282_sub53_14, 1851162471);
+				bool_16 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5878, class282_sub53_14);
+				boolean bool_18 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5874, class282_sub53_14);
+				boolean bool_20 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5875, class282_sub53_14);
 				if ((bool_16 || bool_18) && (client.anInt7339 == 1 && Class20.anInt169 > 2 || JS5GrabWorker.method12562(-269769835))) {
 					bool_20 = true;
 				}

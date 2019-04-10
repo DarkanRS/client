@@ -20,63 +20,34 @@ import java.net.URL;
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 
     public static int anInt3249;
-
     public static Frame fullScreenFrame;
-
     static long aLong3242 = 20000000L;
-
     public static int FPS = 0;
-
     static long[] aLongArray3246 = new long[32];
-
     static long[] aLongArray3247 = new long[32];
-
     public static int anInt3250 = 0;
-
     public static int anInt3251 = 0;
-
     protected static String aString3252 = null;
-
     protected static volatile boolean aBool3274 = true;
-
     static int anInt3256 = 500;
-
     protected static volatile boolean aBool3257 = false;
-
     static volatile long aLong3280 = 0L;
-
     protected static boolean aBool3259 = false;
-
     static volatile boolean aBool3275 = true;
-
     static Class440 aClass440_3269 = null;
-
     protected static Class440 aClass440_3270 = null;
-
     static Class440 aClass440_3271 = null;
-
     static Class279 aClass279_3267 = null;
-
     static long aLong3255 = 0L;
-
     static boolean aBool3276 = false;
-
     public static int MAX_MEMORY = -1;
-
     public static int AVAILABLE_PROCESSORS = 1;
-
     public static int anInt3243;
-
     static File aFile3264;
-
     public static Frame engineFrame;
-
     boolean aBool3254 = false;
-
     boolean aBool3268 = false;
-
     public static Class273 aClass273_3244;
-
     static int anInt3279;
 
     public void supplyApplet(Applet applet_1) {
@@ -86,8 +57,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     final void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8, int i_9) {
         try {
             this.method4683(Class279.aClass279_3369, bool_8);
-            SunIndexLoader.anInt434 = Class349.anInt4083 = class274_1.method4871();
-            int i_10000 = class274_1.method4877();
+            SunIndexLoader.anInt434 = Class349.anInt4083 = class274_1.getWidth();
+            int i_10000 = class274_1.getHeight();
             anInt3243 = i_10000 * -1929118563;
             Class107.anInt1082 = i_10000;
             anInt3250 = 0;
@@ -95,7 +66,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             if (NamedFileReference.method867(-1097326159) == Class279.aClass279_3367) {
                 SunIndexLoader.anInt434 += 2 * class274_1.method4868();
                 Class107.anInt1082 += 2 * class274_1.method4872();
-                this.method4661(class274_1.method4870());
+                this.method4661(class274_1.getName());
             }
             RuntimeException_Sub3.anApplet10460 = Class282_Sub44.anApplet8065;
             this.method4656(string_2, string_3, i_4, i_5);
@@ -821,12 +792,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             this.method4675(false, -1481410790);
         }
     }
-
-    public abstract void method165();
-
-    public abstract void method166();
-
-    abstract void method4762();
 
     public final void windowIconified(WindowEvent windowevent_1) {
     }

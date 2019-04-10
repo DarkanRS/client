@@ -8,7 +8,7 @@ public interface KeyRecord {
 
 	int getType();
 
-	int method92();
+	int getCode();
 
 	long method119(int var1);
 
@@ -30,6 +30,6 @@ public interface KeyRecord {
 
 	int method57();
 
-	int method125(int var1);
+	int getFlags();
 
 }

@@ -135,7 +135,7 @@ public class Class470 {
 	static int method7823(int i_0) {
 		byte b_2;
 		if (i_0 > 12097) {
-			Defaults6Loader.method11248(101206847);
+			EquipmentDefaults.method11248(101206847);
 			b_2 = 4;
 		} else if (i_0 > 5098) {
 			Class282_Sub40.method13300(-804709931);

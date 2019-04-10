@@ -2128,9 +2128,9 @@ public class PacketsDecoder extends Class455 {
 		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_CONFIG) {
 			int key = buffer.readInt();
 			boolean bool_66 = buffer.readUnsignedByteC() == 1;
-			if (bool_66 != Class469.aBool5585 || key != Class232.anInt2879) {
+			if (bool_66 != Class469.aBool5585 || key != KeyHoldInputSubscriber.anInt2879) {
 				Class469.aBool5585 = bool_66;
-				Class232.anInt2879 = key;
+				KeyHoldInputSubscriber.anInt2879 = key;
 				HitsplatIndexLoader.method3614(Class397.aClass397_4803, -1, -1, (byte) 27);
 			}
 			context.currentPacket = null;

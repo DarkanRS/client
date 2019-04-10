@@ -109,7 +109,7 @@ public class PlayerAppearance {
 		}
 	}
 
-	public MeshRasterizer method3998(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, Defaults6Loader defaults6loader_15, short s_16) {
+	public MeshRasterizer method3998(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, EquipmentDefaults defaults6loader_15, short s_16) {
 		if (this.anInt2928 != -1) {
 			return npcindexloader_5.getNPCDefinitions(this.anInt2928).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, animation_10, arr_11, ints_12, i_13, (Class417) null, 2039422694);
 		} else {
@@ -126,36 +126,36 @@ public class PlayerAppearance {
 					for (i_24 = 0; i_24 < ints_20.length; i_24++) {
 						ints_20[i_24] = this.anIntArray2921[i_24];
 					}
-					if (animationdefinitions_23.leftHandItem >= 0 && defaults6loader_15.anInt6990 != -1) {
+					if (animationdefinitions_23.leftHandItem >= 0 && defaults6loader_15.offhandSlot != -1) {
 						bool_21 = true;
 						if (animationdefinitions_23.leftHandItem == 65535) {
-							ints_20[defaults6loader_15.anInt6990] = 0;
-							for (i_24 = 0; i_24 < defaults6loader_15.anIntArray6992.length; i_24++) {
-								ints_20[defaults6loader_15.anIntArray6992[i_24]] = 0;
+							ints_20[defaults6loader_15.offhandSlot] = 0;
+							for (i_24 = 0; i_24 < defaults6loader_15.hiddenAnimationOffhandSlots.length; i_24++) {
+								ints_20[defaults6loader_15.hiddenAnimationOffhandSlots[i_24]] = 0;
 							}
 							long_18 ^= ~0xffffffffL;
 						} else {
-							ints_20[defaults6loader_15.anInt6990] = animationdefinitions_23.leftHandItem | 0x40000000;
-							for (i_24 = 0; i_24 < defaults6loader_15.anIntArray6992.length; i_24++) {
-								ints_20[defaults6loader_15.anIntArray6992[i_24]] = 0;
+							ints_20[defaults6loader_15.offhandSlot] = animationdefinitions_23.leftHandItem | 0x40000000;
+							for (i_24 = 0; i_24 < defaults6loader_15.hiddenAnimationOffhandSlots.length; i_24++) {
+								ints_20[defaults6loader_15.hiddenAnimationOffhandSlots[i_24]] = 0;
 							}
-							long_18 ^= (long) ints_20[defaults6loader_15.anInt6990] << 32;
+							long_18 ^= (long) ints_20[defaults6loader_15.offhandSlot] << 32;
 						}
 					}
-					if (animationdefinitions_23.rightHandItem >= 0 && defaults6loader_15.anInt6991 != -1) {
+					if (animationdefinitions_23.rightHandItem >= 0 && defaults6loader_15.weaponSlot != -1) {
 						bool_22 = true;
 						if (animationdefinitions_23.rightHandItem == 65535) {
-							ints_20[defaults6loader_15.anInt6991] = 0;
-							for (i_24 = 0; i_24 < defaults6loader_15.anIntArray6993.length; i_24++) {
-								ints_20[defaults6loader_15.anIntArray6993[i_24]] = 0;
+							ints_20[defaults6loader_15.weaponSlot] = 0;
+							for (i_24 = 0; i_24 < defaults6loader_15.hiddenAnimationWeaponSlots.length; i_24++) {
+								ints_20[defaults6loader_15.hiddenAnimationWeaponSlots[i_24]] = 0;
 							}
 							long_18 ^= 0xffffffffL;
 						} else {
-							ints_20[defaults6loader_15.anInt6991] = animationdefinitions_23.rightHandItem | 0x40000000;
-							for (i_24 = 0; i_24 < defaults6loader_15.anIntArray6993.length; i_24++) {
-								ints_20[defaults6loader_15.anIntArray6993[i_24]] = 0;
+							ints_20[defaults6loader_15.weaponSlot] = animationdefinitions_23.rightHandItem | 0x40000000;
+							for (i_24 = 0; i_24 < defaults6loader_15.hiddenAnimationWeaponSlots.length; i_24++) {
+								ints_20[defaults6loader_15.hiddenAnimationWeaponSlots[i_24]] = 0;
 							}
-							long_18 ^= (long) ints_20[defaults6loader_15.anInt6991];
+							long_18 ^= (long) ints_20[defaults6loader_15.weaponSlot];
 						}
 					}
 				}
@@ -288,11 +288,11 @@ public class PlayerAppearance {
 					MeshModifier meshmodifier_32 = null;
 					boolean bool_33 = false;
 					if (bool_21) {
-						if (defaults6loader_15.anInt6990 == i_30) {
+						if (defaults6loader_15.offhandSlot == i_30) {
 							bool_33 = true;
 						} else {
-							for (i_34 = 0; i_34 < defaults6loader_15.anIntArray6992.length; i_34++) {
-								if (defaults6loader_15.anIntArray6992[i_34] == i_30) {
+							for (i_34 = 0; i_34 < defaults6loader_15.hiddenAnimationOffhandSlots.length; i_34++) {
+								if (defaults6loader_15.hiddenAnimationOffhandSlots[i_34] == i_30) {
 									bool_33 = true;
 									break;
 								}
@@ -300,11 +300,11 @@ public class PlayerAppearance {
 						}
 					}
 					if (bool_22) {
-						if (defaults6loader_15.anInt6991 == i_30) {
+						if (defaults6loader_15.weaponSlot == i_30) {
 							bool_33 = true;
 						} else {
-							for (i_34 = 0; i_34 < defaults6loader_15.anIntArray6993.length; i_34++) {
-								if (defaults6loader_15.anIntArray6993[i_34] == i_30) {
+							for (i_34 = 0; i_34 < defaults6loader_15.hiddenAnimationWeaponSlots.length; i_34++) {
+								if (defaults6loader_15.hiddenAnimationWeaponSlots[i_34] == i_30) {
 									bool_33 = true;
 									break;
 								}
@@ -538,18 +538,18 @@ public class PlayerAppearance {
 		int i_13 = EntityNode.method4890(i_3 - i_6, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -1579133308);
 		int i_14;
 		for (i_14 = i_8; i_14 < i_12; i_14++) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_14], i_10, i_11, i_5, (byte) 47);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_14], i_10, i_11, i_5, (byte) 47);
 		}
 		for (i_14 = i_9; i_14 > i_13; --i_14) {
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_14], i_10, i_11, i_5, (byte) -32);
+			KeyHoldInputSubscriber.method3922(Class532_Sub1.anIntArrayArray7072[i_14], i_10, i_11, i_5, (byte) -32);
 		}
 		i_14 = EntityNode.method4890(i_0 + i_6, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1513727224);
 		int i_15 = EntityNode.method4890(i_1 - i_6, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1346060806);
 		for (int i_16 = i_12; i_16 <= i_13; i_16++) {
 			int[] ints_17 = Class532_Sub1.anIntArrayArray7072[i_16];
-			Class232.method3922(ints_17, i_10, i_14, i_5, (byte) 87);
-			Class232.method3922(ints_17, i_14, i_15, i_4, (byte) 89);
-			Class232.method3922(ints_17, i_15, i_11, i_5, (byte) -32);
+			KeyHoldInputSubscriber.method3922(ints_17, i_10, i_14, i_5, (byte) 87);
+			KeyHoldInputSubscriber.method3922(ints_17, i_14, i_15, i_4, (byte) 89);
+			KeyHoldInputSubscriber.method3922(ints_17, i_15, i_11, i_5, (byte) -32);
 		}
 	}
 }

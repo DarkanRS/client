@@ -73,7 +73,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 		if (i_1 >= Class532_Sub3_Sub1.anInt7070 && i_1 <= Class532_Sub3_Sub1.anInt7068) {
 			i_21 = EntityNode.method4890(i_0 + i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, -2092614922);
 			i_22 = EntityNode.method4890(i_0 - i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 107584630);
-			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_22, i_21, i_4, (byte) -117);
+			KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_22, i_21, i_4, (byte) -117);
 		}
 		while (i_7 > 0) {
 			if (i_13 < 0) {
@@ -103,10 +103,10 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 				int i_23 = EntityNode.method4890(i_0 + i_6, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 1305925887);
 				int i_24 = EntityNode.method4890(i_0 - i_6, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 923847581);
 				if (i_21 >= Class532_Sub3_Sub1.anInt7070) {
-					Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 40);
+					KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 40);
 				}
 				if (i_22 <= Class532_Sub3_Sub1.anInt7068) {
-					Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 68);
+					KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 68);
 				}
 			}
 		}

@@ -1,17 +1,17 @@
 public class ClanVarDefinitions {
 
 	public char aChar4832;
-	public int anInt4833;
-	public int anInt4834;
-	public int anInt4835;
+	public int baseVar;
+	public int startBit;
+	public int endBit;
 
 	void method6814(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
 			this.aChar4832 = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
 		} else if (i_2 == 3) {
-			this.anInt4833 = rsbytebuffer_1.readUnsignedShort();
-			this.anInt4834 = rsbytebuffer_1.readUnsignedByte();
-			this.anInt4835 = rsbytebuffer_1.readUnsignedByte();
+			this.baseVar = rsbytebuffer_1.readUnsignedShort();
+			this.startBit = rsbytebuffer_1.readUnsignedByte();
+			this.endBit = rsbytebuffer_1.readUnsignedByte();
 		}
 
 	}
@@ -88,9 +88,9 @@ public class ClanVarDefinitions {
 			i_41 = EntityNode.method4890(i_0 + i_2, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 651225496);
 			i_42 = EntityNode.method4890(i_0 - i_11, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, 568370220);
 			i_43 = EntityNode.method4890(i_0 + i_11, Class532_Sub3_Sub1.anInt7071, Class532_Sub3_Sub1.anInt7069, -475666035);
-			Class232.method3922(ints_39, i_40, i_42, i_5, (byte) -27);
-			Class232.method3922(ints_39, i_42, i_43, i_4, (byte) -31);
-			Class232.method3922(ints_39, i_43, i_41, i_5, (byte) 16);
+			KeyHoldInputSubscriber.method3922(ints_39, i_40, i_42, i_5, (byte) -27);
+			KeyHoldInputSubscriber.method3922(ints_39, i_42, i_43, i_4, (byte) -31);
+			KeyHoldInputSubscriber.method3922(ints_39, i_43, i_41, i_5, (byte) 16);
 		}
 
 		while (i_9 > 0) {
@@ -154,24 +154,24 @@ public class ClanVarDefinitions {
 					int[] ints_46;
 					if (i_40 >= Class532_Sub3_Sub1.anInt7070) {
 						ints_46 = Class532_Sub3_Sub1.anIntArrayArray7072[i_40];
-						Class232.method3922(ints_46, i_43, i_45, i_5, (byte) -1);
-						Class232.method3922(ints_46, i_45, i_44, i_4, (byte) 59);
-						Class232.method3922(ints_46, i_44, i_42, i_5, (byte) -30);
+						KeyHoldInputSubscriber.method3922(ints_46, i_43, i_45, i_5, (byte) -1);
+						KeyHoldInputSubscriber.method3922(ints_46, i_45, i_44, i_4, (byte) 59);
+						KeyHoldInputSubscriber.method3922(ints_46, i_44, i_42, i_5, (byte) -30);
 					}
 
 					if (i_41 <= Class532_Sub3_Sub1.anInt7068) {
 						ints_46 = Class532_Sub3_Sub1.anIntArrayArray7072[i_41];
-						Class232.method3922(ints_46, i_43, i_45, i_5, (byte) -15);
-						Class232.method3922(ints_46, i_45, i_44, i_4, (byte) 5);
-						Class232.method3922(ints_46, i_44, i_42, i_5, (byte) 62);
+						KeyHoldInputSubscriber.method3922(ints_46, i_43, i_45, i_5, (byte) -15);
+						KeyHoldInputSubscriber.method3922(ints_46, i_45, i_44, i_4, (byte) 5);
+						KeyHoldInputSubscriber.method3922(ints_46, i_44, i_42, i_5, (byte) 62);
 					}
 				} else {
 					if (i_40 >= Class532_Sub3_Sub1.anInt7070) {
-						Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_40], i_43, i_42, i_5, (byte) 66);
+						KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_40], i_43, i_42, i_5, (byte) 66);
 					}
 
 					if (i_41 <= Class532_Sub3_Sub1.anInt7068) {
-						Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_43, i_42, i_5, (byte) 92);
+						KeyHoldInputSubscriber.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_41], i_43, i_42, i_5, (byte) 92);
 					}
 				}
 			}

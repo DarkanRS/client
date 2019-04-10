@@ -1,25 +1,16 @@
 public class Class6 {
-
 	public String aString37;
-
 	public boolean aBool38;
-
 	public int anInt39;
-
 	public String aString40;
-
 	public int anInt41;
-
 	public int anInt42;
-
 	public String aString43;
-
 	public int anInt44;
-
 	static int anInt46;
 
-	static boolean method302(Interface17 interface17_0, MouseRecord class282_sub53_1, int i_2) {
-		return interface17_0 != null && interface17_0.method127(class282_sub53_1, client.anInterface16Array7298, client.maximumHeldKeys, Class96_Sub21.keyRecorder, (byte) 2);
+	static boolean method302(InputSubscriber interface17_0, MouseRecord class282_sub53_1) {
+		return interface17_0 != null && interface17_0.valid(class282_sub53_1, client.keyRecords, client.maximumHeldKeys, Class96_Sub21.keyRecorder);
 	}
 
 	static void method303(int i_0, int i_1, int i_2) {

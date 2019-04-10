@@ -1,29 +1,17 @@
 public class Class176 {
-
+	
 	float aFloat2193;
-
 	int anInt2195;
-
 	int anInt2196;
-
 	int anInt2197;
-
 	int anInt2198;
-
 	static FontMetrics aClass414_2200;
-
-	static Class472 aClass472_2201;
-
+	static BuildEnvironment BUILD_ENVIRONMENT;
 	float aFloat2190 = 1.0F;
-
 	float aFloat2191 = 1.0F;
-
 	int anInt2192;
-
 	int anInt2189;
-
 	int anInt2199;
-
 	int anInt2194;
 
 	void method2968(Class176 class176_1) {

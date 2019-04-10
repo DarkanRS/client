@@ -1430,15 +1430,4 @@ public class SceneObjectManager {
 	public int getIntensities(int x, int y) {
 		return this.intensities != null ? this.intensities[x][y] & 0xff : 0;
 	}
-
-	static Class215 method3545(RsByteBuffer rsbytebuffer_0) {
-		int i_2 = rsbytebuffer_0.readUnsignedByte();
-		int i_3 = rsbytebuffer_0.readUnsignedByte();
-		int i_4 = rsbytebuffer_0.readUnsignedByte();
-		int[] ints_5 = new int[i_4];
-		for (int i_6 = 0; i_6 < i_4; i_6++) {
-			ints_5[i_6] = rsbytebuffer_0.readUnsignedByte();
-		}
-		return new Class215(i_2, i_3, ints_5);
-	}
 }

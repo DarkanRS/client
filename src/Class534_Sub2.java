@@ -43,7 +43,7 @@ public class Class534_Sub2 extends Class534 {
 				i_4 = 65535;
 			}
 			byte b_5 = 0;
-			if (class282_sub53_1.getClickType(-959652469) == 2) {
+			if (class282_sub53_1.getClickType() == 2) {
 				b_5 = 1;
 			}
 			TCPPacket tcpmessage_6 = Class271.createPacket(OutgoingPacket.CLICK, client.outputContext.isaac);
@@ -70,7 +70,7 @@ public class Class534_Sub2 extends Class534 {
 				i_4 = 65535;
 			}
 			byte b_5 = 0;
-			if (class282_sub53_1.getClickType(-956354647) == 2) {
+			if (class282_sub53_1.getClickType() == 2) {
 				b_5 = 1;
 			}
 			TCPPacket tcpmessage_6 = Class271.createPacket(OutgoingPacket.CLICK, client.outputContext.isaac);
@@ -113,7 +113,7 @@ public class Class534_Sub2 extends Class534 {
 				i_5 = 65535;
 			}
 			byte b_6 = 0;
-			if (class282_sub53_2.getClickType(-235884507) == 2) {
+			if (class282_sub53_2.getClickType() == 2) {
 				b_6 = 1;
 			}
 			TCPPacket tcpmessage_7 = Class271.createPacket(OutgoingPacket.CLICK, client.outputContext.isaac);

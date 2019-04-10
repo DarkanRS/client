@@ -30,17 +30,6 @@ public class Class100 {
         }
     }
 
-    static Class221 method1640(int i_0) {
-        Class221[] arr_2 = JS5FileWorker.method5815();
-        for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-            Class221 class221_4 = arr_2[i_3];
-            if (i_0 == class221_4.anInt2758) {
-                return class221_4;
-            }
-        }
-        return null;
-    }
-
     public static void method1644(String[] arr_0, short[] shorts_1, short s_2) {
         Class88.method1495(arr_0, shorts_1, 0, arr_0.length - 1, -519753439);
     }

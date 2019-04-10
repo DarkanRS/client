@@ -33,8 +33,8 @@ public abstract class Class52 implements Interface2 {
     }
 
     public void method14(boolean bool_1) {
-        int i_2 = this.aClass350_489.aClass356_4094.method6221(329542577 * this.aClass350_489.anInt4093 * -229835439, client.anInt7439 * 1426041429 * 765 * -1115795005 * 150480619, 1903100431) + -1967081549 * this.aClass350_489.anInt4090 * 1823133563;
-        int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1251542108) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
+        int i_2 = this.aClass350_489.aClass356_4094.method6221(329542577 * this.aClass350_489.anInt4093 * -229835439, client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619, 1903100431) + -1967081549 * this.aClass350_489.anInt4090 * 1823133563;
+        int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1251542108) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
         this.method1081(bool_1, i_2, i_3, 1585240849);
         this.method1077(bool_1, i_2, i_3, 338046880);
         String string_4 = Class328.aClass306_3771.method5425(-665821973);
@@ -82,8 +82,8 @@ public abstract class Class52 implements Interface2 {
     }
 
     public void method11(boolean bool_1) {
-        int i_2 = this.aClass350_489.aClass356_4094.method6221(329542577 * this.aClass350_489.anInt4093 * -229835439, client.anInt7439 * 1426041429 * 765 * -1115795005 * 150480619, 1699928073) + -1967081549 * this.aClass350_489.anInt4090 * 1823133563;
-        int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 645986662) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
+        int i_2 = this.aClass350_489.aClass356_4094.method6221(329542577 * this.aClass350_489.anInt4093 * -229835439, client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619, 1699928073) + -1967081549 * this.aClass350_489.anInt4090 * 1823133563;
+        int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 645986662) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
         this.method1081(bool_1, i_2, i_3, 1820160042);
         this.method1077(bool_1, i_2, i_3, -656602947);
         String string_4 = Class328.aClass306_3771.method5425(-101176994);
@@ -149,8 +149,8 @@ public abstract class Class52 implements Interface2 {
     }
 
     public void method20(boolean bool_1, int i_2) {
-        int i_3 = this.aClass350_489.aClass356_4094.method6221(this.aClass350_489.anInt4093, client.anInt7439, 865783303) + this.aClass350_489.anInt4090;
-        int i_4 = this.aClass350_489.aClass353_4087.method6198(this.aClass350_489.anInt4088, client.anInt7312, 1644934617) + this.aClass350_489.anInt4089;
+        int i_3 = this.aClass350_489.aClass356_4094.method6221(this.aClass350_489.anInt4093, client.GAME_WIDTH, 865783303) + this.aClass350_489.anInt4090;
+        int i_4 = this.aClass350_489.aClass353_4087.method6198(this.aClass350_489.anInt4088, client.GAME_HEIGHT, 1644934617) + this.aClass350_489.anInt4089;
         this.method1081(bool_1, i_3, i_4, 213494325);
         this.method1077(bool_1, i_3, i_4, -281773092);
         String string_5 = Class328.aClass306_3771.method5425(661479168);
@@ -176,8 +176,8 @@ public abstract class Class52 implements Interface2 {
     abstract void method1081(boolean var1, int var2, int var3, int var4);
 
     public void method12(boolean bool_1) {
-        int i_2 = this.aClass350_489.aClass356_4094.method6221(329542577 * this.aClass350_489.anInt4093 * -229835439, client.anInt7439 * 1426041429 * 765 * -1115795005 * 150480619, 838379660) + -1967081549 * this.aClass350_489.anInt4090 * 1823133563;
-        int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1061303064) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
+        int i_2 = this.aClass350_489.aClass356_4094.method6221(329542577 * this.aClass350_489.anInt4093 * -229835439, client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619, 838379660) + -1967081549 * this.aClass350_489.anInt4090 * 1823133563;
+        int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1061303064) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
         this.method1081(bool_1, i_2, i_3, 217412171);
         this.method1077(bool_1, i_2, i_3, -688757760);
         String string_4 = Class328.aClass306_3771.method5425(1074452204);

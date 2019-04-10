@@ -44,7 +44,7 @@ public class StructIndexLoader {
 			int i_7 = Class400.anInt4822;
 			int i_8 = IsaacCipher.anInt5157;
 			int i_9;
-			if (client.aClass118_7247 == Class221.aClass118_2763) {
+			if (client.aClass118_7247 == InputSubscriberType.aClass118_2763) {
 				i_9 = -1;
 			} else {
 				i_9 = client.aClass118_7247.anInt1449;

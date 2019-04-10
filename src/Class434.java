@@ -30,14 +30,14 @@ public abstract class Class434 {
 			tcpmessage_1.buffer.writeShort(client.maximumHeldKeys * 4);
 
 			for (i_2 = 0; i_2 < client.maximumHeldKeys; i_2++) {
-				KeyRecord interface16_3 = client.anInterface16Array7298[i_2];
+				KeyRecord interface16_3 = client.keyRecords[i_2];
 				long long_4 = interface16_3.method119(272047645) - Class236.aLong2910;
 				if (long_4 > 16777215L) {
 					long_4 = 16777215L;
 				}
 
 				Class236.aLong2910 = interface16_3.method119(941918410);
-				tcpmessage_1.buffer.writeByte(interface16_3.method92());
+				tcpmessage_1.buffer.writeByte(interface16_3.getCode());
 				tcpmessage_1.buffer.write24BitInt((int) long_4);
 			}
 

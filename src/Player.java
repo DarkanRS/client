@@ -264,7 +264,7 @@ public class Player extends Animable {
 	}
 
 	public boolean method15887() {
-		return QuickchatFiller.aClass529_527.aBool7035;
+		return QuickchatFiller.ENTITY_DEFAULTS.enablePlayerMessages;
 	}
 
 	public int getSize() {
@@ -347,7 +347,7 @@ public class Player extends Animable {
 			i_2 |= 0x80000;
 		}
 
-		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.playerAppearance.method3998(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_10, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437);
+		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.playerAppearance.method3998(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_10, LinkedNodeList.EQUIPMENT_DEFAULTS, (short) -9437);
 		int i_13 = Class46.method932();
 		if (Engine.MAX_MEMORY < 96 && i_13 > 50) {
 			JS5CacheFile.method3359();
@@ -404,7 +404,7 @@ public class Player extends Animable {
 	}
 
 	public void sendChat(String string_1, int i_2, int i_3, byte b_4) {
-		this.method15875(string_1, i_2, i_3, Class204.method3363(592406309) * QuickchatFiller.aClass529_527.anInt7043, 1858323003);
+		this.method15875(string_1, i_2, i_3, Class204.method3363(592406309) * QuickchatFiller.ENTITY_DEFAULTS.playerMessageDuration, 1858323003);
 	}
 
 	public int method15794() {
@@ -656,7 +656,7 @@ public class Player extends Animable {
 	}
 
 	public boolean method15871() {
-		return QuickchatFiller.aClass529_527.aBool7035;
+		return QuickchatFiller.ENTITY_DEFAULTS.enablePlayerMessages;
 	}
 
 	final boolean method13026() {
@@ -698,15 +698,15 @@ public class Player extends Animable {
 	}
 
 	public boolean method15872() {
-		return QuickchatFiller.aClass529_527.aBool7035;
+		return QuickchatFiller.ENTITY_DEFAULTS.enablePlayerMessages;
 	}
 
 	public boolean method15873() {
-		return QuickchatFiller.aClass529_527.aBool7035;
+		return QuickchatFiller.ENTITY_DEFAULTS.enablePlayerMessages;
 	}
 
 	public boolean method15814() {
-		return QuickchatFiller.aClass529_527.aBool7035;
+		return QuickchatFiller.ENTITY_DEFAULTS.enablePlayerMessages;
 	}
 
 	public Class163 method15809() {
@@ -819,17 +819,17 @@ public class Player extends Animable {
 
 		int i_10 = -1;
 		this.teamId = 0;
-		int[] bodyAppearances = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
-		MeshModifier[] modifiedMeshes = new MeshModifier[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
-		ItemDefinitions[] wornItems = new ItemDefinitions[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		int[] bodyAppearances = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
+		MeshModifier[] modifiedMeshes = new MeshModifier[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
+		ItemDefinitions[] wornItems = new ItemDefinitions[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
 
 		int i;
 		int i_15;
 		int i_16;
 		int itemId;
 		int i_18;
-		for (i = 0; i < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i++) {
-			if (LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[i] != 1) {
+		for (i = 0; i < LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length; i++) {
+			if (LinkedNodeList.EQUIPMENT_DEFAULTS.hidden[i] != 1) {
 				i_15 = buffer.readUnsignedByte();
 				if (i_15 == 0) {
 					bodyAppearances[i] = 0;
@@ -861,8 +861,8 @@ public class Player extends Animable {
 			i = buffer.readUnsignedShort();
 			i_15 = 0;
 
-			for (i_16 = 0; i_16 < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_16++) {
-				if (LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[i_16] == 0) {
+			for (i_16 = 0; i_16 < LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length; i_16++) {
+				if (LinkedNodeList.EQUIPMENT_DEFAULTS.hidden[i_16] == 0) {
 					if ((i & 1 << i_15) != 0) {
 						modifiedMeshes[i_16] = Class506.decodeItemEffects(wornItems[i_16], buffer);
 					}

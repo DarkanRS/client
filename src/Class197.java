@@ -16,11 +16,6 @@ public class Class197 {
 		throw new Error();
 	}
 
-	public static Interface17 method3202(RsByteBuffer rsbytebuffer_0) {
-		Class221 class221_2 = Class100.method1640(rsbytebuffer_0.readUnsignedByte());
-		return (Interface17) (class221_2 == Class221.aClass221_2759 ? SceneObjectManager.method3545(rsbytebuffer_0) : (class221_2 == Class221.aClass221_2761 ? Class97.method1614(rsbytebuffer_0) : (class221_2 == Class221.aClass221_2760 ? ClipMap.method6009(rsbytebuffer_0) : null)));
-	}
-
 	static final void method3203(RsBitsBuffer rsbitsbuffer_0, byte b_1) {
 		rsbitsbuffer_0.initBitAccess((byte) -47);
 		int i_2 = client.anInt7315;

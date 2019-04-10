@@ -87,9 +87,9 @@ public final class Class155 {
 		int[] ints_15 = Class532_Sub3.anIntArrayArray7072[i_1];
 		int i_16 = i_0 - i_8;
 		int i_17 = i_0 + i_8;
-		Class232.method3922(ints_15, i_0 - i_2, i_16, i_4, (byte) 98);
-		Class232.method3922(ints_15, i_16, i_17, i_3, (byte) 67);
-		Class232.method3922(ints_15, i_17, i_0 + i_2, i_4, (byte) -55);
+		KeyHoldInputSubscriber.method3922(ints_15, i_0 - i_2, i_16, i_4, (byte) 98);
+		KeyHoldInputSubscriber.method3922(ints_15, i_16, i_17, i_3, (byte) 67);
+		KeyHoldInputSubscriber.method3922(ints_15, i_17, i_0 + i_2, i_4, (byte) -55);
 		while (i_9 > i_7) {
 			i_13 += 2;
 			i_14 += 2;
@@ -116,8 +116,8 @@ public final class Class155 {
 					ints_19 = Class532_Sub3.anIntArrayArray7072[i_1 - i_9];
 					i_20 = i_0 + i_7;
 					i_21 = i_0 - i_7;
-					Class232.method3922(ints_18, i_21, i_20, i_4, (byte) -14);
-					Class232.method3922(ints_19, i_21, i_20, i_4, (byte) 93);
+					KeyHoldInputSubscriber.method3922(ints_18, i_21, i_20, i_4, (byte) -14);
+					KeyHoldInputSubscriber.method3922(ints_19, i_21, i_20, i_4, (byte) 93);
 				} else {
 					ints_18 = Class532_Sub3.anIntArrayArray7072[i_9 + i_1];
 					ints_19 = Class532_Sub3.anIntArrayArray7072[i_1 - i_9];
@@ -126,12 +126,12 @@ public final class Class155 {
 					i_22 = i_0 - i_7;
 					i_23 = i_0 + i_20;
 					i_24 = i_0 - i_20;
-					Class232.method3922(ints_18, i_22, i_24, i_4, (byte) -28);
-					Class232.method3922(ints_18, i_24, i_23, i_3, (byte) -29);
-					Class232.method3922(ints_18, i_23, i_21, i_4, (byte) -47);
-					Class232.method3922(ints_19, i_22, i_24, i_4, (byte) 5);
-					Class232.method3922(ints_19, i_24, i_23, i_3, (byte) -58);
-					Class232.method3922(ints_19, i_23, i_21, i_4, (byte) 9);
+					KeyHoldInputSubscriber.method3922(ints_18, i_22, i_24, i_4, (byte) -28);
+					KeyHoldInputSubscriber.method3922(ints_18, i_24, i_23, i_3, (byte) -29);
+					KeyHoldInputSubscriber.method3922(ints_18, i_23, i_21, i_4, (byte) -47);
+					KeyHoldInputSubscriber.method3922(ints_19, i_22, i_24, i_4, (byte) 5);
+					KeyHoldInputSubscriber.method3922(ints_19, i_24, i_23, i_3, (byte) -58);
+					KeyHoldInputSubscriber.method3922(ints_19, i_23, i_21, i_4, (byte) 9);
 				}
 			}
 			ints_18 = Class532_Sub3.anIntArrayArray7072[i_7 + i_1];
@@ -142,15 +142,15 @@ public final class Class155 {
 				i_22 = i_11 < i_7 ? Class5.anIntArray36[i_7] : i_11;
 				i_23 = i_0 + i_22;
 				i_24 = i_0 - i_22;
-				Class232.method3922(ints_18, i_21, i_24, i_4, (byte) -3);
-				Class232.method3922(ints_18, i_24, i_23, i_3, (byte) 79);
-				Class232.method3922(ints_18, i_23, i_20, i_4, (byte) -16);
-				Class232.method3922(ints_19, i_21, i_24, i_4, (byte) 40);
-				Class232.method3922(ints_19, i_24, i_23, i_3, (byte) -44);
-				Class232.method3922(ints_19, i_23, i_20, i_4, (byte) -57);
+				KeyHoldInputSubscriber.method3922(ints_18, i_21, i_24, i_4, (byte) -3);
+				KeyHoldInputSubscriber.method3922(ints_18, i_24, i_23, i_3, (byte) 79);
+				KeyHoldInputSubscriber.method3922(ints_18, i_23, i_20, i_4, (byte) -16);
+				KeyHoldInputSubscriber.method3922(ints_19, i_21, i_24, i_4, (byte) 40);
+				KeyHoldInputSubscriber.method3922(ints_19, i_24, i_23, i_3, (byte) -44);
+				KeyHoldInputSubscriber.method3922(ints_19, i_23, i_20, i_4, (byte) -57);
 			} else {
-				Class232.method3922(ints_18, i_21, i_20, i_4, (byte) -47);
-				Class232.method3922(ints_19, i_21, i_20, i_4, (byte) 12);
+				KeyHoldInputSubscriber.method3922(ints_18, i_21, i_20, i_4, (byte) -47);
+				KeyHoldInputSubscriber.method3922(ints_19, i_21, i_20, i_4, (byte) 12);
 			}
 		}
 	}

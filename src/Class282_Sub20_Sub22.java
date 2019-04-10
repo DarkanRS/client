@@ -148,7 +148,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						if (client.anInt7341 == 1) {
 							Class155.method2636();
 							GrandExchangeSlot.method5916();
-						} else if (Class282_Sub13.DEFAULTS_LOADER_8.anInterface17_5931.method127(class282_sub53_13, client.anInterface16Array7298, client.maximumHeldKeys, Class96_Sub21.keyRecorder, (byte) 81)) {
+						} else if (Class282_Sub13.DEFAULTS_LOADER_8.inputSubscriber.valid(class282_sub53_13, client.keyRecords, client.maximumHeldKeys, Class96_Sub21.keyRecorder)) {
 							Class468_Sub21.method12869(false, -200546110);
 						} else {
 							if (client.anInt7341 == 3 && LoadingStage.method6684(client.CURRENT_CUTSCENE)) {
@@ -240,7 +240,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 																Class161.method2827(1342280577);
 															}
 															FriendStatus.method7703();
-															if (client.rights > 0 && Class96_Sub21.keyRecorder.method3236(82, -1802639112) && Class96_Sub21.keyRecorder.method3236(81, -1439970687) && client.anInt7191 != 0) {
+															if (client.rights > 0 && Class96_Sub21.keyRecorder.held(82) && Class96_Sub21.keyRecorder.held(81) && client.anInt7191 != 0) {
 																i_2 = VertexNormal.myPlayer.plane - client.anInt7191;
 																if (i_2 < 0) {
 																	i_2 = 0;

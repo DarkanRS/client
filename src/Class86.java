@@ -48,8 +48,8 @@ public class Class86 {
 		return (long) (++CS2Runner.anInt5906 - 1) << 32 | 0xffffffffL;
 	}
 
-	static boolean method1481(Class232 class232_0, byte b_1) {
-		return Class6.method302(class232_0, (MouseRecord) null, 898171196);
+	static boolean method1481(KeyHoldInputSubscriber class232_0, byte b_1) {
+		return Class6.method302(class232_0, (MouseRecord) null);
 	}
 
 	static void method1482(IComponentDefinitions icomponentdefinitions_0, byte b_1) {

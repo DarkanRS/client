@@ -313,7 +313,7 @@ public class NPC extends Animable {
 	}
 
 	public boolean method15871() {
-		return QuickchatFiller.aClass529_527.aBool7041;
+		return QuickchatFiller.ENTITY_DEFAULTS.npcMessagesEnabled;
 	}
 
 	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
@@ -445,7 +445,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16164(String string_1) {
-		int i_5 = Class204.method3363(1027745545) * QuickchatFiller.aClass529_527.anInt7038;
+		int i_5 = Class204.method3363(1027745545) * QuickchatFiller.ENTITY_DEFAULTS.npcMessageDuration;
 		this.method15875(string_1, 0, 0, i_5, 1930642006);
 	}
 
@@ -625,7 +625,7 @@ public class NPC extends Animable {
 	}
 
 	public boolean method15887() {
-		return QuickchatFiller.aClass529_527.aBool7041;
+		return QuickchatFiller.ENTITY_DEFAULTS.npcMessagesEnabled;
 	}
 
 	public Class163 method15811(int i_1) {
@@ -673,15 +673,15 @@ public class NPC extends Animable {
 	}
 
 	public boolean method15872() {
-		return QuickchatFiller.aClass529_527.aBool7041;
+		return QuickchatFiller.ENTITY_DEFAULTS.npcMessagesEnabled;
 	}
 
 	public boolean method15873() {
-		return QuickchatFiller.aClass529_527.aBool7041;
+		return QuickchatFiller.ENTITY_DEFAULTS.npcMessagesEnabled;
 	}
 
 	public boolean method15814() {
-		return QuickchatFiller.aClass529_527.aBool7041;
+		return QuickchatFiller.ENTITY_DEFAULTS.npcMessagesEnabled;
 	}
 
 	public Class163 method15809() {

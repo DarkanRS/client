@@ -8,7 +8,7 @@ public class RenderAnimIndexLoader {
 
 	Index aClass317_2671;
 
-	Defaults6Loader aClass526_2672;
+	EquipmentDefaults aClass526_2672;
 
 	public void method3615() {
 		SoftCache softcache_3 = this.renderAnimCache;
@@ -60,7 +60,7 @@ public class RenderAnimIndexLoader {
 		}
 	}
 
-	public RenderAnimIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Defaults6Loader defaults6loader_4) {
+	public RenderAnimIndexLoader(Game game_1, Language xlanguage_2, Index index_3, EquipmentDefaults defaults6loader_4) {
 		this.aClass317_2671 = index_3;
 		this.aClass317_2671.filesCount(SharedConfigsType.RENDER_ANIMS.id);
 		this.aClass526_2672 = defaults6loader_4;

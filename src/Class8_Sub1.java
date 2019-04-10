@@ -490,7 +490,7 @@ public class Class8_Sub1 extends FontRenderer {
 	static int method13782(int i_0, int i_1) {
 		byte b_3;
 		if (i_1 > 20077) {
-			Defaults6Loader.method11248(1158077099);
+			EquipmentDefaults.method11248(1158077099);
 			b_3 = 4;
 		} else if (i_1 > 10021) {
 			Class282_Sub40.method13300(-686902012);

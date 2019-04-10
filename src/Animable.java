@@ -138,7 +138,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15797(int[] ints_1, int[] ints_2) {
 		if (this.anIntArray10335 == null && ints_1 != null) {
-			this.anIntArray10335 = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+			this.anIntArray10335 = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
 		} else if (ints_1 == null) {
 			this.anIntArray10335 = null;
 			return;
@@ -169,9 +169,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				return true;
 			}
 
-			this.anIntArray10362 = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+			this.anIntArray10362 = new int[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
 
-			for (int i_10 = 0; i_10 < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_10++) {
+			for (int i_10 = 0; i_10 < LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length; i_10++) {
 				this.anIntArray10362[i_10] = -1;
 			}
 		}
@@ -194,7 +194,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				if (i_8 >= -i_5 && i_8 <= i_5) {
 					this.anIntArray10362[i_1] = -1;
 
-					for (int i_9 = 0; i_9 < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_9++) {
+					for (int i_9 = 0; i_9 < LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length; i_9++) {
 						if (this.anIntArray10362[i_9] != -1) {
 							return true;
 						}
@@ -372,7 +372,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		boolean bool_9 = true;
 
 		int i_10;
-		for (i_10 = 0; i_10 < QuickchatFiller.aClass529_527.anInt7026; i_10++) {
+		for (i_10 = 0; i_10 < QuickchatFiller.ENTITY_DEFAULTS.maximumHits; i_10++) {
 			if (this.anIntArray10351[i_10] > i_5) {
 				bool_8 = false;
 			} else {
@@ -403,7 +403,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_15 = this.anIntArray10329[0];
 			}
 
-			for (int i_14 = 1; i_14 < QuickchatFiller.aClass529_527.anInt7026; i_14++) {
+			for (int i_14 = 1; i_14 < QuickchatFiller.ENTITY_DEFAULTS.maximumHits; i_14++) {
 				if (i_11 == 0) {
 					if (this.anIntArray10351[i_14] < i_15) {
 						i_10 = i_14;
@@ -423,9 +423,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				this.aByte10358 = 0;
 			}
 
-			for (i_15 = 0; i_15 < QuickchatFiller.aClass529_527.anInt7026; i_15++) {
+			for (i_15 = 0; i_15 < QuickchatFiller.ENTITY_DEFAULTS.maximumHits; i_15++) {
 				byte b_16 = this.aByte10358;
-				this.aByte10358 = (byte) ((this.aByte10358 + 1) % QuickchatFiller.aClass529_527.anInt7026);
+				this.aByte10358 = (byte) ((this.aByte10358 + 1) % QuickchatFiller.ENTITY_DEFAULTS.maximumHits);
 				if (this.anIntArray10351[b_16] <= i_5) {
 					i_10 = b_16;
 					break;
@@ -468,7 +468,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 		}
 
-		if (class275_sub7_10 != null || i_12 < QuickchatFiller.aClass529_527.anInt7032) {
+		if (class275_sub7_10 != null || i_12 < QuickchatFiller.ENTITY_DEFAULTS.anInt7032) {
 			class275_sub7_13 = new Class275_Sub7(hitbardefinitions_8);
 			if (class275_sub7_9 == null) {
 				this.aClass457_10333.method7647(class275_sub7_13, -1998416604);
@@ -477,7 +477,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 
 			class275_sub7_13.method12601(i_2 + i_4, i_5, i_6, i_3, -1371931787);
-			if (i_12 >= QuickchatFiller.aClass529_527.anInt7032) {
+			if (i_12 >= QuickchatFiller.ENTITY_DEFAULTS.anInt7032) {
 				class275_sub7_10.method4887();
 			}
 		}
@@ -786,11 +786,11 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.drawPriority = 0;
 		this.anInt10325 = 0;
 		this.aByte10358 = 0;
-		this.anIntArray10316 = new int[QuickchatFiller.aClass529_527.anInt7026];
-		this.anIntArray10329 = new int[QuickchatFiller.aClass529_527.anInt7026];
-		this.anIntArray10351 = new int[QuickchatFiller.aClass529_527.anInt7026];
-		this.anIntArray10331 = new int[QuickchatFiller.aClass529_527.anInt7026];
-		this.anIntArray10332 = new int[QuickchatFiller.aClass529_527.anInt7026];
+		this.anIntArray10316 = new int[QuickchatFiller.ENTITY_DEFAULTS.maximumHits];
+		this.anIntArray10329 = new int[QuickchatFiller.ENTITY_DEFAULTS.maximumHits];
+		this.anIntArray10351 = new int[QuickchatFiller.ENTITY_DEFAULTS.maximumHits];
+		this.anIntArray10331 = new int[QuickchatFiller.ENTITY_DEFAULTS.maximumHits];
+		this.anIntArray10332 = new int[QuickchatFiller.ENTITY_DEFAULTS.maximumHits];
 		this.aClass457_10333 = new EntityList();
 		this.faceEntity = -1;
 		this.currentAnimations = null;
@@ -823,7 +823,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			this.aClass161Array10339[i_3] = new Class161(this);
 		}
 
-		this.aClass456_Sub2_Sub1Array10354 = new Class456_Sub2_Sub1[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		this.aClass456_Sub2_Sub1Array10354 = new Class456_Sub2_Sub1[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
 	}
 
 	public abstract boolean method15871();

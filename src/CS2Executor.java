@@ -43,7 +43,7 @@ public class CS2Executor {
 	}
 
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
-		CS2Script cs2script_5 = Class225_Sub1.method12792(class397_0, i_1, i_2);
+		CS2Script cs2script_5 = Class225_Sub1.getScript(class397_0, i_1, i_2);
 		if (cs2script_5 == null) {
 			Shadow.method15509(282059094);
 		} else {
@@ -60,8 +60,8 @@ public class CS2Executor {
 					i_6 = Class282_Sub20_Sub24.aClass118_9884.anInt1299;
 					i_7 = Class282_Sub20_Sub24.aClass118_9884.anInt1428;
 				}
-				cs2executor_3.intLocals[0] = Class163.mouseRecorder.method3569(2102959757) - i_6;
-				cs2executor_3.intLocals[1] = Class163.mouseRecorder.method3570() - i_7;
+				cs2executor_3.intLocals[0] = Class163.mouseRecorder.getMouseX() - i_6;
+				cs2executor_3.intLocals[1] = Class163.mouseRecorder.getMouseY() - i_7;
 			}
 			method1068(cs2script_5, 200000, cs2executor_3);
 		}
@@ -190,7 +190,7 @@ public class CS2Executor {
 	}
 	
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-		CS2Script cs2script_4 = Class225_Sub1.method12792(Class397.aClass397_4792, i_0, -1);
+		CS2Script cs2script_4 = Class225_Sub1.getScript(Class397.aClass397_4792, i_0, -1);
 		if (cs2script_4 != null) {
 			CS2Executor cs2executor_5 = Class125.getNextScriptExecutor();
 			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];

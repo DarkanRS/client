@@ -3,15 +3,15 @@ public class Class42_Sub1 extends Class42 {
 	int anInt9232 = 0;
 
 	public void method12(boolean bool_1) {
-		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1532503387) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
-		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 723681584) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
+		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1532503387) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 723681584) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
 		this.aClass160_414.method2758((float) (i_2 + this.aClass160_414.method228() / 2), (float) (i_3 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232 * -82188333 * 734267483);
 		this.anInt9232 = (this.anInt9232 * -82188333 + -1519742369 * ((Class357_Sub1) this.aClass357_416).anInt7808 * 1780229901) * 734267483;
 	}
 
 	public void method20(boolean bool_1, int i_2) {
-		int i_3 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.anInt7439, 1375122589) + this.aClass357_416.anInt4123;
-		int i_4 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), client.anInt7312, 1542020765) + this.aClass357_416.anInt4120;
+		int i_3 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.GAME_WIDTH, 1375122589) + this.aClass357_416.anInt4123;
+		int i_4 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), client.GAME_HEIGHT, 1542020765) + this.aClass357_416.anInt4120;
 		this.aClass160_414.method2758((float) (i_3 + this.aClass160_414.method228() / 2), (float) (i_4 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232);
 		this.anInt9232 += ((Class357_Sub1) this.aClass357_416).anInt7808;
 	}
@@ -21,15 +21,15 @@ public class Class42_Sub1 extends Class42 {
 	}
 
 	public void method11(boolean bool_1) {
-		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 998209587) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
-		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1415783080) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
+		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 998209587) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1415783080) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
 		this.aClass160_414.method2758((float) (i_2 + this.aClass160_414.method228() / 2), (float) (i_3 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232 * -82188333 * 734267483);
 		this.anInt9232 = (this.anInt9232 * -82188333 + -1519742369 * ((Class357_Sub1) this.aClass357_416).anInt7808 * 1780229901) * 734267483;
 	}
 
 	public void method14(boolean bool_1) {
-		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 2141573560) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
-		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1379612948) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
+		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 2141573560) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1379612948) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
 		this.aClass160_414.method2758((float) (i_2 + this.aClass160_414.method228() / 2), (float) (i_3 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232 * -82188333 * 734267483);
 		this.anInt9232 = (this.anInt9232 * -82188333 + -1519742369 * ((Class357_Sub1) this.aClass357_416).anInt7808 * 1780229901) * 734267483;
 	}

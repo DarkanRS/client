@@ -18,11 +18,11 @@ public class Class182 {
 		throw new Error();
 	}
 
-	public static Class472 method3040(int i_0, byte b_1) {
-		Class472[] arr_2 = Class275_Sub6.method12598();
+	public static BuildEnvironment method3040(int i_0, byte b_1) {
+		BuildEnvironment[] arr_2 = Class275_Sub6.method12598();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
-			Class472 class472_4 = arr_2[i_3];
-			if (i_0 == class472_4.anInt5602) {
+			BuildEnvironment class472_4 = arr_2[i_3];
+			if (i_0 == class472_4.id) {
 				return class472_4;
 			}
 		}

@@ -359,7 +359,7 @@ public class Class329_Sub1 extends Class329 {
 				int i_22 = i_20 & 0x3;
 				if (i_19 == i_6 && i_18 >= i_7 && i_18 < i_7 + 8 && i_17 >= i_8 && i_17 < i_8 + 8) {
 					ObjectDefinitions objectdefinitions_23 = this.objectDefLoader.getObjectDefinitions(i_13);
-					int i_24 = i_4 + Class222.method3756(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
+					int i_24 = i_4 + KeyPressInputSubscriber.method3756(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
 					int i_25 = i_5 + PlayerVarProvider.method282(i_18 & 0x7, i_17 & 0x7, i_9, objectdefinitions_23.sizeX, objectdefinitions_23.sizeY, i_22);
 					if (i_24 > 0 && i_25 > 0 && i_24 < this.maxX - 1 && i_25 < this.maxY - 1) {
 						ClipMap clipmap_26 = null;

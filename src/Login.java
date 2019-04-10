@@ -124,7 +124,7 @@ public class Login {
                             rsbytebuffer_4.writeInt((int) (Math.random() * 9.9999999E7D));
                         }
                         rsbytebuffer_4.writeLong(client.aLong7409);
-                        rsbytebuffer_4.writeByte(client.CURRENT_GAME.anInt5746);
+                        rsbytebuffer_4.writeByte(client.CURRENT_GAME.id);
                         rsbytebuffer_4.writeByte((int) (Math.random() * 9.9999999E7D));
                         rsbytebuffer_4.applyRSA();
                         tcpmessage_2.buffer.writeBytes(rsbytebuffer_4.buffer, 0, rsbytebuffer_4.index);
@@ -291,7 +291,7 @@ public class Login {
                                 rsbitsbuffer_22.writeLong(Class9.aLong77);
                             }
                         }
-                        rsbitsbuffer_22.writeByte(client.CURRENT_GAME.anInt5746);
+                        rsbitsbuffer_22.writeByte(client.CURRENT_GAME.id);
                         rsbitsbuffer_22.writeByte(Class223.CURRENT_LANGUAGE.getValue());
                         IdentitiKitIndexLoader.method809(rsbitsbuffer_22, -378154884);
                         rsbitsbuffer_22.writeString(client.aString7281);
@@ -467,14 +467,14 @@ public class Login {
                             Class509.aBool5870 = (i_3 & 0x2) != 0;
                             Class354.anInt4112 = rsbitsbuffer_19.readInt();
                             Class469.aBool5585 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            Class232.anInt2879 = rsbitsbuffer_19.readInt();
+                            KeyHoldInputSubscriber.anInt2879 = rsbitsbuffer_19.readInt();
                             Class115.anInt1247 = rsbitsbuffer_19.readUnsignedShort();
                             Class417.anInt4994 = rsbitsbuffer_19.readUnsignedShort();
                             Class468_Sub28.anInt7961 = rsbitsbuffer_19.readUnsignedShort();
                             Class125.anInt1572 = rsbitsbuffer_19.readInt();
                             Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.anInt1572);
                             (new Thread(Class119.HOSTNAME_IDENTIFIER)).start();
-                            Class221.anInt2762 = rsbitsbuffer_19.readUnsignedByte();
+                            InputSubscriberType.anInt2762 = rsbitsbuffer_19.readUnsignedByte();
                             Class96_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
                             Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
                             Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;

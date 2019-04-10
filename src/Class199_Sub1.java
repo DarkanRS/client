@@ -16,7 +16,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 
 	Component aComponent8050;
 
-	public boolean method3236(int i_1, int i_2) {
+	public boolean held(int i_1) {
 		return i_1 >= 0 && i_1 < 112 ? this.aBoolArray8048[i_1] : false;
 	}
 

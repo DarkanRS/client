@@ -117,7 +117,7 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		int i_6 = i_2;
 		int i_7 = -i_2;
 		int i_8 = -1;
-		Class232.method3922(Class532_Sub3.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_3, (byte) -15);
+		KeyHoldInputSubscriber.method3922(Class532_Sub3.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_3, (byte) -15);
 		while (i_6 > i_5) {
 			i_8 += 2;
 			i_7 += i_8;
@@ -129,15 +129,15 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 				int[] ints_10 = Class532_Sub3.anIntArrayArray7072[i_1 - i_6];
 				int i_11 = i_0 + i_5;
 				int i_12 = i_0 - i_5;
-				Class232.method3922(ints_9, i_12, i_11, i_3, (byte) -71);
-				Class232.method3922(ints_10, i_12, i_11, i_3, (byte) 45);
+				KeyHoldInputSubscriber.method3922(ints_9, i_12, i_11, i_3, (byte) -71);
+				KeyHoldInputSubscriber.method3922(ints_10, i_12, i_11, i_3, (byte) 45);
 			}
 			int i_13 = i_0 + i_6;
 			int i_14 = i_0 - i_6;
 			int[] ints_15 = Class532_Sub3.anIntArrayArray7072[i_5 + i_1];
 			int[] ints_16 = Class532_Sub3.anIntArrayArray7072[i_1 - i_5];
-			Class232.method3922(ints_15, i_14, i_13, i_3, (byte) 11);
-			Class232.method3922(ints_16, i_14, i_13, i_3, (byte) -34);
+			KeyHoldInputSubscriber.method3922(ints_15, i_14, i_13, i_3, (byte) 11);
+			KeyHoldInputSubscriber.method3922(ints_16, i_14, i_13, i_3, (byte) -34);
 		}
 	}
 }

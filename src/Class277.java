@@ -50,8 +50,8 @@ public class Class277 {
 		int i_2 = -10660793;
 		VarDefinitionLoader.method6394(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_2, -68635316);
 		Class285.aClass8_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -384363737), Class301.anInt3555 + 3, BufferedConnectionContext.anInt2300 + 14, i_2, -1);
-		int i_3 = Class163.mouseRecorder.method3569(1993106311);
-		int i_4 = Class163.mouseRecorder.method3570();
+		int i_3 = Class163.mouseRecorder.getMouseX();
+		int i_4 = Class163.mouseRecorder.getMouseY();
 		int i_5;
 		Class282_Sub50_Sub7 class282_sub50_sub7_6;
 		int i_7;

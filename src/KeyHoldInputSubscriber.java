@@ -1,27 +1,27 @@
-public class Class232 implements Interface17 {
+public class KeyHoldInputSubscriber implements InputSubscriber {
 
 	static int anInt2878;
 
 	public static int anInt2879;
 
-	int[] anIntArray2877;
+	int[] requiredKeys;
 
 	public boolean method126(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
-		int[] ints_5 = this.anIntArray2877;
+		int[] ints_5 = this.requiredKeys;
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 			int i_7 = ints_5[i_6];
-			if (!class199_4.method3236(i_7, -1320094050)) {
+			if (!class199_4.held(i_7)) {
 				return false;
 			}
 		}
 		return true;
 	}
 
-	public boolean method127(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4, byte b_5) {
-		int[] ints_6 = this.anIntArray2877;
+	public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+		int[] ints_6 = this.requiredKeys;
 		for (int i_7 = 0; i_7 < ints_6.length; i_7++) {
 			int i_8 = ints_6[i_7];
-			if (!class199_4.method3236(i_8, -2034817305)) {
+			if (!class199_4.held(i_8)) {
 				return false;
 			}
 		}
@@ -29,10 +29,10 @@ public class Class232 implements Interface17 {
 	}
 
 	public boolean method128(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
-		int[] ints_5 = this.anIntArray2877;
+		int[] ints_5 = this.requiredKeys;
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 			int i_7 = ints_5[i_6];
-			if (!class199_4.method3236(i_7, -1373982439)) {
+			if (!class199_4.held(i_7)) {
 				return false;
 			}
 		}
@@ -40,18 +40,27 @@ public class Class232 implements Interface17 {
 	}
 
 	public boolean method129(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
-		int[] ints_5 = this.anIntArray2877;
+		int[] ints_5 = this.requiredKeys;
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 			int i_7 = ints_5[i_6];
-			if (!class199_4.method3236(i_7, -1634337253)) {
+			if (!class199_4.held(i_7)) {
 				return false;
 			}
 		}
 		return true;
 	}
 
-	Class232(int[] ints_1) {
-		this.anIntArray2877 = ints_1;
+	public static KeyHoldInputSubscriber decode(RsByteBuffer rsbytebuffer_0) {
+	    int count = rsbytebuffer_0.readUnsignedByte();
+	    int[] requiredKeys = new int[count];
+	    for (int i_4 = 0; i_4 < count; i_4++) {
+	        requiredKeys[i_4] = rsbytebuffer_0.readUnsignedByte();
+	    }
+	    return new KeyHoldInputSubscriber(requiredKeys);
+	}
+
+	KeyHoldInputSubscriber(int[] ints_1) {
+		this.requiredKeys = ints_1;
 	}
 
 	static final void method3920(int i_0) {

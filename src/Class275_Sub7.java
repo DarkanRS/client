@@ -44,12 +44,12 @@ public class Class275_Sub7 extends EntityNode {
 		}
 
 		if (class275_sub3_6 == null) {
-			if (i_7 < QuickchatFiller.aClass529_527.anInt7030) {
+			if (i_7 < QuickchatFiller.ENTITY_DEFAULTS.anInt7030) {
 				this.aClass457_7861.method7647(new Class275_Sub3(i_1, i_2, i_3, i_4), -2075315301);
 			}
 		} else {
 			Class516.method8866(new Class275_Sub3(i_1, i_2, i_3, i_4), class275_sub3_6, -653430478);
-			if (i_7 >= QuickchatFiller.aClass529_527.anInt7030) {
+			if (i_7 >= QuickchatFiller.ENTITY_DEFAULTS.anInt7030) {
 				this.aClass457_7861.method7659().method4887();
 			}
 		}

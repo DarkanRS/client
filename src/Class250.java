@@ -242,7 +242,7 @@ public class Class250 {
 					}
 				}
 				if (!bool_94) {
-					i_92 -= QuickchatFiller.aClass529_527.anInt7028 + 2;
+					i_92 -= QuickchatFiller.ENTITY_DEFAULTS.anInt7028 + 2;
 				}
 				if (!((Animable) obj_12).aBool10318) {
 					if (npcdefinitions_91 == null) {
@@ -315,7 +315,7 @@ public class Class250 {
 						i_10000 = i_92 - (i_15 + 2);
 					}
 				}
-				for (i_15 = 0; i_15 < QuickchatFiller.aClass529_527.anInt7026; i_15++) {
+				for (i_15 = 0; i_15 < QuickchatFiller.ENTITY_DEFAULTS.maximumHits; i_15++) {
 					i_100 = ((Animable) obj_12).anIntArray10351[i_15];
 					i_17 = ((Animable) obj_12).anIntArray10316[i_15];
 					HitsplatDefinitions hitsplatdefinitions_122 = null;
@@ -341,8 +341,8 @@ public class Class250 {
 							i_116 = ((Animable) obj_12).method12997() / 2;
 							Class361.method6274((Class521_Sub1) obj_12, i_116, -1352747334);
 							if (client.aFloatArray7292[0] > -1.0F) {
-								client.aFloatArray7292[0] += (float) QuickchatFiller.aClass529_527.anIntArray7042[i_15];
-								client.aFloatArray7292[1] += (float) QuickchatFiller.aClass529_527.anIntArray7029[i_15];
+								client.aFloatArray7292[0] += (float) QuickchatFiller.ENTITY_DEFAULTS.hitOffsetsX[i_15];
+								client.aFloatArray7292[1] += (float) QuickchatFiller.ENTITY_DEFAULTS.hitOffsetsY[i_15];
 								Object obj_102 = null;
 								Object obj_103 = null;
 								Object obj_104 = null;

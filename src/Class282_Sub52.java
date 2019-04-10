@@ -22,11 +22,11 @@ public final class Class282_Sub52 extends Node implements KeyRecord {
         return this.aChar8171;
     }
 
-    public int method92() {
+    public int getCode() {
         return this.anInt8172;
     }
 
-    public int method125(int i_1) {
+    public int getFlags() {
         return this.anInt8174;
     }
 

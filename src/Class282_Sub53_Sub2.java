@@ -8,7 +8,7 @@ public final class Class282_Sub53_Sub2 extends MouseRecord {
 	int anInt9635;
 	static Class282_Sub53_Sub2[] aClass282_Sub53_Sub2Array9633 = new Class282_Sub53_Sub2[0];
 
-	public int getClickType(int i_1) {
+	public int getClickType() {
 		return this.anInt9631;
 	}
 

@@ -330,7 +330,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 		Class174.anInt2133 = i_3;
 		Class174.anInt2136 = i_4;
 		Class208.anInt2662 = i_5;
-		Class232.anInt2878 = i_6;
+		KeyHoldInputSubscriber.anInt2878 = i_6;
 		Queue.anInt5630 = i_7;
 		Class359.anInt4163 = i_8;
 		Class174.aClass91_2141 = null;

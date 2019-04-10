@@ -40,9 +40,9 @@ public class Class532_Sub1 extends Class532 {
 					if (Class158.windowedMode() != 1) {
 						Class46.method935((byte) 0);
 					} else {
-						Class349.anInt4083 = client.anInt7439;
-						client.anInt3250 = (SunIndexLoader.anInt434 - client.anInt7439) / 2;
-						client.anInt3243 = client.anInt7312 * -1929118563;
+						Class349.anInt4083 = client.GAME_WIDTH;
+						client.anInt3250 = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
+						client.anInt3243 = client.GAME_HEIGHT * -1929118563;
 						client.anInt3251 = 0;
 					}
 					if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 && Class349.anInt4083 < 1024) {

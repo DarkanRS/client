@@ -27,8 +27,8 @@ public class Class373 {
 					if (point_2 != null && Class351.gameCanvas.isShowing() && Class530.aBool7050) {
 						class282_sub53_sub1_3.method14732(point_2);
 						if (!class282_sub53_sub1_3.method14731() && class282_sub53_sub1_3.method13481(1700591909) < Class349.anInt4083 && class282_sub53_sub1_3.method13469(1495235000) < Engine.anInt3243 * -969250379 && class282_sub53_sub1_3.method13481(1815146840) >= 0 && class282_sub53_sub1_3.method13469(-1984385021) >= 0) {
-							int i_4 = class282_sub53_sub1_3.getClickType(1166516765);
-							if (class282_sub53_sub1_3.getClickType(1107239769) == -1) {
+							int i_4 = class282_sub53_sub1_3.getClickType();
+							if (class282_sub53_sub1_3.getClickType() == -1) {
 								Class236.aClass534_Sub1_2913.method11410(class282_sub53_sub1_3);
 							} else if (Class298.method5304(i_4, -1867456508)) {
 								Class236.aClass534_Sub1_2913.method12809(class282_sub53_sub1_3);
