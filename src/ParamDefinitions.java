@@ -16,20 +16,20 @@ public class ParamDefinitions {
 		}
 	}
 
-	void method7316(RsByteBuffer rsbytebuffer_1, int i_2) {
+	void method7316(RsByteBuffer buffer, int i_2) {
 		if (i_2 == 1) {
-			this.typeChar = Utils.cp1252ToChar(rsbytebuffer_1.readByte());
+			this.typeChar = Utils.cp1252ToChar(buffer.readByte());
 		} else if (i_2 == 2) {
-			this.defaultInt = rsbytebuffer_1.readInt();
+			this.defaultInt = buffer.readInt();
 		} else if (i_2 == 4) {
 			this.autoDisable = false;
 		} else if (i_2 == 5) {
-			this.typeName = rsbytebuffer_1.readString();
+			this.typeName = buffer.readString();
 		}
 	}
 
-	public boolean method7319(int i_1) {
-		return this.typeChar == 115;
+	public boolean isString() {
+		return this.typeChar == 's';
 	}
 
 	static void method7323() {

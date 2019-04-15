@@ -726,7 +726,7 @@ public class ItemDefinitions implements Definition {
         }
     }
 
-    public int method7099(int i_1, int i_2, int i_3) {
+    public int getCS2Integer(int i_1, int i_2, int i_3) {
         if (this.cs2Map == null) {
             return i_2;
         } else {
@@ -735,12 +735,12 @@ public class ItemDefinitions implements Definition {
         }
     }
 
-    public String method7101(int i_1, String string_2, int i_3) {
+    public String getCS2String(int key, String defaultValue) {
         if (this.cs2Map == null) {
-            return string_2;
+            return defaultValue;
         } else {
-            Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.cs2Map.get((long) i_1);
-            return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
+            Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.cs2Map.get((long) key);
+            return class282_sub47_4 == null ? defaultValue : (String) class282_sub47_4.anObject8068;
         }
     }
 

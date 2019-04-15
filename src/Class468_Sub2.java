@@ -56,7 +56,7 @@ public class Class468_Sub2 extends Preference {
     }
 
     public static WorldDescriptor method12629() {
-        Class448.anInt5427 = 0;
-        return Class77.method1368(46486061);
+        Class448.CURRENT_WORLD = 0;
+        return Class77.getCurrentWorldDescriptor();
     }
 }

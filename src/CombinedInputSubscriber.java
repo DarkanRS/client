@@ -51,10 +51,10 @@ public class CombinedInputSubscriber implements InputSubscriber {
         String string_9 = null;
         if (i_2 != -1) {
             ParamDefinitions attributedefault_10 = IndexLoaders.PARAM_LOADER.getParam(i_2);
-            if (attributedefault_10 == null || attributedefault_10.method7319(1591846177) != bool_5) {
+            if (attributedefault_10 == null || attributedefault_10.isString() != bool_5) {
                 return;
             }
-            if (attributedefault_10.method7319(1882298499)) {
+            if (attributedefault_10.isString()) {
                 string_9 = attributedefault_10.typeName;
             } else {
                 i_8 = attributedefault_10.defaultInt;
@@ -66,10 +66,10 @@ public class CombinedInputSubscriber implements InputSubscriber {
             if ((!bool_1 || itemdefinitions_17.grandExchange) && itemdefinitions_17.certTemplateId == -1 && itemdefinitions_17.lendTemplateId == -1 && itemdefinitions_17.bindTemplateId == -1 && itemdefinitions_17.unknownInt6 == 0 && itemdefinitions_17.name.toLowerCase().indexOf(string_0) != -1) {
                 if (i_2 != -1) {
                     if (bool_5) {
-                        if (!string_4.equals(itemdefinitions_17.method7101(i_2, string_9, -1780783562))) {
+                        if (!string_4.equals(itemdefinitions_17.getCS2String(i_2, string_9))) {
                             continue;
                         }
-                    } else if (i_3 != itemdefinitions_17.method7099(i_2, i_8, -1985446250)) {
+                    } else if (i_3 != itemdefinitions_17.getCS2Integer(i_2, i_8, -1985446250)) {
                         continue;
                     }
                 }

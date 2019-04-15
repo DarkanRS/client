@@ -646,7 +646,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 
 											if (client.aBool7344 && class285_34.aClass521_Sub1_3391.plane == VertexNormal.myPlayer.plane) {
 												ParamDefinitions attributedefault_68 = Class96_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.USE_INTERFACE_ID) : null;
-												if ((Class506.USE_OPTIONS_FLAGS & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.method7099(Class96_Sub12.USE_INTERFACE_ID, attributedefault_68.defaultInt, -1083542144) != attributedefault_68.defaultInt)) {
+												if ((Class506.USE_OPTIONS_FLAGS & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.getCS2Integer(Class96_Sub12.USE_INTERFACE_ID, attributedefault_68.defaultInt, -1083542144) != attributedefault_68.defaultInt)) {
 													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
 												}
 											}

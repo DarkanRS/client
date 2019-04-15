@@ -750,7 +750,7 @@ public enum CS2OpInfo {
 	instr6692(831),
 	instr6204(273),
 	instr6694(171),
-	instr6695(654),
+	SEND_VERIFY_EMAIL_PACKET(654),
 	instr6568(686),
 	instr6697(362),
 	instr6698(684),

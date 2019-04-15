@@ -461,12 +461,12 @@ public class NPCDefinitions {
 		}
 	}
 
-	public String method6882(int i_1, String string_2) {
+	public String getCS2Param(int key, String defaultValue) {
 		if (this.aClass465_4896 == null) {
-			return string_2;
+			return defaultValue;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_4896.get((long) i_1);
-			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_4896.get((long) key);
+			return class282_sub47_4 == null ? defaultValue : (String) class282_sub47_4.anObject8068;
 		}
 	}
 

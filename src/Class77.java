@@ -119,8 +119,8 @@ public class Class77 {
 		}
 	}
 
-	public static WorldDescriptor method1368(int i_0) {
-		return Class448.anInt5427 < Class448.WORLD_DESCRIPTORS_BYID.length ? Class448.WORLD_DESCRIPTORS_BYID[++Class448.anInt5427 - 1] : null;
+	public static WorldDescriptor getCurrentWorldDescriptor() {
+		return Class448.CURRENT_WORLD < Class448.WORLD_DESCRIPTORS_BYID.length ? Class448.WORLD_DESCRIPTORS_BYID[++Class448.CURRENT_WORLD - 1] : null;
 	}
 
 	public static void method1369(AnimationIndexLoader animationindexloader_0) {

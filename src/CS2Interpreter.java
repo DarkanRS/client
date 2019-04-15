@@ -2254,8 +2254,8 @@ public class CS2Interpreter {
 		case instr6694:
 			method3368(exec);
 			break;
-		case instr6695:
-			method6006(exec);
+		case SEND_VERIFY_EMAIL_PACKET:
+			sendVerifyEmailPacket(exec);
 			break;
 		case instr6568:
 			method4568(exec);
@@ -3578,8 +3578,8 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(1555289189)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2).method6882(i_3, attributedefault_4.typeName);
+		if (attributedefault_4.isString()) {
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2).getCS2Param(i_3, attributedefault_4.typeName);
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_2).method6876(i_3, attributedefault_4.defaultInt, 1365877231);
 		}
@@ -3895,7 +3895,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(1764887280)) {
+		if (attributedefault_4.isString()) {
 			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_2, (byte) -22).method11129(i_3, attributedefault_4.typeName);
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ANIMATION_LOADER.getAnimDefs(i_2, (byte) -46).method11133(i_3, attributedefault_4.defaultInt);
@@ -4665,7 +4665,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(2036753920)) {
+		if (attributedefault_4.isString()) {
 			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 882562729).method3722(i_3, attributedefault_4.typeName);
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_2, 884887679).method3723(i_3, attributedefault_4.defaultInt);
@@ -4857,7 +4857,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(1753438100)) {
+		if (attributedefault_4.isString()) {
 			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_2).method7973(i_3, attributedefault_4.typeName);
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_2).method7963(i_3, attributedefault_4.defaultInt, 1059658238);
@@ -4920,7 +4920,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(2105121793)) {
+		if (attributedefault_4.isString()) {
 			String string_5 = attributedefault_4.typeName;
 			if (i_2 == -1) {
 				executor.stringStack[++executor.stringStackPtr - 1] = string_5;
@@ -6850,10 +6850,10 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(2069262708)) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).method7101(i_3, attributedefault_4.typeName, -1662195407);
+		if (attributedefault_4.isString()) {
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).getCS2String(i_3, attributedefault_4.typeName);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).method7099(i_3, attributedefault_4.defaultInt, -1410109564);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).getCS2Integer(i_3, attributedefault_4.defaultInt, -1410109564);
 		}
 	}
 
@@ -7603,7 +7603,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
-		if (attributedefault_4.method7319(1555061388)) {
+		if (attributedefault_4.isString()) {
 			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.STRUCT_LOADER.getStruct(i_2, -1979038944).method14751(i_3, attributedefault_4.typeName);
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.STRUCT_LOADER.getStruct(i_2, 1053782715).method14750(i_3, attributedefault_4.defaultInt);
@@ -7978,23 +7978,23 @@ public class CS2Interpreter {
 		class184_3.queuePacket(tcpmessage_4);
 	}
 
-	static final void method6006(CS2Executor executor) {
+	static final void sendVerifyEmailPacket(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		Class493.sendCheckEmailPacket(string_2);
 	}
 
 	static final void method11244(CS2Executor executor) {
-		WorldDescriptor class217_sub1_2 = Class77.method1368(1851142340);
-		if (class217_sub1_2 != null) {
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.worldNumber;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.flags;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.unknown;
-			World class213_3 = class217_sub1_2.getWorld();
-			executor.intStack[++executor.intStackPtr - 1] = class213_3.countryId;
-			executor.stringStack[++executor.stringStackPtr - 1] = class213_3.activity;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.playerCount;
-			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.ping;
-			executor.stringStack[++executor.stringStackPtr - 1] = class217_sub1_2.ipAddress;
+		WorldDescriptor descriptor = Class77.getCurrentWorldDescriptor();
+		if (descriptor != null) {
+			executor.intStack[++executor.intStackPtr - 1] = descriptor.worldNumber;
+			executor.intStack[++executor.intStackPtr - 1] = descriptor.flags;
+			executor.stringStack[++executor.stringStackPtr - 1] = descriptor.unknown;
+			World world = descriptor.getWorld();
+			executor.intStack[++executor.intStackPtr - 1] = world.countryId;
+			executor.stringStack[++executor.stringStackPtr - 1] = world.activity;
+			executor.intStack[++executor.intStackPtr - 1] = descriptor.playerCount;
+			executor.intStack[++executor.intStackPtr - 1] = descriptor.ping;
+			executor.stringStack[++executor.stringStackPtr - 1] = descriptor.ipAddress;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -10626,7 +10626,7 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		ParamDefinitions attributedefault_5 = IndexLoaders.PARAM_LOADER.getParam(i_4);
-		if (attributedefault_5.method7319(1933175608)) {
+		if (attributedefault_5.isString()) {
 			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.method1998(i_4, attributedefault_5.typeName);
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.method1997(i_4, attributedefault_5.defaultInt, 1468810127);
