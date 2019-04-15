@@ -46,12 +46,12 @@ public class Class348 {
 		}
 	}
 
-	public void method6173(Class61 class61_1) {
-		if (class61_1.aLong631 == this.aLong4073 && this.anInt4060 == class61_1.anInt637) {
+	public void method6173(ClanSettings class61_1) {
+		if (class61_1.aLong631 == this.aLong4073 && this.anInt4060 == class61_1.updateCount) {
 			for (Class282_Sub17 class282_sub17_3 = (Class282_Sub17) this.aClass482_4062.head(); class282_sub17_3 != null; class282_sub17_3 = (Class282_Sub17) this.aClass482_4062.next(983749552)) {
 				class282_sub17_3.method12251(class61_1);
 			}
-			++class61_1.anInt637;
+			++class61_1.updateCount;
 		} else {
 			throw new RuntimeException("");
 		}

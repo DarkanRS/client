@@ -85,7 +85,7 @@ public class NPCDefinitions {
 		if (this.aClass465_4896 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_4896.get((long) i_1);
+			IntNode class282_sub38_4 = (IntNode) this.aClass465_4896.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -465,7 +465,7 @@ public class NPCDefinitions {
 		if (this.aClass465_4896 == null) {
 			return defaultValue;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_4896.get((long) key);
+			StringNode class282_sub47_4 = (StringNode) this.aClass465_4896.get((long) key);
 			return class282_sub47_4 == null ? defaultValue : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -719,7 +719,7 @@ public class NPCDefinitions {
 		} else if (opcode == 249) {
 			int i_4 = stream.readUnsignedByte();
 			if (this.aClass465_4896 == null) {
-				int i_5 = ImageIndexLoader.nextPowerOfTwo(i_4, -597233692);
+				int i_5 = Utils.nextPowerOfTwo(i_4);
 				this.aClass465_4896 = new IterableNodeMap(i_5);
 			}
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
@@ -727,9 +727,9 @@ public class NPCDefinitions {
 				int i_9 = stream.read24BitUnsignedInteger();
 				Object obj_8;
 				if (bool_10) {
-					obj_8 = new Class282_Sub47(stream.readString());
+					obj_8 = new StringNode(stream.readString());
 				} else {
-					obj_8 = new Class282_Sub38(stream.readInt());
+					obj_8 = new IntNode(stream.readInt());
 				}
 				this.aClass465_4896.put((Node) obj_8, (long) i_9);
 			}

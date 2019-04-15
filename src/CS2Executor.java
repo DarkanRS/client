@@ -7,7 +7,7 @@ public class CS2Executor {
 	Animable animable;
 	Class191 aClass191_7008;
 	Class346 aClass346_7009;
-	Class61 aClass61_7010;
+	ClanSettings currentClanSettings;
 	ClanChannel aClass282_Sub4_7011;
 	SceneObject anInterface12_7013;
 	Class521_Sub1_Sub2_Sub1 aClass521_Sub1_Sub2_Sub1_7014;

@@ -70,4 +70,14 @@ public class Utils {
 		return -i_14;
 	}
 
+	public static int nextPowerOfTwo(int i_0) {
+		--i_0;
+		i_0 |= i_0 >>> 1;
+		i_0 |= i_0 >>> 2;
+		i_0 |= i_0 >>> 4;
+		i_0 |= i_0 >>> 8;
+		i_0 |= i_0 >>> 16;
+		return i_0 + 1;
+	}
+
 }

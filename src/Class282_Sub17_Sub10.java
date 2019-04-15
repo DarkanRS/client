@@ -4,15 +4,15 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 	String aString10048;
 	Class348 this$0;
 
-	void method12252(Class61 class61_1) {
+	void method12252(ClanSettings class61_1) {
 		class61_1.method1207(5650566354848839815L * this.aLong10047 * 4560744686503677239L, this.aString10048, -1373003274);
 	}
 
-	void method12255(Class61 class61_1) {
+	void method12255(ClanSettings class61_1) {
 		class61_1.method1207(5650566354848839815L * this.aLong10047 * 4560744686503677239L, this.aString10048, -386642241);
 	}
 
-	void method12251(Class61 class61_1) {
+	void method12251(ClanSettings class61_1) {
 		class61_1.method1207(this.aLong10047, this.aString10048, -2047603654);
 	}
 
@@ -43,15 +43,15 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 		this.aString10048 = rsbytebuffer_1.readNullString();
 	}
 
-	void method12254(Class61 class61_1) {
+	void method12254(ClanSettings class61_1) {
 		class61_1.method1207(5650566354848839815L * this.aLong10047 * 4560744686503677239L, this.aString10048, -1971035094);
 	}
 
-	void method12258(Class61 class61_1) {
+	void method12258(ClanSettings class61_1) {
 		class61_1.method1207(5650566354848839815L * this.aLong10047 * 4560744686503677239L, this.aString10048, -624991178);
 	}
 
-	void method12256(Class61 class61_1) {
+	void method12256(ClanSettings class61_1) {
 		class61_1.method1207(5650566354848839815L * this.aLong10047 * 4560744686503677239L, this.aString10048, -1341102320);
 	}
 

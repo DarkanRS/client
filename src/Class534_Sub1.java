@@ -115,7 +115,7 @@ public class Class534_Sub1 extends Class534 {
 		} else if (class282_sub50_sub7_0.anInt9579 != -1) {
 			ints_2 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub50_sub7_0.anInt9579).quests;
 		} else if (Class237.method3989(class282_sub50_sub7_0.clickType)) {
-			Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.NPCS.get((long) ((int) class282_sub50_sub7_0.aLong9584));
+			StringNode class282_sub47_3 = (StringNode) client.NPCS.get((long) ((int) class282_sub50_sub7_0.aLong9584));
 			if (class282_sub47_3 != null) {
 				NPC npc_4 = (NPC) class282_sub47_3.anObject8068;
 				NPCDefinitions npcdefinitions_5 = npc_4.definitions;

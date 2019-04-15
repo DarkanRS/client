@@ -22,7 +22,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}
 
-	void method12251(Class61 class61_1) {
+	void method12251(ClanSettings class61_1) {
 		class61_1.method1216(this.aLong9930, this.aString9931, 0, (byte) 46);
 	}
 
@@ -34,7 +34,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}
 
-	void method12258(Class61 class61_1) {
+	void method12258(ClanSettings class61_1) {
 		class61_1.method1216(-6384031897606374783L * this.aLong9930 * -7156069632047741567L, this.aString9931, 0, (byte) -53);
 	}
 
@@ -46,19 +46,19 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		this.aString9931 = rsbytebuffer_1.readNullString();
 	}
 
-	void method12254(Class61 class61_1) {
+	void method12254(ClanSettings class61_1) {
 		class61_1.method1216(-6384031897606374783L * this.aLong9930 * -7156069632047741567L, this.aString9931, 0, (byte) -33);
 	}
 
-	void method12255(Class61 class61_1) {
+	void method12255(ClanSettings class61_1) {
 		class61_1.method1216(-6384031897606374783L * this.aLong9930 * -7156069632047741567L, this.aString9931, 0, (byte) 14);
 	}
 
-	void method12256(Class61 class61_1) {
+	void method12256(ClanSettings class61_1) {
 		class61_1.method1216(-6384031897606374783L * this.aLong9930 * -7156069632047741567L, this.aString9931, 0, (byte) 81);
 	}
 
-	void method12252(Class61 class61_1) {
+	void method12252(ClanSettings class61_1) {
 		class61_1.method1216(-6384031897606374783L * this.aLong9930 * -7156069632047741567L, this.aString9931, 0, (byte) -93);
 	}
 

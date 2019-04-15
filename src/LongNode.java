@@ -1,8 +1,8 @@
-public class Class282_Sub45 extends Node {
+public class LongNode extends Node {
 
 	public long aLong8066;
 
-	public Class282_Sub45(long long_1) {
+	public LongNode(long long_1) {
 		this.aLong8066 = long_1;
 	}
 

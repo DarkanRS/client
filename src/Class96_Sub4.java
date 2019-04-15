@@ -151,7 +151,7 @@ public class Class96_Sub4 extends CutsceneAction {
 
 			TCPPacket tcpmessage_15;
 			if (outgoingpacket_18 != null) {
-				Class282_Sub47 class282_sub47_19 = (Class282_Sub47) client.NPCS.get((long) i_7);
+				StringNode class282_sub47_19 = (StringNode) client.NPCS.get((long) i_7);
 				if (class282_sub47_19 != null) {
 					NPC npc_14 = (NPC) class282_sub47_19.anObject8068;
 					client.anInt7293 = i_1;
@@ -302,7 +302,7 @@ public class Class96_Sub4 extends CutsceneAction {
 				}
 
 				if (clickType == 8) {
-					Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.NPCS.get((long) i_7);
+					StringNode class282_sub47_24 = (StringNode) client.NPCS.get((long) i_7);
 					if (class282_sub47_24 != null) {
 						NPC npc_25 = (NPC) class282_sub47_24.anObject8068;
 						client.anInt7293 = i_1;

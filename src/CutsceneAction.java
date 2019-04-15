@@ -22,7 +22,7 @@ public abstract class CutsceneAction {
 	}
 
 	public static void method1607(byte b_0) {
-		Class61.aClass160_647 = null;
+		ClanSettings.aClass160_647 = null;
 		Class60.aClass160_612 = null;
 		Class467.aClass160_5576 = null;
 		ParamDefinitions.aClass160_5339 = null;

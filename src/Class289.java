@@ -412,11 +412,11 @@ public class Class289 implements Runnable {
 								i_25 = (i_24 >> 14 & 0x3fff) - coordgrid_45.x;
 								i_26 = (i_24 & 0x3fff) - coordgrid_45.y;
 								if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4) {
-									Class187.aClass482_2350.append(new Class282_Sub38(i_23));
+									Class187.aClass482_2350.append(new IntNode(i_23));
 								} else {
 									MapAreaDefinitions worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.anIntArray3383[i_23], 1792768149);
 									if (worldmapareadefs_46.anIntArray2717 != null && i_25 + worldmapareadefs_46.anInt2731 >= 0 && i_25 + worldmapareadefs_46.anInt2747 < i_3 && i_26 + worldmapareadefs_46.anInt2746 >= 0 && i_26 + worldmapareadefs_46.anInt2744 < i_4) {
-										Class187.aClass482_2350.append(new Class282_Sub38(i_23));
+										Class187.aClass482_2350.append(new IntNode(i_23));
 									}
 								}
 							}

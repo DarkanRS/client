@@ -1289,9 +1289,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		int i_2 = 0;
 		i_1 &= 0x7fffffff;
 
-		Class282_Sub38 class282_sub38_4;
+		IntNode class282_sub38_4;
 		while (!this.aClass473_8486.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8486.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8486.popTail();
 			anIntArray8381[i_2++] = (int) class282_sub38_4.data;
 			this.anInt8371 -= class282_sub38_4.anInt8002;
 			if (i_2 == 1000) {
@@ -1306,7 +1306,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8375.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8375.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8375.popTail();
 			anIntArray8381[i_2++] = (int) class282_sub38_4.data;
 			this.anInt8370 -= class282_sub38_4.anInt8002;
 			if (i_2 == 1000) {
@@ -1321,7 +1321,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8376.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8376.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8376.popTail();
 			anIntArray8381[i_2++] = class282_sub38_4.anInt8002;
 			if (i_2 == 1000) {
 				OpenGL.glDeleteFramebuffersEXT(i_2, anIntArray8381, 0);
@@ -1335,7 +1335,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8377.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8377.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8377.popTail();
 			anIntArray8381[i_2++] = (int) class282_sub38_4.data;
 			this.anInt8372 -= class282_sub38_4.anInt8002;
 			if (i_2 == 1000) {
@@ -1350,7 +1350,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8373.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8373.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8373.popTail();
 			OpenGL.glDeleteLists((int) class282_sub38_4.data, class282_sub38_4.anInt8002);
 		}
 
@@ -1366,7 +1366,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8373.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8373.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8373.popTail();
 			OpenGL.glDeleteLists((int) class282_sub38_4.data, class282_sub38_4.anInt8002);
 		}
 
@@ -2016,9 +2016,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		int i_2 = 0;
 		i_1 &= 0x7fffffff;
 
-		Class282_Sub38 class282_sub38_4;
+		IntNode class282_sub38_4;
 		while (!this.aClass473_8486.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8486.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8486.popTail();
 			anIntArray8381[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8371 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2033,7 +2033,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8375.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8375.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8375.popTail();
 			anIntArray8381[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8370 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2048,7 +2048,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8376.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8376.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8376.popTail();
 			anIntArray8381[i_2++] = class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
 				OpenGL.glDeleteFramebuffersEXT(i_2, anIntArray8381, 0);
@@ -2062,7 +2062,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8377.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8377.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8377.popTail();
 			anIntArray8381[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8372 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2077,7 +2077,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8373.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8373.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8373.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
@@ -2093,7 +2093,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8373.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8373.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8373.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
@@ -2294,7 +2294,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	final synchronized void method13625(int i_1, int i_2) {
-		Class282_Sub38 class282_sub38_3 = new Class282_Sub38(i_2);
+		IntNode class282_sub38_3 = new IntNode(i_2);
 		class282_sub38_3.data = (long) i_1;
 		this.aClass473_8375.insertBack(class282_sub38_3);
 	}
@@ -2938,9 +2938,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		int i_2 = 0;
 		i_1 &= 0x7fffffff;
 
-		Class282_Sub38 class282_sub38_4;
+		IntNode class282_sub38_4;
 		while (!this.aClass473_8486.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8486.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8486.popTail();
 			anIntArray8381[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8371 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2955,7 +2955,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8375.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8375.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8375.popTail();
 			anIntArray8381[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8370 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2970,7 +2970,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8376.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8376.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8376.popTail();
 			anIntArray8381[i_2++] = class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
 				OpenGL.glDeleteFramebuffersEXT(i_2, anIntArray8381, 0);
@@ -2984,7 +2984,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8377.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8377.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8377.popTail();
 			anIntArray8381[i_2++] = (int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L);
 			this.anInt8372 -= class282_sub38_4.anInt8002 * 1270866345 * -570797415;
 			if (i_2 == 1000) {
@@ -2999,7 +2999,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8373.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8373.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8373.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
@@ -3015,7 +3015,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		while (!this.aClass473_8373.method7861()) {
-			class282_sub38_4 = (Class282_Sub38) this.aClass473_8373.popTail();
+			class282_sub38_4 = (IntNode) this.aClass473_8373.popTail();
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.anInt8002 * 1270866345 * -570797415);
 		}
 
@@ -4400,7 +4400,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	final synchronized void method13657(int i_1, int i_2) {
-		Class282_Sub38 class282_sub38_3 = new Class282_Sub38(i_2);
+		IntNode class282_sub38_3 = new IntNode(i_2);
 		class282_sub38_3.data = (long) i_1;
 		this.aClass473_8486.insertBack(class282_sub38_3);
 	}
@@ -4847,7 +4847,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	final synchronized void method13678(int i_1) {
-		Class282_Sub38 class282_sub38_2 = new Class282_Sub38(i_1);
+		IntNode class282_sub38_2 = new IntNode(i_1);
 		this.aClass473_8376.insertBack(class282_sub38_2);
 	}
 
@@ -4970,7 +4970,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	final synchronized void method13707(int i_1, int i_2) {
-		Class282_Sub38 class282_sub38_3 = new Class282_Sub38(i_2);
+		IntNode class282_sub38_3 = new IntNode(i_2);
 		class282_sub38_3.data = (long) i_1;
 		this.aClass473_8377.insertBack(class282_sub38_3);
 	}

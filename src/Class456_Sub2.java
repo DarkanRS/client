@@ -17,11 +17,11 @@ public class Class456_Sub2 extends Animation {
 			i_10 = 0;
 		}
 
-		if (Class467.aClass160_5576 == null || Class61.aClass160_647 == null) {
+		if (Class467.aClass160_5576 == null || ClanSettings.aClass160_647 == null) {
 			if (IndexLoaders.SPRITES_INDEX.loadFile(ConnectionInfo.anInt5438) && IndexLoaders.SPRITES_INDEX.loadFile(Class373.anInt4350)) {
 				Class467.aClass160_5576 = graphicalrenderer_0.method8444(SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, ConnectionInfo.anInt5438, 0), true);
 				SpriteDefinitions class91_13 = SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, Class373.anInt4350, 0);
-				Class61.aClass160_647 = graphicalrenderer_0.method8444(class91_13, true);
+				ClanSettings.aClass160_647 = graphicalrenderer_0.method8444(class91_13, true);
 				class91_13.method1525();
 				Class60.aClass160_612 = graphicalrenderer_0.method8444(class91_13, true);
 			} else {
@@ -29,14 +29,14 @@ public class Class456_Sub2 extends Animation {
 			}
 		}
 
-		if (Class467.aClass160_5576 != null && Class61.aClass160_647 != null) {
-			int i_11 = (i_3 - Class61.aClass160_647.method2747() * 2) / Class467.aClass160_5576.method2747();
+		if (Class467.aClass160_5576 != null && ClanSettings.aClass160_647 != null) {
+			int i_11 = (i_3 - ClanSettings.aClass160_647.method2747() * 2) / Class467.aClass160_5576.method2747();
 
 			for (int i_12 = 0; i_12 < i_11; i_12++) {
-				Class467.aClass160_5576.method2752(i_1 + Class61.aClass160_647.method2747() + i_12 * Class467.aClass160_5576.method2747(), i_2);
+				Class467.aClass160_5576.method2752(i_1 + ClanSettings.aClass160_647.method2747() + i_12 * Class467.aClass160_5576.method2747(), i_2);
 			}
 
-			Class61.aClass160_647.method2752(i_1, i_2);
+			ClanSettings.aClass160_647.method2752(i_1, i_2);
 			Class60.aClass160_612.method2752(i_3 + i_1 - Class60.aClass160_612.method2747(), i_2);
 		}
 

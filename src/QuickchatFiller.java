@@ -1,7 +1,7 @@
 public class QuickchatFiller implements Interface19 {
 
 	public static EntityDefaults ENTITY_DEFAULTS;
-	public static Class61 aClass61_528;
+	public static ClanSettings CLAN_SETTINGS;
 
 	public String method135(QuickChatValueType value, int[] configs, long data) {
 		if (value == QuickChatValueType.LISTDIALOG) {

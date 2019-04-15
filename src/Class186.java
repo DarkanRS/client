@@ -82,8 +82,8 @@ public class Class186 {
 		client.aString7426 = null;
 		Class459.anInt5534 = 0;
 		Class467.aClass173Array5575 = null;
-		Class282_Sub13.aClass61_7587 = null;
-		QuickchatFiller.aClass61_528 = null;
+		Class282_Sub13.GUEST_CLAN_SETTINGS = null;
+		QuickchatFiller.CLAN_SETTINGS = null;
 		Class237.method3990();
 
 		for (int i_1 = 0; i_1 < 25; i_1++) {

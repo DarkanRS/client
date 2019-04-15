@@ -18,7 +18,7 @@ public class Class423 {
 
 			class345_2.method6128();
 			if (class345_2.anInt4041 == 2 && Class345.aClass465_4029.get((long) i_0) == null) {
-				Class345.aClass465_4029.put(new Class282_Sub38(Class345.anInt4028), (long) i_0);
+				Class345.aClass465_4029.put(new IntNode(Class345.anInt4028), (long) i_0);
 				Class345.aClass345Array4025[++Class345.anInt4028 - 1] = class345_2;
 			}
 

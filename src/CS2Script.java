@@ -53,13 +53,13 @@ public class CS2Script extends CacheableNode {
 
 			for (int i_6 = 0; i_6 < i_5; i_6++) {
 				int i_7 = stream.readUnsignedShort();
-				IterableNodeMap iterablenodemap_8 = new IterableNodeMap(ImageIndexLoader.nextPowerOfTwo(i_7, -234379644));
+				IterableNodeMap iterablenodemap_8 = new IterableNodeMap(Utils.nextPowerOfTwo(i_7));
 				this.switchMaps[i_6] = iterablenodemap_8;
 
 				while (i_7-- > 0) {
 					int i_9 = stream.readInt();
 					int i_10 = stream.readInt();
-					iterablenodemap_8.put(new Class282_Sub38(i_10), (long) i_9);
+					iterablenodemap_8.put(new IntNode(i_10), (long) i_9);
 				}
 			}
 		}

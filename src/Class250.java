@@ -150,7 +150,7 @@ public class Class250 {
 				if (i_10 < i_7) {
 					obj_12 = client.players[ints_8[i_10]];
 				} else {
-					obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_10 - i_7])).anObject8068;
+					obj_12 = (Animable) ((StringNode) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_10 - i_7])).anObject8068;
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.transformTo != null) {
 						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
@@ -666,14 +666,14 @@ public class Class250 {
 			if (i_11 < 2048) {
 				obj_12 = client.players[i_11];
 			} else {
-				obj_12 = (Animable) ((Class282_Sub47) client.NPCS.get((long) (i_11 - 2048))).anObject8068;
+				obj_12 = (Animable) ((StringNode) client.NPCS.get((long) (i_11 - 2048))).anObject8068;
 			}
 			i_92 = client.anIntArray7288[i_10];
 			Object obj_14;
 			if (i_92 < 2048) {
 				obj_14 = client.players[i_92];
 			} else {
-				obj_14 = (Animable) ((Class282_Sub47) client.NPCS.get((long) (i_92 - 2048))).anObject8068;
+				obj_14 = (Animable) ((StringNode) client.NPCS.get((long) (i_92 - 2048))).anObject8068;
 			}
 			ItemDefinitions.method7140((Animable) obj_12, (Animable) obj_14, --((Animable) obj_12).anInt10319, i_0, i_1, i_2, i_3);
 		}

@@ -78,7 +78,7 @@ public final class client extends Engine {
 	static String aString7463 = null;
 	public static Interface35 anInterface35_7206 = new Class15();
 	public static IterableNodeMap NPCS = new IterableNodeMap(64);
-	public static Class282_Sub47[] aClass282_Sub47Array7209 = new Class282_Sub47[1024];
+	public static StringNode[] aClass282_Sub47Array7209 = new StringNode[1024];
 	public static int anInt7210 = 0;
 	public static int NPC_UPDATE_INDEX = 0;
 	public static int[] NPC_UPDATE_INDICES = new int[1024];
@@ -927,7 +927,7 @@ public final class client extends Engine {
 				if (i_3 < i_0) {
 					obj_4 = players[ints_1[i_3]];
 				} else {
-					obj_4 = (Animable) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_3 - i_0])).anObject8068;
+					obj_4 = (Animable) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_3 - i_0])).anObject8068;
 				}
 
 				if (((Animable) obj_4).drawPriority < 0) {
@@ -1046,7 +1046,7 @@ public final class client extends Engine {
 			}
 
 			if (Class521_Sub1_Sub3_Sub1.method16081()) {
-				Class282_Sub47.method13409(Renderers.SOFTWARE_RENDERER);
+				StringNode.method13409(Renderers.SOFTWARE_RENDERER);
 			}
 
 			if (!Class504.loadingState(gameState, (byte) -54) && !Class464.method7742(gameState, (byte) 17) && anInt7349 != -1) {
@@ -1344,7 +1344,7 @@ public final class client extends Engine {
 		}
 
 		for (i_4 = 0; i_4 < NPC_UPDATE_INDEX; i_4++) {
-			NPC npc_9 = (NPC) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_4])).anObject8068;
+			NPC npc_9 = (NPC) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_4])).anObject8068;
 			if (npc_9.hasDefinition(1233643385) && npc_9.definitions.method6885(Class158_Sub1.PLAYER_VAR_PROVIDER)) {
 				npc_9.method14697((byte) 71);
 				if (npc_9.aShort9458 >= 0 && npc_9.aShort9456 >= 0 && npc_9.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && npc_9.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
@@ -1391,7 +1391,7 @@ public final class client extends Engine {
 			Class180 class180_10 = aClass180Array7348[i_4];
 			if (class180_10 != null) {
 				if (class180_10.anInt2236 == 1) {
-					Class282_Sub47 class282_sub47_6 = (Class282_Sub47) NPCS.get((long) class180_10.anInt2238);
+					StringNode class282_sub47_6 = (StringNode) NPCS.get((long) class180_10.anInt2238);
 					if (class282_sub47_6 != null) {
 						NPC npc_7 = (NPC) class282_sub47_6.anObject8068;
 						if (npc_7.drawPriority >= 0) {
@@ -1449,7 +1449,7 @@ public final class client extends Engine {
 				if (i_6 < i_1) {
 					obj_7 = players[ints_2[i_6]];
 				} else {
-					obj_7 = (Animable) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
+					obj_7 = (Animable) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 				}
 
 				if (i_0 != ((Animable) obj_7).plane || ((Animable) obj_7).drawPriority < 0) {
@@ -1525,7 +1525,7 @@ public final class client extends Engine {
 				if (i_6 < i_1) {
 					obj_7 = players[ints_2[i_6]];
 				} else {
-					obj_7 = (Animable) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
+					obj_7 = (Animable) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 				}
 
 				if (i_0 != ((Animable) obj_7).plane) {
@@ -1753,7 +1753,7 @@ public final class client extends Engine {
 		anInt7304 = 0;
 
 		for (int i_0 = 0; i_0 < NPC_UPDATE_INDEX; i_0++) {
-			NPC npc_1 = (NPC) ((Class282_Sub47) NPCS.get((long) NPC_UPDATE_INDICES[i_0])).anObject8068;
+			NPC npc_1 = (NPC) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_0])).anObject8068;
 			if (npc_1.aBool10318 && npc_1.method15899(1588256325) != -1) {
 				int i_2 = (npc_1.getSize() - 1) * 256 + 252;
 				Vector3 vector3_3 = npc_1.method11166().aClass385_3595;
@@ -2110,7 +2110,7 @@ public final class client extends Engine {
 
 									for (i_27 = 0; i_27 < NPC_UPDATE_INDEX; i_27++) {
 										i_52 = NPC_UPDATE_INDICES[i_27];
-										Class282_Sub47 class282_sub47_56 = (Class282_Sub47) NPCS.get((long) i_52);
+										StringNode class282_sub47_56 = (StringNode) NPCS.get((long) i_52);
 										if (class282_sub47_56 != null) {
 											AccountCreationStage.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.anInt4856, (Animable) class282_sub47_56.anObject8068, i_52, 1492205273);
 											((Animable) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10, (byte) 77);

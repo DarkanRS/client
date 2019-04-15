@@ -113,12 +113,12 @@ public final class Class459 {
 				break;
 			}
 			boolean bool_4 = false;
-			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get((long) i_3);
+			StringNode class282_sub47_5 = (StringNode) client.NPCS.get((long) i_3);
 			NPC npc_6;
 			if (class282_sub47_5 == null) {
 				npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
 				npc_6.index = i_3;
-				class282_sub47_5 = new Class282_Sub47(npc_6);
+				class282_sub47_5 = new StringNode(npc_6);
 				client.NPCS.put(class282_sub47_5, (long) i_3);
 				client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
 				bool_4 = true;

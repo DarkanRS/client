@@ -71,7 +71,7 @@ public class Class190 {
 			if (class180_9 != null && class180_9.anInt2236 != 0 && client.cycles % 20 < 10) {
 				int i_13;
 				if (class180_9.anInt2236 == 1) {
-					Class282_Sub47 class282_sub47_10 = (Class282_Sub47) client.NPCS.get((long) class180_9.anInt2238);
+					StringNode class282_sub47_10 = (StringNode) client.NPCS.get((long) class180_9.anInt2238);
 					if (class282_sub47_10 != null) {
 						NPC npc_11 = (NPC) class282_sub47_10.anObject8068;
 						Vector3 vector3_12 = npc_11.method11166().aClass385_3595;

@@ -27,7 +27,7 @@ public class Class113 {
 							}
 						}
 					} else {
-						Class282_Sub47 class282_sub47_7 = (Class282_Sub47) client.NPCS.get((long) (class521_sub1_sub1_sub3_2.anInt10382 - 1));
+						StringNode class282_sub47_7 = (StringNode) client.NPCS.get((long) (class521_sub1_sub1_sub3_2.anInt10382 - 1));
 						if (class282_sub47_7 != null) {
 							NPC npc_8 = (NPC) class282_sub47_7.anObject8068;
 							vector3_5 = npc_8.method11166().aClass385_3595;

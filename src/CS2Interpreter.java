@@ -136,14 +136,14 @@ public class CS2Interpreter {
 		case LONG_LE:
 			longLessOrEqual(exec);
 			break;
-		case LONG_GE:
+		case LONG_GE: //also branch
 			longGreaterOrEqual(exec);
 			break;
-		case instr5990:
-			method6909(exec);
+		case BRANCH_EQ1:
+			branchEq1(exec);
 			break;
-		case instr5023:
-			method3737(exec);
+		case BRANCH_EQ0:
+			branchEq0(exec);
 			break;
 		case LOAD_CLAN_VAR:
 			loadClanVar(exec);
@@ -163,11 +163,11 @@ public class CS2Interpreter {
 		case LOAD_CLAN_SETTING_VARBIT:
 			loadClanSettingVarbit(exec);
 			break;
-		case instr5998:
-			method2605(exec);
+		case LOAD_CLAN_SETTING_VAR_LONG:
+			loadClanSettingVarLong(exec);
 			break;
-		case instr5999:
-			method8864(exec);
+		case LOAD_CLAN_SETTING_VAR_STRING:
+			loadClanSettingVarString(exec);
 			break;
 		case instr6137:
 			method5962(exec);
@@ -3112,9 +3112,9 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method2605(CS2Executor executor) {
+	static final void loadClanSettingVarLong(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		Long long_3 = executor.aClass61_7010.method1201(client.CURRENT_GAME.id << 16 | i_2);
+		Long long_3 = executor.currentClanSettings.getLongVar(client.CURRENT_GAME.id << 16 | i_2);
 		long long_4;
 		if (long_3 == null) {
 			long_4 = -1L;
@@ -3122,6 +3122,18 @@ public class CS2Interpreter {
 			long_4 = long_3.longValue();
 		}
 		executor.longStack[++executor.longStackPtr - 1] = long_4;
+	}
+	
+	static final void loadClanSettingVarString(CS2Executor executor) {
+		int i_2 = executor.intOpValues[executor.instrPtr];
+		String string_3 = executor.currentClanSettings.getStringVar(client.CURRENT_GAME.id << 16 | i_2);
+		String string_4;
+		if (string_3 == null) {
+			string_4 = "";
+		} else {
+			string_4 = string_3;
+		}
+		executor.stringStack[++executor.stringStackPtr - 1] = string_4;
 	}
 
 	static final void method11218(CS2Executor executor) {
@@ -3363,7 +3375,7 @@ public class CS2Interpreter {
 
 	static final void method3779(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass61_7010.aStringArray617[i_2];
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.currentClanSettings.bannedUserNames[i_2];
 	}
 
 	static final void method3780(CS2Executor executor) {
@@ -3468,8 +3480,14 @@ public class CS2Interpreter {
 		Class96_Sub10.method14603(4, i_2 << 16 | i_3, i_4, "", (byte) 73);
 	}
 
-	static final void method6909(CS2Executor executor) {
+	static final void branchEq1(CS2Executor executor) {
 		if (executor.intStack[--executor.intStackPtr] == 1) {
+			executor.instrPtr += executor.intOpValues[executor.instrPtr];
+		}
+	}
+	
+	static final void branchEq0(CS2Executor executor) {
+		if (executor.intStack[--executor.intStackPtr] == 0) {
 			executor.instrPtr += executor.intOpValues[executor.instrPtr];
 		}
 	}
@@ -4087,7 +4105,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5902(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aByte619;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.talkRank;
 	}
 
 	static final void method5904(CS2Executor executor) {
@@ -4273,7 +4291,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4295(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.anInt636;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.replacementOwner;
 	}
 
 	static final void intEqual(CS2Executor executor) {
@@ -4412,7 +4430,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3361(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.method1197((String) executor.stringStack[--executor.stringStackPtr]);
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.method1197((String) executor.stringStack[--executor.stringStackPtr]);
 	}
 
 	static final void method1385(CS2Executor executor) {
@@ -4450,7 +4468,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6205(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = executor.aClass61_7010.method1215()[executor.intStack[executor.intStackPtr - 1]];
+		executor.intStack[executor.intStackPtr - 1] = executor.currentClanSettings.method1215()[executor.intStack[executor.intStackPtr - 1]];
 	}
 
 	static final void method6206(CS2Executor executor) {
@@ -5133,7 +5151,7 @@ public class CS2Interpreter {
 
 	static final void method2102(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aByteArray640[i_2];
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.memberRanks[i_2];
 	}
 
 	static final void method2103(CS2Executor executor) {
@@ -5286,7 +5304,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5299(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class282_Sub45.method13405(TextureDetails.time());
+		executor.intStack[++executor.intStackPtr - 1] = LongNode.method13405(TextureDetails.time());
 	}
 
 	static final void method13040(CS2Executor executor) {
@@ -5647,7 +5665,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5922(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass61_7010.aString622;
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.currentClanSettings.clanName;
 	}
 
 	static final void method5925(CS2Executor executor) {
@@ -5673,7 +5691,7 @@ public class CS2Interpreter {
 		if (class537_3 == null) {
 			throw new RuntimeException();
 		} else {
-			Integer integer_4 = executor.aClass61_7010.method1225(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
+			Integer integer_4 = executor.currentClanSettings.method1225(client.CURRENT_GAME.id << 16 | class537_3.baseVar, class537_3.startBit, class537_3.endBit);
 			int i_5;
 			if (integer_4 == null) {
 				i_5 = 0;
@@ -5702,7 +5720,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method933(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.anInt635;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.currentOwner;
 	}
 
 	static final void method934(CS2Executor executor) {
@@ -6323,7 +6341,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1802(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.anInt632;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.memberCount;
 	}
 
 	static final void method1803(CS2Executor executor) {
@@ -6529,7 +6547,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7274(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aByte627;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.lootshareRank;
 	}
 
 	static final void method7276(CS2Executor executor) {
@@ -6642,7 +6660,7 @@ public class CS2Interpreter {
 
 	static final void switchInstr(CS2Executor executor) {
 		IterableNodeMap iterablenodemap_2 = executor.current.switchMaps[executor.intOpValues[executor.instrPtr]];
-		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) iterablenodemap_2.get((long) executor.intStack[--executor.intStackPtr]);
+		IntNode class282_sub38_3 = (IntNode) iterablenodemap_2.get((long) executor.intStack[--executor.intStackPtr]);
 		if (class282_sub38_3 != null) {
 			executor.instrPtr += class282_sub38_3.anInt8002;
 		}
@@ -7020,9 +7038,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method12881(CS2Executor executor) {
-		if (QuickchatFiller.aClass61_528 != null) {
+		if (QuickchatFiller.CLAN_SETTINGS != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aClass61_7010 = QuickchatFiller.aClass61_528;
+			executor.currentClanSettings = QuickchatFiller.CLAN_SETTINGS;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -7366,7 +7384,7 @@ public class CS2Interpreter {
 
 	static final void method6741(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.anIntArray634[i_2];
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.anIntArray634[i_2];
 	}
 
 	static final void method541(CS2Executor executor) {
@@ -7835,7 +7853,7 @@ public class CS2Interpreter {
 		if (class537_3 == null) {
 			throw new RuntimeException();
 		} else {
-			Integer integer_4 = executor.aClass61_7010.method1199(client.CURRENT_GAME.id << 16 | i_2);
+			Integer integer_4 = executor.currentClanSettings.getIntVar(client.CURRENT_GAME.id << 16 | i_2);
 			int i_5;
 			if (integer_4 == null) {
 				if (class537_3.aChar7096 != 105 && class537_3.aChar7096 != 49) {
@@ -8032,7 +8050,7 @@ public class CS2Interpreter {
 
 	static final void method8037(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aClass61_7010.aStringArray639[i_2];
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.currentClanSettings.memberNames[i_2];
 	}
 
 	static final void method12492(CS2Executor executor) {
@@ -8644,7 +8662,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1889(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aByte626;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.kickRank;
 	}
 
 	static final void method5494(CS2Executor executor) {
@@ -8972,7 +8990,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.method1198(i_2, i_3, i_4);
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.method1198(i_2, i_3, i_4);
 	}
 
 	static final void method8205(CS2Executor executor) {
@@ -9006,7 +9024,7 @@ public class CS2Interpreter {
 		Class149_Sub2.aClass160_9315 = null;
 		Class125.aClass160_1571 = null;
 		Class60.aClass160_612 = null;
-		Class61.aClass160_647 = null;
+		ClanSettings.aClass160_647 = null;
 		Class467.aClass160_5576 = null;
 		HitbarIndexLoader.aClass160_3452 = null;
 		ParamDefinitions.aClass160_5339 = null;
@@ -9018,18 +9036,6 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		Interface interface_4 = Class468_Sub8.INTERFACES[i_2 >> 16];
 		method501(icomponentdefinitions_3, interface_4, executor, (byte) -2);
-	}
-
-	static final void method8864(CS2Executor executor) {
-		int i_2 = executor.intOpValues[executor.instrPtr];
-		String string_3 = executor.aClass61_7010.method1202(client.CURRENT_GAME.id << 16 | i_2);
-		String string_4;
-		if (string_3 == null) {
-			string_4 = "";
-		} else {
-			string_4 = string_3;
-		}
-		executor.stringStack[++executor.stringStackPtr - 1] = string_4;
 	}
 
 	static final void method8865(CS2Executor executor) {
@@ -9236,12 +9242,6 @@ public class CS2Interpreter {
 	}
 
 	static final void method7187(CS2Executor executor) {
-	}
-
-	static final void method3737(CS2Executor executor) {
-		if (executor.intStack[--executor.intStackPtr] == 0) {
-			executor.instrPtr += executor.intOpValues[executor.instrPtr];
-		}
 	}
 
 	static final void method3739(CS2Executor executor) {
@@ -9675,7 +9675,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1171(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.anInt641;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.banCount;
 	}
 
 	static final void method1173(CS2Executor executor) {
@@ -10466,9 +10466,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method8698(CS2Executor executor) {
-		if (Class282_Sub13.aClass61_7587 != null) {
+		if (Class282_Sub13.GUEST_CLAN_SETTINGS != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aClass61_7010 = Class282_Sub13.aClass61_7587;
+			executor.currentClanSettings = Class282_Sub13.GUEST_CLAN_SETTINGS;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -10491,7 +10491,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8701(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aBool624 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.allowGuests ? 1 : 0;
 	}
 
 	static final void method8738(CS2Executor executor) {
@@ -10634,7 +10634,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1135(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aClass61_7010.aByte628;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentClanSettings.aByte628;
 	}
 
 	/**

@@ -460,7 +460,7 @@ public class MapRegion {
 		int i_16;
 		if (i_1 == 18) {
 			for (i_5 = 0; i_5 < client.anInt7210; i_5++) {
-				Class282_Sub47 class282_sub47_15 = client.aClass282_Sub47Array7209[i_5];
+				StringNode class282_sub47_15 = client.aClass282_Sub47Array7209[i_5];
 				if (class282_sub47_15 != null) {
 					NPC npc_7 = (NPC) class282_sub47_15.anObject8068;
 					for (i_8 = 0; i_8 < npc_7.regionBaseX.length; i_8++) {
@@ -480,7 +480,7 @@ public class MapRegion {
 			i_6 = this.sizeX * 512 - 512;
 			i_16 = this.sizeY * 512 - 512;
 			for (i_8 = 0; i_8 < client.anInt7210; i_8++) {
-				Class282_Sub47 class282_sub47_9 = client.aClass282_Sub47Array7209[i_8];
+				StringNode class282_sub47_9 = client.aClass282_Sub47Array7209[i_8];
 				if (class282_sub47_9 != null) {
 					NPC npc_18 = (NPC) class282_sub47_9.anObject8068;
 					Vector3 vector3_19 = Vector3.popVectorStackTo(npc_18.method11166().aClass385_3595);
@@ -514,9 +514,9 @@ public class MapRegion {
 			if (bool_21) {
 				client.anInt7210 = client.NPCS.method7748((short) 292);
 				i_8 = 0;
-				Class282_Sub47 class282_sub47_28;
+				StringNode class282_sub47_28;
 				for (Iterator iterator_24 = client.NPCS.iterator(); iterator_24.hasNext(); client.aClass282_Sub47Array7209[i_8++] = class282_sub47_28) {
-					class282_sub47_28 = (Class282_Sub47) iterator_24.next();
+					class282_sub47_28 = (StringNode) iterator_24.next();
 				}
 			}
 		}
@@ -738,7 +738,7 @@ public class MapRegion {
 						}
 					}
 					for (i_2 = 0; i_2 < client.aClass282_Sub47Array7209.length; i_2++) {
-						Class282_Sub47 class282_sub47_19 = client.aClass282_Sub47Array7209[i_2];
+						StringNode class282_sub47_19 = client.aClass282_Sub47Array7209[i_2];
 						if (class282_sub47_19 != null) {
 							((Class521_Sub1) class282_sub47_19.anObject8068).aClass206_7970 = null;
 						}
@@ -1106,11 +1106,11 @@ public class MapRegion {
 					int i_12 = (this.regionIds[i_3] >> 8) * 64 - this.coordGrid.x + i_10;
 					int i_13 = (this.regionIds[i_3] & 0xff) * 64 - this.coordGrid.y + i_11;
 					NPCDefinitions npcdefinitions_14 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbytebuffer_18.readUnsignedShort());
-					Class282_Sub47 class282_sub47_15 = (Class282_Sub47) client.NPCS.get((long) i_7);
+					StringNode class282_sub47_15 = (StringNode) client.NPCS.get((long) i_7);
 					if (class282_sub47_15 == null && (npcdefinitions_14.walkMask & 0x1) > 0 && i_12 >= 0 && i_12 + npcdefinitions_14.size < this.sizeX && i_13 >= 0 && i_13 + npcdefinitions_14.size < this.sizeY) {
 						NPC npc_16 = new NPC(this.sceneObjectManager);
 						npc_16.index = i_7;
-						Class282_Sub47 class282_sub47_17 = new Class282_Sub47(npc_16);
+						StringNode class282_sub47_17 = new StringNode(npc_16);
 						client.NPCS.put(class282_sub47_17, (long) i_7);
 						client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_17;
 						client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = i_7;

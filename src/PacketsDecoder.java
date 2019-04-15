@@ -374,7 +374,7 @@ public class PacketsDecoder extends Class455 {
 				}
 			} else if (i_8 >> 29 != 0) {
 				int i_35 = i_8 & 0xffff;
-				Class282_Sub47 class282_sub47_116 = (Class282_Sub47) client.NPCS.get((long) i_35);
+				StringNode class282_sub47_116 = (StringNode) client.NPCS.get((long) i_35);
 				if (class282_sub47_116 != null) {
 					NPC npc_120 = (NPC) class282_sub47_116.anObject8068;
 					Class161 class161_104 = npc_120.aClass161Array10339[key];
@@ -637,7 +637,7 @@ public class PacketsDecoder extends Class455 {
 				animationIds[i_6] = buffer.readIntLE();
 			}
 			int speed = buffer.readUnsignedByte();
-			Class282_Sub47 class282_sub47_131 = (Class282_Sub47) client.NPCS.get((long) npcIndex);
+			StringNode class282_sub47_131 = (StringNode) client.NPCS.get((long) npcIndex);
 			if (class282_sub47_131 != null) {
 				Class20.animate((Animable) class282_sub47_131.anObject8068, animationIds, speed, true, (byte) 72);
 			}
@@ -1350,17 +1350,17 @@ public class PacketsDecoder extends Class455 {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			if (context.currentPacketSize == 1) {
 				if (bool_91) {
-					QuickchatFiller.aClass61_528 = null;
+					QuickchatFiller.CLAN_SETTINGS = null;
 				} else {
-					Class282_Sub13.aClass61_7587 = null;
+					Class282_Sub13.GUEST_CLAN_SETTINGS = null;
 				}
 				context.currentPacket = null;
 				return true;
 			} else {
 				if (bool_91) {
-					QuickchatFiller.aClass61_528 = new Class61(buffer);
+					QuickchatFiller.CLAN_SETTINGS = new ClanSettings(buffer);
 				} else {
-					Class282_Sub13.aClass61_7587 = new Class61(buffer);
+					Class282_Sub13.GUEST_CLAN_SETTINGS = new ClanSettings(buffer);
 				}
 				context.currentPacket = null;
 				return true;
@@ -1633,11 +1633,11 @@ public class PacketsDecoder extends Class455 {
 			client.anInt7192 = client.anInt7347;
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			Class348 class348_97 = new Class348(buffer);
-			Class61 class61_99;
+			ClanSettings class61_99;
 			if (bool_91) {
-				class61_99 = QuickchatFiller.aClass61_528;
+				class61_99 = QuickchatFiller.CLAN_SETTINGS;
 			} else {
-				class61_99 = Class282_Sub13.aClass61_7587;
+				class61_99 = Class282_Sub13.GUEST_CLAN_SETTINGS;
 			}
 			class348_97.method6173(class61_99);
 			context.currentPacket = null;

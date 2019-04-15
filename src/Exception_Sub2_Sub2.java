@@ -22,7 +22,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 
 			for (i = 0; i < size; i++) {
 				int key = client.NPC_UPDATE_INDICES[i];
-				NPC npc = (NPC) ((Class282_Sub47) client.NPCS.get((long) key)).anObject8068;
+				NPC npc = (NPC) ((StringNode) client.NPCS.get((long) key)).anObject8068;
 				int needsUpdate = buffer.readBits(1);
 				if (needsUpdate == 0) {
 					client.NPC_UPDATE_INDICES[++client.NPC_UPDATE_INDEX - 1] = key;

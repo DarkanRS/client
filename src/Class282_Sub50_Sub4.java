@@ -7,7 +7,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 			int i_4 = rsbytebuffer_1.readUnsignedByte();
 			int i_5;
 			if (this.aClass465_9518 == null) {
-				i_5 = ImageIndexLoader.nextPowerOfTwo(i_4, -1925062571);
+				i_5 = Utils.nextPowerOfTwo(i_4);
 				this.aClass465_9518 = new IterableNodeMap(i_5);
 			}
 
@@ -16,9 +16,9 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 				int i_7 = rsbytebuffer_1.read24BitUnsignedInteger();
 				Object obj_8;
 				if (bool_6) {
-					obj_8 = new Class282_Sub47(rsbytebuffer_1.readString());
+					obj_8 = new StringNode(rsbytebuffer_1.readString());
 				} else {
-					obj_8 = new Class282_Sub38(rsbytebuffer_1.readInt());
+					obj_8 = new IntNode(rsbytebuffer_1.readInt());
 				}
 
 				this.aClass465_9518.put((Node) obj_8, (long) i_7);
@@ -42,7 +42,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 		if (this.aClass465_9518 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_9518.get((long) i_1);
+			IntNode class282_sub38_4 = (IntNode) this.aClass465_9518.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -51,7 +51,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 		if (this.aClass465_9518 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_9518.get((long) i_1);
+			StringNode class282_sub47_4 = (StringNode) this.aClass465_9518.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}

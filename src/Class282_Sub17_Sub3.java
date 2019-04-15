@@ -4,8 +4,8 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 
 	Class348 this$0;
 
-	void method12251(Class61 class61_1) {
-		class61_1.aString622 = this.aString9935;
+	void method12251(ClanSettings class61_1) {
+		class61_1.clanName = this.aString9935;
 	}
 
 	void method12250(RsByteBuffer rsbytebuffer_1) {
@@ -22,8 +22,8 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 		rsbytebuffer_1.readInt();
 	}
 
-	void method12252(Class61 class61_1) {
-		class61_1.aString622 = this.aString9935;
+	void method12252(ClanSettings class61_1) {
+		class61_1.clanName = this.aString9935;
 	}
 
 	void method12253(RsByteBuffer rsbytebuffer_1) {
@@ -31,16 +31,16 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 		rsbytebuffer_1.readInt();
 	}
 
-	void method12254(Class61 class61_1) {
-		class61_1.aString622 = this.aString9935;
+	void method12254(ClanSettings class61_1) {
+		class61_1.clanName = this.aString9935;
 	}
 
-	void method12258(Class61 class61_1) {
-		class61_1.aString622 = this.aString9935;
+	void method12258(ClanSettings class61_1) {
+		class61_1.clanName = this.aString9935;
 	}
 
-	void method12256(Class61 class61_1) {
-		class61_1.aString622 = this.aString9935;
+	void method12256(ClanSettings class61_1) {
+		class61_1.clanName = this.aString9935;
 	}
 
 	void method12249(RsByteBuffer rsbytebuffer_1) {
@@ -48,8 +48,8 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 		rsbytebuffer_1.readInt();
 	}
 
-	void method12255(Class61 class61_1) {
-		class61_1.aString622 = this.aString9935;
+	void method12255(ClanSettings class61_1) {
+		class61_1.clanName = this.aString9935;
 	}
 
 	static void method15405(int i_0, int i_1, int i_2, int i_3, int i_4) {
