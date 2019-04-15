@@ -32,7 +32,7 @@ public class MeshModifier {
 	}
 
 	public static void method7041(byte b_0) {
-		Class468_Sub8.INTERFACES = new Interface[Class388.INTERFACE_INDEX.containersCount()];
+		Class468_Sub8.INTERFACES = new RSInterface[Class388.INTERFACE_INDEX.containersCount()];
 		MapAreaIndexLoader.INTERFACES_LOADED = new boolean[Class388.INTERFACE_INDEX.containersCount()];
 	}
 

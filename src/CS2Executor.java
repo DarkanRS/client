@@ -25,8 +25,8 @@ public class CS2Executor {
 	int longStackPtr = 0;
 	int anInt7002 = 0;
 	Class509[] aClass509Array7016 = new Class509[50];
-	InterfaceWithDefs aClass513_7007 = new InterfaceWithDefs();
-	InterfaceWithDefs aClass513_6994 = new InterfaceWithDefs();
+	RSHookableInterface hookedInterface1 = new RSHookableInterface();
+	RSHookableInterface hookedInterface2 = new RSHookableInterface();
 	int anInt7015 = 0;
 	int instrPtr = -1;
 

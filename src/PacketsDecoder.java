@@ -1554,7 +1554,7 @@ public class PacketsDecoder extends Class455 {
 				Class351.closeChildren(class282_sub44_103, true, false, -1452683291);
 			}
 			if (client.aClass118_7352 != null) {
-				Class109.redrawComponent(client.aClass118_7352, (byte) 55);
+				Class109.redrawComponent(client.aClass118_7352);
 				client.aClass118_7352 = null;
 			}
 			context.currentPacket = null;
@@ -2088,11 +2088,11 @@ public class PacketsDecoder extends Class455 {
 			}
 			IComponentDefinitions icomponentdefinitions_130 = IComponentDefinitions.getDefs(flags);
 			if (icomponentdefinitions_130 != null) {
-				Class109.redrawComponent(icomponentdefinitions_130, (byte) -6);
+				Class109.redrawComponent(icomponentdefinitions_130);
 			}
 			icomponentdefinitions_130 = IComponentDefinitions.getDefs(interfaceHash);
 			if (icomponentdefinitions_130 != null) {
-				Class109.redrawComponent(icomponentdefinitions_130, (byte) 22);
+				Class109.redrawComponent(icomponentdefinitions_130);
 				HostNameIdentifier.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
 			}
 			if (client.anInt7349 != -1) {

@@ -63,7 +63,7 @@ public class IComponentDefinitions {
 	public String text = "";
 	public int color = 0;
 	public boolean aBool1327 = false;
-	public int anInt1453 = 0;
+	public int transparency = 0;
 	public int anInt1323 = 0;
 	public int anInt1324 = 0;
 	public int anInt1358 = 0;
@@ -230,7 +230,7 @@ public class IComponentDefinitions {
 			i_5 = rsbytebuffer_1.readUnsignedByte();
 			this.aBool1322 = (i_5 & 0x1) != 0;
 			this.aBool1327 = (i_5 & 0x2) != 0;
-			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
+			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1323 = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1324 = rsbytebuffer_1.readInt();
 			this.aBool1325 = rsbytebuffer_1.readUnsignedByte() == 1;
@@ -288,7 +288,7 @@ public class IComponentDefinitions {
 			this.anInt1360 = rsbytebuffer_1.readUnsignedByte();
 			this.aBool1420 = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.color = rsbytebuffer_1.readInt();
-			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
+			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 >= 0) {
 				this.anInt1362 = rsbytebuffer_1.readUnsignedByte();
 			}
@@ -296,7 +296,7 @@ public class IComponentDefinitions {
 		if (this.type == 3) {
 			this.color = rsbytebuffer_1.readInt();
 			this.aBool1316 = rsbytebuffer_1.readUnsignedByte() == 1;
-			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
+			this.transparency = rsbytebuffer_1.readUnsignedByte();
 		}
 		if (this.type == 9) {
 			this.anInt1377 = rsbytebuffer_1.readUnsignedByte();

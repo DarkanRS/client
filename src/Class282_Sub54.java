@@ -426,7 +426,7 @@ public class Class282_Sub54 extends Node {
 		rsbytebuffer_2.writeByte(this.textures.method12873(2145197376));
 		rsbytebuffer_2.writeByte(this.aClass468_Sub18_8214.getValue(-120460114));
 		rsbytebuffer_2.writeByte(0);
-		rsbytebuffer_2.writeByte(this.water.getValue(1244153925));
+		rsbytebuffer_2.writeByte(this.water.getValue());
 		rsbytebuffer_2.writeByte(this.screenSize.method12687(416506379));
 		rsbytebuffer_2.writeByte(this.customCursors.method12675());
 		rsbytebuffer_2.writeByte(this.graphics.method12654());

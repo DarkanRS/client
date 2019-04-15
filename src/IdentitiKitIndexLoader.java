@@ -93,10 +93,10 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		ClipMap.method6007(class282_sub44_1.anInt8063, ints_2, -1937827624);
 		IComponentDefinitions icomponentdefinitions_6 = IComponentDefinitions.getDefs(i_0);
 		if (icomponentdefinitions_6 != null) {
-			Class109.redrawComponent(icomponentdefinitions_6, (byte) 12);
+			Class109.redrawComponent(icomponentdefinitions_6);
 		}
 		if (client.aClass118_7352 != null) {
-			Class109.redrawComponent(client.aClass118_7352, (byte) -25);
+			Class109.redrawComponent(client.aClass118_7352);
 			client.aClass118_7352 = null;
 		}
 		OutputStream_Sub1.method12938((byte) 26);

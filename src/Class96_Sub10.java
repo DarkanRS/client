@@ -22,7 +22,7 @@ public abstract class Class96_Sub10 extends CutsceneAction {
     }
 
     public static void method14603(int i_0, int i_1, int i_2, String string_3, byte b_4) {
-        IComponentDefinitions icomponentdefinitions_5 = Index.method5694(i_1, i_2, -1959607972);
+        IComponentDefinitions icomponentdefinitions_5 = Index.getIComponentDefinitions(i_1, i_2);
         if (icomponentdefinitions_5 != null) {
             if (icomponentdefinitions_5.params != null) {
                 HookRequest hookrequest_6 = new HookRequest();

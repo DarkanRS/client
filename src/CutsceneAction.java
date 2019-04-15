@@ -17,7 +17,7 @@ public abstract class CutsceneAction {
 
 	public abstract void method1601();
 
-	public static Interface method1605(int i_0) {
+	public static RSInterface method1605(int i_0) {
 		return Class468_Sub8.INTERFACES[i_0 >> 16];
 	}
 

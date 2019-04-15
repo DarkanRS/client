@@ -1,6 +1,6 @@
 public class Class468_Sub8 extends Preference {
 
-	public static Interface[] INTERFACES;
+	public static RSInterface[] INTERFACES;
 
 	void method7783(int i_1) {
 		this.anInt5578 = i_1;

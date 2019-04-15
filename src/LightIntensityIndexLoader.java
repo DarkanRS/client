@@ -63,7 +63,7 @@ public class LightIntensityIndexLoader {
 			if (class282_sub44_0 != null && !class282_sub44_0.method13401()) {
 				Class351.closeChildren(class282_sub44_0, true, false, -1434411886);
 			} else {
-				Interface interface_11 = Class468_Sub8.INTERFACES[i_1];
+				RSInterface interface_11 = Class468_Sub8.INTERFACES[i_1];
 				client.method11768(interface_11, interface_11.method1616(2121969346), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9);
 			}
 		}

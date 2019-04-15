@@ -169,7 +169,7 @@ public class IdentikitDefinition implements Definition {
         return i_0 == 16711935 ? -1 : Class5.method294(i_0, (byte) -81);
     }
 
-    public static void method913(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
+    public static void method913(RSInterface interface_0, IComponentDefinitions icomponentdefinitions_1) {
         IComponentDefinitions icomponentdefinitions_3 = Class96_Sub23.method14682(interface_0, icomponentdefinitions_1);
         int i_4;
         int i_5;

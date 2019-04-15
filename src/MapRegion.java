@@ -752,7 +752,7 @@ public class MapRegion {
 				}
 				boolean highDetailWater = false;
 				int chunkSize;
-				if (Class393.preferences.water.getValue(-2143596575) == 2) {
+				if (Class393.preferences.water.getValue() == 2) {
 					for (chunkSize = 0; chunkSize < this.mapDataBuffer.length; chunkSize++) {
 						if (this.hdWaterLandscapeDataBuffer[chunkSize] != null || this.hdWaterMapDataBuffer[chunkSize] != null) {
 							highDetailWater = true;
@@ -779,7 +779,7 @@ public class MapRegion {
 				this.aClass329_Sub1_3167 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 4, this.sizeX, this.sizeY, false, this.aClass311_3202, this.aClass239_3175);
 				this.aClass329_Sub1_3167.method5835(1920682092);
 				this.aClass329_Sub1_3167.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -19);
-				this.aClass329_Sub1_3167.highDetailWater = Class393.preferences.water.getValue(-1025705953) == 2;
+				this.aClass329_Sub1_3167.highDetailWater = Class393.preferences.water.getValue() == 2;
 				this.aClass329_Sub1_3167.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786() == 1;
 				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(-267054469) == 1;
 				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.textures.method12873(1377050121) == 1;
@@ -798,7 +798,7 @@ public class MapRegion {
 					this.highDetailWaterPlane = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 1, this.sizeX, this.sizeY, true, this.aClass311_3202, this.aClass239_3175);
 					this.highDetailWaterPlane.method5835(1973869970);
 					this.highDetailWaterPlane.anInt3809 = Class393.preferences.aClass468_Sub2_8205.method12624((byte) -93);
-					this.highDetailWaterPlane.highDetailWater = Class393.preferences.water.getValue(-962367192) == 2;
+					this.highDetailWaterPlane.highDetailWater = Class393.preferences.water.getValue() == 2;
 					this.highDetailWaterPlane.aBool3780 = Class393.preferences.aClass468_Sub19_8204.method12786() == 1;
 					this.highDetailWaterPlane.aBool3820 = Class393.preferences.aClass468_Sub17_8200.method12762(1666715266) == 1;
 					this.highDetailWaterPlane.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;

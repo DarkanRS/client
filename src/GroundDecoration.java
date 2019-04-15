@@ -359,7 +359,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					}
 					int i_14 = icomponentdefinitions_12.anInt1299 + i_6;
 					int i_15 = i_7 + icomponentdefinitions_12.anInt1428;
-					int i_16 = icomponentdefinitions_12.anInt1453;
+					int i_16 = icomponentdefinitions_12.transparency;
 					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).settingsHash != 0 || icomponentdefinitions_12.type == 0) && i_16 > 127) {
 						i_16 = 127;
 					}
@@ -530,7 +530,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									FontRenderer fontrenderer_43 = icomponentdefinitions_12.method1988(Class487.aClass378_5752, client.anInterface35_7206, 177804367);
 									if (fontrenderer_43 == null) {
 										if (IComponentDefinitions.aBool1399) {
-											Class109.redrawComponent(icomponentdefinitions_12, (byte) -4);
+											Class109.redrawComponent(icomponentdefinitions_12);
 										}
 									} else {
 										i_22 = icomponentdefinitions_12.color;
@@ -625,7 +625,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 												}
 											} else if (IComponentDefinitions.aBool1399) {
-												Class109.redrawComponent(icomponentdefinitions_12, (byte) 43);
+												Class109.redrawComponent(icomponentdefinitions_12);
 											}
 										}
 									} else if (icomponentdefinitions_12.type == 6) {
@@ -644,7 +644,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (meshrasterizer_40 != null) {
 													i_23 = -meshrasterizer_40.YA() >> 1;
 												} else {
-													Class109.redrawComponent(icomponentdefinitions_12, (byte) 15);
+													Class109.redrawComponent(icomponentdefinitions_12);
 												}
 											}
 										} else {
@@ -656,7 +656,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													if (player_37 != null && (i_24 == client.anInt7315 || Class272.method4840(player_37.displayName, (byte) 111) == icomponentdefinitions_12.anInt1339)) {
 														meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, player_37.playerAppearance);
 														if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
-															Class109.redrawComponent(icomponentdefinitions_12, (byte) -76);
+															Class109.redrawComponent(icomponentdefinitions_12);
 														}
 													}
 												}
@@ -672,12 +672,12 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												if (icomponentdefinitions_12.aClass456_1437 != null && icomponentdefinitions_12.aClass456_1437.hasDefs()) {
 													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, icomponentdefinitions_12.aClass456_1437, VertexNormal.myPlayer.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
-														Class109.redrawComponent(icomponentdefinitions_12, (byte) -7);
+														Class109.redrawComponent(icomponentdefinitions_12);
 													}
 												} else {
 													meshrasterizer_40 = icomponentdefinitions_12.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, VertexNormal.myPlayer.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
-														Class109.redrawComponent(icomponentdefinitions_12, (byte) -35);
+														Class109.redrawComponent(icomponentdefinitions_12);
 													}
 												}
 											} else {

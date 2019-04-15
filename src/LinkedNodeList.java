@@ -174,7 +174,7 @@ public class LinkedNodeList {
             }
         }
         if (client.aClass118_7352 != null) {
-            Class109.redrawComponent(client.aClass118_7352, (byte) 66);
+            Class109.redrawComponent(client.aClass118_7352);
             client.aClass118_7352 = null;
         }
     }

@@ -591,8 +591,8 @@ public final class Index {
 		return i_6;
 	}
 
-	public static IComponentDefinitions method5694(int i_0, int i_1, int i_2) {
-		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_0);
+	public static IComponentDefinitions getIComponentDefinitions(int interfaceId, int i_1) {
+		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(interfaceId);
 		return i_1 == -1 ? icomponentdefinitions_3 : (icomponentdefinitions_3 != null && icomponentdefinitions_3.aClass118Array1438 != null && i_1 < icomponentdefinitions_3.aClass118Array1438.length ? icomponentdefinitions_3.aClass118Array1438[i_1] : null);
 	}
 }

@@ -244,22 +244,22 @@ public class Class96_Sub4 extends CutsceneAction {
 
 			if (clickType == 30 && client.aClass118_7352 == null) {
 				Class158_Sub2.method14355(i_5, i_4, 382043562);
-				client.aClass118_7352 = Index.method5694(i_5, i_4, -702392131);
+				client.aClass118_7352 = Index.getIComponentDefinitions(i_5, i_4);
 				if (client.aClass118_7352 != null) {
-					Class109.redrawComponent(client.aClass118_7352, (byte) -7);
+					Class109.redrawComponent(client.aClass118_7352);
 				}
 			}
 
 			IComponentDefinitions icomponentdefinitions_23;
 			if (clickType == 58) {
-				icomponentdefinitions_23 = Index.method5694(i_5, i_4, 1636358419);
+				icomponentdefinitions_23 = Index.getIComponentDefinitions(i_5, i_4);
 				if (icomponentdefinitions_23 != null) {
 					Class151.method2590(icomponentdefinitions_23);
 				}
 			}
 
 			if (clickType == 25) {
-				icomponentdefinitions_23 = Index.method5694(i_5, i_4, 1215515572);
+				icomponentdefinitions_23 = Index.getIComponentDefinitions(i_5, i_4);
 				if (icomponentdefinitions_23 != null) {
 					Class60.method1170();
 					IComponentSettings class282_sub10_21 = client.method11633(icomponentdefinitions_23);
@@ -358,7 +358,7 @@ public class Class96_Sub4 extends CutsceneAction {
 				}
 
 				if (VarcStringIndexLoader.aClass118_4825 != null && client.anInt7297 == 0) {
-					Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825, (byte) -103);
+					Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825);
 				}
 			}
 		}

@@ -29,7 +29,7 @@ public class Class151 {
     static void method2590(IComponentDefinitions icomponentdefinitions_0) {
         if (client.aBool7344) {
             if (icomponentdefinitions_0.anObjectArray1393 != null) {
-                IComponentDefinitions icomponentdefinitions_2 = Index.method5694(Class7.anInt56, client.anInt7345, -1264111799);
+                IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
                 if (icomponentdefinitions_2 != null) {
                     HookRequest hookrequest_3 = new HookRequest();
                     hookrequest_3.iComponentDefs = icomponentdefinitions_0;

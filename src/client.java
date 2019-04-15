@@ -1097,7 +1097,7 @@ public final class client extends Engine {
 			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.aClass468_Sub4_8187.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.aClass468_Sub19_8204.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.aClass468_Sub2_8205.method12624((byte) -13) + " ";
-			str_2 = str_2 + Class393.preferences.water.getValue(-14216160) + " ";
+			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
 			str_2 = str_2 + Class393.preferences.textures.method12873(-932998306) + " ";
 			str_2 = str_2 + Class393.preferences.aClass468_Sub12_8195.method12706((byte) 75) + " ";
 			str_2 = str_2 + "0 ";
@@ -1847,7 +1847,7 @@ public final class client extends Engine {
 		(new Thread(IndexLoaders.MAP_REGION_LOADER_THREAD)).start();
 	}
 
-	public static final void method11768(Interface interface_0, IComponentDefinitions[] arr_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
+	public static final void method11768(RSInterface interface_0, IComponentDefinitions[] arr_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
 		for (int i_11 = 0; i_11 < arr_1.length; i_11++) {
 			IComponentDefinitions icomponentdefinitions_12 = arr_1[i_11];
 			if (icomponentdefinitions_12 != null && i_2 == icomponentdefinitions_12.parent) {
@@ -1909,7 +1909,7 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = icomponentdefinitions_12.aBool1328 && icomponentdefinitions_12.type == 5 && icomponentdefinitions_12.anInt1453 == 0 && icomponentdefinitions_12.anInt1404 < 0 && icomponentdefinitions_12.anInt1426 == -1 && icomponentdefinitions_12.anInt1435 == -1 && !icomponentdefinitions_12.aBool1322 && icomponentdefinitions_12.anInt1423 == 0;
+						boolean bool_47 = icomponentdefinitions_12.aBool1328 && icomponentdefinitions_12.type == 5 && icomponentdefinitions_12.transparency == 0 && icomponentdefinitions_12.anInt1404 < 0 && icomponentdefinitions_12.anInt1426 == -1 && icomponentdefinitions_12.anInt1435 == -1 && !icomponentdefinitions_12.aBool1322 && icomponentdefinitions_12.anInt1423 == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -2162,7 +2162,7 @@ public final class client extends Engine {
 									}
 
 									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
-										IComponentDefinitions icomponentdefinitions_35 = Index.method5694(Class7.anInt56, anInt7345, 381428528);
+										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(Class7.anInt56, anInt7345);
 										if (icomponentdefinitions_35 != null) {
 											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, icomponentdefinitions_12.anInt1426, 1L, i_33, i_34, true, false, (long) (icomponentdefinitions_12.anInt1288 << 32 | icomponentdefinitions_12.idHash), true, -1033171513);
 										} else {

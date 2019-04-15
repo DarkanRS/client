@@ -22,7 +22,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public int anInt10367;
 	byte aByte10358;
 	int interfaceIdToLoad;
-	public Interface inter;
+	public RSInterface inter;
 	public int loadedInterfaceId;
 	int anInt10315;
 	int anInt10317;
@@ -567,7 +567,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (this.loadedInterfaceId == i_1) {
 			return true;
 		} else {
-			this.inter = SkyboxIndexLoader.getInterface(i_1, (int[]) null, (Interface) null, true, (byte) -56);
+			this.inter = SkyboxIndexLoader.getInterface(i_1, (int[]) null, (RSInterface) null, true, (byte) -56);
 			if (this.inter == null) {
 				return false;
 			} else {
