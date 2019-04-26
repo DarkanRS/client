@@ -75,7 +75,7 @@ public class SkyboxIndexLoader {
 		Class407.aCalendar4846.setTime(new Date(long_0));
 	}
 
-	public static Interface getInterface(int interfaceId, int[] ints_1, Interface interface_2, boolean bool_3, byte b_4) {
+	public static RSInterface getInterface(int interfaceId, int[] ints_1, RSInterface interface_2, boolean bool_3, byte b_4) {
 		if (!Class388.INTERFACE_INDEX.loadArchive(interfaceId)) {
 			return null;
 		} else {
@@ -89,7 +89,7 @@ public class SkyboxIndexLoader {
 				arr_6 = interface_2.components;
 			}
 			if (interface_2 == null) {
-				interface_2 = new Interface(bool_3, arr_6);
+				interface_2 = new RSInterface(bool_3, arr_6);
 			} else {
 				interface_2.components = arr_6;
 				interface_2.aBool999 = bool_3;

@@ -11,7 +11,7 @@ public class Class282_Sub17_Sub8 extends Class282_Sub17 {
 		this.anInt10021 = rsbytebuffer_1.readUnsignedShort() * 86059087 * 1415900847;
 	}
 
-	void method12251(Class61 class61_1) {
+	void method12251(ClanSettings class61_1) {
 		class61_1.method1208(this.anInt10021, 2131947597);
 	}
 
@@ -28,23 +28,23 @@ public class Class282_Sub17_Sub8 extends Class282_Sub17 {
 		this.anInt10021 = rsbytebuffer_1.readUnsignedShort() * 86059087 * 1415900847;
 	}
 
-	void method12255(Class61 class61_1) {
+	void method12255(ClanSettings class61_1) {
 		class61_1.method1208(1415900847 * this.anInt10021 * 86059087, 2142138722);
 	}
 
-	void method12258(Class61 class61_1) {
+	void method12258(ClanSettings class61_1) {
 		class61_1.method1208(1415900847 * this.anInt10021 * 86059087, 2146289503);
 	}
 
-	void method12256(Class61 class61_1) {
+	void method12256(ClanSettings class61_1) {
 		class61_1.method1208(1415900847 * this.anInt10021 * 86059087, 2132162006);
 	}
 
-	void method12252(Class61 class61_1) {
+	void method12252(ClanSettings class61_1) {
 		class61_1.method1208(1415900847 * this.anInt10021 * 86059087, 2133274000);
 	}
 
-	void method12254(Class61 class61_1) {
+	void method12254(ClanSettings class61_1) {
 		class61_1.method1208(1415900847 * this.anInt10021 * 86059087, 2138242040);
 	}
 

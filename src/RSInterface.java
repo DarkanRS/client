@@ -1,9 +1,7 @@
-public class Interface {
+public class RSInterface {
 
 	IComponentDefinitions[] iComponentDefinitions;
-
 	public IComponentDefinitions[] components;
-
 	public boolean aBool999;
 
 	public IComponentDefinitions[] method1616(int i_1) {
@@ -27,7 +25,84 @@ public class Interface {
 		}
 	}
 
-	Interface(boolean bool_1, IComponentDefinitions[] arr_2) {
+	static void method7554(RSInterface inter, IComponentDefinitions defs) {
+	    if (defs != null) {
+	        int i_4;
+	        if (defs.anInt1288 != -1) {
+	            IComponentDefinitions icomponentdefinitions_3 = inter.getComponent(defs.parent);
+	            if (icomponentdefinitions_3 != null) {
+	                if (icomponentdefinitions_3.aClass118Array1439 == icomponentdefinitions_3.aClass118Array1438) {
+	                    icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
+	                    icomponentdefinitions_3.aClass118Array1439[icomponentdefinitions_3.aClass118Array1439.length - 1] = defs;
+	                    Class503.method8359(icomponentdefinitions_3.aClass118Array1438, 0, icomponentdefinitions_3.aClass118Array1439, 0, defs.anInt1288);
+	                    Class503.method8359(icomponentdefinitions_3.aClass118Array1438, defs.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1439, defs.anInt1288, icomponentdefinitions_3.aClass118Array1438.length - defs.anInt1288 - 1);
+	                } else {
+	                    i_4 = 0;
+	                    IComponentDefinitions[] arr_5;
+	                    for (arr_5 = icomponentdefinitions_3.aClass118Array1439; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
+	                        ;
+	                    }
+	                    if (i_4 < arr_5.length) {
+	                        Class503.method8359(arr_5, i_4 + 1, arr_5, i_4, arr_5.length - i_4 - 1);
+	                        arr_5[icomponentdefinitions_3.aClass118Array1439.length - 1] = defs;
+	                    }
+	                }
+	            }
+	        } else {
+	            IComponentDefinitions[] arr_6 = inter.method1617(-894902521);
+	            for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != defs; i_4++) {
+	                ;
+	            }
+	            if (i_4 < arr_6.length) {
+	                Class503.method8359(arr_6, i_4 + 1, arr_6, i_4, arr_6.length - i_4 - 1);
+	                arr_6[arr_6.length - 1] = defs;
+	            }
+	        }
+	    }
+	}
+
+	static void method3710(RSInterface inter, IComponentDefinitions defs) {
+		if (defs != null) {
+			int i_4;
+			if (defs.anInt1288 != -1) {
+				IComponentDefinitions icomponentdefinitions_3 = inter.components[defs.parent & 0xffff];
+				if (icomponentdefinitions_3 != null) {
+					if (icomponentdefinitions_3.aClass118Array1438 == icomponentdefinitions_3.aClass118Array1439) {
+						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
+						icomponentdefinitions_3.aClass118Array1439[0] = defs;
+						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, 0, icomponentdefinitions_3.aClass118Array1439, 1, defs.anInt1288);
+						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, defs.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1439, defs.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1438.length - defs.anInt1288 - 1);
+					} else {
+						i_4 = 0;
+	
+						IComponentDefinitions[] arr_5;
+						for (arr_5 = icomponentdefinitions_3.aClass118Array1439; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
+							;
+						}
+	
+						if (i_4 < arr_5.length) {
+							Class503.method8359(arr_5, 0, arr_5, 1, i_4);
+							arr_5[0] = defs;
+						}
+					}
+				}
+			} else {
+				IComponentDefinitions[] arr_6 = inter.method1617(-1207733107);
+	
+				for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != defs; i_4++) {
+					;
+				}
+	
+				if (i_4 < arr_6.length) {
+					Class503.method8359(arr_6, 0, arr_6, 1, i_4);
+					arr_6[0] = defs;
+				}
+			}
+		}
+	
+	}
+
+	RSInterface(boolean bool_1, IComponentDefinitions[] arr_2) {
 		this.components = arr_2;
 		this.aBool999 = bool_1;
 	}

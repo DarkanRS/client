@@ -6,7 +6,7 @@ public abstract class Class109 {
 
     abstract void method1851();
 
-    public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
+    public static void redrawComponent(IComponentDefinitions icomponentdefinitions_0) {
         if (icomponentdefinitions_0.anInt1450 == client.anInt7408) {
             client.aBoolArray7443[icomponentdefinitions_0.anInt1449] = true;
         }

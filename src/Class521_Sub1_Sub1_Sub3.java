@@ -46,7 +46,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					}
 				} else {
 					i_14 = this.anInt10389 - 1;
-					Class282_Sub47 class282_sub47_4 = (Class282_Sub47) client.NPCS.get((long) i_14);
+					StringNode class282_sub47_4 = (StringNode) client.NPCS.get((long) i_14);
 					if (class282_sub47_4 != null) {
 						obj_2 = (Animable) class282_sub47_4.anObject8068;
 					}

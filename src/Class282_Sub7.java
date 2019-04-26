@@ -383,9 +383,9 @@ public class Class282_Sub7 extends Node {
 							i_12 = i_8 >> 16 & 0x7f;
 							if (i_12 > 0) {
 								int i_13 = ints_2[i_10];
-								Class282_Sub47 class282_sub47_14 = (Class282_Sub47) this.aClass465_7521.get((long) i_13);
+								StringNode class282_sub47_14 = (StringNode) this.aClass465_7521.get((long) i_13);
 								if (class282_sub47_14 == null) {
-									class282_sub47_14 = new Class282_Sub47(new byte[128]);
+									class282_sub47_14 = new StringNode(new byte[128]);
 									this.aClass465_7521.put(class282_sub47_14, (long) i_13);
 								}
 

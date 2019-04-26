@@ -34,7 +34,7 @@ public class Class282_Sub13 extends Node {
 
 	int anInt7584;
 
-	public static Class61 aClass61_7587;
+	public static ClanSettings GUEST_CLAN_SETTINGS;
 
 	public static Defaults8Loader DEFAULTS_LOADER_8;
 

@@ -270,14 +270,4 @@ public class ImageIndexLoader implements Interface22 {
 			Class393.preferences.setValue(Class393.preferences.cpu, 2, -2037005846);
 		}
 	}
-
-	public static int nextPowerOfTwo(int i_0, int i_1) {
-		--i_0;
-		i_0 |= i_0 >>> 1;
-		i_0 |= i_0 >>> 2;
-		i_0 |= i_0 >>> 4;
-		i_0 |= i_0 >>> 8;
-		i_0 |= i_0 >>> 16;
-		return i_0 + 1;
-	}
 }

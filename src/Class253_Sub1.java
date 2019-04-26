@@ -46,7 +46,7 @@ public class Class253_Sub1 extends Class253 {
 				throw lineunavailableexception_3;
 			}
 
-			this.method4361(ImageIndexLoader.nextPowerOfTwo(i_1, -434850036));
+			this.method4361(Utils.nextPowerOfTwo(i_1));
 		}
 
 	}

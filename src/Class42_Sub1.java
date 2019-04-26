@@ -60,8 +60,8 @@ public class Class42_Sub1 extends Class42 {
 		Class514.method8841(912280086);
 		client.anInt7221 = 0;
 		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(161279493);
-		Class282_Sub13.aClass61_7587 = null;
-		QuickchatFiller.aClass61_528 = null;
+		Class282_Sub13.GUEST_CLAN_SETTINGS = null;
+		QuickchatFiller.CLAN_SETTINGS = null;
 		Class202_Sub1.GUEST_CLAN_CHANNEL = null;
 		Class113.CLAN_CHANNEL = null;
 		PingRequest.CURRENT_REQUEST = null;

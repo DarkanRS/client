@@ -1024,7 +1024,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 			ints_7 = new int[] {22050};
 		}
 
-		for (Class282_Sub47 class282_sub47_8 = (Class282_Sub47) class282_sub7_1.aClass465_7521.method7750(772569462); class282_sub47_8 != null; class282_sub47_8 = (Class282_Sub47) class282_sub7_1.aClass465_7521.method7751((byte) 16)) {
+		for (StringNode class282_sub47_8 = (StringNode) class282_sub7_1.aClass465_7521.method7750(772569462); class282_sub47_8 != null; class282_sub47_8 = (StringNode) class282_sub7_1.aClass465_7521.method7751((byte) 16)) {
 			int i_9 = (int) class282_sub47_8.data;
 			Class282_Sub14 class282_sub14_10 = (Class282_Sub14) this.aClass465_9694.get((long) i_9);
 			if (class282_sub14_10 == null) {

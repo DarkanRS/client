@@ -122,7 +122,7 @@ public class CursorIndexLoader {
 				}
 			} else {
 				i_17 = i_1 - 1;
-				Class282_Sub47 class282_sub47_18 = (Class282_Sub47) client.NPCS.get((long) i_17);
+				StringNode class282_sub47_18 = (StringNode) client.NPCS.get((long) i_17);
 				if (class282_sub47_18 != null) {
 					obj_16 = (Animable) class282_sub47_18.anObject8068;
 				}

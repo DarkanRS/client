@@ -17,12 +17,12 @@ public abstract class CutsceneAction {
 
 	public abstract void method1601();
 
-	public static Interface method1605(int i_0) {
+	public static RSInterface method1605(int i_0) {
 		return Class468_Sub8.INTERFACES[i_0 >> 16];
 	}
 
 	public static void method1607(byte b_0) {
-		Class61.aClass160_647 = null;
+		ClanSettings.aClass160_647 = null;
 		Class60.aClass160_612 = null;
 		Class467.aClass160_5576 = null;
 		ParamDefinitions.aClass160_5339 = null;

@@ -16,17 +16,17 @@ public final class Class155 {
 		if (this.aClass465_1969 == null) {
 			this.aClass465_1969 = new IterableNodeMap(this.anInt1968);
 		}
-		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1969.get((long) i_1);
+		IntNode class282_sub38_4 = (IntNode) this.aClass465_1969.get((long) i_1);
 		if (class282_sub38_4 != null) {
 			class282_sub38_4.anInt8002 = i_2;
 		} else {
-			class282_sub38_4 = new Class282_Sub38(i_2);
+			class282_sub38_4 = new IntNode(i_2);
 			this.aClass465_1969.put(class282_sub38_4, (long) i_1);
 		}
 	}
 
 	public int method2626(int i_1, byte b_2) {
-		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) this.aClass465_1969.get((long) i_1);
+		IntNode class282_sub38_3 = (IntNode) this.aClass465_1969.get((long) i_1);
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {

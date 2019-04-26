@@ -26,7 +26,7 @@ public class PlayerVarProvider implements VarProvider {
 
 	int poll(boolean bool_1) {
 		long long_3 = TextureDetails.time();
-		for (Class282_Sub45 class282_sub45_5 = (Class282_Sub45) (bool_1 ? this.aClass465_28.method7750(-1019501860) : this.aClass465_28.method7751((byte) 13)); class282_sub45_5 != null; class282_sub45_5 = (Class282_Sub45) this.aClass465_28.method7751((byte) 105)) {
+		for (LongNode class282_sub45_5 = (LongNode) (bool_1 ? this.aClass465_28.method7750(-1019501860) : this.aClass465_28.method7751((byte) 13)); class282_sub45_5 != null; class282_sub45_5 = (LongNode) this.aClass465_28.method7751((byte) 105)) {
 			if ((class282_sub45_5.aLong8066 & 0x3fffffffffffffffL) < long_3) {
 				if ((class282_sub45_5.aLong8066 & 0x4000000000000000L) != 0L) {
 					int i_6 = (int) class282_sub45_5.data;
@@ -50,11 +50,11 @@ public class PlayerVarProvider implements VarProvider {
 
 	public void method266(int i_1, int i_2, int i_3) {
 		this.vars[i_1] = i_2;
-		Class282_Sub45 class282_sub45_4 = (Class282_Sub45) this.aClass465_28.get((long) i_1);
+		LongNode class282_sub45_4 = (LongNode) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {
 			class282_sub45_4.aLong8066 = TextureDetails.time() + 500L;
 		} else {
-			class282_sub45_4 = new Class282_Sub45(TextureDetails.time() + 500L);
+			class282_sub45_4 = new LongNode(TextureDetails.time() + 500L);
 			this.aClass465_28.put(class282_sub45_4, (long) i_1);
 		}
 	}
@@ -121,13 +121,13 @@ public class PlayerVarProvider implements VarProvider {
 
 	void method281(int i_1, int i_2, byte b_3) {
 		this.anIntArray25[i_1] = i_2;
-		Class282_Sub45 class282_sub45_4 = (Class282_Sub45) this.aClass465_28.get((long) i_1);
+		LongNode class282_sub45_4 = (LongNode) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {
 			if (class282_sub45_4.aLong8066 != 4611686018427387905L) {
 				class282_sub45_4.aLong8066 = TextureDetails.time() + 500L | 0x4000000000000000L;
 			}
 		} else {
-			class282_sub45_4 = new Class282_Sub45(4611686018427387905L);
+			class282_sub45_4 = new LongNode(4611686018427387905L);
 			this.aClass465_28.put(class282_sub45_4, (long) i_1);
 		}
 	}

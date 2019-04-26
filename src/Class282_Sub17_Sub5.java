@@ -7,7 +7,7 @@ public class Class282_Sub17_Sub5 extends Class282_Sub17 {
 	String aString9942;
 	Class348 this$0;
 
-	void method12251(Class61 class61_1) {
+	void method12251(ClanSettings class61_1) {
 		class61_1.method1224(this.anInt9941, this.aString9942, (byte) 34);
 	}
 
@@ -16,7 +16,7 @@ public class Class282_Sub17_Sub5 extends Class282_Sub17 {
 		this.aString9942 = rsbytebuffer_1.readString();
 	}
 
-	void method12255(Class61 class61_1) {
+	void method12255(ClanSettings class61_1) {
 		class61_1.method1224(this.anInt9941 * 2094172715 * -1507859325, this.aString9942, (byte) 25);
 	}
 
@@ -34,11 +34,11 @@ public class Class282_Sub17_Sub5 extends Class282_Sub17 {
 		this.aString9942 = rsbytebuffer_1.readString();
 	}
 
-	void method12254(Class61 class61_1) {
+	void method12254(ClanSettings class61_1) {
 		class61_1.method1224(this.anInt9941 * 2094172715 * -1507859325, this.aString9942, (byte) 80);
 	}
 
-	void method12258(Class61 class61_1) {
+	void method12258(ClanSettings class61_1) {
 		class61_1.method1224(this.anInt9941 * 2094172715 * -1507859325, this.aString9942, (byte) 81);
 	}
 
@@ -47,11 +47,11 @@ public class Class282_Sub17_Sub5 extends Class282_Sub17 {
 		this.aString9942 = rsbytebuffer_1.readString();
 	}
 
-	void method12256(Class61 class61_1) {
+	void method12256(ClanSettings class61_1) {
 		class61_1.method1224(this.anInt9941 * 2094172715 * -1507859325, this.aString9942, (byte) 84);
 	}
 
-	void method12252(Class61 class61_1) {
+	void method12252(ClanSettings class61_1) {
 		class61_1.method1224(this.anInt9941 * 2094172715 * -1507859325, this.aString9942, (byte) 62);
 	}
 

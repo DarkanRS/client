@@ -34,7 +34,7 @@ public class Class60 {
 
 	public static void method1170() {
 		if (client.aBool7344) {
-			IComponentDefinitions icomponentdefinitions_1 = Index.method5694(Class7.anInt56, client.anInt7345, 1160609713);
+			IComponentDefinitions icomponentdefinitions_1 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
 			if (icomponentdefinitions_1 != null && icomponentdefinitions_1.anObjectArray1396 != null) {
 				HookRequest hookrequest_2 = new HookRequest();
 				hookrequest_2.iComponentDefs = icomponentdefinitions_1;
@@ -45,7 +45,7 @@ public class Class60 {
 			client.anInt7346 = -1;
 			client.aBool7344 = false;
 			if (icomponentdefinitions_1 != null) {
-				Class109.redrawComponent(icomponentdefinitions_1, (byte) 30);
+				Class109.redrawComponent(icomponentdefinitions_1);
 			}
 		}
 	}

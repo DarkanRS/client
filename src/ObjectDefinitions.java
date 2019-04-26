@@ -87,7 +87,7 @@ public class ObjectDefinitions {
 		if (this.aClass465_5668 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_5668.get((long) i_1);
+			IntNode class282_sub38_4 = (IntNode) this.aClass465_5668.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -312,7 +312,7 @@ public class ObjectDefinitions {
 			} else if (opcode == 249) {
 				i_4 = buffer.readUnsignedByte();
 				if (this.aClass465_5668 == null) {
-					i_5 = ImageIndexLoader.nextPowerOfTwo(i_4, -1920576994);
+					i_5 = Utils.nextPowerOfTwo(i_4);
 					this.aClass465_5668 = new IterableNodeMap(i_5);
 				}
 				for (i_5 = 0; i_5 < i_4; i_5++) {
@@ -320,9 +320,9 @@ public class ObjectDefinitions {
 					i_7 = buffer.read24BitUnsignedInteger();
 					Object obj_8;
 					if (bool_9) {
-						obj_8 = new Class282_Sub47(buffer.readString());
+						obj_8 = new StringNode(buffer.readString());
 					} else {
-						obj_8 = new Class282_Sub38(buffer.readInt());
+						obj_8 = new IntNode(buffer.readInt());
 					}
 					this.aClass465_5668.put((Node) obj_8, (long) i_7);
 				}
@@ -524,7 +524,7 @@ public class ObjectDefinitions {
 		if (this.aClass465_5668 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_5668.get((long) i_1);
+			StringNode class282_sub47_4 = (StringNode) this.aClass465_5668.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}

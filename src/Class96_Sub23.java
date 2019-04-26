@@ -80,7 +80,7 @@ public class Class96_Sub23 extends CutsceneAction {
 		}
 	}
 
-	public static final IComponentDefinitions method14682(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
+	public static final IComponentDefinitions method14682(RSInterface interface_0, IComponentDefinitions icomponentdefinitions_1) {
 		if (icomponentdefinitions_1.parent != -1) {
 			return interface_0.getComponent(icomponentdefinitions_1.parent);
 		} else {

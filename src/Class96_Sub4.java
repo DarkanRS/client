@@ -151,7 +151,7 @@ public class Class96_Sub4 extends CutsceneAction {
 
 			TCPPacket tcpmessage_15;
 			if (outgoingpacket_18 != null) {
-				Class282_Sub47 class282_sub47_19 = (Class282_Sub47) client.NPCS.get((long) i_7);
+				StringNode class282_sub47_19 = (StringNode) client.NPCS.get((long) i_7);
 				if (class282_sub47_19 != null) {
 					NPC npc_14 = (NPC) class282_sub47_19.anObject8068;
 					client.anInt7293 = i_1;
@@ -244,22 +244,22 @@ public class Class96_Sub4 extends CutsceneAction {
 
 			if (clickType == 30 && client.aClass118_7352 == null) {
 				Class158_Sub2.method14355(i_5, i_4, 382043562);
-				client.aClass118_7352 = Index.method5694(i_5, i_4, -702392131);
+				client.aClass118_7352 = Index.getIComponentDefinitions(i_5, i_4);
 				if (client.aClass118_7352 != null) {
-					Class109.redrawComponent(client.aClass118_7352, (byte) -7);
+					Class109.redrawComponent(client.aClass118_7352);
 				}
 			}
 
 			IComponentDefinitions icomponentdefinitions_23;
 			if (clickType == 58) {
-				icomponentdefinitions_23 = Index.method5694(i_5, i_4, 1636358419);
+				icomponentdefinitions_23 = Index.getIComponentDefinitions(i_5, i_4);
 				if (icomponentdefinitions_23 != null) {
 					Class151.method2590(icomponentdefinitions_23);
 				}
 			}
 
 			if (clickType == 25) {
-				icomponentdefinitions_23 = Index.method5694(i_5, i_4, 1215515572);
+				icomponentdefinitions_23 = Index.getIComponentDefinitions(i_5, i_4);
 				if (icomponentdefinitions_23 != null) {
 					Class60.method1170();
 					IComponentSettings class282_sub10_21 = client.method11633(icomponentdefinitions_23);
@@ -302,7 +302,7 @@ public class Class96_Sub4 extends CutsceneAction {
 				}
 
 				if (clickType == 8) {
-					Class282_Sub47 class282_sub47_24 = (Class282_Sub47) client.NPCS.get((long) i_7);
+					StringNode class282_sub47_24 = (StringNode) client.NPCS.get((long) i_7);
 					if (class282_sub47_24 != null) {
 						NPC npc_25 = (NPC) class282_sub47_24.anObject8068;
 						client.anInt7293 = i_1;
@@ -358,7 +358,7 @@ public class Class96_Sub4 extends CutsceneAction {
 				}
 
 				if (VarcStringIndexLoader.aClass118_4825 != null && client.anInt7297 == 0) {
-					Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825, (byte) -103);
+					Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825);
 				}
 			}
 		}

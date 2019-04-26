@@ -15,7 +15,7 @@ public final class Class153 {
 	}
 
 	public int method2609(int i_1, byte b_2) {
-		Class282_Sub38 class282_sub38_3 = (Class282_Sub38) this.aClass465_1963.get((long) i_1);
+		IntNode class282_sub38_3 = (IntNode) this.aClass465_1963.get((long) i_1);
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.anInt8002;
 		} else {
@@ -42,13 +42,13 @@ public final class Class153 {
 			}
 			this.aClass465_1963 = new IterableNodeMap(this.anInt1964);
 		}
-		Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1963.get((long) i_1);
+		IntNode class282_sub38_4 = (IntNode) this.aClass465_1963.get((long) i_1);
 		if (class282_sub38_4 != null) {
 			if ((short) 768 == 768) {
 				class282_sub38_4.anInt8002 = i_2;
 			}
 		} else {
-			class282_sub38_4 = new Class282_Sub38(i_2);
+			class282_sub38_4 = new IntNode(i_2);
 			this.aClass465_1963.put(class282_sub38_4, (long) i_1);
 		}
 	}

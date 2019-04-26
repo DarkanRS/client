@@ -4,15 +4,15 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 	int anInt10019;
 	byte aByte10020;
 
-	void method12258(Class61 class61_1) {
+	void method12258(ClanSettings class61_1) {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, 1997612995);
 	}
 
-	void method12252(Class61 class61_1) {
+	void method12252(ClanSettings class61_1) {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, -945684518);
 	}
 
-	void method12251(Class61 class61_1) {
+	void method12251(ClanSettings class61_1) {
 		class61_1.method1209(this.anInt10019, this.aByte10020, -1275006341);
 	}
 
@@ -31,7 +31,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 		this.aByte10020 = rsbytebuffer_1.readByte();
 	}
 
-	void method12254(Class61 class61_1) {
+	void method12254(ClanSettings class61_1) {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, 942889455);
 	}
 
@@ -40,7 +40,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 		this.aByte10020 = rsbytebuffer_1.readByte();
 	}
 
-	void method12256(Class61 class61_1) {
+	void method12256(ClanSettings class61_1) {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, 1547659433);
 	}
 
@@ -49,7 +49,7 @@ public class Class282_Sub17_Sub7 extends Class282_Sub17 {
 		this.aByte10020 = rsbytebuffer_1.readByte();
 	}
 
-	void method12255(Class61 class61_1) {
+	void method12255(ClanSettings class61_1) {
 		class61_1.method1209(this.anInt10019 * -658188401 * 458516335, this.aByte10020, -278776208);
 	}
 

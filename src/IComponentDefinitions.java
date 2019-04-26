@@ -63,7 +63,7 @@ public class IComponentDefinitions {
 	public String text = "";
 	public int color = 0;
 	public boolean aBool1327 = false;
-	public int anInt1453 = 0;
+	public int transparency = 0;
 	public int anInt1323 = 0;
 	public int anInt1324 = 0;
 	public int anInt1358 = 0;
@@ -230,7 +230,7 @@ public class IComponentDefinitions {
 			i_5 = rsbytebuffer_1.readUnsignedByte();
 			this.aBool1322 = (i_5 & 0x1) != 0;
 			this.aBool1327 = (i_5 & 0x2) != 0;
-			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
+			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1323 = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1324 = rsbytebuffer_1.readInt();
 			this.aBool1325 = rsbytebuffer_1.readUnsignedByte() == 1;
@@ -288,7 +288,7 @@ public class IComponentDefinitions {
 			this.anInt1360 = rsbytebuffer_1.readUnsignedByte();
 			this.aBool1420 = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.color = rsbytebuffer_1.readInt();
-			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
+			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 >= 0) {
 				this.anInt1362 = rsbytebuffer_1.readUnsignedByte();
 			}
@@ -296,7 +296,7 @@ public class IComponentDefinitions {
 		if (this.type == 3) {
 			this.color = rsbytebuffer_1.readInt();
 			this.aBool1316 = rsbytebuffer_1.readUnsignedByte() == 1;
-			this.anInt1453 = rsbytebuffer_1.readUnsignedByte();
+			this.transparency = rsbytebuffer_1.readUnsignedByte();
 		}
 		if (this.type == 9) {
 			this.anInt1377 = rsbytebuffer_1.readUnsignedByte();
@@ -389,13 +389,13 @@ public class IComponentDefinitions {
 			for (i_12 = 0; i_12 < i_11; i_12++) {
 				i_13 = rsbytebuffer_1.read24BitUnsignedInteger();
 				i_14 = rsbytebuffer_1.readInt();
-				this.aClass465_1365.put(new Class282_Sub38(i_14), (long) i_13);
+				this.aClass465_1365.put(new IntNode(i_14), (long) i_13);
 			}
 			i_12 = rsbytebuffer_1.readUnsignedByte();
 			for (i_13 = 0; i_13 < i_12; i_13++) {
 				i_14 = rsbytebuffer_1.read24BitUnsignedInteger();
 				String string_15 = rsbytebuffer_1.readGJString();
-				this.aClass465_1365.put(new Class282_Sub47(string_15), (long) i_14);
+				this.aClass465_1365.put(new StringNode(string_15), (long) i_14);
 			}
 		}
 		this.scriptParams = this.method1990(rsbytebuffer_1);
@@ -550,7 +550,7 @@ public class IComponentDefinitions {
 		if (this.aClass465_1365 == null) {
 			return i_2;
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.get((long) i_1);
+			IntNode class282_sub38_4 = (IntNode) this.aClass465_1365.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
 		}
 	}
@@ -559,7 +559,7 @@ public class IComponentDefinitions {
 		if (this.aClass465_1365 == null) {
 			return string_2;
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.get((long) i_1);
+			StringNode class282_sub47_4 = (StringNode) this.aClass465_1365.get((long) i_1);
 			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -567,11 +567,11 @@ public class IComponentDefinitions {
 	public void method1999(int i_1, int i_2, int i_3) {
 		if (this.aClass465_1365 == null) {
 			this.aClass465_1365 = new IterableNodeMap(16);
-			this.aClass465_1365.put(new Class282_Sub38(i_2), (long) i_1);
+			this.aClass465_1365.put(new IntNode(i_2), (long) i_1);
 		} else {
-			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_1365.get((long) i_1);
+			IntNode class282_sub38_4 = (IntNode) this.aClass465_1365.get((long) i_1);
 			if (class282_sub38_4 == null) {
-				this.aClass465_1365.put(new Class282_Sub38(i_2), (long) i_1);
+				this.aClass465_1365.put(new IntNode(i_2), (long) i_1);
 			} else {
 				class282_sub38_4.anInt8002 = i_2;
 			}
@@ -581,13 +581,13 @@ public class IComponentDefinitions {
 	public void method2000(int i_1, String string_2) {
 		if (this.aClass465_1365 == null) {
 			this.aClass465_1365 = new IterableNodeMap(16);
-			this.aClass465_1365.put(new Class282_Sub47(string_2), (long) i_1);
+			this.aClass465_1365.put(new StringNode(string_2), (long) i_1);
 		} else {
-			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_1365.get((long) i_1);
+			StringNode class282_sub47_4 = (StringNode) this.aClass465_1365.get((long) i_1);
 			if (class282_sub47_4 != null) {
 				class282_sub47_4.remove();
 			}
-			this.aClass465_1365.put(new Class282_Sub47(string_2), (long) i_1);
+			this.aClass465_1365.put(new StringNode(string_2), (long) i_1);
 		}
 	}
 

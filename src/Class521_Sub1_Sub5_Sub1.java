@@ -535,7 +535,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 						Class5.method297(2055895853);
 					} else if (client.connectionContext.getConnection().available(1)) {
 						client.connectionContext.getConnection().read(client.connectionContext.recievedBuffer.buffer, 0, 1);
-						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(Interface.method1626(), client.connectionContext.recievedBuffer.buffer[0] & 0xff);
+						Class96_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(RSInterface.method1626(), client.connectionContext.recievedBuffer.buffer[0] & 0xff);
 						if (AccountCreationResponseOpcodes.CONTINUE != Class96_Sub9.RECIEVED_RESPONSE) {
 							client.connectionContext.method3051((byte) -45);
 						} else {

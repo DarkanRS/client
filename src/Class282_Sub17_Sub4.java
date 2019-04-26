@@ -12,7 +12,7 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 
     Class348 this$0;
 
-    void method12255(Class61 class61_1) {
+    void method12255(ClanSettings class61_1) {
         class61_1.method1212(-31291083 * this.anInt9937 * 339755293, -1425966289 * this.anInt9938 * 1183558607, this.anInt9939 * 2031642257 * -53470607, this.anInt9936 * -1979650293 * 2126963875, (byte) 86);
     }
 
@@ -23,11 +23,11 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
         this.anInt9936 = rsbytebuffer_1.readUnsignedByte();
     }
 
-    void method12251(Class61 class61_1) {
+    void method12251(ClanSettings class61_1) {
         class61_1.method1212(this.anInt9937, this.anInt9938, this.anInt9939, this.anInt9936, (byte) 62);
     }
 
-    void method12254(Class61 class61_1) {
+    void method12254(ClanSettings class61_1) {
         class61_1.method1212(-31291083 * this.anInt9937 * 339755293, -1425966289 * this.anInt9938 * 1183558607, this.anInt9939 * 2031642257 * -53470607, this.anInt9936 * -1979650293 * 2126963875, (byte) 67);
     }
 
@@ -49,15 +49,15 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
         this.this$0 = class348_1;
     }
 
-    void method12258(Class61 class61_1) {
+    void method12258(ClanSettings class61_1) {
         class61_1.method1212(-31291083 * this.anInt9937 * 339755293, -1425966289 * this.anInt9938 * 1183558607, this.anInt9939 * 2031642257 * -53470607, this.anInt9936 * -1979650293 * 2126963875, (byte) 20);
     }
 
-    void method12256(Class61 class61_1) {
+    void method12256(ClanSettings class61_1) {
         class61_1.method1212(-31291083 * this.anInt9937 * 339755293, -1425966289 * this.anInt9938 * 1183558607, this.anInt9939 * 2031642257 * -53470607, this.anInt9936 * -1979650293 * 2126963875, (byte) 62);
     }
 
-    void method12252(Class61 class61_1) {
+    void method12252(ClanSettings class61_1) {
         class61_1.method1212(-31291083 * this.anInt9937 * 339755293, -1425966289 * this.anInt9938 * 1183558607, this.anInt9939 * 2031642257 * -53470607, this.anInt9936 * -1979650293 * 2126963875, (byte) 64);
     }
 

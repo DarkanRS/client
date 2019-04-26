@@ -22,7 +22,7 @@ public class Class468_Sub24 extends Preference {
 		this.anInt5578 = i_1 * -754033619 * -859024475;
 	}
 
-	public int getValue(int i_1) {
+	public int getValue() {
 		return this.anInt5578;
 	}
 

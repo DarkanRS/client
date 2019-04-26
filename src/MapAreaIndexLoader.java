@@ -97,45 +97,4 @@ public class MapAreaIndexLoader {
 		}
 	}
 
-	static void method3710(Interface interface_0, IComponentDefinitions icomponentdefinitions_1) {
-		if (icomponentdefinitions_1 != null) {
-			int i_4;
-			if (icomponentdefinitions_1.anInt1288 != -1) {
-				IComponentDefinitions icomponentdefinitions_3 = interface_0.components[icomponentdefinitions_1.parent & 0xffff];
-				if (icomponentdefinitions_3 != null) {
-					if (icomponentdefinitions_3.aClass118Array1438 == icomponentdefinitions_3.aClass118Array1439) {
-						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
-						icomponentdefinitions_3.aClass118Array1439[0] = icomponentdefinitions_1;
-						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, 0, icomponentdefinitions_3.aClass118Array1439, 1, icomponentdefinitions_1.anInt1288);
-						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, icomponentdefinitions_1.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1439, icomponentdefinitions_1.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1438.length - icomponentdefinitions_1.anInt1288 - 1);
-					} else {
-						i_4 = 0;
-
-						IComponentDefinitions[] arr_5;
-						for (arr_5 = icomponentdefinitions_3.aClass118Array1439; i_4 < arr_5.length && arr_5[i_4] != icomponentdefinitions_1; i_4++) {
-							;
-						}
-
-						if (i_4 < arr_5.length) {
-							Class503.method8359(arr_5, 0, arr_5, 1, i_4);
-							arr_5[0] = icomponentdefinitions_1;
-						}
-					}
-				}
-			} else {
-				IComponentDefinitions[] arr_6 = interface_0.method1617(-1207733107);
-
-				for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != icomponentdefinitions_1; i_4++) {
-					;
-				}
-
-				if (i_4 < arr_6.length) {
-					Class503.method8359(arr_6, 0, arr_6, 1, i_4);
-					arr_6[0] = icomponentdefinitions_1;
-				}
-			}
-		}
-
-	}
-
 }

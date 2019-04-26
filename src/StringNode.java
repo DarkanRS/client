@@ -1,8 +1,8 @@
-public class Class282_Sub47 extends Node {
+public class StringNode extends Node {
 
 	public Object anObject8068;
 
-	public Class282_Sub47(Object object_1) {
+	public StringNode(Object object_1) {
 		this.anObject8068 = object_1;
 	}
 

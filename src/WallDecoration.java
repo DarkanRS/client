@@ -365,7 +365,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 							i_9 = (int) vector3_8.x - (int) vector3_15.x;
 							i_10 = (int) vector3_8.z - (int) vector3_15.z;
 						} else {
-							Class282_Sub47 class282_sub47_16 = (Class282_Sub47) client.NPCS.get((long) i_5);
+							StringNode class282_sub47_16 = (StringNode) client.NPCS.get((long) i_5);
 							if (class282_sub47_16 == null) {
 								animable_0.method15798(i_4, -1);
 								continue;

@@ -271,7 +271,7 @@ public class ParticleProducer {
 	static final void method11501(int i_0) {
 		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
 		if (client.anInt7349 != -1) {
-			InterfaceWithDefs.method8777(client.anInt7349, (byte) -116);
+			RSHookableInterface.method8777(client.anInt7349, (byte) -116);
 		}
 
 		int i_1;

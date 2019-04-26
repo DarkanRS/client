@@ -80,7 +80,7 @@ public class Player extends Animable {
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
 						int i_13;
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
@@ -456,7 +456,7 @@ public class Player extends Animable {
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
 						int i_13;
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
@@ -571,7 +571,7 @@ public class Player extends Animable {
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
 						int i_13;
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							Class282_Sub47 class282_sub47_26 = (Class282_Sub47) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
@@ -1049,7 +1049,7 @@ public class Player extends Animable {
 					if (class180_26 != null && class180_26.anInt2242 != -1) {
 						int i_14;
 						if (class180_26.anInt2236 == 1) {
-							Class282_Sub47 class282_sub47_27 = (Class282_Sub47) client.NPCS.get((long) class180_26.anInt2238);
+							StringNode class282_sub47_27 = (StringNode) client.NPCS.get((long) class180_26.anInt2238);
 							if (class282_sub47_27 != null) {
 								NPC npc_30 = (NPC) class282_sub47_27.anObject8068;
 								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);

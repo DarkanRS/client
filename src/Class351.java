@@ -30,7 +30,7 @@ public class Class351 implements Interface3 {
         Class109_Sub1.method14650(i_4);
         IComponentDefinitions component = IComponentDefinitions.getDefs(interfaceHash);
         if (component != null) {
-            Class109.redrawComponent(component, (byte) -15);
+            Class109.redrawComponent(component);
         }
         OutputStream_Sub1.method12938((byte) 7);
         if (!bool_2 && client.anInt7349 != -1) {

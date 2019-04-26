@@ -138,7 +138,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 				if (client.gameState == 13) {
 					IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 81);
 					Class350_Sub1.method12516();
-					Interface.method1623();
+					RSInterface.method1623();
 					if (client.anInt7396 > 10) {
 						++client.outputContext.idleReadPulses;
 					}
@@ -197,7 +197,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						if (VarcStringIndexLoader.aClass118_4825 != null) {
 							++client.anInt7297;
 							if (client.anInt7297 >= 15) {
-								Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825, (byte) 51);
+								Class109.redrawComponent(VarcStringIndexLoader.aClass118_4825);
 								VarcStringIndexLoader.aClass118_4825 = null;
 							}
 						}

@@ -20,7 +20,7 @@ public class Class14 {
 		RsBitsBuffer buffer = client.outputContext.recievedBuffer;
 		for (int i_1 = 0; i_1 < client.npcListSize; i_1++) {
 			int i_2 = client.NPC_INDICES[i_1];
-			NPC npc = (NPC) ((Class282_Sub47) client.NPCS.get((long) i_2)).anObject8068;
+			NPC npc = (NPC) ((StringNode) client.NPCS.get((long) i_2)).anObject8068;
 			int i_4 = buffer.readUnsignedByte();
 			if ((i_4 & 0x40) != 0) {
 				i_4 += buffer.readUnsignedByte() << 8;

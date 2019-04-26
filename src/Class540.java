@@ -38,7 +38,7 @@ public class Class540 {
 		int i_4;
 		for (i_3 = 0; i_3 < client.anInt7216; i_3++) {
 			i_4 = client.anIntArray7421[i_3];
-			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.NPCS.get((long) i_4);
+			StringNode class282_sub47_5 = (StringNode) client.NPCS.get((long) i_4);
 			NPC npc_7 = (NPC) class282_sub47_5.anObject8068;
 			if (npc_7.lastUpdate != client.anInt7332) {
 				if (Class20.aBool161 && EnumIndexLoader.method7426(i_4, (byte) -86)) {
@@ -56,9 +56,9 @@ public class Class540 {
 			i_3 = client.anInt7210;
 			client.anInt7210 = client.NPCS.method7748((short) 15812);
 			i_4 = 0;
-			Class282_Sub47 class282_sub47_9;
+			StringNode class282_sub47_9;
 			for (Iterator iterator_8 = client.NPCS.iterator(); iterator_8.hasNext(); client.aClass282_Sub47Array7209[i_4++] = class282_sub47_9) {
-				class282_sub47_9 = (Class282_Sub47) iterator_8.next();
+				class282_sub47_9 = (StringNode) iterator_8.next();
 			}
 			for (int i_6 = client.anInt7210; i_6 < i_3; i_6++) {
 				client.aClass282_Sub47Array7209[i_6] = null;

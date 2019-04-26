@@ -45,16 +45,16 @@ public enum CS2OpInfo {
 	LONG_GT(237, true),
 	LONG_LE(465, true),
 	LONG_GE(142, true),
-	instr5990(195, true), //JUMP if 1?
-	instr5023(836, true), //JUMP if 0?
+	BRANCH_EQ1(195, true), //JUMP if 1?
+	BRANCH_EQ0(836, true), //JUMP if 0?
 	LOAD_CLAN_VAR(717, true),
 	LOAD_CLAN_VARBIT(220, true),
 	LOAD_CLAN_VAR_LONG(215, true),
 	LOAD_CLAN_VAR_STRING(995, true),
 	LOAD_CLAN_SETTING_VAR(73, true),
 	LOAD_CLAN_SETTING_VARBIT(147, true),
-	instr5998(83, true),
-	instr5999(910, true),
+	LOAD_CLAN_SETTING_VAR_LONG(83, true),
+	LOAD_CLAN_SETTING_VAR_STRING(910, true),
 	instr6137(113),
 	instr6001(981),
 	CLEAR_COMP_CHILDREN(572),

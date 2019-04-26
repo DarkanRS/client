@@ -20,19 +20,19 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 		this.aByte10018 = rsbytebuffer_1.readByte();
 	}
 
-	void method12252(Class61 class61_1) {
-		class61_1.aBool624 = this.aBool10016;
-		class61_1.aByte619 = this.aByte10015;
-		class61_1.aByte626 = this.aByte10014;
-		class61_1.aByte627 = this.aByte10017;
+	void method12252(ClanSettings class61_1) {
+		class61_1.allowGuests = this.aBool10016;
+		class61_1.talkRank = this.aByte10015;
+		class61_1.kickRank = this.aByte10014;
+		class61_1.lootshareRank = this.aByte10017;
 		class61_1.aByte628 = this.aByte10018;
 	}
 
-	void method12251(Class61 class61_1) {
-		class61_1.aBool624 = this.aBool10016;
-		class61_1.aByte619 = this.aByte10015;
-		class61_1.aByte626 = this.aByte10014;
-		class61_1.aByte627 = this.aByte10017;
+	void method12251(ClanSettings class61_1) {
+		class61_1.allowGuests = this.aBool10016;
+		class61_1.talkRank = this.aByte10015;
+		class61_1.kickRank = this.aByte10014;
+		class61_1.lootshareRank = this.aByte10017;
 		class61_1.aByte628 = this.aByte10018;
 	}
 
@@ -60,27 +60,27 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 		this.aByte10018 = rsbytebuffer_1.readByte();
 	}
 
-	void method12256(Class61 class61_1) {
-		class61_1.aBool624 = this.aBool10016;
-		class61_1.aByte619 = this.aByte10015;
-		class61_1.aByte626 = this.aByte10014;
-		class61_1.aByte627 = this.aByte10017;
+	void method12256(ClanSettings class61_1) {
+		class61_1.allowGuests = this.aBool10016;
+		class61_1.talkRank = this.aByte10015;
+		class61_1.kickRank = this.aByte10014;
+		class61_1.lootshareRank = this.aByte10017;
 		class61_1.aByte628 = this.aByte10018;
 	}
 
-	void method12258(Class61 class61_1) {
-		class61_1.aBool624 = this.aBool10016;
-		class61_1.aByte619 = this.aByte10015;
-		class61_1.aByte626 = this.aByte10014;
-		class61_1.aByte627 = this.aByte10017;
+	void method12258(ClanSettings class61_1) {
+		class61_1.allowGuests = this.aBool10016;
+		class61_1.talkRank = this.aByte10015;
+		class61_1.kickRank = this.aByte10014;
+		class61_1.lootshareRank = this.aByte10017;
 		class61_1.aByte628 = this.aByte10018;
 	}
 
-	void method12254(Class61 class61_1) {
-		class61_1.aBool624 = this.aBool10016;
-		class61_1.aByte619 = this.aByte10015;
-		class61_1.aByte626 = this.aByte10014;
-		class61_1.aByte627 = this.aByte10017;
+	void method12254(ClanSettings class61_1) {
+		class61_1.allowGuests = this.aBool10016;
+		class61_1.talkRank = this.aByte10015;
+		class61_1.kickRank = this.aByte10014;
+		class61_1.lootshareRank = this.aByte10017;
 		class61_1.aByte628 = this.aByte10018;
 	}
 
@@ -88,11 +88,11 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 		this.this$0 = class348_1;
 	}
 
-	void method12255(Class61 class61_1) {
-		class61_1.aBool624 = this.aBool10016;
-		class61_1.aByte619 = this.aByte10015;
-		class61_1.aByte626 = this.aByte10014;
-		class61_1.aByte627 = this.aByte10017;
+	void method12255(ClanSettings class61_1) {
+		class61_1.allowGuests = this.aBool10016;
+		class61_1.talkRank = this.aByte10015;
+		class61_1.kickRank = this.aByte10014;
+		class61_1.lootshareRank = this.aByte10017;
 		class61_1.aByte628 = this.aByte10018;
 	}
 

@@ -7,7 +7,7 @@ public class Class156 {
 	static synchronized void method2642(Interface40 interface40_0, byte b_1) {
 		if (!aBool1970) {
 			if (anInt1972 > 0) {
-				Class282_Sub47 class282_sub47_2 = new Class282_Sub47(interface40_0);
+				StringNode class282_sub47_2 = new StringNode(interface40_0);
 				aClass482_1971.append(class282_sub47_2);
 			} else {
 				interface40_0.ma(false);
@@ -34,7 +34,8 @@ public class Class156 {
 
 	static synchronized void method2652(byte b_0) {
 		while (true) {
-			Class282_Sub47 class282_sub47_1 = (Class282_Sub47) aClass482_1971.popHead();
+			StringNode class282_sub47_1 = (StringNode) aClass482_1971.popHead();
+
 			if (class282_sub47_1 == null) {
 				return;
 			}

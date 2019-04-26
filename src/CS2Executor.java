@@ -7,7 +7,7 @@ public class CS2Executor {
 	Animable animable;
 	Class191 aClass191_7008;
 	Class346 aClass346_7009;
-	Class61 aClass61_7010;
+	ClanSettings currentClanSettings;
 	ClanChannel aClass282_Sub4_7011;
 	SceneObject anInterface12_7013;
 	Class521_Sub1_Sub2_Sub1 aClass521_Sub1_Sub2_Sub1_7014;
@@ -25,8 +25,8 @@ public class CS2Executor {
 	int longStackPtr = 0;
 	int anInt7002 = 0;
 	Class509[] aClass509Array7016 = new Class509[50];
-	InterfaceWithDefs aClass513_7007 = new InterfaceWithDefs();
-	InterfaceWithDefs aClass513_6994 = new InterfaceWithDefs();
+	RSHookableInterface hookedInterface1 = new RSHookableInterface();
+	RSHookableInterface hookedInterface2 = new RSHookableInterface();
 	int anInt7015 = 0;
 	int instrPtr = -1;
 

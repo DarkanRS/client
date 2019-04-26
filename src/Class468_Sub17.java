@@ -11,7 +11,7 @@ public class Class468_Sub17 extends Preference {
 					return 2;
 				}
 
-				if (this.manager.water.getValue(-792271600) > 0) {
+				if (this.manager.water.getValue() > 0) {
 					return 2;
 				}
 			}
@@ -61,7 +61,7 @@ public class Class468_Sub17 extends Preference {
 					return 2;
 				}
 
-				if (this.manager.water.getValue(76059424) > 0) {
+				if (this.manager.water.getValue() > 0) {
 					return 2;
 				}
 			}

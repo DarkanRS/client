@@ -31,11 +31,11 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 	}
 
 	static Class137_Sub1_Sub1 method15537(OpenGLGraphicalRenderer class505_sub1_0, int i_1, int i_2, int[] ints_4, int i_5, int i_6) {
-		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_1) || !Class96_Sub9.method14585(i_2)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, ints_4, i_5, i_6) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, ImageIndexLoader.nextPowerOfTwo(i_1, 253386604), ImageIndexLoader.nextPowerOfTwo(i_2, 1037655353), ints_4)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, ints_4, i_5, i_6);
+		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_1) || !Class96_Sub9.method14585(i_2)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, ints_4, i_5, i_6) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, Utils.nextPowerOfTwo(i_1), Utils.nextPowerOfTwo(i_2), ints_4)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, ints_4, i_5, i_6);
 	}
 
 	static Class137_Sub1_Sub1 method15538(OpenGLGraphicalRenderer class505_sub1_0, int i_1, int i_2, int i_3, int i_4) {
-		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, i_3, i_4, ImageIndexLoader.nextPowerOfTwo(i_3, -1948475331), ImageIndexLoader.nextPowerOfTwo(i_4, -366919304))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, i_3, i_4);
+		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, i_1, i_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, i_1, i_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, i_1, i_2, i_3, i_4);
 	}
 
 	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, int i_6) {
@@ -73,7 +73,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 	}
 
 	static Class137_Sub1_Sub1 method15540(OpenGLGraphicalRenderer class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4, byte[] bytes_6, Class150 class150_7) {
-		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4, bytes_6, class150_7) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, ImageIndexLoader.nextPowerOfTwo(i_3, 527754772), ImageIndexLoader.nextPowerOfTwo(i_4, 1788397404), bytes_6, class150_7)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4, bytes_6, class150_7);
+		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4, bytes_6, class150_7) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4), bytes_6, class150_7)) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4, bytes_6, class150_7);
 	}
 
 	Class137_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int[] ints_6) {
@@ -138,7 +138,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 	}
 
 	static Class137_Sub1_Sub1 method15547(OpenGLGraphicalRenderer class505_sub1_0, Class150 class150_1, Class76 class76_2, int i_3, int i_4) {
-		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, ImageIndexLoader.nextPowerOfTwo(i_3, -572466042), ImageIndexLoader.nextPowerOfTwo(i_4, -2128087947))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4);
+		return !class505_sub1_0.aBool8498 && (!Class96_Sub9.method14585(i_3) || !Class96_Sub9.method14585(i_4)) ? (class505_sub1_0.aBool8401 ? new Class137_Sub1_Sub1(class505_sub1_0, 34037, class150_1, class76_2, i_3, i_4) : new Class137_Sub1_Sub1(class505_sub1_0, class150_1, class76_2, i_3, i_4, Utils.nextPowerOfTwo(i_3), Utils.nextPowerOfTwo(i_4))) : new Class137_Sub1_Sub1(class505_sub1_0, 3553, class150_1, class76_2, i_3, i_4);
 	}
 
 }
