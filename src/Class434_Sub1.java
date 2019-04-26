@@ -297,17 +297,17 @@ public class Class434_Sub1 extends Class434 {
 		int i_6 = i_2 + coordgrid_4.y;
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153 && i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 			long long_7 = (long) (i_0 << 28 | i_6 << 14 | i_5);
-			Class282_Sub29 class282_sub29_9 = (Class282_Sub29) client.aClass465_7414.get(long_7);
+			Node_Sub29 class282_sub29_9 = (Node_Sub29) client.aClass465_7414.get(long_7);
 			if (class282_sub29_9 == null) {
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -259717537);
 			} else {
-				Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_9.aClass482_7708.head();
+				Node_Sub34 class282_sub34_10 = (Node_Sub34) class282_sub29_9.aClass482_7708.head();
 				if (class282_sub34_10 == null) {
 					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -237481476);
 				} else {
-					Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_11 = (Class521_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -211748464);
+					Transform_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_11 = (Transform_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -211748464);
 					if (class521_sub1_sub2_sub1_11 == null) {
-						class521_sub1_sub2_sub1_11 = new Class521_Sub1_Sub2_Sub1(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[i_0].method6722(i_1, i_2), i_2 << 265, i_0, i_0);
+						class521_sub1_sub2_sub1_11 = new Transform_Sub1_Sub2_Sub1(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_0].method6722(i_1, i_2), i_2 << 265, i_0, i_0);
 					} else {
 						class521_sub1_sub2_sub1_11.anInt10415 = -1;
 						class521_sub1_sub2_sub1_11.anInt10411 = -1;
@@ -318,7 +318,7 @@ public class Class434_Sub1 extends Class434 {
 					class521_sub1_sub2_sub1_11.anInt10416 = class282_sub34_10.anInt7852;
 
 					label44: while (true) {
-						Class282_Sub34 class282_sub34_12 = (Class282_Sub34) class282_sub29_9.aClass482_7708.next(1363381477);
+						Node_Sub34 class282_sub34_12 = (Node_Sub34) class282_sub29_9.aClass482_7708.next(1363381477);
 						if (class282_sub34_12 == null) {
 							break;
 						}
@@ -328,7 +328,7 @@ public class Class434_Sub1 extends Class434 {
 							class521_sub1_sub2_sub1_11.anInt10414 = class282_sub34_12.anInt7852;
 
 							while (true) {
-								Class282_Sub34 class282_sub34_13 = (Class282_Sub34) class282_sub29_9.aClass482_7708.next(-761697054);
+								Node_Sub34 class282_sub34_13 = (Node_Sub34) class282_sub29_9.aClass482_7708.next(-761697054);
 								if (class282_sub34_13 == null) {
 									break label44;
 								}

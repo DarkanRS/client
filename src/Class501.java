@@ -33,13 +33,13 @@ public class Class501 {
 		VertexNormal.myPlayer = null;
 
 		for (i_1 = 0; i_1 < client.anInt7210; i_1++) {
-			Animable animable_2 = (Animable) client.aClass282_Sub47Array7209[i_1].anObject8068;
+			Animable animable_2 = (Animable) client.aNode_Sub47Array7209[i_1].anObject8068;
 			if (animable_2 != null) {
 				animable_2.faceEntity = -1;
 			}
 		}
 
-		Class8_Sub2.method14262(882795829);
+		FontRenderer_Sub2.method14262(882795829);
 		NativeLibraryLoader.anInt3240 = 2;
 		Class86.anInt833 = -1;
 		PingRequester.anInt5864 = -1;

@@ -18,19 +18,19 @@ public abstract class CutsceneAction {
 	public abstract void method1601();
 
 	public static RSInterface method1605(int i_0) {
-		return Class468_Sub8.INTERFACES[i_0 >> 16];
+		return Preference_Sub8.INTERFACES[i_0 >> 16];
 	}
 
 	public static void method1607(byte b_0) {
-		ClanSettings.aClass160_647 = null;
-		Class60.aClass160_612 = null;
-		Class467.aClass160_5576 = null;
-		ParamDefinitions.aClass160_5339 = null;
-		HitbarIndexLoader.aClass160_3452 = null;
-		Class354.aClass160_4110 = null;
-		Class125.aClass160_1571 = null;
-		Class149_Sub2.aClass160_9315 = null;
-		Class186.aClass8_2348 = null;
+		ClanSettings.aNativeSprite_647 = null;
+		Class60.aNativeSprite_612 = null;
+		Class467.aNativeSprite_5576 = null;
+		ParamDefinitions.aNativeSprite_5339 = null;
+		HitbarIndexLoader.aNativeSprite_3452 = null;
+		Class354.aNativeSprite_4110 = null;
+		Class125.aNativeSprite_1571 = null;
+		Class149_Sub2.aNativeSprite_9315 = null;
+		Class186.aFontRenderer_2348 = null;
 		Class176.aClass414_2200 = null;
 	}
 

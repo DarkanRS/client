@@ -7,7 +7,7 @@ public class Class367 implements Interface32 {
 	long aLong4238 = 0L;
 	int anInt4235;
 	int anInt4237;
-	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_4234;
+	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_4234;
 	Class76 aClass76_4233;
 	boolean aBool4236;
 
@@ -43,14 +43,14 @@ public class Class367 implements Interface32 {
 
 		this.anInt4235 = 0;
 		this.anInt4237 = 0;
-		this.aClass505_Sub2_Sub2_4234.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_4234.method13885(this);
 	}
 
-	Class367(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class76 class76_2, boolean bool_3) {
-		this.aClass505_Sub2_Sub2_4234 = class505_sub2_sub2_1;
+	Class367(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class76 class76_2, boolean bool_3) {
+		this.aGraphicalRenderer_Sub2_Sub2_4234 = class505_sub2_sub2_1;
 		this.aClass76_4233 = class76_2;
 		this.aBool4236 = bool_3;
-		this.aClass505_Sub2_Sub2_4234.method13901(this);
+		this.aGraphicalRenderer_Sub2_Sub2_4234.method13901(this);
 	}
 
 	public void finalize() {
@@ -65,7 +65,7 @@ public class Class367 implements Interface32 {
 
 		this.anInt4235 = 0;
 		this.anInt4237 = 0;
-		this.aClass505_Sub2_Sub2_4234.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_4234.method13885(this);
 	}
 
 	public long method37(int i_1, int i_2) {
@@ -88,7 +88,7 @@ public class Class367 implements Interface32 {
 				b_3 = 1;
 			}
 
-			this.aLong4238 = IDirect3DDevice.CreateIndexBuffer(this.aClass505_Sub2_Sub2_4234.aLong10252, this.anInt4237, i_2, this.aClass76_4233 == Class76.aClass76_752 ? 101 : 102, b_3);
+			this.aLong4238 = IDirect3DDevice.CreateIndexBuffer(this.aGraphicalRenderer_Sub2_Sub2_4234.aLong10252, this.anInt4237, i_2, this.aClass76_4233 == Class76.aClass76_752 ? 101 : 102, b_3);
 			this.anInt4235 = this.anInt4237;
 		}
 
@@ -108,7 +108,7 @@ public class Class367 implements Interface32 {
 
 	void method6308() {
 		if (this.aLong4238 != 0L) {
-			this.aClass505_Sub2_Sub2_4234.method15650(this.aLong4238);
+			this.aGraphicalRenderer_Sub2_Sub2_4234.method15650(this.aLong4238);
 			this.aLong4238 = 0L;
 		}
 
@@ -132,7 +132,7 @@ public class Class367 implements Interface32 {
 				b_3 = 1;
 			}
 
-			this.aLong4238 = IDirect3DDevice.CreateIndexBuffer(this.aClass505_Sub2_Sub2_4234.aLong10252, this.anInt4237, i_2, this.aClass76_4233 == Class76.aClass76_752 ? 101 : 102, b_3);
+			this.aLong4238 = IDirect3DDevice.CreateIndexBuffer(this.aGraphicalRenderer_Sub2_Sub2_4234.aLong10252, this.anInt4237, i_2, this.aClass76_4233 == Class76.aClass76_752 ? 101 : 102, b_3);
 			this.anInt4235 = this.anInt4237;
 		}
 

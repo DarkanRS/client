@@ -92,12 +92,12 @@ public class SpotAnimIndexLoader {
 	}
 
 	public static NativeSprite method8858(GraphicalRenderer graphicalrenderer_0, int i_1) {
-		Class282_Sub37 class282_sub37_3 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_1);
+		Node_Sub37 class282_sub37_3 = (Node_Sub37) Class492.aClass465_5774.get((long) i_1);
 		if (class282_sub37_3 != null) {
-			Class282_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918();
+			Node_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918();
 			class282_sub37_3.aBool7996 = true;
 			if (class282_sub41_sub3_4 != null) {
-				Class492.aClass502_5776.aClass505_5829 = graphicalrenderer_0;
+				Class492.aClass502_5776.aGraphicalRenderer_5829 = graphicalrenderer_0;
 				return (NativeSprite) class282_sub41_sub3_4.method14795(Class492.aClass502_5776);
 			}
 		}

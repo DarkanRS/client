@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Class253 {
 
-	Class282_Sub15 aClass282_Sub15_3122;
+	Node_Sub15 aNode_Sub15_3122;
 	public static int anInt3129;
 	public static boolean aBool3115;
 	static int anInt3139;
@@ -22,11 +22,11 @@ public class Class253 {
 	boolean aBool3135 = false;
 	int anInt3117 = 0;
 	int anInt3123 = 32;
-	Class282_Sub15[] aClass282_Sub15Array3116 = new Class282_Sub15[8];
-	Class282_Sub15[] aClass282_Sub15Array3141 = new Class282_Sub15[8];
+	Node_Sub15[] aNode_Sub15Array3116 = new Node_Sub15[8];
+	Node_Sub15[] aNode_Sub15Array3141 = new Node_Sub15[8];
 
-	public final synchronized void method4329(Class282_Sub15 class282_sub15_1) {
-		this.aClass282_Sub15_3122 = class282_sub15_1;
+	public final synchronized void method4329(Node_Sub15 class282_sub15_1) {
+		this.aNode_Sub15_3122 = class282_sub15_1;
 	}
 
 	public static final void method4330(boolean bool_1) {
@@ -223,15 +223,15 @@ public class Class253 {
 
 		Arrays.fill(ints_1, 0, i_3, 0);
 		this.anInt3117 -= 256;
-		if (this.aClass282_Sub15_3122 != null && this.anInt3117 <= 0) {
+		if (this.aNode_Sub15_3122 != null && this.anInt3117 <= 0) {
 			this.anInt3117 += anInt3129 >> 4;
-			method4338(this.aClass282_Sub15_3122);
-			this.method4339(this.aClass282_Sub15_3122, this.aClass282_Sub15_3122.method12225());
+			method4338(this.aNode_Sub15_3122);
+			this.method4339(this.aNode_Sub15_3122, this.aNode_Sub15_3122.method12225());
 			int i_4 = 0;
 			int i_5 = 255;
 
 			int i_6;
-			Class282_Sub15 class282_sub15_10;
+			Node_Sub15 class282_sub15_10;
 			label107: for (i_6 = 7; i_5 != 0; --i_6) {
 				int i_16;
 				int i_17;
@@ -247,7 +247,7 @@ public class Class253 {
 					if ((i_9 & 0x1) != 0) {
 						i_5 &= ~(1 << i_16);
 						class282_sub15_10 = null;
-						Class282_Sub15 class282_sub15_11 = this.aClass282_Sub15Array3116[i_16];
+						Node_Sub15 class282_sub15_11 = this.aNode_Sub15Array3116[i_16];
 
 						label101: while (true) {
 							while (true) {
@@ -255,11 +255,11 @@ public class Class253 {
 									break label101;
 								}
 
-								Class282_Sub26 class282_sub26_12 = class282_sub15_11.aClass282_Sub26_7601;
+								Node_Sub26 class282_sub26_12 = class282_sub15_11.aNode_Sub26_7601;
 								if (class282_sub26_12 != null && class282_sub26_12.anInt7690 > i_17) {
 									i_5 |= 1 << i_16;
 									class282_sub15_10 = class282_sub15_11;
-									class282_sub15_11 = class282_sub15_11.aClass282_Sub15_7598;
+									class282_sub15_11 = class282_sub15_11.aNode_Sub15_7598;
 								} else {
 									class282_sub15_11.aBool7600 = true;
 									int i_13 = class282_sub15_11.method12228();
@@ -272,23 +272,23 @@ public class Class253 {
 										break label107;
 									}
 
-									Class282_Sub15 class282_sub15_14 = class282_sub15_11.method12226();
+									Node_Sub15 class282_sub15_14 = class282_sub15_11.method12226();
 									if (class282_sub15_14 != null) {
 										for (int i_15 = class282_sub15_11.anInt7599; class282_sub15_14 != null; class282_sub15_14 = class282_sub15_11.method12239()) {
 											this.method4339(class282_sub15_14, i_15 * class282_sub15_14.method12225() >> 8);
 										}
 									}
 
-									Class282_Sub15 class282_sub15_18 = class282_sub15_11.aClass282_Sub15_7598;
-									class282_sub15_11.aClass282_Sub15_7598 = null;
+									Node_Sub15 class282_sub15_18 = class282_sub15_11.aNode_Sub15_7598;
+									class282_sub15_11.aNode_Sub15_7598 = null;
 									if (class282_sub15_10 == null) {
-										this.aClass282_Sub15Array3116[i_16] = class282_sub15_18;
+										this.aNode_Sub15Array3116[i_16] = class282_sub15_18;
 									} else {
-										class282_sub15_10.aClass282_Sub15_7598 = class282_sub15_18;
+										class282_sub15_10.aNode_Sub15_7598 = class282_sub15_18;
 									}
 
 									if (class282_sub15_18 == null) {
-										this.aClass282_Sub15Array3141[i_16] = class282_sub15_10;
+										this.aNode_Sub15Array3141[i_16] = class282_sub15_10;
 									}
 
 									class282_sub15_11 = class282_sub15_18;
@@ -303,13 +303,13 @@ public class Class253 {
 			}
 
 			for (i_6 = 0; i_6 < 8; i_6++) {
-				Class282_Sub15 class282_sub15_7 = this.aClass282_Sub15Array3116[i_6];
-				Class282_Sub15[] arr_8 = this.aClass282_Sub15Array3116;
-				this.aClass282_Sub15Array3141[i_6] = null;
+				Node_Sub15 class282_sub15_7 = this.aNode_Sub15Array3116[i_6];
+				Node_Sub15[] arr_8 = this.aNode_Sub15Array3116;
+				this.aNode_Sub15Array3141[i_6] = null;
 
 				for (arr_8[i_6] = null; class282_sub15_7 != null; class282_sub15_7 = class282_sub15_10) {
-					class282_sub15_10 = class282_sub15_7.aClass282_Sub15_7598;
-					class282_sub15_7.aClass282_Sub15_7598 = null;
+					class282_sub15_10 = class282_sub15_7.aNode_Sub15_7598;
+					class282_sub15_7.aNode_Sub15_7598 = null;
 				}
 			}
 		}
@@ -318,35 +318,35 @@ public class Class253 {
 			this.anInt3117 = 0;
 		}
 
-		if (this.aClass282_Sub15_3122 != null) {
-			this.aClass282_Sub15_3122.method12230(ints_1, 0, 256);
+		if (this.aNode_Sub15_3122 != null) {
+			this.aNode_Sub15_3122.method12230(ints_1, 0, 256);
 		}
 
 		this.aLong3124 = TextureDetails.time();
 	}
 
-	static final void method4338(Class282_Sub15 class282_sub15_0) {
+	static final void method4338(Node_Sub15 class282_sub15_0) {
 		class282_sub15_0.aBool7600 = false;
-		if (class282_sub15_0.aClass282_Sub26_7601 != null) {
-			class282_sub15_0.aClass282_Sub26_7601.anInt7690 = 0;
+		if (class282_sub15_0.aNode_Sub26_7601 != null) {
+			class282_sub15_0.aNode_Sub26_7601.anInt7690 = 0;
 		}
 
-		for (Class282_Sub15 class282_sub15_1 = class282_sub15_0.method12226(); class282_sub15_1 != null; class282_sub15_1 = class282_sub15_0.method12239()) {
+		for (Node_Sub15 class282_sub15_1 = class282_sub15_0.method12226(); class282_sub15_1 != null; class282_sub15_1 = class282_sub15_0.method12239()) {
 			method4338(class282_sub15_1);
 		}
 
 	}
 
-	final void method4339(Class282_Sub15 class282_sub15_1, int i_2) {
+	final void method4339(Node_Sub15 class282_sub15_1, int i_2) {
 		int i_3 = i_2 >> 5;
-		Class282_Sub15 class282_sub15_4 = this.aClass282_Sub15Array3141[i_3];
+		Node_Sub15 class282_sub15_4 = this.aNode_Sub15Array3141[i_3];
 		if (class282_sub15_4 == null) {
-			this.aClass282_Sub15Array3116[i_3] = class282_sub15_1;
+			this.aNode_Sub15Array3116[i_3] = class282_sub15_1;
 		} else {
-			class282_sub15_4.aClass282_Sub15_7598 = class282_sub15_1;
+			class282_sub15_4.aNode_Sub15_7598 = class282_sub15_1;
 		}
 
-		this.aClass282_Sub15Array3141[i_3] = class282_sub15_1;
+		this.aNode_Sub15Array3141[i_3] = class282_sub15_1;
 		class282_sub15_1.anInt7599 = i_2;
 	}
 
@@ -375,8 +375,8 @@ public class Class253 {
 			this.anInt3117 = 0;
 		}
 
-		if (this.aClass282_Sub15_3122 != null) {
-			this.aClass282_Sub15_3122.method12231(256);
+		if (this.aNode_Sub15_3122 != null) {
+			this.aNode_Sub15_3122.method12231(256);
 		}
 
 	}

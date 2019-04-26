@@ -34,7 +34,7 @@ public class Class281 {
 					this.method4983(sceneobjectmanager_1);
 					Iterator iterator_3 = this.aLinkedList3377.iterator();
 					while (iterator_3.hasNext() && (byte) -1 == -1) {
-						Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Class521_Sub1_Sub1_Sub1) iterator_3.next();
+						Transform_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Transform_Sub1_Sub1_Sub1) iterator_3.next();
 						sceneobjectmanager_1.method3397(class521_sub1_sub1_sub1_4, false, 1630649491);
 					}
 				}
@@ -45,7 +45,7 @@ public class Class281 {
 		if (sceneobjectmanager_1 != null && this.aLinkedList3377 != null) {
 			Iterator iterator_3 = this.aLinkedList3377.iterator();
 			while (iterator_3.hasNext()) {
-				Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Class521_Sub1_Sub1_Sub1) iterator_3.next();
+				Transform_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Transform_Sub1_Sub1_Sub1) iterator_3.next();
 				sceneobjectmanager_1.method3530(class521_sub1_sub1_sub1_4.plane, class521_sub1_sub1_sub1_4.aShort9458, class521_sub1_sub1_sub1_4.aShort9456, new Class280(class521_sub1_sub1_sub1_4), -1561298110);
 			}
 		}
@@ -78,7 +78,7 @@ public class Class281 {
 					if (regionmap_3.is0x2(i_9, i_10, 1872595412)) {
 						++i_8;
 					}
-					this.aLinkedList3377.add(new Class521_Sub1_Sub1_Sub1(sceneobjectmanager_1, this, Class4.anInt35, i_8, i_11, Class504.method8389(i_11, i_12, Class4.anInt35, (byte) 91), i_12));
+					this.aLinkedList3377.add(new Transform_Sub1_Sub1_Sub1(sceneobjectmanager_1, this, Class4.anInt35, i_8, i_11, Class504.method8389(i_11, i_12, Class4.anInt35, (byte) 91), i_12));
 				}
 			}
 			coordgrid_5 = coordgrid_7;

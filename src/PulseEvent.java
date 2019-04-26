@@ -56,7 +56,7 @@ public class PulseEvent extends CacheableNode {
 			long value = event.method14967();
 			if (type == 1) {
 				Class320.VARC_INT[(int) value] = event.primary;
-				client.aBool7400 |= Class282_Sub17_Sub2.VARC_BOOL[(int) value];
+				client.aBool7400 |= Node_Sub17_Sub2.VARC_BOOL[(int) value];
 				client.anIntArray7150[++client.anInt7368 - 1 & 0x1f] = (int) value;
 			} else if (type == 2) {
 				Class462.VARC_STRING[(int) value] = event.string;
@@ -89,12 +89,12 @@ public class PulseEvent extends CacheableNode {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (event.primary != icomponentdefinitions_5.animation) {
 					if (event.primary != -1) {
-						if (icomponentdefinitions_5.aClass456_1437 == null) {
-							icomponentdefinitions_5.aClass456_1437 = new Class456_Sub1();
+						if (icomponentdefinitions_5.aAnimation_1437 == null) {
+							icomponentdefinitions_5.aAnimation_1437 = new Animation_Sub1();
 						}
-						icomponentdefinitions_5.aClass456_1437.update(event.primary);
+						icomponentdefinitions_5.aAnimation_1437.update(event.primary);
 					} else {
-						icomponentdefinitions_5.aClass456_1437 = null;
+						icomponentdefinitions_5.aAnimation_1437 = null;
 					}
 					icomponentdefinitions_5.animation = event.primary;
 					Class109.redrawComponent(icomponentdefinitions_5);

@@ -70,9 +70,9 @@ public class Class185 {
 
     float[] aFloatArray2338;
 
-    Class528_Sub2[] aClass528_Sub2Array2339;
+    MeshRasterizer_Sub2[] aMeshRasterizer_Sub2Array2339;
 
-    Class528_Sub2[] aClass528_Sub2Array2340;
+    MeshRasterizer_Sub2[] aMeshRasterizer_Sub2Array2340;
 
     float[] aFloatArray2315;
 
@@ -86,7 +86,7 @@ public class Class185 {
 
     float[] aFloatArray2324;
 
-    HardwareRenderer aClass505_Sub3_2320;
+    HardwareRenderer aGraphicalRenderer_Sub3_2320;
 
     int[] anIntArray2329;
 
@@ -95,7 +95,7 @@ public class Class185 {
     }
 
     void method3071() {
-        this.aClass144_2310 = new ChoppyItemFixClass(this.aClass505_Sub3_2320, this);
+        this.aClass144_2310 = new ChoppyItemFixClass(this.aGraphicalRenderer_Sub3_2320, this);
     }
 
     Class185(HardwareRenderer hardwarerenderer_1) {
@@ -111,11 +111,11 @@ public class Class185 {
         this.aClass294_2316 = new Matrix44Var();
         this.aClass384_2317 = new Matrix44Arr();
         this.aClass384_2318 = new Matrix44Arr();
-        this.anIntArray2319 = new int[Class528_Sub2.anInt8644];
-        this.aFloatArray2302 = new float[Class528_Sub2.anInt8644];
-        this.aFloatArray2341 = new float[Class528_Sub2.anInt8644];
-        this.aFloatArray2322 = new float[Class528_Sub2.anInt8644];
-        this.aFloatArray2323 = new float[Class528_Sub2.anInt8644];
+        this.anIntArray2319 = new int[MeshRasterizer_Sub2.anInt8644];
+        this.aFloatArray2302 = new float[MeshRasterizer_Sub2.anInt8644];
+        this.aFloatArray2341 = new float[MeshRasterizer_Sub2.anInt8644];
+        this.aFloatArray2322 = new float[MeshRasterizer_Sub2.anInt8644];
+        this.aFloatArray2323 = new float[MeshRasterizer_Sub2.anInt8644];
         this.anIntArray2321 = new int[8];
         this.anIntArray2325 = new int[8];
         this.anIntArray2312 = new int[8];
@@ -125,23 +125,23 @@ public class Class185 {
         this.aFloat2335 = 0.0F;
         this.aFloat2308 = 1.0F;
         this.aFloatArray2338 = new float[2];
-        this.aClass528_Sub2Array2339 = new Class528_Sub2[7];
-        this.aClass528_Sub2Array2340 = new Class528_Sub2[7];
+        this.aMeshRasterizer_Sub2Array2339 = new MeshRasterizer_Sub2[7];
+        this.aMeshRasterizer_Sub2Array2340 = new MeshRasterizer_Sub2[7];
         this.aFloatArray2315 = new float[64];
         this.aFloatArray2342 = new float[64];
         this.aFloatArray2330 = new float[64];
         this.aFloatArray2344 = new float[64];
         this.aFloatArray2345 = new float[64];
         this.aFloatArray2324 = new float[3];
-        this.aClass505_Sub3_2320 = hardwarerenderer_1;
+        this.aGraphicalRenderer_Sub3_2320 = hardwarerenderer_1;
         this.aClass144_2310 = new ChoppyItemFixClass(hardwarerenderer_1, this);
         int i_2;
         for (i_2 = 0; i_2 < 7; i_2++) {
-            this.aClass528_Sub2Array2339[i_2] = new Class528_Sub2(this.aClass505_Sub3_2320);
-            this.aClass528_Sub2Array2340[i_2] = new Class528_Sub2(this.aClass505_Sub3_2320);
+            this.aMeshRasterizer_Sub2Array2339[i_2] = new MeshRasterizer_Sub2(this.aGraphicalRenderer_Sub3_2320);
+            this.aMeshRasterizer_Sub2Array2340[i_2] = new MeshRasterizer_Sub2(this.aGraphicalRenderer_Sub3_2320);
         }
-        this.anIntArray2329 = new int[Class528_Sub2.anInt8562];
-        for (i_2 = 0; i_2 < Class528_Sub2.anInt8562; i_2++) {
+        this.anIntArray2329 = new int[MeshRasterizer_Sub2.anInt8562];
+        for (i_2 = 0; i_2 < MeshRasterizer_Sub2.anInt8562; i_2++) {
             this.anIntArray2329[i_2] = -1;
         }
     }

@@ -7,7 +7,7 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 	int anInt10238;
 	int anInt10239;
 	Canvas aCanvas10241;
-	HardwareRenderer aClass505_Sub3_10237;
+	HardwareRenderer aGraphicalRenderer_Sub3_10237;
 	int[] anIntArray10240;
 	float[] aFloatArray10236;
 
@@ -17,7 +17,7 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 	}
 
 	final boolean method213() {
-		this.aClass505_Sub3_10237.method14376(this.anInt10238, this.anInt10239, this.anIntArray10240, this.aFloatArray10236);
+		this.aGraphicalRenderer_Sub3_10237.method14376(this.anInt10238, this.anInt10239, this.anIntArray10240, this.aFloatArray10236);
 		this.aBool10242 = true;
 		return true;
 	}
@@ -37,13 +37,13 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 
 	Class158_Sub2_Sub3(HardwareRenderer hardwarerenderer_1, Canvas canvas_2, int i_3, int i_4) {
 		this.aCanvas10241 = canvas_2;
-		this.aClass505_Sub3_10237 = hardwarerenderer_1;
+		this.aGraphicalRenderer_Sub3_10237 = hardwarerenderer_1;
 		this.anInt10238 = i_3;
 		this.anInt10239 = i_4;
 	}
 
 	final boolean method54() {
-		this.aClass505_Sub3_10237.method14376(-1977580999 * this.anInt10238 * -1379480567, 2033125333 * this.anInt10239 * -2009073283, this.anIntArray10240, this.aFloatArray10236);
+		this.aGraphicalRenderer_Sub3_10237.method14376(-1977580999 * this.anInt10238 * -1379480567, 2033125333 * this.anInt10239 * -2009073283, this.anIntArray10240, this.aFloatArray10236);
 		this.aBool10242 = true;
 		return true;
 	}
@@ -75,7 +75,7 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 	}
 
 	final boolean method211() {
-		this.aClass505_Sub3_10237.method14376(-1977580999 * this.anInt10238 * -1379480567, 2033125333 * this.anInt10239 * -2009073283, this.anIntArray10240, this.aFloatArray10236);
+		this.aGraphicalRenderer_Sub3_10237.method14376(-1977580999 * this.anInt10238 * -1379480567, 2033125333 * this.anInt10239 * -2009073283, this.anIntArray10240, this.aFloatArray10236);
 		this.aBool10242 = true;
 		return true;
 	}
@@ -98,7 +98,7 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 		this.anIntArray10240 = new int[this.anInt10239 * this.anInt10238];
 		this.aFloatArray10236 = new float[this.anInt10239 * this.anInt10238];
 		if (this.aBool10242) {
-			this.aClass505_Sub3_10237.method14376(this.anInt10238, this.anInt10239, this.anIntArray10240, this.aFloatArray10236);
+			this.aGraphicalRenderer_Sub3_10237.method14376(this.anInt10238, this.anInt10239, this.anIntArray10240, this.aFloatArray10236);
 		}
 
 	}

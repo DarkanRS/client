@@ -1,6 +1,6 @@
 public class ParamDefinitions {
 
-	public static NativeSprite aClass160_5339;
+	public static NativeSprite aNativeSprite_5339;
 	char typeChar;
 	public int defaultInt;
 	public boolean autoDisable = true;
@@ -41,7 +41,7 @@ public class ParamDefinitions {
 			IndexLoaders.MAP_REGION_DECODER.method4446((byte) -33);
 			WorldDescriptor.method13056();
 			Class356.method6227(false, (byte) -17);
-			Class225_Sub6.method13413();
+			RouteStrategy_Sub6.method13413();
 			Class122.method2111(true);
 			ParticleProducerDefinition.method1160(-319039192);
 			Class386.method6673(326422820);
@@ -53,16 +53,16 @@ public class ParamDefinitions {
 			for (i_1 = 0; i_1 < 2048; i_1++) {
 				Player player_2 = client.players[i_1];
 				if (player_2 != null) {
-					for (i_3 = 0; i_3 < player_2.aClass528Array10372.length; i_3++) {
-						player_2.aClass528Array10372[i_3] = null;
+					for (i_3 = 0; i_3 < player_2.aMeshRasterizerArray10372.length; i_3++) {
+						player_2.aMeshRasterizerArray10372[i_3] = null;
 					}
 				}
 			}
 			for (i_1 = 0; i_1 < client.anInt7210; i_1++) {
-				NPC npc_4 = (NPC) client.aClass282_Sub47Array7209[i_1].anObject8068;
+				NPC npc_4 = (NPC) client.aNode_Sub47Array7209[i_1].anObject8068;
 				if (npc_4 != null) {
-					for (i_3 = 0; i_3 < npc_4.aClass528Array10372.length; i_3++) {
-						npc_4.aClass528Array10372[i_3] = null;
+					for (i_3 = 0; i_3 < npc_4.aMeshRasterizerArray10372.length; i_3++) {
+						npc_4.aMeshRasterizerArray10372[i_3] = null;
 					}
 				}
 			}

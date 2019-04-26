@@ -1,7 +1,7 @@
 public class Class167 {
 
 	SoftCache aClass229_2044 = new SoftCache(256);
-	OpenGLGraphicalRenderer aClass505_Sub1_2042;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_2042;
 	Interface22 anInterface22_2043;
 
 	Class137_Sub1 method2857(int i_1, int i_2) {
@@ -13,22 +13,22 @@ public class Class167 {
 		} else {
 			TextureDetails class169_4 = this.anInterface22_2043.method144(i_1);
 			if (i_2 == -1) {
-				i_2 = class169_4.isHalfSize ? 64 : this.aClass505_Sub1_2042.anInt8349;
+				i_2 = class169_4.isHalfSize ? 64 : this.aGraphicalRenderer_Sub1_2042.anInt8349;
 			}
 
 			Class137_Sub1 class137_sub1_5;
-			if (class169_4.hdr && this.aClass505_Sub1_2042.method8471()) {
+			if (class169_4.hdr && this.aGraphicalRenderer_Sub1_2042.method8471()) {
 				float[] floats_7 = this.anInterface22_2043.method145(i_1, i_2, i_2);
-				class137_sub1_5 = new Class137_Sub1(this.aClass505_Sub1_2042, Class150.aClass150_1949, Class76.aClass76_755, i_2, i_2, class169_4.useMipmaps != 0, floats_7, Class150.aClass150_1949);
+				class137_sub1_5 = new Class137_Sub1(this.aGraphicalRenderer_Sub1_2042, Class150.aClass150_1949, Class76.aClass76_755, i_2, i_2, class169_4.useMipmaps != 0, floats_7, Class150.aClass150_1949);
 			} else {
 				int[] ints_6;
-				if (class169_4.blendType != 2 && Class282_Sub41.method13367(class169_4.effectId, (short) 8231)) {
+				if (class169_4.blendType != 2 && Node_Sub41.method13367(class169_4.effectId, (short) 8231)) {
 					ints_6 = this.anInterface22_2043.method140(i_1, 0.7F, i_2, i_2, true, (byte) 47);
 				} else {
 					ints_6 = this.anInterface22_2043.method141(i_1, i_2, i_2, false, 1544969950);
 				}
 
-				class137_sub1_5 = new Class137_Sub1(this.aClass505_Sub1_2042, 3553, i_2, i_2, class169_4.useMipmaps != 0, ints_6, 0, 0, false);
+				class137_sub1_5 = new Class137_Sub1(this.aGraphicalRenderer_Sub1_2042, 3553, i_2, i_2, class169_4.useMipmaps != 0, ints_6, 0, 0, false);
 			}
 
 			class137_sub1_5.method14445(class169_4.repeatS, class169_4.repeatT);
@@ -50,7 +50,7 @@ public class Class167 {
 	}
 
 	Class167(OpenGLGraphicalRenderer class505_sub1_1, Interface22 interface22_2) {
-		this.aClass505_Sub1_2042 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_2042 = class505_sub1_1;
 		this.anInterface22_2043 = interface22_2;
 	}
 

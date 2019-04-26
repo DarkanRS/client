@@ -4,8 +4,8 @@ public abstract class Class455 {
 
     static void iComponentOnIComponent(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
         if (client.aBool7344) {
-            ParamDefinitions attributedefault_4 = Class96_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.USE_INTERFACE_ID) : null;
-            if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.USE_OPTIONS_FLAGS & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.USE_INTERFACE_ID, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
+            ParamDefinitions attributedefault_4 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
+            if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.USE_OPTIONS_FLAGS & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_4.defaultInt, 1315662275) != attributedefault_4.defaultInt)) {
                 PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.aString1369, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1704442537);
             }
         }
@@ -70,7 +70,7 @@ public abstract class Class455 {
                 var_10 = Character.toLowerCase(var_10);
                 var_15 = Character.toLowerCase(var_15);
                 if (var_15 != var_10) {
-                    return Class468_Sub30.method13422(var_10, xlanguage_2) - Class468_Sub30.method13422(var_15, xlanguage_2);
+                    return Preference_Sub30.method13422(var_10, xlanguage_2) - Preference_Sub30.method13422(var_15, xlanguage_2);
                 }
             }
         }
@@ -91,7 +91,7 @@ public abstract class Class455 {
                 var_17 = Character.toLowerCase(var_17);
                 var_13 = Character.toLowerCase(var_13);
                 if (var_17 != var_13) {
-                    return Class468_Sub30.method13422(var_17, xlanguage_2) - Class468_Sub30.method13422(var_13, xlanguage_2);
+                    return Preference_Sub30.method13422(var_17, xlanguage_2) - Preference_Sub30.method13422(var_13, xlanguage_2);
                 }
             }
         }
@@ -103,7 +103,7 @@ public abstract class Class455 {
                 var_13 = charsequence_0.charAt(i_19);
                 char var_14 = charsequence_1.charAt(i_19);
                 if (var_13 != var_14) {
-                    return Class468_Sub30.method13422(var_13, xlanguage_2) - Class468_Sub30.method13422(var_14, xlanguage_2);
+                    return Preference_Sub30.method13422(var_13, xlanguage_2) - Preference_Sub30.method13422(var_14, xlanguage_2);
                 }
             }
             return 0;
@@ -126,12 +126,12 @@ public abstract class Class455 {
                 Class9.anInt94 = -1;
             }
             Class9.aClass184_73.aBool2298 = false;
-            Class8_Sub1.method13784(-3, -416283097);
+            FontRenderer_Sub1.method13784(-3, -416283097);
             Class9.loginStage = 18;
             Class9.anInt90 = 0;
             Class9.anInt104 = 0;
         } else {
-            Class8_Sub1.method13784(3, 737925306);
+            FontRenderer_Sub1.method13784(3, 737925306);
         }
     }
 

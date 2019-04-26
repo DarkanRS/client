@@ -1,4 +1,4 @@
-public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
+public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 	static int[] anIntArray10531 = new int[] { 1, 2, 4, 8 };
 	static int[] anIntArray10533 = new int[] { 16, 32, 64, 128 };
@@ -18,7 +18,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			int i_7 = (int) class305_5.aClass385_3595.x >> 9;
 			int i_8 = (int) class305_5.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, i_7, i_7, i_8, i_8, true, 319778577);
-			meshrasterizer_3.method11282(matrix44var_4, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_9 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_9);
@@ -26,7 +26,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_3.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = Class275_Sub2.method12505((int) class305_5.aClass385_3595.x, (int) class305_5.aClass385_3595.y, (int) class305_5.aClass385_3595.z, meshrasterizer_3, (byte) -4);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_5.aClass385_3595.x, (int) class305_5.aClass385_3595.y, (int) class305_5.aClass385_3595.z, meshrasterizer_3, (byte) -4);
 			} else {
 				Class388.method6694(this.aClass200_10530, (int) class305_5.aClass385_3595.x, (int) class305_5.aClass385_3595.y, (int) class305_5.aClass385_3595.z, meshrasterizer_3, -1850766643);
 			}
@@ -158,7 +158,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, -337672509);
-			meshrasterizer_2.method11282(matrix44var_3, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -166,7 +166,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_2.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = Class275_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) 5);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) 5);
 			} else {
 				Class388.method6694(this.aClass200_10530, (int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, -550552279);
 			}
@@ -238,7 +238,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 		return this.aClass123_10532.method2117(1065429909);
 	}
 
-	final void method13016(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	final void method13016(GraphicalRenderer graphicalrenderer_1, Transform_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		throw new IllegalStateException();
 	}
 
@@ -257,7 +257,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, -204709260);
-			meshrasterizer_2.method11282(matrix44var_3, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -265,7 +265,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_2.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = Class275_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) 8);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) 8);
 			} else {
 				Class388.method6694(this.aClass200_10530, (int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, -237678782);
 			}
@@ -310,7 +310,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, 1290726085);
-			meshrasterizer_2.method11282(matrix44var_3, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -318,7 +318,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_2.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = Class275_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) -25);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) -25);
 			} else {
 				Class388.method6694(this.aClass200_10530, (int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, -678461281);
 			}
@@ -348,17 +348,17 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 		throw new IllegalStateException();
 	}
 
-	final void method13013(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6, int i_7) {
+	final void method13013(GraphicalRenderer graphicalrenderer_1, Transform_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6, int i_7) {
 		throw new IllegalStateException();
 	}
 
 	static final void method16113() {
 		int i_1 = Class296.anInt3534 * 512 + 256;
-		int i_2 = Class282_Sub44.anInt8064 * 512 + 256;
+		int i_2 = Node_Sub44.anInt8064 * 512 + 256;
 		int i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 102) - SpotAnimDefinitions.anInt6985;
 		if (Class115.anInt1249 >= 100) {
 			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
-			Class246.anInt3029 = Class282_Sub44.anInt8064 * 512 + 256;
+			Class246.anInt3029 = Node_Sub44.anInt8064 * 512 + 256;
 			Class109_Sub1.anInt9384 = Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 84) - SpotAnimDefinitions.anInt6985;
 		} else {
 			if (IdentitiKitIndexLoader.anInt361 < i_1) {
@@ -404,7 +404,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			}
 		}
 
-		i_1 = Class96_Sub13.anInt9368 * 512 + 256;
+		i_1 = CutsceneAction_Sub13.anInt9368 * 512 + 256;
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
 		i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 54) - Class121.anInt1527;
 		int i_4 = i_1 - IdentitiKitIndexLoader.anInt361;

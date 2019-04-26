@@ -303,7 +303,7 @@ public final class Index {
 					RsByteBuffer rsbytebuffer_23 = new RsByteBuffer(bytes_22);
 					rsbytebuffer_23.method13249(ints_3, rsbytebuffer_23.buffer.length);
 				}
-				byte[] bytes_27 = Class282_Sub17_Sub6.method15438(bytes_22, (byte) 43);
+				byte[] bytes_27 = Node_Sub17_Sub6.method15438(bytes_22, (byte) 43);
 				if (this.aBool3685) {
 					this.archives[i_1] = null;
 				}

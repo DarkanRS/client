@@ -162,9 +162,9 @@ public class LinkedNodeList {
     public static final void method7886() {
         TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.CLOSE_INTERFACE, client.outputContext.isaac);
         client.outputContext.queuePacket(tcpmessage_2);
-        for (Class282_Sub44 class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 30)) {
+        for (Node_Sub44 class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7751((byte) 30)) {
             if (!class282_sub44_3.isLinked()) {
-                class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(861555487);
+                class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7750(861555487);
                 if (class282_sub44_3 == null) {
                     break;
                 }
@@ -180,13 +180,13 @@ public class LinkedNodeList {
     }
 
     public static void method7887() {
-        Class282_Sub48 class282_sub48_1;
-        for (class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8073.head(); class282_sub48_1 != null; class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-1229768145)) {
+        Node_Sub48 class282_sub48_1;
+        for (class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8073.head(); class282_sub48_1 != null; class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8073.next(-1229768145)) {
             if (class282_sub48_1.aBool8092) {
                 class282_sub48_1.method13426();
             }
         }
-        for (class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head(); class282_sub48_1 != null; class282_sub48_1 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(893135123)) {
+        for (class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_1 != null; class282_sub48_1 = (Node_Sub48) Node_Sub48.aClass482_8074.next(893135123)) {
             if (class282_sub48_1.aBool8092) {
                 class282_sub48_1.method13426();
             }

@@ -3,8 +3,8 @@ import java.nio.ByteBuffer;
 public class Class74 {
 
 	Class71[][] aClass71ArrayArray738;
-	Class505_Sub2 aClass505_Sub2_730;
-	HardwareGround aClass390_Sub1_731;
+	GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_730;
+	HardwareGround aGround_Sub1_731;
 	int anInt732;
 	int anInt734;
 	byte[] aByteArray736;
@@ -17,7 +17,7 @@ public class Class74 {
 
 		for (int i_1 = 0; i_1 < this.anInt733; i_1++) {
 			for (int i_2 = 0; i_2 < this.anInt735; i_2++) {
-				this.aClass71ArrayArray738[i_2][i_1] = new Class71(this.aClass505_Sub2_730, this, this.aClass390_Sub1_731, i_2, i_1, this.anInt737, i_2 * 128 + 1, i_1 * 128 + 1);
+				this.aClass71ArrayArray738[i_2][i_1] = new Class71(this.aGraphicalRenderer_Sub2_730, this, this.aGround_Sub1_731, i_2, i_1, this.anInt737, i_2 * 128 + 1, i_1 * 128 + 1);
 				if (this.aClass71ArrayArray738[i_2][i_1].anInt716 == 0) {
 					this.aClass71ArrayArray738[i_2][i_1] = null;
 				}
@@ -27,7 +27,7 @@ public class Class74 {
 	}
 
 	void method1314(Class48 class48_1, int i_2, int i_3, int i_4, boolean[][] bools_5, boolean bool_6) {
-		float f_7 = 1.0F / (float) (this.aClass505_Sub2_730.anInt8775 * 128);
+		float f_7 = 1.0F / (float) (this.aGraphicalRenderer_Sub2_730.anInt8775 * 128);
 		int i_10;
 		int i_11;
 		int i_13;
@@ -62,7 +62,7 @@ public class Class74 {
 			}
 		} else {
 			int[] ints_24 = new int[this.anInt733 * this.anInt735];
-			ByteBuffer bytebuffer_9 = this.aClass505_Sub2_730.aByteBuffer8838;
+			ByteBuffer bytebuffer_9 = this.aGraphicalRenderer_Sub2_730.aByteBuffer8838;
 			bytebuffer_9.clear();
 			i_10 = 0;
 
@@ -79,11 +79,11 @@ public class Class74 {
 
 						for (int i_19 = i_25; i_19 < i_13; i_19++) {
 							if (i_19 - i_3 >= -i_4 && i_19 - i_3 <= i_4) {
-								int i_20 = i_17 + this.aClass390_Sub1_731.width * i_19;
+								int i_20 = i_17 + this.aGround_Sub1_731.width * i_19;
 
 								for (int i_21 = i_17; i_21 < i_18; i_21++) {
 									if (i_21 - i_2 >= -i_4 && i_21 - i_2 <= i_4 && bools_5[i_21 - i_2 + i_4][i_4 + (i_19 - i_3)]) {
-										short[] shorts_22 = this.aClass390_Sub1_731.aShortArrayArray8534[i_20];
+										short[] shorts_22 = this.aGround_Sub1_731.aShortArrayArray8534[i_20];
 										if (shorts_22 != null) {
 											for (int i_23 = 0; i_23 < shorts_22.length; i_23++) {
 												bytebuffer_9.putShort(shorts_22[i_23]);
@@ -105,8 +105,8 @@ public class Class74 {
 
 			if (bytebuffer_9.position() != 0) {
 				i_11 = bytebuffer_9.position();
-				Interface32 interface32_12 = this.aClass505_Sub2_730.method13911(i_11 / 2);
-				interface32_12.method42(0, i_11, this.aClass505_Sub2_730.aLong8695);
+				Interface32 interface32_12 = this.aGraphicalRenderer_Sub2_730.method13911(i_11 / 2);
+				interface32_12.method42(0, i_11, this.aGraphicalRenderer_Sub2_730.aLong8695);
 				i_13 = 0;
 				i_10 = 0;
 
@@ -129,7 +129,7 @@ public class Class74 {
 	}
 
 	void method1315(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
-		Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_1;
+		CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (CacheableNode_Sub17_Sub2) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub2_4.anInt10453 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub2_4.anInt10455 + 1;
 		int i_5 = i_2 + i_3 * this.anInt732;
@@ -177,7 +177,7 @@ public class Class74 {
 	}
 
 	boolean method1316(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
-		Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_1;
+		CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (CacheableNode_Sub17_Sub2) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub2_4.anInt10453 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub2_4.anInt10455 + 1;
 		int i_5 = i_2 + i_3 * this.anInt732;
@@ -221,7 +221,7 @@ public class Class74 {
 	}
 
 	void method1317(Shadow class282_sub50_sub17_1, int i_2, int i_3) {
-		Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_1;
+		CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_4 = (CacheableNode_Sub17_Sub2) class282_sub50_sub17_1;
 		i_2 = i_2 + class282_sub50_sub17_sub2_4.anInt10453 + 1;
 		i_3 = i_3 + class282_sub50_sub17_sub2_4.anInt10455 + 1;
 		int i_5 = i_2 + i_3 * this.anInt732;
@@ -349,15 +349,15 @@ public class Class74 {
 		return false;
 	}
 
-	Class74(Class505_Sub2 class505_sub2_1, HardwareGround class390_sub1_2) {
-		this.aClass505_Sub2_730 = class505_sub2_1;
-		this.aClass390_Sub1_731 = class390_sub1_2;
-		this.anInt732 = (this.aClass390_Sub1_731.width * this.aClass390_Sub1_731.tileUnits >> this.aClass505_Sub2_730.anInt8806) + 2;
-		this.anInt734 = (this.aClass390_Sub1_731.length * this.aClass390_Sub1_731.tileUnits >> this.aClass505_Sub2_730.anInt8806) + 2;
+	Class74(GraphicalRenderer_Sub2 class505_sub2_1, HardwareGround class390_sub1_2) {
+		this.aGraphicalRenderer_Sub2_730 = class505_sub2_1;
+		this.aGround_Sub1_731 = class390_sub1_2;
+		this.anInt732 = (this.aGround_Sub1_731.width * this.aGround_Sub1_731.tileUnits >> this.aGraphicalRenderer_Sub2_730.anInt8806) + 2;
+		this.anInt734 = (this.aGround_Sub1_731.length * this.aGround_Sub1_731.tileUnits >> this.aGraphicalRenderer_Sub2_730.anInt8806) + 2;
 		this.aByteArray736 = new byte[this.anInt732 * this.anInt734];
-		this.anInt737 = this.aClass505_Sub2_730.anInt8806 + 7 - this.aClass390_Sub1_731.tileScale;
-		this.anInt735 = this.aClass390_Sub1_731.width >> this.anInt737;
-		this.anInt733 = this.aClass390_Sub1_731.length >> this.anInt737;
+		this.anInt737 = this.aGraphicalRenderer_Sub2_730.anInt8806 + 7 - this.aGround_Sub1_731.tileScale;
+		this.anInt735 = this.aGround_Sub1_731.width >> this.anInt737;
+		this.anInt733 = this.aGround_Sub1_731.length >> this.anInt737;
 	}
 
 	static final void method1330(byte[] bytes_0, byte[] bytes_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {

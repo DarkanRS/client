@@ -3,7 +3,7 @@ public class Class197 {
 	static FontMetrics aClass414_2436;
 	static byte[] aByteArray2424 = new byte[2048];
 	static byte[] playerMovementTypes = new byte[2048];
-	static RsByteBuffer[] aClass282_Sub35Array2428 = new RsByteBuffer[2048];
+	static RsByteBuffer[] aNode_Sub35Array2428 = new RsByteBuffer[2048];
 	static int NUM_PLAYER_INDICES = 0;
 	static int[] PLAYER_INDICES = new int[2048];
 	static int anInt2431 = 0;
@@ -33,8 +33,8 @@ public class Class197 {
 		if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(player_3.regionBaseX[0], player_3.regionBaseY[0], 1664929780)) {
 			player_3.collisionPlane = (byte) (player_3.collisionPlane + 1);
 		}
-		if (aClass282_Sub35Array2428[i_2] != null) {
-			player_3.decodeAppearance(aClass282_Sub35Array2428[i_2]);
+		if (aNode_Sub35Array2428[i_2] != null) {
+			player_3.decodeAppearance(aNode_Sub35Array2428[i_2]);
 		}
 		NUM_PLAYER_INDICES = 0;
 		PLAYER_INDICES[++NUM_PLAYER_INDICES - 1] = i_2;

@@ -1,6 +1,6 @@
 public class Class125 implements Interface8 {
 
-    public static NativeSprite aClass160_1571;
+    public static NativeSprite aNativeSprite_1571;
 
     static int anInt1572;
 
@@ -92,7 +92,7 @@ public class Class125 implements Interface8 {
         return 0;
     }
 
-    public static Class282_Sub50_Sub6 method2173(int i_0) {
-        return Class291_Sub1.aClass282_Sub50_Sub6_3491;
+    public static CacheableNode_Sub6 method2173(int i_0) {
+        return Class291_Sub1.aCacheableNode_Sub6_3491;
     }
 }

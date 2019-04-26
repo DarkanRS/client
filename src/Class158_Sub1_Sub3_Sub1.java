@@ -8,7 +8,7 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
 	int anInt10436;
 	int anInt10439;
 	Interface26[] anInterface26Array10440 = new Interface26[4];
-	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_10434;
+	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_10434;
 
 	boolean method2718() {
 		for (int i_1 = 1; i_1 < 4; i_1++) {
@@ -102,7 +102,7 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
 	}
 
 	boolean method15969(long long_1) {
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aClass505_Sub2_Sub2_10434.aLong10252, long_1));
+		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10434.aLong10252, long_1));
 	}
 
 	public int method2720() {
@@ -208,9 +208,9 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
 		super.finalize();
 	}
 
-	Class158_Sub1_Sub3_Sub1(Class505_Sub2_Sub2 class505_sub2_sub2_1) {
+	Class158_Sub1_Sub3_Sub1(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1) {
 		super(class505_sub2_sub2_1);
-		this.aClass505_Sub2_Sub2_10434 = class505_sub2_sub2_1;
+		this.aGraphicalRenderer_Sub2_Sub2_10434 = class505_sub2_sub2_1;
 	}
 
 	public int method2726() {
@@ -252,7 +252,7 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
 	}
 
 	boolean method15972(int i_1, long long_2) {
-		return Class25.method751(IDirect3DDevice.SetRenderTarget(this.aClass505_Sub2_Sub2_10434.aLong10252, i_1, long_2));
+		return Class25.method751(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10434.aLong10252, i_1, long_2));
 	}
 
 	boolean method2725() {

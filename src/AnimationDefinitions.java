@@ -197,7 +197,7 @@ public class AnimationDefinitions {
 		}
 	}
 
-	public static final void method11148(Class521_Sub1 class521_sub1_0, int i_1, int i_2) {
-		Class8_Sub3.method14336(class521_sub1_0, i_1, true, 1386523975);
+	public static final void method11148(Transform_Sub1 class521_sub1_0, int i_1, int i_2) {
+		FontRenderer_Sub3.method14336(class521_sub1_0, i_1, true, 1386523975);
 	}
 }

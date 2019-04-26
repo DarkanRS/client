@@ -130,13 +130,13 @@ public abstract class Class158 {
                     i_11 = nativesprite_22.method2793();
                 }
                 FontRenderer fontrenderer_20 = Renderers.FONT_RENDERER;
-                FontMetrics fontmetrics_21 = Class282_Sub17_Sub2.aClass414_9933;
+                FontMetrics fontmetrics_21 = Node_Sub17_Sub2.aClass414_9933;
                 if (worldmapareadefs_9.anInt2722 == 1) {
-                    fontrenderer_20 = Class16.aClass8_144;
+                    fontrenderer_20 = Class16.aFontRenderer_144;
                     fontmetrics_21 = Class16.aClass414_139;
                 }
                 if (worldmapareadefs_9.anInt2722 == 2) {
-                    fontrenderer_20 = Class285.aClass8_3394;
+                    fontrenderer_20 = Class285.aFontRenderer_3394;
                     fontmetrics_21 = SkyboxIndexLoader.aClass414_3438;
                 }
                 Class241.method4152(icomponentdefinitions_2, class455_1, i_3, i_4, i_5, i_6, i_11, worldmapareadefs_9.areaName, fontrenderer_20, fontmetrics_21, worldmapareadefs_9.anInt2720);

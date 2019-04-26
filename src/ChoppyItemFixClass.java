@@ -33,7 +33,7 @@ public class ChoppyItemFixClass {
 	boolean aBool1703 = true;
 	int anInt1704 = -1;
 	boolean aBool1708 = false;
-	HardwareRenderer aClass505_Sub3_1686;
+	HardwareRenderer aGraphicalRenderer_Sub3_1686;
 	Class185 aClass185_1687;
 	int anInt1705;
 	int[] anIntArray1689;
@@ -552,47 +552,47 @@ public class ChoppyItemFixClass {
 
 		int i_37;
 		if (i_29 != this.anInt1692) {
-			this.anIntArray1693 = this.aClass505_Sub3_1686.method14359(i_29);
+			this.anIntArray1693 = this.aGraphicalRenderer_Sub3_1686.method14359(i_29);
 			if (this.anIntArray1693 == null) {
 				this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
-				i_37 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_29), 266546494) & 0xffff];
+				i_37 = Class335.anIntArray3916[Class372.method6362(this.aGraphicalRenderer_Sub3_1686.method14362(i_29), 266546494) & 0xffff];
 				i_36 = ~0xffffff | (i_37 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_37 >> 8 & 0xff) & 0xff00 | (i_37 & 0xff) * (i_22 & 0xff) >> 8;
 				this.method2425(true, true, false, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, Class302.method5364(i_36, i_25, f_26), Class302.method5364(i_36, i_25, f_27), Class302.method5364(i_36, i_25, f_28));
 				return;
 			}
 
-			this.anInt1694 = this.aClass505_Sub3_1686.method14377(i_29) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+			this.anInt1694 = this.aGraphicalRenderer_Sub3_1686.method14377(i_29) ? 64 : this.aGraphicalRenderer_Sub3_1686.anInt9005;
 			this.anInt1691 = this.anInt1694 - 1;
-			this.anInt1697 = this.aClass505_Sub3_1686.method14361(i_29);
+			this.anInt1697 = this.aGraphicalRenderer_Sub3_1686.method14361(i_29);
 		}
 
 		this.aFloat1696 = f_30;
 		if (this.anInt1688 != i_31) {
-			this.anIntArray1698 = this.aClass505_Sub3_1686.method14359(i_31);
+			this.anIntArray1698 = this.aGraphicalRenderer_Sub3_1686.method14359(i_31);
 			if (this.anIntArray1698 == null) {
 				this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
-				i_37 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_31), 1213792412) & 0xffff];
+				i_37 = Class335.anIntArray3916[Class372.method6362(this.aGraphicalRenderer_Sub3_1686.method14362(i_31), 1213792412) & 0xffff];
 				i_36 = ~0xffffff | (i_37 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_37 >> 8 & 0xff) & 0xff00 | (i_37 & 0xff) * (i_22 & 0xff) >> 8;
 				this.method2425(true, true, false, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, Class302.method5364(i_36, i_25, f_26), Class302.method5364(i_36, i_25, f_27), Class302.method5364(i_36, i_25, f_28));
 				return;
 			}
 
-			this.anInt1701 = this.aClass505_Sub3_1686.method14377(i_31) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+			this.anInt1701 = this.aGraphicalRenderer_Sub3_1686.method14377(i_31) ? 64 : this.aGraphicalRenderer_Sub3_1686.anInt9005;
 			this.anInt1699 = this.anInt1701 - 1;
 		}
 
 		this.aFloat1695 = f_32;
 		if (i_33 != this.anInt1704) {
-			this.anIntArray1673 = this.aClass505_Sub3_1686.method14359(i_33);
+			this.anIntArray1673 = this.aGraphicalRenderer_Sub3_1686.method14359(i_33);
 			if (this.anIntArray1673 == null) {
 				this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
-				i_37 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_33), 1237545137) & 0xffff];
+				i_37 = Class335.anIntArray3916[Class372.method6362(this.aGraphicalRenderer_Sub3_1686.method14362(i_33), 1237545137) & 0xffff];
 				i_36 = ~0xffffff | (i_37 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_37 >> 8 & 0xff) & 0xff00 | (i_37 & 0xff) * (i_22 & 0xff) >> 8;
 				this.method2425(true, true, false, (float) ((int) f_4), (float) ((int) f_5), (float) ((int) f_6), (float) ((int) f_7), (float) ((int) f_8), (float) ((int) f_9), (float) ((int) f_10), (float) ((int) f_11), (float) ((int) f_12), Class302.method5364(i_36, i_25, f_26), Class302.method5364(i_36, i_25, f_27), Class302.method5364(i_36, i_25, f_28));
 				return;
 			}
 
-			this.anInt1706 = this.aClass505_Sub3_1686.method14377(i_33) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+			this.anInt1706 = this.aGraphicalRenderer_Sub3_1686.method14377(i_33) ? 64 : this.aGraphicalRenderer_Sub3_1686.anInt9005;
 			this.anInt1707 = this.anInt1706 - 1;
 		}
 
@@ -1884,11 +1884,11 @@ public class ChoppyItemFixClass {
 	}
 
 	ChoppyItemFixClass(HardwareRenderer hardwarerenderer_1, Class185 class185_2) {
-		this.aClass505_Sub3_1686 = hardwarerenderer_1;
+		this.aGraphicalRenderer_Sub3_1686 = hardwarerenderer_1;
 		this.aClass185_1687 = class185_2;
-		this.anInt1705 = this.aClass505_Sub3_1686.anInt8980;
-		this.anIntArray1689 = this.aClass505_Sub3_1686.anIntArray8979;
-		this.aFloatArray1690 = this.aClass505_Sub3_1686.aFloatArray9010;
+		this.anInt1705 = this.aGraphicalRenderer_Sub3_1686.anInt8980;
+		this.anIntArray1689 = this.aGraphicalRenderer_Sub3_1686.anIntArray8979;
+		this.aFloatArray1690 = this.aGraphicalRenderer_Sub3_1686.aFloatArray9010;
 	}
 
 	final void method2424(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, int i_22, int i_23, int i_24, int i_25, float f_26, float f_27, float f_28, int i_29) {
@@ -1897,19 +1897,19 @@ public class ChoppyItemFixClass {
 		} else {
 			int i_30;
 			if (i_29 != this.anInt1692) {
-				this.anIntArray1693 = this.aClass505_Sub3_1686.method14359(i_29);
+				this.anIntArray1693 = this.aGraphicalRenderer_Sub3_1686.method14359(i_29);
 				if (this.anIntArray1693 == null) {
 					this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
-					int i_74 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_29), 638838203) & 0xffff];
+					int i_74 = Class335.anIntArray3916[Class372.method6362(this.aGraphicalRenderer_Sub3_1686.method14362(i_29), 638838203) & 0xffff];
 					i_30 = ~0xffffff | (i_74 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_74 >> 8 & 0xff) & 0xff00 | (i_74 & 0xff) * (i_22 & 0xff) >> 8;
 					this.method2425(true, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, Class302.method5364(i_30, i_25, f_26), Class302.method5364(i_30, i_25, f_27), Class302.method5364(i_30, i_25, f_28));
 					return;
 				}
 
-				this.anInt1694 = this.aClass505_Sub3_1686.method14377(i_29) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+				this.anInt1694 = this.aGraphicalRenderer_Sub3_1686.method14377(i_29) ? 64 : this.aGraphicalRenderer_Sub3_1686.anInt9005;
 				this.anInt1691 = this.anInt1694 - 1;
-				this.anInt1697 = this.aClass505_Sub3_1686.method14361(i_29);
-				this.aBool1703 = this.aClass505_Sub3_1686.method14403(i_29);
+				this.anInt1697 = this.aGraphicalRenderer_Sub3_1686.method14361(i_29);
+				this.aBool1703 = this.aGraphicalRenderer_Sub3_1686.method14403(i_29);
 			}
 
 			this.anInt1677 = i_25;
@@ -2401,9 +2401,9 @@ public class ChoppyItemFixClass {
 		if (!bool_1) {
 			this.method2428(false, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, 0);
 		} else if (this.aBool1671) {
-			this.aClass505_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, ~0xffffff | i_13, (byte) 9);
-			this.aClass505_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, ~0xffffff | i_13, (byte) -29);
-			this.aClass505_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, ~0xffffff | i_13, (byte) -6);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, ~0xffffff | i_13, (byte) 9);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, ~0xffffff | i_13, (byte) -29);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, ~0xffffff | i_13, (byte) -6);
 		} else {
 			float f_16 = f_8 - f_7;
 			float f_17 = f_5 - f_4;
@@ -2927,9 +2927,9 @@ public class ChoppyItemFixClass {
 		if (!bool_1) {
 			this.method2428(false, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, 0);
 		} else if (this.aBool1671) {
-			this.aClass505_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) -26);
-			this.aClass505_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) -7);
-			this.aClass505_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) 19);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) -26);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) -7);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) 19);
 		} else {
 			float f_16 = f_8 - f_7;
 			float f_17 = f_5 - f_4;
@@ -3466,9 +3466,9 @@ public class ChoppyItemFixClass {
 
 	final void method2428(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, int i_13) {
 		if (this.aBool1671) {
-			this.aClass505_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, i_13, (byte) 39);
-			this.aClass505_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, i_13, (byte) -65);
-			this.aClass505_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, i_13, (byte) 63);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, i_13, (byte) 39);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, i_13, (byte) -65);
+			this.aGraphicalRenderer_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, i_13, (byte) 63);
 		} else {
 			float f_14 = f_8 - f_7;
 			float f_15 = f_5 - f_4;

@@ -1,13 +1,13 @@
 public class Class293 {
 
-	public SceneObjectNode aClass521_Sub1_Sub3_3499;
-	public Class521_Sub1_Sub4 aClass521_Sub1_Sub4_3500;
+	public SceneObjectNode aTransform_Sub1_Sub3_3499;
+	public Transform_Sub1_Sub4 aTransform_Sub1_Sub4_3500;
 	short aShort3501;
-	public Class521_Sub1_Sub5 aClass521_Sub1_Sub5_3502;
-	public Class521_Sub1_Sub4 aClass521_Sub1_Sub4_3503;
+	public Transform_Sub1_Sub5 aTransform_Sub1_Sub5_3502;
+	public Transform_Sub1_Sub4 aTransform_Sub1_Sub4_3503;
 	public Class208 aClass208_3504;
-	public Class521_Sub1_Sub5 aClass521_Sub1_Sub5_3505;
-	Class521_Sub1_Sub2 aClass521_Sub1_Sub2_3506;
+	public Transform_Sub1_Sub5 aTransform_Sub1_Sub5_3505;
+	Transform_Sub1_Sub2 aTransform_Sub1_Sub2_3506;
 	short aShort3508;
 	public Class293 aClass293_3509;
 	short aShort3510;

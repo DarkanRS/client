@@ -1,6 +1,6 @@
 final class Class79 implements VarProvider {
 
-	public static Class282_Sub15_Sub4 aClass282_Sub15_Sub4_783;
+	public static Node_Sub15_Sub4 aNode_Sub15_Sub4_783;
 
 	public int method237(int i_1) {
 		IntNode class282_sub38_2 = (IntNode) Class86.aClass465_823.get((long) i_1);
@@ -44,7 +44,7 @@ final class Class79 implements VarProvider {
 		Class82.aClass75Array804 = null;
 		Class86.aClass92Array820 = null;
 		Class86.aClass93Array821 = null;
-		Class86.aClass96Array822 = null;
+		Class86.aCutsceneActionArray822 = null;
 		Class86.anInt819 = 1;
 		Class86.anInt825 = 0;
 		Class86.anInt824 = 0;

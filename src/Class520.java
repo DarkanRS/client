@@ -4,8 +4,8 @@ public class Class520 {
 
     int anInt5933;
 
-    public Class521_Sub1_Sub2_Sub1 method11158() {
-        Class282_Sub29 class282_sub29_2 = (Class282_Sub29) client.aClass465_7414.get((long) (this.aClass219_5934.level << 28 | this.aClass219_5934.y << 14 | this.aClass219_5934.x));
+    public Transform_Sub1_Sub2_Sub1 method11158() {
+        Node_Sub29 class282_sub29_2 = (Node_Sub29) client.aClass465_7414.get((long) (this.aClass219_5934.level << 28 | this.aClass219_5934.y << 14 | this.aClass219_5934.x));
         if (class282_sub29_2 == null) {
             return null;
         } else {
@@ -13,9 +13,9 @@ public class Class520 {
             int i_4 = this.aClass219_5934.x - coordgrid_3.x;
             int i_5 = this.aClass219_5934.y - coordgrid_3.y;
             if (i_4 >= 0 && i_5 >= 0 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-                for (Class282_Sub34 class282_sub34_6 = (Class282_Sub34) class282_sub29_2.aClass482_7708.head(); class282_sub34_6 != null; class282_sub34_6 = (Class282_Sub34) class282_sub29_2.aClass482_7708.next(184260692)) {
+                for (Node_Sub34 class282_sub34_6 = (Node_Sub34) class282_sub29_2.aClass482_7708.head(); class282_sub34_6 != null; class282_sub34_6 = (Node_Sub34) class282_sub29_2.aClass482_7708.next(184260692)) {
                     if (class282_sub34_6.anInt7853 == this.anInt5933) {
-                        return (Class521_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3437(this.aClass219_5934.level, i_4, i_5);
+                        return (Transform_Sub1_Sub2_Sub1) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3437(this.aClass219_5934.level, i_4, i_5);
                     }
                 }
             }

@@ -169,7 +169,7 @@ public class ParticleProducer {
 
 					Particle class275_sub1_sub1_sub1_28;
 					if (Class235.anInt2905 != Class235.anInt2902) {
-						class275_sub1_sub1_sub1_28 = Class235.aClass275_Sub1_Sub1_Sub1Array2897[Class235.anInt2902];
+						class275_sub1_sub1_sub1_28 = Class235.aEntityNode_Sub1_Sub1_Sub1Array2897[Class235.anInt2902];
 						Class235.anInt2902 = Class235.anInt2902 + 1 & 0x3ff;
 						class275_sub1_sub1_sub1_28.reset(this, i_20, i_21, i_22, i_14, i_15, i_16, i_35, i_24, i_26, i_25, i_30, this.definition.aBool572, this.definition.aBool534);
 					} else {
@@ -247,7 +247,7 @@ public class ParticleProducer {
 		this.startTime = long_4;
 		this.definition = this.aClass87_7110.method1485();
 		if (!graphicalrenderer_1.method8406() && this.definition.anInt573 != -1) {
-			this.definition = Class282_Sub11_Sub1.getParticleProducerDefs(this.definition.anInt573);
+			this.definition = Node_Sub11_Sub1.getParticleProducerDefs(this.definition.anInt573);
 		}
 
 		this.particles = new EntityList();
@@ -269,7 +269,7 @@ public class ParticleProducer {
 	}
 
 	static final void method11501(int i_0) {
-		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
+		CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
 		if (client.anInt7349 != -1) {
 			RSHookableInterface.method8777(client.anInt7349, (byte) -116);
 		}
@@ -287,7 +287,7 @@ public class ParticleProducer {
 		}
 
 		Renderers.SOFTWARE_RENDERER.L();
-		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 123);
+		Node_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 123);
 		i_1 = QuickchatFiller.method1141(1515135830);
 		if (i_1 == -1) {
 			i_1 = client.anInt7427;

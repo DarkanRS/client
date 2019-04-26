@@ -5,18 +5,18 @@ public class TextureDefinition extends CacheableNode {
 	static FileOutputStream aFileOutputStream9481;
 	static double aDouble9479 = -1.0D;
 	static int[] anIntArray9474 = new int[256];
-	Class282_Sub20[] aClass282_Sub20Array9478;
+	Node_Sub20[] aNode_Sub20Array9478;
 	int[] anIntArray9475;
 	int[] anIntArray9473;
-	Class282_Sub20 aClass282_Sub20_9476;
-	Class282_Sub20 aClass282_Sub20_9477;
-	Class282_Sub20 aClass282_Sub20_9480;
+	Node_Sub20 aNode_Sub20_9476;
+	Node_Sub20 aNode_Sub20_9477;
+	Node_Sub20 aNode_Sub20_9480;
 
 	boolean method14717(Index index_1, Interface22 interface22_2, int i_3) {
 		int i_4;
-		if (Class282_Sub20_Sub29.anInt9913 >= 0) {
+		if (Node_Sub20_Sub29.anInt9913 >= 0) {
 			for (i_4 = 0; i_4 < this.anIntArray9475.length; i_4++) {
-				if (!index_1.load(Class282_Sub20_Sub29.anInt9913, this.anIntArray9475[i_4])) {
+				if (!index_1.load(Node_Sub20_Sub29.anInt9913, this.anIntArray9475[i_4])) {
 					return false;
 				}
 			}
@@ -41,8 +41,8 @@ public class TextureDefinition extends CacheableNode {
 		Class532_Sub2.aClass317_7925 = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
-		for (int i_10 = 0; i_10 < this.aClass282_Sub20Array9478.length; i_10++) {
-			this.aClass282_Sub20Array9478[i_10].method12315(i_5, i_6, (byte) 60);
+		for (int i_10 = 0; i_10 < this.aNode_Sub20Array9478.length; i_10++) {
+			this.aNode_Sub20Array9478[i_10].method12315(i_5, i_6, (byte) 60);
 		}
 
 		SoftCache.method3895(d_3);
@@ -68,13 +68,13 @@ public class TextureDefinition extends CacheableNode {
 			int[] ints_16;
 			int[] ints_17;
 			int[] ints_18;
-			if (this.aClass282_Sub20_9476.aBool7669) {
-				int[] ints_19 = this.aClass282_Sub20_9476.method12319(i_15);
+			if (this.aNode_Sub20_9476.aBool7669) {
+				int[] ints_19 = this.aNode_Sub20_9476.method12319(i_15);
 				ints_16 = ints_19;
 				ints_17 = ints_19;
 				ints_18 = ints_19;
 			} else {
-				int[][] ints_26 = this.aClass282_Sub20_9476.method12320(i_15, 1981543466);
+				int[][] ints_26 = this.aNode_Sub20_9476.method12320(i_15, 1981543466);
 				ints_16 = ints_26[0];
 				ints_17 = ints_26[1];
 				ints_18 = ints_26[2];
@@ -127,8 +127,8 @@ public class TextureDefinition extends CacheableNode {
 			}
 		}
 
-		for (i_15 = 0; i_15 < this.aClass282_Sub20Array9478.length; i_15++) {
-			this.aClass282_Sub20Array9478[i_15].method12326();
+		for (i_15 = 0; i_15 < this.aNode_Sub20Array9478.length; i_15++) {
+			this.aNode_Sub20Array9478[i_15].method12326();
 		}
 
 		return ints_24;
@@ -138,8 +138,8 @@ public class TextureDefinition extends CacheableNode {
 		Class532_Sub2.aClass317_7925 = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
-		for (int i_9 = 0; i_9 < this.aClass282_Sub20Array9478.length; i_9++) {
-			this.aClass282_Sub20Array9478[i_9].method12315(i_5, i_6, (byte) 116);
+		for (int i_9 = 0; i_9 < this.aNode_Sub20Array9478.length; i_9++) {
+			this.aNode_Sub20Array9478[i_9].method12315(i_5, i_6, (byte) 116);
 		}
 
 		SoftCache.method3895(d_3);
@@ -153,22 +153,22 @@ public class TextureDefinition extends CacheableNode {
 			int[] ints_13;
 			int[] ints_14;
 			int[] ints_15;
-			if (this.aClass282_Sub20_9476.aBool7669) {
-				ints_15 = this.aClass282_Sub20_9476.method12319(i_11);
+			if (this.aNode_Sub20_9476.aBool7669) {
+				ints_15 = this.aNode_Sub20_9476.method12319(i_11);
 				ints_12 = ints_15;
 				ints_13 = ints_15;
 				ints_14 = ints_15;
 			} else {
-				int[][] ints_22 = this.aClass282_Sub20_9476.method12320(i_11, -1291616356);
+				int[][] ints_22 = this.aNode_Sub20_9476.method12320(i_11, -1291616356);
 				ints_12 = ints_22[0];
 				ints_13 = ints_22[1];
 				ints_14 = ints_22[2];
 			}
 
-			if (this.aClass282_Sub20_9477.aBool7669) {
-				ints_15 = this.aClass282_Sub20_9477.method12319(i_11);
+			if (this.aNode_Sub20_9477.aBool7669) {
+				ints_15 = this.aNode_Sub20_9477.method12319(i_11);
 			} else {
-				ints_15 = this.aClass282_Sub20_9477.method12320(i_11, 1766478944)[0];
+				ints_15 = this.aNode_Sub20_9477.method12320(i_11, 1766478944)[0];
 			}
 
 			if (bool_7) {
@@ -227,8 +227,8 @@ public class TextureDefinition extends CacheableNode {
 			}
 		}
 
-		for (i_11 = 0; i_11 < this.aClass282_Sub20Array9478.length; i_11++) {
-			this.aClass282_Sub20Array9478[i_11].method12326();
+		for (i_11 = 0; i_11 < this.aNode_Sub20Array9478.length; i_11++) {
+			this.aNode_Sub20Array9478[i_11].method12326();
 		}
 
 		return ints_21;
@@ -239,10 +239,10 @@ public class TextureDefinition extends CacheableNode {
 		int i_3 = 0;
 		int i_4 = 0;
 		int[][] ints_5 = new int[i_2][];
-		this.aClass282_Sub20Array9478 = new Class282_Sub20[i_2];
+		this.aNode_Sub20Array9478 = new Node_Sub20[i_2];
 
 		int i_6;
-		Class282_Sub20 class282_sub20_7;
+		Node_Sub20 class282_sub20_7;
 		int i_8;
 		int i_9;
 		for (i_6 = 0; i_6 < i_2; i_6++) {
@@ -255,14 +255,14 @@ public class TextureDefinition extends CacheableNode {
 				++i_4;
 			}
 
-			i_8 = class282_sub20_7.aClass282_Sub20Array7671.length;
+			i_8 = class282_sub20_7.aNode_Sub20Array7671.length;
 			ints_5[i_6] = new int[i_8];
 
 			for (i_9 = 0; i_9 < i_8; i_9++) {
 				ints_5[i_6][i_9] = rsbytebuffer_1.readUnsignedByte();
 			}
 
-			this.aClass282_Sub20Array9478[i_6] = class282_sub20_7;
+			this.aNode_Sub20Array9478[i_6] = class282_sub20_7;
 		}
 
 		this.anIntArray9475 = new int[i_3];
@@ -271,11 +271,11 @@ public class TextureDefinition extends CacheableNode {
 		i_4 = 0;
 
 		for (i_6 = 0; i_6 < i_2; i_6++) {
-			class282_sub20_7 = this.aClass282_Sub20Array9478[i_6];
-			i_8 = class282_sub20_7.aClass282_Sub20Array7671.length;
+			class282_sub20_7 = this.aNode_Sub20Array9478[i_6];
+			i_8 = class282_sub20_7.aNode_Sub20Array7671.length;
 
 			for (i_9 = 0; i_9 < i_8; i_9++) {
-				class282_sub20_7.aClass282_Sub20Array7671[i_9] = this.aClass282_Sub20Array9478[ints_5[i_6][i_9]];
+				class282_sub20_7.aNode_Sub20Array7671[i_9] = this.aNode_Sub20Array9478[ints_5[i_6][i_9]];
 			}
 
 			i_9 = class282_sub20_7.method12323();
@@ -291,9 +291,9 @@ public class TextureDefinition extends CacheableNode {
 			ints_5[i_6] = null;
 		}
 
-		this.aClass282_Sub20_9476 = this.aClass282_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
-		this.aClass282_Sub20_9477 = this.aClass282_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
-		this.aClass282_Sub20_9480 = this.aClass282_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
+		this.aNode_Sub20_9476 = this.aNode_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
+		this.aNode_Sub20_9477 = this.aNode_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
+		this.aNode_Sub20_9480 = this.aNode_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
 		Object obj_11 = null;
 	}
 
@@ -301,8 +301,8 @@ public class TextureDefinition extends CacheableNode {
 		Class532_Sub2.aClass317_7925 = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
-		for (int i_7 = 0; i_7 < this.aClass282_Sub20Array9478.length; i_7++) {
-			this.aClass282_Sub20Array9478[i_7].method12315(i_3, i_4, (byte) 59);
+		for (int i_7 = 0; i_7 < this.aNode_Sub20Array9478.length; i_7++) {
+			this.aNode_Sub20Array9478[i_7].method12315(i_3, i_4, (byte) 59);
 		}
 
 		Class316.method5593(i_3, i_4, -315322197);
@@ -315,29 +315,29 @@ public class TextureDefinition extends CacheableNode {
 			int[] ints_11;
 			int[] ints_12;
 			int[] ints_13;
-			if (this.aClass282_Sub20_9476.aBool7669) {
-				ints_13 = this.aClass282_Sub20_9476.method12319(i_9);
+			if (this.aNode_Sub20_9476.aBool7669) {
+				ints_13 = this.aNode_Sub20_9476.method12319(i_9);
 				ints_10 = ints_13;
 				ints_11 = ints_13;
 				ints_12 = ints_13;
 			} else {
-				int[][] ints_19 = this.aClass282_Sub20_9476.method12320(i_9, 1271694305);
+				int[][] ints_19 = this.aNode_Sub20_9476.method12320(i_9, 1271694305);
 				ints_10 = ints_19[0];
 				ints_11 = ints_19[1];
 				ints_12 = ints_19[2];
 			}
 
-			if (this.aClass282_Sub20_9477.aBool7669) {
-				ints_13 = this.aClass282_Sub20_9477.method12319(i_9);
+			if (this.aNode_Sub20_9477.aBool7669) {
+				ints_13 = this.aNode_Sub20_9477.method12319(i_9);
 			} else {
-				ints_13 = this.aClass282_Sub20_9477.method12320(i_9, -1071831227)[0];
+				ints_13 = this.aNode_Sub20_9477.method12320(i_9, -1071831227)[0];
 			}
 
 			int[] ints_14;
-			if (this.aClass282_Sub20_9480.aBool7669) {
-				ints_14 = this.aClass282_Sub20_9480.method12319(i_9);
+			if (this.aNode_Sub20_9480.aBool7669) {
+				ints_14 = this.aNode_Sub20_9480.method12319(i_9);
 			} else {
-				ints_14 = this.aClass282_Sub20_9480.method12320(i_9, -1302016809)[0];
+				ints_14 = this.aNode_Sub20_9480.method12320(i_9, -1302016809)[0];
 			}
 
 			if (bool_5) {
@@ -363,8 +363,8 @@ public class TextureDefinition extends CacheableNode {
 			}
 		}
 
-		for (i_9 = 0; i_9 < this.aClass282_Sub20Array9478.length; i_9++) {
-			this.aClass282_Sub20Array9478[i_9].method12326();
+		for (i_9 = 0; i_9 < this.aNode_Sub20Array9478.length; i_9++) {
+			this.aNode_Sub20Array9478[i_9].method12326();
 		}
 
 		return floats_18;

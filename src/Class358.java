@@ -69,10 +69,10 @@ public class Class358 {
 		CutsceneEntity.aClass317_746 = null;
 		Class6.anInt46 = -1;
 		Class148.anInt1738 = -1;
-		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
+		Node_Sub33.aNode_Sub15_Sub2_7836 = null;
 		Class158_Sub2_Sub3.anInt10243 = 0;
 		Class152.aBool1962 = false;
-		Class96_Sub22.anInt9440 = 2;
+		CutsceneAction_Sub22.anInt9440 = 2;
 		Class11.aClass109_121 = null;
 	}
 }

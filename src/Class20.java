@@ -1,8 +1,8 @@
 public class Class20 {
 
-	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_157;
+	static CacheableNode_Sub7 aCacheableNode_Sub7_157;
 
-	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_168;
+	static CacheableNode_Sub7 aCacheableNode_Sub7_168;
 
 	static int[] anIntArray177;
 
@@ -16,7 +16,7 @@ public class Class20 {
 
 	static boolean aBool162 = false;
 
-	static Class282_Sub50_Sub15 aClass282_Sub50_Sub15_163 = null;
+	static CacheableNode_Sub15 aCacheableNode_Sub15_163 = null;
 
 	static int anInt167 = 0;
 

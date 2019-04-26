@@ -3,7 +3,7 @@ import jaggl.OpenGL;
 public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
 	static int[] anIntArray10125 = new int[4];
-	OpenGLGraphicalRenderer aClass505_Sub1_10123;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_10123;
 	Class137_Sub2 aClass137_Sub2_10124;
 
 	Class137_Sub2 method13519() {
@@ -12,10 +12,10 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 
 	boolean method15531(Class137_Sub2 class137_sub2_1, Class137_Sub2 class137_sub2_2, float f_3) {
 		boolean bool_4 = true;
-		Class158_Sub1_Sub4 class158_sub1_sub4_5 = this.aClass505_Sub1_10123.aClass158_Sub1_Sub4_8493;
-		this.aClass505_Sub1_10123.qa(anIntArray10125);
-		this.aClass505_Sub1_10123.L();
-		this.aClass505_Sub1_10123.method13586();
+		Class158_Sub1_Sub4 class158_sub1_sub4_5 = this.aGraphicalRenderer_Sub1_10123.aClass158_Sub1_Sub4_8493;
+		this.aGraphicalRenderer_Sub1_10123.qa(anIntArray10125);
+		this.aGraphicalRenderer_Sub1_10123.L();
+		this.aGraphicalRenderer_Sub1_10123.method13586();
 		OpenGL.glMatrixMode(5889);
 		OpenGL.glLoadIdentity();
 		OpenGL.glOrtho(0.0D, 1.0D, 0.0D, 1.0D, -1.0D, 1.0D);
@@ -23,19 +23,19 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 		OpenGL.glLoadIdentity();
 		OpenGL.glPushAttrib(2048);
 		OpenGL.glViewport(0, 0, this.aClass137_Sub2_10124.anInt9104, this.aClass137_Sub2_10124.anInt9104);
-		this.aClass505_Sub1_10123.method13642(false);
-		this.aClass505_Sub1_10123.method13620(false);
-		this.aClass505_Sub1_10123.method13656(false);
-		this.aClass505_Sub1_10123.method13623(false);
-		this.aClass505_Sub1_10123.method13581(-2);
-		this.aClass505_Sub1_10123.method13610(1);
-		this.aClass505_Sub1_10123.method13635(0.0F, 0.0F, 0.0F, f_3);
-		this.aClass505_Sub1_10123.method13717(34165, 34165);
-		this.aClass505_Sub1_10123.method13654(class137_sub2_2);
-		this.aClass505_Sub1_10123.method13610(0);
-		this.aClass505_Sub1_10123.method13612(1);
-		this.aClass505_Sub1_10123.method13654(class137_sub2_1);
-		this.aClass505_Sub1_10123.method8637(class158_sub1_sub4_5, 1679995585);
+		this.aGraphicalRenderer_Sub1_10123.method13642(false);
+		this.aGraphicalRenderer_Sub1_10123.method13620(false);
+		this.aGraphicalRenderer_Sub1_10123.method13656(false);
+		this.aGraphicalRenderer_Sub1_10123.method13623(false);
+		this.aGraphicalRenderer_Sub1_10123.method13581(-2);
+		this.aGraphicalRenderer_Sub1_10123.method13610(1);
+		this.aGraphicalRenderer_Sub1_10123.method13635(0.0F, 0.0F, 0.0F, f_3);
+		this.aGraphicalRenderer_Sub1_10123.method13717(34165, 34165);
+		this.aGraphicalRenderer_Sub1_10123.method13654(class137_sub2_2);
+		this.aGraphicalRenderer_Sub1_10123.method13610(0);
+		this.aGraphicalRenderer_Sub1_10123.method13612(1);
+		this.aGraphicalRenderer_Sub1_10123.method13654(class137_sub2_1);
+		this.aGraphicalRenderer_Sub1_10123.method8637(class158_sub1_sub4_5, 1679995585);
 
 		for (int i_6 = 0; i_6 < 6; i_6++) {
 			int i_7 = i_6 + 34069;
@@ -137,15 +137,15 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 		}
 
 		class158_sub1_sub4_5.method13759(0, (Interface9) null);
-		this.aClass505_Sub1_10123.method8416(class158_sub1_sub4_5, (byte) -26);
-		this.aClass505_Sub1_10123.method13610(1);
-		this.aClass505_Sub1_10123.method13654((Class137) null);
-		this.aClass505_Sub1_10123.method13717(8448, 8448);
-		this.aClass505_Sub1_10123.method13610(0);
-		this.aClass505_Sub1_10123.method13654((Class137) null);
+		this.aGraphicalRenderer_Sub1_10123.method8416(class158_sub1_sub4_5, (byte) -26);
+		this.aGraphicalRenderer_Sub1_10123.method13610(1);
+		this.aGraphicalRenderer_Sub1_10123.method13654((Class137) null);
+		this.aGraphicalRenderer_Sub1_10123.method13717(8448, 8448);
+		this.aGraphicalRenderer_Sub1_10123.method13610(0);
+		this.aGraphicalRenderer_Sub1_10123.method13654((Class137) null);
 		OpenGL.glPopAttrib();
-		this.aClass505_Sub1_10123.r(anIntArray10125[0], anIntArray10125[1], anIntArray10125[2], anIntArray10125[3]);
-		if (bool_4 && !this.aClass505_Sub1_10123.aBool8465) {
+		this.aGraphicalRenderer_Sub1_10123.r(anIntArray10125[0], anIntArray10125[1], anIntArray10125[2], anIntArray10125[3]);
+		if (bool_4 && !this.aGraphicalRenderer_Sub1_10123.aBool8465) {
 			this.aClass137_Sub2_10124.method2353();
 		}
 
@@ -165,7 +165,7 @@ public class Class152_Sub1_Sub2 extends Class152_Sub1 {
 	}
 
 	Class152_Sub1_Sub2(OpenGLGraphicalRenderer class505_sub1_1, int i_2) {
-		this.aClass505_Sub1_10123 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_10123 = class505_sub1_1;
 		this.aClass137_Sub2_10124 = new Class137_Sub2(class505_sub1_1, Class150.aClass150_1949, Class76.aClass76_751, i_2);
 	}
 

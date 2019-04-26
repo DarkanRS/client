@@ -3,7 +3,7 @@ import jaggl.OpenGL;
 public class Class128 {
 
 	static int[] anIntArray1582 = new int[2];
-	OpenGLGraphicalRenderer aClass505_Sub1_1581;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1581;
 	int anInt1583;
 
 	static Class128 method2174(OpenGLGraphicalRenderer class505_sub1_0, Class140[] arr_1) {
@@ -45,12 +45,12 @@ public class Class128 {
 	}
 
 	public void finalize() throws Throwable {
-		this.aClass505_Sub1_1581.method13627((long) this.anInt1583);
+		this.aGraphicalRenderer_Sub1_1581.method13627((long) this.anInt1583);
 		super.finalize();
 	}
 
 	Class128(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class140[] arr_3) {
-		this.aClass505_Sub1_1581 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_1581 = class505_sub1_1;
 		this.anInt1583 = i_2;
 	}
 

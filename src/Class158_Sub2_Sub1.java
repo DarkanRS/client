@@ -5,7 +5,7 @@ import java.awt.Dimension;
 public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 
 	boolean aBool10122;
-	OpenGLGraphicalRenderer aClass505_Sub1_10118;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_10118;
 	Canvas aCanvas10120;
 	OpenGL anOpenGL10119;
 	long aLong10117;
@@ -18,7 +18,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 
 	Class158_Sub2_Sub1(OpenGLGraphicalRenderer class505_sub1_1, Canvas canvas_2, long long_3) {
 		this.aBool10122 = false;
-		this.aClass505_Sub1_10118 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_10118 = class505_sub1_1;
 		this.aCanvas10120 = canvas_2;
 		this.anOpenGL10119 = class505_sub1_1.anOpenGL8352;
 		this.aLong10117 = long_3;
@@ -53,7 +53,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 			throw new IllegalStateException();
 		} else {
 			this.anOpenGL10119.setSurface(this.aLong10117);
-			this.aClass505_Sub1_10118.method13578();
+			this.aGraphicalRenderer_Sub1_10118.method13578();
 			return true;
 		}
 	}
@@ -85,8 +85,8 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 		} else {
 			this.anOpenGL10119.surfaceResized(this.aLong10117);
 			this.method15526();
-			if (this == this.aClass505_Sub1_10118.method8523((byte) 120)) {
-				this.aClass505_Sub1_10118.method13639();
+			if (this == this.aGraphicalRenderer_Sub1_10118.method8523((byte) 120)) {
+				this.aGraphicalRenderer_Sub1_10118.method13639();
 			}
 
 		}
@@ -101,7 +101,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 			throw new IllegalStateException();
 		} else {
 			this.anOpenGL10119.setSurface(this.aLong10117);
-			this.aClass505_Sub1_10118.method13578();
+			this.aGraphicalRenderer_Sub1_10118.method13578();
 			return true;
 		}
 	}
@@ -141,8 +141,8 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 		} else {
 			this.anOpenGL10119.surfaceResized(this.aLong10117);
 			this.method15526();
-			if (this == this.aClass505_Sub1_10118.method8523((byte) 126)) {
-				this.aClass505_Sub1_10118.method13639();
+			if (this == this.aGraphicalRenderer_Sub1_10118.method8523((byte) 126)) {
+				this.aGraphicalRenderer_Sub1_10118.method13639();
 			}
 
 		}
@@ -154,8 +154,8 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 		} else {
 			this.anOpenGL10119.surfaceResized(this.aLong10117);
 			this.method15526();
-			if (this == this.aClass505_Sub1_10118.method8523((byte) 110)) {
-				this.aClass505_Sub1_10118.method13639();
+			if (this == this.aGraphicalRenderer_Sub1_10118.method8523((byte) 110)) {
+				this.aGraphicalRenderer_Sub1_10118.method13639();
 			}
 
 		}
@@ -201,7 +201,7 @@ public class Class158_Sub2_Sub1 extends Class158_Sub2 {
 			throw new IllegalStateException();
 		} else {
 			this.anOpenGL10119.setSurface(this.aLong10117);
-			this.aClass505_Sub1_10118.method13578();
+			this.aGraphicalRenderer_Sub1_10118.method13578();
 			return true;
 		}
 	}

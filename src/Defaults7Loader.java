@@ -1,6 +1,6 @@
 public class Defaults7Loader {
 
-    static NativeSprite aClass160_5883;
+    static NativeSprite aNativeSprite_5883;
     public InputSubscriber anInterface17_5878;
     public InputSubscriber anInterface17_5874;
     public InputSubscriber anInterface17_5875;
@@ -58,9 +58,9 @@ public class Defaults7Loader {
             cacheablenode_0.method13452();
         }
         cacheablenode_0.current = cacheablenode_1.current;
-        cacheablenode_0.aClass282_Sub50_8119 = cacheablenode_1;
-        cacheablenode_0.current.aClass282_Sub50_8119 = cacheablenode_0;
-        cacheablenode_0.aClass282_Sub50_8119.current = cacheablenode_0;
+        cacheablenode_0.aCacheableNode_8119 = cacheablenode_1;
+        cacheablenode_0.current.aCacheableNode_8119 = cacheablenode_0;
+        cacheablenode_0.aCacheableNode_8119.current = cacheablenode_0;
     }
 
     public static MeshRasterizer method8752(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
@@ -95,6 +95,6 @@ public class Defaults7Loader {
     }
 
     public static String method8755(RsByteBuffer rsbytebuffer_0, byte b_1) {
-        return Class282_Sub33.method12582(rsbytebuffer_0);
+        return Node_Sub33.method12582(rsbytebuffer_0);
     }
 }

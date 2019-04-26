@@ -58,7 +58,7 @@ public class Class326_Sub2 extends Class326 implements Interface32 {
 		return super.method42(i_1, i_2, long_3);
 	}
 
-	Class326_Sub2(Class505_Sub2_Sub1 class505_sub2_sub1_1, Class76 class76_2, boolean bool_3) {
+	Class326_Sub2(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class76 class76_2, boolean bool_3) {
 		super(class505_sub2_sub1_1, 34963, bool_3);
 		this.aClass76_9267 = class76_2;
 	}

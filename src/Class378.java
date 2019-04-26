@@ -128,7 +128,7 @@ public class Class378 {
 	}
 
 	public static int method6435() {
-		return Class96_Sub10_Sub1.anInt10159;
+		return CutsceneAction_Sub10_Sub1.anInt10159;
 	}
 
 	public static byte[] method6436(String string_0, int i_1) {

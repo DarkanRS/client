@@ -22,7 +22,7 @@ public final class CutsceneEntity {
 				this.npc.drawPriority = ++Class86.anInt819 - 1;
 			} else {
 				this.player = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
-				this.player.decodeAppearance(Class276.aClass282_Sub35_3346);
+				this.player.decodeAppearance(Class276.aNode_Sub35_3346);
 				this.player.index = this.index;
 				this.player.lastUpdate = client.cycles;
 				this.player.drawPriority = ++Class86.anInt819 - 1;
@@ -138,7 +138,7 @@ public final class CutsceneEntity {
 		return stringbuilder_2.toString();
 	}
 
-	static String method1354(Class282_Sub50_Sub15 class282_sub50_sub15_0) {
+	static String method1354(CacheableNode_Sub15 class282_sub50_sub15_0) {
 		return class282_sub50_sub15_0.aString9771 + ParticleProducerDefinition.method1163(16777215) + " >";
 	}
 }

@@ -17,7 +17,7 @@ public class HardwareGround extends Ground {
 	int[][][] anIntArrayArrayArray8540;
 	int[][][] anIntArrayArrayArray8538;
 	int[][][] anIntArrayArrayArray8556;
-	Class282_Sub6[][][] aClass282_Sub6ArrayArrayArray8541;
+	Node_Sub6[][][] aNode_Sub6ArrayArrayArray8541;
 	byte[][] aByteArrayArray8553;
 	HashTable tileMap;
 	float[][] aFloatArrayArray8549;
@@ -26,13 +26,13 @@ public class HardwareGround extends Ground {
 	Interface4 anInterface4_8557;
 	Interface4 anInterface4_8548;
 	Class70 aClass70_8550;
-	Node[] aClass282Array8547;
+	Node[] aNodeArray8547;
 	int anInt8527;
 	int anInt8525;
 	float aFloat8535 = Float.MAX_VALUE;
 	float aFloat8544 = -3.4028235E38F;
 	LinkedNodeList aClass473_8546 = new LinkedNodeList();
-	Class505_Sub2 aClass505_Sub2_8528;
+	GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_8528;
 	int anInt8536;
 	int anInt8529;
 	int anInt8530;
@@ -42,11 +42,11 @@ public class HardwareGround extends Ground {
 
 	public void method6723(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
 		if (this.anInt8542 > 0) {
-			Interface32 interface32_9 = this.aClass505_Sub2_8528.method13911(this.anInt8527);
+			Interface32 interface32_9 = this.aGraphicalRenderer_Sub2_8528.method13911(this.anInt8527);
 			int i_10 = 0;
 			int i_11 = 32767;
 			int i_12 = -32768;
-			ByteBuffer bytebuffer_13 = this.aClass505_Sub2_8528.aByteBuffer8838;
+			ByteBuffer bytebuffer_13 = this.aGraphicalRenderer_Sub2_8528.aByteBuffer8838;
 			bytebuffer_13.clear();
 
 			for (int i_14 = i_5; i_14 < i_7; i_14++) {
@@ -76,17 +76,17 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			interface32_9.method42(0, bytebuffer_13.position(), this.aClass505_Sub2_8528.aLong8695);
+			interface32_9.method42(0, bytebuffer_13.position(), this.aGraphicalRenderer_Sub2_8528.aLong8695);
 			if (i_10 > 0) {
-				this.aClass505_Sub2_8528.method14004();
-				Class48 class48_20 = this.aClass505_Sub2_8528.aClass48_8794;
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method14161(1, this.anInterface4_8557);
-				this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
-				this.aClass505_Sub2_8528.method13997(interface32_9);
-				this.aClass505_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
-				float f_22 = (float) this.aClass505_Sub2_8528.method8523((byte) 126).method2714();
-				float f_23 = (float) this.aClass505_Sub2_8528.method8523((byte) 127).method2716();
+				this.aGraphicalRenderer_Sub2_8528.method14004();
+				Class48 class48_20 = this.aGraphicalRenderer_Sub2_8528.aClass48_8794;
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method14161(1, this.anInterface4_8557);
+				this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
+				this.aGraphicalRenderer_Sub2_8528.method13997(interface32_9);
+				this.aGraphicalRenderer_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
+				float f_22 = (float) this.aGraphicalRenderer_Sub2_8528.method8523((byte) 126).method2714();
+				float f_23 = (float) this.aGraphicalRenderer_Sub2_8528.method8523((byte) 127).method2716();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
 				matrix44var_24.method5214();
@@ -94,15 +94,15 @@ public class HardwareGround extends Ground {
 				matrix44var_18.method5219((float) i_1 - (float) (i_4 * i_3) / 256.0F, (float) i_2 + (float) (i_7 * i_3) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
 				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23);
 				matrix44var_18.method5219(-1.0F, -1.0F, 0.0F);
-				this.aClass505_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
-				this.aClass505_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aClass505_Sub2_8528.aClass294_8713);
-				this.aClass505_Sub2_8528.method8424(this.aClass505_Sub2_8528.aClass384_8683);
+				this.aGraphicalRenderer_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
+				this.aGraphicalRenderer_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aGraphicalRenderer_Sub2_8528.aClass294_8713);
+				this.aGraphicalRenderer_Sub2_8528.method8424(this.aGraphicalRenderer_Sub2_8528.aClass384_8683);
 				class48_20.method957(Matrix44Arr.aClass384_4666);
 				class48_20.aClass303_460.set(0.0F, 0.0F, 0.0F, 0.0F);
 				class48_20.aClass385_457.set(0.0F, 0.0F, 0.0F);
 				class48_20.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 				class48_20.aClass385_459.set(0.0F, 0.0F, 0.0F);
-				class48_20.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+				class48_20.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 				class48_20.aClass384_454.identity();
 				class48_20.anInt467 = i_11;
 				class48_20.anInt468 = i_12 - i_11 + 1;
@@ -122,7 +122,7 @@ public class HardwareGround extends Ground {
 	}
 
 	public void method6707(int x, int y, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile hdWaterTile, boolean bool_12) {
-		Interface22 interface22_13 = this.aClass505_Sub2_8528.anInterface22_5834;
+		Interface22 interface22_13 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834;
 		if (ints_6 != null && this.anIntArrayArrayArray8543 == null) {
 			this.anIntArrayArrayArray8543 = new int[this.width][this.length][];
 		}
@@ -143,7 +143,7 @@ public class HardwareGround extends Ground {
 			this.anIntArrayArrayArray8532[x][y] = ints_4;
 		}
 
-		Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[x][y] = new Class282_Sub6[ints_7.length];
+		Node_Sub6[] arr_14 = this.aNode_Sub6ArrayArrayArray8541[x][y] = new Node_Sub6[ints_7.length];
 
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
@@ -157,17 +157,17 @@ public class HardwareGround extends Ground {
 
 			Node node;
 			for (node = this.tileMap.get(key); node != null; node = this.tileMap.nextInBucket()) {
-				Class282_Sub6 class282_sub6_21 = (Class282_Sub6) node;
+				Node_Sub6 class282_sub6_21 = (Node_Sub6) node;
 				if (i_16 == class282_sub6_21.anInt7510 && class282_sub6_21.aFloat7511 == (float) i_17 && class282_sub6_21.hdWaterTile.equals(hdWaterTile)) {
 					break;
 				}
 			}
 
 			if (node == null) {
-				arr_14[i_15] = new Class282_Sub6(this, i_16, i_17, hdWaterTile);
+				arr_14[i_15] = new Node_Sub6(this, i_16, i_17, hdWaterTile);
 				this.tileMap.put(arr_14[i_15], key);
 			} else {
-				arr_14[i_15] = (Class282_Sub6) node;
+				arr_14[i_15] = (Node_Sub6) node;
 			}
 		}
 
@@ -184,8 +184,8 @@ public class HardwareGround extends Ground {
 
 	public void z(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1315(class282_sub50_sub17_1, i_7, i_8);
 		}
 
@@ -193,8 +193,8 @@ public class HardwareGround extends Ground {
 
 	public boolean method6712(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			return this.aClass74_8545.method1316(class282_sub50_sub17_1, i_7, i_8);
 		} else {
 			return false;
@@ -203,8 +203,8 @@ public class HardwareGround extends Ground {
 
 	public boolean method6718(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			return this.aClass74_8545.method1316(class282_sub50_sub17_1, i_7, i_8);
 		} else {
 			return false;
@@ -213,11 +213,11 @@ public class HardwareGround extends Ground {
 
 	public void method6715(int i_1, int i_2, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
 		if (this.anInt8542 > 0) {
-			Interface32 interface32_9 = this.aClass505_Sub2_8528.method13911(this.anInt8527);
+			Interface32 interface32_9 = this.aGraphicalRenderer_Sub2_8528.method13911(this.anInt8527);
 			int i_10 = 0;
 			int i_11 = 32767;
 			int i_12 = -32768;
-			ByteBuffer bytebuffer_13 = this.aClass505_Sub2_8528.aByteBuffer8838;
+			ByteBuffer bytebuffer_13 = this.aGraphicalRenderer_Sub2_8528.aByteBuffer8838;
 			bytebuffer_13.clear();
 
 			for (int i_14 = i_5; i_14 < i_7; i_14++) {
@@ -247,17 +247,17 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			interface32_9.method42(0, bytebuffer_13.position(), this.aClass505_Sub2_8528.aLong8695);
+			interface32_9.method42(0, bytebuffer_13.position(), this.aGraphicalRenderer_Sub2_8528.aLong8695);
 			if (i_10 > 0) {
-				this.aClass505_Sub2_8528.method14004();
-				Class48 class48_20 = this.aClass505_Sub2_8528.aClass48_8794;
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method14161(1, this.anInterface4_8557);
-				this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
-				this.aClass505_Sub2_8528.method13997(interface32_9);
-				this.aClass505_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
-				float f_22 = (float) this.aClass505_Sub2_8528.method8523((byte) 109).method2714();
-				float f_23 = (float) this.aClass505_Sub2_8528.method8523((byte) 122).method2716();
+				this.aGraphicalRenderer_Sub2_8528.method14004();
+				Class48 class48_20 = this.aGraphicalRenderer_Sub2_8528.aClass48_8794;
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method14161(1, this.anInterface4_8557);
+				this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
+				this.aGraphicalRenderer_Sub2_8528.method13997(interface32_9);
+				this.aGraphicalRenderer_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
+				float f_22 = (float) this.aGraphicalRenderer_Sub2_8528.method8523((byte) 109).method2714();
+				float f_23 = (float) this.aGraphicalRenderer_Sub2_8528.method8523((byte) 122).method2716();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
 				matrix44var_24.method5214();
@@ -265,15 +265,15 @@ public class HardwareGround extends Ground {
 				matrix44var_18.method5219((float) i_1 - (float) (1024 * i_4) / 256.0F, (float) i_2 + (float) (1024 * i_7) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
 				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23);
 				matrix44var_18.method5219(-1.0F, -1.0F, 0.0F);
-				this.aClass505_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
-				this.aClass505_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aClass505_Sub2_8528.aClass294_8713);
-				this.aClass505_Sub2_8528.method8424(this.aClass505_Sub2_8528.aClass384_8683);
+				this.aGraphicalRenderer_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
+				this.aGraphicalRenderer_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aGraphicalRenderer_Sub2_8528.aClass294_8713);
+				this.aGraphicalRenderer_Sub2_8528.method8424(this.aGraphicalRenderer_Sub2_8528.aClass384_8683);
 				class48_20.method957(Matrix44Arr.aClass384_4666);
 				class48_20.aClass303_460.set(0.0F, 0.0F, 0.0F, 0.0F);
 				class48_20.aClass385_457.set(0.0F, 0.0F, 0.0F);
 				class48_20.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 				class48_20.aClass385_459.set(0.0F, 0.0F, 0.0F);
-				class48_20.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+				class48_20.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 				class48_20.aClass384_454.identity();
 				class48_20.anInt467 = i_11;
 				class48_20.anInt468 = i_12 - i_11 + 1;
@@ -289,14 +289,14 @@ public class HardwareGround extends Ground {
 		if ((this.aByteArrayArray8531[i_1][i_2] & 0x1) == 0) {
 			return null;
 		} else {
-			int i_4 = this.tileUnits >> this.aClass505_Sub2_8528.anInt8806;
-			Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_5 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_3;
-			Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_6;
+			int i_4 = this.tileUnits >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_5 = (CacheableNode_Sub17_Sub2) class282_sub50_sub17_3;
+			CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_6;
 			if (class282_sub50_sub17_sub2_5 != null && class282_sub50_sub17_sub2_5.method16039(i_4, i_4)) {
 				class282_sub50_sub17_sub2_6 = class282_sub50_sub17_sub2_5;
 				class282_sub50_sub17_sub2_5.method16042();
 			} else {
-				class282_sub50_sub17_sub2_6 = new Class282_Sub50_Sub17_Sub2(this.aClass505_Sub2_8528, i_4, i_4);
+				class282_sub50_sub17_sub2_6 = new CacheableNode_Sub17_Sub2(this.aGraphicalRenderer_Sub2_8528, i_4, i_4);
 			}
 
 			class282_sub50_sub17_sub2_6.method16040(0, 0, i_4, i_4);
@@ -305,7 +305,7 @@ public class HardwareGround extends Ground {
 		}
 	}
 
-	void method13791(Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_1, int i_2, int i_3) {
+	void method13791(CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_1, int i_2, int i_3) {
 		int[] ints_4 = this.anIntArrayArrayArray8540[i_2][i_3];
 		int[] ints_5 = this.anIntArrayArrayArray8533[i_2][i_3];
 		int i_6 = ints_4.length;
@@ -316,8 +316,8 @@ public class HardwareGround extends Ground {
 
 		int i_7;
 		for (i_7 = 0; i_7 < i_6; i_7++) {
-			anIntArray8558[i_7] = ints_4[i_7] >> this.aClass505_Sub2_8528.anInt8806;
-			anIntArray8559[i_7] = ints_5[i_7] >> this.aClass505_Sub2_8528.anInt8806;
+			anIntArray8558[i_7] = ints_4[i_7] >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			anIntArray8559[i_7] = ints_5[i_7] >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 		}
 
 		i_7 = 0;
@@ -340,14 +340,14 @@ public class HardwareGround extends Ground {
 		if ((this.aByteArrayArray8531[i_1][i_2] & 0x1) == 0) {
 			return null;
 		} else {
-			int i_4 = this.tileUnits >> this.aClass505_Sub2_8528.anInt8806;
-			Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_5 = (Class282_Sub50_Sub17_Sub2) class282_sub50_sub17_3;
-			Class282_Sub50_Sub17_Sub2 class282_sub50_sub17_sub2_6;
+			int i_4 = this.tileUnits >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_5 = (CacheableNode_Sub17_Sub2) class282_sub50_sub17_3;
+			CacheableNode_Sub17_Sub2 class282_sub50_sub17_sub2_6;
 			if (class282_sub50_sub17_sub2_5 != null && class282_sub50_sub17_sub2_5.method16039(i_4, i_4)) {
 				class282_sub50_sub17_sub2_6 = class282_sub50_sub17_sub2_5;
 				class282_sub50_sub17_sub2_5.method16042();
 			} else {
-				class282_sub50_sub17_sub2_6 = new Class282_Sub50_Sub17_Sub2(this.aClass505_Sub2_8528, i_4, i_4);
+				class282_sub50_sub17_sub2_6 = new CacheableNode_Sub17_Sub2(this.aGraphicalRenderer_Sub2_8528, i_4, i_4);
 			}
 
 			class282_sub50_sub17_sub2_6.method16040(0, 0, i_4, i_4);
@@ -357,7 +357,7 @@ public class HardwareGround extends Ground {
 	}
 
 	public void method6716(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5, int i_6) {
-		if (this.aClass282Array8547 != null) {
+		if (this.aNodeArray8547 != null) {
 			int i_7 = i_3 + i_3 + 1;
 			i_7 *= i_7;
 			if (anIntArray8561.length < i_7) {
@@ -398,31 +398,31 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			ByteBuffer bytebuffer_24 = this.aClass505_Sub2_8528.aByteBuffer8838;
+			ByteBuffer bytebuffer_24 = this.aGraphicalRenderer_Sub2_8528.aByteBuffer8838;
 			bytebuffer_24.clear();
 
 			int i_15;
-			for (i_15 = 0; i_15 < this.aClass282Array8547.length; i_15++) {
-				Class282_Sub6 class282_sub6_16 = (Class282_Sub6) this.aClass282Array8547[i_15];
+			for (i_15 = 0; i_15 < this.aNodeArray8547.length; i_15++) {
+				Node_Sub6 class282_sub6_16 = (Node_Sub6) this.aNodeArray8547[i_15];
 				class282_sub6_16.method12147(anIntArray8561, anInt8560);
 			}
 
 			i_15 = bytebuffer_24.position();
-			Class48 class48_27 = this.aClass505_Sub2_8528.aClass48_8794;
+			Class48 class48_27 = this.aGraphicalRenderer_Sub2_8528.aClass48_8794;
 			if (i_15 != 0) {
-				Interface32 interface32_17 = this.aClass505_Sub2_8528.method13911(i_15 / 2);
-				interface32_17.method42(0, i_15, this.aClass505_Sub2_8528.aLong8695);
-				this.aClass505_Sub2_8528.method14004();
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method13997(interface32_17);
+				Interface32 interface32_17 = this.aGraphicalRenderer_Sub2_8528.method13911(i_15 / 2);
+				interface32_17.method42(0, i_15, this.aGraphicalRenderer_Sub2_8528.aLong8695);
+				this.aGraphicalRenderer_Sub2_8528.method14004();
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method13997(interface32_17);
 				class48_27.method957(Matrix44Arr.aClass384_4666);
-				if (this.aClass505_Sub2_8528.anInt8811 > 0) {
-					class48_27.aClass303_460.set(0.0F, 0.0F, 1.0F, -this.aClass505_Sub2_8528.aFloat8813);
-					class48_27.aClass385_457.set((float) (this.aClass505_Sub2_8528.anInt8810 >> 16 & 0xff) / 255.0F, (float) (this.aClass505_Sub2_8528.anInt8810 >> 8 & 0xff) / 255.0F, (float) (this.aClass505_Sub2_8528.anInt8810 >> 0 & 0xff) / 255.0F);
-					this.aClass505_Sub2_8528.aClass384_8683.method6562(this.aClass505_Sub2_8528.aClass384_8740);
-					this.aClass505_Sub2_8528.aClass384_8683.method6520();
-					class48_27.aClass303_460.concat(this.aClass505_Sub2_8528.aClass384_8683);
-					class48_27.aClass303_460.scale(1.0F / (this.aClass505_Sub2_8528.aFloat8819 - this.aClass505_Sub2_8528.aFloat8813));
+				if (this.aGraphicalRenderer_Sub2_8528.anInt8811 > 0) {
+					class48_27.aClass303_460.set(0.0F, 0.0F, 1.0F, -this.aGraphicalRenderer_Sub2_8528.aFloat8813);
+					class48_27.aClass385_457.set((float) (this.aGraphicalRenderer_Sub2_8528.anInt8810 >> 16 & 0xff) / 255.0F, (float) (this.aGraphicalRenderer_Sub2_8528.anInt8810 >> 8 & 0xff) / 255.0F, (float) (this.aGraphicalRenderer_Sub2_8528.anInt8810 >> 0 & 0xff) / 255.0F);
+					this.aGraphicalRenderer_Sub2_8528.aClass384_8683.method6562(this.aGraphicalRenderer_Sub2_8528.aClass384_8740);
+					this.aGraphicalRenderer_Sub2_8528.aClass384_8683.method6520();
+					class48_27.aClass303_460.concat(this.aGraphicalRenderer_Sub2_8528.aClass384_8683);
+					class48_27.aClass303_460.scale(1.0F / (this.aGraphicalRenderer_Sub2_8528.aFloat8819 - this.aGraphicalRenderer_Sub2_8528.aFloat8813));
 				} else {
 					class48_27.aClass303_460.set(0.0F, 0.0F, 0.0F, 0.0F);
 					class48_27.aClass385_457.set(0.0F, 0.0F, 0.0F);
@@ -430,17 +430,17 @@ public class HardwareGround extends Ground {
 
 				int i_18;
 				int i_19;
-				Class282_Sub6 class282_sub6_20;
+				Node_Sub6 class282_sub6_20;
 				TextureDetails class169_22;
 				if ((this.flags & 0x37) == 0) {
 					i_18 = 0;
 
-					for (i_19 = 0; i_19 < this.aClass282Array8547.length; i_19++) {
-						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
+					for (i_19 = 0; i_19 < this.aNodeArray8547.length; i_19++) {
+						class282_sub6_20 = (Node_Sub6) this.aNodeArray8547[i_19];
 						if (class282_sub6_20.anInt7514 != 0) {
-							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
-								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aClass505_Sub2_8528.anInt8739 + (float) (class282_sub6_20.hdWaterTile.intensity) / 255.0F * (float) (class282_sub6_20.hdWaterTile.scale));
+							if (this.aGraphicalRenderer_Sub2_8528.aBool8779) {
+								this.aGraphicalRenderer_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
+								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aGraphicalRenderer_Sub2_8528.anInt8739 + (float) (class282_sub6_20.hdWaterTile.intensity) / 255.0F * (float) (class282_sub6_20.hdWaterTile.scale));
 								class48_27.aClass303_458.scale(1.0F / (float) (class282_sub6_20.hdWaterTile.scale));
 								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
 							} else {
@@ -450,15 +450,15 @@ public class HardwareGround extends Ground {
 
 							boolean bool_30 = false;
 							if (class282_sub6_20.anInt7510 != -1) {
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
-								bool_30 = !Class282_Sub41.method13367(class169_22.effectId, (short) 16046);
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
+								class169_22 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+								bool_30 = !Node_Sub41.method13367(class169_22.effectId, (short) 16046);
 							} else {
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 							}
 
-							this.aClass505_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
-							this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
+							this.aGraphicalRenderer_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
+							this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
 							class48_27.aClass384_454.method6525(1.0F / class282_sub6_20.aFloat7511, 1.0F / class282_sub6_20.aFloat7511, 1.0F, 1.0F);
 							class48_27.anInt467 = class282_sub6_20.anInt7519;
 							class48_27.anInt468 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
@@ -469,17 +469,17 @@ public class HardwareGround extends Ground {
 						}
 					}
 				} else {
-					class48_27.aClass385_466.set(this.aClass505_Sub2_8528.aFloatArray8747[0], this.aClass505_Sub2_8528.aFloatArray8747[1], this.aClass505_Sub2_8528.aFloatArray8747[2]);
-					class48_27.aClass385_448.set(this.aClass505_Sub2_8528.aFloat8770 * this.aClass505_Sub2_8528.aFloat8766, this.aClass505_Sub2_8528.aFloat8770 * this.aClass505_Sub2_8528.aFloat8767, this.aClass505_Sub2_8528.aFloat8770 * this.aClass505_Sub2_8528.aFloat8768);
-					class48_27.aClass385_464.set(-this.aClass505_Sub2_8528.aFloat8826 * this.aClass505_Sub2_8528.aFloat8766, -this.aClass505_Sub2_8528.aFloat8826 * this.aClass505_Sub2_8528.aFloat8767, -this.aClass505_Sub2_8528.aFloat8826 * this.aClass505_Sub2_8528.aFloat8768);
-					class48_27.aClass385_461.set(this.aClass505_Sub2_8528.aFloat8769 * this.aClass505_Sub2_8528.aFloat8766, this.aClass505_Sub2_8528.aFloat8769 * this.aClass505_Sub2_8528.aFloat8767, this.aClass505_Sub2_8528.aFloat8769 * this.aClass505_Sub2_8528.aFloat8768);
+					class48_27.aClass385_466.set(this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0], this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1], this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2]);
+					class48_27.aClass385_448.set(this.aGraphicalRenderer_Sub2_8528.aFloat8770 * this.aGraphicalRenderer_Sub2_8528.aFloat8766, this.aGraphicalRenderer_Sub2_8528.aFloat8770 * this.aGraphicalRenderer_Sub2_8528.aFloat8767, this.aGraphicalRenderer_Sub2_8528.aFloat8770 * this.aGraphicalRenderer_Sub2_8528.aFloat8768);
+					class48_27.aClass385_464.set(-this.aGraphicalRenderer_Sub2_8528.aFloat8826 * this.aGraphicalRenderer_Sub2_8528.aFloat8766, -this.aGraphicalRenderer_Sub2_8528.aFloat8826 * this.aGraphicalRenderer_Sub2_8528.aFloat8767, -this.aGraphicalRenderer_Sub2_8528.aFloat8826 * this.aGraphicalRenderer_Sub2_8528.aFloat8768);
+					class48_27.aClass385_461.set(this.aGraphicalRenderer_Sub2_8528.aFloat8769 * this.aGraphicalRenderer_Sub2_8528.aFloat8766, this.aGraphicalRenderer_Sub2_8528.aFloat8769 * this.aGraphicalRenderer_Sub2_8528.aFloat8767, this.aGraphicalRenderer_Sub2_8528.aFloat8769 * this.aGraphicalRenderer_Sub2_8528.aFloat8768);
 					i_18 = 0;
 
-					for (i_19 = 0; i_19 < this.aClass282Array8547.length; i_19++) {
-						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
+					for (i_19 = 0; i_19 < this.aNodeArray8547.length; i_19++) {
+						class282_sub6_20 = (Node_Sub6) this.aNodeArray8547[i_19];
 						if (class282_sub6_20.anInt7514 > 0) {
-							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
+							if (this.aGraphicalRenderer_Sub2_8528.aBool8779) {
+								this.aGraphicalRenderer_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
 								float f_21 = 0.15F;
 								class48_27.aClass303_458.set(0.0F, 1.0F / ((float) (class282_sub6_20.hdWaterTile.scale) * f_21), 0.0F, 256.0F / ((float) (class282_sub6_20.hdWaterTile.scale) * f_21));
 								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
@@ -490,16 +490,16 @@ public class HardwareGround extends Ground {
 
 							byte b_29 = 11;
 							if (class282_sub6_20.anInt7510 != -1) {
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+								class169_22 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 								b_29 = class169_22.effectId;
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class48_27.method944(class169_22);
 							} else {
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 							}
 
-							this.aClass505_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
-							this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
+							this.aGraphicalRenderer_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
+							this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
 							class48_27.aClass384_454.method6525(1.0F / class282_sub6_20.aFloat7511, 1.0F / class282_sub6_20.aFloat7511, 1.0F, 1.0F);
 							class48_27.anInt467 = class282_sub6_20.anInt7519;
 							class48_27.anInt468 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
@@ -507,19 +507,19 @@ public class HardwareGround extends Ground {
 							class48_27.anInt470 = class282_sub6_20.anInt7514 / 3;
 							switch (b_29) {
 							case 1:
-								class48_27.aClass385_455.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
+								class48_27.aClass385_455.set(this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
 								class48_27.method948(0);
 								break;
 							case 2:
 							case 4:
 							case 8:
 							case 9:
-								if (!this.aClass505_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
-									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aClass505_Sub2_8528.aClass41_Sub1_Sub1_8691;
-									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);
+								if (!this.aGraphicalRenderer_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
+									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aGraphicalRenderer_Sub2_8528.aClass41_Sub1_Sub1_8691;
+									class41_sub1_sub1_31.aClass384_10090.method6562(this.aGraphicalRenderer_Sub2_8528.aClass384_8729);
 									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F / (class282_sub6_20.aFloat7511 * (float) (class282_sub6_20.hdWaterTile.hdWaterInt1)), 1.0F, 1.0F);
-									class41_sub1_sub1_31.aClass385_10089.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
-									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+									class41_sub1_sub1_31.aClass385_10089.set(this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
+									TextureDetails class169_23 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 									class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
 									class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
 									class41_sub1_sub1_31.anInt10111 = (class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1);
@@ -537,19 +537,19 @@ public class HardwareGround extends Ground {
 							case 3:
 							case 5:
 							default:
-								if (this.aClass505_Sub2_8528.aBool8779) {
+								if (this.aGraphicalRenderer_Sub2_8528.aBool8779) {
 									class48_27.method950();
 								} else {
 									class48_27.method965(0);
 								}
 								break;
 							case 6:
-								class48_27.method946(!Class282_Sub41.method13367(b_29, (short) 8402));
+								class48_27.method946(!Node_Sub41.method13367(b_29, (short) 8402));
 								break;
 							case 7:
-								class48_27.aClass385_455.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
+								class48_27.aClass385_455.set(this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
 								class48_27.aClass384_465.identity();
-								class48_27.anInterface31_451 = this.aClass505_Sub2_8528.method13965();
+								class48_27.anInterface31_451 = this.aGraphicalRenderer_Sub2_8528.method13965();
 								class48_27.method949(0);
 							}
 
@@ -560,10 +560,10 @@ public class HardwareGround extends Ground {
 			}
 
 			if (this.aClass74_8545 != null) {
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method14161(1, this.anInterface4_8557);
-				this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
-				Matrix44Arr matrix44arr_28 = this.aClass505_Sub2_8528.aClass384_8683;
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method14161(1, this.anInterface4_8557);
+				this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
+				Matrix44Arr matrix44arr_28 = this.aGraphicalRenderer_Sub2_8528.aClass384_8683;
 				matrix44arr_28.identity();
 				matrix44arr_28.buf[13] = -1.0F;
 				class48_27.method957(matrix44arr_28);
@@ -575,21 +575,21 @@ public class HardwareGround extends Ground {
 
 	public void NA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1315(class282_sub50_sub17_1, i_7, i_8);
 		}
 
 	}
 
-	public void method6711(Class282_Sub24 class282_sub24_1, int[] ints_2) {
-		this.aClass473_8546.insertBack(new Class282_Sub8(this.aClass505_Sub2_8528, this, class282_sub24_1, ints_2));
+	public void method6711(Node_Sub24 class282_sub24_1, int[] ints_2) {
+		this.aClass473_8546.insertBack(new Node_Sub8(this.aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
 	}
 
 	public void d(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1315(class282_sub50_sub17_1, i_7, i_8);
 		}
 
@@ -669,7 +669,7 @@ public class HardwareGround extends Ground {
 	}
 
 	public void method6706(int i_1, int i_2, int[] ints_3, int[] ints_4, int[] ints_5, int[] ints_6, int[] ints_7, int[] ints_8, int[] ints_9, int[] ints_10, HDWaterTile class90_11, boolean bool_12) {
-		Interface22 interface22_13 = this.aClass505_Sub2_8528.anInterface22_5834;
+		Interface22 interface22_13 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834;
 		if (ints_6 != null && this.anIntArrayArrayArray8543 == null) {
 			this.anIntArrayArrayArray8543 = new int[this.width][this.length][];
 		}
@@ -690,7 +690,7 @@ public class HardwareGround extends Ground {
 			this.anIntArrayArrayArray8532[i_1][i_2] = ints_4;
 		}
 
-		Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[i_1][i_2] = new Class282_Sub6[ints_7.length];
+		Node_Sub6[] arr_14 = this.aNode_Sub6ArrayArrayArray8541[i_1][i_2] = new Node_Sub6[ints_7.length];
 
 		for (int i_15 = 0; i_15 < ints_7.length; i_15++) {
 			int i_16 = ints_9[i_15];
@@ -704,17 +704,17 @@ public class HardwareGround extends Ground {
 
 			Node node_20;
 			for (node_20 = this.tileMap.get(long_18); node_20 != null; node_20 = this.tileMap.nextInBucket()) {
-				Class282_Sub6 class282_sub6_21 = (Class282_Sub6) node_20;
+				Node_Sub6 class282_sub6_21 = (Node_Sub6) node_20;
 				if (class282_sub6_21.anInt7510 == i_16 && class282_sub6_21.aFloat7511 == (float) i_17 && class282_sub6_21.hdWaterTile.equals(class90_11)) {
 					break;
 				}
 			}
 
 			if (node_20 == null) {
-				arr_14[i_15] = new Class282_Sub6(this, i_16, i_17, class90_11);
+				arr_14[i_15] = new Node_Sub6(this, i_16, i_17, class90_11);
 				this.tileMap.put(arr_14[i_15], long_18);
 			} else {
-				arr_14[i_15] = (Class282_Sub6) node_20;
+				arr_14[i_15] = (Node_Sub6) node_20;
 			}
 		}
 
@@ -744,7 +744,7 @@ public class HardwareGround extends Ground {
 			this.tileMap.values(arr_67);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
-				((Class282_Sub6) arr_67[i_3]).method12150(this.anInt8542);
+				((Node_Sub6) arr_67[i_3]).method12150(this.anInt8542);
 			}
 
 			i_3 = 20;
@@ -756,25 +756,25 @@ public class HardwareGround extends Ground {
 				i_3 += 12;
 			}
 
-			NativeHeapBuffer nativeheapbuffer_4 = this.aClass505_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * 4, false);
-			NativeHeapBuffer nativeheapbuffer_5 = this.aClass505_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * i_3, false);
+			NativeHeapBuffer nativeheapbuffer_4 = this.aGraphicalRenderer_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * 4, false);
+			NativeHeapBuffer nativeheapbuffer_5 = this.aGraphicalRenderer_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * i_3, false);
 			Stream stream_6 = new Stream(nativeheapbuffer_5);
 			Stream stream_7 = new Stream(nativeheapbuffer_4);
-			Class282_Sub6[] arr_8 = new Class282_Sub6[this.anInt8542];
+			Node_Sub6[] arr_8 = new Node_Sub6[this.anInt8542];
 			int i_9 = Class51.method1072(this.anInt8542 / 4, 2136936903);
 			if (i_9 < 1) {
 				i_9 = 1;
 			}
 
 			HashTable class453_10 = new HashTable(i_9);
-			Class282_Sub6[] arr_11 = new Class282_Sub6[this.anInt8552];
+			Node_Sub6[] arr_11 = new Node_Sub6[this.anInt8552];
 
 			int i_12;
 			int i_13;
 			for (i_12 = 0; i_12 < this.width; i_12++) {
 				for (i_13 = 0; i_13 < this.length; i_13++) {
 					if (this.anIntArrayArrayArray8538[i_12][i_13] != null) {
-						Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[i_12][i_13];
+						Node_Sub6[] arr_14 = this.aNode_Sub6ArrayArrayArray8541[i_12][i_13];
 						int[] ints_70 = this.anIntArrayArrayArray8540[i_12][i_13];
 						int[] ints_71 = this.anIntArrayArrayArray8533[i_12][i_13];
 						int[] ints_17 = this.anIntArrayArrayArray8556[i_12][i_13];
@@ -805,7 +805,7 @@ public class HardwareGround extends Ground {
 
 						int i_40;
 						label459: for (int i_38 = 0; i_38 < ints_18.length; i_38++) {
-							Class282_Sub6 class282_sub6_73 = arr_14[i_38];
+							Node_Sub6 class282_sub6_73 = arr_14[i_38];
 
 							for (i_40 = 0; i_40 < i_37; i_40++) {
 								if (arr_11[i_40] == class282_sub6_73) {
@@ -884,8 +884,8 @@ public class HardwareGround extends Ground {
 
 								i_52 = Class540.anIntArray7136[i_44 & 0xff80 | i_85];
 								if ((this.flags & 0x7) == 0) {
-									f_53 = this.aClass505_Sub2_8528.aFloatArray8747[0] * f_54 + this.aClass505_Sub2_8528.aFloatArray8747[1] * f_55 + this.aClass505_Sub2_8528.aFloatArray8747[2] * f_56;
-									f_53 = this.aClass505_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aClass505_Sub2_8528.aFloat8770 : this.aClass505_Sub2_8528.aFloat8826);
+									f_53 = this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0] * f_54 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1] * f_55 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2] * f_56;
+									f_53 = this.aGraphicalRenderer_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aGraphicalRenderer_Sub2_8528.aFloat8770 : this.aGraphicalRenderer_Sub2_8528.aFloat8826);
 								}
 							}
 
@@ -907,8 +907,8 @@ public class HardwareGround extends Ground {
 
 									i_87 = Class540.anIntArray7136[i_45 & 0xff80 | i_88];
 									if ((this.flags & 0x7) == 0) {
-										float f_10000 = this.aClass505_Sub2_8528.aFloatArray8747[0] * f_54 + this.aClass505_Sub2_8528.aFloatArray8747[1] * f_55 + this.aClass505_Sub2_8528.aFloatArray8747[2] * f_56;
-										f_61 = this.aClass505_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aClass505_Sub2_8528.aFloat8770 : this.aClass505_Sub2_8528.aFloat8826);
+										float f_10000 = this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0] * f_54 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1] * f_55 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2] * f_56;
+										f_61 = this.aGraphicalRenderer_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aGraphicalRenderer_Sub2_8528.aFloat8770 : this.aGraphicalRenderer_Sub2_8528.aFloat8826);
 										int i_89 = i_87 >> 16 & 0xff;
 										int i_90 = i_87 >> 8 & 0xff;
 										int i_91 = i_87 & 0xff;
@@ -971,7 +971,7 @@ public class HardwareGround extends Ground {
 									}
 								}
 
-								if (this.aClass505_Sub2_8528.anInt8824 == 0) {
+								if (this.aGraphicalRenderer_Sub2_8528.anInt8824 == 0) {
 									stream_7.method2921(~0xffffff | i_87);
 								} else {
 									stream_7.method2922(~0xffffff | i_87);
@@ -983,9 +983,9 @@ public class HardwareGround extends Ground {
 									arr_8[i_86] = arr_14[i_39];
 								}
 
-								class453_10.put(new Class282_Sub46(shorts_72[i_39]), long_47);
+								class453_10.put(new Node_Sub46(shorts_72[i_39]), long_47);
 							} else {
-								shorts_72[i_39] = ((Class282_Sub46) node_80).aShort8067;
+								shorts_72[i_39] = ((Node_Sub46) node_80).aShort8067;
 								i_86 = shorts_72[i_39] & 0xffff;
 								if (i_44 != -1 && arr_14[i_39].data < arr_8[i_86].data) {
 									arr_8[i_86] = arr_14[i_39];
@@ -1003,7 +1003,7 @@ public class HardwareGround extends Ground {
 			}
 
 			for (i_12 = 0; i_12 < this.anInt8525; i_12++) {
-				Class282_Sub6 class282_sub6_68 = arr_8[i_12];
+				Node_Sub6 class282_sub6_68 = arr_8[i_12];
 				if (class282_sub6_68 != null) {
 					class282_sub6_68.method12143(i_12);
 				}
@@ -1019,10 +1019,10 @@ public class HardwareGround extends Ground {
 							int i_74 = shorts_81[i_16++] & 0xffff;
 							int i_75 = shorts_81[i_16++] & 0xffff;
 							int i_76 = shorts_81[i_16++] & 0xffff;
-							Class282_Sub6 class282_sub6_83 = arr_8[i_74];
-							Class282_Sub6 class282_sub6_77 = arr_8[i_75];
-							Class282_Sub6 class282_sub6_78 = arr_8[i_76];
-							Class282_Sub6 class282_sub6_79 = null;
+							Node_Sub6 class282_sub6_83 = arr_8[i_74];
+							Node_Sub6 class282_sub6_77 = arr_8[i_75];
+							Node_Sub6 class282_sub6_78 = arr_8[i_76];
+							Node_Sub6 class282_sub6_79 = null;
 							if (class282_sub6_83 != null) {
 								class282_sub6_83.method12152(i_12, i_13, i_15);
 								class282_sub6_79 = class282_sub6_83;
@@ -1064,42 +1064,42 @@ public class HardwareGround extends Ground {
 
 			stream_6.method2925();
 			stream_7.method2925();
-			this.anInterface4_8557 = this.aClass505_Sub2_8528.method13994(false);
+			this.anInterface4_8557 = this.aGraphicalRenderer_Sub2_8528.method13994(false);
 			this.anInterface4_8557.method27(this.anInt8525 * 4, 4, nativeheapbuffer_4);
-			this.anInterface4_8548 = this.aClass505_Sub2_8528.method13994(false);
+			this.anInterface4_8548 = this.aGraphicalRenderer_Sub2_8528.method13994(false);
 			this.anInterface4_8548.method27(this.anInt8525 * i_3, i_3, nativeheapbuffer_5);
 			if ((this.flags & 0x7) != 0) {
 				if (this.anIntArrayArrayArray8543 != null) {
-					this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
+					this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
 				} else {
-					this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
+					this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
 				}
 			} else if (this.anIntArrayArrayArray8543 != null) {
-				this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691 }), new Class72(Class69.aClass69_690) });
+				this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691 }), new Class72(Class69.aClass69_690) });
 			} else {
-				this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692 }), new Class72(Class69.aClass69_690) });
+				this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692 }), new Class72(Class69.aClass69_690) });
 			}
 
 			i_12 = 0;
 
 			for (i_13 = 0; i_13 < arr_67.length; i_13++) {
-				Class282_Sub6 class282_sub6_82 = (Class282_Sub6) arr_67[i_13];
+				Node_Sub6 class282_sub6_82 = (Node_Sub6) arr_67[i_13];
 				if (class282_sub6_82.anInt7508 > 0) {
 					arr_67[i_12++] = class282_sub6_82;
 				}
 			}
 
-			this.aClass282Array8547 = new Node[i_12];
+			this.aNodeArray8547 = new Node[i_12];
 			long[] longs_92 = new long[i_12];
 
 			for (int i_69 = 0; i_69 < i_12; i_69++) {
-				Class282_Sub6 class282_sub6_93 = (Class282_Sub6) arr_67[i_69];
+				Node_Sub6 class282_sub6_93 = (Node_Sub6) arr_67[i_69];
 				longs_92[i_69] = class282_sub6_93.data;
-				this.aClass282Array8547[i_69] = class282_sub6_93;
+				this.aNodeArray8547[i_69] = class282_sub6_93;
 				class282_sub6_93.method12146(this.anInt8525);
 			}
 
-			Class214.method3669(longs_92, this.aClass282Array8547, 1515187812);
+			Class214.method3669(longs_92, this.aNodeArray8547, 1515187812);
 			if (this.aClass74_8545 != null) {
 				this.aClass74_8545.method1312();
 			}
@@ -1116,7 +1116,7 @@ public class HardwareGround extends Ground {
 		this.anIntArrayArrayArray8543 = null;
 		this.anIntArrayArrayArray8556 = null;
 		this.anIntArrayArrayArray8532 = null;
-		this.aClass282_Sub6ArrayArrayArray8541 = null;
+		this.aNode_Sub6ArrayArrayArray8541 = null;
 		this.aByteArrayArray8553 = null;
 		this.tileMap = null;
 		this.aFloatArrayArray8549 = null;
@@ -1139,7 +1139,7 @@ public class HardwareGround extends Ground {
 			this.tileMap.values(arr_67);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
-				((Class282_Sub6) arr_67[i_3]).method12150(this.anInt8542);
+				((Node_Sub6) arr_67[i_3]).method12150(this.anInt8542);
 			}
 
 			i_3 = 20;
@@ -1151,25 +1151,25 @@ public class HardwareGround extends Ground {
 				i_3 += 12;
 			}
 
-			NativeHeapBuffer nativeheapbuffer_4 = this.aClass505_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * 4, false);
-			NativeHeapBuffer nativeheapbuffer_5 = this.aClass505_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * i_3, false);
+			NativeHeapBuffer nativeheapbuffer_4 = this.aGraphicalRenderer_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * 4, false);
+			NativeHeapBuffer nativeheapbuffer_5 = this.aGraphicalRenderer_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * i_3, false);
 			Stream stream_6 = new Stream(nativeheapbuffer_5);
 			Stream stream_7 = new Stream(nativeheapbuffer_4);
-			Class282_Sub6[] arr_8 = new Class282_Sub6[this.anInt8542];
+			Node_Sub6[] arr_8 = new Node_Sub6[this.anInt8542];
 			int i_9 = Class51.method1072(this.anInt8542 / 4, 1403155536);
 			if (i_9 < 1) {
 				i_9 = 1;
 			}
 
 			HashTable class453_10 = new HashTable(i_9);
-			Class282_Sub6[] arr_11 = new Class282_Sub6[this.anInt8552];
+			Node_Sub6[] arr_11 = new Node_Sub6[this.anInt8552];
 
 			int i_12;
 			int i_13;
 			for (i_12 = 0; i_12 < this.width; i_12++) {
 				for (i_13 = 0; i_13 < this.length; i_13++) {
 					if (this.anIntArrayArrayArray8538[i_12][i_13] != null) {
-						Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[i_12][i_13];
+						Node_Sub6[] arr_14 = this.aNode_Sub6ArrayArrayArray8541[i_12][i_13];
 						int[] ints_70 = this.anIntArrayArrayArray8540[i_12][i_13];
 						int[] ints_71 = this.anIntArrayArrayArray8533[i_12][i_13];
 						int[] ints_17 = this.anIntArrayArrayArray8556[i_12][i_13];
@@ -1200,7 +1200,7 @@ public class HardwareGround extends Ground {
 
 						int i_40;
 						label459: for (int i_38 = 0; i_38 < ints_18.length; i_38++) {
-							Class282_Sub6 class282_sub6_73 = arr_14[i_38];
+							Node_Sub6 class282_sub6_73 = arr_14[i_38];
 
 							for (i_40 = 0; i_40 < i_37; i_40++) {
 								if (arr_11[i_40] == class282_sub6_73) {
@@ -1279,8 +1279,8 @@ public class HardwareGround extends Ground {
 
 								i_52 = Class540.anIntArray7136[i_44 & 0xff80 | i_85];
 								if ((this.flags & 0x7) == 0) {
-									f_53 = this.aClass505_Sub2_8528.aFloatArray8747[0] * f_54 + this.aClass505_Sub2_8528.aFloatArray8747[1] * f_55 + this.aClass505_Sub2_8528.aFloatArray8747[2] * f_56;
-									f_53 = this.aClass505_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aClass505_Sub2_8528.aFloat8770 : this.aClass505_Sub2_8528.aFloat8826);
+									f_53 = this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0] * f_54 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1] * f_55 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2] * f_56;
+									f_53 = this.aGraphicalRenderer_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aGraphicalRenderer_Sub2_8528.aFloat8770 : this.aGraphicalRenderer_Sub2_8528.aFloat8826);
 								}
 							}
 
@@ -1302,8 +1302,8 @@ public class HardwareGround extends Ground {
 
 									i_87 = Class540.anIntArray7136[i_45 & 0xff80 | i_88];
 									if ((this.flags & 0x7) == 0) {
-										float f_10000 = this.aClass505_Sub2_8528.aFloatArray8747[0] * f_54 + this.aClass505_Sub2_8528.aFloatArray8747[1] * f_55 + this.aClass505_Sub2_8528.aFloatArray8747[2] * f_56;
-										f_61 = this.aClass505_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aClass505_Sub2_8528.aFloat8770 : this.aClass505_Sub2_8528.aFloat8826);
+										float f_10000 = this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0] * f_54 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1] * f_55 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2] * f_56;
+										f_61 = this.aGraphicalRenderer_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aGraphicalRenderer_Sub2_8528.aFloat8770 : this.aGraphicalRenderer_Sub2_8528.aFloat8826);
 										int i_89 = i_87 >> 16 & 0xff;
 										int i_90 = i_87 >> 8 & 0xff;
 										int i_91 = i_87 & 0xff;
@@ -1366,7 +1366,7 @@ public class HardwareGround extends Ground {
 									}
 								}
 
-								if (this.aClass505_Sub2_8528.anInt8824 == 0) {
+								if (this.aGraphicalRenderer_Sub2_8528.anInt8824 == 0) {
 									stream_7.method2921(~0xffffff | i_87);
 								} else {
 									stream_7.method2922(~0xffffff | i_87);
@@ -1378,9 +1378,9 @@ public class HardwareGround extends Ground {
 									arr_8[i_86] = arr_14[i_39];
 								}
 
-								class453_10.put(new Class282_Sub46(shorts_72[i_39]), long_47);
+								class453_10.put(new Node_Sub46(shorts_72[i_39]), long_47);
 							} else {
-								shorts_72[i_39] = ((Class282_Sub46) node_80).aShort8067;
+								shorts_72[i_39] = ((Node_Sub46) node_80).aShort8067;
 								i_86 = shorts_72[i_39] & 0xffff;
 								if (i_44 != -1 && arr_14[i_39].data < arr_8[i_86].data) {
 									arr_8[i_86] = arr_14[i_39];
@@ -1398,7 +1398,7 @@ public class HardwareGround extends Ground {
 			}
 
 			for (i_12 = 0; i_12 < this.anInt8525; i_12++) {
-				Class282_Sub6 class282_sub6_68 = arr_8[i_12];
+				Node_Sub6 class282_sub6_68 = arr_8[i_12];
 				if (class282_sub6_68 != null) {
 					class282_sub6_68.method12143(i_12);
 				}
@@ -1414,10 +1414,10 @@ public class HardwareGround extends Ground {
 							int i_74 = shorts_81[i_16++] & 0xffff;
 							int i_75 = shorts_81[i_16++] & 0xffff;
 							int i_76 = shorts_81[i_16++] & 0xffff;
-							Class282_Sub6 class282_sub6_83 = arr_8[i_74];
-							Class282_Sub6 class282_sub6_77 = arr_8[i_75];
-							Class282_Sub6 class282_sub6_78 = arr_8[i_76];
-							Class282_Sub6 class282_sub6_79 = null;
+							Node_Sub6 class282_sub6_83 = arr_8[i_74];
+							Node_Sub6 class282_sub6_77 = arr_8[i_75];
+							Node_Sub6 class282_sub6_78 = arr_8[i_76];
+							Node_Sub6 class282_sub6_79 = null;
 							if (class282_sub6_83 != null) {
 								class282_sub6_83.method12152(i_12, i_13, i_15);
 								class282_sub6_79 = class282_sub6_83;
@@ -1459,42 +1459,42 @@ public class HardwareGround extends Ground {
 
 			stream_6.method2925();
 			stream_7.method2925();
-			this.anInterface4_8557 = this.aClass505_Sub2_8528.method13994(false);
+			this.anInterface4_8557 = this.aGraphicalRenderer_Sub2_8528.method13994(false);
 			this.anInterface4_8557.method27(this.anInt8525 * 4, 4, nativeheapbuffer_4);
-			this.anInterface4_8548 = this.aClass505_Sub2_8528.method13994(false);
+			this.anInterface4_8548 = this.aGraphicalRenderer_Sub2_8528.method13994(false);
 			this.anInterface4_8548.method27(this.anInt8525 * i_3, i_3, nativeheapbuffer_5);
 			if ((this.flags & 0x7) != 0) {
 				if (this.anIntArrayArrayArray8543 != null) {
-					this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
+					this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
 				} else {
-					this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
+					this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
 				}
 			} else if (this.anIntArrayArrayArray8543 != null) {
-				this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691 }), new Class72(Class69.aClass69_690) });
+				this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691 }), new Class72(Class69.aClass69_690) });
 			} else {
-				this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692 }), new Class72(Class69.aClass69_690) });
+				this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692 }), new Class72(Class69.aClass69_690) });
 			}
 
 			i_12 = 0;
 
 			for (i_13 = 0; i_13 < arr_67.length; i_13++) {
-				Class282_Sub6 class282_sub6_82 = (Class282_Sub6) arr_67[i_13];
+				Node_Sub6 class282_sub6_82 = (Node_Sub6) arr_67[i_13];
 				if (class282_sub6_82.anInt7508 > 0) {
 					arr_67[i_12++] = class282_sub6_82;
 				}
 			}
 
-			this.aClass282Array8547 = new Node[i_12];
+			this.aNodeArray8547 = new Node[i_12];
 			long[] longs_92 = new long[i_12];
 
 			for (int i_69 = 0; i_69 < i_12; i_69++) {
-				Class282_Sub6 class282_sub6_93 = (Class282_Sub6) arr_67[i_69];
+				Node_Sub6 class282_sub6_93 = (Node_Sub6) arr_67[i_69];
 				longs_92[i_69] = class282_sub6_93.data;
-				this.aClass282Array8547[i_69] = class282_sub6_93;
+				this.aNodeArray8547[i_69] = class282_sub6_93;
 				class282_sub6_93.method12146(this.anInt8525);
 			}
 
-			Class214.method3669(longs_92, this.aClass282Array8547, 2070243142);
+			Class214.method3669(longs_92, this.aNodeArray8547, 2070243142);
 			if (this.aClass74_8545 != null) {
 				this.aClass74_8545.method1312();
 			}
@@ -1511,7 +1511,7 @@ public class HardwareGround extends Ground {
 		this.anIntArrayArrayArray8543 = null;
 		this.anIntArrayArrayArray8556 = null;
 		this.anIntArrayArrayArray8532 = null;
-		this.aClass282_Sub6ArrayArrayArray8541 = null;
+		this.aNode_Sub6ArrayArrayArray8541 = null;
 		this.aByteArrayArray8553 = null;
 		this.tileMap = null;
 		this.aFloatArrayArray8549 = null;
@@ -1534,7 +1534,7 @@ public class HardwareGround extends Ground {
 			this.tileMap.values(arr_67);
 
 			for (i_3 = 0; i_3 < arr_67.length; i_3++) {
-				((Class282_Sub6) arr_67[i_3]).method12150(this.anInt8542);
+				((Node_Sub6) arr_67[i_3]).method12150(this.anInt8542);
 			}
 
 			i_3 = 20;
@@ -1546,25 +1546,25 @@ public class HardwareGround extends Ground {
 				i_3 += 12;
 			}
 
-			NativeHeapBuffer nativeheapbuffer_4 = this.aClass505_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * 4, false);
-			NativeHeapBuffer nativeheapbuffer_5 = this.aClass505_Sub2_8528.aNativeHeap8699.method759(i_3 * this.anInt8542, false);
+			NativeHeapBuffer nativeheapbuffer_4 = this.aGraphicalRenderer_Sub2_8528.aNativeHeap8699.method759(this.anInt8542 * 4, false);
+			NativeHeapBuffer nativeheapbuffer_5 = this.aGraphicalRenderer_Sub2_8528.aNativeHeap8699.method759(i_3 * this.anInt8542, false);
 			Stream stream_6 = new Stream(nativeheapbuffer_5);
 			Stream stream_7 = new Stream(nativeheapbuffer_4);
-			Class282_Sub6[] arr_8 = new Class282_Sub6[this.anInt8542];
+			Node_Sub6[] arr_8 = new Node_Sub6[this.anInt8542];
 			int i_9 = Class51.method1072(this.anInt8542 / 4, 942119232);
 			if (i_9 < 1) {
 				i_9 = 1;
 			}
 
 			HashTable class453_10 = new HashTable(i_9);
-			Class282_Sub6[] arr_11 = new Class282_Sub6[this.anInt8552];
+			Node_Sub6[] arr_11 = new Node_Sub6[this.anInt8552];
 
 			int i_12;
 			int i_13;
 			for (i_12 = 0; i_12 < this.width; i_12++) {
 				for (i_13 = 0; i_13 < this.length; i_13++) {
 					if (this.anIntArrayArrayArray8538[i_12][i_13] != null) {
-						Class282_Sub6[] arr_14 = this.aClass282_Sub6ArrayArrayArray8541[i_12][i_13];
+						Node_Sub6[] arr_14 = this.aNode_Sub6ArrayArrayArray8541[i_12][i_13];
 						int[] ints_70 = this.anIntArrayArrayArray8540[i_12][i_13];
 						int[] ints_71 = this.anIntArrayArrayArray8533[i_12][i_13];
 						int[] ints_17 = this.anIntArrayArrayArray8556[i_12][i_13];
@@ -1595,7 +1595,7 @@ public class HardwareGround extends Ground {
 
 						int i_40;
 						label459: for (int i_38 = 0; i_38 < ints_18.length; i_38++) {
-							Class282_Sub6 class282_sub6_73 = arr_14[i_38];
+							Node_Sub6 class282_sub6_73 = arr_14[i_38];
 
 							for (i_40 = 0; i_40 < i_37; i_40++) {
 								if (class282_sub6_73 == arr_11[i_40]) {
@@ -1674,8 +1674,8 @@ public class HardwareGround extends Ground {
 
 								i_52 = Class540.anIntArray7136[i_44 & 0xff80 | i_85];
 								if ((this.flags & 0x7) == 0) {
-									f_53 = this.aClass505_Sub2_8528.aFloatArray8747[0] * f_54 + this.aClass505_Sub2_8528.aFloatArray8747[1] * f_55 + this.aClass505_Sub2_8528.aFloatArray8747[2] * f_56;
-									f_53 = this.aClass505_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aClass505_Sub2_8528.aFloat8770 : this.aClass505_Sub2_8528.aFloat8826);
+									f_53 = this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0] * f_54 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1] * f_55 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2] * f_56;
+									f_53 = this.aGraphicalRenderer_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aGraphicalRenderer_Sub2_8528.aFloat8770 : this.aGraphicalRenderer_Sub2_8528.aFloat8826);
 								}
 							}
 
@@ -1697,8 +1697,8 @@ public class HardwareGround extends Ground {
 
 									i_87 = Class540.anIntArray7136[i_45 & 0xff80 | i_88];
 									if ((this.flags & 0x7) == 0) {
-										float f_10000 = this.aClass505_Sub2_8528.aFloatArray8747[0] * f_54 + this.aClass505_Sub2_8528.aFloatArray8747[1] * f_55 + this.aClass505_Sub2_8528.aFloatArray8747[2] * f_56;
-										f_61 = this.aClass505_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aClass505_Sub2_8528.aFloat8770 : this.aClass505_Sub2_8528.aFloat8826);
+										float f_10000 = this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0] * f_54 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1] * f_55 + this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2] * f_56;
+										f_61 = this.aGraphicalRenderer_Sub2_8528.aFloat8769 + f_53 * (f_53 > 0.0F ? this.aGraphicalRenderer_Sub2_8528.aFloat8770 : this.aGraphicalRenderer_Sub2_8528.aFloat8826);
 										int i_89 = i_87 >> 16 & 0xff;
 										int i_90 = i_87 >> 8 & 0xff;
 										int i_91 = i_87 & 0xff;
@@ -1761,7 +1761,7 @@ public class HardwareGround extends Ground {
 									}
 								}
 
-								if (this.aClass505_Sub2_8528.anInt8824 == 0) {
+								if (this.aGraphicalRenderer_Sub2_8528.anInt8824 == 0) {
 									stream_7.method2921(~0xffffff | i_87);
 								} else {
 									stream_7.method2922(~0xffffff | i_87);
@@ -1773,9 +1773,9 @@ public class HardwareGround extends Ground {
 									arr_8[i_86] = arr_14[i_39];
 								}
 
-								class453_10.put(new Class282_Sub46(shorts_72[i_39]), long_47);
+								class453_10.put(new Node_Sub46(shorts_72[i_39]), long_47);
 							} else {
-								shorts_72[i_39] = ((Class282_Sub46) node_80).aShort8067;
+								shorts_72[i_39] = ((Node_Sub46) node_80).aShort8067;
 								i_86 = shorts_72[i_39] & 0xffff;
 								if (i_44 != -1 && arr_14[i_39].data < arr_8[i_86].data) {
 									arr_8[i_86] = arr_14[i_39];
@@ -1793,7 +1793,7 @@ public class HardwareGround extends Ground {
 			}
 
 			for (i_12 = 0; i_12 < this.anInt8525; i_12++) {
-				Class282_Sub6 class282_sub6_68 = arr_8[i_12];
+				Node_Sub6 class282_sub6_68 = arr_8[i_12];
 				if (class282_sub6_68 != null) {
 					class282_sub6_68.method12143(i_12);
 				}
@@ -1809,10 +1809,10 @@ public class HardwareGround extends Ground {
 							int i_74 = shorts_81[i_16++] & 0xffff;
 							int i_75 = shorts_81[i_16++] & 0xffff;
 							int i_76 = shorts_81[i_16++] & 0xffff;
-							Class282_Sub6 class282_sub6_83 = arr_8[i_74];
-							Class282_Sub6 class282_sub6_77 = arr_8[i_75];
-							Class282_Sub6 class282_sub6_78 = arr_8[i_76];
-							Class282_Sub6 class282_sub6_79 = null;
+							Node_Sub6 class282_sub6_83 = arr_8[i_74];
+							Node_Sub6 class282_sub6_77 = arr_8[i_75];
+							Node_Sub6 class282_sub6_78 = arr_8[i_76];
+							Node_Sub6 class282_sub6_79 = null;
 							if (class282_sub6_83 != null) {
 								class282_sub6_83.method12152(i_12, i_13, i_15);
 								class282_sub6_79 = class282_sub6_83;
@@ -1854,42 +1854,42 @@ public class HardwareGround extends Ground {
 
 			stream_6.method2925();
 			stream_7.method2925();
-			this.anInterface4_8557 = this.aClass505_Sub2_8528.method13994(false);
+			this.anInterface4_8557 = this.aGraphicalRenderer_Sub2_8528.method13994(false);
 			this.anInterface4_8557.method27(this.anInt8525 * 4, 4, nativeheapbuffer_4);
-			this.anInterface4_8548 = this.aClass505_Sub2_8528.method13994(false);
+			this.anInterface4_8548 = this.aGraphicalRenderer_Sub2_8528.method13994(false);
 			this.anInterface4_8548.method27(i_3 * this.anInt8525, i_3, nativeheapbuffer_5);
 			if ((this.flags & 0x7) != 0) {
 				if (this.anIntArrayArrayArray8543 != null) {
-					this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
+					this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
 				} else {
-					this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
+					this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_689 }), new Class72(Class69.aClass69_690) });
 				}
 			} else if (this.anIntArrayArrayArray8543 != null) {
-				this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691 }), new Class72(Class69.aClass69_690) });
+				this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692, Class69.aClass69_691 }), new Class72(Class69.aClass69_690) });
 			} else {
-				this.aClass70_8550 = this.aClass505_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692 }), new Class72(Class69.aClass69_690) });
+				this.aClass70_8550 = this.aGraphicalRenderer_Sub2_8528.method13995(new Class72[] { new Class72(new Class69[] { Class69.aClass69_695, Class69.aClass69_692 }), new Class72(Class69.aClass69_690) });
 			}
 
 			i_12 = 0;
 
 			for (i_13 = 0; i_13 < arr_67.length; i_13++) {
-				Class282_Sub6 class282_sub6_82 = (Class282_Sub6) arr_67[i_13];
+				Node_Sub6 class282_sub6_82 = (Node_Sub6) arr_67[i_13];
 				if (class282_sub6_82.anInt7508 > 0) {
 					arr_67[i_12++] = class282_sub6_82;
 				}
 			}
 
-			this.aClass282Array8547 = new Node[i_12];
+			this.aNodeArray8547 = new Node[i_12];
 			long[] longs_92 = new long[i_12];
 
 			for (int i_69 = 0; i_69 < i_12; i_69++) {
-				Class282_Sub6 class282_sub6_93 = (Class282_Sub6) arr_67[i_69];
+				Node_Sub6 class282_sub6_93 = (Node_Sub6) arr_67[i_69];
 				longs_92[i_69] = class282_sub6_93.data;
-				this.aClass282Array8547[i_69] = class282_sub6_93;
+				this.aNodeArray8547[i_69] = class282_sub6_93;
 				class282_sub6_93.method12146(this.anInt8525);
 			}
 
-			Class214.method3669(longs_92, this.aClass282Array8547, 1879958043);
+			Class214.method3669(longs_92, this.aNodeArray8547, 1879958043);
 			if (this.aClass74_8545 != null) {
 				this.aClass74_8545.method1312();
 			}
@@ -1906,7 +1906,7 @@ public class HardwareGround extends Ground {
 		this.anIntArrayArrayArray8543 = null;
 		this.anIntArrayArrayArray8556 = null;
 		this.anIntArrayArrayArray8532 = null;
-		this.aClass282_Sub6ArrayArrayArray8541 = null;
+		this.aNode_Sub6ArrayArrayArray8541 = null;
 		this.aByteArrayArray8553 = null;
 		this.tileMap = null;
 		this.aFloatArrayArray8549 = null;
@@ -1914,20 +1914,20 @@ public class HardwareGround extends Ground {
 		this.aFloatArrayArray8554 = null;
 	}
 
-	public void method6720(Class282_Sub24 class282_sub24_1, int[] ints_2) {
-		this.aClass473_8546.insertBack(new Class282_Sub8(this.aClass505_Sub2_8528, this, class282_sub24_1, ints_2));
+	public void method6720(Node_Sub24 class282_sub24_1, int[] ints_2) {
+		this.aClass473_8546.insertBack(new Node_Sub8(this.aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
 	}
 
 	public void u(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1317(class282_sub50_sub17_1, i_7, i_8);
 		}
 	}
 
 	public void method6717(int i_1, int i_2, int i_3, boolean[][] bools_4, boolean bool_5) {
-		if (this.aClass282Array8547 != null) {
+		if (this.aNodeArray8547 != null) {
 			int i_7 = i_3 + i_3 + 1;
 			i_7 *= i_7;
 			if (anIntArray8561.length < i_7) {
@@ -1968,31 +1968,31 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			ByteBuffer bytebuffer_24 = this.aClass505_Sub2_8528.aByteBuffer8838;
+			ByteBuffer bytebuffer_24 = this.aGraphicalRenderer_Sub2_8528.aByteBuffer8838;
 			bytebuffer_24.clear();
 
 			int i_15;
-			for (i_15 = 0; i_15 < this.aClass282Array8547.length; i_15++) {
-				Class282_Sub6 class282_sub6_16 = (Class282_Sub6) this.aClass282Array8547[i_15];
+			for (i_15 = 0; i_15 < this.aNodeArray8547.length; i_15++) {
+				Node_Sub6 class282_sub6_16 = (Node_Sub6) this.aNodeArray8547[i_15];
 				class282_sub6_16.method12147(anIntArray8561, anInt8560);
 			}
 
 			i_15 = bytebuffer_24.position();
-			Class48 class48_27 = this.aClass505_Sub2_8528.aClass48_8794;
+			Class48 class48_27 = this.aGraphicalRenderer_Sub2_8528.aClass48_8794;
 			if (i_15 != 0) {
-				Interface32 interface32_17 = this.aClass505_Sub2_8528.method13911(i_15 / 2);
-				interface32_17.method42(0, i_15, this.aClass505_Sub2_8528.aLong8695);
-				this.aClass505_Sub2_8528.method14004();
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method13997(interface32_17);
+				Interface32 interface32_17 = this.aGraphicalRenderer_Sub2_8528.method13911(i_15 / 2);
+				interface32_17.method42(0, i_15, this.aGraphicalRenderer_Sub2_8528.aLong8695);
+				this.aGraphicalRenderer_Sub2_8528.method14004();
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method13997(interface32_17);
 				class48_27.method957(Matrix44Arr.aClass384_4666);
-				if (this.aClass505_Sub2_8528.anInt8811 > 0) {
-					class48_27.aClass303_460.set(0.0F, 0.0F, 1.0F, -this.aClass505_Sub2_8528.aFloat8813);
-					class48_27.aClass385_457.set((float) (this.aClass505_Sub2_8528.anInt8810 >> 16 & 0xff) / 255.0F, (float) (this.aClass505_Sub2_8528.anInt8810 >> 8 & 0xff) / 255.0F, (float) (this.aClass505_Sub2_8528.anInt8810 >> 0 & 0xff) / 255.0F);
-					this.aClass505_Sub2_8528.aClass384_8683.method6562(this.aClass505_Sub2_8528.aClass384_8740);
-					this.aClass505_Sub2_8528.aClass384_8683.method6520();
-					class48_27.aClass303_460.concat(this.aClass505_Sub2_8528.aClass384_8683);
-					class48_27.aClass303_460.scale(1.0F / (this.aClass505_Sub2_8528.aFloat8819 - this.aClass505_Sub2_8528.aFloat8813));
+				if (this.aGraphicalRenderer_Sub2_8528.anInt8811 > 0) {
+					class48_27.aClass303_460.set(0.0F, 0.0F, 1.0F, -this.aGraphicalRenderer_Sub2_8528.aFloat8813);
+					class48_27.aClass385_457.set((float) (this.aGraphicalRenderer_Sub2_8528.anInt8810 >> 16 & 0xff) / 255.0F, (float) (this.aGraphicalRenderer_Sub2_8528.anInt8810 >> 8 & 0xff) / 255.0F, (float) (this.aGraphicalRenderer_Sub2_8528.anInt8810 >> 0 & 0xff) / 255.0F);
+					this.aGraphicalRenderer_Sub2_8528.aClass384_8683.method6562(this.aGraphicalRenderer_Sub2_8528.aClass384_8740);
+					this.aGraphicalRenderer_Sub2_8528.aClass384_8683.method6520();
+					class48_27.aClass303_460.concat(this.aGraphicalRenderer_Sub2_8528.aClass384_8683);
+					class48_27.aClass303_460.scale(1.0F / (this.aGraphicalRenderer_Sub2_8528.aFloat8819 - this.aGraphicalRenderer_Sub2_8528.aFloat8813));
 				} else {
 					class48_27.aClass303_460.set(0.0F, 0.0F, 0.0F, 0.0F);
 					class48_27.aClass385_457.set(0.0F, 0.0F, 0.0F);
@@ -2000,17 +2000,17 @@ public class HardwareGround extends Ground {
 
 				int i_18;
 				int i_19;
-				Class282_Sub6 class282_sub6_20;
+				Node_Sub6 class282_sub6_20;
 				TextureDetails class169_22;
 				if ((this.flags & 0x37) == 0) {
 					i_18 = 0;
 
-					for (i_19 = 0; i_19 < this.aClass282Array8547.length; i_19++) {
-						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
+					for (i_19 = 0; i_19 < this.aNodeArray8547.length; i_19++) {
+						class282_sub6_20 = (Node_Sub6) this.aNodeArray8547[i_19];
 						if (class282_sub6_20.anInt7514 != 0) {
-							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
-								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aClass505_Sub2_8528.anInt8739 + (float) class282_sub6_20.hdWaterTile.intensity / 255.0F * (float) class282_sub6_20.hdWaterTile.scale);
+							if (this.aGraphicalRenderer_Sub2_8528.aBool8779) {
+								this.aGraphicalRenderer_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
+								class48_27.aClass303_458.set(0.0F, 1.0F, 0.0F, (float) this.aGraphicalRenderer_Sub2_8528.anInt8739 + (float) class282_sub6_20.hdWaterTile.intensity / 255.0F * (float) class282_sub6_20.hdWaterTile.scale);
 								class48_27.aClass303_458.scale(1.0F / (float) class282_sub6_20.hdWaterTile.scale);
 								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
 							} else {
@@ -2020,15 +2020,15 @@ public class HardwareGround extends Ground {
 
 							boolean bool_30 = false;
 							if (class282_sub6_20.anInt7510 != -1) {
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
-								bool_30 = !Class282_Sub41.method13367(class169_22.effectId, (short) 17932);
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
+								class169_22 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+								bool_30 = !Node_Sub41.method13367(class169_22.effectId, (short) 17932);
 							} else {
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 							}
 
-							this.aClass505_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
-							this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
+							this.aGraphicalRenderer_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
+							this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
 							class48_27.aClass384_454.method6525(1.0F / class282_sub6_20.aFloat7511, 1.0F / class282_sub6_20.aFloat7511, 1.0F, 1.0F);
 							class48_27.anInt467 = class282_sub6_20.anInt7519;
 							class48_27.anInt468 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
@@ -2039,17 +2039,17 @@ public class HardwareGround extends Ground {
 						}
 					}
 				} else {
-					class48_27.aClass385_466.set(this.aClass505_Sub2_8528.aFloatArray8747[0], this.aClass505_Sub2_8528.aFloatArray8747[1], this.aClass505_Sub2_8528.aFloatArray8747[2]);
-					class48_27.aClass385_448.set(this.aClass505_Sub2_8528.aFloat8770 * this.aClass505_Sub2_8528.aFloat8766, this.aClass505_Sub2_8528.aFloat8770 * this.aClass505_Sub2_8528.aFloat8767, this.aClass505_Sub2_8528.aFloat8770 * this.aClass505_Sub2_8528.aFloat8768);
-					class48_27.aClass385_464.set(-this.aClass505_Sub2_8528.aFloat8826 * this.aClass505_Sub2_8528.aFloat8766, -this.aClass505_Sub2_8528.aFloat8826 * this.aClass505_Sub2_8528.aFloat8767, -this.aClass505_Sub2_8528.aFloat8826 * this.aClass505_Sub2_8528.aFloat8768);
-					class48_27.aClass385_461.set(this.aClass505_Sub2_8528.aFloat8769 * this.aClass505_Sub2_8528.aFloat8766, this.aClass505_Sub2_8528.aFloat8769 * this.aClass505_Sub2_8528.aFloat8767, this.aClass505_Sub2_8528.aFloat8769 * this.aClass505_Sub2_8528.aFloat8768);
+					class48_27.aClass385_466.set(this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[0], this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[1], this.aGraphicalRenderer_Sub2_8528.aFloatArray8747[2]);
+					class48_27.aClass385_448.set(this.aGraphicalRenderer_Sub2_8528.aFloat8770 * this.aGraphicalRenderer_Sub2_8528.aFloat8766, this.aGraphicalRenderer_Sub2_8528.aFloat8770 * this.aGraphicalRenderer_Sub2_8528.aFloat8767, this.aGraphicalRenderer_Sub2_8528.aFloat8770 * this.aGraphicalRenderer_Sub2_8528.aFloat8768);
+					class48_27.aClass385_464.set(-this.aGraphicalRenderer_Sub2_8528.aFloat8826 * this.aGraphicalRenderer_Sub2_8528.aFloat8766, -this.aGraphicalRenderer_Sub2_8528.aFloat8826 * this.aGraphicalRenderer_Sub2_8528.aFloat8767, -this.aGraphicalRenderer_Sub2_8528.aFloat8826 * this.aGraphicalRenderer_Sub2_8528.aFloat8768);
+					class48_27.aClass385_461.set(this.aGraphicalRenderer_Sub2_8528.aFloat8769 * this.aGraphicalRenderer_Sub2_8528.aFloat8766, this.aGraphicalRenderer_Sub2_8528.aFloat8769 * this.aGraphicalRenderer_Sub2_8528.aFloat8767, this.aGraphicalRenderer_Sub2_8528.aFloat8769 * this.aGraphicalRenderer_Sub2_8528.aFloat8768);
 					i_18 = 0;
 
-					for (i_19 = 0; i_19 < this.aClass282Array8547.length; i_19++) {
-						class282_sub6_20 = (Class282_Sub6) this.aClass282Array8547[i_19];
+					for (i_19 = 0; i_19 < this.aNodeArray8547.length; i_19++) {
+						class282_sub6_20 = (Node_Sub6) this.aNodeArray8547[i_19];
 						if (class282_sub6_20.anInt7514 > 0) {
-							if (this.aClass505_Sub2_8528.aBool8779) {
-								this.aClass505_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
+							if (this.aGraphicalRenderer_Sub2_8528.aBool8779) {
+								this.aGraphicalRenderer_Sub2_8528.method8476(0, class282_sub6_20.hdWaterTile);
 								float f_21 = 0.15F;
 								class48_27.aClass303_458.set(0.0F, 1.0F / ((float) class282_sub6_20.hdWaterTile.scale * f_21), 0.0F, 256.0F / ((float) class282_sub6_20.hdWaterTile.scale * f_21));
 								class48_27.aClass385_459.set((float) (class282_sub6_20.hdWaterTile.color >> 16 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 8 & 0xff) / 255.0F, (float) (class282_sub6_20.hdWaterTile.color >> 0 & 0xff) / 255.0F);
@@ -2060,16 +2060,16 @@ public class HardwareGround extends Ground {
 
 							byte b_29 = 11;
 							if (class282_sub6_20.anInt7510 != -1) {
-								class169_22 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+								class169_22 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 								b_29 = class169_22.effectId;
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.aClass66_8787.method1283(class282_sub6_20.anInt7510);
 								class48_27.method944(class169_22);
 							} else {
-								class48_27.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+								class48_27.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 							}
 
-							this.aClass505_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
-							this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
+							this.aGraphicalRenderer_Sub2_8528.method14161(1, class282_sub6_20.anInterface4_7516);
+							this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
 							class48_27.aClass384_454.method6525(1.0F / class282_sub6_20.aFloat7511, 1.0F / class282_sub6_20.aFloat7511, 1.0F, 1.0F);
 							class48_27.anInt467 = class282_sub6_20.anInt7519;
 							class48_27.anInt468 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
@@ -2077,7 +2077,7 @@ public class HardwareGround extends Ground {
 							class48_27.anInt470 = class282_sub6_20.anInt7514 / 3;
 							switch (b_29) {
 							case 1:
-								class48_27.aClass385_455.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
+								class48_27.aClass385_455.set(this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
 								class48_27.method948(0);
 								break;
 							case 2:
@@ -2085,12 +2085,12 @@ public class HardwareGround extends Ground {
 							case 8:
 							case 9:
 								// render shaders/ripples water
-								if (!this.aClass505_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
-									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aClass505_Sub2_8528.aClass41_Sub1_Sub1_8691;
-									class41_sub1_sub1_31.aClass384_10090.method6562(this.aClass505_Sub2_8528.aClass384_8729);
+								if (!this.aGraphicalRenderer_Sub2_8528.aBool8692 && (this.flags & 0x8) != 0) {
+									Class41_Sub1_Sub1 class41_sub1_sub1_31 = this.aGraphicalRenderer_Sub2_8528.aClass41_Sub1_Sub1_8691;
+									class41_sub1_sub1_31.aClass384_10090.method6562(this.aGraphicalRenderer_Sub2_8528.aClass384_8729);
 									class41_sub1_sub1_31.aClass384_10091.method6525(1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F / (class282_sub6_20.aFloat7511 * (float) class282_sub6_20.hdWaterTile.hdWaterInt1), 1.0F, 1.0F);
-									class41_sub1_sub1_31.aClass385_10089.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
-									TextureDetails class169_23 = this.aClass505_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
+									class41_sub1_sub1_31.aClass385_10089.set(this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
+									TextureDetails class169_23 = this.aGraphicalRenderer_Sub2_8528.anInterface22_5834.method144(class282_sub6_20.anInt7510);
 									class41_sub1_sub1_31.anInt10095 = class169_23.effectParam1;
 									class41_sub1_sub1_31.anInt10110 = class282_sub6_20.anInt7519;
 									class41_sub1_sub1_31.anInt10111 = class282_sub6_20.anInt7517 - class282_sub6_20.anInt7519 + 1;
@@ -2108,19 +2108,19 @@ public class HardwareGround extends Ground {
 							case 3:
 							case 5:
 							default:
-								if (this.aClass505_Sub2_8528.aBool8779) {
+								if (this.aGraphicalRenderer_Sub2_8528.aBool8779) {
 									class48_27.method950();
 								} else {
 									class48_27.method965(0);
 								}
 								break;
 							case 6:
-								class48_27.method946(!Class282_Sub41.method13367(b_29, (short) 27875));
+								class48_27.method946(!Node_Sub41.method13367(b_29, (short) 27875));
 								break;
 							case 7:
-								class48_27.aClass385_455.set(this.aClass505_Sub2_8528.aClass384_8814.buf[12], this.aClass505_Sub2_8528.aClass384_8814.buf[13], this.aClass505_Sub2_8528.aClass384_8814.buf[14]);
+								class48_27.aClass385_455.set(this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[12], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[13], this.aGraphicalRenderer_Sub2_8528.aClass384_8814.buf[14]);
 								class48_27.aClass384_465.identity();
-								class48_27.anInterface31_451 = this.aClass505_Sub2_8528.method13965();
+								class48_27.anInterface31_451 = this.aGraphicalRenderer_Sub2_8528.method13965();
 								class48_27.method949(0);
 							}
 
@@ -2131,10 +2131,10 @@ public class HardwareGround extends Ground {
 			}
 
 			if (this.aClass74_8545 != null) {
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method14161(1, this.anInterface4_8557);
-				this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
-				Matrix44Arr matrix44arr_28 = this.aClass505_Sub2_8528.aClass384_8683;
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method14161(1, this.anInterface4_8557);
+				this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
+				Matrix44Arr matrix44arr_28 = this.aGraphicalRenderer_Sub2_8528.aClass384_8683;
 				matrix44arr_28.identity();
 				matrix44arr_28.buf[13] = -1.0F;
 				class48_27.method957(matrix44arr_28);
@@ -2146,23 +2146,23 @@ public class HardwareGround extends Ground {
 
 	public boolean method6719(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			return this.aClass74_8545.method1316(class282_sub50_sub17_1, i_7, i_8);
 		} else {
 			return false;
 		}
 	}
 
-	HardwareGround(Class505_Sub2 class505_sub2_1, int i_2, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
+	HardwareGround(GraphicalRenderer_Sub2 class505_sub2_1, int i_2, int i_3, int i_4, int i_5, int[][] ints_6, int[][] ints_7, int i_8) {
 		super(i_4, i_5, i_8, ints_6);
-		this.aClass505_Sub2_8528 = class505_sub2_1;
+		this.aGraphicalRenderer_Sub2_8528 = class505_sub2_1;
 		this.anInt8536 = this.tileScale - 2;
 		this.anInt8529 = 1 << this.anInt8536;
 		this.anInt8530 = i_2;
 		this.flags = i_3;
 		this.anIntArrayArrayArray8532 = new int[i_4][i_5][];
-		this.aClass282_Sub6ArrayArrayArray8541 = new Class282_Sub6[i_4][i_5][];
+		this.aNode_Sub6ArrayArrayArray8541 = new Node_Sub6[i_4][i_5][];
 		this.anIntArrayArrayArray8540 = new int[i_4][i_5][];
 		this.anIntArrayArrayArray8533 = new int[i_4][i_5][];
 		this.anIntArrayArrayArray8538 = new int[i_4][i_5][];
@@ -2200,15 +2200,15 @@ public class HardwareGround extends Ground {
 		++this.aFloat8544;
 		this.tileMap = new HashTable(128);
 		if ((this.flags & 0x10) != 0) {
-			this.aClass74_8545 = new Class74(this.aClass505_Sub2_8528, this);
+			this.aClass74_8545 = new Class74(this.aGraphicalRenderer_Sub2_8528, this);
 		}
 
 	}
 
 	public void a(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1315(class282_sub50_sub17_1, i_7, i_8);
 		}
 
@@ -2216,8 +2216,8 @@ public class HardwareGround extends Ground {
 
 	public void b(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1315(class282_sub50_sub17_1, i_7, i_8);
 		}
 
@@ -2289,18 +2289,18 @@ public class HardwareGround extends Ground {
 		this.method6707(x, y, ints_17, ints_23, ints_18, ints_24, ints_19, ints_20, ints_21, ints_22, hdWaterTile, false);
 	}
 
-	public void method6713(Class282_Sub24 class282_sub24_1, int[] ints_2) {
-		this.aClass473_8546.insertBack(new Class282_Sub8(this.aClass505_Sub2_8528, this, class282_sub24_1, ints_2));
+	public void method6713(Node_Sub24 class282_sub24_1, int[] ints_2) {
+		this.aClass473_8546.insertBack(new Node_Sub8(this.aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
 	}
 
-	public void method6721(Class282_Sub24 class282_sub24_1, int[] ints_2) {
-		this.aClass473_8546.insertBack(new Class282_Sub8(this.aClass505_Sub2_8528, this, class282_sub24_1, ints_2));
+	public void method6721(Node_Sub24 class282_sub24_1, int[] ints_2) {
+		this.aClass473_8546.insertBack(new Node_Sub8(this.aGraphicalRenderer_Sub2_8528, this, class282_sub24_1, ints_2));
 	}
 
 	public void UA(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4) {
 		if (this.aClass74_8545 != null && class282_sub50_sub17_1 != null) {
-			int i_7 = i_2 - (i_3 * this.aClass505_Sub2_8528.anInt8777 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
-			int i_8 = i_4 - (i_3 * this.aClass505_Sub2_8528.anInt8778 >> 8) >> this.aClass505_Sub2_8528.anInt8806;
+			int i_7 = i_2 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8777 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
+			int i_8 = i_4 - (i_3 * this.aGraphicalRenderer_Sub2_8528.anInt8778 >> 8) >> this.aGraphicalRenderer_Sub2_8528.anInt8806;
 			this.aClass74_8545.method1317(class282_sub50_sub17_1, i_7, i_8);
 		}
 
@@ -2308,11 +2308,11 @@ public class HardwareGround extends Ground {
 
 	public void method6710(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, boolean[][] bools_8) {
 		if (this.anInt8542 > 0) {
-			Interface32 interface32_9 = this.aClass505_Sub2_8528.method13911(this.anInt8527);
+			Interface32 interface32_9 = this.aGraphicalRenderer_Sub2_8528.method13911(this.anInt8527);
 			int i_10 = 0;
 			int i_11 = 32767;
 			int i_12 = -32768;
-			ByteBuffer bytebuffer_13 = this.aClass505_Sub2_8528.aByteBuffer8838;
+			ByteBuffer bytebuffer_13 = this.aGraphicalRenderer_Sub2_8528.aByteBuffer8838;
 			bytebuffer_13.clear();
 
 			for (int i_14 = i_5; i_14 < i_7; i_14++) {
@@ -2342,17 +2342,17 @@ public class HardwareGround extends Ground {
 				}
 			}
 
-			interface32_9.method42(0, bytebuffer_13.position(), this.aClass505_Sub2_8528.aLong8695);
+			interface32_9.method42(0, bytebuffer_13.position(), this.aGraphicalRenderer_Sub2_8528.aLong8695);
 			if (i_10 > 0) {
-				this.aClass505_Sub2_8528.method14004();
-				Class48 class48_20 = this.aClass505_Sub2_8528.aClass48_8794;
-				this.aClass505_Sub2_8528.method14161(0, this.anInterface4_8548);
-				this.aClass505_Sub2_8528.method14161(1, this.anInterface4_8557);
-				this.aClass505_Sub2_8528.method13996(this.aClass70_8550);
-				this.aClass505_Sub2_8528.method13997(interface32_9);
-				this.aClass505_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
-				float f_22 = (float) this.aClass505_Sub2_8528.method8523((byte) 105).method2714();
-				float f_23 = (float) this.aClass505_Sub2_8528.method8523((byte) 126).method2716();
+				this.aGraphicalRenderer_Sub2_8528.method14004();
+				Class48 class48_20 = this.aGraphicalRenderer_Sub2_8528.aClass48_8794;
+				this.aGraphicalRenderer_Sub2_8528.method14161(0, this.anInterface4_8548);
+				this.aGraphicalRenderer_Sub2_8528.method14161(1, this.anInterface4_8557);
+				this.aGraphicalRenderer_Sub2_8528.method13996(this.aClass70_8550);
+				this.aGraphicalRenderer_Sub2_8528.method13997(interface32_9);
+				this.aGraphicalRenderer_Sub2_8528.method8457(Matrix44Var.aClass294_3518);
+				float f_22 = (float) this.aGraphicalRenderer_Sub2_8528.method8523((byte) 105).method2714();
+				float f_23 = (float) this.aGraphicalRenderer_Sub2_8528.method8523((byte) 126).method2716();
 				Matrix44Var matrix44var_24 = new Matrix44Var();
 				Matrix44Var matrix44var_18 = new Matrix44Var();
 				matrix44var_24.method5214();
@@ -2360,15 +2360,15 @@ public class HardwareGround extends Ground {
 				matrix44var_18.method5219((float) i_1 - (float) (i_4 * i_3) / 256.0F, (float) i_2 + (float) (i_7 * i_3) / 256.0F, -this.aFloat8535 / (this.aFloat8544 - this.aFloat8535));
 				matrix44var_18.method5247(2.0F / f_22, 2.0F / f_23);
 				matrix44var_18.method5219(-1.0F, -1.0F, 0.0F);
-				this.aClass505_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
-				this.aClass505_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aClass505_Sub2_8528.aClass294_8713);
-				this.aClass505_Sub2_8528.method8424(this.aClass505_Sub2_8528.aClass384_8683);
+				this.aGraphicalRenderer_Sub2_8528.aClass294_8713.method5261(matrix44var_24, matrix44var_18);
+				this.aGraphicalRenderer_Sub2_8528.aClass384_8683.fromVarMatrix44(this.aGraphicalRenderer_Sub2_8528.aClass294_8713);
+				this.aGraphicalRenderer_Sub2_8528.method8424(this.aGraphicalRenderer_Sub2_8528.aClass384_8683);
 				class48_20.method957(Matrix44Arr.aClass384_4666);
 				class48_20.aClass303_460.set(0.0F, 0.0F, 0.0F, 0.0F);
 				class48_20.aClass385_457.set(0.0F, 0.0F, 0.0F);
 				class48_20.aClass303_458.set(0.0F, 0.0F, 0.0F, 0.0F);
 				class48_20.aClass385_459.set(0.0F, 0.0F, 0.0F);
-				class48_20.anInterface6_452 = this.aClass505_Sub2_8528.anInterface6_8788;
+				class48_20.anInterface6_452 = this.aGraphicalRenderer_Sub2_8528.anInterface6_8788;
 				class48_20.aClass384_454.identity();
 				class48_20.anInt467 = i_11;
 				class48_20.anInt468 = i_12 - i_11 + 1;

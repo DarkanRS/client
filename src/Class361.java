@@ -39,11 +39,11 @@ public class Class361 {
 	}
 
 	public Object method6254(Object[] arr_1, byte b_2) throws Throwable {
-		return Class441.method7375(Class282_Sub44.anApplet8065, this.method6253((byte) -103), arr_1, -864782771);
+		return Class441.method7375(Node_Sub44.anApplet8065, this.method6253((byte) -103), arr_1, -864782771);
 	}
 
 	public Object method6255() throws Throwable {
-		return Class441.method7377(Class282_Sub44.anApplet8065, this.method6253((byte) -29), 2107704152);
+		return Class441.method7377(Node_Sub44.anApplet8065, this.method6253((byte) -29), 2107704152);
 	}
 
 	public void method6256(Object[] arr_1) {
@@ -66,30 +66,30 @@ public class Class361 {
 		this.anInt4184 = i_1;
 	}
 
-	static void method6269(Class282_Sub50_Sub7 class282_sub50_sub7_0) {
+	static void method6269(CacheableNode_Sub7 class282_sub50_sub7_0) {
 		if (class282_sub50_sub7_0 != null) {
 			Class20.aClass482_171.append(class282_sub50_sub7_0);
 			++Class20.anInt169;
 			Object obj_2 = null;
-			Class282_Sub50_Sub15 class282_sub50_sub15_3;
+			CacheableNode_Sub15 class282_sub50_sub15_3;
 			if (!class282_sub50_sub7_0.aBool9586 && !"".equals(class282_sub50_sub7_0.aString9588)) {
 				long long_4 = class282_sub50_sub7_0.aLong9580;
-				for (class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.get(long_4); class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-2120595653)) {
+				for (class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass465_172.get(long_4); class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass465_172.method7747(-2120595653)) {
 					;
 				}
 				if (class282_sub50_sub15_3 == null) {
-					class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass229_164.get(long_4);
+					class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass229_164.get(long_4);
 					if (class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588)) {
 						class282_sub50_sub15_3 = null;
 					}
 					if (class282_sub50_sub15_3 == null) {
-						class282_sub50_sub15_3 = new Class282_Sub50_Sub15(class282_sub50_sub7_0.aString9588);
+						class282_sub50_sub15_3 = new CacheableNode_Sub15(class282_sub50_sub7_0.aString9588);
 					}
 					Class20.aClass465_172.put(class282_sub50_sub15_3, long_4);
 					++Class20.anInt170;
 				}
 			} else {
-				class282_sub50_sub15_3 = new Class282_Sub50_Sub15(class282_sub50_sub7_0.aString9588);
+				class282_sub50_sub15_3 = new CacheableNode_Sub15(class282_sub50_sub7_0.aString9588);
 				++Class20.anInt170;
 			}
 			if (class282_sub50_sub15_3.method15245(class282_sub50_sub7_0)) {
@@ -132,7 +132,7 @@ public class Class361 {
 		return bytes_5;
 	}
 
-	static final void method6274(Class521_Sub1 class521_sub1_0, int i_1, int i_2) {
-		Class8_Sub3.method14336(class521_sub1_0, i_1, false, 1466733584);
+	static final void method6274(Transform_Sub1 class521_sub1_0, int i_1, int i_2) {
+		FontRenderer_Sub3.method14336(class521_sub1_0, i_1, false, 1466733584);
 	}
 }

@@ -36,7 +36,7 @@ public class Class316 {
 	}
 
 	public static byte[] method5588(int i_0, int i_1) {
-		Class282_Sub50_Sub2 class282_sub50_sub2_2 = (Class282_Sub50_Sub2) aClass223_3679.method3758((long) i_0);
+		CacheableNode_Sub2 class282_sub50_sub2_2 = (CacheableNode_Sub2) aClass223_3679.method3758((long) i_0);
 		if (class282_sub50_sub2_2 == null) {
 			byte[] bytes_3 = new byte[512];
 			Random random_4 = new Random((long) i_0);
@@ -51,7 +51,7 @@ public class Class316 {
 				bytes_3[i_7] = bytes_3[i_6];
 				bytes_3[i_6] = bytes_3[511 - i_5] = b_8;
 			}
-			class282_sub50_sub2_2 = new Class282_Sub50_Sub2(bytes_3);
+			class282_sub50_sub2_2 = new CacheableNode_Sub2(bytes_3);
 			aClass223_3679.method3759(class282_sub50_sub2_2, (long) i_0);
 		}
 		return class282_sub50_sub2_2.aByteArray9472;
@@ -90,8 +90,8 @@ public class Class316 {
 		Class404.method6810(1208455577);
 		Class20.aBool161 = false;
 		Class292.method5201(Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104);
-		Class96_Sub23.aClass282_Sub50_Sub7_9445 = null;
-		Class20.aClass282_Sub50_Sub7_168 = null;
+		CutsceneAction_Sub23.aCacheableNode_Sub7_9445 = null;
+		Class20.aCacheableNode_Sub7_168 = null;
 	}
 
 	static String method5596(long long_0) {

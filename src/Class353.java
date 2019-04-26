@@ -28,11 +28,11 @@ public class Class353 {
 		datainputstream_4.close();
 	}
 
-	static void method6209(int i_0, int i_1, int i_2, Class282_Sub34 class282_sub34_3, int i_4) {
+	static void method6209(int i_0, int i_1, int i_2, Node_Sub34 class282_sub34_3, int i_4) {
 		long long_5 = (long) (i_0 << 28 | i_2 << 14 | i_1);
-		Class282_Sub29 class282_sub29_7 = (Class282_Sub29) client.aClass465_7414.get(long_5);
+		Node_Sub29 class282_sub29_7 = (Node_Sub29) client.aClass465_7414.get(long_5);
 		if (class282_sub29_7 == null) {
-			class282_sub29_7 = new Class282_Sub29();
+			class282_sub29_7 = new Node_Sub29();
 			client.aClass465_7414.put(class282_sub29_7, long_5);
 			class282_sub29_7.aClass482_7708.append(class282_sub34_3);
 		} else {
@@ -41,7 +41,7 @@ public class Class353 {
 			if (itemdefinitions_8.stackable == 1) {
 				i_9 *= class282_sub34_3.anInt7852 + 1;
 			}
-			for (Class282_Sub34 class282_sub34_10 = (Class282_Sub34) class282_sub29_7.aClass482_7708.head(); class282_sub34_10 != null; class282_sub34_10 = (Class282_Sub34) class282_sub29_7.aClass482_7708.next(1444311005)) {
+			for (Node_Sub34 class282_sub34_10 = (Node_Sub34) class282_sub29_7.aClass482_7708.head(); class282_sub34_10 != null; class282_sub34_10 = (Node_Sub34) class282_sub29_7.aClass482_7708.next(1444311005)) {
 				itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_10.anInt7853);
 				int i_11 = itemdefinitions_8.value;
 				if (itemdefinitions_8.stackable == 1) {

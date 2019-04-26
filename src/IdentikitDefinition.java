@@ -170,7 +170,7 @@ public class IdentikitDefinition implements Definition {
     }
 
     public static void method913(RSInterface interface_0, IComponentDefinitions icomponentdefinitions_1) {
-        IComponentDefinitions icomponentdefinitions_3 = Class96_Sub23.method14682(interface_0, icomponentdefinitions_1);
+        IComponentDefinitions icomponentdefinitions_3 = CutsceneAction_Sub23.method14682(interface_0, icomponentdefinitions_1);
         int i_4;
         int i_5;
         if (icomponentdefinitions_3 == null) {

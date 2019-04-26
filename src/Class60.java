@@ -1,6 +1,6 @@
 public class Class60 {
 
-	public static NativeSprite aClass160_612;
+	public static NativeSprite aNativeSprite_612;
 
 	public static Class60 aClass60_609 = new Class60(1);
 	public static Class60 aClass60_602 = new Class60(2);

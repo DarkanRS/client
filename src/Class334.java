@@ -3,13 +3,13 @@ public class Class334 {
 	static int[] anIntArray3884 = new int[4];
 	int anInt3897;
 	int anInt3899;
-	NativeSprite aClass160_3910;
+	NativeSprite aNativeSprite_3910;
 	int anInt3902;
 	int anInt3911;
 	int anInt3896;
-	static MeshRasterizer aClass528_3905;
-	static NativeSprite aClass160_3912;
-	static NativeSprite aClass160_3895;
+	static MeshRasterizer aMeshRasterizer_3905;
+	static NativeSprite aNativeSprite_3912;
+	static NativeSprite aNativeSprite_3895;
 	int anInt3889;
 	int anInt3890;
 	int anInt3891;
@@ -23,7 +23,7 @@ public class Class334 {
 	int anInt3903;
 
 	boolean method5937(GraphicalRenderer graphicalrenderer_1, Class334 class334_2) {
-		return this.aClass160_3910 != null || this.method5942(graphicalrenderer_1, class334_2);
+		return this.aNativeSprite_3910 != null || this.method5942(graphicalrenderer_1, class334_2);
 	}
 
 	boolean method5938(int i_1, int i_2, int i_3, int i_4) {
@@ -60,7 +60,7 @@ public class Class334 {
 		}
 
 		if (this.anInt3899 < 8) {
-			this.aClass160_3910 = null;
+			this.aNativeSprite_3910 = null;
 			return false;
 		} else {
 			int i_9 = Utils.nextPowerOfTwo(this.anInt3899);
@@ -78,7 +78,7 @@ public class Class334 {
 
 			this.anInt3911 = (int) (Math.asin((double) ((float) i_6 / 256.0F)) * 2607.5945876176133D) & 0x3fff;
 			this.anInt3896 = (int) (Math.atan2((double) i_5, (double) (-i_7)) * 2607.5945876176133D) & 0x3fff;
-			this.aClass160_3910 = null;
+			this.aNativeSprite_3910 = null;
 			return true;
 		}
 	}
@@ -143,9 +143,9 @@ public class Class334 {
 			graphicalrenderer_1.method8457(matrix44var_14);
 			Matrix44Var matrix44var_15 = graphicalrenderer_1.method8450();
 			matrix44var_15.method5223(0.0F, 0.0F, (float) (50 - meshrasterizer_16.AA()));
-			meshrasterizer_16.method11282(matrix44var_15, (Class275_Sub5) null, 1);
-			this.aClass160_3910 = graphicalrenderer_1.method8668(0, 0, this.anInt3902, this.anInt3902, true);
-			this.aClass160_3910.method2751();
+			meshrasterizer_16.method11282(matrix44var_15, (EntityNode_Sub5) null, 1);
+			this.aNativeSprite_3910 = graphicalrenderer_1.method8668(0, 0, this.anInt3902, this.anInt3902, true);
+			this.aNativeSprite_3910.method2751();
 			graphicalrenderer_1.method8424(matrix44arr_12);
 			graphicalrenderer_1.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 		}
@@ -153,16 +153,16 @@ public class Class334 {
 	}
 
 	static void method5940() {
-		aClass528_3905 = null;
-		aClass160_3912 = null;
+		aMeshRasterizer_3905 = null;
+		aNativeSprite_3912 = null;
 	}
 
 	boolean method5942(GraphicalRenderer graphicalrenderer_1, Class334 class334_2) {
-		if (this.aClass160_3910 == null) {
+		if (this.aNativeSprite_3910 == null) {
 			if (this.anInt3887 == 0) {
 				if (Class247.anInterface22_3046.method139(this.anInt3893, -725088114)) {
 					int[] ints_3 = Class247.anInterface22_3046.method141(this.anInt3893, this.anInt3902, this.anInt3902, false, 1606527906);
-					this.aClass160_3910 = graphicalrenderer_1.createNativeSprite(ints_3, this.anInt3902, this.anInt3902, this.anInt3902, -1804968029);
+					this.aNativeSprite_3910 = graphicalrenderer_1.createNativeSprite(ints_3, this.anInt3902, this.anInt3902, this.anInt3902, -1804968029);
 				}
 			} else if (this.anInt3887 == 2) {
 				this.method5939(graphicalrenderer_1, class334_2);
@@ -171,11 +171,11 @@ public class Class334 {
 			}
 		}
 
-		return this.aClass160_3910 != null;
+		return this.aNativeSprite_3910 != null;
 	}
 
 	static void method5943(GraphicalRenderer graphicalrenderer_0) {
-		if (aClass528_3905 == null) {
+		if (aMeshRasterizer_3905 == null) {
 			RSMesh rsmesh_1 = new RSMesh(580, 1104, 1);
 			rsmesh_1.method2664();
 			rsmesh_1.method2662(0, 128, 0);
@@ -221,7 +221,7 @@ public class Class334 {
 			rsmesh_1.textureSkins = null;
 			rsmesh_1.vertexSkins = null;
 			rsmesh_1.facePriorities = null;
-			aClass528_3905 = graphicalrenderer_0.createMeshRasterizer(rsmesh_1, 51200, 33, 64, 768);
+			aMeshRasterizer_3905 = graphicalrenderer_0.createMeshRasterizer(rsmesh_1, 51200, 33, 64, 768);
 		}
 
 	}
@@ -267,7 +267,7 @@ public class Class334 {
 			i_3 = i_8;
 		}
 
-		MeshRasterizer meshrasterizer_13 = aClass528_3905.method11289((byte) 0, 51200, true);
+		MeshRasterizer meshrasterizer_13 = aMeshRasterizer_3905.method11289((byte) 0, 51200, true);
 		meshrasterizer_13.W((short) 0, (short) this.anInt3893);
 		graphicalrenderer_1.IA(1.0F);
 		graphicalrenderer_1.m(16777215, 1.0F, 1.0F, (float) i_3, (float) i_4, (float) i_5);
@@ -283,21 +283,21 @@ public class Class334 {
 		graphicalrenderer_1.method8457(new Matrix44Var());
 		Matrix44Var matrix44var_10 = new Matrix44Var();
 		matrix44var_10.method5223(0.0F, 0.0F, (float) (50 - meshrasterizer_13.AA()));
-		meshrasterizer_13.method11282(matrix44var_10, (Class275_Sub5) null, 1);
+		meshrasterizer_13.method11282(matrix44var_10, (EntityNode_Sub5) null, 1);
 		int i_11 = this.anInt3902 * 13 / 16;
 		int i_12 = (this.anInt3902 - i_11) / 2;
-		aClass160_3895.method2754(i_12, i_12, i_11, i_11, 0, ~0xffffff | this.anInt3894, 1);
-		this.aClass160_3910 = graphicalrenderer_1.method8668(0, 0, this.anInt3902, this.anInt3902, true);
+		aNativeSprite_3895.method2754(i_12, i_12, i_11, i_11, 0, ~0xffffff | this.anInt3894, 1);
+		this.aNativeSprite_3910 = graphicalrenderer_1.method8668(0, 0, this.anInt3902, this.anInt3902, true);
 		graphicalrenderer_1.ba(2, 0);
 		graphicalrenderer_1.B(0, 0, this.anInt3902, this.anInt3902, 0, 0);
-		aClass160_3912.method2754(0, 0, this.anInt3902, this.anInt3902, 1, 0, 0);
-		this.aClass160_3910.method2751();
+		aNativeSprite_3912.method2754(0, 0, this.anInt3902, this.anInt3902, 1, 0, 0);
+		this.aNativeSprite_3910.method2751();
 		graphicalrenderer_1.method8424(matrix44arr_14);
 		graphicalrenderer_1.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 	}
 
 	static void method5946(GraphicalRenderer graphicalrenderer_0) {
-		if (aClass160_3912 == null) {
+		if (aNativeSprite_3912 == null) {
 			int[] ints_1 = new int[16384];
 			int[] ints_2 = new int[16384];
 
@@ -326,14 +326,14 @@ public class Class334 {
 				}
 			}
 
-			aClass160_3912 = graphicalrenderer_0.createNativeSprite(ints_2, 128, 128, 128, -1206625053);
-			aClass160_3895 = graphicalrenderer_0.createNativeSprite(ints_1, 128, 128, 128, 501003044);
+			aNativeSprite_3912 = graphicalrenderer_0.createNativeSprite(ints_2, 128, 128, 128, -1206625053);
+			aNativeSprite_3895 = graphicalrenderer_0.createNativeSprite(ints_1, 128, 128, 128, 501003044);
 		}
 
 	}
 
 	void method5955(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11) {
-		if (this.aClass160_3910 != null) {
+		if (this.aNativeSprite_3910 != null) {
 			float[] floats_12 = new float[3];
 			float f_13 = (float) (-(this.anInt3889 - i_8 << 16));
 			float f_14 = (float) (this.anInt3890 - i_9 << 15);
@@ -348,7 +348,7 @@ public class Class334 {
 				int i_17 = (int) (floats_12[0] - (float) (this.anInt3899 / 2));
 				int i_18 = (int) (floats_12[1] - (float) (this.anInt3899 / 2));
 				if (i_18 < i_5 && i_18 + this.anInt3899 > 0 && i_17 < i_4 && i_17 + this.anInt3899 > 0) {
-					this.aClass160_3910.method2754(i_17, i_18, this.anInt3899, this.anInt3899, 0, i_11 << 24 | 0xffffff, 1);
+					this.aNativeSprite_3910.method2754(i_17, i_18, this.anInt3899, this.anInt3899, 0, i_11 << 24 | 0xffffff, 1);
 				}
 			}
 		}

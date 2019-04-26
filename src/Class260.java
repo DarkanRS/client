@@ -2,7 +2,7 @@ public class Class260 {
 
 	static Class116 aClass116_3229;
 
-	static Class282_Sub15_Sub2 aClass282_Sub15_Sub2_3231;
+	static Node_Sub15_Sub2 aNode_Sub15_Sub2_3231;
 
 	public static int anInt3223 = -1;
 

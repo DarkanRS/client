@@ -3,16 +3,16 @@ import java.util.Calendar;
 public abstract class Preference {
 
 	protected int anInt5578;
-	protected Class282_Sub54 manager;
+	protected Node_Sub54 manager;
 
-	Preference(int i_1, Class282_Sub54 class282_sub54_2) {
+	Preference(int i_1, Node_Sub54 class282_sub54_2) {
 		this.anInt5578 = i_1;
 		this.manager = class282_sub54_2;
 	}
 
 	abstract void method7780(int var1);
 
-	Preference(Class282_Sub54 class282_sub54_1) {
+	Preference(Node_Sub54 class282_sub54_1) {
 		this.manager = class282_sub54_1;
 		this.anInt5578 = this.method7781(1882816731);
 	}
@@ -55,7 +55,7 @@ public abstract class Preference {
 	}
 
 	static void method7789(int i_0) {
-		if (Class393.preferences.aClass468_Sub3_8199.method12632(84527156) == 1) {
+		if (Class393.preferences.aPreference_Sub3_8199.method12632(84527156) == 1) {
 			IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3152, (RsBitsBuffer) null));
 		} else {
 			IndexLoaders.MAP_REGION_DECODER.method4547((byte) -107);

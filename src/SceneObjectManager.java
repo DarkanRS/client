@@ -6,7 +6,7 @@ public class SceneObjectManager {
 
 	public Class293[][][] aClass293ArrayArrayArray2604;
 
-	public Ground[] aClass390Array2591;
+	public Ground[] aGroundArray2591;
 
 	public int anInt2601;
 
@@ -62,9 +62,9 @@ public class SceneObjectManager {
 
 	float[] aFloatArray2639;
 
-	Class282_Sub24[] aClass282_Sub24Array2642;
+	Node_Sub24[] aNode_Sub24Array2642;
 
-	GraphicalRenderer aClass505_2596;
+	GraphicalRenderer aGraphicalRenderer_2596;
 
 	boolean aBool2598;
 
@@ -86,7 +86,7 @@ public class SceneObjectManager {
 
 	public Class293[][][] aClass293ArrayArrayArray2610;
 
-	public Ground[] aClass390Array2607;
+	public Ground[] aGroundArray2607;
 
 	int[][] colors;
 
@@ -102,7 +102,7 @@ public class SceneObjectManager {
 
 	public Class293[][][] waterRelatedClassArray1;
 
-	public Ground[] aClass390Array2614;
+	public Ground[] aGroundArray2614;
 
 	long[][][] aLongArrayArrayArray2645;
 
@@ -110,17 +110,17 @@ public class SceneObjectManager {
 
 	boolean[] aBoolArray2647;
 
-	Class521_Sub1[] aClass521_Sub1Array2605;
+	Transform_Sub1[] aTransform_Sub1Array2605;
 
-	Class521_Sub1[] aClass521_Sub1Array2633;
+	Transform_Sub1[] aTransform_Sub1Array2633;
 
-	Class521_Sub1[] aClass521_Sub1Array2649;
+	Transform_Sub1[] aTransform_Sub1Array2649;
 
-	Class521_Sub1[] aClass521_Sub1Array2626;
+	Transform_Sub1[] aTransform_Sub1Array2626;
 
-	Class521_Sub1[] aClass521_Sub1Array2625;
+	Transform_Sub1[] aTransform_Sub1Array2625;
 
-	Class521_Sub1_Sub1[] aClass521_Sub1_Sub1Array2627;
+	Transform_Sub1_Sub1[] aTransform_Sub1_Sub1Array2627;
 
 	int[] anIntArray2641;
 
@@ -135,17 +135,17 @@ public class SceneObjectManager {
 	public void method3380(boolean bool_1) {
 		if (bool_1) {
 			this.aClass293ArrayArrayArray2604 = this.waterRelatedClassArray1;
-			this.aClass390Array2591 = this.aClass390Array2614;
+			this.aGroundArray2591 = this.aGroundArray2614;
 		} else {
 			this.aClass293ArrayArrayArray2604 = this.aClass293ArrayArrayArray2610;
-			this.aClass390Array2591 = this.aClass390Array2607;
+			this.aGroundArray2591 = this.aGroundArray2607;
 		}
 		this.anInt2601 = this.aClass293ArrayArrayArray2604.length;
 	}
 
-	public Class521_Sub1_Sub5 getWall(int i_1, int i_2, int i_3, byte b_4) {
+	public Transform_Sub1_Sub5 getWall(int i_1, int i_2, int i_3, byte b_4) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
-		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub5_3505;
+		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub5_3505;
 	}
 
 	public void method3382(int i_1, int i_2) {
@@ -154,25 +154,25 @@ public class SceneObjectManager {
 			Class293 class293_6 = this.aClass293ArrayArrayArray2604[i_5][i_1][i_2] = this.aClass293ArrayArrayArray2604[i_5 + 1][i_1][i_2];
 			if (class293_6 != null) {
 				for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
-					Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
+					Transform_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
 					if (class521_sub1_sub1_8.aShort9458 == i_1 && i_2 == class521_sub1_sub1_8.aShort9456) {
 						class521_sub1_sub1_8.plane = (byte) (class521_sub1_sub1_8.plane - 1);
 					}
 				}
-				if (class293_6.aClass521_Sub1_Sub3_3499 != null) {
-					class293_6.aClass521_Sub1_Sub3_3499.plane = (byte) (class293_6.aClass521_Sub1_Sub3_3499.plane - 1);
+				if (class293_6.aTransform_Sub1_Sub3_3499 != null) {
+					class293_6.aTransform_Sub1_Sub3_3499.plane = (byte) (class293_6.aTransform_Sub1_Sub3_3499.plane - 1);
 				}
-				if (class293_6.aClass521_Sub1_Sub5_3505 != null) {
-					class293_6.aClass521_Sub1_Sub5_3505.plane = (byte) (class293_6.aClass521_Sub1_Sub5_3505.plane - 1);
+				if (class293_6.aTransform_Sub1_Sub5_3505 != null) {
+					class293_6.aTransform_Sub1_Sub5_3505.plane = (byte) (class293_6.aTransform_Sub1_Sub5_3505.plane - 1);
 				}
-				if (class293_6.aClass521_Sub1_Sub5_3502 != null) {
-					class293_6.aClass521_Sub1_Sub5_3502.plane = (byte) (class293_6.aClass521_Sub1_Sub5_3502.plane - 1);
+				if (class293_6.aTransform_Sub1_Sub5_3502 != null) {
+					class293_6.aTransform_Sub1_Sub5_3502.plane = (byte) (class293_6.aTransform_Sub1_Sub5_3502.plane - 1);
 				}
-				if (class293_6.aClass521_Sub1_Sub4_3503 != null) {
-					class293_6.aClass521_Sub1_Sub4_3503.plane = (byte) (class293_6.aClass521_Sub1_Sub4_3503.plane - 1);
+				if (class293_6.aTransform_Sub1_Sub4_3503 != null) {
+					class293_6.aTransform_Sub1_Sub4_3503.plane = (byte) (class293_6.aTransform_Sub1_Sub4_3503.plane - 1);
 				}
-				if (class293_6.aClass521_Sub1_Sub4_3500 != null) {
-					class293_6.aClass521_Sub1_Sub4_3500.plane = (byte) (class293_6.aClass521_Sub1_Sub4_3500.plane - 1);
+				if (class293_6.aTransform_Sub1_Sub4_3500 != null) {
+					class293_6.aTransform_Sub1_Sub4_3500.plane = (byte) (class293_6.aTransform_Sub1_Sub4_3500.plane - 1);
 				}
 			}
 		}
@@ -197,7 +197,7 @@ public class SceneObjectManager {
 	}
 
 	public void method3385(int i_1, Ground class390_2) {
-		this.aClass390Array2591[i_1] = class390_2;
+		this.aGroundArray2591[i_1] = class390_2;
 	}
 
 	public int getScale(int i_1, int i_2) {
@@ -236,116 +236,116 @@ public class SceneObjectManager {
 	public void method3393(int i_1, int i_2, int i_3, SceneObjectNode sceneobjectnode_4) {
 		Class293 class293_6 = this.method3459(i_1, i_2, i_3, -204527757);
 		if (class293_6 != null) {
-			class293_6.aClass521_Sub1_Sub3_3499 = sceneobjectnode_4;
-			int i_7 = this.aClass390Array2591 == this.aClass390Array2614 ? 1 : 0;
+			class293_6.aTransform_Sub1_Sub3_3499 = sceneobjectnode_4;
+			int i_7 = this.aGroundArray2591 == this.aGroundArray2614 ? 1 : 0;
 			if (sceneobjectnode_4.method12986(-152076894)) {
 				if (sceneobjectnode_4.method12987(1864171775)) {
-					sceneobjectnode_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_7];
-					this.aClass521_Sub1Array2633[i_7] = sceneobjectnode_4;
+					sceneobjectnode_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_7];
+					this.aTransform_Sub1Array2633[i_7] = sceneobjectnode_4;
 				} else {
-					sceneobjectnode_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_7];
-					this.aClass521_Sub1Array2605[i_7] = sceneobjectnode_4;
+					sceneobjectnode_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_7];
+					this.aTransform_Sub1Array2605[i_7] = sceneobjectnode_4;
 				}
 			} else {
-				sceneobjectnode_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_7];
-				this.aClass521_Sub1Array2649[i_7] = sceneobjectnode_4;
+				sceneobjectnode_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_7];
+				this.aTransform_Sub1Array2649[i_7] = sceneobjectnode_4;
 			}
 		}
 	}
 
-	public void method3394(int i_1, int i_2, int i_3, int i_4, Class521_Sub1_Sub2 class521_sub1_sub2_5) {
+	public void method3394(int i_1, int i_2, int i_3, int i_4, Transform_Sub1_Sub2 class521_sub1_sub2_5) {
 		Class293 class293_7 = this.method3459(i_1, i_2, i_3, 546259933);
 		if (class293_7 != null) {
 			class521_sub1_sub2_5.method11171(new Vector3((float) ((i_2 << this.anInt2592) + this.anInt2594), (float) i_4, (float) ((i_3 << this.anInt2592) + this.anInt2594)));
-			class293_7.aClass521_Sub1_Sub2_3506 = class521_sub1_sub2_5;
-			int i_8 = this.aClass390Array2614 == this.aClass390Array2591 ? 1 : 0;
+			class293_7.aTransform_Sub1_Sub2_3506 = class521_sub1_sub2_5;
+			int i_8 = this.aGroundArray2614 == this.aGroundArray2591 ? 1 : 0;
 			if (class521_sub1_sub2_5.method12986(-1465902560)) {
 				if (class521_sub1_sub2_5.method12987(-1746699245)) {
-					class521_sub1_sub2_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_8];
-					this.aClass521_Sub1Array2633[i_8] = class521_sub1_sub2_5;
+					class521_sub1_sub2_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_8];
+					this.aTransform_Sub1Array2633[i_8] = class521_sub1_sub2_5;
 				} else {
-					class521_sub1_sub2_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_8];
-					this.aClass521_Sub1Array2605[i_8] = class521_sub1_sub2_5;
+					class521_sub1_sub2_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_8];
+					this.aTransform_Sub1Array2605[i_8] = class521_sub1_sub2_5;
 				}
 			} else {
-				class521_sub1_sub2_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_8];
-				this.aClass521_Sub1Array2649[i_8] = class521_sub1_sub2_5;
+				class521_sub1_sub2_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_8];
+				this.aTransform_Sub1Array2649[i_8] = class521_sub1_sub2_5;
 			}
 		}
 	}
 
-	public void method3395(int i_1, int i_2, int i_3, Class521_Sub1_Sub5 class521_sub1_sub5_4, Class521_Sub1_Sub5 class521_sub1_sub5_5, int i_6) {
+	public void method3395(int i_1, int i_2, int i_3, Transform_Sub1_Sub5 class521_sub1_sub5_4, Transform_Sub1_Sub5 class521_sub1_sub5_5, int i_6) {
 		Class293 class293_7 = this.method3459(i_1, i_2, i_3, -322644171);
 		if (class293_7 != null) {
-			class293_7.aClass521_Sub1_Sub5_3505 = class521_sub1_sub5_4;
-			class293_7.aClass521_Sub1_Sub5_3502 = class521_sub1_sub5_5;
-			int i_8 = this.aClass390Array2614 == this.aClass390Array2591 ? 1 : 0;
+			class293_7.aTransform_Sub1_Sub5_3505 = class521_sub1_sub5_4;
+			class293_7.aTransform_Sub1_Sub5_3502 = class521_sub1_sub5_5;
+			int i_8 = this.aGroundArray2614 == this.aGroundArray2591 ? 1 : 0;
 			if (class521_sub1_sub5_4.method12986(-422075919)) {
 				if (class521_sub1_sub5_4.method12987(-1845208495)) {
-					class521_sub1_sub5_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_8];
-					this.aClass521_Sub1Array2633[i_8] = class521_sub1_sub5_4;
+					class521_sub1_sub5_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_8];
+					this.aTransform_Sub1Array2633[i_8] = class521_sub1_sub5_4;
 				} else {
-					class521_sub1_sub5_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_8];
-					this.aClass521_Sub1Array2605[i_8] = class521_sub1_sub5_4;
+					class521_sub1_sub5_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_8];
+					this.aTransform_Sub1Array2605[i_8] = class521_sub1_sub5_4;
 				}
 			} else {
-				class521_sub1_sub5_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_8];
-				this.aClass521_Sub1Array2649[i_8] = class521_sub1_sub5_4;
+				class521_sub1_sub5_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_8];
+				this.aTransform_Sub1Array2649[i_8] = class521_sub1_sub5_4;
 			}
 			if (class521_sub1_sub5_5 != null) {
 				if (class521_sub1_sub5_5.method12986(-1805444814)) {
 					if (class521_sub1_sub5_5.method12987(-1456067745)) {
-						class521_sub1_sub5_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_8];
-						this.aClass521_Sub1Array2633[i_8] = class521_sub1_sub5_5;
+						class521_sub1_sub5_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_8];
+						this.aTransform_Sub1Array2633[i_8] = class521_sub1_sub5_5;
 					} else {
-						class521_sub1_sub5_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_8];
-						this.aClass521_Sub1Array2605[i_8] = class521_sub1_sub5_5;
+						class521_sub1_sub5_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_8];
+						this.aTransform_Sub1Array2605[i_8] = class521_sub1_sub5_5;
 					}
 				} else {
-					class521_sub1_sub5_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_8];
-					this.aClass521_Sub1Array2649[i_8] = class521_sub1_sub5_5;
+					class521_sub1_sub5_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_8];
+					this.aTransform_Sub1Array2649[i_8] = class521_sub1_sub5_5;
 				}
 			}
 		}
 	}
 
-	public void method3396(int i_1, int i_2, int i_3, Class521_Sub1_Sub4 class521_sub1_sub4_4, Class521_Sub1_Sub4 class521_sub1_sub4_5) {
+	public void method3396(int i_1, int i_2, int i_3, Transform_Sub1_Sub4 class521_sub1_sub4_4, Transform_Sub1_Sub4 class521_sub1_sub4_5) {
 		Class293 class293_7 = this.method3459(i_1, i_2, i_3, -144176397);
 		if (class293_7 != null) {
-			class293_7.aClass521_Sub1_Sub4_3503 = class521_sub1_sub4_4;
-			class293_7.aClass521_Sub1_Sub4_3500 = class521_sub1_sub4_5;
-			int i_8 = this.aClass390Array2614 == this.aClass390Array2591 ? 1 : 0;
+			class293_7.aTransform_Sub1_Sub4_3503 = class521_sub1_sub4_4;
+			class293_7.aTransform_Sub1_Sub4_3500 = class521_sub1_sub4_5;
+			int i_8 = this.aGroundArray2614 == this.aGroundArray2591 ? 1 : 0;
 			if (class521_sub1_sub4_4.method12986(-287475150)) {
 				if (class521_sub1_sub4_4.method12987(-1554775076)) {
-					class521_sub1_sub4_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_8];
-					this.aClass521_Sub1Array2633[i_8] = class521_sub1_sub4_4;
+					class521_sub1_sub4_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_8];
+					this.aTransform_Sub1Array2633[i_8] = class521_sub1_sub4_4;
 				} else {
-					class521_sub1_sub4_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_8];
-					this.aClass521_Sub1Array2605[i_8] = class521_sub1_sub4_4;
+					class521_sub1_sub4_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_8];
+					this.aTransform_Sub1Array2605[i_8] = class521_sub1_sub4_4;
 				}
 			} else {
-				class521_sub1_sub4_4.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_8];
-				this.aClass521_Sub1Array2649[i_8] = class521_sub1_sub4_4;
+				class521_sub1_sub4_4.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_8];
+				this.aTransform_Sub1Array2649[i_8] = class521_sub1_sub4_4;
 			}
 			if (class521_sub1_sub4_5 != null) {
 				if (class521_sub1_sub4_5.method12986(-1380725108)) {
 					if (class521_sub1_sub4_5.method12987(-1946462410)) {
-						class521_sub1_sub4_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_8];
-						this.aClass521_Sub1Array2633[i_8] = class521_sub1_sub4_5;
+						class521_sub1_sub4_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_8];
+						this.aTransform_Sub1Array2633[i_8] = class521_sub1_sub4_5;
 					} else {
-						class521_sub1_sub4_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_8];
-						this.aClass521_Sub1Array2605[i_8] = class521_sub1_sub4_5;
+						class521_sub1_sub4_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_8];
+						this.aTransform_Sub1Array2605[i_8] = class521_sub1_sub4_5;
 					}
 				} else {
-					class521_sub1_sub4_5.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_8];
-					this.aClass521_Sub1Array2649[i_8] = class521_sub1_sub4_5;
+					class521_sub1_sub4_5.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_8];
+					this.aTransform_Sub1Array2649[i_8] = class521_sub1_sub4_5;
 				}
 			}
 		}
 	}
 
-	public boolean method3397(Class521_Sub1_Sub1 class521_sub1_sub1_1, boolean bool_2, int i_3) {
-		boolean bool_4 = this.aClass390Array2591 == this.aClass390Array2614;
+	public boolean method3397(Transform_Sub1_Sub1 class521_sub1_sub1_1, boolean bool_2, int i_3) {
+		boolean bool_4 = this.aGroundArray2591 == this.aGroundArray2614;
 		int i_5 = 0;
 		short s_6 = 0;
 		byte b_7 = 0;
@@ -373,8 +373,8 @@ public class SceneObjectManager {
 							s_6 = this.scales[i_9][i_10];
 							b_7 = this.intensities[i_9][i_10];
 						}
-						if (!bool_2 && class293_11.aClass521_Sub1_Sub3_3499 != null && class293_11.aClass521_Sub1_Sub3_3499.aShort9561 > s_8) {
-							s_8 = class293_11.aClass521_Sub1_Sub3_3499.aShort9561;
+						if (!bool_2 && class293_11.aTransform_Sub1_Sub3_3499 != null && class293_11.aTransform_Sub1_Sub3_3499.aShort9561 > s_8) {
+							s_8 = class293_11.aTransform_Sub1_Sub3_3499.aShort9561;
 						}
 					}
 				}
@@ -391,21 +391,21 @@ public class SceneObjectManager {
 				}
 			}
 			if (bool_2) {
-				this.aClass521_Sub1_Sub1Array2627[++this.anInt2616 - 1] = class521_sub1_sub1_1;
+				this.aTransform_Sub1_Sub1Array2627[++this.anInt2616 - 1] = class521_sub1_sub1_1;
 				class521_sub1_sub1_1.aClass206_7970 = this;
 			} else {
-				i_9 = this.aClass390Array2614 == this.aClass390Array2591 ? 1 : 0;
+				i_9 = this.aGroundArray2614 == this.aGroundArray2591 ? 1 : 0;
 				if (class521_sub1_sub1_1.method12986(-874752575)) {
 					if (class521_sub1_sub1_1.method12987(331122687)) {
-						class521_sub1_sub1_1.aClass521_Sub1_7966 = this.aClass521_Sub1Array2633[i_9];
-						this.aClass521_Sub1Array2633[i_9] = class521_sub1_sub1_1;
+						class521_sub1_sub1_1.aTransform_Sub1_7966 = this.aTransform_Sub1Array2633[i_9];
+						this.aTransform_Sub1Array2633[i_9] = class521_sub1_sub1_1;
 					} else {
-						class521_sub1_sub1_1.aClass521_Sub1_7966 = this.aClass521_Sub1Array2605[i_9];
-						this.aClass521_Sub1Array2605[i_9] = class521_sub1_sub1_1;
+						class521_sub1_sub1_1.aTransform_Sub1_7966 = this.aTransform_Sub1Array2605[i_9];
+						this.aTransform_Sub1Array2605[i_9] = class521_sub1_sub1_1;
 					}
 				} else {
-					class521_sub1_sub1_1.aClass521_Sub1_7966 = this.aClass521_Sub1Array2649[i_9];
-					this.aClass521_Sub1Array2649[i_9] = class521_sub1_sub1_1;
+					class521_sub1_sub1_1.aTransform_Sub1_7966 = this.aTransform_Sub1Array2649[i_9];
+					this.aTransform_Sub1Array2649[i_9] = class521_sub1_sub1_1;
 				}
 			}
 			if (bool_2) {
@@ -423,8 +423,8 @@ public class SceneObjectManager {
 	public void method3398(int i_1, int i_2, int i_3, int i_4, byte b_5) {
 		Class293 class293_6 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_6 != null) {
-			Class521_Sub1_Sub4 class521_sub1_sub4_7 = class293_6.aClass521_Sub1_Sub4_3503;
-			Class521_Sub1_Sub4 class521_sub1_sub4_8 = class293_6.aClass521_Sub1_Sub4_3500;
+			Transform_Sub1_Sub4 class521_sub1_sub4_7 = class293_6.aTransform_Sub1_Sub4_3503;
+			Transform_Sub1_Sub4 class521_sub1_sub4_8 = class293_6.aTransform_Sub1_Sub4_3500;
 			if (class521_sub1_sub4_7 != null) {
 				class521_sub1_sub4_7.aShort9611 = (short) (i_4 * class521_sub1_sub4_7.aShort9611 / (16 << this.anInt2592 - 7));
 				class521_sub1_sub4_7.aShort9612 = (short) (i_4 * class521_sub1_sub4_7.aShort9612 / (16 << this.anInt2592 - 7));
@@ -438,9 +438,9 @@ public class SceneObjectManager {
 
 	public void method3399() {
 		for (int i_2 = 0; i_2 < this.anInt2616; i_2++) {
-			Class521_Sub1_Sub1 class521_sub1_sub1_3 = this.aClass521_Sub1_Sub1Array2627[i_2];
+			Transform_Sub1_Sub1 class521_sub1_sub1_3 = this.aTransform_Sub1_Sub1Array2627[i_2];
 			this.method3407(class521_sub1_sub1_3, true);
-			this.aClass521_Sub1_Sub1Array2627[i_2] = null;
+			this.aTransform_Sub1_Sub1Array2627[i_2] = null;
 		}
 		this.anInt2616 = 0;
 	}
@@ -451,25 +451,25 @@ public class SceneObjectManager {
 				for (int i_3 = 0; i_3 < this.sizeY; i_3++) {
 					Class293 class293_4 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 					if (class293_4 != null) {
-						Class521_Sub1_Sub5 class521_sub1_sub5_5 = class293_4.aClass521_Sub1_Sub5_3505;
-						Class521_Sub1_Sub5 class521_sub1_sub5_6 = class293_4.aClass521_Sub1_Sub5_3502;
+						Transform_Sub1_Sub5 class521_sub1_sub5_5 = class293_4.aTransform_Sub1_Sub5_3505;
+						Transform_Sub1_Sub5 class521_sub1_sub5_6 = class293_4.aTransform_Sub1_Sub5_3502;
 						if (class521_sub1_sub5_5 != null && class521_sub1_sub5_5.method12985(-1950778651)) {
 							this.method3452(class521_sub1_sub5_5, i_1, i_2, i_3, 1, 1);
 							if (class521_sub1_sub5_6 != null && class521_sub1_sub5_6.method12985(-770467208)) {
 								this.method3452(class521_sub1_sub5_6, i_1, i_2, i_3, 1, 1);
-								class521_sub1_sub5_6.method13013(this.aClass505_2596, class521_sub1_sub5_5, 0, 0, 0, false, -1985350019);
+								class521_sub1_sub5_6.method13013(this.aGraphicalRenderer_2596, class521_sub1_sub5_5, 0, 0, 0, false, -1985350019);
 								class521_sub1_sub5_6.method12984(150172527);
 							}
 							class521_sub1_sub5_5.method12984(-727923375);
 						}
 						for (Class208 class208_7 = class293_4.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
-							Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
+							Transform_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
 							if (class521_sub1_sub1_8 != null && class521_sub1_sub1_8.method12985(-776427124)) {
 								this.method3452(class521_sub1_sub1_8, i_1, i_2, i_3, class521_sub1_sub1_8.localX - class521_sub1_sub1_8.aShort9458 + 1, class521_sub1_sub1_8.localY - class521_sub1_sub1_8.aShort9456 + 1);
 								class521_sub1_sub1_8.method12984(1378070205);
 							}
 						}
-						SceneObjectNode sceneobjectnode_9 = class293_4.aClass521_Sub1_Sub3_3499;
+						SceneObjectNode sceneobjectnode_9 = class293_4.aTransform_Sub1_Sub3_3499;
 						if (sceneobjectnode_9 != null && sceneobjectnode_9.method12985(-1912639539)) {
 							this.method3417(sceneobjectnode_9, i_1, i_2, i_3);
 							sceneobjectnode_9.method12984(107766505);
@@ -480,13 +480,13 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub4 method3402(int i_1, int i_2, int i_3) {
+	public Transform_Sub1_Sub4 method3402(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
-			this.method3408(class293_5.aClass521_Sub1_Sub4_3503, 1327771301);
-			if (class293_5.aClass521_Sub1_Sub4_3503 != null) {
-				Class521_Sub1_Sub4 class521_sub1_sub4_6 = class293_5.aClass521_Sub1_Sub4_3503;
-				class293_5.aClass521_Sub1_Sub4_3503 = null;
+			this.method3408(class293_5.aTransform_Sub1_Sub4_3503, 1327771301);
+			if (class293_5.aTransform_Sub1_Sub4_3503 != null) {
+				Transform_Sub1_Sub4 class521_sub1_sub4_6 = class293_5.aTransform_Sub1_Sub4_3503;
+				class293_5.aTransform_Sub1_Sub4_3503 = null;
 				return class521_sub1_sub4_6;
 			}
 		}
@@ -498,10 +498,10 @@ public class SceneObjectManager {
 		if (class293_5 == null) {
 			return null;
 		} else {
-			this.method3408(class293_5.aClass521_Sub1_Sub3_3499, 2096802032);
-			if (class293_5.aClass521_Sub1_Sub3_3499 != null) {
-				SceneObjectNode sceneobjectnode_6 = class293_5.aClass521_Sub1_Sub3_3499;
-				class293_5.aClass521_Sub1_Sub3_3499 = null;
+			this.method3408(class293_5.aTransform_Sub1_Sub3_3499, 2096802032);
+			if (class293_5.aTransform_Sub1_Sub3_3499 != null) {
+				SceneObjectNode sceneobjectnode_6 = class293_5.aTransform_Sub1_Sub3_3499;
+				class293_5.aTransform_Sub1_Sub3_3499 = null;
 				return sceneobjectnode_6;
 			} else {
 				return null;
@@ -509,26 +509,26 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub2 method3405(int i_1, int i_2, int i_3, int i_4) {
+	public Transform_Sub1_Sub2 method3405(int i_1, int i_2, int i_3, int i_4) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 == null) {
 			return null;
 		} else {
-			Class521_Sub1_Sub2 class521_sub1_sub2_6 = class293_5.aClass521_Sub1_Sub2_3506;
-			class293_5.aClass521_Sub1_Sub2_3506 = null;
+			Transform_Sub1_Sub2 class521_sub1_sub2_6 = class293_5.aTransform_Sub1_Sub2_3506;
+			class293_5.aTransform_Sub1_Sub2_3506 = null;
 			this.method3408(class521_sub1_sub2_6, 1563744432);
 			return class521_sub1_sub2_6;
 		}
 	}
 
-	void method3407(Class521_Sub1_Sub1 class521_sub1_sub1_1, boolean bool_2) {
+	void method3407(Transform_Sub1_Sub1 class521_sub1_sub1_1, boolean bool_2) {
 		for (int i_4 = class521_sub1_sub1_1.aShort9458; i_4 <= class521_sub1_sub1_1.localX; i_4++) {
 			for (int i_5 = class521_sub1_sub1_1.aShort9456; i_5 <= class521_sub1_sub1_1.localY; i_5++) {
 				Class293 class293_6 = this.aClass293ArrayArrayArray2604[class521_sub1_sub1_1.plane][i_4][i_5];
 				if (class293_6 != null) {
 					Class208 class208_7 = class293_6.aClass208_3504;
 					for (Class208 class208_8 = null; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
-						if (class521_sub1_sub1_1 == class208_7.aClass521_Sub1_Sub1_2659) {
+						if (class521_sub1_sub1_1 == class208_7.aTransform_Sub1_Sub1_2659) {
 							if (class208_8 != null) {
 								class208_8.aClass208_2660 = class208_7.aClass208_2660;
 							} else {
@@ -547,42 +547,42 @@ public class SceneObjectManager {
 		}
 	}
 
-	void method3408(Class521_Sub1 class521_sub1_1, int i_2) {
+	void method3408(Transform_Sub1 class521_sub1_1, int i_2) {
 		if (class521_sub1_1 != null) {
 			class521_sub1_1.method11176();
 			for (int i_3 = 0; i_3 < 2; i_3++) {
-				Class521_Sub1 class521_sub1_4 = null;
-				Class521_Sub1 class521_sub1_5;
-				for (class521_sub1_5 = this.aClass521_Sub1Array2605[i_3]; class521_sub1_5 != null; class521_sub1_5 = class521_sub1_5.aClass521_Sub1_7966) {
+				Transform_Sub1 class521_sub1_4 = null;
+				Transform_Sub1 class521_sub1_5;
+				for (class521_sub1_5 = this.aTransform_Sub1Array2605[i_3]; class521_sub1_5 != null; class521_sub1_5 = class521_sub1_5.aTransform_Sub1_7966) {
 					if (class521_sub1_5 == class521_sub1_1) {
 						if (class521_sub1_4 != null) {
-							class521_sub1_4.aClass521_Sub1_7966 = class521_sub1_5.aClass521_Sub1_7966;
+							class521_sub1_4.aTransform_Sub1_7966 = class521_sub1_5.aTransform_Sub1_7966;
 						} else {
-							this.aClass521_Sub1Array2605[i_3] = class521_sub1_5.aClass521_Sub1_7966;
+							this.aTransform_Sub1Array2605[i_3] = class521_sub1_5.aTransform_Sub1_7966;
 						}
 						return;
 					}
 					class521_sub1_4 = class521_sub1_5;
 				}
 				class521_sub1_4 = null;
-				for (class521_sub1_5 = this.aClass521_Sub1Array2633[i_3]; class521_sub1_5 != null; class521_sub1_5 = class521_sub1_5.aClass521_Sub1_7966) {
+				for (class521_sub1_5 = this.aTransform_Sub1Array2633[i_3]; class521_sub1_5 != null; class521_sub1_5 = class521_sub1_5.aTransform_Sub1_7966) {
 					if (class521_sub1_5 == class521_sub1_1) {
 						if (class521_sub1_4 != null) {
-							class521_sub1_4.aClass521_Sub1_7966 = class521_sub1_5.aClass521_Sub1_7966;
+							class521_sub1_4.aTransform_Sub1_7966 = class521_sub1_5.aTransform_Sub1_7966;
 						} else {
-							this.aClass521_Sub1Array2633[i_3] = class521_sub1_5.aClass521_Sub1_7966;
+							this.aTransform_Sub1Array2633[i_3] = class521_sub1_5.aTransform_Sub1_7966;
 						}
 						return;
 					}
 					class521_sub1_4 = class521_sub1_5;
 				}
 				class521_sub1_4 = null;
-				for (class521_sub1_5 = this.aClass521_Sub1Array2649[i_3]; class521_sub1_5 != null; class521_sub1_5 = class521_sub1_5.aClass521_Sub1_7966) {
+				for (class521_sub1_5 = this.aTransform_Sub1Array2649[i_3]; class521_sub1_5 != null; class521_sub1_5 = class521_sub1_5.aTransform_Sub1_7966) {
 					if (class521_sub1_5 == class521_sub1_1) {
 						if (class521_sub1_4 != null) {
-							class521_sub1_4.aClass521_Sub1_7966 = class521_sub1_5.aClass521_Sub1_7966;
+							class521_sub1_4.aTransform_Sub1_7966 = class521_sub1_5.aTransform_Sub1_7966;
 						} else {
-							this.aClass521_Sub1Array2649[i_3] = class521_sub1_5.aClass521_Sub1_7966;
+							this.aTransform_Sub1Array2649[i_3] = class521_sub1_5.aTransform_Sub1_7966;
 						}
 						return;
 					}
@@ -592,18 +592,18 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub5 getWall2(int i_1, int i_2, int i_3) {
+	public Transform_Sub1_Sub5 getWall2(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
-		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub5_3502;
+		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub5_3502;
 	}
 
-	public Class521_Sub1_Sub1 getInteractableObject(int i_1, int i_2, int i_3, Interface25 interface25_4) {
+	public Transform_Sub1_Sub1 getInteractableObject(int i_1, int i_2, int i_3, Interface25 interface25_4) {
 		Class293 class293_6 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_6 == null) {
 			return null;
 		} else {
 			for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
-				Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
+				Transform_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
 				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456) {
 					return class521_sub1_sub1_8;
 				}
@@ -614,72 +614,72 @@ public class SceneObjectManager {
 
 	public SceneObjectNode getGroundDecoration(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
-		return class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null ? class293_5.aClass521_Sub1_Sub3_3499 : null;
+		return class293_5 != null && class293_5.aTransform_Sub1_Sub3_3499 != null ? class293_5.aTransform_Sub1_Sub3_3499 : null;
 	}
 
-	void method3417(Class521_Sub1 class521_sub1_1, int i_2, int i_3, int i_4) {
+	void method3417(Transform_Sub1 class521_sub1_1, int i_2, int i_3, int i_4) {
 		Class293 class293_6;
 		if (i_3 < this.sizeX) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4];
-			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-1157326636)) {
-				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, this.anInt2593, 0, 0, true, -2061518556);
+			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null && class293_6.aTransform_Sub1_Sub3_3499.method12985(-1157326636)) {
+				class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class293_6.aTransform_Sub1_Sub3_3499, this.anInt2593, 0, 0, true, -2061518556);
 			}
 		}
 		if (i_4 < this.sizeX) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3][i_4 + 1];
-			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-1529728389)) {
-				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, 0, 0, this.anInt2593, true, -1951339273);
+			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null && class293_6.aTransform_Sub1_Sub3_3499.method12985(-1529728389)) {
+				class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class293_6.aTransform_Sub1_Sub3_3499, 0, 0, this.anInt2593, true, -1951339273);
 			}
 		}
 		if (i_3 < this.sizeX && i_4 < this.sizeY) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4 + 1];
-			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-1925311637)) {
-				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, this.anInt2593, 0, this.anInt2593, true, -1913658819);
+			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null && class293_6.aTransform_Sub1_Sub3_3499.method12985(-1925311637)) {
+				class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class293_6.aTransform_Sub1_Sub3_3499, this.anInt2593, 0, this.anInt2593, true, -1913658819);
 			}
 		}
 		if (i_3 < this.sizeX && i_4 > 0) {
 			class293_6 = this.aClass293ArrayArrayArray2604[i_2][i_3 + 1][i_4 - 1];
-			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null && class293_6.aClass521_Sub1_Sub3_3499.method12985(-883899381)) {
-				class521_sub1_1.method13013(this.aClass505_2596, class293_6.aClass521_Sub1_Sub3_3499, this.anInt2593, 0, -this.anInt2593, true, -1779065543);
+			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null && class293_6.aTransform_Sub1_Sub3_3499.method12985(-883899381)) {
+				class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class293_6.aTransform_Sub1_Sub3_3499, this.anInt2593, 0, -this.anInt2593, true, -1779065543);
 			}
 		}
 	}
 
-	void method3421(Class521_Sub1 class521_sub1_1, byte b_2) {
+	void method3421(Transform_Sub1 class521_sub1_1, byte b_2) {
 		Vector3 vector3_3 = class521_sub1_1.method11166().aClass385_3595;
-		this.aClass505_2596.method8479((float) ((int) vector3_3.x), (float) ((int) vector3_3.y + (class521_sub1_1.method12995(-353593796) >> 1)), (float) ((int) vector3_3.z), this.aFloatArray2639);
+		this.aGraphicalRenderer_2596.method8479((float) ((int) vector3_3.x), (float) ((int) vector3_3.y + (class521_sub1_1.method12995(-353593796) >> 1)), (float) ((int) vector3_3.z), this.aFloatArray2639);
 		class521_sub1_1.anInt7969 = (int) this.aFloatArray2639[2];
 	}
 
-	public Class521_Sub1_Sub5 method3422(int i_1, int i_2, int i_3) {
+	public Transform_Sub1_Sub5 method3422(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
-			this.method3408(class293_5.aClass521_Sub1_Sub5_3505, 1587735516);
-			if (class293_5.aClass521_Sub1_Sub5_3505 != null) {
-				Class521_Sub1_Sub5 class521_sub1_sub5_6 = class293_5.aClass521_Sub1_Sub5_3505;
-				class293_5.aClass521_Sub1_Sub5_3505 = null;
+			this.method3408(class293_5.aTransform_Sub1_Sub5_3505, 1587735516);
+			if (class293_5.aTransform_Sub1_Sub5_3505 != null) {
+				Transform_Sub1_Sub5 class521_sub1_sub5_6 = class293_5.aTransform_Sub1_Sub5_3505;
+				class293_5.aTransform_Sub1_Sub5_3505 = null;
 				return class521_sub1_sub5_6;
 			}
 		}
 		return null;
 	}
 
-	boolean method3424(Class521_Sub1 class521_sub1_1, boolean bool_2, byte[][][] bytes_3, int i_4, byte b_5) {
+	boolean method3424(Transform_Sub1 class521_sub1_1, boolean bool_2, byte[][][] bytes_3, int i_4, byte b_5) {
 		if (!this.aBool2599) {
 			return false;
-		} else if (class521_sub1_1 instanceof Class521_Sub1_Sub1) {
-			short s_6 = ((Class521_Sub1_Sub1) class521_sub1_1).localX;
-			short s_13 = ((Class521_Sub1_Sub1) class521_sub1_1).localY;
-			short s_14 = ((Class521_Sub1_Sub1) class521_sub1_1).aShort9458;
-			short s_9 = ((Class521_Sub1_Sub1) class521_sub1_1).aShort9456;
+		} else if (class521_sub1_1 instanceof Transform_Sub1_Sub1) {
+			short s_6 = ((Transform_Sub1_Sub1) class521_sub1_1).localX;
+			short s_13 = ((Transform_Sub1_Sub1) class521_sub1_1).localY;
+			short s_14 = ((Transform_Sub1_Sub1) class521_sub1_1).aShort9458;
+			short s_9 = ((Transform_Sub1_Sub1) class521_sub1_1).aShort9456;
 			for (int i_10 = s_14; i_10 <= s_6; i_10++) {
 				for (int i_11 = s_9; i_11 <= s_13; i_11++) {
 					if (class521_sub1_1.collisionPlane < this.anInt2601 && i_10 >= this.anInt2637 && i_10 < this.anInt2638 && i_11 >= this.anInt2621 && i_11 < this.anInt2640) {
-						if ((bytes_3 == null || class521_sub1_1.plane < i_4 || b_5 != bytes_3[class521_sub1_1.plane][i_10][i_11]) && class521_sub1_1.method13029((byte) 1) && !class521_sub1_1.method13037(this.aClass505_2596, 1922998214)) {
+						if ((bytes_3 == null || class521_sub1_1.plane < i_4 || b_5 != bytes_3[class521_sub1_1.plane][i_10][i_11]) && class521_sub1_1.method13029((byte) 1) && !class521_sub1_1.method13037(this.aGraphicalRenderer_2596, 1922998214)) {
 							return false;
 						}
 						if (!bool_2 && i_10 >= this.anInt2628 - 16 && i_10 <= this.anInt2628 + 16 && i_11 >= this.anInt2629 - 16 && i_11 <= this.anInt2629 + 16) {
-							class521_sub1_1.method12991(this.aClass505_2596, -1308770774);
+							class521_sub1_1.method12991(this.aGraphicalRenderer_2596, -1308770774);
 						}
 						return true;
 					}
@@ -691,11 +691,11 @@ public class SceneObjectManager {
 			int i_7 = (int) vector3_12.x >> this.anInt2592;
 			int i_8 = (int) vector3_12.z >> this.anInt2592;
 			if (class521_sub1_1.collisionPlane < this.anInt2601 && i_7 >= this.anInt2637 && i_7 < this.anInt2638 && i_8 >= this.anInt2621 && i_8 < this.anInt2640) {
-				if ((bytes_3 == null || class521_sub1_1.plane < i_4 || b_5 != bytes_3[class521_sub1_1.plane][i_7][i_8]) && class521_sub1_1.method13029((byte) -39) && !class521_sub1_1.method13037(this.aClass505_2596, -53758878)) {
+				if ((bytes_3 == null || class521_sub1_1.plane < i_4 || b_5 != bytes_3[class521_sub1_1.plane][i_7][i_8]) && class521_sub1_1.method13029((byte) -39) && !class521_sub1_1.method13037(this.aGraphicalRenderer_2596, -53758878)) {
 					return false;
 				} else {
 					if (!bool_2 && i_7 >= this.anInt2628 - 16 && i_7 <= this.anInt2628 + 16 && i_8 >= this.anInt2629 - 16 && i_8 <= this.anInt2629 + 16) {
-						class521_sub1_1.method12991(this.aClass505_2596, -1131763435);
+						class521_sub1_1.method12991(this.aGraphicalRenderer_2596, -1131763435);
 					}
 					return true;
 				}
@@ -707,10 +707,10 @@ public class SceneObjectManager {
 
 	public boolean method3426(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, boolean[] bools_5, byte b_6) {
 		boolean bool_7 = false;
-		if (this.aClass390Array2591 != this.aClass390Array2614) {
-			int i_8 = this.aClass390Array2607[i_2].averageHeight(i_3, i_4, 1177871260);
+		if (this.aGroundArray2591 != this.aGroundArray2614) {
+			int i_8 = this.aGroundArray2607[i_2].averageHeight(i_3, i_4, 1177871260);
 			for (int i_9 = 0; i_9 <= i_2; i_9++) {
-				Ground class390_10 = this.aClass390Array2607[i_9];
+				Ground class390_10 = this.aGroundArray2607[i_9];
 				if (class390_10 != null) {
 					int i_11 = i_8 - class390_10.averageHeight(i_3, i_4, 1885983541);
 					if (bools_5 != null) {
@@ -728,11 +728,11 @@ public class SceneObjectManager {
 	}
 
 	public void method3427(Shadow class282_sub50_sub17_1, int i_2, int i_3, int i_4, boolean[] bools_5, byte b_6) {
-		if (this.aClass390Array2614 != this.aClass390Array2591) {
-			int i_7 = this.aClass390Array2607[i_2].averageHeight(i_3, i_4, 2131709892);
+		if (this.aGroundArray2614 != this.aGroundArray2591) {
+			int i_7 = this.aGroundArray2607[i_2].averageHeight(i_3, i_4, 2131709892);
 			for (int i_8 = 0; i_8 <= i_2; i_8++) {
 				if (bools_5 == null || bools_5[i_8]) {
-					Ground class390_9 = this.aClass390Array2607[i_8];
+					Ground class390_9 = this.aGroundArray2607[i_8];
 					if (class390_9 != null) {
 						class390_9.NA(class282_sub50_sub17_1, i_3, i_7 - class390_9.averageHeight(i_3, i_4, 159261886), i_4);
 					}
@@ -757,7 +757,7 @@ public class SceneObjectManager {
 
 	public void method3430(Class287 class287_1) {
 		if (this.anInt2615 < 65361) {
-			Class282_Sub24 class282_sub24_3 = class287_1.aClass282_Sub24_3425;
+			Node_Sub24 class282_sub24_3 = class287_1.aNode_Sub24_3425;
 			this.aClass287Array2646[this.anInt2615] = class287_1;
 			this.aBoolArray2647[this.anInt2615] = false;
 			++this.anInt2615;
@@ -811,7 +811,7 @@ public class SceneObjectManager {
 		for (int i_2 = 0; i_2 < this.anInt2615; i_2++) {
 			if (!this.aBoolArray2647[i_2]) {
 				Class287 class287_3 = this.aClass287Array2646[i_2];
-				Class282_Sub24 class282_sub24_4 = class287_3.aClass282_Sub24_3425;
+				Node_Sub24 class282_sub24_4 = class287_3.aNode_Sub24_3425;
 				int i_5 = class287_3.anInt3419;
 				int i_6 = class282_sub24_4.method12370() - this.anInt2594;
 				int i_7 = (i_6 * 2 >> this.anInt2592) + 1;
@@ -842,7 +842,7 @@ public class SceneObjectManager {
 					}
 					for (int i_19 = i_17; i_19 <= i_18; i_19++) {
 						byte b_20 = 1;
-						Class521_Sub1_Sub1 class521_sub1_sub1_21 = this.getInteractableObject(i_5, i_19, i_13, (Interface25) null);
+						Transform_Sub1_Sub1 class521_sub1_sub1_21 = this.getInteractableObject(i_5, i_19, i_13, (Interface25) null);
 						if (class521_sub1_sub1_21 != null && class521_sub1_sub1_21.aByte9454 != 0) {
 							boolean bool_22;
 							boolean bool_23;
@@ -897,7 +897,7 @@ public class SceneObjectManager {
 				}
 				this.aBoolArray2647[i_2] = true;
 				if (aBool2644) {
-					this.aClass390Array2591[i_5].method6713(class282_sub24_4, ints_9);
+					this.aGroundArray2591[i_5].method6713(class282_sub24_4, ints_9);
 				}
 			}
 		}
@@ -907,18 +907,18 @@ public class SceneObjectManager {
 		return this.waterRelatedArray4 != null ? this.waterRelatedArray4[i_1][i_2] & 0xff : 0;
 	}
 
-	public Class521_Sub1_Sub2 method3437(int i_1, int i_2, int i_3) {
+	public Transform_Sub1_Sub2 method3437(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
-		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub2_3506;
+		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub2_3506;
 	}
 
-	public Class521_Sub1_Sub4 method3439(int i_1, int i_2, int i_3) {
+	public Transform_Sub1_Sub4 method3439(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
-			this.method3408(class293_5.aClass521_Sub1_Sub4_3500, 1336618461);
-			if (class293_5.aClass521_Sub1_Sub4_3500 != null) {
-				Class521_Sub1_Sub4 class521_sub1_sub4_6 = class293_5.aClass521_Sub1_Sub4_3500;
-				class293_5.aClass521_Sub1_Sub4_3500 = null;
+			this.method3408(class293_5.aTransform_Sub1_Sub4_3500, 1336618461);
+			if (class293_5.aTransform_Sub1_Sub4_3500 != null) {
+				Transform_Sub1_Sub4 class521_sub1_sub4_6 = class293_5.aTransform_Sub1_Sub4_3500;
+				class293_5.aTransform_Sub1_Sub4_3500 = null;
 				return class521_sub1_sub4_6;
 			}
 		}
@@ -930,54 +930,54 @@ public class SceneObjectManager {
 		this.anInt2623 = 0;
 		this.anInt2624 = 0;
 		++this.anInt2609;
-		Class521_Sub1 class521_sub1_7;
+		Transform_Sub1 class521_sub1_7;
 		if ((0 & 0x2) == 0) {
-			for (class521_sub1_7 = this.aClass521_Sub1Array2605[i_6]; class521_sub1_7 != null; class521_sub1_7 = class521_sub1_7.aClass521_Sub1_7966) {
+			for (class521_sub1_7 = this.aTransform_Sub1Array2605[i_6]; class521_sub1_7 != null; class521_sub1_7 = class521_sub1_7.aTransform_Sub1_7966) {
 				this.method3421(class521_sub1_7, (byte) -60);
 				if (class521_sub1_7.anInt7969 != -1 && !this.method3424(class521_sub1_7, bool_1, bytes_2, i_3, b_4)) {
-					this.aClass521_Sub1Array2626[++this.anInt2623 - 1] = class521_sub1_7;
+					this.aTransform_Sub1Array2626[++this.anInt2623 - 1] = class521_sub1_7;
 				}
 			}
 		}
 		int i_16;
 		if ((0 & 0x1) == 0) {
-			for (class521_sub1_7 = this.aClass521_Sub1Array2633[i_6]; class521_sub1_7 != null; class521_sub1_7 = class521_sub1_7.aClass521_Sub1_7966) {
+			for (class521_sub1_7 = this.aTransform_Sub1Array2633[i_6]; class521_sub1_7 != null; class521_sub1_7 = class521_sub1_7.aTransform_Sub1_7966) {
 				this.method3421(class521_sub1_7, (byte) -30);
 				if (class521_sub1_7.anInt7969 != -1 && !this.method3424(class521_sub1_7, bool_1, bytes_2, i_3, b_4)) {
-					this.aClass521_Sub1Array2625[++this.anInt2624 - 1] = class521_sub1_7;
+					this.aTransform_Sub1Array2625[++this.anInt2624 - 1] = class521_sub1_7;
 				}
 			}
-			for (class521_sub1_7 = this.aClass521_Sub1Array2649[i_6]; class521_sub1_7 != null; class521_sub1_7 = class521_sub1_7.aClass521_Sub1_7966) {
+			for (class521_sub1_7 = this.aTransform_Sub1Array2649[i_6]; class521_sub1_7 != null; class521_sub1_7 = class521_sub1_7.aTransform_Sub1_7966) {
 				this.method3421(class521_sub1_7, (byte) 18);
 				if (class521_sub1_7.anInt7969 != -1 && !this.method3424(class521_sub1_7, bool_1, bytes_2, i_3, b_4)) {
 					if (class521_sub1_7.method12987(1931050089)) {
-						this.aClass521_Sub1Array2625[++this.anInt2624 - 1] = class521_sub1_7;
+						this.aTransform_Sub1Array2625[++this.anInt2624 - 1] = class521_sub1_7;
 					} else {
-						this.aClass521_Sub1Array2626[++this.anInt2623 - 1] = class521_sub1_7;
+						this.aTransform_Sub1Array2626[++this.anInt2623 - 1] = class521_sub1_7;
 					}
 				}
 			}
 			if (!bool_1) {
 				for (i_16 = 0; i_16 < this.anInt2616; i_16++) {
-					this.method3421(this.aClass521_Sub1_Sub1Array2627[i_16], (byte) 8);
-					if (this.aClass521_Sub1_Sub1Array2627[i_16].anInt7969 != -1 && !this.method3424(this.aClass521_Sub1_Sub1Array2627[i_16], bool_1, bytes_2, i_3, b_4)) {
-						if (this.aClass521_Sub1_Sub1Array2627[i_16].method12987(1185762690)) {
-							this.aClass521_Sub1Array2625[++this.anInt2624 - 1] = this.aClass521_Sub1_Sub1Array2627[i_16];
+					this.method3421(this.aTransform_Sub1_Sub1Array2627[i_16], (byte) 8);
+					if (this.aTransform_Sub1_Sub1Array2627[i_16].anInt7969 != -1 && !this.method3424(this.aTransform_Sub1_Sub1Array2627[i_16], bool_1, bytes_2, i_3, b_4)) {
+						if (this.aTransform_Sub1_Sub1Array2627[i_16].method12987(1185762690)) {
+							this.aTransform_Sub1Array2625[++this.anInt2624 - 1] = this.aTransform_Sub1_Sub1Array2627[i_16];
 						} else {
-							this.aClass521_Sub1Array2626[++this.anInt2623 - 1] = this.aClass521_Sub1_Sub1Array2627[i_16];
+							this.aTransform_Sub1Array2626[++this.anInt2623 - 1] = this.aTransform_Sub1_Sub1Array2627[i_16];
 						}
 					}
 				}
 			}
 		}
 		if (this.anInt2623 > 0) {
-			this.method3466(this.aClass521_Sub1Array2626, 0, this.anInt2623 - 1);
+			this.method3466(this.aTransform_Sub1Array2626, 0, this.anInt2623 - 1);
 			for (i_16 = 0; i_16 < this.anInt2623; i_16++) {
-				this.method3508(this.aClass521_Sub1Array2626[i_16], this.aClass282_Sub24Array2642);
+				this.method3508(this.aTransform_Sub1Array2626[i_16], this.aNode_Sub24Array2642);
 			}
 		}
 		if (this.aBool2598) {
-			this.aClass505_2596.method8547(0, (Class282_Sub24[]) null);
+			this.aGraphicalRenderer_2596.method8547(0, (Node_Sub24[]) null);
 		}
 		if ((0 & 0x2) == 0) {
 			for (i_16 = 0; i_16 < this.anInt2601; i_16++) {
@@ -1018,7 +1018,7 @@ public class SceneObjectManager {
 							}
 						}
 					}
-					this.aClass390Array2591[i_16].method6717(this.anInt2628, this.anInt2629, this.anInt2652, this.aBoolArrayArray2635, false);
+					this.aGroundArray2591[i_16].method6717(this.anInt2628, this.anInt2629, this.anInt2652, this.aBoolArrayArray2635, false);
 				} else {
 					i_8 = this.aBoolArrayArray2651.length;
 					if (this.aBoolArrayArray2651.length + this.anInt2637 > this.sizeX) {
@@ -1041,14 +1041,14 @@ public class SceneObjectManager {
 							}
 						}
 					}
-					this.aClass390Array2591[i_16].method6717(this.anInt2628, this.anInt2629, this.anInt2652, this.aBoolArrayArray2635, true);
+					this.aGroundArray2591[i_16].method6717(this.anInt2628, this.anInt2629, this.anInt2652, this.aBoolArrayArray2635, true);
 				}
 			}
 		}
 		if (this.anInt2624 > 0) {
-			this.method3502(this.aClass521_Sub1Array2625, 0, this.anInt2624 - 1);
+			this.method3502(this.aTransform_Sub1Array2625, 0, this.anInt2624 - 1);
 			for (i_16 = 0; i_16 < this.anInt2624; i_16++) {
-				this.method3508(this.aClass521_Sub1Array2625[i_16], this.aClass282_Sub24Array2642);
+				this.method3508(this.aTransform_Sub1Array2625[i_16], this.aNode_Sub24Array2642);
 			}
 		}
 	}
@@ -1102,9 +1102,9 @@ public class SceneObjectManager {
 					if (i_25 >= 0 && i_26 >= 0 && i_25 < this.sizeX && i_26 < this.sizeY) {
 						i_27 = i_25 << this.anInt2592;
 						int i_28 = i_26 << this.anInt2592;
-						int i_29 = this.aClass390Array2607[this.aClass390Array2607.length - 1].method6722(i_25, i_26) - (1000 << this.anInt2592 - 7);
-						int i_30 = (this.aClass390Array2614 != null ? this.aClass390Array2614[0].method6722(i_25, i_26) + this.anInt2593 : this.aClass390Array2607[0].method6722(i_25, i_26) + this.anInt2593) + (1000 << this.anInt2592 - 7);
-						i_23 = this.aClass505_2596.method8437(i_27, i_29, i_28, i_27, i_30, i_28);
+						int i_29 = this.aGroundArray2607[this.aGroundArray2607.length - 1].method6722(i_25, i_26) - (1000 << this.anInt2592 - 7);
+						int i_30 = (this.aGroundArray2614 != null ? this.aGroundArray2614[0].method6722(i_25, i_26) + this.anInt2593 : this.aGroundArray2607[0].method6722(i_25, i_26) + this.anInt2593) + (1000 << this.anInt2592 - 7);
+						i_23 = this.aGraphicalRenderer_2596.method8437(i_27, i_29, i_28, i_27, i_30, i_28);
 						this.aBoolArrayArray2635[i_21][i_24] = i_23 == 0;
 					} else {
 						i_23 = -1;
@@ -1123,7 +1123,7 @@ public class SceneObjectManager {
 			this.aClass201_2600.anIntArray2562 = ints_8;
 			this.aClass201_2600.anIntArray2568 = ints_9;
 			this.aClass201_2600.anIntArray2560 = ints_10;
-			this.aClass201_2600.method3265(this.aClass505_2596, i_11);
+			this.aClass201_2600.method3265(this.aGraphicalRenderer_2596, i_11);
 		} else {
 			if (this.aBoolArrayArray2631 == null) {
 				this.aBoolArrayArray2631 = new boolean[this.anInt2652 + this.anInt2652 + 2][this.anInt2652 + this.anInt2652 + 2];
@@ -1141,7 +1141,7 @@ public class SceneObjectManager {
 			this.anInt2640 = this.sizeY;
 			this.aClass201_2600.aBool2542 = false;
 		}
-		ChatLine.method1848(this, this.aClass505_2596);
+		ChatLine.method1848(this, this.aGraphicalRenderer_2596);
 		if (!this.aClass284_2648.aBool3386) {
 			Iterator iterator_31 = this.aClass284_2648.aList3388.iterator();
 			while (iterator_31.hasNext()) {
@@ -1157,9 +1157,9 @@ public class SceneObjectManager {
 		}
 		if (this.waterRelatedClassArray1 != null) {
 			this.method3380(true);
-			this.aClass505_2596.method8475(new HDWaterTile());
+			this.aGraphicalRenderer_2596.method8475(new HDWaterTile());
 			this.method3441(true, bytes_5, i_11, b_12);
-			this.aClass505_2596.O();
+			this.aGraphicalRenderer_2596.O();
 			this.method3380(false);
 		}
 		this.method3441(false, bytes_5, i_11, b_12);
@@ -1169,7 +1169,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	void method3452(Class521_Sub1 class521_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	void method3452(Transform_Sub1 class521_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		boolean bool_7 = true;
 		int i_8 = i_3;
 		int i_9 = i_3 + i_5;
@@ -1183,21 +1183,21 @@ public class SceneObjectManager {
 							if (i_14 >= 0 && i_14 < this.sizeY && (!bool_7 || i_13 >= i_9 || i_14 >= i_11 || i_14 < i_4 && i_3 != i_13)) {
 								Class293 class293_15 = this.aClass293ArrayArrayArray2604[i_12][i_13][i_14];
 								if (class293_15 != null) {
-									int i_16 = (this.aClass390Array2591[i_12].method6722(i_13, i_14) + this.aClass390Array2591[i_12].method6722(1 + i_13, i_14) + this.aClass390Array2591[i_12].method6722(i_13, 1 + i_14) + this.aClass390Array2591[i_12].method6722(1 + i_13, 1 + i_14)) / 4 - (this.aClass390Array2591[i_2].method6722(i_3, i_4) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4) + this.aClass390Array2591[i_2].method6722(i_3, i_4 + 1) + this.aClass390Array2591[i_2].method6722(i_3 + 1, i_4 + 1)) / 4;
-									Class521_Sub1_Sub5 class521_sub1_sub5_17 = class293_15.aClass521_Sub1_Sub5_3505;
-									Class521_Sub1_Sub5 class521_sub1_sub5_18 = class293_15.aClass521_Sub1_Sub5_3502;
+									int i_16 = (this.aGroundArray2591[i_12].method6722(i_13, i_14) + this.aGroundArray2591[i_12].method6722(1 + i_13, i_14) + this.aGroundArray2591[i_12].method6722(i_13, 1 + i_14) + this.aGroundArray2591[i_12].method6722(1 + i_13, 1 + i_14)) / 4 - (this.aGroundArray2591[i_2].method6722(i_3, i_4) + this.aGroundArray2591[i_2].method6722(i_3 + 1, i_4) + this.aGroundArray2591[i_2].method6722(i_3, i_4 + 1) + this.aGroundArray2591[i_2].method6722(i_3 + 1, i_4 + 1)) / 4;
+									Transform_Sub1_Sub5 class521_sub1_sub5_17 = class293_15.aTransform_Sub1_Sub5_3505;
+									Transform_Sub1_Sub5 class521_sub1_sub5_18 = class293_15.aTransform_Sub1_Sub5_3502;
 									if (class521_sub1_sub5_17 != null && class521_sub1_sub5_17.method12985(-2063907301)) {
-										class521_sub1_1.method13013(this.aClass505_2596, class521_sub1_sub5_17, (i_13 - i_3) * this.anInt2593 + (1 - i_5) * this.anInt2594, i_16, (1 - i_6) * this.anInt2594 + (i_14 - i_4) * this.anInt2593, bool_7, -2001031070);
+										class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class521_sub1_sub5_17, (i_13 - i_3) * this.anInt2593 + (1 - i_5) * this.anInt2594, i_16, (1 - i_6) * this.anInt2594 + (i_14 - i_4) * this.anInt2593, bool_7, -2001031070);
 									}
 									if (class521_sub1_sub5_18 != null && class521_sub1_sub5_18.method12985(-1646817954)) {
-										class521_sub1_1.method13013(this.aClass505_2596, class521_sub1_sub5_18, (i_13 - i_3) * this.anInt2593 + (1 - i_5) * this.anInt2594, i_16, (1 - i_6) * this.anInt2594 + (i_14 - i_4) * this.anInt2593, bool_7, -1714087738);
+										class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class521_sub1_sub5_18, (i_13 - i_3) * this.anInt2593 + (1 - i_5) * this.anInt2594, i_16, (1 - i_6) * this.anInt2594 + (i_14 - i_4) * this.anInt2593, bool_7, -1714087738);
 									}
 									for (Class208 class208_19 = class293_15.aClass208_3504; class208_19 != null; class208_19 = class208_19.aClass208_2660) {
-										Class521_Sub1_Sub1 class521_sub1_sub1_20 = class208_19.aClass521_Sub1_Sub1_2659;
+										Transform_Sub1_Sub1 class521_sub1_sub1_20 = class208_19.aTransform_Sub1_Sub1_2659;
 										if (class521_sub1_sub1_20 != null && class521_sub1_sub1_20.method12985(-1911399746) && (i_13 == class521_sub1_sub1_20.aShort9458 || i_8 == i_13) && (i_14 == class521_sub1_sub1_20.aShort9456 || i_10 == i_14)) {
 											int i_21 = class521_sub1_sub1_20.localX - class521_sub1_sub1_20.aShort9458 + 1;
 											int i_22 = class521_sub1_sub1_20.localY - class521_sub1_sub1_20.aShort9456 + 1;
-											class521_sub1_1.method13013(this.aClass505_2596, class521_sub1_sub1_20, this.anInt2593 * (class521_sub1_sub1_20.aShort9458 - i_3) + this.anInt2594 * (i_21 - i_5), i_16, this.anInt2593 * (class521_sub1_sub1_20.aShort9456 - i_4) + (i_22 - i_6) * this.anInt2594, bool_7, -1732186752);
+											class521_sub1_1.method13013(this.aGraphicalRenderer_2596, class521_sub1_sub1_20, this.anInt2593 * (class521_sub1_sub1_20.aShort9458 - i_3) + this.anInt2594 * (i_21 - i_5), i_16, this.anInt2593 * (class521_sub1_sub1_20.aShort9456 - i_4) + (i_22 - i_6) * this.anInt2594, bool_7, -1732186752);
 										}
 									}
 								}
@@ -1222,13 +1222,13 @@ public class SceneObjectManager {
 		return this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 	}
 
-	public Class521_Sub1_Sub5 method3460(int i_1, int i_2, int i_3) {
+	public Transform_Sub1_Sub5 method3460(int i_1, int i_2, int i_3) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_5 != null) {
-			this.method3408(class293_5.aClass521_Sub1_Sub5_3502, 936233239);
-			if (class293_5.aClass521_Sub1_Sub5_3502 != null) {
-				Class521_Sub1_Sub5 class521_sub1_sub5_6 = class293_5.aClass521_Sub1_Sub5_3502;
-				class293_5.aClass521_Sub1_Sub5_3502 = null;
+			this.method3408(class293_5.aTransform_Sub1_Sub5_3502, 936233239);
+			if (class293_5.aTransform_Sub1_Sub5_3502 != null) {
+				Transform_Sub1_Sub5 class521_sub1_sub5_6 = class293_5.aTransform_Sub1_Sub5_3502;
+				class293_5.aTransform_Sub1_Sub5_3502 = null;
 				return class521_sub1_sub5_6;
 			}
 		}
@@ -1239,17 +1239,17 @@ public class SceneObjectManager {
 		return this.waterRelatedArray5 != null ? this.waterRelatedArray5[i_1][i_2] & 0xff : 0;
 	}
 
-	void method3466(Class521_Sub1[] arr_1, int i_2, int i_3) {
+	void method3466(Transform_Sub1[] arr_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_4 = (i_3 + i_2) / 2;
 			int i_5 = i_2;
-			Class521_Sub1 class521_sub1_6 = arr_1[i_4];
+			Transform_Sub1 class521_sub1_6 = arr_1[i_4];
 			arr_1[i_4] = arr_1[i_3];
 			arr_1[i_3] = class521_sub1_6;
 			int i_7 = class521_sub1_6.anInt7969;
 			for (int i_8 = i_2; i_8 < i_3; i_8++) {
 				if (arr_1[i_8].anInt7969 < (i_8 & 0x1) + i_7) {
-					Class521_Sub1 class521_sub1_9 = arr_1[i_8];
+					Transform_Sub1 class521_sub1_9 = arr_1[i_8];
 					arr_1[i_8] = arr_1[i_5];
 					arr_1[i_5++] = class521_sub1_9;
 				}
@@ -1264,7 +1264,7 @@ public class SceneObjectManager {
 	void method3486(int i_2) {
 		Shadow class282_sub50_sub17_4 = null;
 		for (int i_5 = 1; i_5 < i_2; i_5++) {
-			Ground class390_6 = this.aClass390Array2607[i_5];
+			Ground class390_6 = this.aGroundArray2607[i_5];
 			if (class390_6 != null) {
 				for (int i_7 = 0; i_7 < this.sizeY; i_7++) {
 					for (int i_8 = 0; i_8 < this.sizeX; i_8++) {
@@ -1273,7 +1273,7 @@ public class SceneObjectManager {
 							int i_9 = i_8 << this.anInt2592;
 							int i_10 = i_7 << this.anInt2592;
 							for (int i_11 = i_5 - 1; i_11 >= 0; --i_11) {
-								Ground class390_12 = this.aClass390Array2607[i_11];
+								Ground class390_12 = this.aGroundArray2607[i_11];
 								if (class390_12 != null) {
 									int i_13 = class390_6.method6722(i_8, i_7) - class390_12.method6722(i_8, i_7);
 									int i_14 = class390_6.method6722(i_8 + 1, i_7) - class390_12.method6722(i_8 + 1, i_7);
@@ -1289,17 +1289,17 @@ public class SceneObjectManager {
 		}
 	}
 
-	void method3502(Class521_Sub1[] arr_1, int i_2, int i_3) {
+	void method3502(Transform_Sub1[] arr_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_4 = (i_3 + i_2) / 2;
 			int i_5 = i_2;
-			Class521_Sub1 class521_sub1_6 = arr_1[i_4];
+			Transform_Sub1 class521_sub1_6 = arr_1[i_4];
 			arr_1[i_4] = arr_1[i_3];
 			arr_1[i_3] = class521_sub1_6;
 			int i_7 = class521_sub1_6.anInt7969;
 			for (int i_8 = i_2; i_8 < i_3; i_8++) {
 				if (arr_1[i_8].anInt7969 > (i_8 & 0x1) + i_7) {
-					Class521_Sub1 class521_sub1_9 = arr_1[i_8];
+					Transform_Sub1 class521_sub1_9 = arr_1[i_8];
 					arr_1[i_8] = arr_1[i_5];
 					arr_1[i_5++] = class521_sub1_9;
 				}
@@ -1316,20 +1316,20 @@ public class SceneObjectManager {
 		return class293_5 == null ? null : class293_5.aClass208_3504;
 	}
 
-	void method3508(Class521_Sub1 class521_sub1_1, Class282_Sub24[] arr_2) {
+	void method3508(Transform_Sub1 class521_sub1_1, Node_Sub24[] arr_2) {
 		if (this.aBool2598) {
 			int i_3 = class521_sub1_1.method13036(arr_2);
-			this.aClass505_2596.method8547(i_3, arr_2);
+			this.aGraphicalRenderer_2596.method8547(i_3, arr_2);
 		}
-		if (this.aClass390Array2614 == this.aClass390Array2591) {
+		if (this.aGroundArray2614 == this.aGroundArray2591) {
 			boolean bool_10 = false;
 			boolean bool_4 = false;
 			Vector3 vector3_5 = class521_sub1_1.method11166().aClass385_3595;
 			int i_6;
 			int i_7;
-			if (class521_sub1_1 instanceof Class521_Sub1_Sub1) {
-				i_6 = ((Class521_Sub1_Sub1) class521_sub1_1).aShort9458;
-				i_7 = ((Class521_Sub1_Sub1) class521_sub1_1).aShort9456;
+			if (class521_sub1_1 instanceof Transform_Sub1_Sub1) {
+				i_6 = ((Transform_Sub1_Sub1) class521_sub1_1).aShort9458;
+				i_7 = ((Transform_Sub1_Sub1) class521_sub1_1).aShort9456;
 			} else {
 				i_6 = (int) vector3_5.x >> this.anInt2592;
 				i_7 = (int) vector3_5.z >> this.anInt2592;
@@ -1341,12 +1341,12 @@ public class SceneObjectManager {
 			class90_8.hdWaterInt1 = this.method3432(i_6, i_7);
 			class90_8.hdWaterInt2 = this.method3464(i_6, i_7);
 			class90_8.hdWaterInt3 = this.method3391(i_6, i_7);
-			this.aClass505_2596.method8476(this.aClass390Array2607[0].averageHeight((int) vector3_5.x, (int) vector3_5.z, -402315089), class90_8);
+			this.aGraphicalRenderer_2596.method8476(this.aGroundArray2607[0].averageHeight((int) vector3_5.x, (int) vector3_5.z, -402315089), class90_8);
 		}
-		Class285 class285_9 = class521_sub1_1.method12990(this.aClass505_2596);
+		Class285 class285_9 = class521_sub1_1.method12990(this.aGraphicalRenderer_2596);
 		if (class285_9 != null) {
 			if (class285_9.aBool3392) {
-				class285_9.aClass521_Sub1_3391 = class521_sub1_1;
+				class285_9.aTransform_Sub1_3391 = class521_sub1_1;
 				this.aClass284_2648.method5013(class285_9);
 			} else {
 				Class279.method4969(class285_9);
@@ -1354,9 +1354,9 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub4 getWallDecoration(int i_1, int i_2, int i_3, byte b_4) {
+	public Transform_Sub1_Sub4 getWallDecoration(int i_1, int i_2, int i_3, byte b_4) {
 		Class293 class293_5 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
-		return class293_5 == null ? null : class293_5.aClass521_Sub1_Sub4_3503;
+		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub4_3503;
 	}
 
 	public SceneObjectManager(GraphicalRenderer renderer, int sizeX, int sizeY, int i_6, boolean highDetailWater, boolean bool_8) {
@@ -1364,10 +1364,10 @@ public class SceneObjectManager {
 		this.anInt2618 = 5015;
 		this.anInt2619 = 5040;
 		this.aFloatArray2639 = new float[3];
-		this.aClass282_Sub24Array2642 = new Class282_Sub24[8];
+		this.aNode_Sub24Array2642 = new Node_Sub24[8];
 		this.anInt2643 = 1;
-		this.aClass505_2596 = renderer;
-		this.aBool2598 = this.aClass505_2596.method8463() > 0;
+		this.aGraphicalRenderer_2596 = renderer;
+		this.aBool2598 = this.aGraphicalRenderer_2596.method8463() > 0;
 		this.anInt2592 = 9;
 		this.anInt2593 = 1 << this.anInt2592;
 		this.anInt2594 = this.anInt2593 >> 1;
@@ -1378,7 +1378,7 @@ public class SceneObjectManager {
 		this.aClass454_2597 = new Class454();
 		this.aClass201_2600 = new Class201(this);
 		this.aClass293ArrayArrayArray2610 = new Class293[4][this.sizeX][this.sizeY];
-		this.aClass390Array2607 = new Ground[4];
+		this.aGroundArray2607 = new Ground[4];
 		if (highDetailWater) {
 			this.colors = new int[this.sizeX][this.sizeY];
 			this.intensities = new byte[this.sizeX][this.sizeY];
@@ -1387,7 +1387,7 @@ public class SceneObjectManager {
 			this.waterRelatedArray5 = new byte[this.sizeX][this.sizeY];
 			this.waterRelatedArray6 = new byte[this.sizeX][this.sizeY];
 			this.waterRelatedClassArray1 = new Class293[1][this.sizeX][this.sizeY];
-			this.aClass390Array2614 = new Ground[1];
+			this.aGroundArray2614 = new Ground[1];
 		}
 		if (bool_8) {
 			this.aLongArrayArrayArray2645 = new long[4][sizeX][sizeY];
@@ -1396,14 +1396,14 @@ public class SceneObjectManager {
 			this.anInt2615 = 0;
 		}
 		this.method3380(false);
-		this.aClass521_Sub1Array2605 = new Class521_Sub1[2];
-		this.aClass521_Sub1Array2633 = new Class521_Sub1[2];
-		this.aClass521_Sub1Array2649 = new Class521_Sub1[2];
-		this.aClass521_Sub1Array2626 = new Class521_Sub1[10072];
+		this.aTransform_Sub1Array2605 = new Transform_Sub1[2];
+		this.aTransform_Sub1Array2633 = new Transform_Sub1[2];
+		this.aTransform_Sub1Array2649 = new Transform_Sub1[2];
+		this.aTransform_Sub1Array2626 = new Transform_Sub1[10072];
 		this.anInt2623 = 0;
-		this.aClass521_Sub1Array2625 = new Class521_Sub1[5015];
+		this.aTransform_Sub1Array2625 = new Transform_Sub1[5015];
 		this.anInt2624 = 0;
-		this.aClass521_Sub1_Sub1Array2627 = new Class521_Sub1_Sub1[5040];
+		this.aTransform_Sub1_Sub1Array2627 = new Transform_Sub1_Sub1[5040];
 		this.anInt2616 = 0;
 		this.aBoolArrayArray2651 = new boolean[this.anInt2652 + this.anInt2652 + 1][this.anInt2652 + this.anInt2652 + 1];
 		this.aBoolArrayArray2635 = new boolean[this.anInt2652 + this.anInt2652 + 2][this.anInt2652 + this.anInt2652 + 2];
@@ -1411,13 +1411,13 @@ public class SceneObjectManager {
 		this.aClass284_2648 = new Login();
 	}
 
-	public Class521_Sub1_Sub1 method3530(int i_1, int i_2, int i_3, Interface25 interface25_4, int i_5) {
+	public Transform_Sub1_Sub1 method3530(int i_1, int i_2, int i_3, Interface25 interface25_4, int i_5) {
 		Class293 class293_6 = this.aClass293ArrayArrayArray2604[i_1][i_2][i_3];
 		if (class293_6 == null) {
 			return null;
 		} else {
 			for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
-				Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
+				Transform_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
 				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456) {
 					this.method3407(class521_sub1_sub1_8, false);
 					return class521_sub1_sub1_8;

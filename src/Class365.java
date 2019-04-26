@@ -73,14 +73,14 @@ public class Class365 implements Interface3 {
 				Class60.method1172(280036334);
 			}
 
-			boolean bool_2 = state == 1 || Class97.loggedOutState(state) || Class282_Sub17.lobbyState(state, -2143190341);
-			boolean bool_3 = client.gameState == 1 || Class97.loggedOutState(client.gameState) || Class282_Sub17.lobbyState(client.gameState, -2129908537);
+			boolean bool_2 = state == 1 || Class97.loggedOutState(state) || Node_Sub17.lobbyState(state, -2143190341);
+			boolean bool_3 = client.gameState == 1 || Class97.loggedOutState(client.gameState) || Node_Sub17.lobbyState(client.gameState, -2129908537);
 			if (bool_2 != bool_3) {
 				if (bool_2) {
 					Class260.anInt3223 = Class260.anInt3228;
-					if (Class393.preferences.aClass468_Sub13_8229.method12714() != 0) {
-						Class339.method6047(IndexLoaders.MUSIC_INDEX, Class260.anInt3228, Class393.preferences.aClass468_Sub13_8229.method12714());
-						Class468_Sub6.method12658(935417586);
+					if (Class393.preferences.aPreference_Sub13_8229.method12714() != 0) {
+						Class339.method6047(IndexLoaders.MUSIC_INDEX, Class260.anInt3228, Class393.preferences.aPreference_Sub13_8229.method12714());
+						Preference_Sub6.method12658(935417586);
 					} else {
 						Class358.method6240(1276678940);
 					}

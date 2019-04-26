@@ -183,7 +183,7 @@ public class NativeLibraryLoader implements Interface36 {
                 } else {
                     byte[] bytes_5 = this.nativeLibraryIndex.getFileByName(string_4, "");
                     Object obj_6 = null;
-                    File file_7 = Class96_Sub23.method14681(string_3, 827415998);
+                    File file_7 = CutsceneAction_Sub23.method14681(string_3, 827415998);
                     if (bytes_5 != null && file_7 != null) {
                         boolean bool_11 = true;
                         byte[] bytes_9 = VarNPCMap.method2621(file_7, -1379715433);
@@ -295,13 +295,13 @@ public class NativeLibraryLoader implements Interface36 {
     }
 
     static void method4653(int i_0, int i_1, int i_2) {
-        if (QuickchatFiller.ENTITY_DEFAULTS.aBool7044 || Class20.anInt169 != 1 && (!Class96_Sub6.aBool9173 || Class20.anInt169 != 2 || !AccountCreationStage.aClass282_Sub50_Sub7_12.aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1649910920)))) {
+        if (QuickchatFiller.ENTITY_DEFAULTS.aBool7044 || Class20.anInt169 != 1 && (!CutsceneAction_Sub6.aBool9173 || Class20.anInt169 != 2 || !AccountCreationStage.aCacheableNode_Sub7_12.aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1649910920)))) {
             FontMetrics fontmetrics_3 = Class114.method1887(2016134923);
             int i_4 = fontmetrics_3.getWidthNoSprites(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -2018972202));
             int i_5;
             int i_7;
             if (!Class20.aBool162) {
-                for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361)) {
+                for (CacheableNode_Sub7 class282_sub50_sub7_9 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (CacheableNode_Sub7) Class20.aClass482_171.next(1149283361)) {
                     i_7 = Shadow.method15507(class282_sub50_sub7_9, fontmetrics_3);
                     if (i_7 > i_4) {
                         i_4 = i_7;
@@ -311,9 +311,9 @@ public class NativeLibraryLoader implements Interface36 {
                 i_5 = Class20.anInt169 * Class20.anInt178 + 21;
                 Class110.anInt1104 = (Class20.aBool187 ? 26 : 22) + Class20.anInt169 * Class20.anInt178;
             } else {
-                for (Class282_Sub50_Sub15 class282_sub50_sub15_6 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_6 != null; class282_sub50_sub15_6 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1603156921)) {
+                for (CacheableNode_Sub15 class282_sub50_sub15_6 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_6 != null; class282_sub50_sub15_6 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(-1603156921)) {
                     if (class282_sub50_sub15_6.anInt9769 == 1) {
-                        i_7 = Shadow.method15507((Class282_Sub50_Sub7) class282_sub50_sub15_6.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, fontmetrics_3);
+                        i_7 = Shadow.method15507((CacheableNode_Sub7) class282_sub50_sub15_6.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, fontmetrics_3);
                     } else {
                         i_7 = Class163.method2840(class282_sub50_sub15_6, fontmetrics_3);
                     }

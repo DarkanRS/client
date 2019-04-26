@@ -10,7 +10,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	int anInt10129 = 0;
 	int anInt10128 = 0;
 	Class125 aClass125_10127;
-	HardwareRenderer aClass505_Sub3_10130;
+	HardwareRenderer aGraphicalRenderer_Sub3_10130;
 
 	public int method2719() {
 		return 1324847185 * this.anInt10129 * -1045710671;
@@ -41,7 +41,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 					this.anInt10128 = 0;
 				}
 
-				if (this == this.aClass505_Sub3_10130.method8523((byte) 123)) {
+				if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 123)) {
 					this.method213();
 				}
 
@@ -63,7 +63,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				this.anInt10128 = 0;
 			}
 
-			if (this == this.aClass505_Sub3_10130.method8523((byte) 122)) {
+			if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 122)) {
 				this.method213();
 			}
 
@@ -91,7 +91,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	boolean method213() {
-		this.aClass505_Sub3_10130.method14376(this.anInt10129, this.anInt10128, this.aClass192_10126 == null ? null : this.aClass192_10126.anIntArray2390, this.aClass125_10127 == null ? null : this.aClass125_10127.aFloatArray1570);
+		this.aGraphicalRenderer_Sub3_10130.method14376(this.anInt10129, this.anInt10128, this.aClass192_10126 == null ? null : this.aClass192_10126.anIntArray2390, this.aClass125_10127 == null ? null : this.aClass125_10127.aFloatArray1570);
 		return true;
 	}
 
@@ -115,7 +115,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 					this.anInt10128 = 0 * 1050215059;
 				}
 
-				if (this == this.aClass505_Sub3_10130.method8523((byte) 113)) {
+				if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 113)) {
 					this.method213();
 				}
 
@@ -127,7 +127,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	Class158_Sub1_Sub2(HardwareRenderer hardwarerenderer_1) {
-		this.aClass505_Sub3_10130 = hardwarerenderer_1;
+		this.aGraphicalRenderer_Sub3_10130 = hardwarerenderer_1;
 	}
 
 	public void method13763(Interface8 interface8_1) {
@@ -144,7 +144,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				this.anInt10128 = 0 * 1050215059;
 			}
 
-			if (this == this.aClass505_Sub3_10130.method8523((byte) 115)) {
+			if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 115)) {
 				this.method213();
 			}
 
@@ -165,7 +165,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				this.anInt10128 = 0 * 1050215059;
 			}
 
-			if (this == this.aClass505_Sub3_10130.method8523((byte) 112)) {
+			if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 112)) {
 				this.method213();
 			}
 
@@ -181,12 +181,12 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	boolean method211() {
-		this.aClass505_Sub3_10130.method14376(1324847185 * this.anInt10129 * -1045710671, 1050215059 * this.anInt10128 * -1432851557, this.aClass192_10126 == null ? null : this.aClass192_10126.anIntArray2390, this.aClass125_10127 == null ? null : this.aClass125_10127.aFloatArray1570);
+		this.aGraphicalRenderer_Sub3_10130.method14376(1324847185 * this.anInt10129 * -1045710671, 1050215059 * this.anInt10128 * -1432851557, this.aClass192_10126 == null ? null : this.aClass192_10126.anIntArray2390, this.aClass125_10127 == null ? null : this.aClass125_10127.aFloatArray1570);
 		return true;
 	}
 
 	boolean method54() {
-		this.aClass505_Sub3_10130.method14376(1324847185 * this.anInt10129 * -1045710671, 1050215059 * this.anInt10128 * -1432851557, this.aClass192_10126 == null ? null : this.aClass192_10126.anIntArray2390, this.aClass125_10127 == null ? null : this.aClass125_10127.aFloatArray1570);
+		this.aGraphicalRenderer_Sub3_10130.method14376(1324847185 * this.anInt10129 * -1045710671, 1050215059 * this.anInt10128 * -1432851557, this.aClass192_10126 == null ? null : this.aClass192_10126.anIntArray2390, this.aClass125_10127 == null ? null : this.aClass125_10127.aFloatArray1570);
 		return true;
 	}
 
@@ -215,7 +215,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 					this.anInt10128 = 0 * 1050215059;
 				}
 
-				if (this == this.aClass505_Sub3_10130.method8523((byte) 111)) {
+				if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 111)) {
 					this.method213();
 				}
 
@@ -244,7 +244,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 					this.anInt10128 = 0 * 1050215059;
 				}
 
-				if (this == this.aClass505_Sub3_10130.method8523((byte) 118)) {
+				if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 118)) {
 					this.method213();
 				}
 
@@ -278,7 +278,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				this.anInt10128 = 0 * 1050215059;
 			}
 
-			if (this == this.aClass505_Sub3_10130.method8523((byte) 124)) {
+			if (this == this.aGraphicalRenderer_Sub3_10130.method8523((byte) 124)) {
 				this.method213();
 			}
 
@@ -362,7 +362,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	public static void method15536() {
-		for (Class282_Sub37 class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7751((byte) 17)) {
+		for (Node_Sub37 class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7751((byte) 17)) {
 			if (class282_sub37_1.aClass278_Sub1_8001.method4921()) {
 				Class92.method1563(class282_sub37_1.anInt7999);
 			} else {
@@ -376,12 +376,12 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				}
 
 				if (!class282_sub37_1.aBool8000 && !class282_sub37_1.aBool7995) {
-					Class282_Sub41_Sub4 class282_sub41_sub4_2 = class282_sub37_1.aClass278_Sub1_8001.method4914();
+					Node_Sub41_Sub4 class282_sub41_sub4_2 = class282_sub37_1.aClass278_Sub1_8001.method4914();
 					if (class282_sub41_sub4_2 != null) {
-						Class282_Sub15_Sub1 class282_sub15_sub1_3 = class282_sub41_sub4_2.method14845(2048602056);
+						Node_Sub15_Sub1 class282_sub15_sub1_3 = class282_sub41_sub4_2.method14845(2048602056);
 						if (class282_sub15_sub1_3 != null) {
 							class282_sub15_sub1_3.method14820(class282_sub37_1.anInt7997);
-							Class79.aClass282_Sub15_Sub4_783.method15275(class282_sub15_sub1_3);
+							Class79.aNode_Sub15_Sub4_783.method15275(class282_sub15_sub1_3);
 							class282_sub37_1.aBool8000 = true;
 						}
 					}

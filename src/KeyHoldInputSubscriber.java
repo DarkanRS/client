@@ -82,8 +82,8 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 			LoadingStage.method6683(Class11.anInt122, Class504.method8389((int) vector3_5.x, (int) vector3_5.z, Class4.anInt35, (byte) 51) - 200, Class266.anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0, 1500551332);
 			float f_6 = 1.0F - (float) ((100 - i_2) * (100 - i_2) * (100 - i_2)) / 1000000.0F;
 			IdentitiKitIndexLoader.anInt361 = (int) ((float) Class186.anInt2349 + f_6 * (float) (IdentitiKitIndexLoader.anInt361 - Class186.anInt2349));
-			Class109_Sub1.anInt9384 = (int) ((float) Class521_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.anInt9384 - Class521_Sub1_Sub2.anInt9461));
-			Class246.anInt3029 = (int) ((float) (Class246.anInt3029 - Class282_Sub15_Sub1.anInt9575) * f_6 + (float) Class282_Sub15_Sub1.anInt9575);
+			Class109_Sub1.anInt9384 = (int) ((float) Transform_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.anInt9384 - Transform_Sub1_Sub2.anInt9461));
+			Class246.anInt3029 = (int) ((float) (Class246.anInt3029 - Node_Sub15_Sub1.anInt9575) * f_6 + (float) Node_Sub15_Sub1.anInt9575);
 			Class293.anInt3512 = (int) ((float) ClipMap.anInt3968 + f_6 * (float) (Class293.anInt3512 - ClipMap.anInt3968));
 			int i_7 = AnimationDefinitions.anInt5930 - ParamIndexLoader.anInt5029;
 			if (i_7 > 8192) {

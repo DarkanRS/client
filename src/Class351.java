@@ -20,7 +20,7 @@ public class Class351 implements Interface3 {
         return Class60.aClass60_601;
     }
 
-    public static final void closeChildren(Class282_Sub44 parentInterface, boolean unload, boolean bool_2, int i_3) {
+    public static final void closeChildren(Node_Sub44 parentInterface, boolean unload, boolean bool_2, int i_3) {
         int i_4 = parentInterface.anInt8063;
         int interfaceHash = (int) parentInterface.data;
         parentInterface.remove();
@@ -37,9 +37,9 @@ public class Class351 implements Interface3 {
             Class383.method6514(client.anInt7349, 1, 772605854);
         }
         HashTableIterator itr = new HashTableIterator(client.aClass465_7442);
-        for (Class282_Sub44 class282_sub44_8 = (Class282_Sub44) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (Class282_Sub44) itr.next()) {
+        for (Node_Sub44 class282_sub44_8 = (Node_Sub44) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (Node_Sub44) itr.next()) {
             if (!class282_sub44_8.isLinked()) {
-                class282_sub44_8 = (Class282_Sub44) itr.first();
+                class282_sub44_8 = (Node_Sub44) itr.first();
                 if (class282_sub44_8 == null) {
                     break;
                 }

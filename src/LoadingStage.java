@@ -87,12 +87,12 @@ public class LoadingStage {
 			}
 			i_1 += (i_3 - i_7) / 2;
 			i_2 += (i_4 - i_8) / 2;
-			if (Defaults7Loader.aClass160_5883 == null || Defaults7Loader.aClass160_5883.method2747() != i_3 || Defaults7Loader.aClass160_5883.method2793() != i_4) {
+			if (Defaults7Loader.aNativeSprite_5883 == null || Defaults7Loader.aNativeSprite_5883.method2747() != i_3 || Defaults7Loader.aNativeSprite_5883.method2793() != i_4) {
 				Class291_Sub1.method5139(Class291_Sub1.anInt3472, Class291_Sub1.anInt3473 + Class291_Sub1.yLength, Class291_Sub1.xLength + Class291_Sub1.anInt3472, Class291_Sub1.anInt3473, i_1, i_2, i_7 + i_1, i_8 + i_2);
 				Class291_Sub1.renderMap(graphicalrenderer_0);
-				Defaults7Loader.aClass160_5883 = graphicalrenderer_0.method8668(i_1, i_2, i_7, i_8, false);
+				Defaults7Loader.aNativeSprite_5883 = graphicalrenderer_0.method8668(i_1, i_2, i_7, i_8, false);
 			}
-			Defaults7Loader.aClass160_5883.method2752(i_1, i_2);
+			Defaults7Loader.aNativeSprite_5883.method2752(i_1, i_2);
 			int i_9 = i_7 * Class488.anInt5760 / Class291_Sub1.xLength;
 			int i_10 = i_8 * Class351.anInt4097 / Class291_Sub1.yLength;
 			int i_11 = i_7 * MapRegionLoaderTask.anInt3991 / Class291_Sub1.xLength + i_1;
@@ -105,14 +105,14 @@ public class LoadingStage {
 			graphicalrenderer_0.method8430(i_11, i_12, i_9, i_10, i_13, 0);
 			if (Class361.anInt4185 > 0) {
 				int i_14;
-				if (Class96_Sub9.anInt9282 > 50) {
-					i_14 = 500 - Class96_Sub9.anInt9282 * 5;
+				if (CutsceneAction_Sub9.anInt9282 > 50) {
+					i_14 = 500 - CutsceneAction_Sub9.anInt9282 * 5;
 				} else {
-					i_14 = Class96_Sub9.anInt9282 * 5;
+					i_14 = CutsceneAction_Sub9.anInt9282 * 5;
 				}
-				for (Class282_Sub36 class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head(); class282_sub36_15 != null; class282_sub36_15 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
+				for (Node_Sub36 class282_sub36_15 = (Node_Sub36) Class291_Sub1.aClass482_3459.head(); class282_sub36_15 != null; class282_sub36_15 = (Node_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
 					MapAreaDefinitions worldmapareadefs_16 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_15.anInt7991, 1043671083);
-					if (Class282_Sub16.method12248(worldmapareadefs_16, -2066566460)) {
+					if (Node_Sub16.method12248(worldmapareadefs_16, -2066566460)) {
 						int i_17;
 						int i_18;
 						if (class282_sub36_15.anInt7991 == Class291_Sub1.anInt8018) {
@@ -201,9 +201,9 @@ public class LoadingStage {
 				Class86.aClass93Array821[i_9] = new Class93(buffer);
 			}
 			i_9 = buffer.readUnsignedSmart();
-			Class86.aClass96Array822 = new CutsceneAction[i_9];
+			Class86.aCutsceneActionArray822 = new CutsceneAction[i_9];
 			for (int i_10 = 0; i_10 < i_9; i_10++) {
-				Class86.aClass96Array822[i_10] = Class16.method562(buffer);
+				Class86.aCutsceneActionArray822[i_10] = Class16.method562(buffer);
 			}
 			ReflectionCheck.aClass85_8039 = Class85.aClass85_816;
 		}
@@ -216,7 +216,7 @@ public class LoadingStage {
 					bool_11 = false;
 				}
 			}
-			CutsceneAction[] arr_12 = Class86.aClass96Array822;
+			CutsceneAction[] arr_12 = Class86.aCutsceneActionArray822;
 			for (int i_5 = 0; i_5 < arr_12.length; i_5++) {
 				CutsceneAction class96_15 = arr_12[i_5];
 				if (!class96_15.method1599()) {

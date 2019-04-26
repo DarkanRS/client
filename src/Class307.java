@@ -4,7 +4,7 @@ import jagdx.IUnknown;
 public class Class307 implements Interface34 {
 
 	long aLong3610;
-	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_3608;
+	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_3608;
 	int anInt3606;
 	int anInt3609;
 	Class76 aClass76_3607;
@@ -27,20 +27,20 @@ public class Class307 implements Interface34 {
 			this.aLong3610 = 0L;
 		}
 
-		this.aClass505_Sub2_Sub2_3608.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_3608.method13885(this);
 	}
 
 	public void finalize() {
 		this.method184();
 	}
 
-	Class307(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class76 class76_2, int i_3, int i_4) {
-		this.aClass505_Sub2_Sub2_3608 = class505_sub2_sub2_1;
+	Class307(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class76 class76_2, int i_3, int i_4) {
+		this.aGraphicalRenderer_Sub2_Sub2_3608 = class505_sub2_sub2_1;
 		this.anInt3606 = i_3;
 		this.anInt3609 = i_4;
 		this.aClass76_3607 = class76_2;
-		this.aLong3610 = IDirect3DDevice.CreateDepthStencilSurface(this.aClass505_Sub2_Sub2_3608.aLong10252, i_3, i_4, Class505_Sub2_Sub2.method15653(this.aClass76_3607), 0, 0, false);
-		this.aClass505_Sub2_Sub2_3608.method13901(this);
+		this.aLong3610 = IDirect3DDevice.CreateDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_3608.aLong10252, i_3, i_4, GraphicalRenderer_Sub2_Sub2.method15653(this.aClass76_3607), 0, 0, false);
+		this.aGraphicalRenderer_Sub2_Sub2_3608.method13901(this);
 	}
 
 	public int method75() {
@@ -53,7 +53,7 @@ public class Class307 implements Interface34 {
 
 	public void method185() {
 		if (this.aLong3610 != 0L) {
-			this.aClass505_Sub2_Sub2_3608.method15650(this.aLong3610);
+			this.aGraphicalRenderer_Sub2_Sub2_3608.method15650(this.aLong3610);
 			this.aLong3610 = 0L;
 		}
 
@@ -73,12 +73,12 @@ public class Class307 implements Interface34 {
 			this.aLong3610 = 0L;
 		}
 
-		this.aClass505_Sub2_Sub2_3608.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_3608.method13885(this);
 	}
 
 	public void method184() {
 		if (this.aLong3610 != 0L) {
-			this.aClass505_Sub2_Sub2_3608.method15650(this.aLong3610);
+			this.aGraphicalRenderer_Sub2_Sub2_3608.method15650(this.aLong3610);
 			this.aLong3610 = 0L;
 		}
 

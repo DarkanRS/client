@@ -23,7 +23,7 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1670(this.anIntArray9233[8], this.aClass385_459.x, this.aClass385_459.y, this.aClass385_459.z, -1433198453);
 		this.aClass101_9257.method1749(this.anIntArray9233[9], this.aClass303_460.x, this.aClass303_460.y, this.aClass303_460.z, this.aClass303_460.w, (byte) 80);
 		this.aClass101_9257.method1670(this.anIntArray9233[10], this.aClass385_457.x, this.aClass385_457.y, this.aClass385_457.z, -767770113);
-		this.aClass505_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467 * -939296569 * 576571639, this.anInt468, this.anInt469 * -1431655765 * 3 * -1431655765 * 3, this.anInt470);
+		this.aGraphicalRenderer_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467 * -939296569 * 576571639, this.anInt468, this.anInt469 * -1431655765 * 3 * -1431655765 * 3, this.anInt470);
 	}
 
 	public void method962(int i_1) {
@@ -37,7 +37,7 @@ public class Class48_Sub2 extends Class48 {
 
 	public void method967(Matrix44Arr matrix44arr_1) {
 		this.aClass384_9259.method6562(matrix44arr_1);
-		this.aClass384_9259.method6523(this.aClass505_Sub2_449.aClass384_8729);
+		this.aClass384_9259.method6523(this.aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	public void method946(boolean bool_1) {
@@ -56,7 +56,7 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1670(this.anIntArray9233[8], this.aClass385_459.x, this.aClass385_459.y, this.aClass385_459.z, -1035790927);
 		this.aClass101_9257.method1749(this.anIntArray9233[9], this.aClass303_460.x, this.aClass303_460.y, this.aClass303_460.z, this.aClass303_460.w, (byte) 66);
 		this.aClass101_9257.method1670(this.anIntArray9233[10], this.aClass385_457.x, this.aClass385_457.y, this.aClass385_457.z, -1490265321);
-		this.aClass505_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467, this.anInt468, this.anInt469, this.anInt470);
+		this.aGraphicalRenderer_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467, this.anInt468, this.anInt469, this.anInt470);
 	}
 
 	public void method950() {
@@ -83,7 +83,7 @@ public class Class48_Sub2 extends Class48 {
 			this.aClass101_9257.method1673(this.anIntArray9233[0], this.aFloatArray450, i_1 * 4);
 		}
 
-		this.aClass505_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467, this.anInt468, this.anInt469, this.anInt470);
+		this.aGraphicalRenderer_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467, this.anInt468, this.anInt469, this.anInt470);
 	}
 
 	public void method965(int i_1) {
@@ -114,22 +114,22 @@ public class Class48_Sub2 extends Class48 {
 
 	public void method951(Matrix44Arr matrix44arr_1) {
 		this.aClass384_9259.method6562(matrix44arr_1);
-		this.aClass384_9259.method6523(this.aClass505_Sub2_449.aClass384_8729);
+		this.aClass384_9259.method6523(this.aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	public void method952(Matrix44Arr matrix44arr_1) {
 		this.aClass384_9259.method6562(matrix44arr_1);
-		this.aClass384_9259.method6523(this.aClass505_Sub2_449.aClass384_8729);
+		this.aClass384_9259.method6523(this.aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	public void method953(Matrix44Arr matrix44arr_1) {
 		this.aClass384_9259.method6562(matrix44arr_1);
-		this.aClass384_9259.method6523(this.aClass505_Sub2_449.aClass384_8729);
+		this.aClass384_9259.method6523(this.aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	public void method963(Matrix44Arr matrix44arr_1) {
 		this.aClass384_9259.method6562(matrix44arr_1);
-		this.aClass384_9259.method6523(this.aClass505_Sub2_449.aClass384_8729);
+		this.aClass384_9259.method6523(this.aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	public void method955(boolean bool_1) {
@@ -148,7 +148,7 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1670(this.anIntArray9233[8], this.aClass385_459.x, this.aClass385_459.y, this.aClass385_459.z, -385081679);
 		this.aClass101_9257.method1749(this.anIntArray9233[9], this.aClass303_460.x, this.aClass303_460.y, this.aClass303_460.z, this.aClass303_460.w, (byte) 113);
 		this.aClass101_9257.method1670(this.anIntArray9233[10], this.aClass385_457.x, this.aClass385_457.y, this.aClass385_457.z, 803125359);
-		this.aClass505_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467 * -939296569 * 576571639, this.anInt468, this.anInt469 * -1431655765 * 3 * -1431655765 * 3, this.anInt470);
+		this.aGraphicalRenderer_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467 * -939296569 * 576571639, this.anInt468, this.anInt469 * -1431655765 * 3 * -1431655765 * 3, this.anInt470);
 	}
 
 	public void method956(boolean bool_1) {
@@ -167,7 +167,7 @@ public class Class48_Sub2 extends Class48 {
 		this.aClass101_9257.method1670(this.anIntArray9233[8], this.aClass385_459.x, this.aClass385_459.y, this.aClass385_459.z, 1042218945);
 		this.aClass101_9257.method1749(this.anIntArray9233[9], this.aClass303_460.x, this.aClass303_460.y, this.aClass303_460.z, this.aClass303_460.w, (byte) 77);
 		this.aClass101_9257.method1670(this.anIntArray9233[10], this.aClass385_457.x, this.aClass385_457.y, this.aClass385_457.z, 245640981);
-		this.aClass505_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467 * -939296569 * 576571639, this.anInt468, this.anInt469 * -1431655765 * 3 * -1431655765 * 3, this.anInt470);
+		this.aGraphicalRenderer_Sub2_449.method14002(Class352.aClass352_4098, this.anInt467 * -939296569 * 576571639, this.anInt468, this.anInt469 * -1431655765 * 3 * -1431655765 * 3, this.anInt470);
 	}
 
 	public void method966() {
@@ -200,7 +200,7 @@ public class Class48_Sub2 extends Class48 {
 		this.method14564(i_1, 342700156);
 	}
 
-	public Class48_Sub2(Class505_Sub2 class505_sub2_1) throws Exception_Sub2 {
+	public Class48_Sub2(GraphicalRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
 		super(class505_sub2_1);
 		this.method14567();
 	}
@@ -234,24 +234,24 @@ public class Class48_Sub2 extends Class48 {
 	}
 
 	boolean method14567() throws Exception_Sub2 {
-		this.aClass101_9257 = this.aClass505_Sub2_449.method13890("Model");
-		Class282_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9257.method1691("DiffuseSampler", (short) 32201);
-		Class282_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9257.method1691("EnvironmentSampler", (short) 32001);
-		Class282_Sub21_Sub1 class282_sub21_sub1_4 = this.aClass101_9257.method1691("PointLightsPosAndRadiusSq", (short) 15792);
-		Class282_Sub21_Sub1 class282_sub21_sub1_5 = this.aClass101_9257.method1691("PointLightsDiffuseColour", (short) 26295);
-		Class282_Sub21_Sub1 class282_sub21_sub1_6 = this.aClass101_9257.method1691("WVPMatrix", (short) 28335);
-		Class282_Sub21_Sub1 class282_sub21_sub1_7 = this.aClass101_9257.method1691("TexCoordMatrix", (short) 26561);
-		Class282_Sub21_Sub1 class282_sub21_sub1_8 = this.aClass101_9257.method1691("HeightFogPlane", (short) 7913);
-		Class282_Sub21_Sub1 class282_sub21_sub1_9 = this.aClass101_9257.method1691("HeightFogColour", (short) 7930);
-		Class282_Sub21_Sub1 class282_sub21_sub1_10 = this.aClass101_9257.method1691("DistanceFogPlane", (short) 14106);
-		Class282_Sub21_Sub1 class282_sub21_sub1_11 = this.aClass101_9257.method1691("DistanceFogColour", (short) 22664);
-		Class282_Sub21_Sub1 class282_sub21_sub1_12 = this.aClass101_9257.method1691("SunDir", (short) 4744);
-		Class282_Sub21_Sub1 class282_sub21_sub1_13 = this.aClass101_9257.method1691("SunColour", (short) 30429);
-		Class282_Sub21_Sub1 class282_sub21_sub1_14 = this.aClass101_9257.method1691("AntiSunColour", (short) 20720);
-		Class282_Sub21_Sub1 class282_sub21_sub1_15 = this.aClass101_9257.method1691("AmbientColour", (short) 7520);
-		Class282_Sub21_Sub1 class282_sub21_sub1_16 = this.aClass101_9257.method1691("EyePos", (short) 8667);
-		Class282_Sub21_Sub1 class282_sub21_sub1_17 = this.aClass101_9257.method1691("SpecularExponent", (short) 29276);
-		Class282_Sub21_Sub1 class282_sub21_sub1_18 = this.aClass101_9257.method1691("WorldMatrix", (short) 30418);
+		this.aClass101_9257 = this.aGraphicalRenderer_Sub2_449.method13890("Model");
+		Node_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9257.method1691("DiffuseSampler", (short) 32201);
+		Node_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9257.method1691("EnvironmentSampler", (short) 32001);
+		Node_Sub21_Sub1 class282_sub21_sub1_4 = this.aClass101_9257.method1691("PointLightsPosAndRadiusSq", (short) 15792);
+		Node_Sub21_Sub1 class282_sub21_sub1_5 = this.aClass101_9257.method1691("PointLightsDiffuseColour", (short) 26295);
+		Node_Sub21_Sub1 class282_sub21_sub1_6 = this.aClass101_9257.method1691("WVPMatrix", (short) 28335);
+		Node_Sub21_Sub1 class282_sub21_sub1_7 = this.aClass101_9257.method1691("TexCoordMatrix", (short) 26561);
+		Node_Sub21_Sub1 class282_sub21_sub1_8 = this.aClass101_9257.method1691("HeightFogPlane", (short) 7913);
+		Node_Sub21_Sub1 class282_sub21_sub1_9 = this.aClass101_9257.method1691("HeightFogColour", (short) 7930);
+		Node_Sub21_Sub1 class282_sub21_sub1_10 = this.aClass101_9257.method1691("DistanceFogPlane", (short) 14106);
+		Node_Sub21_Sub1 class282_sub21_sub1_11 = this.aClass101_9257.method1691("DistanceFogColour", (short) 22664);
+		Node_Sub21_Sub1 class282_sub21_sub1_12 = this.aClass101_9257.method1691("SunDir", (short) 4744);
+		Node_Sub21_Sub1 class282_sub21_sub1_13 = this.aClass101_9257.method1691("SunColour", (short) 30429);
+		Node_Sub21_Sub1 class282_sub21_sub1_14 = this.aClass101_9257.method1691("AntiSunColour", (short) 20720);
+		Node_Sub21_Sub1 class282_sub21_sub1_15 = this.aClass101_9257.method1691("AmbientColour", (short) 7520);
+		Node_Sub21_Sub1 class282_sub21_sub1_16 = this.aClass101_9257.method1691("EyePos", (short) 8667);
+		Node_Sub21_Sub1 class282_sub21_sub1_17 = this.aClass101_9257.method1691("SpecularExponent", (short) 29276);
+		Node_Sub21_Sub1 class282_sub21_sub1_18 = this.aClass101_9257.method1691("WorldMatrix", (short) 30418);
 		this.aClass115Array9254[0] = this.aClass101_9257.method1651("Unlit", -1079747106);
 		this.aClass115Array9254[1] = this.aClass101_9257.method1651("Unlit_IgnoreAlpha", 594571928);
 		this.aClass115Array9254[17] = this.aClass101_9257.method1651("UnderwaterGround", -1889112916);
@@ -290,7 +290,7 @@ public class Class48_Sub2 extends Class48 {
 
 	public void method957(Matrix44Arr matrix44arr_1) {
 		this.aClass384_9259.method6562(matrix44arr_1);
-		this.aClass384_9259.method6523(this.aClass505_Sub2_449.aClass384_8729);
+		this.aClass384_9259.method6523(this.aGraphicalRenderer_Sub2_449.aClass384_8729);
 	}
 
 	public void method943() {
@@ -308,19 +308,19 @@ public class Class48_Sub2 extends Class48 {
 	}
 
 	public static final void method14571() {
-		Class282_Sub31 class282_sub31_1;
-		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head(); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-18046490)) {
+		Node_Sub31 class282_sub31_1;
+		for (class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7775.head(); class282_sub31_1 != null; class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7775.next(-18046490)) {
 			if (!class282_sub31_1.aBool7774) {
 				class282_sub31_1.aBool7773 = true;
 				if (class282_sub31_1.anInt7762 >= 0 && class282_sub31_1.anInt7763 >= 0 && class282_sub31_1.anInt7762 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && class282_sub31_1.anInt7763 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-					Class275_Sub4.method12585(class282_sub31_1, -1279772486);
+					EntityNode_Sub4.method12585(class282_sub31_1, -1279772486);
 				}
 			} else {
 				class282_sub31_1.remove();
 			}
 		}
 
-		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head(); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(777905499)) {
+		for (class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7776.head(); class282_sub31_1 != null; class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7776.next(777905499)) {
 			if (!class282_sub31_1.aBool7774) {
 				class282_sub31_1.aBool7773 = true;
 			} else {

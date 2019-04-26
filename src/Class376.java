@@ -25,7 +25,7 @@ public class Class376 implements Interface26, Interface34 {
 
 	public void method184() {
 		if (this.aLong4514 != 0L) {
-			this.aClass360_Sub2_Sub1_4515.aClass505_Sub2_Sub2_4165.method15650(this.aLong4514);
+			this.aClass360_Sub2_Sub1_4515.aGraphicalRenderer_Sub2_Sub2_4165.method15650(this.aLong4514);
 			this.aLong4514 = 0L;
 		}
 
@@ -45,7 +45,7 @@ public class Class376 implements Interface26, Interface34 {
 			this.aLong4514 = 0L;
 		}
 
-		this.aClass360_Sub2_Sub1_4515.aClass505_Sub2_Sub2_4165.method13885(this);
+		this.aClass360_Sub2_Sub1_4515.aGraphicalRenderer_Sub2_Sub2_4165.method13885(this);
 	}
 
 	public int method39() {
@@ -66,7 +66,7 @@ public class Class376 implements Interface26, Interface34 {
 			this.aLong4514 = 0L;
 		}
 
-		this.aClass360_Sub2_Sub1_4515.aClass505_Sub2_Sub2_4165.method13885(this);
+		this.aClass360_Sub2_Sub1_4515.aGraphicalRenderer_Sub2_Sub2_4165.method13885(this);
 	}
 
 	public long method123() {
@@ -80,12 +80,12 @@ public class Class376 implements Interface26, Interface34 {
 	Class376(Class360_Sub2_Sub1 class360_sub2_sub1_1, int i_2) {
 		this.anInt4516 = i_2;
 		this.aClass360_Sub2_Sub1_4515 = class360_sub2_sub1_1;
-		this.aClass360_Sub2_Sub1_4515.aClass505_Sub2_Sub2_4165.method13901(this);
+		this.aClass360_Sub2_Sub1_4515.aGraphicalRenderer_Sub2_Sub2_4165.method13901(this);
 	}
 
 	public void method185() {
 		if (this.aLong4514 != 0L) {
-			this.aClass360_Sub2_Sub1_4515.aClass505_Sub2_Sub2_4165.method15650(this.aLong4514);
+			this.aClass360_Sub2_Sub1_4515.aGraphicalRenderer_Sub2_Sub2_4165.method15650(this.aLong4514);
 			this.aLong4514 = 0L;
 		}
 

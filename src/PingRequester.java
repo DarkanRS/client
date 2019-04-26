@@ -89,15 +89,15 @@ public class PingRequester implements Runnable {
 					;
 				}
 			}
-			if (Class225_Sub6.aString8069.startsWith("win") && !bool_4) {
-				Class468_Sub6.method12661(string_0, 0, (byte) -25);
-			} else if (Class225_Sub6.aString8069.startsWith("mac")) {
+			if (RouteStrategy_Sub6.aString8069.startsWith("win") && !bool_4) {
+				Preference_Sub6.method12661(string_0, 0, (byte) -25);
+			} else if (RouteStrategy_Sub6.aString8069.startsWith("mac")) {
 				Class186.method3082(string_0, 1, string_3);
 			} else {
-				Class468_Sub6.method12661(string_0, 2, (byte) -47);
+				Preference_Sub6.method12661(string_0, 2, (byte) -47);
 			}
 		} else {
-			Class468_Sub6.method12661(string_0, 3, (byte) -77);
+			Preference_Sub6.method12661(string_0, 3, (byte) -77);
 		}
 	}
 }

@@ -43,7 +43,7 @@ public class Class114 {
 	static FontMetrics method1887(int i_0) {
 		FontMetrics fontmetrics_1;
 		if (Class20.aBool187) {
-			if (Class186.aClass8_2348 != null && Class176.aClass414_2200 != null) {
+			if (Class186.aFontRenderer_2348 != null && Class176.aClass414_2200 != null) {
 				fontmetrics_1 = Class176.aClass414_2200;
 			} else {
 				fontmetrics_1 = SkyboxIndexLoader.aClass414_3438;

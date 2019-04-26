@@ -189,9 +189,9 @@ public class Class289 implements Runnable {
 				byte b_49 = 0;
 				byte b_15 = 0;
 				if (Class187.aBool2352) {
-					CursorDefintions.aClass160_5004 = graphicalrenderer_0.method8654(i_11, i_11, false, true);
+					CursorDefintions.aNativeSprite_5004 = graphicalrenderer_0.method8654(i_11, i_11, false, true);
 					class158_sub1_36 = graphicalrenderer_0.method8418();
-					class158_sub1_36.method13759(0, CursorDefintions.aClass160_5004.method2808());
+					class158_sub1_36.method13759(0, CursorDefintions.aNativeSprite_5004.method2808());
 					Interface8 interface8_16 = graphicalrenderer_0.method8419(i_11, i_11);
 					class158_sub1_36.method13765(interface8_16);
 					graphicalrenderer_0.method8637(class158_sub1_36, -165772657);
@@ -200,7 +200,7 @@ public class Class289 implements Runnable {
 					b_15 = 48;
 					graphicalrenderer_0.ba(1, 0);
 				} else {
-					CursorDefintions.aClass160_5004 = graphicalrenderer_0.createNativeSprite(ints_35, i_11, i_11, i_11, 1063937715);
+					CursorDefintions.aNativeSprite_5004 = graphicalrenderer_0.createNativeSprite(ints_35, i_11, i_11, i_11, 1063937715);
 				}
 				IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
 				int i_37 = ~0xffffff | (238 + (int) (Math.random() * 20.0D) - 10 << 16) + (238 + (int) (Math.random() * 20.0D) - 10 << 8) + (238 + (int) (Math.random() * 20.0D) - 10);
@@ -259,7 +259,7 @@ public class Class289 implements Runnable {
 									bools_19[i_30][i_31] = regionmap_5.method5498(i_1, i_29, i_24 + i_30, i_31 + i_25, (short) 11199);
 								}
 							}
-							sceneobjectmanager_6.aClass390Array2607[i_29].method6715(b_49, b_15, i_24, i_25, i_26, i_27, bools_19);
+							sceneobjectmanager_6.aGroundArray2607[i_29].method6715(b_49, b_15, i_24, i_25, i_26, i_27, bools_19);
 							if (!Class187.aBool2356) {
 								for (i_30 = -4; i_30 < i_7; i_30++) {
 									for (i_31 = -4; i_31 < i_7; i_31++) {
@@ -271,7 +271,7 @@ public class Class289 implements Runnable {
 												i_34 = i_29 - 1;
 											}
 											if (i_34 >= 0) {
-												Class225_Sub5.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
+												RouteStrategy_Sub5.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
 											}
 										}
 									}
@@ -301,9 +301,9 @@ public class Class289 implements Runnable {
 						}
 						graphicalrenderer_0.B(i_22, i_23, i_7 * 4, i_7 * 4, i_18, 2);
 						if (!Class187.aBool2352) {
-							CursorDefintions.aClass160_5004.method2750((i_20 - b_8) * 4 + 48, i_4 * 4 + 48 - (i_21 - b_9) * 4 - i_7 * 4, i_7 * 4, i_7 * 4, i_22, i_23);
+							CursorDefintions.aNativeSprite_5004.method2750((i_20 - b_8) * 4 + 48, i_4 * 4 + 48 - (i_21 - b_9) * 4 - i_7 * 4, i_7 * 4, i_7 * 4, i_22, i_23);
 							if (Class187.aBool2358) {
-								CursorDefintions.aClass160_5004.method2752(256, 0);
+								CursorDefintions.aNativeSprite_5004.method2752(256, 0);
 								try {
 									graphicalrenderer_0.method8393((short) 3740);
 									Class89.sleep(2000L);
@@ -317,7 +317,7 @@ public class Class289 implements Runnable {
 				if (Class187.aBool2352) {
 					graphicalrenderer_0.method8416(class158_sub1_36, (byte) -88);
 					if (Class187.aBool2358) {
-						CursorDefintions.aClass160_5004.method2752(256, 0);
+						CursorDefintions.aNativeSprite_5004.method2752(256, 0);
 						try {
 							graphicalrenderer_0.method8393((short) 11377);
 							Class89.sleep(2000L);

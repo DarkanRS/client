@@ -43,7 +43,7 @@ final class Class15 implements Interface35 {
                     }
                 }
                 if (nativesprite_6 != null) {
-                    Class115.aClass160Array1248[i_3] = nativesprite_6;
+                    Class115.aNativeSpriteArray1248[i_3] = nativesprite_6;
                     stringbuilder_2.append(" <img=").append(i_3).append(">");
                     ++i_3;
                 }

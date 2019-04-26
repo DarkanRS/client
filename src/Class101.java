@@ -41,7 +41,7 @@ public abstract class Class101 {
 		throw new Exception_Sub2_Sub1(string_1);
 	}
 
-	Class101(Class505_Sub2 class505_sub2_1, Class114 class114_2) {
+	Class101(GraphicalRenderer_Sub2 class505_sub2_1, Class114 class114_2) {
 		this.aString1014 = class114_2.aString1237;
 		this.anInt1009 = class114_2.aClass122Array1236.length;
 		this.aClass107_1013 = new Class107(this.anInt1009, anInterface11_1012);
@@ -90,35 +90,35 @@ public abstract class Class101 {
 		return this.anInt1015 >= 0 ? this.aClass115Array1010[this.anInt1015] : null;
 	}
 
-	public final void method1658(Class282_Sub21_Sub1 class282_sub21_sub1_1, float f_2, float f_3, int i_4) {
+	public final void method1658(Node_Sub21_Sub1 class282_sub21_sub1_1, float f_2, float f_3, int i_4) {
 		this.aClass115Array1010[this.anInt1015].method1923(class282_sub21_sub1_1, f_2, f_3);
 	}
 
-	public final void method1659(Class282_Sub21_Sub1 class282_sub21_sub1_1, float f_2) {
+	public final void method1659(Node_Sub21_Sub1 class282_sub21_sub1_1, float f_2) {
 		this.aClass115Array1010[this.anInt1015].method1894(class282_sub21_sub1_1, f_2);
 	}
 
-	public final void method1661(Class282_Sub21_Sub1 class282_sub21_sub1_1, float f_2, float f_3, float f_4, byte b_5) {
+	public final void method1661(Node_Sub21_Sub1 class282_sub21_sub1_1, float f_2, float f_3, float f_4, byte b_5) {
 		this.aClass115Array1010[this.anInt1015].method1939(class282_sub21_sub1_1, f_2, f_3, f_4);
 	}
 
-	public final void method1662(Class282_Sub21_Sub1 class282_sub21_sub1_1, float f_2, float f_3, float f_4, float f_5, byte b_6) {
+	public final void method1662(Node_Sub21_Sub1 class282_sub21_sub1_1, float f_2, float f_3, float f_4, float f_5, byte b_6) {
 		this.aClass115Array1010[this.anInt1015].method1897(class282_sub21_sub1_1, f_2, f_3, f_4, f_5);
 	}
 
-	public final void method1663(Class282_Sub21_Sub1 class282_sub21_sub1_1, Vector3 vector3_2, int i_3) {
+	public final void method1663(Node_Sub21_Sub1 class282_sub21_sub1_1, Vector3 vector3_2, int i_3) {
 		this.aClass115Array1010[this.anInt1015].method1939(class282_sub21_sub1_1, vector3_2.x, vector3_2.y, vector3_2.z);
 	}
 
 	public abstract boolean method1664();
 
-	abstract Class115 method1665(Class505_Sub2 var1, Class99 var2);
+	abstract Class115 method1665(GraphicalRenderer_Sub2 var1, Class99 var2);
 
-	public final void method1667(Class282_Sub21_Sub1 class282_sub21_sub1_1, Matrix44Arr matrix44arr_2, int i_3) {
+	public final void method1667(Node_Sub21_Sub1 class282_sub21_sub1_1, Matrix44Arr matrix44arr_2, int i_3) {
 		this.aClass115Array1010[this.anInt1015].method1936(class282_sub21_sub1_1, matrix44arr_2);
 	}
 
-	public final void method1668(Class282_Sub21_Sub1 class282_sub21_sub1_1, Matrix44Arr matrix44arr_2, byte b_3) {
+	public final void method1668(Node_Sub21_Sub1 class282_sub21_sub1_1, Matrix44Arr matrix44arr_2, byte b_3) {
 		this.aClass115Array1010[this.anInt1015].method1891(class282_sub21_sub1_1, matrix44arr_2);
 	}
 
@@ -126,7 +126,7 @@ public abstract class Class101 {
 		this.aClass115Array1010[this.anInt1015].method1893(i_1, f_2, f_3, f_4);
 	}
 
-	public final void method1671(Class282_Sub21_Sub1 class282_sub21_sub1_1, int i_2, Interface30 interface30_3) {
+	public final void method1671(Node_Sub21_Sub1 class282_sub21_sub1_1, int i_2, Interface30 interface30_3) {
 		this.aClass115Array1010[this.anInt1015].method1896(class282_sub21_sub1_1, i_2, interface30_3);
 	}
 
@@ -160,15 +160,15 @@ public abstract class Class101 {
 		return this.anInt1016;
 	}
 
-	public Class282_Sub21_Sub1 method1681(String string_1, byte b_2) {
-		return (Class282_Sub21_Sub1) this.aClass107_1011.method1820(string_1, -2115714822);
+	public Node_Sub21_Sub1 method1681(String string_1, byte b_2) {
+		return (Node_Sub21_Sub1) this.aClass107_1011.method1820(string_1, -2115714822);
 	}
 
 	public int method1682(int i_1) {
 		return this.anInt1009;
 	}
 
-	abstract Class115 method1683(Class505_Sub2 var1, Class99 var2);
+	abstract Class115 method1683(GraphicalRenderer_Sub2 var1, Class99 var2);
 
 	void method1684() {
 	}
@@ -179,18 +179,18 @@ public abstract class Class101 {
 
 	public abstract void method1687();
 
-	public final void method1688(Class282_Sub21_Sub1 class282_sub21_sub1_1, float[] floats_2, int i_3) {
+	public final void method1688(Node_Sub21_Sub1 class282_sub21_sub1_1, float[] floats_2, int i_3) {
 		this.aClass115Array1010[this.anInt1015].method1903(class282_sub21_sub1_1, floats_2, floats_2.length);
 	}
 
-	public final void method1689(Class282_Sub21_Sub1 class282_sub21_sub1_1, Vector4 vector4_2, int i_3) {
+	public final void method1689(Node_Sub21_Sub1 class282_sub21_sub1_1, Vector4 vector4_2, int i_3) {
 		this.aClass115Array1010[this.anInt1015].method1897(class282_sub21_sub1_1, vector4_2.x, vector4_2.y, vector4_2.z, vector4_2.w);
 	}
 
 	public abstract void method1690();
 
-	public Class282_Sub21_Sub1 method1691(String string_1, short s_2) throws Exception_Sub2_Sub2 {
-		Class282_Sub21_Sub1 class282_sub21_sub1_3 = (Class282_Sub21_Sub1) this.aClass107_1013.method1820(string_1, -2068288662);
+	public Node_Sub21_Sub1 method1691(String string_1, short s_2) throws Exception_Sub2_Sub2 {
+		Node_Sub21_Sub1 class282_sub21_sub1_3 = (Node_Sub21_Sub1) this.aClass107_1013.method1820(string_1, -2068288662);
 		if (class282_sub21_sub1_3 == null) {
 			throw new Exception_Sub2_Sub2(string_1);
 		} else {
@@ -202,9 +202,9 @@ public abstract class Class101 {
 
 	public abstract boolean method1693();
 
-	abstract Class282_Sub21_Sub1 method1694(Class122 var1);
+	abstract Node_Sub21_Sub1 method1694(Class122 var1);
 
-	public final void method1696(Class282_Sub21_Sub1 class282_sub21_sub1_1, int i_2) {
+	public final void method1696(Node_Sub21_Sub1 class282_sub21_sub1_1, int i_2) {
 		float f_4 = (float) (i_2 >> 16 & 0xff) / 255.0F;
 		float f_5 = (float) (i_2 >> 8 & 0xff) / 255.0F;
 		float f_6 = (float) (i_2 & 0xff) / 255.0F;
@@ -212,17 +212,17 @@ public abstract class Class101 {
 		this.method1662(class282_sub21_sub1_1, f_4, f_5, f_6, f_7, (byte) -41);
 	}
 
-	abstract Class115 method1697(Class505_Sub2 var1, Class99 var2);
+	abstract Class115 method1697(GraphicalRenderer_Sub2 var1, Class99 var2);
 
-	public Class282_Sub21_Sub1 method1705(int i_1, int i_2) {
-		return (Class282_Sub21_Sub1) this.aClass107_1011.method1823(i_1, 1658223630);
+	public Node_Sub21_Sub1 method1705(int i_1, int i_2) {
+		return (Node_Sub21_Sub1) this.aClass107_1011.method1823(i_1, 1658223630);
 	}
 
 	public abstract boolean method1706(Class115 var1);
 
 	public abstract boolean method1707(Class115 var1);
 
-	abstract Class282_Sub21_Sub1 method1712(Class122 var1);
+	abstract Node_Sub21_Sub1 method1712(Class122 var1);
 
 	public abstract void method1713();
 
@@ -236,17 +236,17 @@ public abstract class Class101 {
 
 	public abstract boolean method1734();
 
-	public Class282_Sub21_Sub1 method1742(int i_1, int i_2) {
-		return (Class282_Sub21_Sub1) this.aClass107_1013.method1823(i_1, 1690895511);
+	public Node_Sub21_Sub1 method1742(int i_1, int i_2) {
+		return (Node_Sub21_Sub1) this.aClass107_1013.method1823(i_1, 1690895511);
 	}
 
-	abstract Class115 method1743(Class505_Sub2 var1, Class99 var2);
+	abstract Class115 method1743(GraphicalRenderer_Sub2 var1, Class99 var2);
 
 	public final void method1749(int i_1, float f_2, float f_3, float f_4, float f_5, byte b_6) {
 		this.aClass115Array1010[this.anInt1015].method1895(i_1, f_2, f_3, f_4, f_5);
 	}
 
-	abstract Class282_Sub21_Sub1 method1765(Class122 var1);
+	abstract Node_Sub21_Sub1 method1765(Class122 var1);
 
 	static void method1773(String[] arr_0, int[] ints_1, int i_2, int i_3) {
 		if (i_2 < i_3) {

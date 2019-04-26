@@ -2,11 +2,11 @@ import java.awt.Canvas;
 
 public class Class52_Sub1 extends Class52 {
 
-	NativeSprite aClass160_9150;
+	NativeSprite aNativeSprite_9150;
 
 	public void method23() {
 		super.method22();
-		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -171983138);
+		this.aNativeSprite_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -171983138);
 	}
 
 	void method1081(boolean bool_1, int i_2, int i_3, int i_4) {
@@ -19,7 +19,7 @@ public class Class52_Sub1 extends Class52 {
 		int[] ints_6 = new int[4];
 		Renderers.SOFTWARE_RENDERER.qa(ints_6);
 		Renderers.SOFTWARE_RENDERER.r(i_2, i_3 + 2, i_5 + i_2, i_3 + this.aClass350_489.anInt4088);
-		this.aClass160_9150.method2756(i_2, i_3 + 2, this.aClass350_489.anInt4093, this.aClass350_489.anInt4088);
+		this.aNativeSprite_9150.method2756(i_2, i_3 + 2, this.aClass350_489.anInt4093, this.aClass350_489.anInt4088);
 		Renderers.SOFTWARE_RENDERER.r(ints_6[0], ints_6[1], ints_6[2], ints_6[3]);
 	}
 
@@ -29,7 +29,7 @@ public class Class52_Sub1 extends Class52 {
 
 	public void method22() {
 		super.method22();
-		this.aClass160_9150 = Class152.method2600(this.aClass317_493, ((Class350_Sub1) this.aClass350_489).anInt7756, -1723466442);
+		this.aNativeSprite_9150 = Class152.method2600(this.aClass317_493, ((Class350_Sub1) this.aClass350_489).anInt7756, -1723466442);
 	}
 
 	Class52_Sub1(Index index_1, Index index_2, Class350_Sub1 class350_sub1_3) {
@@ -42,22 +42,22 @@ public class Class52_Sub1 extends Class52 {
 
 	public void method16() {
 		super.method22();
-		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, 682283144);
+		this.aNativeSprite_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, 682283144);
 	}
 
 	public void method18() {
 		super.method22();
-		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -1248848887);
+		this.aNativeSprite_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -1248848887);
 	}
 
 	public void method15() {
 		super.method22();
-		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, 419167438);
+		this.aNativeSprite_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, 419167438);
 	}
 
 	public void method19() {
 		super.method22();
-		this.aClass160_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -2039268926);
+		this.aNativeSprite_9150 = Class152.method2600(this.aClass317_493, -2099828279 * ((Class350_Sub1) this.aClass350_489).anInt7756 * 478363769, -2039268926);
 	}
 
 	public boolean method9() {
@@ -77,7 +77,7 @@ public class Class52_Sub1 extends Class52 {
 		int[] ints_5 = new int[4];
 		Renderers.SOFTWARE_RENDERER.qa(ints_5);
 		Renderers.SOFTWARE_RENDERER.r(i_2, i_3 + 2, i_4 + i_2, this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3);
-		this.aClass160_9150.method2756(i_2, 2 + i_3, 329542577 * this.aClass350_489.anInt4093 * -229835439, this.aClass350_489.anInt4088 * 1707725877 * 323608093);
+		this.aNativeSprite_9150.method2756(i_2, 2 + i_3, 329542577 * this.aClass350_489.anInt4093 * -229835439, this.aClass350_489.anInt4088 * 1707725877 * 323608093);
 		Renderers.SOFTWARE_RENDERER.r(ints_5[0], ints_5[1], ints_5[2], ints_5[3]);
 	}
 
@@ -86,7 +86,7 @@ public class Class52_Sub1 extends Class52 {
 		int[] ints_5 = new int[4];
 		Renderers.SOFTWARE_RENDERER.qa(ints_5);
 		Renderers.SOFTWARE_RENDERER.r(i_2, i_3 + 2, i_4 + i_2, this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3);
-		this.aClass160_9150.method2756(i_2, 2 + i_3, 329542577 * this.aClass350_489.anInt4093 * -229835439, this.aClass350_489.anInt4088 * 1707725877 * 323608093);
+		this.aNativeSprite_9150.method2756(i_2, 2 + i_3, 329542577 * this.aClass350_489.anInt4093 * -229835439, this.aClass350_489.anInt4088 * 1707725877 * 323608093);
 		Renderers.SOFTWARE_RENDERER.r(ints_5[0], ints_5[1], ints_5[2], ints_5[3]);
 	}
 
@@ -95,7 +95,7 @@ public class Class52_Sub1 extends Class52 {
 		int[] ints_5 = new int[4];
 		Renderers.SOFTWARE_RENDERER.qa(ints_5);
 		Renderers.SOFTWARE_RENDERER.r(i_2, i_3 + 2, i_4 + i_2, this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3);
-		this.aClass160_9150.method2756(i_2, 2 + i_3, 329542577 * this.aClass350_489.anInt4093 * -229835439, this.aClass350_489.anInt4088 * 1707725877 * 323608093);
+		this.aNativeSprite_9150.method2756(i_2, 2 + i_3, 329542577 * this.aClass350_489.anInt4093 * -229835439, this.aClass350_489.anInt4088 * 1707725877 * 323608093);
 		Renderers.SOFTWARE_RENDERER.r(ints_5[0], ints_5[1], ints_5[2], ints_5[3]);
 	}
 

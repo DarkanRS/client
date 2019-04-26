@@ -163,7 +163,7 @@ public final class Class155 {
 			Animable animable_5 = null;
 			int i_6 = -1;
 			for (Class208 class208_7 = class293_4.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
-				Class521_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aClass521_Sub1_Sub1_2659;
+				Transform_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
 				if (class521_sub1_sub1_8 instanceof Animable) {
 					Animable animable_9 = (Animable) class521_sub1_sub1_8;
 					int i_10 = (animable_9.getSize() - 1) * 256 + 252;

@@ -63,7 +63,7 @@ public class Class363 {
         } else {
             SystemInfo.method13466(animable_0, bool_1);
             moveType = IdentikitDefinition.anInt430;
-            i_4 = Class8_Sub1.anInt8515;
+            i_4 = FontRenderer_Sub1.anInt8515;
         }
         Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
         int i_6;

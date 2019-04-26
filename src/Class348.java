@@ -12,43 +12,43 @@ public class Class348 {
 		for (int i_3 = rsbytebuffer_1.readUnsignedByte(); i_3 != 0; i_3 = rsbytebuffer_1.readUnsignedByte()) {
 			Object obj_4;
 			if (i_3 == 3) {
-				obj_4 = new Class282_Sub17_Sub10(this);
+				obj_4 = new Node_Sub17_Sub10(this);
 			} else if (i_3 == 1) {
-				obj_4 = new Class282_Sub17_Sub1(this);
+				obj_4 = new Node_Sub17_Sub1(this);
 			} else if (i_3 == 13) {
-				obj_4 = new Class282_Sub17_Sub9(this);
+				obj_4 = new Node_Sub17_Sub9(this);
 			} else if (i_3 == 4) {
-				obj_4 = new Class282_Sub17_Sub6(this);
+				obj_4 = new Node_Sub17_Sub6(this);
 			} else if (i_3 == 6) {
-				obj_4 = new Class282_Sub17_Sub8(this);
+				obj_4 = new Node_Sub17_Sub8(this);
 			} else if (i_3 == 5) {
-				obj_4 = new Class282_Sub17_Sub2(this);
+				obj_4 = new Node_Sub17_Sub2(this);
 			} else if (i_3 == 2) {
-				obj_4 = new Class282_Sub17_Sub7(this);
+				obj_4 = new Node_Sub17_Sub7(this);
 			} else if (i_3 == 7) {
-				obj_4 = new Class282_Sub17_Sub12(this);
+				obj_4 = new Node_Sub17_Sub12(this);
 			} else if (i_3 == 8) {
-				obj_4 = new Class282_Sub17_Sub13(this);
+				obj_4 = new Node_Sub17_Sub13(this);
 			} else if (i_3 == 9) {
-				obj_4 = new Class282_Sub17_Sub11(this);
+				obj_4 = new Node_Sub17_Sub11(this);
 			} else if (i_3 == 10) {
-				obj_4 = new Class282_Sub17_Sub5(this);
+				obj_4 = new Node_Sub17_Sub5(this);
 			} else if (i_3 == 11) {
-				obj_4 = new Class282_Sub17_Sub4(this);
+				obj_4 = new Node_Sub17_Sub4(this);
 			} else {
 				if (i_3 != 12) {
 					throw new RuntimeException("");
 				}
-				obj_4 = new Class282_Sub17_Sub3(this);
+				obj_4 = new Node_Sub17_Sub3(this);
 			}
-			((Class282_Sub17) obj_4).method12250(rsbytebuffer_1);
+			((Node_Sub17) obj_4).method12250(rsbytebuffer_1);
 			this.aClass482_4062.append((Node) obj_4);
 		}
 	}
 
 	public void method6173(ClanSettings class61_1) {
 		if (class61_1.aLong631 == this.aLong4073 && this.anInt4060 == class61_1.updateCount) {
-			for (Class282_Sub17 class282_sub17_3 = (Class282_Sub17) this.aClass482_4062.head(); class282_sub17_3 != null; class282_sub17_3 = (Class282_Sub17) this.aClass482_4062.next(983749552)) {
+			for (Node_Sub17 class282_sub17_3 = (Node_Sub17) this.aClass482_4062.head(); class282_sub17_3 != null; class282_sub17_3 = (Node_Sub17) this.aClass482_4062.next(983749552)) {
 				class282_sub17_3.method12251(class61_1);
 			}
 			++class61_1.updateCount;
@@ -66,9 +66,9 @@ public class Class348 {
 			if (client.anInt7349 != -1) {
 				Class337.unloadInterface(client.anInt7349, -1669420859);
 			}
-			for (Class282_Sub44 class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(1087054250); class282_sub44_2 != null; class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 11)) {
+			for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(1087054250); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 11)) {
 				if (!class282_sub44_2.isLinked()) {
-					class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(-848491079);
+					class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-848491079);
 					if (class282_sub44_2 == null) {
 						break;
 					}
@@ -83,7 +83,7 @@ public class Class348 {
 			IncomingPacket.method6378();
 			Class150.method2582(client.anInt7349, (int[]) null, -1484331524);
 		}
-		Class468_Sub12.method12708();
+		Preference_Sub12.method12708();
 		Class9.aBool71 = false;
 		Class509.method8739();
 		client.anInt7427 = -1;
@@ -96,7 +96,7 @@ public class Class348 {
 		IdentitiKitIndexLoader.anInt361 = 0;
 		if (NativeLibraryLoader.anInt3240 == 5) {
 			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 << 9;
-			Class246.anInt3029 = Class282_Sub44.anInt8064 << 9;
+			Class246.anInt3029 = Node_Sub44.anInt8064 << 9;
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);
 		}

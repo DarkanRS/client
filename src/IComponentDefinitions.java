@@ -15,7 +15,7 @@ public class IComponentDefinitions {
 	public int anInt1432;
 	public int anInt1433;
 	public int anInt1434;
-	public Animation aClass456_1437;
+	public Animation aAnimation_1437;
 	public IComponentDefinitions[] aClass118Array1438;
 	public IComponentDefinitions[] aClass118Array1439;
 	public static int anInt1283 = 0;
@@ -636,7 +636,7 @@ public class IComponentDefinitions {
 				if (rsmesh_19.version < 13) {
 					rsmesh_19.upscale();
 				}
-				meshrasterizer_18 = graphicalrenderer_1.createMeshRasterizer(rsmesh_19, i_2, Class282_Sub14.anInt7597, 64, 768);
+				meshrasterizer_18 = graphicalrenderer_1.createMeshRasterizer(rsmesh_19, i_2, Node_Sub14.anInt7597, 64, 768);
 				int i_20;
 				if (this.aShortArray1347 != null) {
 					for (i_20 = 0; i_20 < this.aShortArray1347.length; i_20++) {
@@ -890,12 +890,12 @@ public class IComponentDefinitions {
 
 	public static IComponentDefinitions getDefs(int hash) {
 		int interfaceId = hash >> 16;
-		if (Class468_Sub8.INTERFACES[interfaceId] == null || Class468_Sub8.INTERFACES[interfaceId].getComponent(hash) == null) {
+		if (Preference_Sub8.INTERFACES[interfaceId] == null || Preference_Sub8.INTERFACES[interfaceId].getComponent(hash) == null) {
 			boolean bool_3 = MovingAnimation.isInterfaceLoaded(interfaceId, (int[]) null, -1161112150);
 			if (!bool_3) {
 				return null;
 			}
 		}
-		return Class468_Sub8.INTERFACES[interfaceId].getComponent(hash);
+		return Preference_Sub8.INTERFACES[interfaceId].getComponent(hash);
 	}
 }

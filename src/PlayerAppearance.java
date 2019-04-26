@@ -365,7 +365,7 @@ public class PlayerAppearance {
 					}
 				}
 				if (animation_9 != null && animation_10 != null) {
-					Class521_Sub1_Sub3_Sub1.method16078(meshrasterizer_45, animation_9, animation_10, -484588693);
+					Transform_Sub1_Sub3_Sub1.method16078(meshrasterizer_45, animation_9, animation_10, -484588693);
 				} else if (animation_9 != null) {
 					animation_9.rasterize(meshrasterizer_45, 0);
 				} else if (animation_10 != null) {
@@ -524,7 +524,7 @@ public class PlayerAppearance {
 	static void method4032(String string_0, String string_1, int i_2, int i_3, int i_4, long long_5, int i_7, int i_8, boolean bool_9, boolean bool_10, long long_11, boolean bool_13, int i_14) {
 		if (!Class20.aBool161 && Class20.anInt169 < 520) {
 			i_2 = i_2 != -1 ? i_2 : client.anInt7427;
-			Class282_Sub50_Sub7 class282_sub50_sub7_15 = new Class282_Sub50_Sub7(string_0, string_1, i_2, i_3, i_4, long_5, i_7, i_8, bool_9, bool_10, long_11, bool_13);
+			CacheableNode_Sub7 class282_sub50_sub7_15 = new CacheableNode_Sub7(string_0, string_1, i_2, i_3, i_4, long_5, i_7, i_8, bool_9, bool_10, long_11, bool_13);
 			Class361.method6269(class282_sub50_sub7_15);
 		}
 	}

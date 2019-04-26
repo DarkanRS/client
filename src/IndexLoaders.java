@@ -88,15 +88,15 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4697) {
-			if (Class468_Sub9.JS5_MANAGER == null) {
-				Class468_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER);
+			if (Preference_Sub9.JS5_MANAGER == null) {
+				Preference_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER);
 			}
 
-			if (!Class468_Sub9.JS5_MANAGER.init()) {
+			if (!Preference_Sub9.JS5_MANAGER.init()) {
 				return 0;
 			}
 
-			Class282_Sub17_Sub1.method15402(0, (String) null, true, 1056006027);
+			Node_Sub17_Sub1.method15402(0, (String) null, true, 1056006027);
 			USING_JAGEX_IMAGE_FORMAT = !NodeCollection.method8145();
 			LOADING_FONT_INDEX = loadIndex(USING_JAGEX_IMAGE_FORMAT ? IndexReference.INDEX_34 : IndexReference.INDEX_32, false, 1, true);
 			GAME_TIPS_INDEX = loadIndex(IndexReference.INDEX_33, false, 1, true);
@@ -115,14 +115,14 @@ public class IndexLoaders {
 				return i_2 / 4;
 			}
 
-			Class96_Sub10_Sub1.anInt10159 = LOADING_FONT_INDEX.getCrc();
+			CutsceneAction_Sub10_Sub1.anInt10159 = LOADING_FONT_INDEX.getCrc();
 			Class302.anInt3561 = GAME_TIPS_INDEX.getCrc();
 			Queue.loadFontArchiveIds(LOADING_FONT_INDEX);
-			int i_3 = Class393.preferences.aClass468_Sub11_8217.method12699((byte) -106);
-			Class275_Sub7.GAME_TIPS_LOADER = new GameTipsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
-			Class399[] arr_4 = Class275_Sub7.GAME_TIPS_LOADER.method6786(i_3, -1983202433);
+			int i_3 = Class393.preferences.aPreference_Sub11_8217.method12699((byte) -106);
+			EntityNode_Sub7.GAME_TIPS_LOADER = new GameTipsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, GAME_TIPS_INDEX);
+			Class399[] arr_4 = EntityNode_Sub7.GAME_TIPS_LOADER.method6786(i_3, -1983202433);
 			if (arr_4.length == 0) {
-				arr_4 = Class275_Sub7.GAME_TIPS_LOADER.method6786(0, 462233129);
+				arr_4 = EntityNode_Sub7.GAME_TIPS_LOADER.method6786(0, 462233129);
 			}
 
 			Class29 class29_5 = new Class29(LOADING_FONT_INDEX, FONT_METRICS_INDEX);
@@ -130,7 +130,7 @@ public class IndexLoaders {
 				Class302.anInterface27Array3559 = new Interface27[arr_4.length];
 
 				for (int i_6 = 0; i_6 < Class302.anInterface27Array3559.length; i_6++) {
-					Class302.anInterface27Array3559[i_6] = new Class299(Class275_Sub7.GAME_TIPS_LOADER.method6785(arr_4[i_6].anInt4814), arr_4[i_6].anInt4815, arr_4[i_6].anInt4816, class29_5);
+					Class302.anInterface27Array3559[i_6] = new Class299(EntityNode_Sub7.GAME_TIPS_LOADER.method6785(arr_4[i_6].anInt4814), arr_4[i_6].anInt4815, arr_4[i_6].anInt4816, class29_5);
 				}
 			}
 		}
@@ -153,13 +153,13 @@ public class IndexLoaders {
 					return 0;
 				}
 
-				if (Class302.anInterface27Array3559.length > 1 && Class275_Sub7.GAME_TIPS_LOADER.method6790(906509340) && Class302.anInterface27Array3559[1].method191(1471914500) < 100) {
+				if (Class302.anInterface27Array3559.length > 1 && EntityNode_Sub7.GAME_TIPS_LOADER.method6790(906509340) && Class302.anInterface27Array3559[1].method191(1471914500) < 100) {
 					return 0;
 				}
 			}
 
 			Class487.aClass378_5752.method6403(client.anInterface35_7206);
-			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 425996443);
+			Node_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 425996443);
 			Class365.setGameState(15);
 		}
 
@@ -216,7 +216,7 @@ public class IndexLoaders {
 				return (i - Class302.anInt3564) * 100 / (100 - Class302.anInt3564);
 			}
 
-			Class468_Sub20.method12806(SPRITES_INDEX);
+			Preference_Sub20.method12806(SPRITES_INDEX);
 			Class487.aClass378_5752 = new Class378(SPRITES_INDEX, FONT_METRICS_INDEX, Class52_Sub3.getFontSpecifications());
 		}
 
@@ -253,7 +253,7 @@ public class IndexLoaders {
 
 			LinkedNodeList.EQUIPMENT_DEFAULTS = new EquipmentDefaults(DEFAULTS_INDEX);
 			Class149_Sub2.DEFAULTS_LOADER_7 = new Defaults7Loader(DEFAULTS_INDEX);
-			Class282_Sub13.DEFAULTS_LOADER_8 = new Defaults8Loader(DEFAULTS_INDEX);
+			Node_Sub13.DEFAULTS_LOADER_8 = new Defaults8Loader(DEFAULTS_INDEX);
 		}
 
 		if (LoadingStage.aClass387_4704 == LOADING_STAGE) {
@@ -323,12 +323,12 @@ public class IndexLoaders {
 
 		if (LoadingStage.aClass387_4707 == LOADING_STAGE) {
 			Class320.VARC_INT = new int[VARC_LOADER.size];
-			Class282_Sub17_Sub2.VARC_BOOL = new boolean[VARC_LOADER.size];
+			Node_Sub17_Sub2.VARC_BOOL = new boolean[VARC_LOADER.size];
 			Class462.VARC_STRING = new String[VARC_STRING_LOADER.size];
 
 			for (i = 0; i < VARC_LOADER.size; i++) {
 				if (VARC_LOADER.method6873(i, (byte) 124).anInt4983 == 0) {
-					Class282_Sub17_Sub2.VARC_BOOL[i] = true;
+					Node_Sub17_Sub2.VARC_BOOL[i] = true;
 					++client.anInt7399;
 				}
 
@@ -351,8 +351,8 @@ public class IndexLoaders {
 
 			bool_10 = true;
 
-			for (i_2 = 0; i_2 < Class468_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
-				IComponentDefinitions icomponentdefinitions_8 = Class468_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
+			for (i_2 = 0; i_2 < Preference_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
+				IComponentDefinitions icomponentdefinitions_8 = Preference_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
 				if (icomponentdefinitions_8.type == 5 && icomponentdefinitions_8.anInt1320 != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.anInt1320, 0)) {
 					bool_10 = false;
 				}
@@ -380,29 +380,29 @@ public class IndexLoaders {
 			VarDefinitionLoader.aThread4520 = null;
 			LOADING_FONT_INDEX = null;
 			GAME_TIPS_INDEX = null;
-			Class275_Sub7.GAME_TIPS_LOADER = null;
+			EntityNode_Sub7.GAME_TIPS_LOADER = null;
 			Class302.anInterface27Array3559 = null;
 			Class358.method6234();
 			client.aBool7465 = Class393.preferences.safeMode.getValue((byte) -77) == 1;
 			Class393.preferences.setValue(Class393.preferences.safeMode, 1, -425362702);
 			if (client.aBool7465) {
-				Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, 2109366156);
-			} else if (Class393.preferences.aClass468_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
-				Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, -28181047);
+				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, 2109366156);
+			} else if (Class393.preferences.aPreference_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
+				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, -28181047);
 			}
 
 			Class190.savePreferences((byte) 125);
 			if (client.aBool7465) {
 				ParticleProducer.method11500(0, false);
 			} else {
-				ParticleProducer.method11500(Class393.preferences.aClass468_Sub18_8214.getValue(2116214746), false);
+				ParticleProducer.method11500(Class393.preferences.aPreference_Sub18_8214.getValue(2116214746), false);
 			}
 
 			Class440.method7373(Class393.preferences.screenSize.method12687(-2050547783), -1, -1, false, (byte) 65);
 			Class487.aClass378_5752.method6403(client.anInterface35_7206);
-			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, -2058774683);
+			Node_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, -2058774683);
 			Class188.method3139(Renderers.SOFTWARE_RENDERER, SPRITES_INDEX);
-			Class122.method2109(Class182.aClass160Array2261, (byte) -7);
+			Class122.method2109(Class182.aNativeSpriteArray2261, (byte) -7);
 		}
 
 		return Class152.method2604();
@@ -419,7 +419,7 @@ public class IndexLoaders {
 			js5cachefile_4 = new JS5CacheFile(i_5, client.aClass440_3270, Class97.aClass440Array996[i_5]);
 		}
 
-		Class492.aClass327_Sub1Array5777[i_5] = Class468_Sub9.JS5_MANAGER.method5480(i_5, js5cachefile_4, Class533.aClass203_7073);
+		Class492.aClass327_Sub1Array5777[i_5] = Preference_Sub9.JS5_MANAGER.method5480(i_5, js5cachefile_4, Class533.aClass203_7073);
 		Class492.aClass327_Sub1Array5777[i_5].method12544();
 		return new Index(Class492.aClass327_Sub1Array5777[i_5], bool_1, i_2);
 	}

@@ -739,7 +739,7 @@ public abstract class MeshRasterizer {
 
 	public abstract int cu();
 
-	public abstract void method11282(Matrix44Var var1, Class275_Sub5 var2, int var3);
+	public abstract void method11282(Matrix44Var var1, EntityNode_Sub5 var2, int var3);
 
 	public abstract void X(short var1, short var2);
 
@@ -816,7 +816,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void method11292(Matrix44Var var1, int var2, boolean var3);
 
-	public abstract void method11293(Matrix44Var var1, Class275_Sub5 var2, int var3);
+	public abstract void method11293(Matrix44Var var1, EntityNode_Sub5 var2, int var3);
 
 	public abstract int ar();
 

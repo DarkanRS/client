@@ -52,11 +52,11 @@ public class TextureDetails {
     }
 
     public static void method2876(NPC npc_0) {
-        for (Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1114732326)) {
-            if (class282_sub48_2.aClass521_Sub1_Sub1_Sub2_Sub2_8085 == npc_0) {
-                if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
-                    Class79.aClass282_Sub15_Sub4_783.method15276(class282_sub48_2.aClass282_Sub15_Sub5_8099);
-                    class282_sub48_2.aClass282_Sub15_Sub5_8099 = null;
+        for (Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.head(); class282_sub48_2 != null; class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass482_8074.next(1114732326)) {
+            if (class282_sub48_2.aTransform_Sub1_Sub1_Sub2_Sub2_8085 == npc_0) {
+                if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
+                    Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+                    class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
                 }
                 class282_sub48_2.remove();
                 break;

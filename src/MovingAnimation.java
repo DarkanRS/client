@@ -1,18 +1,18 @@
 public class MovingAnimation extends Animation {
 
 	public boolean aBool7891 = false;
-	Animable aClass521_Sub1_Sub1_Sub2_7892;
+	Animable aTransform_Sub1_Sub1_Sub2_7892;
 
 	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
-		if (!this.aBool7891 || !this.aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || this.aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187)) {
-			World.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_Sub1_Sub2_7892);
+		if (!this.aBool7891 || !this.aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || this.aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187)) {
+			World.method3662(animationdefinitions_1, i_2, this.aTransform_Sub1_Sub1_Sub2_7892);
 		}
 
 	}
 
 	MovingAnimation(Animable animable_1) {
 		super(false);
-		this.aClass521_Sub1_Sub1_Sub2_7892 = animable_1;
+		this.aTransform_Sub1_Sub1_Sub2_7892 = animable_1;
 	}
 
 	public static String[] method12681(String string_0, char var_1) {
@@ -39,8 +39,8 @@ public class MovingAnimation extends Animation {
 		if (MapAreaIndexLoader.INTERFACES_LOADED[interfaceId]) {
 			return true;
 		} else {
-			Class468_Sub8.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, Class468_Sub8.INTERFACES[interfaceId], false, (byte) -15);
-			if (Class468_Sub8.INTERFACES[interfaceId] == null) {
+			Preference_Sub8.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, Preference_Sub8.INTERFACES[interfaceId], false, (byte) -15);
+			if (Preference_Sub8.INTERFACES[interfaceId] == null) {
 				return false;
 			} else {
 				MapAreaIndexLoader.INTERFACES_LOADED[interfaceId] = true;

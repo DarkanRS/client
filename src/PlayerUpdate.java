@@ -308,14 +308,14 @@ public class PlayerUpdate {
 			byte[] bytes_21 = new byte[i_6];
 			RsByteBuffer rsbytebuffer_22 = new RsByteBuffer(bytes_21);
 			stream.readBytes(bytes_21, 0, i_6);
-			Class197.aClass282_Sub35Array2428[i_1] = rsbytebuffer_22;
+			Class197.aNode_Sub35Array2428[i_1] = rsbytebuffer_22;
 			player.decodeAppearance(rsbytebuffer_22);
 		}
 	
 		if ((flags & 0x10) != 0) {
-			int[] ints_23 = new int[Class8_Sub3.method14339().length];
+			int[] ints_23 = new int[FontRenderer_Sub3.method14339().length];
 	
-			for (int i_7 = 0; i_7 < Class8_Sub3.method14339().length; i_7++) {
+			for (int i_7 = 0; i_7 < FontRenderer_Sub3.method14339().length; i_7++) {
 				ints_23[i_7] = stream.readBigSmart();
 			}
 	

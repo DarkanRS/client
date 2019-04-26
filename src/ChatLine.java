@@ -3,7 +3,7 @@ import java.util.Iterator;
 public class ChatLine {
 
     public static String aString1093;
-    public int anInt1085 = Class282_Sub20_Sub28.method15396();
+    public int anInt1085 = Node_Sub20_Sub28.method15396();
     public int anInt1084;
     public int type;
     public int anInt1086;
@@ -15,7 +15,7 @@ public class ChatLine {
     public String message;
 
     void set(int i_1, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
-        this.anInt1085 = Class282_Sub20_Sub28.method15396();
+        this.anInt1085 = Node_Sub20_Sub28.method15396();
         this.anInt1084 = client.cycles;
         this.type = i_1;
         this.anInt1086 = i_2;

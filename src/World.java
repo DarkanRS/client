@@ -3,7 +3,7 @@ public class World {
 	public String activity;
 	public int countryId;
 
-	public static void method3662(AnimationDefinitions animDef, int i_1, Class521_Sub1 class521_sub1_2) {
+	public static void method3662(AnimationDefinitions animDef, int i_1, Transform_Sub1 class521_sub1_2) {
 		if (Class260.anInt3219 < 50 && animDef != null && animDef.anIntArrayArray5913 != null && i_1 < animDef.anIntArrayArray5913.length && animDef.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == VertexNormal.myPlayer.plane) {
 			int i_4 = animDef.anIntArrayArray5913[i_1][0];
 			int i_5 = i_4 >> 8;
@@ -33,10 +33,10 @@ public class World {
 				}
 			} else {
 				if (class521_sub1_2 == VertexNormal.myPlayer) {
-					if (Class393.preferences.aClass468_Sub13_8225.method12714() == 0) {
+					if (Class393.preferences.aPreference_Sub13_8225.method12714() == 0) {
 						return;
 					}
-				} else if (Class393.preferences.aClass468_Sub13_8193.method12714() == 0) {
+				} else if (Class393.preferences.aPreference_Sub13_8193.method12714() == 0) {
 					return;
 				}
 

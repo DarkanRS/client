@@ -42,7 +42,7 @@ public abstract class Ground {
 
 	public abstract void z(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract void method6711(Class282_Sub24 var1, int[] var2);
+	public abstract void method6711(Node_Sub24 var1, int[] var2);
 
 	public abstract void UA(Shadow var1, int var2, int var3, int var4);
 
@@ -50,7 +50,7 @@ public abstract class Ground {
 
 	public abstract boolean method6712(Shadow var1, int var2, int var3, int var4);
 
-	public abstract void method6713(Class282_Sub24 var1, int[] var2);
+	public abstract void method6713(Node_Sub24 var1, int[] var2);
 
 	public abstract void m(int var1, int var2, int var3);
 
@@ -88,11 +88,11 @@ public abstract class Ground {
 		this.tileHeights = ints_4;
 	}
 
-	public abstract void method6720(Class282_Sub24 var1, int[] var2);
+	public abstract void method6720(Node_Sub24 var1, int[] var2);
 
 	public abstract Shadow s(int var1, int var2, Shadow var3);
 
-	public abstract void method6721(Class282_Sub24 var1, int[] var2);
+	public abstract void method6721(Node_Sub24 var1, int[] var2);
 
 	public final int method6722(int i_1, int i_2) {
 		return this.tileHeights[i_1][i_2];
@@ -119,7 +119,7 @@ public abstract class Ground {
 			}
 			int i_13 = i_12 * i_4 + i_5 * i_11 >> 14;
 			int i_14 = i_5 * i_12 - i_11 * i_4 >> 14;
-			NativeSprite nativesprite_15 = Class282_Sub20_Sub15.aClass160Array9838[i_6];
+			NativeSprite nativesprite_15 = Node_Sub20_Sub15.aNativeSpriteArray9838[i_6];
 			int i_16 = nativesprite_15.method2747();
 			int i_17 = nativesprite_15.method2793();
 			int i_18 = i_13 + icomponentdefinitions_0.anInt1301 / 2 - i_16 / 2;
@@ -134,7 +134,7 @@ public abstract class Ground {
 				i_24 -= 6;
 				int i_25 = (int) (Math.sin(d_22) * (double) i_24);
 				int i_26 = (int) (Math.cos(d_22) * (double) i_24);
-				Class245.aClass160Array3027[i_6].method2758((float) i_2 + (float) icomponentdefinitions_0.anInt1301 / 2.0F + (float) i_25, (float) i_3 + (float) icomponentdefinitions_0.anInt1429 / 2.0F - (float) i_26, 4096, (int) (65535.0D * (-d_22 / 6.283185307179586D)));
+				Class245.aNativeSpriteArray3027[i_6].method2758((float) i_2 + (float) icomponentdefinitions_0.anInt1301 / 2.0F + (float) i_25, (float) i_3 + (float) icomponentdefinitions_0.anInt1429 / 2.0F - (float) i_26, 4096, (int) (65535.0D * (-d_22 / 6.283185307179586D)));
 			}
 		}
 	}

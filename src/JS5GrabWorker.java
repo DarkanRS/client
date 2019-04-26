@@ -77,7 +77,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				return null;
 			} else {
 				byte[] bytes_2 = this.refTableReq.getData(862505694);
-				if (this.refTableReq instanceof Class282_Sub50_Sub11_Sub2) {
+				if (this.refTableReq instanceof CacheableNode_Sub11_Sub2) {
 					if (bytes_2 == null) {
 						throw new RuntimeException();
 					}
@@ -214,7 +214,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		} else {
 			byte[] bytes_5 = ((JS5CacheRequest) obj_4).getData(-530456645);
 			byte[] bytes_8;
-			if (obj_4 instanceof Class282_Sub50_Sub11_Sub2) {
+			if (obj_4 instanceof CacheableNode_Sub11_Sub2) {
 				try {
 					if (bytes_5 != null && bytes_5.length > 2) {
 						aCRC32_7804.reset();
@@ -311,7 +311,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				return null;
 			} else {
 				byte[] bytes_1 = this.refTableReq.getData(1691080819);
-				if (this.refTableReq instanceof Class282_Sub50_Sub11_Sub2) {
+				if (this.refTableReq instanceof CacheableNode_Sub11_Sub2) {
 					if (bytes_1 == null) {
 						throw new RuntimeException();
 					}
@@ -526,13 +526,13 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	static boolean method12562(int i_0) {
-		if (AccountCreationStage.aClass282_Sub50_Sub7_12 == null) {
+		if (AccountCreationStage.aCacheableNode_Sub7_12 == null) {
 			return false;
 		} else {
-			if (AccountCreationStage.aClass282_Sub50_Sub7_12.clickType >= 2000) {
-				AccountCreationStage.aClass282_Sub50_Sub7_12.clickType -= 2000;
+			if (AccountCreationStage.aCacheableNode_Sub7_12.clickType >= 2000) {
+				AccountCreationStage.aCacheableNode_Sub7_12.clickType -= 2000;
 			}
-			return AccountCreationStage.aClass282_Sub50_Sub7_12.clickType == 1007;
+			return AccountCreationStage.aCacheableNode_Sub7_12.clickType == 1007;
 		}
 	}
 }

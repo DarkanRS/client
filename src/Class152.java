@@ -16,7 +16,7 @@ public abstract class Class152 {
 					throw new IOException();
 				}
 			}
-			Class468_Sub10.method12696(new RsByteBuffer(bytes_2));
+			Preference_Sub10.method12696(new RsByteBuffer(bytes_2));
 		} catch (Exception exception_6) {
 			;
 		}
@@ -113,7 +113,7 @@ public abstract class Class152 {
 				Class363.method6286(long_0);
 			}
 		}
-		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
+		CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
 		if (client.anInt7349 != -1) {
 			RSHookableInterface.method8777(client.anInt7349, (byte) -80);
 		}
@@ -129,7 +129,7 @@ public abstract class Class152 {
 			StructIndexLoader.method7039((byte) 58);
 		}
 		Renderers.SOFTWARE_RENDERER.L();
-		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 23);
+		Node_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 23);
 		i_2 = QuickchatFiller.method1141(563483982);
 		if (i_2 == -1) {
 			i_2 = client.anInt7427;
@@ -140,7 +140,7 @@ public abstract class Class152 {
 		UnderlayIndexLoader.method8036(i_2);
 		int i_3 = VertexNormal.myPlayer.getSize() << 8;
 		Vector3 vector3_4 = VertexNormal.myPlayer.method11166().aClass385_3595;
-		Class96_Sub21.method14675(VertexNormal.myPlayer.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
+		CutsceneAction_Sub21.method14675(VertexNormal.myPlayer.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
 		client.anInt7261 = 0;
 	}
 
@@ -185,7 +185,7 @@ public abstract class Class152 {
 					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_2)) {
 						LoadingStage.method6681(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592), (byte) 58);
 					} else {
-						BufferedConnectionContext class184_7 = Class468_Sub20.method12807(1188178835);
+						BufferedConnectionContext class184_7 = Preference_Sub20.method12807(1188178835);
 						TCPPacket tcpmessage_9 = Class271.createPacket(OutgoingPacket.ADD_FRIEND, class184_7.isaac);
 						tcpmessage_9.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_9.buffer.writeString(string_0);

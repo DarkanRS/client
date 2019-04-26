@@ -84,8 +84,8 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		rsbytebuffer_0.writeBytes(bytes_2, 0, 24);
 	}
 
-	public static final Class282_Sub44 method812(int i_0, Class282_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
-		Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) i_0);
+	public static final Node_Sub44 method812(int i_0, Node_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
+		Node_Sub44 class282_sub44_5 = (Node_Sub44) client.aClass465_7442.get((long) i_0);
 		if (class282_sub44_5 != null) {
 			Class351.closeChildren(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
 		}
@@ -101,7 +101,7 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		}
 		OutputStream_Sub1.method12938((byte) 26);
 		if (icomponentdefinitions_6 != null) {
-			HostNameIdentifier.method483(Class468_Sub8.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
+			HostNameIdentifier.method483(Preference_Sub8.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
 		}
 		if (!bool_3) {
 			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);

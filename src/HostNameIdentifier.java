@@ -22,7 +22,7 @@ public class HostNameIdentifier implements Runnable {
 	public static void clearComponents(int i_0, int i_1) {
 		if (i_0 != -1 && !MapAreaIndexLoader.INTERFACES_LOADED[i_0]) {
 			Class388.INTERFACE_INDEX.clearFiles(i_0);
-			Class468_Sub8.INTERFACES[i_0] = null;
+			Preference_Sub8.INTERFACES[i_0] = null;
 		}
 	}
 
@@ -30,7 +30,7 @@ public class HostNameIdentifier implements Runnable {
 		if (Class182.HARDWARE_RENDERER != null) {
 			Class182.HARDWARE_RENDERER.method8396(-517038);
 			Class182.HARDWARE_RENDERER = null;
-			Class182.aClass8_2259 = null;
+			Class182.aFontRenderer_2259 = null;
 		}
 	}
 
@@ -54,15 +54,15 @@ public class HostNameIdentifier implements Runnable {
 	}
 
 	public static void method487(Class116 class116_0, int i_1) {
-		Class148.aClass282_Sub15_Sub2_1735.method15101((short) 21815);
-		Class282_Sub15_Sub2 class282_sub15_sub2_3 = class116_0.method1954();
+		Class148.aNode_Sub15_Sub2_1735.method15101((short) 21815);
+		Node_Sub15_Sub2 class282_sub15_sub2_3 = class116_0.method1954();
 		if (class282_sub15_sub2_3 != null) {
 			Class502.aClass253_5830.method4334();
-			Class148.aClass282_Sub15_Sub2_1735 = class282_sub15_sub2_3;
-			Class148.aClass282_Sub15_Sub2_1735.method15098(class116_0.method1955(), false, 355198113);
-			Class148.aClass282_Sub15_Sub2_1735.method15144(i_1, -216399579);
+			Class148.aNode_Sub15_Sub2_1735 = class282_sub15_sub2_3;
+			Class148.aNode_Sub15_Sub2_1735.method15098(class116_0.method1955(), false, 355198113);
+			Class148.aNode_Sub15_Sub2_1735.method15144(i_1, -216399579);
 			if (Class502.aClass253_5830 != null) {
-				Class502.aClass253_5830.method4329(Class148.aClass282_Sub15_Sub2_1735);
+				Class502.aClass253_5830.method4329(Class148.aNode_Sub15_Sub2_1735);
 			}
 			Class332.method5929(692998744);
 		}

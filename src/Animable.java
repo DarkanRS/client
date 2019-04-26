@@ -1,4 +1,4 @@
-public abstract class Animable extends Class521_Sub1_Sub1 {
+public abstract class Animable extends Transform_Sub1_Sub1 {
 
 	public int index;
 	public int anInt10326;
@@ -39,7 +39,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public EntityList aClass457_10333;
 	public int faceEntity;
 	public int[] currentAnimations;
-	public MovingAnimation aClass456_Sub3_10337;
+	public MovingAnimation aAnimation_Sub3_10337;
 	public Animation currentAnimation;
 	public int anInt10347;
 	public int anInt10348;
@@ -55,9 +55,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public int[] regionBaseX;
 	public int[] regionBaseY;
 	public byte[] walkTypes;
-	public MeshRasterizer[] aClass528Array10372;
+	public MeshRasterizer[] aMeshRasterizerArray10372;
 	public Class161[] aClass161Array10339;
-	public Class456_Sub2_Sub1[] aClass456_Sub2_Sub1Array10354;
+	public Animation_Sub2_Sub1[] aAnimation_Sub2_Sub1Array10354;
 	Class163 aClass163_10334;
 	int anInt10322;
 	int anInt10323;
@@ -445,13 +445,13 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public final void displayHitbar(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		HitbarDefinitions hitbardefinitions_8 = IndexLoaders.HITBAR_LOADER.getDefinitions(i_1, -133815568);
-		Class275_Sub7 class275_sub7_9 = null;
-		Class275_Sub7 class275_sub7_10 = null;
+		EntityNode_Sub7 class275_sub7_9 = null;
+		EntityNode_Sub7 class275_sub7_10 = null;
 		int i_11 = hitbardefinitions_8.anInt2440;
 		int i_12 = 0;
 
-		Class275_Sub7 class275_sub7_13;
-		for (class275_sub7_13 = (Class275_Sub7) this.aClass457_10333.method7659(); class275_sub7_13 != null; class275_sub7_13 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 105)) {
+		EntityNode_Sub7 class275_sub7_13;
+		for (class275_sub7_13 = (EntityNode_Sub7) this.aClass457_10333.method7659(); class275_sub7_13 != null; class275_sub7_13 = (EntityNode_Sub7) this.aClass457_10333.method7650((byte) 105)) {
 			++i_12;
 			if (hitbardefinitions_8 == class275_sub7_13.aClass198_7863) {
 				class275_sub7_13.method12601(i_2 + i_4, i_5, i_6, i_3, -555582799);
@@ -469,7 +469,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 
 		if (class275_sub7_10 != null || i_12 < QuickchatFiller.ENTITY_DEFAULTS.anInt7032) {
-			class275_sub7_13 = new Class275_Sub7(hitbardefinitions_8);
+			class275_sub7_13 = new EntityNode_Sub7(hitbardefinitions_8);
 			if (class275_sub7_9 == null) {
 				this.aClass457_10333.method7647(class275_sub7_13, -1998416604);
 			} else {
@@ -504,8 +504,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_6 = (int) class305_4.aClass385_3595.z >> 9;
 		if (this.aClass206_7970 != null && i_5 >= 1 && i_6 >= 1 && i_5 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_6 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) {
 			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][i_5][i_6];
-			if (class293_7 != null && class293_7.aClass521_Sub1_Sub3_3499 != null) {
-				return class293_7.aClass521_Sub1_Sub3_3499.aShort9561 + i_3;
+			if (class293_7 != null && class293_7.aTransform_Sub1_Sub3_3499 != null) {
+				return class293_7.aTransform_Sub1_Sub3_3499.aShort9561 + i_3;
 			}
 		}
 
@@ -673,7 +673,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 
-				MeshRasterizer meshrasterizer_14 = this.aClass528Array10372[i_8 + 1] = spotanimdefinitions_11.method11228(graphicalrenderer_1, i_13, class161_10.animation, b_9, (byte) 53);
+				MeshRasterizer meshrasterizer_14 = this.aMeshRasterizerArray10372[i_8 + 1] = spotanimdefinitions_11.method11228(graphicalrenderer_1, i_13, class161_10.animation, b_9, (byte) 53);
 				if (meshrasterizer_14 != null) {
 					if (class161_10.anInt2011 >= 0 && renderanimdefs_2.anIntArrayArray2802 != null && renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011] != null) {
 						int i_15 = 0;
@@ -733,7 +733,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 			} else {
-				this.aClass528Array10372[i_8 + 1] = null;
+				this.aMeshRasterizerArray10372[i_8 + 1] = null;
 			}
 		}
 
@@ -749,7 +749,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public final void method15857(int i_1) {
 		HitbarDefinitions hitbardefinitions_3 = IndexLoaders.HITBAR_LOADER.getDefinitions(i_1, 757267285);
 
-		for (Class275_Sub7 class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7659(); class275_sub7_4 != null; class275_sub7_4 = (Class275_Sub7) this.aClass457_10333.method7650((byte) 67)) {
+		for (EntityNode_Sub7 class275_sub7_4 = (EntityNode_Sub7) this.aClass457_10333.method7659(); class275_sub7_4 != null; class275_sub7_4 = (EntityNode_Sub7) this.aClass457_10333.method7650((byte) 67)) {
 			if (hitbardefinitions_3 == class275_sub7_4.aClass198_7863) {
 				class275_sub7_4.method4887();
 				break;
@@ -794,8 +794,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.aClass457_10333 = new EntityList();
 		this.faceEntity = -1;
 		this.currentAnimations = null;
-		this.aClass456_Sub3_10337 = new MovingAnimation(this);
-		this.currentAnimation = new Class456_Sub2(this);
+		this.aAnimation_Sub3_10337 = new MovingAnimation(this);
+		this.currentAnimation = new Animation_Sub2(this);
 		this.anInt10347 = -1;
 		this.anInt10348 = -1;
 		this.aByte10352 = 0;
@@ -816,14 +816,14 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.regionBaseX = new int[i_2];
 		this.regionBaseY = new int[i_2];
 		this.walkTypes = new byte[i_2];
-		this.aClass528Array10372 = new MeshRasterizer[5];
+		this.aMeshRasterizerArray10372 = new MeshRasterizer[5];
 		this.aClass161Array10339 = new Class161[4];
 
 		for (int i_3 = 0; i_3 < 4; i_3++) {
 			this.aClass161Array10339[i_3] = new Class161(this);
 		}
 
-		this.aClass456_Sub2_Sub1Array10354 = new Class456_Sub2_Sub1[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
+		this.aAnimation_Sub2_Sub1Array10354 = new Animation_Sub2_Sub1[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
 	}
 
 	public abstract boolean method15871();

@@ -66,11 +66,11 @@ public class Class62 implements Interface3 {
 		Class235.anInt2902 = 0;
 		Class235.anInt2905 = 0;
 		Class235.aList2896 = new LinkedList();
-		Class235.aClass275_Sub1_Sub1_Sub1Array2897 = new Particle[1024];
+		Class235.aEntityNode_Sub1_Sub1_Sub1Array2897 = new Particle[1024];
 		Queue.aClass539Array5632 = new ParticleSystem[Class89.anIntArray931[Class235.anInt2906] + 1];
 		Class235.anInt2899 = 0;
 		Class235.anInt2901 = 0;
-		Class282_Sub20_Sub22.setParticleIndex(index_0);
+		Node_Sub20_Sub22.setParticleIndex(index_0);
 		Class111.method1866(index_0);
 	}
 

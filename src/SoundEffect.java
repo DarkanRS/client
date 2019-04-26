@@ -18,9 +18,9 @@ public class SoundEffect {
 		this.loopEnd = buffer.readUnsignedShort();
 	}
 
-	public Class282_Sub26_Sub1_Sub2 getMixedAudio() {
+	public Node_Sub26_Sub1_Sub2 getMixedAudio() {
 		byte[] mixed = this.mix();
-		return new Class282_Sub26_Sub1_Sub2(mixed, this.loopBegin * 22050 / 1000, this.loopEnd * 22050 / 1000);
+		return new Node_Sub26_Sub1_Sub2(mixed, this.loopBegin * 22050 / 1000, this.loopEnd * 22050 / 1000);
 	}
 
 	public final int getDelay() {

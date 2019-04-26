@@ -74,7 +74,7 @@ public class MapSpriteDefinitions {
 			Class9.aLong86 = rsbytebuffer_1.readLong();
 		}
 		if (Class9.aLong77 < 0L) {
-			Class8_Sub1.method13784(35, -90187895);
+			FontRenderer_Sub1.method13784(35, -90187895);
 		} else {
 			Class455.method7558(false, true, "", "", Class9.aLong77);
 		}

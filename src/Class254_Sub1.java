@@ -14,7 +14,7 @@ public class Class254_Sub1 extends Class254 implements Runnable {
 					}
 
 					Class89.sleep(10L);
-					Class282_Sub20_Sub27.method15395((Object) null, -398672948);
+					Node_Sub20_Sub27.method15395((Object) null, -398672948);
 				}
 			} catch (Exception exception_4) {
 				Class151.method2594((String) null, exception_4, (byte) -37);

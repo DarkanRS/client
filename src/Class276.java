@@ -2,7 +2,7 @@ public class Class276 {
 
 	static String[] aStringArray3345;
 
-	public static RsByteBuffer aClass282_Sub35_3346;
+	public static RsByteBuffer aNode_Sub35_3346;
 
 	Class276() throws Throwable {
 		throw new Error();

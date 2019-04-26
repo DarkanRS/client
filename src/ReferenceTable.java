@@ -33,7 +33,7 @@ public class ReferenceTable {
     byte[] headerWhirlpool;
 
     void decodeHeader(byte[] bytes_1) {
-        RsByteBuffer stream = new RsByteBuffer(Class282_Sub17_Sub6.method15438(bytes_1, (byte) 90));
+        RsByteBuffer stream = new RsByteBuffer(Node_Sub17_Sub6.method15438(bytes_1, (byte) 90));
         int protocol = stream.readUnsignedByte();
         if (protocol >= 5 && protocol <= 7) {
             if (protocol >= 6) {

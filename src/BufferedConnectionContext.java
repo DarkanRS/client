@@ -24,7 +24,7 @@ public class BufferedConnectionContext {
 
 	NodeCollection queuedPackets = new NodeCollection();
 
-	RsByteBuffer aClass282_Sub35_2282 = new RsByteBuffer(1600);
+	RsByteBuffer aNode_Sub35_2282 = new RsByteBuffer(1600);
 
 	RsBitsBuffer recievedBuffer = new RsBitsBuffer(15000);
 
@@ -48,16 +48,16 @@ public class BufferedConnectionContext {
 
 	public final void method3047(int i_1) throws IOException {
 		if (this.aClass202_2281 != null && this.anInt2279 > 0) {
-			this.aClass282_Sub35_2282.index = 0;
+			this.aNode_Sub35_2282.index = 0;
 			while (true) {
 				TCPPacket tcpmessage_2 = (TCPPacket) this.queuedPackets.head();
-				if (tcpmessage_2 == null || tcpmessage_2.anInt7680 > this.aClass282_Sub35_2282.buffer.length - this.aClass282_Sub35_2282.index) {
-					this.aClass202_2281.write(this.aClass282_Sub35_2282.buffer, this.aClass282_Sub35_2282.index, -771843978);
-					this.anInt2297 += this.aClass282_Sub35_2282.index;
+				if (tcpmessage_2 == null || tcpmessage_2.anInt7680 > this.aNode_Sub35_2282.buffer.length - this.aNode_Sub35_2282.index) {
+					this.aClass202_2281.write(this.aNode_Sub35_2282.buffer, this.aNode_Sub35_2282.index, -771843978);
+					this.anInt2297 += this.aNode_Sub35_2282.index;
 					this.anInt2290 = 0;
 					break;
 				}
-				this.aClass282_Sub35_2282.writeBytes(tcpmessage_2.buffer.buffer, 0, tcpmessage_2.anInt7680);
+				this.aNode_Sub35_2282.writeBytes(tcpmessage_2.buffer.buffer, 0, tcpmessage_2.anInt7680);
 				this.anInt2279 -= tcpmessage_2.anInt7680;
 				tcpmessage_2.remove();
 				tcpmessage_2.buffer.method13059();

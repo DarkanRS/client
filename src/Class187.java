@@ -35,6 +35,6 @@ public class Class187 {
 	}
 
 	public static void method3121(int i_0, short s_1) {
-		Class148.aClass282_Sub15_Sub2_1735.method15094(i_0 >> 8);
+		Class148.aNode_Sub15_Sub2_1735.method15094(i_0 >> 8);
 	}
 }

@@ -8,9 +8,9 @@ public class CS2Executor {
 	Class191 aClass191_7008;
 	Class346 aClass346_7009;
 	ClanSettings currentClanSettings;
-	ClanChannel aClass282_Sub4_7011;
+	ClanChannel aNode_Sub4_7011;
 	SceneObject anInterface12_7013;
-	Class521_Sub1_Sub2_Sub1 aClass521_Sub1_Sub2_Sub1_7014;
+	Transform_Sub1_Sub2_Sub1 aTransform_Sub1_Sub2_Sub1_7014;
 	Object[] objectLocals;
 	int[] intOpValues;
 	CS2Script current;
@@ -43,7 +43,7 @@ public class CS2Executor {
 	}
 
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
-		CS2Script cs2script_5 = Class225_Sub1.getScript(class397_0, i_1, i_2);
+		CS2Script cs2script_5 = RouteStrategy_Sub1.getScript(class397_0, i_1, i_2);
 		if (cs2script_5 == null) {
 			Shadow.method15509(282059094);
 		} else {
@@ -56,9 +56,9 @@ public class CS2Executor {
 			} else {
 				int i_6 = 0;
 				int i_7 = 0;
-				if (Class282_Sub20_Sub24.aClass118_9884 != null) {
-					i_6 = Class282_Sub20_Sub24.aClass118_9884.anInt1299;
-					i_7 = Class282_Sub20_Sub24.aClass118_9884.anInt1428;
+				if (Node_Sub20_Sub24.aClass118_9884 != null) {
+					i_6 = Node_Sub20_Sub24.aClass118_9884.anInt1299;
+					i_7 = Node_Sub20_Sub24.aClass118_9884.anInt1428;
 				}
 				cs2executor_3.intLocals[0] = Class163.mouseRecorder.getMouseX() - i_6;
 				cs2executor_3.intLocals[1] = Class163.mouseRecorder.getMouseY() - i_7;
@@ -103,7 +103,7 @@ public class CS2Executor {
 				StringBuilder stringbuilder_6 = new StringBuilder(30);
 				stringbuilder_6.append("").append(cs2executor_2.current.data).append(" ");
 				for (int i_7 = cs2executor_2.anInt7002 - 1; i_7 >= 0; --i_7) {
-					stringbuilder_6.append("").append(cs2executor_2.aClass509Array7016[i_7].aClass282_Sub50_Sub5_5869.data).append(" ");
+					stringbuilder_6.append("").append(cs2executor_2.aClass509Array7016[i_7].aCacheableNode_Sub5_5869.data).append(" ");
 				}
 				stringbuilder_6.append("").append(Integer.valueOf(cs2opinfo_4.opcode));
 				Class151.method2594(stringbuilder_6.toString(), exception_8, (byte) -32);
@@ -190,7 +190,7 @@ public class CS2Executor {
 	}
 	
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-		CS2Script cs2script_4 = Class225_Sub1.getScript(Class397.aClass397_4792, i_0, -1);
+		CS2Script cs2script_4 = RouteStrategy_Sub1.getScript(Class397.aClass397_4792, i_0, -1);
 		if (cs2script_4 != null) {
 			CS2Executor cs2executor_5 = Class125.getNextScriptExecutor();
 			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];

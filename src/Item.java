@@ -25,7 +25,7 @@ public class Item extends Node {
 				throw new IllegalStateException("");
 			}
 
-			if (Class187.anInt2363 != 2 && Class187.anInt2363 != 5 && CursorDefintions.aClass160_5004 != null) {
+			if (Class187.anInt2363 != 2 && Class187.anInt2363 != 5 && CursorDefintions.aNativeSprite_5004 != null) {
 				CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 				int i_8;
 				int i_9;
@@ -46,7 +46,7 @@ public class Item extends Node {
 
 				int i_12 = i_8 / 128 + 48;
 				int i_13 = 48 + IndexLoaders.MAP_REGION_DECODER.getSizeY() * 4 - i_9 / 128;
-				CursorDefintions.aClass160_5004.method2762((float) i_2 + (float) icomponentdefinitions_1.anInt1301 / 2.0F, (float) i_3 + (float) icomponentdefinitions_1.anInt1429 / 2.0F, (float) i_12, (float) i_13, i_11, i_10 << 2, class455_6, i_2, i_3);
+				CursorDefintions.aNativeSprite_5004.method2762((float) i_2 + (float) icomponentdefinitions_1.anInt1301 / 2.0F, (float) i_3 + (float) icomponentdefinitions_1.anInt1429 / 2.0F, (float) i_12, (float) i_13, i_11, i_10 << 2, class455_6, i_2, i_3);
 				Class283 class283_14 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 38);
 
 				int i_16;
@@ -78,14 +78,14 @@ public class Item extends Node {
 					Class158.method2731(graphicalrenderer_0, class455_6, icomponentdefinitions_1, i_2, i_3, i_16, i_17, objectdefinitions_23.mapIcon, 2923328);
 				}
 
-				for (Class282_Sub29 class282_sub29_24 = (Class282_Sub29) client.aClass465_7414.method7750(-456921914); class282_sub29_24 != null; class282_sub29_24 = (Class282_Sub29) client.aClass465_7414.method7751((byte) 97)) {
+				for (Node_Sub29 class282_sub29_24 = (Node_Sub29) client.aClass465_7414.method7750(-456921914); class282_sub29_24 != null; class282_sub29_24 = (Node_Sub29) client.aClass465_7414.method7751((byte) 97)) {
 					i_16 = (int) (class282_sub29_24.data >> 28 & 0x3L);
 					if (i_16 == Class187.anInt2351) {
 						i_17 = (int) (class282_sub29_24.data & 0x3fffL) - coordgrid_7.x;
 						i_18 = (int) (class282_sub29_24.data >> 14 & 0x3fffL) - coordgrid_7.y;
 						i_19 = i_17 * 4 + 2 - i_8 / 128;
 						i_20 = i_18 * 4 + 2 - i_9 / 128;
-						Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_19, i_20, Class250.aClass160Array3092[0], 1358567832);
+						Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_19, i_20, Class250.aNativeSpriteArray3092[0], 1358567832);
 					}
 				}
 
@@ -96,7 +96,7 @@ public class Item extends Node {
 					if (Class187.anInt2361 != 0) {
 						i_21 = Class187.anInt2361 * 4 + 2 - i_8 / 128 + (VertexNormal.myPlayer.getSize() - 1) * 2;
 						i_16 = 2 + Class187.anInt2359 * 4 - i_9 / 128 + (VertexNormal.myPlayer.getSize() - 1) * 2;
-						Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_21, i_16, Class16.aClass160Array145[Class187.aBool2360 ? 1 : 0], 1471010271);
+						Class190.method3149(icomponentdefinitions_1, class455_6, i_2, i_3, i_21, i_16, Class16.aNativeSpriteArray145[Class187.aBool2360 ? 1 : 0], 1471010271);
 					}
 
 					if (!VertexNormal.myPlayer.hidden) {

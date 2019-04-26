@@ -5,8 +5,8 @@ public class JS5LocalRequester implements Runnable {
 	boolean aBool3661 = false;
 	Thread aThread3663 = new Thread(this);
 
-	Class282_Sub50_Sub11_Sub2 method5564(int i_1, byte[] bytes_2, JS5CacheFile js5cachefile_3, int i_4) {
-		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_5 = new Class282_Sub50_Sub11_Sub2();
+	CacheableNode_Sub11_Sub2 method5564(int i_1, byte[] bytes_2, JS5CacheFile js5cachefile_3, int i_4) {
+		CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_5 = new CacheableNode_Sub11_Sub2();
 		class282_sub50_sub11_sub2_5.anInt10467 = 2;
 		class282_sub50_sub11_sub2_5.key = (long) i_1;
 		class282_sub50_sub11_sub2_5.aByteArray10469 = bytes_2;
@@ -25,9 +25,9 @@ public class JS5LocalRequester implements Runnable {
 	public void run() {
 		while (!this.aBool3661) {
 			Queue class477_2 = this.aClass477_3664;
-			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_1;
+			CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_1;
 			synchronized (this.aClass477_3664) {
-				class282_sub50_sub11_sub2_1 = (Class282_Sub50_Sub11_Sub2) this.aClass477_3664.method7937(1974175895);
+				class282_sub50_sub11_sub2_1 = (CacheableNode_Sub11_Sub2) this.aClass477_3664.method7937(1974175895);
 				if (class282_sub50_sub11_sub2_1 == null) {
 					try {
 						this.aClass477_3664.wait();
@@ -71,8 +71,8 @@ public class JS5LocalRequester implements Runnable {
 		this.aThread3663 = null;
 	}
 
-	Class282_Sub50_Sub11_Sub2 method5567(int i_1, JS5CacheFile js5cachefile_2) {
-		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_4 = new Class282_Sub50_Sub11_Sub2();
+	CacheableNode_Sub11_Sub2 method5567(int i_1, JS5CacheFile js5cachefile_2) {
+		CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_4 = new CacheableNode_Sub11_Sub2();
 		class282_sub50_sub11_sub2_4.anInt10467 = 3;
 		class282_sub50_sub11_sub2_4.key = (long) i_1;
 		class282_sub50_sub11_sub2_4.aClass203_10464 = js5cachefile_2;
@@ -81,7 +81,7 @@ public class JS5LocalRequester implements Runnable {
 		return class282_sub50_sub11_sub2_4;
 	}
 
-	void method5569(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_1, int i_2) {
+	void method5569(CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_1, int i_2) {
 		Queue class477_3 = this.aClass477_3664;
 		synchronized (this.aClass477_3664) {
 			this.aClass477_3664.method7936(class282_sub50_sub11_sub2_1);
@@ -90,12 +90,12 @@ public class JS5LocalRequester implements Runnable {
 		}
 	}
 
-	Class282_Sub50_Sub11_Sub2 method5578(int i_1, JS5CacheFile js5cachefile_2, int i_3) {
-		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_4 = new Class282_Sub50_Sub11_Sub2();
+	CacheableNode_Sub11_Sub2 method5578(int i_1, JS5CacheFile js5cachefile_2, int i_3) {
+		CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_4 = new CacheableNode_Sub11_Sub2();
 		class282_sub50_sub11_sub2_4.anInt10467 = 1;
 		Queue class477_5 = this.aClass477_3664;
 		synchronized (this.aClass477_3664) {
-			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_6 = (Class282_Sub50_Sub11_Sub2) this.aClass477_3664.method7941();
+			CacheableNode_Sub11_Sub2 class282_sub50_sub11_sub2_6 = (CacheableNode_Sub11_Sub2) this.aClass477_3664.method7941();
 
 			while (true) {
 				if (class282_sub50_sub11_sub2_6 == null) {
@@ -108,7 +108,7 @@ public class JS5LocalRequester implements Runnable {
 					return class282_sub50_sub11_sub2_4;
 				}
 
-				class282_sub50_sub11_sub2_6 = (Class282_Sub50_Sub11_Sub2) this.aClass477_3664.method7955(-1570817833);
+				class282_sub50_sub11_sub2_6 = (CacheableNode_Sub11_Sub2) this.aClass477_3664.method7955(-1570817833);
 			}
 		}
 

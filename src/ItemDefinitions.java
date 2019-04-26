@@ -523,7 +523,7 @@ public class ItemDefinitions implements Definition {
                 hardwareRenderer.ba(2, 0);
                 hardwareRenderer.B(0, 0, 36, 32, 0, 0);
                 hardwareRenderer.c(0, -1, 0);
-                meshRasterizer.method11282(matrix44var_20, (Class275_Sub5) null, 1);
+                meshRasterizer.method11282(matrix44var_20, (EntityNode_Sub5) null, 1);
                 hardwareRenderer.method8424(matrix44arr_17);
                 int[] ints_21 = hardwareRenderer.ab(0, 0, 36, 32);
                 if (outlineSize >= 1) {
@@ -895,8 +895,8 @@ public class ItemDefinitions implements Definition {
             if (animable_1 == animable_0) {
                 Renderers.SOFTWARE_RENDERER.method8562(i_13 - 1, i_14 - 1, 18, 18, -256);
             }
-            Class275_Sub2 class275_sub2_15 = PlayerVarProvider.method286();
-            class275_sub2_15.aClass521_Sub1_Sub1_Sub2_7739 = animable_1;
+            EntityNode_Sub2 class275_sub2_15 = PlayerVarProvider.method286();
+            class275_sub2_15.aTransform_Sub1_Sub1_Sub2_7739 = animable_1;
             class275_sub2_15.anInt7742 = i_13;
             class275_sub2_15.anInt7743 = i_14;
             class275_sub2_15.anInt7744 = i_13 + 16;

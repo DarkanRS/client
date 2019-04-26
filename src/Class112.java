@@ -23,7 +23,7 @@ public final class Class112 {
 		}
 		boolean bool_28;
 		if (i_2 == 1) {
-			bool_28 = Class96_Sub17.performCalculationS1(i_0, i_1, routestrategy_3, clipmap_4);
+			bool_28 = CutsceneAction_Sub17.performCalculationS1(i_0, i_1, routestrategy_3, clipmap_4);
 		} else if (i_2 == 2) {
 			bool_28 = Class46.performCalculationS2(i_0, i_1, routestrategy_3, clipmap_4);
 		} else {

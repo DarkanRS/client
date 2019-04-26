@@ -73,7 +73,7 @@ public class Class149_Sub1 extends Class149 {
 		} else if (i_0 - i_2 >= Class532_Sub3_Sub1.anInt7071 && i_0 + i_2 <= Class532_Sub3_Sub1.anInt7069 && i_1 - i_3 >= Class532_Sub3_Sub1.anInt7070 && i_3 + i_1 <= Class532_Sub3_Sub1.anInt7068) {
 			InputSubscriberType.method3751(i_0, i_1, i_2, i_3, i_4);
 		} else {
-			Class282_Sub17_Sub3.method15405(i_0, i_1, i_2, i_3, i_4);
+			Node_Sub17_Sub3.method15405(i_0, i_1, i_2, i_3, i_4);
 		}
 
 	}

@@ -27,7 +27,7 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 	}
 
 	void method2341() {
-		this.aClass505_Sub1_1620.method13601(this);
+		this.aGraphicalRenderer_Sub1_1620.method13601(this);
 	}
 
 	public int method1() {
@@ -47,7 +47,7 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 	}
 
 	void method2345() {
-		this.aClass505_Sub1_1620.method13601(this);
+		this.aGraphicalRenderer_Sub1_1620.method13601(this);
 	}
 
 	public void method107(int i_1, byte[] bytes_2, int i_3) {
@@ -66,7 +66,7 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 	}
 
 	void method2346() {
-		this.aClass505_Sub1_1620.method13601(this);
+		this.aGraphicalRenderer_Sub1_1620.method13601(this);
 	}
 
 }

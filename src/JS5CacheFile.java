@@ -284,13 +284,13 @@ public final class JS5CacheFile {
 	}
 
 	public static RouteStrategy method3354(int i_0, int i_1, int i_2, int i_3, SceneObjectType sceneobjecttype_4, int i_5) {
-		Class224.aClass225_Sub4_2777.approxDestinationX = i_0;
-		Class224.aClass225_Sub4_2777.approxDestinationY = i_1;
-		Class224.aClass225_Sub4_2777.approxDestinationSizeX = i_2;
-		Class224.aClass225_Sub4_2777.approxDestinationSizeY = i_3;
-		Class224.aClass225_Sub4_2777.aClass458_7934 = sceneobjecttype_4;
-		Class224.aClass225_Sub4_2777.anInt7933 = i_5;
-		return Class224.aClass225_Sub4_2777;
+		Class224.aRouteStrategy_Sub4_2777.approxDestinationX = i_0;
+		Class224.aRouteStrategy_Sub4_2777.approxDestinationY = i_1;
+		Class224.aRouteStrategy_Sub4_2777.approxDestinationSizeX = i_2;
+		Class224.aRouteStrategy_Sub4_2777.approxDestinationSizeY = i_3;
+		Class224.aRouteStrategy_Sub4_2777.aClass458_7934 = sceneobjecttype_4;
+		Class224.aRouteStrategy_Sub4_2777.anInt7933 = i_5;
+		return Class224.aRouteStrategy_Sub4_2777;
 	}
 
 	public static void method3359() {

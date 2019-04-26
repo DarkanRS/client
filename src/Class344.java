@@ -42,7 +42,7 @@ public class Class344 {
 
     public Class344(int i_1, int i_2) {
         if (i_2 != i_1) {
-            int i_3 = Class96_Sub15.method14645(i_1, i_2);
+            int i_3 = CutsceneAction_Sub15.method14645(i_1, i_2);
             i_1 /= i_3;
             i_2 /= i_3;
             this.anInt4015 = i_1;
@@ -121,17 +121,17 @@ public class Class344 {
     }
 
     public static RouteStrategy method6115(int i_0, int i_1, int i_2, int i_3) {
-        Class224.aClass225_Sub3_2773.approxDestinationX = i_0;
-        Class224.aClass225_Sub3_2773.approxDestinationY = i_1;
-        Class224.aClass225_Sub3_2773.approxDestinationSizeX = i_2;
-        Class224.aClass225_Sub3_2773.approxDestinationSizeY = i_3;
-        Class224.aClass225_Sub3_2773.anInt7929 = 0;
-        return Class224.aClass225_Sub3_2773;
+        Class224.aRouteStrategy_Sub3_2773.approxDestinationX = i_0;
+        Class224.aRouteStrategy_Sub3_2773.approxDestinationY = i_1;
+        Class224.aRouteStrategy_Sub3_2773.approxDestinationSizeX = i_2;
+        Class224.aRouteStrategy_Sub3_2773.approxDestinationSizeY = i_3;
+        Class224.aRouteStrategy_Sub3_2773.anInt7929 = 0;
+        return Class224.aRouteStrategy_Sub3_2773;
     }
 
     public static final void method6119(String string_0) {
         if (Class467.aClass173Array5575 != null) {
-            BufferedConnectionContext class184_2 = Class468_Sub20.method12807(978713855);
+            BufferedConnectionContext class184_2 = Preference_Sub20.method12807(978713855);
             TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.KICK_FRIENDS_CHAT, class184_2.isaac);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
             tcpmessage_3.buffer.writeString(string_0);

@@ -39,11 +39,11 @@ public class Class150 {
 				HashTable.anIntArray5449[i_0] = i_1;
 			}
 		}
-		Class148.aClass282_Sub15_Sub2_1735.method15095(i_0, i_1, 1233853540);
+		Class148.aNode_Sub15_Sub2_1735.method15095(i_0, i_1, 1233853540);
 	}
 
 	static final void method2581(Animable animable_0, int i_1) {
-		MovingAnimation class456_sub3_2 = animable_0.aClass456_Sub3_10337;
+		MovingAnimation class456_sub3_2 = animable_0.aAnimation_Sub3_10337;
 		if (class456_sub3_2.hasDefs() && class456_sub3_2.method7627(1, -1365163818) && class456_sub3_2.method7580(952228354)) {
 			if (class456_sub3_2.aBool7891) {
 				class456_sub3_2.animate(animable_0.getRenderAnimDefs().getStandAnimation());
@@ -98,13 +98,13 @@ public class Class150 {
 				}
 			}
 		}
-		for (int i_8 = 0; i_8 < animable_0.aClass456_Sub2_Sub1Array10354.length; i_8++) {
-			Class456_Sub2_Sub1 class456_sub2_sub1_10 = animable_0.aClass456_Sub2_Sub1Array10354[i_8];
+		for (int i_8 = 0; i_8 < animable_0.aAnimation_Sub2_Sub1Array10354.length; i_8++) {
+			Animation_Sub2_Sub1 class456_sub2_sub1_10 = animable_0.aAnimation_Sub2_Sub1Array10354[i_8];
 			if (class456_sub2_sub1_10 != null) {
 				if (class456_sub2_sub1_10.anInt10065 > 0) {
 					--class456_sub2_sub1_10.anInt10065;
 				} else if (class456_sub2_sub1_10.method7627(1, 1857072218) && class456_sub2_sub1_10.method7580(921988866)) {
-					animable_0.aClass456_Sub2_Sub1Array10354[i_8] = null;
+					animable_0.aAnimation_Sub2_Sub1Array10354[i_8] = null;
 				}
 			}
 		}
@@ -112,15 +112,15 @@ public class Class150 {
 
 	public static void method2582(int i_0, int[] ints_1, int i_2) {
 		if (i_0 != -1 && MovingAnimation.isInterfaceLoaded(i_0, ints_1, -1943227865)) {
-			IComponentDefinitions[] arr_3 = Class468_Sub8.INTERFACES[i_0].components;
+			IComponentDefinitions[] arr_3 = Preference_Sub8.INTERFACES[i_0].components;
 			Connection.runIComponentScripts(arr_3);
 		}
 	}
 
-	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4) {
+	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, Transform_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4) {
 		CS2Executor cs2executor_6 = Class125.getNextScriptExecutor();
-		cs2executor_6.aClass521_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1_4;
+		cs2executor_6.aTransform_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1_4;
 		CS2Executor.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 35);
-		cs2executor_6.aClass521_Sub1_Sub2_Sub1_7014 = null;
+		cs2executor_6.aTransform_Sub1_Sub2_Sub1_7014 = null;
 	}
 }

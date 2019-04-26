@@ -78,46 +78,46 @@ public class BillboardDefinitions {
 			Class89.method1502(-140705519);
 		}
 		if (Class361.anInt4185 > 0) {
-			--Class96_Sub9.anInt9282;
-			if (Class96_Sub9.anInt9282 == 0) {
+			--CutsceneAction_Sub9.anInt9282;
+			if (CutsceneAction_Sub9.anInt9282 == 0) {
 				--Class361.anInt4185;
-				Class96_Sub9.anInt9282 = 100;
+				CutsceneAction_Sub9.anInt9282 = 100;
 			}
 		} else {
 			Class291_Sub1.anInt8018 = -1;
 			Class291_Sub1.anInt8026 = -1;
 		}
 		if (Class291_Sub1.aBool8022 && Class346.aClass482_4049 != null) {
-			for (Class282_Sub33 class282_sub33_5 = (Class282_Sub33) Class346.aClass482_4049.head(); class282_sub33_5 != null; class282_sub33_5 = (Class282_Sub33) Class346.aClass482_4049.next(-731653338)) {
-				MapAreaDefinitions worldmapareadefs_6 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub33_5.aClass282_Sub36_7835.anInt7991, 1327385371);
+			for (Node_Sub33 class282_sub33_5 = (Node_Sub33) Class346.aClass482_4049.head(); class282_sub33_5 != null; class282_sub33_5 = (Node_Sub33) Class346.aClass482_4049.next(-731653338)) {
+				MapAreaDefinitions worldmapareadefs_6 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub33_5.aNode_Sub36_7835.anInt7991, 1327385371);
 				if (class282_sub33_5.method12577(i_0, i_1)) {
 					if (worldmapareadefs_6.aStringArray2740 != null) {
 						if (worldmapareadefs_6.aStringArray2740[4] != null) {
-							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[4], worldmapareadefs_6.aString2732, -1, 1012, -1, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, false, -1941866254);
+							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[4], worldmapareadefs_6.aString2732, -1, 1012, -1, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, false, -1941866254);
 						}
 						if (worldmapareadefs_6.aStringArray2740[3] != null) {
-							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[3], worldmapareadefs_6.aString2732, -1, 1011, -1, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, false, -1376328054);
+							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[3], worldmapareadefs_6.aString2732, -1, 1011, -1, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, false, -1376328054);
 						}
 						if (worldmapareadefs_6.aStringArray2740[2] != null) {
-							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[2], worldmapareadefs_6.aString2732, -1, 1010, -1, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, false, -1687598339);
+							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[2], worldmapareadefs_6.aString2732, -1, 1010, -1, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, false, -1687598339);
 						}
 						if (worldmapareadefs_6.aStringArray2740[1] != null) {
-							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[1], worldmapareadefs_6.aString2732, -1, 1009, -1, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, false, -1447138539);
+							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[1], worldmapareadefs_6.aString2732, -1, 1009, -1, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, false, -1447138539);
 						}
 						if (worldmapareadefs_6.aStringArray2740[0] != null) {
-							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[0], worldmapareadefs_6.aString2732, -1, 1008, -1, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aClass282_Sub36_7835.anInt7991, false, -1091796707);
+							PlayerAppearance.method4032(worldmapareadefs_6.aStringArray2740[0], worldmapareadefs_6.aString2732, -1, 1008, -1, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, 0, true, false, (long) class282_sub33_5.aNode_Sub36_7835.anInt7991, false, -1091796707);
 						}
 					}
-					if (!class282_sub33_5.aClass282_Sub36_7835.aBool7989) {
-						class282_sub33_5.aClass282_Sub36_7835.aBool7989 = true;
-						HitsplatIndexLoader.method3614(Class397.aClass397_4797, class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 82);
+					if (!class282_sub33_5.aNode_Sub36_7835.aBool7989) {
+						class282_sub33_5.aNode_Sub36_7835.aBool7989 = true;
+						HitsplatIndexLoader.method3614(Class397.aClass397_4797, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 82);
 					}
-					if (class282_sub33_5.aClass282_Sub36_7835.aBool7989) {
-						HitsplatIndexLoader.method3614(Class397.aClass397_4805, class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 69);
+					if (class282_sub33_5.aNode_Sub36_7835.aBool7989) {
+						HitsplatIndexLoader.method3614(Class397.aClass397_4805, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 69);
 					}
-				} else if (class282_sub33_5.aClass282_Sub36_7835.aBool7989) {
-					class282_sub33_5.aClass282_Sub36_7835.aBool7989 = false;
-					HitsplatIndexLoader.method3614(Class397.aClass397_4798, class282_sub33_5.aClass282_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 75);
+				} else if (class282_sub33_5.aNode_Sub36_7835.aBool7989) {
+					class282_sub33_5.aNode_Sub36_7835.aBool7989 = false;
+					HitsplatIndexLoader.method3614(Class397.aClass397_4798, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 75);
 				}
 			}
 		}

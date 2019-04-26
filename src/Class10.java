@@ -12,6 +12,6 @@ public class Class10 {
 		Class291_Sub1.anInt8018 = i_0;
 		Class291_Sub1.anInt8026 = -1;
 		Class361.anInt4185 = 3;
-		Class96_Sub9.anInt9282 = 100;
+		CutsceneAction_Sub9.anInt9282 = 100;
 	}
 }

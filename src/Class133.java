@@ -3,16 +3,16 @@ import jaggl.OpenGL;
 public class Class133 {
 
 	static int[] anIntArray1599 = new int[1];
-	OpenGLGraphicalRenderer aClass505_Sub1_1597;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1597;
 	int anInt1596;
 
 	Class133(OpenGLGraphicalRenderer class505_sub1_1, int i_3) {
-		this.aClass505_Sub1_1597 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_1597 = class505_sub1_1;
 		this.anInt1596 = i_3;
 	}
 
 	public void finalize() throws Throwable {
-		this.aClass505_Sub1_1597.method13628(this.anInt1596);
+		this.aGraphicalRenderer_Sub1_1597.method13628(this.anInt1596);
 		super.finalize();
 	}
 

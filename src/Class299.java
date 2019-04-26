@@ -13,7 +13,7 @@ public class Class299 implements Interface27 {
 
 	Interface2[] anInterface2Array3539;
 
-	GraphicalRenderer aClass505_3542;
+	GraphicalRenderer aGraphicalRenderer_3542;
 
 	boolean aBool3546;
 
@@ -28,11 +28,11 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method161() {
-		if (this.aClass505_3542 != Renderers.SOFTWARE_RENDERER) {
-			this.aClass505_3542 = Renderers.SOFTWARE_RENDERER;
+		if (this.aGraphicalRenderer_3542 != Renderers.SOFTWARE_RENDERER) {
+			this.aGraphicalRenderer_3542 = Renderers.SOFTWARE_RENDERER;
 			this.aBool3546 = true;
 		}
-		this.aClass505_3542.ba(3, 0);
+		this.aGraphicalRenderer_3542.ba(3, 0);
 		Interface2[] arr_2 = this.anInterface2Array3539;
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Interface2 interface2_4 = arr_2[i_3];
@@ -112,11 +112,11 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method158() {
-		if (Renderers.SOFTWARE_RENDERER != this.aClass505_3542) {
-			this.aClass505_3542 = Renderers.SOFTWARE_RENDERER;
+		if (Renderers.SOFTWARE_RENDERER != this.aGraphicalRenderer_3542) {
+			this.aGraphicalRenderer_3542 = Renderers.SOFTWARE_RENDERER;
 			this.aBool3546 = true;
 		}
-		this.aClass505_3542.ba(3, 0);
+		this.aGraphicalRenderer_3542.ba(3, 0);
 		Interface2[] arr_1 = this.anInterface2Array3539;
 		for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 			Interface2 interface2_3 = arr_1[i_2];
@@ -127,11 +127,11 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method159() {
-		if (Renderers.SOFTWARE_RENDERER != this.aClass505_3542) {
-			this.aClass505_3542 = Renderers.SOFTWARE_RENDERER;
+		if (Renderers.SOFTWARE_RENDERER != this.aGraphicalRenderer_3542) {
+			this.aGraphicalRenderer_3542 = Renderers.SOFTWARE_RENDERER;
 			this.aBool3546 = true;
 		}
-		this.aClass505_3542.ba(3, 0);
+		this.aGraphicalRenderer_3542.ba(3, 0);
 		Interface2[] arr_1 = this.anInterface2Array3539;
 		for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 			Interface2 interface2_3 = arr_1[i_2];
@@ -142,11 +142,11 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method195() {
-		if (Renderers.SOFTWARE_RENDERER != this.aClass505_3542) {
-			this.aClass505_3542 = Renderers.SOFTWARE_RENDERER;
+		if (Renderers.SOFTWARE_RENDERER != this.aGraphicalRenderer_3542) {
+			this.aGraphicalRenderer_3542 = Renderers.SOFTWARE_RENDERER;
 			this.aBool3546 = true;
 		}
-		this.aClass505_3542.ba(3, 0);
+		this.aGraphicalRenderer_3542.ba(3, 0);
 		Interface2[] arr_1 = this.anInterface2Array3539;
 		for (int i_2 = 0; i_2 < arr_1.length; i_2++) {
 			Interface2 interface2_3 = arr_1[i_2];
@@ -213,23 +213,23 @@ public class Class299 implements Interface27 {
 	}
 
 	public static void method5313(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		Class282_Sub31 class282_sub31_8 = null;
-		for (Class282_Sub31 class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head(); class282_sub31_9 != null; class282_sub31_9 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-848062278)) {
+		Node_Sub31 class282_sub31_8 = null;
+		for (Node_Sub31 class282_sub31_9 = (Node_Sub31) Node_Sub31.aClass482_7775.head(); class282_sub31_9 != null; class282_sub31_9 = (Node_Sub31) Node_Sub31.aClass482_7775.next(-848062278)) {
 			if (i_0 == class282_sub31_9.anInt7764 && class282_sub31_9.anInt7762 == i_1 && i_2 == class282_sub31_9.anInt7763 && i_3 == class282_sub31_9.anInt7766) {
 				class282_sub31_8 = class282_sub31_9;
 				break;
 			}
 		}
 		if (class282_sub31_8 == null) {
-			class282_sub31_8 = new Class282_Sub31();
+			class282_sub31_8 = new Node_Sub31();
 			class282_sub31_8.anInt7764 = i_0;
 			class282_sub31_8.anInt7766 = i_3;
 			class282_sub31_8.anInt7762 = i_1;
 			class282_sub31_8.anInt7763 = i_2;
 			if (i_1 >= 0 && i_2 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_2 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-				Class275_Sub4.method12585(class282_sub31_8, -1988647724);
+				EntityNode_Sub4.method12585(class282_sub31_8, -1988647724);
 			}
-			Class282_Sub31.aClass482_7775.append(class282_sub31_8);
+			Node_Sub31.aClass482_7775.append(class282_sub31_8);
 		}
 		class282_sub31_8.anInt7769 = i_4;
 		class282_sub31_8.anInt7771 = i_5;
@@ -242,7 +242,7 @@ public class Class299 implements Interface27 {
 		if (i_3 == i_2) {
 			Class532_Sub1.method12838(i_0, i_1, i_2, i_4, i_5, i_6);
 		} else if (i_0 - i_2 >= Class532_Sub3_Sub1.anInt7071 && i_0 + i_2 <= Class532_Sub3_Sub1.anInt7069 && i_1 - i_3 >= Class532_Sub3_Sub1.anInt7070 && i_3 + i_1 <= Class532_Sub3_Sub1.anInt7068) {
-			Class282_Sub20_Sub7.method15241(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
+			Node_Sub20_Sub7.method15241(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 		} else {
 			ClanVarDefinitions.method6824(i_0, i_1, i_2, i_3, i_4, i_5, i_6);
 		}

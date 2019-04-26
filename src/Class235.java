@@ -4,7 +4,7 @@ public class Class235 {
 
     static List aList2896;
 
-    static Particle[] aClass275_Sub1_Sub1_Sub1Array2897;
+    static Particle[] aEntityNode_Sub1_Sub1_Sub1Array2897;
 
     static int anInt2902 = 0;
 
@@ -29,6 +29,6 @@ public class Class235 {
     }
 
     static int method3967(int i_0, int i_1) {
-        return i_0 != SceneObjectType.WALL_DIAGONAL_CORNER.type && i_0 != SceneObjectType.WALL_STRAIGHT_CORNER.type ? Class521_Sub1_Sub5_Sub1.anIntArray10522[i_1 & 0x3] : Class521_Sub1_Sub5_Sub1.anIntArray10518[i_1 & 0x3];
+        return i_0 != SceneObjectType.WALL_DIAGONAL_CORNER.type && i_0 != SceneObjectType.WALL_STRAIGHT_CORNER.type ? Transform_Sub1_Sub5_Sub1.anIntArray10522[i_1 & 0x3] : Transform_Sub1_Sub5_Sub1.anIntArray10518[i_1 & 0x3];
     }
 }

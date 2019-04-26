@@ -1,12 +1,12 @@
 public class Class268 {
 
-	MIDIInstrument aClass282_Sub18_3294;
+	MIDIInstrument aNode_Sub18_3294;
 
-	Class282_Sub26_Sub1_Sub1 aClass282_Sub26_Sub1_Sub1_3296;
+	Node_Sub26_Sub1_Sub1 aNode_Sub26_Sub1_Sub1_3296;
 
 	SoundEffect soundEffect;
 
-	Class282_Sub15_Sub5 aClass282_Sub15_Sub5_3304;
+	Node_Sub15_Sub5 aNode_Sub15_Sub5_3304;
 
 	static int anInt3307;
 
@@ -32,7 +32,7 @@ public class Class268 {
 		return this.type == 2 || this.type == 3;
 	}
 
-	Class268(byte b_1, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, Class521_Sub1 class521_sub1_8) {
+	Class268(byte b_1, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, Transform_Sub1 class521_sub1_8) {
 		this.type = b_1;
 		this.soundId = soundId;
 		this.anInt3302 = i_3;
@@ -40,8 +40,8 @@ public class Class268 {
 		this.anInt3299 = i_5;
 		this.anInt3298 = i_6;
 		this.anInt3295 = i_7;
-		if (class521_sub1_8 != null && class521_sub1_8 instanceof Class521_Sub1_Sub1) {
-			Class521_Sub1_Sub1 class521_sub1_sub1_9 = (Class521_Sub1_Sub1) class521_sub1_8;
+		if (class521_sub1_8 != null && class521_sub1_8 instanceof Transform_Sub1_Sub1) {
+			Transform_Sub1_Sub1 class521_sub1_sub1_9 = (Transform_Sub1_Sub1) class521_sub1_8;
 			this.anInt3305 = class521_sub1_sub1_9.aShort9458;
 			this.anInt3306 = class521_sub1_sub1_9.aShort9456;
 		}
@@ -61,10 +61,10 @@ public class Class268 {
 			String string_2;
 			if (client.aBool7344 && Class20.anInt169 < 2) {
 				string_2 = client.aString7275 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -912912276) + client.aString7356 + " " + "->";
-			} else if (Class468_Sub1.method12619(-1903584217) && Class20.anInt169 > 2) {
-				string_2 = IncomingPacket.method6380(Class96_Sub23.aClass282_Sub50_Sub7_9445, 1195583741);
+			} else if (Preference_Sub1.method12619(-1903584217) && Class20.anInt169 > 2) {
+				string_2 = IncomingPacket.method6380(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, 1195583741);
 			} else {
-				Class282_Sub50_Sub7 class282_sub50_sub7_3 = Class96_Sub23.aClass282_Sub50_Sub7_9445;
+				CacheableNode_Sub7 class282_sub50_sub7_3 = CutsceneAction_Sub23.aCacheableNode_Sub7_9445;
 				if (class282_sub50_sub7_3 == null) {
 					return;
 				}
@@ -80,9 +80,9 @@ public class Class268 {
 			if (Class20.aClass118_183 != null) {
 				FontRenderer fontrenderer_5 = Class20.aClass118_183.method1988(Class487.aClass378_5752, client.anInterface35_7206, -208417273);
 				if (fontrenderer_5 == null) {
-					fontrenderer_5 = Class285.aClass8_3394;
+					fontrenderer_5 = Class285.aFontRenderer_3394;
 				}
-				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.anInt1301, Class20.aClass118_183.anInt1429, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aClass160Array1248, Class20.anIntArray177, 1750233370);
+				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.anInt1301, Class20.aClass118_183.anInt1429, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 1750233370);
 				Class292.method5201(client.anIntArray7438[0], client.anIntArray7438[1], client.anIntArray7438[2], client.anIntArray7438[3]);
 			}
 		}

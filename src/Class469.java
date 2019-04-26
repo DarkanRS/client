@@ -3,9 +3,9 @@ import java.util.Iterator;
 public class Class469 implements Iterator {
 
 	public static boolean aBool5585;
-	CacheableNode aClass282_Sub50_5582 = null;
+	CacheableNode aCacheableNode_5582 = null;
 	Queue aClass477_5584;
-	CacheableNode aClass282_Sub50_5583;
+	CacheableNode aCacheableNode_5583;
 
 	public CacheableNode method7790() {
 		this.method7800();
@@ -14,39 +14,39 @@ public class Class469 implements Iterator {
 
 	public Class469(Queue class477_1) {
 		this.aClass477_5584 = class477_1;
-		this.aClass282_Sub50_5583 = this.aClass477_5584.aClass282_Sub50_5629.aClass282_Sub50_8119;
-		this.aClass282_Sub50_5582 = null;
+		this.aCacheableNode_5583 = this.aClass477_5584.aCacheableNode_5629.aCacheableNode_8119;
+		this.aCacheableNode_5582 = null;
 	}
 
 	public Object next() {
-		CacheableNode cacheablenode_1 = this.aClass282_Sub50_5583;
-		if (cacheablenode_1 == this.aClass477_5584.aClass282_Sub50_5629) {
+		CacheableNode cacheablenode_1 = this.aCacheableNode_5583;
+		if (cacheablenode_1 == this.aClass477_5584.aCacheableNode_5629) {
 			cacheablenode_1 = null;
-			this.aClass282_Sub50_5583 = null;
+			this.aCacheableNode_5583 = null;
 		} else {
-			this.aClass282_Sub50_5583 = cacheablenode_1.aClass282_Sub50_8119;
+			this.aCacheableNode_5583 = cacheablenode_1.aCacheableNode_8119;
 		}
 
-		this.aClass282_Sub50_5582 = cacheablenode_1;
+		this.aCacheableNode_5582 = cacheablenode_1;
 		return cacheablenode_1;
 	}
 
 	public boolean hasNext() {
-		return this.aClass477_5584.aClass282_Sub50_5629 != this.aClass282_Sub50_5583;
+		return this.aClass477_5584.aCacheableNode_5629 != this.aCacheableNode_5583;
 	}
 
 	public void remove() {
-		if (this.aClass282_Sub50_5582 == null) {
+		if (this.aCacheableNode_5582 == null) {
 			throw new IllegalStateException();
 		} else {
-			this.aClass282_Sub50_5582.method13452();
-			this.aClass282_Sub50_5582 = null;
+			this.aCacheableNode_5582.method13452();
+			this.aCacheableNode_5582 = null;
 		}
 	}
 
 	void method7800() {
-		this.aClass282_Sub50_5583 = this.aClass477_5584.aClass282_Sub50_5629.aClass282_Sub50_8119;
-		this.aClass282_Sub50_5582 = null;
+		this.aCacheableNode_5583 = this.aClass477_5584.aCacheableNode_5629.aCacheableNode_8119;
+		this.aCacheableNode_5582 = null;
 	}
 
 	static void method7805(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, IComponentDefinitions icomponentdefinitions_3, Class455 class455_4, int i_5, int i_6) {
@@ -67,7 +67,7 @@ public class Class469 implements Iterator {
 						if (npcdefinitions_11.anInt4914 != -1) {
 							Class158.method2731(graphicalrenderer_0, class455_4, icomponentdefinitions_3, i_5, i_6, i_13, i_14, npcdefinitions_11.anInt4914, -1804553865);
 						} else {
-							Class190.method3149(icomponentdefinitions_3, class455_4, i_5, i_6, i_13, i_14, Class250.aClass160Array3092[1], -1465246718);
+							Class190.method3149(icomponentdefinitions_3, class455_4, i_5, i_6, i_13, i_14, Class250.aNativeSpriteArray3092[1], -1465246718);
 						}
 					}
 				}

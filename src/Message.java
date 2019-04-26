@@ -352,8 +352,8 @@ public class Message {
 		this.aMap5279.put(Language.aClass495_5797, string_4);
 	}
 
-	public static Class282_Sub15_Sub2 method7272() {
-		return Class148.aClass282_Sub15_Sub2_1735;
+	public static Node_Sub15_Sub2 method7272() {
+		return Class148.aNode_Sub15_Sub2_1735;
 	}
 
 	public String translate(Language xlanguage_1, int i_2) {

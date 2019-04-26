@@ -8,17 +8,17 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 
 	public int anInt10155;
 
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10145;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_10145;
 
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10154;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_10154;
 
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10144;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_10144;
 
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10143;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_10143;
 
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10139;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_10139;
 
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10140;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_10140;
 
 	Class115 aClass115_10151;
 
@@ -37,12 +37,12 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 	float aFloat10149;
 
 	boolean method14539() throws Exception_Sub2 {
-		this.aClass282_Sub21_Sub1_10145 = this.aClass101_9218.method1691("WorldMatrix", (short) 13951);
-		this.aClass282_Sub21_Sub1_10154 = this.aClass101_9218.method1691("WVPMatrix", (short) 7310);
-		this.aClass282_Sub21_Sub1_10144 = this.aClass101_9218.method1691("UGenerationPlane", (short) 29108);
-		this.aClass282_Sub21_Sub1_10143 = this.aClass101_9218.method1691("VGenerationPlane", (short) 19913);
-		this.aClass282_Sub21_Sub1_10139 = this.aClass101_9218.method1691("Time", (short) 24696);
-		this.aClass282_Sub21_Sub1_10140 = this.aClass101_9218.method1691("billowSampler3D", (short) 8729);
+		this.aNode_Sub21_Sub1_10145 = this.aClass101_9218.method1691("WorldMatrix", (short) 13951);
+		this.aNode_Sub21_Sub1_10154 = this.aClass101_9218.method1691("WVPMatrix", (short) 7310);
+		this.aNode_Sub21_Sub1_10144 = this.aClass101_9218.method1691("UGenerationPlane", (short) 29108);
+		this.aNode_Sub21_Sub1_10143 = this.aClass101_9218.method1691("VGenerationPlane", (short) 19913);
+		this.aNode_Sub21_Sub1_10139 = this.aClass101_9218.method1691("Time", (short) 24696);
+		this.aNode_Sub21_Sub1_10140 = this.aClass101_9218.method1691("billowSampler3D", (short) 8729);
 		if (this.aClass49_10147.aBool474) {
 			this.aClass115_10141 = this.aClass101_9218.method1651("Waterfall3D", 535586513);
 			this.aClass101_9218.method1655(this.aClass115_10141);
@@ -54,12 +54,12 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 	}
 
 	boolean method14524() throws Exception_Sub2 {
-		this.aClass282_Sub21_Sub1_10145 = this.aClass101_9218.method1691("WorldMatrix", (short) 10413);
-		this.aClass282_Sub21_Sub1_10154 = this.aClass101_9218.method1691("WVPMatrix", (short) 8248);
-		this.aClass282_Sub21_Sub1_10144 = this.aClass101_9218.method1691("UGenerationPlane", (short) 13144);
-		this.aClass282_Sub21_Sub1_10143 = this.aClass101_9218.method1691("VGenerationPlane", (short) 12992);
-		this.aClass282_Sub21_Sub1_10139 = this.aClass101_9218.method1691("Time", (short) 18225);
-		this.aClass282_Sub21_Sub1_10140 = this.aClass101_9218.method1691("billowSampler3D", (short) 13430);
+		this.aNode_Sub21_Sub1_10145 = this.aClass101_9218.method1691("WorldMatrix", (short) 10413);
+		this.aNode_Sub21_Sub1_10154 = this.aClass101_9218.method1691("WVPMatrix", (short) 8248);
+		this.aNode_Sub21_Sub1_10144 = this.aClass101_9218.method1691("UGenerationPlane", (short) 13144);
+		this.aNode_Sub21_Sub1_10143 = this.aClass101_9218.method1691("VGenerationPlane", (short) 12992);
+		this.aNode_Sub21_Sub1_10139 = this.aClass101_9218.method1691("Time", (short) 18225);
+		this.aNode_Sub21_Sub1_10140 = this.aClass101_9218.method1691("billowSampler3D", (short) 13430);
 		if (this.aClass49_10147.aBool474) {
 			this.aClass115_10141 = this.aClass101_9218.method1651("Waterfall3D", 1467514072);
 			this.aClass101_9218.method1655(this.aClass115_10141);
@@ -78,17 +78,17 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 		}
 		this.aClass101_9218.method1646();
 		if (this.aClass49_10147.aBool474) {
-			this.aClass101_9218.method1671(this.aClass282_Sub21_Sub1_10140, 0, this.aClass49_10147.anInterface1_479);
+			this.aClass101_9218.method1671(this.aNode_Sub21_Sub1_10140, 0, this.aClass49_10147.anInterface1_479);
 		}
-		this.aClass101_9218.method1668(this.aClass282_Sub21_Sub1_10145, this.aClass384_10146, (byte) -98);
-		this.aClass101_9218.method1668(this.aClass282_Sub21_Sub1_10154, this.aClass384_10138, (byte) -57);
-		this.aClass101_9218.method1689(this.aClass282_Sub21_Sub1_10144, new Vector4(this.aFloatArray10148[0], this.aFloatArray10148[1], this.aFloatArray10148[2], this.aFloatArray10148[3]), 1522147633);
-		this.aClass101_9218.method1689(this.aClass282_Sub21_Sub1_10143, new Vector4(this.aFloatArray10150[0], this.aFloatArray10150[1], this.aFloatArray10150[2], this.aFloatArray10150[3]), 1537911160);
-		this.aClass101_9218.method1689(this.aClass282_Sub21_Sub1_10139, new Vector4(this.aFloat10149, 0.0F, 0.0F, 0.0F), 1904707370);
-		this.aClass505_Sub2_413.method14002(Class352.aClass352_4098, this.anInt10152, this.anInt10153, this.anInt10142, this.anInt10155);
+		this.aClass101_9218.method1668(this.aNode_Sub21_Sub1_10145, this.aClass384_10146, (byte) -98);
+		this.aClass101_9218.method1668(this.aNode_Sub21_Sub1_10154, this.aClass384_10138, (byte) -57);
+		this.aClass101_9218.method1689(this.aNode_Sub21_Sub1_10144, new Vector4(this.aFloatArray10148[0], this.aFloatArray10148[1], this.aFloatArray10148[2], this.aFloatArray10148[3]), 1522147633);
+		this.aClass101_9218.method1689(this.aNode_Sub21_Sub1_10143, new Vector4(this.aFloatArray10150[0], this.aFloatArray10150[1], this.aFloatArray10150[2], this.aFloatArray10150[3]), 1537911160);
+		this.aClass101_9218.method1689(this.aNode_Sub21_Sub1_10139, new Vector4(this.aFloat10149, 0.0F, 0.0F, 0.0F), 1904707370);
+		this.aGraphicalRenderer_Sub2_413.method14002(Class352.aClass352_4098, this.anInt10152, this.anInt10153, this.anInt10142, this.anInt10155);
 	}
 
-	public Class41_Sub1_Sub2(Class505_Sub2 class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
+	public Class41_Sub1_Sub2(GraphicalRenderer_Sub2 class505_sub2_1, Class49 class49_2) throws Exception_Sub2 {
 		super(class505_sub2_1);
 		this.aClass49_10147 = class49_2;
 		if (this.aClass49_10147.method975() && class505_sub2_1.method13887()) {
@@ -97,12 +97,12 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 	}
 
 	boolean method14541() throws Exception_Sub2 {
-		this.aClass282_Sub21_Sub1_10145 = this.aClass101_9218.method1691("WorldMatrix", (short) 26752);
-		this.aClass282_Sub21_Sub1_10154 = this.aClass101_9218.method1691("WVPMatrix", (short) 11996);
-		this.aClass282_Sub21_Sub1_10144 = this.aClass101_9218.method1691("UGenerationPlane", (short) 30485);
-		this.aClass282_Sub21_Sub1_10143 = this.aClass101_9218.method1691("VGenerationPlane", (short) 19570);
-		this.aClass282_Sub21_Sub1_10139 = this.aClass101_9218.method1691("Time", (short) 19497);
-		this.aClass282_Sub21_Sub1_10140 = this.aClass101_9218.method1691("billowSampler3D", (short) 27239);
+		this.aNode_Sub21_Sub1_10145 = this.aClass101_9218.method1691("WorldMatrix", (short) 26752);
+		this.aNode_Sub21_Sub1_10154 = this.aClass101_9218.method1691("WVPMatrix", (short) 11996);
+		this.aNode_Sub21_Sub1_10144 = this.aClass101_9218.method1691("UGenerationPlane", (short) 30485);
+		this.aNode_Sub21_Sub1_10143 = this.aClass101_9218.method1691("VGenerationPlane", (short) 19570);
+		this.aNode_Sub21_Sub1_10139 = this.aClass101_9218.method1691("Time", (short) 19497);
+		this.aNode_Sub21_Sub1_10140 = this.aClass101_9218.method1691("billowSampler3D", (short) 27239);
 		if (this.aClass49_10147.aBool474) {
 			this.aClass115_10141 = this.aClass101_9218.method1651("Waterfall3D", -501563722);
 			this.aClass101_9218.method1655(this.aClass115_10141);
@@ -132,12 +132,12 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 		this.aFloatArray10150[0] = 0.0F;
 		this.aFloatArray10150[1] = f_6;
 		this.aFloatArray10150[2] = 0.0F;
-		this.aFloatArray10150[3] = (float) this.aClass505_Sub2_413.anInt8820 * f_4 % 1.0F;
+		this.aFloatArray10150[3] = (float) this.aGraphicalRenderer_Sub2_413.anInt8820 * f_4 % 1.0F;
 		if (!this.aClass49_10147.aBool474) {
-			int i_8 = (int) (f_5 * (float) this.aClass505_Sub2_413.anInt8820 * 16.0F);
-			this.aClass505_Sub2_413.method14035(this.aClass49_10147.anInterface6Array478[i_8 % 16]);
+			int i_8 = (int) (f_5 * (float) this.aGraphicalRenderer_Sub2_413.anInt8820 * 16.0F);
+			this.aGraphicalRenderer_Sub2_413.method14035(this.aClass49_10147.anInterface6Array478[i_8 % 16]);
 		} else {
-			this.aFloat10149 = (float) ((double) this.aClass505_Sub2_413.anInt8820 * (double) f_5 % 1.0D);
+			this.aFloat10149 = (float) ((double) this.aGraphicalRenderer_Sub2_413.anInt8820 * (double) f_5 % 1.0D);
 		}
 	}
 }

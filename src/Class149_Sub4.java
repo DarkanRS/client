@@ -85,8 +85,8 @@ public class Class149_Sub4 extends Class149 {
 	static final void method14661() {
 		Iterator iterator_1 = client.aClass465_7334.iterator();
 		while (iterator_1.hasNext()) {
-			Class282_Sub50_Sub10 class282_sub50_sub10_2 = (Class282_Sub50_Sub10) iterator_1.next();
-			Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_3 = class282_sub50_sub10_2.aClass521_Sub1_Sub1_Sub4_9636;
+			CacheableNode_Sub10 class282_sub50_sub10_2 = (CacheableNode_Sub10) iterator_1.next();
+			Transform_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_3 = class282_sub50_sub10_2.aTransform_Sub1_Sub1_Sub4_9636;
 			class521_sub1_sub1_sub4_3.method15926();
 			if (class521_sub1_sub1_sub4_3.method15928()) {
 				class282_sub50_sub10_2.remove();

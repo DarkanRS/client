@@ -60,21 +60,21 @@ public class ServerEnvironment implements Identifiable {
                 EquipmentDefaults.method11248(1422604274);
                 b_1 = 4;
             } else if (i_2 <= 504) {
-                Class282_Sub40.method13300(-273043210);
+                Node_Sub40.method13300(-273043210);
                 b_1 = 3;
             } else if (i_2 <= 1002) {
                 Class119.method2077(240785770);
                 b_1 = 2;
             } else {
-                Class282_Sub20_Sub25.method15393(1945296321);
+                Node_Sub20_Sub25.method15393(1945296321);
                 b_1 = 1;
             }
         } else {
-            Class282_Sub20_Sub25.method15393(1593170502);
+            Node_Sub20_Sub25.method15393(1593170502);
             b_1 = 1;
         }
         if (Class393.preferences.currentToolkit.getValue(-1431790545) != 0) {
-            Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 0, -1334212843);
+            Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, -1334212843);
             ParticleProducer.method11500(0, false);
         } else {
             Class393.preferences.method13505(Class393.preferences.currentToolkit, true, -1824777589);
@@ -109,8 +109,8 @@ public class ServerEnvironment implements Identifiable {
                 client.anInt7367 = Class349.anInt4083;
                 client.anInt7476 = client.anInt3243 * -969250379;
             }
-            LightIntensityIndexLoader.method7313((Class282_Sub44) null, client.anInt7349, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
-            if (Class282_Sub20_Sub24.aClass118_9884 != null) {
+            LightIntensityIndexLoader.method7313((Node_Sub44) null, client.anInt7349, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
+            if (Node_Sub20_Sub24.aClass118_9884 != null) {
                 BillboardDefinitions.method6170(i_1, i_2);
             }
         }

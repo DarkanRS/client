@@ -1,4 +1,4 @@
-public class ba extends Class282_Sub1 implements Interface40 {
+public class ba extends Node_Sub1 implements Interface40 {
 
 	long nativeid;
 

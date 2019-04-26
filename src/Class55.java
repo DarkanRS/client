@@ -1,7 +1,7 @@
 public abstract class Class55 {
 
 	boolean aBool513;
-	protected Class505_Sub2 aClass505_Sub2_514;
+	protected GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_514;
 
 	abstract boolean method1097();
 
@@ -46,8 +46,8 @@ public abstract class Class55 {
 
 	abstract boolean method1113();
 
-	Class55(Class505_Sub2 class505_sub2_1) {
-		this.aClass505_Sub2_514 = class505_sub2_1;
+	Class55(GraphicalRenderer_Sub2 class505_sub2_1) {
+		this.aGraphicalRenderer_Sub2_514 = class505_sub2_1;
 	}
 
 	abstract void method1115();

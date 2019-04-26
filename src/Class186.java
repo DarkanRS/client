@@ -2,7 +2,7 @@ import java.net.URL;
 
 public class Class186 {
 
-	static FontRenderer aClass8_2348;
+	static FontRenderer aFontRenderer_2348;
 	static int anInt2349;
 
 	Class186() throws Throwable {
@@ -13,7 +13,7 @@ public class Class186 {
 		boolean bool_4;
 		if (i_1 == 0) {
 			try {
-				if (!Class225_Sub6.aString8069.startsWith("win")) {
+				if (!RouteStrategy_Sub6.aString8069.startsWith("win")) {
 					throw new Exception();
 				} else if (!string_0.startsWith("http://") && !string_0.startsWith("https://")) {
 					throw new Exception();
@@ -35,7 +35,7 @@ public class Class186 {
 			}
 		} else if (i_1 == 1) {
 			try {
-				Object object_5 = Class441.method7375(Class282_Sub44.anApplet8065, string_2, new Object[] { (new URL(Class282_Sub44.anApplet8065.getCodeBase(), string_0)).toString() }, 161008971);
+				Object object_5 = Class441.method7375(Node_Sub44.anApplet8065, string_2, new Object[] { (new URL(Node_Sub44.anApplet8065.getCodeBase(), string_0)).toString() }, 161008971);
 				bool_4 = object_5 != null;
 				return bool_4;
 			} catch (Throwable throwable_8) {
@@ -43,7 +43,7 @@ public class Class186 {
 			}
 		} else if (i_1 == 2) {
 			try {
-				Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), string_0), "_blank");
+				Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), string_0), "_blank");
 				bool_4 = true;
 				return bool_4;
 			} catch (Exception exception_9) {
@@ -51,13 +51,13 @@ public class Class186 {
 			}
 		} else if (i_1 == 3) {
 			try {
-				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1762272883);
+				Class441.method7377(Node_Sub44.anApplet8065, "loggedout", 1762272883);
 			} catch (Throwable throwable_11) {
 				;
 			}
 
 			try {
-				Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), string_0), "_top");
+				Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), string_0), "_top");
 				bool_4 = true;
 				return bool_4;
 			} catch (Exception exception_10) {
@@ -82,7 +82,7 @@ public class Class186 {
 		client.aString7426 = null;
 		Class459.anInt5534 = 0;
 		Class467.aClass173Array5575 = null;
-		Class282_Sub13.GUEST_CLAN_SETTINGS = null;
+		Node_Sub13.GUEST_CLAN_SETTINGS = null;
 		QuickchatFiller.CLAN_SETTINGS = null;
 		Class237.method3990();
 
@@ -98,7 +98,7 @@ public class Class186 {
 		Class197.NUM_PLAYER_INDICES = 0;
 
 		for (int i_1 = 0; i_1 < 2048; i_1++) {
-			Class197.aClass282_Sub35Array2428[i_1] = null;
+			Class197.aNode_Sub35Array2428[i_1] = null;
 			Class197.playerMovementTypes[i_1] = MovementType.WALKING.id;
 			Class197.aClass4Array2430[i_1] = null;
 		}

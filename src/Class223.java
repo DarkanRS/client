@@ -4,7 +4,7 @@ public final class Class223 {
 
 	int anInt2769;
 
-	CacheableNode aClass282_Sub50_2770 = new CacheableNode();
+	CacheableNode aCacheableNode_2770 = new CacheableNode();
 
 	Queue aClass477_2767 = new Queue();
 
@@ -25,7 +25,7 @@ public final class Class223 {
 			CacheableNode cacheablenode_4 = this.aClass477_2767.method7937(600411374);
 			cacheablenode_4.remove();
 			cacheablenode_4.method13452();
-			if (cacheablenode_4 == this.aClass282_Sub50_2770) {
+			if (cacheablenode_4 == this.aCacheableNode_2770) {
 				cacheablenode_4 = this.aClass477_2767.method7937(1037693707);
 				cacheablenode_4.remove();
 				cacheablenode_4.method13452();
@@ -50,7 +50,7 @@ public final class Class223 {
 	public void method3760() {
 		this.aClass477_2767.method7935((byte) -14);
 		this.aClass465_2771.method7749(-1319395120);
-		this.aClass282_Sub50_2770 = new CacheableNode();
+		this.aCacheableNode_2770 = new CacheableNode();
 		this.anInt2769 = this.anInt2768;
 	}
 

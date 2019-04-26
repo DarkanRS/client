@@ -39,10 +39,10 @@ public class Class350 implements Interface3 {
 	}
 
 	public static void method6189(byte b_0) {
-		for (Class282_Sub50_Sub15 class282_sub50_sub15_1 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_1 != null; class282_sub50_sub15_1 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-433309836)) {
+		for (CacheableNode_Sub15 class282_sub50_sub15_1 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_1 != null; class282_sub50_sub15_1 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(-433309836)) {
 			if (class282_sub50_sub15_1.anInt9769 > 1) {
 				class282_sub50_sub15_1.anInt9769 = 0;
-				Class20.aClass229_164.put(class282_sub50_sub15_1, ((Class282_Sub50_Sub7) class282_sub50_sub15_1.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119).aLong9580);
+				Class20.aClass229_164.put(class282_sub50_sub15_1, ((CacheableNode_Sub7) class282_sub50_sub15_1.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119).aLong9580);
 				class282_sub50_sub15_1.aClass477_9770.method7935((byte) 116);
 			}
 		}

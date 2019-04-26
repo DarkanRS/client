@@ -27,7 +27,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	int anInt9008;
 	Class185[] aClass185Array8984;
 	int anInt9015;
-	NativeSprite aClass160_8987;
+	NativeSprite aNativeSprite_8987;
 	Matrix44Var aClass294_8993;
 	int anInt8992;
 	float[][] aFloatArrayArray8989;
@@ -60,7 +60,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8398(int i_1) {
 		int i_2 = i_1 - this.anInt8977;
 
-		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(1886478674); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867()) {
+		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) this.aClass229_9006.method3866(1886478674); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) this.aClass229_9006.method3867()) {
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -89,9 +89,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	int[] method14359(int i) {
-		Class282_Sub27 class282_sub27;
+		Node_Sub27 class282_sub27;
 		synchronized (((HardwareRenderer) this).aClass229_9006) {
-			class282_sub27 = ((Class282_Sub27) ((HardwareRenderer) this).aClass229_9006.get((long) i | ~0x7fffffffffffffffL));
+			class282_sub27 = ((Node_Sub27) ((HardwareRenderer) this).aClass229_9006.get((long) i | ~0x7fffffffffffffffL));
 			if (class282_sub27 == null) {
 				if (!anInterface22_5834.method139(i, -99337949)) {
 					int[] is = null;
@@ -99,11 +99,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 				}
 				TextureDetails class169 = anInterface22_5834.method144(i);
 				int i_29_ = (class169.isHalfSize || ((HardwareRenderer) this).aBool8997 ? 64 : ((HardwareRenderer) this).anInt9005);
-				class282_sub27 = (new Class282_Sub27(i, i_29_, anInterface22_5834.method141(i, i_29_, i_29_, true, 1334254083), 1 != class169.blendType));
+				class282_sub27 = (new Node_Sub27(i, i_29_, anInterface22_5834.method141(i, i_29_, i_29_, true, 1334254083), 1 != class169.blendType));
 				((HardwareRenderer) this).aClass229_9006.put(class282_sub27, (long) i | ~0x7fffffffffffffffL);
 			}
 		}
-		((Class282_Sub27) class282_sub27).aBool7693 = true;
+		((Node_Sub27) class282_sub27).aBool7693 = true;
 		return class282_sub27.method12406();
 	}
 
@@ -128,9 +128,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	void method14363(boolean bool_1, boolean bool_2, Class151 class151_4) {
 		Class185 class185_5 = this.method14370(Thread.currentThread());
-		Class275_Sub1 class275_sub1_6 = class151_4.aClass464_1961.aClass275_Sub1_5554;
+		EntityNode_Sub1 class275_sub1_6 = class151_4.aClass464_1961.aEntityNode_Sub1_5554;
 
-		for (Class275_Sub1 class275_sub1_7 = class275_sub1_6.aClass275_Sub1_7706; class275_sub1_7 != class275_sub1_6; class275_sub1_7 = class275_sub1_7.aClass275_Sub1_7706) {
+		for (EntityNode_Sub1 class275_sub1_7 = class275_sub1_6.aEntityNode_Sub1_7706; class275_sub1_7 != class275_sub1_6; class275_sub1_7 = class275_sub1_7.aEntityNode_Sub1_7706) {
 			PointEntity class275_sub1_sub1_8 = (PointEntity) class275_sub1_7;
 			int i_9 = class275_sub1_sub1_8.x >> 12;
 			int i_10 = class275_sub1_sub1_8.z >> 12;
@@ -268,7 +268,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return false;
 	}
 
-	public void method8618(Class282_Sub1 class282_sub1_1) {
+	public void method8618(Node_Sub1 class282_sub1_1) {
 	}
 
 	public void method8421() {
@@ -337,12 +337,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 				int i_11 = ints_1[i_8++] >>> 24;
 				if (i_11 != 0 && i_11 != 255) {
 					bool_7 = true;
-					return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
+					return (NativeSprite) (bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 				}
 			}
 		}
 
-		return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
+		return (NativeSprite) (bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 	}
 
 	public FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
@@ -360,14 +360,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 		if (bool_3) {
 			if (bool_6) {
-				return new Class8_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
+				return new FontRenderer_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
 			} else {
-				return new Class8_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
+				return new FontRenderer_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
 			}
 		} else if (bool_6) {
 			throw new IllegalArgumentException("");
 		} else {
-			return new Class8_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
+			return new FontRenderer_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
 		}
 	}
 
@@ -409,12 +409,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 				int i_11 = ints_1[i_8++] >>> 24;
 				if (i_11 != 0 && i_11 != 255) {
 					bool_7 = true;
-					return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
+					return (NativeSprite) (bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 				}
 			}
 		}
 
-		return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
+		return (NativeSprite) (bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 	}
 
 	public void B(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -1754,11 +1754,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8439(Class282_Sub1 class282_sub1_1) {
+	public void method8439(Node_Sub1 class282_sub1_1) {
 	}
 
 	public NativeSprite method8654(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-		return (NativeSprite) (bool_3 ? new Class160_Sub1_Sub3(this, i_1, i_2) : new Class160_Sub1_Sub1(this, i_1, i_2));
+		return (NativeSprite) (bool_3 ? new NativeSprite_Sub1_Sub3(this, i_1, i_2) : new NativeSprite_Sub1_Sub1(this, i_1, i_2));
 	}
 
 	public void method8479(float f_1, float f_2, float f_3, float[] floats_4) {
@@ -1790,9 +1790,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			if (bool_5) {
-				return new Class160_Sub1_Sub3(this, ints_6, i_3, i_4);
+				return new NativeSprite_Sub1_Sub3(this, ints_6, i_3, i_4);
 			} else {
-				return new Class160_Sub1_Sub1(this, ints_6, i_3, i_4);
+				return new NativeSprite_Sub1_Sub1(this, ints_6, i_3, i_4);
 			}
 		}
 	}
@@ -1833,7 +1833,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public MeshRasterizer createMeshRasterizer(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public int method8546(int i_1, int i_2) {
@@ -1841,7 +1841,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public Ground createGround(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_6, int i_7) {
-		return new Class390_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, 512);
+		return new Ground_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, 512);
 	}
 
 	public void method8634() {
@@ -1870,7 +1870,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.anInt9007 = (int) (f_6 * 65535.0F / f_7);
 	}
 
-	public void method8547(int i_1, Class282_Sub24[] arr_2) {
+	public void method8547(int i_1, Node_Sub24[] arr_2) {
 	}
 
 	public void method8535(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
@@ -2095,11 +2095,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 				}
 
 				this.anInt9015 = i_9;
-				this.aClass160_8987 = nativesprite_11;
+				this.aNativeSprite_8987 = nativesprite_11;
 			}
 
 			++i_8;
-			((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, false, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, false);
+			((NativeSprite_Sub1) this.aNativeSprite_8987).method14247(bool_1, bool_2, false, i_5 - i_10, i_6 - i_10, f_7, i_8, i_8, 0, class275_sub1_sub1_4.color, 1, false);
 		}
 
 	}
@@ -2123,10 +2123,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 						}
 
 						this.anInt9015 = i_9;
-						this.aClass160_8987 = nativesprite_14;
+						this.aNativeSprite_8987 = nativesprite_14;
 					}
 
-					((Class160_Sub1) this.aClass160_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, class169_13.blendType != 2);
+					((NativeSprite_Sub1) this.aNativeSprite_8987).method14247(bool_1, bool_2, bool_3, i_4 - i_7, i_5 - i_8, f_6, i_7 << 1, i_8 << 1, i_11, i_10, i_12, class169_13.blendType != 2);
 					return;
 				}
 			}
@@ -2726,8 +2726,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8459() {
-		Class528_Sub2.anInt8644 = 10000;
-		Class528_Sub2.anInt8562 = 10000;
+		MeshRasterizer_Sub2.anInt8644 = 10000;
+		MeshRasterizer_Sub2.anInt8562 = 10000;
 		if (this.anInt9008 > 1) {
 			throw new IllegalStateException();
 		} else {
@@ -2844,7 +2844,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8487(int i_1) {
 		int i_2 = i_1 - 1426154545 * this.anInt8977;
 
-		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(863387437); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867()) {
+		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) this.aClass229_9006.method3866(863387437); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) this.aClass229_9006.method3867()) {
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;
@@ -2939,14 +2939,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 		if (bool_3) {
 			if (bool_6) {
-				return new Class8_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
+				return new FontRenderer_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
 			} else {
-				return new Class8_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
+				return new FontRenderer_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
 			}
 		} else if (bool_6) {
 			throw new IllegalArgumentException("");
 		} else {
-			return new Class8_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
+			return new FontRenderer_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
 		}
 	}
 
@@ -3271,8 +3271,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8560(int i_1) {
-		Class528_Sub2.anInt8644 = i_1;
-		Class528_Sub2.anInt8562 = i_1;
+		MeshRasterizer_Sub2.anInt8644 = i_1;
+		MeshRasterizer_Sub2.anInt8562 = i_1;
 		if (656550451 * this.anInt9008 * 1696391419 > 1) {
 			throw new IllegalStateException();
 		} else {
@@ -3323,8 +3323,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8559(int i_1) {
-		Class528_Sub2.anInt8644 = i_1;
-		Class528_Sub2.anInt8562 = i_1;
+		MeshRasterizer_Sub2.anInt8644 = i_1;
+		MeshRasterizer_Sub2.anInt8562 = i_1;
 		if (656550451 * this.anInt9008 * 1696391419 > 1) {
 			throw new IllegalStateException();
 		} else {
@@ -3380,7 +3380,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				ints_8[i_10] = ints_3[i_10];
 			}
 
-			obj_7 = new Class160_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
+			obj_7 = new NativeSprite_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
 		} else {
 			ints_8 = new int[i_6 * i_5];
 			bytes_9 = class91_1.alpha;
@@ -3393,7 +3393,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 				}
 
-				obj_7 = new Class160_Sub1_Sub3(this, ints_8, i_5, i_6);
+				obj_7 = new NativeSprite_Sub1_Sub3(this, ints_8, i_5, i_6);
 			} else {
 				for (i_10 = 0; i_10 < i_6; i_10++) {
 					i_11 = i_10 * i_5;
@@ -3404,11 +3404,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 				}
 
-				obj_7 = new Class160_Sub1_Sub1(this, ints_8, i_5, i_6);
+				obj_7 = new NativeSprite_Sub1_Sub1(this, ints_8, i_5, i_6);
 			}
 		}
 
-		((Class160_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
+		((NativeSprite_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return (NativeSprite) obj_7;
 	}
 
@@ -3455,7 +3455,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				ints_8[i_10] = ints_3[i_10];
 			}
 
-			obj_7 = new Class160_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
+			obj_7 = new NativeSprite_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
 		} else {
 			ints_8 = new int[i_6 * i_5];
 			bytes_9 = class91_1.alpha;
@@ -3468,7 +3468,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 				}
 
-				obj_7 = new Class160_Sub1_Sub3(this, ints_8, i_5, i_6);
+				obj_7 = new NativeSprite_Sub1_Sub3(this, ints_8, i_5, i_6);
 			} else {
 				for (i_10 = 0; i_10 < i_6; i_10++) {
 					i_11 = i_10 * i_5;
@@ -3479,11 +3479,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 				}
 
-				obj_7 = new Class160_Sub1_Sub1(this, ints_8, i_5, i_6);
+				obj_7 = new NativeSprite_Sub1_Sub1(this, ints_8, i_5, i_6);
 			}
 		}
 
-		((Class160_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
+		((NativeSprite_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return (NativeSprite) obj_7;
 	}
 
@@ -3532,7 +3532,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public MeshRasterizer method8564(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	void method8596(int i_1, int i_2) throws Exception_Sub3 {
@@ -3607,7 +3607,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public MeshRasterizer method8561(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public void fi(int i_1, int i_2) {
@@ -5949,7 +5949,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8480(boolean bool_1) {
 	}
 
-	public Class282_Sub1 method8438(int i_1) {
+	public Node_Sub1 method8438(int i_1) {
 		return null;
 	}
 
@@ -6061,11 +6061,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return i_7;
 	}
 
-	public Class282_Sub1 method8570(int i_1) {
+	public Node_Sub1 method8570(int i_1) {
 		return null;
 	}
 
-	public Class282_Sub1 method8541(int i_1) {
+	public Node_Sub1 method8541(int i_1) {
 		return null;
 	}
 
@@ -6082,15 +6082,15 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public void method8544(Class282_Sub1 class282_sub1_1) {
+	public void method8544(Node_Sub1 class282_sub1_1) {
 	}
 
 	public NativeSprite method8461(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-		return (NativeSprite) (bool_3 ? new Class160_Sub1_Sub3(this, i_1, i_2) : new Class160_Sub1_Sub1(this, i_1, i_2));
+		return (NativeSprite) (bool_3 ? new NativeSprite_Sub1_Sub3(this, i_1, i_2) : new NativeSprite_Sub1_Sub1(this, i_1, i_2));
 	}
 
 	public NativeSprite method8577(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-		return (NativeSprite) (bool_3 ? new Class160_Sub1_Sub3(this, i_1, i_2) : new Class160_Sub1_Sub1(this, i_1, i_2));
+		return (NativeSprite) (bool_3 ? new NativeSprite_Sub1_Sub3(this, i_1, i_2) : new NativeSprite_Sub1_Sub1(this, i_1, i_2));
 	}
 
 	public NativeSprite method8543(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
@@ -6102,12 +6102,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 				int i_11 = ints_1[i_8++] >>> 24;
 				if (i_11 != 0 && i_11 != 255) {
 					bool_7 = true;
-					return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
+					return (NativeSprite) (bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 				}
 			}
 		}
 
-		return (NativeSprite) (bool_7 ? new Class160_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new Class160_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
+		return (NativeSprite) (bool_7 ? new NativeSprite_Sub1_Sub3(this, ints_1, i_2, i_3, i_4, i_5, bool_6) : new NativeSprite_Sub1_Sub1(this, ints_1, i_2, i_3, i_4, i_5, bool_6));
 	}
 
 	public void method8673(int i_1, int i_2, int i_3, int i_4) {
@@ -6140,7 +6140,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				ints_8[i_10] = ints_3[i_10];
 			}
 
-			obj_7 = new Class160_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
+			obj_7 = new NativeSprite_Sub1_Sub2(this, bytes_9, ints_8, i_5, i_6);
 		} else {
 			ints_8 = new int[i_6 * i_5];
 			bytes_9 = class91_1.alpha;
@@ -6153,7 +6153,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 				}
 
-				obj_7 = new Class160_Sub1_Sub3(this, ints_8, i_5, i_6);
+				obj_7 = new NativeSprite_Sub1_Sub3(this, ints_8, i_5, i_6);
 			} else {
 				for (i_10 = 0; i_10 < i_6; i_10++) {
 					i_11 = i_10 * i_5;
@@ -6164,11 +6164,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 					}
 				}
 
-				obj_7 = new Class160_Sub1_Sub1(this, ints_8, i_5, i_6);
+				obj_7 = new NativeSprite_Sub1_Sub1(this, ints_8, i_5, i_6);
 			}
 		}
 
-		((Class160_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
+		((NativeSprite_Sub1) obj_7).method2743(class91_1.minX, class91_1.minY, class91_1.anInt958, class91_1.anInt953);
 		return (NativeSprite) obj_7;
 	}
 
@@ -6199,14 +6199,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			if (bool_5) {
-				return new Class160_Sub1_Sub3(this, ints_6, i_3, i_4);
+				return new NativeSprite_Sub1_Sub3(this, ints_6, i_3, i_4);
 			} else {
-				return new Class160_Sub1_Sub1(this, ints_6, i_3, i_4);
+				return new NativeSprite_Sub1_Sub1(this, ints_6, i_3, i_4);
 			}
 		}
 	}
 
-	public void method8542(Class282_Sub1 class282_sub1_1) {
+	public void method8542(Node_Sub1 class282_sub1_1) {
 	}
 
 	public Class455 method8554(int i_1, int i_2, int[] ints_3, int[] ints_4) {
@@ -6390,14 +6390,14 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 		if (bool_3) {
 			if (bool_6) {
-				return new Class8_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
+				return new FontRenderer_Sub2(this, fontmetrics_1, arr_2, ints_4, ints_5);
 			} else {
-				return new Class8_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
+				return new FontRenderer_Sub1(this, fontmetrics_1, arr_2, ints_4, ints_5);
 			}
 		} else if (bool_6) {
 			throw new IllegalArgumentException("");
 		} else {
-			return new Class8_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
+			return new FontRenderer_Sub3(this, fontmetrics_1, arr_2, ints_4, ints_5);
 		}
 	}
 
@@ -6425,11 +6425,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public MeshRasterizer method8623(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public MeshRasterizer method8505(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub2(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public void L() {
@@ -6450,7 +6450,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public Ground method8569(int i_1, int i_2, int[][] ints_3, int[][] ints_4, int i_5, int i_6, int i_7) {
-		return new Class390_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
+		return new Ground_Sub3(this, i_6, i_7, i_1, i_2, ints_3, ints_4, i_5);
 	}
 
 	public Matrix44Arr method8517() {
@@ -6500,10 +6500,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 		this.method14364();
 	}
 
-	public void method8426(int i_1, Class282_Sub24[] arr_2) {
+	public void method8426(int i_1, Node_Sub24[] arr_2) {
 	}
 
-	public void method8579(int i_1, Class282_Sub24[] arr_2) {
+	public void method8579(int i_1, Node_Sub24[] arr_2) {
 	}
 
 	public int[] ke(int i_1, int i_2, int i_3, int i_4) {
@@ -6608,7 +6608,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return i_1 & i_2 ^ i_2;
 	}
 
-	public void method8394(int i_1, Class282_Sub24[] arr_2) {
+	public void method8394(int i_1, Node_Sub24[] arr_2) {
 	}
 
 	public int method8567(int i_1, int i_2) {
@@ -7108,7 +7108,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	}
 
-	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
+	public Node_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
 		return null;
 	}
 
@@ -7163,9 +7163,9 @@ public class HardwareRenderer extends GraphicalRenderer {
 			}
 
 			if (bool_5) {
-				return new Class160_Sub1_Sub3(this, ints_6, i_3, i_4);
+				return new NativeSprite_Sub1_Sub3(this, ints_6, i_3, i_4);
 			} else {
-				return new Class160_Sub1_Sub1(this, ints_6, i_3, i_4);
+				return new NativeSprite_Sub1_Sub1(this, ints_6, i_3, i_4);
 			}
 		}
 	}
@@ -7237,7 +7237,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	public void method8488(int i_1) {
 		int i_2 = i_1 - 1426154545 * this.anInt8977;
 
-		for (Class282_Sub27 class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3866(514216110); class282_sub27_3 != null; class282_sub27_3 = (Class282_Sub27) this.aClass229_9006.method3867()) {
+		for (Node_Sub27 class282_sub27_3 = (Node_Sub27) this.aClass229_9006.method3866(514216110); class282_sub27_3 != null; class282_sub27_3 = (Node_Sub27) this.aClass229_9006.method3867()) {
 			if (class282_sub27_3.aBool7693) {
 				class282_sub27_3.anInt7692 += i_2;
 				int i_4 = class282_sub27_3.anInt7692 / 50;

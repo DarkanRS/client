@@ -10,11 +10,11 @@ public abstract class JS5StandardRequester {
 	Queue waitingPriorities = new Queue();
 	Queue extras = new Queue();
 	Queue waitingExtras = new Queue();
-	RsByteBuffer aClass282_Sub35_3655 = new RsByteBuffer(6);
+	RsByteBuffer aNode_Sub35_3655 = new RsByteBuffer(6);
 	byte aByte3656 = 0;
 	public volatile int anInt3657 = 0;
 	public volatile int anInt3650 = 0;
-	RsByteBuffer aClass282_Sub35_3647 = new RsByteBuffer(10);
+	RsByteBuffer aNode_Sub35_3647 = new RsByteBuffer(10);
 
 	public abstract void method5514();
 

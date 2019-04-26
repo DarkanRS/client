@@ -44,13 +44,13 @@ public class AnimationFrameBase extends Node {
 
 	}
 
-	static void method12212(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1) {
+	static void method12212(CacheableNode_Sub15 class282_sub50_sub15_0, int i_1) {
 		if (Class20.aBool161) {
 			FontMetrics fontmetrics_3 = Class114.method1887(-1200220753);
 			int i_4 = 0;
 
 			int i_6;
-			for (Class282_Sub50_Sub7 class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7941(); class282_sub50_sub7_5 != null; class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7955(-726833918)) {
+			for (CacheableNode_Sub7 class282_sub50_sub7_5 = (CacheableNode_Sub7) class282_sub50_sub15_0.aClass477_9770.method7941(); class282_sub50_sub7_5 != null; class282_sub50_sub7_5 = (CacheableNode_Sub7) class282_sub50_sub15_0.aClass477_9770.method7955(-726833918)) {
 				i_6 = Shadow.method15507(class282_sub50_sub7_5, fontmetrics_3);
 				if (i_6 > i_4) {
 					i_4 = i_6;
@@ -59,7 +59,7 @@ public class AnimationFrameBase extends Node {
 
 			i_4 += 8;
 			int i_9 = class282_sub50_sub15_0.anInt9769 * Class20.anInt178 + 21;
-			Class521_Sub1_Sub5_Sub1.anInt10526 = (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * class282_sub50_sub15_0.anInt9769;
+			Transform_Sub1_Sub5_Sub1.anInt10526 = (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * class282_sub50_sub15_0.anInt9769;
 			i_6 = Class301.anInt3555 + Class158_Sub2.anInt8975;
 			if (i_4 + i_6 > Class349.anInt4083) {
 				i_6 = Class301.anInt3555 - i_4;
@@ -80,9 +80,9 @@ public class AnimationFrameBase extends Node {
 			}
 
 			Class341.anInt3996 = i_6;
-			Class282_Sub50_Sub2.anInt9471 = i_8;
-			Class96_Sub3.anInt8518 = i_4;
-			Class20.aClass282_Sub50_Sub15_163 = class282_sub50_sub15_0;
+			CacheableNode_Sub2.anInt9471 = i_8;
+			CutsceneAction_Sub3.anInt8518 = i_4;
+			Class20.aCacheableNode_Sub15_163 = class282_sub50_sub15_0;
 		}
 
 	}

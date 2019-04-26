@@ -52,13 +52,13 @@ public class NPCDirection implements Identifiable {
 	}
 
 	static int method4325(WorldDescriptor class217_sub1_0, WorldDescriptor class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5) {
-		int i_7 = Class468_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_2, bool_3, -1139598282);
+		int i_7 = Preference_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_2, bool_3, -1139598282);
 		if (i_7 != 0) {
 			return bool_3 ? -i_7 : i_7;
 		} else if (i_4 == -1) {
 			return 0;
 		} else {
-			int i_8 = Class468_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_4, bool_5, 502697852);
+			int i_8 = Preference_Sub1.method12620(class217_sub1_0, class217_sub1_1, i_4, bool_5, 502697852);
 			return bool_5 ? -i_8 : i_8;
 		}
 	}
@@ -71,7 +71,7 @@ public class NPCDirection implements Identifiable {
 			if (client.FPS < 20) {
 				i_6 = -65536;
 			}
-			Class16.aClass8_144.method359("Fps:" + client.FPS, i_4, i_5, i_6, -1);
+			Class16.aFontRenderer_144.method359("Fps:" + client.FPS, i_4, i_5, i_6, -1);
 			i_5 += 15;
 			Runtime runtime_7 = Runtime.getRuntime();
 			long long_8 = runtime_7.totalMemory() / 1024L;
@@ -80,7 +80,7 @@ public class NPCDirection implements Identifiable {
 			if (long_10 > 262144L) {
 				i_12 = -65536;
 			}
-			Class16.aClass8_144.method359("Mem:" + long_10 + "/" + long_8 + "k", i_4, i_5, i_12, -1);
+			Class16.aFontRenderer_144.method359("Mem:" + long_10 + "/" + long_8 + "k", i_4, i_5, i_12, -1);
 			i_5 += 15;
 			long long_13 = client.outputContext.aClass7_2299.method349((byte) 16);
 			String str_15 = "N/A";
@@ -90,7 +90,7 @@ public class NPCDirection implements Identifiable {
 					str_15 = ParticleProducerDefinition.method1163(16711680) + str_15 + ParticleProducerDefinition.method1163(16776960);
 				}
 			}
-			Class16.aClass8_144.method359("Game: In:" + client.outputContext.anInt2294 + "B/s " + "Out:" + client.outputContext.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
+			Class16.aFontRenderer_144.method359("Game: In:" + client.outputContext.anInt2294 + "B/s " + "Out:" + client.outputContext.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
 			i_5 += 15;
 			long long_16 = client.connectionContext.aClass7_2299.method349((byte) -81);
 			String str_18 = "N/A";
@@ -100,10 +100,10 @@ public class NPCDirection implements Identifiable {
 					str_18 = ParticleProducerDefinition.method1163(16711680) + str_18 + ParticleProducerDefinition.method1163(16776960);
 				}
 			}
-			Class16.aClass8_144.method359("Lobby: In:" + client.connectionContext.anInt2294 + "B/s " + "Out:" + client.connectionContext.anInt2293 + "B/s " + "Ping:" + str_18, i_4, i_5, -256, -1);
+			Class16.aFontRenderer_144.method359("Lobby: In:" + client.connectionContext.anInt2294 + "B/s " + "Out:" + client.connectionContext.anInt2293 + "B/s " + "Ping:" + str_18, i_4, i_5, -256, -1);
 			i_5 += 15;
 			int i_19 = Renderers.SOFTWARE_RENDERER.za() / 1024;
-			Class16.aClass8_144.method359("Offheap:" + i_19 + "k", i_4, i_5, i_19 > 65536 ? -65536 : -256, -1);
+			Class16.aFontRenderer_144.method359("Offheap:" + i_19 + "k", i_4, i_5, i_19 > 65536 ? -65536 : -256, -1);
 			i_5 += 15;
 			int i_20 = 0;
 			int i_21 = 0;
@@ -145,88 +145,88 @@ public class NPCDirection implements Identifiable {
 		}
 	}
 
-	static Class282_Sub20 method4328(int i_0) {
+	static Node_Sub20 method4328(int i_0) {
 		switch (i_0) {
 		case 0:
-			return new Class282_Sub20_Sub17();
+			return new Node_Sub20_Sub17();
 		case 1:
-			return new Class282_Sub20_Sub21();
+			return new Node_Sub20_Sub21();
 		case 2:
-			return new Class282_Sub20_Sub6();
+			return new Node_Sub20_Sub6();
 		case 3:
-			return new Class282_Sub20_Sub18();
+			return new Node_Sub20_Sub18();
 		case 4:
-			return new Class282_Sub20_Sub37();
+			return new Node_Sub20_Sub37();
 		case 5:
-			return new Class282_Sub20_Sub16();
+			return new Node_Sub20_Sub16();
 		case 6:
-			return new Class282_Sub20_Sub20();
+			return new Node_Sub20_Sub20();
 		case 7:
-			return new Class282_Sub20_Sub27();
+			return new Node_Sub20_Sub27();
 		case 8:
-			return new Class282_Sub20_Sub10();
+			return new Node_Sub20_Sub10();
 		case 9:
-			return new Class282_Sub20_Sub23();
+			return new Node_Sub20_Sub23();
 		case 10:
-			return new Class282_Sub20_Sub13();
+			return new Node_Sub20_Sub13();
 		case 11:
-			return new Class282_Sub20_Sub35();
+			return new Node_Sub20_Sub35();
 		case 12:
-			return new Class282_Sub20_Sub3();
+			return new Node_Sub20_Sub3();
 		case 13:
-			return new Class282_Sub20_Sub38();
+			return new Node_Sub20_Sub38();
 		case 14:
-			return new Class282_Sub20_Sub25();
+			return new Node_Sub20_Sub25();
 		case 15:
-			return new Class282_Sub20_Sub34();
+			return new Node_Sub20_Sub34();
 		case 16:
-			return new Class282_Sub20_Sub8();
+			return new Node_Sub20_Sub8();
 		case 17:
-			return new Class282_Sub20_Sub32();
+			return new Node_Sub20_Sub32();
 		case 18:
-			return new Class282_Sub20_Sub29_Sub1();
+			return new Node_Sub20_Sub29_Sub1();
 		case 19:
-			return new Class282_Sub20_Sub15();
+			return new Node_Sub20_Sub15();
 		case 20:
-			return new Class282_Sub20_Sub2();
+			return new Node_Sub20_Sub2();
 		case 21:
-			return new Class282_Sub20_Sub33();
+			return new Node_Sub20_Sub33();
 		case 22:
-			return new Class282_Sub20_Sub31();
+			return new Node_Sub20_Sub31();
 		case 23:
-			return new Class282_Sub20_Sub22();
+			return new Node_Sub20_Sub22();
 		case 24:
-			return new Class282_Sub20_Sub30();
+			return new Node_Sub20_Sub30();
 		case 25:
-			return new Class282_Sub20_Sub28();
+			return new Node_Sub20_Sub28();
 		case 26:
-			return new Class282_Sub20_Sub11();
+			return new Node_Sub20_Sub11();
 		case 27:
-			return new Class282_Sub20_Sub1();
+			return new Node_Sub20_Sub1();
 		case 28:
-			return new Class282_Sub20_Sub9();
+			return new Node_Sub20_Sub9();
 		case 29:
-			return new Class282_Sub20_Sub19();
+			return new Node_Sub20_Sub19();
 		case 30:
-			return new Class282_Sub20_Sub7();
+			return new Node_Sub20_Sub7();
 		case 31:
-			return new Class282_Sub20_Sub5();
+			return new Node_Sub20_Sub5();
 		case 32:
-			return new Class282_Sub20_Sub12();
+			return new Node_Sub20_Sub12();
 		case 33:
-			return new Class282_Sub20_Sub36();
+			return new Node_Sub20_Sub36();
 		case 34:
-			return new Class282_Sub20_Sub4();
+			return new Node_Sub20_Sub4();
 		case 35:
-			return new Class282_Sub20_Sub26();
+			return new Node_Sub20_Sub26();
 		case 36:
-			return new Class282_Sub20_Sub24();
+			return new Node_Sub20_Sub24();
 		case 37:
-			return new Class282_Sub20_Sub14();
+			return new Node_Sub20_Sub14();
 		case 38:
-			return new Class282_Sub20_Sub39();
+			return new Node_Sub20_Sub39();
 		case 39:
-			return new Class282_Sub20_Sub29();
+			return new Node_Sub20_Sub29();
 		default:
 			return null;
 		}

@@ -151,13 +151,13 @@ public class PlayerVarProvider implements VarProvider {
 		return i_3;
 	}
 
-	static Class275_Sub2 method286() {
-		Class275_Sub2 class275_sub2_1 = (Class275_Sub2) Class275_Sub2.aClass457_7745.method7648(1622132188);
+	static EntityNode_Sub2 method286() {
+		EntityNode_Sub2 class275_sub2_1 = (EntityNode_Sub2) EntityNode_Sub2.aClass457_7745.method7648(1622132188);
 		if (class275_sub2_1 != null) {
-			--Class275_Sub2.anInt7741;
+			--EntityNode_Sub2.anInt7741;
 			return class275_sub2_1;
 		} else {
-			return new Class275_Sub2();
+			return new EntityNode_Sub2();
 		}
 	}
 }

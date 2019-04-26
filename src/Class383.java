@@ -42,8 +42,8 @@ public class Class383 implements Interface41 {
 	}
 
 	public static Class268 method6509(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (Class393.preferences.aClass468_Sub13_8225.method12714() != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
-			Class268 class268_7 = new Class268((byte) 1, i_0, i_1, i_2, i_3, i_4, i_5, (Class521_Sub1) null);
+		if (Class393.preferences.aPreference_Sub13_8225.method12714() != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+			Class268 class268_7 = new Class268((byte) 1, i_0, i_1, i_2, i_3, i_4, i_5, (Transform_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
 			return class268_7;
 		} else {
@@ -52,7 +52,7 @@ public class Class383 implements Interface41 {
 	}
 
 	public static void method6511() {
-		for (Class282_Sub37 class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7750(76127195); class282_sub37_1 != null; class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7751((byte) 48)) {
+		for (Node_Sub37 class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7750(76127195); class282_sub37_1 != null; class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7751((byte) 48)) {
 			if (!class282_sub37_1.aBool7996) {
 				Class92.method1563(class282_sub37_1.anInt7999);
 			} else {
@@ -86,7 +86,7 @@ public class Class383 implements Interface41 {
 			}
 			try {
 				Dimension dimension_4 = Class351.gameCanvas.getSize();
-				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
+				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -8);
 				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, QuickchatFiller.ENTITY_DEFAULTS.profilingModel);
 				long long_6 = TextureDetails.time();
 				Renderers.SOFTWARE_RENDERER.L();
@@ -104,7 +104,7 @@ public class Class383 implements Interface41 {
 					for (int i_12 = 15; i_12 >= 0; --i_12) {
 						for (int i_13 = 0; i_13 <= i_12; i_13++) {
 							client.aClass294_7169.method5223((float) ((int) (512.0F * ((float) i_13 - (float) i_12 / 2.0F))), 0.0F, (float) ((i_12 + 1) * 512));
-							meshrasterizer_9.method11282(client.aClass294_7169, (Class275_Sub5) null, 0);
+							meshrasterizer_9.method11282(client.aClass294_7169, (EntityNode_Sub5) null, 0);
 							++i_10;
 							if (TextureDetails.time() - long_6 >= (long) i_1) {
 								break label43;
@@ -126,7 +126,7 @@ public class Class383 implements Interface41 {
 
 	static final void method6514(int i_0, int i_1, int i_2) {
 		if (MovingAnimation.isInterfaceLoaded(i_0, (int[]) null, -1336109157)) {
-			Class151.method2591(Class468_Sub8.INTERFACES[i_0].components, i_1, (byte) -17);
+			Class151.method2591(Preference_Sub8.INTERFACES[i_0].components, i_1, (byte) -17);
 		}
 	}
 

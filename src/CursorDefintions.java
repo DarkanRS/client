@@ -1,7 +1,7 @@
 public class CursorDefintions {
 
 	CursorIndexLoader loader;
-	static NativeSprite aClass160_5004;
+	static NativeSprite aNativeSprite_5004;
 	int spriteId;
 	public int anInt5002;
 	public int anInt5000;

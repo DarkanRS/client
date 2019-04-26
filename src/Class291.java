@@ -32,7 +32,7 @@ public class Class291 {
 	static byte[] aByteArray3475;
 	static ArrayList[][][] anArrayListArrayArrayArray3484;
 	static int[] anIntArray3481;
-	public static Class282_Sub50_Sub6 aClass282_Sub50_Sub6_3491;
+	public static CacheableNode_Sub6 aCacheableNode_Sub6_3491;
 	static byte[] rgbColors;
 	static short[] aShortArray3479;
 	protected static int anInt3485;
@@ -57,7 +57,7 @@ public class Class291 {
 		int[] ints_8 = MAP_AREA_INDEX.getValidFileIds(i_7);
 		if (ints_8 != null) {
 			for (int i_9 = 0; i_9 < ints_8.length; i_9++) {
-				Class282_Sub50_Sub6 class282_sub50_sub6_10 = Class52.method1087(MAP_AREA_INDEX, i_7, ints_8[i_9]);
+				CacheableNode_Sub6 class282_sub50_sub6_10 = Class52.method1087(MAP_AREA_INDEX, i_7, ints_8[i_9]);
 				aClass465_3461.put(class282_sub50_sub6_10, (long) class282_sub50_sub6_10.anInt9536);
 			}
 		}
@@ -78,7 +78,7 @@ public class Class291 {
 	public static Queue method5127(int i_0, int i_1) {
 		Queue class477_2 = new Queue();
 
-		for (Class282_Sub50_Sub6 class282_sub50_sub6_3 = (Class282_Sub50_Sub6) aClass465_3461.method7750(1631315315); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (Class282_Sub50_Sub6) aClass465_3461.method7751((byte) 13)) {
+		for (CacheableNode_Sub6 class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7750(1631315315); class282_sub50_sub6_3 != null; class282_sub50_sub6_3 = (CacheableNode_Sub6) aClass465_3461.method7751((byte) 13)) {
 			if (class282_sub50_sub6_3.aBool9543 && class282_sub50_sub6_3.method14784(i_0, i_1)) {
 				class477_2.method7936(class282_sub50_sub6_3);
 			}
@@ -88,11 +88,11 @@ public class Class291 {
 	}
 
 	static void method5128(int i_0) {
-		aClass282_Sub50_Sub6_3491 = (Class282_Sub50_Sub6) aClass465_3461.get((long) i_0);
+		aCacheableNode_Sub6_3491 = (CacheableNode_Sub6) aClass465_3461.get((long) i_0);
 	}
 
-	public static Class282_Sub50_Sub6 method5130(int i_0) {
-		return (Class282_Sub50_Sub6) aClass465_3461.get((long) i_0);
+	public static CacheableNode_Sub6 method5130(int i_0) {
+		return (CacheableNode_Sub6) aClass465_3461.get((long) i_0);
 	}
 
 	static void renderMap(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
@@ -145,8 +145,8 @@ public class Class291 {
 							}
 
 							if (i_18 == 0 && i_19 == 0 && object_20 == null) {
-								if (aClass282_Sub50_Sub6_3491.anInt9538 != -1) {
-									i_18 = ~0xffffff | aClass282_Sub50_Sub6_3491.anInt9538;
+								if (aCacheableNode_Sub6_3491.anInt9538 != -1) {
+									i_18 = ~0xffffff | aCacheableNode_Sub6_3491.anInt9538;
 								} else if ((i_7 + anInt3485 & 0x4) != (i_12 + anInt3486 & 0x4)) {
 									i_18 = -11840664;
 								} else {
@@ -159,8 +159,8 @@ public class Class291 {
 
 								graphicalrenderer_0.B(i_8, i_13, i_10, i_15, i_18, 0);
 							} else if (object_20 != null) {
-								if (object_20 instanceof Class282_Sub49) {
-									Class282_Sub49 class282_sub49_29 = (Class282_Sub49) object_20;
+								if (object_20 instanceof Node_Sub49) {
+									Node_Sub49 class282_sub49_29 = (Node_Sub49) object_20;
 									if (class282_sub49_29 != null) {
 										renderUnderlay(graphicalrenderer_0, i_8, i_13, i_10, i_15, i_18, i_19, aByteArray3487[i_17], class282_sub49_29.anIntArray8109, class282_sub49_29.aByteArray8108, true);
 									}
@@ -180,8 +180,8 @@ public class Class291 {
 						i_13 = anInt3492 - (i_2 * (i_12 + 1) + 0 >> 16);
 						i_14 = anInt3492 - (i_12 * i_2 + 0 >> 16);
 						i_15 = i_14 - i_13;
-						if (aClass282_Sub50_Sub6_3491.anInt9538 != -1) {
-							i_16 = ~0xffffff | aClass282_Sub50_Sub6_3491.anInt9538;
+						if (aCacheableNode_Sub6_3491.anInt9538 != -1) {
+							i_16 = ~0xffffff | aCacheableNode_Sub6_3491.anInt9538;
 						} else if ((i_7 + anInt3485 & 0x4) != (i_12 + anInt3486 & 0x4)) {
 							i_16 = -11840664;
 						} else {
@@ -214,8 +214,8 @@ public class Class291 {
 							if (i_16 >= 0 && i_16 < yLength) {
 								Object object_26 = anObjectArray3488[i_11 + i_16 * xLength];
 								if (object_26 != null) {
-									if (object_26 instanceof Class282_Sub49) {
-										Class282_Sub49 class282_sub49_27 = (Class282_Sub49) object_26;
+									if (object_26 instanceof Node_Sub49) {
+										Node_Sub49 class282_sub49_27 = (Node_Sub49) object_26;
 										if (class282_sub49_27 != null) {
 											renderObjectSprites(graphicalrenderer_0, i_8, i_13, i_10, i_15, class282_sub49_27.anIntArray8109, class282_sub49_27.aByteArray8108);
 										}
@@ -334,8 +334,8 @@ public class Class291 {
 			for (i_1 = 0; i_1 < yLength; i_1++) {
 				Object object_2 = anObjectArray3488[i_0 + i_1 * xLength];
 				if (object_2 != null) {
-					if (object_2 instanceof Class282_Sub49) {
-						Class282_Sub49 class282_sub49_14 = (Class282_Sub49) object_2;
+					if (object_2 instanceof Node_Sub49) {
+						Node_Sub49 class282_sub49_14 = (Node_Sub49) object_2;
 						if (class282_sub49_14 != null) {
 							for (int i_4 = 0; i_4 < class282_sub49_14.anIntArray8109.length; i_4++) {
 								ObjectDefinitions objectdefinitions_12 = OBJECT_LOADER.getObjectDefinitions(class282_sub49_14.anIntArray8109[i_4]);
@@ -348,7 +348,7 @@ public class Class291 {
 								}
 
 								if (i_13 != -1) {
-									Class282_Sub36 class282_sub36_7 = new Class282_Sub36(i_13);
+									Node_Sub36 class282_sub36_7 = new Node_Sub36(i_13);
 									class282_sub36_7.anInt7987 = i_0;
 									class282_sub36_7.anInt7993 = i_1;
 									aClass482_3459.append(class282_sub36_7);
@@ -367,7 +367,7 @@ public class Class291 {
 						}
 
 						if (i_5 != -1) {
-							Class282_Sub36 class282_sub36_6 = new Class282_Sub36(i_5);
+							Node_Sub36 class282_sub36_6 = new Node_Sub36(i_5);
 							class282_sub36_6.anInt7987 = i_0;
 							class282_sub36_6.anInt7993 = i_1;
 							aClass482_3459.append(class282_sub36_6);
@@ -405,7 +405,7 @@ public class Class291 {
 								}
 
 								if (i_8 != -1) {
-									Class282_Sub36 class282_sub36_9 = new Class282_Sub36(i_8);
+									Node_Sub36 class282_sub36_9 = new Node_Sub36(i_8);
 									class282_sub36_9.anInt7987 = ((anInt3472 >> 6) + i_1) * 64 + class269_18.aByte3311 - anInt3472;
 									class282_sub36_9.anInt7993 = ((anInt3473 >> 6) + i_11) * 64 + class269_18.aByte3309 - anInt3473;
 									aClass482_3459.append(class282_sub36_9);
@@ -543,9 +543,9 @@ public class Class291 {
 		int[] ints_0 = new int[3];
 
 		for (int i_1 = 0; i_1 < aClass283_3470.anInt3382; i_1++) {
-			boolean bool_2 = aClass282_Sub50_Sub6_3491.method14778(aClass283_3470.anIntArray3381[i_1] >> 28 & 0x3, aClass283_3470.anIntArray3381[i_1] >> 14 & 0x3fff, aClass283_3470.anIntArray3381[i_1] & 0x3fff, ints_0, -1151155270);
+			boolean bool_2 = aCacheableNode_Sub6_3491.method14778(aClass283_3470.anIntArray3381[i_1] >> 28 & 0x3, aClass283_3470.anIntArray3381[i_1] >> 14 & 0x3fff, aClass283_3470.anIntArray3381[i_1] & 0x3fff, ints_0, -1151155270);
 			if (bool_2) {
-				Class282_Sub36 class282_sub36_3 = new Class282_Sub36(aClass283_3470.anIntArray3383[i_1]);
+				Node_Sub36 class282_sub36_3 = new Node_Sub36(aClass283_3470.anIntArray3383[i_1]);
 				class282_sub36_3.anInt7987 = ints_0[1] - anInt3472;
 				class282_sub36_3.anInt7993 = ints_0[2] - anInt3473;
 				aClass482_3459.append(class282_sub36_3);
@@ -554,12 +554,12 @@ public class Class291 {
 
 	}
 
-	static void method5146(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, int i_2, int i_3) {
+	static void method5146(GraphicalRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, int i_2, int i_3) {
 		class282_sub36_1.anInt7990 = (0 + i_2 * (class282_sub36_1.anInt7987 - anInt3485) >> 16) + anInt3489;
 		class282_sub36_1.anInt7992 = anInt3492 - (0 + i_3 * (class282_sub36_1.anInt7993 - anInt3465) >> 16);
 	}
 
-	static void method5147(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
+	static void method5147(GraphicalRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
 		if (worldmapareadefs_2.anIntArray2717 != null) {
 			int[] ints_3 = new int[worldmapareadefs_2.anIntArray2717.length];
 
@@ -693,7 +693,7 @@ public class Class291 {
 							bytes_18[i_19] = rsbytebuffer_1.readByte();
 						}
 
-						anObjectArray3488[i_5 * xLength + i_4] = new Class282_Sub49(ints_17, bytes_18);
+						anObjectArray3488[i_5 * xLength + i_4] = new Node_Sub49(ints_17, bytes_18);
 					}
 				} else {
 					ints_17 = null;
@@ -804,8 +804,8 @@ public class Class291 {
 
 	}
 
-	public static Class282_Sub50_Sub6 method5175(int i_0, int i_1) {
-		for (Class282_Sub50_Sub6 class282_sub50_sub6_2 = (Class282_Sub50_Sub6) aClass465_3461.method7750(1754886727); class282_sub50_sub6_2 != null; class282_sub50_sub6_2 = (Class282_Sub50_Sub6) aClass465_3461.method7751((byte) 66)) {
+	public static CacheableNode_Sub6 method5175(int i_0, int i_1) {
+		for (CacheableNode_Sub6 class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7750(1754886727); class282_sub50_sub6_2 != null; class282_sub50_sub6_2 = (CacheableNode_Sub6) aClass465_3461.method7751((byte) 66)) {
 			if (class282_sub50_sub6_2.aBool9543 && class282_sub50_sub6_2.method14784(i_0, i_1)) {
 				return class282_sub50_sub6_2;
 			}
@@ -815,7 +815,7 @@ public class Class291 {
 	}
 
 	static NodeCollection method5179(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		for (Class282_Sub36 class282_sub36_5 = (Class282_Sub36) aClass482_3459.head(); class282_sub36_5 != null; class282_sub36_5 = (Class282_Sub36) aClass482_3459.next(-413792246)) {
+		for (Node_Sub36 class282_sub36_5 = (Node_Sub36) aClass482_3459.head(); class282_sub36_5 != null; class282_sub36_5 = (Node_Sub36) aClass482_3459.next(-413792246)) {
 			method5146(graphicalrenderer_0, class282_sub36_5, i_1, i_2);
 		}
 
@@ -831,7 +831,7 @@ public class Class291 {
 	}
 
 	static void method5183(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
-		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(MAP_AREA_INDEX.getFileByName(aClass282_Sub50_Sub6_3491.aString9533, "area"));
+		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(MAP_AREA_INDEX.getFileByName(aCacheableNode_Sub6_3491.aString9533, "area"));
 		int i_4 = rsbytebuffer_3.readUnsignedByte();
 		int[] ints_5 = new int[i_4];
 
@@ -1014,7 +1014,7 @@ public class Class291 {
 
 							int i_23 = i_22 + (i_3 + i_21 & 0xfc00) + (i_21 & 0x380);
 							int i_24 = i_10 + i_18 * xLength;
-							int i_25 = Class335.anIntArray3916[Class372.method6362(Class96_Sub21.method14677(i_23, 96), 880885246) & 0xffff];
+							int i_25 = Class335.anIntArray3916[Class372.method6362(CutsceneAction_Sub21.method14677(i_23, 96), 880885246) & 0xffff];
 							bytes_1[i_24] = (byte) (i_25 >> 16 & 0xff);
 							shorts_2[i_24] = (short) (i_25 & 0xffff);
 						}

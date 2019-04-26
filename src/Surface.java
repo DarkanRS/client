@@ -17,7 +17,7 @@ public class Surface {
 	public byte aByte839;
 
 	public ParticleProducerDefinition method1485() {
-		return Class282_Sub11_Sub1.getParticleProducerDefs(this.anInt842);
+		return Node_Sub11_Sub1.getParticleProducerDefs(this.anInt842);
 	}
 
 	Surface method1488(int i_1, int i_2, int i_3) {
@@ -33,14 +33,14 @@ public class Surface {
 	}
 
 	public static AccountCreationResponseOpcodes method1489() {
-		return Class96_Sub9.RECIEVED_RESPONSE == null ? AccountCreationResponseOpcodes.aClass483_5730 : Class96_Sub9.RECIEVED_RESPONSE;
+		return CutsceneAction_Sub9.RECIEVED_RESPONSE == null ? AccountCreationResponseOpcodes.aClass483_5730 : CutsceneAction_Sub9.RECIEVED_RESPONSE;
 	}
 
 	public static void method1491(int i_0, byte b_1) {
 		if (Class148.anInt1730 != 0) {
 			Class158_Sub2_Sub3.anInt10243 = i_0;
 		} else {
-			Class148.aClass282_Sub15_Sub2_1735.method15144(i_0, 814872907);
+			Class148.aNode_Sub15_Sub2_1735.method15144(i_0, 814872907);
 		}
 	}
 }

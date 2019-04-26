@@ -1,4 +1,4 @@
-public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObject {
+public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObject {
 
 	boolean aBool10512 = true;
 
@@ -43,7 +43,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			Matrix44Var matrix44var_4 = this.method11168();
 			Class285 class285_5 = Class470.method7824(this.aBool10511, (byte) -97);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, this.aShort9458, this.localX, this.aShort9456, this.localY, true, -219339696);
-			meshrasterizer_3.method11282(matrix44var_4, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_6 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_6);
@@ -51,7 +51,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			this.aBool10512 = meshrasterizer_3.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_7 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_7.aClass385_3595.x, (int) class305_7.aClass385_3595.y, (int) class305_7.aClass385_3595.z, meshrasterizer_3, (byte) -19);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_7.aClass385_3595.x, (int) class305_7.aClass385_3595.y, (int) class305_7.aClass385_3595.z, meshrasterizer_3, (byte) -19);
 			} else {
 				Class388.method6694(this.aClass200_10510, (int) class305_7.aClass385_3595.x, (int) class305_7.aClass385_3595.y, (int) class305_7.aClass385_3595.z, meshrasterizer_3, 464369048);
 			}
@@ -167,7 +167,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10511, (byte) -2);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, this.aShort9458, this.localX, this.aShort9456, this.localY, true, 915832914);
-			meshrasterizer_2.method11282(matrix44var_3, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_5 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -175,7 +175,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 1);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 1);
 			} else {
 				Class388.method6694(this.aClass200_10510, (int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, -1316927176);
 			}
@@ -195,7 +195,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		return this.aBool10512;
 	}
 
-	final void method13013(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6, int i_7) {
+	final void method13013(GraphicalRenderer graphicalrenderer_1, Transform_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6, int i_7) {
 		throw new IllegalStateException();
 	}
 
@@ -227,7 +227,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10511, (byte) -19);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, this.aShort9458, this.localX, this.aShort9456, this.localY, true, 1469676287);
-			meshrasterizer_2.method11282(matrix44var_3, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_5 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -235,7 +235,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 4);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 4);
 			} else {
 				Class388.method6694(this.aClass200_10510, (int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, 1083467352);
 			}
@@ -254,7 +254,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10511, (byte) -5);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, this.aShort9458, this.localX, this.aShort9456, this.localY, true, 1385050972);
-			meshrasterizer_2.method11282(matrix44var_3, this.aClass275_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_5 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -262,7 +262,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = Class275_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) -21);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) -21);
 			} else {
 				Class388.method6694(this.aClass200_10510, (int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, -640718163);
 			}
@@ -293,7 +293,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		return false;
 	}
 
-	final void method13016(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
+	final void method13016(GraphicalRenderer graphicalrenderer_1, Transform_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		throw new IllegalStateException();
 	}
 

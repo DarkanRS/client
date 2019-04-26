@@ -8,10 +8,10 @@ public abstract class Class47 {
 	public Matrix44Arr aClass384_442 = new Matrix44Arr();
 	public Matrix44Arr aClass384_440 = new Matrix44Arr();
 	public Matrix44Arr aClass384_444 = new Matrix44Arr();
-	protected Class505_Sub2 aClass505_Sub2_439;
+	protected GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_439;
 
-	Class47(Class505_Sub2 class505_sub2_1) {
-		this.aClass505_Sub2_439 = class505_sub2_1;
+	Class47(GraphicalRenderer_Sub2 class505_sub2_1) {
+		this.aGraphicalRenderer_Sub2_439 = class505_sub2_1;
 	}
 
 	public abstract void method936();

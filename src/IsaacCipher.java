@@ -225,8 +225,8 @@ public final class IsaacCipher {
                     if (bytes_11 != null) {
                         i_10 = (bytes_11[i_7][i_8] & 0xff) * 8 << 2;
                     }
-                    if (sceneobjectmanager_2.aClass390Array2591 != null && sceneobjectmanager_2.aClass390Array2591[i_9] != null) {
-                        int i_12 = i_5 - (sceneobjectmanager_2.aClass390Array2591[i_9].method6722(i_7, i_8) - i_10);
+                    if (sceneobjectmanager_2.aGroundArray2591 != null && sceneobjectmanager_2.aGroundArray2591[i_9] != null) {
+                        int i_12 = i_5 - (sceneobjectmanager_2.aGroundArray2591[i_9].method6722(i_7, i_8) - i_10);
                         if (i_12 > i_6) {
                             i_6 = i_12;
                         }

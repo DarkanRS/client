@@ -26,7 +26,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	void method13375(int i_1, char var_2, int i_3, int i_4) {
-		Class282_Sub52 class282_sub52_5 = new Class282_Sub52();
+		Node_Sub52 class282_sub52_5 = new Node_Sub52();
 		class282_sub52_5.anInt8173 = i_1;
 		class282_sub52_5.aChar8171 = var_2;
 		class282_sub52_5.anInt8172 = i_3;
@@ -40,11 +40,11 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 
 	public synchronized void method3235() {
 		this.aClass482_8046.method8118(-1343308861);
-		for (Class282_Sub52 class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead(); class282_sub52_2 != null; class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead()) {
+		for (Node_Sub52 class282_sub52_2 = (Node_Sub52) this.aClass482_8047.popHead(); class282_sub52_2 != null; class282_sub52_2 = (Node_Sub52) this.aClass482_8047.popHead()) {
 			class282_sub52_2.anInt8174 = this.method13398((byte) 124);
 			if (class282_sub52_2.anInt8173 == 0) {
 				if (!this.aBoolArray8048[class282_sub52_2.anInt8172]) {
-					Class282_Sub52 class282_sub52_3 = new Class282_Sub52();
+					Node_Sub52 class282_sub52_3 = new Node_Sub52();
 					class282_sub52_3.anInt8173 = 0;
 					class282_sub52_3.aChar8171 = (char) 65535;
 					class282_sub52_3.anInt8172 = class282_sub52_2.anInt8172;
@@ -63,7 +63,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 			} else if (class282_sub52_2.anInt8173 == -1) {
 				for (int i_5 = 0; i_5 < 112; i_5++) {
 					if (this.aBoolArray8048[i_5]) {
-						Class282_Sub52 class282_sub52_4 = new Class282_Sub52();
+						Node_Sub52 class282_sub52_4 = new Node_Sub52();
 						class282_sub52_4.anInt8173 = 1;
 						class282_sub52_4.aChar8171 = (char) 65535;
 						class282_sub52_4.anInt8172 = i_5;
@@ -155,11 +155,11 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 
 	public synchronized void method3246() {
 		this.aClass482_8046.method8118(1090234793);
-		for (Class282_Sub52 class282_sub52_1 = (Class282_Sub52) this.aClass482_8047.popHead(); class282_sub52_1 != null; class282_sub52_1 = (Class282_Sub52) this.aClass482_8047.popHead()) {
+		for (Node_Sub52 class282_sub52_1 = (Node_Sub52) this.aClass482_8047.popHead(); class282_sub52_1 != null; class282_sub52_1 = (Node_Sub52) this.aClass482_8047.popHead()) {
 			class282_sub52_1.anInt8174 = this.method13398((byte) 40) * 110455137 * 656472737;
 			if (class282_sub52_1.anInt8173 * -461318909 * -921682517 == 0) {
 				if (!this.aBoolArray8048[-581998429 * class282_sub52_1.anInt8172 * -1618834677]) {
-					Class282_Sub52 class282_sub52_2 = new Class282_Sub52();
+					Node_Sub52 class282_sub52_2 = new Node_Sub52();
 					class282_sub52_2.anInt8173 = 0 * -921682517;
 					class282_sub52_2.aChar8171 = (char) 65535;
 					class282_sub52_2.anInt8172 = 1 * class282_sub52_1.anInt8172 * -1618834677 * -581998429;
@@ -178,7 +178,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 			} else if (class282_sub52_1.anInt8173 * -461318909 * -921682517 == -1) {
 				for (int i_4 = 0; i_4 < 112; i_4++) {
 					if (this.aBoolArray8048[i_4]) {
-						Class282_Sub52 class282_sub52_3 = new Class282_Sub52();
+						Node_Sub52 class282_sub52_3 = new Node_Sub52();
 						class282_sub52_3.anInt8173 = -461318909 * -921682517;
 						class282_sub52_3.aChar8171 = (char) 65535;
 						class282_sub52_3.anInt8172 = -1618834677 * i_4 * -581998429;

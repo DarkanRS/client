@@ -284,7 +284,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native int ae();
 
-	public void method11282(Matrix44Var matrix44var_1, Class275_Sub5 class275_sub5_2, int i_3) {
+	public void method11282(Matrix44Var matrix44var_1, EntityNode_Sub5 class275_sub5_2, int i_3) {
 		if (class275_sub5_2 == null) {
 			this.aja7140.nx().method314(this, matrix44var_1, (int[]) null, i_3);
 		} else {
@@ -381,7 +381,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		this.ba(ja_1);
 	}
 
-	public void method11293(Matrix44Var matrix44var_1, Class275_Sub5 class275_sub5_2, int i_3) {
+	public void method11293(Matrix44Var matrix44var_1, EntityNode_Sub5 class275_sub5_2, int i_3) {
 		if (class275_sub5_2 == null) {
 			this.aja7140.nx().method314(this, matrix44var_1, (int[]) null, i_3);
 		} else {

@@ -1,7 +1,7 @@
 public class Class149_Sub2 extends Class149 {
 
 	public static Defaults7Loader DEFAULTS_LOADER_7;
-	public static NativeSprite aClass160_9315;
+	public static NativeSprite aNativeSprite_9315;
 	public static FriendStatus FRIEND_STATUS;
 	int anInt9306;
 	int anInt9307;
@@ -42,7 +42,7 @@ public class Class149_Sub2 extends Class149 {
 		int i_9 = i_2 * this.anInt9311 >> 12;
 		int i_10 = this.anInt9312 * i_1 >> 12;
 		int i_11 = i_2 * this.anInt9313 >> 12;
-		Class282_Sub24.method12399(i_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, this.anInt1741, -2112758099);
+		Node_Sub24.method12399(i_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, this.anInt1741, -2112758099);
 	}
 
 	void method2558(int i_1, int i_2) {
@@ -60,7 +60,7 @@ public class Class149_Sub2 extends Class149 {
 		int i_8 = i_2 * 1636198257 * this.anInt9311 * -1674872431 >> 12;
 		int i_9 = i_1 * this.anInt9312 * -1310894617 * 905637335 >> 12;
 		int i_10 = this.anInt9313 * 745027993 * 264374953 * i_2 >> 12;
-		Class282_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * this.anInt1741 * -1378640425, -2120176712);
+		Node_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * this.anInt1741 * -1378640425, -2120176712);
 	}
 
 	void method2559(int i_1, int i_2) {
@@ -72,15 +72,15 @@ public class Class149_Sub2 extends Class149 {
 		int i_8 = i_2 * 1636198257 * this.anInt9311 * -1674872431 >> 12;
 		int i_9 = i_1 * this.anInt9312 * -1310894617 * 905637335 >> 12;
 		int i_10 = this.anInt9313 * 745027993 * 264374953 * i_2 >> 12;
-		Class282_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * this.anInt1741 * -1378640425, -2131700490);
+		Node_Sub24.method12399(i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, -1525176857 * this.anInt1741 * -1378640425, -2131700490);
 	}
 
 	public static void method14609(Player player_0) {
-		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.index);
+		Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.get((long) player_0.index);
 		if (class282_sub48_2 != null) {
-			if (class282_sub48_2.aClass282_Sub15_Sub5_8099 != null) {
-				Class79.aClass282_Sub15_Sub4_783.method15276(class282_sub48_2.aClass282_Sub15_Sub5_8099);
-				class282_sub48_2.aClass282_Sub15_Sub5_8099 = null;
+			if (class282_sub48_2.aNode_Sub15_Sub5_8099 != null) {
+				Class79.aNode_Sub15_Sub4_783.method15276(class282_sub48_2.aNode_Sub15_Sub5_8099);
+				class282_sub48_2.aNode_Sub15_Sub5_8099 = null;
 			}
 
 			class282_sub48_2.remove();
@@ -91,8 +91,8 @@ public class Class149_Sub2 extends Class149 {
 	static int method14610(Player player_0, int i_1) {
 		int i_2 = player_0.anInt10572;
 		RenderAnimDefs renderanimdefs_3 = player_0.getRenderAnimDefs();
-		int i_4 = player_0.aClass456_Sub3_10337.method7597();
-		if (i_4 != -1 && !player_0.aClass456_Sub3_10337.aBool7891) {
+		int i_4 = player_0.aAnimation_Sub3_10337.method7597();
+		if (i_4 != -1 && !player_0.aAnimation_Sub3_10337.aBool7891) {
 			if (i_4 != renderanimdefs_3.runningAnimation && i_4 != renderanimdefs_3.runDir3 && i_4 != renderanimdefs_3.runDir1 && i_4 != renderanimdefs_3.runDir2) {
 				if (i_4 == renderanimdefs_3.teleportingAnimation || i_4 == renderanimdefs_3.teleDir3 || i_4 == renderanimdefs_3.teleDir1 || i_4 == renderanimdefs_3.teleDir2) {
 					i_2 = player_0.anInt10547;

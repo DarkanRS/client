@@ -6,13 +6,13 @@ public class Queue implements Iterable {
 
 	static ParticleSystem[] aClass539Array5632;
 
-	public CacheableNode aClass282_Sub50_5629 = new CacheableNode();
+	public CacheableNode aCacheableNode_5629 = new CacheableNode();
 
-	CacheableNode aClass282_Sub50_5631;
+	CacheableNode aCacheableNode_5631;
 
 	public void method7935(byte b_1) {
-		while (this.aClass282_Sub50_5629.aClass282_Sub50_8119 != this.aClass282_Sub50_5629) {
-			this.aClass282_Sub50_5629.aClass282_Sub50_8119.method13452();
+		while (this.aCacheableNode_5629.aCacheableNode_8119 != this.aCacheableNode_5629) {
+			this.aCacheableNode_5629.aCacheableNode_8119.method13452();
 		}
 	}
 
@@ -20,15 +20,15 @@ public class Queue implements Iterable {
 		if (cacheablenode_1.current != null) {
 			cacheablenode_1.method13452();
 		}
-		cacheablenode_1.current = this.aClass282_Sub50_5629.current;
-		cacheablenode_1.aClass282_Sub50_8119 = this.aClass282_Sub50_5629;
-		cacheablenode_1.current.aClass282_Sub50_8119 = cacheablenode_1;
-		cacheablenode_1.aClass282_Sub50_8119.current = cacheablenode_1;
+		cacheablenode_1.current = this.aCacheableNode_5629.current;
+		cacheablenode_1.aCacheableNode_8119 = this.aCacheableNode_5629;
+		cacheablenode_1.current.aCacheableNode_8119 = cacheablenode_1;
+		cacheablenode_1.aCacheableNode_8119.current = cacheablenode_1;
 	}
 
 	public CacheableNode method7937(int i_1) {
-		CacheableNode cacheablenode_2 = this.aClass282_Sub50_5629.aClass282_Sub50_8119;
-		if (cacheablenode_2 == this.aClass282_Sub50_5629) {
+		CacheableNode cacheablenode_2 = this.aCacheableNode_5629.aCacheableNode_8119;
+		if (cacheablenode_2 == this.aCacheableNode_5629) {
 			return null;
 		} else {
 			cacheablenode_2.method13452();
@@ -38,15 +38,15 @@ public class Queue implements Iterable {
 
 	public int size(int i_1) {
 		int i_2 = 0;
-		for (CacheableNode cacheablenode_3 = this.aClass282_Sub50_5629.aClass282_Sub50_8119; cacheablenode_3 != this.aClass282_Sub50_5629; cacheablenode_3 = cacheablenode_3.aClass282_Sub50_8119) {
+		for (CacheableNode cacheablenode_3 = this.aCacheableNode_5629.aCacheableNode_8119; cacheablenode_3 != this.aCacheableNode_5629; cacheablenode_3 = cacheablenode_3.aCacheableNode_8119) {
 			++i_2;
 		}
 		return i_2;
 	}
 
 	public Queue() {
-		this.aClass282_Sub50_5629.aClass282_Sub50_8119 = this.aClass282_Sub50_5629;
-		this.aClass282_Sub50_5629.current = this.aClass282_Sub50_5629;
+		this.aCacheableNode_5629.aCacheableNode_8119 = this.aCacheableNode_5629;
+		this.aCacheableNode_5629.current = this.aCacheableNode_5629;
 	}
 
 	public CacheableNode method7941() {
@@ -56,26 +56,26 @@ public class Queue implements Iterable {
 	CacheableNode method7946(CacheableNode cacheablenode_1) {
 		CacheableNode cacheablenode_3;
 		if (cacheablenode_1 == null) {
-			cacheablenode_3 = this.aClass282_Sub50_5629.aClass282_Sub50_8119;
+			cacheablenode_3 = this.aCacheableNode_5629.aCacheableNode_8119;
 		} else {
 			cacheablenode_3 = cacheablenode_1;
 		}
-		if (cacheablenode_3 == this.aClass282_Sub50_5629) {
-			this.aClass282_Sub50_5631 = null;
+		if (cacheablenode_3 == this.aCacheableNode_5629) {
+			this.aCacheableNode_5631 = null;
 			return null;
 		} else {
-			this.aClass282_Sub50_5631 = cacheablenode_3.aClass282_Sub50_8119;
+			this.aCacheableNode_5631 = cacheablenode_3.aCacheableNode_8119;
 			return cacheablenode_3;
 		}
 	}
 
 	public CacheableNode method7955(int i_1) {
-		CacheableNode cacheablenode_2 = this.aClass282_Sub50_5631;
-		if (cacheablenode_2 == this.aClass282_Sub50_5629) {
-			this.aClass282_Sub50_5631 = null;
+		CacheableNode cacheablenode_2 = this.aCacheableNode_5631;
+		if (cacheablenode_2 == this.aCacheableNode_5629) {
+			this.aCacheableNode_5631 = null;
 			return null;
 		} else {
-			this.aClass282_Sub50_5631 = cacheablenode_2.aClass282_Sub50_8119;
+			this.aCacheableNode_5631 = cacheablenode_2.aCacheableNode_8119;
 			return cacheablenode_2;
 		}
 	}

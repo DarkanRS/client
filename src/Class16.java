@@ -3,15 +3,15 @@ public class Class16 {
 	static int anInt135;
 	static int p12FullIndex;
 	static int anInt137;
-	static NativeSprite[] aClass160Array138;
+	static NativeSprite[] aNativeSpriteArray138;
 	public static FontMetrics aClass414_139;
 	static int p11FullIndex;
 	static int anInt141;
 	static int anInt142;
 	static int anInt143;
-	public static FontRenderer aClass8_144;
-	static NativeSprite[] aClass160Array145;
-	static NativeSprite aClass160_146;
+	public static FontRenderer aFontRenderer_144;
+	static NativeSprite[] aNativeSpriteArray145;
+	static NativeSprite aNativeSprite_146;
 
 	Class16() throws Throwable {
 		throw new Error();
@@ -23,92 +23,92 @@ public class Class16 {
 		Object action = null;
 		switch (type.id) {
 		case 0:
-			action = new Class96_Sub15(buffer);
+			action = new CutsceneAction_Sub15(buffer);
 			break;
 		case 1:
-			action = new Class96_Sub20(buffer);
+			action = new CutsceneAction_Sub20(buffer);
 			break;
 		case 2:
-			action = new Class96_Sub14(buffer);
+			action = new CutsceneAction_Sub14(buffer);
 		case 3:
 		case 7:
 		case 21:
 		default:
 			break;
 		case 4:
-			action = new Class96_Sub4(buffer);
+			action = new CutsceneAction_Sub4(buffer);
 			break;
 		case 5:
-			action = new Class96_Sub21(buffer);
+			action = new CutsceneAction_Sub21(buffer);
 			break;
 		case 6:
-			action = new Class96_Sub8(buffer);
+			action = new CutsceneAction_Sub8(buffer);
 			break;
 		case 8:
-			action = new Class96_Sub5(buffer);
+			action = new CutsceneAction_Sub5(buffer);
 			break;
 		case 9:
-			action = new Class96_Sub22(buffer);
+			action = new CutsceneAction_Sub22(buffer);
 			break;
 		case 10:
-			action = new Class96_Sub16(buffer, false);
+			action = new CutsceneAction_Sub16(buffer, false);
 			break;
 		case 11:
-			action = new Class96_Sub11(buffer);
+			action = new CutsceneAction_Sub11(buffer);
 			break;
 		case 12:
-			action = new Class96_Sub7(buffer);
+			action = new CutsceneAction_Sub7(buffer);
 			break;
 		case 13:
-			action = new Class96_Sub3(buffer);
+			action = new CutsceneAction_Sub3(buffer);
 			break;
 		case 14:
-			action = new Class96_Sub10_Sub2(buffer);
+			action = new CutsceneAction_Sub10_Sub2(buffer);
 			break;
 		case 15:
 			action = new ProjectileCutsceneAction(buffer, 0, 0);
 			break;
 		case 16:
-			action = new Class96_Sub1(buffer);
+			action = new CutsceneAction_Sub1(buffer);
 			break;
 		case 17:
-			action = new Class96_Sub17(buffer);
+			action = new CutsceneAction_Sub17(buffer);
 			break;
 		case 18:
-			action = new Class96_Sub9(buffer);
+			action = new CutsceneAction_Sub9(buffer);
 			break;
 		case 19:
 			action = new ProjectileCutsceneAction(buffer, 1, 0);
 			break;
 		case 20:
-			action = new Class96_Sub6(buffer);
+			action = new CutsceneAction_Sub6(buffer);
 			break;
 		case 22:
-			action = new Class96_Sub12(buffer);
+			action = new CutsceneAction_Sub12(buffer);
 			break;
 		case 23:
-			action = new Class96_Sub13(buffer);
+			action = new CutsceneAction_Sub13(buffer);
 			break;
 		case 24:
 			action = new ProjectileCutsceneAction(buffer, 0, 1);
 			break;
 		case 25:
-			action = new Class96_Sub10_Sub1(buffer);
+			action = new CutsceneAction_Sub10_Sub1(buffer);
 			break;
 		case 26:
-			action = new Class96_Sub18(buffer);
+			action = new CutsceneAction_Sub18(buffer);
 			break;
 		case 27:
-			action = new Class96_Sub16(buffer, true);
+			action = new CutsceneAction_Sub16(buffer, true);
 			break;
 		case 28:
 			action = new ProjectileCutsceneAction(buffer, 1, 1);
 			break;
 		case 29:
-			action = new Class96_Sub2(buffer);
+			action = new CutsceneAction_Sub2(buffer);
 			break;
 		case 30:
-			action = new Class96_Sub23(buffer);
+			action = new CutsceneAction_Sub23(buffer);
 		}
 		return (CutsceneAction) action;
 	}
@@ -161,7 +161,7 @@ public class Class16 {
 					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_3)) {
 						LoadingStage.method6681(Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
 					} else {
-						BufferedConnectionContext class184_8 = Class468_Sub20.method12807(1039135585);
+						BufferedConnectionContext class184_8 = Preference_Sub20.method12807(1039135585);
 						TCPPacket tcpmessage_10 = Class271.createPacket(OutgoingPacket.ADD_IGNORE, class184_8.isaac);
 						tcpmessage_10.buffer.writeByte(ChatLine.getLength(string_0) + 1);
 						tcpmessage_10.buffer.writeString(string_0);

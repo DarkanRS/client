@@ -7,9 +7,9 @@ public class Class320 {
 
 	public static int[] VARC_INT;
 
-	static Class282_Sub25 aClass282_Sub25_3719 = new Class282_Sub25(0, 0);
+	static Node_Sub25 aNode_Sub25_3719 = new Node_Sub25(0, 0);
 
-	Class282_Sub25[] aClass282_Sub25Array3720;
+	Node_Sub25[] aNode_Sub25Array3720;
 
 	int[][] anIntArrayArray3717;
 
@@ -29,7 +29,7 @@ public class Class320 {
 		for (int i_2 = 0; i_2 < this.anInt3716; i_2++) {
 			this.anIntArrayArray3717[i_2] = null;
 		}
-		this.aClass282_Sub25Array3720 = null;
+		this.aNode_Sub25Array3720 = null;
 		this.anIntArrayArray3717 = null;
 		this.aClass473_3721.clear();
 		this.aClass473_3721 = null;
@@ -38,19 +38,19 @@ public class Class320 {
 	public final int[] method5721(int i_1, int i_2) {
 		if (this.anInt3715 != this.anInt3716) {
 			if (this.anInt3716 != 1) {
-				Class282_Sub25 class282_sub25_3 = this.aClass282_Sub25Array3720[i_1];
+				Node_Sub25 class282_sub25_3 = this.aNode_Sub25Array3720[i_1];
 				if (class282_sub25_3 == null) {
 					this.aBool3722 = true;
 					if (this.anInt3714 >= this.anInt3716) {
-						Class282_Sub25 class282_sub25_4 = (Class282_Sub25) this.aClass473_3721.getNext();
-						class282_sub25_3 = new Class282_Sub25(i_1, class282_sub25_4.anInt7689);
-						this.aClass282_Sub25Array3720[class282_sub25_4.anInt7688] = null;
+						Node_Sub25 class282_sub25_4 = (Node_Sub25) this.aClass473_3721.getNext();
+						class282_sub25_3 = new Node_Sub25(i_1, class282_sub25_4.anInt7689);
+						this.aNode_Sub25Array3720[class282_sub25_4.anInt7688] = null;
 						class282_sub25_4.remove();
 					} else {
-						class282_sub25_3 = new Class282_Sub25(i_1, this.anInt3714);
+						class282_sub25_3 = new Node_Sub25(i_1, this.anInt3714);
 						++this.anInt3714;
 					}
-					this.aClass282_Sub25Array3720[i_1] = class282_sub25_3;
+					this.aNode_Sub25Array3720[i_1] = class282_sub25_3;
 				} else {
 					this.aBool3722 = false;
 				}
@@ -62,8 +62,8 @@ public class Class320 {
 				return this.anIntArrayArray3717[0];
 			}
 		} else {
-			this.aBool3722 = this.aClass282_Sub25Array3720[i_1] == null;
-			this.aClass282_Sub25Array3720[i_1] = aClass282_Sub25_3719;
+			this.aBool3722 = this.aNode_Sub25Array3720[i_1] == null;
+			this.aNode_Sub25Array3720[i_1] = aNode_Sub25_3719;
 			return this.anIntArrayArray3717[i_1];
 		}
 	}
@@ -73,7 +73,7 @@ public class Class320 {
 			throw new RuntimeException();
 		} else {
 			for (int i_2 = 0; i_2 < this.anInt3716; i_2++) {
-				this.aClass282_Sub25Array3720[i_2] = aClass282_Sub25_3719;
+				this.aNode_Sub25Array3720[i_2] = aNode_Sub25_3719;
 			}
 			return this.anIntArrayArray3717;
 		}
@@ -83,7 +83,7 @@ public class Class320 {
 		this.anInt3715 = i_2;
 		this.anInt3716 = i_1;
 		this.anIntArrayArray3717 = new int[this.anInt3716][i_3];
-		this.aClass282_Sub25Array3720 = new Class282_Sub25[this.anInt3715];
+		this.aNode_Sub25Array3720 = new Node_Sub25[this.anInt3715];
 	}
 
 	public static void method5731(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {

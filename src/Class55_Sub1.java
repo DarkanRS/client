@@ -5,12 +5,12 @@ public class Class55_Sub1 extends Class55 {
 	public static float aFloat9188 = 1.0F;
 	public static float aFloat9186 = 1.0F;
 	Class101 aClass101_9187;
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9194;
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9197;
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9195;
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9196;
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9183;
-	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9198;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_9194;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_9197;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_9195;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_9196;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_9183;
+	Node_Sub21_Sub1 aNode_Sub21_Sub1_9198;
 	Class115 aClass115_9182;
 	Class115 aClass115_9185;
 	Class115 aClass115_9190;
@@ -40,7 +40,7 @@ public class Class55_Sub1 extends Class55 {
 	}
 
 	void method1103(int i_1, Class158_Sub1 class158_sub1_2, Interface6 interface6_3, Interface8 interface8_4, Interface6 interface6_5) {
-		float f_6 = this.aClass505_Sub2_514.method13905();
+		float f_6 = this.aGraphicalRenderer_Sub2_514.method13905();
 		float f_7 = (float) class158_sub1_2.method2714();
 		float f_8 = (float) class158_sub1_2.method2716();
 		Interface6 interface6_9 = interface6_3;
@@ -61,7 +61,7 @@ public class Class55_Sub1 extends Class55 {
 			i_14 = i_12;
 			this.aClass101_9187.method1655(this.aClass115_9190);
 			this.aClass101_9187.method1646();
-			this.aClass101_9187.method1658(this.aClass282_Sub21_Sub1_9196, aFloat9186 / f_7, 0.0F, -1376055691);
+			this.aClass101_9187.method1658(this.aNode_Sub21_Sub1_9196, aFloat9186 / f_7, 0.0F, -1376055691);
 		} else if (i_1 == 2) {
 			i_11 = 256;
 			i_12 = 256;
@@ -69,11 +69,11 @@ public class Class55_Sub1 extends Class55 {
 			i_14 = i_12;
 			this.aClass101_9187.method1655(this.aClass115_9190);
 			this.aClass101_9187.method1646();
-			this.aClass101_9187.method1658(this.aClass282_Sub21_Sub1_9196, 0.0F, aFloat9186 / f_8, -1647399007);
+			this.aClass101_9187.method1658(this.aNode_Sub21_Sub1_9196, 0.0F, aFloat9186 / f_8, -1647399007);
 		} else if (i_1 == 3) {
 			this.aClass101_9187.method1655(this.aClass115_9191);
 			interface6_9 = interface6_5;
-			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3);
+			this.aClass101_9187.method1671(this.aNode_Sub21_Sub1_9197, 1, interface6_3);
 			this.aClass101_9187.method1646();
 		}
 
@@ -85,15 +85,15 @@ public class Class55_Sub1 extends Class55 {
 		floats_10[5] = (floats_10[5] - 1.0F) * f_16 + 1.0F;
 		floats_10[10] *= f_17;
 		floats_10[7] *= f_18;
-		this.aClass101_9187.method1688(this.aClass282_Sub21_Sub1_9198, floats_10, 1193588147);
-		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9);
-		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -70);
-		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -98);
-		this.aClass505_Sub2_514.method8617(0, 0, i_11, i_12);
-		this.aClass505_Sub2_514.r(0, 0, i_11, i_12);
+		this.aClass101_9187.method1688(this.aNode_Sub21_Sub1_9198, floats_10, 1193588147);
+		this.aClass101_9187.method1671(this.aNode_Sub21_Sub1_9194, 0, interface6_9);
+		this.aClass101_9187.method1662(this.aNode_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -70);
+		this.aClass101_9187.method1662(this.aNode_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -98);
+		this.aGraphicalRenderer_Sub2_514.method8617(0, 0, i_11, i_12);
+		this.aGraphicalRenderer_Sub2_514.r(0, 0, i_11, i_12);
 	}
 
-	public Class55_Sub1(Class505_Sub2 class505_sub2_1) {
+	public Class55_Sub1(GraphicalRenderer_Sub2 class505_sub2_1) {
 		super(class505_sub2_1);
 	}
 
@@ -114,22 +114,22 @@ public class Class55_Sub1 extends Class55 {
 	}
 
 	boolean method14517() {
-		return this.aClass505_Sub2_514.aBool8718 && this.aClass505_Sub2_514.method13888();
+		return this.aGraphicalRenderer_Sub2_514.aBool8718 && this.aGraphicalRenderer_Sub2_514.method13888();
 	}
 
 	boolean method1101() {
 		if (this.method14517()) {
-			this.aClass101_9187 = this.aClass505_Sub2_514.method13890("FilterBloom");
+			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.method13890("FilterBloom");
 			if (this.aClass101_9187 == null) {
 				return false;
 			} else {
 				try {
-					this.aClass282_Sub21_Sub1_9194 = this.aClass101_9187.method1691("sceneTex", (short) 5629);
-					this.aClass282_Sub21_Sub1_9197 = this.aClass101_9187.method1691("bloomTex1", (short) 16551);
-					this.aClass282_Sub21_Sub1_9195 = this.aClass101_9187.method1691("params", (short) 5315);
-					this.aClass282_Sub21_Sub1_9196 = this.aClass101_9187.method1691("sampleSize", (short) 10054);
-					this.aClass282_Sub21_Sub1_9183 = this.aClass101_9187.method1691("pixelOffsetAndBloomScale", (short) 23779);
-					this.aClass282_Sub21_Sub1_9198 = this.aClass101_9187.method1691("PosAndTexCoords", (short) 12594);
+					this.aNode_Sub21_Sub1_9194 = this.aClass101_9187.method1691("sceneTex", (short) 5629);
+					this.aNode_Sub21_Sub1_9197 = this.aClass101_9187.method1691("bloomTex1", (short) 16551);
+					this.aNode_Sub21_Sub1_9195 = this.aClass101_9187.method1691("params", (short) 5315);
+					this.aNode_Sub21_Sub1_9196 = this.aClass101_9187.method1691("sampleSize", (short) 10054);
+					this.aNode_Sub21_Sub1_9183 = this.aClass101_9187.method1691("pixelOffsetAndBloomScale", (short) 23779);
+					this.aNode_Sub21_Sub1_9198 = this.aClass101_9187.method1691("PosAndTexCoords", (short) 12594);
 					this.aClass101_9187.method1651("test", 2057720732);
 					this.aClass115_9182 = this.aClass101_9187.method1651("techFullscreenTri", 23893671);
 					this.aClass115_9185 = this.aClass101_9187.method1651("brightpass", -416906059);
@@ -169,7 +169,7 @@ public class Class55_Sub1 extends Class55 {
 	}
 
 	void method1109(int i_1, Class158_Sub1 class158_sub1_2, Interface6 interface6_3, Interface8 interface8_4, Interface6 interface6_5) {
-		float f_6 = this.aClass505_Sub2_514.method13905();
+		float f_6 = this.aGraphicalRenderer_Sub2_514.method13905();
 		float f_7 = (float) class158_sub1_2.method2714();
 		float f_8 = (float) class158_sub1_2.method2716();
 		Interface6 interface6_9 = interface6_3;
@@ -190,7 +190,7 @@ public class Class55_Sub1 extends Class55 {
 			i_14 = i_12;
 			this.aClass101_9187.method1655(this.aClass115_9190);
 			this.aClass101_9187.method1646();
-			this.aClass101_9187.method1658(this.aClass282_Sub21_Sub1_9196, aFloat9186 / f_7, 0.0F, -1986573669);
+			this.aClass101_9187.method1658(this.aNode_Sub21_Sub1_9196, aFloat9186 / f_7, 0.0F, -1986573669);
 		} else if (i_1 == 2) {
 			i_11 = 256;
 			i_12 = 256;
@@ -198,11 +198,11 @@ public class Class55_Sub1 extends Class55 {
 			i_14 = i_12;
 			this.aClass101_9187.method1655(this.aClass115_9190);
 			this.aClass101_9187.method1646();
-			this.aClass101_9187.method1658(this.aClass282_Sub21_Sub1_9196, 0.0F, aFloat9186 / f_8, -1759245436);
+			this.aClass101_9187.method1658(this.aNode_Sub21_Sub1_9196, 0.0F, aFloat9186 / f_8, -1759245436);
 		} else if (i_1 == 3) {
 			this.aClass101_9187.method1655(this.aClass115_9191);
 			interface6_9 = interface6_5;
-			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3);
+			this.aClass101_9187.method1671(this.aNode_Sub21_Sub1_9197, 1, interface6_3);
 			this.aClass101_9187.method1646();
 		}
 
@@ -214,16 +214,16 @@ public class Class55_Sub1 extends Class55 {
 		floats_10[5] = (floats_10[5] - 1.0F) * f_16 + 1.0F;
 		floats_10[10] *= f_17;
 		floats_10[7] *= f_18;
-		this.aClass101_9187.method1688(this.aClass282_Sub21_Sub1_9198, floats_10, 749671414);
-		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9);
-		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -3);
-		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -95);
-		this.aClass505_Sub2_514.method8617(0, 0, i_11, i_12);
-		this.aClass505_Sub2_514.r(0, 0, i_11, i_12);
+		this.aClass101_9187.method1688(this.aNode_Sub21_Sub1_9198, floats_10, 749671414);
+		this.aClass101_9187.method1671(this.aNode_Sub21_Sub1_9194, 0, interface6_9);
+		this.aClass101_9187.method1662(this.aNode_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -3);
+		this.aClass101_9187.method1662(this.aNode_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -95);
+		this.aGraphicalRenderer_Sub2_514.method8617(0, 0, i_11, i_12);
+		this.aGraphicalRenderer_Sub2_514.r(0, 0, i_11, i_12);
 	}
 
 	void method1119(int i_1, Class158_Sub1 class158_sub1_2, Interface6 interface6_3, Interface8 interface8_4, Interface6 interface6_5) {
-		float f_6 = this.aClass505_Sub2_514.method13905();
+		float f_6 = this.aGraphicalRenderer_Sub2_514.method13905();
 		float f_7 = (float) class158_sub1_2.method2714();
 		float f_8 = (float) class158_sub1_2.method2716();
 		Interface6 interface6_9 = interface6_3;
@@ -244,7 +244,7 @@ public class Class55_Sub1 extends Class55 {
 			i_14 = i_12;
 			this.aClass101_9187.method1655(this.aClass115_9190);
 			this.aClass101_9187.method1646();
-			this.aClass101_9187.method1658(this.aClass282_Sub21_Sub1_9196, aFloat9186 / f_7, 0.0F, -2043454425);
+			this.aClass101_9187.method1658(this.aNode_Sub21_Sub1_9196, aFloat9186 / f_7, 0.0F, -2043454425);
 		} else if (i_1 == 2) {
 			i_11 = 256;
 			i_12 = 256;
@@ -252,11 +252,11 @@ public class Class55_Sub1 extends Class55 {
 			i_14 = i_12;
 			this.aClass101_9187.method1655(this.aClass115_9190);
 			this.aClass101_9187.method1646();
-			this.aClass101_9187.method1658(this.aClass282_Sub21_Sub1_9196, 0.0F, aFloat9186 / f_8, -1553465871);
+			this.aClass101_9187.method1658(this.aNode_Sub21_Sub1_9196, 0.0F, aFloat9186 / f_8, -1553465871);
 		} else if (i_1 == 3) {
 			this.aClass101_9187.method1655(this.aClass115_9191);
 			interface6_9 = interface6_5;
-			this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9197, 1, interface6_3);
+			this.aClass101_9187.method1671(this.aNode_Sub21_Sub1_9197, 1, interface6_3);
 			this.aClass101_9187.method1646();
 		}
 
@@ -268,12 +268,12 @@ public class Class55_Sub1 extends Class55 {
 		floats_10[5] = (floats_10[5] - 1.0F) * f_16 + 1.0F;
 		floats_10[10] *= f_17;
 		floats_10[7] *= f_18;
-		this.aClass101_9187.method1688(this.aClass282_Sub21_Sub1_9198, floats_10, 92267019);
-		this.aClass101_9187.method1671(this.aClass282_Sub21_Sub1_9194, 0, interface6_9);
-		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -2);
-		this.aClass101_9187.method1662(this.aClass282_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -95);
-		this.aClass505_Sub2_514.method8617(0, 0, i_11, i_12);
-		this.aClass505_Sub2_514.r(0, 0, i_11, i_12);
+		this.aClass101_9187.method1688(this.aNode_Sub21_Sub1_9198, floats_10, 92267019);
+		this.aClass101_9187.method1671(this.aNode_Sub21_Sub1_9194, 0, interface6_9);
+		this.aClass101_9187.method1662(this.aNode_Sub21_Sub1_9195, aFloat9188, aFloat9189, aFloat9184, 0.0F, (byte) -2);
+		this.aClass101_9187.method1662(this.aNode_Sub21_Sub1_9183, f_6 / f_7, f_6 / f_8, 256.0F / f_7, 256.0F / f_8, (byte) -95);
+		this.aGraphicalRenderer_Sub2_514.method8617(0, 0, i_11, i_12);
+		this.aGraphicalRenderer_Sub2_514.r(0, 0, i_11, i_12);
 	}
 
 	void method1120(int i_1) {
@@ -285,17 +285,17 @@ public class Class55_Sub1 extends Class55 {
 
 	boolean method1113() {
 		if (this.method14517()) {
-			this.aClass101_9187 = this.aClass505_Sub2_514.method13890("FilterBloom");
+			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.method13890("FilterBloom");
 			if (this.aClass101_9187 == null) {
 				return false;
 			} else {
 				try {
-					this.aClass282_Sub21_Sub1_9194 = this.aClass101_9187.method1691("sceneTex", (short) 24156);
-					this.aClass282_Sub21_Sub1_9197 = this.aClass101_9187.method1691("bloomTex1", (short) 28551);
-					this.aClass282_Sub21_Sub1_9195 = this.aClass101_9187.method1691("params", (short) 31009);
-					this.aClass282_Sub21_Sub1_9196 = this.aClass101_9187.method1691("sampleSize", (short) 25220);
-					this.aClass282_Sub21_Sub1_9183 = this.aClass101_9187.method1691("pixelOffsetAndBloomScale", (short) 17358);
-					this.aClass282_Sub21_Sub1_9198 = this.aClass101_9187.method1691("PosAndTexCoords", (short) 31197);
+					this.aNode_Sub21_Sub1_9194 = this.aClass101_9187.method1691("sceneTex", (short) 24156);
+					this.aNode_Sub21_Sub1_9197 = this.aClass101_9187.method1691("bloomTex1", (short) 28551);
+					this.aNode_Sub21_Sub1_9195 = this.aClass101_9187.method1691("params", (short) 31009);
+					this.aNode_Sub21_Sub1_9196 = this.aClass101_9187.method1691("sampleSize", (short) 25220);
+					this.aNode_Sub21_Sub1_9183 = this.aClass101_9187.method1691("pixelOffsetAndBloomScale", (short) 17358);
+					this.aNode_Sub21_Sub1_9198 = this.aClass101_9187.method1691("PosAndTexCoords", (short) 31197);
 					this.aClass101_9187.method1651("test", 14547040);
 					this.aClass115_9182 = this.aClass101_9187.method1651("techFullscreenTri", -65124239);
 					this.aClass115_9185 = this.aClass101_9187.method1651("brightpass", -276518163);
@@ -330,17 +330,17 @@ public class Class55_Sub1 extends Class55 {
 
 	boolean method1097() {
 		if (this.method14517()) {
-			this.aClass101_9187 = this.aClass505_Sub2_514.method13890("FilterBloom");
+			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.method13890("FilterBloom");
 			if (this.aClass101_9187 == null) {
 				return false;
 			} else {
 				try {
-					this.aClass282_Sub21_Sub1_9194 = this.aClass101_9187.method1691("sceneTex", (short) 23052);
-					this.aClass282_Sub21_Sub1_9197 = this.aClass101_9187.method1691("bloomTex1", (short) 12055);
-					this.aClass282_Sub21_Sub1_9195 = this.aClass101_9187.method1691("params", (short) 26278);
-					this.aClass282_Sub21_Sub1_9196 = this.aClass101_9187.method1691("sampleSize", (short) 9862);
-					this.aClass282_Sub21_Sub1_9183 = this.aClass101_9187.method1691("pixelOffsetAndBloomScale", (short) 7215);
-					this.aClass282_Sub21_Sub1_9198 = this.aClass101_9187.method1691("PosAndTexCoords", (short) 12182);
+					this.aNode_Sub21_Sub1_9194 = this.aClass101_9187.method1691("sceneTex", (short) 23052);
+					this.aNode_Sub21_Sub1_9197 = this.aClass101_9187.method1691("bloomTex1", (short) 12055);
+					this.aNode_Sub21_Sub1_9195 = this.aClass101_9187.method1691("params", (short) 26278);
+					this.aNode_Sub21_Sub1_9196 = this.aClass101_9187.method1691("sampleSize", (short) 9862);
+					this.aNode_Sub21_Sub1_9183 = this.aClass101_9187.method1691("pixelOffsetAndBloomScale", (short) 7215);
+					this.aNode_Sub21_Sub1_9198 = this.aClass101_9187.method1691("PosAndTexCoords", (short) 12182);
 					this.aClass101_9187.method1651("test", -206314658);
 					this.aClass115_9182 = this.aClass101_9187.method1651("techFullscreenTri", -575469557);
 					this.aClass115_9185 = this.aClass101_9187.method1651("brightpass", -1905427550);

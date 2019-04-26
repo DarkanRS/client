@@ -53,7 +53,7 @@ public class AnimationIndexLoader {
 			SharedConfigsType.ANIMATIONS.filesPerContainer(-1584727313);
 			this.sequenceIndex.filesCount(i_6);
 		}
-		Class96_Sub10_Sub1.setAnimationIndices(index_4, index_5);
+		CutsceneAction_Sub10_Sub1.setAnimationIndices(index_4, index_5);
 	}
 
 	public AnimationFrameSet getAnimationFrame(int i_1) {
@@ -99,7 +99,7 @@ public class AnimationIndexLoader {
 		int i_7 = i_2 - i_0;
 		if (i_7 == 0) {
 			if (i_6 != 0) {
-				Class225_Sub6.method13411(i_0, i_1, i_3, i_4, (byte) -83);
+				RouteStrategy_Sub6.method13411(i_0, i_1, i_3, i_4, (byte) -83);
 			}
 		} else if (i_6 == 0) {
 			Class16.method568(i_0, i_2, i_1, i_4);

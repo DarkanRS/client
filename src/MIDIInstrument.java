@@ -522,9 +522,9 @@ public class MIDIInstrument extends Node {
 		}
 	}
 
-	public Class282_Sub26_Sub1_Sub1 method12272() {
+	public Node_Sub26_Sub1_Sub1 method12272() {
 		Class2.method263(this);
-		return !this.method12276() || this.anInt7636 > this.anInt7605 && this.anInt7638 > this.anInt7605 / Class204.method3363(1396511710) ? new Class282_Sub26_Sub1_Sub1(this.anInt7605, this, this.aFloatArray7608, this.anInt7616, this.anInt7604, this.aBool7609) : null;
+		return !this.method12276() || this.anInt7636 > this.anInt7605 && this.anInt7638 > this.anInt7605 / Class204.method3363(1396511710) ? new Node_Sub26_Sub1_Sub1(this.anInt7605, this, this.aFloatArray7608, this.anInt7616, this.anInt7604, this.aBool7609) : null;
 	}
 
 	int method12273(int i_1) {

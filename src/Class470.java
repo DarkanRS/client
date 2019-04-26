@@ -138,17 +138,17 @@ public class Class470 {
 			EquipmentDefaults.method11248(101206847);
 			b_2 = 4;
 		} else if (i_0 > 5098) {
-			Class282_Sub40.method13300(-804709931);
+			Node_Sub40.method13300(-804709931);
 			b_2 = 3;
 		} else if (i_0 > 2012) {
 			Class119.method2077(1657485946);
 			b_2 = 2;
 		} else {
-			Class282_Sub20_Sub25.method15393(1578234856);
+			Node_Sub20_Sub25.method15393(1578234856);
 			b_2 = 1;
 		}
 		if (Class393.preferences.currentToolkit.getValue(-1022441189) != 2) {
-			Class393.preferences.setValue(Class393.preferences.aClass468_Sub18_8214, 2, -676897118);
+			Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 2, -676897118);
 			ParticleProducer.method11500(2, false);
 		} else {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, 861454749);

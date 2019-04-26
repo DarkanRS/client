@@ -1,7 +1,7 @@
 public class HitbarIndexLoader {
 
     static int anInt3451;
-    public static NativeSprite aClass160_3452;
+    public static NativeSprite aNativeSprite_3452;
     SoftCache aClass229_3449 = new SoftCache(64);
     SoftCache aClass229_3447 = new SoftCache(20);
     Index aClass317_3448;

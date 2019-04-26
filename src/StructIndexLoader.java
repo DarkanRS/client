@@ -3,16 +3,16 @@ public class StructIndexLoader {
 	static int anInt5015;
 	Index aClass317_5014;
 	int anInt5013;
-	Class282_Sub50_Sub4[] aClass282_Sub50_Sub4Array5012;
+	CacheableNode_Sub4[] aCacheableNode_Sub4Array5012;
 
-	public Class282_Sub50_Sub4 getStruct(int i_1, int i_2) {
-		return i_1 < 0 ? new Class282_Sub50_Sub4() : this.aClass282_Sub50_Sub4Array5012[i_1];
+	public CacheableNode_Sub4 getStruct(int i_1, int i_2) {
+		return i_1 < 0 ? new CacheableNode_Sub4() : this.aCacheableNode_Sub4Array5012[i_1];
 	}
 
 	public StructIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5014 = index_3;
 		this.anInt5013 = this.aClass317_5014.filesCount(SharedConfigsType.STRUCTS.id);
-		this.aClass282_Sub50_Sub4Array5012 = new Class282_Sub50_Sub4[this.anInt5013];
+		this.aCacheableNode_Sub4Array5012 = new CacheableNode_Sub4[this.anInt5013];
 
 		for (int i_5 = 0; i_5 < this.anInt5013; i_5++) {
 			Index index_7 = this.aClass317_5014;
@@ -21,12 +21,12 @@ public class StructIndexLoader {
 				bytes_6 = this.aClass317_5014.getFile(SharedConfigsType.STRUCTS.id, i_5);
 			}
 
-			Class282_Sub50_Sub4 class282_sub50_sub4_9 = new Class282_Sub50_Sub4();
+			CacheableNode_Sub4 class282_sub50_sub4_9 = new CacheableNode_Sub4();
 			if (bytes_6 != null) {
 				class282_sub50_sub4_9.method14748(new RsByteBuffer(bytes_6));
 			}
 
-			this.aClass282_Sub50_Sub4Array5012[i_5] = class282_sub50_sub4_9;
+			this.aCacheableNode_Sub4Array5012[i_5] = class282_sub50_sub4_9;
 		}
 
 	}

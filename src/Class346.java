@@ -5,7 +5,7 @@ public class Class346 {
 
     public int[] anIntArray4046;
 
-    public QuickchatMessageDefinitions aClass282_Sub50_Sub9_4047;
+    public QuickchatMessageDefinitions aCacheableNode_Sub9_4047;
 
     public int anInt4048;
 
@@ -51,8 +51,8 @@ public class Class346 {
                 Class4 class4_7 = Class197.aClass4Array2430[i_1];
                 Player player_8 = client.players[i_1] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
                 player_8.index = i_1;
-                if (Class197.aClass282_Sub35Array2428[i_1] != null) {
-                    player_8.decodeAppearance(Class197.aClass282_Sub35Array2428[i_1]);
+                if (Class197.aNode_Sub35Array2428[i_1] != null) {
+                    player_8.decodeAppearance(Class197.aNode_Sub35Array2428[i_1]);
                 }
                 player_8.turn(class4_7.anInt30, true);
                 player_8.faceEntity = class4_7.anInt32;
@@ -158,7 +158,7 @@ public class Class346 {
         int i_7 = i_3 - i_1;
         if (i_6 == 0) {
             if (i_7 != 0) {
-                Class468_Sub15.method12746(i_0, i_1, i_3, i_4);
+                Preference_Sub15.method12746(i_0, i_1, i_3, i_4);
             }
         } else if (i_7 == 0) {
             CS2Executor.method11250(i_0, i_2, i_1, i_4);
@@ -216,7 +216,7 @@ public class Class346 {
             Class9.aLong86 = rsbytebuffer_1.readLong();
         }
         if (Class9.aLong77 < 0L) {
-            Class8_Sub1.method13784(35, 776111623);
+            FontRenderer_Sub1.method13784(35, 776111623);
         } else {
             Class455.method7558(false, true, "", "", Class9.aLong77);
         }
@@ -227,9 +227,9 @@ public class Class346 {
             if (client.anInt7349 != -1) {
                 Class337.unloadInterface(client.anInt7349, -650534239);
             }
-            for (Class282_Sub44 class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 6)) {
+            for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 6)) {
                 if (!class282_sub44_2.isLinked()) {
-                    class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(439080271);
+                    class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(439080271);
                     if (class282_sub44_2 == null) {
                         break;
                     }

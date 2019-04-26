@@ -48,7 +48,7 @@ public class Class388 implements Interface41 {
         tcpmessage_1.buffer.writeByte(Class158.windowedMode());
         tcpmessage_1.buffer.writeShort(Class349.anInt4083);
         tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
-        tcpmessage_1.buffer.writeByte(Class393.preferences.aClass468_Sub4_8223.method12641(-965992195));
+        tcpmessage_1.buffer.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641(-965992195));
         client.outputContext.queuePacket(tcpmessage_1);
     }
 

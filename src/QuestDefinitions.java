@@ -308,7 +308,7 @@ public class QuestDefinitions {
         rsbitsbuffer_0.writeInt(IndexLoaders.NATIVE_LIBRARY_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.SHADER_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(Class378.method6435());
-        rsbitsbuffer_0.writeInt(Class468_Sub7.method12672());
+        rsbitsbuffer_0.writeInt(Preference_Sub7.method12672());
         rsbitsbuffer_0.writeInt(IndexLoaders.CUTSCENE_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.INDEX_36.getCrc());
     }

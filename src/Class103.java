@@ -3,7 +3,7 @@ public abstract class Class103 {
 	public int anInt1056;
 	public Interface6 anInterface6_1059;
 	public Matrix44Arr aClass384_1058 = new Matrix44Arr();
-	protected Class505_Sub2 aClass505_Sub2_1057;
+	protected GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_1057;
 
 	public abstract void method1785(int var1);
 
@@ -15,8 +15,8 @@ public abstract class Class103 {
 
 	public abstract void method1789(Matrix44Arr var1);
 
-	Class103(Class505_Sub2 class505_sub2_1) {
-		this.aClass505_Sub2_1057 = class505_sub2_1;
+	Class103(GraphicalRenderer_Sub2 class505_sub2_1) {
+		this.aGraphicalRenderer_Sub2_1057 = class505_sub2_1;
 	}
 
 	public abstract void method1790();

@@ -4,7 +4,7 @@ public class Class462 {
 
 	int anInt5542;
 
-	AnimationFrameSet aClass282_Sub50_Sub13_5545;
+	AnimationFrameSet aCacheableNode_Sub13_5545;
 
 	int anInt5543;
 
@@ -20,9 +20,9 @@ public class Class462 {
 				return false;
 			} else {
 				this.anInt5542 = ints_5[i_3];
-				this.aClass282_Sub50_Sub13_5545 = animationindexloader_1.getAnimationFrame(this.anInt5542 >> 16);
+				this.aCacheableNode_Sub13_5545 = animationindexloader_1.getAnimationFrame(this.anInt5542 >> 16);
 				this.anInt5542 &= 0xffff;
-				if (this.aClass282_Sub50_Sub13_5545 != null) {
+				if (this.aCacheableNode_Sub13_5545 != null) {
 					if (animationdefinitions_2.tweened && i_4 != -1 && i_4 < ints_5.length) {
 						this.anInt5547 = ints_5[i_4];
 						this.animationFrameSet = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16);
@@ -31,13 +31,13 @@ public class Class462 {
 					if (animationdefinitions_2.aBool5923) {
 						this.anInt5543 |= 0x200;
 					}
-					if (this.aClass282_Sub50_Sub13_5545.method15080(this.anInt5542, -1144516636)) {
+					if (this.aCacheableNode_Sub13_5545.method15080(this.anInt5542, -1144516636)) {
 						this.anInt5543 |= 0x80;
 					}
-					if (this.aClass282_Sub50_Sub13_5545.method15079(this.anInt5542)) {
+					if (this.aCacheableNode_Sub13_5545.method15079(this.anInt5542)) {
 						this.anInt5543 |= 0x100;
 					}
-					if (this.aClass282_Sub50_Sub13_5545.method15081(this.anInt5542)) {
+					if (this.aCacheableNode_Sub13_5545.method15081(this.anInt5542)) {
 						this.anInt5543 |= 0x400;
 					}
 					if (this.animationFrameSet != null) {
@@ -67,6 +67,6 @@ public class Class462 {
 		this.aBool5544 = false;
 		this.anInt5543 = 0;
 		this.animationFrameSet = null;
-		this.aClass282_Sub50_Sub13_5545 = null;
+		this.aCacheableNode_Sub13_5545 = null;
 	}
 }

@@ -5,13 +5,13 @@ import java.nio.ByteBuffer;
 public class Class70_Sub1 extends Class70 {
 
 	long aLong9179 = 0L;
-	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_9178;
+	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9178;
 
-	Class70_Sub1(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class72[] arr_2) {
+	Class70_Sub1(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class72[] arr_2) {
 		super(arr_2);
-		this.aClass505_Sub2_Sub2_9178 = class505_sub2_sub2_1;
+		this.aGraphicalRenderer_Sub2_Sub2_9178 = class505_sub2_sub2_1;
 		byte b_3 = 0;
-		ByteBuffer bytebuffer_4 = this.aClass505_Sub2_Sub2_9178.aByteBuffer8838;
+		ByteBuffer bytebuffer_4 = this.aGraphicalRenderer_Sub2_Sub2_9178.aByteBuffer8838;
 		bytebuffer_4.clear();
 
 		for (short s_5 = 0; s_5 < this.aClass72Array707.length; s_5++) {
@@ -63,8 +63,8 @@ public class Class70_Sub1 extends Class70 {
 		}
 
 		this.method14506(bytebuffer_4, (short) 255, (short) 0, (byte) 17, (byte) 0, (byte) 0, (byte) 0);
-		this.aLong9179 = IDirect3DDevice.CreateVertexDeclaration(this.aClass505_Sub2_Sub2_9178.aLong10252, this.aClass505_Sub2_Sub2_9178.aLong8695);
-		this.aClass505_Sub2_Sub2_9178.method13901(this);
+		this.aLong9179 = IDirect3DDevice.CreateVertexDeclaration(this.aGraphicalRenderer_Sub2_Sub2_9178.aLong10252, this.aGraphicalRenderer_Sub2_Sub2_9178.aLong8695);
+		this.aGraphicalRenderer_Sub2_Sub2_9178.method13901(this);
 	}
 
 	public void method26() {
@@ -73,12 +73,12 @@ public class Class70_Sub1 extends Class70 {
 			this.aLong9179 = 0L;
 		}
 
-		this.aClass505_Sub2_Sub2_9178.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_9178.method13885(this);
 	}
 
 	void method14505() {
 		if (this.aLong9179 != 0L) {
-			this.aClass505_Sub2_Sub2_9178.method15650(this.aLong9179);
+			this.aGraphicalRenderer_Sub2_Sub2_9178.method15650(this.aLong9179);
 			this.aLong9179 = 0L;
 		}
 
@@ -103,7 +103,7 @@ public class Class70_Sub1 extends Class70 {
 			this.aLong9179 = 0L;
 		}
 
-		this.aClass505_Sub2_Sub2_9178.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_9178.method13885(this);
 	}
 
 }

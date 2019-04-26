@@ -1,6 +1,6 @@
 public final class Class354 {
 
-	public static NativeSprite aClass160_4110;
+	public static NativeSprite aNativeSprite_4110;
 
 	static World[] WORLDS;
 

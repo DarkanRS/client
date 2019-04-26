@@ -34,7 +34,7 @@ public class Class463 {
             }
         } else if (animable_0 instanceof Player) {
             Player player_3 = (Player) animable_0;
-            Class96_Sub22.iComponentOnPlayer(player_3, player_3.plane != VertexNormal.myPlayer.plane);
+            CutsceneAction_Sub22.iComponentOnPlayer(player_3, player_3.plane != VertexNormal.myPlayer.plane);
         }
     }
 
@@ -88,56 +88,56 @@ public class Class463 {
     public static boolean method7730() {
         try {
             if (Class148.anInt1730 == 2) {
-                if (Class282_Sub44_Sub3.aClass282_Sub7_9563 == null) {
-                    Class282_Sub44_Sub3.aClass282_Sub7_9563 = Class282_Sub7.method12164(CutsceneEntity.aClass317_746, Class6.anInt46, Class148.anInt1738);
-                    if (Class282_Sub44_Sub3.aClass282_Sub7_9563 == null) {
+                if (Node_Sub44_Sub3.aNode_Sub7_9563 == null) {
+                    Node_Sub44_Sub3.aNode_Sub7_9563 = Node_Sub7.method12164(CutsceneEntity.aClass317_746, Class6.anInt46, Class148.anInt1738);
+                    if (Node_Sub44_Sub3.aNode_Sub7_9563 == null) {
                         return false;
                     }
                 }
                 if (Class454.aClass250_5450 == null) {
                     Class454.aClass250_5450 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
                 }
-                Class282_Sub15_Sub2 class282_sub15_sub2_2 = Class148.aClass282_Sub15_Sub2_1735;
-                if (Class282_Sub33.aClass282_Sub15_Sub2_7836 != null) {
-                    class282_sub15_sub2_2 = Class282_Sub33.aClass282_Sub15_Sub2_7836;
+                Node_Sub15_Sub2 class282_sub15_sub2_2 = Class148.aNode_Sub15_Sub2_1735;
+                if (Node_Sub33.aNode_Sub15_Sub2_7836 != null) {
+                    class282_sub15_sub2_2 = Node_Sub33.aNode_Sub15_Sub2_7836;
                 }
-                if (class282_sub15_sub2_2.method15182(Class282_Sub44_Sub3.aClass282_Sub7_9563, Class148.aClass317_1737, Class454.aClass250_5450, 796081686)) {
-                    Class148.aClass282_Sub15_Sub2_1735 = class282_sub15_sub2_2;
-                    Class148.aClass282_Sub15_Sub2_1735.method15096();
+                if (class282_sub15_sub2_2.method15182(Node_Sub44_Sub3.aNode_Sub7_9563, Class148.aClass317_1737, Class454.aClass250_5450, 796081686)) {
+                    Class148.aNode_Sub15_Sub2_1735 = class282_sub15_sub2_2;
+                    Class148.aNode_Sub15_Sub2_1735.method15096();
                     int i_3;
                     if (Class383.anInt4664 > 0) {
                         Class148.anInt1730 = 3;
-                        Class148.aClass282_Sub15_Sub2_1735.method15144(Class383.anInt4664 > Class158_Sub2_Sub3.anInt10243 ? Class158_Sub2_Sub3.anInt10243 : Class383.anInt4664, -21624698);
+                        Class148.aNode_Sub15_Sub2_1735.method15144(Class383.anInt4664 > Class158_Sub2_Sub3.anInt10243 ? Class158_Sub2_Sub3.anInt10243 : Class383.anInt4664, -21624698);
                         for (i_3 = 0; i_3 < HashTable.anIntArray5449.length; i_3++) {
-                            Class148.aClass282_Sub15_Sub2_1735.method15095(i_3, HashTable.anIntArray5449[i_3], 2144704341);
+                            Class148.aNode_Sub15_Sub2_1735.method15095(i_3, HashTable.anIntArray5449[i_3], 2144704341);
                             HashTable.anIntArray5449[i_3] = 255;
                         }
                     } else {
                         Class148.anInt1730 = 0;
-                        Class148.aClass282_Sub15_Sub2_1735.method15144(Class158_Sub2_Sub3.anInt10243, 1350898514);
+                        Class148.aNode_Sub15_Sub2_1735.method15144(Class158_Sub2_Sub3.anInt10243, 1350898514);
                         for (i_3 = 0; i_3 < HashTable.anIntArray5449.length; i_3++) {
-                            Class148.aClass282_Sub15_Sub2_1735.method15095(i_3, HashTable.anIntArray5449[i_3], 1431081574);
+                            Class148.aNode_Sub15_Sub2_1735.method15095(i_3, HashTable.anIntArray5449[i_3], 1431081574);
                             HashTable.anIntArray5449[i_3] = 255;
                         }
                     }
-                    if (Class282_Sub33.aClass282_Sub15_Sub2_7836 == null) {
+                    if (Node_Sub33.aNode_Sub15_Sub2_7836 == null) {
                         if (Class148.aLong1740 > 0L) {
-                            Class148.aClass282_Sub15_Sub2_1735.method15100(Class282_Sub44_Sub3.aClass282_Sub7_9563, Class152.aBool1962, Class148.aLong1740);
+                            Class148.aNode_Sub15_Sub2_1735.method15100(Node_Sub44_Sub3.aNode_Sub7_9563, Class152.aBool1962, Class148.aLong1740);
                         } else {
-                            Class148.aClass282_Sub15_Sub2_1735.method15098(Class282_Sub44_Sub3.aClass282_Sub7_9563, Class152.aBool1962, 1246043203);
+                            Class148.aNode_Sub15_Sub2_1735.method15098(Node_Sub44_Sub3.aNode_Sub7_9563, Class152.aBool1962, 1246043203);
                         }
                         if (Class11.aClass109_121 != null) {
                             Class11.aClass109_121.method1849((byte) -123);
                         }
                     }
                     if (Class502.aClass253_5830 != null) {
-                        Class502.aClass253_5830.method4329(Class148.aClass282_Sub15_Sub2_1735);
+                        Class502.aClass253_5830.method4329(Class148.aNode_Sub15_Sub2_1735);
                     }
-                    Class282_Sub44_Sub3.aClass282_Sub7_9563 = null;
+                    Node_Sub44_Sub3.aNode_Sub7_9563 = null;
                     Class454.aClass250_5450 = null;
                     CutsceneEntity.aClass317_746 = null;
                     Class148.aLong1740 = 0L;
-                    Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
+                    Node_Sub33.aNode_Sub15_Sub2_7836 = null;
                     Class11.aClass109_121 = null;
                     boolean bool_1 = true;
                     return bool_1;
@@ -145,7 +145,7 @@ public class Class463 {
             }
         } catch (Exception exception_4) {
             exception_4.printStackTrace();
-            Class148.aClass282_Sub15_Sub2_1735.method15101((short) 3647);
+            Class148.aNode_Sub15_Sub2_1735.method15101((short) 3647);
             Class332.method5929(-1000210951);
         }
         return false;

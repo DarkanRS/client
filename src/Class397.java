@@ -28,7 +28,7 @@ public class Class397 implements Interface38 {
 	}
 
 	public static void method6775(int i_0, int i_1, int i_2, int i_3, ObjectDefinitions objectdefinitions_4, NPC npc_5, Player player_6, int i_7) {
-		Class282_Sub48 class282_sub48_8 = new Class282_Sub48();
+		Node_Sub48 class282_sub48_8 = new Node_Sub48();
 		class282_sub48_8.anInt8076 = i_0;
 		class282_sub48_8.anInt8107 = i_1 << 9;
 		class282_sub48_8.anInt8078 = i_2 << 9;
@@ -60,9 +60,9 @@ public class Class397 implements Interface38 {
 			if (class282_sub48_8.anIntArray8102 != null) {
 				class282_sub48_8.anInt8080 = class282_sub48_8.anInt8072 + (int) (Math.random() * (double) (class282_sub48_8.anInt8101 - class282_sub48_8.anInt8072));
 			}
-			Class282_Sub48.aClass482_8073.append(class282_sub48_8);
+			Node_Sub48.aClass482_8073.append(class282_sub48_8);
 		} else if (npc_5 != null) {
-			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub2_8085 = npc_5;
+			class282_sub48_8.aTransform_Sub1_Sub1_Sub2_Sub2_8085 = npc_5;
 			NPCDefinitions npcdefinitions_11 = npc_5.definitions;
 			if (npcdefinitions_11.transformTo != null) {
 				class282_sub48_8.aBool8092 = true;
@@ -71,7 +71,7 @@ public class Class397 implements Interface38 {
 			if (npcdefinitions_11 != null) {
 				class282_sub48_8.anInt8079 = npcdefinitions_11.size + i_1 << 9;
 				class282_sub48_8.anInt8077 = i_2 + npcdefinitions_11.size << 9;
-				class282_sub48_8.soundEffectId = Class282_Sub11_Sub1.method15433(npc_5);
+				class282_sub48_8.soundEffectId = Node_Sub11_Sub1.method15433(npc_5);
 				class282_sub48_8.aBool8098 = npcdefinitions_11.aBool4872;
 				class282_sub48_8.anInt8105 = npcdefinitions_11.specialByte << 9;
 				class282_sub48_8.anInt8089 = npcdefinitions_11.anInt4909;
@@ -79,9 +79,9 @@ public class Class397 implements Interface38 {
 				class282_sub48_8.anInt8093 = npcdefinitions_11.anInt4911;
 				class282_sub48_8.anInt8081 = npcdefinitions_11.anInt4908 << 9;
 			}
-			Class282_Sub48.aClass482_8074.append(class282_sub48_8);
+			Node_Sub48.aClass482_8074.append(class282_sub48_8);
 		} else if (player_6 != null) {
-			class282_sub48_8.aClass521_Sub1_Sub1_Sub2_Sub1_8086 = player_6;
+			class282_sub48_8.aTransform_Sub1_Sub1_Sub2_Sub1_8086 = player_6;
 			class282_sub48_8.anInt8079 = i_1 + player_6.getSize() << 9;
 			class282_sub48_8.anInt8077 = i_2 + player_6.getSize() << 9;
 			class282_sub48_8.soundEffectId = Class149_Sub2.method14610(player_6, 1888639983);
@@ -91,7 +91,7 @@ public class Class397 implements Interface38 {
 			class282_sub48_8.anInt8094 = 256;
 			class282_sub48_8.anInt8093 = 256;
 			class282_sub48_8.anInt8081 = 0;
-			Class282_Sub48.aClass465_8075.put(class282_sub48_8, (long) player_6.index);
+			Node_Sub48.aClass465_8075.put(class282_sub48_8, (long) player_6.index);
 		}
 	}
 }

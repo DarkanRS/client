@@ -3,7 +3,7 @@ import jaggl.OpenGL;
 public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 
 	Interface28[] anInterface28Array10449 = new Interface28[4];
-	Class505_Sub2_Sub1 aClass505_Sub2_Sub1_10446;
+	GraphicalRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_10446;
 	int anInt10443;
 	int anInt10444;
 	Interface28 anInterface28_10448;
@@ -15,9 +15,9 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 		return this.anInt10441;
 	}
 
-	Class158_Sub1_Sub3_Sub2(Class505_Sub2_Sub1 class505_sub2_sub1_1) {
+	Class158_Sub1_Sub3_Sub2(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1) {
 		super(class505_sub2_sub1_1);
-		this.aClass505_Sub2_Sub1_10446 = class505_sub2_sub1_1;
+		this.aGraphicalRenderer_Sub2_Sub1_10446 = class505_sub2_sub1_1;
 		int[] ints_2 = new int[1];
 		OpenGL.glGenFramebuffersEXT(1, ints_2, 0);
 		this.anInt10443 = ints_2[0];
@@ -47,7 +47,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28_10448 = interface28_2;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 107)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 107)) {
 			this.method15982();
 		} else {
 			this.anInt10447 |= 0x10;
@@ -98,7 +98,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28_10448 = interface28_2;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 113)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 113)) {
 			this.method15982();
 		} else {
 			this.anInt10447 |= 0x10;
@@ -148,7 +148,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28Array10449[i_1] = interface28_4;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 125)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 125)) {
 			this.method15981(i_1);
 		} else {
 			this.anInt10447 |= i_3;
@@ -158,7 +158,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 
 	public void method212() {
 		if (this.anInt10443 != 0) {
-			this.aClass505_Sub2_Sub1_10446.method15571(this.anInt10443);
+			this.aGraphicalRenderer_Sub2_Sub1_10446.method15571(this.anInt10443);
 			this.anInt10443 = 0;
 		}
 
@@ -224,7 +224,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28Array10449[i_1] = interface28_4;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 103)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 103)) {
 			this.method15981(i_1);
 		} else {
 			this.anInt10447 |= i_3;
@@ -260,7 +260,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28_10448 = interface28_2;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 121)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 121)) {
 			this.method15982();
 		} else {
 			this.anInt10447 |= 0x10;
@@ -292,7 +292,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28_10448 = interface28_2;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 119)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 119)) {
 			this.method15982();
 		} else {
 			this.anInt10447 |= 0x10;
@@ -335,7 +335,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28Array10449[i_1] = interface28_4;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 120)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 120)) {
 			this.method15981(i_1);
 		} else {
 			this.anInt10447 |= i_3;
@@ -422,7 +422,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 			this.anInterface28Array10449[i_1] = interface28_4;
 		}
 
-		if (this == this.aClass505_Sub2_Sub1_10446.method8523((byte) 116)) {
+		if (this == this.aGraphicalRenderer_Sub2_Sub1_10446.method8523((byte) 116)) {
 			this.method15981(i_1);
 		} else {
 			this.anInt10447 |= i_3;
@@ -437,7 +437,7 @@ public class Class158_Sub1_Sub3_Sub2 extends Class158_Sub1_Sub3 {
 
 	public void method186() {
 		if (this.anInt10443 != 0) {
-			this.aClass505_Sub2_Sub1_10446.method15571(this.anInt10443);
+			this.aGraphicalRenderer_Sub2_Sub1_10446.method15571(this.anInt10443);
 			this.anInt10443 = 0;
 		}
 

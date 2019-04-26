@@ -11,12 +11,12 @@ public class Class18 {
 	static void renderInformation(GraphicalRenderer graphicalrenderer_0, NodeCollection nodecollection_1) {
 		Class346.aClass482_4049.method8118(-449430209);
 		if (!Class291_Sub1.aBool8027) {
-			for (Class282_Sub36 class282_sub36_5 = (Class282_Sub36) nodecollection_1.head(); class282_sub36_5 != null; class282_sub36_5 = (Class282_Sub36) nodecollection_1.next(-319423268)) {
+			for (Node_Sub36 class282_sub36_5 = (Node_Sub36) nodecollection_1.head(); class282_sub36_5 != null; class282_sub36_5 = (Node_Sub36) nodecollection_1.next(-319423268)) {
 				MapAreaDefinitions worldmapareadefs_6 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_5.anInt7991, -113762832);
-				if (Class282_Sub16.method12248(worldmapareadefs_6, -852702638)) {
+				if (Node_Sub16.method12248(worldmapareadefs_6, -852702638)) {
 					boolean bool_7 = MapAreaDefinitions.renderIconsAndNames(graphicalrenderer_0, class282_sub36_5, worldmapareadefs_6);
 					if (bool_7) {
-						Class282_Sub39.method13297(graphicalrenderer_0, class282_sub36_5, worldmapareadefs_6);
+						Node_Sub39.method13297(graphicalrenderer_0, class282_sub36_5, worldmapareadefs_6);
 					}
 				}
 			}

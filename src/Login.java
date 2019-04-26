@@ -25,9 +25,9 @@ public class Login {
     }
 
     void method5013(Class285 class285_1) {
-        Class521_Sub1 class521_sub1_3 = class285_1.aClass521_Sub1_3391;
+        Transform_Sub1 class521_sub1_3 = class285_1.aTransform_Sub1_3391;
         boolean bool_4 = true;
-        Class275_Sub5[] arr_5 = class285_1.aClass521_Sub1_3391.aClass275_Sub5Array7965;
+        EntityNode_Sub5[] arr_5 = class285_1.aTransform_Sub1_3391.aEntityNode_Sub5Array7965;
         for (int i_6 = 0; i_6 < arr_5.length; i_6++) {
             if (arr_5[i_6].aBool7849) {
                 bool_4 = false;
@@ -41,7 +41,7 @@ public class Login {
                 Iterator iterator_8 = this.aList3388.iterator();
                 while (iterator_8.hasNext()) {
                     class285_7 = (Class285) iterator_8.next();
-                    if (class521_sub1_3 == class285_7.aClass521_Sub1_3391) {
+                    if (class521_sub1_3 == class285_7.aTransform_Sub1_3391) {
                         iterator_8.remove();
                         Class279.method4969(class285_7);
                     }
@@ -50,7 +50,7 @@ public class Login {
             ListIterator listiterator_9 = this.aList3388.listIterator();
             while (listiterator_9.hasNext()) {
                 class285_7 = (Class285) listiterator_9.next();
-                if (class521_sub1_3.anInt7969 >= class285_7.aClass521_Sub1_3391.anInt7969) {
+                if (class521_sub1_3.anInt7969 >= class285_7.aTransform_Sub1_3391.anInt7969) {
                     listiterator_9.previous();
                     listiterator_9.add(class285_1);
                     return;
@@ -83,7 +83,7 @@ public class Login {
                     Class9.aClass184_73.method3051((byte) -84);
                     if (Class9.anInt104 >= 3) {
                         Class9.loginStage = 2;
-                        Class8_Sub1.method13784(-5, -1415589664);
+                        FontRenderer_Sub1.method13784(-5, -1415589664);
                         return;
                     }
                     if (Class9.lobbyStage == 273) {
@@ -145,7 +145,7 @@ public class Login {
                     i_10 = Class9.aClass184_73.recievedBuffer.buffer[0] & 0xff;
                     if (i_10 != 0) {
                         Class9.loginStage = 2;
-                        Class8_Sub1.method13784(i_10, -2100127470);
+                        FontRenderer_Sub1.method13784(i_10, -2100127470);
                         Class9.aClass184_73.method3051((byte) -115);
                         Class361.method6270((byte) 36);
                         return;
@@ -238,7 +238,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(Class158.windowedMode());
                         rsbitsbuffer_22.writeShort(Class349.anInt4083);
                         rsbitsbuffer_22.writeShort(Engine.anInt3243 * -969250379);
-                        rsbitsbuffer_22.writeByte(Class393.preferences.aClass468_Sub4_8223.method12641(919663007));
+                        rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641(919663007));
                         IdentitiKitIndexLoader.method809(rsbitsbuffer_22, 972141670);
                         rsbitsbuffer_22.writeString(client.aString7281);
                         rsbitsbuffer_22.writeInt(client.anInt7149);
@@ -329,7 +329,7 @@ public class Login {
                     } else if (i_10 != 29 && i_10 != 45) {
                         if (i_10 == 1) {
                             Class9.loginStage = 105;
-                            Class8_Sub1.method13784(i_10, -1633539224);
+                            FontRenderer_Sub1.method13784(i_10, -1633539224);
                             return;
                         }
                         if (i_10 == 2) {
@@ -344,7 +344,7 @@ public class Login {
                                     return;
                                 } else if (i_10 == 42) {
                                     Class9.loginStage = 201;
-                                    Class8_Sub1.method13784(i_10, -1894609821);
+                                    FontRenderer_Sub1.method13784(i_10, -1894609821);
                                     return;
                                 } else {
                                     if (Class9.aBool74 && !Class9.socialNetworkLogin && Class9.anInt76 != -1 && i_10 == 35) {
@@ -354,7 +354,7 @@ public class Login {
                                         Class9.aClass184_73.method3051((byte) -19);
                                     } else {
                                         Class9.loginStage = 2;
-                                        Class8_Sub1.method13784(i_10, -476487061);
+                                        FontRenderer_Sub1.method13784(i_10, -476487061);
                                         Class9.aClass184_73.method3051((byte) -84);
                                         Class361.method6270((byte) 102);
                                     }
@@ -384,7 +384,7 @@ public class Login {
                         i_10 = Class9.aClass184_73.recievedBuffer.buffer[0] & 0xff;
                         Class9.anInt103 = i_10 * 50;
                         Class9.loginStage = 2;
-                        Class8_Sub1.method13784(21, 17799798);
+                        FontRenderer_Sub1.method13784(21, 17799798);
                         Class9.aClass184_73.method3051((byte) -76);
                         Class361.method6270((byte) 74);
                     }
@@ -413,7 +413,7 @@ public class Login {
                         Class9.anInt94 = (Class9.aClass184_73.recievedBuffer.buffer[2] & 0xff) + ((Class9.aClass184_73.recievedBuffer.buffer[1] & 0xff) << 8);
                     }
                     Class9.loginStage = 2;
-                    Class8_Sub1.method13784(Class110.anInt1105, -612160283);
+                    FontRenderer_Sub1.method13784(Class110.anInt1105, -612160283);
                     Class9.aClass184_73.method3051((byte) -74);
                     Class361.method6270((byte) 89);
                 } else if (Class9.loginStage == 133) {
@@ -470,12 +470,12 @@ public class Login {
                             KeyHoldInputSubscriber.anInt2879 = rsbitsbuffer_19.readInt();
                             Class115.anInt1247 = rsbitsbuffer_19.readUnsignedShort();
                             NPCMeshModifier.anInt4994 = rsbitsbuffer_19.readUnsignedShort();
-                            Class468_Sub28.anInt7961 = rsbitsbuffer_19.readUnsignedShort();
+                            Preference_Sub28.anInt7961 = rsbitsbuffer_19.readUnsignedShort();
                             Class125.anInt1572 = rsbitsbuffer_19.readInt();
                             Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.anInt1572);
                             (new Thread(Class119.HOSTNAME_IDENTIFIER)).start();
                             InputSubscriberType.anInt2762 = rsbitsbuffer_19.readUnsignedByte();
-                            Class96_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
+                            CutsceneAction_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
                             Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
                             Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             VertexNormal.myPlayer.displayName = VertexNormal.myPlayer.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString();
@@ -498,17 +498,17 @@ public class Login {
                         }
                         if ((!client.aBool7224 || client.aBool7322) && !client.aBool7316) {
                             try {
-                                Class441.method7377(Class282_Sub44.anApplet8065, "unzap", 1103714597);
+                                Class441.method7377(Node_Sub44.anApplet8065, "unzap", 1103714597);
                             } catch (Throwable throwable_14) {
                                 ;
                             }
                         } else {
                             try {
-                                Class441.method7377(Class282_Sub44.anApplet8065, "zap", 1696424400);
+                                Class441.method7377(Node_Sub44.anApplet8065, "zap", 1696424400);
                             } catch (Throwable throwable_16) {
                                 if (client.aBool7147) {
                                     try {
-                                        Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), "blank.ws"), "tbi");
+                                        Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), "blank.ws"), "tbi");
                                     } catch (Exception exception_15) {
                                         ;
                                     }
@@ -520,7 +520,7 @@ public class Login {
                         }
                         if (Class9.lobbyStage != 273) {
                             Class9.loginStage = 2;
-                            Class8_Sub1.method13784(2, -1482799);
+                            FontRenderer_Sub1.method13784(2, -1482799);
                             IncomingPacket.method6377();
                             Class365.setGameState(0);
                             Class9.aClass184_73.currentPacket = null;
@@ -555,7 +555,7 @@ public class Login {
                             Class9.aClass184_73.recievedBuffer.index = 0;
                             i_10 = Class9.aClass184_73.currentPacketSize;
                             Class9.loginStage = 2;
-                            Class8_Sub1.method13784(2, -293580682);
+                            FontRenderer_Sub1.method13784(2, -293580682);
                             Class190.method3152();
                             Class197.method3203(Class9.aClass184_73.recievedBuffer, (byte) 87);
                             i_3 = i_10 - Class9.aClass184_73.recievedBuffer.index;
@@ -586,7 +586,7 @@ public class Login {
                             Class9.aClass184_73.recievedBuffer.index = 0;
                             i_10 = Class9.aClass184_73.currentPacketSize;
                             Class9.loginStage = 2;
-                            Class8_Sub1.method13784(15, 481770271);
+                            FontRenderer_Sub1.method13784(15, 481770271);
                             Class501.method8350();
                             Class197.method3203(Class9.aClass184_73.recievedBuffer, (byte) 72);
                             if (Class9.aClass184_73.recievedBuffer.index != i_10) {
@@ -609,7 +609,7 @@ public class Login {
                     Class9.loginStage = 18;
                 } else {
                     Class9.loginStage = 2;
-                    Class8_Sub1.method13784(-4, -1690933680);
+                    FontRenderer_Sub1.method13784(-4, -1690933680);
                     Class361.method6270((byte) 123);
                 }
             }

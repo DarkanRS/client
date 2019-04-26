@@ -88,7 +88,7 @@ public class Class507 {
 		}
 	}
 
-	public static Class282_Sub50_Sub7 method8727() {
-		return Class20.aClass282_Sub50_Sub7_168;
+	public static CacheableNode_Sub7 method8727() {
+		return Class20.aCacheableNode_Sub7_168;
 	}
 }

@@ -20,10 +20,10 @@ public class Class332 {
 
 	static void method5929(int i_0) {
 		Class148.anInt1730 = 0;
-		Class282_Sub44_Sub3.aClass282_Sub7_9563 = null;
+		Node_Sub44_Sub3.aNode_Sub7_9563 = null;
 		Class454.aClass250_5450 = null;
 		CutsceneEntity.aClass317_746 = null;
-		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
+		Node_Sub33.aNode_Sub15_Sub2_7836 = null;
 	}
 
 	public static void method5930(int i_0) {

@@ -1,6 +1,6 @@
 public class AccountCreationStage {
 
-	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_12;
+	static CacheableNode_Sub7 aCacheableNode_Sub7_12;
 	static AccountCreationStage REQUEST = new AccountCreationStage();
 	static AccountCreationStage RESPONSE = new AccountCreationStage();
 

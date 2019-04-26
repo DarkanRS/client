@@ -49,37 +49,37 @@ public class Class277 {
 	static void method4908(GraphicalRenderer graphicalrenderer_0) {
 		int i_2 = -10660793;
 		VarDefinitionLoader.method6394(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_2, -68635316);
-		Class285.aClass8_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -384363737), Class301.anInt3555 + 3, BufferedConnectionContext.anInt2300 + 14, i_2, -1);
+		Class285.aFontRenderer_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -384363737), Class301.anInt3555 + 3, BufferedConnectionContext.anInt2300 + 14, i_2, -1);
 		int i_3 = Class163.mouseRecorder.getMouseX();
 		int i_4 = Class163.mouseRecorder.getMouseY();
 		int i_5;
-		Class282_Sub50_Sub7 class282_sub50_sub7_6;
+		CacheableNode_Sub7 class282_sub50_sub7_6;
 		int i_7;
 		if (!Class20.aBool162) {
 			i_5 = 0;
-			for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(980795881)) {
+			for (class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.next(980795881)) {
 				i_7 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
-				Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub7_6, Class285.aClass8_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -786945772);
+				Node_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub7_6, Class285.aFontRenderer_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -786945772);
 				++i_5;
 			}
 		} else {
 			i_5 = 0;
-			for (Class282_Sub50_Sub15 class282_sub50_sub15_8 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_8 != null; class282_sub50_sub15_8 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1913703770)) {
+			for (CacheableNode_Sub15 class282_sub50_sub15_8 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_8 != null; class282_sub50_sub15_8 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(-1913703770)) {
 				i_7 = i_5 * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
 				if (class282_sub50_sub15_8.anInt9769 == 1) {
-					Class282_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, (Class282_Sub50_Sub7) class282_sub50_sub15_8.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, Class285.aClass8_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -1056594399);
+					Node_Sub25.method12400(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, (CacheableNode_Sub7) class282_sub50_sub15_8.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, Class285.aFontRenderer_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -1056594399);
 				} else {
-					Class99.method1630(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub15_8, Class285.aClass8_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -2123555932);
+					Class99.method1630(i_3, i_4, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_7, class282_sub50_sub15_8, Class285.aFontRenderer_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -2123555932);
 				}
 				++i_5;
 			}
-			if (Class20.aClass282_Sub50_Sub15_163 != null) {
-				VarDefinitionLoader.method6394(graphicalrenderer_0, Class341.anInt3996, Class282_Sub50_Sub2.anInt9471, Class96_Sub3.anInt8518, Class521_Sub1_Sub5_Sub1.anInt10526, i_2, 1059677445);
-				Class285.aClass8_3394.renderText(Class20.aClass282_Sub50_Sub15_163.aString9771, Class341.anInt3996 + 3, Class282_Sub50_Sub2.anInt9471 + 14, i_2, -1);
+			if (Class20.aCacheableNode_Sub15_163 != null) {
+				VarDefinitionLoader.method6394(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, i_2, 1059677445);
+				Class285.aFontRenderer_3394.renderText(Class20.aCacheableNode_Sub15_163.aString9771, Class341.anInt3996 + 3, CacheableNode_Sub2.anInt9471 + 14, i_2, -1);
 				i_5 = 0;
-				for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass282_Sub50_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass282_Sub50_Sub15_163.aClass477_9770.method7955(969047918)) {
-					i_7 = i_5 * Class20.anInt178 + Class282_Sub50_Sub2.anInt9471 + 31;
-					Class282_Sub25.method12400(i_3, i_4, Class341.anInt3996, Class282_Sub50_Sub2.anInt9471, Class96_Sub3.anInt8518, Class521_Sub1_Sub5_Sub1.anInt10526, i_7, class282_sub50_sub7_6, Class285.aClass8_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -1459940203);
+				for (class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7955(969047918)) {
+					i_7 = i_5 * Class20.anInt178 + CacheableNode_Sub2.anInt9471 + 31;
+					Node_Sub25.method12400(i_3, i_4, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, i_7, class282_sub50_sub7_6, Class285.aFontRenderer_3394, SkyboxIndexLoader.aClass414_3438, -1, -256, -1459940203);
 					++i_5;
 				}
 			}

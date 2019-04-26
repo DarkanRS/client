@@ -6,7 +6,7 @@ public abstract class Class137 {
 	boolean aBool1652 = false;
 	boolean aBool1641;
 	int anInt1647;
-	OpenGLGraphicalRenderer aClass505_Sub1_1646;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_1646;
 	int anInt1648;
 	Class150 aClass150_1650;
 	Class76 aClass76_1651;
@@ -21,7 +21,7 @@ public abstract class Class137 {
 	}
 
 	void method2352() {
-		this.aClass505_Sub1_1646.method13654(this);
+		this.aGraphicalRenderer_Sub1_1646.method13654(this);
 		if (this.aBool1652) {
 			OpenGL.glTexParameteri(this.anInt1648, 10241, this.aBool1641 ? 9987 : 9729);
 			OpenGL.glTexParameteri(this.anInt1648, 10240, 9729);
@@ -33,9 +33,9 @@ public abstract class Class137 {
 	}
 
 	boolean method2353() {
-		if (this.aClass505_Sub1_1646.aBool8472) {
+		if (this.aGraphicalRenderer_Sub1_1646.aBool8472) {
 			int i_1 = this.method2358();
-			this.aClass505_Sub1_1646.method13654(this);
+			this.aGraphicalRenderer_Sub1_1646.method13654(this);
 			OpenGL.glGenerateMipmapEXT(this.anInt1648);
 			this.aBool1641 = true;
 			this.method2352();
@@ -58,7 +58,7 @@ public abstract class Class137 {
 
 	void method2355() {
 		if (this.anInt1647 > 0) {
-			this.aClass505_Sub1_1646.anInt8370 -= this.method2358();
+			this.aGraphicalRenderer_Sub1_1646.anInt8370 -= this.method2358();
 			int[] ints_1 = new int[] { this.anInt1647 };
 			OpenGL.glDeleteTextures(1, ints_1, 0);
 			this.anInt1647 = 0;
@@ -67,8 +67,8 @@ public abstract class Class137 {
 	}
 
 	void method2357(int i_1) {
-		this.aClass505_Sub1_1646.anInt8370 -= i_1;
-		this.aClass505_Sub1_1646.anInt8370 += this.method2358();
+		this.aGraphicalRenderer_Sub1_1646.anInt8370 -= i_1;
+		this.aGraphicalRenderer_Sub1_1646.anInt8370 += this.method2358();
 	}
 
 	int method2358() {
@@ -77,9 +77,9 @@ public abstract class Class137 {
 	}
 
 	static void method2359(int i_0, int i_1, int i_2, int i_3, Class150 class150_4, byte[] bytes_5) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
+		if (i_2 > 0 && !CutsceneAction_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
+		} else if (i_3 > 0 && !CutsceneAction_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_6 = class150_4.anInt1959;
@@ -136,9 +136,9 @@ public abstract class Class137 {
 	}
 
 	static void method2361(int i_1, int i_2, int i_3, Class150 class150_4, float[] floats_5) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
+		if (i_2 > 0 && !CutsceneAction_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
+		} else if (i_3 > 0 && !CutsceneAction_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_6 = class150_4.anInt1959;
@@ -200,7 +200,7 @@ public abstract class Class137 {
 	}
 
 	Class137(OpenGLGraphicalRenderer class505_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
-		this.aClass505_Sub1_1646 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_1646 = class505_sub1_1;
 		this.anInt1648 = i_2;
 		this.aClass150_1650 = class150_3;
 		this.aClass76_1651 = class76_4;
@@ -212,9 +212,9 @@ public abstract class Class137 {
 	}
 
 	static void method2371(int i_0, int i_1, int i_2, int i_3, int i_5, int[] ints_6) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
+		if (i_2 > 0 && !CutsceneAction_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
+		} else if (i_3 > 0 && !CutsceneAction_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else if (32993 != 32993) {
 			throw new IllegalArgumentException("");
@@ -280,7 +280,7 @@ public abstract class Class137 {
 
 	void method2378() {
 		if (this.anInt1647 > 0) {
-			this.aClass505_Sub1_1646.method13625(this.anInt1647, this.method2358());
+			this.aGraphicalRenderer_Sub1_1646.method13625(this.anInt1647, this.method2358());
 			this.anInt1647 = 0;
 		}
 

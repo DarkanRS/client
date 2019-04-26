@@ -23,9 +23,9 @@ public class VarBitDefinitions implements Definition {
 	}
 
 	public static void method3805() {
-		Class148.aClass282_Sub15_Sub2_1735.method15101((short) -11220);
+		Class148.aNode_Sub15_Sub2_1735.method15101((short) -11220);
 		Class148.anInt1730 = 1;
 		CutsceneEntity.aClass317_746 = null;
-		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
+		Node_Sub33.aNode_Sub15_Sub2_7836 = null;
 	}
 }

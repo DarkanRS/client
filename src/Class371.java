@@ -95,21 +95,21 @@ public class Class371 {
 	}
 
 	public static RouteStrategy method6352(int i_0, int i_1) {
-		Class224.aClass225_Sub6_2774.approxDestinationX = i_0;
-		Class224.aClass225_Sub6_2774.approxDestinationY = i_1;
-		Class224.aClass225_Sub6_2774.approxDestinationSizeX = 1;
-		Class224.aClass225_Sub6_2774.approxDestinationSizeY = 1;
-		return Class224.aClass225_Sub6_2774;
+		Class224.aRouteStrategy_Sub6_2774.approxDestinationX = i_0;
+		Class224.aRouteStrategy_Sub6_2774.approxDestinationY = i_1;
+		Class224.aRouteStrategy_Sub6_2774.approxDestinationSizeX = 1;
+		Class224.aRouteStrategy_Sub6_2774.approxDestinationSizeY = 1;
+		return Class224.aRouteStrategy_Sub6_2774;
 	}
 
 	public static final void method6353() {
-		BufferedConnectionContext class184_1 = Class468_Sub20.method12807(2071524191);
+		BufferedConnectionContext class184_1 = Preference_Sub20.method12807(2071524191);
 		TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.JOIN_FRIENDS_CHAT, class184_1.isaac);
 		tcpmessage_2.buffer.writeByte(0);
 		class184_1.queuePacket(tcpmessage_2);
 	}
 
 	public static Container getActiveContainer() {
-		return (Container) (Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : Class282_Sub44.anApplet8065));
+		return (Container) (Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : Node_Sub44.anApplet8065));
 	}
 }

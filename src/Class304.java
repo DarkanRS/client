@@ -82,7 +82,7 @@ public class Class304 implements Interface27 {
 
 	Image method5399(String string_1) throws IOException {
 		try {
-			InputStream inputstream_4 = Class282_Sub44.anApplet8065.getClass().getClassLoader().getResourceAsStream(string_1);
+			InputStream inputstream_4 = Node_Sub44.anApplet8065.getClass().getClassLoader().getResourceAsStream(string_1);
 			byte[] bytes_5 = new byte[4000];
 			int i_7;
 			for (int i_6 = 0; (i_7 = inputstream_4.read()) != -1; bytes_5[i_6++] = (byte) i_7) {
@@ -715,7 +715,7 @@ public class Class304 implements Interface27 {
 			Class7.anInt56 = componentDefs.idHash;
 			client.anInt7345 = componentDefs.anInt1288;
 			Class506.USE_OPTIONS_FLAGS = flags;
-			Class96_Sub12.USE_INTERFACE_ID = interfaceId;
+			CutsceneAction_Sub12.USE_INTERFACE_ID = interfaceId;
 			client.anInt7346 = componentDefs.anInt1426;
 			Defaults8Loader.anInt5932 = componentDefs.anInt1307;
 			client.anInt7427 = componentDefs.anInt1310;
@@ -725,7 +725,7 @@ public class Class304 implements Interface27 {
 
 	public static int[][] method5410(int i_2, int i_8) {
 		int[][] ints_9 = new int[256][64];
-		Class282_Sub20_Sub4 class282_sub20_sub4_10 = new Class282_Sub20_Sub4();
+		Node_Sub20_Sub4 class282_sub20_sub4_10 = new Node_Sub20_Sub4();
 		class282_sub20_sub4_10.aBool9726 = false;
 		class282_sub20_sub4_10.anInt9725 = 4;
 		class282_sub20_sub4_10.anInt9735 = 4;

@@ -20,13 +20,13 @@ public abstract class RouteStrategy {
 
 	public static final void method3794(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
 		Class296.anInt3534 = i_0;
-		Class282_Sub44.anInt8064 = i_1;
+		Node_Sub44.anInt8064 = i_1;
 		SpotAnimDefinitions.anInt6985 = i_2;
 		Class454.anInt5451 = i_3;
 		Class115.anInt1249 = i_4;
 		if (bool_5 && Class115.anInt1249 >= 100) {
 			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
-			Class246.anInt3029 = Class282_Sub44.anInt8064 * 512 + 256;
+			Class246.anInt3029 = Node_Sub44.anInt8064 * 512 + 256;
 			Class109_Sub1.anInt9384 = Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 10) - SpotAnimDefinitions.anInt6985;
 		}
 		NativeLibraryLoader.anInt3240 = 5;

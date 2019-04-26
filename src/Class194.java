@@ -14,7 +14,7 @@ public class Class194 {
 	int anInt2408;
 	boolean aBool2404 = false;
 	int[] anIntArray2409 = new int[4];
-	NativeSprite[] aClass160Array2405;
+	NativeSprite[] aNativeSpriteArray2405;
 	int[] anIntArray2403;
 
 	static {
@@ -41,10 +41,10 @@ public class Class194 {
 		for (int i_8 = 0; i_8 < string_2.length(); i_8++) {
 			int i_9 = anIntArray2406[string_2.charAt(i_8)];
 			if (bool_7) {
-				this.aClass160Array2405[i_9].method2742(i_4 + 1, i_5 + 1, 0, -16777216, 1);
+				this.aNativeSpriteArray2405[i_9].method2742(i_4 + 1, i_5 + 1, 0, -16777216, 1);
 			}
 
-			this.aClass160Array2405[i_9].method2742(i_4, i_5, 0, i_6, 1);
+			this.aNativeSpriteArray2405[i_9].method2742(i_4, i_5, 0, i_6, 1);
 			i_4 += this.anIntArray2403[i_9];
 		}
 
@@ -134,12 +134,12 @@ public class Class194 {
 		this.anInt2407 = i_21 - i_17;
 		this.anInt2408 = i_11;
 		this.anIntArray2403[i_5] = i_8;
-		this.aClass160Array2405[i_5] = graphicalrenderer_1.createNativeSprite(ints_14, i_7, i_7, i_10, -829104519);
+		this.aNativeSpriteArray2405[i_5] = graphicalrenderer_1.createNativeSprite(ints_14, i_7, i_7, i_10, -829104519);
 	}
 
 	Class194(GraphicalRenderer class505, int i, Component component) {
 		((Class194) this).aBool2404 = false;
-		((Class194) this).aClass160Array2405 = new NativeSprite[256];
+		((Class194) this).aNativeSpriteArray2405 = new NativeSprite[256];
 		((Class194) this).anIntArray2403 = new int[256];
 		Font font = new Font("Helvetica", true ? 1 : 0, i);
 		FontMetrics fontmetrics = component.getFontMetrics(font);

@@ -7,7 +7,7 @@ public class Class333 implements Interface9, Interface8, Interface28 {
 	Class76 aClass76_3878;
 	int anInt3877;
 	int anInt3879;
-	Class505_Sub2_Sub1 aClass505_Sub2_Sub1_3881;
+	GraphicalRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_3881;
 
 	public void finalize() throws Throwable {
 		this.method5931();
@@ -24,7 +24,7 @@ public class Class333 implements Interface9, Interface8, Interface28 {
 
 	void method5931() {
 		if (this.anInt3882 > 0) {
-			this.aClass505_Sub2_Sub1_3881.method15572(this.anInt3882, this.aClass76_3878.anInt748 * this.aClass150_3880.anInt1959 * this.anInt3877 * this.anInt3879);
+			this.aGraphicalRenderer_Sub2_Sub1_3881.method15572(this.anInt3882, this.aClass76_3878.anInt748 * this.aClass150_3880.anInt1959 * this.anInt3877 * this.anInt3879);
 			this.anInt3882 = 0;
 		}
 
@@ -47,17 +47,17 @@ public class Class333 implements Interface9, Interface8, Interface28 {
 		return this.anInt3877;
 	}
 
-	Class333(Class505_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
+	Class333(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, Class76 class76_3, int i_4, int i_5) {
 		this.aClass150_3880 = class150_2;
 		this.aClass76_3878 = class76_3;
 		this.anInt3877 = i_4;
 		this.anInt3879 = i_5;
-		this.aClass505_Sub2_Sub1_3881 = class505_sub2_sub1_1;
+		this.aGraphicalRenderer_Sub2_Sub1_3881 = class505_sub2_sub1_1;
 		int[] ints_6 = new int[1];
 		OpenGL.glGenRenderbuffersEXT(1, ints_6, 0);
 		this.anInt3882 = ints_6[0];
 		OpenGL.glBindRenderbufferEXT(36161, this.anInt3882);
-		OpenGL.glRenderbufferStorageEXT(36161, Class505_Sub2_Sub1.method15574(this.aClass150_3880, this.aClass76_3878), i_4, i_5);
+		OpenGL.glRenderbufferStorageEXT(36161, GraphicalRenderer_Sub2_Sub1.method15574(this.aClass150_3880, this.aClass76_3878), i_4, i_5);
 	}
 
 	public int method76() {

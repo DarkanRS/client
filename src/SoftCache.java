@@ -30,10 +30,10 @@ public final class SoftCache {
 			this.method3873(long_2);
 			this.anInt2852 -= i_4;
 			while (this.anInt2852 < 0) {
-				Class282_Sub50_Sub1 class282_sub50_sub1_6 = (Class282_Sub50_Sub1) this.aClass477_2855.method7937(-154092419);
+				CacheableNode_Sub1 class282_sub50_sub1_6 = (CacheableNode_Sub1) this.aClass477_2855.method7937(-154092419);
 				this.method3864(class282_sub50_sub1_6, (byte) 24);
 			}
-			Class282_Sub50_Sub1_Sub1 class282_sub50_sub1_sub1_7 = new Class282_Sub50_Sub1_Sub1(object_1, i_4);
+			CacheableNode_Sub1_Sub1 class282_sub50_sub1_sub1_7 = new CacheableNode_Sub1_Sub1(object_1, i_4);
 			this.aClass465_2854.put(class282_sub50_sub1_sub1_7, long_2);
 			this.aClass477_2855.method7936(class282_sub50_sub1_sub1_7);
 			class282_sub50_sub1_sub1_7.key = 0L;
@@ -41,7 +41,7 @@ public final class SoftCache {
 	}
 
 	public void method3858(int i_1, byte b_2) {
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-1108267960)) {
+		for (CacheableNode_Sub1 class282_sub50_sub1_3 = (CacheableNode_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (CacheableNode_Sub1) this.aClass477_2855.method7955(-1108267960)) {
 			if (class282_sub50_sub1_3.method14691(-436752315)) {
 				if (class282_sub50_sub1_3.method14692() == null) {
 					class282_sub50_sub1_3.remove();
@@ -49,7 +49,7 @@ public final class SoftCache {
 					this.anInt2852 += class282_sub50_sub1_3.anInt9451;
 				}
 			} else if (++class282_sub50_sub1_3.key > (long) i_1) {
-				Class282_Sub50_Sub1_Sub2 class282_sub50_sub1_sub2_4 = new Class282_Sub50_Sub1_Sub2(class282_sub50_sub1_3.method14692(), class282_sub50_sub1_3.anInt9451);
+				CacheableNode_Sub1_Sub2 class282_sub50_sub1_sub2_4 = new CacheableNode_Sub1_Sub2(class282_sub50_sub1_3.method14692(), class282_sub50_sub1_3.anInt9451);
 				this.aClass465_2854.put(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3.data);
 				Class224.method3782(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3, -782987779);
 				class282_sub50_sub1_3.remove();
@@ -74,7 +74,7 @@ public final class SoftCache {
 
 	public int method3862() {
 		int i_2 = 0;
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-124475022)) {
+		for (CacheableNode_Sub1 class282_sub50_sub1_3 = (CacheableNode_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_3 != null; class282_sub50_sub1_3 = (CacheableNode_Sub1) this.aClass477_2855.method7955(-124475022)) {
 			if (!class282_sub50_sub1_3.method14691(-1137158918)) {
 				++i_2;
 			}
@@ -83,7 +83,7 @@ public final class SoftCache {
 	}
 
 	public void method3863(int i_1) {
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_2 != null; class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass477_2855.method7955(-586582507)) {
+		for (CacheableNode_Sub1 class282_sub50_sub1_2 = (CacheableNode_Sub1) this.aClass477_2855.method7941(); class282_sub50_sub1_2 != null; class282_sub50_sub1_2 = (CacheableNode_Sub1) this.aClass477_2855.method7955(-586582507)) {
 			if (class282_sub50_sub1_2.method14691(1940847824)) {
 				class282_sub50_sub1_2.remove();
 				class282_sub50_sub1_2.method13452();
@@ -92,7 +92,7 @@ public final class SoftCache {
 		}
 	}
 
-	void method3864(Class282_Sub50_Sub1 class282_sub50_sub1_1, byte b_2) {
+	void method3864(CacheableNode_Sub1 class282_sub50_sub1_1, byte b_2) {
 		if (class282_sub50_sub1_1 != null) {
 			class282_sub50_sub1_1.remove();
 			class282_sub50_sub1_1.method13452();
@@ -101,7 +101,7 @@ public final class SoftCache {
 	}
 
 	public Object get(long long_1) {
-		Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass465_2854.get(long_1);
+		CacheableNode_Sub1 class282_sub50_sub1_3 = (CacheableNode_Sub1) this.aClass465_2854.get(long_1);
 		if (class282_sub50_sub1_3 == null) {
 			return null;
 		} else {
@@ -113,7 +113,7 @@ public final class SoftCache {
 				return null;
 			} else {
 				if (class282_sub50_sub1_3.method14691(279512561)) {
-					Class282_Sub50_Sub1_Sub1 class282_sub50_sub1_sub1_5 = new Class282_Sub50_Sub1_Sub1(object_4, class282_sub50_sub1_3.anInt9451);
+					CacheableNode_Sub1_Sub1 class282_sub50_sub1_sub1_5 = new CacheableNode_Sub1_Sub1(object_4, class282_sub50_sub1_3.anInt9451);
 					this.aClass465_2854.put(class282_sub50_sub1_sub1_5, class282_sub50_sub1_3.data);
 					this.aClass477_2855.method7936(class282_sub50_sub1_sub1_5);
 					class282_sub50_sub1_sub1_5.key = 0L;
@@ -133,14 +133,14 @@ public final class SoftCache {
 	}
 
 	public Object method3866(int i_1) {
-		Class282_Sub50_Sub1 class282_sub50_sub1_4;
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass465_2854.method7750(426226201); class282_sub50_sub1_2 != null; this.anInt2852 += class282_sub50_sub1_4.anInt9451) {
+		CacheableNode_Sub1 class282_sub50_sub1_4;
+		for (CacheableNode_Sub1 class282_sub50_sub1_2 = (CacheableNode_Sub1) this.aClass465_2854.method7750(426226201); class282_sub50_sub1_2 != null; this.anInt2852 += class282_sub50_sub1_4.anInt9451) {
 			Object object_3 = class282_sub50_sub1_2.method14692();
 			if (object_3 != null) {
 				return object_3;
 			}
 			class282_sub50_sub1_4 = class282_sub50_sub1_2;
-			class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass465_2854.method7751((byte) 100);
+			class282_sub50_sub1_2 = (CacheableNode_Sub1) this.aClass465_2854.method7751((byte) 100);
 			class282_sub50_sub1_4.remove();
 			class282_sub50_sub1_4.method13452();
 		}
@@ -148,14 +148,14 @@ public final class SoftCache {
 	}
 
 	public Object method3867() {
-		Class282_Sub50_Sub1 class282_sub50_sub1_4;
-		for (Class282_Sub50_Sub1 class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass465_2854.method7751((byte) 50); class282_sub50_sub1_2 != null; this.anInt2852 += class282_sub50_sub1_4.anInt9451) {
+		CacheableNode_Sub1 class282_sub50_sub1_4;
+		for (CacheableNode_Sub1 class282_sub50_sub1_2 = (CacheableNode_Sub1) this.aClass465_2854.method7751((byte) 50); class282_sub50_sub1_2 != null; this.anInt2852 += class282_sub50_sub1_4.anInt9451) {
 			Object object_3 = class282_sub50_sub1_2.method14692();
 			if (object_3 != null) {
 				return object_3;
 			}
 			class282_sub50_sub1_4 = class282_sub50_sub1_2;
-			class282_sub50_sub1_2 = (Class282_Sub50_Sub1) this.aClass465_2854.method7751((byte) 125);
+			class282_sub50_sub1_2 = (CacheableNode_Sub1) this.aClass465_2854.method7751((byte) 125);
 			class282_sub50_sub1_4.remove();
 			class282_sub50_sub1_4.method13452();
 		}
@@ -163,7 +163,7 @@ public final class SoftCache {
 	}
 
 	public void method3873(long long_1) {
-		Class282_Sub50_Sub1 class282_sub50_sub1_3 = (Class282_Sub50_Sub1) this.aClass465_2854.get(long_1);
+		CacheableNode_Sub1 class282_sub50_sub1_3 = (CacheableNode_Sub1) this.aClass465_2854.get(long_1);
 		this.method3864(class282_sub50_sub1_3, (byte) -6);
 	}
 

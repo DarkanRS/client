@@ -26,7 +26,7 @@ public abstract class GraphicalRenderer {
 		this.method8555();
 	}
 
-	public abstract void method8394(int var1, Class282_Sub24[] var2);
+	public abstract void method8394(int var1, Node_Sub24[] var2);
 
 	public abstract void method8395();
 
@@ -172,7 +172,7 @@ public abstract class GraphicalRenderer {
 		this.B(i_1, i_2, i_3, i_4, i_5, 1);
 	}
 
-	public abstract void method8426(int var1, Class282_Sub24[] var2);
+	public abstract void method8426(int var1, Node_Sub24[] var2);
 
 	public abstract Class455 method8427(int var1, int var2, int[] var3, int[] var4);
 
@@ -221,9 +221,9 @@ public abstract class GraphicalRenderer {
 
 	public abstract int method8437(int var1, int var2, int var3, int var4, int var5, int var6);
 
-	public abstract Class282_Sub1 method8438(int var1);
+	public abstract Node_Sub1 method8438(int var1);
 
-	public abstract void method8439(Class282_Sub1 var1);
+	public abstract void method8439(Node_Sub1 var1);
 
 	public NativeSprite method8440(int i_1, int i_2) {
 		return this.method8654(i_1, i_2, true, false);
@@ -480,17 +480,17 @@ public abstract class GraphicalRenderer {
 
 	public abstract void DA(Class455 var2, int var3, int var4);
 
-	public abstract Class282_Sub1 method8541(int var1);
+	public abstract Node_Sub1 method8541(int var1);
 
-	public abstract void method8542(Class282_Sub1 var1);
+	public abstract void method8542(Node_Sub1 var1);
 
 	public abstract NativeSprite method8543(int[] var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public abstract void method8544(Class282_Sub1 var1);
+	public abstract void method8544(Node_Sub1 var1);
 
 	public abstract int method8546(int var1, int var2);
 
-	public abstract void method8547(int var1, Class282_Sub24[] var2);
+	public abstract void method8547(int var1, Node_Sub24[] var2);
 
 	public abstract NativeSprite method8548(int[] var1, int var2, int var3, int var4, int var5, boolean var6);
 
@@ -542,7 +542,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract Ground method8569(int var1, int var2, int[][] var3, int[][] var4, int var5, int var6, int var7);
 
-	public abstract Class282_Sub1 method8570(int var1);
+	public abstract Node_Sub1 method8570(int var1);
 
 	public abstract Matrix44Arr method8571();
 
@@ -560,7 +560,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract boolean method8578();
 
-	public abstract void method8579(int var1, Class282_Sub24[] var2);
+	public abstract void method8579(int var1, Node_Sub24[] var2);
 
 	public abstract void method8580(Class151 var1);
 
@@ -596,8 +596,8 @@ public abstract class GraphicalRenderer {
 
 	public abstract int[] ke(int var1, int var2, int var3, int var4);
 
-	public Class282_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class282_Sub24(i_1, i_2, i_3, i_4, i_5);
+	public Node_Sub24 method8593(int i_1, int i_2, int i_3, int i_4, int i_5) {
+		return new Node_Sub24(i_1, i_2, i_3, i_4, i_5);
 	}
 
 	public abstract void ib(int var1, int var2, int var3);
@@ -648,7 +648,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8617(int var1, int var2, int var3, int var4);
 
-	public abstract void method8618(Class282_Sub1 var1);
+	public abstract void method8618(Node_Sub1 var1);
 
 	public abstract void method8619(float var1, float var2, float var3, float[] var4);
 
@@ -744,11 +744,11 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8691();
 
-	static void method8695(Class275_Sub2 class275_sub2_0) {
-		class275_sub2_0.aClass521_Sub1_Sub1_Sub2_7739 = null;
-		if (Class275_Sub2.anInt7741 < 20) {
-			Class275_Sub2.aClass457_7745.offer(class275_sub2_0, 1876581083);
-			++Class275_Sub2.anInt7741;
+	static void method8695(EntityNode_Sub2 class275_sub2_0) {
+		class275_sub2_0.aTransform_Sub1_Sub1_Sub2_7739 = null;
+		if (EntityNode_Sub2.anInt7741 < 20) {
+			EntityNode_Sub2.aClass457_7745.offer(class275_sub2_0, 1876581083);
+			++EntityNode_Sub2.anInt7741;
 		}
 	}
 
@@ -761,8 +761,8 @@ public abstract class GraphicalRenderer {
 		return i_3;
 	}
 
-	public static Class282_Sub50_Sub7 method8697() {
-		return Class96_Sub23.aClass282_Sub50_Sub7_9445;
+	public static CacheableNode_Sub7 method8697() {
+		return CutsceneAction_Sub23.aCacheableNode_Sub7_9445;
 	}
 
 	static CS2Script method8699(byte[] bytes_0, int i_1) {

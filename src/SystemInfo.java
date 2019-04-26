@@ -108,11 +108,11 @@ public class SystemInfo extends Node {
 	}
 
 	public SystemInfo() {
-		if (Class225_Sub6.aString8069.startsWith("win")) {
+		if (RouteStrategy_Sub6.aString8069.startsWith("win")) {
 			this.anInt8126 = 1;
-		} else if (Class225_Sub6.aString8069.startsWith("mac")) {
+		} else if (RouteStrategy_Sub6.aString8069.startsWith("mac")) {
 			this.anInt8126 = 2;
-		} else if (Class225_Sub6.aString8069.startsWith("linux")) {
+		} else if (RouteStrategy_Sub6.aString8069.startsWith("linux")) {
 			this.anInt8126 = 3;
 		} else {
 			this.anInt8126 = 4;
@@ -153,11 +153,11 @@ public class SystemInfo extends Node {
 				this.anInt8141 = 23;
 			}
 		}
-		if (Class282_Sub20_Sub34.aString9967.toLowerCase().indexOf("sun") != -1) {
+		if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("sun") != -1) {
 			this.anInt8155 = 1;
-		} else if (Class282_Sub20_Sub34.aString9967.toLowerCase().indexOf("microsoft") != -1) {
+		} else if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("microsoft") != -1) {
 			this.anInt8155 = 2;
-		} else if (Class282_Sub20_Sub34.aString9967.toLowerCase().indexOf("apple") != -1) {
+		} else if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("apple") != -1) {
 			this.anInt8155 = 3;
 		} else {
 			this.anInt8155 = 4;
@@ -336,20 +336,20 @@ public class SystemInfo extends Node {
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;
 			IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
-			Class8_Sub1.anInt8515 = 0;
+			FontRenderer_Sub1.anInt8515 = 0;
 		} else {
 			if (animable_0.currentAnimation.hasDefs() && !animable_0.currentAnimation.hasSpeed(584514311)) {
 				AnimationDefinitions animationdefinitions_4 = animable_0.currentAnimation.getDefs();
 				if (animable_0.anInt10367 > 0 && animationdefinitions_4.animatingPrecedence == 0) {
 					++animable_0.anInt10366;
 					IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
-					Class8_Sub1.anInt8515 = 0;
+					FontRenderer_Sub1.anInt8515 = 0;
 					return;
 				}
 				if (animable_0.anInt10367 <= 0 && animationdefinitions_4.walkingPrecedence == 0) {
 					++animable_0.anInt10366;
 					IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
-					Class8_Sub1.anInt8515 = 0;
+					FontRenderer_Sub1.anInt8515 = 0;
 					return;
 				}
 			}
@@ -361,13 +361,13 @@ public class SystemInfo extends Node {
 						if (animable_0.anInt10367 > 0 && animationdefinitions_20.animatingPrecedence == 0) {
 							++animable_0.anInt10366;
 							IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
-							Class8_Sub1.anInt8515 = 0;
+							FontRenderer_Sub1.anInt8515 = 0;
 							return;
 						}
 						if (animable_0.anInt10367 <= 0 && animationdefinitions_20.walkingPrecedence == 0) {
 							++animable_0.anInt10366;
 							IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
-							Class8_Sub1.anInt8515 = 0;
+							FontRenderer_Sub1.anInt8515 = 0;
 							return;
 						}
 					}
@@ -472,32 +472,32 @@ public class SystemInfo extends Node {
 						i_10 = 1;
 					}
 				}
-				Class8_Sub1.anInt8515 = 0;
+				FontRenderer_Sub1.anInt8515 = 0;
 				if (i_7 == i_5 && i_8 == i_6) {
 					IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
 				} else {
 					if (i_5 < i_7) {
 						vector3_21.x += (float) i_10;
-						Class8_Sub1.anInt8515 |= 0x4;
+						FontRenderer_Sub1.anInt8515 |= 0x4;
 						if (vector3_21.x > (float) i_7) {
 							vector3_21.x = (float) i_7;
 						}
 					} else if (i_5 > i_7) {
 						vector3_21.x -= (float) i_10;
-						Class8_Sub1.anInt8515 |= 0x8;
+						FontRenderer_Sub1.anInt8515 |= 0x8;
 						if (vector3_21.x < (float) i_7) {
 							vector3_21.x = (float) i_7;
 						}
 					}
 					if (i_6 < i_8) {
 						vector3_21.z += (float) i_10;
-						Class8_Sub1.anInt8515 |= 0x1;
+						FontRenderer_Sub1.anInt8515 |= 0x1;
 						if (vector3_21.z > (float) i_8) {
 							vector3_21.z = (float) i_8;
 						}
 					} else if (i_6 > i_8) {
 						vector3_21.z -= (float) i_10;
-						Class8_Sub1.anInt8515 |= 0x2;
+						FontRenderer_Sub1.anInt8515 |= 0x2;
 						if (vector3_21.z < (float) i_8) {
 							vector3_21.z = (float) i_8;
 						}
@@ -524,7 +524,7 @@ public class SystemInfo extends Node {
 					--animable_0.anInt10367;
 				}
 				IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;
-				Class8_Sub1.anInt8515 = 0;
+				FontRenderer_Sub1.anInt8515 = 0;
 				vector3_21.pushVectorStack();
 			}
 		}

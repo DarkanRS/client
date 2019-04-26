@@ -1,38 +1,38 @@
 public final class Class101_Sub2 extends Class101 {
 
 	boolean aBool9361;
-	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_9362;
+	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9362;
 	Class115_Sub1 aClass115_Sub1_9360;
 
 	public void method1690() {
-		this.aClass505_Sub2_Sub2_9362.method15666(0L);
-		this.aClass505_Sub2_Sub2_9362.method15645(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(0L);
 		this.aBool9361 = false;
-		this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
-		this.aClass505_Sub2_Sub2_9362.method14163(1);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
-		this.aClass505_Sub2_Sub2_9362.method14163(0);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(1);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(0);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
 	}
 
-	Class115 method1743(Class505_Sub2 class505_sub2_1, Class99 class99_2) {
-		return new Class115_Sub1((Class505_Sub2_Sub2) class505_sub2_1, this, class99_2);
+	Class115 method1743(GraphicalRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
+		return new Class115_Sub1((GraphicalRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
 	}
 
 	public void method1713() {
-		this.aClass505_Sub2_Sub2_9362.method15666(0L);
-		this.aClass505_Sub2_Sub2_9362.method15645(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(0L);
 		this.aBool9361 = false;
-		this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
-		this.aClass505_Sub2_Sub2_9362.method14163(1);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
-		this.aClass505_Sub2_Sub2_9362.method14163(0);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(1);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(0);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
 	}
 
-	Class101_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2_1, Class114 class114_2) {
+	Class101_Sub2(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class114 class114_2) {
 		super(class505_sub2_sub2_1, class114_2);
-		this.aClass505_Sub2_Sub2_9362 = class505_sub2_sub2_1;
+		this.aGraphicalRenderer_Sub2_Sub2_9362 = class505_sub2_sub2_1;
 		this.aBool9361 = false;
 	}
 
@@ -48,9 +48,9 @@ public final class Class101_Sub2 extends Class101 {
 				throw new IllegalArgumentException();
 			} else {
 				if (this.aBool9361) {
-					this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-					this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-					this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+					this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+					this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+					this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 				}
 
 				return true;
@@ -59,31 +59,31 @@ public final class Class101_Sub2 extends Class101 {
 	}
 
 	public boolean method1693() {
-		return this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
+		return this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
 	}
 
 	public boolean method1648() {
-		return this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
+		return this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
 	}
 
 	public void method1647() {
-		this.aClass505_Sub2_Sub2_9362.method15666(0L);
-		this.aClass505_Sub2_Sub2_9362.method15645(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(0L);
 		this.aBool9361 = false;
-		this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
-		this.aClass505_Sub2_Sub2_9362.method14163(1);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
-		this.aClass505_Sub2_Sub2_9362.method14163(0);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(1);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(0);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
 	}
 
 	public void method1686() {
 		if (this.aClass115_Sub1_9360 == null) {
 			throw new RuntimeException_Sub2();
 		} else {
-			this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-			this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-			this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 			this.aBool9361 = true;
 		}
 	}
@@ -92,72 +92,72 @@ public final class Class101_Sub2 extends Class101 {
 		if (this.aClass115_Sub1_9360 == null) {
 			throw new RuntimeException_Sub2();
 		} else {
-			this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-			this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-			this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 			this.aBool9361 = true;
 		}
 	}
 
-	Class115 method1683(Class505_Sub2 class505_sub2_1, Class99 class99_2) {
-		return new Class115_Sub1((Class505_Sub2_Sub2) class505_sub2_1, this, class99_2);
+	Class115 method1683(GraphicalRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
+		return new Class115_Sub1((GraphicalRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
 	}
 
 	public void method1678() {
-		this.aClass505_Sub2_Sub2_9362.method15666(0L);
-		this.aClass505_Sub2_Sub2_9362.method15645(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(0L);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(0L);
 		this.aBool9361 = false;
-		this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
-		this.aClass505_Sub2_Sub2_9362.method14163(1);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
-		this.aClass505_Sub2_Sub2_9362.method14163(0);
-		this.aClass505_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = null;
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(1);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14163(0);
+		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
 	}
 
 	public void method1685() {
 		if (this.aClass115_Sub1_9360 == null) {
 			throw new RuntimeException_Sub2();
 		} else {
-			this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-			this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-			this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 			this.aBool9361 = true;
 		}
 	}
 
 	public boolean method1664() {
-		return this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
+		return this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
 	}
 
 	public boolean method1692() {
-		return this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
+		return this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
 	}
 
-	Class282_Sub21_Sub1 method1765(Class122 class122_1) {
-		return new Class282_Sub21_Sub1_Sub1(this, class122_1);
+	Node_Sub21_Sub1 method1765(Class122 class122_1) {
+		return new Node_Sub21_Sub1_Sub1(this, class122_1);
 	}
 
 	public boolean method1734() {
-		return this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
+		return this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 == this.aClass115_Sub1_9360;
 	}
 
 	public void method1646() {
 		if (this.aClass115_Sub1_9360 == null) {
 			throw new RuntimeException_Sub2();
 		} else {
-			this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-			this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-			this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+			this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 			this.aBool9361 = true;
 		}
 	}
 
-	Class115 method1665(Class505_Sub2 class505_sub2_1, Class99 class99_2) {
-		return new Class115_Sub1((Class505_Sub2_Sub2) class505_sub2_1, this, class99_2);
+	Class115 method1665(GraphicalRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
+		return new Class115_Sub1((GraphicalRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
 	}
 
-	Class115 method1697(Class505_Sub2 class505_sub2_1, Class99 class99_2) {
-		return new Class115_Sub1((Class505_Sub2_Sub2) class505_sub2_1, this, class99_2);
+	Class115 method1697(GraphicalRenderer_Sub2 class505_sub2_1, Class99 class99_2) {
+		return new Class115_Sub1((GraphicalRenderer_Sub2_Sub2) class505_sub2_1, this, class99_2);
 	}
 
 	public boolean method1706(Class115 class115_1) {
@@ -172,9 +172,9 @@ public final class Class101_Sub2 extends Class101 {
 				throw new IllegalArgumentException();
 			} else {
 				if (this.aBool9361) {
-					this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-					this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-					this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+					this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+					this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+					this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 				}
 
 				return true;
@@ -194,9 +194,9 @@ public final class Class101_Sub2 extends Class101 {
 				throw new IllegalArgumentException();
 			} else {
 				if (this.aBool9361) {
-					this.aClass505_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
-					this.aClass505_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
-					this.aClass505_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
+					this.aGraphicalRenderer_Sub2_Sub2_9362.method15666(this.aClass115_Sub1_9360.aLong9286);
+					this.aGraphicalRenderer_Sub2_Sub2_9362.method15645(this.aClass115_Sub1_9360.aLong9287);
+					this.aGraphicalRenderer_Sub2_Sub2_9362.aClass115_Sub1_10251 = this.aClass115_Sub1_9360;
 				}
 
 				return true;
@@ -204,12 +204,12 @@ public final class Class101_Sub2 extends Class101 {
 		}
 	}
 
-	Class282_Sub21_Sub1 method1694(Class122 class122_1) {
-		return new Class282_Sub21_Sub1_Sub1(this, class122_1);
+	Node_Sub21_Sub1 method1694(Class122 class122_1) {
+		return new Node_Sub21_Sub1_Sub1(this, class122_1);
 	}
 
-	Class282_Sub21_Sub1 method1712(Class122 class122_1) {
-		return new Class282_Sub21_Sub1_Sub1(this, class122_1);
+	Node_Sub21_Sub1 method1712(Class122 class122_1) {
+		return new Node_Sub21_Sub1_Sub1(this, class122_1);
 	}
 
 }

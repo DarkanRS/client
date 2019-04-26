@@ -779,8 +779,8 @@ public class ObjectDefinitions {
 
 	public static void method8020() {
 		MeshModifier.method7042();
-		Class282_Sub20_Sub36.method15420();
-		Class282_Sub20_Sub24.method15391(792930354);
+		Node_Sub20_Sub36.method15420();
+		Node_Sub20_Sub24.method15391(792930354);
 		Class335.method5961();
 	}
 

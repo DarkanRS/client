@@ -193,25 +193,25 @@ public class JS5Manager {
 					if (arr_0 != null) {
 						label270: for (i_18 = Class4.anInt35 + 1; i_18 <= 3; i_18++) {
 							if (arr_0[i_18] != null && (regionmap_8.tileMasks[i_18][i_11][i_14] & 0x8) == 0) {
-								Class521_Sub1_Sub1 class521_sub1_sub1_21;
+								Transform_Sub1_Sub1 class521_sub1_sub1_21;
 								int i_23;
 								Class293 class293_26;
 								Class208 class208_27;
 								if (bool_16 && arr_0[i_18][i_11][i_14] != null) {
-									if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505 != null) {
+									if (arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3505 != null) {
 										i_19 = Class125.method2172(i_12);
-										if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505.aShort9615 == i_19 || arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502.aShort9615 == i_19) {
+										if (arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3505.aShort9615 == i_19 || arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3502.aShort9615 == i_19) {
 											continue;
 										}
 										if (i_13 != 0) {
 											i_20 = Class125.method2172(i_13);
-											if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505.aShort9615 == i_20 || arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502.aShort9615 == i_20) {
+											if (arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3505.aShort9615 == i_20 || arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3502.aShort9615 == i_20) {
 												continue;
 											}
 										}
 										if (i_15 != 0) {
 											i_20 = Class125.method2172(i_15);
-											if (arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3505.aShort9615 == i_20 || arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aClass521_Sub1_Sub5_3502.aShort9615 == i_20) {
+											if (arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3505.aShort9615 == i_20 || arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3502 != null && arr_0[i_18][i_11][i_14].aTransform_Sub1_Sub5_3502.aShort9615 == i_20) {
 												continue;
 											}
 										}
@@ -219,7 +219,7 @@ public class JS5Manager {
 									class293_26 = arr_0[i_18][i_11][i_14];
 									if (class293_26.aClass208_3504 != null) {
 										for (class208_27 = class293_26.aClass208_3504; class208_27 != null; class208_27 = class208_27.aClass208_2660) {
-											class521_sub1_sub1_21 = class208_27.aClass521_Sub1_Sub1_2659;
+											class521_sub1_sub1_21 = class208_27.aTransform_Sub1_Sub1_2659;
 											if (class521_sub1_sub1_21 instanceof SceneObject) {
 												SceneObject sceneobject_28 = (SceneObject) class521_sub1_sub1_21;
 												i_23 = sceneobject_28.method89(1472550307);
@@ -238,7 +238,7 @@ public class JS5Manager {
 								class293_26 = arr_0[i_18][i_11][i_14];
 								if (class293_26 != null && class293_26.aClass208_3504 != null) {
 									for (class208_27 = class293_26.aClass208_3504; class208_27 != null; class208_27 = class208_27.aClass208_2660) {
-										class521_sub1_sub1_21 = class208_27.aClass521_Sub1_Sub1_2659;
+										class521_sub1_sub1_21 = class208_27.aTransform_Sub1_Sub1_2659;
 										if (class521_sub1_sub1_21.localX != class521_sub1_sub1_21.aShort9458 || class521_sub1_sub1_21.localY != class521_sub1_sub1_21.aShort9456) {
 											for (int i_22 = class521_sub1_sub1_21.aShort9458; i_22 <= class521_sub1_sub1_21.localX; i_22++) {
 												for (i_23 = class521_sub1_sub1_21.aShort9456; i_23 <= class521_sub1_sub1_21.localY; i_23++) {
@@ -254,7 +254,7 @@ public class JS5Manager {
 						}
 					}
 					if (bool_17) {
-						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[Class4.anInt35 + 1].method6722(i_11, i_14);
+						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[Class4.anInt35 + 1].method6722(i_11, i_14);
 						if (client.anIntArray7198[i_1] < i_18) {
 							client.anIntArray7198[i_1] = i_18;
 						}

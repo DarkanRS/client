@@ -5,15 +5,15 @@ import java.awt.Insets;
 
 public class EntityNode {
 
-	public EntityNode aClass275_3339;
-	public EntityNode aClass275_3340;
+	public EntityNode aEntityNode_3339;
+	public EntityNode aEntityNode_3340;
 
 	public void method4887() {
-		if (this.aClass275_3340 != null) {
-			this.aClass275_3340.aClass275_3339 = this.aClass275_3339;
-			this.aClass275_3339.aClass275_3340 = this.aClass275_3340;
-			this.aClass275_3339 = null;
-			this.aClass275_3340 = null;
+		if (this.aEntityNode_3340 != null) {
+			this.aEntityNode_3340.aEntityNode_3339 = this.aEntityNode_3339;
+			this.aEntityNode_3339.aEntityNode_3340 = this.aEntityNode_3340;
+			this.aEntityNode_3339 = null;
+			this.aEntityNode_3340 = null;
 		}
 	}
 

@@ -12,7 +12,7 @@ public class Class287 {
 
     int anInt3433;
 
-    public Class282_Sub24 aClass282_Sub24_3425;
+    public Node_Sub24 aNode_Sub24_3425;
 
     int anInt3435;
 
@@ -23,8 +23,8 @@ public class Class287 {
     int anInt3432;
 
     public Class287(GraphicalRenderer graphicalrenderer_1, int i_2, RsByteBuffer rsbytebuffer_3) {
-        if (Class468_Sub20.anIntArray7920 == null) {
-            Class8_Sub1.method13783();
+        if (Preference_Sub20.anIntArray7920 == null) {
+            FontRenderer_Sub1.method13783();
         }
         this.anInt3419 = rsbytebuffer_3.readUnsignedByte();
         this.aBool3426 = (this.anInt3419 & 0x8) != 0;
@@ -61,7 +61,7 @@ public class Class287 {
     }
 
     void method5050(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-        this.aClass282_Sub24_3425 = graphicalrenderer_1.method8593(i_2, i_3, i_4, i_5, i_6);
+        this.aNode_Sub24_3425 = graphicalrenderer_1.method8593(i_2, i_3, i_4, i_5, i_6);
     }
 
     void method5052() {
@@ -176,7 +176,7 @@ public class Class287 {
                     i_4 = i_5;
                     break;
                 case 3:
-                    i_4 = Class468_Sub20.anIntArray7920[i_5] >> 1;
+                    i_4 = Preference_Sub20.anIntArray7920[i_5] >> 1;
                     break;
                 case 4:
                     i_4 = i_5 >> 10 << 11;
@@ -190,7 +190,7 @@ public class Class287 {
         } else {
             i_4 = 2048;
         }
-        this.aClass282_Sub24_3425.method12373((float) ((i_4 * this.anInt3409 >> 11) + this.anInt3435) / 2048.0F);
+        this.aNode_Sub24_3425.method12373((float) ((i_4 * this.anInt3409 >> 11) + this.anInt3435) / 2048.0F);
     }
 
     public void method5061(int i_1, int i_2, int i_3, int i_4) {

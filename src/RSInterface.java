@@ -113,7 +113,7 @@ public class RSInterface {
 			Class268 sound = Class260.aClass268Array3232[i_1];
 			boolean bool_3 = false;
 			int i_4;
-			if (sound.aClass282_Sub15_Sub5_3304 == null) {
+			if (sound.aNode_Sub15_Sub5_3304 == null) {
 				--sound.anInt3297;
 				if (sound.anInt3297 >= (sound.method4793((byte) -64) ? -1500 : -10)) {
 					if (sound.type == 1 && sound.soundEffect == null) {
@@ -122,16 +122,16 @@ public class RSInterface {
 							continue;
 						}
 						sound.anInt3297 += sound.soundEffect.getDelay();
-					} else if (sound.method4793((byte) -41) && (sound.aClass282_Sub18_3294 == null || sound.aClass282_Sub26_Sub1_Sub1_3296 == null)) {
-						if (sound.aClass282_Sub18_3294 == null) {
-							sound.aClass282_Sub18_3294 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, sound.soundId);
+					} else if (sound.method4793((byte) -41) && (sound.aNode_Sub18_3294 == null || sound.aNode_Sub26_Sub1_Sub1_3296 == null)) {
+						if (sound.aNode_Sub18_3294 == null) {
+							sound.aNode_Sub18_3294 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, sound.soundId);
 						}
-						if (sound.aClass282_Sub18_3294 == null) {
+						if (sound.aNode_Sub18_3294 == null) {
 							continue;
 						}
-						if (sound.aClass282_Sub26_Sub1_Sub1_3296 == null) {
-							sound.aClass282_Sub26_Sub1_Sub1_3296 = sound.aClass282_Sub18_3294.method12272();
-							if (sound.aClass282_Sub26_Sub1_Sub1_3296 == null) {
+						if (sound.aNode_Sub26_Sub1_Sub1_3296 == null) {
+							sound.aNode_Sub26_Sub1_Sub1_3296 = sound.aNode_Sub18_3294.method12272();
+							if (sound.aNode_Sub26_Sub1_Sub1_3296 == null) {
 								continue;
 							}
 						}
@@ -157,7 +157,7 @@ public class RSInterface {
 								if (i_14 < 0) {
 									i_14 = 0;
 								}
-								i_5 = (i_7 - i_14) * Class393.preferences.aClass468_Sub13_8193.method12714() * sound.anInt3299 / i_7 >> 2;
+								i_5 = (i_7 - i_14) * Class393.preferences.aPreference_Sub13_8193.method12714() * sound.anInt3299 / i_7 >> 2;
 								if (sound.anInt3305 != -1) {
 									i_10 = sound.anInt3305;
 									i_12 = sound.anInt3306;
@@ -181,24 +181,24 @@ public class RSInterface {
 								i_5 = 0;
 							}
 						} else {
-							i_5 = sound.anInt3299 * (sound.type == 3 ? Class393.preferences.aClass468_Sub13_8227.method12714() : Class393.preferences.aClass468_Sub13_8225.method12714()) >> 2;
+							i_5 = sound.anInt3299 * (sound.type == 3 ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) >> 2;
 						}
 						if (i_5 > 0) {
 							if (sound.type == 1) {
 								Object obj_18 = null;
-								Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_19 = sound.soundEffect.getMixedAudio().method16062(Class119.aClass344_1460);
-								sound.aClass282_Sub15_Sub5_3304 = class282_sub26_sub1_sub2_19.method15225(sound.anInt3295, i_5, i_4);
+								Node_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_19 = sound.soundEffect.getMixedAudio().method16062(Class119.aClass344_1460);
+								sound.aNode_Sub15_Sub5_3304 = class282_sub26_sub1_sub2_19.method15225(sound.anInt3295, i_5, i_4);
 							} else if (sound.method4793((byte) -6)) {
-								sound.aClass282_Sub15_Sub5_3304 = sound.aClass282_Sub26_Sub1_Sub1_3296.method15225(sound.anInt3295, i_5, i_4);
+								sound.aNode_Sub15_Sub5_3304 = sound.aNode_Sub26_Sub1_Sub1_3296.method15225(sound.anInt3295, i_5, i_4);
 							}
-							sound.aClass282_Sub15_Sub5_3304.method15325(sound.anInt3302 - 1);
-							Class79.aClass282_Sub15_Sub4_783.method15275(sound.aClass282_Sub15_Sub5_3304);
+							sound.aNode_Sub15_Sub5_3304.method15325(sound.anInt3302 - 1);
+							Class79.aNode_Sub15_Sub4_783.method15275(sound.aNode_Sub15_Sub5_3304);
 						}
 					}
 				} else {
 					bool_3 = true;
 				}
-			} else if (!sound.aClass282_Sub15_Sub5_3304.isLinked()) {
+			} else if (!sound.aNode_Sub15_Sub5_3304.isLinked()) {
 				bool_3 = true;
 			}
 			if (bool_3) {
@@ -210,16 +210,16 @@ public class RSInterface {
 			}
 		}
 		if (Class260.aBool3220 && !Class116.method1966(1117518618)) {
-			if (Class393.preferences.aClass468_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1) {
-				if (Class260.aClass282_Sub15_Sub2_3231 != null) {
-					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aClass468_Sub13_8228.method12714(), Class260.aClass282_Sub15_Sub2_3231);
+			if (Class393.preferences.aPreference_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1) {
+				if (Class260.aNode_Sub15_Sub2_3231 != null) {
+					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aPreference_Sub13_8228.method12714(), Class260.aNode_Sub15_Sub2_3231);
 				} else {
-					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aClass468_Sub13_8228.method12714(), (byte) -3);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aPreference_Sub13_8228.method12714(), (byte) -3);
 				}
 			}
 			Class260.aBool3220 = false;
-			Class260.aClass282_Sub15_Sub2_3231 = null;
-		} else if (Class393.preferences.aClass468_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1 && !Class116.method1966(1621182156)) {
+			Class260.aNode_Sub15_Sub2_3231 = null;
+		} else if (Class393.preferences.aPreference_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1 && !Class116.method1966(1621182156)) {
 			TCPPacket tcpmessage_17 = Class271.createPacket(OutgoingPacket.SOUND_EFFECT_MUSIC_ENDED, client.outputContext.isaac);
 			tcpmessage_17.buffer.writeInt(Class260.anInt3223);
 			client.outputContext.queuePacket(tcpmessage_17);

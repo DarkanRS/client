@@ -67,7 +67,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	float aFloat8431 = 1.0F;
 	float aFloat8433 = -1.0F;
 	float aFloat8434 = -1.0F;
-	Class282_Sub24[] aClass282_Sub24Array8435;
+	Node_Sub24[] aNode_Sub24Array8435;
 	int anInt8358;
 	int anInt8378;
 	float aFloat8446;
@@ -77,9 +77,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	int anInt8451;
 	float aFloat8489;
 	float aFloat8414;
-	Class528_Sub1[] aClass528_Sub1Array8479;
-	Class528_Sub1[] aClass528_Sub1Array8492;
-	Class282_Sub35_Sub1 aClass282_Sub35_Sub1_8499;
+	MeshRasterizer_Sub1[] aMeshRasterizer_Sub1Array8479;
+	MeshRasterizer_Sub1[] aMeshRasterizer_Sub1Array8492;
+	Node_Sub35_Sub1 aNode_Sub35_Sub1_8499;
 	int[] anIntArray8500;
 	int[] anIntArray8501;
 	int[] anIntArray8502;
@@ -96,7 +96,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	boolean aBool8401;
 	boolean aBool8362;
 	boolean aBool8465;
-	Class282_Sub5_Sub1 aClass282_Sub5_Sub1_8444;
+	Node_Sub5_Sub1 aNode_Sub5_Sub1_8444;
 	Class146 aClass146_8356;
 	boolean aBool8309;
 	boolean aBool8393;
@@ -227,8 +227,8 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		new Class137_Sub1(this, 3553, Class150.aClass150_1949, Class76.aClass76_751, 1, 1);
 
 		for (int i_1 = 0; i_1 < 7; i_1++) {
-			this.aClass528_Sub1Array8479[i_1] = new Class528_Sub1(this);
-			this.aClass528_Sub1Array8492[i_1] = new Class528_Sub1(this);
+			this.aMeshRasterizer_Sub1Array8479[i_1] = new MeshRasterizer_Sub1(this);
+			this.aMeshRasterizer_Sub1Array8492[i_1] = new MeshRasterizer_Sub1(this);
 		}
 
 		if (this.aBool8472) {
@@ -315,7 +315,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	void method8397() {
 		for (Node node_1 = this.aClass473_8369.getBack(); node_1 != null; node_1 = this.aClass473_8369.getPrevious()) {
-			((Class282_Sub1_Sub1) node_1).method15450();
+			((Node_Sub1_Sub1) node_1).method15450();
 		}
 
 		if (this.aClass170_8357 != null) {
@@ -338,7 +338,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public boolean method8403() {
-		return this.aClass282_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
+		return this.aNode_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
 	}
 
 	public boolean method8404() {
@@ -362,7 +362,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public NativeSprite method8604(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-		return new Class160_Sub2(this, i_1, i_2, i_3, i_4);
+		return new NativeSprite_Sub2(this, i_1, i_2, i_3, i_4);
 	}
 
 	public boolean method8454() {
@@ -371,7 +371,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	OpenGLGraphicalRenderer(Canvas canvas_1, Interface22 interface22_2, int i_3) {
 		super(interface22_2);
-		this.aClass282_Sub24Array8435 = new Class282_Sub24[anInt8421];
+		this.aNode_Sub24Array8435 = new Node_Sub24[anInt8421];
 		this.anInt8441 = -1;
 		this.anInt8358 = -1;
 		this.anInt8378 = 0;
@@ -382,9 +382,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		this.anInt8451 = 8448;
 		this.aFloat8489 = -1.0F;
 		this.aFloat8414 = -1.0F;
-		this.aClass528_Sub1Array8479 = new Class528_Sub1[7];
-		this.aClass528_Sub1Array8492 = new Class528_Sub1[7];
-		this.aClass282_Sub35_Sub1_8499 = new Class282_Sub35_Sub1(8192);
+		this.aMeshRasterizer_Sub1Array8479 = new MeshRasterizer_Sub1[7];
+		this.aMeshRasterizer_Sub1Array8492 = new MeshRasterizer_Sub1[7];
+		this.aNode_Sub35_Sub1_8499 = new Node_Sub35_Sub1(8192);
 		this.anIntArray8500 = new int[1];
 		this.anIntArray8501 = new int[1];
 		this.anIntArray8502 = new int[1];
@@ -483,10 +483,10 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 						this.aClass164_8363 = new Class164(this);
 						this.aClass170_8357 = new Class170(this);
 						if (this.aClass170_8357.method2896()) {
-							this.aClass282_Sub5_Sub1_8444 = new Class282_Sub5_Sub1(this);
-							if (!this.aClass282_Sub5_Sub1_8444.method15445()) {
-								this.aClass282_Sub5_Sub1_8444.method12120();
-								this.aClass282_Sub5_Sub1_8444 = null;
+							this.aNode_Sub5_Sub1_8444 = new Node_Sub5_Sub1(this);
+							if (!this.aNode_Sub5_Sub1_8444.method15445()) {
+								this.aNode_Sub5_Sub1_8444.method12120();
+								this.aNode_Sub5_Sub1_8444 = null;
 							}
 						}
 
@@ -520,7 +520,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	void method8531() {
 		for (Node node_1 = this.aClass473_8369.getBack(); node_1 != null; node_1 = this.aClass473_8369.getPrevious()) {
-			((Class282_Sub1_Sub1) node_1).method15450();
+			((Node_Sub1_Sub1) node_1).method15450();
 		}
 
 		if (this.aClass170_8357 != null) {
@@ -949,16 +949,16 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		OpenGL.glEnd();
 	}
 
-	public Class282_Sub1 method8438(int i_1) {
-		Class282_Sub1_Sub1 class282_sub1_sub1_2 = new Class282_Sub1_Sub1(i_1);
+	public Node_Sub1 method8438(int i_1) {
+		Node_Sub1_Sub1 class282_sub1_sub1_2 = new Node_Sub1_Sub1(i_1);
 		this.aClass473_8369.insertBack(class282_sub1_sub1_2);
 		return class282_sub1_sub1_2;
 	}
 
-	public void method8439(Class282_Sub1 class282_sub1_1) {
-		this.aNativeHeap8445 = ((Class282_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
+	public void method8439(Node_Sub1 class282_sub1_1) {
+		this.aNativeHeap8445 = ((Node_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
 		if (this.anInterface14_8496 == null) {
-			Class282_Sub35_Sub1 class282_sub35_sub1_2 = new Class282_Sub35_Sub1(80);
+			Node_Sub35_Sub1 class282_sub35_sub1_2 = new Node_Sub35_Sub1(80);
 			if (this.aBool8467) {
 				class282_sub35_sub1_2.method14688(-1.0F);
 				class282_sub35_sub1_2.method14688(-1.0F);
@@ -1012,7 +1012,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public NativeSprite method8654(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-		return new Class160_Sub2(this, i_1, i_2, bool_3);
+		return new NativeSprite_Sub2(this, i_1, i_2, bool_3);
 	}
 
 	public NativeSprite method8444(SpriteDefinitions class91_1, boolean bool_2) {
@@ -1043,11 +1043,11 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public NativeSprite method8442(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-		return new Class160_Sub2(this, i_4, i_5, ints_1, i_2, i_3);
+		return new NativeSprite_Sub2(this, i_4, i_5, ints_1, i_2, i_3);
 	}
 
 	public NativeSprite method8668(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-		return new Class160_Sub2(this, i_1, i_2, i_3, i_4);
+		return new NativeSprite_Sub2(this, i_1, i_2, i_3, i_4);
 	}
 
 	public Class455 method8624(int i_1, int i_2, int[] ints_3, int[] ints_4) {
@@ -1082,7 +1082,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public MeshRasterizer createMeshRasterizer(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public int method8452(int i_1, int i_2) {
@@ -1152,7 +1152,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public Interface8 method8419(int i_1, int i_2) {
-		return new Class282_Sub50_Sub19(this, Class150.aClass150_1953, Class76.aClass76_749, i_1, i_2);
+		return new CacheableNode_Sub19(this, Class150.aClass150_1953, Class76.aClass76_749, i_1, i_2);
 	}
 
 	public void method8421() {
@@ -1381,7 +1381,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	void method8486() {
 		for (Node node_1 = this.aClass473_8369.getBack(); node_1 != null; node_1 = this.aClass473_8369.getPrevious()) {
-			((Class282_Sub1_Sub1) node_1).method15450();
+			((Node_Sub1_Sub1) node_1).method15450();
 		}
 
 		if (this.aClass170_8357 != null) {
@@ -1627,7 +1627,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public FontRenderer createFont(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
-		return new Class8_Sub5(this, fontmetrics_1, arr_2, bool_3);
+		return new FontRenderer_Sub5(this, fontmetrics_1, arr_2, bool_3);
 	}
 
 	final void method13591(float f_1, float f_2) {
@@ -1636,10 +1636,10 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		this.method13594();
 	}
 
-	public void method8618(Class282_Sub1 class282_sub1_1) {
-		this.aNativeHeap8445 = ((Class282_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
+	public void method8618(Node_Sub1 class282_sub1_1) {
+		this.aNativeHeap8445 = ((Node_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
 		if (this.anInterface14_8496 == null) {
-			Class282_Sub35_Sub1 class282_sub35_sub1_2 = new Class282_Sub35_Sub1(80);
+			Node_Sub35_Sub1 class282_sub35_sub1_2 = new Node_Sub35_Sub1(80);
 			if (this.aBool8467) {
 				class282_sub35_sub1_2.method14688(-1.0F);
 				class282_sub35_sub1_2.method14688(-1.0F);
@@ -1780,9 +1780,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final boolean method8469() {
-		if (this.aClass282_Sub5_Sub1_8444 != null) {
-			if (!this.aClass282_Sub5_Sub1_8444.method12129()) {
-				if (!this.aClass170_8357.method2900(this.aClass282_Sub5_Sub1_8444)) {
+		if (this.aNode_Sub5_Sub1_8444 != null) {
+			if (!this.aNode_Sub5_Sub1_8444.method12129()) {
+				if (!this.aClass170_8357.method2900(this.aNode_Sub5_Sub1_8444)) {
 					return false;
 				}
 
@@ -1796,21 +1796,21 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final void method8490() {
-		if (this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129()) {
-			this.aClass170_8357.method2885(this.aClass282_Sub5_Sub1_8444);
+		if (this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129()) {
+			this.aClass170_8357.method2885(this.aNode_Sub5_Sub1_8444);
 			this.aClass167_8481.method2861();
 		}
 
 	}
 
 	public final boolean method8471() {
-		return this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129();
+		return this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129();
 	}
 
 	final void method8592(float f_1, float f_2, float f_3) {
-		Class282_Sub5_Sub1.aFloat10026 = f_1;
-		Class282_Sub5_Sub1.aFloat10025 = f_2;
-		Class282_Sub5_Sub1.aFloat10024 = f_3;
+		Node_Sub5_Sub1.aFloat10026 = f_1;
+		Node_Sub5_Sub1.aFloat10025 = f_2;
+		Node_Sub5_Sub1.aFloat10024 = f_3;
 	}
 
 	public boolean method8492() {
@@ -2180,9 +2180,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final boolean method8600() {
-		if (this.aClass282_Sub5_Sub1_8444 != null) {
-			if (!this.aClass282_Sub5_Sub1_8444.method12129()) {
-				if (!this.aClass170_8357.method2900(this.aClass282_Sub5_Sub1_8444)) {
+		if (this.aNode_Sub5_Sub1_8444 != null) {
+			if (!this.aNode_Sub5_Sub1_8444.method12129()) {
+				if (!this.aClass170_8357.method2900(this.aNode_Sub5_Sub1_8444)) {
 					return false;
 				}
 
@@ -2205,9 +2205,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final boolean method8628() {
-		if (this.aClass282_Sub5_Sub1_8444 != null) {
-			if (!this.aClass282_Sub5_Sub1_8444.method12129()) {
-				if (!this.aClass170_8357.method2900(this.aClass282_Sub5_Sub1_8444)) {
+		if (this.aNode_Sub5_Sub1_8444 != null) {
+			if (!this.aNode_Sub5_Sub1_8444.method12129()) {
+				if (!this.aClass170_8357.method2900(this.aNode_Sub5_Sub1_8444)) {
 					return false;
 				}
 
@@ -2301,7 +2301,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	void method8485() {
 		for (Node node_1 = this.aClass473_8369.getBack(); node_1 != null; node_1 = this.aClass473_8369.getPrevious()) {
-			((Class282_Sub1_Sub1) node_1).method15450();
+			((Node_Sub1_Sub1) node_1).method15450();
 		}
 
 		if (this.aClass170_8357 != null) {
@@ -2552,23 +2552,23 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public FontRenderer method8625(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
-		return new Class8_Sub5(this, fontmetrics_1, arr_2, bool_3);
+		return new FontRenderer_Sub5(this, fontmetrics_1, arr_2, bool_3);
 	}
 
 	public boolean method8599() {
-		return this.aClass282_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
+		return this.aNode_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
 	}
 
 	public boolean method8464() {
-		return this.aClass282_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
+		return this.aNode_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
 	}
 
 	public NativeSprite method8552(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-		return new Class160_Sub2(this, i_1, i_2, i_3, i_4);
+		return new NativeSprite_Sub2(this, i_1, i_2, i_3, i_4);
 	}
 
 	public boolean method8649() {
-		return this.aClass282_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
+		return this.aNode_Sub5_Sub1_8444 != null && (this.anInt8475 <= 1 || this.aBool8344);
 	}
 
 	final void method13637() {
@@ -2587,7 +2587,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	void method13638() {
 		int i_1;
 		for (i_1 = 0; i_1 < this.anInt8437; i_1++) {
-			Class282_Sub24 class282_sub24_2 = this.aClass282_Sub24Array8435[i_1];
+			Node_Sub24 class282_sub24_2 = this.aNode_Sub24Array8435[i_1];
 			int i_3 = i_1 + 16386;
 			aFloatArray8322[0] = (float) class282_sub24_2.method12368((byte) 11);
 			aFloatArray8322[1] = (float) class282_sub24_2.method12369();
@@ -3193,8 +3193,8 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final void method8601() {
-		if (this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129()) {
-			this.aClass170_8357.method2885(this.aClass282_Sub5_Sub1_8444);
+		if (this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129()) {
+			this.aClass170_8357.method2885(this.aNode_Sub5_Sub1_8444);
 			this.aClass167_8481.method2861();
 		}
 
@@ -3890,22 +3890,22 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		return i_7;
 	}
 
-	public Class282_Sub1 method8570(int i_1) {
-		Class282_Sub1_Sub1 class282_sub1_sub1_2 = new Class282_Sub1_Sub1(i_1);
+	public Node_Sub1 method8570(int i_1) {
+		Node_Sub1_Sub1 class282_sub1_sub1_2 = new Node_Sub1_Sub1(i_1);
 		this.aClass473_8369.insertBack(class282_sub1_sub1_2);
 		return class282_sub1_sub1_2;
 	}
 
-	public Class282_Sub1 method8541(int i_1) {
-		Class282_Sub1_Sub1 class282_sub1_sub1_2 = new Class282_Sub1_Sub1(i_1);
+	public Node_Sub1 method8541(int i_1) {
+		Node_Sub1_Sub1 class282_sub1_sub1_2 = new Node_Sub1_Sub1(i_1);
 		this.aClass473_8369.insertBack(class282_sub1_sub1_2);
 		return class282_sub1_sub1_2;
 	}
 
-	public void method8542(Class282_Sub1 class282_sub1_1) {
-		this.aNativeHeap8445 = ((Class282_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
+	public void method8542(Node_Sub1 class282_sub1_1) {
+		this.aNativeHeap8445 = ((Node_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
 		if (this.anInterface14_8496 == null) {
-			Class282_Sub35_Sub1 class282_sub35_sub1_2 = new Class282_Sub35_Sub1(80);
+			Node_Sub35_Sub1 class282_sub35_sub1_2 = new Node_Sub35_Sub1(80);
 			if (this.aBool8467) {
 				class282_sub35_sub1_2.method14688(-1.0F);
 				class282_sub35_sub1_2.method14688(-1.0F);
@@ -3958,10 +3958,10 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8544(Class282_Sub1 class282_sub1_1) {
-		this.aNativeHeap8445 = ((Class282_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
+	public void method8544(Node_Sub1 class282_sub1_1) {
+		this.aNativeHeap8445 = ((Node_Sub1_Sub1) class282_sub1_1).aNativeHeap10051;
 		if (this.anInterface14_8496 == null) {
-			Class282_Sub35_Sub1 class282_sub35_sub1_2 = new Class282_Sub35_Sub1(80);
+			Node_Sub35_Sub1 class282_sub35_sub1_2 = new Node_Sub35_Sub1(80);
 			if (this.aBool8467) {
 				class282_sub35_sub1_2.method14688(-1.0F);
 				class282_sub35_sub1_2.method14688(-1.0F);
@@ -4027,15 +4027,15 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public FontRenderer method8660(FontMetrics fontmetrics_1, SpriteDefinitions[] arr_2, boolean bool_3) {
-		return new Class8_Sub5(this, fontmetrics_1, arr_2, bool_3);
+		return new FontRenderer_Sub5(this, fontmetrics_1, arr_2, bool_3);
 	}
 
 	public NativeSprite method8543(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-		return new Class160_Sub2(this, i_4, i_5, ints_1, i_2, i_3);
+		return new NativeSprite_Sub2(this, i_4, i_5, ints_1, i_2, i_3);
 	}
 
 	public NativeSprite method8548(int[] ints_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6) {
-		return new Class160_Sub2(this, i_4, i_5, ints_1, i_2, i_3);
+		return new NativeSprite_Sub2(this, i_4, i_5, ints_1, i_2, i_3);
 	}
 
 	public NativeSprite method8612(SpriteDefinitions class91_1, boolean bool_2) {
@@ -4101,7 +4101,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public NativeSprite method8577(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-		return new Class160_Sub2(this, i_1, i_2, bool_3);
+		return new NativeSprite_Sub2(this, i_1, i_2, bool_3);
 	}
 
 	public void GA() {
@@ -4189,19 +4189,19 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public MeshRasterizer method8561(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public MeshRasterizer method8623(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public MeshRasterizer method8505(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public MeshRasterizer method8564(RSMesh rsmesh_1, int i_2, int i_3, int i_4, int i_5) {
-		return new Class528_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
+		return new MeshRasterizer_Sub1(this, rsmesh_1, i_2, i_4, i_5, i_3);
 	}
 
 	public int method8565(int i_1, int i_2) {
@@ -4327,9 +4327,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		return 4;
 	}
 
-	public void method8394(int i_1, Class282_Sub24[] arr_2) {
+	public void method8394(int i_1, Node_Sub24[] arr_2) {
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
-			this.aClass282_Sub24Array8435[i_3] = arr_2[i_3];
+			this.aNode_Sub24Array8435[i_3] = arr_2[i_3];
 		}
 
 		this.anInt8437 = i_1;
@@ -4339,9 +4339,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8426(int i_1, Class282_Sub24[] arr_2) {
+	public void method8426(int i_1, Node_Sub24[] arr_2) {
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
-			this.aClass282_Sub24Array8435[i_3] = arr_2[i_3];
+			this.aNode_Sub24Array8435[i_3] = arr_2[i_3];
 		}
 
 		this.anInt8437 = i_1;
@@ -4351,9 +4351,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 
 	}
 
-	public void method8579(int i_1, Class282_Sub24[] arr_2) {
+	public void method8579(int i_1, Node_Sub24[] arr_2) {
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
-			this.aClass282_Sub24Array8435[i_3] = arr_2[i_3];
+			this.aNode_Sub24Array8435[i_3] = arr_2[i_3];
 		}
 
 		this.anInt8437 = i_1;
@@ -4578,37 +4578,37 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final void method8602() {
-		if (this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129()) {
-			this.aClass170_8357.method2885(this.aClass282_Sub5_Sub1_8444);
+		if (this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129()) {
+			this.aClass170_8357.method2885(this.aNode_Sub5_Sub1_8444);
 			this.aClass167_8481.method2861();
 		}
 
 	}
 
 	public final void method8521() {
-		if (this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129()) {
-			this.aClass170_8357.method2885(this.aClass282_Sub5_Sub1_8444);
+		if (this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129()) {
+			this.aClass170_8357.method2885(this.aNode_Sub5_Sub1_8444);
 			this.aClass167_8481.method2861();
 		}
 
 	}
 
 	public final boolean method8679() {
-		return this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129();
+		return this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129();
 	}
 
 	public final boolean method8605() {
-		return this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129();
+		return this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129();
 	}
 
 	public final boolean method8607() {
-		return this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129();
+		return this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129();
 	}
 
 	final void method8608(float f_1, float f_2, float f_3, float f_4, float f_5, float f_6) {
-		Class282_Sub5_Sub1.aFloat10026 = f_1;
-		Class282_Sub5_Sub1.aFloat10025 = f_2;
-		Class282_Sub5_Sub1.aFloat10024 = f_3;
+		Node_Sub5_Sub1.aFloat10026 = f_1;
+		Node_Sub5_Sub1.aFloat10025 = f_2;
+		Node_Sub5_Sub1.aFloat10024 = f_3;
 	}
 
 	public Matrix44Arr method8517() {
@@ -4719,7 +4719,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public Interface8 method8621(int i_1, int i_2) {
-		return new Class282_Sub50_Sub19(this, Class150.aClass150_1953, Class76.aClass76_749, i_1, i_2);
+		return new CacheableNode_Sub19(this, Class150.aClass150_1953, Class76.aClass76_749, i_1, i_2);
 	}
 
 	public boolean method8609() {
@@ -4843,7 +4843,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public final boolean method8606() {
-		return this.aClass282_Sub5_Sub1_8444 != null && this.aClass282_Sub5_Sub1_8444.method12129();
+		return this.aNode_Sub5_Sub1_8444 != null && this.aNode_Sub5_Sub1_8444.method12129();
 	}
 
 	final synchronized void method13678(int i_1) {
@@ -4869,7 +4869,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 	}
 
 	public NativeSprite method8461(int i_1, int i_2, boolean bool_3, boolean bool_4) {
-		return new Class160_Sub2(this, i_1, i_2, bool_3);
+		return new NativeSprite_Sub2(this, i_1, i_2, bool_3);
 	}
 
 	void method13689() {
@@ -4943,9 +4943,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		this.anInt8466 = 1 << this.anInt8473 * -1431655765 * 3 * -1431655765 * 3;
 	}
 
-	public void method8547(int i_1, Class282_Sub24[] arr_2) {
+	public void method8547(int i_1, Node_Sub24[] arr_2) {
 		for (int i_3 = 0; i_3 < i_1; i_3++) {
-			this.aClass282_Sub24Array8435[i_3] = arr_2[i_3];
+			this.aNode_Sub24Array8435[i_3] = arr_2[i_3];
 		}
 
 		this.anInt8437 = i_1;

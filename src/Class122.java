@@ -36,14 +36,14 @@ public class Class122 {
 
 	public static void method2109(NativeSprite[] arr_0, byte b_1) {
 		Class20.anInt186 = arr_0.length;
-		Class115.aClass160Array1248 = new NativeSprite[Class20.anInt186 + 10];
+		Class115.aNativeSpriteArray1248 = new NativeSprite[Class20.anInt186 + 10];
 		Class20.anIntArray177 = new int[Class20.anInt186 + 10];
-		System.arraycopy(arr_0, 0, Class115.aClass160Array1248, 0, Class20.anInt186);
+		System.arraycopy(arr_0, 0, Class115.aNativeSpriteArray1248, 0, Class20.anInt186);
 		int i_2;
 		for (i_2 = 0; i_2 < Class20.anInt186; i_2++) {
-			Class20.anIntArray177[i_2] = Class115.aClass160Array1248[i_2].method2748();
+			Class20.anIntArray177[i_2] = Class115.aNativeSpriteArray1248[i_2].method2748();
 		}
-		for (i_2 = Class20.anInt186; i_2 < Class115.aClass160Array1248.length; i_2++) {
+		for (i_2 = Class20.anInt186; i_2 < Class115.aNativeSpriteArray1248.length; i_2++) {
 			Class20.anIntArray177[i_2] = 12;
 		}
 	}
@@ -79,19 +79,19 @@ public class Class122 {
 	}
 
 	public static void method2111(boolean bool_0) {
-		if (bool_0 && Class291_Sub1.aClass282_Sub50_Sub6_3491 != null) {
-			Class51.anInt488 = Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9536;
+		if (bool_0 && Class291_Sub1.aCacheableNode_Sub6_3491 != null) {
+			Class51.anInt488 = Class291_Sub1.aCacheableNode_Sub6_3491.anInt9536;
 		} else {
 			Class51.anInt488 = -1;
 		}
-		Class291_Sub1.aClass282_Sub50_Sub6_3491 = null;
+		Class291_Sub1.aCacheableNode_Sub6_3491 = null;
 		Class346.aClass482_4049 = null;
 		Class291_Sub1.anInt8015 = 0;
-		Class282_Sub20_Sub24.aClass118_9884 = null;
+		Node_Sub20_Sub24.aClass118_9884 = null;
 		Class291_Sub1.method5137();
 		Class291_Sub1.aClass482_3459.method8118(-1939522587);
 		Class291_Sub1.aClass283_3470 = null;
-		Defaults7Loader.aClass160_5883 = null;
+		Defaults7Loader.aNativeSprite_5883 = null;
 		Class291_Sub1.anInt8014 = -1;
 		Class291_Sub1.anInt8016 = -1;
 		Class494.aClass194_5794 = null;
@@ -101,7 +101,7 @@ public class Class122 {
 		Class114.aClass194_1243 = null;
 		DefaultsFile.aClass194_6967 = null;
 		Class251.aClass194_3103 = null;
-		Class521_Sub1_Sub5_Sub1.aClass194_10527 = null;
+		Transform_Sub1_Sub5_Sub1.aClass194_10527 = null;
 		if (Class291_Sub1.MAP_AREA_LOADER != null) {
 			Class291_Sub1.MAP_AREA_LOADER.method3699();
 			Class291_Sub1.MAP_AREA_LOADER.method3697(128, 64, 1766469976);

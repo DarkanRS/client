@@ -48,7 +48,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void q(Interface22 var1, int var2, int var3);
 
-	public void method8618(Class282_Sub1 class282_sub1_1) {
+	public void method8618(Node_Sub1 class282_sub1_1) {
 		this.z = (ba) class282_sub1_1;
 		this.n(class282_sub1_1);
 	}
@@ -236,7 +236,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void r(int var1, int var2, int var3, int var4);
 
-	public void method8542(Class282_Sub1 class282_sub1_1) {
+	public void method8542(Node_Sub1 class282_sub1_1) {
 		this.z = (ba) class282_sub1_1;
 		this.n(class282_sub1_1);
 	}
@@ -354,13 +354,13 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	}
 
-	public Class282_Sub1 method8438(int i_1) {
+	public Node_Sub1 method8438(int i_1) {
 		ba ba_2 = new ba(this, i_1);
 		this.au.append(ba_2);
 		return ba_2;
 	}
 
-	public void method8439(Class282_Sub1 class282_sub1_1) {
+	public void method8439(Node_Sub1 class282_sub1_1) {
 		this.z = (ba) class282_sub1_1;
 		this.n(class282_sub1_1);
 	}
@@ -510,7 +510,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void YA(int var1, int var2, int var3, int var4, int var5, int var6);
 
-	public void method8547(int i_1, Class282_Sub24[] arr_2) {
+	public void method8547(int i_1, Node_Sub24[] arr_2) {
 		int i_3 = 0;
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
@@ -706,7 +706,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return this.af;
 	}
 
-	native void n(Class282_Sub1 var1);
+	native void n(Node_Sub1 var1);
 
 	public boolean method8528() {
 		return true;
@@ -778,7 +778,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return new za(this, canvas_1, i_2, i_3);
 	}
 
-	public Class282_Sub1 method8570(int i_1) {
+	public Node_Sub1 method8570(int i_1) {
 		ba ba_2 = new ba(this, i_1);
 		this.au.append(ba_2);
 		return ba_2;
@@ -1123,7 +1123,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void on(int var1, int var2, int var3, int var4);
 
-	public void method8544(Class282_Sub1 class282_sub1_1) {
+	public void method8544(Node_Sub1 class282_sub1_1) {
 		this.z = (ba) class282_sub1_1;
 		this.n(class282_sub1_1);
 	}
@@ -1289,7 +1289,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return new i(this, this.z, i_1, i_2, ints_3, ints_4, i_5, i_6, i_7);
 	}
 
-	public Class282_Sub1 method8541(int i_1) {
+	public Node_Sub1 method8541(int i_1) {
 		ba ba_2 = new ba(this, i_1);
 		this.au.append(ba_2);
 		return ba_2;
@@ -1311,7 +1311,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return 4;
 	}
 
-	public void method8394(int i_1, Class282_Sub24[] arr_2) {
+	public void method8394(int i_1, Node_Sub24[] arr_2) {
 		int i_3 = 0;
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
@@ -1326,7 +1326,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		this.Q(i_1, aq, av);
 	}
 
-	public void method8426(int i_1, Class282_Sub24[] arr_2) {
+	public void method8426(int i_1, Node_Sub24[] arr_2) {
 		int i_3 = 0;
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
@@ -1609,7 +1609,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void hr(int var1, Class455 var2, int var3, int var4);
 
-	public void method8579(int i_1, Class282_Sub24[] arr_2) {
+	public void method8579(int i_1, Node_Sub24[] arr_2) {
 		int i_3 = 0;
 
 		for (int i_4 = 0; i_4 < i_1; i_4++) {
@@ -1661,11 +1661,11 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void nz(int var1);
 
-	native void nm(Class282_Sub1 var1);
+	native void nm(Node_Sub1 var1);
 
-	native void nd(Class282_Sub1 var1);
+	native void nd(Node_Sub1 var1);
 
-	native void nj(Class282_Sub1 var1);
+	native void nj(Node_Sub1 var1);
 
 	native void nf(int var1, int[] var2, float[] var3);
 

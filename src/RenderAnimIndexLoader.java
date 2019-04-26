@@ -76,7 +76,7 @@ public class RenderAnimIndexLoader {
 				}
 			}
 		} else {
-			GroundDecoration.method16094(Class468_Sub8.INTERFACES[i_0].method1616(2127300382), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0);
+			GroundDecoration.method16094(Preference_Sub8.INTERFACES[i_0].method1616(2127300382), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0);
 		}
 	}
 
@@ -84,7 +84,7 @@ public class RenderAnimIndexLoader {
 		Queue queue_1 = Class236.aQueue2914;
 		synchronized (Class236.aQueue2914) {
 			while (true) {
-				Class282_Sub53_Sub1 class282_sub53_sub1_2 = (Class282_Sub53_Sub1) Class236.aQueue2914.poll();
+				MouseRecord_Sub1 class282_sub53_sub1_2 = (MouseRecord_Sub1) Class236.aQueue2914.poll();
 				if (class282_sub53_sub1_2 == null) {
 					return;
 				}

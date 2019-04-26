@@ -44,7 +44,7 @@ public class Particle extends PointEntity {
 
 	void kill() {
 		this.producer.parent.particles[this.aShort10425] = null;
-		Class235.aClass275_Sub1_Sub1_Sub1Array2897[Class235.anInt2905] = this;
+		Class235.aEntityNode_Sub1_Sub1_Sub1Array2897[Class235.anInt2905] = this;
 		Class235.anInt2905 = Class235.anInt2905 + 1 & 0x3ff;
 		this.method4887();
 		this.method12423((byte) -115);
@@ -57,7 +57,7 @@ public class Particle extends PointEntity {
 		if (i_7 <= 0 && i_7 >= -262144 && i_5 >= 0 && i_5 < sceneobjectmanager_1.sizeX && i_6 >= 0 && i_6 < sceneobjectmanager_1.sizeY) {
 			ParticleSystem class539_8 = this.producer.parent;
 			ParticleProducerDefinition class59_9 = this.producer.definition;
-			Ground[] arr_10 = sceneobjectmanager_1.aClass390Array2591;
+			Ground[] arr_10 = sceneobjectmanager_1.aGroundArray2591;
 			int i_11 = class539_8.anInt7122;
 			Class293 class293_12 = sceneobjectmanager_1.aClass293ArrayArrayArray2604[class539_8.anInt7122][i_5][i_6];
 			if (class293_12 != null) {
@@ -131,24 +131,24 @@ public class Particle extends PointEntity {
 					int i_20 = this.x >> 12;
 					i_17 = this.y >> 12;
 					Class200 class200_18;
-					if (class293_12.aClass521_Sub1_Sub5_3505 != null) {
-						class200_18 = class293_12.aClass521_Sub1_Sub5_3505.method12992(graphicalrenderer_2, (byte) -108);
+					if (class293_12.aTransform_Sub1_Sub5_3505 != null) {
+						class200_18 = class293_12.aTransform_Sub1_Sub5_3505.method12992(graphicalrenderer_2, (byte) -108);
 						if (class200_18 != null && class200_18.method3255(i_20, i_7, i_17)) {
 							this.kill();
 							return;
 						}
 					}
 
-					if (class293_12.aClass521_Sub1_Sub5_3502 != null) {
-						class200_18 = class293_12.aClass521_Sub1_Sub5_3502.method12992(graphicalrenderer_2, (byte) -127);
+					if (class293_12.aTransform_Sub1_Sub5_3502 != null) {
+						class200_18 = class293_12.aTransform_Sub1_Sub5_3502.method12992(graphicalrenderer_2, (byte) -127);
 						if (class200_18 != null && class200_18.method3255(i_20, i_7, i_17)) {
 							this.kill();
 							return;
 						}
 					}
 
-					if (class293_12.aClass521_Sub1_Sub3_3499 != null) {
-						class200_18 = class293_12.aClass521_Sub1_Sub3_3499.method12992(graphicalrenderer_2, (byte) -37);
+					if (class293_12.aTransform_Sub1_Sub3_3499 != null) {
+						class200_18 = class293_12.aTransform_Sub1_Sub3_3499.method12992(graphicalrenderer_2, (byte) -37);
 						if (class200_18 != null && class200_18.method3255(i_20, i_7, i_17)) {
 							this.kill();
 							return;
@@ -156,7 +156,7 @@ public class Particle extends PointEntity {
 					}
 
 					for (Class208 class208_21 = class293_12.aClass208_3504; class208_21 != null; class208_21 = class208_21.aClass208_2660) {
-						Class200 class200_19 = class208_21.aClass521_Sub1_Sub1_2659.method12992(graphicalrenderer_2, (byte) -12);
+						Class200 class200_19 = class208_21.aTransform_Sub1_Sub1_2659.method12992(graphicalrenderer_2, (byte) -12);
 						if (class200_19 != null && class200_19.method3255(i_20, i_7, i_17)) {
 							this.kill();
 							return;
@@ -277,7 +277,7 @@ public class Particle extends PointEntity {
 				this.speed = (int) ((long) this.speed - ((long) this.speed * long_20 >> 28));
 			}
 
-			Class282_Sub40 class282_sub40_45;
+			Node_Sub40 class282_sub40_45;
 			Class345 class345_46;
 			if (definition.anIntArray559 != null) {
 				Iterator iterator_44 = system.aList7127.iterator();
@@ -288,7 +288,7 @@ public class Particle extends PointEntity {
 							break label218;
 						}
 
-						class282_sub40_45 = (Class282_Sub40) iterator_44.next();
+						class282_sub40_45 = (Node_Sub40) iterator_44.next();
 						class345_46 = class282_sub40_45.aClass345_8007;
 					} while (class345_46.anInt4041 == 1);
 
@@ -355,7 +355,7 @@ public class Particle extends PointEntity {
 
 			if (definition.anIntArray582 != null) {
 				for (dx = 0; dx < definition.anIntArray582.length; dx++) {
-					class282_sub40_45 = (Class282_Sub40) Class235.aClass465_2904.get((long) definition.anIntArray582[dx]);
+					class282_sub40_45 = (Node_Sub40) Class235.aClass465_2904.get((long) definition.anIntArray582[dx]);
 
 					while (class282_sub40_45 != null) {
 						class345_46 = class282_sub40_45.aClass345_8007;
@@ -364,7 +364,7 @@ public class Particle extends PointEntity {
 						double d_23 = (double) (plane - class282_sub40_45.anInt8008);
 						double d_25 = d_48 * d_48 + d_21 * d_21 + d_23 * d_23;
 						if (d_25 > (double) class345_46.aLong4044) {
-							class282_sub40_45 = (Class282_Sub40) Class235.aClass465_2904.method7747(-1253459750);
+							class282_sub40_45 = (Node_Sub40) Class235.aClass465_2904.method7747(-1253459750);
 						} else {
 							double d_27 = Math.sqrt(d_25);
 							if (d_27 == 0.0D) {
@@ -373,7 +373,7 @@ public class Particle extends PointEntity {
 
 							double d_29 = (d_48 * (double) class282_sub40_45.aFloat8011 + d_21 * (double) class345_46.anInt4036 + d_23 * (double) class282_sub40_45.aFloat8012) * 65535.0D / ((double) class345_46.anInt4033 * d_27);
 							if (d_29 < (double) class345_46.anInt4024) {
-								class282_sub40_45 = (Class282_Sub40) Class235.aClass465_2904.method7747(-1518106530);
+								class282_sub40_45 = (Node_Sub40) Class235.aClass465_2904.method7747(-1518106530);
 							} else {
 								double d_31 = 0.0D;
 								if (class345_46.anInt4038 == 1) {
@@ -409,7 +409,7 @@ public class Particle extends PointEntity {
 									}
 								}
 
-								class282_sub40_45 = (Class282_Sub40) Class235.aClass465_2904.method7747(-1586920665);
+								class282_sub40_45 = (Node_Sub40) Class235.aClass465_2904.method7747(-1586920665);
 							}
 						}
 					}

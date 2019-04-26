@@ -4,11 +4,11 @@ public class Class123 {
 
 	Class476 aClass476_1541;
 
-	MeshRasterizer aClass528_1544;
+	MeshRasterizer aMeshRasterizer_1544;
 
 	boolean[] aBoolArray1553;
 
-	Shadow aClass282_Sub50_Sub17_1551;
+	Shadow aCacheableNode_Sub17_1551;
 
 	ParticleSystem aClass539_1538;
 
@@ -30,7 +30,7 @@ public class Class123 {
 
 	int anInt1542;
 
-	Class521_Sub1 aClass521_Sub1_1539;
+	Transform_Sub1 aTransform_Sub1_1539;
 
 	byte aByte1537;
 
@@ -38,7 +38,7 @@ public class Class123 {
 
 	boolean aBool1550;
 
-	Animation aClass456_1545;
+	Animation aAnimation_1545;
 
 	public void animate(int i_1) {
 		this.aBool1546 = true;
@@ -51,7 +51,7 @@ public class Class123 {
 
 	void method2116(Class476 class476_1, int i_2) {
 		this.aClass476_1541 = class476_1;
-		this.aClass528_1544 = null;
+		this.aMeshRasterizer_1544 = null;
 	}
 
 	boolean method2117(int i_1) {
@@ -59,11 +59,11 @@ public class Class123 {
 	}
 
 	void method2118(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		if (this.aClass282_Sub50_Sub17_1551 != null) {
-			Vector3 vector3_3 = this.aClass521_Sub1_1539.method11166().aClass385_3595;
-			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3427(this.aClass282_Sub50_Sub17_1551, this.aByte1549, (int) vector3_3.x, (int) vector3_3.z, this.aBoolArray1553, (byte) -43);
+		if (this.aCacheableNode_Sub17_1551 != null) {
+			Vector3 vector3_3 = this.aTransform_Sub1_1539.method11166().aClass385_3595;
+			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3427(this.aCacheableNode_Sub17_1551, this.aByte1549, (int) vector3_3.x, (int) vector3_3.z, this.aBoolArray1553, (byte) -43);
 			this.aBoolArray1553 = null;
-			this.aClass282_Sub50_Sub17_1551 = null;
+			this.aCacheableNode_Sub17_1551 = null;
 		}
 	}
 
@@ -110,7 +110,7 @@ public class Class123 {
 				objectdefinitions_8 = null;
 			}
 			if (objectdefinitions_7.method7967((byte) 82)) {
-				if (bool_1 && this.aClass456_1545.hasDefs() && objectdefinitions_7.method7979(this.aClass456_1545.method7597(), -1433895387)) {
+				if (bool_1 && this.aAnimation_1545.hasDefs() && objectdefinitions_7.method7979(this.aAnimation_1545.method7597(), -1433895387)) {
 					return;
 				}
 				if (objectdefinitions_7.id != this.anInt1547) {
@@ -123,7 +123,7 @@ public class Class123 {
 					i_3 = 1;
 				}
 			} else if (objectdefinitions_8 != null && objectdefinitions_8.method7967((byte) 72)) {
-				if (bool_1 && this.aClass456_1545.hasDefs() && objectdefinitions_8.method7979(this.aClass456_1545.method7597(), 512535535)) {
+				if (bool_1 && this.aAnimation_1545.hasDefs() && objectdefinitions_8.method7979(this.aAnimation_1545.method7597(), 512535535)) {
 					return;
 				}
 				if (this.anInt1547 != objectdefinitions_7.id) {
@@ -138,27 +138,27 @@ public class Class123 {
 			}
 		}
 		if (i_5 == -1) {
-			this.aClass456_1545.method7569();
+			this.aAnimation_1545.method7569();
 		} else {
-			this.aClass456_1545.method7571(i_5, 0, i_3, bool_6, -1486563257);
+			this.aAnimation_1545.method7571(i_5, 0, i_3, bool_6, -1486563257);
 			this.anInt1548 = client.cycles;
 			this.aBool1552 = false;
-			this.aClass528_1544 = null;
+			this.aMeshRasterizer_1544 = null;
 		}
 	}
 
-	Class123(GraphicalRenderer graphicalrenderer_1, ObjectIndexLoader objectindexloader_2, ObjectDefinitions objectdefinitions_3, int i_4, int i_5, int i_6, int i_7, Class521_Sub1 class521_sub1_8, boolean bool_9, int i_10) {
+	Class123(GraphicalRenderer graphicalrenderer_1, ObjectIndexLoader objectindexloader_2, ObjectDefinitions objectdefinitions_3, int i_4, int i_5, int i_6, int i_7, Transform_Sub1 class521_sub1_8, boolean bool_9, int i_10) {
 		this.aClass474_1536 = objectindexloader_2;
 		this.anInt1540 = objectdefinitions_3.id;
 		this.anInt1555 = i_4;
 		this.anInt1542 = i_5;
-		this.aClass521_Sub1_1539 = class521_sub1_8;
+		this.aTransform_Sub1_1539 = class521_sub1_8;
 		this.aBool1546 = i_10 != -1;
 		this.aByte1537 = (byte) i_6;
 		this.aByte1549 = (byte) i_7;
 		this.aBool1543 = bool_9;
 		this.aBool1550 = graphicalrenderer_1.method8402() && objectdefinitions_3.aBool5703 && !this.aBool1543;
-		this.aClass456_1545 = new Class456_Sub2(class521_sub1_8);
+		this.aAnimation_1545 = new Animation_Sub2(class521_sub1_8);
 		this.method2124(false, i_10, 1);
 	}
 
@@ -175,73 +175,73 @@ public class Class123 {
 			if (!this.aBool1546 && this.anInt1547 != objectdefinitions_6.id) {
 				this.method2124(true, -1, 0);
 				this.aBool1552 = false;
-				this.aClass528_1544 = null;
+				this.aMeshRasterizer_1544 = null;
 			}
-			this.method2133(this.aClass521_Sub1_1539);
+			this.method2133(this.aTransform_Sub1_1539);
 			if (bool_4) {
-				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.preferences.aClass468_Sub2_8205.method12624((byte) -25) != 0;
+				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.preferences.aPreference_Sub2_8205.method12624((byte) -25) != 0;
 			}
 			if (bool_3 && !bool_4) {
 				this.anInt1547 = objectdefinitions_6.id;
 				return null;
 			} else {
-				Vector3 vector3_7 = this.aClass521_Sub1_1539.method11166().aClass385_3595;
+				Vector3 vector3_7 = this.aTransform_Sub1_1539.method11166().aClass385_3595;
 				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 				if (bool_4) {
-					sceneobjectmanager_8.method3427(this.aClass282_Sub50_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, this.aBoolArray1553, (byte) -45);
+					sceneobjectmanager_8.method3427(this.aCacheableNode_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, this.aBoolArray1553, (byte) -45);
 					this.aBool1552 = false;
 				}
-				Ground class390_9 = sceneobjectmanager_8.aClass390Array2591[this.aByte1549];
+				Ground class390_9 = sceneobjectmanager_8.aGroundArray2591[this.aByte1549];
 				Ground class390_10;
 				if (this.aBool1543) {
-					class390_10 = sceneobjectmanager_8.aClass390Array2607[0];
+					class390_10 = sceneobjectmanager_8.aGroundArray2607[0];
 				} else {
-					class390_10 = this.aByte1549 < 3 ? sceneobjectmanager_8.aClass390Array2591[this.aByte1549 + 1] : null;
+					class390_10 = this.aByte1549 < 3 ? sceneobjectmanager_8.aGroundArray2591[this.aByte1549 + 1] : null;
 				}
 				MeshRasterizer meshrasterizer_11 = null;
-				if (this.aClass456_1545.hasDefs()) {
+				if (this.aAnimation_1545.hasDefs()) {
 					if (bool_4) {
 						i_2 |= 0x40000;
 					}
-					meshrasterizer_11 = objectdefinitions_6.method8012(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2124588555), (int) vector3_7.z, this.aClass456_1545, this.aClass476_1541);
+					meshrasterizer_11 = objectdefinitions_6.method8012(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2124588555), (int) vector3_7.z, this.aAnimation_1545, this.aClass476_1541);
 					if (meshrasterizer_11 != null) {
 						if (bool_4) {
 							if (this.aBoolArray1553 == null) {
 								this.aBoolArray1553 = new boolean[4];
 							}
-							this.aClass282_Sub50_Sub17_1551 = meshrasterizer_11.ga(this.aClass282_Sub50_Sub17_1551);
-							sceneobjectmanager_8.method3426(this.aClass282_Sub50_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, this.aBoolArray1553, (byte) -96);
+							this.aCacheableNode_Sub17_1551 = meshrasterizer_11.ga(this.aCacheableNode_Sub17_1551);
+							sceneobjectmanager_8.method3426(this.aCacheableNode_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, this.aBoolArray1553, (byte) -96);
 							this.aBool1552 = true;
 						}
 						this.anInt1554 = meshrasterizer_11.YA();
 						meshrasterizer_11.n();
 					} else {
 						this.aBoolArray1553 = null;
-						this.aClass282_Sub50_Sub17_1551 = null;
+						this.aCacheableNode_Sub17_1551 = null;
 						this.anInt1554 = 0;
 					}
-					this.aClass528_1544 = null;
-				} else if (this.aClass528_1544 != null && (this.aClass528_1544.m() & i_2) == i_2 && this.anInt1547 == objectdefinitions_6.id) {
-					meshrasterizer_11 = this.aClass528_1544;
+					this.aMeshRasterizer_1544 = null;
+				} else if (this.aMeshRasterizer_1544 != null && (this.aMeshRasterizer_1544.m() & i_2) == i_2 && this.anInt1547 == objectdefinitions_6.id) {
+					meshrasterizer_11 = this.aMeshRasterizer_1544;
 				} else {
-					if (this.aClass528_1544 != null) {
-						i_2 |= this.aClass528_1544.m();
+					if (this.aMeshRasterizer_1544 != null) {
+						i_2 |= this.aMeshRasterizer_1544.m();
 					}
 					Class452 class452_12 = objectdefinitions_6.method8010(graphicalrenderer_1, i_2, this.anInt1555 != 11 ? this.anInt1555 : 10, this.anInt1555 == 11 ? 4 + this.anInt1542 : this.anInt1542, class390_9, class390_10, (int) vector3_7.x, class390_9.averageHeight((int) vector3_7.x, (int) vector3_7.z, -2029689654), (int) vector3_7.z, bool_4, this.aClass476_1541, 1886483873);
 					if (class452_12 != null) {
-						this.aClass528_1544 = meshrasterizer_11 = (MeshRasterizer) class452_12.anObject5443;
+						this.aMeshRasterizer_1544 = meshrasterizer_11 = (MeshRasterizer) class452_12.anObject5443;
 						if (bool_4) {
-							this.aClass282_Sub50_Sub17_1551 = (Shadow) class452_12.anObject5444;
+							this.aCacheableNode_Sub17_1551 = (Shadow) class452_12.anObject5444;
 							this.aBoolArray1553 = null;
-							sceneobjectmanager_8.method3426(this.aClass282_Sub50_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, (boolean[]) null, (byte) -31);
+							sceneobjectmanager_8.method3426(this.aCacheableNode_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, (boolean[]) null, (byte) -31);
 							this.aBool1552 = true;
 						}
 						this.anInt1554 = meshrasterizer_11.YA();
 						meshrasterizer_11.n();
 					} else {
 						this.aBoolArray1553 = null;
-						this.aClass282_Sub50_Sub17_1551 = null;
-						this.aClass528_1544 = null;
+						this.aCacheableNode_Sub17_1551 = null;
+						this.aMeshRasterizer_1544 = null;
 						this.anInt1554 = 0;
 					}
 				}
@@ -251,14 +251,14 @@ public class Class123 {
 		}
 	}
 
-	void method2133(Class521_Sub1 class521_sub1_1) {
-		if (this.aClass456_1545.hasDefs()) {
-			if (this.aClass456_1545.method7627(client.cycles - this.anInt1548, -1604815652)) {
-				if (Class393.preferences.aClass468_Sub2_8205.method12624((byte) -127) == 2) {
+	void method2133(Transform_Sub1 class521_sub1_1) {
+		if (this.aAnimation_1545.hasDefs()) {
+			if (this.aAnimation_1545.method7627(client.cycles - this.anInt1548, -1604815652)) {
+				if (Class393.preferences.aPreference_Sub2_8205.method12624((byte) -127) == 2) {
 					this.aBool1552 = false;
 				}
-				if (this.aClass456_1545.method7580(487845582)) {
-					this.aClass456_1545.update(-1);
+				if (this.aAnimation_1545.method7580(487845582)) {
+					this.aAnimation_1545.update(-1);
 					this.aBool1546 = false;
 					this.method2124(false, -1, 0);
 				}
@@ -288,7 +288,7 @@ public class Class123 {
 	}
 
 	public static void method2152(int i_0, int i_1) {
-		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.get((long) i_0);
+		Node_Sub37 class282_sub37_2 = (Node_Sub37) Class492.aClass465_5774.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.aBool7995 = !class282_sub37_2.aBool7995;
 			class282_sub37_2.aClass278_Sub1_8001.method4924(class282_sub37_2.aBool7995);

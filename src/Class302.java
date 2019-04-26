@@ -27,7 +27,7 @@ public class Class302 {
 
 	static void handleMovementAnimations(Animable animable, int moveType, int i_2, int i_3, int i_4) {
 		RenderAnimDefs renderAnim = animable.getRenderAnimDefs();
-		MovingAnimation animation = animable.aClass456_Sub3_10337;
+		MovingAnimation animation = animable.aAnimation_Sub3_10337;
 		int turnDirection = animable.turnDirection - animable.aClass19_10359.turnDirection & 0x3fff;
 		if (moveType == MovementType.TELEPORT.id) {
 			if (turnDirection == 0 && animable.turningTicks <= 25) {
@@ -43,7 +43,7 @@ public class Class302 {
 				animation.aBool7891 = false;
 			} else if (!animation.aBool7891 || !renderAnim.method3810(animation.method7597())) {
 				animation.animate(renderAnim.getStandAnimation());
-				animation.aBool7891 = animable.aClass456_Sub3_10337.hasDefs();
+				animation.aBool7891 = animable.aAnimation_Sub3_10337.hasDefs();
 			}
 		} else if (animable.faceEntity == -1 || turnDirection < 10240 && turnDirection > 2048) {
 			if (turnDirection == 0 && animable.turningTicks <= 25) {
@@ -121,6 +121,6 @@ public class Class302 {
 	}
 
 	public static int method5364(int i_0, int i_1, float f_2) {
-		return Class8_Sub3.method14337(i_0, i_1, (int) f_2);
+		return FontRenderer_Sub3.method14337(i_0, i_1, (int) f_2);
 	}
 }

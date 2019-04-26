@@ -21,7 +21,7 @@ public abstract class Class504 {
                 if (i_2 < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433().tileMasks[1][i_4][i_5] & 0x2) != 0) {
                     i_6 = i_2 + 1;
                 }
-                return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass390Array2591[i_6].averageHeight(i_0, i_1, 1879647652);
+                return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_6].averageHeight(i_0, i_1, 1879647652);
             } else {
                 return 0;
             }

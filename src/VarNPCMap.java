@@ -61,8 +61,8 @@ public final class VarNPCMap {
 	}
 
 	public static Class268 method2618(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
-		if (Class393.preferences.aClass468_Sub13_8225.method12714() != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
-			Class268 class268_6 = new Class268((byte) 1, i_0, i_1, i_2, i_3, 0, i_4, (Class521_Sub1) null);
+		if (Class393.preferences.aPreference_Sub13_8225.method12714() != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+			Class268 class268_6 = new Class268((byte) 1, i_0, i_1, i_2, i_3, 0, i_4, (Transform_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_6;
 			return class268_6;
 		} else {
@@ -78,7 +78,7 @@ public final class VarNPCMap {
 		return ObjectDefinitions.method8023(file_0, (int) file_0.length());
 	}
 
-	static Class208 method2622(Class521_Sub1_Sub1 class521_sub1_sub1_0) {
+	static Class208 method2622(Transform_Sub1_Sub1 class521_sub1_sub1_0) {
 		Class208 class208_2;
 		if (Class507.aClass208_5860 == null) {
 			class208_2 = new Class208();
@@ -88,7 +88,7 @@ public final class VarNPCMap {
 			class208_2.aClass208_2660 = null;
 			--Class208.anInt2661;
 		}
-		class208_2.aClass521_Sub1_Sub1_2659 = class521_sub1_sub1_0;
+		class208_2.aTransform_Sub1_Sub1_2659 = class521_sub1_sub1_0;
 		return class208_2;
 	}
 }

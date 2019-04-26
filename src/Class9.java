@@ -27,7 +27,7 @@ public class Class9 {
 		throw new Error();
 	}
 
-	public static String method450(Class282_Sub50_Sub7 class282_sub50_sub7_0) {
+	public static String method450(CacheableNode_Sub7 class282_sub50_sub7_0) {
 		if (!Class20.aBool161 && class282_sub50_sub7_0 != null) {
 			int[] ints_2 = Class534_Sub1.method12815(class282_sub50_sub7_0, -1654060513);
 			return ints_2 == null ? "" : Class15.method547(ints_2, 1877842979);

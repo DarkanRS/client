@@ -193,7 +193,7 @@ public class IncomingPacket {
 	}
 
 	public static Game method6376(int i_0) {
-		Game[] arr_2 = Class282_Sub15_Sub1.method14817();
+		Game[] arr_2 = Node_Sub15_Sub1.method14817();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			Game game_4 = arr_2[i_3];
 			if (i_0 == game_4.id) {
@@ -214,7 +214,7 @@ public class IncomingPacket {
 	}
 
 	public static void method6379(Player player_0) {
-		Class282_Sub48 class282_sub48_2 = (Class282_Sub48) Class282_Sub48.aClass465_8075.get((long) player_0.index);
+		Node_Sub48 class282_sub48_2 = (Node_Sub48) Node_Sub48.aClass465_8075.get((long) player_0.index);
 		if (class282_sub48_2 == null) {
 			Class397.method6775(player_0.plane, player_0.regionBaseX[0], player_0.regionBaseY[0], 0, (ObjectDefinitions) null, (NPC) null, player_0, 77262483);
 		} else {
@@ -222,7 +222,7 @@ public class IncomingPacket {
 		}
 	}
 
-	static String method6380(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1) {
+	static String method6380(CacheableNode_Sub7 class282_sub50_sub7_0, int i_1) {
 		return class282_sub50_sub7_0.aString9585 != null && class282_sub50_sub7_0.aString9585.length() != 0 ? (class282_sub50_sub7_0.aString9588 != null && class282_sub50_sub7_0.aString9588.length() > 0 ? class282_sub50_sub7_0.aString9576 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -1322354341) + class282_sub50_sub7_0.aString9588 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -1270840835) + class282_sub50_sub7_0.aString9585 : class282_sub50_sub7_0.aString9576 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -394104656) + class282_sub50_sub7_0.aString9585) : (class282_sub50_sub7_0.aString9588 != null && class282_sub50_sub7_0.aString9588.length() > 0 ? class282_sub50_sub7_0.aString9576 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -1844703581) + class282_sub50_sub7_0.aString9588 : class282_sub50_sub7_0.aString9576);
 	}
 }

@@ -3,7 +3,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 	static int[] anIntArray10082 = new int[6];
 	static int[][] anIntArrayArray10076 = new int[6][];
 	Class137_Sub2 aClass137_Sub2_10077;
-	OpenGLGraphicalRenderer aClass505_Sub1_10079;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_10079;
 	int anInt10080;
 	int anInt10085;
 	int anInt10078;
@@ -13,7 +13,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 
 	Class137_Sub2 method13519() {
 		if (this.aClass137_Sub2_10077 == null) {
-			Interface22 interface22_1 = this.aClass505_Sub1_10079.anInterface22_5834;
+			Interface22 interface22_1 = this.aGraphicalRenderer_Sub1_10079.anInterface22_5834;
 			anIntArray10082[0] = this.anInt10081;
 			anIntArray10082[1] = this.anInt10084;
 			anIntArray10082[2] = this.anInt10080;
@@ -44,14 +44,14 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 				anIntArrayArray10076[i_4] = interface22_1.method140(anIntArray10082[i_4], 1.0F, i_3, i_3, false, (byte) 70);
 			}
 
-			this.aClass137_Sub2_10077 = new Class137_Sub2(this.aClass505_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
+			this.aClass137_Sub2_10077 = new Class137_Sub2(this.aGraphicalRenderer_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
 		}
 
 		return this.aClass137_Sub2_10077;
 	}
 
 	Class152_Sub1_Sub1(OpenGLGraphicalRenderer class505_sub1_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
-		this.aClass505_Sub1_10079 = class505_sub1_1;
+		this.aGraphicalRenderer_Sub1_10079 = class505_sub1_1;
 		this.anInt10080 = i_4;
 		this.anInt10085 = i_5;
 		this.anInt10078 = i_6;
@@ -62,7 +62,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 
 	Class137_Sub2 method13520() {
 		if (this.aClass137_Sub2_10077 == null) {
-			Interface22 interface22_1 = this.aClass505_Sub1_10079.anInterface22_5834;
+			Interface22 interface22_1 = this.aGraphicalRenderer_Sub1_10079.anInterface22_5834;
 			anIntArray10082[0] = this.anInt10081;
 			anIntArray10082[1] = this.anInt10084;
 			anIntArray10082[2] = this.anInt10080;
@@ -93,7 +93,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 				anIntArrayArray10076[i_4] = interface22_1.method140(anIntArray10082[i_4], 1.0F, i_3, i_3, false, (byte) 74);
 			}
 
-			this.aClass137_Sub2_10077 = new Class137_Sub2(this.aClass505_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
+			this.aClass137_Sub2_10077 = new Class137_Sub2(this.aGraphicalRenderer_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
 		}
 
 		return this.aClass137_Sub2_10077;
@@ -101,7 +101,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 
 	Class137_Sub2 method13521() {
 		if (this.aClass137_Sub2_10077 == null) {
-			Interface22 interface22_1 = this.aClass505_Sub1_10079.anInterface22_5834;
+			Interface22 interface22_1 = this.aGraphicalRenderer_Sub1_10079.anInterface22_5834;
 			anIntArray10082[0] = this.anInt10081;
 			anIntArray10082[1] = this.anInt10084;
 			anIntArray10082[2] = this.anInt10080;
@@ -132,7 +132,7 @@ public class Class152_Sub1_Sub1 extends Class152_Sub1 {
 				anIntArrayArray10076[i_4] = interface22_1.method140(anIntArray10082[i_4], 1.0F, i_3, i_3, false, (byte) 70);
 			}
 
-			this.aClass137_Sub2_10077 = new Class137_Sub2(this.aClass505_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
+			this.aClass137_Sub2_10077 = new Class137_Sub2(this.aGraphicalRenderer_Sub1_10079, Class150.aClass150_1950, Class76.aClass76_751, i_3, bool_2, anIntArrayArray10076);
 		}
 
 		return this.aClass137_Sub2_10077;

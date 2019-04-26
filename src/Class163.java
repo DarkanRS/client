@@ -32,9 +32,9 @@ public class Class163 {
 		return this.anInt2030;
 	}
 
-	static int method2840(Class282_Sub50_Sub15 class282_sub50_sub15_0, FontMetrics fontmetrics_1) {
+	static int method2840(CacheableNode_Sub15 class282_sub50_sub15_0, FontMetrics fontmetrics_1) {
 		String string_3 = CutsceneEntity.method1354(class282_sub50_sub15_0);
-		return fontmetrics_1.getWidth(string_3, Class115.aClass160Array1248);
+		return fontmetrics_1.getWidth(string_3, Class115.aNativeSpriteArray1248);
 	}
 
 	public static TilestreamPacket[] method2842() {
@@ -57,11 +57,11 @@ public class Class163 {
 		int i_6 = client.anInt7294;
 		NativeSprite nativesprite_7;
 		if (client.anInt7296 == 1) {
-			nativesprite_7 = Class282_Sub36.aClass160Array7994[client.anInt7295 / 100];
+			nativesprite_7 = Node_Sub36.aNativeSpriteArray7994[client.anInt7295 / 100];
 			nativesprite_7.method2752(i_5 - 8, i_6 - 8);
 		}
 		if (client.anInt7296 == 2) {
-			nativesprite_7 = Class282_Sub36.aClass160Array7994[client.anInt7295 / 100 + 4];
+			nativesprite_7 = Node_Sub36.aNativeSpriteArray7994[client.anInt7295 / 100 + 4];
 			nativesprite_7.method2752(i_5 - 8, i_6 - 8);
 		}
 	}

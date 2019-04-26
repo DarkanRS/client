@@ -6,7 +6,7 @@ public class Class43 implements Interface2 {
 
 	Class351 aClass351_418;
 
-	NativeSprite aClass160_417;
+	NativeSprite aNativeSprite_417;
 
 	public boolean method21() {
 		return this.aClass317_419.loadFile(this.aClass351_418.anInt4095 * -1867361899 * -985960003);
@@ -18,7 +18,7 @@ public class Class43 implements Interface2 {
 	}
 
 	public void method22() {
-		this.aClass160_417 = Class152.method2600(this.aClass317_419, this.aClass351_418.anInt4095, 104726423);
+		this.aNativeSprite_417 = Class152.method2600(this.aClass317_419, this.aClass351_418.anInt4095, 104726423);
 	}
 
 	public boolean method10(int i_1) {
@@ -29,8 +29,8 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_2 = Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423 > 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005 ? -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639 : client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619;
 			int i_3 = -969250379 * Engine.anInt3243 * -969250379 * -1929118563 > 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313 ? Engine.anInt3243 * -969250379 * -1929118563 * -969250379 : client.GAME_HEIGHT * -994133479 * 553 * -645779313 * 1176039023;
-			int i_4 = this.aClass160_417.method228();
-			int i_5 = this.aClass160_417.method2748();
+			int i_4 = this.aNativeSprite_417.method228();
+			int i_5 = this.aNativeSprite_417.method2748();
 			int i_6 = 0;
 			int i_7 = i_2;
 			int i_8 = i_2 * i_5 / i_4;
@@ -41,7 +41,7 @@ public class Class43 implements Interface2 {
 				i_7 = i_3 * i_4 / i_5;
 				i_6 = (i_2 - i_7) / 2;
 			}
-			this.aClass160_417.method2789(i_6, i_9, i_7, i_8);
+			this.aNativeSprite_417.method2789(i_6, i_9, i_7, i_8);
 		}
 	}
 
@@ -49,8 +49,8 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_2 = Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423 > 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005 ? -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639 : client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619;
 			int i_3 = -969250379 * Engine.anInt3243 * -969250379 * -1929118563 > 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313 ? Engine.anInt3243 * -969250379 * -1929118563 * -969250379 : client.GAME_HEIGHT * -994133479 * 553 * -645779313 * 1176039023;
-			int i_4 = this.aClass160_417.method228();
-			int i_5 = this.aClass160_417.method2748();
+			int i_4 = this.aNativeSprite_417.method228();
+			int i_5 = this.aNativeSprite_417.method2748();
 			int i_6 = 0;
 			int i_7 = i_2;
 			int i_8 = i_2 * i_5 / i_4;
@@ -61,7 +61,7 @@ public class Class43 implements Interface2 {
 				i_7 = i_3 * i_4 / i_5;
 				i_6 = (i_2 - i_7) / 2;
 			}
-			this.aClass160_417.method2789(i_6, i_9, i_7, i_8);
+			this.aNativeSprite_417.method2789(i_6, i_9, i_7, i_8);
 		}
 	}
 
@@ -69,8 +69,8 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_2 = Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423 > 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005 ? -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639 : client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619;
 			int i_3 = -969250379 * Engine.anInt3243 * -969250379 * -1929118563 > 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313 ? Engine.anInt3243 * -969250379 * -1929118563 * -969250379 : client.GAME_HEIGHT * -994133479 * 553 * -645779313 * 1176039023;
-			int i_4 = this.aClass160_417.method228();
-			int i_5 = this.aClass160_417.method2748();
+			int i_4 = this.aNativeSprite_417.method228();
+			int i_5 = this.aNativeSprite_417.method2748();
 			int i_6 = 0;
 			int i_7 = i_2;
 			int i_8 = i_2 * i_5 / i_4;
@@ -81,32 +81,32 @@ public class Class43 implements Interface2 {
 				i_7 = i_3 * i_4 / i_5;
 				i_6 = (i_2 - i_7) / 2;
 			}
-			this.aClass160_417.method2789(i_6, i_9, i_7, i_8);
+			this.aNativeSprite_417.method2789(i_6, i_9, i_7, i_8);
 		}
 	}
 
 	public void method15() {
-		this.aClass160_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, 1052813230);
+		this.aNativeSprite_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, 1052813230);
 	}
 
 	public void method16() {
-		this.aClass160_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, -80699226);
+		this.aNativeSprite_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, -80699226);
 	}
 
 	public void method23() {
-		this.aClass160_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, 1204539186);
+		this.aNativeSprite_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, 1204539186);
 	}
 
 	public void method19() {
-		this.aClass160_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, -1132507134);
+		this.aNativeSprite_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, -1132507134);
 	}
 
 	public void method20(boolean bool_1, int i_2) {
 		if (bool_1) {
 			int i_3 = Class349.anInt4083 > client.GAME_WIDTH ? Class349.anInt4083 : client.GAME_WIDTH;
 			int i_4 = Engine.anInt3243 * -969250379 > client.GAME_HEIGHT ? Engine.anInt3243 * -969250379 : client.GAME_HEIGHT;
-			int i_5 = this.aClass160_417.method228();
-			int i_6 = this.aClass160_417.method2748();
+			int i_5 = this.aNativeSprite_417.method228();
+			int i_6 = this.aNativeSprite_417.method2748();
 			int i_7 = 0;
 			int i_8 = i_3;
 			int i_9 = i_3 * i_6 / i_5;
@@ -117,7 +117,7 @@ public class Class43 implements Interface2 {
 				i_8 = i_4 * i_5 / i_6;
 				i_7 = (i_3 - i_8) / 2;
 			}
-			this.aClass160_417.method2789(i_7, i_10, i_8, i_9);
+			this.aNativeSprite_417.method2789(i_7, i_10, i_8, i_9);
 		}
 	}
 
@@ -130,7 +130,7 @@ public class Class43 implements Interface2 {
 	}
 
 	public void method18() {
-		this.aClass160_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, 1158327615);
+		this.aNativeSprite_417 = Class152.method2600(this.aClass317_419, -985960003 * this.aClass351_418.anInt4095 * -1867361899, 1158327615);
 	}
 
 	public boolean method17() {

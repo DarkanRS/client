@@ -21,14 +21,14 @@ public final class Class47_Sub1 extends Class47 {
     }
 
     boolean method14475() throws Exception_Sub2 {
-        this.aClass101_9124 = this.aClass505_Sub2_439.method13890("Sprite");
-        Class282_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9124.method1691("WVPMatrix", (short) 15174);
-        Class282_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9124.method1691("SpriteSampler", (short) 14030);
-        Class282_Sub21_Sub1 class282_sub21_sub1_4 = this.aClass101_9124.method1691("MaskSampler", (short) 25732);
-        Class282_Sub21_Sub1 class282_sub21_sub1_5 = this.aClass101_9124.method1691("MulColour", (short) 14326);
-        Class282_Sub21_Sub1 class282_sub21_sub1_6 = this.aClass101_9124.method1691("AddColour", (short) 25922);
-        Class282_Sub21_Sub1 class282_sub21_sub1_7 = this.aClass101_9124.method1691("SpriteTexCoordMatrix", (short) 30502);
-        Class282_Sub21_Sub1 class282_sub21_sub1_8 = this.aClass101_9124.method1691("MaskTexCoordMatrix", (short) 12246);
+        this.aClass101_9124 = this.aGraphicalRenderer_Sub2_439.method13890("Sprite");
+        Node_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9124.method1691("WVPMatrix", (short) 15174);
+        Node_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9124.method1691("SpriteSampler", (short) 14030);
+        Node_Sub21_Sub1 class282_sub21_sub1_4 = this.aClass101_9124.method1691("MaskSampler", (short) 25732);
+        Node_Sub21_Sub1 class282_sub21_sub1_5 = this.aClass101_9124.method1691("MulColour", (short) 14326);
+        Node_Sub21_Sub1 class282_sub21_sub1_6 = this.aClass101_9124.method1691("AddColour", (short) 25922);
+        Node_Sub21_Sub1 class282_sub21_sub1_7 = this.aClass101_9124.method1691("SpriteTexCoordMatrix", (short) 30502);
+        Node_Sub21_Sub1 class282_sub21_sub1_8 = this.aClass101_9124.method1691("MaskTexCoordMatrix", (short) 12246);
         this.aClass115Array9137[0] = this.aClass101_9124.method1651("Normal", 1509292021);
         this.aClass115Array9137[1] = this.aClass101_9124.method1651("Masked", 1673746004);
         this.aClass115Array9137[2] = this.aClass101_9124.method1651("AlphaTex", -295690352);
@@ -80,14 +80,14 @@ public final class Class47_Sub1 extends Class47 {
     void method14476(byte b_1) {
         this.aClass101_9124.method1646();
         this.aClass101_9124.method1677(this.anIntArray9139[1], 0, this.anInterface6_443, 243138244);
-        this.aClass505_Sub2_439.method13933(this.aClass384_442);
+        this.aGraphicalRenderer_Sub2_439.method13933(this.aClass384_442);
         this.aClass101_9124.method1676(this.anIntArray9139[0], this.aClass384_442, -376306243);
         this.aClass101_9124.method1675(this.anIntArray9139[3], this.aClass384_440, (byte) 14);
         this.aClass101_9124.method1749(this.anIntArray9139[5], this.aClass303_9140.x, this.aClass303_9140.y, this.aClass303_9140.z, this.aClass303_9140.w, (byte) 38);
         this.aClass101_9124.method1749(this.anIntArray9139[6], this.aClass303_9141.x, this.aClass303_9141.y, this.aClass303_9141.z, this.aClass303_9141.w, (byte) 44);
-        this.aClass505_Sub2_439.method14161(0, this.anInterface4_445);
-        this.aClass505_Sub2_439.method13996(this.aClass70_447);
-        this.aClass505_Sub2_439.method13923(Class352.aClass352_4104, this.anInt446, 2);
+        this.aGraphicalRenderer_Sub2_439.method14161(0, this.anInterface4_445);
+        this.aGraphicalRenderer_Sub2_439.method13996(this.aClass70_447);
+        this.aGraphicalRenderer_Sub2_439.method13923(Class352.aClass352_4104, this.anInt446, 2);
     }
 
     public void method938() {
@@ -148,7 +148,7 @@ public final class Class47_Sub1 extends Class47 {
         }
     }
 
-    public Class47_Sub1(Class505_Sub2 class505_sub2_1) throws Exception_Sub2 {
+    public Class47_Sub1(GraphicalRenderer_Sub2 class505_sub2_1) throws Exception_Sub2 {
         super(class505_sub2_1);
         this.method14475();
     }

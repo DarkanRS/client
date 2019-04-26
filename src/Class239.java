@@ -20,7 +20,7 @@ public class Class239 {
 
 	SoftCache aClass229_2954 = new SoftCache(9);
 
-	GraphicalRenderer aClass505_2944;
+	GraphicalRenderer aGraphicalRenderer_2944;
 
 	Class535[][] aClass535ArrayArray2943;
 
@@ -35,7 +35,7 @@ public class Class239 {
 	Class535 aClass535_2931;
 
 	public void method4037(MapRegion mapregion_1, byte b_2) {
-		if (!Class97.loggedOutState(client.gameState) && !Class282_Sub17.lobbyState(client.gameState, -1116602507)) {
+		if (!Class97.loggedOutState(client.gameState) && !Node_Sub17.lobbyState(client.gameState, -1116602507)) {
 			int i_3 = -1;
 			int i_4 = -1;
 			if (VertexNormal.myPlayer != null) {
@@ -95,9 +95,9 @@ public class Class239 {
 	}
 
 	void method4049(byte b_1) {
-		this.aClass505_2944.IA((0.7F + (float) Class393.preferences.aClass468_Sub21_8222.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * this.aClass535_2951.aFloat7081);
-		this.aClass505_2944.m(this.aClass535_2951.anInt7083, this.aClass535_2951.aFloat7082, this.aClass535_2951.aFloat7090, (float) ((int) this.aClass385_2952.x << 2), (float) ((int) this.aClass385_2952.y << 2), (float) ((int) this.aClass385_2952.z << 2));
-		this.aClass505_2944.method8477(this.aClass535_2951.aClass152_7087);
+		this.aGraphicalRenderer_2944.IA((0.7F + (float) Class393.preferences.aPreference_Sub21_8222.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * this.aClass535_2951.aFloat7081);
+		this.aGraphicalRenderer_2944.m(this.aClass535_2951.anInt7083, this.aClass535_2951.aFloat7082, this.aClass535_2951.aFloat7090, (float) ((int) this.aClass385_2952.x << 2), (float) ((int) this.aClass385_2952.y << 2), (float) ((int) this.aClass385_2952.z << 2));
+		this.aGraphicalRenderer_2944.method8477(this.aClass535_2951.aClass152_7087);
 	}
 
 	Class247 method4050(int i_1, int i_2, int i_3, int i_4) {
@@ -111,14 +111,14 @@ public class Class239 {
 	}
 
 	void method4051() {
-		this.aClass505_2944.method8472(this.aClass535_2951.aFloat7080, this.aClass535_2951.aFloat7088, this.aClass535_2951.aFloat7089);
+		this.aGraphicalRenderer_2944.method8472(this.aClass535_2951.aFloat7080, this.aClass535_2951.aFloat7088, this.aClass535_2951.aFloat7089);
 	}
 
 	public void method4052() {
-		this.aClass505_2944.IA((0.7F + (float) Class393.preferences.aClass468_Sub21_8222.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1614008770)) * 1.1523438F);
-		this.aClass505_2944.m(anInt2935, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
-		this.aClass505_2944.c(anInt2932, -1, 0);
-		this.aClass505_2944.method8477(Class81.aClass152_802);
+		this.aGraphicalRenderer_2944.IA((0.7F + (float) Class393.preferences.aPreference_Sub21_8222.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1614008770)) * 1.1523438F);
+		this.aGraphicalRenderer_2944.m(anInt2935, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
+		this.aGraphicalRenderer_2944.c(anInt2932, -1, 0);
+		this.aGraphicalRenderer_2944.method8477(Class81.aClass152_802);
 	}
 
 	public void method4056(int i_1, int i_2, Class535 class535_3, byte b_4) {
@@ -131,7 +131,7 @@ public class Class239 {
 		if (class152_10 != null) {
 			return class152_10;
 		} else {
-			class152_10 = this.aClass505_2944.method8466(i_1, i_2, i_3, i_4, i_5, i_6);
+			class152_10 = this.aGraphicalRenderer_2944.method8466(i_1, i_2, i_3, i_4, i_5, i_6);
 			this.aClass229_2953.put(class152_10, long_8);
 			return class152_10;
 		}
@@ -142,7 +142,7 @@ public class Class239 {
 			long long_2 = TextureDetails.time();
 			this.anInt2945 = (int) ((long) (this.anInt2945 * 824774497) - (long_2 - this.aLong2936) * 824774497L) * 1863439521;
 			if (this.anInt2945 > 0) {
-				this.aClass535_2951.method11445(this.aClass505_2944, this.aClass535_2937, this.aClass535_2931, (float) (this.anInt2946 - this.anInt2945) / (float) this.anInt2946);
+				this.aClass535_2951.method11445(this.aGraphicalRenderer_2944, this.aClass535_2937, this.aClass535_2931, (float) (this.anInt2946 - this.anInt2945) / (float) this.anInt2946);
 			} else {
 				this.aClass535_2951.method11444(this.aClass535_2931);
 				if (this.aClass535_2951.aClass247_7091 != null) {
@@ -184,11 +184,11 @@ public class Class239 {
 	public void method4075(int i_1) {
 		byte b_2 = 0;
 		int i_3 = (this.aClass535_2951.anInt7086 + 256 << 2) + b_2;
-		this.aClass505_2944.c(this.aClass535_2951.anInt7085, Class393.preferences.fog.method13417(-2079793648) == 1 ? i_3 : -1, 0);
+		this.aGraphicalRenderer_2944.c(this.aClass535_2951.anInt7085, Class393.preferences.fog.method13417(-2079793648) == 1 ? i_3 : -1, 0);
 	}
 
 	public Class239(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		this.aClass505_2944 = graphicalrenderer_1;
+		this.aGraphicalRenderer_2944 = graphicalrenderer_1;
 		this.aClass535ArrayArray2943 = new Class535[i_2][i_3];
 		if (HitsplatIndexLoader.anIntArray2668 != null) {
 			Class81.aClass152_802 = this.method4064(HitsplatIndexLoader.anIntArray2668[0], HitsplatIndexLoader.anIntArray2668[1], HitsplatIndexLoader.anIntArray2668[2], HitsplatIndexLoader.anIntArray2668[3], HitsplatIndexLoader.anIntArray2668[4], HitsplatIndexLoader.anIntArray2668[5], 106789318);

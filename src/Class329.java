@@ -161,9 +161,9 @@ public class Class329 {
 				}
 			}
 			if (this.aBool3820) {
-				this.method5846(graphicalrenderer_1, this.sceneObjectManager.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
+				this.method5846(graphicalrenderer_1, this.sceneObjectManager.aGroundArray2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
 			} else {
-				this.method5845(graphicalrenderer_1, this.sceneObjectManager.aClass390Array2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
+				this.method5845(graphicalrenderer_1, this.sceneObjectManager.aGroundArray2591[i_6], i_6, ints_5, i_6 == 0 ? class390_2 : null, i_6 == 0 ? class390_3 : null);
 			}
 			this.underlayIds[i_6] = null;
 			this.overlayIds[i_6] = null;
@@ -179,7 +179,7 @@ public class Class329 {
 			}
 		}
 		for (i_6 = 0; i_6 < this.anInt3845; i_6++) {
-			this.sceneObjectManager.aClass390Array2591[i_6].SA();
+			this.sceneObjectManager.aGroundArray2591[i_6].SA();
 		}
 	}
 
@@ -1485,8 +1485,8 @@ public class Class329 {
 	}
 
 	static void method5906() {
-		Class282_Sub53_Sub2.anInt9630 = 100;
-		Class282_Sub53_Sub2.aClass282_Sub53_Sub2Array9633 = new Class282_Sub53_Sub2[100];
+		MouseRecord_Sub2.anInt9630 = 100;
+		MouseRecord_Sub2.aMouseRecord_Sub2Array9633 = new MouseRecord_Sub2[100];
 		Class279.anInt3370 = 0;
 	}
 }

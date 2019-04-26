@@ -8,7 +8,7 @@ public class Class49 {
 	Interface1 anInterface1_475 = null;
 	public Interface6[] anInterface6Array478 = null;
 	public Interface1 anInterface1_479 = null;
-	Class505_Sub2 aClass505_Sub2_481;
+	GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_481;
 	public boolean aBool474;
 
 	static void method968() {
@@ -28,7 +28,7 @@ public class Class49 {
 	}
 
 	public boolean method969() {
-		if (!this.aClass505_Sub2_481.aBool8827) {
+		if (!this.aGraphicalRenderer_Sub2_481.aBool8827) {
 			return false;
 		} else {
 			if (this.anInterface1_480 == null) {
@@ -63,21 +63,21 @@ public class Class49 {
 					}
 				}
 
-				this.anInterface1_480 = this.aClass505_Sub2_481.method13962(Class150.aClass150_1949, bytes_2);
+				this.anInterface1_480 = this.aGraphicalRenderer_Sub2_481.method13962(Class150.aClass150_1949, bytes_2);
 			}
 
 			return this.anInterface1_480 != null;
 		}
 	}
 
-	Class49(Class505_Sub2 class505_sub2_1) {
-		this.aClass505_Sub2_481 = class505_sub2_1;
-		this.aBool474 = this.aClass505_Sub2_481.aBool8827;
-		if (this.aBool474 && !this.aClass505_Sub2_481.method13955(Class150.aClass150_1952, Class76.aClass76_751)) {
+	Class49(GraphicalRenderer_Sub2 class505_sub2_1) {
+		this.aGraphicalRenderer_Sub2_481 = class505_sub2_1;
+		this.aBool474 = this.aGraphicalRenderer_Sub2_481.aBool8827;
+		if (this.aBool474 && !this.aGraphicalRenderer_Sub2_481.method13955(Class150.aClass150_1952, Class76.aClass76_751)) {
 			this.aBool474 = false;
 		}
 
-		if (this.aBool474 || this.aClass505_Sub2_481.method13954(Class150.aClass150_1952, Class76.aClass76_751)) {
+		if (this.aBool474 || this.aGraphicalRenderer_Sub2_481.method13954(Class150.aClass150_1952, Class76.aClass76_751)) {
 			method968();
 			if (!this.aBool474) {
 				this.anInterface6Array476 = new Interface6[16];
@@ -85,21 +85,21 @@ public class Class49 {
 				int i_2;
 				byte[] bytes_3;
 				for (i_2 = 0; i_2 < 16; i_2++) {
-					bytes_3 = Class282_Sub17_Sub5.method15410(anObject482, i_2 * 32768, -232784177);
-					this.anInterface6Array476[i_2] = this.aClass505_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, bytes_3);
+					bytes_3 = Node_Sub17_Sub5.method15410(anObject482, i_2 * 32768, -232784177);
+					this.anInterface6Array476[i_2] = this.aGraphicalRenderer_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, bytes_3);
 				}
 
 				this.anInterface6Array478 = new Interface6[16];
 
 				for (i_2 = 0; i_2 < 16; i_2++) {
-					bytes_3 = Class282_Sub17_Sub5.method15410(anObject477, i_2 * 32768, -560964822);
-					this.anInterface6Array478[i_2] = this.aClass505_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, bytes_3);
+					bytes_3 = Node_Sub17_Sub5.method15410(anObject477, i_2 * 32768, -560964822);
+					this.anInterface6Array478[i_2] = this.aGraphicalRenderer_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, bytes_3);
 				}
 			} else {
 				byte[] bytes_4 = Class346.method6154(anObject482, false);
-				this.anInterface1_475 = this.aClass505_Sub2_481.method13962(Class150.aClass150_1952, bytes_4);
+				this.anInterface1_475 = this.aGraphicalRenderer_Sub2_481.method13962(Class150.aClass150_1952, bytes_4);
 				bytes_4 = Class346.method6154(anObject477, false);
-				this.anInterface1_479 = this.aClass505_Sub2_481.method13962(Class150.aClass150_1952, bytes_4);
+				this.anInterface1_479 = this.aGraphicalRenderer_Sub2_481.method13962(Class150.aClass150_1952, bytes_4);
 			}
 		}
 

@@ -88,7 +88,7 @@ public class Class356 {
 			IndexLoaders.CURSOR_LOADER.method7324();
 			IndexLoaders.HITSPLAT_LOADER.method3604();
 			IndexLoaders.HITBAR_LOADER.method5103();
-			Class468_Sub8.method12679();
+			Preference_Sub8.method12679();
 			Class520.method11161();
 			Class487.aClass378_5752.method6410();
 			Class413.method6939();
@@ -99,7 +99,7 @@ public class Class356 {
 				client.anInt7173 = 0;
 			}
 			IndexLoaders.MAP_REGION_DECODER.method4435().method4040();
-			Class468_Sub27.method12958();
+			Preference_Sub27.method12958();
 			Class188.method3140();
 			Class191.method3166();
 			Class321.method5757();

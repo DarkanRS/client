@@ -9,7 +9,7 @@ public class Class300 implements Interface4 {
 	byte aByte3547;
 	long aLong3549 = 0L;
 	int anInt3548;
-	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_3551;
+	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_3551;
 	boolean aBool3552;
 
 	public boolean method27(int i_1, int i_2, Source source_3) {
@@ -33,7 +33,7 @@ public class Class300 implements Interface4 {
 				IUnknown.Release(this.aLong3549);
 			}
 
-			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aClass505_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
+			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
 			this.anInt3548 = this.anInt3550;
 		}
 
@@ -61,7 +61,7 @@ public class Class300 implements Interface4 {
 				IUnknown.Release(this.aLong3549);
 			}
 
-			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aClass505_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
+			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
 			this.anInt3548 = this.anInt3550;
 		}
 
@@ -88,12 +88,12 @@ public class Class300 implements Interface4 {
 
 		this.anInt3548 = 0;
 		this.anInt3550 = 0;
-		this.aClass505_Sub2_Sub2_3551.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_3551.method13885(this);
 	}
 
 	void method5319() {
 		if (this.aLong3549 != 0L) {
-			this.aClass505_Sub2_Sub2_3551.method15650(this.aLong3549);
+			this.aGraphicalRenderer_Sub2_Sub2_3551.method15650(this.aLong3549);
 			this.aLong3549 = 0L;
 			this.anInt3548 = 0;
 			this.anInt3550 = 0;
@@ -109,7 +109,7 @@ public class Class300 implements Interface4 {
 
 		this.anInt3548 = 0;
 		this.anInt3550 = 0;
-		this.aClass505_Sub2_Sub2_3551.method13885(this);
+		this.aGraphicalRenderer_Sub2_Sub2_3551.method13885(this);
 	}
 
 	public void finalize() {
@@ -133,7 +133,7 @@ public class Class300 implements Interface4 {
 				IUnknown.Release(this.aLong3549);
 			}
 
-			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aClass505_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
+			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
 			this.anInt3548 = this.anInt3550;
 		}
 
@@ -157,17 +157,17 @@ public class Class300 implements Interface4 {
 				IUnknown.Release(this.aLong3549);
 			}
 
-			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aClass505_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
+			this.aLong3549 = IDirect3DDevice.CreateVertexBuffer(this.aGraphicalRenderer_Sub2_Sub2_3551.aLong10252, this.anInt3550, i_3, 0, b_4);
 			this.anInt3548 = this.anInt3550;
 		}
 
 		return this.aLong3549 != 0L;
 	}
 
-	Class300(Class505_Sub2_Sub2 class505_sub2_sub2_1, boolean bool_2) {
-		this.aClass505_Sub2_Sub2_3551 = class505_sub2_sub2_1;
+	Class300(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, boolean bool_2) {
+		this.aGraphicalRenderer_Sub2_Sub2_3551 = class505_sub2_sub2_1;
 		this.aBool3552 = bool_2;
-		this.aClass505_Sub2_Sub2_3551.method13901(this);
+		this.aGraphicalRenderer_Sub2_Sub2_3551.method13901(this);
 	}
 
 	public boolean method33(int i_1, int i_2, Source source_3) {

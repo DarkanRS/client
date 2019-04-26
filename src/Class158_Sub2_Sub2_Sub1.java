@@ -14,7 +14,7 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 		return 0;
 	}
 
-	Class158_Sub2_Sub2_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
+	Class158_Sub2_Sub2_Sub1(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
 		super(class505_sub2_sub1_1);
 		this.aCanvas10302 = canvas_2;
 		this.anOpenGL10299 = class505_sub2_sub1_1.anOpenGL10191;
@@ -116,7 +116,7 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 		return true;
 	}
 
-	Class158_Sub2_Sub2_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2) {
+	Class158_Sub2_Sub2_Sub1(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2) {
 		this(class505_sub2_sub1_1, canvas_2, class505_sub2_sub1_1.anOpenGL10191.prepareSurface(canvas_2));
 	}
 

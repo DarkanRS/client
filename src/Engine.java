@@ -51,7 +51,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     static int anInt3279;
 
     public void supplyApplet(Applet applet_1) {
-        Class282_Sub44.anApplet8065 = applet_1;
+        Node_Sub44.anApplet8065 = applet_1;
     }
 
     final void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8, int i_9) {
@@ -68,7 +68,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class107.anInt1082 += 2 * class274_1.method4872();
                 this.method4661(class274_1.getName());
             }
-            RuntimeException_Sub3.anApplet10460 = Class282_Sub44.anApplet8065;
+            RuntimeException_Sub3.anApplet10460 = Node_Sub44.anApplet8065;
             this.method4656(string_2, string_3, i_4, i_5);
         } catch (Throwable throwable_11) {
             Class151.method2594((String) null, throwable_11, (byte) -115);
@@ -81,10 +81,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         Class514.anInt5887 = i_3;
         RuntimeException_Sub3.anInt10457 = 727;
         InventoriesIndexLoader.anInt4781 = 1;
-        Class282_Sub20_Sub34.aString9967 = "Unknown";
+        Node_Sub20_Sub34.aString9967 = "Unknown";
         ChatLine.aString1093 = "1.1";
         try {
-            Class282_Sub20_Sub34.aString9967 = System.getProperty("java.vendor");
+            Node_Sub20_Sub34.aString9967 = System.getProperty("java.vendor");
             ChatLine.aString1093 = System.getProperty("java.version");
         } catch (Exception exception_22) {
             ;
@@ -94,7 +94,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         } catch (Exception exception_21) {
             RuntimeException_Sub4.aString10463 = "Unknown";
         }
-        Class225_Sub6.aString8069 = RuntimeException_Sub4.aString10463.toLowerCase();
+        RouteStrategy_Sub6.aString8069 = RuntimeException_Sub4.aString10463.toLowerCase();
         try {
             Class402.aString4828 = System.getProperty("os.arch").toLowerCase();
         } catch (Exception exception_20) {
@@ -114,7 +114,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             ;
         }
         try {
-            if (Class225_Sub6.aString8069.startsWith("win")) {
+            if (RouteStrategy_Sub6.aString8069.startsWith("win")) {
                 if (Class110.aString1103 == null) {
                     Class110.aString1103 = System.getenv("USERPROFILE");
                 }
@@ -163,11 +163,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         }
         Class499.method8334(aFile3264);
         Class328.method5827();
-        aClass440_3270 = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.dat2", 1605505802), 524288000L), 5200);
-        aClass440_3271 = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.idx255", 526140284), 1048576L), 6000);
+        aClass440_3270 = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.dat2", 1605505802), 524288000L), 5200);
+        aClass440_3271 = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx255", 526140284), 1048576L), 6000);
         Class97.aClass440Array996 = new Class440[HitbarIndexLoader.anInt3451];
         for (i_13 = 0; i_13 < HitbarIndexLoader.anInt3451; i_13++) {
-            Class97.aClass440Array996[i_13] = new Class440(new Class442(Class96_Sub23.method14681("main_file_cache.idx" + i_13, 535964137), 1048576L), 6000);
+            Class97.aClass440Array996[i_13] = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx" + i_13, 535964137), 1048576L), 6000);
         }
         try {
             Class274.aClass470_3336 = new Class470();
@@ -361,7 +361,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     final boolean method4665(byte b_1) {
-        String string_2 = Class282_Sub44.anApplet8065.getDocumentBase().getHost().toLowerCase();
+        String string_2 = Node_Sub44.anApplet8065.getDocumentBase().getHost().toLowerCase();
         if (!string_2.equals("jagex.com") && !string_2.endsWith(".jagex.com")) {
             if (!string_2.equals("runescape.com") && !string_2.endsWith(".runescape.com")) {
                 if (!string_2.equals("stellardawn.com") && !string_2.endsWith(".stellardawn.com")) {
@@ -559,12 +559,12 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             this.aBool3254 = true;
             System.out.println("error_game_" + string_1);
             try {
-                Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1643442211);
+                Class441.method7377(Node_Sub44.anApplet8065, "loggedout", 1643442211);
             } catch (Throwable throwable_5) {
                 ;
             }
             try {
-                Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
+                Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
             } catch (Exception exception_4) {
                 ;
             }
@@ -608,7 +608,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     abstract void method4690();
 
     public void method168(Applet applet_1) {
-        Class282_Sub44.anApplet8065 = applet_1;
+        Node_Sub44.anApplet8065 = applet_1;
     }
 
     public void start() {
@@ -745,8 +745,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     void method4745() {
-        if (Class282_Sub20_Sub34.aString9967 != null) {
-            String string_2 = Class282_Sub20_Sub34.aString9967.toLowerCase();
+        if (Node_Sub20_Sub34.aString9967 != null) {
+            String string_2 = Node_Sub20_Sub34.aString9967.toLowerCase();
             if (string_2.indexOf("sun") != -1 || string_2.indexOf("apple") != -1) {
                 String string_3 = ChatLine.aString1093;
                 if (string_3.equals("1.1") || string_3.startsWith("1.1.") || string_3.equals("1.2") || string_3.startsWith("1.2.") || string_3.equals("1.3") || string_3.startsWith("1.3.") || string_3.equals("1.4") || string_3.startsWith("1.4.") || string_3.equals("1.5") || string_3.startsWith("1.5.") || string_3.equals("1.6.0")) {
@@ -778,7 +778,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 this.method4667();
             }
             this.method4668();
-            Class282_Sub20_Sub27.method15395(Class351.gameCanvas, -859332556);
+            Node_Sub20_Sub27.method15395(Class351.gameCanvas, -859332556);
         }
     }
 

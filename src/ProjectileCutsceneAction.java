@@ -56,9 +56,9 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 			}
 		}
 		int i_7 = this.anInt9399 << 2;
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_12 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), this.anInt9410, i_4, i_4, i_2, i_3, this.anInt9405 << 2, client.cycles, this.anInt9409 + client.cycles, this.anInt9412, i_7, this.anInt9402 + 1, this.anInt9400 + 1, this.anInt9413 << 2, false, 0);
+		Transform_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_12 = new Transform_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), this.anInt9410, i_4, i_4, i_2, i_3, this.anInt9405 << 2, client.cycles, this.anInt9409 + client.cycles, this.anInt9412, i_7, this.anInt9402 + 1, this.anInt9400 + 1, this.anInt9413 << 2, false, 0);
 		class521_sub1_sub1_sub3_12.method15904(i_5, i_6, this.anInt9413 << 2, this.anInt9409 + client.cycles);
-		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_12));
+		client.aClass482_7333.append(new CacheableNode_Sub16(class521_sub1_sub1_sub3_12));
 	}
 
 	public void method1601() {
@@ -91,9 +91,9 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 			}
 		}
 		int i_6 = -716833811 * this.anInt9399 * 2139724261 << 2;
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_11 = new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), this.anInt9410 * 2035189521 * 899631601, i_3, i_3, i_1, i_2, this.anInt9405 * 2127134041 * -1118504215 << 2, client.cycles * 1968179203 * -1809259861, -1809259861 * client.cycles * 1968179203 + this.anInt9409 * -229470439 * -511484631, this.anInt9412 * -1446164009 * 1829419495, i_6, 1 + this.anInt9402 * -37939787 * -772738915, this.anInt9400 * 857868507 * 1060287315 + 1, -209777139 * this.anInt9413 * 885452997 << 2, false, 0);
+		Transform_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_11 = new Transform_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), this.anInt9410 * 2035189521 * 899631601, i_3, i_3, i_1, i_2, this.anInt9405 * 2127134041 * -1118504215 << 2, client.cycles * 1968179203 * -1809259861, -1809259861 * client.cycles * 1968179203 + this.anInt9409 * -229470439 * -511484631, this.anInt9412 * -1446164009 * 1829419495, i_6, 1 + this.anInt9402 * -37939787 * -772738915, this.anInt9400 * 857868507 * 1060287315 + 1, -209777139 * this.anInt9413 * 885452997 << 2, false, 0);
 		class521_sub1_sub1_sub3_11.method15904(i_4, i_5, -209777139 * this.anInt9413 * 885452997 << 2, -511484631 * this.anInt9409 * -229470439 + client.cycles * 1968179203 * -1809259861);
-		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3_11));
+		client.aClass482_7333.append(new CacheableNode_Sub16(class521_sub1_sub1_sub3_11));
 	}
 
 	boolean method1599() {
@@ -154,7 +154,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 							client.aClass10Array7456[i_7] = client.aClass10Array7456[i_7 + 1];
 						}
 						client.anInt7386 = client.anInt7347;
-						BufferedConnectionContext class184_9 = Class468_Sub20.method12807(-1089718324);
+						BufferedConnectionContext class184_9 = Preference_Sub20.method12807(-1089718324);
 						TCPPacket tcpmessage_8 = Class271.createPacket(OutgoingPacket.REMOVE_IGNORE, class184_9.isaac);
 						tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_8.buffer.writeString(string_0);

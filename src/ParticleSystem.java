@@ -38,7 +38,7 @@ public class ParticleSystem {
 		Iterator iterator_1 = this.aList7127.iterator();
 
 		while (iterator_1.hasNext()) {
-			Class282_Sub40 class282_sub40_3 = (Class282_Sub40) iterator_1.next();
+			Node_Sub40 class282_sub40_3 = (Node_Sub40) iterator_1.next();
 			if (class282_sub40_3.aClass345_8007.anInt4041 == 1) {
 				class282_sub40_3.remove();
 			}
@@ -124,7 +124,7 @@ public class ParticleSystem {
 
 		while (true) {
 			label69: while (iterator_6.hasNext()) {
-				Class282_Sub40 class282_sub40_7 = (Class282_Sub40) iterator_6.next();
+				Node_Sub40 class282_sub40_7 = (Node_Sub40) iterator_6.next();
 				if (arr_1 != null) {
 					for (int i_8 = 0; i_8 < arr_1.length; i_8++) {
 						if (arr_1[i_8] == class282_sub40_7.aClass172_8009 || arr_1[i_8].aClass172_2114 == class282_sub40_7.aClass172_8009) {
@@ -148,15 +148,15 @@ public class ParticleSystem {
 			if (arr_1 != null) {
 				for (int i_4 = 0; i_4 < arr_1.length && i_4 != 8 && this.anInt7121 != 8; i_4++) {
 					if (!aBoolArray7134[i_4]) {
-						Class282_Sub40 class282_sub40_5 = null;
+						Node_Sub40 class282_sub40_5 = null;
 						if (arr_1[i_4].method2913(-1744283986).anInt4041 == 1 && Class235.anInt2898 < 32) {
-							class282_sub40_5 = new Class282_Sub40(arr_1[i_4], this);
+							class282_sub40_5 = new Node_Sub40(arr_1[i_4], this);
 							Class235.aClass465_2904.put(class282_sub40_5, (long) arr_1[i_4].anInt2115);
 							++Class235.anInt2898;
 						}
 
 						if (class282_sub40_5 == null) {
-							class282_sub40_5 = new Class282_Sub40(arr_1[i_4], this);
+							class282_sub40_5 = new Node_Sub40(arr_1[i_4], this);
 						}
 
 						this.aList7127.add(class282_sub40_5);

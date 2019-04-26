@@ -73,10 +73,10 @@ public class Class174 {
             if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
                 IndexLoaders.MAP_REGION_DECODER.method4441().method12475(Renderers.SOFTWARE_RENDERER, i_0, i_1, i_2, i_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0));
                 if (i_4 >= 0) {
-                    int i_10 = Class393.preferences.aClass468_Sub23_8202.method12897((byte) 28);
-                    Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, 1, -1662895154);
+                    int i_10 = Class393.preferences.aPreference_Sub23_8202.method12897((byte) 28);
+                    Class393.preferences.setValue(Class393.preferences.aPreference_Sub23_8202, 1, -1662895154);
                     IndexLoaders.MAP_REGION_DECODER.method4441().method12459(Renderers.SOFTWARE_RENDERER, i_9, i_0, i_2, i_3, i_4, i_5, i_6, IndexLoaders.MAP_REGION_DECODER.getClipMap(i_0), i_7, -1045787010);
-                    Class393.preferences.setValue(Class393.preferences.aClass468_Sub23_8202, i_10, -1533283163);
+                    Class393.preferences.setValue(Class393.preferences.aPreference_Sub23_8202, i_10, -1533283163);
                 }
             }
         }

@@ -21,7 +21,7 @@ public abstract class Class48 {
 	public Vector3 aClass385_464 = new Vector3();
 	public Vector3 aClass385_461 = new Vector3();
 	public Matrix44Arr aClass384_465 = new Matrix44Arr();
-	protected Class505_Sub2 aClass505_Sub2_449;
+	protected GraphicalRenderer_Sub2 aGraphicalRenderer_Sub2_449;
 
 	public abstract void method943();
 
@@ -62,8 +62,8 @@ public abstract class Class48 {
 
 	public abstract void method954(boolean var1);
 
-	Class48(Class505_Sub2 class505_sub2_1) {
-		this.aClass505_Sub2_449 = class505_sub2_1;
+	Class48(GraphicalRenderer_Sub2 class505_sub2_1) {
+		this.aGraphicalRenderer_Sub2_449 = class505_sub2_1;
 	}
 
 	public abstract void method955(boolean var1);

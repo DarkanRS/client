@@ -1,6 +1,6 @@
 public class Class393 {
 
-	public static Class282_Sub54 preferences;
+	public static Node_Sub54 preferences;
 
 	public Interface3[] anInterface3Array4782;
 

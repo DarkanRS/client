@@ -272,8 +272,8 @@ public class MapAreaDefinitions {
                     string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.myPlayer.anInt10565, -1957998512) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
                 if (client.aBool7344 && !bool_1) {
-                    ParamDefinitions attributedefault_10 = Class96_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(Class96_Sub12.USE_INTERFACE_ID) : null;
-                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(Class96_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
+                    ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
+                    if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
                         PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1728725165);
                     }
                 }
@@ -381,7 +381,7 @@ public class MapAreaDefinitions {
         return "http://" + str_1 + "." + string_3 + "/l=" + Class223.CURRENT_LANGUAGE + "/a=" + client.anInt7149 + str_2 + "/";
     }
 
-    static boolean renderIconsAndNames(GraphicalRenderer graphicalrenderer_0, Class282_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
+    static boolean renderIconsAndNames(GraphicalRenderer graphicalrenderer_0, Node_Sub36 class282_sub36_1, MapAreaDefinitions worldmapareadefs_2) {
         int i_6 = Integer.MAX_VALUE;
         int i_7 = Integer.MIN_VALUE;
         int i_8 = Integer.MAX_VALUE;
@@ -435,7 +435,7 @@ public class MapAreaDefinitions {
         if (worldmapareadefs_2.areaName != null) {
             class194_15 = Class286.method5048(worldmapareadefs_2.anInt2722);
             if (class194_15 != null) {
-                i_16 = Class282_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, (int[]) null, Class291_Sub1.aStringArray8024, (Sprite[]) null);
+                i_16 = Node_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, (int[]) null, Class291_Sub1.aStringArray8024, (Sprite[]) null);
                 i_17 = (Class291_Sub1.anInt3476 - Class291_Sub1.anInt3489) * worldmapareadefs_2.anInt2750 / (Class291_Sub1.anInt3480 - Class291_Sub1.anInt3485) + class282_sub36_1.anInt7990;
                 i_18 = class282_sub36_1.anInt7992 - (Class291_Sub1.anInt3492 - Class291_Sub1.anInt3490) * worldmapareadefs_2.anInt2752 / (Class291_Sub1.anInt3486 - Class291_Sub1.anInt3465);
                 if (nativesprite_10 == null) {
@@ -475,10 +475,10 @@ public class MapAreaDefinitions {
             Class291_Sub1.method5147(graphicalrenderer_0, class282_sub36_1, worldmapareadefs_2);
             if (nativesprite_10 != null) {
                 if (Class361.anInt4185 > 0 && (Class291_Sub1.anInt8018 != -1 && Class291_Sub1.anInt8018 == class282_sub36_1.anInt7991 || Class291_Sub1.anInt8026 != -1 && worldmapareadefs_2.anInt2718 == Class291_Sub1.anInt8026)) {
-                    if (Class96_Sub9.anInt9282 > 50) {
-                        i_24 = 200 - Class96_Sub9.anInt9282 * 2;
+                    if (CutsceneAction_Sub9.anInt9282 > 50) {
+                        i_24 = 200 - CutsceneAction_Sub9.anInt9282 * 2;
                     } else {
-                        i_24 = Class96_Sub9.anInt9282 * 2;
+                        i_24 = CutsceneAction_Sub9.anInt9282 * 2;
                     }
                     int i_27 = i_24 << 24 | 0xffff00;
                     graphicalrenderer_0.method8468(class282_sub36_1.anInt7990, class282_sub36_1.anInt7992, nativesprite_10.method2747() / 2 + 7, i_27, 1444193569);
@@ -493,7 +493,7 @@ public class MapAreaDefinitions {
                 InventoriesIndexLoader.renderAreaText(graphicalrenderer_0, class282_sub36_1, worldmapareadefs_2, i_16, i_17, i_18, i_19, class194_15);
             }
             if (worldmapareadefs_2.anInt2719 != -1 || worldmapareadefs_2.areaName != null) {
-                Class282_Sub33 class282_sub33_28 = new Class282_Sub33(class282_sub36_1);
+                Node_Sub33 class282_sub33_28 = new Node_Sub33(class282_sub36_1);
                 class282_sub33_28.anInt7830 = i_11;
                 class282_sub33_28.anInt7828 = i_12;
                 class282_sub33_28.anInt7834 = i_13;

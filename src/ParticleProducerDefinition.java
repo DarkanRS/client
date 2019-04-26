@@ -314,7 +314,7 @@ public class ParticleProducerDefinition {
 		if (index_0.loadFile(Class16.anInt137)) {
 			++i_2;
 		}
-		if (index_0.loadFile(Class468_Sub12.anInt7899)) {
+		if (index_0.loadFile(Preference_Sub12.anInt7899)) {
 			++i_2;
 		}
 		if (index_0.loadFile(Class13.anInt130)) {
@@ -346,7 +346,7 @@ public class ParticleProducerDefinition {
 	}
 
 	public static void method1161(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, String string_6, short s_7) {
-		Class275_Sub6 class275_sub6_8 = new Class275_Sub6();
+		EntityNode_Sub6 class275_sub6_8 = new EntityNode_Sub6();
 		class275_sub6_8.anInt7857 = i_0;
 		class275_sub6_8.anInt7859 = i_1;
 		class275_sub6_8.anInt7854 = i_2;

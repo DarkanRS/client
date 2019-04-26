@@ -6,7 +6,7 @@ public class Class247 {
 
 	int anInt3044;
 
-	NativeSprite aClass160_3030;
+	NativeSprite aNativeSprite_3030;
 
 	int anInt3052;
 
@@ -20,7 +20,7 @@ public class Class247 {
 
 	boolean aBool3045 = true;
 
-	MeshRasterizer aClass528_3048;
+	MeshRasterizer aMeshRasterizer_3048;
 
 	int anInt3034;
 
@@ -50,22 +50,22 @@ public class Class247 {
 
 	void method4206(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, boolean bool_11, int i_13, byte b_14) {
 		int i_15 = 255 - i_13;
-		if (this.aClass528_3048 == null) {
+		if (this.aMeshRasterizer_3048 == null) {
 			graphicalrenderer_1.ba(2, 0);
 			i_8 = i_8 + i_2 & 0x3fff;
 			if (this.anInt3031 != -1 && this.anInt3034 != 0) {
 				TextureDetails class169_16 = anInterface22_3046.method144(this.anInt3031);
-				if (this.aClass160_3030 == null && anInterface22_3046.method139(this.anInt3031, -408857237)) {
+				if (this.aNativeSprite_3030 == null && anInterface22_3046.method139(this.anInt3031, -408857237)) {
 					int[] ints_17 = class169_16.blendType == 2 ? anInterface22_3046.method141(this.anInt3031, this.anInt3034, this.anInt3034, false, -1509054197) : anInterface22_3046.method140(this.anInt3031, 0.7F, this.anInt3034, this.anInt3034, false, (byte) 127);
 					this.anInt3053 = ints_17[0];
 					this.anInt3044 = ints_17[ints_17.length - 1];
-					this.aClass160_3030 = graphicalrenderer_1.createNativeSprite(ints_17, this.anInt3034, this.anInt3034, this.anInt3034, 1367570399);
+					this.aNativeSprite_3030 = graphicalrenderer_1.createNativeSprite(ints_17, this.anInt3034, this.anInt3034, this.anInt3034, 1367570399);
 				}
 				int i_22 = i_15 == 255 ? (class169_16.blendType == 2 ? 1 : 0) : 1;
 				if (i_22 == 1 && bool_11) {
 					graphicalrenderer_1.B(i_3, i_4, i_5, i_6, i_10, 0);
 				}
-				if (this.aClass160_3030 != null) {
+				if (this.aNativeSprite_3030 != null) {
 					int i_18 = i_7 * i_6 / -4096;
 					int i_19;
 					for (i_19 = i_8 * i_6 / 4096 + (i_5 - i_6) / 2; i_19 > i_6; i_19 -= i_6) {
@@ -84,12 +84,12 @@ public class Class247 {
 						}
 						for (i_20 = i_19 - i_6; i_20 < i_5; i_20 += i_6) {
 							for (int i_21 = i_18 - i_6; i_21 < i_6; i_21 += i_6) {
-								this.aClass160_3030.method2754(i_3 + i_20, i_21 + i_4, i_6, i_6, 0, i_15 << 24 | 0xffffff, i_22);
+								this.aNativeSprite_3030.method2754(i_3 + i_20, i_21 + i_4, i_6, i_6, 0, i_15 << 24 | 0xffffff, i_22);
 							}
 						}
 					} else {
 						for (i_20 = i_19 - i_6; i_20 < i_5; i_20 += i_6) {
-							this.aClass160_3030.method2754(i_3 + i_20, i_18 + i_4, i_6, i_6, 0, i_15 << 24 | 0xffffff, i_22);
+							this.aNativeSprite_3030.method2754(i_3 + i_20, i_18 + i_4, i_6, i_6, 0, i_15 << 24 | 0xffffff, i_22);
 						}
 						if ((this.anInt3053 & ~0xffffff) != 0) {
 							graphicalrenderer_1.method8425(0, 0, i_5, i_18 + i_4 + 1, this.anInt3053, (byte) -82);
@@ -192,7 +192,7 @@ public class Class247 {
 			}
 			if (i_5 != this.anInt3034) {
 				this.anInt3034 = i_5;
-				this.aClass160_3030 = null;
+				this.aNativeSprite_3030 = null;
 			}
 			if (this.aClass334Array3049 != null) {
 				this.anInt3043 = 0;
@@ -218,11 +218,11 @@ public class Class247 {
 			}
 		}
 		if (i_3 != 0 && graphicalrenderer_1.method8404()) {
-			if (this.aClass528_3048 == null && this.anInt3047 >= 0) {
+			if (this.aMeshRasterizer_3048 == null && this.anInt3047 >= 0) {
 				this.method4229(graphicalrenderer_1);
 			}
 		} else {
-			this.aClass528_3048 = null;
+			this.aMeshRasterizer_3048 = null;
 		}
 		if (this.aClass247_3051 != null && this != this.aClass247_3051) {
 			this.aClass247_3051.method4209();
@@ -237,8 +237,8 @@ public class Class247 {
 			if (bool_3) {
 				graphicalrenderer_1.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
 				RSMesh rsmesh_4 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3047);
-				this.aClass528_3048 = graphicalrenderer_1.createMeshRasterizer(rsmesh_4, 1099776, 0, 255, 1);
-				byte[] bytes_5 = this.aClass528_3048.aw();
+				this.aMeshRasterizer_3048 = graphicalrenderer_1.createMeshRasterizer(rsmesh_4, 1099776, 0, 255, 1);
+				byte[] bytes_5 = this.aMeshRasterizer_3048.aw();
 				if (bytes_5 == null) {
 					this.aByteArray3037 = null;
 				} else {
@@ -261,10 +261,10 @@ public class Class247 {
 		graphicalrenderer_1.method8457(matrix44var_8);
 		Matrix44Var matrix44var_9 = new Matrix44Var();
 		if (i_5 != this.anInt3036) {
-			this.aClass528_3048.method11312((byte) i_5, this.aByteArray3037);
+			this.aMeshRasterizer_3048.method11312((byte) i_5, this.aByteArray3037);
 			this.anInt3036 = i_5;
 		}
-		this.aClass528_3048.method11282(matrix44var_9, (Class275_Sub5) null, 0);
+		this.aMeshRasterizer_3048.method11282(matrix44var_9, (EntityNode_Sub5) null, 0);
 		graphicalrenderer_1.method8457(matrix44var_7);
 	}
 
@@ -291,13 +291,13 @@ public class Class247 {
 		} else {
 			int i_3 = i_0 >> 16;
 			int i_4 = i_0 & 0xffff;
-			if (Class468_Sub8.INTERFACES[i_3] != null && Class468_Sub8.INTERFACES[i_3].components[i_4] != null) {
-				IComponentDefinitions icomponentdefinitions_5 = Class468_Sub8.INTERFACES[i_3].components[i_4];
-				Class282_Sub50_Sub7 class282_sub50_sub7_6;
+			if (Preference_Sub8.INTERFACES[i_3] != null && Preference_Sub8.INTERFACES[i_3].components[i_4] != null) {
+				IComponentDefinitions icomponentdefinitions_5 = Preference_Sub8.INTERFACES[i_3].components[i_4];
+				CacheableNode_Sub7 class282_sub50_sub7_6;
 				if (i_1 == -1 && icomponentdefinitions_5.type == 0) {
-					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1787533982)) {
+					for (class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.next(1787533982)) {
 						if (class282_sub50_sub7_6.clickType == 58 || class282_sub50_sub7_6.clickType == 1007 || class282_sub50_sub7_6.clickType == 25 || class282_sub50_sub7_6.clickType == 57 || class282_sub50_sub7_6.clickType == 30) {
-							for (IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(class282_sub50_sub7_6.anInt9582); icomponentdefinitions_7 != null; icomponentdefinitions_7 = Class96_Sub23.method14682(Class468_Sub8.INTERFACES[icomponentdefinitions_7.idHash >> 16], icomponentdefinitions_7)) {
+							for (IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(class282_sub50_sub7_6.anInt9582); icomponentdefinitions_7 != null; icomponentdefinitions_7 = CutsceneAction_Sub23.method14682(Preference_Sub8.INTERFACES[icomponentdefinitions_7.idHash >> 16], icomponentdefinitions_7)) {
 								if (icomponentdefinitions_7.idHash == icomponentdefinitions_5.idHash) {
 									return true;
 								}
@@ -305,7 +305,7 @@ public class Class247 {
 						}
 					}
 				} else {
-					for (class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(2009173063)) {
+					for (class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (CacheableNode_Sub7) Class20.aClass482_171.next(2009173063)) {
 						if (class282_sub50_sub7_6.anInt9581 == i_1 && icomponentdefinitions_5.idHash == class282_sub50_sub7_6.anInt9582 && (class282_sub50_sub7_6.clickType == 58 || class282_sub50_sub7_6.clickType == 1007 || class282_sub50_sub7_6.clickType == 25 || class282_sub50_sub7_6.clickType == 57 || class282_sub50_sub7_6.clickType == 30)) {
 							return true;
 						}
@@ -319,14 +319,14 @@ public class Class247 {
 	}
 
 	public static void method4250(byte b_0) {
-		for (Class282_Sub37 class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7750(-1139367366); class282_sub37_1 != null; class282_sub37_1 = (Class282_Sub37) Class492.aClass465_5774.method7751((byte) 8)) {
+		for (Node_Sub37 class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7750(-1139367366); class282_sub37_1 != null; class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7751((byte) 8)) {
 			Class92.method1563(class282_sub37_1.anInt7999);
 		}
 	}
 
 	static void method4251() {
 		Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.REQUEST;
-		Class96_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5729;
+		CutsceneAction_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5729;
 		Class237.aClass494_2916 = Class494.aClass494_5786;
 		Class404.aClass466_4831 = Class466.aClass466_5569;
 	}

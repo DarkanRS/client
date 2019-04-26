@@ -8,7 +8,7 @@ public class Class404 {
 	}
 
 	public static final void method6809(String string_0, int i_1) {
-		BufferedConnectionContext class184_3 = Class468_Sub20.method12807(-19463532);
+		BufferedConnectionContext class184_3 = Preference_Sub20.method12807(-19463532);
 		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.CHANGE_FRIENDS_CHAT, class184_3.isaac);
 		tcpmessage_4.buffer.writeByte(1 + ChatLine.getLength(string_0));
 		tcpmessage_4.buffer.write128Byte(i_1, 2009148363);
@@ -17,9 +17,9 @@ public class Class404 {
 	}
 
 	static void method6810(int i_0) {
-		if (Class20.aClass282_Sub50_Sub15_163 != null) {
-			Class20.aClass282_Sub50_Sub15_163 = null;
-			Class292.method5201(Class341.anInt3996, Class282_Sub50_Sub2.anInt9471, Class96_Sub3.anInt8518, Class521_Sub1_Sub5_Sub1.anInt10526);
+		if (Class20.aCacheableNode_Sub15_163 != null) {
+			Class20.aCacheableNode_Sub15_163 = null;
+			Class292.method5201(Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526);
 		}
 
 	}
@@ -28,7 +28,7 @@ public class Class404 {
 		if (Class113.CLAN_CHANNEL != null && i_0 >= 0 && i_0 < Class113.CLAN_CHANNEL.numPlayers) {
 			ClanChannelPlayer class57_2 = Class113.CLAN_CHANNEL.players[i_0];
 			if (class57_2.rank == -1) {
-				BufferedConnectionContext class184_3 = Class468_Sub20.method12807(2122526956);
+				BufferedConnectionContext class184_3 = Preference_Sub20.method12807(2122526956);
 				TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.CLAN_CHAT_KICK, class184_3.isaac);
 				tcpmessage_4.buffer.writeByte(2 + ChatLine.getLength(class57_2.name));
 				tcpmessage_4.buffer.writeShort(i_0);

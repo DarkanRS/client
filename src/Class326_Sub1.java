@@ -12,7 +12,7 @@ public class Class326_Sub1 extends Class326 implements Interface4 {
 		return super.method39();
 	}
 
-	Class326_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1_1, boolean bool_2) {
+	Class326_Sub1(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, boolean bool_2) {
 		super(class505_sub2_sub1_1, 34962, bool_2);
 	}
 

@@ -51,17 +51,17 @@ final class Class82 implements Interface11 {
                     bool_19 = true;
                 }
                 if (player_10.aBool10571) {
-                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aClass160Array3092[6], -632004672);
+                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aNativeSpriteArray3092[6], -632004672);
                 } else if (bool_19) {
-                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aClass160Array3092[4], -274315333);
+                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aNativeSpriteArray3092[4], -274315333);
                 } else if (player_10.aBool10550) {
-                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aClass160Array3092[7], 1669680426);
+                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aNativeSpriteArray3092[7], 1669680426);
                 } else if (bool_14) {
-                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aClass160Array3092[3], -815789205);
+                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aNativeSpriteArray3092[3], -815789205);
                 } else if (bool_18) {
-                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aClass160Array3092[5], 1069521943);
+                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aNativeSpriteArray3092[5], 1069521943);
                 } else {
-                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aClass160Array3092[2], -336642754);
+                    Class190.method3149(icomponentdefinitions_2, class455_3, i_4, i_5, i_12, i_13, Class250.aNativeSpriteArray3092[2], -336642754);
                 }
             }
         }

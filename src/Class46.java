@@ -2,7 +2,7 @@ public class Class46 implements Interface2 {
 
 	public static Object[] CLAN_VARS;
 
-	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_438;
+	static CacheableNode_Sub7 aCacheableNode_Sub7_438;
 
 	Class366 aClass366_436;
 
@@ -346,7 +346,7 @@ public class Class46 implements Interface2 {
 	static void method935(byte b_0) {
 		int i_1 = 0;
 		if (Class393.preferences != null) {
-			i_1 = Class393.preferences.aClass468_Sub7_8210.method12666(1300916790);
+			i_1 = Class393.preferences.aPreference_Sub7_8210.method12666(1300916790);
 		}
 		int i_2;
 		int i_3;

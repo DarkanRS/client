@@ -1,11 +1,8 @@
-import java.awt.Point;
+
 
 public class Node {
-
     public long data;
-
     public Node next;
-
     public Node prev;
 
     public void remove() {

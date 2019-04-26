@@ -20,7 +20,7 @@ public class Class373 {
 			}
 			while (true) {
 				while (true) {
-					Class282_Sub53_Sub1 class282_sub53_sub1_3 = (Class282_Sub53_Sub1) Class236.aQueue2914.poll();
+					MouseRecord_Sub1 class282_sub53_sub1_3 = (MouseRecord_Sub1) Class236.aQueue2914.poll();
 					if (class282_sub53_sub1_3 == null) {
 						return;
 					}

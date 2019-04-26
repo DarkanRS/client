@@ -55,12 +55,12 @@ public class Class190 {
 	}
 
 	public static RouteStrategy method3150(int i_0, int i_1, int i_2, int i_3) {
-		Class224.aClass225_Sub2_2778.approxDestinationX = i_0;
-		Class224.aClass225_Sub2_2778.approxDestinationY = i_1;
-		Class224.aClass225_Sub2_2778.approxDestinationSizeX = i_2;
-		Class224.aClass225_Sub2_2778.approxDestinationSizeY = i_3;
-		Class224.aClass225_Sub2_2778.anInt7928 = 0;
-		return Class224.aClass225_Sub2_2778;
+		Class224.aRouteStrategy_Sub2_2778.approxDestinationX = i_0;
+		Class224.aRouteStrategy_Sub2_2778.approxDestinationY = i_1;
+		Class224.aRouteStrategy_Sub2_2778.approxDestinationSizeX = i_2;
+		Class224.aRouteStrategy_Sub2_2778.approxDestinationSizeY = i_3;
+		Class224.aRouteStrategy_Sub2_2778.anInt7928 = 0;
+		return Class224.aRouteStrategy_Sub2_2778;
 	}
 
 	static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
@@ -140,23 +140,23 @@ public class Class190 {
 		client.aClass465_7334.method7749(1935752602);
 		client.aClass457_7335.method7651();
 		client.aClass465_7414.method7749(828403909);
-		Class282_Sub31.aClass482_7775 = new NodeCollection();
-		Class282_Sub31.aClass482_7776 = new NodeCollection();
+		Node_Sub31.aClass482_7775 = new NodeCollection();
+		Node_Sub31.aClass482_7776 = new NodeCollection();
 		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(-1043684196);
-		Class8_Sub3.method14341();
+		FontRenderer_Sub3.method14341();
 		Class296.anInt3534 = 0;
-		Class282_Sub44.anInt8064 = 0;
+		Node_Sub44.anInt8064 = 0;
 		SpotAnimDefinitions.anInt6985 = 0;
 		Class454.anInt5451 = 0;
 		Class115.anInt1249 = 0;
-		Class96_Sub13.anInt9368 = 0;
+		CutsceneAction_Sub13.anInt9368 = 0;
 		OutgoingLoginPacket.anInt4280 = 0;
 		Class121.anInt1527 = 0;
 		LinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;
 
 		for (i_1 = 0; i_1 < Class320.VARC_INT.length; i_1++) {
-			if (!Class282_Sub17_Sub2.VARC_BOOL[i_1]) {
+			if (!Node_Sub17_Sub2.VARC_BOOL[i_1]) {
 				Class320.VARC_INT[i_1] = -1;
 			}
 		}
@@ -165,9 +165,9 @@ public class Class190 {
 			Class337.unloadInterface(client.anInt7349, 1308673999);
 		}
 
-		for (Class282_Sub44 class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(774217336); class282_sub44_2 != null; class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 87)) {
+		for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(774217336); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 87)) {
 			if (!class282_sub44_2.isLinked()) {
-				class282_sub44_2 = (Class282_Sub44) client.aClass465_7442.method7750(-1913243579);
+				class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-1913243579);
 				if (class282_sub44_2 == null) {
 					break;
 				}
@@ -187,7 +187,7 @@ public class Class190 {
 			client.PLAYER_OPTION_CURSORS[i_1] = -1;
 		}
 
-		Class8_Sub2.method14262(-19282159);
+		FontRenderer_Sub2.method14262(-19282159);
 		client.aBool7172 = true;
 
 		for (i_1 = 0; i_1 < 107; i_1++) {
@@ -202,7 +202,7 @@ public class Class190 {
 		client.aBool7371 = true;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1420130584);
-		Class393.preferences.setValue(Class393.preferences.aClass468_Sub27_8209, Class393.preferences.aClass468_Sub27_8208.method12952((byte) 104), 999317322);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, Class393.preferences.aPreference_Sub27_8208.method12952((byte) 104), 999317322);
 		client.anInt7221 = 0;
 		Class350.method6189((byte) 111);
 		Class388.method6692(2043592347);

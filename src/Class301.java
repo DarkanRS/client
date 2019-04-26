@@ -198,6 +198,6 @@ public class Class301 implements Interface41 {
 	}
 
 	static boolean method5334(int i_0, int i_1, int i_2) {
-		return i_1 >= 1000 && i_0 < 1000 ? true : (i_1 < 1000 && i_0 < 1000 ? (Class96_Sub4.method13788(i_0, -1087183805) ? true : !Class96_Sub4.method13788(i_1, -1371032664)) : i_1 >= 1000 && i_0 >= 1000);
+		return i_1 >= 1000 && i_0 < 1000 ? true : (i_1 < 1000 && i_0 < 1000 ? (CutsceneAction_Sub4.method13788(i_0, -1087183805) ? true : !CutsceneAction_Sub4.method13788(i_1, -1371032664)) : i_1 >= 1000 && i_0 >= 1000);
 	}
 }

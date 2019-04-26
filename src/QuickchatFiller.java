@@ -40,7 +40,7 @@ public class QuickchatFiller implements Interface19 {
 	}
 
 	public static void method1139(int i_0) {
-		CursorDefintions.aClass160_5004 = null;
+		CursorDefintions.aNativeSprite_5004 = null;
 		Class187.anInt2351 = -1;
 	}
 
@@ -48,11 +48,11 @@ public class QuickchatFiller implements Interface19 {
 		if (client.aClass118_7257 == null) {
 			if (!Class20.aBool161) {
 				if (Class149_Sub2.DEFAULTS_LOADER_7.aBool5876) {
-					if (Class20.aClass282_Sub50_Sub7_168 != null) {
-						return Class20.aClass282_Sub50_Sub7_168.anInt9578;
+					if (Class20.aCacheableNode_Sub7_168 != null) {
+						return Class20.aCacheableNode_Sub7_168.anInt9578;
 					}
-				} else if (Class96_Sub23.aClass282_Sub50_Sub7_9445 != null) {
-					return Class96_Sub23.aClass282_Sub50_Sub7_9445.anInt9578;
+				} else if (CutsceneAction_Sub23.aCacheableNode_Sub7_9445 != null) {
+					return CutsceneAction_Sub23.aCacheableNode_Sub7_9445.anInt9578;
 				}
 			} else {
 				FontMetrics fontmetrics_1 = Class114.method1887(466263588);
@@ -60,7 +60,7 @@ public class QuickchatFiller implements Interface19 {
 				int i_3 = Class163.mouseRecorder.getMouseY();
 				int i_4;
 				int i_5;
-				Class282_Sub50_Sub7 class282_sub50_sub7_7;
+				CacheableNode_Sub7 class282_sub50_sub7_7;
 				int i_8;
 				if (!Class20.aBool162) {
 					if (i_2 > Class301.anInt3555 && i_2 < Class301.anInt3555 + Class158_Sub2.anInt8975) {
@@ -81,7 +81,7 @@ public class QuickchatFiller implements Interface19 {
 						if (i_4 != -1) {
 							i_5 = 0;
 							NodeIterator nodeiterator_6 = new NodeIterator(Class20.aClass482_171);
-							for (class282_sub50_sub7_7 = (Class282_Sub50_Sub7) nodeiterator_6.method7683(1195046637); class282_sub50_sub7_7 != null; class282_sub50_sub7_7 = (Class282_Sub50_Sub7) nodeiterator_6.next()) {
+							for (class282_sub50_sub7_7 = (CacheableNode_Sub7) nodeiterator_6.method7683(1195046637); class282_sub50_sub7_7 != null; class282_sub50_sub7_7 = (CacheableNode_Sub7) nodeiterator_6.next()) {
 								if (i_5++ == i_4) {
 									return class282_sub50_sub7_7.anInt9578;
 								}
@@ -108,22 +108,22 @@ public class QuickchatFiller implements Interface19 {
 						if (i_4 != -1) {
 							i_5 = 0;
 							class469_9 = new Class469(Class20.aClass477_182);
-							for (Class282_Sub50_Sub15 class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.method7790(); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.next()) {
+							for (CacheableNode_Sub15 class282_sub50_sub15_10 = (CacheableNode_Sub15) class469_9.method7790(); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (CacheableNode_Sub15) class469_9.next()) {
 								if (i_5++ == i_4) {
-									return ((Class282_Sub50_Sub7) class282_sub50_sub15_10.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119).anInt9578;
+									return ((CacheableNode_Sub7) class282_sub50_sub15_10.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119).anInt9578;
 								}
 							}
 						}
-					} else if (Class20.aClass282_Sub50_Sub15_163 != null && i_2 > Class341.anInt3996 && i_2 < Class96_Sub3.anInt8518 + Class341.anInt3996) {
+					} else if (Class20.aCacheableNode_Sub15_163 != null && i_2 > Class341.anInt3996 && i_2 < CutsceneAction_Sub3.anInt8518 + Class341.anInt3996) {
 						i_4 = -1;
-						for (i_5 = 0; i_5 < Class20.aClass282_Sub50_Sub15_163.anInt9769; i_5++) {
+						for (i_5 = 0; i_5 < Class20.aCacheableNode_Sub15_163.anInt9769; i_5++) {
 							if (Class20.aBool187) {
-								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.anInt4978 + Class282_Sub50_Sub2.anInt9471 + 1 + 20;
+								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.anInt4978 + CacheableNode_Sub2.anInt9471 + 1 + 20;
 								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
 									i_4 = i_5;
 								}
 							} else {
-								i_8 = i_5 * Class20.anInt178 + Class282_Sub50_Sub2.anInt9471 + 31;
+								i_8 = i_5 * Class20.anInt178 + CacheableNode_Sub2.anInt9471 + 31;
 								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
 									i_4 = i_5;
 								}
@@ -131,8 +131,8 @@ public class QuickchatFiller implements Interface19 {
 						}
 						if (i_4 != -1) {
 							i_5 = 0;
-							class469_9 = new Class469(Class20.aClass282_Sub50_Sub15_163.aClass477_9770);
-							for (class282_sub50_sub7_7 = (Class282_Sub50_Sub7) class469_9.method7790(); class282_sub50_sub7_7 != null; class282_sub50_sub7_7 = (Class282_Sub50_Sub7) class469_9.next()) {
+							class469_9 = new Class469(Class20.aCacheableNode_Sub15_163.aClass477_9770);
+							for (class282_sub50_sub7_7 = (CacheableNode_Sub7) class469_9.method7790(); class282_sub50_sub7_7 != null; class282_sub50_sub7_7 = (CacheableNode_Sub7) class469_9.next()) {
 								if (i_5++ == i_4) {
 									return class282_sub50_sub7_7.anInt9578;
 								}
@@ -146,8 +146,8 @@ public class QuickchatFiller implements Interface19 {
 	}
 
 	public static void method1142(Class268 class268_0, int i_1) {
-		if (class268_0.aClass282_Sub15_Sub5_3304 != null) {
-			Class79.aClass282_Sub15_Sub4_783.method15276(class268_0.aClass282_Sub15_Sub5_3304);
+		if (class268_0.aNode_Sub15_Sub5_3304 != null) {
+			Class79.aNode_Sub15_Sub4_783.method15276(class268_0.aNode_Sub15_Sub5_3304);
 		} else {
 			class268_0.anInt3297 = Integer.MIN_VALUE;
 		}

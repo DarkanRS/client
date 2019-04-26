@@ -10,23 +10,23 @@ public class Class116 {
 
 	public int anInt1254;
 
-	Class282_Sub15_Sub2 aClass282_Sub15_Sub2_1256;
+	Node_Sub15_Sub2 aNode_Sub15_Sub2_1256;
 
-	Class282_Sub7 aClass282_Sub7_1255;
+	Node_Sub7 aNode_Sub7_1255;
 
-	Class282_Sub15_Sub2 method1954() {
-		return this.aClass282_Sub15_Sub2_1256;
+	Node_Sub15_Sub2 method1954() {
+		return this.aNode_Sub15_Sub2_1256;
 	}
 
-	Class282_Sub7 method1955() {
-		return this.aClass282_Sub7_1255;
+	Node_Sub7 method1955() {
+		return this.aNode_Sub7_1255;
 	}
 
 	public Class116(Index index_1, int i_2) {
 		this.aClass317_1253 = index_1;
 		this.anInt1254 = i_2;
-		this.aClass282_Sub15_Sub2_1256 = new Class282_Sub15_Sub2();
-		this.aClass282_Sub15_Sub2_1256.method15137(-1186547906);
+		this.aNode_Sub15_Sub2_1256 = new Node_Sub15_Sub2();
+		this.aNode_Sub15_Sub2_1256.method15137(-1186547906);
 	}
 
 	public boolean method1956(int i_1) {
@@ -36,15 +36,15 @@ public class Class116 {
 	public boolean method1963() {
 		Class332.method5929(263587449);
 		if (this.anInt1252 == 0) {
-			this.aClass282_Sub7_1255 = Class282_Sub7.method12164(this.aClass317_1253, this.anInt1254, 0);
-			if (this.aClass282_Sub7_1255 == null) {
+			this.aNode_Sub7_1255 = Node_Sub7.method12164(this.aClass317_1253, this.anInt1254, 0);
+			if (this.aNode_Sub7_1255 == null) {
 				return false;
 			}
 			this.aClass250_1257 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
 			this.anInt1252 = 1;
 		}
 		if (this.anInt1252 == 1) {
-			if (!this.aClass282_Sub15_Sub2_1256.method15182(this.aClass282_Sub7_1255, Class148.aClass317_1737, this.aClass250_1257, 1813033404)) {
+			if (!this.aNode_Sub15_Sub2_1256.method15182(this.aNode_Sub7_1255, Class148.aClass317_1737, this.aClass250_1257, 1813033404)) {
 				return false;
 			}
 			this.anInt1252 = 2;
@@ -53,7 +53,7 @@ public class Class116 {
 	}
 
 	public static boolean method1966(int i_0) {
-		return Class148.anInt1730 != 0 ? true : Class148.aClass282_Sub15_Sub2_1735.method15103(1586124800);
+		return Class148.anInt1730 != 0 ? true : Class148.aNode_Sub15_Sub2_1735.method15103(1586124800);
 	}
 
 	public static MeshRasterizer method1969(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5, MeshRasterizer meshrasterizer_6, int i_7, int i_8, int i_9, int i_10, Animation animation_11) {

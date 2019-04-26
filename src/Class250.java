@@ -2,7 +2,7 @@ import java.awt.Color;
 
 public class Class250 {
 
-	static NativeSprite[] aClass160Array3092;
+	static NativeSprite[] aNativeSpriteArray3092;
 
 	IterableNodeMap aClass465_3087 = new IterableNodeMap(256);
 
@@ -14,11 +14,11 @@ public class Class250 {
 
 	Index aClass317_3088;
 
-	Class282_Sub26_Sub1_Sub2 method4285(int i_1, int i_2, int[] ints_3, int i_4) {
+	Node_Sub26_Sub1_Sub2 method4285(int i_1, int i_2, int[] ints_3, int i_4) {
 		int i_5 = i_2 ^ (i_1 << 4 & 0xffff | i_1 >>> 12);
 		i_5 |= i_1 << 16;
 		long long_6 = (long) i_5;
-		Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_8 = (Class282_Sub26_Sub1_Sub2) this.aClass465_3089.get(long_6);
+		Node_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2_8 = (Node_Sub26_Sub1_Sub2) this.aClass465_3089.get(long_6);
 		if (class282_sub26_sub1_sub2_8 != null) {
 			return class282_sub26_sub1_sub2_8;
 		} else if (ints_3 != null && ints_3[0] <= 0) {
@@ -38,11 +38,11 @@ public class Class250 {
 		}
 	}
 
-	Class282_Sub26_Sub1_Sub1 method4286(int i_1, int i_2, int[] ints_3, byte b_4) {
+	Node_Sub26_Sub1_Sub1 method4286(int i_1, int i_2, int[] ints_3, byte b_4) {
 		int i_5 = i_2 ^ (i_1 << 4 & 0xffff | i_1 >>> 12);
 		i_5 |= i_1 << 16;
 		long long_6 = (long) i_5 ^ 0x100000000L;
-		Class282_Sub26_Sub1_Sub1 class282_sub26_sub1_sub1_8 = (Class282_Sub26_Sub1_Sub1) this.aClass465_3090.get(long_6);
+		Node_Sub26_Sub1_Sub1 class282_sub26_sub1_sub1_8 = (Node_Sub26_Sub1_Sub1) this.aClass465_3090.get(long_6);
 		if (class282_sub26_sub1_sub1_8 != null) {
 			return class282_sub26_sub1_sub1_8;
 		} else if (ints_3 != null && ints_3[0] <= 0) {
@@ -72,7 +72,7 @@ public class Class250 {
 		this.aClass317_3088 = index_2;
 	}
 
-	public Class282_Sub26_Sub1_Sub1 method4287(int i_1, int[] ints_2) {
+	public Node_Sub26_Sub1_Sub1 method4287(int i_1, int[] ints_2) {
 		if (this.aClass317_3088.containersCount() == 1) {
 			return this.method4286(0, i_1, ints_2, (byte) 114);
 		} else if (this.aClass317_3088.filesCount(i_1) == 1) {
@@ -82,7 +82,7 @@ public class Class250 {
 		}
 	}
 
-	public Class282_Sub26_Sub1_Sub2 method4290(int i_1, int[] ints_2) {
+	public Node_Sub26_Sub1_Sub2 method4290(int i_1, int[] ints_2) {
 		if (this.aClass317_3091.containersCount() == 1) {
 			return this.method4285(0, i_1, ints_2, 980716221);
 		} else if (this.aClass317_3091.filesCount(i_1) == 1) {
@@ -97,12 +97,12 @@ public class Class250 {
 	}
 
 	static void method4297(int i_0) {
-		Class96_Sub21.keyRecorder.method3238();
+		CutsceneAction_Sub21.keyRecorder.method3238();
 		Class163.mouseRecorder.method3584();
 		Class308.aclient3620.method4704(2044329067);
 		Class351.gameCanvas.setBackground(Color.black);
 		client.anInt7190 = -1;
-		Class96_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
+		CutsceneAction_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -106);
 	}
 
@@ -163,7 +163,7 @@ public class Class250 {
 					continue;
 				}
 			}
-			Class361.method6274((Class521_Sub1) obj_12, ((Animable) obj_12).method12997(), -1607053853);
+			Class361.method6274((Transform_Sub1) obj_12, ((Animable) obj_12).method12997(), -1607053853);
 			if (client.aFloatArray7292[0] >= 0.0F) {
 				if (((Animable) obj_12).method15887()) {
 					Class163 class163_110 = ((Animable) obj_12).method15811(-709125350);
@@ -182,8 +182,8 @@ public class Class250 {
 				int i_28;
 				NativeSprite nativesprite_98;
 				if (!((Animable) obj_12).aBool10318 && !((Animable) obj_12).aClass457_10333.method7666(833555541)) {
-					for (Class275_Sub7 class275_sub7_95 = (Class275_Sub7) ((Animable) obj_12).aClass457_10333.method7659(); class275_sub7_95 != null; class275_sub7_95 = (Class275_Sub7) ((Animable) obj_12).aClass457_10333.method7650((byte) 17)) {
-						Class275_Sub3 class275_sub3_16 = class275_sub7_95.method12600(client.cycles);
+					for (EntityNode_Sub7 class275_sub7_95 = (EntityNode_Sub7) ((Animable) obj_12).aClass457_10333.method7659(); class275_sub7_95 != null; class275_sub7_95 = (EntityNode_Sub7) ((Animable) obj_12).aClass457_10333.method7650((byte) 17)) {
+						EntityNode_Sub3 class275_sub3_16 = class275_sub7_95.method12600(client.cycles);
 						if (class275_sub3_16 == null) {
 							if (class275_sub7_95.method12602()) {
 								class275_sub7_95.method4887();
@@ -249,19 +249,19 @@ public class Class250 {
 						Player player_119 = (Player) obj_12;
 						NativeSprite nativesprite_111;
 						if (player_119.skullId != -1) {
-							nativesprite_111 = Class282_Sub21.aClass160Array7673[player_119.skullId];
+							nativesprite_111 = Node_Sub21.aNativeSpriteArray7673[player_119.skullId];
 							i_92 -= nativesprite_111.method2793();
 							nativesprite_111.method2752((int) (client.aFloatArray7292[0] + (float) i_0 - 12.0F), i_92);
 							i_92 -= 2;
 						}
 						if (player_119.headIconId != -1) {
-							nativesprite_111 = Class16.aClass160Array138[player_119.headIconId];
+							nativesprite_111 = Class16.aNativeSpriteArray138[player_119.headIconId];
 							i_92 -= nativesprite_111.method2793();
 							nativesprite_111.method2752((int) (client.aFloatArray7292[0] + (float) i_0 - 12.0F), i_92);
 							i_92 -= 2;
 						}
-					} else if (npcdefinitions_91.headIcons >= 0 && npcdefinitions_91.headIcons < Class16.aClass160Array138.length) {
-						NativeSprite nativesprite_120 = Class16.aClass160Array138[npcdefinitions_91.headIcons];
+					} else if (npcdefinitions_91.headIcons >= 0 && npcdefinitions_91.headIcons < Class16.aNativeSpriteArray138.length) {
+						NativeSprite nativesprite_120 = Class16.aNativeSpriteArray138[npcdefinitions_91.headIcons];
 						i_92 -= nativesprite_120.method2793();
 						nativesprite_120.method2752((int) ((float) i_0 + client.aFloatArray7292[0] - (float) (nativesprite_120.method2747() >> 1)), i_92);
 						i_92 -= 2;
@@ -278,7 +278,7 @@ public class Class250 {
 						for (i_17 = 0; i_17 < arr_113.length; i_17++) {
 							class180_121 = arr_113[i_17];
 							if (class180_121 != null && class180_121.anInt2236 == 10 && class180_121.anInt2238 == ints_8[i_10]) {
-								nativesprite_98 = Class391.aClass160Array4778[class180_121.anInt2240];
+								nativesprite_98 = Class391.aNativeSpriteArray4778[class180_121.anInt2240];
 								if (nativesprite_98.method2793() > i_15) {
 									i_15 = nativesprite_98.method2793();
 								}
@@ -295,7 +295,7 @@ public class Class250 {
 					for (i_17 = 0; i_17 < arr_113.length; i_17++) {
 						class180_121 = arr_113[i_17];
 						if (class180_121 != null && class180_121.anInt2236 == 1 && client.NPC_UPDATE_INDICES[i_10 - i_7] == class180_121.anInt2238) {
-							nativesprite_98 = Class391.aClass160Array4778[class180_121.anInt2240];
+							nativesprite_98 = Class391.aNativeSpriteArray4778[class180_121.anInt2240];
 							if (nativesprite_98.method2793() > i_15) {
 								i_15 = nativesprite_98.method2793();
 							}
@@ -339,7 +339,7 @@ public class Class250 {
 							((Animable) obj_12).anIntArray10351[i_15] = -1;
 						} else {
 							i_116 = ((Animable) obj_12).method12997() / 2;
-							Class361.method6274((Class521_Sub1) obj_12, i_116, -1352747334);
+							Class361.method6274((Transform_Sub1) obj_12, i_116, -1352747334);
 							if (client.aFloatArray7292[0] > -1.0F) {
 								client.aFloatArray7292[0] += (float) QuickchatFiller.ENTITY_DEFAULTS.hitOffsetsX[i_15];
 								client.aFloatArray7292[1] += (float) QuickchatFiller.ENTITY_DEFAULTS.hitOffsetsY[i_15];
@@ -453,8 +453,8 @@ public class Class250 {
 								}
 								FontRenderer fontrenderer_109 = Renderers.FONT_RENDERER;
 								FontRenderer fontrenderer_53 = Renderers.FONT_RENDERER;
-								FontMetrics fontmetrics_54 = Class282_Sub17_Sub2.aClass414_9933;
-								FontMetrics fontmetrics_55 = Class282_Sub17_Sub2.aClass414_9933;
+								FontMetrics fontmetrics_54 = Node_Sub17_Sub2.aClass414_9933;
+								FontMetrics fontmetrics_55 = Node_Sub17_Sub2.aClass414_9933;
 								int i_56 = hitsplatdefinitions_122.anInt2849;
 								FontRenderer fontrenderer_57;
 								FontMetrics fontmetrics_58;
@@ -742,23 +742,23 @@ public class Class250 {
 				i_19 = i_17 | ~0xffffff;
 				i_115 = client.aClass163Array7419[i_11].method2831();
 				if (i_115 == 0) {
-					Class285.aClass8_3394.method360(string_114, i_0 + i_93, i_92 + i_1, i_19, -16777216);
+					Class285.aFontRenderer_3394.method360(string_114, i_0 + i_93, i_92 + i_1, i_19, -16777216);
 				}
 				if (i_115 == 1) {
-					Class285.aClass8_3394.method387(string_114, i_0 + i_93, i_92 + i_1, i_19, client.anInt7286);
+					Class285.aFontRenderer_3394.method387(string_114, i_0 + i_93, i_92 + i_1, i_19, client.anInt7286);
 				}
 				if (i_115 == 2) {
-					Class285.aClass8_3394.method368(string_114, i_0 + i_93, i_92 + i_1, i_19, client.anInt7286);
+					Class285.aFontRenderer_3394.method368(string_114, i_0 + i_93, i_92 + i_1, i_19, client.anInt7286);
 				}
 				if (i_115 == 3) {
 					i_21 = 150 - client.aClass163Array7419[i_11].method2833() * 150 / client.aClass163Array7419[i_11].method2832(71923775);
-					Class285.aClass8_3394.method381(string_114, i_0 + i_93, i_92 + i_1, i_19, client.anInt7286, i_21);
+					Class285.aFontRenderer_3394.method381(string_114, i_0 + i_93, i_92 + i_1, i_19, client.anInt7286, i_21);
 				}
 				if (i_115 == 4) {
 					i_21 = 150 - client.aClass163Array7419[i_11].method2833() * 150 / client.aClass163Array7419[i_11].method2832(744941042);
 					i_116 = i_21 * (SkyboxIndexLoader.aClass414_3438.getWidthNoSprites(string_114) + 100) / 150;
 					Renderers.SOFTWARE_RENDERER.o(i_0 + i_93 - 50, i_1, i_0 + i_93 + 50, i_3 + i_1);
-					Class285.aClass8_3394.renderText(string_114, i_0 + i_93 + 50 - i_116, i_92 + i_1, i_19, -16777216);
+					Class285.aFontRenderer_3394.renderText(string_114, i_0 + i_93 + 50 - i_116, i_92 + i_1, i_19, -16777216);
 					Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
 				}
 				if (i_115 == 5) {
@@ -771,11 +771,11 @@ public class Class250 {
 					}
 					i_23 = SkyboxIndexLoader.aClass414_3438.anInt4978 + SkyboxIndexLoader.aClass414_3438.anInt4979;
 					Renderers.SOFTWARE_RENDERER.o(i_0, i_92 + i_1 - i_23 - 1, i_0 + i_2, i_92 + i_1 + 5);
-					Class285.aClass8_3394.method360(string_114, i_0 + i_93, i_116 + i_92 + i_1, i_19, -16777216);
+					Class285.aFontRenderer_3394.method360(string_114, i_0 + i_93, i_116 + i_92 + i_1, i_19, -16777216);
 					Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
 				}
 			} else {
-				Class285.aClass8_3394.method360(string_114, i_0 + i_93, i_92 + i_1, -256, -16777216);
+				Class285.aFontRenderer_3394.method360(string_114, i_0 + i_93, i_92 + i_1, -256, -16777216);
 			}
 		}
 	}

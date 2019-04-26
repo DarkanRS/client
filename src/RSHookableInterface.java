@@ -5,7 +5,7 @@ public class RSHookableInterface {
 	boolean method8764(int i_1, int i_2) {
 		IComponentDefinitions icomponentdefinitions_4 = Index.getIComponentDefinitions(i_1, i_2);
 		if (icomponentdefinitions_4 != null) {
-			this.inter = Class468_Sub8.INTERFACES[i_1 >> 16];
+			this.inter = Preference_Sub8.INTERFACES[i_1 >> 16];
 			this.defs = icomponentdefinitions_4;
 			return true;
 		} else {
@@ -39,7 +39,7 @@ public class RSHookableInterface {
 
 	static final void method8777(int i_0, byte b_1) {
 		if (MovingAnimation.isInterfaceLoaded(i_0, (int[]) null, -1514339264)) {
-			Class464.method7743(Class468_Sub8.INTERFACES[i_0].components, -1);
+			Class464.method7743(Preference_Sub8.INTERFACES[i_0].components, -1);
 		}
 
 	}

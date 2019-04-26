@@ -8,9 +8,9 @@ public class Class278_Sub1 extends Class278 {
 
     byte[][] aByteArrayArray8111 = new byte[10][];
 
-    RsByteBuffer aClass282_Sub35_8112 = new RsByteBuffer((byte[]) null);
+    RsByteBuffer aNode_Sub35_8112 = new RsByteBuffer((byte[]) null);
 
-    RsByteBuffer aClass282_Sub35_8116 = new RsByteBuffer((byte[]) null);
+    RsByteBuffer aNode_Sub35_8116 = new RsByteBuffer((byte[]) null);
 
     Index aClass317_8117;
 
@@ -27,50 +27,50 @@ public class Class278_Sub1 extends Class278 {
             if (bytes_2 == null) {
                 throw new IllegalStateException("");
             }
-            this.aClass282_Sub35_8116.buffer = bytes_2;
-            this.aClass282_Sub35_8116.index = 0 * -1990677291;
+            this.aNode_Sub35_8116.buffer = bytes_2;
+            this.aNode_Sub35_8116.index = 0 * -1990677291;
             i_3 = bytes_2.length >> 1;
             this.anIntArray8114 = new int[i_3];
             for (i_4 = 0; i_4 < i_3; i_4++) {
-                this.anIntArray8114[i_4] = this.aClass282_Sub35_8116.readUnsignedShort();
+                this.anIntArray8114[i_4] = this.aNode_Sub35_8116.readUnsignedShort();
             }
         }
         if (-285637449 * this.anInt8115 * -603678457 >= this.anIntArray8114.length) {
             return -1;
         } else {
             this.method13447(492449179);
-            this.aClass282_Sub35_8116.buffer = bytes_1;
-            this.aClass282_Sub35_8116.index = 0 * -1990677291;
+            this.aNode_Sub35_8116.buffer = bytes_1;
+            this.aNode_Sub35_8116.index = 0 * -1990677291;
             do {
-                if (-1990677291 * this.aClass282_Sub35_8116.index * -1115476867 >= this.aClass282_Sub35_8116.buffer.length) {
-                    this.aClass282_Sub35_8116.buffer = null;
+                if (-1990677291 * this.aNode_Sub35_8116.index * -1115476867 >= this.aNode_Sub35_8116.buffer.length) {
+                    this.aNode_Sub35_8116.buffer = null;
                     return bytes_1.length;
                 }
-                if (this.aClass282_Sub35_8112.buffer == null) {
+                if (this.aNode_Sub35_8112.buffer == null) {
                     if (this.aByteArrayArray8111[0] == null) {
-                        this.aClass282_Sub35_8116.buffer = null;
-                        return this.aClass282_Sub35_8116.index * -1115476867 * -1990677291;
+                        this.aNode_Sub35_8116.buffer = null;
+                        return this.aNode_Sub35_8116.index * -1115476867 * -1990677291;
                     }
-                    this.aClass282_Sub35_8112.buffer = this.aByteArrayArray8111[0];
+                    this.aNode_Sub35_8112.buffer = this.aByteArrayArray8111[0];
                 }
-                int i_5 = this.aClass282_Sub35_8116.buffer.length - -1990677291 * this.aClass282_Sub35_8116.index * -1115476867;
-                i_3 = this.aClass282_Sub35_8112.buffer.length - -1990677291 * this.aClass282_Sub35_8112.index * -1115476867;
+                int i_5 = this.aNode_Sub35_8116.buffer.length - -1990677291 * this.aNode_Sub35_8116.index * -1115476867;
+                i_3 = this.aNode_Sub35_8112.buffer.length - -1990677291 * this.aNode_Sub35_8112.index * -1115476867;
                 if (i_5 < i_3) {
-                    this.aClass282_Sub35_8112.readBytes(this.aClass282_Sub35_8116.buffer, this.aClass282_Sub35_8116.index * -1115476867 * -1990677291, i_5);
-                    this.aClass282_Sub35_8116.buffer = null;
+                    this.aNode_Sub35_8112.readBytes(this.aNode_Sub35_8116.buffer, this.aNode_Sub35_8116.index * -1115476867 * -1990677291, i_5);
+                    this.aNode_Sub35_8116.buffer = null;
                     return bytes_1.length;
                 }
-                this.aClass282_Sub35_8116.writeBytes(this.aClass282_Sub35_8112.buffer, this.aClass282_Sub35_8112.index * -1115476867 * -1990677291, i_3);
-                this.aClass282_Sub35_8112.buffer = null;
-                this.aClass282_Sub35_8112.index = 0 * -1990677291;
+                this.aNode_Sub35_8116.writeBytes(this.aNode_Sub35_8112.buffer, this.aNode_Sub35_8112.index * -1115476867 * -1990677291, i_3);
+                this.aNode_Sub35_8112.buffer = null;
+                this.aNode_Sub35_8112.index = 0 * -1990677291;
                 this.anInt8115 = (this.anInt8115 * -603678457 + -603678457) * -285637449;
                 for (i_4 = 0; i_4 < 9; i_4++) {
                     this.aByteArrayArray8111[i_4] = this.aByteArrayArray8111[1 + i_4];
                 }
                 this.aByteArrayArray8111[9] = null;
             } while (this.anInt8115 * -603678457 * -285637449 < this.anIntArray8114.length);
-            this.aClass282_Sub35_8116.buffer = null;
-            return -1990677291 * this.aClass282_Sub35_8116.index * -1115476867;
+            this.aNode_Sub35_8116.buffer = null;
+            return -1990677291 * this.aNode_Sub35_8116.index * -1115476867;
         }
     }
 
@@ -91,50 +91,50 @@ public class Class278_Sub1 extends Class278 {
             if (bytes_3 == null) {
                 throw new IllegalStateException("");
             }
-            this.aClass282_Sub35_8116.buffer = bytes_3;
-            this.aClass282_Sub35_8116.index = 0;
+            this.aNode_Sub35_8116.buffer = bytes_3;
+            this.aNode_Sub35_8116.index = 0;
             i_4 = bytes_3.length >> 1;
             this.anIntArray8114 = new int[i_4];
             for (i_5 = 0; i_5 < i_4; i_5++) {
-                this.anIntArray8114[i_5] = this.aClass282_Sub35_8116.readUnsignedShort();
+                this.anIntArray8114[i_5] = this.aNode_Sub35_8116.readUnsignedShort();
             }
         }
         if (this.anInt8115 >= this.anIntArray8114.length) {
             return -1;
         } else {
             this.method13447(-1706767091);
-            this.aClass282_Sub35_8116.buffer = bytes_1;
-            this.aClass282_Sub35_8116.index = 0;
+            this.aNode_Sub35_8116.buffer = bytes_1;
+            this.aNode_Sub35_8116.index = 0;
             do {
-                if (this.aClass282_Sub35_8116.index >= this.aClass282_Sub35_8116.buffer.length) {
-                    this.aClass282_Sub35_8116.buffer = null;
+                if (this.aNode_Sub35_8116.index >= this.aNode_Sub35_8116.buffer.length) {
+                    this.aNode_Sub35_8116.buffer = null;
                     return bytes_1.length;
                 }
-                if (this.aClass282_Sub35_8112.buffer == null) {
+                if (this.aNode_Sub35_8112.buffer == null) {
                     if (this.aByteArrayArray8111[0] == null) {
-                        this.aClass282_Sub35_8116.buffer = null;
-                        return this.aClass282_Sub35_8116.index;
+                        this.aNode_Sub35_8116.buffer = null;
+                        return this.aNode_Sub35_8116.index;
                     }
-                    this.aClass282_Sub35_8112.buffer = this.aByteArrayArray8111[0];
+                    this.aNode_Sub35_8112.buffer = this.aByteArrayArray8111[0];
                 }
-                int i_6 = this.aClass282_Sub35_8116.buffer.length - this.aClass282_Sub35_8116.index;
-                i_4 = this.aClass282_Sub35_8112.buffer.length - this.aClass282_Sub35_8112.index;
+                int i_6 = this.aNode_Sub35_8116.buffer.length - this.aNode_Sub35_8116.index;
+                i_4 = this.aNode_Sub35_8112.buffer.length - this.aNode_Sub35_8112.index;
                 if (i_6 < i_4) {
-                    this.aClass282_Sub35_8112.readBytes(this.aClass282_Sub35_8116.buffer, this.aClass282_Sub35_8116.index, i_6);
-                    this.aClass282_Sub35_8116.buffer = null;
+                    this.aNode_Sub35_8112.readBytes(this.aNode_Sub35_8116.buffer, this.aNode_Sub35_8116.index, i_6);
+                    this.aNode_Sub35_8116.buffer = null;
                     return bytes_1.length;
                 }
-                this.aClass282_Sub35_8116.writeBytes(this.aClass282_Sub35_8112.buffer, this.aClass282_Sub35_8112.index, i_4);
-                this.aClass282_Sub35_8112.buffer = null;
-                this.aClass282_Sub35_8112.index = 0;
+                this.aNode_Sub35_8116.writeBytes(this.aNode_Sub35_8112.buffer, this.aNode_Sub35_8112.index, i_4);
+                this.aNode_Sub35_8112.buffer = null;
+                this.aNode_Sub35_8112.index = 0;
                 ++this.anInt8115;
                 for (i_5 = 0; i_5 < 9; i_5++) {
                     this.aByteArrayArray8111[i_5] = this.aByteArrayArray8111[i_5 + 1];
                 }
                 this.aByteArrayArray8111[9] = null;
             } while (this.anInt8115 < this.anIntArray8114.length);
-            this.aClass282_Sub35_8116.buffer = null;
-            return this.aClass282_Sub35_8116.index;
+            this.aNode_Sub35_8116.buffer = null;
+            return this.aNode_Sub35_8116.index;
         }
     }
 
@@ -156,7 +156,7 @@ public class Class278_Sub1 extends Class278 {
                 int i_5 = (int) (-client.aFloat7365);
                 i_5 = i_5 + client.anInt7255 * 2 & 0x3fff;
                 i_5 <<= 2;
-                Class16.aClass160_146.method2761((float) icomponentdefinitions_0.anInt1301 / 2.0F + (float) i_1, (float) icomponentdefinitions_0.anInt1429 / 2.0F + (float) i_2, i_5, class119_4.aClass455_1456, i_1, i_2);
+                Class16.aNativeSprite_146.method2761((float) icomponentdefinitions_0.anInt1301 / 2.0F + (float) i_1, (float) icomponentdefinitions_0.anInt1429 / 2.0F + (float) i_2, i_5, class119_4.aClass455_1456, i_1, i_2);
             } else {
                 Renderers.SOFTWARE_RENDERER.DA(class119_4.aClass455_1456, i_1, i_2);
             }

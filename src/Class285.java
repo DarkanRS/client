@@ -2,26 +2,26 @@ import java.util.Stack;
 
 public class Class285 {
 
-	public Class521_Sub1 aClass521_Sub1_3391;
+	public Transform_Sub1 aTransform_Sub1_3391;
 
 	boolean aBool3392;
 
 	Login aClass284_3393;
 
-	public static FontRenderer aClass8_3394;
+	public static FontRenderer aFontRenderer_3394;
 
 	static Stack aStack3390 = new Stack();
 
 	public boolean method5019(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		int i_5 = this.aClass521_Sub1_3391.method12996();
-		if (this.aClass521_Sub1_3391.aClass275_Sub5Array7965 != null) {
-			for (int i_6 = 0; i_6 < this.aClass521_Sub1_3391.aClass275_Sub5Array7965.length; i_6++) {
-				this.aClass521_Sub1_3391.aClass275_Sub5Array7965[i_6].anInt7851 <<= i_5;
-				if (this.aClass521_Sub1_3391.aClass275_Sub5Array7965[i_6].method12594(this.aClass284_3393.anInt3387 + i_2, i_3 + this.aClass284_3393.anInt3385) && this.aClass521_Sub1_3391.method12983(graphicalrenderer_1, i_2, i_3)) {
-					this.aClass521_Sub1_3391.aClass275_Sub5Array7965[i_6].anInt7851 >>= i_5;
+		int i_5 = this.aTransform_Sub1_3391.method12996();
+		if (this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965 != null) {
+			for (int i_6 = 0; i_6 < this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965.length; i_6++) {
+				this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].anInt7851 <<= i_5;
+				if (this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].method12594(this.aClass284_3393.anInt3387 + i_2, i_3 + this.aClass284_3393.anInt3385) && this.aTransform_Sub1_3391.method12983(graphicalrenderer_1, i_2, i_3)) {
+					this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].anInt7851 >>= i_5;
 					return true;
 				}
-				this.aClass521_Sub1_3391.aClass275_Sub5Array7965[i_6].anInt7851 >>= i_5;
+				this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].anInt7851 >>= i_5;
 			}
 		}
 		return false;

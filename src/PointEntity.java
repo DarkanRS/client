@@ -1,4 +1,4 @@
-public class PointEntity extends Class275_Sub1 {
+public class PointEntity extends EntityNode_Sub1 {
 
 	public int y;
 	public int x;

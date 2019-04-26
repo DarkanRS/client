@@ -6,12 +6,12 @@ public class Class151 {
     public Class464 aClass464_1961 = new Class464();
 
     public static void decodeWorldList(boolean refresh, byte[] data) {
-        if (Class96_Sub20.WORLD_LIST_BUFFER == null) {
-            Class96_Sub20.WORLD_LIST_BUFFER = new RsByteBuffer(20000);
+        if (CutsceneAction_Sub20.WORLD_LIST_BUFFER == null) {
+            CutsceneAction_Sub20.WORLD_LIST_BUFFER = new RsByteBuffer(20000);
         }
-        Class96_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
+        CutsceneAction_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
         if (refresh) {
-            Class468_Sub10.decodeWorldList(Class96_Sub20.WORLD_LIST_BUFFER.buffer);
+            Preference_Sub10.decodeWorldList(CutsceneAction_Sub20.WORLD_LIST_BUFFER.buffer);
             Class448.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
             int i_3 = 0;
             for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {
@@ -22,7 +22,7 @@ public class Class151 {
             }
             Class448.aBool5422 = false;
             Class448.aLong5425 = TextureDetails.time();
-            Class96_Sub20.WORLD_LIST_BUFFER = null;
+            CutsceneAction_Sub20.WORLD_LIST_BUFFER = null;
         }
     }
 
@@ -57,7 +57,7 @@ public class Class151 {
                     if (icomponentdefinitions_4.aClass118Array1439 != null) {
                         method2591(icomponentdefinitions_4.aClass118Array1439, i_1, (byte) -28);
                     }
-                    Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
+                    Node_Sub44 class282_sub44_5 = (Node_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
                     if (class282_sub44_5 != null) {
                         Class383.method6514(class282_sub44_5.anInt8063, i_1, -138211954);
                     }
@@ -86,7 +86,7 @@ public class Class151 {
     }
 
     static final void method2592(byte b_0) {
-        if (!Class282_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState)) {
+        if (!Node_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState)) {
             ClanVarSettingsIndexLoader.aClass202_2883 = client.outputContext.getConnection();
             client.outputContext.method3061(-1872117357);
             Class365.setGameState(10);
@@ -99,7 +99,7 @@ public class Class151 {
         try {
             String str_3 = "";
             if (throwable_1 != null) {
-                str_3 = Class96_Sub3.method13787(throwable_1);
+                str_3 = CutsceneAction_Sub3.method13787(throwable_1);
             }
             if (string_0 != null) {
                 if (throwable_1 != null) {

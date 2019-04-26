@@ -55,7 +55,7 @@ public class Class176 {
 	}
 
 	public static void method2977(int i_0) {
-		Class96_Sub5.method14243();
+		CutsceneAction_Sub5.method14243();
 	}
 
 	static long method2979(int i_0) {

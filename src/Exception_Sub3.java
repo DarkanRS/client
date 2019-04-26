@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Exception_Sub3 extends Exception {
 
 	public static void method15619(boolean bool_0, int i_1) {
-		Class282_Sub20_Sub24.method15391(941725182);
+		Node_Sub20_Sub24.method15391(941725182);
 		if (TextureDetails.method2875(client.gameState, -1881307804)) {
 			BufferedConnectionContext[] arr_2 = client.aClass184Array7220;
 
@@ -27,7 +27,7 @@ public class Exception_Sub3 extends Exception {
 				}
 			}
 
-			Class282_Sub20_Sub24.method15391(-1015227977);
+			Node_Sub20_Sub24.method15391(-1015227977);
 		}
 
 	}

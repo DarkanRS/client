@@ -5,12 +5,12 @@ public class Class141_Sub6 extends Class141 {
 	}
 
 	void method2400(Class137 class137_1, int i_2) {
-		this.aClass505_Sub1_1664.method13654(class137_1);
-		this.aClass505_Sub1_1664.method13612(i_2);
+		this.aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+		this.aGraphicalRenderer_Sub1_1664.method13612(i_2);
 	}
 
 	void method2397(boolean bool_1) {
-		this.aClass505_Sub1_1664.method13621(true);
+		this.aGraphicalRenderer_Sub1_1664.method13621(true);
 	}
 
 	void method2408(boolean bool_1) {
@@ -26,15 +26,15 @@ public class Class141_Sub6 extends Class141 {
 	}
 
 	void method2411() {
-		this.aClass505_Sub1_1664.method13621(false);
+		this.aGraphicalRenderer_Sub1_1664.method13621(false);
 	}
 
 	void method2398() {
-		this.aClass505_Sub1_1664.method13621(false);
+		this.aGraphicalRenderer_Sub1_1664.method13621(false);
 	}
 
 	void method2403(boolean bool_1) {
-		this.aClass505_Sub1_1664.method13621(true);
+		this.aGraphicalRenderer_Sub1_1664.method13621(true);
 	}
 
 	void method2404(boolean bool_1) {
@@ -51,8 +51,8 @@ public class Class141_Sub6 extends Class141 {
 	}
 
 	void method2394(Class137 class137_1, int i_2) {
-		this.aClass505_Sub1_1664.method13654(class137_1);
-		this.aClass505_Sub1_1664.method13612(i_2);
+		this.aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+		this.aGraphicalRenderer_Sub1_1664.method13612(i_2);
 	}
 
 	void method2396(int i_1, int i_2) {
@@ -66,22 +66,22 @@ public class Class141_Sub6 extends Class141 {
 	}
 
 	void method2402(boolean bool_1) {
-		this.aClass505_Sub1_1664.method13621(true);
+		this.aGraphicalRenderer_Sub1_1664.method13621(true);
 	}
 
 	void method2412(Class137 class137_1, int i_2) {
-		this.aClass505_Sub1_1664.method13654(class137_1);
-		this.aClass505_Sub1_1664.method13612(i_2);
+		this.aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+		this.aGraphicalRenderer_Sub1_1664.method13612(i_2);
 	}
 
 	void method2413(Class137 class137_1, int i_2) {
-		this.aClass505_Sub1_1664.method13654(class137_1);
-		this.aClass505_Sub1_1664.method13612(i_2);
+		this.aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+		this.aGraphicalRenderer_Sub1_1664.method13612(i_2);
 	}
 
 	void method2414(Class137 class137_1, int i_2) {
-		this.aClass505_Sub1_1664.method13654(class137_1);
-		this.aClass505_Sub1_1664.method13612(i_2);
+		this.aGraphicalRenderer_Sub1_1664.method13654(class137_1);
+		this.aGraphicalRenderer_Sub1_1664.method13612(i_2);
 	}
 
 }

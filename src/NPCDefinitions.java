@@ -314,7 +314,7 @@ public class NPCDefinitions {
 					}
 				}
 				if (animation_5 != null && animation_6 != null) {
-					Class521_Sub1_Sub3_Sub1.method16078(meshrasterizer_37, animation_5, animation_6, 407704915);
+					Transform_Sub1_Sub3_Sub1.method16078(meshrasterizer_37, animation_5, animation_6, 407704915);
 				} else if (animation_5 != null) {
 					animation_5.rasterize(meshrasterizer_37, 0);
 				} else if (animation_6 != null) {
@@ -646,7 +646,7 @@ public class NPCDefinitions {
 		} else if (opcode == 127) {
 			this.renderEmote = stream.readUnsignedShort();
 		} else if (opcode == 128) {
-			Class386.identify(Class8_Sub3.method14339(), stream.readUnsignedByte());
+			Class386.identify(FontRenderer_Sub3.method14339(), stream.readUnsignedByte());
 		} else if (opcode == 134) {
 			this.walkingAnimation = stream.readUnsignedShort();
 			if (this.walkingAnimation == 65535) {

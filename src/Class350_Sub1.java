@@ -18,12 +18,12 @@ public class Class350_Sub1 extends Class350 {
 	}
 
 	static final void method12516() {
-		Class282_Sub31 class282_sub31_1;
-		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.head(); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(486596704)) {
+		Node_Sub31 class282_sub31_1;
+		for (class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7775.head(); class282_sub31_1 != null; class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7775.next(486596704)) {
 			IterableNodeMap.method7772(class282_sub31_1, false);
 		}
 
-		for (class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7776.head(); class282_sub31_1 != null; class282_sub31_1 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(2087235894)) {
+		for (class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7776.head(); class282_sub31_1 != null; class282_sub31_1 = (Node_Sub31) Node_Sub31.aClass482_7776.next(2087235894)) {
 			IterableNodeMap.method7772(class282_sub31_1, true);
 		}
 

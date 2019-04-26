@@ -2,11 +2,11 @@ final class Class17 implements Interface25 {
 
     public static int anInt148;
 
-    public boolean method182(Class521_Sub1_Sub1 class521_sub1_sub1_1) {
+    public boolean method182(Transform_Sub1_Sub1 class521_sub1_sub1_1) {
         return class521_sub1_sub1_1 instanceof SceneObject;
     }
 
-    public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1_1) {
+    public boolean method183(Transform_Sub1_Sub1 class521_sub1_sub1_1) {
         return class521_sub1_sub1_1 instanceof SceneObject;
     }
 

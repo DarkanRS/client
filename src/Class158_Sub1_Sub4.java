@@ -8,12 +8,12 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	int anInt10230;
 	int anInt10229;
 	Interface13[] anInterface13Array10233 = new Interface13[4];
-	OpenGLGraphicalRenderer aClass505_Sub1_10227;
+	OpenGLGraphicalRenderer aGraphicalRenderer_Sub1_10227;
 	Interface13 anInterface13_10232;
 
 	public void method186() {
 		if (this.anInt10228 != 0) {
-			this.aClass505_Sub1_10227.method13678(this.anInt10228);
+			this.aGraphicalRenderer_Sub1_10227.method13678(this.anInt10228);
 			this.anInt10228 = 0;
 		}
 
@@ -33,7 +33,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 		}
 
 		this.anInt10226 = 0;
-		this.aClass505_Sub1_10227.method13578();
+		this.aGraphicalRenderer_Sub1_10227.method13578();
 		return true;
 	}
 
@@ -55,8 +55,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_4.method74();
 				this.anInt10229 = interface13_4.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 126)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 126)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -64,7 +64,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13Array10233[i_1] = interface13_4;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 120)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 120)) {
 			this.method15622(i_1);
 		} else {
 			this.anInt10226 |= i_3;
@@ -90,7 +90,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	void method15624(int i_3, int i_4, boolean bool_8) {
 		if (true | bool_8) {
 			int i_9 = this.anInt10230;
-			int i_10 = this.aClass505_Sub1_10227.method8523((byte) 123).method2716();
+			int i_10 = this.aGraphicalRenderer_Sub1_10227.method8523((byte) 123).method2716();
 			int i_11 = 0;
 			if (bool_8) {
 				i_11 |= 0x100;
@@ -130,8 +130,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_4.method74();
 				this.anInt10229 = interface13_4.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 126)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 126)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -139,7 +139,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13Array10233[i_1] = interface13_4;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 111)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 111)) {
 			this.method15622(i_1);
 		} else {
 			this.anInt10226 |= i_3;
@@ -151,7 +151,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 		if (!class505_sub1_1.aBool8472) {
 			throw new IllegalStateException("");
 		} else {
-			this.aClass505_Sub1_10227 = class505_sub1_1;
+			this.aGraphicalRenderer_Sub1_10227 = class505_sub1_1;
 			int[] ints_2 = new int[1];
 			OpenGL.glGenFramebuffersEXT(1, ints_2, 0);
 			this.anInt10228 = ints_2[0];
@@ -160,7 +160,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 
 	public void method212() {
 		if (this.anInt10228 != 0) {
-			this.aClass505_Sub1_10227.method13678(this.anInt10228);
+			this.aGraphicalRenderer_Sub1_10227.method13678(this.anInt10228);
 			this.anInt10228 = 0;
 		}
 
@@ -205,8 +205,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_4.method74();
 				this.anInt10229 = interface13_4.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 105)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 105)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -214,7 +214,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13Array10233[i_1] = interface13_4;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 117)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 117)) {
 			this.method15622(i_1);
 		} else {
 			this.anInt10226 |= i_3;
@@ -236,7 +236,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 		}
 
 		this.anInt10226 = 0;
-		this.aClass505_Sub1_10227.method13578();
+		this.aGraphicalRenderer_Sub1_10227.method13578();
 		return true;
 	}
 
@@ -258,8 +258,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_4.method74();
 				this.anInt10229 = interface13_4.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 116)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 116)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -267,7 +267,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13Array10233[i_1] = interface13_4;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 116)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 116)) {
 			this.method15622(i_1);
 		} else {
 			this.anInt10226 |= i_3;
@@ -292,8 +292,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_2.method74();
 				this.anInt10229 = interface13_2.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 113)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 113)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -301,7 +301,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13_10232 = interface13_2;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 104)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 104)) {
 			this.method15625();
 		} else {
 			this.anInt10226 |= 0x10;
@@ -326,8 +326,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_2.method74();
 				this.anInt10229 = interface13_2.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 109)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 109)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -335,7 +335,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13_10232 = interface13_2;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 124)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 124)) {
 			this.method15625();
 		} else {
 			this.anInt10226 |= 0x10;
@@ -360,8 +360,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_2.method74();
 				this.anInt10229 = interface13_2.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 112)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 112)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -369,7 +369,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13_10232 = interface13_2;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 107)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 107)) {
 			this.method15625();
 		} else {
 			this.anInt10226 |= 0x10;
@@ -396,7 +396,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 		}
 
 		this.anInt10226 = 0;
-		this.aClass505_Sub1_10227.method13578();
+		this.aGraphicalRenderer_Sub1_10227.method13578();
 		return true;
 	}
 
@@ -417,8 +417,8 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			} else {
 				this.anInt10230 = interface13_2.method74();
 				this.anInt10229 = interface13_2.method1();
-				if (this == this.aClass505_Sub1_10227.method8523((byte) 124)) {
-					this.aClass505_Sub1_10227.method13639();
+				if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 124)) {
+					this.aGraphicalRenderer_Sub1_10227.method13639();
 				}
 			}
 
@@ -426,7 +426,7 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 			this.anInterface13_10232 = interface13_2;
 		}
 
-		if (this == this.aClass505_Sub1_10227.method8523((byte) 127)) {
+		if (this == this.aGraphicalRenderer_Sub1_10227.method8523((byte) 127)) {
 			this.method15625();
 		} else {
 			this.anInt10226 |= 0x10;

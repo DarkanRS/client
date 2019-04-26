@@ -4,7 +4,7 @@ public class i extends Ground implements Interface40 {
 	NodeCollection aClass482_7143 = new NodeCollection();
 	ja aja7144;
 
-	public void method6721(Class282_Sub24 class282_sub24_1, int[] ints_2) {
+	public void method6721(Node_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1);
 		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -66), class282_sub24_1.method12369(), class282_sub24_1.method12394(1778675317), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2137870600), ints_2);
 	}
@@ -211,7 +211,7 @@ public class i extends Ground implements Interface40 {
 		int i_7 = 0;
 		float[] floats_8 = new float[this.aClass482_7143.size()];
 
-		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(89434836)) {
+		for (Node_Sub24 class282_sub24_9 = (Node_Sub24) this.aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Node_Sub24) this.aClass482_7143.next(89434836)) {
 			floats_8[i_7++] = class282_sub24_9.method12395(-730968094);
 		}
 
@@ -243,7 +243,7 @@ public class i extends Ground implements Interface40 {
 
 	public native void u(Shadow var1, int var2, int var3, int var4, int var5, boolean var6);
 
-	public void method6713(Class282_Sub24 class282_sub24_1, int[] ints_2) {
+	public void method6713(Node_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1);
 		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -36), class282_sub24_1.method12369(), class282_sub24_1.method12394(1367026999), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2137393590), ints_2);
 	}
@@ -275,7 +275,7 @@ public class i extends Ground implements Interface40 {
 		int i_7 = 0;
 		float[] floats_8 = new float[this.aClass482_7143.size()];
 
-		for (Class282_Sub24 class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Class282_Sub24) this.aClass482_7143.next(-1062392884)) {
+		for (Node_Sub24 class282_sub24_9 = (Node_Sub24) this.aClass482_7143.head(); class282_sub24_9 != null; class282_sub24_9 = (Node_Sub24) this.aClass482_7143.next(-1062392884)) {
 			floats_8[i_7++] = class282_sub24_9.method12395(1226134811);
 		}
 
@@ -315,14 +315,14 @@ public class i extends Ground implements Interface40 {
 
 	public native void ma(boolean var1);
 
-	public void method6720(Class282_Sub24 class282_sub24_1, int[] ints_2) {
+	public void method6720(Node_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1);
 		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -36), class282_sub24_1.method12369(), class282_sub24_1.method12394(1861802480), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2141041870), ints_2);
 	}
 
 	public native void x(boolean var1);
 
-	public void method6711(Class282_Sub24 class282_sub24_1, int[] ints_2) {
+	public void method6711(Node_Sub24 class282_sub24_1, int[] ints_2) {
 		this.aClass482_7143.append(class282_sub24_1);
 		this.A(class282_sub24_1.hashCode(), class282_sub24_1.method12368((byte) -75), class282_sub24_1.method12369(), class282_sub24_1.method12394(1800255406), class282_sub24_1.method12370(), class282_sub24_1.method12371(-2136043298), ints_2);
 	}

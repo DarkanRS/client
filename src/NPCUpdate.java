@@ -33,11 +33,11 @@ public class NPCUpdate {
 			client.anInt7210 = client.NPCS.method7748((short) 15812);
 			i_4 = 0;
 			StringNode class282_sub47_9;
-			for (Iterator iterator_8 = client.NPCS.iterator(); iterator_8.hasNext(); client.aClass282_Sub47Array7209[i_4++] = class282_sub47_9) {
+			for (Iterator iterator_8 = client.NPCS.iterator(); iterator_8.hasNext(); client.aNode_Sub47Array7209[i_4++] = class282_sub47_9) {
 				class282_sub47_9 = (StringNode) iterator_8.next();
 			}
 			for (int i_6 = client.anInt7210; i_6 < i_3; i_6++) {
-				client.aClass282_Sub47Array7209[i_6] = null;
+				client.aNode_Sub47Array7209[i_6] = null;
 			}
 		}
 		if (client.outputContext.recievedBuffer.index != client.outputContext.currentPacketSize) {
@@ -52,8 +52,8 @@ public class NPCUpdate {
 				throw new RuntimeException("" + (client.anInt7210 - client.NPC_UPDATE_INDEX));
 			} else {
 				for (i_3 = 0; i_3 < client.anInt7210; i_3++) {
-					if (((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).lastUpdate != client.anInt7332) {
-						throw new RuntimeException("" + ((Animable) client.aClass282_Sub47Array7209[i_3].anObject8068).index);
+					if (((Animable) client.aNode_Sub47Array7209[i_3].anObject8068).lastUpdate != client.anInt7332) {
+						throw new RuntimeException("" + ((Animable) client.aNode_Sub47Array7209[i_3].anObject8068).index);
 					}
 				}
 			}
@@ -139,7 +139,7 @@ public class NPCUpdate {
 				npc_6.index = i_3;
 				class282_sub47_5 = new StringNode(npc_6);
 				client.NPCS.put(class282_sub47_5, (long) i_3);
-				client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
+				client.aNode_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
 				bool_4 = true;
 			}
 			npc_6 = (NPC) class282_sub47_5.anObject8068;
@@ -209,8 +209,8 @@ public class NPCUpdate {
 				i_4 += buffer.readUnsignedByte() << 24;
 			}
 			if ((i_4 & 0x10) != 0) {
-				int[] ints_5 = new int[Class8_Sub3.method14339().length];
-				for (int i_6 = 0; i_6 < Class8_Sub3.method14339().length; i_6++) {
+				int[] ints_5 = new int[FontRenderer_Sub3.method14339().length];
+				for (int i_6 = 0; i_6 < FontRenderer_Sub3.method14339().length; i_6++) {
 					ints_5[i_6] = buffer.readBigSmart();
 				}
 				int i_6 = buffer.readUnsignedByte();

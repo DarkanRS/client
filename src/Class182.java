@@ -4,9 +4,9 @@ public class Class182 {
 
 	static GraphicalRenderer HARDWARE_RENDERER;
 
-	static FontRenderer aClass8_2259;
+	static FontRenderer aFontRenderer_2259;
 
-	public static NativeSprite[] aClass160Array2261;
+	public static NativeSprite[] aNativeSpriteArray2261;
 
 	public static int anInt2262;
 
@@ -19,7 +19,7 @@ public class Class182 {
 	}
 
 	public static BuildEnvironment method3040(int i_0, byte b_1) {
-		BuildEnvironment[] arr_2 = Class275_Sub6.method12598();
+		BuildEnvironment[] arr_2 = EntityNode_Sub6.method12598();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			BuildEnvironment class472_4 = arr_2[i_3];
 			if (i_0 == class472_4.id) {

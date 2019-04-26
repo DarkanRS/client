@@ -6,7 +6,7 @@ public abstract class Class319 implements Interface30 {
 	int anInt3706;
 	boolean aBool3712;
 	Class35 aClass35_3705;
-	Class505_Sub2_Sub1 aClass505_Sub2_Sub1_3700;
+	GraphicalRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_3700;
 	int anInt3707;
 	Class150 aClass150_3708;
 	Class76 aClass76_3710;
@@ -18,20 +18,20 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	void method5699(int i_1) {
-		this.aClass505_Sub2_Sub1_3700.anInt8701 -= i_1;
-		this.aClass505_Sub2_Sub1_3700.anInt8701 += this.method5698();
+		this.aGraphicalRenderer_Sub2_Sub1_3700.anInt8701 -= i_1;
+		this.aGraphicalRenderer_Sub2_Sub1_3700.anInt8701 += this.method5698();
 	}
 
 	public void method26() {
 		if (this.anInt3706 > 0) {
-			this.aClass505_Sub2_Sub1_3700.method15570(this.anInt3706, this.method5698());
+			this.aGraphicalRenderer_Sub2_Sub1_3700.method15570(this.anInt3706, this.method5698());
 			this.anInt3706 = 0;
 		}
 
 	}
 
 	void method5700() {
-		this.aClass505_Sub2_Sub1_3700.method14035(this);
+		this.aGraphicalRenderer_Sub2_Sub1_3700.method14035(this);
 		if (this.aClass35_3705 == Class35.aClass35_382) {
 			OpenGL.glTexParameteri(this.anInt3707, 10241, this.aBool3712 ? 9987 : 9729);
 			OpenGL.glTexParameteri(this.anInt3707, 10240, 9729);
@@ -44,7 +44,7 @@ public abstract class Class319 implements Interface30 {
 
 	boolean method54() {
 		int i_1 = this.method5698();
-		this.aClass505_Sub2_Sub1_3700.method14035(this);
+		this.aGraphicalRenderer_Sub2_Sub1_3700.method14035(this);
 		OpenGL.glGenerateMipmapEXT(this.anInt3707);
 		this.aBool3712 = true;
 		this.method5700();
@@ -61,9 +61,9 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	void method5702(int i_1, int i_2, int i_3, float[] floats_4) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
+		if (i_2 > 0 && !CutsceneAction_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
+		} else if (i_3 > 0 && !CutsceneAction_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_5 = this.aClass150_3708.anInt1959;
@@ -75,7 +75,7 @@ public abstract class Class319 implements Interface30 {
 			float[] floats_11 = new float[i_8 * i_9 * i_5];
 
 			while (true) {
-				OpenGL.glTexImage2Df(i_1, i_6, Class505_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), i_2, i_3, 0, Class505_Sub2_Sub1.method15575(this.aClass150_3708), 5126, floats_10, 0);
+				OpenGL.glTexImage2Df(i_1, i_6, GraphicalRenderer_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), i_2, i_3, 0, GraphicalRenderer_Sub2_Sub1.method15575(this.aClass150_3708), 5126, floats_10, 0);
 				if (i_7 <= 1) {
 					return;
 				}
@@ -126,16 +126,16 @@ public abstract class Class319 implements Interface30 {
 
 	public void method32() {
 		if (this.anInt3706 > 0) {
-			this.aClass505_Sub2_Sub1_3700.method15570(this.anInt3706, this.method5698());
+			this.aGraphicalRenderer_Sub2_Sub1_3700.method15570(this.anInt3706, this.method5698());
 			this.anInt3706 = 0;
 		}
 
 	}
 
 	void method5707(int i_1, int i_2, int i_3, byte[] bytes_4) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
+		if (i_2 > 0 && !CutsceneAction_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
+		} else if (i_3 > 0 && !CutsceneAction_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else {
 			int i_5 = this.aClass150_3708.anInt1959;
@@ -147,7 +147,7 @@ public abstract class Class319 implements Interface30 {
 			byte[] bytes_11 = new byte[i_8 * i_9 * i_5];
 
 			while (true) {
-				OpenGL.glTexImage2Dub(i_1, i_6, Class505_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), i_2, i_3, 0, Class505_Sub2_Sub1.method15575(this.aClass150_3708), 5121, bytes_10, 0);
+				OpenGL.glTexImage2Dub(i_1, i_6, GraphicalRenderer_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), i_2, i_3, 0, GraphicalRenderer_Sub2_Sub1.method15575(this.aClass150_3708), 5121, bytes_10, 0);
 				if (i_7 <= 1) {
 					return;
 				}
@@ -191,9 +191,9 @@ public abstract class Class319 implements Interface30 {
 		}
 	}
 
-	Class319(Class505_Sub2_Sub1 class505_sub2_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
+	Class319(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, int i_2, Class150 class150_3, Class76 class76_4, int i_5, boolean bool_6) {
 		this.aClass35_3705 = Class35.aClass35_382;
-		this.aClass505_Sub2_Sub1_3700 = class505_sub2_sub1_1;
+		this.aGraphicalRenderer_Sub2_Sub1_3700 = class505_sub2_sub1_1;
 		this.anInt3707 = i_2;
 		this.aClass150_3708 = class150_3;
 		this.aClass76_3710 = class76_4;
@@ -206,8 +206,8 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	public void method207() {
-		int i_1 = this.aClass505_Sub2_Sub1_3700.method13963();
-		int i_2 = this.aClass505_Sub2_Sub1_3700.anIntArray10188[i_1];
+		int i_1 = this.aGraphicalRenderer_Sub2_Sub1_3700.method13963();
+		int i_2 = this.aGraphicalRenderer_Sub2_Sub1_3700.anIntArray10188[i_1];
 		if (i_2 != this.anInt3707) {
 			if (i_2 != 0) {
 				OpenGL.glBindTexture(i_2, 0);
@@ -215,7 +215,7 @@ public abstract class Class319 implements Interface30 {
 			}
 
 			OpenGL.glEnable(this.anInt3707);
-			this.aClass505_Sub2_Sub1_3700.anIntArray10188[i_1] = this.anInt3707;
+			this.aGraphicalRenderer_Sub2_Sub1_3700.anIntArray10188[i_1] = this.anInt3707;
 		}
 
 		OpenGL.glBindTexture(this.anInt3707, this.anInt3706);
@@ -254,9 +254,9 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	void method5714(int i_1, int i_2, int i_3, int[] ints_4) {
-		if (i_2 > 0 && !Class96_Sub9.method14585(i_2)) {
+		if (i_2 > 0 && !CutsceneAction_Sub9.method14585(i_2)) {
 			throw new IllegalArgumentException("");
-		} else if (i_3 > 0 && !Class96_Sub9.method14585(i_3)) {
+		} else if (i_3 > 0 && !CutsceneAction_Sub9.method14585(i_3)) {
 			throw new IllegalArgumentException("");
 		} else if (this.aClass150_3708 != Class150.aClass150_1949) {
 			throw new IllegalArgumentException("");
@@ -269,7 +269,7 @@ public abstract class Class319 implements Interface30 {
 			int[] ints_10 = new int[i_7 * i_8];
 
 			while (true) {
-				OpenGL.glTexImage2Di(i_1, i_5, Class505_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), i_2, i_3, 0, 32993, this.aClass505_Sub2_Sub1_3700.anInt10198, ints_9, 0);
+				OpenGL.glTexImage2Di(i_1, i_5, GraphicalRenderer_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), i_2, i_3, 0, 32993, this.aGraphicalRenderer_Sub2_Sub1_3700.anInt10198, ints_9, 0);
 				if (i_6 <= 1) {
 					return;
 				}
@@ -321,8 +321,8 @@ public abstract class Class319 implements Interface30 {
 	}
 
 	public void method203() {
-		int i_1 = this.aClass505_Sub2_Sub1_3700.method13963();
-		int i_2 = this.aClass505_Sub2_Sub1_3700.anIntArray10188[i_1];
+		int i_1 = this.aGraphicalRenderer_Sub2_Sub1_3700.method13963();
+		int i_2 = this.aGraphicalRenderer_Sub2_Sub1_3700.anIntArray10188[i_1];
 		if (i_2 != this.anInt3707) {
 			if (i_2 != 0) {
 				OpenGL.glBindTexture(i_2, 0);
@@ -330,7 +330,7 @@ public abstract class Class319 implements Interface30 {
 			}
 
 			OpenGL.glEnable(this.anInt3707);
-			this.aClass505_Sub2_Sub1_3700.anIntArray10188[i_1] = this.anInt3707;
+			this.aGraphicalRenderer_Sub2_Sub1_3700.anIntArray10188[i_1] = this.anInt3707;
 		}
 
 		OpenGL.glBindTexture(this.anInt3707, this.anInt3706);

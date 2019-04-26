@@ -28,12 +28,12 @@ public class Class423 {
 	}
 
 	static final void method7066(int i_0, int i_1, int i_2, int i_3) {
-		for (Class275_Sub6 class275_sub6_7 = (Class275_Sub6) client.aClass457_7335.method7659(); class275_sub6_7 != null; class275_sub6_7 = (Class275_Sub6) client.aClass457_7335.method7650((byte) 39)) {
+		for (EntityNode_Sub6 class275_sub6_7 = (EntityNode_Sub6) client.aClass457_7335.method7659(); class275_sub6_7 != null; class275_sub6_7 = (EntityNode_Sub6) client.aClass457_7335.method7650((byte) 39)) {
 			if (client.cycles >= class275_sub6_7.anInt7858) {
 				class275_sub6_7.method4887();
 			} else {
 				Class407.method6871(class275_sub6_7.anInt7857, (class275_sub6_7.anInt7859 << 9) + 256, (class275_sub6_7.anInt7854 << 9) + 256, class275_sub6_7.anInt7855 * 2, -1994365952);
-				Class285.aClass8_3394.method360(class275_sub6_7.aString7860, (int) ((float) i_0 + client.aFloatArray7292[0]), (int) ((float) i_1 + client.aFloatArray7292[1]), ~0xffffff | class275_sub6_7.anInt7856, 0);
+				Class285.aFontRenderer_3394.method360(class275_sub6_7.aString7860, (int) ((float) i_0 + client.aFloatArray7292[0]), (int) ((float) i_1 + client.aFloatArray7292[1]), ~0xffffff | class275_sub6_7.anInt7856, 0);
 			}
 		}
 

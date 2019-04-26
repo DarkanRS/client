@@ -17,10 +17,10 @@ public abstract class Class109 {
         CutsceneEntity.aClass317_746 = index_0;
         Class6.anInt46 = i_1;
         Class148.anInt1738 = i_2;
-        Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
+        Node_Sub33.aNode_Sub15_Sub2_7836 = null;
         Class158_Sub2_Sub3.anInt10243 = i_3;
         Class152.aBool1962 = bool_4;
-        Class96_Sub22.anInt9440 = 10000;
+        CutsceneAction_Sub22.anInt9440 = 10000;
         Class148.aLong1740 = (long) 0;
         Class383.anInt4664 = 0;
     }

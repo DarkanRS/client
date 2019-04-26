@@ -41,14 +41,14 @@ public class Class136 {
 			int i_2;
 			byte[] bytes_3;
 			for (i_2 = 0; i_2 < 16; i_2++) {
-				bytes_3 = Class282_Sub17_Sub5.method15410(anObject1637, i_2 * 32768, -1014539390);
+				bytes_3 = Node_Sub17_Sub5.method15410(anObject1637, i_2 * 32768, -1014539390);
 				this.aClass137_Sub1Array1632[i_2] = new Class137_Sub1(class505_sub1_1, 3553, Class150.aClass150_1952, Class76.aClass76_751, 128, 128, true, bytes_3, Class150.aClass150_1952, false);
 			}
 
 			this.aClass137_Sub1Array1634 = new Class137_Sub1[16];
 
 			for (i_2 = 0; i_2 < 16; i_2++) {
-				bytes_3 = Class282_Sub17_Sub5.method15410(anObject1627, i_2 * 32768, 675773741);
+				bytes_3 = Node_Sub17_Sub5.method15410(anObject1627, i_2 * 32768, 675773741);
 				this.aClass137_Sub1Array1634[i_2] = new Class137_Sub1(class505_sub1_1, 3553, Class150.aClass150_1952, Class76.aClass76_751, 128, 128, true, bytes_3, Class150.aClass150_1952, false);
 			}
 		} else {

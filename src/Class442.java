@@ -77,7 +77,7 @@ public final class Class442 {
 
 	static final void method7403(int i_0, int i_1, int i_2, boolean bool_3, int i_4) {
 		if (MovingAnimation.isInterfaceLoaded(i_0, (int[]) null, 1896916428)) {
-			InteractableObject.method16099(Class468_Sub8.INTERFACES[i_0].components, -1, i_1, i_2, bool_3, (byte) 60);
+			InteractableObject.method16099(Preference_Sub8.INTERFACES[i_0].components, -1, i_1, i_2, bool_3, (byte) 60);
 		}
 
 	}

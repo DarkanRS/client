@@ -1,7 +1,7 @@
 public class ClanSettings {
 
 	long aLong631;
-	public static NativeSprite aClass160_647;
+	public static NativeSprite aNativeSprite_647;
 	public int currentOwner = -1;
 	public int replacementOwner = -1;
 	public int banCount;

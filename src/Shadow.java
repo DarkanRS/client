@@ -17,15 +17,15 @@ public abstract class Shadow extends CacheableNode {
         }
     }
 
-    static int method15507(Class282_Sub50_Sub7 class282_sub50_sub7_0, FontMetrics fontmetrics_1) {
+    static int method15507(CacheableNode_Sub7 class282_sub50_sub7_0, FontMetrics fontmetrics_1) {
         String string_3 = IncomingPacket.method6380(class282_sub50_sub7_0, 594489701);
         int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_0, -1355601435);
         if (ints_4 != null) {
             string_3 = string_3 + Class15.method547(ints_4, 1858331234);
         }
-        int i_5 = fontmetrics_1.getWidth(string_3, Class115.aClass160Array1248);
+        int i_5 = fontmetrics_1.getWidth(string_3, Class115.aNativeSpriteArray1248);
         if (class282_sub50_sub7_0.aBool9577) {
-            i_5 += Exception_Sub1.aClass160_10075.method2747() + 4;
+            i_5 += Exception_Sub1.aNativeSprite_10075.method2747() + 4;
         }
         return i_5;
     }

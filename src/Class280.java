@@ -1,17 +1,17 @@
 public class Class280 implements Interface25 {
 
-	Class521_Sub1_Sub1_Sub1 aClass521_Sub1_Sub1_Sub1_3371;
+	Transform_Sub1_Sub1_Sub1 aTransform_Sub1_Sub1_Sub1_3371;
 
-	public boolean method182(Class521_Sub1_Sub1 class521_sub1_sub1_1) {
-		return class521_sub1_sub1_1 == this.aClass521_Sub1_Sub1_Sub1_3371;
+	public boolean method182(Transform_Sub1_Sub1 class521_sub1_sub1_1) {
+		return class521_sub1_sub1_1 == this.aTransform_Sub1_Sub1_Sub1_3371;
 	}
 
-	public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1_1) {
-		return class521_sub1_sub1_1 == this.aClass521_Sub1_Sub1_Sub1_3371;
+	public boolean method183(Transform_Sub1_Sub1 class521_sub1_sub1_1) {
+		return class521_sub1_sub1_1 == this.aTransform_Sub1_Sub1_Sub1_3371;
 	}
 
-	Class280(Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_1) {
-		this.aClass521_Sub1_Sub1_Sub1_3371 = class521_sub1_sub1_sub1_1;
+	Class280(Transform_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_1) {
+		this.aTransform_Sub1_Sub1_Sub1_3371 = class521_sub1_sub1_sub1_1;
 	}
 
 	static final void method4974(long long_0) {
