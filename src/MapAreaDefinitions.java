@@ -274,7 +274,7 @@ public class MapAreaDefinitions {
                 if (client.aBool7344 && !bool_1) {
                     ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
                     if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
-                        PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1728725165);
+                        PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1728725165);
                     }
                 }
                 if (!bool_1) {
@@ -313,7 +313,7 @@ public class MapAreaDefinitions {
                                 if (i_6 == npcdefinitions_3.anInt4854) {
                                     i_8 = npcdefinitions_3.anInt4861;
                                 }
-                                PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1773453670);
+                                PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1773453670);
                             }
                         }
                         if (npcdefinitions_3.aByte4916 == 1) {
@@ -352,7 +352,7 @@ public class MapAreaDefinitions {
                                     if (i_6 == npcdefinitions_3.anInt4854) {
                                         i_9 = npcdefinitions_3.anInt4861;
                                     }
-                                    PlayerAppearance.method4032(arr_11[i_6], ParticleProducerDefinition.method1163(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1021673171);
+                                    PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1021673171);
                                 }
                             }
                         }

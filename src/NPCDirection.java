@@ -87,7 +87,7 @@ public class NPCDirection implements Identifiable {
 			if (long_13 != -1L) {
 				str_15 = long_13 + "ms";
 				if (long_13 > 500L) {
-					str_15 = ParticleProducerDefinition.method1163(16711680) + str_15 + ParticleProducerDefinition.method1163(16776960);
+					str_15 = Utils.rgbToColHexShortcut(16711680) + str_15 + Utils.rgbToColHexShortcut(16776960);
 				}
 			}
 			Class16.aFontRenderer_144.method359("Game: In:" + client.outputContext.anInt2294 + "B/s " + "Out:" + client.outputContext.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
@@ -97,7 +97,7 @@ public class NPCDirection implements Identifiable {
 			if (long_16 != -1L) {
 				str_18 = long_16 + "ms";
 				if (long_16 > 500L) {
-					str_18 = ParticleProducerDefinition.method1163(16711680) + str_18 + ParticleProducerDefinition.method1163(16776960);
+					str_18 = Utils.rgbToColHexShortcut(16711680) + str_18 + Utils.rgbToColHexShortcut(16776960);
 				}
 			}
 			Class16.aFontRenderer_144.method359("Lobby: In:" + client.connectionContext.anInt2294 + "B/s " + "Out:" + client.connectionContext.anInt2293 + "B/s " + "Ping:" + str_18, i_4, i_5, -256, -1);

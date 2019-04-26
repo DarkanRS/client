@@ -96,7 +96,7 @@ public class RsByteBuffer extends Node {
         }
     }
 
-    public void writeJagString(String string_1, int i_2) {
+    public void writeJagString(String string_1) {
         int i_3 = string_1.indexOf(0);
         if (i_3 >= 0) {
             throw new IllegalArgumentException("");

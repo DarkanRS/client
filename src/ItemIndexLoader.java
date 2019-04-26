@@ -251,7 +251,7 @@ public class ItemIndexLoader implements IndexLoader {
 
 	static String method7169(int i_0, int i_1, int i_2) {
 		int i_3 = i_1 - i_0;
-		return i_3 < -9 ? ParticleProducerDefinition.method1163(16711680) : (i_3 < -6 ? ParticleProducerDefinition.method1163(16723968) : (i_3 < -3 ? ParticleProducerDefinition.method1163(16740352) : (i_3 < 0 ? ParticleProducerDefinition.method1163(16756736) : (i_3 > 9 ? ParticleProducerDefinition.method1163(65280) : (i_3 > 6 ? ParticleProducerDefinition.method1163(4259584) : (i_3 > 3 ? ParticleProducerDefinition.method1163(8453888) : (i_3 > 0 ? ParticleProducerDefinition.method1163(12648192) : ParticleProducerDefinition.method1163(16776960))))))));
+		return i_3 < -9 ? Utils.rgbToColHexShortcut(16711680) : (i_3 < -6 ? Utils.rgbToColHexShortcut(16723968) : (i_3 < -3 ? Utils.rgbToColHexShortcut(16740352) : (i_3 < 0 ? Utils.rgbToColHexShortcut(16756736) : (i_3 > 9 ? Utils.rgbToColHexShortcut(65280) : (i_3 > 6 ? Utils.rgbToColHexShortcut(4259584) : (i_3 > 3 ? Utils.rgbToColHexShortcut(8453888) : (i_3 > 0 ? Utils.rgbToColHexShortcut(12648192) : Utils.rgbToColHexShortcut(16776960))))))));
 	}
 
 	static void method7170(int i_0) {

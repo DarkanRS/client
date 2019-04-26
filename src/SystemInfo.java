@@ -4,51 +4,28 @@ import java.util.HashMap;
 public class SystemInfo extends Node {
 
 	String aString8157;
-
 	String aString8160;
-
 	String aString8159;
-
 	String aString8153;
-
 	int[] anIntArray8139 = new int[3];
-
 	int anInt8126;
-
 	boolean aBool8142;
-
 	int anInt8141;
-
 	int anInt8155;
-
 	public int javaRelease;
-
 	int anInt8148;
-
 	public int javaUpdate;
-
 	boolean aBool8150;
-
 	int anInt8151;
-
 	int anInt8146;
-
 	public int anInt8167;
-
 	int anInt8163;
-
 	int anInt8156;
-
 	String aString8165;
-
 	int anInt8168;
-
 	int anInt8121;
-
 	String aString8166;
-
 	int anInt8162;
-
 	int anInt8164;
 
 	public int method13454() {
@@ -91,14 +68,14 @@ public class SystemInfo extends Node {
 		rsbytebuffer_1.writeByte(this.anInt8146);
 		rsbytebuffer_1.write24BitInt(this.anInt8167);
 		rsbytebuffer_1.writeShort(this.anInt8156);
-		rsbytebuffer_1.writeJagString(this.aString8157, 2145026142);
-		rsbytebuffer_1.writeJagString(this.aString8160, 2128264250);
-		rsbytebuffer_1.writeJagString(this.aString8159, 2122985674);
-		rsbytebuffer_1.writeJagString(this.aString8153, 2114964752);
+		rsbytebuffer_1.writeJagString(this.aString8157);
+		rsbytebuffer_1.writeJagString(this.aString8160);
+		rsbytebuffer_1.writeJagString(this.aString8159);
+		rsbytebuffer_1.writeJagString(this.aString8153);
 		rsbytebuffer_1.writeByte(this.anInt8162);
 		rsbytebuffer_1.writeShort(this.anInt8164);
-		rsbytebuffer_1.writeJagString(this.aString8165, 2113125400);
-		rsbytebuffer_1.writeJagString(this.aString8166, 2132826460);
+		rsbytebuffer_1.writeJagString(this.aString8165);
+		rsbytebuffer_1.writeJagString(this.aString8166);
 		rsbytebuffer_1.writeByte(this.anInt8163);
 		rsbytebuffer_1.writeByte(this.anInt8121);
 		for (int i_3 = 0; i_3 < this.anIntArray8139.length; i_3++) {

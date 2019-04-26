@@ -7496,7 +7496,7 @@ public class CS2Interpreter {
 
 	static final void method1817(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = ParticleProducerDefinition.method1163(i_2);
+		executor.stringStack[++executor.stringStackPtr - 1] = Utils.rgbToColHexShortcut(i_2);
 	}
 
 	static final void method7332(CS2Executor executor) {

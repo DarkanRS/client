@@ -647,7 +647,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 											if (client.aBool7344 && class285_34.aTransform_Sub1_3391.plane == VertexNormal.myPlayer.plane) {
 												ParamDefinitions attributedefault_68 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
 												if ((Class506.USE_OPTIONS_FLAGS & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.getCS2Integer(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_68.defaultInt, -1083542144) != attributedefault_68.defaultInt)) {
-													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
+													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
 												}
 											}
 
@@ -690,7 +690,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 															i_28 = itemdefinitions_65.unknownInt21;
 														}
 
-														PlayerAppearance.method4032(arr_69[i_42], ParticleProducerDefinition.method1163(i_38) + itemdefinitions_65.name, i_28, s_70, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1528903882);
+														PlayerAppearance.method4032(arr_69[i_42], Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, i_28, s_70, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1528903882);
 													}
 												}
 											}
@@ -711,7 +711,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 						if (client.aBool7344 && class285_34.aTransform_Sub1_3391.plane == VertexNormal.myPlayer.plane) {
 							ParamDefinitions attributedefault_62 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
 							if ((Class506.USE_OPTIONS_FLAGS & 0x4) != 0 && (attributedefault_62 == null || objectdefinitions_57.method7963(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_62.defaultInt, -2052450472) != attributedefault_62.defaultInt)) {
-								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(65535) + objectdefinitions_57.name, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
+								PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(65535) + objectdefinitions_57.name, Defaults8Loader.anInt5932, 2, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -79), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -2015227666);
 							}
 						}
 					} while (class285_34.aTransform_Sub1_3391.plane != VertexNormal.myPlayer.plane);
@@ -755,7 +755,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 							i_51 = objectdefinitions_57.anInt5666;
 						}
 
-						PlayerAppearance.method4032(arr_63[i_21], ParticleProducerDefinition.method1163(65535) + objectdefinitions_57.name, i_51, s_52, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -98), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -1344607256);
+						PlayerAppearance.method4032(arr_63[i_21], Utils.rgbToColHexShortcut(65535) + objectdefinitions_57.name, i_51, s_52, -1, Class329.method5905(sceneobject_60, i_46, i_47, (byte) -98), i_46, i_47, true, false, (long) sceneobject_60.hashCode(), false, -1344607256);
 					}
 				}
 			}

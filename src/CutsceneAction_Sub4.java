@@ -269,7 +269,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 						client.aString7275 = "Null";
 					}
 
-					client.aString7356 = icomponentdefinitions_23.aString1369 + ParticleProducerDefinition.method1163(16777215);
+					client.aString7356 = icomponentdefinitions_23.aString1369 + Utils.rgbToColHexShortcut(16777215);
 				}
 			} else {
 				OutgoingPacket outgoingpacket_27 = null;

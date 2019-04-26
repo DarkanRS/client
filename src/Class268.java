@@ -75,7 +75,7 @@ public class Class268 {
 				}
 			}
 			if (Class20.anInt169 > 2) {
-				string_2 = string_2 + ParticleProducerDefinition.method1163(16777215) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
+				string_2 = string_2 + Utils.rgbToColHexShortcut(16777215) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
 			}
 			if (Class20.aClass118_183 != null) {
 				FontRenderer fontrenderer_5 = Class20.aClass118_183.method1988(Class487.aClass378_5752, client.anInterface35_7206, -208417273);

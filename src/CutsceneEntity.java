@@ -139,6 +139,6 @@ public final class CutsceneEntity {
 	}
 
 	static String method1354(CacheableNode_Sub15 class282_sub50_sub15_0) {
-		return class282_sub50_sub15_0.aString9771 + ParticleProducerDefinition.method1163(16777215) + " >";
+		return class282_sub50_sub15_0.aString9771 + Utils.rgbToColHexShortcut(16777215) + " >";
 	}
 }

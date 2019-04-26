@@ -2020,7 +2020,7 @@ public final class client extends Engine {
 											aString7275 = "Null";
 										}
 
-										aString7356 = icomponentdefinitions_12.aString1369 + ParticleProducerDefinition.method1163(16777215);
+										aString7356 = icomponentdefinitions_12.aString1369 + Utils.rgbToColHexShortcut(16777215);
 									}
 
 									i_27 = icomponentdefinitions_12.anIntArray1395[i_24];

@@ -80,4 +80,8 @@ public class Utils {
 		return i_0 + 1;
 	}
 
+	public static String rgbToColHexShortcut(int i_0) {
+		return "<col=" + Integer.toHexString(i_0) + ">";
+	}
+
 }

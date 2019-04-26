@@ -19,8 +19,8 @@ public class Class105 {
 			TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.aClass379_4533, client.outputContext.isaac);
 			tcpmessage_4.buffer.writeShort(1 + Utils.stringLengthPlus2(string_1) + Utils.stringLengthPlus2(string_2));
 			tcpmessage_4.buffer.writeByte(i_0);
-			tcpmessage_4.buffer.writeJagString(string_2, 2115936374);
-			tcpmessage_4.buffer.writeJagString(string_1, 2111937462);
+			tcpmessage_4.buffer.writeJagString(string_2);
+			tcpmessage_4.buffer.writeJagString(string_1);
 			client.outputContext.queuePacket(tcpmessage_4);
 		}
 	}

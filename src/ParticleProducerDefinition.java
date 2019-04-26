@@ -356,8 +356,4 @@ public class ParticleProducerDefinition {
 		class275_sub6_8.anInt7856 = i_5;
 		client.aClass457_7335.offer(class275_sub6_8, 1112580220);
 	}
-
-	public static String method1163(int i_0) {
-		return "<col=" + Integer.toHexString(i_0) + ">";
-	}
 }

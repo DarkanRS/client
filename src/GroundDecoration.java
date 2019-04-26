@@ -542,7 +542,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												string_35 = "null";
 											}
 											if ((itemdefinitions_36.stackable == 1 || icomponentdefinitions_12.anInt1427 != 1) && icomponentdefinitions_12.anInt1427 != -1) {
-												string_35 = ParticleProducerDefinition.method1163(16748608) + string_35 + "</col>" + " x" + Class488.method8210(icomponentdefinitions_12.anInt1427);
+												string_35 = Utils.rgbToColHexShortcut(16748608) + string_35 + "</col>" + " x" + Class488.method8210(icomponentdefinitions_12.anInt1427);
 											}
 										}
 										if (icomponentdefinitions_12.anInt1435 != -1) {

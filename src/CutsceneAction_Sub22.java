@@ -31,7 +31,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
         if (Class20.anInt169 < 412) {
             if (VertexNormal.myPlayer == player_0) {
                 if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0) {
-                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.index, false, -1931180359);
+                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.index, false, -1931180359);
                 }
             } else {
                 String string_3;
@@ -49,9 +49,9 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                     }
                     String string_8 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE, -1209944287) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE, -1303103497);
                     if (player_0.anInt10565 >= player_0.anInt10554) {
-                        string_3 = player_0.method16127(2054627302) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, VertexNormal.myPlayer.anInt10565, -1737457030) : ParticleProducerDefinition.method1163(16777215)) + " (" + string_8 + player_0.anInt10565 + ")";
+                        string_3 = player_0.method16127(2054627302) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, VertexNormal.myPlayer.anInt10565, -1737457030) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.anInt10565 + ")";
                     } else {
-                        string_3 = player_0.method16127(2144417480) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, VertexNormal.myPlayer.anInt10565, -1524250646) : ParticleProducerDefinition.method1163(16777215)) + " (" + string_8 + player_0.anInt10565 + "+" + (player_0.anInt10554 - player_0.anInt10565) + ")";
+                        string_3 = player_0.method16127(2144417480) + (bool_4 ? ItemIndexLoader.method7169(player_0.anInt10565, VertexNormal.myPlayer.anInt10565, -1524250646) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.anInt10565 + "+" + (player_0.anInt10554 - player_0.anInt10565) + ")";
                     }
                 } else if (player_0.anInt10556 == -1) {
                     string_3 = player_0.method16127(2137901539);
@@ -59,10 +59,10 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                     string_3 = player_0.method16127(1967945336) + " (" + Message.SKILL_.translate(Class223.CURRENT_LANGUAGE, -871379797) + player_0.anInt10556 + ")";
                 }
                 if (client.aBool7344 && !bool_1 && (Class506.USE_OPTIONS_FLAGS & 0x8) != 0) {
-                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + ParticleProducerDefinition.method1163(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1521566355);
+                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1521566355);
                 }
                 if (bool_1) {
-                    PlayerAppearance.method4032(ParticleProducerDefinition.method1163(13421772) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, (long) player_0.index, false, -1005059728);
+                    PlayerAppearance.method4032(Utils.rgbToColHexShortcut(13421772) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, (long) player_0.index, false, -1005059728);
                 } else {
                     for (int i_10 = 7; i_10 >= 0; --i_10) {
                         if (client.PLAYER_OPTIONS[i_10] != null) {
@@ -85,14 +85,14 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                             }
                             short s_12 = (short) (client.aShortArray7239[i_10] + s_11);
                             int i_7 = client.PLAYER_OPTION_CURSORS[i_10] != -1 ? client.PLAYER_OPTION_CURSORS[i_10] : client.anInt7342;
-                            PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], ParticleProducerDefinition.method1163(16777215) + string_3, i_7, s_12, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1621747030);
+                            PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], Utils.rgbToColHexShortcut(16777215) + string_3, i_7, s_12, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1621747030);
                         }
                     }
                 }
                 if (!bool_1) {
                     for (CacheableNode_Sub7 class282_sub50_sub7_9 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (CacheableNode_Sub7) Class20.aClass482_171.next(1246744595)) {
                         if (class282_sub50_sub7_9.clickType == 23) {
-                            class282_sub50_sub7_9.aString9585 = ParticleProducerDefinition.method1163(16777215) + string_3;
+                            class282_sub50_sub7_9.aString9585 = Utils.rgbToColHexShortcut(16777215) + string_3;
                             break;
                         }
                     }
