@@ -6,7 +6,7 @@ public class NPC extends Animable {
 	public int anInt10583 = 1;
 	public int anInt10576 = 1;
 	public int anInt10575 = -1;
-	public Class153 aClass153_10579 = new Class153();
+	public VarNPCMap varns = new VarNPCMap();
 	int[] anIntArray10585 = new int[6];
 	int[] anIntArray10586 = new int[6];
 	int anInt10587;
@@ -182,7 +182,7 @@ public class NPC extends Animable {
 			return this.anInt10575;
 		} else {
 			if (this.definitions.transformTo != null) {
-				NPCDefinitions npcdefinitions_2 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+				NPCDefinitions npcdefinitions_2 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				if (npcdefinitions_2 != null && npcdefinitions_2.renderEmote != -1) {
 					return npcdefinitions_2.renderEmote;
 				}
@@ -258,7 +258,7 @@ public class NPC extends Animable {
 
 	public int method12997() {
 		if (this.definitions.transformTo != null) {
-			NPCDefinitions npcdefinitions_2 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			NPCDefinitions npcdefinitions_2 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_2 != null && npcdefinitions_2.anInt4902 != -1) {
 				return npcdefinitions_2.anInt4902;
 			}
@@ -268,12 +268,12 @@ public class NPC extends Animable {
 	}
 
 	boolean method16162(int i_1) {
-		return this.definitions.aBool4893;
+		return this.definitions.visible;
 	}
 
 	public int method15898() {
 		if (this.definitions.transformTo != null) {
-			NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			NPCDefinitions npcdefinitions_1 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
 				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
 			}
@@ -383,7 +383,7 @@ public class NPC extends Animable {
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
 			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
@@ -470,7 +470,7 @@ public class NPC extends Animable {
 			matrix44var_5.method5209(matrix44var_3);
 			matrix44var_5.method5219(0.0F, (float) (-20 - this.anInt10325), 0.0F);
 			RenderAnimDefs renderanimdefs_14 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_9 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_9 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_10 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
@@ -552,7 +552,7 @@ public class NPC extends Animable {
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
 			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
@@ -615,7 +615,7 @@ public class NPC extends Animable {
 
 	public int method15897() {
 		if (this.definitions.transformTo != null) {
-			NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			NPCDefinitions npcdefinitions_1 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
 				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
 			}
@@ -658,7 +658,7 @@ public class NPC extends Animable {
 			return this.anInt10575 * -1914841399 * -343399559;
 		} else {
 			if (this.definitions.transformTo != null) {
-				NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+				NPCDefinitions npcdefinitions_1 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				if (npcdefinitions_1 != null && npcdefinitions_1.renderEmote * -318852007 * -490908695 != -1) {
 					return -490908695 * npcdefinitions_1.renderEmote * -318852007;
 				}
@@ -705,7 +705,7 @@ public class NPC extends Animable {
 			return this.anInt10575 * -1914841399 * -343399559;
 		} else {
 			if (this.definitions.transformTo != null) {
-				NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+				NPCDefinitions npcdefinitions_1 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				if (npcdefinitions_1 != null && npcdefinitions_1.renderEmote * -318852007 * -490908695 != -1) {
 					return -490908695 * npcdefinitions_1.renderEmote * -318852007;
 				}
@@ -771,7 +771,7 @@ public class NPC extends Animable {
 
 	public int method15804() {
 		if (this.definitions.transformTo != null) {
-			NPCDefinitions npcdefinitions_1 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			NPCDefinitions npcdefinitions_1 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
 				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
 			}
@@ -799,7 +799,7 @@ public class NPC extends Animable {
 
 	public int method15899(int i_1) {
 		if (this.definitions.transformTo != null) {
-			NPCDefinitions npcdefinitions_2 = this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			NPCDefinitions npcdefinitions_2 = this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_2 != null && npcdefinitions_2.anInt4918 != -1) {
 				return npcdefinitions_2.anInt4918;
 			}
@@ -839,7 +839,7 @@ public class NPC extends Animable {
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
 			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
-			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
+			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
 			if (Class393.preferences.aClass468_Sub28_8212.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {

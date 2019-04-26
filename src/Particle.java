@@ -422,7 +422,7 @@ public class Particle extends PointEntity {
 
 					for (dx = 0; dx < definition.anIntArray561.length; dx++) {
 						Class423.method7065(definition.anIntArray561[dx]);
-						definition.anIntArray562[dx] = ((IntNode) Class345.aClass465_4029.get((long) definition.anIntArray561[dx])).anInt8002;
+						definition.anIntArray562[dx] = ((IntNode) Class345.aClass465_4029.get((long) definition.anIntArray561[dx])).value;
 					}
 				}
 

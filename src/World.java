@@ -28,7 +28,7 @@ public class World {
 					if (animDef.aBool5928) {
 						Class435.method7300(i_5, i_6, 0, i_9, false, i_8);
 					} else {
-						Class153.method2618(i_5, i_6, 0, i_9, i_8, 1889559384);
+						VarNPCMap.method2618(i_5, i_6, 0, i_9, i_8, 1889559384);
 					}
 				}
 			} else {

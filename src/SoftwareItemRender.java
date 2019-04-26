@@ -114,7 +114,7 @@ public class SoftwareItemRender implements Interface18 {
 			if (defs.aBool5928) {
 				Class435.method7300(i_4, i_5, 0, i_7, false, i_6);
 			} else {
-				Class153.method2618(i_4, i_5, 0, i_7, i_6, 1648413322);
+				VarNPCMap.method2618(i_4, i_5, 0, i_7, i_6, 1648413322);
 			}
 		}
 	}

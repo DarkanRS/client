@@ -293,7 +293,7 @@ public final class Class251 {
 						Class209.printConsoleMessage("No such file", -445176938);
 						return;
 					}
-					byte[] bytes_5 = Class153.method2621(file_20, 1265044571);
+					byte[] bytes_5 = VarNPCMap.method2621(file_20, 1265044571);
 					if (bytes_5 == null) {
 						Class209.printConsoleMessage("Failed to read file", -1589533875);
 						return;

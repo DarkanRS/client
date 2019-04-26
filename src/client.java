@@ -559,7 +559,7 @@ public final class client extends Engine {
 	public final void init() {
 		if (this.method4665((byte) 80)) {
 			String str_1 = "";
-			Class358[] arr_2 = Class153.method2619(860702591);
+			Class358[] arr_2 = VarNPCMap.method2619(860702591);
 
 			for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 				Class358 class358_4 = arr_2[i_3];

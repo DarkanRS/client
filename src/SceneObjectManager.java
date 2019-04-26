@@ -358,7 +358,7 @@ public class SceneObjectManager {
 				for (i_10 = class521_sub1_sub1_1.aShort9456; i_10 <= class521_sub1_sub1_1.localY; i_10++) {
 					Class293 class293_11 = this.method3459(class521_sub1_sub1_1.plane, i_9, i_10, 123590531);
 					if (class293_11 != null) {
-						Class208 class208_12 = Class153.method2622(class521_sub1_sub1_1);
+						Class208 class208_12 = VarNPCMap.method2622(class521_sub1_sub1_1);
 						Class208 class208_13 = class293_11.aClass208_3504;
 						if (class208_13 == null) {
 							class293_11.aClass208_3504 = class208_12;

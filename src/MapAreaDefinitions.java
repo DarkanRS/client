@@ -218,7 +218,7 @@ public class MapAreaDefinitions {
             return i_2;
         } else {
             IntNode class282_sub38_4 = (IntNode) this.aClass465_2737.get((long) i_1);
-            return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
+            return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
         }
     }
 
@@ -260,13 +260,13 @@ public class MapAreaDefinitions {
             NPCDefinitions npcdefinitions_3 = npc_0.definitions;
             String string_4 = npc_0.aString10584;
             if (npcdefinitions_3.transformTo != null) {
-                npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+                npcdefinitions_3 = npcdefinitions_3.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 if (npcdefinitions_3 == null) {
                     return;
                 }
                 string_4 = npcdefinitions_3.name;
             }
-            if (npcdefinitions_3.aBool4893) {
+            if (npcdefinitions_3.visible) {
                 if (npc_0.anInt10582 != 0) {
                     String string_5 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE, -834706251) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE, -2066176113);
                     string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.myPlayer.anInt10565, -1957998512) + " (" + string_5 + npc_0.anInt10582 + ")";

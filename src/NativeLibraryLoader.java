@@ -186,7 +186,7 @@ public class NativeLibraryLoader implements Interface36 {
                     File file_7 = Class96_Sub23.method14681(string_3, 827415998);
                     if (bytes_5 != null && file_7 != null) {
                         boolean bool_11 = true;
-                        byte[] bytes_9 = Class153.method2621(file_7, -1379715433);
+                        byte[] bytes_9 = VarNPCMap.method2621(file_7, -1379715433);
                         if (bytes_9 != null && bytes_9.length == bytes_5.length) {
                             for (int i_10 = 0; i_10 < bytes_9.length; i_10++) {
                                 if (bytes_9[i_10] != bytes_5[i_10]) {

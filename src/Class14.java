@@ -115,7 +115,7 @@ public class Class14 {
 				for (i_6 = 0; i_6 < i_14; i_6++) {
 					i_7 = buffer.readUnsignedShortLE128();
 					i_8 = buffer.readIntV1();
-					npc.aClass153_10579.method2614(i_7, i_8);
+					npc.varns.setVarn(i_7, i_8);
 				}
 			}
 			int i_9;
@@ -289,12 +289,12 @@ public class Class14 {
 				}
 			}
 			if ((i_4 & 0x400000) != 0) {
-				npc.aClass153_10579.method2607();
+				npc.varns.method2607();
 				i_14 = buffer.buffer[++buffer.index - 1] & 0xff;
 				for (i_6 = 0; i_6 < i_14; i_6++) {
 					i_7 = buffer.readUnsignedShort();
 					i_8 = buffer.readIntV1();
-					npc.aClass153_10579.method2614(i_7, i_8);
+					npc.varns.setVarn(i_7, i_8);
 				}
 			}
 			if ((i_4 & 0x4) != 0) {

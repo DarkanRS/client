@@ -140,7 +140,7 @@ public class Class250 {
 				if (class75_13.id >= 0) {
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.transformTo != null) {
-						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+						npcdefinitions_91 = npcdefinitions_91.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 						if (npcdefinitions_91 == null) {
 							continue;
 						}
@@ -153,7 +153,7 @@ public class Class250 {
 					obj_12 = (Animable) ((StringNode) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_10 - i_7])).anObject8068;
 					npcdefinitions_91 = ((NPC) obj_12).definitions;
 					if (npcdefinitions_91.transformTo != null) {
-						npcdefinitions_91 = npcdefinitions_91.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+						npcdefinitions_91 = npcdefinitions_91.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 						if (npcdefinitions_91 == null) {
 							continue;
 						}

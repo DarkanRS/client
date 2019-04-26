@@ -18,7 +18,7 @@ public final class Class155 {
 		}
 		IntNode class282_sub38_4 = (IntNode) this.aClass465_1969.get((long) i_1);
 		if (class282_sub38_4 != null) {
-			class282_sub38_4.anInt8002 = i_2;
+			class282_sub38_4.value = i_2;
 		} else {
 			class282_sub38_4 = new IntNode(i_2);
 			this.aClass465_1969.put(class282_sub38_4, (long) i_1);
@@ -28,7 +28,7 @@ public final class Class155 {
 	public int method2626(int i_1, byte b_2) {
 		IntNode class282_sub38_3 = (IntNode) this.aClass465_1969.get((long) i_1);
 		if (class282_sub38_3 != null) {
-			return class282_sub38_3.anInt8002;
+			return class282_sub38_3.value;
 		} else {
 			Class372 class372_4 = IndexLoaders.VAR_LOADER.method6384(i_1, 1420964828);
 			return class372_4.aChar4328 != 105 ? -1 : 0;

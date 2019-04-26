@@ -120,7 +120,7 @@ public class Class534_Sub1 extends Class534 {
 				NPC npc_4 = (NPC) class282_sub47_3.anObject8068;
 				NPCDefinitions npcdefinitions_5 = npc_4.definitions;
 				if (npcdefinitions_5.transformTo != null) {
-					npcdefinitions_5 = npcdefinitions_5.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+					npcdefinitions_5 = npcdefinitions_5.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				}
 				if (npcdefinitions_5 != null) {
 					ints_2 = npcdefinitions_5.anIntArray4915;

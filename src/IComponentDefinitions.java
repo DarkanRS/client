@@ -551,7 +551,7 @@ public class IComponentDefinitions {
 			return i_2;
 		} else {
 			IntNode class282_sub38_4 = (IntNode) this.aClass465_1365.get((long) i_1);
-			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
+			return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
 		}
 	}
 
@@ -573,7 +573,7 @@ public class IComponentDefinitions {
 			if (class282_sub38_4 == null) {
 				this.aClass465_1365.put(new IntNode(i_2), (long) i_1);
 			} else {
-				class282_sub38_4.anInt8002 = i_2;
+				class282_sub38_4.value = i_2;
 			}
 		}
 	}

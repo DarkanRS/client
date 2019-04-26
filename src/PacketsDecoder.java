@@ -1213,7 +1213,7 @@ public class PacketsDecoder extends Class455 {
 			int i_6 = buffer.readUnsignedShort();
 			int delay = buffer.readUnsignedByte();
 			int i_8 = buffer.readUnsignedShort();
-			Class153.method2618(soundId, flags, i_6, delay, i_8, 1278035776);
+			VarNPCMap.method2618(soundId, flags, i_6, delay, i_8, 1278035776);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4372) {

@@ -66,7 +66,7 @@ public class Class397 implements Interface38 {
 			NPCDefinitions npcdefinitions_11 = npc_5.definitions;
 			if (npcdefinitions_11.transformTo != null) {
 				class282_sub48_8.aBool8092 = true;
-				npcdefinitions_11 = npcdefinitions_11.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+				npcdefinitions_11 = npcdefinitions_11.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			}
 			if (npcdefinitions_11 != null) {
 				class282_sub48_8.anInt8079 = npcdefinitions_11.size + i_1 << 9;

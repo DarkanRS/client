@@ -49,7 +49,7 @@ public class ClanSettings {
 			return null;
 		} else {
 			Node node_3 = this.variables.get((long) i_1);
-			return node_3 != null && node_3 instanceof IntNode ? new Integer(((IntNode) node_3).anInt8002) : null;
+			return node_3 != null && node_3 instanceof IntNode ? new Integer(((IntNode) node_3).value) : null;
 		}
 	}
 
@@ -195,11 +195,11 @@ public class ClanSettings {
 			if (node_9 != null) {
 				if (node_9 instanceof IntNode) {
 					IntNode class282_sub38_10 = (IntNode) node_9;
-					if ((class282_sub38_10.anInt8002 & i_8) == i_2) {
+					if ((class282_sub38_10.value & i_8) == i_2) {
 						return false;
 					}
-					class282_sub38_10.anInt8002 &= ~i_8;
-					class282_sub38_10.anInt8002 |= i_2;
+					class282_sub38_10.value &= ~i_8;
+					class282_sub38_10.value |= i_2;
 					return true;
 				}
 				node_9.remove();
@@ -285,10 +285,10 @@ public class ClanSettings {
 			if (node_4 != null) {
 				if (node_4 instanceof IntNode) {
 					IntNode class282_sub38_5 = (IntNode) node_4;
-					if (i_2 == class282_sub38_5.anInt8002) {
+					if (i_2 == class282_sub38_5.value) {
 						return false;
 					}
-					class282_sub38_5.anInt8002 = i_2;
+					class282_sub38_5.value = i_2;
 					return true;
 				}
 				node_4.remove();
@@ -337,7 +337,7 @@ public class ClanSettings {
 			Node node_5 = this.variables.get((long) i_1);
 			if (node_5 != null && node_5 instanceof IntNode) {
 				int i_6 = i_3 == 31 ? -1 : (1 << i_3 + 1) - 1;
-				return new Integer((((IntNode) node_5).anInt8002 & i_6) >>> i_2);
+				return new Integer((((IntNode) node_5).value & i_6) >>> i_2);
 			} else {
 				return null;
 			}

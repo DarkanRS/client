@@ -1294,11 +1294,11 @@ public class CS2Interpreter {
 		case instr6374:
 			method7699(exec);
 			break;
-		case instr6375:
-			method3792(exec);
+		case GET_MOUSE_X:
+			getMouseX(exec);
 			break;
-		case instr6889:
-			method299(exec);
+		case GET_MOUSE_Y:
+			getMouseY(exec);
 			break;
 		case instr6143:
 			method1801(exec);
@@ -4776,7 +4776,7 @@ public class CS2Interpreter {
 
 	static final void playSoundEffect(CS2Executor executor) {
 		executor.intStackPtr -= 3;
-		Class153.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], 255, 256, 1363502239);
+		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], 255, 256, 1363502239);
 	}
 
 	static final void method3169(CS2Executor executor) {
@@ -5528,7 +5528,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method299(CS2Executor executor) {
+	static final void getMouseY(CS2Executor executor) {
 		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.getMouseY();
 	}
 
@@ -5537,10 +5537,10 @@ public class CS2Interpreter {
 		boolean bool_3 = false;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.transformTo != null) {
-			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			npcdefinitions_4 = npcdefinitions_4.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 		}
 		if (npcdefinitions_4 != null) {
-			bool_3 = npcdefinitions_4.aBool4893;
+			bool_3 = npcdefinitions_4.visible;
 		}
 		executor.intStack[++executor.intStackPtr - 1] = bool_3 ? 1 : 0;
 	}
@@ -6587,7 +6587,7 @@ public class CS2Interpreter {
 
 	static final void getVarnbitOld(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).aClass153_10579.method2610(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).varns.getVarnBit(i_2);
 	}
 
 	static final void method2096(CS2Executor executor) {
@@ -6662,7 +6662,7 @@ public class CS2Interpreter {
 		IterableNodeMap iterablenodemap_2 = executor.current.switchMaps[executor.intOpValues[executor.instrPtr]];
 		IntNode class282_sub38_3 = (IntNode) iterablenodemap_2.get((long) executor.intStack[--executor.intStackPtr]);
 		if (class282_sub38_3 != null) {
-			executor.instrPtr += class282_sub38_3.anInt8002;
+			executor.instrPtr += class282_sub38_3.value;
 		}
 	}
 
@@ -7664,7 +7664,7 @@ public class CS2Interpreter {
 
 	static final void getVarnOld(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).aClass153_10579.method2609(i_2, (byte) 106);
+		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).varns.getVarn(i_2);
 	}
 
 	static final void loadLong(CS2Executor executor) {
@@ -7811,7 +7811,7 @@ public class CS2Interpreter {
 		method11223(icomponentdefinitions_3, interface_4, executor, 334837898);
 	}
 
-	static final void method3792(CS2Executor executor) {
+	static final void getMouseX(CS2Executor executor) {
 		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.getMouseX();
 	}
 
@@ -8658,7 +8658,7 @@ public class CS2Interpreter {
 
 	static final void method1888(CS2Executor executor) {
 		executor.intStackPtr -= 5;
-		Class153.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], executor.intStack[executor.intStackPtr + 4], 1275118183);
+		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], executor.intStack[executor.intStackPtr + 4], 1275118183);
 	}
 
 	static final void method1889(CS2Executor executor) {
@@ -9066,7 +9066,7 @@ public class CS2Interpreter {
 		String string_3 = npc_2.aString10584;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.transformTo != null) {
-			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			npcdefinitions_4 = npcdefinitions_4.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			if (npcdefinitions_4 == null) {
 				string_3 = "";
 			} else {
@@ -9257,7 +9257,7 @@ public class CS2Interpreter {
 		NPC npc_2 = (NPC) executor.animable;
 		NPCDefinitions npcdefinitions_3 = npc_2.definitions;
 		if (npcdefinitions_3.transformTo != null) {
-			npcdefinitions_3 = npcdefinitions_3.method6884(Class158_Sub1.PLAYER_VAR_PROVIDER);
+			npcdefinitions_3 = npcdefinitions_3.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 		}
 		executor.intStack[++executor.intStackPtr - 1] = npcdefinitions_3 != null ? 1 : 0;
 	}
@@ -10505,7 +10505,7 @@ public class CS2Interpreter {
 
 	static final void method14520(CS2Executor executor) {
 		executor.intStackPtr -= 4;
-		Class153.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], 256, 1476817598);
+		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], 256, 1476817598);
 	}
 
 	static final void method14521(CS2Executor executor) {

@@ -419,7 +419,7 @@ public class Login {
                 } else if (Class9.loginStage == 133) {
                     if (Class9.aClass184_73.getConnection().available(1)) {
                         Class9.aClass184_73.getConnection().read(Class9.aClass184_73.recievedBuffer.buffer, 0, 1);
-                        Class153.anInt1965 = Class9.aClass184_73.recievedBuffer.buffer[0] & 0xff;
+                        VarNPCMap.anInt1965 = Class9.aClass184_73.recievedBuffer.buffer[0] & 0xff;
                         Class9.loginStage = 140;
                     }
                 } else {
@@ -427,10 +427,10 @@ public class Login {
                     if (Class9.loginStage == 140) {
                         rsbitsbuffer_19 = Class9.aClass184_73.recievedBuffer;
                         if (Class9.lobbyStage == 273) {
-                            if (!Class9.aClass184_73.getConnection().available(Class153.anInt1965)) {
+                            if (!Class9.aClass184_73.getConnection().available(VarNPCMap.anInt1965)) {
                                 return;
                             }
-                            Class9.aClass184_73.getConnection().read(rsbitsbuffer_19.buffer, 0, Class153.anInt1965);
+                            Class9.aClass184_73.getConnection().read(rsbitsbuffer_19.buffer, 0, VarNPCMap.anInt1965);
                             rsbitsbuffer_19.index = 0;
                             client.rights = rsbitsbuffer_19.readUnsignedByte();
                             client.anInt7319 = rsbitsbuffer_19.readUnsignedByte();
@@ -448,10 +448,10 @@ public class Login {
                             IndexLoaders.ITEM_LOADER.method7148(client.membersWorld);
                             IndexLoaders.NPC_INDEX_LOADER.method6847(client.membersWorld);
                         } else {
-                            if (!Class9.aClass184_73.getConnection().available(Class153.anInt1965)) {
+                            if (!Class9.aClass184_73.getConnection().available(VarNPCMap.anInt1965)) {
                                 return;
                             }
-                            Class9.aClass184_73.getConnection().read(rsbitsbuffer_19.buffer, 0, Class153.anInt1965);
+                            Class9.aClass184_73.getConnection().read(rsbitsbuffer_19.buffer, 0, VarNPCMap.anInt1965);
                             rsbitsbuffer_19.index = 0;
                             client.rights = rsbitsbuffer_19.readUnsignedByte();
                             client.anInt7319 = rsbitsbuffer_19.readUnsignedByte();

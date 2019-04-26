@@ -655,7 +655,7 @@ public class Class329 {
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 - 1][i_5 - 1];
 						i_17 = bytes_10[i_4 - 1][i_5 - 1] * 2 + 4 & 0x7;
-						i_18 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) -21);
+						i_18 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) -21);
 						if (aBoolArrayArray3822[b_16][i_17]) {
 							this.anIntArray3838[0] = overlaydef_15.primaryRGB;
 							this.anIntArray3839[0] = i_18;
@@ -674,7 +674,7 @@ public class Class329 {
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 + 1][i_5 - 1];
 						i_17 = bytes_10[i_4 + 1][i_5 - 1] * 2 + 6 & 0x7;
-						i_18 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) -18);
+						i_18 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) -18);
 						if (aBoolArrayArray3822[b_16][i_17]) {
 							this.anIntArray3838[2] = overlaydef_15.primaryRGB;
 							this.anIntArray3839[2] = i_18;
@@ -695,7 +695,7 @@ public class Class329 {
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 - 1][i_5 + 1];
 						i_17 = bytes_10[i_4 - 1][i_5 + 1] * 2 + 2 & 0x7;
-						i_18 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) 12);
+						i_18 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) 12);
 						if (aBoolArrayArray3822[b_16][i_17]) {
 							this.anIntArray3838[6] = overlaydef_15.primaryRGB;
 							this.anIntArray3839[6] = i_18;
@@ -714,7 +714,7 @@ public class Class329 {
 					if (overlaydef_15.primaryRGB != -1 && overlaydef_15.aBool7061) {
 						b_16 = bytes_9[i_4 + 1][i_5 + 1];
 						i_17 = bytes_10[i_4 + 1][i_5 + 1] * 2 + 0 & 0x7;
-						i_18 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) -16);
+						i_18 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) -16);
 						if (aBoolArrayArray3822[b_16][i_17]) {
 							this.anIntArray3838[4] = overlaydef_15.primaryRGB;
 							this.anIntArray3839[4] = i_18;
@@ -741,7 +741,7 @@ public class Class329 {
 					if (overlaydef_15.aBool7061) {
 						i_18 = 2;
 						i_19 = b_23 * 2 + 4;
-						i_20 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) 56);
+						i_20 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) 56);
 						for (i_21 = 0; i_21 < 3; i_21++) {
 							i_19 &= 0x7;
 							i_18 &= 0x7;
@@ -779,7 +779,7 @@ public class Class329 {
 					if (overlaydef_15.aBool7061) {
 						i_18 = 4;
 						i_19 = b_23 * 2 + 2;
-						i_20 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) 43);
+						i_20 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) 43);
 						for (i_21 = 0; i_21 < 3; i_21++) {
 							i_19 &= 0x7;
 							i_18 &= 0x7;
@@ -817,7 +817,7 @@ public class Class329 {
 					if (overlaydef_15.aBool7061) {
 						i_18 = 6;
 						i_19 = b_23 * 2 + 4;
-						i_20 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) -53);
+						i_20 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) -53);
 						for (i_21 = 0; i_21 < 3; i_21++) {
 							i_19 &= 0x7;
 							i_18 &= 0x7;
@@ -855,7 +855,7 @@ public class Class329 {
 					if (overlaydef_15.aBool7061) {
 						i_18 = 4;
 						i_19 = b_23 * 2 + 6;
-						i_20 = Class153.method2617(graphicalrenderer_1, overlaydef_15, (byte) 10);
+						i_20 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_15, (byte) 10);
 						for (i_21 = 0; i_21 < 3; i_21++) {
 							i_19 &= 0x7;
 							i_18 &= 0x7;
@@ -884,7 +884,7 @@ public class Class329 {
 			}
 		}
 		if (overlaydef_2 != null && overlaydef_2.aBool7061) {
-			i_14 = Class153.method2617(graphicalrenderer_1, overlaydef_2, (byte) -30);
+			i_14 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_2, (byte) -30);
 			for (int i_22 = 0; i_22 < 8; i_22++) {
 				int i_24 = i_22 - this.anInt3781 * 2 & 0x7;
 				if (aBoolArrayArray3822[this.anInt3844][i_22] && this.anIntArray3842[i_24] <= overlaydef_2.anInt7052) {
@@ -935,7 +935,7 @@ public class Class329 {
 			this.anInt3850 = overlaydef_5.primaryRGB;
 			this.anInt3848 = overlaydef_5.texture;
 			this.anInt3849 = overlaydef_5.anInt7057;
-			int i_19 = Class153.method2617(graphicalrenderer_1, overlaydef_5, (byte) 29);
+			int i_19 = VarNPCMap.method2617(graphicalrenderer_1, overlaydef_5, (byte) 29);
 			for (int i_20 = 0; i_20 < this.overlayFaceCount; i_20++) {
 				boolean bool_21 = false;
 				byte b_22;

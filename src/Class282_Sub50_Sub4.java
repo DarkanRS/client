@@ -43,7 +43,7 @@ public class Class282_Sub50_Sub4 extends CacheableNode {
 			return i_2;
 		} else {
 			IntNode class282_sub38_4 = (IntNode) this.aClass465_9518.get((long) i_1);
-			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
+			return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
 		}
 	}
 

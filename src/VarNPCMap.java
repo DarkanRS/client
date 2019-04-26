@@ -1,55 +1,48 @@
 import java.io.File;
 
-public final class Class153 {
+public final class VarNPCMap {
 
 	static int anInt1965;
-
 	int anInt1964;
-
-	IterableNodeMap aClass465_1963;
+	IterableNodeMap varnMap;
 
 	public void method2607() {
-		if (this.aClass465_1963 != null) {
-			this.aClass465_1963.method7749(1241970145);
+		if (this.varnMap != null) {
+			this.varnMap.method7749(1241970145);
 		}
 	}
 
-	public int method2609(int i_1, byte b_2) {
-		IntNode class282_sub38_3 = (IntNode) this.aClass465_1963.get((long) i_1);
+	public int getVarn(int i_1) {
+		IntNode class282_sub38_3 = (IntNode) this.varnMap.get((long) i_1);
 		if (class282_sub38_3 != null) {
-			return class282_sub38_3.anInt8002;
+			return class282_sub38_3.value;
 		} else {
 			SCT24Definitions class449_4 = IndexLoaders.SCT24_LOADER.method7450(i_1);
 			return class449_4.aChar5431 != 105 ? -1 : 0;
 		}
 	}
 
-	public int method2610(int i_1) {
+	public int getVarnBit(int i_1) {
 		SCT25Definitions class489_3 = IndexLoaders.SCT25_LOADER.method8322(i_1);
 		int i_4 = class489_3.anInt5764;
 		int i_5 = class489_3.anInt5762 == 31 ? -1 : (1 << class489_3.anInt5762 + 1) - 1;
-		return (this.method2609(i_4, (byte) 117) & i_5) >>> class489_3.anInt5763;
+		return (this.getVarn(i_4) & i_5) >>> class489_3.anInt5763;
 	}
 
-	Class153() {
+	VarNPCMap() {
 		this.anInt1964 = 32;
 	}
 
-	public void method2614(int i_1, int i_2) {
-		if (this.aClass465_1963 == null) {
-			if ((short) 768 != 768) {
-				return;
-			}
-			this.aClass465_1963 = new IterableNodeMap(this.anInt1964);
+	public void setVarn(int i_1, int i_2) {
+		if (this.varnMap == null) {
+			this.varnMap = new IterableNodeMap(this.anInt1964);
 		}
-		IntNode class282_sub38_4 = (IntNode) this.aClass465_1963.get((long) i_1);
+		IntNode class282_sub38_4 = (IntNode) this.varnMap.get((long) i_1);
 		if (class282_sub38_4 != null) {
-			if ((short) 768 == 768) {
-				class282_sub38_4.anInt8002 = i_2;
-			}
+			class282_sub38_4.value = i_2;
 		} else {
 			class282_sub38_4 = new IntNode(i_2);
-			this.aClass465_1963.put(class282_sub38_4, (long) i_1);
+			this.varnMap.put(class282_sub38_4, (long) i_1);
 		}
 	}
 

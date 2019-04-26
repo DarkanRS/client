@@ -731,7 +731,7 @@ public class ItemDefinitions implements Definition {
             return i_2;
         } else {
             IntNode class282_sub38_4 = (IntNode) this.cs2Map.get((long) i_1);
-            return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
+            return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
         }
     }
 
