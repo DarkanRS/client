@@ -100,19 +100,4 @@ public class PingRequester implements Runnable {
 			Class468_Sub6.method12661(string_0, 3, (byte) -77);
 		}
 	}
-
-	static final void decodeMasks(RsBitsBuffer rsbitsbuffer_0) {
-		for (int i_2 = 0; i_2 < Class197.anInt2434; i_2++) {
-			int i_3 = Class197.anIntArray2435[i_2];
-			Player player_4 = client.players[i_3];
-			int i_5 = rsbitsbuffer_0.readUnsignedByte();
-			if ((i_5 & 0x8) != 0) {
-				i_5 += rsbitsbuffer_0.readUnsignedByte() << 8;
-			}
-			if ((i_5 & 0x100) != 0) {
-				i_5 += rsbitsbuffer_0.readUnsignedByte() << 16;
-			}
-			Class282_Sub15_Sub5.decodeMasks(rsbitsbuffer_0, i_3, player_4, i_5);
-		}
-	}
 }

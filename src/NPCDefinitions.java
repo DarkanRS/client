@@ -504,7 +504,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public boolean method6886(int i_1) {
+	public boolean method6886() {
 		if (this.transformTo == null) {
 			return this.walkingAnimation != -1 || this.rotate90RightAnimation != -1 || this.rotate90LeftAnimation != -1;
 		} else {

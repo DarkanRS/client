@@ -314,7 +314,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public final void sendSpotAnim(int spotAnimId, int i_2, int i_3, int i_4, boolean bool_5, int i_6, int i_7) {
+	public final void sendSpotAnim(int spotAnimId, int i_2, int i_3, int i_4, boolean bool_5, int i_6) {
 		Class161 class161_8 = this.aClass161Array10339[i_6];
 		int currSpotAnimId = class161_8.spotAnimId;
 		if (spotAnimId != -1 && currSpotAnimId != -1) {
@@ -367,7 +367,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		this.anInt10367 = 0;
 	}
 
-	public final void applyHit(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	public final void applyHit(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		boolean bool_8 = true;
 		boolean bool_9 = true;
 

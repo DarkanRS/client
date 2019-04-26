@@ -9063,7 +9063,7 @@ public class CS2Interpreter {
 
 	static final void method12915(CS2Executor executor) {
 		NPC npc_2 = (NPC) executor.animable;
-		String string_3 = npc_2.aString10584;
+		String string_3 = npc_2.modifiedName;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.transformTo != null) {
 			npcdefinitions_4 = npcdefinitions_4.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);

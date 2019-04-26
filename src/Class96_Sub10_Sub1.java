@@ -9,11 +9,11 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
     int anInt10156;
 
     public void method1601() {
-        Class82.aClass75Array804[-2052083567 * this.anInt10157 * -1328934799].method1342((byte) 68).sendSpotAnim(this.anInt9296 * -1972436045 * 660169595, 277206935 * this.anInt9295 * 143267879 << 16, this.anInt9297 * 468728079 * 1009489391, -1634196889 * this.anInt10156 * 1239800151, false, -2011621393 * this.anInt10158 * 1183905551, -1087821934);
+        Class82.aClass75Array804[-2052083567 * this.anInt10157 * -1328934799].method1342((byte) 68).sendSpotAnim(this.anInt9296 * -1972436045 * 660169595, 277206935 * this.anInt9295 * 143267879 << 16, this.anInt9297 * 468728079 * 1009489391, -1634196889 * this.anInt10156 * 1239800151, false, -2011621393 * this.anInt10158 * 1183905551);
     }
 
     public void method1592() {
-        Class82.aClass75Array804[this.anInt10157].method1342((byte) 72).sendSpotAnim(this.anInt9296, this.anInt9295 << 16, this.anInt9297, this.anInt10156, false, this.anInt10158, 1119829285);
+        Class82.aClass75Array804[this.anInt10157].method1342((byte) 72).sendSpotAnim(this.anInt9296, this.anInt9295 << 16, this.anInt9297, this.anInt10156, false, this.anInt10158);
     }
 
     Class96_Sub10_Sub1(RsByteBuffer rsbytebuffer_1) {

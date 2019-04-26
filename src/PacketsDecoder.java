@@ -1879,7 +1879,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.PLAYER_UPDATE) {
-			Class282_Sub34.decodePlayerUpdate(buffer, context.currentPacketSize);
+			PlayerUpdate.decode(buffer, context.currentPacketSize);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.CAMERA_POSITION) {
@@ -2181,7 +2181,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.NPC_UPDATE) {
-			Class540.decodeNPCUpdate(false, -1846664385);
+			NPCUpdate.decode(false);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.RECIEVE_FRIENDS_CHAT_MESSAGE) {
@@ -2345,7 +2345,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.NPC_UPDATE_LARGE) {
-			Class540.decodeNPCUpdate(true, -938480813);
+			NPCUpdate.decode(true);
 			context.currentPacket = null;
 			return true;
 		} else {

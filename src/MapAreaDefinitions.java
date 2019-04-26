@@ -258,7 +258,7 @@ public class MapAreaDefinitions {
     static void iComponentOnNPC(NPC npc_0, boolean bool_1, int i_2) {
         if (Class20.anInt169 < 412) {
             NPCDefinitions npcdefinitions_3 = npc_0.definitions;
-            String string_4 = npc_0.aString10584;
+            String string_4 = npc_0.modifiedName;
             if (npcdefinitions_3.transformTo != null) {
                 npcdefinitions_3 = npcdefinitions_3.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
                 if (npcdefinitions_3 == null) {

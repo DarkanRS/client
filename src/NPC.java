@@ -14,7 +14,7 @@ public class NPC extends Animable {
 	int anInt10589;
 	int anInt10590;
 	public NPCDefinitions definitions;
-	public String aString10584;
+	public String modifiedName;
 	public int anInt10582;
 
 	int method12996() {
@@ -643,7 +643,7 @@ public class NPC extends Animable {
 
 		this.definitions = npcdefinitions_1;
 		if (this.definitions != null) {
-			this.aString10584 = this.definitions.name;
+			this.modifiedName = this.definitions.name;
 			this.anInt10582 = this.definitions.combatLevel;
 		}
 
