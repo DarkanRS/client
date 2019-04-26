@@ -1,7 +1,7 @@
 public class IComponentDefinitions {
 
 	public int anInt1281;
-	public Class417 aClass417_1308;
+	public NPCMeshModifier aClass417_1308;
 	public int anInt1340;
 	public int anInt1350;
 	public int anInt1354;

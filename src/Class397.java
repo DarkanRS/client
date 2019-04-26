@@ -73,7 +73,7 @@ public class Class397 implements Interface38 {
 				class282_sub48_8.anInt8077 = i_2 + npcdefinitions_11.size << 9;
 				class282_sub48_8.soundEffectId = Class282_Sub11_Sub1.method15433(npc_5);
 				class282_sub48_8.aBool8098 = npcdefinitions_11.aBool4872;
-				class282_sub48_8.anInt8105 = npcdefinitions_11.anInt4907 << 9;
+				class282_sub48_8.anInt8105 = npcdefinitions_11.specialByte << 9;
 				class282_sub48_8.anInt8089 = npcdefinitions_11.anInt4909;
 				class282_sub48_8.anInt8094 = npcdefinitions_11.anInt4919;
 				class282_sub48_8.anInt8093 = npcdefinitions_11.anInt4911;

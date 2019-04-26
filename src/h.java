@@ -148,7 +148,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		VertexNormal class84_16;
 		for (i_15 = 0; i_15 < i_12; i_15++) {
 			class84_16 = rsmesh_3.isolatedVertexNormals[i_15];
-			BillboardDefinitions class347_17 = Class417.getBillboardDefinitions(class84_16.anInt812);
+			BillboardDefinitions class347_17 = NPCMeshModifier.getBillboardDefinitions(class84_16.anInt812);
 			ints_13[i_14++] = class84_16.anInt809;
 			ints_13[i_14++] = class347_17.anInt4054;
 			ints_13[i_14++] = class347_17.anInt4050;

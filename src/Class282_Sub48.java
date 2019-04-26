@@ -100,7 +100,7 @@ public class Class282_Sub48 extends Node {
 					npcdefinitions_5 = npcdefinitions_5.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				}
 				if (npcdefinitions_5 != null) {
-					this.anInt8105 = npcdefinitions_5.anInt4907 << 9;
+					this.anInt8105 = npcdefinitions_5.specialByte << 9;
 					this.anInt8081 = npcdefinitions_5.anInt4908 << 9;
 					this.anInt8089 = npcdefinitions_5.anInt4909;
 					this.aBool8098 = npcdefinitions_5.aBool4872;

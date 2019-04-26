@@ -469,7 +469,7 @@ public class Login {
                             Class469.aBool5585 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             KeyHoldInputSubscriber.anInt2879 = rsbitsbuffer_19.readInt();
                             Class115.anInt1247 = rsbitsbuffer_19.readUnsignedShort();
-                            Class417.anInt4994 = rsbitsbuffer_19.readUnsignedShort();
+                            NPCMeshModifier.anInt4994 = rsbitsbuffer_19.readUnsignedShort();
                             Class468_Sub28.anInt7961 = rsbitsbuffer_19.readUnsignedShort();
                             Class125.anInt1572 = rsbitsbuffer_19.readInt();
                             Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.anInt1572);

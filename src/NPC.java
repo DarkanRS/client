@@ -1,10 +1,10 @@
 public class NPC extends Animable {
 
-	public Class417 aClass417_10581;
+	public NPCMeshModifier meshModifiers;
 	public int anInt10578 = -1;
 	public int anInt10577 = -1;
-	public int anInt10583 = 1;
-	public int anInt10576 = 1;
+	public int meshModifierCount = 1;
+	public int headMeshModifierCount = 1;
 	public int anInt10575 = -1;
 	public VarNPCMap varns = new VarNPCMap();
 	int[] anIntArray10585 = new int[6];
@@ -63,7 +63,7 @@ public class NPC extends Animable {
 		}
 
 		int i_11 = this.aClass19_10359.method578();
-		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.definitions.method6879(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.aClass417_10581, this.getRenderAnimation(), false, -1676394010);
+		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.definitions.method6879(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.meshModifiers, this.getRenderAnimation(), false, -1676394010);
 		if (meshrasterizer_12 == null) {
 			return false;
 		} else {

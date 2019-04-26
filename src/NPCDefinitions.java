@@ -37,11 +37,11 @@ public class NPCDefinitions {
 	public byte aByte4883 = -96;
 	public byte aByte4899 = -16;
 	public byte walkMask = 0;
-	public int anInt4903 = -1;
-	public int anInt4921 = -1;
-	public int anInt4876 = -1;
-	public int anInt4906 = -1;
-	public int anInt4907 = 0;
+	public int walkingAnimation = -1;
+	public int rotate180Animation = -1;
+	public int rotate90RightAnimation = -1;
+	public int rotate90LeftAnimation = -1;
+	public int specialByte = 0;
 	public int anInt4908 = 0;
 	public int anInt4909 = 255;
 	public int anInt4902 = -1;
@@ -52,20 +52,20 @@ public class NPCDefinitions {
 	public int anInt4919;
 	public int anInt4913;
 	public boolean aBool4920;
-	short[] aShortArray4863;
-	public short[] aShortArray4892;
-	short[] aShortArray4866;
-	public short[] aShortArray4867;
-	byte[] aByteArray4865;
-	public int[] anIntArray4860;
+	short[] originalColors;
+	public short[] modifiedColors;
+	short[] originalTextures;
+	public short[] modifiedTextures;
+	byte[] recolourPalette;
+	public int[] headModels;
 	public int[] transformTo;
-	int[][] anIntArrayArray4895;
+	int[][] modelTranslation;
 	byte aByte4868;
 	byte aByte4869;
 	byte aByte4905;
 	public int[] anIntArray4915;
 	public boolean aBool4872;
-	IterableNodeMap aClass465_4896;
+	IterableNodeMap cs2Params;
 
 	void method6874(RsByteBuffer rsbytebuffer_1) {
 		while (true) {
@@ -77,15 +77,15 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6875(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11) {
+	public final MeshRasterizer method6875(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, NPCMeshModifier class417_10, int i_11) {
 		return this.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, this.renderEmote, true, 1493042037);
 	}
 
 	public int method6876(int i_1, int i_2, int i_3) {
-		if (this.aClass465_4896 == null) {
+		if (this.cs2Params == null) {
 			return i_2;
 		} else {
-			IntNode class282_sub38_4 = (IntNode) this.aClass465_4896.get((long) i_1);
+			IntNode class282_sub38_4 = (IntNode) this.cs2Params.get((long) i_1);
 			return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
 		}
 	}
@@ -103,7 +103,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, Class417 class417_10, int i_11, boolean bool_12, int i_13) {
+	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, NPCMeshModifier class417_10, int i_11, boolean bool_12, int i_13) {
 		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_14 = this.getTransformed(interface42_4);
 			return npcdefinitions_14 == null ? null : npcdefinitions_14.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12, 1208445516);
@@ -152,10 +152,10 @@ public class NPCDefinitions {
 					i_32 |= meshrasterizer_19.m();
 				}
 				int i_21 = i_32;
-				if (this.aShortArray4863 != null) {
+				if (this.originalColors != null) {
 					i_21 = i_32 | 0x4000;
 				}
-				if (this.aShortArray4866 != null) {
+				if (this.originalTextures != null) {
 					i_21 |= 0x8000;
 				}
 				if (this.aByte4871 != 0) {
@@ -190,8 +190,8 @@ public class NPCDefinitions {
 							if (arr_47[i_25].version < 13) {
 								arr_47[i_25].upscale();
 							}
-							if (this.anIntArrayArray4895 != null && this.anIntArrayArray4895[i_25] != null) {
-								arr_47[i_25].translate(this.anIntArrayArray4895[i_25][0], this.anIntArrayArray4895[i_25][1], this.anIntArrayArray4895[i_25][2]);
+							if (this.modelTranslation != null && this.modelTranslation[i_25] != null) {
+								arr_47[i_25].translate(this.modelTranslation[i_25][0], this.modelTranslation[i_25][1], this.modelTranslation[i_25][2]);
 							}
 						}
 					}
@@ -231,28 +231,28 @@ public class NPCDefinitions {
 				}
 				meshrasterizer_19 = graphicalrenderer_1.createMeshRasterizer(rsmesh_36, i_21, this.aClass406_4855.anInt4845, this.anInt4885 + 64, this.anInt4888 * 5 + 850);
 				short[] shorts_48;
-				if (this.aShortArray4863 != null) {
+				if (this.originalColors != null) {
 					if (class417_10 != null && class417_10.aShortArray4990 != null) {
 						shorts_48 = class417_10.aShortArray4990;
 					} else {
-						shorts_48 = this.aShortArray4892;
+						shorts_48 = this.modifiedColors;
 					}
-					for (i_27 = 0; i_27 < this.aShortArray4863.length; i_27++) {
-						if (this.aByteArray4865 != null && i_27 < this.aByteArray4865.length) {
-							meshrasterizer_19.X(this.aShortArray4863[i_27], aShortArray4862[this.aByteArray4865[i_27] & 0xff]);
+					for (i_27 = 0; i_27 < this.originalColors.length; i_27++) {
+						if (this.recolourPalette != null && i_27 < this.recolourPalette.length) {
+							meshrasterizer_19.X(this.originalColors[i_27], aShortArray4862[this.recolourPalette[i_27] & 0xff]);
 						} else {
-							meshrasterizer_19.X(this.aShortArray4863[i_27], shorts_48[i_27]);
+							meshrasterizer_19.X(this.originalColors[i_27], shorts_48[i_27]);
 						}
 					}
 				}
-				if (this.aShortArray4866 != null) {
+				if (this.originalTextures != null) {
 					if (class417_10 != null && class417_10.aShortArray4991 != null) {
 						shorts_48 = class417_10.aShortArray4991;
 					} else {
-						shorts_48 = this.aShortArray4867;
+						shorts_48 = this.modifiedTextures;
 					}
-					for (i_27 = 0; i_27 < this.aShortArray4866.length; i_27++) {
-						meshrasterizer_19.W(this.aShortArray4866[i_27], shorts_48[i_27]);
+					for (i_27 = 0; i_27 < this.originalTextures.length; i_27++) {
+						meshrasterizer_19.W(this.originalTextures[i_27], shorts_48[i_27]);
 					}
 				}
 				if (this.aByte4871 != 0) {
@@ -329,11 +329,11 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, VarProvider interface42_3, Animation animation_4, Class417 class417_5, int i_6) {
+	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, VarProvider interface42_3, Animation animation_4, NPCMeshModifier class417_5, int i_6) {
 		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_7 = this.getTransformed(interface42_3);
 			return npcdefinitions_7 == null ? null : npcdefinitions_7.method6880(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5, 1382303105);
-		} else if (this.anIntArray4860 == null && (class417_5 == null || class417_5.anIntArray4992 == null)) {
+		} else if (this.headModels == null && (class417_5 == null || class417_5.anIntArray4992 == null)) {
 			return null;
 		} else {
 			int i_18 = i_2;
@@ -354,16 +354,16 @@ public class NPCDefinitions {
 					i_18 |= meshrasterizer_10.m();
 				}
 				int i_19 = i_18;
-				if (this.aShortArray4863 != null) {
+				if (this.originalColors != null) {
 					i_19 = i_18 | 0x4000;
 				}
-				if (this.aShortArray4866 != null) {
+				if (this.originalTextures != null) {
 					i_19 |= 0x8000;
 				}
 				if (this.aByte4871 != 0) {
 					i_19 |= 0x80000;
 				}
-				int[] ints_12 = class417_5 != null && class417_5.anIntArray4992 != null ? class417_5.anIntArray4992 : this.anIntArray4860;
+				int[] ints_12 = class417_5 != null && class417_5.anIntArray4992 != null ? class417_5.anIntArray4992 : this.headModels;
 				boolean bool_13 = false;
 				Index index_14 = this.aClass406_4855.aClass317_4842;
 				int i_15;
@@ -403,28 +403,28 @@ public class NPCDefinitions {
 				meshrasterizer_10 = graphicalrenderer_1.createMeshRasterizer(rsmesh_27, i_19, this.aClass406_4855.anInt4845, 64, 768);
 				int i_17;
 				short[] shorts_21;
-				if (this.aShortArray4863 != null) {
+				if (this.originalColors != null) {
 					if (class417_5 != null && class417_5.aShortArray4990 != null) {
 						shorts_21 = class417_5.aShortArray4990;
 					} else {
-						shorts_21 = this.aShortArray4892;
+						shorts_21 = this.modifiedColors;
 					}
-					for (i_17 = 0; i_17 < this.aShortArray4863.length; i_17++) {
-						if (this.aByteArray4865 != null && i_17 < this.aByteArray4865.length) {
-							meshrasterizer_10.X(this.aShortArray4863[i_17], aShortArray4862[this.aByteArray4865[i_17] & 0xff]);
+					for (i_17 = 0; i_17 < this.originalColors.length; i_17++) {
+						if (this.recolourPalette != null && i_17 < this.recolourPalette.length) {
+							meshrasterizer_10.X(this.originalColors[i_17], aShortArray4862[this.recolourPalette[i_17] & 0xff]);
 						} else {
-							meshrasterizer_10.X(this.aShortArray4863[i_17], shorts_21[i_17]);
+							meshrasterizer_10.X(this.originalColors[i_17], shorts_21[i_17]);
 						}
 					}
 				}
-				if (this.aShortArray4866 != null) {
+				if (this.originalTextures != null) {
 					if (class417_5 != null && class417_5.aShortArray4991 != null) {
 						shorts_21 = class417_5.aShortArray4991;
 					} else {
-						shorts_21 = this.aShortArray4867;
+						shorts_21 = this.modifiedTextures;
 					}
-					for (i_17 = 0; i_17 < this.aShortArray4866.length; i_17++) {
-						meshrasterizer_10.W(this.aShortArray4866[i_17], shorts_21[i_17]);
+					for (i_17 = 0; i_17 < this.originalTextures.length; i_17++) {
+						meshrasterizer_10.W(this.originalTextures[i_17], shorts_21[i_17]);
 					}
 				}
 				if (this.aByte4871 != 0) {
@@ -462,10 +462,10 @@ public class NPCDefinitions {
 	}
 
 	public String getCS2Param(int key, String defaultValue) {
-		if (this.aClass465_4896 == null) {
+		if (this.cs2Params == null) {
 			return defaultValue;
 		} else {
-			StringNode class282_sub47_4 = (StringNode) this.aClass465_4896.get((long) key);
+			StringNode class282_sub47_4 = (StringNode) this.cs2Params.get((long) key);
 			return class282_sub47_4 == null ? defaultValue : (String) class282_sub47_4.anObject8068;
 		}
 	}
@@ -506,12 +506,12 @@ public class NPCDefinitions {
 
 	public boolean method6886(int i_1) {
 		if (this.transformTo == null) {
-			return this.anInt4903 != -1 || this.anInt4876 != -1 || this.anInt4906 != -1;
+			return this.walkingAnimation != -1 || this.rotate90RightAnimation != -1 || this.rotate90LeftAnimation != -1;
 		} else {
 			for (int i_2 = 0; i_2 < this.transformTo.length; i_2++) {
 				if (this.transformTo[i_2] != -1) {
 					NPCDefinitions npcdefinitions_3 = this.aClass406_4855.getNPCDefinitions(this.transformTo[i_2]);
-					if (npcdefinitions_3.anInt4903 != -1 || npcdefinitions_3.anInt4876 != -1 || npcdefinitions_3.anInt4906 != -1) {
+					if (npcdefinitions_3.walkingAnimation != -1 || npcdefinitions_3.rotate90RightAnimation != -1 || npcdefinitions_3.rotate90LeftAnimation != -1) {
 						return true;
 					}
 				}
@@ -546,31 +546,31 @@ public class NPCDefinitions {
 			this.options[opcode - 30] = stream.readString();
 		} else if (opcode == 40) {
 			int i_4 = stream.readUnsignedByte();
-			this.aShortArray4863 = new short[i_4];
-			this.aShortArray4892 = new short[i_4];
+			this.originalColors = new short[i_4];
+			this.modifiedColors = new short[i_4];
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
-				this.aShortArray4863[i_5] = (short) stream.readUnsignedShort();
-				this.aShortArray4892[i_5] = (short) stream.readUnsignedShort();
+				this.originalColors[i_5] = (short) stream.readUnsignedShort();
+				this.modifiedColors[i_5] = (short) stream.readUnsignedShort();
 			}
 		} else if (opcode == 41) {
 			int i_4 = stream.readUnsignedByte();
-			this.aShortArray4866 = new short[i_4];
-			this.aShortArray4867 = new short[i_4];
+			this.originalTextures = new short[i_4];
+			this.modifiedTextures = new short[i_4];
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
-				this.aShortArray4866[i_5] = (short) stream.readUnsignedShort();
-				this.aShortArray4867[i_5] = (short) stream.readUnsignedShort();
+				this.originalTextures[i_5] = (short) stream.readUnsignedShort();
+				this.modifiedTextures[i_5] = (short) stream.readUnsignedShort();
 			}
 		} else if (opcode == 42) {
 			int i_4 = stream.readUnsignedByte();
-			this.aByteArray4865 = new byte[i_4];
+			this.recolourPalette = new byte[i_4];
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
-				this.aByteArray4865[i_5] = stream.readByte();
+				this.recolourPalette[i_5] = stream.readByte();
 			}
 		} else if (opcode == 60) {
 			int i_4 = stream.readUnsignedByte();
-			this.anIntArray4860 = new int[i_4];
+			this.headModels = new int[i_4];
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
-				this.anIntArray4860[i_5] = stream.readBigSmart();
+				this.headModels[i_5] = stream.readBigSmart();
 			}
 		} else if (opcode == 93) {
 			this.isVisibleOnMap = false;
@@ -630,11 +630,11 @@ public class NPCDefinitions {
 		} else if (opcode == 119) {
 			this.walkMask = stream.readByte();
 		} else if (opcode == 121) {
-			this.anIntArrayArray4895 = new int[this.modelIds.length][];
+			this.modelTranslation = new int[this.modelIds.length][];
 			int i_4 = stream.readUnsignedByte();
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
 				int i_6 = stream.readUnsignedByte();
-				int[] ints_7 = this.anIntArrayArray4895[i_6] = new int[3];
+				int[] ints_7 = this.modelTranslation[i_6] = new int[3];
 				ints_7[0] = stream.readByte();
 				ints_7[1] = stream.readByte();
 				ints_7[2] = stream.readByte();
@@ -648,23 +648,23 @@ public class NPCDefinitions {
 		} else if (opcode == 128) {
 			Class386.identify(Class8_Sub3.method14339(), stream.readUnsignedByte());
 		} else if (opcode == 134) {
-			this.anInt4903 = stream.readUnsignedShort();
-			if (this.anInt4903 == 65535) {
-				this.anInt4903 = -1;
+			this.walkingAnimation = stream.readUnsignedShort();
+			if (this.walkingAnimation == 65535) {
+				this.walkingAnimation = -1;
 			}
-			this.anInt4921 = stream.readUnsignedShort();
-			if (this.anInt4921 == 65535) {
-				this.anInt4921 = -1;
+			this.rotate180Animation = stream.readUnsignedShort();
+			if (this.rotate180Animation == 65535) {
+				this.rotate180Animation = -1;
 			}
-			this.anInt4876 = stream.readUnsignedShort();
-			if (this.anInt4876 == 65535) {
-				this.anInt4876 = -1;
+			this.rotate90RightAnimation = stream.readUnsignedShort();
+			if (this.rotate90RightAnimation == 65535) {
+				this.rotate90RightAnimation = -1;
 			}
-			this.anInt4906 = stream.readUnsignedShort();
-			if (this.anInt4906 == 65535) {
-				this.anInt4906 = -1;
+			this.rotate90LeftAnimation = stream.readUnsignedShort();
+			if (this.rotate90LeftAnimation == 65535) {
+				this.rotate90LeftAnimation = -1;
 			}
-			this.anInt4907 = stream.readUnsignedByte();
+			this.specialByte = stream.readUnsignedByte();
 		} else if (opcode == 135) {
 			this.anInt4875 = stream.readUnsignedByte();
 			this.anInt4873 = stream.readUnsignedShort();
@@ -718,9 +718,9 @@ public class NPCDefinitions {
 			this.aBool4920 = false;
 		} else if (opcode == 249) {
 			int i_4 = stream.readUnsignedByte();
-			if (this.aClass465_4896 == null) {
+			if (this.cs2Params == null) {
 				int i_5 = Utils.nextPowerOfTwo(i_4);
-				this.aClass465_4896 = new IterableNodeMap(i_5);
+				this.cs2Params = new IterableNodeMap(i_5);
 			}
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
 				boolean bool_10 = stream.readUnsignedByte() == 1;
@@ -731,7 +731,7 @@ public class NPCDefinitions {
 				} else {
 					obj_8 = new IntNode(stream.readInt());
 				}
-				this.aClass465_4896.put((Node) obj_8, (long) i_9);
+				this.cs2Params.put((Node) obj_8, (long) i_9);
 			}
 		}
 	}

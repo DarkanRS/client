@@ -156,7 +156,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 				for (i_19 = 0; i_19 < rsmesh_2.isolatedVertexNormals.length; i_19++) {
 					VertexNormal class84_69 = rsmesh_2.isolatedVertexNormals[i_19];
 					if (i_12 == class84_69.anInt809) {
-						BillboardDefinitions class347_70 = Class417.getBillboardDefinitions(class84_69.anInt812);
+						BillboardDefinitions class347_70 = NPCMeshModifier.getBillboardDefinitions(class84_69.anInt812);
 						if (class347_70.aBool4059) {
 							bool_18 = true;
 						}
@@ -231,7 +231,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 
 			for (i_12 = 0; i_12 < this.anInt8294; i_12++) {
 				VertexNormal class84_110 = rsmesh_2.isolatedVertexNormals[i_12];
-				BillboardDefinitions class347_66 = Class417.getBillboardDefinitions(class84_110.anInt812);
+				BillboardDefinitions class347_66 = NPCMeshModifier.getBillboardDefinitions(class84_110.anInt812);
 				i_111 = -1;
 
 				for (i_79 = 0; i_79 < this.anInt8262; i_79++) {

@@ -8220,7 +8220,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7915(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class417.anInt4994;
+		executor.intStack[++executor.intStackPtr - 1] = NPCMeshModifier.anInt4994;
 	}
 
 	static final void method3988(CS2Executor executor) {
@@ -10668,7 +10668,7 @@ public class CS2Interpreter {
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
-				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, true);
+				icomponentdefinitions_0.aClass417_1308 = new NPCMeshModifier(npcdefinitions_5, true);
 			}
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(-610795534);
 			if (i_4 >= 0 && i_4 < npcdefinitions_5.modelIds.length) {
@@ -10763,10 +10763,10 @@ public class CS2Interpreter {
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
-				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
+				icomponentdefinitions_0.aClass417_1308 = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
 			}
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(976304204);
-			if (npcdefinitions_5.aShortArray4892 != null && i_4 >= 0 && i_4 < npcdefinitions_5.aShortArray4892.length) {
+			if (npcdefinitions_5.modifiedColors != null && i_4 >= 0 && i_4 < npcdefinitions_5.modifiedColors.length) {
 				icomponentdefinitions_0.aClass417_1308.aShortArray4990[i_4] = (short) i_3;
 				Class109.redrawComponent(icomponentdefinitions_0);
 			} else {
@@ -11558,10 +11558,10 @@ public class CS2Interpreter {
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
-				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, false);
+				icomponentdefinitions_0.aClass417_1308 = new NPCMeshModifier(npcdefinitions_5, false);
 			}
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(1471250768);
-			if (i_4 >= 0 && i_4 < npcdefinitions_5.anIntArray4860.length) {
+			if (i_4 >= 0 && i_4 < npcdefinitions_5.headModels.length) {
 				icomponentdefinitions_0.aClass417_1308.anIntArray4992[i_4] = i_3;
 				Class109.redrawComponent(icomponentdefinitions_0);
 			} else {
@@ -11648,10 +11648,10 @@ public class CS2Interpreter {
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
 			if (icomponentdefinitions_0.aClass417_1308 == null) {
-				icomponentdefinitions_0.aClass417_1308 = new Class417(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
+				icomponentdefinitions_0.aClass417_1308 = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
 			}
 			icomponentdefinitions_0.aClass417_1308.aLong4993 = Class86.method1480(1488415195);
-			if (npcdefinitions_5.aShortArray4867 != null && i_4 >= 0 && i_4 < npcdefinitions_5.aShortArray4867.length) {
+			if (npcdefinitions_5.modifiedTextures != null && i_4 >= 0 && i_4 < npcdefinitions_5.modifiedTextures.length) {
 				icomponentdefinitions_0.aClass417_1308.aShortArray4991[i_4] = (short) i_3;
 				Class109.redrawComponent(icomponentdefinitions_0);
 			} else {

@@ -111,7 +111,7 @@ public class PlayerAppearance {
 
 	public MeshRasterizer method3998(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, Animation animation_10, Animation[] arr_11, int[] ints_12, int i_13, EquipmentDefaults defaults6loader_15, short s_16) {
 		if (this.anInt2928 != -1) {
-			return npcindexloader_5.getNPCDefinitions(this.anInt2928).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, animation_10, arr_11, ints_12, i_13, (Class417) null, 2039422694);
+			return npcindexloader_5.getNPCDefinitions(this.anInt2928).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, animation_10, arr_11, ints_12, i_13, (NPCMeshModifier) null, 2039422694);
 		} else {
 			int i_17 = i_2;
 			long long_18 = this.aLong2926;
@@ -437,7 +437,7 @@ public class PlayerAppearance {
 
 	public MeshRasterizer method4021(GraphicalRenderer graphicalrenderer_1, int i_2, IdentitiKitIndexLoader class31_3, NPCIndexLoader npcindexloader_4, ItemIndexLoader itemindexloader_5, AnimationIndexLoader animationindexloader_6, VarProvider interface42_7, Animation animation_8) {
 		if (this.anInt2928 != -1) {
-			return npcindexloader_4.getNPCDefinitions(this.anInt2928).method6880(graphicalrenderer_1, i_2, interface42_7, animation_8, (Class417) null, 1135826867);
+			return npcindexloader_4.getNPCDefinitions(this.anInt2928).method6880(graphicalrenderer_1, i_2, interface42_7, animation_8, (NPCMeshModifier) null, 1135826867);
 		} else {
 			int i_10 = animation_8 != null ? i_2 | animation_8.method7640(-1790467862) : i_2;
 			SoftCache softcache_12 = aClass229_2930;

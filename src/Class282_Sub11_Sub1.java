@@ -76,19 +76,19 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 			}
 		}
 
-		int i_3 = npcdefinitions_2.anInt4876;
+		int i_3 = npcdefinitions_2.rotate90RightAnimation;
 		RenderAnimDefs renderanimdefs_4 = npc_0.getRenderAnimDefs();
 		int i_5 = npc_0.aClass456_Sub3_10337.method7597();
 		if (i_5 != -1 && !npc_0.aClass456_Sub3_10337.aBool7891) {
 			if (i_5 != renderanimdefs_4.runningAnimation && i_5 != renderanimdefs_4.runDir3 && i_5 != renderanimdefs_4.runDir1 && i_5 != renderanimdefs_4.runDir2) {
 				if (i_5 == renderanimdefs_4.teleportingAnimation || i_5 == renderanimdefs_4.teleDir3 || i_5 == renderanimdefs_4.teleDir1 || i_5 == renderanimdefs_4.teleDir2) {
-					i_3 = npcdefinitions_2.anInt4921;
+					i_3 = npcdefinitions_2.rotate180Animation;
 				}
 			} else {
-				i_3 = npcdefinitions_2.anInt4906;
+				i_3 = npcdefinitions_2.rotate90LeftAnimation;
 			}
 		} else {
-			i_3 = npcdefinitions_2.anInt4903;
+			i_3 = npcdefinitions_2.walkingAnimation;
 		}
 
 		return i_3;
