@@ -11,7 +11,7 @@ public class Class448 {
 	static int CURRENT_WORLD = 1000336;
 	static int currentWorldPingIdx = 0;
 	static PingRequest CURRENT_WORLD_PING_REQUEST = null;
-	public static boolean aBool5419 = false;
+	public static boolean PING_WORLDS = false;
 
 	Class448() throws Throwable {
 		throw new Error();

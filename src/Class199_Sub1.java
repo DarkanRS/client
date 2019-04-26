@@ -40,7 +40,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 
 	public synchronized void method3235() {
 		this.aClass482_8046.method8118(-1343308861);
-		for (Class282_Sub52 class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead((byte) -120); class282_sub52_2 != null; class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead((byte) -23)) {
+		for (Class282_Sub52 class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead(); class282_sub52_2 != null; class282_sub52_2 = (Class282_Sub52) this.aClass482_8047.popHead()) {
 			class282_sub52_2.anInt8174 = this.method13398((byte) 124);
 			if (class282_sub52_2.anInt8173 == 0) {
 				if (!this.aBoolArray8048[class282_sub52_2.anInt8172]) {
@@ -80,7 +80,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	public KeyRecord getNext(int i_1) {
-		return (KeyRecord) this.aClass482_8046.popHead((byte) -54);
+		return (KeyRecord) this.aClass482_8046.popHead();
 	}
 
 	void method13378(KeyEvent keyevent_1, int i_2, byte b_3) {
@@ -121,7 +121,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	public KeyRecord method3243() {
-		return (KeyRecord) this.aClass482_8046.popHead((byte) -43);
+		return (KeyRecord) this.aClass482_8046.popHead();
 	}
 
 	void method13387() {
@@ -138,11 +138,11 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	public KeyRecord method3239() {
-		return (KeyRecord) this.aClass482_8046.popHead((byte) -4);
+		return (KeyRecord) this.aClass482_8046.popHead();
 	}
 
 	public KeyRecord method3234() {
-		return (KeyRecord) this.aClass482_8046.popHead((byte) -62);
+		return (KeyRecord) this.aClass482_8046.popHead();
 	}
 
 	public void method3245() {
@@ -155,7 +155,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 
 	public synchronized void method3246() {
 		this.aClass482_8046.method8118(1090234793);
-		for (Class282_Sub52 class282_sub52_1 = (Class282_Sub52) this.aClass482_8047.popHead((byte) -35); class282_sub52_1 != null; class282_sub52_1 = (Class282_Sub52) this.aClass482_8047.popHead((byte) -109)) {
+		for (Class282_Sub52 class282_sub52_1 = (Class282_Sub52) this.aClass482_8047.popHead(); class282_sub52_1 != null; class282_sub52_1 = (Class282_Sub52) this.aClass482_8047.popHead()) {
 			class282_sub52_1.anInt8174 = this.method13398((byte) 40) * 110455137 * 656472737;
 			if (class282_sub52_1.anInt8173 * -461318909 * -921682517 == 0) {
 				if (!this.aBoolArray8048[-581998429 * class282_sub52_1.anInt8172 * -1618834677]) {

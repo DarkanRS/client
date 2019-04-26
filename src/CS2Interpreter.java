@@ -2257,8 +2257,8 @@ public class CS2Interpreter {
 		case SEND_VERIFY_EMAIL_PACKET:
 			sendVerifyEmailPacket(exec);
 			break;
-		case instr6568:
-			method4568(exec);
+		case SEND_SIGNUP_FORM_PACKET:
+			sendSignupFormPacket(exec);
 			break;
 		case instr6697:
 			method3172(exec);
@@ -2599,8 +2599,8 @@ public class CS2Interpreter {
 		case instr6809:
 			method5816(exec);
 			break;
-		case instr6804:
-			method12573(exec);
+		case SET_PING_WORLDS:
+			setPingWorlds(exec);
 			break;
 		case instr6589:
 			method3039(exec);
@@ -3299,9 +3299,9 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method12573(CS2Executor executor) {
+	static final void setPingWorlds(CS2Executor executor) {
 		if (client.gameState == 0) {
-			Class448.aBool5419 = executor.intStack[--executor.intStackPtr] == 1;
+			Class448.PING_WORLDS = executor.intStack[--executor.intStackPtr] == 1;
 		}
 	}
 
@@ -10374,7 +10374,7 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = i_2 > i_3 ? i_2 : i_3;
 	}
 
-	static final void method4568(CS2Executor executor) {
+	static final void sendSignupFormPacket(CS2Executor executor) {
 		executor.stringStackPtr -= 2;
 		executor.intStackPtr -= 2;
 		Class119.method2074((String) executor.stringStack[executor.stringStackPtr], (String) executor.stringStack[executor.stringStackPtr + 1], executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1] == 1);

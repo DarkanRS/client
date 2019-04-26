@@ -21,7 +21,7 @@ public class SCT24Definitions {
 	}
 
 	public static void pingWorlds() {
-		if (Class448.aBool5419) {
+		if (Class448.PING_WORLDS) {
 			if (Class448.currentWorldPingIdx < Class485.WORLD_LIST_START) {
 				Class448.currentWorldPingIdx = Class485.WORLD_LIST_START;
 			}
@@ -35,10 +35,13 @@ public class SCT24Definitions {
 						}
 
 						int ping = Class448.CURRENT_WORLD_PING_REQUEST.ping;
+						
+						//System.out.println("Ping: " + world.ipAddress + "->" + ping);
+						
 						if (ping == -1) {
 							return;
 						}
-
+						
 						world.ping = ping;
 						++Class448.currentWorldPingIdx;
 						Class448.CURRENT_WORLD_PING_REQUEST = null;

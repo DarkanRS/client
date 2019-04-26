@@ -134,7 +134,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	public MouseRecord nextSubmission(byte b_1) {
-		return (MouseRecord) this.aClass482_7941.popHead((byte) -121);
+		return (MouseRecord) this.aClass482_7941.popHead();
 	}
 
 	int method12908(MouseEvent mouseevent_1, int i_2) {
@@ -172,7 +172,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	public MouseRecord method3590() {
-		return (MouseRecord) this.aClass482_7941.popHead((byte) -90);
+		return (MouseRecord) this.aClass482_7941.popHead();
 	}
 
 	public synchronized void mouseWheelMoved(MouseWheelEvent mousewheelevent_1) {
@@ -202,7 +202,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	public MouseRecord method3591() {
-		return (MouseRecord) this.aClass482_7941.popHead((byte) -123);
+		return (MouseRecord) this.aClass482_7941.popHead();
 	}
 
 	public boolean method3583() {
@@ -238,7 +238,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	public MouseRecord method3592() {
-		return (MouseRecord) this.aClass482_7941.popHead((byte) -101);
+		return (MouseRecord) this.aClass482_7941.popHead();
 	}
 
 	public synchronized void mouseExited(MouseEvent mouseevent_1) {
@@ -250,7 +250,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	public MouseRecord method3588() {
-		return (MouseRecord) this.aClass482_7941.popHead((byte) -37);
+		return (MouseRecord) this.aClass482_7941.popHead();
 	}
 
 	public void method3594() {

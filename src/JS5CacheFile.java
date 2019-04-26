@@ -304,12 +304,6 @@ public final class JS5CacheFile {
 	}
 
 	public static final boolean method3360(byte b_0) {
-		boolean bool_1;
-		if (Class9.loginStage != 2) {
-			bool_1 = true;
-		} else {
-			bool_1 = false;
-		}
-		return bool_1;
+		return Class9.loginStage != 2;
 	}
 }

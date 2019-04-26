@@ -100,7 +100,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	synchronized void method14815(Class282_Sub39 class282_sub39_1, int i_2) {
 		while (this.anInt9569 >= 100) {
-			this.aClass482_9568.popHead((byte) -124);
+			this.aClass482_9568.popHead();
 			--this.anInt9569;
 		}
 		this.aClass482_9568.append(class282_sub39_1);

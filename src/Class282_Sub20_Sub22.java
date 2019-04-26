@@ -223,15 +223,15 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 							IComponentDefinitions icomponentdefinitions_11;
 							HookRequest hookrequest_14;
 							do {
-								hookrequest_14 = (HookRequest) client.aClass482_7233.popHead((byte) -22);
+								hookrequest_14 = (HookRequest) client.aClass482_7233.popHead();
 								if (hookrequest_14 == null) {
 									while (true) {
 										do {
-											hookrequest_14 = (HookRequest) client.aClass482_7404.popHead((byte) -73);
+											hookrequest_14 = (HookRequest) client.aClass482_7404.popHead();
 											if (hookrequest_14 == null) {
 												while (true) {
 													do {
-														hookrequest_14 = (HookRequest) client.aClass482_7402.popHead((byte) -101);
+														hookrequest_14 = (HookRequest) client.aClass482_7402.popHead();
 														if (hookrequest_14 == null) {
 															if (Class282_Sub20_Sub24.aClass118_9884 == null) {
 																client.anInt7184 = 0;

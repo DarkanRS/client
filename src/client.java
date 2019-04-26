@@ -848,7 +848,7 @@ public final class client extends Engine {
 				} else if (Class298.method5304(type, -1452447223)) {
 					mouseRecords.append(record);
 					if (mouseRecords.size() > 10) {
-						MouseRecord head = (MouseRecord) mouseRecords.popHead((byte) -45);
+						MouseRecord head = (MouseRecord) mouseRecords.popHead();
 						if (head != null) {
 							head.cache(1848572957);
 						}
@@ -899,7 +899,7 @@ public final class client extends Engine {
 			}
 
 			Class279.renderItems(Renderers.SOFTWARE_RENDERER);
-			mouseRecords.popHead((byte) -124);
+			mouseRecords.popHead();
 		}
 
 	}
@@ -2864,15 +2864,15 @@ public final class client extends Engine {
 			IComponentDefinitions icomponentdefinitions_14;
 			IComponentDefinitions icomponentdefinitions_16;
 			do {
-				hookrequest_13 = (HookRequest) aClass482_7233.popHead((byte) -106);
+				hookrequest_13 = (HookRequest) aClass482_7233.popHead();
 				if (hookrequest_13 == null) {
 					while (true) {
 						do {
-							hookrequest_13 = (HookRequest) aClass482_7404.popHead((byte) -51);
+							hookrequest_13 = (HookRequest) aClass482_7404.popHead();
 							if (hookrequest_13 == null) {
 								while (true) {
 									do {
-										hookrequest_13 = (HookRequest) aClass482_7402.popHead((byte) -66);
+										hookrequest_13 = (HookRequest) aClass482_7402.popHead();
 										if (hookrequest_13 == null) {
 											if (aClass118_7257 != null) {
 												Class161.method2827(1986248750);

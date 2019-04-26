@@ -17,7 +17,7 @@ public class NodeCollection implements Iterable, Collection {
 		node_1.next.prev = node_1;
 	}
 
-	public Node popHead(byte b_1) {
+	public Node popHead() {
 		Node node_2 = this.tail.next;
 		if (node_2 == this.tail) {
 			return null;
