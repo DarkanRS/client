@@ -145,12 +145,12 @@ public class ItemIndexLoader implements IndexLoader {
 	public void method7150(int i_1) {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3859(-1183528358);
+			this.cache.method3859();
 		}
 
 		softcache_2 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
-			this.aClass229_5115.method3859(-545923890);
+			this.aClass229_5115.method3859();
 		}
 
 		Class212 class212_6 = this.aClass212_5114;
@@ -169,7 +169,7 @@ public class ItemIndexLoader implements IndexLoader {
 	public void method7152() {
 		SoftCache softcache_2 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
-			this.aClass229_5115.method3859(1371574931);
+			this.aClass229_5115.method3859();
 		}
 	}
 
@@ -177,19 +177,19 @@ public class ItemIndexLoader implements IndexLoader {
 		this.anInt5116 = i_1;
 		SoftCache softcache_3 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
-			this.aClass229_5115.method3859(1018730754);
+			this.aClass229_5115.method3859();
 		}
 	}
 
 	public void method7156() {
 		SoftCache softcache_3 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3858(5, (byte) -11);
+			this.cache.method3858(5);
 		}
 
 		softcache_3 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
-			this.aClass229_5115.method3858(5, (byte) -73);
+			this.aClass229_5115.method3858(5);
 		}
 
 		Class212 class212_7 = this.aClass212_5114;
@@ -235,12 +235,12 @@ public class ItemIndexLoader implements IndexLoader {
 	public void method7166() {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3863(1688795020);
+			this.cache.method3863();
 		}
 
 		softcache_2 = this.aClass229_5115;
 		synchronized (this.aClass229_5115) {
-			this.aClass229_5115.method3863(692619526);
+			this.aClass229_5115.method3863();
 		}
 
 		Class212 class212_6 = this.aClass212_5114;

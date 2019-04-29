@@ -796,7 +796,7 @@ public class ObjectDefinitions {
 				if (class282_sub50_sub12_1 == null) {
 					return null;
 				}
-				if (class282_sub50_sub12_1.method14955(31148025) > TextureDetails.time()) {
+				if (class282_sub50_sub12_1.method14955(31148025) > Utils.time()) {
 					return null;
 				}
 				class282_sub50_sub12_1.remove();

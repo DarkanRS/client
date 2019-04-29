@@ -6,18 +6,18 @@ public final class Class241 {
         throw new Error();
     }
 
-    public static int method4150(int i_0) {
+    public static int getCPUProfile() {
         Canvas canvas_1 = new Canvas();
         canvas_1.setSize(100, 100);
         GraphicalRenderer graphicalrenderer_2 = Class320.createRenderer(0, canvas_1, (Interface22) null, (Index) null, 0, -2017555063);
-        long long_3 = TextureDetails.time();
+        long long_3 = Utils.time();
         int i_5;
         for (i_5 = 0; i_5 < 10000; i_5++) {
             graphicalrenderer_2.method8658();
         }
-        i_5 = (int) (TextureDetails.time() - long_3);
+        i_5 = (int) (Utils.time() - long_3);
         graphicalrenderer_2.method8425(0, 0, 100, 100, -16777216, (byte) -29);
-        graphicalrenderer_2.method8396(-2143467944);
+        graphicalrenderer_2.method8396();
         return i_5;
     }
 

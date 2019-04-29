@@ -28,7 +28,7 @@ public class Class29 {
     }
 
     static void deleteItemContainer(int key, boolean negativeKey) {
-        ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+        ItemContainer container = ItemContainer.getContainer(key, negativeKey);
         if (container != null) {
             container.remove();
         }

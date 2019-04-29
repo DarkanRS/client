@@ -115,7 +115,7 @@ public abstract class Class152 {
 		}
 		CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
 		if (client.anInt7349 != -1) {
-			RSHookableInterface.method8777(client.anInt7349, (byte) -80);
+			CS2Interface.method8777(client.anInt7349, (byte) -80);
 		}
 		int i_2;
 		for (i_2 = 0; i_2 < client.anInt7407; i_2++) {
@@ -146,7 +146,7 @@ public abstract class Class152 {
 
 	public static final void method2603(String string_0) {
 		if (string_0 != null) {
-			if ((client.anInt7449 < 200 || client.aBool7316) && client.anInt7449 < 200) {
+			if ((client.anInt7449 < 200 || client.IS_MEMBER) && client.anInt7449 < 200) {
 				String string_2 = Class383.method6515(string_0);
 				if (string_2 != null) {
 					int i_3;

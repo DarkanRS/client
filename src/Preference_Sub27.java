@@ -52,7 +52,7 @@ public class Preference_Sub27 extends Preference {
 	}
 
 	static void method12958() {
-		Class180.aClass229_2245.method3859(-1655793483);
+		Class180.aClass229_2245.method3859();
 	}
 
 }

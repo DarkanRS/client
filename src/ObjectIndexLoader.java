@@ -68,34 +68,34 @@ public class ObjectIndexLoader {
 		this.anInt5617 = i_1;
 		SoftCache softcache_3 = this.aClass229_5614;
 		synchronized (this.aClass229_5614) {
-			this.aClass229_5614.method3859(-2096062108);
+			this.aClass229_5614.method3859();
 		}
 		softcache_3 = this.aClass229_5615;
 		synchronized (this.aClass229_5615) {
-			this.aClass229_5615.method3859(-27932787);
+			this.aClass229_5615.method3859();
 		}
 		softcache_3 = this.aClass229_5619;
 		synchronized (this.aClass229_5619) {
-			this.aClass229_5619.method3859(1932349321);
+			this.aClass229_5619.method3859();
 		}
 	}
 
 	public void method7895(byte b_1) {
 		SoftCache softcache_2 = this.softCache;
 		synchronized (this.softCache) {
-			this.softCache.method3859(1354085029);
+			this.softCache.method3859();
 		}
 		softcache_2 = this.aClass229_5614;
 		synchronized (this.aClass229_5614) {
-			this.aClass229_5614.method3859(-1238602820);
+			this.aClass229_5614.method3859();
 		}
 		softcache_2 = this.aClass229_5615;
 		synchronized (this.aClass229_5615) {
-			this.aClass229_5615.method3859(895757660);
+			this.aClass229_5615.method3859();
 		}
 		softcache_2 = this.aClass229_5619;
 		synchronized (this.aClass229_5619) {
-			this.aClass229_5619.method3859(722371520);
+			this.aClass229_5619.method3859();
 		}
 		this.aClass157Array5616 = new RSMesh[4];
 		this.aClass452_5620 = new Class452((Object) null, (Object) null);
@@ -104,38 +104,38 @@ public class ObjectIndexLoader {
 	public void method7896() {
 		SoftCache softcache_3 = this.softCache;
 		synchronized (this.softCache) {
-			this.softCache.method3858(5, (byte) -81);
+			this.softCache.method3858(5);
 		}
 		softcache_3 = this.aClass229_5614;
 		synchronized (this.aClass229_5614) {
-			this.aClass229_5614.method3858(5, (byte) -26);
+			this.aClass229_5614.method3858(5);
 		}
 		softcache_3 = this.aClass229_5615;
 		synchronized (this.aClass229_5615) {
-			this.aClass229_5615.method3858(5, (byte) 77);
+			this.aClass229_5615.method3858(5);
 		}
 		softcache_3 = this.aClass229_5619;
 		synchronized (this.aClass229_5619) {
-			this.aClass229_5619.method3858(5, (byte) 63);
+			this.aClass229_5619.method3858(5);
 		}
 	}
 
 	public void method7897() {
 		SoftCache softcache_2 = this.softCache;
 		synchronized (this.softCache) {
-			this.softCache.method3863(1368757759);
+			this.softCache.method3863();
 		}
 		softcache_2 = this.aClass229_5614;
 		synchronized (this.aClass229_5614) {
-			this.aClass229_5614.method3863(1886053158);
+			this.aClass229_5614.method3863();
 		}
 		softcache_2 = this.aClass229_5615;
 		synchronized (this.aClass229_5615) {
-			this.aClass229_5615.method3863(1444983758);
+			this.aClass229_5615.method3863();
 		}
 		softcache_2 = this.aClass229_5619;
 		synchronized (this.aClass229_5619) {
-			this.aClass229_5619.method3863(1778004488);
+			this.aClass229_5619.method3863();
 		}
 	}
 

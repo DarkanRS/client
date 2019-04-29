@@ -57,10 +57,10 @@ public abstract class Class434 {
 			client.outputContext.queuePacket(tcpmessage_1);
 		}
 
-		if (Class236.aBool2909 != Class530.aBool7050) {
-			Class236.aBool2909 = Class530.aBool7050;
+		if (Class236.aBool2909 != Class530.appletHasFocus) {
+			Class236.aBool2909 = Class530.appletHasFocus;
 			tcpmessage_1 = Class271.createPacket(OutgoingPacket.CLIENT_FOCUS, client.outputContext.isaac);
-			tcpmessage_1.buffer.writeByte(Class530.aBool7050 ? 1 : 0);
+			tcpmessage_1.buffer.writeByte(Class530.appletHasFocus ? 1 : 0);
 			client.outputContext.queuePacket(tcpmessage_1);
 		}
 

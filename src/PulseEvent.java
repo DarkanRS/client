@@ -22,7 +22,7 @@ public class PulseEvent extends CacheableNode {
 	}
 
 	void method14965(byte b_1) {
-		this.key = this.key & ~0x7fffffffffffffffL | TextureDetails.time() + 500L;
+		this.key = this.key & ~0x7fffffffffffffffL | Utils.time() + 500L;
 		aClass477_9655.method7936(this);
 	}
 
@@ -82,7 +82,7 @@ public class PulseEvent extends CacheableNode {
 					icomponentdefinitions_5.anInt1329 = i_6;
 					icomponentdefinitions_5.anInt1330 = i_7;
 					icomponentdefinitions_5.anInt1339 = i_8;
-					icomponentdefinitions_5.aClass417_1308 = null;
+					icomponentdefinitions_5.npcMeshModifier = null;
 					Class109.redrawComponent(icomponentdefinitions_5);
 				}
 			} else if (type == 5) {

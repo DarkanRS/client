@@ -122,7 +122,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 					method15402(i_9, string_1, bool_2, 1368243224);
 					if (graphicalrenderer_16 != null) {
 						try {
-							graphicalrenderer_16.method8396(978390252);
+							graphicalrenderer_16.method8396();
 						} catch (Throwable throwable_11) {
 							;
 						}
@@ -131,7 +131,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 				}
 				if (graphicalrenderer_16 != null) {
 					try {
-						graphicalrenderer_16.method8396(1088813931);
+						graphicalrenderer_16.method8396();
 					} catch (Throwable throwable_12) {
 						;
 					}
@@ -139,7 +139,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 			} catch (Exception exception_15) {
 				if (graphicalrenderer_16 != null) {
 					try {
-						graphicalrenderer_16.method8396(-2045375529);
+						graphicalrenderer_16.method8396();
 					} catch (Throwable throwable_10) {
 						;
 					}

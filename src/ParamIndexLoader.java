@@ -8,14 +8,14 @@ public class ParamIndexLoader {
 	public void method7067() {
 		SoftCache softcache_2 = this.aClass229_5028;
 		synchronized (this.aClass229_5028) {
-			this.aClass229_5028.method3863(1684780970);
+			this.aClass229_5028.method3863();
 		}
 	}
 
 	public void method7068() {
 		SoftCache softcache_3 = this.aClass229_5028;
 		synchronized (this.aClass229_5028) {
-			this.aClass229_5028.method3858(5, (byte) -89);
+			this.aClass229_5028.method3858(5);
 		}
 	}
 
@@ -55,7 +55,7 @@ public class ParamIndexLoader {
 	public void method7070() {
 		SoftCache softcache_2 = this.aClass229_5028;
 		synchronized (this.aClass229_5028) {
-			this.aClass229_5028.method3859(-299334668);
+			this.aClass229_5028.method3859();
 		}
 	}
 

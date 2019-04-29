@@ -71,7 +71,7 @@ public class Class188 {
 	static void method3140() {
 		SoftCache softcache_1 = Class13.aClass229_127;
 		synchronized (Class13.aClass229_127) {
-			Class13.aClass229_127.method3859(-1273299444);
+			Class13.aClass229_127.method3859();
 		}
 	}
 
@@ -443,7 +443,7 @@ public class Class188 {
 		if (NamedFileReference.method867(1523656747) != Class279.aClass279_3368) {
 			try {
 				String string_1 = Node_Sub44.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
-				int i_2 = (int) (TextureDetails.time() / 86400000L) - 11745;
+				int i_2 = (int) (Utils.time() / 86400000L) - 11745;
 				String string_3 = "usrdob=" + i_2 + "; version=1; path=/; domain=" + string_1;
 				Class441.method7376(Node_Sub44.anApplet8065, "document.cookie=\"" + string_3 + "\"", (byte) 18);
 			} catch (Throwable throwable_4) {

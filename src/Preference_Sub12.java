@@ -69,7 +69,7 @@ public class Preference_Sub12 extends Preference {
 
 	public static void method12710(int i_0) {
 		Node_Sub14.anInt7597 = i_0;
-		IComponentDefinitions.aClass229_1341.method3859(-1043512499);
+		IComponentDefinitions.aClass229_1341.method3859();
 	}
 
 }

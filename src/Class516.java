@@ -42,7 +42,7 @@ public class Class516 {
 				if (string_0.length() == 0) {
 					string_4 = string_4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
 				} else {
-					string_4 = string_4 + "; Expires=" + Class316.method5596(TextureDetails.time() + 94608000000L) + "; Max-Age=" + 94608000L;
+					string_4 = string_4 + "; Expires=" + Class316.method5596(Utils.time() + 94608000000L) + "; Max-Age=" + 94608000L;
 				}
 				Class441.method7376(Node_Sub44.anApplet8065, "document.cookie=\"" + string_4 + "\"", (byte) 78);
 			} catch (Throwable throwable_5) {

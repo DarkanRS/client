@@ -59,8 +59,8 @@ public class Class435 {
 
 	static final void method7302(GraphicalRenderer graphicalrenderer_0, Interface22 interface22_1) {
 		if (Class291_Sub1.aCacheableNode_Sub6_3491 != null) {
-			TextureDetails.time();
-			TextureDetails.time();
+			Utils.time();
+			Utils.time();
 			if (Class291_Sub1.anInt8015 < 10) {
 				if (!Class291_Sub1.MAP_AREA_INDEX.method5629(Class291_Sub1.aCacheableNode_Sub6_3491.aString9533)) {
 					Class291_Sub1.anInt8015 = IndexLoaders.WORLD_MAP_INDEX.method5631(Class291_Sub1.aCacheableNode_Sub6_3491.aString9533, (byte) 95) / 10;

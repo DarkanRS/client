@@ -283,23 +283,19 @@ public abstract class Class101 {
 		}
 	}
 
-	public static int method1776(int i_0) {
-		if (false) {
-			return 0;
+	public static int getContainerFreeSpace(int i_0) {
+		ItemContainer container = ItemContainer.getContainer(i_0, false);
+		if (container == null) {
+			return IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
 		} else {
-			ItemContainer class282_sub30_3 = CS2Runner.getItemContainer(i_0, false);
-			if (class282_sub30_3 == null) {
-				return IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
-			} else {
-				int i_4 = 0;
-				for (int i_5 = 0; i_5 < class282_sub30_3.itemIds.length; i_5++) {
-					if (class282_sub30_3.itemIds[i_5] == -1) {
-						++i_4;
-					}
+			int i_4 = 0;
+			for (int i_5 = 0; i_5 < container.itemIds.length; i_5++) {
+				if (container.itemIds[i_5] == -1) {
+					++i_4;
 				}
-				i_4 += IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 24410).maxSize - class282_sub30_3.itemIds.length;
-				return i_4;
 			}
+			i_4 += IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 24410).maxSize - container.itemIds.length;
+			return i_4;
 		}
 	}
 }

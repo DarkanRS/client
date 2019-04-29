@@ -76,8 +76,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 
 		this.anInt8977 = i_1;
-		this.aClass229_9013.method3858(5, (byte) 24);
-		this.aClass229_9006.method3858(5, (byte) -100);
+		this.aClass229_9013.method3858(5);
+		this.aClass229_9006.method3858(5);
 	}
 
 	public int method8443(int i_1, int i_2) {
@@ -2439,10 +2439,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 			this.method14409();
 			SunDefinitions.method854(true, true, -1425832759);
 			this.aBool9012 = true;
-			this.anInt8977 = (int) TextureDetails.time();
+			this.anInt8977 = (int) Utils.time();
 		} catch (Throwable throwable_3) {
 			throwable_3.printStackTrace();
-			this.method8396(-752657427);
+			this.method8396();
 			throw new RuntimeException("");
 		}
 	}
@@ -2490,7 +2490,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8568() {
 		this.aBool8997 = false;
-		this.aClass229_9006.method3859(-1268608854);
+		this.aClass229_9006.method3859();
 	}
 
 	void method14374() {
@@ -2860,8 +2860,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 
 		this.anInt8977 = i_1;
-		this.aClass229_9013.method3858(5, (byte) -11);
-		this.aClass229_9006.method3858(5, (byte) -40);
+		this.aClass229_9013.method3858(5);
+		this.aClass229_9006.method3858(5);
 	}
 
 	public void fq(int i_1, int i_2, int i_3, int i_4, int i_5) {
@@ -6077,7 +6077,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			this.method8412(canvas_1);
 		} catch (Throwable throwable_6) {
 			throwable_6.printStackTrace();
-			this.method8396(1612503193);
+			this.method8396();
 			throw new RuntimeException("");
 		}
 	}
@@ -7114,7 +7114,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8595(boolean bool_1) {
 		this.aBool8997 = bool_1;
-		this.aClass229_9006.method3859(-1919539148);
+		this.aClass229_9006.method3859();
 	}
 
 	public Class152 method8557(Class152 class152_1, Class152 class152_2, float f_3, Class152 class152_4) {
@@ -7203,7 +7203,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8594(boolean bool_1) {
 		this.aBool8997 = bool_1;
-		this.aClass229_9006.method3859(586880417);
+		this.aClass229_9006.method3859();
 	}
 
 	public void method8613() {
@@ -7253,8 +7253,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 
 		this.anInt8977 = i_1;
-		this.aClass229_9013.method3858(5, (byte) -94);
-		this.aClass229_9006.method3858(5, (byte) 3);
+		this.aClass229_9013.method3858(5);
+		this.aClass229_9006.method3858(5);
 	}
 
 	public void method8573(float f_1, float f_2, float f_3, float[] floats_4) {

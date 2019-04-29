@@ -262,7 +262,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(RenderAnimDefs.anInt2831);
                         rsbitsbuffer_22.writeInt(client.anInt7163);
                         rsbitsbuffer_22.writeString(client.aString7164);
-                        rsbitsbuffer_22.writeByte(Class448.aClass450_5421 != null && Class159.GAME_CONNECTION_INFO.worldId == Class448.aClass450_5421.worldId ? 0 : 1);
+                        rsbitsbuffer_22.writeByte(Class448.CONNECTION_INFO != null && Class159.GAME_CONNECTION_INFO.worldId == Class448.CONNECTION_INFO.worldId ? 0 : 1);
                         int i_9 = Class159.GAME_CONNECTION_INFO.worldId;
                         rsbitsbuffer_22.writeInt(i_9);
                         QuestDefinitions.writeCRCs(rsbitsbuffer_22, 1259367589);
@@ -437,9 +437,9 @@ public class Login {
                             client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.aBool7325 = rsbitsbuffer_19.readUnsignedByte() == 1;
+                            client.IS_QUICKCHAT_ONLY = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.anInt7315 = rsbitsbuffer_19.readUnsignedShort();
-                            client.aBool7316 = rsbitsbuffer_19.readUnsignedByte() == 1;
+                            client.IS_MEMBER = rsbitsbuffer_19.readUnsignedByte() == 1;
                             Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(1818887431);
                             client.membersWorld = rsbitsbuffer_19.readUnsignedByte() == 1;
                             RegionMap.aString3643 = rsbitsbuffer_19.readString();
@@ -461,9 +461,9 @@ public class Login {
                             client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             Class116.aLong1259 = rsbitsbuffer_19.readLong();
-                            Class43.aLong420 = Class116.aLong1259 - TextureDetails.time() - rsbitsbuffer_19.read5ByteInteger();
+                            Class43.aLong420 = Class116.aLong1259 - Utils.time() - rsbitsbuffer_19.read5ByteInteger();
                             i_3 = rsbitsbuffer_19.readUnsignedByte();
-                            client.aBool7316 = (i_3 & 0x1) != 0;
+                            client.IS_MEMBER = (i_3 & 0x1) != 0;
                             Class509.aBool5870 = (i_3 & 0x2) != 0;
                             Class354.anInt4112 = rsbitsbuffer_19.readInt();
                             Class469.aBool5585 = rsbitsbuffer_19.readUnsignedByte() == 1;
@@ -482,21 +482,21 @@ public class Login {
                             RegionMap.anInt3644 = rsbitsbuffer_19.readUnsignedByte();
                             Class121.anInt1526 = rsbitsbuffer_19.readInt();
                             client.aBool7323 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            Class448.aClass450_5421 = new ConnectionInfo();
-                            Class448.aClass450_5421.worldId = rsbitsbuffer_19.readUnsignedShort();
-                            if (Class448.aClass450_5421.worldId == 65535) {
-                                Class448.aClass450_5421.worldId = -1;
+                            Class448.CONNECTION_INFO = new ConnectionInfo();
+                            Class448.CONNECTION_INFO.worldId = rsbitsbuffer_19.readUnsignedShort();
+                            if (Class448.CONNECTION_INFO.worldId == 65535) {
+                                Class448.CONNECTION_INFO.worldId = -1;
                             }
-                            Class448.aClass450_5421.host = rsbitsbuffer_19.readGJString();
+                            Class448.CONNECTION_INFO.host = rsbitsbuffer_19.readGJString();
                             if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813) {
-                                Class448.aClass450_5421.anInt5434 = Class448.aClass450_5421.worldId * -1708079975 + 1140744768;
-                                Class448.aClass450_5421.anInt5437 = Class448.aClass450_5421.worldId * -1473668237 + 1047080176;
+                                Class448.CONNECTION_INFO.anInt5434 = Class448.CONNECTION_INFO.worldId * -1708079975 + 1140744768;
+                                Class448.CONNECTION_INFO.anInt5437 = Class448.CONNECTION_INFO.worldId * -1473668237 + 1047080176;
                             }
                             if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5810 && (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5808 || client.rights < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
                                 Class274.method4884((byte) 74);
                             }
                         }
-                        if ((!client.aBool7224 || client.aBool7322) && !client.aBool7316) {
+                        if ((!client.aBool7224 || client.aBool7322) && !client.IS_MEMBER) {
                             try {
                                 Class441.method7377(Node_Sub44.anApplet8065, "unzap", 1103714597);
                             } catch (Throwable throwable_14) {

@@ -28,7 +28,7 @@ public class HostNameIdentifier implements Runnable {
 
 	static void method482(byte b_0) {
 		if (Class182.HARDWARE_RENDERER != null) {
-			Class182.HARDWARE_RENDERER.method8396(-517038);
+			Class182.HARDWARE_RENDERER.method8396();
 			Class182.HARDWARE_RENDERER = null;
 			Class182.aFontRenderer_2259 = null;
 		}

@@ -59,7 +59,7 @@ public abstract class Class209 {
         if (Class13.aStringArray129 == null) {
             FontRenderer.method402(1696819544);
         }
-        client.aCalendar7278.setTime(new Date(TextureDetails.time()));
+        client.aCalendar7278.setTime(new Date(Utils.time()));
         int i_2 = client.aCalendar7278.get(11);
         int i_3 = client.aCalendar7278.get(12);
         int i_4 = client.aCalendar7278.get(13);

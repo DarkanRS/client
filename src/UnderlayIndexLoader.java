@@ -35,7 +35,7 @@ public class UnderlayIndexLoader {
 	public void method8026() {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3859(-62537234);
+			this.cache.method3859();
 		}
 	}
 
@@ -47,14 +47,14 @@ public class UnderlayIndexLoader {
 	public void method8030() {
 		SoftCache softcache_3 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3858(5, (byte) -26);
+			this.cache.method3858(5);
 		}
 	}
 
 	public void method8032() {
 		SoftCache softcache_2 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3863(977235767);
+			this.cache.method3863();
 		}
 	}
 

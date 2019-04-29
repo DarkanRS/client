@@ -1,7 +1,7 @@
 public class Class534_Sub2 extends Class534 {
 
 	boolean method11434() {
-		return this.method12842(654823929) != null || this.aLong7076 * 1203484888895588483L * 2966128844247041579L < TextureDetails.time() - 2000L;
+		return this.method12842(654823929) != null || this.aLong7076 * 1203484888895588483L * 2966128844247041579L < Utils.time() - 2000L;
 	}
 
 	MouseRecord method12842(int i_1) {
@@ -12,7 +12,7 @@ public class Class534_Sub2 extends Class534 {
 	}
 
 	boolean method11423() {
-		return this.method12842(1070936564) != null || this.aLong7076 < TextureDetails.time() - 2000L;
+		return this.method12842(1070936564) != null || this.aLong7076 < Utils.time() - 2000L;
 	}
 
 	TCPPacket method11416() {

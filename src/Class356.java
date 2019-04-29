@@ -103,9 +103,9 @@ public class Class356 {
 			Class188.method3140();
 			Class191.method3166();
 			Class321.method5757();
-			CS2Runner.aClass229_5901.method3859(876370296);
-			client.aClass229_7204.method3859(-1910455391);
-			Class20.aClass229_191.method3859(-1112414148);
+			client.aClass229_5901.method3859();
+			client.aClass229_7204.method3859();
+			Class20.aClass229_191.method3859();
 		}
 		Class430.method7217();
 		HostNameIdentifier.method482((byte) 38);

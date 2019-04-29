@@ -1,4 +1,4 @@
-public class RSHookableInterface {
+public class CS2Interface {
 	RSInterface inter;
 	IComponentDefinitions defs;
 

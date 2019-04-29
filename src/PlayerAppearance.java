@@ -1,28 +1,18 @@
 public class PlayerAppearance {
 
 	static int[] anIntArray2917 = new int[] { 8, 11, 4, 6, 9, 7, 10, 0 };
-
 	static SoftCache aClass229_2920 = new SoftCache(260);
-
 	static SoftCache aClass229_2930 = new SoftCache(5);
-
 	public int anInt2928 = -1;
-
 	long aLong2926;
-
 	int anInt2925;
-
 	int[] anIntArray2921;
-
 	MeshModifier[] aClass422Array2922;
-
 	public int[] colors;
-
-	public boolean aBool2929;
-
+	public boolean gender;
 	long aLong2927;
 
-	void method3991() {
+	void refresh() {
 		long[] longs_2 = RsByteBuffer.aLongArray7979;
 		this.aLong2926 = -1L;
 		this.aLong2926 = this.aLong2926 >>> 8 ^ longs_2[(int) ((this.aLong2926 ^ (long) (this.anInt2925 >> 8)) & 0xffL)];
@@ -39,7 +29,7 @@ public class PlayerAppearance {
 				if (this.aClass422Array2922[i_3] != null) {
 					int[] ints_4;
 					int[] ints_5;
-					if (this.aBool2929) {
+					if (this.gender) {
 						ints_4 = this.aClass422Array2922[i_3].femaleBody;
 						ints_5 = this.aClass422Array2922[i_3].femaleHeads;
 					} else {
@@ -77,7 +67,7 @@ public class PlayerAppearance {
 		for (i_3 = 0; i_3 < 10; i_3++) {
 			this.aLong2926 = this.aLong2926 >>> 8 ^ longs_2[(int) ((this.aLong2926 ^ (long) this.colors[i_3]) & 0xffL)];
 		}
-		this.aLong2926 = this.aLong2926 >>> 8 ^ longs_2[(int) ((this.aLong2926 ^ (long) (this.aBool2929 ? 1 : 0)) & 0xffL)];
+		this.aLong2926 = this.aLong2926 >>> 8 ^ longs_2[(int) ((this.aLong2926 ^ (long) (this.gender ? 1 : 0)) & 0xffL)];
 	}
 
 	public void method3992(int i_1, int[] ints_2, MeshModifier[] arr_3, int[] ints_4, boolean bool_5, int i_6) {
@@ -87,25 +77,25 @@ public class PlayerAppearance {
 		this.anIntArray2921 = ints_2;
 		this.aClass422Array2922 = arr_3;
 		this.colors = ints_4;
-		this.aBool2929 = bool_5;
+		this.gender = bool_5;
 		this.anInt2928 = i_6;
-		this.method3991();
+		this.refresh();
 	}
 
 	public void method3993(int i_1, int i_2, IdentitiKitIndexLoader class31_3, int i_4) {
 		int i_5 = anIntArray2917[i_1];
 		if (class31_3.method800(i_2, 1435454406) != null) {
 			this.anIntArray2921[i_5] = i_2 | ~0x7fffffff;
-			this.method3991();
+			this.refresh();
 		}
 	}
 
-	public void method3995(int i_1, int i_2, ItemIndexLoader itemindexloader_3) {
-		if (i_2 == -1) {
-			this.anIntArray2921[i_1] = 0;
-		} else if (itemindexloader_3.getItemDefinitions(i_2) != null) {
-			this.anIntArray2921[i_1] = i_2 | 0x40000000;
-			this.method3991();
+	public void setItem(int index, int itemId, ItemIndexLoader itemindexloader_3) {
+		if (itemId == -1) {
+			this.anIntArray2921[index] = 0;
+		} else if (itemindexloader_3.getItemDefinitions(itemId) != null) {
+			this.anIntArray2921[index] = itemId | 0x40000000;
+			this.refresh();
 		}
 	}
 
@@ -227,7 +217,7 @@ public class PlayerAppearance {
 									if (!bool_55 && this.aClass422Array2922 != null && this.aClass422Array2922[i_31] != null) {
 										meshmodifier_42 = this.aClass422Array2922[i_31];
 									}
-									rsmesh_35 = itemindexloader_6.getItemDefinitions(i_41 & 0x3fffffff).getBodyMesh(this.aBool2929, meshmodifier_42, 710746900);
+									rsmesh_35 = itemindexloader_6.getItemDefinitions(i_41 & 0x3fffffff).getBodyMesh(this.gender, meshmodifier_42, 710746900);
 									if (rsmesh_35 != null) {
 										arr_56[i_31] = rsmesh_35;
 									}
@@ -315,7 +305,7 @@ public class PlayerAppearance {
 						if (!bool_33 && this.aClass422Array2922 != null && this.aClass422Array2922[i_30] != null) {
 							meshmodifier_32 = this.aClass422Array2922[i_30];
 						}
-						if (!itemindexloader_6.getItemDefinitions(i_31 & 0x3fffffff).bodyMeshesReady(this.aBool2929, meshmodifier_32, -1830991961)) {
+						if (!itemindexloader_6.getItemDefinitions(i_31 & 0x3fffffff).bodyMeshesReady(this.gender, meshmodifier_32, -1830991961)) {
 							bool_29 = true;
 						}
 					} else if ((i_31 & ~0x7fffffff) != 0 && !class31_4.method800(i_31 & 0x3fffffff, 1122652918).method898()) {
@@ -431,8 +421,8 @@ public class PlayerAppearance {
 	}
 
 	public void method4003(boolean bool_1) {
-		this.aBool2929 = bool_1;
-		this.method3991();
+		this.gender = bool_1;
+		this.refresh();
 	}
 
 	public MeshRasterizer method4021(GraphicalRenderer graphicalrenderer_1, int i_2, IdentitiKitIndexLoader class31_3, NPCIndexLoader npcindexloader_4, ItemIndexLoader itemindexloader_5, AnimationIndexLoader animationindexloader_6, VarProvider interface42_7, Animation animation_8) {
@@ -458,7 +448,7 @@ public class PlayerAppearance {
 						if (this.aClass422Array2922 != null && this.aClass422Array2922[i_14] != null) {
 							meshmodifier_16 = this.aClass422Array2922[i_14];
 						}
-						if (!itemindexloader_5.getItemDefinitions(i_15 & 0x3fffffff).headMeshesReady(this.aBool2929, meshmodifier_16)) {
+						if (!itemindexloader_5.getItemDefinitions(i_15 & 0x3fffffff).headMeshesReady(this.gender, meshmodifier_16)) {
 							bool_13 = true;
 						}
 					} else if ((i_15 & ~0x7fffffff) != 0 && !class31_3.method800(i_15 & 0x3fffffff, 745327343).method900()) {
@@ -479,7 +469,7 @@ public class PlayerAppearance {
 						if (this.aClass422Array2922 != null && this.aClass422Array2922[i_22] != null) {
 							meshmodifier_18 = this.aClass422Array2922[i_22];
 						}
-						rsmesh_19 = itemindexloader_5.getItemDefinitions(i_17 & 0x3fffffff).getHeadMesh(this.aBool2929, meshmodifier_18);
+						rsmesh_19 = itemindexloader_5.getItemDefinitions(i_17 & 0x3fffffff).getHeadMesh(this.gender, meshmodifier_18);
 						if (rsmesh_19 != null) {
 							arr_21[i_15++] = rsmesh_19;
 						}
@@ -516,9 +506,9 @@ public class PlayerAppearance {
 		}
 	}
 
-	public void method4029(int i_1, int i_2) {
+	public void setBaseColor(int i_1, int i_2) {
 		this.colors[i_1] = i_2;
-		this.method3991();
+		this.refresh();
 	}
 
 	static void method4032(String string_0, String string_1, int i_2, int i_3, int i_4, long long_5, int i_7, int i_8, boolean bool_9, boolean bool_10, long long_11, boolean bool_13, int i_14) {

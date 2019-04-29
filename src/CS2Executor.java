@@ -1,4 +1,14 @@
+import java.util.ArrayList;
+
 public class CS2Executor {
+	
+	static int CURRENT_CS2_EXEC_IDX = 0;
+	static ArrayList CS2_EXECUTORS = new ArrayList();
+	static int anInt5904 = 0;
+	static String aString5897 = null;
+	static boolean aBool5898 = false;
+	static int[] anIntArray5900 = new int[3];
+	static int anInt5906 = 0;
 
 	int[] intLocals;
 	long[] longLocals;
@@ -24,9 +34,9 @@ public class CS2Executor {
 	long[] longStack = new long[1000];
 	int longStackPtr = 0;
 	int anInt7002 = 0;
-	Class509[] aClass509Array7016 = new Class509[50];
-	RSHookableInterface hookedInterface1 = new RSHookableInterface();
-	RSHookableInterface hookedInterface2 = new RSHookableInterface();
+	Class509[] returnValues = new Class509[50];
+	CS2Interface hookedInterface1 = new CS2Interface();
+	CS2Interface hookedInterface2 = new CS2Interface();
 	int anInt7015 = 0;
 	int instrPtr = -1;
 
@@ -45,7 +55,7 @@ public class CS2Executor {
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
 		CS2Script cs2script_5 = RouteStrategy_Sub1.getScript(class397_0, i_1, i_2);
 		if (cs2script_5 == null) {
-			Shadow.method15509(282059094);
+			decrementCS2ExecIdx();
 		} else {
 			cs2executor_3.intLocals = new int[cs2script_5.intLocalsCount];
 			cs2executor_3.objectLocals = new Object[cs2script_5.stringLocalsCount];
@@ -78,14 +88,14 @@ public class CS2Executor {
 		cs2executor_2.anInt7002 = 0;
 		try {
 			try {
-				CS2Runner.anInt5904 = 0;
+				anInt5904 = 0;
 				while (true) {
-					++CS2Runner.anInt5904;
-					if (CS2Runner.anInt5904 > i_1) {
+					++anInt5904;
+					if (anInt5904 > i_1) {
 						throw new RuntimeException("");
 					}
 					cs2opinfo_4 = cs2executor_2.operations[++cs2executor_2.instrPtr];
-					if (CS2Runner.aBool5898 && (CS2Runner.aString5897 == null || cs2executor_2.current.scriptName != null && cs2executor_2.current.scriptName.indexOf(CS2Runner.aString5897) != -1)) {
+					if (aBool5898 && (aString5897 == null || cs2executor_2.current.scriptName != null && cs2executor_2.current.scriptName.indexOf(aString5897) != -1)) {
 						System.out.println(cs2executor_2.current.scriptName + ": " + cs2opinfo_4);
 					}
 					if (cs2executor_2.intOpValues[cs2executor_2.instrPtr] == 1) {
@@ -94,7 +104,7 @@ public class CS2Executor {
 						cs2executor_2.aBool7022 = false;
 					}
 					if (cs2opinfo_4 == CS2OpInfo.RETURN && cs2executor_2.anInt7002 == 0) {
-						Shadow.method15509(1969627147);
+						decrementCS2ExecIdx();
 						break;
 					}
 					CS2Interpreter.executeOperation(cs2opinfo_4, cs2executor_2);
@@ -103,14 +113,14 @@ public class CS2Executor {
 				StringBuilder stringbuilder_6 = new StringBuilder(30);
 				stringbuilder_6.append("").append(cs2executor_2.current.data).append(" ");
 				for (int i_7 = cs2executor_2.anInt7002 - 1; i_7 >= 0; --i_7) {
-					stringbuilder_6.append("").append(cs2executor_2.aClass509Array7016[i_7].aCacheableNode_Sub5_5869.data).append(" ");
+					stringbuilder_6.append("").append(cs2executor_2.returnValues[i_7].aCacheableNode_Sub5_5869.data).append(" ");
 				}
 				stringbuilder_6.append("").append(Integer.valueOf(cs2opinfo_4.opcode));
 				Class151.method2594(stringbuilder_6.toString(), exception_8, (byte) -32);
-				Shadow.method15509(1831526496);
+				decrementCS2ExecIdx();
 			}
 		} catch (Exception exception_9) {
-			Shadow.method15509(105300500);
+			decrementCS2ExecIdx();
 		}
 	}
 	
@@ -123,7 +133,7 @@ public class CS2Executor {
 		int i_4 = ((Integer) arr_3[0]).intValue();
 		CS2Script cs2script_5 = Class286.getCS2Script(i_4);
 		if (cs2script_5 != null) {
-			CS2Executor cs2executor_6 = Class125.getNextScriptExecutor();
+			CS2Executor cs2executor_6 = getNextScriptExecutor();
 			cs2executor_6.intLocals = new int[cs2script_5.intLocalsCount];
 			int i_7 = 0;
 			cs2executor_6.objectLocals = new String[cs2script_5.stringLocalsCount];
@@ -192,12 +202,27 @@ public class CS2Executor {
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
 		CS2Script cs2script_4 = RouteStrategy_Sub1.getScript(Class397.aClass397_4792, i_0, -1);
 		if (cs2script_4 != null) {
-			CS2Executor cs2executor_5 = Class125.getNextScriptExecutor();
+			CS2Executor cs2executor_5 = getNextScriptExecutor();
 			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];
 			cs2executor_5.objectLocals = new String[cs2script_4.stringLocalsCount];
 			cs2executor_5.objectLocals[0] = string_1;
 			cs2executor_5.intLocals[0] = i_2;
 			method1068(cs2script_4, 200000, cs2executor_5);
 		}
+	}
+
+	static final void decrementCS2ExecIdx() {
+	    --CURRENT_CS2_EXEC_IDX;
+	}
+
+	static final CS2Executor getNextScriptExecutor() {
+	    if (CURRENT_CS2_EXEC_IDX == CS2_EXECUTORS.size()) {
+	        CS2_EXECUTORS.add(new CS2Executor());
+	    }
+	    return  (CS2Executor) CS2_EXECUTORS.get(CURRENT_CS2_EXEC_IDX++);
+	}
+
+	static final long method1480() {
+		return (long) (++anInt5906 - 1) << 32 | 0xffffffffL;
 	}
 }

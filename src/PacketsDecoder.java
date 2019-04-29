@@ -320,7 +320,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.RUN_ENERGY) {
-			client.anInt7300 = buffer.readUnsignedByte();
+			client.RUN_ENERGY = buffer.readUnsignedByte();
 			client.anInt7397 = client.anInt7347;
 			context.currentPacket = null;
 			return true;
@@ -581,7 +581,7 @@ public class PacketsDecoder extends Class455 {
 			int i_7 = buffer.readUnsignedByte();
 			boolean bool_74 = false;
 			if (i_7 <= 1) {
-				if ((!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
+				if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 					if (i_7 <= 1 && Class280.method4975(str_92, (byte) -70)) {
 						bool_74 = true;
 					}
@@ -694,7 +694,7 @@ public class PacketsDecoder extends Class455 {
 				if (player_119.displayName != null && player_119.playerAppearance != null) {
 					boolean bool_69 = false;
 					if (i_7 <= 1) {
-						if (!bool_74 && (client.aBool7224 && !client.aBool7244 || client.aBool7325)) {
+						if (!bool_74 && (client.aBool7224 && !client.aBool7244 || client.IS_QUICKCHAT_ONLY)) {
 							bool_69 = true;
 						} else if (Class280.method4975(player_119.displayName, (byte) -107)) {
 							bool_69 = true;
@@ -886,7 +886,7 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.PLAYER_WEIGHT) {
-			client.anInt7354 = buffer.readShort();
+			client.RUN_WEIGHT = buffer.readShort();
 			client.anInt7397 = client.anInt7347;
 			context.currentPacket = null;
 			return true;
@@ -1807,7 +1807,7 @@ public class PacketsDecoder extends Class455 {
 			while (true) {
 				if (i_15 >= 100) {
 					if (i_11 <= 1) {
-						if ((!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
+						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 							if (Class280.method4975(str_92, (byte) -73)) {
 								bool_14 = true;
 							}
@@ -1912,7 +1912,7 @@ public class PacketsDecoder extends Class455 {
 						}
 					}
 					if (i_10 <= 1) {
-						if ((!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
+						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 							if (Class280.method4975(string_88, (byte) -47)) {
 								bool_112 = true;
 							}
@@ -2201,7 +2201,7 @@ public class PacketsDecoder extends Class455 {
 			while (true) {
 				if (i_34 >= 100) {
 					if (i_35 <= 1) {
-						if ((!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
+						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 							if (Class280.method4975(str_92, (byte) -112)) {
 								bool_16 = true;
 							}

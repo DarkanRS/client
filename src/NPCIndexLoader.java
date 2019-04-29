@@ -54,67 +54,67 @@ public class NPCIndexLoader {
 		this.anInt4845 = i_1;
 		SoftCache softcache_3 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
-			this.aClass229_4836.method3859(1726285779);
+			this.aClass229_4836.method3859();
 		}
 		softcache_3 = this.aClass229_4843;
 		synchronized (this.aClass229_4843) {
-			this.aClass229_4843.method3859(21107724);
+			this.aClass229_4843.method3859();
 		}
 	}
 
 	public void method6831() {
 		SoftCache softcache_2 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
-			this.aClass229_4836.method3859(-157973986);
+			this.aClass229_4836.method3859();
 		}
 		softcache_2 = this.aClass229_4843;
 		synchronized (this.aClass229_4843) {
-			this.aClass229_4843.method3859(970264872);
+			this.aClass229_4843.method3859();
 		}
 	}
 
 	public void method6832() {
 		SoftCache softcache_3 = this.aClass229_4841;
 		synchronized (this.aClass229_4841) {
-			this.aClass229_4841.method3858(5, (byte) 39);
+			this.aClass229_4841.method3858(5);
 		}
 		softcache_3 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
-			this.aClass229_4836.method3858(5, (byte) -24);
+			this.aClass229_4836.method3858(5);
 		}
 		softcache_3 = this.aClass229_4843;
 		synchronized (this.aClass229_4843) {
-			this.aClass229_4843.method3858(5, (byte) -2);
+			this.aClass229_4843.method3858(5);
 		}
 	}
 
 	public void method6833() {
 		SoftCache softcache_2 = this.aClass229_4841;
 		synchronized (this.aClass229_4841) {
-			this.aClass229_4841.method3863(813622109);
+			this.aClass229_4841.method3863();
 		}
 		softcache_2 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
-			this.aClass229_4836.method3863(687026796);
+			this.aClass229_4836.method3863();
 		}
 		softcache_2 = this.aClass229_4843;
 		synchronized (this.aClass229_4843) {
-			this.aClass229_4843.method3863(1635439222);
+			this.aClass229_4843.method3863();
 		}
 	}
 
 	public void method6836(byte b_1) {
 		SoftCache softcache_2 = this.aClass229_4841;
 		synchronized (this.aClass229_4841) {
-			this.aClass229_4841.method3859(-986318596);
+			this.aClass229_4841.method3859();
 		}
 		softcache_2 = this.aClass229_4836;
 		synchronized (this.aClass229_4836) {
-			this.aClass229_4836.method3859(-1053289793);
+			this.aClass229_4836.method3859();
 		}
 		softcache_2 = this.aClass229_4843;
 		synchronized (this.aClass229_4843) {
-			this.aClass229_4843.method3859(-1428350726);
+			this.aClass229_4843.method3859();
 		}
 	}
 

@@ -29,14 +29,14 @@ public class SCT24IndexLoader {
 	public void method7452() {
 		SoftCache softcache_3 = this.aClass229_5417;
 		synchronized (this.aClass229_5417) {
-			this.aClass229_5417.method3858(5, (byte) -19);
+			this.aClass229_5417.method3858(5);
 		}
 	}
 
 	public void method7453() {
 		SoftCache softcache_2 = this.aClass229_5417;
 		synchronized (this.aClass229_5417) {
-			this.aClass229_5417.method3863(972747632);
+			this.aClass229_5417.method3863();
 		}
 	}
 
@@ -50,7 +50,7 @@ public class SCT24IndexLoader {
 	public void method7458() {
 		SoftCache softcache_2 = this.aClass229_5417;
 		synchronized (this.aClass229_5417) {
-			this.aClass229_5417.method3859(1246806514);
+			this.aClass229_5417.method3859();
 		}
 	}
 

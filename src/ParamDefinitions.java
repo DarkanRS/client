@@ -67,7 +67,7 @@ public class ParamDefinitions {
 				}
 			}
 			client.aClass465_7334.method7749(835503641);
-			Renderers.SOFTWARE_RENDERER.method8396(-2084829618);
+			Renderers.SOFTWARE_RENDERER.method8396();
 			Renderers.SOFTWARE_RENDERER = null;
 		}
 	}

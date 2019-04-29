@@ -11,7 +11,7 @@ public class ClanVarSettingsIndexLoader {
 	public void method3923() {
 		SoftCache softcache_3 = this.aClass229_2881;
 		synchronized (this.aClass229_2881) {
-			this.aClass229_2881.method3858(5, (byte) -46);
+			this.aClass229_2881.method3858(5);
 		}
 	}
 
@@ -25,14 +25,14 @@ public class ClanVarSettingsIndexLoader {
 	public void method3924() {
 		SoftCache softcache_2 = this.aClass229_2881;
 		synchronized (this.aClass229_2881) {
-			this.aClass229_2881.method3859(122018948);
+			this.aClass229_2881.method3859();
 		}
 	}
 
 	public void method3926() {
 		SoftCache softcache_2 = this.aClass229_2881;
 		synchronized (this.aClass229_2881) {
-			this.aClass229_2881.method3863(733385638);
+			this.aClass229_2881.method3863();
 		}
 	}
 

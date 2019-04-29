@@ -40,21 +40,21 @@ public class OverlayIndexLoader {
 	public void method11476() {
 		SoftCache softcache_2 = this.aClass229_7092;
 		synchronized (this.aClass229_7092) {
-			this.aClass229_7092.method3859(2009928513);
+			this.aClass229_7092.method3859();
 		}
 	}
 
 	public void method11477() {
 		SoftCache softcache_3 = this.aClass229_7092;
 		synchronized (this.aClass229_7092) {
-			this.aClass229_7092.method3858(5, (byte) 14);
+			this.aClass229_7092.method3858(5);
 		}
 	}
 
 	public void method11478() {
 		SoftCache softcache_2 = this.aClass229_7092;
 		synchronized (this.aClass229_7092) {
-			this.aClass229_7092.method3863(1398711796);
+			this.aClass229_7092.method3863();
 		}
 	}
 

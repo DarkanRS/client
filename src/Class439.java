@@ -5,10 +5,10 @@ public final class Class439 {
 	}
 
 	public static void method7343() {
-		IComponentDefinitions.aClass229_1280.method3858(50, (byte) 2);
-		IComponentDefinitions.aClass229_1341.method3858(50, (byte) 35);
-		IComponentDefinitions.aClass229_1303.method3858(50, (byte) 34);
-		IComponentDefinitions.aClass229_1282.method3858(50, (byte) -52);
+		IComponentDefinitions.aClass229_1280.method3858(50);
+		IComponentDefinitions.aClass229_1341.method3858(50);
+		IComponentDefinitions.aClass229_1303.method3858(50);
+		IComponentDefinitions.aClass229_1282.method3858(50);
 	}
 
 	static final void routeToSceneObject(int i_0, int i_1, long long_2) {

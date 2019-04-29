@@ -84,4 +84,13 @@ public class Utils {
 		return "<col=" + Integer.toHexString(i_0) + ">";
 	}
 
+	public static final synchronized long time() {
+	    long long_1 = System.currentTimeMillis();
+	    if (long_1 < Class97.aLong993) {
+	        Class97.aLong994 += Class97.aLong993 - long_1;
+	    }
+	    Class97.aLong993 = long_1;
+	    return long_1 + Class97.aLong994;
+	}
+
 }

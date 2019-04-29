@@ -44,11 +44,11 @@ public class Class66 {
 	}
 
 	void method1278() {
-		this.aClass229_674.method3858(5, (byte) -10);
+		this.aClass229_674.method3858(5);
 	}
 
 	void method1279() {
-		this.aClass229_674.method3859(-906241221);
+		this.aClass229_674.method3859();
 	}
 
 	Interface6 method1283(int i_1) {

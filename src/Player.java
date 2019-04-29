@@ -5,20 +5,20 @@ public class Player extends Animable {
 	public byte male = 0;
 	public int skullId = -1;
 	public int headIconId = -1;
-	public int anInt10565 = 0;
-	public int anInt10554 = 0;
-	public int anInt10555 = -1;
-	public int anInt10556 = 0;
+	public int combatLevel = 0;
+	public int cbLevelWithSumm = 0;
+	public int cbLevelRelated = -1;
+	public int elo = 0;
 	public int faceDirection = -1;
 	public boolean aBool10573 = false;
 	public int teamId = 0;
-	public int anInt10560 = -1;
-	public int anInt10547 = -1;
-	public int anInt10572 = -1;
-	public int anInt10574 = -1;
+	public int walkingAnimation = -1;
+	public int rotate180Animation = -1;
+	public int rotate90RightAnimation = -1;
+	public int rotate90LeftAnimation = -1;
 	public boolean isTransformedNPC = false;
 	public int isNpc = 0;
-	public int anInt10566 = 255;
+	public int specialByte = 255;
 	public boolean aBool10568 = false;
 	public boolean aBool10571 = false;
 	public boolean hidden = false;
@@ -26,7 +26,7 @@ public class Player extends Animable {
 	public Class155 aClass155_10561 = new Class155();
 	String prefixTitle;
 	String postfixTitle;
-	int anInt10545;
+	int renderEmote;
 	public String username;
 	public String displayName;
 	public PlayerAppearance playerAppearance;
@@ -272,7 +272,7 @@ public class Player extends Animable {
 	}
 
 	int getRenderAnimation() {
-		return this.anInt10545;
+		return this.renderEmote;
 	}
 
 	public int method15899(int i_1) {
@@ -686,11 +686,11 @@ public class Player extends Animable {
 	}
 
 	int method15867() {
-		return this.anInt10545 * -900819287 * 1628597657;
+		return this.renderEmote * -900819287 * 1628597657;
 	}
 
 	int method15868() {
-		return this.anInt10545 * -900819287 * 1628597657;
+		return this.renderEmote * -900819287 * 1628597657;
 	}
 
 	public Class200 method12993(GraphicalRenderer graphicalrenderer_1) {
@@ -883,45 +883,45 @@ public class Player extends Animable {
 			ints_21[i_15] = i_16;
 		}
 
-		this.anInt10545 = buffer.readUnsignedShort();
+		this.renderEmote = buffer.readUnsignedShort();
 		this.username = buffer.readString();
 		this.displayName = this.username;
 		if (this == VertexNormal.myPlayer) {
 			RuntimeException_Sub3.aString10458 = this.username;
 		}
 
-		this.anInt10565 = buffer.readUnsignedByte();
+		this.combatLevel = buffer.readUnsignedByte();
 		if (showElo) {
-			this.anInt10556 = buffer.readUnsignedShort();
-			if (this.anInt10556 == 65535) {
-				this.anInt10556 = -1;
+			this.elo = buffer.readUnsignedShort();
+			if (this.elo == 65535) {
+				this.elo = -1;
 			}
 
-			this.anInt10554 = this.anInt10565;
-			this.anInt10555 = -1;
+			this.cbLevelWithSumm = this.combatLevel;
+			this.cbLevelRelated = -1;
 		} else {
-			this.anInt10556 = 0;
-			this.anInt10554 = buffer.readUnsignedByte();
-			this.anInt10555 = buffer.readUnsignedByte();
-			if (this.anInt10555 == 255) {
-				this.anInt10555 = -1;
+			this.elo = 0;
+			this.cbLevelWithSumm = buffer.readUnsignedByte();
+			this.cbLevelRelated = buffer.readUnsignedByte();
+			if (this.cbLevelRelated == 255) {
+				this.cbLevelRelated = -1;
 			}
 		}
 
 		i_15 = this.isNpc;
 		this.isNpc = buffer.readUnsignedByte();
 		if (this.isNpc != 0) {
-			i_16 = this.anInt10560;
-			itemId = this.anInt10547;
-			i_18 = this.anInt10572;
-			int i_19 = this.anInt10574;
-			int i_20 = this.anInt10566;
-			this.anInt10560 = buffer.readUnsignedShort();
-			this.anInt10547 = buffer.readUnsignedShort();
-			this.anInt10572 = buffer.readUnsignedShort();
-			this.anInt10574 = buffer.readUnsignedShort();
-			this.anInt10566 = buffer.readUnsignedByte();
-			if (transformedBefore != this.isTransformedNPC || i_15 != this.isNpc || i_16 != this.anInt10560 || itemId != this.anInt10547 || i_18 != this.anInt10572 || i_19 != this.anInt10574 || i_20 != this.anInt10566) {
+			i_16 = this.walkingAnimation;
+			itemId = this.rotate180Animation;
+			i_18 = this.rotate90RightAnimation;
+			int i_19 = this.rotate90LeftAnimation;
+			int i_20 = this.specialByte;
+			this.walkingAnimation = buffer.readUnsignedShort();
+			this.rotate180Animation = buffer.readUnsignedShort();
+			this.rotate90RightAnimation = buffer.readUnsignedShort();
+			this.rotate90LeftAnimation = buffer.readUnsignedShort();
+			this.specialByte = buffer.readUnsignedByte();
+			if (transformedBefore != this.isTransformedNPC || i_15 != this.isNpc || i_16 != this.walkingAnimation || itemId != this.rotate180Animation || i_18 != this.rotate90RightAnimation || i_19 != this.rotate90LeftAnimation || i_20 != this.specialByte) {
 				IncomingPacket.method6379(this);
 			}
 		} else {

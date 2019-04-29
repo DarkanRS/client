@@ -1,6 +1,6 @@
 public class Class530 {
 
-	public static boolean aBool7050;
+	public static boolean appletHasFocus;
 
 	CoordGrid aClass219_7048;
 

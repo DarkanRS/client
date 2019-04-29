@@ -1,6 +1,6 @@
 public class EntityNode_Sub4 extends EntityNode {
 
-	int anInt7838 = (int) (TextureDetails.time() / 1000L);
+	int anInt7838 = (int) (Utils.time() / 1000L);
 	String aString7837;
 	short aShort7839;
 

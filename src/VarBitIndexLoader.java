@@ -42,28 +42,28 @@ public class VarBitIndexLoader implements IndexLoader {
 	public void method3898() {
 		SoftCache softcache_3 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
-			this.aClass229_2856.method3858(5, (byte) -17);
+			this.aClass229_2856.method3858(5);
 		}
 	}
 
 	public void method3899() {
 		SoftCache softcache_2 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
-			this.aClass229_2856.method3863(1268003404);
+			this.aClass229_2856.method3863();
 		}
 	}
 
 	public void method3903() {
 		SoftCache softcache_2 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
-			this.aClass229_2856.method3859(891629452);
+			this.aClass229_2856.method3859();
 		}
 	}
 
 	public void method3906(int i_1) {
 		SoftCache softcache_3 = this.aClass229_2856;
 		synchronized (this.aClass229_2856) {
-			this.aClass229_2856.method3859(1117502683);
+			this.aClass229_2856.method3859();
 			this.aClass229_2856 = new SoftCache(i_1);
 		}
 	}

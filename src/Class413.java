@@ -55,6 +55,6 @@ public class Class413 implements Identifiable {
     }
 
     static void method6939() {
-        ItemContainer.aClass229_7712.method3859(1403175614);
+        ItemContainer.aClass229_7712.method3859();
     }
 }

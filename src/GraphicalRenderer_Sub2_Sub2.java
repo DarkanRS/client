@@ -154,7 +154,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 			IDirect3DDevice.BeginScene(this.aLong10252);
 		} catch (Throwable throwable_13) {
 			throwable_13.printStackTrace();
-			this.method8396(593778067);
+			this.method8396();
 			throw new RuntimeException("");
 		}
 	}

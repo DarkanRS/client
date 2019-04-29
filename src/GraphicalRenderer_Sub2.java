@@ -343,7 +343,7 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 			this.aLong8695 = DirectBufferHelper.getDirectBufferAddress(this.aByteBuffer8838);
 		} catch (Throwable throwable_7) {
 			throwable_7.printStackTrace();
-			this.method8396(-1513744370);
+			this.method8396();
 			if (throwable_7 instanceof OutOfMemoryError) {
 				throw (OutOfMemoryError) throwable_7;
 			}

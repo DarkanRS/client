@@ -42,7 +42,7 @@ public class Class358 {
 	}
 
 	static void method6234() {
-		Class299.aClass229_3545.method3859(-1558417289);
+		Class299.aClass229_3545.method3859();
 	}
 
 	static void method6235(byte[] bytes_0) {

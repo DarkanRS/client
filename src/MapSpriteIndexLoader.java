@@ -36,11 +36,11 @@ public class MapSpriteIndexLoader {
 	public void method7173() {
 		SoftCache softcache_3 = this.aClass229_5117;
 		synchronized (this.aClass229_5117) {
-			this.aClass229_5117.method3858(5, (byte) 14);
+			this.aClass229_5117.method3858(5);
 		}
 		softcache_3 = this.aClass229_5122;
 		synchronized (this.aClass229_5122) {
-			this.aClass229_5122.method3858(5, (byte) 47);
+			this.aClass229_5122.method3858(5);
 		}
 	}
 
@@ -57,11 +57,11 @@ public class MapSpriteIndexLoader {
 	public void method7174() {
 		SoftCache softcache_2 = this.aClass229_5117;
 		synchronized (this.aClass229_5117) {
-			this.aClass229_5117.method3859(764081943);
+			this.aClass229_5117.method3859();
 		}
 		softcache_2 = this.aClass229_5122;
 		synchronized (this.aClass229_5122) {
-			this.aClass229_5122.method3859(-1307540664);
+			this.aClass229_5122.method3859();
 		}
 	}
 
@@ -73,11 +73,11 @@ public class MapSpriteIndexLoader {
 	public void method7177() {
 		SoftCache softcache_2 = this.aClass229_5117;
 		synchronized (this.aClass229_5117) {
-			this.aClass229_5117.method3863(1392803983);
+			this.aClass229_5117.method3863();
 		}
 		softcache_2 = this.aClass229_5122;
 		synchronized (this.aClass229_5122) {
-			this.aClass229_5122.method3863(728062976);
+			this.aClass229_5122.method3863();
 		}
 	}
 

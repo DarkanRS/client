@@ -40,21 +40,21 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 	public void method801() {
 		SoftCache softcache_2 = this.aClass229_360;
 		synchronized (this.aClass229_360) {
-			this.aClass229_360.method3859(-1013964419);
+			this.aClass229_360.method3859();
 		}
 	}
 
 	public void method802() {
 		SoftCache softcache_3 = this.aClass229_360;
 		synchronized (this.aClass229_360) {
-			this.aClass229_360.method3858(5, (byte) -3);
+			this.aClass229_360.method3858(5);
 		}
 	}
 
 	public void method803() {
 		SoftCache softcache_2 = this.aClass229_360;
 		synchronized (this.aClass229_360) {
-			this.aClass229_360.method3863(903388454);
+			this.aClass229_360.method3863();
 		}
 	}
 

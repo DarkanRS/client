@@ -30,7 +30,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8395();
 
-	public void method8396(int i_1) {
+	public void method8396() {
 		aBoolArray5839[this.rendererId] = false;
 		Enumeration enumeration_2 = this.aHashtable5855.keys();
 		while (enumeration_2.hasMoreElements()) {
@@ -48,7 +48,7 @@ public abstract class GraphicalRenderer {
 	public abstract int za();
 
 	public void finalize() {
-		this.method8396(-830410559);
+		this.method8396();
 	}
 
 	public abstract boolean method8399();

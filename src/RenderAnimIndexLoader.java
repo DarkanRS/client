@@ -13,7 +13,7 @@ public class RenderAnimIndexLoader {
 	public void method3615() {
 		SoftCache softcache_3 = this.renderAnimCache;
 		synchronized (this.renderAnimCache) {
-			this.renderAnimCache.method3858(5, (byte) 19);
+			this.renderAnimCache.method3858(5);
 		}
 	}
 
@@ -49,14 +49,14 @@ public class RenderAnimIndexLoader {
 	public void method3617() {
 		SoftCache softcache_2 = this.renderAnimCache;
 		synchronized (this.renderAnimCache) {
-			this.renderAnimCache.method3859(-2032720796);
+			this.renderAnimCache.method3859();
 		}
 	}
 
 	public void method3618() {
 		SoftCache softcache_2 = this.renderAnimCache;
 		synchronized (this.renderAnimCache) {
-			this.renderAnimCache.method3863(1249794319);
+			this.renderAnimCache.method3863();
 		}
 	}
 

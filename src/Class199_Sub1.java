@@ -30,7 +30,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		class282_sub52_5.anInt8173 = i_1;
 		class282_sub52_5.aChar8171 = var_2;
 		class282_sub52_5.anInt8172 = i_3;
-		class282_sub52_5.aLong8169 = TextureDetails.time();
+		class282_sub52_5.aLong8169 = Utils.time();
 		this.aClass482_8047.append(class282_sub52_5);
 	}
 

@@ -41,11 +41,11 @@ public class Class93 {
 	public static void method1568() {
 		SoftCache softcache_1 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			PlayerAppearance.aClass229_2920.method3863(1281693706);
+			PlayerAppearance.aClass229_2920.method3863();
 		}
 		softcache_1 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {
-			PlayerAppearance.aClass229_2930.method3863(1087742173);
+			PlayerAppearance.aClass229_2930.method3863();
 		}
 	}
 

@@ -69,7 +69,7 @@ public class CombinedInputSubscriber implements InputSubscriber {
                         if (!string_4.equals(itemdefinitions_17.getCS2String(i_2, string_9))) {
                             continue;
                         }
-                    } else if (i_3 != itemdefinitions_17.getCS2Integer(i_2, i_8, -1985446250)) {
+                    } else if (i_3 != itemdefinitions_17.getCS2Integer(i_2, i_8)) {
                         continue;
                     }
                 }

@@ -243,7 +243,7 @@ public class Huffman {
 	}
 
 	public static int method1980(int i_0, int i_1, boolean bool_2, int i_3) {
-		ItemContainer class282_sub30_4 = CS2Runner.getItemContainer(i_0, bool_2);
+		ItemContainer class282_sub30_4 = ItemContainer.getContainer(i_0, bool_2);
 		if (class282_sub30_4 == null) {
 			return 0;
 		} else if (i_1 == -1) {
@@ -263,7 +263,7 @@ public class Huffman {
 		Class13.anInt128 = i_0;
 		SoftCache softcache_2 = Class13.aClass229_127;
 		synchronized (Class13.aClass229_127) {
-			Class13.aClass229_127.method3859(1707843883);
+			Class13.aClass229_127.method3859();
 		}
 	}
 }

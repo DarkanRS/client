@@ -35,21 +35,21 @@ public class LightIntensityIndexLoader {
 	public void method7306() {
 		SoftCache softcache_2 = this.aClass229_5334;
 		synchronized (this.aClass229_5334) {
-			this.aClass229_5334.method3859(1100969051);
+			this.aClass229_5334.method3859();
 		}
 	}
 
 	public void method7307() {
 		SoftCache softcache_3 = this.aClass229_5334;
 		synchronized (this.aClass229_5334) {
-			this.aClass229_5334.method3858(5, (byte) 12);
+			this.aClass229_5334.method3858(5);
 		}
 	}
 
 	public void method7308() {
 		SoftCache softcache_2 = this.aClass229_5334;
 		synchronized (this.aClass229_5334) {
-			this.aClass229_5334.method3863(1784570586);
+			this.aClass229_5334.method3863();
 		}
 	}
 

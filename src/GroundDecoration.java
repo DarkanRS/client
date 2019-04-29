@@ -681,7 +681,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													}
 												}
 											} else {
-												ItemContainer class282_sub30_42 = CS2Runner.getItemContainer(icomponentdefinitions_12.anInt1330, false);
+												ItemContainer class282_sub30_42 = ItemContainer.getContainer(icomponentdefinitions_12.anInt1330, false);
 												if (class282_sub30_42 != null) {
 													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, icomponentdefinitions_12.aAnimation_1437, icomponentdefinitions_12.anInt1339, icomponentdefinitions_12.anInt1329 == 9, icomponentdefinitions_12.aBool1388 ? VertexNormal.myPlayer.playerAppearance : null);
 												}

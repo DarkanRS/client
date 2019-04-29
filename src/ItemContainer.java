@@ -140,4 +140,9 @@ public class ItemContainer extends Node {
 		return long_7;
 	}
 
+	static ItemContainer getContainer(int key, boolean negativeKey) {
+		long longKey = (long) (key | (negativeKey ? Integer.MIN_VALUE : 0));
+		return (ItemContainer) CONTAINER_MAP.get(longKey);
+	}
+
 }

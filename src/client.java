@@ -177,7 +177,7 @@ public final class client extends Engine {
 	public static int GAME_HEIGHT;
 	public static Player[] players;
 	public static int anInt7315;
-	public static boolean aBool7316;
+	public static boolean IS_MEMBER;
 	public static boolean membersWorld;
 	public static int rights;
 	public static int anInt7319;
@@ -186,7 +186,7 @@ public final class client extends Engine {
 	static boolean aBool7322;
 	public static boolean aBool7323;
 	static boolean aBool7454;
-	public static boolean aBool7325;
+	public static boolean IS_QUICKCHAT_ONLY;
 	static short[] aShortArray7239;
 	static int[] PLAYER_OPTION_CURSORS;
 	static String[] PLAYER_OPTIONS;
@@ -213,8 +213,8 @@ public final class client extends Engine {
 	public static IterableNodeMap aClass465_7442;
 	static int anInt7351;
 	public static IComponentDefinitions aClass118_7352;
-	public static int anInt7300;
-	public static int anInt7354;
+	public static int RUN_ENERGY;
+	public static int RUN_WEIGHT;
 	static boolean aBool7168;
 	static boolean aBool7264;
 	public static IComponentDefinitions aClass118_7183;
@@ -413,7 +413,7 @@ public final class client extends Engine {
 		GAME_HEIGHT = 553;
 		players = new Player[2048];
 		anInt7315 = -1;
-		aBool7316 = false;
+		IS_MEMBER = false;
 		membersWorld = false;
 		rights = 0;
 		anInt7319 = 0;
@@ -422,7 +422,7 @@ public final class client extends Engine {
 		aBool7322 = false;
 		aBool7323 = false;
 		aBool7454 = true;
-		aBool7325 = false;
+		IS_QUICKCHAT_ONLY = false;
 		aShortArray7239 = new short[] { (short) 44, (short) 45, (short) 46, (short) 47, (short) 48, (short) 49, (short) 50, (short) 51 };
 		PLAYER_OPTION_CURSORS = new int[8];
 		PLAYER_OPTIONS = new String[8];
@@ -449,8 +449,8 @@ public final class client extends Engine {
 		aClass465_7442 = new IterableNodeMap(8);
 		anInt7351 = 0;
 		aClass118_7352 = null;
-		anInt7300 = 0;
-		anInt7354 = 0;
+		RUN_ENERGY = 0;
+		RUN_WEIGHT = 0;
 		aBool7168 = false;
 		aBool7264 = false;
 		aClass118_7183 = null;
@@ -556,6 +556,8 @@ public final class client extends Engine {
 		anIntArray7461 = new int[4];
 	}
 
+	public static SoftCache aClass229_5901 = new SoftCache(4);
+
 	public final void init() {
 		if (this.method4665((byte) 80)) {
 			String str_1 = "";
@@ -654,7 +656,7 @@ public final class client extends Engine {
 						break;
 					case 18:
 						if (string_7.equalsIgnoreCase("true")) {
-							aBool7316 = true;
+							IS_MEMBER = true;
 						}
 						break;
 					case 19:
@@ -807,7 +809,7 @@ public final class client extends Engine {
 			CutsceneAction_Sub21.keyRecorder.method3235();
 			Class163.mouseRecorder.method3589();
 			if (Renderers.SOFTWARE_RENDERER != null) {
-				Renderers.SOFTWARE_RENDERER.method8398((int) TextureDetails.time());
+				Renderers.SOFTWARE_RENDERER.method8398((int) Utils.time());
 			}
 
 			anInt7193 = 0;
@@ -961,7 +963,7 @@ public final class client extends Engine {
 			}
 
 			if (Class176.method2980(gameState, -997270926)) {
-				if (aLong7307 != 0L && TextureDetails.time() > aLong7307) {
+				if (aLong7307 != 0L && Utils.time() > aLong7307) {
 					Class440.method7373(Class158.windowedMode(), -1, -1, false, (byte) 23);
 				} else if (!Renderers.SOFTWARE_RENDERER.method8465() && aBool3257) {
 					Class350_Sub2.method12571(757549008);
@@ -987,12 +989,12 @@ public final class client extends Engine {
 						Class532_Sub1.method12840(865941395);
 					}
 
-					aLong7307 = TextureDetails.time() + 500L;
+					aLong7307 = Utils.time() + 500L;
 					aBool7185 = false;
 				}
 			}
 
-			if (Class475.supportsFullScreen && fullScreenFrame != null && !Class530.aBool7050 && Class176.method2980(gameState, -576589462)) {
+			if (Class475.supportsFullScreen && fullScreenFrame != null && !Class530.appletHasFocus && Class176.method2980(gameState, -576589462)) {
 				Class440.method7373(Class393.preferences.screenSize.method12687(-342071815), -1, -1, false, (byte) 98);
 			}
 
@@ -1235,7 +1237,7 @@ public final class client extends Engine {
 					stream.writeString(aString7164);
 					Class47_Sub1.updateConnection.write(stream.buffer, length + 2, -2102703988);
 					++updateStage;
-					JS5CacheFile.aLong2577 = TextureDetails.time();
+					JS5CacheFile.aLong2577 = Utils.time();
 				}
 
 				int reponse;
@@ -1253,7 +1255,7 @@ public final class client extends Engine {
 						}
 
 						++updateStage;
-					} else if (TextureDetails.time() - JS5CacheFile.aLong2577 > 30000L) {
+					} else if (Utils.time() - JS5CacheFile.aLong2577 > 30000L) {
 						this.updateNetStatus(1001);
 						return;
 					}
@@ -1888,7 +1890,7 @@ public final class client extends Engine {
 					}
 
 					if (icomponentdefinitions_12.aBool1424 || i_15 < i_17 && i_16 < i_18) {
-						if (icomponentdefinitions_12.disableHover && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
+						if (icomponentdefinitions_12.noClickThrough && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
 							for (HookRequest hookrequest_37 = (HookRequest) aClass482_7402.head(); hookrequest_37 != null; hookrequest_37 = (HookRequest) aClass482_7402.next(999668227)) {
 								if (hookrequest_37.aBool8052) {
 									hookrequest_37.remove();
@@ -1935,7 +1937,7 @@ public final class client extends Engine {
 						if (!aBool7344 && bool_48) {
 							if (icomponentdefinitions_12.anInt1309 >= 0) {
 								anInt7427 = icomponentdefinitions_12.anInt1309;
-							} else if (icomponentdefinitions_12.disableHover) {
+							} else if (icomponentdefinitions_12.noClickThrough) {
 								anInt7427 = -1;
 							}
 						}
@@ -2616,7 +2618,7 @@ public final class client extends Engine {
 
 		Class28.method772((byte) 124);
 		if (Renderers.SOFTWARE_RENDERER != null) {
-			Renderers.SOFTWARE_RENDERER.method8396(1980757736);
+			Renderers.SOFTWARE_RENDERER.method8396();
 		}
 
 		if (Class475.supportsFullScreen && fullScreenFrame != null) {
@@ -2726,7 +2728,7 @@ public final class client extends Engine {
 
 		Class28.method772((byte) 94);
 		if (Renderers.SOFTWARE_RENDERER != null) {
-			Renderers.SOFTWARE_RENDERER.method8396(-2758306);
+			Renderers.SOFTWARE_RENDERER.method8396();
 		}
 
 		if (Class475.supportsFullScreen && fullScreenFrame != null) {
@@ -2887,12 +2889,12 @@ public final class client extends Engine {
 											}
 
 											SCT24Definitions.pingWorlds();
-											if (aBool7400 && aLong7401 < TextureDetails.time() - 60000L) {
+											if (aBool7400 && aLong7401 < Utils.time() - 60000L) {
 												Node_Sub11.method12211(133515669);
 											}
 
 											for (EntityNode_Sub4 class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7659(); class275_sub4_17 != null; class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7650((byte) 99)) {
-												if ((long) class275_sub4_17.anInt7838 < TextureDetails.time() / 1000L - 5L) {
+												if ((long) class275_sub4_17.anInt7838 < Utils.time() / 1000L - 5L) {
 													if (class275_sub4_17.aShort7839 > 0) {
 														Class191.method3167(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE, -1495775612), 1096465682);
 													}

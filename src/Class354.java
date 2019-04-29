@@ -23,7 +23,7 @@ public final class Class354 {
 	static void method6215() {
 		SoftCache softcache_1 = Class13.aClass229_127;
 		synchronized (Class13.aClass229_127) {
-			Class13.aClass229_127.method3863(1545219371);
+			Class13.aClass229_127.method3863();
 		}
 	}
 

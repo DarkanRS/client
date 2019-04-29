@@ -878,7 +878,7 @@ public class MapRegion {
 				}
 				this.sceneObjectManager.method3428();
 				if (this.aBool3171) {
-					TextureDetails.time();
+					Utils.time();
 					while (!Renderers.SOFTWARE_RENDERER.method8455(-203069693)) {
 						this.method4462(1, (byte) -98);
 					}
@@ -889,7 +889,7 @@ public class MapRegion {
 					this.method4418(mapregion_12);
 					IndexLoaders.MAP_REGION_LOADER_THREAD.method6050(mapregion_12);
 					bool_21 = true;
-					TextureDetails.time();
+					Utils.time();
 					Object object_13 = client.anObject7227;
 					synchronized (client.anObject7227) {
 						client.aBool7225 = true;
@@ -962,7 +962,7 @@ public class MapRegion {
 				}
 				ParticleProducerDefinition.method1160(-1437458578);
 				if (this.aBool3206) {
-					Class209.printConsoleMessage(Long.toString(TextureDetails.time() - this.aLong3183), -1857188149);
+					Class209.printConsoleMessage(Long.toString(Utils.time() - this.aLong3183), -1857188149);
 					this.aBool3206 = false;
 				}
 				if (bool_21) {

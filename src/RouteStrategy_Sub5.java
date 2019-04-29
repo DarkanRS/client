@@ -107,7 +107,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 	}
 
 	static void resetContainer(int key, boolean negativeKey) {
-		ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+		ItemContainer container = ItemContainer.getContainer(key, negativeKey);
 		if (container != null) {
 			for (int i_4 = 0; i_4 < container.itemIds.length; i_4++) {
 				container.itemIds[i_4] = -1;

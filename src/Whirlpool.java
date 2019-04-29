@@ -254,7 +254,7 @@ public class Whirlpool {
 					} else if (i_0 == 27) {
 						Preference.method7789(-838440375);
 					} else if (i_0 == 6) {
-						IndexLoaders.MAP_REGION_DECODER.aLong3183 = TextureDetails.time();
+						IndexLoaders.MAP_REGION_DECODER.aLong3183 = Utils.time();
 						IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
 						Preference.method7789(620089057);
 					} else {

@@ -148,7 +148,7 @@ public class Class289 implements Runnable {
 	}
 
 	static boolean method5097(GraphicalRenderer graphicalrenderer_0, int i_1) {
-		TextureDetails.time();
+		Utils.time();
 		if (!graphicalrenderer_0.method8455(1890093661)) {
 			return false;
 		} else {

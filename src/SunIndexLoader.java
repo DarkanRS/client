@@ -35,21 +35,21 @@ public class SunIndexLoader {
 	public void method916() {
 		SoftCache softcache_2 = this.aClass229_432;
 		synchronized (this.aClass229_432) {
-			this.aClass229_432.method3859(-1765413444);
+			this.aClass229_432.method3859();
 		}
 	}
 
 	public void method917() {
 		SoftCache softcache_3 = this.aClass229_432;
 		synchronized (this.aClass229_432) {
-			this.aClass229_432.method3858(5, (byte) 1);
+			this.aClass229_432.method3858(5);
 		}
 	}
 
 	public void method918() {
 		SoftCache softcache_2 = this.aClass229_432;
 		synchronized (this.aClass229_432) {
-			this.aClass229_432.method3863(1208180587);
+			this.aClass229_432.method3863();
 		}
 	}
 

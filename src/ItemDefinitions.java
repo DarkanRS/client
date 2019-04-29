@@ -726,7 +726,7 @@ public class ItemDefinitions implements Definition {
         }
     }
 
-    public int getCS2Integer(int i_1, int i_2, int i_3) {
+    public int getCS2Integer(int i_1, int i_2) {
         if (this.cs2Map == null) {
             return i_2;
         } else {

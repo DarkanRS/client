@@ -28,10 +28,10 @@ public class GrandExchangeSlot {
 	}
 
 	public static void method5913() {
-		IComponentDefinitions.aClass229_1280.method3863(1550469296);
-		IComponentDefinitions.aClass229_1341.method3863(986985015);
-		IComponentDefinitions.aClass229_1303.method3863(759496379);
-		IComponentDefinitions.aClass229_1282.method3863(726939878);
+		IComponentDefinitions.aClass229_1280.method3863();
+		IComponentDefinitions.aClass229_1341.method3863();
+		IComponentDefinitions.aClass229_1303.method3863();
+		IComponentDefinitions.aClass229_1282.method3863();
 	}
 
 	public static int method5914(byte[] bytes_0, int i_1, CharSequence charsequence_2) {

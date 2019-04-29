@@ -9,24 +9,24 @@ public class MapAreaIndexLoader {
 	public void method3695() {
 		SoftCache softcache_3 = this.aClass229_2707;
 		synchronized (this.aClass229_2707) {
-			this.aClass229_2707.method3858(5, (byte) 71);
+			this.aClass229_2707.method3858(5);
 		}
 
 		softcache_3 = this.aClass229_2708;
 		synchronized (this.aClass229_2708) {
-			this.aClass229_2708.method3858(5, (byte) -60);
+			this.aClass229_2708.method3858(5);
 		}
 	}
 
 	public void method3696() {
 		SoftCache softcache_2 = this.aClass229_2707;
 		synchronized (this.aClass229_2707) {
-			this.aClass229_2707.method3863(2127164020);
+			this.aClass229_2707.method3863();
 		}
 
 		softcache_2 = this.aClass229_2708;
 		synchronized (this.aClass229_2708) {
-			this.aClass229_2708.method3863(1611491782);
+			this.aClass229_2708.method3863();
 		}
 	}
 
@@ -38,12 +38,12 @@ public class MapAreaIndexLoader {
 	public void method3699() {
 		SoftCache softcache_2 = this.aClass229_2707;
 		synchronized (this.aClass229_2707) {
-			this.aClass229_2707.method3859(-1557275586);
+			this.aClass229_2707.method3859();
 		}
 
 		softcache_2 = this.aClass229_2708;
 		synchronized (this.aClass229_2708) {
-			this.aClass229_2708.method3859(-1044931706);
+			this.aClass229_2708.method3859();
 		}
 	}
 
@@ -88,12 +88,12 @@ public class MapAreaIndexLoader {
 	public static void method3709() {
 		SoftCache softcache_2 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			PlayerAppearance.aClass229_2920.method3858(5, (byte) 86);
+			PlayerAppearance.aClass229_2920.method3858(5);
 		}
 
 		softcache_2 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {
-			PlayerAppearance.aClass229_2930.method3858(5, (byte) 15);
+			PlayerAppearance.aClass229_2930.method3858(5);
 		}
 	}
 

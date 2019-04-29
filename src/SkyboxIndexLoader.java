@@ -9,14 +9,14 @@ public class SkyboxIndexLoader {
 	public void method5068() {
 		SoftCache softcache_3 = this.aClass229_3437;
 		synchronized (this.aClass229_3437) {
-			this.aClass229_3437.method3858(5, (byte) -51);
+			this.aClass229_3437.method3858(5);
 		}
 	}
 
 	public void method5070() {
 		SoftCache softcache_2 = this.aClass229_3437;
 		synchronized (this.aClass229_3437) {
-			this.aClass229_3437.method3859(1722121730);
+			this.aClass229_3437.method3859();
 		}
 	}
 
@@ -28,7 +28,7 @@ public class SkyboxIndexLoader {
 	public void method5071() {
 		SoftCache softcache_2 = this.aClass229_3437;
 		synchronized (this.aClass229_3437) {
-			this.aClass229_3437.method3863(2056846713);
+			this.aClass229_3437.method3863();
 		}
 	}
 

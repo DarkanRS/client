@@ -49,7 +49,7 @@ public class SunDefinitions {
 
 	static void method851(int i_0) {
 		Class180.anInt2246 = i_0;
-		Class180.aClass229_2245.method3859(1791836497);
+		Class180.aClass229_2245.method3859();
 	}
 
 	public static Connection createAsyncConnection(Socket socket_0, int i_1, int i_2) throws IOException {

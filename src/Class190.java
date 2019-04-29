@@ -110,7 +110,7 @@ public class Class190 {
 
 		Class186.method3083(619410098);
 		client.connectionContext.method3051((byte) -99);
-		Class530.aBool7050 = true;
+		Class530.appletHasFocus = true;
 		Class250.method4296();
 
 		int i_1;

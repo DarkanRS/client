@@ -50,15 +50,6 @@ public class Class125 implements Interface8 {
         return this.anInt1569 * -2091052327 * 946359657;
     }
 
-    static final CS2Executor getNextScriptExecutor() {
-        if (CS2Runner.CURRENT_CS2_EXEC_IDX == CS2Runner.CS2_EXECUTORS.size()) {
-            CS2Runner.CS2_EXECUTORS.add(new CS2Executor());
-        }
-        CS2Executor cs2executor_1 = (CS2Executor) CS2Runner.CS2_EXECUTORS.get(CS2Runner.CURRENT_CS2_EXEC_IDX);
-        ++CS2Runner.CURRENT_CS2_EXEC_IDX;
-        return cs2executor_1;
-    }
-
     static final int method2172(int i_0) {
         int i_2 = i_0 & 0x3f;
         int i_3 = i_0 >> 6 & 0x3;

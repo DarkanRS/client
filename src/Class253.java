@@ -11,7 +11,7 @@ public class Class253 {
 	int anInt3132;
 	int anInt3121;
 	static Class254 aClass254_3120;
-	long aLong3124 = TextureDetails.time();
+	long aLong3124 = Utils.time();
 	long aLong3128 = 0L;
 	boolean aBool3133 = true;
 	int anInt3114 = 0;
@@ -85,7 +85,7 @@ public class Class253 {
 
 	public final synchronized void method4333() {
 		if (!this.aBool3135) {
-			long long_1 = TextureDetails.time();
+			long long_1 = Utils.time();
 
 			try {
 				if (long_1 > this.aLong3124 + 6000L) {
@@ -95,7 +95,7 @@ public class Class253 {
 				while (long_1 > this.aLong3124 + 5000L) {
 					this.method4373();
 					this.aLong3124 += (long) (256000 / anInt3129);
-					long_1 = TextureDetails.time();
+					long_1 = Utils.time();
 				}
 			} catch (Exception exception_7) {
 				this.aLong3124 = long_1;
@@ -180,7 +180,7 @@ public class Class253 {
 			this.method4344();
 		} catch (Exception exception_2) {
 			this.method4343();
-			this.aLong3128 = TextureDetails.time() + 2000L;
+			this.aLong3128 = Utils.time() + 2000L;
 		}
 
 	}
@@ -322,7 +322,7 @@ public class Class253 {
 			this.aNode_Sub15_3122.method12230(ints_1, 0, 256);
 		}
 
-		this.aLong3124 = TextureDetails.time();
+		this.aLong3124 = Utils.time();
 	}
 
 	static final void method4338(Node_Sub15 class282_sub15_0) {

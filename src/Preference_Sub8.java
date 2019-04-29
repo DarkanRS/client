@@ -52,12 +52,12 @@ public class Preference_Sub8 extends Preference {
 	public static void method12679() {
 		SoftCache softcache_1 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			PlayerAppearance.aClass229_2920.method3859(1287149735);
+			PlayerAppearance.aClass229_2920.method3859();
 		}
 
 		softcache_1 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {
-			PlayerAppearance.aClass229_2930.method3859(193180691);
+			PlayerAppearance.aClass229_2930.method3859();
 		}
 	}
 

@@ -42,11 +42,11 @@ public class Class167 {
 	}
 
 	void method2860() {
-		this.aClass229_2044.method3858(5, (byte) 49);
+		this.aClass229_2044.method3858(5);
 	}
 
 	void method2861() {
-		this.aClass229_2044.method3859(355316582);
+		this.aClass229_2044.method3859();
 	}
 
 	Class167(OpenGLGraphicalRenderer class505_sub1_1, Interface22 interface22_2) {

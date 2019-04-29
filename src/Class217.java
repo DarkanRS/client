@@ -38,7 +38,7 @@ public abstract class Class217 {
 			class282_sub53_sub1_6.anInt9517 = i_1;
 			class282_sub53_sub1_6.anInt9513 = i_2;
 			class282_sub53_sub1_6.anInt9514 = i_3;
-			class282_sub53_sub1_6.aLong9515 = TextureDetails.time();
+			class282_sub53_sub1_6.aLong9515 = Utils.time();
 			return class282_sub53_sub1_6;
 		}
 	}

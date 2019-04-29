@@ -37,11 +37,11 @@ public class HitbarIndexLoader {
     public void method5103() {
         SoftCache softcache_2 = this.aClass229_3449;
         synchronized (this.aClass229_3449) {
-            this.aClass229_3449.method3859(-2093187724);
+            this.aClass229_3449.method3859();
         }
         softcache_2 = this.aClass229_3447;
         synchronized (this.aClass229_3447) {
-            this.aClass229_3447.method3859(1931980556);
+            this.aClass229_3447.method3859();
         }
     }
 
@@ -54,22 +54,22 @@ public class HitbarIndexLoader {
     public void method5107() {
         SoftCache softcache_3 = this.aClass229_3449;
         synchronized (this.aClass229_3449) {
-            this.aClass229_3449.method3858(5, (byte) -95);
+            this.aClass229_3449.method3858(5);
         }
         softcache_3 = this.aClass229_3447;
         synchronized (this.aClass229_3447) {
-            this.aClass229_3447.method3858(5, (byte) 84);
+            this.aClass229_3447.method3858(5);
         }
     }
 
     public void method5109() {
         SoftCache softcache_2 = this.aClass229_3449;
         synchronized (this.aClass229_3449) {
-            this.aClass229_3449.method3863(1288912888);
+            this.aClass229_3449.method3863();
         }
         softcache_2 = this.aClass229_3447;
         synchronized (this.aClass229_3447) {
-            this.aClass229_3447.method3863(1186404476);
+            this.aClass229_3447.method3863();
         }
     }
 

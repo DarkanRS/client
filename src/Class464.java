@@ -79,7 +79,7 @@ public final class Class464 {
 					}
 					Node_Sub44 class282_sub44_5 = (Node_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
 					if (class282_sub44_5 != null) {
-						RSHookableInterface.method8777(class282_sub44_5.anInt8063, (byte) -57);
+						CS2Interface.method8777(class282_sub44_5.anInt8063, (byte) -57);
 					}
 				}
 				if (icomponentdefinitions_4.type == 6 && icomponentdefinitions_4.animation != -1) {

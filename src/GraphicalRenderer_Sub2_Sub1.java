@@ -190,7 +190,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 			}
 		} catch (Throwable throwable_22) {
 			throwable_22.printStackTrace();
-			this.method8396(1155001996);
+			this.method8396();
 			if (throwable_22 instanceof OutOfMemoryError) {
 				throw (OutOfMemoryError) throwable_22;
 			} else {
@@ -911,9 +911,9 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 			OpenGL.glDeleteLists((int) class282_sub38_4.data, class282_sub38_4.value);
 		}
 
-		if (this.za() > 100663296 && TextureDetails.time() > this.aLong10199 + 60000L) {
+		if (this.za() > 100663296 && Utils.time() > this.aLong10199 + 60000L) {
 			System.gc();
-			this.aLong10199 = TextureDetails.time();
+			this.aLong10199 = Utils.time();
 		}
 
 		super.method8398(i_1);
@@ -1214,9 +1214,9 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.value * 1270866345 * -570797415);
 		}
 
-		if (this.za() > 100663296 && TextureDetails.time() > this.aLong10199 + 60000L) {
+		if (this.za() > 100663296 && Utils.time() > this.aLong10199 + 60000L) {
 			System.gc();
-			this.aLong10199 = TextureDetails.time();
+			this.aLong10199 = Utils.time();
 		}
 
 		super.method8398(i_1);
@@ -2305,9 +2305,9 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 			OpenGL.glDeleteLists((int) (class282_sub38_4.data * -1253863389874800229L * -3442165056282524525L), class282_sub38_4.value * 1270866345 * -570797415);
 		}
 
-		if (this.za() > 100663296 && TextureDetails.time() > this.aLong10199 + 60000L) {
+		if (this.za() > 100663296 && Utils.time() > this.aLong10199 + 60000L) {
 			System.gc();
-			this.aLong10199 = TextureDetails.time();
+			this.aLong10199 = Utils.time();
 		}
 
 		super.method8398(i_1);

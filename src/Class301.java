@@ -102,7 +102,7 @@ public class Class301 implements Interface41 {
 			Class179.anInt2221 += 6;
 		}
 		int i_1;
-		if (Class179.anInt2231 != -1 && Class179.aLong2232 < TextureDetails.time()) {
+		if (Class179.anInt2231 != -1 && Class179.aLong2232 < Utils.time()) {
 			for (i_1 = Class179.anInt2231; i_1 < Class276.aStringArray3345.length; i_1++) {
 				if (Class276.aStringArray3345[i_1].startsWith("pause")) {
 					int i_2 = 5;
@@ -113,7 +113,7 @@ public class Class301 implements Interface41 {
 					}
 					Class209.printConsoleMessage("Pausing for " + i_2 + " seconds...", -707420136);
 					Class179.anInt2231 = i_1 + 1;
-					Class179.aLong2232 = TextureDetails.time() + (long) (i_2 * 1000);
+					Class179.aLong2232 = Utils.time() + (long) (i_2 * 1000);
 					return;
 				}
 				Class179.aString2225 = Class276.aStringArray3345[i_1];

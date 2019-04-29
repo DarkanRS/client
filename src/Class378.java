@@ -98,15 +98,15 @@ public class Class378 {
 	}
 
 	public void method6410() {
-		this.aClass229_4524.method3859(-1705560469);
+		this.aClass229_4524.method3859();
 	}
 
 	public void method6411() {
-		this.aClass229_4524.method3858(50, (byte) -27);
+		this.aClass229_4524.method3858(50);
 	}
 
 	public void method6412() {
-		this.aClass229_4524.method3863(1703943609);
+		this.aClass229_4524.method3863();
 	}
 
 	public FontMetrics method6415(Interface35 interface35_1, int i_2, int i_3) {
@@ -181,8 +181,8 @@ public class Class378 {
 		Class487.aClass378_5752.method6411();
 		Class332.method5927();
 		ReferenceTable.method5768();
-		client.aClass229_7204.method3858(5, (byte) 17);
-		Class20.aClass229_191.method3858(5, (byte) 15);
-		CS2Runner.aClass229_5901.method3858(5, (byte) -83);
+		client.aClass229_7204.method3858(5);
+		Class20.aClass229_191.method3858(5);
+		client.aClass229_5901.method3858(5);
 	}
 }

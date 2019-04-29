@@ -25,7 +25,7 @@ public class PlayerVarProvider implements VarProvider {
 	}
 
 	int poll(boolean bool_1) {
-		long long_3 = TextureDetails.time();
+		long long_3 = Utils.time();
 		for (LongNode class282_sub45_5 = (LongNode) (bool_1 ? this.aClass465_28.method7750(-1019501860) : this.aClass465_28.method7751((byte) 13)); class282_sub45_5 != null; class282_sub45_5 = (LongNode) this.aClass465_28.method7751((byte) 105)) {
 			if ((class282_sub45_5.aLong8066 & 0x3fffffffffffffffL) < long_3) {
 				if ((class282_sub45_5.aLong8066 & 0x4000000000000000L) != 0L) {
@@ -52,9 +52,9 @@ public class PlayerVarProvider implements VarProvider {
 		this.vars[i_1] = i_2;
 		LongNode class282_sub45_4 = (LongNode) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {
-			class282_sub45_4.aLong8066 = TextureDetails.time() + 500L;
+			class282_sub45_4.aLong8066 = Utils.time() + 500L;
 		} else {
-			class282_sub45_4 = new LongNode(TextureDetails.time() + 500L);
+			class282_sub45_4 = new LongNode(Utils.time() + 500L);
 			this.aClass465_28.put(class282_sub45_4, (long) i_1);
 		}
 	}
@@ -124,7 +124,7 @@ public class PlayerVarProvider implements VarProvider {
 		LongNode class282_sub45_4 = (LongNode) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {
 			if (class282_sub45_4.aLong8066 != 4611686018427387905L) {
-				class282_sub45_4.aLong8066 = TextureDetails.time() + 500L | 0x4000000000000000L;
+				class282_sub45_4.aLong8066 = Utils.time() + 500L | 0x4000000000000000L;
 			}
 		} else {
 			class282_sub45_4 = new LongNode(4611686018427387905L);

@@ -261,7 +261,7 @@ public final class Class251 {
 				if (string_0.startsWith("setoutput ")) {
 					file_20 = new File(string_0.substring(10));
 					if (file_20.exists()) {
-						file_20 = new File(string_0.substring(10) + "." + TextureDetails.time() + ".log");
+						file_20 = new File(string_0.substring(10) + "." + Utils.time() + ".log");
 						if (file_20.exists()) {
 							Class209.printConsoleMessage("file already exists!", -2041307357);
 							return;

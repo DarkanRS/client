@@ -124,24 +124,24 @@ public class NPCDirection implements Identifiable {
 		}
 	}
 
-	public static int method4327(int i_0, int i_1, boolean bool_2, byte b_4) {
-		ItemContainer class282_sub30_5 = CS2Runner.getItemContainer(i_0, false);
-		if (class282_sub30_5 == null) {
+	public static int containerTotalParam(int containerId, int paramId, boolean countStack) {
+		ItemContainer container = ItemContainer.getContainer(containerId, false);
+		if (container == null) {
 			return 0;
 		} else {
-			int i_6 = 0;
-			for (int i_7 = 0; i_7 < class282_sub30_5.itemIds.length; i_7++) {
-				if (class282_sub30_5.itemIds[i_7] >= 0 && class282_sub30_5.itemIds[i_7] < IndexLoaders.ITEM_LOADER.maxItemsCount) {
-					ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub30_5.itemIds[i_7]);
-					int i_9 = itemdefinitions_8.getCS2Integer(i_1, IndexLoaders.PARAM_LOADER.getParam(i_1).defaultInt, -304171855);
-					if (bool_2) {
-						i_6 += i_9 * class282_sub30_5.amounts[i_7];
+			int total = 0;
+			for (int i = 0; i < container.itemIds.length; i++) {
+				if (container.itemIds[i] >= 0 && container.itemIds[i] < IndexLoaders.ITEM_LOADER.maxItemsCount) {
+					ItemDefinitions itemDef = IndexLoaders.ITEM_LOADER.getItemDefinitions(container.itemIds[i]);
+					int param = itemDef.getCS2Integer(paramId, IndexLoaders.PARAM_LOADER.getParam(paramId).defaultInt);
+					if (countStack) {
+						total += param * container.amounts[i];
 					} else {
-						i_6 += i_9;
+						total += param;
 					}
 				}
 			}
-			return i_6;
+			return total;
 		}
 	}
 

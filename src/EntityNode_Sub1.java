@@ -17,12 +17,12 @@ public class EntityNode_Sub1 extends EntityNode {
 		Class149.anInt1744 = i_0;
 		SoftCache softcache_2 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {
-			PlayerAppearance.aClass229_2930.method3859(329835081);
+			PlayerAppearance.aClass229_2930.method3859();
 		}
 
 		softcache_2 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			PlayerAppearance.aClass229_2920.method3859(-1157514698);
+			PlayerAppearance.aClass229_2920.method3859();
 		}
 	}
 

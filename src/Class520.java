@@ -29,10 +29,10 @@ public class Class520 {
     }
 
     public static void method11161() {
-        IComponentDefinitions.aClass229_1280.method3859(286396160);
-        IComponentDefinitions.aClass229_1341.method3859(-1363804807);
-        IComponentDefinitions.aClass229_1303.method3859(857287784);
-        IComponentDefinitions.aClass229_1282.method3859(-1018738721);
+        IComponentDefinitions.aClass229_1280.method3859();
+        IComponentDefinitions.aClass229_1341.method3859();
+        IComponentDefinitions.aClass229_1303.method3859();
+        IComponentDefinitions.aClass229_1282.method3859();
     }
 
     public static boolean method11162(int i_0, byte b_1) {

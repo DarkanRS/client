@@ -54,40 +54,40 @@ public class SpotAnimIndexLoader {
 		this.anInt5892 = i_1;
 		SoftCache softcache_3 = this.aClass229_5890;
 		synchronized (this.aClass229_5890) {
-			this.aClass229_5890.method3859(1433473768);
+			this.aClass229_5890.method3859();
 		}
 	}
 
 	public void method8847() {
 		SoftCache softcache_3 = this.aClass229_5891;
 		synchronized (this.aClass229_5891) {
-			this.aClass229_5891.method3858(5, (byte) 28);
+			this.aClass229_5891.method3858(5);
 		}
 		softcache_3 = this.aClass229_5890;
 		synchronized (this.aClass229_5890) {
-			this.aClass229_5890.method3858(5, (byte) 23);
+			this.aClass229_5890.method3858(5);
 		}
 	}
 
 	public void method8848() {
 		SoftCache softcache_2 = this.aClass229_5891;
 		synchronized (this.aClass229_5891) {
-			this.aClass229_5891.method3859(128096981);
+			this.aClass229_5891.method3859();
 		}
 		softcache_2 = this.aClass229_5890;
 		synchronized (this.aClass229_5890) {
-			this.aClass229_5890.method3859(-1366287850);
+			this.aClass229_5890.method3859();
 		}
 	}
 
 	public void method8849() {
 		SoftCache softcache_2 = this.aClass229_5891;
 		synchronized (this.aClass229_5891) {
-			this.aClass229_5891.method3863(1832676736);
+			this.aClass229_5891.method3863();
 		}
 		softcache_2 = this.aClass229_5890;
 		synchronized (this.aClass229_5890) {
-			this.aClass229_5890.method3863(1443039032);
+			this.aClass229_5890.method3863();
 		}
 	}
 
@@ -166,7 +166,7 @@ public class SpotAnimIndexLoader {
 	}
 
 	public static int getItemIdAtSlot(int key, int slot, boolean negativeKey, int i_3) {
-		ItemContainer container = CS2Runner.getItemContainer(key, negativeKey);
+		ItemContainer container = ItemContainer.getContainer(key, negativeKey);
 		return container == null ? -1 : (slot >= 0 && slot < container.itemIds.length ? container.itemIds[slot] : -1);
 	}
 

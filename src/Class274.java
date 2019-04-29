@@ -37,8 +37,8 @@ public class Class274 {
     }
 
     public static void method4884(byte b_0) {
-        if (Class448.aClass450_5421.worldId != -1) {
-            Class62.setGameHost(Class448.aClass450_5421.worldId, Class448.aClass450_5421.host);
+        if (Class448.CONNECTION_INFO.worldId != -1) {
+            Class62.setGameHost(Class448.CONNECTION_INFO.worldId, Class448.CONNECTION_INFO.host);
         }
     }
 }

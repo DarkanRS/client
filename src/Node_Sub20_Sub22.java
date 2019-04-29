@@ -110,9 +110,9 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 						tcpmessage_6.buffer.writeShort(PingRequest.CURRENT_REQUEST.ping);
 						client.outputContext.queuePacket(tcpmessage_6);
 						PingRequest.CURRENT_REQUEST = null;
-						Class28.aLong351 = TextureDetails.time() + 30000L;
+						Class28.aLong351 = Utils.time() + 30000L;
 					}
-				} else if (TextureDetails.time() >= Class28.aLong351) {
+				} else if (Utils.time() >= Class28.aLong351) {
 					PingRequest.CURRENT_REQUEST = client.PING_REQUESTER.createPingRequest(Class159.GAME_CONNECTION_INFO.host);
 				}
 				Class434.method7292();
@@ -253,11 +253,11 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 															for (i_2 = 0; i_2 < 5; i_2++) {
 																++client.anIntArray7435[i_2];
 															}
-															if (client.aBool7400 && client.aLong7401 < TextureDetails.time() - 60000L) {
+															if (client.aBool7400 && client.aLong7401 < Utils.time() - 60000L) {
 																Node_Sub11.method12211(375713564);
 															}
 															for (EntityNode_Sub4 class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7650((byte) 20)) {
-																if ((long) class275_sub4_15.anInt7838 < TextureDetails.time() / 1000L - 5L) {
+																if ((long) class275_sub4_15.anInt7838 < Utils.time() / 1000L - 5L) {
 																	if (class275_sub4_15.aShort7839 > 0) {
 																		Class191.method3167(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE, -1783066271), 442373563);
 																	}

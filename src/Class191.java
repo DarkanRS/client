@@ -62,7 +62,7 @@ public class Class191 implements Runnable {
 	}
 
 	public static void method3166() {
-		ParticleProducerDefinition.aClass229_533.method3859(1570831832);
+		ParticleProducerDefinition.aClass229_533.method3859();
 	}
 
 	public static void method3167(int i_0, int i_1, String string_2, String string_3, String string_4, String string_5, int i_6) {

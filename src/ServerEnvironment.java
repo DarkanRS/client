@@ -55,7 +55,7 @@ public class ServerEnvironment implements Identifiable {
     static int method8313() {
         byte b_1;
         if (Engine.MAX_MEMORY >= 96) {
-            int i_2 = Class241.method4150(1219422368);
+            int i_2 = Class241.getCPUProfile();
             if (i_2 <= 104) {
                 EquipmentDefaults.method11248(1422604274);
                 b_1 = 4;

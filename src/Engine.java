@@ -352,12 +352,12 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         }
         Class351.gameCanvas.addFocusListener(this);
         Class351.gameCanvas.requestFocus();
-        Class530.aBool7050 = true;
+        Class530.appletHasFocus = true;
         aBool3275 = true;
         Class351.gameCanvas.setFocusTraversalKeysEnabled(false);
         aBool3274 = true;
         aBool3257 = false;
-        aLong3280 = TextureDetails.time();
+        aLong3280 = Utils.time();
     }
 
     final boolean method4665(byte b_1) {
@@ -408,7 +408,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     void method4667() {
-        long long_2 = TextureDetails.time();
+        long long_2 = Utils.time();
         long long_4 = aLongArray3247[CutsceneEntity.anInt747];
         aLongArray3247[CutsceneEntity.anInt747] = long_2;
         CutsceneEntity.anInt747 = CutsceneEntity.anInt747 + 1 & 0x1f;
@@ -416,13 +416,13 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             ;
         }
         synchronized (this) {
-            Class530.aBool7050 = aBool3275;
+            Class530.appletHasFocus = aBool3275;
         }
         this.method4677();
     }
 
     void method4668() {
-        long long_2 = TextureDetails.time();
+        long long_2 = Utils.time();
         long long_4 = aLongArray3246[Class165.anInt2036];
         aLongArray3246[Class165.anInt2036] = long_2;
         Class165.anInt2036 = Class165.anInt2036 + 1 & 0x1f;
@@ -451,13 +451,13 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     public void stop() {
         if (!aBool3276) {
-            aLong3255 = TextureDetails.time() + 4000L;
+            aLong3255 = Utils.time() + 4000L;
         }
     }
 
     public void destroy() {
         if (!aBool3276) {
-            aLong3255 = TextureDetails.time();
+            aLong3255 = Utils.time();
             Class89.sleep(5000L);
             this.method4675(false, -2042911108);
         }
@@ -466,7 +466,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public final synchronized void paint(Graphics graphics_1) {
         if (!aBool3276) {
             aBool3274 = true;
-            if (TextureDetails.time() - aLong3280 > 1000L) {
+            if (Utils.time() - aLong3280 > 1000L) {
                 Rectangle rectangle_2 = graphics_1.getClipBounds();
                 if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 && rectangle_2.height >= Class107.anInt1082) {
                     aBool3257 = true;
@@ -627,7 +627,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public final synchronized void method180(Graphics graphics_1) {
         if (!aBool3276) {
             aBool3274 = true;
-            if (TextureDetails.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
+            if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
                 Rectangle rectangle_2 = graphics_1.getClipBounds();
                 if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511) {
                     aBool3257 = true;
@@ -686,25 +686,25 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     public void method171() {
         if (!aBool3276) {
-            aLong3255 = (TextureDetails.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
     public void method181() {
         if (!aBool3276) {
-            aLong3255 = (TextureDetails.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
     public void method172() {
         if (!aBool3276) {
-            aLong3255 = (TextureDetails.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
     public void method173() {
         if (!aBool3276) {
-            aLong3255 = (TextureDetails.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
+            aLong3255 = (Utils.time() + 4000L) * -7135659755925244301L * 2009587532026748603L;
         }
     }
 
@@ -714,7 +714,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     public void method175() {
         if (!aBool3276) {
-            aLong3255 = TextureDetails.time() * -7135659755925244301L * 2009587532026748603L;
+            aLong3255 = Utils.time() * -7135659755925244301L * 2009587532026748603L;
             Class89.sleep(5000L);
             this.method4675(false, -1541596193);
         }
@@ -735,7 +735,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public final synchronized void method179(Graphics graphics_1) {
         if (!aBool3276) {
             aBool3274 = true;
-            if (TextureDetails.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
+            if (Utils.time() - -8855560604364028117L * aLong3280 * 3757206876099985283L > 1000L) {
                 Rectangle rectangle_2 = graphics_1.getClipBounds();
                 if (rectangle_2 == null || rectangle_2.width >= SunIndexLoader.anInt434 * 1426041429 * 765 * 1031248161 * -1016911135 && rectangle_2.height >= -499509193 * Class107.anInt1082 * -1929118563 * -969250379 * 685317511) {
                     aBool3257 = true;
@@ -772,7 +772,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         this.method4704(1996724901);
         this.method4676();
         aClass273_3244 = VertexNormal.method1461();
-        while (aLong3255 == 0L || TextureDetails.time() < aLong3255) {
+        while (aLong3255 == 0L || Utils.time() < aLong3255) {
             anInt3279 = aClass273_3244.method4842(aLong3242);
             for (int i_6 = 0; i_6 < anInt3279; i_6++) {
                 this.method4667();
@@ -787,7 +787,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     public void method174() {
         if (!aBool3276) {
-            aLong3255 = TextureDetails.time() * -7135659755925244301L * 2009587532026748603L;
+            aLong3255 = Utils.time() * -7135659755925244301L * 2009587532026748603L;
             Class89.sleep(5000L);
             this.method4675(false, -1481410790);
         }

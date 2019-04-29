@@ -90,7 +90,7 @@ public class Node_Sub48 extends Node {
 			this.aBool8098 = this.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isTransformedNPC;
 			this.anInt8105 = this.aTransform_Sub1_Sub1_Sub2_Sub1_8086.isNpc << 9;
 			this.anInt8081 = 0;
-			this.anInt8089 = this.aTransform_Sub1_Sub1_Sub2_Sub1_8086.anInt10566;
+			this.anInt8089 = this.aTransform_Sub1_Sub1_Sub2_Sub1_8086.specialByte;
 			this.anInt8094 = 256;
 			this.anInt8093 = 256;
 		}

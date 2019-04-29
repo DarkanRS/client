@@ -1,7 +1,7 @@
 public class IComponentDefinitions {
 
 	public int anInt1281;
-	public NPCMeshModifier aClass417_1308;
+	public NPCMeshModifier npcMeshModifier;
 	public int anInt1340;
 	public int anInt1350;
 	public int anInt1354;
@@ -53,7 +53,7 @@ public class IComponentDefinitions {
 	public boolean hidden = false;
 	public int anInt1376 = 0;
 	public int anInt1314 = 0;
-	public boolean disableHover = false;
+	public boolean noClickThrough = false;
 	public int anInt1320 = -1;
 	public int anInt1423 = 0;
 	public int anInt1329 = 1;
@@ -214,13 +214,13 @@ public class IComponentDefinitions {
 		int i_4 = rsbytebuffer_1.readUnsignedByte();
 		this.hidden = (i_4 & 0x1) != 0;
 		if (i_3 >= 0) {
-			this.disableHover = (i_4 & 0x2) != 0;
+			this.noClickThrough = (i_4 & 0x2) != 0;
 		}
 		if (this.type == 0) {
 			this.anInt1376 = rsbytebuffer_1.readUnsignedShort();
 			this.anInt1314 = rsbytebuffer_1.readUnsignedShort();
 			if (i_3 < 0) {
-				this.disableHover = rsbytebuffer_1.readUnsignedByte() == 1;
+				this.noClickThrough = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
 		int i_5;
@@ -659,7 +659,7 @@ public class IComponentDefinitions {
 		} else {
 			MeshRasterizer meshrasterizer_23;
 			if (this.anInt1329 == 2) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.aClass417_1308, 1874491057);
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.npcMeshModifier, 1874491057);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;
@@ -688,7 +688,7 @@ public class IComponentDefinitions {
 					return meshrasterizer_24;
 				}
 			} else if (this.anInt1329 == 6) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.aClass417_1308, -653193588);
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.npcMeshModifier, -653193588);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;

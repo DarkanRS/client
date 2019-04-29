@@ -154,6 +154,6 @@ public final class Class321 {
 	}
 
 	public static void method5757() {
-		Class345.aClass229_4031.method3859(1719265419);
+		Class345.aClass229_4031.method3859();
 	}
 }

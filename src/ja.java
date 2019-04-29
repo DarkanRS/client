@@ -70,7 +70,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	native void wa(float[] var1);
 
 	public synchronized void finalize() {
-		this.method8396(-710252687);
+		this.method8396();
 		if (this.nativeid != 0L) {
 			Class156.method2642(this, (byte) 14);
 		}
@@ -697,7 +697,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 			}
 		} catch (Throwable throwable_9) {
-			this.method8396(1670288083);
+			this.method8396();
 			throw new RuntimeException();
 		}
 	}

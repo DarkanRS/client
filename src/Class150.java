@@ -118,7 +118,7 @@ public class Class150 {
 	}
 
 	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, Transform_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4) {
-		CS2Executor cs2executor_6 = Class125.getNextScriptExecutor();
+		CS2Executor cs2executor_6 = CS2Executor.getNextScriptExecutor();
 		cs2executor_6.aTransform_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1_4;
 		CS2Executor.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 35);
 		cs2executor_6.aTransform_Sub1_Sub2_Sub1_7014 = null;

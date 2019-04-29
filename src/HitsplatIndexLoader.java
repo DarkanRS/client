@@ -9,11 +9,11 @@ public class HitsplatIndexLoader {
 	public void method3602() {
 		SoftCache softcache_3 = this.aClass229_2667;
 		synchronized (this.aClass229_2667) {
-			this.aClass229_2667.method3858(5, (byte) -65);
+			this.aClass229_2667.method3858(5);
 		}
 		softcache_3 = this.aClass229_2664;
 		synchronized (this.aClass229_2664) {
-			this.aClass229_2664.method3858(5, (byte) 47);
+			this.aClass229_2664.method3858(5);
 		}
 	}
 
@@ -47,11 +47,11 @@ public class HitsplatIndexLoader {
 	public void method3604() {
 		SoftCache softcache_2 = this.aClass229_2667;
 		synchronized (this.aClass229_2667) {
-			this.aClass229_2667.method3859(1876702995);
+			this.aClass229_2667.method3859();
 		}
 		softcache_2 = this.aClass229_2664;
 		synchronized (this.aClass229_2664) {
-			this.aClass229_2664.method3859(2003512741);
+			this.aClass229_2664.method3859();
 		}
 	}
 
@@ -64,11 +64,11 @@ public class HitsplatIndexLoader {
 	public void method3608() {
 		SoftCache softcache_2 = this.aClass229_2667;
 		synchronized (this.aClass229_2667) {
-			this.aClass229_2667.method3863(994543412);
+			this.aClass229_2667.method3863();
 		}
 		softcache_2 = this.aClass229_2664;
 		synchronized (this.aClass229_2664) {
-			this.aClass229_2664.method3863(1441931247);
+			this.aClass229_2664.method3863();
 		}
 	}
 
@@ -95,7 +95,7 @@ public class HitsplatIndexLoader {
 	}
 
 	public static void method3614(Class397 class397_0, int i_1, int i_2, byte b_3) {
-		CS2Executor cs2executor_4 = Class125.getNextScriptExecutor();
+		CS2Executor cs2executor_4 = CS2Executor.getNextScriptExecutor();
 		CS2Executor.method1834(class397_0, i_1, i_2, cs2executor_4, (byte) 7);
 	}
 }

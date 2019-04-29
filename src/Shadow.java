@@ -33,8 +33,4 @@ public abstract class Shadow extends CacheableNode {
     public static File method15508(int i_0) {
         return Engine.aFile3264;
     }
-
-    static final void method15509(int i_0) {
-        --CS2Runner.CURRENT_CS2_EXEC_IDX;
-    }
 }

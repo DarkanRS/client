@@ -9,7 +9,7 @@ public class Class332 {
 	}
 
 	static void method5927() {
-		Class180.aClass229_2245.method3858(5, (byte) 12);
+		Class180.aClass229_2245.method3858(5);
 	}
 
 	public static Class350 method5928(RsByteBuffer rsbytebuffer_0) {

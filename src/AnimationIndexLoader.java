@@ -9,11 +9,11 @@ public class AnimationIndexLoader {
 	public void method11204() {
 		SoftCache softcache_2 = this.aClass229_6955;
 		synchronized (this.aClass229_6955) {
-			this.aClass229_6955.method3859(1867962972);
+			this.aClass229_6955.method3859();
 		}
 		softcache_2 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3859(335894365);
+			this.cache.method3859();
 		}
 	}
 
@@ -71,22 +71,22 @@ public class AnimationIndexLoader {
 	public void method11208() {
 		SoftCache softcache_2 = this.aClass229_6955;
 		synchronized (this.aClass229_6955) {
-			this.aClass229_6955.method3863(2031071202);
+			this.aClass229_6955.method3863();
 		}
 		softcache_2 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3863(1832973954);
+			this.cache.method3863();
 		}
 	}
 
 	public void method11210() {
 		SoftCache softcache_3 = this.aClass229_6955;
 		synchronized (this.aClass229_6955) {
-			this.aClass229_6955.method3858(5, (byte) -49);
+			this.aClass229_6955.method3858(5);
 		}
 		softcache_3 = this.cache;
 		synchronized (this.cache) {
-			this.cache.method3858(5, (byte) -26);
+			this.cache.method3858(5);
 		}
 	}
 

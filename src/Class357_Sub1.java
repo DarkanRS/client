@@ -45,9 +45,9 @@ public class Class357_Sub1 extends Class357 {
 		Class487.aClass378_5752.method6412();
 		Class18.method571();
 		Class354.method6215();
-		client.aClass229_7204.method3863(1522845266);
-		Class20.aClass229_191.method3863(691961844);
-		CS2Runner.aClass229_5901.method3863(1768110542);
+		client.aClass229_7204.method3863();
+		Class20.aClass229_191.method3863();
+		client.aClass229_5901.method3863();
 	}
 
 }

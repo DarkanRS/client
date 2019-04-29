@@ -10,11 +10,11 @@ public class CursorIndexLoader {
 	public void method7324() {
 		SoftCache softcache_2 = this.aClass229_5344;
 		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3859(1982287383);
+			this.aClass229_5344.method3859();
 		}
 		softcache_2 = this.aClass229_5342;
 		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3859(378665676);
+			this.aClass229_5342.method3859();
 		}
 	}
 
@@ -48,22 +48,22 @@ public class CursorIndexLoader {
 	public void method7326() {
 		SoftCache softcache_3 = this.aClass229_5344;
 		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3858(5, (byte) -55);
+			this.aClass229_5344.method3858(5);
 		}
 		softcache_3 = this.aClass229_5342;
 		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3858(5, (byte) 18);
+			this.aClass229_5342.method3858(5);
 		}
 	}
 
 	public void method7327() {
 		SoftCache softcache_2 = this.aClass229_5344;
 		synchronized (this.aClass229_5344) {
-			this.aClass229_5344.method3863(1594658345);
+			this.aClass229_5344.method3863();
 		}
 		softcache_2 = this.aClass229_5342;
 		synchronized (this.aClass229_5342) {
-			this.aClass229_5342.method3863(725307198);
+			this.aClass229_5342.method3863();
 		}
 	}
 

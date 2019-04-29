@@ -43,21 +43,21 @@ public class VarDefinitionLoader implements IndexLoader {
 	public void method6386() {
 		SoftCache softcache_3 = this.aClass229_4517;
 		synchronized (this.aClass229_4517) {
-			this.aClass229_4517.method3858(5, (byte) -47);
+			this.aClass229_4517.method3858(5);
 		}
 	}
 
 	public void method6388() {
 		SoftCache softcache_2 = this.aClass229_4517;
 		synchronized (this.aClass229_4517) {
-			this.aClass229_4517.method3859(-2056634706);
+			this.aClass229_4517.method3859();
 		}
 	}
 
 	public void method6390() {
 		SoftCache softcache_2 = this.aClass229_4517;
 		synchronized (this.aClass229_4517) {
-			this.aClass229_4517.method3863(2135815187);
+			this.aClass229_4517.method3863();
 		}
 	}
 

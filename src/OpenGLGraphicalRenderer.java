@@ -500,7 +500,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 			}
 		} catch (Throwable throwable_18) {
 			throwable_18.printStackTrace();
-			this.method8396(-219989635);
+			this.method8396();
 			if (throwable_18 instanceof OutOfMemoryError) {
 				throw (OutOfMemoryError) throwable_18;
 			} else {
@@ -1371,9 +1371,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && TextureDetails.time() > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && Utils.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = TextureDetails.time();
+			this.aLong8316 = Utils.time();
 		}
 
 		this.anInt8368 = i_1;
@@ -2098,9 +2098,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && TextureDetails.time() > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && Utils.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = TextureDetails.time();
+			this.aLong8316 = Utils.time();
 		}
 
 		this.anInt8368 = i_1;
@@ -3020,9 +3020,9 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		}
 
 		this.aClass167_8481.method2860();
-		if (this.za() > 100663296 && TextureDetails.time() > this.aLong8316 + 60000L) {
+		if (this.za() > 100663296 && Utils.time() > this.aLong8316 + 60000L) {
 			System.gc();
-			this.aLong8316 = TextureDetails.time();
+			this.aLong8316 = Utils.time();
 		}
 
 		this.anInt8368 = i_1;
