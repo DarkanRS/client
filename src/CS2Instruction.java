@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public enum CS2OpInfo {
+public enum CS2Instruction {
 	PUSH_INT(79, true),
 	LOAD_VARP(154, true),
 	STORE_VARP(929, true),
@@ -1008,26 +1008,26 @@ public enum CS2OpInfo {
 	instr6927(963),
 	instr6951(62);
 
-	private static HashMap<Integer, CS2OpInfo> OPCODES = new HashMap<>();
+	private static HashMap<Integer, CS2Instruction> OPCODES = new HashMap<>();
 	
 	static {
-		for (CS2OpInfo op : CS2OpInfo.values()) {
+		for (CS2Instruction op : CS2Instruction.values()) {
 			OPCODES.put(op.opcode, op);
 		}
 	}
 	
-	public static CS2OpInfo getByOpcode(int id) {
+	public static CS2Instruction getByOpcode(int id) {
 		return OPCODES.get(id);
 	}
 	
 	public int opcode;
 	public boolean hasIntConstant;
 
-	private CS2OpInfo(int opcode) {
+	private CS2Instruction(int opcode) {
 		this(opcode, false);
 	}
 
-	private CS2OpInfo(int opcode, boolean hasIntConstant) {
+	private CS2Instruction(int opcode, boolean hasIntConstant) {
 		this.opcode = opcode;
 		this.hasIntConstant = hasIntConstant;
 	}

@@ -5,7 +5,7 @@ import java.io.File;
 
 public class CS2Interpreter {
 
-	public static final void executeOperation(CS2OpInfo operation, CS2Executor exec) {
+	public static final void executeOperation(CS2Instruction operation, CS2Executor exec) {
 		switch (operation) {
 		case PUSH_INT:
 			pushInt(exec);

@@ -13,7 +13,7 @@ public class CS2Executor {
 	int[] intLocals;
 	long[] longLocals;
 	int anInt7004;
-	CS2OpInfo[] operations;
+	CS2Instruction[] operations;
 	Animable animable;
 	Class191 aClass191_7008;
 	Class346 aClass346_7009;
@@ -84,7 +84,7 @@ public class CS2Executor {
 		cs2executor_2.current = cs2script_0;
 		cs2executor_2.operations = cs2executor_2.current.operations;
 		cs2executor_2.intOpValues = cs2executor_2.current.intOpValues;
-		CS2OpInfo cs2opinfo_4 = null;
+		CS2Instruction cs2opinfo_4 = null;
 		cs2executor_2.anInt7002 = 0;
 		try {
 			try {
@@ -103,7 +103,7 @@ public class CS2Executor {
 					} else {
 						cs2executor_2.aBool7022 = false;
 					}
-					if (cs2opinfo_4 == CS2OpInfo.RETURN && cs2executor_2.anInt7002 == 0) {
+					if (cs2opinfo_4 == CS2Instruction.RETURN && cs2executor_2.anInt7002 == 0) {
 						decrementCS2ExecIdx();
 						break;
 					}
