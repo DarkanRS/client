@@ -6,9 +6,7 @@ public class Class279 {
 	static int anInt3370;
 
 	public static Class279 aClass279_3368 = new Class279();
-
 	static Class279 aClass279_3369 = new Class279();
-
 	static Class279 aClass279_3367 = new Class279();
 
 	static void method4964() {

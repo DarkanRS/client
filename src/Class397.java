@@ -18,8 +18,8 @@ public class Class397 implements Interface38 {
 	public static Class397 aClass397_4807 = new Class397("", 25);
 	public static Class397 aClass397_4808 = new Class397("", 26);
 	public static Class397 aClass397_4809 = new Class397("", 27);
-	static Class397 aClass397_4810 = new Class397("", 73);
-	static Class397 aClass397_4811 = new Class397("", 76);
+	public static Class397 aClass397_4810 = new Class397("", 73);
+	public static Class397 aClass397_4811 = new Class397("", 76);
 
 	public int anInt4802;
 
