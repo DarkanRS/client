@@ -12,7 +12,7 @@ public class OutgoingPacket {
 	public static OutgoingPacket GROUND_ITEM_CLICK_4 = new OutgoingPacket(8, 7);
 	public static OutgoingPacket BUTTON_CLICK_4 = new OutgoingPacket(9, 8);
 	public static OutgoingPacket SEND_PREFERENCES = new OutgoingPacket(10, -1);
-	public static OutgoingPacket COLOR_PICKER_RESULT = new OutgoingPacket(11, 2);
+	public static OutgoingPacket RESUME_HSLDIALOG = new OutgoingPacket(11, 2);
 	public static OutgoingPacket REMOVE_IGNORE = new OutgoingPacket(12, -1);
 	public static OutgoingPacket ICOMPONENT_ON_PLAYER = new OutgoingPacket(13, 11);
 	public static OutgoingPacket SEND_FRIENDS_QUICKCHAT = new OutgoingPacket(14, -1);
@@ -59,7 +59,7 @@ public class OutgoingPacket {
 	public static OutgoingPacket RECEIVE_PACKET_COUNT = new OutgoingPacket(55, 4);
 	public static OutgoingPacket aClass379_4543 = new OutgoingPacket(56, -2);
 	public static OutgoingPacket MOUSE_BUTTON_CLICK = new OutgoingPacket(57, 7);
-	public static OutgoingPacket INPUT_INTEGER = new OutgoingPacket(58, 4);
+	public static OutgoingPacket RESUME_COUNTDIALOG = new OutgoingPacket(58, 4);
 	public static OutgoingPacket CLICK = new OutgoingPacket(59, 6);
 	public static OutgoingPacket CLOSE_INTERFACE = new OutgoingPacket(60, 0);
 	public static OutgoingPacket GROUND_ITEM_EXAMINE = new OutgoingPacket(61, 7);
@@ -70,7 +70,7 @@ public class OutgoingPacket {
 	public static OutgoingPacket PLAYER_OPTION_1 = new OutgoingPacket(66, 3);
 	public static OutgoingPacket ICOMPONENT_ON_GROUND_ITEM = new OutgoingPacket(67, 15);
 	public static OutgoingPacket BUTTON_CLICK_3 = new OutgoingPacket(68, 8);
-	public static OutgoingPacket aClass379_4596 = new OutgoingPacket(69, -1); //TODO could also be enter string
+	public static OutgoingPacket RESUME_CLANFORUMQFCDIALOG = new OutgoingPacket(69, -1);
 	public static OutgoingPacket PLAYER_OPTION_10 = new OutgoingPacket(70, 3);
 	public static OutgoingPacket JOIN_FRIENDS_CHAT = new OutgoingPacket(71, -1);
 	public static OutgoingPacket BUTTON_CLICK_5 = new OutgoingPacket(72, 8);
@@ -81,14 +81,14 @@ public class OutgoingPacket {
 	public static OutgoingPacket NPC_CLICK_3 = new OutgoingPacket(77, 3);
 	public static OutgoingPacket MOVE_MOUSE_2 = new OutgoingPacket(78, -1);
 	public static OutgoingPacket aClass379_4606 = new OutgoingPacket(79, 1); //TODO account creation related
-	public static OutgoingPacket INPUT_NAME = new OutgoingPacket(80, -1);
+	public static OutgoingPacket RESUME_NAMEDIALOG = new OutgoingPacket(80, -1);
 	public static OutgoingPacket BUTTON_CLICK_8 = new OutgoingPacket(81, 8);
 	public static OutgoingPacket aClass379_4609 = new OutgoingPacket(82, 4); //writes one identical int sometime during gamestate/region loading. Probably sends when something fails to load or error occurs
 	public static OutgoingPacket MOVE_CAMERA = new OutgoingPacket(83, 4);
 	public static OutgoingPacket SCREEN_SIZE = new OutgoingPacket(84, 6);
 	public static OutgoingPacket COMMAND = new OutgoingPacket(85, -1);
 	public static OutgoingPacket CHAT = new OutgoingPacket(86, -1);
-	public static OutgoingPacket INPUT_LONG_TEXT = new OutgoingPacket(87, -1);
+	public static OutgoingPacket RESUME_TEXTDIALOG = new OutgoingPacket(87, -1);
 	public static OutgoingPacket WRITE_PING = new OutgoingPacket(88, 2);
 	public static OutgoingPacket PLAYER_OPTION_4 = new OutgoingPacket(89, 3);
 	public static OutgoingPacket aClass379_4617 = new OutgoingPacket(90, -1); //TODO another clan user click one

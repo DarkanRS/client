@@ -1109,13 +1109,13 @@ public class CS2Interpreter {
 			method3939(exec);
 			break;
 		case RESUME_COUNTDIALOG:
-			method4889(exec);
+			resumeCountDialog(exec);
 			break;
 		case RESUME_NAMEDIALOG:
-			method5786(exec);
+			resumeNamedDialog(exec);
 			break;
 		case RESUME_STRINGDIALOG:
-			method4197(exec);
+			resumeStringDialog(exec);
 			break;
 		case OPPLAYER:
 			method6194(exec);
@@ -1144,14 +1144,14 @@ public class CS2Interpreter {
 		case instr6324:
 			method8147(exec);
 			break;
-		case instr6325:
-			method2072(exec);
+		case RESUME_HSLDIALOG:
+			resumeHSLDialog(exec);
 			break;
-		case instr6326:
-			method2870(exec);
+		case RESUME_CLANFORUMQFCDIALOG:
+			resumeClanForumQFCDialog(exec);
 			break;
-		case PLAY_SOUND_EFFECT:
-			playSoundEffect(exec);
+		case SOUND_SYNTH:
+			playSoundSynth(exec);
 			break;
 		case instr6480:
 			method3555(exec);
@@ -4774,7 +4774,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void playSoundEffect(CS2Executor executor) {
+	static final void playSoundSynth(CS2Executor executor) {
 		executor.intStackPtr -= 3;
 		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], 255, 256, 1363502239);
 	}
@@ -4847,13 +4847,13 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method4889(CS2Executor executor) {
+	static final void resumeCountDialog(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = 0;
 		if (Class115.method1950(string_2, -1586612370)) {
 			i_3 = Class328.parseInt(string_2, 1827486792);
 		}
-		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.INPUT_INTEGER, client.outputContext.isaac);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.RESUME_COUNTDIALOG, client.outputContext.isaac);
 		tcpmessage_4.buffer.writeInt(i_3);
 		client.outputContext.queuePacket(tcpmessage_4);
 	}
@@ -4903,9 +4903,9 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method2870(CS2Executor executor) {
+	static final void resumeClanForumQFCDialog(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4596, client.outputContext.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.RESUME_CLANFORUMQFCDIALOG, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
 		client.outputContext.queuePacket(tcpmessage_3);
@@ -7812,9 +7812,9 @@ public class CS2Interpreter {
 		executor.stringStack[++executor.stringStackPtr - 1] = string_2.toLowerCase();
 	}
 
-	static final void method4197(CS2Executor executor) {
+	static final void resumeStringDialog(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.INPUT_LONG_TEXT, client.outputContext.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.RESUME_TEXTDIALOG, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
 		client.outputContext.queuePacket(tcpmessage_3);
@@ -8618,9 +8618,9 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method5786(CS2Executor executor) {
+	static final void resumeNamedDialog(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.INPUT_NAME, client.outputContext.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.RESUME_NAMEDIALOG, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeByte(string_2.length() + 1);
 		tcpmessage_3.buffer.writeString(string_2);
 		client.outputContext.queuePacket(tcpmessage_3);
@@ -10379,9 +10379,9 @@ public class CS2Interpreter {
 		method1083(icomponentdefinitions_3, interface_4, executor);
 	}
 
-	static final void method2072(CS2Executor executor) {
+	static final void resumeHSLDialog(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.COLOR_PICKER_RESULT, client.outputContext.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.RESUME_HSLDIALOG, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeShort(i_2);
 		client.outputContext.queuePacket(tcpmessage_3);
 	}
