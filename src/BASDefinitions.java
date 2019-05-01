@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class RenderAnimDefs {
+public class BASDefinitions {
 
 	public int renderAnimId;
 	RenderAnimIndexLoader aClass211_2788;

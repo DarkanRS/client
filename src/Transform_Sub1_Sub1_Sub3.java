@@ -57,7 +57,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 				Vector3 vector3_3 = ((Animable) obj_2).method11166().aClass385_3595;
 				this.method11172(vector3_3.x, (float) (Class504.method8389((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.anInt10383), vector3_3.z);
 				if (this.anInt10391 >= 0) {
-					RenderAnimDefs renderanimdefs_15 = ((Animable) obj_2).getRenderAnimDefs();
+					BASDefinitions renderanimdefs_15 = ((Animable) obj_2).getRenderAnimDefs();
 					int i_5 = 0;
 					int i_6 = 0;
 					if (renderanimdefs_15.anIntArrayArray2802 != null && renderanimdefs_15.anIntArrayArray2802[this.anInt10391] != null) {

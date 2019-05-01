@@ -140,11 +140,11 @@ public class NPCDefinitions {
 			synchronized (this.aClass406_4855.aClass229_4836) {
 				meshrasterizer_19 = (MeshRasterizer) this.aClass406_4855.aClass229_4836.get(long_33);
 			}
-			RenderAnimDefs renderanimdefs_45 = null;
+			BASDefinitions renderanimdefs_45 = null;
 			if (!bool_12 && i_11 != -1) {
-				renderanimdefs_45 = renderanimindexloader_3.getRenderAnimDefs(i_11, (byte) 22);
+				renderanimdefs_45 = renderanimindexloader_3.getBASDefs(i_11, (byte) 22);
 			} else if (this.renderEmote != -1) {
-				renderanimdefs_45 = renderanimindexloader_3.getRenderAnimDefs(this.renderEmote, (byte) 85);
+				renderanimdefs_45 = renderanimindexloader_3.getBASDefs(this.renderEmote, (byte) 85);
 			}
 			int i_25;
 			if (meshrasterizer_19 == null || (meshrasterizer_19.m() & i_32) != i_32) {

@@ -8,9 +8,9 @@ public class ItemContainer extends Node {
 	final MeshRasterizer method12429(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, int i_4, boolean bool_5, PlayerAppearance playerappearance_6) {
 		MeshRasterizer meshrasterizer_8 = null;
 		int i_9 = i_2;
-		RenderAnimDefs renderanimdefs_10 = null;
+		BASDefinitions renderanimdefs_10 = null;
 		if (i_4 != -1) {
-			renderanimdefs_10 = IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(i_4, (byte) 66);
+			renderanimdefs_10 = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(i_4, (byte) 66);
 		}
 
 		int[] ints_11 = this.itemIds;

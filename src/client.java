@@ -277,8 +277,8 @@ public final class client extends Engine {
 	static int[] anIntArray7263;
 	static Class163[] aClass163Array7419;
 	static int[] anIntArray7148;
-	public static int anInt7416;
-	public static int anInt7422;
+	public static int PUBLIC_FILTER;
+	public static int TRADE_FILTER;
 	static long[] aLongArray7424;
 	static int anInt7389;
 	public static String aString7426;
@@ -518,8 +518,8 @@ public final class client extends Engine {
 		anIntArray7263 = new int[anInt7366];
 		aClass163Array7419 = new Class163[anInt7366];
 		anIntArray7148 = new int[] { 16776960, 16711680, 65280, 65535, 16711935, 16777215 };
-		anInt7416 = 0;
-		anInt7422 = 0;
+		PUBLIC_FILTER = 0;
+		TRADE_FILTER = 0;
 		aLongArray7424 = new long[100];
 		anInt7389 = 0;
 		aString7426 = null;
@@ -712,7 +712,7 @@ public final class client extends Engine {
 						}
 						break;
 					case 30:
-						RenderAnimDefs.anInt2831 = Integer.parseInt(string_7);
+						BASDefinitions.anInt2831 = Integer.parseInt(string_7);
 						break;
 					case 31:
 						Class223.CURRENT_LANGUAGE = Language.method8278(Integer.parseInt(string_7), 1916155090);

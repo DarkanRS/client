@@ -54,7 +54,7 @@ public class Player extends Animable {
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -110) == 1) {
-				RenderAnimDefs renderanimdefs_8 = this.getRenderAnimDefs();
+				BASDefinitions renderanimdefs_8 = this.getRenderAnimDefs();
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-563768008) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
@@ -332,7 +332,7 @@ public class Player extends Animable {
 
 	boolean method16133(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		int i_4 = i_2;
-		RenderAnimDefs renderanimdefs_5 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_5 = this.getRenderAnimDefs();
 		Animation animation_6 = this.currentAnimation.hasDefs() && !this.currentAnimation.hasSpeed(-509247548) ? this.currentAnimation : null;
 		MovingAnimation class456_sub3_7 = !this.aAnimation_Sub3_10337.hasDefs() || this.aBool10573 || this.aAnimation_Sub3_10337.aBool7891 && animation_6 != null ? null : this.aAnimation_Sub3_10337;
 		int i_8 = renderanimdefs_5.anInt2786;
@@ -430,7 +430,7 @@ public class Player extends Animable {
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -42) == 1) {
-				RenderAnimDefs renderanimdefs_8 = this.getRenderAnimDefs();
+				BASDefinitions renderanimdefs_8 = this.getRenderAnimDefs();
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-305064415) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
@@ -545,7 +545,7 @@ public class Player extends Animable {
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -32) == 1) {
-				RenderAnimDefs renderanimdefs_8 = this.getRenderAnimDefs();
+				BASDefinitions renderanimdefs_8 = this.getRenderAnimDefs();
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(871780846) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
@@ -715,7 +715,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.anInt7416 * 1429316783 == 0 || client.anInt7416 * 1429316783 * -574868913 == 3 || -574868913 * client.anInt7416 * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -729,7 +729,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.anInt7416 * 1429316783 == 0 || client.anInt7416 * 1429316783 * -574868913 == 3 || -574868913 * client.anInt7416 * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -743,7 +743,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.anInt7416 * 1429316783 == 0 || client.anInt7416 * 1429316783 * -574868913 == 3 || -574868913 * client.anInt7416 * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -957,7 +957,7 @@ public class Player extends Animable {
 		}
 
 		if (this.aAnimation_Sub3_10337.hasDefs() && this.aAnimation_Sub3_10337.aBool7891) {
-			RenderAnimDefs renderanimdefs_23 = this.getRenderAnimDefs();
+			BASDefinitions renderanimdefs_23 = this.getRenderAnimDefs();
 			if (!renderanimdefs_23.method3810(this.aAnimation_Sub3_10337.method7597())) {
 				this.aAnimation_Sub3_10337.update(-1);
 				this.aAnimation_Sub3_10337.aBool7891 = false;
@@ -972,7 +972,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.anInt7416 * 1429316783 == 0 || client.anInt7416 * 1429316783 * -574868913 == 3 || -574868913 * client.anInt7416 * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -1023,7 +1023,7 @@ public class Player extends Animable {
 			Class285 class285_18 = null;
 			this.aBool10312 = false;
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -35) == 1) {
-				RenderAnimDefs renderanimdefs_9 = this.getRenderAnimDefs();
+				BASDefinitions renderanimdefs_9 = this.getRenderAnimDefs();
 				if (renderanimdefs_9.aBool2787 && (this.playerAppearance.anInt2928 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928).aBool4912)) {
 					Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1045482299) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_11 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_10 == null) ? this.aAnimation_Sub3_10337 : null;
@@ -1125,7 +1125,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (client.anInt7416 == 0 || client.anInt7416 == 3 || client.anInt7416 == 1 && MovementType.method4282(this.displayName)) {
+			if (client.PUBLIC_FILTER == 0 || client.PUBLIC_FILTER == 3 || client.PUBLIC_FILTER == 1 && MovementType.method4282(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}

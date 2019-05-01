@@ -2,7 +2,7 @@ import java.util.Queue;
 
 public class RenderAnimIndexLoader {
 
-	public static RenderAnimDefs aClass227_2669 = new RenderAnimDefs();
+	public static BASDefinitions aClass227_2669 = new BASDefinitions();
 
 	SoftCache renderAnimCache = new SoftCache(64);
 
@@ -17,11 +17,11 @@ public class RenderAnimIndexLoader {
 		}
 	}
 
-	public RenderAnimDefs getRenderAnimDefs(int i_1, byte b_2) {
+	public BASDefinitions getBASDefs(int i_1, byte b_2) {
 		SoftCache softcache_4 = this.renderAnimCache;
-		RenderAnimDefs renderanimdefs_3;
+		BASDefinitions renderanimdefs_3;
 		synchronized (this.renderAnimCache) {
-			renderanimdefs_3 = (RenderAnimDefs) this.renderAnimCache.get((long) i_1);
+			renderanimdefs_3 = (BASDefinitions) this.renderAnimCache.get((long) i_1);
 		}
 		if (renderanimdefs_3 != null) {
 			renderanimdefs_3.renderAnimId = i_1;
@@ -32,7 +32,7 @@ public class RenderAnimIndexLoader {
 			synchronized (this.aClass317_2671) {
 				bytes_10 = this.aClass317_2671.getFile(SharedConfigsType.RENDER_ANIMS.id, i_1);
 			}
-			renderanimdefs_3 = new RenderAnimDefs();
+			renderanimdefs_3 = new BASDefinitions();
 			renderanimdefs_3.renderAnimId = i_1;
 			renderanimdefs_3.aClass211_2788 = this;
 			if (bytes_10 != null) {

@@ -60,7 +60,7 @@ public final class CutsceneEntity {
 			NPCDefinitions npcdefinitions_2 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.id);
 			boolean bool_3 = npcdefinitions_2.method6881();
 			if (this.animations == null) {
-				RenderAnimDefs renderanimdefs_4 = IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(npcdefinitions_2.renderEmote, (byte) -42);
+				BASDefinitions renderanimdefs_4 = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(npcdefinitions_2.renderEmote, (byte) -42);
 				this.animations = renderanimdefs_4.method3828();
 			}
 			int[] ints_7 = this.animations;

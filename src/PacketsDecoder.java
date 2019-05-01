@@ -626,8 +626,8 @@ public class PacketsDecoder extends Class455 {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.PRIVATE_GAME_BAR_SETTING) {
-			Class149_Sub2.FRIEND_STATUS = Class246.getFriendStatus(buffer.readUnsignedByte());
+		} else if (context.currentPacket == IncomingPacket.SET_PRIVATE_FILTER) {
+			Class149_Sub2.PRIVATE_FILTER = Class246.getFriendStatus(buffer.readUnsignedByte());
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.ANIMATE_NPC) {
@@ -871,9 +871,9 @@ public class PacketsDecoder extends Class455 {
 			Huffman.method1978(i_6, key, flags);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.GAME_BAR_SETTINGS) {
-			client.anInt7422 = buffer.readUnsignedByteC();
-			client.anInt7416 = buffer.readUnsignedByte128();
+		} else if (context.currentPacket == IncomingPacket.SET_FILTERS_MISC) {
+			client.TRADE_FILTER = buffer.readUnsignedByteC();
+			client.PUBLIC_FILTER = buffer.readUnsignedByte128();
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4451) {

@@ -128,7 +128,7 @@ public class CursorIndexLoader {
 				}
 			}
 			if (obj_16 != null) {
-				RenderAnimDefs renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs();
+				BASDefinitions renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs();
 				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
 					i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
 				}

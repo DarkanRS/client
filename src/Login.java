@@ -259,7 +259,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(IndexLoaders.NATIVE_LIBRARY_LOADER.method4639() ? 1 : 0);
                         rsbitsbuffer_22.writeByte(client.aBool7310 ? 1 : 0);
                         rsbitsbuffer_22.writeByte(client.aBool7160 ? 1 : 0);
-                        rsbitsbuffer_22.writeByte(RenderAnimDefs.anInt2831);
+                        rsbitsbuffer_22.writeByte(BASDefinitions.anInt2831);
                         rsbitsbuffer_22.writeInt(client.anInt7163);
                         rsbitsbuffer_22.writeString(client.aString7164);
                         rsbitsbuffer_22.writeByte(Class448.CONNECTION_INFO != null && Class159.GAME_CONNECTION_INFO.worldId == Class448.CONNECTION_INFO.worldId ? 0 : 1);

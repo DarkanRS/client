@@ -64,7 +64,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 	int anInt10363;
 
 	public void turn(int i_1, boolean bool_2) {
-		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_4 = this.getRenderAnimDefs();
 		if (bool_2 || renderanimdefs_4.anInt2820 != 0 || this.anInt10340 != 0) {
 			this.turnDirection = i_1 & 0x3fff;
 			this.aClass19_10359.method577(this.turnDirection, 836947093);
@@ -90,7 +90,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 	}
 
 	public int method15796() {
-		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_2 = this.getRenderAnimDefs();
 		int i_3 = this.aClass19_10359.turnDirection;
 		boolean bool_4;
 		if (renderanimdefs_2.anInt2820 != 0) {
@@ -176,7 +176,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 			}
 		}
 
-		RenderAnimDefs renderanimdefs_4 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_4 = this.getRenderAnimDefs();
 		int i_5 = 256;
 		if (renderanimdefs_4.anIntArray2818 != null && renderanimdefs_4.anIntArray2818[i_1] > 0) {
 			i_5 = renderanimdefs_4.anIntArray2818[i_1];
@@ -489,7 +489,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 	}
 
 	public int method12997() {
-		RenderAnimDefs renderanimdefs_2 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_2 = this.getRenderAnimDefs();
 		int i_3;
 		if (renderanimdefs_2.anInt2798 != -1) {
 			i_3 = renderanimdefs_2.anInt2798;
@@ -639,7 +639,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 		this.anInt10315 = i_1;
 	}
 
-	void method15837(GraphicalRenderer graphicalrenderer_1, RenderAnimDefs renderanimdefs_2, int i_3, int i_4, int i_5, int i_6) {
+	void method15837(GraphicalRenderer graphicalrenderer_1, BASDefinitions renderanimdefs_2, int i_3, int i_4, int i_5, int i_6) {
 		for (int i_8 = 0; i_8 < this.aClass161Array10339.length; i_8++) {
 			byte b_9 = 0;
 			if (i_8 == 0) {
@@ -741,9 +741,9 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 
 	public abstract Class163 method15852();
 
-	public RenderAnimDefs getRenderAnimDefs() {
+	public BASDefinitions getRenderAnimDefs() {
 		int i_2 = this.getRenderAnimation();
-		return i_2 == -1 ? RenderAnimIndexLoader.aClass227_2669 : IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(i_2, (byte) -2);
+		return i_2 == -1 ? RenderAnimIndexLoader.aClass227_2669 : IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(i_2, (byte) -2);
 	}
 
 	public final void method15857(int i_1) {
@@ -759,7 +759,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 	}
 
 	public void method15863(int i_1, int i_2) {
-		RenderAnimDefs renderanimdefs_3 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_3 = this.getRenderAnimDefs();
 		if (renderanimdefs_3.anInt2820 != 0 || this.anInt10340 != 0) {
 			this.aClass19_10359.method579();
 			int i_4 = i_1 - this.aClass19_10359.turnDirection & 0x3fff;

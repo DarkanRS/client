@@ -309,7 +309,7 @@ public class SystemInfo extends Node {
 	}
 
 	static final void method13466(Animable animable_0, boolean bool_1) {
-		RenderAnimDefs renderanimdefs_3 = animable_0.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_3 = animable_0.getRenderAnimDefs();
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;
 			IdentikitDefinition.anInt430 = MovementType.TELEPORT.id;

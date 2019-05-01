@@ -30,7 +30,7 @@ public class IncomingPacket {
 	public static IncomingPacket CREATE_GROUND_ITEM = new IncomingPacket(27, 5);
 	public static IncomingPacket aClass375_4480 = new IncomingPacket(28, -2);
 	public static IncomingPacket PING = new IncomingPacket(29, 0);
-	public static IncomingPacket GAME_BAR_SETTINGS = new IncomingPacket(30, 2);
+	public static IncomingPacket SET_FILTERS_MISC = new IncomingPacket(30, 2);
 	public static IncomingPacket RECIEVE_PRIVATE_QUICKCHAT = new IncomingPacket(31, -1);
 	public static IncomingPacket ICOMPONENT_CONFIG = new IncomingPacket(32, 5);
 	public static IncomingPacket HIDE_ICOMPONENT = new IncomingPacket(33, 5);
@@ -67,7 +67,7 @@ public class IncomingPacket {
 	public static IncomingPacket RUN_ENERGY = new IncomingPacket(64, 1);
 	public static IncomingPacket aClass375_4416 = new IncomingPacket(65, -2);
 	public static IncomingPacket RESET_CAMERA = new IncomingPacket(66, 0);
-	public static IncomingPacket PRIVATE_GAME_BAR_SETTING = new IncomingPacket(67, 1);
+	public static IncomingPacket SET_PRIVATE_FILTER = new IncomingPacket(67, 1);
 	public static IncomingPacket VARPBIT_1 = new IncomingPacket(68, 3);
 	public static IncomingPacket DESTROY_OBJECT = new IncomingPacket(69, 2);
 	public static IncomingPacket MINIMAP_FLAG = new IncomingPacket(70, 2);

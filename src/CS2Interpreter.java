@@ -1361,7 +1361,7 @@ public class CS2Interpreter {
 			method7501(exec);
 			break;
 		case EMAIL_VALIDATION_ADD_NEW_ADDRESS:
-			method5828(exec);
+			emailValidationAddNewAddress(exec);
 			break;
 		case FRIEND_COUNT:
 			method4773(exec);
@@ -1828,34 +1828,34 @@ public class CS2Interpreter {
 		case ANIMATION_PARAM:
 			getAnimationParam(exec);
 			break;
-		case instr6553:
+		case BAS_GETANIM_READY:
 			method15408(exec);
 			break;
 		case instr6554:
 			method5755(exec);
 			break;
 		case instr6555:
-			method2566(exec);
+			sendAClass379_4624(exec);
 			break;
 		case instr6458:
 			method546(exec);
 			break;
-		case instr6746:
+		case CHAT_GETFILTER_PUBLIC:
 			method2872(exec);
 			break;
-		case instr6558:
+		case CHAT_SETFILTER:
 			method11371(exec);
 			break;
 		case SEND_REPORT_ABUSE_PACKET:
 			sendReportAbusePacket(exec);
 			break;
-		case instr6560:
+		case instr6560: //CHAT_GETHISTORY_BYUID
 			method2824(exec);
 			break;
-		case instr6739:
+		case instr6739: //CHAT_GETHISTORY_BYTYPEANDLINE
 			method15512(exec);
 			break;
-		case instr6562:
+		case instr6562: //CHAT_GETFILTER_PRIVATE
 			method5046(exec);
 			break;
 		case instr6563:
@@ -1876,10 +1876,10 @@ public class CS2Interpreter {
 		case instr6565:
 			method3783(exec);
 			break;
-		case instr6796:
+		case CHAT_PLAYERNAME:
 			method8717(exec);
 			break;
-		case instr6526:
+		case CHAT_GETFILTER_TRADE:
 			method1173(exec);
 			break;
 		case instr6225:
@@ -3769,14 +3769,14 @@ public class CS2Interpreter {
 		client.aBool7175 = false;
 	}
 
-	static final void method5828(CS2Executor executor) {
+	static final void emailValidationAddNewAddress(CS2Executor executor) {
 		--executor.stringStackPtr;
 		executor.intStackPtr -= 3;
 		String string_2 = (String) executor.stringStack[executor.stringStackPtr];
 		boolean bool_3 = executor.intStack[executor.intStackPtr] == 1;
 		boolean bool_4 = executor.intStack[executor.intStackPtr + 1] == 1;
 		boolean bool_5 = executor.intStack[executor.intStackPtr + 2] == 1;
-		TCPPacket tcpmessage_6 = Class271.createPacket(OutgoingPacket.aClass379_4619, client.connectionContext.isaac);
+		TCPPacket tcpmessage_6 = Class271.createPacket(OutgoingPacket.EMAIL_VALIDATION_ADD_NEW_ADDRESS, client.connectionContext.isaac);
 		tcpmessage_6.buffer.writeShort(ChatLine.getLength(string_2) + 1);
 		tcpmessage_6.buffer.writeString(string_2);
 		int i_7 = 0;
@@ -4921,7 +4921,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2872(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7416;
+		executor.intStack[++executor.intStackPtr - 1] = client.PUBLIC_FILTER;
 	}
 
 	static final void method2873(CS2Executor executor) {
@@ -5199,7 +5199,7 @@ public class CS2Interpreter {
 		method910(icomponentdefinitions_3, interface_4, executor, 1996171820);
 	}
 
-	static final void method2566(CS2Executor executor) {
+	static final void sendAClass379_4624(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		if (client.gameState == 0 && !JS5CacheFile.method3360((byte) 72)) {
 			if (string_2.length() > 20) {
@@ -7001,10 +7001,10 @@ public class CS2Interpreter {
 	}
 
 	static final void method5046(CS2Executor executor) {
-		if (Class149_Sub2.FRIEND_STATUS == null) {
+		if (Class149_Sub2.PRIVATE_FILTER == null) {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class149_Sub2.FRIEND_STATUS.id;
+			executor.intStack[++executor.intStackPtr - 1] = Class149_Sub2.PRIVATE_FILTER.id;
 		}
 	}
 
@@ -7105,7 +7105,7 @@ public class CS2Interpreter {
 
 	static final void method11594(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.INPUT_STRING, client.connectionContext.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.EMAIL_VALIDATION_SUBMIT_CODE, client.connectionContext.isaac);
 		tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_2));
 		tcpmessage_3.buffer.writeString(string_2);
 		client.connectionContext.queuePacket(tcpmessage_3);
@@ -9671,7 +9671,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1173(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7422;
+		executor.intStack[++executor.intStackPtr - 1] = client.TRADE_FILTER;
 	}
 
 	static final void method401(CS2Executor executor) {
@@ -9694,7 +9694,7 @@ public class CS2Interpreter {
 	static final void method7501(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[--executor.stringStackPtr];
-		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.aClass379_4558, client.connectionContext.isaac);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.EMAIL_VALIDATION_CHANGE_ADDRESS, client.connectionContext.isaac);
 		tcpmessage_4.buffer.writeShort(ChatLine.getLength(string_2) + ChatLine.getLength(string_3));
 		tcpmessage_4.buffer.writeString(string_2);
 		tcpmessage_4.buffer.writeString(string_3);
@@ -10131,19 +10131,19 @@ public class CS2Interpreter {
 
 	static final void method15408(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		RenderAnimDefs renderanimdefs_3 = IndexLoaders.RENDER_ANIM_LOADER.getRenderAnimDefs(i_2, (byte) 12);
-		if (renderanimdefs_3.anIntArray2814 != null && renderanimdefs_3.anIntArray2814.length > 0) {
+		BASDefinitions bas = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(i_2, (byte) 12);
+		if (bas.anIntArray2814 != null && bas.anIntArray2814.length > 0) {
 			int i_4 = 0;
-			int i_5 = renderanimdefs_3.standAnimations[0];
-			for (int i_6 = 1; i_6 < renderanimdefs_3.anIntArray2814.length; i_6++) {
-				if (renderanimdefs_3.standAnimations[i_6] > i_5) {
+			int i_5 = bas.standAnimations[0];
+			for (int i_6 = 1; i_6 < bas.anIntArray2814.length; i_6++) {
+				if (bas.standAnimations[i_6] > i_5) {
 					i_4 = i_6;
-					i_5 = renderanimdefs_3.standAnimations[i_6];
+					i_5 = bas.standAnimations[i_6];
 				}
 			}
-			executor.intStack[++executor.intStackPtr - 1] = renderanimdefs_3.anIntArray2814[i_4];
+			executor.intStack[++executor.intStackPtr - 1] = bas.anIntArray2814[i_4];
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = renderanimdefs_3.standAnimation;
+			executor.intStack[++executor.intStackPtr - 1] = bas.standAnimation;
 		}
 	}
 
@@ -10312,17 +10312,17 @@ public class CS2Interpreter {
 
 	static final void method11371(CS2Executor executor) {
 		executor.intStackPtr -= 3;
-		client.anInt7416 = executor.intStack[executor.intStackPtr];
-		Class149_Sub2.FRIEND_STATUS = Class246.getFriendStatus(executor.intStack[executor.intStackPtr + 1]);
-		if (Class149_Sub2.FRIEND_STATUS == null) {
-			Class149_Sub2.FRIEND_STATUS = FriendStatus.FRIENDS_ONLY;
+		client.PUBLIC_FILTER = executor.intStack[executor.intStackPtr];
+		Class149_Sub2.PRIVATE_FILTER = Class246.getFriendStatus(executor.intStack[executor.intStackPtr + 1]);
+		if (Class149_Sub2.PRIVATE_FILTER == null) {
+			Class149_Sub2.PRIVATE_FILTER = FriendStatus.FRIENDS_ONLY;
 		}
-		client.anInt7422 = executor.intStack[executor.intStackPtr + 2];
+		client.TRADE_FILTER = executor.intStack[executor.intStackPtr + 2];
 		BufferedConnectionContext class184_2 = Preference_Sub20.method12807(-405485002);
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.UPDATE_FRIEND_STATUS, class184_2.isaac);
-		tcpmessage_3.buffer.writeByte(client.anInt7416);
-		tcpmessage_3.buffer.writeByte(Class149_Sub2.FRIEND_STATUS.id);
-		tcpmessage_3.buffer.writeByte(client.anInt7422);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.CHAT_SETFILTER, class184_2.isaac);
+		tcpmessage_3.buffer.writeByte(client.PUBLIC_FILTER);
+		tcpmessage_3.buffer.writeByte(Class149_Sub2.PRIVATE_FILTER.id);
+		tcpmessage_3.buffer.writeByte(client.TRADE_FILTER);
 		class184_2.queuePacket(tcpmessage_3);
 	}
 

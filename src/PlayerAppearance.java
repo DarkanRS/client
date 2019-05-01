@@ -180,9 +180,9 @@ public class PlayerAppearance {
 			synchronized (aClass229_2920) {
 				meshrasterizer_39 = (MeshRasterizer) aClass229_2920.get(long_18);
 			}
-			RenderAnimDefs renderanimdefs_51 = null;
+			BASDefinitions renderanimdefs_51 = null;
 			if (this.anInt2925 != -1) {
-				renderanimdefs_51 = renderanimindexloader_3.getRenderAnimDefs(this.anInt2925, (byte) 62);
+				renderanimdefs_51 = renderanimindexloader_3.getBASDefs(this.anInt2925, (byte) 62);
 			}
 			int i_30;
 			int i_31;

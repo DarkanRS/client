@@ -48,7 +48,7 @@ public class NPC extends Animable {
 
 	boolean method16158(GraphicalRenderer graphicalrenderer_1, int i_2, byte b_3) {
 		int i_4 = i_2;
-		RenderAnimDefs renderanimdefs_5 = this.getRenderAnimDefs();
+		BASDefinitions renderanimdefs_5 = this.getRenderAnimDefs();
 		Animation animation_6 = this.currentAnimation.hasDefs() && !this.currentAnimation.hasSpeed(-1119795377) ? this.currentAnimation : null;
 		MovingAnimation class456_sub3_7 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_6 == null) ? this.aAnimation_Sub3_10337 : null;
 		int i_8 = renderanimdefs_5.anInt2786;
@@ -382,7 +382,7 @@ public class NPC extends Animable {
 
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
-			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
+			BASDefinitions renderanimdefs_13 = this.getRenderAnimDefs();
 			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
@@ -469,7 +469,7 @@ public class NPC extends Animable {
 
 			matrix44var_5.method5209(matrix44var_3);
 			matrix44var_5.method5219(0.0F, (float) (-20 - this.anInt10325), 0.0F);
-			RenderAnimDefs renderanimdefs_14 = this.getRenderAnimDefs();
+			BASDefinitions renderanimdefs_14 = this.getRenderAnimDefs();
 			NPCDefinitions npcdefinitions_9 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_10 = null;
@@ -551,7 +551,7 @@ public class NPC extends Animable {
 
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
-			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
+			BASDefinitions renderanimdefs_13 = this.getRenderAnimDefs();
 			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
@@ -838,7 +838,7 @@ public class NPC extends Animable {
 
 			matrix44var_4.method5209(matrix44var_2);
 			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
-			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs();
+			BASDefinitions renderanimdefs_13 = this.getRenderAnimDefs();
 			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;

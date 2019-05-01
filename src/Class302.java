@@ -26,7 +26,7 @@ public class Class302 {
 	}
 
 	static void handleMovementAnimations(Animable animable, int moveType, int i_2, int i_3, int i_4) {
-		RenderAnimDefs renderAnim = animable.getRenderAnimDefs();
+		BASDefinitions renderAnim = animable.getRenderAnimDefs();
 		MovingAnimation animation = animable.aAnimation_Sub3_10337;
 		int turnDirection = animable.turnDirection - animable.aClass19_10359.turnDirection & 0x3fff;
 		if (moveType == MovementType.TELEPORT.id) {

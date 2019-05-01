@@ -25,7 +25,7 @@ public class CutsceneAction_Sub21 extends CutsceneAction {
 		}
 
 		byte b_6;
-		RenderAnimDefs renderanimdefs_7;
+		BASDefinitions renderanimdefs_7;
 		int i_8;
 		int i_9;
 		Vector3 vector3_12;

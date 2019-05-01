@@ -21,7 +21,7 @@ public class OutgoingPacket {
 	public static OutgoingPacket GRAND_EXCHANGE_ITEM_SELECT = new OutgoingPacket(17, 2);
 	public static OutgoingPacket aClass379_4531 = new OutgoingPacket(18, 4); //music related
 	public static OutgoingPacket BUTTON_CLICK_9 = new OutgoingPacket(19, 8);
-	public static OutgoingPacket UPDATE_FRIEND_STATUS = new OutgoingPacket(20, 3);
+	public static OutgoingPacket CHAT_SETFILTER = new OutgoingPacket(20, 3);
 	public static OutgoingPacket BUTTON_CLICK_7 = new OutgoingPacket(21, 8);
 	public static OutgoingPacket BUTTON_CLICK_10 = new OutgoingPacket(22, 8);
 	public static OutgoingPacket BUTTON_CLICK_6 = new OutgoingPacket(23, 8);
@@ -53,7 +53,7 @@ public class OutgoingPacket {
 	public static OutgoingPacket ICOMPONENT_CONTINUE = new OutgoingPacket(49, 6);
 	public static OutgoingPacket NPC_CLICK_2 = new OutgoingPacket(50, 3);
 	public static OutgoingPacket PLAYER_OPTION_7 = new OutgoingPacket(51, 3);
-	public static OutgoingPacket INPUT_STRING = new OutgoingPacket(52, -1);
+	public static OutgoingPacket EMAIL_VALIDATION_SUBMIT_CODE = new OutgoingPacket(52, -1);
 	public static OutgoingPacket PLAYER_OPTION_9 = new OutgoingPacket(53, 3);
 	public static OutgoingPacket GROUND_ITEM_CLICK_3 = new OutgoingPacket(54, 7);
 	public static OutgoingPacket RECEIVE_PACKET_COUNT = new OutgoingPacket(55, 4);
@@ -93,14 +93,14 @@ public class OutgoingPacket {
 	public static OutgoingPacket PLAYER_OPTION_4 = new OutgoingPacket(89, 3);
 	public static OutgoingPacket aClass379_4617 = new OutgoingPacket(90, -1); //TODO another clan user click one
 	public static OutgoingPacket KICK_FRIENDS_CHAT = new OutgoingPacket(91, -1);
-	public static OutgoingPacket aClass379_4619 = new OutgoingPacket(92, -2); //cs2 driven string with 3 bit flags
+	public static OutgoingPacket EMAIL_VALIDATION_ADD_NEW_ADDRESS = new OutgoingPacket(92, -2);
 	public static OutgoingPacket OBJECT_CLICK_2 = new OutgoingPacket(93, 9);
 	public static OutgoingPacket PLAYER_OPTION_8 = new OutgoingPacket(94, 3);
 	public static OutgoingPacket NPC_CLICK_4 = new OutgoingPacket(95, 3);
 	public static OutgoingPacket BUTTON_CLICK_1 = new OutgoingPacket(96, 8);
 	public static OutgoingPacket aClass379_4624 = new OutgoingPacket(97, -1); //cs2 driven something during login stage?
 	public static OutgoingPacket ICOMPONENT_ON_OBJECT = new OutgoingPacket(98, 17);
-	public static OutgoingPacket aClass379_4558 = new OutgoingPacket(99, -2); //cs2 driven 2 strings
+	public static OutgoingPacket EMAIL_VALIDATION_CHANGE_ADDRESS = new OutgoingPacket(99, -2);
 	public static OutgoingPacket REPORT_ABUSE = new OutgoingPacket(100, -1);
 	public static OutgoingPacket SEND_SIGN_UP_FORM = new OutgoingPacket(101, -2);
 	public static OutgoingPacket CHECK_EMAIL_VALIDITY = new OutgoingPacket(102, -2);
