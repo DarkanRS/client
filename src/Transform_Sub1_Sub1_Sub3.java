@@ -40,7 +40,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 				if (this.anInt10389 < 0) {
 					i_14 = -this.anInt10389 - 1;
 					if (i_14 == client.myPlayerIndex) {
-						obj_2 = VertexNormal.myPlayer;
+						obj_2 = VertexNormal.MY_PLAYER;
 					} else {
 						obj_2 = client.players[i_14];
 					}

@@ -138,51 +138,51 @@ public abstract class Class152 {
 			i_2 = client.anInt7340;
 		}
 		UnderlayIndexLoader.method8036(i_2);
-		int i_3 = VertexNormal.myPlayer.getSize() << 8;
-		Vector3 vector3_4 = VertexNormal.myPlayer.method11166().aClass385_3595;
-		CutsceneAction_Sub21.method14675(VertexNormal.myPlayer.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
+		int i_3 = VertexNormal.MY_PLAYER.getSize() << 8;
+		Vector3 vector3_4 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+		CutsceneAction_Sub21.method14675(VertexNormal.MY_PLAYER.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
 		client.anInt7261 = 0;
 	}
 
-	public static final void method2603(String string_0) {
+	public static final void addFriend(String string_0) {
 		if (string_0 != null) {
-			if ((client.anInt7449 < 200 || client.IS_MEMBER) && client.anInt7449 < 200) {
+			if ((client.FRIEND_COUNT < 200 || client.IS_MEMBER) && client.FRIEND_COUNT < 200) {
 				String string_2 = Class383.method6515(string_0);
 				if (string_2 != null) {
 					int i_3;
 					String string_5;
 					String string_6;
-					for (i_3 = 0; i_3 < client.anInt7449; i_3++) {
-						Class6 class6_4 = client.aClass6Array7452[i_3];
-						string_5 = Class383.method6515(class6_4.aString37);
+					for (i_3 = 0; i_3 < client.FRIEND_COUNT; i_3++) {
+						Friend class6_4 = client.FRIENDS[i_3];
+						string_5 = Class383.method6515(class6_4.displayName);
 						if (string_5 != null && string_5.equals(string_2)) {
 							ChatLine.appendGameMessage(string_0 + Message.ALREADY_ON_FRIENDS_LIST.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
-						if (class6_4.aString43 != null) {
-							string_6 = Class383.method6515(class6_4.aString43);
+						if (class6_4.username != null) {
+							string_6 = Class383.method6515(class6_4.username);
 							if (string_6 != null && string_6.equals(string_2)) {
 								ChatLine.appendGameMessage(string_0 + Message.ALREADY_ON_FRIENDS_LIST.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
 					}
-					for (i_3 = 0; i_3 < client.anInt7373; i_3++) {
-						Class10 class10_8 = client.aClass10Array7456[i_3];
-						string_5 = Class383.method6515(class10_8.aString115);
+					for (i_3 = 0; i_3 < client.IGNORE_LIST_COUNT; i_3++) {
+						Ignore class10_8 = client.IGNORED_PLAYERS[i_3];
+						string_5 = Class383.method6515(class10_8.unfilteredUsername);
 						if (string_5 != null && string_5.equals(string_2)) {
 							ChatLine.appendGameMessage(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
-						if (class10_8.aString116 != null) {
-							string_6 = Class383.method6515(class10_8.aString116);
+						if (class10_8.displayName != null) {
+							string_6 = Class383.method6515(class10_8.displayName);
 							if (string_6 != null && string_6.equals(string_2)) {
 								ChatLine.appendGameMessage(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
 					}
-					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_2)) {
+					if (Class383.method6515(VertexNormal.MY_PLAYER.displayName).equals(string_2)) {
 						ChatLine.appendGameMessage(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE));
 					} else {
 						BufferedConnectionContext class184_7 = Preference_Sub20.method12807(1188178835);

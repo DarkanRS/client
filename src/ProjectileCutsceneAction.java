@@ -140,18 +140,18 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 		this.anInt9399 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	public static final void method14665(String string_0) {
+	public static final void deleteIgnore(String string_0) {
 		if (string_0 != null) {
 			String string_2 = Class383.method6515(string_0);
 			if (string_2 != null) {
-				for (int i_3 = 0; i_3 < client.anInt7373; i_3++) {
-					Class10 class10_4 = client.aClass10Array7456[i_3];
-					String string_5 = class10_4.aString115;
+				for (int i_3 = 0; i_3 < client.IGNORE_LIST_COUNT; i_3++) {
+					Ignore class10_4 = client.IGNORED_PLAYERS[i_3];
+					String string_5 = class10_4.unfilteredUsername;
 					String string_6 = Class383.method6515(string_5);
 					if (Class159.method2734(string_0, string_2, string_5, string_6, (byte) -110)) {
-						--client.anInt7373;
-						for (int i_7 = i_3; i_7 < client.anInt7373; i_7++) {
-							client.aClass10Array7456[i_7] = client.aClass10Array7456[i_7 + 1];
+						--client.IGNORE_LIST_COUNT;
+						for (int i_7 = i_3; i_7 < client.IGNORE_LIST_COUNT; i_7++) {
+							client.IGNORED_PLAYERS[i_7] = client.IGNORED_PLAYERS[i_7 + 1];
 						}
 						client.anInt7386 = client.anInt7347;
 						BufferedConnectionContext class184_9 = Preference_Sub20.method12807(-1089718324);

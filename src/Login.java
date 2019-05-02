@@ -119,7 +119,7 @@ public class Login {
                         rsbytebuffer_4.writeByte(Class9.anInt76);
                         rsbytebuffer_4.writeShort((int) (Math.random() * 9.9999999E7D));
                         rsbytebuffer_4.writeByte(Class223.CURRENT_LANGUAGE.getValue());
-                        rsbytebuffer_4.writeInt(client.anInt7149);
+                        rsbytebuffer_4.writeInt(client.AFFILIATE);
                         for (i_5 = 0; i_5 < 6; i_5++) {
                             rsbytebuffer_4.writeInt((int) (Math.random() * 9.9999999E7D));
                         }
@@ -241,7 +241,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641(919663007));
                         IdentitiKitIndexLoader.method809(rsbitsbuffer_22, 972141670);
                         rsbitsbuffer_22.writeString(client.aString7281);
-                        rsbitsbuffer_22.writeInt(client.anInt7149);
+                        rsbitsbuffer_22.writeInt(client.AFFILIATE);
                         rsbytebuffer_7 = Class393.preferences.encode();
                         rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
@@ -299,7 +299,7 @@ public class Login {
                         rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeBytes(rsbytebuffer_7.buffer, 0, rsbytebuffer_7.index);
                         rsbitsbuffer_22.writeString(Class464.aString5555);
-                        rsbitsbuffer_22.writeInt(client.anInt7149);
+                        rsbitsbuffer_22.writeInt(client.AFFILIATE);
                         rsbitsbuffer_22.writeInt(client.anInt7163);
                         rsbitsbuffer_22.writeString(client.aString7164);
                         QuestDefinitions.writeCRCs(rsbitsbuffer_22, 860014211);
@@ -457,7 +457,7 @@ public class Login {
                             client.PLAYER_MOD_LEVEL = rsbitsbuffer_19.readUnsignedByte();
                             client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(979570289);
-                            VertexNormal.myPlayer.male = (byte) rsbitsbuffer_19.readUnsignedByte();
+                            VertexNormal.MY_PLAYER.male = (byte) rsbitsbuffer_19.readUnsignedByte();
                             client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             Class116.aLong1259 = rsbitsbuffer_19.readLong();
@@ -478,7 +478,7 @@ public class Login {
                             CutsceneAction_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
                             Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
                             Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            VertexNormal.myPlayer.displayName = VertexNormal.myPlayer.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString();
+                            VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString();
                             RegionMap.anInt3644 = rsbitsbuffer_19.readUnsignedByte();
                             Class121.anInt1526 = rsbitsbuffer_19.readInt();
                             client.aBool7323 = rsbitsbuffer_19.readUnsignedByte() == 1;

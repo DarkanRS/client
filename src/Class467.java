@@ -4,7 +4,7 @@ public class Class467 {
 	int anInt5572;
 	public int anInt5573;
 	public int anInt5574;
-	public static Class173[] aClass173Array5575;
+	public static FriendsChatPlayer[] FC_PLAYERS;
 	public static NativeSprite aNativeSprite_5576;
 
 }

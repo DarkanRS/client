@@ -30,7 +30,7 @@ public class Class86 {
 	}
 
 	static boolean method1481(KeyHoldInputSubscriber class232_0, byte b_1) {
-		return Class6.method302(class232_0, (MouseRecord) null);
+		return Friend.method302(class232_0, (MouseRecord) null);
 	}
 
 	static void method1482(IComponentDefinitions icomponentdefinitions_0, byte b_1) {

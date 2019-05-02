@@ -302,7 +302,7 @@ public class IndexLoaders {
 			Class94.method1589();
 			Class77.method1369(ANIMATION_LOADER);
 			Class62.method1261(PARTICLE_INDEX);
-			Class173.method2943(MESH_INDEX, IMAGE_LOADER);
+			FriendsChatPlayer.method2943(MESH_INDEX, IMAGE_LOADER);
 			Huffman huffman = new Huffman(HUFFMAN_INDEX.getFileByName("huffman", ""));
 			InventoriesIndexLoader.setHuffman(huffman);
 			Engine.aClass273_3244 = VertexNormal.method1461();

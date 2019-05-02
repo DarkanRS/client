@@ -38,9 +38,9 @@ public class Class239 {
 		if (!Class97.loggedOutState(client.gameState) && !Node_Sub17.lobbyState(client.gameState, -1116602507)) {
 			int i_3 = -1;
 			int i_4 = -1;
-			if (VertexNormal.myPlayer != null) {
-				i_3 = VertexNormal.myPlayer.regionBaseX[0] >> 3;
-				i_4 = VertexNormal.myPlayer.regionBaseY[0] >> 3;
+			if (VertexNormal.MY_PLAYER != null) {
+				i_3 = VertexNormal.MY_PLAYER.regionBaseX[0] >> 3;
+				i_4 = VertexNormal.MY_PLAYER.regionBaseY[0] >> 3;
 			}
 			if (i_3 >= 0 && i_3 < mapregion_1.getSizeX() >> 3 && i_4 >= 0 && i_4 < mapregion_1.getSizeY() >> 3) {
 				this.method4072(i_3, i_4, anInt2942, -1945601333);

@@ -21,7 +21,7 @@ public final class client extends Engine {
 	public static boolean aBool7310 = false;
 	static boolean aBool7147 = false;
 	static String aString7281 = null;
-	public static int anInt7149 = 0;
+	public static int AFFILIATE = 0;
 	public static int anInt7447 = 0;
 	public static boolean aBool7151 = false;
 	public static byte[] aByteArray7152 = null;
@@ -203,7 +203,7 @@ public final class client extends Engine {
 	public static int anInt7340;
 	static int anInt7427;
 	public static int anInt7342;
-	public static int anInt7190;
+	public static int CURRENT_CURSOR;
 	public static boolean aBool7344;
 	static int anInt7345;
 	static int anInt7346;
@@ -281,8 +281,8 @@ public final class client extends Engine {
 	public static int TRADE_FILTER;
 	static long[] aLongArray7424;
 	static int anInt7389;
-	public static String aString7426;
-	public static String aString7359;
+	public static String FC_NAME;
+	public static String FC_OWNER_NAME;
 	public static GrandExchangeSlot[] GRAND_EXCHANGE_SLOTS;
 	static int anInt7429;
 	static boolean[] aBoolArray7431;
@@ -303,12 +303,12 @@ public final class client extends Engine {
 	public static int anInt7188;
 	public static int anInt7440;
 	static int anInt7451;
-	public static int anInt7449;
+	public static int FRIEND_COUNT;
 	public static int anInt7434;
-	public static Class6[] aClass6Array7452;
+	public static Friend[] FRIENDS;
 	static EntityList aClass457_7350;
-	public static int anInt7373;
-	public static Class10[] aClass10Array7456;
+	public static int IGNORE_LIST_COUNT;
+	public static Ignore[] IGNORED_PLAYERS;
 	static Calendar aCalendar7278;
 	public static byte aByte7458;
 	public static Interface25 anInterface25_7446;
@@ -439,7 +439,7 @@ public final class client extends Engine {
 		anInt7340 = -1;
 		anInt7427 = -1;
 		anInt7342 = -1;
-		anInt7190 = -1;
+		CURRENT_CURSOR = -1;
 		aBool7344 = false;
 		anInt7345 = -1;
 		anInt7346 = -1;
@@ -522,8 +522,8 @@ public final class client extends Engine {
 		TRADE_FILTER = 0;
 		aLongArray7424 = new long[100];
 		anInt7389 = 0;
-		aString7426 = null;
-		aString7359 = null;
+		FC_NAME = null;
+		FC_OWNER_NAME = null;
 		GRAND_EXCHANGE_SLOTS = new GrandExchangeSlot[6];
 		anInt7429 = 0;
 		aBoolArray7431 = new boolean[5];
@@ -544,12 +544,12 @@ public final class client extends Engine {
 		anInt7188 = 0;
 		anInt7440 = 0;
 		anInt7451 = 0;
-		anInt7449 = 0;
+		FRIEND_COUNT = 0;
 		anInt7434 = 0;
-		aClass6Array7452 = new Class6[200];
+		FRIENDS = new Friend[200];
 		aClass457_7350 = new EntityList();
-		anInt7373 = 0;
-		aClass10Array7456 = new Class10[100];
+		IGNORE_LIST_COUNT = 0;
+		IGNORED_PLAYERS = new Ignore[100];
 		aCalendar7278 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 		aByte7458 = -6;
 		anInterface25_7446 = new Class17();
@@ -600,7 +600,7 @@ public final class client extends Engine {
 						Class448.lobbyConnectionInfo.host = string_7;
 						break;
 					case 6:
-						TilestreamPacket.anInt4219 = Integer.parseInt(string_7);
+						TilestreamPacket.COUNTRY = Integer.parseInt(string_7);
 						break;
 					case 7:
 						str_1 = string_7;
@@ -674,7 +674,7 @@ public final class client extends Engine {
 						}
 						break;
 					case 23:
-						anInt7149 = Integer.parseInt(string_7);
+						AFFILIATE = Integer.parseInt(string_7);
 						break;
 					case 24:
 						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
@@ -827,7 +827,7 @@ public final class client extends Engine {
 					char keyCode = record.getCharacter();
 					if (Class298.method5303((byte) 37) && (keyCode == 96 || keyCode == 167 || keyCode == 178)) {
 						if (Transform_Sub1_Sub3_Sub1.method16081()) {
-							Class173.method2944(1516285434);
+							FriendsChatPlayer.method2944(1516285434);
 						} else {
 							SpotAnimDefinitions.method11243();
 						}
@@ -1090,8 +1090,8 @@ public final class client extends Engine {
 		try {
 			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			str_2 = str_2 + coordgrid_3.x + "," + coordgrid_3.y + "," + IndexLoaders.MAP_REGION_DECODER.getSizeX() + "," + IndexLoaders.MAP_REGION_DECODER.getSizeY() + " ";
-			if (VertexNormal.myPlayer != null) {
-				str_2 = str_2 + Class4.anInt35 + "," + (VertexNormal.myPlayer.regionBaseX[0] + coordgrid_3.x) + "," + (VertexNormal.myPlayer.regionBaseY[0] + coordgrid_3.y) + " ";
+			if (VertexNormal.MY_PLAYER != null) {
+				str_2 = str_2 + Class4.anInt35 + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_3.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_3.y) + " ";
 			} else {
 				str_2 = str_2 + Class4.anInt35 + "," + Class4.anInt35 + "," + Class4.anInt35 + "," + " ";
 			}
@@ -1312,7 +1312,7 @@ public final class client extends Engine {
 				player_5.method14697((byte) 56);
 				if (player_5.aShort9458 >= 0 && player_5.aShort9456 >= 0 && player_5.localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && player_5.localY < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 					player_5.aBool10573 = player_5.aAnimation_Sub3_10337.aBool7891 ? animate : false;
-					if (player_5 == VertexNormal.myPlayer) {
+					if (player_5 == VertexNormal.MY_PLAYER) {
 						player_5.drawPriority = Integer.MAX_VALUE;
 					} else {
 						i_8 = 0;
@@ -1402,7 +1402,7 @@ public final class client extends Engine {
 					}
 				} else if (class180_10.anInt2236 == 10) {
 					Player player_11 = players[class180_10.anInt2238];
-					if (player_11 != null && player_11 != VertexNormal.myPlayer && player_11.drawPriority >= 0) {
+					if (player_11 != null && player_11 != VertexNormal.MY_PLAYER && player_11.drawPriority >= 0) {
 						player_11.drawPriority += 2048;
 					}
 				}
@@ -1947,7 +1947,7 @@ public final class client extends Engine {
 						}
 
 						boolean bool_38 = false;
-						if (Class163.mouseRecorder.method3565((byte) -53) && bool_48) {
+						if (Class163.mouseRecorder.leftButtonDown() && bool_48) {
 							bool_38 = true;
 						}
 
@@ -2156,8 +2156,8 @@ public final class client extends Engine {
 										i_33 = (i_31 >> 2) + (anInt7262 >> 9);
 										i_34 = (anInt7376 >> 9) - (i_32 >> 2);
 									} else {
-										int i_45 = (VertexNormal.myPlayer.getSize() - 1) * 256;
-										Vector3 vector3_36 = VertexNormal.myPlayer.method11166().aClass385_3595;
+										int i_45 = (VertexNormal.MY_PLAYER.getSize() - 1) * 256;
+										Vector3 vector3_36 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 										i_33 = ((int) vector3_36.x - i_45 >> 9) + (i_31 >> 2);
 										i_34 = ((int) vector3_36.z - i_45 >> 9) - (i_32 >> 2);
 									}

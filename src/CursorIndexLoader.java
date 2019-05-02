@@ -116,7 +116,7 @@ public class CursorIndexLoader {
 			if (i_1 < 0) {
 				i_17 = -i_1 - 1;
 				if (i_17 == client.myPlayerIndex) {
-					obj_16 = VertexNormal.myPlayer;
+					obj_16 = VertexNormal.MY_PLAYER;
 				} else {
 					obj_16 = client.players[i_17];
 				}

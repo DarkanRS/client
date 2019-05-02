@@ -88,10 +88,10 @@ public class Class348 {
 		Class509.method8739();
 		client.anInt7427 = -1;
 		UnderlayIndexLoader.method8036(client.anInt7340);
-		VertexNormal.myPlayer = new Player((SceneObjectManager) null);
-		VertexNormal.myPlayer.method11172((float) (IndexLoaders.MAP_REGION_DECODER.getSizeX() * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.getSizeY() * 512 / 2));
-		VertexNormal.myPlayer.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.getSizeX() / 2;
-		VertexNormal.myPlayer.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.getSizeY() / 2;
+		VertexNormal.MY_PLAYER = new Player((SceneObjectManager) null);
+		VertexNormal.MY_PLAYER.method11172((float) (IndexLoaders.MAP_REGION_DECODER.getSizeX() * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.getSizeY() * 512 / 2));
+		VertexNormal.MY_PLAYER.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.getSizeX() / 2;
+		VertexNormal.MY_PLAYER.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.getSizeY() / 2;
 		Class246.anInt3029 = 0;
 		IdentitiKitIndexLoader.anInt361 = 0;
 		if (NativeLibraryLoader.anInt3240 == 5) {

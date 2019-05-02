@@ -14,7 +14,7 @@ public abstract class Node_Sub1 extends Node {
 		if (i_0 > 0) {
 			Class148.anInt1730 = 1;
 			CutsceneEntity.aClass317_746 = index_1;
-			Class6.anInt46 = i_2;
+			Friend.anInt46 = i_2;
 			Class148.anInt1738 = 0;
 			Node_Sub33.aNode_Sub15_Sub2_7836 = null;
 			Class158_Sub2_Sub3.anInt10243 = i_4;

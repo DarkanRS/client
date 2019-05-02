@@ -7,7 +7,7 @@ public class Class363 {
     }
 
     static final void method6286(long long_0) {
-        Vector3 vector3_2 = VertexNormal.myPlayer.method11166().aClass385_3595;
+        Vector3 vector3_2 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
         int i_3 = (int) vector3_2.x + client.anInt7248;
         int i_4 = (int) vector3_2.z + client.anInt7250;
         if (Class11.anInt122 - i_3 < -2000 || Class11.anInt122 - i_3 > 2000 || Class266.anInt3289 - i_4 < -2000 || Class266.anInt3289 - i_4 > 2000) {
@@ -81,7 +81,7 @@ public class Class363 {
             animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
             animable_0.method15801();
         }
-        if (VertexNormal.myPlayer == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 12) * 512)) {
+        if (VertexNormal.MY_PLAYER == animable_0 && ((int) vector3_5.x < 6144 || (int) vector3_5.z < 6144 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 12) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 12) * 512)) {
             animable_0.currentAnimation.update(-1);
             for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
                 animable_0.aClass161Array10339[i_6].spotAnimId = -1;

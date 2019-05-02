@@ -60,7 +60,7 @@ public class Class119 {
 
 		for (int i_6 = 0; i_6 < i_3; i_6++) {
 			Player player_7 = client.players[ints_4[i_6]];
-			if (player_7 != null && player_7 != VertexNormal.myPlayer && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
+			if (player_7 != null && player_7 != VertexNormal.MY_PLAYER && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
 				OutgoingPacket outgoingpacket_8 = null;
 				if (i_0 == 1) {
 					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_1;

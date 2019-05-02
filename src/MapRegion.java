@@ -79,9 +79,9 @@ public class MapRegion {
 		int i_3 = this.coordGrid.y;
 		int mapBaseX = (IdentitiKitIndexLoader.anInt361 >> 12) + (i_2 >> 3);
 		int mapBaseY = (Class246.anInt3029 >> 12) + (i_3 >> 3);
-		VertexNormal.myPlayer.plane = 0;
+		VertexNormal.MY_PLAYER.plane = 0;
 		Class4.anInt35 = 0;
-		VertexNormal.myPlayer.move(8, 8);
+		VertexNormal.MY_PLAYER.move(8, 8);
 		byte regionSize = 18;
 		this.xteas = new int[regionSize][4];
 		this.regionIds = new int[regionSize];
@@ -1340,11 +1340,11 @@ public class MapRegion {
 	}
 
 	static final boolean routeTo(int i_0, int i_1, boolean bool_2, RouteStrategy routestrategy_3) {
-		int i_5 = VertexNormal.myPlayer.regionBaseX[0];
-		int i_6 = VertexNormal.myPlayer.regionBaseY[0];
+		int i_5 = VertexNormal.MY_PLAYER.regionBaseX[0];
+		int i_6 = VertexNormal.MY_PLAYER.regionBaseY[0];
 		if (i_5 >= 0 && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_6 >= 0 && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 			if (i_0 >= 0 && i_0 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_1 >= 0 && i_1 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-				int i_7 = Class112.findRoute(i_5, i_6, VertexNormal.myPlayer.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.myPlayer.plane), bool_2, client.walkStepsX, client.walkStepsY, -1311698246);
+				int i_7 = Class112.findRoute(i_5, i_6, VertexNormal.MY_PLAYER.getSize(), routestrategy_3, IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane), bool_2, client.walkStepsX, client.walkStepsY, -1311698246);
 				if (i_7 < 1) {
 					return false;
 				} else {

@@ -21,7 +21,7 @@ public class Node_Sub20_Sub34 extends Node_Sub20 {
 			for (int i_7 = 0; i_7 < Class316.anInt3670; i_7++) {
 				Node_Sub11_Sub2.anInt10003 = Integer.MAX_VALUE;
 				Ground.anInt4777 = Integer.MAX_VALUE;
-				Class10.anInt118 = Integer.MAX_VALUE;
+				Ignore.anInt118 = Integer.MAX_VALUE;
 				Class368.anInt4266 = Integer.MAX_VALUE;
 				int i_8 = Class316.anIntArray3672[i_7] * this.anInt9961 + 2048;
 				int i_9 = i_8 >> 12;
@@ -61,13 +61,13 @@ public class Node_Sub20_Sub34 extends Node_Sub20 {
 						}
 						if (i_17 < Class368.anInt4266) {
 							Node_Sub11_Sub2.anInt10003 = Ground.anInt4777;
-							Ground.anInt4777 = Class10.anInt118;
-							Class10.anInt118 = Class368.anInt4266;
+							Ground.anInt4777 = Ignore.anInt118;
+							Ignore.anInt118 = Class368.anInt4266;
 							Class368.anInt4266 = i_17;
-						} else if (i_17 < Class10.anInt118) {
+						} else if (i_17 < Ignore.anInt118) {
 							Node_Sub11_Sub2.anInt10003 = Ground.anInt4777;
-							Ground.anInt4777 = Class10.anInt118;
-							Class10.anInt118 = i_17;
+							Ground.anInt4777 = Ignore.anInt118;
+							Ignore.anInt118 = i_17;
 						} else if (i_17 < Ground.anInt4777) {
 							Node_Sub11_Sub2.anInt10003 = Ground.anInt4777;
 							Ground.anInt4777 = i_17;
@@ -81,10 +81,10 @@ public class Node_Sub20_Sub34 extends Node_Sub20 {
 					ints_3[i_7] = Class368.anInt4266;
 					break;
 				case 1:
-					ints_3[i_7] = Class10.anInt118;
+					ints_3[i_7] = Ignore.anInt118;
 					break;
 				case 2:
-					ints_3[i_7] = Class10.anInt118 - Class368.anInt4266;
+					ints_3[i_7] = Ignore.anInt118 - Class368.anInt4266;
 					break;
 				case 3:
 					ints_3[i_7] = Ground.anInt4777;

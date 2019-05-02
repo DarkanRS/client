@@ -142,28 +142,6 @@ public class Class306 implements Runnable {
         return this.anInterface27_3598.method189(this.aLong3601);
     }
 
-    public static String method5457(long long_0) {
-        if (long_0 > 0L && long_0 < 6582952005840035281L) {
-            if (long_0 % 37L == 0L) {
-                return null;
-            } else {
-                int i_2 = 0;
-                for (long long_3 = long_0; long_3 != 0L; long_3 /= 37L) {
-                    ++i_2;
-                }
-                StringBuilder stringbuilder_6 = new StringBuilder(i_2);
-                while (long_0 != 0L) {
-                    long long_4 = long_0;
-                    long_0 /= 37L;
-                    stringbuilder_6.append(Class500.aCharArray5825[(int) (long_4 - 37L * long_0)]);
-                }
-                return stringbuilder_6.reverse().toString();
-            }
-        } else {
-            return null;
-        }
-    }
-
     static void method5458(int i_0, int i_1, int i_2, int i_3) {
         float f_5 = (float) Class291_Sub1.yLength / (float) Class291_Sub1.xLength;
         int i_6 = i_2;

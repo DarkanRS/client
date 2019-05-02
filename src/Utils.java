@@ -148,4 +148,26 @@ public class Utils {
 		}
 	}
 
+	public static String getStringFromLong(long long_0) {
+	    if (long_0 > 0L && long_0 < 6582952005840035281L) {
+	        if (long_0 % 37L == 0L) {
+	            return null;
+	        } else {
+	            int i_2 = 0;
+	            for (long long_3 = long_0; long_3 != 0L; long_3 /= 37L) {
+	                ++i_2;
+	            }
+	            StringBuilder stringbuilder_6 = new StringBuilder(i_2);
+	            while (long_0 != 0L) {
+	                long long_4 = long_0;
+	                long_0 /= 37L;
+	                stringbuilder_6.append(Class500.aCharArray5825[(int) (long_4 - 37L * long_0)]);
+	            }
+	            return stringbuilder_6.reverse().toString();
+	        }
+	    } else {
+	        return null;
+	    }
+	}
+
 }

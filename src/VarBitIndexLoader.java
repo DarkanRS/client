@@ -72,8 +72,8 @@ public class VarBitIndexLoader implements IndexLoader {
 		if (string_0 == null) {
 			return -1;
 		} else {
-			for (int i_2 = 0; i_2 < client.anInt7449; i_2++) {
-				if (string_0.equalsIgnoreCase(client.aClass6Array7452[i_2].aString37)) {
+			for (int i_2 = 0; i_2 < client.FRIEND_COUNT; i_2++) {
+				if (string_0.equalsIgnoreCase(client.FRIENDS[i_2].displayName)) {
 					return i_2;
 				}
 			}

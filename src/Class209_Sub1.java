@@ -76,7 +76,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		}
 	}
 
-	public boolean method3566() {
+	public boolean rightButtonDown() {
 		return (this.anInt7940 & 0x2) != 0;
 	}
 
@@ -84,7 +84,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		return 954893953 * this.anInt7939 * 220182913;
 	}
 
-	public boolean method3565(byte b_1) {
+	public boolean leftButtonDown() {
 		return (this.anInt7940 & 0x1) != 0;
 	}
 
@@ -92,7 +92,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -2109256124);
 	}
 
-	public boolean method3567(byte b_1) {
+	public boolean middleButtonDown() {
 		return (this.anInt7940 & 0x4) != 0;
 	}
 

@@ -200,7 +200,7 @@ public class Class188 {
 						i_23 = rsbitsbuffer_2.readUnsignedShort();
 						if (IndexLoaders.MAP_REGION_DECODER.method4419(-1875813222) != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 							i_24 = i_8 + 1;
-							if (VertexNormal.myPlayer.regionBaseX[0] >= i_21 - i_24 && VertexNormal.myPlayer.regionBaseX[0] <= i_21 + i_24 && VertexNormal.myPlayer.regionBaseY[0] >= i_5 - i_24 && VertexNormal.myPlayer.regionBaseY[0] <= i_24 + i_5) {
+							if (VertexNormal.MY_PLAYER.regionBaseX[0] >= i_21 - i_24 && VertexNormal.MY_PLAYER.regionBaseX[0] <= i_21 + i_24 && VertexNormal.MY_PLAYER.regionBaseY[0] >= i_5 - i_24 && VertexNormal.MY_PLAYER.regionBaseY[0] <= i_24 + i_5) {
 								Class383.method6509(i_6, i_9, i_10, i_11, i_8 + (Class272.anInt3331 << 24) + (i_5 << 8) + (i_21 << 16), i_23);
 							}
 						}
@@ -348,7 +348,7 @@ public class Class188 {
 							boolean bool_41 = rsbitsbuffer_2.readUnsignedByte() == 1;
 							if (IndexLoaders.MAP_REGION_DECODER.method4419(-2004979271) != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 								i_14 = i_8 + 1;
-								if (VertexNormal.myPlayer.regionBaseX[0] >= i_21 - i_14 && VertexNormal.myPlayer.regionBaseX[0] <= i_21 + i_14 && VertexNormal.myPlayer.regionBaseY[0] >= i_5 - i_14 && VertexNormal.myPlayer.regionBaseY[0] <= i_14 + i_5) {
+								if (VertexNormal.MY_PLAYER.regionBaseX[0] >= i_21 - i_14 && VertexNormal.MY_PLAYER.regionBaseX[0] <= i_21 + i_14 && VertexNormal.MY_PLAYER.regionBaseY[0] >= i_5 - i_14 && VertexNormal.MY_PLAYER.regionBaseY[0] <= i_14 + i_5) {
 									Class256.method4414(i_6, i_9, i_10, i_11, i_8 + (Class272.anInt3331 << 24) + (i_5 << 8) + (i_21 << 16), bool_41, i_23);
 								}
 							}

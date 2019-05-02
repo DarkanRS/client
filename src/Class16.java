@@ -118,9 +118,9 @@ public class Class16 {
 		Class260.anInt3219 = 0;
 	}
 
-	public static final void method567(String string_0, boolean bool_1, byte b_2) {
+	public static final void addIgnore(String string_0, boolean bool_1, byte b_2) {
 		if (string_0 != null) {
-			if (client.anInt7373 >= 100) {
+			if (client.IGNORE_LIST_COUNT >= 100) {
 				ChatLine.appendGameMessage(Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE));
 			} else {
 				String string_3 = Class383.method6515(string_0);
@@ -128,37 +128,37 @@ public class Class16 {
 					int i_4;
 					String string_6;
 					String string_7;
-					for (i_4 = 0; i_4 < client.anInt7373; i_4++) {
-						Class10 class10_5 = client.aClass10Array7456[i_4];
-						string_6 = Class383.method6515(class10_5.aString115);
+					for (i_4 = 0; i_4 < client.IGNORE_LIST_COUNT; i_4++) {
+						Ignore class10_5 = client.IGNORED_PLAYERS[i_4];
+						string_6 = Class383.method6515(class10_5.unfilteredUsername);
 						if (string_6 != null && string_6.equals(string_3)) {
 							ChatLine.appendGameMessage(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
-						if (class10_5.aString116 != null) {
-							string_7 = Class383.method6515(class10_5.aString116);
+						if (class10_5.displayName != null) {
+							string_7 = Class383.method6515(class10_5.displayName);
 							if (string_7 != null && string_7.equals(string_3)) {
 								ChatLine.appendGameMessage(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
 					}
-					for (i_4 = 0; i_4 < client.anInt7449; i_4++) {
-						Class6 class6_9 = client.aClass6Array7452[i_4];
-						string_6 = Class383.method6515(class6_9.aString37);
+					for (i_4 = 0; i_4 < client.FRIEND_COUNT; i_4++) {
+						Friend class6_9 = client.FRIENDS[i_4];
+						string_6 = Class383.method6515(class6_9.displayName);
 						if (string_6 != null && string_6.equals(string_3)) {
 							ChatLine.appendGameMessage(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
-						if (class6_9.aString43 != null) {
-							string_7 = Class383.method6515(class6_9.aString43);
+						if (class6_9.username != null) {
+							string_7 = Class383.method6515(class6_9.username);
 							if (string_7 != null && string_7.equals(string_3)) {
 								ChatLine.appendGameMessage(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
 					}
-					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_3)) {
+					if (Class383.method6515(VertexNormal.MY_PLAYER.displayName).equals(string_3)) {
 						ChatLine.appendGameMessage(Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE));
 					} else {
 						BufferedConnectionContext class184_8 = Preference_Sub20.method12807(1039135585);

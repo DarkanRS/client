@@ -78,10 +78,10 @@ public class Class186 {
 		client.anInt7178 = 0;
 		Class209_Sub1.method12916();
 		client.anInt7434 = 0;
-		client.anInt7449 = 0;
-		client.aString7426 = null;
-		Class459.anInt5534 = 0;
-		Class467.aClass173Array5575 = null;
+		client.FRIEND_COUNT = 0;
+		client.FC_NAME = null;
+		Class459.FC_PLAYER_COUNT = 0;
+		Class467.FC_PLAYERS = null;
 		Node_Sub13.GUEST_CLAN_SETTINGS = null;
 		QuickchatFiller.CLAN_SETTINGS = null;
 		Class237.method3990();

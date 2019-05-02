@@ -5,14 +5,14 @@ public abstract class Class209 {
 
     public abstract int method3564();
 
-    public abstract boolean method3565(byte var1);
+    public abstract boolean leftButtonDown();
 
-    public abstract boolean method3566();
+    public abstract boolean rightButtonDown();
 
-    public abstract boolean method3567(byte var1);
+    public abstract boolean middleButtonDown();
 
     public boolean method3568() {
-        return this.method3565((byte) -13) || this.method3566() || this.method3567((byte) 69);
+        return this.leftButtonDown() || this.rightButtonDown() || this.middleButtonDown();
     }
 
     public abstract int getMouseX();

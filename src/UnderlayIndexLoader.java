@@ -62,20 +62,20 @@ public class UnderlayIndexLoader {
 		if (Class393.preferences.customCursors.method12675() == 0) {
 			i_0 = -1;
 		}
-		if (i_0 != client.anInt7190) {
+		if (i_0 != client.CURRENT_CURSOR) {
 			if (i_0 != -1) {
 				CursorDefintions class419_2 = IndexLoaders.CURSOR_LOADER.method7325(i_0);
 				SpriteDefinitions class91_3 = class419_2.getSprite();
 				if (class91_3 != null) {
-					MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, class91_3.method1528(), class91_3.method1519(), class91_3.method1520(), new Point(class419_2.anInt5002, class419_2.anInt5000));
-					client.anInt7190 = i_0;
+					MeshModifier.aClass267_5026.setCustomCursor(Class351.gameCanvas, class91_3.method1528(), class91_3.method1519(), class91_3.method1520(), new Point(class419_2.anInt5002, class419_2.anInt5000));
+					client.CURRENT_CURSOR = i_0;
 				} else {
 					i_0 = -1;
 				}
 			}
-			if (i_0 == -1 && client.anInt7190 != -1) {
-				MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, (int[]) null, -1, -1, new Point());
-				client.anInt7190 = -1;
+			if (i_0 == -1 && client.CURRENT_CURSOR != -1) {
+				MeshModifier.aClass267_5026.setCustomCursor(Class351.gameCanvas, (int[]) null, -1, -1, new Point());
+				client.CURRENT_CURSOR = -1;
 			}
 		}
 	}

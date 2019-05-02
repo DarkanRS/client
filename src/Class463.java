@@ -30,11 +30,11 @@ public class Class463 {
         if (animable_0 instanceof NPC) {
             NPC npc_2 = (NPC) animable_0;
             if (npc_2.definitions != null) {
-                MapAreaDefinitions.iComponentOnNPC(npc_2, npc_2.plane != VertexNormal.myPlayer.plane, 2058310476);
+                MapAreaDefinitions.iComponentOnNPC(npc_2, npc_2.plane != VertexNormal.MY_PLAYER.plane, 2058310476);
             }
         } else if (animable_0 instanceof Player) {
             Player player_3 = (Player) animable_0;
-            CutsceneAction_Sub22.iComponentOnPlayer(player_3, player_3.plane != VertexNormal.myPlayer.plane);
+            CutsceneAction_Sub22.iComponentOnPlayer(player_3, player_3.plane != VertexNormal.MY_PLAYER.plane);
         }
     }
 
@@ -89,7 +89,7 @@ public class Class463 {
         try {
             if (Class148.anInt1730 == 2) {
                 if (Node_Sub44_Sub3.aNode_Sub7_9563 == null) {
-                    Node_Sub44_Sub3.aNode_Sub7_9563 = Node_Sub7.method12164(CutsceneEntity.aClass317_746, Class6.anInt46, Class148.anInt1738);
+                    Node_Sub44_Sub3.aNode_Sub7_9563 = Node_Sub7.method12164(CutsceneEntity.aClass317_746, Friend.anInt46, Class148.anInt1738);
                     if (Node_Sub44_Sub3.aNode_Sub7_9563 == null) {
                         return false;
                     }

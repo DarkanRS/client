@@ -1,12 +1,12 @@
-public class Class6 {
-	public String aString37;
-	public boolean aBool38;
-	public int anInt39;
-	public String aString40;
-	public int anInt41;
-	public int anInt42;
-	public String aString43;
-	public int anInt44;
+public class Friend {
+	public String displayName;
+	public boolean referrer;
+	public int worldId;
+	public String worldName;
+	public int fcRank;
+	public int platform;
+	public String username;
+	public int worldFlags;
 	static int anInt46;
 
 	static boolean method302(InputSubscriber interface17_0, MouseRecord class282_sub53_1) {

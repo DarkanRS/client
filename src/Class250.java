@@ -101,7 +101,7 @@ public class Class250 {
 		Class163.mouseRecorder.method3584();
 		Class308.aclient3620.method4704(2044329067);
 		Class351.gameCanvas.setBackground(Color.black);
-		client.anInt7190 = -1;
+		client.CURRENT_CURSOR = -1;
 		CutsceneAction_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -106);
 	}
@@ -159,7 +159,7 @@ public class Class250 {
 						}
 					}
 				}
-				if (((Animable) obj_12).drawPriority < 0 || ((Animable) obj_12).anInt10349 != client.anInt7286 && ((Animable) obj_12).plane != VertexNormal.myPlayer.plane) {
+				if (((Animable) obj_12).drawPriority < 0 || ((Animable) obj_12).anInt10349 != client.anInt7286 && ((Animable) obj_12).plane != VertexNormal.MY_PLAYER.plane) {
 					continue;
 				}
 			}

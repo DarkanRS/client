@@ -1,16 +1,16 @@
-public class Class173 {
+public class FriendsChatPlayer {
 
-	public byte aByte2126;
+	public byte rank;
 
-	public String aString2127;
+	public String username;
 
-	String aString2128;
+	String textName;
 
-	public String aString2129;
+	public String displayName;
 
-	public String aString2130;
+	public String worldName;
 
-	public int anInt2131;
+	public int worldId;
 
 	public static void method2943(Index index_0, Interface22 interface22_1) {
 		PaddedJS5Request.aClass317_10379 = index_0;

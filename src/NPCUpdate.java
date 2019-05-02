@@ -185,7 +185,7 @@ public class NPCUpdate {
 			if (bool_4) {
 				npc_6.turn(i_9, true);
 			}
-			npc_6.move(i_12, VertexNormal.myPlayer.regionBaseX[0] + i_10, VertexNormal.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize());
+			npc_6.move(i_12, VertexNormal.MY_PLAYER.regionBaseX[0] + i_10, VertexNormal.MY_PLAYER.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize());
 			if (npc_6.definitions.method6886()) {
 				Class397.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
 			}

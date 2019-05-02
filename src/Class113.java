@@ -41,7 +41,7 @@ public class Class113 {
 					int i_6 = -class521_sub1_sub1_sub3_2.anInt10382 - 1;
 					Player player_9;
 					if (i_6 == client.myPlayerIndex) {
-						player_9 = VertexNormal.myPlayer;
+						player_9 = VertexNormal.MY_PLAYER;
 					} else {
 						player_9 = client.players[i_6];
 					}

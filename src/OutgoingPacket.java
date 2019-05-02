@@ -8,7 +8,7 @@ public class OutgoingPacket {
 	public static OutgoingPacket ICOMPONENT_ON_ICOMPONENT = new OutgoingPacket(4, 16);
 	public static OutgoingPacket WORLD_MAP_CLICK = new OutgoingPacket(5, 4);
 	public static OutgoingPacket PLAYER_OPTION_2 = new OutgoingPacket(6, 3);
-	public static OutgoingPacket CHANGE_FRIENDS_CHAT = new OutgoingPacket(7, -1);
+	public static OutgoingPacket SET_FC_RANK = new OutgoingPacket(7, -1);
 	public static OutgoingPacket GROUND_ITEM_CLICK_4 = new OutgoingPacket(8, 7);
 	public static OutgoingPacket BUTTON_CLICK_4 = new OutgoingPacket(9, 8);
 	public static OutgoingPacket SEND_PREFERENCES = new OutgoingPacket(10, -1);

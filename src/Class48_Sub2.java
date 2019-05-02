@@ -1,6 +1,6 @@
 public class Class48_Sub2 extends Class48 {
 
-	public static byte aByte9263;
+	public static byte MY_PLAYER_FC_RANK;
 	int[] anIntArray9233;
 	Matrix44Arr aClass384_9259 = new Matrix44Arr();
 	Class115[] aClass115Array9254 = new Class115[18];

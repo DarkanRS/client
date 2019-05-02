@@ -200,7 +200,7 @@ public class Whirlpool {
 		} else {
 			try {
 				if (i_0 == 8) {
-					Class173.method2944(-1950066116);
+					FriendsChatPlayer.method2944(-1950066116);
 				} else if (i_0 == 24) {
 					Class209.printConsoleMessage("" + Engine.FPS);
 				} else if (i_0 == 28) {
@@ -260,11 +260,11 @@ public class Whirlpool {
 					} else {
 						Vector3 vector3_8;
 						if (i_0 == 26) {
-							vector3_8 = VertexNormal.myPlayer.method11166().aClass385_3595;
+							vector3_8 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9));
 						} else if (i_0 == 2) {
-							vector3_8 = VertexNormal.myPlayer.method11166().aClass385_3595;
-							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
+							vector3_8 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.MY_PLAYER.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
 						} else if (i_0 == 23) {
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53));
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119));

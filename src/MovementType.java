@@ -41,16 +41,16 @@ public class MovementType implements Identifiable {
         animable_0.method15863(animable_0.anInt10346, 1692779087);
     }
 
-    public static boolean method4282(String string_0) {
+    public static boolean isFriend(String string_0) {
         if (string_0 == null) {
             return false;
         } else {
-            for (int i_2 = 0; i_2 < client.anInt7449; i_2++) {
-                if (string_0.equalsIgnoreCase(client.aClass6Array7452[i_2].aString37)) {
+            for (int i_2 = 0; i_2 < client.FRIEND_COUNT; i_2++) {
+                if (string_0.equalsIgnoreCase(client.FRIENDS[i_2].displayName)) {
                     return true;
                 }
             }
-            return string_0.equalsIgnoreCase(VertexNormal.myPlayer.displayName);
+            return string_0.equalsIgnoreCase(VertexNormal.MY_PLAYER.displayName);
         }
     }
 }

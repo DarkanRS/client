@@ -30,7 +30,7 @@ public class Class501 {
 			client.players[i_1] = null;
 		}
 
-		VertexNormal.myPlayer = null;
+		VertexNormal.MY_PLAYER = null;
 
 		for (i_1 = 0; i_1 < client.anInt7210; i_1++) {
 			Animable animable_2 = (Animable) client.aNode_Sub47Array7209[i_1].anObject8068;

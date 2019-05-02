@@ -54,7 +54,7 @@ public class Class469 implements Iterator {
 			StringNode class282_sub47_9 = (StringNode) client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_8]);
 			if (class282_sub47_9 != null) {
 				NPC npc_10 = (NPC) class282_sub47_9.anObject8068;
-				if (npc_10.hasDefinition(-438666523) && npc_10.plane == VertexNormal.myPlayer.plane) {
+				if (npc_10.hasDefinition(-438666523) && npc_10.plane == VertexNormal.MY_PLAYER.plane) {
 					NPCDefinitions npcdefinitions_11 = npc_10.definitions;
 					if (npcdefinitions_11 != null && npcdefinitions_11.transformTo != null) {
 						npcdefinitions_11 = npcdefinitions_11.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);

@@ -130,7 +130,7 @@ public class Class344 {
     }
 
     public static final void method6119(String string_0) {
-        if (Class467.aClass173Array5575 != null) {
+        if (Class467.FC_PLAYERS != null) {
             BufferedConnectionContext class184_2 = Preference_Sub20.method12807(978713855);
             TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.KICK_FRIENDS_CHAT, class184_2.isaac);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));

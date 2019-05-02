@@ -35,7 +35,7 @@ public final class Class459 {
 
 	int anInt5532;
 
-	public static int anInt5534;
+	public static int FC_PLAYER_COUNT;
 
 	int anInt5498 = 6;
 

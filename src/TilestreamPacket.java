@@ -1,6 +1,6 @@
 public class TilestreamPacket {
 
-    public static int anInt4219;
+    public static int COUNTRY;
 
     public static TilestreamPacket aClass364_4209 = new TilestreamPacket(-1);
 

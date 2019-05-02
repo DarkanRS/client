@@ -29,7 +29,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
 
     static void iComponentOnPlayer(Player player_0, boolean bool_1) {
         if (Class20.anInt169 < 412) {
-            if (VertexNormal.myPlayer == player_0) {
+            if (VertexNormal.MY_PLAYER == player_0) {
                 if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0) {
                     PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.index, false, -1931180359);
                 }
@@ -37,9 +37,9 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                 String string_3;
                 if (player_0.elo == 0) {
                     boolean bool_4 = true;
-                    if (VertexNormal.myPlayer.cbLevelRelated != -1 && player_0.cbLevelRelated != -1) {
-                        int i_5 = VertexNormal.myPlayer.cbLevelRelated < player_0.cbLevelRelated ? VertexNormal.myPlayer.cbLevelRelated : player_0.cbLevelRelated;
-                        int i_6 = VertexNormal.myPlayer.combatLevel - player_0.combatLevel;
+                    if (VertexNormal.MY_PLAYER.cbLevelRelated != -1 && player_0.cbLevelRelated != -1) {
+                        int i_5 = VertexNormal.MY_PLAYER.cbLevelRelated < player_0.cbLevelRelated ? VertexNormal.MY_PLAYER.cbLevelRelated : player_0.cbLevelRelated;
+                        int i_6 = VertexNormal.MY_PLAYER.combatLevel - player_0.combatLevel;
                         if (i_6 < 0) {
                             i_6 = -i_6;
                         }
@@ -49,9 +49,9 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                     }
                     String string_8 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
                     if (player_0.combatLevel >= player_0.cbLevelWithSumm) {
-                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ItemIndexLoader.method7169(player_0.combatLevel, VertexNormal.myPlayer.combatLevel, -1737457030) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + ")";
+                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ItemIndexLoader.method7169(player_0.combatLevel, VertexNormal.MY_PLAYER.combatLevel, -1737457030) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + ")";
                     } else {
-                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ItemIndexLoader.method7169(player_0.combatLevel, VertexNormal.myPlayer.combatLevel, -1524250646) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + "+" + (player_0.cbLevelWithSumm - player_0.combatLevel) + ")";
+                        string_3 = player_0.getUsernameWithTitle() + (bool_4 ? ItemIndexLoader.method7169(player_0.combatLevel, VertexNormal.MY_PLAYER.combatLevel, -1524250646) : Utils.rgbToColHexShortcut(16777215)) + " (" + string_8 + player_0.combatLevel + "+" + (player_0.cbLevelWithSumm - player_0.combatLevel) + ")";
                     }
                 } else if (player_0.elo == -1) {
                     string_3 = player_0.getUsernameWithTitle();
@@ -68,11 +68,11 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                         if (client.PLAYER_OPTIONS[i_10] != null) {
                             short s_11 = 0;
                             if (Game.darkan == client.CURRENT_GAME && client.PLAYER_OPTIONS[i_10].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE))) {
-                                if (client.aBool7454 && player_0.combatLevel > VertexNormal.myPlayer.combatLevel) {
+                                if (client.aBool7454 && player_0.combatLevel > VertexNormal.MY_PLAYER.combatLevel) {
                                     s_11 = 2000;
                                 }
-                                if (VertexNormal.myPlayer.teamId != 0 && player_0.teamId != 0) {
-                                    if (player_0.teamId == VertexNormal.myPlayer.teamId) {
+                                if (VertexNormal.MY_PLAYER.teamId != 0 && player_0.teamId != 0) {
+                                    if (player_0.teamId == VertexNormal.MY_PLAYER.teamId) {
                                         s_11 = 2000;
                                     } else {
                                         s_11 = 0;

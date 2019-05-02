@@ -509,7 +509,7 @@ public class Transform_Sub1_Sub5_Sub1 extends Transform_Sub1_Sub5 implements Sce
 					Class14.LOGIN_XTEAS = Class463.method7725(packet);
 					int i_4 = packet.buffer.index;
 					packet.buffer.writeString(client.aString7164);
-					packet.buffer.writeShort(client.anInt7149);
+					packet.buffer.writeShort(client.AFFILIATE);
 					packet.buffer.writeLong(client.aLong7153);
 					packet.buffer.writeString(Class464.aString5555);
 					packet.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());

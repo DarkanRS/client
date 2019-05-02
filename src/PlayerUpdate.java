@@ -220,7 +220,7 @@ public class PlayerUpdate {
 	
 		if ((flags & 0x4000) != 0) {
 			String string_16 = stream.readString();
-			if (player == VertexNormal.myPlayer) {
+			if (player == VertexNormal.MY_PLAYER) {
 				ChatLine.appendChatMessage(2, 0, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
 			}
 	

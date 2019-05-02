@@ -4,7 +4,7 @@ public class World {
 	public int countryId;
 
 	public static void method3662(AnimationDefinitions animDef, int i_1, Transform_Sub1 class521_sub1_2) {
-		if (Class260.anInt3219 < 50 && animDef != null && animDef.anIntArrayArray5913 != null && i_1 < animDef.anIntArrayArray5913.length && animDef.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == VertexNormal.myPlayer.plane) {
+		if (Class260.anInt3219 < 50 && animDef != null && animDef.anIntArrayArray5913 != null && i_1 < animDef.anIntArrayArray5913.length && animDef.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == VertexNormal.MY_PLAYER.plane) {
 			int i_4 = animDef.anIntArrayArray5913[i_1][0];
 			int i_5 = i_4 >> 8;
 			int i_6 = i_4 >> 5 & 0x7;
@@ -24,7 +24,7 @@ public class World {
 
 			int i_9 = animDef.anIntArray5926 == null ? 255 : animDef.anIntArray5926[i_1];
 			if (i_7 == 0) {
-				if (class521_sub1_2 == VertexNormal.myPlayer) {
+				if (class521_sub1_2 == VertexNormal.MY_PLAYER) {
 					if (animDef.aBool5928) {
 						Class435.playSoundVorbis(i_5, i_6, 0, i_9, false, i_8);
 					} else {
@@ -32,7 +32,7 @@ public class World {
 					}
 				}
 			} else {
-				if (class521_sub1_2 == VertexNormal.myPlayer) {
+				if (class521_sub1_2 == VertexNormal.MY_PLAYER) {
 					if (Class393.preferences.aPreference_Sub13_8225.method12714() == 0) {
 						return;
 					}
@@ -43,7 +43,7 @@ public class World {
 				Vector3 vector3_10 = class521_sub1_2.method11166().aClass385_3595;
 				int i_11 = (int) vector3_10.x - 256 >> 9;
 				int i_12 = (int) vector3_10.z - 256 >> 9;
-				int i_13 = class521_sub1_2 == VertexNormal.myPlayer ? 0 : i_7 + (i_12 << 8) + (class521_sub1_2.plane << 24) + (i_11 << 16);
+				int i_13 = class521_sub1_2 == VertexNormal.MY_PLAYER ? 0 : i_7 + (i_12 << 8) + (class521_sub1_2.plane << 24) + (i_11 << 16);
 				Class260.aClass268Array3232[++Class260.anInt3219 - 1] = new Class268((byte) (animDef.aBool5928 ? 2 : 1), i_5, i_6, 0, i_9, i_13, i_8, class521_sub1_2);
 			}
 		}

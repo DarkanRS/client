@@ -56,16 +56,16 @@ public class Class280 implements Interface25 {
 		IsaacCipher.method7268(1874031200);
 	}
 
-	public static boolean method4975(String string_0) {
+	public static boolean isIgnored(String string_0) {
 		if (string_0 == null) {
 			return false;
 		} else {
-			for (int i_2 = 0; i_2 < client.anInt7373; i_2++) {
-				Class10 class10_3 = client.aClass10Array7456[i_2];
-				if (string_0.equalsIgnoreCase(class10_3.aString115)) {
+			for (int i_2 = 0; i_2 < client.IGNORE_LIST_COUNT; i_2++) {
+				Ignore class10_3 = client.IGNORED_PLAYERS[i_2];
+				if (string_0.equalsIgnoreCase(class10_3.unfilteredUsername)) {
 					return true;
 				}
-				if (string_0.equalsIgnoreCase(class10_3.aString116)) {
+				if (string_0.equalsIgnoreCase(class10_3.displayName)) {
 					return true;
 				}
 			}

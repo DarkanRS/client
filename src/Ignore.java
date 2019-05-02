@@ -1,10 +1,10 @@
-public class Class10 {
+public class Ignore {
 
-	public String aString115;
+	public String unfilteredUsername;
 
-	public String aString116;
+	public String displayName;
 
-	public boolean aBool117;
+	public boolean temporary;
 
 	static int anInt118;
 

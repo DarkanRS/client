@@ -27,27 +27,27 @@ final class Class82 implements Interface11 {
         int[] ints_8 = Class197.PLAYER_INDICES;
         for (int i_9 = 0; i_9 < i_7; i_9++) {
             Player player_10 = client.players[ints_8[i_9]];
-            if (player_10 != null && player_10.hasAppearance((byte) 69) && !player_10.hidden && player_10 != VertexNormal.myPlayer && player_10.plane == VertexNormal.myPlayer.plane) {
+            if (player_10 != null && player_10.hasAppearance((byte) 69) && !player_10.hidden && player_10 != VertexNormal.MY_PLAYER && player_10.plane == VertexNormal.MY_PLAYER.plane) {
                 Vector3 vector3_11 = player_10.method11166().aClass385_3595;
                 int i_12 = (int) vector3_11.x / 128 - i_0 / 128;
                 int i_13 = (int) vector3_11.z / 128 - i_1 / 128;
                 boolean bool_14 = false;
-                for (int i_15 = 0; i_15 < client.anInt7449; i_15++) {
-                    Class6 class6_17 = client.aClass6Array7452[i_15];
-                    if (player_10.displayName.equals(class6_17.aString37) && class6_17.anInt39 != 0) {
+                for (int i_15 = 0; i_15 < client.FRIEND_COUNT; i_15++) {
+                    Friend class6_17 = client.FRIENDS[i_15];
+                    if (player_10.displayName.equals(class6_17.displayName) && class6_17.worldId != 0) {
                         bool_14 = true;
                         break;
                     }
                 }
                 boolean bool_18 = false;
-                for (int i_16 = 0; i_16 < Class459.anInt5534; i_16++) {
-                    if (player_10.displayName.equals(Class467.aClass173Array5575[i_16].aString2127)) {
+                for (int i_16 = 0; i_16 < Class459.FC_PLAYER_COUNT; i_16++) {
+                    if (player_10.displayName.equals(Class467.FC_PLAYERS[i_16].username)) {
                         bool_18 = true;
                         break;
                     }
                 }
                 boolean bool_19 = false;
-                if (VertexNormal.myPlayer.teamId != 0 && player_10.teamId != 0 && player_10.teamId == VertexNormal.myPlayer.teamId) {
+                if (VertexNormal.MY_PLAYER.teamId != 0 && player_10.teamId != 0 && player_10.teamId == VertexNormal.MY_PLAYER.teamId) {
                     bool_19 = true;
                 }
                 if (player_10.aBool10571) {

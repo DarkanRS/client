@@ -1276,22 +1276,22 @@ public class CS2Interpreter {
 		case WORLD_LANGUAGE:
 			getWorldLanguage(exec);
 			break;
-		case instr6327:
+		case MOVECOORD:
 			method1613(exec);
 			break;
-		case instr6168:
+		case AFFILIATE:
 			method6799(exec);
 			break;
 		case PROFILE_CPU:
 			getCPUProfile(exec);
 			break;
-		case instr6604:
+		case PLAYERDEMO:
 			method6399(exec);
 			break;
 		case APPLET_HASFOCUS:
 			getAppletFocus(exec);
 			break;
-		case instr6374:
+		case FROMBILLING:
 			method7699(exec);
 			break;
 		case GET_MOUSE_X:
@@ -1309,22 +1309,22 @@ public class CS2Interpreter {
 		case GET_MINIMENU_LENGTH:
 			method6121(exec);
 			break;
-		case instr6077:
+		case GET_CURRENTCURSOR:
 			method2552(exec);
 			break;
-		case instr6381:
+		case GET_SELFYANGLE:
 			method3340(exec);
 			break;
-		case instr6382:
+		case MAP_ISOWNER:
 			method13494(exec);
 			break;
-		case instr6383:
+		case GET_MOUSEBUTTONS:
 			method4031(exec);
 			break;
-		case instr6384:
+		case SELF_PLAYER_UID:
 			method7186(exec);
 			break;
-		case instr6396:
+		case GET_MINIMENU_TARGET:
 			method6275(exec);
 			break;
 		case ENUM_STRING:
@@ -1369,106 +1369,106 @@ public class CS2Interpreter {
 		case FRIEND_GETNAME:
 			method2096(exec);
 			break;
-		case instr6932:
+		case FRIEND_GETWORLD:
 			method5695(exec);
 			break;
-		case instr6401:
+		case FRIEND_GETRANK:
 			method3597(exec);
 			break;
-		case instr6402:
+		case FRIEND_GETWORLDFLAGS:
 			method11370(exec);
 			break;
-		case instr6403:
+		case FRIEND_SETRANK:
 			method1641(exec);
 			break;
-		case instr6399:
+		case FRIEND_ADD:
 			method1500(exec);
 			break;
-		case instr6405:
+		case FRIEND_DEL:
 			method4278(exec);
 			break;
-		case instr6758:
+		case IGNORE_ADD:
 			method1452(exec);
 			break;
-		case instr6407:
+		case IGNORE_DEL:
 			method4181(exec);
 			break;
-		case instr6944:
+		case FRIEND_TEST:
 			method7932(exec);
 			break;
-		case instr6409:
+		case FRIEND_GETWORLDNAME:
 			method2871(exec);
 			break;
-		case instr6282:
+		case FC_GETCHATDISPLAYNAME:
 			method3966(exec);
 			break;
-		case instr6411:
+		case FC_GETCHATCOUNT:
 			method6680(exec);
 			break;
-		case instr6412:
+		case FC_GETCHATUSERNAME:
 			method8870(exec);
 			break;
-		case instr6413:
+		case FC_GETCHATUSERWORLD:
 			method4905(exec);
 			break;
-		case instr6414:
+		case FC_GETCHATUSERRANK:
 			method8756(exec);
 			break;
-		case instr6415:
+		case FC_GETCHATMINKICK:
 			method3829(exec);
 			break;
-		case instr6897:
+		case FC_KICKUSER:
 			method6152(exec);
 			break;
-		case instr6417:
+		case FC_GETCHATRANK:
 			method14491(exec);
 			break;
-		case instr6926:
+		case FC_JOINCHAT:
 			method4902(exec);
 			break;
-		case instr6093:
+		case FC_LEAVECHAT:
 			method7928(exec);
 			break;
-		case instr6420:
+		case IGNORE_COUNT:
 			method4829(exec);
 			break;
-		case instr6421:
+		case IGNORE_GETNAME:
 			method5489(exec);
 			break;
-		case instr6422:
+		case IGNORE_TEST:
 			method16124(exec);
 			break;
-		case instr6423:
+		case FC_ISSELF:
 			method1608(exec);
 			break;
-		case instr6424:
+		case FC_GETCHATOWNERNAME:
 			method13044(exec);
 			break;
-		case instr6061:
+		case FC_GETCHATUSERWORLDNAME:
 			method11355(exec);
 			break;
-		case instr6426:
+		case FRIEND_PLATFORM:
 			method1625(exec);
 			break;
-		case instr6427:
+		case FRIEND_GETSLOTFROMNAME:
 			method1775(exec);
 			break;
-		case instr6428:
+		case PLAYERCOUNTRY:
 			method14833(exec);
 			break;
-		case instr6429:
+		case IGNORE_ADD_TEMP:
 			method1462(exec);
 			break;
-		case instr6430:
+		case IGNORE_IS_TEMP:
 			method3164(exec);
 			break;
-		case instr6431:
+		case FC_GETCHATUSERNAME_UNFILTERED:
 			method4566(exec);
 			break;
-		case instr6432:
+		case IGNORE_GETNAME_UNFILTERED:
 			method8019(exec);
 			break;
-		case instr6029:
+		case FRIEND_IS_REFERRER:
 			method3739(exec);
 			break;
 		case instr6434:
@@ -3176,8 +3176,8 @@ public class CS2Interpreter {
 	}
 
 	static final void getMyPlayerPos(CS2Executor executor) {
-		byte b_2 = VertexNormal.myPlayer.plane;
-		Vector3 vector3_3 = VertexNormal.myPlayer.method11166().aClass385_3595;
+		byte b_2 = VertexNormal.MY_PLAYER.plane;
+		Vector3 vector3_3 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = ((int) vector3_3.x >> 9) + coordgrid_4.x;
 		int i_6 = ((int) vector3_3.z >> 9) + coordgrid_4.y;
@@ -3338,8 +3338,8 @@ public class CS2Interpreter {
 
 	static final void method8717(CS2Executor executor) {
 		String string_2;
-		if (VertexNormal.myPlayer != null && VertexNormal.myPlayer.username != null) {
-			string_2 = VertexNormal.myPlayer.getUsernameWithTitle();
+		if (VertexNormal.MY_PLAYER != null && VertexNormal.MY_PLAYER.username != null) {
+			string_2 = VertexNormal.MY_PLAYER.getUsernameWithTitle();
 		} else {
 			string_2 = "";
 		}
@@ -3517,7 +3517,7 @@ public class CS2Interpreter {
 		boolean bool_2 = false;
 		if (client.aBool7310) {
 			try {
-				Object object_3 = Class361.aClass361_4178.method6254(new Object[] { Integer.valueOf(Class504.anInt5832), Boolean.valueOf(VertexNormal.myPlayer.male == 1), Integer.valueOf(executor.intStack[--executor.intStackPtr]) }, (byte) 69);
+				Object object_3 = Class361.aClass361_4178.method6254(new Object[] { Integer.valueOf(Class504.anInt5832), Boolean.valueOf(VertexNormal.MY_PLAYER.male == 1), Integer.valueOf(executor.intStack[--executor.intStackPtr]) }, (byte) 69);
 				if (object_3 != null) {
 					bool_2 = ((Boolean) object_3).booleanValue();
 				}
@@ -3626,7 +3626,7 @@ public class CS2Interpreter {
 	}
 
 	static final void getPlayerGender(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.myPlayer.playerAppearance != null && VertexNormal.myPlayer.playerAppearance.gender ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.MY_PLAYER.playerAppearance != null && VertexNormal.MY_PLAYER.playerAppearance.gender ? 1 : 0;
 	}
 
 	static final void method4881(CS2Executor executor) {
@@ -3951,7 +3951,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6799(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7149;
+		executor.intStack[++executor.intStackPtr - 1] = client.AFFILIATE;
 	}
 
 	static final void method6800(CS2Executor executor) {
@@ -4175,9 +4175,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method4031(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.method3565((byte) -75) ? 1 : 0;
-		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.method3566() ? 1 : 0;
-		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.method3567((byte) -59) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.leftButtonDown() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.rightButtonDown() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class163.mouseRecorder.middleButtonDown() ? 1 : 0;
 	}
 
 	static final void method4033(CS2Executor executor) {
@@ -4246,7 +4246,7 @@ public class CS2Interpreter {
 
 	static final void method4278(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class402.method6798(string_2);
+		Class402.deleteFriend(string_2);
 	}
 
 	static final void method4279(CS2Executor executor) {
@@ -4264,8 +4264,8 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (VertexNormal.myPlayer.playerAppearance != null) {
-			VertexNormal.myPlayer.playerAppearance.setItem(i_2, i_3, IndexLoaders.ITEM_LOADER);
+		if (VertexNormal.MY_PLAYER.playerAppearance != null) {
+			VertexNormal.MY_PLAYER.playerAppearance.setItem(i_2, i_3, IndexLoaders.ITEM_LOADER);
 		}
 	}
 
@@ -4513,7 +4513,7 @@ public class CS2Interpreter {
 		if (string_2.startsWith(Class76.getCrown(0)) || string_2.startsWith(Class76.getCrown(1))) {
 			string_2 = string_2.substring(7);
 		}
-		executor.intStack[++executor.intStackPtr - 1] = MovementType.method4282(string_2) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = MovementType.isFriend(string_2) ? 1 : 0;
 	}
 
 	static final void method7933(CS2Executor executor) {
@@ -4651,8 +4651,8 @@ public class CS2Interpreter {
 
 	static final void method8756(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			executor.intStack[++executor.intStackPtr - 1] = Class467.aClass173Array5575[i_2].aByte2126;
+		if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = Class467.FC_PLAYERS[i_2].rank;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -4767,8 +4767,8 @@ public class CS2Interpreter {
 
 	static final void method5695(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			executor.intStack[++executor.intStackPtr - 1] = client.aClass6Array7452[i_2].anInt39;
+		if (client.anInt7434 == 2 && i_2 < client.FRIEND_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = client.FRIENDS[i_2].worldId;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -4886,17 +4886,17 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (VertexNormal.myPlayer.playerAppearance != null) {
+		if (VertexNormal.MY_PLAYER.playerAppearance != null) {
 			int i_4;
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray428.length; i_4++) {
 				if (IdentikitDefinition.anIntArray428[i_4] == i_2) {
-					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, -1891661545);
+					VertexNormal.MY_PLAYER.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, -1891661545);
 					return;
 				}
 			}
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray422.length; i_4++) {
 				if (IdentikitDefinition.anIntArray422[i_4] == i_2) {
-					VertexNormal.myPlayer.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, 938562628);
+					VertexNormal.MY_PLAYER.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, 938562628);
 					break;
 				}
 			}
@@ -4913,8 +4913,8 @@ public class CS2Interpreter {
 
 	static final void method2871(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			executor.stringStack[++executor.stringStackPtr - 1] = client.aClass6Array7452[i_2].aString40;
+		if (client.anInt7434 == 2 && i_2 < client.FRIEND_COUNT) {
+			executor.stringStack[++executor.stringStackPtr - 1] = client.FRIENDS[i_2].worldName;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -5334,11 +5334,11 @@ public class CS2Interpreter {
 
 	static final void method5489(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 != 0 && i_2 < client.anInt7373) {
-			Class10 class10_3 = client.aClass10Array7456[i_2];
-			executor.stringStack[++executor.stringStackPtr - 1] = class10_3.aString115;
-			if (class10_3.aString116 != null) {
-				executor.stringStack[++executor.stringStackPtr - 1] = class10_3.aString116;
+		if (client.anInt7434 != 0 && i_2 < client.IGNORE_LIST_COUNT) {
+			Ignore class10_3 = client.IGNORED_PLAYERS[i_2];
+			executor.stringStack[++executor.stringStackPtr - 1] = class10_3.unfilteredUsername;
+			if (class10_3.displayName != null) {
+				executor.stringStack[++executor.stringStackPtr - 1] = class10_3.displayName;
 			} else {
 				executor.stringStack[++executor.stringStackPtr - 1] = "";
 			}
@@ -5502,7 +5502,7 @@ public class CS2Interpreter {
 
 	static final void method4181(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		ProjectileCutsceneAction.method14665(string_2);
+		ProjectileCutsceneAction.deleteIgnore(string_2);
 	}
 
 	static final void method6071(CS2Executor executor) {
@@ -5785,7 +5785,7 @@ public class CS2Interpreter {
 		} else if (client.anInt7434 == 1) {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = client.anInt7449;
+			executor.intStack[++executor.intStackPtr - 1] = client.FRIEND_COUNT;
 		}
 	}
 
@@ -5831,8 +5831,8 @@ public class CS2Interpreter {
 
 	static final void method7771(CS2Executor executor) {
 		String string_2;
-		if (VertexNormal.myPlayer != null && VertexNormal.myPlayer.username != null) {
-			string_2 = VertexNormal.myPlayer.getDisplayName();
+		if (VertexNormal.MY_PLAYER != null && VertexNormal.MY_PLAYER.username != null) {
+			string_2 = VertexNormal.MY_PLAYER.getDisplayName();
 		} else {
 			string_2 = "";
 		}
@@ -6033,8 +6033,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method13044(CS2Executor executor) {
-		if (client.aString7359 != null) {
-			executor.stringStack[++executor.stringStackPtr - 1] = client.aString7359;
+		if (client.FC_OWNER_NAME != null) {
+			executor.stringStack[++executor.stringStackPtr - 1] = client.FC_OWNER_NAME;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -6274,8 +6274,8 @@ public class CS2Interpreter {
 
 	static final void method1625(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 >= 0 && i_2 < client.anInt7449) {
-			executor.intStack[++executor.intStackPtr - 1] = client.aClass6Array7452[i_2].anInt42;
+		if (client.anInt7434 == 2 && i_2 >= 0 && i_2 < client.FRIEND_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = client.FRIENDS[i_2].platform;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -6438,7 +6438,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14491(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class48_Sub2.aByte9263;
+		executor.intStack[++executor.intStackPtr - 1] = Class48_Sub2.MY_PLAYER_FC_RANK;
 	}
 
 	static final void method14492(CS2Executor executor) {
@@ -6584,11 +6584,11 @@ public class CS2Interpreter {
 
 	static final void method2096(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			Class6 class6_3 = client.aClass6Array7452[i_2];
-			executor.stringStack[++executor.stringStackPtr - 1] = class6_3.aString37;
-			if (class6_3.aString43 != null) {
-				executor.stringStack[++executor.stringStackPtr - 1] = class6_3.aString43;
+		if (client.anInt7434 == 2 && i_2 < client.FRIEND_COUNT) {
+			Friend class6_3 = client.FRIENDS[i_2];
+			executor.stringStack[++executor.stringStackPtr - 1] = class6_3.displayName;
+			if (class6_3.username != null) {
+				executor.stringStack[++executor.stringStackPtr - 1] = class6_3.username;
 			} else {
 				executor.stringStack[++executor.stringStackPtr - 1] = "";
 			}
@@ -6722,7 +6722,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2552(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7190;
+		executor.intStack[++executor.intStackPtr - 1] = client.CURRENT_CURSOR;
 	}
 
 	static final void method2554(CS2Executor executor) {
@@ -6881,7 +6881,7 @@ public class CS2Interpreter {
 
 	static final void method3164(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.aClass10Array7456[i_2].aBool117 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = client.IGNORED_PLAYERS[i_2].temporary ? 1 : 0;
 	}
 
 	static final void method3168(CS2Executor executor) {
@@ -7051,8 +7051,8 @@ public class CS2Interpreter {
 
 	static final void method11355(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			executor.stringStack[++executor.stringStackPtr - 1] = Class467.aClass173Array5575[i_2].aString2130;
+		if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
+			executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].worldName;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -7331,7 +7331,7 @@ public class CS2Interpreter {
 
 	static final void method1500(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class152.method2603(string_2);
+		Class152.addFriend(string_2);
 	}
 
 	static final void method1501(CS2Executor executor) {
@@ -7426,8 +7426,8 @@ public class CS2Interpreter {
 
 	static final void method8019(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 != 0 && i_2 < client.anInt7373) {
-			executor.stringStack[++executor.stringStackPtr - 1] = client.aClass10Array7456[i_2].aString115;
+		if (client.anInt7434 != 0 && i_2 < client.IGNORE_LIST_COUNT) {
+			executor.stringStack[++executor.stringStackPtr - 1] = client.IGNORED_PLAYERS[i_2].unfilteredUsername;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -7570,8 +7570,8 @@ public class CS2Interpreter {
 
 	static final void method4905(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			executor.intStack[++executor.intStackPtr - 1] = Class467.aClass173Array5575[i_2].anInt2131;
+		if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = Class467.FC_PLAYERS[i_2].worldId;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -8161,8 +8161,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method3966(CS2Executor executor) {
-		if (client.aString7426 != null) {
-			executor.stringStack[++executor.stringStackPtr - 1] = Class285.method5025(client.aString7426);
+		if (client.FC_NAME != null) {
+			executor.stringStack[++executor.stringStackPtr - 1] = Class285.method5025(client.FC_NAME);
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -8294,7 +8294,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method810(CS2Executor executor) {
-		Class10.method458(executor.intStack[--executor.intStackPtr]);
+		Ignore.method458(executor.intStack[--executor.intStackPtr]);
 	}
 
 	static final void method811(CS2Executor executor) {
@@ -8324,7 +8324,7 @@ public class CS2Interpreter {
 
 	static final void method1452(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class16.method567(string_2, false, (byte) -20);
+		Class16.addIgnore(string_2, false, (byte) -20);
 	}
 
 	static final void method3339(CS2Executor executor) {
@@ -8333,7 +8333,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3340(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.myPlayer.aClass19_10359.method578() >> 3;
+		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.MY_PLAYER.aClass19_10359.method578() >> 3;
 	}
 
 	static final void method3341(CS2Executor executor) {
@@ -8396,7 +8396,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3829(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class412.aByte4963;
+		executor.intStack[++executor.intStackPtr - 1] = Class412.FC_MIN_RANK_CAN_KICK;
 	}
 
 	static final void method3830(CS2Executor executor) {
@@ -8611,7 +8611,7 @@ public class CS2Interpreter {
 
 	static final void method1608(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (Class467.aClass173Array5575 != null && i_2 < Class459.anInt5534 && Class467.aClass173Array5575[i_2].aString2127.equalsIgnoreCase(VertexNormal.myPlayer.displayName)) {
+		if (Class467.FC_PLAYERS != null && i_2 < Class459.FC_PLAYER_COUNT && Class467.FC_PLAYERS[i_2].username.equalsIgnoreCase(VertexNormal.MY_PLAYER.displayName)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -8729,8 +8729,8 @@ public class CS2Interpreter {
 
 	static final void method3597(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			executor.intStack[++executor.intStackPtr - 1] = client.aClass6Array7452[i_2].anInt41;
+		if (client.anInt7434 == 2 && i_2 < client.FRIEND_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = client.FRIENDS[i_2].fcRank;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -8900,8 +8900,8 @@ public class CS2Interpreter {
 
 	static final void setGender(CS2Executor executor) {
 		boolean bool_2 = executor.intStack[--executor.intStackPtr] != 0;
-		if (VertexNormal.myPlayer.playerAppearance != null) {
-			VertexNormal.myPlayer.playerAppearance.method4003(bool_2);
+		if (VertexNormal.MY_PLAYER.playerAppearance != null) {
+			VertexNormal.MY_PLAYER.playerAppearance.method4003(bool_2);
 		}
 	}
 
@@ -9046,8 +9046,8 @@ public class CS2Interpreter {
 
 	static final void method8870(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			executor.stringStack[++executor.stringStackPtr - 1] = Class467.aClass173Array5575[i_2].aString2129;
+		if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
+			executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].displayName;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -9187,7 +9187,7 @@ public class CS2Interpreter {
 		executor.stringStackPtr -= 2;
 		String string_2 = (String) executor.stringStack[executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
-		if (VertexNormal.myPlayer.playerAppearance != null && VertexNormal.myPlayer.playerAppearance.gender) {
+		if (VertexNormal.MY_PLAYER.playerAppearance != null && VertexNormal.MY_PLAYER.playerAppearance.gender) {
 			executor.stringStack[++executor.stringStackPtr - 1] = string_3;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = string_2;
@@ -9203,7 +9203,7 @@ public class CS2Interpreter {
 
 	static final void method1462(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class16.method567(string_2, true, (byte) -67);
+		Class16.addIgnore(string_2, true, (byte) -67);
 	}
 
 	static final void method1463(CS2Executor executor) {
@@ -9238,8 +9238,8 @@ public class CS2Interpreter {
 
 	static final void method3739(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			executor.intStack[++executor.intStackPtr - 1] = client.aClass6Array7452[i_2].aBool38 ? 1 : 0;
+		if (client.anInt7434 == 2 && i_2 < client.FRIEND_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = client.FRIENDS[i_2].referrer ? 1 : 0;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -9398,7 +9398,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15417(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class6.method304();
+		executor.intStack[++executor.intStackPtr - 1] = Friend.method304();
 	}
 
 	static final void method4381(CS2Executor executor) {
@@ -9418,7 +9418,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14833(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = TilestreamPacket.anInt4219;
+		executor.intStack[++executor.intStackPtr - 1] = TilestreamPacket.COUNTRY;
 	}
 
 	static final void method14835(CS2Executor executor) {
@@ -9471,8 +9471,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method6680(CS2Executor executor) {
-		if (client.aString7426 != null) {
-			executor.intStack[++executor.intStackPtr - 1] = Class459.anInt5534;
+		if (client.FC_NAME != null) {
+			executor.intStack[++executor.intStackPtr - 1] = Class459.FC_PLAYER_COUNT;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -9581,7 +9581,7 @@ public class CS2Interpreter {
 	}
 
 	static final void getPlayerCombatLevel(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.myPlayer.combatLevel;
+		executor.intStack[++executor.intStackPtr - 1] = VertexNormal.MY_PLAYER.combatLevel;
 	}
 
 	static final void loadClanVarLong(CS2Executor executor) {
@@ -9884,7 +9884,7 @@ public class CS2Interpreter {
 		if (client.anInt7434 == 0) {
 			executor.intStack[++executor.intStackPtr - 1] = -1;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = client.anInt7373;
+			executor.intStack[++executor.intStackPtr - 1] = client.IGNORE_LIST_COUNT;
 		}
 	}
 
@@ -10064,14 +10064,14 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		if (VertexNormal.myPlayer.playerAppearance != null) {
-			VertexNormal.myPlayer.playerAppearance.setBaseColor(i_2, i_3);
+		if (VertexNormal.MY_PLAYER.playerAppearance != null) {
+			VertexNormal.MY_PLAYER.playerAppearance.setBaseColor(i_2, i_3);
 		}
 	}
 
 	static final void method1836(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		Class329_Sub1.animateZero(VertexNormal.myPlayer, executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1]);
+		Class329_Sub1.animateZero(VertexNormal.MY_PLAYER, executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1]);
 	}
 
 	static final void method1837(CS2Executor executor) {
@@ -10091,7 +10091,7 @@ public class CS2Interpreter {
 		if (string_2.startsWith(Class76.getCrown(0)) || string_2.startsWith(Class76.getCrown(1))) {
 			string_2 = string_2.substring(7);
 		}
-		executor.intStack[++executor.intStackPtr - 1] = Class280.method4975(string_2) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class280.isIgnored(string_2) ? 1 : 0;
 	}
 
 	static final void method3561(CS2Executor executor) {
@@ -10303,8 +10303,8 @@ public class CS2Interpreter {
 
 	static final void method11370(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
-			executor.intStack[++executor.intStackPtr - 1] = client.aClass6Array7452[i_2].anInt44;
+		if (client.anInt7434 == 2 && i_2 < client.FRIEND_COUNT) {
+			executor.intStack[++executor.intStackPtr - 1] = client.FRIENDS[i_2].worldFlags;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -10352,8 +10352,8 @@ public class CS2Interpreter {
 
 	static final void method4566(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.aString7426 != null && i_2 < Class459.anInt5534) {
-			executor.stringStack[++executor.stringStackPtr - 1] = Class467.aClass173Array5575[i_2].aString2127;
+		if (client.FC_NAME != null && i_2 < Class459.FC_PLAYER_COUNT) {
+			executor.stringStack[++executor.stringStackPtr - 1] = Class467.FC_PLAYERS[i_2].username;
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -10405,7 +10405,7 @@ public class CS2Interpreter {
 	static final void method1641(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = executor.intStack[--executor.intStackPtr];
-		Class404.method6809(string_2, i_3);
+		Class404.setFCRank(string_2, i_3);
 	}
 
 	static final void method1643(CS2Executor executor) {

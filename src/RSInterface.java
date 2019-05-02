@@ -141,10 +141,10 @@ public class RSInterface {
 						int i_5;
 						if (sound.anInt3298 != 0) {
 							int i_6 = sound.anInt3298 >> 24 & 0x3;
-							if (i_6 == VertexNormal.myPlayer.plane) {
+							if (i_6 == VertexNormal.MY_PLAYER.plane) {
 								int i_7 = (sound.anInt3298 & 0xff) << 9;
-								int i_8 = VertexNormal.myPlayer.getSize() << 8;
-								Vector3 vector3_9 = VertexNormal.myPlayer.method11166().aClass385_3595;
+								int i_8 = VertexNormal.MY_PLAYER.getSize() << 8;
+								Vector3 vector3_9 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 								int i_10 = sound.anInt3298 >> 16 & 0xff;
 								int i_11 = (i_10 << 9) + 256 - (int) vector3_9.x + i_8;
 								int i_12 = sound.anInt3298 >> 8 & 0xff;

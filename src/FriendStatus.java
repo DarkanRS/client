@@ -160,7 +160,7 @@ public class FriendStatus {
 			if (Class20.aBool161) {
 				int i_6;
 				int i_11;
-				if (Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5882, class282_sub53_14)) {
+				if (Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5882, class282_sub53_14)) {
 					int i_5;
 					CacheableNode_Sub7 class282_sub50_sub7_8;
 					Class469 class469_15;
@@ -303,9 +303,9 @@ public class FriendStatus {
 					}
 				}
 			} else {
-				bool_16 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5878, class282_sub53_14);
-				boolean bool_18 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5874, class282_sub53_14);
-				boolean bool_20 = Class6.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5875, class282_sub53_14);
+				bool_16 = Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5878, class282_sub53_14);
+				boolean bool_18 = Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5874, class282_sub53_14);
+				boolean bool_20 = Friend.method302(Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5875, class282_sub53_14);
 				if ((bool_16 || bool_18) && (client.anInt7339 == 1 && Class20.anInt169 > 2 || JS5GrabWorker.method12562(-269769835))) {
 					bool_20 = true;
 				}

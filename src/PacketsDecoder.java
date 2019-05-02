@@ -275,7 +275,7 @@ public class PacketsDecoder extends Class455 {
 			int i_81 = 0;
 			while (true) {
 				if (i_81 >= 100) {
-					if (i_11 <= 1 && Class280.method4975(str_92)) {
+					if (i_11 <= 1 && Class280.isIgnored(str_92)) {
 						bool_73 = true;
 					}
 					break;
@@ -429,7 +429,7 @@ public class PacketsDecoder extends Class455 {
 				int i_35 = i_8 & 0xffff;
 				Player player_117;
 				if (i_35 == client.myPlayerIndex) {
-					player_117 = VertexNormal.myPlayer;
+					player_117 = VertexNormal.MY_PLAYER;
 				} else {
 					player_117 = client.players[i_35];
 				}
@@ -523,7 +523,7 @@ public class PacketsDecoder extends Class455 {
 			} else if (type == 98) {
 				QuestDefinitions.setConsoleText(message);
 			} else {
-				if (!nameFormatted.equals("") && Class280.method4975(nameFormatted)) {
+				if (!nameFormatted.equals("") && Class280.isIgnored(nameFormatted)) {
 					context.currentPacket = null;
 					return true;
 				}
@@ -582,7 +582,7 @@ public class PacketsDecoder extends Class455 {
 			boolean bool_74 = false;
 			if (i_7 <= 1) {
 				if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
-					if (i_7 <= 1 && Class280.method4975(str_92)) {
+					if (i_7 <= 1 && Class280.isIgnored(str_92)) {
 						bool_74 = true;
 					}
 				} else {
@@ -611,7 +611,7 @@ public class PacketsDecoder extends Class455 {
 			int i_7 = buffer.readUnsignedByte();
 			int i_8 = buffer.readUnsignedShort();
 			boolean bool_69 = false;
-			if (i_7 <= 1 && Class280.method4975(str_92)) {
+			if (i_7 <= 1 && Class280.isIgnored(str_92)) {
 				bool_69 = true;
 			}
 			if (!bool_69) {
@@ -680,7 +680,7 @@ public class PacketsDecoder extends Class455 {
 			int playerIndex = buffer.readUnsignedShort();
 			Player player;
 			if (playerIndex == client.myPlayerIndex) {
-				player = VertexNormal.myPlayer;
+				player = VertexNormal.MY_PLAYER;
 			} else {
 				player = client.players[playerIndex];
 			}
@@ -696,7 +696,7 @@ public class PacketsDecoder extends Class455 {
 					if (icon <= 1) {
 						if (!is0x8000 && (client.aBool7224 && !client.aBool7244 || client.IS_QUICKCHAT_ONLY)) {
 							bool_69 = true;
-						} else if (Class280.method4975(player.displayName)) {
+						} else if (Class280.isIgnored(player.displayName)) {
 							bool_69 = true;
 						}
 					}
@@ -768,55 +768,55 @@ public class PacketsDecoder extends Class455 {
 		} else if (context.currentPacket == IncomingPacket.FRIENDS_CHAT_CHANNEL) {
 			client.anInt7179 = client.anInt7347;
 			if (context.currentPacketSize == 0) {
-				client.aString7426 = null;
-				client.aString7359 = null;
-				Class459.anInt5534 = 0;
-				Class467.aClass173Array5575 = null;
+				client.FC_NAME = null;
+				client.FC_OWNER_NAME = null;
+				Class459.FC_PLAYER_COUNT = 0;
+				Class467.FC_PLAYERS = null;
 				context.currentPacket = null;
 				return true;
 			} else {
-				client.aString7359 = buffer.readString();
-				boolean bool_91 = buffer.readUnsignedByte() == 1;
-				if (bool_91) {
+				client.FC_OWNER_NAME = buffer.readString();
+				boolean isOwner = buffer.readUnsignedByte() == 1;
+				if (isOwner) {
 					buffer.readString();
 				}
 				long long_47 = buffer.readLong();
-				client.aString7426 = Class306.method5457(long_47);
-				Class412.aByte4963 = buffer.readByte();
+				client.FC_NAME = Utils.getStringFromLong(long_47);
+				Class412.FC_MIN_RANK_CAN_KICK = buffer.readByte();
 				int i_7 = buffer.readUnsignedByte();
 				if (i_7 == 255) {
 					context.currentPacket = null;
 					return true;
 				} else {
-					Class459.anInt5534 = i_7;
-					Class173[] arr_136 = new Class173[100];
-					for (int i_9 = 0; i_9 < Class459.anInt5534; i_9++) {
-						arr_136[i_9] = new Class173();
-						arr_136[i_9].aString2129 = buffer.readString();
-						bool_91 = buffer.readUnsignedByte() == 1;
-						if (bool_91) {
-							arr_136[i_9].aString2127 = buffer.readString();
+					Class459.FC_PLAYER_COUNT = i_7;
+					FriendsChatPlayer[] fcPlayers = new FriendsChatPlayer[100];
+					for (int i_9 = 0; i_9 < Class459.FC_PLAYER_COUNT; i_9++) {
+						fcPlayers[i_9] = new FriendsChatPlayer();
+						fcPlayers[i_9].displayName = buffer.readString();
+						boolean changedName = buffer.readUnsignedByte() == 1;
+						if (changedName) {
+							fcPlayers[i_9].username = buffer.readString();
 						} else {
-							arr_136[i_9].aString2127 = arr_136[i_9].aString2129;
+							fcPlayers[i_9].username = fcPlayers[i_9].displayName;
 						}
-						arr_136[i_9].aString2128 = Class383.method6515(arr_136[i_9].aString2127);
-						arr_136[i_9].anInt2131 = buffer.readUnsignedShort();
-						arr_136[i_9].aByte2126 = buffer.readByte();
-						arr_136[i_9].aString2130 = buffer.readString();
-						if (arr_136[i_9].aString2127.equals(VertexNormal.myPlayer.displayName)) {
-							Class48_Sub2.aByte9263 = arr_136[i_9].aByte2126;
+						fcPlayers[i_9].textName = Class383.method6515(fcPlayers[i_9].username);
+						fcPlayers[i_9].worldId = buffer.readUnsignedShort();
+						fcPlayers[i_9].rank = buffer.readByte();
+						fcPlayers[i_9].worldName = buffer.readString();
+						if (fcPlayers[i_9].username.equals(VertexNormal.MY_PLAYER.displayName)) {
+							Class48_Sub2.MY_PLAYER_FC_RANK = fcPlayers[i_9].rank;
 						}
 					}
 					boolean bool_69 = false;
-					int i_10 = Class459.anInt5534;
+					int i_10 = Class459.FC_PLAYER_COUNT;
 					while (i_10 > 0) {
 						bool_69 = true;
 						--i_10;
 						for (int i_11 = 0; i_11 < i_10; i_11++) {
-							if (arr_136[i_11].aString2128.compareTo(arr_136[i_11 + 1].aString2128) > 0) {
-								Class173 class173_140 = arr_136[i_11];
-								arr_136[i_11] = arr_136[i_11 + 1];
-								arr_136[i_11 + 1] = class173_140;
+							if (fcPlayers[i_11].textName.compareTo(fcPlayers[i_11 + 1].textName) > 0) {
+								FriendsChatPlayer class173_140 = fcPlayers[i_11];
+								fcPlayers[i_11] = fcPlayers[i_11 + 1];
+								fcPlayers[i_11 + 1] = class173_140;
 								bool_69 = false;
 							}
 						}
@@ -824,7 +824,7 @@ public class PacketsDecoder extends Class455 {
 							break;
 						}
 					}
-					Class467.aClass173Array5575 = arr_136;
+					Class467.FC_PLAYERS = fcPlayers;
 					context.currentPacket = null;
 					return true;
 				}
@@ -950,7 +950,7 @@ public class PacketsDecoder extends Class455 {
 							break label2385;
 						}
 					}
-					if (i_10 <= 1 && Class280.method4975(string_88)) {
+					if (i_10 <= 1 && Class280.isIgnored(string_88)) {
 						bool_14 = true;
 					}
 				}
@@ -999,7 +999,7 @@ public class PacketsDecoder extends Class455 {
 			int i_82 = 0;
 			while (true) {
 				if (i_82 >= 100) {
-					if (i_35 <= 1 && Class280.method4975(str_92)) {
+					if (i_35 <= 1 && Class280.isIgnored(str_92)) {
 						bool_115 = true;
 					}
 					break;
@@ -1433,39 +1433,39 @@ public class PacketsDecoder extends Class455 {
 			}
 			int i_11;
 			if (bool_69) {
-				if (Class459.anInt5534 == 0) {
+				if (Class459.FC_PLAYER_COUNT == 0) {
 					context.currentPacket = null;
 					return true;
 				}
-				for (i_11 = 0; i_11 < Class459.anInt5534 && (!Class467.aClass173Array5575[i_11].aString2127.equals(str_92) || i_7 != Class467.aClass173Array5575[i_11].anInt2131); i_11++) {
+				for (i_11 = 0; i_11 < Class459.FC_PLAYER_COUNT && (!Class467.FC_PLAYERS[i_11].username.equals(str_92) || i_7 != Class467.FC_PLAYERS[i_11].worldId); i_11++) {
 					;
 				}
-				if (i_11 < Class459.anInt5534) {
-					while (i_11 < Class459.anInt5534 - 1) {
-						Class467.aClass173Array5575[i_11] = Class467.aClass173Array5575[i_11 + 1];
+				if (i_11 < Class459.FC_PLAYER_COUNT) {
+					while (i_11 < Class459.FC_PLAYER_COUNT - 1) {
+						Class467.FC_PLAYERS[i_11] = Class467.FC_PLAYERS[i_11 + 1];
 						++i_11;
 					}
-					--Class459.anInt5534;
-					Class467.aClass173Array5575[Class459.anInt5534] = null;
+					--Class459.FC_PLAYER_COUNT;
+					Class467.FC_PLAYERS[Class459.FC_PLAYER_COUNT] = null;
 				}
 			} else {
 				String str_25 = buffer.readString();
-				Class173 class173_138 = new Class173();
-				class173_138.aString2129 = string_63;
-				class173_138.aString2127 = str_92;
-				class173_138.aString2128 = Class383.method6515(class173_138.aString2127);
-				class173_138.anInt2131 = i_7;
-				class173_138.aByte2126 = b_72;
-				class173_138.aString2130 = str_25;
+				FriendsChatPlayer class173_138 = new FriendsChatPlayer();
+				class173_138.displayName = string_63;
+				class173_138.username = str_92;
+				class173_138.textName = Class383.method6515(class173_138.username);
+				class173_138.worldId = i_7;
+				class173_138.rank = b_72;
+				class173_138.worldName = str_25;
 				int i_12;
-				for (i_12 = Class459.anInt5534 - 1; i_12 >= 0; --i_12) {
-					int i_35 = Class467.aClass173Array5575[i_12].aString2128.compareTo(class173_138.aString2128);
+				for (i_12 = Class459.FC_PLAYER_COUNT - 1; i_12 >= 0; --i_12) {
+					int i_35 = Class467.FC_PLAYERS[i_12].textName.compareTo(class173_138.textName);
 					if (i_35 == 0) {
-						Class467.aClass173Array5575[i_12].anInt2131 = i_7;
-						Class467.aClass173Array5575[i_12].aByte2126 = b_72;
-						Class467.aClass173Array5575[i_12].aString2130 = str_25;
-						if (str_92.equals(VertexNormal.myPlayer.displayName)) {
-							Class48_Sub2.aByte9263 = b_72;
+						Class467.FC_PLAYERS[i_12].worldId = i_7;
+						Class467.FC_PLAYERS[i_12].rank = b_72;
+						Class467.FC_PLAYERS[i_12].worldName = str_25;
+						if (str_92.equals(VertexNormal.MY_PLAYER.displayName)) {
+							Class48_Sub2.MY_PLAYER_FC_RANK = b_72;
 						}
 						client.anInt7179 = client.anInt7347;
 						context.currentPacket = null;
@@ -1475,20 +1475,20 @@ public class PacketsDecoder extends Class455 {
 						break;
 					}
 				}
-				if (Class459.anInt5534 >= Class467.aClass173Array5575.length) {
+				if (Class459.FC_PLAYER_COUNT >= Class467.FC_PLAYERS.length) {
 					context.currentPacket = null;
 					return true;
 				}
-				for (int i_35 = Class459.anInt5534 - 1; i_35 > i_12; --i_35) {
-					Class467.aClass173Array5575[i_35 + 1] = Class467.aClass173Array5575[i_35];
+				for (int i_35 = Class459.FC_PLAYER_COUNT - 1; i_35 > i_12; --i_35) {
+					Class467.FC_PLAYERS[i_35 + 1] = Class467.FC_PLAYERS[i_35];
 				}
-				if (Class459.anInt5534 == 0) {
-					Class467.aClass173Array5575 = new Class173[100];
+				if (Class459.FC_PLAYER_COUNT == 0) {
+					Class467.FC_PLAYERS = new FriendsChatPlayer[100];
 				}
-				Class467.aClass173Array5575[i_12 + 1] = class173_138;
-				++Class459.anInt5534;
-				if (str_92.equals(VertexNormal.myPlayer.displayName)) {
-					Class48_Sub2.aByte9263 = b_72;
+				Class467.FC_PLAYERS[i_12 + 1] = class173_138;
+				++Class459.FC_PLAYER_COUNT;
+				if (str_92.equals(VertexNormal.MY_PLAYER.displayName)) {
+					Class48_Sub2.MY_PLAYER_FC_RANK = b_72;
 				}
 			}
 			client.anInt7179 = client.anInt7347;
@@ -1808,7 +1808,7 @@ public class PacketsDecoder extends Class455 {
 				if (i_15 >= 100) {
 					if (i_11 <= 1) {
 						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
-							if (Class280.method4975(str_92)) {
+							if (Class280.isIgnored(str_92)) {
 								bool_14 = true;
 							}
 						} else {
@@ -1913,7 +1913,7 @@ public class PacketsDecoder extends Class455 {
 					}
 					if (i_10 <= 1) {
 						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
-							if (Class280.method4975(string_88)) {
+							if (Class280.isIgnored(string_88)) {
 								bool_112 = true;
 							}
 						} else {
@@ -1966,96 +1966,96 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (context.currentPacket == IncomingPacket.FRIEND_STATUS) {
 			while (buffer.index < context.currentPacketSize) {
-				boolean bool_91 = buffer.readUnsignedByte() == 1;
-				String string_88 = buffer.readString();
-				String str_92 = buffer.readString();
-				int i_7 = buffer.readUnsignedShort();
-				int i_8 = buffer.readUnsignedByte();
+				boolean warnMessage = buffer.readUnsignedByte() == 1;
+				String displayName = buffer.readString();
+				String username = buffer.readString();
+				int world = buffer.readUnsignedShort();
+				int fcFrank = buffer.readUnsignedByte();
 				boolean bool_69 = buffer.readUnsignedByte() == 1;
-				String str_25 = "";
+				String worldName = "";
 				int i_11 = -1;
 				int i_12 = 0;
-				if (i_7 > 0) {
-					str_25 = buffer.readString();
+				if (world > 0) {
+					worldName = buffer.readString();
 					i_11 = buffer.readUnsignedByte();
 					i_12 = buffer.readInt();
 				}
-				for (int i_35 = 0; i_35 < client.anInt7449; i_35++) {
-					Class6 class6_113 = client.aClass6Array7452[i_35];
-					if (!bool_91) {
-						if (string_88.equals(class6_113.aString37)) {
-							if (i_7 != class6_113.anInt39) {
+				for (int i_35 = 0; i_35 < client.FRIEND_COUNT; i_35++) {
+					Friend class6_113 = client.FRIENDS[i_35];
+					if (!warnMessage) {
+						if (displayName.equals(class6_113.displayName)) {
+							if (world != class6_113.worldId) {
 								boolean bool_73 = true;
 								for (EntityNode_Sub4 class275_sub4_32 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_32 != null; class275_sub4_32 = (EntityNode_Sub4) client.aClass457_7350.method7650((byte) 73)) {
-									if (class275_sub4_32.aString7837.equals(string_88)) {
-										if (i_7 != 0 && class275_sub4_32.aShort7839 == 0) {
+									if (class275_sub4_32.aString7837.equals(displayName)) {
+										if (world != 0 && class275_sub4_32.aShort7839 == 0) {
 											class275_sub4_32.method4887();
 											bool_73 = false;
-										} else if (i_7 == 0 && class275_sub4_32.aShort7839 != 0) {
+										} else if (world == 0 && class275_sub4_32.aShort7839 != 0) {
 											class275_sub4_32.method4887();
 											bool_73 = false;
 										}
 									}
 								}
 								if (bool_73) {
-									client.aClass457_7350.offer(new EntityNode_Sub4(string_88, i_7), 1701737919);
+									client.aClass457_7350.offer(new EntityNode_Sub4(displayName, world), 1701737919);
 								}
-								class6_113.anInt39 = i_7;
+								class6_113.worldId = world;
 							}
-							class6_113.aString43 = str_92;
-							class6_113.aString40 = str_25;
-							class6_113.anInt41 = i_8;
-							class6_113.anInt42 = i_11;
-							class6_113.aBool38 = bool_69;
-							class6_113.anInt44 = i_12;
-							string_88 = null;
+							class6_113.username = username;
+							class6_113.worldName = worldName;
+							class6_113.fcRank = fcFrank;
+							class6_113.platform = i_11;
+							class6_113.referrer = bool_69;
+							class6_113.worldFlags = i_12;
+							displayName = null;
 							break;
 						}
-					} else if (str_92.equals(class6_113.aString37)) {
-						class6_113.aString37 = string_88;
-						class6_113.aString43 = str_92;
-						string_88 = null;
+					} else if (username.equals(class6_113.displayName)) {
+						class6_113.displayName = displayName;
+						class6_113.username = username;
+						displayName = null;
 						break;
 					}
 				}
-				if (string_88 != null && client.anInt7449 < 200) {
-					Class6 class6_106 = new Class6();
-					client.aClass6Array7452[client.anInt7449] = class6_106;
-					class6_106.aString37 = string_88;
-					class6_106.aString43 = str_92;
-					class6_106.anInt39 = i_7;
-					class6_106.aString40 = str_25;
-					class6_106.anInt41 = i_8;
-					class6_106.anInt42 = i_11;
-					class6_106.aBool38 = bool_69;
-					class6_106.anInt44 = i_12;
-					++client.anInt7449;
+				if (displayName != null && client.FRIEND_COUNT < 200) {
+					Friend friend = new Friend();
+					client.FRIENDS[client.FRIEND_COUNT] = friend;
+					friend.displayName = displayName;
+					friend.username = username;
+					friend.worldId = world;
+					friend.worldName = worldName;
+					friend.fcRank = fcFrank;
+					friend.platform = i_11;
+					friend.referrer = bool_69;
+					friend.worldFlags = i_12;
+					++client.FRIEND_COUNT;
 				}
 			}
 			client.anInt7434 = 2;
 			client.anInt7386 = client.anInt7347;
 			boolean bool_91 = false;
-			int flags = client.anInt7449;
+			int flags = client.FRIEND_COUNT;
 			while (flags > 0) {
 				bool_91 = true;
 				--flags;
 				for (int i_6 = 0; i_6 < flags; i_6++) {
 					boolean bool_70 = false;
-					Class6 class6_132 = client.aClass6Array7452[i_6];
-					Class6 class6_134 = client.aClass6Array7452[i_6 + 1];
-					if (class6_132.anInt39 != Class159.GAME_CONNECTION_INFO.worldId && class6_134.anInt39 == Class159.GAME_CONNECTION_INFO.worldId) {
+					Friend class6_132 = client.FRIENDS[i_6];
+					Friend class6_134 = client.FRIENDS[i_6 + 1];
+					if (class6_132.worldId != Class159.GAME_CONNECTION_INFO.worldId && class6_134.worldId == Class159.GAME_CONNECTION_INFO.worldId) {
 						bool_70 = true;
 					}
-					if (!bool_70 && class6_132.anInt39 == 0 && class6_134.anInt39 != 0) {
+					if (!bool_70 && class6_132.worldId == 0 && class6_134.worldId != 0) {
 						bool_70 = true;
 					}
-					if (!bool_70 && !class6_132.aBool38 && class6_134.aBool38) {
+					if (!bool_70 && !class6_132.referrer && class6_134.referrer) {
 						bool_70 = true;
 					}
 					if (bool_70) {
-						Class6 class6_87 = client.aClass6Array7452[i_6];
-						client.aClass6Array7452[i_6] = client.aClass6Array7452[i_6 + 1];
-						client.aClass6Array7452[i_6 + 1] = class6_87;
+						Friend class6_87 = client.FRIENDS[i_6];
+						client.FRIENDS[i_6] = client.FRIENDS[i_6 + 1];
+						client.FRIENDS[i_6 + 1] = class6_87;
 						bool_91 = false;
 					}
 				}
@@ -2150,22 +2150,22 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		} else if (context.currentPacket == IncomingPacket.ADD_IGNORE) {
 			int key = buffer.readUnsignedByte();
-			boolean bool_66 = (key & 0x1) == 1;
-			String str_92 = buffer.readString();
-			String string_42 = buffer.readString();
-			if (!bool_66) {
-				Class10 class10_43 = new Class10();
-				client.aClass10Array7456[client.anInt7373] = class10_43;
-				class10_43.aString115 = str_92;
-				class10_43.aString116 = string_42;
-				class10_43.aBool117 = (key & 0x2) == 2;
-				++client.anInt7373;
+			boolean editDisplayName = (key & 0x1) == 1;
+			String username = buffer.readString();
+			String displayName = buffer.readString();
+			if (!editDisplayName) {
+				Ignore ignore = new Ignore();
+				client.IGNORED_PLAYERS[client.IGNORE_LIST_COUNT] = ignore;
+				ignore.unfilteredUsername = username;
+				ignore.displayName = displayName;
+				ignore.temporary = (key & 0x2) == 2;
+				++client.IGNORE_LIST_COUNT;
 			} else {
-				for (int i_8 = 0; i_8 < client.anInt7373; i_8++) {
-					Class10 class10_44 = client.aClass10Array7456[i_8];
-					if (string_42.equals(class10_44.aString115)) {
-						class10_44.aString115 = str_92;
-						class10_44.aString116 = string_42;
+				for (int i_8 = 0; i_8 < client.IGNORE_LIST_COUNT; i_8++) {
+					Ignore class10_44 = client.IGNORED_PLAYERS[i_8];
+					if (displayName.equals(class10_44.unfilteredUsername)) {
+						class10_44.unfilteredUsername = username;
+						class10_44.displayName = displayName;
 						break;
 					}
 				}
@@ -2202,7 +2202,7 @@ public class PacketsDecoder extends Class455 {
 				if (i_34 >= 100) {
 					if (i_35 <= 1) {
 						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
-							if (Class280.method4975(str_92)) {
+							if (Class280.isIgnored(str_92)) {
 								bool_16 = true;
 							}
 						} else {
@@ -2261,13 +2261,13 @@ public class PacketsDecoder extends Class455 {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.IGNORE_LIST) {
-			client.anInt7373 = buffer.readUnsignedByte();
-			for (int key = 0; key < client.anInt7373; key++) {
-				Class10 class10_89 = new Class10();
-				client.aClass10Array7456[key] = class10_89;
-				class10_89.aString115 = buffer.readString();
-				class10_89.aString116 = buffer.readString();
-				class10_89.aBool117 = false;
+			client.IGNORE_LIST_COUNT = buffer.readUnsignedByte();
+			for (int key = 0; key < client.IGNORE_LIST_COUNT; key++) {
+				Ignore class10_89 = new Ignore();
+				client.IGNORED_PLAYERS[key] = class10_89;
+				class10_89.unfilteredUsername = buffer.readString();
+				class10_89.displayName = buffer.readString();
+				class10_89.temporary = false;
 			}
 			client.anInt7386 = client.anInt7347;
 			context.currentPacket = null;

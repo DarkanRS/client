@@ -15,7 +15,7 @@ public abstract class Class109 {
     static void method1859(Index index_0, int i_1, int i_2, int i_3, boolean bool_4) {
         Class148.anInt1730 = 1;
         CutsceneEntity.aClass317_746 = index_0;
-        Class6.anInt46 = i_1;
+        Friend.anInt46 = i_1;
         Class148.anInt1738 = i_2;
         Node_Sub33.aNode_Sub15_Sub2_7836 = null;
         Class158_Sub2_Sub3.anInt10243 = i_3;

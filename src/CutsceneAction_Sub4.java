@@ -88,7 +88,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				client.anInt7295 = 0;
 				tcpmessage_17 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_PLAYER, client.outputContext.isaac);
 				tcpmessage_17.buffer.writeShort(client.anInt7345);
-				tcpmessage_17.buffer.writeShortLE(VertexNormal.myPlayer.index);
+				tcpmessage_17.buffer.writeShortLE(VertexNormal.MY_PLAYER.index);
 				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1700744259) ? 1 : 0);
 				tcpmessage_17.buffer.writeIntV2(Class7.anInt56);
 				tcpmessage_17.buffer.writeShortLE(client.anInt7346);
@@ -168,7 +168,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 
 			if (clickType == 60) {
 				if (client.rights > 0 && CutsceneAction_Sub8.method14577()) {
-					SCT24IndexLoader.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1797867076);
+					SCT24IndexLoader.method7460(VertexNormal.MY_PLAYER.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1797867076);
 				} else {
 					client.anInt7293 = i_1;
 					client.anInt7294 = i_2;
@@ -183,7 +183,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 
 			if (clickType == 23) {
 				if (client.rights > 0 && CutsceneAction_Sub8.method14577()) {
-					SCT24IndexLoader.method7460(VertexNormal.myPlayer.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
+					SCT24IndexLoader.method7460(VertexNormal.MY_PLAYER.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
 				} else {
 					tcpmessage_13 = CutsceneArea.method12078(i_4, i_5, i_7);
 					if (i_7 == 1) {
@@ -194,7 +194,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 						tcpmessage_13.buffer.writeByte(client.anInt7255);
 						tcpmessage_13.buffer.writeByte(client.anInt7203);
 						tcpmessage_13.buffer.writeByte(89);
-						Vector3 vector3_20 = VertexNormal.myPlayer.method11166().aClass385_3595;
+						Vector3 vector3_20 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 						tcpmessage_13.buffer.writeShort((int) vector3_20.x);
 						tcpmessage_13.buffer.writeShort((int) vector3_20.z);
 						tcpmessage_13.buffer.writeByte(63);
@@ -350,7 +350,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				}
 
 				if (clickType == 1008 || clickType == 1009 || clickType == 1010 || clickType == 1011 || clickType == 1012) {
-					Class6.method303(clickType, i_7, i_4);
+					Friend.method303(clickType, i_7, i_4);
 				}
 
 				if (client.aBool7344) {

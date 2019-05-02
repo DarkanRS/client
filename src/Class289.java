@@ -408,7 +408,7 @@ public class Class289 implements Runnable {
 						CoordGrid coordgrid_45 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 						for (i_23 = 0; i_23 < class283_44.anInt3382; i_23++) {
 							i_24 = class283_44.anIntArray3381[i_23];
-							if (i_24 >> 28 == VertexNormal.myPlayer.plane) {
+							if (i_24 >> 28 == VertexNormal.MY_PLAYER.plane) {
 								i_25 = (i_24 >> 14 & 0x3fff) - coordgrid_45.x;
 								i_26 = (i_24 & 0x3fff) - coordgrid_45.y;
 								if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4) {

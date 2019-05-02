@@ -74,7 +74,7 @@ public class Player extends Animable {
 			}
 
 			int i_18;
-			if (this == VertexNormal.myPlayer) {
+			if (this == VertexNormal.MY_PLAYER) {
 				for (i_18 = client.aClass180Array7348.length - 1; i_18 >= 0; --i_18) {
 					Class180 class180_25 = client.aClass180Array7348[i_18];
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
@@ -83,7 +83,7 @@ public class Player extends Animable {
 							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
-								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
@@ -91,7 +91,7 @@ public class Player extends Animable {
 						}
 
 						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
-							Vector3 vector3_27 = VertexNormal.myPlayer.method11166().aClass385_3595;
+							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
 							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
 							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
@@ -102,7 +102,7 @@ public class Player extends Animable {
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
 							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
 							if (player_28 != null) {
-								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
@@ -126,7 +126,7 @@ public class Player extends Animable {
 
 			for (i_18 = 0; i_18 < this.aMeshRasterizerArray10372.length; i_18++) {
 				if (this.aMeshRasterizerArray10372[i_18] != null) {
-					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.myPlayer ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -253,7 +253,7 @@ public class Player extends Animable {
 		vector3_5.z = (float) (this.regionBaseY[0] * 512 + i_4 * 256);
 		this.method11171(vector3_5);
 		vector3_5.pushVectorStack();
-		if (this == VertexNormal.myPlayer) {
+		if (this == VertexNormal.MY_PLAYER) {
 			IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-402586639);
 		}
 
@@ -450,7 +450,7 @@ public class Player extends Animable {
 			}
 
 			int i_18;
-			if (this == VertexNormal.myPlayer) {
+			if (this == VertexNormal.MY_PLAYER) {
 				for (i_18 = client.aClass180Array7348.length - 1; i_18 >= 0; --i_18) {
 					Class180 class180_25 = client.aClass180Array7348[i_18];
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
@@ -459,7 +459,7 @@ public class Player extends Animable {
 							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
-								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
@@ -467,7 +467,7 @@ public class Player extends Animable {
 						}
 
 						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
-							Vector3 vector3_27 = VertexNormal.myPlayer.method11166().aClass385_3595;
+							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
 							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
 							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
@@ -478,7 +478,7 @@ public class Player extends Animable {
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
 							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
 							if (player_28 != null) {
-								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
@@ -502,7 +502,7 @@ public class Player extends Animable {
 
 			for (i_18 = 0; i_18 < this.aMeshRasterizerArray10372.length; i_18++) {
 				if (this.aMeshRasterizerArray10372[i_18] != null) {
-					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.myPlayer ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -565,7 +565,7 @@ public class Player extends Animable {
 			}
 
 			int i_18;
-			if (this == VertexNormal.myPlayer) {
+			if (this == VertexNormal.MY_PLAYER) {
 				for (i_18 = client.aClass180Array7348.length - 1; i_18 >= 0; --i_18) {
 					Class180 class180_25 = client.aClass180Array7348[i_18];
 					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
@@ -574,7 +574,7 @@ public class Player extends Animable {
 							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
-								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
@@ -582,7 +582,7 @@ public class Player extends Animable {
 						}
 
 						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
-							Vector3 vector3_27 = VertexNormal.myPlayer.method11166().aClass385_3595;
+							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
 							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
 							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
@@ -593,7 +593,7 @@ public class Player extends Animable {
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
 							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
 							if (player_28 != null) {
-								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
@@ -617,7 +617,7 @@ public class Player extends Animable {
 
 			for (i_18 = 0; i_18 < this.aMeshRasterizerArray10372.length; i_18++) {
 				if (this.aMeshRasterizerArray10372[i_18] != null) {
-					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.myPlayer ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -715,7 +715,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -729,7 +729,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -743,7 +743,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -886,7 +886,7 @@ public class Player extends Animable {
 		this.renderEmote = buffer.readUnsignedShort();
 		this.username = buffer.readString();
 		this.displayName = this.username;
-		if (this == VertexNormal.myPlayer) {
+		if (this == VertexNormal.MY_PLAYER) {
 			RuntimeException_Sub3.aString10458 = this.username;
 		}
 
@@ -972,7 +972,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.method4282(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -1043,7 +1043,7 @@ public class Player extends Animable {
 			}
 
 			int i_19;
-			if (this == VertexNormal.myPlayer) {
+			if (this == VertexNormal.MY_PLAYER) {
 				for (i_19 = client.aClass180Array7348.length - 1; i_19 >= 0; --i_19) {
 					Class180 class180_26 = client.aClass180Array7348[i_19];
 					if (class180_26 != null && class180_26.anInt2242 != -1) {
@@ -1052,7 +1052,7 @@ public class Player extends Animable {
 							StringNode class282_sub47_27 = (StringNode) client.NPCS.get((long) class180_26.anInt2238);
 							if (class282_sub47_27 != null) {
 								NPC npc_30 = (NPC) class282_sub47_27.anObject8068;
-								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								i_14 = (int) vector3_13.x;
 								int i_15 = (int) vector3_13.z;
 								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_14, (long) i_15, class180_26.anInt2242, 92160000L);
@@ -1060,7 +1060,7 @@ public class Player extends Animable {
 						}
 
 						if (class180_26.anInt2236 == 2) {
-							Vector3 vector3_28 = VertexNormal.myPlayer.method11166().aClass385_3595;
+							Vector3 vector3_28 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
 							long long_20 = (long) (class180_26.anInt2243 - (int) vector3_28.x);
 							long long_22 = (long) (class180_26.anInt2235 - (int) vector3_28.z);
 							long long_16 = (long) (class180_26.anInt2237 << 9);
@@ -1071,7 +1071,7 @@ public class Player extends Animable {
 						if (class180_26.anInt2236 == 10 && class180_26.anInt2238 >= 0 && class180_26.anInt2238 < client.players.length) {
 							Player player_29 = client.players[class180_26.anInt2238];
 							if (player_29 != null) {
-								Vector3 vector3_31 = Vector3.method6632(player_29.method11166().aClass385_3595, VertexNormal.myPlayer.method11166().aClass385_3595);
+								Vector3 vector3_31 = Vector3.method6632(player_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
 								int i_24 = (int) vector3_31.x;
 								i_14 = (int) vector3_31.z;
 								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_24, (long) i_14, class180_26.anInt2242, 92160000L);
@@ -1095,7 +1095,7 @@ public class Player extends Animable {
 
 			for (i_19 = 0; i_19 < this.aMeshRasterizerArray10372.length; i_19++) {
 				if (this.aMeshRasterizerArray10372[i_19] != null) {
-					this.aMeshRasterizerArray10372[i_19].method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[i_19], this == VertexNormal.myPlayer ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_19].method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[i_19], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -1125,7 +1125,7 @@ public class Player extends Animable {
 				return null;
 			}
 
-			if (client.PUBLIC_FILTER == 0 || client.PUBLIC_FILTER == 3 || client.PUBLIC_FILTER == 1 && MovementType.method4282(this.displayName)) {
+			if (client.PUBLIC_FILTER == 0 || client.PUBLIC_FILTER == 3 || client.PUBLIC_FILTER == 1 && MovementType.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}

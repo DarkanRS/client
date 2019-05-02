@@ -192,10 +192,10 @@ public class Message {
 	}
 
 	static void method7275(GraphicalRenderer graphicalrenderer_0) {
-		if (Class187.anInt2351 != VertexNormal.myPlayer.plane && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
+		if (Class187.anInt2351 != VertexNormal.MY_PLAYER.plane && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null) {
 			Utils.time();
-			if (Class289.method5097(graphicalrenderer_0, VertexNormal.myPlayer.plane)) {
-				Class187.anInt2351 = VertexNormal.myPlayer.plane;
+			if (Class289.method5097(graphicalrenderer_0, VertexNormal.MY_PLAYER.plane)) {
+				Class187.anInt2351 = VertexNormal.MY_PLAYER.plane;
 			}
 		}
 	}
