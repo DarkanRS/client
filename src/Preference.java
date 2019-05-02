@@ -3,34 +3,34 @@ import java.util.Calendar;
 public abstract class Preference {
 
 	protected int anInt5578;
-	protected Node_Sub54 manager;
+	protected GamePreferences manager;
 
-	Preference(int i_1, Node_Sub54 class282_sub54_2) {
+	Preference(int i_1, GamePreferences class282_sub54_2) {
 		this.anInt5578 = i_1;
 		this.manager = class282_sub54_2;
 	}
 
 	abstract void method7780(int var1);
 
-	Preference(Node_Sub54 class282_sub54_1) {
+	Preference(GamePreferences class282_sub54_1) {
 		this.manager = class282_sub54_1;
 		this.anInt5578 = this.method7781(1882816731);
 	}
 
 	abstract int method7781(int var1);
 
-	void method7782(int i_1) {
-		if (this.method7785(i_1, 594235257) != 3) {
-			this.method7783(i_1);
+	void setPref(int i_1) {
+		if (this.method7785(i_1) != 3) {
+			this.setValue(i_1);
 		}
 
 	}
 
-	abstract void method7783(int var1);
+	abstract void setValue(int var1);
 
 	abstract int method7784(int var1);
 
-	abstract int method7785(int var1, int var2);
+	abstract int method7785(int var1);
 
 	abstract int method7786();
 

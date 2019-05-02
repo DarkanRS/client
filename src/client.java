@@ -800,8 +800,8 @@ public final class client extends Engine {
 			outputContext.method3059(-1650964006);
 			connectionContext.method3059(-1386724833);
 			this.method11622();
-			if (Preference_Sub9.JS5_MANAGER != null) {
-				Preference_Sub9.JS5_MANAGER.pulse();
+			if (ScreenSizePreference.JS5_MANAGER != null) {
+				ScreenSizePreference.JS5_MANAGER.pulse();
 			}
 
 			ObjectDefinitions.method8020();
@@ -957,7 +957,7 @@ public final class client extends Engine {
 		if (gameState != 16) {
 			long long_2 = Class176.method2979(-565051439) / 1000000L - aLong7170;
 			aLong7170 = Class176.method2979(-1607655073) / 1000000L;
-			boolean bool_4 = Class463.method7730();
+			boolean bool_4 = ProcessorSpecs.method7730();
 			if (bool_4 && Class260.aBool3220 && Class320.aClass253_3723 != null) {
 				Class320.aClass253_3723.method4334();
 			}
@@ -1077,7 +1077,7 @@ public final class client extends Engine {
 			}
 
 			if (Class393.preferences.safeMode.getValue((byte) 40) == 1 && gameState == 5 && anInt7349 != -1) {
-				Class393.preferences.setValue(Class393.preferences.safeMode, 0, -1689344796);
+				Class393.preferences.setValue(Class393.preferences.safeMode, 0);
 				Class190.savePreferences((byte) 36);
 			}
 		}
@@ -2093,7 +2093,7 @@ public final class client extends Engine {
 										for (EntityNode_Sub2 class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7659(); class275_sub2_57 != null; class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7650((byte) 102)) {
 											if (i_9 >= class275_sub2_57.anInt7742 && i_9 < class275_sub2_57.anInt7744 && i_10 >= class275_sub2_57.anInt7743 && i_10 < class275_sub2_57.anInt7740) {
 												HitsplatDefinitions.method3851();
-												Class463.method7724(class275_sub2_57.aTransform_Sub1_Sub1_Sub2_7739);
+												ProcessorSpecs.method7724(class275_sub2_57.aTransform_Sub1_Sub1_Sub2_7739);
 											}
 										}
 									}

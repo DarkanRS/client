@@ -143,7 +143,7 @@ public abstract class Class115 implements Interface7 {
 				Renderers.SOFTWARE_RENDERER.method8490();
 			}
 			if (bool_0 != bool_2) {
-				Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, bool_0 ? 1 : 0, -2016706726);
+				Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, bool_0 ? 1 : 0);
 				Class190.savePreferences((byte) 111);
 				return true;
 			} else {

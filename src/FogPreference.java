@@ -1,6 +1,6 @@
-public class Preference_Sub30 extends Preference {
+public class FogPreference extends Preference {
 
-	public Preference_Sub30(int i_1, Node_Sub54 class282_sub54_2) {
+	public FogPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -23,11 +23,11 @@ public class Preference_Sub30 extends Preference {
 		return 1;
 	}
 
-	public Preference_Sub30(Node_Sub54 class282_sub54_1) {
+	public FogPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	public int method7785(int i_1, int i_2) {
+	public int method7785(int i_1) {
 		return i_1 != 0 && this.manager.aPreference_Sub29_8201.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(410905125) != 1 ? 2 : 1);
 	}
 
@@ -55,7 +55,7 @@ public class Preference_Sub30 extends Preference {
 		return true;
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 

@@ -112,7 +112,7 @@ public class Class150 {
 
 	public static void method2582(int i_0, int[] ints_1, int i_2) {
 		if (i_0 != -1 && MovingAnimation.isInterfaceLoaded(i_0, ints_1, -1943227865)) {
-			IComponentDefinitions[] arr_3 = Preference_Sub8.INTERFACES[i_0].components;
+			IComponentDefinitions[] arr_3 = CustomCursorsPreference.INTERFACES[i_0].components;
 			Connection.runIComponentScripts(arr_3);
 		}
 	}

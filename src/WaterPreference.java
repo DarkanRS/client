@@ -1,6 +1,6 @@
-public class Preference_Sub24 extends Preference {
+public class WaterPreference extends Preference {
 
-	public Preference_Sub24(int i_1, Node_Sub54 class282_sub54_2) {
+	public WaterPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -14,7 +14,7 @@ public class Preference_Sub24 extends Preference {
 		return 1;
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -30,7 +30,7 @@ public class Preference_Sub24 extends Preference {
 		return i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(1640668889) != 1 ? 2 : 1;
 	}
 
-	public Preference_Sub24(Node_Sub54 class282_sub54_1) {
+	public WaterPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
@@ -42,7 +42,7 @@ public class Preference_Sub24 extends Preference {
 		return 1;
 	}
 
-	public int method7785(int i_1, int i_2) {
+	public int method7785(int i_1) {
 		return i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(182985530) != 1 ? 2 : 1;
 	}
 

@@ -56,27 +56,27 @@ public class Node_Sub20_Sub25 extends Node_Sub20 {
 	}
 
 	public static void method15393(int i_1) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8208, 1, 62287602);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, 1, 463702183);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub23_8202, 0, -1779797403);
-		Class393.preferences.setValue(Class393.preferences.fog, 0, -1558090127);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub17_8200, 0, 1513887822);
-		Class393.preferences.setValue(Class393.preferences.idleAnimations, 0, -1514537540);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub26_8224, 0, 1378722670);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub28_8212, 0, -339994641);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub2_8205, 0, 1587382390);
-		Class393.preferences.setValue(Class393.preferences.textures, 0, -1566931898);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub19_8204, 0, 142474266);
-		Class393.preferences.setValue(Class393.preferences.water, 0, 1640092780);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8187, 0, -847424999);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, 0, 358482435);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub20_8207, 0, 2033925467);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub1_8197, Class106.aClass106_1075.anInt1071, -273525452);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, 0, 1196949747);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub14_8211, 0, -1623251899);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8208, 1);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, 1);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub23_8202, 0);
+		Class393.preferences.setValue(Class393.preferences.fog, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub17_8200, 0);
+		Class393.preferences.setValue(Class393.preferences.idleAnimations, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub26_8224, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub28_8212, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub2_8205, 0);
+		Class393.preferences.setValue(Class393.preferences.textures, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub19_8204, 0);
+		Class393.preferences.setValue(Class393.preferences.water, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8187, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub20_8207, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub1_8197, Class106.aClass106_1075.anInt1071);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, 0);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub14_8211, 0);
 		ImageIndexLoader.method5777(1755856105);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 2, -1469341129);
-		Class393.preferences.setValue(Class393.preferences.graphics, 1, -971375585);
+		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 2);
+		Class393.preferences.setValue(Class393.preferences.graphics, 1);
 		Class94.method1589();
 		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-462453553);
 		client.aBool7185 = true;

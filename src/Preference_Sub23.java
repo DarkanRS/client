@@ -5,7 +5,7 @@ public class Preference_Sub23 extends Preference {
 	}
 
 	public void method12898() {
-		if (this.manager.method13514((byte) 30) != Game.darkan) {
+		if (this.manager.getGame() != Game.darkan) {
 			this.anInt5578 = 1;
 		}
 
@@ -20,23 +20,23 @@ public class Preference_Sub23 extends Preference {
 	}
 
 	public boolean method12899() {
-		return this.manager.method13514((byte) 82) == Game.darkan;
+		return this.manager.getGame() == Game.darkan;
 	}
 
 	int method7781(int i_1) {
 		return 1;
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
-	public Preference_Sub23(int i_1, Node_Sub54 class282_sub54_2) {
+	public Preference_Sub23(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
 	public int method7784(int i_1) {
-		return this.manager.method13514((byte) 84) == Game.darkan ? 1 : 3;
+		return this.manager.getGame() == Game.darkan ? 1 : 3;
 	}
 
 	void method7780(int i_1) {
@@ -47,11 +47,11 @@ public class Preference_Sub23 extends Preference {
 		return 1;
 	}
 
-	public int method7785(int i_1, int i_2) {
-		return this.manager.method13514((byte) 4) == Game.darkan ? 1 : 3;
+	public int method7785(int i_1) {
+		return this.manager.getGame() == Game.darkan ? 1 : 3;
 	}
 
-	public Preference_Sub23(Node_Sub54 class282_sub54_1) {
+	public Preference_Sub23(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 

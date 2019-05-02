@@ -1,6 +1,6 @@
 public class Preference_Sub10 extends Preference {
 
-	public Preference_Sub10(int i_1, Node_Sub54 class282_sub54_2) {
+	public Preference_Sub10(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -8,7 +8,7 @@ public class Preference_Sub10 extends Preference {
 		return this.anInt5578;
 	}
 
-	public Preference_Sub10(Node_Sub54 class282_sub54_1) {
+	public Preference_Sub10(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
@@ -19,7 +19,7 @@ public class Preference_Sub10 extends Preference {
 
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -43,7 +43,7 @@ public class Preference_Sub10 extends Preference {
 		return 1;
 	}
 
-	int method7785(int i_1, int i_2) {
+	int method7785(int i_1) {
 		return 1;
 	}
 

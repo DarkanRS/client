@@ -2,7 +2,7 @@ public class Preference_Sub2 extends Preference {
 
     public static int anInt7868;
 
-    public Preference_Sub2(int i_1, Node_Sub54 class282_sub54_2) {
+    public Preference_Sub2(int i_1, GamePreferences class282_sub54_2) {
         super(i_1, class282_sub54_2);
     }
 
@@ -14,11 +14,11 @@ public class Preference_Sub2 extends Preference {
         return 2;
     }
 
-    public int method7785(int i_1, int i_2) {
+    public int method7785(int i_1) {
         return this.manager.textures.method12873(547920845) == 0 ? 3 : 1;
     }
 
-    void method7783(int i_1) {
+    void setValue(int i_1) {
         this.anInt5578 = i_1;
     }
 
@@ -42,7 +42,7 @@ public class Preference_Sub2 extends Preference {
         return 2;
     }
 
-    public Preference_Sub2(Node_Sub54 class282_sub54_1) {
+    public Preference_Sub2(GamePreferences class282_sub54_1) {
         super(class282_sub54_1);
     }
 

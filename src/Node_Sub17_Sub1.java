@@ -118,7 +118,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 					if (i_9 == 2) {
 						client.aBool7171 = true;
 					}
-					Class393.preferences.setValue(Class393.preferences.currentToolkit, 0, -1949394777);
+					Class393.preferences.setValue(Class393.preferences.currentToolkit, 0);
 					method15402(i_9, string_1, bool_2, 1368243224);
 					if (graphicalrenderer_16 != null) {
 						try {
@@ -149,7 +149,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 		if (bool_2) {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2, 2032339457);
 		}
-		Class393.preferences.setValue(Class393.preferences.currentToolkit, i_0, -952272736);
+		Class393.preferences.setValue(Class393.preferences.currentToolkit, i_0);
 		if (!bool_2) {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, !bool_2, -1976221425);
 		}

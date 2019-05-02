@@ -1864,11 +1864,11 @@ public class PacketsDecoder extends Class455 {
 			int i_6 = buffer.readUnsignedShort();
 			Class470.method7825();
 			int i_8;
-			if (Preference_Sub8.INTERFACES[key] != null) {
+			if (CustomCursorsPreference.INTERFACES[key] != null) {
 				for (int i_7 = flags; i_7 < i_6; i_7++) {
 					i_8 = buffer.read24BitUnsignedInteger();
-					if (i_7 < Preference_Sub8.INTERFACES[key].components.length && Preference_Sub8.INTERFACES[key].components[i_7] != null) {
-						Preference_Sub8.INTERFACES[key].components[i_7].anInt1414 = i_8;
+					if (i_7 < CustomCursorsPreference.INTERFACES[key].components.length && CustomCursorsPreference.INTERFACES[key].components[i_7] != null) {
+						CustomCursorsPreference.INTERFACES[key].components[i_7].anInt1414 = i_8;
 					}
 				}
 			}
@@ -2093,7 +2093,7 @@ public class PacketsDecoder extends Class455 {
 			icomponentdefinitions_130 = IComponentDefinitions.getDefs(interfaceHash);
 			if (icomponentdefinitions_130 != null) {
 				Class109.redrawComponent(icomponentdefinitions_130);
-				HostNameIdentifier.method483(Preference_Sub8.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
+				HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[icomponentdefinitions_130.idHash >>> 16], icomponentdefinitions_130, true, -460404316);
 			}
 			if (client.anInt7349 != -1) {
 				Class383.method6514(client.anInt7349, 1, 1200373841);

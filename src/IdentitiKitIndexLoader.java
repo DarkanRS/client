@@ -101,7 +101,7 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		}
 		OutputStream_Sub1.method12938((byte) 26);
 		if (icomponentdefinitions_6 != null) {
-			HostNameIdentifier.method483(Preference_Sub8.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
+			HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
 		}
 		if (!bool_3) {
 			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);

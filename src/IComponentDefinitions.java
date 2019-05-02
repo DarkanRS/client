@@ -811,7 +811,7 @@ public class IComponentDefinitions {
 				return class119_5;
 			}
 		}
-		SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(Class463.SPRITES_INDEX, this.anInt1320, 0);
+		SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(ProcessorSpecs.SPRITES_INDEX, this.anInt1320, 0);
 		if (class91_6 == null) {
 			return null;
 		} else {
@@ -856,7 +856,7 @@ public class IComponentDefinitions {
 		if (nativesprite_5 != null) {
 			return nativesprite_5;
 		} else {
-			SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(Class463.SPRITES_INDEX, this.anInt1320, 0);
+			SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(ProcessorSpecs.SPRITES_INDEX, this.anInt1320, 0);
 			if (class91_6 == null) {
 				aBool1399 = true;
 				return null;
@@ -890,12 +890,12 @@ public class IComponentDefinitions {
 
 	public static IComponentDefinitions getDefs(int hash) {
 		int interfaceId = hash >> 16;
-		if (Preference_Sub8.INTERFACES[interfaceId] == null || Preference_Sub8.INTERFACES[interfaceId].getComponent(hash) == null) {
+		if (CustomCursorsPreference.INTERFACES[interfaceId] == null || CustomCursorsPreference.INTERFACES[interfaceId].getComponent(hash) == null) {
 			boolean bool_3 = MovingAnimation.isInterfaceLoaded(interfaceId, (int[]) null, -1161112150);
 			if (!bool_3) {
 				return null;
 			}
 		}
-		return Preference_Sub8.INTERFACES[interfaceId].getComponent(hash);
+		return CustomCursorsPreference.INTERFACES[interfaceId].getComponent(hash);
 	}
 }

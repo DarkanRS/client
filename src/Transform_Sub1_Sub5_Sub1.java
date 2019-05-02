@@ -506,7 +506,7 @@ public class Transform_Sub1_Sub5_Sub1 extends Transform_Sub1_Sub5 implements Sce
 					i_3 = packet.buffer.index;
 					packet.buffer.writeShort(727);
 					packet.buffer.writeShort(1);
-					Class14.LOGIN_XTEAS = Class463.method7725(packet);
+					Class14.LOGIN_XTEAS = ProcessorSpecs.method7725(packet);
 					int i_4 = packet.buffer.index;
 					packet.buffer.writeString(client.aString7164);
 					packet.buffer.writeShort(client.AFFILIATE);

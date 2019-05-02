@@ -70,7 +70,7 @@ public abstract class Class455 {
                 var_10 = Character.toLowerCase(var_10);
                 var_15 = Character.toLowerCase(var_15);
                 if (var_15 != var_10) {
-                    return Preference_Sub30.method13422(var_10, xlanguage_2) - Preference_Sub30.method13422(var_15, xlanguage_2);
+                    return FogPreference.method13422(var_10, xlanguage_2) - FogPreference.method13422(var_15, xlanguage_2);
                 }
             }
         }
@@ -91,7 +91,7 @@ public abstract class Class455 {
                 var_17 = Character.toLowerCase(var_17);
                 var_13 = Character.toLowerCase(var_13);
                 if (var_17 != var_13) {
-                    return Preference_Sub30.method13422(var_17, xlanguage_2) - Preference_Sub30.method13422(var_13, xlanguage_2);
+                    return FogPreference.method13422(var_17, xlanguage_2) - FogPreference.method13422(var_13, xlanguage_2);
                 }
             }
         }
@@ -103,7 +103,7 @@ public abstract class Class455 {
                 var_13 = charsequence_0.charAt(i_19);
                 char var_14 = charsequence_1.charAt(i_19);
                 if (var_13 != var_14) {
-                    return Preference_Sub30.method13422(var_13, xlanguage_2) - Preference_Sub30.method13422(var_14, xlanguage_2);
+                    return FogPreference.method13422(var_13, xlanguage_2) - FogPreference.method13422(var_14, xlanguage_2);
                 }
             }
             return 0;

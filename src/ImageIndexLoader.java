@@ -265,9 +265,9 @@ public class ImageIndexLoader implements Interface22 {
 
 	static void method5777(int i_0) {
 		if (Engine.AVAILABLE_PROCESSORS > 1) {
-			Class393.preferences.setValue(Class393.preferences.cpu, 4, 482618320);
+			Class393.preferences.setValue(Class393.preferences.cpu, 4);
 		} else {
-			Class393.preferences.setValue(Class393.preferences.cpu, 2, -2037005846);
+			Class393.preferences.setValue(Class393.preferences.cpu, 2);
 		}
 	}
 }

@@ -1,18 +1,18 @@
-public class Preference_Sub15 extends Preference {
+public class IdleAnimationsPreference extends Preference {
 
 	int method7781(int i_1) {
 		return 1;
 	}
 
-	public Preference_Sub15(int i_1, Node_Sub54 class282_sub54_2) {
+	public IdleAnimationsPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
-	public Preference_Sub15(Node_Sub54 class282_sub54_1) {
+	public IdleAnimationsPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -29,7 +29,7 @@ public class Preference_Sub15 extends Preference {
 	}
 
 	public void method12741() {
-		if (this.manager.method13514((byte) 95) == Game.stellarDawn) {
+		if (this.manager.getGame() == Game.stellarDawn) {
 			this.anInt5578 = 2;
 		}
 
@@ -39,7 +39,7 @@ public class Preference_Sub15 extends Preference {
 
 	}
 
-	int method7785(int i_1, int i_2) {
+	int method7785(int i_1) {
 		return 1;
 	}
 

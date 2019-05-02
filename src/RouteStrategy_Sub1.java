@@ -22,9 +22,9 @@ public class RouteStrategy_Sub1 extends RouteStrategy {
 		return i_2 == -1440558477 * this.approxDestinationX * -726719813 && i_3 == 1732585867 * this.approxDestinationY * 1767388707;
 	}
 
-	static Node_Sub54 method12791() {
+	static GamePreferences method12791() {
 		Class442 class442_1 = null;
-		Node_Sub54 class282_sub54_2 = new Node_Sub54(client.CURRENT_GAME);
+		GamePreferences class282_sub54_2 = new GamePreferences(client.CURRENT_GAME);
 
 		try {
 			class442_1 = Class345.method6137("", client.CURRENT_GAME.name, false);
@@ -38,7 +38,7 @@ public class RouteStrategy_Sub1 extends RouteStrategy {
 				}
 			}
 
-			class282_sub54_2 = new Node_Sub54(new RsByteBuffer(bytes_3), client.CURRENT_GAME);
+			class282_sub54_2 = new GamePreferences(new RsByteBuffer(bytes_3), client.CURRENT_GAME);
 		} catch (Exception exception_7) {
 			;
 		}

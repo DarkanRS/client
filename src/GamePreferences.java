@@ -1,8 +1,8 @@
-public class Node_Sub54 extends Node {
+public class GamePreferences extends Node {
 
-	Game aClass486_8191;
-	Class463 aClass463_8196;
-	public Preference_Sub18 currentToolkit;
+	Game game;
+	ProcessorSpecs processorSpecs;
+	public GraphicsToolkitPreference currentToolkit;
 	public Preference_Sub4 aPreference_Sub4_8187;
 	public Preference_Sub4 aPreference_Sub4_8223;
 	public Preference_Sub12 aPreference_Sub12_8195;
@@ -10,10 +10,10 @@ public class Node_Sub54 extends Node {
 	public Preference_Sub1 aPreference_Sub1_8197;
 	public Preference_Sub16 aPreference_Sub16_8198;
 	public Preference_Sub26 aPreference_Sub26_8224;
-	public Preference_Sub30 fog;
+	public FogPreference fog;
 	public Preference_Sub17 aPreference_Sub17_8200;
 	public Preference_Sub23 aPreference_Sub23_8202;
-	public Preference_Sub15 idleAnimations;
+	public IdleAnimationsPreference idleAnimations;
 	public Preference_Sub19 aPreference_Sub19_8204;
 	public Preference_Sub2 aPreference_Sub2_8205;
 	public Preference_Sub29 aPreference_Sub29_8201;
@@ -23,16 +23,16 @@ public class Node_Sub54 extends Node {
 	public Preference_Sub7 aPreference_Sub7_8210;
 	public Preference_Sub14 aPreference_Sub14_8211;
 	public Preference_Sub28 aPreference_Sub28_8212;
-	public Preference_Sub22 textures;
-	public Preference_Sub18 aPreference_Sub18_8214;
-	public Preference_Sub24 water;
-	public Preference_Sub9 screenSize;
-	public Preference_Sub9 aPreference_Sub9_8218;
-	public Preference_Sub8 customCursors;
-	public Preference_Sub6 graphics;
-	public Preference_Sub5 cpu;
+	public TexturesPreference textures;
+	public GraphicsToolkitPreference aPreference_Sub18_8214;
+	public WaterPreference water;
+	public ScreenSizePreference screenSize;
+	public ScreenSizePreference aPreference_Sub9_8218;
+	public CustomCursorsPreference customCursors;
+	public GraphicsPreference graphics;
+	public CPUMaxMemoryPreference cpu;
 	public Preference_Sub11 aPreference_Sub11_8217;
-	public Preference_Sub25 safeMode;
+	public SafeModePreference safeMode;
 	public Preference_Sub3 aPreference_Sub3_8199;
 	public Preference_Sub13 aPreference_Sub13_8225;
 	public Preference_Sub13 aPreference_Sub13_8193;
@@ -41,14 +41,14 @@ public class Node_Sub54 extends Node {
 	public Preference_Sub13 aPreference_Sub13_8229;
 	public Preference_Sub10 aPreference_Sub10_8215;
 
-	public Node_Sub54(RsByteBuffer rsbytebuffer_1, Game game_2) {
-		this.aClass486_8191 = game_2;
-		this.aClass463_8196 = new Class463(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.indexOf("arm") != -1);
-		this.currentToolkit = new Preference_Sub18(0, this);
-		this.method13496(rsbytebuffer_1);
+	public GamePreferences(RsByteBuffer rsbytebuffer_1, Game game_2) {
+		this.game = game_2;
+		this.processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.indexOf("arm") != -1);
+		this.currentToolkit = new GraphicsToolkitPreference(0, this);
+		this.decode(rsbytebuffer_1);
 	}
 
-	void method13496(RsByteBuffer rsbytebuffer_1) {
+	void decode(RsByteBuffer rsbytebuffer_1) {
 		if (rsbytebuffer_1 != null && rsbytebuffer_1.buffer != null) {
 			int i_3 = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 < 23) {
@@ -72,10 +72,10 @@ public class Node_Sub54 extends Node {
 				}
 
 				this.aPreference_Sub26_8224 = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
-				this.fog = new Preference_Sub30(rsbytebuffer_1.readUnsignedByte(), this);
+				this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub17_8200 = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub23_8202 = new Preference_Sub23(rsbytebuffer_1.readUnsignedByte(), this);
-				this.idleAnimations = new Preference_Sub15(rsbytebuffer_1.readUnsignedByte(), this);
+				this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub19_8204 = new Preference_Sub19(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub2_8205 = new Preference_Sub2(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 24) {
@@ -95,18 +95,18 @@ public class Node_Sub54 extends Node {
 					++rsbytebuffer_1.index;
 				}
 
-				this.textures = new Preference_Sub22(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub18_8214 = new Preference_Sub18(rsbytebuffer_1.readUnsignedByte(), this);
-				this.currentToolkit = new Preference_Sub18(this.aPreference_Sub18_8214.getValue(-958077547), this);
+				this.textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.aPreference_Sub18_8214 = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.currentToolkit = new GraphicsToolkitPreference(this.aPreference_Sub18_8214.getValue(-958077547), this);
 				rsbytebuffer_1.readUnsignedByte();
-				this.water = new Preference_Sub24(rsbytebuffer_1.readUnsignedByte(), this);
-				this.screenSize = new Preference_Sub9(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub9_8218 = new Preference_Sub9(this.screenSize.method12687(-1215691938), this);
-				this.customCursors = new Preference_Sub8(rsbytebuffer_1.readUnsignedByte(), this);
-				this.graphics = new Preference_Sub6(rsbytebuffer_1.readUnsignedByte(), this);
-				this.cpu = new Preference_Sub5(rsbytebuffer_1.readUnsignedByte(), this);
+				this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.aPreference_Sub9_8218 = new ScreenSizePreference(this.screenSize.method12687(-1215691938), this);
+				this.customCursors = new CustomCursorsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub11_8217 = new Preference_Sub11(rsbytebuffer_1.readUnsignedByte(), this);
-				this.safeMode = new Preference_Sub25(rsbytebuffer_1.readUnsignedByte(), this);
+				this.safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 26) {
 					this.aPreference_Sub3_8199 = new Preference_Sub3(rsbytebuffer_1.readUnsignedByte(), this);
 				}
@@ -156,7 +156,7 @@ public class Node_Sub54 extends Node {
 		}
 
 		if (bool_1 || this.fog == null) {
-			this.fog = new Preference_Sub30(this);
+			this.fog = new FogPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub17_8200 == null) {
@@ -168,7 +168,7 @@ public class Node_Sub54 extends Node {
 		}
 
 		if (bool_1 || this.idleAnimations == null) {
-			this.idleAnimations = new Preference_Sub15(this);
+			this.idleAnimations = new IdleAnimationsPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub19_8204 == null) {
@@ -208,39 +208,39 @@ public class Node_Sub54 extends Node {
 		}
 
 		if (bool_1 || this.textures == null) {
-			this.textures = new Preference_Sub22(this);
+			this.textures = new TexturesPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub18_8214 == null) {
-			this.aPreference_Sub18_8214 = new Preference_Sub18(this);
+			this.aPreference_Sub18_8214 = new GraphicsToolkitPreference(this);
 		}
 
 		if (bool_1 || this.currentToolkit == null) {
-			this.currentToolkit = new Preference_Sub18(this.aPreference_Sub18_8214.getValue(-1125192103), this);
+			this.currentToolkit = new GraphicsToolkitPreference(this.aPreference_Sub18_8214.getValue(-1125192103), this);
 		}
 
 		if (bool_1 || this.water == null) {
-			this.water = new Preference_Sub24(this);
+			this.water = new WaterPreference(this);
 		}
 
 		if (bool_1 || this.screenSize == null) {
-			this.screenSize = new Preference_Sub9(this);
+			this.screenSize = new ScreenSizePreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub9_8218 == null) {
-			this.aPreference_Sub9_8218 = new Preference_Sub9(this.screenSize.method12687(-1865727854), this);
+			this.aPreference_Sub9_8218 = new ScreenSizePreference(this.screenSize.method12687(-1865727854), this);
 		}
 
 		if (bool_1 || this.customCursors == null) {
-			this.customCursors = new Preference_Sub8(this);
+			this.customCursors = new CustomCursorsPreference(this);
 		}
 
 		if (bool_1 || this.graphics == null) {
-			this.graphics = new Preference_Sub6(this);
+			this.graphics = new GraphicsPreference(this);
 		}
 
 		if (bool_1 || this.cpu == null) {
-			this.cpu = new Preference_Sub5(this);
+			this.cpu = new CPUMaxMemoryPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub11_8217 == null) {
@@ -248,7 +248,7 @@ public class Node_Sub54 extends Node {
 		}
 
 		if (bool_1 || this.safeMode == null) {
-			this.safeMode = new Preference_Sub25(this);
+			this.safeMode = new SafeModePreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub3_8199 == null) {
@@ -287,7 +287,7 @@ public class Node_Sub54 extends Node {
 		this.aPreference_Sub27_8208 = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
 		this.aPreference_Sub23_8202 = new Preference_Sub23(rsbytebuffer_1.readUnsignedByte(), this);
 		++rsbytebuffer_1.index;
-		this.idleAnimations = new Preference_Sub15(rsbytebuffer_1.readUnsignedByte(), this);
+		this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aPreference_Sub26_8224 = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
 		rsbytebuffer_1.readUnsignedByte();
 		this.aPreference_Sub28_8212 = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
@@ -311,8 +311,8 @@ public class Node_Sub54 extends Node {
 		}
 
 		this.aPreference_Sub19_8204 = new Preference_Sub19(bool_6 | bool_7 ? 1 : 0, this);
-		this.water = new Preference_Sub24(rsbytebuffer_1.readUnsignedByte(), this);
-		this.fog = new Preference_Sub30(rsbytebuffer_1.readUnsignedByte(), this);
+		this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
+		this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aPreference_Sub4_8187 = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aPreference_Sub10_8215 = new Preference_Sub10(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aPreference_Sub13_8225 = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
@@ -345,11 +345,11 @@ public class Node_Sub54 extends Node {
 
 		rsbytebuffer_1.readInt();
 		if (i_2 >= 6) {
-			this.screenSize = new Preference_Sub9(rsbytebuffer_1.readUnsignedByte(), this);
+			this.screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 7) {
-			this.safeMode = new Preference_Sub25(rsbytebuffer_1.readUnsignedByte(), this);
+			this.safeMode = new SafeModePreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 8) {
@@ -365,11 +365,11 @@ public class Node_Sub54 extends Node {
 		}
 
 		if (i_2 >= 11) {
-			this.customCursors = new Preference_Sub8(rsbytebuffer_1.readUnsignedByte(), this);
+			this.customCursors = new CustomCursorsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 12) {
-			this.idleAnimations = new Preference_Sub15(rsbytebuffer_1.readUnsignedByte(), this);
+			this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 13) {
@@ -377,19 +377,19 @@ public class Node_Sub54 extends Node {
 		}
 
 		if (i_2 >= 14) {
-			this.aPreference_Sub18_8214 = new Preference_Sub18(rsbytebuffer_1.readUnsignedByte(), this);
+			this.aPreference_Sub18_8214 = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 15) {
-			this.cpu = new Preference_Sub5(rsbytebuffer_1.readUnsignedByte(), this);
+			this.cpu = new CPUMaxMemoryPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 16) {
-			this.textures = new Preference_Sub22(rsbytebuffer_1.readUnsignedByte(), this);
+			this.textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 18) {
-			this.graphics = new Preference_Sub6(rsbytebuffer_1.readUnsignedByte(), this);
+			this.graphics = new GraphicsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 19) {
@@ -484,29 +484,29 @@ public class Node_Sub54 extends Node {
 		this.aPreference_Sub10_8215.method12692();
 	}
 
-	public Class463 method13504() {
-		return this.aClass463_8196;
+	public ProcessorSpecs getProcessorSpecs() {
+		return this.processorSpecs;
 	}
 
-	public void method13505(Preference_Sub18 class468_sub18_1, boolean bool_2, int i_3) {
+	public void method13505(GraphicsToolkitPreference class468_sub18_1, boolean bool_2, int i_3) {
 		class468_sub18_1.method12783(bool_2);
 		this.method13502();
 	}
 
-	public Node_Sub54(Game game_1) {
-		this.aClass486_8191 = game_1;
-		this.aClass463_8196 = new Class463(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.toLowerCase().indexOf("arm") != -1);
-		this.currentToolkit = new Preference_Sub18(0, this);
+	public GamePreferences(Game game_1) {
+		this.game = game_1;
+		this.processorSpecs = new ProcessorSpecs(Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS, Class402.aString4828.toLowerCase().indexOf("arm") != -1);
+		this.currentToolkit = new GraphicsToolkitPreference(0, this);
 		this.method13497(true, 311350524);
 	}
 
-	public void setValue(Preference class468_1, int i_2, int i_3) {
-		class468_1.method7782(i_2);
+	public void setValue(Preference class468_1, int i_2) {
+		class468_1.setPref(i_2);
 		this.method13502();
 	}
 
-	public Game method13514(byte b_1) {
-		return this.aClass486_8191;
+	public Game getGame() {
+		return this.game;
 	}
 
 }

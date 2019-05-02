@@ -1,11 +1,11 @@
-public class Preference_Sub22 extends Preference {
+public class TexturesPreference extends Preference {
 
 	int method7787() {
 		return 1;
 	}
 
 	public void method12871() {
-		if (this.manager.method13514((byte) 28) != Game.darkan) {
+		if (this.manager.getGame() != Game.darkan) {
 			this.anInt5578 = 1;
 		}
 
@@ -20,11 +20,11 @@ public class Preference_Sub22 extends Preference {
 	}
 
 	public boolean method12872() {
-		return this.manager.method13514((byte) 119) == Game.darkan;
+		return this.manager.getGame() == Game.darkan;
 	}
 
-	public int method7785(int i_1, int i_2) {
-		return this.manager.method13514((byte) 66) == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(288309414) != 1 ? 2 : 1) : 3;
+	public int method7785(int i_1) {
+		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(288309414) != 1 ? 2 : 1) : 3;
 	}
 
 	public int method12873(int i_1) {
@@ -36,22 +36,22 @@ public class Preference_Sub22 extends Preference {
 	}
 
 	public int method7784(int i_1) {
-		return this.manager.method13514((byte) 72) == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(-925093981) != 1 ? 2 : 1) : 3;
+		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(-925093981) != 1 ? 2 : 1) : 3;
 	}
 
 	void method7780(int i_1) {
 		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
-	public Preference_Sub22(Node_Sub54 class282_sub54_1) {
+	public TexturesPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
-	public Preference_Sub22(int i_1, Node_Sub54 class282_sub54_2) {
+	public TexturesPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 

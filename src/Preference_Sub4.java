@@ -1,10 +1,10 @@
 public class Preference_Sub4 extends Preference {
 
-	public Preference_Sub4(int i_1, Node_Sub54 class282_sub54_2) {
+	public Preference_Sub4(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
-	public int method7785(int i_1, int i_2) {
+	public int method7785(int i_1) {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(-1381198903), -2081713291) ? 3 : 1;
 	}
 
@@ -27,7 +27,7 @@ public class Preference_Sub4 extends Preference {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(340724503), -757986233) ? 3 : 1;
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -51,7 +51,7 @@ public class Preference_Sub4 extends Preference {
 		return Class60.method1166(this.manager.currentToolkit.getValue(-655051522), -271241654);
 	}
 
-	public Preference_Sub4(Node_Sub54 class282_sub54_1) {
+	public Preference_Sub4(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 

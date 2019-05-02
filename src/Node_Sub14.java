@@ -487,7 +487,7 @@ public class Node_Sub14 extends Node {
 	public static final void method12221(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
 		if (client.aClass118_7257 == null && !Class20.aBool161 && icomponentdefinitions_0 != null && CutsceneAction_Sub14.method14643(icomponentdefinitions_0, 735931958)) {
 			client.aClass118_7257 = icomponentdefinitions_0;
-			client.aClass118_7247 = Preference_Sub22.method12880(icomponentdefinitions_0);
+			client.aClass118_7247 = TexturesPreference.method12880(icomponentdefinitions_0);
 			client.anInt7361 = i_1;
 			client.anInt7362 = i_2;
 			CutsceneAction_Sub1.anInt8308 = 0;

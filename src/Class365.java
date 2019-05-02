@@ -80,7 +80,7 @@ public class Class365 implements Interface3 {
 					Class260.anInt3223 = Class260.anInt3228;
 					if (Class393.preferences.aPreference_Sub13_8229.method12714() != 0) {
 						Class339.method6047(IndexLoaders.MUSIC_INDEX, Class260.anInt3228, Class393.preferences.aPreference_Sub13_8229.method12714());
-						Preference_Sub6.method12658(935417586);
+						GraphicsPreference.method12658(935417586);
 					} else {
 						Class358.method6240(1276678940);
 					}

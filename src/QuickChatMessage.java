@@ -155,7 +155,7 @@ public class QuickChatMessage {
         int i_7 = i_3 - i_1;
         if (i_6 == 0) {
             if (i_7 != 0) {
-                Preference_Sub15.method12746(i_0, i_1, i_3, i_4);
+                IdleAnimationsPreference.method12746(i_0, i_1, i_3, i_4);
             }
         } else if (i_7 == 0) {
             CS2Executor.method11250(i_0, i_2, i_1, i_4);

@@ -39,8 +39,8 @@ public class MovingAnimation extends Animation {
 		if (MapAreaIndexLoader.INTERFACES_LOADED[interfaceId]) {
 			return true;
 		} else {
-			Preference_Sub8.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, Preference_Sub8.INTERFACES[interfaceId], false, (byte) -15);
-			if (Preference_Sub8.INTERFACES[interfaceId] == null) {
+			CustomCursorsPreference.INTERFACES[interfaceId] = SkyboxIndexLoader.getInterface(interfaceId, xteas, CustomCursorsPreference.INTERFACES[interfaceId], false, (byte) -15);
+			if (CustomCursorsPreference.INTERFACES[interfaceId] == null) {
 				return false;
 			} else {
 				MapAreaIndexLoader.INTERFACES_LOADED[interfaceId] = true;

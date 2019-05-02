@@ -38,7 +38,7 @@ public class Class356 {
 			IndexLoaders.CURSOR_LOADER.method7324();
 			IndexLoaders.HITSPLAT_LOADER.method3604();
 			IndexLoaders.HITBAR_LOADER.method5103();
-			Preference_Sub8.method12679();
+			CustomCursorsPreference.method12679();
 			Class520.method11161();
 			Class487.aClass378_5752.method6410();
 			Class413.method6939();

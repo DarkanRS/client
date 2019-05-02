@@ -90,14 +90,14 @@ public class PingRequester implements Runnable {
 				}
 			}
 			if (RouteStrategy_Sub6.aString8069.startsWith("win") && !bool_4) {
-				Preference_Sub6.method12661(string_0, 0, (byte) -25);
+				GraphicsPreference.method12661(string_0, 0, (byte) -25);
 			} else if (RouteStrategy_Sub6.aString8069.startsWith("mac")) {
 				Class186.method3082(string_0, 1, string_3);
 			} else {
-				Preference_Sub6.method12661(string_0, 2, (byte) -47);
+				GraphicsPreference.method12661(string_0, 2, (byte) -47);
 			}
 		} else {
-			Preference_Sub6.method12661(string_0, 3, (byte) -77);
+			GraphicsPreference.method12661(string_0, 3, (byte) -77);
 		}
 	}
 }

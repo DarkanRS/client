@@ -80,7 +80,7 @@ public class IndexLoaders {
 		if (Class393.preferences.safeMode.getValue((byte) 1) == 0) {
 			for (i = 0; i < client.anInt7193; i++) {
 				if (client.KEYS_PRESSED[i].getCharacter() == 115 || client.KEYS_PRESSED[i].getCharacter() == 83) {
-					Class393.preferences.setValue(Class393.preferences.safeMode, 1, -821310033);
+					Class393.preferences.setValue(Class393.preferences.safeMode, 1);
 					client.aBool7155 = true;
 					break;
 				}
@@ -88,11 +88,11 @@ public class IndexLoaders {
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4697) {
-			if (Preference_Sub9.JS5_MANAGER == null) {
-				Preference_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER);
+			if (ScreenSizePreference.JS5_MANAGER == null) {
+				ScreenSizePreference.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER);
 			}
 
-			if (!Preference_Sub9.JS5_MANAGER.init()) {
+			if (!ScreenSizePreference.JS5_MANAGER.init()) {
 				return 0;
 			}
 
@@ -351,8 +351,8 @@ public class IndexLoaders {
 
 			bool_10 = true;
 
-			for (i_2 = 0; i_2 < Preference_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
-				IComponentDefinitions icomponentdefinitions_8 = Preference_Sub8.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
+			for (i_2 = 0; i_2 < CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components.length; i_2++) {
+				IComponentDefinitions icomponentdefinitions_8 = CustomCursorsPreference.INTERFACES[QuickchatFiller.ENTITY_DEFAULTS.loginWindow].components[i_2];
 				if (icomponentdefinitions_8.type == 5 && icomponentdefinitions_8.anInt1320 != -1 && !SPRITES_INDEX.load(icomponentdefinitions_8.anInt1320, 0)) {
 					bool_10 = false;
 				}
@@ -384,11 +384,11 @@ public class IndexLoaders {
 			Class302.anInterface27Array3559 = null;
 			Class358.method6234();
 			client.aBool7465 = Class393.preferences.safeMode.getValue((byte) -77) == 1;
-			Class393.preferences.setValue(Class393.preferences.safeMode, 1, -425362702);
+			Class393.preferences.setValue(Class393.preferences.safeMode, 1);
 			if (client.aBool7465) {
-				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, 2109366156);
+				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
 			} else if (Class393.preferences.aPreference_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
-				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, -28181047);
+				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
 			}
 
 			Class190.savePreferences((byte) 125);
@@ -419,7 +419,7 @@ public class IndexLoaders {
 			js5cachefile_4 = new JS5CacheFile(i_5, client.aClass440_3270, Class97.aClass440Array996[i_5]);
 		}
 
-		Class492.aClass327_Sub1Array5777[i_5] = Preference_Sub9.JS5_MANAGER.method5480(i_5, js5cachefile_4, Class533.aClass203_7073);
+		Class492.aClass327_Sub1Array5777[i_5] = ScreenSizePreference.JS5_MANAGER.method5480(i_5, js5cachefile_4, Class533.aClass203_7073);
 		Class492.aClass327_Sub1Array5777[i_5].method12544();
 		return new Index(Class492.aClass327_Sub1Array5777[i_5], bool_1, i_2);
 	}

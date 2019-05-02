@@ -1,10 +1,10 @@
-public class Preference_Sub5 extends Preference {
+public class CPUMaxMemoryPreference extends Preference {
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
-	public Preference_Sub5(int i_1, Node_Sub54 class282_sub54_2) {
+	public CPUMaxMemoryPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -16,18 +16,18 @@ public class Preference_Sub5 extends Preference {
 	}
 
 	int method7781(int i_1) {
-		return this.manager.method13504().method7720(-2118359386) > 1 ? 4 : 2;
+		return this.manager.getProcessorSpecs().getProcessorCount() > 1 ? 4 : 2;
 	}
 
 	void method7780(int i_1) {
 		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
-	int method7785(int i_1, int i_2) {
+	int method7785(int i_1) {
 		return 1;
 	}
 
-	public Preference_Sub5(Node_Sub54 class282_sub54_1) {
+	public CPUMaxMemoryPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
@@ -36,11 +36,11 @@ public class Preference_Sub5 extends Preference {
 	}
 
 	int method7786() {
-		return this.manager.method13504().method7720(-1591316902) > 1 ? 4 : 2;
+		return this.manager.getProcessorSpecs().getProcessorCount() > 1 ? 4 : 2;
 	}
 
 	int method7787() {
-		return this.manager.method13504().method7720(-1527744651) > 1 ? 4 : 2;
+		return this.manager.getProcessorSpecs().getProcessorCount() > 1 ? 4 : 2;
 	}
 
 	public int getValue() {

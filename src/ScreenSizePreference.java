@@ -1,8 +1,8 @@
-public class Preference_Sub9 extends Preference {
+public class ScreenSizePreference extends Preference {
 
 	public static JS5Manager JS5_MANAGER;
 
-	public Preference_Sub9(int i_1, Node_Sub54 class282_sub54_2) {
+	public ScreenSizePreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -12,11 +12,11 @@ public class Preference_Sub9 extends Preference {
 		}
 	}
 
-	public Preference_Sub9(Node_Sub54 class282_sub54_1) {
+	public ScreenSizePreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	void method7783(int i_1) {
+	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
@@ -29,11 +29,11 @@ public class Preference_Sub9 extends Preference {
 	}
 
 	int method7786() {
-		return this.manager.method13504().method7719() ? 3 : 2;
+		return this.manager.getProcessorSpecs().isARM() ? 3 : 2;
 	}
 
 	int method7787() {
-		return this.manager.method13504().method7719() ? 3 : 2;
+		return this.manager.getProcessorSpecs().isARM() ? 3 : 2;
 	}
 
 	public int method12687(int i_1) {
@@ -41,10 +41,10 @@ public class Preference_Sub9 extends Preference {
 	}
 
 	int method7781(int i_1) {
-		return this.manager.method13504().method7719() ? 3 : 2;
+		return this.manager.getProcessorSpecs().isARM() ? 3 : 2;
 	}
 
-	int method7785(int i_1, int i_2) {
+	int method7785(int i_1) {
 		return 1;
 	}
 }

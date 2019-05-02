@@ -1,29 +1,27 @@
-public class Class463 {
+public class ProcessorSpecs {
 
     static Index SPRITES_INDEX;
 
-    int anInt5551;
+    int maxMemory;
+    int processorCount;
+    boolean isARM;
 
-    int anInt5550;
-
-    boolean aBool5552;
-
-    public boolean method7719() {
-        return this.aBool5552;
+    public boolean isARM() {
+        return this.isARM;
     }
 
-    public int method7720(int i_1) {
-        return this.anInt5550;
+    public int getProcessorCount() {
+        return this.processorCount;
     }
 
-    public int method7721(int i_1) {
-        return this.anInt5551;
+    public int getMaxMemory() {
+        return this.maxMemory;
     }
 
-    Class463(int i_1, int i_2, boolean bool_3) {
-        this.anInt5551 = i_1;
-        this.anInt5550 = i_2;
-        this.aBool5552 = bool_3;
+    ProcessorSpecs(int i_1, int i_2, boolean bool_3) {
+        this.maxMemory = i_1;
+        this.processorCount = i_2;
+        this.isARM = bool_3;
     }
 
     static void method7724(Animable animable_0) {

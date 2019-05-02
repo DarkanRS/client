@@ -59,7 +59,7 @@ public class Class363 {
         if (animable_0.anInt10342 > client.cycles) {
             MovementType.method4281(animable_0);
         } else if (animable_0.anInt10345 >= client.cycles) {
-            Class463.method7727(animable_0);
+            ProcessorSpecs.method7727(animable_0);
         } else {
             SystemInfo.method13466(animable_0, bool_1);
             moveType = IdentikitDefinition.anInt430;

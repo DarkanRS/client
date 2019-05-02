@@ -92,7 +92,7 @@ public class CursorIndexLoader {
 		Class358.method6240(1510969650);
 		Class260.anInt3223 = -1;
 		Class260.aBool3220 = false;
-		Preference_Sub6.method12658(-111108219);
+		GraphicsPreference.method12658(-111108219);
 		ClipMap.method6008(true);
 		Class459.method7678(-1273832193);
 		Class204.method3367();

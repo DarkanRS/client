@@ -157,7 +157,7 @@ public final class Class251 {
 					ParticleProducer.method11500(0, false);
 					if (Class393.preferences.currentToolkit.getValue(-491393282) == 0) {
 						Class209.printConsoleMessage("Success");
-						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, -1122635532);
+						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
 						Class190.savePreferences((byte) 68);
 						client.aBool7175 = false;
 					} else {
@@ -169,7 +169,7 @@ public final class Class251 {
 					ParticleProducer.method11500(1, false);
 					if (Class393.preferences.currentToolkit.getValue(-1821997083) == 1) {
 						Class209.printConsoleMessage("Success");
-						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 1, -1690467164);
+						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 1);
 						Class190.savePreferences((byte) 47);
 						client.aBool7175 = false;
 					} else {
@@ -181,7 +181,7 @@ public final class Class251 {
 					ParticleProducer.method11500(2, false);
 					if (Class393.preferences.currentToolkit.getValue(2070272351) == 2) {
 						Class209.printConsoleMessage("Success");
-						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 2, -259704912);
+						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 2);
 						Class190.savePreferences((byte) 17);
 						client.aBool7175 = false;
 					} else {
@@ -193,7 +193,7 @@ public final class Class251 {
 					ParticleProducer.method11500(3, false);
 					if (Class393.preferences.currentToolkit.getValue(389435618) == 3) {
 						Class209.printConsoleMessage("Success");
-						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 3, 1626226442);
+						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 3);
 						Class190.savePreferences((byte) 28);
 						client.aBool7175 = false;
 					} else {
@@ -205,7 +205,7 @@ public final class Class251 {
 					ParticleProducer.method11500(5, false);
 					if (Class393.preferences.currentToolkit.getValue(-889180352) == 5) {
 						Class209.printConsoleMessage("Success");
-						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 5, -1654618197);
+						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 5);
 						Class190.savePreferences((byte) 119);
 						client.aBool7175 = false;
 					} else {

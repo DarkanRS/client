@@ -251,6 +251,6 @@ public class NodeCollection implements Iterable, Collection {
 		Class79.aNode_Sub15_Sub4_783 = new Node_Sub15_Sub4();
 		Class100.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
 		Class119.aClass344_1460 = new Class344(22050, Class253.anInt3129);
-		Preference_Sub6.method12658(552328415);
+		GraphicsPreference.method12658(552328415);
 	}
 }
