@@ -69,10 +69,6 @@ public class LoadingStage {
 		return new LoadingStage[] { aClass387_4697, aClass387_4695, aClass387_4696, aClass387_4702, aClass387_4708, aClass387_4699, aClass387_4700, aClass387_4717, aClass387_4709, aClass387_4716, aClass387_4704, aClass387_4705, aClass387_4706, aClass387_4707, aClass387_4713, aClass387_4698, aClass387_4710, aClass387_4701 };
 	}
 
-	public static void method6681(String string_1, byte b_2) {
-		Class191.method3167(4, 0, "", "", "", string_1, 146573843);
-	}
-
 	static final void renderMiniMiniMap(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4) {
 		graphicalrenderer_0.r(i_1, i_2, i_3 + i_1, i_2 + i_4);
 		graphicalrenderer_0.method8425(i_1, i_2, i_3, i_4, -16777216, (byte) -58);

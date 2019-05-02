@@ -34,7 +34,7 @@ public class Class163 {
 
 	static int method2840(CacheableNode_Sub15 class282_sub50_sub15_0, FontMetrics fontmetrics_1) {
 		String string_3 = CutsceneEntity.method1354(class282_sub50_sub15_0);
-		return fontmetrics_1.getWidth(string_3, Class115.aNativeSpriteArray1248);
+		return fontmetrics_1.getTextWidth(string_3, Class115.aNativeSpriteArray1248);
 	}
 
 	public static TilestreamPacket[] method2842() {

@@ -6,7 +6,7 @@ public interface Sprite {
 
 	int method227();
 
-	int method228();
+	int scaleWidth();
 
 	int method229();
 

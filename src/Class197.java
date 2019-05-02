@@ -18,7 +18,7 @@ public class Class197 {
 
 	static final void method3203(RsBitsBuffer rsbitsbuffer_0, byte b_1) {
 		rsbitsbuffer_0.initBitAccess((byte) -47);
-		int i_2 = client.anInt7315;
+		int i_2 = client.myPlayerIndex;
 		Player player_3 = VertexNormal.myPlayer = client.players[i_2] = new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
 		player_3.index = i_2;
 		int i_4 = rsbitsbuffer_0.readBits(30);

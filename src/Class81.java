@@ -1,12 +1,8 @@
 public class Class81 {
 
-	static int NUM_CHAT_LINES;
-
 	static Class152 aClass152_802;
 
 	static int anInt803;
-
-	static ChatLine[] CHAT_LINES = new ChatLine[100];
 
 	static int anInt801 = 0;
 

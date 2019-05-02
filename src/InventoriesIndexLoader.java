@@ -11,7 +11,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 		this.configIndex.filesCount(SharedConfigsType.INVENTORIES.id);
 	}
 
-	public ItemContainerDefinitions getInventoryDef(int i_1, short s_2) {
+	public ItemContainerDefinitions getInventoryDef(int i_1) {
 		SoftCache softcache_4 = this.cached;
 		ItemContainerDefinitions inventorydef_3;
 		synchronized (this.cached) {

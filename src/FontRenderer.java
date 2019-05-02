@@ -71,12 +71,12 @@ public abstract class FontRenderer {
                 }
             }
             i_20 = i_2;
-            int i_21 = i_3 + this.fontMetrics.anInt4978;
+            int i_21 = i_3 + this.fontMetrics.topPadding;
             int i_22 = -1;
             if (i_9 == 1) {
-                i_21 += (i_5 - this.fontMetrics.anInt4978 - this.fontMetrics.anInt4979) / 2;
+                i_21 += (i_5 - this.fontMetrics.topPadding - this.fontMetrics.bottomPadding) / 2;
             } else if (i_9 == 2) {
-                i_21 = i_3 + i_5 - this.fontMetrics.anInt4979;
+                i_21 = i_3 + i_5 - this.fontMetrics.bottomPadding;
             }
             if (i_8 == 1) {
                 i_22 = this.fontMetrics.getWidthNoSprites(string_1) + i_19;
@@ -91,9 +91,9 @@ public abstract class FontRenderer {
                     i_22 = this.fontMetrics.getWidthNoSprites(string_1) + i_19;
                 }
                 ints_12[0] = i_20;
-                ints_12[1] = i_21 - this.fontMetrics.anInt4978;
+                ints_12[1] = i_21 - this.fontMetrics.topPadding;
                 ints_12[2] = i_22;
-                ints_12[3] = this.fontMetrics.anInt4979 + this.fontMetrics.anInt4978;
+                ints_12[3] = this.fontMetrics.bottomPadding + this.fontMetrics.topPadding;
             }
             return i_19;
         }
@@ -171,7 +171,7 @@ public abstract class FontRenderer {
     }
 
     void method371(String string_1, int i_2, int i_3, NativeSprite[] arr_4, int[] ints_5, Class455 class455_6, int i_7, int i_8) {
-        i_3 -= this.fontMetrics.anInt4975;
+        i_3 -= this.fontMetrics.verticalSpacing;
         int i_10 = -1;
         int i_11 = -1;
         int i_12 = string_1.length();
@@ -201,15 +201,15 @@ public abstract class FontRenderer {
                         if (!string_15.equals("reg")) {
                             if (string_15.startsWith("img=")) {
                                 try {
-                                    int i_16 = Class328.parseInt(string_15.substring(4), -1416049939);
+                                    int i_16 = Utils.parseInt(string_15.substring(4));
                                     NativeSprite nativesprite_17 = arr_4[i_16];
                                     int i_18 = ints_5 != null ? ints_5[i_16] : nativesprite_17.method2748();
                                     if ((anInt64 & ~0xffffff) == -16777216) {
-                                        nativesprite_17.method2742(i_2, i_3 + this.fontMetrics.anInt4975 - i_18, 1, 0, 1);
+                                        nativesprite_17.method2742(i_2, i_3 + this.fontMetrics.verticalSpacing - i_18, 1, 0, 1);
                                     } else {
-                                        nativesprite_17.method2742(i_2, i_3 + this.fontMetrics.anInt4975 - i_18, 0, anInt64 & ~0xffffff | 0xffffff, 1);
+                                        nativesprite_17.method2742(i_2, i_3 + this.fontMetrics.verticalSpacing - i_18, 0, anInt64 & ~0xffffff | 0xffffff, 1);
                                     }
-                                    i_2 += arr_4[i_16].method228();
+                                    i_2 += arr_4[i_16].scaleWidth();
                                     i_11 = -1;
                                 } catch (Exception exception_21) {
                                     ;
@@ -245,10 +245,10 @@ public abstract class FontRenderer {
                     }
                     int i_20 = this.fontMetrics.method6945(var_14, (byte) -117);
                     if (anInt61 != -1) {
-                        this.renderer.method8659(i_2, i_3 + (int) (0.7D * (double) this.fontMetrics.anInt4975), i_20, anInt61, -1221933071);
+                        this.renderer.method8659(i_2, i_3 + (int) (0.7D * (double) this.fontMetrics.verticalSpacing), i_20, anInt61, -1221933071);
                     }
                     if (anInt62 != -1) {
-                        this.renderer.method8659(i_2, i_3 + this.fontMetrics.anInt4975 + 1, i_20, anInt62, 435318936);
+                        this.renderer.method8659(i_2, i_3 + this.fontMetrics.verticalSpacing + 1, i_20, anInt62, 435318936);
                     }
                     i_2 += i_20;
                     i_11 = var_14;
@@ -258,7 +258,7 @@ public abstract class FontRenderer {
     }
 
     void method372(String string_1, int i_2, int i_3, NativeSprite[] arr_4, int[] ints_5, int[] ints_6, int[] ints_7, int i_8) {
-        i_3 -= this.fontMetrics.anInt4975;
+        i_3 -= this.fontMetrics.verticalSpacing;
         int i_9 = -1;
         int i_10 = -1;
         int i_11 = 0;
@@ -302,11 +302,11 @@ public abstract class FontRenderer {
                                         i_17 = 0;
                                     }
                                     ++i_11;
-                                    int i_18 = Class328.parseInt(string_15.substring(4), 1488511496);
+                                    int i_18 = Utils.parseInt(string_15.substring(4));
                                     NativeSprite nativesprite_19 = arr_4[i_18];
                                     int i_20 = ints_5 != null ? ints_5[i_18] : nativesprite_19.method2748();
-                                    nativesprite_19.method2742(i_16 + i_2, i_3 + this.fontMetrics.anInt4975 - i_20 + i_17, 1, 0, 1);
-                                    i_2 += arr_4[i_18].method228();
+                                    nativesprite_19.method2742(i_16 + i_2, i_3 + this.fontMetrics.verticalSpacing - i_20 + i_17, 1, 0, 1);
+                                    i_2 += arr_4[i_18].scaleWidth();
                                     i_10 = -1;
                                 } catch (Exception exception_23) {
                                     ;
@@ -347,10 +347,10 @@ public abstract class FontRenderer {
                     }
                     i_17 = this.fontMetrics.method6945(var_14, (byte) -20);
                     if (anInt61 != -1) {
-                        this.renderer.method8659(i_2, i_3 + (int) ((double) this.fontMetrics.anInt4975 * 0.7D), i_17, anInt61, -645910355);
+                        this.renderer.method8659(i_2, i_3 + (int) ((double) this.fontMetrics.verticalSpacing * 0.7D), i_17, anInt61, -645910355);
                     }
                     if (anInt62 != -1) {
-                        this.renderer.method8659(i_2, i_3 + this.fontMetrics.anInt4975, i_17, anInt62, -510924109);
+                        this.renderer.method8659(i_2, i_3 + this.fontMetrics.verticalSpacing, i_17, anInt62, -510924109);
                     }
                     i_2 += i_17;
                     i_10 = var_14;
@@ -367,10 +367,10 @@ public abstract class FontRenderer {
         } else {
             this.method365(i_6, i_7, 745766148);
             if (i_10 == 0) {
-                i_10 = this.fontMetrics.anInt4975;
+                i_10 = this.fontMetrics.verticalSpacing;
             }
             int[] ints_18;
-            if (i_5 < i_10 + this.fontMetrics.anInt4979 + this.fontMetrics.anInt4978 && i_5 < i_10 + i_10) {
+            if (i_5 < i_10 + this.fontMetrics.bottomPadding + this.fontMetrics.topPadding && i_5 < i_10 + i_10) {
                 ints_18 = null;
             } else {
                 ints_18 = new int[] { i_4 };
@@ -383,7 +383,7 @@ public abstract class FontRenderer {
                 }
             }
             if (i_11 > 0 && i_19 >= i_11) {
-                aStringArray69[i_11 - 1] = this.fontMetrics.method6959(aStringArray69[i_11 - 1], i_4, arr_12);
+                aStringArray69[i_11 - 1] = this.fontMetrics.fitText(aStringArray69[i_11 - 1], i_4, arr_12);
                 i_19 = i_11;
             }
             if (i_9 == 3 && i_19 == 1) {
@@ -392,17 +392,17 @@ public abstract class FontRenderer {
             int i_20;
             int i_21;
             if (i_9 == 0) {
-                i_20 = i_3 + this.fontMetrics.anInt4978;
+                i_20 = i_3 + this.fontMetrics.topPadding;
             } else if (i_9 == 1) {
-                i_20 = (i_5 - this.fontMetrics.anInt4978 - this.fontMetrics.anInt4979 - i_10 * (i_19 - 1)) / 2 + i_3 + this.fontMetrics.anInt4978;
+                i_20 = (i_5 - this.fontMetrics.topPadding - this.fontMetrics.bottomPadding - i_10 * (i_19 - 1)) / 2 + i_3 + this.fontMetrics.topPadding;
             } else if (i_9 == 2) {
-                i_20 = i_3 + i_5 - this.fontMetrics.anInt4979 - i_10 * (i_19 - 1);
+                i_20 = i_3 + i_5 - this.fontMetrics.bottomPadding - i_10 * (i_19 - 1);
             } else {
-                i_21 = (i_5 - this.fontMetrics.anInt4978 - this.fontMetrics.anInt4979 - i_10 * (i_19 - 1)) / (i_19 + 1);
+                i_21 = (i_5 - this.fontMetrics.topPadding - this.fontMetrics.bottomPadding - i_10 * (i_19 - 1)) / (i_19 + 1);
                 if (i_21 < 0) {
                     i_21 = 0;
                 }
-                i_20 = i_3 + this.fontMetrics.anInt4978 + i_21;
+                i_20 = i_3 + this.fontMetrics.topPadding + i_21;
                 i_10 += i_21;
             }
             for (i_21 = 0; i_21 < i_19; i_21++) {
@@ -494,13 +494,13 @@ public abstract class FontRenderer {
     }
 
     static void method402(int i_0) {
-        Class179.anInt2230 = SkyboxIndexLoader.aClass414_3438.anInt4978 + SkyboxIndexLoader.aClass414_3438.anInt4979 + 2;
-        Class179.anInt2222 = Class16.aClass414_139.anInt4978 + Class16.aClass414_139.anInt4979 + 2;
+        Class179.anInt2230 = SkyboxIndexLoader.aClass414_3438.topPadding + SkyboxIndexLoader.aClass414_3438.bottomPadding + 2;
+        Class179.anInt2222 = Class16.aClass414_139.topPadding + Class16.aClass414_139.bottomPadding + 2;
         Class13.aStringArray129 = new String[500];
         for (int i_1 = 0; i_1 < Class13.aStringArray129.length; i_1++) {
             Class13.aStringArray129[i_1] = "";
         }
-        Class209.printConsoleMessage(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE, -1940277002), -1694092142);
+        Class209.printConsoleMessage(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE));
     }
 
     public static GraphicalRenderer method404(Canvas canvas_0, Interface22 interface22_1, int i_2, int i_3) {

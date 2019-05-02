@@ -51,7 +51,7 @@ public class Class114 {
 		} else {
 			fontmetrics_1 = SkyboxIndexLoader.aClass414_3438;
 		}
-		Class20.anInt178 = fontmetrics_1.anInt4979 + fontmetrics_1.anInt4978;
+		Class20.anInt178 = fontmetrics_1.bottomPadding + fontmetrics_1.topPadding;
 		return fontmetrics_1;
 	}
 

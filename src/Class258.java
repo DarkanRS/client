@@ -19,8 +19,8 @@ public class Class258 {
 
 	public static Class357 method4570(RsByteBuffer rsbytebuffer_0, int i_1) {
 		int i_2 = rsbytebuffer_0.readBigSmart();
-		Class356 class356_3 = Class350_Sub3_Sub1.method15558(251815760)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_4 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
+		Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readShort();
 		return new Class357(i_2, class356_3, class353_4, i_5, i_6);

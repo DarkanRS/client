@@ -47,7 +47,7 @@ public class VarcDefinitions {
 					i_8 = objectdefinitions_1.sizeY;
 					i_9 = objectdefinitions_1.sizeX;
 				}
-				int i_10 = nativesprite_7.method228();
+				int i_10 = nativesprite_7.scaleWidth();
 				int i_11 = nativesprite_7.method2748();
 				if (class418_6.aBool4996) {
 					i_10 = i_8 * 4;

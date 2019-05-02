@@ -646,7 +646,7 @@ public class NPCDefinitions {
 		} else if (opcode == 127) {
 			this.renderEmote = stream.readUnsignedShort();
 		} else if (opcode == 128) {
-			Class386.identify(FontRenderer_Sub3.method14339(), stream.readUnsignedByte());
+			Class386.identify(MovementType.values(), stream.readUnsignedByte());
 		} else if (opcode == 134) {
 			this.walkingAnimation = stream.readUnsignedShort();
 			if (this.walkingAnimation == 65535) {

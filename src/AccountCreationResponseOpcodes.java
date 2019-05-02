@@ -37,8 +37,4 @@ public class AccountCreationResponseOpcodes implements Identifiable {
 	public int getValue() {
 		return this.anInt5739;
 	}
-
-	public static Class353[] method8155() {
-		return new Class353[] { Class353.aClass353_4107, Class353.aClass353_4105, Class353.aClass353_4106 };
-	}
 }

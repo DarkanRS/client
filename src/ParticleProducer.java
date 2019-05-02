@@ -265,7 +265,7 @@ public class ParticleProducer {
 	}
 
 	public static void method11500(int i_0, boolean bool_1) {
-		Class231.method3914(i_0, Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -929025713), bool_1, (byte) 104);
+		Class231.method3914(i_0, Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), bool_1, (byte) 104);
 	}
 
 	static final void method11501(int i_0) {

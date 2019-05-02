@@ -24,7 +24,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_11;
 		float f_12;
 		if (this.aBool9028) {
-			f_11 = (float) this.method228();
+			f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			float f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -181,7 +181,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		} else {
 			OpenGL.glPushMatrix();
 			OpenGL.glTranslatef((float) this.anInt9030, (float) this.anInt9034, 0.0F);
-			int i_10 = this.method228();
+			int i_10 = this.scaleWidth();
 			int i_11 = this.method2748();
 			int i_12 = this.aClass137_Sub1_Sub1_9033.anInt10133 + i_2;
 			OpenGL.glBegin(7);
@@ -355,7 +355,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		this.aGraphicalRenderer_Sub1_9032.method13624(i_7);
 		OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
 		if (this.aBool9028) {
-			float f_9 = (float) i_3 / (float) this.method228();
+			float f_9 = (float) i_3 / (float) this.scaleWidth();
 			float f_10 = (float) i_4 / (float) this.method2748();
 			float f_11 = (float) i_1 + (float) this.anInt9030 * f_9;
 			float f_12 = (float) i_2 + (float) this.anInt9034 * f_10;
@@ -432,7 +432,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_11;
 		float f_12;
 		if (this.aBool9028) {
-			f_11 = (float) this.method228();
+			f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			float f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -474,7 +474,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		OpenGL.glEnd();
 	}
 
-	public int method228() {
+	public int scaleWidth() {
 		return this.aClass137_Sub1_Sub1_9033.anInt10136 + this.anInt9030 + this.anInt9036;
 	}
 
@@ -503,7 +503,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		} else {
 			OpenGL.glPushMatrix();
 			OpenGL.glTranslatef((float) this.anInt9030, (float) this.anInt9034, 0.0F);
-			int i_10 = this.method228();
+			int i_10 = this.scaleWidth();
 			int i_11 = this.method2748();
 			int i_12 = i_2 + this.aClass137_Sub1_Sub1_9033.anInt10133;
 			OpenGL.glBegin(7);
@@ -604,7 +604,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_14;
 		float f_15;
 		if (this.aBool9028) {
-			f_12 = (float) this.method228();
+			f_12 = (float) this.scaleWidth();
 			f_13 = (float) this.method2748();
 			f_14 = (f_3 - f_1) / f_12;
 			f_15 = (f_4 - f_2) / f_12;
@@ -773,7 +773,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		this.aGraphicalRenderer_Sub1_9032.method13624(i_7);
 		OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
 		if (this.aBool9028) {
-			float f_9 = (float) i_3 / (float) this.method228();
+			float f_9 = (float) i_3 / (float) this.scaleWidth();
 			float f_10 = (float) i_4 / (float) this.method2748();
 			float f_11 = (float) i_1 + (float) this.anInt9030 * f_9;
 			float f_12 = (float) i_2 + (float) this.anInt9034 * f_10;
@@ -853,7 +853,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_14;
 		float f_15;
 		if (this.aBool9028) {
-			f_12 = (float) this.method228();
+			f_12 = (float) this.scaleWidth();
 			f_13 = (float) this.method2748();
 			f_14 = (f_3 - f_1) / f_12;
 			f_15 = (f_4 - f_2) / f_12;
@@ -1115,7 +1115,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		} else {
 			OpenGL.glPushMatrix();
 			OpenGL.glTranslatef((float) this.anInt9030, (float) this.anInt9034, 0.0F);
-			int i_10 = this.method228();
+			int i_10 = this.scaleWidth();
 			int i_11 = this.method2748();
 			int i_12 = i_2 + this.aClass137_Sub1_Sub1_9033.anInt10133;
 			OpenGL.glBegin(7);
@@ -1197,7 +1197,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_11;
 		float f_12;
 		if (this.aBool9028) {
-			f_11 = (float) this.method228();
+			f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			float f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -1243,7 +1243,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_11;
 		float f_12;
 		if (this.aBool9028) {
-			f_11 = (float) this.method228();
+			f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			float f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -1308,7 +1308,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		float f_14;
 		float f_15;
 		if (this.aBool9028) {
-			f_12 = (float) this.method228();
+			f_12 = (float) this.scaleWidth();
 			f_13 = (float) this.method2748();
 			f_14 = (f_3 - f_1) / f_12;
 			f_15 = (f_4 - f_2) / f_12;
@@ -1399,7 +1399,7 @@ public class NativeSprite_Sub2 extends NativeSprite {
 		this.aGraphicalRenderer_Sub1_9032.method13624(i_7);
 		OpenGL.glColor4ub((byte) (i_6 >> 16), (byte) (i_6 >> 8), (byte) i_6, (byte) (i_6 >> 24));
 		if (this.aBool9028) {
-			float f_9 = (float) i_3 / (float) this.method228();
+			float f_9 = (float) i_3 / (float) this.scaleWidth();
 			float f_10 = (float) i_4 / (float) this.method2748();
 			float f_11 = (float) i_1 + (float) this.anInt9030 * f_9;
 			float f_12 = (float) i_2 + (float) this.anInt9034 * f_10;

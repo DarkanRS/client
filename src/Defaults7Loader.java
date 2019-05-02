@@ -94,7 +94,7 @@ public class Defaults7Loader {
         return meshrasterizer_9;
     }
 
-    public static String method8755(RsByteBuffer rsbytebuffer_0, byte b_1) {
+    public static String method8755(RsByteBuffer rsbytebuffer_0) {
         return Node_Sub33.method12582(rsbytebuffer_0);
     }
 }

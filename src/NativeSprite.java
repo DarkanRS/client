@@ -37,7 +37,7 @@ public abstract class NativeSprite implements Sprite {
 	public abstract int method2757();
 
 	public final void method2758(float f_1, float f_2, int i_3, int i_4) {
-		this.method2760(f_1, f_2, (float) this.method228() / 2.0F, (float) this.method2748() / 2.0F, i_3, i_4, 1, 0);
+		this.method2760(f_1, f_2, (float) this.scaleWidth() / 2.0F, (float) this.method2748() / 2.0F, i_3, i_4, 1, 0);
 	}
 
 	final void method2760(float f_1, float f_2, float f_3, float f_4, int i_5, int i_6, int i_7, int i_8) {
@@ -47,8 +47,8 @@ public abstract class NativeSprite implements Sprite {
 			float f_13 = (float) Math.cos(d_10) * (float) i_5;
 			float f_14 = (-f_3 * f_13 + -f_4 * f_12) / 4096.0F + f_1;
 			float f_15 = (--f_3 * f_12 + -f_4 * f_13) / 4096.0F + f_2;
-			float f_16 = (((float) this.method228() - f_3) * f_13 + -f_4 * f_12) / 4096.0F + f_1;
-			float f_17 = (-((float) this.method228() - f_3) * f_12 + -f_4 * f_13) / 4096.0F + f_2;
+			float f_16 = (((float) this.scaleWidth() - f_3) * f_13 + -f_4 * f_12) / 4096.0F + f_1;
+			float f_17 = (-((float) this.scaleWidth() - f_3) * f_12 + -f_4 * f_13) / 4096.0F + f_2;
 			float f_18 = (-f_3 * f_13 + ((float) this.method2748() - f_4) * f_12) / 4096.0F + f_1;
 			float f_19 = (--f_3 * f_12 + ((float) this.method2748() - f_4) * f_13) / 4096.0F + f_2;
 			this.method2763(f_14, f_15, f_16, f_17, f_18, f_19, i_7, i_8, 1);
@@ -57,7 +57,7 @@ public abstract class NativeSprite implements Sprite {
 	}
 
 	public final void method2761(float f_1, float f_2, int i_4, Class455 class455_5, int i_6, int i_7) {
-		this.method2762(f_1, f_2, (float) this.method228() / 2.0F, (float) this.method2748() / 2.0F, 4141, i_4, class455_5, i_6, i_7);
+		this.method2762(f_1, f_2, (float) this.scaleWidth() / 2.0F, (float) this.method2748() / 2.0F, 4141, i_4, class455_5, i_6, i_7);
 	}
 
 	public final void method2762(float f_1, float f_2, float f_3, float f_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
@@ -67,8 +67,8 @@ public abstract class NativeSprite implements Sprite {
 			float f_13 = (float) Math.cos(d_10) * (float) i_5;
 			float f_14 = (-f_3 * f_13 + -f_4 * f_12) / 4096.0F + f_1;
 			float f_15 = (--f_3 * f_12 + -f_4 * f_13) / 4096.0F + f_2;
-			float f_16 = (((float) this.method228() - f_3) * f_13 + -f_4 * f_12) / 4096.0F + f_1;
-			float f_17 = (-((float) this.method228() - f_3) * f_12 + -f_4 * f_13) / 4096.0F + f_2;
+			float f_16 = (((float) this.scaleWidth() - f_3) * f_13 + -f_4 * f_12) / 4096.0F + f_1;
+			float f_17 = (-((float) this.scaleWidth() - f_3) * f_12 + -f_4 * f_13) / 4096.0F + f_2;
 			float f_18 = (-f_3 * f_13 + ((float) this.method2748() - f_4) * f_12) / 4096.0F + f_1;
 			float f_19 = (--f_3 * f_12 + ((float) this.method2748() - f_4) * f_13) / 4096.0F + f_2;
 			this.method2797(f_14, f_15, f_16, f_17, f_18, f_19, class455_7, i_8, i_9);
@@ -133,7 +133,7 @@ public abstract class NativeSprite implements Sprite {
 	public abstract int method225();
 
 	public final void method2790(float f_1, float f_2, int i_3, int i_4, int i_6) {
-		this.method2760(f_1, f_2, (float) this.method228() / 2.0F, (float) this.method2748() / 2.0F, i_3, i_4, 0, i_6);
+		this.method2760(f_1, f_2, (float) this.scaleWidth() / 2.0F, (float) this.method2748() / 2.0F, i_3, i_4, 0, i_6);
 	}
 
 	abstract void method2791(float var1, float var2, float var3, float var4, float var5, float var6, int var7, int var8, int var9, int var10);
@@ -164,7 +164,7 @@ public abstract class NativeSprite implements Sprite {
 
 	public abstract void method2804(int[] var1);
 
-	public abstract int method228();
+	public abstract int scaleWidth();
 
 	public abstract Interface9 method2808();
 

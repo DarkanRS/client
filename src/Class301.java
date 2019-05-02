@@ -111,7 +111,7 @@ public class Class301 implements Interface41 {
 					} catch (Exception exception_12) {
 						;
 					}
-					Class209.printConsoleMessage("Pausing for " + i_2 + " seconds...", -707420136);
+					Class209.printConsoleMessage("Pausing for " + i_2 + " seconds...");
 					Class179.anInt2231 = i_1 + 1;
 					Class179.aLong2232 = Utils.time() + (long) (i_2 * 1000);
 					return;
@@ -134,7 +134,7 @@ public class Class301 implements Interface41 {
 		for (i_1 = 0; i_1 < client.anInt7193; i_1++) {
 			KeyRecord interface16_9 = client.KEYS_PRESSED[i_1];
 			int i_10 = interface16_9.getCode();
-			char var_4 = interface16_9.getCode(-63648913);
+			char var_4 = interface16_9.getCharacter();
 			int i_5 = interface16_9.getFlags();
 			if (i_10 == 84) {
 				Class165.method2853(false, -2060132011);
@@ -188,7 +188,7 @@ public class Class301 implements Interface41 {
 				Class534.method11441((byte) -128);
 				Class179.anInt2220 = Class179.aString2225.length();
 			} else if (Class380.method6450(var_4, -803297917) || "\\/.:, _-+[]~@".indexOf(var_4) != -1) {
-				Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.KEYS_PRESSED[i_1].getCode(-890560120) + Class179.aString2225.substring(Class179.anInt2220);
+				Class179.aString2225 = Class179.aString2225.substring(0, Class179.anInt2220) + client.KEYS_PRESSED[i_1].getCharacter() + Class179.aString2225.substring(Class179.anInt2220);
 				++Class179.anInt2220;
 			}
 		}

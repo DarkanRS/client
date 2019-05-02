@@ -286,7 +286,7 @@ public abstract class Class101 {
 	public static int getContainerFreeSpace(int i_0) {
 		ItemContainer container = ItemContainer.getContainer(i_0, false);
 		if (container == null) {
-			return IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 6976).maxSize;
+			return IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0).maxSize;
 		} else {
 			int i_4 = 0;
 			for (int i_5 = 0; i_5 < container.itemIds.length; i_5++) {
@@ -294,7 +294,7 @@ public abstract class Class101 {
 					++i_4;
 				}
 			}
-			i_4 += IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0, (short) 24410).maxSize - container.itemIds.length;
+			i_4 += IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_0).maxSize - container.itemIds.length;
 			return i_4;
 		}
 	}

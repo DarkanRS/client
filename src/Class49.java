@@ -38,7 +38,7 @@ public class Class49 {
 					anObject483 = JS5Manager.method5493(bytes_1, (byte) 40);
 				}
 
-				bytes_1 = Class346.method6154(anObject483, false);
+				bytes_1 = QuickChatMessage.method6154(anObject483, false);
 				byte[] bytes_2 = new byte[bytes_1.length * 4];
 				int i_3 = 0;
 
@@ -96,9 +96,9 @@ public class Class49 {
 					this.anInterface6Array478[i_2] = this.aGraphicalRenderer_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, bytes_3);
 				}
 			} else {
-				byte[] bytes_4 = Class346.method6154(anObject482, false);
+				byte[] bytes_4 = QuickChatMessage.method6154(anObject482, false);
 				this.anInterface1_475 = this.aGraphicalRenderer_Sub2_481.method13962(Class150.aClass150_1952, bytes_4);
-				bytes_4 = Class346.method6154(anObject477, false);
+				bytes_4 = QuickChatMessage.method6154(anObject477, false);
 				this.anInterface1_479 = this.aGraphicalRenderer_Sub2_481.method13962(Class150.aClass150_1952, bytes_4);
 			}
 		}

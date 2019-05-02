@@ -20,7 +20,7 @@ public class Node_Sub46 extends Node {
 			graphicalrenderer_0.B(i_2, i_3, i_4, i_5, -16777216, 0);
 			graphicalrenderer_0.method8430(i_8 - 152, i_9, 304, 34, client.aColorArray7199[client.anInt7447].getRGB(), 0);
 			graphicalrenderer_0.B(i_8 - 150, i_9 + 2, Class291_Sub1.anInt8015 * 3, 30, client.aColorArray7186[client.anInt7447].getRGB(), 0);
-			Class285.aFontRenderer_3394.method360(Message.LOADING.translate(Class223.CURRENT_LANGUAGE, -895351629), i_8, b_7 + i_9, client.aColorArray7200[client.anInt7447].getRGB(), -1);
+			Class285.aFontRenderer_3394.method360(Message.LOADING.translate(Class223.CURRENT_LANGUAGE), i_8, b_7 + i_9, client.aColorArray7200[client.anInt7447].getRGB(), -1);
 		} else {
 			int i_17 = MapSpriteIndexLoader.anInt5123 - (int) ((float) i_4 / Class291_Sub1.aFloat3468);
 			i_8 = (int) ((float) i_5 / Class291_Sub1.aFloat3468) + Class475.anInt5624;

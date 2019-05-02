@@ -87,7 +87,7 @@ public class Class320 {
 	}
 
 	public static void method5731(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
-		Class42.method890(i_5, i_6, 100, (byte) -118);
+		Class42.playSoundSong(i_5, i_6, 100, (byte) -118);
 		Class260.aClass277_3234 = new Class277(i_0, i_1 << 9, i_2 << 9, i_3 << 8, i_4 * 8);
 	}
 

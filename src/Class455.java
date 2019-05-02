@@ -15,7 +15,7 @@ public abstract class Class455 {
                 PlayerAppearance.method4032(string_8, icomponentdefinitions_0.aString1369, Class520.method11163(icomponentdefinitions_0, i_7, 556653013), 1007, icomponentdefinitions_0.anInt1426, (long) (i_7 + 1), icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -976206052);
             }
         }
-        String string_9 = Class346.method6157(icomponentdefinitions_0, -948753255);
+        String string_9 = QuickChatMessage.method6157(icomponentdefinitions_0, -948753255);
         if (string_9 != null) {
             PlayerAppearance.method4032(string_9, icomponentdefinitions_0.aString1369, icomponentdefinitions_0.anInt1378, 25, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1589662667);
         }
@@ -29,7 +29,7 @@ public abstract class Class455 {
             if (icomponentdefinitions_0.aString1348 != null) {
                 PlayerAppearance.method4032(icomponentdefinitions_0.aString1348, "", -1, 30, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1336342241);
             } else {
-                PlayerAppearance.method4032(Message.CONTINUE.translate(Class223.CURRENT_LANGUAGE, -1421679788), "", -1, 30, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1542959326);
+                PlayerAppearance.method4032(Message.CONTINUE.translate(Class223.CURRENT_LANGUAGE), "", -1, 30, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1542959326);
             }
         }
     }

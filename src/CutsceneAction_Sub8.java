@@ -11,7 +11,7 @@ public class CutsceneAction_Sub8 extends CutsceneAction {
 	int anInt9268;
 
 	public void method1592() {
-		this.aClass268_9271 = Class435.method7300(this.anInt9270, this.anInt9268, 0, this.anInt9269, false, this.anInt9272);
+		this.aClass268_9271 = Class435.playSoundVorbis(this.anInt9270, this.anInt9268, 0, this.anInt9269, false, this.anInt9272);
 	}
 
 	CutsceneAction_Sub8(RsByteBuffer rsbytebuffer_1) {
@@ -30,7 +30,7 @@ public class CutsceneAction_Sub8 extends CutsceneAction {
 	}
 
 	public void method1601() {
-		this.aClass268_9271 = Class435.method7300(983294899 * this.anInt9270 * -1315470469, this.anInt9268 * 1609664985 * -573413783, 0, this.anInt9269 * -957613339 * -840420627, false, 177588843 * this.anInt9272 * -1529769405);
+		this.aClass268_9271 = Class435.playSoundVorbis(983294899 * this.anInt9270 * -1315470469, this.anInt9268 * 1609664985 * -573413783, 0, this.anInt9269 * -957613339 * -840420627, false, 177588843 * this.anInt9272 * -1529769405);
 	}
 
 	static boolean method14577() {

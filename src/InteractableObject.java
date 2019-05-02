@@ -328,17 +328,17 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			if (icomponentdefinitions_7 != null && icomponentdefinitions_7.parent == i_1) {
 				Class484.method8200(icomponentdefinitions_7, i_2, i_3, bool_4, -417515150);
 				Class246.method4204(icomponentdefinitions_7, i_2, i_3, -878856707);
-				if (icomponentdefinitions_7.anInt1311 > icomponentdefinitions_7.anInt1376 - icomponentdefinitions_7.anInt1301) {
-					icomponentdefinitions_7.anInt1311 = icomponentdefinitions_7.anInt1376 - icomponentdefinitions_7.anInt1301;
+				if (icomponentdefinitions_7.scrollX > icomponentdefinitions_7.scrollWidth - icomponentdefinitions_7.width) {
+					icomponentdefinitions_7.scrollX = icomponentdefinitions_7.scrollWidth - icomponentdefinitions_7.width;
 				}
-				if (icomponentdefinitions_7.anInt1311 < 0) {
-					icomponentdefinitions_7.anInt1311 = 0;
+				if (icomponentdefinitions_7.scrollX < 0) {
+					icomponentdefinitions_7.scrollX = 0;
 				}
-				if (icomponentdefinitions_7.anInt1312 > icomponentdefinitions_7.anInt1314 - icomponentdefinitions_7.anInt1429) {
-					icomponentdefinitions_7.anInt1312 = icomponentdefinitions_7.anInt1314 - icomponentdefinitions_7.anInt1429;
+				if (icomponentdefinitions_7.scrollY > icomponentdefinitions_7.scrollHeight - icomponentdefinitions_7.height) {
+					icomponentdefinitions_7.scrollY = icomponentdefinitions_7.scrollHeight - icomponentdefinitions_7.height;
 				}
-				if (icomponentdefinitions_7.anInt1312 < 0) {
-					icomponentdefinitions_7.anInt1312 = 0;
+				if (icomponentdefinitions_7.scrollY < 0) {
+					icomponentdefinitions_7.scrollY = 0;
 				}
 				if (icomponentdefinitions_7.type == 0) {
 					Class480.method8044(arr_0, icomponentdefinitions_7, bool_4, (byte) -82);

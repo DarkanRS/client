@@ -29,7 +29,7 @@ public class Class302 {
 		BASDefinitions renderAnim = animable.getRenderAnimDefs();
 		MovingAnimation animation = animable.aAnimation_Sub3_10337;
 		int turnDirection = animable.turnDirection - animable.aClass19_10359.turnDirection & 0x3fff;
-		if (moveType == MovementType.TELEPORT.id) {
+		if (moveType == MovementType.STATIONARY.id) {
 			if (turnDirection == 0 && animable.turningTicks <= 25) {
 				if (!animation.aBool7891 || !renderAnim.method3810(animation.method7597())) {
 					animation.animate(renderAnim.getStandAnimation());

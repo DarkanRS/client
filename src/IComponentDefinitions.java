@@ -51,8 +51,8 @@ public class IComponentDefinitions {
 	public byte aByte1355 = 0;
 	public int parent = -1;
 	public boolean hidden = false;
-	public int anInt1376 = 0;
-	public int anInt1314 = 0;
+	public int scrollWidth = 0;
+	public int scrollHeight = 0;
 	public boolean noClickThrough = false;
 	public int anInt1320 = -1;
 	public int anInt1423 = 0;
@@ -113,13 +113,13 @@ public class IComponentDefinitions {
 	public Object[] anObjectArray1396;
 	public Object[] anObjectArray1400;
 	public Object[] anObjectArray1397;
-	public Object[] anObjectArray1342;
+	public Object[] mouseLeaveScript;
 	public Object[] anObjectArray1387;
 	public Object[] anObjectArray1409;
 	public Object[] params;
 	public int anInt1326 = 0;
 	public Object[] anObjectArray1393;
-	public Object[] anObjectArray1278;
+	public Object[] mouseOverScript;
 	public Object[] anObjectArray1386;
 	public Object[] anObjectArray1319;
 	public Object[] anObjectArray1302;
@@ -130,7 +130,7 @@ public class IComponentDefinitions {
 	public Object[] anObjectArray1403;
 	public Object[] anObjectArray1405;
 	public int[] anIntArray1401;
-	public int[] anIntArray1398;
+	public int[] mouseLeaveArrayParam;
 	public int[] anIntArray1402;
 	public int[] anIntArray1315;
 	public int[] anIntArray1406;
@@ -145,19 +145,19 @@ public class IComponentDefinitions {
 	public Object[] anObjectArray1346;
 	public Object[] anObjectArray1353;
 	public Object[] anObjectArray1271;
-	public boolean aBool1384;
+	public boolean usesScripts;
 	public ParticleSystem particleSystem;
 	IterableNodeMap aClass465_1365;
 	public int idHash = -1;
 	public int anInt1288 = -1;
-	public int anInt1299 = 0;
-	public int anInt1428 = 0;
-	public int anInt1301 = 0;
-	public int anInt1429 = 0;
+	public int x = 0;
+	public int y = 0;
+	public int width = 0;
+	public int height = 0;
 	public int anInt1289 = 1;
 	public int anInt1375 = 1;
-	public int anInt1311 = 0;
-	public int anInt1312 = 0;
+	public int scrollX = 0;
+	public int scrollY = 0;
 	public int anInt1339 = -1;
 	public int anInt1293 = 0;
 	public int anInt1334 = 0;
@@ -217,8 +217,8 @@ public class IComponentDefinitions {
 			this.noClickThrough = (i_4 & 0x2) != 0;
 		}
 		if (this.type == 0) {
-			this.anInt1376 = rsbytebuffer_1.readUnsignedShort();
-			this.anInt1314 = rsbytebuffer_1.readUnsignedShort();
+			this.scrollWidth = rsbytebuffer_1.readUnsignedShort();
+			this.scrollHeight = rsbytebuffer_1.readUnsignedShort();
 			if (i_3 < 0) {
 				this.noClickThrough = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
@@ -404,14 +404,14 @@ public class IComponentDefinitions {
 		this.anObjectArray1396 = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1400 = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1397 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1342 = this.method1990(rsbytebuffer_1);
+		this.mouseLeaveScript = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1387 = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1409 = this.method1990(rsbytebuffer_1);
 		this.params = this.method1990(rsbytebuffer_1);
 		if (i_3 >= 0) {
 			this.anObjectArray1393 = this.method1990(rsbytebuffer_1);
 		}
-		this.anObjectArray1278 = this.method1990(rsbytebuffer_1);
+		this.mouseOverScript = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1386 = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1319 = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1302 = this.method1990(rsbytebuffer_1);
@@ -422,7 +422,7 @@ public class IComponentDefinitions {
 		this.anObjectArray1403 = this.method1990(rsbytebuffer_1);
 		this.anObjectArray1405 = this.method1990(rsbytebuffer_1);
 		this.anIntArray1401 = this.method1986(rsbytebuffer_1);
-		this.anIntArray1398 = this.method1986(rsbytebuffer_1);
+		this.mouseLeaveArrayParam = this.method1986(rsbytebuffer_1);
 		this.anIntArray1402 = this.method1986(rsbytebuffer_1);
 		this.anIntArray1315 = this.method1986(rsbytebuffer_1);
 		this.anIntArray1406 = this.method1986(rsbytebuffer_1);
@@ -448,7 +448,7 @@ public class IComponentDefinitions {
 		this.anObjectArray1302 = null;
 		this.anObjectArray1389 = null;
 		this.anObjectArray1390 = null;
-		this.anObjectArray1278 = null;
+		this.mouseOverScript = null;
 		this.anObjectArray1392 = null;
 		this.anObjectArray1451 = null;
 		this.anObjectArray1394 = null;
@@ -456,8 +456,8 @@ public class IComponentDefinitions {
 		this.anObjectArray1396 = null;
 		this.anObjectArray1397 = null;
 		this.anIntArray1401 = null;
-		this.anObjectArray1342 = null;
-		this.anIntArray1398 = null;
+		this.mouseLeaveScript = null;
+		this.mouseLeaveArrayParam = null;
 		this.anObjectArray1387 = null;
 		this.anIntArray1402 = null;
 		this.anObjectArray1403 = null;
@@ -507,7 +507,7 @@ public class IComponentDefinitions {
 					arr_4[i_5] = rsbytebuffer_1.readString();
 				}
 			}
-			this.aBool1384 = true;
+			this.usesScripts = true;
 			return arr_4;
 		}
 	}
@@ -726,7 +726,7 @@ public class IComponentDefinitions {
 		this.anInt1381 = 0;
 		this.anInt1382 = anInt1283;
 		this.aString1338 = "";
-		this.aBool1384 = false;
+		this.usesScripts = false;
 		this.anInt1426 = -1;
 		this.anInt1427 = 0;
 		this.aBool1388 = false;

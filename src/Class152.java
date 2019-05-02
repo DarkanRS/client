@@ -156,13 +156,13 @@ public abstract class Class152 {
 						Class6 class6_4 = client.aClass6Array7452[i_3];
 						string_5 = Class383.method6515(class6_4.aString37);
 						if (string_5 != null && string_5.equals(string_2)) {
-							LoadingStage.method6681(string_0 + Message.aClass433_5300.translate(Class223.CURRENT_LANGUAGE, -429754713), (byte) 25);
+							ChatLine.appendGameMessage(string_0 + Message.ALREADY_ON_FRIENDS_LIST.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
 						if (class6_4.aString43 != null) {
 							string_6 = Class383.method6515(class6_4.aString43);
 							if (string_6 != null && string_6.equals(string_2)) {
-								LoadingStage.method6681(string_0 + Message.aClass433_5300.translate(Class223.CURRENT_LANGUAGE, -1776218961), (byte) 15);
+								ChatLine.appendGameMessage(string_0 + Message.ALREADY_ON_FRIENDS_LIST.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
@@ -171,19 +171,19 @@ public abstract class Class152 {
 						Class10 class10_8 = client.aClass10Array7456[i_3];
 						string_5 = Class383.method6515(class10_8.aString115);
 						if (string_5 != null && string_5.equals(string_2)) {
-							LoadingStage.method6681(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE, -2005183517) + string_0 + Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE, -2069902145), (byte) 0);
+							ChatLine.appendGameMessage(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
 						if (class10_8.aString116 != null) {
 							string_6 = Class383.method6515(class10_8.aString116);
 							if (string_6 != null && string_6.equals(string_2)) {
-								LoadingStage.method6681(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE, -1810692087) + string_0 + Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE, -1486683427), (byte) 11);
+								ChatLine.appendGameMessage(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
 					}
 					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_2)) {
-						LoadingStage.method6681(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592), (byte) 58);
+						ChatLine.appendGameMessage(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE));
 					} else {
 						BufferedConnectionContext class184_7 = Preference_Sub20.method12807(1188178835);
 						TCPPacket tcpmessage_9 = Class271.createPacket(OutgoingPacket.ADD_FRIEND, class184_7.isaac);
@@ -193,7 +193,7 @@ public abstract class Class152 {
 					}
 				}
 			} else {
-				LoadingStage.method6681(Message.aClass433_5309.translate(Class223.CURRENT_LANGUAGE, -1836106303), (byte) 44);
+				ChatLine.appendGameMessage(Message.aClass433_5309.translate(Class223.CURRENT_LANGUAGE));
 			}
 		}
 	}

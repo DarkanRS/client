@@ -99,7 +99,7 @@ public class Preference_Sub20 extends Preference {
 		LoadingStage xloadingstage_1 = IndexLoaders.LOADING_STAGE;
 		int i_2 = IndexLoaders.initializeGame();
 		if (xloadingstage_1 == IndexLoaders.LOADING_STAGE) {
-			Class380.aString4636 = IndexLoaders.LOADING_STAGE.aClass433_4711.translate(Class223.CURRENT_LANGUAGE, -1559474593);
+			Class380.aString4636 = IndexLoaders.LOADING_STAGE.aClass433_4711.translate(Class223.CURRENT_LANGUAGE);
 			if (IndexLoaders.LOADING_STAGE.aBool4718) {
 				Class302.anInt3563 = i_2 * (IndexLoaders.LOADING_STAGE.anInt4703 - IndexLoaders.LOADING_STAGE.anInt4715) / 100 + IndexLoaders.LOADING_STAGE.anInt4715;
 			}
@@ -110,7 +110,7 @@ public class Preference_Sub20 extends Preference {
 			Class328.aClass306_3771 = null;
 			Class365.setGameState(5);
 		} else {
-			Class380.aString4636 = xloadingstage_1.aClass433_4714.translate(Class223.CURRENT_LANGUAGE, -2022596623);
+			Class380.aString4636 = xloadingstage_1.aClass433_4714.translate(Class223.CURRENT_LANGUAGE);
 			if (IndexLoaders.LOADING_STAGE.aBool4694) {
 				Class380.aString4636 = Class380.aString4636 + xloadingstage_1.anInt4703 + "%";
 			}

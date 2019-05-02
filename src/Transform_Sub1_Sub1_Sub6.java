@@ -460,9 +460,4 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
 	}
-
-	public static int getAmountAtSlot(int key, int slot, boolean negativeKey, int i_3) {
-		ItemContainer container = ItemContainer.getContainer(key, negativeKey);
-		return container == null ? 0 : (slot >= 0 && slot < container.amounts.length ? container.amounts[slot] : 0);
-	}
 }

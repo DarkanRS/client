@@ -67,8 +67,4 @@ public final class Class328 implements Comparable {
 			;
 		}
 	}
-
-	public static int parseInt(CharSequence charsequence_0, int i_1) {
-		return Class356.parseInt(charsequence_0, 10);
-	}
 }

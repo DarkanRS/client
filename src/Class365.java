@@ -51,7 +51,7 @@ public class Class365 implements Interface3 {
 			}
 
 			if (state == 0) {
-				Class346.method6161(client.anInt7349 != QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow);
+				QuickChatMessage.method6161(client.anInt7349 != QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow);
 			}
 
 			if (state != 14 && state != 12) {

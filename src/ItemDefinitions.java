@@ -225,7 +225,7 @@ public class ItemDefinitions implements Definition {
                 this.inventoryOptions[i_4] = itemdefinitions_2.inventoryOptions[i_4];
             }
         }
-        this.inventoryOptions[4] = Message.DISCARD_2.translate(this.loader.language, -2102685104);
+        this.inventoryOptions[4] = Message.DISCARD_2.translate(this.loader.language);
     }
 
     void generateCert(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2) {
@@ -870,7 +870,7 @@ public class ItemDefinitions implements Definition {
                 this.inventoryOptions[i_4] = itemdefinitions_2.inventoryOptions[i_4];
             }
         }
-        this.inventoryOptions[4] = Message.DISCARD.translate(this.loader.language, -898798531);
+        this.inventoryOptions[4] = Message.DISCARD.translate(this.loader.language);
     }
 
     static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6) {

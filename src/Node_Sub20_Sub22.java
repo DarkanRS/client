@@ -231,7 +231,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 											if (hookrequest_14 == null) {
 												while (true) {
 													do {
-														hookrequest_14 = (HookRequest) client.aClass482_7402.popHead();
+														hookrequest_14 = (HookRequest) client.PENDING_HOOK_REQUESTS.popHead();
 														if (hookrequest_14 == null) {
 															if (Node_Sub20_Sub24.aClass118_9884 == null) {
 																client.anInt7184 = 0;
@@ -259,10 +259,10 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 															for (EntityNode_Sub4 class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_15 != null; class275_sub4_15 = (EntityNode_Sub4) client.aClass457_7350.method7650((byte) 20)) {
 																if ((long) class275_sub4_15.anInt7838 < Utils.time() / 1000L - 5L) {
 																	if (class275_sub4_15.aShort7839 > 0) {
-																		Class191.method3167(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE, -1783066271), 442373563);
+																		ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
 																	}
 																	if (class275_sub4_15.aShort7839 == 0) {
-																		Class191.method3167(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE, -805981058), 1499607134);
+																		ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_15.aString7837 + Message.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
 																	}
 																	class275_sub4_15.method4887();
 																}
@@ -338,7 +338,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 															}
 															return;
 														}
-														icomponentdefinitions_10 = hookrequest_14.iComponentDefs;
+														icomponentdefinitions_10 = hookrequest_14.source;
 														if (icomponentdefinitions_10.anInt1288 < 0) {
 															break;
 														}
@@ -347,7 +347,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 													CS2Executor.executeHookInner200k(hookrequest_14, 2146300541);
 												}
 											}
-											icomponentdefinitions_10 = hookrequest_14.iComponentDefs;
+											icomponentdefinitions_10 = hookrequest_14.source;
 											if (icomponentdefinitions_10.anInt1288 < 0) {
 												break;
 											}
@@ -356,7 +356,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 										CS2Executor.executeHookInner200k(hookrequest_14, 690549551);
 									}
 								}
-								icomponentdefinitions_10 = hookrequest_14.iComponentDefs;
+								icomponentdefinitions_10 = hookrequest_14.source;
 								if (icomponentdefinitions_10.anInt1288 < 0) {
 									break;
 								}

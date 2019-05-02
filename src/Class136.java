@@ -52,13 +52,13 @@ public class Class136 {
 				this.aClass137_Sub1Array1634[i_2] = new Class137_Sub1(class505_sub1_1, 3553, Class150.aClass150_1952, Class76.aClass76_751, 128, 128, true, bytes_3, Class150.aClass150_1952, false);
 			}
 		} else {
-			byte[] bytes_5 = Class346.method6154(anObject1637, false);
+			byte[] bytes_5 = QuickChatMessage.method6154(anObject1637, false);
 			this.aClass137_Sub4_1633 = new Class137_Sub4(class505_sub1_1, Class150.aClass150_1952, Class76.aClass76_751, bytes_5, Class150.aClass150_1952);
-			bytes_5 = Class346.method6154(anObject1627, false);
+			bytes_5 = QuickChatMessage.method6154(anObject1627, false);
 			this.aClass137_Sub4_1636 = new Class137_Sub4(class505_sub1_1, Class150.aClass150_1952, Class76.aClass76_751, bytes_5, Class150.aClass150_1952);
 			Class164 class164_6 = class505_sub1_1.aClass164_8363;
 			if (class164_6.method2847()) {
-				bytes_5 = Class346.method6154(anObject1628, false);
+				bytes_5 = QuickChatMessage.method6154(anObject1628, false);
 				this.aClass137_Sub4_1638 = new Class137_Sub4(class505_sub1_1, Class150.aClass150_1949, Class76.aClass76_751);
 				Class137_Sub4 class137_sub4_4 = new Class137_Sub4(class505_sub1_1, Class150.aClass150_1948, Class76.aClass76_751, bytes_5, Class150.aClass150_1948);
 				if (!class164_6.method2848(this.aClass137_Sub4_1638, class137_sub4_4)) {

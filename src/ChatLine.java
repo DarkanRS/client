@@ -4,39 +4,68 @@ public class ChatLine {
 
     public static String aString1093;
     public int anInt1085 = Node_Sub20_Sub28.method15396();
-    public int anInt1084;
+    public int time;
     public int type;
     public int anInt1086;
     public String crownedName;
     public String name;
     public String nameSimple;
     public String clan;
-    public int anInt1091;
+    public int quickchatMessageId;
     public String message;
+	static int NUM_CHAT_LINES;
+	static ChatLine[] CHAT_LINES = new ChatLine[100];
 
-    void set(int i_1, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
+    void set(int type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
         this.anInt1085 = Node_Sub20_Sub28.method15396();
-        this.anInt1084 = client.cycles;
-        this.type = i_1;
+        this.time = client.cycles;
+        this.type = type;
         this.anInt1086 = i_2;
         this.crownedName = string_3;
         this.name = string_4;
         this.nameSimple = string_5;
         this.clan = string_6;
-        this.anInt1091 = i_7;
+        this.quickchatMessageId = i_7;
         this.message = string_8;
     }
 
-    ChatLine(int i_1, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
-        this.anInt1084 = client.cycles;
-        this.type = i_1;
+    public static void appendGameMessage(String message) {
+		appendChatMessage(4, 0, "", "", "", message);
+	}
+
+	public static void appendChatMessage(String message) {
+		appendChatMessage(0, 0, "", "", "", message);
+	}
+
+	public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message) {
+		appendChatMessage(type, effectFlags, crownedName, name, nameSimple, message, (String) null, -1);
+	}
+
+	public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message, String clan, int quickChatMessageId) {
+		ChatLine line = CHAT_LINES[99];
+		for (int i = 99; i > 0; --i) {
+			CHAT_LINES[i] = CHAT_LINES[i - 1];
+		}
+		if (line == null) {
+			line = new ChatLine(type, effectFlags, crownedName, name, nameSimple, clan, quickChatMessageId, message);
+		} else {
+			line.set(type, effectFlags, crownedName, name, nameSimple, clan, quickChatMessageId, message);
+		}
+		CHAT_LINES[0] = line;
+		++NUM_CHAT_LINES;
+		client.anInt7391 = client.anInt7347;
+	}
+
+	ChatLine(int type, int i_2, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
+        this.time = client.cycles;
+        this.type = type;
         this.anInt1086 = i_2;
-        this.crownedName = string_3;
-        this.name = string_4;
-        this.nameSimple = string_5;
-        this.clan = string_6;
-        this.anInt1091 = i_7;
-        this.message = string_8;
+        this.crownedName = crownedName;
+        this.name = name;
+        this.nameSimple = nameSimple;
+        this.clan = clan;
+        this.quickchatMessageId = i_7;
+        this.message = message;
     }
 
     public static int getLength(String string_0) {

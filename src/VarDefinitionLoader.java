@@ -99,8 +99,8 @@ public class VarDefinitionLoader implements IndexLoader {
 
 	public static Class62 method6401(RsByteBuffer rsbytebuffer_0) {
 		String string_2 = rsbytebuffer_0.readString();
-		Class356 class356_3 = Class350_Sub3_Sub1.method15558(180670091)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_4 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
+		Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readShort();
 		int i_7 = rsbytebuffer_0.readUnsignedByte();

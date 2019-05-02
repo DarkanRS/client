@@ -37,7 +37,7 @@ public class Class60 {
 			IComponentDefinitions icomponentdefinitions_1 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
 			if (icomponentdefinitions_1 != null && icomponentdefinitions_1.anObjectArray1396 != null) {
 				HookRequest hookrequest_2 = new HookRequest();
-				hookrequest_2.iComponentDefs = icomponentdefinitions_1;
+				hookrequest_2.source = icomponentdefinitions_1;
 				hookrequest_2.params = icomponentdefinitions_1.anObjectArray1396;
 				CS2Executor.executeHookInner200k(hookrequest_2, 1386646091);
 			}

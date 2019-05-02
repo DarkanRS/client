@@ -1,14 +1,11 @@
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-public class Class346 {
+public class QuickChatMessage {
 
     public int[] anIntArray4046;
-
-    public QuickchatMessageDefinitions aCacheableNode_Sub9_4047;
-
-    public int anInt4048;
-
+    public QuickchatMessageDefinitions qcMessageDefs;
+    public int qcMessageId;
     static NodeCollection aClass482_4049;
 
     public static byte[] method6154(Object object_0, boolean bool_1) {

@@ -507,10 +507,6 @@ public class FontRenderer_Sub3 extends FontRenderer {
 		}
 	}
 
-	public static MovementType[] method14339() {
-		return new MovementType[] { MovementType.HALF_WALK, MovementType.WALKING, MovementType.RUNNING, MovementType.TELEPORT };
-	}
-
 	static void method14341() {
 		PulseEvent.aClass465_9667.method7749(207048647);
 		PulseEvent.aClass477_9655.method7935((byte) -65);

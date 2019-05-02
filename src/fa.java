@@ -66,7 +66,7 @@ public class fa extends NativeSprite implements Interface40, Interface9 {
 
 	native int da(long var1);
 
-	public int method228() {
+	public int scaleWidth() {
 		return this.WA(this.nativeid);
 	}
 

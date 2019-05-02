@@ -297,9 +297,9 @@ public final class Index {
 			} else {
 				byte[] bytes_22;
 				if (ints_3 == null || ints_3[0] == 0 && ints_3[1] == 0 && ints_3[2] == 0 && ints_3[3] == 0) {
-					bytes_22 = Class346.method6154(this.archives[i_1], false);
+					bytes_22 = QuickChatMessage.method6154(this.archives[i_1], false);
 				} else {
-					bytes_22 = Class346.method6154(this.archives[i_1], true);
+					bytes_22 = QuickChatMessage.method6154(this.archives[i_1], true);
 					RsByteBuffer rsbytebuffer_23 = new RsByteBuffer(bytes_22);
 					rsbytebuffer_23.method13249(ints_3, rsbytebuffer_23.buffer.length);
 				}
@@ -445,7 +445,7 @@ public final class Index {
 				throw new RuntimeException("");
 			} else {
 				if (this.archiveFiles[i_1][i_2] != null) {
-					bytes_4 = Class346.method6154(this.archiveFiles[i_1][i_2], false);
+					bytes_4 = QuickChatMessage.method6154(this.archiveFiles[i_1][i_2], false);
 					if (bytes_4 == null) {
 						throw new RuntimeException("");
 					}

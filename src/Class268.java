@@ -60,7 +60,7 @@ public class Class268 {
 		if ((Class20.anInt169 >= 2 || client.aBool7344) && client.aClass118_7257 == null) {
 			String string_2;
 			if (client.aBool7344 && Class20.anInt169 < 2) {
-				string_2 = client.aString7275 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -912912276) + client.aString7356 + " " + "->";
+				string_2 = client.aString7275 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + client.aString7356 + " " + "->";
 			} else if (Preference_Sub1.method12619(-1903584217) && Class20.anInt169 > 2) {
 				string_2 = IncomingPacket.method6380(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, 1195583741);
 			} else {
@@ -75,14 +75,14 @@ public class Class268 {
 				}
 			}
 			if (Class20.anInt169 > 2) {
-				string_2 = string_2 + Utils.rgbToColHexShortcut(16777215) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365);
+				string_2 = string_2 + Utils.rgbToColHexShortcut(16777215) + " / " + (Class20.anInt169 - 2) + Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE);
 			}
 			if (Class20.aClass118_183 != null) {
 				FontRenderer fontrenderer_5 = Class20.aClass118_183.method1988(Class487.aClass378_5752, client.anInterface35_7206, -208417273);
 				if (fontrenderer_5 == null) {
 					fontrenderer_5 = Class285.aFontRenderer_3394;
 				}
-				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.anInt1301, Class20.aClass118_183.anInt1429, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 1750233370);
+				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.width, Class20.aClass118_183.height, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 1750233370);
 				Class292.method5201(client.anIntArray7438[0], client.anIntArray7438[1], client.anIntArray7438[2], client.anIntArray7438[3]);
 			}
 		}

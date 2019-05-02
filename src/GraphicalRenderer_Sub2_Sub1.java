@@ -76,8 +76,8 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 				if (arr_10.length >= 2) {
 					int i_11;
 					try {
-						i_11 = Class328.parseInt(arr_10[0], 102234625);
-						int i_12 = Class328.parseInt(arr_10[1], -768077921);
+						i_11 = Utils.parseInt(arr_10[0]);
+						int i_12 = Utils.parseInt(arr_10[1]);
 						this.anInt10196 = i_11 * 10 + i_12;
 					} catch (NumberFormatException numberformatexception_20) {
 						throw new RuntimeException("");
@@ -143,7 +143,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 												}
 
 												if (string_16.length() >= 4 && Class115.method1950(string_16.substring(0, 4), -77816633)) {
-													i_11 = Class328.parseInt(string_16.substring(0, 4), 1896827568);
+													i_11 = Utils.parseInt(string_16.substring(0, 4));
 													break;
 												}
 											}

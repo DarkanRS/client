@@ -71,7 +71,7 @@ public class PlayerUpdate {
 							if (i_5 == 0) {
 								i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 								Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
-							} else if (Class346.method6155(rsbitsbuffer_0, i_4)) {
+							} else if (QuickChatMessage.method6155(rsbitsbuffer_0, i_4)) {
 								Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 							}
 						}
@@ -93,7 +93,7 @@ public class PlayerUpdate {
 								if (i_5 == 0) {
 									i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 									Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
-								} else if (Class346.method6155(rsbitsbuffer_0, i_4)) {
+								} else if (QuickChatMessage.method6155(rsbitsbuffer_0, i_4)) {
 									Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 								}
 							}
@@ -136,7 +136,7 @@ public class PlayerUpdate {
 	}
 
 	static final void decodeMasksBody(RsBitsBuffer stream, int i_1, Player player, int flags) {
-		byte tempMoveType = MovementType.TELEPORT.id;
+		byte tempMoveType = MovementType.STATIONARY.id;
 		
 		if ((flags & 0x20000) != 0) {
 			player.aByte10371 = stream.readByte();
@@ -221,20 +221,20 @@ public class PlayerUpdate {
 		if ((flags & 0x4000) != 0) {
 			String string_16 = stream.readString();
 			if (player == VertexNormal.myPlayer) {
-				Class191.method3167(2, 0, player.method16127(2097729093), player.method16128(), player.username, string_16, 1185055161);
+				ChatLine.appendChatMessage(2, 0, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
 			}
 	
-			player.sendChat(string_16, 0, 0, (byte) -79);
+			player.sendChat(string_16, 0, 0);
 		}
 	
 		if ((flags & 0x80000) != 0) {
 			String string_16 = stream.readString();
 			int i_7 = stream.readUnsignedByte128();
 			if ((i_7 & 0x1) != 0) {
-				Class191.method3167(2, i_7, player.method16127(1944808899), player.method16128(), player.username, string_16, 1566432010);
+				ChatLine.appendChatMessage(2, i_7, player.getUsernameWithTitle(), player.getDisplayName(), player.username, string_16);
 			}
 	
-			player.sendChat(string_16, 0, 0, (byte) -55);
+			player.sendChat(string_16, 0, 0);
 		}
 	
 		if ((flags & 0x40000) != 0) {
@@ -313,14 +313,14 @@ public class PlayerUpdate {
 		}
 	
 		if ((flags & 0x10) != 0) {
-			int[] ints_23 = new int[FontRenderer_Sub3.method14339().length];
+			int[] ints_23 = new int[MovementType.values().length];
 	
-			for (int i_7 = 0; i_7 < FontRenderer_Sub3.method14339().length; i_7++) {
+			for (int i_7 = 0; i_7 < MovementType.values().length; i_7++) {
 				ints_23[i_7] = stream.readBigSmart();
 			}
 	
 			int i_7 = stream.readUnsignedByte();
-			Class20.animate(player, ints_23, i_7, false, (byte) -32);
+			Class20.animate(player, ints_23, i_7, false);
 		}
 	
 		if ((flags & 0x2) != 0) {
@@ -421,7 +421,7 @@ public class PlayerUpdate {
 				player.move(player.anInt10569, player.anInt10570);
 			} else {
 				byte b_20;
-				if (tempMoveType != MovementType.TELEPORT.id) {
+				if (tempMoveType != MovementType.STATIONARY.id) {
 					b_20 = tempMoveType;
 				} else {
 					b_20 = Class197.playerMovementTypes[i_1];

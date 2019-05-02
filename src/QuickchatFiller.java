@@ -67,13 +67,13 @@ public class QuickchatFiller implements Interface19 {
 						i_4 = -1;
 						for (i_5 = 0; i_5 < Class20.anInt169; i_5++) {
 							if (Class20.aBool187) {
-								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
-								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
+								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + fontmetrics_1.topPadding + BufferedConnectionContext.anInt2300 + 1 + 20;
+								if (i_3 > i_8 - fontmetrics_1.topPadding - 1 && i_3 < i_8 + fontmetrics_1.bottomPadding) {
 									i_4 = i_5;
 								}
 							} else {
 								i_8 = (Class20.anInt169 - 1 - i_5) * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
-								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
+								if (i_3 > i_8 - fontmetrics_1.topPadding - 1 && i_3 < i_8 + fontmetrics_1.bottomPadding) {
 									i_4 = i_5;
 								}
 							}
@@ -94,13 +94,13 @@ public class QuickchatFiller implements Interface19 {
 						i_4 = -1;
 						for (i_5 = 0; i_5 < Class20.anInt170; i_5++) {
 							if (Class20.aBool187) {
-								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
-								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
+								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.topPadding + BufferedConnectionContext.anInt2300 + 1 + 20;
+								if (i_3 > i_8 - fontmetrics_1.topPadding - 1 && i_3 < i_8 + fontmetrics_1.bottomPadding) {
 									i_4 = i_5;
 								}
 							} else {
 								i_8 = i_5 * Class20.anInt178 + BufferedConnectionContext.anInt2300 + 31;
-								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
+								if (i_3 > i_8 - fontmetrics_1.topPadding - 1 && i_3 < i_8 + fontmetrics_1.bottomPadding) {
 									i_4 = i_5;
 								}
 							}
@@ -118,13 +118,13 @@ public class QuickchatFiller implements Interface19 {
 						i_4 = -1;
 						for (i_5 = 0; i_5 < Class20.aCacheableNode_Sub15_163.anInt9769; i_5++) {
 							if (Class20.aBool187) {
-								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.anInt4978 + CacheableNode_Sub2.anInt9471 + 1 + 20;
-								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
+								i_8 = i_5 * Class20.anInt178 + fontmetrics_1.topPadding + CacheableNode_Sub2.anInt9471 + 1 + 20;
+								if (i_3 > i_8 - fontmetrics_1.topPadding - 1 && i_3 < i_8 + fontmetrics_1.bottomPadding) {
 									i_4 = i_5;
 								}
 							} else {
 								i_8 = i_5 * Class20.anInt178 + CacheableNode_Sub2.anInt9471 + 31;
-								if (i_3 > i_8 - fontmetrics_1.anInt4978 - 1 && i_3 < i_8 + fontmetrics_1.anInt4979) {
+								if (i_3 > i_8 - fontmetrics_1.topPadding - 1 && i_3 < i_8 + fontmetrics_1.bottomPadding) {
 									i_4 = i_5;
 								}
 							}

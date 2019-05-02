@@ -13,10 +13,6 @@ public class Class2 {
 		}
 	}
 
-	public static void method258(String string_0) {
-		Class191.method3167(0, 0, "", "", "", string_0, 1534931586);
-	}
-
 	public static int method259(int i_0, int i_1, int i_2, int i_3) {
 		i_2 &= 0x3;
 		return i_2 == 0 ? i_1 : (i_2 == 1 ? 7 - i_0 : (i_2 == 2 ? 7 - i_1 : i_0));

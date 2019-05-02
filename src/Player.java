@@ -190,7 +190,7 @@ public class Player extends Animable {
 
 	}
 
-	public String method16127(int i_2) {
+	public String getUsernameWithTitle() {
 		String str_3 = "";
 		if (this.prefixTitle != null) {
 			str_3 = this.prefixTitle;
@@ -204,7 +204,7 @@ public class Player extends Animable {
 		return str_3;
 	}
 
-	public String method16128() {
+	public String getDisplayName() {
 		return this.displayName;
 	}
 
@@ -403,7 +403,7 @@ public class Player extends Animable {
 		}
 	}
 
-	public void sendChat(String string_1, int i_2, int i_3, byte b_4) {
+	public void sendChat(String string_1, int i_2, int i_3) {
 		this.method15875(string_1, i_2, i_3, Class204.method3363(592406309) * QuickchatFiller.ENTITY_DEFAULTS.playerMessageDuration, 1858323003);
 	}
 
@@ -943,7 +943,7 @@ public class Player extends Animable {
 			vecSize.pushVectorStack();
 		}
 
-		if (this.index == client.anInt7315 && ints_22 != null) {
+		if (this.index == client.myPlayerIndex && ints_22 != null) {
 			for (i_18 = 0; i_18 < ints_21.length; i_18++) {
 				if (ints_21[i_18] != ints_22[i_18]) {
 					IndexLoaders.ITEM_LOADER.method7151((byte) -16);

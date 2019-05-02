@@ -2,7 +2,7 @@ public interface KeyRecord {
 
 	int method75();
 
-	char getCode(int var1);
+	char getCharacter();
 
 	int method4();
 

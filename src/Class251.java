@@ -36,44 +36,44 @@ public final class Class251 {
 					if (string_0.equalsIgnoreCase("displayfps")) {
 						client.aBool7176 = !client.aBool7176;
 						if (client.aBool7176) {
-							Class209.printConsoleMessage("FPS on", -1478532172);
+							Class209.printConsoleMessage("FPS on");
 						} else {
-							Class209.printConsoleMessage("FPS off", -318501716);
+							Class209.printConsoleMessage("FPS off");
 						}
 						return;
 					}
 					if (!string_0.equals("renderer")) {
 						if (string_0.equals("heap")) {
-							Class209.printConsoleMessage("Heap: " + Engine.MAX_MEMORY + "MB", -845757732);
+							Class209.printConsoleMessage("Heap: " + Engine.MAX_MEMORY + "MB");
 							return;
 						}
 						if (string_0.equalsIgnoreCase("getcamerapos")) {
 							CoordGrid coordgrid_27 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-							Class209.printConsoleMessage("Pos: " + VertexNormal.myPlayer.plane + "," + ((IdentitiKitIndexLoader.anInt361 >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y >> 6) + "," + ((IdentitiKitIndexLoader.anInt361 >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, VertexNormal.myPlayer.plane, (byte) 22) - Class109_Sub1.anInt9384), -2096324041);
-							Class209.printConsoleMessage("Look: " + VertexNormal.myPlayer.plane + "," + (coordgrid_27.x + CutsceneAction_Sub13.anInt9368 >> 6) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 >> 6) + "," + (coordgrid_27.x + CutsceneAction_Sub13.anInt9368 & 0x3f) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 & 0x3f) + " Height: " + (Class504.method8389(CutsceneAction_Sub13.anInt9368, OutgoingLoginPacket.anInt4280, VertexNormal.myPlayer.plane, (byte) 2) - Class121.anInt1527), -2049086171);
+							Class209.printConsoleMessage("Pos: " + VertexNormal.myPlayer.plane + "," + ((IdentitiKitIndexLoader.anInt361 >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y >> 6) + "," + ((IdentitiKitIndexLoader.anInt361 >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, VertexNormal.myPlayer.plane, (byte) 22) - Class109_Sub1.anInt9384));
+							Class209.printConsoleMessage("Look: " + VertexNormal.myPlayer.plane + "," + (coordgrid_27.x + CutsceneAction_Sub13.anInt9368 >> 6) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 >> 6) + "," + (coordgrid_27.x + CutsceneAction_Sub13.anInt9368 & 0x3f) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 & 0x3f) + " Height: " + (Class504.method8389(CutsceneAction_Sub13.anInt9368, OutgoingLoginPacket.anInt4280, VertexNormal.myPlayer.plane, (byte) 2) - Class121.anInt1527));
 							return;
 						}
 						break label381;
 					}
 					Class168 class168_4 = Renderers.SOFTWARE_RENDERER.method8392();
-					Class209.printConsoleMessage("Toolkit ID: " + Class393.preferences.currentToolkit.getValue(174476725), -199774023);
-					Class209.printConsoleMessage("Vendor: " + class168_4.anInt2052, -1266717403);
-					Class209.printConsoleMessage("Name: " + class168_4.aString2051, -2120239732);
-					Class209.printConsoleMessage("Version: " + class168_4.anInt2045, -1689852117);
-					Class209.printConsoleMessage("Device: " + class168_4.aString2053, -1211113537);
-					Class209.printConsoleMessage("Driver Version: " + class168_4.aLong2049, -598072423);
+					Class209.printConsoleMessage("Toolkit ID: " + Class393.preferences.currentToolkit.getValue(174476725));
+					Class209.printConsoleMessage("Vendor: " + class168_4.anInt2052);
+					Class209.printConsoleMessage("Name: " + class168_4.aString2051);
+					Class209.printConsoleMessage("Version: " + class168_4.anInt2045);
+					Class209.printConsoleMessage("Device: " + class168_4.aString2053);
+					Class209.printConsoleMessage("Driver Version: " + class168_4.aLong2049);
 					return;
 				}
-				Class209.printConsoleMessage("commands - This command", -1128292172);
-				Class209.printConsoleMessage("cls - Clear console", -1305824571);
-				Class209.printConsoleMessage("displayfps - Toggle FPS and other information", -1028056987);
-				Class209.printConsoleMessage("renderer - Print graphics renderer information", -895621363);
-				Class209.printConsoleMessage("heap - Print java memory information", -770815394);
-				Class209.printConsoleMessage("getcamerapos - Print location and direction of camera for use in bug reports", -2142075960);
+				Class209.printConsoleMessage("commands - This command");
+				Class209.printConsoleMessage("cls - Clear console");
+				Class209.printConsoleMessage("displayfps - Toggle FPS and other information");
+				Class209.printConsoleMessage("renderer - Print graphics renderer information");
+				Class209.printConsoleMessage("heap - Print java memory information");
+				Class209.printConsoleMessage("getcamerapos - Print location and direction of camera for use in bug reports");
 				return;
 			}
 		} catch (Exception exception_19) {
-			Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -927245115), -314816204);
+			Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 			return;
 		}
 		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 || client.rights >= 2) {
@@ -81,32 +81,32 @@ public final class Class251 {
 				if (string_0.equalsIgnoreCase("wm1")) {
 					Class440.method7373(1, -1, -1, false, (byte) 111);
 					if (Class158.windowedMode() == 1) {
-						Class209.printConsoleMessage("Success", -1081042103);
+						Class209.printConsoleMessage("Success");
 					} else {
-						Class209.printConsoleMessage("Failure", -1679059179);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (string_0.equalsIgnoreCase("wm2")) {
 					Class440.method7373(2, -1, -1, false, (byte) 71);
 					if (Class158.windowedMode() == 2) {
-						Class209.printConsoleMessage("Success", -268796037);
+						Class209.printConsoleMessage("Success");
 					} else {
-						Class209.printConsoleMessage("Failure", -693309543);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (Class475.supportsFullScreen && string_0.equalsIgnoreCase("wm3")) {
 					Class440.method7373(3, 1024, 768, false, (byte) 71);
 					if (Class158.windowedMode() == 3) {
-						Class209.printConsoleMessage("Success", -1837857918);
+						Class209.printConsoleMessage("Success");
 					} else {
-						Class209.printConsoleMessage("Failure", -223811881);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (string_0.startsWith("clipmask")) {
-					Class209.printConsoleMessage("[" + VertexNormal.myPlayer.localX + ", " + VertexNormal.myPlayer.localY + "]:" + IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.myPlayer.plane).map[VertexNormal.myPlayer.localX][VertexNormal.myPlayer.localY], -354697449);
+					Class209.printConsoleMessage("[" + VertexNormal.myPlayer.localX + ", " + VertexNormal.myPlayer.localY + "]:" + IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.myPlayer.plane).map[VertexNormal.myPlayer.localX][VertexNormal.myPlayer.localY]);
 				}
 				int i_6;
 				int i_10;
@@ -136,7 +136,7 @@ public final class Class251 {
 					string_0 = string_0.substring(9);
 					i_6 = string_0.indexOf(32);
 					if (i_6 == -1) {
-						Class209.printConsoleMessage("Failure", -208040475);
+						Class209.printConsoleMessage("Failure");
 						return;
 					}
 					try {
@@ -145,71 +145,71 @@ public final class Class251 {
 						;
 					}
 					if (i_10 == -1) {
-						Class209.printConsoleMessage("Failure", -1955711283);
+						Class209.printConsoleMessage("Failure");
 						return;
 					}
 					String string_7 = string_0.substring(i_6 + 1).trim() + ".runescape.com";
 					ServerEnvironment.method8314(string_7, i_10);
-					Class209.printConsoleMessage("Success", -226741800);
+					Class209.printConsoleMessage("Success");
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk0")) {
 					ParticleProducer.method11500(0, false);
 					if (Class393.preferences.currentToolkit.getValue(-491393282) == 0) {
-						Class209.printConsoleMessage("Success", -1340836055);
+						Class209.printConsoleMessage("Success");
 						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0, -1122635532);
 						Class190.savePreferences((byte) 68);
 						client.aBool7175 = false;
 					} else {
-						Class209.printConsoleMessage("Failure", -344734779);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk1")) {
 					ParticleProducer.method11500(1, false);
 					if (Class393.preferences.currentToolkit.getValue(-1821997083) == 1) {
-						Class209.printConsoleMessage("Success", -364086081);
+						Class209.printConsoleMessage("Success");
 						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 1, -1690467164);
 						Class190.savePreferences((byte) 47);
 						client.aBool7175 = false;
 					} else {
-						Class209.printConsoleMessage("Failure", -716939990);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk2")) {
 					ParticleProducer.method11500(2, false);
 					if (Class393.preferences.currentToolkit.getValue(2070272351) == 2) {
-						Class209.printConsoleMessage("Success", -1794668716);
+						Class209.printConsoleMessage("Success");
 						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 2, -259704912);
 						Class190.savePreferences((byte) 17);
 						client.aBool7175 = false;
 					} else {
-						Class209.printConsoleMessage("Failure", -822814139);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk3")) {
 					ParticleProducer.method11500(3, false);
 					if (Class393.preferences.currentToolkit.getValue(389435618) == 3) {
-						Class209.printConsoleMessage("Success", -832737067);
+						Class209.printConsoleMessage("Success");
 						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 3, 1626226442);
 						Class190.savePreferences((byte) 28);
 						client.aBool7175 = false;
 					} else {
-						Class209.printConsoleMessage("Failure", -129081346);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
 				if (string_0.equalsIgnoreCase("tk5")) {
 					ParticleProducer.method11500(5, false);
 					if (Class393.preferences.currentToolkit.getValue(-889180352) == 5) {
-						Class209.printConsoleMessage("Success", -1022184236);
+						Class209.printConsoleMessage("Success");
 						Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 5, -1654618197);
 						Class190.savePreferences((byte) 119);
 						client.aBool7175 = false;
 					} else {
-						Class209.printConsoleMessage("Failure", -1885199360);
+						Class209.printConsoleMessage("Failure");
 					}
 					return;
 				}
@@ -235,12 +235,12 @@ public final class Class251 {
 				}
 				if (string_0.startsWith("getclientvarpbit")) {
 					i_10 = Integer.parseInt(string_0.substring(17));
-					Class209.printConsoleMessage("varpbit=" + Class158_Sub1.PLAYER_VAR_PROVIDER.getVarBit(i_10), -1998632005);
+					Class209.printConsoleMessage("varpbit=" + Class158_Sub1.PLAYER_VAR_PROVIDER.getVarBit(i_10));
 					return;
 				}
 				if (string_0.startsWith("getclientvarp")) {
 					i_10 = Integer.parseInt(string_0.substring(14));
-					Class209.printConsoleMessage("varp=" + Class158_Sub1.PLAYER_VAR_PROVIDER.getVar(i_10), -2108704386);
+					Class209.printConsoleMessage("varp=" + Class158_Sub1.PLAYER_VAR_PROVIDER.getVar(i_10));
 					return;
 				}
 				String[] arr_24;
@@ -263,7 +263,7 @@ public final class Class251 {
 					if (file_20.exists()) {
 						file_20 = new File(string_0.substring(10) + "." + Utils.time() + ".log");
 						if (file_20.exists()) {
-							Class209.printConsoleMessage("file already exists!", -2041307357);
+							Class209.printConsoleMessage("file already exists!");
 							return;
 						}
 					}
@@ -274,9 +274,9 @@ public final class Class251 {
 					try {
 						TextureDefinition.aFileOutputStream9481 = new FileOutputStream(file_20);
 					} catch (FileNotFoundException filenotfoundexception_15) {
-						Class209.printConsoleMessage("Could not create " + file_20.getName(), -1294344572);
+						Class209.printConsoleMessage("Could not create " + file_20.getName());
 					} catch (SecurityException securityexception_16) {
-						Class209.printConsoleMessage("Cannot write to " + file_20.getName(), -425204708);
+						Class209.printConsoleMessage("Cannot write to " + file_20.getName());
 					}
 					return;
 				}
@@ -290,12 +290,12 @@ public final class Class251 {
 				if (string_0.startsWith("runscript ")) {
 					file_20 = new File(string_0.substring(10));
 					if (!file_20.exists()) {
-						Class209.printConsoleMessage("No such file", -445176938);
+						Class209.printConsoleMessage("No such file");
 						return;
 					}
 					byte[] bytes_5 = VarNPCMap.method2621(file_20, 1265044571);
 					if (bytes_5 == null) {
-						Class209.printConsoleMessage("Failed to read file", -1589533875);
+						Class209.printConsoleMessage("Failed to read file");
 						return;
 					}
 					String[] arr_12 = MovingAnimation.method12681(Class122.method2110(Node_Sub17_Sub7.method15439(bytes_5), '\r', ""), '\n');
@@ -310,12 +310,12 @@ public final class Class251 {
 					client.outputContext.queuePacket(tcpmessage_21);
 				}
 			} catch (Exception exception_18) {
-				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1449846660), -1151783606);
+				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 				return;
 			}
 		}
 		if (client.gameState != 13) {
-			Class209.printConsoleMessage(Message.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1344246012) + string_0, -1444759652);
+			Class209.printConsoleMessage(Message.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE) + string_0);
 		}
 	}
 

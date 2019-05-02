@@ -177,8 +177,8 @@ public class IdentikitDefinition implements Definition {
             i_4 = Class349.anInt4083;
             i_5 = client.anInt3243 * -969250379;
         } else {
-            i_4 = icomponentdefinitions_3.anInt1301;
-            i_5 = icomponentdefinitions_3.anInt1429;
+            i_4 = icomponentdefinitions_3.width;
+            i_5 = icomponentdefinitions_3.height;
         }
         Class484.method8200(icomponentdefinitions_1, i_4, i_5, false, -342639292);
         Class246.method4204(icomponentdefinitions_1, i_4, i_5, 354709557);

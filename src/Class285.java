@@ -36,7 +36,7 @@ public class Class285 {
 	}
 
 	public static int method5026(CharSequence charsequence_0, byte b_2) {
-		return Class356.parseInt(charsequence_0, 16);
+		return Utils.parseInt(charsequence_0, 16);
 	}
 
 	public static int getCRC(byte[] data, int length) {

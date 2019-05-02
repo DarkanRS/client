@@ -40,7 +40,7 @@ public class Class113 {
 				if (class521_sub1_sub1_sub3_2.anInt10382 < 0) {
 					int i_6 = -class521_sub1_sub1_sub3_2.anInt10382 - 1;
 					Player player_9;
-					if (i_6 == client.anInt7315) {
+					if (i_6 == client.myPlayerIndex) {
 						player_9 = VertexNormal.myPlayer;
 					} else {
 						player_9 = client.players[i_6];

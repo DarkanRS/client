@@ -25,6 +25,6 @@ public class Class180 {
 	public int anInt2242 = -1;
 
 	public static ChatLine method3032(int i_0) {
-		return i_0 >= 0 && i_0 < 100 ? Class81.CHAT_LINES[i_0] : null;
+		return i_0 >= 0 && i_0 < 100 ? ChatLine.CHAT_LINES[i_0] : null;
 	}
 }

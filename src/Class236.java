@@ -21,7 +21,7 @@ public class Class236 {
 
     static void method3985(Animable animable_0, int i_1, byte b_2) {
         if (animable_0.currentAnimations != null) {
-            MovementType class249_3 = (MovementType) Class386.identify(FontRenderer_Sub3.method14339(), i_1);
+            MovementType class249_3 = (MovementType) Class386.identify(MovementType.values(), i_1);
             int i_4 = animable_0.currentAnimations[class249_3.method4268()];
             if (i_4 != animable_0.currentAnimation.method7597()) {
                 animable_0.currentAnimation.method7615(i_4, animable_0.currentAnimation.getSpeed());

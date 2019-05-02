@@ -40,7 +40,7 @@ public class Animation_Sub2 extends Animation {
 			Class60.aNativeSprite_612.method2752(i_3 + i_1 - Class60.aNativeSprite_612.method2747(), i_2);
 		}
 
-		fontrenderer_6.renderText(string_8, i_1 + 3, (20 - fontmetrics_7.anInt4978) / 2 + i_2 + fontmetrics_7.anInt4978, Class388.anInt4722 | ~0xffffff, -1);
+		fontrenderer_6.renderText(string_8, i_1 + 3, (20 - fontmetrics_7.topPadding) / 2 + i_2 + fontmetrics_7.topPadding, Class388.anInt4722 | ~0xffffff, -1);
 		graphicalrenderer_0.B(i_1, i_5 + i_2, i_3, i_4 - i_5, i_10 << 24 | Node_Sub20_Sub9.anInt9792, 1);
 	}
 

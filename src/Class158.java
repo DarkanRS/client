@@ -63,8 +63,8 @@ public abstract class Class158 {
                         i_13 = i_13 * 256 / (client.anInt7203 + 256);
                         i_14 = i_14 * 256 / (client.anInt7203 + 256);
                     }
-                    ints_10[i_11 * 2] = i_3 + icomponentdefinitions_2.anInt1301 / 2 + ((worldmapareadefs_9.anIntArray2717[i_11 * 2 + 1] * 4 + i_6) * i_13 + i_14 * (i_5 + worldmapareadefs_9.anIntArray2717[i_11 * 2] * 4) >> 14);
-                    ints_10[i_11 * 2 + 1] = icomponentdefinitions_2.anInt1429 / 2 + i_4 - ((worldmapareadefs_9.anIntArray2717[i_11 * 2 + 1] * 4 + i_6) * i_14 - i_13 * (i_5 + worldmapareadefs_9.anIntArray2717[i_11 * 2] * 4) >> 14);
+                    ints_10[i_11 * 2] = i_3 + icomponentdefinitions_2.width / 2 + ((worldmapareadefs_9.anIntArray2717[i_11 * 2 + 1] * 4 + i_6) * i_13 + i_14 * (i_5 + worldmapareadefs_9.anIntArray2717[i_11 * 2] * 4) >> 14);
+                    ints_10[i_11 * 2 + 1] = icomponentdefinitions_2.height / 2 + i_4 - ((worldmapareadefs_9.anIntArray2717[i_11 * 2 + 1] * 4 + i_6) * i_14 - i_13 * (i_5 + worldmapareadefs_9.anIntArray2717[i_11 * 2] * 4) >> 14);
                 }
                 Class119 class119_19 = icomponentdefinitions_2.method2046(graphicalrenderer_0, -907269302);
                 if (class119_19 != null) {

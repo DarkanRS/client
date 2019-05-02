@@ -202,7 +202,7 @@ public class Whirlpool {
 				if (i_0 == 8) {
 					Class173.method2944(-1950066116);
 				} else if (i_0 == 24) {
-					Class209.printConsoleMessage("" + Engine.FPS, -1823674146);
+					Class209.printConsoleMessage("" + Engine.FPS);
 				} else if (i_0 == 28) {
 					Class201 class201_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass201_2600;
 					class201_2.aBool2552 = !class201_2.aBool2552;
@@ -223,7 +223,7 @@ public class Whirlpool {
 						}
 						runtime_7 = Runtime.getRuntime();
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
-						Class209.printConsoleMessage("" + i_3, -1844000265);
+						Class209.printConsoleMessage("" + i_3);
 					} else if (i_0 == 9) {
 						Class357_Sub1.method12565();
 						for (i_5 = 0; i_5 < 10; i_5++) {
@@ -231,16 +231,16 @@ public class Whirlpool {
 						}
 						runtime_7 = Runtime.getRuntime();
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
-						Class209.printConsoleMessage("" + i_3, -1847953573);
+						Class209.printConsoleMessage("" + i_3);
 						JS5CacheFile.method3359();
 						Class357_Sub1.method12565();
 						for (int i_4 = 0; i_4 < 10; i_4++) {
 							System.gc();
 						}
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
-						Class209.printConsoleMessage("" + i_3, -1441723190);
+						Class209.printConsoleMessage("" + i_3);
 					} else if (i_0 == 19) {
-						Class209.printConsoleMessage(IndexLoaders.NATIVE_LIBRARY_LOADER.method219(-1916862873) ? "Success" : "Failure", -1724537176);
+						Class209.printConsoleMessage(IndexLoaders.NATIVE_LIBRARY_LOADER.method219(-1916862873) ? "Success" : "Failure");
 					} else if (i_0 == 20) {
 						Class159.GAME_CONNECTION_INFO.swap(-799490388);
 					} else if (i_0 == 22) {
@@ -261,14 +261,14 @@ public class Whirlpool {
 						Vector3 vector3_8;
 						if (i_0 == 26) {
 							vector3_8 = VertexNormal.myPlayer.method11166().aClass385_3595;
-							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9), -1980423440);
+							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9));
 						} else if (i_0 == 2) {
 							vector3_8 = VertexNormal.myPlayer.method11166().aClass385_3595;
-							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9), -1193762995);
+							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.myPlayer.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
 						} else if (i_0 == 23) {
-							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53), -622119201);
-							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119), -632491603);
-							Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_LOADER.aClass212_5114.method3632(), -1389047879);
+							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53));
+							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119));
+							Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_LOADER.aClass212_5114.method3632());
 						} else if (i_0 == 16) {
 							Class356.method6227(false, (byte) 37);
 						} else if (i_0 == 15) {
@@ -288,7 +288,7 @@ public class Whirlpool {
 					}
 				}
 			} catch (Exception exception_6) {
-				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1843715069), -915823010);
+				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 			}
 		}
 	}

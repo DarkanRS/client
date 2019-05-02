@@ -213,12 +213,12 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 
 		if (this.game == Game.darkan) {
-			this.defaultGroundOptions = new String[] { null, null, Message.TAKE.translate(this.language, -1215966862), null, null, Message.EXAMINE.translate(this.language, -380297277) };
+			this.defaultGroundOptions = new String[] { null, null, Message.TAKE.translate(this.language), null, null, Message.EXAMINE.translate(this.language) };
 		} else {
-			this.defaultGroundOptions = new String[] { null, null, Message.TAKE.translate(this.language, -791276439), null, null, null };
+			this.defaultGroundOptions = new String[] { null, null, Message.TAKE.translate(this.language), null, null, null };
 		}
 
-		this.defaultInventoryOptions = new String[] { null, null, null, null, Message.DROP.translate(this.language, -1623734133) };
+		this.defaultInventoryOptions = new String[] { null, null, null, null, Message.DROP.translate(this.language) };
 	}
 
 	public NativeSprite softwareRender(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4, int i_5, int i_6, PlayerAppearance playerappearance_7) {

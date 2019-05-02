@@ -759,7 +759,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                         ;
                     }
                     String string_5 = string_3.substring(6, i_4);
-                    if (Class115.method1950(string_5, 233261508) && Class328.parseInt(string_5, 1485921021) < 10) {
+                    if (Class115.method1950(string_5, 233261508) && Utils.parseInt(string_5) < 10) {
                         this.method4680("wrongjava", -1712930660);
                         return;
                     }
@@ -802,7 +802,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     static void method4779(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
         if (i_0 == i_2 && i_3 == i_1 && i_4 == i_6 && i_5 == i_7) {
-            Class346.method6159(i_0, i_1, i_6, i_7, i_8, -1028676957);
+            QuickChatMessage.method6159(i_0, i_1, i_6, i_7, i_8, -1028676957);
         } else {
             int i_10 = i_0;
             int i_11 = i_1;
@@ -829,7 +829,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 int i_32 = i_24 * i_23;
                 int i_33 = i_0 + (i_29 + i_27 + i_31 >> 12);
                 int i_34 = (i_30 + i_28 + i_32 >> 12) + i_1;
-                Class346.method6159(i_10, i_11, i_33, i_34, i_8, -880935447);
+                QuickChatMessage.method6159(i_10, i_11, i_33, i_34, i_8, -880935447);
                 i_10 = i_33;
                 i_11 = i_34;
             }

@@ -16,7 +16,7 @@ public class CS2Executor {
 	CS2Instruction[] operations;
 	Animable animable;
 	Class191 aClass191_7008;
-	Class346 aClass346_7009;
+	QuickChatMessage aClass346_7009;
 	ClanSettings currentClanSettings;
 	ClanChannel aNode_Sub4_7011;
 	SceneObject anInterface12_7013;
@@ -67,8 +67,8 @@ public class CS2Executor {
 				int i_6 = 0;
 				int i_7 = 0;
 				if (Node_Sub20_Sub24.aClass118_9884 != null) {
-					i_6 = Node_Sub20_Sub24.aClass118_9884.anInt1299;
-					i_7 = Node_Sub20_Sub24.aClass118_9884.anInt1428;
+					i_6 = Node_Sub20_Sub24.aClass118_9884.x;
+					i_7 = Node_Sub20_Sub24.aClass118_9884.y;
 				}
 				cs2executor_3.intLocals[0] = Class163.mouseRecorder.getMouseX() - i_6;
 				cs2executor_3.intLocals[1] = Class163.mouseRecorder.getMouseY() - i_7;
@@ -145,15 +145,15 @@ public class CS2Executor {
 				if (arr_3[i_10] instanceof Integer) {
 					int i_11 = ((Integer) arr_3[i_10]).intValue();
 					if (i_11 == -2147483647) {
-						i_11 = hookrequest_0.anInt8059;
+						i_11 = hookrequest_0.mouseX;
 					}
 
 					if (i_11 == -2147483646) {
-						i_11 = hookrequest_0.anInt8055;
+						i_11 = hookrequest_0.mouseY;
 					}
 
 					if (i_11 == -2147483645) {
-						i_11 = hookrequest_0.iComponentDefs != null ? hookrequest_0.iComponentDefs.idHash : -1;
+						i_11 = hookrequest_0.source != null ? hookrequest_0.source.idHash : -1;
 					}
 
 					if (i_11 == -2147483644) {
@@ -161,7 +161,7 @@ public class CS2Executor {
 					}
 
 					if (i_11 == -2147483643) {
-						i_11 = hookrequest_0.iComponentDefs != null ? hookrequest_0.iComponentDefs.anInt1288 : -1;
+						i_11 = hookrequest_0.source != null ? hookrequest_0.source.anInt1288 : -1;
 					}
 
 					if (i_11 == -2147483642) {
@@ -173,11 +173,11 @@ public class CS2Executor {
 					}
 
 					if (i_11 == -2147483640) {
-						i_11 = hookrequest_0.anInt8058;
+						i_11 = hookrequest_0.typedKeyCode;
 					}
 
 					if (i_11 == -2147483639) {
-						i_11 = hookrequest_0.anInt8056;
+						i_11 = hookrequest_0.typedKeyChar;
 					}
 
 					cs2executor_6.intLocals[i_7++] = i_11;

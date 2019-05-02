@@ -60,9 +60,9 @@ public final class VarNPCMap {
 		}
 	}
 
-	public static Class268 method2618(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
+	public static Class268 playSoundSynth(int i_0, int i_1, int i_2, int i_3, int sampleRate) {
 		if (Class393.preferences.aPreference_Sub13_8225.method12714() != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
-			Class268 class268_6 = new Class268((byte) 1, i_0, i_1, i_2, i_3, 0, i_4, (Transform_Sub1) null);
+			Class268 class268_6 = new Class268((byte) 1, i_0, i_1, i_2, i_3, 0, sampleRate, (Transform_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_6;
 			return class268_6;
 		} else {

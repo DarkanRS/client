@@ -51,7 +51,7 @@ public class Class105 {
 			if (bool_4) {
 				player_6.aBool10568 = false;
 			} else {
-				if (client.anInt7315 == i_1) {
+				if (client.myPlayerIndex == i_1) {
 					throw new RuntimeException();
 				}
 				Class4 class4_14 = Class197.aClass4Array2430[i_1] = new Class4();
@@ -69,7 +69,7 @@ public class Class105 {
 				}
 				client.players[i_1] = null;
 				if (rsbitsbuffer_0.readBits(1) != 0) {
-					Class346.method6155(rsbitsbuffer_0, i_1);
+					QuickChatMessage.method6155(rsbitsbuffer_0, i_1);
 				}
 			}
 		} else {
@@ -194,7 +194,7 @@ public class Class105 {
 					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1753987250)) {
 						player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
 					}
-					if (client.anInt7315 == i_1 && player_6.plane != Class4.anInt35) {
+					if (client.myPlayerIndex == i_1 && player_6.plane != Class4.anInt35) {
 						Class4.anInt35 = player_6.plane;
 					}
 				} else {
@@ -215,7 +215,7 @@ public class Class105 {
 					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1539369664)) {
 						player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
 					}
-					if (client.anInt7315 == i_1) {
+					if (client.myPlayerIndex == i_1) {
 						Class4.anInt35 = player_6.plane;
 					}
 				}

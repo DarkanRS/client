@@ -13,7 +13,7 @@ public class CutsceneAction_Sub13 extends CutsceneAction {
 	int anInt9366;
 
 	public void method1592() {
-		this.aClass268_9367 = VarNPCMap.method2618(this.anInt9363, this.anInt9366, 0, this.anInt9365, this.anInt9364, 1753039442);
+		this.aClass268_9367 = VarNPCMap.playSoundSynth(this.anInt9363, this.anInt9366, 0, this.anInt9365, this.anInt9364);
 	}
 
 	void method1593() {
@@ -24,7 +24,7 @@ public class CutsceneAction_Sub13 extends CutsceneAction {
 	}
 
 	public void method1601() {
-		this.aClass268_9367 = VarNPCMap.method2618(-1658024425 * this.anInt9363 * -614233689, 1033987545 * this.anInt9366 * 468765289, 0, 183603537 * this.anInt9365 * -2028447823, this.anInt9364 * -1995338863 * -1180265103, 1758960658);
+		this.aClass268_9367 = VarNPCMap.playSoundSynth(-1658024425 * this.anInt9363 * -614233689, 1033987545 * this.anInt9366 * 468765289, 0, 183603537 * this.anInt9365 * -2028447823, this.anInt9364 * -1995338863 * -1180265103);
 	}
 
 	CutsceneAction_Sub13(RsByteBuffer rsbytebuffer_1) {

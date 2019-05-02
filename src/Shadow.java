@@ -13,7 +13,7 @@ public abstract class Shadow extends CacheableNode {
             SunDefinitions.method854(false, true, -2145672761);
             int i_9 = Class540.anIntArray7136[i_8];
             Class13.method508(false, true, 425097305);
-            graphicalrenderer_0.B(i_1, ((63 - i_7) * icomponentdefinitions_3.anInt1429 >> 6) + i_2, icomponentdefinitions_3.anInt1301, (icomponentdefinitions_3.anInt1429 >> 6) + 1, i_9, 0);
+            graphicalrenderer_0.B(i_1, ((63 - i_7) * icomponentdefinitions_3.height >> 6) + i_2, icomponentdefinitions_3.width, (icomponentdefinitions_3.height >> 6) + 1, i_9, 0);
         }
     }
 
@@ -23,7 +23,7 @@ public abstract class Shadow extends CacheableNode {
         if (ints_4 != null) {
             string_3 = string_3 + Class15.method547(ints_4, 1858331234);
         }
-        int i_5 = fontmetrics_1.getWidth(string_3, Class115.aNativeSpriteArray1248);
+        int i_5 = fontmetrics_1.getTextWidth(string_3, Class115.aNativeSpriteArray1248);
         if (class282_sub50_sub7_0.aBool9577) {
             i_5 += Exception_Sub1.aNativeSprite_10075.method2747() + 4;
         }

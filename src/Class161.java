@@ -25,14 +25,14 @@ public class Class161 {
 			if (i_1 < client.anInt7432) {
 				i_1 = client.anInt7432;
 			}
-			if (i_1 + client.aClass118_7257.anInt1301 > client.anInt7367 + client.anInt7432) {
-				i_1 = client.anInt7367 + client.anInt7432 - client.aClass118_7257.anInt1301;
+			if (i_1 + client.aClass118_7257.width > client.anInt7367 + client.anInt7432) {
+				i_1 = client.anInt7367 + client.anInt7432 - client.aClass118_7257.width;
 			}
 			if (i_2 < client.anInt7265) {
 				i_2 = client.anInt7265;
 			}
-			if (i_2 + client.aClass118_7257.anInt1429 > client.anInt7265 + client.anInt7476) {
-				i_2 = client.anInt7476 + client.anInt7265 - client.aClass118_7257.anInt1429;
+			if (i_2 + client.aClass118_7257.height > client.anInt7265 + client.anInt7476) {
+				i_2 = client.anInt7476 + client.anInt7265 - client.aClass118_7257.height;
 			}
 			int i_3;
 			int i_4;
@@ -40,8 +40,8 @@ public class Class161 {
 				i_3 = i_1;
 				i_4 = i_2;
 			} else {
-				i_3 = i_1 - client.anInt7432 + client.aClass118_7247.anInt1311;
-				i_4 = i_2 - client.anInt7265 + client.aClass118_7247.anInt1312;
+				i_3 = i_1 - client.anInt7432 + client.aClass118_7247.scrollX;
+				i_4 = i_2 - client.anInt7265 + client.aClass118_7247.scrollY;
 			}
 			HookRequest hookrequest_5;
 			if (!Class163.mouseRecorder.method3568()) {
@@ -49,9 +49,9 @@ public class Class161 {
 					Class60.method1170();
 					if (client.aClass118_7257.anObjectArray1394 != null) {
 						hookrequest_5 = new HookRequest();
-						hookrequest_5.iComponentDefs = client.aClass118_7257;
-						hookrequest_5.anInt8059 = i_3;
-						hookrequest_5.anInt8055 = i_4;
+						hookrequest_5.source = client.aClass118_7257;
+						hookrequest_5.mouseX = i_3;
+						hookrequest_5.mouseY = i_4;
 						hookrequest_5.aClass118_8057 = client.aClass118_7370;
 						hookrequest_5.params = client.aClass118_7257.anObjectArray1394;
 						CS2Executor.executeHookInner200k(hookrequest_5, 79466209);
@@ -76,9 +76,9 @@ public class Class161 {
 				}
 				if (client.aClass118_7257.anObjectArray1451 != null && client.aBool7364) {
 					hookrequest_5 = new HookRequest();
-					hookrequest_5.iComponentDefs = client.aClass118_7257;
-					hookrequest_5.anInt8059 = i_3;
-					hookrequest_5.anInt8055 = i_4;
+					hookrequest_5.source = client.aClass118_7257;
+					hookrequest_5.mouseX = i_3;
+					hookrequest_5.mouseY = i_4;
 					hookrequest_5.params = client.aClass118_7257.anObjectArray1451;
 					CS2Executor.executeHookInner200k(hookrequest_5, 814557204);
 				}

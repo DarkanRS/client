@@ -151,12 +151,12 @@ public class Class278_Sub1 extends Class278 {
     static void method13448(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
         Class119 class119_4 = icomponentdefinitions_0.method2046(Renderers.SOFTWARE_RENDERER, -1375447309);
         if (class119_4 != null) {
-            Renderers.SOFTWARE_RENDERER.r(i_1, i_2, icomponentdefinitions_0.anInt1301 + i_1, i_2 + icomponentdefinitions_0.anInt1429);
+            Renderers.SOFTWARE_RENDERER.r(i_1, i_2, icomponentdefinitions_0.width + i_1, i_2 + icomponentdefinitions_0.height);
             if (Class187.anInt2363 < 3) {
                 int i_5 = (int) (-client.aFloat7365);
                 i_5 = i_5 + client.anInt7255 * 2 & 0x3fff;
                 i_5 <<= 2;
-                Class16.aNativeSprite_146.method2761((float) icomponentdefinitions_0.anInt1301 / 2.0F + (float) i_1, (float) icomponentdefinitions_0.anInt1429 / 2.0F + (float) i_2, i_5, class119_4.aClass455_1456, i_1, i_2);
+                Class16.aNativeSprite_146.method2761((float) icomponentdefinitions_0.width / 2.0F + (float) i_1, (float) icomponentdefinitions_0.height / 2.0F + (float) i_2, i_5, class119_4.aClass455_1456, i_1, i_2);
             } else {
                 Renderers.SOFTWARE_RENDERER.DA(class119_4.aClass455_1456, i_1, i_2);
             }

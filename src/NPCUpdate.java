@@ -209,12 +209,12 @@ public class NPCUpdate {
 				i_4 += buffer.readUnsignedByte() << 24;
 			}
 			if ((i_4 & 0x10) != 0) {
-				int[] ints_5 = new int[FontRenderer_Sub3.method14339().length];
-				for (int i_6 = 0; i_6 < FontRenderer_Sub3.method14339().length; i_6++) {
+				int[] ints_5 = new int[MovementType.values().length];
+				for (int i_6 = 0; i_6 < MovementType.values().length; i_6++) {
 					ints_5[i_6] = buffer.readBigSmart();
 				}
 				int i_6 = buffer.readUnsignedByte();
-				Class20.animate(npc, ints_5, i_6, true, (byte) 23);
+				Class20.animate(npc, ints_5, i_6, true);
 			}
 			if ((i_4 & 0x100) != 0) {
 				int i_14 = npc.definitions.modelIds.length;

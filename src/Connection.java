@@ -53,7 +53,7 @@ public abstract class Connection {
             IComponentDefinitions icomponentdefinitions_3 = arr_0[i_2];
             if (icomponentdefinitions_3.scriptParams != null) {
                 HookRequest hookrequest_4 = new HookRequest();
-                hookrequest_4.iComponentDefs = icomponentdefinitions_3;
+                hookrequest_4.source = icomponentdefinitions_3;
                 hookrequest_4.params = icomponentdefinitions_3.scriptParams;
                 CS2Executor.executeHookInner(hookrequest_4, 2000000, (byte) 84);
             }

@@ -18,6 +18,10 @@ public class Class353 {
 		return this == aClass353_4107 ? 0 : (this == aClass353_4106 ? i_4 - i_1 : (this == aClass353_4105 ? (i_4 - i_1) / 2 : 0));
 	}
 
+	public static Class353[] values() {
+		return new Class353[] { aClass353_4107, aClass353_4105, aClass353_4106 };
+	}
+
 	static void method6208(File file_0, byte[] bytes_1, int i_2) throws IOException {
 		DataInputStream datainputstream_4 = new DataInputStream(new BufferedInputStream(new FileInputStream(file_0)));
 		try {

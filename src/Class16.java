@@ -19,7 +19,7 @@ public class Class16 {
 
 	static CutsceneAction method562(RsByteBuffer buffer) {
 		int i_2 = buffer.readUnsignedByte();
-		CutsceneActionType type = Class346.method6156(i_2);
+		CutsceneActionType type = QuickChatMessage.method6156(i_2);
 		Object action = null;
 		switch (type.id) {
 		case 0:
@@ -121,7 +121,7 @@ public class Class16 {
 	public static final void method567(String string_0, boolean bool_1, byte b_2) {
 		if (string_0 != null) {
 			if (client.anInt7373 >= 100) {
-				LoadingStage.method6681(Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE, -927458536), (byte) 0);
+				ChatLine.appendGameMessage(Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE));
 			} else {
 				String string_3 = Class383.method6515(string_0);
 				if (string_3 != null) {
@@ -132,13 +132,13 @@ public class Class16 {
 						Class10 class10_5 = client.aClass10Array7456[i_4];
 						string_6 = Class383.method6515(class10_5.aString115);
 						if (string_6 != null && string_6.equals(string_3)) {
-							LoadingStage.method6681(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -794034411), (byte) 6);
+							ChatLine.appendGameMessage(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
 						if (class10_5.aString116 != null) {
 							string_7 = Class383.method6515(class10_5.aString116);
 							if (string_7 != null && string_7.equals(string_3)) {
-								LoadingStage.method6681(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -1228902826), (byte) 24);
+								ChatLine.appendGameMessage(string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
@@ -147,19 +147,19 @@ public class Class16 {
 						Class6 class6_9 = client.aClass6Array7452[i_4];
 						string_6 = Class383.method6515(class6_9.aString37);
 						if (string_6 != null && string_6.equals(string_3)) {
-							LoadingStage.method6681(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1154046234) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -627858057), (byte) 53);
+							ChatLine.appendGameMessage(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE));
 							return;
 						}
 						if (class6_9.aString43 != null) {
 							string_7 = Class383.method6515(class6_9.aString43);
 							if (string_7 != null && string_7.equals(string_3)) {
-								LoadingStage.method6681(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1770440532) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -695950851), (byte) 47);
+								ChatLine.appendGameMessage(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE));
 								return;
 							}
 						}
 					}
 					if (Class383.method6515(VertexNormal.myPlayer.displayName).equals(string_3)) {
-						LoadingStage.method6681(Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
+						ChatLine.appendGameMessage(Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE));
 					} else {
 						BufferedConnectionContext class184_8 = Preference_Sub20.method12807(1039135585);
 						TCPPacket tcpmessage_10 = Class271.createPacket(OutgoingPacket.ADD_IGNORE, class184_8.isaac);

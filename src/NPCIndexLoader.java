@@ -130,7 +130,7 @@ public class NPCIndexLoader {
 			this.aClass317_4839.filesCount(i_6);
 		}
 		if (this.aClass486_4844 == Game.darkan) {
-			this.aStringArray4840 = new String[] { null, null, null, null, null, Message.EXAMINE.translate(this.aClass495_4837, -1623078066) };
+			this.aStringArray4840 = new String[] { null, null, null, null, null, Message.EXAMINE.translate(this.aClass495_4837) };
 		} else {
 			this.aStringArray4840 = new String[6];
 		}

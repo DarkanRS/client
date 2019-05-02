@@ -87,9 +87,9 @@ public class Class186 {
 		Class237.method3990();
 
 		for (int i_1 = 0; i_1 < 25; i_1++) {
-			client.anIntArray7336[i_1] = 0;
-			client.anIntArray7337[i_1] = 0;
-			client.anIntArray7338[i_1] = 0;
+			client.SKILL_LEVEL_VISIBLE[i_1] = 0;
+			client.SKILL_LEVEL_ACTUAL[i_1] = 0;
+			client.SKILL_XP[i_1] = 0;
 		}
 
 	}

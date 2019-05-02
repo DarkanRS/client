@@ -55,7 +55,7 @@ public abstract class Class209 {
 
     public abstract void method3595();
 
-    public static void printConsoleMessage(String string_0, int i_1) {
+    public static void printConsoleMessage(String string_0) {
         if (Class13.aStringArray129 == null) {
             FontRenderer.method402(1696819544);
         }

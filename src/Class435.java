@@ -6,9 +6,9 @@ public class Class435 {
 		throw new Error();
 	}
 
-	public static Class268 method7300(int i_0, int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
-		if ((bool_4 ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
-			Class268 class268_7 = new Class268((byte) (bool_4 ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Transform_Sub1) null);
+	public static Class268 playSoundVorbis(int i_0, int i_1, int i_2, int i_3, boolean idk, int i_5) {
+		if ((idk ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
+			Class268 class268_7 = new Class268((byte) (idk ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Transform_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
 			return class268_7;
 		} else {
@@ -131,7 +131,7 @@ public class Class435 {
 				Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469);
 				Class89.method1502(-931909822);
 				Class291_Sub1.method5126();
-				Class346.aClass482_4049 = new NodeCollection();
+				QuickChatMessage.aClass482_4049 = new NodeCollection();
 				Class291_Sub1.anInt3454 += (int) (Math.random() * 5.0D) - 2;
 				if (Class291_Sub1.anInt3454 < -8) {
 					Class291_Sub1.anInt3454 = -8;

@@ -64,7 +64,7 @@ public class NPCDirection implements Identifiable {
 	}
 
 	static void method4326(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2) {
-		int i_4 = icomponentdefinitions_2.anInt1301 + i_0;
+		int i_4 = icomponentdefinitions_2.width + i_0;
 		int i_5 = i_1 + 15;
 		if (client.aBool7176) {
 			int i_6 = -256;

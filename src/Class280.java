@@ -56,7 +56,7 @@ public class Class280 implements Interface25 {
 		IsaacCipher.method7268(1874031200);
 	}
 
-	public static boolean method4975(String string_0, byte b_1) {
+	public static boolean method4975(String string_0) {
 		if (string_0 == null) {
 			return false;
 		} else {

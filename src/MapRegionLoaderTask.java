@@ -80,19 +80,4 @@ public class MapRegionLoaderTask implements Runnable {
 			this.method6054();
 		}
 	}
-
-	public static void appendMessage(int i_0, int i_1, String string_2, String string_3, String string_4, String string_5, String string_6, int i_7) {
-		ChatLine chatline_8 = Class81.CHAT_LINES[99];
-		for (int i_9 = 99; i_9 > 0; --i_9) {
-			Class81.CHAT_LINES[i_9] = Class81.CHAT_LINES[i_9 - 1];
-		}
-		if (chatline_8 == null) {
-			chatline_8 = new ChatLine(i_0, i_1, string_2, string_3, string_4, string_6, i_7, string_5);
-		} else {
-			chatline_8.set(i_0, i_1, string_2, string_3, string_4, string_6, i_7, string_5);
-		}
-		Class81.CHAT_LINES[0] = chatline_8;
-		++Class81.NUM_CHAT_LINES;
-		client.anInt7391 = client.anInt7347;
-	}
 }

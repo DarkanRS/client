@@ -69,8 +69,8 @@ public class AnimationFrameBase extends Node {
 				i_6 = 0;
 			}
 
-			int i_7 = Class20.aBool187 ? fontmetrics_3.anInt4978 + 1 + 20 : 31;
-			int i_8 = i_1 - i_7 + fontmetrics_3.anInt4978 + 1;
+			int i_7 = Class20.aBool187 ? fontmetrics_3.topPadding + 1 + 20 : 31;
+			int i_8 = i_1 - i_7 + fontmetrics_3.topPadding + 1;
 			if (i_9 + i_8 > Engine.anInt3243 * -969250379) {
 				i_8 = Engine.anInt3243 * -969250379 - i_9;
 			}

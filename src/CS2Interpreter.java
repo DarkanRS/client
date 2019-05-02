@@ -643,67 +643,67 @@ public class CS2Interpreter {
 		case instr6157:
 			method6138(exec);
 			break;
-		case SET_COMP_POS:
+		case IF_SETPOSITION:
 			ifSetPosition(exec);
 			break;
-		case instr6934: //IF_SETSIZE
+		case IF_SETSIZE:
 			method2826(exec);
 			break;
-		case HIDE_COMP:
+		case IF_SETHIDE:
 			hideComp(exec);
 			break;
-		case instr6161: //IF_SETASPECT
+		case IF_SETASPECT:
 			method283(exec);
 			break;
-		case instr6706: //IF_SETNOCLICKTHROUGH
+		case IF_SETNOCLICKTHROUGH:
 			method1167(exec);
 			break;
-		case instr6163: //IF_SETSCROLLPOS
+		case IF_SETSCROLLPOS:
 			method5302(exec);
 			break;
-		case instr6164: //IF_SETCOLOUR
+		case IF_SETCOLOR:
 			method15514(exec);
 			break;
-		case instr6165: //IF_SETFILL
+		case IF_SETFILL:
 			method3554(exec);
 			break;
-		case SET_COMP_TRANSPARENCY:
+		case IF_SETTRANS:
 			setCompTransparency(exec);
 			break;
-		case instr6167: //IF_SETLINEWID
+		case IF_SETLINEWID:
 			method6016(exec);
 			break;
-		case SET_COMP_SPRITE:
+		case IF_SETGRAPHIC:
 			setCompSprite(exec);
 			break;
-		case instr6169: //IF_SET2DANGLE
+		case IF_SET2DANGLE:
 			method460(exec);
 			break;
-		case instr6142: //IF_SETTILING
+		case IF_SETTILING:
 			method3250(exec);
 			break;
-		case instr6171: //IF_SETMODEL
+		case IF_SETMODEL:
 			method4311(exec);
 			break;
-		case instr6056: //IF_SETMODELANGLE
+		case IF_SETMODELANGLE:
 			method3020(exec);
 			break;
-		case ANIMATE_COMP: //IF_SETMODELANIM
+		case IF_SETMODELANIM:
 			animateComp(exec);
 			break;
-		case instr6174: //IF_SETMODELORTHOG
+		case instr6174:
 			method11492(exec);
 			break;
-		case instr6369: //IF_SETMODELTINT
+		case instr6369:
 			method1509(exec);
 			break;
-		case SET_COMP_TEXT:
+		case IF_SETTEXT:
 			setCompText(exec);
 			break;
-		case instr6177: //IF_SETTEXTFONT
+		case instr6177:
 			method3232(exec);
 			break;
-		case instr6178: //IF_SETTEXTALIGN
+		case instr6178:
 			method4205(exec);
 			break;
 		case instr6170:
@@ -895,11 +895,11 @@ public class CS2Interpreter {
 		case instr5973:
 			method5511(exec);
 			break;
-		case HOOK_MOUSE_HOVER:
-			hookMouseHover(exec);
+		case IF_SETONMOUSEOVER:
+			ifSetOnMouseOver(exec);
 			break;
-		case instr6243:
-			method2595(exec);
+		case IF_SETONMOUSELEAVE:
+			ifSetOnMouseLeave(exec);
 			break;
 		case instr6393:
 			method6762(exec);
@@ -958,40 +958,40 @@ public class CS2Interpreter {
 		case instr6898:
 			method6372(exec);
 			break;
-		case instr6263:
+		case IF_CLEARSCRIPTHOOKS:
 			method6040(exec);
 			break;
-		case instr6398:
+		case IF_GETX:
 			method4146(exec);
 			break;
-		case instr6265:
+		case IF_GETY:
 			method6151(exec);
 			break;
-		case GET_COMP_WIDTH:
+		case IF_GETWIDTH:
 			getCompWidth(exec);
 			break;
-		case GET_COMP_HEIGHT:
+		case IF_GETHEIGHT:
 			getCompHeight(exec);
 			break;
-		case instr6268:
-			method6232(exec);
+		case IF_GETHIDE:
+			getCompHidden(exec);
 			break;
-		case instr6269:
+		case IF_GETLAYER:
 			method5045(exec);
 			break;
-		case instr6270:
+		case IF_GETPARENTLAYER:
 			method8220(exec);
 			break;
-		case instr6271:
+		case IF_GETCOLOR:
 			method454(exec);
 			break;
-		case instr6272:
+		case IF_GETSCROLLX:
 			method7422(exec);
 			break;
-		case instr6273:
+		case IF_GETSCROLLY:
 			method11473(exec);
 			break;
-		case GET_COMP_TEXT:
+		case IF_GETTEXT:
 			getCompText(exec);
 			break;
 		case instr6275:
@@ -1070,10 +1070,10 @@ public class CS2Interpreter {
 			method8715(exec);
 			break;
 		case instr6300:
-			method855(exec);
+			method855(exec); //IF_GETCHARINDEXATPOS?
 			break;
 		case instr6391:
-			method6941(exec);
+			method6941(exec); //IF_GETCHARPOSATINDEX?
 			break;
 		case instr6302:
 			method6670(exec);
@@ -1102,7 +1102,7 @@ public class CS2Interpreter {
 		case MES:
 			method3339(exec);
 			break;
-		case instr6311:
+		case RESET_MYPLAYER_ANIMS:
 			method1836(exec);
 			break;
 		case IF_CLOSE:
@@ -1120,28 +1120,28 @@ public class CS2Interpreter {
 		case OPPLAYER:
 			method6194(exec);
 			break;
-		case instr6317:
+		case IF_DRAGPICKUP:
 			method870(exec);
 			break;
-		case instr6318:
+		case CC_DRAGPICKUP:
 			method5082(exec);
 			break;
-		case instr6910:
+		case RESUME_ITEMDIALOG:
 			method12841(exec);
 			break;
-		case instr6320:
+		case IF_OPENSUBCLIENT:
 			method1355(exec);
 			break;
-		case instr6321:
+		case IF_CLOSESUBCLIENT:
 			method4839(exec);
 			break;
-		case instr6322:
+		case OPPLAYERT:
 			method15399(exec);
 			break;
-		case instr6040:
-			method6229(exec);
+		case MES_TYPED:
+			appendTypedMessage(exec);
 			break;
-		case instr6324:
+		case SETUP_MESSAGEBOX:
 			method8147(exec);
 			break;
 		case RESUME_HSLDIALOG:
@@ -1153,82 +1153,82 @@ public class CS2Interpreter {
 		case SOUND_SYNTH:
 			playSoundSynth(exec);
 			break;
-		case instr6480:
+		case SOUND_SONG:
 			method3555(exec);
 			break;
-		case instr6329:
+		case SOUND_JINGLE:
 			method5027(exec);
 			break;
-		case instr6330:
+		case SOUND_SYNTH_VOLUME:
 			method14520(exec);
 			break;
-		case instr6619:
+		case SOUND_SONG_VOLUME:
 			method4557(exec);
 			break;
-		case instr6332:
+		case SOUND_JINGLE_VOLUME:
 			method11612(exec);
 			break;
-		case instr6333:
+		case SOUND_VORBIS_VOLUME:
 			method2823(exec);
 			break;
-		case instr6334:
+		case SOUND_SPEECH_VOLUME:
 			method8153(exec);
 			break;
-		case instr6788:
+		case SOUND_SYNTH_RATE:
 			method1888(exec);
 			break;
-		case instr6336:
+		case SOUND_VORBIS_RATE:
 			method5335(exec);
 			break;
-		case instr6337:
+		case CLIENTCLOCK:
 			method456(exec);
 			break;
-		case instr6338:
+		case INV_GETITEM:
 			method7675(exec);
 			break;
-		case instr6339:
+		case INV_GETNUM:
 			method5197(exec);
 			break;
-		case instr6810:
+		case INV_TOTAL:
 			method15389(exec);
 			break;
-		case instr6341:
+		case INV_SIZE:
 			method2729(exec);
 			break;
-		case instr6467:
+		case INV_TOTALCAT:
 			method16089(exec);
 			break;
-		case instr6343:
+		case STAT:
 			method3913(exec);
 			break;
-		case instr6701:
+		case STAT_BASE:
 			method11486(exec);
 			break;
-		case instr6345:
+		case STAT_VISIBLE_XP:
 			method7444(exec);
 			break;
-		case instr6067:
-			method5408(exec);
+		case COORD:
+			getMyPlayerPos(exec);
 			break;
-		case instr6865:
+		case COORDX:
 			method13057(exec);
 			break;
-		case instr6348:
+		case COORDY:
 			method7427(exec);
 			break;
-		case instr6349:
+		case COORDZ:
 			method5003(exec);
 			break;
-		case instr6385:
+		case WORLD_MEMBERS:
 			method5733(exec);
 			break;
-		case instr6351:
+		case INVOTHER_GETITEM:
 			method4825(exec);
 			break;
-		case instr6575:
+		case INVOTHER_GETNUM:
 			method6230(exec);
 			break;
-		case instr6353:
+		case INVOTHER_TOTAL:
 			method5490(exec);
 			break;
 		case STAFFMODLEVEL:
@@ -1246,10 +1246,10 @@ public class CS2Interpreter {
 		case RUNWEIGHT_VISIBLE:
 			getRunWeight(exec);
 			break;
-		case instr6359:
+		case PLAYERMOD:
 			method1467(exec);
 			break;
-		case instr6360:
+		case PLAYERMODLEVEL:
 			method3033(exec);
 			break;
 		case PLAYERMEMBER:
@@ -3175,7 +3175,7 @@ public class CS2Interpreter {
 		method6122(icomponentdefinitions_3, interface_4, executor);
 	}
 
-	static final void method5408(CS2Executor executor) {
+	static final void getMyPlayerPos(CS2Executor executor) {
 		byte b_2 = VertexNormal.myPlayer.plane;
 		Vector3 vector3_3 = VertexNormal.myPlayer.method11166().aClass385_3595;
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -3339,7 +3339,7 @@ public class CS2Interpreter {
 	static final void method8717(CS2Executor executor) {
 		String string_2;
 		if (VertexNormal.myPlayer != null && VertexNormal.myPlayer.username != null) {
-			string_2 = VertexNormal.myPlayer.method16127(2008342545);
+			string_2 = VertexNormal.myPlayer.getUsernameWithTitle();
 		} else {
 			string_2 = "";
 		}
@@ -3396,7 +3396,7 @@ public class CS2Interpreter {
 		ChatLine chatline_3 = Class180.method3032(i_2);
 		int i_4 = -1;
 		if (chatline_3 != null) {
-			i_4 = chatline_3.anInt1091;
+			i_4 = chatline_3.quickchatMessageId;
 		}
 		executor.intStack[++executor.intStackPtr - 1] = i_4;
 	}
@@ -3414,7 +3414,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3555(CS2Executor executor) {
-		Class42.method890(executor.intStack[--executor.intStackPtr], 255, 50, (byte) 39);
+		Class42.playSoundSong(executor.intStack[--executor.intStackPtr], 255, 50, (byte) 39);
 	}
 
 	static final void method3556(CS2Executor executor) {
@@ -3455,8 +3455,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(2);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.anInt4048);
-		executor.aClass346_7009.aCacheableNode_Sub9_4047.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -463581846);
+		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
+		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -463581846);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -76404824);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -3634,7 +3634,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4882(CS2Executor executor) {
-		Class492.method8265(0, 0, client.aClass118_7183.anInt1301, client.aClass118_7183.anInt1429, false, (byte) -37);
+		Class492.method8265(0, 0, client.aClass118_7183.width, client.aClass118_7183.height, false, (byte) -37);
 		executor.intStack[++executor.intStackPtr - 1] = client.anInt7188;
 		executor.intStack[++executor.intStackPtr - 1] = client.anInt7440;
 	}
@@ -3698,7 +3698,7 @@ public class CS2Interpreter {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = executor.intStack[--executor.intStackPtr];
 		FontMetrics fontmetrics_4 = Class94.getFontMetrics(IndexLoaders.FONT_METRICS_INDEX, i_3, 1361822536);
-		executor.intStack[++executor.intStackPtr - 1] = fontmetrics_4.getWidth(string_2, Class182.aNativeSpriteArray2261);
+		executor.intStack[++executor.intStackPtr - 1] = fontmetrics_4.getTextWidth(string_2, Class182.aNativeSpriteArray2261);
 	}
 
 	static final void method1855(CS2Executor executor) {
@@ -3751,7 +3751,7 @@ public class CS2Interpreter {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method2732(icomponentdefinitions_3, interface_4, executor, -1950907302);
+		setCompText(icomponentdefinitions_3, interface_4, executor, -1950907302);
 	}
 
 	static final void method13494(CS2Executor executor) {
@@ -3989,7 +3989,7 @@ public class CS2Interpreter {
 	static final void method6796(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1428;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.y;
 	}
 
 	static final void method6797(CS2Executor executor) {
@@ -4068,7 +4068,7 @@ public class CS2Interpreter {
 	static final void method11125(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1311;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollX;
 	}
 
 	static final void method11126(CS2Executor executor) {
@@ -4505,7 +4505,7 @@ public class CS2Interpreter {
 	static final void getCompWidth(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1301;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.width;
 	}
 
 	static final void method7932(CS2Executor executor) {
@@ -4535,7 +4535,7 @@ public class CS2Interpreter {
 		ChatLine chatline_3 = Class180.method3032(i_2);
 		int i_4 = -1;
 		if (chatline_3 != null) {
-			i_4 = chatline_3.anInt1084;
+			i_4 = chatline_3.time;
 		}
 		executor.intStack[++executor.intStackPtr - 1] = i_4;
 	}
@@ -4706,13 +4706,13 @@ public class CS2Interpreter {
 			underlaydefinition_2 = executor.hookedInterface1;
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_4.anInt1312;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_4.scrollY;
 	}
 
 	static final void method14578(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1314;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollHeight;
 	}
 
 	static final void ifSetPosition(CS2Executor executor) {
@@ -4776,7 +4776,7 @@ public class CS2Interpreter {
 
 	static final void playSoundSynth(CS2Executor executor) {
 		executor.intStackPtr -= 3;
-		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], 255, 256, 1363502239);
+		VarNPCMap.playSoundSynth(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], 255, 256);
 	}
 
 	static final void method3169(CS2Executor executor) {
@@ -4851,7 +4851,7 @@ public class CS2Interpreter {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		int i_3 = 0;
 		if (Class115.method1950(string_2, -1586612370)) {
-			i_3 = Class328.parseInt(string_2, 1827486792);
+			i_3 = Utils.parseInt(string_2);
 		}
 		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.RESUME_COUNTDIALOG, client.outputContext.isaac);
 		tcpmessage_4.buffer.writeInt(i_3);
@@ -4994,8 +4994,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(1);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.anInt4048);
-		executor.aClass346_7009.aCacheableNode_Sub9_4047.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -245952501);
+		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
+		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -245952501);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, 1096626300);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -5136,7 +5136,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = Huffman.method1980(i_2, i_3, false, 1448220048);
+		executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getContainerTotal(i_2, i_3, false);
 	}
 
 	static final void method1562(CS2Executor executor) {
@@ -5352,7 +5352,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = Huffman.method1980(i_2, i_3, true, 1580023895);
+		executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getContainerTotal(i_2, i_3, true);
 	}
 
 	static final void method6314(CS2Executor executor) {
@@ -5367,8 +5367,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(0);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.anInt4048);
-		executor.aClass346_7009.aCacheableNode_Sub9_4047.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -1259900340);
+		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
+		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -1259900340);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, 1119414501);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -5708,7 +5708,7 @@ public class CS2Interpreter {
 	static final void method8863(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1299;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.x;
 	}
 
 	static final void method933(CS2Executor executor) {
@@ -5832,7 +5832,7 @@ public class CS2Interpreter {
 	static final void method7771(CS2Executor executor) {
 		String string_2;
 		if (VertexNormal.myPlayer != null && VertexNormal.myPlayer.username != null) {
-			string_2 = VertexNormal.myPlayer.method16128();
+			string_2 = VertexNormal.myPlayer.getDisplayName();
 		} else {
 			string_2 = "";
 		}
@@ -5901,12 +5901,12 @@ public class CS2Interpreter {
 	}
 
 	static void method4556(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).method4093(Class158_Sub1.PLAYER_VAR_PROVIDER, client.anIntArray7337) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).method4093(Class158_Sub1.PLAYER_VAR_PROVIDER, client.SKILL_LEVEL_ACTUAL) ? 1 : 0;
 	}
 
 	static final void method4557(CS2Executor executor) {
 		executor.intStackPtr -= 3;
-		Class42.method890(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], (byte) -2);
+		Class42.playSoundSong(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], (byte) -2);
 	}
 
 	static final void method4558(CS2Executor executor) {
@@ -6190,7 +6190,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = Transform_Sub1_Sub1_Sub6.getAmountAtSlot(i_2, i_3, false, 1986479665);
+		executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getAmountAtSlot(i_2, i_3, false);
 	}
 
 	static final void method5198(CS2Executor executor) {
@@ -6378,11 +6378,11 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.water.method12923() ? 1 : 0;
 	}
 
-	static final void method2595(CS2Executor executor) {
+	static final void ifSetOnMouseLeave(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = Preference_Sub8.INTERFACES[i_2 >> 16];
-		method6453(icomponentdefinitions_3, interface_4, executor, -1649840188);
+		setOnMouseLeave(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6194(CS2Executor executor) {
@@ -6750,13 +6750,13 @@ public class CS2Interpreter {
 	static final void method7032(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1301;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.width;
 	}
 
 	static final void method14659(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1314;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollHeight;
 	}
 
 	static final void method14660(CS2Executor executor) {
@@ -6827,7 +6827,7 @@ public class CS2Interpreter {
 
 	static final void method2823(CS2Executor executor) {
 		executor.intStackPtr -= 4;
-		Class435.method7300(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], false, 256);
+		Class435.playSoundVorbis(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], false, 256);
 	}
 
 	static final void method2824(CS2Executor executor) {
@@ -6869,7 +6869,7 @@ public class CS2Interpreter {
 
 	static final void method2729(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_2, (short) 9738).maxSize;
+		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.INVENTORY_LOADER.getInventoryDef(i_2).maxSize;
 	}
 
 	static final void ccSetNoClickThrough(CS2Executor executor) {
@@ -6950,7 +6950,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1467(CS2Executor executor) {
-		if (client.anInt7319 >= 5 && client.anInt7319 <= 9) {
+		if (client.PLAYER_MOD_LEVEL >= 5 && client.PLAYER_MOD_LEVEL <= 9) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -7125,7 +7125,7 @@ public class CS2Interpreter {
 
 	static final void method5335(CS2Executor executor) {
 		executor.intStackPtr -= 5;
-		Class435.method7300(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], false, executor.intStack[executor.intStackPtr + 4]);
+		Class435.playSoundVorbis(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], false, executor.intStack[executor.intStackPtr + 4]);
 	}
 
 	static final void method7082(CS2Executor executor) {
@@ -7211,7 +7211,7 @@ public class CS2Interpreter {
 	static final void method4901(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1376;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollWidth;
 	}
 
 	static final void method4902(CS2Executor executor) {
@@ -7284,7 +7284,7 @@ public class CS2Interpreter {
 	static final void method11473(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1312;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollY;
 	}
 
 	static final void method3200(CS2Executor executor) {
@@ -7301,9 +7301,9 @@ public class CS2Interpreter {
 
 	static final void method8147(CS2Executor executor) {
 		executor.intStackPtr -= 11;
-		Class356[] arr_2 = Class350_Sub3_Sub1.method15558(418447133);
-		Class353[] arr_3 = AccountCreationResponseOpcodes.method8155();
-		Node_Sub15_Sub3.method15239(arr_2[executor.intStack[executor.intStackPtr]], arr_3[executor.intStack[executor.intStackPtr + 1]], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], executor.intStack[executor.intStackPtr + 4], executor.intStack[executor.intStackPtr + 5], executor.intStack[executor.intStackPtr + 6], executor.intStack[executor.intStackPtr + 7], executor.intStack[executor.intStackPtr + 8], executor.intStack[executor.intStackPtr + 9], executor.intStack[executor.intStackPtr + 10]);
+		Class356[] class356s = Class356.values();
+		Class353[] class353s = Class353.values();
+		Node_Sub15_Sub3.method15239(class356s[executor.intStack[executor.intStackPtr]], class353s[executor.intStack[executor.intStackPtr + 1]], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], executor.intStack[executor.intStackPtr + 4], executor.intStack[executor.intStackPtr + 5], executor.intStack[executor.intStackPtr + 6], executor.intStack[executor.intStackPtr + 7], executor.intStack[executor.intStackPtr + 8], executor.intStack[executor.intStackPtr + 9], executor.intStack[executor.intStackPtr + 10]);
 	}
 
 	static final void method6908(CS2Executor executor) {
@@ -7360,11 +7360,11 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = Class9.anInt106;
 	}
 
-	static final void hookMouseHover(CS2Executor executor) {
+	static final void ifSetOnMouseOver(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = Preference_Sub8.INTERFACES[i_2 >> 16];
-		method8277(icomponentdefinitions_3, interface_4, executor, 1396779389);
+		setOnMouseOver(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6738(CS2Executor executor) {
@@ -7705,17 +7705,17 @@ public class CS2Interpreter {
 		client.aBool7175 = false;
 	}
 
-	static final void method6229(CS2Executor executor) {
+	static final void appendTypedMessage(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		int i_2 = executor.intStack[executor.intStackPtr];
-		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		String string_4 = (String) executor.stringStack[--executor.stringStackPtr];
-		if (i_2 == 99) {
-			Class209.printConsoleMessage(string_4, -914132655);
-		} else if (i_2 == 98) {
-			QuestDefinitions.setConsoleText(string_4, 2053399101);
+		int type = executor.intStack[executor.intStackPtr];
+		int effectFlags = executor.intStack[executor.intStackPtr + 1];
+		String message = (String) executor.stringStack[--executor.stringStackPtr];
+		if (type == 99) {
+			Class209.printConsoleMessage(message);
+		} else if (type == 98) {
+			QuestDefinitions.setConsoleText(message);
 		} else {
-			Class191.method3167(i_2, i_3, "", "", "", string_4, 30910415);
+			ChatLine.appendChatMessage(type, effectFlags, "", "", "", message);
 		}
 	}
 
@@ -7723,7 +7723,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = Transform_Sub1_Sub1_Sub6.getAmountAtSlot(i_2, i_3, true, -1743480204);
+		executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getAmountAtSlot(i_2, i_3, true);
 	}
 
 	static final void method6231(CS2Executor executor) {
@@ -7731,7 +7731,7 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = client.GRAND_EXCHANGE_SLOTS[i_2].method5909();
 	}
 
-	static final void method6232(CS2Executor executor) {
+	static final void getCompHidden(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.hidden ? 1 : 0;
@@ -7762,7 +7762,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6730(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = ((Player) executor.animable).method16127(2071482968);
+		executor.stringStack[++executor.stringStackPtr - 1] = ((Player) executor.animable).getUsernameWithTitle();
 	}
 
 	static final void getEnumSize(CS2Executor executor) {
@@ -7891,7 +7891,7 @@ public class CS2Interpreter {
 
 	static final void method7444(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.anIntArray7338[i_2];
+		executor.intStack[++executor.intStackPtr - 1] = client.SKILL_XP[i_2];
 	}
 
 	static final void method7445(CS2Executor executor) {
@@ -8247,7 +8247,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = SpotAnimIndexLoader.getItemIdAtSlot(i_2, i_3, false, 946854305);
+		executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getItemIdAtSlot(i_2, i_3, false);
 	}
 
 	static final void method2107(CS2Executor executor) {
@@ -8276,7 +8276,7 @@ public class CS2Interpreter {
 
 	static final void method11486(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.anIntArray7337[i_2];
+		executor.intStack[++executor.intStackPtr - 1] = client.SKILL_LEVEL_ACTUAL[i_2];
 	}
 
 	static final void mergeStrings(CS2Executor executor) {
@@ -8329,7 +8329,7 @@ public class CS2Interpreter {
 
 	static final void method3339(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		Class2.method258(string_2);
+		ChatLine.appendChatMessage(string_2);
 	}
 
 	static final void method3340(CS2Executor executor) {
@@ -8443,8 +8443,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method3033(CS2Executor executor) {
-		if (client.anInt7319 >= 5 && client.anInt7319 <= 9) {
-			executor.intStack[++executor.intStackPtr - 1] = client.anInt7319;
+		if (client.PLAYER_MOD_LEVEL >= 5 && client.PLAYER_MOD_LEVEL <= 9) {
+			executor.intStack[++executor.intStackPtr - 1] = client.PLAYER_MOD_LEVEL;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -8592,8 +8592,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(3);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.anInt4048);
-		executor.aClass346_7009.aCacheableNode_Sub9_4047.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -1204920325);
+		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
+		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -1204920325);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -2062129936);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -8650,7 +8650,7 @@ public class CS2Interpreter {
 
 	static final void method1888(CS2Executor executor) {
 		executor.intStackPtr -= 5;
-		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], executor.intStack[executor.intStackPtr + 4], 1275118183);
+		VarNPCMap.playSoundSynth(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], executor.intStack[executor.intStackPtr + 4]);
 	}
 
 	static final void method1889(CS2Executor executor) {
@@ -8689,7 +8689,7 @@ public class CS2Interpreter {
 
 	static final void method5027(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		Huffman.method1978(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], 255);
+		Huffman.playSoundJingle(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], 255);
 	}
 
 	static final void method5029(CS2Executor executor) {
@@ -8761,7 +8761,7 @@ public class CS2Interpreter {
 	static final void method858(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1376;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollWidth;
 	}
 
 	static void method5290(CS2Executor executor) {
@@ -8851,7 +8851,7 @@ public class CS2Interpreter {
 	static final void method7422(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1311;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.scrollX;
 	}
 
 	static void method1799(CS2Executor executor) {
@@ -8870,7 +8870,7 @@ public class CS2Interpreter {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method8277(icomponentdefinitions_3, interface_4, executor, 1708366546);
+		setOnMouseOver(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method261(CS2Executor executor) {
@@ -8879,7 +8879,7 @@ public class CS2Interpreter {
 
 	static final void method11612(CS2Executor executor) {
 		executor.intStackPtr -= 3;
-		Huffman.method1978(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2]);
+		Huffman.playSoundJingle(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2]);
 	}
 
 	static final void method11613(CS2Executor executor) {
@@ -9130,7 +9130,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = Preference_Sub8.INTERFACES[i_2 >> 16];
-		method2732(icomponentdefinitions_3, interface_4, executor, 2144367938);
+		setCompText(icomponentdefinitions_3, interface_4, executor, 2144367938);
 	}
 
 	static final void randSoundPitch(CS2Executor executor) {
@@ -9230,7 +9230,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7186(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7315;
+		executor.intStack[++executor.intStackPtr - 1] = client.myPlayerIndex;
 	}
 
 	static final void method7187(CS2Executor executor) {
@@ -9267,7 +9267,7 @@ public class CS2Interpreter {
 
 	static final void method16089(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		ItemContainerDefinitions inventorydef_2 = IndexLoaders.INVENTORY_LOADER.getInventoryDef(executor.intStack[executor.intStackPtr], (short) 24055);
+		ItemContainerDefinitions inventorydef_2 = IndexLoaders.INVENTORY_LOADER.getInventoryDef(executor.intStack[executor.intStackPtr]);
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = -1;
 		for (int i_5 = 0; i_5 < inventorydef_2.contentSize; i_5++) {
@@ -9300,7 +9300,7 @@ public class CS2Interpreter {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method6453(icomponentdefinitions_3, interface_4, executor, -258126680);
+		setOnMouseLeave(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method6044(CS2Executor executor) {
@@ -9350,8 +9350,8 @@ public class CS2Interpreter {
 		tcpmessage_4.buffer.writeByte(0);
 		int i_5 = tcpmessage_4.buffer.index;
 		tcpmessage_4.buffer.writeString(string_2);
-		tcpmessage_4.buffer.writeShort(executor.aClass346_7009.anInt4048);
-		executor.aClass346_7009.aCacheableNode_Sub9_4047.method14896(tcpmessage_4.buffer, executor.aClass346_7009.anIntArray4046, -1485943767);
+		tcpmessage_4.buffer.writeShort(executor.aClass346_7009.qcMessageId);
+		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_4.buffer, executor.aClass346_7009.anIntArray4046, -1485943767);
 		tcpmessage_4.buffer.method13061(tcpmessage_4.buffer.index - i_5, 460016164);
 		class184_3.queuePacket(tcpmessage_4);
 	}
@@ -9453,7 +9453,7 @@ public class CS2Interpreter {
 	}
 
 	static void method14841(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).method4111(client.anIntArray7337, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).method4111(client.SKILL_LEVEL_ACTUAL, executor.intStack[executor.intStackPtr - 1]) ? 1 : 0;
 		--executor.intStackPtr;
 	}
 
@@ -9830,10 +9830,10 @@ public class CS2Interpreter {
 	}
 
 	static final void method11154(CS2Executor executor) {
-		executor.aClass346_7009 = new Class346();
-		executor.aClass346_7009.anInt4048 = executor.intStack[--executor.intStackPtr];
-		executor.aClass346_7009.aCacheableNode_Sub9_4047 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(executor.aClass346_7009.anInt4048);
-		executor.aClass346_7009.anIntArray4046 = new int[executor.aClass346_7009.aCacheableNode_Sub9_4047.method14916(388398854)];
+		executor.aClass346_7009 = new QuickChatMessage();
+		executor.aClass346_7009.qcMessageId = executor.intStack[--executor.intStackPtr];
+		executor.aClass346_7009.qcMessageDefs = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(executor.aClass346_7009.qcMessageId);
+		executor.aClass346_7009.anIntArray4046 = new int[executor.aClass346_7009.qcMessageDefs.method14916(388398854)];
 	}
 
 	static final void method1979(CS2Executor executor) {
@@ -9873,7 +9873,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.intStack[++executor.intStackPtr - 1] = SpotAnimIndexLoader.getItemIdAtSlot(i_2, i_3, true, 113694446);
+		executor.intStack[++executor.intStackPtr - 1] = ItemContainer.getItemIdAtSlot(i_2, i_3, true);
 	}
 
 	static final void method4826(CS2Executor executor) {
@@ -9925,114 +9925,114 @@ public class CS2Interpreter {
 		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 			String string_3 = string_2.toLowerCase();
 			byte b_4 = 0;
-			if (string_3.startsWith(Message.aClass433_5310.translate(Language.aClass495_5795, -2011565304))) {
+			if (string_3.startsWith(Message.aClass433_5310.translate(Language.aClass495_5795))) {
 				b_4 = 0;
-				string_2 = string_2.substring(Message.aClass433_5310.translate(Language.aClass495_5795, -1474574192).length());
-			} else if (string_3.startsWith(Message.aClass433_5224.translate(Language.aClass495_5795, -1018725645))) {
+				string_2 = string_2.substring(Message.aClass433_5310.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5224.translate(Language.aClass495_5795))) {
 				b_4 = 1;
-				string_2 = string_2.substring(Message.aClass433_5224.translate(Language.aClass495_5795, -728158667).length());
-			} else if (string_3.startsWith(Message.aClass433_5312.translate(Language.aClass495_5795, -421866122))) {
+				string_2 = string_2.substring(Message.aClass433_5224.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5312.translate(Language.aClass495_5795))) {
 				b_4 = 2;
-				string_2 = string_2.substring(Message.aClass433_5312.translate(Language.aClass495_5795, -1190421734).length());
-			} else if (string_3.startsWith(Message.aClass433_5313.translate(Language.aClass495_5795, -1865274206))) {
+				string_2 = string_2.substring(Message.aClass433_5312.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5313.translate(Language.aClass495_5795))) {
 				b_4 = 3;
-				string_2 = string_2.substring(Message.aClass433_5313.translate(Language.aClass495_5795, -885173587).length());
-			} else if (string_3.startsWith(Message.aClass433_5314.translate(Language.aClass495_5795, -915262147))) {
+				string_2 = string_2.substring(Message.aClass433_5313.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5314.translate(Language.aClass495_5795))) {
 				b_4 = 4;
-				string_2 = string_2.substring(Message.aClass433_5314.translate(Language.aClass495_5795, -588425222).length());
-			} else if (string_3.startsWith(Message.aClass433_5221.translate(Language.aClass495_5795, -741938249))) {
+				string_2 = string_2.substring(Message.aClass433_5314.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5221.translate(Language.aClass495_5795))) {
 				b_4 = 5;
-				string_2 = string_2.substring(Message.aClass433_5221.translate(Language.aClass495_5795, -1332685832).length());
-			} else if (string_3.startsWith(Message.aClass433_5194.translate(Language.aClass495_5795, -893060110))) {
+				string_2 = string_2.substring(Message.aClass433_5221.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5194.translate(Language.aClass495_5795))) {
 				b_4 = 6;
-				string_2 = string_2.substring(Message.aClass433_5194.translate(Language.aClass495_5795, -1212621971).length());
-			} else if (string_3.startsWith(Message.aClass433_5317.translate(Language.aClass495_5795, -2087693192))) {
+				string_2 = string_2.substring(Message.aClass433_5194.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5317.translate(Language.aClass495_5795))) {
 				b_4 = 7;
-				string_2 = string_2.substring(Message.aClass433_5317.translate(Language.aClass495_5795, -1840274123).length());
-			} else if (string_3.startsWith(Message.aClass433_5318.translate(Language.aClass495_5795, -1925786826))) {
+				string_2 = string_2.substring(Message.aClass433_5317.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5318.translate(Language.aClass495_5795))) {
 				b_4 = 8;
-				string_2 = string_2.substring(Message.aClass433_5318.translate(Language.aClass495_5795, -605242854).length());
-			} else if (string_3.startsWith(Message.aClass433_5319.translate(Language.aClass495_5795, -685127730))) {
+				string_2 = string_2.substring(Message.aClass433_5318.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5319.translate(Language.aClass495_5795))) {
 				b_4 = 9;
-				string_2 = string_2.substring(Message.aClass433_5319.translate(Language.aClass495_5795, -1671757341).length());
-			} else if (string_3.startsWith(Message.aClass433_5320.translate(Language.aClass495_5795, -2082715119))) {
+				string_2 = string_2.substring(Message.aClass433_5319.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5320.translate(Language.aClass495_5795))) {
 				b_4 = 10;
-				string_2 = string_2.substring(Message.aClass433_5320.translate(Language.aClass495_5795, -893838603).length());
-			} else if (string_3.startsWith(Message.aClass433_5199.translate(Language.aClass495_5795, -1011038702))) {
+				string_2 = string_2.substring(Message.aClass433_5320.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5199.translate(Language.aClass495_5795))) {
 				b_4 = 11;
-				string_2 = string_2.substring(Message.aClass433_5199.translate(Language.aClass495_5795, -705460695).length());
+				string_2 = string_2.substring(Message.aClass433_5199.translate(Language.aClass495_5795).length());
 			} else if (Class223.CURRENT_LANGUAGE != Language.aClass495_5795) {
-				if (string_3.startsWith(Message.aClass433_5310.translate(Class223.CURRENT_LANGUAGE, -1967698860))) {
+				if (string_3.startsWith(Message.aClass433_5310.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 0;
-					string_2 = string_2.substring(Message.aClass433_5310.translate(Class223.CURRENT_LANGUAGE, -931333964).length());
-				} else if (string_3.startsWith(Message.aClass433_5224.translate(Class223.CURRENT_LANGUAGE, -1211635984))) {
+					string_2 = string_2.substring(Message.aClass433_5310.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5224.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 1;
-					string_2 = string_2.substring(Message.aClass433_5224.translate(Class223.CURRENT_LANGUAGE, -1312881079).length());
-				} else if (string_3.startsWith(Message.aClass433_5312.translate(Class223.CURRENT_LANGUAGE, -392031535))) {
+					string_2 = string_2.substring(Message.aClass433_5224.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5312.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 2;
-					string_2 = string_2.substring(Message.aClass433_5312.translate(Class223.CURRENT_LANGUAGE, -243965545).length());
-				} else if (string_3.startsWith(Message.aClass433_5313.translate(Class223.CURRENT_LANGUAGE, -366331193))) {
+					string_2 = string_2.substring(Message.aClass433_5312.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5313.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 3;
-					string_2 = string_2.substring(Message.aClass433_5313.translate(Class223.CURRENT_LANGUAGE, -564963965).length());
-				} else if (string_3.startsWith(Message.aClass433_5314.translate(Class223.CURRENT_LANGUAGE, -2131562051))) {
+					string_2 = string_2.substring(Message.aClass433_5313.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5314.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 4;
-					string_2 = string_2.substring(Message.aClass433_5314.translate(Class223.CURRENT_LANGUAGE, -1233253928).length());
-				} else if (string_3.startsWith(Message.aClass433_5221.translate(Class223.CURRENT_LANGUAGE, -1423052187))) {
+					string_2 = string_2.substring(Message.aClass433_5314.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5221.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 5;
-					string_2 = string_2.substring(Message.aClass433_5221.translate(Class223.CURRENT_LANGUAGE, -2041202369).length());
-				} else if (string_3.startsWith(Message.aClass433_5194.translate(Class223.CURRENT_LANGUAGE, -1085733103))) {
+					string_2 = string_2.substring(Message.aClass433_5221.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5194.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 6;
-					string_2 = string_2.substring(Message.aClass433_5194.translate(Class223.CURRENT_LANGUAGE, -840616776).length());
-				} else if (string_3.startsWith(Message.aClass433_5317.translate(Class223.CURRENT_LANGUAGE, -1915496954))) {
+					string_2 = string_2.substring(Message.aClass433_5194.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5317.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 7;
-					string_2 = string_2.substring(Message.aClass433_5317.translate(Class223.CURRENT_LANGUAGE, -1395321722).length());
-				} else if (string_3.startsWith(Message.aClass433_5318.translate(Class223.CURRENT_LANGUAGE, -257492430))) {
+					string_2 = string_2.substring(Message.aClass433_5317.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5318.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 8;
-					string_2 = string_2.substring(Message.aClass433_5318.translate(Class223.CURRENT_LANGUAGE, -686511373).length());
-				} else if (string_3.startsWith(Message.aClass433_5319.translate(Class223.CURRENT_LANGUAGE, -1394465272))) {
+					string_2 = string_2.substring(Message.aClass433_5318.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5319.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 9;
-					string_2 = string_2.substring(Message.aClass433_5319.translate(Class223.CURRENT_LANGUAGE, -1753131121).length());
-				} else if (string_3.startsWith(Message.aClass433_5320.translate(Class223.CURRENT_LANGUAGE, -654352038))) {
+					string_2 = string_2.substring(Message.aClass433_5319.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5320.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 10;
-					string_2 = string_2.substring(Message.aClass433_5320.translate(Class223.CURRENT_LANGUAGE, -235801765).length());
-				} else if (string_3.startsWith(Message.aClass433_5199.translate(Class223.CURRENT_LANGUAGE, -2110850814))) {
+					string_2 = string_2.substring(Message.aClass433_5320.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5199.translate(Class223.CURRENT_LANGUAGE))) {
 					b_4 = 11;
-					string_2 = string_2.substring(Message.aClass433_5199.translate(Class223.CURRENT_LANGUAGE, -1600723987).length());
+					string_2 = string_2.substring(Message.aClass433_5199.translate(Class223.CURRENT_LANGUAGE).length());
 				}
 			}
 			string_3 = string_2.toLowerCase();
 			byte b_5 = 0;
-			if (string_3.startsWith(Message.aClass433_5292.translate(Language.aClass495_5795, -305628261))) {
+			if (string_3.startsWith(Message.aClass433_5292.translate(Language.aClass495_5795))) {
 				b_5 = 1;
-				string_2 = string_2.substring(Message.aClass433_5292.translate(Language.aClass495_5795, -834692667).length());
-			} else if (string_3.startsWith(Message.aClass433_5323.translate(Language.aClass495_5795, -242214370))) {
+				string_2 = string_2.substring(Message.aClass433_5292.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5323.translate(Language.aClass495_5795))) {
 				b_5 = 2;
-				string_2 = string_2.substring(Message.aClass433_5323.translate(Language.aClass495_5795, -2038369408).length());
-			} else if (string_3.startsWith(Message.aClass433_5324.translate(Language.aClass495_5795, -1649524008))) {
+				string_2 = string_2.substring(Message.aClass433_5323.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5324.translate(Language.aClass495_5795))) {
 				b_5 = 3;
-				string_2 = string_2.substring(Message.aClass433_5324.translate(Language.aClass495_5795, -1763068646).length());
-			} else if (string_3.startsWith(Message.aClass433_5325.translate(Language.aClass495_5795, -870525017))) {
+				string_2 = string_2.substring(Message.aClass433_5324.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5325.translate(Language.aClass495_5795))) {
 				b_5 = 4;
-				string_2 = string_2.substring(Message.aClass433_5325.translate(Language.aClass495_5795, -2012994574).length());
-			} else if (string_3.startsWith(Message.aClass433_5326.translate(Language.aClass495_5795, -663048228))) {
+				string_2 = string_2.substring(Message.aClass433_5325.translate(Language.aClass495_5795).length());
+			} else if (string_3.startsWith(Message.aClass433_5326.translate(Language.aClass495_5795))) {
 				b_5 = 5;
-				string_2 = string_2.substring(Message.aClass433_5326.translate(Language.aClass495_5795, -242529694).length());
+				string_2 = string_2.substring(Message.aClass433_5326.translate(Language.aClass495_5795).length());
 			} else if (Language.aClass495_5795 != Class223.CURRENT_LANGUAGE) {
-				if (string_3.startsWith(Message.aClass433_5292.translate(Class223.CURRENT_LANGUAGE, -1825511899))) {
+				if (string_3.startsWith(Message.aClass433_5292.translate(Class223.CURRENT_LANGUAGE))) {
 					b_5 = 1;
-					string_2 = string_2.substring(Message.aClass433_5292.translate(Class223.CURRENT_LANGUAGE, -600018624).length());
-				} else if (string_3.startsWith(Message.aClass433_5323.translate(Class223.CURRENT_LANGUAGE, -1604558277))) {
+					string_2 = string_2.substring(Message.aClass433_5292.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5323.translate(Class223.CURRENT_LANGUAGE))) {
 					b_5 = 2;
-					string_2 = string_2.substring(Message.aClass433_5323.translate(Class223.CURRENT_LANGUAGE, -1592623584).length());
-				} else if (string_3.startsWith(Message.aClass433_5324.translate(Class223.CURRENT_LANGUAGE, -270607277))) {
+					string_2 = string_2.substring(Message.aClass433_5323.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5324.translate(Class223.CURRENT_LANGUAGE))) {
 					b_5 = 3;
-					string_2 = string_2.substring(Message.aClass433_5324.translate(Class223.CURRENT_LANGUAGE, -1627000504).length());
-				} else if (string_3.startsWith(Message.aClass433_5325.translate(Class223.CURRENT_LANGUAGE, -370181299))) {
+					string_2 = string_2.substring(Message.aClass433_5324.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5325.translate(Class223.CURRENT_LANGUAGE))) {
 					b_5 = 4;
-					string_2 = string_2.substring(Message.aClass433_5325.translate(Class223.CURRENT_LANGUAGE, -1502824305).length());
-				} else if (string_3.startsWith(Message.aClass433_5326.translate(Class223.CURRENT_LANGUAGE, -741710586))) {
+					string_2 = string_2.substring(Message.aClass433_5325.translate(Class223.CURRENT_LANGUAGE).length());
+				} else if (string_3.startsWith(Message.aClass433_5326.translate(Class223.CURRENT_LANGUAGE))) {
 					b_5 = 5;
-					string_2 = string_2.substring(Message.aClass433_5326.translate(Class223.CURRENT_LANGUAGE, -1032612070).length());
+					string_2 = string_2.substring(Message.aClass433_5326.translate(Class223.CURRENT_LANGUAGE).length());
 				}
 			}
 			BufferedConnectionContext class184_6 = Preference_Sub20.method12807(-1317872697);
@@ -10071,7 +10071,7 @@ public class CS2Interpreter {
 
 	static final void method1836(CS2Executor executor) {
 		executor.intStackPtr -= 2;
-		Class329_Sub1.method12491(VertexNormal.myPlayer, executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1]);
+		Class329_Sub1.animateZero(VertexNormal.myPlayer, executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1]);
 	}
 
 	static final void method1837(CS2Executor executor) {
@@ -10091,7 +10091,7 @@ public class CS2Interpreter {
 		if (string_2.startsWith(Class76.getCrown(0)) || string_2.startsWith(Class76.getCrown(1))) {
 			string_2 = string_2.substring(7);
 		}
-		executor.intStack[++executor.intStackPtr - 1] = Class280.method4975(string_2, (byte) -104) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class280.method4975(string_2) ? 1 : 0;
 	}
 
 	static final void method3561(CS2Executor executor) {
@@ -10193,7 +10193,7 @@ public class CS2Interpreter {
 	static final void method6151(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1428;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.y;
 	}
 
 	static final void method6152(CS2Executor executor) {
@@ -10399,7 +10399,7 @@ public class CS2Interpreter {
 
 	static final void method3913(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = client.anIntArray7336[i_2];
+		executor.intStack[++executor.intStackPtr - 1] = client.SKILL_LEVEL_VISIBLE[i_2];
 	}
 
 	static final void method1641(CS2Executor executor) {
@@ -10437,7 +10437,7 @@ public class CS2Interpreter {
 
 	static final void method8153(CS2Executor executor) {
 		executor.intStackPtr -= 4;
-		Class435.method7300(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], true, 256);
+		Class435.playSoundVorbis(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], true, 256);
 	}
 
 	static final void method8154(CS2Executor executor) {
@@ -10497,7 +10497,7 @@ public class CS2Interpreter {
 
 	static final void method14520(CS2Executor executor) {
 		executor.intStackPtr -= 4;
-		VarNPCMap.method2618(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], 256, 1476817598);
+		VarNPCMap.playSoundSynth(executor.intStack[executor.intStackPtr], executor.intStack[executor.intStackPtr + 1], executor.intStack[executor.intStackPtr + 2], executor.intStack[executor.intStackPtr + 3], 256);
 	}
 
 	static final void method14521(CS2Executor executor) {
@@ -10510,13 +10510,13 @@ public class CS2Interpreter {
 	static final void method4146(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1299;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.x;
 	}
 
 	static final void getCompHeight(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1429;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.height;
 	}
 
 	static final void method4148(CS2Executor executor) {
@@ -10547,7 +10547,7 @@ public class CS2Interpreter {
 	static final void method5598(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1429;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.height;
 	}
 
 	static void method2841(CS2Executor executor) {
@@ -10769,19 +10769,19 @@ public class CS2Interpreter {
 
 	static final void method1852(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 2;
-		icomponentdefinitions_0.anInt1311 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		if (icomponentdefinitions_0.anInt1311 > icomponentdefinitions_0.anInt1376 - icomponentdefinitions_0.anInt1301) {
-			icomponentdefinitions_0.anInt1311 = icomponentdefinitions_0.anInt1376 - icomponentdefinitions_0.anInt1301;
+		icomponentdefinitions_0.scrollX = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		if (icomponentdefinitions_0.scrollX > icomponentdefinitions_0.scrollWidth - icomponentdefinitions_0.width) {
+			icomponentdefinitions_0.scrollX = icomponentdefinitions_0.scrollWidth - icomponentdefinitions_0.width;
 		}
-		if (icomponentdefinitions_0.anInt1311 < 0) {
-			icomponentdefinitions_0.anInt1311 = 0;
+		if (icomponentdefinitions_0.scrollX < 0) {
+			icomponentdefinitions_0.scrollX = 0;
 		}
-		icomponentdefinitions_0.anInt1312 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		if (icomponentdefinitions_0.anInt1312 > icomponentdefinitions_0.anInt1314 - icomponentdefinitions_0.anInt1429) {
-			icomponentdefinitions_0.anInt1312 = icomponentdefinitions_0.anInt1314 - icomponentdefinitions_0.anInt1429;
+		icomponentdefinitions_0.scrollY = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		if (icomponentdefinitions_0.scrollY > icomponentdefinitions_0.scrollHeight - icomponentdefinitions_0.height) {
+			icomponentdefinitions_0.scrollY = icomponentdefinitions_0.scrollHeight - icomponentdefinitions_0.height;
 		}
-		if (icomponentdefinitions_0.anInt1312 < 0) {
-			icomponentdefinitions_0.anInt1312 = 0;
+		if (icomponentdefinitions_0.scrollY < 0) {
+			icomponentdefinitions_0.scrollY = 0;
 		}
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -10791,11 +10791,11 @@ public class CS2Interpreter {
 
 	static final void method6289(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, -14681089) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1390 = method6193(string_4, cs2executor_2, 289210792);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1390 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method7927(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, byte b_2) {
@@ -10811,40 +10811,40 @@ public class CS2Interpreter {
 
 	static final void method3078(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 198501911) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1389 = method6193(string_4, cs2executor_2, 81409636);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1389 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method3672(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, short s_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 394644224) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1412 = method6193(string_4, cs2executor_2, 1237376111);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1412 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
-	static final void method6453(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void setOnMouseLeave(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		int[] ints_5 = method14642(string_4, cs2executor_2, 1022957959);
+		int[] ints_5 = popIntArrayParam(string_4, cs2executor_2);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1342 = method6193(string_4, cs2executor_2, 720778855);
-		icomponentdefinitions_0.anIntArray1398 = ints_5;
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.mouseLeaveScript = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.mouseLeaveArrayParam = ints_5;
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method7889(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1390174253) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1346 = method6193(string_4, cs2executor_2, 1483918243);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1346 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method774(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -10861,11 +10861,11 @@ public class CS2Interpreter {
 
 	static final void method2874(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 69608151) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1319 = method6193(string_4, cs2executor_2, 1275110471);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1319 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method7267(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -10875,11 +10875,11 @@ public class CS2Interpreter {
 
 	static final void method5009(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1962956605) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1413 = method6193(string_4, cs2executor_2, 1097556379);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1413 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method7142(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -10889,13 +10889,13 @@ public class CS2Interpreter {
 
 	static final void method6288(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, short s_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		int[] ints_5 = method14642(string_4, cs2executor_2, -37726580);
+		int[] ints_5 = popIntArrayParam(string_4, cs2executor_2);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1405 = method6193(string_4, cs2executor_2, 1676741238);
+		icomponentdefinitions_0.anObjectArray1405 = popParamsDynamic(string_4, cs2executor_2);
 		icomponentdefinitions_0.anIntArray1406 = ints_5;
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method2915(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -10918,22 +10918,22 @@ public class CS2Interpreter {
 
 	static final void method6689(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		int[] ints_5 = method14642(string_4, cs2executor_2, 1724948075);
+		int[] ints_5 = popIntArrayParam(string_4, cs2executor_2);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1397 = method6193(string_4, cs2executor_2, 116060778);
+		icomponentdefinitions_0.anObjectArray1397 = popParamsDynamic(string_4, cs2executor_2);
 		icomponentdefinitions_0.anIntArray1401 = ints_5;
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method6690(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 41262162) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1361 = method6193(string_4, cs2executor_2, -295691698);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1361 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method4159(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -10950,35 +10950,39 @@ public class CS2Interpreter {
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
-	static final int[] method14642(String string_0, CS2Executor cs2executor_1, int i_2) {
-		int[] ints_3 = null;
-		if (string_0.length() > 0 && string_0.charAt(string_0.length() - 1) == 89) {
-			int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
-			if (i_4 > 0) {
-				for (ints_3 = new int[i_4]; i_4-- > 0; ints_3[i_4] = cs2executor_1.intStack[--cs2executor_1.intStackPtr]) {
-					;
+	static final int[] popIntArrayParam(String paramTypes, CS2Executor cs2executor_1) {
+		int[] intArr = null;
+		if (paramTypes.length() > 0 && paramTypes.charAt(paramTypes.length() - 1) == 'Y') {
+			int size = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+			if (size > 0) {
+				intArr = new int[size];
+				while (size-- > 0) {
+					intArr[size] = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 				}
+//				for (intArr = new int[size]; size-- > 0; intArr[size] = cs2executor_1.intStack[--cs2executor_1.intStackPtr]) {
+//					;
+//				}
 			}
 		}
-		return ints_3;
+		return intArr;
 	}
 
 	static final void method11221(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1482833983) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1393 = method6193(string_4, cs2executor_2, -404986216);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1393 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method11223(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 382641837) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1392 = method6193(string_4, cs2executor_2, 1828799616);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1392 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method501(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
@@ -10988,13 +10992,13 @@ public class CS2Interpreter {
 
 	static final void method502(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		int[] ints_5 = method14642(string_4, cs2executor_2, 2090816514);
+		int[] ints_5 = popIntArrayParam(string_4, cs2executor_2);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1403 = method6193(string_4, cs2executor_2, 1107987835);
+		icomponentdefinitions_0.anObjectArray1403 = popParamsDynamic(string_4, cs2executor_2);
 		icomponentdefinitions_0.anIntArray1315 = ints_5;
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method505(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -11010,8 +11014,8 @@ public class CS2Interpreter {
 
 	static final void method506(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 2;
-		icomponentdefinitions_0.anInt1376 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1314 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.scrollWidth = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.scrollHeight = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.type == 0) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1735080264);
@@ -11102,11 +11106,11 @@ public class CS2Interpreter {
 
 	static final void method4651(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1522252372) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1292 = method6193(string_4, cs2executor_2, 1736342439);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1292 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method6313(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11137,11 +11141,11 @@ public class CS2Interpreter {
 
 	static final void method5017(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, -305873852) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1383 = method6193(string_4, cs2executor_2, -186222410);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1383 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method2955(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -11150,11 +11154,11 @@ public class CS2Interpreter {
 
 	static final void method4772(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1550392426) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1419 = method6193(string_4, cs2executor_2, 902561109);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1419 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method7429(IComponentDefinitions icomponentdefinitions_0, int i_1, byte[] bytes_2, byte[] bytes_3, CS2Executor cs2executor_4, int i_5) {
@@ -11208,32 +11212,31 @@ public class CS2Interpreter {
 
 	static final void method2593(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1647551269) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1394 = method6193(string_4, cs2executor_2, 1442904775);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1394 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
-	static final Object[] method6193(String string_0, CS2Executor cs2executor_1, int i_2) {
-		Object[] arr_3 = new Object[string_0.length() + 1];
-		int i_4;
-		for (i_4 = arr_3.length - 1; i_4 >= 1; --i_4) {
-			if (string_0.charAt(i_4 - 1) == 115) {
-				arr_3[i_4] = cs2executor_1.stringStack[--cs2executor_1.stringStackPtr];
-			} else if (string_0.charAt(i_4 - 1) == 167) {
-				arr_3[i_4] = new Long(cs2executor_1.longStack[--cs2executor_1.longStackPtr]);
+	static final Object[] popParamsDynamic(String paramTypes, CS2Executor executor) {
+		Object[] params = new Object[paramTypes.length() + 1];
+		for (int i = params.length - 1; i >= 1; --i) {
+			if (paramTypes.charAt(i - 1) == 's') {
+				params[i] = executor.stringStack[--executor.stringStackPtr];
+			} else if (paramTypes.charAt(i - 1) == 'º') {
+				params[i] = new Long(executor.longStack[--executor.longStackPtr]);
 			} else {
-				arr_3[i_4] = new Integer(cs2executor_1.intStack[--cs2executor_1.intStackPtr]);
+				params[i] = new Integer(executor.intStack[--executor.intStackPtr]);
 			}
 		}
-		i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
-		if (i_4 != -1) {
-			arr_3[0] = new Integer(i_4);
+		int scriptId = executor.intStack[--executor.intStackPtr];
+		if (scriptId != -1) {
+			params[0] = new Integer(scriptId);
 		} else {
-			arr_3 = null;
+			params = null;
 		}
-		return arr_3;
+		return params;
 	}
 
 	static final void method13468(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -11246,11 +11249,11 @@ public class CS2Interpreter {
 
 	static final void method4136(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 718441711) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1409 = method6193(string_4, cs2executor_2, 1509347670);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1409 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method14664(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, boolean bool_2, int i_3, CS2Executor cs2executor_4, byte b_5) {
@@ -11286,7 +11289,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method2732(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void setCompText(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 		if (!string_4.equals(icomponentdefinitions_0.text)) {
 			icomponentdefinitions_0.text = string_4;
@@ -11311,11 +11314,11 @@ public class CS2Interpreter {
 
 	static final void method1083(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1248172600) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1451 = method6193(string_4, cs2executor_2, 537651905);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1451 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method2168(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11328,11 +11331,11 @@ public class CS2Interpreter {
 
 	static final void method2170(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1404763010) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1421 = method6193(string_4, cs2executor_2, 930133882);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1421 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method14605(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, byte b_2) {
@@ -11354,11 +11357,11 @@ public class CS2Interpreter {
 
 	static final void method542(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 876649685) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1407 = method6193(string_4, cs2executor_2, -479801764);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1407 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method14700(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11437,11 +11440,11 @@ public class CS2Interpreter {
 
 	static final void method14653(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, -271288407) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1353 = method6193(string_4, cs2executor_2, 1245386660);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1353 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method12260(IComponentDefinitions icDefs, RSInterface interface_1, CS2Executor executor) {
@@ -11496,29 +11499,29 @@ public class CS2Interpreter {
 
 	static final void method1845(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 122183599) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1271 = method6193(string_4, cs2executor_2, 350429453);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1271 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method3365(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1659229843) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1302 = method6193(string_4, cs2executor_2, -80213268);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1302 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method3366(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 570698140) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1416 = method6193(string_4, cs2executor_2, -422636898);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1416 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method3369(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -11529,13 +11532,13 @@ public class CS2Interpreter {
 		FontMetrics fontmetrics_3 = icomponentdefinitions_0.method1989(Class487.aClass378_5752, client.anInterface35_7206);
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_5 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
-		int i_6 = fontmetrics_3.method6956(icomponentdefinitions_0.text, icomponentdefinitions_0.anInt1301, icomponentdefinitions_0.anInt1358, i_5, i_4, Class182.aNativeSpriteArray2261);
+		int i_6 = fontmetrics_3.method6956(icomponentdefinitions_0.text, icomponentdefinitions_0.width, icomponentdefinitions_0.anInt1358, i_5, i_4, Class182.aNativeSpriteArray2261);
 		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_6;
 	}
 
 	static final void method3987(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 3;
-		icomponentdefinitions_0.anInt1330 = client.anInt7315;
+		icomponentdefinitions_0.anInt1330 = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -1355203883);
@@ -11568,7 +11571,7 @@ public class CS2Interpreter {
 
 	static final void method12401(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 5;
-		icomponentdefinitions_0.anInt1330 = client.anInt7315;
+		icomponentdefinitions_0.anInt1330 = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -2001727659);
@@ -11687,11 +11690,11 @@ public class CS2Interpreter {
 
 	static final void method5455(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1521695883) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1418 = method6193(string_4, cs2executor_2, 570621267);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1418 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method5459(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11716,10 +11719,10 @@ public class CS2Interpreter {
 		} else {
 			if (icomponentdefinitions_0.anObjectArray1271 != null) {
 				HookRequest hookrequest_3 = new HookRequest();
-				hookrequest_3.iComponentDefs = icomponentdefinitions_0;
+				hookrequest_3.source = icomponentdefinitions_0;
 				hookrequest_3.params = icomponentdefinitions_0.anObjectArray1271;
 				hookrequest_3.anInt8061 = cs2executor_1.anInt7015 + 1;
-				client.aClass482_7402.append(hookrequest_3);
+				client.PENDING_HOOK_REQUESTS.append(hookrequest_3);
 			}
 		}
 	}
@@ -11727,20 +11730,20 @@ public class CS2Interpreter {
 	static final void method5001(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		FontMetrics fontmetrics_3 = icomponentdefinitions_0.method1989(Class487.aClass378_5752, client.anInterface35_7206);
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
-		Point point_5 = fontmetrics_3.method6954(icomponentdefinitions_0.text, icomponentdefinitions_0.anInt1301, icomponentdefinitions_0.anInt1358, i_4, Class182.aNativeSpriteArray2261);
+		Point point_5 = fontmetrics_3.method6954(icomponentdefinitions_0.text, icomponentdefinitions_0.width, icomponentdefinitions_0.anInt1358, i_4, Class182.aNativeSpriteArray2261);
 		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = point_5.x;
 		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = point_5.y;
 	}
 
 	static final void method3338(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		int[] ints_5 = method14642(string_4, cs2executor_2, 510066471);
+		int[] ints_5 = popIntArrayParam(string_4, cs2executor_2);
 		if (ints_5 != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1387 = method6193(string_4, cs2executor_2, 1621483934);
+		icomponentdefinitions_0.anObjectArray1387 = popParamsDynamic(string_4, cs2executor_2);
 		icomponentdefinitions_0.anIntArray1402 = ints_5;
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method6244(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11767,11 +11770,11 @@ public class CS2Interpreter {
 
 	static final void method14586(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, -159099843) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1396 = method6193(string_4, cs2executor_2, -448612500);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1396 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method6045(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
@@ -11779,13 +11782,13 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.anInt1307 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 	}
 
-	static final void method8277(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1293603558) != null) {
-			string_4 = string_4.substring(0, string_4.length() - 1);
+	static final void setOnMouseOver(IComponentDefinitions iCompDefs, RSInterface inter, CS2Executor cs2executor_2) {
+		String paramTypes = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		if (popIntArrayParam(paramTypes, cs2executor_2) != null) {
+			paramTypes = paramTypes.substring(0, paramTypes.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1278 = method6193(string_4, cs2executor_2, -34782350);
-		icomponentdefinitions_0.aBool1384 = true;
+		iCompDefs.mouseOverScript = popParamsDynamic(paramTypes, cs2executor_2);
+		iCompDefs.usesScripts = true;
 	}
 
 	static final void method869(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11797,11 +11800,11 @@ public class CS2Interpreter {
 
 	static final void method910(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 513538858) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.params = method6193(string_4, cs2executor_2, 240682174);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.params = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void setNoClickThrough(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
@@ -11827,20 +11830,20 @@ public class CS2Interpreter {
 
 	static final void method15409(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1686354780) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1386 = method6193(string_4, cs2executor_2, 1189927775);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1386 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method6158(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 908211513) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1415 = method6193(string_4, cs2executor_2, 1001457907);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1415 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method11337(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11858,11 +11861,11 @@ public class CS2Interpreter {
 
 	static final void method1642(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		String string_4 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
-		if (method14642(string_4, cs2executor_2, 1421907667) != null) {
+		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1400 = method6193(string_4, cs2executor_2, 1475160400);
-		icomponentdefinitions_0.aBool1384 = true;
+		icomponentdefinitions_0.anObjectArray1400 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method4149(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {

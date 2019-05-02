@@ -151,7 +151,7 @@ public class ObjectIndexLoader {
 			this.objectIndex.filesCount(i_6);
 		}
 		if (this.game == Game.darkan) {
-			this.defaultOptions = new String[] { null, null, null, null, null, Message.EXAMINE.translate(this.aClass495_5608, -952366759) };
+			this.defaultOptions = new String[] { null, null, null, null, null, Message.EXAMINE.translate(this.aClass495_5608) };
 		} else {
 			this.defaultOptions = new String[6];
 		}

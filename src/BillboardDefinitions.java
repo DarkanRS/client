@@ -87,8 +87,8 @@ public class BillboardDefinitions {
 			Class291_Sub1.anInt8018 = -1;
 			Class291_Sub1.anInt8026 = -1;
 		}
-		if (Class291_Sub1.aBool8022 && Class346.aClass482_4049 != null) {
-			for (Node_Sub33 class282_sub33_5 = (Node_Sub33) Class346.aClass482_4049.head(); class282_sub33_5 != null; class282_sub33_5 = (Node_Sub33) Class346.aClass482_4049.next(-731653338)) {
+		if (Class291_Sub1.aBool8022 && QuickChatMessage.aClass482_4049 != null) {
+			for (Node_Sub33 class282_sub33_5 = (Node_Sub33) QuickChatMessage.aClass482_4049.head(); class282_sub33_5 != null; class282_sub33_5 = (Node_Sub33) QuickChatMessage.aClass482_4049.next(-731653338)) {
 				MapAreaDefinitions worldmapareadefs_6 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub33_5.aNode_Sub36_7835.anInt7991, 1327385371);
 				if (class282_sub33_5.method12577(i_0, i_1)) {
 					if (worldmapareadefs_6.aStringArray2740 != null) {

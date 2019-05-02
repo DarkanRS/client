@@ -74,7 +74,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 					client.anInt7295 = 0;
 					tcpmessage_13 = Class271.createPacket(outgoingpacket_11, client.outputContext.isaac);
 					tcpmessage_13.buffer.writeShort(i_7);
-					tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-1893602887) ? 1 : 0, -1708065557);
+					tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-1893602887) ? 1 : 0);
 					client.outputContext.queuePacket(tcpmessage_13);
 					MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, Class344.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()));
 				}
@@ -88,10 +88,10 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				client.anInt7295 = 0;
 				tcpmessage_17 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_PLAYER, client.outputContext.isaac);
 				tcpmessage_17.buffer.writeShort(client.anInt7345);
-				tcpmessage_17.buffer.writeShortLE(VertexNormal.myPlayer.index, (short) -7319);
-				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1700744259) ? 1 : 0, 2138987650);
+				tcpmessage_17.buffer.writeShortLE(VertexNormal.myPlayer.index);
+				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1700744259) ? 1 : 0);
 				tcpmessage_17.buffer.writeIntV2(Class7.anInt56);
-				tcpmessage_17.buffer.writeShortLE(client.anInt7346, (short) -21214);
+				tcpmessage_17.buffer.writeShortLE(client.anInt7346);
 				client.outputContext.queuePacket(tcpmessage_17);
 			}
 
@@ -108,10 +108,10 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 					client.anInt7295 = 0;
 					tcpmessage_13 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_PLAYER, client.outputContext.isaac);
 					tcpmessage_13.buffer.writeShort(client.anInt7345);
-					tcpmessage_13.buffer.writeShortLE(i_7, (short) -12854);
-					tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-1642883449) ? 1 : 0, -1169068214);
+					tcpmessage_13.buffer.writeShortLE(i_7);
+					tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-1642883449) ? 1 : 0);
 					tcpmessage_13.buffer.writeIntV2(Class7.anInt56);
-					tcpmessage_13.buffer.writeShortLE(client.anInt7346, (short) -2375);
+					tcpmessage_13.buffer.writeShortLE(client.anInt7346);
 					client.outputContext.queuePacket(tcpmessage_13);
 					MapRegion.routeTo(player_12.regionBaseX[0], player_12.regionBaseY[0], true, Class344.method6115(player_12.regionBaseX[0], player_12.regionBaseY[0], player_12.getSize(), player_12.getSize()));
 				}
@@ -124,12 +124,12 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				client.anInt7295 = 0;
 				tcpmessage_17 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_OBJECT, client.outputContext.isaac);
 				tcpmessage_17.buffer.writeShortLE128(i_4 + coordgrid_10.x);
-				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1875320207) ? 1 : 0, -728413963);
+				tcpmessage_17.buffer.write128Byte(VertexNormal.method1465(-1875320207) ? 1 : 0);
 				tcpmessage_17.buffer.writeIntV1((int) (long_8 >>> 32) & 0x7fffffff, 1535840012);
 				tcpmessage_17.buffer.writeInt(Class7.anInt56);
-				tcpmessage_17.buffer.writeShortLE(client.anInt7346, (short) -20075);
+				tcpmessage_17.buffer.writeShortLE(client.anInt7346);
 				tcpmessage_17.buffer.writeShort128(client.anInt7345);
-				tcpmessage_17.buffer.writeShortLE(i_5 + coordgrid_10.y, (short) -19304);
+				tcpmessage_17.buffer.writeShortLE(i_5 + coordgrid_10.y);
 				client.outputContext.queuePacket(tcpmessage_17);
 				Class439.routeToSceneObject(i_4, i_5, long_8);
 			}
@@ -219,10 +219,10 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				tcpmessage_13.buffer.writeShort128(client.anInt7346);
 				tcpmessage_13.buffer.writeIntV2(Class7.anInt56);
 				tcpmessage_13.buffer.writeShort(i_7);
-				tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-2067403858) ? 1 : 0, 614309811);
+				tcpmessage_13.buffer.write128Byte(VertexNormal.method1465(-2067403858) ? 1 : 0);
 				tcpmessage_13.buffer.writeShortLE128(client.anInt7345);
 				tcpmessage_13.buffer.writeShortLE128(i_5 + coordgrid_10.y);
-				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x, (short) -574);
+				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x);
 				client.outputContext.queuePacket(tcpmessage_13);
 				client.method12073(i_4, i_5, 693787765);
 			}
@@ -233,11 +233,11 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				client.anInt7296 = 1;
 				client.anInt7295 = 0;
 				tcpmessage_13 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_TILE, client.outputContext.isaac);
-				tcpmessage_13.buffer.writeShortLE(client.anInt7346, (short) -18202);
-				tcpmessage_13.buffer.writeShortLE(i_5 + coordgrid_10.y, (short) -5938);
+				tcpmessage_13.buffer.writeShortLE(client.anInt7346);
+				tcpmessage_13.buffer.writeShortLE(i_5 + coordgrid_10.y);
 				tcpmessage_13.buffer.writeIntV1(Class7.anInt56, 362432766);
 				tcpmessage_13.buffer.writeShort128(client.anInt7345);
-				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x, (short) -8634);
+				tcpmessage_13.buffer.writeShortLE(i_4 + coordgrid_10.x);
 				client.outputContext.queuePacket(tcpmessage_13);
 				MapRegion.routeTo(i_4, i_5, true, SunDefinitions.method853(i_4, i_5, -795317623));
 			}
@@ -264,7 +264,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 					Class60.method1170();
 					IComponentSettings class282_sub10_21 = client.method11633(icomponentdefinitions_23);
 					Class304.setUseOptionFlags(icomponentdefinitions_23, class282_sub10_21.getUseOptionFlags(), class282_sub10_21.interfaceId, (byte) -114);
-					client.aString7275 = Class346.method6157(icomponentdefinitions_23, -252673863);
+					client.aString7275 = QuickChatMessage.method6157(icomponentdefinitions_23, -252673863);
 					if (client.aString7275 == null) {
 						client.aString7275 = "Null";
 					}
@@ -312,7 +312,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 						TCPPacket tcpmessage_16 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_NPC, client.outputContext.isaac);
 						tcpmessage_16.buffer.writeIntV2(Class7.anInt56);
 						tcpmessage_16.buffer.writeShortLE128(i_7);
-						tcpmessage_16.buffer.write128Byte(VertexNormal.method1465(-1846955130) ? 1 : 0, 1376249266);
+						tcpmessage_16.buffer.write128Byte(VertexNormal.method1465(-1846955130) ? 1 : 0);
 						tcpmessage_16.buffer.writeShortLE128(client.anInt7346);
 						tcpmessage_16.buffer.writeShort128(client.anInt7345);
 						client.outputContext.queuePacket(tcpmessage_16);

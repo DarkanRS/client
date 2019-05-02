@@ -775,7 +775,7 @@ public class Class291 {
 					MapSpriteDefinitions class418_10 = MAP_SPRITE_LOADER.method7172(i_9);
 					NativeSprite nativesprite_11 = class418_10.method7010(graphicalrenderer_0, objectdefinitions_8.adjustMapSceneRotation ? bytes_6[i_7] >> 6 & 0x3 : 0, objectdefinitions_8.flipMapSprite ? objectdefinitions_8.inverted : false, (byte) 70);
 					if (nativesprite_11 != null) {
-						int i_12 = i_3 * nativesprite_11.method228() >> 2;
+						int i_12 = i_3 * nativesprite_11.scaleWidth() >> 2;
 						int i_13 = i_4 * nativesprite_11.method2748() >> 2;
 						if (class418_10.aBool4996) {
 							int i_14 = objectdefinitions_8.sizeX;

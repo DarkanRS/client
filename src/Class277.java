@@ -49,7 +49,7 @@ public class Class277 {
 	static void method4908(GraphicalRenderer graphicalrenderer_0) {
 		int i_2 = -10660793;
 		VarDefinitionLoader.method6394(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_2, -68635316);
-		Class285.aFontRenderer_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -384363737), Class301.anInt3555 + 3, BufferedConnectionContext.anInt2300 + 14, i_2, -1);
+		Class285.aFontRenderer_3394.renderText(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE), Class301.anInt3555 + 3, BufferedConnectionContext.anInt2300 + 14, i_2, -1);
 		int i_3 = Class163.mouseRecorder.getMouseX();
 		int i_4 = Class163.mouseRecorder.getMouseY();
 		int i_5;

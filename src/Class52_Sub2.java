@@ -32,9 +32,9 @@ public class Class52_Sub2 extends Class52 {
 			int[] ints_5 = new int[4];
 			Renderers.SOFTWARE_RENDERER.qa(ints_5);
 			Renderers.SOFTWARE_RENDERER.r(i_2, i_3, this.aClass350_489.anInt4093 + i_2, i_3 + this.aClass350_489.anInt4088);
-			int i_6 = this.aNativeSprite_9160.method228();
+			int i_6 = this.aNativeSprite_9160.scaleWidth();
 			int i_7 = this.aNativeSprite_9160.method2748();
-			int i_8 = this.aNativeSprite_9163.method228();
+			int i_8 = this.aNativeSprite_9163.scaleWidth();
 			int i_9 = this.aNativeSprite_9163.method2748();
 			this.aNativeSprite_9160.method2752(i_2, i_3 + (this.aClass350_489.anInt4088 - i_7) / 2);
 			this.aNativeSprite_9163.method2752(this.aClass350_489.anInt4093 + i_2 - i_8, i_3 + (this.aClass350_489.anInt4088 - i_9) / 2);
@@ -49,8 +49,8 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	void method1077(boolean bool_1, int i_2, int i_3, int i_4) {
-		int i_5 = i_2 + this.aNativeSprite_9160.method228();
-		int i_6 = this.aClass350_489.anInt4093 + i_2 - this.aNativeSprite_9163.method228();
+		int i_5 = i_2 + this.aNativeSprite_9160.scaleWidth();
+		int i_6 = this.aClass350_489.anInt4093 + i_2 - this.aNativeSprite_9163.scaleWidth();
 		int i_7 = i_3 + this.aNativeSprite_9164.method2748();
 		int i_8 = i_3 + this.aClass350_489.anInt4088 - this.aNativeSprite_9165.method2748();
 		int i_9 = i_6 - i_5;
@@ -111,9 +111,9 @@ public class Class52_Sub2 extends Class52 {
 			int[] ints_4 = new int[4];
 			Renderers.SOFTWARE_RENDERER.qa(ints_4);
 			Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577, this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3);
-			int i_5 = this.aNativeSprite_9160.method228();
+			int i_5 = this.aNativeSprite_9160.scaleWidth();
 			int i_6 = this.aNativeSprite_9160.method2748();
-			int i_7 = this.aNativeSprite_9163.method228();
+			int i_7 = this.aNativeSprite_9163.scaleWidth();
 			int i_8 = this.aNativeSprite_9163.method2748();
 			this.aNativeSprite_9160.method2752(i_2, (this.aClass350_489.anInt4088 * 1707725877 * 323608093 - i_6) / 2 + i_3);
 			this.aNativeSprite_9163.method2752(this.aClass350_489.anInt4093 * -229835439 * 329542577 + i_2 - i_7, (this.aClass350_489.anInt4088 * 1707725877 * 323608093 - i_8) / 2 + i_3);
@@ -177,8 +177,8 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	void method1080(boolean bool_1, int i_2, int i_3) {
-		int i_4 = i_2 + this.aNativeSprite_9160.method228();
-		int i_5 = i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577 - this.aNativeSprite_9163.method228();
+		int i_4 = i_2 + this.aNativeSprite_9160.scaleWidth();
+		int i_5 = i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577 - this.aNativeSprite_9163.scaleWidth();
 		int i_6 = i_3 + this.aNativeSprite_9164.method2748();
 		int i_7 = this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3 - this.aNativeSprite_9165.method2748();
 		int i_8 = i_5 - i_4;
@@ -194,8 +194,8 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	void method1075(boolean bool_1, int i_2, int i_3) {
-		int i_4 = i_2 + this.aNativeSprite_9160.method228();
-		int i_5 = i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577 - this.aNativeSprite_9163.method228();
+		int i_4 = i_2 + this.aNativeSprite_9160.scaleWidth();
+		int i_5 = i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577 - this.aNativeSprite_9163.scaleWidth();
 		int i_6 = i_3 + this.aNativeSprite_9164.method2748();
 		int i_7 = this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3 - this.aNativeSprite_9165.method2748();
 		int i_8 = i_5 - i_4;
@@ -211,8 +211,8 @@ public class Class52_Sub2 extends Class52 {
 	}
 
 	void method1079(boolean bool_1, int i_2, int i_3) {
-		int i_4 = i_2 + this.aNativeSprite_9160.method228();
-		int i_5 = i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577 - this.aNativeSprite_9163.method228();
+		int i_4 = i_2 + this.aNativeSprite_9160.scaleWidth();
+		int i_5 = i_2 + this.aClass350_489.anInt4093 * -229835439 * 329542577 - this.aNativeSprite_9163.scaleWidth();
 		int i_6 = i_3 + this.aNativeSprite_9164.method2748();
 		int i_7 = this.aClass350_489.anInt4088 * 1707725877 * 323608093 + i_3 - this.aNativeSprite_9165.method2748();
 		int i_8 = i_5 - i_4;

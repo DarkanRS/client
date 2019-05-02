@@ -144,7 +144,7 @@ public class Class446 {
 				fontmetrics_4 = Class197.aClass414_2436;
 				fontrenderer_3 = graphicalrenderer_2.createFont(fontmetrics_4, Class174.aClass91Array2132, true);
 				i_7 = fontmetrics_4.method6951(string_0, 250, (Sprite[]) null, (byte) 127);
-				i_8 = fontmetrics_4.method6972(string_0, 250, fontmetrics_4.anInt4975, (Sprite[]) null, 369575167);
+				i_8 = fontmetrics_4.method6972(string_0, 250, fontmetrics_4.verticalSpacing, (Sprite[]) null, 369575167);
 				int i_15 = Class174.aClass91_2138.width;
 				i_10 = i_15 + 4;
 				i_7 += i_10 * 2;

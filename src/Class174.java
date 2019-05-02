@@ -1,23 +1,14 @@
 public class Class174 {
 
     static int anInt2133;
-
     static int anInt2134;
-
     static boolean aBool2135;
-
     static int anInt2136;
-
     static int anInt2137;
-
     static Class356 aClass356_2139;
-
     static Class353 aClass353_2140;
-
     static SpriteDefinitions aClass91_2141;
-
     static SpriteDefinitions aClass91_2138;
-
     static SpriteDefinitions[] aClass91Array2132;
 
     Class174() throws Throwable {

@@ -27,7 +27,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
 		}
 	}
 
-	public int method13481(int i_1) {
+	public int getX() {
 		return this.anInt9516;
 	}
 
@@ -125,7 +125,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
 		}
 	}
 
-	public int method13469(int i_1) {
+	public int getY() {
 		return this.anInt9517;
 	}
 

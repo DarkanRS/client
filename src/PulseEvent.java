@@ -150,22 +150,22 @@ public class PulseEvent extends CacheableNode {
 			} else if (type == 11) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.aByte1333 = 0;
-				icomponentdefinitions_5.anInt1299 = icomponentdefinitions_5.basePositionX = event.primary;
+				icomponentdefinitions_5.x = icomponentdefinitions_5.basePositionX = event.primary;
 				icomponentdefinitions_5.aByte1355 = 0;
-				icomponentdefinitions_5.anInt1428 = icomponentdefinitions_5.basePositionY = event.secondary;
+				icomponentdefinitions_5.y = icomponentdefinitions_5.basePositionY = event.secondary;
 				Class109.redrawComponent(icomponentdefinitions_5);
 			} else if (type == 12) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = event.primary;
 				if (icomponentdefinitions_5 != null && icomponentdefinitions_5.type == 0) {
-					if (i_6 > icomponentdefinitions_5.anInt1314 - icomponentdefinitions_5.anInt1429) {
-						i_6 = icomponentdefinitions_5.anInt1314 - icomponentdefinitions_5.anInt1429;
+					if (i_6 > icomponentdefinitions_5.scrollHeight - icomponentdefinitions_5.height) {
+						i_6 = icomponentdefinitions_5.scrollHeight - icomponentdefinitions_5.height;
 					}
 					if (i_6 < 0) {
 						i_6 = 0;
 					}
-					if (i_6 != icomponentdefinitions_5.anInt1312) {
-						icomponentdefinitions_5.anInt1312 = i_6;
+					if (i_6 != icomponentdefinitions_5.scrollY) {
+						icomponentdefinitions_5.scrollY = i_6;
 						Class109.redrawComponent(icomponentdefinitions_5);
 					}
 				}

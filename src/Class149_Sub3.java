@@ -14,7 +14,7 @@ public class Class149_Sub3 extends Class149 {
 		int i_5 = this.anInt9377 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9375 >> 12;
 		int i_7 = i_2 * this.anInt9379 >> 12;
-		Class346.method6159(i_4, i_6, i_5, i_7, this.anInt1741, -1954460187);
+		QuickChatMessage.method6159(i_4, i_6, i_5, i_7, this.anInt1741, -1954460187);
 	}
 
 	void method2555(int i_1, int i_2) {
@@ -22,7 +22,7 @@ public class Class149_Sub3 extends Class149 {
 		int i_4 = i_1 * 553709943 * this.anInt9377 * -567461817 >> 12;
 		int i_5 = 191477951 * this.anInt9375 * -640305345 * i_2 >> 12;
 		int i_6 = 1578600883 * this.anInt9379 * -1583198853 * i_2 >> 12;
-		Class346.method6159(i_3, i_5, i_4, i_6, this.anInt1741 * -1378640425 * -1525176857, -1432674157);
+		QuickChatMessage.method6159(i_3, i_5, i_4, i_6, this.anInt1741 * -1378640425 * -1525176857, -1432674157);
 	}
 
 	void method2556(int i_1, int i_2) {
@@ -36,7 +36,7 @@ public class Class149_Sub3 extends Class149 {
 		int i_4 = i_1 * 553709943 * this.anInt9377 * -567461817 >> 12;
 		int i_5 = 191477951 * this.anInt9375 * -640305345 * i_2 >> 12;
 		int i_6 = 1578600883 * this.anInt9379 * -1583198853 * i_2 >> 12;
-		Class346.method6159(i_3, i_5, i_4, i_6, this.anInt1741 * -1378640425 * -1525176857, 106086118);
+		QuickChatMessage.method6159(i_3, i_5, i_4, i_6, this.anInt1741 * -1378640425 * -1525176857, 106086118);
 	}
 
 	Class149_Sub3(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {

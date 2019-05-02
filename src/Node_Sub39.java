@@ -109,7 +109,7 @@ public class Node_Sub39 extends Node {
 				class282_sub33_21.anInt7832 = i_17;
 				class282_sub33_21.anInt7831 = i_16;
 				class282_sub33_21.anInt7827 = i_18;
-				Class346.aClass482_4049.append(class282_sub33_21);
+				QuickChatMessage.aClass482_4049.append(class282_sub33_21);
 			}
 		}
 

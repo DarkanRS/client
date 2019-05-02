@@ -14,7 +14,7 @@ public final class Node_Sub52 extends Node implements KeyRecord {
         return this.anInt8173;
     }
 
-    public char getCode(int i_1) {
+    public char getCharacter() {
         return this.aChar8171;
     }
 

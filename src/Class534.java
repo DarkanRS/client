@@ -67,13 +67,13 @@ public abstract class Class534 {
 						break label105;
 					}
 					class282_sub53_13.remove();
-					int i_8 = class282_sub53_13.method13469(1360106336);
+					int i_8 = class282_sub53_13.getY();
 					if (i_8 < -1) {
 						i_8 = -1;
 					} else if (i_8 > 65534) {
 						i_8 = 65534;
 					}
-					int i_9 = class282_sub53_13.method13481(2047173833);
+					int i_9 = class282_sub53_13.getX();
 					if (i_9 < -1) {
 						i_9 = -1;
 					} else if (i_9 > 65534) {

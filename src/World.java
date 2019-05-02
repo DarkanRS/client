@@ -26,9 +26,9 @@ public class World {
 			if (i_7 == 0) {
 				if (class521_sub1_2 == VertexNormal.myPlayer) {
 					if (animDef.aBool5928) {
-						Class435.method7300(i_5, i_6, 0, i_9, false, i_8);
+						Class435.playSoundVorbis(i_5, i_6, 0, i_9, false, i_8);
 					} else {
-						VarNPCMap.method2618(i_5, i_6, 0, i_9, i_8, 1889559384);
+						VarNPCMap.playSoundSynth(i_5, i_6, 0, i_9, i_8);
 					}
 				}
 			} else {

@@ -227,7 +227,7 @@ public class Huffman {
 		}
 	}
 
-	public static void method1978(int i_0, int i_1, int i_2) {
+	public static void playSoundJingle(int i_0, int i_1, int i_2) {
 		i_2 = i_2 * Class393.preferences.aPreference_Sub13_8228.method12714() >> 8;
 		if (i_2 != 0 && i_0 != -1) {
 			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && Class116.method1966(1048199259) && !Class345.method6140()) {
@@ -239,23 +239,6 @@ public class Huffman {
 			Class11.method13400(IndexLoaders.INDEX_11, i_0, i_2, (byte) -50);
 			Class150.method2580(-1, 255, (byte) -39);
 			Class260.aBool3220 = true;
-		}
-	}
-
-	public static int method1980(int i_0, int i_1, boolean bool_2, int i_3) {
-		ItemContainer class282_sub30_4 = ItemContainer.getContainer(i_0, bool_2);
-		if (class282_sub30_4 == null) {
-			return 0;
-		} else if (i_1 == -1) {
-			return 0;
-		} else {
-			int i_5 = 0;
-			for (int i_6 = 0; i_6 < class282_sub30_4.amounts.length; i_6++) {
-				if (class282_sub30_4.itemIds[i_6] == i_1) {
-					i_5 += class282_sub30_4.amounts[i_6];
-				}
-			}
-			return i_5;
 		}
 	}
 

@@ -433,7 +433,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 											}
 
 											if (string_12.length() >= 4 && Class115.method1950(string_12.substring(0, 4), 814122152)) {
-												i_7 = Class328.parseInt(string_12.substring(0, 4), -1887024388);
+												i_7 = Utils.parseInt(string_12.substring(0, 4));
 												break;
 											}
 										}
@@ -4235,8 +4235,8 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		String[] arr_3 = MovingAnimation.method12681(string_2.replace('.', ' '), ' ');
 		if (arr_3.length >= 2) {
 			try {
-				int i_4 = Class328.parseInt(arr_3[0], 242232953);
-				int i_5 = Class328.parseInt(arr_3[1], -1619906898);
+				int i_4 = Utils.parseInt(arr_3[0]);
+				int i_5 = Utils.parseInt(arr_3[1]);
 				this.anInt8443 = i_4 * 10 + i_5;
 			} catch (NumberFormatException numberformatexception_7) {
 				i_1 |= 0x4;

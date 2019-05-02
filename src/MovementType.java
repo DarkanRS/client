@@ -1,11 +1,8 @@
 public class MovementType implements Identifiable {
-
-    public static MovementType TELEPORT = new MovementType((byte) -1);
-
+	
+    public static MovementType STATIONARY = new MovementType((byte) -1);
     public static MovementType HALF_WALK = new MovementType((byte) 0);
-
     public static MovementType WALKING = new MovementType((byte) 1);
-
     public static MovementType RUNNING = new MovementType((byte) 2);
 
     public byte id;
@@ -26,7 +23,11 @@ public class MovementType implements Identifiable {
         return this.id;
     }
 
-    MovementType(byte b_1) {
+    public static MovementType[] values() {
+		return new MovementType[] { HALF_WALK, WALKING, RUNNING, STATIONARY };
+	}
+
+	MovementType(byte b_1) {
         this.id = b_1;
     }
 

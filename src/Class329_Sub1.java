@@ -991,9 +991,9 @@ public class Class329_Sub1 extends Class329 {
 		this.aClass239_7719 = class239_8;
 	}
 
-	public static void method12491(Player player_0, int i_1, int i_2) {
-		int[] ints_4 = new int[FontRenderer_Sub3.method14339().length];
-		Arrays.fill(ints_4, 0, ints_4.length, i_1);
-		Class20.animate(player_0, ints_4, i_2, false, (byte) -11);
+	public static void animateZero(Player player, int size, int speed) {
+		int[] animations = new int[MovementType.values().length];
+		Arrays.fill(animations, 0, animations.length, size);
+		Class20.animate(player, animations, speed, false);
 	}
 }

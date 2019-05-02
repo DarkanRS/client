@@ -185,6 +185,6 @@ public class Class41_Sub1_Sub1 extends Class41_Sub1 {
 	}
 
 	public static int method15524() {
-		return Class81.NUM_CHAT_LINES;
+		return ChatLine.NUM_CHAT_LINES;
 	}
 }

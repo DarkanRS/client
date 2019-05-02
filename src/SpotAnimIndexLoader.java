@@ -165,11 +165,6 @@ public class SpotAnimIndexLoader {
 		}
 	}
 
-	public static int getItemIdAtSlot(int key, int slot, boolean negativeKey, int i_3) {
-		ItemContainer container = ItemContainer.getContainer(key, negativeKey);
-		return container == null ? -1 : (slot >= 0 && slot < container.itemIds.length ? container.itemIds[slot] : -1);
-	}
-
 	public static void method8862(int i_0, int i_1, int i_2, boolean bool_3) {
 		if (Class393.preferences.currentToolkit.getValue(1767720477) != 0) {
 			Class291_Sub1.anInt8021 = Class393.preferences.currentToolkit.getValue(-124335836);

@@ -60,7 +60,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_9.anInterface6_443 = this.anInterface6_9050;
 		class47_9.method937(i_5, i_6);
 		if (this.aBool9051) {
-			i_3 = i_3 * this.anInt9060 / this.method228();
+			i_3 = i_3 * this.anInt9060 / this.scaleWidth();
 			i_4 = i_4 * this.anInt9053 / this.method2748();
 			i_1 += i_3 * this.anInt9055 / this.anInt9060;
 			i_2 += i_4 * this.anInt9057 / this.anInt9053;
@@ -129,7 +129,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_12;
 		float f_13;
 		if (this.aBool9051) {
-			float f_11 = (float) this.method228();
+			float f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -201,7 +201,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_12;
 		float f_13;
 		if (this.aBool9051) {
-			float f_11 = (float) this.method228();
+			float f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -364,7 +364,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 				}
 			} else if (bool_11) {
 				i_13 = i_3 + i_1;
-				i_14 = this.method228();
+				i_14 = this.scaleWidth();
 				class47_8.aClass384_440.method6525(this.anInterface6_9050.method47((float) this.anInt9060), this.anInterface6_9050.method62((float) i_4), 1.0F, 1.0F);
 				i_15 = this.anInt9055 + i_1;
 
@@ -389,7 +389,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 			} else {
 				i_13 = i_2 + i_4;
 				i_14 = i_3 + i_1;
-				i_15 = this.method228();
+				i_15 = this.scaleWidth();
 				i_16 = this.method2748();
 				int i_17 = i_2 + this.anInt9057;
 
@@ -464,7 +464,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_13 = (float) this.aGraphicalRenderer_Sub2_9052.method8523((byte) 110).method2716();
 		class47_11.aClass384_442.identity();
 		if (this.aBool9051) {
-			float f_14 = (float) this.anInt9060 / (float) this.method228();
+			float f_14 = (float) this.anInt9060 / (float) this.scaleWidth();
 			float f_15 = (float) this.anInt9053 / (float) this.method2748();
 			class47_11.aClass384_442.buf[0] = (f_3 - f_1) * f_14;
 			class47_11.aClass384_442.buf[1] = (f_4 - f_2) * f_14;
@@ -556,7 +556,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 				}
 			} else if (bool_11) {
 				i_13 = i_1 + i_3;
-				i_14 = this.method228();
+				i_14 = this.scaleWidth();
 				class47_8.aClass384_440.method6525(this.anInterface6_9050.method47((float) this.anInt9060), this.anInterface6_9050.method62((float) i_4), 1.0F, 1.0F);
 				i_15 = i_1 + this.anInt9055;
 
@@ -581,7 +581,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 			} else {
 				i_13 = i_2 + i_4;
 				i_14 = i_1 + i_3;
-				i_15 = this.method228();
+				i_15 = this.scaleWidth();
 				i_16 = this.method2748();
 				int i_17 = i_2 + this.anInt9057;
 
@@ -776,7 +776,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_9.anInterface6_443 = this.anInterface6_9050;
 		class47_9.method937(i_5, i_6);
 		if (this.aBool9051) {
-			i_3 = i_3 * this.anInt9060 / this.method228();
+			i_3 = i_3 * this.anInt9060 / this.scaleWidth();
 			i_4 = i_4 * this.anInt9053 / this.method2748();
 			i_1 += this.anInt9055 * i_3 / this.anInt9060;
 			i_2 += this.anInt9057 * i_4 / this.anInt9053;
@@ -844,7 +844,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		class47_9.anInterface6_443 = this.anInterface6_9050;
 		class47_9.method937(i_5, i_6);
 		if (this.aBool9051) {
-			i_3 = i_3 * this.anInt9060 / this.method228();
+			i_3 = i_3 * this.anInt9060 / this.scaleWidth();
 			i_4 = i_4 * this.anInt9053 / this.method2748();
 			i_1 += this.anInt9055 * i_3 / this.anInt9060;
 			i_2 += this.anInt9057 * i_4 / this.anInt9053;
@@ -1060,7 +1060,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 				}
 			} else if (bool_11) {
 				i_13 = i_1 + i_3;
-				i_14 = this.method228();
+				i_14 = this.scaleWidth();
 				class47_8.aClass384_440.method6525(this.anInterface6_9050.method47((float) this.anInt9060), this.anInterface6_9050.method62((float) i_4), 1.0F, 1.0F);
 				i_15 = i_1 + this.anInt9055;
 
@@ -1085,7 +1085,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 			} else {
 				i_13 = i_2 + i_4;
 				i_14 = i_1 + i_3;
-				i_15 = this.method228();
+				i_15 = this.scaleWidth();
 				i_16 = this.method2748();
 				int i_17 = i_2 + this.anInt9057;
 
@@ -1147,7 +1147,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 
 	}
 
-	public int method228() {
+	public int scaleWidth() {
 		return this.anInt9060 + this.anInt9055 + this.anInt9058;
 	}
 
@@ -1157,7 +1157,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_12;
 		float f_13;
 		if (this.aBool9051) {
-			float f_11 = (float) this.method228();
+			float f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -1231,7 +1231,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_12;
 		float f_13;
 		if (this.aBool9051) {
-			float f_11 = (float) this.method228();
+			float f_11 = (float) this.scaleWidth();
 			f_12 = (float) this.method2748();
 			f_13 = (f_3 - f_1) / f_11;
 			float f_14 = (f_4 - f_2) / f_11;
@@ -1282,7 +1282,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_13 = (float) this.aGraphicalRenderer_Sub2_9052.method8523((byte) 112).method2716();
 		class47_11.aClass384_442.identity();
 		if (this.aBool9051) {
-			float f_14 = (float) this.anInt9060 / (float) this.method228();
+			float f_14 = (float) this.anInt9060 / (float) this.scaleWidth();
 			float f_15 = (float) this.anInt9053 / (float) this.method2748();
 			class47_11.aClass384_442.buf[0] = (f_3 - f_1) * f_14;
 			class47_11.aClass384_442.buf[1] = (f_4 - f_2) * f_14;
@@ -1332,7 +1332,7 @@ public class NativeSprite_Sub3 extends NativeSprite {
 		float f_13 = (float) this.aGraphicalRenderer_Sub2_9052.method8523((byte) 127).method2716();
 		class47_11.aClass384_442.identity();
 		if (this.aBool9051) {
-			float f_14 = (float) this.anInt9060 / (float) this.method228();
+			float f_14 = (float) this.anInt9060 / (float) this.scaleWidth();
 			float f_15 = (float) this.anInt9053 / (float) this.method2748();
 			class47_11.aClass384_442.buf[0] = (f_3 - f_1) * f_14;
 			class47_11.aClass384_442.buf[1] = (f_4 - f_2) * f_14;

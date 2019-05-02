@@ -140,6 +140,33 @@ public class ItemContainer extends Node {
 		return long_7;
 	}
 
+	public static int getAmountAtSlot(int key, int slot, boolean negativeKey) {
+		ItemContainer container = getContainer(key, negativeKey);
+		return container == null ? 0 : (slot >= 0 && slot < container.amounts.length ? container.amounts[slot] : 0);
+	}
+
+	public static int getContainerTotal(int i_0, int i_1, boolean bool_2) {
+		ItemContainer class282_sub30_4 = getContainer(i_0, bool_2);
+		if (class282_sub30_4 == null) {
+			return 0;
+		} else if (i_1 == -1) {
+			return 0;
+		} else {
+			int i_5 = 0;
+			for (int i_6 = 0; i_6 < class282_sub30_4.amounts.length; i_6++) {
+				if (class282_sub30_4.itemIds[i_6] == i_1) {
+					i_5 += class282_sub30_4.amounts[i_6];
+				}
+			}
+			return i_5;
+		}
+	}
+
+	public static int getItemIdAtSlot(int key, int slot, boolean negativeKey) {
+		ItemContainer container = getContainer(key, negativeKey);
+		return container == null ? -1 : (slot >= 0 && slot < container.itemIds.length ? container.itemIds[slot] : -1);
+	}
+
 	static ItemContainer getContainer(int key, boolean negativeKey) {
 		long longKey = (long) (key | (negativeKey ? Integer.MIN_VALUE : 0));
 		return (ItemContainer) CONTAINER_MAP.get(longKey);

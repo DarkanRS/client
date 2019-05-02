@@ -122,19 +122,19 @@ public abstract class Ground {
 			NativeSprite nativesprite_15 = Node_Sub20_Sub15.aNativeSpriteArray9838[i_6];
 			int i_16 = nativesprite_15.method2747();
 			int i_17 = nativesprite_15.method2793();
-			int i_18 = i_13 + icomponentdefinitions_0.anInt1301 / 2 - i_16 / 2;
+			int i_18 = i_13 + icomponentdefinitions_0.width / 2 - i_16 / 2;
 			int i_19 = i_16 + i_18;
-			int i_20 = -i_14 + icomponentdefinitions_0.anInt1429 / 2 - i_17;
+			int i_20 = -i_14 + icomponentdefinitions_0.height / 2 - i_17;
 			int i_21 = i_20 + i_17;
 			if (class119_1.method2073(i_18, i_20, -560505458) && class119_1.method2073(i_19, i_20, -1424835178) && class119_1.method2073(i_18, i_21, -197878747) && class119_1.method2073(i_19, i_21, -685172335)) {
 				nativesprite_15.method2773(i_18 + i_2, i_3 + i_20, class119_1.aClass455_1456, i_2, i_3);
 			} else {
 				double d_22 = Math.atan2((double) i_13, (double) i_14);
-				int i_24 = Math.min(icomponentdefinitions_0.anInt1301 / 2, icomponentdefinitions_0.anInt1429 / 2);
+				int i_24 = Math.min(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2);
 				i_24 -= 6;
 				int i_25 = (int) (Math.sin(d_22) * (double) i_24);
 				int i_26 = (int) (Math.cos(d_22) * (double) i_24);
-				Class245.aNativeSpriteArray3027[i_6].method2758((float) i_2 + (float) icomponentdefinitions_0.anInt1301 / 2.0F + (float) i_25, (float) i_3 + (float) icomponentdefinitions_0.anInt1429 / 2.0F - (float) i_26, 4096, (int) (65535.0D * (-d_22 / 6.283185307179586D)));
+				Class245.aNativeSpriteArray3027[i_6].method2758((float) i_2 + (float) icomponentdefinitions_0.width / 2.0F + (float) i_25, (float) i_3 + (float) icomponentdefinitions_0.height / 2.0F - (float) i_26, 4096, (int) (65535.0D * (-d_22 / 6.283185307179586D)));
 			}
 		}
 	}

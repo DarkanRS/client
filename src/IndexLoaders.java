@@ -79,7 +79,7 @@ public class IndexLoaders {
 		int i;
 		if (Class393.preferences.safeMode.getValue((byte) 1) == 0) {
 			for (i = 0; i < client.anInt7193; i++) {
-				if (client.KEYS_PRESSED[i].getCode(-469731478) == 115 || client.KEYS_PRESSED[i].getCode(-1315201556) == 83) {
+				if (client.KEYS_PRESSED[i].getCharacter() == 115 || client.KEYS_PRESSED[i].getCharacter() == 83) {
 					Class393.preferences.setValue(Class393.preferences.safeMode, 1, -821310033);
 					client.aBool7155 = true;
 					break;

@@ -32,7 +32,7 @@ public class Class151 {
                 IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
                 if (icomponentdefinitions_2 != null) {
                     HookRequest hookrequest_3 = new HookRequest();
-                    hookrequest_3.iComponentDefs = icomponentdefinitions_0;
+                    hookrequest_3.source = icomponentdefinitions_0;
                     hookrequest_3.aClass118_8057 = icomponentdefinitions_2;
                     hookrequest_3.params = icomponentdefinitions_0.anObjectArray1393;
                     CS2Executor.executeHookInner200k(hookrequest_3, 1791224764);
@@ -40,11 +40,11 @@ public class Class151 {
             }
             TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_ICOMPONENT, client.outputContext.isaac);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
-            tcpmessage_4.buffer.writeShortLE(client.anInt7345, (short) -9723);
+            tcpmessage_4.buffer.writeShortLE(client.anInt7345);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
             tcpmessage_4.buffer.writeLEInt(icomponentdefinitions_0.idHash, (byte) 89);
             tcpmessage_4.buffer.writeIntV2(Class7.anInt56);
-            tcpmessage_4.buffer.writeShortLE(client.anInt7346, (short) -1117);
+            tcpmessage_4.buffer.writeShortLE(client.anInt7346);
             client.outputContext.queuePacket(tcpmessage_4);
         }
     }
@@ -65,7 +65,7 @@ public class Class151 {
                 HookRequest hookrequest_6;
                 if (i_1 == 0 && icomponentdefinitions_4.anObjectArray1421 != null) {
                     hookrequest_6 = new HookRequest();
-                    hookrequest_6.iComponentDefs = icomponentdefinitions_4;
+                    hookrequest_6.source = icomponentdefinitions_4;
                     hookrequest_6.params = icomponentdefinitions_4.anObjectArray1421;
                     CS2Executor.executeHookInner200k(hookrequest_6, 506526261);
                 }
@@ -77,7 +77,7 @@ public class Class151 {
                         }
                     }
                     hookrequest_6 = new HookRequest();
-                    hookrequest_6.iComponentDefs = icomponentdefinitions_4;
+                    hookrequest_6.source = icomponentdefinitions_4;
                     hookrequest_6.params = icomponentdefinitions_4.anObjectArray1346;
                     CS2Executor.executeHookInner200k(hookrequest_6, 2094989397);
                 }

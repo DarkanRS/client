@@ -64,8 +64,4 @@ public class Class191 implements Runnable {
 	public static void method3166() {
 		ParticleProducerDefinition.aClass229_533.method3859();
 	}
-
-	public static void method3167(int i_0, int i_1, String string_2, String string_3, String string_4, String string_5, int i_6) {
-		MapRegionLoaderTask.appendMessage(i_0, i_1, string_2, string_3, string_4, string_5, (String) null, -1);
-	}
 }

@@ -268,7 +268,7 @@ public class MapAreaDefinitions {
             }
             if (npcdefinitions_3.visible) {
                 if (npc_0.anInt10582 != 0) {
-                    String string_5 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE, -834706251) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE, -2066176113);
+                    String string_5 = client.CURRENT_GAME == Game.stellarDawn ? Message.RATING_.translate(Class223.CURRENT_LANGUAGE) : Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE);
                     string_4 = string_4 + ItemIndexLoader.method7169(npc_0.anInt10582, VertexNormal.myPlayer.combatLevel, -1957998512) + " (" + string_5 + npc_0.anInt10582 + ")";
                 }
                 if (client.aBool7344 && !bool_1) {
@@ -286,7 +286,7 @@ public class MapAreaDefinitions {
                         int i_6;
                         short s_7;
                         for (i_6 = arr_11.length - 1; i_6 >= 0; --i_6) {
-                            if (arr_11[i_6] != null && (npcdefinitions_3.aByte4916 == 0 || !arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1264290338)) && !arr_11[i_6].equalsIgnoreCase(Message.EXAMINE.translate(Class223.CURRENT_LANGUAGE, -1819151765)))) {
+                            if (arr_11[i_6] != null && (npcdefinitions_3.aByte4916 == 0 || !arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) && !arr_11[i_6].equalsIgnoreCase(Message.EXAMINE.translate(Class223.CURRENT_LANGUAGE)))) {
                                 s_7 = 0;
                                 int i_8 = client.anInt7342;
                                 if (i_6 == 0) {
@@ -313,12 +313,12 @@ public class MapAreaDefinitions {
                                 if (i_6 == npcdefinitions_3.anInt4854) {
                                     i_8 = npcdefinitions_3.anInt4861;
                                 }
-                                PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -422947170)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1773453670);
+                                PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1773453670);
                             }
                         }
                         if (npcdefinitions_3.aByte4916 == 1) {
                             for (i_6 = 0; i_6 < arr_11.length; i_6++) {
-                                if (arr_11[i_6] != null && (arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -436851003)) || arr_11[i_6].equalsIgnoreCase(Message.EXAMINE.translate(Class223.CURRENT_LANGUAGE, -473516287)))) {
+                                if (arr_11[i_6] != null && (arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) || arr_11[i_6].equalsIgnoreCase(Message.EXAMINE.translate(Class223.CURRENT_LANGUAGE)))) {
                                     s_7 = 0;
                                     if (npc_0.anInt10582 > VertexNormal.myPlayer.combatLevel) {
                                         s_7 = 2000;
@@ -352,7 +352,7 @@ public class MapAreaDefinitions {
                                     if (i_6 == npcdefinitions_3.anInt4854) {
                                         i_9 = npcdefinitions_3.anInt4861;
                                     }
-                                    PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1997310478)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1021673171);
+                                    PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1021673171);
                                 }
                             }
                         }
@@ -404,11 +404,11 @@ public class MapAreaDefinitions {
                 nativesprite_10 = worldmapareadefs_2.renderIcons(graphicalrenderer_0, false);
             }
             if (nativesprite_10 != null) {
-                i_11 = class282_sub36_1.anInt7990 - (nativesprite_10.method228() + 1 >> 1);
+                i_11 = class282_sub36_1.anInt7990 - (nativesprite_10.scaleWidth() + 1 >> 1);
                 if (i_11 < i_6) {
                     i_6 = i_11;
                 }
-                i_12 = class282_sub36_1.anInt7990 + (nativesprite_10.method228() + 1 >> 1);
+                i_12 = class282_sub36_1.anInt7990 + (nativesprite_10.scaleWidth() + 1 >> 1);
                 if (i_12 > i_7) {
                     i_7 = i_12;
                 }
@@ -487,7 +487,7 @@ public class MapAreaDefinitions {
                     graphicalrenderer_0.method8468(class282_sub36_1.anInt7990, class282_sub36_1.anInt7992, nativesprite_10.method2747() / 2 + 1, i_27, 283633810);
                     graphicalrenderer_0.method8468(class282_sub36_1.anInt7990, class282_sub36_1.anInt7992, nativesprite_10.method2747() / 2, i_27, -1440374921);
                 }
-                nativesprite_10.method2752(class282_sub36_1.anInt7990 - (nativesprite_10.method228() >> 1), class282_sub36_1.anInt7992 - (nativesprite_10.method2748() >> 1));
+                nativesprite_10.method2752(class282_sub36_1.anInt7990 - (nativesprite_10.scaleWidth() >> 1), class282_sub36_1.anInt7992 - (nativesprite_10.method2748() >> 1));
             }
             if (worldmapareadefs_2.areaName != null && class194_15 != null) {
                 InventoriesIndexLoader.renderAreaText(graphicalrenderer_0, class282_sub36_1, worldmapareadefs_2, i_16, i_17, i_18, i_19, class194_15);
@@ -502,7 +502,7 @@ public class MapAreaDefinitions {
                 class282_sub33_28.anInt7832 = i_21;
                 class282_sub33_28.anInt7831 = i_22;
                 class282_sub33_28.anInt7827 = i_23;
-                Class346.aClass482_4049.append(class282_sub33_28);
+                QuickChatMessage.aClass482_4049.append(class282_sub33_28);
             }
             return false;
         } else {

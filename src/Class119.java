@@ -79,7 +79,7 @@ public class Class119 {
 				if (outgoingpacket_8 != null) {
 					TCPPacket tcpmessage_9 = Class271.createPacket(outgoingpacket_8, client.outputContext.isaac);
 					tcpmessage_9.buffer.writeShort(ints_4[i_6]);
-					tcpmessage_9.buffer.write128Byte(0, 1653548844);
+					tcpmessage_9.buffer.write128Byte(0);
 					client.outputContext.queuePacket(tcpmessage_9);
 				}
 
@@ -89,7 +89,7 @@ public class Class119 {
 		}
 
 		if (!bool_5) {
-			LoadingStage.method6681(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111) + string_1, (byte) -65);
+			ChatLine.appendGameMessage(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE) + string_1);
 		}
 
 	}
@@ -97,7 +97,7 @@ public class Class119 {
 	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
 		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.ICOMPONENT_DRAG_ONTO_ICOMPONENT, client.outputContext.isaac);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
-		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288, (short) -28348);
+		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288);
 		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 		tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);

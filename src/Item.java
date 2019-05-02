@@ -20,8 +20,8 @@ public class Item extends Node {
 		Class119 class119_5 = icomponentdefinitions_1.method2046(graphicalrenderer_0, 1273435241);
 		if (class119_5 != null) {
 			Class455 class455_6 = class119_5.aClass455_1456;
-			graphicalrenderer_0.r(i_2, i_3, i_2 + icomponentdefinitions_1.anInt1301, i_3 + icomponentdefinitions_1.anInt1429);
-			if (class119_5.anInt1458 != icomponentdefinitions_1.anInt1301 || class119_5.anInt1454 != icomponentdefinitions_1.anInt1429) {
+			graphicalrenderer_0.r(i_2, i_3, i_2 + icomponentdefinitions_1.width, i_3 + icomponentdefinitions_1.height);
+			if (class119_5.anInt1458 != icomponentdefinitions_1.width || class119_5.anInt1454 != icomponentdefinitions_1.height) {
 				throw new IllegalStateException("");
 			}
 
@@ -46,7 +46,7 @@ public class Item extends Node {
 
 				int i_12 = i_8 / 128 + 48;
 				int i_13 = 48 + IndexLoaders.MAP_REGION_DECODER.getSizeY() * 4 - i_9 / 128;
-				CursorDefintions.aNativeSprite_5004.method2762((float) i_2 + (float) icomponentdefinitions_1.anInt1301 / 2.0F, (float) i_3 + (float) icomponentdefinitions_1.anInt1429 / 2.0F, (float) i_12, (float) i_13, i_11, i_10 << 2, class455_6, i_2, i_3);
+				CursorDefintions.aNativeSprite_5004.method2762((float) i_2 + (float) icomponentdefinitions_1.width / 2.0F, (float) i_3 + (float) icomponentdefinitions_1.height / 2.0F, (float) i_12, (float) i_13, i_11, i_10 << 2, class455_6, i_2, i_3);
 				Class283 class283_14 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 38);
 
 				int i_16;
@@ -100,7 +100,7 @@ public class Item extends Node {
 					}
 
 					if (!VertexNormal.myPlayer.hidden) {
-						graphicalrenderer_0.method8425(i_2 + icomponentdefinitions_1.anInt1301 / 2 - 1, i_3 + icomponentdefinitions_1.anInt1429 / 2 - 1, 3, 3, -1, (byte) -117);
+						graphicalrenderer_0.method8425(i_2 + icomponentdefinitions_1.width / 2 - 1, i_3 + icomponentdefinitions_1.height / 2 - 1, 3, 3, -1, (byte) -117);
 					}
 				}
 			} else {

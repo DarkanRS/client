@@ -150,8 +150,8 @@ public class FriendStatus {
 			MouseRecord class282_sub53_14 = (MouseRecord) client.mouseRecords.head();
 			int i_4;
 			if (class282_sub53_14 != null) {
-				i_3 = class282_sub53_14.method13481(1796432776);
-				i_4 = class282_sub53_14.method13469(-1321812289);
+				i_3 = class282_sub53_14.getX();
+				i_4 = class282_sub53_14.getY();
 			} else {
 				i_3 = Class163.mouseRecorder.getMouseX();
 				i_4 = Class163.mouseRecorder.getMouseY();
@@ -168,8 +168,8 @@ public class FriendStatus {
 						i_5 = -1;
 						for (i_6 = 0; i_6 < Class20.aCacheableNode_Sub15_163.anInt9769; i_6++) {
 							if (Class20.aBool187) {
-								i_11 = i_6 * Class20.anInt178 + fontmetrics_1.anInt4978 + CacheableNode_Sub2.anInt9471 + 1 + 20;
-								if (i_4 > i_11 - fontmetrics_1.anInt4978 - 1 && i_4 < i_11 + fontmetrics_1.anInt4979) {
+								i_11 = i_6 * Class20.anInt178 + fontmetrics_1.topPadding + CacheableNode_Sub2.anInt9471 + 1 + 20;
+								if (i_4 > i_11 - fontmetrics_1.topPadding - 1 && i_4 < i_11 + fontmetrics_1.bottomPadding) {
 									i_5 = i_6;
 								}
 							} else {
@@ -196,8 +196,8 @@ public class FriendStatus {
 							i_5 = -1;
 							for (i_6 = 0; i_6 < Class20.anInt169; i_6++) {
 								if (Class20.aBool187) {
-									i_11 = (Class20.anInt169 - 1 - i_6) * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
-									if (i_4 > i_11 - fontmetrics_1.anInt4978 - 1 && i_4 < i_11 + fontmetrics_1.anInt4979) {
+									i_11 = (Class20.anInt169 - 1 - i_6) * Class20.anInt178 + fontmetrics_1.topPadding + BufferedConnectionContext.anInt2300 + 1 + 20;
+									if (i_4 > i_11 - fontmetrics_1.topPadding - 1 && i_4 < i_11 + fontmetrics_1.bottomPadding) {
 										i_5 = i_6;
 									}
 								} else {
@@ -223,8 +223,8 @@ public class FriendStatus {
 							i_5 = -1;
 							for (i_6 = 0; i_6 < Class20.anInt170; i_6++) {
 								if (Class20.aBool187) {
-									i_11 = i_6 * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
-									if (i_4 > i_11 - fontmetrics_1.anInt4978 - 1 && i_4 < i_11 + fontmetrics_1.anInt4979) {
+									i_11 = i_6 * Class20.anInt178 + fontmetrics_1.topPadding + BufferedConnectionContext.anInt2300 + 1 + 20;
+									if (i_4 > i_11 - fontmetrics_1.topPadding - 1 && i_4 < i_11 + fontmetrics_1.bottomPadding) {
 										i_5 = i_6;
 										break;
 									}
@@ -268,10 +268,10 @@ public class FriendStatus {
 								for (i_12 = 0; i_12 < Class20.anInt170; i_12++) {
 									int i_13;
 									if (Class20.aBool187) {
-										i_13 = i_12 * Class20.anInt178 + fontmetrics_1.anInt4978 + BufferedConnectionContext.anInt2300 + 1 + 20;
-										if (i_4 > i_13 - fontmetrics_1.anInt4978 - 1 && i_4 < i_13 + fontmetrics_1.anInt4979) {
+										i_13 = i_12 * Class20.anInt178 + fontmetrics_1.topPadding + BufferedConnectionContext.anInt2300 + 1 + 20;
+										if (i_4 > i_13 - fontmetrics_1.topPadding - 1 && i_4 < i_13 + fontmetrics_1.bottomPadding) {
 											i_6 = i_12;
-											i_11 = i_13 - fontmetrics_1.anInt4978 - 1;
+											i_11 = i_13 - fontmetrics_1.topPadding - 1;
 											break;
 										}
 									} else {

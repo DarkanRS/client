@@ -104,7 +104,7 @@ public class SunDefinitions {
 			fontrenderer_7 = Class285.aFontRenderer_3394;
 		}
 		FontMetrics fontmetrics_8 = Class114.method1887(-864314974);
-		Animation_Sub2.method12680(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, fontrenderer_7, fontmetrics_8, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -827597083));
+		Animation_Sub2.method12680(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, fontrenderer_7, fontmetrics_8, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE));
 		int i_9 = 255 - Class182.anInt2262 - Class20.anInt156;
 		if (i_9 < 0) {
 			i_9 = 0;
@@ -118,18 +118,18 @@ public class SunDefinitions {
 		if (!Class20.aBool162) {
 			i_12 = 0;
 			for (class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aClass482_171.next(-573495848)) {
-				i_14 = i_3 + b_6 + (Class20.anInt169 - 1 - i_12) * Class20.anInt178 + fontmetrics_8.anInt4978 + 1;
-				if (i_10 > Class301.anInt3555 && i_10 < Class301.anInt3555 + Class158_Sub2.anInt8975 && i_11 > i_14 - fontmetrics_8.anInt4978 - 1 && i_11 < i_14 + fontmetrics_8.anInt4979 && class282_sub50_sub7_13.aBool9583) {
-					graphicalrenderer_0.B(Class301.anInt3555, i_14 - fontmetrics_8.anInt4978, Class158_Sub2.anInt8975, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
+				i_14 = i_3 + b_6 + (Class20.anInt169 - 1 - i_12) * Class20.anInt178 + fontmetrics_8.topPadding + 1;
+				if (i_10 > Class301.anInt3555 && i_10 < Class301.anInt3555 + Class158_Sub2.anInt8975 && i_11 > i_14 - fontmetrics_8.topPadding - 1 && i_11 < i_14 + fontmetrics_8.bottomPadding && class282_sub50_sub7_13.aBool9583) {
+					graphicalrenderer_0.B(Class301.anInt3555, i_14 - fontmetrics_8.topPadding, Class158_Sub2.anInt8975, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
 				}
 				++i_12;
 			}
 		} else {
 			i_12 = 0;
 			for (class282_sub50_sub15_16 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_16 != null; class282_sub50_sub15_16 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(-2089129686)) {
-				i_14 = i_3 + b_6 + i_12 * Class20.anInt178 + fontmetrics_8.anInt4978 + 1;
-				if (i_10 > Class301.anInt3555 && i_10 < Class158_Sub2.anInt8975 + Class301.anInt3555 && i_11 > i_14 - fontmetrics_8.anInt4978 - 1 && i_11 < i_14 + fontmetrics_8.anInt4979 && (class282_sub50_sub15_16.anInt9769 > 1 || ((CacheableNode_Sub7) class282_sub50_sub15_16.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119).aBool9583)) {
-					graphicalrenderer_0.B(Class301.anInt3555, i_14 - fontmetrics_8.anInt4978, Class158_Sub2.anInt8975, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
+				i_14 = i_3 + b_6 + i_12 * Class20.anInt178 + fontmetrics_8.topPadding + 1;
+				if (i_10 > Class301.anInt3555 && i_10 < Class158_Sub2.anInt8975 + Class301.anInt3555 && i_11 > i_14 - fontmetrics_8.topPadding - 1 && i_11 < i_14 + fontmetrics_8.bottomPadding && (class282_sub50_sub15_16.anInt9769 > 1 || ((CacheableNode_Sub7) class282_sub50_sub15_16.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119).aBool9583)) {
+					graphicalrenderer_0.B(Class301.anInt3555, i_14 - fontmetrics_8.topPadding, Class158_Sub2.anInt8975, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
 				}
 				++i_12;
 			}
@@ -137,9 +137,9 @@ public class SunDefinitions {
 				Animation_Sub2.method12680(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, b_6, fontrenderer_7, fontmetrics_8, Class20.aCacheableNode_Sub15_163.aString9771);
 				i_12 = 0;
 				for (class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7955(-889659924)) {
-					i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.anInt4978 + CacheableNode_Sub2.anInt9471 + 1;
-					if (i_10 > Class341.anInt3996 && i_10 < CutsceneAction_Sub3.anInt8518 + Class341.anInt3996 && i_11 > i_14 - fontmetrics_8.anInt4978 - 1 && i_11 < i_14 + fontmetrics_8.anInt4979 && class282_sub50_sub7_13.aBool9583) {
-						graphicalrenderer_0.B(Class341.anInt3996, i_14 - fontmetrics_8.anInt4978, CutsceneAction_Sub3.anInt8518, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
+					i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.topPadding + CacheableNode_Sub2.anInt9471 + 1;
+					if (i_10 > Class341.anInt3996 && i_10 < CutsceneAction_Sub3.anInt8518 + Class341.anInt3996 && i_11 > i_14 - fontmetrics_8.topPadding - 1 && i_11 < i_14 + fontmetrics_8.bottomPadding && class282_sub50_sub7_13.aBool9583) {
+						graphicalrenderer_0.B(Class341.anInt3996, i_14 - fontmetrics_8.topPadding, CutsceneAction_Sub3.anInt8518, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
 					}
 					++i_12;
 				}
@@ -150,14 +150,14 @@ public class SunDefinitions {
 		if (!Class20.aBool162) {
 			i_12 = 0;
 			for (class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aClass482_171.next(-668033309)) {
-				i_14 = i_3 + b_6 + (Class20.anInt169 - 1 - i_12) * Class20.anInt178 + fontmetrics_8.anInt4978 + 1;
+				i_14 = i_3 + b_6 + (Class20.anInt169 - 1 - i_12) * Class20.anInt178 + fontmetrics_8.topPadding + 1;
 				Node_Sub25.method12400(i_10, i_11, i_2, i_3, i_4, i_5, i_14, class282_sub50_sub7_13, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -162491799);
 				++i_12;
 			}
 		} else {
 			i_12 = 0;
 			for (class282_sub50_sub15_16 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_16 != null; class282_sub50_sub15_16 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(880459303)) {
-				i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.anInt4978 + BufferedConnectionContext.anInt2300 + 1;
+				i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.topPadding + BufferedConnectionContext.anInt2300 + 1;
 				if (class282_sub50_sub15_16.anInt9769 == 1) {
 					Node_Sub25.method12400(i_10, i_11, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, i_14, (CacheableNode_Sub7) class282_sub50_sub15_16.aClass477_9770.aCacheableNode_5629.aCacheableNode_8119, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, -462904311);
 				} else {
@@ -168,7 +168,7 @@ public class SunDefinitions {
 			if (Class20.aCacheableNode_Sub15_163 != null) {
 				i_12 = 0;
 				for (class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7955(-2102750964)) {
-					i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.anInt4978 + CacheableNode_Sub2.anInt9471 + 1;
+					i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.topPadding + CacheableNode_Sub2.anInt9471 + 1;
 					Node_Sub25.method12400(i_10, i_11, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, i_14, class282_sub50_sub7_13, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, 50305852);
 					++i_12;
 				}

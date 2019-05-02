@@ -112,9 +112,9 @@ public class SoftwareItemRender implements Interface18 {
 			}
 			int i_7 = defs.anIntArray5926 == null ? 255 : defs.anIntArray5926[i_1];
 			if (defs.aBool5928) {
-				Class435.method7300(i_4, i_5, 0, i_7, false, i_6);
+				Class435.playSoundVorbis(i_4, i_5, 0, i_7, false, i_6);
 			} else {
-				VarNPCMap.method2618(i_4, i_5, 0, i_7, i_6, 1648413322);
+				VarNPCMap.playSoundSynth(i_4, i_5, 0, i_7, i_6);
 			}
 		}
 	}

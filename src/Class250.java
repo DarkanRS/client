@@ -176,7 +176,7 @@ public class Class250 {
 					}
 				}
 				i_92 = (int) ((float) i_1 + client.aFloatArray7292[1]);
-				i_92 -= SkyboxIndexLoader.aClass414_3438.anInt4978;
+				i_92 -= SkyboxIndexLoader.aClass414_3438.topPadding;
 				boolean bool_94 = false;
 				int i_27;
 				int i_28;
@@ -558,8 +558,8 @@ public class Class250 {
 								int i_81 = i_80;
 								int i_82 = i_80 + i_47;
 								int i_83 = i_80 + hitsplatdefinitions_122.anInt2832 + 15;
-								int i_84 = i_83 - fontmetrics_54.anInt4978;
-								int i_85 = i_83 + fontmetrics_54.anInt4979;
+								int i_84 = i_83 - fontmetrics_54.topPadding;
+								int i_85 = i_83 + fontmetrics_54.bottomPadding;
 								if (i_84 < i_80) {
 									i_81 = i_84;
 								}
@@ -571,8 +571,8 @@ public class Class250 {
 								int i_88;
 								if (hitsplatdefinitions_101 != null) {
 									i_86 = i_80 + hitsplatdefinitions_101.anInt2832 + 15;
-									i_87 = i_86 - fontmetrics_55.anInt4978;
-									i_88 = i_86 + fontmetrics_55.anInt4979;
+									i_87 = i_86 - fontmetrics_55.topPadding;
+									i_88 = i_86 + fontmetrics_55.bottomPadding;
 									if (i_87 < i_81) {
 										;
 									}
@@ -677,7 +677,7 @@ public class Class250 {
 			}
 			ItemDefinitions.method7140((Animable) obj_12, (Animable) obj_14, --((Animable) obj_12).anInt10319, i_0, i_1, i_2, i_3);
 		}
-		i_10 = SkyboxIndexLoader.aClass414_3438.anInt4979 + SkyboxIndexLoader.aClass414_3438.anInt4978 + 2;
+		i_10 = SkyboxIndexLoader.aClass414_3438.bottomPadding + SkyboxIndexLoader.aClass414_3438.topPadding + 2;
 		for (i_11 = 0; i_11 < client.anInt7415; i_11++) {
 			int i_93 = client.anIntArray7420[i_11];
 			i_92 = client.anIntArray7417[i_11];
@@ -769,7 +769,7 @@ public class Class250 {
 					} else if (i_21 > 125) {
 						i_116 = i_21 - 125;
 					}
-					i_23 = SkyboxIndexLoader.aClass414_3438.anInt4978 + SkyboxIndexLoader.aClass414_3438.anInt4979;
+					i_23 = SkyboxIndexLoader.aClass414_3438.topPadding + SkyboxIndexLoader.aClass414_3438.bottomPadding;
 					Renderers.SOFTWARE_RENDERER.o(i_0, i_92 + i_1 - i_23 - 1, i_0 + i_2, i_92 + i_1 + 5);
 					Class285.aFontRenderer_3394.method360(string_114, i_0 + i_93, i_116 + i_92 + i_1, i_19, -16777216);
 					Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);

@@ -23,7 +23,7 @@ public class Class366 implements Interface3 {
 				SunDefinitions.method854(false, true, -1039964582);
 				int i_9 = Class540.anIntArray7136[i_8];
 				Class13.method508(false, true, -1893866080);
-				graphicalrenderer_0.B((i_7 * icomponentdefinitions_3.anInt1301 >> 7) + i_1, i_2 + ((7 - i_6) * icomponentdefinitions_3.anInt1429 >> 3), (icomponentdefinitions_3.anInt1301 >> 7) + 1, (icomponentdefinitions_3.anInt1429 >> 3) + 1, i_9, 0);
+				graphicalrenderer_0.B((i_7 * icomponentdefinitions_3.width >> 7) + i_1, i_2 + ((7 - i_6) * icomponentdefinitions_3.height >> 3), (icomponentdefinitions_3.width >> 7) + 1, (icomponentdefinitions_3.height >> 3) + 1, i_9, 0);
 			}
 		}
 	}
@@ -53,8 +53,8 @@ public class Class366 implements Interface3 {
 
 	public static Class365 method6303(RsByteBuffer rsbytebuffer_0) {
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
-		Class356 class356_3 = Class350_Sub3_Sub1.method15558(-41327107)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_4 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
+		Class356 class356_3 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_4 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readShort();
 		int i_7 = rsbytebuffer_0.readUnsignedShort();

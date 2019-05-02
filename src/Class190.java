@@ -36,7 +36,7 @@ public class Class190 {
 				i_8 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
 			}
 
-			int i_9 = Math.max(icomponentdefinitions_0.anInt1301 / 2, icomponentdefinitions_0.anInt1429 / 2) + 10;
+			int i_9 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
 			int i_10 = i_5 * i_5 + i_4 * i_4;
 			if (i_10 <= i_9 * i_9) {
 				int i_11 = Class382.anIntArray4657[i_8];
@@ -48,7 +48,7 @@ public class Class190 {
 
 				int i_13 = i_12 * i_4 + i_5 * i_11 >> 14;
 				int i_14 = i_5 * i_12 - i_11 * i_4 >> 14;
-				nativesprite_6.method2773(i_13 + icomponentdefinitions_0.anInt1301 / 2 + i_2 - nativesprite_6.method228() / 2, i_3 + icomponentdefinitions_0.anInt1429 / 2 - i_14 - nativesprite_6.method2748() / 2, class455_1, i_2, i_3);
+				nativesprite_6.method2773(i_13 + icomponentdefinitions_0.width / 2 + i_2 - nativesprite_6.scaleWidth() / 2, i_3 + icomponentdefinitions_0.height / 2 - i_14 - nativesprite_6.method2748() / 2, class455_1, i_2, i_3);
 			}
 		}
 
@@ -201,7 +201,7 @@ public class Class190 {
 		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(117803918);
 		client.aBool7371 = true;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
-		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1420130584);
+		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, Class393.preferences.aPreference_Sub27_8208.method12952((byte) 104), 999317322);
 		client.anInt7221 = 0;
 		Class350.method6189((byte) 111);

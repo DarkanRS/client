@@ -284,7 +284,7 @@ public class HitbarDefinitions {
 				}
 				if (client.aBool7172) {
 					Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_2, i_3, -16777216, (byte) -43);
-					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1334063717), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -94);
+					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -94);
 				}
 				HitsplatDefinitions.method3850(client.aClass384_7167, false, (float) (i_0 + i_2 / 2), (float) (i_3 / 2 + i_1), (float) (client.anInt7451 << 1), (float) (client.anInt7451 << 1), i_2, i_3, (byte) 55);
 				Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);

@@ -69,7 +69,7 @@ public class RsByteBuffer extends Node {
         this.buffer[++this.index - 1] = (byte) i_1;
     }
 
-    public void writeShortLE(int i_1, short s_2) {
+    public void writeShortLE(int i_1) {
         this.buffer[++this.index - 1] = (byte) i_1;
         this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
     }
@@ -360,7 +360,7 @@ public class RsByteBuffer extends Node {
         this.buffer[++this.index - 1] = (byte) (0 - i_1);
     }
 
-    public void write128Byte(int i_1, int i_2) {
+    public void write128Byte(int i_1) {
         this.buffer[++this.index - 1] = (byte) (128 - i_1);
     }
 

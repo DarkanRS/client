@@ -433,12 +433,12 @@ public class Login {
                             Class9.aClass184_73.getConnection().read(rsbitsbuffer_19.buffer, 0, VarNPCMap.anInt1965);
                             rsbitsbuffer_19.index = 0;
                             client.rights = rsbitsbuffer_19.readUnsignedByte();
-                            client.anInt7319 = rsbitsbuffer_19.readUnsignedByte();
+                            client.PLAYER_MOD_LEVEL = rsbitsbuffer_19.readUnsignedByte();
                             client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.IS_QUICKCHAT_ONLY = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.anInt7315 = rsbitsbuffer_19.readUnsignedShort();
+                            client.myPlayerIndex = rsbitsbuffer_19.readUnsignedShort();
                             client.IS_MEMBER = rsbitsbuffer_19.readUnsignedByte() == 1;
                             Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(1818887431);
                             client.membersWorld = rsbitsbuffer_19.readUnsignedByte() == 1;
@@ -454,7 +454,7 @@ public class Login {
                             Class9.aClass184_73.getConnection().read(rsbitsbuffer_19.buffer, 0, VarNPCMap.anInt1965);
                             rsbitsbuffer_19.index = 0;
                             client.rights = rsbitsbuffer_19.readUnsignedByte();
-                            client.anInt7319 = rsbitsbuffer_19.readUnsignedByte();
+                            client.PLAYER_MOD_LEVEL = rsbitsbuffer_19.readUnsignedByte();
                             client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(979570289);
                             VertexNormal.myPlayer.male = (byte) rsbitsbuffer_19.readUnsignedByte();

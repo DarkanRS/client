@@ -1,8 +1,7 @@
 public class Class516 {
 
-	public static int[] anIntArray5895 = new int[] { 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 120 };
-
-	public static int[] anIntArray5896 = new int[120];
+	public static int[] SKILL_MAX_LEVEL = new int[] { 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 120 };
+	public static int[] SKILL_XP_FOR_LEVEL = new int[120];
 
 	static {
 		int i_0 = 0;
@@ -10,7 +9,7 @@ public class Class516 {
 			int i_2 = i_1 + 1;
 			int i_3 = (int) ((double) i_2 + 300.0D * Math.pow(2.0D, (double) i_2 / 7.0D));
 			i_0 += i_3;
-			anIntArray5896[i_1] = i_0 / 4;
+			SKILL_XP_FOR_LEVEL[i_1] = i_0 / 4;
 		}
 	}
 

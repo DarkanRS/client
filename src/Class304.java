@@ -122,16 +122,16 @@ public class Class304 implements Interface27 {
 				}
 				this.aBool3583 = Boolean.parseBoolean(arr_2[0]);
 				this.aBool3584 = Boolean.parseBoolean(arr_2[1]);
-				this.anInt3585 = Class328.parseInt(arr_2[2], -2030396621) * -1241431707 * 956041325;
-				this.anInt3586 = Class328.parseInt(arr_2[3], 974172112) * 1545138689 * -1599402495;
-				this.anInt3587 = Class328.parseInt(arr_2[4], 591996672) * -1872715597 * -1500311941;
-				this.anInt3571 = Class328.parseInt(arr_2[5], -1261326942) * 544546015 * 1149083423;
-				this.anInt3569 = Class328.parseInt(arr_2[6], -1478060576) * -850535471 * 215899441;
-				this.anInt3590 = Class328.parseInt(arr_2[7], 815852619) * -537340309 * -1591466429;
-				this.anInt3591 = Class328.parseInt(arr_2[8], -1480568222) * 1020096939 * -1703804669;
-				this.anInt3592 = Class328.parseInt(arr_2[9], -1007765739) * -29425429 * -2097436733;
+				this.anInt3585 = Utils.parseInt(arr_2[2]) * -1241431707 * 956041325;
+				this.anInt3586 = Utils.parseInt(arr_2[3]) * 1545138689 * -1599402495;
+				this.anInt3587 = Utils.parseInt(arr_2[4]) * -1872715597 * -1500311941;
+				this.anInt3571 = Utils.parseInt(arr_2[5]) * 544546015 * 1149083423;
+				this.anInt3569 = Utils.parseInt(arr_2[6]) * -850535471 * 215899441;
+				this.anInt3590 = Utils.parseInt(arr_2[7]) * -537340309 * -1591466429;
+				this.anInt3591 = Utils.parseInt(arr_2[8]) * 1020096939 * -1703804669;
+				this.anInt3592 = Utils.parseInt(arr_2[9]) * -29425429 * -2097436733;
 				String string_3 = arr_2[10];
-				int i_4 = Class328.parseInt(arr_2[11], -2144581898);
+				int i_4 = Utils.parseInt(arr_2[11]);
 				int i_5 = Class285.method5026(arr_2[12].substring(2), (byte) -78);
 				this.aFont3573 = new Font(string_3, 0, i_4);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
@@ -156,7 +156,7 @@ public class Class304 implements Interface27 {
 				this.anImage3581 = this.method5399(arr_2[21]);
 				mediatracker_6.addImage(this.anImage3581, 8);
 				mediatracker_6.waitForAll();
-				this.anInt3593 = Class328.parseInt(arr_2[22], -949578085) * -1517908233 * -493710649;
+				this.anInt3593 = Utils.parseInt(arr_2[22]) * -1517908233 * -493710649;
 			} catch (Exception exception_41) {
 				this.aBool3572 = true;
 			}
@@ -264,16 +264,16 @@ public class Class304 implements Interface27 {
 				}
 				this.aBool3583 = Boolean.parseBoolean(arr_2[0]);
 				this.aBool3584 = Boolean.parseBoolean(arr_2[1]);
-				this.anInt3585 = Class328.parseInt(arr_2[2], -346568032) * -1241431707 * 956041325;
-				this.anInt3586 = Class328.parseInt(arr_2[3], -1703440249) * 1545138689 * -1599402495;
-				this.anInt3587 = Class328.parseInt(arr_2[4], -2144517952) * -1872715597 * -1500311941;
-				this.anInt3571 = Class328.parseInt(arr_2[5], -665574879) * 544546015 * 1149083423;
-				this.anInt3569 = Class328.parseInt(arr_2[6], -867673357) * -850535471 * 215899441;
-				this.anInt3590 = Class328.parseInt(arr_2[7], 1101144441) * -537340309 * -1591466429;
-				this.anInt3591 = Class328.parseInt(arr_2[8], 1548892014) * 1020096939 * -1703804669;
-				this.anInt3592 = Class328.parseInt(arr_2[9], -971832079) * -29425429 * -2097436733;
+				this.anInt3585 = Utils.parseInt(arr_2[2]) * -1241431707 * 956041325;
+				this.anInt3586 = Utils.parseInt(arr_2[3]) * 1545138689 * -1599402495;
+				this.anInt3587 = Utils.parseInt(arr_2[4]) * -1872715597 * -1500311941;
+				this.anInt3571 = Utils.parseInt(arr_2[5]) * 544546015 * 1149083423;
+				this.anInt3569 = Utils.parseInt(arr_2[6]) * -850535471 * 215899441;
+				this.anInt3590 = Utils.parseInt(arr_2[7]) * -537340309 * -1591466429;
+				this.anInt3591 = Utils.parseInt(arr_2[8]) * 1020096939 * -1703804669;
+				this.anInt3592 = Utils.parseInt(arr_2[9]) * -29425429 * -2097436733;
 				String string_3 = arr_2[10];
-				int i_4 = Class328.parseInt(arr_2[11], -716552025);
+				int i_4 = Utils.parseInt(arr_2[11]);
 				int i_5 = Class285.method5026(arr_2[12].substring(2), (byte) -48);
 				this.aFont3573 = new Font(string_3, 0, i_4);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
@@ -298,7 +298,7 @@ public class Class304 implements Interface27 {
 				this.anImage3581 = this.method5399(arr_2[21]);
 				mediatracker_6.addImage(this.anImage3581, 8);
 				mediatracker_6.waitForAll();
-				this.anInt3593 = Class328.parseInt(arr_2[22], -60073066) * -1517908233 * -493710649;
+				this.anInt3593 = Utils.parseInt(arr_2[22]) * -1517908233 * -493710649;
 			} catch (Exception exception_41) {
 				this.aBool3572 = true;
 			}
@@ -402,16 +402,16 @@ public class Class304 implements Interface27 {
 				}
 				this.aBool3583 = Boolean.parseBoolean(arr_3[0]);
 				this.aBool3584 = Boolean.parseBoolean(arr_3[1]);
-				this.anInt3585 = Class328.parseInt(arr_3[2], 1033089484);
-				this.anInt3586 = Class328.parseInt(arr_3[3], -1313656246);
-				this.anInt3587 = Class328.parseInt(arr_3[4], -1060623325);
-				this.anInt3571 = Class328.parseInt(arr_3[5], -948777137);
-				this.anInt3569 = Class328.parseInt(arr_3[6], 58867236);
-				this.anInt3590 = Class328.parseInt(arr_3[7], -2109433001);
-				this.anInt3591 = Class328.parseInt(arr_3[8], -732361811);
-				this.anInt3592 = Class328.parseInt(arr_3[9], -2066543129);
+				this.anInt3585 = Utils.parseInt(arr_3[2]);
+				this.anInt3586 = Utils.parseInt(arr_3[3]);
+				this.anInt3587 = Utils.parseInt(arr_3[4]);
+				this.anInt3571 = Utils.parseInt(arr_3[5]);
+				this.anInt3569 = Utils.parseInt(arr_3[6]);
+				this.anInt3590 = Utils.parseInt(arr_3[7]);
+				this.anInt3591 = Utils.parseInt(arr_3[8]);
+				this.anInt3592 = Utils.parseInt(arr_3[9]);
 				String string_4 = arr_3[10];
-				int i_5 = Class328.parseInt(arr_3[11], 60349585);
+				int i_5 = Utils.parseInt(arr_3[11]);
 				int i_6 = Class285.method5026(arr_3[12].substring(2), (byte) 113);
 				this.aFont3573 = new Font(string_4, 0, i_5);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
@@ -436,7 +436,7 @@ public class Class304 implements Interface27 {
 				this.anImage3581 = this.method5399(arr_3[21]);
 				mediatracker_7.addImage(this.anImage3581, 8);
 				mediatracker_7.waitForAll();
-				this.anInt3593 = Class328.parseInt(arr_3[22], 651937374);
+				this.anInt3593 = Utils.parseInt(arr_3[22]);
 			} catch (Exception exception_42) {
 				this.aBool3572 = true;
 			}
@@ -540,16 +540,16 @@ public class Class304 implements Interface27 {
 				}
 				this.aBool3583 = Boolean.parseBoolean(arr_2[0]);
 				this.aBool3584 = Boolean.parseBoolean(arr_2[1]);
-				this.anInt3585 = Class328.parseInt(arr_2[2], 895203431) * -1241431707 * 956041325;
-				this.anInt3586 = Class328.parseInt(arr_2[3], 1978076845) * 1545138689 * -1599402495;
-				this.anInt3587 = Class328.parseInt(arr_2[4], -930354221) * -1872715597 * -1500311941;
-				this.anInt3571 = Class328.parseInt(arr_2[5], -1326044091) * 544546015 * 1149083423;
-				this.anInt3569 = Class328.parseInt(arr_2[6], 1309882503) * -850535471 * 215899441;
-				this.anInt3590 = Class328.parseInt(arr_2[7], 129092294) * -537340309 * -1591466429;
-				this.anInt3591 = Class328.parseInt(arr_2[8], -315499877) * 1020096939 * -1703804669;
-				this.anInt3592 = Class328.parseInt(arr_2[9], -221145728) * -29425429 * -2097436733;
+				this.anInt3585 = Utils.parseInt(arr_2[2]) * -1241431707 * 956041325;
+				this.anInt3586 = Utils.parseInt(arr_2[3]) * 1545138689 * -1599402495;
+				this.anInt3587 = Utils.parseInt(arr_2[4]) * -1872715597 * -1500311941;
+				this.anInt3571 = Utils.parseInt(arr_2[5]) * 544546015 * 1149083423;
+				this.anInt3569 = Utils.parseInt(arr_2[6]) * -850535471 * 215899441;
+				this.anInt3590 = Utils.parseInt(arr_2[7]) * -537340309 * -1591466429;
+				this.anInt3591 = Utils.parseInt(arr_2[8]) * 1020096939 * -1703804669;
+				this.anInt3592 = Utils.parseInt(arr_2[9]) * -29425429 * -2097436733;
 				String string_3 = arr_2[10];
-				int i_4 = Class328.parseInt(arr_2[11], 962870203);
+				int i_4 = Utils.parseInt(arr_2[11]);
 				int i_5 = Class285.method5026(arr_2[12].substring(2), (byte) 87);
 				this.aFont3573 = new Font(string_3, 0, i_4);
 				this.aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(this.aFont3573);
@@ -574,7 +574,7 @@ public class Class304 implements Interface27 {
 				this.anImage3581 = this.method5399(arr_2[21]);
 				mediatracker_6.addImage(this.anImage3581, 8);
 				mediatracker_6.waitForAll();
-				this.anInt3593 = Class328.parseInt(arr_2[22], -1276931523) * -1517908233 * -493710649;
+				this.anInt3593 = Utils.parseInt(arr_2[22]) * -1517908233 * -493710649;
 			} catch (Exception exception_41) {
 				this.aBool3572 = true;
 			}
@@ -700,14 +700,14 @@ public class Class304 implements Interface27 {
 	}
 
 	static String method5407(int i_0, Language xlanguage_1) {
-		return i_0 < 100000 ? "<col=ffff00>" + i_0 + "</col>" : (i_0 < 10000000 ? "<col=ffffff>" + i_0 / 1000 + Message.aClass433_5297.translate(xlanguage_1, -664620101) + "</col>" : "<col=00ff80>" + i_0 / 1000000 + Message.aClass433_5304.translate(xlanguage_1, -1313761048) + "</col>");
+		return i_0 < 100000 ? "<col=ffff00>" + i_0 + "</col>" : (i_0 < 10000000 ? "<col=ffffff>" + i_0 / 1000 + Message.aClass433_5297.translate(xlanguage_1) + "</col>" : "<col=00ff80>" + i_0 / 1000000 + Message.aClass433_5304.translate(xlanguage_1) + "</col>");
 	}
 
 	public static void setUseOptionFlags(IComponentDefinitions componentDefs, int flags, int interfaceId, byte b_3) {
 		if (componentDefs != null) {
 			if (componentDefs.anObjectArray1400 != null) {
 				HookRequest hookrequest_4 = new HookRequest();
-				hookrequest_4.iComponentDefs = componentDefs;
+				hookrequest_4.source = componentDefs;
 				hookrequest_4.params = componentDefs.anObjectArray1400;
 				CS2Executor.executeHookInner200k(hookrequest_4, 1699733120);
 			}

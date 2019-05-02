@@ -1,6 +1,6 @@
 public abstract class MouseRecord extends Node {
 
-	public abstract int method13469(int var1);
+	public abstract int getY();
 	public abstract int getClickType();
 	public abstract long method13471(int var1);
 	public abstract int method13472();
@@ -11,7 +11,7 @@ public abstract class MouseRecord extends Node {
 	public abstract int method13478();
 	public abstract long method13479();
 	public abstract long method13480();
-	public abstract int method13481(int var1);
+	public abstract int getX();
 	public abstract long method13482();
 	public abstract int method13483();
 	public abstract int method13484();

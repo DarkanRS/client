@@ -4,11 +4,11 @@ public class Class175 {
         throw new Error();
     }
 
-    public static Class346 method2958(RsByteBuffer rsbytebuffer_0) {
-        Class346 class346_2 = new Class346();
-        class346_2.anInt4048 = rsbytebuffer_0.readUnsignedShort();
-        class346_2.aCacheableNode_Sub9_4047 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(class346_2.anInt4048);
-        return class346_2;
+    public static QuickChatMessage decodeQuickchatMessage(RsByteBuffer buffer) {
+        QuickChatMessage message = new QuickChatMessage();
+        message.qcMessageId = buffer.readUnsignedShort();
+        message.qcMessageDefs = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(message.qcMessageId);
+        return message;
     }
 
     public static boolean method2962(char var_0) {

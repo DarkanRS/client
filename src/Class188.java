@@ -214,7 +214,7 @@ public class Class188 {
 						i_9 = i_8 + coordgrid_25.x;
 						i_10 = rsbitsbuffer_2.readUnsignedShortLE128();
 						i_11 = rsbitsbuffer_2.readUnsignedShortLE128();
-						if (i_3 != client.anInt7315) {
+						if (i_3 != client.myPlayerIndex) {
 							boolean bool_40 = i_8 >= 0 && i_6 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY();
 							if (bool_40 || IndexLoaders.MAP_REGION_DECODER.method4419(-1899363566).method4401()) {
 								Class353.method6209(Class272.anInt3331, i_9, i_7, new Node_Sub34(i_11, i_10), 773061896);

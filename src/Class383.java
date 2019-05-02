@@ -62,8 +62,8 @@ public class Class383 implements Interface41 {
 	}
 
 	static Class350 method6512(RsByteBuffer rsbytebuffer_0) {
-		Class356 class356_2 = Class350_Sub3_Sub1.method15558(-535190719)[rsbytebuffer_0.readUnsignedByte()];
-		Class353 class353_3 = AccountCreationResponseOpcodes.method8155()[rsbytebuffer_0.readUnsignedByte()];
+		Class356 class356_2 = Class356.values()[rsbytebuffer_0.readUnsignedByte()];
+		Class353 class353_3 = Class353.values()[rsbytebuffer_0.readUnsignedByte()];
 		int i_4 = rsbytebuffer_0.readShort();
 		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readUnsignedShort();
@@ -79,14 +79,14 @@ public class Class383 implements Interface41 {
 			return 1;
 		} else {
 			if (i_0 != Class393.preferences.currentToolkit.getValue(-408744518)) {
-				Class231.method3914(i_0, Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1872391356), true, (byte) 110);
+				Class231.method3914(i_0, Message.PROFILING.translate(Class223.CURRENT_LANGUAGE), true, (byte) 110);
 				if (Class393.preferences.currentToolkit.getValue(-455278899) != i_0) {
 					return -1;
 				}
 			}
 			try {
 				Dimension dimension_4 = Class351.gameCanvas.getSize();
-				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -8);
+				Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -8);
 				RSMesh rsmesh_5 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, QuickchatFiller.ENTITY_DEFAULTS.profilingModel);
 				long long_6 = Utils.time();
 				Renderers.SOFTWARE_RENDERER.L();

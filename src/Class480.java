@@ -62,8 +62,8 @@ public class Class480 {
 	}
 
 	static void method8044(IComponentDefinitions[] arr_0, IComponentDefinitions icomponentdefinitions_1, boolean bool_2, byte b_3) {
-		int i_4 = icomponentdefinitions_1.anInt1376 != 0 ? icomponentdefinitions_1.anInt1376 : icomponentdefinitions_1.anInt1301;
-		int i_5 = icomponentdefinitions_1.anInt1314 != 0 ? icomponentdefinitions_1.anInt1314 : icomponentdefinitions_1.anInt1429;
+		int i_4 = icomponentdefinitions_1.scrollWidth != 0 ? icomponentdefinitions_1.scrollWidth : icomponentdefinitions_1.width;
+		int i_5 = icomponentdefinitions_1.scrollHeight != 0 ? icomponentdefinitions_1.scrollHeight : icomponentdefinitions_1.height;
 		InteractableObject.method16099(arr_0, icomponentdefinitions_1.idHash, i_4, i_5, bool_2, (byte) 29);
 		if (icomponentdefinitions_1.aClass118Array1439 != null) {
 			InteractableObject.method16099(icomponentdefinitions_1.aClass118Array1439, icomponentdefinitions_1.idHash, i_4, i_5, bool_2, (byte) 17);

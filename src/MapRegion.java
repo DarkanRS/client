@@ -435,7 +435,7 @@ public class MapRegion {
 			this.anInt3207 = i_2;
 			if (!this.aBool3171) {
 				Class365.setGameState(i_3);
-				Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -532223437), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -29);
+				Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -29);
 			}
 			if (this.coordGrid != null) {
 				this.aClass219_3169 = this.coordGrid;
@@ -724,7 +724,7 @@ public class MapRegion {
 				return false;
 			} else {
 				if (!this.aBool3171 && this.aClass339_3188 != Class339.aClass339_3984) {
-					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -414285039) + "<br>" + "(100%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -26);
+					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE) + "<br>" + "(100%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -26);
 				}
 				this.aClass339_3188 = Class339.aClass339_3982;
 				if (!this.aBool3171) {
@@ -962,7 +962,7 @@ public class MapRegion {
 				}
 				ParticleProducerDefinition.method1160(-1437458578);
 				if (this.aBool3206) {
-					Class209.printConsoleMessage(Long.toString(Utils.time() - this.aLong3183), -1857188149);
+					Class209.printConsoleMessage(Long.toString(Utils.time() - this.aLong3183));
 					this.aBool3206 = false;
 				}
 				if (bool_21) {

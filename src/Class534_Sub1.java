@@ -20,9 +20,9 @@ public class Class534_Sub1 extends Class534 {
 		MouseRecord_Sub1 class282_sub53_sub1_2 = (MouseRecord_Sub1) this.aQueue7921.poll();
 		if (class282_sub53_sub1_2 != null) {
 			TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.outputContext.isaac);
-			tcpmessage_3.buffer.writeLEInt(class282_sub53_sub1_2.method13481(2071740821) | class282_sub53_sub1_2.method13469(1875995188) << 16, (byte) 22);
+			tcpmessage_3.buffer.writeLEInt(class282_sub53_sub1_2.getX() | class282_sub53_sub1_2.getY() << 16, (byte) 22);
 			tcpmessage_3.buffer.writeByte128(class282_sub53_sub1_2.method14730(-24722123) << 1 | class282_sub53_sub1_2.method14729() & 0x1, 670389922);
-			tcpmessage_3.buffer.writeShortLE(this.method11408(class282_sub53_sub1_2, 65535, 1958251581), (short) -6480);
+			tcpmessage_3.buffer.writeShortLE(this.method11408(class282_sub53_sub1_2, 65535, 1958251581));
 			client.outputContext.queuePacket(tcpmessage_3);
 			class282_sub53_sub1_2.cache(-1706861091);
 		}
@@ -52,9 +52,9 @@ public class Class534_Sub1 extends Class534 {
 		MouseRecord_Sub1 class282_sub53_sub1_1 = (MouseRecord_Sub1) this.aQueue7921.poll();
 		if (class282_sub53_sub1_1 != null) {
 			TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.outputContext.isaac);
-			tcpmessage_2.buffer.writeLEInt(class282_sub53_sub1_1.method13481(1928533930) | class282_sub53_sub1_1.method13469(-2039460343) << 16, (byte) -49);
+			tcpmessage_2.buffer.writeLEInt(class282_sub53_sub1_1.getX() | class282_sub53_sub1_1.getY() << 16, (byte) -49);
 			tcpmessage_2.buffer.writeByte128(class282_sub53_sub1_1.method14730(-1430500590) << 1 | class282_sub53_sub1_1.method14729() & 0x1, -2080491977);
-			tcpmessage_2.buffer.writeShortLE(this.method11408(class282_sub53_sub1_1, 65535, 2099731488), (short) -23063);
+			tcpmessage_2.buffer.writeShortLE(this.method11408(class282_sub53_sub1_1, 65535, 2099731488));
 			client.outputContext.queuePacket(tcpmessage_2);
 			class282_sub53_sub1_1.cache(1162879870);
 		}
@@ -64,9 +64,9 @@ public class Class534_Sub1 extends Class534 {
 		MouseRecord_Sub1 class282_sub53_sub1_1 = (MouseRecord_Sub1) this.aQueue7921.poll();
 		if (class282_sub53_sub1_1 != null) {
 			TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.outputContext.isaac);
-			tcpmessage_2.buffer.writeLEInt(class282_sub53_sub1_1.method13481(932524891) | class282_sub53_sub1_1.method13469(-1600764926) << 16, (byte) 96);
+			tcpmessage_2.buffer.writeLEInt(class282_sub53_sub1_1.getX() | class282_sub53_sub1_1.getY() << 16, (byte) 96);
 			tcpmessage_2.buffer.writeByte128(class282_sub53_sub1_1.method14730(2068393904) << 1 | class282_sub53_sub1_1.method14729() & 0x1, -414105270);
-			tcpmessage_2.buffer.writeShortLE(this.method11408(class282_sub53_sub1_1, 65535, -352975879), (short) -24854);
+			tcpmessage_2.buffer.writeShortLE(this.method11408(class282_sub53_sub1_1, 65535, -352975879));
 			client.outputContext.queuePacket(tcpmessage_2);
 			class282_sub53_sub1_1.cache(-92529177);
 		}

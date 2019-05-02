@@ -93,20 +93,20 @@ public class Class20 {
 		}
 	}
 
-	public static void animate(Animable animable_0, int[] animationIds, int speed, boolean bool_3, byte b_4) {
+	public static void animate(Animable animable, int[] animationIds, int speed, boolean bool_3) {
 		boolean bool_5;
 		int i_6;
-		if (animable_0.currentAnimations != null) {
+		if (animable.currentAnimations != null) {
 			bool_5 = true;
-			for (i_6 = 0; i_6 < animable_0.currentAnimations.length; i_6++) {
-				if (animable_0.currentAnimations[i_6] != animationIds[i_6]) {
+			for (i_6 = 0; i_6 < animable.currentAnimations.length; i_6++) {
+				if (animable.currentAnimations[i_6] != animationIds[i_6]) {
 					bool_5 = false;
 					break;
 				}
 			}
-			Animation animation_9 = animable_0.currentAnimation;
+			Animation animation_9 = animable.currentAnimation;
 			if (bool_5 && animation_9.hasDefs()) {
-				AnimationDefinitions animationdefinitions_7 = animable_0.currentAnimation.getDefs();
+				AnimationDefinitions animationdefinitions_7 = animable.currentAnimation.getDefs();
 				int speedType = animationdefinitions_7.replayMode;
 				if (speedType == 1) {
 					animation_9.method7583(speed);
@@ -121,19 +121,19 @@ public class Class20 {
 			if (animationIds[i_6] != -1) {
 				bool_5 = false;
 			}
-			if (animable_0.currentAnimations == null || animable_0.currentAnimations[i_6] == -1 || IndexLoaders.ANIMATION_LOADER.getAnimDefs(animationIds[i_6], (byte) -52).priority >= IndexLoaders.ANIMATION_LOADER.getAnimDefs(animable_0.currentAnimations[i_6], (byte) -23).priority) {
-				animable_0.currentAnimations = animationIds;
-				animable_0.currentAnimation.setSpeed(speed);
+			if (animable.currentAnimations == null || animable.currentAnimations[i_6] == -1 || IndexLoaders.ANIMATION_LOADER.getAnimDefs(animationIds[i_6], (byte) -52).priority >= IndexLoaders.ANIMATION_LOADER.getAnimDefs(animable.currentAnimations[i_6], (byte) -23).priority) {
+				animable.currentAnimations = animationIds;
+				animable.currentAnimation.setSpeed(speed);
 				if (bool_3) {
-					animable_0.anInt10367 = animable_0.anInt10355;
+					animable.anInt10367 = animable.anInt10355;
 				}
 			}
 		}
 		if (bool_5) {
-			animable_0.currentAnimations = animationIds;
-			animable_0.currentAnimation.setSpeed(speed);
+			animable.currentAnimations = animationIds;
+			animable.currentAnimation.setSpeed(speed);
 			if (bool_3) {
-				animable_0.anInt10367 = animable_0.anInt10355;
+				animable.anInt10367 = animable.anInt10355;
 			}
 		}
 	}

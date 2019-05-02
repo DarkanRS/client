@@ -176,11 +176,11 @@ public final class client extends Engine {
 	public static int GAME_WIDTH;
 	public static int GAME_HEIGHT;
 	public static Player[] players;
-	public static int anInt7315;
+	public static int myPlayerIndex;
 	public static boolean IS_MEMBER;
 	public static boolean membersWorld;
 	public static int rights;
-	public static int anInt7319;
+	public static int PLAYER_MOD_LEVEL;
 	public static boolean aBool7224;
 	public static boolean aBool7244;
 	static boolean aBool7322;
@@ -196,9 +196,9 @@ public final class client extends Engine {
 	public static NodeCollection aClass482_7333;
 	public static IterableNodeMap aClass465_7334;
 	public static EntityList aClass457_7335;
-	public static int[] anIntArray7336;
-	public static int[] anIntArray7337;
-	public static int[] anIntArray7338;
+	public static int[] SKILL_LEVEL_VISIBLE;
+	public static int[] SKILL_LEVEL_ACTUAL;
+	public static int[] SKILL_XP;
 	static int anInt7339;
 	public static int anInt7340;
 	static int anInt7427;
@@ -259,7 +259,7 @@ public final class client extends Engine {
 	public static int anInt7399;
 	public static boolean aBool7400;
 	static long aLong7401;
-	public static NodeCollection aClass482_7402;
+	public static NodeCollection PENDING_HOOK_REQUESTS;
 	static NodeCollection aClass482_7233;
 	static NodeCollection aClass482_7404;
 	static IterableNodeMap ICOMPONENT_SETTINGS_SLOTS;
@@ -412,11 +412,11 @@ public final class client extends Engine {
 		GAME_WIDTH = 765;
 		GAME_HEIGHT = 553;
 		players = new Player[2048];
-		anInt7315 = -1;
+		myPlayerIndex = -1;
 		IS_MEMBER = false;
 		membersWorld = false;
 		rights = 0;
-		anInt7319 = 0;
+		PLAYER_MOD_LEVEL = 0;
 		aBool7224 = false;
 		aBool7244 = false;
 		aBool7322 = false;
@@ -432,9 +432,9 @@ public final class client extends Engine {
 		aClass482_7333 = new NodeCollection();
 		aClass465_7334 = new IterableNodeMap(16);
 		aClass457_7335 = new EntityList();
-		anIntArray7336 = new int[25];
-		anIntArray7337 = new int[25];
-		anIntArray7338 = new int[25];
+		SKILL_LEVEL_VISIBLE = new int[25];
+		SKILL_LEVEL_ACTUAL = new int[25];
+		SKILL_XP = new int[25];
 		anInt7339 = 0;
 		anInt7340 = -1;
 		anInt7427 = -1;
@@ -495,7 +495,7 @@ public final class client extends Engine {
 		anInt7399 = 0;
 		aBool7400 = false;
 		aLong7401 = -1L;
-		aClass482_7402 = new NodeCollection();
+		PENDING_HOOK_REQUESTS = new NodeCollection();
 		aClass482_7233 = new NodeCollection();
 		aClass482_7404 = new NodeCollection();
 		ICOMPONENT_SETTINGS_SLOTS = new IterableNodeMap(512);
@@ -824,7 +824,7 @@ public final class client extends Engine {
 						++maximumHeldKeys;
 					}
 				} else {
-					char keyCode = record.getCode(-176963649);
+					char keyCode = record.getCharacter();
 					if (Class298.method5303((byte) 37) && (keyCode == 96 || keyCode == 167 || keyCode == 178)) {
 						if (Transform_Sub1_Sub3_Sub1.method16081()) {
 							Class173.method2944(1516285434);
@@ -1021,19 +1021,19 @@ public final class client extends Engine {
 			} else if (Class464.method7742(gameState, (byte) 88)) {
 				if (IndexLoaders.MAP_REGION_DECODER.method4420() == Class339.aClass339_3985) {
 					width = IndexLoaders.MAP_REGION_DECODER.method4421() / 2;
-					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1524722095) + "<br>" + "(" + width + "%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -97);
+					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE) + "<br>" + "(" + width + "%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -97);
 				} else if (IndexLoaders.MAP_REGION_DECODER.method4420() == Class339.aClass339_3983) {
 					width = 50 + IndexLoaders.MAP_REGION_DECODER.method4538() / 2;
-					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1005069265) + "<br>" + "(" + width + "%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -56);
+					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE) + "<br>" + "(" + width + "%)", true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -56);
 				} else {
-					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -267708081), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -27);
+					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), true, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -27);
 				}
 			} else if (gameState == 13) {
 				Class152.method2601(long_2);
 			} else if (gameState == 10) {
-				Class446.method7447(Message.CONNECTION_LOST.translate(Class223.CURRENT_LANGUAGE, -897810008) + "<br>" + Message.ATTEMPTING_TO_REESTABLISH.translate(Class223.CURRENT_LANGUAGE, -1031078167), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -41);
+				Class446.method7447(Message.CONNECTION_LOST.translate(Class223.CURRENT_LANGUAGE) + "<br>" + Message.ATTEMPTING_TO_REESTABLISH.translate(Class223.CURRENT_LANGUAGE), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -41);
 			} else if (gameState == 17) {
-				Class446.method7447(Message.PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -905717195), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -100);
+				Class446.method7447(Message.PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE), false, Renderers.SOFTWARE_RENDERER, Class16.aFontRenderer_144, Class16.aClass414_139, (byte) -100);
 			}
 
 			if (anInt7412 == 3) {
@@ -1681,7 +1681,7 @@ public final class client extends Engine {
 			aBool7176 = true;
 		}
 
-		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1954357321);
+		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE);
 		IndexLoaders.MAP_REGION_LOADER_THREAD = new MapRegionLoaderTask();
 		(new Thread(IndexLoaders.MAP_REGION_LOADER_THREAD)).start();
 	}
@@ -1844,57 +1844,57 @@ public final class client extends Engine {
 			aBool7176 = true;
 		}
 
-		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -504694626);
+		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE);
 		IndexLoaders.MAP_REGION_LOADER_THREAD = new MapRegionLoaderTask();
 		(new Thread(IndexLoaders.MAP_REGION_LOADER_THREAD)).start();
 	}
 
-	public static final void method11768(RSInterface interface_0, IComponentDefinitions[] arr_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
-		for (int i_11 = 0; i_11 < arr_1.length; i_11++) {
-			IComponentDefinitions icomponentdefinitions_12 = arr_1[i_11];
-			if (icomponentdefinitions_12 != null && i_2 == icomponentdefinitions_12.parent) {
-				int i_13 = i_7 + icomponentdefinitions_12.anInt1299;
-				int i_14 = i_8 + icomponentdefinitions_12.anInt1428;
+	public static final void method11768(RSInterface interface_0, IComponentDefinitions[] components, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
+		for (int i_11 = 0; i_11 < components.length; i_11++) {
+			IComponentDefinitions iCompDef = components[i_11];
+			if (iCompDef != null && i_2 == iCompDef.parent) {
+				int x = i_7 + iCompDef.x;
+				int y = i_8 + iCompDef.y;
 				int i_15;
 				int i_16;
 				int i_17;
 				int i_18;
-				if (icomponentdefinitions_12.type == 2) {
+				if (iCompDef.type == 2) {
 					i_15 = i_3;
 					i_16 = i_4;
 					i_17 = i_5;
 					i_18 = i_6;
 				} else {
-					int i_19 = i_13 + icomponentdefinitions_12.anInt1301;
-					int i_20 = i_14 + icomponentdefinitions_12.anInt1429;
-					if (icomponentdefinitions_12.type == 9) {
+					int i_19 = x + iCompDef.width;
+					int i_20 = y + iCompDef.height;
+					if (iCompDef.type == 9) {
 						++i_19;
 						++i_20;
 					}
 
-					i_15 = i_13 > i_3 ? i_13 : i_3;
-					i_16 = i_14 > i_4 ? i_14 : i_4;
+					i_15 = x > i_3 ? x : i_3;
+					i_16 = y > i_4 ? y : i_4;
 					i_17 = i_19 < i_5 ? i_19 : i_5;
 					i_18 = i_20 < i_6 ? i_20 : i_6;
 				}
 
-				if (icomponentdefinitions_12.type != 0 && !icomponentdefinitions_12.aBool1384 && method11633(icomponentdefinitions_12).settingsHash == 0 && icomponentdefinitions_12 != aClass118_7247 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1269 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1374 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1372 && icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1436) {
+				if (iCompDef.type != 0 && !iCompDef.usesScripts && method11633(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.anInt1269 && iCompDef.contentType != IComponentDefinitions.anInt1374 && iCompDef.contentType != IComponentDefinitions.anInt1372 && iCompDef.contentType != IComponentDefinitions.anInt1436) {
 					if (i_15 < i_17 && i_16 < i_18) {
-						Class86.method1482(icomponentdefinitions_12, (byte) 35);
+						Class86.method1482(iCompDef, (byte) 35);
 					}
-				} else if (!method11651(icomponentdefinitions_12)) {
-					if (icomponentdefinitions_12 == aClass118_7257 && CutsceneAction_Sub14.method14643(aClass118_7257, -140661194)) {
+				} else if (!method11651(iCompDef)) {
+					if (iCompDef == aClass118_7257 && CutsceneAction_Sub14.method14643(aClass118_7257, -140661194)) {
 						aBool7369 = true;
-						anInt7252 = i_13;
-						anInt7215 = i_14;
+						anInt7252 = x;
+						anInt7215 = y;
 					}
 
-					if (icomponentdefinitions_12.aBool1424 || i_15 < i_17 && i_16 < i_18) {
-						if (icomponentdefinitions_12.noClickThrough && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
-							for (HookRequest hookrequest_37 = (HookRequest) aClass482_7402.head(); hookrequest_37 != null; hookrequest_37 = (HookRequest) aClass482_7402.next(999668227)) {
-								if (hookrequest_37.aBool8052) {
+					if (iCompDef.aBool1424 || i_15 < i_17 && i_16 < i_18) {
+						if (iCompDef.noClickThrough && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
+							for (HookRequest hookrequest_37 = (HookRequest) PENDING_HOOK_REQUESTS.head(); hookrequest_37 != null; hookrequest_37 = (HookRequest) PENDING_HOOK_REQUESTS.next(999668227)) {
+								if (hookrequest_37.hasMousePosition) {
 									hookrequest_37.remove();
-									hookrequest_37.iComponentDefs.aBool1440 = false;
+									hookrequest_37.source.aBool1440 = false;
 								}
 							}
 
@@ -1911,15 +1911,15 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = icomponentdefinitions_12.aBool1328 && icomponentdefinitions_12.type == 5 && icomponentdefinitions_12.transparency == 0 && icomponentdefinitions_12.anInt1404 < 0 && icomponentdefinitions_12.anInt1426 == -1 && icomponentdefinitions_12.anInt1435 == -1 && !icomponentdefinitions_12.aBool1322 && icomponentdefinitions_12.anInt1423 == 0;
+						boolean bool_47 = iCompDef.aBool1328 && iCompDef.type == 5 && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.aBool1322 && iCompDef.anInt1423 == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
 							if (bool_47) {
-								Class119 class119_21 = icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, 386578026);
-								if (class119_21 != null && class119_21.anInt1458 == icomponentdefinitions_12.anInt1301 && icomponentdefinitions_12.anInt1429 == class119_21.anInt1454) {
-									int i_22 = i_9 - i_13;
-									int i_23 = i_10 - i_14;
+								Class119 class119_21 = iCompDef.method2046(Renderers.SOFTWARE_RENDERER, 386578026);
+								if (class119_21 != null && class119_21.anInt1458 == iCompDef.width && iCompDef.height == class119_21.anInt1454) {
+									int i_22 = i_9 - x;
+									int i_23 = i_10 - y;
 									if (i_23 >= 0 && i_23 < class119_21.anIntArray1457.length) {
 										i_24 = class119_21.anIntArray1457[i_23];
 										if (i_22 >= i_24 && i_22 <= i_24 + class119_21.anIntArray1455[i_23]) {
@@ -1935,15 +1935,15 @@ public final class client extends Engine {
 						}
 
 						if (!aBool7344 && bool_48) {
-							if (icomponentdefinitions_12.anInt1309 >= 0) {
-								anInt7427 = icomponentdefinitions_12.anInt1309;
-							} else if (icomponentdefinitions_12.noClickThrough) {
+							if (iCompDef.anInt1309 >= 0) {
+								anInt7427 = iCompDef.anInt1309;
+							} else if (iCompDef.noClickThrough) {
 								anInt7427 = -1;
 							}
 						}
 
 						if (!Class20.aBool161 && bool_48 && !interface_0.aBool999) {
-							Class455.iComponentOnIComponent(icomponentdefinitions_12, i_9 - i_13, i_10 - i_14);
+							Class455.iComponentOnIComponent(iCompDef, i_9 - x, i_10 - y);
 						}
 
 						boolean bool_38 = false;
@@ -1952,17 +1952,17 @@ public final class client extends Engine {
 						}
 
 						boolean bool_49 = false;
-						MouseRecord class282_sub53_39 = (MouseRecord) mouseRecords.head();
+						MouseRecord record = (MouseRecord) mouseRecords.head();
 						int i_25;
 						int i_26;
 						int i_27;
 						Class119 class119_40;
-						if (class282_sub53_39 != null && class282_sub53_39.getClickType() == 0 && class282_sub53_39.method13481(1581398490) >= i_15 && class282_sub53_39.method13469(523863332) >= i_16 && class282_sub53_39.method13481(1968714645) < i_17 && class282_sub53_39.method13469(1262935690) < i_18) {
+						if (record != null && record.getClickType() == 0 && record.getX() >= i_15 && record.getY() >= i_16 && record.getX() < i_17 && record.getY() < i_18) {
 							if (bool_47) {
-								class119_40 = icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, 854241922);
-								if (class119_40 != null && icomponentdefinitions_12.anInt1301 == class119_40.anInt1458 && icomponentdefinitions_12.anInt1429 == class119_40.anInt1454) {
-									i_25 = class282_sub53_39.method13481(1963952523) - i_13;
-									i_26 = class282_sub53_39.method13469(-1768286963) - i_14;
+								class119_40 = iCompDef.method2046(Renderers.SOFTWARE_RENDERER, 854241922);
+								if (class119_40 != null && iCompDef.width == class119_40.anInt1458 && iCompDef.height == class119_40.anInt1454) {
+									i_25 = record.getX() - x;
+									i_26 = record.getY() - y;
 									if (i_26 >= 0 && i_26 < class119_40.anIntArray1457.length) {
 										i_27 = class119_40.anIntArray1457[i_26];
 										if (i_25 >= i_27 && i_25 <= i_27 + class119_40.anIntArray1455[i_26]) {
@@ -1977,15 +1977,15 @@ public final class client extends Engine {
 							}
 						}
 
-						if (icomponentdefinitions_12.aBool1424 && !Transform_Sub1_Sub3_Sub1.method16081()) {
-							for (i_24 = 0; i_24 < icomponentdefinitions_12.aByteArrayArray1366.length; i_24++) {
+						if (iCompDef.aBool1424 && !Transform_Sub1_Sub3_Sub1.method16081()) {
+							for (i_24 = 0; i_24 < iCompDef.aByteArrayArray1366.length; i_24++) {
 								boolean bool_50 = false;
 								boolean bool_51 = false;
-								if (icomponentdefinitions_12.anIntArray1267[i_24] > 0) {
+								if (iCompDef.anIntArray1267[i_24] > 0) {
 									for (i_27 = 0; i_27 < anInt7193; i_27++) {
-										if (icomponentdefinitions_12.anIntArray1267[i_24] == KEYS_PRESSED[i_27].getCode(-1744878171)) {
+										if (iCompDef.anIntArray1267[i_24] == KEYS_PRESSED[i_27].getCharacter()) {
 											bool_50 = true;
-											if (icomponentdefinitions_12.anIntArray1425 == null || icomponentdefinitions_12.anIntArray1425[i_24] <= cycles) {
+											if (iCompDef.anIntArray1425 == null || iCompDef.anIntArray1425[i_24] <= cycles) {
 												bool_51 = true;
 											}
 											break;
@@ -1993,15 +1993,15 @@ public final class client extends Engine {
 									}
 								}
 
-								if (!bool_50 && icomponentdefinitions_12.aByteArrayArray1366[i_24] != null) {
-									for (i_27 = 0; i_27 < icomponentdefinitions_12.aByteArrayArray1366[i_24].length; i_27++) {
-										if (CutsceneAction_Sub21.keyRecorder.held(icomponentdefinitions_12.aByteArrayArray1366[i_24][i_27])) {
+								if (!bool_50 && iCompDef.aByteArrayArray1366[i_24] != null) {
+									for (i_27 = 0; i_27 < iCompDef.aByteArrayArray1366[i_24].length; i_27++) {
+										if (CutsceneAction_Sub21.keyRecorder.held(iCompDef.aByteArrayArray1366[i_24][i_27])) {
 											bool_50 = true;
-											if (icomponentdefinitions_12.anIntArray1425 != null && icomponentdefinitions_12.anIntArray1425[i_24] > cycles) {
+											if (iCompDef.anIntArray1425 != null && iCompDef.anIntArray1425[i_24] > cycles) {
 												break;
 											}
 
-											byte b_28 = icomponentdefinitions_12.aByteArrayArray1367[i_24][i_27];
+											byte b_28 = iCompDef.aByteArrayArray1367[i_24][i_27];
 											if (b_28 == 0 || ((b_28 & 0x8) == 0 || !CutsceneAction_Sub21.keyRecorder.held(86) && !CutsceneAction_Sub21.keyRecorder.held(82) && !CutsceneAction_Sub21.keyRecorder.held(81)) && ((b_28 & 0x2) == 0 || CutsceneAction_Sub21.keyRecorder.held(86)) && ((b_28 & 0x1) == 0 || CutsceneAction_Sub21.keyRecorder.held(82)) && ((b_28 & 0x4) == 0 || CutsceneAction_Sub21.keyRecorder.held(81))) {
 												bool_51 = true;
 												break;
@@ -2012,83 +2012,82 @@ public final class client extends Engine {
 
 								if (bool_51) {
 									if (i_24 < 10) {
-										CutsceneAction_Sub10.method14603(i_24 + 1, icomponentdefinitions_12.idHash, icomponentdefinitions_12.anInt1288, "", (byte) 124);
+										CutsceneAction_Sub10.method14603(i_24 + 1, iCompDef.idHash, iCompDef.anInt1288, "", (byte) 124);
 									} else if (i_24 == 10) {
 										Class60.method1170();
-										IComponentSettings class282_sub10_41 = method11633(icomponentdefinitions_12);
-										Class304.setUseOptionFlags(icomponentdefinitions_12, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
-										aString7275 = Class346.method6157(icomponentdefinitions_12, 1492565193);
+										IComponentSettings class282_sub10_41 = method11633(iCompDef);
+										Class304.setUseOptionFlags(iCompDef, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
+										aString7275 = QuickChatMessage.method6157(iCompDef, 1492565193);
 										if (aString7275 == null) {
 											aString7275 = "Null";
 										}
 
-										aString7356 = icomponentdefinitions_12.aString1369 + Utils.rgbToColHexShortcut(16777215);
+										aString7356 = iCompDef.aString1369 + Utils.rgbToColHexShortcut(16777215);
 									}
 
-									i_27 = icomponentdefinitions_12.anIntArray1395[i_24];
-									if (icomponentdefinitions_12.anIntArray1425 == null) {
-										icomponentdefinitions_12.anIntArray1425 = new int[icomponentdefinitions_12.aByteArrayArray1366.length];
+									i_27 = iCompDef.anIntArray1395[i_24];
+									if (iCompDef.anIntArray1425 == null) {
+										iCompDef.anIntArray1425 = new int[iCompDef.aByteArrayArray1366.length];
 									}
 
 									if (i_27 != 0) {
-										icomponentdefinitions_12.anIntArray1425[i_24] = i_27 + cycles;
+										iCompDef.anIntArray1425[i_24] = i_27 + cycles;
 									} else {
-										icomponentdefinitions_12.anIntArray1425[i_24] = Integer.MAX_VALUE;
+										iCompDef.anIntArray1425[i_24] = Integer.MAX_VALUE;
 									}
 								}
 
-								if (!bool_50 && icomponentdefinitions_12.anIntArray1425 != null) {
-									icomponentdefinitions_12.anIntArray1425[i_24] = 0;
+								if (!bool_50 && iCompDef.anIntArray1425 != null) {
+									iCompDef.anIntArray1425[i_24] = 0;
 								}
 							}
 						}
 
 						if (bool_49) {
-							Node_Sub14.method12221(icomponentdefinitions_12, class282_sub53_39.method13481(1900714400) - i_13, class282_sub53_39.method13469(-380403758) - i_14, 983477136);
+							Node_Sub14.method12221(iCompDef, record.getX() - x, record.getY() - y, 983477136);
 						}
 
-						if (aClass118_7257 != null && icomponentdefinitions_12 != aClass118_7257 && bool_48 && method11633(icomponentdefinitions_12).dragEnabled()) {
-							aClass118_7370 = icomponentdefinitions_12;
+						if (aClass118_7257 != null && iCompDef != aClass118_7257 && bool_48 && method11633(iCompDef).dragEnabled()) {
+							aClass118_7370 = iCompDef;
 						}
 
-						if (icomponentdefinitions_12 == aClass118_7247) {
+						if (iCompDef == aClass118_7247) {
 							aBool7403 = true;
-							anInt7432 = i_13;
-							anInt7265 = i_14;
-							anInt7367 = aClass118_7247.anInt1301;
-							anInt7476 = aClass118_7247.anInt1429;
+							anInt7432 = x;
+							anInt7265 = y;
+							anInt7367 = aClass118_7247.width;
+							anInt7476 = aClass118_7247.height;
 						}
 
-						if (icomponentdefinitions_12.aBool1384 || icomponentdefinitions_12.contentType != 0) {
-							HookRequest hookrequest_53;
-							if (bool_48 && anInt7191 != 0 && icomponentdefinitions_12.anObjectArray1412 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.aBool8052 = true;
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8055 = anInt7191;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1412;
-								aClass482_7402.append(hookrequest_53);
+						if (iCompDef.usesScripts || iCompDef.contentType != 0) {
+							if (bool_48 && anInt7191 != 0 && iCompDef.anObjectArray1412 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.hasMousePosition = true;
+								hookRequest.source = iCompDef;
+								hookRequest.mouseY = anInt7191;
+								hookRequest.params = iCompDef.anObjectArray1412;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
 							if (aClass118_7257 != null) {
 								bool_49 = false;
 								bool_38 = false;
-							} else if (Class20.aBool161 || icomponentdefinitions_12.contentType != IComponentDefinitions.anInt1313 && anInt7184 > 0) {
+							} else if (Class20.aBool161 || iCompDef.contentType != IComponentDefinitions.anInt1313 && anInt7184 > 0) {
 								bool_49 = false;
 								bool_38 = false;
 								bool_48 = false;
 							}
 
-							if (icomponentdefinitions_12.contentType != 0) {
+							if (iCompDef.contentType != 0) {
 								int i_52;
-								if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1372 || icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1436) {
-									aClass118_7183 = icomponentdefinitions_12;
+								if (iCompDef.contentType == IComponentDefinitions.anInt1372 || iCompDef.contentType == IComponentDefinitions.anInt1436) {
+									aClass118_7183 = iCompDef;
 									Class535 class535_59 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038((short) 4792);
 									if (class535_59.method11451() != null && !IndexLoaders.MAP_REGION_LOADER_THREAD.method6051()) {
-										class535_59.method11451().method4217(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1429, Class393.preferences.aPreference_Sub14_8211.method12728());
+										class535_59.method11451().method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.aPreference_Sub14_8211.method12728());
 									}
 
-									if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1372 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
+									if (iCompDef.contentType == IComponentDefinitions.anInt1372 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
 										Transform_Sub1_Sub4_Sub1.iComponentOnGroundTile(Renderers.SOFTWARE_RENDERER, i_9, i_10);
 
 										for (EntityNode_Sub2 class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7659(); class275_sub2_57 != null; class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7650((byte) 102)) {
@@ -2106,7 +2105,7 @@ public final class client extends Engine {
 										Player player_55 = players[ints_46[i_27]];
 										if (player_55 != null) {
 											AccountCreationStage.method252(Class397.aClass397_4806, -1, player_55, ints_46[i_27], 1912850737);
-											player_55.method15880(i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10, (byte) 91);
+											player_55.method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10, (byte) 91);
 										}
 									}
 
@@ -2115,27 +2114,27 @@ public final class client extends Engine {
 										StringNode class282_sub47_56 = (StringNode) NPCS.get((long) i_52);
 										if (class282_sub47_56 != null) {
 											AccountCreationStage.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.anInt4856, (Animable) class282_sub47_56.anObject8068, i_52, 1492205273);
-											((Animable) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10, (byte) 77);
+											((Animable) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10, (byte) 77);
 										}
 									}
 									continue;
 								}
 
-								if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1269) {
-									class119_40 = icomponentdefinitions_12.method2046(Renderers.SOFTWARE_RENDERER, -139394981);
+								if (iCompDef.contentType == IComponentDefinitions.anInt1269) {
+									class119_40 = iCompDef.method2046(Renderers.SOFTWARE_RENDERER, -139394981);
 									if (class119_40 == null || Class187.anInt2363 != 0 && Class187.anInt2363 != 3 || Class20.aBool161 || i_9 < i_15 || i_10 < i_16 || i_9 >= i_17 || i_10 >= i_18) {
 										continue;
 									}
 
-									i_25 = i_9 - i_13;
-									i_26 = i_10 - i_14;
+									i_25 = i_9 - x;
+									i_26 = i_10 - y;
 									i_27 = class119_40.anIntArray1457[i_26];
 									if (i_25 < i_27 || i_25 > i_27 + class119_40.anIntArray1455[i_26]) {
 										continue;
 									}
 
-									i_25 -= icomponentdefinitions_12.anInt1301 / 2;
-									i_26 -= icomponentdefinitions_12.anInt1429 / 2;
+									i_25 -= iCompDef.width / 2;
+									i_26 -= iCompDef.height / 2;
 									if (NativeLibraryLoader.anInt3240 == 4) {
 										i_52 = (int) aFloat7365 & 0x3fff;
 									} else {
@@ -2166,7 +2165,7 @@ public final class client extends Engine {
 									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
 										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(Class7.anInt56, anInt7345);
 										if (icomponentdefinitions_35 != null) {
-											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, icomponentdefinitions_12.anInt1426, 1L, i_33, i_34, true, false, (long) (icomponentdefinitions_12.anInt1288 << 32 | icomponentdefinitions_12.idHash), true, -1033171513);
+											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, iCompDef.anInt1426, 1L, i_33, i_34, true, false, (long) (iCompDef.anInt1288 << 32 | iCompDef.idHash), true, -1033171513);
 										} else {
 											Class60.method1170();
 										}
@@ -2174,22 +2173,22 @@ public final class client extends Engine {
 									}
 
 									if (Game.stellarDawn == CURRENT_GAME) {
-										PlayerAppearance.method4032(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1664758870), "", -1, 60, -1, 1L, i_33, i_34, true, false, 0L, true, -1558398631);
+										PlayerAppearance.method4032(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE), "", -1, 60, -1, 1L, i_33, i_34, true, false, 0L, true, -1558398631);
 									}
 
 									PlayerAppearance.method4032(Class85.aString817, "", anInt7311, 23, -1, 1L, i_33, i_34, true, false, 0L, true, -1994629741);
 									continue;
 								}
 
-								if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1313) {
-									Node_Sub20_Sub24.aClass118_9884 = icomponentdefinitions_12;
+								if (iCompDef.contentType == IComponentDefinitions.anInt1313) {
+									Node_Sub20_Sub24.aClass118_9884 = iCompDef;
 									if (bool_48) {
 										Class291_Sub1.aBool8022 = true;
 									}
 
 									if (bool_49) {
-										i_24 = (int) ((double) (class282_sub53_39.method13481(1215503828) - i_13 - icomponentdefinitions_12.anInt1301 / 2) * 2.0D / (double) Class291.aFloat3468);
-										i_25 = (int) (-((double) (class282_sub53_39.method13469(11142405) - i_14 - icomponentdefinitions_12.anInt1429 / 2) * 2.0D / (double) Class291.aFloat3468));
+										i_24 = (int) ((double) (record.getX() - x - iCompDef.width / 2) * 2.0D / (double) Class291.aFloat3468);
+										i_25 = (int) (-((double) (record.getY() - y - iCompDef.height / 2) * 2.0D / (double) Class291.aFloat3468));
 										i_26 = i_24 + Class291.anInt3472 + MapSpriteIndexLoader.anInt5123;
 										i_27 = i_25 + Class291.anInt3473 + Class475.anInt5624;
 										CacheableNode_Sub6 class282_sub50_sub6_42 = Class125.method2173(1504861114);
@@ -2245,346 +2244,346 @@ public final class client extends Engine {
 									continue;
 								}
 
-								if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1272) {
+								if (iCompDef.contentType == IComponentDefinitions.anInt1272) {
 									if (bool_38) {
-										Class306.method5458(Class163.mouseRecorder.getMouseX() - i_13, Class163.mouseRecorder.getMouseY() - i_14, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429);
+										Class306.method5458(Class163.mouseRecorder.getMouseX() - x, Class163.mouseRecorder.getMouseY() - y, iCompDef.width, iCompDef.height);
 									}
 									continue;
 								}
 
-								if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1374) {
-									Class15.method544(icomponentdefinitions_12, i_13, i_14, 1211773543);
+								if (iCompDef.contentType == IComponentDefinitions.anInt1374) {
+									Class15.method544(iCompDef, x, y, 1211773543);
 									continue;
 								}
 							}
 
-							if (!icomponentdefinitions_12.aBool1286 && bool_49) {
-								icomponentdefinitions_12.aBool1286 = true;
-								if (icomponentdefinitions_12.anObjectArray1386 != null) {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.aBool8052 = true;
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = class282_sub53_39.method13481(1563678506) - i_13;
-									hookrequest_53.anInt8055 = class282_sub53_39.method13469(804357569) - i_14;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1386;
-									aClass482_7402.append(hookrequest_53);
+							if (!iCompDef.aBool1286 && bool_49) {
+								iCompDef.aBool1286 = true;
+								if (iCompDef.anObjectArray1386 != null) {
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.hasMousePosition = true;
+									hookRequest.source = iCompDef;
+									hookRequest.mouseX = record.getX() - x;
+									hookRequest.mouseY = record.getY() - y;
+									hookRequest.params = iCompDef.anObjectArray1386;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 							}
 
-							if (icomponentdefinitions_12.aBool1286 && bool_38 && icomponentdefinitions_12.anObjectArray1319 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.aBool8052 = true;
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
-								hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1319;
-								aClass482_7402.append(hookrequest_53);
+							if (iCompDef.aBool1286 && bool_38 && iCompDef.anObjectArray1319 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.hasMousePosition = true;
+								hookRequest.source = iCompDef;
+								hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
+								hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
+								hookRequest.params = iCompDef.anObjectArray1319;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (icomponentdefinitions_12.aBool1286 && !bool_38) {
-								icomponentdefinitions_12.aBool1286 = false;
-								if (icomponentdefinitions_12.anObjectArray1302 != null) {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.aBool8052 = true;
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
-									hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1302;
-									aClass482_7404.append(hookrequest_53);
+							if (iCompDef.aBool1286 && !bool_38) {
+								iCompDef.aBool1286 = false;
+								if (iCompDef.anObjectArray1302 != null) {
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.hasMousePosition = true;
+									hookRequest.source = iCompDef;
+									hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
+									hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
+									hookRequest.params = iCompDef.anObjectArray1302;
+									aClass482_7404.append(hookRequest);
 								}
 							}
 
-							if (bool_38 && icomponentdefinitions_12.anObjectArray1389 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.aBool8052 = true;
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
-								hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1389;
-								aClass482_7402.append(hookrequest_53);
+							if (bool_38 && iCompDef.anObjectArray1389 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.hasMousePosition = true;
+								hookRequest.source = iCompDef;
+								hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
+								hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
+								hookRequest.params = iCompDef.anObjectArray1389;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (!icomponentdefinitions_12.aBool1440 && bool_48) {
-								icomponentdefinitions_12.aBool1440 = true;
-								if (icomponentdefinitions_12.anObjectArray1390 != null) {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.aBool8052 = true;
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
-									hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1390;
-									aClass482_7402.append(hookrequest_53);
+							if (!iCompDef.aBool1440 && bool_48) {
+								iCompDef.aBool1440 = true;
+								if (iCompDef.anObjectArray1390 != null) {
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.hasMousePosition = true;
+									hookRequest.source = iCompDef;
+									hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
+									hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
+									hookRequest.params = iCompDef.anObjectArray1390;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 							}
 
-							if (icomponentdefinitions_12.aBool1440 && bool_48 && icomponentdefinitions_12.anObjectArray1278 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.aBool8052 = true;
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
-								hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1278;
-								aClass482_7402.append(hookrequest_53);
+							if (iCompDef.aBool1440 && bool_48 && iCompDef.mouseOverScript != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.hasMousePosition = true;
+								hookRequest.source = iCompDef;
+								hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
+								hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
+								hookRequest.params = iCompDef.mouseOverScript;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (icomponentdefinitions_12.aBool1440 && !bool_48) {
-								icomponentdefinitions_12.aBool1440 = false;
-								if (icomponentdefinitions_12.anObjectArray1392 != null) {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.aBool8052 = true;
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.anInt8059 = Class163.mouseRecorder.getMouseX() - i_13;
-									hookrequest_53.anInt8055 = Class163.mouseRecorder.getMouseY() - i_14;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1392;
-									aClass482_7404.append(hookrequest_53);
+							if (iCompDef.aBool1440 && !bool_48) {
+								iCompDef.aBool1440 = false;
+								if (iCompDef.anObjectArray1392 != null) {
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.hasMousePosition = true;
+									hookRequest.source = iCompDef;
+									hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
+									hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
+									hookRequest.params = iCompDef.anObjectArray1392;
+									aClass482_7404.append(hookRequest);
 								}
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1409 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1409;
-								aClass482_7233.append(hookrequest_53);
+							if (iCompDef.anObjectArray1409 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1409;
+								aClass482_7233.append(hookRequest);
 							}
 
 							HookRequest hookrequest_54;
-							if (icomponentdefinitions_12.anObjectArray1403 != null && anInt7368 > icomponentdefinitions_12.anInt1446) {
-								if (icomponentdefinitions_12.anIntArray1315 != null && anInt7368 - icomponentdefinitions_12.anInt1446 <= 32) {
-									label969: for (i_24 = icomponentdefinitions_12.anInt1446; i_24 < anInt7368; i_24++) {
+							if (iCompDef.anObjectArray1403 != null && anInt7368 > iCompDef.anInt1446) {
+								if (iCompDef.anIntArray1315 != null && anInt7368 - iCompDef.anInt1446 <= 32) {
+									label969: for (i_24 = iCompDef.anInt1446; i_24 < anInt7368; i_24++) {
 										i_25 = anIntArray7150[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1315.length; i_26++) {
-											if (i_25 == icomponentdefinitions_12.anIntArray1315[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.anIntArray1315.length; i_26++) {
+											if (i_25 == iCompDef.anIntArray1315[i_26]) {
 												hookrequest_54 = new HookRequest();
-												hookrequest_54.iComponentDefs = icomponentdefinitions_12;
-												hookrequest_54.params = icomponentdefinitions_12.anObjectArray1403;
-												aClass482_7402.append(hookrequest_54);
+												hookrequest_54.source = iCompDef;
+												hookrequest_54.params = iCompDef.anObjectArray1403;
+												PENDING_HOOK_REQUESTS.append(hookrequest_54);
 												break label969;
 											}
 										}
 									}
 								} else {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1403;
-									aClass482_7402.append(hookrequest_53);
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.source = iCompDef;
+									hookRequest.params = iCompDef.anObjectArray1403;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 
-								icomponentdefinitions_12.anInt1446 = anInt7368;
+								iCompDef.anInt1446 = anInt7368;
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1405 != null && anInt7388 > icomponentdefinitions_12.anInt1447) {
-								if (icomponentdefinitions_12.anIntArray1406 != null && anInt7388 - icomponentdefinitions_12.anInt1447 <= 32) {
-									label945: for (i_24 = icomponentdefinitions_12.anInt1447; i_24 < anInt7388; i_24++) {
+							if (iCompDef.anObjectArray1405 != null && anInt7388 > iCompDef.anInt1447) {
+								if (iCompDef.anIntArray1406 != null && anInt7388 - iCompDef.anInt1447 <= 32) {
+									label945: for (i_24 = iCompDef.anInt1447; i_24 < anInt7388; i_24++) {
 										i_25 = anIntArray7387[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1406.length; i_26++) {
-											if (i_25 == icomponentdefinitions_12.anIntArray1406[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.anIntArray1406.length; i_26++) {
+											if (i_25 == iCompDef.anIntArray1406[i_26]) {
 												hookrequest_54 = new HookRequest();
-												hookrequest_54.iComponentDefs = icomponentdefinitions_12;
-												hookrequest_54.params = icomponentdefinitions_12.anObjectArray1405;
-												aClass482_7402.append(hookrequest_54);
+												hookrequest_54.source = iCompDef;
+												hookrequest_54.params = iCompDef.anObjectArray1405;
+												PENDING_HOOK_REQUESTS.append(hookrequest_54);
 												break label945;
 											}
 										}
 									}
 								} else {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1405;
-									aClass482_7402.append(hookrequest_53);
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.source = iCompDef;
+									hookRequest.params = iCompDef.anObjectArray1405;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 
-								icomponentdefinitions_12.anInt1447 = anInt7388;
+								iCompDef.anInt1447 = anInt7388;
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1397 != null && anInt7453 > icomponentdefinitions_12.anInt1443) {
-								if (icomponentdefinitions_12.anIntArray1401 != null && anInt7453 - icomponentdefinitions_12.anInt1443 <= 32) {
-									label921: for (i_24 = icomponentdefinitions_12.anInt1443; i_24 < anInt7453; i_24++) {
+							if (iCompDef.anObjectArray1397 != null && anInt7453 > iCompDef.anInt1443) {
+								if (iCompDef.anIntArray1401 != null && anInt7453 - iCompDef.anInt1443 <= 32) {
+									label921: for (i_24 = iCompDef.anInt1443; i_24 < anInt7453; i_24++) {
 										i_25 = anIntArray7379[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1401.length; i_26++) {
-											if (i_25 == icomponentdefinitions_12.anIntArray1401[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.anIntArray1401.length; i_26++) {
+											if (i_25 == iCompDef.anIntArray1401[i_26]) {
 												hookrequest_54 = new HookRequest();
-												hookrequest_54.iComponentDefs = icomponentdefinitions_12;
-												hookrequest_54.params = icomponentdefinitions_12.anObjectArray1397;
-												aClass482_7402.append(hookrequest_54);
+												hookrequest_54.source = iCompDef;
+												hookrequest_54.params = iCompDef.anObjectArray1397;
+												PENDING_HOOK_REQUESTS.append(hookrequest_54);
 												break label921;
 											}
 										}
 									}
 								} else {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1397;
-									aClass482_7402.append(hookrequest_53);
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.source = iCompDef;
+									hookRequest.params = iCompDef.anObjectArray1397;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 
-								icomponentdefinitions_12.anInt1443 = anInt7453;
+								iCompDef.anInt1443 = anInt7453;
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1342 != null && anInt7382 > icomponentdefinitions_12.anInt1444) {
-								if (icomponentdefinitions_12.anIntArray1398 != null && anInt7382 - icomponentdefinitions_12.anInt1444 <= 32) {
-									label897: for (i_24 = icomponentdefinitions_12.anInt1444; i_24 < anInt7382; i_24++) {
+							if (iCompDef.mouseLeaveScript != null && anInt7382 > iCompDef.anInt1444) {
+								if (iCompDef.mouseLeaveArrayParam != null && anInt7382 - iCompDef.anInt1444 <= 32) {
+									label897: for (i_24 = iCompDef.anInt1444; i_24 < anInt7382; i_24++) {
 										i_25 = anIntArray7381[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1398.length; i_26++) {
-											if (i_25 == icomponentdefinitions_12.anIntArray1398[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.mouseLeaveArrayParam.length; i_26++) {
+											if (i_25 == iCompDef.mouseLeaveArrayParam[i_26]) {
 												hookrequest_54 = new HookRequest();
-												hookrequest_54.iComponentDefs = icomponentdefinitions_12;
-												hookrequest_54.params = icomponentdefinitions_12.anObjectArray1342;
-												aClass482_7402.append(hookrequest_54);
+												hookrequest_54.source = iCompDef;
+												hookrequest_54.params = iCompDef.mouseLeaveScript;
+												PENDING_HOOK_REQUESTS.append(hookrequest_54);
 												break label897;
 											}
 										}
 									}
 								} else {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1342;
-									aClass482_7402.append(hookrequest_53);
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.source = iCompDef;
+									hookRequest.params = iCompDef.mouseLeaveScript;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 
-								icomponentdefinitions_12.anInt1444 = anInt7382;
+								iCompDef.anInt1444 = anInt7382;
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1387 != null && anInt7384 > icomponentdefinitions_12.anInt1445) {
-								if (icomponentdefinitions_12.anIntArray1402 != null && anInt7384 - icomponentdefinitions_12.anInt1445 <= 32) {
-									label873: for (i_24 = icomponentdefinitions_12.anInt1445; i_24 < anInt7384; i_24++) {
+							if (iCompDef.anObjectArray1387 != null && anInt7384 > iCompDef.anInt1445) {
+								if (iCompDef.anIntArray1402 != null && anInt7384 - iCompDef.anInt1445 <= 32) {
+									label873: for (i_24 = iCompDef.anInt1445; i_24 < anInt7384; i_24++) {
 										i_25 = anIntArray7283[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1402.length; i_26++) {
-											if (i_25 == icomponentdefinitions_12.anIntArray1402[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.anIntArray1402.length; i_26++) {
+											if (i_25 == iCompDef.anIntArray1402[i_26]) {
 												hookrequest_54 = new HookRequest();
-												hookrequest_54.iComponentDefs = icomponentdefinitions_12;
-												hookrequest_54.params = icomponentdefinitions_12.anObjectArray1387;
-												aClass482_7402.append(hookrequest_54);
+												hookrequest_54.source = iCompDef;
+												hookrequest_54.params = iCompDef.anObjectArray1387;
+												PENDING_HOOK_REQUESTS.append(hookrequest_54);
 												break label873;
 											}
 										}
 									}
 								} else {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1387;
-									aClass482_7402.append(hookrequest_53);
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.source = iCompDef;
+									hookRequest.params = iCompDef.anObjectArray1387;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 
-								icomponentdefinitions_12.anInt1445 = anInt7384;
+								iCompDef.anInt1445 = anInt7384;
 							}
 
-							if (icomponentdefinitions_12.anObjectArray1407 != null && CLAN_VAR_COUNTER > icomponentdefinitions_12.anInt1448) {
-								if (icomponentdefinitions_12.anIntArray1408 != null && CLAN_VAR_COUNTER - icomponentdefinitions_12.anInt1448 <= 32) {
-									label849: for (i_24 = icomponentdefinitions_12.anInt1448; i_24 < CLAN_VAR_COUNTER; i_24++) {
+							if (iCompDef.anObjectArray1407 != null && CLAN_VAR_COUNTER > iCompDef.anInt1448) {
+								if (iCompDef.anIntArray1408 != null && CLAN_VAR_COUNTER - iCompDef.anInt1448 <= 32) {
+									label849: for (i_24 = iCompDef.anInt1448; i_24 < CLAN_VAR_COUNTER; i_24++) {
 										i_25 = CLAN_VAR_KEYS[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < icomponentdefinitions_12.anIntArray1408.length; i_26++) {
-											if (i_25 == icomponentdefinitions_12.anIntArray1408[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.anIntArray1408.length; i_26++) {
+											if (i_25 == iCompDef.anIntArray1408[i_26]) {
 												hookrequest_54 = new HookRequest();
-												hookrequest_54.iComponentDefs = icomponentdefinitions_12;
-												hookrequest_54.params = icomponentdefinitions_12.anObjectArray1407;
-												aClass482_7402.append(hookrequest_54);
+												hookrequest_54.source = iCompDef;
+												hookrequest_54.params = iCompDef.anObjectArray1407;
+												PENDING_HOOK_REQUESTS.append(hookrequest_54);
 												break label849;
 											}
 										}
 									}
 								} else {
-									hookrequest_53 = new HookRequest();
-									hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_53.params = icomponentdefinitions_12.anObjectArray1407;
-									aClass482_7402.append(hookrequest_53);
+									HookRequest hookRequest = new HookRequest();
+									hookRequest.source = iCompDef;
+									hookRequest.params = iCompDef.anObjectArray1407;
+									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 
-								icomponentdefinitions_12.anInt1448 = CLAN_VAR_COUNTER;
+								iCompDef.anInt1448 = CLAN_VAR_COUNTER;
 							}
 
-							if (anInt7391 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1413 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1413;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7391 > iCompDef.anInt1442 && iCompDef.anObjectArray1413 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1413;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7386 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1415 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1415;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7386 > iCompDef.anInt1442 && iCompDef.anObjectArray1415 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1415;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7179 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1416 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1416;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7179 > iCompDef.anInt1442 && iCompDef.anObjectArray1416 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1416;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7192 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1383 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1383;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7192 > iCompDef.anInt1442 && iCompDef.anObjectArray1383 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1383;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7395 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1418 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1418;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7395 > iCompDef.anInt1442 && iCompDef.anObjectArray1418 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1418;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7320 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1361 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1361;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7320 > iCompDef.anInt1442 && iCompDef.anObjectArray1361 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1361;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							if (anInt7397 > icomponentdefinitions_12.anInt1442 && icomponentdefinitions_12.anObjectArray1419 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1419;
-								aClass482_7402.append(hookrequest_53);
+							if (anInt7397 > iCompDef.anInt1442 && iCompDef.anObjectArray1419 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1419;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
-							icomponentdefinitions_12.anInt1442 = anInt7347;
-							if (icomponentdefinitions_12.anObjectArray1292 != null) {
+							iCompDef.anInt1442 = anInt7347;
+							if (iCompDef.anObjectArray1292 != null) {
 								for (i_24 = 0; i_24 < anInt7193; i_24++) {
 									HookRequest hookrequest_44 = new HookRequest();
-									hookrequest_44.iComponentDefs = icomponentdefinitions_12;
-									hookrequest_44.anInt8058 = KEYS_PRESSED[i_24].getCode();
-									hookrequest_44.anInt8056 = KEYS_PRESSED[i_24].getCode(-1306556341);
-									hookrequest_44.params = icomponentdefinitions_12.anObjectArray1292;
-									aClass482_7402.append(hookrequest_44);
+									hookrequest_44.source = iCompDef;
+									hookrequest_44.typedKeyCode = KEYS_PRESSED[i_24].getCode();
+									hookrequest_44.typedKeyChar = KEYS_PRESSED[i_24].getCharacter();
+									hookrequest_44.params = iCompDef.anObjectArray1292;
+									PENDING_HOOK_REQUESTS.append(hookrequest_44);
 								}
 							}
 
-							if (aBool7355 && icomponentdefinitions_12.anObjectArray1353 != null) {
-								hookrequest_53 = new HookRequest();
-								hookrequest_53.iComponentDefs = icomponentdefinitions_12;
-								hookrequest_53.params = icomponentdefinitions_12.anObjectArray1353;
-								aClass482_7402.append(hookrequest_53);
+							if (aBool7355 && iCompDef.anObjectArray1353 != null) {
+								HookRequest hookRequest = new HookRequest();
+								hookRequest.source = iCompDef;
+								hookRequest.params = iCompDef.anObjectArray1353;
+								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 						}
 
-						if (icomponentdefinitions_12.type == 5 && icomponentdefinitions_12.anInt1404 != -1) {
-							icomponentdefinitions_12.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_12.anInt1429, Class393.preferences.aPreference_Sub14_8211.method12728());
+						if (iCompDef.type == 5 && iCompDef.anInt1404 != -1) {
+							iCompDef.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.aPreference_Sub14_8211.method12728());
 						}
 
-						Class86.method1482(icomponentdefinitions_12, (byte) 9);
-						if (icomponentdefinitions_12.type == 0) {
-							method11768(interface_0, arr_1, icomponentdefinitions_12.idHash, i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10);
-							if (icomponentdefinitions_12.aClass118Array1439 != null) {
-								method11768(interface_0, icomponentdefinitions_12.aClass118Array1439, icomponentdefinitions_12.idHash, i_15, i_16, i_17, i_18, i_13 - icomponentdefinitions_12.anInt1311, i_14 - icomponentdefinitions_12.anInt1312, i_9, i_10);
+						Class86.method1482(iCompDef, (byte) 9);
+						if (iCompDef.type == 0) {
+							method11768(interface_0, components, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
+							if (iCompDef.aClass118Array1439 != null) {
+								method11768(interface_0, iCompDef.aClass118Array1439, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
 							}
 
-							Node_Sub44 class282_sub44_58 = (Node_Sub44) aClass465_7442.get((long) icomponentdefinitions_12.idHash);
+							Node_Sub44 class282_sub44_58 = (Node_Sub44) aClass465_7442.get((long) iCompDef.idHash);
 							if (class282_sub44_58 != null) {
 								if (Game.darkan == CURRENT_GAME && class282_sub44_58.anInt8062 == 0 && !Class20.aBool161 && bool_48 && !aBool7168) {
 									HitsplatDefinitions.method3851();
 								}
 
-								LightIntensityIndexLoader.method7313(class282_sub44_58, class282_sub44_58.anInt8063, i_15, i_16, i_17, i_18, i_13, i_14, i_9, i_10, (byte) -89);
+								LightIntensityIndexLoader.method7313(class282_sub44_58, class282_sub44_58.anInt8063, i_15, i_16, i_17, i_18, x, y, i_9, i_10, (byte) -89);
 							}
 						}
 					}
@@ -2716,7 +2715,7 @@ public final class client extends Engine {
 			aBool7176 = true;
 		}
 
-		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -876841091);
+		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE);
 		IndexLoaders.MAP_REGION_LOADER_THREAD = new MapRegionLoaderTask();
 		(new Thread(IndexLoaders.MAP_REGION_LOADER_THREAD)).start();
 	}
@@ -2874,7 +2873,7 @@ public final class client extends Engine {
 							if (hookrequest_13 == null) {
 								while (true) {
 									do {
-										hookrequest_13 = (HookRequest) aClass482_7402.popHead();
+										hookrequest_13 = (HookRequest) PENDING_HOOK_REQUESTS.popHead();
 										if (hookrequest_13 == null) {
 											if (aClass118_7257 != null) {
 												Class161.method2827(1986248750);
@@ -2896,11 +2895,11 @@ public final class client extends Engine {
 											for (EntityNode_Sub4 class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7659(); class275_sub4_17 != null; class275_sub4_17 = (EntityNode_Sub4) aClass457_7350.method7650((byte) 99)) {
 												if ((long) class275_sub4_17.anInt7838 < Utils.time() / 1000L - 5L) {
 													if (class275_sub4_17.aShort7839 > 0) {
-														Class191.method3167(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE, -1495775612), 1096465682);
+														ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_IN.translate(Class223.CURRENT_LANGUAGE));
 													}
 
 													if (class275_sub4_17.aShort7839 == 0) {
-														Class191.method3167(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE, -737324095), 1209993360);
+														ChatLine.appendChatMessage(5, 0, "", "", "", class275_sub4_17.aString7837 + Message.HAS_LOGGED_OUT.translate(Class223.CURRENT_LANGUAGE));
 													}
 
 													class275_sub4_17.method4887();
@@ -2932,7 +2931,7 @@ public final class client extends Engine {
 											return;
 										}
 
-										icomponentdefinitions_16 = hookrequest_13.iComponentDefs;
+										icomponentdefinitions_16 = hookrequest_13.source;
 										if (icomponentdefinitions_16.anInt1288 < 0) {
 											break;
 										}
@@ -2944,7 +2943,7 @@ public final class client extends Engine {
 								}
 							}
 
-							icomponentdefinitions_16 = hookrequest_13.iComponentDefs;
+							icomponentdefinitions_16 = hookrequest_13.source;
 							if (icomponentdefinitions_16.anInt1288 < 0) {
 								break;
 							}
@@ -2956,7 +2955,7 @@ public final class client extends Engine {
 					}
 				}
 
-				icomponentdefinitions_16 = hookrequest_13.iComponentDefs;
+				icomponentdefinitions_16 = hookrequest_13.source;
 				if (icomponentdefinitions_16.anInt1288 < 0) {
 					break;
 				}

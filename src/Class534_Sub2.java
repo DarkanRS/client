@@ -30,13 +30,13 @@ public class Class534_Sub2 extends Class534 {
 		MouseRecord class282_sub53_1 = this.method12842(1478779913);
 		if (class282_sub53_1 != null) {
 			int i_2 = this.method11408(class282_sub53_1, 32767, 207131238);
-			int i_3 = class282_sub53_1.method13469(792510855);
+			int i_3 = class282_sub53_1.getY();
 			if (i_3 < 0) {
 				i_3 = 0;
 			} else if (i_3 > 65535) {
 				i_3 = 65535;
 			}
-			int i_4 = class282_sub53_1.method13481(1279358218);
+			int i_4 = class282_sub53_1.getX();
 			if (i_4 < 0) {
 				i_4 = 0;
 			} else if (i_4 > 65535) {
@@ -57,13 +57,13 @@ public class Class534_Sub2 extends Class534 {
 		MouseRecord class282_sub53_1 = this.method12842(898910000);
 		if (class282_sub53_1 != null) {
 			int i_2 = this.method11408(class282_sub53_1, 32767, 1197830293);
-			int i_3 = class282_sub53_1.method13469(2099556517);
+			int i_3 = class282_sub53_1.getY();
 			if (i_3 < 0) {
 				i_3 = 0;
 			} else if (i_3 > 65535) {
 				i_3 = 65535;
 			}
-			int i_4 = class282_sub53_1.method13481(1254719059);
+			int i_4 = class282_sub53_1.getX();
 			if (i_4 < 0) {
 				i_4 = 0;
 			} else if (i_4 > 65535) {
@@ -100,13 +100,13 @@ public class Class534_Sub2 extends Class534 {
 		MouseRecord class282_sub53_2 = this.method12842(500103661);
 		if (class282_sub53_2 != null) {
 			int i_3 = this.method11408(class282_sub53_2, 32767, -102422024);
-			int i_4 = class282_sub53_2.method13469(367077082);
+			int i_4 = class282_sub53_2.getY();
 			if (i_4 < 0) {
 				i_4 = 0;
 			} else if (i_4 > 65535) {
 				i_4 = 65535;
 			}
-			int i_5 = class282_sub53_2.method13481(1346429650);
+			int i_5 = class282_sub53_2.getX();
 			if (i_5 < 0) {
 				i_5 = 0;
 			} else if (i_5 > 65535) {

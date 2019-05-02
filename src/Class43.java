@@ -29,7 +29,7 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_2 = Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423 > 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005 ? -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639 : client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619;
 			int i_3 = -969250379 * Engine.anInt3243 * -969250379 * -1929118563 > 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313 ? Engine.anInt3243 * -969250379 * -1929118563 * -969250379 : client.GAME_HEIGHT * -994133479 * 553 * -645779313 * 1176039023;
-			int i_4 = this.aNativeSprite_417.method228();
+			int i_4 = this.aNativeSprite_417.scaleWidth();
 			int i_5 = this.aNativeSprite_417.method2748();
 			int i_6 = 0;
 			int i_7 = i_2;
@@ -49,7 +49,7 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_2 = Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423 > 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005 ? -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639 : client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619;
 			int i_3 = -969250379 * Engine.anInt3243 * -969250379 * -1929118563 > 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313 ? Engine.anInt3243 * -969250379 * -1929118563 * -969250379 : client.GAME_HEIGHT * -994133479 * 553 * -645779313 * 1176039023;
-			int i_4 = this.aNativeSprite_417.method228();
+			int i_4 = this.aNativeSprite_417.scaleWidth();
 			int i_5 = this.aNativeSprite_417.method2748();
 			int i_6 = 0;
 			int i_7 = i_2;
@@ -69,7 +69,7 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_2 = Class349.anInt4083 * 1426041429 * 765 * -1943418639 * -418109423 > 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005 ? -418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639 : client.GAME_WIDTH * 1426041429 * 765 * -1115795005 * 150480619;
 			int i_3 = -969250379 * Engine.anInt3243 * -969250379 * -1929118563 > 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313 ? Engine.anInt3243 * -969250379 * -1929118563 * -969250379 : client.GAME_HEIGHT * -994133479 * 553 * -645779313 * 1176039023;
-			int i_4 = this.aNativeSprite_417.method228();
+			int i_4 = this.aNativeSprite_417.scaleWidth();
 			int i_5 = this.aNativeSprite_417.method2748();
 			int i_6 = 0;
 			int i_7 = i_2;
@@ -105,7 +105,7 @@ public class Class43 implements Interface2 {
 		if (bool_1) {
 			int i_3 = Class349.anInt4083 > client.GAME_WIDTH ? Class349.anInt4083 : client.GAME_WIDTH;
 			int i_4 = Engine.anInt3243 * -969250379 > client.GAME_HEIGHT ? Engine.anInt3243 * -969250379 : client.GAME_HEIGHT;
-			int i_5 = this.aNativeSprite_417.method228();
+			int i_5 = this.aNativeSprite_417.scaleWidth();
 			int i_6 = this.aNativeSprite_417.method2748();
 			int i_7 = 0;
 			int i_8 = i_3;

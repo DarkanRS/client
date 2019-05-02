@@ -15,10 +15,6 @@ public class Class350_Sub3_Sub1 extends Class350_Sub3 {
 		return Class60.aClass60_610;
 	}
 
-	public static Class356[] method15558(int i_0) {
-		return new Class356[] { Class356.aClass356_4117, Class356.aClass356_4118, Class356.aClass356_4119 };
-	}
-
 	static final void method15560(long long_0) {
 		try {
 			Thread.sleep(long_0);

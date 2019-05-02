@@ -26,7 +26,7 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
         if (icomponentdefinitions_5 != null) {
             if (icomponentdefinitions_5.params != null) {
                 HookRequest hookrequest_6 = new HookRequest();
-                hookrequest_6.iComponentDefs = icomponentdefinitions_5;
+                hookrequest_6.source = icomponentdefinitions_5;
                 hookrequest_6.anInt8051 = i_0;
                 hookrequest_6.opName = string_3;
                 hookrequest_6.params = icomponentdefinitions_5.params;

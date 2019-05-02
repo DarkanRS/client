@@ -12,11 +12,11 @@ public final class MouseRecord_Sub2 extends MouseRecord {
 		return this.anInt9631;
 	}
 
-	public int method13481(int i_1) {
+	public int getX() {
 		return this.anInt9632;
 	}
 
-	public int method13469(int i_1) {
+	public int getY() {
 		return this.anInt9629;
 	}
 

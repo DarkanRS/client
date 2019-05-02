@@ -55,7 +55,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 
 			this.aGraphicalRenderer_Sub3_8875.qa(this.anIntArray8857);
 			this.aGraphicalRenderer_Sub3_8875.o(this.aGraphicalRenderer_Sub3_8875.anInt8983 * -363774331 * 72550989, this.aGraphicalRenderer_Sub3_8875.anInt9009 * 1457972577 * 1516535457, i_1 + i_3, i_2 + i_4);
-			int i_8 = this.method228();
+			int i_8 = this.scaleWidth();
 			int i_9 = this.method2748();
 			int i_10 = (i_3 + i_8 - 1) / i_8;
 			int i_11 = (i_4 + i_9 - 1) / i_9;
@@ -104,7 +104,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 
 			this.aGraphicalRenderer_Sub3_8875.qa(this.anIntArray8857);
 			this.aGraphicalRenderer_Sub3_8875.o(this.aGraphicalRenderer_Sub3_8875.anInt8983, this.aGraphicalRenderer_Sub3_8875.anInt9009, i_3 + i_1, i_2 + i_4);
-			int i_8 = this.method228();
+			int i_8 = this.scaleWidth();
 			int i_9 = this.method2748();
 			int i_10 = (i_3 + i_8 - 1) / i_8;
 			int i_11 = (i_9 + i_4 - 1) / i_9;
@@ -312,7 +312,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 
 	public abstract void method2778(int var1, int var2, int var3, int var4, int var5);
 
-	public int method228() {
+	public int scaleWidth() {
 		return this.anInt8853 + this.anInt8851 + this.anInt8855;
 	}
 
@@ -439,7 +439,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 
 			this.aGraphicalRenderer_Sub3_8875.qa(this.anIntArray8857);
 			this.aGraphicalRenderer_Sub3_8875.o(this.aGraphicalRenderer_Sub3_8875.anInt8983 * -363774331 * 72550989, this.aGraphicalRenderer_Sub3_8875.anInt9009 * 1457972577 * 1516535457, i_1 + i_3, i_2 + i_4);
-			int i_8 = this.method228();
+			int i_8 = this.scaleWidth();
 			int i_9 = this.method2748();
 			int i_10 = (i_3 + i_8 - 1) / i_8;
 			int i_11 = (i_4 + i_9 - 1) / i_9;

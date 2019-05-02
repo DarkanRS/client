@@ -158,7 +158,7 @@ public class Class28 implements Interface2 {
                 icomponentdefinitions_0.spritePitch = 150;
                 icomponentdefinitions_0.spriteRoll = (int) (Math.sin((double) client.cycles / 40.0D) * 256.0D) & 0x7ff;
                 icomponentdefinitions_0.anInt1329 = 5;
-                icomponentdefinitions_0.anInt1330 = client.anInt7315;
+                icomponentdefinitions_0.anInt1330 = client.myPlayerIndex;
                 icomponentdefinitions_0.anInt1339 = Class272.method4840(VertexNormal.myPlayer.displayName, (byte) 15);
                 MovingAnimation class456_sub3_2 = VertexNormal.myPlayer.aAnimation_Sub3_10337;
                 if (class456_sub3_2 != null) {

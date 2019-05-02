@@ -40,7 +40,7 @@ public class QuickchatCategoryLoader {
 
 	static void method5921() {
 		if (client.aByteArray7152 != null) {
-			Class346.method6160();
+			QuickChatMessage.method6160();
 		} else if (Class9.anInt76 != -1) {
 			Class279.method4964();
 		} else {

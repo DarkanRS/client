@@ -99,8 +99,8 @@ public class ServerEnvironment implements Identifiable {
             int i_2 = Class163.mouseRecorder.getMouseY();
             MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head();
             if (class282_sub53_3 != null) {
-                i_1 = class282_sub53_3.method13481(1154972064);
-                i_2 = class282_sub53_3.method13469(1835497951);
+                i_1 = class282_sub53_3.getX();
+                i_2 = class282_sub53_3.getY();
             }
             if (client.aClass118_7257 != null && InputSubscriberType.aClass118_2763 == client.aClass118_7247) {
                 client.aBool7403 = true;

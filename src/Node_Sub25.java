@@ -9,7 +9,7 @@ public class Node_Sub25 extends Node {
     }
 
     static void method12400(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, CacheableNode_Sub7 class282_sub50_sub7_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10, int i_11, int i_12) {
-        if (i_0 > i_2 && i_0 < i_2 + i_4 && i_1 > i_6 - fontmetrics_9.anInt4978 - 1 && i_1 < fontmetrics_9.anInt4979 + i_6 && class282_sub50_sub7_7.aBool9583) {
+        if (i_0 > i_2 && i_0 < i_2 + i_4 && i_1 > i_6 - fontmetrics_9.topPadding - 1 && i_1 < fontmetrics_9.bottomPadding + i_6 && class282_sub50_sub7_7.aBool9583) {
             i_10 = i_11;
         }
         int[] ints_13 = Class534_Sub1.method12815(class282_sub50_sub7_7, -1726186381);
@@ -19,7 +19,7 @@ public class Node_Sub25 extends Node {
         }
         fontrenderer_8.method386(string_14, i_2 + 3, i_6, i_10, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aNativeSpriteArray1248, Class20.anIntArray177, -1905511896);
         if (class282_sub50_sub7_7.aBool9577) {
-            Exception_Sub1.aNativeSprite_10075.method2752(5 + i_2 + fontmetrics_9.getWidthNoSprites(string_14), i_6 - fontmetrics_9.anInt4978);
+            Exception_Sub1.aNativeSprite_10075.method2752(5 + i_2 + fontmetrics_9.getWidthNoSprites(string_14), i_6 - fontmetrics_9.topPadding);
         }
     }
 
