@@ -21,7 +21,7 @@ public class Class501 {
 		Class9.aClass184_73.thirdLastPacket = null;
 		Class9.aClass184_73.currentPacketSize = 0;
 		Class9.aClass184_73.idleReadPulses = 0;
-		client.anInt7178 = 0;
+		client.REBOOT_TIMER = 0;
 		Class350.method6189((byte) 111);
 		Class256.method4416();
 

@@ -1169,7 +1169,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8669(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
 			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -1339,7 +1339,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8563(int i_1, int i_2, int i_3, int i_4, int i_5, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_13 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_13 = (Class455_Sub3) class455_7;
 			int[] ints_14 = packetsdecoder_13.anIntArray9077;
 			int[] ints_15 = packetsdecoder_13.anIntArray9078;
 			int i_16 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -1586,7 +1586,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8532(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
 			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -1798,7 +1798,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public Class455 method8624(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-		return new PacketsDecoder(i_1, i_2, ints_3, ints_4);
+		return new Class455_Sub3(i_1, i_2, ints_3, ints_4);
 	}
 
 	public void en(float f_1, float f_2) {
@@ -1875,7 +1875,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8535(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9, int i_10, int i_11, int i_12) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_13 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_13 = (Class455_Sub3) class455_7;
 			int[] ints_14 = packetsdecoder_13.anIntArray9077;
 			int[] ints_15 = packetsdecoder_13.anIntArray9078;
 			int i_16 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -2791,7 +2791,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void DA(Class455 class455_2, int i_3, int i_4) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_5 = (PacketsDecoder) class455_2;
+			Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;
@@ -4526,7 +4526,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public Class455 method8553(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-		return new PacketsDecoder(i_1, i_2, ints_3, ints_4);
+		return new Class455_Sub3(i_1, i_2, ints_3, ints_4);
 	}
 
 	public void method8415(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
@@ -5411,7 +5411,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8576(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
 			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -5589,7 +5589,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8533(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
 			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -5759,7 +5759,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void method8575(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, Class455 class455_7, int i_8, int i_9) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_10 = (PacketsDecoder) class455_7;
+			Class455_Sub3 packetsdecoder_10 = (Class455_Sub3) class455_7;
 			int[] ints_11 = packetsdecoder_10.anIntArray9077;
 			int[] ints_12 = packetsdecoder_10.anIntArray9078;
 			int i_13 = this.anInt9009 > i_9 ? this.anInt9009 : i_9;
@@ -6210,11 +6210,11 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public Class455 method8554(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-		return new PacketsDecoder(i_1, i_2, ints_3, ints_4);
+		return new Class455_Sub3(i_1, i_2, ints_3, ints_4);
 	}
 
 	public Class455 method8427(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-		return new PacketsDecoder(i_1, i_2, ints_3, ints_4);
+		return new Class455_Sub3(i_1, i_2, ints_3, ints_4);
 	}
 
 	void method14399(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
@@ -6278,7 +6278,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void hr(int i_1, Class455 class455_2, int i_3, int i_4) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_5 = (PacketsDecoder) class455_2;
+			Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;
@@ -6326,7 +6326,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void hi(int i_1, Class455 class455_2, int i_3, int i_4) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_5 = (PacketsDecoder) class455_2;
+			Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;
@@ -7141,7 +7141,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public Class455 method8556(int i_1, int i_2, int[] ints_3, int[] ints_4) {
-		return new PacketsDecoder(i_1, i_2, ints_3, ints_4);
+		return new Class455_Sub3(i_1, i_2, ints_3, ints_4);
 	}
 
 	public NativeSprite method8604(int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
@@ -7389,7 +7389,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public void hz(int i_1, Class455 class455_2, int i_3, int i_4) {
 		if (this.anIntArray8979 != null) {
-			PacketsDecoder packetsdecoder_5 = (PacketsDecoder) class455_2;
+			Class455_Sub3 packetsdecoder_5 = (Class455_Sub3) class455_2;
 			int[] ints_6 = packetsdecoder_5.anIntArray9077;
 			int[] ints_7 = packetsdecoder_5.anIntArray9078;
 			int i_8;

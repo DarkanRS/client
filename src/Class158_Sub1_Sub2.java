@@ -5,7 +5,7 @@ import java.awt.image.ImageObserver;
 
 public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 
-	static int anInt10131;
+	static int UPDATE_ZONE_Y;
 	Class192 aClass192_10126;
 	int anInt10129 = 0;
 	int anInt10128 = 0;

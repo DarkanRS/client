@@ -1,6 +1,6 @@
 public class CutsceneAction_Sub21 extends CutsceneAction {
 
-	public static Class199 keyRecorder;
+	public static KeyRecorder keyRecorder;
 	int anInt9437;
 	int anInt9436;
 

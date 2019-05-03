@@ -32,7 +32,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		int i_13;
 		int i_14;
 		if (sceneobject_10 != null) {
-			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1708238959).getObjectDefinitions(sceneobject_10.getId(1992951281));
+			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(1992951281));
 			i_12 = sceneobject_10.method92(-401484615) & 0x3;
 			i_13 = sceneobject_10.method89(2041579125);
 			if (objectdefinitions_11.mapSpriteId != -1) {
@@ -79,7 +79,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		}
 		sceneobject_10 = (SceneObject) sceneobjectmanager_9.getInteractableObject(i_1, i_2, i_3, client.anInterface25_7446);
 		if (sceneobject_10 != null) {
-			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1933772768).getObjectDefinitions(sceneobject_10.getId(281132177));
+			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(281132177));
 			i_12 = sceneobject_10.method92(-763690677) & 0x3;
 			i_13 = sceneobject_10.method89(1162036783);
 			if (objectdefinitions_11.mapSpriteId != -1) {
@@ -98,7 +98,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		}
 		sceneobject_10 = (SceneObject) sceneobjectmanager_9.getGroundDecoration(i_1, i_2, i_3);
 		if (sceneobject_10 != null) {
-			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1659848045).getObjectDefinitions(sceneobject_10.getId(-1741343457));
+			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(-1741343457));
 			i_12 = sceneobject_10.method92(-1014923705) & 0x3;
 			if (objectdefinitions_11.mapSpriteId != -1) {
 				VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1254236729);

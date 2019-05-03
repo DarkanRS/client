@@ -1,6 +1,6 @@
 public class Class272 {
 
-	static int anInt3331;
+	static int UPDATE_ZONE_PLANE;
 
 	Class272() throws Throwable {
 		throw new Error();

@@ -10,7 +10,7 @@ public class CombinedInputSubscriber implements InputSubscriber {
         this.requiredKeys = ints_3;
     }
 
-    public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+    public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
         if (class282_sub53_1 == null) {
             if (this.clickType != -1) {
                 return false;

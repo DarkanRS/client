@@ -182,7 +182,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 	}
 
 	void method14258(byte[] bytes_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, Class455 class455_13, int i_14, int i_15) {
-		PacketsDecoder packetsdecoder_16 = (PacketsDecoder) class455_13;
+		Class455_Sub3 packetsdecoder_16 = (Class455_Sub3) class455_13;
 		int[] ints_17 = packetsdecoder_16.anIntArray9077;
 		int[] ints_18 = packetsdecoder_16.anIntArray9078;
 		int i_19 = i_10 - this.aGraphicalRenderer_Sub3_8889.anInt8983;

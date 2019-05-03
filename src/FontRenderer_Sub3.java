@@ -148,7 +148,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 	}
 
 	void method14326(byte[] bytes_1, int[] ints_2, int[] ints_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, Class455 class455_14, int i_15, int i_16) {
-		PacketsDecoder packetsdecoder_17 = (PacketsDecoder) class455_14;
+		Class455_Sub3 packetsdecoder_17 = (Class455_Sub3) class455_14;
 		int[] ints_18 = packetsdecoder_17.anIntArray9077;
 		int[] ints_19 = packetsdecoder_17.anIntArray9078;
 		int i_20 = i_11 - this.aGraphicalRenderer_Sub3_8968.anInt8983;
@@ -204,7 +204,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 	}
 
 	void method14327(byte[] bytes_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, Class455 class455_13, int i_14, int i_15) {
-		PacketsDecoder packetsdecoder_16 = (PacketsDecoder) class455_13;
+		Class455_Sub3 packetsdecoder_16 = (Class455_Sub3) class455_13;
 		int[] ints_17 = packetsdecoder_16.anIntArray9077;
 		int[] ints_18 = packetsdecoder_16.anIntArray9078;
 		int i_19 = i_10 - this.aGraphicalRenderer_Sub3_8968.anInt8983;
@@ -485,7 +485,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 
 	static final boolean method14338(BufferedConnectionContext class184_0) {
 		try {
-			boolean bool_2 = PacketsDecoder.method14433(class184_0);
+			boolean bool_2 = PacketDecoder.decode(class184_0);
 			return bool_2;
 		} catch (IOException ioexception_7) {
 			if (client.gameState == 7) {

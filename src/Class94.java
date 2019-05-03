@@ -41,8 +41,8 @@ public class Class94 {
 			i_1 |= 0x40;
 		}
 		Preference_Sub12.method12710(i_1);
-		IndexLoaders.MAP_REGION_DECODER.method4436(-2047295764).method7893(i_1, 2082493334);
-		IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -5779).method4436(-1603453217).method7893(i_1, -79480655);
+		IndexLoaders.MAP_REGION_DECODER.method4436().method7893(i_1, 2082493334);
+		IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -5779).method4436().method7893(i_1, -79480655);
 		IndexLoaders.ITEM_LOADER.method7153(i_1);
 		IndexLoaders.NPC_INDEX_LOADER.method6829(i_1);
 		IndexLoaders.SPOT_ANIM_LOADER.method8846(i_1);

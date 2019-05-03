@@ -75,7 +75,7 @@ public class Class186 {
 		Class9.aClass184_73.secondLastPacket = null;
 		Class9.aClass184_73.thirdLastPacket = null;
 		Class9.aClass184_73.idleReadPulses = 0;
-		client.anInt7178 = 0;
+		client.REBOOT_TIMER = 0;
 		Class209_Sub1.method12916();
 		client.anInt7434 = 0;
 		client.FRIEND_COUNT = 0;

@@ -50,7 +50,7 @@ public final class client extends Engine {
 	public static boolean aBool7175 = true;
 	static boolean aBool7176 = false;
 	static boolean aBool7177 = false;
-	public static int anInt7178 = 0;
+	public static int REBOOT_TIMER = 0;
 	public static Class180[] aClass180Array7348 = new Class180[8];
 	public static Class281[] aClass281Array7180 = new Class281[9];
 	public static boolean aBool7219 = false;
@@ -793,8 +793,8 @@ public final class client extends Engine {
 			++cycles;
 			if (cycles % 1000 == 1) {
 				GregorianCalendar gregoriancalendar_10 = new GregorianCalendar();
-				PacketsDecoder.anInt9079 = gregoriancalendar_10.get(11) * 600 + gregoriancalendar_10.get(12) * 10 + gregoriancalendar_10.get(13) / 6;
-				aRandom7260.setSeed((long) PacketsDecoder.anInt9079);
+				Class455_Sub3.anInt9079 = gregoriancalendar_10.get(11) * 600 + gregoriancalendar_10.get(12) * 10 + gregoriancalendar_10.get(13) / 6;
+				aRandom7260.setSeed((long) Class455_Sub3.anInt9079);
 			}
 
 			outputContext.method3059(-1650964006);
@@ -2770,8 +2770,8 @@ public final class client extends Engine {
 	final void method12044(short s_1) {
 		int i_2;
 		if (gameState == 0 && !JS5CacheFile.method3360((byte) -61) || gameState == 7 && Class9.anInt106 == 42 || gameState == 3) {
-			if (anInt7178 > 1) {
-				--anInt7178;
+			if (REBOOT_TIMER > 1) {
+				--REBOOT_TIMER;
 				anInt7397 = anInt7347;
 			}
 

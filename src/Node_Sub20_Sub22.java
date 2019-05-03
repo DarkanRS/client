@@ -79,8 +79,8 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 	}
 
 	static final void method15386() {
-		if (client.anInt7178 > 1) {
-			--client.anInt7178;
+		if (client.REBOOT_TIMER > 1) {
+			--client.REBOOT_TIMER;
 			client.anInt7397 = client.anInt7347;
 		}
 		if (client.outputContext.aBool2298) {

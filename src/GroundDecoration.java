@@ -559,7 +559,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											Renderers.SOFTWARE_RENDERER.o(i_14, i_15, i_14 + icomponentdefinitions_12.width, i_15 + icomponentdefinitions_12.height);
 										}
 										if (icomponentdefinitions_12.aBool1363) {
-											fontrenderer_43.method367(string_35, i_14, i_15, icomponentdefinitions_12.width, icomponentdefinitions_12.height, 255 - (i_16 & 0xff) << 24 | i_22, icomponentdefinitions_12.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, icomponentdefinitions_12.anInt1359, icomponentdefinitions_12.anInt1360, client.aRandom7260, PacketsDecoder.anInt9079, client.anIntArray7438, Class182.aNativeSpriteArray2261, (int[]) null, 1113506161);
+											fontrenderer_43.method367(string_35, i_14, i_15, icomponentdefinitions_12.width, icomponentdefinitions_12.height, 255 - (i_16 & 0xff) << 24 | i_22, icomponentdefinitions_12.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, icomponentdefinitions_12.anInt1359, icomponentdefinitions_12.anInt1360, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class182.aNativeSpriteArray2261, (int[]) null, 1113506161);
 										} else {
 											fontrenderer_43.method373(string_35, i_14, i_15, icomponentdefinitions_12.width, icomponentdefinitions_12.height, 255 - (i_16 & 0xff) << 24 | i_22, icomponentdefinitions_12.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, icomponentdefinitions_12.anInt1359, icomponentdefinitions_12.anInt1360, icomponentdefinitions_12.anInt1358, icomponentdefinitions_12.anInt1362, Class182.aNativeSpriteArray2261, (int[]) null, (Class455) null, 0, 0);
 										}

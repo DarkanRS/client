@@ -301,7 +301,7 @@ public class Class434_Sub1 extends Class434 {
 			if (class282_sub29_9 == null) {
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -259717537);
 			} else {
-				Node_Sub34 class282_sub34_10 = (Node_Sub34) class282_sub29_9.aClass482_7708.head();
+				GroundItem class282_sub34_10 = (GroundItem) class282_sub29_9.aClass482_7708.head();
 				if (class282_sub34_10 == null) {
 					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -237481476);
 				} else {
@@ -314,28 +314,28 @@ public class Class434_Sub1 extends Class434 {
 						class521_sub1_sub2_sub1_11.aClass206_7970 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 					}
 
-					class521_sub1_sub2_sub1_11.anInt10423 = class282_sub34_10.anInt7853;
-					class521_sub1_sub2_sub1_11.anInt10416 = class282_sub34_10.anInt7852;
+					class521_sub1_sub2_sub1_11.anInt10423 = class282_sub34_10.id;
+					class521_sub1_sub2_sub1_11.anInt10416 = class282_sub34_10.amount;
 
 					label44: while (true) {
-						Node_Sub34 class282_sub34_12 = (Node_Sub34) class282_sub29_9.aClass482_7708.next(1363381477);
+						GroundItem class282_sub34_12 = (GroundItem) class282_sub29_9.aClass482_7708.next(1363381477);
 						if (class282_sub34_12 == null) {
 							break;
 						}
 
-						if (class282_sub34_12.anInt7853 != class521_sub1_sub2_sub1_11.anInt10423) {
-							class521_sub1_sub2_sub1_11.anInt10411 = class282_sub34_12.anInt7853;
-							class521_sub1_sub2_sub1_11.anInt10414 = class282_sub34_12.anInt7852;
+						if (class282_sub34_12.id != class521_sub1_sub2_sub1_11.anInt10423) {
+							class521_sub1_sub2_sub1_11.anInt10411 = class282_sub34_12.id;
+							class521_sub1_sub2_sub1_11.anInt10414 = class282_sub34_12.amount;
 
 							while (true) {
-								Node_Sub34 class282_sub34_13 = (Node_Sub34) class282_sub29_9.aClass482_7708.next(-761697054);
+								GroundItem class282_sub34_13 = (GroundItem) class282_sub29_9.aClass482_7708.next(-761697054);
 								if (class282_sub34_13 == null) {
 									break label44;
 								}
 
-								if (class282_sub34_13.anInt7853 != class521_sub1_sub2_sub1_11.anInt10423 && class521_sub1_sub2_sub1_11.anInt10411 != class282_sub34_13.anInt7853) {
-									class521_sub1_sub2_sub1_11.anInt10415 = class282_sub34_13.anInt7853;
-									class521_sub1_sub2_sub1_11.anInt10412 = class282_sub34_13.anInt7852;
+								if (class282_sub34_13.id != class521_sub1_sub2_sub1_11.anInt10423 && class521_sub1_sub2_sub1_11.anInt10411 != class282_sub34_13.id) {
+									class521_sub1_sub2_sub1_11.anInt10415 = class282_sub34_13.id;
+									class521_sub1_sub2_sub1_11.anInt10412 = class282_sub34_13.amount;
 								}
 							}
 						}

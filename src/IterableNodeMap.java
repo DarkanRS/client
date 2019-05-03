@@ -121,7 +121,7 @@ public final class IterableNodeMap implements Iterable {
 
 	static final void method7772(Node_Sub31 class282_sub31_0, boolean bool_1) {
 		if (class282_sub31_0.aBool7774) {
-			if (class282_sub31_0.anInt7765 < 0 || Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1617066319), class282_sub31_0.anInt7765, class282_sub31_0.anInt7770)) {
+			if (class282_sub31_0.anInt7765 < 0 || Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(), class282_sub31_0.anInt7765, class282_sub31_0.anInt7770)) {
 				if (!bool_1) {
 					Class174.animateObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7766, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, class282_sub31_0.anInt7765, class282_sub31_0.anInt7767, class282_sub31_0.anInt7770, -1, -1133711870);
 				} else {
@@ -129,7 +129,7 @@ public final class IterableNodeMap implements Iterable {
 				}
 				class282_sub31_0.remove();
 			}
-		} else if (class282_sub31_0.aBool7773 && class282_sub31_0.anInt7762 >= 1 && class282_sub31_0.anInt7763 >= 1 && class282_sub31_0.anInt7762 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && class282_sub31_0.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2 && (class282_sub31_0.anInt7769 < 0 || Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1528257548), class282_sub31_0.anInt7769, class282_sub31_0.anInt7771))) {
+		} else if (class282_sub31_0.aBool7773 && class282_sub31_0.anInt7762 >= 1 && class282_sub31_0.anInt7763 >= 1 && class282_sub31_0.anInt7762 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 2 && class282_sub31_0.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 2 && (class282_sub31_0.anInt7769 < 0 || Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(), class282_sub31_0.anInt7769, class282_sub31_0.anInt7771))) {
 			if (!bool_1) {
 				Class174.animateObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7766, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, class282_sub31_0.anInt7769, class282_sub31_0.anInt7772, class282_sub31_0.anInt7771, -1, -1118636715);
 			} else {

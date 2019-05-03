@@ -36,6 +36,6 @@ public class Class99 {
 			i_10 = i_11;
 		}
 		String string_13 = CutsceneEntity.method1354(class282_sub50_sub15_7);
-		fontrenderer_8.method386(string_13, i_2 + 3, i_6, i_10, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 701039409);
+		fontrenderer_8.method386(string_13, i_2 + 3, i_6, i_10, client.aRandom7260, Class455_Sub3.anInt9079, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 701039409);
 	}
 }

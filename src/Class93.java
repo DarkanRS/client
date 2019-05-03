@@ -82,7 +82,7 @@ public class Class93 {
 	}
 
 	static boolean method1577(SceneObject sceneobject_0, int i_1) {
-		ObjectDefinitions objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(sceneobject_0.getId(-1594739949));
+		ObjectDefinitions objectdefinitions_2 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_0.getId(-1594739949));
 		if (objectdefinitions_2.mapSpriteId == -1) {
 			return true;
 		} else {

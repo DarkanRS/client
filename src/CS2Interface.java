@@ -9,7 +9,7 @@ public class CS2Interface {
 			this.defs = icomponentdefinitions_4;
 			return true;
 		} else {
-			this.method8768(525234186);
+			this.method8768();
 			return false;
 		}
 	}
@@ -24,11 +24,11 @@ public class CS2Interface {
 			}
 		}
 
-		this.method8768(-2008016727);
+		this.method8768();
 		return false;
 	}
 
-	void method8768(int i_1) {
+	void method8768() {
 		this.inter = null;
 		this.defs = null;
 	}

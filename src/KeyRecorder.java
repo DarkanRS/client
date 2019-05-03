@@ -1,4 +1,4 @@
-public abstract class Class199 {
+public abstract class KeyRecorder {
 
     public abstract KeyRecord method3234();
 

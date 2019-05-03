@@ -155,7 +155,7 @@ public class Class378 {
 		IndexLoaders.OVERLAY_LOADER.method11477();
 		IndexLoaders.UNDERLAY_LOADER.method8030();
 		IndexLoaders.IDENTITI_KIT_LOADER.method802();
-		IndexLoaders.MAP_REGION_DECODER.method4436(-1981388866).method7896();
+		IndexLoaders.MAP_REGION_DECODER.method4436().method7896();
 		IndexLoaders.NPC_INDEX_LOADER.method6832();
 		IndexLoaders.ITEM_LOADER.method7156();
 		IndexLoaders.ANIMATION_LOADER.method11210();

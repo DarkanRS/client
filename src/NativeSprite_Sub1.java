@@ -528,7 +528,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 			throw new IllegalStateException();
 		} else {
 			if (this.method14248(f_1, f_2, f_3, f_4, f_5, f_6)) {
-				PacketsDecoder packetsdecoder_11 = (PacketsDecoder) class455_8;
+				Class455_Sub3 packetsdecoder_11 = (Class455_Sub3) class455_8;
 				this.method14250(packetsdecoder_11.anIntArray9077, packetsdecoder_11.anIntArray9078, anInt8861 - i_9, -i_10 - (anInt8864 - anInt8863));
 			}
 
@@ -664,7 +664,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 			throw new IllegalStateException();
 		} else {
 			if (this.method14248(f_1, f_2, f_3, f_4, f_5, f_6)) {
-				PacketsDecoder packetsdecoder_11 = (PacketsDecoder) class455_8;
+				Class455_Sub3 packetsdecoder_11 = (Class455_Sub3) class455_8;
 				this.method14250(packetsdecoder_11.anIntArray9077, packetsdecoder_11.anIntArray9078, anInt8861 - i_9, -i_10 - (anInt8864 - anInt8863));
 			}
 
@@ -676,7 +676,7 @@ public abstract class NativeSprite_Sub1 extends NativeSprite {
 			throw new IllegalStateException();
 		} else {
 			if (this.method14248(f_1, f_2, f_3, f_4, f_5, f_6)) {
-				PacketsDecoder packetsdecoder_11 = (PacketsDecoder) class455_8;
+				Class455_Sub3 packetsdecoder_11 = (Class455_Sub3) class455_8;
 				this.method14250(packetsdecoder_11.anIntArray9077, packetsdecoder_11.anIntArray9078, anInt8861 - i_9, -i_10 - (anInt8864 - anInt8863));
 			}
 

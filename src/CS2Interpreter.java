@@ -184,16 +184,16 @@ public class CS2Interpreter {
 		case instr6004:
 			method2620(exec);
 			break;
-		case instr6438:
+		case IF_SENDTOFRONT:
 			method15553(true, exec);
 			break;
-		case instr6006:
+		case IF_SENDTOBACK:
 			method15553(false, exec);
 			break;
-		case instr6007:
+		case CC_SENDTOFRONT:
 			method5200(true, exec);
 			break;
-		case instr6008:
+		case CC_SENDTOBACK:
 			method5200(false, exec);
 			break;
 		case instr6009:
@@ -4876,9 +4876,9 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		ParamDefinitions attributedefault_4 = IndexLoaders.PARAM_LOADER.getParam(i_3);
 		if (attributedefault_4.isString()) {
-			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_2).method7973(i_3, attributedefault_4.typeName);
+			executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_2).method7973(i_3, attributedefault_4.typeName);
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_2).method7963(i_3, attributedefault_4.defaultInt, 1059658238);
+			executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_2).method7963(i_3, attributedefault_4.defaultInt, 1059658238);
 		}
 	}
 
@@ -5455,7 +5455,7 @@ public class CS2Interpreter {
 	static final void method4173(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		method6942(icomponentdefinitions_3, executor, -839720836);
+		method6942(icomponentdefinitions_3, executor);
 	}
 
 	static final void method4174(CS2Executor executor) {
@@ -8314,7 +8314,7 @@ public class CS2Interpreter {
 	static final void method815(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		method6942(icomponentdefinitions_3, executor, 312854602);
+		method6942(icomponentdefinitions_3, executor);
 	}
 
 	static final void method12689(CS2Executor executor) {
@@ -9612,7 +9612,7 @@ public class CS2Interpreter {
 	}
 
 	static final void getSystemUpdateTimer(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7178;
+		executor.intStack[++executor.intStackPtr - 1] = client.REBOOT_TIMER;
 	}
 
 	static final void method911(CS2Executor executor) {
@@ -11627,7 +11627,7 @@ public class CS2Interpreter {
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
-	static final void method6942(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
+	static final void method6942(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1) {
 		if (client.method11633(icomponentdefinitions_0).continueOptionEnabled() && client.aClass118_7352 == null) {
 			Class158_Sub2.method14355(icomponentdefinitions_0.idHash, icomponentdefinitions_0.anInt1288, -946546687);
 			client.aClass118_7352 = Index.getIComponentDefinitions(icomponentdefinitions_0.idHash, icomponentdefinitions_0.anInt1288);
