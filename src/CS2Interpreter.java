@@ -1753,37 +1753,37 @@ public class CS2Interpreter {
 		case instr6319:
 			method6139(exec);
 			break;
-		case instr6100:
+		case ITEM_NAME:
 			method4247(exec);
 			break;
-		case instr6749:
+		case ITEM_OP:
 			method3042(exec);
 			break;
-		case instr6893:
+		case ITEM_IOP:
 			method4202(exec);
 			break;
-		case instr6380:
+		case ITEM_COST:
 			method6284(exec);
 			break;
-		case instr6335:
+		case ITEM_STACKABLE:
 			method11406(exec);
 			break;
-		case instr6533:
+		case ITEM_CERT:
 			method12215(exec);
 			break;
-		case instr6534:
+		case ITEM_UNCERT:
 			method12724(exec);
 			break;
-		case instr6508:
+		case ITEM_WEARPOS:
 			method7445(exec);
 			break;
-		case instr6408:
+		case ITEM_WEARPOS2:
 			method5765(exec);
 			break;
-		case instr6537:
+		case ITEM_WEARPOS3:
 			method6781(exec);
 			break;
-		case instr6538:
+		case ITEM_MEMBERS:
 			method5198(exec);
 			break;
 		case ITEM_PARAM:
@@ -1801,19 +1801,19 @@ public class CS2Interpreter {
 		case instr6104:
 			method4315(exec);
 			break;
-		case instr6291:
+		case ITEM_MULTISTACKSIZE:
 			method3229(exec);
 			break;
-		case instr6545:
+		case ITEM_FIND:
 			method4089(exec);
 			break;
-		case instr6546:
+		case ITEM_FINDNEXT:
 			method6400(exec);
 			break;
-		case instr6547:
+		case ITEM_MINIMENU_COLOUR_OVERRIDDEN:
 			method3030(exec);
 			break;
-		case instr6548:
+		case ITEM_MINIMENU_COLOUR:
 			method911(exec);
 			break;
 		case NPC_PARAM:
@@ -4346,6 +4346,16 @@ public class CS2Interpreter {
 			executor.intStack[++executor.intStackPtr - 1] = Class62.setGameHost(i_2, string_3) ? 1 : 0;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
+		}
+	}
+	
+	static final void method12724(CS2Executor executor) {
+		int i_2 = executor.intStack[--executor.intStackPtr];
+		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
+		if (itemdefinitions_3.certTemplateId >= 0 && itemdefinitions_3.certId >= 0) {
+			executor.intStack[++executor.intStackPtr - 1] = itemdefinitions_3.certId;
+		} else {
+			executor.intStack[++executor.intStackPtr - 1] = i_2;
 		}
 	}
 
@@ -9807,16 +9817,6 @@ public class CS2Interpreter {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1423;
-	}
-
-	static final void method12724(CS2Executor executor) {
-		int i_2 = executor.intStack[--executor.intStackPtr];
-		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2);
-		if (itemdefinitions_3.certTemplateId >= 0 && itemdefinitions_3.certId >= 0) {
-			executor.intStack[++executor.intStackPtr - 1] = itemdefinitions_3.certId;
-		} else {
-			executor.intStack[++executor.intStackPtr - 1] = i_2;
-		}
 	}
 
 	static final void method1162(CS2Executor executor) {
