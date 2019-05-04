@@ -2923,16 +2923,16 @@ public class CS2Interpreter {
 		case NPC_TYPE:
 			method2103(exec);
 			break;
-		case GET_LOC_SCREEN_POSITION:
+		case GET_OBJECT_SCREEN_POSITION:
 			method5692(exec);
 			break;
-		case GET_OBJ_SCREEN_POSITION:
+		case GET_ITEM_SCREEN_POSITION:
 			method4137(exec);
 			break;
-		case GET_LOC_OVERLAY_HEIGHT:
+		case GET_OBJECT_OVERLAY_HEIGHT:
 			method6042(exec);
 			break;
-		case GET_OBJ_OVERLAY_HEIGHT:
+		case GET_ITEM_OVERLAY_HEIGHT:
 			method3769(exec);
 			break;
 		case GET_OBJECT_BOUNDING_BOX:
