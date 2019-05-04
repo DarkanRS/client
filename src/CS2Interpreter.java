@@ -2950,79 +2950,79 @@ public class CS2Interpreter {
 		case instr6021:
 			method8700(exec);
 			break;
-		case instr6089:
+		case QUEST_GETNAME:
 			method2101(exec);
 			break;
-		case instr6463:
+		case QUEST_GETSORTNAME:
 			method5736(exec);
 			break;
-		case instr6929:
+		case QUEST_TYPE:
 			method356(exec);
 			break;
-		case instr6930:
+		case QUEST_GETDIFFICULTY:
 			method7434(exec);
 			break;
-		case instr6371:
+		case QUEST_GETMEMBERS:
 			method7461(exec);
 			break;
-		case instr6723:
+		case QUEST_POINTS:
 			method1799(exec);
 			break;
-		case instr6933:
+		case QUEST_QUESTREQ_COUNT:
 			method5016(exec);
 			break;
-		case instr6535:
+		case QUEST_QUESTREQ:
 			method777(exec);
 			break;
-		case instr6935:
+		case QUEST_QUESTREQ_MET:
 			method4314(exec);
 			break;
-		case instr6936:
+		case QUEST_POINTSREQ:
 			method3753(exec);
 			break;
-		case instr6937:
+		case QUEST_POINTSREQ_MET:
 			method466(exec);
 			break;
-		case instr6042:
+		case QUEST_STATREQ_COUNT:
 			method2953(exec);
 			break;
-		case instr6939:
+		case QUEST_STATREQ_STAT:
 			method2092(exec);
 			break;
-		case instr6940:
+		case QUEST_STATREQ_LEVEL:
 			method2841(exec);
 			break;
-		case instr6691:
+		case QUEST_STATREQ_MET:
 			method14841(exec);
 			break;
-		case instr6062:
+		case QUEST_VARPREQ_COUNT:
 			method868(exec);
 			break;
-		case instr6943:
+		case QUEST_VARPREQ_DESC:
 			method3553(exec);
 			break;
-		case instr6352:
+		case QUEST_VARPREQ_MET:
 			method1067(exec);
 			break;
-		case instr6078:
+		case QUEST_VARBITREQ_COUNT:
 			method7083(exec);
 			break;
-		case instr6946:
+		case QUEST_VARBITREQ_DESC:
 			method11592(exec);
 			break;
-		case instr6241:
+		case QUEST_VARBITREQ_MET:
 			method12587(exec);
 			break;
-		case instr6571:
+		case QUEST_ALLREQMET:
 			method4556(exec);
 			break;
-		case instr6949:
+		case QUEST_STARTED:
 			method8216(exec);
 			break;
-		case instr6927:
+		case QUEST_FINISHED:
 			method5290(exec);
 			break;
-		case instr6951:
+		case QUEST_PARAM:
 			method4249(exec);
 			break;
 		default:
@@ -3402,7 +3402,7 @@ public class CS2Interpreter {
 	}
 
 	static void method3553(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).aStringArray2971[executor.intStack[executor.intStackPtr - 1]];
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).varpRequirementNames[executor.intStack[executor.intStackPtr - 1]];
 		executor.intStackPtr -= 2;
 	}
 
@@ -4274,7 +4274,7 @@ public class CS2Interpreter {
 	}
 
 	static void method777(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).anIntArray2968[executor.intStack[executor.intStackPtr - 1]];
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).questPrerequisiteIds[executor.intStack[executor.intStackPtr - 1]];
 		--executor.intStackPtr;
 	}
 
@@ -5075,7 +5075,7 @@ public class CS2Interpreter {
 	}
 
 	static void method5736(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]).altName;
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]).sortName;
 	}
 
 	static final void method504(CS2Executor executor) {
@@ -5133,7 +5133,7 @@ public class CS2Interpreter {
 	}
 
 	static void method3753(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2973;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).questpointRequirement;
 	}
 
 	static final void method3755(CS2Executor executor) {
@@ -5656,7 +5656,7 @@ public class CS2Interpreter {
 
 	static void method5016(CS2Executor executor) {
 		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
-		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArray2968 == null ? 0 : questdefinitions_2.anIntArray2968.length;
+		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.questPrerequisiteIds == null ? 0 : questdefinitions_2.questPrerequisiteIds.length;
 	}
 
 	static final void longLessOrEqual(CS2Executor executor) {
@@ -5786,7 +5786,7 @@ public class CS2Interpreter {
 
 	static void method2953(CS2Executor executor) {
 		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
-		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArrayArray2966 == null ? 0 : questdefinitions_2.anIntArrayArray2966.length;
+		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.levelRequirements == null ? 0 : questdefinitions_2.levelRequirements.length;
 	}
 
 	static final void method4773(CS2Executor executor) {
@@ -6583,7 +6583,7 @@ public class CS2Interpreter {
 	}
 
 	static void method2092(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).anIntArrayArray2966[executor.intStack[executor.intStackPtr - 1]][0];
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).levelRequirements[executor.intStack[executor.intStackPtr - 1]][0];
 		--executor.intStackPtr;
 	}
 
@@ -7102,7 +7102,7 @@ public class CS2Interpreter {
 	}
 
 	static void method11592(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).aStringArray2975[executor.intStack[executor.intStackPtr - 1]];
+		executor.stringStack[++executor.stringStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).varbitRequirementNames[executor.intStack[executor.intStackPtr - 1]];
 		executor.intStackPtr -= 2;
 	}
 
@@ -7144,7 +7144,7 @@ public class CS2Interpreter {
 
 	static void method7083(CS2Executor executor) {
 		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
-		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArray2964 == null ? 0 : questdefinitions_2.anIntArray2964.length;
+		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.varBitRequirements == null ? 0 : questdefinitions_2.varBitRequirements.length;
 	}
 
 	static final void method584(CS2Executor executor) {
@@ -7896,7 +7896,7 @@ public class CS2Interpreter {
 	}
 
 	static void method7434(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2960;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).difficulty;
 	}
 
 	static final void method7444(CS2Executor executor) {
@@ -7972,7 +7972,7 @@ public class CS2Interpreter {
 	}
 
 	static void method356(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2958;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).type;
 	}
 
 	static final void method7218(CS2Executor executor) {
@@ -8865,7 +8865,7 @@ public class CS2Interpreter {
 	}
 
 	static void method1799(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).anInt2963;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).questpointReward;
 	}
 
 	static final void pushString(CS2Executor executor) {
@@ -9388,7 +9388,7 @@ public class CS2Interpreter {
 
 	static void method868(CS2Executor executor) {
 		QuestDefinitions questdefinitions_2 = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[--executor.intStackPtr]);
-		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.anIntArray2961 == null ? 0 : questdefinitions_2.anIntArray2961.length;
+		executor.intStack[++executor.intStackPtr - 1] = questdefinitions_2.varpRequirements == null ? 0 : questdefinitions_2.varpRequirements.length;
 	}
 
 	static final void method870(CS2Executor executor) {
@@ -9896,7 +9896,7 @@ public class CS2Interpreter {
 	}
 
 	static void method7461(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).aBool2962 ? 1 : 0;
+		executor.intStack[executor.intStackPtr - 1] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 1]).members ? 1 : 0;
 	}
 
 	static final void method7462(CS2Executor executor) {
@@ -10551,7 +10551,7 @@ public class CS2Interpreter {
 	}
 
 	static void method2841(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).anIntArrayArray2966[executor.intStack[executor.intStackPtr - 1]][1];
+		executor.intStack[executor.intStackPtr - 2] = IndexLoaders.QUEST_LOADER.getQuest(executor.intStack[executor.intStackPtr - 2]).levelRequirements[executor.intStack[executor.intStackPtr - 1]][1];
 		--executor.intStackPtr;
 	}
 

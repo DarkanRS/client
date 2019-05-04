@@ -2,60 +2,60 @@ public class QuestDefinitions {
 
     QuestIndexLoader aClass242_2976;
     public String name;
-    public String altName;
+    public String sortName;
     int[][] varValues;
     int[][] varbitValues;
-    public int anInt2958 = 0;
-    public int anInt2960 = 0;
-    public boolean aBool2962 = false;
-    public int anInt2963;
+    public int type = 0;
+    public int difficulty = 0;
+    public boolean members = false;
+    public int questpointReward;
     int[] anIntArray2955;
-    public int[] anIntArray2968;
-    public int[][] anIntArrayArray2966;
-    public int anInt2973;
-    public int anInt2977 = -1;
-    public int[] anIntArray2961;
-    int[] anIntArray2969;
-    int[] anIntArray2970;
-    public String[] aStringArray2971;
-    public int[] anIntArray2964;
-    int[] anIntArray2967;
-    int[] anIntArray2974;
-    public String[] aStringArray2975;
-    IterableNodeMap aClass465_2972;
+    public int[] questPrerequisiteIds;
+    public int[][] levelRequirements;
+    public int questpointRequirement;
+    public int graphicId = -1;
+    public int[] varpRequirements;
+    int[] minVarpValue;
+    int[] maxVarpValue;
+    public String[] varpRequirementNames;
+    public int[] varBitRequirements;
+    int[] minVarBitValue;
+    int[] maxVarBitValue;
+    public String[] varbitRequirementNames;
+    IterableNodeMap params;
 
     public boolean method4093(VarProvider interface42_1, int[] ints_2) {
-        if (this.aClass242_2976.method4154(interface42_1, 1765999661) < this.anInt2973) {
+        if (this.aClass242_2976.method4154(interface42_1, 1765999661) < this.questpointRequirement) {
             return false;
         } else {
             int i_4;
-            if (this.anIntArrayArray2966 != null) {
-                for (i_4 = 0; i_4 < this.anIntArrayArray2966.length; i_4++) {
-                    if (ints_2[this.anIntArrayArray2966[i_4][0]] < this.anIntArrayArray2966[i_4][1]) {
+            if (this.levelRequirements != null) {
+                for (i_4 = 0; i_4 < this.levelRequirements.length; i_4++) {
+                    if (ints_2[this.levelRequirements[i_4][0]] < this.levelRequirements[i_4][1]) {
                         return false;
                     }
                 }
             }
-            if (this.anIntArray2968 != null) {
-                for (i_4 = 0; i_4 < this.anIntArray2968.length; i_4++) {
-                    if (!this.aClass242_2976.getQuest(this.anIntArray2968[i_4]).isComplete(interface42_1)) {
+            if (this.questPrerequisiteIds != null) {
+                for (i_4 = 0; i_4 < this.questPrerequisiteIds.length; i_4++) {
+                    if (!this.aClass242_2976.getQuest(this.questPrerequisiteIds[i_4]).isComplete(interface42_1)) {
                         return false;
                     }
                 }
             }
             int i_5;
-            if (this.anIntArray2961 != null) {
-                for (i_4 = 0; i_4 < this.anIntArray2961.length; i_4++) {
-                    i_5 = interface42_1.getVar(this.anIntArray2961[i_4]);
-                    if (i_5 < this.anIntArray2969[i_4] || i_5 > this.anIntArray2970[i_4]) {
+            if (this.varpRequirements != null) {
+                for (i_4 = 0; i_4 < this.varpRequirements.length; i_4++) {
+                    i_5 = interface42_1.getVar(this.varpRequirements[i_4]);
+                    if (i_5 < this.minVarpValue[i_4] || i_5 > this.maxVarpValue[i_4]) {
                         return false;
                     }
                 }
             }
-            if (this.anIntArray2964 != null) {
-                for (i_4 = 0; i_4 < this.anIntArray2964.length; i_4++) {
-                    i_5 = interface42_1.getVarBit(this.anIntArray2964[i_4]);
-                    if (i_5 < this.anIntArray2967[i_4] || i_5 > this.anIntArray2974[i_4]) {
+            if (this.varBitRequirements != null) {
+                for (i_4 = 0; i_4 < this.varBitRequirements.length; i_4++) {
+                    i_5 = interface42_1.getVarBit(this.varBitRequirements[i_4]);
+                    if (i_5 < this.minVarBitValue[i_4] || i_5 > this.maxVarBitValue[i_4]) {
                         return false;
                     }
                 }
@@ -68,7 +68,7 @@ public class QuestDefinitions {
         if (i_2 == 1) {
             this.name = rsbytebuffer_1.readGJString();
         } else if (i_2 == 2) {
-            this.altName = rsbytebuffer_1.readGJString();
+            this.sortName = rsbytebuffer_1.readGJString();
         } else {
             int i_4;
             int i_5;
@@ -91,13 +91,13 @@ public class QuestDefinitions {
             } else if (i_2 == 5) {
                 rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 6) {
-                this.anInt2958 = rsbytebuffer_1.readUnsignedByte();
+                this.type = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 7) {
-                this.anInt2960 = rsbytebuffer_1.readUnsignedByte();
+                this.difficulty = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 8) {
-                this.aBool2962 = true;
+                this.members = true;
             } else if (i_2 == 9) {
-                this.anInt2963 = rsbytebuffer_1.readUnsignedByte();
+                this.questpointReward = rsbytebuffer_1.readUnsignedByte();
             } else if (i_2 == 10) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
                 this.anIntArray2955 = new int[i_4];
@@ -108,50 +108,50 @@ public class QuestDefinitions {
                 rsbytebuffer_1.readInt();
             } else if (i_2 == 13) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArray2968 = new int[i_4];
+                this.questPrerequisiteIds = new int[i_4];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    this.anIntArray2968[i_5] = rsbytebuffer_1.readUnsignedShort();
+                    this.questPrerequisiteIds[i_5] = rsbytebuffer_1.readUnsignedShort();
                 }
             } else if (i_2 == 14) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArrayArray2966 = new int[i_4][2];
+                this.levelRequirements = new int[i_4][2];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    this.anIntArrayArray2966[i_5][0] = rsbytebuffer_1.readUnsignedByte();
-                    this.anIntArrayArray2966[i_5][1] = rsbytebuffer_1.readUnsignedByte();
+                    this.levelRequirements[i_5][0] = rsbytebuffer_1.readUnsignedByte();
+                    this.levelRequirements[i_5][1] = rsbytebuffer_1.readUnsignedByte();
                 }
             } else if (i_2 == 15) {
-                this.anInt2973 = rsbytebuffer_1.readUnsignedShort();
+                this.questpointRequirement = rsbytebuffer_1.readUnsignedShort();
             } else if (i_2 == 17) {
-                this.anInt2977 = rsbytebuffer_1.readBigSmart();
+                this.graphicId = rsbytebuffer_1.readBigSmart();
             } else if (i_2 == 18) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArray2961 = new int[i_4];
-                this.anIntArray2969 = new int[i_4];
-                this.anIntArray2970 = new int[i_4];
-                this.aStringArray2971 = new String[i_4];
+                this.varpRequirements = new int[i_4];
+                this.minVarpValue = new int[i_4];
+                this.maxVarpValue = new int[i_4];
+                this.varpRequirementNames = new String[i_4];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    this.anIntArray2961[i_5] = rsbytebuffer_1.readInt();
-                    this.anIntArray2969[i_5] = rsbytebuffer_1.readInt();
-                    this.anIntArray2970[i_5] = rsbytebuffer_1.readInt();
-                    this.aStringArray2971[i_5] = rsbytebuffer_1.readString();
+                    this.varpRequirements[i_5] = rsbytebuffer_1.readInt();
+                    this.minVarpValue[i_5] = rsbytebuffer_1.readInt();
+                    this.maxVarpValue[i_5] = rsbytebuffer_1.readInt();
+                    this.varpRequirementNames[i_5] = rsbytebuffer_1.readString();
                 }
             } else if (i_2 == 19) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                this.anIntArray2964 = new int[i_4];
-                this.anIntArray2967 = new int[i_4];
-                this.anIntArray2974 = new int[i_4];
-                this.aStringArray2975 = new String[i_4];
+                this.varBitRequirements = new int[i_4];
+                this.minVarBitValue = new int[i_4];
+                this.maxVarBitValue = new int[i_4];
+                this.varbitRequirementNames = new String[i_4];
                 for (i_5 = 0; i_5 < i_4; i_5++) {
-                    this.anIntArray2964[i_5] = rsbytebuffer_1.readInt();
-                    this.anIntArray2967[i_5] = rsbytebuffer_1.readInt();
-                    this.anIntArray2974[i_5] = rsbytebuffer_1.readInt();
-                    this.aStringArray2975[i_5] = rsbytebuffer_1.readString();
+                    this.varBitRequirements[i_5] = rsbytebuffer_1.readInt();
+                    this.minVarBitValue[i_5] = rsbytebuffer_1.readInt();
+                    this.maxVarBitValue[i_5] = rsbytebuffer_1.readInt();
+                    this.varbitRequirementNames[i_5] = rsbytebuffer_1.readString();
                 }
             } else if (i_2 == 249) {
                 i_4 = rsbytebuffer_1.readUnsignedByte();
-                if (this.aClass465_2972 == null) {
+                if (this.params == null) {
                     i_5 = Utils.nextPowerOfTwo(i_4);
-                    this.aClass465_2972 = new IterableNodeMap(i_5);
+                    this.params = new IterableNodeMap(i_5);
                 }
                 for (i_5 = 0; i_5 < i_4; i_5++) {
                     boolean bool_6 = rsbytebuffer_1.readUnsignedByte() == 1;
@@ -162,15 +162,15 @@ public class QuestDefinitions {
                     } else {
                         obj_8 = new IntNode(rsbytebuffer_1.readInt());
                     }
-                    this.aClass465_2972.put((Node) obj_8, (long) i_7);
+                    this.params.put((Node) obj_8, (long) i_7);
                 }
             }
         }
     }
 
     void method4095() {
-        if (this.altName == null) {
-            this.altName = this.name;
+        if (this.sortName == null) {
+            this.sortName = this.name;
         }
     }
 
@@ -213,42 +213,42 @@ public class QuestDefinitions {
     }
 
     public boolean method4101(VarProvider interface42_1) {
-        return this.aClass242_2976.method4154(interface42_1, 2095145584) >= this.anInt2973;
+        return this.aClass242_2976.method4154(interface42_1, 2095145584) >= this.questpointRequirement;
     }
 
     public boolean method4103(VarProvider interface42_1, int i_2) {
-        return this.anIntArray2968 != null && i_2 >= 0 && i_2 < this.anIntArray2968.length ? this.aClass242_2976.getQuest(this.anIntArray2968[i_2]).isComplete(interface42_1) : false;
+        return this.questPrerequisiteIds != null && i_2 >= 0 && i_2 < this.questPrerequisiteIds.length ? this.aClass242_2976.getQuest(this.questPrerequisiteIds[i_2]).isComplete(interface42_1) : false;
     }
 
     public boolean method4104(VarProvider interface42_1, int i_2) {
-        if (this.anIntArray2961 != null && i_2 >= 0 && i_2 < this.anIntArray2961.length) {
-            int i_4 = interface42_1.getVar(this.anIntArray2961[i_2]);
-            return i_4 >= this.anIntArray2969[i_2] && i_4 <= this.anIntArray2970[i_2];
+        if (this.varpRequirements != null && i_2 >= 0 && i_2 < this.varpRequirements.length) {
+            int i_4 = interface42_1.getVar(this.varpRequirements[i_2]);
+            return i_4 >= this.minVarpValue[i_2] && i_4 <= this.maxVarpValue[i_2];
         } else {
             return false;
         }
     }
 
     public boolean method4105(VarProvider interface42_1, int i_2) {
-        if (this.anIntArray2964 != null && i_2 >= 0 && i_2 < this.anIntArray2964.length) {
-            int i_4 = interface42_1.getVarBit(this.anIntArray2964[i_2]);
-            return i_4 >= this.anIntArray2967[i_2] && i_4 <= this.anIntArray2974[i_2];
+        if (this.varBitRequirements != null && i_2 >= 0 && i_2 < this.varBitRequirements.length) {
+            int i_4 = interface42_1.getVarBit(this.varBitRequirements[i_2]);
+            return i_4 >= this.minVarBitValue[i_2] && i_4 <= this.maxVarBitValue[i_2];
         } else {
             return false;
         }
     }
 
     public String method4110(int i_1, String string_2) {
-        if (this.aClass465_2972 == null) {
+        if (this.params == null) {
             return string_2;
         } else {
-            StringNode class282_sub47_4 = (StringNode) this.aClass465_2972.get((long) i_1);
+            StringNode class282_sub47_4 = (StringNode) this.params.get((long) i_1);
             return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
         }
     }
 
     public boolean method4111(int[] ints_1, int i_2) {
-        return this.anIntArrayArray2966 != null && i_2 >= 0 && i_2 < this.anIntArrayArray2966.length ? ints_1[this.anIntArrayArray2966[i_2][0]] >= this.anIntArrayArray2966[i_2][1] : false;
+        return this.levelRequirements != null && i_2 >= 0 && i_2 < this.levelRequirements.length ? ints_1[this.levelRequirements[i_2][0]] >= this.levelRequirements[i_2][1] : false;
     }
 
     void method4119(RsByteBuffer rsbytebuffer_1) {
@@ -262,10 +262,10 @@ public class QuestDefinitions {
     }
 
     public int method4135(int i_1, int i_2) {
-        if (this.aClass465_2972 == null) {
+        if (this.params == null) {
             return i_2;
         } else {
-            IntNode class282_sub38_4 = (IntNode) this.aClass465_2972.get((long) i_1);
+            IntNode class282_sub38_4 = (IntNode) this.params.get((long) i_1);
             return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
         }
     }
