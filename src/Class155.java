@@ -155,17 +155,17 @@ public final class Class155 {
 		}
 	}
 
-	static Animable method2640(int i_0, int i_1, int i_2) {
+	static Entity method2640(int i_0, int i_1, int i_2) {
 		Class293 class293_4 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass293ArrayArrayArray2604[i_0][i_1][i_2];
 		if (class293_4 == null) {
 			return null;
 		} else {
-			Animable animable_5 = null;
+			Entity animable_5 = null;
 			int i_6 = -1;
 			for (Class208 class208_7 = class293_4.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
 				Transform_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
-				if (class521_sub1_sub1_8 instanceof Animable) {
-					Animable animable_9 = (Animable) class521_sub1_sub1_8;
+				if (class521_sub1_sub1_8 instanceof Entity) {
+					Entity animable_9 = (Entity) class521_sub1_sub1_8;
 					int i_10 = (animable_9.getSize() - 1) * 256 + 252;
 					Vector3 vector3_11 = animable_9.method11166().aClass385_3595;
 					int i_12 = (int) vector3_11.x - i_10 >> 9;

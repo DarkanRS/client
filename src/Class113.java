@@ -19,7 +19,7 @@ public class Class113 {
 				Vector3 vector3_5;
 				if (class521_sub1_sub1_sub3_2.anInt10382 > 0) {
 					if (client.anInt7341 == 4) {
-						Animable animable_3 = Class82.aClass75Array804[class521_sub1_sub1_sub3_2.anInt10382 - 1].method1342((byte) 22);
+						Entity animable_3 = Class82.aClass75Array804[class521_sub1_sub1_sub3_2.anInt10382 - 1].method1342((byte) 22);
 						if (animable_3 != null) {
 							Vector3 vector3_4 = animable_3.method11166().aClass385_3595;
 							if ((int) vector3_4.x >= 0 && (int) vector3_4.x < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 512 && (int) vector3_4.z >= 0 && (int) vector3_4.z < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 512) {

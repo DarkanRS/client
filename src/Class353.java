@@ -32,7 +32,7 @@ public class Class353 {
 		datainputstream_4.close();
 	}
 
-	static void method6209(int i_0, int x, int y, GroundItem groundItem) {
+	static void method6209(int i_0, int x, int y, GroundItemNode groundItem) {
 		long long_5 = (long) (i_0 << 28 | y << 14 | x);
 		Node_Sub29 class282_sub29_7 = (Node_Sub29) client.aClass465_7414.get(long_5);
 		if (class282_sub29_7 == null) {
@@ -45,7 +45,7 @@ public class Class353 {
 			if (itemdefinitions_8.stackable == 1) {
 				i_9 *= groundItem.amount + 1;
 			}
-			for (GroundItem class282_sub34_10 = (GroundItem) class282_sub29_7.aClass482_7708.head(); class282_sub34_10 != null; class282_sub34_10 = (GroundItem) class282_sub29_7.aClass482_7708.next(1444311005)) {
+			for (GroundItemNode class282_sub34_10 = (GroundItemNode) class282_sub29_7.aClass482_7708.head(); class282_sub34_10 != null; class282_sub34_10 = (GroundItemNode) class282_sub29_7.aClass482_7708.next(1444311005)) {
 				itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_10.id);
 				int i_11 = itemdefinitions_8.value;
 				if (itemdefinitions_8.stackable == 1) {

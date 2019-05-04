@@ -24,7 +24,7 @@ public class ProcessorSpecs {
         this.isARM = bool_3;
     }
 
-    static void method7724(Animable animable_0) {
+    static void method7724(Entity animable_0) {
         if (animable_0 instanceof NPC) {
             NPC npc_2 = (NPC) animable_0;
             if (npc_2.definitions != null) {
@@ -57,7 +57,7 @@ public class ProcessorSpecs {
         return ints_3;
     }
 
-    static final void method7727(Animable animable_0) {
+    static final void method7727(Entity animable_0) {
         Animation animation_2 = animable_0.currentAnimation;
         if (animable_0.anInt10345 == client.cycles || !animation_2.hasDefs() || animation_2.method7585(1)) {
             int i_3 = animable_0.anInt10345 - animable_0.anInt10342;

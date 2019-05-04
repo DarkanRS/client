@@ -25,7 +25,7 @@ public class Class302 {
 		return (i_0 + (i_0 >>> 31)) % i_1 + i_3;
 	}
 
-	static void handleMovementAnimations(Animable animable, int moveType, int i_2, int i_3, int i_4) {
+	static void handleMovementAnimations(Entity animable, int moveType, int i_2, int i_3, int i_4) {
 		BASDefinitions renderAnim = animable.getRenderAnimDefs();
 		MovingAnimation animation = animable.aAnimation_Sub3_10337;
 		int turnDirection = animable.turnDirection - animable.aClass19_10359.turnDirection & 0x3fff;

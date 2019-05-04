@@ -37,52 +37,52 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
                 if (client.gameState == 0 || client.gameState == 13) {
                     TCPPacket tcpmessage_7;
                     if (i_0 == 1) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_1, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON1, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 2) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_2, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON2, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 3) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_3, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON3, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 4) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_4, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON4, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 5) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_5, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON5, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 6) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_9, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON9, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 7) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_6, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON6, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 8) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_7, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON7, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 9) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_10, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON10, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }
                     if (i_0 == 10) {
-                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.BUTTON_CLICK_8, class184_8.isaac);
+                        tcpmessage_7 = Class271.createPacket(OutgoingPacket.IF_BUTTON8, class184_8.isaac);
                         Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426);
                         class184_8.queuePacket(tcpmessage_7);
                     }

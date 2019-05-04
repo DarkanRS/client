@@ -1,4 +1,4 @@
-public class NPC extends Animable {
+public class NPC extends Entity {
 
 	public NPCMeshModifier meshModifiers;
 	public int anInt10578 = -1;
@@ -391,19 +391,19 @@ public class NPC extends Animable {
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
-					if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < 1 + this.aMeshRasterizerArray10372.length) {
+					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -19);
 					}
 
 					class285_9 = Class470.method7824(this.method16162(1548602767), (byte) -37);
 					this.aBool10312 = true;
 					graphicalrenderer_1.RA(false);
-					meshrasterizer_12.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+					meshrasterizer_12.method11282(matrix44var_4, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 					graphicalrenderer_1.RA(true);
 				}
 			}
 
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -90);
 			}
 
@@ -420,7 +420,7 @@ public class NPC extends Animable {
 						this.aMeshRasterizerArray10372[i_14].PA(this.anInt10587 * 1113755543 * 812179495, 954646983 * this.anInt10588 * -1431655765 * 3 * -1912819721, 37639707 * this.anInt10589 * -62352365, 478845591 * this.anInt10590 * -331447001);
 					}
 
-					this.aMeshRasterizerArray10372[i_14].method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[i_14], 0);
+					this.aMeshRasterizerArray10372[i_14].method11282(matrix44var_4, this.boundingBoxPolygons[i_14], 0);
 				}
 			}
 
@@ -478,19 +478,19 @@ public class NPC extends Animable {
 				MovingAnimation class456_sub3_12 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_13 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.size, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
 				if (meshrasterizer_13 != null) {
-					if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length + 1) {
+					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length + 1) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -107);
 					}
 
 					class285_10 = Class470.method7824(this.method16162(425151398), (byte) -117);
 					this.aBool10312 = true;
 					graphicalrenderer_1.RA(false);
-					meshrasterizer_13.method11282(matrix44var_5, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+					meshrasterizer_13.method11282(matrix44var_5, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 					graphicalrenderer_1.RA(true);
 				}
 			}
 
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -9);
 			}
 
@@ -507,7 +507,7 @@ public class NPC extends Animable {
 						this.aMeshRasterizerArray10372[i_15].PA(this.anInt10587, this.anInt10588, this.anInt10589, this.anInt10590);
 					}
 
-					this.aMeshRasterizerArray10372[i_15].method11282(matrix44var_5, this.aEntityNode_Sub5Array7965[i_15], 0);
+					this.aMeshRasterizerArray10372[i_15].method11282(matrix44var_5, this.boundingBoxPolygons[i_15], 0);
 				}
 			}
 
@@ -560,19 +560,19 @@ public class NPC extends Animable {
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
-					if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < 1 + this.aMeshRasterizerArray10372.length) {
+					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -114);
 					}
 
 					class285_9 = Class470.method7824(this.method16162(673687659), (byte) -118);
 					this.aBool10312 = true;
 					graphicalrenderer_1.RA(false);
-					meshrasterizer_12.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+					meshrasterizer_12.method11282(matrix44var_4, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 					graphicalrenderer_1.RA(true);
 				}
 			}
 
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -3);
 			}
 
@@ -589,7 +589,7 @@ public class NPC extends Animable {
 						this.aMeshRasterizerArray10372[i_14].PA(this.anInt10587 * 1113755543 * 812179495, 954646983 * this.anInt10588 * -1431655765 * 3 * -1912819721, 37639707 * this.anInt10589 * -62352365, 478845591 * this.anInt10590 * -331447001);
 					}
 
-					this.aMeshRasterizerArray10372[i_14].method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[i_14], 0);
+					this.aMeshRasterizerArray10372[i_14].method11282(matrix44var_4, this.boundingBoxPolygons[i_14], 0);
 				}
 			}
 
@@ -847,19 +847,19 @@ public class NPC extends Animable {
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
-					if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < 1 + this.aMeshRasterizerArray10372.length) {
+					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -124);
 					}
 
 					class285_9 = Class470.method7824(this.method16162(1927143783), (byte) -100);
 					this.aBool10312 = true;
 					graphicalrenderer_1.RA(false);
-					meshrasterizer_12.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+					meshrasterizer_12.method11282(matrix44var_4, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 					graphicalrenderer_1.RA(true);
 				}
 			}
 
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -10);
 			}
 
@@ -876,7 +876,7 @@ public class NPC extends Animable {
 						this.aMeshRasterizerArray10372[i_14].PA(this.anInt10587 * 1113755543 * 812179495, 954646983 * this.anInt10588 * -1431655765 * 3 * -1912819721, 37639707 * this.anInt10589 * -62352365, 478845591 * this.anInt10590 * -331447001);
 					}
 
-					this.aMeshRasterizerArray10372[i_14].method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[i_14], 0);
+					this.aMeshRasterizerArray10372[i_14].method11282(matrix44var_4, this.boundingBoxPolygons[i_14], 0);
 				}
 			}
 

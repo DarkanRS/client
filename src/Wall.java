@@ -18,7 +18,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			int i_7 = (int) class305_5.aClass385_3595.x >> 9;
 			int i_8 = (int) class305_5.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, i_7, i_7, i_8, i_8, true, 319778577);
-			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_9 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_9);
@@ -158,7 +158,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, -337672509);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -257,7 +257,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, -204709260);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -310,7 +310,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, 1290726085);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10532.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);

@@ -43,7 +43,7 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			Matrix44Var matrix44var_4 = this.method11168();
 			Class285 class285_5 = Class470.method7824(this.aBool10511, (byte) -97);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, this.aShort9458, this.localX, this.aShort9456, this.localY, true, -219339696);
-			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_6 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_6);
@@ -167,7 +167,7 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10511, (byte) -2);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, this.aShort9458, this.localX, this.aShort9456, this.localY, true, 915832914);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_5 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -227,7 +227,7 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10511, (byte) -19);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, this.aShort9458, this.localX, this.aShort9456, this.localY, true, 1469676287);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_5 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -254,7 +254,7 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10511, (byte) -5);
 			this.aClass123_10509.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, this.aShort9458, this.localX, this.aShort9456, this.localY, true, 1385050972);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10509.aClass539_1538 != null) {
 				Class151 class151_5 = this.aClass123_10509.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_5);

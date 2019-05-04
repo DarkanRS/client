@@ -630,7 +630,7 @@ public class PacketDecoder {
 			int speed = buffer.readUnsignedByte();
 			StringNode class282_sub47_131 = (StringNode) client.NPCS.get((long) npcIndex);
 			if (class282_sub47_131 != null) {
-				Class20.animate((Animable) class282_sub47_131.anObject8068, animationIds, speed, true);
+				Class20.animate((Entity) class282_sub47_131.anObject8068, animationIds, speed, true);
 			}
 			context.currentPacket = null;
 			return true;
@@ -916,8 +916,8 @@ public class PacketDecoder {
 				}
 			}
 			for (int key = 0; key < client.anInt7210; key++) {
-				((Animable) client.aNode_Sub47Array7209[key].anObject8068).currentAnimations = null;
-				((Animable) client.aNode_Sub47Array7209[key].anObject8068).currentAnimation.update(-1);
+				((Entity) client.aNode_Sub47Array7209[key].anObject8068).currentAnimations = null;
+				((Entity) client.aNode_Sub47Array7209[key].anObject8068).currentAnimation.update(-1);
 			}
 			context.currentPacket = null;
 			return true;
@@ -2361,7 +2361,7 @@ public class PacketDecoder {
 			if (client.aClass465_7414 != null) {
 				Node_Sub29 class282_sub29_12 = (Node_Sub29) client.aClass465_7414.get((long) (Class272.UPDATE_ZONE_PLANE << 28 | i_6 << 14 | i_8));
 				if (class282_sub29_12 != null) {
-					for (GroundItem class282_sub34_13 = (GroundItem) class282_sub29_12.aClass482_7708.head(); class282_sub34_13 != null; class282_sub34_13 = (GroundItem) class282_sub29_12.aClass482_7708.next(1296718058)) {
+					for (GroundItemNode class282_sub34_13 = (GroundItemNode) class282_sub29_12.aClass482_7708.head(); class282_sub34_13 != null; class282_sub34_13 = (GroundItemNode) class282_sub29_12.aClass482_7708.next(1296718058)) {
 						if ((i_9 & 0x7fff) == class282_sub34_13.id && i_10 == class282_sub34_13.amount) {
 							class282_sub34_13.remove();
 							class282_sub34_13.amount = i_11;
@@ -2470,7 +2470,7 @@ public class PacketDecoder {
 			if (i_3 != client.myPlayerIndex) {
 				boolean bool_40 = i_8 >= 0 && i_6 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_6 < IndexLoaders.MAP_REGION_DECODER.getSizeY();
 				if (bool_40 || IndexLoaders.MAP_REGION_DECODER.method4419(-1899363566).method4401()) {
-					Class353.method6209(Class272.UPDATE_ZONE_PLANE, i_9, i_7, new GroundItem(i_11, i_10));
+					Class353.method6209(Class272.UPDATE_ZONE_PLANE, i_9, i_7, new GroundItemNode(i_11, i_10));
 					if (bool_40) {
 						Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, i_8, i_6);
 					}
@@ -2497,7 +2497,7 @@ public class PacketDecoder {
 			int i_9 = buffer.readUnsignedShortLE128();
 			Node_Sub29 class282_sub29_39 = (Node_Sub29) client.aClass465_7414.get((long) (Class272.UPDATE_ZONE_PLANE << 28 | i_6 << 14 | i_8));
 			if (class282_sub29_39 != null) {
-				for (GroundItem class282_sub34_26 = (GroundItem) class282_sub29_39.aClass482_7708.head(); class282_sub34_26 != null; class282_sub34_26 = (GroundItem) class282_sub29_39.aClass482_7708.next(715558625)) {
+				for (GroundItemNode class282_sub34_26 = (GroundItemNode) class282_sub29_39.aClass482_7708.head(); class282_sub34_26 != null; class282_sub34_26 = (GroundItemNode) class282_sub29_39.aClass482_7708.next(715558625)) {
 					if ((i_9 & 0x7fff) == class282_sub34_26.id) {
 						class282_sub34_26.remove();
 						break;
@@ -2625,7 +2625,7 @@ public class PacketDecoder {
 			int x = localX + coordgrid_31.x;
 			boolean bool_36 = localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY();
 			if (bool_36 || IndexLoaders.MAP_REGION_DECODER.method4419(-2008774639).method4401()) {
-				Class353.method6209(Class272.UPDATE_ZONE_PLANE, x, y, new GroundItem(id, amount));
+				Class353.method6209(Class272.UPDATE_ZONE_PLANE, x, y, new GroundItemNode(id, amount));
 				if (bool_36) {
 					Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, localX, localY);
 				}

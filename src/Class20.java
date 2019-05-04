@@ -93,7 +93,7 @@ public class Class20 {
 		}
 	}
 
-	public static void animate(Animable animable, int[] animationIds, int speed, boolean bool_3) {
+	public static void animate(Entity animable, int[] animationIds, int speed, boolean bool_3) {
 		boolean bool_5;
 		int i_6;
 		if (animable.currentAnimations != null) {

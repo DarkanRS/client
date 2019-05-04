@@ -35,7 +35,7 @@ public class NPCIndexLoader {
 				bytes_10 = this.aClass317_4839.getFile(SharedConfigsType.NPCS.containerId(i_1), SharedConfigsType.NPCS.fileId(i_1));
 			}
 			npcdefinitions_3 = new NPCDefinitions();
-			npcdefinitions_3.anInt4856 = i_1;
+			npcdefinitions_3.type = i_1;
 			npcdefinitions_3.aClass406_4855 = this;
 			npcdefinitions_3.options = (String[]) this.aStringArray4840.clone();
 			if (bytes_10 != null) {

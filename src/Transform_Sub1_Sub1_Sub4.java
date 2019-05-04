@@ -19,7 +19,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			this.method15930(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, (byte) 22);
 			Class285 class285_4 = Class470.method7824(false, (byte) -71);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10409 != null) {
 				Class151 class151_5 = this.aClass539_10409.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -79,7 +79,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			this.method15930(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, (byte) 81);
 			Class285 class285_4 = Class470.method7824(false, (byte) -13);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10409 != null) {
 				Class151 class151_5 = this.aClass539_10409.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -189,7 +189,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			this.method15930(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, (byte) 3);
 			Class285 class285_4 = Class470.method7824(false, (byte) -9);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10409 != null) {
 				Class151 class151_5 = this.aClass539_10409.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -214,7 +214,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_4 = this.method11168();
 			this.method15930(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, (byte) 66);
 			Class285 class285_5 = Class470.method7824(false, (byte) -116);
-			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10409 != null) {
 				Class151 class151_6 = this.aClass539_10409.method11517();
 				graphicalrenderer_1.method8456(class151_6);

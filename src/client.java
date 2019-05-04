@@ -929,16 +929,16 @@ public final class client extends Engine {
 				if (i_3 < i_0) {
 					obj_4 = players[ints_1[i_3]];
 				} else {
-					obj_4 = (Animable) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_3 - i_0])).anObject8068;
+					obj_4 = (Entity) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_3 - i_0])).anObject8068;
 				}
 
-				if (((Animable) obj_4).drawPriority < 0) {
+				if (((Entity) obj_4).drawPriority < 0) {
 					continue;
 				}
 			}
 
-			int i_7 = ((Animable) obj_4).getSize();
-			Vector3 vector3_6 = ((Animable) obj_4).method11166().aClass385_3595;
+			int i_7 = ((Entity) obj_4).getSize();
+			Vector3 vector3_6 = ((Entity) obj_4).method11166().aClass385_3595;
 			if ((i_7 & 0x1) == 0) {
 				if (((int) vector3_6.x & 0x1ff) == 0 && ((int) vector3_6.z & 0x1ff) == 0) {
 					continue;
@@ -947,7 +947,7 @@ public final class client extends Engine {
 				continue;
 			}
 
-			((Animable) obj_4).method11172(vector3_6.x, (float) Class504.method8389((int) vector3_6.x, (int) vector3_6.z, ((Animable) obj_4).plane, (byte) 71), vector3_6.z);
+			((Entity) obj_4).method11172(vector3_6.x, (float) Class504.method8389((int) vector3_6.x, (int) vector3_6.z, ((Entity) obj_4).plane, (byte) 71), vector3_6.z);
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397((Transform_Sub1_Sub1) obj_4, true, -622341859);
 		}
 
@@ -1451,16 +1451,16 @@ public final class client extends Engine {
 				if (i_6 < i_1) {
 					obj_7 = players[ints_2[i_6]];
 				} else {
-					obj_7 = (Animable) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
+					obj_7 = (Entity) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 				}
 
-				if (i_0 != ((Animable) obj_7).plane || ((Animable) obj_7).drawPriority < 0) {
+				if (i_0 != ((Entity) obj_7).plane || ((Entity) obj_7).drawPriority < 0) {
 					continue;
 				}
 			}
 
-			int i_17 = ((Animable) obj_7).getSize();
-			Vector3 vector3_9 = ((Animable) obj_7).method11166().aClass385_3595;
+			int i_17 = ((Entity) obj_7).getSize();
+			Vector3 vector3_9 = ((Entity) obj_7).method11166().aClass385_3595;
 			if ((i_17 & 0x1) == 0) {
 				if (((int) vector3_9.x & 0x1ff) != 0 || ((int) vector3_9.z & 0x1ff) != 0) {
 					continue;
@@ -1474,10 +1474,10 @@ public final class client extends Engine {
 			if (i_17 == 1) {
 				i_10 = (int) vector3_9.x >> 9;
 				i_11 = (int) vector3_9.z >> 9;
-				if (((Animable) obj_7).drawPriority > ints_3[i_10][i_11]) {
-					ints_3[i_10][i_11] = ((Animable) obj_7).drawPriority;
+				if (((Entity) obj_7).drawPriority > ints_3[i_10][i_11]) {
+					ints_3[i_10][i_11] = ((Entity) obj_7).drawPriority;
 					ints_4[i_10][i_11] = 1;
-				} else if (ints_3[i_10][i_11] == ((Animable) obj_7).drawPriority) {
+				} else if (ints_3[i_10][i_11] == ((Entity) obj_7).drawPriority) {
 					++ints_4[i_10][i_11];
 				}
 			} else {
@@ -1489,10 +1489,10 @@ public final class client extends Engine {
 
 				for (int i_15 = i_11; i_15 <= i_13; i_15++) {
 					for (int i_16 = i_12; i_16 <= i_14; i_16++) {
-						if (((Animable) obj_7).drawPriority > ints_3[i_15][i_16]) {
-							ints_3[i_15][i_16] = ((Animable) obj_7).drawPriority;
+						if (((Entity) obj_7).drawPriority > ints_3[i_15][i_16]) {
+							ints_3[i_15][i_16] = ((Entity) obj_7).drawPriority;
 							ints_4[i_15][i_16] = 1;
-						} else if (ints_3[i_15][i_16] == ((Animable) obj_7).drawPriority) {
+						} else if (ints_3[i_15][i_16] == ((Entity) obj_7).drawPriority) {
 							++ints_4[i_15][i_16];
 						}
 					}
@@ -1527,29 +1527,29 @@ public final class client extends Engine {
 				if (i_6 < i_1) {
 					obj_7 = players[ints_2[i_6]];
 				} else {
-					obj_7 = (Animable) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
+					obj_7 = (Entity) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_6 - i_1])).anObject8068;
 				}
 
-				if (i_0 != ((Animable) obj_7).plane) {
+				if (i_0 != ((Entity) obj_7).plane) {
 					continue;
 				}
 
-				if (((Animable) obj_7).drawPriority < 0) {
-					((Animable) obj_7).aBool10318 = false;
+				if (((Entity) obj_7).drawPriority < 0) {
+					((Entity) obj_7).aBool10318 = false;
 					continue;
 				}
 			}
 
-			((Animable) obj_7).anInt10319 = 0;
-			int i_17 = ((Animable) obj_7).getSize();
-			Vector3 vector3_9 = ((Animable) obj_7).method11166().aClass385_3595;
+			((Entity) obj_7).anInt10319 = 0;
+			int i_17 = ((Entity) obj_7).getSize();
+			Vector3 vector3_9 = ((Entity) obj_7).method11166().aClass385_3595;
 			if ((i_17 & 0x1) == 0) {
 				if (((int) vector3_9.x & 0x1ff) != 0 || ((int) vector3_9.z & 0x1ff) != 0) {
-					((Animable) obj_7).aBool10318 = false;
+					((Entity) obj_7).aBool10318 = false;
 					continue;
 				}
 			} else if (((int) vector3_9.x & 0x1ff) != 256 || ((int) vector3_9.z & 0x1ff) != 256) {
-				((Animable) obj_7).aBool10318 = false;
+				((Entity) obj_7).aBool10318 = false;
 				continue;
 			}
 
@@ -1559,14 +1559,14 @@ public final class client extends Engine {
 				if (i_17 == 1) {
 					i_10 = (int) vector3_9.x >> 9;
 					i_11 = (int) vector3_9.z >> 9;
-					if (ints_3[i_10][i_11] != ((Animable) obj_7).drawPriority) {
-						((Animable) obj_7).aBool10318 = true;
+					if (ints_3[i_10][i_11] != ((Entity) obj_7).drawPriority) {
+						((Entity) obj_7).aBool10318 = true;
 						continue;
 					}
 
 					if (ints_4[i_10][i_11] > 1) {
 						--ints_4[i_10][i_11];
-						((Animable) obj_7).aBool10318 = true;
+						((Entity) obj_7).aBool10318 = true;
 						continue;
 					}
 				} else {
@@ -1575,23 +1575,23 @@ public final class client extends Engine {
 					int i_12 = (int) vector3_9.z - i_10 >> 9;
 					int i_13 = i_10 + (int) vector3_9.x >> 9;
 					int i_14 = i_10 + (int) vector3_9.z >> 9;
-					if (!Class81.method1453(ints_3, ints_4, ((Animable) obj_7).drawPriority, i_11, i_12, i_13, i_14)) {
+					if (!Class81.method1453(ints_3, ints_4, ((Entity) obj_7).drawPriority, i_11, i_12, i_13, i_14)) {
 						for (int i_15 = i_11; i_15 <= i_13; i_15++) {
 							for (int i_16 = i_12; i_16 <= i_14; i_16++) {
-								if (ints_3[i_15][i_16] == ((Animable) obj_7).drawPriority) {
+								if (ints_3[i_15][i_16] == ((Entity) obj_7).drawPriority) {
 									--ints_4[i_15][i_16];
 								}
 							}
 						}
 
-						((Animable) obj_7).aBool10318 = true;
+						((Entity) obj_7).aBool10318 = true;
 						continue;
 					}
 				}
 			}
 
-			((Animable) obj_7).aBool10318 = false;
-			((Animable) obj_7).method11172(vector3_9.x, (float) Class504.method8389((int) vector3_9.x, (int) vector3_9.z, ((Animable) obj_7).plane, (byte) 48), vector3_9.z);
+			((Entity) obj_7).aBool10318 = false;
+			((Entity) obj_7).method11172(vector3_9.x, (float) Class504.method8389((int) vector3_9.x, (int) vector3_9.z, ((Entity) obj_7).plane, (byte) 48), vector3_9.z);
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397((Transform_Sub1_Sub1) obj_7, true, -1200990157);
 		}
 
@@ -1761,7 +1761,7 @@ public final class client extends Engine {
 				Vector3 vector3_3 = npc_1.method11166().aClass385_3595;
 				int i_4 = (int) vector3_3.x - i_2 >> 9;
 				int i_5 = (int) vector3_3.z - i_2 >> 9;
-				Animable animable_6 = Class155.method2640(npc_1.plane, i_4, i_5);
+				Entity animable_6 = Class155.method2640(npc_1.plane, i_4, i_5);
 				if (animable_6 != null) {
 					int i_7 = animable_6.index;
 					if (animable_6 instanceof NPC) {
@@ -1783,7 +1783,7 @@ public final class client extends Engine {
 			}
 		}
 
-		RouteStrategy_Sub5.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1, (byte) 101);
+		RouteStrategy_Sub5.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1);
 	}
 
 	final void method4738() {
@@ -2113,8 +2113,8 @@ public final class client extends Engine {
 										i_52 = NPC_UPDATE_INDICES[i_27];
 										StringNode class282_sub47_56 = (StringNode) NPCS.get((long) i_52);
 										if (class282_sub47_56 != null) {
-											AccountCreationStage.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.anInt4856, (Animable) class282_sub47_56.anObject8068, i_52, 1492205273);
-											((Animable) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10, (byte) 77);
+											AccountCreationStage.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.type, (Entity) class282_sub47_56.anObject8068, i_52, 1492205273);
+											((Entity) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10, (byte) 77);
 										}
 									}
 									continue;

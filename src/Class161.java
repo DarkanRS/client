@@ -10,7 +10,7 @@ public class Class161 {
 
 	public Animation animation;
 
-	Class161(Animable animable_1) {
+	Class161(Entity animable_1) {
 		this.animation = new Animation_Sub2(animable_1);
 	}
 

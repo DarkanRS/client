@@ -16,7 +16,7 @@ public class Class105 {
 
 	static void method1804(int i_0, String string_1, String string_2) {
 		if (client.outputContext != null) {
-			TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.aClass379_4533, client.outputContext.isaac);
+			TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.BUG_REPORT, client.outputContext.isaac);
 			tcpmessage_4.buffer.writeShort(1 + Utils.stringLengthPlus2(string_1) + Utils.stringLengthPlus2(string_2));
 			tcpmessage_4.buffer.writeByte(i_0);
 			tcpmessage_4.buffer.writeJagString(string_2);

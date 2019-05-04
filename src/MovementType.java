@@ -31,7 +31,7 @@ public class MovementType implements Identifiable {
         this.id = b_1;
     }
 
-    static final void method4281(Animable animable_0) {
+    static final void method4281(Entity animable_0) {
         int i_2 = animable_0.anInt10342 - client.cycles;
         int i_3 = animable_0.anInt10326 * 512 + animable_0.getSize() * 256;
         int i_4 = animable_0.anInt10328 * 512 + animable_0.getSize() * 256;

@@ -53,7 +53,7 @@ public class Class363 {
         IsaacCipher.method7268(1036013303);
     }
 
-    static final void method6287(Animable animable_0, boolean bool_1, int i_2) {
+    static final void method6287(Entity animable_0, boolean bool_1, int i_2) {
         int moveType = MovementType.STATIONARY.id;
         int i_4 = 0;
         if (animable_0.anInt10342 > client.cycles) {

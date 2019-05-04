@@ -2920,34 +2920,34 @@ public class CS2Interpreter {
 		case instr6916:
 			method4830(exec);
 			break;
-		case instr6917:
+		case NPC_TYPE:
 			method2103(exec);
 			break;
-		case instr6918:
+		case GET_LOC_SCREEN_POSITION:
 			method5692(exec);
 			break;
-		case instr6102:
+		case GET_OBJ_SCREEN_POSITION:
 			method4137(exec);
 			break;
-		case instr6126:
+		case GET_LOC_OVERLAY_HEIGHT:
 			method6042(exec);
 			break;
-		case instr6921:
+		case GET_OBJ_OVERLAY_HEIGHT:
 			method3769(exec);
 			break;
-		case instr6000:
+		case GET_OBJECT_BOUNDING_BOX:
 			method7332(exec);
 			break;
-		case instr6751:
+		case GET_ITEM_BOUNDING_BOX:
 			method798(exec);
 			break;
-		case instr6924:
+		case GET_ENTITY_BOUNDING_BOX:
 			method3067(exec);
 			break;
-		case instr6728:
+		case BUG_REPORT:
 			method5298(exec);
 			break;
-		case instr6021:
+		case ARRAY_SORT:
 			method8700(exec);
 			break;
 		case QUEST_GETNAME:
@@ -3236,7 +3236,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2867(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.animable.method12997();
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentEntity.method12997();
 	}
 
 	static final void method2868(CS2Executor executor) {
@@ -3455,14 +3455,14 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(2);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
-		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -463581846);
+		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
+		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -463581846);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -76404824);
 		class184_2.queuePacket(tcpmessage_3);
 	}
 
 	static final void method471(CS2Executor executor) {
-		executor.intStack[executor.intStackPtr - 1] = executor.aNode_Sub4_7011.method12095()[executor.intStack[executor.intStackPtr - 1]];
+		executor.intStack[executor.intStackPtr - 1] = executor.clanChannel.method12095()[executor.intStack[executor.intStackPtr - 1]];
 	}
 
 	static final void multiply(CS2Executor executor) {
@@ -3549,7 +3549,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6281(CS2Executor executor) {
-		Class163 class163_2 = executor.animable.method15811(767923452);
+		Class163 class163_2 = executor.currentEntity.method15811(767923452);
 		if (class163_2 == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
@@ -3841,7 +3841,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method13410(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aNode_Sub4_7011.numPlayers;
+		executor.intStack[++executor.intStackPtr - 1] = executor.clanChannel.numPlayers;
 	}
 
 	static final void method12925(CS2Executor executor) {
@@ -4324,7 +4324,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3067(CS2Executor executor) {
-		method6018(executor.animable, executor, 1557948152);
+		getBoundingBox(executor.currentEntity, executor);
 	}
 
 	static final void method3068(CS2Executor executor) {
@@ -4769,7 +4769,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5692(CS2Executor executor) {
-		AnimationDefinitions.method11148((Transform_Sub1) executor.anInterface12_7013, executor.intStack[--executor.intStackPtr], -253954252);
+		AnimationDefinitions.method11148((Transform_Sub1) executor.currentSceneObject, executor.intStack[--executor.intStackPtr], -253954252);
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[0];
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[1];
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[2];
@@ -4791,7 +4791,7 @@ public class CS2Interpreter {
 
 	static final void method3169(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aNode_Sub4_7011.players[i_2].world;
+		executor.intStack[++executor.intStackPtr - 1] = executor.clanChannel.players[i_2].world;
 	}
 
 	static final void method4161(CS2Executor executor) {
@@ -4804,7 +4804,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14644(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aNode_Sub4_7011.minRankToKick;
+		executor.intStack[++executor.intStackPtr - 1] = executor.clanChannel.minRankToKick;
 	}
 
 	static final void method12586(CS2Executor executor) {
@@ -4812,7 +4812,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
-		method2738(executor.animable.inter, i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor);
+		method2738(executor.currentEntity.inter, i_2 & 0xffff, i_3, i_4, executor.aBool7022, executor);
 	}
 
 	static void method12587(CS2Executor executor) {
@@ -5004,8 +5004,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(1);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
-		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -245952501);
+		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
+		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -245952501);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, 1096626300);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -5165,7 +5165,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2103(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).definitions.anInt4856;
+		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.currentEntity).definitions.type;
 	}
 
 	static final void loadVarc(CS2Executor executor) {
@@ -5377,8 +5377,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(0);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
-		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -1259900340);
+		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
+		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -1259900340);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, 1119414501);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -5543,7 +5543,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method300(CS2Executor executor) {
-		NPC npc_2 = (NPC) executor.animable;
+		NPC npc_2 = (NPC) executor.currentEntity;
 		boolean bool_3 = false;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.transformTo != null) {
@@ -5781,7 +5781,7 @@ public class CS2Interpreter {
 		} else {
 			underlaydefinition_3 = executor.hookedInterface1;
 		}
-		executor.intStack[++executor.intStackPtr - 1] = underlaydefinition_3.method8766(executor.animable.inter, i_2, -1) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = underlaydefinition_3.method8766(executor.currentEntity.inter, i_2, -1) ? 1 : 0;
 	}
 
 	static void method2953(CS2Executor executor) {
@@ -5865,7 +5865,7 @@ public class CS2Interpreter {
 
 	static final void getVarpOld(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = ((Player) executor.animable).aClass155_10561.method2626(i_2, (byte) 56);
+		executor.intStack[++executor.intStackPtr - 1] = ((Player) executor.currentEntity).aClass155_10561.method2626(i_2, (byte) 56);
 	}
 
 	static final void method8343(CS2Executor executor) {
@@ -6053,7 +6053,7 @@ public class CS2Interpreter {
 	static final void method13046(CS2Executor executor) {
 		if (Class113.CLAN_CHANNEL != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aNode_Sub4_7011 = Class113.CLAN_CHANNEL;
+			executor.clanChannel = Class113.CLAN_CHANNEL;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -6179,7 +6179,7 @@ public class CS2Interpreter {
 
 	static final void method4968(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Preference_Sub19.method12790(executor.aNode_Sub4_7011 == Class113.CLAN_CHANNEL, i_2);
+		Preference_Sub19.method12790(executor.clanChannel == Class113.CLAN_CHANNEL, i_2);
 	}
 
 	static final void method4970(CS2Executor executor) {
@@ -6444,7 +6444,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3769(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aTransform_Sub1_Sub2_Sub1_7014.method12997();
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentGroundItem.method12997();
 	}
 
 	static final void method14491(CS2Executor executor) {
@@ -6589,7 +6589,7 @@ public class CS2Interpreter {
 
 	static final void getVarnbitOld(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).varns.getVarnBit(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.currentEntity).varns.getVarnBit(i_2);
 	}
 
 	static final void method2096(CS2Executor executor) {
@@ -6622,7 +6622,7 @@ public class CS2Interpreter {
 
 	static final void method2639(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		NPC npc_3 = (NPC) executor.animable;
+		NPC npc_3 = (NPC) executor.currentEntity;
 		int i_4 = npc_3.method16163(i_2);
 		int i_5 = npc_3.method16169(i_2);
 		executor.intStack[++executor.intStackPtr - 1] = i_4;
@@ -6654,7 +6654,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4137(CS2Executor executor) {
-		AnimationDefinitions.method11148(executor.aTransform_Sub1_Sub2_Sub1_7014, executor.intStack[--executor.intStackPtr], -1315599355);
+		AnimationDefinitions.method11148(executor.currentGroundItem, executor.intStack[--executor.intStackPtr], -1315599355);
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[0];
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[1];
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[2];
@@ -6947,7 +6947,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.aClass346_7009.anIntArray4046[i_2] = i_3;
+		executor.currentQuickChatMessage.anIntArray4046[i_2] = i_3;
 	}
 
 	static final void storeInt(CS2Executor executor) {
@@ -7347,7 +7347,7 @@ public class CS2Interpreter {
 	static final void method1501(CS2Executor executor) {
 		if (Class202_Sub1.GUEST_CLAN_CHANNEL != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.aNode_Sub4_7011 = Class202_Sub1.GUEST_CLAN_CHANNEL;
+			executor.clanChannel = Class202_Sub1.GUEST_CLAN_CHANNEL;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -7397,7 +7397,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method543(CS2Executor executor) {
-		executor.animable.method15813(executor.intStack[--executor.intStackPtr]);
+		executor.currentEntity.method15813(executor.intStack[--executor.intStackPtr]);
 	}
 
 	static final void setBit(CS2Executor executor) {
@@ -7502,7 +7502,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7332(CS2Executor executor) {
-		method6018((Transform_Sub1) executor.anInterface12_7013, executor, 1876481461);
+		getBoundingBox((Transform_Sub1) executor.currentSceneObject, executor);
 	}
 
 	static final void method7334(CS2Executor executor) {
@@ -7588,7 +7588,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6190(CS2Executor executor) {
-		AnimationDefinitions.method11148(executor.animable, executor.intStack[--executor.intStackPtr], 1271800838);
+		AnimationDefinitions.method11148(executor.currentEntity, executor.intStack[--executor.intStackPtr], 1271800838);
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[0];
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[1];
 		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloatArray7292[2];
@@ -7604,7 +7604,7 @@ public class CS2Interpreter {
 		} else {
 			underlaydefinition_4 = executor.hookedInterface1;
 		}
-		executor.intStack[++executor.intStackPtr - 1] = underlaydefinition_4.method8766(executor.animable.inter, i_2, i_3) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = underlaydefinition_4.method8766(executor.currentEntity.inter, i_2, i_3) ? 1 : 0;
 	}
 
 	static final void method5816(CS2Executor executor) {
@@ -7666,7 +7666,7 @@ public class CS2Interpreter {
 
 	static final void getVarnOld(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.animable).varns.getVarn(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = ((NPC) executor.currentEntity).varns.getVarn(i_2);
 	}
 
 	static final void loadLong(CS2Executor executor) {
@@ -7772,7 +7772,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6730(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = ((Player) executor.animable).getUsernameWithTitle();
+		executor.stringStack[++executor.stringStackPtr - 1] = ((Player) executor.currentEntity).getUsernameWithTitle();
 	}
 
 	static final void getEnumSize(CS2Executor executor) {
@@ -8132,7 +8132,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3043(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aNode_Sub4_7011.method12098((String) executor.stringStack[--executor.stringStackPtr]);
+		executor.intStack[++executor.intStackPtr - 1] = executor.clanChannel.method12098((String) executor.stringStack[--executor.stringStackPtr]);
 	}
 
 	static final void method3713(CS2Executor executor) {
@@ -8250,7 +8250,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3021(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.aNode_Sub4_7011.guestsTalk;
+		executor.intStack[++executor.intStackPtr - 1] = executor.clanChannel.guestsTalk;
 	}
 
 	static final void method7675(CS2Executor executor) {
@@ -8308,7 +8308,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method811(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aNode_Sub4_7011.clanName;
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.clanChannel.clanName;
 	}
 
 	static final void method814(CS2Executor executor) {
@@ -8363,7 +8363,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3344(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7162 == executor.animable.method15794() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = client.anInt7162 == executor.currentEntity.method15794() ? 1 : 0;
 	}
 
 	static final void method3346(CS2Executor executor) {
@@ -8491,7 +8491,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		executor.aClass346_7009.anIntArray4046[i_2] = i_3;
+		executor.currentQuickChatMessage.anIntArray4046[i_2] = i_3;
 	}
 
 	static final void method4633(CS2Executor executor) {
@@ -8602,8 +8602,8 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(3);
-		tcpmessage_3.buffer.writeShort(executor.aClass346_7009.qcMessageId);
-		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.aClass346_7009.anIntArray4046, -1204920325);
+		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
+		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -1204920325);
 		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -2062129936);
 		class184_2.queuePacket(tcpmessage_3);
 	}
@@ -8851,7 +8851,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method798(CS2Executor executor) {
-		method6018(executor.aTransform_Sub1_Sub2_Sub1_7014, executor, 1907071092);
+		getBoundingBox(executor.currentGroundItem, executor);
 	}
 
 	static final void method7420(CS2Executor executor) {
@@ -8884,7 +8884,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method261(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = executor.animable.loadedInterfaceId;
+		executor.intStack[++executor.intStackPtr - 1] = executor.currentEntity.loadedInterfaceId;
 	}
 
 	static final void method11612(CS2Executor executor) {
@@ -9064,7 +9064,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method12915(CS2Executor executor) {
-		NPC npc_2 = (NPC) executor.animable;
+		NPC npc_2 = (NPC) executor.currentEntity;
 		String string_3 = npc_2.modifiedName;
 		NPCDefinitions npcdefinitions_4 = npc_2.definitions;
 		if (npcdefinitions_4.transformTo != null) {
@@ -9256,7 +9256,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3740(CS2Executor executor) {
-		NPC npc_2 = (NPC) executor.animable;
+		NPC npc_2 = (NPC) executor.currentEntity;
 		NPCDefinitions npcdefinitions_3 = npc_2.definitions;
 		if (npcdefinitions_3.transformTo != null) {
 			npcdefinitions_3 = npcdefinitions_3.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
@@ -9303,7 +9303,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6042(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = ((Transform_Sub1) executor.anInterface12_7013).method12997();
+		executor.intStack[++executor.intStackPtr - 1] = ((Transform_Sub1) executor.currentSceneObject).method12997();
 	}
 
 	static final void method6043(CS2Executor executor) {
@@ -9360,8 +9360,8 @@ public class CS2Interpreter {
 		tcpmessage_4.buffer.writeByte(0);
 		int i_5 = tcpmessage_4.buffer.index;
 		tcpmessage_4.buffer.writeString(string_2);
-		tcpmessage_4.buffer.writeShort(executor.aClass346_7009.qcMessageId);
-		executor.aClass346_7009.qcMessageDefs.method14896(tcpmessage_4.buffer, executor.aClass346_7009.anIntArray4046, -1485943767);
+		tcpmessage_4.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
+		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_4.buffer, executor.currentQuickChatMessage.anIntArray4046, -1485943767);
 		tcpmessage_4.buffer.method13061(tcpmessage_4.buffer.index - i_5, 460016164);
 		class184_3.queuePacket(tcpmessage_4);
 	}
@@ -9469,7 +9469,7 @@ public class CS2Interpreter {
 
 	static final void method6677(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = executor.aNode_Sub4_7011.players[i_2].rank;
+		executor.intStack[++executor.intStackPtr - 1] = executor.clanChannel.players[i_2].rank;
 	}
 
 	static final void method6678(CS2Executor executor) {
@@ -9830,15 +9830,15 @@ public class CS2Interpreter {
 	}
 
 	static final void method11154(CS2Executor executor) {
-		executor.aClass346_7009 = new QuickChatMessage();
-		executor.aClass346_7009.qcMessageId = executor.intStack[--executor.intStackPtr];
-		executor.aClass346_7009.qcMessageDefs = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(executor.aClass346_7009.qcMessageId);
-		executor.aClass346_7009.anIntArray4046 = new int[executor.aClass346_7009.qcMessageDefs.method14916(388398854)];
+		executor.currentQuickChatMessage = new QuickChatMessage();
+		executor.currentQuickChatMessage.qcMessageId = executor.intStack[--executor.intStackPtr];
+		executor.currentQuickChatMessage.qcMessageDefs = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(executor.currentQuickChatMessage.qcMessageId);
+		executor.currentQuickChatMessage.anIntArray4046 = new int[executor.currentQuickChatMessage.qcMessageDefs.method14916(388398854)];
 	}
 
 	static final void method1979(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.stringStack[++executor.stringStackPtr - 1] = executor.aNode_Sub4_7011.players[i_2].name;
+		executor.stringStack[++executor.stringStackPtr - 1] = executor.clanChannel.players[i_2].name;
 	}
 
 	static final void method7744(CS2Executor executor) {
@@ -9889,7 +9889,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4830(CS2Executor executor) {
-		IComponentDefinitions icomponentdefinitions_2 = executor.animable.inter.getComponent(executor.intStack[--executor.intStackPtr]);
+		IComponentDefinitions icomponentdefinitions_2 = executor.currentEntity.inter.getComponent(executor.intStack[--executor.intStackPtr]);
 		icomponentdefinitions_2.aClass118Array1438 = null;
 		icomponentdefinitions_2.aClass118Array1439 = null;
 		Class109.redrawComponent(icomponentdefinitions_2);
@@ -10211,7 +10211,7 @@ public class CS2Interpreter {
 
 	static final void getVarpbitOld(CS2Executor executor) {
 		int i_2 = executor.intOpValues[executor.instrPtr];
-		executor.intStack[++executor.intStackPtr - 1] = ((Player) executor.animable).aClass155_10561.method2627(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = ((Player) executor.currentEntity).aClass155_10561.method2627(i_2);
 	}
 
 	static final void strAppendNum(CS2Executor executor) {
@@ -10478,7 +10478,7 @@ public class CS2Interpreter {
 		} else if (i_3 == i_4) {
 			throw new RuntimeException();
 		} else {
-			RouteStrategy_Sub5.method13047(executor.globalArrays[i_3], executor.globalArrays[i_4], 0, i_2 - 1, (byte) 46);
+			RouteStrategy_Sub5.method13047(executor.globalArrays[i_3], executor.globalArrays[i_4], 0, i_2 - 1);
 		}
 	}
 
@@ -10672,55 +10672,55 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method6018(Transform_Sub1 class521_sub1_0, CS2Executor cs2executor_1, int i_2) {
+	static final void getBoundingBox(Transform_Sub1 transform, CS2Executor cs2executor_1) {
 		boolean bool_3 = false;
-		int i_4 = 0;
-		int i_5 = 0;
-		int i_6 = 0;
-		int i_7 = 0;
-		if (class521_sub1_0.aEntityNode_Sub5Array7965 != null) {
-			for (int i_8 = 0; i_8 < class521_sub1_0.aEntityNode_Sub5Array7965.length; i_8++) {
-				EntityNode_Sub5 class275_sub5_9 = class521_sub1_0.aEntityNode_Sub5Array7965[i_8];
-				if (class275_sub5_9.aBool7849) {
-					int i_10;
-					int i_11;
-					if (class275_sub5_9.anInt7850 < class275_sub5_9.anInt7847) {
-						i_10 = class275_sub5_9.anInt7850 - class275_sub5_9.anInt7851;
-						i_11 = class275_sub5_9.anInt7851 + class275_sub5_9.anInt7847;
+		int minX = 0;
+		int minY = 0;
+		int maxX = 0;
+		int maxY = 0;
+		if (transform.boundingBoxPolygons != null) {
+			for (int i_8 = 0; i_8 < transform.boundingBoxPolygons.length; i_8++) {
+				EntityNode_Sub5 node = transform.boundingBoxPolygons[i_8];
+				if (node.aBool7849) {
+					int left;
+					int right;
+					if (node.anInt7850 < node.anInt7847) {
+						left = node.anInt7850 - node.anInt7851;
+						right = node.anInt7851 + node.anInt7847;
 					} else {
-						i_10 = class275_sub5_9.anInt7847 - class275_sub5_9.anInt7851;
-						i_11 = class275_sub5_9.anInt7850 + class275_sub5_9.anInt7851;
+						left = node.anInt7847 - node.anInt7851;
+						right = node.anInt7850 + node.anInt7851;
 					}
-					int i_12;
-					int i_13;
-					if (class275_sub5_9.anInt7846 < class275_sub5_9.anInt7848) {
-						i_12 = class275_sub5_9.anInt7846 - class275_sub5_9.anInt7851;
-						i_13 = class275_sub5_9.anInt7851 + class275_sub5_9.anInt7848;
+					int bottom;
+					int top;
+					if (node.anInt7846 < node.anInt7848) {
+						bottom = node.anInt7846 - node.anInt7851;
+						top = node.anInt7851 + node.anInt7848;
 					} else {
-						i_12 = class275_sub5_9.anInt7848 - class275_sub5_9.anInt7851;
-						i_13 = class275_sub5_9.anInt7846 + class275_sub5_9.anInt7851;
+						bottom = node.anInt7848 - node.anInt7851;
+						top = node.anInt7846 + node.anInt7851;
 					}
-					if (!bool_3 || i_10 < i_4) {
-						i_4 = i_10;
+					if (!bool_3 || left < minX) {
+						minX = left;
 					}
-					if (!bool_3 || i_12 < i_5) {
-						i_5 = i_12;
+					if (!bool_3 || bottom < minY) {
+						minY = bottom;
 					}
-					if (!bool_3 || i_11 > i_6) {
-						i_6 = i_11;
+					if (!bool_3 || right > maxX) {
+						maxX = right;
 					}
-					if (!bool_3 || i_13 > i_7) {
-						i_7 = i_13;
+					if (!bool_3 || top > maxY) {
+						maxY = top;
 					}
 					bool_3 = true;
 				}
 			}
 		}
 		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = bool_3 ? 1 : 0;
-		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_4;
-		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_5;
-		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_6;
-		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = i_7;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = minX;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = minY;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = maxX;
+		cs2executor_1.intStack[++cs2executor_1.intStackPtr - 1] = maxY;
 	}
 
 	static final void method4883(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, CS2Executor cs2executor_3) {

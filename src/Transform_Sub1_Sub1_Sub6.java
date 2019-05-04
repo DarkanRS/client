@@ -117,7 +117,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 		} else {
 			Matrix44Var matrix44var_2 = this.method11168();
 			Class285 class285_3 = Class470.method7824(this.aBool10541, (byte) -109);
-			this.aMeshRasterizer_10535.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10535.method11282(matrix44var_2, this.boundingBoxPolygons[0], 0);
 			return class285_3;
 		}
 	}
@@ -157,7 +157,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 		} else {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Class285 class285_4 = Class470.method7824(this.aBool10541, (byte) -118);
-			this.aMeshRasterizer_10535.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10535.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			return class285_4;
 		}
 	}
@@ -343,7 +343,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 		} else {
 			Matrix44Var matrix44var_2 = this.method11168();
 			Class285 class285_3 = Class470.method7824(this.aBool10541, (byte) 3);
-			this.aMeshRasterizer_10535.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10535.method11282(matrix44var_2, this.boundingBoxPolygons[0], 0);
 			return class285_3;
 		}
 	}
@@ -354,7 +354,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 		} else {
 			Matrix44Var matrix44var_2 = this.method11168();
 			Class285 class285_3 = Class470.method7824(this.aBool10541, (byte) -31);
-			this.aMeshRasterizer_10535.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10535.method11282(matrix44var_2, this.boundingBoxPolygons[0], 0);
 			return class285_3;
 		}
 	}

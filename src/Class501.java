@@ -33,7 +33,7 @@ public class Class501 {
 		VertexNormal.MY_PLAYER = null;
 
 		for (i_1 = 0; i_1 < client.anInt7210; i_1++) {
-			Animable animable_2 = (Animable) client.aNode_Sub47Array7209[i_1].anObject8068;
+			Entity animable_2 = (Entity) client.aNode_Sub47Array7209[i_1].anObject8068;
 			if (animable_2 != null) {
 				animable_2.faceEntity = -1;
 			}

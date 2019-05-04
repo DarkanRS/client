@@ -72,8 +72,8 @@ public final class CutsceneEntity {
 		}
 	}
 
-	public Animable method1342(byte b_1) {
-		return (Animable) (this.npc != null ? this.npc : this.player);
+	public Entity method1342(byte b_1) {
+		return (Entity) (this.npc != null ? this.npc : this.player);
 	}
 
 	CutsceneEntity(RsByteBuffer buffer, int index) {

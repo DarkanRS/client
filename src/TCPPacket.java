@@ -31,7 +31,7 @@ public class TCPPacket extends Node {
 				int i_11 = client.NPC_UPDATE_INDICES[i_10];
 				StringNode class282_sub47_12 = (StringNode) client.NPCS.get((long) i_11);
 				if (class282_sub47_12 != null) {
-					((Animable) class282_sub47_12.anObject8068).method15818(i_0, i_1, i_2, i_3, i_4, i_5, i_6, 1391480104);
+					((Entity) class282_sub47_12.anObject8068).method15818(i_0, i_1, i_2, i_3, i_4, i_5, i_6, 1391480104);
 				}
 			}
 		}

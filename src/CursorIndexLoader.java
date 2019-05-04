@@ -124,11 +124,11 @@ public class CursorIndexLoader {
 				i_17 = i_1 - 1;
 				StringNode class282_sub47_18 = (StringNode) client.NPCS.get((long) i_17);
 				if (class282_sub47_18 != null) {
-					obj_16 = (Animable) class282_sub47_18.anObject8068;
+					obj_16 = (Entity) class282_sub47_18.anObject8068;
 				}
 			}
 			if (obj_16 != null) {
-				BASDefinitions renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs();
+				BASDefinitions renderanimdefs_19 = ((Entity) obj_16).getRenderAnimDefs();
 				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
 					i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
 				}

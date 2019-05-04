@@ -177,7 +177,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 									for (int i_7 = 0; i_7 < Class82.aClass75Array804.length; i_7++) {
 										CutsceneEntity class75_4 = Class82.aClass75Array804[i_7];
 										if (class75_4.initialized) {
-											Animable animable_5 = class75_4.method1342((byte) 112);
+											Entity animable_5 = class75_4.method1342((byte) 112);
 											Class363.method6287(animable_5, true, -101184635);
 										}
 									}

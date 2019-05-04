@@ -39,7 +39,7 @@ public class Class357 implements Interface3 {
 			long long_6 = (long) client.NPC_UPDATE_INDICES[i_2];
 			StringNode class282_sub47_5 = (StringNode) client.NPCS.get(long_6);
 			if (class282_sub47_5 != null) {
-				((Animable) class282_sub47_5.anObject8068).method15812(655110500);
+				((Entity) class282_sub47_5.anObject8068).method15812(655110500);
 			}
 		}
 		if (client.anInt7341 == 4) {

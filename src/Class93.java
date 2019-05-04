@@ -20,7 +20,7 @@ public class Class93 {
 	void method1566(CutsceneEntity class75_1, int i_2, int i_3) {
 		int i_4 = this.anIntArray968[0];
 		class75_1.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
-		Animable animable_5 = class75_1.method1342((byte) 51);
+		Entity animable_5 = class75_1.method1342((byte) 51);
 		animable_5.anInt10355 = 0;
 		for (int i_6 = this.anIntArray971.length - 1; i_6 >= 0; --i_6) {
 			int i_7 = this.anIntArray971[i_6];

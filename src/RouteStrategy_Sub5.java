@@ -124,7 +124,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		return i_2 == 3 ? Class93.method1578(long_0, i_2) : Integer.toString(i_4 / 10) + i_4 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_5] + "-" + i_6;
 	}
 
-	public static void method13047(int[] ints_0, int[] ints_1, int i_2, int i_3, byte b_4) {
+	public static void method13047(int[] ints_0, int[] ints_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_5 = (i_3 + i_2) / 2;
 			int i_6 = i_2;
@@ -149,8 +149,8 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 			ints_0[i_6] = i_7;
 			ints_1[i_3] = ints_1[i_6];
 			ints_1[i_6] = i_8;
-			method13047(ints_0, ints_1, i_2, i_6 - 1, (byte) 34);
-			method13047(ints_0, ints_1, i_6 + 1, i_3, (byte) 95);
+			method13047(ints_0, ints_1, i_2, i_6 - 1);
+			method13047(ints_0, ints_1, i_6 + 1, i_3);
 		}
 	}
 }

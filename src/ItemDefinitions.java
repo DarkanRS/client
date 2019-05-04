@@ -873,7 +873,7 @@ public class ItemDefinitions implements Definition {
         this.inventoryOptions[4] = Message.DISCARD.translate(this.loader.language);
     }
 
-    static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+    static final void method7140(Entity animable_0, Entity animable_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         int i_10 = animable_1.method15899(-525246876);
         if (i_10 != -1) {
             NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get((long) i_10);
