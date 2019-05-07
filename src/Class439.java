@@ -24,7 +24,7 @@ public final class Class439 {
 				routestrategy_8 = Class148.method2551(i_0, i_1, sceneobjecttype_7, i_5);
 			}
 		} else {
-			ObjectDefinitions objectdefinitions_9 = IndexLoaders.MAP_REGION_DECODER.method4436(-1792559044).getObjectDefinitions(i_6);
+			ObjectDefinitions objectdefinitions_9 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_6);
 			int i_10;
 			int i_11;
 			if (i_5 != 0 && i_5 != 2) {

@@ -32,17 +32,17 @@ public class Class430 {
 	}
 
 	static void method7221() {
-		Class199_Sub1.anIntArray8044[44] = 71;
-		Class199_Sub1.anIntArray8044[45] = 26;
-		Class199_Sub1.anIntArray8044[46] = 72;
-		Class199_Sub1.anIntArray8044[47] = 73;
-		Class199_Sub1.anIntArray8044[59] = 57;
-		Class199_Sub1.anIntArray8044[61] = 27;
-		Class199_Sub1.anIntArray8044[91] = 42;
-		Class199_Sub1.anIntArray8044[92] = 74;
-		Class199_Sub1.anIntArray8044[93] = 43;
-		Class199_Sub1.anIntArray8044[192] = 28;
-		Class199_Sub1.anIntArray8044[222] = 58;
-		Class199_Sub1.anIntArray8044[520] = 59;
+		CanvasKeyRecorder.anIntArray8044[44] = 71;
+		CanvasKeyRecorder.anIntArray8044[45] = 26;
+		CanvasKeyRecorder.anIntArray8044[46] = 72;
+		CanvasKeyRecorder.anIntArray8044[47] = 73;
+		CanvasKeyRecorder.anIntArray8044[59] = 57;
+		CanvasKeyRecorder.anIntArray8044[61] = 27;
+		CanvasKeyRecorder.anIntArray8044[91] = 42;
+		CanvasKeyRecorder.anIntArray8044[92] = 74;
+		CanvasKeyRecorder.anIntArray8044[93] = 43;
+		CanvasKeyRecorder.anIntArray8044[192] = 28;
+		CanvasKeyRecorder.anIntArray8044[222] = 58;
+		CanvasKeyRecorder.anIntArray8044[520] = 59;
 	}
 }

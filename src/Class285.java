@@ -14,14 +14,14 @@ public class Class285 {
 
 	public boolean method5019(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		int i_5 = this.aTransform_Sub1_3391.method12996();
-		if (this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965 != null) {
-			for (int i_6 = 0; i_6 < this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965.length; i_6++) {
-				this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].anInt7851 <<= i_5;
-				if (this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].method12594(this.aClass284_3393.anInt3387 + i_2, i_3 + this.aClass284_3393.anInt3385) && this.aTransform_Sub1_3391.method12983(graphicalrenderer_1, i_2, i_3)) {
-					this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].anInt7851 >>= i_5;
+		if (this.aTransform_Sub1_3391.boundingBoxPolygons != null) {
+			for (int i_6 = 0; i_6 < this.aTransform_Sub1_3391.boundingBoxPolygons.length; i_6++) {
+				this.aTransform_Sub1_3391.boundingBoxPolygons[i_6].anInt7851 <<= i_5;
+				if (this.aTransform_Sub1_3391.boundingBoxPolygons[i_6].method12594(this.aClass284_3393.anInt3387 + i_2, i_3 + this.aClass284_3393.anInt3385) && this.aTransform_Sub1_3391.method12983(graphicalrenderer_1, i_2, i_3)) {
+					this.aTransform_Sub1_3391.boundingBoxPolygons[i_6].anInt7851 >>= i_5;
 					return true;
 				}
-				this.aTransform_Sub1_3391.aEntityNode_Sub5Array7965[i_6].anInt7851 >>= i_5;
+				this.aTransform_Sub1_3391.boundingBoxPolygons[i_6].anInt7851 >>= i_5;
 			}
 		}
 		return false;

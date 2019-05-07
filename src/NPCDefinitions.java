@@ -1,7 +1,7 @@
 public class NPCDefinitions {
 
 	NPCIndexLoader aClass406_4855;
-	public int anInt4856;
+	public int type;
 	public String[] options;
 	public static short[] aShortArray4862 = new short[256];
 	public int[] modelIds;
@@ -131,7 +131,7 @@ public class NPCDefinitions {
 				i_32 |= animation_6.method7640(-1870377420);
 				bool_15 = true;
 			}
-			long long_33 = (long) (this.anInt4856 | graphicalrenderer_1.rendererId << 16);
+			long long_33 = (long) (this.type | graphicalrenderer_1.rendererId << 16);
 			if (class417_10 != null) {
 				long_33 |= class417_10.aLong4993 << 24;
 			}
@@ -340,7 +340,7 @@ public class NPCDefinitions {
 			if (animation_4 != null) {
 				i_18 = i_2 | animation_4.method7640(-1724515671);
 			}
-			long long_8 = (long) (this.anInt4856 | graphicalrenderer_1.rendererId << 16);
+			long long_8 = (long) (this.type | graphicalrenderer_1.rendererId << 16);
 			if (class417_5 != null) {
 				long_8 |= class417_5.aLong4993 << 24;
 			}

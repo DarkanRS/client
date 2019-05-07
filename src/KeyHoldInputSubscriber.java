@@ -6,7 +6,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 
 	int[] requiredKeys;
 
-	public boolean method126(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method126(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
 		int[] ints_5 = this.requiredKeys;
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 			int i_7 = ints_5[i_6];
@@ -17,7 +17,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 		return true;
 	}
 
-	public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+	public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
 		int[] ints_6 = this.requiredKeys;
 		for (int i_7 = 0; i_7 < ints_6.length; i_7++) {
 			int i_8 = ints_6[i_7];
@@ -28,7 +28,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 		return true;
 	}
 
-	public boolean method128(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method128(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
 		int[] ints_5 = this.requiredKeys;
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 			int i_7 = ints_5[i_6];
@@ -39,7 +39,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 		return true;
 	}
 
-	public boolean method129(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+	public boolean method129(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
 		int[] ints_5 = this.requiredKeys;
 		for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 			int i_7 = ints_5[i_6];

@@ -81,7 +81,7 @@ public class MapSpriteIndexLoader {
 		}
 	}
 
-	static final int method7188(Animable animable_0) {
+	static final int method7188(Entity animable_0) {
 		if (animable_0.anInt10340 == 0) {
 			return 0;
 		} else {
@@ -92,13 +92,13 @@ public class MapSpriteIndexLoader {
 				if (animable_0.faceEntity < 32768) {
 					StringNode class282_sub47_3 = (StringNode) client.NPCS.get((long) animable_0.faceEntity);
 					if (class282_sub47_3 != null) {
-						obj_2 = (Animable) class282_sub47_3.anObject8068;
+						obj_2 = (Entity) class282_sub47_3.anObject8068;
 					}
 				} else if (animable_0.faceEntity >= 32768) {
 					obj_2 = client.players[animable_0.faceEntity - 32768];
 				}
 				if (obj_2 != null) {
-					vector3_9 = Vector3.method6632(animable_0.method11166().aClass385_3595, ((Animable) obj_2).method11166().aClass385_3595);
+					vector3_9 = Vector3.method6632(animable_0.method11166().aClass385_3595, ((Entity) obj_2).method11166().aClass385_3595);
 					int i_4 = (int) vector3_9.x;
 					i_5 = (int) vector3_9.z;
 					if (i_4 != 0 || i_5 != 0) {

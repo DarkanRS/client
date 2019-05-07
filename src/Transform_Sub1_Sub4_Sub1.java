@@ -74,7 +74,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			matrix44var_3.method5209(this.method11168());
 			matrix44var_3.method5219((float) this.aShort9611, 0.0F, (float) this.aShort9612);
 			Class285 class285_4 = Class470.method7824(this.aBool10481, (byte) -111);
-			this.aMeshRasterizer_10483.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10483.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			return class285_4;
 		}
 	}
@@ -145,7 +145,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			matrix44var_2.method5209(this.method11168());
 			matrix44var_2.method5219((float) this.aShort9611, 0.0F, (float) this.aShort9612);
 			Class285 class285_3 = Class470.method7824(this.aBool10481, (byte) -46);
-			this.aMeshRasterizer_10483.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10483.method11282(matrix44var_2, this.boundingBoxPolygons[0], 0);
 			return class285_3;
 		}
 	}
@@ -354,7 +354,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			matrix44var_2.method5209(this.method11168());
 			matrix44var_2.method5219((float) this.aShort9611, 0.0F, (float) this.aShort9612);
 			Class285 class285_3 = Class470.method7824(this.aBool10481, (byte) -51);
-			this.aMeshRasterizer_10483.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10483.method11282(matrix44var_2, this.boundingBoxPolygons[0], 0);
 			return class285_3;
 		}
 	}
@@ -367,7 +367,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			matrix44var_2.method5209(this.method11168());
 			matrix44var_2.method5219((float) this.aShort9611, 0.0F, (float) this.aShort9612);
 			Class285 class285_3 = Class470.method7824(this.aBool10481, (byte) -61);
-			this.aMeshRasterizer_10483.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[0], 0);
+			this.aMeshRasterizer_10483.method11282(matrix44var_2, this.boundingBoxPolygons[0], 0);
 			return class285_3;
 		}
 	}
@@ -627,15 +627,15 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 									}
 								}
 
-								if (class285_34.aTransform_Sub1_3391 instanceof Transform_Sub1_Sub2_Sub1) {
+								if (class285_34.aTransform_Sub1_3391 instanceof GroundItem) {
 									int i_48 = i_46 + coordgrid_4.x;
 									i_49 = i_47 + coordgrid_4.y;
 									Node_Sub29 class282_sub29_61 = (Node_Sub29) client.aClass465_7414.get((long) (class285_34.aTransform_Sub1_3391.plane << 28 | i_49 << 14 | i_48));
 									if (class282_sub29_61 != null) {
 										i_21 = 0;
 
-										for (Node_Sub34 class282_sub34_39 = (Node_Sub34) class282_sub29_61.aClass482_7708.method8065(-2081006953); class282_sub34_39 != null; i_21++) {
-											ItemDefinitions itemdefinitions_65 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_39.anInt7853);
+										for (GroundItemNode class282_sub34_39 = (GroundItemNode) class282_sub29_61.aClass482_7708.method8065(-2081006953); class282_sub34_39 != null; i_21++) {
+											ItemDefinitions itemdefinitions_65 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_39.id);
 											if (itemdefinitions_65.hasTooltipColor) {
 												i_38 = itemdefinitions_65.tooltipColor;
 											} else if (itemdefinitions_65.membersOnly) {
@@ -647,7 +647,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 											if (client.aBool7344 && class285_34.aTransform_Sub1_3391.plane == VertexNormal.MY_PLAYER.plane) {
 												ParamDefinitions attributedefault_68 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
 												if ((Class506.USE_OPTIONS_FLAGS & 0x1) != 0 && (attributedefault_68 == null || itemdefinitions_65.getCS2Integer(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_68.defaultInt) != attributedefault_68.defaultInt)) {
-													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1634636602);
+													PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, Defaults8Loader.anInt5932, 17, -1, (long) class282_sub34_39.id, i_46, i_47, true, false, (long) i_21, false, -1634636602);
 												}
 											}
 
@@ -690,19 +690,19 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 															i_28 = itemdefinitions_65.unknownInt21;
 														}
 
-														PlayerAppearance.method4032(arr_69[i_42], Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, i_28, s_70, -1, (long) class282_sub34_39.anInt7853, i_46, i_47, true, false, (long) i_21, false, -1528903882);
+														PlayerAppearance.method4032(arr_69[i_42], Utils.rgbToColHexShortcut(i_38) + itemdefinitions_65.name, i_28, s_70, -1, (long) class282_sub34_39.id, i_46, i_47, true, false, (long) i_21, false, -1528903882);
 													}
 												}
 											}
 
-											class282_sub34_39 = (Node_Sub34) class282_sub29_61.aClass482_7708.method8068((byte) 117);
+											class282_sub34_39 = (GroundItemNode) class282_sub29_61.aClass482_7708.method8068((byte) 117);
 										}
 									}
 								}
 							} while (!(class285_34.aTransform_Sub1_3391 instanceof SceneObject));
 
 							sceneobject_60 = (SceneObject) class285_34.aTransform_Sub1_3391;
-							objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436(-1539469212).getObjectDefinitions(sceneobject_60.getId(2000772127));
+							objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_60.getId(2000772127));
 							if (objectdefinitions_57.toObjectIds != null) {
 								objectdefinitions_57 = objectdefinitions_57.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 107);
 							}

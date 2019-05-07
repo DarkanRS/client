@@ -15,7 +15,7 @@ public class QuestIndexLoader {
         for (int i_4 = 0; i_4 < this.size; i_4++) {
             QuestDefinitions questdefinitions_5 = this.getQuest(i_4);
             if (questdefinitions_5.isComplete(interface42_1)) {
-                i_3 += questdefinitions_5.anInt2963;
+                i_3 += questdefinitions_5.questpointReward;
             }
         }
         return i_3;

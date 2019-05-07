@@ -2,15 +2,15 @@ public class TilestreamPacket {
 
     public static int COUNTRY;
 
-    public static TilestreamPacket aClass364_4209 = new TilestreamPacket(-1);
+    public static TilestreamPacket CUSTOMIZE_OBJECT = new TilestreamPacket(-1);
 
-    public static TilestreamPacket aClass364_4207 = new TilestreamPacket(3);
+    public static TilestreamPacket REMOVE_GROUND_ITEM = new TilestreamPacket(3);
 
     public static TilestreamPacket CREATE_GROUND_ITEM = new TilestreamPacket(5);
 
-    public static TilestreamPacket aClass364_4213 = new TilestreamPacket(2);
+    public static TilestreamPacket DESTROY_OBJECT = new TilestreamPacket(2);
 
-    public static TilestreamPacket aClass364_4208 = new TilestreamPacket(6);
+    public static TilestreamPacket CREATE_OBJECT = new TilestreamPacket(6);
 
     public static TilestreamPacket PROJECTILE = new TilestreamPacket(16);
 
@@ -42,4 +42,8 @@ public class TilestreamPacket {
             Class273.method4866(i_0, i_1, i_2, i_3);
         }
     }
+
+	public static TilestreamPacket[] values() {
+		return new TilestreamPacket[] { CUSTOMIZE_OBJECT, REMOVE_GROUND_ITEM, CREATE_GROUND_ITEM, DESTROY_OBJECT, CREATE_OBJECT, PROJECTILE, aClass364_4210, aClass364_4211, aClass364_4205, aClass364_4204, aClass364_4214, TILE_MESSAGE, aClass364_4216, aClass364_4217, aClass364_4218 };
+	}
 }

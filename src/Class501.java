@@ -21,7 +21,7 @@ public class Class501 {
 		Class9.aClass184_73.thirdLastPacket = null;
 		Class9.aClass184_73.currentPacketSize = 0;
 		Class9.aClass184_73.idleReadPulses = 0;
-		client.anInt7178 = 0;
+		client.REBOOT_TIMER = 0;
 		Class350.method6189((byte) 111);
 		Class256.method4416();
 
@@ -33,7 +33,7 @@ public class Class501 {
 		VertexNormal.MY_PLAYER = null;
 
 		for (i_1 = 0; i_1 < client.anInt7210; i_1++) {
-			Animable animable_2 = (Animable) client.aNode_Sub47Array7209[i_1].anObject8068;
+			Entity animable_2 = (Entity) client.aNode_Sub47Array7209[i_1].anObject8068;
 			if (animable_2 != null) {
 				animable_2.faceEntity = -1;
 			}

@@ -52,8 +52,8 @@ public class NPCUpdate {
 				throw new RuntimeException("" + (client.anInt7210 - client.NPC_UPDATE_INDEX));
 			} else {
 				for (i_3 = 0; i_3 < client.anInt7210; i_3++) {
-					if (((Animable) client.aNode_Sub47Array7209[i_3].anObject8068).lastUpdate != client.anInt7332) {
-						throw new RuntimeException("" + ((Animable) client.aNode_Sub47Array7209[i_3].anObject8068).index);
+					if (((Entity) client.aNode_Sub47Array7209[i_3].anObject8068).lastUpdate != client.anInt7332) {
+						throw new RuntimeException("" + ((Entity) client.aNode_Sub47Array7209[i_3].anObject8068).index);
 					}
 				}
 			}

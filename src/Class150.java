@@ -42,7 +42,7 @@ public class Class150 {
 		Class148.aNode_Sub15_Sub2_1735.method15095(i_0, i_1, 1233853540);
 	}
 
-	static final void method2581(Animable animable_0, int i_1) {
+	static final void method2581(Entity animable_0, int i_1) {
 		MovingAnimation class456_sub3_2 = animable_0.aAnimation_Sub3_10337;
 		if (class456_sub3_2.hasDefs() && class456_sub3_2.method7627(1, -1365163818) && class456_sub3_2.method7580(952228354)) {
 			if (class456_sub3_2.aBool7891) {
@@ -117,10 +117,10 @@ public class Class150 {
 		}
 	}
 
-	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, Transform_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1_4) {
+	public static void method2583(Class397 class397_0, int i_1, Class520 class520_3, GroundItem class521_sub1_sub2_sub1_4) {
 		CS2Executor cs2executor_6 = CS2Executor.getNextScriptExecutor();
-		cs2executor_6.aTransform_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1_4;
+		cs2executor_6.currentGroundItem = class521_sub1_sub2_sub1_4;
 		CS2Executor.method1834(class397_0, i_1, -1, cs2executor_6, (byte) 35);
-		cs2executor_6.aTransform_Sub1_Sub2_Sub1_7014 = null;
+		cs2executor_6.currentGroundItem = null;
 	}
 }

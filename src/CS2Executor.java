@@ -14,13 +14,13 @@ public class CS2Executor {
 	long[] longLocals;
 	int anInt7004;
 	CS2Instruction[] operations;
-	Animable animable;
+	Entity currentEntity;
 	Class191 aClass191_7008;
-	QuickChatMessage aClass346_7009;
+	QuickChatMessage currentQuickChatMessage;
 	ClanSettings currentClanSettings;
-	ClanChannel aNode_Sub4_7011;
-	SceneObject anInterface12_7013;
-	Transform_Sub1_Sub2_Sub1 aTransform_Sub1_Sub2_Sub1_7014;
+	ClanChannel clanChannel;
+	SceneObject currentSceneObject;
+	GroundItem currentGroundItem;
 	Object[] objectLocals;
 	int[] intOpValues;
 	CS2Script current;

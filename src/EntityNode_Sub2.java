@@ -1,6 +1,6 @@
 public class EntityNode_Sub2 extends EntityNode {
 
-	Animable aTransform_Sub1_Sub1_Sub2_7739;
+	Entity aTransform_Sub1_Sub1_Sub2_7739;
 	int anInt7740;
 	int anInt7742;
 	int anInt7743;

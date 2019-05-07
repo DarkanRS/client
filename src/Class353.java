@@ -32,31 +32,31 @@ public class Class353 {
 		datainputstream_4.close();
 	}
 
-	static void method6209(int i_0, int i_1, int i_2, Node_Sub34 class282_sub34_3, int i_4) {
-		long long_5 = (long) (i_0 << 28 | i_2 << 14 | i_1);
+	static void method6209(int i_0, int x, int y, GroundItemNode groundItem) {
+		long long_5 = (long) (i_0 << 28 | y << 14 | x);
 		Node_Sub29 class282_sub29_7 = (Node_Sub29) client.aClass465_7414.get(long_5);
 		if (class282_sub29_7 == null) {
 			class282_sub29_7 = new Node_Sub29();
 			client.aClass465_7414.put(class282_sub29_7, long_5);
-			class282_sub29_7.aClass482_7708.append(class282_sub34_3);
+			class282_sub29_7.aClass482_7708.append(groundItem);
 		} else {
-			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_3.anInt7853);
+			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(groundItem.id);
 			int i_9 = itemdefinitions_8.value;
 			if (itemdefinitions_8.stackable == 1) {
-				i_9 *= class282_sub34_3.anInt7852 + 1;
+				i_9 *= groundItem.amount + 1;
 			}
-			for (Node_Sub34 class282_sub34_10 = (Node_Sub34) class282_sub29_7.aClass482_7708.head(); class282_sub34_10 != null; class282_sub34_10 = (Node_Sub34) class282_sub29_7.aClass482_7708.next(1444311005)) {
-				itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_10.anInt7853);
+			for (GroundItemNode class282_sub34_10 = (GroundItemNode) class282_sub29_7.aClass482_7708.head(); class282_sub34_10 != null; class282_sub34_10 = (GroundItemNode) class282_sub29_7.aClass482_7708.next(1444311005)) {
+				itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub34_10.id);
 				int i_11 = itemdefinitions_8.value;
 				if (itemdefinitions_8.stackable == 1) {
-					i_11 *= class282_sub34_10.anInt7852 + 1;
+					i_11 *= class282_sub34_10.amount + 1;
 				}
 				if (i_9 > i_11) {
-					Class446.method7430(class282_sub34_3, class282_sub34_10, -1282402285);
+					Class446.method7430(groundItem, class282_sub34_10, -1282402285);
 					return;
 				}
 			}
-			class282_sub29_7.aClass482_7708.append(class282_sub34_3);
+			class282_sub29_7.aClass482_7708.append(groundItem);
 		}
 	}
 }

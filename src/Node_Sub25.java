@@ -17,7 +17,7 @@ public class Node_Sub25 extends Node {
         if (ints_13 != null) {
             string_14 = string_14 + Class15.method547(ints_13, 1953018919);
         }
-        fontrenderer_8.method386(string_14, i_2 + 3, i_6, i_10, client.aRandom7260, PacketsDecoder.anInt9079, Class115.aNativeSpriteArray1248, Class20.anIntArray177, -1905511896);
+        fontrenderer_8.method386(string_14, i_2 + 3, i_6, i_10, client.aRandom7260, Class455_Sub3.anInt9079, Class115.aNativeSpriteArray1248, Class20.anIntArray177, -1905511896);
         if (class282_sub50_sub7_7.aBool9577) {
             Exception_Sub1.aNativeSprite_10075.method2752(5 + i_2 + fontmetrics_9.getWidthNoSprites(string_14), i_6 - fontmetrics_9.topPadding);
         }

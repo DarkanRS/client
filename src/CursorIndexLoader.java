@@ -124,11 +124,11 @@ public class CursorIndexLoader {
 				i_17 = i_1 - 1;
 				StringNode class282_sub47_18 = (StringNode) client.NPCS.get((long) i_17);
 				if (class282_sub47_18 != null) {
-					obj_16 = (Animable) class282_sub47_18.anObject8068;
+					obj_16 = (Entity) class282_sub47_18.anObject8068;
 				}
 			}
 			if (obj_16 != null) {
-				BASDefinitions renderanimdefs_19 = ((Animable) obj_16).getRenderAnimDefs();
+				BASDefinitions renderanimdefs_19 = ((Entity) obj_16).getRenderAnimDefs();
 				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
 					i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
 				}
@@ -137,8 +137,8 @@ public class CursorIndexLoader {
 				}
 			}
 		}
-		Transform_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Transform_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_0, Class272.anInt3331, Class272.anInt3331, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
-		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.anInt3331, (byte) 65) - i_5, i_10 + client.cycles);
+		Transform_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Transform_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_0, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
+		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.UPDATE_ZONE_PLANE, (byte) 65) - i_5, i_10 + client.cycles);
 		client.aClass482_7333.append(new CacheableNode_Sub16(class521_sub1_sub1_sub3_20));
 	}
 }

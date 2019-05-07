@@ -27,7 +27,7 @@ public class Login {
     void method5013(Class285 class285_1) {
         Transform_Sub1 class521_sub1_3 = class285_1.aTransform_Sub1_3391;
         boolean bool_4 = true;
-        EntityNode_Sub5[] arr_5 = class285_1.aTransform_Sub1_3391.aEntityNode_Sub5Array7965;
+        EntityNode_Sub5[] arr_5 = class285_1.aTransform_Sub1_3391.boundingBoxPolygons;
         for (int i_6 = 0; i_6 < arr_5.length; i_6++) {
             if (arr_5[i_6].aBool7849) {
                 bool_4 = false;
@@ -443,8 +443,8 @@ public class Login {
                             Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(1818887431);
                             client.membersWorld = rsbitsbuffer_19.readUnsignedByte() == 1;
                             RegionMap.aString3643 = rsbitsbuffer_19.readString();
-                            IndexLoaders.MAP_REGION_DECODER.method4436(-1683757670).method7912(client.membersWorld);
-                            IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) 2983).method4436(-1487690474).method7912(client.membersWorld);
+                            IndexLoaders.MAP_REGION_DECODER.method4436().method7912(client.membersWorld);
+                            IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) 2983).method4436().method7912(client.membersWorld);
                             IndexLoaders.ITEM_LOADER.method7148(client.membersWorld);
                             IndexLoaders.NPC_INDEX_LOADER.method6847(client.membersWorld);
                         } else {

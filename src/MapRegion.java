@@ -192,7 +192,7 @@ public class MapRegion {
 		return this.aClass239_3175;
 	}
 
-	public ObjectIndexLoader method4436(int i_1) {
+	public ObjectIndexLoader method4436() {
 		return this.objectDefsLoader;
 	}
 

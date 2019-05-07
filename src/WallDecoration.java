@@ -56,7 +56,7 @@ public class WallDecoration extends Transform_Sub1_Sub4 implements SceneObject {
 			int i_7 = (int) class305_5.aClass385_3595.x >> 9;
 			int i_8 = (int) class305_5.aClass385_3595.z >> 9;
 			this.aClass123_10501.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, i_7, i_7, i_8, i_8, true, 2117778784);
-			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10501.aClass539_1538 != null) {
 				Class151 class151_9 = this.aClass123_10501.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_9);
@@ -210,7 +210,7 @@ public class WallDecoration extends Transform_Sub1_Sub4 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10501.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, 801514354);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10501.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10501.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -246,7 +246,7 @@ public class WallDecoration extends Transform_Sub1_Sub4 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10501.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, 1608810000);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10501.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10501.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -274,7 +274,7 @@ public class WallDecoration extends Transform_Sub1_Sub4 implements SceneObject {
 			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
 			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
 			this.aClass123_10501.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, 2103867839);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10501.aClass539_1538 != null) {
 				Class151 class151_8 = this.aClass123_10501.aClass539_1538.method11517();
 				graphicalrenderer_1.method8456(class151_8);
@@ -325,7 +325,7 @@ public class WallDecoration extends Transform_Sub1_Sub4 implements SceneObject {
 		Class532.anInt7068 = i_3;
 	}
 
-	static final void method16087(Animable animable_0) {
+	static final void method16087(Entity animable_0) {
 		if (animable_0.anIntArray10335 != null || animable_0.anIntArray10362 != null) {
 			boolean bool_2 = true;
 			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();

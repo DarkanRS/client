@@ -48,7 +48,7 @@ public class QuickchatCategoryLoader {
 		}
 	}
 
-	public static void method5923(Animable animable, int[] animationIds, int[] ints_2, int[] ints_3, int i_4) {
+	public static void method5923(Entity animable, int[] animationIds, int[] ints_2, int[] ints_3, int i_4) {
 		for (int i_5 = 0; i_5 < animationIds.length; i_5++) {
 			int i_6 = animationIds[i_5];
 			int i_7 = ints_3[i_5];

@@ -841,7 +841,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 				}
 
 				if (i_9 > 0 && i_10 > 0) {
-					PacketsDecoder packetsdecoder_29 = (PacketsDecoder) class455_3;
+					Class455_Sub3 packetsdecoder_29 = (Class455_Sub3) class455_3;
 					int[] ints_15 = packetsdecoder_29.anIntArray9077;
 					int[] ints_16 = packetsdecoder_29.anIntArray9078;
 					int i_17 = i_2;
@@ -1294,7 +1294,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 				}
 
 				if (i_9 > 0 && i_10 > 0) {
-					PacketsDecoder packetsdecoder_29 = (PacketsDecoder) class455_3;
+					Class455_Sub3 packetsdecoder_29 = (Class455_Sub3) class455_3;
 					int[] ints_15 = packetsdecoder_29.anIntArray9077;
 					int[] ints_16 = packetsdecoder_29.anIntArray9078;
 					int i_17 = i_2;
@@ -5119,7 +5119,7 @@ public class NativeSprite_Sub1_Sub3 extends NativeSprite_Sub1 {
 				}
 
 				if (i_9 > 0 && i_10 > 0) {
-					PacketsDecoder packetsdecoder_29 = (PacketsDecoder) class455_3;
+					Class455_Sub3 packetsdecoder_29 = (Class455_Sub3) class455_3;
 					int[] ints_15 = packetsdecoder_29.anIntArray9077;
 					int[] ints_16 = packetsdecoder_29.anIntArray9078;
 					int i_17 = i_2;

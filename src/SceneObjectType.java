@@ -1,6 +1,6 @@
 public class SceneObjectType implements Identifiable {
 
-	static int anInt5495;
+	static int UPDATE_ZONE_X;
 
 	public static SceneObjectType WALL_STRAIGHT = new SceneObjectType(0, 0);
 

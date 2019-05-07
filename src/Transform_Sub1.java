@@ -1,16 +1,11 @@
 public abstract class Transform_Sub1 extends Transform {
 
 	Transform_Sub1 aTransform_Sub1_7966;
-
 	public byte plane;
-
 	public byte collisionPlane;
-
 	int anInt7969;
-
 	public SceneObjectManager aClass206_7970;
-
-	public EntityNode_Sub5[] aEntityNode_Sub5Array7965;
+	public EntityNode_Sub5[] boundingBoxPolygons;
 
 	abstract int method12982(Node_Sub24[] var1);
 
@@ -85,9 +80,9 @@ public abstract class Transform_Sub1 extends Transform {
 	public abstract int method13006();
 
 	void method13008(int i_1, byte b_2) {
-		this.aEntityNode_Sub5Array7965 = new EntityNode_Sub5[i_1];
-		for (int i_3 = 0; i_3 < this.aEntityNode_Sub5Array7965.length; i_3++) {
-			this.aEntityNode_Sub5Array7965[i_3] = new EntityNode_Sub5();
+		this.boundingBoxPolygons = new EntityNode_Sub5[i_1];
+		for (int i_3 = 0; i_3 < this.boundingBoxPolygons.length; i_3++) {
+			this.boundingBoxPolygons[i_3] = new EntityNode_Sub5();
 		}
 	}
 

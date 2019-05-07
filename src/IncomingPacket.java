@@ -15,7 +15,7 @@ public class IncomingPacket {
 	public static IncomingPacket GLOBAL_CONFIG_1 = new IncomingPacket(12, 6);
 	public static IncomingPacket aClass375_4365 = new IncomingPacket(13, 8);
 	public static IncomingPacket PLAYER_WEIGHT = new IncomingPacket(14, 2);
-	public static IncomingPacket aClass375_4392 = new IncomingPacket(15, 3);
+	public static IncomingPacket UPDATE_ZONE_PARTIAL_FOLLOWS = new IncomingPacket(15, 3);
 	public static IncomingPacket OPEN_URL = new IncomingPacket(16, -2);
 	public static IncomingPacket aClass375_4368 = new IncomingPacket(17, 3);
 	public static IncomingPacket aClass375_4433 = new IncomingPacket(18, 8);
@@ -30,7 +30,7 @@ public class IncomingPacket {
 	public static IncomingPacket CREATE_GROUND_ITEM = new IncomingPacket(27, 5);
 	public static IncomingPacket aClass375_4480 = new IncomingPacket(28, -2);
 	public static IncomingPacket PING = new IncomingPacket(29, 0);
-	public static IncomingPacket SET_FILTERS_MISC = new IncomingPacket(30, 2);
+	public static IncomingPacket CHAT_FILTER_SETTINGS = new IncomingPacket(30, 2);
 	public static IncomingPacket RECIEVE_PRIVATE_QUICKCHAT = new IncomingPacket(31, -1);
 	public static IncomingPacket ICOMPONENT_CONFIG = new IncomingPacket(32, 5);
 	public static IncomingPacket HIDE_ICOMPONENT = new IncomingPacket(33, 5);
@@ -41,7 +41,7 @@ public class IncomingPacket {
 	public static IncomingPacket INTERFACE = new IncomingPacket(38, 23);
 	public static IncomingPacket CAMERA_POSITION = new IncomingPacket(39, 6);
 	public static IncomingPacket aClass375_4399 = new IncomingPacket(40, 4);
-	public static IncomingPacket SET_LOCAL_REGION = new IncomingPacket(41, 3);
+	public static IncomingPacket UPDATE_ZONE_FULL_FOLLOWS = new IncomingPacket(41, 3);
 	public static IncomingPacket aClass375_4393 = new IncomingPacket(42, 3);
 	public static IncomingPacket PLAYER_UPDATE = new IncomingPacket(43, -2);
 	public static IncomingPacket ICOMPONENT_SPRITE_SCALE = new IncomingPacket(44, 10);
@@ -65,9 +65,9 @@ public class IncomingPacket {
 	public static IncomingPacket LOGOUT_FULL = new IncomingPacket(62, 0);
 	public static IncomingPacket MUSIC_TRACK = new IncomingPacket(63, 4);
 	public static IncomingPacket RUN_ENERGY = new IncomingPacket(64, 1);
-	public static IncomingPacket aClass375_4416 = new IncomingPacket(65, -2);
+	public static IncomingPacket UPDATE_ZONE_PARTIAL_ENCLOSED = new IncomingPacket(65, -2);
 	public static IncomingPacket RESET_CAMERA = new IncomingPacket(66, 0);
-	public static IncomingPacket SET_PRIVATE_FILTER = new IncomingPacket(67, 1);
+	public static IncomingPacket CHAT_FILTER_SETTINGS_PRIVATECHAT = new IncomingPacket(67, 1);
 	public static IncomingPacket VARPBIT_1 = new IncomingPacket(68, 3);
 	public static IncomingPacket DESTROY_OBJECT = new IncomingPacket(69, 2);
 	public static IncomingPacket MINIMAP_FLAG = new IncomingPacket(70, 2);
@@ -78,7 +78,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4426 = new IncomingPacket(75, 4);
 	public static IncomingPacket aClass375_4492 = new IncomingPacket(76, 2);
 	public static IncomingPacket aClass375_4428 = new IncomingPacket(77, 2);
-	public static IncomingPacket CLOSE_CHILDREN = new IncomingPacket(78, 4);
+	public static IncomingPacket IF_CLOSESUB = new IncomingPacket(78, 4);
 	public static IncomingPacket HINT_ICON = new IncomingPacket(79, 14);
 	public static IncomingPacket OBJECT_ANIMATION = new IncomingPacket(80, 9);
 	public static IncomingPacket RECIEVE_CLAN_MESSAGE = new IncomingPacket(81, -1);
@@ -102,7 +102,7 @@ public class IncomingPacket {
 	public static IncomingPacket RUN_CS2_SCRIPT = new IncomingPacket(99, -2);
 	public static IncomingPacket aClass375_4451 = new IncomingPacket(100, 0);
 	public static IncomingPacket aClass375_4452 = new IncomingPacket(101, 0);
-	public static IncomingPacket SYSTEM_UPDATE = new IncomingPacket(102, 2);
+	public static IncomingPacket UPDATE_REBOOT_TIMER = new IncomingPacket(102, 2);
 	public static IncomingPacket WORLD_LIST = new IncomingPacket(103, -2);
 	public static IncomingPacket SOUND_IDX15 = new IncomingPacket(104, 6);
 	public static IncomingPacket aClass375_4456 = new IncomingPacket(105, 6);
@@ -140,7 +140,7 @@ public class IncomingPacket {
 	public static IncomingPacket CLAN_SETTINGS = new IncomingPacket(137, -2);
 	public static IncomingPacket ADD_IGNORE = new IncomingPacket(138, -1);
 	public static IncomingPacket aClass375_4351 = new IncomingPacket(139, 8);
-	public static IncomingPacket SKILL_LEVEL = new IncomingPacket(140, 6);
+	public static IncomingPacket UPDATE_STAT = new IncomingPacket(140, 6);
 	public static IncomingPacket aClass375_4484 = new IncomingPacket(141, 6);
 	public static IncomingPacket RECIEVE_FRIENDS_CHAT_QUICKCHAT = new IncomingPacket(142, -1);
 	public static IncomingPacket PROJECTILE = new IncomingPacket(143, 16);

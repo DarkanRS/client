@@ -308,7 +308,7 @@ public class SystemInfo extends Node {
 		this.method13455();
 	}
 
-	static final void method13466(Animable animable_0, boolean bool_1) {
+	static final void method13466(Entity animable_0, boolean bool_1) {
 		BASDefinitions renderanimdefs_3 = animable_0.getRenderAnimDefs();
 		if (animable_0.anInt10355 == 0) {
 			animable_0.anInt10366 = 0;

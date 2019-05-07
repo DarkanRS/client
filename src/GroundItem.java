@@ -1,4 +1,4 @@
-public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
+public class GroundItem extends Transform_Sub1_Sub2 {
 
 	public int anInt10412;
 	public int anInt10414;
@@ -178,7 +178,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (-503986647 * this.anInt10415 * 100349465 != -1) {
 			meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
-				meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[2], 0);
+				meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[2], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
 				this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
 			}
@@ -187,7 +187,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (this.anInt10411 * -1841858001 * 313920719 != -1) {
 			meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
-				meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[1], 0);
+				meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[1], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
 				if (meshrasterizer_32.n() > this.anInt10418 * -1885839727 * 599728753) {
 					this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
@@ -197,7 +197,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 
 		meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 		if (meshrasterizer_32 != null) {
-			meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[0], 0);
 			this.aBool10419 |= meshrasterizer_32.i();
 			if (meshrasterizer_32.n() > 599728753 * this.anInt10418 * -1885839727) {
 				this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
@@ -236,7 +236,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		return i_3;
 	}
 
-	public Transform_Sub1_Sub2_Sub1(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+	public GroundItem(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		super(sceneobjectmanager_1, i_2, i_3, i_4, i_5, i_6);
 		this.method13008(3, (byte) -104);
 		this.method15947();
@@ -325,7 +325,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (-503986647 * this.anInt10415 * 100349465 != -1) {
 			meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
-				meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[2], 0);
+				meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[2], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
 				this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
 			}
@@ -334,7 +334,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (this.anInt10411 * -1841858001 * 313920719 != -1) {
 			meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
-				meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[1], 0);
+				meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[1], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
 				if (meshrasterizer_32.n() > this.anInt10418 * -1885839727 * 599728753) {
 					this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
@@ -344,7 +344,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 
 		meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 		if (meshrasterizer_32 != null) {
-			meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[0], 0);
 			this.aBool10419 |= meshrasterizer_32.i();
 			if (meshrasterizer_32.n() > 599728753 * this.anInt10418 * -1885839727) {
 				this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
@@ -433,7 +433,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (-503986647 * this.anInt10415 * 100349465 != -1) {
 			meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(-503986647 * this.anInt10415 * 100349465).method7084(graphicalrenderer_1, 526336, this.anInt10412 * -1052106625 * -931815553, (PlayerAppearance) null, (Animation) null, this.anInt10420 * -450257987 * 225048469, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
-				meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[2], 0);
+				meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[2], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
 				this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
 			}
@@ -442,7 +442,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (this.anInt10411 * -1841858001 * 313920719 != -1) {
 			meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(this.anInt10411 * -1841858001 * 313920719).method7084(graphicalrenderer_1, 526336, 1089437631 * this.anInt10414 * 1305767999, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, -731570957 * this.anInt10421 * -1431655765 * 3 * -146187205, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 			if (meshrasterizer_32 != null) {
-				meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[1], 0);
+				meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[1], 0);
 				this.aBool10419 |= meshrasterizer_32.i();
 				if (meshrasterizer_32.n() > this.anInt10418 * -1885839727 * 599728753) {
 					this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
@@ -452,7 +452,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 
 		meshrasterizer_32 = IndexLoaders.ITEM_LOADER.getItemDefinitions(-876219087 * this.anInt10423 * -1511570479).method7084(graphicalrenderer_1, 526336, this.anInt10416 * 1423185937 * 513267953, (PlayerAppearance) null, (Animation) null, 225048469 * this.anInt10420 * -450257987, this.anInt10421 * -1431655765 * 3 * -146187205 * -731570957, 1264449599 * this.anInt10413 * 1440872383, -359736537 * this.anInt10417 * 1371726999);
 		if (meshrasterizer_32 != null) {
-			meshrasterizer_32.method11282(matrix44var_6, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_32.method11282(matrix44var_6, this.boundingBoxPolygons[0], 0);
 			this.aBool10419 |= meshrasterizer_32.i();
 			if (meshrasterizer_32.n() > 599728753 * this.anInt10418 * -1885839727) {
 				this.anInt10418 = meshrasterizer_32.n() * -1885839727 * 599728753;
@@ -581,7 +581,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (this.anInt10415 != -1) {
 			meshrasterizer_33 = IndexLoaders.ITEM_LOADER.getItemDefinitions(this.anInt10415).method7084(graphicalrenderer_1, 526336, this.anInt10412, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417);
 			if (meshrasterizer_33 != null) {
-				meshrasterizer_33.method11282(matrix44var_7, this.aEntityNode_Sub5Array7965[2], 0);
+				meshrasterizer_33.method11282(matrix44var_7, this.boundingBoxPolygons[2], 0);
 				this.aBool10419 |= meshrasterizer_33.i();
 				this.anInt10418 = meshrasterizer_33.n();
 			}
@@ -590,7 +590,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 		if (this.anInt10411 != -1) {
 			meshrasterizer_33 = IndexLoaders.ITEM_LOADER.getItemDefinitions(this.anInt10411).method7084(graphicalrenderer_1, 526336, this.anInt10414, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417);
 			if (meshrasterizer_33 != null) {
-				meshrasterizer_33.method11282(matrix44var_7, this.aEntityNode_Sub5Array7965[1], 0);
+				meshrasterizer_33.method11282(matrix44var_7, this.boundingBoxPolygons[1], 0);
 				this.aBool10419 |= meshrasterizer_33.i();
 				if (meshrasterizer_33.n() > this.anInt10418) {
 					this.anInt10418 = meshrasterizer_33.n();
@@ -600,7 +600,7 @@ public class Transform_Sub1_Sub2_Sub1 extends Transform_Sub1_Sub2 {
 
 		meshrasterizer_33 = IndexLoaders.ITEM_LOADER.getItemDefinitions(this.anInt10423).method7084(graphicalrenderer_1, 526336, this.anInt10416, (PlayerAppearance) null, (Animation) null, this.anInt10420, this.anInt10421, this.anInt10413, this.anInt10417);
 		if (meshrasterizer_33 != null) {
-			meshrasterizer_33.method11282(matrix44var_7, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_33.method11282(matrix44var_7, this.boundingBoxPolygons[0], 0);
 			this.aBool10419 |= meshrasterizer_33.i();
 			if (meshrasterizer_33.n() > this.anInt10418) {
 				this.anInt10418 = meshrasterizer_33.n();

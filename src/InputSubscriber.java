@@ -1,5 +1,5 @@
 public interface InputSubscriber {
-	boolean valid(MouseRecord var1, KeyRecord[] var2, int var3, Class199 var4);
+	boolean valid(MouseRecord var1, KeyRecord[] var2, int var3, KeyRecorder var4);
 
 	static InputSubscriber decode(RsByteBuffer rsbytebuffer_0) {
 		InputSubscriberType class221_2 = InputSubscriberType.valueOf(rsbytebuffer_0.readUnsignedByte());

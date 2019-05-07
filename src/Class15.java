@@ -33,13 +33,13 @@ final class Class15 implements Interface35 {
         int i_3 = Class20.anInt186;
         for (int i_4 = 0; i_4 < ints_0.length; i_4++) {
             QuestDefinitions questdefinitions_5 = IndexLoaders.QUEST_LOADER.getQuest(ints_0[i_4]);
-            if (questdefinitions_5.anInt2977 != -1) {
-                NativeSprite nativesprite_6 = (NativeSprite) Class20.aClass229_191.get((long) questdefinitions_5.anInt2977);
+            if (questdefinitions_5.graphicId != -1) {
+                NativeSprite nativesprite_6 = (NativeSprite) Class20.aClass229_191.get((long) questdefinitions_5.graphicId);
                 if (nativesprite_6 == null) {
-                    SpriteDefinitions class91_7 = SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, questdefinitions_5.anInt2977, 0);
+                    SpriteDefinitions class91_7 = SpriteDefinitions.getSprite(IndexLoaders.SPRITES_INDEX, questdefinitions_5.graphicId, 0);
                     if (class91_7 != null) {
                         nativesprite_6 = Renderers.SOFTWARE_RENDERER.method8444(class91_7, true);
-                        Class20.aClass229_191.put(nativesprite_6, (long) questdefinitions_5.anInt2977);
+                        Class20.aClass229_191.put(nativesprite_6, (long) questdefinitions_5.graphicId);
                     }
                 }
                 if (nativesprite_6 != null) {
@@ -54,8 +54,8 @@ final class Class15 implements Interface35 {
 
     public static void method549(Class397 class397_0, int i_1, SceneObject sceneobject_3) {
         CS2Executor cs2executor_5 = CS2Executor.getNextScriptExecutor();
-        cs2executor_5.anInterface12_7013 = sceneobject_3;
+        cs2executor_5.currentSceneObject = sceneobject_3;
         CS2Executor.method1834(class397_0, i_1, -1, cs2executor_5, (byte) 23);
-        cs2executor_5.anInterface12_7013 = null;
+        cs2executor_5.currentSceneObject = null;
     }
 }

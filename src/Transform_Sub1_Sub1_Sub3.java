@@ -48,16 +48,16 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 					i_14 = this.anInt10389 - 1;
 					StringNode class282_sub47_4 = (StringNode) client.NPCS.get((long) i_14);
 					if (class282_sub47_4 != null) {
-						obj_2 = (Animable) class282_sub47_4.anObject8068;
+						obj_2 = (Entity) class282_sub47_4.anObject8068;
 					}
 				}
 			}
 
 			if (obj_2 != null) {
-				Vector3 vector3_3 = ((Animable) obj_2).method11166().aClass385_3595;
+				Vector3 vector3_3 = ((Entity) obj_2).method11166().aClass385_3595;
 				this.method11172(vector3_3.x, (float) (Class504.method8389((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.anInt10383), vector3_3.z);
 				if (this.anInt10391 >= 0) {
-					BASDefinitions renderanimdefs_15 = ((Animable) obj_2).getRenderAnimDefs();
+					BASDefinitions renderanimdefs_15 = ((Entity) obj_2).getRenderAnimDefs();
 					int i_5 = 0;
 					int i_6 = 0;
 					if (renderanimdefs_15.anIntArrayArray2802 != null && renderanimdefs_15.anIntArrayArray2802[this.anInt10391] != null) {
@@ -71,10 +71,10 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 					}
 
 					if (i_5 != 0 || i_6 != 0) {
-						int i_7 = ((Animable) obj_2).aClass19_10359.method578();
+						int i_7 = ((Entity) obj_2).aClass19_10359.method578();
 						int i_8 = i_7;
-						if (((Animable) obj_2).anIntArray10362 != null && ((Animable) obj_2).anIntArray10362[this.anInt10391] != -1) {
-							i_8 = ((Animable) obj_2).anIntArray10362[this.anInt10391];
+						if (((Entity) obj_2).anIntArray10362 != null && ((Entity) obj_2).anIntArray10362[this.anInt10391] != -1) {
+							i_8 = ((Entity) obj_2).anIntArray10362[this.anInt10391];
 						}
 
 						int i_9 = i_8 - i_7 & 0x3fff;
@@ -153,7 +153,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_4 = this.method11168();
 			this.method15905(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, (short) -8736);
 			Class285 class285_5 = Class470.method7824(false, (byte) -59);
-			meshrasterizer_3.method11282(matrix44var_4, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_3.method11282(matrix44var_4, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10402 != null) {
 				Class151 class151_6 = this.aClass539_10402.method11517();
 				graphicalrenderer_1.method8456(class151_6);
@@ -254,7 +254,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			this.method15905(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, (short) -381);
 			Class285 class285_4 = Class470.method7824(false, (byte) -61);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10402 != null) {
 				Class151 class151_5 = this.aClass539_10402.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -275,7 +275,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			this.method15905(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, (short) 8398);
 			Class285 class285_4 = Class470.method7824(false, (byte) -42);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10402 != null) {
 				Class151 class151_5 = this.aClass539_10402.method11517();
 				graphicalrenderer_1.method8456(class151_5);
@@ -388,7 +388,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			this.method15905(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, (short) 13564);
 			Class285 class285_4 = Class470.method7824(false, (byte) -22);
-			meshrasterizer_2.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[0], 0);
+			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass539_10402 != null) {
 				Class151 class151_5 = this.aClass539_10402.method11517();
 				graphicalrenderer_1.method8456(class151_5);

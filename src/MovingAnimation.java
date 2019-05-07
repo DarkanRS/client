@@ -1,7 +1,7 @@
 public class MovingAnimation extends Animation {
 
 	public boolean aBool7891 = false;
-	Animable aTransform_Sub1_Sub1_Sub2_7892;
+	Entity aTransform_Sub1_Sub1_Sub2_7892;
 
 	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
 		if (!this.aBool7891 || !this.aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || this.aTransform_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187)) {
@@ -10,7 +10,7 @@ public class MovingAnimation extends Animation {
 
 	}
 
-	MovingAnimation(Animable animable_1) {
+	MovingAnimation(Entity animable_1) {
 		super(false);
 		this.aTransform_Sub1_Sub1_Sub2_7892 = animable_1;
 	}

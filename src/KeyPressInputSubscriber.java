@@ -2,7 +2,7 @@ public class KeyPressInputSubscriber implements InputSubscriber {
 	int code;
 	int flags;
 
-	public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, Class199 class199_4) {
+	public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
 		for (int i_6 = 0; i_6 < i_3 && i_6 < arr_2.length; i_6++) {
 			KeyRecord interface16_7 = arr_2[i_6];
 			if (interface16_7 != null && interface16_7.getCode() == this.code && interface16_7.getFlags() == this.flags) {

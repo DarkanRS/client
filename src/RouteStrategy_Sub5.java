@@ -32,7 +32,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		int i_13;
 		int i_14;
 		if (sceneobject_10 != null) {
-			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1708238959).getObjectDefinitions(sceneobject_10.getId(1992951281));
+			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(1992951281));
 			i_12 = sceneobject_10.method92(-401484615) & 0x3;
 			i_13 = sceneobject_10.method89(2041579125);
 			if (objectdefinitions_11.mapSpriteId != -1) {
@@ -79,7 +79,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		}
 		sceneobject_10 = (SceneObject) sceneobjectmanager_9.getInteractableObject(i_1, i_2, i_3, client.anInterface25_7446);
 		if (sceneobject_10 != null) {
-			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1933772768).getObjectDefinitions(sceneobject_10.getId(281132177));
+			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(281132177));
 			i_12 = sceneobject_10.method92(-763690677) & 0x3;
 			i_13 = sceneobject_10.method89(1162036783);
 			if (objectdefinitions_11.mapSpriteId != -1) {
@@ -98,7 +98,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		}
 		sceneobject_10 = (SceneObject) sceneobjectmanager_9.getGroundDecoration(i_1, i_2, i_3);
 		if (sceneobject_10 != null) {
-			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436(-1659848045).getObjectDefinitions(sceneobject_10.getId(-1741343457));
+			objectdefinitions_11 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_10.getId(-1741343457));
 			i_12 = sceneobject_10.method92(-1014923705) & 0x3;
 			if (objectdefinitions_11.mapSpriteId != -1) {
 				VarcDefinitions.method6997(graphicalrenderer_0, objectdefinitions_11, i_12, i_4, i_5, 1254236729);
@@ -124,7 +124,7 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 		return i_2 == 3 ? Class93.method1578(long_0, i_2) : Integer.toString(i_4 / 10) + i_4 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_5] + "-" + i_6;
 	}
 
-	public static void method13047(int[] ints_0, int[] ints_1, int i_2, int i_3, byte b_4) {
+	public static void method13047(int[] ints_0, int[] ints_1, int i_2, int i_3) {
 		if (i_2 < i_3) {
 			int i_5 = (i_3 + i_2) / 2;
 			int i_6 = i_2;
@@ -149,8 +149,8 @@ public class RouteStrategy_Sub5 extends RouteStrategy {
 			ints_0[i_6] = i_7;
 			ints_1[i_3] = ints_1[i_6];
 			ints_1[i_6] = i_8;
-			method13047(ints_0, ints_1, i_2, i_6 - 1, (byte) 34);
-			method13047(ints_0, ints_1, i_6 + 1, i_3, (byte) 95);
+			method13047(ints_0, ints_1, i_2, i_6 - 1);
+			method13047(ints_0, ints_1, i_6 + 1, i_3);
 		}
 	}
 }

@@ -37,10 +37,6 @@ public class Class163 {
 		return fontmetrics_1.getTextWidth(string_3, Class115.aNativeSpriteArray1248);
 	}
 
-	public static TilestreamPacket[] method2842() {
-		return new TilestreamPacket[] { TilestreamPacket.aClass364_4209, TilestreamPacket.aClass364_4207, TilestreamPacket.CREATE_GROUND_ITEM, TilestreamPacket.aClass364_4213, TilestreamPacket.aClass364_4208, TilestreamPacket.PROJECTILE, TilestreamPacket.aClass364_4210, TilestreamPacket.aClass364_4211, TilestreamPacket.aClass364_4205, TilestreamPacket.aClass364_4204, TilestreamPacket.aClass364_4214, TilestreamPacket.TILE_MESSAGE, TilestreamPacket.aClass364_4216, TilestreamPacket.aClass364_4217, TilestreamPacket.aClass364_4218 };
-	}
-
 	public static Class350 method2843(RsByteBuffer rsbytebuffer_0, int i_1) {
 		Class350 class350_2 = Class383.method6512(rsbytebuffer_0);
 		int i_3 = rsbytebuffer_0.readBigSmart();

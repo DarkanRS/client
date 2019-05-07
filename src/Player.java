@@ -1,4 +1,4 @@
-public class Player extends Animable {
+public class Player extends Entity {
 
 	public int anInt10569;
 	public int anInt10570;
@@ -60,14 +60,14 @@ public class Player extends Animable {
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
 					MeshRasterizer meshrasterizer_11 = Class116.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
 					if (meshrasterizer_11 != null) {
-						if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < 1 + this.aMeshRasterizerArray10372.length) {
+						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -124);
 						}
 
 						class285_17 = Class470.method7824(true, (byte) -56);
 						this.aBool10312 = true;
 						graphicalrenderer_1.RA(false);
-						meshrasterizer_11.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+						meshrasterizer_11.method11282(matrix44var_2, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 						graphicalrenderer_1.RA(true);
 					}
 				}
@@ -114,7 +114,7 @@ public class Player extends Animable {
 
 			matrix44var_2.method5209(matrix44var_3);
 			matrix44var_2.method5219(0.0F, (float) (-5 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -87);
 			}
 
@@ -126,7 +126,7 @@ public class Player extends Animable {
 
 			for (i_18 = 0; i_18 < this.aMeshRasterizerArray10372.length; i_18++) {
 				if (this.aMeshRasterizerArray10372[i_18] != null) {
-					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.boundingBoxPolygons[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -436,14 +436,14 @@ public class Player extends Animable {
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
 					MeshRasterizer meshrasterizer_11 = Class116.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
 					if (meshrasterizer_11 != null) {
-						if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < 1 + this.aMeshRasterizerArray10372.length) {
+						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -105);
 						}
 
 						class285_17 = Class470.method7824(true, (byte) -34);
 						this.aBool10312 = true;
 						graphicalrenderer_1.RA(false);
-						meshrasterizer_11.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+						meshrasterizer_11.method11282(matrix44var_2, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 						graphicalrenderer_1.RA(true);
 					}
 				}
@@ -490,7 +490,7 @@ public class Player extends Animable {
 
 			matrix44var_2.method5209(matrix44var_3);
 			matrix44var_2.method5219(0.0F, (float) (-5 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -105);
 			}
 
@@ -502,7 +502,7 @@ public class Player extends Animable {
 
 			for (i_18 = 0; i_18 < this.aMeshRasterizerArray10372.length; i_18++) {
 				if (this.aMeshRasterizerArray10372[i_18] != null) {
-					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.boundingBoxPolygons[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -551,14 +551,14 @@ public class Player extends Animable {
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
 					MeshRasterizer meshrasterizer_11 = Class116.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
 					if (meshrasterizer_11 != null) {
-						if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < 1 + this.aMeshRasterizerArray10372.length) {
+						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -105);
 						}
 
 						class285_17 = Class470.method7824(true, (byte) -125);
 						this.aBool10312 = true;
 						graphicalrenderer_1.RA(false);
-						meshrasterizer_11.method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+						meshrasterizer_11.method11282(matrix44var_2, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 						graphicalrenderer_1.RA(true);
 					}
 				}
@@ -605,7 +605,7 @@ public class Player extends Animable {
 
 			matrix44var_2.method5209(matrix44var_3);
 			matrix44var_2.method5219(0.0F, (float) (-5 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -61);
 			}
 
@@ -617,7 +617,7 @@ public class Player extends Animable {
 
 			for (i_18 = 0; i_18 < this.aMeshRasterizerArray10372.length; i_18++) {
 				if (this.aMeshRasterizerArray10372[i_18] != null) {
-					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.aEntityNode_Sub5Array7965[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_18].method11282(matrix44var_2, this.boundingBoxPolygons[i_18], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 
@@ -1029,14 +1029,14 @@ public class Player extends Animable {
 					MovingAnimation class456_sub3_11 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_10 == null) ? this.aAnimation_Sub3_10337 : null;
 					MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 					if (meshrasterizer_12 != null) {
-						if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length + 1) {
+						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length + 1) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -9);
 						}
 
 						class285_18 = Class470.method7824(true, (byte) -88);
 						this.aBool10312 = true;
 						graphicalrenderer_1.RA(false);
-						meshrasterizer_12.method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[this.aMeshRasterizerArray10372.length], 0);
+						meshrasterizer_12.method11282(matrix44var_3, this.boundingBoxPolygons[this.aMeshRasterizerArray10372.length], 0);
 						graphicalrenderer_1.RA(true);
 					}
 				}
@@ -1083,7 +1083,7 @@ public class Player extends Animable {
 
 			matrix44var_3.method5209(matrix44var_4);
 			matrix44var_3.method5219(0.0F, (float) (-5 - this.anInt10325), 0.0F);
-			if (this.aEntityNode_Sub5Array7965 == null || this.aEntityNode_Sub5Array7965.length < this.aMeshRasterizerArray10372.length) {
+			if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length) {
 				this.method13008(this.aMeshRasterizerArray10372.length, (byte) -92);
 			}
 
@@ -1095,7 +1095,7 @@ public class Player extends Animable {
 
 			for (i_19 = 0; i_19 < this.aMeshRasterizerArray10372.length; i_19++) {
 				if (this.aMeshRasterizerArray10372[i_19] != null) {
-					this.aMeshRasterizerArray10372[i_19].method11282(matrix44var_3, this.aEntityNode_Sub5Array7965[i_19], this == VertexNormal.MY_PLAYER ? 1 : 0);
+					this.aMeshRasterizerArray10372[i_19].method11282(matrix44var_3, this.boundingBoxPolygons[i_19], this == VertexNormal.MY_PLAYER ? 1 : 0);
 				}
 			}
 

@@ -1,4 +1,4 @@
-public abstract class Animable extends Transform_Sub1_Sub1 {
+public abstract class Entity extends Transform_Sub1_Sub1 {
 
 	public int index;
 	public int anInt10326;
@@ -527,7 +527,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 		this.localY = (short) (i_2 + (int) vector3_3.z >> 9);
 	}
 
-	Animable(SceneObjectManager sceneobjectmanager_1) {
+	Entity(SceneObjectManager sceneobjectmanager_1) {
 		this(sceneobjectmanager_1, 10);
 	}
 
@@ -776,7 +776,7 @@ public abstract class Animable extends Transform_Sub1_Sub1 {
 
 	abstract int method15868();
 
-	Animable(SceneObjectManager sceneobjectmanager_1, int i_2) {
+	Entity(SceneObjectManager sceneobjectmanager_1, int i_2) {
 		super(sceneobjectmanager_1, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, (byte) 0);
 		this.anInt10315 = 1;
 		this.anInt10317 = -32768;

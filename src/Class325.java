@@ -6,8 +6,8 @@ public class Class325 {
 		throw new Error();
 	}
 
-	public static Class199 method5787(Component component_0) {
-		return new Class199_Sub1(component_0);
+	public static KeyRecorder method5787(Component component_0) {
+		return new CanvasKeyRecorder(component_0);
 	}
 
 	static boolean method5789(int i_0) {
