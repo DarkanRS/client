@@ -40,12 +40,12 @@ public class BASDefinitions {
 	public int runTurn2 = -1;
 	public int walkTurn1 = -1;
 	public int walkTurn2 = -1;
-	public int[] anIntArray2814 = null;
-	public int[] standAnimations = null;
+	public int[] randomStandAnimations = null;
+	public int[] randomStandAnimationChances = null;
 	public boolean aBool2787 = true;
 	public int anInt2813 = 0;
 	public int anInt2790 = 0;
-	int numStandAnimations = 0;
+	int totalChance = 0;
 	public int[] anIntArray2818;
 	public int[][] anIntArrayArray2791;
 	Matrix44Var[] aClass294Array2805;
@@ -142,13 +142,13 @@ public class BASDefinitions {
 				this.walkTurn2 = rsbytebuffer_1.readBigSmart();
 			} else if (i_2 == 52) {
 				i_4 = rsbytebuffer_1.readUnsignedByte();
-				this.anIntArray2814 = new int[i_4];
-				this.standAnimations = new int[i_4];
+				this.randomStandAnimations = new int[i_4];
+				this.randomStandAnimationChances = new int[i_4];
 				for (i_5 = 0; i_5 < i_4; i_5++) {
-					this.anIntArray2814[i_5] = rsbytebuffer_1.readBigSmart();
+					this.randomStandAnimations[i_5] = rsbytebuffer_1.readBigSmart();
 					int i_6 = rsbytebuffer_1.readUnsignedByte();
-					this.standAnimations[i_5] = i_6;
-					this.numStandAnimations += i_6;
+					this.randomStandAnimationChances[i_5] = i_6;
+					this.totalChance += i_6;
 				}
 			} else if (i_2 == 53) {
 				this.aBool2787 = false;
@@ -177,15 +177,15 @@ public class BASDefinitions {
 	public int getStandAnimation() {
 		if (this.standAnimation != -1) {
 			return this.standAnimation;
-		} else if (this.anIntArray2814 == null) {
+		} else if (this.randomStandAnimations == null) {
 			return -1;
 		} else {
-			int i_2 = (int) (Math.random() * (double) this.numStandAnimations);
+			int i_2 = (int) (Math.random() * (double) this.totalChance);
 			int i_3;
-			for (i_3 = 0; i_2 >= this.standAnimations[i_3]; i_3++) {
-				i_2 -= this.standAnimations[i_3];
+			for (i_3 = 0; i_2 >= this.randomStandAnimationChances[i_3]; i_3++) {
+				i_2 -= this.randomStandAnimationChances[i_3];
 			}
-			return this.anIntArray2814[i_3];
+			return this.randomStandAnimations[i_3];
 		}
 	}
 
@@ -195,9 +195,9 @@ public class BASDefinitions {
 		} else if (this.standAnimation == i_1) {
 			return true;
 		} else {
-			if (this.anIntArray2814 != null) {
-				for (int i_3 = 0; i_3 < this.anIntArray2814.length; i_3++) {
-					if (this.anIntArray2814[i_3] == i_1) {
+			if (this.randomStandAnimations != null) {
+				for (int i_3 = 0; i_3 < this.randomStandAnimations.length; i_3++) {
+					if (this.randomStandAnimations[i_3] == i_1) {
 						return true;
 					}
 				}
@@ -261,8 +261,8 @@ public class BASDefinitions {
 		AccountCreationStage.method253(this.standAnimation, iterablenodemap_2, 1339333196);
 		int[] ints_3;
 		int i_4;
-		if (this.anIntArray2814 != null) {
-			ints_3 = this.anIntArray2814;
+		if (this.randomStandAnimations != null) {
+			ints_3 = this.randomStandAnimations;
 			for (i_4 = 0; i_4 < ints_3.length; i_4++) {
 				int i_7 = ints_3[i_4];
 				AccountCreationStage.method253(i_7, iterablenodemap_2, -371482637);

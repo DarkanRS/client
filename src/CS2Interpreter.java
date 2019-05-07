@@ -10132,16 +10132,16 @@ public class CS2Interpreter {
 	static final void method15408(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		BASDefinitions bas = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(i_2, (byte) 12);
-		if (bas.anIntArray2814 != null && bas.anIntArray2814.length > 0) {
+		if (bas.randomStandAnimations != null && bas.randomStandAnimations.length > 0) {
 			int i_4 = 0;
-			int i_5 = bas.standAnimations[0];
-			for (int i_6 = 1; i_6 < bas.anIntArray2814.length; i_6++) {
-				if (bas.standAnimations[i_6] > i_5) {
+			int i_5 = bas.randomStandAnimationChances[0];
+			for (int i_6 = 1; i_6 < bas.randomStandAnimations.length; i_6++) {
+				if (bas.randomStandAnimationChances[i_6] > i_5) {
 					i_4 = i_6;
-					i_5 = bas.standAnimations[i_6];
+					i_5 = bas.randomStandAnimationChances[i_6];
 				}
 			}
-			executor.intStack[++executor.intStackPtr - 1] = bas.anIntArray2814[i_4];
+			executor.intStack[++executor.intStackPtr - 1] = bas.randomStandAnimations[i_4];
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = bas.standAnimation;
 		}
