@@ -201,7 +201,7 @@ public class Class286 implements Runnable {
 				return DefaultsFile.aClass194_6967;
 			}
 			if ((double) Class291_Sub1.aFloat3468 == 6.0D) {
-				return Class251.aClass194_3103;
+				return RouteFinder.aClass194_3103;
 			}
 			if ((double) Class291_Sub1.aFloat3468 >= 8.0D) {
 				return Transform_Sub1_Sub5_Sub1.aClass194_10527;

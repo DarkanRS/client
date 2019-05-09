@@ -17,22 +17,22 @@ public final class Class112 {
 		int i_10;
 		for (int i_9 = 0; i_9 < 128; i_9++) {
 			for (i_10 = 0; i_10 < 128; i_10++) {
-				Class251.directions[i_9][i_10] = 0;
-				Class251.distances[i_9][i_10] = 99999999;
+				RouteFinder.directions[i_9][i_10] = 0;
+				RouteFinder.distances[i_9][i_10] = 99999999;
 			}
 		}
 		boolean bool_28;
 		if (i_2 == 1) {
-			bool_28 = CutsceneAction_Sub17.performCalculationS1(i_0, i_1, routestrategy_3, clipmap_4);
+			bool_28 = RouteFinder.performCalculationS1(i_0, i_1, routestrategy_3, clipmap_4);
 		} else if (i_2 == 2) {
-			bool_28 = Class46.performCalculationS2(i_0, i_1, routestrategy_3, clipmap_4);
+			bool_28 = RouteFinder.performCalculationS2(i_0, i_1, routestrategy_3, clipmap_4);
 		} else {
-			bool_28 = Class46.performCalculationSX(i_0, i_1, i_2, routestrategy_3, clipmap_4);
+			bool_28 = RouteFinder.performCalculationSX(i_0, i_1, i_2, routestrategy_3, clipmap_4);
 		}
 		i_10 = i_0 - 64;
 		int i_11 = i_1 - 64;
-		int i_12 = Class251.exitX;
-		int i_13 = Class251.exitY;
+		int i_12 = RouteFinder.exitX;
+		int i_13 = RouteFinder.exitY;
 		int i_14;
 		int i_15;
 		int i_17;
@@ -51,7 +51,7 @@ public final class Class112 {
 				for (int i_22 = i_18 - b_16; i_22 <= i_18 + b_16; i_22++) {
 					int i_23 = i_21 - i_10;
 					int i_24 = i_22 - i_11;
-					if (i_23 >= 0 && i_24 >= 0 && i_23 < 128 && i_24 < 128 && Class251.distances[i_23][i_24] < 100) {
+					if (i_23 >= 0 && i_24 >= 0 && i_23 < 128 && i_24 < 128 && RouteFinder.distances[i_23][i_24] < 100) {
 						int i_25 = 0;
 						if (i_21 < i_17) {
 							i_25 = i_17 - i_21;
@@ -65,9 +65,9 @@ public final class Class112 {
 							i_26 = i_22 - (i_18 + i_20 - 1);
 						}
 						int i_27 = i_25 * i_25 + i_26 * i_26;
-						if (i_27 < i_14 || i_27 == i_14 && Class251.distances[i_23][i_24] < i_15) {
+						if (i_27 < i_14 || i_27 == i_14 && RouteFinder.distances[i_23][i_24] < i_15) {
 							i_14 = i_27;
-							i_15 = Class251.distances[i_23][i_24];
+							i_15 = RouteFinder.distances[i_23][i_24];
 							i_12 = i_21;
 							i_13 = i_22;
 						}
@@ -82,14 +82,14 @@ public final class Class112 {
 			return 0;
 		} else {
 			byte b_29 = 0;
-			Class251.bufferX[b_29] = i_12;
+			RouteFinder.bufferX[b_29] = i_12;
 			i_14 = b_29 + 1;
-			Class251.bufferY[b_29] = i_13;
-			for (int i_30 = i_15 = Class251.directions[i_12 - i_10][i_13 - i_11]; i_0 != i_12 || i_13 != i_1; i_30 = Class251.directions[i_12 - i_10][i_13 - i_11]) {
+			RouteFinder.bufferY[b_29] = i_13;
+			for (int i_30 = i_15 = RouteFinder.directions[i_12 - i_10][i_13 - i_11]; i_0 != i_12 || i_13 != i_1; i_30 = RouteFinder.directions[i_12 - i_10][i_13 - i_11]) {
 				if (i_15 != i_30) {
 					i_15 = i_30;
-					Class251.bufferX[i_14] = i_12;
-					Class251.bufferY[i_14++] = i_13;
+					RouteFinder.bufferX[i_14] = i_12;
+					RouteFinder.bufferY[i_14++] = i_13;
 				}
 				if ((i_30 & 0x2) != 0) {
 					++i_12;
@@ -104,8 +104,8 @@ public final class Class112 {
 			}
 			i_17 = 0;
 			while (i_14-- > 0) {
-				ints_6[i_17] = Class251.bufferX[i_14];
-				ints_7[i_17++] = Class251.bufferY[i_14];
+				ints_6[i_17] = RouteFinder.bufferX[i_14];
+				ints_7[i_17++] = RouteFinder.bufferY[i_14];
 				if (i_17 >= ints_6.length) {
 					break;
 				}

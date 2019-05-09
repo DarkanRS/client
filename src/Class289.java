@@ -285,15 +285,15 @@ public class Class289 implements Runnable {
 									i_32 = i_20 + i_30;
 									i_33 = i_21 + i_31;
 									i_34 = clipmap_38.map[i_32 - clipmap_38.offsetX][i_33 - clipmap_38.offsetY];
-									if ((i_34 & 0x40240000) != 0) {
+									if (!ClipMap.isFlagged(i_34, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.ALT_OBJ)) {
 										graphicalrenderer_0.method8425(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, 4, -1713569622, (byte) -107);
-									} else if ((i_34 & 0x800000) != 0) {
+									} else if (!ClipMap.isFlagged(i_34, ClipFlag.N_ALT_OBJ)) {
 										graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622, -113850245);
-									} else if ((i_34 & 0x2000000) != 0) {
+									} else if (!ClipMap.isFlagged(i_34, ClipFlag.E_ALT_OBJ)) {
 										graphicalrenderer_0.method8428(i_22 + i_30 * 4 + 3, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
-									} else if ((i_34 & 0x8000000) != 0) {
+									} else if (!ClipMap.isFlagged(i_34, ClipFlag.S_ALT_OBJ)) {
 										graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4 + 3, 4, -1713569622, 1008017075);
-									} else if ((i_34 & 0x20000000) != 0) {
+									} else if (!ClipMap.isFlagged(i_34, ClipFlag.W_ALT_OBJ)) {
 										graphicalrenderer_0.method8428(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
 									}
 								}

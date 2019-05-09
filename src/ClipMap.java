@@ -1,44 +1,51 @@
+import java.util.ArrayList;
+
 public class ClipMap {
 
     public int[][] map;
-
     public int offsetX;
-
     public int offsetY;
-
     int sizeX;
-
     int sizeY;
 
     static int anInt3968;
+    
+    public static ArrayList<ClipFlag> getFlags(int value) {
+		ArrayList<ClipFlag> flags = new ArrayList<>();
+		for (ClipFlag f : ClipFlag.values()) {
+			if ((value & f.flag) != 0 && f != ClipFlag.EMPTY)
+				flags.add(f);
+		}
+		return flags;
+    }
 
-    public void method5965() {
-        for (int i_2 = 0; i_2 < this.sizeX; i_2++) {
-            for (int i_3 = 0; i_3 < this.sizeY; i_3++) {
-                if (i_2 != 0 && i_3 != 0 && i_2 < this.sizeX - 5 && i_3 < this.sizeY - 5) {
-                    this.map[i_2][i_3] = 2097152;
+    public void initEmpty() {
+        for (int x = 0; x < this.sizeX; x++) {
+            for (int y = 0; y < this.sizeY; y++) {
+                if (x != 0 && y != 0 && x < this.sizeX - 5 && y < this.sizeY - 5) {
+                    this.map[x][y] = ClipFlag.BLOCKED.flag;
                 } else {
-                    this.map[i_2][i_3] = -1;
+                    this.map[x][y] = ClipFlag.EMPTY.flag;
                 }
             }
         }
     }
 
-    public void addObject(int i_1, int i_2, int i_3, int i_4, boolean bool_5, boolean bool_6, byte b_7) {
-        int i_8 = 256;
-        if (bool_5) {
-            i_8 |= 0x20000;
+    public void addObject(int i_1, int i_2, int i_3, int i_4, boolean clipped, boolean projectileClipped) {
+        int flag = ClipFlag.OBJ.flag;
+        if (clipped) {
+            flag |= ClipFlag.BLOCKED_OBJ.flag;
         }
-        if (bool_6) {
-            i_8 |= 0x40000000;
+        if (projectileClipped) {
+            flag |= ClipFlag.ALT_OBJ.flag;
         }
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
-        for (int i_9 = i_1; i_9 < i_3 + i_1; i_9++) {
-            if (i_9 >= 0 && i_9 < this.sizeX) {
-                for (int i_10 = i_2; i_10 < i_2 + i_4; i_10++) {
-                    if (i_10 >= 0 && i_10 < this.sizeY) {
-                        this.addMask(i_9, i_10, i_8, (byte) -45);
+        for (int x = i_1; x < i_3 + i_1; x++) {
+            if (x >= 0 && x < this.sizeX) {
+                for (int y = i_2; y < i_2 + i_4; y++) {
+                    if (y >= 0 && y < this.sizeY) {
+                        this.addFlag(x, y, flag);
                     }
                 }
             }
@@ -48,16 +55,22 @@ public class ClipMap {
     public void addBlockFloorDeco(int i_1, int i_2) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
-        this.map[i_1][i_2] |= 0x40000;
+        this.map[i_1][i_2] |= ClipFlag.BLOCKED_DECO.flag;
+    }
+    
+    public void removeBlockFloorDeco(int i_1, int i_2) {
+        i_1 -= this.offsetX;
+        i_2 -= this.offsetY;
+        this.map[i_1][i_2] &= ~ClipFlag.BLOCKED_DECO.flag;
     }
 
-    public void method5970(int i_1, int i_2, int i_3, int i_4, int i_5, boolean bool_6, boolean bool_7) {
-        int i_9 = 256;
-        if (bool_6) {
-            i_9 |= 0x20000;
+    public void removeObject(int i_1, int i_2, int i_3, int i_4, int i_5, boolean blocked, boolean alt) {
+        int flag = ClipFlag.OBJ.flag;
+        if (blocked) {
+            flag |= ClipFlag.BLOCKED_OBJ.flag;
         }
-        if (bool_7) {
-            i_9 |= 0x40000000;
+        if (alt) {
+            flag |= ClipFlag.ALT_OBJ.flag;
         }
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
@@ -71,7 +84,7 @@ public class ClipMap {
             if (i_10 >= 0 && i_10 < this.sizeX) {
                 for (int i_11 = i_2; i_11 < i_2 + i_4; i_11++) {
                     if (i_11 >= 0 && i_11 < this.sizeY) {
-                        this.method5973(i_10, i_11, i_9, (byte) 121);
+                        this.removeFlag(i_10, i_11, flag);
                     }
                 }
             }
@@ -83,202 +96,223 @@ public class ClipMap {
         i_2 -= this.offsetY;
         if (i_3 == 0) {
             if (i_4 == 0) {
-                this.addMask(i_1, i_2, 128, (byte) -66);
-                this.addMask(i_1 - 1, i_2, 8, (byte) -78);
+                this.addFlag(i_1, i_2, ClipFlag.W_OBJ);
+                this.addFlag(i_1 - 1, i_2, ClipFlag.E_OBJ);
             }
             if (i_4 == 1) {
-                this.addMask(i_1, i_2, 2, (byte) -8);
-                this.addMask(i_1, i_2 + 1, 32, (byte) -40);
+                this.addFlag(i_1, i_2, ClipFlag.N_OBJ);
+                this.addFlag(i_1, i_2 + 1, ClipFlag.S_OBJ);
             }
             if (i_4 == 2) {
-                this.addMask(i_1, i_2, 8, (byte) -5);
-                this.addMask(i_1 + 1, i_2, 128, (byte) -55);
+                this.addFlag(i_1, i_2, ClipFlag.E_OBJ);
+                this.addFlag(i_1 + 1, i_2, ClipFlag.W_OBJ);
             }
             if (i_4 == 3) {
-                this.addMask(i_1, i_2, 32, (byte) -4);
-                this.addMask(i_1, i_2 - 1, 2, (byte) -73);
+                this.addFlag(i_1, i_2, ClipFlag.S_OBJ);
+                this.addFlag(i_1, i_2 - 1, ClipFlag.N_OBJ);
             }
         }
         if (i_3 == 1 || i_3 == 3) {
             if (i_4 == 0) {
-                this.addMask(i_1, i_2, 1, (byte) -65);
-                this.addMask(i_1 - 1, i_2 + 1, 16, (byte) -1);
+                this.addFlag(i_1, i_2, ClipFlag.NW_OBJ);
+                this.addFlag(i_1 - 1, i_2 + 1, ClipFlag.SE_OBJ);
             }
             if (i_4 == 1) {
-                this.addMask(i_1, i_2, 4, (byte) -113);
-                this.addMask(i_1 + 1, i_2 + 1, 64, (byte) -40);
+                this.addFlag(i_1, i_2, ClipFlag.NE_OBJ);
+                this.addFlag(i_1 + 1, i_2 + 1, ClipFlag.SW_OBJ);
             }
             if (i_4 == 2) {
-                this.addMask(i_1, i_2, 16, (byte) -55);
-                this.addMask(i_1 + 1, i_2 - 1, 1, (byte) -106);
+                this.addFlag(i_1, i_2, ClipFlag.SE_OBJ);
+                this.addFlag(i_1 + 1, i_2 - 1, ClipFlag.NW_OBJ);
             }
             if (i_4 == 3) {
-                this.addMask(i_1, i_2, 64, (byte) -119);
-                this.addMask(i_1 - 1, i_2 - 1, 4, (byte) -35);
+                this.addFlag(i_1, i_2, ClipFlag.SW_OBJ);
+                this.addFlag(i_1 - 1, i_2 - 1, ClipFlag.NE_OBJ);
             }
         }
         if (i_3 == 2) {
             if (i_4 == 0) {
-                this.addMask(i_1, i_2, 130, (byte) -57);
-                this.addMask(i_1 - 1, i_2, 8, (byte) -10);
-                this.addMask(i_1, i_2 + 1, 32, (byte) -15);
+                this.addFlag(i_1, i_2, ClipFlag.N_OBJ, ClipFlag.W_OBJ);
+                this.addFlag(i_1 - 1, i_2, ClipFlag.E_OBJ);
+                this.addFlag(i_1, i_2 + 1, ClipFlag.S_OBJ);
             }
             if (i_4 == 1) {
-                this.addMask(i_1, i_2, 10, (byte) -5);
-                this.addMask(i_1, i_2 + 1, 32, (byte) -98);
-                this.addMask(i_1 + 1, i_2, 128, (byte) -13);
+                this.addFlag(i_1, i_2, ClipFlag.N_OBJ, ClipFlag.E_OBJ);
+                this.addFlag(i_1, i_2 + 1, ClipFlag.S_OBJ);
+                this.addFlag(i_1 + 1, i_2, ClipFlag.W_OBJ);
             }
             if (i_4 == 2) {
-                this.addMask(i_1, i_2, 40, (byte) -32);
-                this.addMask(i_1 + 1, i_2, 128, (byte) -104);
-                this.addMask(i_1, i_2 - 1, 2, (byte) -11);
+                this.addFlag(i_1, i_2, ClipFlag.E_OBJ, ClipFlag.S_OBJ);
+                this.addFlag(i_1 + 1, i_2, ClipFlag.W_OBJ);
+                this.addFlag(i_1, i_2 - 1, ClipFlag.N_OBJ);
             }
             if (i_4 == 3) {
-                this.addMask(i_1, i_2, 160, (byte) -41);
-                this.addMask(i_1, i_2 - 1, 2, (byte) -112);
-                this.addMask(i_1 - 1, i_2, 8, (byte) -103);
+                this.addFlag(i_1, i_2, ClipFlag.S_OBJ, ClipFlag.W_OBJ);
+                this.addFlag(i_1, i_2 - 1, ClipFlag.N_OBJ);
+                this.addFlag(i_1 - 1, i_2, ClipFlag.E_OBJ);
             }
         }
         if (bool_5) {
             if (i_3 == 0) {
                 if (i_4 == 0) {
-                    this.addMask(i_1, i_2, 65536, (byte) -54);
-                    this.addMask(i_1 - 1, i_2, 4096, (byte) -117);
+                    this.addFlag(i_1, i_2, ClipFlag.W_BOUND);
+                    this.addFlag(i_1 - 1, i_2, ClipFlag.E_BOUND);
                 }
                 if (i_4 == 1) {
-                    this.addMask(i_1, i_2, 1024, (byte) -86);
-                    this.addMask(i_1, i_2 + 1, 16384, (byte) -114);
+                    this.addFlag(i_1, i_2, ClipFlag.N_BOUND);
+                    this.addFlag(i_1, i_2 + 1, ClipFlag.S_BOUND);
                 }
                 if (i_4 == 2) {
-                    this.addMask(i_1, i_2, 4096, (byte) -112);
-                    this.addMask(i_1 + 1, i_2, 65536, (byte) -88);
+                    this.addFlag(i_1, i_2, ClipFlag.E_BOUND);
+                    this.addFlag(i_1 + 1, i_2, ClipFlag.W_BOUND);
                 }
                 if (i_4 == 3) {
-                    this.addMask(i_1, i_2, 16384, (byte) -20);
-                    this.addMask(i_1, i_2 - 1, 1024, (byte) -12);
+                    this.addFlag(i_1, i_2, ClipFlag.S_BOUND);
+                    this.addFlag(i_1, i_2 - 1, ClipFlag.N_BOUND);
                 }
             }
             if (i_3 == 1 || i_3 == 3) {
                 if (i_4 == 0) {
-                    this.addMask(i_1, i_2, 512, (byte) -118);
-                    this.addMask(i_1 - 1, i_2 + 1, 8192, (byte) -106);
+                    this.addFlag(i_1, i_2, ClipFlag.NW_BOUND);
+                    this.addFlag(i_1 - 1, i_2 + 1, ClipFlag.SE_BOUND);
                 }
                 if (i_4 == 1) {
-                    this.addMask(i_1, i_2, 2048, (byte) -15);
-                    this.addMask(i_1 + 1, i_2 + 1, 32768, (byte) -59);
+                    this.addFlag(i_1, i_2, ClipFlag.NE_BOUND);
+                    this.addFlag(i_1 + 1, i_2 + 1, ClipFlag.SW_BOUND);
                 }
                 if (i_4 == 2) {
-                    this.addMask(i_1, i_2, 8192, (byte) -115);
-                    this.addMask(i_1 + 1, i_2 - 1, 512, (byte) -60);
+                    this.addFlag(i_1, i_2, ClipFlag.SE_BOUND);
+                    this.addFlag(i_1 + 1, i_2 - 1, ClipFlag.NW_BOUND);
                 }
                 if (i_4 == 3) {
-                    this.addMask(i_1, i_2, 32768, (byte) -88);
-                    this.addMask(i_1 - 1, i_2 - 1, 2048, (byte) -40);
+                    this.addFlag(i_1, i_2, ClipFlag.SW_BOUND);
+                    this.addFlag(i_1 - 1, i_2 - 1, ClipFlag.NE_BOUND);
                 }
             }
             if (i_3 == 2) {
                 if (i_4 == 0) {
-                    this.addMask(i_1, i_2, 66560, (byte) -32);
-                    this.addMask(i_1 - 1, i_2, 4096, (byte) -5);
-                    this.addMask(i_1, i_2 + 1, 16384, (byte) -16);
+                    this.addFlag(i_1, i_2, ClipFlag.N_BOUND, ClipFlag.W_BOUND);
+                    this.addFlag(i_1 - 1, i_2, ClipFlag.E_BOUND);
+                    this.addFlag(i_1, i_2 + 1, ClipFlag.S_BOUND);
                 }
                 if (i_4 == 1) {
-                    this.addMask(i_1, i_2, 5120, (byte) -17);
-                    this.addMask(i_1, i_2 + 1, 16384, (byte) -115);
-                    this.addMask(i_1 + 1, i_2, 65536, (byte) -83);
+                    this.addFlag(i_1, i_2, ClipFlag.N_BOUND, ClipFlag.E_BOUND);
+                    this.addFlag(i_1, i_2 + 1, ClipFlag.S_BOUND);
+                    this.addFlag(i_1 + 1, i_2, ClipFlag.W_BOUND);
                 }
                 if (i_4 == 2) {
-                    this.addMask(i_1, i_2, 20480, (byte) -124);
-                    this.addMask(i_1 + 1, i_2, 65536, (byte) -78);
-                    this.addMask(i_1, i_2 - 1, 1024, (byte) -2);
+                    this.addFlag(i_1, i_2, ClipFlag.E_BOUND, ClipFlag.S_BOUND);
+                    this.addFlag(i_1 + 1, i_2, ClipFlag.W_BOUND);
+                    this.addFlag(i_1, i_2 - 1, ClipFlag.N_BOUND);
                 }
                 if (i_4 == 3) {
-                    this.addMask(i_1, i_2, 81920, (byte) -97);
-                    this.addMask(i_1, i_2 - 1, 1024, (byte) -22);
-                    this.addMask(i_1 - 1, i_2, 4096, (byte) -53);
+                    this.addFlag(i_1, i_2, ClipFlag.S_BOUND, ClipFlag.W_BOUND);
+                    this.addFlag(i_1, i_2 - 1, ClipFlag.N_BOUND);
+                    this.addFlag(i_1 - 1, i_2, ClipFlag.E_BOUND);
                 }
             }
         }
         if (bool_6) {
             if (i_3 == 0) {
                 if (i_4 == 0) {
-                    this.addMask(i_1, i_2, 536870912, (byte) -6);
-                    this.addMask(i_1 - 1, i_2, 33554432, (byte) -69);
+                    this.addFlag(i_1, i_2, ClipFlag.W_ALT_OBJ);
+                    this.addFlag(i_1 - 1, i_2, ClipFlag.E_ALT_OBJ);
                 }
                 if (i_4 == 1) {
-                    this.addMask(i_1, i_2, 8388608, (byte) -99);
-                    this.addMask(i_1, i_2 + 1, 134217728, (byte) -100);
+                    this.addFlag(i_1, i_2, ClipFlag.N_ALT_OBJ);
+                    this.addFlag(i_1, i_2 + 1, ClipFlag.S_ALT_OBJ);
                 }
                 if (i_4 == 2) {
-                    this.addMask(i_1, i_2, 33554432, (byte) -18);
-                    this.addMask(i_1 + 1, i_2, 536870912, (byte) -23);
+                    this.addFlag(i_1, i_2, ClipFlag.E_ALT_OBJ);
+                    this.addFlag(i_1 + 1, i_2, ClipFlag.W_ALT_OBJ);
                 }
                 if (i_4 == 3) {
-                    this.addMask(i_1, i_2, 134217728, (byte) -104);
-                    this.addMask(i_1, i_2 - 1, 8388608, (byte) -88);
+                    this.addFlag(i_1, i_2, ClipFlag.S_ALT_OBJ);
+                    this.addFlag(i_1, i_2 - 1, ClipFlag.N_ALT_OBJ);
                 }
             }
             if (i_3 == 1 || i_3 == 3) {
                 if (i_4 == 0) {
-                    this.addMask(i_1, i_2, 4194304, (byte) -116);
-                    this.addMask(i_1 - 1, i_2 + 1, 67108864, (byte) -95);
+                    this.addFlag(i_1, i_2, ClipFlag.NW_ALT_OBJ);
+                    this.addFlag(i_1 - 1, i_2 + 1, ClipFlag.SE_ALT_OBJ);
                 }
                 if (i_4 == 1) {
-                    this.addMask(i_1, i_2, 16777216, (byte) -120);
-                    this.addMask(i_1 + 1, i_2 + 1, 268435456, (byte) -127);
+                    this.addFlag(i_1, i_2, ClipFlag.NE_ALT_OBJ);
+                    this.addFlag(i_1 + 1, i_2 + 1, ClipFlag.SW_ALT_OBJ);
                 }
                 if (i_4 == 2) {
-                    this.addMask(i_1, i_2, 67108864, (byte) -59);
-                    this.addMask(i_1 + 1, i_2 - 1, 4194304, (byte) -92);
+                    this.addFlag(i_1, i_2, ClipFlag.SE_ALT_OBJ);
+                    this.addFlag(i_1 + 1, i_2 - 1, ClipFlag.NW_ALT_OBJ);
                 }
                 if (i_4 == 3) {
-                    this.addMask(i_1, i_2, 268435456, (byte) -63);
-                    this.addMask(i_1 - 1, i_2 - 1, 16777216, (byte) -69);
+                    this.addFlag(i_1, i_2, ClipFlag.SW_ALT_OBJ);
+                    this.addFlag(i_1 - 1, i_2 - 1, ClipFlag.NE_ALT_OBJ);
                 }
             }
             if (i_3 == 2) {
                 if (i_4 == 0) {
-                    this.addMask(i_1, i_2, 545259520, (byte) -108);
-                    this.addMask(i_1 - 1, i_2, 33554432, (byte) -103);
-                    this.addMask(i_1, i_2 + 1, 134217728, (byte) -9);
+                    this.addFlag(i_1, i_2, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ);
+                    this.addFlag(i_1 - 1, i_2, ClipFlag.E_ALT_OBJ);
+                    this.addFlag(i_1, i_2 + 1, ClipFlag.S_ALT_OBJ);
                 }
                 if (i_4 == 1) {
-                    this.addMask(i_1, i_2, 41943040, (byte) -99);
-                    this.addMask(i_1, i_2 + 1, 134217728, (byte) -27);
-                    this.addMask(i_1 + 1, i_2, 536870912, (byte) -124);
+                    this.addFlag(i_1, i_2, ClipFlag.N_ALT_OBJ, ClipFlag.E_ALT_OBJ);
+                    this.addFlag(i_1, i_2 + 1, ClipFlag.S_ALT_OBJ);
+                    this.addFlag(i_1 + 1, i_2, ClipFlag.W_ALT_OBJ);
                 }
                 if (i_4 == 2) {
-                    this.addMask(i_1, i_2, 167772160, (byte) -67);
-                    this.addMask(i_1 + 1, i_2, 536870912, (byte) -102);
-                    this.addMask(i_1, i_2 - 1, 8388608, (byte) -115);
+                    this.addFlag(i_1, i_2, ClipFlag.E_ALT_OBJ, ClipFlag.S_ALT_OBJ);
+                    this.addFlag(i_1 + 1, i_2, ClipFlag.W_ALT_OBJ);
+                    this.addFlag(i_1, i_2 - 1, ClipFlag.N_ALT_OBJ);
                 }
                 if (i_4 == 3) {
-                    this.addMask(i_1, i_2, 671088640, (byte) -1);
-                    this.addMask(i_1, i_2 - 1, 8388608, (byte) -83);
-                    this.addMask(i_1 - 1, i_2, 33554432, (byte) -81);
+                    this.addFlag(i_1, i_2, ClipFlag.S_ALT_OBJ, ClipFlag.W_ALT_OBJ);
+                    this.addFlag(i_1, i_2 - 1, ClipFlag.N_ALT_OBJ);
+                    this.addFlag(i_1 - 1, i_2, ClipFlag.E_ALT_OBJ);
                 }
             }
         }
     }
 
-    public void addUnwalkable(int i_1, int i_2) {
+    public void addBlockedTile(int i_1, int i_2) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
-        this.map[i_1][i_2] |= 0x200000;
+        this.map[i_1][i_2] |= ClipFlag.BLOCKED.flag;
+    }
+    
+    void removeFlag(int i_1, int i_2, ClipFlag... flags) {
+    	int flag = 0;
+    	for (ClipFlag f : flags)
+    		flag |= f.flag;
+    	removeFlag(i_1, i_2, flag);
     }
 
-    void method5973(int i_1, int i_2, int i_3, byte b_4) {
+    void removeFlag(int i_1, int i_2, int i_3) {
         this.map[i_1][i_2] &= ~i_3;
     }
 
-    public void method5974(int i_1, int i_2) {
+    public void removeBlockedTile(int i_1, int i_2) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
-        this.map[i_1][i_2] &= ~0x200000;
+        this.map[i_1][i_2] &= ~ClipFlag.BLOCKED.flag;
     }
 
-    void addMask(int i_1, int i_2, int i_3, byte b_4) {
+    void addFlag(int i_1, int i_2, int i_3) {
         this.map[i_1][i_2] |= i_3;
+    }
+    
+    void addFlag(int i_1, int i_2, ClipFlag... flags) {
+    	int flag = 0;
+    	for (ClipFlag f : flags)
+    		flag |= f.flag;
+    	addFlag(i_1, i_2, flag);
+    }
+    
+    public static boolean isFlagged(int value, ClipFlag... flags) {
+    	int flag = 0;
+    	for (ClipFlag f : flags)
+    		flag |= f.flag;
+    	return (value & flag) == 0;
     }
 
     public boolean method5978(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
@@ -288,31 +322,31 @@ public class ClipMap {
         int i_14 = i_8 + i_6;
         int i_15;
         int i_16;
-        if (i_13 == i_1 && (i_9 & 0x2) == 0) {
+        if (i_13 == i_1 && isFlagged(i_9, ClipFlag.N_OBJ)) {
             i_15 = i_2 > i_6 ? i_2 : i_6;
             for (i_16 = i_12 < i_14 ? i_12 : i_14; i_15 < i_16; i_15++) {
-                if ((this.map[i_13 - 1 - this.offsetX][i_15 - this.offsetY] & 0x8) == 0) {
+                if (isFlagged(this.map[i_13 - 1 - this.offsetX][i_15 - this.offsetY], ClipFlag.E_OBJ)) {
                     return true;
                 }
             }
-        } else if (i_5 == i_11 && (i_9 & 0x8) == 0) {
+        } else if (i_5 == i_11 && isFlagged(i_9, ClipFlag.E_OBJ)) {
             i_15 = i_2 > i_6 ? i_2 : i_6;
             for (i_16 = i_12 < i_14 ? i_12 : i_14; i_15 < i_16; i_15++) {
-                if ((this.map[i_5 - this.offsetX][i_15 - this.offsetY] & 0x80) == 0) {
+                if (isFlagged(this.map[i_5 - this.offsetX][i_15 - this.offsetY], ClipFlag.W_OBJ)) {
                     return true;
                 }
             }
-        } else if (i_14 == i_2 && (i_9 & 0x1) == 0) {
+        } else if (i_14 == i_2 && isFlagged(i_9, ClipFlag.NW_OBJ)) {
             i_15 = i_1 > i_5 ? i_1 : i_5;
             for (i_16 = i_11 < i_13 ? i_11 : i_13; i_15 < i_16; i_15++) {
-                if ((this.map[i_15 - this.offsetX][i_14 - 1 - this.offsetY] & 0x2) == 0) {
+                if (isFlagged(this.map[i_15 - this.offsetX][i_14 - 1 - this.offsetY], ClipFlag.N_OBJ)) {
                     return true;
                 }
             }
-        } else if (i_12 == i_6 && (i_9 & 0x4) == 0) {
+        } else if (i_12 == i_6 && isFlagged(i_9, ClipFlag.NE_OBJ)) {
             i_15 = i_1 > i_5 ? i_1 : i_5;
             for (i_16 = i_11 < i_13 ? i_11 : i_13; i_15 < i_16; i_15++) {
-                if ((this.map[i_15 - this.offsetX][i_6 - this.offsetY] & 0x20) == 0) {
+                if (isFlagged(this.map[i_15 - this.offsetX][i_6 - this.offsetY], ClipFlag.S_OBJ)) {
                     return true;
                 }
             }
@@ -338,40 +372,40 @@ public class ClipMap {
                     if (i_4 - 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_5 + 1 == i_2 && (this.map[i_1][i_2] & 0x2c0120) == 0) {
+                    if (i_4 == i_1 && i_5 + 1 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && (this.map[i_1][i_2] & 0x2c0102) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && isFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
                     if (i_4 == i_1 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0108) == 0) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
                     if (i_4 + 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 + 1 && (this.map[i_1][i_2] & 0x2c0120) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 + 1 && isFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && (this.map[i_1][i_2] & 0x2c0102) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && isFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 3) {
                     if (i_4 == i_1 && i_2 == i_5 - 1) {
                         return true;
                     }
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0108) == 0) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 }
@@ -384,14 +418,14 @@ public class ClipMap {
                     if (i_4 == i_1 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && (this.map[i_1][i_2] & 0x2c0102) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && isFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0108) == 0) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 == i_1 && i_5 + 1 == i_2) {
@@ -400,14 +434,14 @@ public class ClipMap {
                     if (i_4 + 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 - 1 && (this.map[i_1][i_2] & 0x2c0102) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 - 1 && isFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
-                    if (i_4 - 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0108) == 0) {
+                    if (i_4 - 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 + 1 && (this.map[i_1][i_2] & 0x2c0120) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 + 1 && isFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 + 1 == i_1 && i_5 == i_2) {
@@ -420,10 +454,10 @@ public class ClipMap {
                     if (i_4 - 1 == i_1 && i_5 == i_2) {
                         return true;
                     }
-                    if (i_4 == i_1 && i_2 == i_5 + 1 && (this.map[i_1][i_2] & 0x2c0120) == 0) {
+                    if (i_4 == i_1 && i_2 == i_5 + 1 && isFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 == i_1 && i_2 == i_5 - 1) {
@@ -432,16 +466,16 @@ public class ClipMap {
                 }
             }
             if (i_6 == 9) {
-                if (i_4 == i_1 && i_2 == i_5 + 1 && (this.map[i_1][i_2] & 0x20) == 0) {
+                if (i_4 == i_1 && i_2 == i_5 + 1 && isFlagged(this.map[i_1][i_2], ClipFlag.S_OBJ)) {
                     return true;
                 }
-                if (i_4 == i_1 && i_2 == i_5 - 1 && (this.map[i_1][i_2] & 0x2) == 0) {
+                if (i_4 == i_1 && i_2 == i_5 - 1 && isFlagged(this.map[i_1][i_2], ClipFlag.N_OBJ)) {
                     return true;
                 }
-                if (i_4 - 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x8) == 0) {
+                if (i_4 - 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ)) {
                     return true;
                 }
-                if (i_4 + 1 == i_1 && i_5 == i_2 && (this.map[i_1][i_2] & 0x80) == 0) {
+                if (i_4 + 1 == i_1 && i_5 == i_2 && isFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ)) {
                     return true;
                 }
             }
@@ -453,40 +487,40 @@ public class ClipMap {
                     if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && (this.map[i_4][i_2] & 0x2c0120) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && isFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && (this.map[i_4][i_10] & 0x2c0102) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && isFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_9][i_5] & 0x2c0108) == 0) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_1][i_5] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
                     if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && (this.map[i_4][i_2] & 0x2c0120) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && isFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && (this.map[i_4][i_10] & 0x2c0102) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && isFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 3) {
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2) {
                         return true;
                     }
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_9][i_5] & 0x2c0108) == 0) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_1][i_5] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 }
@@ -499,14 +533,14 @@ public class ClipMap {
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_1][i_5] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && (this.map[i_4][i_10] & 0x2c0102) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && isFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 1) {
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_9][i_5] & 0x2c0108) == 0) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2) {
@@ -515,14 +549,14 @@ public class ClipMap {
                     if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && (this.map[i_4][i_10] & 0x2c0102) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && isFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                 } else if (i_7 == 2) {
-                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_9][i_5] & 0x2c0108) == 0) {
+                    if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && (this.map[i_4][i_2] & 0x2c0120) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && isFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
@@ -535,10 +569,10 @@ public class ClipMap {
                     if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10) {
                         return true;
                     }
-                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && (this.map[i_4][i_2] & 0x2c0120) == 0) {
+                    if (i_4 >= i_1 && i_4 <= i_9 && i_2 == i_5 + 1 && isFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
-                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_1][i_5] & 0x2c0180) == 0) {
+                    if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                         return true;
                     }
                     if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2) {
@@ -547,16 +581,16 @@ public class ClipMap {
                 }
             }
             if (i_6 == 9) {
-                if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && (this.map[i_4][i_2] & 0x2c0120) == 0) {
+                if (i_4 >= i_1 && i_4 <= i_9 && i_5 + 1 == i_2 && isFlagged(this.map[i_4][i_2], ClipFlag.S_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && (this.map[i_4][i_10] & 0x2c0102) == 0) {
+                if (i_4 >= i_1 && i_4 <= i_9 && i_5 - i_3 == i_2 && isFlagged(this.map[i_4][i_10], ClipFlag.N_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_9][i_5] & 0x2c0108) == 0) {
+                if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && (this.map[i_1][i_5] & 0x2c0180) == 0) {
+                if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && isFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
             }
@@ -570,194 +604,188 @@ public class ClipMap {
         } else {
             int i_10 = i_4 + i_6 - 1;
             int i_11 = i_5 + i_7 - 1;
-            return i_1 >= i_4 && i_1 <= i_10 && i_2 >= i_5 && i_2 <= i_11 ? true : (i_4 - 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && (this.map[i_1 - this.offsetX][i_2 - this.offsetY] & 0x8) == 0 && (i_8 & 0x8) == 0 ? true : (i_10 + 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && (this.map[i_1 - this.offsetX][i_2 - this.offsetY] & 0x80) == 0 && (i_8 & 0x2) == 0 ? true : (i_2 == i_5 - 1 && i_1 >= i_4 && i_1 <= i_10 && (this.map[i_1 - this.offsetX][i_2 - this.offsetY] & 0x2) == 0 && (i_8 & 0x4) == 0 ? true : i_2 == i_11 + 1 && i_1 >= i_4 && i_1 <= i_10 && (this.map[i_1 - this.offsetX][i_2 - this.offsetY] & 0x20) == 0 && (i_8 & 0x1) == 0)));
+            return i_1 >= i_4 && i_1 <= i_10 && i_2 >= i_5 && i_2 <= i_11 ? true : (i_4 - 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && isFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.E_OBJ) && isFlagged(i_8, ClipFlag.E_OBJ) ? true : (i_10 + 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && isFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.W_OBJ) && isFlagged(i_8, ClipFlag.N_OBJ) ? true : (i_2 == i_5 - 1 && i_1 >= i_4 && i_1 <= i_10 && isFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.N_OBJ) && isFlagged(i_8, ClipFlag.NE_OBJ) ? true : i_2 == i_11 + 1 && i_1 >= i_4 && i_1 <= i_10 && isFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.S_OBJ) && isFlagged(i_8, ClipFlag.NW_OBJ))));
         }
     }
 
-    public void method5991(int i_1, int i_2) {
-        i_1 -= this.offsetX;
-        i_2 -= this.offsetY;
-        this.map[i_1][i_2] &= ~0x40000;
-    }
-
-    public void method5992(int i_1, int i_2, int i_3, int i_4, boolean bool_5, boolean bool_6) {
+    public void method5992(int i_1, int i_2, int i_3, int i_4, boolean blocks, boolean alt) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
         if (i_3 == 0) {
             if (i_4 == 0) {
-                this.method5973(i_1, i_2, 128, (byte) 124);
-                this.method5973(i_1 - 1, i_2, 8, (byte) 71);
+                this.removeFlag(i_1, i_2, ClipFlag.W_OBJ);
+                this.removeFlag(i_1 - 1, i_2, ClipFlag.E_OBJ);
             }
             if (i_4 == 1) {
-                this.method5973(i_1, i_2, 2, (byte) 69);
-                this.method5973(i_1, i_2 + 1, 32, (byte) 69);
+                this.removeFlag(i_1, i_2, ClipFlag.N_OBJ);
+                this.removeFlag(i_1, i_2 + 1, ClipFlag.S_OBJ);
             }
             if (i_4 == 2) {
-                this.method5973(i_1, i_2, 8, (byte) 119);
-                this.method5973(i_1 + 1, i_2, 128, (byte) 114);
+                this.removeFlag(i_1, i_2, ClipFlag.E_OBJ);
+                this.removeFlag(i_1 + 1, i_2, ClipFlag.W_OBJ);
             }
             if (i_4 == 3) {
-                this.method5973(i_1, i_2, 32, (byte) 113);
-                this.method5973(i_1, i_2 - 1, 2, (byte) 101);
+                this.removeFlag(i_1, i_2, ClipFlag.S_OBJ);
+                this.removeFlag(i_1, i_2 - 1, ClipFlag.N_OBJ);
             }
         }
         if (i_3 == 1 || i_3 == 3) {
             if (i_4 == 0) {
-                this.method5973(i_1, i_2, 1, (byte) 123);
-                this.method5973(i_1 - 1, i_2 + 1, 16, (byte) 93);
+                this.removeFlag(i_1, i_2, ClipFlag.NW_OBJ);
+                this.removeFlag(i_1 - 1, i_2 + 1, ClipFlag.SE_OBJ);
             }
             if (i_4 == 1) {
-                this.method5973(i_1, i_2, 4, (byte) 122);
-                this.method5973(i_1 + 1, i_2 + 1, 64, (byte) 68);
+                this.removeFlag(i_1, i_2, ClipFlag.NE_OBJ);
+                this.removeFlag(i_1 + 1, i_2 + 1, ClipFlag.SW_OBJ);
             }
             if (i_4 == 2) {
-                this.method5973(i_1, i_2, 16, (byte) 105);
-                this.method5973(i_1 + 1, i_2 - 1, 1, (byte) 89);
+                this.removeFlag(i_1, i_2, ClipFlag.SE_OBJ);
+                this.removeFlag(i_1 + 1, i_2 - 1, ClipFlag.NW_OBJ);
             }
             if (i_4 == 3) {
-                this.method5973(i_1, i_2, 64, (byte) 68);
-                this.method5973(i_1 - 1, i_2 - 1, 4, (byte) 106);
+                this.removeFlag(i_1, i_2, ClipFlag.SW_OBJ);
+                this.removeFlag(i_1 - 1, i_2 - 1, ClipFlag.NE_OBJ);
             }
         }
         if (i_3 == 2) {
             if (i_4 == 0) {
-                this.method5973(i_1, i_2, 130, (byte) 112);
-                this.method5973(i_1 - 1, i_2, 8, (byte) 74);
-                this.method5973(i_1, i_2 + 1, 32, (byte) 100);
+                this.removeFlag(i_1, i_2, ClipFlag.N_OBJ, ClipFlag.W_OBJ);
+                this.removeFlag(i_1 - 1, i_2, ClipFlag.E_OBJ);
+                this.removeFlag(i_1, i_2 + 1, ClipFlag.S_OBJ);
             }
             if (i_4 == 1) {
-                this.method5973(i_1, i_2, 10, (byte) 122);
-                this.method5973(i_1, i_2 + 1, 32, (byte) 68);
-                this.method5973(i_1 + 1, i_2, 128, (byte) 99);
+                this.removeFlag(i_1, i_2, ClipFlag.N_OBJ, ClipFlag.E_OBJ);
+                this.removeFlag(i_1, i_2 + 1, ClipFlag.S_OBJ);
+                this.removeFlag(i_1 + 1, i_2, ClipFlag.W_OBJ);
             }
             if (i_4 == 2) {
-                this.method5973(i_1, i_2, 40, (byte) 73);
-                this.method5973(i_1 + 1, i_2, 128, (byte) 102);
-                this.method5973(i_1, i_2 - 1, 2, (byte) 73);
+                this.removeFlag(i_1, i_2, ClipFlag.E_OBJ, ClipFlag.S_OBJ);
+                this.removeFlag(i_1 + 1, i_2, ClipFlag.W_OBJ);
+                this.removeFlag(i_1, i_2 - 1, ClipFlag.N_OBJ);
             }
             if (i_4 == 3) {
-                this.method5973(i_1, i_2, 160, (byte) 114);
-                this.method5973(i_1, i_2 - 1, 2, (byte) 74);
-                this.method5973(i_1 - 1, i_2, 8, (byte) 105);
+                this.removeFlag(i_1, i_2, ClipFlag.S_OBJ, ClipFlag.W_OBJ);
+                this.removeFlag(i_1, i_2 - 1, ClipFlag.N_OBJ);
+                this.removeFlag(i_1 - 1, i_2, ClipFlag.E_OBJ);
             }
         }
-        if (bool_5) {
+        if (blocks) {
             if (i_3 == 0) {
                 if (i_4 == 0) {
-                    this.method5973(i_1, i_2, 65536, (byte) 79);
-                    this.method5973(i_1 - 1, i_2, 4096, (byte) 124);
+                    this.removeFlag(i_1, i_2, ClipFlag.W_BOUND);
+                    this.removeFlag(i_1 - 1, i_2, ClipFlag.E_BOUND);
                 }
                 if (i_4 == 1) {
-                    this.method5973(i_1, i_2, 1024, (byte) 82);
-                    this.method5973(i_1, i_2 + 1, 16384, (byte) 72);
+                    this.removeFlag(i_1, i_2, ClipFlag.N_BOUND);
+                    this.removeFlag(i_1, i_2 + 1, ClipFlag.S_BOUND);
                 }
                 if (i_4 == 2) {
-                    this.method5973(i_1, i_2, 4096, (byte) 101);
-                    this.method5973(i_1 + 1, i_2, 65536, (byte) 119);
+                    this.removeFlag(i_1, i_2, ClipFlag.E_BOUND);
+                    this.removeFlag(i_1 + 1, i_2, ClipFlag.W_BOUND);
                 }
                 if (i_4 == 3) {
-                    this.method5973(i_1, i_2, 16384, (byte) 107);
-                    this.method5973(i_1, i_2 - 1, 1024, (byte) 122);
+                    this.removeFlag(i_1, i_2, ClipFlag.S_BOUND);
+                    this.removeFlag(i_1, i_2 - 1, ClipFlag.N_BOUND);
                 }
             }
             if (i_3 == 1 || i_3 == 3) {
                 if (i_4 == 0) {
-                    this.method5973(i_1, i_2, 512, (byte) 66);
-                    this.method5973(i_1 - 1, i_2 + 1, 8192, (byte) 126);
+                    this.removeFlag(i_1, i_2, ClipFlag.NW_BOUND);
+                    this.removeFlag(i_1 - 1, i_2 + 1, ClipFlag.SE_BOUND);
                 }
                 if (i_4 == 1) {
-                    this.method5973(i_1, i_2, 2048, (byte) 127);
-                    this.method5973(i_1 + 1, i_2 + 1, 32768, (byte) 114);
+                    this.removeFlag(i_1, i_2, ClipFlag.NE_BOUND);
+                    this.removeFlag(i_1 + 1, i_2 + 1, ClipFlag.SW_BOUND);
                 }
                 if (i_4 == 2) {
-                    this.method5973(i_1, i_2, 8192, (byte) 125);
-                    this.method5973(i_1 + 1, i_2 - 1, 512, (byte) 84);
+                    this.removeFlag(i_1, i_2, ClipFlag.SE_BOUND);
+                    this.removeFlag(i_1 + 1, i_2 - 1, ClipFlag.NW_BOUND);
                 }
                 if (i_4 == 3) {
-                    this.method5973(i_1, i_2, 32768, (byte) 116);
-                    this.method5973(i_1 - 1, i_2 - 1, 2048, (byte) 91);
+                    this.removeFlag(i_1, i_2, ClipFlag.SW_BOUND);
+                    this.removeFlag(i_1 - 1, i_2 - 1, ClipFlag.NE_BOUND);
                 }
             }
             if (i_3 == 2) {
                 if (i_4 == 0) {
-                    this.method5973(i_1, i_2, 66560, (byte) 70);
-                    this.method5973(i_1 - 1, i_2, 4096, (byte) 88);
-                    this.method5973(i_1, i_2 + 1, 16384, (byte) 121);
+                    this.removeFlag(i_1, i_2, ClipFlag.N_BOUND, ClipFlag.W_BOUND);
+                    this.removeFlag(i_1 - 1, i_2, ClipFlag.E_BOUND);
+                    this.removeFlag(i_1, i_2 + 1, ClipFlag.S_BOUND);
                 }
                 if (i_4 == 1) {
-                    this.method5973(i_1, i_2, 5120, (byte) 66);
-                    this.method5973(i_1, i_2 + 1, 16384, (byte) 101);
-                    this.method5973(i_1 + 1, i_2, 65536, (byte) 85);
+                    this.removeFlag(i_1, i_2, ClipFlag.N_BOUND, ClipFlag.E_BOUND);
+                    this.removeFlag(i_1, i_2 + 1, ClipFlag.S_BOUND);
+                    this.removeFlag(i_1 + 1, i_2, ClipFlag.W_BOUND);
                 }
                 if (i_4 == 2) {
-                    this.method5973(i_1, i_2, 20480, (byte) 125);
-                    this.method5973(i_1 + 1, i_2, 65536, (byte) 107);
-                    this.method5973(i_1, i_2 - 1, 1024, (byte) 118);
+                    this.removeFlag(i_1, i_2, ClipFlag.E_BOUND, ClipFlag.S_BOUND);
+                    this.removeFlag(i_1 + 1, i_2, ClipFlag.W_BOUND);
+                    this.removeFlag(i_1, i_2 - 1, ClipFlag.N_BOUND);
                 }
                 if (i_4 == 3) {
-                    this.method5973(i_1, i_2, 81920, (byte) 91);
-                    this.method5973(i_1, i_2 - 1, 1024, (byte) 69);
-                    this.method5973(i_1 - 1, i_2, 4096, (byte) 123);
+                    this.removeFlag(i_1, i_2, ClipFlag.S_BOUND, ClipFlag.W_BOUND);
+                    this.removeFlag(i_1, i_2 - 1, ClipFlag.N_BOUND);
+                    this.removeFlag(i_1 - 1, i_2, ClipFlag.E_BOUND);
                 }
             }
         }
-        if (bool_6) {
+        if (alt) {
             if (i_3 == 0) {
                 if (i_4 == 0) {
-                    this.method5973(i_1, i_2, 536870912, (byte) 122);
-                    this.method5973(i_1 - 1, i_2, 33554432, (byte) 118);
+                    this.removeFlag(i_1, i_2, ClipFlag.W_ALT_OBJ);
+                    this.removeFlag(i_1 - 1, i_2, ClipFlag.E_ALT_OBJ);
                 }
                 if (i_4 == 1) {
-                    this.method5973(i_1, i_2, 8388608, (byte) 81);
-                    this.method5973(i_1, i_2 + 1, 134217728, (byte) 90);
+                    this.removeFlag(i_1, i_2, ClipFlag.N_ALT_OBJ);
+                    this.removeFlag(i_1, i_2 + 1, ClipFlag.S_ALT_OBJ);
                 }
                 if (i_4 == 2) {
-                    this.method5973(i_1, i_2, 33554432, (byte) 106);
-                    this.method5973(i_1 + 1, i_2, 536870912, (byte) 120);
+                    this.removeFlag(i_1, i_2, ClipFlag.E_ALT_OBJ);
+                    this.removeFlag(i_1 + 1, i_2, ClipFlag.W_ALT_OBJ);
                 }
                 if (i_4 == 3) {
-                    this.method5973(i_1, i_2, 134217728, (byte) 89);
-                    this.method5973(i_1, i_2 - 1, 8388608, (byte) 68);
+                    this.removeFlag(i_1, i_2, ClipFlag.S_ALT_OBJ);
+                    this.removeFlag(i_1, i_2 - 1, ClipFlag.N_ALT_OBJ);
                 }
             }
             if (i_3 == 1 || i_3 == 3) {
                 if (i_4 == 0) {
-                    this.method5973(i_1, i_2, 4194304, (byte) 106);
-                    this.method5973(i_1 - 1, i_2 + 1, 67108864, (byte) 82);
+                    this.removeFlag(i_1, i_2, ClipFlag.NW_ALT_OBJ);
+                    this.removeFlag(i_1 - 1, i_2 + 1, ClipFlag.SE_ALT_OBJ);
                 }
                 if (i_4 == 1) {
-                    this.method5973(i_1, i_2, 16777216, (byte) 113);
-                    this.method5973(i_1 + 1, i_2 + 1, 268435456, (byte) 101);
+                    this.removeFlag(i_1, i_2, ClipFlag.NE_ALT_OBJ);
+                    this.removeFlag(i_1 + 1, i_2 + 1, ClipFlag.SW_ALT_OBJ);
                 }
                 if (i_4 == 2) {
-                    this.method5973(i_1, i_2, 67108864, (byte) 94);
-                    this.method5973(i_1 + 1, i_2 - 1, 4194304, (byte) 106);
+                    this.removeFlag(i_1, i_2, ClipFlag.SE_ALT_OBJ);
+                    this.removeFlag(i_1 + 1, i_2 - 1, ClipFlag.NW_ALT_OBJ);
                 }
                 if (i_4 == 3) {
-                    this.method5973(i_1, i_2, 268435456, (byte) 111);
-                    this.method5973(i_1 - 1, i_2 - 1, 16777216, (byte) 69);
+                    this.removeFlag(i_1, i_2, ClipFlag.SW_ALT_OBJ);
+                    this.removeFlag(i_1 - 1, i_2 - 1, ClipFlag.NE_ALT_OBJ);
                 }
             }
             if (i_3 == 2) {
                 if (i_4 == 0) {
-                    this.method5973(i_1, i_2, 545259520, (byte) 87);
-                    this.method5973(i_1 - 1, i_2, 33554432, (byte) 118);
-                    this.method5973(i_1, i_2 + 1, 134217728, (byte) 67);
+                    this.removeFlag(i_1, i_2, ClipFlag.N_ALT_OBJ, ClipFlag.W_ALT_OBJ);
+                    this.removeFlag(i_1 - 1, i_2, ClipFlag.E_ALT_OBJ);
+                    this.removeFlag(i_1, i_2 + 1, ClipFlag.S_ALT_OBJ);
                 }
                 if (i_4 == 1) {
-                    this.method5973(i_1, i_2, 41943040, (byte) 106);
-                    this.method5973(i_1, i_2 + 1, 134217728, (byte) 91);
-                    this.method5973(i_1 + 1, i_2, 536870912, (byte) 123);
+                    this.removeFlag(i_1, i_2, ClipFlag.N_ALT_OBJ, ClipFlag.E_ALT_OBJ);
+                    this.removeFlag(i_1, i_2 + 1, ClipFlag.S_ALT_OBJ);
+                    this.removeFlag(i_1 + 1, i_2, ClipFlag.W_ALT_OBJ);
                 }
                 if (i_4 == 2) {
-                    this.method5973(i_1, i_2, 167772160, (byte) 107);
-                    this.method5973(i_1 + 1, i_2, 536870912, (byte) 90);
-                    this.method5973(i_1, i_2 - 1, 8388608, (byte) 86);
+                    this.removeFlag(i_1, i_2, ClipFlag.E_ALT_OBJ, ClipFlag.S_ALT_OBJ);
+                    this.removeFlag(i_1 + 1, i_2, ClipFlag.W_ALT_OBJ);
+                    this.removeFlag(i_1, i_2 - 1, ClipFlag.N_ALT_OBJ);
                 }
                 if (i_4 == 3) {
-                    this.method5973(i_1, i_2, 671088640, (byte) 122);
-                    this.method5973(i_1, i_2 - 1, 8388608, (byte) 88);
-                    this.method5973(i_1 - 1, i_2, 33554432, (byte) 102);
+                    this.removeFlag(i_1, i_2, ClipFlag.S_ALT_OBJ, ClipFlag.W_ALT_OBJ);
+                    this.removeFlag(i_1, i_2 - 1, ClipFlag.N_ALT_OBJ);
+                    this.removeFlag(i_1 - 1, i_2, ClipFlag.E_ALT_OBJ);
                 }
             }
         }

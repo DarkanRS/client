@@ -11,7 +11,7 @@ public class Class403 {
 		clipmap_3.sizeX = i_0 + 1 + 5;
 		clipmap_3.sizeY = i_1 + 1 + 5;
 		clipmap_3.map = new int[clipmap_3.sizeX][clipmap_3.sizeY];
-		clipmap_3.method5965();
+		clipmap_3.initEmpty();
 		return clipmap_3;
 	}
 

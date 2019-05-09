@@ -208,7 +208,7 @@ public class Class435 {
 				Exception_Sub3.method15619(true, 735044045);
 				Node_Sub15_Sub1.method14840((byte) -35);
 			} else if (Class291_Sub1.anInt8015 == 88) {
-				Class251.aClass194_3103 = new Class194(graphicalrenderer_0, 26, Class351.gameCanvas);
+				RouteFinder.aClass194_3103 = new Class194(graphicalrenderer_0, 26, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 91;
 				Exception_Sub3.method15619(true, 1741477937);
 				Node_Sub15_Sub1.method14840((byte) -64);

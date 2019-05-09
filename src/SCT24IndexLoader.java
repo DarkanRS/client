@@ -56,6 +56,6 @@ public class SCT24IndexLoader {
 
 	static final void method7460(int i_0, int i_1, int i_2, int i_3) {
 		String string_4 = "tele " + i_0 + "," + (i_1 >> 6) + "," + (i_2 >> 6) + "," + (i_1 & 0x3f) + "," + (i_2 & 0x3f);
-		Class251.handleCommand(string_4, true, false);
+		RouteFinder.handleCommand(string_4, true, false);
 	}
 }

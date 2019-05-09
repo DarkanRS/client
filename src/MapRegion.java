@@ -613,7 +613,7 @@ public class MapRegion {
 		this.aClass329_Sub1_3167 = null;
 		for (int i_2 = 0; i_2 < 4; i_2++) {
 			if (this.clipMaps[i_2] != null) {
-				this.clipMaps[i_2].method5965();
+				this.clipMaps[i_2].initEmpty();
 			}
 		}
 		if (this.aClass311_3202 != null) {
@@ -697,7 +697,7 @@ public class MapRegion {
 						i_4 = 10;
 						i_5 = 10;
 					}
-					i_6 = Class251.decodeLandscapeData(this.objectDefsLoader, bytes_3, i_4, i_5, this.sizeX, this.sizeY);
+					i_6 = RegionMap.decodeLandscapeData(this.objectDefsLoader, bytes_3, i_4, i_5, this.sizeX, this.sizeY);
 					if (i_6 > 0) {
 						this.anInt3191 += i_6;
 					}
@@ -710,7 +710,7 @@ public class MapRegion {
 						i_4 = 10;
 						i_5 = 10;
 					}
-					i_6 = Class251.decodeLandscapeData(this.objectDefsLoader, bytes_3, i_4, i_5, this.sizeX, this.sizeY);
+					i_6 = RegionMap.decodeLandscapeData(this.objectDefsLoader, bytes_3, i_4, i_5, this.sizeX, this.sizeY);
 					if (i_6 > 0) {
 						this.anInt3191 += i_6;
 					}

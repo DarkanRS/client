@@ -7148,7 +7148,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method584(CS2Executor executor) {
-		Class251.handleCommand((String) executor.stringStack[--executor.stringStackPtr], false, false);
+		RouteFinder.handleCommand((String) executor.stringStack[--executor.stringStackPtr], false, false);
 	}
 
 	static final void method585(CS2Executor executor) {

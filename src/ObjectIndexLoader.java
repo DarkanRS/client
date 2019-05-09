@@ -48,9 +48,9 @@ public class ObjectIndexLoader {
 				objectdefinitions_3.method7964(new RsByteBuffer(bytes_9));
 			}
 			objectdefinitions_3.method7966();
-			if (objectdefinitions_3.gateway) {
+			if (objectdefinitions_3.alt) {
 				objectdefinitions_3.clipType = 0;
-				objectdefinitions_3.projectileClipped = false;
+				objectdefinitions_3.blocks = false;
 			}
 			if (!this.showOptions && objectdefinitions_3.members) {
 				objectdefinitions_3.options = null;

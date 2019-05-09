@@ -13,7 +13,7 @@ public class ObjectDefinitions {
 	public int sizeX = 1;
 	public int sizeY = 1;
 	public int clipType = 2;
-	public boolean projectileClipped = true;
+	public boolean blocks = true;
 	public int interactable = -1;
 	byte groundContoured = 0;
 	public boolean delayShading = false;
@@ -36,7 +36,7 @@ public class ObjectDefinitions {
 	int offsetY = 0;
 	int offsetZ = 0;
 	public boolean obstructsGround = false;
-	public boolean gateway = false;
+	public boolean alt = false;
 	public int supportsItems = -1;
 	int configFileId = -1;
 	int configId = -1;
@@ -127,9 +127,9 @@ public class ObjectDefinitions {
 			this.sizeY = buffer.readUnsignedByte();
 		} else if (opcode == 17) {
 			this.clipType = 0;
-			this.projectileClipped = false;
+			this.blocks = false;
 		} else if (opcode == 18) {
-			this.projectileClipped = false;
+			this.blocks = false;
 		} else if (opcode == 19) {
 			this.interactable = buffer.readUnsignedByte();
 		} else if (opcode == 21) {
@@ -196,7 +196,7 @@ public class ObjectDefinitions {
 		} else if (opcode == 73) {
 			this.obstructsGround = true;
 		} else if (opcode == 74) {
-			this.gateway = true;
+			this.alt = true;
 		} else if (opcode == 75) {
 			this.supportsItems = buffer.readUnsignedByte();
 		} else if (opcode != 77 && opcode != 92) {

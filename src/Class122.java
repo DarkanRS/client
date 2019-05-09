@@ -100,7 +100,7 @@ public class Class122 {
 		Class446.aClass194_5416 = null;
 		Class114.aClass194_1243 = null;
 		DefaultsFile.aClass194_6967 = null;
-		Class251.aClass194_3103 = null;
+		RouteFinder.aClass194_3103 = null;
 		Transform_Sub1_Sub5_Sub1.aClass194_10527 = null;
 		if (Class291_Sub1.MAP_AREA_LOADER != null) {
 			Class291_Sub1.MAP_AREA_LOADER.method3699();

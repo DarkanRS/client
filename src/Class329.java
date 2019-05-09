@@ -238,7 +238,7 @@ public class Class329 {
 						i_12 = i_10 + i_2;
 						int i_13 = i_3 + i_11;
 						if (i_12 >= 0 && i_12 < this.maxX && i_13 >= 0 && i_13 < this.maxY) {
-							clipmap_14.method5974(i_12, i_13);
+							clipmap_14.removeBlockedTile(i_12, i_13);
 						}
 					}
 				}
@@ -267,7 +267,7 @@ public class Class329 {
 					int i_16 = i_3 + Class112.method1871(i_14 & 0x7, i_15 & 0x7, i_8);
 					i_17 = i_4 + Class2.method259(i_14 & 0x7, i_15 & 0x7, i_8, 97423682);
 					if (i_16 > 0 && i_16 < this.maxX - 1 && i_17 > 0 && i_17 < this.maxY - 1) {
-						clipmap_13.method5974(i_16, i_17);
+						clipmap_13.removeBlockedTile(i_16, i_17);
 					}
 				}
 			}
@@ -368,7 +368,7 @@ public class Class329 {
 								i_9 = i_5 - 1;
 							}
 							if (i_9 >= 0) {
-								arr_3[i_9].addUnwalkable(i_6, i_7);
+								arr_3[i_9].addBlockedTile(i_6, i_7);
 							}
 						}
 					}

@@ -79,7 +79,7 @@ public class PacketDecoder {
 			return true;
 		} else if (context.currentPacket == IncomingPacket.PROCESS_DEV_CONSOLE_COMMAND) {
 			String string_63 = buffer.readString();
-			Class251.handleCommand(string_63, false, false);
+			RouteFinder.handleCommand(string_63, false, false);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.SEND_ITEM_CONTAINER) {
