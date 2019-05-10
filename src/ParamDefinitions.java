@@ -41,7 +41,7 @@ public class ParamDefinitions {
 			IndexLoaders.MAP_REGION_DECODER.method4446((byte) -33);
 			WorldDescriptor.method13056();
 			Class356.method6227(false, (byte) -17);
-			RouteStrategy_Sub6.method13413();
+			GroundItemStrategy.method13413();
 			Class122.method2111(true);
 			ParticleProducerDefinition.method1160(-319039192);
 			Class386.method6673(326422820);

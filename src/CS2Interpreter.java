@@ -6174,7 +6174,7 @@ public class CS2Interpreter {
 	}
 
 	static final void fromDate(CS2Executor executor) {
-		executor.stringStack[++executor.stringStackPtr - 1] = RouteStrategy_Sub5.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr], 126882752), Class223.CURRENT_LANGUAGE.getValue());
+		executor.stringStack[++executor.stringStackPtr - 1] = NormalObjectStrategy.method13045(Class302.method5363(executor.intStack[--executor.intStackPtr], 126882752), Class223.CURRENT_LANGUAGE.getValue());
 	}
 
 	static final void method4968(CS2Executor executor) {
@@ -10478,7 +10478,7 @@ public class CS2Interpreter {
 		} else if (i_3 == i_4) {
 			throw new RuntimeException();
 		} else {
-			RouteStrategy_Sub5.method13047(executor.globalArrays[i_3], executor.globalArrays[i_4], 0, i_2 - 1);
+			NormalObjectStrategy.method13047(executor.globalArrays[i_3], executor.globalArrays[i_4], 0, i_2 - 1);
 		}
 	}
 

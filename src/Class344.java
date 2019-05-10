@@ -121,12 +121,12 @@ public class Class344 {
     }
 
     public static RouteStrategy method6115(int i_0, int i_1, int i_2, int i_3) {
-        Class224.aRouteStrategy_Sub3_2773.approxDestinationX = i_0;
-        Class224.aRouteStrategy_Sub3_2773.approxDestinationY = i_1;
-        Class224.aRouteStrategy_Sub3_2773.approxDestinationSizeX = i_2;
-        Class224.aRouteStrategy_Sub3_2773.approxDestinationSizeY = i_3;
-        Class224.aRouteStrategy_Sub3_2773.anInt7929 = 0;
-        return Class224.aRouteStrategy_Sub3_2773;
+        RouteStrategies.PLAYER.approxDestinationX = i_0;
+        RouteStrategies.PLAYER.approxDestinationY = i_1;
+        RouteStrategies.PLAYER.approxDestinationSizeX = i_2;
+        RouteStrategies.PLAYER.approxDestinationSizeY = i_3;
+        RouteStrategies.PLAYER.anInt7929 = 0;
+        return RouteStrategies.PLAYER;
     }
 
     public static final void method6119(String string_0) {

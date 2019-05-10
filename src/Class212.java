@@ -78,7 +78,7 @@ public class Class212 {
 			} else if (++class282_sub50_sub8_2.key > (long) 5) {
 				CacheableNode_Sub8_Sub2 class282_sub50_sub8_sub2_3 = new CacheableNode_Sub8_Sub2(class282_sub50_sub8_2.anInterface18_9607, class282_sub50_sub8_2.method14860(), class282_sub50_sub8_2.anInt9606);
 				this.aClass465_2677.put(class282_sub50_sub8_sub2_3, class282_sub50_sub8_2.data);
-				Class224.method3782(class282_sub50_sub8_sub2_3, class282_sub50_sub8_2, -1476316652);
+				RouteStrategies.method3782(class282_sub50_sub8_sub2_3, class282_sub50_sub8_2, -1476316652);
 				class282_sub50_sub8_2.remove();
 				class282_sub50_sub8_2.method13452();
 			}

@@ -53,7 +53,7 @@ public class CS2Executor {
 	}
 
 	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
-		CS2Script cs2script_5 = RouteStrategy_Sub1.getScript(class397_0, i_1, i_2);
+		CS2Script cs2script_5 = FixedTileStrategy.getScript(class397_0, i_1, i_2);
 		if (cs2script_5 == null) {
 			decrementCS2ExecIdx();
 		} else {
@@ -200,7 +200,7 @@ public class CS2Executor {
 	}
 	
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-		CS2Script cs2script_4 = RouteStrategy_Sub1.getScript(Class397.aClass397_4792, i_0, -1);
+		CS2Script cs2script_4 = FixedTileStrategy.getScript(Class397.aClass397_4792, i_0, -1);
 		if (cs2script_4 != null) {
 			CS2Executor cs2executor_5 = getNextScriptExecutor();
 			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];

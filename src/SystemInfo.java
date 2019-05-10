@@ -85,11 +85,11 @@ public class SystemInfo extends Node {
 	}
 
 	public SystemInfo() {
-		if (RouteStrategy_Sub6.aString8069.startsWith("win")) {
+		if (GroundItemStrategy.aString8069.startsWith("win")) {
 			this.anInt8126 = 1;
-		} else if (RouteStrategy_Sub6.aString8069.startsWith("mac")) {
+		} else if (GroundItemStrategy.aString8069.startsWith("mac")) {
 			this.anInt8126 = 2;
-		} else if (RouteStrategy_Sub6.aString8069.startsWith("linux")) {
+		} else if (GroundItemStrategy.aString8069.startsWith("linux")) {
 			this.anInt8126 = 3;
 		} else {
 			this.anInt8126 = 4;

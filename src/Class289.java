@@ -271,7 +271,7 @@ public class Class289 implements Runnable {
 												i_34 = i_29 - 1;
 											}
 											if (i_34 >= 0) {
-												RouteStrategy_Sub5.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
+												NormalObjectStrategy.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
 											}
 										}
 									}
@@ -285,15 +285,15 @@ public class Class289 implements Runnable {
 									i_32 = i_20 + i_30;
 									i_33 = i_21 + i_31;
 									i_34 = clipmap_38.map[i_32 - clipmap_38.offsetX][i_33 - clipmap_38.offsetY];
-									if (!ClipMap.isFlagged(i_34, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.ALT_OBJ)) {
+									if (!ClipMap.notFlagged(i_34, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.ALT_OBJ)) {
 										graphicalrenderer_0.method8425(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, 4, -1713569622, (byte) -107);
-									} else if (!ClipMap.isFlagged(i_34, ClipFlag.N_ALT_OBJ)) {
+									} else if (!ClipMap.notFlagged(i_34, ClipFlag.N_ALT_OBJ)) {
 										graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622, -113850245);
-									} else if (!ClipMap.isFlagged(i_34, ClipFlag.E_ALT_OBJ)) {
+									} else if (!ClipMap.notFlagged(i_34, ClipFlag.E_ALT_OBJ)) {
 										graphicalrenderer_0.method8428(i_22 + i_30 * 4 + 3, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
-									} else if (!ClipMap.isFlagged(i_34, ClipFlag.S_ALT_OBJ)) {
+									} else if (!ClipMap.notFlagged(i_34, ClipFlag.S_ALT_OBJ)) {
 										graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4 + 3, 4, -1713569622, 1008017075);
-									} else if (!ClipMap.isFlagged(i_34, ClipFlag.W_ALT_OBJ)) {
+									} else if (!ClipMap.notFlagged(i_34, ClipFlag.W_ALT_OBJ)) {
 										graphicalrenderer_0.method8428(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
 									}
 								}

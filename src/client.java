@@ -1640,7 +1640,7 @@ public final class client extends Engine {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
-		Class393.preferences = RouteStrategy_Sub1.method12791();
+		Class393.preferences = FixedTileStrategy.method12791();
 		if (Class393.preferences.aPreference_Sub3_8199.method12632(507739411) == 1) {
 			SceneObjectManager.aBool2644 = false;
 		}
@@ -1783,7 +1783,7 @@ public final class client extends Engine {
 			}
 		}
 
-		RouteStrategy_Sub5.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1);
+		NormalObjectStrategy.method13047(anIntArray7288, anIntArray7287, 0, anInt7304 - 1);
 	}
 
 	final void method4738() {
@@ -1803,7 +1803,7 @@ public final class client extends Engine {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
-		Class393.preferences = RouteStrategy_Sub1.method12791();
+		Class393.preferences = FixedTileStrategy.method12791();
 		if (Class393.preferences.aPreference_Sub3_8199.method12632(1417868363) == 1) {
 			SceneObjectManager.aBool2644 = false;
 		}
@@ -2674,7 +2674,7 @@ public final class client extends Engine {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
-		Class393.preferences = RouteStrategy_Sub1.method12791();
+		Class393.preferences = FixedTileStrategy.method12791();
 		if (Class393.preferences.aPreference_Sub3_8199.method12632(100736861) == 1) {
 			SceneObjectManager.aBool2644 = false;
 		}

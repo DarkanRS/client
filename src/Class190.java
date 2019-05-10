@@ -54,13 +54,13 @@ public class Class190 {
 
 	}
 
-	public static RouteStrategy method3150(int i_0, int i_1, int i_2, int i_3) {
-		Class224.aRouteStrategy_Sub2_2778.approxDestinationX = i_0;
-		Class224.aRouteStrategy_Sub2_2778.approxDestinationY = i_1;
-		Class224.aRouteStrategy_Sub2_2778.approxDestinationSizeX = i_2;
-		Class224.aRouteStrategy_Sub2_2778.approxDestinationSizeY = i_3;
-		Class224.aRouteStrategy_Sub2_2778.anInt7928 = 0;
-		return Class224.aRouteStrategy_Sub2_2778;
+	public static RouteStrategy method3150(int i_0, int i_1, int sizeX, int sizeY) {
+		RouteStrategies.NPC.approxDestinationX = i_0;
+		RouteStrategies.NPC.approxDestinationY = i_1;
+		RouteStrategies.NPC.approxDestinationSizeX = sizeX;
+		RouteStrategies.NPC.approxDestinationSizeY = sizeY;
+		RouteStrategies.NPC.anInt7928 = 0;
+		return RouteStrategies.NPC;
 	}
 
 	static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {

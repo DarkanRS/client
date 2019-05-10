@@ -1,25 +1,9 @@
 import java.io.IOException;
 
-public class RouteStrategy_Sub1 extends RouteStrategy {
+public class FixedTileStrategy extends RouteStrategy {
 
-	public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4, byte b_5) {
+	public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
 		return i_2 == this.approxDestinationX && i_3 == this.approxDestinationY;
-	}
-
-	public boolean method3786(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-		return i_2 == -1440558477 * this.approxDestinationX * -726719813 && i_3 == 1732585867 * this.approxDestinationY * 1767388707;
-	}
-
-	public boolean method3785(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-		return i_2 == -1440558477 * this.approxDestinationX * -726719813 && i_3 == 1732585867 * this.approxDestinationY * 1767388707;
-	}
-
-	public boolean method3788(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-		return i_2 == -1440558477 * this.approxDestinationX * -726719813 && i_3 == 1732585867 * this.approxDestinationY * 1767388707;
-	}
-
-	public boolean method3789(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
-		return i_2 == -1440558477 * this.approxDestinationX * -726719813 && i_3 == 1732585867 * this.approxDestinationY * 1767388707;
 	}
 
 	static GamePreferences method12791() {

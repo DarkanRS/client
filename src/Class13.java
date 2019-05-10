@@ -17,7 +17,7 @@ public class Class13 {
         class282_sub50_sub15_0.method13452();
         for (CacheableNode_Sub15 class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass477_182.method7941(); class282_sub50_sub15_3 != null; class282_sub50_sub15_3 = (CacheableNode_Sub15) Class20.aClass477_182.method7955(-1642244739)) {
             if (Class301.method5334(class282_sub50_sub15_0.method15244((byte) 107), class282_sub50_sub15_3.method15244((byte) 59), 993157847)) {
-                Class224.method3782(class282_sub50_sub15_0, class282_sub50_sub15_3, -1979656463);
+                RouteStrategies.method3782(class282_sub50_sub15_0, class282_sub50_sub15_3, -1979656463);
                 bool_2 = true;
                 break;
             }

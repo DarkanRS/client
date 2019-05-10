@@ -33,13 +33,13 @@ public class Class148 {
 	}
 
 	public static RouteStrategy method2551(int i_0, int i_1, SceneObjectType sceneobjecttype_4, int i_5) {
-		Class224.aRouteStrategy_Sub5_2775.approxDestinationX = i_0;
-		Class224.aRouteStrategy_Sub5_2775.approxDestinationY = i_1;
-		Class224.aRouteStrategy_Sub5_2775.approxDestinationSizeX = 0;
-		Class224.aRouteStrategy_Sub5_2775.approxDestinationSizeY = 0;
-		Class224.aRouteStrategy_Sub5_2775.aClass458_7972 = sceneobjecttype_4;
-		Class224.aRouteStrategy_Sub5_2775.anInt7971 = i_5;
-		return Class224.aRouteStrategy_Sub5_2775;
+		RouteStrategies.NORMAL_OBJECT.approxDestinationX = i_0;
+		RouteStrategies.NORMAL_OBJECT.approxDestinationY = i_1;
+		RouteStrategies.NORMAL_OBJECT.approxDestinationSizeX = 0;
+		RouteStrategies.NORMAL_OBJECT.approxDestinationSizeY = 0;
+		RouteStrategies.NORMAL_OBJECT.aClass458_7972 = sceneobjecttype_4;
+		RouteStrategies.NORMAL_OBJECT.anInt7971 = i_5;
+		return RouteStrategies.NORMAL_OBJECT;
 	}
 
 	static Class method2553(String string_0, short s_1) throws ClassNotFoundException {

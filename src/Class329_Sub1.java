@@ -494,7 +494,7 @@ public class Class329_Sub1 extends Class329 {
 				}
 			}
 			if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-				clipmap_16.method5971(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+				clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
 			}
 			if (objectdefinitions_5.decorDisplacement != 64) {
 				this.sceneObjectManager.method3398(i_7, i_12, i_13, objectdefinitions_5.decorDisplacement, (byte) 45);
@@ -526,7 +526,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 				}
 				if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-					clipmap_16.method5971(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+					clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
 				}
 				return true;
 			} else if (i_2 == SceneObjectType.WALL_WHOLE_CORNER.type) {
@@ -564,7 +564,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 				}
 				if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-					clipmap_16.method5971(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+					clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
 				}
 				if (objectdefinitions_5.decorDisplacement != 64) {
 					this.sceneObjectManager.method3398(i_7, i_12, i_13, objectdefinitions_5.decorDisplacement, (byte) 58);
@@ -593,7 +593,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 				}
 				if (objectdefinitions_5.clipType != 0 && clipmap_16 != null) {
-					clipmap_16.method5971(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
+					clipmap_16.addWall(i_12, i_13, i_2, i_3, objectdefinitions_5.blocks, !objectdefinitions_5.alt);
 				}
 				return true;
 			} else if (i_2 == SceneObjectType.WALL_INTERACT.type) {
@@ -948,7 +948,7 @@ public class Class329_Sub1 extends Class329 {
 				this.sceneObjectManager.method3422(i_2, x, y);
 				this.sceneObjectManager.method3460(i_2, x, y);
 				if (objectdefinitions_9.clipType != 0) {
-					clipmap_6.method5992(x, y, type, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.alt);
+					clipmap_6.removeWall(x, y, type, i_11, objectdefinitions_9.blocks, !objectdefinitions_9.alt);
 				}
 				if (objectdefinitions_9.occludes == 1) {
 					if (i_11 == 0) {

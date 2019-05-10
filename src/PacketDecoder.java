@@ -86,7 +86,7 @@ public class PacketDecoder {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readUnsignedByte();
 			boolean isNegativeKey = (flags & 0x1) == 1;
-			RouteStrategy_Sub5.resetContainer(key, isNegativeKey);
+			NormalObjectStrategy.resetContainer(key, isNegativeKey);
 			int size = buffer.readUnsignedShort();
 			for (int slot = 0; slot < size; slot++) {
 				int amount = buffer.readUnsigned128Byte();
@@ -540,7 +540,7 @@ public class PacketDecoder {
 				if (string_137.length() == 0) {
 					string_137 = url;
 				}
-				if (!client.aBool7310 || RouteStrategy_Sub6.aString8069.startsWith("mac") || !Class186.method3082(url, 1, Class361.aClass361_4179.method6253((byte) -74))) {
+				if (!client.aBool7310 || GroundItemStrategy.aString8069.startsWith("mac") || !Class186.method3082(url, 1, Class361.aClass361_4179.method6253((byte) -74))) {
 					CacheableNode_Sub6.method14788(string_137, true, Class393.preferences.currentToolkit.getValue(111625844) == 5, client.aBool7158, client.aBool7159, (byte) -120);
 				}
 			} else {

@@ -55,7 +55,7 @@ public class IdleAnimationsPreference extends Preference {
 		if (i_0 >= Class532_Sub2.anInt7071 && i_0 <= Class532_Sub2.anInt7069) {
 			i_1 = EntityNode.method4890(i_1, Class532_Sub2.anInt7070, Class532_Sub2.anInt7068, 2018185590);
 			i_2 = EntityNode.method4890(i_2, Class532_Sub2.anInt7070, Class532_Sub2.anInt7068, 1691480210);
-			RouteStrategy_Sub6.method13411(i_0, i_1, i_2, i_3, (byte) -31);
+			GroundItemStrategy.method13411(i_0, i_1, i_2, i_3, (byte) -31);
 		}
 
 	}

@@ -13,7 +13,7 @@ public class Class186 {
 		boolean bool_4;
 		if (i_1 == 0) {
 			try {
-				if (!RouteStrategy_Sub6.aString8069.startsWith("win")) {
+				if (!GroundItemStrategy.aString8069.startsWith("win")) {
 					throw new Exception();
 				} else if (!string_0.startsWith("http://") && !string_0.startsWith("https://")) {
 					throw new Exception();

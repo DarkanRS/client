@@ -99,7 +99,7 @@ public class AnimationIndexLoader {
 		int i_7 = i_2 - i_0;
 		if (i_7 == 0) {
 			if (i_6 != 0) {
-				RouteStrategy_Sub6.method13411(i_0, i_1, i_3, i_4, (byte) -83);
+				GroundItemStrategy.method13411(i_0, i_1, i_3, i_4, (byte) -83);
 			}
 		} else if (i_6 == 0) {
 			Class16.method568(i_0, i_2, i_1, i_4);

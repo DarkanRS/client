@@ -1,18 +1,13 @@
-public final class Class224 {
+public final class RouteStrategies {
 
-	static RouteStrategy_Sub1 aRouteStrategy_Sub1_2776 = new RouteStrategy_Sub1();
+	static FixedTileStrategy FIXED_TILE = new FixedTileStrategy();
+	static GroundItemStrategy GROUND_ITEM = new GroundItemStrategy();
+	static PlayerStrategy PLAYER = new PlayerStrategy();
+	static NPCStrategy NPC = new NPCStrategy();
+	static WallObjectStrategy WALL_OBJECT = new WallObjectStrategy();
+	static NormalObjectStrategy NORMAL_OBJECT = new NormalObjectStrategy();
 
-	static RouteStrategy_Sub6 aRouteStrategy_Sub6_2774 = new RouteStrategy_Sub6();
-
-	static RouteStrategy_Sub3 aRouteStrategy_Sub3_2773 = new RouteStrategy_Sub3();
-
-	static RouteStrategy_Sub2 aRouteStrategy_Sub2_2778 = new RouteStrategy_Sub2();
-
-	static RouteStrategy_Sub4 aRouteStrategy_Sub4_2777 = new RouteStrategy_Sub4();
-
-	static RouteStrategy_Sub5 aRouteStrategy_Sub5_2775 = new RouteStrategy_Sub5();
-
-	Class224() throws Throwable {
+	RouteStrategies() throws Throwable {
 		throw new Error();
 	}
 

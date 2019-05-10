@@ -95,11 +95,11 @@ public class Class371 {
 	}
 
 	public static RouteStrategy method6352(int i_0, int i_1) {
-		Class224.aRouteStrategy_Sub6_2774.approxDestinationX = i_0;
-		Class224.aRouteStrategy_Sub6_2774.approxDestinationY = i_1;
-		Class224.aRouteStrategy_Sub6_2774.approxDestinationSizeX = 1;
-		Class224.aRouteStrategy_Sub6_2774.approxDestinationSizeY = 1;
-		return Class224.aRouteStrategy_Sub6_2774;
+		RouteStrategies.GROUND_ITEM.approxDestinationX = i_0;
+		RouteStrategies.GROUND_ITEM.approxDestinationY = i_1;
+		RouteStrategies.GROUND_ITEM.approxDestinationSizeX = 1;
+		RouteStrategies.GROUND_ITEM.approxDestinationSizeY = 1;
+		return RouteStrategies.GROUND_ITEM;
 	}
 
 	public static final void method6353() {

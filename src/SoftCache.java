@@ -51,7 +51,7 @@ public final class SoftCache {
 			} else if (++class282_sub50_sub1_3.key > (long) i_1) {
 				CacheableNode_Sub1_Sub2 class282_sub50_sub1_sub2_4 = new CacheableNode_Sub1_Sub2(class282_sub50_sub1_3.method14692(), class282_sub50_sub1_3.anInt9451);
 				this.aClass465_2854.put(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3.data);
-				Class224.method3782(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3, -782987779);
+				RouteStrategies.method3782(class282_sub50_sub1_sub2_4, class282_sub50_sub1_3, -782987779);
 				class282_sub50_sub1_3.remove();
 				class282_sub50_sub1_3.method13452();
 			}

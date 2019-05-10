@@ -55,7 +55,7 @@ public class CutsceneAction_Sub14 extends CutsceneAction {
         if (Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
             bool_1 = false;
         }
-        if (RouteStrategy_Sub6.aString8069.startsWith("win")) {
+        if (GroundItemStrategy.aString8069.startsWith("win")) {
             bool_3 = true;
             bool_2 = true;
         } else {

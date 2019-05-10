@@ -94,7 +94,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         } catch (Exception exception_21) {
             RuntimeException_Sub4.aString10463 = "Unknown";
         }
-        RouteStrategy_Sub6.aString8069 = RuntimeException_Sub4.aString10463.toLowerCase();
+        GroundItemStrategy.aString8069 = RuntimeException_Sub4.aString10463.toLowerCase();
         try {
             Class402.aString4828 = System.getProperty("os.arch").toLowerCase();
         } catch (Exception exception_20) {
@@ -114,7 +114,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             ;
         }
         try {
-            if (RouteStrategy_Sub6.aString8069.startsWith("win")) {
+            if (GroundItemStrategy.aString8069.startsWith("win")) {
                 if (Class110.aString1103 == null) {
                     Class110.aString1103 = System.getenv("USERPROFILE");
                 }

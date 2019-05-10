@@ -57,11 +57,11 @@ public class SunDefinitions {
 	}
 
 	public static RouteStrategy method853(int i_0, int i_1, int i_2) {
-		Class224.aRouteStrategy_Sub1_2776.approxDestinationX = i_0;
-		Class224.aRouteStrategy_Sub1_2776.approxDestinationY = i_1;
-		Class224.aRouteStrategy_Sub1_2776.approxDestinationSizeX = 1;
-		Class224.aRouteStrategy_Sub1_2776.approxDestinationSizeY = 1;
-		return Class224.aRouteStrategy_Sub1_2776;
+		RouteStrategies.FIXED_TILE.approxDestinationX = i_0;
+		RouteStrategies.FIXED_TILE.approxDestinationY = i_1;
+		RouteStrategies.FIXED_TILE.approxDestinationSizeX = 1;
+		RouteStrategies.FIXED_TILE.approxDestinationSizeY = 1;
+		return RouteStrategies.FIXED_TILE;
 	}
 
 	public static void method854(boolean bool_0, boolean bool_1, int i_2) {

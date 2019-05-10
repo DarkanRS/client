@@ -89,9 +89,9 @@ public class PingRequester implements Runnable {
 					;
 				}
 			}
-			if (RouteStrategy_Sub6.aString8069.startsWith("win") && !bool_4) {
+			if (GroundItemStrategy.aString8069.startsWith("win") && !bool_4) {
 				GraphicsPreference.method12661(string_0, 0, (byte) -25);
-			} else if (RouteStrategy_Sub6.aString8069.startsWith("mac")) {
+			} else if (GroundItemStrategy.aString8069.startsWith("mac")) {
 				Class186.method3082(string_0, 1, string_3);
 			} else {
 				GraphicsPreference.method12661(string_0, 2, (byte) -47);

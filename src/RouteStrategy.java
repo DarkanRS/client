@@ -1,22 +1,11 @@
 public abstract class RouteStrategy {
 
 	public int approxDestinationX;
-
 	public int approxDestinationY;
-
 	public int approxDestinationSizeX;
-
 	public int approxDestinationSizeY;
 
-	public abstract boolean method3785(int var1, int var2, int var3, ClipMap var4);
-
-	public abstract boolean method3786(int var1, int var2, int var3, ClipMap var4);
-
-	public abstract boolean canExit(int var1, int var2, int var3, ClipMap var4, byte var5);
-
-	public abstract boolean method3788(int var1, int var2, int var3, ClipMap var4);
-
-	public abstract boolean method3789(int var1, int var2, int var3, ClipMap var4);
+	public abstract boolean canExit(int size, int x, int y, ClipMap var4);
 
 	public static final void method3794(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
 		Class296.anInt3534 = i_0;
