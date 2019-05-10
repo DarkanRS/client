@@ -355,29 +355,28 @@ public class Class329 {
 	}
 
 	public void initClipMap(GraphicalRenderer graphicalrenderer_1, int[][][] ints_2, ClipMap[] arr_3, byte b_4) {
-		int i_5;
-		int i_6;
-		int i_7;
 		if (!this.overlayHidden) {
-			for (i_5 = 0; i_5 < 4; i_5++) {
-				for (i_6 = 0; i_6 < this.maxX; i_6++) {
-					for (i_7 = 0; i_7 < this.maxY; i_7++) {
-						if ((this.regionMap.tileMasks[i_5][i_6][i_7] & 0x1) != 0) {
-							int i_9 = i_5;
-							if ((this.regionMap.tileMasks[1][i_6][i_7] & 0x2) != 0) {
-								i_9 = i_5 - 1;
+			for (int plane = 0; plane < 4; plane++) {
+				for (int x = 0; x < this.maxX; x++) {
+					for (int y = 0; y < this.maxY; y++) {
+						if ((this.regionMap.tileMasks[plane][x][y] & 0x1) != 0) {
+							int height = plane;
+							if ((this.regionMap.tileMasks[1][x][y] & 0x2) != 0) {
+								height = plane - 1;
 							}
-							if (i_9 >= 0) {
-								arr_3[i_9].addBlockedTile(i_6, i_7);
+							if (height >= 0) {
+//								if (height == 0)
+//									System.out.println("Blocking: " + x + ", " + y);
+								arr_3[height].addBlockedTile(x, y);
 							}
 						}
 					}
 				}
 			}
 		}
-		for (i_5 = 0; i_5 < this.anInt3845; i_5++) {
-			i_6 = 0;
-			i_7 = 0;
+		for (int i_5 = 0; i_5 < this.anInt3845; i_5++) {
+			int i_6 = 0;
+			int i_7 = 0;
 			if (!this.overlayHidden) {
 				if (this.highDetailWater) {
 					i_7 |= 0x8;
@@ -1373,7 +1372,7 @@ public class Class329 {
 		}
 	}
 
-	final void decodeTileMasks(RsByteBuffer rsbytebuffer_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11) {
+	final void decodeTileMasks(RsByteBuffer rsbytebuffer_1, int plane, int x, int y, int i_5, int i_6, int i_7, int i_8, int i_9, boolean bool_10, int i_11) {
 		if (i_9 == 1) {
 			i_6 = 1;
 		} else if (i_9 == 2) {
@@ -1383,19 +1382,19 @@ public class Class329 {
 			i_5 = 1;
 		}
 		int i_12;
-		if (i_3 >= 0 && i_3 < this.maxX && i_4 >= 0 && i_4 < this.maxY) {
+		if (x >= 0 && x < this.maxX && y >= 0 && y < this.maxY) {
 			if (!this.overlayHidden && !bool_10) {
-				this.regionMap.tileMasks[i_2][i_3][i_4] = 0;
+				this.regionMap.tileMasks[plane][x][y] = 0;
 			}
 			while (true) {
 				i_12 = rsbytebuffer_1.readUnsignedByte();
 				if (i_12 == 0) {
 					if (this.overlayHidden) {
-						this.tileHeights[0][i_3 + i_5][i_4 + i_6] = 0;
-					} else if (i_2 == 0) {
-						this.tileHeights[0][i_3 + i_5][i_4 + i_6] = -Class92.calculateTileHeights(i_7 + 932731, i_8 + 556238) * 8 << 2;
+						this.tileHeights[0][x + i_5][y + i_6] = 0;
+					} else if (plane == 0) {
+						this.tileHeights[0][x + i_5][y + i_6] = -Class92.calculateTileHeights(i_7 + 932731, i_8 + 556238) * 8 << 2;
 					} else {
-						this.tileHeights[i_2][i_3 + i_5][i_4 + i_6] = this.tileHeights[i_2 - 1][i_3 + i_5][i_4 + i_6] - 960;
+						this.tileHeights[plane][x + i_5][y + i_6] = this.tileHeights[plane - 1][x + i_5][y + i_6] - 960;
 					}
 					break;
 				}
@@ -1405,13 +1404,13 @@ public class Class329 {
 						if (i_13 == 1) {
 							i_13 = 0;
 						}
-						if (i_2 == 0) {
-							this.tileHeights[0][i_3 + i_5][i_4 + i_6] = -i_13 * 8 << 2;
+						if (plane == 0) {
+							this.tileHeights[0][x + i_5][y + i_6] = -i_13 * 8 << 2;
 						} else {
-							this.tileHeights[i_2][i_3 + i_5][i_4 + i_6] = this.tileHeights[i_2 - 1][i_3 + i_5][i_4 + i_6] - (i_13 * 8 << 2);
+							this.tileHeights[plane][x + i_5][y + i_6] = this.tileHeights[plane - 1][x + i_5][y + i_6] - (i_13 * 8 << 2);
 						}
 					} else {
-						this.tileHeights[0][i_3 + i_5][i_4 + i_6] = i_13 * 8 << 2;
+						this.tileHeights[0][x + i_5][y + i_6] = i_13 * 8 << 2;
 					}
 					break;
 				}
@@ -1419,16 +1418,16 @@ public class Class329 {
 					if (bool_10) {
 						rsbytebuffer_1.readUnsignedByte();
 					} else {
-						this.overlayIds[i_2][i_3][i_4] = rsbytebuffer_1.readByte();
-						this.overlayPathShapes[i_2][i_3][i_4] = (byte) ((i_12 - 2) / 4);
-						this.overlayRotations[i_2][i_3][i_4] = (byte) (i_12 - 2 + i_9 & 0x3);
+						this.overlayIds[plane][x][y] = rsbytebuffer_1.readByte();
+						this.overlayPathShapes[plane][x][y] = (byte) ((i_12 - 2) / 4);
+						this.overlayRotations[plane][x][y] = (byte) (i_12 - 2 + i_9 & 0x3);
 					}
 				} else if (i_12 <= 81) {
 					if (!this.overlayHidden && !bool_10) {
-						this.regionMap.tileMasks[i_2][i_3][i_4] = (byte) (i_12 - 49);
+						this.regionMap.tileMasks[plane][x][y] = (byte) (i_12 - 49);
 					}
 				} else if (!bool_10) {
-					this.underlayIds[i_2][i_3][i_4] = (byte) (i_12 - 81);
+					this.underlayIds[plane][x][y] = (byte) (i_12 - 81);
 				}
 			}
 		} else {

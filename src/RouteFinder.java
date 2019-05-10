@@ -468,7 +468,7 @@ public final class RouteFinder {
 					return;
 				}
 				if (string_0.startsWith("clipmask")) {
-					Class209.printConsoleMessage("(" + VertexNormal.MY_PLAYER.localX + ", " + VertexNormal.MY_PLAYER.localY + "): "+IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX][VertexNormal.MY_PLAYER.localY]+" - " + ClipMap.getFlags(IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX][VertexNormal.MY_PLAYER.localY]).toString());
+					Class209.printConsoleMessage("(" + VertexNormal.MY_PLAYER.localX + ", " + VertexNormal.MY_PLAYER.localY + "): "+IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX+1][VertexNormal.MY_PLAYER.localY+1]+" - " + ClipMap.getFlags(IndexLoaders.MAP_REGION_DECODER.getClipMap(VertexNormal.MY_PLAYER.plane).map[VertexNormal.MY_PLAYER.localX+1][VertexNormal.MY_PLAYER.localY+1]).toString());
 				}
 				int i_6;
 				int i_10;
