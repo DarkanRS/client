@@ -111,8 +111,8 @@ public abstract class Ground {
 			} else {
 				i_10 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
 			}
-			int i_11 = Class382.anIntArray4657[i_10];
-			int i_12 = Class382.anIntArray4661[i_10];
+			int i_11 = Class382.SINE[i_10];
+			int i_12 = Class382.COSINE[i_10];
 			if (NativeLibraryLoader.anInt3240 != 4) {
 				i_11 = i_11 * 256 / (client.anInt7203 + 256);
 				i_12 = i_12 * 256 / (client.anInt7203 + 256);

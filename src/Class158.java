@@ -57,8 +57,8 @@ public abstract class Class158 {
                     } else {
                         i_12 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
                     }
-                    i_13 = Class382.anIntArray4657[i_12];
-                    i_14 = Class382.anIntArray4661[i_12];
+                    i_13 = Class382.SINE[i_12];
+                    i_14 = Class382.COSINE[i_12];
                     if (NativeLibraryLoader.anInt3240 != 4) {
                         i_13 = i_13 * 256 / (client.anInt7203 + 256);
                         i_14 = i_14 * 256 / (client.anInt7203 + 256);

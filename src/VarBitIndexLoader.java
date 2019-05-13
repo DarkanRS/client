@@ -34,7 +34,7 @@ public class VarBitIndexLoader implements IndexLoader {
 		this.aClass317_2858 = index_3;
 		if (this.aClass317_2858 != null) {
 			int i_4 = this.aClass317_2858.containersCount() - 1;
-			SharedConfigsType.VARBITS.filesPerContainer(-689743414);
+			SharedConfigsType.VARBITS.filesPerContainer();
 			this.aClass317_2858.filesCount(i_4);
 		}
 	}

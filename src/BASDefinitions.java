@@ -48,7 +48,7 @@ public class BASDefinitions {
 	int totalChance = 0;
 	public int[] anIntArray2818;
 	public int[][] anIntArrayArray2791;
-	Matrix44Var[] aClass294Array2805;
+	Matrix44Var[] matrices;
 
 	void method3808(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
@@ -206,43 +206,43 @@ public class BASDefinitions {
 		}
 	}
 
-	public Matrix44Var[] method3811(byte b_1) {
-		if (this.aClass294Array2805 != null) {
-			return this.aClass294Array2805;
+	public Matrix44Var[] method3811() {
+		if (this.matrices != null) {
+			return this.matrices;
 		} else if (this.anIntArrayArray2802 == null) {
 			return null;
 		} else {
-			this.aClass294Array2805 = new Matrix44Var[this.anIntArrayArray2802.length];
-			for (int i_2 = 0; i_2 < this.anIntArrayArray2802.length; i_2++) {
+			this.matrices = new Matrix44Var[this.anIntArrayArray2802.length];
+			for (int i = 0; i < this.anIntArrayArray2802.length; i++) {
 				int i_3 = 0;
 				int i_4 = 0;
 				int i_5 = 0;
-				int i_6 = 0;
-				int i_7 = 0;
-				int i_8 = 0;
-				if (this.anIntArrayArray2802[i_2] != null) {
-					i_3 = this.anIntArrayArray2802[i_2][0];
-					i_4 = this.anIntArrayArray2802[i_2][1];
-					i_5 = this.anIntArrayArray2802[i_2][2];
-					i_6 = this.anIntArrayArray2802[i_2][3] << 3;
-					i_7 = this.anIntArrayArray2802[i_2][4] << 3;
-					i_8 = this.anIntArrayArray2802[i_2][5] << 3;
+				int xRot = 0;
+				int yRot = 0;
+				int zRot = 0;
+				if (this.anIntArrayArray2802[i] != null) {
+					i_3 = this.anIntArrayArray2802[i][0];
+					i_4 = this.anIntArrayArray2802[i][1];
+					i_5 = this.anIntArrayArray2802[i][2];
+					xRot = this.anIntArrayArray2802[i][3] << 3;
+					yRot = this.anIntArrayArray2802[i][4] << 3;
+					zRot = this.anIntArrayArray2802[i][5] << 3;
 				}
-				if (i_3 != 0 || i_4 != 0 || i_5 != 0 || i_6 != 0 || i_7 != 0 || i_8 != 0) {
-					Matrix44Var matrix44var_9 = this.aClass294Array2805[i_2] = new Matrix44Var();
-					if (i_8 != 0) {
-						matrix44var_9.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(i_8));
+				if (i_3 != 0 || i_4 != 0 || i_5 != 0 || xRot != 0 || yRot != 0 || zRot != 0) {
+					Matrix44Var matrix = this.matrices[i] = new Matrix44Var();
+					if (zRot != 0) {
+						matrix.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(zRot));
 					}
-					if (i_6 != 0) {
-						matrix44var_9.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(i_6));
+					if (xRot != 0) {
+						matrix.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(xRot));
 					}
-					if (i_7 != 0) {
-						matrix44var_9.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(i_7));
+					if (yRot != 0) {
+						matrix.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(yRot));
 					}
-					matrix44var_9.method5219((float) i_3, (float) i_4, (float) i_5);
+					matrix.method5219((float) i_3, (float) i_4, (float) i_5);
 				}
 			}
-			return this.aClass294Array2805;
+			return this.matrices;
 		}
 	}
 

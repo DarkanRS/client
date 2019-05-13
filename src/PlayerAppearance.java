@@ -320,7 +320,7 @@ public class PlayerAppearance {
 			} else {
 				Matrix44Var[] arr_46 = null;
 				if (renderanimdefs_51 != null) {
-					arr_46 = renderanimdefs_51.method3811((byte) 98);
+					arr_46 = renderanimdefs_51.method3811();
 				}
 				if (bool_50 && arr_46 != null) {
 					for (i_30 = 0; i_30 < ints_12.length; i_30++) {

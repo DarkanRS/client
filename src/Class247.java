@@ -255,9 +255,9 @@ public class Class247 {
 		Matrix44Var matrix44var_7 = graphicalrenderer_1.method8458();
 		Matrix44Var matrix44var_8 = new Matrix44Var();
 		matrix44var_8.method5223(0.0F, 0.0F, 0.0F);
-		matrix44var_8.method5220(0.0F, -1.0F, 0.0F, Class382.method6508(-i_3 & 0x3fff));
-		matrix44var_8.method5220(-1.0F, 0.0F, 0.0F, Class382.method6508(-i_2 & 0x3fff));
-		matrix44var_8.method5220(0.0F, 0.0F, -1.0F, Class382.method6508(-i_4 & 0x3fff));
+		matrix44var_8.rotation(0.0F, -1.0F, 0.0F, Class382.method6508(-i_3 & 0x3fff));
+		matrix44var_8.rotation(-1.0F, 0.0F, 0.0F, Class382.method6508(-i_2 & 0x3fff));
+		matrix44var_8.rotation(0.0F, 0.0F, -1.0F, Class382.method6508(-i_4 & 0x3fff));
 		graphicalrenderer_1.method8457(matrix44var_8);
 		Matrix44Var matrix44var_9 = new Matrix44Var();
 		if (i_5 != this.anInt3036) {

@@ -597,8 +597,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void f(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = i_2 * this.anIntArray8931[i_4] + i_3 * this.anIntArray8901[i_4] >> 14;
@@ -758,8 +758,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void t(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = i_3 * this.anIntArray8902[i_4] - i_2 * this.anIntArray8931[i_4] >> 14;
@@ -772,8 +772,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void EA(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = i_2 * this.anIntArray8902[i_4] + i_3 * this.anIntArray8901[i_4] >> 14;
@@ -2047,8 +2047,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bx(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8931[i_4] * i_2 + this.anIntArray8901[i_4] * i_3 >> 14;
@@ -2133,24 +2133,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 					this.anIntArray8902[i_5] -= anInt8939;
 					this.anIntArray8931[i_5] -= anInt8964;
 					if (i_4 != 0) {
-						i_6 = Class382.anIntArray4657[i_4];
-						i_7 = Class382.anIntArray4661[i_4];
+						i_6 = Class382.SINE[i_4];
+						i_7 = Class382.COSINE[i_4];
 						i_8 = i_6 * this.anIntArray8902[i_5] + i_7 * this.anIntArray8901[i_5] + 16383 >> 14;
 						this.anIntArray8902[i_5] = i_7 * this.anIntArray8902[i_5] - i_6 * this.anIntArray8901[i_5] + 16383 >> 14;
 						this.anIntArray8901[i_5] = i_8;
 					}
 
 					if (i_2 != 0) {
-						i_6 = Class382.anIntArray4657[i_2];
-						i_7 = Class382.anIntArray4661[i_2];
+						i_6 = Class382.SINE[i_2];
+						i_7 = Class382.COSINE[i_2];
 						i_8 = i_7 * this.anIntArray8902[i_5] - i_6 * this.anIntArray8931[i_5] + 16383 >> 14;
 						this.anIntArray8931[i_5] = i_6 * this.anIntArray8902[i_5] + i_7 * this.anIntArray8931[i_5] + 16383 >> 14;
 						this.anIntArray8902[i_5] = i_8;
 					}
 
 					if (i_3 != 0) {
-						i_6 = Class382.anIntArray4657[i_3];
-						i_7 = Class382.anIntArray4661[i_3];
+						i_6 = Class382.SINE[i_3];
+						i_7 = Class382.COSINE[i_3];
 						i_8 = i_6 * this.anIntArray8931[i_5] + i_7 * this.anIntArray8901[i_5] + 16383 >> 14;
 						this.anIntArray8931[i_5] = i_7 * this.anIntArray8931[i_5] - i_6 * this.anIntArray8901[i_5] + 16383 >> 14;
 						this.anIntArray8901[i_5] = i_8;
@@ -2334,24 +2334,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 									this.anIntArray8902[i_13] -= anInt8939;
 									this.anIntArray8931[i_13] -= anInt8964;
 									if (i_5 != 0) {
-										i_14 = Class382.anIntArray4657[i_5];
-										i_15 = Class382.anIntArray4661[i_5];
+										i_14 = Class382.SINE[i_5];
+										i_15 = Class382.COSINE[i_5];
 										i_16 = i_14 * this.anIntArray8902[i_13] + i_15 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8902[i_13] = i_15 * this.anIntArray8902[i_13] - i_14 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
 									}
 
 									if (i_3 != 0) {
-										i_14 = Class382.anIntArray4657[i_3];
-										i_15 = Class382.anIntArray4661[i_3];
+										i_14 = Class382.SINE[i_3];
+										i_15 = Class382.COSINE[i_3];
 										i_16 = i_15 * this.anIntArray8902[i_13] - i_14 * this.anIntArray8931[i_13] + 16383 >> 14;
 										this.anIntArray8931[i_13] = i_14 * this.anIntArray8902[i_13] + i_15 * this.anIntArray8931[i_13] + 16383 >> 14;
 										this.anIntArray8902[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
-										i_14 = Class382.anIntArray4657[i_4];
-										i_15 = Class382.anIntArray4661[i_4];
+										i_14 = Class382.SINE[i_4];
+										i_15 = Class382.COSINE[i_4];
 										i_16 = i_14 * this.anIntArray8931[i_13] + i_15 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8931[i_13] = i_15 * this.anIntArray8931[i_13] - i_14 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
@@ -2368,24 +2368,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 									this.anIntArray8902[i_13] -= anInt8939;
 									this.anIntArray8931[i_13] -= anInt8964;
 									if (i_3 != 0) {
-										i_14 = Class382.anIntArray4657[i_3];
-										i_15 = Class382.anIntArray4661[i_3];
+										i_14 = Class382.SINE[i_3];
+										i_15 = Class382.COSINE[i_3];
 										i_16 = i_15 * this.anIntArray8902[i_13] - i_14 * this.anIntArray8931[i_13] + 16383 >> 14;
 										this.anIntArray8931[i_13] = i_14 * this.anIntArray8902[i_13] + i_15 * this.anIntArray8931[i_13] + 16383 >> 14;
 										this.anIntArray8902[i_13] = i_16;
 									}
 
 									if (i_5 != 0) {
-										i_14 = Class382.anIntArray4657[i_5];
-										i_15 = Class382.anIntArray4661[i_5];
+										i_14 = Class382.SINE[i_5];
+										i_15 = Class382.COSINE[i_5];
 										i_16 = i_14 * this.anIntArray8902[i_13] + i_15 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8902[i_13] = i_15 * this.anIntArray8902[i_13] - i_14 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
-										i_14 = Class382.anIntArray4657[i_4];
-										i_15 = Class382.anIntArray4661[i_4];
+										i_14 = Class382.SINE[i_4];
+										i_15 = Class382.COSINE[i_4];
 										i_16 = i_14 * this.anIntArray8931[i_13] + i_15 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8931[i_13] = i_15 * this.anIntArray8931[i_13] - i_14 * this.anIntArray8901[i_13] + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
@@ -2419,24 +2419,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 										int i_19;
 										int i_20;
 										if (i_5 != 0) {
-											i_18 = Class382.anIntArray4657[i_5];
-											i_19 = Class382.anIntArray4661[i_5];
+											i_18 = Class382.SINE[i_5];
+											i_19 = Class382.COSINE[i_5];
 											i_20 = this.aShortArray8933[i_17] * i_18 + this.aShortArray8909[i_17] * i_19 + 16383 >> 14;
 											this.aShortArray8933[i_17] = (short) (this.aShortArray8933[i_17] * i_19 - this.aShortArray8909[i_17] * i_18 + 16383 >> 14);
 											this.aShortArray8909[i_17] = (short) i_20;
 										}
 
 										if (i_3 != 0) {
-											i_18 = Class382.anIntArray4657[i_3];
-											i_19 = Class382.anIntArray4661[i_3];
+											i_18 = Class382.SINE[i_3];
+											i_19 = Class382.COSINE[i_3];
 											i_20 = this.aShortArray8933[i_17] * i_19 - this.aShortArray8911[i_17] * i_18 + 16383 >> 14;
 											this.aShortArray8911[i_17] = (short) (this.aShortArray8933[i_17] * i_18 + this.aShortArray8911[i_17] * i_19 + 16383 >> 14);
 											this.aShortArray8933[i_17] = (short) i_20;
 										}
 
 										if (i_4 != 0) {
-											i_18 = Class382.anIntArray4657[i_4];
-											i_19 = Class382.anIntArray4661[i_4];
+											i_18 = Class382.SINE[i_4];
+											i_19 = Class382.COSINE[i_4];
 											i_20 = this.aShortArray8911[i_17] * i_18 + this.aShortArray8909[i_17] * i_19 + 16383 >> 14;
 											this.aShortArray8911[i_17] = (short) (this.aShortArray8911[i_17] * i_19 - this.aShortArray8909[i_17] * i_18 + 16383 >> 14);
 											this.aShortArray8909[i_17] = (short) i_20;
@@ -3289,24 +3289,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 									this.anIntArray8902[i_13] -= anInt8939;
 									this.anIntArray8931[i_13] -= anInt8964;
 									if (i_5 != 0) {
-										i_14 = Class382.anIntArray4657[i_5];
-										i_15 = Class382.anIntArray4661[i_5];
+										i_14 = Class382.SINE[i_5];
+										i_15 = Class382.COSINE[i_5];
 										i_16 = this.anIntArray8902[i_13] * i_14 + this.anIntArray8901[i_13] * i_15 + 16383 >> 14;
 										this.anIntArray8902[i_13] = this.anIntArray8902[i_13] * i_15 - this.anIntArray8901[i_13] * i_14 + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
 									}
 
 									if (i_3 != 0) {
-										i_14 = Class382.anIntArray4657[i_3];
-										i_15 = Class382.anIntArray4661[i_3];
+										i_14 = Class382.SINE[i_3];
+										i_15 = Class382.COSINE[i_3];
 										i_16 = this.anIntArray8902[i_13] * i_15 - this.anIntArray8931[i_13] * i_14 + 16383 >> 14;
 										this.anIntArray8931[i_13] = this.anIntArray8902[i_13] * i_14 + this.anIntArray8931[i_13] * i_15 + 16383 >> 14;
 										this.anIntArray8902[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
-										i_14 = Class382.anIntArray4657[i_4];
-										i_15 = Class382.anIntArray4661[i_4];
+										i_14 = Class382.SINE[i_4];
+										i_15 = Class382.COSINE[i_4];
 										i_16 = this.anIntArray8931[i_13] * i_14 + this.anIntArray8901[i_13] * i_15 + 16383 >> 14;
 										this.anIntArray8931[i_13] = this.anIntArray8931[i_13] * i_15 - this.anIntArray8901[i_13] * i_14 + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
@@ -3323,24 +3323,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 									this.anIntArray8902[i_13] -= anInt8939;
 									this.anIntArray8931[i_13] -= anInt8964;
 									if (i_3 != 0) {
-										i_14 = Class382.anIntArray4657[i_3];
-										i_15 = Class382.anIntArray4661[i_3];
+										i_14 = Class382.SINE[i_3];
+										i_15 = Class382.COSINE[i_3];
 										i_16 = this.anIntArray8902[i_13] * i_15 - this.anIntArray8931[i_13] * i_14 + 16383 >> 14;
 										this.anIntArray8931[i_13] = this.anIntArray8902[i_13] * i_14 + this.anIntArray8931[i_13] * i_15 + 16383 >> 14;
 										this.anIntArray8902[i_13] = i_16;
 									}
 
 									if (i_5 != 0) {
-										i_14 = Class382.anIntArray4657[i_5];
-										i_15 = Class382.anIntArray4661[i_5];
+										i_14 = Class382.SINE[i_5];
+										i_15 = Class382.COSINE[i_5];
 										i_16 = this.anIntArray8902[i_13] * i_14 + this.anIntArray8901[i_13] * i_15 + 16383 >> 14;
 										this.anIntArray8902[i_13] = this.anIntArray8902[i_13] * i_15 - this.anIntArray8901[i_13] * i_14 + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
 									}
 
 									if (i_4 != 0) {
-										i_14 = Class382.anIntArray4657[i_4];
-										i_15 = Class382.anIntArray4661[i_4];
+										i_14 = Class382.SINE[i_4];
+										i_15 = Class382.COSINE[i_4];
 										i_16 = this.anIntArray8931[i_13] * i_14 + this.anIntArray8901[i_13] * i_15 + 16383 >> 14;
 										this.anIntArray8931[i_13] = this.anIntArray8931[i_13] * i_15 - this.anIntArray8901[i_13] * i_14 + 16383 >> 14;
 										this.anIntArray8901[i_13] = i_16;
@@ -3374,24 +3374,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 										int i_19;
 										int i_20;
 										if (i_5 != 0) {
-											i_18 = Class382.anIntArray4657[i_5];
-											i_19 = Class382.anIntArray4661[i_5];
+											i_18 = Class382.SINE[i_5];
+											i_19 = Class382.COSINE[i_5];
 											i_20 = this.aShortArray8933[i_17] * i_18 + this.aShortArray8909[i_17] * i_19 + 16383 >> 14;
 											this.aShortArray8933[i_17] = (short) (this.aShortArray8933[i_17] * i_19 - this.aShortArray8909[i_17] * i_18 + 16383 >> 14);
 											this.aShortArray8909[i_17] = (short) i_20;
 										}
 
 										if (i_3 != 0) {
-											i_18 = Class382.anIntArray4657[i_3];
-											i_19 = Class382.anIntArray4661[i_3];
+											i_18 = Class382.SINE[i_3];
+											i_19 = Class382.COSINE[i_3];
 											i_20 = this.aShortArray8933[i_17] * i_19 - this.aShortArray8911[i_17] * i_18 + 16383 >> 14;
 											this.aShortArray8911[i_17] = (short) (this.aShortArray8933[i_17] * i_18 + this.aShortArray8911[i_17] * i_19 + 16383 >> 14);
 											this.aShortArray8933[i_17] = (short) i_20;
 										}
 
 										if (i_4 != 0) {
-											i_18 = Class382.anIntArray4657[i_4];
-											i_19 = Class382.anIntArray4661[i_4];
+											i_18 = Class382.SINE[i_4];
+											i_19 = Class382.COSINE[i_4];
 											i_20 = this.aShortArray8911[i_17] * i_18 + this.aShortArray8909[i_17] * i_19 + 16383 >> 14;
 											this.aShortArray8911[i_17] = (short) (this.aShortArray8911[i_17] * i_19 - this.aShortArray8909[i_17] * i_18 + 16383 >> 14);
 											this.aShortArray8909[i_17] = (short) i_20;
@@ -4032,8 +4032,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bn(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8902[i_4] * i_3 - this.anIntArray8931[i_4] * i_2 >> 14;
@@ -4201,8 +4201,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bi(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8931[i_4] * i_2 + this.anIntArray8901[i_4] * i_3 >> 14;
@@ -4215,8 +4215,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bw(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8931[i_4] * i_2 + this.anIntArray8901[i_4] * i_3 >> 14;
@@ -4267,8 +4267,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void dl(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8902[i_4] * i_2 + this.anIntArray8901[i_4] * i_3 >> 14;
@@ -4281,8 +4281,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bm(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8902[i_4] * i_3 - this.anIntArray8931[i_4] * i_2 >> 14;
@@ -4295,8 +4295,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bs(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8902[i_4] * i_3 - this.anIntArray8931[i_4] * i_2 >> 14;
@@ -4309,8 +4309,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bk(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8902[i_4] * i_3 - this.anIntArray8931[i_4] * i_2 >> 14;
@@ -4323,8 +4323,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bf(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		for (int i_4 = 0; i_4 < this.anInt8910; i_4++) {
 			int i_5 = this.anIntArray8902[i_4] * i_3 - this.anIntArray8931[i_4] * i_2 >> 14;
@@ -4599,12 +4599,12 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 						}
 
 						int[] ints_49 = new int[9];
-						i_17 = Class382.anIntArray4661[i_3];
-						i_18 = Class382.anIntArray4657[i_3];
-						i_19 = Class382.anIntArray4661[i_4];
-						i_20 = Class382.anIntArray4657[i_4];
-						i_21 = Class382.anIntArray4661[i_5];
-						i_22 = Class382.anIntArray4657[i_5];
+						i_17 = Class382.COSINE[i_3];
+						i_18 = Class382.SINE[i_3];
+						i_19 = Class382.COSINE[i_4];
+						i_20 = Class382.SINE[i_4];
+						i_21 = Class382.COSINE[i_5];
+						i_22 = Class382.SINE[i_5];
 						i_23 = i_18 * i_21 + 8192 >> 14;
 						i_24 = i_18 * i_22 + 8192 >> 14;
 						ints_49[0] = i_19 * i_21 + i_20 * i_24 + 8192 >> 14;
@@ -4697,24 +4697,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 										this.anIntArray8902[i_14] -= anInt8939;
 										this.anIntArray8931[i_14] -= anInt8964;
 										if (i_5 != 0) {
-											i_15 = Class382.anIntArray4657[i_5];
-											i_16 = Class382.anIntArray4661[i_5];
+											i_15 = Class382.SINE[i_5];
+											i_16 = Class382.COSINE[i_5];
 											i_17 = this.anIntArray8902[i_14] * i_15 + this.anIntArray8901[i_14] * i_16 + 16383 >> 14;
 											this.anIntArray8902[i_14] = this.anIntArray8902[i_14] * i_16 - this.anIntArray8901[i_14] * i_15 + 16383 >> 14;
 											this.anIntArray8901[i_14] = i_17;
 										}
 
 										if (i_3 != 0) {
-											i_15 = Class382.anIntArray4657[i_3];
-											i_16 = Class382.anIntArray4661[i_3];
+											i_15 = Class382.SINE[i_3];
+											i_16 = Class382.COSINE[i_3];
 											i_17 = this.anIntArray8902[i_14] * i_16 - this.anIntArray8931[i_14] * i_15 + 16383 >> 14;
 											this.anIntArray8931[i_14] = this.anIntArray8902[i_14] * i_15 + this.anIntArray8931[i_14] * i_16 + 16383 >> 14;
 											this.anIntArray8902[i_14] = i_17;
 										}
 
 										if (i_4 != 0) {
-											i_15 = Class382.anIntArray4657[i_4];
-											i_16 = Class382.anIntArray4661[i_4];
+											i_15 = Class382.SINE[i_4];
+											i_16 = Class382.COSINE[i_4];
 											i_17 = this.anIntArray8931[i_14] * i_15 + this.anIntArray8901[i_14] * i_16 + 16383 >> 14;
 											this.anIntArray8931[i_14] = this.anIntArray8931[i_14] * i_16 - this.anIntArray8901[i_14] * i_15 + 16383 >> 14;
 											this.anIntArray8901[i_14] = i_17;
@@ -4747,24 +4747,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 												}
 
 												if (i_5 != 0) {
-													i_19 = Class382.anIntArray4657[i_5];
-													i_20 = Class382.anIntArray4661[i_5];
+													i_19 = Class382.SINE[i_5];
+													i_20 = Class382.COSINE[i_5];
 													i_21 = this.aShortArray8933[i_18] * i_19 + this.aShortArray8909[i_18] * i_20 + 16383 >> 14;
 													this.aShortArray8933[i_18] = (short) (this.aShortArray8933[i_18] * i_20 - this.aShortArray8909[i_18] * i_19 + 16383 >> 14);
 													this.aShortArray8909[i_18] = (short) i_21;
 												}
 
 												if (i_3 != 0) {
-													i_19 = Class382.anIntArray4657[i_3];
-													i_20 = Class382.anIntArray4661[i_3];
+													i_19 = Class382.SINE[i_3];
+													i_20 = Class382.COSINE[i_3];
 													i_21 = this.aShortArray8933[i_18] * i_20 - this.aShortArray8911[i_18] * i_19 + 16383 >> 14;
 													this.aShortArray8911[i_18] = (short) (this.aShortArray8933[i_18] * i_19 + this.aShortArray8911[i_18] * i_20 + 16383 >> 14);
 													this.aShortArray8933[i_18] = (short) i_21;
 												}
 
 												if (i_4 != 0) {
-													i_19 = Class382.anIntArray4657[i_4];
-													i_20 = Class382.anIntArray4661[i_4];
+													i_19 = Class382.SINE[i_4];
+													i_20 = Class382.COSINE[i_4];
 													i_21 = this.aShortArray8911[i_18] * i_19 + this.aShortArray8909[i_18] * i_20 + 16383 >> 14;
 													this.aShortArray8911[i_18] = (short) (this.aShortArray8911[i_18] * i_20 - this.aShortArray8909[i_18] * i_19 + 16383 >> 14);
 													this.aShortArray8909[i_18] = (short) i_21;
@@ -5065,8 +5065,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bz(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		int i_4;
 		int i_5;
@@ -5135,24 +5135,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 					this.anIntArray8902[i_5] -= anInt8939;
 					this.anIntArray8931[i_5] -= anInt8964;
 					if (i_4 != 0) {
-						i_6 = Class382.anIntArray4657[i_4];
-						i_7 = Class382.anIntArray4661[i_4];
+						i_6 = Class382.SINE[i_4];
+						i_7 = Class382.COSINE[i_4];
 						i_8 = this.anIntArray8902[i_5] * i_6 + this.anIntArray8901[i_5] * i_7 + 16383 >> 14;
 						this.anIntArray8902[i_5] = this.anIntArray8902[i_5] * i_7 - this.anIntArray8901[i_5] * i_6 + 16383 >> 14;
 						this.anIntArray8901[i_5] = i_8;
 					}
 
 					if (i_2 != 0) {
-						i_6 = Class382.anIntArray4657[i_2];
-						i_7 = Class382.anIntArray4661[i_2];
+						i_6 = Class382.SINE[i_2];
+						i_7 = Class382.COSINE[i_2];
 						i_8 = this.anIntArray8902[i_5] * i_7 - this.anIntArray8931[i_5] * i_6 + 16383 >> 14;
 						this.anIntArray8931[i_5] = this.anIntArray8902[i_5] * i_6 + this.anIntArray8931[i_5] * i_7 + 16383 >> 14;
 						this.anIntArray8902[i_5] = i_8;
 					}
 
 					if (i_3 != 0) {
-						i_6 = Class382.anIntArray4657[i_3];
-						i_7 = Class382.anIntArray4661[i_3];
+						i_6 = Class382.SINE[i_3];
+						i_7 = Class382.COSINE[i_3];
 						i_8 = this.anIntArray8931[i_5] * i_6 + this.anIntArray8901[i_5] * i_7 + 16383 >> 14;
 						this.anIntArray8931[i_5] = this.anIntArray8931[i_5] * i_7 - this.anIntArray8901[i_5] * i_6 + 16383 >> 14;
 						this.anIntArray8901[i_5] = i_8;
@@ -5297,24 +5297,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 					this.anIntArray8902[i_5] -= anInt8939;
 					this.anIntArray8931[i_5] -= anInt8964;
 					if (i_4 != 0) {
-						i_6 = Class382.anIntArray4657[i_4];
-						i_7 = Class382.anIntArray4661[i_4];
+						i_6 = Class382.SINE[i_4];
+						i_7 = Class382.COSINE[i_4];
 						i_8 = this.anIntArray8902[i_5] * i_6 + this.anIntArray8901[i_5] * i_7 + 16383 >> 14;
 						this.anIntArray8902[i_5] = this.anIntArray8902[i_5] * i_7 - this.anIntArray8901[i_5] * i_6 + 16383 >> 14;
 						this.anIntArray8901[i_5] = i_8;
 					}
 
 					if (i_2 != 0) {
-						i_6 = Class382.anIntArray4657[i_2];
-						i_7 = Class382.anIntArray4661[i_2];
+						i_6 = Class382.SINE[i_2];
+						i_7 = Class382.COSINE[i_2];
 						i_8 = this.anIntArray8902[i_5] * i_7 - this.anIntArray8931[i_5] * i_6 + 16383 >> 14;
 						this.anIntArray8931[i_5] = this.anIntArray8902[i_5] * i_6 + this.anIntArray8931[i_5] * i_7 + 16383 >> 14;
 						this.anIntArray8902[i_5] = i_8;
 					}
 
 					if (i_3 != 0) {
-						i_6 = Class382.anIntArray4657[i_3];
-						i_7 = Class382.anIntArray4661[i_3];
+						i_6 = Class382.SINE[i_3];
+						i_7 = Class382.COSINE[i_3];
 						i_8 = this.anIntArray8931[i_5] * i_6 + this.anIntArray8901[i_5] * i_7 + 16383 >> 14;
 						this.anIntArray8931[i_5] = this.anIntArray8931[i_5] * i_7 - this.anIntArray8901[i_5] * i_6 + 16383 >> 14;
 						this.anIntArray8901[i_5] = i_8;
@@ -5705,8 +5705,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void S(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		int i_4;
 		int i_5;
@@ -5830,8 +5830,8 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void bj(int i_1) {
-		int i_2 = Class382.anIntArray4657[i_1];
-		int i_3 = Class382.anIntArray4661[i_1];
+		int i_2 = Class382.SINE[i_1];
+		int i_3 = Class382.COSINE[i_1];
 
 		int i_4;
 		int i_5;
@@ -6176,12 +6176,12 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 						}
 
 						int[] ints_49 = new int[9];
-						i_17 = Class382.anIntArray4661[i_3];
-						i_18 = Class382.anIntArray4657[i_3];
-						i_19 = Class382.anIntArray4661[i_4];
-						i_20 = Class382.anIntArray4657[i_4];
-						i_21 = Class382.anIntArray4661[i_5];
-						i_22 = Class382.anIntArray4657[i_5];
+						i_17 = Class382.COSINE[i_3];
+						i_18 = Class382.SINE[i_3];
+						i_19 = Class382.COSINE[i_4];
+						i_20 = Class382.SINE[i_4];
+						i_21 = Class382.COSINE[i_5];
+						i_22 = Class382.SINE[i_5];
 						i_23 = i_18 * i_21 + 8192 >> 14;
 						i_24 = i_18 * i_22 + 8192 >> 14;
 						ints_49[0] = i_19 * i_21 + i_20 * i_24 + 8192 >> 14;
@@ -6274,24 +6274,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 										this.anIntArray8902[i_14] -= anInt8939;
 										this.anIntArray8931[i_14] -= anInt8964;
 										if (i_5 != 0) {
-											i_15 = Class382.anIntArray4657[i_5];
-											i_16 = Class382.anIntArray4661[i_5];
+											i_15 = Class382.SINE[i_5];
+											i_16 = Class382.COSINE[i_5];
 											i_17 = i_15 * this.anIntArray8902[i_14] + i_16 * this.anIntArray8901[i_14] + 16383 >> 14;
 											this.anIntArray8902[i_14] = i_16 * this.anIntArray8902[i_14] - i_15 * this.anIntArray8901[i_14] + 16383 >> 14;
 											this.anIntArray8901[i_14] = i_17;
 										}
 
 										if (i_3 != 0) {
-											i_15 = Class382.anIntArray4657[i_3];
-											i_16 = Class382.anIntArray4661[i_3];
+											i_15 = Class382.SINE[i_3];
+											i_16 = Class382.COSINE[i_3];
 											i_17 = i_16 * this.anIntArray8902[i_14] - i_15 * this.anIntArray8931[i_14] + 16383 >> 14;
 											this.anIntArray8931[i_14] = i_15 * this.anIntArray8902[i_14] + i_16 * this.anIntArray8931[i_14] + 16383 >> 14;
 											this.anIntArray8902[i_14] = i_17;
 										}
 
 										if (i_4 != 0) {
-											i_15 = Class382.anIntArray4657[i_4];
-											i_16 = Class382.anIntArray4661[i_4];
+											i_15 = Class382.SINE[i_4];
+											i_16 = Class382.COSINE[i_4];
 											i_17 = i_15 * this.anIntArray8931[i_14] + i_16 * this.anIntArray8901[i_14] + 16383 >> 14;
 											this.anIntArray8931[i_14] = i_16 * this.anIntArray8931[i_14] - i_15 * this.anIntArray8901[i_14] + 16383 >> 14;
 											this.anIntArray8901[i_14] = i_17;
@@ -6324,24 +6324,24 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 												}
 
 												if (i_5 != 0) {
-													i_19 = Class382.anIntArray4657[i_5];
-													i_20 = Class382.anIntArray4661[i_5];
+													i_19 = Class382.SINE[i_5];
+													i_20 = Class382.COSINE[i_5];
 													i_21 = this.aShortArray8933[i_18] * i_19 + this.aShortArray8909[i_18] * i_20 + 16383 >> 14;
 													this.aShortArray8933[i_18] = (short) (this.aShortArray8933[i_18] * i_20 - this.aShortArray8909[i_18] * i_19 + 16383 >> 14);
 													this.aShortArray8909[i_18] = (short) i_21;
 												}
 
 												if (i_3 != 0) {
-													i_19 = Class382.anIntArray4657[i_3];
-													i_20 = Class382.anIntArray4661[i_3];
+													i_19 = Class382.SINE[i_3];
+													i_20 = Class382.COSINE[i_3];
 													i_21 = this.aShortArray8933[i_18] * i_20 - this.aShortArray8911[i_18] * i_19 + 16383 >> 14;
 													this.aShortArray8911[i_18] = (short) (this.aShortArray8933[i_18] * i_19 + this.aShortArray8911[i_18] * i_20 + 16383 >> 14);
 													this.aShortArray8933[i_18] = (short) i_21;
 												}
 
 												if (i_4 != 0) {
-													i_19 = Class382.anIntArray4657[i_4];
-													i_20 = Class382.anIntArray4661[i_4];
+													i_19 = Class382.SINE[i_4];
+													i_20 = Class382.COSINE[i_4];
 													i_21 = this.aShortArray8911[i_18] * i_19 + this.aShortArray8909[i_18] * i_20 + 16383 >> 14;
 													this.aShortArray8911[i_18] = (short) (this.aShortArray8911[i_18] * i_20 - this.aShortArray8909[i_18] * i_19 + 16383 >> 14);
 													this.aShortArray8909[i_18] = (short) i_21;

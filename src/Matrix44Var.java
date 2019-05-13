@@ -161,18 +161,18 @@ public class Matrix44Var {
 
 	}
 
-	public void method5217(float f_1, float f_2, float f_3, float f_4) {
-		float f_5 = (float) Math.cos((double) f_4);
-		float f_6 = (float) Math.sin((double) f_4);
-		this.aFloat3519 = f_5 + f_1 * f_1 * (1.0F - f_5);
-		this.aFloat3514 = f_3 * f_6 + f_2 * f_1 * (1.0F - f_5);
-		this.aFloat3516 = -f_2 * f_6 + f_3 * f_1 * (1.0F - f_5);
-		this.aFloat3517 = -f_3 * f_6 + f_1 * f_2 * (1.0F - f_5);
-		this.aFloat3523 = f_5 + f_2 * f_2 * (1.0F - f_5);
-		this.aFloat3522 = f_1 * f_6 + f_3 * f_2 * (1.0F - f_5);
-		this.aFloat3520 = f_2 * f_6 + f_1 * f_3 * (1.0F - f_5);
-		this.aFloat3513 = -f_1 * f_6 + f_2 * f_3 * (1.0F - f_5);
-		this.aFloat3521 = f_5 + f_3 * f_3 * (1.0F - f_5);
+	public void method5217(float f_1, float f_2, float f_3, float theta) {
+		float cos = (float) Math.cos((double) theta);
+		float sin = (float) Math.sin((double) theta);
+		this.aFloat3519 = cos + f_1 * f_1 * (1.0F - cos);
+		this.aFloat3514 = f_3 * sin + f_2 * f_1 * (1.0F - cos);
+		this.aFloat3516 = -f_2 * sin + f_3 * f_1 * (1.0F - cos);
+		this.aFloat3517 = -f_3 * sin + f_1 * f_2 * (1.0F - cos);
+		this.aFloat3523 = cos + f_2 * f_2 * (1.0F - cos);
+		this.aFloat3522 = f_1 * sin + f_3 * f_2 * (1.0F - cos);
+		this.aFloat3520 = f_2 * sin + f_1 * f_3 * (1.0F - cos);
+		this.aFloat3513 = -f_1 * sin + f_2 * f_3 * (1.0F - cos);
+		this.aFloat3521 = cos + f_3 * f_3 * (1.0F - cos);
 		this.aFloat3525 = 0.0F;
 		this.aFloat3524 = 0.0F;
 		this.aFloat3515 = 0.0F;
@@ -184,18 +184,18 @@ public class Matrix44Var {
 		this.aFloat3525 += f_3;
 	}
 
-	public void method5220(float f_1, float f_2, float f_3, float f_4) {
-		float f_5 = (float) Math.cos((double) f_4);
-		float f_6 = (float) Math.sin((double) f_4);
-		float f_7 = f_5 + f_1 * f_1 * (1.0F - f_5);
-		float f_8 = f_3 * f_6 + f_2 * f_1 * (1.0F - f_5);
-		float f_9 = -f_2 * f_6 + f_3 * f_1 * (1.0F - f_5);
-		float f_10 = -f_3 * f_6 + f_1 * f_2 * (1.0F - f_5);
-		float f_11 = f_5 + f_2 * f_2 * (1.0F - f_5);
-		float f_12 = f_1 * f_6 + f_3 * f_2 * (1.0F - f_5);
-		float f_13 = f_2 * f_6 + f_1 * f_3 * (1.0F - f_5);
-		float f_14 = -f_1 * f_6 + f_2 * f_3 * (1.0F - f_5);
-		float f_15 = f_5 + f_3 * f_3 * (1.0F - f_5);
+	public void rotation(float axisX, float axisY, float axisZ, float theta) {
+		float cos = (float) Math.cos((double) theta);
+		float sin = (float) Math.sin((double) theta);
+		float f_7 = cos + axisX * axisX * (1.0F - cos);
+		float f_8 = axisZ * sin + axisY * axisX * (1.0F - cos);
+		float f_9 = -axisY * sin + axisZ * axisX * (1.0F - cos);
+		float f_10 = -axisZ * sin + axisX * axisY * (1.0F - cos);
+		float f_11 = cos + axisY * axisY * (1.0F - cos);
+		float f_12 = axisX * sin + axisZ * axisY * (1.0F - cos);
+		float f_13 = axisY * sin + axisX * axisZ * (1.0F - cos);
+		float f_14 = -axisX * sin + axisY * axisZ * (1.0F - cos);
+		float f_15 = cos + axisZ * axisZ * (1.0F - cos);
 		float f_16 = this.aFloat3519;
 		float f_17 = this.aFloat3514;
 		float f_18 = this.aFloat3517;

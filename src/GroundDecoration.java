@@ -729,16 +729,16 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											}
 											if (icomponentdefinitions_12.aBool1332) {
 												client.aClass294_7169.method5217(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spritePitch));
-												client.aClass294_7169.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spriteRoll));
-												client.aClass294_7169.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(icomponentdefinitions_12.spriteYaw));
+												client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spriteRoll));
+												client.aClass294_7169.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(icomponentdefinitions_12.spriteYaw));
 												client.aClass294_7169.method5219((float) icomponentdefinitions_12.anInt1441, (float) icomponentdefinitions_12.anInt1263, (float) icomponentdefinitions_12.anInt1304);
 											} else {
-												int i_31 = Class382.anIntArray4657[icomponentdefinitions_12.spritePitch << 3] * (icomponentdefinitions_12.spriteScale << 2) >> 14;
-												int i_32 = Class382.anIntArray4661[icomponentdefinitions_12.spritePitch << 3] * (icomponentdefinitions_12.spriteScale << 2) >> 14;
+												int i_31 = Class382.SINE[icomponentdefinitions_12.spritePitch << 3] * (icomponentdefinitions_12.spriteScale << 2) >> 14;
+												int i_32 = Class382.COSINE[icomponentdefinitions_12.spritePitch << 3] * (icomponentdefinitions_12.spriteScale << 2) >> 14;
 												client.aClass294_7169.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-icomponentdefinitions_12.spriteYaw << 3));
-												client.aClass294_7169.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spriteRoll << 3));
+												client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spriteRoll << 3));
 												client.aClass294_7169.method5219((float) (icomponentdefinitions_12.anInt1293 << 2), (float) (i_31 + i_23 + (icomponentdefinitions_12.anInt1334 << 2)), (float) (i_32 + (icomponentdefinitions_12.anInt1334 << 2)));
-												client.aClass294_7169.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spritePitch << 3));
+												client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(icomponentdefinitions_12.spritePitch << 3));
 											}
 											icomponentdefinitions_12.method1991(Renderers.SOFTWARE_RENDERER, meshrasterizer_40, client.aClass294_7169, client.cycles);
 											if (client.aBool7358) {

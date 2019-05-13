@@ -39,8 +39,8 @@ public class Class190 {
 			int i_9 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
 			int i_10 = i_5 * i_5 + i_4 * i_4;
 			if (i_10 <= i_9 * i_9) {
-				int i_11 = Class382.anIntArray4657[i_8];
-				int i_12 = Class382.anIntArray4661[i_8];
+				int i_11 = Class382.SINE[i_8];
+				int i_12 = Class382.COSINE[i_8];
 				if (NativeLibraryLoader.anInt3240 != 4) {
 					i_11 = i_11 * 256 / (client.anInt7203 + 256);
 					i_12 = i_12 * 256 / (client.anInt7203 + 256);

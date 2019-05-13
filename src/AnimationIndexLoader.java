@@ -50,7 +50,7 @@ public class AnimationIndexLoader {
 		this.sequenceIndex = index_3;
 		if (this.sequenceIndex != null) {
 			int i_6 = this.sequenceIndex.containersCount() - 1;
-			SharedConfigsType.ANIMATIONS.filesPerContainer(-1584727313);
+			SharedConfigsType.ANIMATIONS.filesPerContainer();
 			this.sequenceIndex.filesCount(i_6);
 		}
 		CutsceneAction_Sub10_Sub1.setAnimationIndices(index_4, index_5);

@@ -2141,8 +2141,8 @@ public final class client extends Engine {
 										i_52 = (int) aFloat7365 + anInt7255 & 0x3fff;
 									}
 
-									int i_29 = Class382.anIntArray4657[i_52];
-									int i_30 = Class382.anIntArray4661[i_52];
+									int i_29 = Class382.SINE[i_52];
+									int i_30 = Class382.COSINE[i_52];
 									if (NativeLibraryLoader.anInt3240 != 4) {
 										i_29 = (anInt7203 + 256) * i_29 >> 8;
 										i_30 = i_30 * (anInt7203 + 256) >> 8;

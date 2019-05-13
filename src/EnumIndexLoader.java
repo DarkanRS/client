@@ -30,7 +30,7 @@ public class EnumIndexLoader {
 		this.configIndex = index_3;
 		if (this.configIndex != null) {
 			int i_4 = this.configIndex.containersCount() - 1;
-			SharedConfigsType.ENUMS.filesPerContainer(-613744571);
+			SharedConfigsType.ENUMS.filesPerContainer();
 			this.configIndex.filesCount(i_4);
 		}
 	}

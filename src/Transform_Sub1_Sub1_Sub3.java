@@ -78,8 +78,8 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 						}
 
 						int i_9 = i_8 - i_7 & 0x3fff;
-						int i_10 = Class382.anIntArray4657[i_9];
-						int i_11 = Class382.anIntArray4661[i_9];
+						int i_10 = Class382.SINE[i_9];
+						int i_11 = Class382.COSINE[i_9];
 						int i_12 = i_10 * i_6 + i_5 * i_11 >> 14;
 						i_6 = i_6 * i_11 - i_10 * i_5 >> 14;
 						Vector3 vector3_13 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);

@@ -111,8 +111,8 @@ public class Class334 {
 			int i_10;
 			if (this.anInt3911 != 0) {
 				i_7 = -this.anInt3911 & 0x3fff;
-				i_8 = Class382.anIntArray4657[i_7];
-				i_9 = Class382.anIntArray4661[i_7];
+				i_8 = Class382.SINE[i_7];
+				i_9 = Class382.COSINE[i_7];
 				i_10 = i_5 * i_9 - i_6 * i_8 >> 14;
 				i_6 = i_5 * i_8 + i_6 * i_9 >> 14;
 				i_5 = i_10;
@@ -120,8 +120,8 @@ public class Class334 {
 
 			if (this.anInt3896 != 0) {
 				i_7 = -this.anInt3896 & 0x3fff;
-				i_8 = Class382.anIntArray4657[i_7];
-				i_9 = Class382.anIntArray4661[i_7];
+				i_8 = Class382.SINE[i_7];
+				i_9 = Class382.COSINE[i_7];
 				i_10 = i_6 * i_8 + i_4 * i_9 >> 14;
 				i_6 = i_6 * i_9 - i_4 * i_8 >> 14;
 				i_4 = i_10;
@@ -183,8 +183,8 @@ public class Class334 {
 
 			for (int i_2 = 0; i_2 <= 24; i_2++) {
 				int i_3 = i_2 * 8192 / 24;
-				int i_4 = Class382.anIntArray4657[i_3];
-				int i_5 = Class382.anIntArray4661[i_3];
+				int i_4 = Class382.SINE[i_3];
+				int i_5 = Class382.COSINE[i_3];
 
 				int i_6;
 				int i_7;
@@ -193,9 +193,9 @@ public class Class334 {
 				int i_10;
 				for (i_6 = 1; i_6 < 24; i_6++) {
 					i_7 = i_6 * 8192 / 24;
-					i_8 = Class382.anIntArray4661[i_7] >> 7;
-					i_9 = Class382.anIntArray4657[i_7] * i_4 >> 21;
-					i_10 = Class382.anIntArray4657[i_7] * i_5 >> 21;
+					i_8 = Class382.COSINE[i_7] >> 7;
+					i_9 = Class382.SINE[i_7] * i_4 >> 21;
+					i_10 = Class382.SINE[i_7] * i_5 >> 21;
 					rsmesh_1.method2662(i_10, i_8, -i_9);
 				}
 
@@ -252,16 +252,16 @@ public class Class334 {
 		int i_7;
 		int i_8;
 		if (this.anInt3911 != 0) {
-			i_6 = Class382.anIntArray4657[this.anInt3911];
-			i_7 = Class382.anIntArray4661[this.anInt3911];
+			i_6 = Class382.SINE[this.anInt3911];
+			i_7 = Class382.COSINE[this.anInt3911];
 			i_8 = i_4 * i_7 - i_5 * i_6 >> 14;
 			i_5 = i_4 * i_6 + i_5 * i_7 >> 14;
 			i_4 = i_8;
 		}
 
 		if (this.anInt3896 != 0) {
-			i_6 = Class382.anIntArray4657[this.anInt3896];
-			i_7 = Class382.anIntArray4661[this.anInt3896];
+			i_6 = Class382.SINE[this.anInt3896];
+			i_7 = Class382.COSINE[this.anInt3896];
 			i_8 = i_5 * i_6 + i_3 * i_7 >> 14;
 			i_5 = i_5 * i_7 - i_3 * i_6 >> 14;
 			i_3 = i_8;

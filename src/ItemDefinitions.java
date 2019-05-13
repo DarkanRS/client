@@ -516,9 +516,9 @@ public class ItemDefinitions implements Definition {
                 hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0D), 0.95F + (float) (Math.random() / 10.0D), -50.0F, -10.0F, -50.0F);
                 Matrix44Var matrix44var_20 = hardwareRenderer.method8450();
                 matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-this.modelRotationZ << 3));
-                matrix44var_20.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(this.modelRotationY << 3));
-                matrix44var_20.method5219((float) (this.modelOffsetX << 2), (float) ((zoom * Class382.anIntArray4657[this.modelRotationX << 3] >> 14) - meshRasterizer.YA() / 2 + (this.modelOffsetY << 2)), (float) ((zoom * Class382.anIntArray4661[this.modelRotationX << 3] >> 14) + (this.modelOffsetY << 2)));
-                matrix44var_20.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(this.modelRotationX << 3));
+                matrix44var_20.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(this.modelRotationY << 3));
+                matrix44var_20.method5219((float) (this.modelOffsetX << 2), (float) ((zoom * Class382.SINE[this.modelRotationX << 3] >> 14) - meshRasterizer.YA() / 2 + (this.modelOffsetY << 2)), (float) ((zoom * Class382.COSINE[this.modelRotationX << 3] >> 14) + (this.modelOffsetY << 2)));
+                matrix44var_20.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(this.modelRotationX << 3));
                 hardwareRenderer.r(0, 0, 36, 32);
                 hardwareRenderer.ba(2, 0);
                 hardwareRenderer.B(0, 0, 36, 32, 0, 0);

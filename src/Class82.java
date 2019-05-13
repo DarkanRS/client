@@ -2,23 +2,8 @@ final class Class82 implements Interface11 {
 
     public static CutsceneEntity[] aClass75Array804;
 
-    public long method78(String string_1) {
-        return Class254.method4379(string_1);
-    }
-
+    @Override
     public long method79(String string_1, int i_2) {
-        return Class254.method4379(string_1);
-    }
-
-    public long method81(String string_1) {
-        return Class254.method4379(string_1);
-    }
-
-    public long method80(String string_1) {
-        return Class254.method4379(string_1);
-    }
-
-    public long method82(String string_1) {
         return Class254.method4379(string_1);
     }
 

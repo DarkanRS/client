@@ -38,8 +38,8 @@ public final class Class241 {
         int i_13 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
         int i_14 = i_5 * i_5 + i_4 * i_4;
         if (i_14 <= i_13 * i_13) {
-            int i_15 = Class382.anIntArray4657[i_12];
-            int i_16 = Class382.anIntArray4661[i_12];
+            int i_15 = Class382.SINE[i_12];
+            int i_16 = Class382.COSINE[i_12];
             if (NativeLibraryLoader.anInt3240 != 4) {
                 i_15 = i_15 * 256 / (client.anInt7203 + 256);
                 i_16 = i_16 * 256 / (client.anInt7203 + 256);

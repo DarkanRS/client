@@ -147,7 +147,7 @@ public class ObjectIndexLoader {
 		this.meshIndex = index_5;
 		if (this.objectIndex != null) {
 			int i_6 = this.objectIndex.containersCount() - 1;
-			SharedConfigsType.OBJECTS.filesPerContainer(-1090472574);
+			SharedConfigsType.OBJECTS.filesPerContainer();
 			this.objectIndex.filesCount(i_6);
 		}
 		if (this.game == Game.darkan) {

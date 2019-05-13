@@ -88,7 +88,7 @@ public class Class345 {
 	}
 
 	void method6128() {
-		this.anInt4024 = Class382.anIntArray4661[this.anInt4034 << 3];
+		this.anInt4024 = Class382.COSINE[this.anInt4034 << 3];
 		long long_2 = (long) this.anInt4027;
 		long long_4 = (long) this.anInt4036;
 		long long_6 = (long) this.anInt4037;

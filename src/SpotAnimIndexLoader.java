@@ -18,7 +18,7 @@ public class SpotAnimIndexLoader {
 		this.aClass317_5888 = index_3;
 		this.aClass317_5889 = index_4;
 		int i_5 = this.aClass317_5888.containersCount() - 1;
-		SharedConfigsType.SPOT_ANIMS.filesPerContainer(-397238873);
+		SharedConfigsType.SPOT_ANIMS.filesPerContainer();
 		this.aClass317_5888.filesCount(i_5);
 	}
 

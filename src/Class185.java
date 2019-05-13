@@ -1,93 +1,48 @@
 public class Class185 {
-
     boolean aBool2304;
-
     float aFloat2326;
-
     float aFloat2331;
-
     float aFloat2332;
-
     float aFloat2333;
-
     int anInt2337;
-
     Runnable aRunnable2343;
-
     ChoppyItemFixClass aClass144_2310;
-
     float aFloat2305 = 0.85F;
-
     float aFloat2303;
-
     int anInt2307;
-
     int anInt2336;
-
     boolean aBool2309;
-
     int anInt2306;
-
     int anInt2313;
-
     boolean aBool2334;
-
     Matrix44Arr aClass384_2346;
-
     Matrix44Var aClass294_2314;
-
     Matrix44Var aClass294_2316;
-
     Matrix44Arr aClass384_2317;
-
     Matrix44Arr aClass384_2318;
-
     int[] anIntArray2319;
-
     float[] aFloatArray2302;
-
     float[] aFloatArray2341;
-
     float[] aFloatArray2322;
-
     float[] aFloatArray2323;
-
     int[] anIntArray2321;
-
     int[] anIntArray2325;
-
     int[] anIntArray2312;
-
     int[] anIntArray2327;
-
     int[] anIntArray2328;
-
     float aFloat2311;
-
     float aFloat2335;
-
     float aFloat2308;
-
     float[] aFloatArray2338;
-
     MeshRasterizer_Sub2[] aMeshRasterizer_Sub2Array2339;
-
     MeshRasterizer_Sub2[] aMeshRasterizer_Sub2Array2340;
-
     float[] aFloatArray2315;
-
     float[] aFloatArray2342;
-
     float[] aFloatArray2330;
-
     float[] aFloatArray2344;
-
     float[] aFloatArray2345;
-
     float[] aFloatArray2324;
-
     HardwareRenderer aGraphicalRenderer_Sub3_2320;
-
     int[] anIntArray2329;
 
     void method3070(Runnable runnable_1) {

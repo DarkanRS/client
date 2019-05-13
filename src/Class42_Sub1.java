@@ -72,7 +72,7 @@ public class Class42_Sub1 extends Class42 {
 
 	static void method14563(Node_Sub15_Sub2 class282_sub15_sub2_1, short s_2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2_1);
-		SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2_1, Class320.aClass253_3723);
+		StaticMethods.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2_1, Class320.aClass253_3723);
 	}
 
 }

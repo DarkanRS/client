@@ -248,9 +248,9 @@ public class HitbarDefinitions {
 				Class535 class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038((short) 4699);
 				i_14 = class535_16.method11450();
 				client.aClass294_7457.method5223((float) (-IdentitiKitIndexLoader.anInt361), (float) (-Class109_Sub1.anInt9384), (float) (-Class246.anInt3029));
-				client.aClass294_7457.method5220(0.0F, -1.0F, 0.0F, Class382.method6508(-AnimationDefinitions.anInt5930 & 0x3fff));
-				client.aClass294_7457.method5220(-1.0F, 0.0F, 0.0F, Class382.method6508(-Class293.anInt3512 & 0x3fff));
-				client.aClass294_7457.method5220(0.0F, 0.0F, -1.0F, Class382.method6508(-Class121.anInt1525 & 0x3fff));
+				client.aClass294_7457.rotation(0.0F, -1.0F, 0.0F, Class382.method6508(-AnimationDefinitions.anInt5930 & 0x3fff));
+				client.aClass294_7457.rotation(-1.0F, 0.0F, 0.0F, Class382.method6508(-Class293.anInt3512 & 0x3fff));
+				client.aClass294_7457.rotation(0.0F, 0.0F, -1.0F, Class382.method6508(-Class121.anInt1525 & 0x3fff));
 				Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
 				HitsplatDefinitions.method3850(client.aClass384_7167, true, (float) (i_2 / 2), (float) (i_3 / 2), (float) (client.anInt7451 << 1), (float) (client.anInt7451 << 1), i_2, i_3, (byte) 116);
 				Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);

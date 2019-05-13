@@ -3795,7 +3795,7 @@ public class CS2Interpreter {
 
 	static final void method5829(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		SharedConfigsType.method2094(i_2);
+		StaticMethods.method2094(i_2);
 	}
 
 	static final void randomInclusive(CS2Executor executor) {

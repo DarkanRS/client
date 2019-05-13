@@ -711,8 +711,8 @@ public class RSMesh {
 		int i_6;
 		int i_7;
 		if (i_3 != 0) {
-			i_4 = Class382.anIntArray4657[i_3];
-			i_5 = Class382.anIntArray4661[i_3];
+			i_4 = Class382.SINE[i_3];
+			i_5 = Class382.COSINE[i_3];
 
 			for (i_6 = 0; i_6 < this.vertexCount; i_6++) {
 				i_7 = i_4 * this.vertexY[i_6] + i_5 * this.vertexX[i_6] >> 14;
@@ -722,8 +722,8 @@ public class RSMesh {
 		}
 
 		if (i_1 != 0) {
-			i_4 = Class382.anIntArray4657[i_1];
-			i_5 = Class382.anIntArray4661[i_1];
+			i_4 = Class382.SINE[i_1];
+			i_5 = Class382.COSINE[i_1];
 
 			for (i_6 = 0; i_6 < this.vertexCount; i_6++) {
 				i_7 = i_5 * this.vertexY[i_6] - i_4 * this.vertexZ[i_6] >> 14;
@@ -733,8 +733,8 @@ public class RSMesh {
 		}
 
 		if (i_2 != 0) {
-			i_4 = Class382.anIntArray4657[i_2];
-			i_5 = Class382.anIntArray4661[i_2];
+			i_4 = Class382.SINE[i_2];
+			i_5 = Class382.COSINE[i_2];
 
 			for (i_6 = 0; i_6 < this.vertexCount; i_6++) {
 				i_7 = i_4 * this.vertexZ[i_6] + i_5 * this.vertexX[i_6] >> 14;

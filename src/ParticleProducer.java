@@ -128,12 +128,12 @@ public class ParticleProducer {
 					} else {
 						i_17 = this.anInt7113 + (int) ((double) this.anInt7114 * Math.random());
 						i_17 &= 0x3fff;
-						i_18 = Class382.anIntArray4657[i_17];
-						int i_19 = Class382.anIntArray4661[i_17];
+						i_18 = Class382.SINE[i_17];
+						int i_19 = Class382.COSINE[i_17];
 						i_20 = this.anInt7117 + (int) ((double) this.anInt7116 * Math.random());
 						i_20 &= 0x1fff;
-						i_21 = Class382.anIntArray4657[i_20];
-						i_22 = Class382.anIntArray4661[i_20];
+						i_21 = Class382.SINE[i_20];
+						i_22 = Class382.COSINE[i_20];
 						byte b_23 = 13;
 						i_14 = i_19 * i_21 >> b_23;
 						i_15 = (i_22 << 1) * -1;

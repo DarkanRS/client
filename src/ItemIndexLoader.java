@@ -207,7 +207,7 @@ public class ItemIndexLoader implements IndexLoader {
 		this.meshIndex = index_6;
 		if (this.fs19 != null) {
 			int i_7 = this.fs19.containersCount() - 1;
-			this.maxItemsCount = i_7 * SharedConfigsType.ITEMS.filesPerContainer(-1077198554) + this.fs19.filesCount(i_7);
+			this.maxItemsCount = i_7 * SharedConfigsType.ITEMS.filesPerContainer() + this.fs19.filesCount(i_7);
 		} else {
 			this.maxItemsCount = 0;
 		}

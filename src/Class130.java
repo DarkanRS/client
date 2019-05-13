@@ -104,9 +104,9 @@ public class Class130 {
 			}
 		}
 
-		OpenGL.glMatrixMode(5890);
+		OpenGL.glMatrixMode(5890); //GL_TEXTURE
 		OpenGL.glLoadIdentity();
-		OpenGL.glMatrixMode(5888);
+		OpenGL.glMatrixMode(5888); //GL_MODELVIEW
 	}
 
 	boolean method2293(Shadow class282_sub50_sub17_1, int i_2, int i_3) {

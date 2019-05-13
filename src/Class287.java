@@ -170,7 +170,7 @@ public class Class287 {
             int i_5 = this.anInt3432 * i_1 / 50 + this.anInt3433 & 0x7ff;
             switch(this.anInt3431) {
                 case 1:
-                    i_4 = (Class382.anIntArray4657[i_5 << 3] >> 4) + 1024;
+                    i_4 = (Class382.SINE[i_5 << 3] >> 4) + 1024;
                     break;
                 case 2:
                     i_4 = i_5;

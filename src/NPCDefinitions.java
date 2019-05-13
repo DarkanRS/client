@@ -278,7 +278,7 @@ public class NPCDefinitions {
 			} else {
 				Matrix44Var[] arr_39 = null;
 				if (renderanimdefs_45 != null) {
-					arr_39 = renderanimdefs_45.method3811((byte) 81);
+					arr_39 = renderanimdefs_45.method3811();
 				}
 				int i_40;
 				if (bool_38 && arr_39 != null) {

@@ -101,8 +101,8 @@ public class Class116 {
 					i_25 = ints_19[i_23];
 					for (int i_26 = 0; i_26 < b_30; i_26++) {
 						int i_27 = (i_26 << 14) / b_30;
-						i_28 = Class382.anIntArray4657[i_27] * i_24 >> 14;
-						int i_29 = Class382.anIntArray4661[i_27] * i_25 >> 14;
+						i_28 = Class382.SINE[i_27] * i_24 >> 14;
+						int i_29 = Class382.COSINE[i_27] * i_25 >> 14;
 						ints_22[i_23][i_26] = rsmesh_20.method2662(i_28, 0, i_29);
 					}
 				}
