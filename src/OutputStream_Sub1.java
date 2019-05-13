@@ -13,7 +13,7 @@ public class OutputStream_Sub1 extends OutputStream {
 	static void method12938(byte b_0) {
 		for (CacheableNode_Sub7 class282_sub50_sub7_1 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_1 != null; class282_sub50_sub7_1 = (CacheableNode_Sub7) Class20.aClass482_171.next(-318548046)) {
 			if (Class14.method539(class282_sub50_sub7_1.clickType, -836613899)) {
-				StaticMethods.method2095(class282_sub50_sub7_1);
+				Static.method2095(class282_sub50_sub7_1);
 			}
 		}
 

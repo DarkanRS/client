@@ -94,7 +94,7 @@ public class Class122 {
 		Defaults7Loader.aNativeSprite_5883 = null;
 		Class291_Sub1.anInt8014 = -1;
 		Class291_Sub1.anInt8016 = -1;
-		Class494.aClass194_5794 = null;
+		Static.aClass194_5794 = null;
 		Class291_Sub1.aClass194_8017 = null;
 		Class291_Sub1.aClass194_8023 = null;
 		Class446.aClass194_5416 = null;

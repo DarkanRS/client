@@ -521,7 +521,7 @@ public class Login {
                         if (Class9.lobbyStage != 273) {
                             Class9.loginStage = 2;
                             FontRenderer_Sub1.method13784(2, -1482799);
-                            IncomingPacket.method6377();
+                            Static.method6377();
                             Class365.setGameState(0);
                             Class9.aClass184_73.currentPacket = null;
                             return;

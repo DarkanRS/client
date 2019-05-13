@@ -73,7 +73,7 @@ public class Class271 {
 	public static TCPPacket createPacket(OutgoingPacket outgoingpacket_0, IsaacCipher isaaccipher_1) {
 		TCPPacket tcpmessage_3 = Class158_Sub2.method14356();
 		tcpmessage_3.packet = outgoingpacket_0;
-		tcpmessage_3.anInt7678 = outgoingpacket_0.anInt4632;
+		tcpmessage_3.anInt7678 = outgoingpacket_0.size;
 		if (tcpmessage_3.anInt7678 == -1) {
 			tcpmessage_3.buffer = new RsBitsBuffer(260);
 		} else if (tcpmessage_3.anInt7678 == -2) {
@@ -86,7 +86,7 @@ public class Class271 {
 			tcpmessage_3.buffer = new RsBitsBuffer(260);
 		}
 		tcpmessage_3.buffer.setIsaacCipher(isaaccipher_1, 351906319);
-		tcpmessage_3.buffer.writeIsaacByte(tcpmessage_3.packet.anInt4631, 328020366);
+		tcpmessage_3.buffer.writeIsaacByte(tcpmessage_3.packet.id, 328020366);
 		tcpmessage_3.anInt7680 = 0;
 		return tcpmessage_3;
 	}

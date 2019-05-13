@@ -19,6 +19,6 @@ public class FriendsChatPlayer {
 
 	static void method2944(int i_0) {
 		Class179.aBool2229 = false;
-		IncomingPacket.method6378();
+		Static.method6378();
 	}
 }

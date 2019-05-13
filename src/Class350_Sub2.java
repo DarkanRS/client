@@ -32,6 +32,6 @@ public class Class350_Sub2 extends Class350 {
 		} else {
 			ParticleProducer.method11500(Class393.preferences.currentToolkit.getValue(-1386089693), false);
 		}
-		IncomingPacket.method6378();
+		Static.method6378();
 	}
 }

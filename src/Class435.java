@@ -178,7 +178,7 @@ public class Class435 {
 				Exception_Sub3.method15619(true, -147678453);
 				Node_Sub15_Sub1.method14840((byte) -22);
 			} else if (Class291_Sub1.anInt8015 == 70) {
-				Class494.aClass194_5794 = new Class194(graphicalrenderer_0, 11, Class351.gameCanvas);
+				Static.aClass194_5794 = new Class194(graphicalrenderer_0, 11, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 73;
 				Exception_Sub3.method15619(true, -1670495557);
 				Node_Sub15_Sub1.method14840((byte) 30);

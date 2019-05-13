@@ -1,56 +1,21 @@
-public class MovementType implements Identifiable {
-	
-    public static MovementType STATIONARY = new MovementType((byte) -1);
-    public static MovementType HALF_WALK = new MovementType((byte) 0);
-    public static MovementType WALKING = new MovementType((byte) 1);
-    public static MovementType RUNNING = new MovementType((byte) 2);
+public enum MovementType implements Identifiable {
 
-    public byte id;
+	STATIONARY((byte) -1), 
+	HALF_WALK((byte) 0), 
+	WALKING((byte) 1), 
+	RUNNING((byte) 2);
 
-    public int getValue() {
-        return this.id;
-    }
+	public byte id;
 
-    public int method4268() {
-        return this.id + 1;
-    }
+	public int getValue() {
+		return this.id;
+	}
 
-    public int method76() {
-        return this.id;
-    }
-
-    public int method75() {
-        return this.id;
-    }
-
-    public static MovementType[] values() {
-		return new MovementType[] { HALF_WALK, WALKING, RUNNING, STATIONARY };
+	public int getValueIncr() {
+		return this.id + 1;
 	}
 
 	MovementType(byte b_1) {
-        this.id = b_1;
-    }
-
-    static final void method4281(Entity animable_0) {
-        int i_2 = animable_0.anInt10342 - client.cycles;
-        int i_3 = animable_0.anInt10326 * 512 + animable_0.getSize() * 256;
-        int i_4 = animable_0.anInt10328 * 512 + animable_0.getSize() * 256;
-        Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
-        animable_0.method11172((float) ((int) vector3_5.x + (i_3 - (int) vector3_5.x) / i_2), (float) ((int) vector3_5.y), (float) ((int) vector3_5.z + (i_4 - (int) vector3_5.z) / i_2));
-        animable_0.anInt10366 = 0;
-        animable_0.method15863(animable_0.anInt10346, 1692779087);
-    }
-
-    public static boolean isFriend(String string_0) {
-        if (string_0 == null) {
-            return false;
-        } else {
-            for (int i_2 = 0; i_2 < client.FRIEND_COUNT; i_2++) {
-                if (string_0.equalsIgnoreCase(client.FRIENDS[i_2].displayName)) {
-                    return true;
-                }
-            }
-            return string_0.equalsIgnoreCase(VertexNormal.MY_PLAYER.displayName);
-        }
-    }
+		this.id = b_1;
+	}
 }

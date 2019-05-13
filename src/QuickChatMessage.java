@@ -238,7 +238,7 @@ public class QuickChatMessage {
             MeshModifier.method7041((byte) -97);
             client.anInt7349 = QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow;
             Class516.method8867(false);
-            IncomingPacket.method6378();
+            Static.method6378();
             Class150.method2582(client.anInt7349, (int[]) null, -1429871398);
         }
         Class9.aBool71 = true;

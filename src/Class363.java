@@ -57,7 +57,7 @@ public class Class363 {
         int moveType = MovementType.STATIONARY.id;
         int i_4 = 0;
         if (animable_0.anInt10342 > client.cycles) {
-            MovementType.method4281(animable_0);
+            Static.method4281(animable_0);
         } else if (animable_0.anInt10345 >= client.cycles) {
             ProcessorSpecs.method7727(animable_0);
         } else {

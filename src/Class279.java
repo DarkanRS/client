@@ -33,7 +33,7 @@ public class Class279 {
 					IndexLoaders.ITEM_LOADER.getSprite(graphicalrenderer_0, graphicalrenderer_0, item_2.id, item_2.amount, item_2.outlineSize, item_2.shadowColor, false, false, item_2.anInt7819, Renderers.FONT_RENDERER, item_2.hasPlayerAppearance ? VertexNormal.MY_PLAYER.playerAppearance : null, (byte) 77);
 					item_2.remove();
 				}
-				IncomingPacket.method6378();
+				Static.method6378();
 			} else {
 				if (Class182.HARDWARE_RENDERER == null) {
 					Canvas canvas_3 = new Canvas();

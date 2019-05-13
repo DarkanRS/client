@@ -62,13 +62,13 @@ public class Class268 {
 			if (client.aBool7344 && Class20.anInt169 < 2) {
 				string_2 = client.aString7275 + Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + client.aString7356 + " " + "->";
 			} else if (Preference_Sub1.method12619(-1903584217) && Class20.anInt169 > 2) {
-				string_2 = IncomingPacket.method6380(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, 1195583741);
+				string_2 = Static.method6380(CutsceneAction_Sub23.aCacheableNode_Sub7_9445, 1195583741);
 			} else {
 				CacheableNode_Sub7 class282_sub50_sub7_3 = CutsceneAction_Sub23.aCacheableNode_Sub7_9445;
 				if (class282_sub50_sub7_3 == null) {
 					return;
 				}
-				string_2 = IncomingPacket.method6380(class282_sub50_sub7_3, 1123504706);
+				string_2 = Static.method6380(class282_sub50_sub7_3, 1123504706);
 				int[] ints_4 = Class534_Sub1.method12815(class282_sub50_sub7_3, -1336515986);
 				if (ints_4 != null) {
 					string_2 = string_2 + Class15.method547(ints_4, 2114598830);

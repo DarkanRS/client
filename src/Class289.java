@@ -328,7 +328,7 @@ public class Class289 implements Runnable {
 				}
 				graphicalrenderer_0.L();
 				graphicalrenderer_0.ba(1, 1);
-				IncomingPacket.method6378();
+				Static.method6378();
 				ObjectIndexLoader objectindexloader_39 = IndexLoaders.MAP_REGION_DECODER.method4436();
 				Class187.anInt2353 = 0;
 				Class187.aClass482_2350.method8118(862321870);

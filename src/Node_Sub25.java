@@ -13,7 +13,7 @@ public class Node_Sub25 extends Node {
             i_10 = i_11;
         }
         int[] ints_13 = Class534_Sub1.method12815(class282_sub50_sub7_7, -1726186381);
-        String string_14 = IncomingPacket.method6380(class282_sub50_sub7_7, 868923697);
+        String string_14 = Static.method6380(class282_sub50_sub7_7, 868923697);
         if (ints_13 != null) {
             string_14 = string_14 + Class15.method547(ints_13, 1953018919);
         }

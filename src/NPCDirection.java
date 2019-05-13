@@ -1,12 +1,12 @@
-public class NPCDirection implements Identifiable {
-	public static NPCDirection NORTH = new NPCDirection(0, 0);
-	public static NPCDirection EAST = new NPCDirection(2, 1);
-	public static NPCDirection SOUTH_EAST = new NPCDirection(3, 2);
-	public static NPCDirection NORTH_WEST = new NPCDirection(7, 3);
-	public static NPCDirection SOUTH = new NPCDirection(6, 4);
-	public static NPCDirection WEST = new NPCDirection(4, 5);
-	public static NPCDirection NORTH_EAST = new NPCDirection(5, 6);
-	public static NPCDirection SOUTH_WEST = new NPCDirection(1, 7);
+public enum NPCDirection implements Identifiable {
+	NORTH(0, 0),
+	EAST(2, 1),
+	SOUTH_EAST(3, 2),
+	NORTH_WEST(7, 3),
+	SOUTH(6, 4),
+	WEST(4, 5),
+	NORTH_EAST(5, 6),
+	SOUTH_WEST(1, 7);
 	
 	public int value;
 	int direction;
@@ -41,14 +41,6 @@ public class NPCDirection implements Identifiable {
 
 	public int getValue() {
 		return this.direction;
-	}
-
-	public int method75() {
-		return 764906751 * this.direction * 431977215;
-	}
-
-	public int method76() {
-		return 764906751 * this.direction * 431977215;
 	}
 
 	static int method4325(WorldDescriptor class217_sub1_0, WorldDescriptor class217_sub1_1, int i_2, boolean bool_3, int i_4, boolean bool_5) {

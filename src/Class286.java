@@ -169,7 +169,7 @@ public class Class286 implements Runnable {
 	static Class194 method5048(int i_0) {
 		if (i_0 == 0) {
 			if ((double) Class291_Sub1.aFloat3468 == 3.0D) {
-				return Class494.aClass194_5794;
+				return Static.aClass194_5794;
 			}
 			if ((double) Class291_Sub1.aFloat3468 == 4.0D) {
 				return Class291_Sub1.aClass194_8017;

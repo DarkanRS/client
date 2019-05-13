@@ -1,16 +1,11 @@
-public class Class466 implements Identifiable {
+public enum Class466 implements Identifiable {
 
-	public static Class466 aClass466_5569 = new Class466(-2);
-
-	public static Class466 aClass466_5564 = new Class466(-3);
-
-	static Class466 aClass466_5565 = new Class466(2);
-
-	public static Class466 aClass466_5563 = new Class466(3);
-
-	static Class466 aClass466_5567 = new Class466(21);
-
-	static Class466 aClass466_5568 = new Class466(20);
+	aClass466_5569(-2),
+	aClass466_5564(-3),
+	aClass466_5565(2),
+	aClass466_5563(3),
+	aClass466_5567(21),
+	aClass466_5568(20);
 
 	int anInt5566;
 
@@ -18,16 +13,8 @@ public class Class466 implements Identifiable {
 		return this.anInt5566;
 	}
 
-	public int method75() {
-		return 1856682733 * this.anInt5566 * -1731808539;
-	}
-
 	Class466(int i_1) {
 		this.anInt5566 = i_1;
-	}
-
-	public int method76() {
-		return 1856682733 * this.anInt5566 * -1731808539;
 	}
 
 	static void method7776() {

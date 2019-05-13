@@ -146,7 +146,7 @@ public class Class378 {
 				i_4 -= 2;
 			}
 			byte[] bytes_5 = new byte[i_4];
-			IncomingPacket.method6375(string_0, bytes_5, 0);
+			Static.method6375(string_0, bytes_5, 0);
 			return bytes_5;
 		}
 	}

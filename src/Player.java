@@ -715,7 +715,7 @@ public class Player extends Entity {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && Static.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -729,7 +729,7 @@ public class Player extends Entity {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && Static.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -743,7 +743,7 @@ public class Player extends Entity {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && Static.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -922,7 +922,7 @@ public class Player extends Entity {
 			this.rotate90LeftAnimation = buffer.readUnsignedShort();
 			this.specialByte = buffer.readUnsignedByte();
 			if (transformedBefore != this.isTransformedNPC || i_15 != this.isNpc || i_16 != this.walkingAnimation || itemId != this.rotate180Animation || i_18 != this.rotate90RightAnimation || i_19 != this.rotate90LeftAnimation || i_20 != this.specialByte) {
-				IncomingPacket.method6379(this);
+				Static.method6379(this);
 			}
 		} else {
 			Class149_Sub2.method14609(this);
@@ -972,7 +972,7 @@ public class Player extends Entity {
 				return null;
 			}
 
-			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && MovementType.isFriend(this.displayName)) {
+			if (-574868913 * client.PUBLIC_FILTER * 1429316783 == 0 || client.PUBLIC_FILTER * 1429316783 * -574868913 == 3 || -574868913 * client.PUBLIC_FILTER * 1429316783 == 1 && Static.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}
@@ -1125,7 +1125,7 @@ public class Player extends Entity {
 				return null;
 			}
 
-			if (client.PUBLIC_FILTER == 0 || client.PUBLIC_FILTER == 3 || client.PUBLIC_FILTER == 1 && MovementType.isFriend(this.displayName)) {
+			if (client.PUBLIC_FILTER == 0 || client.PUBLIC_FILTER == 3 || client.PUBLIC_FILTER == 1 && Static.isFriend(this.displayName)) {
 				return this.aClass163_10334;
 			}
 		}

@@ -43,7 +43,7 @@ public final class Class78 {
 	static String method1382(Date date_0, String string_1, TimeZone timezone_2, Language xlanguage_3) {
 		if (aMap766 == null) {
 			aMap766 = new HashMap(6);
-			Language[] arr_5 = Language.method8294(-15971239);
+			Language[] arr_5 = Language.values();
 			for (int i_6 = 0; i_6 < arr_5.length; i_6++) {
 				Language xlanguage_7 = arr_5[i_6];
 				aMap766.put(xlanguage_7, new ConcurrentLinkedQueue());

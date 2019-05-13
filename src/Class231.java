@@ -64,7 +64,7 @@ public class Class231 {
 		Class188.method3139(Renderers.SOFTWARE_RENDERER, IndexLoaders.SPRITES_INDEX);
 		Class76.method1361((byte) -31);
 		Class122.method2109(Class182.aNativeSpriteArray2261, (byte) 8);
-		IncomingPacket.method6378();
+		Static.method6378();
 		Class94.method1589();
 		if (client.gameState == 5) {
 			Class365.setGameState(11);

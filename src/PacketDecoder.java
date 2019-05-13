@@ -236,7 +236,7 @@ public class PacketDecoder {
 		} else if (context.currentPacket == IncomingPacket.UPDATE_ZONE_PARTIAL_ENCLOSED) {
 			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.read128Byte() << 3;
 			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
-			SceneObjectType.UPDATE_ZONE_X = buffer.readByte() << 3;
+			Static.UPDATE_ZONE_X = buffer.readByte() << 3;
 			while (buffer.index < context.currentPacketSize) {
 				TilestreamPacket tilestreampacket_68 = TilestreamPacket.values()[buffer.readUnsignedByte()];
 				PacketDecoder.decodeTilestreamPacket(tilestreampacket_68);
@@ -1035,7 +1035,7 @@ public class PacketDecoder {
 		} else if (context.currentPacket == IncomingPacket.UPDATE_ZONE_FULL_FOLLOWS) { 
 			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.readByte128() << 3;
 			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
-			SceneObjectType.UPDATE_ZONE_X = buffer.readByte128() << 3;
+			Static.UPDATE_ZONE_X = buffer.readByte128() << 3;
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.ICOMPONENT_SETTINGS_SET) {
@@ -1165,7 +1165,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.UPDATE_ZONE_PARTIAL_FOLLOWS) {
-			SceneObjectType.UPDATE_ZONE_X = buffer.read128Byte() << 3;
+			Static.UPDATE_ZONE_X = buffer.read128Byte() << 3;
 			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.readByte() << 3;
 			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte();
 			CoordGrid coordgrid_67 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -1175,7 +1175,7 @@ public class PacketDecoder {
 				int i_8 = i_7 - coordgrid_67.x;
 				int i_9 = (int) (class282_sub29_109.data >> 14 & 0x3fffL);
 				int i_10 = i_9 - coordgrid_67.y;
-				if (i_6 == Class272.UPDATE_ZONE_PLANE && i_8 >= SceneObjectType.UPDATE_ZONE_X && i_8 < SceneObjectType.UPDATE_ZONE_X + 8 && i_10 >= Class158_Sub1_Sub2.UPDATE_ZONE_Y && i_10 < Class158_Sub1_Sub2.UPDATE_ZONE_Y + 8) {
+				if (i_6 == Class272.UPDATE_ZONE_PLANE && i_8 >= Static.UPDATE_ZONE_X && i_8 < Static.UPDATE_ZONE_X + 8 && i_10 >= Class158_Sub1_Sub2.UPDATE_ZONE_Y && i_10 < Class158_Sub1_Sub2.UPDATE_ZONE_Y + 8) {
 					class282_sub29_109.remove();
 					if (i_8 >= 0 && i_10 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_10 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 						Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, i_8, i_10);
@@ -1184,12 +1184,12 @@ public class PacketDecoder {
 			}
 			Node_Sub31 class282_sub31_110;
 			for (class282_sub31_110 = (Node_Sub31) Node_Sub31.aClass482_7775.head(); class282_sub31_110 != null; class282_sub31_110 = (Node_Sub31) Node_Sub31.aClass482_7775.next(-766641666)) {
-				if (class282_sub31_110.anInt7762 >= SceneObjectType.UPDATE_ZONE_X && class282_sub31_110.anInt7762 < SceneObjectType.UPDATE_ZONE_X + 8 && class282_sub31_110.anInt7763 >= Class158_Sub1_Sub2.UPDATE_ZONE_Y && class282_sub31_110.anInt7763 < Class158_Sub1_Sub2.UPDATE_ZONE_Y + 8 && class282_sub31_110.anInt7764 == Class272.UPDATE_ZONE_PLANE) {
+				if (class282_sub31_110.anInt7762 >= Static.UPDATE_ZONE_X && class282_sub31_110.anInt7762 < Static.UPDATE_ZONE_X + 8 && class282_sub31_110.anInt7763 >= Class158_Sub1_Sub2.UPDATE_ZONE_Y && class282_sub31_110.anInt7763 < Class158_Sub1_Sub2.UPDATE_ZONE_Y + 8 && class282_sub31_110.anInt7764 == Class272.UPDATE_ZONE_PLANE) {
 					class282_sub31_110.aBool7774 = true;
 				}
 			}
 			for (class282_sub31_110 = (Node_Sub31) Node_Sub31.aClass482_7776.head(); class282_sub31_110 != null; class282_sub31_110 = (Node_Sub31) Node_Sub31.aClass482_7776.next(804942724)) {
-				if (class282_sub31_110.anInt7762 >= SceneObjectType.UPDATE_ZONE_X && class282_sub31_110.anInt7762 < SceneObjectType.UPDATE_ZONE_X + 8 && class282_sub31_110.anInt7763 >= Class158_Sub1_Sub2.UPDATE_ZONE_Y && class282_sub31_110.anInt7763 < Class158_Sub1_Sub2.UPDATE_ZONE_Y + 8 && class282_sub31_110.anInt7764 == Class272.UPDATE_ZONE_PLANE) {
+				if (class282_sub31_110.anInt7762 >= Static.UPDATE_ZONE_X && class282_sub31_110.anInt7762 < Static.UPDATE_ZONE_X + 8 && class282_sub31_110.anInt7763 >= Class158_Sub1_Sub2.UPDATE_ZONE_Y && class282_sub31_110.anInt7763 < Class158_Sub1_Sub2.UPDATE_ZONE_Y + 8 && class282_sub31_110.anInt7764 == Class272.UPDATE_ZONE_PLANE) {
 					class282_sub31_110.aBool7774 = true;
 				}
 			}
@@ -2353,7 +2353,7 @@ public class PacketDecoder {
 			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = i_5 + coordgrid_4.y;
-			int i_7 = (i_3 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_7 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_8 = i_7 + coordgrid_4.x;
 			int i_9 = buffer.readUnsignedShort();
 			int i_10 = buffer.readUnsignedShort();
@@ -2380,7 +2380,7 @@ public class PacketDecoder {
 			IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_3).method7987(i_21, -588474817);
 		} else if (TilestreamPacket.aClass364_4218 == packet) {
 			int i_3 = buffer.readUnsignedByte();
-			int i_21 = (i_3 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = buffer.readUnsignedShort();
 			if (i_6 == 65535) {
@@ -2410,7 +2410,7 @@ public class PacketDecoder {
 		} else if (TilestreamPacket.PROJECTILE == packet) {
 			int i_3 = buffer.readUnsignedByte();
 			boolean bool_38 = (i_3 & 0x80) != 0;
-			int i_5 = (i_3 >> 3 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_5 = (i_3 >> 3 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_6 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_7 = i_5 + buffer.readByte();
 			int i_8 = i_6 + buffer.readByte();
@@ -2439,7 +2439,7 @@ public class PacketDecoder {
 			}
 		} else if (TilestreamPacket.aClass364_4214 == packet) {
 			int i_3 = buffer.readUnsignedByte();
-			int i_21 = (i_3 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = buffer.readUnsignedShort();
 			if (i_6 == 65535) {
@@ -2463,7 +2463,7 @@ public class PacketDecoder {
 			CoordGrid coordgrid_25 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int i_6 = (i_21 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_7 = i_6 + coordgrid_25.y;
-			int i_8 = (i_21 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_8 = (i_21 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_9 = i_8 + coordgrid_25.x;
 			int i_10 = buffer.readUnsignedShortLE128();
 			int i_11 = buffer.readUnsignedShortLE128();
@@ -2482,7 +2482,7 @@ public class PacketDecoder {
 			int i_5 = i_3 & 0x3;
 			int i_6 = client.anIntArray7230[i_21];
 			int i_7 = buffer.readUnsignedByte();
-			int i_8 = (i_7 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_8 = (i_7 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_9 = (i_7 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-1974292488).method4401() || i_8 >= 0 && i_9 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_9 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				Class299.method5313(Class272.UPDATE_ZONE_PLANE, i_8, i_9, i_6, -1, i_21, i_5);
@@ -2492,7 +2492,7 @@ public class PacketDecoder {
 			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = i_5 + coordgrid_4.y;
-			int i_7 = (i_3 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_7 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_8 = i_7 + coordgrid_4.x;
 			int i_9 = buffer.readUnsignedShortLE128();
 			Node_Sub29 class282_sub29_39 = (Node_Sub29) client.aClass465_7414.get((long) (Class272.UPDATE_ZONE_PLANE << 28 | i_6 << 14 | i_8));
@@ -2518,7 +2518,7 @@ public class PacketDecoder {
 			int i_7 = client.anIntArray7230[i_6];
 			int i_8 = buffer.readUnsignedByte();
 			int i_9 = buffer.readUnsignedByte128();
-			int i_10 = (i_9 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_10 = (i_9 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_11 = (i_9 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			if (i_6 == SceneObjectType.GROUND_INTERACT.type) {
 				i_6 = SceneObjectType.SCENERY_INTERACT.type;
@@ -2572,7 +2572,7 @@ public class PacketDecoder {
 		} else if (TilestreamPacket.TILE_MESSAGE == packet) {
 			buffer.readUnsignedByte();
 			int i_3 = buffer.readUnsignedByte();
-			int i_21 = (i_3 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = buffer.readUnsignedShort();
 			int i_7 = buffer.readUnsignedByte();
@@ -2583,7 +2583,7 @@ public class PacketDecoder {
 			}
 		} else if (TilestreamPacket.aClass364_4217 == packet) {
 			int i_3 = buffer.readUnsignedByte();
-			int i_21 = (i_3 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = buffer.readUnsignedShort();
 			if (i_6 == 65535) {
@@ -2608,7 +2608,7 @@ public class PacketDecoder {
 			int i_5 = i_3 & 0x3;
 			int i_6 = client.anIntArray7230[i_21];
 			int i_7 = buffer.readUnsigned128Byte();
-			int i_8 = (i_7 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_8 = (i_7 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_9 = (i_7 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_10 = buffer.readIntLE();
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2057621455) != Class256.aClass256_3153) {
@@ -2621,7 +2621,7 @@ public class PacketDecoder {
 			CoordGrid coordgrid_31 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int localY = (i_5 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int y = localY + coordgrid_31.y;
-			int localX = (i_5 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int localX = (i_5 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int x = localX + coordgrid_31.x;
 			boolean bool_36 = localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY();
 			if (bool_36 || IndexLoaders.MAP_REGION_DECODER.method4419(-2008774639).method4401()) {
@@ -2632,7 +2632,7 @@ public class PacketDecoder {
 			}
 		} else if (TilestreamPacket.aClass364_4210 == packet) {
 			int i_3 = buffer.readUnsignedByte();
-			int i_21 = (i_3 >> 4 & 0xf) + SceneObjectType.UPDATE_ZONE_X * 2;
+			int i_21 = (i_3 >> 4 & 0xf) + Static.UPDATE_ZONE_X * 2;
 			int i_5 = Class158_Sub1_Sub2.UPDATE_ZONE_Y * 2 + (i_3 & 0xf);
 			int i_6 = buffer.readUnsignedByte();
 			boolean bool_33 = (i_6 & 0x1) != 0;
@@ -2670,7 +2670,7 @@ public class PacketDecoder {
 		} else if (TilestreamPacket.CREATE_OBJECT == packet) {
 			int i_3 = buffer.readInt();
 			int i_21 = buffer.readUnsigned128Byte();
-			int i_5 = (i_21 >> 4 & 0x7) + SceneObjectType.UPDATE_ZONE_X;
+			int i_5 = (i_21 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_6 = (i_21 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_7 = buffer.readUnsigned128Byte();
 			int i_8 = i_7 >> 2;

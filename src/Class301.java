@@ -194,7 +194,7 @@ public class Class301 implements Interface41 {
 		}
 		client.anInt7193 = 0;
 		client.maximumHeldKeys = 0;
-		IncomingPacket.method6378();
+		Static.method6378();
 	}
 
 	static boolean method5334(int i_0, int i_1, int i_2) {

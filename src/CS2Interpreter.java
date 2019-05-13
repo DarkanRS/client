@@ -3795,7 +3795,7 @@ public class CS2Interpreter {
 
 	static final void method5829(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		StaticMethods.method2094(i_2);
+		Static.method2094(i_2);
 	}
 
 	static final void randomInclusive(CS2Executor executor) {
@@ -4523,7 +4523,7 @@ public class CS2Interpreter {
 		if (string_2.startsWith(Class76.getCrown(0)) || string_2.startsWith(Class76.getCrown(1))) {
 			string_2 = string_2.substring(7);
 		}
-		executor.intStack[++executor.intStackPtr - 1] = MovementType.isFriend(string_2) ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Static.isFriend(string_2) ? 1 : 0;
 	}
 
 	static final void method7933(CS2Executor executor) {
@@ -10053,7 +10053,7 @@ public class CS2Interpreter {
 		IndexLoaders.ITEM_LOADER.method7152();
 		IndexLoaders.ITEM_LOADER.method7151((byte) -24);
 		IndexLoaders.NPC_INDEX_LOADER.method6831();
-		IncomingPacket.method6378();
+		Static.method6378();
 	}
 
 	static final void method1862(CS2Executor executor) {

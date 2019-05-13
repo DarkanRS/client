@@ -606,7 +606,7 @@ public final class client extends Engine {
 						str_1 = string_7;
 						break;
 					case 8:
-						CURRENT_GAME = IncomingPacket.method6376(Integer.parseInt(string_7));
+						CURRENT_GAME = Static.method6376(Integer.parseInt(string_7));
 						break;
 					case 9:
 						if (string_7.equalsIgnoreCase("true")) {
@@ -677,7 +677,7 @@ public final class client extends Engine {
 						AFFILIATE = Integer.parseInt(string_7);
 						break;
 					case 24:
-						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.method8299(), Integer.parseInt(string_7));
+						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.values(), Integer.parseInt(string_7));
 						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
 							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
 						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1201911871) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
@@ -1009,7 +1009,7 @@ public final class client extends Engine {
 			}
 
 			if (Renderers.SOFTWARE_RENDERER != null && Renderers.SOFTWARE_RENDERER.method8465() || Class158.windowedMode() != 1) {
-				IncomingPacket.method6378();
+				Static.method6378();
 			}
 
 			if (Class504.loadingState(gameState, (byte) -30)) {

@@ -1,38 +1,22 @@
-public class ServerEnvironment implements Identifiable {
+public enum ServerEnvironment implements Identifiable {
 
-    public static ServerEnvironment aClass496_5810 = new ServerEnvironment("LOCAL", "", 4);
-    public static ServerEnvironment aClass496_5807 = new ServerEnvironment("WTWIP", "", 3);
-    public static ServerEnvironment aClass496_5809 = new ServerEnvironment("WTI", "", 5);
-    public static ServerEnvironment aClass496_5808 = new ServerEnvironment("WTQA", "", 2);
-    public static ServerEnvironment aClass496_5811 = new ServerEnvironment("WTRC", "", 1);
-    public static ServerEnvironment aClass496_5812 = new ServerEnvironment("INTBETA", "", 6);
-    public static ServerEnvironment aClass496_5813 = new ServerEnvironment("LIVE", "", 0);
+    aClass496_5810("LOCAL", "", 4),
+    aClass496_5807("WTWIP", "", 3),
+    aClass496_5809("WTI", "", 5),
+    aClass496_5808("WTQA", "", 2),
+    aClass496_5811("WTRC", "", 1),
+    aClass496_5812("INTBETA", "", 6),
+    aClass496_5813("LIVE", "", 0);
 
     String aString5815;
 
     int anInt5814;
 
-    static {
-        method8299();
-    }
-
     ServerEnvironment(String string_1, String string_2, int i_3) {
         this.aString5815 = string_1;
         this.anInt5814 = i_3;
     }
-
-    public static ServerEnvironment[] method8299() {
-        return new ServerEnvironment[] { aClass496_5807, aClass496_5810, aClass496_5813, aClass496_5812, aClass496_5809, aClass496_5811, aClass496_5808 };
-    }
-
-    public int method76() {
-        return -2013930027 * this.anInt5814 * -887327875;
-    }
-
-    public int method75() {
-        return -2013930027 * this.anInt5814 * -887327875;
-    }
-
+    
     public int getValue() {
         return this.anInt5814;
     }
