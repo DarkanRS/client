@@ -139,10 +139,10 @@ public class PlayerUpdate {
 		byte tempMoveType = MovementType.STATIONARY.id;
 		
 		if ((flags & 0x20000) != 0) {
-			player.aByte10371 = stream.readByte();
-			player.aByte10327 = stream.readByteC();
-			player.aByte10364 = stream.read128Byte();
-			player.aByte10352 = (byte) stream.readUnsigned128Byte();
+			player.redAdd = stream.readByte();
+			player.greenAdd = stream.readByteC();
+			player.blueAdd = stream.read128Byte();
+			player.scalar = (byte) stream.readUnsigned128Byte();
 			player.anInt10347 = client.cycles + stream.readUnsignedShort128();
 			player.anInt10348 = client.cycles + stream.readUnsignedShort();
 		}

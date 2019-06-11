@@ -2,7 +2,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 
 	public int index;
 	public int anInt10326;
-	public byte aByte10327;
+	public byte greenAdd;
 	public int anInt10328;
 	public int anInt10341;
 	public int anInt10342;
@@ -10,8 +10,8 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 	public int anInt10345;
 	public int anInt10346;
 	public int anInt10349;
-	public byte aByte10364;
-	public byte aByte10371;
+	public byte blueAdd;
+	public byte redAdd;
 	public int turnDirection;
 	public int turningTicks;
 	public int[] anIntArray10335;
@@ -43,7 +43,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 	public Animation currentAnimation;
 	public int anInt10347;
 	public int anInt10348;
-	public byte aByte10352;
+	public byte scalar;
 	public int lastUpdate;
 	public int anInt10340;
 	public Class19 aClass19_10359;
@@ -798,7 +798,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 		this.currentAnimation = new Animation_Sub2(this);
 		this.anInt10347 = -1;
 		this.anInt10348 = -1;
-		this.aByte10352 = 0;
+		this.scalar = 0;
 		this.lastUpdate = 0;
 		this.turningTicks = 0;
 		this.anInt10340 = 256;

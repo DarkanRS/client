@@ -342,7 +342,7 @@ public class Player extends Entity {
 		}
 
 		int i_10 = this.aClass19_10359.method578();
-		boolean bool_11 = this.aByte10352 != 0 && client.cycles >= this.anInt10347 && client.cycles < this.anInt10348;
+		boolean bool_11 = this.scalar != 0 && client.cycles >= this.anInt10347 && client.cycles < this.anInt10348;
 		if (bool_11) {
 			i_2 |= 0x80000;
 		}
@@ -392,7 +392,7 @@ public class Player extends Entity {
 			}
 
 			if (bool_11) {
-				meshrasterizer_12.PA(this.aByte10371, this.aByte10327, this.aByte10364, this.aByte10352 & 0xff);
+				meshrasterizer_12.PA(this.redAdd, this.greenAdd, this.blueAdd, this.scalar & 0xff);
 			}
 
 			if (!this.aBool10573) {

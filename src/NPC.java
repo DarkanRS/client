@@ -57,7 +57,7 @@ public class NPC extends Entity {
 			i_2 |= 0x7;
 		}
 
-		boolean bool_10 = this.aByte10352 != 0 && client.cycles >= this.anInt10347 && client.cycles < this.anInt10348;
+		boolean bool_10 = this.scalar != 0 && client.cycles >= this.anInt10347 && client.cycles < this.anInt10348;
 		if (bool_10) {
 			i_2 |= 0x80000;
 		}
@@ -88,7 +88,7 @@ public class NPC extends Entity {
 			}
 
 			if (bool_10) {
-				meshrasterizer_12.PA(this.aByte10371, this.aByte10327, this.aByte10364, this.aByte10352 & 0xff);
+				meshrasterizer_12.PA(this.redAdd, this.greenAdd, this.blueAdd, this.scalar & 0xff);
 			}
 
 			this.method15837(graphicalrenderer_1, renderanimdefs_5, i_4, i_8, i_9, i_11);

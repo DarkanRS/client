@@ -464,10 +464,10 @@ public class NPCUpdate {
 				npc.anInt10577 = buffer.readShortLE();
 			}
 			if ((i_4 & 0x20000) != 0) {
-				npc.aByte10371 = buffer.read128Byte();
-				npc.aByte10327 = buffer.readByte();
-				npc.aByte10364 = buffer.readByte();
-				npc.aByte10352 = (byte) buffer.readUnsigned128Byte();
+				npc.redAdd = buffer.read128Byte();
+				npc.greenAdd = buffer.readByte();
+				npc.blueAdd = buffer.readByte();
+				npc.scalar = (byte) buffer.readUnsigned128Byte();
 				npc.anInt10347 = client.cycles + buffer.readShortLE();
 				npc.anInt10348 = client.cycles + buffer.readUnsignedShort();
 			}
