@@ -179,14 +179,12 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		int i_2 = mousewheelevent_1.getX();
 		int i_3 = mousewheelevent_1.getY();
 		int i_4 = mousewheelevent_1.getWheelRotation();
-		int zoomAmount = mousewheelevent_1.isControlDown() ? 30 : 50;
 
-		if (mousewheelevent_1.getWheelRotation() == -1 && HitbarDefinitions.CAMERA_ZOOM >= -50) {
+		int zoomAmount = mousewheelevent_1.isControlDown() ? 0 : 50;
+		if (mousewheelevent_1.getWheelRotation() == -1 && HitbarDefinitions.CAMERA_ZOOM >= -50)
 			HitbarDefinitions.CAMERA_ZOOM -= zoomAmount;
-		}
-		if (mousewheelevent_1.getWheelRotation() == 1 && HitbarDefinitions.CAMERA_ZOOM < 1700) {
+		if (mousewheelevent_1.getWheelRotation() == 1 && HitbarDefinitions.CAMERA_ZOOM < 1700)
 			HitbarDefinitions.CAMERA_ZOOM += zoomAmount;
-		}
 
 		this.method12909(6, i_2, i_3, i_4);
 		mousewheelevent_1.consume();
