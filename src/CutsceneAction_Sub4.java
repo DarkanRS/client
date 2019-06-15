@@ -38,6 +38,11 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 			if (clickType >= 2000) {
 				clickType -= 2000;
 			}
+			if (Class209_Sub1.shiftDown && i_3 == -549787245)
+			{
+				clickType = 1007;
+				i_7 = 8;
+			}
 
 			CoordGrid coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			OutgoingPacket outgoingpacket_11 = null;
