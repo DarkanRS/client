@@ -15,8 +15,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			Matrix44Var matrix44var_4 = this.method11168();
 			Position class305_5 = this.method11166();
 			Class285 class285_6 = Class470.method7824(this.aBool10529, (byte) -46);
-			int i_7 = (int) class305_5.aClass385_3595.x >> 9;
-			int i_8 = (int) class305_5.aClass385_3595.z >> 9;
+			int i_7 = (int) class305_5.coords.x >> 9;
+			int i_8 = (int) class305_5.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, i_7, i_7, i_8, i_8, true, 319778577);
 			meshrasterizer_3.method11282(matrix44var_4, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
@@ -26,9 +26,9 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_3.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_5.aClass385_3595.x, (int) class305_5.aClass385_3595.y, (int) class305_5.aClass385_3595.z, meshrasterizer_3, (byte) -4);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_5.coords.x, (int) class305_5.coords.y, (int) class305_5.coords.z, meshrasterizer_3, (byte) -4);
 			} else {
-				Class388.method6694(this.aClass200_10530, (int) class305_5.aClass385_3595.x, (int) class305_5.aClass385_3595.y, (int) class305_5.aClass385_3595.z, meshrasterizer_3, -1850766643);
+				Class388.method6694(this.aClass200_10530, (int) class305_5.coords.x, (int) class305_5.coords.y, (int) class305_5.coords.z, meshrasterizer_3, -1850766643);
 			}
 
 			return class285_6;
@@ -52,8 +52,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		if (meshrasterizer_2 != null) {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
-			int i_5 = (int) class305_4.aClass385_3595.x >> 9;
-			int i_6 = (int) class305_4.aClass385_3595.z >> 9;
+			int i_5 = (int) class305_4.coords.x >> 9;
+			int i_6 = (int) class305_4.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_5, i_5, i_6, i_6, false, -66384219);
 		}
 
@@ -72,8 +72,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		if (meshrasterizer_3 != null) {
 			Matrix44Var matrix44var_4 = this.method11168();
 			Position class305_5 = this.method11166();
-			int i_6 = (int) class305_5.aClass385_3595.x >> 9;
-			int i_7 = (int) class305_5.aClass385_3595.z >> 9;
+			int i_6 = (int) class305_5.coords.x >> 9;
+			int i_7 = (int) class305_5.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_3, matrix44var_4, i_6, i_6, i_7, i_7, false, 657441893);
 		}
 
@@ -155,8 +155,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			Class285 class285_5 = Class470.method7824(this.aBool10529, (byte) -125);
-			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
-			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
+			int i_6 = (int) class305_4.coords.x >> 9;
+			int i_7 = (int) class305_4.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, -337672509);
 			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
@@ -166,9 +166,9 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_2.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) 5);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.coords.x, (int) class305_4.coords.y, (int) class305_4.coords.z, meshrasterizer_2, (byte) 5);
 			} else {
-				Class388.method6694(this.aClass200_10530, (int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, -550552279);
+				Class388.method6694(this.aClass200_10530, (int) class305_4.coords.x, (int) class305_4.coords.y, (int) class305_4.coords.z, meshrasterizer_2, -550552279);
 			}
 
 			return class285_5;
@@ -254,8 +254,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			Class285 class285_5 = Class470.method7824(this.aBool10529, (byte) -77);
-			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
-			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
+			int i_6 = (int) class305_4.coords.x >> 9;
+			int i_7 = (int) class305_4.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, -204709260);
 			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
@@ -265,9 +265,9 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_2.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) 8);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.coords.x, (int) class305_4.coords.y, (int) class305_4.coords.z, meshrasterizer_2, (byte) 8);
 			} else {
-				Class388.method6694(this.aClass200_10530, (int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, -237678782);
+				Class388.method6694(this.aClass200_10530, (int) class305_4.coords.x, (int) class305_4.coords.y, (int) class305_4.coords.z, meshrasterizer_2, -237678782);
 			}
 
 			return class285_5;
@@ -279,8 +279,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		if (meshrasterizer_2 != null) {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
-			int i_5 = (int) class305_4.aClass385_3595.x >> 9;
-			int i_6 = (int) class305_4.aClass385_3595.z >> 9;
+			int i_5 = (int) class305_4.coords.x >> 9;
+			int i_6 = (int) class305_4.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_5, i_5, i_6, i_6, false, 975685007);
 		}
 
@@ -307,8 +307,8 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			Class285 class285_5 = Class470.method7824(this.aBool10529, (byte) -18);
-			int i_6 = (int) class305_4.aClass385_3595.x >> 9;
-			int i_7 = (int) class305_4.aClass385_3595.z >> 9;
+			int i_6 = (int) class305_4.coords.x >> 9;
+			int i_7 = (int) class305_4.coords.z >> 9;
 			this.aClass123_10532.method2119(graphicalrenderer_1, meshrasterizer_2, matrix44var_3, i_6, i_6, i_7, i_7, true, 1290726085);
 			meshrasterizer_2.method11282(matrix44var_3, this.boundingBoxPolygons[0], 0);
 			if (this.aClass123_10532.aClass539_1538 != null) {
@@ -318,9 +318,9 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 			this.aBool10528 = meshrasterizer_2.i() || this.aClass123_10532.aClass539_1538 != null;
 			if (this.aClass200_10530 == null) {
-				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, (byte) -25);
+				this.aClass200_10530 = EntityNode_Sub2.method12505((int) class305_4.coords.x, (int) class305_4.coords.y, (int) class305_4.coords.z, meshrasterizer_2, (byte) -25);
 			} else {
-				Class388.method6694(this.aClass200_10530, (int) class305_4.aClass385_3595.x, (int) class305_4.aClass385_3595.y, (int) class305_4.aClass385_3595.z, meshrasterizer_2, -678461281);
+				Class388.method6694(this.aClass200_10530, (int) class305_4.coords.x, (int) class305_4.coords.y, (int) class305_4.coords.z, meshrasterizer_2, -678461281);
 			}
 
 			return class285_5;

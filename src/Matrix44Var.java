@@ -74,8 +74,8 @@ public class Matrix44Var {
 	}
 
 	public void method5210(Position class305_1) {
-		this.method5242(class305_1.aClass381_3594);
-		this.method5263(class305_1.aClass385_3595);
+		this.method5242(class305_1.quaternion);
+		this.method5263(class305_1.coords);
 	}
 
 	public void method5212() {
@@ -363,16 +363,16 @@ public class Matrix44Var {
 	}
 
 	public void method5279(Position class305_1) {
-		float f_2 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.scalar;
-		float f_3 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.i;
-		float f_4 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.j;
-		float f_5 = class305_1.aClass381_3594.scalar * class305_1.aClass381_3594.k;
-		float f_6 = class305_1.aClass381_3594.i * class305_1.aClass381_3594.i;
-		float f_7 = class305_1.aClass381_3594.i * class305_1.aClass381_3594.j;
-		float f_8 = class305_1.aClass381_3594.i * class305_1.aClass381_3594.k;
-		float f_9 = class305_1.aClass381_3594.j * class305_1.aClass381_3594.j;
-		float f_10 = class305_1.aClass381_3594.j * class305_1.aClass381_3594.k;
-		float f_11 = class305_1.aClass381_3594.k * class305_1.aClass381_3594.k;
+		float f_2 = class305_1.quaternion.scalar * class305_1.quaternion.scalar;
+		float f_3 = class305_1.quaternion.scalar * class305_1.quaternion.i;
+		float f_4 = class305_1.quaternion.scalar * class305_1.quaternion.j;
+		float f_5 = class305_1.quaternion.scalar * class305_1.quaternion.k;
+		float f_6 = class305_1.quaternion.i * class305_1.quaternion.i;
+		float f_7 = class305_1.quaternion.i * class305_1.quaternion.j;
+		float f_8 = class305_1.quaternion.i * class305_1.quaternion.k;
+		float f_9 = class305_1.quaternion.j * class305_1.quaternion.j;
+		float f_10 = class305_1.quaternion.j * class305_1.quaternion.k;
+		float f_11 = class305_1.quaternion.k * class305_1.quaternion.k;
 		this.aFloat3519 = f_6 + f_2 - f_11 - f_9;
 		this.aFloat3514 = f_7 + f_5 + f_7 + f_5;
 		this.aFloat3516 = f_8 - f_4 - f_4 + f_8;
@@ -382,9 +382,9 @@ public class Matrix44Var {
 		this.aFloat3520 = f_8 + f_4 + f_8 + f_4;
 		this.aFloat3513 = f_10 - f_3 - f_3 + f_10;
 		this.aFloat3521 = f_11 + f_2 - f_9 - f_6;
-		this.aFloat3515 = class305_1.aClass385_3595.x;
-		this.aFloat3524 = class305_1.aClass385_3595.y;
-		this.aFloat3525 = class305_1.aClass385_3595.z;
+		this.aFloat3515 = class305_1.coords.x;
+		this.aFloat3524 = class305_1.coords.y;
+		this.aFloat3525 = class305_1.coords.z;
 	}
 
 }

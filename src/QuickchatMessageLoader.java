@@ -82,7 +82,7 @@ public class QuickchatMessageLoader {
 					client.anIntArray7305[i_4] = 0;
 				}
 
-				Vector3 vector3_17 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+				Vector3 vector3_17 = VertexNormal.MY_PLAYER.method11166().coords;
 				i_5 = (int) vector3_17.x;
 				int i_6 = (int) vector3_17.z;
 				RegionMap regionmap_7 = IndexLoaders.MAP_REGION_DECODER.method4433();

@@ -144,7 +144,7 @@ public class RSInterface {
 							if (i_6 == VertexNormal.MY_PLAYER.plane) {
 								int i_7 = (sound.anInt3298 & 0xff) << 9;
 								int i_8 = VertexNormal.MY_PLAYER.getSize() << 8;
-								Vector3 vector3_9 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+								Vector3 vector3_9 = VertexNormal.MY_PLAYER.method11166().coords;
 								int i_10 = sound.anInt3298 >> 16 & 0xff;
 								int i_11 = (i_10 << 9) + 256 - (int) vector3_9.x + i_8;
 								int i_12 = sound.anInt3298 >> 8 & 0xff;

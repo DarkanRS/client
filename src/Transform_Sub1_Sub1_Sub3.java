@@ -54,7 +54,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 			}
 
 			if (obj_2 != null) {
-				Vector3 vector3_3 = ((Entity) obj_2).method11166().aClass385_3595;
+				Vector3 vector3_3 = ((Entity) obj_2).method11166().coords;
 				this.method11172(vector3_3.x, (float) (Class504.method8389((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.anInt10383), vector3_3.z);
 				if (this.anInt10391 >= 0) {
 					BASDefinitions renderanimdefs_15 = ((Entity) obj_2).getRenderAnimDefs();
@@ -82,7 +82,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 						int i_11 = Class382.COSINE[i_9];
 						int i_12 = i_10 * i_6 + i_5 * i_11 >> 14;
 						i_6 = i_6 * i_11 - i_10 * i_5 >> 14;
-						Vector3 vector3_13 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+						Vector3 vector3_13 = Vector3.popVectorStackTo(this.method11166().coords);
 						vector3_13.x += (float) i_12;
 						vector3_13.z += (float) i_6;
 						this.method11171(vector3_13);
@@ -99,7 +99,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	}
 
 	public final void method15904(int i_1, int i_2, int i_3, int i_4) {
-		Vector3 vector3_6 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_6 = Vector3.popVectorStackTo(this.method11166().coords);
 		if (!this.aBool10398) {
 			float f_7 = (float) i_1 - vector3_6.x;
 			float f_8 = (float) i_2 - vector3_6.z;
@@ -178,7 +178,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	}
 
 	void method14697(byte b_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		this.aShort9458 = this.localX = (short) ((int) (vector3_2.x / 512.0F));
 		this.aShort9456 = this.localY = (short) ((int) (vector3_2.z / 512.0F));
 	}
@@ -349,21 +349,21 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	public final void method15910(int i_1) {
 		this.aBool10398 = true;
 		Position class305_3 = new Position(this.method11166());
-		class305_3.aClass385_3595.x = (float) ((double) class305_3.aClass385_3595.x + this.aDouble10394 * (double) i_1);
-		class305_3.aClass385_3595.z = (float) ((double) class305_3.aClass385_3595.z + this.aDouble10395 * (double) i_1);
+		class305_3.coords.x = (float) ((double) class305_3.coords.x + this.aDouble10394 * (double) i_1);
+		class305_3.coords.z = (float) ((double) class305_3.coords.z + this.aDouble10395 * (double) i_1);
 		if (this.aBool10400) {
-			class305_3.aClass385_3595.y = (float) (Class504.method8389((int) class305_3.aClass385_3595.x, (int) class305_3.aClass385_3595.z, this.plane, (byte) 18) - this.anInt10383);
+			class305_3.coords.y = (float) (Class504.method8389((int) class305_3.coords.x, (int) class305_3.coords.z, this.plane, (byte) 18) - this.anInt10383);
 		} else if (this.anInt10387 != -1) {
-			class305_3.aClass385_3595.y = (float) ((double) class305_3.aClass385_3595.y + this.aDouble10397 * (double) i_1 + (double) i_1 * (double) i_1 * 0.5D * this.aDouble10390);
+			class305_3.coords.y = (float) ((double) class305_3.coords.y + this.aDouble10397 * (double) i_1 + (double) i_1 * (double) i_1 * 0.5D * this.aDouble10390);
 			this.aDouble10397 += (double) i_1 * this.aDouble10390;
 		} else {
-			class305_3.aClass385_3595.y = (float) ((double) class305_3.aClass385_3595.y + this.aDouble10397 * (double) i_1);
+			class305_3.coords.y = (float) ((double) class305_3.coords.y + this.aDouble10397 * (double) i_1);
 		}
 
-		class305_3.aClass381_3594.angle(1.0F, 0.0F, 0.0F, (float) Math.atan2(this.aDouble10397, this.aDouble10396));
+		class305_3.quaternion.angle(1.0F, 0.0F, 0.0F, (float) Math.atan2(this.aDouble10397, this.aDouble10396));
 		Quaternion quaternion_4 = Quaternion.create();
 		quaternion_4.angle(0.0F, 1.0F, 0.0F, (float) Math.atan2(this.aDouble10394, this.aDouble10395) - 3.1415927F);
-		class305_3.aClass381_3594.multiply(quaternion_4);
+		class305_3.quaternion.multiply(quaternion_4);
 		quaternion_4.cache();
 		this.method11191(class305_3);
 		if (this.aAnimation_10399.method7627(1, -1320963255) && this.aAnimation_10399.method7580(1594863337)) {

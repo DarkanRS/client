@@ -51,9 +51,9 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			this.aBool10512 = meshrasterizer_3.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_7 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_7.aClass385_3595.x, (int) class305_7.aClass385_3595.y, (int) class305_7.aClass385_3595.z, meshrasterizer_3, (byte) -19);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_7.coords.x, (int) class305_7.coords.y, (int) class305_7.coords.z, meshrasterizer_3, (byte) -19);
 			} else {
-				Class388.method6694(this.aClass200_10510, (int) class305_7.aClass385_3595.x, (int) class305_7.aClass385_3595.y, (int) class305_7.aClass385_3595.z, meshrasterizer_3, 464369048);
+				Class388.method6694(this.aClass200_10510, (int) class305_7.coords.x, (int) class305_7.coords.y, (int) class305_7.coords.z, meshrasterizer_3, 464369048);
 			}
 			return class285_5;
 		}
@@ -175,9 +175,9 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 1);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.coords.x, (int) class305_6.coords.y, (int) class305_6.coords.z, meshrasterizer_2, (byte) 1);
 			} else {
-				Class388.method6694(this.aClass200_10510, (int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, -1316927176);
+				Class388.method6694(this.aClass200_10510, (int) class305_6.coords.x, (int) class305_6.coords.y, (int) class305_6.coords.z, meshrasterizer_2, -1316927176);
 			}
 			return class285_4;
 		}
@@ -235,9 +235,9 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) 4);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.coords.x, (int) class305_6.coords.y, (int) class305_6.coords.z, meshrasterizer_2, (byte) 4);
 			} else {
-				Class388.method6694(this.aClass200_10510, (int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, 1083467352);
+				Class388.method6694(this.aClass200_10510, (int) class305_6.coords.x, (int) class305_6.coords.y, (int) class305_6.coords.z, meshrasterizer_2, 1083467352);
 			}
 			return class285_4;
 		}
@@ -262,9 +262,9 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 			this.aBool10512 = meshrasterizer_2.i() || this.aClass123_10509.aClass539_1538 != null;
 			Position class305_6 = this.method11166();
 			if (this.aClass200_10510 == null) {
-				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, (byte) -21);
+				this.aClass200_10510 = EntityNode_Sub2.method12505((int) class305_6.coords.x, (int) class305_6.coords.y, (int) class305_6.coords.z, meshrasterizer_2, (byte) -21);
 			} else {
-				Class388.method6694(this.aClass200_10510, (int) class305_6.aClass385_3595.x, (int) class305_6.aClass385_3595.y, (int) class305_6.aClass385_3595.z, meshrasterizer_2, -640718163);
+				Class388.method6694(this.aClass200_10510, (int) class305_6.coords.x, (int) class305_6.coords.y, (int) class305_6.coords.z, meshrasterizer_2, -640718163);
 			}
 			return class285_4;
 		}

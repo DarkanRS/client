@@ -167,7 +167,7 @@ public final class Class155 {
 				if (class521_sub1_sub1_8 instanceof Entity) {
 					Entity animable_9 = (Entity) class521_sub1_sub1_8;
 					int i_10 = (animable_9.getSize() - 1) * 256 + 252;
-					Vector3 vector3_11 = animable_9.method11166().aClass385_3595;
+					Vector3 vector3_11 = animable_9.method11166().coords;
 					int i_12 = (int) vector3_11.x - i_10 >> 9;
 					int i_13 = (int) vector3_11.z - i_10 >> 9;
 					int i_14 = i_10 + (int) vector3_11.x >> 9;

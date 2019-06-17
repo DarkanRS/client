@@ -13,7 +13,7 @@ final class Class82 implements Interface11 {
         for (int i_9 = 0; i_9 < i_7; i_9++) {
             Player player_10 = client.players[ints_8[i_9]];
             if (player_10 != null && player_10.hasAppearance((byte) 69) && !player_10.hidden && player_10 != VertexNormal.MY_PLAYER && player_10.plane == VertexNormal.MY_PLAYER.plane) {
-                Vector3 vector3_11 = player_10.method11166().aClass385_3595;
+                Vector3 vector3_11 = player_10.method11166().coords;
                 int i_12 = (int) vector3_11.x / 128 - i_0 / 128;
                 int i_13 = (int) vector3_11.z / 128 - i_1 / 128;
                 boolean bool_14 = false;

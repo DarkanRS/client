@@ -37,7 +37,7 @@ public class Item extends Node {
 					i_10 = (int) (-client.aFloat7365) & 0x3fff;
 					i_11 = 4096;
 				} else {
-					Vector3 vector3_22 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+					Vector3 vector3_22 = VertexNormal.MY_PLAYER.method11166().coords;
 					i_8 = (int) vector3_22.x;
 					i_9 = (int) vector3_22.z;
 					i_10 = (int) (-client.aFloat7365) + client.anInt7255 & 0x3fff;

@@ -60,7 +60,7 @@ public class Class123 {
 
 	void method2118(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		if (this.aCacheableNode_Sub17_1551 != null) {
-			Vector3 vector3_3 = this.aTransform_Sub1_1539.method11166().aClass385_3595;
+			Vector3 vector3_3 = this.aTransform_Sub1_1539.method11166().coords;
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3427(this.aCacheableNode_Sub17_1551, this.aByte1549, (int) vector3_3.x, (int) vector3_3.z, this.aBoolArray1553, (byte) -43);
 			this.aBoolArray1553 = null;
 			this.aCacheableNode_Sub17_1551 = null;
@@ -185,7 +185,7 @@ public class Class123 {
 				this.anInt1547 = objectdefinitions_6.id;
 				return null;
 			} else {
-				Vector3 vector3_7 = this.aTransform_Sub1_1539.method11166().aClass385_3595;
+				Vector3 vector3_7 = this.aTransform_Sub1_1539.method11166().coords;
 				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 				if (bool_4) {
 					sceneobjectmanager_8.method3427(this.aCacheableNode_Sub17_1551, this.aByte1549, (int) vector3_7.x, (int) vector3_7.z, this.aBoolArray1553, (byte) -45);

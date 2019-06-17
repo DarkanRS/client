@@ -7,7 +7,7 @@ public class Class363 {
     }
 
     static final void method6286(long long_0) {
-        Vector3 vector3_2 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+        Vector3 vector3_2 = VertexNormal.MY_PLAYER.method11166().coords;
         int i_3 = (int) vector3_2.x + client.anInt7248;
         int i_4 = (int) vector3_2.z + client.anInt7250;
         if (Class11.anInt122 - i_3 < -2000 || Class11.anInt122 - i_3 > 2000 || Class266.anInt3289 - i_4 < -2000 || Class266.anInt3289 - i_4 > 2000) {
@@ -65,7 +65,7 @@ public class Class363 {
             moveType = IdentikitDefinition.anInt430;
             i_4 = FontRenderer_Sub1.anInt8515;
         }
-        Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
+        Vector3 vector3_5 = animable_0.method11166().coords;
         int i_6;
         if ((int) vector3_5.x < 512 || (int) vector3_5.z < 512 || (int) vector3_5.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1) * 512 || (int) vector3_5.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) * 512) {
             animable_0.currentAnimation.update(-1);

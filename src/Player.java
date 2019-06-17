@@ -41,7 +41,7 @@ public class Player extends Entity {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			int i_5 = this.aClass19_10359.method578();
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				int i_7 = -2023195771 * this.anInt10325 * -374848179 - class293_6.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = (int) ((float) (this.anInt10325 * -374848179 * -2023195771) - (float) i_7 / 10.0F) * -374848179 * -2023195771;
@@ -83,7 +83,7 @@ public class Player extends Entity {
 							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
-								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
@@ -91,7 +91,7 @@ public class Player extends Entity {
 						}
 
 						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
-							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().coords;
 							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
 							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
 							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
@@ -102,7 +102,7 @@ public class Player extends Entity {
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
 							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
 							if (player_28 != null) {
-								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
@@ -248,7 +248,7 @@ public class Player extends Entity {
 		this.regionBaseX[0] = i_1;
 		this.regionBaseY[0] = i_2;
 		int i_4 = this.getSize();
-		Vector3 vector3_5 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_5 = Vector3.popVectorStackTo(this.method11166().coords);
 		vector3_5.x = (float) (i_4 * 256 + this.regionBaseX[0] * 512);
 		vector3_5.z = (float) (this.regionBaseY[0] * 512 + i_4 * 256);
 		this.method11171(vector3_5);
@@ -417,7 +417,7 @@ public class Player extends Entity {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			int i_5 = this.aClass19_10359.method578();
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				int i_7 = -2023195771 * this.anInt10325 * -374848179 - class293_6.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = (int) ((float) (this.anInt10325 * -374848179 * -2023195771) - (float) i_7 / 10.0F) * -374848179 * -2023195771;
@@ -459,7 +459,7 @@ public class Player extends Entity {
 							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
-								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
@@ -467,7 +467,7 @@ public class Player extends Entity {
 						}
 
 						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
-							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().coords;
 							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
 							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
 							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
@@ -478,7 +478,7 @@ public class Player extends Entity {
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
 							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
 							if (player_28 != null) {
-								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
@@ -532,7 +532,7 @@ public class Player extends Entity {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			int i_5 = this.aClass19_10359.method578();
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				int i_7 = -2023195771 * this.anInt10325 * -374848179 - class293_6.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = (int) ((float) (this.anInt10325 * -374848179 * -2023195771) - (float) i_7 / 10.0F) * -374848179 * -2023195771;
@@ -574,7 +574,7 @@ public class Player extends Entity {
 							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
-								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
@@ -582,7 +582,7 @@ public class Player extends Entity {
 						}
 
 						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
-							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().coords;
 							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
 							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
 							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
@@ -593,7 +593,7 @@ public class Player extends Entity {
 						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
 							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
 							if (player_28 != null) {
-								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
 								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
@@ -793,7 +793,7 @@ public class Player extends Entity {
 		this.setBoundSize((flags >> 3 & 0x7) + 1);
 		boolean titleBefore = (flags & 0x40) != 0;
 		boolean titleAfter = (flags & 0x80) != 0;
-		Vector3 vecSize = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vecSize = Vector3.popVectorStackTo(this.method11166().coords);
 		vecSize.x += (float) (this.getSize() - size << 8);
 		vecSize.z += (float) (this.getSize() - size << 8);
 		this.method11171(vecSize);
@@ -936,7 +936,7 @@ public class Player extends Entity {
 		int[] ints_22 = this.playerAppearance.colors;
 		this.playerAppearance.method3992(this.getRenderAnimation(), bodyAppearances, modifiedMeshes, ints_21, this.male == 1, i_10);
 		if (i_10 != i_16) {
-			vecSize = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+			vecSize = Vector3.popVectorStackTo(this.method11166().coords);
 			vecSize.x = (float) ((this.regionBaseX[0] << 9) + (this.getSize() << 8));
 			vecSize.z = (float) ((this.regionBaseY[0] << 9) + (this.getSize() << 8));
 			this.method11171(vecSize);
@@ -1010,7 +1010,7 @@ public class Player extends Entity {
 			Matrix44Var matrix44var_4 = this.method11168();
 			Position class305_5 = this.method11166();
 			int i_6 = this.aClass19_10359.method578();
-			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_5.aClass385_3595.x >> 9][(int) class305_5.aClass385_3595.z >> 9];
+			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_5.coords.x >> 9][(int) class305_5.coords.z >> 9];
 			if (class293_7 != null && class293_7.aTransform_Sub1_Sub3_3499 != null) {
 				int i_8 = this.anInt10325 - class293_7.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = (int) ((float) this.anInt10325 - (float) i_8 / 10.0F);
@@ -1052,7 +1052,7 @@ public class Player extends Entity {
 							StringNode class282_sub47_27 = (StringNode) client.NPCS.get((long) class180_26.anInt2238);
 							if (class282_sub47_27 != null) {
 								NPC npc_30 = (NPC) class282_sub47_27.anObject8068;
-								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_14 = (int) vector3_13.x;
 								int i_15 = (int) vector3_13.z;
 								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_14, (long) i_15, class180_26.anInt2242, 92160000L);
@@ -1060,7 +1060,7 @@ public class Player extends Entity {
 						}
 
 						if (class180_26.anInt2236 == 2) {
-							Vector3 vector3_28 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+							Vector3 vector3_28 = VertexNormal.MY_PLAYER.method11166().coords;
 							long long_20 = (long) (class180_26.anInt2243 - (int) vector3_28.x);
 							long long_22 = (long) (class180_26.anInt2235 - (int) vector3_28.z);
 							long long_16 = (long) (class180_26.anInt2237 << 9);
@@ -1071,7 +1071,7 @@ public class Player extends Entity {
 						if (class180_26.anInt2236 == 10 && class180_26.anInt2238 >= 0 && class180_26.anInt2238 < client.players.length) {
 							Player player_29 = client.players[class180_26.anInt2238];
 							if (player_29 != null) {
-								Vector3 vector3_31 = Vector3.method6632(player_29.method11166().aClass385_3595, VertexNormal.MY_PLAYER.method11166().aClass385_3595);
+								Vector3 vector3_31 = Vector3.method6632(player_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_24 = (int) vector3_31.x;
 								i_14 = (int) vector3_31.z;
 								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_24, (long) i_14, class180_26.anInt2242, 92160000L);

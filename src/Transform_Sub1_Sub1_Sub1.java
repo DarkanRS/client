@@ -39,7 +39,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_4 = this.method11168();
 			Position class305_5 = this.method11166();
 			matrix44var_3.method5209(matrix44var_4);
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_5.aClass385_3595.x >> 9][(int) class305_5.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_5.coords.x >> 9][(int) class305_5.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				matrix44var_3.method5219(0.0F, (float) (-class293_6.aTransform_Sub1_Sub3_3499.aShort9561), 0.0F);
 			}
@@ -102,7 +102,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			matrix44var_2.method5209(matrix44var_3);
-			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_5 != null && class293_5.aTransform_Sub1_Sub3_3499 != null) {
 				matrix44var_2.method5219(0.0F, (float) (-class293_5.aTransform_Sub1_Sub3_3499.aShort9561), 0.0F);
 			}
@@ -127,7 +127,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			matrix44var_2.method5209(matrix44var_3);
-			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_5 != null && class293_5.aTransform_Sub1_Sub3_3499 != null) {
 				matrix44var_2.method5219(0.0F, (float) (-class293_5.aTransform_Sub1_Sub3_3499.aShort9561), 0.0F);
 			}
@@ -163,7 +163,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 			Matrix44Var matrix44var_3 = this.method11168();
 			Position class305_4 = this.method11166();
 			matrix44var_2.method5209(matrix44var_3);
-			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_5 != null && class293_5.aTransform_Sub1_Sub3_3499 != null) {
 				matrix44var_2.method5219(0.0F, (float) (-class293_5.aTransform_Sub1_Sub3_3499.aShort9561), 0.0F);
 			}

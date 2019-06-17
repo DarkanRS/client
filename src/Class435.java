@@ -79,7 +79,7 @@ public class Class435 {
 				int[] ints_3 = new int[3];
 				int i_4 = -1;
 				int i_5 = -1;
-				Vector3 vector3_6 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+				Vector3 vector3_6 = VertexNormal.MY_PLAYER.method11166().coords;
 				CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 				if (Class291_Sub1.aCacheableNode_Sub6_3491.method14778(VertexNormal.MY_PLAYER.plane, ((int) vector3_6.x >> 9) + coordgrid_7.x, ((int) vector3_6.z >> 9) + coordgrid_7.y, ints_3, -1889386276)) {
 					i_4 = ints_3[1] - Class291_Sub1.anInt3472;

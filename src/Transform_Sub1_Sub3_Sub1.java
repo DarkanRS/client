@@ -30,7 +30,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10491;
 			this.aCacheableNode_Sub17_10491 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 53);
 		}
@@ -76,12 +76,12 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 				class390_7 = null;
 			}
 		}
-		Vector3 vector3_8 = this.method11166().aClass385_3595;
+		Vector3 vector3_8 = this.method11166().coords;
 		return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, SceneObjectType.GROUND_DECORATION.type, this.aByte10496, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, (Class476) null, 219855525);
 	}
 
 	public Class200 method12992(GraphicalRenderer graphicalrenderer_1, byte b_2) {
-		Vector3 vector3_3 = this.method11166().aClass385_3595;
+		Vector3 vector3_3 = this.method11166().coords;
 		if (this.aClass200_10494 == null) {
 			this.aClass200_10494 = EntityNode_Sub2.method12505((int) vector3_3.x, (int) vector3_3.y, (int) vector3_3.z, this.method16075(graphicalrenderer_1, 0, -857380966), (byte) -72);
 		}
@@ -105,7 +105,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 			class282_sub50_sub17_4 = this.aCacheableNode_Sub17_10491;
 			this.aCacheableNode_Sub17_10491 = null;
 		}
-		Vector3 vector3_6 = this.method11166().aClass385_3595;
+		Vector3 vector3_6 = this.method11166().coords;
 		if (class282_sub50_sub17_4 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -76);
 		}
@@ -173,7 +173,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10491;
 			this.aCacheableNode_Sub17_10491 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -43);
 		}
@@ -209,7 +209,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 			class282_sub50_sub17_4 = this.aCacheableNode_Sub17_10491;
 			this.aCacheableNode_Sub17_10491 = null;
 		}
-		Vector3 vector3_6 = this.method11166().aClass385_3595;
+		Vector3 vector3_6 = this.method11166().coords;
 		if (class282_sub50_sub17_4 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -99);
 		}
@@ -248,7 +248,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10491;
 			this.aCacheableNode_Sub17_10491 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -62);
 		}
@@ -264,7 +264,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10491;
 			this.aCacheableNode_Sub17_10491 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 71);
 		}
@@ -392,7 +392,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 	}
 
 	public Class200 method13019(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10494 == null) {
 			this.aClass200_10494 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16075(graphicalrenderer_1, 0, 2111828058), (byte) 15);
 		}
@@ -400,7 +400,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 	}
 
 	public Class200 method13018(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10494 == null) {
 			this.aClass200_10494 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16075(graphicalrenderer_1, 0, -1243491544), (byte) 55);
 		}
@@ -408,7 +408,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 	}
 
 	public Class200 method12993(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10494 == null) {
 			this.aClass200_10494 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16075(graphicalrenderer_1, 0, 1861667283), (byte) 4);
 		}

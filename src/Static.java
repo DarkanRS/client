@@ -115,7 +115,7 @@ public class Static {
 	    int i_2 = animable_0.anInt10342 - client.cycles;
 	    int i_3 = animable_0.anInt10326 * 512 + animable_0.getSize() * 256;
 	    int i_4 = animable_0.anInt10328 * 512 + animable_0.getSize() * 256;
-	    Vector3 vector3_5 = animable_0.method11166().aClass385_3595;
+	    Vector3 vector3_5 = animable_0.method11166().coords;
 	    animable_0.method11172((float) ((int) vector3_5.x + (i_3 - (int) vector3_5.x) / i_2), (float) ((int) vector3_5.y), (float) ((int) vector3_5.z + (i_4 - (int) vector3_5.z) / i_2));
 	    animable_0.anInt10366 = 0;
 	    animable_0.method15863(animable_0.anInt10346, 1692779087);

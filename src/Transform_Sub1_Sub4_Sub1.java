@@ -55,7 +55,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			}
 		}
 
-		Vector3 vector3_8 = this.method11166().aClass385_3595;
+		Vector3 vector3_8 = this.method11166().coords;
 		return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, this.aByte10485, this.aByte10487, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, (Class476) null, 921813682);
 	}
 
@@ -161,7 +161,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			this.aCacheableNode_Sub17_10486 = null;
 		}
 
-		Vector3 vector3_6 = this.method11166().aClass385_3595;
+		Vector3 vector3_6 = this.method11166().coords;
 		if (class282_sub50_sub17_4 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -33);
 		}
@@ -179,7 +179,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			this.aCacheableNode_Sub17_10486 = null;
 		}
 
-		Vector3 vector3_6 = this.method11166().aClass385_3595;
+		Vector3 vector3_6 = this.method11166().coords;
 		if (class282_sub50_sub17_4 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -18);
 		}
@@ -221,7 +221,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 	}
 
 	public Class200 method12992(GraphicalRenderer graphicalrenderer_1, byte b_2) {
-		Vector3 vector3_3 = this.method11166().aClass385_3595;
+		Vector3 vector3_3 = this.method11166().coords;
 		if (this.aClass200_10484 == null) {
 			this.aClass200_10484 = EntityNode_Sub2.method12505((int) vector3_3.x, (int) vector3_3.y, (int) vector3_3.z, this.method16068(graphicalrenderer_1, 0, (byte) 22), (byte) 106);
 		}
@@ -248,7 +248,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			this.aCacheableNode_Sub17_10486 = null;
 		}
 
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -19);
 		}
@@ -266,7 +266,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			this.aCacheableNode_Sub17_10486 = null;
 		}
 
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -64);
 		}
@@ -284,7 +284,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			this.aCacheableNode_Sub17_10486 = null;
 		}
 
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 44);
 		}
@@ -306,7 +306,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 			this.aCacheableNode_Sub17_10486 = null;
 		}
 
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -74);
 		}
@@ -318,7 +318,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 	}
 
 	public Class200 method12993(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10484 == null) {
 			this.aClass200_10484 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16068(graphicalrenderer_1, 0, (byte) -75), (byte) -30);
 		}
@@ -373,7 +373,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 	}
 
 	public Class200 method13019(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10484 == null) {
 			this.aClass200_10484 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16068(graphicalrenderer_1, 0, (byte) -38), (byte) 41);
 		}
@@ -392,7 +392,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 	}
 
 	public Class200 method13018(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10484 == null) {
 			this.aClass200_10484 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16068(graphicalrenderer_1, 0, (byte) 32), (byte) 31);
 		}
@@ -517,7 +517,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 											i_46 = ((Transform_Sub1_Sub1) class285_34.aTransform_Sub1_3391).aShort9458;
 											i_47 = ((Transform_Sub1_Sub1) class285_34.aTransform_Sub1_3391).aShort9456;
 										} else {
-											Vector3 vector3_35 = class285_34.aTransform_Sub1_3391.method11166().aClass385_3595;
+											Vector3 vector3_35 = class285_34.aTransform_Sub1_3391.method11166().coords;
 											i_46 = (int) vector3_35.x >> 9;
 											i_47 = (int) vector3_35.z >> 9;
 										}
@@ -528,7 +528,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 
 										Player player_58 = (Player) class285_34.aTransform_Sub1_3391;
 										i_49 = player_58.getSize();
-										Vector3 vector3_36 = player_58.method11166().aClass385_3595;
+										Vector3 vector3_36 = player_58.method11166().coords;
 										if ((i_49 & 0x1) == 0 && ((int) vector3_36.x & 0x1ff) == 0 && ((int) vector3_36.z & 0x1ff) == 0 || (i_49 & 0x1) == 1 && ((int) vector3_36.x & 0x1ff) == 256 && ((int) vector3_36.z & 0x1ff) == 256) {
 											i_21 = (int) vector3_36.x - (player_58.getSize() - 1 << 8);
 											i_22 = (int) vector3_36.z - (player_58.getSize() - 1 << 8);
@@ -538,7 +538,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 												if (class282_sub47_24 != null) {
 													NPC npc_40 = (NPC) class282_sub47_24.anObject8068;
 													if (npc_40.anInt10375 != client.cycles && npc_40.aBool10318) {
-														vector3_26 = npc_40.method11166().aClass385_3595;
+														vector3_26 = npc_40.method11166().coords;
 														i_41 = (int) vector3_26.x - (npc_40.definitions.size - 1 << 8);
 														i_28 = (int) vector3_26.z - (npc_40.definitions.size - 1 << 8);
 														if (i_41 >= i_21 && npc_40.definitions.size <= player_58.getSize() - (i_41 - i_21 >> 9) && i_28 >= i_22 && npc_40.definitions.size <= player_58.getSize() - (i_28 - i_22 >> 9)) {
@@ -555,7 +555,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 											for (int i_25 = 0; i_25 < i_51; i_25++) {
 												Player player_55 = client.players[ints_53[i_25]];
 												if (player_55 != null && player_55.anInt10375 != client.cycles && player_58 != player_55 && player_55.aBool10318) {
-													Vector3 vector3_27 = player_55.method11166().aClass385_3595;
+													Vector3 vector3_27 = player_55.method11166().coords;
 													i_28 = (int) vector3_27.x - (player_55.getSize() - 1 << 8);
 													int i_29 = (int) vector3_27.z - (player_55.getSize() - 1 << 8);
 													if (i_28 >= i_21 && player_55.getSize() <= player_58.getSize() - (i_28 - i_21 >> 9) && i_29 >= i_22 && player_55.getSize() <= player_58.getSize() - (i_29 - i_22 >> 9)) {
@@ -582,7 +582,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 										break;
 									}
 
-									Vector3 vector3_56 = npc_59.method11166().aClass385_3595;
+									Vector3 vector3_56 = npc_59.method11166().coords;
 									if ((npc_59.definitions.size & 0x1) == 0 && ((int) vector3_56.x & 0x1ff) == 0 && ((int) vector3_56.z & 0x1ff) == 0 || (npc_59.definitions.size & 0x1) == 1 && ((int) vector3_56.x & 0x1ff) == 256 && ((int) vector3_56.z & 0x1ff) == 256) {
 										int i_50 = (int) vector3_56.x - (npc_59.definitions.size - 1 << 8);
 										i_21 = (int) vector3_56.z - (npc_59.definitions.size - 1 << 8);
@@ -592,7 +592,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 											if (class282_sub47_37 != null) {
 												NPC npc_54 = (NPC) class282_sub47_37.anObject8068;
 												if (npc_54.anInt10375 != client.cycles && npc_59 != npc_54 && npc_54.aBool10318) {
-													Vector3 vector3_66 = npc_54.method11166().aClass385_3595;
+													Vector3 vector3_66 = npc_54.method11166().coords;
 													i_42 = (int) vector3_66.x - (npc_54.definitions.size - 1 << 8);
 													i_41 = (int) vector3_66.z - (npc_54.definitions.size - 1 << 8);
 													if (i_42 >= i_50 && npc_54.definitions.size <= npc_59.definitions.size - (i_42 - i_50 >> 9) && i_41 >= i_21 && npc_54.definitions.size <= npc_59.definitions.size - (i_41 - i_21 >> 9)) {
@@ -609,7 +609,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 										for (i_38 = 0; i_38 < i_22; i_38++) {
 											Player player_67 = client.players[ints_64[i_38]];
 											if (player_67 != null && player_67.anInt10375 != client.cycles && player_67.aBool10318) {
-												vector3_26 = player_67.method11166().aClass385_3595;
+												vector3_26 = player_67.method11166().coords;
 												i_41 = (int) vector3_26.x - (player_67.getSize() - 1 << 8);
 												i_28 = (int) vector3_26.z - (player_67.getSize() - 1 << 8);
 												if (i_41 >= i_50 && player_67.getSize() <= npc_59.definitions.size - (i_41 - i_50 >> 9) && i_28 >= i_21 && player_67.getSize() <= npc_59.definitions.size - (i_28 - i_21 >> 9)) {

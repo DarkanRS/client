@@ -3177,7 +3177,7 @@ public class CS2Interpreter {
 
 	static final void getMyPlayerPos(CS2Executor executor) {
 		byte b_2 = VertexNormal.MY_PLAYER.plane;
-		Vector3 vector3_3 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+		Vector3 vector3_3 = VertexNormal.MY_PLAYER.method11166().coords;
 		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 		int i_5 = ((int) vector3_3.x >> 9) + coordgrid_4.x;
 		int i_6 = ((int) vector3_3.z >> 9) + coordgrid_4.y;

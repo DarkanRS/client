@@ -409,7 +409,7 @@ public class SceneObjectManager {
 				}
 			}
 			if (bool_2) {
-				Vector3 vector3_14 = Vector3.popVectorStackTo(class521_sub1_sub1_1.method11166().aClass385_3595);
+				Vector3 vector3_14 = Vector3.popVectorStackTo(class521_sub1_sub1_1.method11166().coords);
 				vector3_14.y -= (float) s_8;
 				class521_sub1_sub1_1.method11171(vector3_14);
 				vector3_14.pushVectorStack();
@@ -646,7 +646,7 @@ public class SceneObjectManager {
 	}
 
 	void method3421(Transform_Sub1 class521_sub1_1, byte b_2) {
-		Vector3 vector3_3 = class521_sub1_1.method11166().aClass385_3595;
+		Vector3 vector3_3 = class521_sub1_1.method11166().coords;
 		this.aGraphicalRenderer_2596.method8479((float) ((int) vector3_3.x), (float) ((int) vector3_3.y + (class521_sub1_1.method12995(-353593796) >> 1)), (float) ((int) vector3_3.z), this.aFloatArray2639);
 		class521_sub1_1.anInt7969 = (int) this.aFloatArray2639[2];
 	}
@@ -687,7 +687,7 @@ public class SceneObjectManager {
 			}
 			return true;
 		} else {
-			Vector3 vector3_12 = class521_sub1_1.method11166().aClass385_3595;
+			Vector3 vector3_12 = class521_sub1_1.method11166().coords;
 			int i_7 = (int) vector3_12.x >> this.anInt2592;
 			int i_8 = (int) vector3_12.z >> this.anInt2592;
 			if (class521_sub1_1.collisionPlane < this.anInt2601 && i_7 >= this.anInt2637 && i_7 < this.anInt2638 && i_8 >= this.anInt2621 && i_8 < this.anInt2640) {
@@ -1324,7 +1324,7 @@ public class SceneObjectManager {
 		if (this.aGroundArray2614 == this.aGroundArray2591) {
 			boolean bool_10 = false;
 			boolean bool_4 = false;
-			Vector3 vector3_5 = class521_sub1_1.method11166().aClass385_3595;
+			Vector3 vector3_5 = class521_sub1_1.method11166().coords;
 			int i_6;
 			int i_7;
 			if (class521_sub1_1 instanceof Transform_Sub1_Sub1) {

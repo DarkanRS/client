@@ -470,7 +470,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 			i_4 = i_7 / 2 + (class521_sub1_sub1_9.aShort9458 << 9);
 			i_5 = i_8 / 2 + (class521_sub1_sub1_9.aShort9456 << 9);
 		} else {
-			Vector3 vector3_6 = class521_sub1_0.method11166().aClass385_3595;
+			Vector3 vector3_6 = class521_sub1_0.method11166().coords;
 			i_4 = (int) vector3_6.x;
 			i_5 = (int) vector3_6.z;
 		}

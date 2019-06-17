@@ -1,34 +1,34 @@
 public class Position {
 
-	public Quaternion aClass381_3594 = new Quaternion();
-	public Vector3 aClass385_3595 = new Vector3();
+	public Quaternion quaternion = new Quaternion();
+	public Vector3 coords = new Vector3();
 
-	public void method5411(Position class305_1) {
-		this.aClass381_3594.copy(class305_1.aClass381_3594);
-		this.aClass385_3595.copy(class305_1.aClass385_3595);
+	public void copy(Position position) {
+		this.quaternion.copy(position.quaternion);
+		this.coords.copy(position.coords);
 	}
 
 	public Position() {
 	}
 
 	public final void method5413() {
-		this.aClass381_3594.negate();
-		this.aClass385_3595.negate();
-		this.aClass385_3595.method6634(this.aClass381_3594);
+		this.quaternion.negate();
+		this.coords.negate();
+		this.coords.method6634(this.quaternion);
 	}
 
-	public final void method5414(Position class305_1) {
-		this.aClass381_3594.multiply(class305_1.aClass381_3594);
-		this.aClass385_3595.method6634(class305_1.aClass381_3594);
-		this.aClass385_3595.add(class305_1.aClass385_3595);
+	public final void method5414(Position pos2) {
+		this.quaternion.multiply(pos2.quaternion);
+		this.coords.method6634(pos2.quaternion);
+		this.coords.add(pos2.coords);
 	}
 
-	public Position(Position class305_1) {
-		this.method5411(class305_1);
+	public Position(Position position) {
+		this.copy(position);
 	}
 
 	public String toString() {
-		return "[" + this.aClass381_3594.toString() + "|" + this.aClass385_3595.toString() + "]";
+		return "[" + this.quaternion.toString() + "|" + this.coords.toString() + "]";
 	}
 
 }

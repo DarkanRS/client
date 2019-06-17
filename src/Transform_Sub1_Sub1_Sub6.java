@@ -62,12 +62,12 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 				class390_7 = null;
 			}
 		}
-		Vector3 vector3_8 = this.method11166().aClass385_3595;
+		Vector3 vector3_8 = this.method11166().coords;
 		return objectdefinitions_5.method8010(graphicalrenderer_1, i_2, this.aByte10539 != SceneObjectType.GROUND_INTERACT.type ? this.aByte10539 : SceneObjectType.SCENERY_INTERACT.type, SceneObjectType.GROUND_INTERACT.type == this.aByte10539 ? this.aByte10540 + 4 : this.aByte10540, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, bool_3, (Class476) null, -333836235);
 	}
 
 	public Class200 method12992(GraphicalRenderer graphicalrenderer_1, byte b_2) {
-		Vector3 vector3_3 = this.method11166().aClass385_3595;
+		Vector3 vector3_3 = this.method11166().coords;
 		if (this.aClass200_10537 == null) {
 			this.aClass200_10537 = EntityNode_Sub2.method12505((int) vector3_3.x, (int) vector3_3.y, (int) vector3_3.z, this.method16116(graphicalrenderer_1, 0, 1810045144), (byte) -15);
 		}
@@ -192,7 +192,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 			class282_sub50_sub17_4 = this.aCacheableNode_Sub17_10538;
 			this.aCacheableNode_Sub17_10538 = null;
 		}
-		Vector3 vector3_6 = this.method11166().aClass385_3595;
+		Vector3 vector3_6 = this.method11166().coords;
 		if (class282_sub50_sub17_4 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -117);
 		}
@@ -224,7 +224,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10538;
 			this.aCacheableNode_Sub17_10538 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -21);
 		}
@@ -258,7 +258,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10538;
 			this.aCacheableNode_Sub17_10538 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -17);
 		}
@@ -274,7 +274,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10538;
 			this.aCacheableNode_Sub17_10538 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) -47);
 		}
@@ -290,7 +290,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 			class282_sub50_sub17_3 = this.aCacheableNode_Sub17_10538;
 			this.aCacheableNode_Sub17_10538 = null;
 		}
-		Vector3 vector3_5 = this.method11166().aClass385_3595;
+		Vector3 vector3_5 = this.method11166().coords;
 		if (class282_sub50_sub17_3 != null) {
 			this.aClass206_7970.method3427(class282_sub50_sub17_3, this.collisionPlane, (int) vector3_5.x, (int) vector3_5.z, (boolean[]) null, (byte) 98);
 		}
@@ -387,7 +387,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 	}
 
 	public Class200 method13019(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10537 == null) {
 			this.aClass200_10537 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16116(graphicalrenderer_1, 0, -1544222422), (byte) 86);
 		}
@@ -395,7 +395,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 	}
 
 	public Class200 method13018(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10537 == null) {
 			this.aClass200_10537 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16116(graphicalrenderer_1, 0, 1772745037), (byte) -101);
 		}
@@ -403,7 +403,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 	}
 
 	public Class200 method12993(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = this.method11166().aClass385_3595;
+		Vector3 vector3_2 = this.method11166().coords;
 		if (this.aClass200_10537 == null) {
 			this.aClass200_10537 = EntityNode_Sub2.method12505((int) vector3_2.x, (int) vector3_2.y, (int) vector3_2.z, this.method16116(graphicalrenderer_1, 0, 2021240884), (byte) -103);
 		}
@@ -444,7 +444,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 			class282_sub50_sub17_4 = this.aCacheableNode_Sub17_10538;
 			this.aCacheableNode_Sub17_10538 = null;
 		}
-		Vector3 vector3_6 = this.method11166().aClass385_3595;
+		Vector3 vector3_6 = this.method11166().coords;
 		if (class282_sub50_sub17_4 != null) {
 			this.aClass206_7970.method3426(class282_sub50_sub17_4, this.collisionPlane, (int) vector3_6.x, (int) vector3_6.z, (boolean[]) null, (byte) -9);
 		}

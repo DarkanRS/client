@@ -145,7 +145,7 @@ public class HitbarDefinitions {
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
 			Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_2, i_3, -16777216, (byte) -114);
 		} else {
-			Vector3 vector3_6 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+			Vector3 vector3_6 = VertexNormal.MY_PLAYER.method11166().coords;
 			boolean bool_7 = false;
 			if (client.anInt7341 != 1) {
 				if (!client.aBool7321) {

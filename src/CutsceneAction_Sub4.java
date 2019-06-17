@@ -194,7 +194,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 						tcpmessage_13.buffer.writeByte(client.anInt7255);
 						tcpmessage_13.buffer.writeByte(client.anInt7203);
 						tcpmessage_13.buffer.writeByte(89);
-						Vector3 vector3_20 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+						Vector3 vector3_20 = VertexNormal.MY_PLAYER.method11166().coords;
 						tcpmessage_13.buffer.writeShort((int) vector3_20.x);
 						tcpmessage_13.buffer.writeShort((int) vector3_20.z);
 						tcpmessage_13.buffer.writeByte(63);

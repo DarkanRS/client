@@ -40,7 +40,7 @@ public class World {
 					return;
 				}
 
-				Vector3 vector3_10 = class521_sub1_2.method11166().aClass385_3595;
+				Vector3 vector3_10 = class521_sub1_2.method11166().coords;
 				int i_11 = (int) vector3_10.x - 256 >> 9;
 				int i_12 = (int) vector3_10.z - 256 >> 9;
 				int i_13 = class521_sub1_2 == VertexNormal.MY_PLAYER ? 0 : i_7 + (i_12 << 8) + (class521_sub1_2.plane << 24) + (i_11 << 16);

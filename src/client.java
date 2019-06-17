@@ -938,7 +938,7 @@ public final class client extends Engine {
 			}
 
 			int i_7 = ((Entity) obj_4).getSize();
-			Vector3 vector3_6 = ((Entity) obj_4).method11166().aClass385_3595;
+			Vector3 vector3_6 = ((Entity) obj_4).method11166().coords;
 			if ((i_7 & 0x1) == 0) {
 				if (((int) vector3_6.x & 0x1ff) == 0 && ((int) vector3_6.z & 0x1ff) == 0) {
 					continue;
@@ -1460,7 +1460,7 @@ public final class client extends Engine {
 			}
 
 			int i_17 = ((Entity) obj_7).getSize();
-			Vector3 vector3_9 = ((Entity) obj_7).method11166().aClass385_3595;
+			Vector3 vector3_9 = ((Entity) obj_7).method11166().coords;
 			if ((i_17 & 0x1) == 0) {
 				if (((int) vector3_9.x & 0x1ff) != 0 || ((int) vector3_9.z & 0x1ff) != 0) {
 					continue;
@@ -1542,7 +1542,7 @@ public final class client extends Engine {
 
 			((Entity) obj_7).anInt10319 = 0;
 			int i_17 = ((Entity) obj_7).getSize();
-			Vector3 vector3_9 = ((Entity) obj_7).method11166().aClass385_3595;
+			Vector3 vector3_9 = ((Entity) obj_7).method11166().coords;
 			if ((i_17 & 0x1) == 0) {
 				if (((int) vector3_9.x & 0x1ff) != 0 || ((int) vector3_9.z & 0x1ff) != 0) {
 					((Entity) obj_7).aBool10318 = false;
@@ -1758,7 +1758,7 @@ public final class client extends Engine {
 			NPC npc_1 = (NPC) ((StringNode) NPCS.get((long) NPC_UPDATE_INDICES[i_0])).anObject8068;
 			if (npc_1.aBool10318 && npc_1.method15899(1588256325) != -1) {
 				int i_2 = (npc_1.getSize() - 1) * 256 + 252;
-				Vector3 vector3_3 = npc_1.method11166().aClass385_3595;
+				Vector3 vector3_3 = npc_1.method11166().coords;
 				int i_4 = (int) vector3_3.x - i_2 >> 9;
 				int i_5 = (int) vector3_3.z - i_2 >> 9;
 				Entity animable_6 = Class155.method2640(npc_1.plane, i_4, i_5);
@@ -2157,7 +2157,7 @@ public final class client extends Engine {
 										i_34 = (anInt7376 >> 9) - (i_32 >> 2);
 									} else {
 										int i_45 = (VertexNormal.MY_PLAYER.getSize() - 1) * 256;
-										Vector3 vector3_36 = VertexNormal.MY_PLAYER.method11166().aClass385_3595;
+										Vector3 vector3_36 = VertexNormal.MY_PLAYER.method11166().coords;
 										i_33 = ((int) vector3_36.x - i_45 >> 9) + (i_31 >> 2);
 										i_34 = ((int) vector3_36.z - i_45 >> 9) - (i_32 >> 2);
 									}

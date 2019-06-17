@@ -885,7 +885,7 @@ public class ItemDefinitions implements Definition {
                 nativesprite_11 = Renderers.SOFTWARE_RENDERER.method8444(arr_12[0], true);
                 client.aClass229_7204.put(nativesprite_11, (long) i_10);
             }
-            Vector3 vector3_16 = animable_0.method11166().aClass385_3595;
+            Vector3 vector3_16 = animable_0.method11166().coords;
             HitsplatIndexLoader.method3612(animable_0.plane, (int) vector3_16.x, (int) vector3_16.z, animable_0.getSize() * 256, 0, false, (byte) 2);
             int i_13 = (int) ((float) i_3 + client.aFloatArray7292[0] - 18.0F);
             int i_14 = (int) ((float) i_4 + client.aFloatArray7292[1] - 16.0F - 54.0F);

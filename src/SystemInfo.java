@@ -350,7 +350,7 @@ public class SystemInfo extends Node {
 					}
 				}
 			}
-			Vector3 vector3_21 = Vector3.popVectorStackTo(animable_0.method11166().aClass385_3595);
+			Vector3 vector3_21 = Vector3.popVectorStackTo(animable_0.method11166().coords);
 			int i_5 = (int) vector3_21.x;
 			int i_6 = (int) vector3_21.z;
 			int i_7 = 512 * animable_0.regionBaseX[animable_0.anInt10355 - 1] + animable_0.getSize() * 256;

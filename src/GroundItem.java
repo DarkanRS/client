@@ -100,7 +100,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 	}
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().coords);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) -112);
 		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9);
 		int i_5 = 0;
@@ -169,7 +169,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 		}
 
 		vector3_2.pushVectorStack();
-		Vector3 vector3_30 = this.method11166().aClass385_3595;
+		Vector3 vector3_30 = this.method11166().coords;
 		matrix44var_6.method5219(vector3_30.x, vector3_30.y - 10.0F, vector3_30.z);
 		Class285 class285_31 = Class470.method7824(true, (byte) 2);
 		this.aBool10419 = false;
@@ -247,7 +247,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 	}
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().coords);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) 62);
 		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9);
 		int i_5 = 0;
@@ -316,7 +316,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 		}
 
 		vector3_2.pushVectorStack();
-		Vector3 vector3_30 = this.method11166().aClass385_3595;
+		Vector3 vector3_30 = this.method11166().coords;
 		matrix44var_6.method5219(vector3_30.x, vector3_30.y - 10.0F, vector3_30.z);
 		Class285 class285_31 = Class470.method7824(true, (byte) -32);
 		this.aBool10419 = false;
@@ -355,7 +355,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 	}
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_2 = Vector3.popVectorStackTo(this.method11166().coords);
 		Class208 class208_3 = this.aClass206_7970.method3507(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9, (byte) 88);
 		SceneObjectNode sceneobjectnode_4 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_2.x >> 9, (int) vector3_2.z >> 9);
 		int i_5 = 0;
@@ -424,7 +424,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 		}
 
 		vector3_2.pushVectorStack();
-		Vector3 vector3_30 = this.method11166().aClass385_3595;
+		Vector3 vector3_30 = this.method11166().coords;
 		matrix44var_6.method5219(vector3_30.x, vector3_30.y - 10.0F, vector3_30.z);
 		Class285 class285_31 = Class470.method7824(true, (byte) -61);
 		this.aBool10419 = false;
@@ -503,7 +503,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 	}
 
 	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
-		Vector3 vector3_3 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_3 = Vector3.popVectorStackTo(this.method11166().coords);
 		Class208 class208_4 = this.aClass206_7970.method3507(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9, (byte) -92);
 		SceneObjectNode sceneobjectnode_5 = this.aClass206_7970.getGroundDecoration(this.plane, (int) vector3_3.x >> 9, (int) vector3_3.z >> 9);
 		int i_6 = 0;
@@ -572,7 +572,7 @@ public class GroundItem extends Transform_Sub1_Sub2 {
 		}
 
 		vector3_3.pushVectorStack();
-		Vector3 vector3_31 = this.method11166().aClass385_3595;
+		Vector3 vector3_31 = this.method11166().coords;
 		matrix44var_7.method5219(vector3_31.x, vector3_31.y - 10.0F, vector3_31.z);
 		Class285 class285_32 = Class470.method7824(true, (byte) -5);
 		this.aBool10419 = false;

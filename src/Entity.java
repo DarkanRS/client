@@ -500,8 +500,8 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 		}
 
 		Position class305_4 = this.method11166();
-		int i_5 = (int) class305_4.aClass385_3595.x >> 9;
-		int i_6 = (int) class305_4.aClass385_3595.z >> 9;
+		int i_5 = (int) class305_4.coords.x >> 9;
+		int i_6 = (int) class305_4.coords.z >> 9;
 		if (this.aClass206_7970 != null && i_5 >= 1 && i_6 >= 1 && i_5 <= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 1 && i_6 <= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 1) {
 			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][i_5][i_6];
 			if (class293_7 != null && class293_7.aTransform_Sub1_Sub3_3499 != null) {
@@ -520,7 +520,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 
 	public void method14697(byte b_1) {
 		int i_2 = (this.anInt10315 - 1 << 8) + 240;
-		Vector3 vector3_3 = this.method11166().aClass385_3595;
+		Vector3 vector3_3 = this.method11166().coords;
 		this.aShort9458 = (short) ((int) vector3_3.x - i_2 >> 9);
 		this.aShort9456 = (short) ((int) vector3_3.z - i_2 >> 9);
 		this.localX = (short) (i_2 + (int) vector3_3.x >> 9);
@@ -865,7 +865,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 	public abstract int method15892();
 
 	void method15895(int i_1, int i_2, int i_3, int i_4, int i_5) {
-		Vector3 vector3_7 = this.method11166().aClass385_3595;
+		Vector3 vector3_7 = this.method11166().coords;
 		int i_8 = this.aShort9458 + this.localX >> 1;
 		int i_9 = this.localY + this.aShort9456 >> 1;
 		int i_10 = Class382.SINE[i_1];

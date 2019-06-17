@@ -19,10 +19,10 @@ public class Transform {
 		if (this.aBool5938) {
 			this.aBool5938 = false;
 			if (this.aTransform_5943 != null) {
-				this.aClass305_5937.method5411(this.aClass305_5936);
+				this.aClass305_5937.copy(this.aClass305_5936);
 				this.aClass305_5937.method5414(this.aTransform_5943.method11166());
 			} else {
-				this.aClass305_5937.method5411(this.aClass305_5936);
+				this.aClass305_5937.copy(this.aClass305_5936);
 			}
 		}
 
@@ -32,7 +32,7 @@ public class Transform {
 	final Position method11167() {
 		if (this.aBool5945) {
 			this.aBool5945 = false;
-			this.aClass305_5939.method5411(this.method11166());
+			this.aClass305_5939.copy(this.method11166());
 			this.aClass305_5939.method5413();
 		}
 
@@ -49,7 +49,7 @@ public class Transform {
 	}
 
 	public final void method11171(Vector3 vector3_1) {
-		this.aClass305_5936.aClass385_3595.copy(vector3_1);
+		this.aClass305_5936.coords.copy(vector3_1);
 		this.method11174();
 		if (this.aTransform_5944 != null) {
 			this.aTransform_5944.method11188();
@@ -58,7 +58,7 @@ public class Transform {
 	}
 
 	public final void method11172(float f_1, float f_2, float f_3) {
-		this.aClass305_5936.aClass385_3595.set(f_1, f_2, f_3);
+		this.aClass305_5936.coords.set(f_1, f_2, f_3);
 		this.method11174();
 		if (this.aTransform_5944 != null) {
 			this.aTransform_5944.method11188();
@@ -73,7 +73,7 @@ public class Transform {
 	}
 
 	final void method11175(Position class305_1) {
-		this.aClass305_5936.method5411(class305_1);
+		this.aClass305_5936.copy(class305_1);
 		this.method11174();
 		if (this.aTransform_5944 != null) {
 			this.aTransform_5944.method11188();
@@ -120,7 +120,7 @@ public class Transform {
 	}
 
 	public final void method11187(Quaternion quaternion_1) {
-		this.aClass305_5936.aClass381_3594.copy(quaternion_1);
+		this.aClass305_5936.quaternion.copy(quaternion_1);
 		this.method11174();
 		if (this.aTransform_5944 != null) {
 			this.aTransform_5944.method11188();

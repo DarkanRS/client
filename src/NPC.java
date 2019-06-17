@@ -162,7 +162,7 @@ public class NPC extends Entity {
 		this.anInt10366 = 0;
 		this.regionBaseX[0] = i_2;
 		this.regionBaseY[0] = i_3;
-		Vector3 vector3_10 = Vector3.popVectorStackTo(this.method11166().aClass385_3595);
+		Vector3 vector3_10 = Vector3.popVectorStackTo(this.method11166().coords);
 		vector3_10.x = (float) ((i_5 << 8) + (this.regionBaseX[0] << 9));
 		vector3_10.z = (float) ((i_5 << 8) + (this.regionBaseY[0] << 9));
 		this.method11171(vector3_10);
@@ -372,7 +372,7 @@ public class NPC extends Entity {
 			Position class305_3 = this.method11166();
 			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 			int i_5 = this.aClass19_10359.method578();
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.coords.x >> 9][(int) class305_3.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				int i_7 = this.anInt10325 * -374848179 * -2023195771 - class293_6.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = -374848179 * (int) ((float) (-2023195771 * this.anInt10325 * -374848179) - (float) i_7 / 10.0F) * -2023195771;
@@ -459,7 +459,7 @@ public class NPC extends Entity {
 			Position class305_4 = this.method11166();
 			Matrix44Var matrix44var_5 = graphicalrenderer_1.method8450();
 			int i_6 = this.aClass19_10359.method578();
-			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.coords.x >> 9][(int) class305_4.coords.z >> 9];
 			if (class293_7 != null && class293_7.aTransform_Sub1_Sub3_3499 != null) {
 				int i_8 = this.anInt10325 - class293_7.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = (int) ((float) this.anInt10325 - (float) i_8 / 10.0F);
@@ -541,7 +541,7 @@ public class NPC extends Entity {
 			Position class305_3 = this.method11166();
 			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 			int i_5 = this.aClass19_10359.method578();
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.coords.x >> 9][(int) class305_3.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				int i_7 = this.anInt10325 * -374848179 * -2023195771 - class293_6.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = -374848179 * (int) ((float) (-2023195771 * this.anInt10325 * -374848179) - (float) i_7 / 10.0F) * -2023195771;
@@ -828,7 +828,7 @@ public class NPC extends Entity {
 			Position class305_3 = this.method11166();
 			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
 			int i_5 = this.aClass19_10359.method578();
-			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.coords.x >> 9][(int) class305_3.coords.z >> 9];
 			if (class293_6 != null && class293_6.aTransform_Sub1_Sub3_3499 != null) {
 				int i_7 = this.anInt10325 * -374848179 * -2023195771 - class293_6.aTransform_Sub1_Sub3_3499.aShort9561;
 				this.anInt10325 = -374848179 * (int) ((float) (-2023195771 * this.anInt10325 * -374848179) - (float) i_7 / 10.0F) * -2023195771;

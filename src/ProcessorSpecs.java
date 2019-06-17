@@ -66,7 +66,7 @@ public class ProcessorSpecs {
             int i_6 = animable_0.anInt10328 * 512 + animable_0.getSize() * 256;
             int i_7 = animable_0.anInt10341 * 512 + animable_0.getSize() * 256;
             int i_8 = animable_0.anInt10343 * 512 + animable_0.getSize() * 256;
-            Vector3 vector3_9 = animable_0.method11166().aClass385_3595;
+            Vector3 vector3_9 = animable_0.method11166().coords;
             animable_0.method11172((float) ((i_7 * i_4 + i_5 * (i_3 - i_4)) / i_3), (float) ((int) vector3_9.y), (float) ((i_4 * i_8 + i_6 * (i_3 - i_4)) / i_3));
         }
         animable_0.anInt10366 = 0;

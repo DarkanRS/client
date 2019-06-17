@@ -85,7 +85,7 @@ public class CutsceneAction_Sub21 extends CutsceneAction {
 				}
 			}
 
-			vector3_12 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595;
+			vector3_12 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.method11166().coords;
 			class282_sub48_5.anInt8107 = (int) vector3_12.x;
 			class282_sub48_5.anInt8079 = (int) vector3_12.x + (class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.getSize() << 8);
 			class282_sub48_5.anInt8078 = (int) vector3_12.z;
@@ -139,7 +139,7 @@ public class CutsceneAction_Sub21 extends CutsceneAction {
 				}
 			}
 
-			vector3_12 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595;
+			vector3_12 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.method11166().coords;
 			class282_sub48_5.anInt8107 = (int) vector3_12.x;
 			class282_sub48_5.anInt8079 = (int) vector3_12.x + (class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.getSize() << 8);
 			class282_sub48_5.anInt8078 = (int) vector3_12.z;

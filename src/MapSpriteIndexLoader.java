@@ -98,7 +98,7 @@ public class MapSpriteIndexLoader {
 					obj_2 = client.players[animable_0.faceEntity - 32768];
 				}
 				if (obj_2 != null) {
-					vector3_9 = Vector3.method6632(animable_0.method11166().aClass385_3595, ((Entity) obj_2).method11166().aClass385_3595);
+					vector3_9 = Vector3.method6632(animable_0.method11166().coords, ((Entity) obj_2).method11166().coords);
 					int i_4 = (int) vector3_9.x;
 					i_5 = (int) vector3_9.z;
 					if (i_4 != 0 || i_5 != 0) {
@@ -115,7 +115,7 @@ public class MapSpriteIndexLoader {
 			} else if (animable_0 instanceof NPC) {
 				NPC npc_10 = (NPC) animable_0;
 				if (npc_10.anInt10578 != -1 && (npc_10.anInt10355 == 0 || npc_10.anInt10366 > 0)) {
-					vector3_9 = npc_10.method11166().aClass385_3595;
+					vector3_9 = npc_10.method11166().coords;
 					CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 					i_5 = (int) vector3_9.x - (npc_10.anInt10578 * 256 - coordgrid_7.x * 256 - coordgrid_7.x * 256);
 					int i_6 = (int) vector3_9.z - (npc_10.anInt10577 * 256 - coordgrid_7.y * 256 - coordgrid_7.y * 256);
