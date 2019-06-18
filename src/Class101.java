@@ -160,7 +160,7 @@ public abstract class Class101 {
 		return this.anInt1016;
 	}
 
-	public Node_Sub21_Sub1 method1681(String string_1, byte b_2) {
+	public Node_Sub21_Sub1 method1681(String string_1) {
 		return (Node_Sub21_Sub1) this.aClass107_1011.method1820(string_1, -2115714822);
 	}
 

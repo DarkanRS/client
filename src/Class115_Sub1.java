@@ -41,13 +41,13 @@ public final class Class115_Sub1 extends Class115 {
 		this.aBoolArray9285 = new boolean[2];
 		this.aString1245 = class99_2.aString1003;
 		if (class99_2.aString1001 != null) {
-			this.aString1244 = class99_2.aString1001;
-			this.aByteArray9289 = class505_sub2_sub2_1.method15651(this.aString1244);
+			this.shaderName = class99_2.aString1001;
+			this.aByteArray9289 = class505_sub2_sub2_1.getDXShaderData(this.shaderName);
 		}
 
 		if (class99_2.aString1002 != null) {
 			this.aString1246 = class99_2.aString1002;
-			this.aByteArray9290 = class505_sub2_sub2_1.method15651(this.aString1246);
+			this.aByteArray9290 = class505_sub2_sub2_1.getDXShaderData(this.aString1246);
 		}
 
 		class505_sub2_sub2_1.method13901(this);

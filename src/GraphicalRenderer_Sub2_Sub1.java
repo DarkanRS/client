@@ -40,7 +40,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 	}
 
 	public Class101 method13890(String string_1) {
-		byte[] bytes_2 = this.method15579(string_1);
+		byte[] bytes_2 = this.getGLShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {
@@ -1382,8 +1382,8 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 
 	}
 
-	byte[] method15579(String string_1) {
-		return this.method14075("gl", string_1);
+	byte[] getGLShaderData(String string_1) {
+		return this.getCacheShaderData("gl", string_1);
 	}
 
 	void method13922() {
@@ -1637,7 +1637,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 	}
 
 	public Class101 method14049(String string_1) {
-		byte[] bytes_2 = this.method15579(string_1);
+		byte[] bytes_2 = this.getGLShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {

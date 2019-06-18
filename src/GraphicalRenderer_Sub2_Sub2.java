@@ -812,12 +812,12 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		IDirect3DDevice.DrawIndexedPrimitive(this.aLong10252, method15654(class352_1), 0, i_2, i_3, i_4, i_5);
 	}
 
-	byte[] method15651(String string_1) {
-		return this.method14075("dx", string_1);
+	byte[] getDXShaderData(String string_1) {
+		return this.getCacheShaderData("dx", string_1);
 	}
 
 	public Class101 method13890(String string_1) {
-		byte[] bytes_2 = this.method15651(string_1);
+		byte[] bytes_2 = this.getDXShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {
@@ -1151,7 +1151,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 	}
 
 	public Class101 method14049(String string_1) {
-		byte[] bytes_2 = this.method15651(string_1);
+		byte[] bytes_2 = this.getDXShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {

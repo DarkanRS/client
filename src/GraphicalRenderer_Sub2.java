@@ -110,7 +110,7 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 	Matrix44Arr aClass384_8841;
 	Matrix44Var aClass294_8842;
 	protected int anInt8844;
-	Index aClass317_8789;
+	Index shaderIndex;
 	public int anInt8709;
 	int anInt8824;
 	Class66 aClass66_8787;
@@ -314,7 +314,7 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 		this.anInt8844 = -1;
 
 		try {
-			this.aClass317_8789 = index_2;
+			this.shaderIndex = index_2;
 			this.anInt8709 = i_3;
 			this.anInt8824 = i_4;
 			SunDefinitions.method854(false, true, -1368886840);
@@ -3431,8 +3431,8 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 
 	abstract Interface6 method14072(Class150 var1, Class76 var2, int var3, int var4);
 
-	byte[] method14075(String string_1, String string_2) {
-		return this.aClass317_8789.getFileByName(string_1, string_2);
+	byte[] getCacheShaderData(String string_1, String string_2) {
+		return this.shaderIndex.getFileByName(string_1, string_2);
 	}
 
 	abstract Interface1 method14077(Class150 var1, int var2, int var3, int var4, boolean var5, byte[] var6);

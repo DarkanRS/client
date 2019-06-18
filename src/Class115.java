@@ -1,6 +1,6 @@
 public abstract class Class115 implements Interface7 {
 
-	protected String aString1244;
+	protected String shaderName;
 
 	protected String aString1246;
 

@@ -31,21 +31,21 @@ public abstract class Class41_Sub1 extends Class41 {
 		if (this.aClass101_9218 == null) {
 			throw new Exception_Sub2("");
 		} else {
-			this.aNode_Sub21_Sub1_9212 = this.aClass101_9218.method1681("textureMatrix", (byte) 18);
-			this.aNode_Sub21_Sub1_9211 = this.aClass101_9218.method1681("modelMatrix", (byte) -24);
-			this.aNode_Sub21_Sub1_9204 = this.aClass101_9218.method1681("viewMatrix", (byte) -52);
-			this.aNode_Sub21_Sub1_9202 = this.aClass101_9218.method1681("projectionMatrix", (byte) -50);
-			this.aNode_Sub21_Sub1_9207 = this.aClass101_9218.method1681("modelViewMatrix", (byte) 33);
-			this.aNode_Sub21_Sub1_9208 = this.aClass101_9218.method1681("modelViewProjectionMatrix", (byte) 81);
-			this.aNode_Sub21_Sub1_9216 = this.aClass101_9218.method1681("viewProjectionMatrix", (byte) -33);
-			this.aNode_Sub21_Sub1_9229 = this.aClass101_9218.method1681("ambientColour", (byte) -14);
-			this.aNode_Sub21_Sub1_9209 = this.aClass101_9218.method1681("sunDirection", (byte) 68);
-			this.aNode_Sub21_Sub1_9214 = this.aClass101_9218.method1681("sunColour", (byte) 81);
-			this.aNode_Sub21_Sub1_9215 = this.aClass101_9218.method1681("antiSunColour", (byte) -7);
-			this.aNode_Sub21_Sub1_9217 = this.aClass101_9218.method1681("sunExponent", (byte) -20);
-			this.aNode_Sub21_Sub1_9213 = this.aClass101_9218.method1681("eyePosition", (byte) -36);
-			this.aNode_Sub21_Sub1_9203 = this.aClass101_9218.method1681("eyePositionOS", (byte) 7);
-			this.aNode_Sub21_Sub1_9205 = this.aClass101_9218.method1681("sunDirectionOS", (byte) 39);
+			this.aNode_Sub21_Sub1_9212 = this.aClass101_9218.method1681("textureMatrix");
+			this.aNode_Sub21_Sub1_9211 = this.aClass101_9218.method1681("modelMatrix");
+			this.aNode_Sub21_Sub1_9204 = this.aClass101_9218.method1681("viewMatrix");
+			this.aNode_Sub21_Sub1_9202 = this.aClass101_9218.method1681("projectionMatrix");
+			this.aNode_Sub21_Sub1_9207 = this.aClass101_9218.method1681("modelViewMatrix");
+			this.aNode_Sub21_Sub1_9208 = this.aClass101_9218.method1681("modelViewProjectionMatrix");
+			this.aNode_Sub21_Sub1_9216 = this.aClass101_9218.method1681("viewProjectionMatrix");
+			this.aNode_Sub21_Sub1_9229 = this.aClass101_9218.method1681("ambientColour");
+			this.aNode_Sub21_Sub1_9209 = this.aClass101_9218.method1681("sunDirection");
+			this.aNode_Sub21_Sub1_9214 = this.aClass101_9218.method1681("sunColour");
+			this.aNode_Sub21_Sub1_9215 = this.aClass101_9218.method1681("antiSunColour");
+			this.aNode_Sub21_Sub1_9217 = this.aClass101_9218.method1681("sunExponent");
+			this.aNode_Sub21_Sub1_9213 = this.aClass101_9218.method1681("eyePosition");
+			this.aNode_Sub21_Sub1_9203 = this.aClass101_9218.method1681("eyePositionOS");
+			this.aNode_Sub21_Sub1_9205 = this.aClass101_9218.method1681("sunDirectionOS");
 			if (!this.method14524()) {
 				this.aClass101_9218 = null;
 				this.aNode_Sub21_Sub1_9212 = null;

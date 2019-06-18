@@ -11,7 +11,7 @@ public class Class115_Sub2 extends Class115 {
 	boolean aBool9425;
 	int[] anIntArray9426;
 	String aString9434;
-	String aString9430;
+	String shaderProgram;
 	float[] aFloatArray9429;
 	float[] aFloatArray9422;
 	float[] aFloatArray9431;
@@ -50,39 +50,42 @@ public class Class115_Sub2 extends Class115 {
 		this.aBool9425 = false;
 		this.anIntArray9426 = new int[13];
 		this.aString1245 = class99_2.aString1003;
-		StringBuilder stringbuilder_3 = new StringBuilder();
+		StringBuilder programString = new StringBuilder();
 		Class121[] arr_4;
 		int i_5;
 		Class121 class121_6;
+		System.out.println("Shader loading:");
 		if (class99_2.aString1001 != null) {
-			this.aString1244 = class99_2.aString1001;
+			System.out.println(class99_2.aString1001);
+			this.shaderName = class99_2.aString1001;
 			if (class99_2.aClass121Array1000 != null) {
 				arr_4 = class99_2.aClass121Array1000;
 
 				for (i_5 = 0; i_5 < arr_4.length; i_5++) {
 					class121_6 = arr_4[i_5];
-					stringbuilder_3.append("#define " + class121_6.aString1524 + " " + class121_6.aString1523 + '\n');
+					programString.append("#define " + class121_6.aString1524 + " " + class121_6.aString1523 + '\n');
 				}
 			}
 
-			stringbuilder_3.append(new String(class505_sub2_sub1_1.method15579(this.aString1244)));
-			this.aString9434 = stringbuilder_3.toString();
+			programString.append(new String(class505_sub2_sub1_1.getGLShaderData(this.shaderName)));
+			this.aString9434 = programString.toString();
 		}
 
 		if (class99_2.aString1002 != null) {
+			System.out.println(class99_2.aString1002);
 			this.aString1246 = class99_2.aString1002;
-			stringbuilder_3.setLength(0);
+			programString.setLength(0);
 			if (class99_2.aClass121Array1004 != null) {
 				arr_4 = class99_2.aClass121Array1004;
 
 				for (i_5 = 0; i_5 < arr_4.length; i_5++) {
 					class121_6 = arr_4[i_5];
-					stringbuilder_3.append("#define " + class121_6.aString1524 + " " + class121_6.aString1523 + '\n');
+					programString.append("#define " + class121_6.aString1524 + " " + class121_6.aString1523 + '\n');
 				}
 			}
 
-			stringbuilder_3.append(new String(class505_sub2_sub1_1.method15579(this.aString1246)));
-			this.aString9430 = stringbuilder_3.toString();
+			programString.append(new String(class505_sub2_sub1_1.getGLShaderData(this.aString1246)));
+			this.shaderProgram = programString.toString();
 		}
 
 		Class503.method8365(this.anIntArray9426, 0, this.anIntArray9426.length, -1);
@@ -295,8 +298,8 @@ public class Class115_Sub2 extends Class115 {
 			return true;
 		} else {
 			this.aGraphicalRenderer_Sub2_Sub1_9419.aClass115_Sub2_10189 = null;
-			this.anInt9435 = this.method14671(35633, this.aString9434, this.aString1244);
-			this.anInt9424 = this.method14671(35632, this.aString9430, this.aString1246);
+			this.anInt9435 = this.method14671(35633, this.aString9434, this.shaderName);
+			this.anInt9424 = this.method14671(35632, this.shaderProgram, this.aString1246);
 			if (this.anInt9435 != 0 && this.anInt9424 != 0) {
 				this.anInt9423 = OpenGL.glCreateProgram();
 				if (this.anInt9435 != 0) {
@@ -383,7 +386,7 @@ public class Class115_Sub2 extends Class115 {
 						}
 
 						this.aString9434 = null;
-						this.aString9430 = null;
+						this.shaderProgram = null;
 						this.aBool9425 = true;
 						return true;
 					}
@@ -551,8 +554,8 @@ public class Class115_Sub2 extends Class115 {
 			return true;
 		} else {
 			this.aGraphicalRenderer_Sub2_Sub1_9419.aClass115_Sub2_10189 = null;
-			this.anInt9435 = this.method14671(35633, this.aString9434, this.aString1244);
-			this.anInt9424 = this.method14671(35632, this.aString9430, this.aString1246);
+			this.anInt9435 = this.method14671(35633, this.aString9434, this.shaderName);
+			this.anInt9424 = this.method14671(35632, this.shaderProgram, this.aString1246);
 			if (this.anInt9435 != 0 && this.anInt9424 != 0) {
 				this.anInt9423 = OpenGL.glCreateProgram();
 				if (this.anInt9435 != 0) {
@@ -639,7 +642,7 @@ public class Class115_Sub2 extends Class115 {
 						}
 
 						this.aString9434 = null;
-						this.aString9430 = null;
+						this.shaderProgram = null;
 						this.aBool9425 = true;
 						return true;
 					}
@@ -832,8 +835,8 @@ public class Class115_Sub2 extends Class115 {
 			return true;
 		} else {
 			this.aGraphicalRenderer_Sub2_Sub1_9419.aClass115_Sub2_10189 = null;
-			this.anInt9435 = this.method14671(35633, this.aString9434, this.aString1244);
-			this.anInt9424 = this.method14671(35632, this.aString9430, this.aString1246);
+			this.anInt9435 = this.method14671(35633, this.aString9434, this.shaderName);
+			this.anInt9424 = this.method14671(35632, this.shaderProgram, this.aString1246);
 			if (this.anInt9435 != 0 && this.anInt9424 != 0) {
 				this.anInt9423 = OpenGL.glCreateProgram();
 				if (this.anInt9435 != 0) {
@@ -920,7 +923,7 @@ public class Class115_Sub2 extends Class115 {
 						}
 
 						this.aString9434 = null;
-						this.aString9430 = null;
+						this.shaderProgram = null;
 						this.aBool9425 = true;
 						return true;
 					}
