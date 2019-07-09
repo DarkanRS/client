@@ -15,7 +15,7 @@ public class Node_Sub20_Sub29 extends Node_Sub20 {
 		if (this.anIntArray9916 != null) {
 			return true;
 		} else if (this.anInt9912 >= 0) {
-			SpriteDefinitions class91_2 = anInt9913 >= 0 ? SpriteDefinitions.getSprite(Class532_Sub2.aClass317_7925, anInt9913, this.anInt9912) : SpriteDefinitions.method1515(Class532_Sub2.aClass317_7925, this.anInt9912);
+			SpriteDefinitions class91_2 = anInt9913 >= 0 ? SpriteDefinitions.getSprite(Class532_Sub2.CURR_SPRITE_INDEX, anInt9913, this.anInt9912) : SpriteDefinitions.method1515(Class532_Sub2.CURR_SPRITE_INDEX, this.anInt9912);
 			class91_2.method1523();
 			this.anIntArray9916 = class91_2.method1528();
 			this.anInt9914 = class91_2.width;

@@ -38,7 +38,7 @@ public class TextureDefinition extends CacheableNode {
 	}
 
 	int[] method14718(Index index_1, Interface22 interface22_2, double d_3, int i_5, int i_6, boolean bool_7, boolean bool_8, int i_9) {
-		Class532_Sub2.aClass317_7925 = index_1;
+		Class532_Sub2.CURR_SPRITE_INDEX = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
 		for (int i_10 = 0; i_10 < this.aNode_Sub20Array9478.length; i_10++) {
@@ -135,7 +135,7 @@ public class TextureDefinition extends CacheableNode {
 	}
 
 	int[] method14719(Index index_1, Interface22 interface22_2, double d_3, int i_5, int i_6, boolean bool_7, byte b_8) {
-		Class532_Sub2.aClass317_7925 = index_1;
+		Class532_Sub2.CURR_SPRITE_INDEX = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
 		for (int i_9 = 0; i_9 < this.aNode_Sub20Array9478.length; i_9++) {
@@ -298,7 +298,7 @@ public class TextureDefinition extends CacheableNode {
 	}
 
 	float[] method14723(Index index_1, Interface22 interface22_2, int i_3, int i_4, boolean bool_5) {
-		Class532_Sub2.aClass317_7925 = index_1;
+		Class532_Sub2.CURR_SPRITE_INDEX = index_1;
 		Class532_Sub1.anInterface22_7922 = interface22_2;
 
 		for (int i_7 = 0; i_7 < this.aNode_Sub20Array9478.length; i_7++) {
