@@ -1,6 +1,6 @@
 public class Class29 {
 
-    Class30 aClass30_354;
+    NewsItemFetcher aClass30_354;
 
     Index aClass317_352;
 
@@ -15,9 +15,9 @@ public class Class29 {
         }
     }
 
-    Class30 method782() {
+    NewsItemFetcher method782() {
         if (this.aClass30_354 == null) {
-            this.aClass30_354 = new Class30();
+            this.aClass30_354 = new NewsItemFetcher();
         }
         return this.aClass30_354;
     }

@@ -54,7 +54,7 @@ public class Class507 {
 				client.anInt3243 = client.GAME_HEIGHT * -1929118563;
 				client.anInt3251 = 0;
 			}
-			if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813 && Class349.anInt4083 < 1024) {
+			if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && Class349.anInt4083 < 1024) {
 				int i_10000 = client.anInt3243;
 			}
 			if (!bool_4) {

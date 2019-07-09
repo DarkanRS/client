@@ -438,7 +438,7 @@ public final class RouteFinder {
 			Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 			return;
 		}
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 || client.rights >= 2) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT || client.rights >= 2) {
 			try {
 				if (string_0.equalsIgnoreCase("wm1")) {
 					Class440.method7373(1, -1, -1, false, (byte) 111);

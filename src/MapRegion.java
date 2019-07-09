@@ -605,7 +605,7 @@ public class MapRegion {
 		client.aClass465_7334.method7749(189639583);
 		client.aClass482_7333.method8118(-886454007);
 		client.aClass457_7335.method7651();
-		Class30.method795();
+		NewsItemFetcher.method795();
 	}
 
 	void method4460() {

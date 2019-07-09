@@ -1,6 +1,6 @@
 public class HDWaterTile {
 
-	public static ServerEnvironment aClass496_952;
+	public static ServerEnvironment SERVER_ENVIRONMENT;
 	public int color;
 	public int scale;
 	public int intensity;

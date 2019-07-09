@@ -6,34 +6,35 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Class30 implements Runnable {
+public class NewsItemFetcher implements Runnable {
 
     Thread aThread355;
 
-    volatile boolean aBool356;
+    volatile boolean fetched;
 
-    Class105[] aClass105Array357;
+    NewsItem[] newsItems;
 
-    Class105 method791(int i_1, byte b_2) {
-        return this.aClass105Array357 != null && i_1 >= 0 && i_1 < this.aClass105Array357.length ? this.aClass105Array357[i_1] : null;
+    NewsItem get(int id) {
+        return this.newsItems != null && id >= 0 && id < this.newsItems.length ? this.newsItems[id] : null;
     }
 
-    boolean method792(int i_1) {
-        if (this.aBool356) {
+    boolean fetch() {
+        if (this.fetched) {
             return true;
         } else {
             if (this.aThread355 == null) {
                 this.aThread355 = new Thread(this);
                 this.aThread355.start();
             }
-            return this.aBool356;
+            return this.fetched;
         }
     }
 
     public void run() {
         try {
-            int i_1 = HDWaterTile.aClass496_952 == ServerEnvironment.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId + 7000;
-            BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.host + ":" + i_1 + "/news.ws?game=" + client.CURRENT_GAME.id)).openStream())));
+            int port = HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.LIVE ? 80 : Class448.aClass450_5420.worldId + 7000;
+            //System.out.println("http://" + Class448.aClass450_5420.host + ":" + port + "/news.ws?game=" + client.CURRENT_GAME.id);
+            BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.host + ":" + port + "/news.ws?game=" + client.CURRENT_GAME.id)).openStream())));
             String string_3 = bufferedreader_2.readLine();
             ArrayList arraylist_4;
             for (arraylist_4 = new ArrayList(); string_3 != null; string_3 = bufferedreader_2.readLine()) {
@@ -44,14 +45,14 @@ public class Class30 implements Runnable {
             if (arr_5.length % 3 != 0) {
                 return;
             }
-            this.aClass105Array357 = new Class105[arr_5.length / 3];
+            this.newsItems = new NewsItem[arr_5.length / 3];
             for (int i_6 = 0; i_6 < arr_5.length; i_6 += 3) {
-                this.aClass105Array357[i_6 / 3] = new Class105(arr_5[i_6], arr_5[i_6 + 1], arr_5[i_6 + 2]);
+                this.newsItems[i_6 / 3] = new NewsItem(arr_5[i_6], arr_5[i_6 + 1], arr_5[i_6 + 2]);
             }
         } catch (IOException ioexception_8) {
             ;
         }
-        this.aBool356 = true;
+        this.fetched = true;
     }
 
     public static void method795() {

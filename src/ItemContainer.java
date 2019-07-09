@@ -90,7 +90,7 @@ public class ItemContainer extends Node {
 				i_26 = i_9 | 0x4000;
 			}
 
-			meshrasterizer_8 = graphicalrenderer_1.createMeshRasterizer(rsmesh_28, i_26, Class105.anInt1069, 65, 857);
+			meshrasterizer_8 = graphicalrenderer_1.createMeshRasterizer(rsmesh_28, i_26, NewsItem.anInt1069, 65, 857);
 			if (playerappearance_6 != null) {
 				for (i_18 = 0; i_18 < 10; i_18++) {
 					for (i_19 = 0; i_19 < AbstractQueue_Sub1.SKIN_COLORS[i_18].length; i_19++) {

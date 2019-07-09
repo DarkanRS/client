@@ -677,11 +677,11 @@ public final class client extends Engine {
 						AFFILIATE = Integer.parseInt(string_7);
 						break;
 					case 24:
-						HDWaterTile.aClass496_952 = (ServerEnvironment) Class386.identify(ServerEnvironment.values(), Integer.parseInt(string_7));
-						if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5807;
-						} else if (!ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1201911871) && ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
-							HDWaterTile.aClass496_952 = ServerEnvironment.aClass496_5813;
+						HDWaterTile.SERVER_ENVIRONMENT = (ServerEnvironment) Class386.identify(ServerEnvironment.values(), Integer.parseInt(string_7));
+						if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
+							HDWaterTile.SERVER_ENVIRONMENT = ServerEnvironment.WTWIP;
+						} else if (!ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 1201911871) && ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
+							HDWaterTile.SERVER_ENVIRONMENT = ServerEnvironment.LIVE;
 						}
 						break;
 					case 25:
@@ -1636,7 +1636,7 @@ public final class client extends Engine {
 		Quaternion.method6493();
 		ItemDefinitions.method7141((byte) -88);
 		Node_Sub41_Sub3.method14807(649907715);
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
@@ -1645,15 +1645,15 @@ public final class client extends Engine {
 			SceneObjectManager.aBool2644 = false;
 		}
 
-		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
-		} else if (ServerEnvironment.method8308(HDWaterTile.aClass496_952, 739431588)) {
+		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 739431588)) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = 1140744768 + -58916693 * Class448.aClass450_5420.worldId * -1933199413;
 			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1933199413 * -58916693 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
 			Class448.lobbyConnectionInfo.anInt5437 = (Class448.lobbyConnectionInfo.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
-		} else if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = "127.0.0.1";
 			Class448.lobbyConnectionInfo.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = -58916693 * Class448.aClass450_5420.worldId * -1933199413 + 1140744768;
@@ -1677,7 +1677,7 @@ public final class client extends Engine {
 
 		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -44);
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			aBool7176 = true;
 		}
 
@@ -1799,7 +1799,7 @@ public final class client extends Engine {
 		Quaternion.method6493();
 		ItemDefinitions.method7141((byte) -10);
 		Node_Sub41_Sub3.method14807(702651669);
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
@@ -1808,15 +1808,15 @@ public final class client extends Engine {
 			SceneObjectManager.aBool2644 = false;
 		}
 
-		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
-		} else if (ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1401692729)) {
+		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 1401692729)) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = 1140744768 + -58916693 * Class448.aClass450_5420.worldId * -1933199413;
 			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1933199413 * -58916693 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
 			Class448.lobbyConnectionInfo.anInt5437 = (Class448.lobbyConnectionInfo.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
-		} else if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = "127.0.0.1";
 			Class448.lobbyConnectionInfo.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = -58916693 * Class448.aClass450_5420.worldId * -1933199413 + 1140744768;
@@ -1840,7 +1840,7 @@ public final class client extends Engine {
 
 		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -9);
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			aBool7176 = true;
 		}
 
@@ -2670,7 +2670,7 @@ public final class client extends Engine {
 		Quaternion.method6493();
 		ItemDefinitions.method7141((byte) -39);
 		Node_Sub41_Sub3.method14807(-741497337);
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 		}
 
@@ -2679,15 +2679,15 @@ public final class client extends Engine {
 			SceneObjectManager.aBool2644 = false;
 		}
 
-		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
-		} else if (ServerEnvironment.method8308(HDWaterTile.aClass496_952, 1661844371)) {
+		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 1661844371)) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = Class448.aClass450_5420.worldId * -1708079975 + 1140744768;
 			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1708079975 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = Class448.aClass450_5420.worldId * -1473668237 + 1047080176;
 			Class448.lobbyConnectionInfo.anInt5437 = Class448.lobbyConnectionInfo.worldId * -1473668237 + 1047080176;
-		} else if (ServerEnvironment.aClass496_5810 == HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = "127.0.0.1";
 			Class448.lobbyConnectionInfo.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = Class448.aClass450_5420.worldId * -1708079975 + 1140744768;
@@ -2711,7 +2711,7 @@ public final class client extends Engine {
 
 		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -76);
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			aBool7176 = true;
 		}
 

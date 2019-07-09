@@ -353,7 +353,7 @@ public class Player extends Entity {
 			JS5CacheFile.method3359();
 		}
 
-		if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 && i_13 < 50) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT && i_13 < 50) {
 			int i_14;
 			for (i_14 = 50 - i_13; i_14 > client.anInt7173; client.anInt7173++) {
 				Class339.aByteArrayArray3986[client.anInt7173] = new byte[102400];
@@ -363,7 +363,7 @@ public class Player extends Entity {
 				--client.anInt7173;
 				Class339.aByteArrayArray3986[client.anInt7173] = null;
 			}
-		} else if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952) {
+		} else if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
 			Class339.aByteArrayArray3986 = new byte[50][];
 			client.anInt7173 = 0;
 		}
@@ -813,7 +813,7 @@ public class Player extends Entity {
 		this.skullId = buffer.readByte();
 		this.headIconId = buffer.readByte();
 		this.hidden = buffer.readByte() == 1;
-		if (ServerEnvironment.aClass496_5813 == HDWaterTile.aClass496_952 && client.rights >= 2) {
+		if (ServerEnvironment.LIVE == HDWaterTile.SERVER_ENVIRONMENT && client.rights >= 2) {
 			this.hidden = false;
 		}
 

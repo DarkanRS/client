@@ -5309,7 +5309,7 @@ public class CS2Interpreter {
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr];
 		String string_4 = (String) executor.stringStack[executor.stringStackPtr + 1];
 		if (string_3.length() <= 500 && string_4.length() <= 500) {
-			Class105.method1804(i_2, string_3, string_4);
+			NewsItem.method1804(i_2, string_3, string_4);
 		}
 	}
 
@@ -11096,7 +11096,7 @@ public class CS2Interpreter {
 			Class109.redrawComponent(icomponentdefinitions_0);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class105.method1807(icomponentdefinitions_0.idHash);
+			NewsItem.method1807(icomponentdefinitions_0.idHash);
 		}
 	}
 

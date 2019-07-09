@@ -2,12 +2,12 @@ import java.util.Locale;
 
 public enum Language implements Identifiable {
 
-	aClass495_5795("EN", "en", "English", ServerEnvironment.aClass496_5813, 0, "GB"),
-    aClass495_5802("DE", "de", "German", ServerEnvironment.aClass496_5813, 1, "DE"),
-    aClass495_5801("FR", "fr", "French", ServerEnvironment.aClass496_5813, 2, "FR"),
-    aClass495_5797("PT", "pt", "Portuguese", ServerEnvironment.aClass496_5813, 3, "BR"),
-    aClass495_5799("NL", "nl", "Dutch", ServerEnvironment.aClass496_5807, 4, "NL"),
-    aClass495_5800("ES", "es", "Spanish", ServerEnvironment.aClass496_5807, 5, "ES");
+	aClass495_5795("EN", "en", "English", ServerEnvironment.LIVE, 0, "GB"),
+    aClass495_5802("DE", "de", "German", ServerEnvironment.LIVE, 1, "DE"),
+    aClass495_5801("FR", "fr", "French", ServerEnvironment.LIVE, 2, "FR"),
+    aClass495_5797("PT", "pt", "Portuguese", ServerEnvironment.LIVE, 3, "BR"),
+    aClass495_5799("NL", "nl", "Dutch", ServerEnvironment.WTWIP, 4, "NL"),
+    aClass495_5800("ES", "es", "Spanish", ServerEnvironment.WTWIP, 5, "ES");
 	
     static Language[] aClass495Array5796;
 

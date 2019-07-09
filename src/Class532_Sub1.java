@@ -45,7 +45,7 @@ public class Class532_Sub1 extends Class532 {
 						client.anInt3243 = client.GAME_HEIGHT * -1929118563;
 						client.anInt3251 = 0;
 					}
-					if (ServerEnvironment.aClass496_5813 != HDWaterTile.aClass496_952 && Class349.anInt4083 < 1024) {
+					if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT && Class349.anInt4083 < 1024) {
 						int i_10000 = client.anInt3243;
 					}
 					Class351.gameCanvas.setSize(Class349.anInt4083, client.anInt3243 * -969250379);

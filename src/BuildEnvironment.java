@@ -1,12 +1,13 @@
 import java.awt.Frame;
 
-public class BuildEnvironment {
+public enum BuildEnvironment {
 
-	public static BuildEnvironment LIVE = new BuildEnvironment("LIVE", 0);
-	public static BuildEnvironment BUILD_LIVE = new BuildEnvironment("BUILDLIVE", 3);
-	public static BuildEnvironment RC = new BuildEnvironment("RC", 1);
-	public static BuildEnvironment WIP = new BuildEnvironment("WIP", 2);
-	static BuildEnvironment INT_BETA = new BuildEnvironment("INTBETA", 4);
+	LIVE("LIVE", 0),
+	BUILD_LIVE("BUILDLIVE", 3),
+	RC("RC", 1),
+	WIP("WIP", 2),
+	INT_BETA("INTBETA", 4);
+	
 	public String name;
 	public int id;
 

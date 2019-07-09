@@ -364,13 +364,13 @@ public class MapAreaDefinitions {
 
     public static String method3741() {
         String str_1 = "www";
-        if (ServerEnvironment.aClass496_5811 == HDWaterTile.aClass496_952) {
+        if (ServerEnvironment.WTRC == HDWaterTile.SERVER_ENVIRONMENT) {
             str_1 = "www-wtrc";
-        } else if (ServerEnvironment.aClass496_5808 == HDWaterTile.aClass496_952) {
+        } else if (ServerEnvironment.WTQA == HDWaterTile.SERVER_ENVIRONMENT) {
             str_1 = "www-wtqa";
-        } else if (ServerEnvironment.aClass496_5807 == HDWaterTile.aClass496_952) {
+        } else if (ServerEnvironment.WTWIP == HDWaterTile.SERVER_ENVIRONMENT) {
             str_1 = "www-wtwip";
-        } else if (HDWaterTile.aClass496_952 == ServerEnvironment.aClass496_5809) {
+        } else if (HDWaterTile.SERVER_ENVIRONMENT == ServerEnvironment.WTI) {
             str_1 = "www-wti";
         }
         String str_2 = "";

@@ -4,23 +4,23 @@ public class Class28 implements Interface2 {
 
     Class365 aClass365_349;
 
-    Class30 aClass30_350;
+    NewsItemFetcher fetchNewsTask;
 
-    Class28(Class30 class30_1, Class365 class365_2) {
+    Class28(NewsItemFetcher class30_1, Class365 class365_2) {
         this.aClass365_349 = class365_2;
-        this.aClass30_350 = class30_1;
+        this.fetchNewsTask = class30_1;
     }
 
     public boolean method10(int i_1) {
-        return this.aClass30_350.method792(998475180);
+        return this.fetchNewsTask.fetch();
     }
 
     public boolean method17() {
-        return this.aClass30_350.method792(-2107971523);
+        return this.fetchNewsTask.fetch();
     }
 
     public void method11(boolean bool_1) {
-        Class105 class105_2 = this.aClass30_350.method791(this.aClass365_349.anInt4229 * 1551783443 * 778888219, (byte) -49);
+        NewsItem class105_2 = this.fetchNewsTask.get(this.aClass365_349.anInt4229 * 1551783443 * 778888219);
         if (class105_2 != null) {
             int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1460019555) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
             int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1018239308) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
@@ -40,7 +40,7 @@ public class Class28 implements Interface2 {
     }
 
     public void method20(boolean bool_1, int i_2) {
-        Class105 class105_3 = this.aClass30_350.method791(this.aClass365_349.anInt4229, (byte) -61);
+        NewsItem class105_3 = this.fetchNewsTask.get(this.aClass365_349.anInt4229);
         if (class105_3 != null) {
             int i_4 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227, client.GAME_WIDTH, 1591676659) + this.aClass365_349.anInt4221;
             int i_5 = this.aClass365_349.aClass353_4226.method6198(this.aClass365_349.anInt4228, client.GAME_HEIGHT, 1855171415) + this.aClass365_349.anInt4223;
@@ -60,7 +60,7 @@ public class Class28 implements Interface2 {
     }
 
     public void method12(boolean bool_1) {
-        Class105 class105_2 = this.aClass30_350.method791(this.aClass365_349.anInt4229 * 1551783443 * 778888219, (byte) -33);
+        NewsItem class105_2 = this.fetchNewsTask.get(this.aClass365_349.anInt4229 * 1551783443 * 778888219);
         if (class105_2 != null) {
             int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1607557191) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
             int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1779448896) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
@@ -84,7 +84,7 @@ public class Class28 implements Interface2 {
     }
 
     public void method14(boolean bool_1) {
-        Class105 class105_2 = this.aClass30_350.method791(this.aClass365_349.anInt4229 * 1551783443 * 778888219, (byte) -70);
+        NewsItem class105_2 = this.fetchNewsTask.get(this.aClass365_349.anInt4229 * 1551783443 * 778888219);
         if (class105_2 != null) {
             int i_3 = this.aClass365_349.aClass356_4225.method6221(this.aClass365_349.anInt4227 * 1984931449 * -547232823, 150480619 * client.GAME_WIDTH * 1426041429 * 765 * -1115795005, 1779044306) + this.aClass365_349.anInt4221 * 368783541 * 1878539677;
             int i_4 = this.aClass365_349.aClass353_4226.method6198(1416311209 * this.aClass365_349.anInt4228 * -1733557607, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1414644446) + this.aClass365_349.anInt4223 * 843965525 * -1081607939;
@@ -119,15 +119,15 @@ public class Class28 implements Interface2 {
     }
 
     public boolean method13() {
-        return this.aClass30_350.method792(-362908592);
+        return this.fetchNewsTask.fetch();
     }
 
     public boolean method9() {
-        return this.aClass30_350.method792(1107978088);
+        return this.fetchNewsTask.fetch();
     }
 
     public boolean method21() {
-        return this.aClass30_350.method792(-1024774196);
+        return this.fetchNewsTask.fetch();
     }
 
     public void method15() {

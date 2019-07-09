@@ -42,7 +42,7 @@ public class Class356 {
 			Class520.method11161();
 			Class487.aClass378_5752.method6410();
 			Class413.method6939();
-			if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5813) {
+			if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
 				for (int i_2 = 0; i_2 < Class339.aByteArrayArray3986.length; i_2++) {
 					Class339.aByteArrayArray3986[i_2] = null;
 				}

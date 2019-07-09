@@ -51,7 +51,7 @@ public class Class60 {
 	}
 
 	static void method1172(int i_0) {
-		if (HDWaterTile.aClass496_952 != ServerEnvironment.aClass496_5810) {
+		if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL) {
 			Class361.aClass361_4174.method6257(-84783453);
 		}
 	}

@@ -28,7 +28,7 @@ public class PlayerUpdate {
 						i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 						Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 					} else {
-						Class105.method1806(rsbitsbuffer_0, i_4, 1605181338);
+						NewsItem.method1806(rsbitsbuffer_0, i_4, 1605181338);
 					}
 				}
 			}
@@ -50,7 +50,7 @@ public class PlayerUpdate {
 							i_2 = Class399.decodeSkip(rsbitsbuffer_0);
 							Class197.aByteArray2424[i_4] = (byte) (Class197.aByteArray2424[i_4] | 0x2);
 						} else {
-							Class105.method1806(rsbitsbuffer_0, i_4, 1591127292);
+							NewsItem.method1806(rsbitsbuffer_0, i_4, 1591127292);
 						}
 					}
 				}

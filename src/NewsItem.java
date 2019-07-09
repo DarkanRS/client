@@ -1,4 +1,4 @@
-public class Class105 {
+public class NewsItem {
 
 	static int anInt1069;
 
@@ -8,7 +8,7 @@ public class Class105 {
 
 	String aString1068;
 
-	Class105(String string_1, String string_2, String string_3) {
+	NewsItem(String string_1, String string_2, String string_3) {
 		this.aString1067 = string_1;
 		this.aString1066 = string_2;
 		this.aString1068 = string_3;

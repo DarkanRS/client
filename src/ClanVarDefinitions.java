@@ -213,7 +213,7 @@ public class ClanVarDefinitions {
 				ints_9[i_6] = class467_7.anInt5574 * class467_7.anInt5571;
 			}
 
-			Class30.method796(ints_9, Class149_Sub3.aClass467Array9380);
+			NewsItemFetcher.method796(ints_9, Class149_Sub3.aClass467Array9380);
 		}
 
 		return Class149_Sub3.aClass467Array9380;

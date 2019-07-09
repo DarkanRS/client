@@ -23,7 +23,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_5 = this.anInt9392 * i_1 >> 12;
 		int i_6 = i_2 * this.anInt9393 >> 12;
 		int i_7 = i_2 * this.anInt9394 >> 12;
-		Class105.method1805(i_4, i_5, i_6, i_7, this.anInt1741, this.anInt1742);
+		NewsItem.method1805(i_4, i_5, i_6, i_7, this.anInt1741, this.anInt1742);
 	}
 
 	void method2556(int i_1, int i_2) {
@@ -47,7 +47,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_4 = this.anInt9392 * 50986485 * 232719965 * i_1 >> 12;
 		int i_5 = i_2 * -1685653473 * this.anInt9393 * -724925473 >> 12;
 		int i_6 = this.anInt9394 * 954206695 * -1856308777 * i_2 >> 12;
-		Class105.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331);
+		NewsItem.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331);
 	}
 
 	void method2559(int i_1, int i_2) {
@@ -55,7 +55,7 @@ public class Class149_Sub4 extends Class149 {
 		int i_4 = this.anInt9392 * 50986485 * 232719965 * i_1 >> 12;
 		int i_5 = i_2 * -1685653473 * this.anInt9393 * -724925473 >> 12;
 		int i_6 = this.anInt9394 * 954206695 * -1856308777 * i_2 >> 12;
-		Class105.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331);
+		NewsItem.method1805(i_3, i_4, i_5, i_6, -1525176857 * this.anInt1741 * -1378640425, this.anInt1742 * 383825605 * -1125689331);
 	}
 
 	void method2562(int i_1, int i_2) {

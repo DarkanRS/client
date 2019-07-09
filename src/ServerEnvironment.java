@@ -1,12 +1,12 @@
 public enum ServerEnvironment implements Identifiable {
 
-    aClass496_5810("LOCAL", "", 4),
-    aClass496_5807("WTWIP", "", 3),
-    aClass496_5809("WTI", "", 5),
-    aClass496_5808("WTQA", "", 2),
-    aClass496_5811("WTRC", "", 1),
-    aClass496_5812("INTBETA", "", 6),
-    aClass496_5813("LIVE", "", 0);
+    LOCAL("LOCAL", "", 4),
+    WTWIP("WTWIP", "", 3),
+    WTI("WTI", "", 5),
+    WTQA("WTQA", "", 2),
+    WTRC("WTRC", "", 1),
+    INTBETA("INTBETA", "", 6),
+    LIVE("LIVE", "", 0);
 
     String aString5815;
 
@@ -22,7 +22,7 @@ public enum ServerEnvironment implements Identifiable {
     }
 
     public static boolean method8308(ServerEnvironment class496_0, int i_1) {
-        return aClass496_5811 == class496_0 || aClass496_5808 == class496_0 || aClass496_5807 == class496_0 || aClass496_5809 == class496_0 || aClass496_5812 == class496_0;
+        return WTRC == class496_0 || WTQA == class496_0 || WTWIP == class496_0 || WTI == class496_0 || INTBETA == class496_0;
     }
 
     static void method8309(RsByteBuffer rsbytebuffer_0, int i_1) {
