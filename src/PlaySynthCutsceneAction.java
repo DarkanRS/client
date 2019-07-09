@@ -1,4 +1,4 @@
-public class CutsceneAction_Sub13 extends CutsceneAction {
+public class PlaySynthCutsceneAction extends CutsceneAction {
 
 	public static int anInt9368;
 
@@ -27,7 +27,7 @@ public class CutsceneAction_Sub13 extends CutsceneAction {
 		this.aClass268_9367 = VarNPCMap.playSoundSynth(-1658024425 * this.anInt9363 * -614233689, 1033987545 * this.anInt9366 * 468765289, 0, 183603537 * this.anInt9365 * -2028447823, this.anInt9364 * -1995338863 * -1180265103);
 	}
 
-	CutsceneAction_Sub13(RsByteBuffer rsbytebuffer_1) {
+	PlaySynthCutsceneAction(RsByteBuffer rsbytebuffer_1) {
 		super(rsbytebuffer_1);
 		this.anInt9363 = rsbytebuffer_1.readUnsignedShort();
 		this.anInt9365 = rsbytebuffer_1.readUnsignedByte();

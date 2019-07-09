@@ -140,7 +140,7 @@ public abstract class Class152 {
 		UnderlayIndexLoader.method8036(i_2);
 		int i_3 = VertexNormal.MY_PLAYER.getSize() << 8;
 		Vector3 vector3_4 = VertexNormal.MY_PLAYER.method11166().coords;
-		CutsceneAction_Sub21.method14675(VertexNormal.MY_PLAYER.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
+		PlaySoundJingleCutsceneAction.method14675(VertexNormal.MY_PLAYER.plane, i_3 + (int) vector3_4.x, i_3 + (int) vector3_4.z, client.anInt7261);
 		client.anInt7261 = 0;
 	}
 

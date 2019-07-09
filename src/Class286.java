@@ -211,7 +211,7 @@ public class Class286 implements Runnable {
 	}
 
 	static CS2Script getCS2Script(int i_0) {
-		CS2Script cs2script_1 = (CS2Script) Class506.aClass223_5857.method3758((long) i_0);
+		CS2Script cs2script_1 = (CS2Script) Class506.CS2_CACHE.get((long) i_0);
 		if (cs2script_1 != null) {
 			return cs2script_1;
 		} else {
@@ -222,7 +222,7 @@ public class Class286 implements Runnable {
 				} catch (Exception exception_4) {
 					throw new RuntimeException(exception_4.getMessage() + " " + i_0);
 				}
-				Class506.aClass223_5857.method3759(cs2script_1, (long) i_0);
+				Class506.CS2_CACHE.put(cs2script_1, (long) i_0);
 				return cs2script_1;
 			} else {
 				return null;

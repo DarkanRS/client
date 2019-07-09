@@ -3505,7 +3505,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1590(CS2Executor executor) {
-		int i_2 = CutsceneAction_Sub14.method14641();
+		int i_2 = ApplyHitmarkCutsceneAction.method14641();
 		executor.intStack[++executor.intStackPtr - 1] = ClanVarSettingsIndexLoader.anInt2880 = Class393.preferences.currentToolkit.getValue(1802099431);
 		executor.intStack[++executor.intStackPtr - 1] = i_2;
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -112);
@@ -5115,7 +5115,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1357(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = CutsceneAction_Sub1.anInt8307;
+		executor.intStack[++executor.intStackPtr - 1] = SendFinishedCutsceneAction.anInt8307;
 	}
 
 	static final void method1362(CS2Executor executor) {
@@ -6367,7 +6367,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method928(CS2Executor executor) {
-		if (CutsceneAction_Sub21.keyRecorder.held(82)) {
+		if (PlaySoundJingleCutsceneAction.keyRecorder.held(82)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -8226,7 +8226,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3988(CS2Executor executor) {
-		if (CutsceneAction_Sub21.keyRecorder.held(86)) {
+		if (PlaySoundJingleCutsceneAction.keyRecorder.held(86)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -9367,7 +9367,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8297(CS2Executor executor) {
-		if (CutsceneAction_Sub21.keyRecorder.held(81)) {
+		if (PlaySoundJingleCutsceneAction.keyRecorder.held(81)) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;

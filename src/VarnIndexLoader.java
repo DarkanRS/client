@@ -1,20 +1,20 @@
-public class SCT24IndexLoader {
+public class VarnIndexLoader {
 
 	SoftCache aClass229_5417 = new SoftCache(64);
 
 	Index aClass317_5418;
 
-	public SCT24Definitions method7450(int i_1) {
+	public VarnDefinitions method7450(int i_1) {
 		SoftCache softcache_4 = this.aClass229_5417;
-		SCT24Definitions class449_3;
+		VarnDefinitions class449_3;
 		synchronized (this.aClass229_5417) {
-			class449_3 = (SCT24Definitions) this.aClass229_5417.get((long) i_1);
+			class449_3 = (VarnDefinitions) this.aClass229_5417.get((long) i_1);
 		}
 		if (class449_3 != null) {
 			return class449_3;
 		} else {
 			byte[] bytes_8 = this.aClass317_5418.getFile(SharedConfigsType.SCT_24.id, i_1);
-			class449_3 = new SCT24Definitions();
+			class449_3 = new VarnDefinitions();
 			if (bytes_8 != null) {
 				class449_3.method7487(new RsByteBuffer(bytes_8));
 			}
@@ -40,7 +40,7 @@ public class SCT24IndexLoader {
 		}
 	}
 
-	public SCT24IndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
+	public VarnIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5418 = index_3;
 		if (this.aClass317_5418 != null) {
 			this.aClass317_5418.filesCount(SharedConfigsType.SCT_24.id);

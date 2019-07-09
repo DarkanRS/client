@@ -29,7 +29,7 @@ public class Class16 {
 			action = new CutsceneAction_Sub20(buffer);
 			break;
 		case 2:
-			action = new CutsceneAction_Sub14(buffer);
+			action = new ApplyHitmarkCutsceneAction(buffer);
 		case 3:
 		case 7:
 		case 21:
@@ -39,10 +39,10 @@ public class Class16 {
 			action = new CutsceneAction_Sub4(buffer);
 			break;
 		case 5:
-			action = new CutsceneAction_Sub21(buffer);
+			action = new PlaySoundJingleCutsceneAction(buffer);
 			break;
 		case 6:
-			action = new CutsceneAction_Sub8(buffer);
+			action = new PlaySoundVorbisCutsceneAction(buffer);
 			break;
 		case 8:
 			action = new CutsceneAction_Sub5(buffer);
@@ -60,7 +60,7 @@ public class Class16 {
 			action = new CutsceneAction_Sub7(buffer);
 			break;
 		case 13:
-			action = new CutsceneAction_Sub3(buffer);
+			action = new ObjectAnimationCutsceneAction(buffer);
 			break;
 		case 14:
 			action = new CutsceneAction_Sub10_Sub2(buffer);
@@ -69,7 +69,7 @@ public class Class16 {
 			action = new ProjectileCutsceneAction(buffer, 0, 0);
 			break;
 		case 16:
-			action = new CutsceneAction_Sub1(buffer);
+			action = new SendFinishedCutsceneAction(buffer);
 			break;
 		case 17:
 			action = new CutsceneAction_Sub17(buffer);
@@ -87,7 +87,7 @@ public class Class16 {
 			action = new CutsceneAction_Sub12(buffer);
 			break;
 		case 23:
-			action = new CutsceneAction_Sub13(buffer);
+			action = new PlaySynthCutsceneAction(buffer);
 			break;
 		case 24:
 			action = new ProjectileCutsceneAction(buffer, 0, 1);

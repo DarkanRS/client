@@ -97,12 +97,12 @@ public class Class250 {
 	}
 
 	static void method4297(int i_0) {
-		CutsceneAction_Sub21.keyRecorder.method3238();
+		PlaySoundJingleCutsceneAction.keyRecorder.method3238();
 		Class163.mouseRecorder.method3584();
 		Class308.aclient3620.method4704(2044329067);
 		Class351.gameCanvas.setBackground(Color.black);
 		client.CURRENT_CURSOR = -1;
-		CutsceneAction_Sub21.keyRecorder = Class325.method5787(Class351.gameCanvas);
+		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -106);
 	}
 

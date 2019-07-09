@@ -27,7 +27,7 @@ public class Node_Sub46 extends Node {
 			i_9 = (int) ((float) i_4 / Class291_Sub1.aFloat3468) + MapSpriteIndexLoader.anInt5123;
 			int i_10 = Class475.anInt5624 - (int) ((float) i_5 / Class291_Sub1.aFloat3468);
 			MapRegionLoaderTask.anInt3991 = MapSpriteIndexLoader.anInt5123 - (int) ((float) i_4 / Class291_Sub1.aFloat3468);
-			SCT25Definitions.anInt5765 = Class475.anInt5624 - (int) ((float) i_5 / Class291_Sub1.aFloat3468);
+			VarnBitDefinitions.anInt5765 = Class475.anInt5624 - (int) ((float) i_5 / Class291_Sub1.aFloat3468);
 			Class488.anInt5760 = (int) ((float) (i_4 * 2) / Class291_Sub1.aFloat3468);
 			Class351.anInt4097 = (int) ((float) (i_5 * 2) / Class291_Sub1.aFloat3468);
 			Class291_Sub1.method5139(i_17 + Class291_Sub1.anInt3472, i_8 + Class291_Sub1.anInt3473, i_9 + Class291_Sub1.anInt3472, i_10 + Class291_Sub1.anInt3473, i_2, i_3, i_2 + i_4, i_3 + i_5 + 1);

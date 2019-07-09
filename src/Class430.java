@@ -23,7 +23,7 @@ public class Class430 {
 	}
 
 	public static void method7217() {
-		Class506.aClass223_5857.method3760();
+		Class506.CS2_CACHE.method3760();
 	}
 
 	static final int method7220(int i_0, int i_1, int i_2, int i_3, int i_4) {

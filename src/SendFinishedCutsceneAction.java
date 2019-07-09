@@ -1,4 +1,4 @@
-public class CutsceneAction_Sub1 extends CutsceneAction {
+public class SendFinishedCutsceneAction extends CutsceneAction {
 
 	public static int anInt8307;
 	static int anInt8308;
@@ -11,7 +11,7 @@ public class CutsceneAction_Sub1 extends CutsceneAction {
 		Preference_Sub21.method12869(true, -748080019);
 	}
 
-	CutsceneAction_Sub1(RsByteBuffer rsbytebuffer_1) {
+	SendFinishedCutsceneAction(RsByteBuffer rsbytebuffer_1) {
 		super(rsbytebuffer_1);
 	}
 

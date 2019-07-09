@@ -134,16 +134,16 @@ public class SunDefinitions {
 				++i_12;
 			}
 			if (Class20.aCacheableNode_Sub15_163 != null) {
-				Animation_Sub2.method12680(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, b_6, fontrenderer_7, fontmetrics_8, Class20.aCacheableNode_Sub15_163.aString9771);
+				Animation_Sub2.method12680(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, ObjectAnimationCutsceneAction.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, b_6, fontrenderer_7, fontmetrics_8, Class20.aCacheableNode_Sub15_163.aString9771);
 				i_12 = 0;
 				for (class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7955(-889659924)) {
 					i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.topPadding + CacheableNode_Sub2.anInt9471 + 1;
-					if (i_10 > Class341.anInt3996 && i_10 < CutsceneAction_Sub3.anInt8518 + Class341.anInt3996 && i_11 > i_14 - fontmetrics_8.topPadding - 1 && i_11 < i_14 + fontmetrics_8.bottomPadding && class282_sub50_sub7_13.aBool9583) {
-						graphicalrenderer_0.B(Class341.anInt3996, i_14 - fontmetrics_8.topPadding, CutsceneAction_Sub3.anInt8518, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
+					if (i_10 > Class341.anInt3996 && i_10 < ObjectAnimationCutsceneAction.anInt8518 + Class341.anInt3996 && i_11 > i_14 - fontmetrics_8.topPadding - 1 && i_11 < i_14 + fontmetrics_8.bottomPadding && class282_sub50_sub7_13.aBool9583) {
+						graphicalrenderer_0.B(Class341.anInt3996, i_14 - fontmetrics_8.topPadding, ObjectAnimationCutsceneAction.anInt8518, Class20.anInt178, i_9 << 24 | Class20.anInt188, 1);
 					}
 					++i_12;
 				}
-				Class487.method8209(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, b_6, (byte) 61);
+				Class487.method8209(graphicalrenderer_0, Class341.anInt3996, CacheableNode_Sub2.anInt9471, ObjectAnimationCutsceneAction.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, b_6, (byte) 61);
 			}
 		}
 		Class487.method8209(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, (byte) -15);
@@ -169,7 +169,7 @@ public class SunDefinitions {
 				i_12 = 0;
 				for (class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7941(); class282_sub50_sub7_13 != null; class282_sub50_sub7_13 = (CacheableNode_Sub7) Class20.aCacheableNode_Sub15_163.aClass477_9770.method7955(-2102750964)) {
 					i_14 = b_6 + i_12 * Class20.anInt178 + fontmetrics_8.topPadding + CacheableNode_Sub2.anInt9471 + 1;
-					Node_Sub25.method12400(i_10, i_11, Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, i_14, class282_sub50_sub7_13, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, 50305852);
+					Node_Sub25.method12400(i_10, i_11, Class341.anInt3996, CacheableNode_Sub2.anInt9471, ObjectAnimationCutsceneAction.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526, i_14, class282_sub50_sub7_13, fontrenderer_7, fontmetrics_8, Class388.anInt4722 | ~0xffffff, Class99.anInt1005 | ~0xffffff, 50305852);
 					++i_12;
 				}
 			}

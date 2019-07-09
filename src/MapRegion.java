@@ -592,7 +592,7 @@ public class MapRegion {
 		} else {
 			Class296.anInt3534 -= i_3;
 			Node_Sub44.anInt8064 -= i_4;
-			CutsceneAction_Sub13.anInt9368 -= i_3;
+			PlaySynthCutsceneAction.anInt9368 -= i_3;
 			OutgoingLoginPacket.anInt4280 -= i_4;
 			IdentitiKitIndexLoader.anInt361 -= i_3 * 512;
 			Class246.anInt3029 -= i_4 * 512;

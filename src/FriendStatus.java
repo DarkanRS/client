@@ -164,7 +164,7 @@ public class FriendStatus {
 					int i_5;
 					CacheableNode_Sub7 class282_sub50_sub7_8;
 					Class469 class469_15;
-					if (Class20.aCacheableNode_Sub15_163 != null && i_3 >= Class341.anInt3996 && i_3 <= Class341.anInt3996 + CutsceneAction_Sub3.anInt8518 && i_4 >= CacheableNode_Sub2.anInt9471 && i_4 <= Transform_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471) {
+					if (Class20.aCacheableNode_Sub15_163 != null && i_3 >= Class341.anInt3996 && i_3 <= Class341.anInt3996 + ObjectAnimationCutsceneAction.anInt8518 && i_4 >= CacheableNode_Sub2.anInt9471 && i_4 <= Transform_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471) {
 						i_5 = -1;
 						for (i_6 = 0; i_6 < Class20.aCacheableNode_Sub15_163.anInt9769; i_6++) {
 							if (Class20.aBool187) {
@@ -253,7 +253,7 @@ public class FriendStatus {
 				} else {
 					bool_16 = false;
 					if (Class20.aCacheableNode_Sub15_163 != null) {
-						if (i_3 >= Class341.anInt3996 - 10 && i_3 <= CutsceneAction_Sub3.anInt8518 + Class341.anInt3996 + 10 && i_4 >= CacheableNode_Sub2.anInt9471 - 10 && i_4 <= Transform_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471 + 10) {
+						if (i_3 >= Class341.anInt3996 - 10 && i_3 <= ObjectAnimationCutsceneAction.anInt8518 + Class341.anInt3996 + 10 && i_4 >= CacheableNode_Sub2.anInt9471 - 10 && i_4 <= Transform_Sub1_Sub5_Sub1.anInt10526 + CacheableNode_Sub2.anInt9471 + 10) {
 							bool_16 = true;
 						} else {
 							Class404.method6810(988728251);

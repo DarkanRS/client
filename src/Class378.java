@@ -162,8 +162,8 @@ public class Class378 {
 		IndexLoaders.SPOT_ANIM_LOADER.method8847();
 		IndexLoaders.VARBIT_LOADER.method3898();
 		IndexLoaders.VAR_LOADER.method6386();
-		IndexLoaders.SCT24_LOADER.method7452();
-		IndexLoaders.SCT25_LOADER.method8320();
+		IndexLoaders.VARN_LOADER.method7452();
+		IndexLoaders.VARNBIT_LOADER.method8320();
 		IndexLoaders.CLAN_VAR_LOADER.method6755();
 		IndexLoaders.CLAN_VAR_SETTINGS_LOADER.method3923();
 		IndexLoaders.RENDER_ANIM_LOADER.method3615();

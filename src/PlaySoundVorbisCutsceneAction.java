@@ -1,4 +1,4 @@
-public class CutsceneAction_Sub8 extends CutsceneAction {
+public class PlaySoundVorbisCutsceneAction extends CutsceneAction {
 
 	Class268 aClass268_9271;
 
@@ -14,7 +14,7 @@ public class CutsceneAction_Sub8 extends CutsceneAction {
 		this.aClass268_9271 = Class435.playSoundVorbis(this.anInt9270, this.anInt9268, 0, this.anInt9269, false, this.anInt9272);
 	}
 
-	CutsceneAction_Sub8(RsByteBuffer rsbytebuffer_1) {
+	PlaySoundVorbisCutsceneAction(RsByteBuffer rsbytebuffer_1) {
 		super(rsbytebuffer_1);
 		this.anInt9270 = rsbytebuffer_1.readUnsignedShort();
 		this.anInt9269 = rsbytebuffer_1.readUnsignedByte();

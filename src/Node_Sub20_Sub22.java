@@ -148,7 +148,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 						if (client.anInt7341 == 1) {
 							Class155.method2636();
 							GrandExchangeSlot.method5916();
-						} else if (Node_Sub13.DEFAULTS_LOADER_8.inputSubscriber.valid(class282_sub53_13, client.keyRecords, client.maximumHeldKeys, CutsceneAction_Sub21.keyRecorder)) {
+						} else if (Node_Sub13.DEFAULTS_LOADER_8.inputSubscriber.valid(class282_sub53_13, client.keyRecords, client.maximumHeldKeys, PlaySoundJingleCutsceneAction.keyRecorder)) {
 							Preference_Sub21.method12869(false, -200546110);
 						} else {
 							if (client.anInt7341 == 3 && LoadingStage.method6684(client.CURRENT_CUTSCENE)) {
@@ -240,7 +240,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 																Class161.method2827(1342280577);
 															}
 															FriendStatus.method7703();
-															if (client.rights > 0 && CutsceneAction_Sub21.keyRecorder.held(82) && CutsceneAction_Sub21.keyRecorder.held(81) && client.anInt7191 != 0) {
+															if (client.rights > 0 && PlaySoundJingleCutsceneAction.keyRecorder.held(82) && PlaySoundJingleCutsceneAction.keyRecorder.held(81) && client.anInt7191 != 0) {
 																i_2 = VertexNormal.MY_PLAYER.plane - client.anInt7191;
 																if (i_2 < 0) {
 																	i_2 = 0;
@@ -248,7 +248,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 																	i_2 = 3;
 																}
 																CoordGrid coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-																SCT24IndexLoader.method7460(i_2, VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_12.x, VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_12.y, -1104014965);
+																VarnIndexLoader.method7460(i_2, VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_12.x, VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_12.y, -1104014965);
 															}
 															for (i_2 = 0; i_2 < 5; i_2++) {
 																++client.anIntArray7435[i_2];

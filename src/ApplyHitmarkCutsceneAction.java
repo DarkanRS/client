@@ -1,4 +1,4 @@
-public class CutsceneAction_Sub14 extends CutsceneAction {
+public class ApplyHitmarkCutsceneAction extends CutsceneAction {
 
     int anInt9369;
 
@@ -15,7 +15,7 @@ public class CutsceneAction_Sub14 extends CutsceneAction {
         animable_2.applyHit(this.anInt9370, this.anInt9371, this.anInt9373, this.anInt9372, client.cycles, 0);
     }
 
-    CutsceneAction_Sub14(RsByteBuffer rsbytebuffer_1) {
+    ApplyHitmarkCutsceneAction(RsByteBuffer rsbytebuffer_1) {
         super(rsbytebuffer_1);
         this.anInt9369 = rsbytebuffer_1.readUnsignedShort();
         int i_2 = rsbytebuffer_1.readUnsignedByte();

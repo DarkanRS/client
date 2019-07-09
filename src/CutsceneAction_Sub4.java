@@ -167,8 +167,8 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 			}
 
 			if (clickType == 60) {
-				if (client.rights > 0 && CutsceneAction_Sub8.method14577()) {
-					SCT24IndexLoader.method7460(VertexNormal.MY_PLAYER.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1797867076);
+				if (client.rights > 0 && PlaySoundVorbisCutsceneAction.method14577()) {
+					VarnIndexLoader.method7460(VertexNormal.MY_PLAYER.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1797867076);
 				} else {
 					client.anInt7293 = i_1;
 					client.anInt7294 = i_2;
@@ -182,8 +182,8 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 			}
 
 			if (clickType == 23) {
-				if (client.rights > 0 && CutsceneAction_Sub8.method14577()) {
-					SCT24IndexLoader.method7460(VertexNormal.MY_PLAYER.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
+				if (client.rights > 0 && PlaySoundVorbisCutsceneAction.method14577()) {
+					VarnIndexLoader.method7460(VertexNormal.MY_PLAYER.plane, i_4 + coordgrid_10.x, i_5 + coordgrid_10.y, -1328310024);
 				} else {
 					tcpmessage_13 = CutsceneArea.method12078(i_4, i_5, i_7);
 					if (i_7 == 1) {

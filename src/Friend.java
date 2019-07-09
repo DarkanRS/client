@@ -10,7 +10,7 @@ public class Friend {
 	static int anInt46;
 
 	static boolean method302(InputSubscriber interface17_0, MouseRecord class282_sub53_1) {
-		return interface17_0 != null && interface17_0.valid(class282_sub53_1, client.keyRecords, client.maximumHeldKeys, CutsceneAction_Sub21.keyRecorder);
+		return interface17_0 != null && interface17_0.valid(class282_sub53_1, client.keyRecords, client.maximumHeldKeys, PlaySoundJingleCutsceneAction.keyRecorder);
 	}
 
 	static void method303(int i_0, int i_1, int i_2) {

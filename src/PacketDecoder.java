@@ -2543,7 +2543,7 @@ public class PacketDecoder {
 				i_14 = objectdefinitions_32.modifiedTextures.length;
 			}
 			if ((i_8 & 0x1) == 1) {
-				SCT25Definitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, (Class476) null, (byte) -37);
+				VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, (Class476) null, (byte) -37);
 			} else {
 				int[] ints_28 = null;
 				if ((i_8 & 0x2) == 2) {
@@ -2566,7 +2566,7 @@ public class PacketDecoder {
 						shorts_37[i_18] = (short) buffer.readUnsignedShort();
 					}
 				}
-				SCT25Definitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, new Class476(Node_Sub31.aLong7777, ints_28, shorts_29, shorts_37), (byte) 79);
+				VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, new Class476(Node_Sub31.aLong7777, ints_28, shorts_29, shorts_37), (byte) 79);
 				++Node_Sub31.aLong7777;
 			}
 		} else if (TilestreamPacket.TILE_MESSAGE == packet) {

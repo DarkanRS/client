@@ -24,8 +24,8 @@ public class Class356 {
 			IndexLoaders.SPOT_ANIM_LOADER.method8848();
 			IndexLoaders.VARBIT_LOADER.method3903();
 			IndexLoaders.VAR_LOADER.method6388();
-			IndexLoaders.SCT24_LOADER.method7458();
-			IndexLoaders.SCT25_LOADER.method8319();
+			IndexLoaders.VARN_LOADER.method7458();
+			IndexLoaders.VARNBIT_LOADER.method8319();
 			IndexLoaders.CLAN_VAR_LOADER.method6754();
 			IndexLoaders.CLAN_VAR_SETTINGS_LOADER.method3924();
 			IndexLoaders.RENDER_ANIM_LOADER.method3617();

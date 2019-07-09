@@ -149,7 +149,7 @@ public class Class190 {
 		SpotAnimDefinitions.anInt6985 = 0;
 		Class454.anInt5451 = 0;
 		Class115.anInt1249 = 0;
-		CutsceneAction_Sub13.anInt9368 = 0;
+		PlaySynthCutsceneAction.anInt9368 = 0;
 		OutgoingLoginPacket.anInt4280 = 0;
 		Class121.anInt1527 = 0;
 		LinkedNodeList.anInt5606 = 0;

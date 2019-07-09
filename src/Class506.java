@@ -2,7 +2,7 @@ public class Class506 {
 
 	static int USE_OPTIONS_FLAGS;
 
-	static Class223 aClass223_5857 = new Class223(128);
+	static Class223 CS2_CACHE = new Class223(128);
 
 	Class506() throws Throwable {
 		throw new Error();

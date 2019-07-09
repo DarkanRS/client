@@ -475,7 +475,7 @@ public class Login {
                             Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.anInt1572);
                             (new Thread(Class119.HOSTNAME_IDENTIFIER)).start();
                             InputSubscriberType.anInt2762 = rsbitsbuffer_19.readUnsignedByte();
-                            CutsceneAction_Sub1.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
+                            SendFinishedCutsceneAction.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
                             Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
                             Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString();

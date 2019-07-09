@@ -404,7 +404,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 			}
 		}
 
-		i_1 = CutsceneAction_Sub13.anInt9368 * 512 + 256;
+		i_1 = PlaySynthCutsceneAction.anInt9368 * 512 + 256;
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
 		i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 54) - Class121.anInt1527;
 		int i_4 = i_1 - IdentitiKitIndexLoader.anInt361;

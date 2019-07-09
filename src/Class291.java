@@ -1014,7 +1014,7 @@ public class Class291 {
 
 							int i_23 = i_22 + (i_3 + i_21 & 0xfc00) + (i_21 & 0x380);
 							int i_24 = i_10 + i_18 * xLength;
-							int i_25 = Class335.anIntArray3916[Class372.method6362(CutsceneAction_Sub21.method14677(i_23, 96), 880885246) & 0xffff];
+							int i_25 = Class335.anIntArray3916[Class372.method6362(PlaySoundJingleCutsceneAction.method14677(i_23, 96), 880885246) & 0xffff];
 							bytes_1[i_24] = (byte) (i_25 >> 16 & 0xff);
 							shorts_2[i_24] = (short) (i_25 & 0xffff);
 						}

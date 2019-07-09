@@ -92,7 +92,7 @@ public class LoadingStage {
 			int i_9 = i_7 * Class488.anInt5760 / Class291_Sub1.xLength;
 			int i_10 = i_8 * Class351.anInt4097 / Class291_Sub1.yLength;
 			int i_11 = i_7 * MapRegionLoaderTask.anInt3991 / Class291_Sub1.xLength + i_1;
-			int i_12 = i_8 + i_2 - i_8 * SCT25Definitions.anInt5765 / Class291_Sub1.yLength - i_10;
+			int i_12 = i_8 + i_2 - i_8 * VarnBitDefinitions.anInt5765 / Class291_Sub1.yLength - i_10;
 			int i_13 = -1996554240;
 			if (Game.stellarDawn == client.CURRENT_GAME) {
 				i_13 = -1996488705;

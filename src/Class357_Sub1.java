@@ -26,8 +26,8 @@ public class Class357_Sub1 extends Class357 {
 		IndexLoaders.SPOT_ANIM_LOADER.method8849();
 		IndexLoaders.VARBIT_LOADER.method3899();
 		IndexLoaders.VAR_LOADER.method6390();
-		IndexLoaders.SCT24_LOADER.method7453();
-		IndexLoaders.SCT25_LOADER.method8321();
+		IndexLoaders.VARN_LOADER.method7453();
+		IndexLoaders.VARNBIT_LOADER.method8321();
 		IndexLoaders.CLAN_VAR_LOADER.method6756();
 		IndexLoaders.CLAN_VAR_SETTINGS_LOADER.method3926();
 		IndexLoaders.RENDER_ANIM_LOADER.method3618();

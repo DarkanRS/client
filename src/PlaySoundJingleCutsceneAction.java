@@ -1,4 +1,4 @@
-public class CutsceneAction_Sub21 extends CutsceneAction {
+public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 
 	public static KeyRecorder keyRecorder;
 	int anInt9437;
@@ -8,7 +8,7 @@ public class CutsceneAction_Sub21 extends CutsceneAction {
 		Huffman.playSoundJingle(this.anInt9437, 0, this.anInt9436);
 	}
 
-	CutsceneAction_Sub21(RsByteBuffer rsbytebuffer_1) {
+	PlaySoundJingleCutsceneAction(RsByteBuffer rsbytebuffer_1) {
 		super(rsbytebuffer_1);
 		this.anInt9437 = rsbytebuffer_1.readUnsignedShort();
 		this.anInt9436 = rsbytebuffer_1.readUnsignedByte();

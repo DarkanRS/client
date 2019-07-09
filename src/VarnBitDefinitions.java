@@ -1,4 +1,4 @@
-public class SCT25Definitions {
+public class VarnBitDefinitions {
 
 	static int anInt5765;
 	public int anInt5764;

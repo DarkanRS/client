@@ -11,7 +11,7 @@ public class ImageIndexLoader implements Interface22 {
 	TextureDetails[] textures;
 
 	TextureDefinition method5770(int i_1, int i_2) {
-		CacheableNode cacheablenode_3 = this.aClass223_3754.method3758((long) i_1);
+		CacheableNode cacheablenode_3 = this.aClass223_3754.get((long) i_1);
 		if (cacheablenode_3 != null) {
 			return (TextureDefinition) cacheablenode_3;
 		} else {
@@ -20,7 +20,7 @@ public class ImageIndexLoader implements Interface22 {
 				return null;
 			} else {
 				TextureDefinition texturedefinition_5 = new TextureDefinition(new RsByteBuffer(bytes_4));
-				this.aClass223_3754.method3759(texturedefinition_5, (long) i_1);
+				this.aClass223_3754.put(texturedefinition_5, (long) i_1);
 				return texturedefinition_5;
 			}
 		}

@@ -36,7 +36,7 @@ public class Class316 {
 	}
 
 	public static byte[] method5588(int i_0, int i_1) {
-		CacheableNode_Sub2 class282_sub50_sub2_2 = (CacheableNode_Sub2) aClass223_3679.method3758((long) i_0);
+		CacheableNode_Sub2 class282_sub50_sub2_2 = (CacheableNode_Sub2) aClass223_3679.get((long) i_0);
 		if (class282_sub50_sub2_2 == null) {
 			byte[] bytes_3 = new byte[512];
 			Random random_4 = new Random((long) i_0);
@@ -52,7 +52,7 @@ public class Class316 {
 				bytes_3[i_6] = bytes_3[511 - i_5] = b_8;
 			}
 			class282_sub50_sub2_2 = new CacheableNode_Sub2(bytes_3);
-			aClass223_3679.method3759(class282_sub50_sub2_2, (long) i_0);
+			aClass223_3679.put(class282_sub50_sub2_2, (long) i_0);
 		}
 		return class282_sub50_sub2_2.aByteArray9472;
 	}

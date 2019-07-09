@@ -1028,7 +1028,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 			int i_9 = (int) class282_sub47_8.data;
 			Node_Sub14 class282_sub14_10 = (Node_Sub14) this.aClass465_9694.get((long) i_9);
 			if (class282_sub14_10 == null) {
-				class282_sub14_10 = CutsceneAction_Sub21.method14676(index_2, i_9);
+				class282_sub14_10 = PlaySoundJingleCutsceneAction.method14676(index_2, i_9);
 				if (class282_sub14_10 == null) {
 					bool_6 = false;
 					continue;

@@ -44,7 +44,7 @@ public enum OutgoingPacket {
 	MINI_WALK(42, 18),
 	GROUND_ITEM_CLICK_5(43, 7),
 	SEND_FPS(44, 9),
-	aClass379_4572(45, 1), //cutscene related
+	CUTSCENE_FINISHED(45, 1),
 	ICOMPONENT_ON_TILE(46, 12),
 	REQUEST_WORLD_LIST(47, 4),
 	OBJECT_CLICK_5(48, 9),

@@ -114,7 +114,7 @@ public class QuickchatFiller implements Interface19 {
 								}
 							}
 						}
-					} else if (Class20.aCacheableNode_Sub15_163 != null && i_2 > Class341.anInt3996 && i_2 < CutsceneAction_Sub3.anInt8518 + Class341.anInt3996) {
+					} else if (Class20.aCacheableNode_Sub15_163 != null && i_2 > Class341.anInt3996 && i_2 < ObjectAnimationCutsceneAction.anInt8518 + Class341.anInt3996) {
 						i_4 = -1;
 						for (i_5 = 0; i_5 < Class20.aCacheableNode_Sub15_163.anInt9769; i_5++) {
 							if (Class20.aBool187) {

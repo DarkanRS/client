@@ -17,13 +17,13 @@ public final class VarNPCMap {
 		if (class282_sub38_3 != null) {
 			return class282_sub38_3.value;
 		} else {
-			SCT24Definitions class449_4 = IndexLoaders.SCT24_LOADER.method7450(i_1);
+			VarnDefinitions class449_4 = IndexLoaders.VARN_LOADER.method7450(i_1);
 			return class449_4.aChar5431 != 105 ? -1 : 0;
 		}
 	}
 
 	public int getVarnBit(int i_1) {
-		SCT25Definitions class489_3 = IndexLoaders.SCT25_LOADER.method8322(i_1);
+		VarnBitDefinitions class489_3 = IndexLoaders.VARNBIT_LOADER.method8322(i_1);
 		int i_4 = class489_3.anInt5764;
 		int i_5 = class489_3.anInt5762 == 31 ? -1 : (1 << class489_3.anInt5762 + 1) - 1;
 		return (this.getVarn(i_4) & i_5) >>> class489_3.anInt5763;

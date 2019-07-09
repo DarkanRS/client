@@ -19,7 +19,7 @@ public class Class404 {
 	static void method6810(int i_0) {
 		if (Class20.aCacheableNode_Sub15_163 != null) {
 			Class20.aCacheableNode_Sub15_163 = null;
-			Class292.method5201(Class341.anInt3996, CacheableNode_Sub2.anInt9471, CutsceneAction_Sub3.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526);
+			Class292.method5201(Class341.anInt3996, CacheableNode_Sub2.anInt9471, ObjectAnimationCutsceneAction.anInt8518, Transform_Sub1_Sub5_Sub1.anInt10526);
 		}
 
 	}

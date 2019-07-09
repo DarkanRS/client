@@ -68,8 +68,8 @@ public class IndexLoaders {
 	public static VarcIndexLoader VARC_LOADER;
 	public static VarBitIndexLoader VARBIT_LOADER;
 	public static VarDefinitionLoader VAR_LOADER;
-	public static SCT24IndexLoader SCT24_LOADER;
-	public static SCT25IndexLoader SCT25_LOADER;
+	public static VarnIndexLoader VARN_LOADER;
+	public static VarnBitIndexLoader VARNBIT_LOADER;
 	public static ClanVarIndexLoader CLAN_VAR_LOADER;
 	public static ClanVarSettingsIndexLoader CLAN_VAR_SETTINGS_LOADER;
 	public static QuickchatCategoryLoader QUICK_CHAT_CATEGORY_LOADER;
@@ -290,8 +290,8 @@ public class IndexLoaders {
 			VARC_LOADER = new VarcIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			VARBIT_LOADER = new VarBitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, VARBIT_INDEX);
 			VAR_LOADER = new VarDefinitionLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			SCT24_LOADER = new SCT24IndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			SCT25_LOADER = new SCT25IndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
+			VARN_LOADER = new VarnIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
+			VARNBIT_LOADER = new VarnBitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			CLAN_VAR_LOADER = new ClanVarIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			CLAN_VAR_SETTINGS_LOADER = new ClanVarSettingsIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			Class403.method6803(INTERFACE_INDEX, MESH_INDEX, SPRITES_INDEX, FONT_METRICS_INDEX);

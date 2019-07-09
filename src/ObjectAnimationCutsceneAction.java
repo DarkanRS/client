@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 
-public class CutsceneAction_Sub3 extends CutsceneAction {
+public class ObjectAnimationCutsceneAction extends CutsceneAction {
 
 	static int anInt8518;
 
@@ -27,7 +27,7 @@ public class CutsceneAction_Sub3 extends CutsceneAction {
 		Class9.animateObject(-1318859227 * class92_1.anInt965 * 1968020909, class92_1.anInt962 * 1631065949 * -76417803, -987984923 * class92_1.anInt966 * -1041057299, class92_1.aClass458_963.anInt5494 * -259002495 * 480268417, class92_1.aClass458_963.type * 2087055829 * 1109376893, -71092145 * class92_1.anInt967 * 1405673135, this.anInt8517 * 450467189 * -45034787);
 	}
 
-	CutsceneAction_Sub3(RsByteBuffer rsbytebuffer_1) {
+	ObjectAnimationCutsceneAction(RsByteBuffer rsbytebuffer_1) {
 		super(rsbytebuffer_1);
 		this.anInt8516 = rsbytebuffer_1.readUnsignedShort();
 		this.anInt8517 = rsbytebuffer_1.readBigSmart();

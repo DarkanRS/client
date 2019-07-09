@@ -99,7 +99,7 @@ public class Class151 {
         try {
             String str_3 = "";
             if (throwable_1 != null) {
-                str_3 = CutsceneAction_Sub3.method13787(throwable_1);
+                str_3 = ObjectAnimationCutsceneAction.method13787(throwable_1);
             }
             if (string_0 != null) {
                 if (throwable_1 != null) {

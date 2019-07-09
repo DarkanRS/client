@@ -12,7 +12,7 @@ public final class Class223 {
 
 	IterableNodeMap aClass465_2771;
 
-	public CacheableNode method3758(long long_1) {
+	public CacheableNode get(long long_1) {
 		CacheableNode cacheablenode_3 = (CacheableNode) this.aClass465_2771.get(long_1);
 		if (cacheablenode_3 != null) {
 			this.aClass477_2767.method7936(cacheablenode_3);
@@ -20,7 +20,7 @@ public final class Class223 {
 		return cacheablenode_3;
 	}
 
-	public void method3759(CacheableNode cacheablenode_1, long long_2) {
+	public void put(CacheableNode cacheablenode_1, long long_2) {
 		if (this.anInt2769 == 0) {
 			CacheableNode cacheablenode_4 = this.aClass477_2767.method7937(600411374);
 			cacheablenode_4.remove();

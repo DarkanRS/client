@@ -15,8 +15,6 @@ public abstract class CutsceneAction {
 		return true;
 	}
 
-	public abstract void method1601();
-
 	public static RSInterface method1605(int i_0) {
 		return CustomCursorsPreference.INTERFACES[i_0 >> 16];
 	}

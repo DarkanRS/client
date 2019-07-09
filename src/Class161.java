@@ -16,7 +16,7 @@ public class Class161 {
 
 	static final void method2827(int i_0) {
 		Class109.redrawComponent(client.aClass118_7257);
-		++CutsceneAction_Sub1.anInt8308;
+		++SendFinishedCutsceneAction.anInt8308;
 		if (client.aBool7369 && client.aBool7403) {
 			int i_1 = Class163.mouseRecorder.getMouseX();
 			int i_2 = Class163.mouseRecorder.getMouseY();
@@ -67,7 +67,7 @@ public class Class161 {
 				client.aClass118_7257 = null;
 				client.aClass118_7247 = null;
 			} else {
-				if (CutsceneAction_Sub1.anInt8308 > client.aClass118_7257.anInt1381) {
+				if (SendFinishedCutsceneAction.anInt8308 > client.aClass118_7257.anInt1381) {
 					int i_7 = i_1 - client.anInt7252;
 					int i_6 = i_2 - client.anInt7215;
 					if (i_7 > client.aClass118_7257.anInt1380 || i_7 < -client.aClass118_7257.anInt1380 || i_6 > client.aClass118_7257.anInt1380 || i_6 < -client.aClass118_7257.anInt1380) {
@@ -83,7 +83,7 @@ public class Class161 {
 					CS2Executor.executeHookInner200k(hookrequest_5, 814557204);
 				}
 			}
-		} else if (CutsceneAction_Sub1.anInt8308 > 1) {
+		} else if (SendFinishedCutsceneAction.anInt8308 > 1) {
 			client.aClass118_7257 = null;
 			client.aClass118_7247 = null;
 		}

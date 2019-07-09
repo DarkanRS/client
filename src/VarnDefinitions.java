@@ -1,4 +1,4 @@
-public class SCT24Definitions {
+public class VarnDefinitions {
 
 	public char aChar5431;
 

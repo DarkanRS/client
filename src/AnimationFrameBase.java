@@ -81,7 +81,7 @@ public class AnimationFrameBase extends Node {
 
 			Class341.anInt3996 = i_6;
 			CacheableNode_Sub2.anInt9471 = i_8;
-			CutsceneAction_Sub3.anInt8518 = i_4;
+			ObjectAnimationCutsceneAction.anInt8518 = i_4;
 			Class20.aCacheableNode_Sub15_163 = class282_sub50_sub15_0;
 		}
 
