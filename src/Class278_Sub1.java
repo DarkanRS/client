@@ -167,8 +167,8 @@ public class Class278_Sub1 extends Class278 {
         if (Class320.aClass253_3723 != null) {
             Class320.aClass253_3723.method4335();
         }
-        if (Class100.aClass253_1008 != null) {
-            Class100.aClass253_1008.method4335();
+        if (ShaderDecoder.aClass253_1008 != null) {
+            ShaderDecoder.aClass253_1008.method4335();
         }
     }
 }

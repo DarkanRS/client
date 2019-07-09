@@ -12,7 +12,7 @@ public final class Class115_Sub1 extends Class115 {
 	long aLong9286;
 	long aLong9287;
 	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9293;
-	Class101_Sub2 aClass101_Sub2_9294;
+	DirectXShader aClass101_Sub2_9294;
 
 	void method1912(Node_Sub21_Sub1 class282_sub21_sub1_1, float f_2) {
 		int i_3 = ((Node_Sub21_Sub1_Sub1) class282_sub21_sub1_1).method15782();
@@ -495,7 +495,7 @@ public final class Class115_Sub1 extends Class115 {
 		}
 	}
 
-	Class115_Sub1(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class101_Sub2 class101_sub2_2, Class99 class99_3) {
+	Class115_Sub1(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, DirectXShader class101_sub2_2, Class99 class99_3) {
 		this(class505_sub2_sub2_1, class99_3);
 		this.aGraphicalRenderer_Sub2_Sub2_9293 = class505_sub2_sub2_1;
 		this.aClass101_Sub2_9294 = class101_sub2_2;

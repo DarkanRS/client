@@ -3,7 +3,7 @@ import jaggl.OpenGL;
 public class Node_Sub21_Sub1_Sub2 extends Node_Sub21_Sub1 {
 
 	int[] anIntArray10308 = null;
-	Class101_Sub1 aClass101_Sub1_10309;
+	OpenGLShader aClass101_Sub1_10309;
 
 	public final int method15460(int i_1) {
 		return this.anIntArray10308[i_1];
@@ -69,7 +69,7 @@ public class Node_Sub21_Sub1_Sub2 extends Node_Sub21_Sub1 {
 		return this.anIntArray10308[i_1];
 	}
 
-	Node_Sub21_Sub1_Sub2(Class101_Sub1 class101_sub1_1, Class122 class122_2) {
+	Node_Sub21_Sub1_Sub2(OpenGLShader class101_sub1_1, Class122 class122_2) {
 		super(class122_2);
 		this.aClass101_Sub1_10309 = class101_sub1_1;
 	}

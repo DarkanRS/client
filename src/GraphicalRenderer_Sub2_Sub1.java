@@ -39,13 +39,13 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 		return true;
 	}
 
-	public Class101 method13890(String string_1) {
+	public Shader loadShader(String string_1) {
 		byte[] bytes_2 = this.getGLShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {
-			Class114 class114_3 = this.method13891(bytes_2);
-			return new Class101_Sub1(this, class114_3);
+			ShaderLoader class114_3 = this.method13891(bytes_2);
+			return new OpenGLShader(this, class114_3);
 		}
 	}
 
@@ -1636,13 +1636,13 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 
 	}
 
-	public Class101 method14049(String string_1) {
+	public Shader method14049(String string_1) {
 		byte[] bytes_2 = this.getGLShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {
-			Class114 class114_3 = this.method13891(bytes_2);
-			return new Class101_Sub1(this, class114_3);
+			ShaderLoader class114_3 = this.method13891(bytes_2);
+			return new OpenGLShader(this, class114_3);
 		}
 	}
 

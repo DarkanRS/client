@@ -257,7 +257,7 @@ public class Class111 {
 	}
 
 	public static void method1865(String[] arr_0, int[] ints_1, int i_2) {
-		Class101.method1773(arr_0, ints_1, 0, arr_0.length - 1);
+		Shader.method1773(arr_0, ints_1, 0, arr_0.length - 1);
 	}
 
 	public static void method1866(Index index_0) {

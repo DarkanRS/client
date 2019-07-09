@@ -816,13 +816,13 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		return this.getCacheShaderData("dx", string_1);
 	}
 
-	public Class101 method13890(String string_1) {
-		byte[] bytes_2 = this.getDXShaderData(string_1);
+	public Shader loadShader(String name) {
+		byte[] bytes_2 = this.getDXShaderData(name);
 		if (bytes_2 == null) {
 			return null;
 		} else {
-			Class114 class114_3 = this.method13891(bytes_2);
-			return new Class101_Sub2(this, class114_3);
+			ShaderLoader class114_3 = this.method13891(bytes_2);
+			return new DirectXShader(this, class114_3);
 		}
 	}
 
@@ -1150,13 +1150,13 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		return (this.aD3DCAPS10267.PixelShaderVersion & 0xffff) >= 257;
 	}
 
-	public Class101 method14049(String string_1) {
+	public Shader method14049(String string_1) {
 		byte[] bytes_2 = this.getDXShaderData(string_1);
 		if (bytes_2 == null) {
 			return null;
 		} else {
-			Class114 class114_3 = this.method13891(bytes_2);
-			return new Class101_Sub2(this, class114_3);
+			ShaderLoader class114_3 = this.method13891(bytes_2);
+			return new DirectXShader(this, class114_3);
 		}
 	}
 

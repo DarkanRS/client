@@ -1,10 +1,10 @@
-public class Class100 {
+public class ShaderDecoder {
 
     static Class253 aClass253_1008;
     byte[] aByteArray1007;
     int anInt1006;
 
-    Class100(byte[] bytes_1) {
+    ShaderDecoder(byte[] bytes_1) {
         this.aByteArray1007 = bytes_1;
         this.anInt1006 = 0;
     }

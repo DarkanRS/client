@@ -1,4 +1,4 @@
-public abstract class Class101 {
+public abstract class Shader {
 
 	static Interface11 anInterface11_1012 = new Class82();
 
@@ -41,7 +41,7 @@ public abstract class Class101 {
 		throw new Exception_Sub2_Sub1(string_1);
 	}
 
-	Class101(GraphicalRenderer_Sub2 class505_sub2_1, Class114 class114_2) {
+	Shader(GraphicalRenderer_Sub2 class505_sub2_1, ShaderLoader class114_2) {
 		this.aString1014 = class114_2.aString1237;
 		this.anInt1009 = class114_2.aClass122Array1236.length;
 		this.aClass107_1013 = new Class107(this.anInt1009, anInterface11_1012);

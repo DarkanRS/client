@@ -55,7 +55,7 @@ public class QuickchatFiller implements Interface19 {
 					return CutsceneAction_Sub23.aCacheableNode_Sub7_9445.anInt9578;
 				}
 			} else {
-				FontMetrics fontmetrics_1 = Class114.method1887(466263588);
+				FontMetrics fontmetrics_1 = ShaderLoader.method1887(466263588);
 				int i_2 = Class163.mouseRecorder.getMouseX();
 				int i_3 = Class163.mouseRecorder.getMouseY();
 				int i_4;

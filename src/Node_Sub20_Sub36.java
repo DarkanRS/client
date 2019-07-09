@@ -64,8 +64,8 @@ public class Node_Sub20_Sub36 extends Node_Sub20 {
 		Class253.method4330(Class393.preferences.aPreference_Sub10_8215.method12691(-490218326) == 1);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(Node_Sub20_Sub10.method15262((Node_Sub15_Sub2) null, 1928117026), (short) 11196);
-		Class100.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
-		Class100.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
+		ShaderDecoder.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
+		ShaderDecoder.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
 	}
 
 	public static void method15419(String string_0, boolean bool_1) {

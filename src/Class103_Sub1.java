@@ -5,7 +5,7 @@ import java.awt.image.PixelGrabber;
 
 public class Class103_Sub1 extends Class103 {
 
-	Class101 aClass101_9148;
+	Shader aClass101_9148;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9144;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9145;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9149;
@@ -13,7 +13,7 @@ public class Class103_Sub1 extends Class103 {
 	Matrix44Arr aClass384_9147 = new Matrix44Arr();
 
 	boolean method14483() throws Exception_Sub2 {
-		this.aClass101_9148 = this.aGraphicalRenderer_Sub2_1057.method13890("Particle");
+		this.aClass101_9148 = this.aGraphicalRenderer_Sub2_1057.loadShader("Particle");
 		this.aNode_Sub21_Sub1_9144 = this.aClass101_9148.method1691("WVPMatrix", (short) 22417);
 		this.aNode_Sub21_Sub1_9145 = this.aClass101_9148.method1691("DiffuseSampler", (short) 26058);
 		this.aNode_Sub21_Sub1_9149 = this.aClass101_9148.method1691("TexCoordMatrix", (short) 32643);

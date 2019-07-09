@@ -12,7 +12,7 @@ public class Class99 {
 
 	public Class121[] aClass121Array1004;
 
-	void method1628(Class100 class100_1) {
+	void method1628(ShaderDecoder class100_1) {
 		this.aString1003 = class100_1.method1633();
 		this.aString1001 = class100_1.method1633();
 		this.aString1002 = class100_1.method1633();

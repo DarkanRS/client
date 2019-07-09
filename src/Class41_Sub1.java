@@ -2,7 +2,7 @@ public abstract class Class41_Sub1 extends Class41 {
 
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9206;
 	static Matrix44Arr aClass384_9228 = new Matrix44Arr();
-	protected Class101 aClass101_9218;
+	protected Shader aClass101_9218;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9212;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9211;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9204;
@@ -27,7 +27,7 @@ public abstract class Class41_Sub1 extends Class41 {
 	}
 
 	boolean method14523(String string_1) throws Exception_Sub2 {
-		this.aClass101_9218 = this.aGraphicalRenderer_Sub2_413.method13890(string_1);
+		this.aClass101_9218 = this.aGraphicalRenderer_Sub2_413.loadShader(string_1);
 		if (this.aClass101_9218 == null) {
 			throw new Exception_Sub2("");
 		} else {

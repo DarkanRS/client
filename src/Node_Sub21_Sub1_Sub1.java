@@ -2,7 +2,7 @@ public final class Node_Sub21_Sub1_Sub1 extends Node_Sub21_Sub1 {
 
 	int[] anIntArray10306 = null;
 	int[] anIntArray10307 = null;
-	Class101_Sub2 aClass101_Sub2_10305;
+	DirectXShader aClass101_Sub2_10305;
 
 	public final int method15472(int i_1) {
 		int i_2 = this.anIntArray10306[i_1];
@@ -62,7 +62,7 @@ public final class Node_Sub21_Sub1_Sub1 extends Node_Sub21_Sub1 {
 		return true;
 	}
 
-	Node_Sub21_Sub1_Sub1(Class101_Sub2 class101_sub2_1, Class122 class122_2) {
+	Node_Sub21_Sub1_Sub1(DirectXShader class101_sub2_1, Class122 class122_2) {
 		super(class122_2);
 		this.aClass101_Sub2_10305 = class101_sub2_1;
 		this.anIntArray10306 = class122_2.anIntArray1531;

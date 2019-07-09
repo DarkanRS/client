@@ -1,4 +1,4 @@
-public final class Class101_Sub2 extends Class101 {
+public final class DirectXShader extends Shader {
 
 	boolean aBool9361;
 	GraphicalRenderer_Sub2_Sub2 aGraphicalRenderer_Sub2_Sub2_9362;
@@ -30,7 +30,7 @@ public final class Class101_Sub2 extends Class101 {
 		this.aGraphicalRenderer_Sub2_Sub2_9362.method14035((Interface30) null);
 	}
 
-	Class101_Sub2(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, Class114 class114_2) {
+	DirectXShader(GraphicalRenderer_Sub2_Sub2 class505_sub2_sub2_1, ShaderLoader class114_2) {
 		super(class505_sub2_sub2_1, class114_2);
 		this.aGraphicalRenderer_Sub2_Sub2_9362 = class505_sub2_sub2_1;
 		this.aBool9361 = false;

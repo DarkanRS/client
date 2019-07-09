@@ -296,7 +296,7 @@ public class NativeLibraryLoader implements Interface36 {
 
     static void method4653(int i_0, int i_1, int i_2) {
         if (QuickchatFiller.ENTITY_DEFAULTS.aBool7044 || Class20.anInt169 != 1 && (!CutsceneAction_Sub6.aBool9173 || Class20.anInt169 != 2 || !AccountCreationStage.aCacheableNode_Sub7_12.aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE)))) {
-            FontMetrics fontmetrics_3 = Class114.method1887(2016134923);
+            FontMetrics fontmetrics_3 = ShaderLoader.method1887(2016134923);
             int i_4 = fontmetrics_3.getWidthNoSprites(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE));
             int i_5;
             int i_7;

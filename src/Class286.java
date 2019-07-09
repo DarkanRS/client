@@ -188,14 +188,14 @@ public class Class286 implements Runnable {
 				return Class446.aClass194_5416;
 			}
 			if ((double) Class291_Sub1.aFloat3468 == 6.0D) {
-				return Class114.aClass194_1243;
+				return ShaderLoader.aClass194_1243;
 			}
 			if ((double) Class291_Sub1.aFloat3468 >= 8.0D) {
 				return DefaultsFile.aClass194_6967;
 			}
 		} else if (i_0 == 2) {
 			if ((double) Class291_Sub1.aFloat3468 == 3.0D) {
-				return Class114.aClass194_1243;
+				return ShaderLoader.aClass194_1243;
 			}
 			if ((double) Class291_Sub1.aFloat3468 == 4.0D) {
 				return DefaultsFile.aClass194_6967;

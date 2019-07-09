@@ -5,7 +5,7 @@ public class Class48_Sub2 extends Class48 {
 	Matrix44Arr aClass384_9259 = new Matrix44Arr();
 	Class115[] aClass115Array9254 = new Class115[18];
 	int[][] anIntArrayArray9258 = new int[18][17];
-	Class101 aClass101_9257;
+	Shader aClass101_9257;
 
 	public void method954(boolean bool_1) {
 		if (bool_1) {
@@ -234,7 +234,7 @@ public class Class48_Sub2 extends Class48 {
 	}
 
 	boolean method14567() throws Exception_Sub2 {
-		this.aClass101_9257 = this.aGraphicalRenderer_Sub2_449.method13890("Model");
+		this.aClass101_9257 = this.aGraphicalRenderer_Sub2_449.loadShader("Model");
 		Node_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9257.method1691("DiffuseSampler", (short) 32201);
 		Node_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9257.method1691("EnvironmentSampler", (short) 32001);
 		Node_Sub21_Sub1 class282_sub21_sub1_4 = this.aClass101_9257.method1691("PointLightsPosAndRadiusSq", (short) 15792);

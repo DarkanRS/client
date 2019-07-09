@@ -10,6 +10,6 @@ public class Class214 {
 	}
 
 	public static void method3669(long[] longs_0, Object[] arr_1, int i_2) {
-		Class114.method1890(longs_0, arr_1, 0, longs_0.length - 1);
+		ShaderLoader.method1890(longs_0, arr_1, 0, longs_0.length - 1);
 	}
 }

@@ -4,7 +4,7 @@ public final class Class47_Sub1 extends Class47 {
 
     int[] anIntArray9139;
 
-    Class101 aClass101_9124;
+    Shader aClass101_9124;
 
     Class115[] aClass115Array9137 = new Class115[3];
 
@@ -21,7 +21,7 @@ public final class Class47_Sub1 extends Class47 {
     }
 
     boolean method14475() throws Exception_Sub2 {
-        this.aClass101_9124 = this.aGraphicalRenderer_Sub2_439.method13890("Sprite");
+        this.aClass101_9124 = this.aGraphicalRenderer_Sub2_439.loadShader("Sprite");
         Node_Sub21_Sub1 class282_sub21_sub1_2 = this.aClass101_9124.method1691("WVPMatrix", (short) 15174);
         Node_Sub21_Sub1 class282_sub21_sub1_3 = this.aClass101_9124.method1691("SpriteSampler", (short) 14030);
         Node_Sub21_Sub1 class282_sub21_sub1_4 = this.aClass101_9124.method1691("MaskSampler", (short) 25732);

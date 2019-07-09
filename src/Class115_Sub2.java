@@ -17,7 +17,7 @@ public class Class115_Sub2 extends Class115 {
 	float[] aFloatArray9431;
 	float[] aFloatArray9432;
 	int[] anIntArray9433;
-	Class101_Sub1 aClass101_Sub1_9421;
+	OpenGLShader aClass101_Sub1_9421;
 	GraphicalRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_9419;
 
 	void method1928(Node_Sub21_Sub1 class282_sub21_sub1_1, int i_2, Interface30 obj_3) {
@@ -786,7 +786,7 @@ public class Class115_Sub2 extends Class115 {
 		OpenGL.glUniform3fv(i_1, 3, matrix44arr_2.method6544(aFloatArray9427), 0);
 	}
 
-	Class115_Sub2(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class101_Sub1 class101_sub1_2, Class99 class99_3) {
+	Class115_Sub2(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, OpenGLShader class101_sub1_2, Class99 class99_3) {
 		this(class505_sub2_sub1_1, class99_3);
 		this.aClass101_Sub1_9421 = class101_sub1_2;
 		this.aGraphicalRenderer_Sub2_Sub1_9419 = class505_sub2_sub1_1;

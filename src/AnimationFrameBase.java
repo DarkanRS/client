@@ -46,7 +46,7 @@ public class AnimationFrameBase extends Node {
 
 	static void method12212(CacheableNode_Sub15 class282_sub50_sub15_0, int i_1) {
 		if (Class20.aBool161) {
-			FontMetrics fontmetrics_3 = Class114.method1887(-1200220753);
+			FontMetrics fontmetrics_3 = ShaderLoader.method1887(-1200220753);
 			int i_4 = 0;
 
 			int i_6;

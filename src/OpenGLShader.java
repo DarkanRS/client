@@ -1,12 +1,12 @@
 import jaggl.OpenGL;
 
-public class Class101_Sub1 extends Class101 {
+public class OpenGLShader extends Shader {
 
 	GraphicalRenderer_Sub2_Sub1 aGraphicalRenderer_Sub2_Sub1_9264;
 	Class115_Sub2 aClass115_Sub2_9265;
-	int anInt9266;
+	int handle;
 
-	Class101_Sub1(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, Class114 class114_2) {
+	OpenGLShader(GraphicalRenderer_Sub2_Sub1 class505_sub2_sub1_1, ShaderLoader class114_2) {
 		super(class505_sub2_sub1_1, class114_2);
 		this.aGraphicalRenderer_Sub2_Sub1_9264 = class505_sub2_sub1_1;
 	}
@@ -27,9 +27,9 @@ public class Class101_Sub1 extends Class101 {
 			if (this.anInt1015 == -1) {
 				throw new IllegalArgumentException();
 			} else {
-				this.anInt9266 = this.aClass115_Sub2_9265.anInt9423;
+				this.handle = this.aClass115_Sub2_9265.anInt9423;
 				if (bool_2) {
-					OpenGL.glUseProgram(this.anInt9266);
+					OpenGL.glUseProgram(this.handle);
 					this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 				}
 
@@ -68,7 +68,7 @@ public class Class101_Sub1 extends Class101 {
 				throw new RuntimeException_Sub2();
 			}
 
-			OpenGL.glUseProgram(this.anInt9266);
+			OpenGL.glUseProgram(this.handle);
 			this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 		}
 
@@ -80,7 +80,7 @@ public class Class101_Sub1 extends Class101 {
 				throw new RuntimeException_Sub2();
 			}
 
-			OpenGL.glUseProgram(this.anInt9266);
+			OpenGL.glUseProgram(this.handle);
 			this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 		}
 
@@ -92,7 +92,7 @@ public class Class101_Sub1 extends Class101 {
 				throw new RuntimeException_Sub2();
 			}
 
-			OpenGL.glUseProgram(this.anInt9266);
+			OpenGL.glUseProgram(this.handle);
 			this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 		}
 
@@ -114,7 +114,7 @@ public class Class101_Sub1 extends Class101 {
 				throw new RuntimeException_Sub2();
 			}
 
-			OpenGL.glUseProgram(this.anInt9266);
+			OpenGL.glUseProgram(this.handle);
 			this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 		}
 
@@ -155,9 +155,9 @@ public class Class101_Sub1 extends Class101 {
 			if (this.anInt1015 * -1224879653 * -401096109 == -1) {
 				throw new IllegalArgumentException();
 			} else {
-				this.anInt9266 = this.aClass115_Sub2_9265.anInt9423;
+				this.handle = this.aClass115_Sub2_9265.anInt9423;
 				if (bool_2) {
-					OpenGL.glUseProgram(this.anInt9266);
+					OpenGL.glUseProgram(this.handle);
 					this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 				}
 
@@ -178,9 +178,9 @@ public class Class101_Sub1 extends Class101 {
 			if (this.anInt1015 * -1224879653 * -401096109 == -1) {
 				throw new IllegalArgumentException();
 			} else {
-				this.anInt9266 = this.aClass115_Sub2_9265.anInt9423;
+				this.handle = this.aClass115_Sub2_9265.anInt9423;
 				if (bool_2) {
-					OpenGL.glUseProgram(this.anInt9266);
+					OpenGL.glUseProgram(this.handle);
 					this.aGraphicalRenderer_Sub2_Sub1_9264.aClass115_Sub2_10189 = this.aClass115_Sub2_9265;
 				}
 

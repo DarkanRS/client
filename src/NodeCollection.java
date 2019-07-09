@@ -247,9 +247,9 @@ public class NodeCollection implements Iterable, Collection {
 		Class253.method4330(Class393.preferences.aPreference_Sub10_8215.method12691(722134232) == 1);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(Node_Sub20_Sub10.method15262((Node_Sub15_Sub2) null, 191335579), (short) 27702);
-		Class100.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
+		ShaderDecoder.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
 		Class79.aNode_Sub15_Sub4_783 = new Node_Sub15_Sub4();
-		Class100.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
+		ShaderDecoder.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
 		Class119.aClass344_1460 = new Class344(22050, Class253.anInt3129);
 		GraphicsPreference.method12658(552328415);
 	}

@@ -4758,7 +4758,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6695(CS2Executor executor) {
-		Class101.method1774();
+		Shader.method1774();
 	}
 
 	static final void method5691(CS2Executor executor) {
@@ -7636,7 +7636,7 @@ public class CS2Interpreter {
 
 	static final void getContainerFreeSpace(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class101.getContainerFreeSpace(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Shader.getContainerFreeSpace(i_2);
 	}
 
 	static final void method3986(CS2Executor executor) {

@@ -95,6 +95,6 @@ public class CombinedInputSubscriber implements InputSubscriber {
         for (int i_12 = 0; i_12 < VarcDefinitions.anInt4985; i_12++) {
             arr_16[i_12] = IndexLoaders.ITEM_LOADER.getItemDefinitions(shorts_7[i_12]).name;
         }
-        Class100.method1644(arr_16, Class308.aShortArray3621, (short) 2733);
+        ShaderDecoder.method1644(arr_16, Class308.aShortArray3621, (short) 2733);
     }
 }

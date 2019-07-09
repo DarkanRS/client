@@ -193,7 +193,7 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 		return this.aBool8692;
 	}
 
-	public abstract Class101 method13890(String var1);
+	public abstract Shader loadShader(String var1);
 
 	public final void method8586(Matrix44Arr matrix44arr_1) {
 		this.aClass384_8724.method6562(matrix44arr_1);
@@ -204,12 +204,12 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 
 	}
 
-	Class114 method13891(byte[] bytes_1) {
+	ShaderLoader method13891(byte[] bytes_1) {
 		if (bytes_1 == null) {
 			return null;
 		} else {
 			try {
-				Class114 class114_2 = new Class114(bytes_1);
+				ShaderLoader class114_2 = new ShaderLoader(bytes_1);
 				return class114_2;
 			} catch (Exception exception_4) {
 				return null;
@@ -3266,7 +3266,7 @@ public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {
 
 	abstract Interface6 method14048(int var1, int var2, boolean var3, int[] var4, int var5, int var6);
 
-	public abstract Class101 method14049(String var1);
+	public abstract Shader method14049(String var1);
 
 	public int method8537(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
 		int i_7 = 0;

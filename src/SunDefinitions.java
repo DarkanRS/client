@@ -103,7 +103,7 @@ public class SunDefinitions {
 		} else {
 			fontrenderer_7 = Class285.aFontRenderer_3394;
 		}
-		FontMetrics fontmetrics_8 = Class114.method1887(-864314974);
+		FontMetrics fontmetrics_8 = ShaderLoader.method1887(-864314974);
 		Animation_Sub2.method12680(graphicalrenderer_0, Class301.anInt3555, BufferedConnectionContext.anInt2300, Class158_Sub2.anInt8975, Class110.anInt1104, b_6, fontrenderer_7, fontmetrics_8, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE));
 		int i_9 = 255 - Class182.anInt2262 - Class20.anInt156;
 		if (i_9 < 0) {

@@ -14,7 +14,7 @@ public class Class122 {
 
 	public int[] anIntArray1534;
 
-	void method2105(Class100 class100_1, byte b_2) {
+	void method2105(ShaderDecoder class100_1, byte b_2) {
 		int i_3 = class100_1.method1632((byte) -72);
 		this.aClass111_1529 = NPCIndexLoader.method6852(-1465285148)[i_3];
 		int i_4;
@@ -98,7 +98,7 @@ public class Class122 {
 		Class291_Sub1.aClass194_8017 = null;
 		Class291_Sub1.aClass194_8023 = null;
 		Class446.aClass194_5416 = null;
-		Class114.aClass194_1243 = null;
+		ShaderLoader.aClass194_1243 = null;
 		DefaultsFile.aClass194_6967 = null;
 		RouteFinder.aClass194_3103 = null;
 		Transform_Sub1_Sub5_Sub1.aClass194_10527 = null;

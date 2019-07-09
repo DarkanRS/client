@@ -4,7 +4,7 @@ public class Class55_Sub1 extends Class55 {
 	public static float aFloat9184 = 1.0F;
 	public static float aFloat9188 = 1.0F;
 	public static float aFloat9186 = 1.0F;
-	Class101 aClass101_9187;
+	Shader aClass101_9187;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9194;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9197;
 	Node_Sub21_Sub1 aNode_Sub21_Sub1_9195;
@@ -119,7 +119,7 @@ public class Class55_Sub1 extends Class55 {
 
 	boolean method1101() {
 		if (this.method14517()) {
-			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.method13890("FilterBloom");
+			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.loadShader("FilterBloom");
 			if (this.aClass101_9187 == null) {
 				return false;
 			} else {
@@ -285,7 +285,7 @@ public class Class55_Sub1 extends Class55 {
 
 	boolean method1113() {
 		if (this.method14517()) {
-			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.method13890("FilterBloom");
+			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.loadShader("FilterBloom");
 			if (this.aClass101_9187 == null) {
 				return false;
 			} else {
@@ -330,7 +330,7 @@ public class Class55_Sub1 extends Class55 {
 
 	boolean method1097() {
 		if (this.method14517()) {
-			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.method13890("FilterBloom");
+			this.aClass101_9187 = this.aGraphicalRenderer_Sub2_514.loadShader("FilterBloom");
 			if (this.aClass101_9187 == null) {
 				return false;
 			} else {

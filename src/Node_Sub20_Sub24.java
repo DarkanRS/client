@@ -76,8 +76,8 @@ public class Node_Sub20_Sub24 extends Node_Sub20 {
 			Class320.aClass253_3723.method4333();
 		}
 
-		if (Class100.aClass253_1008 != null) {
-			Class100.aClass253_1008.method4333();
+		if (ShaderDecoder.aClass253_1008 != null) {
+			ShaderDecoder.aClass253_1008.method4333();
 		}
 
 	}

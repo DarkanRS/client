@@ -69,7 +69,7 @@ public class Class76 {
 		for (int i_8 = 0; i_8 < VarcDefinitions.anInt4985; i_8++) {
 			arr_11[i_8] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(shorts_3[i_8]).method14898(-47369611);
 		}
-		Class100.method1644(arr_11, Class308.aShortArray3621, (short) 30307);
+		ShaderDecoder.method1644(arr_11, Class308.aShortArray3621, (short) 30307);
 	}
 
 	public static void method1361(byte b_0) {

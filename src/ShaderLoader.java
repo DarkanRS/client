@@ -1,4 +1,4 @@
-public class Class114 {
+public class ShaderLoader {
 
 	static Class194 aClass194_1243;
 
@@ -11,7 +11,7 @@ public class Class114 {
 	Class99[] aClass99Array1241;
 
 	void method1885(byte[] bytes_1) throws Exception_Sub1 {
-		Class100 class100_3 = new Class100(bytes_1);
+		ShaderDecoder class100_3 = new ShaderDecoder(bytes_1);
 		int i_4 = class100_3.method1632((byte) -72);
 		if (i_4 != 4) {
 			throw new Exception_Sub1(this, i_4);
@@ -36,7 +36,7 @@ public class Class114 {
 		}
 	}
 
-	public Class114(byte[] bytes_1) throws Exception_Sub1 {
+	public ShaderLoader(byte[] bytes_1) throws Exception_Sub1 {
 		this.method1885(bytes_1);
 	}
 
