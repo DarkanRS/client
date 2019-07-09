@@ -15,22 +15,22 @@ public class Class122 {
 	public int[] anIntArray1534;
 
 	void method2105(ShaderDecoder class100_1, byte b_2) {
-		int i_3 = class100_1.method1632((byte) -72);
+		int i_3 = class100_1.getNextStringLength();
 		this.aClass111_1529 = NPCIndexLoader.method6852(-1465285148)[i_3];
 		int i_4;
 		if (this.aClass111_1529 == Class111.aClass111_1109) {
-			i_4 = class100_1.method1632((byte) 0);
+			i_4 = class100_1.getNextStringLength();
 			this.aClass111_1533 = NPCIndexLoader.method6852(-2096161358)[i_4];
-			this.anInt1528 = class100_1.method1632((byte) -88);
+			this.anInt1528 = class100_1.getNextStringLength();
 		}
-		this.aString1530 = class100_1.method1633();
-		this.aString1532 = class100_1.method1633();
-		i_4 = class100_1.method1632((byte) -35);
+		this.aString1530 = class100_1.readString();
+		this.aString1532 = class100_1.readString();
+		i_4 = class100_1.getNextStringLength();
 		this.anIntArray1531 = new int[i_4];
 		this.anIntArray1534 = new int[i_4];
 		for (int i_5 = 0; i_5 < i_4; i_5++) {
-			this.anIntArray1531[i_5] = class100_1.method1632((byte) -74);
-			this.anIntArray1534[i_5] = class100_1.method1632((byte) -19);
+			this.anIntArray1531[i_5] = class100_1.getNextStringLength();
+			this.anIntArray1534[i_5] = class100_1.getNextStringLength();
 		}
 	}
 

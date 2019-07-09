@@ -42,7 +42,7 @@ public abstract class Shader {
 	}
 
 	Shader(GraphicalRenderer_Sub2 class505_sub2_1, ShaderLoader class114_2) {
-		this.aString1014 = class114_2.aString1237;
+		this.aString1014 = class114_2.name;
 		this.anInt1009 = class114_2.aClass122Array1236.length;
 		this.aClass107_1013 = new Class107(this.anInt1009, anInterface11_1012);
 		int i_3;

@@ -13,11 +13,11 @@ public class Class99 {
 	public Class121[] aClass121Array1004;
 
 	void method1628(ShaderDecoder class100_1) {
-		this.aString1003 = class100_1.method1633();
-		this.aString1001 = class100_1.method1633();
-		this.aString1002 = class100_1.method1633();
-		int i_3 = class100_1.method1632((byte) -36);
-		int i_4 = class100_1.method1632((byte) -58);
+		this.aString1003 = class100_1.readString();
+		this.aString1001 = class100_1.readString();
+		this.aString1002 = class100_1.readString();
+		int i_3 = class100_1.getNextStringLength();
+		int i_4 = class100_1.getNextStringLength();
 		this.aClass121Array1000 = i_3 == 0 ? null : new Class121[i_3];
 		this.aClass121Array1004 = i_4 == 0 ? null : new Class121[i_4];
 		int i_5;

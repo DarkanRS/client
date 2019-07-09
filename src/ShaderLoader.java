@@ -2,7 +2,7 @@ public class ShaderLoader {
 
 	static Class194 aClass194_1243;
 
-	String aString1237;
+	String name;
 
 	Class122[] aClass122Array1236;
 
@@ -10,34 +10,34 @@ public class ShaderLoader {
 
 	Class99[] aClass99Array1241;
 
-	void method1885(byte[] bytes_1) throws Exception_Sub1 {
-		ShaderDecoder class100_3 = new ShaderDecoder(bytes_1);
-		int i_4 = class100_3.method1632((byte) -72);
-		if (i_4 != 4) {
-			throw new Exception_Sub1(this, i_4);
+	void load(byte[] bytes_1) throws Exception_Sub1 {
+		ShaderDecoder decoder = new ShaderDecoder(bytes_1);
+		int headerLen = decoder.getNextStringLength();
+		if (headerLen != 4) {
+			throw new Exception_Sub1(this, headerLen);
 		} else {
-			this.aString1237 = class100_3.method1633();
-			this.aClass122Array1236 = new Class122[class100_3.method1632((byte) -44)];
-			this.aClass122Array1240 = new Class122[class100_3.method1632((byte) -15)];
-			this.aClass99Array1241 = new Class99[class100_3.method1632((byte) -125)];
+			this.name = decoder.readString();
+			this.aClass122Array1236 = new Class122[decoder.getNextStringLength()];
+			this.aClass122Array1240 = new Class122[decoder.getNextStringLength()];
+			this.aClass99Array1241 = new Class99[decoder.getNextStringLength()];
 			int i_5;
 			for (i_5 = 0; i_5 < this.aClass122Array1236.length; i_5++) {
 				this.aClass122Array1236[i_5] = new Class122();
-				this.aClass122Array1236[i_5].method2105(class100_3, (byte) -114);
+				this.aClass122Array1236[i_5].method2105(decoder, (byte) -114);
 			}
 			for (i_5 = 0; i_5 < this.aClass122Array1240.length; i_5++) {
 				this.aClass122Array1240[i_5] = new Class122();
-				this.aClass122Array1240[i_5].method2105(class100_3, (byte) -10);
+				this.aClass122Array1240[i_5].method2105(decoder, (byte) -10);
 			}
 			for (i_5 = 0; i_5 < this.aClass99Array1241.length; i_5++) {
 				this.aClass99Array1241[i_5] = new Class99();
-				this.aClass99Array1241[i_5].method1628(class100_3);
+				this.aClass99Array1241[i_5].method1628(decoder);
 			}
 		}
 	}
 
-	public ShaderLoader(byte[] bytes_1) throws Exception_Sub1 {
-		this.method1885(bytes_1);
+	public ShaderLoader(byte[] data) throws Exception_Sub1 {
+		this.load(data);
 	}
 
 	static FontMetrics method1887(int i_0) {

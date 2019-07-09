@@ -1,32 +1,32 @@
 public class ShaderDecoder {
 
     static Class253 aClass253_1008;
-    byte[] aByteArray1007;
-    int anInt1006;
+    byte[] data;
+    int decoderIndex;
 
     ShaderDecoder(byte[] bytes_1) {
-        this.aByteArray1007 = bytes_1;
-        this.anInt1006 = 0;
+        this.data = bytes_1;
+        this.decoderIndex = 0;
     }
 
-    int method1632(byte b_1) {
+    int getNextStringLength() {
         short s_2 = 0;
         for (int i_3 = 0; i_3 < 2; i_3++) {
-            s_2 = (short) (s_2 | (this.aByteArray1007[++this.anInt1006 - 1] & 0xff) << i_3 * 8);
+            s_2 = (short) (s_2 | (this.data[++this.decoderIndex - 1] & 0xff) << i_3 * 8);
         }
         return s_2;
     }
 
-    String method1633() {
-        int i_2 = this.method1632((byte) -122);
-        if (i_2 == -1) {
+    String readString() {
+        int length = this.getNextStringLength();
+        if (length == -1) {
             return null;
-        } else if (i_2 > 256) {
+        } else if (length > 256) {
             throw new RuntimeException_Sub4();
         } else {
-            String string_3 = new String(this.aByteArray1007, this.anInt1006, i_2);
-            this.anInt1006 += i_2;
-            return string_3;
+            String str = new String(this.data, this.decoderIndex, length);
+            this.decoderIndex += length;
+            return str;
         }
     }
 
