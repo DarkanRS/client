@@ -1,23 +1,14 @@
 public class Class306 implements Runnable {
 
     boolean aBool3597;
-
     long aLong3602;
-
     String aString3603;
-
     int anInt3596;
-
     LoadingStage aClass387_3605;
-
     int anInt3600;
-
     Interface27 anInterface27_3604 = null;
-
     Interface27 anInterface27_3598 = new Class304();
-
     volatile boolean aBool3599;
-
     long aLong3601;
 
     int method5418() {

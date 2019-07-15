@@ -29,15 +29,14 @@ public class Class281 {
 
 	public void method4978(SceneObjectManager sceneobjectmanager_1) {
 		if (sceneobjectmanager_1 != null) {
-			if ((byte) -1 != -1)
-				if (this.anInt3374 > 0 && (byte) -1 == -1) {
-					this.method4983(sceneobjectmanager_1);
-					Iterator iterator_3 = this.aLinkedList3377.iterator();
-					while (iterator_3.hasNext() && (byte) -1 == -1) {
-						Transform_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Transform_Sub1_Sub1_Sub1) iterator_3.next();
-						sceneobjectmanager_1.method3397(class521_sub1_sub1_sub1_4, false, 1630649491);
-					}
+			if (this.anInt3374 > 0) {
+				this.method4983(sceneobjectmanager_1);
+				Iterator iterator_3 = this.aLinkedList3377.iterator();
+				while (iterator_3.hasNext() && (byte) -1 == -1) {
+					Transform_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Transform_Sub1_Sub1_Sub1) iterator_3.next();
+					sceneobjectmanager_1.method3397(class521_sub1_sub1_sub1_4, false, 1630649491);
 				}
+			}
 		}
 	}
 

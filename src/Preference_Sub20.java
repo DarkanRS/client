@@ -93,7 +93,7 @@ public class Preference_Sub20 extends Preference {
 			IndexLoaders.LOADING_STAGE = Class302.aClass387Array3557[0];
 			Class302.aLong3562 = Utils.time();
 		}
-		if (Class328.aClass306_3771 == null) {
+		if (Comparable_Sub1.aClass306_3771 == null) {
 			Class165.method2852(-536830752);
 		}
 		LoadingStage xloadingstage_1 = IndexLoaders.LOADING_STAGE;
@@ -107,7 +107,7 @@ public class Preference_Sub20 extends Preference {
 				Class380.aString4636 = Class380.aString4636 + Class302.anInt3563 + "%";
 			}
 		} else if (IndexLoaders.LOADING_STAGE == LoadingStage.aClass387_4701) {
-			Class328.aClass306_3771 = null;
+			Comparable_Sub1.aClass306_3771 = null;
 			Class365.setGameState(5);
 		} else {
 			Class380.aString4636 = xloadingstage_1.aClass433_4714.translate(Class223.CURRENT_LANGUAGE);
@@ -119,18 +119,18 @@ public class Preference_Sub20 extends Preference {
 				Class302.aLong3562 = Utils.time();
 			}
 		}
-		if (Class328.aClass306_3771 != null) {
-			Class328.aClass306_3771.method5422(Class302.aLong3562, Class380.aString4636, Class302.anInt3563, IndexLoaders.LOADING_STAGE, -361143334);
+		if (Comparable_Sub1.aClass306_3771 != null) {
+			Comparable_Sub1.aClass306_3771.method5422(Class302.aLong3562, Class380.aString4636, Class302.anInt3563, IndexLoaders.LOADING_STAGE, -361143334);
 			if (Class302.anInterface27Array3559 != null) {
 				for (int i_3 = Class302.anInt3560 + 1; i_3 < Class302.anInterface27Array3559.length; i_3++) {
-					if (Class302.anInterface27Array3559[i_3].method191(1666965000) >= 100 && i_3 - 1 == Class302.anInt3560 && client.gameState != 4 && Class328.aClass306_3771.method5450()) {
+					if (Class302.anInterface27Array3559[i_3].method191(1666965000) >= 100 && i_3 - 1 == Class302.anInt3560 && client.gameState != 4 && Comparable_Sub1.aClass306_3771.method5450()) {
 						try {
 							Class302.anInterface27Array3559[i_3].method161();
 						} catch (Exception exception_5) {
 							Class302.anInterface27Array3559 = null;
 							break;
 						}
-						Class328.aClass306_3771.method5445(Class302.anInterface27Array3559[i_3]);
+						Comparable_Sub1.aClass306_3771.method5445(Class302.anInterface27Array3559[i_3]);
 						++Class302.anInt3560;
 						if (Class302.anInt3560 >= Class302.anInterface27Array3559.length - 1 && Class302.anInterface27Array3559.length > 1) {
 							Class302.anInt3560 = EntityNode_Sub7.GAME_TIPS_LOADER.method6790(512238595) ? 0 : -1;

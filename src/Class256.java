@@ -1,23 +1,15 @@
 public class Class256 {
 
 	public static Class256 aClass256_3154 = new Class256(false, false);
-
 	public static Class256 aClass256_3153 = new Class256(true, false);
-
 	public static Class256 aClass256_3158 = new Class256(false, false);
-
 	public static Class256 aClass256_3155 = new Class256(true, false);
-
-	static Class256 aClass256_3156 = new Class256(true, false);
-
-	static Class256 aClass256_3157 = new Class256(true, true);
-
-	static Class256 aClass256_3161 = new Class256(true, true);
-
+	public static Class256 aClass256_3156 = new Class256(true, false);
+	public static Class256 aClass256_3157 = new Class256(true, true);
+	public static Class256 aClass256_3161 = new Class256(true, true);
 	public static Class256 aClass256_3152 = new Class256(false, false);
 
 	boolean aBool3160;
-
 	boolean aBool3159;
 
 	public boolean method4401() {

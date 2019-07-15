@@ -1,25 +1,15 @@
 public class Class308 {
 
 	public static client aclient3620;
-
 	public static short[] aShortArray3621;
-
 	static Node_Sub16 aNode_Sub16_3618 = new Node_Sub16(0, 0);
-
 	Node_Sub16[] aNode_Sub16Array3615;
-
 	int[][][] anIntArrayArrayArray3614;
-
 	LinkedNodeList aClass473_3612 = new LinkedNodeList();
-
 	public boolean aBool3619 = false;
-
 	int anInt3617 = 0;
-
 	int anInt3616 = -1;
-
 	int anInt3611;
-
 	int anInt3613;
 
 	final void method5462() {

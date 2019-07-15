@@ -4,19 +4,12 @@ import java.io.OutputStream;
 public class Class289 implements Runnable {
 
 	IOException anIOException3439;
-
 	int anInt3443 = 0;
-
 	int anInt3444 = 0;
-
 	OutputStream anOutputStream3442;
-
 	boolean aBool3446;
-
 	int anInt3440;
-
 	byte[] aByteArray3441;
-
 	Thread aThread3445;
 
 	boolean method5086(int i_1) {

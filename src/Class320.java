@@ -4,25 +4,15 @@ import java.awt.Dimension;
 public class Class320 {
 
 	public static Class253 aClass253_3723;
-
 	public static int[] VARC_INT;
-
 	static Node_Sub25 aNode_Sub25_3719 = new Node_Sub25(0, 0);
-
 	Node_Sub25[] aNode_Sub25Array3720;
-
 	int[][] anIntArrayArray3717;
-
 	LinkedNodeList aClass473_3721 = new LinkedNodeList();
-
 	public boolean aBool3722 = false;
-
 	int anInt3714 = 0;
-
 	int anInt3718 = -1;
-
 	int anInt3715;
-
 	int anInt3716;
 
 	final void method5720() {

@@ -68,7 +68,7 @@ public final class Class78 {
 		} else if (Class9.anInt76 != -1) {
 			Class14.method537();
 		} else {
-			Class345.worldLogin(Class9.aString99, Class9.aString102, 2140005303);
+			ParticleArchive1Def.worldLogin(Class9.aString99, Class9.aString102, 2140005303);
 		}
 	}
 

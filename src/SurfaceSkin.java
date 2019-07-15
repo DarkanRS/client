@@ -23,7 +23,7 @@ public class SurfaceSkin {
         return new SurfaceSkin(this.anInt2115, i_1);
     }
 
-    public Class345 method2913(int i_1) {
+    public ParticleArchive1Def method2913(int i_1) {
         return Class423.method7065(this.anInt2115);
     }
 }

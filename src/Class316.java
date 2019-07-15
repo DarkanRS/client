@@ -4,23 +4,14 @@ import java.util.Random;
 public class Class316 {
 
 	static Class223 aClass223_3679 = new Class223(16);
-
 	public static int[] anIntArray3677;
-
 	public static int[] anIntArray3675;
-
 	public static int[] anIntArray3672;
-
 	public static int anInt3669;
-
 	public static int anInt3670;
-
 	public static int anInt3678;
-
 	public static int[] anIntArray3668;
-
 	public static int anInt3673;
-
 	public static int anInt3671;
 
 	public static void method5586(byte b_0) {

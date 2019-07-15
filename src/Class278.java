@@ -7,29 +7,17 @@ import java.io.IOException;
 public abstract class Class278 {
 
 	boolean aBool3361;
-
 	Node_Sub41_Sub3 aNode_Sub41_Sub3_3363;
-
 	Node_Sub41_Sub4 aNode_Sub41_Sub4_3366;
-
 	String aString3365;
-
 	Node_Sub41_Sub2 aNode_Sub41_Sub2_3364;
-
 	boolean aBool3353;
-
 	boolean aBool3359;
-
 	byte[] aByteArray3354;
-
 	OggSyncState anOggSyncState3355;
-
 	OggPage anOggPage3352;
-
 	OggPacket anOggPacket3356;
-
 	IterableNodeMap aClass465_3358;
-
 	boolean aBool3360;
 
 	boolean method4910(int i_1) {

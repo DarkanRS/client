@@ -17,6 +17,6 @@ public class Class509 {
 	}
 
 	public static int method8740(int i_0) {
-		return Class328.aClass306_3771.method5418();
+		return Comparable_Sub1.aClass306_3771.method5418();
 	}
 }

@@ -230,7 +230,7 @@ public class Huffman {
 	public static void playSoundJingle(int i_0, int i_1, int i_2) {
 		i_2 = i_2 * Class393.preferences.aPreference_Sub13_8228.method12714() >> 8;
 		if (i_2 != 0 && i_0 != -1) {
-			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && Class116.method1966(1048199259) && !Class345.method6140()) {
+			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && Class116.method1966(1048199259) && !ParticleArchive1Def.method6140()) {
 				Class260.aNode_Sub15_Sub2_3231 = Message.method7272();
 				VarBitIndexLoader.method3912();
 				Node_Sub15_Sub2 class282_sub15_sub2_4 = Node_Sub20_Sub10.method15262(Class260.aNode_Sub15_Sub2_3231, 1475290596);

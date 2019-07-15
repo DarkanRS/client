@@ -1,44 +1,26 @@
 import java.io.File;
 import java.io.IOException;
 
-public class Class345 {
+public class ParticleArchive1Def {
 
-	static Index aClass317_4021;
-
+	static Index PARTICLE_INDEX;
 	public int anInt4032;
-
-	public static Class345[] aClass345Array4025 = new Class345[16];
-
+	public static ParticleArchive1Def[] aClass345Array4025 = new ParticleArchive1Def[16];
 	static int anInt4028 = 0;
-
 	public static IterableNodeMap aClass465_4029 = new IterableNodeMap(16);
-
 	static SoftCache aClass229_4031 = new SoftCache(64);
-
 	int anInt4034;
-
 	public int anInt4038;
-
 	public int anInt4035;
-
 	public int anInt4027;
-
 	public int anInt4036;
-
 	public int anInt4037;
-
 	public int anInt4041;
-
 	public int anInt4039 = 0;
-
 	public int anInt4040 = 0;
-
 	boolean aBool4042 = false;
-
 	public int anInt4024;
-
 	public int anInt4033;
-
 	public long aLong4044;
 
 	void method6124(RsByteBuffer rsbytebuffer_1) {

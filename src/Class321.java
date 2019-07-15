@@ -20,7 +20,7 @@ public final class Class321 {
 			if (this.aLong3726 != -1L) {
 				this.method5745((byte) 57);
 			}
-			Class328 class328_4 = (Class328) this.aMap3728.remove(object_1);
+			Comparable_Sub1 class328_4 = (Comparable_Sub1) this.aMap3728.remove(object_1);
 			Object object_5;
 			if (class328_4 != null) {
 				this.anAbstractQueue_Sub1_3725.remove(class328_4);
@@ -63,7 +63,7 @@ public final class Class321 {
 			if (this.aLong3726 != -1L) {
 				this.method5745((byte) 81);
 			}
-			Class328 class328_4 = (Class328) this.aMap3728.get(object_1);
+			Comparable_Sub1 class328_4 = (Comparable_Sub1) this.aMap3728.get(object_1);
 			Object object_5;
 			if (class328_4 == null) {
 				object_5 = null;
@@ -81,20 +81,20 @@ public final class Class321 {
 			if (this.aLong3726 != -1L) {
 				this.method5745((byte) 119);
 			}
-			Class328 class328_5 = (Class328) this.aMap3728.get(object_1);
+			Comparable_Sub1 class328_5 = (Comparable_Sub1) this.aMap3728.get(object_1);
 			if (class328_5 != null) {
 				Object object_9 = class328_5.anObject3768;
 				class328_5.anObject3768 = object_2;
 				this.method5742(class328_5, false, (byte) 13);
 				return object_9;
 			} else {
-				Class328 class328_6;
+				Comparable_Sub1 class328_6;
 				if (this.method5738() && this.aMap3728.size() == this.anInt3730) {
-					class328_6 = (Class328) this.anAbstractQueue_Sub1_3727.remove();
+					class328_6 = (Comparable_Sub1) this.anAbstractQueue_Sub1_3727.remove();
 					this.aMap3728.remove(class328_6.anObject3770);
 					this.anAbstractQueue_Sub1_3725.remove(class328_6);
 				}
-				class328_6 = new Class328(object_2, object_1);
+				class328_6 = new Comparable_Sub1(object_2, object_1);
 				this.aMap3728.put(object_1, class328_6);
 				this.method5742(class328_6, true, (byte) 6);
 				Object obj_7 = null;
@@ -103,7 +103,7 @@ public final class Class321 {
 		}
 	}
 
-	void method5742(Class328 class328_1, boolean bool_2, byte b_3) {
+	void method5742(Comparable_Sub1 class328_1, boolean bool_2, byte b_3) {
 		if (!bool_2) {
 			this.anAbstractQueue_Sub1_3725.remove(class328_1);
 			if (this.method5738() && !this.anAbstractQueue_Sub1_3727.remove(class328_1)) {
@@ -140,7 +140,7 @@ public final class Class321 {
 		} else {
 			long long_2 = System.currentTimeMillis() - this.aLong3726;
 			while (!this.anAbstractQueue_Sub1_3725.isEmpty()) {
-				Class328 class328_4 = (Class328) this.anAbstractQueue_Sub1_3725.peek();
+				Comparable_Sub1 class328_4 = (Comparable_Sub1) this.anAbstractQueue_Sub1_3725.peek();
 				if (class328_4.aLong3767 >= long_2) {
 					break;
 				}
@@ -154,6 +154,6 @@ public final class Class321 {
 	}
 
 	public static void method5757() {
-		Class345.aClass229_4031.method3859();
+		ParticleArchive1Def.aClass229_4031.method3859();
 	}
 }

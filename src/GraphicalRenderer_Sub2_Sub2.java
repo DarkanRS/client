@@ -197,7 +197,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 			this.aD3DPRESENT_PARAMETERS10248.BackBufferHeight = 0;
 			if (method15656(this.anInt10260, this.anInt10244, this.aLong10246, this.anInt8709, this.aD3DPRESENT_PARAMETERS10248)) {
 				i_2 = IDirect3DDevice.Reset(this.aLong10252, this.aD3DPRESENT_PARAMETERS10248);
-				if (Class25.method751(i_2)) {
+				if (Class25.gtOrEqualToZero(i_2)) {
 					this.method13899();
 					this.method13897();
 					return true;
@@ -253,7 +253,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 	void method8555() throws Exception_Sub3 {
 		IDirect3DDevice.EndScene(this.aLong10252);
 		int i_3 = this.aClass158_Sub2_5841.method14344();
-		if (Class25.method750(i_3)) {
+		if (Class25.lessThanZero(i_3)) {
 			if (i_3 != -2005530520) {
 				if (++this.anInt10262 > 50) {
 					throw new Exception_Sub3();
@@ -276,7 +276,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	public void method8395() {
 		long long_1 = IDirect3DDevice.CreateEventQuery(this.aLong10252);
-		if (Class25.method751(IDirect3DEventQuery.Issue(long_1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DEventQuery.Issue(long_1))) {
 			while (true) {
 				int i_3 = IDirect3DEventQuery.IsSignaled(long_1);
 				if (i_3 != 1) {
@@ -483,7 +483,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	boolean method13955(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 4, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 4, method15652(class150_1, class76_2)));
 	}
 
 	Interface6 method14094(int i_1, int i_2, boolean bool_3, int[] ints_4, int i_5, int i_6) {
@@ -769,7 +769,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	boolean method13954(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
 	}
 
 	void method14204() {
@@ -915,7 +915,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 		try {
 			D3DDISPLAYMODE d3ddisplaymode_10 = new D3DDISPLAYMODE();
-			if (Class25.method750(IDirect3D.GetAdapterDisplayMode(long_2, i_0, d3ddisplaymode_10))) {
+			if (Class25.lessThanZero(IDirect3D.GetAdapterDisplayMode(long_2, i_0, d3ddisplaymode_10))) {
 				return false;
 			} else {
 				label74: for (; i_4 >= 0; --i_4) {
@@ -1048,7 +1048,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 	void method8596(int i_1, int i_2) throws Exception_Sub3 {
 		IDirect3DDevice.EndScene(this.aLong10252);
 		int i_3 = this.aClass158_Sub2_5841.method14344();
-		if (Class25.method750(i_3)) {
+		if (Class25.lessThanZero(i_3)) {
 			if (i_3 != -2005530520) {
 				if (++this.anInt10262 > 50) {
 					throw new Exception_Sub3();
@@ -1134,7 +1134,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		int[] ints_5 = null;
 		long long_6 = IDirect3DDevice.GetRenderTarget(this.aLong10252, 0);
 		long long_8 = IDirect3DDevice.CreateRenderTarget(this.aLong10252, i_3, i_4, 21, 0, 0, true);
-		if (Class25.method751(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
 			ints_5 = new int[i_3 * i_4];
 			IDirect3DSurface.Download(long_8, 0, 0, i_3, i_4, i_3 * 4, 16, this.aLong8695);
 			this.aByteBuffer8838.clear();
@@ -1236,7 +1236,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	public void method8483() {
 		long long_1 = IDirect3DDevice.CreateEventQuery(this.aLong10252);
-		if (Class25.method751(IDirect3DEventQuery.Issue(long_1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DEventQuery.Issue(long_1))) {
 			while (true) {
 				int i_3 = IDirect3DEventQuery.IsSignaled(long_1);
 				if (i_3 != 1) {
@@ -1364,29 +1364,29 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	boolean method14134(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
 	}
 
 	boolean method14136(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
 	}
 
 	boolean method13975(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
 	}
 
 	boolean method14137(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
 	}
 
 	public int[] kh(int i_1, int i_2, int i_3, int i_4) {
 		int[] ints_5 = null;
 		long long_6 = IDirect3DDevice.GetRenderTarget(this.aLong10252, 0);
 		long long_8 = IDirect3DDevice.CreateRenderTarget(this.aLong10252, i_3, i_4, 21, 0, 0, true);
-		if (Class25.method751(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
 			ints_5 = new int[i_3 * i_4];
 			IDirect3DSurface.Download(long_8, 0, 0, i_3, i_4, i_3 * 4, 16, this.aLong8695);
 			this.aByteBuffer8838.clear();
@@ -1644,7 +1644,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	boolean method14135(Class150 class150_1, Class76 class76_2) {
 		D3DDISPLAYMODE d3ddisplaymode_3 = new D3DDISPLAYMODE();
-		return Class25.method751(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.method751(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
+		return Class25.gtOrEqualToZero(IDirect3D.GetAdapterDisplayMode(this.aLong10246, this.anInt10260, d3ddisplaymode_3)) && Class25.gtOrEqualToZero(IDirect3D.CheckDeviceFormat(this.aLong10246, this.anInt10260, this.anInt10244, d3ddisplaymode_3.Format, 0, 3, method15652(class150_1, class76_2)));
 	}
 
 	void method14190() {
@@ -1944,7 +1944,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		int[] ints_5 = null;
 		long long_6 = IDirect3DDevice.GetRenderTarget(this.aLong10252, 0);
 		long long_8 = IDirect3DDevice.CreateRenderTarget(this.aLong10252, i_3, i_4, 21, 0, 0, true);
-		if (Class25.method751(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
 			ints_5 = new int[i_3 * i_4];
 			IDirect3DSurface.Download(long_8, 0, 0, i_3, i_4, i_3 * 4, 16, this.aLong8695);
 			this.aByteBuffer8838.clear();
@@ -1979,7 +1979,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		int[] ints_5 = null;
 		long long_6 = IDirect3DDevice.GetRenderTarget(this.aLong10252, 0);
 		long long_8 = IDirect3DDevice.CreateRenderTarget(this.aLong10252, i_3, i_4, 21, 0, 0, true);
-		if (Class25.method751(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DDevice.StretchRect(this.aLong10252, long_6, i_1, i_2, i_3, i_4, long_8, 0, 0, i_3, i_4, 1))) {
 			ints_5 = new int[i_3 * i_4];
 			IDirect3DSurface.Download(long_8, 0, 0, i_3, i_4, i_3 * 4, 16, this.aLong8695);
 			this.aByteBuffer8838.clear();
@@ -2022,7 +2022,7 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
 	public void method8484() {
 		long long_1 = IDirect3DDevice.CreateEventQuery(this.aLong10252);
-		if (Class25.method751(IDirect3DEventQuery.Issue(long_1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DEventQuery.Issue(long_1))) {
 			while (true) {
 				int i_3 = IDirect3DEventQuery.IsSignaled(long_1);
 				if (i_3 != 1) {

@@ -4,11 +4,11 @@ public class Class25 {
 		throw new Error();
 	}
 
-	public static final boolean method750(int i_0) {
+	public static final boolean lessThanZero(int i_0) {
 		return i_0 < 0;
 	}
 
-	public static final boolean method751(int i_0) {
+	public static final boolean gtOrEqualToZero(int i_0) {
 		return i_0 >= 0;
 	}
 

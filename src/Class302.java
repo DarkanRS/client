@@ -1,19 +1,12 @@
 public class Class302 {
 
 	static LoadingStage[] aClass387Array3557;
-
 	static Interface27[] anInterface27Array3559;
-
 	static int anInt3561;
-
 	static long aLong3562;
-
 	static int anInt3563;
-
 	static int[] anIntArray3558 = new int[] { 4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 };
-
 	static int anInt3560 = -1;
-
 	static int anInt3564 = -1;
 
 	Class302() throws Throwable {

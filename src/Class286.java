@@ -5,17 +5,11 @@ import java.io.InputStream;
 public class Class286 implements Runnable {
 
 	IOException anIOException3401;
-
 	int anInt3400 = 0;
-
 	InputStream anInputStream3396;
-
 	int anInt3395 = 0;
-
 	int anInt3397;
-
 	byte[] aByteArray3399;
-
 	Thread aThread3398;
 
 	boolean method5030(int i_1, int i_2) throws IOException {

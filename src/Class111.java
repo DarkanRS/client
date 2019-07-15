@@ -137,6 +137,6 @@ public class Class111 {
 	}
 
 	public static void method1866(Index index_0) {
-		Class345.aClass317_4021 = index_0;
+		ParticleArchive1Def.PARTICLE_INDEX = index_0;
 	}
 }

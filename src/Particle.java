@@ -278,7 +278,7 @@ public class Particle extends PointEntity {
 			}
 
 			Node_Sub40 class282_sub40_45;
-			Class345 class345_46;
+			ParticleArchive1Def class345_46;
 			if (definition.anIntArray559 != null) {
 				Iterator iterator_44 = system.aList7127.iterator();
 
@@ -422,12 +422,12 @@ public class Particle extends PointEntity {
 
 					for (dx = 0; dx < definition.anIntArray561.length; dx++) {
 						Class423.method7065(definition.anIntArray561[dx]);
-						definition.anIntArray562[dx] = ((IntNode) Class345.aClass465_4029.get((long) definition.anIntArray561[dx])).value;
+						definition.anIntArray562[dx] = ((IntNode) ParticleArchive1Def.aClass465_4029.get((long) definition.anIntArray561[dx])).value;
 					}
 				}
 
 				for (dx = 0; dx < definition.anIntArray562.length; dx++) {
-					Class345 class345_52 = Class345.aClass345Array4025[definition.anIntArray562[dx]];
+					ParticleArchive1Def class345_52 = ParticleArchive1Def.aClass345Array4025[definition.anIntArray562[dx]];
 					if (class345_52.anInt4040 == 0) {
 						directionX += (double) (delta * class345_52.anInt4027);
 						directionZ += (double) (delta * class345_52.anInt4036);

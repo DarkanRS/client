@@ -11,7 +11,7 @@ public class FixedTileStrategy extends RouteStrategy {
 		GamePreferences class282_sub54_2 = new GamePreferences(client.CURRENT_GAME);
 
 		try {
-			class442_1 = Class345.method6137("", client.CURRENT_GAME.name, false);
+			class442_1 = ParticleArchive1Def.method6137("", client.CURRENT_GAME.name, false);
 			byte[] bytes_3 = new byte[(int) class442_1.method7388()];
 
 			int i_4;

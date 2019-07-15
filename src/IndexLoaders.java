@@ -368,7 +368,7 @@ public class IndexLoaders {
 		}
 
 		if (LoadingStage.aClass387_4710 == LOADING_STAGE) {
-			Class328.aClass306_3771.method5437(1971285079);
+			Comparable_Sub1.aClass306_3771.method5437(1971285079);
 
 			try {
 				VarDefinitionLoader.aThread4520.join();
@@ -376,7 +376,7 @@ public class IndexLoaders {
 				return 0;
 			}
 
-			Class328.aClass306_3771 = null;
+			Comparable_Sub1.aClass306_3771 = null;
 			VarDefinitionLoader.aThread4520 = null;
 			LOADING_FONT_INDEX = null;
 			GAME_TIPS_INDEX = null;

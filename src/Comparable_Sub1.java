@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public final class Class328 implements Comparable {
+public final class Comparable_Sub1 implements Comparable {
 
 	long aLong3767;
 
@@ -17,22 +17,22 @@ public final class Class328 implements Comparable {
 	Object anObject3770;
 
 	public boolean equals(Object object_1) {
-		if (object_1 instanceof Class328) {
-			return this.anObject3770.equals(((Class328) object_1).anObject3770);
+		if (object_1 instanceof Comparable_Sub1) {
+			return this.anObject3770.equals(((Comparable_Sub1) object_1).anObject3770);
 		} else {
 			throw new IllegalArgumentException();
 		}
 	}
 
 	public int compareTo(Object object_1) {
-		return this.method5822((Class328) object_1);
+		return this.method5822((Comparable_Sub1) object_1);
 	}
 
-	int method5822(Class328 class328_1) {
+	int method5822(Comparable_Sub1 class328_1) {
 		return this.aLong3769 < class328_1.aLong3769 ? -1 : (this.aLong3769 > class328_1.aLong3769 ? 1 : 0);
 	}
 
-	Class328(Object object_1, Object object_2) {
+	Comparable_Sub1(Object object_1, Object object_2) {
 		this.anObject3768 = object_1;
 		this.anObject3770 = object_2;
 	}

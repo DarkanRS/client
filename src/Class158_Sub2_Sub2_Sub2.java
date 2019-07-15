@@ -75,7 +75,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	boolean method2718() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	public int method14349() {
@@ -147,7 +147,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	boolean method2725() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	public int method2726() {
@@ -156,22 +156,22 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	public boolean method54() {
 		this.aBool10478 = true;
-		return Class25.method750(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0, this.aLong10475)) ? false : (Class25.method750(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, this.aLong10474)) ? false : super.method213());
+		return Class25.lessThanZero(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0, this.aLong10475)) ? false : (Class25.lessThanZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, this.aLong10474)) ? false : super.method213());
 	}
 
 	boolean method2723() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	boolean method2715() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	boolean method2717() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	public int method2714() {
@@ -184,7 +184,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	boolean method2722() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	public int method2720() {
@@ -205,7 +205,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	boolean method2724() {
 		this.aBool10478 = false;
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0L));
 	}
 
 	public int method14351(int i_1, int i_2) {
@@ -252,7 +252,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	public boolean method213() {
 		this.aBool10478 = true;
-		return Class25.method750(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0, this.aLong10475)) ? false : (Class25.method750(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, this.aLong10474)) ? false : super.method213());
+		return Class25.lessThanZero(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0, this.aLong10475)) ? false : (Class25.lessThanZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, this.aLong10474)) ? false : super.method213());
 	}
 
 	public int method14345(int i_1, int i_2) {
@@ -289,7 +289,7 @@ public class Class158_Sub2_Sub2_Sub2 extends Class158_Sub2_Sub2 implements Inter
 
 	public boolean method211() {
 		this.aBool10478 = true;
-		return Class25.method750(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0, this.aLong10475)) ? false : (Class25.method750(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, this.aLong10474)) ? false : super.method213());
+		return Class25.lessThanZero(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, 0, this.aLong10475)) ? false : (Class25.lessThanZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10479.aLong10252, this.aLong10474)) ? false : super.method213());
 	}
 
 }

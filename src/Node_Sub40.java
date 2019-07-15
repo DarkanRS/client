@@ -7,7 +7,7 @@ public class Node_Sub40 extends Node {
 	float aFloat8011;
 	float aFloat8012;
 	SurfaceSkin aClass172_8009;
-	Class345 aClass345_8007;
+	ParticleArchive1Def aClass345_8007;
 
 	void method13298(byte b_1) {
 		this.anInt8010 = this.aClass172_8009.anInt2113;

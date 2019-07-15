@@ -1,25 +1,15 @@
 public class Class287 {
 
     public int anInt3419;
-
     boolean aBool3426;
-
     boolean aBool3427;
-
     short[] aShortArray3429;
-
     public int anInt3430;
-
     int anInt3433;
-
     public Node_Sub24 aNode_Sub24_3425;
-
     int anInt3435;
-
     int anInt3431;
-
     int anInt3409;
-
     int anInt3432;
 
     public Class287(GraphicalRenderer graphicalrenderer_1, int i_2, RsByteBuffer rsbytebuffer_3) {

@@ -29,7 +29,7 @@ public class OutgoingLoginPacket {
     public int id;
 
     static {
-        OutgoingLoginPacket[] arr_0 = Class345.getOutgoingLoginPackets();
+        OutgoingLoginPacket[] arr_0 = ParticleArchive1Def.getOutgoingLoginPackets();
         for (int i_1 = 0; i_1 < arr_0.length; i_1++) {
             OUTGOING_LOGIN_PACKETS[arr_0[i_1].id] = arr_0[i_1];
         }

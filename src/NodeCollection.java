@@ -215,11 +215,11 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public static void method8144(boolean bool_0) {
-		if (Class328.aClass306_3771 == null) {
+		if (Comparable_Sub1.aClass306_3771 == null) {
 			Class165.method2852(-1959846530);
 		}
 		if (bool_0) {
-			Class328.aClass306_3771.method5419();
+			Comparable_Sub1.aClass306_3771.method5419();
 		}
 	}
 

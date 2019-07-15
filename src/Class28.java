@@ -134,8 +134,8 @@ public class Class28 implements Interface2 {
     }
 
     public static void method772(byte b_0) {
-        if (Class328.aClass306_3771 != null) {
-            Class328.aClass306_3771.method5437(-138348763);
+        if (Comparable_Sub1.aClass306_3771 != null) {
+            Comparable_Sub1.aClass306_3771.method5437(-138348763);
         }
         if (VarDefinitionLoader.aThread4520 != null) {
             while (true) {

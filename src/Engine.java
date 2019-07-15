@@ -162,7 +162,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             }
         }
         Class499.method8334(aFile3264);
-        Class328.method5827();
+        Comparable_Sub1.method5827();
         aClass440_3270 = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.dat2", 1605505802), 524288000L), 5200);
         aClass440_3271 = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx255", 526140284), 1048576L), 6000);
         Class97.aClass440Array996 = new Class440[HitbarIndexLoader.anInt3451];

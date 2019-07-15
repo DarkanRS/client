@@ -102,7 +102,7 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
 	}
 
 	boolean method15969(long long_1) {
-		return Class25.method751(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10434.aLong10252, long_1));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetDepthStencilSurface(this.aGraphicalRenderer_Sub2_Sub2_10434.aLong10252, long_1));
 	}
 
 	public int method2720() {
@@ -252,7 +252,7 @@ public class Class158_Sub1_Sub3_Sub1 extends Class158_Sub1_Sub3 {
 	}
 
 	boolean method15972(int i_1, long long_2) {
-		return Class25.method751(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10434.aLong10252, i_1, long_2));
+		return Class25.gtOrEqualToZero(IDirect3DDevice.SetRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_10434.aLong10252, i_1, long_2));
 	}
 
 	boolean method2725() {

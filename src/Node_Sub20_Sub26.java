@@ -38,7 +38,7 @@ public class Node_Sub20_Sub26 extends Node_Sub20 {
 
 	static void lobbyLogin(String string_0, String string_1) {
 		if (!Loader.LOBBY_ENABLED) {
-			Class345.worldLogin(string_0, string_1, (byte) -8);
+			ParticleArchive1Def.worldLogin(string_0, string_1, (byte) -8);
 			return;
 		}
 		Class9.lobbyStage = 140;

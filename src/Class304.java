@@ -11,53 +11,29 @@ import java.io.InputStream;
 public class Class304 implements Interface27 {
 
 	boolean aBool3572;
-
 	boolean aBool3583;
-
 	boolean aBool3584;
-
 	int anInt3585;
-
 	int anInt3586;
-
 	int anInt3587;
-
 	int anInt3571;
-
 	int anInt3569;
-
 	int anInt3590;
-
 	int anInt3591;
-
 	int anInt3592;
-
 	Font aFont3573;
-
 	java.awt.FontMetrics aFontMetrics3570;
-
 	Color aColor3582;
-
 	Image anImage3575;
-
 	Image anImage3574;
-
 	Image anImage3589;
-
 	Image anImage3576;
-
 	Image anImage3577;
-
 	Image anImage3578;
-
 	Image anImage3579;
-
 	Image anImage3580;
-
 	Image anImage3581;
-
 	int anInt3593;
-
 	Image anImage3588;
 
 	final int method5396(int i_1, int i_2) {
@@ -77,7 +53,7 @@ public class Class304 implements Interface27 {
 	}
 
 	void method5398() {
-		Class158_Sub1_Sub2.method15535(Class328.aClass306_3771.method5424((byte) 89), Class328.aClass306_3771.method5425(-1675493228), client.aColorArray7186[client.anInt7447], client.aColorArray7199[client.anInt7447], client.aColorArray7200[client.anInt7447]);
+		Class158_Sub1_Sub2.method15535(Comparable_Sub1.aClass306_3771.method5424((byte) 89), Comparable_Sub1.aClass306_3771.method5425(-1675493228), client.aColorArray7186[client.anInt7447], client.aColorArray7199[client.anInt7447], client.aColorArray7200[client.anInt7447]);
 	}
 
 	Image method5399(String string_1) throws IOException {
@@ -167,8 +143,8 @@ public class Class304 implements Interface27 {
 			Graphics graphics_43 = Class351.gameCanvas.getGraphics();
 			if (graphics_43 != null) {
 				try {
-					int i_33 = Class328.aClass306_3771.method5424((byte) 94);
-					String string_34 = Class328.aClass306_3771.method5425(-620954186);
+					int i_33 = Comparable_Sub1.aClass306_3771.method5424((byte) 94);
+					String string_34 = Comparable_Sub1.aClass306_3771.method5425(-620954186);
 					if (OutputStream_Sub1.anImage7953 == null) {
 						OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, Engine.anInt3243 * -969250379 * -1929118563 * -969250379);
 					}
@@ -309,8 +285,8 @@ public class Class304 implements Interface27 {
 			Graphics graphics_43 = Class351.gameCanvas.getGraphics();
 			if (graphics_43 != null) {
 				try {
-					int i_33 = Class328.aClass306_3771.method5424((byte) 101);
-					String string_34 = Class328.aClass306_3771.method5425(1371688477);
+					int i_33 = Comparable_Sub1.aClass306_3771.method5424((byte) 101);
+					String string_34 = Comparable_Sub1.aClass306_3771.method5425(1371688477);
 					if (OutputStream_Sub1.anImage7953 == null) {
 						OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, Engine.anInt3243 * -969250379 * -1929118563 * -969250379);
 					}
@@ -447,8 +423,8 @@ public class Class304 implements Interface27 {
 			Graphics graphics_44 = Class351.gameCanvas.getGraphics();
 			if (graphics_44 != null) {
 				try {
-					int i_34 = Class328.aClass306_3771.method5424((byte) 48);
-					String string_35 = Class328.aClass306_3771.method5425(-2106602009);
+					int i_34 = Comparable_Sub1.aClass306_3771.method5424((byte) 48);
+					String string_35 = Comparable_Sub1.aClass306_3771.method5425(-2106602009);
 					if (OutputStream_Sub1.anImage7953 == null) {
 						OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(Class349.anInt4083, Engine.anInt3243 * -969250379);
 					}
@@ -585,8 +561,8 @@ public class Class304 implements Interface27 {
 			Graphics graphics_43 = Class351.gameCanvas.getGraphics();
 			if (graphics_43 != null) {
 				try {
-					int i_33 = Class328.aClass306_3771.method5424((byte) 110);
-					String string_34 = Class328.aClass306_3771.method5425(-1434118755);
+					int i_33 = Comparable_Sub1.aClass306_3771.method5424((byte) 110);
+					String string_34 = Comparable_Sub1.aClass306_3771.method5425(-1434118755);
 					if (OutputStream_Sub1.anImage7953 == null) {
 						OutputStream_Sub1.anImage7953 = Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083 * 1426041429 * 765 * -1943418639, Engine.anInt3243 * -969250379 * -1929118563 * -969250379);
 					}

@@ -10,7 +10,7 @@ public class Class190 {
 		Class442 class442_1 = null;
 
 		try {
-			class442_1 = Class345.method6137("", client.CURRENT_GAME.name, true);
+			class442_1 = ParticleArchive1Def.method6137("", client.CURRENT_GAME.name, true);
 			RsByteBuffer rsbytebuffer_2 = Class393.preferences.encode();
 			class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index, -1686459180);
 		} catch (Exception exception_4) {

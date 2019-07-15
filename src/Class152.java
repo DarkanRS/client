@@ -7,7 +7,7 @@ public abstract class Class152 {
 	static void method2596() {
 		Class442 class442_1 = null;
 		try {
-			class442_1 = Class345.method6137("2", client.CURRENT_GAME.name, false);
+			class442_1 = ParticleArchive1Def.method6137("2", client.CURRENT_GAME.name, false);
 			byte[] bytes_2 = new byte[(int) class442_1.method7388()];
 			int i_3;
 			for (int i_4 = 0; i_4 < bytes_2.length; i_4 += i_3) {

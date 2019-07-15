@@ -32,10 +32,10 @@ public class StructIndexLoader {
 	}
 
 	static final void method7039(byte b_0) {
-		Class328.aClass118Array3772 = null;
+		Comparable_Sub1.aClass118Array3772 = null;
 		RenderAnimIndexLoader.method3629(client.anInt7349, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, -1, -1848011733);
-		if (Class328.aClass118Array3772 != null) {
-			IComponentDefinitions[] arr_1 = Class328.aClass118Array3772;
+		if (Comparable_Sub1.aClass118Array3772 != null) {
+			IComponentDefinitions[] arr_1 = Comparable_Sub1.aClass118Array3772;
 			int i_2 = -1412584499;
 			byte b_3 = 0;
 			byte b_4 = 0;
@@ -51,7 +51,7 @@ public class StructIndexLoader {
 			}
 
 			GroundDecoration.method16094(arr_1, i_2, b_3, b_4, i_5, i_6, i_7, i_8, i_9, true);
-			Class328.aClass118Array3772 = null;
+			Comparable_Sub1.aClass118Array3772 = null;
 		}
 
 	}

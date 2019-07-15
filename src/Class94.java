@@ -50,7 +50,7 @@ public class Class94 {
 		Game.method8204(i_1);
 		Huffman.method1982(i_1);
 		EntityNode_Sub1.method12424(i_1);
-		Class345.method6143(i_1);
+		ParticleArchive1Def.method6143(i_1);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -126);
 	}
 }

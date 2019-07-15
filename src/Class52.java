@@ -37,9 +37,9 @@ public abstract class Class52 implements Interface2 {
         int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1251542108) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
         this.method1081(bool_1, i_2, i_3, 1585240849);
         this.method1077(bool_1, i_2, i_3, 338046880);
-        String string_4 = Class328.aClass306_3771.method5425(-665821973);
+        String string_4 = Comparable_Sub1.aClass306_3771.method5425(-665821973);
         if (Utils.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
-            string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-1441344140).anInt4712 * 2061403819 * -1763884029 + ")";
+            string_4 = string_4 + " (" + Comparable_Sub1.aClass306_3771.method5427(-1441344140).anInt4712 * 2061403819 * -1763884029 + ")";
         }
         this.aFontRenderer_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
     }
@@ -47,12 +47,12 @@ public abstract class Class52 implements Interface2 {
     abstract void method1077(boolean var1, int var2, int var3, int var4);
 
     int method1078(int i_1) {
-        int i_2 = Class328.aClass306_3771.method5424((byte) 103);
+        int i_2 = Comparable_Sub1.aClass306_3771.method5424((byte) 103);
         int i_3 = i_2 * 100;
         if (i_2 == this.anInt494 && i_2 != 0) {
-            int i_4 = Class328.aClass306_3771.method5423();
+            int i_4 = Comparable_Sub1.aClass306_3771.method5423();
             if (i_4 > i_2) {
-                long long_5 = this.aLong491 - Class328.aClass306_3771.method5439();
+                long long_5 = this.aLong491 - Comparable_Sub1.aClass306_3771.method5439();
                 if (long_5 > 0L) {
                     long long_7 = 10000L * long_5 / (long) i_2 * (long) (i_4 - i_2);
                     long long_9 = (Utils.time() - this.aLong491) * 10000L;
@@ -86,9 +86,9 @@ public abstract class Class52 implements Interface2 {
         int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 645986662) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
         this.method1081(bool_1, i_2, i_3, 1820160042);
         this.method1077(bool_1, i_2, i_3, -656602947);
-        String string_4 = Class328.aClass306_3771.method5425(-101176994);
+        String string_4 = Comparable_Sub1.aClass306_3771.method5425(-101176994);
         if (Utils.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
-            string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(-588033146).anInt4712 * 2061403819 * -1763884029 + ")";
+            string_4 = string_4 + " (" + Comparable_Sub1.aClass306_3771.method5427(-588033146).anInt4712 * 2061403819 * -1763884029 + ")";
         }
         this.aFontRenderer_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
     }
@@ -153,9 +153,9 @@ public abstract class Class52 implements Interface2 {
         int i_4 = this.aClass350_489.aClass353_4087.method6198(this.aClass350_489.anInt4088, client.GAME_HEIGHT, 1644934617) + this.aClass350_489.anInt4089;
         this.method1081(bool_1, i_3, i_4, 213494325);
         this.method1077(bool_1, i_3, i_4, -281773092);
-        String string_5 = Class328.aClass306_3771.method5425(661479168);
+        String string_5 = Comparable_Sub1.aClass306_3771.method5425(661479168);
         if (Utils.time() - this.aLong491 > 10000L) {
-            string_5 = string_5 + " (" + Class328.aClass306_3771.method5427(-260598892).anInt4712 + ")";
+            string_5 = string_5 + " (" + Comparable_Sub1.aClass306_3771.method5427(-260598892).anInt4712 + ")";
         }
         this.aFontRenderer_492.method360(string_5, this.aClass350_489.anInt4093 / 2 + i_3, this.aClass350_489.anInt4088 / 2 + this.aClass350_489.anInt4092 + i_4 + 4, this.aClass350_489.anInt4091, -1);
     }
@@ -180,9 +180,9 @@ public abstract class Class52 implements Interface2 {
         int i_3 = this.aClass350_489.aClass353_4087.method6198(323608093 * this.aClass350_489.anInt4088 * 1707725877, 1176039023 * client.GAME_HEIGHT * -994133479 * 553 * -645779313, 1061303064) + this.aClass350_489.anInt4089 * 2015431945 * -1196256967;
         this.method1081(bool_1, i_2, i_3, 217412171);
         this.method1077(bool_1, i_2, i_3, -688757760);
-        String string_4 = Class328.aClass306_3771.method5425(1074452204);
+        String string_4 = Comparable_Sub1.aClass306_3771.method5425(1074452204);
         if (Utils.time() - 1058145188107000551L * this.aLong491 * 5361705510848321751L > 10000L) {
-            string_4 = string_4 + " (" + Class328.aClass306_3771.method5427(396217824).anInt4712 * 2061403819 * -1763884029 + ")";
+            string_4 = string_4 + " (" + Comparable_Sub1.aClass306_3771.method5427(396217824).anInt4712 * 2061403819 * -1763884029 + ")";
         }
         this.aFontRenderer_492.method360(string_4, this.aClass350_489.anInt4093 * -229835439 * 329542577 / 2 + i_2, 4 + 323608093 * this.aClass350_489.anInt4088 * 1707725877 / 2 + i_3 + this.aClass350_489.anInt4092 * -1053358863 * -1921815535, -771513131 * this.aClass350_489.anInt4091 * -77040515, -1);
     }

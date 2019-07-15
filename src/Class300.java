@@ -13,7 +13,7 @@ public class Class300 implements Interface4 {
 	boolean aBool3552;
 
 	public boolean method27(int i_1, int i_2, Source source_3) {
-		return this.method31(i_1, i_2) ? Class25.method751(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2())) : false;
+		return this.method31(i_1, i_2) ? Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2())) : false;
 	}
 
 	public boolean method29(int i_1, int i_2) {
@@ -77,7 +77,7 @@ public class Class300 implements Interface4 {
 	}
 
 	public boolean method42(int i_1, int i_2, long long_3) {
-		return Class25.method751(IDirect3DVertexBuffer.Upload(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0, long_3));
+		return Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0, long_3));
 	}
 
 	public void method26() {
@@ -171,11 +171,11 @@ public class Class300 implements Interface4 {
 	}
 
 	public boolean method33(int i_1, int i_2, Source source_3) {
-		return this.method31(i_1, i_2) ? Class25.method751(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2())) : false;
+		return this.method31(i_1, i_2) ? Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2())) : false;
 	}
 
 	public boolean method34(int i_1, int i_2, Source source_3) {
-		return this.method31(i_1, i_2) ? Class25.method751(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2())) : false;
+		return this.method31(i_1, i_2) ? Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, 0, this.anInt3550, this.aBool3552 ? 8192 : 0, source_3.method2())) : false;
 	}
 
 	public int method36() {
@@ -203,7 +203,7 @@ public class Class300 implements Interface4 {
 	}
 
 	public boolean method35(int i_1, int i_2, long long_3) {
-		return Class25.method751(IDirect3DVertexBuffer.Upload(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0, long_3));
+		return Class25.gtOrEqualToZero(IDirect3DVertexBuffer.Upload(this.aLong3549, i_1, i_2, this.aBool3552 ? 8192 : 0, long_3));
 	}
 
 }

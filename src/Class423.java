@@ -4,25 +4,25 @@ public class Class423 {
 		throw new Error();
 	}
 
-	public static Class345 method7065(int i_0) {
-		Class345 class345_2 = (Class345) Class345.aClass229_4031.get((long) i_0);
+	public static ParticleArchive1Def method7065(int i_0) {
+		ParticleArchive1Def class345_2 = (ParticleArchive1Def) ParticleArchive1Def.aClass229_4031.get((long) i_0);
 		if (class345_2 != null) {
 			return class345_2;
 		} else {
-			byte[] bytes_3 = Class345.aClass317_4021.getFile(1, i_0);
-			class345_2 = new Class345();
+			byte[] bytes_3 = ParticleArchive1Def.PARTICLE_INDEX.getFile(1, i_0);
+			class345_2 = new ParticleArchive1Def();
 			class345_2.anInt4032 = i_0;
 			if (bytes_3 != null) {
 				class345_2.method6124(new RsByteBuffer(bytes_3));
 			}
 
 			class345_2.method6128();
-			if (class345_2.anInt4041 == 2 && Class345.aClass465_4029.get((long) i_0) == null) {
-				Class345.aClass465_4029.put(new IntNode(Class345.anInt4028), (long) i_0);
-				Class345.aClass345Array4025[++Class345.anInt4028 - 1] = class345_2;
+			if (class345_2.anInt4041 == 2 && ParticleArchive1Def.aClass465_4029.get((long) i_0) == null) {
+				ParticleArchive1Def.aClass465_4029.put(new IntNode(ParticleArchive1Def.anInt4028), (long) i_0);
+				ParticleArchive1Def.aClass345Array4025[++ParticleArchive1Def.anInt4028 - 1] = class345_2;
 			}
 
-			Class345.aClass229_4031.put(class345_2, (long) i_0);
+			ParticleArchive1Def.aClass229_4031.put(class345_2, (long) i_0);
 			return class345_2;
 		}
 	}

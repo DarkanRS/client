@@ -52,7 +52,7 @@ public class Class360_Sub2_Sub1 extends Class360_Sub2 implements Interface29 {
 	public void method53(int i_3, int i_4, int[] ints_5) {
 		long long_7 = IDirect3DTexture.GetSurfaceLevel(this.aLong4168, 0);
 		long long_9 = IDirect3DDevice.CreateRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, i_3, i_4, 21, 0, 0, true);
-		if (Class25.method751(IDirect3DDevice.StretchRect(this.aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, long_7, 0, 0, i_3, i_4, long_9, 0, 0, i_3, i_4, 1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DDevice.StretchRect(this.aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, long_7, 0, 0, i_3, i_4, long_9, 0, 0, i_3, i_4, 1))) {
 			IDirect3DSurface.Download(long_9, 0, 0, i_3, i_4, i_3 * 4, 16, this.aGraphicalRenderer_Sub2_Sub2_4165.aLong8695);
 			this.aGraphicalRenderer_Sub2_Sub2_4165.aByteBuffer8838.clear();
 			this.aGraphicalRenderer_Sub2_Sub2_4165.aByteBuffer8838.asIntBuffer().get(ints_5);
@@ -145,7 +145,7 @@ public class Class360_Sub2_Sub1 extends Class360_Sub2 implements Interface29 {
 	public void method69(int i_1, int i_2, int i_3, int i_4, int[] ints_5, int i_6) {
 		long long_7 = IDirect3DTexture.GetSurfaceLevel(this.aLong4168, 0);
 		long long_9 = IDirect3DDevice.CreateRenderTarget(this.aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, i_3, i_4, 21, 0, 0, true);
-		if (Class25.method751(IDirect3DDevice.StretchRect(this.aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, long_7, i_1, i_2, i_3, i_4, long_9, 0, 0, i_3, i_4, 1))) {
+		if (Class25.gtOrEqualToZero(IDirect3DDevice.StretchRect(this.aGraphicalRenderer_Sub2_Sub2_4165.aLong10252, long_7, i_1, i_2, i_3, i_4, long_9, 0, 0, i_3, i_4, 1))) {
 			IDirect3DSurface.Download(long_9, 0, 0, i_3, i_4, i_3 * 4, 16, this.aGraphicalRenderer_Sub2_Sub2_4165.aLong8695);
 			this.aGraphicalRenderer_Sub2_Sub2_4165.aByteBuffer8838.clear();
 			this.aGraphicalRenderer_Sub2_Sub2_4165.aByteBuffer8838.asIntBuffer().get(ints_5);

@@ -20,7 +20,7 @@ public class Class367 implements Interface32 {
 	}
 
 	public boolean method35(int i_1, int i_2, long long_3) {
-		return Class25.method751(IDirect3DIndexBuffer.Upload(this.aLong4238, i_1, i_2, this.aBool4236 ? 8192 : 0, long_3));
+		return Class25.gtOrEqualToZero(IDirect3DIndexBuffer.Upload(this.aLong4238, i_1, i_2, this.aBool4236 ? 8192 : 0, long_3));
 	}
 
 	public long method40(int i_1, int i_2) {
@@ -103,7 +103,7 @@ public class Class367 implements Interface32 {
 	}
 
 	public boolean method42(int i_1, int i_2, long long_3) {
-		return Class25.method751(IDirect3DIndexBuffer.Upload(this.aLong4238, i_1, i_2, this.aBool4236 ? 8192 : 0, long_3));
+		return Class25.gtOrEqualToZero(IDirect3DIndexBuffer.Upload(this.aLong4238, i_1, i_2, this.aBool4236 ? 8192 : 0, long_3));
 	}
 
 	void method6308() {
