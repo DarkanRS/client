@@ -3,7 +3,7 @@ import sun.misc.Unsafe;
 
 public class MeshRasterizer_Sub3 extends MeshRasterizer {
 
-	static Class34 aClass34_8938;
+	//static Class34 aClass34_8938; //TODO CHECK IF THIS WAS NEEDED?
 	static float[] aFloatArray8956 = new float[2];
 	static int[] anIntArray8928 = new int[1];
 	static int[] anIntArray8958 = new int[1];
@@ -2918,9 +2918,9 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void method11282(Matrix44Var matrix44var_1, EntityNode_Sub5 class275_sub5_2, int i_3) {
-		if (aClass34_8938 != null) {
-			aClass34_8938.method841();
-		}
+//		if (aClass34_8938 != null) {
+//			aClass34_8938.method841();
+//		}
 
 		if (this.anInt8906 != 0) {
 			Matrix44Arr matrix44arr_4 = this.aGraphicalRenderer_Sub2_8917.aClass384_8724;
@@ -5478,9 +5478,9 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	}
 
 	public void method11293(Matrix44Var matrix44var_1, EntityNode_Sub5 class275_sub5_2, int i_3) {
-		if (aClass34_8938 != null) {
-			aClass34_8938.method841();
-		}
+//		if (aClass34_8938 != null) {
+//			aClass34_8938.method841();
+//		}
 
 		if (this.anInt8906 != 0) {
 			Matrix44Arr matrix44arr_4 = this.aGraphicalRenderer_Sub2_8917.aClass384_8724;
