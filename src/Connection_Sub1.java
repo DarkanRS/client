@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.net.Socket;
 
-public class Class202_Sub1 extends Connection {
+public class Connection_Sub1 extends Connection {
 
 	public static ClanChannel GUEST_CLAN_CHANNEL;
 
@@ -98,7 +98,7 @@ public class Class202_Sub1 extends Connection {
 		this.aClass289_8185.method5087(bytes_1, i_2, i_3, -1850876885);
 	}
 
-	Class202_Sub1(Socket socket_1, int i_2) throws IOException {
+	Connection_Sub1(Socket socket_1, int i_2) throws IOException {
 		this.aSocket8184 = socket_1;
 		this.aSocket8184.setSoTimeout(30000);
 		this.aSocket8184.setTcpNoDelay(true);

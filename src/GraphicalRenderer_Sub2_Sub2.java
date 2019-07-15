@@ -244,10 +244,10 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		super.method13897();
 	}
 
-	public Class168 method8392() {
+	public RendererInfo method8392() {
 		D3DADAPTER_IDENTIFIER d3dadapter_identifier_1 = new D3DADAPTER_IDENTIFIER();
 		IDirect3D.GetAdapterIdentifier(this.aLong10246, this.anInt10260, 0, d3dadapter_identifier_1);
-		return new Class168(d3dadapter_identifier_1.VendorID, "Direct3D", 9, d3dadapter_identifier_1.Description, d3dadapter_identifier_1.DriverVersion);
+		return new RendererInfo(d3dadapter_identifier_1.VendorID, "Direct3D", 9, d3dadapter_identifier_1.Description, d3dadapter_identifier_1.DriverVersion);
 	}
 
 	void method8555() throws Exception_Sub3 {
@@ -1423,10 +1423,10 @@ public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 		return new Class360_Sub2(this, class150_1, i_2, i_3, bool_4, floats_5, i_6, i_7);
 	}
 
-	public Class168 method8481() {
+	public RendererInfo method8481() {
 		D3DADAPTER_IDENTIFIER d3dadapter_identifier_1 = new D3DADAPTER_IDENTIFIER();
 		IDirect3D.GetAdapterIdentifier(this.aLong10246, this.anInt10260, 0, d3dadapter_identifier_1);
-		return new Class168(d3dadapter_identifier_1.VendorID, "Direct3D", 9, d3dadapter_identifier_1.Description, d3dadapter_identifier_1.DriverVersion);
+		return new RendererInfo(d3dadapter_identifier_1.VendorID, "Direct3D", 9, d3dadapter_identifier_1.Description, d3dadapter_identifier_1.DriverVersion);
 	}
 
 	void method13899() {

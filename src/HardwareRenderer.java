@@ -47,8 +47,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return false;
 	}
 
-	public Class168 method8392() {
-		return new Class168(0, "Pure Java", 1, "CPU", 0L);
+	public RendererInfo method8392() {
+		return new RendererInfo(0, "Pure Java", 1, "CPU", 0L);
 	}
 
 	public void method8507() {
@@ -2740,8 +2740,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return new Class125(i_1, i_2);
 	}
 
-	public Class168 method8481() {
-		return new Class168(0, "Pure Java", 1, "CPU", 0L);
+	public RendererInfo method8481() {
+		return new RendererInfo(0, "Pure Java", 1, "CPU", 0L);
 	}
 
 	void method8486() {

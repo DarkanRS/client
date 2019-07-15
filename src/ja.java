@@ -587,8 +587,8 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return new oa(i_1, i_2);
 	}
 
-	public Class168 method8481() {
-		return new Class168(0, "SSE", 1, "CPU", 0L);
+	public RendererInfo method8481() {
+		return new RendererInfo(0, "SSE", 1, "CPU", 0L);
 	}
 
 	public void method8634() {
@@ -1468,8 +1468,8 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	public void method8521() {
 	}
 
-	public Class168 method8392() {
-		return new Class168(0, "SSE", 1, "CPU", 0L);
+	public RendererInfo method8392() {
+		return new RendererInfo(0, "SSE", 1, "CPU", 0L);
 	}
 
 	public boolean method8605() {

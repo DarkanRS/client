@@ -1063,7 +1063,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 		OpenGL.glPolygonMode(1028, (i_1 & 0x2) != 0 ? 6913 : 6914);
 	}
 
-	public Class168 method8481() {
+	public RendererInfo method8481() {
 		int i_1 = -1;
 		if (this.aString10185.indexOf("nvidia") != -1) {
 			i_1 = 4318;
@@ -1073,7 +1073,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 			i_1 = 4098;
 		}
 
-		return new Class168(i_1, "OpenGL", this.anInt10196, this.aString10200, 0L);
+		return new RendererInfo(i_1, "OpenGL", this.anInt10196, this.aString10200, 0L);
 	}
 
 	void method8596(int i_1, int i_2) throws Exception_Sub3 {
@@ -2044,7 +2044,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 		OpenGL.glTexEnvfv(8960, 8705, this.aFloatArray10172, 0);
 	}
 
-	public Class168 method8392() {
+	public RendererInfo method8392() {
 		int i_1 = -1;
 		if (this.aString10185.indexOf("nvidia") != -1) {
 			i_1 = 4318;
@@ -2054,7 +2054,7 @@ public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 			i_1 = 4098;
 		}
 
-		return new Class168(i_1, "OpenGL", this.anInt10196, this.aString10200, 0L);
+		return new RendererInfo(i_1, "OpenGL", this.anInt10196, this.aString10200, 0L);
 	}
 
 	Interface6 method14143(Class150 class150_1, int i_2, int i_3, boolean bool_4, byte[] bytes_5) {

@@ -417,13 +417,13 @@ public final class RouteFinder {
 						}
 						break label381;
 					}
-					Class168 class168_4 = Renderers.SOFTWARE_RENDERER.method8392();
+					RendererInfo class168_4 = Renderers.SOFTWARE_RENDERER.method8392();
 					Class209.printConsoleMessage("Toolkit ID: " + Class393.preferences.currentToolkit.getValue(174476725));
-					Class209.printConsoleMessage("Vendor: " + class168_4.anInt2052);
-					Class209.printConsoleMessage("Name: " + class168_4.aString2051);
-					Class209.printConsoleMessage("Version: " + class168_4.anInt2045);
-					Class209.printConsoleMessage("Device: " + class168_4.aString2053);
-					Class209.printConsoleMessage("Driver Version: " + class168_4.aLong2049);
+					Class209.printConsoleMessage("Vendor: " + class168_4.id);
+					Class209.printConsoleMessage("Name: " + class168_4.name);
+					Class209.printConsoleMessage("Version: " + class168_4.version);
+					Class209.printConsoleMessage("Device: " + class168_4.description);
+					Class209.printConsoleMessage("Driver Version: " + class168_4.driverVersion);
 					return;
 				}
 				Class209.printConsoleMessage("commands - This command");

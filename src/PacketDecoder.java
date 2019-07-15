@@ -135,7 +135,7 @@ public class PacketDecoder {
 				if (nonGuest) {
 					Class113.CLAN_CHANNEL = null;
 				} else {
-					Class202_Sub1.GUEST_CLAN_CHANNEL = null;
+					Connection_Sub1.GUEST_CLAN_CHANNEL = null;
 				}
 				context.currentPacket = null;
 				return true;
@@ -143,7 +143,7 @@ public class PacketDecoder {
 				if (nonGuest) {
 					Class113.CLAN_CHANNEL = new ClanChannel(buffer);
 				} else {
-					Class202_Sub1.GUEST_CLAN_CHANNEL = new ClanChannel(buffer);
+					Connection_Sub1.GUEST_CLAN_CHANNEL = new ClanChannel(buffer);
 				}
 				context.currentPacket = null;
 				return true;
@@ -930,7 +930,7 @@ public class PacketDecoder {
 			int i_11 = buffer.readUnsignedShort();
 			long long_53 = long_51 + (long_49 << 32);
 			boolean bool_14 = false;
-			ClanChannel class282_sub4_102 = bool_91 ? Class113.CLAN_CHANNEL : Class202_Sub1.GUEST_CLAN_CHANNEL;
+			ClanChannel class282_sub4_102 = bool_91 ? Class113.CLAN_CHANNEL : Connection_Sub1.GUEST_CLAN_CHANNEL;
 			if (class282_sub4_102 == null) {
 				bool_14 = true;
 			} else {
@@ -1500,7 +1500,7 @@ public class PacketDecoder {
 			if (bool_91) {
 				class282_sub4_108 = Class113.CLAN_CHANNEL;
 			} else {
-				class282_sub4_108 = Class202_Sub1.GUEST_CLAN_CHANNEL;
+				class282_sub4_108 = Connection_Sub1.GUEST_CLAN_CHANNEL;
 			}
 			class349_105.method6179(class282_sub4_108);
 			context.currentPacket = null;
@@ -1891,7 +1891,7 @@ public class PacketDecoder {
 			int i_10 = buffer.readUnsignedByte();
 			long long_55 = long_51 + (long_49 << 32);
 			boolean bool_112 = false;
-			ClanChannel class282_sub4_37 = bool_91 ? Class113.CLAN_CHANNEL : Class202_Sub1.GUEST_CLAN_CHANNEL;
+			ClanChannel class282_sub4_37 = bool_91 ? Class113.CLAN_CHANNEL : Connection_Sub1.GUEST_CLAN_CHANNEL;
 			if (class282_sub4_37 == null) {
 				bool_112 = true;
 			} else {

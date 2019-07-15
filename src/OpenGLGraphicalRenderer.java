@@ -1474,7 +1474,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		return this.aBool8342 && (!this.method8471() || this.aBool8344);
 	}
 
-	public Class168 method8481() {
+	public RendererInfo method8481() {
 		int i_1 = -1;
 		if (this.aString8463.indexOf("nvidia") != -1) {
 			i_1 = 4318;
@@ -1484,7 +1484,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 			i_1 = 4098;
 		}
 
-		return new Class168(i_1, "OpenGL", this.anInt8443, this.aString8464, 0L);
+		return new RendererInfo(i_1, "OpenGL", this.anInt8443, this.aString8464, 0L);
 	}
 
 	public final Matrix44Arr method8453() {
@@ -4855,7 +4855,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 		return this.anInt8371 + this.anInt8370 + this.anInt8372;
 	}
 
-	public Class168 method8392() {
+	public RendererInfo method8392() {
 		int i_1 = -1;
 		if (this.aString8463.indexOf("nvidia") != -1) {
 			i_1 = 4318;
@@ -4865,7 +4865,7 @@ public class OpenGLGraphicalRenderer extends GraphicalRenderer {
 			i_1 = 4098;
 		}
 
-		return new Class168(i_1, "OpenGL", this.anInt8443, this.aString8464, 0L);
+		return new RendererInfo(i_1, "OpenGL", this.anInt8443, this.aString8464, 0L);
 	}
 
 	public NativeSprite method8461(int i_1, int i_2, boolean bool_3, boolean bool_4) {

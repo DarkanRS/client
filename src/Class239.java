@@ -1,37 +1,21 @@
 public class Class239 {
 
 	static int anInt2935 = 16777215;
-
 	static int anInt2932 = 13156520;
-
 	static int anInt2942 = 5145;
-
 	long aLong2936 = 0L;
-
 	int anInt2946 = 0;
-
 	int anInt2945 = -1;
-
 	boolean aBool2947 = false;
-
 	Vector3 aClass385_2952 = new Vector3(-50.0F, -60.0F, -50.0F);
-
 	SoftCache aClass229_2953 = new SoftCache(9);
-
 	SoftCache aClass229_2954 = new SoftCache(9);
-
 	GraphicalRenderer aGraphicalRenderer_2944;
-
 	Class535[][] aClass535ArrayArray2943;
-
 	static Class247 aClass247_2940;
-
 	Class535 aClass535_2948;
-
 	Class535 aClass535_2951;
-
 	Class535 aClass535_2937;
-
 	Class535 aClass535_2931;
 
 	public void method4037(MapRegion mapregion_1, byte b_2) {

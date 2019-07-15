@@ -7345,9 +7345,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method1501(CS2Executor executor) {
-		if (Class202_Sub1.GUEST_CLAN_CHANNEL != null) {
+		if (Connection_Sub1.GUEST_CLAN_CHANNEL != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
-			executor.clanChannel = Class202_Sub1.GUEST_CLAN_CHANNEL;
+			executor.clanChannel = Connection_Sub1.GUEST_CLAN_CHANNEL;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}

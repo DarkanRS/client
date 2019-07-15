@@ -20,7 +20,7 @@ public abstract class GraphicalRenderer {
 
 	public int rendererId;
 
-	public abstract Class168 method8392();
+	public abstract RendererInfo method8392();
 
 	public final void method8393(short s_1) throws Exception_Sub3 {
 		this.method8555();
@@ -321,7 +321,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8480(boolean var1);
 
-	public abstract Class168 method8481();
+	public abstract RendererInfo method8481();
 
 	public abstract void method8483();
 

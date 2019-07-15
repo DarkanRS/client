@@ -53,7 +53,7 @@ public class SunDefinitions {
 	}
 
 	public static Connection createAsyncConnection(Socket socket_0, int i_1, int i_2) throws IOException {
-		return new Class202_Sub1(socket_0, i_1);
+		return new Connection_Sub1(socket_0, i_1);
 	}
 
 	public static RouteStrategy method853(int i_0, int i_1, int i_2) {

@@ -87,9 +87,9 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
                 try {
                     i_6 = Class383.method6513(3, 1000, 1356532046);
                     if (Class393.preferences.currentToolkit.getValue(525522056) == 3) {
-                        Class168 class168_7 = Renderers.SOFTWARE_RENDERER.method8392();
-                        long long_8 = class168_7.aLong2049 & 0xffffffffffffL;
-                        switch(class168_7.anInt2052) {
+                        RendererInfo class168_7 = Renderers.SOFTWARE_RENDERER.method8392();
+                        long long_8 = class168_7.driverVersion & 0xffffffffffffL;
+                        switch(class168_7.id) {
                             case 4098:
                                 bool_2 &= long_8 >= 60129613779L;
                                 break;

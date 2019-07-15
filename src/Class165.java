@@ -1,9 +1,7 @@
 public class Class165 {
 
 	static int anInt2035;
-
 	static int anInt2036;
-
 	static int anInt2037;
 
 	Class165() throws Throwable {
