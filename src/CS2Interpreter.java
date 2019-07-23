@@ -5216,7 +5216,7 @@ public class CS2Interpreter {
 				client.aByte7458 = -4;
 			} else {
 				client.aByte7458 = -1;
-				TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4624, client.LOBBY_CONNECTION_CONTEXT.isaac);
+				TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.UNK_97, client.LOBBY_CONNECTION_CONTEXT.isaac);
 				tcpmessage_3.buffer.writeByte(0);
 				int i_4 = tcpmessage_3.buffer.index;
 				tcpmessage_3.buffer.writeString(string_2);

@@ -27,7 +27,7 @@ public class Class332 {
 	}
 
 	public static void method5930(int i_0) {
-		TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.aClass379_4531, client.GAME_CONNECTION_CONTEXT.isaac);
+		TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.UNK_18, client.GAME_CONNECTION_CONTEXT.isaac);
 		tcpmessage_2.buffer.writeInt(-1);
 		client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
 		Class260.aClass116_3229 = new Class116(IndexLoaders.MUSIC_INDEX, i_0);

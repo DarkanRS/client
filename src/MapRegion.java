@@ -925,7 +925,7 @@ public class MapRegion {
 				Class48_Sub2.method14571();
 				TCPPacket tcpmessage_22;
 				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.gameState == 18) {
-					tcpmessage_22 = Class271.createPacket(OutgoingPacket.aClass379_4609, client.GAME_CONNECTION_CONTEXT.isaac);
+					tcpmessage_22 = Class271.createPacket(OutgoingPacket.UNK_82, client.GAME_CONNECTION_CONTEXT.isaac);
 					tcpmessage_22.buffer.writeInt(1057001181);
 					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
 				}

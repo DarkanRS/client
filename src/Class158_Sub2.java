@@ -25,7 +25,7 @@ public abstract class Class158_Sub2 extends Class158 {
 	abstract void method14354(int var1, int var2);
 
 	public static void method14355(int i_0, int i_1, int i_2) {
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.ICOMPONENT_CONTINUE, client.GAME_CONNECTION_CONTEXT.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.IF_CONTINUE, client.GAME_CONNECTION_CONTEXT.isaac);
 		tcpmessage_3.buffer.writeIntV1(i_0, 834716715);
 		tcpmessage_3.buffer.writeShortLE128(i_1);
 		client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);

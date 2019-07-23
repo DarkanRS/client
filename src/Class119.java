@@ -63,17 +63,17 @@ public class Class119 {
 			if (player_7 != null && player_7 != VertexNormal.MY_PLAYER && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
 				OutgoingPacket outgoingpacket_8 = null;
 				if (i_0 == 1) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_1;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OP1;
 				} else if (i_0 == 4) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_4;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OP4;
 				} else if (i_0 == 5) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_5;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OP5;
 				} else if (i_0 == 6) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_6;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OP6;
 				} else if (i_0 == 7) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_7;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OP7;
 				} else if (i_0 == 9) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OPTION_9;
+					outgoingpacket_8 = OutgoingPacket.PLAYER_OP9;
 				}
 
 				if (outgoingpacket_8 != null) {
@@ -95,7 +95,7 @@ public class Class119 {
 	}
 
 	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.ICOMPONENT_DRAG_ONTO_ICOMPONENT, client.GAME_CONNECTION_CONTEXT.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
 		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288);
 		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);
