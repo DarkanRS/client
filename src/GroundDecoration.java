@@ -466,8 +466,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								continue;
 							}
 							if (icomponentdefinitions_12.contentType == IComponentDefinitions.anInt1273) {
-								if (client.aBool7176 || client.aBool7177) {
-									NPCDirection.method4326(i_14, i_15, icomponentdefinitions_12);
+								if (client.DRAW_DEBUG || client.aBool7177) {
+									NPCDirection.drawDebugInformation(i_14, i_15, icomponentdefinitions_12);
 									client.aBoolArray7443[i_13] = true;
 								}
 								continue;

@@ -177,10 +177,10 @@ public class Message {
 	Map aMap5279 = new HashMap(6);
 
 	Message(String string_1, String string_2, String string_3, String string_4) {
-		this.aMap5279.put(Language.aClass495_5795, string_1);
-		this.aMap5279.put(Language.aClass495_5802, string_2);
-		this.aMap5279.put(Language.aClass495_5801, string_3);
-		this.aMap5279.put(Language.aClass495_5797, string_4);
+		this.aMap5279.put(Language.ENGLISH, string_1);
+		this.aMap5279.put(Language.GERMAN, string_2);
+		this.aMap5279.put(Language.FRENCH, string_3);
+		this.aMap5279.put(Language.PORTUGESE, string_4);
 	}
 
 	public static Node_Sub15_Sub2 method7272() {

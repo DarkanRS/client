@@ -55,25 +55,25 @@ public enum NPCDirection implements Identifiable {
 		}
 	}
 
-	static void method4326(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2) {
-		int i_4 = icomponentdefinitions_2.width + i_0;
-		int i_5 = i_1 + 15;
-		if (client.aBool7176) {
-			int i_6 = -256;
+	static void drawDebugInformation(int x, int y, IComponentDefinitions inter) {
+		int currDrawX = inter.width + x;
+		int currDrawY = y + 15;
+		if (client.DRAW_DEBUG) {
+			int fpsColor = -256;
 			if (client.FPS < 20) {
-				i_6 = -65536;
+				fpsColor = -65536;
 			}
-			Class16.aFontRenderer_144.method359("Fps:" + client.FPS, i_4, i_5, i_6, -1);
-			i_5 += 15;
+			Class16.aFontRenderer_144.drawText("Fps:" + client.FPS, currDrawX, currDrawY, fpsColor, -1);
+			currDrawY += 15;
 			Runtime runtime_7 = Runtime.getRuntime();
 			long long_8 = runtime_7.totalMemory() / 1024L;
 			long long_10 = long_8 - runtime_7.freeMemory() / 1024L;
-			int i_12 = -256;
+			int memColor = -256;
 			if (long_10 > 262144L) {
-				i_12 = -65536;
+				memColor = -65536;
 			}
-			Class16.aFontRenderer_144.method359("Mem:" + long_10 + "/" + long_8 + "k", i_4, i_5, i_12, -1);
-			i_5 += 15;
+			Class16.aFontRenderer_144.drawText("Mem:" + long_10 + "/" + long_8 + "k", currDrawX, currDrawY, memColor, -1);
+			currDrawY += 15;
 			long gamePing = client.GAME_CONNECTION_CONTEXT.pinger.getPing();
 			String gamePingStr = "N/A";
 			if (gamePing != -1L) {
@@ -82,8 +82,8 @@ public enum NPCDirection implements Identifiable {
 					gamePingStr = Utils.rgbToColHexShortcut(16711680) + gamePingStr + Utils.rgbToColHexShortcut(16776960);
 				}
 			}
-			Class16.aFontRenderer_144.method359("Game: In:" + client.GAME_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.GAME_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + gamePingStr, i_4, i_5, -256, -1);
-			i_5 += 15;
+			Class16.aFontRenderer_144.drawText("Game: In:" + client.GAME_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.GAME_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + gamePingStr, currDrawX, currDrawY, -256, -1);
+			currDrawY += 15;
 			long lobbyPing = client.LOBBY_CONNECTION_CONTEXT.pinger.getPing();
 			String lobbyPingStr = "N/A";
 			if (lobbyPing != -1L) {
@@ -92,11 +92,11 @@ public enum NPCDirection implements Identifiable {
 					lobbyPingStr = Utils.rgbToColHexShortcut(16711680) + lobbyPingStr + Utils.rgbToColHexShortcut(16776960);
 				}
 			}
-			Class16.aFontRenderer_144.method359("Lobby: In:" + client.LOBBY_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.LOBBY_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + lobbyPingStr, i_4, i_5, -256, -1);
-			i_5 += 15;
+			Class16.aFontRenderer_144.drawText("Lobby: In:" + client.LOBBY_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.LOBBY_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + lobbyPingStr, currDrawX, currDrawY, -256, -1);
+			currDrawY += 15;
 			int i_19 = Renderers.SOFTWARE_RENDERER.za() / 1024;
-			Class16.aFontRenderer_144.method359("Offheap:" + i_19 + "k", i_4, i_5, i_19 > 65536 ? -65536 : -256, -1);
-			i_5 += 15;
+			Class16.aFontRenderer_144.drawText("Offheap:" + i_19 + "k", currDrawX, currDrawY, i_19 > 65536 ? -65536 : -256, -1);
+			currDrawY += 15;
 			int i_20 = 0;
 			int i_21 = 0;
 			int i_22 = 0;
@@ -110,9 +110,9 @@ public enum NPCDirection implements Identifiable {
 			}
 			i_23 = i_22 * 100 / i_20;
 			int i_24 = i_21 * 10000 / i_20;
-			String string_25 = "Cache:" + Connection.method3342((long) i_24, 2, true, Language.aClass495_5795, (byte) 28) + "% (" + i_23 + "%)";
-			Renderers.FONT_RENDERER.method359(string_25, i_4, i_5, -256, -1);
-			i_5 += 12;
+			String string_25 = "Cache:" + Connection.method3342((long) i_24, 2, true, Language.ENGLISH, (byte) 28) + "% (" + i_23 + "%)";
+			Renderers.FONT_RENDERER.drawText(string_25, currDrawX, currDrawY, -256, -1);
+			currDrawY += 12;
 		}
 	}
 

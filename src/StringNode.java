@@ -29,7 +29,7 @@ public class StringNode extends Node {
 				}
 			}
 		}
-		Renderers.FONT_RENDERER.method359("727 1", Class349.anInt4083 - 25, 330, -1, -16777216);
+		Renderers.FONT_RENDERER.drawText("727 1", Class349.anInt4083 - 25, 330, -1, -16777216);
 		graphicalrenderer_0.r(0, 0, Class349.anInt4083, 350);
 		graphicalrenderer_0.method8659(0, 350 - Class179.anInt2230, Class349.anInt4083, -1, -51892104);
 		Class285.aFontRenderer_3394.renderText("--> " + GameTipsLoader.method6793(Class179.aString2225), 10, 350 - SkyboxIndexLoader.aClass414_3438.bottomPadding - 1, -1, -16777216);

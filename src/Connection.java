@@ -63,11 +63,11 @@ public abstract class Connection {
     public static String method3342(long long_0, int i_2, boolean bool_3, Language xlanguage_4, byte b_5) {
         char var_6 = 44;
         char var_7 = 46;
-        if (xlanguage_4 == Language.aClass495_5795) {
+        if (xlanguage_4 == Language.ENGLISH) {
             var_6 = 46;
             var_7 = 44;
         }
-        if (xlanguage_4 == Language.aClass495_5801) {
+        if (xlanguage_4 == Language.FRENCH) {
             var_7 = 160;
         }
         boolean bool_8 = false;

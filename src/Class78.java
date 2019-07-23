@@ -17,7 +17,7 @@ public final class Class78 {
 	}
 
 	public static String method1372(Date date_0, String string_1) {
-		return method1382(date_0, string_1, method1373(), Language.aClass495_5795);
+		return method1382(date_0, string_1, method1373(), Language.ENGLISH);
 	}
 
 	static TimeZone method1373() {

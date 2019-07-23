@@ -78,7 +78,7 @@ public abstract class Class455 {
         char var_13;
         int i_18;
         for (i_18 = 0; i_18 < i_16; i_18++) {
-            if (xlanguage_2 == Language.aClass495_5801) {
+            if (xlanguage_2 == Language.FRENCH) {
                 i_6 = i_4 - 1 - i_18;
                 i_7 = i_5 - 1 - i_18;
             } else {

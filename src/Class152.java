@@ -47,7 +47,7 @@ public abstract class Class152 {
 			if (var_0 >= 204 && var_0 <= 207) {
 				return 'I';
 			}
-			if (var_0 == 209 && xlanguage_1 != Language.aClass495_5800) {
+			if (var_0 == 209 && xlanguage_1 != Language.SPANISH) {
 				return 'N';
 			}
 			if (var_0 >= 210 && var_0 <= 214) {
@@ -74,7 +74,7 @@ public abstract class Class152 {
 			if (var_0 >= 236 && var_0 <= 239) {
 				return 'i';
 			}
-			if (var_0 == 241 && xlanguage_1 != Language.aClass495_5800) {
+			if (var_0 == 241 && xlanguage_1 != Language.SPANISH) {
 				return 'n';
 			}
 			if (var_0 >= 242 && var_0 <= 246) {

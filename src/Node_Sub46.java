@@ -41,10 +41,10 @@ public class Node_Sub46 extends Node {
 					CutsceneAction_Sub9.anInt9282 = 20;
 				}
 			}
-			if (client.aBool7176) {
+			if (client.DRAW_DEBUG) {
 				int i_12 = i_2 + i_4 - 5;
 				int i_13 = i_3 + i_5 - 8;
-				Class16.aFontRenderer_144.method359("Fps:" + Engine.FPS, i_12, i_13, 16776960, -1);
+				Class16.aFontRenderer_144.drawText("Fps:" + Engine.FPS, i_12, i_13, 16776960, -1);
 				i_13 -= 15;
 				Runtime runtime_14 = Runtime.getRuntime();
 				int i_15 = (int) ((runtime_14.totalMemory() - runtime_14.freeMemory()) / 1024L);
@@ -52,7 +52,7 @@ public class Node_Sub46 extends Node {
 				if (i_15 > 65536) {
 					i_16 = 16711680;
 				}
-				Class16.aFontRenderer_144.method359("Mem:" + i_15 + "k", i_12, i_13, i_16, -1);
+				Class16.aFontRenderer_144.drawText("Mem:" + i_15 + "k", i_12, i_13, i_16, -1);
 				i_13 -= 15;
 			}
 		}

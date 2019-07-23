@@ -23,7 +23,7 @@ public abstract class FontRenderer {
         }
     }
 
-    public void method359(String string_1, int i_2, int i_3, int i_4, int i_5) {
+    public void drawText(String string_1, int i_2, int i_3, int i_4, int i_5) {
         if (string_1 != null) {
             this.method365(i_4, i_5, 248909725);
             this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1), i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0);

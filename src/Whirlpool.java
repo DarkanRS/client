@@ -207,9 +207,9 @@ public class Whirlpool {
 					Class201 class201_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass201_2600;
 					class201_2.aBool2552 = !class201_2.aBool2552;
 				} else if (i_0 == 7) {
-					client.aBool7176 = true;
+					client.DRAW_DEBUG = true;
 				} else if (i_0 == 4) {
-					client.aBool7176 = false;
+					client.DRAW_DEBUG = false;
 				} else if (i_0 == 14) {
 					client.aClass457_7335.method7651();
 				} else {

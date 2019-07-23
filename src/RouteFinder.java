@@ -396,8 +396,8 @@ public final class RouteFinder {
 						return;
 					}
 					if (string_0.equalsIgnoreCase("displayfps")) {
-						client.aBool7176 = !client.aBool7176;
-						if (client.aBool7176) {
+						client.DRAW_DEBUG = !client.DRAW_DEBUG;
+						if (client.DRAW_DEBUG) {
 							Class209.printConsoleMessage("FPS on");
 						} else {
 							Class209.printConsoleMessage("FPS off");

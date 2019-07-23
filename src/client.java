@@ -48,7 +48,7 @@ public final class client extends Engine {
 	public static int anInt7173 = 0;
 	public static int cycles = 0;
 	public static boolean aBool7175 = true;
-	static boolean aBool7176 = false;
+	static boolean DRAW_DEBUG = false;
 	static boolean aBool7177 = false;
 	public static int REBOOT_TIMER = 0;
 	public static Class180[] aClass180Array7348 = new Class180[8];
@@ -1679,7 +1679,7 @@ public final class client extends Engine {
 		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -44);
 		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
-			aBool7176 = true;
+			DRAW_DEBUG = true;
 		}
 
 		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE);
@@ -1842,7 +1842,7 @@ public final class client extends Engine {
 		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -9);
 		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
-			aBool7176 = true;
+			DRAW_DEBUG = true;
 		}
 
 		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE);
@@ -2713,7 +2713,7 @@ public final class client extends Engine {
 		PlaySoundJingleCutsceneAction.keyRecorder = Class325.method5787(Class351.gameCanvas);
 		Class163.mouseRecorder = FontRenderer.method400(Class351.gameCanvas, (byte) -76);
 		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT) {
-			aBool7176 = true;
+			DRAW_DEBUG = true;
 		}
 
 		aString3252 = Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE);
