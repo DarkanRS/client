@@ -109,7 +109,7 @@ public class Class190 {
 		}
 
 		Class186.method3083(619410098);
-		client.connectionContext.method3051((byte) -99);
+		client.LOBBY_CONNECTION_CONTEXT.method3051();
 		Class530.appletHasFocus = true;
 		Class250.method4296();
 
@@ -136,7 +136,7 @@ public class Class190 {
 		client.NPC_UPDATE_INDEX = 0;
 		client.anInt7210 = 0;
 		client.NPCS.method7749(1966305284);
-		client.aClass482_7333.method8118(1024989967);
+		client.aClass482_7333.removeAll();
 		client.aClass465_7334.method7749(1935752602);
 		client.aClass457_7335.method7651();
 		client.aClass465_7414.method7749(828403909);

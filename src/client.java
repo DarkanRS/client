@@ -87,8 +87,8 @@ public final class client extends Engine {
 	static int anInt7332 = 0;
 	static int anInt7216 = 0;
 	static int[] anIntArray7421 = new int[1005];
-	public static BufferedConnectionContext connectionContext = new BufferedConnectionContext();
-	public static BufferedConnectionContext outputContext = new BufferedConnectionContext();
+	public static BufferedConnectionContext LOBBY_CONNECTION_CONTEXT = new BufferedConnectionContext();
+	public static BufferedConnectionContext GAME_CONNECTION_CONTEXT = new BufferedConnectionContext();
 	public static BufferedConnectionContext[] aClass184Array7220;
 	static int anInt7221;
 	static boolean aBool7459;
@@ -324,7 +324,7 @@ public final class client extends Engine {
 	}
 
 	static {
-		aClass184Array7220 = new BufferedConnectionContext[] { outputContext, connectionContext };
+		aClass184Array7220 = new BufferedConnectionContext[] { GAME_CONNECTION_CONTEXT, LOBBY_CONNECTION_CONTEXT };
 		anInt7221 = 0;
 		aBool7459 = false;
 		PING_REQUESTER = new PingRequester();
@@ -557,6 +557,7 @@ public final class client extends Engine {
 	}
 
 	public static SoftCache aClass229_5901 = new SoftCache(4);
+	static int anInt56;
 
 	public final void init() {
 		if (this.method4665((byte) 80)) {
@@ -593,11 +594,11 @@ public final class client extends Engine {
 						}
 						break;
 					case 5:
-						if (Class448.lobbyConnectionInfo == null) {
-							Class448.lobbyConnectionInfo = new ConnectionInfo();
+						if (Class448.LOBBY_CONNECTION_INFO == null) {
+							Class448.LOBBY_CONNECTION_INFO = new ConnectionInfo();
 						}
 
-						Class448.lobbyConnectionInfo.host = string_7;
+						Class448.LOBBY_CONNECTION_INFO.host = string_7;
 						break;
 					case 6:
 						TilestreamPacket.COUNTRY = Integer.parseInt(string_7);
@@ -635,11 +636,11 @@ public final class client extends Engine {
 						Class464.aString5555 = string_7;
 						break;
 					case 14:
-						if (Class448.lobbyConnectionInfo == null) {
-							Class448.lobbyConnectionInfo = new ConnectionInfo();
+						if (Class448.LOBBY_CONNECTION_INFO == null) {
+							Class448.LOBBY_CONNECTION_INFO = new ConnectionInfo();
 						}
 
-						Class448.lobbyConnectionInfo.worldId = Integer.parseInt(string_7);
+						Class448.LOBBY_CONNECTION_INFO.worldId = Integer.parseInt(string_7);
 						break;
 					case 15:
 						Class176.BUILD_ENVIRONMENT = Class182.method3040(Integer.parseInt(string_7), (byte) -28);
@@ -797,8 +798,8 @@ public final class client extends Engine {
 				aRandom7260.setSeed((long) Class455_Sub3.anInt9079);
 			}
 
-			outputContext.method3059(-1650964006);
-			connectionContext.method3059(-1386724833);
+			GAME_CONNECTION_CONTEXT.method3059(-1650964006);
+			LOBBY_CONNECTION_CONTEXT.method3059(-1386724833);
 			this.method11622();
 			if (ScreenSizePreference.JS5_MANAGER != null) {
 				ScreenSizePreference.JS5_MANAGER.pulse();
@@ -889,7 +890,7 @@ public final class client extends Engine {
 						Class9.anInt107 = Class9.anInt106;
 						if (Class448.aBool5428) {
 							Class62.setGameHost(Class448.aClass450_5429.worldId, Class448.aClass450_5429.host);
-							outputContext.method3061(-1506150960);
+							GAME_CONNECTION_CONTEXT.reset();
 							Class365.setGameState(10);
 						} else {
 							CursorIndexLoader.method7333(Class9.aBool71, 2069442218);
@@ -1226,7 +1227,7 @@ public final class client extends Engine {
 				}
 
 				if (updateStage == 1) {
-					Class47_Sub1.updateConnection = SunDefinitions.createAsyncConnection(Node_Sub20_Sub10.clientSocket, 125000, 165252847);
+					Class47_Sub1.updateConnection = SunDefinitions.createAsyncConnection(Node_Sub20_Sub10.clientSocket, 125000);
 					int length = 13 + aString7164.length();
 					RsByteBuffer stream = new RsByteBuffer(length + 4);
 					stream.writeByte(OutgoingLoginPacket.INIT_JS5REMOTE_CONNECTION.id);
@@ -1650,16 +1651,16 @@ public final class client extends Engine {
 		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 739431588)) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = 1140744768 + -58916693 * Class448.aClass450_5420.worldId * -1933199413;
-			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1933199413 * -58916693 + 1140744768;
+			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -58916693 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.lobbyConnectionInfo.anInt5437 = (Class448.lobbyConnectionInfo.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
+			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
 		} else if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = "127.0.0.1";
-			Class448.lobbyConnectionInfo.host = "127.0.0.1";
+			Class448.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = -58916693 * Class448.aClass450_5420.worldId * -1933199413 + 1140744768;
-			Class448.lobbyConnectionInfo.anInt5434 = -58916693 * Class448.lobbyConnectionInfo.worldId * -1933199413 + 1140744768;
+			Class448.LOBBY_CONNECTION_INFO.anInt5434 = -58916693 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.lobbyConnectionInfo.anInt5437 = (-1441381029 * Class448.lobbyConnectionInfo.worldId * -1933199413 + 1250363344) * -1637999045;
+			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
 		}
 
 		Class159.GAME_CONNECTION_INFO = Class448.aClass450_5420;
@@ -1813,16 +1814,16 @@ public final class client extends Engine {
 		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 1401692729)) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = 1140744768 + -58916693 * Class448.aClass450_5420.worldId * -1933199413;
-			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1933199413 * -58916693 + 1140744768;
+			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -58916693 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.lobbyConnectionInfo.anInt5437 = (Class448.lobbyConnectionInfo.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
+			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 * -1441381029 + 1250363344) * -1637999045;
 		} else if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = "127.0.0.1";
-			Class448.lobbyConnectionInfo.host = "127.0.0.1";
+			Class448.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = -58916693 * Class448.aClass450_5420.worldId * -1933199413 + 1140744768;
-			Class448.lobbyConnectionInfo.anInt5434 = -58916693 * Class448.lobbyConnectionInfo.worldId * -1933199413 + 1140744768;
+			Class448.LOBBY_CONNECTION_INFO.anInt5434 = -58916693 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = (-1441381029 * Class448.aClass450_5420.worldId * -1933199413 + 1250363344) * -1637999045;
-			Class448.lobbyConnectionInfo.anInt5437 = (-1441381029 * Class448.lobbyConnectionInfo.worldId * -1933199413 + 1250363344) * -1637999045;
+			Class448.LOBBY_CONNECTION_INFO.anInt5437 = (-1441381029 * Class448.LOBBY_CONNECTION_INFO.worldId * -1933199413 + 1250363344) * -1637999045;
 		}
 
 		Class159.GAME_CONNECTION_INFO = Class448.aClass450_5420;
@@ -2163,7 +2164,7 @@ public final class client extends Engine {
 									}
 
 									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
-										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(Class7.anInt56, anInt7345);
+										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(client.anInt56, anInt7345);
 										if (icomponentdefinitions_35 != null) {
 											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, iCompDef.anInt1426, 1L, i_33, i_34, true, false, (long) (iCompDef.anInt1288 << 32 | iCompDef.idHash), true, -1033171513);
 										} else {
@@ -2625,10 +2626,10 @@ public final class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		outputContext.method3051((byte) -122);
-		outputContext.aClass7_2299.method347(-669506484);
-		connectionContext.method3051((byte) -84);
-		connectionContext.aClass7_2299.method347(1264741540);
+		GAME_CONNECTION_CONTEXT.method3051();
+		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
+		LOBBY_CONNECTION_CONTEXT.method3051();
+		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		Class278_Sub1.method13449((byte) -20);
 		Class119.JS5_STANDARD_REQUESTER.method5525(1906332744);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 68);
@@ -2684,16 +2685,16 @@ public final class client extends Engine {
 		} else if (ServerEnvironment.method8308(HDWaterTile.SERVER_ENVIRONMENT, 1661844371)) {
 			Class448.aClass450_5420.host = Node_Sub44.anApplet8065.getCodeBase().getHost();
 			Class448.aClass450_5420.anInt5434 = Class448.aClass450_5420.worldId * -1708079975 + 1140744768;
-			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1708079975 + 1140744768;
+			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = Class448.aClass450_5420.worldId * -1473668237 + 1047080176;
-			Class448.lobbyConnectionInfo.anInt5437 = Class448.lobbyConnectionInfo.worldId * -1473668237 + 1047080176;
+			Class448.LOBBY_CONNECTION_INFO.anInt5437 = Class448.LOBBY_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
 		} else if (ServerEnvironment.LOCAL == HDWaterTile.SERVER_ENVIRONMENT) {
 			Class448.aClass450_5420.host = "127.0.0.1";
-			Class448.lobbyConnectionInfo.host = "127.0.0.1";
+			Class448.LOBBY_CONNECTION_INFO.host = "127.0.0.1";
 			Class448.aClass450_5420.anInt5434 = Class448.aClass450_5420.worldId * -1708079975 + 1140744768;
-			Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId * -1708079975 + 1140744768;
+			Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId * -1708079975 + 1140744768;
 			Class448.aClass450_5420.anInt5437 = Class448.aClass450_5420.worldId * -1473668237 + 1047080176;
-			Class448.lobbyConnectionInfo.anInt5437 = Class448.lobbyConnectionInfo.worldId * -1473668237 + 1047080176;
+			Class448.LOBBY_CONNECTION_INFO.anInt5437 = Class448.LOBBY_CONNECTION_INFO.worldId * -1473668237 + 1047080176;
 		}
 
 		Class159.GAME_CONNECTION_INFO = Class448.aClass450_5420;
@@ -2735,10 +2736,10 @@ public final class client extends Engine {
 			fullScreenFrame = null;
 		}
 
-		outputContext.method3051((byte) -43);
-		outputContext.aClass7_2299.method347(2071949527);
-		connectionContext.method3051((byte) -77);
-		connectionContext.aClass7_2299.method347(-1713928547);
+		GAME_CONNECTION_CONTEXT.method3051();
+		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
+		LOBBY_CONNECTION_CONTEXT.method3051();
+		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		Class278_Sub1.method13449((byte) 10);
 		Class119.JS5_STANDARD_REQUESTER.method5525(-411822521);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 4);
@@ -2779,7 +2780,7 @@ public final class client extends Engine {
 				HitsplatDefinitions.method3851();
 			}
 
-			for (i_2 = 0; i_2 < 100 && FontRenderer_Sub3.method14338(connectionContext); i_2++) {
+			for (i_2 = 0; i_2 < 100 && FontRenderer_Sub3.method14338(LOBBY_CONNECTION_CONTEXT); i_2++) {
 				;
 			}
 		}
@@ -2907,20 +2908,20 @@ public final class client extends Engine {
 											}
 
 											if (gameState == 0 && !JS5CacheFile.method3360((byte) 17) || gameState == 7 && Class9.anInt106 == 42 || gameState == 3) {
-												if (gameState != 7 && connectionContext.getConnection() == null) {
+												if (gameState != 7 && LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
 													CursorIndexLoader.method7333(false, 2142128542);
-												} else if (connectionContext != null) {
-													++connectionContext.anInt2290;
-													if (connectionContext.anInt2290 > 50) {
-														TCPPacket tcpmessage_18 = Class271.createPacket(OutgoingPacket.PING, connectionContext.isaac);
-														connectionContext.queuePacket(tcpmessage_18);
+												} else if (LOBBY_CONNECTION_CONTEXT != null) {
+													++LOBBY_CONNECTION_CONTEXT.anInt2290;
+													if (LOBBY_CONNECTION_CONTEXT.anInt2290 > 50) {
+														TCPPacket tcpmessage_18 = Class271.createPacket(OutgoingPacket.PING, LOBBY_CONNECTION_CONTEXT.isaac);
+														LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_18);
 													}
 
 													try {
-														connectionContext.method3047(1630204206);
+														LOBBY_CONNECTION_CONTEXT.flush();
 													} catch (IOException ioexception_15) {
 														if (gameState == 7) {
-															connectionContext.method3051((byte) -106);
+															LOBBY_CONNECTION_CONTEXT.method3051();
 														} else {
 															CursorIndexLoader.method7333(false, 2058327064);
 														}

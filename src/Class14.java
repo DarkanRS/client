@@ -12,7 +12,7 @@ public class Class14 {
 
 	static void method537() {
 		Class9.lobbyStage = 273;
-		Class9.aClass184_73 = client.outputContext;
+		Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;
 		Class455.method7558(Class9.aLong77 == -1L, true, "", "", Class9.aLong77);
 	}
 

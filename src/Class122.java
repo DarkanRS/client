@@ -89,7 +89,7 @@ public class Class122 {
 		Class291_Sub1.anInt8015 = 0;
 		Node_Sub20_Sub24.aClass118_9884 = null;
 		Class291_Sub1.method5137();
-		Class291_Sub1.aClass482_3459.method8118(-1939522587);
+		Class291_Sub1.aClass482_3459.removeAll();
 		Class291_Sub1.aClass283_3470 = null;
 		Defaults7Loader.aNativeSprite_5883 = null;
 		Class291_Sub1.anInt8014 = -1;

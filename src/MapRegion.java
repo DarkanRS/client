@@ -603,7 +603,7 @@ public class MapRegion {
 		Class350.method6189((byte) 120);
 		QuickchatFiller.method1139(-1725445379);
 		client.aClass465_7334.method7749(189639583);
-		client.aClass482_7333.method8118(-886454007);
+		client.aClass482_7333.removeAll();
 		client.aClass457_7335.method7651();
 		NewsItemFetcher.method795();
 	}
@@ -924,10 +924,10 @@ public class MapRegion {
 				ClanVarDefinitions.method6823();
 				Class48_Sub2.method14571();
 				TCPPacket tcpmessage_22;
-				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.outputContext.getConnection() != null && client.gameState == 18) {
-					tcpmessage_22 = Class271.createPacket(OutgoingPacket.aClass379_4609, client.outputContext.isaac);
+				if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.GAME_CONNECTION_CONTEXT.getConnection() != null && client.gameState == 18) {
+					tcpmessage_22 = Class271.createPacket(OutgoingPacket.aClass379_4609, client.GAME_CONNECTION_CONTEXT.isaac);
 					tcpmessage_22.buffer.writeInt(1057001181);
-					client.outputContext.queuePacket(tcpmessage_22);
+					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
 				}
 				if (!this.aClass256_3163.method4410((byte) 29)) {
 					i_5 = (this.anInt3170 - (this.sizeX >> 4)) / 8;
@@ -955,9 +955,9 @@ public class MapRegion {
 					Class365.setGameState(3);
 				} else {
 					Class365.setGameState(13);
-					if (client.outputContext.getConnection() != null) {
-						tcpmessage_22 = Class271.createPacket(OutgoingPacket.REGION_LOADED_CONFIRM, client.outputContext.isaac);
-						client.outputContext.queuePacket(tcpmessage_22);
+					if (client.GAME_CONNECTION_CONTEXT.getConnection() != null) {
+						tcpmessage_22 = Class271.createPacket(OutgoingPacket.REGION_LOADED_CONFIRM, client.GAME_CONNECTION_CONTEXT.isaac);
+						client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
 					}
 				}
 				ParticleProducerDefinition.method1160(-1437458578);

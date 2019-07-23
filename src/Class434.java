@@ -26,7 +26,7 @@ public abstract class Class434 {
 		TCPPacket tcpmessage_1;
 		int i_2;
 		if (client.maximumHeldKeys > 0) {
-			tcpmessage_1 = Class271.createPacket(OutgoingPacket.KEY_PRESS, client.outputContext.isaac);
+			tcpmessage_1 = Class271.createPacket(OutgoingPacket.KEY_PRESS, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_1.buffer.writeShort(client.maximumHeldKeys * 4);
 
 			for (i_2 = 0; i_2 < client.maximumHeldKeys; i_2++) {
@@ -41,7 +41,7 @@ public abstract class Class434 {
 				tcpmessage_1.buffer.write24BitInt((int) long_4);
 			}
 
-			client.outputContext.queuePacket(tcpmessage_1);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 
 		if (Class236.anInt2912 > 0) {
@@ -51,27 +51,27 @@ public abstract class Class434 {
 		if (client.aBool7371 && Class236.anInt2912 <= 0) {
 			Class236.anInt2912 = 20;
 			client.aBool7371 = false;
-			tcpmessage_1 = Class271.createPacket(OutgoingPacket.MOVE_CAMERA, client.outputContext.isaac);
+			tcpmessage_1 = Class271.createPacket(OutgoingPacket.MOVE_CAMERA, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_1.buffer.writeShortLE128((int) client.aFloat7146 >> 3);
 			tcpmessage_1.buffer.writeShort128((int) client.aFloat7365 >> 3);
-			client.outputContext.queuePacket(tcpmessage_1);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 
 		if (Class236.aBool2909 != Class530.appletHasFocus) {
 			Class236.aBool2909 = Class530.appletHasFocus;
-			tcpmessage_1 = Class271.createPacket(OutgoingPacket.CLIENT_FOCUS, client.outputContext.isaac);
+			tcpmessage_1 = Class271.createPacket(OutgoingPacket.CLIENT_FOCUS, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_1.buffer.writeByte(Class530.appletHasFocus ? 1 : 0);
-			client.outputContext.queuePacket(tcpmessage_1);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 
 		if (!client.aBool7175) {
-			tcpmessage_1 = Class271.createPacket(OutgoingPacket.SEND_PREFERENCES, client.outputContext.isaac);
+			tcpmessage_1 = Class271.createPacket(OutgoingPacket.SEND_PREFERENCES, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_1.buffer.writeByte(0);
 			i_2 = tcpmessage_1.buffer.index;
 			RsByteBuffer rsbytebuffer_6 = Class393.preferences.encode();
 			tcpmessage_1.buffer.writeBytes(rsbytebuffer_6.buffer, 0, rsbytebuffer_6.index);
 			tcpmessage_1.buffer.method13061(tcpmessage_1.buffer.index - i_2, -1036471531);
-			client.outputContext.queuePacket(tcpmessage_1);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 			client.aBool7175 = true;
 		}
 

@@ -68,13 +68,13 @@ public enum ServerEnvironment implements Identifiable {
     }
 
     public static void method8314(String string_0, int port) {
-        if (Class448.lobbyConnectionInfo == null) {
-            Class448.lobbyConnectionInfo = new ConnectionInfo();
+        if (Class448.LOBBY_CONNECTION_INFO == null) {
+            Class448.LOBBY_CONNECTION_INFO = new ConnectionInfo();
         }
-        Class448.lobbyConnectionInfo.host = string_0;
-        Class448.lobbyConnectionInfo.worldId = port + 1099;
-        Class448.lobbyConnectionInfo.anInt5434 = Class448.lobbyConnectionInfo.worldId;
-        Class448.lobbyConnectionInfo.anInt5437 = Class448.lobbyConnectionInfo.worldId;
+        Class448.LOBBY_CONNECTION_INFO.host = string_0;
+        Class448.LOBBY_CONNECTION_INFO.worldId = port + 1099;
+        Class448.LOBBY_CONNECTION_INFO.anInt5434 = Class448.LOBBY_CONNECTION_INFO.worldId;
+        Class448.LOBBY_CONNECTION_INFO.anInt5437 = Class448.LOBBY_CONNECTION_INFO.worldId;
     }
 
     static final void method8315(int i_0) {

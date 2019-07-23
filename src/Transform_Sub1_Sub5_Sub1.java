@@ -498,8 +498,8 @@ public class Transform_Sub1_Sub5_Sub1 extends Transform_Sub1_Sub5 implements Sce
 
 				int i_3;
 				if (Class192.ACCOUNT_CREATION_STAGE == AccountCreationStage.REQUEST) {
-					client.connectionContext.method3050(SunDefinitions.createAsyncConnection(Class448.lobbyConnectionInfo.createSocket((byte) 121), 15000, 1038176780), Class448.lobbyConnectionInfo.host, (byte) -47);
-					client.connectionContext.method3054((short) 8665);
+					client.LOBBY_CONNECTION_CONTEXT.init(SunDefinitions.createAsyncConnection(Class448.LOBBY_CONNECTION_INFO.createSocket((byte) 121), 15000), Class448.LOBBY_CONNECTION_INFO.host);
+					client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
 					TCPPacket packet = SkyboxDefinitions.method3558((byte) 87);
 					packet.buffer.writeByte(OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
 					packet.buffer.writeShort(0);
@@ -525,39 +525,39 @@ public class Transform_Sub1_Sub5_Sub1 extends Transform_Sub1_Sub5 implements Sce
 					packet.buffer.index += 7;
 					packet.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_4, packet.buffer.index);
 					packet.buffer.method13281(packet.buffer.index - i_3);
-					client.connectionContext.queuePacket(packet);
-					client.connectionContext.method3047(557990439);
+					client.LOBBY_CONNECTION_CONTEXT.queuePacket(packet);
+					client.LOBBY_CONNECTION_CONTEXT.flush();
 					Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.RESPONSE;
 				}
 
 				if (AccountCreationStage.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
-					if (client.connectionContext.getConnection() == null) {
+					if (client.LOBBY_CONNECTION_CONTEXT.getConnection() == null) {
 						Class5.method297(2055895853);
-					} else if (client.connectionContext.getConnection().available(1)) {
-						client.connectionContext.getConnection().read(client.connectionContext.recievedBuffer.buffer, 0, 1);
-						CutsceneAction_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(RSInterface.method1626(), client.connectionContext.recievedBuffer.buffer[0] & 0xff);
+					} else if (client.LOBBY_CONNECTION_CONTEXT.getConnection().available(1)) {
+						client.LOBBY_CONNECTION_CONTEXT.getConnection().read(client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.buffer, 0, 1);
+						CutsceneAction_Sub9.RECIEVED_RESPONSE = (AccountCreationResponseOpcodes) Class386.identify(RSInterface.method1626(), client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.buffer[0] & 0xff);
 						if (AccountCreationResponseOpcodes.CONTINUE != CutsceneAction_Sub9.RECIEVED_RESPONSE) {
-							client.connectionContext.method3051((byte) -45);
+							client.LOBBY_CONNECTION_CONTEXT.method3051();
 						} else {
-							client.connectionContext.isaac = new IsaacCipher(Class14.LOGIN_XTEAS);
+							client.LOBBY_CONNECTION_CONTEXT.isaac = new IsaacCipher(Class14.LOGIN_XTEAS);
 							int[] ints_8 = new int[4];
 
 							for (i_3 = 0; i_3 < 4; i_3++) {
 								ints_8[i_3] = Class14.LOGIN_XTEAS[i_3] + 50;
 							}
 
-							client.connectionContext.aClass432_2295 = new IsaacCipher(ints_8);
-							client.connectionContext.recievedBuffer.setIsaacCipher(client.connectionContext.aClass432_2295, 1577326429);
+							client.LOBBY_CONNECTION_CONTEXT.aClass432_2295 = new IsaacCipher(ints_8);
+							client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.setIsaacCipher(client.LOBBY_CONNECTION_CONTEXT.aClass432_2295, 1577326429);
 							Class365.setGameState(3);
-							client.connectionContext.method3054((short) -8634);
-							client.connectionContext.recievedBuffer.index = 0;
-							client.connectionContext.lastPacket = null;
-							client.connectionContext.secondLastPacket = null;
-							client.connectionContext.thirdLastPacket = null;
-							client.connectionContext.idleReadPulses = 0;
+							client.LOBBY_CONNECTION_CONTEXT.clearAllQueuedPackets();
+							client.LOBBY_CONNECTION_CONTEXT.recievedBuffer.index = 0;
+							client.LOBBY_CONNECTION_CONTEXT.lastPacket = null;
+							client.LOBBY_CONNECTION_CONTEXT.secondLastPacket = null;
+							client.LOBBY_CONNECTION_CONTEXT.thirdLastPacket = null;
+							client.LOBBY_CONNECTION_CONTEXT.idleReadPulses = 0;
 						}
 
-						client.connectionContext.currentPacket = null;
+						client.LOBBY_CONNECTION_CONTEXT.currentPacket = null;
 						Class192.ACCOUNT_CREATION_STAGE = null;
 					}
 				}

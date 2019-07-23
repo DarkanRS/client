@@ -114,8 +114,8 @@ public class FriendStatus {
 			if (!Class20.aBool161) {
 				Class20.aBool162 = Class20.anInt198 != -1 && Class20.anInt169 >= Class20.anInt198 || (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * Class20.anInt169 > Engine.anInt3243 * -969250379;
 			}
-			Class20.aClass482_174.method8118(1351673894);
-			Class20.aClass482_175.method8118(-1093691233);
+			Class20.aClass482_174.removeAll();
+			Class20.aClass482_175.removeAll();
 			int i_3;
 			for (CacheableNode_Sub7 class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.next(1807139429)) {
 				i_3 = class282_sub50_sub7_2.clickType;

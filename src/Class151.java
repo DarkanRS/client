@@ -29,7 +29,7 @@ public class Class151 {
     static void method2590(IComponentDefinitions icomponentdefinitions_0) {
         if (client.aBool7344) {
             if (icomponentdefinitions_0.anObjectArray1393 != null) {
-                IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
+                IComponentDefinitions icomponentdefinitions_2 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
                 if (icomponentdefinitions_2 != null) {
                     HookRequest hookrequest_3 = new HookRequest();
                     hookrequest_3.source = icomponentdefinitions_0;
@@ -38,14 +38,14 @@ public class Class151 {
                     CS2Executor.executeHookInner200k(hookrequest_3, 1791224764);
                 }
             }
-            TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_ICOMPONENT, client.outputContext.isaac);
+            TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.ICOMPONENT_ON_ICOMPONENT, client.GAME_CONNECTION_CONTEXT.isaac);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
             tcpmessage_4.buffer.writeLEInt(icomponentdefinitions_0.idHash, (byte) 89);
-            tcpmessage_4.buffer.writeIntV2(Class7.anInt56);
+            tcpmessage_4.buffer.writeIntV2(client.anInt56);
             tcpmessage_4.buffer.writeShortLE(client.anInt7346);
-            client.outputContext.queuePacket(tcpmessage_4);
+            client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);
         }
     }
 
@@ -87,8 +87,8 @@ public class Class151 {
 
     static final void method2592(byte b_0) {
         if (!Node_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState)) {
-            ClanVarSettingsIndexLoader.aClass202_2883 = client.outputContext.getConnection();
-            client.outputContext.method3061(-1872117357);
+            ClanVarSettingsIndexLoader.aClass202_2883 = client.GAME_CONNECTION_CONTEXT.getConnection();
+            client.GAME_CONNECTION_CONTEXT.reset();
             Class365.setGameState(10);
         } else {
             CursorIndexLoader.method7333(false, 2084407063);

@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class Class289 implements Runnable {
+public class AsyncOutputStream implements Runnable {
 
 	IOException anIOException3439;
 	int anInt3443 = 0;
@@ -131,7 +131,7 @@ public class Class289 implements Runnable {
 		}
 	}
 
-	Class289(OutputStream outputstream_1, int i_2) {
+	AsyncOutputStream(OutputStream outputstream_1, int i_2) {
 		this.anOutputStream3442 = outputstream_1;
 		this.anInt3440 = i_2 + 1;
 		this.aByteArray3441 = new byte[this.anInt3440];
@@ -324,7 +324,7 @@ public class Class289 implements Runnable {
 				Static.method6378();
 				ObjectIndexLoader objectindexloader_39 = IndexLoaders.MAP_REGION_DECODER.method4436();
 				Class187.anInt2353 = 0;
-				Class187.aClass482_2350.method8118(862321870);
+				Class187.aClass482_2350.removeAll();
 				if (!Class187.aBool2356) {
 					for (i_21 = b_8; i_21 < b_8 + i_3; i_21++) {
 						for (i_22 = b_9; i_22 < i_4 + b_9; i_22++) {

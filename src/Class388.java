@@ -44,12 +44,12 @@ public class Class388 implements Interface41 {
     }
 
     static void method6692(int i_0) {
-        TCPPacket tcpmessage_1 = Class271.createPacket(OutgoingPacket.SCREEN_SIZE, client.outputContext.isaac);
+        TCPPacket tcpmessage_1 = Class271.createPacket(OutgoingPacket.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_1.buffer.writeByte(Class158.windowedMode());
         tcpmessage_1.buffer.writeShort(Class349.anInt4083);
         tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
         tcpmessage_1.buffer.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641(-965992195));
-        client.outputContext.queuePacket(tcpmessage_1);
+        client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
     }
 
     static boolean method6693(int i_0) {

@@ -206,7 +206,7 @@ public class QuickChatMessage {
 
     static void method6160() {
         Class9.lobbyStage = 140;
-        Class9.aClass184_73 = client.connectionContext;
+        Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
         if (client.aByteArray7152 != null) {
             RsByteBuffer rsbytebuffer_1 = new RsByteBuffer(client.aByteArray7152);
             Class9.aLong77 = rsbytebuffer_1.readLong();

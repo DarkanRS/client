@@ -78,11 +78,11 @@ public class CursorIndexLoader {
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			BufferedConnectionContext class184_4 = arr_2[i_3];
 			try {
-				class184_4.method3047(1513639473);
+				class184_4.flush();
 			} catch (IOException ioexception_8) {
 				;
 			}
-			class184_4.method3051((byte) -59);
+			class184_4.method3051();
 		}
 		JS5StandardRequester.method5558();
 		Class356.method6227(false, (byte) -48);

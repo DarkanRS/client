@@ -80,9 +80,9 @@ public class Class5 {
 	}
 
 	static void method297(int i_0) {
-		client.connectionContext.method3051((byte) -37);
+		client.LOBBY_CONNECTION_CONTEXT.method3051();
 		if (Class14.anInt134 < 2) {
-			Class448.lobbyConnectionInfo.swap(876652608);
+			Class448.LOBBY_CONNECTION_INFO.swap(876652608);
 			Class14.anInt133 = 0;
 			++Class14.anInt134;
 			Class192.ACCOUNT_CREATION_STAGE = AccountCreationStage.REQUEST;

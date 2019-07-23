@@ -489,7 +489,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 			return bool_2;
 		} catch (IOException ioexception_7) {
 			if (client.gameState == 7) {
-				class184_0.method3061(-1844369751);
+				class184_0.reset();
 				return false;
 			} else {
 				Class151.method2592((byte) 31);

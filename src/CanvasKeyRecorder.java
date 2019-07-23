@@ -39,7 +39,7 @@ public final class CanvasKeyRecorder extends KeyRecorder implements KeyListener,
 	}
 
 	public synchronized void method3235() {
-		this.aClass482_8046.method8118(-1343308861);
+		this.aClass482_8046.removeAll();
 		for (Node_Sub52 class282_sub52_2 = (Node_Sub52) this.aClass482_8047.popHead(); class282_sub52_2 != null; class282_sub52_2 = (Node_Sub52) this.aClass482_8047.popHead()) {
 			class282_sub52_2.anInt8174 = this.method13398((byte) 124);
 			if (class282_sub52_2.anInt8173 == 0) {
@@ -132,8 +132,8 @@ public final class CanvasKeyRecorder extends KeyRecorder implements KeyListener,
 			for (int i_2 = 0; i_2 < 112; i_2++) {
 				this.aBoolArray8048[i_2] = false;
 			}
-			this.aClass482_8046.method8118(-1693342085);
-			this.aClass482_8047.method8118(-800390555);
+			this.aClass482_8046.removeAll();
+			this.aClass482_8047.removeAll();
 		}
 	}
 
@@ -154,7 +154,7 @@ public final class CanvasKeyRecorder extends KeyRecorder implements KeyListener,
 	}
 
 	public synchronized void method3246() {
-		this.aClass482_8046.method8118(1090234793);
+		this.aClass482_8046.removeAll();
 		for (Node_Sub52 class282_sub52_1 = (Node_Sub52) this.aClass482_8047.popHead(); class282_sub52_1 != null; class282_sub52_1 = (Node_Sub52) this.aClass482_8047.popHead()) {
 			class282_sub52_1.anInt8174 = this.method13398((byte) 40) * 110455137 * 656472737;
 			if (class282_sub52_1.anInt8173 * -461318909 * -921682517 == 0) {

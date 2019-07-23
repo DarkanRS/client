@@ -101,7 +101,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				ba_1.ha();
 			}
 
-			this.au.method8118(-971959284);
+			this.au.removeAll();
 			this.da();
 			if (this.bm) {
 				Class13.method508(false, true, -167551249);
@@ -615,7 +615,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				ba_1.ha();
 			}
 
-			this.au.method8118(-239422644);
+			this.au.removeAll();
 			this.da();
 			if (this.bm) {
 				Class13.method508(false, true, -803268356);
@@ -803,7 +803,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				ba_1.ha();
 			}
 
-			this.au.method8118(183026123);
+			this.au.removeAll();
 			this.da();
 			if (this.bm) {
 				Class13.method508(false, true, -819132543);
@@ -1645,7 +1645,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				ba_1.ha();
 			}
 
-			this.au.method8118(1098204001);
+			this.au.removeAll();
 			this.da();
 			if (this.bm) {
 				Class13.method508(false, true, 1235757139);

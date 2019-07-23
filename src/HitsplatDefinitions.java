@@ -175,7 +175,7 @@ public class HitsplatDefinitions {
 
 		Class20.anInt170 = 0;
 		Class20.anInt169 = 0;
-		Class20.aClass482_171.method8118(-1612336586);
+		Class20.aClass482_171.removeAll();
 		Class20.aClass465_172.method7749(-2124634600);
 		Class20.aClass477_182.method7935((byte) 16);
 		Class361.method6269(Class20.aCacheableNode_Sub7_157);

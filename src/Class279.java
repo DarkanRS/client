@@ -11,7 +11,7 @@ public class Class279 {
 
 	static void method4964() {
 		Class9.lobbyStage = 140;
-		Class9.aClass184_73 = client.connectionContext;
+		Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
 		Class455.method7558(Class9.aLong77 == -1L, true, "", "", Class9.aLong77);
 	}
 

@@ -2,7 +2,7 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Class286 implements Runnable {
+public class AsyncInputStream implements Runnable {
 
 	IOException anIOException3401;
 	int anInt3400 = 0;
@@ -105,7 +105,7 @@ public class Class286 implements Runnable {
 		}
 	}
 
-	Class286(InputStream inputstream_1, int i_2) {
+	AsyncInputStream(InputStream inputstream_1, int i_2) {
 		this.anInputStream3396 = inputstream_1;
 		this.anInt3397 = i_2 + 1;
 		this.aByteArray3399 = new byte[this.anInt3397];

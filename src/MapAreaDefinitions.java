@@ -433,7 +433,7 @@ public class MapAreaDefinitions {
         int i_23 = 0;
         int i_24;
         if (worldmapareadefs_2.areaName != null) {
-            class194_15 = Class286.method5048(worldmapareadefs_2.anInt2722);
+            class194_15 = AsyncInputStream.method5048(worldmapareadefs_2.anInt2722);
             if (class194_15 != null) {
                 i_16 = Node_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, (int[]) null, Class291_Sub1.aStringArray8024, (Sprite[]) null);
                 i_17 = (Class291_Sub1.anInt3476 - Class291_Sub1.anInt3489) * worldmapareadefs_2.anInt2750 / (Class291_Sub1.anInt3480 - Class291_Sub1.anInt3485) + class282_sub36_1.anInt7990;

@@ -48,7 +48,7 @@ public class Class350 implements Interface3 {
 		}
 		Class20.anInt170 = 0;
 		Class20.anInt169 = 0;
-		Class20.aClass482_171.method8118(-1633616509);
+		Class20.aClass482_171.removeAll();
 		Class20.aClass465_172.method7749(168262790);
 		Class20.aClass477_182.method7935((byte) 1);
 		Class20.aBool161 = false;

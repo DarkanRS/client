@@ -52,7 +52,7 @@ public final class Class155 {
 
 	public static void method2635(String string_0, String string_1) {
 		if (string_0.length() <= 320 && Class388.method6693(1569311303)) {
-			client.connectionContext.method3051((byte) -71);
+			client.LOBBY_CONNECTION_CONTEXT.method3051();
 			HitbarIndexLoader.method5118((byte) -126);
 			Class9.aString99 = string_0;
 			Class9.aString102 = string_1;

@@ -40,8 +40,8 @@ public class NPCUpdate {
 				client.aNode_Sub47Array7209[i_6] = null;
 			}
 		}
-		if (client.outputContext.recievedBuffer.index != client.outputContext.currentPacketSize) {
-			throw new RuntimeException(client.outputContext.recievedBuffer.index + " " + client.outputContext.currentPacketSize);
+		if (client.GAME_CONNECTION_CONTEXT.recievedBuffer.index != client.GAME_CONNECTION_CONTEXT.currentPacketSize) {
+			throw new RuntimeException(client.GAME_CONNECTION_CONTEXT.recievedBuffer.index + " " + client.GAME_CONNECTION_CONTEXT.currentPacketSize);
 		} else {
 			for (i_3 = 0; i_3 < client.NPC_UPDATE_INDEX; i_3++) {
 				if (client.NPCS.get((long) client.NPC_UPDATE_INDICES[i_3]) == null) {
@@ -61,7 +61,7 @@ public class NPCUpdate {
 	}
 
 	static final void decodeAddRemove() {
-		RsBitsBuffer buffer = client.outputContext.recievedBuffer;
+		RsBitsBuffer buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
 		buffer.initBitAccess((byte) 104);
 		int size = buffer.readBits(8);
 		int i;
@@ -125,8 +125,8 @@ public class NPCUpdate {
 	}
 
 	static final void decodeUpdate(boolean largeView) {
-		RsBitsBuffer rsbitsbuffer_2 = client.outputContext.recievedBuffer;
-		while (rsbitsbuffer_2.readableBits(client.outputContext.currentPacketSize) >= 15) {
+		RsBitsBuffer rsbitsbuffer_2 = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
+		while (rsbitsbuffer_2.readableBits(client.GAME_CONNECTION_CONTEXT.currentPacketSize) >= 15) {
 			int i_3 = rsbitsbuffer_2.readBits(15);
 			if (i_3 == 32767) {
 				break;
@@ -194,7 +194,7 @@ public class NPCUpdate {
 	}
 
 	static final void decodeMasks() {
-		RsBitsBuffer buffer = client.outputContext.recievedBuffer;
+		RsBitsBuffer buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
 		for (int i_1 = 0; i_1 < client.npcListSize; i_1++) {
 			int i_2 = client.NPC_INDICES[i_1];
 			NPC npc = (NPC) ((StringNode) client.NPCS.get((long) i_2)).anObject8068;

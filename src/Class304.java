@@ -688,7 +688,7 @@ public class Class304 implements Interface27 {
 				CS2Executor.executeHookInner200k(hookrequest_4, 1699733120);
 			}
 			client.aBool7344 = true;
-			Class7.anInt56 = componentDefs.idHash;
+			client.anInt56 = componentDefs.idHash;
 			client.anInt7345 = componentDefs.anInt1288;
 			Class506.USE_OPTIONS_FLAGS = flags;
 			CutsceneAction_Sub12.USE_INTERFACE_ID = interfaceId;

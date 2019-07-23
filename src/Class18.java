@@ -9,7 +9,7 @@ public class Class18 {
 	}
 
 	static void renderInformation(GraphicalRenderer graphicalrenderer_0, NodeCollection nodecollection_1) {
-		QuickChatMessage.aClass482_4049.method8118(-449430209);
+		QuickChatMessage.aClass482_4049.removeAll();
 		if (!Class291_Sub1.aBool8027) {
 			for (Node_Sub36 class282_sub36_5 = (Node_Sub36) nodecollection_1.head(); class282_sub36_5 != null; class282_sub36_5 = (Node_Sub36) nodecollection_1.next(-319423268)) {
 				MapAreaDefinitions worldmapareadefs_6 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_5.anInt7991, -113762832);

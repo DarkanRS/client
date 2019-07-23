@@ -30,7 +30,7 @@ public class Node_Sub20_Sub38 extends Node_Sub20 {
 			}
 
 			Class9.anInt76 = i_0;
-			client.connectionContext.method3051((byte) -50);
+			client.LOBBY_CONNECTION_CONTEXT.method3051();
 			Class365.setGameState(14);
 		}
 

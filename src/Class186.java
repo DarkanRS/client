@@ -69,12 +69,12 @@ public class Class186 {
 	}
 
 	static void method3083(int i_0) {
-		Class9.aClass184_73.method3054((short) 18699);
-		Class9.aClass184_73.recievedBuffer.index = 0;
-		Class9.aClass184_73.lastPacket = null;
-		Class9.aClass184_73.secondLastPacket = null;
-		Class9.aClass184_73.thirdLastPacket = null;
-		Class9.aClass184_73.idleReadPulses = 0;
+		Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
+		Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
+		Class9.CURRENT_CONNECTION_CONTEXT.lastPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.secondLastPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.thirdLastPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.idleReadPulses = 0;
 		client.REBOOT_TIMER = 0;
 		Class209_Sub1.method12916();
 		client.anInt7434 = 0;

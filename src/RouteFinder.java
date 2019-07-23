@@ -579,7 +579,7 @@ public final class RouteFinder {
 					if (client.gameState == 13) {
 						Class151.method2592((byte) 34);
 					} else if (client.gameState == 18) {
-						client.outputContext.aBool2298 = true;
+						client.GAME_CONNECTION_CONTEXT.aBool2298 = true;
 					}
 					return;
 				}
@@ -664,12 +664,12 @@ public final class RouteFinder {
 					Class341.method6074(arr_12, 1579654554);
 				}
 				if (client.gameState == 13) {
-					TCPPacket tcpmessage_21 = Class271.createPacket(OutgoingPacket.COMMAND, client.outputContext.isaac);
+					TCPPacket tcpmessage_21 = Class271.createPacket(OutgoingPacket.COMMAND, client.GAME_CONNECTION_CONTEXT.isaac);
 					tcpmessage_21.buffer.writeByte(string_0.length() + 3);
 					tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
 					tcpmessage_21.buffer.writeByte(bool_2 ? 1 : 0);
 					tcpmessage_21.buffer.writeString(string_0);
-					client.outputContext.queuePacket(tcpmessage_21);
+					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_21);
 				}
 			} catch (Exception exception_18) {
 				Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));

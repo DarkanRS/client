@@ -113,7 +113,7 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public void clear() {
-		this.method8118(913774407);
+		this.removeAll();
 	}
 
 	public boolean isEmpty() {
@@ -204,7 +204,7 @@ public class NodeCollection implements Iterable, Collection {
 		this.tail.prev = this.tail;
 	}
 
-	public void method8118(int i_1) {
+	public void removeAll() {
 		while (this.tail.next != this.tail) {
 			this.tail.next.remove();
 		}

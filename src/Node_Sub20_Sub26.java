@@ -42,7 +42,7 @@ public class Node_Sub20_Sub26 extends Node_Sub20 {
 			return;
 		}
 		Class9.lobbyStage = 140;
-		Class9.aClass184_73 = client.connectionContext;
+		Class9.CURRENT_CONNECTION_CONTEXT = client.LOBBY_CONNECTION_CONTEXT;
 		Class455.method7558(false, false, string_0, string_1, -1L);
 	}
 

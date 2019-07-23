@@ -13,14 +13,14 @@ public class Class501 {
 	}
 
 	static void method8350() {
-		Class9.aClass184_73.method3054((short) 1653);
-		Class9.aClass184_73.recievedBuffer.index = 0;
-		Class9.aClass184_73.currentPacket = null;
-		Class9.aClass184_73.lastPacket = null;
-		Class9.aClass184_73.secondLastPacket = null;
-		Class9.aClass184_73.thirdLastPacket = null;
-		Class9.aClass184_73.currentPacketSize = 0;
-		Class9.aClass184_73.idleReadPulses = 0;
+		Class9.CURRENT_CONNECTION_CONTEXT.clearAllQueuedPackets();
+		Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index = 0;
+		Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.lastPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.secondLastPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.thirdLastPacket = null;
+		Class9.CURRENT_CONNECTION_CONTEXT.currentPacketSize = 0;
+		Class9.CURRENT_CONNECTION_CONTEXT.idleReadPulses = 0;
 		client.REBOOT_TIMER = 0;
 		Class350.method6189((byte) 111);
 		Class256.method4416();

@@ -125,7 +125,7 @@ public abstract class Class455 {
                 Class9.anInt112 = -1;
                 Class9.anInt94 = -1;
             }
-            Class9.aClass184_73.aBool2298 = false;
+            Class9.CURRENT_CONNECTION_CONTEXT.aBool2298 = false;
             FontRenderer_Sub1.method13784(-3, -416283097);
             Class9.loginStage = 18;
             Class9.anInt90 = 0;

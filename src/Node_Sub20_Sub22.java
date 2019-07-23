@@ -83,32 +83,32 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 			--client.REBOOT_TIMER;
 			client.anInt7397 = client.anInt7347;
 		}
-		if (client.outputContext.aBool2298) {
-			client.outputContext.aBool2298 = false;
+		if (client.GAME_CONNECTION_CONTEXT.aBool2298) {
+			client.GAME_CONNECTION_CONTEXT.aBool2298 = false;
 			Class151.method2592((byte) 21);
 		} else {
 			if (!Class20.aBool161) {
 				HitsplatDefinitions.method3851();
 			}
-			for (int i_1 = 0; i_1 < 100 && FontRenderer_Sub3.method14338(client.outputContext); i_1++) {
+			for (int i_1 = 0; i_1 < 100 && FontRenderer_Sub3.method14338(client.GAME_CONNECTION_CONTEXT); i_1++) {
 				;
 			}
 			if (client.gameState == 13) {
 				int i_2;
 				TCPPacket tcpmessage_6;
 				while (HashTableIterator.hasValues()) {
-					tcpmessage_6 = Class271.createPacket(OutgoingPacket.REFLECTION_CHECK, client.outputContext.isaac);
+					tcpmessage_6 = Class271.createPacket(OutgoingPacket.REFLECTION_CHECK, client.GAME_CONNECTION_CONTEXT.isaac);
 					tcpmessage_6.buffer.writeByte(0);
 					i_2 = tcpmessage_6.buffer.index;
 					FontRenderer_Sub2.method14264(tcpmessage_6.buffer);
 					tcpmessage_6.buffer.method13061(tcpmessage_6.buffer.index - i_2, 788141162);
-					client.outputContext.queuePacket(tcpmessage_6);
+					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_6);
 				}
 				if (PingRequest.CURRENT_REQUEST != null) {
 					if (PingRequest.CURRENT_REQUEST.ping != -1) {
-						tcpmessage_6 = Class271.createPacket(OutgoingPacket.WRITE_PING, client.outputContext.isaac);
+						tcpmessage_6 = Class271.createPacket(OutgoingPacket.WRITE_PING, client.GAME_CONNECTION_CONTEXT.isaac);
 						tcpmessage_6.buffer.writeShort(PingRequest.CURRENT_REQUEST.ping);
-						client.outputContext.queuePacket(tcpmessage_6);
+						client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_6);
 						PingRequest.CURRENT_REQUEST = null;
 						Class28.aLong351 = Utils.time() + 30000L;
 					}
@@ -140,9 +140,9 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 					Class350_Sub1.method12516();
 					RSInterface.method1623();
 					if (client.anInt7396 > 10) {
-						++client.outputContext.idleReadPulses;
+						++client.GAME_CONNECTION_CONTEXT.idleReadPulses;
 					}
-					if (client.outputContext.idleReadPulses > 2250) {
+					if (client.GAME_CONNECTION_CONTEXT.idleReadPulses > 2250) {
 						Class151.method2592((byte) 35);
 					} else {
 						if (client.anInt7341 == 1) {
@@ -213,9 +213,9 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 						++client.anInt7347;
 						TCPPacket tcpmessage_8;
 						if (client.aBool7375) {
-							tcpmessage_8 = Class271.createPacket(OutgoingPacket.WORLD_MAP_CLICK, client.outputContext.isaac);
+							tcpmessage_8 = Class271.createPacket(OutgoingPacket.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
 							tcpmessage_8.buffer.writeLEInt(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015, (byte) -22);
-							client.outputContext.queuePacket(tcpmessage_8);
+							client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
 							client.aBool7375 = false;
 						}
 						while (true) {
@@ -322,17 +322,17 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 															if (client.anInt7203 > 11) {
 																client.anInt7258 = -1;
 															}
-															++client.outputContext.anInt2290;
-															if (client.outputContext.anInt2290 > 50) {
-																tcpmessage_8 = Class271.createPacket(OutgoingPacket.PING, client.outputContext.isaac);
-																client.outputContext.queuePacket(tcpmessage_8);
+															++client.GAME_CONNECTION_CONTEXT.anInt2290;
+															if (client.GAME_CONNECTION_CONTEXT.anInt2290 > 50) {
+																tcpmessage_8 = Class271.createPacket(OutgoingPacket.PING, client.GAME_CONNECTION_CONTEXT.isaac);
+																client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
 															}
 															if (client.aBool7459) {
 																Class466.method7776();
 																client.aBool7459 = false;
 															}
 															try {
-																client.outputContext.method3047(613912304);
+																client.GAME_CONNECTION_CONTEXT.flush();
 															} catch (IOException ioexception_9) {
 																Class151.method2592((byte) 40);
 															}

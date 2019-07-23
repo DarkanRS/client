@@ -29,7 +29,7 @@ public abstract class Class534 {
 	}
 
 	void method11409() {
-		this.aClass482_7077.method8118(839183612);
+		this.aClass482_7077.removeAll();
 		this.aLong7074 = -1L;
 		this.aLong7076 = -1L;
 		this.anInt7075 = -1;
@@ -143,7 +143,7 @@ public abstract class Class534 {
 				tcpmessage_2.buffer.writeByte(i_4 / i_5);
 				tcpmessage_2.buffer.writeByte(i_4 % i_5);
 				tcpmessage_2.buffer.index = i_7;
-				client.outputContext.queuePacket(tcpmessage_2);
+				client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
 			}
 		}
 		this.method11414();

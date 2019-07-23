@@ -74,25 +74,25 @@ public enum NPCDirection implements Identifiable {
 			}
 			Class16.aFontRenderer_144.method359("Mem:" + long_10 + "/" + long_8 + "k", i_4, i_5, i_12, -1);
 			i_5 += 15;
-			long long_13 = client.outputContext.aClass7_2299.method349((byte) 16);
-			String str_15 = "N/A";
-			if (long_13 != -1L) {
-				str_15 = long_13 + "ms";
-				if (long_13 > 500L) {
-					str_15 = Utils.rgbToColHexShortcut(16711680) + str_15 + Utils.rgbToColHexShortcut(16776960);
+			long gamePing = client.GAME_CONNECTION_CONTEXT.pinger.getPing();
+			String gamePingStr = "N/A";
+			if (gamePing != -1L) {
+				gamePingStr = gamePing + "ms";
+				if (gamePing > 500L) {
+					gamePingStr = Utils.rgbToColHexShortcut(16711680) + gamePingStr + Utils.rgbToColHexShortcut(16776960);
 				}
 			}
-			Class16.aFontRenderer_144.method359("Game: In:" + client.outputContext.anInt2294 + "B/s " + "Out:" + client.outputContext.anInt2293 + "B/s " + "Ping:" + str_15, i_4, i_5, -256, -1);
+			Class16.aFontRenderer_144.method359("Game: In:" + client.GAME_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.GAME_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + gamePingStr, i_4, i_5, -256, -1);
 			i_5 += 15;
-			long long_16 = client.connectionContext.aClass7_2299.method349((byte) -81);
-			String str_18 = "N/A";
-			if (long_16 != -1L) {
-				str_18 = long_16 + "ms";
-				if (long_16 > 500L) {
-					str_18 = Utils.rgbToColHexShortcut(16711680) + str_18 + Utils.rgbToColHexShortcut(16776960);
+			long lobbyPing = client.LOBBY_CONNECTION_CONTEXT.pinger.getPing();
+			String lobbyPingStr = "N/A";
+			if (lobbyPing != -1L) {
+				lobbyPingStr = lobbyPing + "ms";
+				if (lobbyPing > 500L) {
+					lobbyPingStr = Utils.rgbToColHexShortcut(16711680) + lobbyPingStr + Utils.rgbToColHexShortcut(16776960);
 				}
 			}
-			Class16.aFontRenderer_144.method359("Lobby: In:" + client.connectionContext.anInt2294 + "B/s " + "Out:" + client.connectionContext.anInt2293 + "B/s " + "Ping:" + str_18, i_4, i_5, -256, -1);
+			Class16.aFontRenderer_144.method359("Lobby: In:" + client.LOBBY_CONNECTION_CONTEXT.anInt2294 + "B/s " + "Out:" + client.LOBBY_CONNECTION_CONTEXT.anInt2293 + "B/s " + "Ping:" + lobbyPingStr, i_4, i_5, -256, -1);
 			i_5 += 15;
 			int i_19 = Renderers.SOFTWARE_RENDERER.za() / 1024;
 			Class16.aFontRenderer_144.method359("Offheap:" + i_19 + "k", i_4, i_5, i_19 > 65536 ? -65536 : -256, -1);

@@ -34,7 +34,7 @@ public class Class60 {
 
 	public static void method1170() {
 		if (client.aBool7344) {
-			IComponentDefinitions icomponentdefinitions_1 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
+			IComponentDefinitions icomponentdefinitions_1 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
 			if (icomponentdefinitions_1 != null && icomponentdefinitions_1.anObjectArray1396 != null) {
 				HookRequest hookrequest_2 = new HookRequest();
 				hookrequest_2.source = icomponentdefinitions_1;

@@ -2,7 +2,7 @@ public class Class448 {
 
 	public static ConnectionInfo aClass450_5420;
 	public static ConnectionInfo CONNECTION_INFO;
-	public static ConnectionInfo lobbyConnectionInfo;
+	public static ConnectionInfo LOBBY_CONNECTION_INFO;
 	public static long aLong5425;
 	public static boolean aBool5428;
 	public static ConnectionInfo aClass450_5429;

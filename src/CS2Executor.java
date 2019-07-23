@@ -131,7 +131,7 @@ public class CS2Executor {
 	static void executeHookInner(HookRequest hookrequest_0, int i_1, byte b_2) {
 		Object[] arr_3 = hookrequest_0.params;
 		int i_4 = ((Integer) arr_3[0]).intValue();
-		CS2Script cs2script_5 = Class286.getCS2Script(i_4);
+		CS2Script cs2script_5 = AsyncInputStream.getCS2Script(i_4);
 		if (cs2script_5 != null) {
 			CS2Executor cs2executor_6 = getNextScriptExecutor();
 			cs2executor_6.intLocals = new int[cs2script_5.intLocalsCount];

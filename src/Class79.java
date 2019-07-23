@@ -39,7 +39,7 @@ final class Class79 implements VarProvider {
 
 	public static void method1390(int i_0) {
 		Class86.aClass465_823.method7749(1941006178);
-		Class86.CUTSCENE_AREAS.method8118(515043749);
+		Class86.CUTSCENE_AREAS.removeAll();
 		Class86.aClass77Array818 = null;
 		Class82.aClass75Array804 = null;
 		Class86.aClass92Array820 = null;

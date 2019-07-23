@@ -15,13 +15,13 @@ public class NewsItem {
 	}
 
 	static void method1804(int i_0, String string_1, String string_2) {
-		if (client.outputContext != null) {
-			TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.BUG_REPORT, client.outputContext.isaac);
+		if (client.GAME_CONNECTION_CONTEXT != null) {
+			TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.BUG_REPORT, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_4.buffer.writeShort(1 + Utils.stringLengthPlus2(string_1) + Utils.stringLengthPlus2(string_2));
 			tcpmessage_4.buffer.writeByte(i_0);
 			tcpmessage_4.buffer.writeJagString(string_2);
 			tcpmessage_4.buffer.writeJagString(string_1);
-			client.outputContext.queuePacket(tcpmessage_4);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);
 		}
 	}
 

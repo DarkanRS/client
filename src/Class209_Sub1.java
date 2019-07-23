@@ -65,7 +65,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		NodeCollection nodecollection_2 = this.aClass482_7941;
 		this.aClass482_7941 = this.aClass482_7945;
 		this.aClass482_7945 = nodecollection_2;
-		this.aClass482_7945.method8118(-2108421155);
+		this.aClass482_7945.removeAll();
 	}
 
 	void method12905(int i_1, int i_2, int i_3) {
@@ -168,7 +168,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		NodeCollection nodecollection_1 = this.aClass482_7941;
 		this.aClass482_7941 = this.aClass482_7945;
 		this.aClass482_7945 = nodecollection_1;
-		this.aClass482_7945.method8118(237232495);
+		this.aClass482_7945.removeAll();
 	}
 
 	public MouseRecord method3590() {
@@ -198,7 +198,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		NodeCollection nodecollection_1 = this.aClass482_7941;
 		this.aClass482_7941 = this.aClass482_7945;
 		this.aClass482_7945 = nodecollection_1;
-		this.aClass482_7945.method8118(-461780594);
+		this.aClass482_7945.removeAll();
 	}
 
 	public MouseRecord method3591() {

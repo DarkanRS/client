@@ -54,9 +54,9 @@ public class Class62 implements Interface3 {
 
 	static void method1260(int i_0, boolean bool_1, int i_2) {
 		if (bool_1) {
-			TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4556, client.outputContext.isaac);
+			TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.aClass379_4556, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_3.buffer.writeShort(i_0);
-			client.outputContext.queuePacket(tcpmessage_3);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
 		} else {
 			HitsplatIndexLoader.method3614(Class397.aClass397_4800, i_0, -1, (byte) 69);
 		}

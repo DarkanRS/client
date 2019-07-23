@@ -460,7 +460,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 
 				if (i_8 != -1 && i_9 != -1) {
 					if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
-						IComponentDefinitions icomponentdefinitions_30 = Index.getIComponentDefinitions(Class7.anInt56, client.anInt7345);
+						IComponentDefinitions icomponentdefinitions_30 = Index.getIComponentDefinitions(client.anInt56, client.anInt7345);
 						if (icomponentdefinitions_30 != null) {
 							PlayerAppearance.method4032(client.aString7275, " " + "->" + " ", Defaults8Loader.anInt5932, 59, -1, 0L, i_8, i_9, true, false, (long) (i_8 << 32 | i_9), true, -1546030291);
 						} else {

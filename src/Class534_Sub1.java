@@ -19,11 +19,11 @@ public class Class534_Sub1 extends Class534 {
 	void method11414() {
 		MouseRecord_Sub1 class282_sub53_sub1_2 = (MouseRecord_Sub1) this.aQueue7921.poll();
 		if (class282_sub53_sub1_2 != null) {
-			TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.outputContext.isaac);
+			TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_3.buffer.writeLEInt(class282_sub53_sub1_2.getX() | class282_sub53_sub1_2.getY() << 16, (byte) 22);
 			tcpmessage_3.buffer.writeByte128(class282_sub53_sub1_2.method14730(-24722123) << 1 | class282_sub53_sub1_2.method14729() & 0x1, 670389922);
 			tcpmessage_3.buffer.writeShortLE(this.method11408(class282_sub53_sub1_2, 65535, 1958251581));
-			client.outputContext.queuePacket(tcpmessage_3);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
 			class282_sub53_sub1_2.cache(-1706861091);
 		}
 	}
@@ -51,11 +51,11 @@ public class Class534_Sub1 extends Class534 {
 	void method11431() {
 		MouseRecord_Sub1 class282_sub53_sub1_1 = (MouseRecord_Sub1) this.aQueue7921.poll();
 		if (class282_sub53_sub1_1 != null) {
-			TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.outputContext.isaac);
+			TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_2.buffer.writeLEInt(class282_sub53_sub1_1.getX() | class282_sub53_sub1_1.getY() << 16, (byte) -49);
 			tcpmessage_2.buffer.writeByte128(class282_sub53_sub1_1.method14730(-1430500590) << 1 | class282_sub53_sub1_1.method14729() & 0x1, -2080491977);
 			tcpmessage_2.buffer.writeShortLE(this.method11408(class282_sub53_sub1_1, 65535, 2099731488));
-			client.outputContext.queuePacket(tcpmessage_2);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
 			class282_sub53_sub1_1.cache(1162879870);
 		}
 	}
@@ -63,11 +63,11 @@ public class Class534_Sub1 extends Class534 {
 	void method11418() {
 		MouseRecord_Sub1 class282_sub53_sub1_1 = (MouseRecord_Sub1) this.aQueue7921.poll();
 		if (class282_sub53_sub1_1 != null) {
-			TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.outputContext.isaac);
+			TCPPacket tcpmessage_2 = Class271.createPacket(OutgoingPacket.MOUSE_BUTTON_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_2.buffer.writeLEInt(class282_sub53_sub1_1.getX() | class282_sub53_sub1_1.getY() << 16, (byte) 96);
 			tcpmessage_2.buffer.writeByte128(class282_sub53_sub1_1.method14730(2068393904) << 1 | class282_sub53_sub1_1.method14729() & 0x1, -414105270);
 			tcpmessage_2.buffer.writeShortLE(this.method11408(class282_sub53_sub1_1, 65535, -352975879));
-			client.outputContext.queuePacket(tcpmessage_2);
+			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
 			class282_sub53_sub1_1.cache(-92529177);
 		}
 	}
@@ -77,19 +77,19 @@ public class Class534_Sub1 extends Class534 {
 	}
 
 	TCPPacket method11416() {
-		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.outputContext.isaac);
+		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
 	}
 
 	TCPPacket method11420() {
-		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.outputContext.isaac);
+		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
 	}
 
 	TCPPacket method11428() {
-		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.outputContext.isaac);
+		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
 	}
 
 	TCPPacket method11422() {
-		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.outputContext.isaac);
+		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
 	}
 
 	int method11415() {
@@ -105,7 +105,7 @@ public class Class534_Sub1 extends Class534 {
 	}
 
 	TCPPacket method11421() {
-		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.outputContext.isaac);
+		return Class271.createPacket(OutgoingPacket.MOVE_MOUSE, client.GAME_CONNECTION_CONTEXT.isaac);
 	}
 
 	static int[] method12815(CacheableNode_Sub7 class282_sub50_sub7_0, int i_1) {

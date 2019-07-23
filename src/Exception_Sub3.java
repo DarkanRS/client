@@ -20,7 +20,7 @@ public class Exception_Sub3 extends Exception {
 					class184_4.queuePacket(tcpmessage_5);
 
 					try {
-						class184_4.method3047(168161979);
+						class184_4.flush();
 					} catch (IOException ioexception_7) {
 						class184_4.aBool2298 = true;
 					}

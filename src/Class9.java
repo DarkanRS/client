@@ -1,6 +1,6 @@
 public class Class9 {
 
-	static BufferedConnectionContext aClass184_73;
+	static BufferedConnectionContext CURRENT_CONNECTION_CONTEXT;
 	static int lobbyStage;
 	static boolean aBool74 = false;
 	static boolean socialNetworkLogin = false;

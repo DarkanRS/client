@@ -48,7 +48,7 @@ public class Preference_Sub19 extends Preference {
 	}
 
 	public static final void method12790(boolean bool_0, int i_1) {
-		ClanChannel class282_sub4_3 = bool_0 ? Class113.CLAN_CHANNEL : Connection_Sub1.GUEST_CLAN_CHANNEL;
+		ClanChannel class282_sub4_3 = bool_0 ? Class113.CLAN_CHANNEL : AsyncConnection.GUEST_CLAN_CHANNEL;
 		if (class282_sub4_3 != null && i_1 >= 0 && i_1 < class282_sub4_3.numPlayers) {
 			ClanChannelPlayer class57_4 = class282_sub4_3.players[i_1];
 			if (class57_4.rank == -1) {
