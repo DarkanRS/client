@@ -58,7 +58,7 @@ public enum OutgoingPacket {
 	LOBBY_HYPERLINK(56, -2), //clicking hyperlink in lobby
 	MOUSE_BUTTON_CLICK(57, 7),
 	RESUME_COUNTDIALOG(58, 4),
-	CLICK(59, 6),
+	MOUSE_CLICK(59, 6),
 	CLOSE_INTERFACE(60, 0),
 	GROUND_ITEM_EXAMINE(61, 7),
 	CLIENT_FOCUS(62, 1),
