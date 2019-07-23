@@ -55,7 +55,7 @@ public enum OutgoingPacket {
 	PLAYER_OP9(53, 3, true),
 	GROUND_ITEM_OP3(54, 7, true),
 	RECEIVE_PACKET_COUNT(55, 4),
-	UNK_56(56, -2), //clicking hyperlink in lobby
+	LOBBY_HYPERLINK(56, -2), //clicking hyperlink in lobby
 	MOUSE_BUTTON_CLICK(57, 7),
 	RESUME_COUNTDIALOG(58, 4),
 	CLICK(59, 6),
