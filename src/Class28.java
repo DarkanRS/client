@@ -150,7 +150,7 @@ public class Class28 implements Interface2 {
     }
 
     static final void method776(IComponentDefinitions icomponentdefinitions_0) {
-        if (icomponentdefinitions_0.contentType == IComponentDefinitions.anInt1266) {
+        if (icomponentdefinitions_0.contentType == IComponentDefinitions.CONTENT_TYPE_328) {
             if (VertexNormal.MY_PLAYER.displayName == null) {
                 icomponentdefinitions_0.anInt1330 = 0;
                 icomponentdefinitions_0.anInt1339 = 0;

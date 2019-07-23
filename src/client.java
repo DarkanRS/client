@@ -1879,7 +1879,7 @@ public final class client extends Engine {
 					i_18 = i_20 < i_6 ? i_20 : i_6;
 				}
 
-				if (iCompDef.type != 0 && !iCompDef.usesScripts && method11633(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.anInt1269 && iCompDef.contentType != IComponentDefinitions.anInt1374 && iCompDef.contentType != IComponentDefinitions.anInt1372 && iCompDef.contentType != IComponentDefinitions.anInt1436) {
+				if (iCompDef.type != 0 && !iCompDef.usesScripts && method11633(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
 					if (i_15 < i_17 && i_16 < i_18) {
 						Class86.method1482(iCompDef, (byte) 35);
 					}
@@ -2073,7 +2073,7 @@ public final class client extends Engine {
 							if (aClass118_7257 != null) {
 								bool_49 = false;
 								bool_38 = false;
-							} else if (Class20.aBool161 || iCompDef.contentType != IComponentDefinitions.anInt1313 && anInt7184 > 0) {
+							} else if (Class20.aBool161 || iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1400 && anInt7184 > 0) {
 								bool_49 = false;
 								bool_38 = false;
 								bool_48 = false;
@@ -2081,14 +2081,14 @@ public final class client extends Engine {
 
 							if (iCompDef.contentType != 0) {
 								int i_52;
-								if (iCompDef.contentType == IComponentDefinitions.anInt1372 || iCompDef.contentType == IComponentDefinitions.anInt1436) {
+								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 || iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1403) {
 									aClass118_7183 = iCompDef;
 									Class535 class535_59 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038((short) 4792);
 									if (class535_59.method11451() != null && !IndexLoaders.MAP_REGION_LOADER_THREAD.method6051()) {
 										class535_59.method11451().method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.aPreference_Sub14_8211.method12728());
 									}
 
-									if (iCompDef.contentType == IComponentDefinitions.anInt1372 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
+									if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
 										Transform_Sub1_Sub4_Sub1.iComponentOnGroundTile(Renderers.SOFTWARE_RENDERER, i_9, i_10);
 
 										for (EntityNode_Sub2 class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7659(); class275_sub2_57 != null; class275_sub2_57 = (EntityNode_Sub2) aClass457_7290.method7650((byte) 102)) {
@@ -2121,7 +2121,7 @@ public final class client extends Engine {
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.anInt1269) {
+								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1338) {
 									class119_40 = iCompDef.method2046(Renderers.SOFTWARE_RENDERER, -139394981);
 									if (class119_40 == null || Class187.anInt2363 != 0 && Class187.anInt2363 != 3 || Class20.aBool161 || i_9 < i_15 || i_10 < i_16 || i_9 >= i_17 || i_10 >= i_18) {
 										continue;
@@ -2181,7 +2181,7 @@ public final class client extends Engine {
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.anInt1313) {
+								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1400) {
 									Node_Sub20_Sub24.aClass118_9884 = iCompDef;
 									if (bool_48) {
 										Class291_Sub1.aBool8022 = true;
@@ -2245,14 +2245,14 @@ public final class client extends Engine {
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.anInt1272) {
+								if (iCompDef.contentType == IComponentDefinitions.MINIMAP) {
 									if (bool_38) {
 										Class306.method5458(Class163.mouseRecorder.getMouseX() - x, Class163.mouseRecorder.getMouseY() - y, iCompDef.width, iCompDef.height);
 									}
 									continue;
 								}
 
-								if (iCompDef.contentType == IComponentDefinitions.anInt1374) {
+								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1406) {
 									Class15.method544(iCompDef, x, y, 1211773543);
 									continue;
 								}

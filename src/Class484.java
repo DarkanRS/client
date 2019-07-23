@@ -40,7 +40,7 @@ public final class Class484 {
 				}
 			}
 		}
-		if (iCompDef.contentType == IComponentDefinitions.anInt1372) {
+		if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337) {
 			client.aClass118_7183 = iCompDef;
 		}
 		if (bool_3 && iCompDef.anObjectArray1271 != null && (i_5 != iCompDef.width || i_6 != iCompDef.height)) {

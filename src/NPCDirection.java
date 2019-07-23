@@ -65,14 +65,14 @@ public enum NPCDirection implements Identifiable {
 			}
 			Class16.aFontRenderer_144.drawText("Fps:" + client.FPS, currDrawX, currDrawY, fpsColor, -1);
 			currDrawY += 15;
-			Runtime runtime_7 = Runtime.getRuntime();
-			long long_8 = runtime_7.totalMemory() / 1024L;
-			long long_10 = long_8 - runtime_7.freeMemory() / 1024L;
+			Runtime runtime = Runtime.getRuntime();
+			long totalMem = runtime.totalMemory() / 1024L;
+			long freeMem = totalMem - runtime.freeMemory() / 1024L;
 			int memColor = -256;
-			if (long_10 > 262144L) {
+			if (freeMem > 262144L) {
 				memColor = -65536;
 			}
-			Class16.aFontRenderer_144.drawText("Mem:" + long_10 + "/" + long_8 + "k", currDrawX, currDrawY, memColor, -1);
+			Class16.aFontRenderer_144.drawText("Mem:" + freeMem + "/" + totalMem + "k", currDrawX, currDrawY, memColor, -1);
 			currDrawY += 15;
 			long gamePing = client.GAME_CONNECTION_CONTEXT.pinger.getPing();
 			String gamePingStr = "N/A";
