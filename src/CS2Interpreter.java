@@ -3451,7 +3451,7 @@ public class CS2Interpreter {
 
 	static final void method468(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Preference_Sub20.method12807(461566707);
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.QUICKCHAT_PUBLIC, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(2);
@@ -5000,7 +5000,7 @@ public class CS2Interpreter {
 
 	static final void method3921(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Preference_Sub20.method12807(-1070075874);
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.QUICKCHAT_PUBLIC, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(1);
@@ -5373,7 +5373,7 @@ public class CS2Interpreter {
 
 	static final void method6315(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Preference_Sub20.method12807(-1148731547);
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.QUICKCHAT_PUBLIC, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(0);
@@ -8598,7 +8598,7 @@ public class CS2Interpreter {
 
 	static final void method1603(CS2Executor executor) {
 		BufferedConnectionContext class184_2 = Preference_Sub20.method12807(-846822027);
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.PUBLIC_QUICKCHAT, class184_2.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.QUICKCHAT_PUBLIC, class184_2.isaac);
 		tcpmessage_3.buffer.writeByte(0);
 		int i_4 = tcpmessage_3.buffer.index;
 		tcpmessage_3.buffer.writeByte(3);
@@ -9356,7 +9356,7 @@ public class CS2Interpreter {
 	static final void method8296(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		BufferedConnectionContext class184_3 = Preference_Sub20.method12807(-625511967);
-		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.SEND_FRIENDS_QUICKCHAT, class184_3.isaac);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.QUICKCHAT_PRIVATE, class184_3.isaac);
 		tcpmessage_4.buffer.writeByte(0);
 		int i_5 = tcpmessage_4.buffer.index;
 		tcpmessage_4.buffer.writeString(string_2);
@@ -9580,7 +9580,7 @@ public class CS2Interpreter {
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
 		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 			BufferedConnectionContext class184_4 = Preference_Sub20.method12807(65699692);
-			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.SEND_FRIENDS_CHAT_MESSAGE, class184_4.isaac);
+			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.SEND_PRIVATE_MESSAGE, class184_4.isaac);
 			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_2);

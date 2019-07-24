@@ -9,7 +9,7 @@ public class Class404 {
 
 	public static final void setFCRank(String string_0, int i_1) {
 		BufferedConnectionContext class184_3 = Preference_Sub20.method12807(-19463532);
-		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.SET_FC_RANK, class184_3.isaac);
+		TCPPacket tcpmessage_4 = Class271.createPacket(OutgoingPacket.FC_SET_RANK, class184_3.isaac);
 		tcpmessage_4.buffer.writeByte(1 + ChatLine.getLength(string_0));
 		tcpmessage_4.buffer.write128Byte(i_1);
 		tcpmessage_4.buffer.writeString(string_0);
