@@ -23,8 +23,8 @@ public class EntityNode {
 
 	public static void method4891(byte b_0) {
 		if (client.fullScreenFrame == null) {
-			int i_1 = client.anInt3250;
-			int i_2 = client.anInt3251;
+			int i_1 = client.GAME_CANVAS_X;
+			int i_2 = client.GAME_CANVAS_Y;
 			int i_3 = SunIndexLoader.anInt434 - Class349.anInt4083 - i_1;
 			int i_4 = Class107.anInt1082 - client.anInt3243 * -969250379 - i_2;
 			if (i_1 > 0 || i_3 > 0 || i_2 > 0 || i_4 > 0) {

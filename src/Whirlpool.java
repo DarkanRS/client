@@ -192,31 +192,31 @@ public class Whirlpool {
 		}
 	}
 
-	static void method7421(int i_0) {
-		if (i_0 == 17) {
+	static void applyDebugOpcode(int id) {
+		if (id == 17) {
 			throw new Error();
-		} else if (i_0 == 25) {
+		} else if (id == 25) {
 			throw new OutOfMemoryError();
 		} else {
 			try {
-				if (i_0 == 8) {
+				if (id == 8) {
 					FriendsChatPlayer.method2944(-1950066116);
-				} else if (i_0 == 24) {
+				} else if (id == 24) {
 					Class209.printConsoleMessage("" + Engine.FPS);
-				} else if (i_0 == 28) {
+				} else if (id == 28) {
 					Class201 class201_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aClass201_2600;
 					class201_2.aBool2552 = !class201_2.aBool2552;
-				} else if (i_0 == 7) {
+				} else if (id == 7) {
 					client.DRAW_DEBUG = true;
-				} else if (i_0 == 4) {
+				} else if (id == 4) {
 					client.DRAW_DEBUG = false;
-				} else if (i_0 == 14) {
+				} else if (id == 14) {
 					client.aClass457_7335.method7651();
 				} else {
 					int i_3;
 					int i_5;
 					Runtime runtime_7;
-					if (i_0 == 21) {
+					if (id == 21) {
 						Class357_Sub1.method12565();
 						for (i_5 = 0; i_5 < 10; i_5++) {
 							System.gc();
@@ -224,7 +224,7 @@ public class Whirlpool {
 						runtime_7 = Runtime.getRuntime();
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
 						Class209.printConsoleMessage("" + i_3);
-					} else if (i_0 == 9) {
+					} else if (id == 9) {
 						Class357_Sub1.method12565();
 						for (i_5 = 0; i_5 < 10; i_5++) {
 							System.gc();
@@ -239,49 +239,49 @@ public class Whirlpool {
 						}
 						i_3 = (int) ((runtime_7.totalMemory() - runtime_7.freeMemory()) / 1024L);
 						Class209.printConsoleMessage("" + i_3);
-					} else if (i_0 == 19) {
+					} else if (id == 19) {
 						Class209.printConsoleMessage(IndexLoaders.NATIVE_LIBRARY_LOADER.method219(-1916862873) ? "Success" : "Failure");
-					} else if (i_0 == 20) {
+					} else if (id == 20) {
 						Class159.GAME_CONNECTION_INFO.swap(-799490388);
-					} else if (i_0 == 22) {
+					} else if (id == 22) {
 						Class119.JS5_STANDARD_REQUESTER.method5525(-115621470);
-					} else if (i_0 == 3) {
+					} else if (id == 3) {
 						Class119.JS5_STANDARD_REQUESTER.method5526();
-					} else if (i_0 == 13) {
+					} else if (id == 13) {
 						Class351.gameCanvas.setLocation(50, 50);
-					} else if (i_0 == 1) {
-						Class351.gameCanvas.setLocation(Engine.anInt3250, Engine.anInt3251);
-					} else if (i_0 == 27) {
+					} else if (id == 1) {
+						Class351.gameCanvas.setLocation(Engine.GAME_CANVAS_X, Engine.GAME_CANVAS_Y);
+					} else if (id == 27) {
 						Preference.method7789(-838440375);
-					} else if (i_0 == 6) {
+					} else if (id == 6) {
 						IndexLoaders.MAP_REGION_DECODER.aLong3183 = Utils.time();
 						IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
 						Preference.method7789(620089057);
 					} else {
 						Vector3 vector3_8;
-						if (i_0 == 26) {
+						if (id == 26) {
 							vector3_8 = VertexNormal.MY_PLAYER.method11166().coords;
 							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9));
-						} else if (i_0 == 2) {
+						} else if (id == 2) {
 							vector3_8 = VertexNormal.MY_PLAYER.method11166().coords;
 							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.MY_PLAYER.plane].getHeight((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
-						} else if (i_0 == 23) {
+						} else if (id == 23) {
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53));
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119));
 							Class209.printConsoleMessage(IndexLoaders.ITEM_LOADER.aClass212_5114.method3640() + " " + IndexLoaders.ITEM_LOADER.aClass212_5114.method3632());
-						} else if (i_0 == 16) {
+						} else if (id == 16) {
 							Class356.method6227(false, (byte) 37);
-						} else if (i_0 == 15) {
+						} else if (id == 15) {
 							client.aBool7177 = !client.aBool7177;
 							Renderers.SOFTWARE_RENDERER.method8480(client.aBool7177);
 							Node_Sub14.method12222();
-						} else if (i_0 == 10) {
+						} else if (id == 10) {
 							client.anInt7240 = 0;
 							IndexLoaders.MAP_REGION_DECODER.method4547((byte) -123);
-						} else if (i_0 == 5) {
+						} else if (id == 5) {
 							client.anInt7240 = 1;
 							IndexLoaders.MAP_REGION_DECODER.method4547((byte) -69);
-						} else if (i_0 == 29) {
+						} else if (id == 29) {
 							client.anInt7240 = 2;
 							IndexLoaders.MAP_REGION_DECODER.method4547((byte) -47);
 						}

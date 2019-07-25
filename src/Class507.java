@@ -50,9 +50,9 @@ public class Class507 {
 				Class46.method935((byte) -63);
 			} else {
 				Class349.anInt4083 = client.GAME_WIDTH;
-				client.anInt3250 = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
+				client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - client.GAME_WIDTH) / 2;
 				client.anInt3243 = client.GAME_HEIGHT * -1929118563;
-				client.anInt3251 = 0;
+				client.GAME_CANVAS_Y = 0;
 			}
 			if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE && Class349.anInt4083 < 1024) {
 				int i_10000 = client.anInt3243;
@@ -62,9 +62,9 @@ public class Class507 {
 				Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
 				if (container_6 == client.engineFrame) {
 					insets_7 = client.engineFrame.getInsets();
-					Class351.gameCanvas.setLocation(insets_7.left + client.anInt3250, insets_7.top + client.anInt3251);
+					Class351.gameCanvas.setLocation(insets_7.left + client.GAME_CANVAS_X, insets_7.top + client.GAME_CANVAS_Y);
 				} else {
-					Class351.gameCanvas.setLocation(client.anInt3250, client.anInt3251);
+					Class351.gameCanvas.setLocation(client.GAME_CANVAS_X, client.GAME_CANVAS_Y);
 				}
 			} else {
 				Class350_Sub2.method12571(-551950888);

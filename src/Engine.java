@@ -25,8 +25,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     public static int FPS = 0;
     static long[] aLongArray3246 = new long[32];
     static long[] aLongArray3247 = new long[32];
-    public static int anInt3250 = 0;
-    public static int anInt3251 = 0;
+    public static int GAME_CANVAS_X = 0;
+    public static int GAME_CANVAS_Y = 0;
     protected static String aString3252 = null;
     protected static volatile boolean aBool3274 = true;
     static int anInt3256 = 500;
@@ -61,8 +61,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             int i_10000 = class274_1.getHeight();
             anInt3243 = i_10000 * -1929118563;
             Class107.anInt1082 = i_10000;
-            anInt3250 = 0;
-            anInt3251 = 0;
+            GAME_CANVAS_X = 0;
+            GAME_CANVAS_Y = 0;
             if (NamedFileReference.method867(-1097326159) == Class279.aClass279_3367) {
                 SunIndexLoader.anInt434 += 2 * class274_1.method4868();
                 Class107.anInt1082 += 2 * class274_1.method4872();
@@ -346,9 +346,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         Class351.gameCanvas.setVisible(true);
         if (container_1 == engineFrame) {
             Insets insets_3 = engineFrame.getInsets();
-            Class351.gameCanvas.setLocation(insets_3.left + anInt3250, insets_3.top + anInt3251);
+            Class351.gameCanvas.setLocation(insets_3.left + GAME_CANVAS_X, insets_3.top + GAME_CANVAS_Y);
         } else {
-            Class351.gameCanvas.setLocation(anInt3250, anInt3251);
+            Class351.gameCanvas.setLocation(GAME_CANVAS_X, GAME_CANVAS_Y);
         }
         Class351.gameCanvas.addFocusListener(this);
         Class351.gameCanvas.requestFocus();
@@ -437,9 +437,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             Class351.gameCanvas.setVisible(true);
             if (engineFrame != null && fullScreenFrame == null) {
                 Insets insets_7 = engineFrame.getInsets();
-                Class351.gameCanvas.setLocation(insets_7.left + anInt3250, insets_7.top + anInt3251);
+                Class351.gameCanvas.setLocation(insets_7.left + GAME_CANVAS_X, insets_7.top + GAME_CANVAS_Y);
             } else {
-                Class351.gameCanvas.setLocation(anInt3250, anInt3251);
+                Class351.gameCanvas.setLocation(GAME_CANVAS_X, GAME_CANVAS_Y);
             }
         }
         this.method4678();

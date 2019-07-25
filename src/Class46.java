@@ -95,21 +95,21 @@ public class Class46 implements Interface2 {
 			i_2 = SunIndexLoader.anInt434 > 800 ? 800 : SunIndexLoader.anInt434;
 			i_3 = Class107.anInt1082 > 600 ? 600 : Class107.anInt1082;
 			Class349.anInt4083 = i_2;
-			client.anInt3250 = (SunIndexLoader.anInt434 - i_2) / 2;
+			client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - i_2) / 2;
 			client.anInt3243 = i_3 * -1929118563;
-			client.anInt3251 = 0;
+			client.GAME_CANVAS_Y = 0;
 		} else if (i_1 == 1) {
 			i_2 = SunIndexLoader.anInt434 > 1024 ? 1024 : SunIndexLoader.anInt434;
 			i_3 = Class107.anInt1082 > 768 ? 768 : Class107.anInt1082;
 			Class349.anInt4083 = i_2;
-			client.anInt3250 = (SunIndexLoader.anInt434 - i_2) / 2;
+			client.GAME_CANVAS_X = (SunIndexLoader.anInt434 - i_2) / 2;
 			client.anInt3243 = i_3 * -1929118563;
-			client.anInt3251 = 0;
+			client.GAME_CANVAS_Y = 0;
 		} else {
 			Class349.anInt4083 = SunIndexLoader.anInt434;
-			client.anInt3250 = 0;
+			client.GAME_CANVAS_X = 0;
 			client.anInt3243 = Class107.anInt1082 * -1929118563;
-			client.anInt3251 = 0;
+			client.GAME_CANVAS_Y = 0;
 		}
 	}
 }
