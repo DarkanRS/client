@@ -179,8 +179,8 @@ public class Node_Sub19 extends Node {
 				for (i_10 = 0; i_10 <= i_6; i_10++) {
 					i_11 = i_10 + this.anInt7642;
 					if (i_11 > 0 && i_11 < this.aGround_Sub2_7654.width - 1) {
-						i_12 = class390_sub2_2.method6722(i_11 + 1, i_9) - class390_sub2_2.method6722(i_11 - 1, i_9);
-						i_13 = class390_sub2_2.method6722(i_11, i_9 + 1) - class390_sub2_2.method6722(i_11, i_9 - 1);
+						i_12 = class390_sub2_2.getHeight(i_11 + 1, i_9) - class390_sub2_2.getHeight(i_11 - 1, i_9);
+						i_13 = class390_sub2_2.getHeight(i_11, i_9 + 1) - class390_sub2_2.getHeight(i_11, i_9 - 1);
 						float f_14 = (float) (1.0D / Math.sqrt((double) (i_12 * i_12 + i_13 * i_13 + 65536)));
 						this.aFloatArrayArray7652[i_10][i_8] = (float) i_12 * f_14;
 						this.aFloatArrayArray7648[i_10][i_8] = -256.0F * f_14;

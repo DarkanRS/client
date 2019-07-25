@@ -4075,7 +4075,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
-				if (class390_3.method6722(i_8, i_10) == i_6 && class390_3.method6722(i_9, i_10) == i_6 && class390_3.method6722(i_8, i_11) == i_6 && class390_3.method6722(i_9, i_11) == i_6) {
+				if (class390_3.getHeight(i_8, i_10) == i_6 && class390_3.getHeight(i_9, i_10) == i_6 && class390_3.getHeight(i_8, i_11) == i_6 && class390_3.getHeight(i_9, i_11) == i_6) {
 					return;
 				}
 			} else if (class390_4 == null || i_8 < 0 || class390_4.tileUnits + i_9 >> class390_4.tileScale >= class390_4.width || i_10 < 0 || class390_4.tileUnits + i_11 >> class390_4.tileScale >= class390_4.length) {
@@ -4404,7 +4404,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 				i_9 = i_9 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
 				i_10 >>= class390_3.tileScale;
 				i_11 = i_11 + (class390_3.tileUnits - 1) >> class390_3.tileScale;
-				if (class390_3.method6722(i_8, i_10) == i_6 && class390_3.method6722(i_9, i_10) == i_6 && class390_3.method6722(i_8, i_11) == i_6 && class390_3.method6722(i_9, i_11) == i_6) {
+				if (class390_3.getHeight(i_8, i_10) == i_6 && class390_3.getHeight(i_9, i_10) == i_6 && class390_3.getHeight(i_8, i_11) == i_6 && class390_3.getHeight(i_9, i_11) == i_6) {
 					return;
 				}
 			} else if (class390_4 == null || i_8 < 0 || i_9 + class390_4.tileUnits >> class390_4.tileScale >= class390_4.width || i_10 < 0 || i_11 + class390_4.tileUnits >> class390_4.tileScale >= class390_4.length) {

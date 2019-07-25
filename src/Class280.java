@@ -53,7 +53,7 @@ public class Class280 implements Interface25 {
 		}
 		client.aFloat7365 += 8.0F * (client.aFloat7266 * (float) long_0 / 40.0F);
 		client.aFloat7146 += 8.0F * ((float) long_0 * client.aFloat7284 / 40.0F);
-		IsaacCipher.method7268(1874031200);
+		IsaacCipher.processCamera();
 	}
 
 	public static boolean isIgnored(String string_0) {

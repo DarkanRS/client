@@ -193,7 +193,7 @@ public final class IsaacCipher {
         return ObjectIndexLoader.getWorld(Class159.GAME_CONNECTION_INFO.worldId);
     }
 
-    static final void method7268(int i_0) {
+    static final void processCamera() {
         if (client.aFloat7146 < 1081.0F) {
             client.aFloat7146 = 1081.0F;
         }
@@ -212,21 +212,20 @@ public final class IsaacCipher {
         int i_4 = Class266.anInt3289 >> 9;
         int i_5 = Class504.method8389(Class11.anInt122, Class266.anInt3289, Class4.anInt35, (byte) 58);
         int i_6 = 0;
-        int i_7;
         if (i_3 > 3 && i_4 > 3 && i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 4 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 4) {
-            for (i_7 = i_3 - 4; i_7 <= i_3 + 4; i_7++) {
-                for (int i_8 = i_4 - 4; i_8 <= i_4 + 4; i_8++) {
+            for (int x = i_3 - 4; x <= i_3 + 4; x++) {
+                for (int y = i_4 - 4; y <= i_4 + 4; y++) {
                     int i_9 = Class4.anInt35;
-                    if (i_9 < 3 && regionmap_1.is0x2(i_7, i_8, 1857186418)) {
+                    if (i_9 < 3 && regionmap_1.is0x2(x, y, 1857186418)) {
                         ++i_9;
                     }
                     int i_10 = 0;
                     byte[][] bytes_11 = IndexLoaders.MAP_REGION_DECODER.method4507(i_9);
                     if (bytes_11 != null) {
-                        i_10 = (bytes_11[i_7][i_8] & 0xff) * 8 << 2;
+                        i_10 = (bytes_11[x][y] & 0xff) * 8 << 2;
                     }
                     if (sceneobjectmanager_2.aGroundArray2591 != null && sceneobjectmanager_2.aGroundArray2591[i_9] != null) {
-                        int i_12 = i_5 - (sceneobjectmanager_2.aGroundArray2591[i_9].method6722(i_7, i_8) - i_10);
+                        int i_12 = i_5 - (sceneobjectmanager_2.aGroundArray2591[i_9].getHeight(x, y) - i_10);
                         if (i_12 > i_6) {
                             i_6 = i_12;
                         }
@@ -234,7 +233,7 @@ public final class IsaacCipher {
                 }
             }
         }
-        i_7 = (i_6 >> 2) * 1536;
+        int i_7 = (i_6 >> 2) * 1536;
         if (i_7 > 786432) {
             i_7 = 786432;
         }

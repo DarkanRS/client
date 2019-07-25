@@ -307,7 +307,7 @@ public class Class434_Sub1 extends Class434 {
 				} else {
 					GroundItem class521_sub1_sub2_sub1_11 = (GroundItem) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3405(i_0, i_1, i_2, -211748464);
 					if (class521_sub1_sub2_sub1_11 == null) {
-						class521_sub1_sub2_sub1_11 = new GroundItem(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_0].method6722(i_1, i_2), i_2 << 265, i_0, i_0);
+						class521_sub1_sub2_sub1_11 = new GroundItem(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_1 << 265, IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[i_0].getHeight(i_1, i_2), i_2 << 265, i_0, i_0);
 					} else {
 						class521_sub1_sub2_sub1_11.anInt10415 = -1;
 						class521_sub1_sub2_sub1_11.anInt10411 = -1;

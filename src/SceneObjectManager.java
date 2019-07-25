@@ -1102,8 +1102,8 @@ public class SceneObjectManager {
 					if (i_25 >= 0 && i_26 >= 0 && i_25 < this.sizeX && i_26 < this.sizeY) {
 						i_27 = i_25 << this.anInt2592;
 						int i_28 = i_26 << this.anInt2592;
-						int i_29 = this.aGroundArray2607[this.aGroundArray2607.length - 1].method6722(i_25, i_26) - (1000 << this.anInt2592 - 7);
-						int i_30 = (this.aGroundArray2614 != null ? this.aGroundArray2614[0].method6722(i_25, i_26) + this.anInt2593 : this.aGroundArray2607[0].method6722(i_25, i_26) + this.anInt2593) + (1000 << this.anInt2592 - 7);
+						int i_29 = this.aGroundArray2607[this.aGroundArray2607.length - 1].getHeight(i_25, i_26) - (1000 << this.anInt2592 - 7);
+						int i_30 = (this.aGroundArray2614 != null ? this.aGroundArray2614[0].getHeight(i_25, i_26) + this.anInt2593 : this.aGroundArray2607[0].getHeight(i_25, i_26) + this.anInt2593) + (1000 << this.anInt2592 - 7);
 						i_23 = this.aGraphicalRenderer_2596.method8437(i_27, i_29, i_28, i_27, i_30, i_28);
 						this.aBoolArrayArray2635[i_21][i_24] = i_23 == 0;
 					} else {
@@ -1183,7 +1183,7 @@ public class SceneObjectManager {
 							if (i_14 >= 0 && i_14 < this.sizeY && (!bool_7 || i_13 >= i_9 || i_14 >= i_11 || i_14 < i_4 && i_3 != i_13)) {
 								Class293 class293_15 = this.aClass293ArrayArrayArray2604[i_12][i_13][i_14];
 								if (class293_15 != null) {
-									int i_16 = (this.aGroundArray2591[i_12].method6722(i_13, i_14) + this.aGroundArray2591[i_12].method6722(1 + i_13, i_14) + this.aGroundArray2591[i_12].method6722(i_13, 1 + i_14) + this.aGroundArray2591[i_12].method6722(1 + i_13, 1 + i_14)) / 4 - (this.aGroundArray2591[i_2].method6722(i_3, i_4) + this.aGroundArray2591[i_2].method6722(i_3 + 1, i_4) + this.aGroundArray2591[i_2].method6722(i_3, i_4 + 1) + this.aGroundArray2591[i_2].method6722(i_3 + 1, i_4 + 1)) / 4;
+									int i_16 = (this.aGroundArray2591[i_12].getHeight(i_13, i_14) + this.aGroundArray2591[i_12].getHeight(1 + i_13, i_14) + this.aGroundArray2591[i_12].getHeight(i_13, 1 + i_14) + this.aGroundArray2591[i_12].getHeight(1 + i_13, 1 + i_14)) / 4 - (this.aGroundArray2591[i_2].getHeight(i_3, i_4) + this.aGroundArray2591[i_2].getHeight(i_3 + 1, i_4) + this.aGroundArray2591[i_2].getHeight(i_3, i_4 + 1) + this.aGroundArray2591[i_2].getHeight(i_3 + 1, i_4 + 1)) / 4;
 									Transform_Sub1_Sub5 class521_sub1_sub5_17 = class293_15.aTransform_Sub1_Sub5_3505;
 									Transform_Sub1_Sub5 class521_sub1_sub5_18 = class293_15.aTransform_Sub1_Sub5_3502;
 									if (class521_sub1_sub5_17 != null && class521_sub1_sub5_17.method12985(-2063907301)) {
@@ -1275,10 +1275,10 @@ public class SceneObjectManager {
 							for (int i_11 = i_5 - 1; i_11 >= 0; --i_11) {
 								Ground class390_12 = this.aGroundArray2607[i_11];
 								if (class390_12 != null) {
-									int i_13 = class390_6.method6722(i_8, i_7) - class390_12.method6722(i_8, i_7);
-									int i_14 = class390_6.method6722(i_8 + 1, i_7) - class390_12.method6722(i_8 + 1, i_7);
-									int i_15 = class390_6.method6722(i_8 + 1, i_7 + 1) - class390_12.method6722(i_8 + 1, i_7 + 1);
-									int i_16 = class390_6.method6722(i_8, i_7 + 1) - class390_12.method6722(i_8, i_7 + 1);
+									int i_13 = class390_6.getHeight(i_8, i_7) - class390_12.getHeight(i_8, i_7);
+									int i_14 = class390_6.getHeight(i_8 + 1, i_7) - class390_12.getHeight(i_8 + 1, i_7);
+									int i_15 = class390_6.getHeight(i_8 + 1, i_7 + 1) - class390_12.getHeight(i_8 + 1, i_7 + 1);
+									int i_16 = class390_6.getHeight(i_8, i_7 + 1) - class390_12.getHeight(i_8, i_7 + 1);
 									class390_12.UA(class282_sub50_sub17_4, i_9, (i_16 + i_15 + i_14 + i_13) / 4, i_10);
 								}
 							}

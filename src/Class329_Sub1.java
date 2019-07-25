@@ -56,7 +56,7 @@ public class Class329_Sub1 extends Class329 {
 				i_18 = i_5 + 1;
 			}
 			Ground class390_19 = this.sceneObjectManager.aGroundArray2591[i_2];
-			int i_20 = class390_19.method6722(i_15, i_17) + class390_19.method6722(i_16, i_17) + class390_19.method6722(i_15, i_18) + class390_19.method6722(i_16, i_18) >> 2;
+			int i_20 = class390_19.getHeight(i_15, i_17) + class390_19.getHeight(i_16, i_17) + class390_19.getHeight(i_15, i_18) + class390_19.getHeight(i_16, i_18) >> 2;
 			int i_21 = (i_4 << 9) + (i_13 << 8);
 			int i_22 = (i_5 << 9) + (i_14 << 8);
 			boolean bool_23 = this.aBool3773 && !this.overlayHidden && objectDefs.delayShading;

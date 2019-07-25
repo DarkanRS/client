@@ -49,7 +49,7 @@ public class HostNameIdentifier implements Runnable {
 			AnimationDefinitions.anInt5930 = i_1;
 			Class121.anInt1525 = i_2;
 		}
-		IsaacCipher.method7268(1504588088);
+		IsaacCipher.processCamera();
 		client.aBool7371 = true;
 	}
 

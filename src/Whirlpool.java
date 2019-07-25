@@ -264,7 +264,7 @@ public class Whirlpool {
 							Class209.printConsoleMessage(((int) vector3_8.x >> 9) + " " + ((int) vector3_8.z >> 9));
 						} else if (i_0 == 2) {
 							vector3_8 = VertexNormal.MY_PLAYER.method11166().coords;
-							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.MY_PLAYER.plane].method6722((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
+							Class209.printConsoleMessage("" + IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[VertexNormal.MY_PLAYER.plane].getHeight((int) vector3_8.x >> 9, (int) vector3_8.z >> 9));
 						} else if (i_0 == 23) {
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1280.method3861() + " " + IComponentDefinitions.aClass229_1280.method3860((byte) 53));
 							Class209.printConsoleMessage(IComponentDefinitions.aClass229_1341.method3861() + " " + IComponentDefinitions.aClass229_1341.method3860((byte) 119));

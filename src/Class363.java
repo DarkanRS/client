@@ -50,7 +50,7 @@ public class Class363 {
         }
         client.aFloat7365 += client.aFloat7266 * (float) long_0 / 6.0F;
         client.aFloat7146 += client.aFloat7284 * (float) long_0 / 6.0F;
-        IsaacCipher.method7268(1036013303);
+        IsaacCipher.processCamera();
     }
 
     static final void method6287(Entity animable_0, boolean bool_1, int i_2) {

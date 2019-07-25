@@ -254,7 +254,7 @@ public class JS5Manager {
 						}
 					}
 					if (bool_17) {
-						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[Class4.anInt35 + 1].method6722(i_11, i_14);
+						i_18 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().aGroundArray2591[Class4.anInt35 + 1].getHeight(i_11, i_14);
 						if (client.anIntArray7198[i_1] < i_18) {
 							client.anIntArray7198[i_1] = i_18;
 						}

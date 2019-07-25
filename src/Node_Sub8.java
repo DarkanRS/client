@@ -168,8 +168,8 @@ public class Node_Sub8 extends Node {
 				for (i_21 = 0; i_21 <= i_6; i_21++) {
 					i_11 = i_21 + this.anInt7531;
 					if (i_11 > 0 && i_11 < this.aGround_Sub1_7524.width - 1) {
-						i_12 = class390_sub1_2.method6722(i_11 + 1, i_9) - class390_sub1_2.method6722(i_11 - 1, i_9);
-						i_13 = class390_sub1_2.method6722(i_11, i_9 + 1) - class390_sub1_2.method6722(i_11, i_9 - 1);
+						i_12 = class390_sub1_2.getHeight(i_11 + 1, i_9) - class390_sub1_2.getHeight(i_11 - 1, i_9);
+						i_13 = class390_sub1_2.getHeight(i_11, i_9 + 1) - class390_sub1_2.getHeight(i_11, i_9 - 1);
 						float f_14 = (float) (1.0D / Math.sqrt((double) (i_12 * i_12 + i_13 * i_13 + 65536)));
 						this.aFloatArrayArray7534[i_21][i_8] = (float) i_12 * f_14;
 						this.aFloatArrayArray7535[i_21][i_8] = -256.0F * f_14;

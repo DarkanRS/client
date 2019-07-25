@@ -511,10 +511,10 @@ public class Class329 {
 							}
 						}
 					}
-					i_32 = ground.method6722(x, y);
-					i_33 = ground.method6722(x + 1, y);
-					i_34 = ground.method6722(x + 1, y + 1);
-					i_35 = ground.method6722(x, y + 1);
+					i_32 = ground.getHeight(x, y);
+					i_33 = ground.getHeight(x + 1, y);
+					i_34 = ground.getHeight(x + 1, y + 1);
+					i_35 = ground.getHeight(x, y + 1);
 					boolean bool_39 = this.regionMap.is0x2(x, y, 1772345202);
 					if (bool_39 && plane > 1 || !bool_39 && plane > 0) {
 						boolean bool_37 = true;
@@ -1210,10 +1210,10 @@ public class Class329 {
 	}
 
 	void method5852(Ground class390_1, UnderlayDef underlaydef_2, OverlayDef overlaydef_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10) {
-		int i_12 = class390_1.method6722(i_5, i_6);
-		int i_13 = class390_1.method6722(i_7, i_6);
-		int i_14 = class390_1.method6722(i_7, i_8);
-		int i_15 = class390_1.method6722(i_5, i_8);
+		int i_12 = class390_1.getHeight(i_5, i_6);
+		int i_13 = class390_1.getHeight(i_7, i_6);
+		int i_14 = class390_1.getHeight(i_7, i_8);
+		int i_15 = class390_1.getHeight(i_5, i_8);
 		boolean bool_16 = this.regionMap.is0x2(i_5, i_6, 1534116751);
 		if (bool_16 && i_4 > 1 || !bool_16 && i_4 > 0) {
 			boolean bool_17 = true;
@@ -1357,11 +1357,11 @@ public class Class329 {
 				i_14 = -i_14;
 			}
 			if (i_13 == i_14) {
-				i_13 = class390_6.method6722(i_2, i_3) - class390_6.method6722(i_4, i_5);
+				i_13 = class390_6.getHeight(i_2, i_3) - class390_6.getHeight(i_4, i_5);
 				if (i_13 < 0) {
 					i_13 = -i_13;
 				}
-				i_14 = class390_6.method6722(i_4, i_3) - class390_6.method6722(i_2, i_5);
+				i_14 = class390_6.getHeight(i_4, i_3) - class390_6.getHeight(i_2, i_5);
 				if (i_14 < 0) {
 					i_14 = -i_14;
 				}

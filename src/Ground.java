@@ -94,7 +94,7 @@ public abstract class Ground {
 
 	public abstract void method6721(Node_Sub24 var1, int[] var2);
 
-	public final int method6722(int i_1, int i_2) {
+	public final int getHeight(int i_1, int i_2) {
 		return this.tileHeights[i_1][i_2];
 	}
 
