@@ -75,7 +75,7 @@ public class Node_Sub20_Sub33 extends Node_Sub20 {
 		if (Class20.aBool161) {
 			Class354.method6216(graphicalrenderer_0);
 		} else {
-			Class268.method4800(graphicalrenderer_0);
+			AreadSound.method4800(graphicalrenderer_0);
 		}
 
 	}

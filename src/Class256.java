@@ -35,9 +35,9 @@ public class Class256 {
 		}
 	}
 
-	public static Class268 method4414(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5, int i_6) {
-		if ((bool_5 ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
-			Class268 class268_8 = new Class268((byte) (bool_5 ? 3 : 2), i_0, i_1, i_2, i_3, i_4, i_6, (Transform_Sub1) null);
+	public static AreadSound method4414(int soundId, int i_1, int i_2, int i_3, int i_4, boolean type, int i_6) {
+		if ((type ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && soundId != -1) {
+			AreadSound class268_8 = new AreadSound((byte) (type ? 3 : 2), soundId, i_1, i_2, i_3, i_4, i_6, (Transform_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_8;
 			return class268_8;
 		} else {

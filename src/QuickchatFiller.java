@@ -145,7 +145,7 @@ public class QuickchatFiller implements Interface19 {
 		return -1;
 	}
 
-	public static void method1142(Class268 class268_0, int i_1) {
+	public static void method1142(AreadSound class268_0, int i_1) {
 		if (class268_0.aNode_Sub15_Sub5_3304 != null) {
 			Class79.aNode_Sub15_Sub4_783.method15276(class268_0.aNode_Sub15_Sub5_3304);
 		} else {

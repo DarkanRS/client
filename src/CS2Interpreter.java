@@ -6259,7 +6259,7 @@ public class CS2Interpreter {
 
 	static final void method6272(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int[] ints_3 = Class268.method4799(i_2);
+		int[] ints_3 = AreadSound.method4799(i_2);
 		Class503.method8362(ints_3, 0, executor.intStack, executor.intStackPtr, 3);
 		executor.intStackPtr += 3;
 	}

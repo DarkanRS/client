@@ -61,7 +61,7 @@ public class MapRegion {
 		this.aClass239_3175.method4039(mapregion_1.method4435());
 	}
 
-	public Class256 method4419(int i_1) {
+	public Class256 method4419() {
 		return this.aClass256_3163;
 	}
 

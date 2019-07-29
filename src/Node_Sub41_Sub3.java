@@ -275,7 +275,7 @@ public class Node_Sub41_Sub3 extends Node_Sub41 {
 	}
 
 	public static void method14807(int i_1) {
-		Class268.anInt3307 = 100;
+		AreadSound.anInt3307 = 100;
 		MouseRecord_Sub1.aMouseRecord_Sub1Array9497 = new MouseRecord_Sub1[100];
 		Class81.anInt803 = 0;
 	}

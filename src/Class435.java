@@ -6,9 +6,9 @@ public class Class435 {
 		throw new Error();
 	}
 
-	public static Class268 playSoundVorbis(int i_0, int i_1, int i_2, int i_3, boolean idk, int i_5) {
+	public static AreadSound playSoundVorbis(int i_0, int i_1, int i_2, int i_3, boolean idk, int i_5) {
 		if ((idk ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.anInt3219 < 50 && i_0 != -1) {
-			Class268 class268_7 = new Class268((byte) (idk ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Transform_Sub1) null);
+			AreadSound class268_7 = new AreadSound((byte) (idk ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Transform_Sub1) null);
 			Class260.aClass268Array3232[++Class260.anInt3219 - 1] = class268_7;
 			return class268_7;
 		} else {

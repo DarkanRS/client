@@ -2,7 +2,7 @@ public class PlaySynthCutsceneAction extends CutsceneAction {
 
 	public static int anInt9368;
 
-	Class268 aClass268_9367;
+	AreadSound aClass268_9367;
 
 	int anInt9363;
 

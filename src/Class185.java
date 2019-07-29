@@ -103,7 +103,7 @@ public class Class185 {
 
     public static void method3077() {
         for (int i_1 = 0; i_1 < Class260.anInt3219; i_1++) {
-            Class268 class268_2 = Class260.aClass268Array3232[i_1];
+            AreadSound class268_2 = Class260.aClass268Array3232[i_1];
             if (class268_2.type == 3) {
                 QuickchatFiller.method1142(class268_2, 1716467770);
             }

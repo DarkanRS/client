@@ -21,7 +21,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
 	public void cache(int i_1) {
 		MouseRecord_Sub1[] arr_2 = aMouseRecord_Sub1Array9497;
 		synchronized (aMouseRecord_Sub1Array9497) {
-			if (Class81.anInt803 < Class268.anInt3307 - 1) {
+			if (Class81.anInt803 < AreadSound.anInt3307 - 1) {
 				aMouseRecord_Sub1Array9497[++Class81.anInt803 - 1] = this;
 			}
 		}
@@ -175,7 +175,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
 	public void method13485() {
 		MouseRecord_Sub1[] arr_1 = aMouseRecord_Sub1Array9497;
 		synchronized (aMouseRecord_Sub1Array9497) {
-			if (Class81.anInt803 * 1574444133 * 1803498861 < Class268.anInt3307 * 2078474485 * -1238258851 - 1) {
+			if (Class81.anInt803 * 1574444133 * 1803498861 < AreadSound.anInt3307 * 2078474485 * -1238258851 - 1) {
 				MouseRecord_Sub1[] arr_10000 = aMouseRecord_Sub1Array9497;
 				int i_10001 = Class81.anInt803 * 1574444133 + 1574444133;
 				Class81.anInt803 = (Class81.anInt803 * 1574444133 + 1574444133) * 1803498861;
@@ -206,7 +206,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
 	public void method13486() {
 		MouseRecord_Sub1[] arr_1 = aMouseRecord_Sub1Array9497;
 		synchronized (aMouseRecord_Sub1Array9497) {
-			if (Class81.anInt803 * 1574444133 * 1803498861 < Class268.anInt3307 * 2078474485 * -1238258851 - 1) {
+			if (Class81.anInt803 * 1574444133 * 1803498861 < AreadSound.anInt3307 * 2078474485 * -1238258851 - 1) {
 				MouseRecord_Sub1[] arr_10000 = aMouseRecord_Sub1Array9497;
 				int i_10001 = Class81.anInt803 * 1574444133 + 1574444133;
 				Class81.anInt803 = (Class81.anInt803 * 1574444133 + 1574444133) * 1803498861;
@@ -218,7 +218,7 @@ public class MouseRecord_Sub1 extends MouseRecord {
 	public void method13487() {
 		MouseRecord_Sub1[] arr_1 = aMouseRecord_Sub1Array9497;
 		synchronized (aMouseRecord_Sub1Array9497) {
-			if (Class81.anInt803 * 1574444133 * 1803498861 < Class268.anInt3307 * 2078474485 * -1238258851 - 1) {
+			if (Class81.anInt803 * 1574444133 * 1803498861 < AreadSound.anInt3307 * 2078474485 * -1238258851 - 1) {
 				MouseRecord_Sub1[] arr_10000 = aMouseRecord_Sub1Array9497;
 				int i_10001 = Class81.anInt803 * 1574444133 + 1574444133;
 				Class81.anInt803 = (Class81.anInt803 * 1574444133 + 1574444133) * 1803498861;

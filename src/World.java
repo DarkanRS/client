@@ -44,7 +44,7 @@ public class World {
 				int i_11 = (int) vector3_10.x - 256 >> 9;
 				int i_12 = (int) vector3_10.z - 256 >> 9;
 				int i_13 = class521_sub1_2 == VertexNormal.MY_PLAYER ? 0 : i_7 + (i_12 << 8) + (class521_sub1_2.plane << 24) + (i_11 << 16);
-				Class260.aClass268Array3232[++Class260.anInt3219 - 1] = new Class268((byte) (animDef.aBool5928 ? 2 : 1), i_5, i_6, 0, i_9, i_13, i_8, class521_sub1_2);
+				Class260.aClass268Array3232[++Class260.anInt3219 - 1] = new AreadSound((byte) (animDef.aBool5928 ? 2 : 1), i_5, i_6, 0, i_9, i_13, i_8, class521_sub1_2);
 			}
 		}
 

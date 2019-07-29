@@ -1,6 +1,6 @@
 public class PlaySoundVorbisCutsceneAction extends CutsceneAction {
 
-	Class268 aClass268_9271;
+	AreadSound aClass268_9271;
 
 	int anInt9270;
 

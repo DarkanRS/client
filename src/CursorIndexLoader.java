@@ -109,7 +109,7 @@ public class CursorIndexLoader {
 		}
 	}
 	
-	static void createProjectile(int spotAnimId, int source, int lockOn, int basOffIdx, int startHeight, int endHeight, int localX, int localY, int xOff, int yOff, int delay, int endTime, int angle, int angle2, boolean useFloorHeight) {
+	static void createProjectile(int spotAnimId, int source, int lockOn, int basOffIdx, int startHeight, int endHeight, int localX, int localY, int xOff, int yOff, int delay, int endTime, int angleY, int angleXZ, boolean useFloorHeight) {
 		if (source != 0 && basOffIdx != -1) {
 			Object entity = null;
 			if (source < 0) {
@@ -136,7 +136,7 @@ public class CursorIndexLoader {
 				}
 			}
 		}
-		Projectile projectile = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, endTime + client.cycles, angle, angle2, source, lockOn, endHeight, useFloorHeight, basOffIdx);
+		Projectile projectile = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, endTime + client.cycles, angleY, angleXZ, source, lockOn, endHeight, useFloorHeight, basOffIdx);
 		projectile.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE, (byte) 65) - endHeight, delay + client.cycles);
 		client.PROJECTILES.append(new ProjectileNode(projectile));
 	}

@@ -12,8 +12,8 @@ public class Projectile extends Transform_Sub1_Sub1 {
 	int spotAnimId;
 	public int startTime;
 	public int endTime;
-	int angle;
-	int angle2;
+	int angleY;
+	int angleXZ;
 	int entitySource;
 	public int entityLockOn;
 	int startHeight;
@@ -105,8 +105,8 @@ public class Projectile extends Transform_Sub1_Sub1 {
 			float f_8 = (float) i_2 - position.z;
 			float f_9 = (float) Math.sqrt((double) (f_8 * f_8 + f_7 * f_7));
 			if (f_9 != 0.0F) {
-				position.x += f_7 * (float) this.angle2 / f_9;
-				position.z += f_8 * (float) this.angle2 / f_9;
+				position.x += f_7 * (float) this.angleXZ / f_9;
+				position.z += f_8 * (float) this.angleXZ / f_9;
 			}
 
 			if (this.useFloorHeight) {
@@ -120,9 +120,9 @@ public class Projectile extends Transform_Sub1_Sub1 {
 		this.aDouble10394 = (double) ((float) i_1 - position.x) / d_10;
 		this.aDouble10395 = (double) ((float) i_2 - position.z) / d_10;
 		this.aDouble10396 = Math.sqrt(this.aDouble10395 * this.aDouble10395 + this.aDouble10394 * this.aDouble10394);
-		if (this.angle != -1) {
+		if (this.angleY != -1) {
 			if (!this.aBool10398) {
-				this.aDouble10397 = -this.aDouble10396 * Math.tan(0.02454369D * (double) this.angle);
+				this.aDouble10397 = -this.aDouble10396 * Math.tan(0.02454369D * (double) this.angleY);
 			}
 
 			this.aDouble10390 = ((double) ((float) i_3 - position.y) - this.aDouble10397 * d_10) * 2.0D / (d_10 * d_10);
@@ -288,13 +288,13 @@ public class Projectile extends Transform_Sub1_Sub1 {
 		}
 	}
 
-	public Projectile(SceneObjectManager objManager, int spotAnimId, int fromPlane, int toPlane, int localX, int localY, int startHeight, int startTime, int endTime, int angle, int angle2, int entitySource, int entityLockOn, int endHeight, boolean flag0x80, int i_16) {
+	public Projectile(SceneObjectManager objManager, int spotAnimId, int fromPlane, int toPlane, int localX, int localY, int startHeight, int startTime, int endTime, int angleY, int angleXZ, int entitySource, int entityLockOn, int endHeight, boolean flag0x80, int i_16) {
 		super(objManager, fromPlane, toPlane, localX, Class504.getTerrainHeightAtPos(localX, localY, fromPlane, (byte) 25) - startHeight, localY, localX >> 9, localX >> 9, localY >> 9, localY >> 9, false, (byte) 0);
 		this.spotAnimId = spotAnimId;
 		this.startTime = startTime;
 		this.endTime = endTime;
-		this.angle = angle;
-		this.angle2 = angle2;
+		this.angleY = angleY;
+		this.angleXZ = angleXZ;
 		this.entitySource = entitySource;
 		this.entityLockOn = entityLockOn;
 		this.startHeight = startHeight;
@@ -353,7 +353,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 		class305_3.coords.z = (float) ((double) class305_3.coords.z + this.aDouble10395 * (double) i_1);
 		if (this.useFloorHeight) {
 			class305_3.coords.y = (float) (Class504.getTerrainHeightAtPos((int) class305_3.coords.x, (int) class305_3.coords.z, this.plane, (byte) 18) - this.startHeight);
-		} else if (this.angle != -1) {
+		} else if (this.angleY != -1) {
 			class305_3.coords.y = (float) ((double) class305_3.coords.y + this.aDouble10397 * (double) i_1 + (double) i_1 * (double) i_1 * 0.5D * this.aDouble10390);
 			this.aDouble10397 += (double) i_1 * this.aDouble10390;
 		} else {

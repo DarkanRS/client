@@ -1,4 +1,4 @@
-public class Class268 {
+public class AreadSound {
 
 	MIDIInstrument aNode_Sub18_3294;
 
@@ -32,8 +32,8 @@ public class Class268 {
 		return this.type == 2 || this.type == 3;
 	}
 
-	Class268(byte b_1, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, Transform_Sub1 class521_sub1_8) {
-		this.type = b_1;
+	AreadSound(byte type, int soundId, int i_3, int i_4, int i_5, int i_6, int i_7, Transform_Sub1 class521_sub1_8) {
+		this.type = type;
 		this.soundId = soundId;
 		this.anInt3302 = i_3;
 		this.anInt3297 = i_4;
