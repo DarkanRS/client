@@ -136,7 +136,7 @@ public class Class190 {
 		client.NPC_UPDATE_INDEX = 0;
 		client.anInt7210 = 0;
 		client.NPCS.method7749(1966305284);
-		client.aClass482_7333.removeAll();
+		client.PROJECTILES.removeAll();
 		client.aClass465_7334.method7749(1935752602);
 		client.aClass457_7335.method7651();
 		client.aClass465_7414.method7749(828403909);

@@ -136,5 +136,6 @@ public class Static {
 
 	static Class194 aClass194_5794;
 	static int UPDATE_ZONE_X;
+	public static int COUNTRY;
 
 }

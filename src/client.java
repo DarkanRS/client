@@ -98,7 +98,7 @@ public final class client extends Engine {
 	public static Object anObject7227;
 	public static int[] anIntArray7228;
 	public static int anInt7234;
-	public static int[] anIntArray7230;
+	public static int[] OBJECT_TYPE_SLOTS;
 	public static int CURRENT_CUTSCENE;
 	public static int anInt7341;
 	public static boolean aBool7321;
@@ -193,7 +193,7 @@ public final class client extends Engine {
 	static boolean[] PLAYER_OPTION_REDUCED_PRIORITY;
 	static int anInt7311;
 	public static IterableNodeMap aClass465_7414;
-	public static NodeCollection aClass482_7333;
+	public static NodeCollection PROJECTILES;
 	public static IterableNodeMap aClass465_7334;
 	public static EntityList aClass457_7335;
 	public static int[] SKILL_LEVEL_VISIBLE;
@@ -334,7 +334,7 @@ public final class client extends Engine {
 		anObject7227 = new Object();
 		anIntArray7228 = new int[64];
 		anInt7234 = 0;
-		anIntArray7230 = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
+		OBJECT_TYPE_SLOTS = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
 		CURRENT_CUTSCENE = -1;
 		anInt7341 = 1;
 		aBool7321 = false;
@@ -429,7 +429,7 @@ public final class client extends Engine {
 		PLAYER_OPTION_REDUCED_PRIORITY = new boolean[8];
 		anInt7311 = -1;
 		aClass465_7414 = new IterableNodeMap(64);
-		aClass482_7333 = new NodeCollection();
+		PROJECTILES = new NodeCollection();
 		aClass465_7334 = new IterableNodeMap(16);
 		aClass457_7335 = new EntityList();
 		SKILL_LEVEL_VISIBLE = new int[25];
@@ -601,7 +601,7 @@ public final class client extends Engine {
 						Class448.LOBBY_CONNECTION_INFO.host = string_7;
 						break;
 					case 6:
-						TilestreamPacket.COUNTRY = Integer.parseInt(string_7);
+						Static.COUNTRY = Integer.parseInt(string_7);
 						break;
 					case 7:
 						str_1 = string_7;
@@ -948,7 +948,7 @@ public final class client extends Engine {
 				continue;
 			}
 
-			((Entity) obj_4).method11172(vector3_6.x, (float) Class504.method8389((int) vector3_6.x, (int) vector3_6.z, ((Entity) obj_4).plane, (byte) 71), vector3_6.z);
+			((Entity) obj_4).method11172(vector3_6.x, (float) Class504.getTerrainHeightAtPos((int) vector3_6.x, (int) vector3_6.z, ((Entity) obj_4).plane, (byte) 71), vector3_6.z);
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397((Transform_Sub1_Sub1) obj_4, true, -622341859);
 		}
 
@@ -1592,7 +1592,7 @@ public final class client extends Engine {
 			}
 
 			((Entity) obj_7).aBool10318 = false;
-			((Entity) obj_7).method11172(vector3_9.x, (float) Class504.method8389((int) vector3_9.x, (int) vector3_9.z, ((Entity) obj_7).plane, (byte) 48), vector3_9.z);
+			((Entity) obj_7).method11172(vector3_9.x, (float) Class504.getTerrainHeightAtPos((int) vector3_9.x, (int) vector3_9.z, ((Entity) obj_7).plane, (byte) 48), vector3_9.z);
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397((Transform_Sub1_Sub1) obj_7, true, -1200990157);
 		}
 
@@ -2630,7 +2630,7 @@ public final class client extends Engine {
 		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		LOBBY_CONNECTION_CONTEXT.method3051();
 		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
-		Class278_Sub1.method13449((byte) -20);
+		Index36FileReference.method13449((byte) -20);
 		Class119.JS5_STANDARD_REQUESTER.method5525(1906332744);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 68);
 		if (PING_REQUESTER != null) {
@@ -2740,7 +2740,7 @@ public final class client extends Engine {
 		GAME_CONNECTION_CONTEXT.pinger.finishPingRequest();
 		LOBBY_CONNECTION_CONTEXT.method3051();
 		LOBBY_CONNECTION_CONTEXT.pinger.finishPingRequest();
-		Class278_Sub1.method13449((byte) 10);
+		Index36FileReference.method13449((byte) 10);
 		Class119.JS5_STANDARD_REQUESTER.method5525(-411822521);
 		Whirlpool.JS5_LOCAL_REQUESTER.method5565((byte) 4);
 		if (PING_REQUESTER != null) {

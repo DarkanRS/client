@@ -9,11 +9,11 @@ public class PulseEvent extends CacheableNode {
 	static Queue aClass477_9655 = new Queue();
 	static IterableNodeMap aClass465_9667 = new IterableNodeMap(16);
 
-	PulseEvent(int i_1, long long_2) {
-		this.data = (long) i_1 << 56 | long_2;
+	PulseEvent(int type, long data) {
+		this.data = (long) type << 56 | data;
 	}
 
-	int method14953() {
+	int getType() {
 		return (int) (this.data >>> 56 & 0xffL);
 	}
 
@@ -52,7 +52,7 @@ public class PulseEvent extends CacheableNode {
 			client.anIntArray7379[++client.anInt7453 - 1 & 0x1f] = i_1;
 		}
 		for (PulseEvent event = ObjectDefinitions.nextPulseEvent(); event != null; event = ObjectDefinitions.nextPulseEvent()) {
-			int type = event.method14953();
+			int type = event.getType();
 			long value = event.method14967();
 			if (type == 1) {
 				Class320.VARC_INT[(int) value] = event.primary;

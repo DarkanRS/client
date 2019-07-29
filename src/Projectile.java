@@ -1,4 +1,4 @@
-public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
+public class Projectile extends Transform_Sub1_Sub1 {
 
 	double aDouble10394;
 	double aDouble10395;
@@ -9,18 +9,18 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	int anInt10385 = 0;
 	ParticleSystem aClass539_10402;
 	boolean aBool10398 = false;
-	int anInt10386;
-	public int anInt10393;
-	public int anInt10392;
-	int anInt10387;
-	int anInt10388;
-	int anInt10389;
-	public int anInt10382;
-	int anInt10383;
-	public int anInt10384;
-	boolean aBool10400;
+	int spotAnimId;
+	public int startTime;
+	public int endTime;
+	int angle;
+	int angle2;
+	int entitySource;
+	public int entityLockOn;
+	int startHeight;
+	public int endHeight;
+	boolean useFloorHeight;
 	int anInt10391;
-	Animation aAnimation_10399;
+	Animation animation;
 
 	boolean method12999() {
 		return false;
@@ -31,21 +31,21 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	}
 
 	public void method15903() {
-		if (!this.aBool10398 && this.anInt10389 != 0) {
+		if (!this.aBool10398 && this.entitySource != 0) {
 			Object obj_2 = null;
 			if (client.anInt7341 == 4) {
-				obj_2 = Class82.aClass75Array804[this.anInt10389 - 1].method1342((byte) 61);
+				obj_2 = Class82.aClass75Array804[this.entitySource - 1].method1342((byte) 61);
 			} else {
 				int i_14;
-				if (this.anInt10389 < 0) {
-					i_14 = -this.anInt10389 - 1;
+				if (this.entitySource < 0) {
+					i_14 = -this.entitySource - 1;
 					if (i_14 == client.myPlayerIndex) {
 						obj_2 = VertexNormal.MY_PLAYER;
 					} else {
 						obj_2 = client.players[i_14];
 					}
 				} else {
-					i_14 = this.anInt10389 - 1;
+					i_14 = this.entitySource - 1;
 					StringNode class282_sub47_4 = (StringNode) client.NPCS.get((long) i_14);
 					if (class282_sub47_4 != null) {
 						obj_2 = (Entity) class282_sub47_4.anObject8068;
@@ -55,7 +55,7 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 
 			if (obj_2 != null) {
 				Vector3 vector3_3 = ((Entity) obj_2).method11166().coords;
-				this.method11172(vector3_3.x, (float) (Class504.method8389((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.anInt10383), vector3_3.z);
+				this.method11172(vector3_3.x, (float) (Class504.getTerrainHeightAtPos((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.startHeight), vector3_3.z);
 				if (this.anInt10391 >= 0) {
 					BASDefinitions renderanimdefs_15 = ((Entity) obj_2).getRenderAnimDefs();
 					int i_5 = 0;
@@ -99,38 +99,38 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	}
 
 	public final void method15904(int i_1, int i_2, int i_3, int i_4) {
-		Vector3 vector3_6 = Vector3.popVectorStackTo(this.method11166().coords);
+		Vector3 position = Vector3.popVectorStackTo(this.method11166().coords);
 		if (!this.aBool10398) {
-			float f_7 = (float) i_1 - vector3_6.x;
-			float f_8 = (float) i_2 - vector3_6.z;
+			float f_7 = (float) i_1 - position.x;
+			float f_8 = (float) i_2 - position.z;
 			float f_9 = (float) Math.sqrt((double) (f_8 * f_8 + f_7 * f_7));
 			if (f_9 != 0.0F) {
-				vector3_6.x += f_7 * (float) this.anInt10388 / f_9;
-				vector3_6.z += f_8 * (float) this.anInt10388 / f_9;
+				position.x += f_7 * (float) this.angle2 / f_9;
+				position.z += f_8 * (float) this.angle2 / f_9;
 			}
 
-			if (this.aBool10400) {
-				vector3_6.y = (float) (Class504.method8389((int) vector3_6.x, (int) vector3_6.z, this.plane, (byte) 116) - this.anInt10383);
+			if (this.useFloorHeight) {
+				position.y = (float) (Class504.getTerrainHeightAtPos((int) position.x, (int) position.z, this.plane, (byte) 116) - this.startHeight);
 			}
 
-			this.method11171(vector3_6);
+			this.method11171(position);
 		}
 
-		double d_10 = (double) (this.anInt10392 + 1 - i_4);
-		this.aDouble10394 = (double) ((float) i_1 - vector3_6.x) / d_10;
-		this.aDouble10395 = (double) ((float) i_2 - vector3_6.z) / d_10;
+		double d_10 = (double) (this.endTime + 1 - i_4);
+		this.aDouble10394 = (double) ((float) i_1 - position.x) / d_10;
+		this.aDouble10395 = (double) ((float) i_2 - position.z) / d_10;
 		this.aDouble10396 = Math.sqrt(this.aDouble10395 * this.aDouble10395 + this.aDouble10394 * this.aDouble10394);
-		if (this.anInt10387 != -1) {
+		if (this.angle != -1) {
 			if (!this.aBool10398) {
-				this.aDouble10397 = -this.aDouble10396 * Math.tan(0.02454369D * (double) this.anInt10387);
+				this.aDouble10397 = -this.aDouble10396 * Math.tan(0.02454369D * (double) this.angle);
 			}
 
-			this.aDouble10390 = ((double) ((float) i_3 - vector3_6.y) - this.aDouble10397 * d_10) * 2.0D / (d_10 * d_10);
+			this.aDouble10390 = ((double) ((float) i_3 - position.y) - this.aDouble10397 * d_10) * 2.0D / (d_10 * d_10);
 		} else {
-			this.aDouble10397 = (double) ((float) i_3 - vector3_6.y) / d_10;
+			this.aDouble10397 = (double) ((float) i_3 - position.y) / d_10;
 		}
 
-		vector3_6.pushVectorStack();
+		position.pushVectorStack();
 	}
 
 	boolean method13000() {
@@ -218,8 +218,8 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15907(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
-		SpotAnimDefinitions spotanimdefinitions_4 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -54);
-		return spotanimdefinitions_4.method11228(graphicalrenderer_1, i_2, this.aAnimation_10399, (byte) 2, (byte) 57);
+		SpotAnimDefinitions spotanimdefinitions_4 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.spotAnimId, (byte) -54);
+		return spotanimdefinitions_4.method11228(graphicalrenderer_1, i_2, this.animation, (byte) 2, (byte) 57);
 	}
 
 	public int method13005() {
@@ -288,23 +288,23 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 		}
 	}
 
-	public Transform_Sub1_Sub1_Sub3(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, int i_14, boolean bool_15, int i_16) {
-		super(sceneobjectmanager_1, i_3, i_4, i_5, Class504.method8389(i_5, i_6, i_3, (byte) 25) - i_7, i_6, i_5 >> 9, i_5 >> 9, i_6 >> 9, i_6 >> 9, false, (byte) 0);
-		this.anInt10386 = i_2;
-		this.anInt10393 = i_8;
-		this.anInt10392 = i_9;
-		this.anInt10387 = i_10;
-		this.anInt10388 = i_11;
-		this.anInt10389 = i_12;
-		this.anInt10382 = i_13;
-		this.anInt10383 = i_7;
-		this.anInt10384 = i_14;
-		this.aBool10400 = bool_15;
+	public Projectile(SceneObjectManager objManager, int spotAnimId, int fromPlane, int toPlane, int localX, int localY, int startHeight, int startTime, int endTime, int angle, int angle2, int entitySource, int entityLockOn, int endHeight, boolean flag0x80, int i_16) {
+		super(objManager, fromPlane, toPlane, localX, Class504.getTerrainHeightAtPos(localX, localY, fromPlane, (byte) 25) - startHeight, localY, localX >> 9, localX >> 9, localY >> 9, localY >> 9, false, (byte) 0);
+		this.spotAnimId = spotAnimId;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.angle = angle;
+		this.angle2 = angle2;
+		this.entitySource = entitySource;
+		this.entityLockOn = entityLockOn;
+		this.startHeight = startHeight;
+		this.endHeight = endHeight;
+		this.useFloorHeight = flag0x80;
 		this.aBool10398 = false;
 		this.anInt10391 = i_16;
-		int i_17 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.anInt10386, (byte) -8).animationId;
-		this.aAnimation_10399 = new Animation_Sub2(this);
-		this.aAnimation_10399.update(i_17);
+		int i_17 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.spotAnimId, (byte) -8).animationId;
+		this.animation = new Animation_Sub2(this);
+		this.animation.update(i_17);
 		this.method13008(1, (byte) -89);
 	}
 
@@ -351,9 +351,9 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 		Position class305_3 = new Position(this.method11166());
 		class305_3.coords.x = (float) ((double) class305_3.coords.x + this.aDouble10394 * (double) i_1);
 		class305_3.coords.z = (float) ((double) class305_3.coords.z + this.aDouble10395 * (double) i_1);
-		if (this.aBool10400) {
-			class305_3.coords.y = (float) (Class504.method8389((int) class305_3.coords.x, (int) class305_3.coords.z, this.plane, (byte) 18) - this.anInt10383);
-		} else if (this.anInt10387 != -1) {
+		if (this.useFloorHeight) {
+			class305_3.coords.y = (float) (Class504.getTerrainHeightAtPos((int) class305_3.coords.x, (int) class305_3.coords.z, this.plane, (byte) 18) - this.startHeight);
+		} else if (this.angle != -1) {
 			class305_3.coords.y = (float) ((double) class305_3.coords.y + this.aDouble10397 * (double) i_1 + (double) i_1 * (double) i_1 * 0.5D * this.aDouble10390);
 			this.aDouble10397 += (double) i_1 * this.aDouble10390;
 		} else {
@@ -366,8 +366,8 @@ public class Transform_Sub1_Sub1_Sub3 extends Transform_Sub1_Sub1 {
 		class305_3.quaternion.multiply(quaternion_4);
 		quaternion_4.cache();
 		this.method11191(class305_3);
-		if (this.aAnimation_10399.method7627(1, -1320963255) && this.aAnimation_10399.method7580(1594863337)) {
-			this.aAnimation_10399.method7582((byte) -115);
+		if (this.animation.method7627(1, -1320963255) && this.animation.method7580(1594863337)) {
+			this.animation.method7582((byte) -115);
 		}
 
 	}

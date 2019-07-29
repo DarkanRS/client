@@ -92,9 +92,9 @@ public class SpotAnimIndexLoader {
 	}
 
 	public static NativeSprite method8858(GraphicalRenderer graphicalrenderer_0, int i_1) {
-		Node_Sub37 class282_sub37_3 = (Node_Sub37) Class492.aClass465_5774.get((long) i_1);
+		Index36FileNode class282_sub37_3 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.get((long) i_1);
 		if (class282_sub37_3 != null) {
-			Node_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918();
+			Node_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.reference.method4918();
 			class282_sub37_3.aBool7996 = true;
 			if (class282_sub41_sub3_4 != null) {
 				Class492.aClass502_5776.aGraphicalRenderer_5829 = graphicalrenderer_0;

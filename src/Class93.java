@@ -49,14 +49,14 @@ public class Class93 {
 		}
 	}
 
-	public static void method1575(int i_0, int i_1, boolean bool_2) {
-		if (Class492.aClass465_5774.get((long) i_0) == null) {
+	public static void method1575(int fileId, int i_1, boolean bool_2) {
+		if (Class492.INDEX36_FILE_CACHE.get((long) fileId) == null) {
 			if (!client.aBool7393) {
-				Class62.method1260(i_0, bool_2, 860609292);
+				Class62.method1260(fileId, bool_2, 860609292);
 			} else {
-				Node_Sub37 class282_sub37_4 = new Node_Sub37(i_0, new Class278_Sub1(IndexLoaders.INDEX_36, i_0), i_1, bool_2);
-				class282_sub37_4.aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
-				Class492.aClass465_5774.put(class282_sub37_4, (long) i_0);
+				Index36FileNode class282_sub37_4 = new Index36FileNode(fileId, new Index36FileReference(IndexLoaders.INDEX_36, fileId), i_1, bool_2);
+				class282_sub37_4.reference.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
+				Class492.INDEX36_FILE_CACHE.put(class282_sub37_4, (long) fileId);
 			}
 		}
 	}

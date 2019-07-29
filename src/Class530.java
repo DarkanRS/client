@@ -9,7 +9,7 @@ public class Class530 {
 	int anInt7049;
 
 	int method11343() {
-		return client.anIntArray7230[this.anInt7047];
+		return client.OBJECT_TYPE_SLOTS[this.anInt7047];
 	}
 
 	public SceneObject method11344() {

@@ -355,11 +355,11 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 	static final void method16113() {
 		int i_1 = Class296.anInt3534 * 512 + 256;
 		int i_2 = Node_Sub44.anInt8064 * 512 + 256;
-		int i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 102) - SpotAnimDefinitions.anInt6985;
+		int i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35, (byte) 102) - SpotAnimDefinitions.anInt6985;
 		if (Class115.anInt1249 >= 100) {
 			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
 			Class246.anInt3029 = Node_Sub44.anInt8064 * 512 + 256;
-			Class109_Sub1.anInt9384 = Class504.method8389(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 84) - SpotAnimDefinitions.anInt6985;
+			Class109_Sub1.anInt9384 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 84) - SpotAnimDefinitions.anInt6985;
 		} else {
 			if (IdentitiKitIndexLoader.anInt361 < i_1) {
 				IdentitiKitIndexLoader.anInt361 = (i_1 - IdentitiKitIndexLoader.anInt361) * Class115.anInt1249 / 1000 + IdentitiKitIndexLoader.anInt361 + Class454.anInt5451;
@@ -406,7 +406,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 		i_1 = PlaySynthCutsceneAction.anInt9368 * 512 + 256;
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
-		i_3 = Class504.method8389(i_1, i_2, Class4.anInt35, (byte) 54) - Class121.anInt1527;
+		i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35, (byte) 54) - Class121.anInt1527;
 		int i_4 = i_1 - IdentitiKitIndexLoader.anInt361;
 		int i_5 = i_3 - Class109_Sub1.anInt9384;
 		int i_6 = i_2 - Class246.anInt3029;

@@ -1,38 +1,25 @@
-public class TilestreamPacket {
+public enum TilestreamPacket {
 
-    public static int COUNTRY;
-
-    public static TilestreamPacket CUSTOMIZE_OBJECT = new TilestreamPacket(-1);
-
-    public static TilestreamPacket REMOVE_GROUND_ITEM = new TilestreamPacket(3);
-
-    public static TilestreamPacket CREATE_GROUND_ITEM = new TilestreamPacket(5);
-
-    public static TilestreamPacket DESTROY_OBJECT = new TilestreamPacket(2);
-
-    public static TilestreamPacket CREATE_OBJECT = new TilestreamPacket(6);
-
-    public static TilestreamPacket PROJECTILE = new TilestreamPacket(16);
-
-    public static TilestreamPacket aClass364_4210 = new TilestreamPacket(19);
-
-    public static TilestreamPacket aClass364_4211 = new TilestreamPacket(5);
-
-    public static TilestreamPacket aClass364_4205 = new TilestreamPacket(7);
-
-    public static TilestreamPacket aClass364_4204 = new TilestreamPacket(7);
-
-    public static TilestreamPacket aClass364_4214 = new TilestreamPacket(8);
-
-    public static TilestreamPacket TILE_MESSAGE = new TilestreamPacket(-1);
-
-    public static TilestreamPacket aClass364_4216 = new TilestreamPacket(6);
-
-    public static TilestreamPacket aClass364_4217 = new TilestreamPacket(9);
-
-    public static TilestreamPacket aClass364_4218 = new TilestreamPacket(8);
+    CUSTOMIZE_OBJECT(-1),
+    REMOVE_GROUND_ITEM(3),
+    CREATE_GROUND_ITEM(5),
+    DESTROY_OBJECT(2),
+    CREATE_OBJECT(6),
+    MAP_PROJANIM(16),
+    MAP_PROJANIM_HALFSQ(19),
+    OBJECT_PREFETCH(5),
+    aClass364_4205(7),
+    aClass364_4204(7),
+    MIDI_SONG_LOCATION(8),
+    TILE_MESSAGE(-1),
+    OBJ_ANIM(6),
+    aClass364_4217(9),
+    aClass364_4218(8);
+	
+	public int id;
 
     TilestreamPacket(int i_1) {
+    	this.id = i_1;
     }
 
     static final void method6292(int i_0, int i_1, int i_2, int i_3) {
@@ -43,7 +30,7 @@ public class TilestreamPacket {
         }
     }
 
-	public static TilestreamPacket[] values() {
-		return new TilestreamPacket[] { CUSTOMIZE_OBJECT, REMOVE_GROUND_ITEM, CREATE_GROUND_ITEM, DESTROY_OBJECT, CREATE_OBJECT, PROJECTILE, aClass364_4210, aClass364_4211, aClass364_4205, aClass364_4204, aClass364_4214, TILE_MESSAGE, aClass364_4216, aClass364_4217, aClass364_4218 };
-	}
+//	public static TilestreamPacket[] values() {
+//		return new TilestreamPacket[] { CUSTOMIZE_OBJECT, REMOVE_GROUND_ITEM, CREATE_GROUND_ITEM, DESTROY_OBJECT, CREATE_OBJECT, PROJECTILE, aClass364_4210, aClass364_4211, aClass364_4205, aClass364_4204, aClass364_4214, TILE_MESSAGE, aClass364_4216, aClass364_4217, aClass364_4218 };
+//	}
 }

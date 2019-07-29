@@ -19,11 +19,11 @@ public class Class148 {
 	}
 
 	public static String method2550(int i_0) {
-		Node_Sub37 class282_sub37_2 = (Node_Sub37) Class492.aClass465_5774.get((long) i_0);
+		Index36FileNode class282_sub37_2 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
 		if (class282_sub37_2 != null) {
-			Node_Sub41_Sub2 class282_sub41_sub2_3 = class282_sub37_2.aClass278_Sub1_8001.method4935();
+			Node_Sub41_Sub2 class282_sub41_sub2_3 = class282_sub37_2.reference.method4935();
 			if (class282_sub41_sub2_3 != null) {
-				double d_4 = class282_sub37_2.aClass278_Sub1_8001.method4923(1997080101);
+				double d_4 = class282_sub37_2.reference.method4923(1997080101);
 				if ((double) class282_sub41_sub2_3.method14702() <= d_4 && (double) class282_sub41_sub2_3.method14705((byte) 5) >= d_4) {
 					return class282_sub41_sub2_3.method14704();
 				}

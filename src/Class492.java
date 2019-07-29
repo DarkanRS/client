@@ -2,7 +2,7 @@ public class Class492 {
 
 	public static JS5GrabWorker[] aClass327_Sub1Array5777;
 
-	static IterableNodeMap aClass465_5774 = new IterableNodeMap(4);
+	static IterableNodeMap INDEX36_FILE_CACHE = new IterableNodeMap(4);
 
 	static Class502 aClass502_5776 = new Class502();
 

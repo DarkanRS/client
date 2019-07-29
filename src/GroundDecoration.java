@@ -448,7 +448,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							}
 							if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1339) {
 								if (inter.method2046(Renderers.SOFTWARE_RENDERER, -1781031351) != null) {
-									Class278_Sub1.method13448(inter, drawX, drawY);
+									Index36FileReference.method13448(inter, drawX, drawY);
 									Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								}
 								continue;

@@ -60,7 +60,7 @@ public class Node_Sub20_Sub36 extends Node_Sub20 {
 	}
 
 	public static void method15418() {
-		Class278_Sub1.method13449((byte) -118);
+		Index36FileReference.method13449((byte) -118);
 		Class253.method4330(Class393.preferences.aPreference_Sub10_8215.method12691(-490218326) == 1);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(Node_Sub20_Sub10.method15262((Node_Sub15_Sub2) null, 1928117026), (short) 11196);

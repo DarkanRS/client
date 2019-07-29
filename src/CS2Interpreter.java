@@ -9428,7 +9428,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14833(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = TilestreamPacket.COUNTRY;
+		executor.intStack[++executor.intStackPtr - 1] = Static.COUNTRY;
 	}
 
 	static final void method14835(CS2Executor executor) {

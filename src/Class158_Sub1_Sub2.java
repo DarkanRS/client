@@ -362,21 +362,21 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	public static void method15536() {
-		for (Node_Sub37 class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7751((byte) 17)) {
-			if (class282_sub37_1.aClass278_Sub1_8001.method4921()) {
-				Class92.method1563(class282_sub37_1.anInt7999);
+		for (Index36FileNode class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 17)) {
+			if (class282_sub37_1.reference.method4921()) {
+				Class92.method1563(class282_sub37_1.fileId);
 			} else {
-				class282_sub37_1.aClass278_Sub1_8001.method13447(-947293525);
+				class282_sub37_1.reference.method13447(-947293525);
 
 				try {
-					class282_sub37_1.aClass278_Sub1_8001.method4932();
+					class282_sub37_1.reference.method4932();
 				} catch (Exception exception_4) {
-					Class151.method2594("" + class282_sub37_1.anInt7999, exception_4, (byte) -82);
-					Class92.method1563(class282_sub37_1.anInt7999);
+					Class151.method2594("" + class282_sub37_1.fileId, exception_4, (byte) -82);
+					Class92.method1563(class282_sub37_1.fileId);
 				}
 
 				if (!class282_sub37_1.aBool8000 && !class282_sub37_1.aBool7995) {
-					Node_Sub41_Sub4 class282_sub41_sub4_2 = class282_sub37_1.aClass278_Sub1_8001.method4914();
+					Node_Sub41_Sub4 class282_sub41_sub4_2 = class282_sub37_1.reference.method4914();
 					if (class282_sub41_sub4_2 != null) {
 						Node_Sub15_Sub1 class282_sub15_sub1_3 = class282_sub41_sub4_2.method14845(2048602056);
 						if (class282_sub15_sub1_3 != null) {

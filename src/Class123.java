@@ -288,10 +288,10 @@ public class Class123 {
 	}
 
 	public static void method2152(int i_0, int i_1) {
-		Node_Sub37 class282_sub37_2 = (Node_Sub37) Class492.aClass465_5774.get((long) i_0);
+		Index36FileNode class282_sub37_2 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.aBool7995 = !class282_sub37_2.aBool7995;
-			class282_sub37_2.aClass278_Sub1_8001.method4924(class282_sub37_2.aBool7995);
+			class282_sub37_2.reference.method4924(class282_sub37_2.aBool7995);
 		}
 	}
 }

@@ -185,7 +185,7 @@ public class HitbarDefinitions {
 						i_8 = client.anIntArray7433[4] + 128;
 					}
 					i_9 = (int) client.aFloat7365 + client.anInt7343 & 0x3fff;
-					LoadingStage.method6683(Class11.anInt122, Class504.method8389((int) vector3_6.x, (int) vector3_6.z, Class4.anInt35, (byte) 13) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1262873702);
+					LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos((int) vector3_6.x, (int) vector3_6.z, Class4.anInt35, (byte) 13) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1262873702);
 				} else if (NativeLibraryLoader.anInt3240 == 4) {
 					i_8 = (int) client.aFloat7146;
 					if (client.anInt7273 >> 8 > i_8) {
@@ -195,7 +195,7 @@ public class HitbarDefinitions {
 						i_8 = client.anIntArray7433[4] + 128;
 					}
 					i_9 = (int) client.aFloat7365 & 0x3fff;
-					LoadingStage.method6683(Class11.anInt122, Class504.method8389(client.anInt7262, client.anInt7376, Class4.anInt35, (byte) 101) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1318646026);
+					LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos(client.anInt7262, client.anInt7376, Class4.anInt35, (byte) 101) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1318646026);
 				} else if (NativeLibraryLoader.anInt3240 == 1) {
 					KeyHoldInputSubscriber.method3920(i_3);
 				}

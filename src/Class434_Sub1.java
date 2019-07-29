@@ -341,7 +341,7 @@ public class Class434_Sub1 extends Class434 {
 						}
 					}
 
-					int i_14 = Class504.method8389((i_1 << 9) + 256, (i_2 << 9) + 256, i_0, (byte) 85);
+					int i_14 = Class504.getTerrainHeightAtPos((i_1 << 9) + 256, (i_2 << 9) + 256, i_0, (byte) 85);
 					class521_sub1_sub2_sub1_11.method11172((float) (i_1 << 265), (float) i_14, (float) (i_2 << 265));
 					class521_sub1_sub2_sub1_11.anInt10422 = 0;
 					class521_sub1_sub2_sub1_11.plane = (byte) i_0;

@@ -603,7 +603,7 @@ public class MapRegion {
 		Class350.method6189((byte) 120);
 		QuickchatFiller.method1139(-1725445379);
 		client.aClass465_7334.method7749(189639583);
-		client.aClass482_7333.removeAll();
+		client.PROJECTILES.removeAll();
 		client.aClass457_7335.method7651();
 		NewsItemFetcher.method795();
 	}

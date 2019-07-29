@@ -1,6 +1,6 @@
 public class CutsceneAction_Sub6 extends CutsceneAction {
 
-	static boolean aBool9173;
+	static boolean SHOW_FACE_HERE;
 	int anInt9170;
 	int anInt9169;
 	int anInt9168;

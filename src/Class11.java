@@ -21,7 +21,7 @@ public class Class11 {
 		if (Class501.anInt5828 >= 100) {
 			int i_6 = PlaySynthCutsceneAction.anInt9368 * 512 + 256;
 			int i_7 = OutgoingLoginPacket.anInt4280 * 512 + 256;
-			int i_8 = Class504.method8389(i_6, i_7, Class4.anInt35, (byte) 25) - Class121.anInt1527;
+			int i_8 = Class504.getTerrainHeightAtPos(i_6, i_7, Class4.anInt35, (byte) 25) - Class121.anInt1527;
 			int i_9 = i_6 - IdentitiKitIndexLoader.anInt361;
 			int i_10 = i_8 - Class109_Sub1.anInt9384;
 			int i_11 = i_7 - Class246.anInt3029;

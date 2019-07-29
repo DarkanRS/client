@@ -319,8 +319,8 @@ public class Class247 {
 	}
 
 	public static void method4250(byte b_0) {
-		for (Node_Sub37 class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7750(-1139367366); class282_sub37_1 != null; class282_sub37_1 = (Node_Sub37) Class492.aClass465_5774.method7751((byte) 8)) {
-			Class92.method1563(class282_sub37_1.anInt7999);
+		for (Index36FileNode class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7750(-1139367366); class282_sub37_1 != null; class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 8)) {
+			Class92.method1563(class282_sub37_1.fileId);
 		}
 	}
 

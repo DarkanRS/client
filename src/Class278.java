@@ -37,7 +37,7 @@ public abstract class Class278 {
 		} else {
 			int i_2;
 			while (this.anOggSyncState3355.pageOut(this.anOggPage3352) <= 0) {
-				i_2 = this.method4951(this.aByteArray3354);
+				i_2 = this.decode(this.aByteArray3354);
 				if (i_2 == -1) {
 					this.aBool3361 = true;
 					return null;
@@ -174,8 +174,6 @@ public abstract class Class278 {
 		this.aBool3353 = !this.aBool3353;
 	}
 
-	abstract int method4925(byte[] var1) throws IOException;
-
 	public void method4932() throws IOException {
 		if (!this.aBool3353) {
 			for (; !this.aBool3360; this.aBool3359 = false) {
@@ -280,7 +278,7 @@ public abstract class Class278 {
 		}
 	}
 
-	abstract int method4951(byte[] var1) throws IOException;
+	abstract int decode(byte[] var1) throws IOException;
 
 	static Node_Sub20 method4963(RsByteBuffer rsbytebuffer_0) {
 		rsbytebuffer_0.readUnsignedByte();

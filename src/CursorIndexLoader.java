@@ -108,37 +108,36 @@ public class CursorIndexLoader {
 			}
 		}
 	}
-
-	static void method7335(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14) {
-		if (i_1 != 0 && i_3 != -1) {
-			Object obj_16 = null;
-			int i_17;
-			if (i_1 < 0) {
-				i_17 = -i_1 - 1;
-				if (i_17 == client.myPlayerIndex) {
-					obj_16 = VertexNormal.MY_PLAYER;
+	
+	static void createProjectile(int spotAnimId, int source, int lockOn, int basOffIdx, int startHeight, int endHeight, int localX, int localY, int xOff, int yOff, int delay, int endTime, int angle, int angle2, boolean useFloorHeight) {
+		if (source != 0 && basOffIdx != -1) {
+			Object entity = null;
+			if (source < 0) {
+				int playerId = -source - 1;
+				if (playerId == client.myPlayerIndex) {
+					entity = VertexNormal.MY_PLAYER;
 				} else {
-					obj_16 = client.players[i_17];
+					entity = client.players[playerId];
 				}
 			} else {
-				i_17 = i_1 - 1;
-				StringNode class282_sub47_18 = (StringNode) client.NPCS.get((long) i_17);
+				int npcIndex = source - 1;
+				StringNode class282_sub47_18 = (StringNode) client.NPCS.get((long) npcIndex);
 				if (class282_sub47_18 != null) {
-					obj_16 = (Entity) class282_sub47_18.anObject8068;
+					entity = (Entity) class282_sub47_18.anObject8068;
 				}
 			}
-			if (obj_16 != null) {
-				BASDefinitions renderanimdefs_19 = ((Entity) obj_16).getRenderAnimDefs();
-				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[i_3] != null) {
-					i_4 -= renderanimdefs_19.anIntArrayArray2802[i_3][1];
+			if (entity != null) {
+				BASDefinitions renderanimdefs_19 = ((Entity) entity).getRenderAnimDefs();
+				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[basOffIdx] != null) {
+					startHeight -= renderanimdefs_19.anIntArrayArray2802[basOffIdx][1];
 				}
-				if (renderanimdefs_19.anIntArrayArray2791 != null && renderanimdefs_19.anIntArrayArray2791[i_3] != null) {
-					i_4 -= renderanimdefs_19.anIntArrayArray2791[i_3][1];
+				if (renderanimdefs_19.anIntArrayArray2791 != null && renderanimdefs_19.anIntArrayArray2791[basOffIdx] != null) {
+					startHeight -= renderanimdefs_19.anIntArrayArray2791[basOffIdx][1];
 				}
 			}
 		}
-		Transform_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3_20 = new Transform_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_0, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, i_6, i_7, i_4, i_10 + client.cycles, i_11 + client.cycles, i_12, i_13, i_1, i_2, i_5, bool_14, i_3);
-		class521_sub1_sub1_sub3_20.method15904(i_8, i_9, Class504.method8389(i_8, i_9, Class272.UPDATE_ZONE_PLANE, (byte) 65) - i_5, i_10 + client.cycles);
-		client.aClass482_7333.append(new CacheableNode_Sub16(class521_sub1_sub1_sub3_20));
+		Projectile projectile = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, endTime + client.cycles, angle, angle2, source, lockOn, endHeight, useFloorHeight, basOffIdx);
+		projectile.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE, (byte) 65) - endHeight, delay + client.cycles);
+		client.PROJECTILES.append(new ProjectileNode(projectile));
 	}
 }

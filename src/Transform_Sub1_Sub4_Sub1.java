@@ -467,7 +467,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 							Class60.method1170();
 						}
 					} else {
-						if (CutsceneAction_Sub6.aBool9173) {
+						if (CutsceneAction_Sub6.SHOW_FACE_HERE) {
 							PlayerAppearance.method4032(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE), "", -1, 60, -1, 0L, i_8, i_9, true, false, (long) (i_8 << 32 | i_9), true, -1333249112);
 						}
 

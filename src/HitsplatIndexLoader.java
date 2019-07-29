@@ -78,7 +78,7 @@ public class HitsplatIndexLoader {
 			client.aFloatArray7292[1] = -1.0F;
 			floats_7[0] = -1.0F;
 		} else {
-			int i_8 = Class504.method8389(i_1, i_2, i_0, (byte) 110) - i_4;
+			int i_8 = Class504.getTerrainHeightAtPos(i_1, i_2, i_0, (byte) 110) - i_4;
 			client.aClass294_7457.method5209(Renderers.SOFTWARE_RENDERER.method8458());
 			client.aClass294_7457.method5219((float) i_3, 0.0F, 0.0F);
 			Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
