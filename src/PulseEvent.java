@@ -78,9 +78,9 @@ public class PulseEvent extends CacheableNode {
 				int i_6 = event.primary;
 				int i_7 = event.secondary;
 				int i_8 = event.tertiary;
-				if (i_6 != icomponentdefinitions_5.anInt1329 || i_7 != icomponentdefinitions_5.anInt1330 || i_8 != icomponentdefinitions_5.anInt1339) {
+				if (i_6 != icomponentdefinitions_5.anInt1329 || i_7 != icomponentdefinitions_5.playerIndex || i_8 != icomponentdefinitions_5.anInt1339) {
 					icomponentdefinitions_5.anInt1329 = i_6;
-					icomponentdefinitions_5.anInt1330 = i_7;
+					icomponentdefinitions_5.playerIndex = i_7;
 					icomponentdefinitions_5.anInt1339 = i_8;
 					icomponentdefinitions_5.npcMeshModifier = null;
 					Class109.redrawComponent(icomponentdefinitions_5);
@@ -178,7 +178,7 @@ public class PulseEvent extends CacheableNode {
 				Class187.anInt2359 = event.secondary;
 			} else if (type == 16) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				icomponentdefinitions_5.anInt1277 = event.primary;
+				icomponentdefinitions_5.fontRelated = event.primary;
 			} else if (type == 20) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.aBool1356 = event.primary == 1;

@@ -57,9 +57,9 @@ public class IComponentDefinitions {
 	public int anInt1320 = -1;
 	public int anInt1423 = 0;
 	public int anInt1329 = 1;
-	public int anInt1330;
+	public int playerIndex;
 	public boolean aBool1322 = false;
-	public int anInt1277 = -1;
+	public int fontRelated = -1;
 	public String text = "";
 	public int color = 0;
 	public boolean aBool1327 = false;
@@ -242,7 +242,7 @@ public class IComponentDefinitions {
 		}
 		if (this.type == 6) {
 			this.anInt1329 = 1;
-			this.anInt1330 = rsbytebuffer_1.readBigSmart();
+			this.playerIndex = rsbytebuffer_1.readBigSmart();
 			i_5 = rsbytebuffer_1.readUnsignedByte();
 			boolean bool_6 = (i_5 & 0x1) == 1;
 			this.aBool1332 = (i_5 & 0x2) == 2;
@@ -273,7 +273,7 @@ public class IComponentDefinitions {
 			}
 		}
 		if (this.type == 4) {
-			this.anInt1277 = rsbytebuffer_1.readBigSmart();
+			this.fontRelated = rsbytebuffer_1.readBigSmart();
 			if (i_3 >= 2) {
 				this.aBool1356 = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
@@ -482,13 +482,13 @@ public class IComponentDefinitions {
 	}
 
 	public FontRenderer method1988(Class378 class378_1, Interface35 interface35_2, int i_3) {
-		FontRenderer fontrenderer_4 = (FontRenderer) class378_1.method6426(interface35_2, this.anInt1277, false, this.aBool1356, -2116791003);
+		FontRenderer fontrenderer_4 = (FontRenderer) class378_1.method6426(interface35_2, this.fontRelated, false, this.aBool1356, -2116791003);
 		aBool1399 = fontrenderer_4 == null;
 		return fontrenderer_4;
 	}
 
 	public FontMetrics method1989(Class378 class378_1, Interface35 interface35_2) {
-		FontMetrics fontmetrics_4 = class378_1.method6415(interface35_2, this.anInt1277, -717286606);
+		FontMetrics fontmetrics_4 = class378_1.method6415(interface35_2, this.fontRelated, -717286606);
 		aBool1399 = fontmetrics_4 == null;
 		return fontmetrics_4;
 	}
@@ -595,7 +595,7 @@ public class IComponentDefinitions {
 		aBool1399 = false;
 		if (this.anInt1329 == 0) {
 			return null;
-		} else if (this.anInt1329 == 1 && this.anInt1330 == -1) {
+		} else if (this.anInt1329 == 1 && this.playerIndex == -1) {
 			return null;
 		} else if (this.anInt1329 == 1) {
 			if (animation_9 != null) {
@@ -622,13 +622,13 @@ public class IComponentDefinitions {
 				}
 				i_2 |= 0x8000;
 			}
-			long long_21 = (long) graphicalrenderer_1.rendererId << 59 | (long) this.anInt1329 << 54 | (long) this.anInt1330 << 38 | long_13 & 0x3fffffffffL;
+			long long_21 = (long) graphicalrenderer_1.rendererId << 59 | (long) this.anInt1329 << 54 | (long) this.playerIndex << 38 | long_13 & 0x3fffffffffL;
 			MeshRasterizer meshrasterizer_18 = (MeshRasterizer) aClass229_1341.get(long_21);
 			if (meshrasterizer_18 == null || graphicalrenderer_1.method8452(meshrasterizer_18.m(), i_2) != 0) {
 				if (meshrasterizer_18 != null) {
 					i_2 = graphicalrenderer_1.method8546(i_2, meshrasterizer_18.m());
 				}
-				RSMesh rsmesh_19 = RSMesh.decodeMesh(Class488.MESH_INDEX, this.anInt1330);
+				RSMesh rsmesh_19 = RSMesh.decodeMesh(Class488.MESH_INDEX, this.playerIndex);
 				if (rsmesh_19 == null) {
 					aBool1399 = true;
 					return null;
@@ -659,7 +659,7 @@ public class IComponentDefinitions {
 		} else {
 			MeshRasterizer meshrasterizer_23;
 			if (this.anInt1329 == 2) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.npcMeshModifier, 1874491057);
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.playerIndex).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.npcMeshModifier, 1874491057);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;
@@ -679,7 +679,7 @@ public class IComponentDefinitions {
 					}
 				}
 			} else if (this.anInt1329 == 4) {
-				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.anInt1330);
+				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.playerIndex);
 				MeshRasterizer meshrasterizer_24 = itemdefinitions_27.method7084(graphicalrenderer_1, i_2, 10, playerappearance_10, animation_9, 0, 0, 0, 0);
 				if (meshrasterizer_24 == null) {
 					aBool1399 = true;
@@ -688,7 +688,7 @@ public class IComponentDefinitions {
 					return meshrasterizer_24;
 				}
 			} else if (this.anInt1329 == 6) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.anInt1330).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.npcMeshModifier, -653193588);
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.playerIndex).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.npcMeshModifier, -653193588);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;
@@ -699,8 +699,8 @@ public class IComponentDefinitions {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
-					int i_12 = this.anInt1330 >>> 16;
-					int i_25 = this.anInt1330 & 0xffff;
+					int i_12 = this.playerIndex >>> 16;
+					int i_25 = this.playerIndex & 0xffff;
 					int i_14 = this.anInt1339;
 					MeshRasterizer meshrasterizer_15 = playerappearance_10.method3999(graphicalrenderer_1, i_2, class31_4, animationindexloader_7, animation_9, i_12, i_25, i_14);
 					if (meshrasterizer_15 == null) {

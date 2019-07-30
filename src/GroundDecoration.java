@@ -650,7 +650,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										} else {
 											Player player_37;
 											if (inter.anInt1329 == 3) {
-												i_24 = inter.anInt1330;
+												i_24 = inter.playerIndex;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.method4840(player_37.displayName, (byte) 111) == inter.anInt1339)) {
@@ -661,7 +661,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													}
 												}
 											} else if (inter.anInt1329 == 5) {
-												i_24 = inter.anInt1330;
+												i_24 = inter.playerIndex;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.method4840(player_37.displayName, (byte) 17) == inter.anInt1339)) {
@@ -681,7 +681,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													}
 												}
 											} else {
-												ItemContainer class282_sub30_42 = ItemContainer.getContainer(inter.anInt1330, false);
+												ItemContainer class282_sub30_42 = ItemContainer.getContainer(inter.playerIndex, false);
 												if (class282_sub30_42 != null) {
 													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.aAnimation_1437, inter.anInt1339, inter.anInt1329 == 9, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null);
 												}

@@ -4157,7 +4157,7 @@ public class CS2Interpreter {
 	static final void method6449(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.anInt1330 : -1;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.playerIndex : -1;
 	}
 
 	static final void method6452(CS2Executor executor) {
@@ -5031,7 +5031,7 @@ public class CS2Interpreter {
 	static final void method6142(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
 	}
 
 	static final void method289(CS2Executor executor) {
@@ -7356,7 +7356,7 @@ public class CS2Interpreter {
 	static final void method14602(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
 	}
 
 	static final void bitAnd(CS2Executor executor) {
@@ -7557,7 +7557,7 @@ public class CS2Interpreter {
 	static final void method1512(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.anInt1330 : -1;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.playerIndex : -1;
 	}
 
 	static final void arrayStore(CS2Executor executor) {
@@ -8463,7 +8463,7 @@ public class CS2Interpreter {
 	static final void method15559(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
 	}
 
 	static final void method4629(CS2Executor executor) {
@@ -10443,7 +10443,7 @@ public class CS2Interpreter {
 	static final void method8154(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
 	}
 
 	static final void method8156(CS2Executor executor) {
@@ -10658,7 +10658,7 @@ public class CS2Interpreter {
 		if (icomponentdefinitions_0.anInt1329 != 6) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
 				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, true);
 			}
@@ -10753,7 +10753,7 @@ public class CS2Interpreter {
 		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
 				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
 			}
@@ -11189,7 +11189,7 @@ public class CS2Interpreter {
 	static final void method5763(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 2;
 		icomponentdefinitions_0.npcMeshModifier = null;
-		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -1575336609);
 		}
@@ -11267,7 +11267,7 @@ public class CS2Interpreter {
 		}
 		if (i_6 == -1) {
 			icomponentdefinitions_0.anInt1329 = 1;
-			icomponentdefinitions_0.anInt1330 = -1;
+			icomponentdefinitions_0.playerIndex = -1;
 			icomponentdefinitions_0.anInt1426 = -1;
 		} else {
 			icomponentdefinitions_0.anInt1426 = i_6;
@@ -11365,7 +11365,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14700(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1277 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.fontRelated = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Game.method8207(icomponentdefinitions_0.idHash);
@@ -11421,7 +11421,7 @@ public class CS2Interpreter {
 
 	static final void method1455(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 4;
-		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1339 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 2] == 1) {
 			icomponentdefinitions_0.anInt1329 = 9;
@@ -11476,7 +11476,7 @@ public class CS2Interpreter {
 
 	static final void method7555(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
 		icomponentdefinitions_0.anInt1329 = 1;
-		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -624586705);
@@ -11538,7 +11538,7 @@ public class CS2Interpreter {
 
 	static final void method3987(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 3;
-		icomponentdefinitions_0.anInt1330 = client.myPlayerIndex;
+		icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -1355203883);
@@ -11551,7 +11551,7 @@ public class CS2Interpreter {
 		if (icomponentdefinitions_0.anInt1329 != 2) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
 				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, false);
 			}
@@ -11571,7 +11571,7 @@ public class CS2Interpreter {
 
 	static final void method12401(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 5;
-		icomponentdefinitions_0.anInt1330 = client.myPlayerIndex;
+		icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -2001727659);
@@ -11615,7 +11615,7 @@ public class CS2Interpreter {
 
 	static final void method5066(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 5;
-		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, 1743541888);
 		}
@@ -11641,7 +11641,7 @@ public class CS2Interpreter {
 		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.anInt1330);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
 				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
 			}
@@ -11849,7 +11849,7 @@ public class CS2Interpreter {
 	static final void method11337(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.anInt1329 = 6;
 		icomponentdefinitions_0.npcMeshModifier = null;
-		icomponentdefinitions_0.anInt1330 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -515297121);
 		}

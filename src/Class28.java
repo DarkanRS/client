@@ -152,13 +152,13 @@ public class Class28 implements Interface2 {
     static final void method776(IComponentDefinitions icomponentdefinitions_0) {
         if (icomponentdefinitions_0.contentType == IComponentDefinitions.CONTENT_TYPE_328) {
             if (VertexNormal.MY_PLAYER.displayName == null) {
-                icomponentdefinitions_0.anInt1330 = 0;
+                icomponentdefinitions_0.playerIndex = 0;
                 icomponentdefinitions_0.anInt1339 = 0;
             } else {
                 icomponentdefinitions_0.spritePitch = 150;
                 icomponentdefinitions_0.spriteRoll = (int) (Math.sin((double) client.cycles / 40.0D) * 256.0D) & 0x7ff;
                 icomponentdefinitions_0.anInt1329 = 5;
-                icomponentdefinitions_0.anInt1330 = client.myPlayerIndex;
+                icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
                 icomponentdefinitions_0.anInt1339 = Class272.method4840(VertexNormal.MY_PLAYER.displayName, (byte) 15);
                 MovingAnimation class456_sub3_2 = VertexNormal.MY_PLAYER.aAnimation_Sub3_10337;
                 if (class456_sub3_2 != null) {

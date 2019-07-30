@@ -1,23 +1,14 @@
 public class Class150 {
 
 	public static Class150 aClass150_1950 = new Class150(5, 3);
-
 	public static Class150 aClass150_1949 = new Class150(6, 4);
-
 	public static Class150 aClass150_1951 = new Class150(1, 1);
-
 	public static Class150 aClass150_1948 = new Class150(0, 1);
-
 	public static Class150 aClass150_1952 = new Class150(4, 2);
-
 	public static Class150 aClass150_1953 = new Class150(8, 1);
-
 	static Class150 aClass150_1954 = new Class150(3, 3);
-
 	static Class150 aClass150_1955 = new Class150(2, 4);
-
 	public static Class150 aClass150_1956 = new Class150(7, 1);
-
 	public static Class150 aClass150_1957 = new Class150(9, 1);
 
 	public int anInt1958;
