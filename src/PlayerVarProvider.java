@@ -73,7 +73,7 @@ public class PlayerVarProvider implements VarProvider {
 			i_2 = 0;
 		}
 		i_8 <<= i_6;
-		this.method281(i_5, this.anIntArray25[i_5] & ~i_8 | i_2 << i_6 & i_8, (byte) 73);
+		this.setVarp(i_5, this.anIntArray25[i_5] & ~i_8 | i_2 << i_6 & i_8, (byte) 73);
 	}
 
 	public int getVarBit(int i_1) {
@@ -119,7 +119,7 @@ public class PlayerVarProvider implements VarProvider {
 		return this.vars[i_1];
 	}
 
-	void method281(int i_1, int i_2, byte b_3) {
+	void setVarp(int i_1, int i_2, byte b_3) {
 		this.anIntArray25[i_1] = i_2;
 		LongNode class282_sub45_4 = (LongNode) this.aClass465_28.get((long) i_1);
 		if (class282_sub45_4 != null) {

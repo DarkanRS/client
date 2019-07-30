@@ -10,7 +10,7 @@ public abstract class Class504 {
         return i_0 == 4 || i_0 == 15 || i_0 == 1;
     }
 
-    public static final int getTerrainHeightAtPos(int i_0, int i_1, int i_2, byte b_3) {
+    public static final int getTerrainHeightAtPos(int i_0, int i_1, int i_2) {
         if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() == null) {
             return 0;
         } else {

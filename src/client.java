@@ -948,7 +948,7 @@ public final class client extends Engine {
 				continue;
 			}
 
-			((Entity) obj_4).method11172(vector3_6.x, (float) Class504.getTerrainHeightAtPos((int) vector3_6.x, (int) vector3_6.z, ((Entity) obj_4).plane, (byte) 71), vector3_6.z);
+			((Entity) obj_4).method11172(vector3_6.x, (float) Class504.getTerrainHeightAtPos((int) vector3_6.x, (int) vector3_6.z, ((Entity) obj_4).plane), vector3_6.z);
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397((Transform_Sub1_Sub1) obj_4, true, -622341859);
 		}
 
@@ -1592,7 +1592,7 @@ public final class client extends Engine {
 			}
 
 			((Entity) obj_7).aBool10318 = false;
-			((Entity) obj_7).method11172(vector3_9.x, (float) Class504.getTerrainHeightAtPos((int) vector3_9.x, (int) vector3_9.z, ((Entity) obj_7).plane, (byte) 48), vector3_9.z);
+			((Entity) obj_7).method11172(vector3_9.x, (float) Class504.getTerrainHeightAtPos((int) vector3_9.x, (int) vector3_9.z, ((Entity) obj_7).plane), vector3_9.z);
 			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397((Transform_Sub1_Sub1) obj_7, true, -1200990157);
 		}
 

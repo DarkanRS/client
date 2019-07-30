@@ -46,22 +46,22 @@ public class Animation {
 	}
 
 	public final void update(int i_1) {
-		this.method7571(i_1, 0, 0, false, -629553578);
+		this.animateFull(i_1, 0, 0, false, -629553578);
 	}
 
 	public final void method7569() {
-		this.method7571(-1, 0, 0, false, -731012703);
+		this.animateFull(-1, 0, 0, false, -731012703);
 	}
 
 	public final void animate(int animationId) {
 		this.animate(animationId, 0, 0, false, true, (byte) 104);
 	}
 
-	public final void method7571(int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
-		this.animate(i_1, i_2, i_3, bool_4, false, (byte) 62);
+	public final void animateFull(int animationId, int speed, int i_3, boolean bool_4, int i_5) {
+		this.animate(animationId, speed, i_3, bool_4, false, (byte) 62);
 	}
 
-	final void animate(int animationId, int i_2, int i_3, boolean bool_4, boolean bool_5, byte b_6) {
+	final void animate(int animationId, int speed, int i_3, boolean bool_4, boolean bool_5, byte b_6) {
 		if (animationId != this.method7597()) {
 			if (animationId == -1) {
 				this.defs = null;
@@ -74,7 +74,7 @@ public class Animation {
 					this.defs = NamedFileReference.ANIMATION_INDEX_LOADER.getAnimDefs(animationId, (byte) 11);
 				}
 				this.anInt5459 = 0;
-				this.speed = i_2;
+				this.speed = speed;
 				this.anInt5461 = i_3;
 				this.aBool5456 = bool_5;
 				if (bool_4) {
@@ -190,7 +190,7 @@ public class Animation {
 	}
 
 	public final void method7615(int i_1, int i_2) {
-		this.method7571(i_1, i_2, 0, false, 1549105687);
+		this.animateFull(i_1, i_2, 0, false, 1549105687);
 	}
 
 	public final boolean method7627(int i_1, int i_2) {

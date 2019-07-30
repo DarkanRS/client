@@ -13,8 +13,8 @@ public enum TilestreamPacket {
     MIDI_SONG_LOCATION(8),
     TILE_MESSAGE(-1),
     OBJ_ANIM(6),
-    aClass364_4217(9),
-    aClass364_4218(8);
+    SOUND_AREA(9),
+    SPOT_ANIM(8);
 	
 	public int id;
 

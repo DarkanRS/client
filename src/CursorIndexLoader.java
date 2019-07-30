@@ -137,7 +137,7 @@ public class CursorIndexLoader {
 			}
 		}
 		Projectile projectile = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, endTime + client.cycles, angleY, angleXZ, source, lockOn, endHeight, useFloorHeight, basOffIdx);
-		projectile.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE, (byte) 65) - endHeight, delay + client.cycles);
+		projectile.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, delay + client.cycles);
 		client.PROJECTILES.append(new ProjectileNode(projectile));
 	}
 }

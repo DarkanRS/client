@@ -323,60 +323,59 @@ public class PacketDecoder {
 			PulseEvent.method13786(i_6, 3, flags, key, (byte) -84);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.SPOTANIM) {
-			int key = buffer.readUnsignedByteC();
-			int flags = buffer.readUnsignedShort128();
-			if (flags == 65535) {
-				flags = -1;
+		} else if (context.currentPacket == IncomingPacket.SPOT_ANIM_SPECIFIC) {
+			int idk = buffer.readUnsignedByteC();
+			int spotAnimId = buffer.readUnsignedShort128();
+			if (spotAnimId == 65535) {
+				spotAnimId = -1;
 			}
-			int i_6 = buffer.readUnsignedByteC();
-			int i_7 = buffer.readUnsignedShort128();
-			int i_8 = buffer.readIntLE();
-			int i_9 = buffer.readShortLE();
-			int i_10 = i_6 & 0x7;
-			int i_11 = i_6 >> 3 & 0xf;
-			if (i_11 == 15) {
-				i_11 = -1;
+			int settings = buffer.readUnsignedByteC();
+			int speed = buffer.readUnsignedShort128();
+			int targetHash = buffer.readIntLE();
+			int height = buffer.readShortLE();
+			int rotation = settings & 0x7;
+			int setting1 = settings >> 3 & 0xf;
+			if (setting1 == 15) {
+				setting1 = -1;
 			}
-			boolean bool_78 = (i_6 >> 7 & 0x1) == 1;
-			int i_83;
-			if (i_8 >> 30 != 0) {
+			boolean setting2 = (settings >> 7 & 0x1) == 1;
+			if (targetHash >> 30 != 0) {
 				CoordGrid coordgrid_33 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-				int i_77 = i_8 >> 28 & 0x3;
-				int i_15 = (i_8 >> 14 & 0x3fff) - coordgrid_33.x;
-				int i_81 = (i_8 & 0x3fff) - coordgrid_33.y;
-				if (i_15 >= 0 && i_81 >= 0 && i_15 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_81 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-					if (flags == -1) {
-						CacheableNode_Sub10 class282_sub50_sub10_80 = (CacheableNode_Sub10) client.aClass465_7334.get((long) (i_15 << 16 | i_81));
+				int fromPlane = targetHash >> 28 & 0x3;
+				int x = (targetHash >> 14 & 0x3fff) - coordgrid_33.x;
+				int y = (targetHash & 0x3fff) - coordgrid_33.y;
+				if (x >= 0 && y >= 0 && x < IndexLoaders.MAP_REGION_DECODER.getSizeX() && y < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+					if (spotAnimId == -1) {
+						CacheableNode_Sub10 class282_sub50_sub10_80 = (CacheableNode_Sub10) client.aClass465_7334.get((long) (x << 16 | y));
 						if (class282_sub50_sub10_80 != null) {
 							class282_sub50_sub10_80.aTransform_Sub1_Sub1_Sub4_9636.method15931(-2031553804);
 							class282_sub50_sub10_80.remove();
 						}
 					} else {
-						int i_34 = i_15 * 512 + 256;
-						int i_82 = i_81 * 512 + 256;
-						i_83 = i_77;
-						if (i_77 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_15, i_81, 1765906120)) {
-							i_83 = i_77 + 1;
+						int tileX = x * 512 + 256;
+						int tileY = y * 512 + 256;
+						int toPlane = fromPlane;
+						if (fromPlane < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(x, y, 1765906120)) {
+							toPlane = fromPlane + 1;
 						}
-						Transform_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_20 = new Transform_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), flags, i_7, i_77, i_83, i_34, Class504.getTerrainHeightAtPos(i_34, i_82, i_77, (byte) 74) - i_9, i_82, i_15, i_15, i_81, i_81, i_10, bool_78);
-						client.aClass465_7334.put(new CacheableNode_Sub10(class521_sub1_sub1_sub4_20), (long) (i_15 << 16 | i_81));
+						SpotAnim spotAnim = new SpotAnim(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, speed, fromPlane, toPlane, tileX, Class504.getTerrainHeightAtPos(tileX, tileY, fromPlane) - height, tileY, x, x, y, y, rotation, setting2);
+						client.aClass465_7334.put(new CacheableNode_Sub10(spotAnim), (long) (x << 16 | y));
 					}
 				}
-			} else if (i_8 >> 29 != 0) {
-				int i_35 = i_8 & 0xffff;
+			} else if (targetHash >> 29 != 0) {
+				int i_35 = targetHash & 0xffff;
 				StringNode class282_sub47_116 = (StringNode) client.NPCS.get((long) i_35);
 				if (class282_sub47_116 != null) {
 					NPC npc_120 = (NPC) class282_sub47_116.anObject8068;
-					Class161 class161_104 = npc_120.aClass161Array10339[key];
-					if (flags == 65535) {
-						flags = -1;
+					Class161 class161_104 = npc_120.aClass161Array10339[idk];
+					if (spotAnimId == 65535) {
+						spotAnimId = -1;
 					}
 					boolean bool_115 = true;
 					int i_82 = class161_104.spotAnimId;
-					if (flags != -1 && i_82 != -1) {
-						if (flags == i_82) {
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -4);
+					if (spotAnimId != -1 && i_82 != -1) {
+						if (spotAnimId == i_82) {
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -4);
 							if (spotanimdefinitions_38.aBool6968 && spotanimdefinitions_38.animationId != -1) {
 								AnimationDefinitions animationdefinitions_86 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) -4);
 								int i_21 = animationdefinitions_86.replayMode;
@@ -389,7 +388,7 @@ public class PacketDecoder {
 								}
 							}
 						} else {
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) 50);
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) 50);
 							SpotAnimDefinitions spotanimdefinitions_85 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(i_82, (byte) 100);
 							if (spotanimdefinitions_38.animationId != -1 && spotanimdefinitions_85.animationId != -1) {
 								AnimationDefinitions animationdefinitions_123 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) 15);
@@ -401,23 +400,23 @@ public class PacketDecoder {
 						}
 					}
 					if (bool_115) {
-						class161_104.spotAnimId = flags;
-						class161_104.anInt2013 = i_9;
-						class161_104.anInt2011 = i_11;
-						if (flags != -1) {
-							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -65);
+						class161_104.spotAnimId = spotAnimId;
+						class161_104.anInt2013 = height;
+						class161_104.anInt2011 = setting1;
+						if (spotAnimId != -1) {
+							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -65);
 							int i_40 = spotanimdefinitions_38.aBool6968 ? 0 : 2;
-							if (bool_78) {
+							if (setting2) {
 								i_40 = 1;
 							}
-							class161_104.animation.method7571(spotanimdefinitions_38.animationId, i_7, i_40, false, 1725179623);
+							class161_104.animation.animateFull(spotanimdefinitions_38.animationId, speed, i_40, false, 1725179623);
 						} else {
 							class161_104.animation.update(-1);
 						}
 					}
 				}
-			} else if (i_8 >> 28 != 0) {
-				int i_35 = i_8 & 0xffff;
+			} else if (targetHash >> 28 != 0) {
+				int i_35 = targetHash & 0xffff;
 				Player player_117;
 				if (i_35 == client.myPlayerIndex) {
 					player_117 = VertexNormal.MY_PLAYER;
@@ -425,15 +424,15 @@ public class PacketDecoder {
 					player_117 = client.players[i_35];
 				}
 				if (player_117 != null) {
-					Class161 class161_121 = player_117.aClass161Array10339[key];
-					if (flags == 65535) {
-						flags = -1;
+					Class161 class161_121 = player_117.aClass161Array10339[idk];
+					if (spotAnimId == 65535) {
+						spotAnimId = -1;
 					}
 					boolean bool_16 = true;
 					int i_34 = class161_121.spotAnimId;
-					if (flags != -1 && i_34 != -1) {
-						if (i_34 == flags) {
-							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) 39);
+					if (spotAnimId != -1 && i_34 != -1) {
+						if (i_34 == spotAnimId) {
+							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) 39);
 							if (spotanimdefinitions_125.aBool6968 && spotanimdefinitions_125.animationId != -1) {
 								AnimationDefinitions animationdefinitions_124 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) 36);
 								int i_40 = animationdefinitions_124.replayMode;
@@ -446,7 +445,7 @@ public class PacketDecoder {
 								}
 							}
 						} else {
-							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -86);
+							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -86);
 							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(i_34, (byte) -10);
 							if (spotanimdefinitions_125.animationId != -1 && spotanimdefinitions_38.animationId != -1) {
 								AnimationDefinitions animationdefinitions_86 = IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) -12);
@@ -458,17 +457,17 @@ public class PacketDecoder {
 						}
 					}
 					if (bool_16) {
-						class161_121.spotAnimId = flags;
-						class161_121.anInt2013 = i_9;
-						class161_121.anInt2011 = i_11;
-						class161_121.anInt2015 = i_10;
-						if (flags != -1) {
-							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(flags, (byte) -15);
-							i_83 = spotanimdefinitions_125.aBool6968 ? 0 : 2;
-							if (bool_78) {
+						class161_121.spotAnimId = spotAnimId;
+						class161_121.anInt2013 = height;
+						class161_121.anInt2011 = setting1;
+						class161_121.anInt2015 = rotation;
+						if (spotAnimId != -1) {
+							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -15);
+							int i_83 = spotanimdefinitions_125.aBool6968 ? 0 : 2;
+							if (setting2) {
 								i_83 = 1;
 							}
-							class161_121.animation.method7571(spotanimdefinitions_125.animationId, i_7, i_83, false, -948478080);
+							class161_121.animation.animateFull(spotanimdefinitions_125.animationId, speed, i_83, false, -948478080);
 						} else {
 							class161_121.animation.update(-1);
 						}
@@ -1386,7 +1385,7 @@ public class PacketDecoder {
 		} else if (context.currentPacket == IncomingPacket.VARP_1) {
 			byte b_100 = buffer.readByte();
 			int flags = buffer.readUnsignedShortLE128();
-			Class158_Sub1.PLAYER_VAR_PROVIDER.method281(flags, b_100, (byte) 16);
+			Class158_Sub1.PLAYER_VAR_PROVIDER.setVarp(flags, b_100, (byte) 16);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.PLAY_SONG_RELATED) {
@@ -1527,14 +1526,14 @@ public class PacketDecoder {
 			PulseEvent.method3069(flags, key);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.aClass375_4351) {
-			PacketDecoder.decodeTilestreamPacket(TilestreamPacket.aClass364_4218);
+		} else if (context.currentPacket == IncomingPacket.SPOT_ANIM) {
+			PacketDecoder.decodeTilestreamPacket(TilestreamPacket.SPOT_ANIM);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.aClass375_4381) {
+		} else if (context.currentPacket == IncomingPacket.VARP_2) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readUnsignedShortLE128();
-			Class158_Sub1.PLAYER_VAR_PROVIDER.method281(flags, key, (byte) -17);
+			Class158_Sub1.PLAYER_VAR_PROVIDER.setVarp(flags, key, (byte) -17);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.IF_CLOSESUB) {
@@ -1835,7 +1834,7 @@ public class PacketDecoder {
 			PulseEvent.method6751(flags, b_100, 1876892604);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.VARP_2) {
+		} else if (context.currentPacket == IncomingPacket.aClass375_3292) {
 			int key = buffer.readInt();
 			int flags = buffer.readIntV1();
 			Class470.method7825();
@@ -2378,33 +2377,33 @@ public class PacketDecoder {
 			int i_3 = buffer.readInt();
 			int i_21 = buffer.readUnsignedByte();
 			IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_3).method7987(i_21, -588474817);
-		} else if (TilestreamPacket.aClass364_4218 == packet) {
+		} else if (TilestreamPacket.SPOT_ANIM == packet) {
 			int i_3 = buffer.readUnsignedByte();
-			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
-			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
-			int i_6 = buffer.readUnsignedShort();
-			if (i_6 == 65535) {
-				i_6 = -1;
+			int x = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
+			int y = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
+			int spotAnimId = buffer.readUnsignedShort();
+			if (spotAnimId == 65535) {
+				spotAnimId = -1;
 			}
-			int i_7 = buffer.readUnsignedShort();
-			int i_8 = buffer.readUnsignedShort();
-			int i_9 = buffer.readUnsignedByte();
-			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && i_21 >= 0 && i_5 >= 0 && i_21 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_5 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
-				if (i_6 == -1) {
-					CacheableNode_Sub10 class282_sub50_sub10_22 = (CacheableNode_Sub10) client.aClass465_7334.get((long) (i_21 << 16 | i_5));
+			int height = buffer.readUnsignedShort();
+			int speed = buffer.readUnsignedShort();
+			int rotation = buffer.readUnsignedByte();
+			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153 && x >= 0 && y >= 0 && x < IndexLoaders.MAP_REGION_DECODER.getSizeX() && y < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
+				if (spotAnimId == -1) {
+					CacheableNode_Sub10 class282_sub50_sub10_22 = (CacheableNode_Sub10) client.aClass465_7334.get((long) (x << 16 | y));
 					if (class282_sub50_sub10_22 != null) {
 						class282_sub50_sub10_22.aTransform_Sub1_Sub1_Sub4_9636.method15931(-2141216299);
 						class282_sub50_sub10_22.remove();
 					}
 				} else {
-					int i_10 = i_21 * 512 + 256;
-					int i_11 = i_5 * 512 + 256;
-					int i_23 = Class272.UPDATE_ZONE_PLANE;
-					if (i_23 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_21, i_5, 1736872012)) {
-						++i_23;
+					int tileX = x * 512 + 256;
+					int tileY = y * 512 + 256;
+					int toPlane = Class272.UPDATE_ZONE_PLANE;
+					if (toPlane < 3 && IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(x, y, 1736872012)) {
+						++toPlane;
 					}
-					Transform_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_35 = new Transform_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), i_6, i_8, Class272.UPDATE_ZONE_PLANE, i_23, i_10, Class504.getTerrainHeightAtPos(i_10, i_11, Class272.UPDATE_ZONE_PLANE, (byte) 59) - i_7, i_11, i_21, i_21, i_5, i_5, i_9, false);
-					client.aClass465_7334.put(new CacheableNode_Sub10(class521_sub1_sub1_sub4_35), (long) (i_21 << 16 | i_5));
+					SpotAnim spotAnim = new SpotAnim(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, speed, Class272.UPDATE_ZONE_PLANE, toPlane, tileX, Class504.getTerrainHeightAtPos(tileX, tileY, Class272.UPDATE_ZONE_PLANE) - height, tileY, x, x, y, y, rotation, false);
+					client.aClass465_7334.put(new CacheableNode_Sub10(spotAnim), (long) (x << 16 | y));
 				}
 			}
 		} else if (TilestreamPacket.MAP_PROJANIM == packet) {
@@ -2434,7 +2433,7 @@ public class PacketDecoder {
 				endHeight <<= 2;
 				angle2 <<= 2;
 				Projectile class521_sub1_sub1_sub3_17 = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, delayPlusSpeed + client.cycles, angle, angle2, 0, lockOn, endHeight, useFloorHeight, -1);
-				class521_sub1_sub1_sub3_17.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE, (byte) 20) - endHeight, delay + client.cycles);
+				class521_sub1_sub1_sub3_17.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, delay + client.cycles);
 				client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_17));
 			}
 		} else if (TilestreamPacket.MIDI_SONG_LOCATION == packet) {
@@ -2562,7 +2561,7 @@ public class PacketDecoder {
 			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153) {
 				ParticleProducerDefinition.method1161(Class272.UPDATE_ZONE_PLANE, i_21, i_5, i_7, i_6, i_8, string_27, (short) 17078);
 			}
-		} else if (TilestreamPacket.aClass364_4217 == packet) { //sound related again
+		} else if (TilestreamPacket.SOUND_AREA == packet) { //sound related again
 			int flags = buffer.readUnsignedByte();
 			int localX = (flags >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int localY = (flags & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;

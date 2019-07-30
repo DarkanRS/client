@@ -140,7 +140,7 @@ public class Class123 {
 		if (i_5 == -1) {
 			this.aAnimation_1545.method7569();
 		} else {
-			this.aAnimation_1545.method7571(i_5, 0, i_3, bool_6, -1486563257);
+			this.aAnimation_1545.animateFull(i_5, 0, i_3, bool_6, -1486563257);
 			this.anInt1548 = client.cycles;
 			this.aBool1552 = false;
 			this.aMeshRasterizer_1544 = null;

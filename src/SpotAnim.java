@@ -1,19 +1,19 @@
-public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
+public class SpotAnim extends Transform_Sub1_Sub1 {
 
 	boolean aBool10405 = true;
 	int anInt10407 = 0;
-	int anInt10408 = 0;
-	int anInt10406;
-	Animation aAnimation_10404;
+	int rotation = 0;
+	int spotAnimId;
+	Animation animation;
 	ParticleSystem aClass539_10409;
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.anInt10408 * -2052644023 != 0 ? 5 : 0), this.anInt10406 * -1615535539 * 346760837, (short) 27510);
+		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.rotation * -2052644023 != 0 ? 5 : 0), this.spotAnimId * -1615535539 * 346760837, (short) 27510);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
-			if (this.anInt10408 * -2052644023 * 868957945 != 0) {
-				meshrasterizer_2.f(1509410816 * this.anInt10408 * -2052644023);
+			if (this.rotation * -2052644023 * 868957945 != 0) {
+				meshrasterizer_2.f(1509410816 * this.rotation * -2052644023);
 			}
 
 			Matrix44Var matrix44var_3 = this.method11168();
@@ -45,18 +45,18 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 	}
 
 	public final void method15926() {
-		if (this.aAnimation_10404 != null && !this.aAnimation_10404.method7580(1671019519)) {
-			this.aAnimation_10404.method7627(1, 360110199);
+		if (this.animation != null && !this.animation.method7580(1671019519)) {
+			this.animation.method7627(1, 360110199);
 		}
 
 	}
 
 	public final boolean method15927() {
-		return this.aAnimation_10404 != null && !this.aAnimation_10404.hasSpeed(-432924037);
+		return this.animation != null && !this.animation.hasSpeed(-432924037);
 	}
 
 	public final boolean method15928() {
-		return this.aAnimation_10404 == null || this.aAnimation_10404.method7580(283387313);
+		return this.animation == null || this.animation.method7580(283387313);
 	}
 
 	MeshRasterizer method15929(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, short s_4) {
@@ -64,16 +64,16 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 		Ground class390_6 = this.aClass206_7970.aGroundArray2607[this.plane];
 		Ground class390_7 = this.collisionPlane < 3 ? this.aClass206_7970.aGroundArray2607[this.collisionPlane + 1] : null;
 		Vector3 vector3_8 = this.method11166().coords;
-		return this.aAnimation_10404 != null && !this.aAnimation_10404.method7580(1923086864) ? spotanimdefinitions_5.rasterize(graphicalrenderer_1, i_2, true, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, this.aAnimation_10404, (byte) 2, -2029487974) : spotanimdefinitions_5.rasterize(graphicalrenderer_1, i_2, true, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, (Animation) null, (byte) 2, -379915283);
+		return this.animation != null && !this.animation.method7580(1923086864) ? spotanimdefinitions_5.rasterize(graphicalrenderer_1, i_2, true, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, this.animation, (byte) 2, -2029487974) : spotanimdefinitions_5.rasterize(graphicalrenderer_1, i_2, true, class390_6, class390_7, (int) vector3_8.x, (int) vector3_8.y, (int) vector3_8.z, (Animation) null, (byte) 2, -379915283);
 	}
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.anInt10408 * -2052644023 != 0 ? 5 : 0), this.anInt10406 * -1615535539 * 346760837, (short) -6159);
+		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.rotation * -2052644023 != 0 ? 5 : 0), this.spotAnimId * -1615535539 * 346760837, (short) -6159);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
-			if (this.anInt10408 * -2052644023 * 868957945 != 0) {
-				meshrasterizer_2.f(1509410816 * this.anInt10408 * -2052644023);
+			if (this.rotation * -2052644023 * 868957945 != 0) {
+				meshrasterizer_2.f(1509410816 * this.rotation * -2052644023);
 			}
 
 			Matrix44Var matrix44var_3 = this.method11168();
@@ -91,21 +91,21 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 			return class285_4;
 		}
 	}
-
-	public Transform_Sub1_Sub1_Sub4(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, boolean bool_14) {
-		super(sceneobjectmanager_1, i_4, i_5, i_6, i_7, i_8, i_9, i_10, i_11, i_12, false, (byte) 0);
-		this.anInt10406 = i_2;
-		this.anInt10408 = i_13;
-		SpotAnimDefinitions spotanimdefinitions_15 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.anInt10406, (byte) -53);
-		int i_16 = spotanimdefinitions_15.animationId;
-		if (i_16 != -1) {
-			this.aAnimation_10404 = new Animation_Sub2(this);
+	
+	public SpotAnim(SceneObjectManager objManager, int spotAnimId, int speed, int fromPlane, int toPlane, int localX, int height, int localY, int x1, int x2, int y1, int y2, int rotation, boolean setting2) {
+		super(objManager, fromPlane, toPlane, localX, height, localY, x1, x2, y1, y2, false, (byte) 0);
+		this.spotAnimId = spotAnimId;
+		this.rotation = rotation;
+		SpotAnimDefinitions spotanimdefinitions_15 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.spotAnimId, (byte) -53);
+		int animId = spotanimdefinitions_15.animationId;
+		if (animId != -1) {
+			this.animation = new Animation_Sub2(this);
 			int i_17 = spotanimdefinitions_15.aBool6968 ? 0 : 2;
-			if (bool_14) {
+			if (setting2) {
 				i_17 = 1;
 			}
 
-			this.aAnimation_10404.method7571(i_16, i_3, i_17, false, -782305807);
+			this.animation.animateFull(animId, speed, i_17, false, -782305807);
 		}
 
 		this.method13008(1, (byte) -42);
@@ -178,12 +178,12 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 	}
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.anInt10408 * -2052644023 != 0 ? 5 : 0), this.anInt10406 * -1615535539 * 346760837, (short) 25265);
+		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0x800 | (868957945 * this.rotation * -2052644023 != 0 ? 5 : 0), this.spotAnimId * -1615535539 * 346760837, (short) 25265);
 		if (meshrasterizer_2 == null) {
 			return null;
 		} else {
-			if (this.anInt10408 * -2052644023 * 868957945 != 0) {
-				meshrasterizer_2.f(1509410816 * this.anInt10408 * -2052644023);
+			if (this.rotation * -2052644023 * 868957945 != 0) {
+				meshrasterizer_2.f(1509410816 * this.rotation * -2052644023);
 			}
 
 			Matrix44Var matrix44var_3 = this.method11168();
@@ -203,12 +203,12 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 	}
 
 	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_3 = this.method15929(graphicalrenderer_1, 0x800 | (this.anInt10408 != 0 ? 5 : 0), this.anInt10406, (short) -28146);
+		MeshRasterizer meshrasterizer_3 = this.method15929(graphicalrenderer_1, 0x800 | (this.rotation != 0 ? 5 : 0), this.spotAnimId, (short) -28146);
 		if (meshrasterizer_3 == null) {
 			return null;
 		} else {
-			if (this.anInt10408 != 0) {
-				meshrasterizer_3.f(this.anInt10408 * 2048);
+			if (this.rotation != 0) {
+				meshrasterizer_3.f(this.rotation * 2048);
 			}
 
 			Matrix44Var matrix44var_4 = this.method11168();
@@ -228,7 +228,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 	}
 
 	void method13012(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0, 346760837 * this.anInt10406 * -1615535539, (short) -3054);
+		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0, 346760837 * this.spotAnimId * -1615535539, (short) -3054);
 		if (meshrasterizer_2 != null) {
 			this.method15930(graphicalrenderer_1, meshrasterizer_2, this.method11168(), (byte) 100);
 		}
@@ -236,7 +236,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 	}
 
 	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		MeshRasterizer meshrasterizer_3 = this.method15929(graphicalrenderer_1, 0, this.anInt10406, (short) 4697);
+		MeshRasterizer meshrasterizer_3 = this.method15929(graphicalrenderer_1, 0, this.spotAnimId, (short) 4697);
 		if (meshrasterizer_3 != null) {
 			this.method15930(graphicalrenderer_1, meshrasterizer_3, this.method11168(), (byte) 25);
 		}
@@ -280,7 +280,7 @@ public class Transform_Sub1_Sub1_Sub4 extends Transform_Sub1_Sub1 {
 	}
 
 	void method13023(GraphicalRenderer graphicalrenderer_1) {
-		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0, 346760837 * this.anInt10406 * -1615535539, (short) 19834);
+		MeshRasterizer meshrasterizer_2 = this.method15929(graphicalrenderer_1, 0, 346760837 * this.spotAnimId * -1615535539, (short) 19834);
 		if (meshrasterizer_2 != null) {
 			this.method15930(graphicalrenderer_1, meshrasterizer_2, this.method11168(), (byte) 68);
 		}

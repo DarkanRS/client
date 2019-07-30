@@ -359,7 +359,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 		class161_8.anInt2011 = i_4;
 		class161_8.anInt2013 = i_2 >> 16;
 		class161_8.anInt2015 = i_3;
-		class161_8.animation.method7571(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
+		class161_8.animation.animateFull(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
 	}
 
 	public final void method15801() {

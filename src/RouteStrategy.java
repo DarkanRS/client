@@ -16,7 +16,7 @@ public abstract class RouteStrategy {
 		if (bool_5 && Class115.anInt1249 >= 100) {
 			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
 			Class246.anInt3029 = Node_Sub44.anInt8064 * 512 + 256;
-			Class109_Sub1.anInt9384 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35, (byte) 10) - SpotAnimDefinitions.anInt6985;
+			Class109_Sub1.anInt9384 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35) - SpotAnimDefinitions.anInt6985;
 		}
 		NativeLibraryLoader.anInt3240 = 5;
 		Class86.anInt833 = -1;

@@ -55,7 +55,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 
 			if (obj_2 != null) {
 				Vector3 vector3_3 = ((Entity) obj_2).method11166().coords;
-				this.method11172(vector3_3.x, (float) (Class504.getTerrainHeightAtPos((int) vector3_3.x, (int) vector3_3.z, this.plane, (byte) 26) - this.startHeight), vector3_3.z);
+				this.method11172(vector3_3.x, (float) (Class504.getTerrainHeightAtPos((int) vector3_3.x, (int) vector3_3.z, this.plane) - this.startHeight), vector3_3.z);
 				if (this.anInt10391 >= 0) {
 					BASDefinitions renderanimdefs_15 = ((Entity) obj_2).getRenderAnimDefs();
 					int i_5 = 0;
@@ -110,7 +110,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 			}
 
 			if (this.useFloorHeight) {
-				position.y = (float) (Class504.getTerrainHeightAtPos((int) position.x, (int) position.z, this.plane, (byte) 116) - this.startHeight);
+				position.y = (float) (Class504.getTerrainHeightAtPos((int) position.x, (int) position.z, this.plane) - this.startHeight);
 			}
 
 			this.method11171(position);
@@ -289,7 +289,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 	}
 
 	public Projectile(SceneObjectManager objManager, int spotAnimId, int fromPlane, int toPlane, int localX, int localY, int startHeight, int startTime, int endTime, int angleY, int angleXZ, int entitySource, int entityLockOn, int endHeight, boolean flag0x80, int i_16) {
-		super(objManager, fromPlane, toPlane, localX, Class504.getTerrainHeightAtPos(localX, localY, fromPlane, (byte) 25) - startHeight, localY, localX >> 9, localX >> 9, localY >> 9, localY >> 9, false, (byte) 0);
+		super(objManager, fromPlane, toPlane, localX, Class504.getTerrainHeightAtPos(localX, localY, fromPlane) - startHeight, localY, localX >> 9, localX >> 9, localY >> 9, localY >> 9, false, (byte) 0);
 		this.spotAnimId = spotAnimId;
 		this.startTime = startTime;
 		this.endTime = endTime;
@@ -352,7 +352,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 		class305_3.coords.x = (float) ((double) class305_3.coords.x + this.aDouble10394 * (double) i_1);
 		class305_3.coords.z = (float) ((double) class305_3.coords.z + this.aDouble10395 * (double) i_1);
 		if (this.useFloorHeight) {
-			class305_3.coords.y = (float) (Class504.getTerrainHeightAtPos((int) class305_3.coords.x, (int) class305_3.coords.z, this.plane, (byte) 18) - this.startHeight);
+			class305_3.coords.y = (float) (Class504.getTerrainHeightAtPos((int) class305_3.coords.x, (int) class305_3.coords.z, this.plane) - this.startHeight);
 		} else if (this.angleY != -1) {
 			class305_3.coords.y = (float) ((double) class305_3.coords.y + this.aDouble10397 * (double) i_1 + (double) i_1 * (double) i_1 * 0.5D * this.aDouble10390);
 			this.aDouble10397 += (double) i_1 * this.aDouble10390;

@@ -10,7 +10,7 @@ public class Class258 {
 		Iterator iterator_1 = client.aClass465_7334.iterator();
 		while (iterator_1.hasNext()) {
 			CacheableNode_Sub10 class282_sub50_sub10_2 = (CacheableNode_Sub10) iterator_1.next();
-			Transform_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_3 = class282_sub50_sub10_2.aTransform_Sub1_Sub1_Sub4_9636;
+			SpotAnim class521_sub1_sub1_sub4_3 = class282_sub50_sub10_2.aTransform_Sub1_Sub1_Sub4_9636;
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager() != null && class521_sub1_sub1_sub4_3.method15927()) {
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3397(class521_sub1_sub1_sub4_3, true, 402306072);
 			}

@@ -77,7 +77,7 @@ public class Class281 {
 					if (regionmap_3.is0x2(i_9, i_10, 1872595412)) {
 						++i_8;
 					}
-					this.aLinkedList3377.add(new Transform_Sub1_Sub1_Sub1(sceneobjectmanager_1, this, Class4.anInt35, i_8, i_11, Class504.getTerrainHeightAtPos(i_11, i_12, Class4.anInt35, (byte) 91), i_12));
+					this.aLinkedList3377.add(new Transform_Sub1_Sub1_Sub1(sceneobjectmanager_1, this, Class4.anInt35, i_8, i_11, Class504.getTerrainHeightAtPos(i_11, i_12, Class4.anInt35), i_12));
 				}
 			}
 			coordgrid_5 = coordgrid_7;
