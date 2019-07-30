@@ -221,8 +221,8 @@ public class QuickChatMessage {
 
     static void method6161(boolean bool_0) {
         if (bool_0) {
-            if (client.anInt7349 != -1) {
-                Class337.unloadInterface(client.anInt7349, -650534239);
+            if (client.BASE_WINDOW_ID != -1) {
+                Class337.unloadInterface(client.BASE_WINDOW_ID, -650534239);
             }
             for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 6)) {
                 if (!class282_sub44_2.isLinked()) {
@@ -233,13 +233,13 @@ public class QuickChatMessage {
                 }
                 Class351.closeChildren(class282_sub44_2, true, false, -1457682699);
             }
-            client.anInt7349 = -1;
+            client.BASE_WINDOW_ID = -1;
             client.aClass465_7442 = new IterableNodeMap(8);
             MeshModifier.method7041((byte) -97);
-            client.anInt7349 = QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow;
+            client.BASE_WINDOW_ID = QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow;
             Class516.method8867(false);
             Static.method6378();
-            Class150.method2582(client.anInt7349, (int[]) null, -1429871398);
+            Class150.method2582(client.BASE_WINDOW_ID, (int[]) null, -1429871398);
         }
         Class9.aBool71 = true;
     }

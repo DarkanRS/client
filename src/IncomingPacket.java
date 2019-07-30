@@ -36,7 +36,7 @@ public enum IncomingPacket {
 	PLAYER_INTERFACE(34, 25),
 	ICOMPONENT_SPRITE(35, 8),
 	aClass375_4397(36, 5), //redraw interface with boolean?
-	WINDOW_PANE_PACKET(37, 19),
+	IF_OPENTOP(37, 19), //windowId
 	INTERFACE(38, 23),
 	CAMERA_POSITION(39, 6),
 	aClass375_4399(40, 4), //map region x and y static variables?

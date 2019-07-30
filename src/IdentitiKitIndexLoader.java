@@ -106,8 +106,8 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		if (!bool_3) {
 			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);
 		}
-		if (!bool_3 && client.anInt7349 != -1) {
-			Class383.method6514(client.anInt7349, 1, 815212600);
+		if (!bool_3 && client.BASE_WINDOW_ID != -1) {
+			Class383.method6514(client.BASE_WINDOW_ID, 1, 815212600);
 		}
 		return class282_sub44_1;
 	}

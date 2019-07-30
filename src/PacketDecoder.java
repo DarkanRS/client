@@ -175,22 +175,22 @@ public class PacketDecoder {
 			SunDefinitions.setComponentText(flags, string_63);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.WINDOW_PANE_PACKET) {
+		} else if (context.currentPacket == IncomingPacket.IF_OPENTOP) {
 			int key = buffer.readIntV1();
 			int flags = buffer.readIntV1();
-			int i_6 = buffer.readUnsignedShort128();
-			int i_7 = buffer.readUnsigned128Byte();
+			int windowId = buffer.readUnsignedShort128();
+			int type = buffer.readUnsigned128Byte();
 			int i_8 = buffer.readInt();
 			int i_9 = buffer.readInt();
 			Class470.method7825();
-			if (i_7 == 2) {
+			if (type == 2) {
 				ParamIndexLoader.method7081((byte) 18);
 			}
-			int[] ints_93 = new int[] { i_9, i_8, key, flags };
-			client.anInt7349 = i_6;
-			ClipMap.method6007(i_6, ints_93, -1517468503);
+			int[] xteas = new int[] { i_9, i_8, key, flags };
+			client.BASE_WINDOW_ID = windowId;
+			ClipMap.method6007(windowId, xteas, -1517468503);
 			Class516.method8867(false);
-			Class150.method2582(client.anInt7349, ints_93, -1390726584);
+			Class150.method2582(client.BASE_WINDOW_ID, xteas, -1390726584);
 			for (int i_11 = 0; i_11 < 107; i_11++) {
 				client.aBoolArray7443[i_11] = true;
 			}
@@ -1401,8 +1401,8 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.aClass375_4497) {
-			if (client.anInt7349 != -1) {
-				Class383.method6514(client.anInt7349, 0, 1952807696);
+			if (client.BASE_WINDOW_ID != -1) {
+				Class383.method6514(client.BASE_WINDOW_ID, 0, 1952807696);
 			}
 			context.currentPacket = null;
 			return true;
@@ -2085,8 +2085,8 @@ public class PacketDecoder {
 				Class109.redrawComponent(iCompDefs);
 				HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[iCompDefs.idHash >>> 16], iCompDefs, true, -460404316);
 			}
-			if (client.anInt7349 != -1) {
-				Class383.method6514(client.anInt7349, 1, 1200373841);
+			if (client.BASE_WINDOW_ID != -1) {
+				Class383.method6514(client.BASE_WINDOW_ID, 1, 1200373841);
 			}
 			context.currentPacket = null;
 			return true;

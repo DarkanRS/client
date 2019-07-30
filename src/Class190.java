@@ -161,8 +161,8 @@ public class Class190 {
 			}
 		}
 
-		if (client.anInt7349 != -1) {
-			Class337.unloadInterface(client.anInt7349, 1308673999);
+		if (client.BASE_WINDOW_ID != -1) {
+			Class337.unloadInterface(client.BASE_WINDOW_ID, 1308673999);
 		}
 
 		for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(774217336); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 87)) {
@@ -176,7 +176,7 @@ public class Class190 {
 			Class351.closeChildren(class282_sub44_2, true, false, -1492337711);
 		}
 
-		client.anInt7349 = -1;
+		client.BASE_WINDOW_ID = -1;
 		client.aClass465_7442 = new IterableNodeMap(8);
 		MeshModifier.method7041((byte) -126);
 		client.aClass118_7352 = null;

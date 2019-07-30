@@ -78,7 +78,7 @@ public enum ServerEnvironment implements Identifiable {
     }
 
     static final void method8315(int i_0) {
-        if (client.anInt7349 != -1) {
+        if (client.BASE_WINDOW_ID != -1) {
             int i_1 = Class163.mouseRecorder.getMouseX();
             int i_2 = Class163.mouseRecorder.getMouseY();
             MouseRecord class282_sub53_3 = (MouseRecord) client.mouseRecords.head();
@@ -93,7 +93,7 @@ public enum ServerEnvironment implements Identifiable {
                 client.anInt7367 = Class349.anInt4083;
                 client.anInt7476 = client.anInt3243 * -969250379;
             }
-            LightIntensityIndexLoader.method7313((Node_Sub44) null, client.anInt7349, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
+            LightIntensityIndexLoader.method7313((Node_Sub44) null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
             if (Node_Sub20_Sub24.aClass118_9884 != null) {
                 BillboardDefinitions.method6170(i_1, i_2);
             }

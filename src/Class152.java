@@ -114,8 +114,8 @@ public abstract class Class152 {
 			}
 		}
 		CutsceneAction_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) client.cycles);
-		if (client.anInt7349 != -1) {
-			CS2Interface.method8777(client.anInt7349, (byte) -80);
+		if (client.BASE_WINDOW_ID != -1) {
+			CS2Interface.method8777(client.BASE_WINDOW_ID, (byte) -80);
 		}
 		int i_2;
 		for (i_2 = 0; i_2 < client.anInt7407; i_2++) {
@@ -124,7 +124,7 @@ public abstract class Class152 {
 		}
 		client.anInt7408 = client.cycles;
 		Class380.method6451(-1, -1, 926012216);
-		if (client.anInt7349 != -1) {
+		if (client.BASE_WINDOW_ID != -1) {
 			client.anInt7407 = 0;
 			StructIndexLoader.method7039((byte) 58);
 		}

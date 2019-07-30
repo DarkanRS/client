@@ -6360,7 +6360,7 @@ public class CS2Interpreter {
 
 	static final void method927(CS2Executor executor) {
 		int i_2 = client.aClass465_7442.method7748((short) 622);
-		if (client.anInt7349 != -1) {
+		if (client.BASE_WINDOW_ID != -1) {
 			++i_2;
 		}
 		executor.intStack[++executor.intStackPtr - 1] = i_2;
@@ -8894,9 +8894,9 @@ public class CS2Interpreter {
 
 	static final void method11613(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		if (client.anInt7349 != -1) {
+		if (client.BASE_WINDOW_ID != -1) {
 			if (i_2 == 0) {
-				executor.intStack[++executor.intStackPtr - 1] = client.anInt7349;
+				executor.intStack[++executor.intStackPtr - 1] = client.BASE_WINDOW_ID;
 				return;
 			}
 			--i_2;

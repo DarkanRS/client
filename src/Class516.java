@@ -28,7 +28,7 @@ public class Class516 {
 	}
 
 	static final void method8867(boolean bool_0) {
-		Class442.method7403(client.anInt7349, Class349.anInt4083, client.anInt3243 * -969250379, bool_0, 2111552471);
+		Class442.method7403(client.BASE_WINDOW_ID, Class349.anInt4083, client.anInt3243 * -969250379, bool_0, 2111552471);
 	}
 
 	static void method8868(String string_0) {

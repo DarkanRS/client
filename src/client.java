@@ -209,7 +209,7 @@ public final class client extends Engine {
 	static int anInt7346;
 	public static String aString7275;
 	public static String aString7356;
-	public static volatile int anInt7349;
+	public static volatile int BASE_WINDOW_ID;
 	public static IterableNodeMap aClass465_7442;
 	static int anInt7351;
 	public static IComponentDefinitions aClass118_7352;
@@ -445,7 +445,7 @@ public final class client extends Engine {
 		anInt7346 = -1;
 		aString7275 = null;
 		aString7356 = null;
-		anInt7349 = -1;
+		BASE_WINDOW_ID = -1;
 		aClass465_7442 = new IterableNodeMap(8);
 		anInt7351 = 0;
 		aClass118_7352 = null;
@@ -1052,7 +1052,7 @@ public final class client extends Engine {
 				StringNode.method13409(Renderers.SOFTWARE_RENDERER);
 			}
 
-			if (!Class504.loadingState(gameState, (byte) -54) && !Class464.method7742(gameState, (byte) 17) && anInt7349 != -1) {
+			if (!Class504.loadingState(gameState, (byte) -54) && !Class464.method7742(gameState, (byte) 17) && BASE_WINDOW_ID != -1) {
 				try {
 					Renderers.SOFTWARE_RENDERER.method8393((short) 30084);
 				} catch (Exception_Sub3 exception_sub3_12) {
@@ -1077,7 +1077,7 @@ public final class client extends Engine {
 				Class378.method6438();
 			}
 
-			if (Class393.preferences.safeMode.getValue((byte) 40) == 1 && gameState == 5 && anInt7349 != -1) {
+			if (Class393.preferences.safeMode.getValue((byte) 40) == 1 && gameState == 5 && BASE_WINDOW_ID != -1) {
 				Class393.preferences.setValue(Class393.preferences.safeMode, 0);
 				Class190.savePreferences((byte) 36);
 			}

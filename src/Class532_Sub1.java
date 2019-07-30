@@ -59,7 +59,7 @@ public class Class532_Sub1 extends Class532 {
 						Class351.gameCanvas.setLocation(client.GAME_CANVAS_X, client.GAME_CANVAS_Y);
 					}
 					GameTipsLoader.method6795(-366853248);
-					if (client.anInt7349 != -1) {
+					if (client.BASE_WINDOW_ID != -1) {
 						Class516.method8867(true);
 					}
 					EntityNode.method4891((byte) -40);

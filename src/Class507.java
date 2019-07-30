@@ -75,7 +75,7 @@ public class Class507 {
 				client.resizeableScreen = false;
 			}
 			GameTipsLoader.method6795(2030703690);
-			if (client.anInt7349 != -1) {
+			if (client.BASE_WINDOW_ID != -1) {
 				Class516.method8867(true);
 			}
 			if (client.GAME_CONNECTION_CONTEXT.getConnection() != null && TextureDetails.method2875(client.gameState, -2070106492)) {

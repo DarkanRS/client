@@ -47,11 +47,11 @@ public class Class365 implements Interface3 {
 			}
 
 			if (state == 5) {
-				Class348.method6175(client.gameState == 3 || client.gameState == 8 || client.anInt7349 != QuickchatFiller.ENTITY_DEFAULTS.loginWindow, 618699905);
+				Class348.method6175(client.gameState == 3 || client.gameState == 8 || client.BASE_WINDOW_ID != QuickchatFiller.ENTITY_DEFAULTS.loginWindow, 618699905);
 			}
 
 			if (state == 0) {
-				QuickChatMessage.method6161(client.anInt7349 != QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow);
+				QuickChatMessage.method6161(client.BASE_WINDOW_ID != QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow);
 			}
 
 			if (state != 14 && state != 12) {
