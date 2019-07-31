@@ -236,7 +236,7 @@ public class Huffman {
 				Node_Sub15_Sub2 class282_sub15_sub2_4 = Node_Sub20_Sub10.method15262(Class260.aNode_Sub15_Sub2_3231, 1475290596);
 				Class42_Sub1.method14563(class282_sub15_sub2_4, (short) 569);
 			}
-			Class11.method13400(IndexLoaders.INDEX_11, i_0, i_2, (byte) -50);
+			Class11.method13400(IndexLoaders.MUSIC2_INDEX, i_0, i_2, (byte) -50);
 			Class150.method2580(-1, 255, (byte) -39);
 			Class260.aBool3220 = true;
 		}

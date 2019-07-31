@@ -15,10 +15,10 @@ public class IndexLoaders {
 	public static Index MESH_INDEX;
 	public static Index TEXTURE_INDEX;
 	public static Index HUFFMAN_INDEX;
-	public static Index INDEX_11;
+	public static Index MUSIC2_INDEX;
 	public static Index CS2_SCRIPTS_INDEX;
 	public static Index MIDI_INSTRUMENT_INDEX;
-	public static Index INDEX_15;
+	public static Index SOUND_MIDI_INDEX;
 	public static Index OBJECT_INDEX;
 	public static Index ENUM_INDEX;
 	public static Index NPC_INDEX;
@@ -36,7 +36,7 @@ public class IndexLoaders {
 	public static Index CUTSCENE_INDEX;
 	public static Index NATIVE_LIBRARY_INDEX;
 	public static Index SHADER_INDEX;
-	public static Index INDEX_36;
+	public static Index VORBIS_INDEX;
 	public static Index LOADING_FONT_INDEX;
 	public static Index GAME_TIPS_INDEX;
 	public static Index FONT_METRICS_INDEX;
@@ -175,10 +175,10 @@ public class IndexLoaders {
 			MESH_INDEX = loadIndex(IndexReference.INDEX_7, false, 1, false);
 			TEXTURE_INDEX = loadIndex(IndexReference.INDEX_9, false, 1, true);
 			HUFFMAN_INDEX = loadIndex(IndexReference.INDEX_10, false, 1, false);
-			INDEX_11 = loadIndex(IndexReference.INDEX_11, false, 1, false);
+			MUSIC2_INDEX = loadIndex(IndexReference.INDEX_11, false, 1, false);
 			CS2_SCRIPTS_INDEX = loadIndex(IndexReference.INDEX_12, false, 1, true);
 			MIDI_INSTRUMENT_INDEX = loadIndex(IndexReference.INDEX_14, false, 1, false);
-			INDEX_15 = loadIndex(IndexReference.INDEX_15, false, 1, false);
+			SOUND_MIDI_INDEX = loadIndex(IndexReference.INDEX_15, false, 1, false);
 			OBJECT_INDEX = loadIndex(IndexReference.INDEX_16, false, 1, true);
 			ENUM_INDEX = loadIndex(IndexReference.INDEX_17, false, 1, true);
 			NPC_INDEX = loadIndex(IndexReference.INDEX_18, false, 1, true);
@@ -196,7 +196,7 @@ public class IndexLoaders {
 			CUTSCENE_INDEX = loadIndex(IndexReference.INDEX_35, true, 1, false);
 			NATIVE_LIBRARY_INDEX = loadIndex(IndexReference.INDEX_30, true, 1, false);
 			SHADER_INDEX = loadIndex(IndexReference.INDEX_31, true, 1, true);
-			INDEX_36 = loadIndex(IndexReference.INDEX_36, true, 2, false);
+			VORBIS_INDEX = loadIndex(IndexReference.INDEX_36, true, 2, false);
 		}
 
 		if (LOADING_STAGE == LoadingStage.aClass387_4700) {

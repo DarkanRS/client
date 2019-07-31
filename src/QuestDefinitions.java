@@ -286,11 +286,11 @@ public class QuestDefinitions {
         rsbitsbuffer_0.writeInt(IndexLoaders.SPRITES_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.TEXTURE_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.HUFFMAN_INDEX.getCrc());
-        rsbitsbuffer_0.writeInt(IndexLoaders.INDEX_11.getCrc());
+        rsbitsbuffer_0.writeInt(IndexLoaders.MUSIC2_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.CS2_SCRIPTS_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.FONT_METRICS_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.MIDI_INSTRUMENT_INDEX.getCrc());
-        rsbitsbuffer_0.writeInt(IndexLoaders.INDEX_15.getCrc());
+        rsbitsbuffer_0.writeInt(IndexLoaders.SOUND_MIDI_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.OBJECT_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.ENUM_INDEX.getCrc());
         rsbitsbuffer_0.writeInt(IndexLoaders.NPC_INDEX.getCrc());
@@ -310,7 +310,7 @@ public class QuestDefinitions {
         rsbitsbuffer_0.writeInt(Class378.method6435());
         rsbitsbuffer_0.writeInt(Preference_Sub7.method12672());
         rsbitsbuffer_0.writeInt(IndexLoaders.CUTSCENE_INDEX.getCrc());
-        rsbitsbuffer_0.writeInt(IndexLoaders.INDEX_36.getCrc());
+        rsbitsbuffer_0.writeInt(IndexLoaders.VORBIS_INDEX.getCrc());
     }
 
     public static void setConsoleText(String string_0) {

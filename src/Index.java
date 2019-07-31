@@ -8,7 +8,7 @@ public final class Index {
 	Object[][] archiveFiles;
 	JS5FileWorker aClass327_3690;
 	boolean aBool3685;
-	int anInt3683;
+	int loadType;
 
 	public int getCrc() {
 		if (!this.referenceTableLoaded()) {
@@ -316,7 +316,7 @@ public final class Index {
 					int i_17;
 					int i_18;
 					int i_19;
-					if (this.anInt3683 != 2) {
+					if (this.loadType != 2) {
 						i_11 = bytes_27.length;
 						--i_11;
 						i_12 = bytes_27[i_11] & 0xff;
@@ -353,7 +353,7 @@ public final class Index {
 							} else {
 								i_18 = ints_6[i_17];
 							}
-							if (this.anInt3683 == 0) {
+							if (this.loadType == 0) {
 								arr_7[i_18] = JS5Manager.method5493(bytes_24[i_17], (byte) 5);
 							} else {
 								arr_7[i_18] = bytes_24[i_17];
@@ -415,7 +415,7 @@ public final class Index {
 					} else {
 						i_11 = ints_6[0];
 					}
-					if (this.anInt3683 == 0) {
+					if (this.loadType == 0) {
 						arr_7[i_11] = JS5Manager.method5493(bytes_27, (byte) 109);
 					} else {
 						arr_7[i_11] = bytes_27;
@@ -451,12 +451,12 @@ public final class Index {
 					}
 				}
 				if (bytes_4 != null) {
-					if (this.anInt3683 == 1) {
+					if (this.loadType == 1) {
 						this.archiveFiles[i_1][i_2] = null;
 						if (this.referenceTable.fileCounts[i_1] == 1) {
 							this.archiveFiles[i_1] = null;
 						}
-					} else if (this.anInt3683 == 2) {
+					} else if (this.loadType == 2) {
 						this.archiveFiles[i_1] = null;
 					}
 				}
@@ -494,7 +494,7 @@ public final class Index {
 		if (i_3 >= 0 && i_3 <= 2) {
 			this.aClass327_3690 = js5fileworker_1;
 			this.aBool3685 = bool_2;
-			this.anInt3683 = i_3;
+			this.loadType = i_3;
 		} else {
 			throw new IllegalArgumentException("");
 		}

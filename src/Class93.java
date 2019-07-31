@@ -54,7 +54,7 @@ public class Class93 {
 			if (!client.aBool7393) {
 				Class62.method1260(fileId, bool_2, 860609292);
 			} else {
-				Index36FileNode class282_sub37_4 = new Index36FileNode(fileId, new Index36FileReference(IndexLoaders.INDEX_36, fileId), i_1, bool_2);
+				Index36FileNode class282_sub37_4 = new Index36FileNode(fileId, new Index36FileReference(IndexLoaders.VORBIS_INDEX, fileId), i_1, bool_2);
 				class282_sub37_4.reference.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
 				Class492.INDEX36_FILE_CACHE.put(class282_sub37_4, (long) fileId);
 			}
