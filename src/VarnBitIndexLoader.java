@@ -28,7 +28,7 @@ public class VarnBitIndexLoader {
 	public VarnBitIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
 		this.aClass317_5823 = index_3;
 		if (this.aClass317_5823 != null) {
-			this.aClass317_5823.filesCount(SharedConfigsType.SCT_25.id);
+			this.aClass317_5823.filesCount(SharedConfigsType.VARNBIT.id);
 		}
 	}
 
@@ -41,7 +41,7 @@ public class VarnBitIndexLoader {
 		if (class489_3 != null) {
 			return class489_3;
 		} else {
-			byte[] bytes_8 = this.aClass317_5823.getFile(SharedConfigsType.SCT_25.id, i_1);
+			byte[] bytes_8 = this.aClass317_5823.getFile(SharedConfigsType.VARNBIT.id, i_1);
 			class489_3 = new VarnBitDefinitions();
 			if (bytes_8 != null) {
 				class489_3.method8213(new RsByteBuffer(bytes_8));
