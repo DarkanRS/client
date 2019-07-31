@@ -45,7 +45,7 @@ public enum IncomingPacket {
 	PLAYER_UPDATE(43, -2),
 	ICOMPONENT_SPRITE_SCALE(44, 10),
 	VARCLAN_ENABLE(45, 0),
-	aClass375_4502(46, -2), //clan settings
+	CLANSETTINGS_DELTA(46, -2), //clan settings
 	NPC_UPDATE_LARGE(47, -2),
 	ICOMPONENT_POSITION(48, 8),
 	CLAN_CHAT_CHANNEL(49, -2),
@@ -136,7 +136,7 @@ public enum IncomingPacket {
 	aClass375_4453(134, 2), //not a clue
 	ICOMPONENT_MODEL(135, 8),
 	SOUND_SYNTH(136, 8),
-	CLAN_SETTINGS(137, -2),
+	CLANSETTINGS_FULL(137, -2),
 	ADD_IGNORE(138, -1),
 	SPOT_ANIM(139, 8),
 	UPDATE_STAT(140, 6),

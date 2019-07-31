@@ -101,11 +101,11 @@ public class Class185 {
         }
     }
 
-    public static void method3077() {
-        for (int i_1 = 0; i_1 < Class260.anInt3219; i_1++) {
-            AreadSound class268_2 = Class260.aClass268Array3232[i_1];
-            if (class268_2.type == 3) {
-                QuickchatFiller.method1142(class268_2, 1716467770);
+    public static void resetSounds() {
+        for (int i_1 = 0; i_1 < Class260.SOUNDS_SIZE; i_1++) {
+            AreadSound sound = Class260.SOUNDS[i_1];
+            if (sound.type == 3) {
+                QuickchatFiller.method1142(sound, 1716467770);
             }
         }
     }

@@ -1111,7 +1111,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.RESET_SOUNDS) {
-			Class185.method3077();
+			Class185.resetSounds();
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == IncomingPacket.REQUEST_FPS) {
@@ -1335,7 +1335,7 @@ public class PacketDecoder {
 			Class92.method1563(key);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.CLAN_SETTINGS) {
+		} else if (context.currentPacket == IncomingPacket.CLANSETTINGS_FULL) {
 			client.anInt7192 = client.anInt7347;
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			if (context.currentPacketSize == 1) {
@@ -1619,7 +1619,7 @@ public class PacketDecoder {
 			IdentitiKitIndexLoader.method812(i_9, new Node_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == IncomingPacket.aClass375_4502) {
+		} else if (context.currentPacket == IncomingPacket.CLANSETTINGS_DELTA) {
 			client.anInt7192 = client.anInt7347;
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			Class348 class348_97 = new Class348(buffer);

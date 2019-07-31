@@ -95,7 +95,7 @@ public class SoftwareItemRender implements Interface18 {
 	}
 
 	public static void method7034(AnimationDefinitions defs, int i_1) {
-		if (Class260.anInt3219 < 50 && defs != null && defs.anIntArrayArray5913 != null && i_1 < defs.anIntArrayArray5913.length && defs.anIntArrayArray5913[i_1] != null) {
+		if (Class260.SOUNDS_SIZE < 50 && defs != null && defs.anIntArrayArray5913 != null && i_1 < defs.anIntArrayArray5913.length && defs.anIntArrayArray5913[i_1] != null) {
 			int i_3 = defs.anIntArrayArray5913[i_1][0];
 			int i_4 = i_3 >> 8;
 			int i_5 = i_3 >> 5 & 0x7;

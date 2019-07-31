@@ -109,8 +109,8 @@ public class RSInterface {
 
 	public static final void method1623() {
 		Class216.method3675();
-		for (int i_1 = 0; i_1 < Class260.anInt3219; i_1++) {
-			AreadSound sound = Class260.aClass268Array3232[i_1];
+		for (int i_1 = 0; i_1 < Class260.SOUNDS_SIZE; i_1++) {
+			AreadSound sound = Class260.SOUNDS[i_1];
 			boolean bool_3 = false;
 			int i_4;
 			if (sound.aNode_Sub15_Sub5_3304 == null) {
@@ -202,9 +202,9 @@ public class RSInterface {
 				bool_3 = true;
 			}
 			if (bool_3) {
-				--Class260.anInt3219;
-				for (i_4 = i_1; i_4 < Class260.anInt3219; i_4++) {
-					Class260.aClass268Array3232[i_4] = Class260.aClass268Array3232[i_4 + 1];
+				--Class260.SOUNDS_SIZE;
+				for (i_4 = i_1; i_4 < Class260.SOUNDS_SIZE; i_4++) {
+					Class260.SOUNDS[i_4] = Class260.SOUNDS[i_4 + 1];
 				}
 				--i_1;
 			}

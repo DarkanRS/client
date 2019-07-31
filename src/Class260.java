@@ -10,9 +10,9 @@ public class Class260 {
 
 	public static int anInt3228 = -1;
 
-	static int anInt3219 = 0;
+	static int SOUNDS_SIZE = 0;
 
-	static AreadSound[] aClass268Array3232 = new AreadSound[50];
+	static AreadSound[] SOUNDS = new AreadSound[50];
 
 	static Class277 aClass277_3221 = null;
 

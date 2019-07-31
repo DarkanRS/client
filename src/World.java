@@ -4,7 +4,7 @@ public class World {
 	public int countryId;
 
 	public static void method3662(AnimationDefinitions animDef, int i_1, Transform_Sub1 class521_sub1_2) {
-		if (Class260.anInt3219 < 50 && animDef != null && animDef.anIntArrayArray5913 != null && i_1 < animDef.anIntArrayArray5913.length && animDef.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == VertexNormal.MY_PLAYER.plane) {
+		if (Class260.SOUNDS_SIZE < 50 && animDef != null && animDef.anIntArrayArray5913 != null && i_1 < animDef.anIntArrayArray5913.length && animDef.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == VertexNormal.MY_PLAYER.plane) {
 			int i_4 = animDef.anIntArrayArray5913[i_1][0];
 			int i_5 = i_4 >> 8;
 			int i_6 = i_4 >> 5 & 0x7;
@@ -44,7 +44,7 @@ public class World {
 				int i_11 = (int) vector3_10.x - 256 >> 9;
 				int i_12 = (int) vector3_10.z - 256 >> 9;
 				int i_13 = class521_sub1_2 == VertexNormal.MY_PLAYER ? 0 : i_7 + (i_12 << 8) + (class521_sub1_2.plane << 24) + (i_11 << 16);
-				Class260.aClass268Array3232[++Class260.anInt3219 - 1] = new AreadSound((byte) (animDef.aBool5928 ? 2 : 1), i_5, i_6, 0, i_9, i_13, i_8, class521_sub1_2);
+				Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = new AreadSound((byte) (animDef.aBool5928 ? 2 : 1), i_5, i_6, 0, i_9, i_13, i_8, class521_sub1_2);
 			}
 		}
 

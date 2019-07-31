@@ -114,8 +114,8 @@ public class Class16 {
 	}
 
 	public static void method566(int i_0) {
-		Class260.aClass268Array3232 = new AreadSound[50];
-		Class260.anInt3219 = 0;
+		Class260.SOUNDS = new AreadSound[50];
+		Class260.SOUNDS_SIZE = 0;
 	}
 
 	public static final void addIgnore(String string_0, boolean bool_1, byte b_2) {

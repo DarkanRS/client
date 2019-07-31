@@ -1567,8 +1567,8 @@ public class CS2Interpreter {
 		case instr6465:
 			method471(exec);
 			break;
-		case instr6147:
-			method14639(exec);
+		case CLAN_VARS_ENABLED:
+			clanVarsEnabled(exec);
 			break;
 		case instr6316:
 			method6231(exec);
@@ -10555,7 +10555,7 @@ public class CS2Interpreter {
 		--executor.intStackPtr;
 	}
 
-	static final void method14639(CS2Executor executor) {
+	static final void clanVarsEnabled(CS2Executor executor) {
 		executor.intStack[++executor.intStackPtr - 1] = Class46.CLAN_VARS != null ? 1 : 0;
 	}
 

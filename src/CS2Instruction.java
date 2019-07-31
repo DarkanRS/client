@@ -521,7 +521,7 @@ public enum CS2Instruction {
 	instr5984(350),
 	instr6464(897),
 	instr6465(5),
-	instr6147(559),
+	CLAN_VARS_ENABLED(559),
 	instr6316(414),
 	instr6468(602),
 	instr6469(575),
