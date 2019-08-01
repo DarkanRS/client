@@ -125,7 +125,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == ServerPacket.MAP_PROJANIM_HALFSQ) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.MAP_PROJANIM_HALFSQ);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.MAP_PROJANIM_HALFSQ);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CLAN_CHAT_CHANNEL) {
@@ -238,7 +238,7 @@ public class PacketDecoder {
 			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
 			Static.UPDATE_ZONE_X = buffer.readByte() << 3;
 			while (buffer.index < context.currentPacketSize) {
-				UpdateZonePackets tilestreampacket_68 = UpdateZonePackets.values()[buffer.readUnsignedByte()];
+				UpdateZonePacket tilestreampacket_68 = UpdateZonePacket.values()[buffer.readUnsignedByte()];
 				PacketDecoder.decodeTilestreamPacket(tilestreampacket_68);
 			}
 			context.currentPacket = null;
@@ -522,7 +522,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.OBJECT_PREFETCH) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.OBJECT_PREFETCH);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.OBJECT_PREFETCH);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.OPEN_URL) {
@@ -872,7 +872,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.TILE_MESSAGE) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.TILE_MESSAGE);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.TILE_MESSAGE);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.PLAYER_WEIGHT) {
@@ -1125,7 +1125,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.OBJ_ANIM) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.OBJ_ANIM);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.OBJ_ANIM);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.VARCLAN_SET_BYTE) {
@@ -1139,7 +1139,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.GROUND_ITEM_REVEAL) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.GROUND_ITEM_REVEAL);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.GROUND_ITEM_REVEAL);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.UPDATE_INV_STOP_TRANSMIT) {
@@ -1160,7 +1160,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.MIDI_SONG_LOCATION) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.MIDI_SONG_LOCATION);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.MIDI_SONG_LOCATION);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.UPDATE_ZONE_PARTIAL_FOLLOWS) {
@@ -1516,7 +1516,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == ServerPacket.REMOVE_GROUND_ITEM) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.REMOVE_GROUND_ITEM);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.REMOVE_GROUND_ITEM);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IF_SETANIM) {
@@ -1527,7 +1527,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.SPOT_ANIM) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.SPOT_ANIM);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.SPOT_ANIM);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.VARP_LARGE) {
@@ -1716,7 +1716,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.GROUND_ITEM_COUNT) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.GROUND_ITEM_COUNT);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.GROUND_ITEM_COUNT);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IF_SETPLAYERMODEL) {
@@ -1739,7 +1739,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CREATE_OBJECT) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.CREATE_OBJECT);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.CREATE_OBJECT);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.SEND_PRIVATE_MESSAGE) {
@@ -1749,7 +1749,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CREATE_GROUND_ITEM) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.CREATE_GROUND_ITEM);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.CREATE_GROUND_ITEM);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.aClass375_4452) {
@@ -1865,7 +1865,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CUSTOMIZE_OBJECT) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.CUSTOMIZE_OBJECT);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.CUSTOMIZE_OBJECT);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.PLAYER_UPDATE) {
@@ -1943,7 +1943,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.MAP_PROJANIM) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.MAP_PROJANIM);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.MAP_PROJANIM);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.UPDATE_SITESETTINGS_COOKIE) {
@@ -2112,7 +2112,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return false;
 		} else if (context.currentPacket == ServerPacket.DESTROY_OBJECT) {
-			PacketDecoder.decodeTilestreamPacket(UpdateZonePackets.DESTROY_OBJECT);
+			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.DESTROY_OBJECT);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.aClass375_4429) {
@@ -2345,9 +2345,9 @@ public class PacketDecoder {
 		}
 	}
 
-	static final void decodeTilestreamPacket(UpdateZonePackets packet) {
+	static final void decodeTilestreamPacket(UpdateZonePacket packet) {
 		RsBitsBuffer buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
-		if (UpdateZonePackets.GROUND_ITEM_COUNT == packet) {
+		if (UpdateZonePacket.GROUND_ITEM_COUNT == packet) {
 			int i_3 = buffer.readUnsignedByte();
 			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
@@ -2373,11 +2373,11 @@ public class PacketDecoder {
 					}
 				}
 			}
-		} else if (UpdateZonePackets.OBJECT_PREFETCH == packet) {
+		} else if (UpdateZonePacket.OBJECT_PREFETCH == packet) {
 			int i_3 = buffer.readInt();
 			int i_21 = buffer.readUnsignedByte();
 			IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_3).method7987(i_21, -588474817);
-		} else if (UpdateZonePackets.SPOT_ANIM == packet) {
+		} else if (UpdateZonePacket.SPOT_ANIM == packet) {
 			int i_3 = buffer.readUnsignedByte();
 			int x = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int y = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
@@ -2406,7 +2406,7 @@ public class PacketDecoder {
 					client.aClass465_7334.put(new CacheableNode_Sub10(spotAnim), (long) (x << 16 | y));
 				}
 			}
-		} else if (UpdateZonePackets.MAP_PROJANIM == packet) {
+		} else if (UpdateZonePacket.MAP_PROJANIM == packet) {
 			int flags = buffer.readUnsignedByte();
 			boolean useFloorHeight = (flags & 0x80) != 0;
 			int localX = (flags >> 3 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2436,7 +2436,7 @@ public class PacketDecoder {
 				class521_sub1_sub1_sub3_17.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, delay + client.cycles);
 				client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_17));
 			}
-		} else if (UpdateZonePackets.MIDI_SONG_LOCATION == packet) {
+		} else if (UpdateZonePacket.MIDI_SONG_LOCATION == packet) {
 			int i_3 = buffer.readUnsignedByte();
 			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
@@ -2456,7 +2456,7 @@ public class PacketDecoder {
 					Class383.method6509(i_6, i_9, i_10, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (i_5 << 8) + (i_21 << 16), i_23);
 				}
 			}
-		} else if (UpdateZonePackets.DESTROY_OBJECT == packet) {
+		} else if (UpdateZonePacket.DESTROY_OBJECT == packet) {
 			int i_3 = buffer.readUnsignedByte128();
 			int i_21 = i_3 >> 2;
 			int i_5 = i_3 & 0x3;
@@ -2467,7 +2467,7 @@ public class PacketDecoder {
 			if (IndexLoaders.MAP_REGION_DECODER.method4419().method4401() || i_8 >= 0 && i_9 >= 0 && i_8 < IndexLoaders.MAP_REGION_DECODER.getSizeX() && i_9 < IndexLoaders.MAP_REGION_DECODER.getSizeY()) {
 				Class299.method5313(Class272.UPDATE_ZONE_PLANE, i_8, i_9, i_6, -1, i_21, i_5);
 			}
-		} else if (UpdateZonePackets.REMOVE_GROUND_ITEM == packet) {
+		} else if (UpdateZonePacket.REMOVE_GROUND_ITEM == packet) {
 			int i_3 = buffer.readUnsignedByteC();
 			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
@@ -2490,7 +2490,7 @@ public class PacketDecoder {
 					Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, i_7, i_5);
 				}
 			}
-		} else if (UpdateZonePackets.CUSTOMIZE_OBJECT == packet) {
+		} else if (UpdateZonePacket.CUSTOMIZE_OBJECT == packet) {
 			int i_3 = buffer.readInt();
 			ObjectDefinitions objectdefinitions_32 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(i_3);
 			int i_5 = buffer.readUnsignedByte128();
@@ -2549,7 +2549,7 @@ public class PacketDecoder {
 				VarnBitDefinitions.method8217(Class272.UPDATE_ZONE_PLANE, i_10, i_11, i_7, i_3, i_6, new Class476(Node_Sub31.aLong7777, ints_28, shorts_29, shorts_37), (byte) 79);
 				++Node_Sub31.aLong7777;
 			}
-		} else if (UpdateZonePackets.TILE_MESSAGE == packet) {
+		} else if (UpdateZonePacket.TILE_MESSAGE == packet) {
 			buffer.readUnsignedByte();
 			int i_3 = buffer.readUnsignedByte();
 			int i_21 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2561,7 +2561,7 @@ public class PacketDecoder {
 			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153) {
 				ParticleProducerDefinition.method1161(Class272.UPDATE_ZONE_PLANE, i_21, i_5, i_7, i_6, i_8, string_27, (short) 17078);
 			}
-		} else if (UpdateZonePackets.SOUND_AREA == packet) { //sound related again
+		} else if (UpdateZonePacket.SOUND_AREA == packet) { //sound related again
 			int flags = buffer.readUnsignedByte();
 			int localX = (flags >> 4 & 0x7) + Static.UPDATE_ZONE_X;
 			int localY = (flags & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
@@ -2582,7 +2582,7 @@ public class PacketDecoder {
 					Class256.method4414(soundId, i_9, i_10, i_11, i_8 + (Class272.UPDATE_ZONE_PLANE << 24) + (localY << 8) + (localX << 16), soundType, i_23);
 				}
 			}
-		} else if (UpdateZonePackets.OBJ_ANIM == packet) {
+		} else if (UpdateZonePacket.OBJ_ANIM == packet) {
 			int i_3 = buffer.readUnsigned128Byte();
 			int type = i_3 >> 2;
 			int rotation = i_3 & 0x3;
@@ -2594,7 +2594,7 @@ public class PacketDecoder {
 			if (IndexLoaders.MAP_REGION_DECODER.method4419() != Class256.aClass256_3153) {
 				Class9.animateObject(Class272.UPDATE_ZONE_PLANE, x, y, slot, type, rotation, animationId);
 			}
-		} else if (UpdateZonePackets.GROUND_ITEM_REVEAL == packet) {
+		} else if (UpdateZonePacket.GROUND_ITEM_REVEAL == packet) {
 			int playerId = buffer.readUnsignedShort();
 			int i_21 = buffer.readUnsignedByte();
 			CoordGrid coordgrid_25 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
@@ -2613,7 +2613,7 @@ public class PacketDecoder {
 					}
 				}
 			}
-		} else if (UpdateZonePackets.CREATE_GROUND_ITEM == packet) {
+		} else if (UpdateZonePacket.CREATE_GROUND_ITEM == packet) {
 			int amount = buffer.readUnsignedShortLE128();
 			int id = buffer.readUnsignedShort128();
 			int i_5 = buffer.readUnsignedByteC();
@@ -2629,7 +2629,7 @@ public class PacketDecoder {
 					Class434_Sub1.method12760(Class272.UPDATE_ZONE_PLANE, localX, localY);
 				}
 			}
-		} else if (UpdateZonePackets.MAP_PROJANIM_HALFSQ == packet) {
+		} else if (UpdateZonePacket.MAP_PROJANIM_HALFSQ == packet) {
 			int localCoordsHash = buffer.readUnsignedByte();
 			int localX = (localCoordsHash >> 4 & 0xf) + Static.UPDATE_ZONE_X * 2;
 			int localY = Class158_Sub1_Sub2.UPDATE_ZONE_Y * 2 + (localCoordsHash & 0xf);
@@ -2666,7 +2666,7 @@ public class PacketDecoder {
 				angle2 <<= 2;
 				CursorIndexLoader.createProjectile(spotAnimId, source, lockOn, basOffIdx, startHeight, endHeight, localX, localY, xOff, yOff, delay, endTime, angle, angle2, useFloorHeight);
 			}
-		} else if (UpdateZonePackets.CREATE_OBJECT == packet) {
+		} else if (UpdateZonePacket.CREATE_OBJECT == packet) {
 			int i_3 = buffer.readInt();
 			int i_21 = buffer.readUnsigned128Byte();
 			int i_5 = (i_21 >> 4 & 0x7) + Static.UPDATE_ZONE_X;

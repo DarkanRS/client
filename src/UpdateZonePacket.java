@@ -1,4 +1,4 @@
-public enum UpdateZonePackets {
+public enum UpdateZonePacket {
 
     CUSTOMIZE_OBJECT(-1),
     REMOVE_GROUND_ITEM(3),
@@ -18,7 +18,7 @@ public enum UpdateZonePackets {
 	
 	public int id;
 
-    UpdateZonePackets(int i_1) {
+    UpdateZonePacket(int i_1) {
     	this.id = i_1;
     }
 
