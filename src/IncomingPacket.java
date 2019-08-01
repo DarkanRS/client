@@ -19,7 +19,7 @@ public enum IncomingPacket {
 	aClass375_4368(17, 3), //vorbis preload sound probably
 	VORBIS_SOUND(18, 8),
 	UPDATE_FRIENDCHAT_CHANNEL_SINGLEUSER(19, -1),
-	aClass375_4402(20, 6), //text color for interfaces?
+	aClass375_4402(20, 6), //gets a string from some linkedlist populated from index 36 vorbis??..
 	SHOW_FACE_HERE(21, 1),
 	SEND_PRIVATE_QUICKCHAT(22, -1),
 	IF_OPENSUB_ACTIVE_OBJECT(23, 32),

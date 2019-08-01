@@ -268,14 +268,14 @@ public class CS2Interpreter {
 		case instr6032:
 			method5099(exec);
 			break;
-		case instr6033:
-			method6291(exec);
+		case CC_SETTEXT:
+			setCCText(exec);
 			break;
-		case instr6034:
-			method13412(exec);
+		case CC_SETTEXTFONT:
+			setCCFont(exec);
 			break;
-		case instr6817:
-			method6271(exec);
+		case CC_SETTEXTALIGN:
+			setCCTextAlign(exec);
 			break;
 		case instr6036:
 			method12659(exec);
@@ -700,11 +700,11 @@ public class CS2Interpreter {
 		case IF_SETTEXT:
 			setCompText(exec);
 			break;
-		case instr6177:
-			method3232(exec);
+		case IF_SETTEXTFONT:
+			setIfFont(exec);
 			break;
-		case instr6178:
-			method4205(exec);
+		case IF_SETTEXTALIGN:
+			setIfTextAlign(exec);
 			break;
 		case instr6170:
 			method8018(exec);
@@ -3574,11 +3574,11 @@ public class CS2Interpreter {
 		method14892(icomponentdefinitions_3, interface_4, executor, (byte) 79);
 	}
 
-	static final void method13412(CS2Executor executor) {
+	static final void setCCFont(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method14700(icomponentdefinitions_3, interface_4, executor, 1949391932);
+		setIfFont(icomponentdefinitions_3, interface_4, executor, 1949391932);
 	}
 
 	static final void method8263(CS2Executor executor) {
@@ -3747,7 +3747,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method6291(CS2Executor executor) {
+	static final void setCCText(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
@@ -5618,11 +5618,11 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method4205(CS2Executor executor) {
+	static final void setIfTextAlign(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = CustomCursorsPreference.INTERFACES[i_2 >> 16];
-		method2168(icomponentdefinitions_3, interface_4, executor, -1301648510);
+		setIfTextAlign(icomponentdefinitions_3, interface_4, executor, -1301648510);
 	}
 
 	static final void getAppletFocus(CS2Executor executor) {
@@ -6250,11 +6250,11 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = Class475.anInt5624 + Class291.anInt3473;
 	}
 
-	static final void method6271(CS2Executor executor) {
+	static final void setCCTextAlign(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method2168(icomponentdefinitions_3, interface_4, executor, 539000010);
+		setIfTextAlign(icomponentdefinitions_3, interface_4, executor, 539000010);
 	}
 
 	static final void method6272(CS2Executor executor) {
@@ -7259,11 +7259,11 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).multiStackSize;
 	}
 
-	static final void method3232(CS2Executor executor) {
+	static final void setIfFont(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = CustomCursorsPreference.INTERFACES[i_2 >> 16];
-		method14700(icomponentdefinitions_3, interface_4, executor, -442383470);
+		setIfFont(icomponentdefinitions_3, interface_4, executor, -442383470);
 	}
 
 	static final void method3233(CS2Executor executor) {
@@ -11321,7 +11321,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
-	static final void method2168(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void setIfTextAlign(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 3;
 		icomponentdefinitions_0.anInt1359 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1360 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
@@ -11364,7 +11364,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
-	static final void method14700(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void setIfFont(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.fontRelated = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
