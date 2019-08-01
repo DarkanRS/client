@@ -63,7 +63,7 @@ public class Preference_Sub21 extends Preference {
 			Class276.aNode_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(2119033925);
-			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.CUTSCENE_FINISHED, client.GAME_CONNECTION_CONTEXT.isaac);
+			TCPPacket tcpmessage_5 = Class271.createPacket(ClientPacket.CUTSCENE_FINISHED, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_5.buffer.writeByte(bool_0 ? 1 : 0);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_5);
 		}

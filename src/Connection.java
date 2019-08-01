@@ -113,7 +113,7 @@ public abstract class Connection {
     public static final void method3345(String string_0) {
         if (!string_0.equals("")) {
             BufferedConnectionContext class184_2 = Preference_Sub20.method12807(-1721172592);
-            TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.FC_JOIN, class184_2.isaac);
+            TCPPacket tcpmessage_3 = Class271.createPacket(ClientPacket.FC_JOIN, class184_2.isaac);
             tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
             tcpmessage_3.buffer.writeString(string_0);
             class184_2.queuePacket(tcpmessage_3);

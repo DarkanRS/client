@@ -2,11 +2,11 @@ import java.io.IOException;
 
 public class BufferedConnectionContext {
 
-	IncomingPacket lastPacket;
+	ServerPacket lastPacket;
 	public IsaacCipher isaac;
-	IncomingPacket thirdLastPacket;
+	ServerPacket thirdLastPacket;
 	IsaacCipher aClass432_2295;
-	IncomingPacket secondLastPacket;
+	ServerPacket secondLastPacket;
 	static int anInt2300;
 	int anInt2297;
 	public int anInt2290 = 0;
@@ -15,7 +15,7 @@ public class BufferedConnectionContext {
 	NodeCollection queuedPackets = new NodeCollection();
 	RsByteBuffer writeBuffer = new RsByteBuffer(1600);
 	RsBitsBuffer recievedBuffer = new RsBitsBuffer(15000);
-	IncomingPacket currentPacket = null;
+	ServerPacket currentPacket = null;
 	int currentPacketSize = 0;
 	boolean aBool2288 = true;
 	int idleReadPulses = 0;

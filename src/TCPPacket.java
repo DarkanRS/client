@@ -2,7 +2,7 @@ public class TCPPacket extends Node {
 
 	int anInt7678;
 	public int anInt7680;
-	OutgoingPacket packet;
+	ClientPacket packet;
 	public RsBitsBuffer buffer;
 	static TCPPacket[] OUTGOING_PACKETS = new TCPPacket[300];
 	static int index = 0;

@@ -664,7 +664,7 @@ public final class RouteFinder {
 					Class341.method6074(arr_12, 1579654554);
 				}
 				if (client.gameState == 13) {
-					TCPPacket tcpmessage_21 = Class271.createPacket(OutgoingPacket.COMMAND, client.GAME_CONNECTION_CONTEXT.isaac);
+					TCPPacket tcpmessage_21 = Class271.createPacket(ClientPacket.COMMAND, client.GAME_CONNECTION_CONTEXT.isaac);
 					tcpmessage_21.buffer.writeByte(string_0.length() + 3);
 					tcpmessage_21.buffer.writeByte(bool_1 ? 1 : 0);
 					tcpmessage_21.buffer.writeByte(bool_2 ? 1 : 0);

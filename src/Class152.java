@@ -186,7 +186,7 @@ public abstract class Class152 {
 						ChatLine.appendGameMessage(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE));
 					} else {
 						BufferedConnectionContext class184_7 = Preference_Sub20.method12807(1188178835);
-						TCPPacket tcpmessage_9 = Class271.createPacket(OutgoingPacket.ADD_FRIEND, class184_7.isaac);
+						TCPPacket tcpmessage_9 = Class271.createPacket(ClientPacket.ADD_FRIEND, class184_7.isaac);
 						tcpmessage_9.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_9.buffer.writeString(string_0);
 						class184_7.queuePacket(tcpmessage_9);

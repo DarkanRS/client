@@ -32,7 +32,7 @@ public class Class119 {
 
 	public static void method2074(String string_0, String string_1, int i_2, boolean bool_3) {
 		if (client.gameState == 3) {
-			TCPPacket tcpmessage_5 = Class271.createPacket(OutgoingPacket.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
+			TCPPacket tcpmessage_5 = Class271.createPacket(ClientPacket.SEND_SIGN_UP_FORM, client.LOBBY_CONNECTION_CONTEXT.isaac);
 			tcpmessage_5.buffer.writeShort(0);
 			int i_6 = tcpmessage_5.buffer.index;
 			tcpmessage_5.buffer.writeString(string_0);
@@ -61,19 +61,19 @@ public class Class119 {
 		for (int i_6 = 0; i_6 < i_3; i_6++) {
 			Player player_7 = client.players[ints_4[i_6]];
 			if (player_7 != null && player_7 != VertexNormal.MY_PLAYER && player_7.displayName != null && player_7.displayName.equalsIgnoreCase(string_1)) {
-				OutgoingPacket outgoingpacket_8 = null;
+				ClientPacket outgoingpacket_8 = null;
 				if (i_0 == 1) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OP1;
+					outgoingpacket_8 = ClientPacket.PLAYER_OP1;
 				} else if (i_0 == 4) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OP4;
+					outgoingpacket_8 = ClientPacket.PLAYER_OP4;
 				} else if (i_0 == 5) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OP5;
+					outgoingpacket_8 = ClientPacket.PLAYER_OP5;
 				} else if (i_0 == 6) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OP6;
+					outgoingpacket_8 = ClientPacket.PLAYER_OP6;
 				} else if (i_0 == 7) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OP7;
+					outgoingpacket_8 = ClientPacket.PLAYER_OP7;
 				} else if (i_0 == 9) {
-					outgoingpacket_8 = OutgoingPacket.PLAYER_OP9;
+					outgoingpacket_8 = ClientPacket.PLAYER_OP9;
 				}
 
 				if (outgoingpacket_8 != null) {
@@ -95,7 +95,7 @@ public class Class119 {
 	}
 
 	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
-		TCPPacket tcpmessage_3 = Class271.createPacket(OutgoingPacket.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
+		TCPPacket tcpmessage_3 = Class271.createPacket(ClientPacket.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
 		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288);
 		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);

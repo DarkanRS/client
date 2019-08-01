@@ -8,7 +8,7 @@ public class Class493 {
 
 	public static void sendCheckEmailPacket(String string_0) {
 		if (client.gameState == 3) {
-			TCPPacket message = Class271.createPacket(OutgoingPacket.CHECK_EMAIL_VALIDITY, client.LOBBY_CONNECTION_CONTEXT.isaac);
+			TCPPacket message = Class271.createPacket(ClientPacket.CHECK_EMAIL_VALIDITY, client.LOBBY_CONNECTION_CONTEXT.isaac);
 			message.buffer.writeShort(0);
 			int start = message.buffer.index;
 			message.buffer.writeString(string_0);

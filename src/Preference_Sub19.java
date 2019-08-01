@@ -54,7 +54,7 @@ public class Preference_Sub19 extends Preference {
 			if (class57_4.rank == -1) {
 				String string_5 = class57_4.name;
 				BufferedConnectionContext class184_6 = Preference_Sub20.method12807(-1321489648);
-				TCPPacket tcpmessage_7 = Class271.createPacket(OutgoingPacket.UNK_90, class184_6.isaac);
+				TCPPacket tcpmessage_7 = Class271.createPacket(ClientPacket.UNK_90, class184_6.isaac);
 				tcpmessage_7.buffer.writeByte(3 + ChatLine.getLength(string_5));
 				tcpmessage_7.buffer.writeByte(bool_0 ? 1 : 0);
 				tcpmessage_7.buffer.writeShort(i_1);

@@ -562,7 +562,7 @@ public class Login {
                             RsBitsBuffer rsbitsbuffer_21 = new RsBitsBuffer(i_3);
                             System.arraycopy(Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.buffer, Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index, rsbitsbuffer_21.buffer, 0, i_3);
                             Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer.index += i_3;
-                            if (IncomingPacket.DYNAMIC_MAP_REGION == Class9.CURRENT_CONNECTION_CONTEXT.currentPacket) {
+                            if (ServerPacket.DYNAMIC_MAP_REGION == Class9.CURRENT_CONNECTION_CONTEXT.currentPacket) {
                                 IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, rsbitsbuffer_21), 356381544);
                             } else {
                                 IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, rsbitsbuffer_21), 1199163537);

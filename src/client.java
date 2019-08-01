@@ -2913,7 +2913,7 @@ public final class client extends Engine {
 												} else if (LOBBY_CONNECTION_CONTEXT != null) {
 													++LOBBY_CONNECTION_CONTEXT.anInt2290;
 													if (LOBBY_CONNECTION_CONTEXT.anInt2290 > 50) {
-														TCPPacket tcpmessage_18 = Class271.createPacket(OutgoingPacket.PING, LOBBY_CONNECTION_CONTEXT.isaac);
+														TCPPacket tcpmessage_18 = Class271.createPacket(ClientPacket.PING, LOBBY_CONNECTION_CONTEXT.isaac);
 														LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_18);
 													}
 

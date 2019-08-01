@@ -70,7 +70,7 @@ public class Class271 {
 		Class109.method1859(index_0, i_1, i_2, i_3, bool_4);
 	}
 
-	public static TCPPacket createPacket(OutgoingPacket outgoingpacket_0, IsaacCipher isaaccipher_1) {
+	public static TCPPacket createPacket(ClientPacket outgoingpacket_0, IsaacCipher isaaccipher_1) {
 		TCPPacket tcpmessage_3 = Class158_Sub2.method14356();
 		tcpmessage_3.packet = outgoingpacket_0;
 		tcpmessage_3.anInt7678 = outgoingpacket_0.size;

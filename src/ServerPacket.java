@@ -1,4 +1,4 @@
-public enum IncomingPacket {
+public enum ServerPacket {
 	IF_SETPLAYERHEAD(0, 4),
 	CREATE_CHECK_EMAIL_REPLY(1, 1), 
 	PROCESS_DEV_CONSOLE_COMMAND(2, -1),
@@ -165,7 +165,7 @@ public enum IncomingPacket {
 	public int opcode;
 	public int size;
 
-	IncomingPacket(int opcode, int size) {
+	ServerPacket(int opcode, int size) {
 		this.opcode = opcode;
 		this.size = size;
 	}

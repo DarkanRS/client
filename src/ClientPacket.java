@@ -1,4 +1,4 @@
-public enum OutgoingPacket {
+public enum ClientPacket {
 	PING(0, 0),
 	PLAYER_OP6(1, 3, true),
 	SOUND_EFFECT_MUSIC_ENDED(2, 4),
@@ -108,13 +108,13 @@ public enum OutgoingPacket {
 	int size;
 	boolean tickProcessed;
 
-	OutgoingPacket(int id, int size, boolean tickProcessed) {
+	ClientPacket(int id, int size, boolean tickProcessed) {
 		this.id = id;
 		this.size = size;
 		this.tickProcessed = tickProcessed;
 	}
 	
-	OutgoingPacket(int id, int size) {
+	ClientPacket(int id, int size) {
 		this(id, size, false);
 	}
 }

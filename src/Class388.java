@@ -44,7 +44,7 @@ public class Class388 implements Interface41 {
     }
 
     static void method6692(int i_0) {
-        TCPPacket tcpmessage_1 = Class271.createPacket(OutgoingPacket.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
+        TCPPacket tcpmessage_1 = Class271.createPacket(ClientPacket.SCREEN_SIZE, client.GAME_CONNECTION_CONTEXT.isaac);
         tcpmessage_1.buffer.writeByte(Class158.windowedMode());
         tcpmessage_1.buffer.writeShort(Class349.anInt4083);
         tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379);
