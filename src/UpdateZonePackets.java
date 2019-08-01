@@ -1,4 +1,4 @@
-public enum TilestreamPacket {
+public enum UpdateZonePackets {
 
     CUSTOMIZE_OBJECT(-1),
     REMOVE_GROUND_ITEM(3),
@@ -18,7 +18,7 @@ public enum TilestreamPacket {
 	
 	public int id;
 
-    TilestreamPacket(int i_1) {
+    UpdateZonePackets(int i_1) {
     	this.id = i_1;
     }
 
