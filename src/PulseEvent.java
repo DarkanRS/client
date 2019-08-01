@@ -220,7 +220,7 @@ public class PulseEvent extends CacheableNode {
 		class282_sub50_sub12_4.secondary = i_2;
 	}
 
-	static void method13786(int i_0, int i_1, int i_2, int i_3, byte b_4) {
+	static void setIFContent(int i_0, int i_1, int i_2, int i_3, byte b_4) {
 		PulseEvent class282_sub50_sub12_5 = PulseEvent.createPulseEvent(4, (long) i_0);
 		class282_sub50_sub12_5.immediate();
 		class282_sub50_sub12_5.primary = i_1;
