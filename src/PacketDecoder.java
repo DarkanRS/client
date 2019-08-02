@@ -31,12 +31,12 @@ public class PacketDecoder {
 				context.idleReadPulses = 0;
 			}
 			context.aBool2288 = true;
-			ServerPacket[] arr_4 = Class60.getIncommingPacket();
 			int opcode = buffer.readEncryptedSmart();
-			if (opcode < 0 || opcode >= arr_4.length) {
+			ServerPacket packet = ServerPacket.forId(opcode);
+			if (packet == null) {
 				throw new IOException(opcode + " " + buffer.index);
 			}
-			context.currentPacket = arr_4[opcode];
+			context.currentPacket = packet;
 			context.currentPacketSize = context.currentPacket.size;
 		}
 		if (context.currentPacketSize == -1) {
@@ -99,7 +99,7 @@ public class PacketDecoder {
 			client.anIntArray7381[++client.anInt7382 - 1 & 0x1f] = key;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.PLAYER_UNDER_NPC_PRIORITY) {
+		} else if (context.currentPacket == ServerPacket.SET_DRAW_ORDER) {
 			int key = buffer.readUnsignedByteC();
 			Class470.method7825();
 			client.anInt7291 = key;
@@ -113,7 +113,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.CAMERA_ROTATION) {
+		} else if (context.currentPacket == ServerPacket.CAM_FORCEANGLE) {
 			int key = buffer.readUnsignedShort128();
 			int flags = buffer.readUnsignedShortLE128();
 			Class470.method7825();
@@ -148,7 +148,7 @@ public class PacketDecoder {
 				context.currentPacket = null;
 				return true;
 			}
-		} else if (context.currentPacket == ServerPacket.GRAND_EXCHANGE_SLOT) {
+		} else if (context.currentPacket == ServerPacket.UPDATE_GE_SLOT) {
 			int key = buffer.readUnsignedByte();
 			if (buffer.readUnsignedByte() == 0) {
 				client.GRAND_EXCHANGE_SLOTS[key] = new GrandExchangeSlot();
@@ -204,7 +204,7 @@ public class PacketDecoder {
 			PulseEvent.setIFContent(interHash, 5, key, i_6, (byte) -76);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RESET_CAMERA) {
+		} else if (context.currentPacket == ServerPacket.CAM_SMOOTHRESET) {
 			Class470.method7825();
 			Class514.method8841(1210401894);
 			context.currentPacket = null;
@@ -250,7 +250,7 @@ public class PacketDecoder {
 			PulseEvent.method2966(flags, key);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECIEVE_PRIVATE_QUICKCHAT) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_PRIVATE_ECHO) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -476,7 +476,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.CAMERA_LOOK) {
+		} else if (context.currentPacket == ServerPacket.CAM_LOOKAT) {
 			int viewX = buffer.readUnsignedByte();
 			int viewY = buffer.readUnsignedShort128() << 2;
 			int viewZ = buffer.readUnsignedByte128();
@@ -547,7 +547,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.CAMERA_SHAKE) {
+		} else if (context.currentPacket == ServerPacket.CAM_SHAKE) {
 			int key = buffer.readUnsigned128Byte();
 			int flags = buffer.readUnsignedShort();
 			int i_6 = buffer.readUnsignedByteC();
@@ -819,7 +819,7 @@ public class PacketDecoder {
 					return true;
 				}
 			}
-		} else if (context.currentPacket == ServerPacket.STOP_CAMERA_SHAKE) {
+		} else if (context.currentPacket == ServerPacket.CAM_RESET) {
 			Class470.method7825();
 			EntityNode_Sub7.method12606((byte) 81);
 			context.currentPacket = null;
@@ -920,7 +920,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.CLAN_QUICK_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_CLANCHANNEL) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			long long_49 = (long) buffer.readUnsignedShort();
@@ -972,7 +972,7 @@ public class PacketDecoder {
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECIEVE_FRIENDS_CHAT_QUICKCHAT) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_FRIENDCHAT) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -1014,7 +1014,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.SEND_PRIVATE_QUICKCHAT) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_PRIVATE) {
 			String string_63 = buffer.readString();
 			int flags = buffer.readUnsignedShort();
 			String str_92 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(flags).fillDynamicValues(buffer);
@@ -1219,7 +1219,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.HINT_ICON) {
+		} else if (context.currentPacket == ServerPacket.HINT_ARROW) {
 			int flags = buffer.readUnsignedByte();
 			int iconIndex = flags >> 5;
 			int targetType = flags & 0x1f;
@@ -1781,7 +1781,7 @@ public class PacketDecoder {
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method268(key, flags, -1140695527);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECIEVE_PRIVATE_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.RECEIVE_PRIVATE_MESSAGE) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -1872,7 +1872,7 @@ public class PacketDecoder {
 			PlayerUpdate.decode(buffer, context.currentPacketSize);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.CAMERA_POSITION) {
+		} else if (context.currentPacket == ServerPacket.CAM_MOVETO) {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readUnsignedByte();
 			int i_6 = buffer.readUnsigned128Byte();
@@ -1882,7 +1882,7 @@ public class PacketDecoder {
 			RouteStrategy.method3794(flags, key, i_7, i_6, i_8, true);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECIEVE_CLAN_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_CLANCHANNEL) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			long long_49 = (long) buffer.readUnsignedShort();
@@ -2174,7 +2174,7 @@ public class PacketDecoder {
 			NPCUpdate.decode(false);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECIEVE_FRIENDS_CHAT_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.RECEIVE_FRIENDS_CHAT_MESSAGE) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;

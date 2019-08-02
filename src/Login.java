@@ -545,7 +545,7 @@ public class Login {
                             Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(rsbitsbuffer_19.buffer, 3, 1);
                         }
                         i_3 = rsbitsbuffer_19.readEncryptedSmart();
-                        Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = Class60.getIncommingPacket()[i_3];
+                        Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = ServerPacket.forId(i_3);
                         Class9.CURRENT_CONNECTION_CONTEXT.currentPacketSize = rsbitsbuffer_19.readUnsignedShort();
                         Class9.loginStage = 156;
                     }
