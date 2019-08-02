@@ -39,8 +39,8 @@ public class Class42_Sub1 extends Class42 {
 		IndexLoaders.MAP_REGION_DECODER.method4485(-617728645);
 
 		int i_1;
-		for (i_1 = 0; i_1 < client.aClass180Array7348.length; i_1++) {
-			client.aClass180Array7348[i_1] = null;
+		for (i_1 = 0; i_1 < client.HINT_ARROWS.length; i_1++) {
+			client.HINT_ARROWS[i_1] = null;
 		}
 
 		for (i_1 = 0; i_1 < client.aClass281Array7180.length; i_1++) {

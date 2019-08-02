@@ -23,9 +23,9 @@ public class Class188 {
 			Class16.aNativeSpriteArray138[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
 		}
 		arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt135);
-		Class391.aNativeSpriteArray4778 = new NativeSprite[arr_3.length];
+		Class391.HINT_ARROW_SPRITES = new NativeSprite[arr_3.length];
 		for (i_4 = 0; i_4 < arr_3.length; i_4++) {
-			Class391.aNativeSpriteArray4778[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
+			Class391.HINT_ARROW_SPRITES[i_4] = graphicalrenderer_0.method8444(arr_3[i_4], true);
 		}
 		arr_3 = SpriteDefinitions.method1514(index_1, Class16.anInt142);
 		Node_Sub20_Sub15.aNativeSpriteArray9838 = new NativeSprite[arr_3.length];

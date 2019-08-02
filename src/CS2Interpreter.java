@@ -3193,7 +3193,7 @@ public class CS2Interpreter {
 
 	static final void method15512(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		int i_4 = -1;
 		if (chatline_3 != null) {
 			i_4 = chatline_3.type;
@@ -3393,7 +3393,7 @@ public class CS2Interpreter {
 
 	static final void method3783(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		int i_4 = -1;
 		if (chatline_3 != null) {
 			i_4 = chatline_3.quickchatMessageId;
@@ -4542,7 +4542,7 @@ public class CS2Interpreter {
 
 	static final void method894(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		int i_4 = -1;
 		if (chatline_3 != null) {
 			i_4 = chatline_3.time;
@@ -5886,7 +5886,7 @@ public class CS2Interpreter {
 
 	static final void method3803(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		int i_4 = -1;
 		if (chatline_3 != null) {
 			i_4 = chatline_3.anInt1085;
@@ -6231,7 +6231,7 @@ public class CS2Interpreter {
 
 	static final void method565(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		String str_4 = "";
 		if (chatline_3 != null && chatline_3.nameSimple != null) {
 			str_4 = chatline_3.nameSimple;
@@ -6842,7 +6842,7 @@ public class CS2Interpreter {
 
 	static final void method2824(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		String str_4 = "";
 		if (chatline_3 != null && chatline_3.message != null) {
 			str_4 = chatline_3.message;
@@ -7472,7 +7472,7 @@ public class CS2Interpreter {
 
 	static final void method1814(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		int i_4 = 0;
 		if (chatline_3 != null) {
 			i_4 = chatline_3.anInt1086;
@@ -7656,7 +7656,7 @@ public class CS2Interpreter {
 
 	static final void method6733(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		String str_4 = "";
 		if (chatline_3 != null && chatline_3.clan != null) {
 			str_4 = chatline_3.clan;
@@ -7696,7 +7696,7 @@ public class CS2Interpreter {
 
 	static final void method6237(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		String str_4 = "";
 		if (chatline_3 != null && chatline_3.crownedName != null) {
 			str_4 = chatline_3.crownedName;
@@ -9433,7 +9433,7 @@ public class CS2Interpreter {
 
 	static final void method14835(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		ChatLine chatline_3 = Class180.method3032(i_2);
+		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		String str_4 = "";
 		if (chatline_3 != null && chatline_3.name != null) {
 			str_4 = chatline_3.name;

@@ -5,7 +5,7 @@ public class Class18 {
 	}
 
 	static void method571() {
-		Class180.aClass229_2245.method3863();
+		HintArrow.aClass229_2245.method3863();
 	}
 
 	static void renderInformation(GraphicalRenderer graphicalrenderer_0, NodeCollection nodecollection_1) {

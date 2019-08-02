@@ -269,16 +269,16 @@ public class Class250 {
 				}
 				int i_15;
 				int i_10000;
-				Class180[] arr_113;
-				Class180 class180_121;
+				HintArrow[] arr_113;
+				HintArrow class180_121;
 				if (obj_12 instanceof Player) {
 					if (i_10 >= 0) {
 						i_15 = 0;
-						arr_113 = client.aClass180Array7348;
+						arr_113 = client.HINT_ARROWS;
 						for (i_17 = 0; i_17 < arr_113.length; i_17++) {
 							class180_121 = arr_113[i_17];
-							if (class180_121 != null && class180_121.anInt2236 == 10 && class180_121.anInt2238 == ints_8[i_10]) {
-								nativesprite_98 = Class391.aNativeSpriteArray4778[class180_121.anInt2240];
+							if (class180_121 != null && class180_121.targetType == 10 && class180_121.targetIndex == ints_8[i_10]) {
+								nativesprite_98 = Class391.HINT_ARROW_SPRITES[class180_121.arrowSprite];
 								if (nativesprite_98.method2793() > i_15) {
 									i_15 = nativesprite_98.method2793();
 								}
@@ -291,19 +291,19 @@ public class Class250 {
 					}
 				} else {
 					i_15 = 0;
-					arr_113 = client.aClass180Array7348;
+					arr_113 = client.HINT_ARROWS;
 					for (i_17 = 0; i_17 < arr_113.length; i_17++) {
 						class180_121 = arr_113[i_17];
-						if (class180_121 != null && class180_121.anInt2236 == 1 && client.NPC_UPDATE_INDICES[i_10 - i_7] == class180_121.anInt2238) {
-							nativesprite_98 = Class391.aNativeSpriteArray4778[class180_121.anInt2240];
+						if (class180_121 != null && class180_121.targetType == 1 && client.NPC_UPDATE_INDICES[i_10 - i_7] == class180_121.targetIndex) {
+							nativesprite_98 = Class391.HINT_ARROW_SPRITES[class180_121.arrowSprite];
 							if (nativesprite_98.method2793() > i_15) {
 								i_15 = nativesprite_98.method2793();
 							}
 							boolean bool_20;
-							if (class180_121.anInt2244 == 0) {
+							if (class180_121.idk == 0) {
 								bool_20 = true;
 							} else {
-								i_21 = Class204.method3363(1264825249) * 1000 / class180_121.anInt2244 / 2;
+								i_21 = Class204.method3363(1264825249) * 1000 / class180_121.idk / 2;
 								bool_20 = client.cycles % (i_21 * 2) < i_21;
 							}
 							if (bool_20) {

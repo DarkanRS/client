@@ -1220,55 +1220,55 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.HINT_ICON) {
-			int key = buffer.readUnsignedByte();
-			int flags = key >> 5;
-			int i_6 = key & 0x1f;
-			if (i_6 == 0) {
-				client.aClass180Array7348[flags] = null;
+			int flags = buffer.readUnsignedByte();
+			int iconIndex = flags >> 5;
+			int targetType = flags & 0x1f;
+			if (targetType == 0) {
+				client.HINT_ARROWS[iconIndex] = null;
 				context.currentPacket = null;
 				return true;
 			} else {
-				Class180 class180_129 = new Class180();
-				class180_129.anInt2236 = i_6;
-				class180_129.anInt2240 = buffer.readUnsignedByte();
-				if (class180_129.anInt2240 >= 0 && class180_129.anInt2240 < Class391.aNativeSpriteArray4778.length) {
-					if (class180_129.anInt2236 != 1 && class180_129.anInt2236 != 10) {
-						if (class180_129.anInt2236 >= 2 && class180_129.anInt2236 <= 6) {
-							if (class180_129.anInt2236 == 2) {
-								class180_129.anInt2243 = 256;
-								class180_129.anInt2235 = 256;
+				HintArrow arrow = new HintArrow();
+				arrow.targetType = targetType;
+				arrow.arrowSprite = buffer.readUnsignedByte();
+				if (arrow.arrowSprite >= 0 && arrow.arrowSprite < Class391.HINT_ARROW_SPRITES.length) {
+					if (arrow.targetType != 1 && arrow.targetType != 10) {
+						if (arrow.targetType >= 2 && arrow.targetType <= 6) {
+							if (arrow.targetType == 2) {
+								arrow.x = 256;
+								arrow.y = 256;
 							}
-							if (class180_129.anInt2236 == 3) {
-								class180_129.anInt2243 = 0;
-								class180_129.anInt2235 = 256;
+							if (arrow.targetType == 3) {
+								arrow.x = 0;
+								arrow.y = 256;
 							}
-							if (class180_129.anInt2236 == 4) {
-								class180_129.anInt2243 = 512;
-								class180_129.anInt2235 = 256;
+							if (arrow.targetType == 4) {
+								arrow.x = 512;
+								arrow.y = 256;
 							}
-							if (class180_129.anInt2236 == 5) {
-								class180_129.anInt2243 = 256;
-								class180_129.anInt2235 = 0;
+							if (arrow.targetType == 5) {
+								arrow.x = 256;
+								arrow.y = 0;
 							}
-							if (class180_129.anInt2236 == 6) {
-								class180_129.anInt2243 = 256;
-								class180_129.anInt2235 = 512;
+							if (arrow.targetType == 6) {
+								arrow.x = 256;
+								arrow.y = 512;
 							}
-							class180_129.anInt2236 = 2;
-							class180_129.anInt2239 = buffer.readUnsignedByte();
-							CoordGrid coordgrid_133 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-							class180_129.anInt2243 += buffer.readUnsignedShort() - coordgrid_133.x << 9;
-							class180_129.anInt2235 += buffer.readUnsignedShort() - coordgrid_133.y << 9;
-							class180_129.anInt2241 = buffer.readUnsignedByte() << 2;
-							class180_129.anInt2237 = buffer.readUnsignedShort();
+							arrow.targetType = 2;
+							arrow.plane = buffer.readUnsignedByte();
+							CoordGrid grid = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+							arrow.x += buffer.readUnsignedShort() - grid.x << 9;
+							arrow.y += buffer.readUnsignedShort() - grid.y << 9;
+							arrow.height = buffer.readUnsignedByte() << 2;
+							arrow.distance = buffer.readUnsignedShort();
 						}
 					} else {
-						class180_129.anInt2238 = buffer.readUnsignedShort();
-						class180_129.anInt2244 = buffer.readUnsignedShort();
+						arrow.targetIndex = buffer.readUnsignedShort();
+						arrow.idk = buffer.readUnsignedShort();
 						buffer.index += 4;
 					}
-					class180_129.anInt2242 = buffer.readInt();
-					client.aClass180Array7348[flags] = class180_129;
+					arrow.modelId = buffer.readInt();
+					client.HINT_ARROWS[iconIndex] = arrow;
 				}
 				context.currentPacket = null;
 				return true;

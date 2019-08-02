@@ -75,37 +75,37 @@ public class Player extends Entity {
 
 			int i_18;
 			if (this == VertexNormal.MY_PLAYER) {
-				for (i_18 = client.aClass180Array7348.length - 1; i_18 >= 0; --i_18) {
-					Class180 class180_25 = client.aClass180Array7348[i_18];
-					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
+				for (i_18 = client.HINT_ARROWS.length - 1; i_18 >= 0; --i_18) {
+					HintArrow class180_25 = client.HINT_ARROWS[i_18];
+					if (class180_25 != null && 1869984395 * class180_25.modelId * -669014749 != -1) {
 						int i_13;
-						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+						if (-379447335 * class180_25.targetType * -860161943 == 1) {
+							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.targetIndex * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
-								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.modelId * -669014749, 92160000L);
 							}
 						}
 
-						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
+						if (class180_25.targetType * -860161943 * -379447335 == 2) {
 							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().coords;
-							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
-							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
-							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
+							long long_19 = (long) (class180_25.x * -1582343557 * -51612493 - (int) vector3_27.x);
+							long long_21 = (long) (class180_25.y * -1351216313 * -1074026889 - (int) vector3_27.z);
+							long long_15 = (long) (1116475963 * class180_25.distance * 1144190707 << 9);
 							long_15 *= long_15;
-							this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], long_19, long_21, class180_25.anInt2242 * -669014749 * 1869984395, long_15);
+							this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], long_19, long_21, class180_25.modelId * -669014749 * 1869984395, long_15);
 						}
 
-						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
-							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
+						if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.players.length) {
+							Player player_28 = client.players[1505135749 * class180_25.targetIndex * -1443656627];
 							if (player_28 != null) {
 								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
-								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.modelId * -669014749 * 1869984395, 92160000L);
 							}
 						}
 					}
@@ -451,37 +451,37 @@ public class Player extends Entity {
 
 			int i_18;
 			if (this == VertexNormal.MY_PLAYER) {
-				for (i_18 = client.aClass180Array7348.length - 1; i_18 >= 0; --i_18) {
-					Class180 class180_25 = client.aClass180Array7348[i_18];
-					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
+				for (i_18 = client.HINT_ARROWS.length - 1; i_18 >= 0; --i_18) {
+					HintArrow class180_25 = client.HINT_ARROWS[i_18];
+					if (class180_25 != null && 1869984395 * class180_25.modelId * -669014749 != -1) {
 						int i_13;
-						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+						if (-379447335 * class180_25.targetType * -860161943 == 1) {
+							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.targetIndex * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
-								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.modelId * -669014749, 92160000L);
 							}
 						}
 
-						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
+						if (class180_25.targetType * -860161943 * -379447335 == 2) {
 							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().coords;
-							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
-							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
-							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
+							long long_19 = (long) (class180_25.x * -1582343557 * -51612493 - (int) vector3_27.x);
+							long long_21 = (long) (class180_25.y * -1351216313 * -1074026889 - (int) vector3_27.z);
+							long long_15 = (long) (1116475963 * class180_25.distance * 1144190707 << 9);
 							long_15 *= long_15;
-							this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], long_19, long_21, class180_25.anInt2242 * -669014749 * 1869984395, long_15);
+							this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], long_19, long_21, class180_25.modelId * -669014749 * 1869984395, long_15);
 						}
 
-						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
-							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
+						if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.players.length) {
+							Player player_28 = client.players[1505135749 * class180_25.targetIndex * -1443656627];
 							if (player_28 != null) {
 								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
-								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.modelId * -669014749 * 1869984395, 92160000L);
 							}
 						}
 					}
@@ -566,37 +566,37 @@ public class Player extends Entity {
 
 			int i_18;
 			if (this == VertexNormal.MY_PLAYER) {
-				for (i_18 = client.aClass180Array7348.length - 1; i_18 >= 0; --i_18) {
-					Class180 class180_25 = client.aClass180Array7348[i_18];
-					if (class180_25 != null && 1869984395 * class180_25.anInt2242 * -669014749 != -1) {
+				for (i_18 = client.HINT_ARROWS.length - 1; i_18 >= 0; --i_18) {
+					HintArrow class180_25 = client.HINT_ARROWS[i_18];
+					if (class180_25 != null && 1869984395 * class180_25.modelId * -669014749 != -1) {
 						int i_13;
-						if (-379447335 * class180_25.anInt2236 * -860161943 == 1) {
-							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.anInt2238 * -1443656627));
+						if (-379447335 * class180_25.targetType * -860161943 == 1) {
+							StringNode class282_sub47_26 = (StringNode) client.NPCS.get((long) (1505135749 * class180_25.targetIndex * -1443656627));
 							if (class282_sub47_26 != null) {
 								NPC npc_29 = (NPC) class282_sub47_26.anObject8068;
 								Vector3 vector3_12 = Vector3.method6632(npc_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_13 = (int) vector3_12.x;
 								int i_14 = (int) vector3_12.z;
-								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.anInt2242 * -669014749, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_13, (long) i_14, 1869984395 * class180_25.modelId * -669014749, 92160000L);
 							}
 						}
 
-						if (class180_25.anInt2236 * -860161943 * -379447335 == 2) {
+						if (class180_25.targetType * -860161943 * -379447335 == 2) {
 							Vector3 vector3_27 = VertexNormal.MY_PLAYER.method11166().coords;
-							long long_19 = (long) (class180_25.anInt2243 * -1582343557 * -51612493 - (int) vector3_27.x);
-							long long_21 = (long) (class180_25.anInt2235 * -1351216313 * -1074026889 - (int) vector3_27.z);
-							long long_15 = (long) (1116475963 * class180_25.anInt2237 * 1144190707 << 9);
+							long long_19 = (long) (class180_25.x * -1582343557 * -51612493 - (int) vector3_27.x);
+							long long_21 = (long) (class180_25.y * -1351216313 * -1074026889 - (int) vector3_27.z);
+							long long_15 = (long) (1116475963 * class180_25.distance * 1144190707 << 9);
 							long_15 *= long_15;
-							this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], long_19, long_21, class180_25.anInt2242 * -669014749 * 1869984395, long_15);
+							this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], long_19, long_21, class180_25.modelId * -669014749 * 1869984395, long_15);
 						}
 
-						if (-379447335 * class180_25.anInt2236 * -860161943 == 10 && 1505135749 * class180_25.anInt2238 * -1443656627 >= 0 && 1505135749 * class180_25.anInt2238 * -1443656627 < client.players.length) {
-							Player player_28 = client.players[1505135749 * class180_25.anInt2238 * -1443656627];
+						if (-379447335 * class180_25.targetType * -860161943 == 10 && 1505135749 * class180_25.targetIndex * -1443656627 >= 0 && 1505135749 * class180_25.targetIndex * -1443656627 < client.players.length) {
+							Player player_28 = client.players[1505135749 * class180_25.targetIndex * -1443656627];
 							if (player_28 != null) {
 								Vector3 vector3_30 = Vector3.method6632(player_28.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_23 = (int) vector3_30.x;
 								i_13 = (int) vector3_30.z;
-								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.anInt2242 * -669014749 * 1869984395, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_2, this.aMeshRasterizerArray10372[0], (long) i_23, (long) i_13, class180_25.modelId * -669014749 * 1869984395, 92160000L);
 							}
 						}
 					}
@@ -1044,37 +1044,37 @@ public class Player extends Entity {
 
 			int i_19;
 			if (this == VertexNormal.MY_PLAYER) {
-				for (i_19 = client.aClass180Array7348.length - 1; i_19 >= 0; --i_19) {
-					Class180 class180_26 = client.aClass180Array7348[i_19];
-					if (class180_26 != null && class180_26.anInt2242 != -1) {
+				for (i_19 = client.HINT_ARROWS.length - 1; i_19 >= 0; --i_19) {
+					HintArrow class180_26 = client.HINT_ARROWS[i_19];
+					if (class180_26 != null && class180_26.modelId != -1) {
 						int i_14;
-						if (class180_26.anInt2236 == 1) {
-							StringNode class282_sub47_27 = (StringNode) client.NPCS.get((long) class180_26.anInt2238);
+						if (class180_26.targetType == 1) {
+							StringNode class282_sub47_27 = (StringNode) client.NPCS.get((long) class180_26.targetIndex);
 							if (class282_sub47_27 != null) {
 								NPC npc_30 = (NPC) class282_sub47_27.anObject8068;
 								Vector3 vector3_13 = Vector3.method6632(npc_30.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								i_14 = (int) vector3_13.x;
 								int i_15 = (int) vector3_13.z;
-								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_14, (long) i_15, class180_26.anInt2242, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_14, (long) i_15, class180_26.modelId, 92160000L);
 							}
 						}
 
-						if (class180_26.anInt2236 == 2) {
+						if (class180_26.targetType == 2) {
 							Vector3 vector3_28 = VertexNormal.MY_PLAYER.method11166().coords;
-							long long_20 = (long) (class180_26.anInt2243 - (int) vector3_28.x);
-							long long_22 = (long) (class180_26.anInt2235 - (int) vector3_28.z);
-							long long_16 = (long) (class180_26.anInt2237 << 9);
+							long long_20 = (long) (class180_26.x - (int) vector3_28.x);
+							long long_22 = (long) (class180_26.y - (int) vector3_28.z);
+							long long_16 = (long) (class180_26.distance << 9);
 							long_16 *= long_16;
-							this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], long_20, long_22, class180_26.anInt2242, long_16);
+							this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], long_20, long_22, class180_26.modelId, long_16);
 						}
 
-						if (class180_26.anInt2236 == 10 && class180_26.anInt2238 >= 0 && class180_26.anInt2238 < client.players.length) {
-							Player player_29 = client.players[class180_26.anInt2238];
+						if (class180_26.targetType == 10 && class180_26.targetIndex >= 0 && class180_26.targetIndex < client.players.length) {
+							Player player_29 = client.players[class180_26.targetIndex];
 							if (player_29 != null) {
 								Vector3 vector3_31 = Vector3.method6632(player_29.method11166().coords, VertexNormal.MY_PLAYER.method11166().coords);
 								int i_24 = (int) vector3_31.x;
 								i_14 = (int) vector3_31.z;
-								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_24, (long) i_14, class180_26.anInt2242, 92160000L);
+								this.method16136(graphicalrenderer_1, matrix44var_3, this.aMeshRasterizerArray10372[0], (long) i_24, (long) i_14, class180_26.modelId, 92160000L);
 							}
 						}
 					}

@@ -534,12 +534,12 @@ public class MapRegion {
 				vector3_22.pushVectorStack();
 			}
 		}
-		Class180[] arr_14 = client.aClass180Array7348;
+		HintArrow[] arr_14 = client.HINT_ARROWS;
 		for (i_6 = 0; i_6 < arr_14.length; i_6++) {
-			Class180 class180_23 = arr_14[i_6];
+			HintArrow class180_23 = arr_14[i_6];
 			if (class180_23 != null) {
-				class180_23.anInt2243 -= i_3 * 512;
-				class180_23.anInt2235 -= i_4 * 512;
+				class180_23.x -= i_3 * 512;
+				class180_23.y -= i_4 * 512;
 			}
 		}
 		Node_Sub31 class282_sub31_26;

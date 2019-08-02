@@ -65,7 +65,7 @@ public class Defaults7Loader {
 
     public static MeshRasterizer method8752(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
         long long_7 = (long) i_5;
-        MeshRasterizer meshrasterizer_9 = (MeshRasterizer) Class180.aClass229_2245.get(long_7);
+        MeshRasterizer meshrasterizer_9 = (MeshRasterizer) HintArrow.aClass229_2245.get(long_7);
         short s_10 = 2055;
         if (meshrasterizer_9 == null) {
             RSMesh rsmesh_11 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, i_5);
@@ -75,8 +75,8 @@ public class Defaults7Loader {
             if (rsmesh_11.version < 13) {
                 rsmesh_11.upscale();
             }
-            meshrasterizer_9 = graphicalrenderer_0.createMeshRasterizer(rsmesh_11, s_10, Class180.anInt2246, 64, 768);
-            Class180.aClass229_2245.put(meshrasterizer_9, long_7);
+            meshrasterizer_9 = graphicalrenderer_0.createMeshRasterizer(rsmesh_11, s_10, HintArrow.anInt2246, 64, 768);
+            HintArrow.aClass229_2245.put(meshrasterizer_9, long_7);
         }
         meshrasterizer_9 = meshrasterizer_9.method11289((byte) 6, s_10, true);
         if (i_1 != 0) {

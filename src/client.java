@@ -51,7 +51,7 @@ public final class client extends Engine {
 	static boolean DRAW_DEBUG = false;
 	static boolean aBool7177 = false;
 	public static int REBOOT_TIMER = 0;
-	public static Class180[] aClass180Array7348 = new Class180[8];
+	public static HintArrow[] HINT_ARROWS = new HintArrow[8];
 	public static Class281[] aClass281Array7180 = new Class281[9];
 	public static boolean aBool7219 = false;
 	static boolean aBool7241 = false;
@@ -1390,19 +1390,19 @@ public final class client extends Engine {
 			}
 		}
 
-		for (i_4 = 0; i_4 < aClass180Array7348.length; i_4++) {
-			Class180 class180_10 = aClass180Array7348[i_4];
+		for (i_4 = 0; i_4 < HINT_ARROWS.length; i_4++) {
+			HintArrow class180_10 = HINT_ARROWS[i_4];
 			if (class180_10 != null) {
-				if (class180_10.anInt2236 == 1) {
-					StringNode class282_sub47_6 = (StringNode) NPCS.get((long) class180_10.anInt2238);
+				if (class180_10.targetType == 1) {
+					StringNode class282_sub47_6 = (StringNode) NPCS.get((long) class180_10.targetIndex);
 					if (class282_sub47_6 != null) {
 						NPC npc_7 = (NPC) class282_sub47_6.anObject8068;
 						if (npc_7.drawPriority >= 0) {
 							npc_7.drawPriority += 2048;
 						}
 					}
-				} else if (class180_10.anInt2236 == 10) {
-					Player player_11 = players[class180_10.anInt2238];
+				} else if (class180_10.targetType == 10) {
+					Player player_11 = players[class180_10.targetIndex];
 					if (player_11 != null && player_11 != VertexNormal.MY_PLAYER && player_11.drawPriority >= 0) {
 						player_11.drawPriority += 2048;
 					}

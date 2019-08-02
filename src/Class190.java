@@ -64,38 +64,38 @@ public class Class190 {
 	}
 
 	static void method3151(int i_0, int i_1, IComponentDefinitions icomponentdefinitions_2, Class119 class119_3, int i_4, int i_5) {
-		Class180[] arr_7 = client.aClass180Array7348;
+		HintArrow[] hintArrows = client.HINT_ARROWS;
 
-		for (int i_8 = 0; i_8 < arr_7.length; i_8++) {
-			Class180 class180_9 = arr_7[i_8];
-			if (class180_9 != null && class180_9.anInt2236 != 0 && client.cycles % 20 < 10) {
+		for (int i_8 = 0; i_8 < hintArrows.length; i_8++) {
+			HintArrow arrow = hintArrows[i_8];
+			if (arrow != null && arrow.targetType != 0 && client.cycles % 20 < 10) {
 				int i_13;
-				if (class180_9.anInt2236 == 1) {
-					StringNode class282_sub47_10 = (StringNode) client.NPCS.get((long) class180_9.anInt2238);
+				if (arrow.targetType == 1) {
+					StringNode class282_sub47_10 = (StringNode) client.NPCS.get((long) arrow.targetIndex);
 					if (class282_sub47_10 != null) {
 						NPC npc_11 = (NPC) class282_sub47_10.anObject8068;
 						Vector3 vector3_12 = npc_11.method11166().coords;
 						i_13 = (int) vector3_12.x / 128 - i_0 / 128;
 						int i_14 = (int) vector3_12.z / 128 - i_1 / 128;
-						Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_13, i_14, class180_9.anInt2240, 360000L);
+						Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_13, i_14, arrow.arrowSprite, 360000L);
 					}
 				}
 
-				if (class180_9.anInt2236 == 2) {
-					int i_15 = class180_9.anInt2243 / 128 - i_0 / 128;
-					int i_16 = class180_9.anInt2235 / 128 - i_1 / 128;
-					long long_17 = (long) (class180_9.anInt2237 << 7);
+				if (arrow.targetType == 2) {
+					int i_15 = arrow.x / 128 - i_0 / 128;
+					int i_16 = arrow.y / 128 - i_1 / 128;
+					long long_17 = (long) (arrow.distance << 7);
 					long_17 *= long_17;
-					Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_15, i_16, class180_9.anInt2240, long_17);
+					Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_15, i_16, arrow.arrowSprite, long_17);
 				}
 
-				if (class180_9.anInt2236 == 10 && class180_9.anInt2238 >= 0 && class180_9.anInt2238 < client.players.length) {
-					Player player_20 = client.players[class180_9.anInt2238];
+				if (arrow.targetType == 10 && arrow.targetIndex >= 0 && arrow.targetIndex < client.players.length) {
+					Player player_20 = client.players[arrow.targetIndex];
 					if (player_20 != null) {
 						Vector3 vector3_21 = player_20.method11166().coords;
 						int i_19 = (int) vector3_21.x / 128 - i_0 / 128;
 						i_13 = (int) vector3_21.z / 128 - i_1 / 128;
-						Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_19, i_13, class180_9.anInt2240, 360000L);
+						Ground.method6728(icomponentdefinitions_2, class119_3, i_4, i_5, i_19, i_13, arrow.arrowSprite, 360000L);
 					}
 				}
 			}
@@ -114,8 +114,8 @@ public class Class190 {
 		Class250.method4296();
 
 		int i_1;
-		for (i_1 = 0; i_1 < client.aClass180Array7348.length; i_1++) {
-			client.aClass180Array7348[i_1] = null;
+		for (i_1 = 0; i_1 < client.HINT_ARROWS.length; i_1++) {
+			client.HINT_ARROWS[i_1] = null;
 		}
 
 		client.aBool7344 = false;

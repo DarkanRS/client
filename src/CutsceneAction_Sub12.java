@@ -27,13 +27,13 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
 	}
 
 	static final void method14612(int i_0, int i_1, int i_2, int i_3) {
-		Class180[] arr_7 = client.aClass180Array7348;
+		HintArrow[] arr_7 = client.HINT_ARROWS;
 		for (int i_8 = 0; i_8 < arr_7.length; i_8++) {
-			Class180 class180_9 = arr_7[i_8];
-			if (class180_9 != null && class180_9.anInt2236 == 2) {
-				Class407.method6871(class180_9.anInt2239, class180_9.anInt2243, class180_9.anInt2235, class180_9.anInt2241 * 2, -1913137620);
+			HintArrow class180_9 = arr_7[i_8];
+			if (class180_9 != null && class180_9.targetType == 2) {
+				Class407.method6871(class180_9.plane, class180_9.x, class180_9.y, class180_9.height * 2, -1913137620);
 				if (client.aFloatArray7292[0] > -1.0F && client.cycles % 20 < 10) {
-					NativeSprite nativesprite_10 = Class391.aNativeSpriteArray4778[class180_9.anInt2240];
+					NativeSprite nativesprite_10 = Class391.HINT_ARROW_SPRITES[class180_9.arrowSprite];
 					int i_11 = (int) (client.aFloatArray7292[0] + (float) i_0 - 12.0F);
 					int i_12 = (int) (client.aFloatArray7292[1] + (float) i_1 - 28.0F);
 					nativesprite_10.method2752(i_11, i_12);
