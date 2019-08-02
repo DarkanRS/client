@@ -199,9 +199,9 @@ public class HitbarDefinitions {
 				} else if (NativeLibraryLoader.anInt3240 == 1) {
 					KeyHoldInputSubscriber.method3920(i_3);
 				}
-				i_8 = IdentitiKitIndexLoader.anInt361;
-				i_9 = Class109_Sub1.anInt9384;
-				int i_10 = Class246.anInt3029;
+				i_8 = IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
+				i_9 = Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
+				int i_10 = Class246.CAM_MOVE_ABSOLUTEY;
 				int i_11 = Class293.anInt3512;
 				int i_12 = AnimationDefinitions.anInt5930;
 				int i_14;
@@ -209,13 +209,13 @@ public class HitbarDefinitions {
 					if (client.aBoolArray7431[i_13]) {
 						i_14 = (int) (Math.random() * (double) (client.anIntArray7268[i_13] * 2 + 1) - (double) client.anIntArray7268[i_13] + Math.sin((double) client.anIntArray7435[i_13] * ((double) client.anIntArray7462[i_13] / 100.0D)) * (double) client.anIntArray7433[i_13]);
 						if (i_13 == 0) {
-							IdentitiKitIndexLoader.anInt361 += i_14 << 2;
+							IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX += i_14 << 2;
 						}
 						if (i_13 == 1) {
-							Class109_Sub1.anInt9384 += i_14 << 2;
+							Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT += i_14 << 2;
 						}
 						if (i_13 == 2) {
-							Class246.anInt3029 += i_14 << 2;
+							Class246.CAM_MOVE_ABSOLUTEY += i_14 << 2;
 						}
 						if (i_13 == 3) {
 							AnimationDefinitions.anInt5930 = i_14 + AnimationDefinitions.anInt5930 & 0x3fff;
@@ -230,24 +230,24 @@ public class HitbarDefinitions {
 						}
 					}
 				}
-				if (IdentitiKitIndexLoader.anInt361 < 0) {
-					IdentitiKitIndexLoader.anInt361 = 0;
+				if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX < 0) {
+					IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = 0;
 				}
-				if (IdentitiKitIndexLoader.anInt361 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeX << 9) - 1) {
-					IdentitiKitIndexLoader.anInt361 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeX << 9) - 1;
+				if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeX << 9) - 1) {
+					IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeX << 9) - 1;
 				}
-				if (Class246.anInt3029 < 0) {
-					Class246.anInt3029 = 0;
+				if (Class246.CAM_MOVE_ABSOLUTEY < 0) {
+					Class246.CAM_MOVE_ABSOLUTEY = 0;
 				}
-				if (Class246.anInt3029 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1) {
-					Class246.anInt3029 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1;
+				if (Class246.CAM_MOVE_ABSOLUTEY > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1) {
+					Class246.CAM_MOVE_ABSOLUTEY = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().sizeY << 9) - 1;
 				}
 				QuickchatMessageLoader.method7215();
 				Renderers.SOFTWARE_RENDERER.method8617(i_0, i_1, i_2, i_3);
 				Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
 				Class535 class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038((short) 4699);
 				i_14 = class535_16.method11450();
-				client.aClass294_7457.method5223((float) (-IdentitiKitIndexLoader.anInt361), (float) (-Class109_Sub1.anInt9384), (float) (-Class246.anInt3029));
+				client.aClass294_7457.method5223((float) (-IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX), (float) (-Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT), (float) (-Class246.CAM_MOVE_ABSOLUTEY));
 				client.aClass294_7457.rotation(0.0F, -1.0F, 0.0F, Class382.method6508(-AnimationDefinitions.anInt5930 & 0x3fff));
 				client.aClass294_7457.rotation(-1.0F, 0.0F, 0.0F, Class382.method6508(-Class293.anInt3512 & 0x3fff));
 				client.aClass294_7457.rotation(0.0F, 0.0F, -1.0F, Class382.method6508(-Class121.anInt1525 & 0x3fff));
@@ -264,7 +264,7 @@ public class HitbarDefinitions {
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_2, i_3);
 				IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
 				byte b_15 = Class393.preferences.aPreference_Sub27_8209.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentitiKitIndexLoader.anInt361, Class109_Sub1.anInt9384, Class246.anInt3029, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aPreference_Sub26_8224.method12943(619789577) == 0);
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aPreference_Sub26_8224.method12943(619789577) == 0);
 				++client.anInt7396;
 				Node_Sub20_Sub24.method15391(-1221353280);
 				if (client.gameState == 13) {
@@ -274,9 +274,9 @@ public class HitbarDefinitions {
 					Class163.method2844(i_0, i_1, i_2, i_3);
 				}
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3399();
-				IdentitiKitIndexLoader.anInt361 = i_8;
-				Class109_Sub1.anInt9384 = i_9;
-				Class246.anInt3029 = i_10;
+				IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_8;
+				Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_9;
+				Class246.CAM_MOVE_ABSOLUTEY = i_10;
 				Class293.anInt3512 = i_11;
 				AnimationDefinitions.anInt5930 = i_12;
 				if (client.aBool7172 && Class119.JS5_STANDARD_REQUESTER.priorities((short) 26280) == 0) {

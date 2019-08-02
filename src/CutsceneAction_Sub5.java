@@ -11,13 +11,13 @@ public class CutsceneAction_Sub5 extends CutsceneAction {
 	int anInt8849;
 
 	public void method1601() {
-		RouteStrategy.method3794(-1748191497 * this.anInt8845 * -597628217, this.anInt8846 * 693223401 * -808646567, -602355731 * this.anInt8847 * 1851960805, 100, 100, false);
+		RouteStrategy.moveCamera(-1748191497 * this.anInt8845 * -597628217, this.anInt8846 * 693223401 * -808646567, -602355731 * this.anInt8847 * 1851960805, 100, 100, false);
 		HostNameIdentifier.method486(-908637089 * this.anInt8848 * -1393422433, this.anInt8849 * -652781679 * -1608889999, 0);
 		client.aBool7321 = true;
 	}
 
 	public void method1592() {
-		RouteStrategy.method3794(this.anInt8845, this.anInt8846, this.anInt8847, 100, 100, false);
+		RouteStrategy.moveCamera(this.anInt8845, this.anInt8846, this.anInt8847, 100, 100, false);
 		HostNameIdentifier.method486(this.anInt8848, this.anInt8849, 0);
 		client.aBool7321 = true;
 	}

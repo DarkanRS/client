@@ -1873,13 +1873,13 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CAM_MOVETO) {
-			int key = buffer.readUnsignedByte();
-			int flags = buffer.readUnsignedByte();
-			int i_6 = buffer.readUnsigned128Byte();
-			int i_7 = buffer.readShortLE() << 2;
-			int i_8 = buffer.readUnsignedByte128();
+			int localY = buffer.readUnsignedByte();
+			int localX = buffer.readUnsignedByte();
+			int constantSpeed = buffer.readUnsigned128Byte();
+			int moveZ = buffer.readShortLE() << 2;
+			int variableSpeed = buffer.readUnsignedByte128();
 			Class470.method7825();
-			RouteStrategy.method3794(flags, key, i_7, i_6, i_8, true);
+			RouteStrategy.moveCamera(localX, localY, moveZ, constantSpeed, variableSpeed, true);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.MESSAGE_CLANCHANNEL) {

@@ -2,7 +2,7 @@ public class Class296 {
 
 	static Class446[] aClass446Array3531;
 
-	public static int anInt3534;
+	public static int CAM_MOVE_LOCALX;
 
 	static int anInt3532 = 0;
 

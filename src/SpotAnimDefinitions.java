@@ -2,7 +2,7 @@ public class SpotAnimDefinitions {
 
 	SpotAnimIndexLoader aClass515_6973;
 
-	static int anInt6985;
+	static int CAM_MOVE_Z;
 
 	int defaultModel;
 

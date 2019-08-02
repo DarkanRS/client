@@ -5494,7 +5494,7 @@ public class CS2Interpreter {
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		int i_5 = executor.intStack[executor.intStackPtr + 3];
 		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-		RouteStrategy.method3794((i_2 >> 14 & 0x3fff) - coordgrid_6.x, (i_2 & 0x3fff) - coordgrid_6.y, i_3 << 2, i_4, i_5, false);
+		RouteStrategy.moveCamera((i_2 >> 14 & 0x3fff) - coordgrid_6.x, (i_2 & 0x3fff) - coordgrid_6.y, i_3 << 2, i_4, i_5, false);
 	}
 
 	static final void method4178(CS2Executor executor) {

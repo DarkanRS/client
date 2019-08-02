@@ -92,11 +92,11 @@ public class Class348 {
 		VertexNormal.MY_PLAYER.method11172((float) (IndexLoaders.MAP_REGION_DECODER.getSizeX() * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.getSizeY() * 512 / 2));
 		VertexNormal.MY_PLAYER.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.getSizeX() / 2;
 		VertexNormal.MY_PLAYER.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.getSizeY() / 2;
-		Class246.anInt3029 = 0;
-		IdentitiKitIndexLoader.anInt361 = 0;
+		Class246.CAM_MOVE_ABSOLUTEY = 0;
+		IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = 0;
 		if (NativeLibraryLoader.anInt3240 == 5) {
-			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 << 9;
-			Class246.anInt3029 = Node_Sub44.anInt8064 << 9;
+			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX << 9;
+			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY << 9;
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);
 		}

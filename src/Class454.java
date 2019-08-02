@@ -2,7 +2,7 @@ public class Class454 {
 
 	static Class250 aClass250_5450;
 
-	static int anInt5451;
+	static int CAM_MOVE_CONST_SPEED;
 
 	public Class454() {
 		System.nanoTime();

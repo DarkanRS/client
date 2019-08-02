@@ -411,7 +411,7 @@ public final class RouteFinder {
 						}
 						if (string_0.equalsIgnoreCase("getcamerapos")) {
 							CoordGrid coordgrid_27 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-							Class209.printConsoleMessage("Pos: " + VertexNormal.MY_PLAYER.plane + "," + ((IdentitiKitIndexLoader.anInt361 >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y >> 6) + "," + ((IdentitiKitIndexLoader.anInt361 >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.anInt3029 >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, VertexNormal.MY_PLAYER.plane) - Class109_Sub1.anInt9384));
+							Class209.printConsoleMessage("Pos: " + VertexNormal.MY_PLAYER.plane + "," + ((IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9) + coordgrid_27.x >> 6) + "," + ((Class246.CAM_MOVE_ABSOLUTEY >> 9) + coordgrid_27.y >> 6) + "," + ((IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9) + coordgrid_27.x & 0x3f) + "," + ((Class246.CAM_MOVE_ABSOLUTEY >> 9) + coordgrid_27.y & 0x3f) + " Height: " + (Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, VertexNormal.MY_PLAYER.plane) - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT));
 							Class209.printConsoleMessage("Look: " + VertexNormal.MY_PLAYER.plane + "," + (coordgrid_27.x + PlaySynthCutsceneAction.anInt9368 >> 6) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 >> 6) + "," + (coordgrid_27.x + PlaySynthCutsceneAction.anInt9368 & 0x3f) + "," + (coordgrid_27.y + OutgoingLoginPacket.anInt4280 & 0x3f) + " Height: " + (Class504.getTerrainHeightAtPos(PlaySynthCutsceneAction.anInt9368, OutgoingLoginPacket.anInt4280, VertexNormal.MY_PLAYER.plane) - Class121.anInt1527));
 							return;
 						}

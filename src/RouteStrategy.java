@@ -7,16 +7,16 @@ public abstract class RouteStrategy {
 
 	public abstract boolean canExit(int size, int x, int y, ClipMap var4);
 
-	public static final void method3794(int i_0, int i_1, int i_2, int i_3, int i_4, boolean bool_5) {
-		Class296.anInt3534 = i_0;
-		Node_Sub44.anInt8064 = i_1;
-		SpotAnimDefinitions.anInt6985 = i_2;
-		Class454.anInt5451 = i_3;
-		Class115.anInt1249 = i_4;
-		if (bool_5 && Class115.anInt1249 >= 100) {
-			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
-			Class246.anInt3029 = Node_Sub44.anInt8064 * 512 + 256;
-			Class109_Sub1.anInt9384 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35) - SpotAnimDefinitions.anInt6985;
+	public static final void moveCamera(int localX, int localY, int moveZ, int constantSpeed, int variableSpeed, boolean bool_5) {
+		Class296.CAM_MOVE_LOCALX = localX;
+		Node_Sub44.CAM_MOVE_LOCALY = localY;
+		SpotAnimDefinitions.CAM_MOVE_Z = moveZ;
+		Class454.CAM_MOVE_CONST_SPEED = constantSpeed;
+		Class115.CAM_MOVE_VAR_SPEED = variableSpeed;
+		if (bool_5 && Class115.CAM_MOVE_VAR_SPEED >= 100) {
+			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
+			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
+			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
 		}
 		NativeLibraryLoader.anInt3240 = 5;
 		Class86.anInt833 = -1;

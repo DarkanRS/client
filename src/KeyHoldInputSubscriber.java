@@ -81,9 +81,9 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 			Vector3 vector3_5 = VertexNormal.MY_PLAYER.method11166().coords;
 			LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos((int) vector3_5.x, (int) vector3_5.z, Class4.anInt35) - 200, Class266.anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0, 1500551332);
 			float f_6 = 1.0F - (float) ((100 - i_2) * (100 - i_2) * (100 - i_2)) / 1000000.0F;
-			IdentitiKitIndexLoader.anInt361 = (int) ((float) Class186.anInt2349 + f_6 * (float) (IdentitiKitIndexLoader.anInt361 - Class186.anInt2349));
-			Class109_Sub1.anInt9384 = (int) ((float) Transform_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.anInt9384 - Transform_Sub1_Sub2.anInt9461));
-			Class246.anInt3029 = (int) ((float) (Class246.anInt3029 - Node_Sub15_Sub1.anInt9575) * f_6 + (float) Node_Sub15_Sub1.anInt9575);
+			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (int) ((float) Class186.anInt2349 + f_6 * (float) (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX - Class186.anInt2349));
+			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = (int) ((float) Transform_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT - Transform_Sub1_Sub2.anInt9461));
+			Class246.CAM_MOVE_ABSOLUTEY = (int) ((float) (Class246.CAM_MOVE_ABSOLUTEY - Node_Sub15_Sub1.anInt9575) * f_6 + (float) Node_Sub15_Sub1.anInt9575);
 			Class293.anInt3512 = (int) ((float) ClipMap.anInt3968 + f_6 * (float) (Class293.anInt3512 - ClipMap.anInt3968));
 			int i_7 = AnimationDefinitions.anInt5930 - ParamIndexLoader.anInt5029;
 			if (i_7 > 8192) {

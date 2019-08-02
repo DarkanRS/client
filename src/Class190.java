@@ -144,11 +144,11 @@ public class Class190 {
 		Node_Sub31.aClass482_7776 = new NodeCollection();
 		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(-1043684196);
 		FontRenderer_Sub3.method14341();
-		Class296.anInt3534 = 0;
-		Node_Sub44.anInt8064 = 0;
-		SpotAnimDefinitions.anInt6985 = 0;
-		Class454.anInt5451 = 0;
-		Class115.anInt1249 = 0;
+		Class296.CAM_MOVE_LOCALX = 0;
+		Node_Sub44.CAM_MOVE_LOCALY = 0;
+		SpotAnimDefinitions.CAM_MOVE_Z = 0;
+		Class454.CAM_MOVE_CONST_SPEED = 0;
+		Class115.CAM_MOVE_VAR_SPEED = 0;
 		PlaySynthCutsceneAction.anInt9368 = 0;
 		OutgoingLoginPacket.anInt4280 = 0;
 		Class121.anInt1527 = 0;

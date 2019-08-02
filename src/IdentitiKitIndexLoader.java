@@ -2,7 +2,7 @@ import java.io.IOException;
 
 public class IdentitiKitIndexLoader implements IndexLoader {
 
-	public static int anInt361;
+	public static int CAM_MOVE_ABSOLUTEX;
 
 	SoftCache aClass229_360 = new SoftCache(64);
 

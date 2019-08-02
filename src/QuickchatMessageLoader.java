@@ -89,9 +89,9 @@ public class QuickchatMessageLoader {
 				SceneObjectManager sceneobjectmanager_8 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
 				int i_9;
 				if (NativeLibraryLoader.anInt3240 != 2 && PingRequester.anInt5864 == -1) {
-					i_9 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35);
-					if (i_9 - Class109_Sub1.anInt9384 < 3200 && (regionmap_7.tileMasks[Class4.anInt35][IdentitiKitIndexLoader.anInt361 >> 9][Class246.anInt3029 >> 9] & 0x4) != 0) {
-						JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, IdentitiKitIndexLoader.anInt361 >> 9, Class246.anInt3029 >> 9, false, (byte) -37);
+					i_9 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35);
+					if (i_9 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT < 3200 && (regionmap_7.tileMasks[Class4.anInt35][IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9][Class246.CAM_MOVE_ABSOLUTEY >> 9] & 0x4) != 0) {
+						JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9, Class246.CAM_MOVE_ABSOLUTEY >> 9, false, (byte) -37);
 					}
 				} else {
 					if (NativeLibraryLoader.anInt3240 != 2) {
@@ -102,8 +102,8 @@ public class QuickchatMessageLoader {
 					if ((regionmap_7.tileMasks[Class4.anInt35][i_5 >> 9][i_6 >> 9] & 0x4) != 0) {
 						JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 0, i_5 >> 9, i_6 >> 9, false, (byte) 46);
 					} else if (Class293.anInt3512 < 2560) {
-						i_9 = IdentitiKitIndexLoader.anInt361 >> 9;
-						int i_10 = Class246.anInt3029 >> 9;
+						i_9 = IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9;
+						int i_10 = Class246.CAM_MOVE_ABSOLUTEY >> 9;
 						int i_11 = i_5 >> 9;
 						int i_12 = i_6 >> 9;
 						int i_13;

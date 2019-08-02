@@ -2856,7 +2856,7 @@ public final class client extends Engine {
 				SpotAnimIndexLoader.method8860((byte) -121);
 			}
 
-			if (IdentitiKitIndexLoader.anInt361 >> 9 < 14 || IdentitiKitIndexLoader.anInt361 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Class246.anInt3029 >> 9 < 14 || Class246.anInt3029 >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14) {
+			if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9 < 14 || IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeX() - 14 || Class246.CAM_MOVE_ABSOLUTEY >> 9 < 14 || Class246.CAM_MOVE_ABSOLUTEY >> 9 >= IndexLoaders.MAP_REGION_DECODER.getSizeY() - 14) {
 				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3154, (RsBitsBuffer) null), 919170648);
 			}
 		}

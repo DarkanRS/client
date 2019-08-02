@@ -353,53 +353,53 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 	}
 
 	static final void method16113() {
-		int i_1 = Class296.anInt3534 * 512 + 256;
-		int i_2 = Node_Sub44.anInt8064 * 512 + 256;
-		int i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35) - SpotAnimDefinitions.anInt6985;
-		if (Class115.anInt1249 >= 100) {
-			IdentitiKitIndexLoader.anInt361 = Class296.anInt3534 * 512 + 256;
-			Class246.anInt3029 = Node_Sub44.anInt8064 * 512 + 256;
-			Class109_Sub1.anInt9384 = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.anInt361, Class246.anInt3029, Class4.anInt35) - SpotAnimDefinitions.anInt6985;
+		int i_1 = Class296.CAM_MOVE_LOCALX * 512 + 256;
+		int i_2 = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
+		int i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
+		if (Class115.CAM_MOVE_VAR_SPEED >= 100) {
+			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
+			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
+			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
 		} else {
-			if (IdentitiKitIndexLoader.anInt361 < i_1) {
-				IdentitiKitIndexLoader.anInt361 = (i_1 - IdentitiKitIndexLoader.anInt361) * Class115.anInt1249 / 1000 + IdentitiKitIndexLoader.anInt361 + Class454.anInt5451;
-				if (IdentitiKitIndexLoader.anInt361 > i_1) {
-					IdentitiKitIndexLoader.anInt361 = i_1;
+			if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
+				IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (i_1 - IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX) * Class115.CAM_MOVE_VAR_SPEED / 1000 + IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX + Class454.CAM_MOVE_CONST_SPEED;
+				if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX > i_1) {
+					IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_1;
 				}
 			}
 
-			if (IdentitiKitIndexLoader.anInt361 > i_1) {
-				IdentitiKitIndexLoader.anInt361 -= Class115.anInt1249 * (IdentitiKitIndexLoader.anInt361 - i_1) / 1000 + Class454.anInt5451;
-				if (IdentitiKitIndexLoader.anInt361 < i_1) {
-					IdentitiKitIndexLoader.anInt361 = i_1;
+			if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX > i_1) {
+				IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= Class115.CAM_MOVE_VAR_SPEED * (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX - i_1) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
+				if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
+					IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_1;
 				}
 			}
 
-			if (Class109_Sub1.anInt9384 < i_3) {
-				Class109_Sub1.anInt9384 = (i_3 - Class109_Sub1.anInt9384) * Class115.anInt1249 / 1000 + Class109_Sub1.anInt9384 + Class454.anInt5451;
-				if (Class109_Sub1.anInt9384 > i_3) {
-					Class109_Sub1.anInt9384 = i_3;
+			if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT < i_3) {
+				Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = (i_3 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT) * Class115.CAM_MOVE_VAR_SPEED / 1000 + Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT + Class454.CAM_MOVE_CONST_SPEED;
+				if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT > i_3) {
+					Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_3;
 				}
 			}
 
-			if (Class109_Sub1.anInt9384 > i_3) {
-				Class109_Sub1.anInt9384 -= Class115.anInt1249 * (Class109_Sub1.anInt9384 - i_3) / 1000 + Class454.anInt5451;
-				if (Class109_Sub1.anInt9384 < i_3) {
-					Class109_Sub1.anInt9384 = i_3;
+			if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT > i_3) {
+				Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT -= Class115.CAM_MOVE_VAR_SPEED * (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT - i_3) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
+				if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT < i_3) {
+					Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_3;
 				}
 			}
 
-			if (Class246.anInt3029 < i_2) {
-				Class246.anInt3029 = (i_2 - Class246.anInt3029) * Class115.anInt1249 / 1000 + Class246.anInt3029 + Class454.anInt5451;
-				if (Class246.anInt3029 > i_2) {
-					Class246.anInt3029 = i_2;
+			if (Class246.CAM_MOVE_ABSOLUTEY < i_2) {
+				Class246.CAM_MOVE_ABSOLUTEY = (i_2 - Class246.CAM_MOVE_ABSOLUTEY) * Class115.CAM_MOVE_VAR_SPEED / 1000 + Class246.CAM_MOVE_ABSOLUTEY + Class454.CAM_MOVE_CONST_SPEED;
+				if (Class246.CAM_MOVE_ABSOLUTEY > i_2) {
+					Class246.CAM_MOVE_ABSOLUTEY = i_2;
 				}
 			}
 
-			if (Class246.anInt3029 > i_2) {
-				Class246.anInt3029 -= Class115.anInt1249 * (Class246.anInt3029 - i_2) / 1000 + Class454.anInt5451;
-				if (Class246.anInt3029 < i_2) {
-					Class246.anInt3029 = i_2;
+			if (Class246.CAM_MOVE_ABSOLUTEY > i_2) {
+				Class246.CAM_MOVE_ABSOLUTEY -= Class115.CAM_MOVE_VAR_SPEED * (Class246.CAM_MOVE_ABSOLUTEY - i_2) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
+				if (Class246.CAM_MOVE_ABSOLUTEY < i_2) {
+					Class246.CAM_MOVE_ABSOLUTEY = i_2;
 				}
 			}
 		}
@@ -407,9 +407,9 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		i_1 = PlaySynthCutsceneAction.anInt9368 * 512 + 256;
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
 		i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35) - Class121.anInt1527;
-		int i_4 = i_1 - IdentitiKitIndexLoader.anInt361;
-		int i_5 = i_3 - Class109_Sub1.anInt9384;
-		int i_6 = i_2 - Class246.anInt3029;
+		int i_4 = i_1 - IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
+		int i_5 = i_3 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
+		int i_6 = i_2 - Class246.CAM_MOVE_ABSOLUTEY;
 		int i_7 = (int) Math.sqrt((double) (i_6 * i_6 + i_4 * i_4));
 		int i_8 = (int) (Math.atan2((double) i_5, (double) i_7) * 2607.5945876176133D) & 0x3fff;
 		int i_9 = (int) (Math.atan2((double) i_4, (double) i_6) * -2607.5945876176133D) & 0x3fff;

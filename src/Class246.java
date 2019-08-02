@@ -2,7 +2,7 @@ public class Class246 {
 
 	static String[] aStringArray3028;
 
-	public static int anInt3029;
+	public static int CAM_MOVE_ABSOLUTEY;
 
 	Class246() throws Throwable {
 		throw new Error();

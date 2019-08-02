@@ -140,9 +140,9 @@ public class SpotAnimIndexLoader {
 				floats_3[i_5] = (float) i_9 + (((float) i_12 * f_2 + (float) i_18) * f_2 + (float) i_10) * f_2;
 			}
 			CoordGrid coordgrid_16 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
-			IdentitiKitIndexLoader.anInt361 = (int) floats_3[0] - coordgrid_16.x * 512;
-			Class109_Sub1.anInt9384 = (int) floats_3[1] * -1;
-			Class246.anInt3029 = (int) floats_3[2] - coordgrid_16.y * 512;
+			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (int) floats_3[0] - coordgrid_16.x * 512;
+			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = (int) floats_3[1] * -1;
+			Class246.CAM_MOVE_ABSOLUTEY = (int) floats_3[2] - coordgrid_16.y * 512;
 			float[] floats_6 = new float[3];
 			i_7 = client.anInt7280 * 2;
 			for (i_8 = 0; i_8 < 3; i_8++) {

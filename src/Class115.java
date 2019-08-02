@@ -8,7 +8,7 @@ public abstract class Class115 implements Interface7 {
 
 	static NativeSprite[] aNativeSpriteArray1248;
 
-	static int anInt1249;
+	static int CAM_MOVE_VAR_SPEED;
 
 	protected String aString1245 = null;
 
