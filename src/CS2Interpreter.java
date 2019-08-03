@@ -4007,7 +4007,7 @@ public class CS2Interpreter {
 		if (CustomCursorsPreference.INTERFACES[i_2] == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
-			String string_3 = CustomCursorsPreference.INTERFACES[i_2].components[0].aString1285;
+			String string_3 = CustomCursorsPreference.INTERFACES[i_2].components[0].name;
 			if (string_3 == null) {
 				executor.stringStack[++executor.stringStackPtr - 1] = "";
 			} else {
@@ -4157,7 +4157,7 @@ public class CS2Interpreter {
 	static final void method6449(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.playerIndex : -1;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.modelType == 1 ? icomponentdefinitions_3.playerIndex : -1;
 	}
 
 	static final void method6452(CS2Executor executor) {
@@ -4283,8 +4283,8 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		--i_4;
-		if (icomponentdefinitions_3.aStringArray1352 != null && i_4 < icomponentdefinitions_3.aStringArray1352.length && icomponentdefinitions_3.aStringArray1352[i_4] != null) {
-			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.aStringArray1352[i_4];
+		if (icomponentdefinitions_3.rightclickOptions != null && i_4 < icomponentdefinitions_3.rightclickOptions.length && icomponentdefinitions_3.rightclickOptions[i_4] != null) {
+			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.rightclickOptions[i_4];
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -5031,7 +5031,7 @@ public class CS2Interpreter {
 	static final void method6142(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontId;
 	}
 
 	static final void method289(CS2Executor executor) {
@@ -5368,7 +5368,7 @@ public class CS2Interpreter {
 	static final void method6314(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1320;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteId;
 	}
 
 	static final void method6315(CS2Executor executor) {
@@ -7091,7 +7091,7 @@ public class CS2Interpreter {
 	static final void method6212(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1320;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.spriteId;
 	}
 
 	static final void bitFlagged(CS2Executor executor) {
@@ -7356,7 +7356,7 @@ public class CS2Interpreter {
 	static final void method14602(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontId;
 	}
 
 	static final void bitAnd(CS2Executor executor) {
@@ -7456,8 +7456,8 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		--i_4;
-		if (icomponentdefinitions_3.aStringArray1352 != null && i_4 < icomponentdefinitions_3.aStringArray1352.length && icomponentdefinitions_3.aStringArray1352[i_4] != null) {
-			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.aStringArray1352[i_4];
+		if (icomponentdefinitions_3.rightclickOptions != null && i_4 < icomponentdefinitions_3.rightclickOptions.length && icomponentdefinitions_3.rightclickOptions[i_4] != null) {
+			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.rightclickOptions[i_4];
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -7557,7 +7557,7 @@ public class CS2Interpreter {
 	static final void method1512(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.playerIndex : -1;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.modelType == 1 ? icomponentdefinitions_3.playerIndex : -1;
 	}
 
 	static final void arrayStore(CS2Executor executor) {
@@ -8353,7 +8353,7 @@ public class CS2Interpreter {
 		if (CustomCursorsPreference.INTERFACES[i_2] == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
-			String string_4 = CustomCursorsPreference.INTERFACES[i_2].components[i_3].aString1285;
+			String string_4 = CustomCursorsPreference.INTERFACES[i_2].components[i_3].name;
 			if (string_4 == null) {
 				executor.stringStack[++executor.stringStackPtr - 1] = "";
 			} else {
@@ -8463,7 +8463,7 @@ public class CS2Interpreter {
 	static final void method15559(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontId;
 	}
 
 	static final void method4629(CS2Executor executor) {
@@ -10443,7 +10443,7 @@ public class CS2Interpreter {
 	static final void method8154(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontRelated;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.fontId;
 	}
 
 	static final void method8156(CS2Executor executor) {
@@ -10655,7 +10655,7 @@ public class CS2Interpreter {
 	static final void method14680(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.anInt1329 != 6) {
+		if (icomponentdefinitions_0.modelType != 6) {
 			throw new RuntimeException("");
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
@@ -10750,12 +10750,12 @@ public class CS2Interpreter {
 	static final void method15207(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
+		if (icomponentdefinitions_0.modelType != 6 && icomponentdefinitions_0.modelType != 2) {
 			throw new RuntimeException("");
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
-				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
+				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.modelType == 6);
 			}
 			icomponentdefinitions_0.npcMeshModifier.aLong4993 = CS2Executor.method1480();
 			if (npcdefinitions_5.modifiedColors != null && i_4 >= 0 && i_4 < npcdefinitions_5.modifiedColors.length) {
@@ -10794,7 +10794,7 @@ public class CS2Interpreter {
 		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1390 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.onMouseHoverScript = popParamsDynamic(string_4, cs2executor_2);
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
@@ -10848,7 +10848,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method774(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.aBool1351 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.hFlip = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10883,7 +10883,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7142(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aBool1420 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.shadow = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10904,7 +10904,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8754(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.aBool1316 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.filled = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10923,7 +10923,7 @@ public class CS2Interpreter {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
 		icomponentdefinitions_0.anObjectArray1397 = popParamsDynamic(string_4, cs2executor_2);
-		icomponentdefinitions_0.anIntArray1401 = ints_5;
+		icomponentdefinitions_0.varps = ints_5;
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
@@ -10946,7 +10946,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4160(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, short s_3) {
-		icomponentdefinitions_0.anInt1323 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.borderThickness = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10981,12 +10981,12 @@ public class CS2Interpreter {
 		if (popIntArrayParam(string_4, cs2executor_2) != null) {
 			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		icomponentdefinitions_0.anObjectArray1392 = popParamsDynamic(string_4, cs2executor_2);
+		icomponentdefinitions_0.onMouseLeaveScript = popParamsDynamic(string_4, cs2executor_2);
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
 	static final void method501(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.aBool1322 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.repeat_ = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11081,7 +11081,7 @@ public class CS2Interpreter {
 		} else {
 			bool_5 = false;
 		}
-		icomponentdefinitions_0.aBool1327 = bool_5;
+		icomponentdefinitions_0.alpha = bool_5;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11091,8 +11091,8 @@ public class CS2Interpreter {
 
 	static final void method8390(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		if (i_4 != icomponentdefinitions_0.anInt1320) {
-			icomponentdefinitions_0.anInt1320 = i_4;
+		if (i_4 != icomponentdefinitions_0.spriteId) {
+			icomponentdefinitions_0.spriteId = i_4;
 			Class109.redrawComponent(icomponentdefinitions_0);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11149,7 +11149,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2955(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.anInt1309 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.mouseOverCursor = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 	}
 
 	static final void method4772(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
@@ -11187,7 +11187,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5763(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1329 = 2;
+		icomponentdefinitions_0.modelType = 2;
 		icomponentdefinitions_0.npcMeshModifier = null;
 		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11240,7 +11240,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method13468(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.aBool1328 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.clickMask = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Message.method7278(icomponentdefinitions_0.idHash);
@@ -11266,7 +11266,7 @@ public class CS2Interpreter {
 			Item.method12575(icomponentdefinitions_0.idHash, (byte) 59);
 		}
 		if (i_6 == -1) {
-			icomponentdefinitions_0.anInt1329 = 1;
+			icomponentdefinitions_0.modelType = 1;
 			icomponentdefinitions_0.playerIndex = -1;
 			icomponentdefinitions_0.anInt1426 = -1;
 		} else {
@@ -11323,8 +11323,8 @@ public class CS2Interpreter {
 
 	static final void setIfTextAlign(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 3;
-		icomponentdefinitions_0.anInt1359 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1360 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.textHorizontalAli = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.textVerticalAli = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		icomponentdefinitions_0.anInt1358 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
@@ -11365,7 +11365,7 @@ public class CS2Interpreter {
 	}
 
 	static final void setIfFont(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.fontRelated = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.fontId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Game.method8207(icomponentdefinitions_0.idHash);
@@ -11395,8 +11395,8 @@ public class CS2Interpreter {
 		} else if (i_5 > 5) {
 			i_5 = 5;
 		}
-		icomponentdefinitions_0.aByte1333 = (byte) i_4;
-		icomponentdefinitions_0.aByte1355 = (byte) i_5;
+		icomponentdefinitions_0.aspectXType = (byte) i_4;
+		icomponentdefinitions_0.aspectYType = (byte) i_5;
 		Class109.redrawComponent(icomponentdefinitions_0);
 		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
 		if (icomponentdefinitions_0.type == 0) {
@@ -11424,9 +11424,9 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1339 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 2] == 1) {
-			icomponentdefinitions_0.anInt1329 = 9;
+			icomponentdefinitions_0.modelType = 9;
 		} else {
-			icomponentdefinitions_0.anInt1329 = 8;
+			icomponentdefinitions_0.modelType = 8;
 		}
 		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 3] == 1) {
 			icomponentdefinitions_0.aBool1388 = true;
@@ -11465,8 +11465,8 @@ public class CS2Interpreter {
 		} else if (i_5 > 4) {
 			i_5 = 4;
 		}
-		icDefs.aByte1368 = (byte) i_4;
-		icDefs.aByte1294 = (byte) i_5;
+		icDefs.aspectWidthType = (byte) i_4;
+		icDefs.aspectHeightType = (byte) i_5;
 		Class109.redrawComponent(icDefs);
 		IdentikitDefinition.method913(interface_1, icDefs);
 		if (icDefs.type == 0) {
@@ -11475,7 +11475,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7555(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.anInt1329 = 1;
+		icomponentdefinitions_0.modelType = 1;
 		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11537,7 +11537,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3987(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1329 = 3;
+		icomponentdefinitions_0.modelType = 3;
 		icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11548,7 +11548,7 @@ public class CS2Interpreter {
 	static final void method1494(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.anInt1329 != 2) {
+		if (icomponentdefinitions_0.modelType != 2) {
 			throw new RuntimeException("");
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
@@ -11570,7 +11570,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method12401(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1329 = 5;
+		icomponentdefinitions_0.modelType = 5;
 		icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11605,7 +11605,7 @@ public class CS2Interpreter {
 		} else {
 			bool_5 = false;
 		}
-		icomponentdefinitions_0.aBool1325 = bool_5;
+		icomponentdefinitions_0.vFlip = bool_5;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11614,7 +11614,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5066(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1329 = 5;
+		icomponentdefinitions_0.modelType = 5;
 		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, 1743541888);
@@ -11638,12 +11638,12 @@ public class CS2Interpreter {
 	static final void method3601(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.anInt1329 != 6 && icomponentdefinitions_0.anInt1329 != 2) {
+		if (icomponentdefinitions_0.modelType != 6 && icomponentdefinitions_0.modelType != 2) {
 			throw new RuntimeException("");
 		} else {
 			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
-				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.anInt1329 == 6);
+				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.modelType == 6);
 			}
 			icomponentdefinitions_0.npcMeshModifier.aLong4993 = CS2Executor.method1480();
 			if (npcdefinitions_5.modifiedTextures != null && i_4 >= 0 && i_4 < npcdefinitions_5.modifiedTextures.length) {
@@ -11709,7 +11709,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method569(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1362 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.multiline = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11778,8 +11778,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method6045(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.anInt1310 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1307 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.targetLeaveCursor = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.targetOverCursor = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 	}
 
 	static final void setOnMouseOver(IComponentDefinitions iCompDefs, RSInterface inter, CS2Executor cs2executor_2) {
@@ -11787,7 +11787,7 @@ public class CS2Interpreter {
 		if (popIntArrayParam(paramTypes, cs2executor_2) != null) {
 			paramTypes = paramTypes.substring(0, paramTypes.length() - 1);
 		}
-		iCompDefs.mouseOverScript = popParamsDynamic(paramTypes, cs2executor_2);
+		iCompDefs.popupScript = popParamsDynamic(paramTypes, cs2executor_2);
 		iCompDefs.usesScripts = true;
 	}
 
@@ -11847,7 +11847,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method11337(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.anInt1329 = 6;
+		icomponentdefinitions_0.modelType = 6;
 		icomponentdefinitions_0.npcMeshModifier = null;
 		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11856,7 +11856,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15474(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.aStringArray1352 = null;
+		icomponentdefinitions_0.rightclickOptions = null;
 	}
 
 	static final void method1642(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {

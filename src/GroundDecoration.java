@@ -514,12 +514,12 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						if (client.aBoolArray7410[i_13] || client.anInt7412 > 1) {
 							if (inter.type == 3) {
 								if (i_16 == 0) {
-									if (inter.aBool1316) {
+									if (inter.filled) {
 										Renderers.SOFTWARE_RENDERER.B(drawX, drawY, inter.width, inter.height, inter.color, 0);
 									} else {
 										Renderers.SOFTWARE_RENDERER.method8430(drawX, drawY, inter.width, inter.height, inter.color, 0);
 									}
-								} else if (inter.aBool1316) {
+								} else if (inter.filled) {
 									Renderers.SOFTWARE_RENDERER.B(drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | inter.color & 0xffffff, 1);
 								} else {
 									Renderers.SOFTWARE_RENDERER.method8430(drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | inter.color & 0xffffff, 1);
@@ -559,9 +559,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
 										}
 										if (inter.aBool1363) {
-											fontrenderer_43.method367(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, inter.anInt1359, inter.anInt1360, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class182.aNativeSpriteArray2261, (int[]) null, 1113506161);
+											fontrenderer_43.method367(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class182.aNativeSpriteArray2261, (int[]) null, 1113506161);
 										} else {
-											fontrenderer_43.method373(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.aBool1420 ? 255 - (i_16 & 0xff) << 24 : -1, inter.anInt1359, inter.anInt1360, inter.anInt1358, inter.anInt1362, Class182.aNativeSpriteArray2261, (int[]) null, (Class455) null, 0, 0);
+											fontrenderer_43.method373(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, inter.anInt1358, inter.multiline, Class182.aNativeSpriteArray2261, (int[]) null, (Class455) null, 0, 0);
 										}
 										if (client.aBool7358) {
 											Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
@@ -577,7 +577,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											NativeSprite nativesprite_41;
 											if (inter.anInt1426 != -1) {
 												PlayerAppearance playerappearance_34 = inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null;
-												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.anInt1323, ~0xffffff | inter.anInt1324, inter.anInt1335, playerappearance_34);
+												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.anInt1324, inter.anInt1335, playerappearance_34);
 											} else if (inter.anInt1435 != -1) {
 												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, inter.anInt1435);
 											} else {
@@ -587,7 +587,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												i_22 = nativesprite_41.scaleWidth();
 												i_23 = nativesprite_41.method2748();
 												i_24 = 255 - (i_16 & 0xff) << 24 | (inter.color != 0 ? inter.color & 0xffffff : 16777215);
-												if (!inter.aBool1322) {
+												if (!inter.repeat_) {
 													if (inter.color == 0 && i_16 == 0) {
 														if (inter.anInt1423 != 0) {
 															nativesprite_41.method2758((float) inter.width / 2.0F + (float) drawX, (float) drawY + (float) inter.height / 2.0F, inter.width * 4096 / i_22, inter.anInt1423);
@@ -649,7 +649,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											}
 										} else {
 											Player player_37;
-											if (inter.anInt1329 == 3) {
+											if (inter.modelType == 3) {
 												i_24 = inter.playerIndex;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
@@ -660,7 +660,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 														}
 													}
 												}
-											} else if (inter.anInt1329 == 5) {
+											} else if (inter.modelType == 5) {
 												i_24 = inter.playerIndex;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
@@ -668,7 +668,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.aAnimation_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS, (short) -10357);
 													}
 												}
-											} else if (inter.anInt1329 != 8 && inter.anInt1329 != 9) {
+											} else if (inter.modelType != 8 && inter.modelType != 9) {
 												if (inter.aAnimation_1437 != null && inter.aAnimation_1437.hasDefs()) {
 													meshrasterizer_40 = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.aAnimation_1437, VertexNormal.MY_PLAYER.playerAppearance);
 													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
@@ -683,7 +683,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											} else {
 												ItemContainer class282_sub30_42 = ItemContainer.getContainer(inter.playerIndex, false);
 												if (class282_sub30_42 != null) {
-													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.aAnimation_1437, inter.anInt1339, inter.anInt1329 == 9, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null);
+													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.aAnimation_1437, inter.anInt1339, inter.modelType == 9, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null);
 												}
 											}
 										}

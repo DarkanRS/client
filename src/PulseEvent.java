@@ -78,8 +78,8 @@ public class PulseEvent extends CacheableNode {
 				int i_6 = event.primary;
 				int i_7 = event.secondary;
 				int i_8 = event.tertiary;
-				if (i_6 != icomponentdefinitions_5.anInt1329 || i_7 != icomponentdefinitions_5.playerIndex || i_8 != icomponentdefinitions_5.anInt1339) {
-					icomponentdefinitions_5.anInt1329 = i_6;
+				if (i_6 != icomponentdefinitions_5.modelType || i_7 != icomponentdefinitions_5.playerIndex || i_8 != icomponentdefinitions_5.anInt1339) {
+					icomponentdefinitions_5.modelType = i_6;
 					icomponentdefinitions_5.playerIndex = i_7;
 					icomponentdefinitions_5.anInt1339 = i_8;
 					icomponentdefinitions_5.npcMeshModifier = null;
@@ -149,9 +149,9 @@ public class PulseEvent extends CacheableNode {
 				}
 			} else if (type == 11) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				icomponentdefinitions_5.aByte1333 = 0;
+				icomponentdefinitions_5.aspectXType = 0;
 				icomponentdefinitions_5.x = icomponentdefinitions_5.basePositionX = event.primary;
-				icomponentdefinitions_5.aByte1355 = 0;
+				icomponentdefinitions_5.aspectYType = 0;
 				icomponentdefinitions_5.y = icomponentdefinitions_5.basePositionY = event.secondary;
 				Class109.redrawComponent(icomponentdefinitions_5);
 			} else if (type == 12) {
@@ -171,20 +171,20 @@ public class PulseEvent extends CacheableNode {
 				}
 			} else if (type == 14) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				icomponentdefinitions_5.anInt1320 = event.primary;
+				icomponentdefinitions_5.spriteId = event.primary;
 			} else if (type == 15) {
 				Class187.aBool2360 = true;
 				Class187.anInt2361 = event.primary;
 				Class187.anInt2359 = event.secondary;
 			} else if (type == 16) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				icomponentdefinitions_5.fontRelated = event.primary;
+				icomponentdefinitions_5.fontId = event.primary;
 			} else if (type == 20) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.aBool1356 = event.primary == 1;
 			} else if (type == 21) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				icomponentdefinitions_5.aBool1328 = event.primary == 1;
+				icomponentdefinitions_5.clickMask = event.primary == 1;
 			} else if (type == 17) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.anInt1435 = event.primary;

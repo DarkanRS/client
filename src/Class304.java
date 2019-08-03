@@ -693,8 +693,8 @@ public class Class304 implements Interface27 {
 			Class506.USE_OPTIONS_FLAGS = flags;
 			CutsceneAction_Sub12.USE_INTERFACE_ID = interfaceId;
 			client.anInt7346 = componentDefs.anInt1426;
-			Defaults8Loader.anInt5932 = componentDefs.anInt1307;
-			client.anInt7427 = componentDefs.anInt1310;
+			Defaults8Loader.anInt5932 = componentDefs.targetOverCursor;
+			client.anInt7427 = componentDefs.targetLeaveCursor;
 			Class109.redrawComponent(componentDefs);
 		}
 	}

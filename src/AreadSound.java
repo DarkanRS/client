@@ -82,7 +82,7 @@ public class AreadSound {
 				if (fontrenderer_5 == null) {
 					fontrenderer_5 = Class285.aFontRenderer_3394;
 				}
-				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.width, Class20.aClass118_183.height, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 1750233370);
+				fontrenderer_5.method367(string_2, Class20.anInt195, Class20.anInt179, Class20.aClass118_183.width, Class20.aClass118_183.height, Class20.aClass118_183.color, Class20.aClass118_183.anInt1324, Class20.aClass118_183.textHorizontalAli, Class20.aClass118_183.textVerticalAli, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class115.aNativeSpriteArray1248, Class20.anIntArray177, 1750233370);
 				Class292.method5201(client.anIntArray7438[0], client.anIntArray7438[1], client.anIntArray7438[2], client.anIntArray7438[3]);
 			}
 		}

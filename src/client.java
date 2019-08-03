@@ -1912,7 +1912,7 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.aBool1328 && iCompDef.type == 5 && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.aBool1322 && iCompDef.anInt1423 == 0;
+						boolean bool_47 = iCompDef.clickMask && iCompDef.type == 5 && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.repeat_ && iCompDef.anInt1423 == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -1936,8 +1936,8 @@ public final class client extends Engine {
 						}
 
 						if (!aBool7344 && bool_48) {
-							if (iCompDef.anInt1309 >= 0) {
-								anInt7427 = iCompDef.anInt1309;
+							if (iCompDef.mouseOverCursor >= 0) {
+								anInt7427 = iCompDef.mouseOverCursor;
 							} else if (iCompDef.noClickThrough) {
 								anInt7427 = -1;
 							}
@@ -2306,36 +2306,36 @@ public final class client extends Engine {
 
 							if (!iCompDef.aBool1440 && bool_48) {
 								iCompDef.aBool1440 = true;
-								if (iCompDef.anObjectArray1390 != null) {
+								if (iCompDef.onMouseHoverScript != null) {
 									HookRequest hookRequest = new HookRequest();
 									hookRequest.hasMousePosition = true;
 									hookRequest.source = iCompDef;
 									hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
 									hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
-									hookRequest.params = iCompDef.anObjectArray1390;
+									hookRequest.params = iCompDef.onMouseHoverScript;
 									PENDING_HOOK_REQUESTS.append(hookRequest);
 								}
 							}
 
-							if (iCompDef.aBool1440 && bool_48 && iCompDef.mouseOverScript != null) {
+							if (iCompDef.aBool1440 && bool_48 && iCompDef.popupScript != null) {
 								HookRequest hookRequest = new HookRequest();
 								hookRequest.hasMousePosition = true;
 								hookRequest.source = iCompDef;
 								hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
 								hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
-								hookRequest.params = iCompDef.mouseOverScript;
+								hookRequest.params = iCompDef.popupScript;
 								PENDING_HOOK_REQUESTS.append(hookRequest);
 							}
 
 							if (iCompDef.aBool1440 && !bool_48) {
 								iCompDef.aBool1440 = false;
-								if (iCompDef.anObjectArray1392 != null) {
+								if (iCompDef.onMouseLeaveScript != null) {
 									HookRequest hookRequest = new HookRequest();
 									hookRequest.hasMousePosition = true;
 									hookRequest.source = iCompDef;
 									hookRequest.mouseX = Class163.mouseRecorder.getMouseX() - x;
 									hookRequest.mouseY = Class163.mouseRecorder.getMouseY() - y;
-									hookRequest.params = iCompDef.anObjectArray1392;
+									hookRequest.params = iCompDef.onMouseLeaveScript;
 									aClass482_7404.append(hookRequest);
 								}
 							}
@@ -2399,12 +2399,12 @@ public final class client extends Engine {
 							}
 
 							if (iCompDef.anObjectArray1397 != null && anInt7453 > iCompDef.anInt1443) {
-								if (iCompDef.anIntArray1401 != null && anInt7453 - iCompDef.anInt1443 <= 32) {
+								if (iCompDef.varps != null && anInt7453 - iCompDef.anInt1443 <= 32) {
 									label921: for (i_24 = iCompDef.anInt1443; i_24 < anInt7453; i_24++) {
 										i_25 = anIntArray7379[i_24 & 0x1f];
 
-										for (i_26 = 0; i_26 < iCompDef.anIntArray1401.length; i_26++) {
-											if (i_25 == iCompDef.anIntArray1401[i_26]) {
+										for (i_26 = 0; i_26 < iCompDef.varps.length; i_26++) {
+											if (i_25 == iCompDef.varps[i_26]) {
 												hookrequest_54 = new HookRequest();
 												hookrequest_54.source = iCompDef;
 												hookrequest_54.params = iCompDef.anObjectArray1397;

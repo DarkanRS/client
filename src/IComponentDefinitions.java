@@ -39,53 +39,53 @@ public class IComponentDefinitions {
 	public static SoftCache aClass229_1341 = new SoftCache(50);
 	public static boolean aBool1399 = false;
 	public int type;
-	public String aString1285;
+	public String name;
 	public int contentType = 0;
 	public int basePositionX = 0;
 	public int basePositionY = 0;
 	public int baseWidth = 0;
 	public int baseHeight = 0;
-	public byte aByte1368 = 0;
-	public byte aByte1294 = 0;
-	public byte aByte1333 = 0;
-	public byte aByte1355 = 0;
+	public byte aspectWidthType = 0;
+	public byte aspectHeightType = 0;
+	public byte aspectXType = 0;
+	public byte aspectYType = 0;
 	public int parent = -1;
 	public boolean hidden = false;
 	public int scrollWidth = 0;
 	public int scrollHeight = 0;
 	public boolean noClickThrough = false;
-	public int anInt1320 = -1;
+	public int spriteId = -1;
 	public int anInt1423 = 0;
-	public int anInt1329 = 1;
+	public int modelType = 1;
 	public int playerIndex;
-	public boolean aBool1322 = false;
-	public int fontRelated = -1;
+	public boolean repeat_ = false;
+	public int fontId = -1;
 	public String text = "";
 	public int color = 0;
-	public boolean aBool1327 = false;
+	public boolean alpha = false;
 	public int transparency = 0;
-	public int anInt1323 = 0;
+	public int borderThickness = 0;
 	public int anInt1324 = 0;
 	public int anInt1358 = 0;
-	public int anInt1359 = 0;
-	public int anInt1360 = 0;
+	public int textHorizontalAli = 0;
+	public int textVerticalAli = 0;
 	public int anInt1377 = 1;
 	public boolean aBool1332;
 	public boolean aBool1356 = true;
-	public boolean aBool1316 = false;
+	public boolean filled = false;
 	public byte[][] aByteArrayArray1366;
 	public byte[][] aByteArrayArray1367;
 	public int[] anIntArray1395;
 	public int[] anIntArray1267;
 	public String aString1369;
-	public boolean aBool1325;
-	public boolean aBool1420 = false;
+	public boolean vFlip;
+	public boolean shadow = false;
 	public boolean aBool1357 = false;
-	public String[] aStringArray1352;
+	public String[] rightclickOptions;
 	public boolean aBool1344 = false;
-	public int anInt1362 = 0;
-	public int[] anIntArray1284;
-	public boolean aBool1351;
+	public int multiline = 0;
+	public int[] opCursors;
+	public boolean hFlip;
 	public String aString1348;
 	public boolean aBool1345 = false;
 	public boolean aBool1424;
@@ -99,17 +99,17 @@ public class IComponentDefinitions {
 	public int spriteRoll = 0;
 	public int spriteYaw = 0;
 	public int spriteScale = 100;
-	public boolean aBool1328 = true;
+	public boolean clickMask = true;
 	public int anInt1304 = 0;
 	public int animation;
-	public int anInt1307 = -1;
-	public int anInt1309 = -1;
+	public int targetOverCursor = -1;
+	public int mouseOverCursor = -1;
 	public IComponentSettings settings;
 	public int anInt1417 = 0;
-	public int anInt1310 = -1;
-	public Object[] scriptParams;
-	public Object[] anObjectArray1390;
-	public Object[] anObjectArray1392;
+	public int targetLeaveCursor = -1;
+	public Object[] onLoadScript;
+	public Object[] onMouseHoverScript;
+	public Object[] onMouseLeaveScript;
 	public Object[] anObjectArray1396;
 	public Object[] anObjectArray1400;
 	public Object[] anObjectArray1397;
@@ -119,7 +119,7 @@ public class IComponentDefinitions {
 	public Object[] params;
 	public int anInt1326 = 0;
 	public Object[] anObjectArray1393;
-	public Object[] mouseOverScript;
+	public Object[] popupScript;
 	public Object[] anObjectArray1386;
 	public Object[] anObjectArray1319;
 	public Object[] anObjectArray1302;
@@ -129,7 +129,7 @@ public class IComponentDefinitions {
 	public Object[] anObjectArray1412;
 	public Object[] anObjectArray1403;
 	public Object[] anObjectArray1405;
-	public int[] anIntArray1401;
+	public int[] varps;
 	public int[] mouseLeaveArrayParam;
 	public int[] anIntArray1402;
 	public int[] anIntArray1315;
@@ -185,6 +185,21 @@ public class IComponentDefinitions {
 	short[] aShortArray1331;
 	short[] aShortArray1349;
 	short[] aShortArray1317;
+	
+	public enum ContentType {
+		MODEL(6),
+		FIGURE(3),
+		TEXT(4),
+		CONTAINER(0),
+		SPRITE(5), 
+		UNKNOWN(9);
+		
+		private int id;
+		
+		private ContentType(int id) {
+			this.id = id;
+		}
+	}
 
 	void readValues(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
@@ -194,17 +209,17 @@ public class IComponentDefinitions {
 		this.type = rsbytebuffer_1.readUnsignedByte();
 		if ((this.type & 0x80) != 0) {
 			this.type &= 0x7f;
-			this.aString1285 = rsbytebuffer_1.readString();
+			this.name = rsbytebuffer_1.readString();
 		}
 		this.contentType = rsbytebuffer_1.readUnsignedShort();
 		this.basePositionX = rsbytebuffer_1.readShort();
 		this.basePositionY = rsbytebuffer_1.readShort();
 		this.baseWidth = rsbytebuffer_1.readUnsignedShort();
 		this.baseHeight = rsbytebuffer_1.readUnsignedShort();
-		this.aByte1368 = rsbytebuffer_1.readByte();
-		this.aByte1294 = rsbytebuffer_1.readByte();
-		this.aByte1333 = rsbytebuffer_1.readByte();
-		this.aByte1355 = rsbytebuffer_1.readByte();
+		this.aspectWidthType = rsbytebuffer_1.readByte();
+		this.aspectHeightType = rsbytebuffer_1.readByte();
+		this.aspectXType = rsbytebuffer_1.readByte();
+		this.aspectYType = rsbytebuffer_1.readByte();
 		this.parent = rsbytebuffer_1.readUnsignedShort();
 		if (this.parent == 65535) {
 			this.parent = -1;
@@ -223,31 +238,30 @@ public class IComponentDefinitions {
 				this.noClickThrough = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
-		int i_5;
 		if (this.type == 5) {
-			this.anInt1320 = rsbytebuffer_1.readInt();
+			this.spriteId = rsbytebuffer_1.readInt();
 			this.anInt1423 = rsbytebuffer_1.readUnsignedShort();
-			i_5 = rsbytebuffer_1.readUnsignedByte();
-			this.aBool1322 = (i_5 & 0x1) != 0;
-			this.aBool1327 = (i_5 & 0x2) != 0;
+			int flag2 = rsbytebuffer_1.readUnsignedByte();
+			this.repeat_ = (flag2 & 0x1) != 0;
+			this.alpha = (flag2 & 0x2) != 0;
 			this.transparency = rsbytebuffer_1.readUnsignedByte();
-			this.anInt1323 = rsbytebuffer_1.readUnsignedByte();
+			this.borderThickness = rsbytebuffer_1.readUnsignedByte();
 			this.anInt1324 = rsbytebuffer_1.readInt();
-			this.aBool1325 = rsbytebuffer_1.readUnsignedByte() == 1;
-			this.aBool1351 = rsbytebuffer_1.readUnsignedByte() == 1;
+			this.vFlip = rsbytebuffer_1.readUnsignedByte() == 1;
+			this.hFlip = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.color = rsbytebuffer_1.readInt();
 			if (i_3 >= 3) {
-				this.aBool1328 = rsbytebuffer_1.readUnsignedByte() == 1;
+				this.clickMask = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
 		if (this.type == 6) {
-			this.anInt1329 = 1;
+			this.modelType = 1;
 			this.playerIndex = rsbytebuffer_1.readBigSmart();
-			i_5 = rsbytebuffer_1.readUnsignedByte();
-			boolean bool_6 = (i_5 & 0x1) == 1;
-			this.aBool1332 = (i_5 & 0x2) == 2;
-			this.aBool1344 = (i_5 & 0x4) == 4;
-			this.aBool1345 = (i_5 & 0x8) == 8;
+			int flag2 = rsbytebuffer_1.readUnsignedByte();
+			boolean bool_6 = (flag2 & 0x1) == 1;
+			this.aBool1332 = (flag2 & 0x2) == 2;
+			this.aBool1344 = (flag2 & 0x4) == 4;
+			this.aBool1345 = (flag2 & 0x8) == 8;
 			if (bool_6) {
 				this.anInt1441 = rsbytebuffer_1.readShort();
 				this.anInt1263 = rsbytebuffer_1.readShort();
@@ -265,15 +279,15 @@ public class IComponentDefinitions {
 				this.spriteScale = rsbytebuffer_1.readShort();
 			}
 			this.animation = rsbytebuffer_1.readBigSmart();
-			if (this.aByte1368 != 0) {
+			if (this.aspectWidthType != 0) {
 				this.anInt1417 = rsbytebuffer_1.readUnsignedShort();
 			}
-			if (this.aByte1294 != 0) {
+			if (this.aspectHeightType != 0) {
 				this.anInt1326 = rsbytebuffer_1.readUnsignedShort();
 			}
 		}
 		if (this.type == 4) {
-			this.fontRelated = rsbytebuffer_1.readBigSmart();
+			this.fontId = rsbytebuffer_1.readBigSmart();
 			if (i_3 >= 2) {
 				this.aBool1356 = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
@@ -284,18 +298,18 @@ public class IComponentDefinitions {
 				this.text = this.text.replace("Runescape", "Darkan");
 			}
 			this.anInt1358 = rsbytebuffer_1.readUnsignedByte();
-			this.anInt1359 = rsbytebuffer_1.readUnsignedByte();
-			this.anInt1360 = rsbytebuffer_1.readUnsignedByte();
-			this.aBool1420 = rsbytebuffer_1.readUnsignedByte() == 1;
+			this.textHorizontalAli = rsbytebuffer_1.readUnsignedByte();
+			this.textVerticalAli = rsbytebuffer_1.readUnsignedByte();
+			this.shadow = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.color = rsbytebuffer_1.readInt();
 			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 >= 0) {
-				this.anInt1362 = rsbytebuffer_1.readUnsignedByte();
+				this.multiline = rsbytebuffer_1.readUnsignedByte();
 			}
 		}
 		if (this.type == 3) {
 			this.color = rsbytebuffer_1.readInt();
-			this.aBool1316 = rsbytebuffer_1.readUnsignedByte() == 1;
+			this.filled = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.transparency = rsbytebuffer_1.readUnsignedByte();
 		}
 		if (this.type == 9) {
@@ -303,7 +317,7 @@ public class IComponentDefinitions {
 			this.color = rsbytebuffer_1.readInt();
 			this.aBool1357 = rsbytebuffer_1.readUnsignedByte() == 1;
 		}
-		i_5 = rsbytebuffer_1.read24BitUnsignedInteger();
+		int optionMask = rsbytebuffer_1.read24BitUnsignedInteger();
 		int i_16 = rsbytebuffer_1.readUnsignedByte();
 		int i_7;
 		if (i_16 != 0) {
@@ -333,23 +347,23 @@ public class IComponentDefinitions {
 		int i_18 = i_7 >> 4;
 		int i_10;
 		if (i_17 > 0) {
-			this.aStringArray1352 = new String[i_17];
+			this.rightclickOptions = new String[i_17];
 			for (i_10 = 0; i_10 < i_17; i_10++) {
-				this.aStringArray1352[i_10] = rsbytebuffer_1.readString();
+				this.rightclickOptions[i_10] = rsbytebuffer_1.readString();
 			}
 		}
 		int i_11;
 		if (i_18 > 0) {
 			i_10 = rsbytebuffer_1.readUnsignedByte();
-			this.anIntArray1284 = new int[i_10 + 1];
-			for (i_11 = 0; i_11 < this.anIntArray1284.length; i_11++) {
-				this.anIntArray1284[i_11] = -1;
+			this.opCursors = new int[i_10 + 1];
+			for (i_11 = 0; i_11 < this.opCursors.length; i_11++) {
+				this.opCursors[i_11] = -1;
 			}
-			this.anIntArray1284[i_10] = rsbytebuffer_1.readUnsignedShort();
+			this.opCursors[i_10] = rsbytebuffer_1.readUnsignedShort();
 		}
 		if (i_18 > 1) {
 			i_10 = rsbytebuffer_1.readUnsignedByte();
-			this.anIntArray1284[i_10] = rsbytebuffer_1.readUnsignedShort();
+			this.opCursors[i_10] = rsbytebuffer_1.readUnsignedShort();
 		}
 		this.aString1348 = rsbytebuffer_1.readString();
 		if (this.aString1348.equals("")) {
@@ -360,27 +374,27 @@ public class IComponentDefinitions {
 		this.anInt1382 = rsbytebuffer_1.readUnsignedByte();
 		this.aString1338 = rsbytebuffer_1.readString();
 		i_10 = -1;
-		if (IComponentSettings.getUseOptionFlags(i_5) != 0) {
+		if (IComponentSettings.getUseOptionFlags(optionMask) != 0) {
 			i_10 = rsbytebuffer_1.readUnsignedShort();
 			if (i_10 == 65535) {
 				i_10 = -1;
 			}
-			this.anInt1307 = rsbytebuffer_1.readUnsignedShort();
-			if (this.anInt1307 == 65535) {
-				this.anInt1307 = -1;
+			this.targetOverCursor = rsbytebuffer_1.readUnsignedShort();
+			if (this.targetOverCursor == 65535) {
+				this.targetOverCursor = -1;
 			}
-			this.anInt1310 = rsbytebuffer_1.readUnsignedShort();
-			if (this.anInt1310 == 65535) {
-				this.anInt1310 = -1;
+			this.targetLeaveCursor = rsbytebuffer_1.readUnsignedShort();
+			if (this.targetLeaveCursor == 65535) {
+				this.targetLeaveCursor = -1;
 			}
 		}
 		if (i_3 >= 0) {
-			this.anInt1309 = rsbytebuffer_1.readUnsignedShort();
-			if (this.anInt1309 == 65535) {
-				this.anInt1309 = -1;
+			this.mouseOverCursor = rsbytebuffer_1.readUnsignedShort();
+			if (this.mouseOverCursor == 65535) {
+				this.mouseOverCursor = -1;
 			}
 		}
-		this.settings = new IComponentSettings(i_5, i_10);
+		this.settings = new IComponentSettings(optionMask, i_10);
 		if (i_3 >= 0) {
 			i_11 = rsbytebuffer_1.readUnsignedByte();
 			int i_12;
@@ -398,37 +412,37 @@ public class IComponentDefinitions {
 				this.aClass465_1365.put(new StringNode(string_15), (long) i_14);
 			}
 		}
-		this.scriptParams = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1390 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1392 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1396 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1400 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1397 = this.method1990(rsbytebuffer_1);
-		this.mouseLeaveScript = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1387 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1409 = this.method1990(rsbytebuffer_1);
-		this.params = this.method1990(rsbytebuffer_1);
+		this.onLoadScript = this.decodeScript(rsbytebuffer_1);
+		this.onMouseHoverScript = this.decodeScript(rsbytebuffer_1);
+		this.onMouseLeaveScript = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1396 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1400 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1397 = this.decodeScript(rsbytebuffer_1);
+		this.mouseLeaveScript = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1387 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1409 = this.decodeScript(rsbytebuffer_1);
+		this.params = this.decodeScript(rsbytebuffer_1);
 		if (i_3 >= 0) {
-			this.anObjectArray1393 = this.method1990(rsbytebuffer_1);
+			this.anObjectArray1393 = this.decodeScript(rsbytebuffer_1);
 		}
-		this.mouseOverScript = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1386 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1319 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1302 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1389 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1451 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1394 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1412 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1403 = this.method1990(rsbytebuffer_1);
-		this.anObjectArray1405 = this.method1990(rsbytebuffer_1);
-		this.anIntArray1401 = this.method1986(rsbytebuffer_1);
-		this.mouseLeaveArrayParam = this.method1986(rsbytebuffer_1);
-		this.anIntArray1402 = this.method1986(rsbytebuffer_1);
-		this.anIntArray1315 = this.method1986(rsbytebuffer_1);
-		this.anIntArray1406 = this.method1986(rsbytebuffer_1);
+		this.popupScript = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1386 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1319 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1302 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1389 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1451 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1394 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1412 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1403 = this.decodeScript(rsbytebuffer_1);
+		this.anObjectArray1405 = this.decodeScript(rsbytebuffer_1);
+		this.varps = this.decodeScript3(rsbytebuffer_1);
+		this.mouseLeaveArrayParam = this.decodeScript3(rsbytebuffer_1);
+		this.anIntArray1402 = this.decodeScript3(rsbytebuffer_1);
+		this.anIntArray1315 = this.decodeScript3(rsbytebuffer_1);
+		this.anIntArray1406 = this.decodeScript3(rsbytebuffer_1);
 	}
 
-	int[] method1986(RsByteBuffer rsbytebuffer_1) {
+	int[] decodeScript3(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 == 0) {
 			return null;
@@ -442,20 +456,20 @@ public class IComponentDefinitions {
 	}
 
 	public void method1987() {
-		this.scriptParams = null;
+		this.onLoadScript = null;
 		this.anObjectArray1386 = null;
 		this.anObjectArray1319 = null;
 		this.anObjectArray1302 = null;
 		this.anObjectArray1389 = null;
-		this.anObjectArray1390 = null;
-		this.mouseOverScript = null;
-		this.anObjectArray1392 = null;
+		this.onMouseHoverScript = null;
+		this.popupScript = null;
+		this.onMouseLeaveScript = null;
 		this.anObjectArray1451 = null;
 		this.anObjectArray1394 = null;
 		this.anObjectArray1400 = null;
 		this.anObjectArray1396 = null;
 		this.anObjectArray1397 = null;
-		this.anIntArray1401 = null;
+		this.varps = null;
 		this.mouseLeaveScript = null;
 		this.mouseLeaveArrayParam = null;
 		this.anObjectArray1387 = null;
@@ -482,18 +496,18 @@ public class IComponentDefinitions {
 	}
 
 	public FontRenderer method1988(Class378 class378_1, Interface35 interface35_2, int i_3) {
-		FontRenderer fontrenderer_4 = (FontRenderer) class378_1.method6426(interface35_2, this.fontRelated, false, this.aBool1356, -2116791003);
+		FontRenderer fontrenderer_4 = (FontRenderer) class378_1.method6426(interface35_2, this.fontId, false, this.aBool1356, -2116791003);
 		aBool1399 = fontrenderer_4 == null;
 		return fontrenderer_4;
 	}
 
 	public FontMetrics method1989(Class378 class378_1, Interface35 interface35_2) {
-		FontMetrics fontmetrics_4 = class378_1.method6415(interface35_2, this.fontRelated, -717286606);
+		FontMetrics fontmetrics_4 = class378_1.method6415(interface35_2, this.fontId, -717286606);
 		aBool1399 = fontmetrics_4 == null;
 		return fontmetrics_4;
 	}
 
-	Object[] method1990(RsByteBuffer rsbytebuffer_1) {
+	Object[] decodeScript(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 == 0) {
 			return null;
@@ -525,16 +539,16 @@ public class IComponentDefinitions {
 	}
 
 	public void method1994(int i_1, String string_2) {
-		if (this.aStringArray1352 == null || this.aStringArray1352.length <= i_1) {
+		if (this.rightclickOptions == null || this.rightclickOptions.length <= i_1) {
 			String[] arr_4 = new String[i_1 + 1];
-			if (this.aStringArray1352 != null) {
-				for (int i_5 = 0; i_5 < this.aStringArray1352.length; i_5++) {
-					arr_4[i_5] = this.aStringArray1352[i_5];
+			if (this.rightclickOptions != null) {
+				for (int i_5 = 0; i_5 < this.rightclickOptions.length; i_5++) {
+					arr_4[i_5] = this.rightclickOptions[i_5];
 				}
 			}
-			this.aStringArray1352 = arr_4;
+			this.rightclickOptions = arr_4;
 		}
-		this.aStringArray1352[i_1] = string_2;
+		this.rightclickOptions[i_1] = string_2;
 	}
 
 	public void method1995(int i_1) {
@@ -593,11 +607,11 @@ public class IComponentDefinitions {
 
 	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
 		aBool1399 = false;
-		if (this.anInt1329 == 0) {
+		if (this.modelType == 0) {
 			return null;
-		} else if (this.anInt1329 == 1 && this.playerIndex == -1) {
+		} else if (this.modelType == 1 && this.playerIndex == -1) {
 			return null;
-		} else if (this.anInt1329 == 1) {
+		} else if (this.modelType == 1) {
 			if (animation_9 != null) {
 				i_2 |= animation_9.method7640(-1880128798);
 			}
@@ -622,7 +636,7 @@ public class IComponentDefinitions {
 				}
 				i_2 |= 0x8000;
 			}
-			long long_21 = (long) graphicalrenderer_1.rendererId << 59 | (long) this.anInt1329 << 54 | (long) this.playerIndex << 38 | long_13 & 0x3fffffffffL;
+			long long_21 = (long) graphicalrenderer_1.rendererId << 59 | (long) this.modelType << 54 | (long) this.playerIndex << 38 | long_13 & 0x3fffffffffL;
 			MeshRasterizer meshrasterizer_18 = (MeshRasterizer) aClass229_1341.get(long_21);
 			if (meshrasterizer_18 == null || graphicalrenderer_1.method8452(meshrasterizer_18.m(), i_2) != 0) {
 				if (meshrasterizer_18 != null) {
@@ -658,7 +672,7 @@ public class IComponentDefinitions {
 			return meshrasterizer_18;
 		} else {
 			MeshRasterizer meshrasterizer_23;
-			if (this.anInt1329 == 2) {
+			if (this.modelType == 2) {
 				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.playerIndex).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.npcMeshModifier, 1874491057);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
@@ -666,7 +680,7 @@ public class IComponentDefinitions {
 				} else {
 					return meshrasterizer_23;
 				}
-			} else if (this.anInt1329 == 3) {
+			} else if (this.modelType == 3) {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
@@ -678,7 +692,7 @@ public class IComponentDefinitions {
 						return meshrasterizer_23;
 					}
 				}
-			} else if (this.anInt1329 == 4) {
+			} else if (this.modelType == 4) {
 				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.playerIndex);
 				MeshRasterizer meshrasterizer_24 = itemdefinitions_27.method7084(graphicalrenderer_1, i_2, 10, playerappearance_10, animation_9, 0, 0, 0, 0);
 				if (meshrasterizer_24 == null) {
@@ -687,7 +701,7 @@ public class IComponentDefinitions {
 				} else {
 					return meshrasterizer_24;
 				}
-			} else if (this.anInt1329 == 6) {
+			} else if (this.modelType == 6) {
 				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.playerIndex).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.npcMeshModifier, -653193588);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
@@ -695,7 +709,7 @@ public class IComponentDefinitions {
 				} else {
 					return meshrasterizer_23;
 				}
-			} else if (this.anInt1329 == 7) {
+			} else if (this.modelType == 7) {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
@@ -783,27 +797,27 @@ public class IComponentDefinitions {
 	}
 
 	public void method2039(int i_1, int i_2) {
-		if (this.anIntArray1284 == null || this.anIntArray1284.length <= i_1) {
+		if (this.opCursors == null || this.opCursors.length <= i_1) {
 			int[] ints_4 = new int[i_1 + 1];
-			if (this.anIntArray1284 != null) {
+			if (this.opCursors != null) {
 				int i_5;
-				for (i_5 = 0; i_5 < this.anIntArray1284.length; i_5++) {
-					ints_4[i_5] = this.anIntArray1284[i_5];
+				for (i_5 = 0; i_5 < this.opCursors.length; i_5++) {
+					ints_4[i_5] = this.opCursors[i_5];
 				}
-				for (i_5 = this.anIntArray1284.length; i_5 < i_1; i_5++) {
+				for (i_5 = this.opCursors.length; i_5 < i_1; i_5++) {
 					ints_4[i_5] = -1;
 				}
 			}
-			this.anIntArray1284 = ints_4;
+			this.opCursors = ints_4;
 		}
-		this.anIntArray1284[i_1] = i_2;
+		this.opCursors[i_1] = i_2;
 	}
 
 	public Class119 method2046(GraphicalRenderer graphicalrenderer_1, int i_2) {
 		long long_3 = (long) this.idHash << 32 | (long) this.anInt1288 & 0xffffffffL;
 		Class119 class119_5 = (Class119) aClass229_1303.get(long_3);
 		if (class119_5 != null) {
-			if (class119_5.anInt1459 != this.anInt1320) {
+			if (class119_5.anInt1459 != this.spriteId) {
 				aClass229_1303.method3873(long_3);
 				class119_5 = null;
 			}
@@ -811,7 +825,7 @@ public class IComponentDefinitions {
 				return class119_5;
 			}
 		}
-		SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(ProcessorSpecs.SPRITES_INDEX, this.anInt1320, 0);
+		SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(ProcessorSpecs.SPRITES_INDEX, this.spriteId, 0);
 		if (class91_6 == null) {
 			return null;
 		} else {
@@ -842,7 +856,7 @@ public class IComponentDefinitions {
 			if (class455_15 == null) {
 				return null;
 			} else {
-				class119_5 = new Class119(i_7, i_8, ints_10, ints_9, class455_15, this.anInt1320);
+				class119_5 = new Class119(i_7, i_8, ints_10, ints_9, class455_15, this.spriteId);
 				aClass229_1303.put(class119_5, long_3);
 				return class119_5;
 			}
@@ -851,31 +865,31 @@ public class IComponentDefinitions {
 
 	public NativeSprite method2048(GraphicalRenderer graphicalrenderer_1) {
 		aBool1399 = false;
-		long long_3 = ((this.aBool1351 ? 1L : 0L) << 39) + ((this.aBool1327 ? 1L : 0L) << 35) + (long) this.anInt1320 + ((long) this.anInt1323 << 36) + ((this.aBool1325 ? 1L : 0L) << 38) + ((long) this.anInt1324 << 40);
+		long long_3 = ((this.hFlip ? 1L : 0L) << 39) + ((this.alpha ? 1L : 0L) << 35) + (long) this.spriteId + ((long) this.borderThickness << 36) + ((this.vFlip ? 1L : 0L) << 38) + ((long) this.anInt1324 << 40);
 		NativeSprite nativesprite_5 = (NativeSprite) aClass229_1280.get(long_3);
 		if (nativesprite_5 != null) {
 			return nativesprite_5;
 		} else {
-			SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(ProcessorSpecs.SPRITES_INDEX, this.anInt1320, 0);
+			SpriteDefinitions class91_6 = SpriteDefinitions.getSprite(ProcessorSpecs.SPRITES_INDEX, this.spriteId, 0);
 			if (class91_6 == null) {
 				aBool1399 = true;
 				return null;
 			} else {
-				if (this.aBool1325) {
+				if (this.vFlip) {
 					class91_6.method1526();
 				}
-				if (this.aBool1351) {
+				if (this.hFlip) {
 					class91_6.method1525();
 				}
-				if (this.anInt1323 > 0) {
-					class91_6.method1554(this.anInt1323);
+				if (this.borderThickness > 0) {
+					class91_6.method1554(this.borderThickness);
 				} else if (this.anInt1324 != 0) {
 					class91_6.method1554(1);
 				}
-				if (this.anInt1323 >= 1) {
+				if (this.borderThickness >= 1) {
 					class91_6.method1536(1);
 				}
-				if (this.anInt1323 >= 2) {
+				if (this.borderThickness >= 2) {
 					class91_6.method1536(16777215);
 				}
 				if (this.anInt1324 != 0) {

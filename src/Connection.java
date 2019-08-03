@@ -51,10 +51,10 @@ public abstract class Connection {
     public static void runIComponentScripts(IComponentDefinitions[] arr_0) {
         for (int i_2 = 0; i_2 < arr_0.length; i_2++) {
             IComponentDefinitions icomponentdefinitions_3 = arr_0[i_2];
-            if (icomponentdefinitions_3.scriptParams != null) {
+            if (icomponentdefinitions_3.onLoadScript != null) {
                 HookRequest hookrequest_4 = new HookRequest();
                 hookrequest_4.source = icomponentdefinitions_3;
-                hookrequest_4.params = icomponentdefinitions_3.scriptParams;
+                hookrequest_4.params = icomponentdefinitions_3.onLoadScript;
                 CS2Executor.executeHookInner(hookrequest_4, 2000000, (byte) 84);
             }
         }

@@ -20,28 +20,28 @@ public class Class246 {
 	}
 
 	static void method4204(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
-		if (icomponentdefinitions_0.aByte1333 == 0) {
+		if (icomponentdefinitions_0.aspectXType == 0) {
 			icomponentdefinitions_0.x = icomponentdefinitions_0.basePositionX;
-		} else if (icomponentdefinitions_0.aByte1333 == 1) {
+		} else if (icomponentdefinitions_0.aspectXType == 1) {
 			icomponentdefinitions_0.x = icomponentdefinitions_0.basePositionX + (i_1 - icomponentdefinitions_0.width) / 2;
-		} else if (icomponentdefinitions_0.aByte1333 == 2) {
+		} else if (icomponentdefinitions_0.aspectXType == 2) {
 			icomponentdefinitions_0.x = i_1 - icomponentdefinitions_0.width - icomponentdefinitions_0.basePositionX;
-		} else if (icomponentdefinitions_0.aByte1333 == 3) {
+		} else if (icomponentdefinitions_0.aspectXType == 3) {
 			icomponentdefinitions_0.x = icomponentdefinitions_0.basePositionX * i_1 >> 14;
-		} else if (icomponentdefinitions_0.aByte1333 == 4) {
+		} else if (icomponentdefinitions_0.aspectXType == 4) {
 			icomponentdefinitions_0.x = (i_1 - icomponentdefinitions_0.width) / 2 + (icomponentdefinitions_0.basePositionX * i_1 >> 14);
 		} else {
 			icomponentdefinitions_0.x = i_1 - icomponentdefinitions_0.width - (icomponentdefinitions_0.basePositionX * i_1 >> 14);
 		}
-		if (icomponentdefinitions_0.aByte1355 == 0) {
+		if (icomponentdefinitions_0.aspectYType == 0) {
 			icomponentdefinitions_0.y = icomponentdefinitions_0.basePositionY;
-		} else if (icomponentdefinitions_0.aByte1355 == 1) {
+		} else if (icomponentdefinitions_0.aspectYType == 1) {
 			icomponentdefinitions_0.y = (i_2 - icomponentdefinitions_0.height) / 2 + icomponentdefinitions_0.basePositionY;
-		} else if (icomponentdefinitions_0.aByte1355 == 2) {
+		} else if (icomponentdefinitions_0.aspectYType == 2) {
 			icomponentdefinitions_0.y = i_2 - icomponentdefinitions_0.height - icomponentdefinitions_0.basePositionY;
-		} else if (icomponentdefinitions_0.aByte1355 == 3) {
+		} else if (icomponentdefinitions_0.aspectYType == 3) {
 			icomponentdefinitions_0.y = i_2 * icomponentdefinitions_0.basePositionY >> 14;
-		} else if (icomponentdefinitions_0.aByte1355 == 4) {
+		} else if (icomponentdefinitions_0.aspectYType == 4) {
 			icomponentdefinitions_0.y = (i_2 - icomponentdefinitions_0.height) / 2 + (i_2 * icomponentdefinitions_0.basePositionY >> 14);
 		} else {
 			icomponentdefinitions_0.y = i_2 - icomponentdefinitions_0.height - (i_2 * icomponentdefinitions_0.basePositionY >> 14);
