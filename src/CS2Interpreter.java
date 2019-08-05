@@ -4900,13 +4900,13 @@ public class CS2Interpreter {
 			int i_4;
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray428.length; i_4++) {
 				if (IdentikitDefinition.anIntArray428[i_4] == i_2) {
-					VertexNormal.MY_PLAYER.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, -1891661545);
+					VertexNormal.MY_PLAYER.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTIKIT_LOADER, -1891661545);
 					return;
 				}
 			}
 			for (i_4 = 0; i_4 < IdentikitDefinition.anIntArray422.length; i_4++) {
 				if (IdentikitDefinition.anIntArray422[i_4] == i_2) {
-					VertexNormal.MY_PLAYER.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTITI_KIT_LOADER, 938562628);
+					VertexNormal.MY_PLAYER.playerAppearance.method3993(i_4, i_3, IndexLoaders.IDENTIKIT_LOADER, 938562628);
 					break;
 				}
 			}

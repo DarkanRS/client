@@ -18,7 +18,7 @@ public class Class357_Sub1 extends Class357 {
 	static final void method12565() {
 		IndexLoaders.OVERLAY_LOADER.method11478();
 		IndexLoaders.UNDERLAY_LOADER.method8032();
-		IndexLoaders.IDENTITI_KIT_LOADER.method803();
+		IndexLoaders.IDENTIKIT_LOADER.method803();
 		IndexLoaders.MAP_REGION_DECODER.method4436().method7897();
 		IndexLoaders.NPC_INDEX_LOADER.method6833();
 		IndexLoaders.ITEM_LOADER.method7166();

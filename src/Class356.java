@@ -16,7 +16,7 @@ public class Class356 {
 		if (!bool_0) {
 			IndexLoaders.OVERLAY_LOADER.method11476();
 			IndexLoaders.UNDERLAY_LOADER.method8026();
-			IndexLoaders.IDENTITI_KIT_LOADER.method801();
+			IndexLoaders.IDENTIKIT_LOADER.method801();
 			IndexLoaders.MAP_REGION_DECODER.method4436().method7895((byte) 113);
 			IndexLoaders.NPC_INDEX_LOADER.method6836((byte) -66);
 			IndexLoaders.ITEM_LOADER.method7150(-1855693683);

@@ -50,7 +50,7 @@ public class IndexLoaders {
 	public static UnderlayIndexLoader UNDERLAY_LOADER;
 	public static HitsplatIndexLoader HITSPLAT_LOADER;
 	public static HitbarIndexLoader HITBAR_LOADER;
-	public static IdentiKitIndexLoader IDENTITI_KIT_LOADER;
+	public static IdentiKitIndexLoader IDENTIKIT_LOADER;
 	public static InventoriesIndexLoader INVENTORY_LOADER;
 	public static LightIntensityIndexLoader LIGHT_INTENSITY_LOADER;
 	public static ObjectIndexLoader OBJECT_LOADER;
@@ -270,7 +270,7 @@ public class IndexLoaders {
 			UNDERLAY_LOADER = new UnderlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			HITSPLAT_LOADER = new HitsplatIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			HITBAR_LOADER = new HitbarIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-			IDENTITI_KIT_LOADER = new IdentiKitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, MESH_INDEX);
+			IDENTIKIT_LOADER = new IdentiKitIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, MESH_INDEX);
 			INVENTORY_LOADER = new InventoriesIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			LIGHT_INTENSITY_LOADER = new LightIntensityIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			OBJECT_LOADER = new ObjectIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, OBJECT_INDEX, MESH_INDEX);

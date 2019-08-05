@@ -154,7 +154,7 @@ public class Class378 {
 	static final void method6438() {
 		IndexLoaders.OVERLAY_LOADER.method11477();
 		IndexLoaders.UNDERLAY_LOADER.method8030();
-		IndexLoaders.IDENTITI_KIT_LOADER.method802();
+		IndexLoaders.IDENTIKIT_LOADER.method802();
 		IndexLoaders.MAP_REGION_DECODER.method4436().method7896();
 		IndexLoaders.NPC_INDEX_LOADER.method6832();
 		IndexLoaders.ITEM_LOADER.method7156();
