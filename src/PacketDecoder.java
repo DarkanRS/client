@@ -197,11 +197,11 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IF_SETPLAYERMODEL_OTHER) {
-			int key = buffer.readUnsignedShort128();
+			int pid = buffer.readUnsignedShort128();
 			int interHash = buffer.readIntV1();
-			int i_6 = buffer.readIntV1();
+			int displayNameInt = buffer.readIntV1();
 			Class470.method7825();
-			PulseEvent.setIFContent(interHash, 5, key, i_6, (byte) -76);
+			PulseEvent.setIFContent(interHash, 5, pid, displayNameInt, (byte) -76);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CAM_SMOOTHRESET) {
