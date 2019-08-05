@@ -389,7 +389,7 @@ public class NPC extends Entity {
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1080298347) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
-				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -19);
@@ -476,7 +476,7 @@ public class NPC extends Entity {
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
 				Animation animation_11 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-539713016) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_12 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aAnimation_Sub3_10337;
-				MeshRasterizer meshrasterizer_13 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.size, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
+				MeshRasterizer meshrasterizer_13 = SongReference.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.size, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
 				if (meshrasterizer_13 != null) {
 					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length + 1) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -107);
@@ -558,7 +558,7 @@ public class NPC extends Entity {
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1093777602) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
-				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -114);
@@ -845,7 +845,7 @@ public class NPC extends Entity {
 			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(2108774285) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
-				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 				if (meshrasterizer_12 != null) {
 					if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 						this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -124);

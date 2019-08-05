@@ -8,7 +8,7 @@ public class CutsceneAction_Sub9 extends CutsceneAction {
 
     int anInt9279;
 
-    Class116 aClass116_9281;
+    SongReference aClass116_9281;
 
     CutsceneAction_Sub9(RsByteBuffer rsbytebuffer_1) {
         super(rsbytebuffer_1);
@@ -18,7 +18,7 @@ public class CutsceneAction_Sub9 extends CutsceneAction {
 
     boolean method1599() {
         if (this.aClass116_9281 == null) {
-            this.aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, this.anInt9280);
+            this.aClass116_9281 = new SongReference(IndexLoaders.MUSIC_INDEX, this.anInt9280);
         }
         return this.aClass116_9281.method1963();
     }

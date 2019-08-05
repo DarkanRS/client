@@ -53,7 +53,7 @@ public class HostNameIdentifier implements Runnable {
 		client.aBool7371 = true;
 	}
 
-	public static void method487(Class116 class116_0, int i_1) {
+	public static void method487(SongReference class116_0, int i_1) {
 		Class148.aNode_Sub15_Sub2_1735.method15101((short) 21815);
 		Node_Sub15_Sub2 class282_sub15_sub2_3 = class116_0.method1954();
 		if (class282_sub15_sub2_3 != null) {

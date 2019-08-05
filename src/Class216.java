@@ -9,9 +9,9 @@ public class Class216 {
 	}
 
 	static void method3675() {
-		if (Class260.aClass116_3229 != null && !Class260.aClass116_3229.method1956(1097733979) && Class260.aClass116_3229.method1963()) {
-			TCPPacket tcpmessage_1 = Class271.createPacket(ClientPacket.UNK_18, client.GAME_CONNECTION_CONTEXT.isaac);
-			tcpmessage_1.buffer.writeInt(Class260.aClass116_3229.anInt1254);
+		if (Class260.aClass116_3229 != null && !Class260.aClass116_3229.isLoaded() && Class260.aClass116_3229.method1963()) {
+			TCPPacket tcpmessage_1 = Class271.createPacket(ClientPacket.SONG_LOADED, client.GAME_CONNECTION_CONTEXT.isaac);
+			tcpmessage_1.buffer.writeInt(Class260.aClass116_3229.musicId);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 	}

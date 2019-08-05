@@ -844,7 +844,7 @@ public class PacketDecoder {
 			Class42.playSoundSong(i_6, flags, key, (byte) -6);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.aClass375_4501) {
+		} else if (context.currentPacket == ServerPacket.IF_SETCLICKMASK) {
 			boolean bool_91 = buffer.readUnsigned128Byte() == 1;
 			int flags = buffer.readIntLE();
 			Class470.method7825();
@@ -1037,7 +1037,7 @@ public class PacketDecoder {
 			Static.UPDATE_ZONE_X = buffer.readByte128() << 3;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.IF_SETCLICKMASK) {
+		} else if (context.currentPacket == ServerPacket.IF_SETTARGETPARAM) {
 			int toSlot = buffer.readUnsignedShortLE128();
 			if (toSlot == 65535) {
 				toSlot = -1;
@@ -1067,7 +1067,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.IF_RESETSETCLICKMASK) {
+		} else if (context.currentPacket == ServerPacket.IF_RESETTARGETPARAM) {
 			int interfaceHash = buffer.readIntV1();
 			int interfaceId = buffer.readUnsignedShortLE128();
 			int toSlot = buffer.readUnsignedShort();
@@ -1725,12 +1725,12 @@ public class PacketDecoder {
 			PulseEvent.setIFContent(key, 5, client.myPlayerIndex, 0, (byte) -60);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.aClass375_4428) {
-			int key = buffer.readUnsignedShortLE128();
-			if (key == 65535) {
-				key = -1;
+		} else if (context.currentPacket == ServerPacket.PRELOAD_SONG) {
+			int songId = buffer.readUnsignedShortLE128();
+			if (songId == 65535) {
+				songId = -1;
 			}
-			Class332.method5930(key);
+			Class332.preloadSong(songId);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.DEBUG_SERVER_TRIGGERS) {

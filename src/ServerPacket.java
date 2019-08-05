@@ -39,7 +39,7 @@ public enum ServerPacket {
 	IF_OPENSUB_ACTIVE_PLAYER(34, 25),
 	IF_SETGRAPHIC(35, 8),
 	aClass375_4397(36, 5), //redraw interface with boolean?
-	IF_OPENTOP(37, 19), //windowId
+	IF_OPENTOP(37, 19),
 	IF_OPENSUB(38, 23),
 	CAM_MOVETO(39, 6),
 	aClass375_4399(40, 4), //map region x and y static variables?
@@ -79,7 +79,7 @@ public enum ServerPacket {
 	FRIEND_STATUS(74, -2),
 	EXECUTE_CS2_SCRIPT_RELATED(75, 4),
 	DEBUG_SERVER_TRIGGERS(76, 2),
-	aClass375_4428(77, 2), //song preload?
+	PRELOAD_SONG(77, 2),
 	IF_CLOSESUB(78, 4),
 	HINT_ARROW(79, 14),
 	OBJ_ANIM_SPECIFIC(80, 9),
@@ -123,7 +123,7 @@ public enum ServerPacket {
 	CAM_FORCEANGLE(118, 4),
 	CLIENT_SETVARCSTR_LARGE(119, -2),
 	RESET_SOUNDS(120, 0),
-	IF_SETCLICKMASK(121, 12),
+	IF_SETTARGETPARAM(121, 12),
 	RESET_ALL_ANIMATIONS(122, 0),
 	VARCLAN_SET_BYTE(123, 3),
 	IF_SETTEXT(124, -2),
@@ -150,9 +150,9 @@ public enum ServerPacket {
 	ANIMATE_NPC(145, 19),
 	aClass375_4497(146, 0), //load last interface? no idea
 	IDENTIFY_HOST_NAME(147, 4),
-	IF_RESETSETCLICKMASK(148, 10),
+	IF_RESETTARGETPARAM(148, 10),
 	aClass375_5382(149, -2), //rebuild region maybe?
-	aClass375_4501(150, 5), //not sure but pulse event related
+	IF_SETCLICKMASK(150, 5),
 	SET_DRAW_ORDER(151, 1),
 	PUBLIC_MESSAGE(152, -1),
 	SET_CURSOR(153, -1),

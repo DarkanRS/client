@@ -460,8 +460,8 @@ public class Login {
                             VertexNormal.MY_PLAYER.male = (byte) rsbitsbuffer_19.readUnsignedByte();
                             client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
                             client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            Class116.aLong1259 = rsbitsbuffer_19.readLong();
-                            Class43.aLong420 = Class116.aLong1259 - Utils.time() - rsbitsbuffer_19.read5ByteInteger();
+                            SongReference.aLong1259 = rsbitsbuffer_19.readLong();
+                            Class43.aLong420 = SongReference.aLong1259 - Utils.time() - rsbitsbuffer_19.read5ByteInteger();
                             i_3 = rsbitsbuffer_19.readUnsignedByte();
                             client.IS_MEMBER = (i_3 & 0x1) != 0;
                             Class509.aBool5870 = (i_3 & 0x2) != 0;

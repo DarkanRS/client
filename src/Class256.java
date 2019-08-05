@@ -25,7 +25,7 @@ public class Class256 {
 		return this.aBool3160;
 	}
 
-	public static void method4412(Class116 class116_0, int i_1, int i_2) {
+	public static void method4412(SongReference class116_0, int i_1, int i_2) {
 		i_1 = i_1 * Class393.preferences.aPreference_Sub13_8228.method12714() >> 8;
 		if (class116_0 == null) {
 			VarBitDefinitions.method3805();

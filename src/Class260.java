@@ -1,6 +1,6 @@
 public class Class260 {
 
-	static Class116 aClass116_3229;
+	static SongReference aClass116_3229;
 
 	static Node_Sub15_Sub2 aNode_Sub15_Sub2_3231;
 

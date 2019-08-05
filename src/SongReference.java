@@ -1,19 +1,12 @@
-public class Class116 {
+public class SongReference {
 
 	public static long aLong1259;
-
 	Class250 aClass250_1257 = null;
-
-	int anInt1252 = 0;
-
-	Index aClass317_1253;
-
-	public int anInt1254;
-
+	int loadedStage = 0;
+	Index musicIndex;
+	public int musicId;
 	Node_Sub15_Sub2 aNode_Sub15_Sub2_1256;
-
 	Node_Sub7 aNode_Sub7_1255;
-
 	Node_Sub15_Sub2 method1954() {
 		return this.aNode_Sub15_Sub2_1256;
 	}
@@ -22,32 +15,32 @@ public class Class116 {
 		return this.aNode_Sub7_1255;
 	}
 
-	public Class116(Index index_1, int i_2) {
-		this.aClass317_1253 = index_1;
-		this.anInt1254 = i_2;
+	public SongReference(Index index_1, int i_2) {
+		this.musicIndex = index_1;
+		this.musicId = i_2;
 		this.aNode_Sub15_Sub2_1256 = new Node_Sub15_Sub2();
 		this.aNode_Sub15_Sub2_1256.method15137(-1186547906);
 	}
 
-	public boolean method1956(int i_1) {
-		return this.anInt1252 == 2;
+	public boolean isLoaded() {
+		return this.loadedStage == 2;
 	}
 
 	public boolean method1963() {
 		Class332.method5929(263587449);
-		if (this.anInt1252 == 0) {
-			this.aNode_Sub7_1255 = Node_Sub7.method12164(this.aClass317_1253, this.anInt1254, 0);
+		if (this.loadedStage == 0) {
+			this.aNode_Sub7_1255 = Node_Sub7.method12164(this.musicIndex, this.musicId, 0);
 			if (this.aNode_Sub7_1255 == null) {
 				return false;
 			}
 			this.aClass250_1257 = new Class250(Class148.aClass317_1732, Class148.aClass317_1731);
-			this.anInt1252 = 1;
+			this.loadedStage = 1;
 		}
-		if (this.anInt1252 == 1) {
+		if (this.loadedStage == 1) {
 			if (!this.aNode_Sub15_Sub2_1256.method15182(this.aNode_Sub7_1255, Class148.aClass317_1737, this.aClass250_1257, 1813033404)) {
 				return false;
 			}
-			this.anInt1252 = 2;
+			this.loadedStage = 2;
 		}
 		return true;
 	}

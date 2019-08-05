@@ -58,7 +58,7 @@ public class Player extends Entity {
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-563768008) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
-					MeshRasterizer meshrasterizer_11 = Class116.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
+					MeshRasterizer meshrasterizer_11 = SongReference.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
 					if (meshrasterizer_11 != null) {
 						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -124);
@@ -434,7 +434,7 @@ public class Player extends Entity {
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-305064415) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
-					MeshRasterizer meshrasterizer_11 = Class116.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
+					MeshRasterizer meshrasterizer_11 = SongReference.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
 					if (meshrasterizer_11 != null) {
 						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -105);
@@ -549,7 +549,7 @@ public class Player extends Entity {
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(871780846) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_10 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? this.aAnimation_Sub3_10337 : null;
-					MeshRasterizer meshrasterizer_11 = Class116.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
+					MeshRasterizer meshrasterizer_11 = SongReference.method1969(graphicalrenderer_1, i_5, -35614997 * this.anInt10322 * 2085530051, this.anInt10323 * 884618779 * -1768311789, -628205413 * this.anInt10363 * -1453470317, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_10 != null ? class456_sub3_10 : animation_9));
 					if (meshrasterizer_11 != null) {
 						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < 1 + this.aMeshRasterizerArray10372.length) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -105);
@@ -1027,7 +1027,7 @@ public class Player extends Entity {
 				if (renderanimdefs_9.aBool2787 && (this.playerAppearance.anInt2928 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928).aBool4912)) {
 					Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1045482299) ? this.currentAnimation : null;
 					MovingAnimation class456_sub3_11 = this.aAnimation_Sub3_10337.hasDefs() && (!this.aAnimation_Sub3_10337.aBool7891 || animation_10 == null) ? this.aAnimation_Sub3_10337 : null;
-					MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
+					MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, 1, this.aMeshRasterizerArray10372[0], 0, 0, 160, 240, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
 					if (meshrasterizer_12 != null) {
 						if (this.boundingBoxPolygons == null || this.boundingBoxPolygons.length < this.aMeshRasterizerArray10372.length + 1) {
 							this.method13008(this.aMeshRasterizerArray10372.length + 1, (byte) -9);

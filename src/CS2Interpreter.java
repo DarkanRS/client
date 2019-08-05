@@ -7334,8 +7334,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method1499(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = (int) (Class116.aLong1259 / 60000L);
-		executor.intStack[++executor.intStackPtr - 1] = (int) ((Class116.aLong1259 - Utils.time() - Class43.aLong420) / 60000L);
+		executor.intStack[++executor.intStackPtr - 1] = (int) (SongReference.aLong1259 / 60000L);
+		executor.intStack[++executor.intStackPtr - 1] = (int) ((SongReference.aLong1259 - Utils.time() - Class43.aLong420) / 60000L);
 		executor.intStack[++executor.intStackPtr - 1] = Class509.aBool5870 ? 1 : 0;
 	}
 

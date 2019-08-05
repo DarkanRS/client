@@ -17,7 +17,7 @@ public enum ClientPacket {
 	SEND_PRIVATE_MESSAGE(15, -2),
 	NPC_OP2(16, 3, true),
 	GRAND_EXCHANGE_ITEM_SELECT(17, 2),
-	UNK_18(18, 4), //music related
+	SONG_LOADED(18, 4),
 	IF_OP6(19, 8, true),
 	CHAT_SETFILTER(20, 3),
 	IF_OP8(21, 8, true),
