@@ -27,7 +27,7 @@ public final class Class484 {
 		if (iCompDef.aspectHeightType == 4) {
 			iCompDef.height = iCompDef.width * iCompDef.anInt1375 / iCompDef.anInt1289;
 		}
-		if (client.aBool7168 && (client.method11633(iCompDef).settingsHash != 0 || iCompDef.type == 0)) {
+		if (client.aBool7168 && (client.method11633(iCompDef).settingsHash != 0 || iCompDef.type == ComponentType.CONTAINER)) {
 			if (iCompDef.height < 5 && iCompDef.width < 5) {
 				iCompDef.height = 5;
 				iCompDef.width = 5;

@@ -78,7 +78,7 @@ public class NPCDefinitions {
 	}
 
 	public final MeshRasterizer method6875(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, NPCMeshModifier class417_10, int i_11) {
-		return this.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, this.renderEmote, true, 1493042037);
+		return this.renderFull(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, this.renderEmote, true, 1493042037);
 	}
 
 	public int method6876(int i_1, int i_2, int i_3) {
@@ -103,10 +103,10 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6879(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, NPCMeshModifier class417_10, int i_11, boolean bool_12, int i_13) {
+	public final MeshRasterizer renderFull(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, VarProvider interface42_4, Animation animation_5, Animation animation_6, Animation[] arr_7, int[] ints_8, int i_9, NPCMeshModifier class417_10, int i_11, boolean bool_12, int i_13) {
 		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_14 = this.getTransformed(interface42_4);
-			return npcdefinitions_14 == null ? null : npcdefinitions_14.method6879(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12, 1208445516);
+			return npcdefinitions_14 == null ? null : npcdefinitions_14.renderFull(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_4, animation_5, animation_6, arr_7, ints_8, i_9, class417_10, i_11, bool_12, 1208445516);
 		} else {
 			int i_32 = i_2;
 			if (this.anInt4881 != 128) {
@@ -329,10 +329,10 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6880(GraphicalRenderer graphicalrenderer_1, int i_2, VarProvider interface42_3, Animation animation_4, NPCMeshModifier class417_5, int i_6) {
+	public final MeshRasterizer renderHead(GraphicalRenderer graphicalrenderer_1, int i_2, VarProvider interface42_3, Animation animation_4, NPCMeshModifier class417_5, int i_6) {
 		if (this.transformTo != null) {
 			NPCDefinitions npcdefinitions_7 = this.getTransformed(interface42_3);
-			return npcdefinitions_7 == null ? null : npcdefinitions_7.method6880(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5, 1382303105);
+			return npcdefinitions_7 == null ? null : npcdefinitions_7.renderHead(graphicalrenderer_1, i_2, interface42_3, animation_4, class417_5, 1382303105);
 		} else if (this.headModels == null && (class417_5 == null || class417_5.anIntArray4992 == null)) {
 			return null;
 		} else {

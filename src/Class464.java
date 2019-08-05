@@ -72,7 +72,7 @@ public final class Class464 {
 		for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
 			IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
 			if (icomponentdefinitions_4 != null && icomponentdefinitions_4.parent == i_1 && !client.method11651(icomponentdefinitions_4)) {
-				if (icomponentdefinitions_4.type == 0) {
+				if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
 					method7743(arr_0, icomponentdefinitions_4.idHash);
 					if (icomponentdefinitions_4.aClass118Array1439 != null) {
 						method7743(icomponentdefinitions_4.aClass118Array1439, icomponentdefinitions_4.idHash);
@@ -82,13 +82,13 @@ public final class Class464 {
 						CS2Interface.method8777(class282_sub44_5.anInt8063, (byte) -57);
 					}
 				}
-				if (icomponentdefinitions_4.type == 6 && icomponentdefinitions_4.animation != -1) {
-					if (icomponentdefinitions_4.aAnimation_1437 == null) {
-						icomponentdefinitions_4.aAnimation_1437 = new Animation_Sub1();
-						icomponentdefinitions_4.aAnimation_1437.update(icomponentdefinitions_4.animation);
+				if (icomponentdefinitions_4.type == ComponentType.MODEL && icomponentdefinitions_4.animation != -1) {
+					if (icomponentdefinitions_4.anim == null) {
+						icomponentdefinitions_4.anim = new Animation_Sub1();
+						icomponentdefinitions_4.anim.update(icomponentdefinitions_4.animation);
 					}
-					if (icomponentdefinitions_4.aAnimation_1437.method7627(client.anInt7261, 1231441216) && icomponentdefinitions_4.aAnimation_1437.method7580(602854407)) {
-						icomponentdefinitions_4.aAnimation_1437.method7582((byte) -59);
+					if (icomponentdefinitions_4.anim.method7627(client.anInt7261, 1231441216) && icomponentdefinitions_4.anim.method7580(602854407)) {
+						icomponentdefinitions_4.anim.method7582((byte) -59);
 					}
 				}
 			}

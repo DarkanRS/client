@@ -5,7 +5,7 @@ public class ItemContainer extends Node {
 	int[] itemIds = new int[] { -1 };
 	int[] amounts = new int[1];
 
-	final MeshRasterizer method12429(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, int i_4, boolean bool_5, PlayerAppearance playerappearance_6) {
+	final MeshRasterizer method12429(GraphicalRenderer graphicalrenderer_1, int i_2, Animation animation_3, int i_4, boolean female, PlayerAppearance playerappearance_6) {
 		MeshRasterizer meshrasterizer_8 = null;
 		int i_9 = i_2;
 		BASDefinitions renderanimdefs_10 = null;
@@ -31,7 +31,7 @@ public class ItemContainer extends Node {
 			i_9 = i_2 | animation_3.method7640(-1290274733);
 		}
 
-		long long_24 = this.method12444(ints_11, i_4, playerappearance_6 != null ? playerappearance_6.colors : null, bool_5);
+		long long_24 = this.method12444(ints_11, i_4, playerappearance_6 != null ? playerappearance_6.colors : null, female);
 		if (aClass229_7712 != null) {
 			meshrasterizer_8 = (MeshRasterizer) aClass229_7712.get(long_24);
 		}
@@ -45,7 +45,7 @@ public class ItemContainer extends Node {
 			boolean bool_15 = false;
 
 			for (int i_16 = 0; i_16 < ints_11.length; i_16++) {
-				if (ints_11[i_16] != -1 && !IndexLoaders.ITEM_LOADER.getItemDefinitions(ints_11[i_16]).bodyMeshesReady(bool_5, (MeshModifier) null, -763899504)) {
+				if (ints_11[i_16] != -1 && !IndexLoaders.ITEM_LOADER.getItemDefinitions(ints_11[i_16]).bodyMeshesReady(female, (MeshModifier) null, -763899504)) {
 					bool_15 = true;
 				}
 			}
@@ -59,7 +59,7 @@ public class ItemContainer extends Node {
 			int i_17;
 			for (i_17 = 0; i_17 < ints_11.length; i_17++) {
 				if (ints_11[i_17] != -1) {
-					arr_27[i_17] = IndexLoaders.ITEM_LOADER.getItemDefinitions(ints_11[i_17]).getBodyMesh(bool_5, (MeshModifier) null, 2085001887);
+					arr_27[i_17] = IndexLoaders.ITEM_LOADER.getItemDefinitions(ints_11[i_17]).getBodyMesh(female, (MeshModifier) null, 2085001887);
 				}
 			}
 

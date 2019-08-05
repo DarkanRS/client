@@ -360,7 +360,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					int drawX = inter.x + i_6;
 					int drawY = i_7 + inter.y;
 					int i_16 = inter.transparency;
-					if (client.aBool7168 && (client.method11633(inter).settingsHash != 0 || inter.type == 0) && i_16 > 127) {
+					if (client.aBool7168 && (client.method11633(inter).settingsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
 						i_16 = 127;
 					}
 					int i_17;
@@ -403,7 +403,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					int i_20;
 					int i_21;
 					int i_22;
-					if (inter.type == 2) {
+					if (inter.type == ComponentType.TYPE_2) {
 						i_17 = i_2;
 						i_18 = i_3;
 						i_19 = i_4;
@@ -411,7 +411,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					} else {
 						i_21 = drawX + inter.width;
 						i_22 = drawY + inter.height;
-						if (inter.type == 9) {
+						if (inter.type == ComponentType.LINE) {
 							++i_21;
 							++i_22;
 						}
@@ -476,7 +476,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 						int i_23;
 						int i_24;
 						int i_25;
-						if (inter.type == 0) {
+						if (inter.type == ComponentType.CONTAINER) {
 							if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1407 && Renderers.SOFTWARE_RENDERER.method8471()) {
 								Renderers.SOFTWARE_RENDERER.method8525(Class349.anInt4083, client.anInt3243 * -969250379);
 							}
@@ -512,7 +512,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 						}
 						if (client.aBoolArray7410[i_13] || client.anInt7412 > 1) {
-							if (inter.type == 3) {
+							if (inter.type == ComponentType.FIGURE) {
 								if (i_16 == 0) {
 									if (inter.filled) {
 										Renderers.SOFTWARE_RENDERER.B(drawX, drawY, inter.width, inter.height, inter.color, 0);
@@ -526,7 +526,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								}
 							} else {
 								ItemDefinitions itemdefinitions_36;
-								if (inter.type == 4) {
+								if (inter.type == ComponentType.TEXT) {
 									FontRenderer fontrenderer_43 = inter.method1988(Class487.aClass378_5752, client.anInterface35_7206, 177804367);
 									if (fontrenderer_43 == null) {
 										if (IComponentDefinitions.aBool1399) {
@@ -570,7 +570,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								} else {
 									int i_27;
 									int i_39;
-									if (inter.type == 5) {
+									if (inter.type == ComponentType.SPRITE) {
 										if (inter.anInt1404 >= 0) {
 											inter.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1984245878).method4214(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter.width, inter.height, inter.anInt1430 << 3, inter.anInt1431 << 3);
 										} else {
@@ -628,9 +628,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												Class109.redrawComponent(inter);
 											}
 										}
-									} else if (inter.type == 6) {
+									} else if (inter.type == ComponentType.MODEL) {
 										IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
-										MeshRasterizer meshrasterizer_40 = null;
+										MeshRasterizer meshRasterizer = null;
 										i_22 = 2048;
 										if (inter.anInt1354 != 0) {
 											i_22 |= 0x80000;
@@ -640,56 +640,56 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.anInt1426);
 											if (itemdefinitions_36 != null) {
 												itemdefinitions_36 = itemdefinitions_36.method7090(inter.anInt1427);
-												meshrasterizer_40 = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null, inter.aAnimation_1437, 0, 0, 0, 0);
-												if (meshrasterizer_40 != null) {
-													i_23 = -meshrasterizer_40.YA() >> 1;
+												meshRasterizer = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null, inter.anim, 0, 0, 0, 0);
+												if (meshRasterizer != null) {
+													i_23 = -meshRasterizer.YA() >> 1;
 												} else {
 													Class109.redrawComponent(inter);
 												}
 											}
 										} else {
 											Player player_37;
-											if (inter.modelType == 3) {
-												i_24 = inter.playerIndex;
+											if (inter.modelType == ModelType.PLAYER_HEAD) {
+												i_24 = inter.modelId;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.method4840(player_37.displayName, (byte) 111) == inter.anInt1339)) {
-														meshrasterizer_40 = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.aAnimation_1437, player_37.playerAppearance);
-														if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
+														meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, player_37.playerAppearance);
+														if (meshRasterizer == null && IComponentDefinitions.aBool1399) {
 															Class109.redrawComponent(inter);
 														}
 													}
 												}
-											} else if (inter.modelType == 5) {
-												i_24 = inter.playerIndex;
+											} else if (inter.modelType == ModelType.PLAYER_MODEL) {
+												i_24 = inter.modelId;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
 													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.method4840(player_37.displayName, (byte) 17) == inter.anInt1339)) {
-														meshrasterizer_40 = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.aAnimation_1437, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS, (short) -10357);
+														meshRasterizer = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS, (short) -10357);
 													}
 												}
-											} else if (inter.modelType != 8 && inter.modelType != 9) {
-												if (inter.aAnimation_1437 != null && inter.aAnimation_1437.hasDefs()) {
-													meshrasterizer_40 = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.aAnimation_1437, VertexNormal.MY_PLAYER.playerAppearance);
-													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
+											} else if (inter.modelType != ModelType.ITEM_CONTAINER_MALE && inter.modelType != ModelType.ITEM_CONTAINER_FEMALE) {
+												if (inter.anim != null && inter.anim.hasDefs()) {
+													meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, VertexNormal.MY_PLAYER.playerAppearance);
+													if (meshRasterizer == null && IComponentDefinitions.aBool1399) {
 														Class109.redrawComponent(inter);
 													}
 												} else {
-													meshrasterizer_40 = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, VertexNormal.MY_PLAYER.playerAppearance);
-													if (meshrasterizer_40 == null && IComponentDefinitions.aBool1399) {
+													meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, (Animation) null, VertexNormal.MY_PLAYER.playerAppearance);
+													if (meshRasterizer == null && IComponentDefinitions.aBool1399) {
 														Class109.redrawComponent(inter);
 													}
 												}
 											} else {
-												ItemContainer class282_sub30_42 = ItemContainer.getContainer(inter.playerIndex, false);
-												if (class282_sub30_42 != null) {
-													meshrasterizer_40 = class282_sub30_42.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.aAnimation_1437, inter.anInt1339, inter.modelType == 9, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null);
+												ItemContainer container = ItemContainer.getContainer(inter.modelId, false);
+												if (container != null) {
+													meshRasterizer = container.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.anim, inter.anInt1339, inter.modelType == ModelType.ITEM_CONTAINER_FEMALE, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null);
 												}
 											}
 										}
-										if (meshrasterizer_40 != null) {
+										if (meshRasterizer != null) {
 											if (inter.anInt1354 != 0) {
-												meshrasterizer_40.PA(inter.anInt1340, inter.anInt1350, inter.anInt1281, inter.anInt1354);
+												meshRasterizer.PA(inter.anInt1340, inter.anInt1350, inter.anInt1281, inter.anInt1354);
 											}
 											if (inter.anInt1417 > 0) {
 												i_24 = (inter.width << 9) / inter.anInt1417;
@@ -740,11 +740,11 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												client.aClass294_7169.method5219((float) (inter.anInt1293 << 2), (float) (i_31 + i_23 + (inter.anInt1334 << 2)), (float) (i_32 + (inter.anInt1334 << 2)));
 												client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(inter.spritePitch << 3));
 											}
-											inter.method1991(Renderers.SOFTWARE_RENDERER, meshrasterizer_40, client.aClass294_7169, client.cycles);
+											inter.method1991(Renderers.SOFTWARE_RENDERER, meshRasterizer, client.aClass294_7169, client.cycles);
 											if (client.aBool7358) {
 												Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
 											}
-											meshrasterizer_40.method11282(client.aClass294_7169, (EntityNode_Sub5) null, 1);
+											meshRasterizer.method11282(client.aClass294_7169, (EntityNode_Sub5) null, 1);
 											if (!inter.aBool1344 && inter.particleSystem != null) {
 												Renderers.SOFTWARE_RENDERER.method8456(inter.particleSystem.method11533());
 											}
@@ -755,8 +755,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												Renderers.SOFTWARE_RENDERER.RA(true);
 											}
 										}
-									} else if (inter.type == 9) {
-										if (inter.aBool1357) {
+									} else if (inter.type == ComponentType.LINE) {
+										if (inter.lineDirection) {
 											i_21 = drawX;
 											i_22 = drawY + inter.height;
 											i_23 = drawX + inter.width;
@@ -767,10 +767,10 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											i_23 = drawX + inter.width;
 											i_24 = drawY + inter.height;
 										}
-										if (inter.anInt1377 == 1) {
+										if (inter.lineWidth == 1) {
 											Renderers.SOFTWARE_RENDERER.method8433(i_21, i_22, i_23, i_24, inter.color, 0);
 										} else {
-											Renderers.SOFTWARE_RENDERER.method8496(i_21, i_22, i_23, i_24, inter.color, inter.anInt1377, 0);
+											Renderers.SOFTWARE_RENDERER.method8496(i_21, i_22, i_23, i_24, inter.color, inter.lineWidth, 0);
 										}
 									}
 								}

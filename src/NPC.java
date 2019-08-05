@@ -63,7 +63,7 @@ public class NPC extends Entity {
 		}
 
 		int i_11 = this.aClass19_10359.method578();
-		MeshRasterizer meshrasterizer_12 = this.aMeshRasterizerArray10372[0] = this.definitions.method6879(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aAnimation_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.meshModifiers, this.getRenderAnimation(), false, -1676394010);
+		MeshRasterizer meshrasterizer_12 = this.aMeshRasterizerArray10372[0] = this.definitions.renderFull(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIM_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, animation_6, class456_sub3_7, this.aAnimation_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.meshModifiers, this.getRenderAnimation(), false, -1676394010);
 		if (meshrasterizer_12 == null) {
 			return false;
 		} else {

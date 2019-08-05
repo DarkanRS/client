@@ -53,7 +53,7 @@ public class Class151 {
         for (int i_3 = 0; i_3 < arr_0.length; i_3++) {
             IComponentDefinitions icomponentdefinitions_4 = arr_0[i_3];
             if (icomponentdefinitions_4 != null) {
-                if (icomponentdefinitions_4.type == 0) {
+                if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
                     if (icomponentdefinitions_4.aClass118Array1439 != null) {
                         method2591(icomponentdefinitions_4.aClass118Array1439, i_1, (byte) -28);
                     }

@@ -340,7 +340,7 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 				if (icomponentdefinitions_7.scrollY < 0) {
 					icomponentdefinitions_7.scrollY = 0;
 				}
-				if (icomponentdefinitions_7.type == 0) {
+				if (icomponentdefinitions_7.type == ComponentType.CONTAINER) {
 					Class480.method8044(arr_0, icomponentdefinitions_7, bool_4, (byte) -82);
 				}
 			}

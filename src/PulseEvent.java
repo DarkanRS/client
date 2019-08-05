@@ -75,12 +75,12 @@ public class PulseEvent extends CacheableNode {
 				}
 			} else if (type == 4) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				int i_6 = event.primary;
+				ModelType i_6 = ModelType.forId(event.primary);
 				int i_7 = event.secondary;
 				int i_8 = event.tertiary;
-				if (i_6 != icomponentdefinitions_5.modelType || i_7 != icomponentdefinitions_5.playerIndex || i_8 != icomponentdefinitions_5.anInt1339) {
+				if (i_6 != icomponentdefinitions_5.modelType || i_7 != icomponentdefinitions_5.modelId || i_8 != icomponentdefinitions_5.anInt1339) {
 					icomponentdefinitions_5.modelType = i_6;
-					icomponentdefinitions_5.playerIndex = i_7;
+					icomponentdefinitions_5.modelId = i_7;
 					icomponentdefinitions_5.anInt1339 = i_8;
 					icomponentdefinitions_5.npcMeshModifier = null;
 					Class109.redrawComponent(icomponentdefinitions_5);
@@ -89,12 +89,12 @@ public class PulseEvent extends CacheableNode {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				if (event.primary != icomponentdefinitions_5.animation) {
 					if (event.primary != -1) {
-						if (icomponentdefinitions_5.aAnimation_1437 == null) {
-							icomponentdefinitions_5.aAnimation_1437 = new Animation_Sub1();
+						if (icomponentdefinitions_5.anim == null) {
+							icomponentdefinitions_5.anim = new Animation_Sub1();
 						}
-						icomponentdefinitions_5.aAnimation_1437.update(event.primary);
+						icomponentdefinitions_5.anim.update(event.primary);
 					} else {
-						icomponentdefinitions_5.aAnimation_1437 = null;
+						icomponentdefinitions_5.anim = null;
 					}
 					icomponentdefinitions_5.animation = event.primary;
 					Class109.redrawComponent(icomponentdefinitions_5);
@@ -157,7 +157,7 @@ public class PulseEvent extends CacheableNode {
 			} else if (type == 12) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = event.primary;
-				if (icomponentdefinitions_5 != null && icomponentdefinitions_5.type == 0) {
+				if (icomponentdefinitions_5 != null && icomponentdefinitions_5.type == ComponentType.CONTAINER) {
 					if (i_6 > icomponentdefinitions_5.scrollHeight - icomponentdefinitions_5.height) {
 						i_6 = icomponentdefinitions_5.scrollHeight - icomponentdefinitions_5.height;
 					}

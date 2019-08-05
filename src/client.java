@@ -1727,7 +1727,7 @@ public final class client extends Engine {
 				return false;
 			}
 
-			if (icomponentdefinitions_0.type == 0) {
+			if (icomponentdefinitions_0.type == ComponentType.CONTAINER) {
 				return false;
 			}
 		}
@@ -1860,7 +1860,7 @@ public final class client extends Engine {
 				int i_16;
 				int i_17;
 				int i_18;
-				if (iCompDef.type == 2) {
+				if (iCompDef.type == ComponentType.TYPE_2) {
 					i_15 = i_3;
 					i_16 = i_4;
 					i_17 = i_5;
@@ -1868,7 +1868,7 @@ public final class client extends Engine {
 				} else {
 					int i_19 = x + iCompDef.width;
 					int i_20 = y + iCompDef.height;
-					if (iCompDef.type == 9) {
+					if (iCompDef.type == ComponentType.LINE) {
 						++i_19;
 						++i_20;
 					}
@@ -1879,7 +1879,7 @@ public final class client extends Engine {
 					i_18 = i_20 < i_6 ? i_20 : i_6;
 				}
 
-				if (iCompDef.type != 0 && !iCompDef.usesScripts && method11633(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
+				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && method11633(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
 					if (i_15 < i_17 && i_16 < i_18) {
 						Class86.method1482(iCompDef, (byte) 35);
 					}
@@ -1912,7 +1912,7 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.clickMask && iCompDef.type == 5 && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.repeat_ && iCompDef.anInt1423 == 0;
+						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.repeat_ && iCompDef.anInt1423 == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -2567,12 +2567,12 @@ public final class client extends Engine {
 							}
 						}
 
-						if (iCompDef.type == 5 && iCompDef.anInt1404 != -1) {
+						if (iCompDef.type == ComponentType.SPRITE && iCompDef.anInt1404 != -1) {
 							iCompDef.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.aPreference_Sub14_8211.method12728());
 						}
 
 						Class86.method1482(iCompDef, (byte) 9);
-						if (iCompDef.type == 0) {
+						if (iCompDef.type == ComponentType.CONTAINER) {
 							method11768(interface_0, components, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
 							if (iCompDef.aClass118Array1439 != null) {
 								method11768(interface_0, iCompDef.aClass118Array1439, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);

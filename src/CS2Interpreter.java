@@ -4157,7 +4157,7 @@ public class CS2Interpreter {
 	static final void method6449(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.modelType == 1 ? icomponentdefinitions_3.playerIndex : -1;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.modelType == ModelType.RAW_MODEL ? icomponentdefinitions_3.modelId : -1;
 	}
 
 	static final void method6452(CS2Executor executor) {
@@ -7557,7 +7557,7 @@ public class CS2Interpreter {
 	static final void method1512(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.modelType == 1 ? icomponentdefinitions_3.playerIndex : -1;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.modelType == ModelType.RAW_MODEL ? icomponentdefinitions_3.modelId : -1;
 	}
 
 	static final void arrayStore(CS2Executor executor) {
@@ -10655,10 +10655,10 @@ public class CS2Interpreter {
 	static final void method14680(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.modelType != 6) {
+		if (icomponentdefinitions_0.modelType != ModelType.NPC_MODEL) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.modelId);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
 				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, true);
 			}
@@ -10750,12 +10750,12 @@ public class CS2Interpreter {
 	static final void method15207(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.modelType != 6 && icomponentdefinitions_0.modelType != 2) {
+		if (icomponentdefinitions_0.modelType != ModelType.NPC_MODEL && icomponentdefinitions_0.modelType != ModelType.NPC_HEAD) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.modelId);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
-				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.modelType == 6);
+				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.modelType == ModelType.NPC_MODEL);
 			}
 			icomponentdefinitions_0.npcMeshModifier.aLong4993 = CS2Executor.method1480();
 			if (npcdefinitions_5.modifiedColors != null && i_4 >= 0 && i_4 < npcdefinitions_5.modifiedColors.length) {
@@ -11017,7 +11017,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.scrollWidth = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.scrollHeight = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.redrawComponent(icomponentdefinitions_0);
-		if (icomponentdefinitions_0.type == 0) {
+		if (icomponentdefinitions_0.type == ComponentType.CONTAINER) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1735080264);
 		}
 	}
@@ -11054,7 +11054,7 @@ public class CS2Interpreter {
 				throw new RuntimeException("" + (i_3 - 1));
 			} else {
 				IComponentDefinitions icomponentdefinitions_12 = new IComponentDefinitions();
-				icomponentdefinitions_12.type = i_2;
+				icomponentdefinitions_12.type = ComponentType.forId(i_2);
 				icomponentdefinitions_12.parent = icomponentdefinitions_12.idHash = icomponentdefinitions_7.idHash;
 				icomponentdefinitions_12.anInt1288 = i_3;
 				icomponentdefinitions_7.aClass118Array1438[i_3] = icomponentdefinitions_12;
@@ -11134,7 +11134,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method789(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		if (icomponentdefinitions_0.type == 5) {
+		if (icomponentdefinitions_0.type == ComponentType.SPRITE) {
 			method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -1486072931);
 		}
 	}
@@ -11187,9 +11187,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method5763(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.modelType = 2;
+		icomponentdefinitions_0.modelType = ModelType.NPC_HEAD;
 		icomponentdefinitions_0.npcMeshModifier = null;
-		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -1575336609);
 		}
@@ -11266,8 +11266,8 @@ public class CS2Interpreter {
 			Item.method12575(icomponentdefinitions_0.idHash, (byte) 59);
 		}
 		if (i_6 == -1) {
-			icomponentdefinitions_0.modelType = 1;
-			icomponentdefinitions_0.playerIndex = -1;
+			icomponentdefinitions_0.modelType = ModelType.RAW_MODEL;
+			icomponentdefinitions_0.modelId = -1;
 			icomponentdefinitions_0.anInt1426 = -1;
 		} else {
 			icomponentdefinitions_0.anInt1426 = i_6;
@@ -11345,7 +11345,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6186(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		if (icomponentdefinitions_0.type == 4) {
+		if (icomponentdefinitions_0.type == ComponentType.TEXT) {
 			method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -2108209213);
 		}
 	}
@@ -11399,7 +11399,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.aspectYType = (byte) i_5;
 		Class109.redrawComponent(icomponentdefinitions_0);
 		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
-		if (icomponentdefinitions_0.type == 0) {
+		if (icomponentdefinitions_0.type == ComponentType.CONTAINER) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1665129520);
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -11421,12 +11421,12 @@ public class CS2Interpreter {
 
 	static final void method1455(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 4;
-		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.modelId = cs2executor_2.intStack[cs2executor_2.intStackPtr];
 		icomponentdefinitions_0.anInt1339 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 2] == 1) {
-			icomponentdefinitions_0.modelType = 9;
+			icomponentdefinitions_0.modelType = ModelType.ITEM_CONTAINER_FEMALE;
 		} else {
-			icomponentdefinitions_0.modelType = 8;
+			icomponentdefinitions_0.modelType = ModelType.ITEM_CONTAINER_MALE;
 		}
 		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 3] == 1) {
 			icomponentdefinitions_0.aBool1388 = true;
@@ -11469,14 +11469,14 @@ public class CS2Interpreter {
 		icDefs.aspectHeightType = (byte) i_5;
 		Class109.redrawComponent(icDefs);
 		IdentikitDefinition.method913(interface_1, icDefs);
-		if (icDefs.type == 0) {
+		if (icDefs.type == ComponentType.CONTAINER) {
 			HostNameIdentifier.method483(interface_1, icDefs, false, -610252618);
 		}
 	}
 
 	static final void method7555(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.modelType = 1;
-		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.modelType = ModelType.RAW_MODEL;
+		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -624586705);
@@ -11537,8 +11537,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method3987(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.modelType = 3;
-		icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
+		icomponentdefinitions_0.modelType = ModelType.PLAYER_HEAD;
+		icomponentdefinitions_0.modelId = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -1355203883);
@@ -11548,10 +11548,10 @@ public class CS2Interpreter {
 	static final void method1494(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.modelType != 2) {
+		if (icomponentdefinitions_0.modelType != ModelType.NPC_HEAD) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.modelId);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
 				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, false);
 			}
@@ -11570,8 +11570,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method12401(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.modelType = 5;
-		icomponentdefinitions_0.playerIndex = client.myPlayerIndex;
+		icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
+		icomponentdefinitions_0.modelId = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -2001727659);
@@ -11579,7 +11579,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14892(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.anInt1377 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.lineWidth = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11614,8 +11614,8 @@ public class CS2Interpreter {
 	}
 
 	static final void method5066(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.modelType = 5;
-		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
+		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, 1743541888);
 		}
@@ -11623,7 +11623,7 @@ public class CS2Interpreter {
 
 	static final void method13450(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.aBool1357 = i_4 == 1;
+		icomponentdefinitions_0.lineDirection = i_4 == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11638,12 +11638,12 @@ public class CS2Interpreter {
 	static final void method3601(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
 		int i_3 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
 		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr] - 1;
-		if (icomponentdefinitions_0.modelType != 6 && icomponentdefinitions_0.modelType != 2) {
+		if (icomponentdefinitions_0.modelType != ModelType.NPC_MODEL && icomponentdefinitions_0.modelType != ModelType.NPC_HEAD) {
 			throw new RuntimeException("");
 		} else {
-			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.playerIndex);
+			NPCDefinitions npcdefinitions_5 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(icomponentdefinitions_0.modelId);
 			if (icomponentdefinitions_0.npcMeshModifier == null) {
-				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.modelType == 6);
+				icomponentdefinitions_0.npcMeshModifier = new NPCMeshModifier(npcdefinitions_5, icomponentdefinitions_0.modelType == ModelType.NPC_MODEL);
 			}
 			icomponentdefinitions_0.npcMeshModifier.aLong4993 = CS2Executor.method1480();
 			if (npcdefinitions_5.modifiedTextures != null && i_4 >= 0 && i_4 < npcdefinitions_5.modifiedTextures.length) {
@@ -11668,12 +11668,12 @@ public class CS2Interpreter {
 		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (i_4 != icomponentdefinitions_0.animation) {
 			if (i_4 != -1) {
-				if (icomponentdefinitions_0.aAnimation_1437 == null) {
-					icomponentdefinitions_0.aAnimation_1437 = new Animation_Sub1();
+				if (icomponentdefinitions_0.anim == null) {
+					icomponentdefinitions_0.anim = new Animation_Sub1();
 				}
-				icomponentdefinitions_0.aAnimation_1437.update(i_4);
+				icomponentdefinitions_0.anim.update(i_4);
 			} else {
-				icomponentdefinitions_0.aAnimation_1437 = null;
+				icomponentdefinitions_0.anim = null;
 			}
 			icomponentdefinitions_0.animation = i_4;
 			Class109.redrawComponent(icomponentdefinitions_0);
@@ -11752,7 +11752,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.anInt1375 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
-		if (icomponentdefinitions_0.type == 0) {
+		if (icomponentdefinitions_0.type == ComponentType.CONTAINER) {
 			HostNameIdentifier.method483(interface_1, icomponentdefinitions_0, false, -1114649951);
 		}
 	}
@@ -11847,9 +11847,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method11337(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.modelType = 6;
+		icomponentdefinitions_0.modelType = ModelType.NPC_MODEL;
 		icomponentdefinitions_0.npcMeshModifier = null;
-		icomponentdefinitions_0.playerIndex = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -515297121);
 		}

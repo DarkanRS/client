@@ -15,7 +15,7 @@ public class IComponentDefinitions {
 	public int anInt1432;
 	public int anInt1433;
 	public int anInt1434;
-	public Animation aAnimation_1437;
+	public Animation anim;
 	public IComponentDefinitions[] aClass118Array1438;
 	public IComponentDefinitions[] aClass118Array1439;
 	public static int anInt1283 = 0;
@@ -38,7 +38,7 @@ public class IComponentDefinitions {
 	static SoftCache aClass229_1282 = new SoftCache(4);
 	public static SoftCache aClass229_1341 = new SoftCache(50);
 	public static boolean aBool1399 = false;
-	public int type;
+	public ComponentType type;
 	public String name;
 	public int contentType = 0;
 	public int basePositionX = 0;
@@ -56,8 +56,8 @@ public class IComponentDefinitions {
 	public boolean noClickThrough = false;
 	public int spriteId = -1;
 	public int anInt1423 = 0;
-	public int modelType = 1;
-	public int playerIndex;
+	public ModelType modelType = ModelType.RAW_MODEL;
+	public int modelId;
 	public boolean repeat_ = false;
 	public int fontId = -1;
 	public String text = "";
@@ -69,7 +69,7 @@ public class IComponentDefinitions {
 	public int anInt1358 = 0;
 	public int textHorizontalAli = 0;
 	public int textVerticalAli = 0;
-	public int anInt1377 = 1;
+	public int lineWidth = 1;
 	public boolean aBool1332;
 	public boolean aBool1356 = true;
 	public boolean filled = false;
@@ -80,7 +80,7 @@ public class IComponentDefinitions {
 	public String aString1369;
 	public boolean vFlip;
 	public boolean shadow = false;
-	public boolean aBool1357 = false;
+	public boolean lineDirection = false;
 	public String[] rightclickOptions;
 	public boolean aBool1344 = false;
 	public int multiline = 0;
@@ -185,32 +185,18 @@ public class IComponentDefinitions {
 	short[] aShortArray1331;
 	short[] aShortArray1349;
 	short[] aShortArray1317;
-	
-	public enum ContentType {
-		MODEL(6),
-		FIGURE(3),
-		TEXT(4),
-		CONTAINER(0),
-		SPRITE(5), 
-		UNKNOWN(9);
-		
-		private int id;
-		
-		private ContentType(int id) {
-			this.id = id;
-		}
-	}
 
 	void readValues(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
 		if (i_3 == 255) {
 			i_3 = -1;
 		}
-		this.type = rsbytebuffer_1.readUnsignedByte();
-		if ((this.type & 0x80) != 0) {
-			this.type &= 0x7f;
+		int typeId = rsbytebuffer_1.readUnsignedByte();
+		if ((typeId & 0x80) != 0) {
+			typeId &= 0x7f;
 			this.name = rsbytebuffer_1.readString();
 		}
+		this.type = ComponentType.forId(typeId);
 		this.contentType = rsbytebuffer_1.readUnsignedShort();
 		this.basePositionX = rsbytebuffer_1.readShort();
 		this.basePositionY = rsbytebuffer_1.readShort();
@@ -231,14 +217,14 @@ public class IComponentDefinitions {
 		if (i_3 >= 0) {
 			this.noClickThrough = (i_4 & 0x2) != 0;
 		}
-		if (this.type == 0) {
+		if (this.type == ComponentType.CONTAINER) {
 			this.scrollWidth = rsbytebuffer_1.readUnsignedShort();
 			this.scrollHeight = rsbytebuffer_1.readUnsignedShort();
 			if (i_3 < 0) {
 				this.noClickThrough = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
-		if (this.type == 5) {
+		if (this.type == ComponentType.SPRITE) {
 			this.spriteId = rsbytebuffer_1.readInt();
 			this.anInt1423 = rsbytebuffer_1.readUnsignedShort();
 			int flag2 = rsbytebuffer_1.readUnsignedByte();
@@ -254,9 +240,9 @@ public class IComponentDefinitions {
 				this.clickMask = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 		}
-		if (this.type == 6) {
-			this.modelType = 1;
-			this.playerIndex = rsbytebuffer_1.readBigSmart();
+		if (this.type == ComponentType.MODEL) {
+			this.modelType = ModelType.RAW_MODEL;
+			this.modelId = rsbytebuffer_1.readBigSmart();
 			int flag2 = rsbytebuffer_1.readUnsignedByte();
 			boolean bool_6 = (flag2 & 0x1) == 1;
 			this.aBool1332 = (flag2 & 0x2) == 2;
@@ -286,7 +272,7 @@ public class IComponentDefinitions {
 				this.anInt1326 = rsbytebuffer_1.readUnsignedShort();
 			}
 		}
-		if (this.type == 4) {
+		if (this.type == ComponentType.TEXT) {
 			this.fontId = rsbytebuffer_1.readBigSmart();
 			if (i_3 >= 2) {
 				this.aBool1356 = rsbytebuffer_1.readUnsignedByte() == 1;
@@ -307,15 +293,15 @@ public class IComponentDefinitions {
 				this.multiline = rsbytebuffer_1.readUnsignedByte();
 			}
 		}
-		if (this.type == 3) {
+		if (this.type == ComponentType.FIGURE) {
 			this.color = rsbytebuffer_1.readInt();
 			this.filled = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.transparency = rsbytebuffer_1.readUnsignedByte();
 		}
-		if (this.type == 9) {
-			this.anInt1377 = rsbytebuffer_1.readUnsignedByte();
+		if (this.type == ComponentType.LINE) {
+			this.lineWidth = rsbytebuffer_1.readUnsignedByte();
 			this.color = rsbytebuffer_1.readInt();
-			this.aBool1357 = rsbytebuffer_1.readUnsignedByte() == 1;
+			this.lineDirection = rsbytebuffer_1.readUnsignedByte() == 1;
 		}
 		int optionMask = rsbytebuffer_1.read24BitUnsignedInteger();
 		int i_16 = rsbytebuffer_1.readUnsignedByte();
@@ -607,11 +593,11 @@ public class IComponentDefinitions {
 
 	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
 		aBool1399 = false;
-		if (this.modelType == 0) {
+		if (this.modelType == ModelType.NONE) {
 			return null;
-		} else if (this.modelType == 1 && this.playerIndex == -1) {
+		} else if (this.modelType == ModelType.RAW_MODEL && this.modelId == -1) {
 			return null;
-		} else if (this.modelType == 1) {
+		} else if (this.modelType == ModelType.RAW_MODEL) {
 			if (animation_9 != null) {
 				i_2 |= animation_9.method7640(-1880128798);
 			}
@@ -636,13 +622,13 @@ public class IComponentDefinitions {
 				}
 				i_2 |= 0x8000;
 			}
-			long long_21 = (long) graphicalrenderer_1.rendererId << 59 | (long) this.modelType << 54 | (long) this.playerIndex << 38 | long_13 & 0x3fffffffffL;
+			long long_21 = (long) graphicalrenderer_1.rendererId << 59 | (long) this.modelType.getId() << 54 | (long) this.modelId << 38 | long_13 & 0x3fffffffffL;
 			MeshRasterizer meshrasterizer_18 = (MeshRasterizer) aClass229_1341.get(long_21);
 			if (meshrasterizer_18 == null || graphicalrenderer_1.method8452(meshrasterizer_18.m(), i_2) != 0) {
 				if (meshrasterizer_18 != null) {
 					i_2 = graphicalrenderer_1.method8546(i_2, meshrasterizer_18.m());
 				}
-				RSMesh rsmesh_19 = RSMesh.decodeMesh(Class488.MESH_INDEX, this.playerIndex);
+				RSMesh rsmesh_19 = RSMesh.decodeMesh(Class488.MESH_INDEX, this.modelId);
 				if (rsmesh_19 == null) {
 					aBool1399 = true;
 					return null;
@@ -672,15 +658,15 @@ public class IComponentDefinitions {
 			return meshrasterizer_18;
 		} else {
 			MeshRasterizer meshrasterizer_23;
-			if (this.modelType == 2) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.playerIndex).method6880(graphicalrenderer_1, i_2, interface42_8, animation_9, this.npcMeshModifier, 1874491057);
+			if (this.modelType == ModelType.NPC_HEAD) {
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.modelId).renderHead(graphicalrenderer_1, i_2, interface42_8, animation_9, this.npcMeshModifier, 1874491057);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;
 				} else {
 					return meshrasterizer_23;
 				}
-			} else if (this.modelType == 3) {
+			} else if (this.modelType == ModelType.PLAYER_HEAD) {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
@@ -692,8 +678,8 @@ public class IComponentDefinitions {
 						return meshrasterizer_23;
 					}
 				}
-			} else if (this.modelType == 4) {
-				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.playerIndex);
+			} else if (this.modelType == ModelType.ITEM) {
+				ItemDefinitions itemdefinitions_27 = itemindexloader_6.getItemDefinitions(this.modelId);
 				MeshRasterizer meshrasterizer_24 = itemdefinitions_27.method7084(graphicalrenderer_1, i_2, 10, playerappearance_10, animation_9, 0, 0, 0, 0);
 				if (meshrasterizer_24 == null) {
 					aBool1399 = true;
@@ -701,20 +687,20 @@ public class IComponentDefinitions {
 				} else {
 					return meshrasterizer_24;
 				}
-			} else if (this.modelType == 6) {
-				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.playerIndex).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.npcMeshModifier, -653193588);
+			} else if (this.modelType == ModelType.NPC_MODEL) {
+				meshrasterizer_23 = npcindexloader_5.getNPCDefinitions(this.modelId).method6875(graphicalrenderer_1, i_2, renderanimindexloader_3, interface42_8, animation_9, (Animation) null, (Animation[]) null, (int[]) null, 0, this.npcMeshModifier, -653193588);
 				if (meshrasterizer_23 == null) {
 					aBool1399 = true;
 					return null;
 				} else {
 					return meshrasterizer_23;
 				}
-			} else if (this.modelType == 7) {
+			} else if (this.modelType == ModelType.PLAYER_HEAD_IGNOREWORN) {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
-					int i_12 = this.playerIndex >>> 16;
-					int i_25 = this.playerIndex & 0xffff;
+					int i_12 = this.modelId >>> 16;
+					int i_25 = this.modelId & 0xffff;
 					int i_14 = this.anInt1339;
 					MeshRasterizer meshrasterizer_15 = playerappearance_10.method3999(graphicalrenderer_1, i_2, class31_4, animationindexloader_7, animation_9, i_12, i_25, i_14);
 					if (meshrasterizer_15 == null) {

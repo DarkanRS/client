@@ -1706,7 +1706,7 @@ public class PacketDecoder {
 			PulseEvent.method778(interfaceHash, defs.modelOffsetX, defs.modelOffsetY, defs.modelRotationZ);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.aClass375_4481) {
+		} else if (context.currentPacket == ServerPacket.IF_SETPLAYERHEAD_IGNOREWORN) {
 			int key = buffer.readShortLE();
 			int flags = buffer.readUnsignedShort128();
 			int i_6 = buffer.readUnsignedShort128();

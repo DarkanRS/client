@@ -571,11 +571,11 @@ public class ItemDefinitions implements Definition {
         }
     }
 
-    public final boolean bodyMeshesReady(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+    public final boolean bodyMeshesReady(boolean female, MeshModifier meshmodifier_2, int i_3) {
         int i_4;
         int i_5;
         int i_6;
-        if (bool_1) {
+        if (female) {
             if (meshmodifier_2 != null && meshmodifier_2.femaleBody != null) {
                 i_4 = meshmodifier_2.femaleBody[0];
                 i_5 = meshmodifier_2.femaleBody[1];

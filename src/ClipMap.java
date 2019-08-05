@@ -796,8 +796,8 @@ public class ClipMap {
             IComponentDefinitions[] arr_3 = CustomCursorsPreference.INTERFACES[i_0].components;
             for (int i_4 = 0; i_4 < arr_3.length; i_4++) {
                 IComponentDefinitions icomponentdefinitions_5 = arr_3[i_4];
-                if (icomponentdefinitions_5 != null && icomponentdefinitions_5.aAnimation_1437 != null) {
-                    icomponentdefinitions_5.aAnimation_1437.method7582((byte) -62);
+                if (icomponentdefinitions_5 != null && icomponentdefinitions_5.anim != null) {
+                    icomponentdefinitions_5.anim.method7582((byte) -62);
                 }
             }
         }

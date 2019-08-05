@@ -132,7 +132,7 @@ public enum ServerPacket {
 	FRIENDS_CHAT_CHANNEL(127, -2),
 	MIDI_SONG_LOCATION(128, 6),
 	aClass375_4364(129, 2), //reads some weird shit and is only set, never read?.. entity method gets set in cs2 interpreter
-	aClass375_4481(130, 10), //player onto an interface with different type? maybe full model or chathead without helmet?
+	IF_SETPLAYERHEAD_IGNOREWORN(130, 10),
 	MESSAGE_QUICKCHAT_CLANCHANNEL(131, -1),
 	aClass375_4483(132, 9), //retex/recolor interface?
 	QUICKCHAT_RELATED1(133, -1),
