@@ -84,7 +84,7 @@ public class PlayerAppearance {
 
 	public void method3993(int i_1, int i_2, IdentitiKitIndexLoader class31_3, int i_4) {
 		int i_5 = anIntArray2917[i_1];
-		if (class31_3.method800(i_2, 1435454406) != null) {
+		if (class31_3.getIdentitiKit(i_2) != null) {
 			this.anIntArray2921[i_5] = i_2 | ~0x7fffffff;
 			this.refresh();
 		}
@@ -222,7 +222,7 @@ public class PlayerAppearance {
 										arr_56[i_31] = rsmesh_35;
 									}
 								} else if ((i_41 & ~0x7fffffff) != 0) {
-									rsmesh_35 = class31_4.method800(i_41 & 0x3fffffff, -33767981).method899();
+									rsmesh_35 = class31_4.getIdentitiKit(i_41 & 0x3fffffff).method899();
 									if (rsmesh_35 != null) {
 										arr_56[i_31] = rsmesh_35;
 									}
@@ -308,7 +308,7 @@ public class PlayerAppearance {
 						if (!itemindexloader_6.getItemDefinitions(i_31 & 0x3fffffff).bodyMeshesReady(this.gender, meshmodifier_32, -1830991961)) {
 							bool_29 = true;
 						}
-					} else if ((i_31 & ~0x7fffffff) != 0 && !class31_4.method800(i_31 & 0x3fffffff, 1122652918).method898()) {
+					} else if ((i_31 & ~0x7fffffff) != 0 && !class31_4.getIdentitiKit(i_31 & 0x3fffffff).method898()) {
 						bool_29 = true;
 					}
 					++i_30;
@@ -366,9 +366,9 @@ public class PlayerAppearance {
 		}
 	}
 
-	public MeshRasterizer method3999(GraphicalRenderer graphicalrenderer_1, int i_2, IdentitiKitIndexLoader class31_3, AnimationIndexLoader animationindexloader_4, Animation animation_5, int i_6, int i_7, int i_8) {
+	public MeshRasterizer method3999(GraphicalRenderer graphicalrenderer_1, int i_2, IdentitiKitIndexLoader identitiKitLoader, AnimationIndexLoader animationindexloader_4, Animation animation_5, int idKit1, int idKit2, int idKit3) {
 		int i_10 = animation_5 != null ? i_2 | animation_5.method7640(-1959438084) : i_2;
-		long long_11 = (long) i_8 << 32 | (long) (i_7 << 16) | (long) i_6;
+		long long_11 = (long) idKit3 << 32 | (long) (idKit2 << 16) | (long) idKit1;
 		SoftCache softcache_14 = aClass229_2930;
 		MeshRasterizer meshrasterizer_13;
 		synchronized (aClass229_2930) {
@@ -380,18 +380,18 @@ public class PlayerAppearance {
 			}
 			RSMesh[] arr_15 = new RSMesh[3];
 			int i_16 = 0;
-			if (!class31_3.method800(i_6, 2136015066).method900() || !class31_3.method800(i_7, 1449973284).method900() || !class31_3.method800(i_8, 327347634).method900()) {
+			if (!identitiKitLoader.getIdentitiKit(idKit1).method900() || !identitiKitLoader.getIdentitiKit(idKit2).method900() || !identitiKitLoader.getIdentitiKit(idKit3).method900()) {
 				return null;
 			}
-			RSMesh rsmesh_17 = class31_3.method800(i_6, 23864498).method895(246816839);
+			RSMesh rsmesh_17 = identitiKitLoader.getIdentitiKit(idKit1).renderHead();
 			if (rsmesh_17 != null) {
 				arr_15[i_16++] = rsmesh_17;
 			}
-			rsmesh_17 = class31_3.method800(i_7, 283433208).method895(1834406332);
+			rsmesh_17 = identitiKitLoader.getIdentitiKit(idKit2).renderHead();
 			if (rsmesh_17 != null) {
 				arr_15[i_16++] = rsmesh_17;
 			}
-			rsmesh_17 = class31_3.method800(i_8, 644064518).method895(1598273380);
+			rsmesh_17 = identitiKitLoader.getIdentitiKit(idKit3).renderHead();
 			if (rsmesh_17 != null) {
 				arr_15[i_16++] = rsmesh_17;
 			}
@@ -451,7 +451,7 @@ public class PlayerAppearance {
 						if (!itemindexloader_5.getItemDefinitions(i_15 & 0x3fffffff).headMeshesReady(this.gender, meshmodifier_16)) {
 							bool_13 = true;
 						}
-					} else if ((i_15 & ~0x7fffffff) != 0 && !class31_3.method800(i_15 & 0x3fffffff, 745327343).method900()) {
+					} else if ((i_15 & ~0x7fffffff) != 0 && !class31_3.getIdentitiKit(i_15 & 0x3fffffff).method900()) {
 						bool_13 = true;
 					}
 				}
@@ -474,7 +474,7 @@ public class PlayerAppearance {
 							arr_21[i_15++] = rsmesh_19;
 						}
 					} else if ((i_17 & ~0x7fffffff) != 0) {
-						rsmesh_19 = class31_3.method800(i_17 & 0x3fffffff, 316441737).method895(-2041696);
+						rsmesh_19 = class31_3.getIdentitiKit(i_17 & 0x3fffffff).renderHead();
 						if (rsmesh_19 != null) {
 							arr_21[i_15++] = rsmesh_19;
 						}

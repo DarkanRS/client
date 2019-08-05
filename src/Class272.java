@@ -6,7 +6,7 @@ public class Class272 {
 		throw new Error();
 	}
 
-	public static int method4840(CharSequence charsequence_0, byte b_1) {
+	public static int stringToInt(CharSequence charsequence_0) {
 		int i_2 = charsequence_0.length();
 		int i_3 = 0;
 		for (int i_4 = 0; i_4 < i_2; i_4++) {

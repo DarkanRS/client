@@ -561,7 +561,7 @@ public class PacketDecoder {
 			client.anIntArray7435[i_6] = flags;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.QUICKCHAT_RELATED1) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_PLAYER_GROUP) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -591,7 +591,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.QUICKCHAT_RELATED2) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_PLAYER_GROUP) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -1707,12 +1707,12 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IF_SETPLAYERHEAD_IGNOREWORN) {
-			int key = buffer.readShortLE();
-			int flags = buffer.readUnsignedShort128();
-			int i_6 = buffer.readUnsignedShort128();
-			int i_7 = buffer.readIntV2();
+			int idKit1 = buffer.readShortLE();
+			int usernameMeme = buffer.readUnsignedShort128();
+			int idKit2 = buffer.readUnsignedShort128();
+			int interfaceHash = buffer.readIntV2();
 			Class470.method7825();
-			PulseEvent.setIFContent(i_7, 7, key << 16 | i_6, flags, (byte) -41);
+			PulseEvent.setIFContent(interfaceHash, 7, idKit1 << 16 | idKit2, usernameMeme, (byte) -41);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.GROUND_ITEM_COUNT) {

@@ -653,7 +653,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												i_24 = inter.modelId;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
-													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.method4840(player_37.displayName, (byte) 111) == inter.anInt1339)) {
+													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339)) {
 														meshRasterizer = inter.method2002(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, player_37.playerAppearance);
 														if (meshRasterizer == null && IComponentDefinitions.aBool1399) {
 															Class109.redrawComponent(inter);
@@ -664,7 +664,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												i_24 = inter.modelId;
 												if (i_24 >= 0 && i_24 < 2048) {
 													player_37 = client.players[i_24];
-													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.method4840(player_37.displayName, (byte) 17) == inter.anInt1339)) {
+													if (player_37 != null && (i_24 == client.myPlayerIndex || Class272.stringToInt(player_37.displayName) == inter.anInt1339)) {
 														meshRasterizer = player_37.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_22, IndexLoaders.RENDER_ANIM_LOADER, IndexLoaders.IDENTITI_KIT_LOADER, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_LOADER, IndexLoaders.ANIMATION_LOADER, Class158_Sub1.PLAYER_VAR_PROVIDER, inter.anim, (Animation) null, (Animation[]) null, (int[]) null, 0, LinkedNodeList.EQUIPMENT_DEFAULTS, (short) -10357);
 													}
 												}

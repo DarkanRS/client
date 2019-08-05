@@ -85,7 +85,7 @@ public enum ServerPacket {
 	OBJ_ANIM_SPECIFIC(80, 9),
 	MESSAGE_CLANCHANNEL(81, -1),
 	IF_SETANIM(82, 8),
-	QUICKCHAT_RELATED2(83, -1),
+	MESSAGE_QUICKCHAT_PLAYER_GROUP(83, -1),
 	CUSTOMIZE_OBJECT(84, -1),
 	REGION(85, -2),
 	aClass375_4437(86, -2), //"opensn" maybe social network login?
@@ -135,7 +135,7 @@ public enum ServerPacket {
 	IF_SETPLAYERHEAD_IGNOREWORN(130, 10),
 	MESSAGE_QUICKCHAT_CLANCHANNEL(131, -1),
 	aClass375_4483(132, 9), //retex/recolor interface?
-	QUICKCHAT_RELATED1(133, -1),
+	MESSAGE_PLAYER_GROUP(133, -1),
 	aClass375_4453(134, 2), //not a clue
 	IF_SETMODEL(135, 8),
 	SOUND_SYNTH(136, 8),

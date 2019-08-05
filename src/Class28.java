@@ -159,7 +159,7 @@ public class Class28 implements Interface2 {
                 icomponentdefinitions_0.spriteRoll = (int) (Math.sin((double) client.cycles / 40.0D) * 256.0D) & 0x7ff;
                 icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
                 icomponentdefinitions_0.modelId = client.myPlayerIndex;
-                icomponentdefinitions_0.anInt1339 = Class272.method4840(VertexNormal.MY_PLAYER.displayName, (byte) 15);
+                icomponentdefinitions_0.anInt1339 = Class272.stringToInt(VertexNormal.MY_PLAYER.displayName);
                 MovingAnimation class456_sub3_2 = VertexNormal.MY_PLAYER.aAnimation_Sub3_10337;
                 if (class456_sub3_2 != null) {
                     if (icomponentdefinitions_0.anim == null) {

@@ -13,7 +13,7 @@ public class IdentikitDefinition implements Definition {
     short[] replacementTextures;
     int[] headModels = new int[] { -1, -1, -1, -1, -1 };
 
-    public RSMesh method895(int i_1) {
+    public RSMesh renderHead() {
         RSMesh[] arr_2 = new RSMesh[5];
         int i_3 = 0;
         Index index_4 = this.aClass31_429.aClass317_359;

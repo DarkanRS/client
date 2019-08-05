@@ -699,10 +699,10 @@ public class IComponentDefinitions {
 				if (playerappearance_10 == null) {
 					return null;
 				} else {
-					int i_12 = this.modelId >>> 16;
-					int i_25 = this.modelId & 0xffff;
-					int i_14 = this.anInt1339;
-					MeshRasterizer meshrasterizer_15 = playerappearance_10.method3999(graphicalrenderer_1, i_2, class31_4, animationindexloader_7, animation_9, i_12, i_25, i_14);
+					int idKit1 = this.modelId >>> 16;
+					int idKit2 = this.modelId & 0xffff;
+					int idKit3 = this.anInt1339;
+					MeshRasterizer meshrasterizer_15 = playerappearance_10.method3999(graphicalrenderer_1, i_2, class31_4, animationindexloader_7, animation_9, idKit1, idKit2, idKit3);
 					if (meshrasterizer_15 == null) {
 						aBool1399 = true;
 						return null;
