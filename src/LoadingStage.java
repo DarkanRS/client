@@ -148,7 +148,7 @@ public class LoadingStage {
 			i_12 = Class382.SINE[i_11] * i_14 >> 14;
 			i_14 = Class382.COSINE[i_11] * i_14 >> 14;
 		}
-		IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_0 - i_12;
+		IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_0 - i_12;
 		Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_1 - i_13;
 		Class246.CAM_MOVE_ABSOLUTEY = i_2 - i_14;
 		Class293.anInt3512 = i_3;

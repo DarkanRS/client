@@ -1,6 +1,6 @@
 public class IdentikitDefinition implements Definition {
 
-    IdentitiKitIndexLoader aClass31_429;
+    IdentiKitIndexLoader aClass31_429;
     static int anInt430;
     static int anInt431;
     public static int[] anIntArray428 = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };

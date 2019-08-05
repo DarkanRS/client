@@ -73,7 +73,7 @@ public class EntityNode_Sub7 extends EntityNode {
 		Class86.anInt833 = -1;
 		PingRequester.anInt5864 = -1;
 		client.anInt7429 = client.cycles;
-		Class186.anInt2349 = IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
+		Class186.anInt2349 = IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
 		Transform_Sub1_Sub2.anInt9461 = Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
 		Node_Sub15_Sub1.anInt9575 = Class246.CAM_MOVE_ABSOLUTEY;
 		ClipMap.anInt3968 = Class293.anInt3512;

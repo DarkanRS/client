@@ -32,7 +32,7 @@ public class Class239 {
 				this.method4072(mapregion_1.getSizeX() >> 4, mapregion_1.getSizeY() >> 4, 0, -1860642378);
 			}
 		} else {
-			this.method4072(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12, Class246.CAM_MOVE_ABSOLUTEY >> 12, anInt2942, -1959454932);
+			this.method4072(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12, Class246.CAM_MOVE_ABSOLUTEY >> 12, anInt2942, -1959454932);
 		}
 		this.method4065();
 		this.method4049((byte) 97);

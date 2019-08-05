@@ -752,7 +752,7 @@ public class PacketDecoder {
 			int i_11 = buffer.readIntV1();
 			int i_12 = buffer.readUnsignedShortLE128();
 			Class470.method7825();
-			IdentitiKitIndexLoader.method812(key, new Node_Sub44_Sub3(i_6, i_9, new Class520(coordgrid_90, i_12)), new int[] { i_8, i_11, flags, i_7 }, false, (byte) 121);
+			IdentiKitIndexLoader.method812(key, new Node_Sub44_Sub3(i_6, i_9, new Class520(coordgrid_90, i_12)), new int[] { i_8, i_11, flags, i_7 }, false, (byte) 121);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.FRIENDS_CHAT_CHANNEL) {
@@ -1616,7 +1616,7 @@ public class PacketDecoder {
 			int i_10 = buffer.readIntV1();
 			int i_11 = buffer.readShortLE();
 			Class470.method7825();
-			IdentitiKitIndexLoader.method812(i_9, new Node_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
+			IdentiKitIndexLoader.method812(i_9, new Node_Sub44_Sub2(i_7, flags, i_11), new int[] { i_6, i_8, i_10, key }, false, (byte) 25);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CLANSETTINGS_DELTA) {
@@ -1662,7 +1662,7 @@ public class PacketDecoder {
 			int i_9 = buffer.readInt();
 			int i_10 = buffer.readUnsignedByteC();
 			Class470.method7825();
-			IdentitiKitIndexLoader.method812(i_9, new Node_Sub44(i_7, i_10), new int[] { key, i_6, flags, i_8 }, false, (byte) 25);
+			IdentiKitIndexLoader.method812(i_9, new Node_Sub44(i_7, i_10), new int[] { key, i_6, flags, i_8 }, false, (byte) 25);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CREATE_ACCOUNT_REPLY) {
@@ -2135,7 +2135,7 @@ public class PacketDecoder {
 			int i_10 = buffer.readInt();
 			int i_11 = buffer.readInt();
 			Class470.method7825();
-			IdentitiKitIndexLoader.method812(i_7, new Node_Sub44_Sub1(i_9, i_6, key), new int[] { i_11, flags, i_10, i_8 }, false, (byte) 46);
+			IdentiKitIndexLoader.method812(i_7, new Node_Sub44_Sub1(i_9, i_6, key), new int[] { i_11, flags, i_10, i_8 }, false, (byte) 46);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.ADD_IGNORE) {
@@ -2289,7 +2289,7 @@ public class PacketDecoder {
 			CoordGrid coordgrid_36 = new CoordGrid(buffer.readIntV2());
 			int i_15 = buffer.readInt();
 			Class470.method7825();
-			IdentitiKitIndexLoader.method812(key, new Node_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
+			IdentiKitIndexLoader.method812(key, new Node_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.VARCLAN_DISABLE) {

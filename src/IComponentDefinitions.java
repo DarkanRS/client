@@ -591,7 +591,7 @@ public class IComponentDefinitions {
 		}
 	}
 
-	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentitiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
+	public MeshRasterizer method2002(GraphicalRenderer graphicalrenderer_1, int i_2, RenderAnimIndexLoader renderanimindexloader_3, IdentiKitIndexLoader class31_4, NPCIndexLoader npcindexloader_5, ItemIndexLoader itemindexloader_6, AnimationIndexLoader animationindexloader_7, VarProvider interface42_8, Animation animation_9, PlayerAppearance playerappearance_10) {
 		aBool1399 = false;
 		if (this.modelType == ModelType.NONE) {
 			return null;

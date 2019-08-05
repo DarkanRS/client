@@ -357,21 +357,21 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		int i_2 = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
 		int i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
 		if (Class115.CAM_MOVE_VAR_SPEED >= 100) {
-			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
+			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
 			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
-			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
+			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
 		} else {
-			if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
-				IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (i_1 - IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX) * Class115.CAM_MOVE_VAR_SPEED / 1000 + IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX + Class454.CAM_MOVE_CONST_SPEED;
-				if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX > i_1) {
-					IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_1;
+			if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
+				IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (i_1 - IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX) * Class115.CAM_MOVE_VAR_SPEED / 1000 + IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX + Class454.CAM_MOVE_CONST_SPEED;
+				if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX > i_1) {
+					IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_1;
 				}
 			}
 
-			if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX > i_1) {
-				IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= Class115.CAM_MOVE_VAR_SPEED * (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX - i_1) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
-				if (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
-					IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_1;
+			if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX > i_1) {
+				IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= Class115.CAM_MOVE_VAR_SPEED * (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX - i_1) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
+				if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
+					IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_1;
 				}
 			}
 
@@ -407,7 +407,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		i_1 = PlaySynthCutsceneAction.anInt9368 * 512 + 256;
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
 		i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35) - Class121.anInt1527;
-		int i_4 = i_1 - IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
+		int i_4 = i_1 - IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
 		int i_5 = i_3 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
 		int i_6 = i_2 - Class246.CAM_MOVE_ABSOLUTEY;
 		int i_7 = (int) Math.sqrt((double) (i_6 * i_6 + i_4 * i_4));

@@ -14,9 +14,9 @@ public abstract class RouteStrategy {
 		Class454.CAM_MOVE_CONST_SPEED = constantSpeed;
 		Class115.CAM_MOVE_VAR_SPEED = variableSpeed;
 		if (bool_5 && Class115.CAM_MOVE_VAR_SPEED >= 100) {
-			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
+			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
 			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
-			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
+			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
 		}
 		NativeLibraryLoader.anInt3240 = 5;
 		Class86.anInt833 = -1;

@@ -239,7 +239,7 @@ public class Login {
                         rsbitsbuffer_22.writeShort(Class349.anInt4083);
                         rsbitsbuffer_22.writeShort(Engine.anInt3243 * -969250379);
                         rsbitsbuffer_22.writeByte(Class393.preferences.aPreference_Sub4_8223.method12641(919663007));
-                        IdentitiKitIndexLoader.method809(rsbitsbuffer_22, 972141670);
+                        IdentiKitIndexLoader.method809(rsbitsbuffer_22, 972141670);
                         rsbitsbuffer_22.writeString(client.aString7281);
                         rsbitsbuffer_22.writeInt(client.AFFILIATE);
                         rsbytebuffer_7 = Class393.preferences.encode();
@@ -293,7 +293,7 @@ public class Login {
                         }
                         rsbitsbuffer_22.writeByte(client.CURRENT_GAME.id);
                         rsbitsbuffer_22.writeByte(Class223.CURRENT_LANGUAGE.getValue());
-                        IdentitiKitIndexLoader.method809(rsbitsbuffer_22, -378154884);
+                        IdentiKitIndexLoader.method809(rsbitsbuffer_22, -378154884);
                         rsbitsbuffer_22.writeString(client.aString7281);
                         rsbytebuffer_7 = Class393.preferences.encode();
                         rsbitsbuffer_22.writeByte(rsbytebuffer_7.index);

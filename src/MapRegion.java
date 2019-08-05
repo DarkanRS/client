@@ -77,7 +77,7 @@ public class MapRegion {
 		this.method4456(Class480.method8046(Class393.preferences.aPreference_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
 		int i_2 = this.coordGrid.x;
 		int i_3 = this.coordGrid.y;
-		int mapBaseX = (IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12) + (i_2 >> 3);
+		int mapBaseX = (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12) + (i_2 >> 3);
 		int mapBaseY = (Class246.CAM_MOVE_ABSOLUTEY >> 12) + (i_3 >> 3);
 		VertexNormal.MY_PLAYER.plane = 0;
 		Class4.anInt35 = 0;
@@ -594,7 +594,7 @@ public class MapRegion {
 			Node_Sub44.CAM_MOVE_LOCALY -= i_4;
 			PlaySynthCutsceneAction.anInt9368 -= i_3;
 			OutgoingLoginPacket.anInt4280 -= i_4;
-			IdentitiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= i_3 * 512;
+			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= i_3 * 512;
 			Class246.CAM_MOVE_ABSOLUTEY -= i_4 * 512;
 			if (Math.abs(i_3) > this.sizeX || Math.abs(i_4) > this.sizeY) {
 				this.aClass239_3175.method4048(1347425088);

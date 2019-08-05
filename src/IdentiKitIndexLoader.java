@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class IdentitiKitIndexLoader implements IndexLoader {
+public class IdentiKitIndexLoader implements IndexLoader {
 
 	public static int CAM_MOVE_ABSOLUTEX;
 
@@ -10,7 +10,7 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 
 	Index aClass317_359;
 
-	public IdentikitDefinition getIdentitiKit(int i_1) {
+	public IdentikitDefinition getIdentiKit(int i_1) {
 		SoftCache softcache_4 = this.aClass229_360;
 		IdentikitDefinition class44_3;
 		synchronized (this.aClass229_360) {
@@ -22,7 +22,7 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 			Index index_5 = this.aClass317_358;
 			byte[] bytes_10;
 			synchronized (this.aClass317_358) {
-				bytes_10 = this.aClass317_358.getFile(SharedConfigsType.IDENTITIKIT.id, i_1);
+				bytes_10 = this.aClass317_358.getFile(SharedConfigsType.IdentiKit.id, i_1);
 			}
 			class44_3 = new IdentikitDefinition();
 			class44_3.aClass31_429 = this;
@@ -58,10 +58,10 @@ public class IdentitiKitIndexLoader implements IndexLoader {
 		}
 	}
 
-	public IdentitiKitIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+	public IdentiKitIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
 		this.aClass317_358 = index_3;
 		this.aClass317_359 = index_4;
-		this.aClass317_358.filesCount(SharedConfigsType.IDENTITIKIT.id);
+		this.aClass317_358.filesCount(SharedConfigsType.IdentiKit.id);
 	}
 
 	public static void method809(RsByteBuffer rsbytebuffer_0, int i_1) {

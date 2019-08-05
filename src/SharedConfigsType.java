@@ -1,7 +1,7 @@
 public enum SharedConfigsType {
 	UNDERLAYS(1),
 	SCT_2(2),
-	IDENTITIKIT(3),
+	IdentiKit(3),
 	OVERLAYS(4),
 	INVENTORIES(5),
 	OBJECTS(6, 8),

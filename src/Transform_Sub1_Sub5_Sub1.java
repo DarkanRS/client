@@ -514,7 +514,7 @@ public class Transform_Sub1_Sub5_Sub1 extends Transform_Sub1_Sub5 implements Sce
 					packet.buffer.writeString(Class464.aString5555);
 					packet.buffer.writeByte(Class223.CURRENT_LANGUAGE.getValue());
 					packet.buffer.writeByte(client.CURRENT_GAME.id);
-					IdentitiKitIndexLoader.method809(packet.buffer, -1671456029);
+					IdentiKitIndexLoader.method809(packet.buffer, -1671456029);
 					String string_5 = client.aString7156;
 					packet.buffer.writeByte(string_5 == null ? 0 : 1);
 					if (string_5 != null) {

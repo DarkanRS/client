@@ -203,7 +203,7 @@ public class CS2Interpreter {
 			method815(exec);
 			break;
 		case BASE_IDKIT:
-			setBaseIdentitiKit(exec);
+			setBaseIdentiKit(exec);
 			break;
 		case BASE_COLOR:
 			setBaseColor(exec);
@@ -4892,7 +4892,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void setBaseIdentitiKit(CS2Executor executor) {
+	static final void setBaseIdentiKit(CS2Executor executor) {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
@@ -5265,7 +5265,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		IdentitiKitIndexLoader.method812(i_2, new Node_Sub44(i_3, 3), (int[]) null, true, (byte) 92);
+		IdentiKitIndexLoader.method812(i_2, new Node_Sub44(i_3, 3), (int[]) null, true, (byte) 92);
 	}
 
 	static final void method5962(CS2Executor executor) {
