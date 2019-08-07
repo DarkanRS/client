@@ -22,10 +22,10 @@ public final class Class484 {
 			iCompDef.height = i_2 * iCompDef.baseHeight >> 14;
 		}
 		if (iCompDef.aspectWidthType == 4) {
-			iCompDef.width = iCompDef.anInt1289 * iCompDef.height / iCompDef.anInt1375;
+			iCompDef.width = iCompDef.aspectX * iCompDef.height / iCompDef.aspectY;
 		}
 		if (iCompDef.aspectHeightType == 4) {
-			iCompDef.height = iCompDef.width * iCompDef.anInt1375 / iCompDef.anInt1289;
+			iCompDef.height = iCompDef.width * iCompDef.aspectY / iCompDef.aspectX;
 		}
 		if (client.aBool7168 && (client.getIComponentSettings(iCompDef).settingsHash != 0 || iCompDef.type == ComponentType.CONTAINER)) {
 			if (iCompDef.height < 5 && iCompDef.width < 5) {

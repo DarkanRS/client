@@ -69,8 +69,8 @@ public class PulseEvent extends CacheableNode {
 				}
 			} else if (type == 22) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				if (event.primary == 1 != icomponentdefinitions_5.aBool1363) {
-					icomponentdefinitions_5.aBool1363 = event.primary == 1;
+				if (event.primary == 1 != icomponentdefinitions_5.textAntiMacro) {
+					icomponentdefinitions_5.textAntiMacro = event.primary == 1;
 					Class109.redrawComponent(icomponentdefinitions_5);
 				}
 			} else if (type == 4) {
@@ -124,8 +124,8 @@ public class PulseEvent extends CacheableNode {
 					icomponentdefinitions_5.spriteRoll = event.secondary;
 					icomponentdefinitions_5.spriteScale = event.tertiary;
 					if (icomponentdefinitions_5.anInt1426 != -1) {
-						if (icomponentdefinitions_5.anInt1417 > 0) {
-							icomponentdefinitions_5.spriteScale = icomponentdefinitions_5.spriteScale * 32 / icomponentdefinitions_5.anInt1417;
+						if (icomponentdefinitions_5.aspectWidth > 0) {
+							icomponentdefinitions_5.spriteScale = icomponentdefinitions_5.spriteScale * 32 / icomponentdefinitions_5.aspectWidth;
 						} else if (icomponentdefinitions_5.baseWidth > 0) {
 							icomponentdefinitions_5.spriteScale = icomponentdefinitions_5.spriteScale * 32 / icomponentdefinitions_5.baseWidth;
 						}
@@ -181,7 +181,7 @@ public class PulseEvent extends CacheableNode {
 				icomponentdefinitions_5.fontId = event.primary;
 			} else if (type == 20) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				icomponentdefinitions_5.aBool1356 = event.primary == 1;
+				icomponentdefinitions_5.monospaced = event.primary == 1;
 			} else if (type == 21) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				icomponentdefinitions_5.clickMask = event.primary == 1;
@@ -191,11 +191,11 @@ public class PulseEvent extends CacheableNode {
 			} else if (type == 18) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = (int) (value >> 32);
-				icomponentdefinitions_5.method2007(i_6, (short) event.primary, (short) event.secondary, -328591291);
+				icomponentdefinitions_5.recolor(i_6, (short) event.primary, (short) event.secondary);
 			} else if (type == 19) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
 				int i_6 = (int) (value >> 32);
-				icomponentdefinitions_5.method2013(i_6, (short) event.primary, (short) event.secondary, (byte) 69);
+				icomponentdefinitions_5.retexture(i_6, (short) event.primary, (short) event.secondary);
 			}
 		}
 	}

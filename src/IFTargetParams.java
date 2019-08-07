@@ -1,6 +1,6 @@
-public final class IComponentSettings extends Node {
+public final class IFTargetParams extends Node {
 
-	static IComponentSettings DEFAULT_SETTINGS = new IComponentSettings(0, -1);
+	static IFTargetParams DEFAULT_SETTINGS = new IFTargetParams(0, -1);
 	public int settingsHash;
 	public int interfaceId;
 
@@ -13,14 +13,14 @@ public final class IComponentSettings extends Node {
 	}
 
 	public final int getUseOptionFlags() {
-		return IComponentSettings.getUseOptionFlags(this.settingsHash);
+		return IFTargetParams.getUseOptionFlags(this.settingsHash);
 	}
 
 	public final int depthFlags() {
 		return this.settingsHash >> 18 & 0x7;
 	}
 
-	public IComponentSettings(int i_1, int i_2) {
+	public IFTargetParams(int i_1, int i_2) {
 		this.settingsHash = i_1;
 		this.interfaceId = i_2;
 	}

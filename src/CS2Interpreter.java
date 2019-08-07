@@ -170,10 +170,10 @@ public class CS2Interpreter {
 			loadClanSettingVarString(exec);
 			break;
 		case CC_CREATE:
-			method5962(exec);
+			ccCreate(exec);
 			break;
 		case CC_DELETE:
-			method3790(exec);
+			ccDelete(exec);
 			break;
 		case CC_DELETEALL:
 			clearCompChildren(exec);
@@ -185,22 +185,22 @@ public class CS2Interpreter {
 			method2620(exec);
 			break;
 		case IF_SENDTOFRONT:
-			method15553(true, exec);
+			ifSetFront(true, exec);
 			break;
 		case IF_SENDTOBACK:
-			method15553(false, exec);
+			ifSetFront(false, exec);
 			break;
 		case CC_SENDTOFRONT:
-			method5200(true, exec);
+			ccSetFront(true, exec);
 			break;
 		case CC_SENDTOBACK:
-			method5200(false, exec);
+			ccSetFront(false, exec);
 			break;
-		case instr6009:
-			method4173(exec);
+		case IF_RESUME_PAUSEBUTTON:
+			ifResumePauseButton(exec);
 			break;
-		case instr6419:
-			method815(exec);
+		case CC_RESUME_PAUSEBUTTON:
+			ccResumePauseButton(exec);
 			break;
 		case BASE_IDKIT:
 			setBaseIdentiKit(exec);
@@ -214,58 +214,58 @@ public class CS2Interpreter {
 		case SET_ITEM:
 			setItem(exec);
 			break;
-		case instr6146:
+		case CC_SETPOSITION:
 			ccSetPosition(exec);
 			break;
-		case instr6016: //CC_SETSIZE
-			method6116(exec);
+		case CC_SETSIZE:
+			ccSetSize(exec);
 			break;
-		case instr6118: //CC_SETHIDE
-			method2638(exec);
+		case CC_SETHIDE:
+			ccSetHide(exec);
 			break;
-		case instr6018: //CC_SETASPECT
-			method6282(exec);
+		case CC_SETASPECT:
+			ccSetAspect(exec);
 			break;
-		case instr6019:
+		case CC_SETNOCLICKTHROUGH:
 			ccSetNoClickThrough(exec);
 			break;
-		case instr6020: //CC_SETSCROLLPOS
-			method459(exec);
+		case CC_SETSCROLLPOS:
+			ccSetScrollPos(exec);
 			break;
-		case instr6626:
+		case CC_SETCOLOR:
 			method5314(exec);
 			break;
-		case instr6022:
+		case CC_SETFILL:
 			method3918(exec);
 			break;
-		case instr6023:
+		case CC_SETTRANS:
 			method5487(exec);
 			break;
-		case instr6024:
+		case CC_SETLINEWID:
 			method6687(exec);
 			break;
-		case instr6025:
+		case CC_SETGRAPHIC:
 			method6071(exec);
 			break;
-		case instr6026:
+		case CC_SET2DANGLE:
 			method5332(exec);
 			break;
-		case instr6027:
+		case CC_SETTILING:
 			method5774(exec);
 			break;
-		case instr6475:
+		case CC_SETMODEL:
 			method8327(exec);
 			break;
-		case instr6683:
+		case CC_SETMODELANGLE:
 			method6364(exec);
 			break;
-		case instr6055:
+		case CC_SETMODELANIM:
 			method8726(exec);
 			break;
-		case instr6031:
+		case CC_SETMODELORTHOG:
 			method15523(exec);
 			break;
-		case instr6032:
+		case CC_SETMODELTINT:
 			method5099(exec);
 			break;
 		case CC_SETTEXT:
@@ -277,67 +277,67 @@ public class CS2Interpreter {
 		case CC_SETTEXTALIGN:
 			setCCTextAlign(exec);
 			break;
-		case instr6036:
+		case CC_SETTEXTSHADOW:
 			method12659(exec);
 			break;
-		case instr6037:
+		case CC_SETTEXTANTIMACRO:
 			method8714(exec);
 			break;
-		case instr6038:
+		case CC_SETOUTLINE:
 			method4965(exec);
 			break;
-		case instr6039:
+		case CC_SETGRAPHICSHADOW:
 			method1497(exec);
 			break;
-		case instr6532:
+		case CC_SETVFLIP:
 			method1569(exec);
 			break;
-		case instr6098:
+		case CC_SETHFLIP:
 			method15448(exec);
 			break;
-		case instr6831:
+		case CC_SETSCROLLSIZE:
 			method7929(exec);
 			break;
-		case instr6043:
+		case CC_SETALPHA:
 			method7933(exec);
 			break;
-		case instr6914:
+		case CC_SETMODELZOOM:
 			method12116(exec);
 			break;
-		case instr6045:
+		case CC_SETLINEDIRECTION:
 			method1259(exec);
 			break;
-		case instr6079:
+		case CC_SETMODELORIGIN:
 			method893(exec);
 			break;
-		case instr6047:
+		case CC_SETMAXLINES:
 			method1949(exec);
 			break;
-		case instr6048:
+		case CC_SETPARAM_INT:
 			method3031(exec);
 			break;
-		case instr6049:
+		case CC_SETPARAM_STRING:
 			method4558(exec);
 			break;
-		case instr6050:
+		case instr6050: //something sprite index 36
 			method6210(exec);
 			break;
-		case instr6051:
+		case instr6051: //something text index 36
 			method8344(exec);
 			break;
-		case instr6052:
+		case CC_SETRECOL:
 			method11380(exec);
 			break;
-		case instr6053:
+		case CC_SETRETEX:
 			method6688(exec);
 			break;
-		case instr6198:
+		case CC_SETFONTMONO:
 			method12846(exec);
 			break;
-		case instr6909:
+		case CC_SETPARAM:
 			method8753(exec);
 			break;
-		case instr6068:
+		case CC_SETCLICKMASK:
 			method5833(exec);
 			break;
 		case instr6057:
@@ -3031,7 +3031,7 @@ public class CS2Interpreter {
 
 	}
 
-	static final void method5200(boolean bool, CS2Executor executor) {
+	static final void ccSetFront(boolean bool, CS2Executor executor) {
 		CS2Interface underlaydefinition_3 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_3.defs;
 		RSInterface interface_5 = underlaydefinition_3.inter;
@@ -3042,7 +3042,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method15553(boolean bool, CS2Executor executor) {
+	static final void ifSetFront(boolean bool, CS2Executor executor) {
 		int i_3 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_4 = IComponentDefinitions.getDefs(i_3);
 		RSInterface interface_5 = CustomCursorsPreference.INTERFACES[i_3 >> 16];
@@ -3213,7 +3213,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = CustomCursorsPreference.INTERFACES[i_2 >> 16];
-		method5121(icomponentdefinitions_3, interface_4, executor);
+		ifSetColor(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method2865(CS2Executor executor) {
@@ -3853,10 +3853,10 @@ public class CS2Interpreter {
 	static final void method1864(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		if (icomponentdefinitions_3.aString1369 == null) {
+		if (icomponentdefinitions_3.useOnName == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
-			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.aString1369;
+			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.useOnName;
 		}
 	}
 
@@ -4283,8 +4283,8 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		--i_4;
-		if (icomponentdefinitions_3.rightclickOptions != null && i_4 < icomponentdefinitions_3.rightclickOptions.length && icomponentdefinitions_3.rightclickOptions[i_4] != null) {
-			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.rightclickOptions[i_4];
+		if (icomponentdefinitions_3.optionNames != null && i_4 < icomponentdefinitions_3.optionNames.length && icomponentdefinitions_3.optionNames[i_4] != null) {
+			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.optionNames[i_4];
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -4311,7 +4311,7 @@ public class CS2Interpreter {
 	static final void method3065(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1423;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.angle2d;
 	}
 
 	static final void method3066(CS2Executor executor) {
@@ -4373,11 +4373,11 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8229.method12714();
 	}
 
-	static final void method6282(CS2Executor executor) {
+	static final void ccSetAspect(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method6244(icomponentdefinitions_3, interface_4, executor, -1411462408);
+		ifSetAspect(icomponentdefinitions_3, interface_4, executor, -1411462408);
 	}
 
 	static final void method6283(CS2Executor executor) {
@@ -4537,7 +4537,7 @@ public class CS2Interpreter {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method13292(icomponentdefinitions_3, interface_4, executor);
+		ifSetModelOrigin(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method894(CS2Executor executor) {
@@ -5268,7 +5268,7 @@ public class CS2Interpreter {
 		IdentiKitIndexLoader.method812(i_2, new Node_Sub44(i_3, 3), (int[]) null, true, (byte) 92);
 	}
 
-	static final void method5962(CS2Executor executor) {
+	static final void ccCreate(CS2Executor executor) {
 		executor.intStackPtr -= 3;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
@@ -5417,7 +5417,7 @@ public class CS2Interpreter {
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		IComponentDefinitions icomponentdefinitions_5 = Index.getIComponentDefinitions(i_2 << 16 | i_3, i_4);
 		Class60.method1170();
-		IComponentSettings class282_sub10_6 = client.getIComponentSettings(icomponentdefinitions_5);
+		IFTargetParams class282_sub10_6 = client.getIComponentSettings(icomponentdefinitions_5);
 		Class304.setUseOptionFlags(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.interfaceId, (byte) -101);
 	}
 
@@ -5462,7 +5462,7 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_2).stackable == 1 ? 1 : 0;
 	}
 
-	static final void method4173(CS2Executor executor) {
+	static final void ifResumePauseButton(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		method6942(icomponentdefinitions_3, executor);
@@ -5939,10 +5939,10 @@ public class CS2Interpreter {
 	static final void method8215(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
-		if (icomponentdefinitions_3.aString1369 == null) {
+		if (icomponentdefinitions_3.useOnName == null) {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		} else {
-			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.aString1369;
+			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.useOnName;
 		}
 	}
 
@@ -6219,7 +6219,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = CustomCursorsPreference.INTERFACES[i_2 >> 16];
-		method13292(icomponentdefinitions_3, interface_4, executor);
+		ifSetModelOrigin(icomponentdefinitions_3, interface_4, executor);
 	}
 
 	static final void method564(CS2Executor executor) {
@@ -6462,7 +6462,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = CustomCursorsPreference.INTERFACES[i_2 >> 16];
-		method6244(icomponentdefinitions_3, interface_4, executor, 606535438);
+		ifSetAspect(icomponentdefinitions_3, interface_4, executor, 606535438);
 	}
 
 	static final void method284(CS2Executor executor) {
@@ -6608,7 +6608,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method2638(CS2Executor executor) {
+	static final void ccSetHide(CS2Executor executor) {
 		CS2Interface underlaydefinition_2;
 		if (executor.aBool7022) {
 			underlaydefinition_2 = executor.hookedInterface2;
@@ -6677,7 +6677,7 @@ public class CS2Interpreter {
 		}
 		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.defs;
 		RSInterface interface_5 = underlaydefinition_2.inter;
-		method5121(icomponentdefinitions_4, interface_5, executor);
+		ifSetColor(icomponentdefinitions_4, interface_5, executor);
 	}
 
 	static final void callCS2Script(CS2Executor executor) {
@@ -6902,7 +6902,7 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_5 == null ? -1 : icomponentdefinitions_5.idHash;
 	}
 
-	static final void method6116(CS2Executor executor) {
+	static final void ccSetSize(CS2Executor executor) {
 		CS2Interface underlaydefinition_2;
 		if (executor.aBool7022) {
 			underlaydefinition_2 = executor.hookedInterface2;
@@ -7456,8 +7456,8 @@ public class CS2Interpreter {
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		int i_4 = executor.intStack[--executor.intStackPtr];
 		--i_4;
-		if (icomponentdefinitions_3.rightclickOptions != null && i_4 < icomponentdefinitions_3.rightclickOptions.length && icomponentdefinitions_3.rightclickOptions[i_4] != null) {
-			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.rightclickOptions[i_4];
+		if (icomponentdefinitions_3.optionNames != null && i_4 < icomponentdefinitions_3.optionNames.length && icomponentdefinitions_3.optionNames[i_4] != null) {
+			executor.stringStack[++executor.stringStackPtr - 1] = icomponentdefinitions_3.optionNames[i_4];
 		} else {
 			executor.stringStack[++executor.stringStackPtr - 1] = "";
 		}
@@ -7791,7 +7791,7 @@ public class CS2Interpreter {
 		executor.intStack[++executor.intStackPtr - 1] = (int) (client.aLong7153 & ~0x0L);
 	}
 
-	static final void method3790(CS2Executor executor) {
+	static final void ccDelete(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		if (underlaydefinition_2.defs.anInt1288 == -1) {
 			if (executor.aBool7022) {
@@ -8321,7 +8321,7 @@ public class CS2Interpreter {
 		}
 	}
 
-	static final void method815(CS2Executor executor) {
+	static final void ccResumePauseButton(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		method6942(icomponentdefinitions_3, executor);
@@ -9520,7 +9520,7 @@ public class CS2Interpreter {
 		client.aBool7175 = false;
 	}
 
-	static final void method459(CS2Executor executor) {
+	static final void ccSetScrollPos(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
@@ -9816,7 +9816,7 @@ public class CS2Interpreter {
 	static final void method12723(CS2Executor executor) {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
-		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.anInt1423;
+		executor.intStack[++executor.intStackPtr - 1] = icomponentdefinitions_3.angle2d;
 	}
 
 	static final void method1162(CS2Executor executor) {
@@ -10852,10 +10852,10 @@ public class CS2Interpreter {
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
-	static final void method13292(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
+	static final void ifSetModelOrigin(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr -= 2;
-		icomponentdefinitions_0.anInt1441 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1263 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.originX = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.originY = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10869,7 +10869,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7267(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aBool1344 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.usesOrthogonal = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10899,7 +10899,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2915(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.anInt1324 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.spriteShadow = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10908,7 +10908,7 @@ public class CS2Interpreter {
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
-	static final void method5121(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
+	static final void ifSetColor(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
 		icomponentdefinitions_0.color = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
@@ -10938,10 +10938,10 @@ public class CS2Interpreter {
 
 	static final void method4159(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 4;
-		icomponentdefinitions_0.anInt1340 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1350 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
-		icomponentdefinitions_0.anInt1281 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
-		icomponentdefinitions_0.anInt1354 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		icomponentdefinitions_0.modelTintRed = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.modelTintGreen = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.modelTintBlue = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		icomponentdefinitions_0.modelTintScalar = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -10986,7 +10986,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method501(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.repeat_ = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.tiling = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11196,7 +11196,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2960(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aBool1363 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.textAntiMacro = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class244.method4196(icomponentdefinitions_0.idHash);
@@ -11281,8 +11281,8 @@ public class CS2Interpreter {
 			ifComp.offsetY = itemdefinitions_8.modelOffsetY;
 			ifComp.spriteScale = itemdefinitions_8.modelZoom;
 			ifComp.anInt1335 = i_3;
-			if (ifComp.anInt1417 > 0) {
-				ifComp.spriteScale = ifComp.spriteScale * 32 / ifComp.anInt1417;
+			if (ifComp.aspectWidth > 0) {
+				ifComp.spriteScale = ifComp.spriteScale * 32 / ifComp.aspectWidth;
 			} else if (ifComp.baseWidth > 0) {
 				ifComp.spriteScale = ifComp.spriteScale * 32 / ifComp.baseWidth;
 			}
@@ -11301,7 +11301,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6122(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.aString1369 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		icomponentdefinitions_0.useOnName = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 
 	static final void method14482(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11351,7 +11351,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8310(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.anInt1423 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.angle2d = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11451,8 +11451,8 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 4;
 		icDefs.baseWidth = executor.intStack[executor.intStackPtr];
 		icDefs.baseHeight = executor.intStack[executor.intStackPtr + 1];
-		icDefs.anInt1417 = 0;
-		icDefs.anInt1326 = 0;
+		icDefs.aspectWidth = 0;
+		icDefs.aspectHeight = 0;
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		if (i_4 < 0) {
 			i_4 = 0;
@@ -11489,7 +11489,7 @@ public class CS2Interpreter {
 		short s_5 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		short s_6 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		if (i_4 >= 0 && i_4 < 5) {
-			icomponentdefinitions_0.method2013(i_4, s_5, s_6, (byte) 11);
+			icomponentdefinitions_0.retexture(i_4, s_5, s_6);
 			Class109.redrawComponent(icomponentdefinitions_0);
 			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 				Class276.method4903(icomponentdefinitions_0.idHash, i_4);
@@ -11525,7 +11525,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3369(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2) {
-		icomponentdefinitions_0.aString1338 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		icomponentdefinitions_0.useOptionString = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 
 	static final void method3965(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, int i_2) {
@@ -11566,7 +11566,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7547(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aString1348 = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
+		icomponentdefinitions_0.opName = (String) cs2executor_2.stringStack[--cs2executor_2.stringStackPtr];
 	}
 
 	static final void method12401(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11709,7 +11709,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method569(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.multiline = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.maxTextLines = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 	}
 
@@ -11746,10 +11746,10 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
-	static final void method6244(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void ifSetAspect(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		cs2executor_2.intStackPtr -= 2;
-		icomponentdefinitions_0.anInt1289 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
-		icomponentdefinitions_0.anInt1375 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.aspectX = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.aspectY = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		IdentikitDefinition.method913(interface_1, icomponentdefinitions_0);
 		if (icomponentdefinitions_0.type == ComponentType.CONTAINER) {
@@ -11856,7 +11856,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15474(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, byte b_3) {
-		icomponentdefinitions_0.rightclickOptions = null;
+		icomponentdefinitions_0.optionNames = null;
 	}
 
 	static final void method1642(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
@@ -11878,7 +11878,7 @@ public class CS2Interpreter {
 		short s_5 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
 		short s_6 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
 		if (i_4 >= 0 && i_4 < 5) {
-			icomponentdefinitions_0.method2007(i_4, s_5, s_6, -1261332787);
+			icomponentdefinitions_0.recolor(i_4, s_5, s_6);
 			Class109.redrawComponent(icomponentdefinitions_0);
 			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 				RegionMap.method5513(icomponentdefinitions_0.idHash, i_4);
@@ -11887,7 +11887,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6697(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
-		icomponentdefinitions_0.aBool1356 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		icomponentdefinitions_0.monospaced = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			CutsceneAction_Sub17.method14656(icomponentdefinitions_0.idHash);

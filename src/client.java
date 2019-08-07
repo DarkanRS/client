@@ -1598,13 +1598,13 @@ public final class client extends Engine {
 
 	}
 
-	public static IComponentSettings getIComponentSettings(IComponentDefinitions icomponentdefinitions_0) {
-		IComponentSettings class282_sub10_1 = (IComponentSettings) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
-		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.settings;
+	public static IFTargetParams getIComponentSettings(IComponentDefinitions icomponentdefinitions_0) {
+		IFTargetParams class282_sub10_1 = (IFTargetParams) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
+		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.targetParams;
 	}
 
 	static IComponentDefinitions method11634(IComponentDefinitions icomponentdefinitions_0) {
-		IComponentSettings class282_sub10_1 = getIComponentSettings(icomponentdefinitions_0);
+		IFTargetParams class282_sub10_1 = getIComponentSettings(icomponentdefinitions_0);
 		if (class282_sub10_1.bit23Enabled()) {
 			return InputSubscriberType.aClass118_2763;
 		} else {
@@ -1912,7 +1912,7 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.repeat_ && iCompDef.anInt1423 == 0;
+						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -2016,14 +2016,14 @@ public final class client extends Engine {
 										CutsceneAction_Sub10.method14603(i_24 + 1, iCompDef.idHash, iCompDef.anInt1288, "", (byte) 124);
 									} else if (i_24 == 10) {
 										Class60.method1170();
-										IComponentSettings class282_sub10_41 = getIComponentSettings(iCompDef);
+										IFTargetParams class282_sub10_41 = getIComponentSettings(iCompDef);
 										Class304.setUseOptionFlags(iCompDef, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
 										aString7275 = QuickChatMessage.method6157(iCompDef, 1492565193);
 										if (aString7275 == null) {
 											aString7275 = "Null";
 										}
 
-										aString7356 = iCompDef.aString1369 + Utils.rgbToColHexShortcut(16777215);
+										aString7356 = iCompDef.useOnName + Utils.rgbToColHexShortcut(16777215);
 									}
 
 									i_27 = iCompDef.anIntArray1395[i_24];

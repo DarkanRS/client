@@ -1051,16 +1051,16 @@ public class PacketDecoder {
 			Class470.method7825();
 			for (int slot = fromSlot; slot <= toSlot; slot++) {
 				long slots = (long) slot + ((long) interfaceHash << 32);
-				IComponentSettings currentSettings = (IComponentSettings) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
-				IComponentSettings newSettings;
+				IFTargetParams currentSettings = (IFTargetParams) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
+				IFTargetParams newSettings;
 				if (currentSettings == null) {
 					if (slot == -1) {
-						newSettings = new IComponentSettings(settings, IComponentDefinitions.getDefs(interfaceHash).settings.interfaceId);
+						newSettings = new IFTargetParams(settings, IComponentDefinitions.getDefs(interfaceHash).targetParams.interfaceId);
 					} else {
-						newSettings = new IComponentSettings(settings, -1);
+						newSettings = new IFTargetParams(settings, -1);
 					}
 				} else {
-					newSettings = new IComponentSettings(settings, currentSettings.interfaceId);
+					newSettings = new IFTargetParams(settings, currentSettings.interfaceId);
 					currentSettings.remove();
 				}
 				client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);
@@ -1081,16 +1081,16 @@ public class PacketDecoder {
 			Class470.method7825();
 			for (int slot = fromSlot; slot <= toSlot; slot++) {
 				long slots = (long) slot + ((long) interfaceHash << 32);
-				IComponentSettings currentSettings = (IComponentSettings) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
-				IComponentSettings newSettings;
+				IFTargetParams currentSettings = (IFTargetParams) client.ICOMPONENT_SETTINGS_SLOTS.get(slots);
+				IFTargetParams newSettings;
 				if (currentSettings == null) {
 					if (slot == -1) {
-						newSettings = new IComponentSettings(IComponentDefinitions.getDefs(interfaceHash).settings.settingsHash, interfaceId);
+						newSettings = new IFTargetParams(IComponentDefinitions.getDefs(interfaceHash).targetParams.settingsHash, interfaceId);
 					} else {
-						newSettings = new IComponentSettings(0, interfaceId);
+						newSettings = new IFTargetParams(0, interfaceId);
 					}
 				} else {
-					newSettings = new IComponentSettings(currentSettings.settingsHash, interfaceId);
+					newSettings = new IFTargetParams(currentSettings.settingsHash, interfaceId);
 					currentSettings.remove();
 				}
 				client.ICOMPONENT_SETTINGS_SLOTS.put(newSettings, slots);

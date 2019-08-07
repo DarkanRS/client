@@ -1,10 +1,10 @@
 public class IComponentDefinitions {
 
-	public int anInt1281;
+	public int modelTintBlue;
 	public NPCMeshModifier npcMeshModifier;
-	public int anInt1340;
-	public int anInt1350;
-	public int anInt1354;
+	public int modelTintRed;
+	public int modelTintGreen;
+	public int modelTintScalar;
 	public Object[] anObjectArray1407;
 	public int[] anIntArray1408;
 	public int anInt1414;
@@ -55,57 +55,57 @@ public class IComponentDefinitions {
 	public int scrollHeight = 0;
 	public boolean noClickThrough = false;
 	public int spriteId = -1;
-	public int anInt1423 = 0;
+	public int angle2d = 0;
 	public ModelType modelType = ModelType.RAW_MODEL;
 	public int modelId;
-	public boolean repeat_ = false;
+	public boolean tiling = false;
 	public int fontId = -1;
 	public String text = "";
 	public int color = 0;
 	public boolean alpha = false;
 	public int transparency = 0;
 	public int borderThickness = 0;
-	public int anInt1324 = 0;
+	public int spriteShadow = 0;
 	public int anInt1358 = 0;
 	public int textHorizontalAli = 0;
 	public int textVerticalAli = 0;
 	public int lineWidth = 1;
-	public boolean aBool1332;
-	public boolean aBool1356 = true;
+	public boolean hasOrigin;
+	public boolean monospaced = true;
 	public boolean filled = false;
 	public byte[][] aByteArrayArray1366;
 	public byte[][] aByteArrayArray1367;
 	public int[] anIntArray1395;
 	public int[] anIntArray1267;
-	public String aString1369;
+	public String useOnName;
 	public boolean vFlip;
 	public boolean shadow = false;
 	public boolean lineDirection = false;
-	public String[] rightclickOptions;
-	public boolean aBool1344 = false;
-	public int multiline = 0;
+	public String[] optionNames;
+	public boolean usesOrthogonal = false;
+	public int maxTextLines = 0;
 	public int[] opCursors;
 	public boolean hFlip;
-	public String aString1348;
+	public String opName;
 	public boolean aBool1345 = false;
 	public boolean aBool1424;
 	public int anInt1380;
 	public int anInt1381;
 	public int anInt1382;
-	public String aString1338;
-	public int anInt1441 = 0;
-	public int anInt1263 = 0;
+	public String useOptionString;
+	public int originX = 0;
+	public int originY = 0;
 	public int spritePitch = 0;
 	public int spriteRoll = 0;
 	public int spriteYaw = 0;
 	public int spriteScale = 100;
 	public boolean clickMask = true;
-	public int anInt1304 = 0;
+	public int originZ = 0;
 	public int animation;
 	public int targetOverCursor = -1;
 	public int mouseOverCursor = -1;
-	public IComponentSettings settings;
-	public int anInt1417 = 0;
+	public IFTargetParams targetParams;
+	public int aspectWidth = 0;
 	public int targetLeaveCursor = -1;
 	public Object[] onLoadScript;
 	public Object[] onMouseHoverScript;
@@ -117,7 +117,7 @@ public class IComponentDefinitions {
 	public Object[] anObjectArray1387;
 	public Object[] anObjectArray1409;
 	public Object[] params;
-	public int anInt1326 = 0;
+	public int aspectHeight = 0;
 	public Object[] anObjectArray1393;
 	public Object[] popupScript;
 	public Object[] anObjectArray1386;
@@ -154,15 +154,15 @@ public class IComponentDefinitions {
 	public int y = 0;
 	public int width = 0;
 	public int height = 0;
-	public int anInt1289 = 1;
-	public int anInt1375 = 1;
+	public int aspectX = 1;
+	public int aspectY = 1;
 	public int scrollX = 0;
 	public int scrollY = 0;
 	public int anInt1339 = -1;
 	public int offsetX = 0;
 	public int offsetY = 0;
 	public int anInt1335 = 2;
-	public boolean aBool1363 = false;
+	public boolean textAntiMacro = false;
 	public int anInt1378;
 	public IComponentDefinitions aClass118_1379;
 	public int anInt1426;
@@ -181,10 +181,10 @@ public class IComponentDefinitions {
 	public int anInt1448;
 	public int anInt1449;
 	public int anInt1450;
-	short[] aShortArray1347;
-	short[] aShortArray1331;
-	short[] aShortArray1349;
-	short[] aShortArray1317;
+	short[] colorsToReplace;
+	short[] colorsToReplaceWith;
+	short[] texturesToReplace;
+	short[] texturesToReplaceWith;
 
 	void readValues(RsByteBuffer rsbytebuffer_1) {
 		int i_3 = rsbytebuffer_1.readUnsignedByte();
@@ -226,13 +226,13 @@ public class IComponentDefinitions {
 		}
 		if (this.type == ComponentType.SPRITE) {
 			this.spriteId = rsbytebuffer_1.readInt();
-			this.anInt1423 = rsbytebuffer_1.readUnsignedShort();
+			this.angle2d = rsbytebuffer_1.readUnsignedShort();
 			int flag2 = rsbytebuffer_1.readUnsignedByte();
-			this.repeat_ = (flag2 & 0x1) != 0;
+			this.tiling = (flag2 & 0x1) != 0;
 			this.alpha = (flag2 & 0x2) != 0;
 			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			this.borderThickness = rsbytebuffer_1.readUnsignedByte();
-			this.anInt1324 = rsbytebuffer_1.readInt();
+			this.spriteShadow = rsbytebuffer_1.readInt();
 			this.vFlip = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.hFlip = rsbytebuffer_1.readUnsignedByte() == 1;
 			this.color = rsbytebuffer_1.readInt();
@@ -245,20 +245,20 @@ public class IComponentDefinitions {
 			this.modelId = rsbytebuffer_1.readBigSmart();
 			int flag2 = rsbytebuffer_1.readUnsignedByte();
 			boolean bool_6 = (flag2 & 0x1) == 1;
-			this.aBool1332 = (flag2 & 0x2) == 2;
-			this.aBool1344 = (flag2 & 0x4) == 4;
+			this.hasOrigin = (flag2 & 0x2) == 2;
+			this.usesOrthogonal = (flag2 & 0x4) == 4;
 			this.aBool1345 = (flag2 & 0x8) == 8;
 			if (bool_6) {
-				this.anInt1441 = rsbytebuffer_1.readShort();
-				this.anInt1263 = rsbytebuffer_1.readShort();
+				this.originX = rsbytebuffer_1.readShort();
+				this.originY = rsbytebuffer_1.readShort();
 				this.spritePitch = rsbytebuffer_1.readUnsignedShort();
 				this.spriteRoll = rsbytebuffer_1.readUnsignedShort();
 				this.spriteYaw = rsbytebuffer_1.readUnsignedShort();
 				this.spriteScale = rsbytebuffer_1.readUnsignedShort();
-			} else if (this.aBool1332) {
-				this.anInt1441 = rsbytebuffer_1.readShort();
-				this.anInt1263 = rsbytebuffer_1.readShort();
-				this.anInt1304 = rsbytebuffer_1.readShort();
+			} else if (this.hasOrigin) {
+				this.originX = rsbytebuffer_1.readShort();
+				this.originY = rsbytebuffer_1.readShort();
+				this.originZ = rsbytebuffer_1.readShort();
 				this.spritePitch = rsbytebuffer_1.readUnsignedShort();
 				this.spriteRoll = rsbytebuffer_1.readUnsignedShort();
 				this.spriteYaw = rsbytebuffer_1.readUnsignedShort();
@@ -266,16 +266,16 @@ public class IComponentDefinitions {
 			}
 			this.animation = rsbytebuffer_1.readBigSmart();
 			if (this.aspectWidthType != 0) {
-				this.anInt1417 = rsbytebuffer_1.readUnsignedShort();
+				this.aspectWidth = rsbytebuffer_1.readUnsignedShort();
 			}
 			if (this.aspectHeightType != 0) {
-				this.anInt1326 = rsbytebuffer_1.readUnsignedShort();
+				this.aspectHeight = rsbytebuffer_1.readUnsignedShort();
 			}
 		}
 		if (this.type == ComponentType.TEXT) {
 			this.fontId = rsbytebuffer_1.readBigSmart();
 			if (i_3 >= 2) {
-				this.aBool1356 = rsbytebuffer_1.readUnsignedByte() == 1;
+				this.monospaced = rsbytebuffer_1.readUnsignedByte() == 1;
 			}
 			this.text = rsbytebuffer_1.readString();
 			if (this.text.toLowerCase().contains("runescape")) {
@@ -290,7 +290,7 @@ public class IComponentDefinitions {
 			this.color = rsbytebuffer_1.readInt();
 			this.transparency = rsbytebuffer_1.readUnsignedByte();
 			if (i_3 >= 0) {
-				this.multiline = rsbytebuffer_1.readUnsignedByte();
+				this.maxTextLines = rsbytebuffer_1.readUnsignedByte();
 			}
 		}
 		if (this.type == ComponentType.FIGURE) {
@@ -327,15 +327,15 @@ public class IComponentDefinitions {
 				this.aByteArrayArray1367[i_7] = new byte[] { b_9 };
 			}
 		}
-		this.aString1369 = rsbytebuffer_1.readString();
+		this.useOnName = rsbytebuffer_1.readString();
 		i_7 = rsbytebuffer_1.readUnsignedByte();
 		int i_17 = i_7 & 0xf;
 		int i_18 = i_7 >> 4;
 		int i_10;
 		if (i_17 > 0) {
-			this.rightclickOptions = new String[i_17];
+			this.optionNames = new String[i_17];
 			for (i_10 = 0; i_10 < i_17; i_10++) {
-				this.rightclickOptions[i_10] = rsbytebuffer_1.readString();
+				this.optionNames[i_10] = rsbytebuffer_1.readString();
 			}
 		}
 		int i_11;
@@ -351,16 +351,16 @@ public class IComponentDefinitions {
 			i_10 = rsbytebuffer_1.readUnsignedByte();
 			this.opCursors[i_10] = rsbytebuffer_1.readUnsignedShort();
 		}
-		this.aString1348 = rsbytebuffer_1.readString();
-		if (this.aString1348.equals("")) {
-			this.aString1348 = null;
+		this.opName = rsbytebuffer_1.readString();
+		if (this.opName.equals("")) {
+			this.opName = null;
 		}
 		this.anInt1380 = rsbytebuffer_1.readUnsignedByte();
 		this.anInt1381 = rsbytebuffer_1.readUnsignedByte();
 		this.anInt1382 = rsbytebuffer_1.readUnsignedByte();
-		this.aString1338 = rsbytebuffer_1.readString();
+		this.useOptionString = rsbytebuffer_1.readString();
 		i_10 = -1;
-		if (IComponentSettings.getUseOptionFlags(optionMask) != 0) {
+		if (IFTargetParams.getUseOptionFlags(optionMask) != 0) {
 			i_10 = rsbytebuffer_1.readUnsignedShort();
 			if (i_10 == 65535) {
 				i_10 = -1;
@@ -380,7 +380,7 @@ public class IComponentDefinitions {
 				this.mouseOverCursor = -1;
 			}
 		}
-		this.settings = new IComponentSettings(optionMask, i_10);
+		this.targetParams = new IFTargetParams(optionMask, i_10);
 		if (i_3 >= 0) {
 			i_11 = rsbytebuffer_1.readUnsignedByte();
 			int i_12;
@@ -482,7 +482,7 @@ public class IComponentDefinitions {
 	}
 
 	public FontRenderer method1988(Class378 class378_1, Interface35 interface35_2, int i_3) {
-		FontRenderer fontrenderer_4 = (FontRenderer) class378_1.method6426(interface35_2, this.fontId, false, this.aBool1356, -2116791003);
+		FontRenderer fontrenderer_4 = (FontRenderer) class378_1.method6426(interface35_2, this.fontId, false, this.monospaced, -2116791003);
 		aBool1399 = fontrenderer_4 == null;
 		return fontrenderer_4;
 	}
@@ -525,16 +525,16 @@ public class IComponentDefinitions {
 	}
 
 	public void method1994(int i_1, String string_2) {
-		if (this.rightclickOptions == null || this.rightclickOptions.length <= i_1) {
+		if (this.optionNames == null || this.optionNames.length <= i_1) {
 			String[] arr_4 = new String[i_1 + 1];
-			if (this.rightclickOptions != null) {
-				for (int i_5 = 0; i_5 < this.rightclickOptions.length; i_5++) {
-					arr_4[i_5] = this.rightclickOptions[i_5];
+			if (this.optionNames != null) {
+				for (int i_5 = 0; i_5 < this.optionNames.length; i_5++) {
+					arr_4[i_5] = this.optionNames[i_5];
 				}
 			}
-			this.rightclickOptions = arr_4;
+			this.optionNames = arr_4;
 		}
-		this.rightclickOptions[i_1] = string_2;
+		this.optionNames[i_1] = string_2;
 	}
 
 	public void method1995(int i_1) {
@@ -604,21 +604,21 @@ public class IComponentDefinitions {
 			long long_13 = -1L;
 			long[] longs_26 = RsByteBuffer.aLongArray7979;
 			int i_16;
-			if (this.aShortArray1347 != null) {
-				for (i_16 = 0; i_16 < this.aShortArray1347.length; i_16++) {
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.aShortArray1347[i_16] >> 8)) & 0xffL)];
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.aShortArray1347[i_16]) & 0xffL)];
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.aShortArray1331[i_16] >> 8)) & 0xffL)];
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.aShortArray1331[i_16]) & 0xffL)];
+			if (this.colorsToReplace != null) {
+				for (i_16 = 0; i_16 < this.colorsToReplace.length; i_16++) {
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.colorsToReplace[i_16] >> 8)) & 0xffL)];
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.colorsToReplace[i_16]) & 0xffL)];
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.colorsToReplaceWith[i_16] >> 8)) & 0xffL)];
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.colorsToReplaceWith[i_16]) & 0xffL)];
 				}
 				i_2 |= 0x4000;
 			}
-			if (this.aShortArray1349 != null) {
-				for (i_16 = 0; i_16 < this.aShortArray1349.length; i_16++) {
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.aShortArray1349[i_16] >> 8)) & 0xffL)];
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.aShortArray1349[i_16]) & 0xffL)];
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.aShortArray1317[i_16] >> 8)) & 0xffL)];
-					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.aShortArray1317[i_16]) & 0xffL)];
+			if (this.texturesToReplace != null) {
+				for (i_16 = 0; i_16 < this.texturesToReplace.length; i_16++) {
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.texturesToReplace[i_16] >> 8)) & 0xffL)];
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.texturesToReplace[i_16]) & 0xffL)];
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) (this.texturesToReplaceWith[i_16] >> 8)) & 0xffL)];
+					long_13 = long_13 >>> 8 ^ longs_26[(int) ((long_13 ^ (long) this.texturesToReplaceWith[i_16]) & 0xffL)];
 				}
 				i_2 |= 0x8000;
 			}
@@ -638,14 +638,14 @@ public class IComponentDefinitions {
 				}
 				meshrasterizer_18 = graphicalrenderer_1.createMeshRasterizer(rsmesh_19, i_2, Node_Sub14.anInt7597, 64, 768);
 				int i_20;
-				if (this.aShortArray1347 != null) {
-					for (i_20 = 0; i_20 < this.aShortArray1347.length; i_20++) {
-						meshrasterizer_18.X(this.aShortArray1347[i_20], this.aShortArray1331[i_20]);
+				if (this.colorsToReplace != null) {
+					for (i_20 = 0; i_20 < this.colorsToReplace.length; i_20++) {
+						meshrasterizer_18.X(this.colorsToReplace[i_20], this.colorsToReplaceWith[i_20]);
 					}
 				}
-				if (this.aShortArray1349 != null) {
-					for (i_20 = 0; i_20 < this.aShortArray1349.length; i_20++) {
-						meshrasterizer_18.W(this.aShortArray1349[i_20], this.aShortArray1317[i_20]);
+				if (this.texturesToReplace != null) {
+					for (i_20 = 0; i_20 < this.texturesToReplace.length; i_20++) {
+						meshrasterizer_18.W(this.texturesToReplace[i_20], this.texturesToReplaceWith[i_20]);
 					}
 				}
 				aClass229_1341.put(meshrasterizer_18, long_21);
@@ -717,15 +717,15 @@ public class IComponentDefinitions {
 	}
 
 	public IComponentDefinitions() {
-		this.settings = IComponentSettings.DEFAULT_SETTINGS;
+		this.targetParams = IFTargetParams.DEFAULT_SETTINGS;
 		this.aBool1424 = false;
-		this.aString1369 = "";
+		this.useOnName = "";
 		this.anInt1378 = -1;
 		this.aClass118_1379 = null;
 		this.anInt1380 = 0;
 		this.anInt1381 = 0;
 		this.anInt1382 = anInt1283;
-		this.aString1338 = "";
+		this.useOptionString = "";
 		this.usesScripts = false;
 		this.anInt1426 = -1;
 		this.anInt1427 = 0;
@@ -746,25 +746,25 @@ public class IComponentDefinitions {
 		this.anInt1450 = -1;
 	}
 
-	public void method2007(int i_1, short s_2, short s_3, int i_4) {
-		if (i_1 < 5) {
-			if (this.aShortArray1347 == null) {
-				this.aShortArray1347 = new short[5];
-				this.aShortArray1331 = new short[5];
+	public void recolor(int index, short originalColor, short modifiedColor) {
+		if (index < 5) {
+			if (this.colorsToReplace == null) {
+				this.colorsToReplace = new short[5];
+				this.colorsToReplaceWith = new short[5];
 			}
-			this.aShortArray1347[i_1] = s_2;
-			this.aShortArray1331[i_1] = s_3;
+			this.colorsToReplace[index] = originalColor;
+			this.colorsToReplaceWith[index] = modifiedColor;
 		}
 	}
 
-	public void method2013(int i_1, short s_2, short s_3, byte b_4) {
+	public void retexture(int i_1, short s_2, short s_3) {
 		if (i_1 < 5) {
-			if (this.aShortArray1349 == null) {
-				this.aShortArray1349 = new short[5];
-				this.aShortArray1317 = new short[5];
+			if (this.texturesToReplace == null) {
+				this.texturesToReplace = new short[5];
+				this.texturesToReplaceWith = new short[5];
 			}
-			this.aShortArray1349[i_1] = s_2;
-			this.aShortArray1317[i_1] = s_3;
+			this.texturesToReplace[i_1] = s_2;
+			this.texturesToReplaceWith[i_1] = s_3;
 		}
 	}
 
@@ -851,7 +851,7 @@ public class IComponentDefinitions {
 
 	public NativeSprite method2048(GraphicalRenderer graphicalrenderer_1) {
 		aBool1399 = false;
-		long long_3 = ((this.hFlip ? 1L : 0L) << 39) + ((this.alpha ? 1L : 0L) << 35) + (long) this.spriteId + ((long) this.borderThickness << 36) + ((this.vFlip ? 1L : 0L) << 38) + ((long) this.anInt1324 << 40);
+		long long_3 = ((this.hFlip ? 1L : 0L) << 39) + ((this.alpha ? 1L : 0L) << 35) + (long) this.spriteId + ((long) this.borderThickness << 36) + ((this.vFlip ? 1L : 0L) << 38) + ((long) this.spriteShadow << 40);
 		NativeSprite nativesprite_5 = (NativeSprite) aClass229_1280.get(long_3);
 		if (nativesprite_5 != null) {
 			return nativesprite_5;
@@ -869,7 +869,7 @@ public class IComponentDefinitions {
 				}
 				if (this.borderThickness > 0) {
 					class91_6.method1554(this.borderThickness);
-				} else if (this.anInt1324 != 0) {
+				} else if (this.spriteShadow != 0) {
 					class91_6.method1554(1);
 				}
 				if (this.borderThickness >= 1) {
@@ -878,8 +878,8 @@ public class IComponentDefinitions {
 				if (this.borderThickness >= 2) {
 					class91_6.method1536(16777215);
 				}
-				if (this.anInt1324 != 0) {
-					class91_6.method1524(~0xffffff | this.anInt1324);
+				if (this.spriteShadow != 0) {
+					class91_6.method1524(~0xffffff | this.spriteShadow);
 				}
 				nativesprite_5 = graphicalrenderer_1.method8444(class91_6, true);
 				aClass229_1280.method3857(nativesprite_5, long_3, nativesprite_5.method2747() * nativesprite_5.method2793() * 4, -1671047824);

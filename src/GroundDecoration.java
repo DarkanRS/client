@@ -558,10 +558,10 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										if (client.aBool7358) {
 											Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
 										}
-										if (inter.aBool1363) {
+										if (inter.textAntiMacro) {
 											fontrenderer_43.method367(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, client.aRandom7260, Class455_Sub3.anInt9079, client.anIntArray7438, Class182.aNativeSpriteArray2261, (int[]) null, 1113506161);
 										} else {
-											fontrenderer_43.method373(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, inter.anInt1358, inter.multiline, Class182.aNativeSpriteArray2261, (int[]) null, (Class455) null, 0, 0);
+											fontrenderer_43.method373(string_35, drawX, drawY, inter.width, inter.height, 255 - (i_16 & 0xff) << 24 | i_22, inter.shadow ? 255 - (i_16 & 0xff) << 24 : -1, inter.textHorizontalAli, inter.textVerticalAli, inter.anInt1358, inter.maxTextLines, Class182.aNativeSpriteArray2261, (int[]) null, (Class455) null, 0, 0);
 										}
 										if (client.aBool7358) {
 											Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
@@ -577,7 +577,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											NativeSprite nativesprite_41;
 											if (inter.anInt1426 != -1) {
 												PlayerAppearance playerappearance_34 = inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null;
-												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.anInt1324, inter.anInt1335, playerappearance_34);
+												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.anInt1335, playerappearance_34);
 											} else if (inter.anInt1435 != -1) {
 												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, inter.anInt1435);
 											} else {
@@ -587,17 +587,17 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												i_22 = nativesprite_41.scaleWidth();
 												i_23 = nativesprite_41.method2748();
 												i_24 = 255 - (i_16 & 0xff) << 24 | (inter.color != 0 ? inter.color & 0xffffff : 16777215);
-												if (!inter.repeat_) {
+												if (!inter.tiling) {
 													if (inter.color == 0 && i_16 == 0) {
-														if (inter.anInt1423 != 0) {
-															nativesprite_41.method2758((float) inter.width / 2.0F + (float) drawX, (float) drawY + (float) inter.height / 2.0F, inter.width * 4096 / i_22, inter.anInt1423);
+														if (inter.angle2d != 0) {
+															nativesprite_41.method2758((float) inter.width / 2.0F + (float) drawX, (float) drawY + (float) inter.height / 2.0F, inter.width * 4096 / i_22, inter.angle2d);
 														} else if (i_22 == inter.width && i_23 == inter.height) {
 															nativesprite_41.method2752(drawX, drawY);
 														} else {
 															nativesprite_41.method2789(drawX, drawY, inter.width, inter.height);
 														}
-													} else if (inter.anInt1423 != 0) {
-														nativesprite_41.method2790((float) inter.width / 2.0F + (float) drawX, (float) inter.height / 2.0F + (float) drawY, inter.width * 4096 / i_22, inter.anInt1423, i_24);
+													} else if (inter.angle2d != 0) {
+														nativesprite_41.method2790((float) inter.width / 2.0F + (float) drawX, (float) inter.height / 2.0F + (float) drawY, inter.width * 4096 / i_22, inter.angle2d, i_24);
 													} else if (i_22 == inter.width && i_23 == inter.height) {
 														nativesprite_41.method2742(drawX, drawY, 0, i_24, 1);
 													} else {
@@ -605,15 +605,15 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 													}
 												} else {
 													Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
-													if (inter.anInt1423 != 0) {
+													if (inter.angle2d != 0) {
 														i_25 = (i_22 - 1 + inter.width) / i_22;
 														i_39 = (i_23 - 1 + inter.height) / i_23;
 														for (i_27 = 0; i_27 < i_25; i_27++) {
 															for (int i_28 = 0; i_28 < i_39; i_28++) {
 																if (inter.color != 0) {
-																	nativesprite_41.method2790((float) (drawX + i_27 * i_22) + (float) i_22 / 2.0F, (float) i_23 / 2.0F + (float) (drawY + i_23 * i_28), 4096, inter.anInt1423, i_24);
+																	nativesprite_41.method2790((float) (drawX + i_27 * i_22) + (float) i_22 / 2.0F, (float) i_23 / 2.0F + (float) (drawY + i_23 * i_28), 4096, inter.angle2d, i_24);
 																} else {
-																	nativesprite_41.method2758((float) (drawX + i_22 * i_27) + (float) i_22 / 2.0F, (float) (drawY + i_23 * i_28) + (float) i_23 / 2.0F, 4096, inter.anInt1423);
+																	nativesprite_41.method2758((float) (drawX + i_22 * i_27) + (float) i_22 / 2.0F, (float) (drawY + i_23 * i_28) + (float) i_23 / 2.0F, 4096, inter.angle2d);
 																}
 															}
 														}
@@ -632,7 +632,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										IndexLoaders.MAP_REGION_DECODER.method4435().method4052();
 										MeshRasterizer meshRasterizer = null;
 										i_22 = 2048;
-										if (inter.anInt1354 != 0) {
+										if (inter.modelTintScalar != 0) {
 											i_22 |= 0x80000;
 										}
 										i_23 = 0;
@@ -688,24 +688,24 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											}
 										}
 										if (meshRasterizer != null) {
-											if (inter.anInt1354 != 0) {
-												meshRasterizer.PA(inter.anInt1340, inter.anInt1350, inter.anInt1281, inter.anInt1354);
+											if (inter.modelTintScalar != 0) {
+												meshRasterizer.PA(inter.modelTintRed, inter.modelTintGreen, inter.modelTintBlue, inter.modelTintScalar);
 											}
-											if (inter.anInt1417 > 0) {
-												i_24 = (inter.width << 9) / inter.anInt1417;
+											if (inter.aspectWidth > 0) {
+												i_24 = (inter.width << 9) / inter.aspectWidth;
 											} else {
 												i_24 = 512;
 											}
-											if (inter.anInt1326 > 0) {
-												i_25 = (inter.height << 9) / inter.anInt1326;
+											if (inter.aspectHeight > 0) {
+												i_25 = (inter.height << 9) / inter.aspectHeight;
 											} else {
 												i_25 = 512;
 											}
 											i_39 = inter.width / 2 + drawX;
 											i_27 = inter.height / 2 + drawY;
-											if (!inter.aBool1332) {
-												i_39 += i_24 * inter.anInt1441 >> 9;
-												i_27 += i_25 * inter.anInt1263 >> 9;
+											if (!inter.hasOrigin) {
+												i_39 += i_24 * inter.originX >> 9;
+												i_27 += i_25 * inter.originY >> 9;
 											}
 											client.aClass294_7457.method5212();
 											Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
@@ -713,25 +713,25 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											int i_29 = IndexLoaders.MAP_REGION_DECODER.method4544(-1051442584);
 											int i_30 = IndexLoaders.MAP_REGION_DECODER.method4522(-1749801746);
 											i_30 += inter.spriteScale;
-											if (inter.aBool1344) {
-												if (inter.aBool1332) {
-													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379), (float) inter.spriteScale);
+											if (inter.usesOrthogonal) {
+												if (inter.hasOrigin) {
+													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243), (float) inter.spriteScale);
 												} else {
-													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379), (float) (inter.spriteScale << 2));
+													matrix44arr_38.method6532((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243), (float) (inter.spriteScale << 2));
 												}
 											} else {
-												matrix44arr_38.method6531((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243 * -969250379));
+												matrix44arr_38.method6531((float) i_39, (float) i_27, (float) i_24, (float) i_25, (float) i_29, (float) i_30, (float) Class349.anInt4083, (float) (client.anInt3243));
 											}
 											Renderers.SOFTWARE_RENDERER.method8424(matrix44arr_38);
 											Renderers.SOFTWARE_RENDERER.ba(2, 0);
 											if (inter.aBool1345) {
 												Renderers.SOFTWARE_RENDERER.RA(false);
 											}
-											if (inter.aBool1332) {
+											if (inter.hasOrigin) {
 												client.aClass294_7169.method5217(1.0F, 0.0F, 0.0F, Class382.method6508(inter.spritePitch));
 												client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(inter.spriteRoll));
 												client.aClass294_7169.rotation(0.0F, 0.0F, 1.0F, Class382.method6508(inter.spriteYaw));
-												client.aClass294_7169.method5219((float) inter.anInt1441, (float) inter.anInt1263, (float) inter.anInt1304);
+												client.aClass294_7169.method5219((float) inter.originX, (float) inter.originY, (float) inter.originZ);
 											} else {
 												int i_31 = Class382.SINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
 												int i_32 = Class382.COSINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
@@ -745,7 +745,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												Renderers.SOFTWARE_RENDERER.o(drawX, drawY, drawX + inter.width, drawY + inter.height);
 											}
 											meshRasterizer.method11282(client.aClass294_7169, (EntityNode_Sub5) null, 1);
-											if (!inter.aBool1344 && inter.particleSystem != null) {
+											if (!inter.usesOrthogonal && inter.particleSystem != null) {
 												Renderers.SOFTWARE_RENDERER.method8456(inter.particleSystem.method11533());
 											}
 											if (client.aBool7358) {
