@@ -340,22 +340,22 @@ public class CS2Interpreter {
 		case CC_SETCLICKMASK:
 			method5833(exec);
 			break;
-		case instr6057:
+		case CC_SETITEM:
 			method3080(exec);
 			break;
-		case instr6306:
+		case CC_SETNPCHEAD:
 			method3356(exec);
 			break;
-		case instr6059:
+		case CC_SETPLAYERHEAD_SELF:
 			method6802(exec);
 			break;
-		case instr6105:
+		case CC_SETNPCMODEL:
 			method8212(exec);
 			break;
-		case instr6665:
+		case CC_SETPLAYERMODEL:
 			method6283(exec);
 			break;
-		case instr6912:
+		case CC_SETITEM_NONUM:
 			method12719(exec);
 			break;
 		case instr6063:
@@ -373,16 +373,16 @@ public class CS2Interpreter {
 		case instr6895:
 			method6510(exec);
 			break;
-		case instr6618:
+		case CC_SETPLAYERMODEL_SELF:
 			method4381(exec);
 			break;
-		case instr6244:
+		case CC_SETITEM_ALWAYSNUM:
 			method15552(exec);
 			break;
-		case instr6070:
+		case CC_SETITEM_WEARCOL_ALWAYSNUM:
 			method1570(exec);
 			break;
-		case instr6071:
+		case CC_SETOP:
 			method6452(exec);
 			break;
 		case instr6676:
@@ -397,7 +397,7 @@ public class CS2Interpreter {
 		case instr6075:
 			method4801(exec);
 			break;
-		case instr6076:
+		case instr6076: //CC_SETTARGETVERB?
 			method7522(exec);
 			break;
 		case instr6110:
@@ -4024,7 +4024,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(i_2);
 		RSInterface interface_4 = CustomCursorsPreference.INTERFACES[i_2 >> 16];
-		method5763(icomponentdefinitions_3, interface_4, executor, 258036500);
+		ifSetNPCHead(icomponentdefinitions_3, interface_4, executor, 258036500);
 	}
 
 	static final void method4864(CS2Executor executor) {
@@ -4425,7 +4425,7 @@ public class CS2Interpreter {
 		CS2Interface underlaydefinition_2 = executor.aBool7022 ? executor.hookedInterface2 : executor.hookedInterface1;
 		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.defs;
 		RSInterface interface_4 = underlaydefinition_2.inter;
-		method5763(icomponentdefinitions_3, interface_4, executor, 2042314343);
+		ifSetNPCHead(icomponentdefinitions_3, interface_4, executor, 2042314343);
 	}
 
 	static final void method3357(CS2Executor executor) {
@@ -11186,7 +11186,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.aByteArrayArray1367[i_1] = bytes_3;
 	}
 
-	static final void method5763(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
+	static final void ifSetNPCHead(IComponentDefinitions icomponentdefinitions_0, RSInterface interface_1, CS2Executor cs2executor_2, int i_3) {
 		icomponentdefinitions_0.modelType = ModelType.NPC_HEAD;
 		icomponentdefinitions_0.npcMeshModifier = null;
 		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
@@ -11256,7 +11256,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.usesScripts = true;
 	}
 
-	static final void setItemIFComp(IComponentDefinitions ifComp, RSInterface interface_1, boolean bool_2, int i_3, CS2Executor cs2executor_4, byte b_5) {
+	static final void setItemIFComp(IComponentDefinitions ifComp, RSInterface interface_1, boolean wearCol, int renderStack, CS2Executor cs2executor_4, byte b_5) {
 		cs2executor_4.intStackPtr -= 2;
 		int itemId = cs2executor_4.intStack[cs2executor_4.intStackPtr];
 		int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
@@ -11272,7 +11272,7 @@ public class CS2Interpreter {
 		} else {
 			ifComp.anInt1426 = itemId;
 			ifComp.anInt1427 = i_7;
-			ifComp.aBool1388 = bool_2;
+			ifComp.wearCol = wearCol;
 			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_LOADER.getItemDefinitions(itemId);
 			ifComp.spritePitch = itemdefinitions_8.modelRotationX;
 			ifComp.spriteRoll = itemdefinitions_8.modelRotationY;
@@ -11280,7 +11280,7 @@ public class CS2Interpreter {
 			ifComp.offsetX = itemdefinitions_8.modelOffsetX;
 			ifComp.offsetY = itemdefinitions_8.modelOffsetY;
 			ifComp.spriteScale = itemdefinitions_8.modelZoom;
-			ifComp.anInt1335 = i_3;
+			ifComp.renderStack = renderStack;
 			if (ifComp.aspectWidth > 0) {
 				ifComp.spriteScale = ifComp.spriteScale * 32 / ifComp.aspectWidth;
 			} else if (ifComp.baseWidth > 0) {
@@ -11429,9 +11429,9 @@ public class CS2Interpreter {
 			icomponentdefinitions_0.modelType = ModelType.ITEM_CONTAINER_MALE;
 		}
 		if (cs2executor_2.intStack[cs2executor_2.intStackPtr + 3] == 1) {
-			icomponentdefinitions_0.aBool1388 = true;
+			icomponentdefinitions_0.wearCol = true;
 		} else {
-			icomponentdefinitions_0.aBool1388 = false;
+			icomponentdefinitions_0.wearCol = false;
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
 			Class92.method1565(icomponentdefinitions_0.idHash, -940537484);

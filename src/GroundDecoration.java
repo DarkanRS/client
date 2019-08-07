@@ -576,8 +576,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										} else {
 											NativeSprite nativesprite_41;
 											if (inter.anInt1426 != -1) {
-												PlayerAppearance playerappearance_34 = inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null;
-												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.anInt1335, playerappearance_34);
+												PlayerAppearance playerappearance_34 = inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null;
+												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.renderStack, playerappearance_34);
 											} else if (inter.anInt1435 != -1) {
 												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, inter.anInt1435);
 											} else {
@@ -640,7 +640,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.anInt1426);
 											if (itemdefinitions_36 != null) {
 												itemdefinitions_36 = itemdefinitions_36.method7090(inter.anInt1427);
-												meshRasterizer = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null, inter.anim, 0, 0, 0, 0);
+												meshRasterizer = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null, inter.anim, 0, 0, 0, 0);
 												if (meshRasterizer != null) {
 													i_23 = -meshRasterizer.YA() >> 1;
 												} else {
@@ -683,7 +683,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											} else {
 												ItemContainer container = ItemContainer.getContainer(inter.modelId, false);
 												if (container != null) {
-													meshRasterizer = container.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.anim, inter.anInt1339, inter.modelType == ModelType.ITEM_CONTAINER_FEMALE, inter.aBool1388 ? VertexNormal.MY_PLAYER.playerAppearance : null);
+													meshRasterizer = container.method12429(Renderers.SOFTWARE_RENDERER, i_22, inter.anim, inter.anInt1339, inter.modelType == ModelType.ITEM_CONTAINER_FEMALE, inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null);
 												}
 											}
 										}

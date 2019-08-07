@@ -161,13 +161,13 @@ public class IComponentDefinitions {
 	public int anInt1339 = -1;
 	public int offsetX = 0;
 	public int offsetY = 0;
-	public int anInt1335 = 2;
+	public int renderStack = 2;
 	public boolean textAntiMacro = false;
 	public int anInt1378;
 	public IComponentDefinitions aClass118_1379;
 	public int anInt1426;
 	public int anInt1427;
-	public boolean aBool1388;
+	public boolean wearCol;
 	public int anInt1404;
 	public int anInt1435;
 	public boolean aBool1440;
@@ -729,7 +729,7 @@ public class IComponentDefinitions {
 		this.usesScripts = false;
 		this.anInt1426 = -1;
 		this.anInt1427 = 0;
-		this.aBool1388 = false;
+		this.wearCol = false;
 		this.anInt1404 = -1;
 		this.anInt1435 = -1;
 		this.animation = -1;
