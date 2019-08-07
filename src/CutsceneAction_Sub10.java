@@ -32,7 +32,7 @@ public abstract class CutsceneAction_Sub10 extends CutsceneAction {
                 hookrequest_6.params = icomponentdefinitions_5.params;
                 CS2Executor.executeHookInner200k(hookrequest_6, 156165111);
             }
-            if (client.method11633(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
+            if (client.getIComponentSettings(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
                 BufferedConnectionContext class184_8 = Preference_Sub20.method12807(870102038);
                 if (client.gameState == 0 || client.gameState == 13) {
                     TCPPacket tcpmessage_7;

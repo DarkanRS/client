@@ -141,9 +141,9 @@ public class PulseEvent extends CacheableNode {
 				}
 			} else if (type == 10) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				if (event.primary != icomponentdefinitions_5.anInt1293 || event.secondary != icomponentdefinitions_5.anInt1334 || event.tertiary != icomponentdefinitions_5.spriteYaw) {
-					icomponentdefinitions_5.anInt1293 = event.primary;
-					icomponentdefinitions_5.anInt1334 = event.secondary;
+				if (event.primary != icomponentdefinitions_5.offsetX || event.secondary != icomponentdefinitions_5.offsetY || event.tertiary != icomponentdefinitions_5.spriteYaw) {
+					icomponentdefinitions_5.offsetX = event.primary;
+					icomponentdefinitions_5.offsetY = event.secondary;
 					icomponentdefinitions_5.spriteYaw = event.tertiary;
 					Class109.redrawComponent(icomponentdefinitions_5);
 				}

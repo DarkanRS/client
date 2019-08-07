@@ -119,7 +119,7 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
     }
 
     static boolean method14643(IComponentDefinitions icomponentdefinitions_0, int i_1) {
-        IComponentSettings class282_sub10_2 = client.method11633(icomponentdefinitions_0);
+        IComponentSettings class282_sub10_2 = client.getIComponentSettings(icomponentdefinitions_0);
         return class282_sub10_2.depthFlags() > 0 ? true : (class282_sub10_2.bit23Enabled() ? true : icomponentdefinitions_0.aClass118_1379 != null);
     }
 }

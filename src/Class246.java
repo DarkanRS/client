@@ -46,7 +46,7 @@ public class Class246 {
 		} else {
 			icomponentdefinitions_0.y = i_2 - icomponentdefinitions_0.height - (i_2 * icomponentdefinitions_0.basePositionY >> 14);
 		}
-		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).settingsHash != 0 || icomponentdefinitions_0.type == ComponentType.CONTAINER)) {
+		if (client.aBool7168 && (client.getIComponentSettings(icomponentdefinitions_0).settingsHash != 0 || icomponentdefinitions_0.type == ComponentType.CONTAINER)) {
 			if (icomponentdefinitions_0.x < 0) {
 				icomponentdefinitions_0.x = 0;
 			} else if (icomponentdefinitions_0.x + icomponentdefinitions_0.width > i_1) {

@@ -1598,13 +1598,13 @@ public final class client extends Engine {
 
 	}
 
-	public static IComponentSettings method11633(IComponentDefinitions icomponentdefinitions_0) {
+	public static IComponentSettings getIComponentSettings(IComponentDefinitions icomponentdefinitions_0) {
 		IComponentSettings class282_sub10_1 = (IComponentSettings) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
 		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.settings;
 	}
 
 	static IComponentDefinitions method11634(IComponentDefinitions icomponentdefinitions_0) {
-		IComponentSettings class282_sub10_1 = method11633(icomponentdefinitions_0);
+		IComponentSettings class282_sub10_1 = getIComponentSettings(icomponentdefinitions_0);
 		if (class282_sub10_1.bit23Enabled()) {
 			return InputSubscriberType.aClass118_2763;
 		} else {
@@ -1723,7 +1723,7 @@ public final class client extends Engine {
 
 	static boolean method11651(IComponentDefinitions icomponentdefinitions_0) {
 		if (aBool7168) {
-			if (method11633(icomponentdefinitions_0).settingsHash != 0) {
+			if (getIComponentSettings(icomponentdefinitions_0).settingsHash != 0) {
 				return false;
 			}
 
@@ -1879,7 +1879,7 @@ public final class client extends Engine {
 					i_18 = i_20 < i_6 ? i_20 : i_6;
 				}
 
-				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && method11633(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
+				if (iCompDef.type != ComponentType.CONTAINER && !iCompDef.usesScripts && getIComponentSettings(iCompDef).settingsHash == 0 && iCompDef != aClass118_7247 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1338 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1406 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1337 && iCompDef.contentType != IComponentDefinitions.CONTENT_TYPE_1403) {
 					if (i_15 < i_17 && i_16 < i_18) {
 						Class86.method1482(iCompDef, (byte) 35);
 					}
@@ -2016,7 +2016,7 @@ public final class client extends Engine {
 										CutsceneAction_Sub10.method14603(i_24 + 1, iCompDef.idHash, iCompDef.anInt1288, "", (byte) 124);
 									} else if (i_24 == 10) {
 										Class60.method1170();
-										IComponentSettings class282_sub10_41 = method11633(iCompDef);
+										IComponentSettings class282_sub10_41 = getIComponentSettings(iCompDef);
 										Class304.setUseOptionFlags(iCompDef, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
 										aString7275 = QuickChatMessage.method6157(iCompDef, 1492565193);
 										if (aString7275 == null) {
@@ -2048,7 +2048,7 @@ public final class client extends Engine {
 							Node_Sub14.method12221(iCompDef, record.getX() - x, record.getY() - y, 983477136);
 						}
 
-						if (aClass118_7257 != null && iCompDef != aClass118_7257 && bool_48 && method11633(iCompDef).dragEnabled()) {
+						if (aClass118_7257 != null && iCompDef != aClass118_7257 && bool_48 && getIComponentSettings(iCompDef).dragEnabled()) {
 							aClass118_7370 = iCompDef;
 						}
 

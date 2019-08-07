@@ -262,7 +262,7 @@ public class ItemIndexLoader implements IndexLoader {
 	}
 
 	static String method7171(IComponentDefinitions icomponentdefinitions_0, int i_1, byte b_2) {
-		return !client.method11633(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? null : (icomponentdefinitions_0.rightclickOptions != null && icomponentdefinitions_0.rightclickOptions.length > i_1 && icomponentdefinitions_0.rightclickOptions[i_1] != null && icomponentdefinitions_0.rightclickOptions[i_1].trim().length() != 0 ? icomponentdefinitions_0.rightclickOptions[i_1] : (client.aBool7168 ? "Hidden-" + i_1 : null));
+		return !client.getIComponentSettings(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? null : (icomponentdefinitions_0.rightclickOptions != null && icomponentdefinitions_0.rightclickOptions.length > i_1 && icomponentdefinitions_0.rightclickOptions[i_1] != null && icomponentdefinitions_0.rightclickOptions[i_1].trim().length() != 0 ? icomponentdefinitions_0.rightclickOptions[i_1] : (client.aBool7168 ? "Hidden-" + i_1 : null));
 	}
 
 }

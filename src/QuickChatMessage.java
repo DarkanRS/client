@@ -147,7 +147,7 @@ public class QuickChatMessage {
     }
 
     static String method6157(IComponentDefinitions icomponentdefinitions_0, int i_1) {
-        return client.method11633(icomponentdefinitions_0).getUseOptionFlags() == 0 ? null : (icomponentdefinitions_0.aString1338 != null && icomponentdefinitions_0.aString1338.trim().length() != 0 ? icomponentdefinitions_0.aString1338 : (client.aBool7168 ? "Hidden-use" : null));
+        return client.getIComponentSettings(icomponentdefinitions_0).getUseOptionFlags() == 0 ? null : (icomponentdefinitions_0.aString1338 != null && icomponentdefinitions_0.aString1338.trim().length() != 0 ? icomponentdefinitions_0.aString1338 : (client.aBool7168 ? "Hidden-use" : null));
     }
 
     public static final void method6159(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {

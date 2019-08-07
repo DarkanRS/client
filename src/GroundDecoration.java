@@ -360,13 +360,13 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					int drawX = inter.x + i_6;
 					int drawY = i_7 + inter.y;
 					int i_16 = inter.transparency;
-					if (client.aBool7168 && (client.method11633(inter).settingsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
+					if (client.aBool7168 && (client.getIComponentSettings(inter).settingsHash != 0 || inter.type == ComponentType.CONTAINER) && i_16 > 127) {
 						i_16 = 127;
 					}
 					int i_17;
 					int i_18;
 					if (inter == client.aClass118_7257) {
-						if (i_1 != -1412584499 && (inter.anInt1382 == IComponentDefinitions.anInt1265 || inter.anInt1382 == IComponentDefinitions.anInt1283 || client.method11633(inter).bit23Enabled())) {
+						if (i_1 != -1412584499 && (inter.anInt1382 == IComponentDefinitions.anInt1265 || inter.anInt1382 == IComponentDefinitions.anInt1283 || client.getIComponentSettings(inter).bit23Enabled())) {
 							Comparable_Sub1.aClass118Array3772 = arr_0;
 							GameTipsLoader.anInt4822 = i_6;
 							IsaacCipher.anInt5157 = i_7;
@@ -389,7 +389,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							if (i_18 + inter.height > client.anInt7265 + client.anInt7476) {
 								i_18 = client.anInt7476 + client.anInt7265 - inter.height;
 							}
-							if (client.method11633(inter).bit23Enabled()) {
+							if (client.getIComponentSettings(inter).bit23Enabled()) {
 								Class292.method5201(i_17, i_18, inter.width, inter.height);
 							}
 							drawX = i_17;
@@ -737,7 +737,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 												int i_32 = Class382.COSINE[inter.spritePitch << 3] * (inter.spriteScale << 2) >> 14;
 												client.aClass294_7169.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-inter.spriteYaw << 3));
 												client.aClass294_7169.rotation(0.0F, 1.0F, 0.0F, Class382.method6508(inter.spriteRoll << 3));
-												client.aClass294_7169.method5219((float) (inter.anInt1293 << 2), (float) (i_31 + i_23 + (inter.anInt1334 << 2)), (float) (i_32 + (inter.anInt1334 << 2)));
+												client.aClass294_7169.method5219((float) (inter.offsetX << 2), (float) (i_31 + i_23 + (inter.offsetY << 2)), (float) (i_32 + (inter.offsetY << 2)));
 												client.aClass294_7169.rotation(1.0F, 0.0F, 0.0F, Class382.method6508(inter.spritePitch << 3));
 											}
 											inter.method1991(Renderers.SOFTWARE_RENDERER, meshRasterizer, client.aClass294_7169, client.cycles);

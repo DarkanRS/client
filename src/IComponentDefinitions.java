@@ -159,8 +159,8 @@ public class IComponentDefinitions {
 	public int scrollX = 0;
 	public int scrollY = 0;
 	public int anInt1339 = -1;
-	public int anInt1293 = 0;
-	public int anInt1334 = 0;
+	public int offsetX = 0;
+	public int offsetY = 0;
 	public int anInt1335 = 2;
 	public boolean aBool1363 = false;
 	public int anInt1378;

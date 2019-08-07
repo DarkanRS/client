@@ -40,6 +40,6 @@ public class Class520 {
     }
 
     static int method11163(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2) {
-        return !client.method11633(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? -1 : (icomponentdefinitions_0.opCursors != null && icomponentdefinitions_0.opCursors.length > i_1 ? icomponentdefinitions_0.opCursors[i_1] : -1);
+        return !client.getIComponentSettings(icomponentdefinitions_0).clickOptionEnabled(i_1) && icomponentdefinitions_0.params == null ? -1 : (icomponentdefinitions_0.opCursors != null && icomponentdefinitions_0.opCursors.length > i_1 ? icomponentdefinitions_0.opCursors[i_1] : -1);
     }
 }
