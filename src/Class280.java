@@ -51,8 +51,8 @@ public class Class280 implements Interface25 {
 			}
 			Class266.anInt3289 += i_5;
 		}
-		client.aFloat7365 += 8.0F * (client.aFloat7266 * (float) long_0 / 40.0F);
-		client.aFloat7146 += 8.0F * ((float) long_0 * client.aFloat7284 / 40.0F);
+		client.camAngleY += 8.0F * (client.aFloat7266 * (float) long_0 / 40.0F);
+		client.camAngleX += 8.0F * ((float) long_0 * client.aFloat7284 / 40.0F);
 		IsaacCipher.processCamera();
 	}
 

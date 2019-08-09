@@ -554,7 +554,7 @@ public class PacketDecoder {
 			int i_7 = buffer.readUnsignedByteC();
 			int i_8 = buffer.readUnsigned128Byte();
 			Class470.method7825();
-			client.aBoolArray7431[i_6] = true;
+			client.CAM_SHAKING[i_6] = true;
 			client.anIntArray7268[i_6] = i_7;
 			client.anIntArray7433[i_6] = key;
 			client.anIntArray7462[i_6] = i_8;

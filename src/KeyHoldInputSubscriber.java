@@ -70,19 +70,19 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 			Class86.anInt833 = -1;
 			PingRequester.anInt5864 = -1;
 		} else {
-			int i_3 = (int) client.aFloat7146;
+			int i_3 = (int) client.camAngleX;
 			if (client.anInt7273 >> 8 > i_3) {
 				i_3 = client.anInt7273 >> 8;
 			}
-			if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_3) {
+			if (client.CAM_SHAKING[4] && client.anIntArray7433[4] + 128 > i_3) {
 				i_3 = client.anIntArray7433[4] + 128;
 			}
-			int i_4 = (int) client.aFloat7365 + client.anInt7343 & 0x3fff;
+			int i_4 = (int) client.camAngleY + client.anInt7343 & 0x3fff;
 			Vector3 vector3_5 = VertexNormal.MY_PLAYER.method11166().coords;
 			LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos((int) vector3_5.x, (int) vector3_5.z, Class4.anInt35) - 200, Class266.anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0, 1500551332);
 			float f_6 = 1.0F - (float) ((100 - i_2) * (100 - i_2) * (100 - i_2)) / 1000000.0F;
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (int) ((float) Class186.anInt2349 + f_6 * (float) (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX - Class186.anInt2349));
-			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = (int) ((float) Transform_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT - Transform_Sub1_Sub2.anInt9461));
+			Class109_Sub1.CAM_MOVE_ABSOLUTEZ = (int) ((float) Transform_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.CAM_MOVE_ABSOLUTEZ - Transform_Sub1_Sub2.anInt9461));
 			Class246.CAM_MOVE_ABSOLUTEY = (int) ((float) (Class246.CAM_MOVE_ABSOLUTEY - Node_Sub15_Sub1.anInt9575) * f_6 + (float) Node_Sub15_Sub1.anInt9575);
 			Class293.anInt3512 = (int) ((float) ClipMap.anInt3968 + f_6 * (float) (Class293.anInt3512 - ClipMap.anInt3968));
 			int i_7 = AnimationDefinitions.anInt5930 - ParamIndexLoader.anInt5029;

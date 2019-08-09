@@ -48,8 +48,8 @@ public class Class363 {
             }
             Class266.anInt3289 += i_6;
         }
-        client.aFloat7365 += client.aFloat7266 * (float) long_0 / 6.0F;
-        client.aFloat7146 += client.aFloat7284 * (float) long_0 / 6.0F;
+        client.camAngleY += client.aFloat7266 * (float) long_0 / 6.0F;
+        client.camAngleX += client.aFloat7284 * (float) long_0 / 6.0F;
         IsaacCipher.processCamera();
     }
 

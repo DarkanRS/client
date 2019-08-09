@@ -131,8 +131,8 @@ public final class client extends Engine {
 	static int anInt7261;
 	public static int anInt7262;
 	public static int anInt7376;
-	public static float aFloat7146;
-	public static float aFloat7365;
+	public static float camAngleX;
+	public static float camAngleY;
 	static float aFloat7266;
 	static float aFloat7284;
 	static boolean aBool7331;
@@ -285,7 +285,7 @@ public final class client extends Engine {
 	public static String FC_OWNER_NAME;
 	public static GrandExchangeSlot[] GRAND_EXCHANGE_SLOTS;
 	static int anInt7429;
-	static boolean[] aBoolArray7431;
+	static boolean[] CAM_SHAKING;
 	static int[] anIntArray7268;
 	static int[] anIntArray7433;
 	static int[] anIntArray7462;
@@ -367,8 +367,8 @@ public final class client extends Engine {
 		anInt7261 = 0;
 		anInt7262 = 0;
 		anInt7376 = 0;
-		aFloat7146 = 1052.0F;
-		aFloat7365 = 0.0F;
+		camAngleX = 1052.0F;
+		camAngleY = 0.0F;
 		aFloat7266 = 0.0F;
 		aFloat7284 = 0.0F;
 		aBool7331 = false;
@@ -526,7 +526,7 @@ public final class client extends Engine {
 		FC_OWNER_NAME = null;
 		GRAND_EXCHANGE_SLOTS = new GrandExchangeSlot[6];
 		anInt7429 = 0;
-		aBoolArray7431 = new boolean[5];
+		CAM_SHAKING = new boolean[5];
 		anIntArray7268 = new int[5];
 		anIntArray7433 = new int[5];
 		anIntArray7462 = new int[5];
@@ -2137,9 +2137,9 @@ public final class client extends Engine {
 									i_25 -= iCompDef.width / 2;
 									i_26 -= iCompDef.height / 2;
 									if (NativeLibraryLoader.anInt3240 == 4) {
-										i_52 = (int) aFloat7365 & 0x3fff;
+										i_52 = (int) camAngleY & 0x3fff;
 									} else {
-										i_52 = (int) aFloat7365 + anInt7255 & 0x3fff;
+										i_52 = (int) camAngleY + anInt7255 & 0x3fff;
 									}
 
 									int i_29 = Class382.SINE[i_52];

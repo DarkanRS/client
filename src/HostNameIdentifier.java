@@ -42,8 +42,8 @@ public class HostNameIdentifier implements Runnable {
 		i_0 <<= 3;
 		i_1 <<= 3;
 		i_2 <<= 3;
-		client.aFloat7146 = (float) i_0;
-		client.aFloat7365 = (float) i_1;
+		client.camAngleX = (float) i_0;
+		client.camAngleY = (float) i_1;
 		if (NativeLibraryLoader.anInt3240 == 5) {
 			Class293.anInt3512 = i_0;
 			AnimationDefinitions.anInt5930 = i_1;

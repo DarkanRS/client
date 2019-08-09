@@ -53,9 +53,9 @@ public abstract class Class158 {
                 int i_14;
                 for (i_11 = 0; i_11 < ints_10.length / 2; i_11++) {
                     if (NativeLibraryLoader.anInt3240 == 4) {
-                        i_12 = (int) client.aFloat7365 & 0x3fff;
+                        i_12 = (int) client.camAngleY & 0x3fff;
                     } else {
-                        i_12 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
+                        i_12 = (int) client.camAngleY + client.anInt7255 & 0x3fff;
                     }
                     i_13 = Class382.SINE[i_12];
                     i_14 = Class382.COSINE[i_12];

@@ -52,8 +52,8 @@ public abstract class Class434 {
 			Class236.anInt2912 = 20;
 			client.aBool7371 = false;
 			tcpmessage_1 = Class271.createPacket(ClientPacket.MOVE_CAMERA, client.GAME_CONNECTION_CONTEXT.isaac);
-			tcpmessage_1.buffer.writeShortLE128((int) client.aFloat7146 >> 3);
-			tcpmessage_1.buffer.writeShort128((int) client.aFloat7365 >> 3);
+			tcpmessage_1.buffer.writeShortLE128((int) client.camAngleX >> 3);
+			tcpmessage_1.buffer.writeShort128((int) client.camAngleY >> 3);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 

@@ -12,7 +12,7 @@ public final class Class514 {
 
 	public static final void method8841(int i_0) {
 		for (int i_1 = 0; i_1 < 5; i_1++) {
-			client.aBoolArray7431[i_1] = false;
+			client.CAM_SHAKING[i_1] = false;
 		}
 		client.anInt7277 = -1;
 		client.anInt7448 = -1;

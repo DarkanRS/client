@@ -2,7 +2,7 @@ import java.awt.Canvas;
 
 final class Class109_Sub1 extends Class109 {
 
-	static int CAM_MOVE_TERRAIN_HEIGHT;
+	static int CAM_MOVE_ABSOLUTEZ;
 
 	void method1851() {
 		Class260.aClass277_3221 = Class260.aClass277_3234;

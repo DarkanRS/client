@@ -194,17 +194,17 @@ public final class IsaacCipher {
     }
 
     static final void processCamera() {
-        if (client.aFloat7146 < 1081.0F) {
-            client.aFloat7146 = 1081.0F;
+        if (client.camAngleX < 1081.0F) {
+            client.camAngleX = 1081.0F;
         }
-        if (client.aFloat7146 > 2980.0F) {
-            client.aFloat7146 = 2980.0F;
+        if (client.camAngleX > 2980.0F) {
+            client.camAngleX = 2980.0F;
         }
-        while (client.aFloat7365 >= 16384.0F) {
-            client.aFloat7365 -= 16384.0F;
+        while (client.camAngleY >= 16384.0F) {
+            client.camAngleY -= 16384.0F;
         }
-        while (client.aFloat7365 < 0.0F) {
-            client.aFloat7365 += 16384.0F;
+        while (client.camAngleY < 0.0F) {
+            client.camAngleY += 16384.0F;
         }
         RegionMap regionmap_1 = IndexLoaders.MAP_REGION_DECODER.method4433();
         SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();

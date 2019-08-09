@@ -189,7 +189,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 					if (i_7 == 1) {
 						tcpmessage_13.buffer.writeByte(-1);
 						tcpmessage_13.buffer.writeByte(-1);
-						tcpmessage_13.buffer.writeShort((int) client.aFloat7365);
+						tcpmessage_13.buffer.writeShort((int) client.camAngleY);
 						tcpmessage_13.buffer.writeByte(57);
 						tcpmessage_13.buffer.writeByte(client.anInt7255);
 						tcpmessage_13.buffer.writeByte(client.anInt7203);

@@ -177,50 +177,50 @@ public class HitbarDefinitions {
 				int i_8;
 				int i_9;
 				if (NativeLibraryLoader.anInt3240 == 2) {
-					i_8 = (int) client.aFloat7146;
+					i_8 = (int) client.camAngleX;
 					if (client.anInt7273 >> 8 > i_8) {
 						i_8 = client.anInt7273 >> 8;
 					}
-					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_8) {
+					if (client.CAM_SHAKING[4] && client.anIntArray7433[4] + 128 > i_8) {
 						i_8 = client.anIntArray7433[4] + 128;
 					}
-					i_9 = (int) client.aFloat7365 + client.anInt7343 & 0x3fff;
+					i_9 = (int) client.camAngleY + client.anInt7343 & 0x3fff;
 					LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos((int) vector3_6.x, (int) vector3_6.z, Class4.anInt35) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1262873702);
 				} else if (NativeLibraryLoader.anInt3240 == 4) {
-					i_8 = (int) client.aFloat7146;
+					i_8 = (int) client.camAngleX;
 					if (client.anInt7273 >> 8 > i_8) {
 						i_8 = client.anInt7273 >> 8;
 					}
-					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_8) {
+					if (client.CAM_SHAKING[4] && client.anIntArray7433[4] + 128 > i_8) {
 						i_8 = client.anIntArray7433[4] + 128;
 					}
-					i_9 = (int) client.aFloat7365 & 0x3fff;
+					i_9 = (int) client.camAngleY & 0x3fff;
 					LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos(client.anInt7262, client.anInt7376, Class4.anInt35) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1318646026);
 				} else if (NativeLibraryLoader.anInt3240 == 1) {
 					KeyHoldInputSubscriber.method3920(i_3);
 				}
 				i_8 = IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
-				i_9 = Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
+				i_9 = Class109_Sub1.CAM_MOVE_ABSOLUTEZ;
 				int i_10 = Class246.CAM_MOVE_ABSOLUTEY;
 				int i_11 = Class293.anInt3512;
 				int i_12 = AnimationDefinitions.anInt5930;
 				int i_14;
-				for (int i_13 = 0; i_13 < 5; i_13++) {
-					if (client.aBoolArray7431[i_13]) {
-						i_14 = (int) (Math.random() * (double) (client.anIntArray7268[i_13] * 2 + 1) - (double) client.anIntArray7268[i_13] + Math.sin((double) client.anIntArray7435[i_13] * ((double) client.anIntArray7462[i_13] / 100.0D)) * (double) client.anIntArray7433[i_13]);
-						if (i_13 == 0) {
+				for (int slotId = 0; slotId < 5; slotId++) {
+					if (client.CAM_SHAKING[slotId]) {
+						i_14 = (int) (Math.random() * (double) (client.anIntArray7268[slotId] * 2 + 1) - (double) client.anIntArray7268[slotId] + Math.sin((double) client.anIntArray7435[slotId] * ((double) client.anIntArray7462[slotId] / 100.0D)) * (double) client.anIntArray7433[slotId]);
+						if (slotId == 0) {
 							IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX += i_14 << 2;
 						}
-						if (i_13 == 1) {
-							Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT += i_14 << 2;
+						if (slotId == 1) {
+							Class109_Sub1.CAM_MOVE_ABSOLUTEZ += i_14 << 2;
 						}
-						if (i_13 == 2) {
+						if (slotId == 2) {
 							Class246.CAM_MOVE_ABSOLUTEY += i_14 << 2;
 						}
-						if (i_13 == 3) {
+						if (slotId == 3) {
 							AnimationDefinitions.anInt5930 = i_14 + AnimationDefinitions.anInt5930 & 0x3fff;
 						}
-						if (i_13 == 4) {
+						if (slotId == 4) {
 							Class293.anInt3512 += i_14;
 							if (Class293.anInt3512 < 1024) {
 								Class293.anInt3512 = 1024;
@@ -247,7 +247,7 @@ public class HitbarDefinitions {
 				Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
 				Class535 class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038((short) 4699);
 				i_14 = class535_16.method11450();
-				client.aClass294_7457.method5223((float) (-IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX), (float) (-Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT), (float) (-Class246.CAM_MOVE_ABSOLUTEY));
+				client.aClass294_7457.method5223((float) (-IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX), (float) (-Class109_Sub1.CAM_MOVE_ABSOLUTEZ), (float) (-Class246.CAM_MOVE_ABSOLUTEY));
 				client.aClass294_7457.rotation(0.0F, -1.0F, 0.0F, Class382.method6508(-AnimationDefinitions.anInt5930 & 0x3fff));
 				client.aClass294_7457.rotation(-1.0F, 0.0F, 0.0F, Class382.method6508(-Class293.anInt3512 & 0x3fff));
 				client.aClass294_7457.rotation(0.0F, 0.0F, -1.0F, Class382.method6508(-Class121.anInt1525 & 0x3fff));
@@ -264,7 +264,7 @@ public class HitbarDefinitions {
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_2, i_3);
 				IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
 				byte b_15 = Class393.preferences.aPreference_Sub27_8209.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aPreference_Sub26_8224.method12943(619789577) == 0);
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aPreference_Sub26_8224.method12943(619789577) == 0);
 				++client.anInt7396;
 				Node_Sub20_Sub24.method15391(-1221353280);
 				if (client.gameState == 13) {
@@ -275,7 +275,7 @@ public class HitbarDefinitions {
 				}
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3399();
 				IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = i_8;
-				Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_9;
+				Class109_Sub1.CAM_MOVE_ABSOLUTEZ = i_9;
 				Class246.CAM_MOVE_ABSOLUTEY = i_10;
 				Class293.anInt3512 = i_11;
 				AnimationDefinitions.anInt5930 = i_12;

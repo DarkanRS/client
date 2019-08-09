@@ -359,7 +359,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		if (Class115.CAM_MOVE_VAR_SPEED >= 100) {
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
 			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
-			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
+			Class109_Sub1.CAM_MOVE_ABSOLUTEZ = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35) - SpotAnimDefinitions.CAM_MOVE_Z;
 		} else {
 			if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {
 				IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (i_1 - IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX) * Class115.CAM_MOVE_VAR_SPEED / 1000 + IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX + Class454.CAM_MOVE_CONST_SPEED;
@@ -375,17 +375,17 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 				}
 			}
 
-			if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT < i_3) {
-				Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = (i_3 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT) * Class115.CAM_MOVE_VAR_SPEED / 1000 + Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT + Class454.CAM_MOVE_CONST_SPEED;
-				if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT > i_3) {
-					Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_3;
+			if (Class109_Sub1.CAM_MOVE_ABSOLUTEZ < i_3) {
+				Class109_Sub1.CAM_MOVE_ABSOLUTEZ = (i_3 - Class109_Sub1.CAM_MOVE_ABSOLUTEZ) * Class115.CAM_MOVE_VAR_SPEED / 1000 + Class109_Sub1.CAM_MOVE_ABSOLUTEZ + Class454.CAM_MOVE_CONST_SPEED;
+				if (Class109_Sub1.CAM_MOVE_ABSOLUTEZ > i_3) {
+					Class109_Sub1.CAM_MOVE_ABSOLUTEZ = i_3;
 				}
 			}
 
-			if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT > i_3) {
-				Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT -= Class115.CAM_MOVE_VAR_SPEED * (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT - i_3) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
-				if (Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT < i_3) {
-					Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = i_3;
+			if (Class109_Sub1.CAM_MOVE_ABSOLUTEZ > i_3) {
+				Class109_Sub1.CAM_MOVE_ABSOLUTEZ -= Class115.CAM_MOVE_VAR_SPEED * (Class109_Sub1.CAM_MOVE_ABSOLUTEZ - i_3) / 1000 + Class454.CAM_MOVE_CONST_SPEED;
+				if (Class109_Sub1.CAM_MOVE_ABSOLUTEZ < i_3) {
+					Class109_Sub1.CAM_MOVE_ABSOLUTEZ = i_3;
 				}
 			}
 
@@ -408,7 +408,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
 		i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.anInt35) - Class121.anInt1527;
 		int i_4 = i_1 - IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
-		int i_5 = i_3 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
+		int i_5 = i_3 - Class109_Sub1.CAM_MOVE_ABSOLUTEZ;
 		int i_6 = i_2 - Class246.CAM_MOVE_ABSOLUTEY;
 		int i_7 = (int) Math.sqrt((double) (i_6 * i_6 + i_4 * i_4));
 		int i_8 = (int) (Math.atan2((double) i_5, (double) i_7) * 2607.5945876176133D) & 0x3fff;

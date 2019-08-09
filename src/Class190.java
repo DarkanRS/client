@@ -31,9 +31,9 @@ public class Class190 {
 		if (nativesprite_6 != null) {
 			int i_8;
 			if (NativeLibraryLoader.anInt3240 == 4) {
-				i_8 = (int) client.aFloat7365 & 0x3fff;
+				i_8 = (int) client.camAngleY & 0x3fff;
 			} else {
-				i_8 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
+				i_8 = (int) client.camAngleY + client.anInt7255 & 0x3fff;
 			}
 
 			int i_9 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
@@ -125,7 +125,7 @@ public class Class190 {
 		client.anInt7343 = (int) (Math.random() * 80.0D) - 40;
 		client.anInt7255 = (int) (Math.random() * 120.0D) - 60;
 		client.anInt7203 = (int) (Math.random() * 30.0D) - 20;
-		client.aFloat7365 = (float) ((int) (Math.random() * 160.0D) - 80 & 0x3fff);
+		client.camAngleY = (float) ((int) (Math.random() * 160.0D) - 80 & 0x3fff);
 		ClanVarIndexLoader.method6763();
 
 		for (i_1 = 0; i_1 < 2048; i_1++) {

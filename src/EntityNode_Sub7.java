@@ -62,7 +62,7 @@ public class EntityNode_Sub7 extends EntityNode {
 
 	public static final void method12606(byte b_0) {
 		for (int i_1 = 0; i_1 < 5; i_1++) {
-			client.aBoolArray7431[i_1] = false;
+			client.CAM_SHAKING[i_1] = false;
 		}
 
 		client.anInt7277 = -1;
@@ -74,7 +74,7 @@ public class EntityNode_Sub7 extends EntityNode {
 		PingRequester.anInt5864 = -1;
 		client.anInt7429 = client.cycles;
 		Class186.anInt2349 = IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
-		Transform_Sub1_Sub2.anInt9461 = Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT;
+		Transform_Sub1_Sub2.anInt9461 = Class109_Sub1.CAM_MOVE_ABSOLUTEZ;
 		Node_Sub15_Sub1.anInt9575 = Class246.CAM_MOVE_ABSOLUTEY;
 		ClipMap.anInt3968 = Class293.anInt3512;
 		ParamIndexLoader.anInt5029 = AnimationDefinitions.anInt5930;

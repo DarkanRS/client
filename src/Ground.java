@@ -107,9 +107,9 @@ public abstract class Ground {
 		if ((long) i_9 <= long_7) {
 			int i_10;
 			if (NativeLibraryLoader.anInt3240 == 4) {
-				i_10 = (int) client.aFloat7365 & 0x3fff;
+				i_10 = (int) client.camAngleY & 0x3fff;
 			} else {
-				i_10 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
+				i_10 = (int) client.camAngleY + client.anInt7255 & 0x3fff;
 			}
 			int i_11 = Class382.SINE[i_10];
 			int i_12 = Class382.COSINE[i_10];

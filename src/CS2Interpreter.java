@@ -3290,7 +3290,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1370(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloat7365 >> 3;
+		executor.intStack[++executor.intStackPtr - 1] = (int) client.camAngleY >> 3;
 	}
 
 	static final void method12572(CS2Executor executor) {
@@ -7831,7 +7831,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1456(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = (int) client.aFloat7146 >> 3;
+		executor.intStack[++executor.intStackPtr - 1] = (int) client.camAngleX >> 3;
 	}
 
 	static final void method14655(CS2Executor executor) {

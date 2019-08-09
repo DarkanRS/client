@@ -31,9 +31,9 @@ public final class Class241 {
     static void method4152(IComponentDefinitions icomponentdefinitions_0, Class455 class455_1, int i_2, int i_3, int i_4, int i_5, int i_6, String string_7, FontRenderer fontrenderer_8, FontMetrics fontmetrics_9, int i_10) {
         int i_12;
         if (NativeLibraryLoader.anInt3240 == 4) {
-            i_12 = (int) client.aFloat7365 & 0x3fff;
+            i_12 = (int) client.camAngleY & 0x3fff;
         } else {
-            i_12 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
+            i_12 = (int) client.camAngleY + client.anInt7255 & 0x3fff;
         }
         int i_13 = Math.max(icomponentdefinitions_0.width / 2, icomponentdefinitions_0.height / 2) + 10;
         int i_14 = i_5 * i_5 + i_4 * i_4;

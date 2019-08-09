@@ -141,7 +141,7 @@ public class SpotAnimIndexLoader {
 			}
 			CoordGrid coordgrid_16 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (int) floats_3[0] - coordgrid_16.x * 512;
-			Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT = (int) floats_3[1] * -1;
+			Class109_Sub1.CAM_MOVE_ABSOLUTEZ = (int) floats_3[1] * -1;
 			Class246.CAM_MOVE_ABSOLUTEY = (int) floats_3[2] - coordgrid_16.y * 512;
 			float[] floats_6 = new float[3];
 			i_7 = client.anInt7280 * 2;

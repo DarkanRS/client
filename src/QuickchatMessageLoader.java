@@ -90,7 +90,7 @@ public class QuickchatMessageLoader {
 				int i_9;
 				if (NativeLibraryLoader.anInt3240 != 2 && PingRequester.anInt5864 == -1) {
 					i_9 = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.anInt35);
-					if (i_9 - Class109_Sub1.CAM_MOVE_TERRAIN_HEIGHT < 3200 && (regionmap_7.tileMasks[Class4.anInt35][IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9][Class246.CAM_MOVE_ABSOLUTEY >> 9] & 0x4) != 0) {
+					if (i_9 - Class109_Sub1.CAM_MOVE_ABSOLUTEZ < 3200 && (regionmap_7.tileMasks[Class4.anInt35][IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9][Class246.CAM_MOVE_ABSOLUTEY >> 9] & 0x4) != 0) {
 						JS5Manager.method5492(sceneobjectmanager_8.aClass293ArrayArrayArray2604, 1, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 9, Class246.CAM_MOVE_ABSOLUTEY >> 9, false, (byte) -37);
 					}
 				} else {
