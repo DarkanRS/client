@@ -16,10 +16,10 @@ public enum UpdateZonePacket {
     SOUND_AREA(9),
     SPOT_ANIM(8);
 	
-	public int id;
+	public int size;
 
-    UpdateZonePacket(int i_1) {
-    	this.id = i_1;
+    UpdateZonePacket(int size) {
+    	this.size = size;
     }
 
     static final void method6292(int i_0, int i_1, int i_2, int i_3) {
@@ -29,8 +29,4 @@ public enum UpdateZonePacket {
             Class273.method4866(i_0, i_1, i_2, i_3);
         }
     }
-
-//	public static TilestreamPacket[] values() {
-//		return new TilestreamPacket[] { CUSTOMIZE_OBJECT, REMOVE_GROUND_ITEM, CREATE_GROUND_ITEM, DESTROY_OBJECT, CREATE_OBJECT, PROJECTILE, aClass364_4210, aClass364_4211, aClass364_4205, aClass364_4204, aClass364_4214, TILE_MESSAGE, aClass364_4216, aClass364_4217, aClass364_4218 };
-//	}
 }

@@ -233,16 +233,6 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.UPDATE_ZONE_PARTIAL_ENCLOSED) {
-			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.read128Byte() << 3;
-			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
-			Static.UPDATE_ZONE_X = buffer.readByte() << 3;
-			while (buffer.index < context.currentPacketSize) {
-				UpdateZonePacket tilestreampacket_68 = UpdateZonePacket.values()[buffer.readUnsignedByte()];
-				PacketDecoder.decodeTilestreamPacket(tilestreampacket_68);
-			}
-			context.currentPacket = null;
-			return true;
 		} else if (context.currentPacket == ServerPacket.IF_SETSCROLLPOS) {
 			int key = buffer.readUnsignedShort();
 			int flags = buffer.readInt();
@@ -1031,12 +1021,6 @@ public class PacketDecoder {
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.UPDATE_ZONE_FULL_FOLLOWS) { 
-			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.readByte128() << 3;
-			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
-			Static.UPDATE_ZONE_X = buffer.readByte128() << 3;
-			context.currentPacket = null;
-			return true;
 		} else if (context.currentPacket == ServerPacket.IF_SETTARGETPARAM) {
 			int toSlot = buffer.readUnsignedShortLE128();
 			if (toSlot == 65535) {
@@ -1161,6 +1145,22 @@ public class PacketDecoder {
 			return true;
 		} else if (context.currentPacket == ServerPacket.MIDI_SONG_LOCATION) {
 			PacketDecoder.decodeTilestreamPacket(UpdateZonePacket.MIDI_SONG_LOCATION);
+			context.currentPacket = null;
+			return true;
+		} else if (context.currentPacket == ServerPacket.UPDATE_ZONE_FULL_FOLLOWS) { 
+			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.readByte128() << 3;
+			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
+			Static.UPDATE_ZONE_X = buffer.readByte128() << 3;
+			context.currentPacket = null;
+			return true;
+		} else if (context.currentPacket == ServerPacket.UPDATE_ZONE_PARTIAL_ENCLOSED) {
+			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.read128Byte() << 3;
+			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte128();
+			Static.UPDATE_ZONE_X = buffer.readByte() << 3;
+			while (buffer.index < context.currentPacketSize) {
+				UpdateZonePacket tilestreampacket_68 = UpdateZonePacket.values()[buffer.readUnsignedByte()];
+				PacketDecoder.decodeTilestreamPacket(tilestreampacket_68);
+			}
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.UPDATE_ZONE_PARTIAL_FOLLOWS) {
