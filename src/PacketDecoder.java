@@ -1388,7 +1388,7 @@ public class PacketDecoder {
 			Class158_Sub1.PLAYER_VAR_PROVIDER.setVarp(flags, b_100, (byte) 16);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.PLAY_SONG_RELATED) {
+		} else if (context.currentPacket == ServerPacket.aClass375_3828) {
 			int key = buffer.readUnsigned128Byte();
 			int flags = buffer.readUnsignedByte();
 			int i_6 = buffer.readUnsignedByteC();
@@ -1763,7 +1763,7 @@ public class PacketDecoder {
 			PulseEvent.setIFContent(key, 3, client.myPlayerIndex, 0, (byte) -81);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.EXECUTE_CS2_SCRIPT_RELATED) {
+		} else if (context.currentPacket == ServerPacket.aClass375_3822) {
 			int key = buffer.readIntLE();
 			if (key != Class354.anInt4112) {
 				Class354.anInt4112 = key;

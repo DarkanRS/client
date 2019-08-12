@@ -77,7 +77,7 @@ public enum ServerPacket {
 	IF_SETPLAYERMODEL(72, 4),
 	aClass375_4396(73, -1), //loops through interface components on an interface setting an int value that only has use in cs2 interpreter? maybe cursor?
 	FRIEND_STATUS(74, -2),
-	EXECUTE_CS2_SCRIPT_RELATED(75, 4),
+	aClass375_3822(75, 4), //changes cs2 executor and runs a script?
 	DEBUG_SERVER_TRIGGERS(76, 2),
 	PRELOAD_SONG(77, 2),
 	IF_CLOSESUB(78, 4),
@@ -95,7 +95,7 @@ public enum ServerPacket {
 	aClass375_4441(90, 28), //decoding some stuff into class440? literally not a clue
 	UPDATE_SITESETTINGS_COOKIE(91, -1),
 	SEND_PRIVATE_MESSAGE(92, -2),
-	PLAY_SONG_RELATED(93, 11),
+	aClass375_3828(93, 11), //play sound song but with specific volume or something?
 	VARCLAN_DISABLE(94, 0),
 	MAP_PROJANIM_HALFSQ(95, 17),
 	aClass375_4418(96, 8), //creates a pulse event with type 13 which doesn't have a handler for what I can see? So does nothing effectively?
