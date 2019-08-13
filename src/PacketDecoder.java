@@ -1280,21 +1280,21 @@ public class PacketDecoder {
 			int lockOn = buffer.readShort();
 			int flags = buffer.readUnsignedByte128();
 			int y = buffer.readUnsignedShort128();
-			int angleXZ = buffer.readUnsignedShort();
-			int delay = buffer.readUnsignedShortLE128();
+			int slope = buffer.readUnsignedShort();
+			int startTime = buffer.readUnsignedShortLE128();
 			int spotAnimId = buffer.readUnsignedShortLE128();
-			int angleY = buffer.readUnsignedByte128();
-			if (angleY == 255) {
-				angleY = -1;
+			int angle = buffer.readUnsignedByte128();
+			if (angle == 255) {
+				angle = -1;
 			}
 			byte xDist = buffer.readByteC();
 			byte yDist = buffer.readByteC();
 			int x = buffer.readUnsignedShort128();
 			int startHeight = buffer.readUnsignedByteC();
 			boolean useFloorHeight = (flags & 0x1) != 0;
-			boolean preciseStartHeight = (flags & 0x2) != 0;
-			int basOffIdx = preciseStartHeight ? flags >> 2 : -1;
-			if (preciseStartHeight) {
+			boolean hasBASOffIdx = (flags & 0x2) != 0;
+			int basOffIdx = hasBASOffIdx ? flags >> 2 : -1;
+			if (hasBASOffIdx) {
 				startHeight = (byte) startHeight;
 			} else {
 				startHeight *= 4;
@@ -1311,8 +1311,8 @@ public class PacketDecoder {
 				yOff *= 256;
 				startHeight <<= 2;
 				endHeight <<= 2;
-				angleXZ <<= 2;
-				CursorIndexLoader.createProjectile(spotAnimId, source, lockOn, basOffIdx, startHeight, endHeight, localX, localY, xOff, yOff, delay, endTime, angleY, angleXZ, useFloorHeight);
+				slope <<= 2;
+				CursorIndexLoader.createProjectile(spotAnimId, source, lockOn, basOffIdx, startHeight, endHeight, localX, localY, xOff, yOff, startTime, endTime, angle, slope, useFloorHeight);
 			}
 			context.currentPacket = null;
 			return true;
@@ -2420,7 +2420,7 @@ public class PacketDecoder {
 			int delay = buffer.readUnsignedShort();
 			int delayPlusSpeed = buffer.readUnsignedShort();
 			int angle = buffer.readUnsignedByte();
-			int angle2 = buffer.readUnsignedShort();
+			int slope = buffer.readUnsignedShort();
 			if (angle == 255) {
 				angle = -1;
 			}
@@ -2431,8 +2431,8 @@ public class PacketDecoder {
 				yOff = yOff * 512 + 256;
 				startHeight <<= 2;
 				endHeight <<= 2;
-				angle2 <<= 2;
-				Projectile class521_sub1_sub1_sub3_17 = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, delayPlusSpeed + client.cycles, angle, angle2, 0, lockOn, endHeight, useFloorHeight, -1);
+				slope <<= 2;
+				Projectile class521_sub1_sub1_sub3_17 = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, delayPlusSpeed + client.cycles, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
 				class521_sub1_sub1_sub3_17.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, delay + client.cycles);
 				client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_17));
 			}
