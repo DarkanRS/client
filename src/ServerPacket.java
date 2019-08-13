@@ -106,7 +106,7 @@ public enum ServerPacket {
 	aClass375_4452(101, 0), //something with setting a number to 1 and refreshing interfaces? ignore list related? FRIENDLIST_LOADED?
 	UPDATE_REBOOT_TIMER(102, 2),
 	WORLD_LIST(103, -2),
-	SOUND_IDX15(104, 6),
+	VORBIS_SPEECH_SOUND(104, 6),
 	IF_SETCOLOR(105, 6),
 	aClass375_4457(106, 2), //vorbis related?
 	GROUND_ITEM_REVEAL(107, 7),

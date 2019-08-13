@@ -2239,7 +2239,7 @@ public class PacketDecoder {
 			Class9.animateObject(plane, x, y, slot, type, rotation, animationId);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.SOUND_IDX15) {
+		} else if (context.currentPacket == ServerPacket.VORBIS_SPEECH_SOUND) {
 			int key = buffer.readUnsignedShort();
 			if (key == 65535) {
 				key = -1;
