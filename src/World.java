@@ -33,10 +33,10 @@ public class World {
 				}
 			} else {
 				if (class521_sub1_2 == VertexNormal.MY_PLAYER) {
-					if (Class393.preferences.aPreference_Sub13_8225.method12714() == 0) {
+					if (Class393.preferences.soundEffectVolume.method12714() == 0) {
 						return;
 					}
-				} else if (Class393.preferences.aPreference_Sub13_8193.method12714() == 0) {
+				} else if (Class393.preferences.ambientSoundVolume.method12714() == 0) {
 					return;
 				}
 

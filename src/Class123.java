@@ -179,7 +179,7 @@ public class Class123 {
 			}
 			this.method2133(this.aTransform_Sub1_1539);
 			if (bool_4) {
-				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.preferences.aPreference_Sub2_8205.method12624((byte) -25) != 0;
+				bool_4 &= this.aBool1550 & !this.aBool1552 & Class393.preferences.sceneryShadows.method12624((byte) -25) != 0;
 			}
 			if (bool_3 && !bool_4) {
 				this.anInt1547 = objectdefinitions_6.id;
@@ -254,7 +254,7 @@ public class Class123 {
 	void method2133(Transform_Sub1 class521_sub1_1) {
 		if (this.aAnimation_1545.hasDefs()) {
 			if (this.aAnimation_1545.method7627(client.cycles - this.anInt1548, -1604815652)) {
-				if (Class393.preferences.aPreference_Sub2_8205.method12624((byte) -127) == 2) {
+				if (Class393.preferences.sceneryShadows.method12624((byte) -127) == 2) {
 					this.aBool1552 = false;
 				}
 				if (this.aAnimation_1545.method7580(487845582)) {

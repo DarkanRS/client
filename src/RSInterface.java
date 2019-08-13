@@ -157,7 +157,7 @@ public class RSInterface {
 								if (i_14 < 0) {
 									i_14 = 0;
 								}
-								i_5 = (i_7 - i_14) * Class393.preferences.aPreference_Sub13_8193.method12714() * sound.anInt3299 / i_7 >> 2;
+								i_5 = (i_7 - i_14) * Class393.preferences.ambientSoundVolume.method12714() * sound.anInt3299 / i_7 >> 2;
 								if (sound.anInt3305 != -1) {
 									i_10 = sound.anInt3305;
 									i_12 = sound.anInt3306;
@@ -181,7 +181,7 @@ public class RSInterface {
 								i_5 = 0;
 							}
 						} else {
-							i_5 = sound.anInt3299 * (sound.type == 3 ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) >> 2;
+							i_5 = sound.anInt3299 * (sound.type == 3 ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) >> 2;
 						}
 						if (i_5 > 0) {
 							if (sound.type == 1) {
@@ -210,16 +210,16 @@ public class RSInterface {
 			}
 		}
 		if (Class260.aBool3220 && !SongReference.method1966(1117518618)) {
-			if (Class393.preferences.aPreference_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1) {
+			if (Class393.preferences.musicVolume.method12714() != 0 && Class260.anInt3223 != -1) {
 				if (Class260.aNode_Sub15_Sub2_3231 != null) {
-					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aPreference_Sub13_8228.method12714(), Class260.aNode_Sub15_Sub2_3231);
+					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.musicVolume.method12714(), Class260.aNode_Sub15_Sub2_3231);
 				} else {
-					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.aPreference_Sub13_8228.method12714(), (byte) -3);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, Class260.anInt3223, Class393.preferences.musicVolume.method12714(), (byte) -3);
 				}
 			}
 			Class260.aBool3220 = false;
 			Class260.aNode_Sub15_Sub2_3231 = null;
-		} else if (Class393.preferences.aPreference_Sub13_8228.method12714() != 0 && Class260.anInt3223 != -1 && !SongReference.method1966(1621182156)) {
+		} else if (Class393.preferences.musicVolume.method12714() != 0 && Class260.anInt3223 != -1 && !SongReference.method1966(1621182156)) {
 			TCPPacket tcpmessage_17 = Class271.createPacket(ClientPacket.SOUND_EFFECT_MUSIC_ENDED, client.GAME_CONNECTION_CONTEXT.isaac);
 			tcpmessage_17.buffer.writeInt(Class260.anInt3223);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_17);

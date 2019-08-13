@@ -729,7 +729,7 @@ public class OpenGLGround extends Ground {
 							shorts_15 = this.materialIndices[i_13];
 							if (shorts_15 != null) {
 								for (i_16 = 0; i_16 < shorts_15.length; i_16++) {
-									class282_sub35_sub1_11.writeLEShort(shorts_15[i_16] & 0xffff, (byte) -40);
+									class282_sub35_sub1_11.writeLEShort(shorts_15[i_16] & 0xffff);
 									++i_10;
 								}
 							}
@@ -1958,7 +1958,7 @@ public class OpenGLGround extends Ground {
 							shorts_15 = this.materialIndices[i_13];
 							if (shorts_15 != null) {
 								for (i_16 = 0; i_16 < shorts_15.length; i_16++) {
-									class282_sub35_sub1_11.writeLEShort(shorts_15[i_16] & 0xffff, (byte) -46);
+									class282_sub35_sub1_11.writeLEShort(shorts_15[i_16] & 0xffff);
 									++i_10;
 								}
 							}
@@ -2113,7 +2113,7 @@ public class OpenGLGround extends Ground {
 							shorts_15 = this.materialIndices[i_13];
 							if (shorts_15 != null) {
 								for (i_16 = 0; i_16 < shorts_15.length; i_16++) {
-									class282_sub35_sub1_11.writeLEShort(shorts_15[i_16] & 0xffff, (byte) 46);
+									class282_sub35_sub1_11.writeLEShort(shorts_15[i_16] & 0xffff);
 									++i_10;
 								}
 							}

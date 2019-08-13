@@ -101,7 +101,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 					tcpmessage_6.buffer.writeByte(0);
 					i_2 = tcpmessage_6.buffer.index;
 					FontRenderer_Sub2.method14264(tcpmessage_6.buffer);
-					tcpmessage_6.buffer.method13061(tcpmessage_6.buffer.index - i_2, 788141162);
+					tcpmessage_6.buffer.writeIndex(tcpmessage_6.buffer.index - i_2);
 					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_6);
 				}
 				if (PingRequest.CURRENT_REQUEST != null) {

@@ -387,7 +387,7 @@ public class IndexLoaders {
 			Class393.preferences.setValue(Class393.preferences.safeMode, 1);
 			if (client.aBool7465) {
 				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
-			} else if (Class393.preferences.aPreference_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
+			} else if (Class393.preferences.aPreference_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.ram < 512 && Class11.SYSTEM_INFO.ram != 0) {
 				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
 			}
 

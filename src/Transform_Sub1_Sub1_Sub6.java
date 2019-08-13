@@ -84,7 +84,7 @@ public class Transform_Sub1_Sub1_Sub6 extends Transform_Sub1_Sub1 implements Sce
 		this.aByte10540 = (byte) i_16;
 		this.aBool10541 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.aBool10543 = bool_17;
-		this.aBool10544 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10536 && Class393.preferences.aPreference_Sub2_8205.method12624((byte) -6) != 0;
+		this.aBool10544 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10536 && Class393.preferences.sceneryShadows.method12624((byte) -6) != 0;
 		int i_18 = 2048;
 		if (this.aBool10543) {
 			i_18 |= 0x10000;

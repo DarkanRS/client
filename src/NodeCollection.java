@@ -244,7 +244,7 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public static void method8148() {
-		Class253.method4330(Class393.preferences.aPreference_Sub10_8215.method12691(722134232) == 1);
+		Class253.method4330(Class393.preferences.monoStereo.method12691(722134232) == 1);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(Node_Sub20_Sub10.method15262((Node_Sub15_Sub2) null, 191335579), (short) 27702);
 		ShaderDecoder.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);

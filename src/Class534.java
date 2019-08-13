@@ -137,7 +137,7 @@ public abstract class Class534 {
 				}
 			}
 			if (tcpmessage_2 != null) {
-				tcpmessage_2.buffer.method13061(tcpmessage_2.buffer.index - i_3, -898756253);
+				tcpmessage_2.buffer.writeIndex(tcpmessage_2.buffer.index - i_3);
 				int i_7 = tcpmessage_2.buffer.index;
 				tcpmessage_2.buffer.index = i_3;
 				tcpmessage_2.buffer.writeByte(i_4 / i_5);

@@ -25,18 +25,18 @@ public class Class256 {
 		return this.aBool3160;
 	}
 
-	public static void method4412(SongReference class116_0, int i_1, int i_2) {
-		i_1 = i_1 * Class393.preferences.aPreference_Sub13_8228.method12714() >> 8;
+	public static void method4412(SongReference class116_0, int volume, int i_2) {
+		volume = volume * Class393.preferences.musicVolume.method12714() >> 8;
 		if (class116_0 == null) {
 			VarBitDefinitions.method3805();
 		} else {
-			HostNameIdentifier.method487(class116_0, i_1);
+			HostNameIdentifier.method487(class116_0, volume);
 			VarBitIndexLoader.method3912();
 		}
 	}
 
 	public static AreadSound method4414(int soundId, int i_1, int i_2, int i_3, int i_4, boolean type, int i_6) {
-		if ((type ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
+		if ((type ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
 			AreadSound class268_8 = new AreadSound((byte) (type ? 3 : 2), soundId, i_1, i_2, i_3, i_4, i_6, (Transform_Sub1) null);
 			Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = class268_8;
 			return class268_8;

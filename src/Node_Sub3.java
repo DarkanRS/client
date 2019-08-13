@@ -148,11 +148,11 @@ public class Node_Sub3 extends Node {
 
 					while (i_10 < shorts_7.length) {
 						if ((i_8 & 1 << i_9++) != 0) {
-							class282_sub35_sub1_4.writeLEShort(shorts_7[i_10++] & 0xffff, (byte) -68);
+							class282_sub35_sub1_4.writeLEShort(shorts_7[i_10++] & 0xffff);
 							++i_3;
-							class282_sub35_sub1_4.writeLEShort(shorts_7[i_10++] & 0xffff, (byte) -75);
+							class282_sub35_sub1_4.writeLEShort(shorts_7[i_10++] & 0xffff);
 							++i_3;
-							class282_sub35_sub1_4.writeLEShort(shorts_7[i_10++] & 0xffff, (byte) 31);
+							class282_sub35_sub1_4.writeLEShort(shorts_7[i_10++] & 0xffff);
 							++i_3;
 						} else {
 							i_10 += 3;

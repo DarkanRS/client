@@ -3457,7 +3457,7 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(2);
 		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
 		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -463581846);
-		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -76404824);
+		tcpmessage_3.buffer.writeIndex(tcpmessage_3.buffer.index - i_4);
 		class184_2.queuePacket(tcpmessage_3);
 	}
 
@@ -3630,7 +3630,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4881(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8225.method12714();
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.soundEffectVolume.method12714();
 	}
 
 	static final void method4882(CS2Executor executor) {
@@ -4151,7 +4151,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6675(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub2_8205.method12624((byte) -45);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.sceneryShadows.method12624((byte) -45);
 	}
 
 	static final void method6449(CS2Executor executor) {
@@ -5006,7 +5006,7 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(1);
 		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
 		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -245952501);
-		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, 1096626300);
+		tcpmessage_3.buffer.writeIndex(tcpmessage_3.buffer.index - i_4);
 		class184_2.queuePacket(tcpmessage_3);
 	}
 
@@ -5062,7 +5062,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5734(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8227.method12714();
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.voiceOverVolume.method12714();
 	}
 
 	static final void method5735(CS2Executor executor) {
@@ -5220,7 +5220,7 @@ public class CS2Interpreter {
 				tcpmessage_3.buffer.writeByte(0);
 				int i_4 = tcpmessage_3.buffer.index;
 				tcpmessage_3.buffer.writeString(string_2);
-				tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -1911140874);
+				tcpmessage_3.buffer.writeIndex(tcpmessage_3.buffer.index - i_4);
 				client.LOBBY_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
 			}
 		} else {
@@ -5379,7 +5379,7 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(0);
 		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
 		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -1259900340);
-		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, 1119414501);
+		tcpmessage_3.buffer.writeIndex(tcpmessage_3.buffer.index - i_4);
 		class184_2.queuePacket(tcpmessage_3);
 	}
 
@@ -5726,7 +5726,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method934(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class11.SYSTEM_INFO.anInt8167 >= 512 && !client.aBool7465 && !client.aBool7171 ? 0 : 1;
+		executor.intStack[++executor.intStackPtr - 1] = Class11.SYSTEM_INFO.ram >= 512 && !client.aBool7465 && !client.aBool7171 ? 0 : 1;
 	}
 
 	static final void bitOr(CS2Executor executor) {
@@ -5737,7 +5737,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3692(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8228.method12714();
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.musicVolume.method12714();
 	}
 
 	static final void method3693(CS2Executor executor) {
@@ -6060,7 +6060,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3611(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub2_8205, executor.intStack[--executor.intStackPtr]);
+		Class393.preferences.setValue(Class393.preferences.sceneryShadows, executor.intStack[--executor.intStackPtr]);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -4);
 		Class190.savePreferences((byte) 43);
 		client.aBool7175 = false;
@@ -6737,7 +6737,7 @@ public class CS2Interpreter {
 
 	static final void method2554(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		int i_3 = Class393.preferences.aPreference_Sub13_8228.method12714();
+		int i_3 = Class393.preferences.musicVolume.method12714();
 		if (i_2 != i_3) {
 			if (TextureDetails.method2875(client.gameState, -2096796884)) {
 				if (i_3 == 0 && Class260.anInt3223 != -1) {
@@ -6751,7 +6751,7 @@ public class CS2Interpreter {
 					Surface.method1491(i_2, (byte) -25);
 				}
 			}
-			Class393.preferences.setValue(Class393.preferences.aPreference_Sub13_8228, i_2);
+			Class393.preferences.setValue(Class393.preferences.musicVolume, i_2);
 			Class190.savePreferences((byte) 29);
 			client.aBool7175 = false;
 		}
@@ -6829,7 +6829,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3942(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub10_8215, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
+		Class393.preferences.setValue(Class393.preferences.monoStereo, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
 		Node_Sub20_Sub36.method15418();
 		Class190.savePreferences((byte) 44);
 		client.aBool7175 = false;
@@ -7020,7 +7020,7 @@ public class CS2Interpreter {
 
 	static final void method5047(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub21_8222, i_2);
+		Class393.preferences.setValue(Class393.preferences.brightness, i_2);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -44);
 		Class190.savePreferences((byte) 84);
 		client.aBool7175 = false;
@@ -7056,7 +7056,7 @@ public class CS2Interpreter {
 
 	static final void method11351(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub2_8205.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.sceneryShadows.method7785(i_2);
 	}
 
 	static final void method11355(CS2Executor executor) {
@@ -7139,7 +7139,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7082(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub10_8215.method12691(-1233469498) == 1 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.monoStereo.method12691(-1233469498) == 1 ? 1 : 0;
 	}
 
 	static void method7083(CS2Executor executor) {
@@ -7298,7 +7298,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3200(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub13_8227, executor.intStack[--executor.intStackPtr]);
+		Class393.preferences.setValue(Class393.preferences.voiceOverVolume, executor.intStack[--executor.intStackPtr]);
 		Class190.savePreferences((byte) 24);
 		client.aBool7175 = false;
 	}
@@ -8604,7 +8604,7 @@ public class CS2Interpreter {
 		tcpmessage_3.buffer.writeByte(3);
 		tcpmessage_3.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
 		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_3.buffer, executor.currentQuickChatMessage.anIntArray4046, -1204920325);
-		tcpmessage_3.buffer.method13061(tcpmessage_3.buffer.index - i_4, -2062129936);
+		tcpmessage_3.buffer.writeIndex(tcpmessage_3.buffer.index - i_4);
 		class184_2.queuePacket(tcpmessage_3);
 	}
 
@@ -8681,9 +8681,9 @@ public class CS2Interpreter {
 	}
 
 	static final void checkJavaVersion(CS2Executor executor) {
-		if (Class11.SYSTEM_INFO.javaRelease < 6) {
+		if (Class11.SYSTEM_INFO.javaBuild < 6) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
-		} else if (Class11.SYSTEM_INFO.javaRelease == 6 && Class11.SYSTEM_INFO.javaUpdate < 10) {
+		} else if (Class11.SYSTEM_INFO.javaBuild == 6 && Class11.SYSTEM_INFO.javaUpdate < 10) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
@@ -8747,7 +8747,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3599(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub13_8225, executor.intStack[--executor.intStackPtr]);
+		Class393.preferences.setValue(Class393.preferences.soundEffectVolume, executor.intStack[--executor.intStackPtr]);
 		Class190.savePreferences((byte) 97);
 		client.aBool7175 = false;
 	}
@@ -9322,7 +9322,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method12718(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub13_8193, executor.intStack[--executor.intStackPtr]);
+		Class393.preferences.setValue(Class393.preferences.ambientSoundVolume, executor.intStack[--executor.intStackPtr]);
 		Class190.savePreferences((byte) 49);
 		client.aBool7175 = false;
 	}
@@ -9362,7 +9362,7 @@ public class CS2Interpreter {
 		tcpmessage_4.buffer.writeString(string_2);
 		tcpmessage_4.buffer.writeShort(executor.currentQuickChatMessage.qcMessageId);
 		executor.currentQuickChatMessage.qcMessageDefs.method14896(tcpmessage_4.buffer, executor.currentQuickChatMessage.anIntArray4046, -1485943767);
-		tcpmessage_4.buffer.method13061(tcpmessage_4.buffer.index - i_5, 460016164);
+		tcpmessage_4.buffer.writeIndex(tcpmessage_4.buffer.index - i_5);
 		class184_3.queuePacket(tcpmessage_4);
 	}
 
@@ -9514,7 +9514,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method457(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub23_8202, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
+		Class393.preferences.setValue(Class393.preferences.groundDecoration, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -3);
 		Class190.savePreferences((byte) 89);
 		client.aBool7175 = false;
@@ -10042,7 +10042,7 @@ public class CS2Interpreter {
 			tcpmessage_7.buffer.writeByte(b_4);
 			tcpmessage_7.buffer.writeByte(b_5);
 			MapSpriteIndexLoader.method7189(tcpmessage_7.buffer, string_2, 151728977);
-			tcpmessage_7.buffer.method13061(tcpmessage_7.buffer.index - i_8, -918882679);
+			tcpmessage_7.buffer.writeIndex(tcpmessage_7.buffer.index - i_8);
 			class184_6.queuePacket(tcpmessage_7);
 		}
 	}
@@ -10057,7 +10057,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1862(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub23_8202.method12899() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.groundDecoration.method12899() ? 1 : 0;
 	}
 
 	static final void setBaseColor(CS2Executor executor) {
@@ -10233,7 +10233,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4989(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub2_8205.method12622() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.sceneryShadows.method12622() ? 1 : 0;
 	}
 
 	static final void method7043(CS2Executor executor) {
@@ -10298,7 +10298,7 @@ public class CS2Interpreter {
 
 	static final void method11341(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub23_8202.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.groundDecoration.method7785(i_2);
 	}
 
 	static final void method11370(CS2Executor executor) {
@@ -10425,7 +10425,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method13404(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub13_8193.method12714();
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.ambientSoundVolume.method12714();
 	}
 
 	static final void method8152(CS2Executor executor) {
@@ -10447,7 +10447,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8156(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub21_8222.method12865();
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.brightness.method12865();
 	}
 
 	static final void method8694(CS2Executor executor) {
@@ -10577,7 +10577,7 @@ public class CS2Interpreter {
 		int[] ints_2 = executor.intStack;
 		int i_3 = ++executor.intStackPtr - 1;
 		byte b_4;
-		if (Class393.preferences.aPreference_Sub23_8202.method12897((byte) 38) == 1) {
+		if (Class393.preferences.groundDecoration.method12897((byte) 38) == 1) {
 			b_4 = 1;
 		} else {
 			b_4 = 0;
@@ -10648,7 +10648,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class106.method1818(icomponentdefinitions_0.idHash, 438520847);
+			MapSize.method1818(icomponentdefinitions_0.idHash, 438520847);
 		}
 	}
 
@@ -11262,7 +11262,7 @@ public class CS2Interpreter {
 		int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
 		if (ifComp.anInt1288 == -1 && !interface_1.aBool999) {
 			CutsceneActionType.method6914(ifComp.idHash);
-			Class106.method1818(ifComp.idHash, 209948825);
+			MapSize.method1818(ifComp.idHash, 209948825);
 			Item.method12575(ifComp.idHash, (byte) 59);
 		}
 		if (itemId == -1) {
@@ -11593,7 +11593,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.spriteScale = cs2executor_2.intStack[cs2executor_2.intStackPtr + 5];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class106.method1818(icomponentdefinitions_0.idHash, -1101705065);
+			MapSize.method1818(icomponentdefinitions_0.idHash, -1101705065);
 			Item.method12575(icomponentdefinitions_0.idHash, (byte) 9);
 		}
 	}

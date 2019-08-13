@@ -3927,9 +3927,9 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			}
 		} else {
 			for (i_3 = 0; i_3 < this.anInt8302; i_3++) {
-				class282_sub35_sub1_2.writeLEShort(this.aShortArray8266[i_3], (byte) -112);
-				class282_sub35_sub1_2.writeLEShort(this.aShortArray8267[i_3], (byte) -102);
-				class282_sub35_sub1_2.writeLEShort(this.aShortArray8256[i_3], (byte) -97);
+				class282_sub35_sub1_2.writeLEShort(this.aShortArray8266[i_3]);
+				class282_sub35_sub1_2.writeLEShort(this.aShortArray8267[i_3]);
+				class282_sub35_sub1_2.writeLEShort(this.aShortArray8256[i_3]);
 			}
 		}
 

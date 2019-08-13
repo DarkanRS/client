@@ -67,7 +67,7 @@ public class Class329_Sub1 extends Class329 {
 			if (!aBool7717 || (!Class308.isWall(i_8, -2097799445) || objectDefs.occludes == 1) && (!QuestDefinitions.isRoof(i_8, -1938518575) || objectDefs.occludes != 0)) {
 				Object obj_25;
 				if (i_8 == SceneObjectType.GROUND_DECORATION.type) {
-					if (Class393.preferences.aPreference_Sub23_8202.method12897((byte) 84) != 0 || objectDefs.interactable != 0 || objectDefs.clipType == 1 || objectDefs.obstructsGround) {
+					if (Class393.preferences.groundDecoration.method12897((byte) 84) != 0 || objectDefs.interactable != 0 || objectDefs.clipType == 1 || objectDefs.obstructsGround) {
 						if (bool_24) {
 							Transform_Sub1_Sub3_Sub1 class521_sub1_sub3_sub1_26 = new Transform_Sub1_Sub3_Sub1(this.sceneObjectManager, graphicalrenderer_1, this.objectDefLoader, objectDefs, i_3, i_2, i_21, i_20, i_22, this.overlayHidden, i_7, bool_23);
 							if (class521_sub1_sub3_sub1_26.method86(1102115730)) {

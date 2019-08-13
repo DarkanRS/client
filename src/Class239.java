@@ -79,7 +79,7 @@ public class Class239 {
 	}
 
 	void method4049(byte b_1) {
-		this.aGraphicalRenderer_2944.IA((0.7F + (float) Class393.preferences.aPreference_Sub21_8222.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * this.aClass535_2951.aFloat7081);
+		this.aGraphicalRenderer_2944.IA((0.7F + (float) Class393.preferences.brightness.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * this.aClass535_2951.aFloat7081);
 		this.aGraphicalRenderer_2944.m(this.aClass535_2951.anInt7083, this.aClass535_2951.aFloat7082, this.aClass535_2951.aFloat7090, (float) ((int) this.aClass385_2952.x << 2), (float) ((int) this.aClass385_2952.y << 2), (float) ((int) this.aClass385_2952.z << 2));
 		this.aGraphicalRenderer_2944.method8477(this.aClass535_2951.aClass152_7087);
 	}
@@ -99,7 +99,7 @@ public class Class239 {
 	}
 
 	public void method4052() {
-		this.aGraphicalRenderer_2944.IA((0.7F + (float) Class393.preferences.aPreference_Sub21_8222.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1614008770)) * 1.1523438F);
+		this.aGraphicalRenderer_2944.IA((0.7F + (float) Class393.preferences.brightness.method12865() * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1614008770)) * 1.1523438F);
 		this.aGraphicalRenderer_2944.m(anInt2935, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
 		this.aGraphicalRenderer_2944.c(anInt2932, -1, 0);
 		this.aGraphicalRenderer_2944.method8477(Class81.aClass152_802);

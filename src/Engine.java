@@ -136,7 +136,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             ;
         }
         Class246.aStringArray3028 = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", Class110.aString1103, "/tmp/", "" };
-        Class106.aStringArray1077 = new String[] { ".dk_cache_" + Class514.anInt5887, ".file_store_" + Class514.anInt5887 };
+        MapSize.aStringArray1077 = new String[] { ".dk_cache_" + Class514.anInt5887, ".file_store_" + Class514.anInt5887 };
         int i_13 = 0;
         label131: while (i_13 < 4) {
             aFile3264 = this.method4657(string_1, string_2, i_13);
@@ -248,9 +248,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             }
         }
         if (string_6 == null && i_3 == 0) {
-            label103: for (int i_17 = 0; i_17 < Class106.aStringArray1077.length; i_17++) {
+            label103: for (int i_17 = 0; i_17 < MapSize.aStringArray1077.length; i_17++) {
                 for (i_10 = 0; i_10 < Class246.aStringArray3028.length; i_10++) {
-                    File file_23 = new File(Class246.aStringArray3028[i_10] + Class106.aStringArray1077[i_17] + File.separatorChar + string_1 + File.separatorChar);
+                    File file_23 = new File(Class246.aStringArray3028[i_10] + MapSize.aStringArray1077[i_17] + File.separatorChar + string_1 + File.separatorChar);
                     if (file_23.exists() && this.method4720(new File(file_23, "test.dat"), true, (byte) -97)) {
                         string_6 = file_23.toString();
                         bool_8 = true;

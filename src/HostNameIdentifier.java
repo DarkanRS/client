@@ -60,7 +60,7 @@ public class HostNameIdentifier implements Runnable {
 			Class502.aClass253_5830.method4334();
 			Class148.aNode_Sub15_Sub2_1735 = class282_sub15_sub2_3;
 			Class148.aNode_Sub15_Sub2_1735.method15098(class116_0.method1955(), false, 355198113);
-			Class148.aNode_Sub15_Sub2_1735.method15144(i_1, -216399579);
+			Class148.aNode_Sub15_Sub2_1735.setVolume(i_1, -216399579);
 			if (Class502.aClass253_5830 != null) {
 				Class502.aClass253_5830.method4329(Class148.aNode_Sub15_Sub2_1735);
 			}

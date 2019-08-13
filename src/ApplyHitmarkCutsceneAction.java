@@ -52,7 +52,7 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
         boolean bool_1 = true;
         boolean bool_2 = false;
         boolean bool_3 = false;
-        if (Class11.SYSTEM_INFO.anInt8167 < 512 && Class11.SYSTEM_INFO.anInt8167 != 0) {
+        if (Class11.SYSTEM_INFO.ram < 512 && Class11.SYSTEM_INFO.ram != 0) {
             bool_1 = false;
         }
         if (GroundItemStrategy.aString8069.startsWith("win")) {

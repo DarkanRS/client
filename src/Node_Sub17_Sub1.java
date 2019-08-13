@@ -101,7 +101,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 					if (Renderers.SOFTWARE_RENDERER.method8399()) {
 						boolean bool_8 = true;
 						try {
-							bool_8 = Class11.SYSTEM_INFO.anInt8167 > 256;
+							bool_8 = Class11.SYSTEM_INFO.ram > 256;
 						} catch (Throwable throwable_13) {
 							;
 						}

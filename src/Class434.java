@@ -70,7 +70,7 @@ public abstract class Class434 {
 			i_2 = tcpmessage_1.buffer.index;
 			RsByteBuffer rsbytebuffer_6 = Class393.preferences.encode();
 			tcpmessage_1.buffer.writeBytes(rsbytebuffer_6.buffer, 0, rsbytebuffer_6.index);
-			tcpmessage_1.buffer.method13061(tcpmessage_1.buffer.index - i_2, -1036471531);
+			tcpmessage_1.buffer.writeIndex(tcpmessage_1.buffer.index - i_2);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 			client.aBool7175 = true;
 		}

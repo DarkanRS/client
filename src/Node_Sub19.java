@@ -24,7 +24,7 @@ public class Node_Sub19 extends Node {
 		if (this.aGraphicalRenderer_Sub1_7650.aBool8467) {
 			this.aNode_Sub35_7655.writeShort(s_1);
 		} else {
-			this.aNode_Sub35_7655.writeLEShort(s_1, (byte) -40);
+			this.aNode_Sub35_7655.writeLEShort(s_1);
 		}
 
 	}

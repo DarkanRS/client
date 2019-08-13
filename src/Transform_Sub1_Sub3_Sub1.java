@@ -348,7 +348,7 @@ public class Transform_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneOb
 		this.aByte10496 = (byte) i_11;
 		this.aBool10498 = objectdefinitions_4.interactable != 0 && !bool_10;
 		this.aBool10497 = bool_12;
-		this.aBool10500 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10493 && Class393.preferences.aPreference_Sub2_8205.method12624((byte) -122) != 0;
+		this.aBool10500 = graphicalrenderer_2.method8402() && objectdefinitions_4.aBool5703 && !this.aBool10493 && Class393.preferences.sceneryShadows.method12624((byte) -122) != 0;
 		int i_13 = 2048;
 		if (this.aBool10497) {
 			i_13 |= 0x10000;

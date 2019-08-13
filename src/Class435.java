@@ -7,7 +7,7 @@ public class Class435 {
 	}
 
 	public static AreadSound playSoundVorbis(int i_0, int i_1, int i_2, int i_3, boolean idk, int i_5) {
-		if ((idk ? Class393.preferences.aPreference_Sub13_8227.method12714() : Class393.preferences.aPreference_Sub13_8225.method12714()) != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && i_0 != -1) {
+		if ((idk ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && i_0 != -1) {
 			AreadSound class268_7 = new AreadSound((byte) (idk ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Transform_Sub1) null);
 			Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = class268_7;
 			return class268_7;

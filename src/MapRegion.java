@@ -18,7 +18,7 @@ public class MapRegion {
 	int[] hdWaterLandscapeDataArchiveIds;
 	byte[][] hdWaterMapDataBuffer;
 	byte[][] hdWaterLandscapeDataBuffer;
-	Class256 aClass256_3163;
+	Class256 mapType;
 	byte[][][] aByteArrayArrayArray3162;
 	ObjectIndexLoader objectDefsLoader;
 	SceneObjectManager sceneObjectManager;
@@ -32,11 +32,11 @@ public class MapRegion {
 	int zFar;
 	int sizeY;
 	int sizeX;
-	int[][][] anIntArrayArrayArray3205;
+	int[][][] chunkFlags;
 	int[][] anIntArrayArray3185;
 	int[][] anIntArrayArray3186;
 	RegionMap aClass311_3202;
-	Class106 aClass106_3165;
+	MapSize aClass106_3165;
 	int anInt3170;
 	int anInt3207;
 	CoordGrid coordGrid = new CoordGrid();
@@ -62,7 +62,7 @@ public class MapRegion {
 	}
 
 	public Class256 method4419() {
-		return this.aClass256_3163;
+		return this.mapType;
 	}
 
 	public Class339 method4420() {
@@ -74,7 +74,7 @@ public class MapRegion {
 	}
 
 	void method4422() {
-		this.method4456(Class480.method8046(Class393.preferences.aPreference_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
+		this.setMapSizes(Class480.getMapSize(Class393.preferences.aPreference_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
 		int i_2 = this.coordGrid.x;
 		int i_3 = this.coordGrid.y;
 		int mapBaseX = (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12) + (i_2 >> 3);
@@ -160,7 +160,7 @@ public class MapRegion {
 			}
 			for (int i_5 = 0; i_5 < this.sizeX >> 3; i_5++) {
 				for (int i_6 = 0; i_6 < this.sizeY >> 3; i_6++) {
-					int i_7 = this.anIntArrayArrayArray3205[i_4][i_5][i_6];
+					int i_7 = this.chunkFlags[i_4][i_5][i_6];
 					if (i_7 != -1) {
 						int i_8 = i_7 >> 24 & 0x3;
 						if (!class329_sub1_1.overlayHidden || i_8 == 0) {
@@ -205,47 +205,43 @@ public class MapRegion {
 	}
 
 	void method4439(RsBitsBuffer rsbitsbuffer_1) {
-		int i_3 = rsbitsbuffer_1.readUnsignedByteC();
-		boolean bool_4 = (i_3 & 0x1) != 0;
-		int i_5 = rsbitsbuffer_1.readUnsigned128Byte();
-		if (i_5 == 1) {
-			this.aClass256_3163 = Class256.aClass256_3155;
-		} else if (i_5 == 2) {
-			this.aClass256_3163 = Class256.aClass256_3156;
-		} else if (i_5 == 3) {
-			this.aClass256_3163 = Class256.aClass256_3157;
-		} else if (i_5 == 4) {
-			this.aClass256_3163 = Class256.aClass256_3161;
+		int forceRefresh = rsbitsbuffer_1.readUnsignedByteC();
+		boolean bool_4 = (forceRefresh & 0x1) != 0;
+		int type = rsbitsbuffer_1.readUnsigned128Byte();
+		if (type == 1) {
+			this.mapType = Class256.aClass256_3155;
+		} else if (type == 2) {
+			this.mapType = Class256.aClass256_3156;
+		} else if (type == 3) {
+			this.mapType = Class256.aClass256_3157;
+		} else if (type == 4) {
+			this.mapType = Class256.aClass256_3161;
 		}
-		int i_6 = rsbitsbuffer_1.readUnsignedByte128();
-		int i_7 = rsbitsbuffer_1.readUnsignedShort128();
-		int i_8 = rsbitsbuffer_1.readUnsignedShort();
+		int mapSize = rsbitsbuffer_1.readUnsignedByte128();
+		int regionY = rsbitsbuffer_1.readUnsignedShort128();
+		int regionX = rsbitsbuffer_1.readUnsignedShort();
 		if (!this.aBool3171) {
 			this.method4457(-1079730027);
 		}
-		this.method4456(Class480.method8046(i_6, (byte) 66), -1665469325);
+		this.setMapSizes(Class480.getMapSize(mapSize, (byte) 66), -1665469325);
 		rsbitsbuffer_1.initBitAccess((byte) 76);
-		int i_9;
-		int i_10;
-		int i_11;
-		int i_12;
-		for (i_9 = 0; i_9 < 4; i_9++) {
-			for (i_10 = 0; i_10 < this.sizeX >> 3; i_10++) {
-				for (i_11 = 0; i_11 < this.sizeY >> 3; i_11++) {
-					i_12 = rsbitsbuffer_1.readBits(1);
-					if (i_12 == 1) {
-						this.anIntArrayArrayArray3205[i_9][i_10][i_11] = rsbitsbuffer_1.readBits(26);
+		for (int regionIdx = 0; regionIdx < 4; regionIdx++) {
+			for (int rx = 0; rx < this.sizeX >> 3; rx++) {
+				for (int ry = 0; ry < this.sizeY >> 3; ry++) {
+					int hasChunkFlags = rsbitsbuffer_1.readBits(1);
+					if (hasChunkFlags == 1) {
+						this.chunkFlags[regionIdx][rx][ry] = rsbitsbuffer_1.readBits(26);
 					} else {
-						this.anIntArrayArrayArray3205[i_9][i_10][i_11] = -1;
+						this.chunkFlags[regionIdx][rx][ry] = -1;
 					}
 				}
 			}
 		}
 		rsbitsbuffer_1.finishBitAccess((byte) 26);
-		i_9 = (rsbitsbuffer_1.buffer.length - rsbitsbuffer_1.index) / 16;
+		int i_9 = (rsbitsbuffer_1.buffer.length - rsbitsbuffer_1.index) / 16;
 		this.xteas = new int[i_9][4];
-		for (i_10 = 0; i_10 < i_9; i_10++) {
-			for (i_11 = 0; i_11 < 4; i_11++) {
+		for (int i_10 = 0; i_10 < i_9; i_10++) {
+			for (int i_11 = 0; i_11 < 4; i_11++) {
 				this.xteas[i_10][i_11] = rsbitsbuffer_1.readInt();
 			}
 		}
@@ -261,10 +257,10 @@ public class MapRegion {
 		this.hdWaterMapDataBuffer = new byte[i_9][];
 		this.hdWaterLandscapeDataBuffer = new byte[i_9][];
 		i_9 = 0;
-		for (i_10 = 0; i_10 < 4; i_10++) {
-			for (i_11 = 0; i_11 < this.sizeX >> 3; i_11++) {
-				for (i_12 = 0; i_12 < this.sizeY >> 3; i_12++) {
-					int i_13 = this.anIntArrayArrayArray3205[i_10][i_11][i_12];
+		for (int i_10 = 0; i_10 < 4; i_10++) {
+			for (int i_11 = 0; i_11 < this.sizeX >> 3; i_11++) {
+				for (int i_12 = 0; i_12 < this.sizeY >> 3; i_12++) {
+					int i_13 = this.chunkFlags[i_10][i_11][i_12];
 					if (i_13 != -1) {
 						int i_14 = i_13 >> 14 & 0x3ff;
 						int i_15 = i_13 >> 3 & 0x7ff;
@@ -290,7 +286,7 @@ public class MapRegion {
 				}
 			}
 		}
-		this.method4458(i_8, i_7, 18, bool_4);
+		this.method4458(regionX, regionY, 18, bool_4);
 	}
 
 	public void method4440(byte[][][] bytes_1) {
@@ -347,7 +343,7 @@ public class MapRegion {
 		if (!this.aBool3171) {
 			this.method4457(1460285779);
 		}
-		this.method4456(Class480.method8046(i_2, (byte) 107), 1375320268);
+		this.setMapSizes(Class480.getMapSize(i_2, (byte) 107), 1375320268);
 		int i_6 = (rsbitsbuffer_1.buffer.length - rsbitsbuffer_1.index) / 16;
 		this.xteas = new int[i_6][4];
 		int i_7;
@@ -395,10 +391,10 @@ public class MapRegion {
 		return name;
 	}
 
-	void method4456(Class106 class106_1, int i_2) {
-		if (class106_1 != this.aClass106_3165) {
-			this.sizeX = this.sizeY = class106_1.anInt1076;
-			this.anIntArrayArrayArray3205 = new int[4][this.sizeX >> 3][this.sizeY >> 3];
+	void setMapSizes(MapSize mapSize, int i_2) {
+		if (mapSize != this.aClass106_3165) {
+			this.sizeX = this.sizeY = mapSize.size;
+			this.chunkFlags = new int[4][this.sizeX >> 3][this.sizeY >> 3];
 			this.anIntArrayArray3185 = new int[this.sizeX][this.sizeY];
 			this.anIntArrayArray3186 = new int[this.sizeX][this.sizeY];
 			for (int i_3 = 0; i_3 < 4; i_3++) {
@@ -407,18 +403,18 @@ public class MapRegion {
 			this.aByteArrayArrayArray3162 = new byte[4][this.sizeX][this.sizeY];
 			this.aClass311_3202 = new RegionMap(this.sizeX, this.sizeY);
 			this.method4446((byte) -52);
-			this.aClass106_3165 = class106_1;
+			this.aClass106_3165 = mapSize;
 		}
 	}
 
 	void method4457(int i_1) {
-		if (this.aClass256_3163 != Class256.aClass256_3153 && this.aClass256_3164 != Class256.aClass256_3153) {
-			if (this.aClass256_3163 == Class256.aClass256_3155 || this.aClass256_3163 == Class256.aClass256_3157 || this.aClass256_3164 != this.aClass256_3163 && (this.aClass256_3163 == Class256.aClass256_3158 || this.aClass256_3164 == Class256.aClass256_3158)) {
+		if (this.mapType != Class256.aClass256_3153 && this.aClass256_3164 != Class256.aClass256_3153) {
+			if (this.mapType == Class256.aClass256_3155 || this.mapType == Class256.aClass256_3157 || this.aClass256_3164 != this.mapType && (this.mapType == Class256.aClass256_3158 || this.aClass256_3164 == Class256.aClass256_3158)) {
 				client.NPC_UPDATE_INDEX = 0;
 				client.anInt7210 = 0;
 				client.NPCS.method7749(-1318045853);
 			}
-			this.aClass256_3164 = this.aClass256_3163;
+			this.aClass256_3164 = this.mapType;
 		}
 	}
 
@@ -546,14 +542,14 @@ public class MapRegion {
 		for (class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7775.head(); class282_sub31_26 != null; class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7775.next(-298997053)) {
 			class282_sub31_26.anInt7762 -= i_3;
 			class282_sub31_26.anInt7763 -= i_4;
-			if (this.aClass256_3163 != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= this.sizeX || class282_sub31_26.anInt7763 >= this.sizeY)) {
+			if (this.mapType != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= this.sizeX || class282_sub31_26.anInt7763 >= this.sizeY)) {
 				class282_sub31_26.remove();
 			}
 		}
 		for (class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7776.head(); class282_sub31_26 != null; class282_sub31_26 = (Node_Sub31) Node_Sub31.aClass482_7776.next(270479135)) {
 			class282_sub31_26.anInt7762 -= i_3;
 			class282_sub31_26.anInt7763 -= i_4;
-			if (this.aClass256_3163 != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= this.sizeX || class282_sub31_26.anInt7763 >= this.sizeY)) {
+			if (this.mapType != Class256.aClass256_3161 && (class282_sub31_26.anInt7762 < 0 || class282_sub31_26.anInt7763 < 0 || class282_sub31_26.anInt7762 >= this.sizeX || class282_sub31_26.anInt7763 >= this.sizeY)) {
 				class282_sub31_26.remove();
 			}
 		}
@@ -568,7 +564,7 @@ public class MapRegion {
 					if (this.sceneObjectManager.aClass293ArrayArrayArray2604 != null) {
 						this.sceneObjectManager.method3405(i_16, i_17, i_11, -1311217260);
 					}
-				} else if (this.aClass256_3163 != Class256.aClass256_3161) {
+				} else if (this.mapType != Class256.aClass256_3161) {
 					class282_sub29_27.remove();
 				}
 			}
@@ -693,7 +689,7 @@ public class MapRegion {
 				if (bytes_3 != null) {
 					i_4 = (this.regionIds[i_2] >> 8) * 64 - this.coordGrid.x;
 					i_5 = (this.regionIds[i_2] & 0xff) * 64 - this.coordGrid.y;
-					if (this.aClass256_3163.method4410((byte) 64)) {
+					if (this.mapType.method4410((byte) 64)) {
 						i_4 = 10;
 						i_5 = 10;
 					}
@@ -706,7 +702,7 @@ public class MapRegion {
 				if (bytes_3 != null) {
 					i_4 = (this.regionIds[i_2] >> 8) * 64 - this.coordGrid.x;
 					i_5 = (this.regionIds[i_2] & 0xff) * 64 - this.coordGrid.y;
-					if (this.aClass256_3163.method4410((byte) 9)) {
+					if (this.mapType.method4410((byte) 9)) {
 						i_4 = 10;
 						i_5 = 10;
 					}
@@ -778,12 +774,12 @@ public class MapRegion {
 				this.aFloat3173 = -0.05F + (float) (Math.random() / 10.0D);
 				this.aClass329_Sub1_3167 = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 4, this.sizeX, this.sizeY, false, this.aClass311_3202, this.aClass239_3175);
 				this.aClass329_Sub1_3167.method5835(1920682092);
-				this.aClass329_Sub1_3167.anInt3809 = Class393.preferences.aPreference_Sub2_8205.method12624((byte) -19);
+				this.aClass329_Sub1_3167.anInt3809 = Class393.preferences.sceneryShadows.method12624((byte) -19);
 				this.aClass329_Sub1_3167.highDetailWater = Class393.preferences.water.getValue() == 2;
 				this.aClass329_Sub1_3167.aBool3780 = Class393.preferences.aPreference_Sub19_8204.method12786() == 1;
 				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.aPreference_Sub17_8200.method12762(-267054469) == 1;
 				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.textures.method12873(1377050121) == 1;
-				if (!this.aClass256_3163.method4410((byte) -32)) {
+				if (!this.mapType.method4410((byte) -32)) {
 					this.decodeUnderlayMasks(this.aClass329_Sub1_3167, this.mapDataBuffer, 1315892185);
 				} else {
 					this.method4464(this.aClass329_Sub1_3167, this.mapDataBuffer, 1987015126);
@@ -797,12 +793,12 @@ public class MapRegion {
 					this.sceneObjectManager.method3380(true);
 					this.highDetailWaterPlane = new Class329_Sub1(this.sceneObjectManager, this.objectDefsLoader, 1, this.sizeX, this.sizeY, true, this.aClass311_3202, this.aClass239_3175);
 					this.highDetailWaterPlane.method5835(1973869970);
-					this.highDetailWaterPlane.anInt3809 = Class393.preferences.aPreference_Sub2_8205.method12624((byte) -93);
+					this.highDetailWaterPlane.anInt3809 = Class393.preferences.sceneryShadows.method12624((byte) -93);
 					this.highDetailWaterPlane.highDetailWater = Class393.preferences.water.getValue() == 2;
 					this.highDetailWaterPlane.aBool3780 = Class393.preferences.aPreference_Sub19_8204.method12786() == 1;
 					this.highDetailWaterPlane.aBool3820 = Class393.preferences.aPreference_Sub17_8200.method12762(1666715266) == 1;
 					this.highDetailWaterPlane.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;
-					if (!this.aClass256_3163.method4410((byte) 46)) {
+					if (!this.mapType.method4410((byte) 46)) {
 						this.decodeUnderlayMasks(this.highDetailWaterPlane, this.hdWaterMapDataBuffer, 500096938);
 						if (!this.aBool3171) {
 							Exception_Sub3.method15619(true, -1068785077);
@@ -821,7 +817,7 @@ public class MapRegion {
 					}
 				}
 				this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, highDetailWater ? this.highDetailWaterPlane.tileHeights : null, this.clipMaps, (byte) 44);
-				if (!this.aClass256_3163.method4410((byte) -39)) {
+				if (!this.mapType.method4410((byte) -39)) {
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, -1924347583);
 					}
@@ -854,7 +850,7 @@ public class MapRegion {
 					if (!this.aBool3171) {
 						Exception_Sub3.method15619(true, 1689569657);
 					}
-					if (!this.aClass256_3163.method4410((byte) -69)) {
+					if (!this.mapType.method4410((byte) -69)) {
 						this.method4465(this.highDetailWaterPlane, this.hdWaterLandscapeDataBuffer);
 					} else {
 						this.method4432(this.highDetailWaterPlane, this.hdWaterLandscapeDataBuffer, 346534701);
@@ -929,7 +925,7 @@ public class MapRegion {
 					tcpmessage_22.buffer.writeInt(1057001181);
 					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_22);
 				}
-				if (!this.aClass256_3163.method4410((byte) 29)) {
+				if (!this.mapType.method4410((byte) 29)) {
 					i_5 = (this.anInt3170 - (this.sizeX >> 4)) / 8;
 					i_6 = (this.anInt3170 + (this.sizeX >> 4)) / 8;
 					i_14 = (this.anInt3207 - (this.sizeY >> 4)) / 8;
@@ -1016,29 +1012,25 @@ public class MapRegion {
 	}
 
 	void method4464(Class329_Sub1 class329_sub1_1, byte[][] bytes_2, int i_3) {
-		int i_4;
-		int i_5;
-		int i_6;
-		int i_7;
-		for (i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
+		for (int i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
 			if (!this.aBool3171) {
 				Node_Sub20_Sub24.method15391(-84440023);
 			}
-			for (i_5 = 0; i_5 < this.sizeX >> 3; i_5++) {
-				for (i_6 = 0; i_6 < this.sizeY >> 3; i_6++) {
-					i_7 = this.anIntArrayArrayArray3205[i_4][i_5][i_6];
-					if (i_7 != -1) {
-						int i_8 = i_7 >> 24 & 0x3;
-						if (!class329_sub1_1.overlayHidden || i_8 == 0) {
-							int i_9 = i_7 >> 1 & 0x3;
-							int i_10 = i_7 >> 14 & 0x3ff;
-							int i_11 = i_7 >> 3 & 0x7ff;
-							int i_12 = (i_10 / 8 << 8) + i_11 / 8;
+			for (int x = 0; x < this.sizeX >> 3; x++) {
+				for (int y = 0; y < this.sizeY >> 3; y++) {
+					int chunkFlag = this.chunkFlags[i_4][x][y];
+					if (chunkFlag != -1) {
+						int plane = chunkFlag >> 24 & 0x3;
+						if (!class329_sub1_1.overlayHidden || plane == 0) {
+							int rotation = chunkFlag >> 1 & 0x3;
+							int realX = chunkFlag >> 14 & 0x3ff;
+							int realY = chunkFlag >> 3 & 0x7ff;
+							int i_12 = (realX / 8 << 8) + realY / 8;
 							for (int i_13 = 0; i_13 < this.regionIds.length; i_13++) {
 								if (i_12 == this.regionIds[i_13] && bytes_2[i_13] != null) {
 									RsByteBuffer rsbytebuffer_14 = new RsByteBuffer(bytes_2[i_13]);
-									class329_sub1_1.method5841(rsbytebuffer_14, i_4, i_5 * 8, i_6 * 8, i_8, i_10, i_11, i_9, this.clipMaps);
-									class329_sub1_1.method12460(Renderers.SOFTWARE_RENDERER, rsbytebuffer_14, i_4, i_5 * 8, i_6 * 8, i_8, i_10, i_11, i_9);
+									class329_sub1_1.method5841(rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation, this.clipMaps);
+									class329_sub1_1.method12460(Renderers.SOFTWARE_RENDERER, rsbytebuffer_14, i_4, x * 8, y * 8, plane, realX, realY, rotation);
 									break;
 								}
 							}
@@ -1047,13 +1039,13 @@ public class MapRegion {
 				}
 			}
 		}
-		for (i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
+		for (int i_4 = 0; i_4 < class329_sub1_1.anInt3845; i_4++) {
 			if (!this.aBool3171) {
 				Node_Sub20_Sub24.method15391(-1748836752);
 			}
-			for (i_5 = 0; i_5 < this.sizeX >> 3; i_5++) {
-				for (i_6 = 0; i_6 < this.sizeY >> 3; i_6++) {
-					i_7 = this.anIntArrayArrayArray3205[i_4][i_5][i_6];
+			for (int i_5 = 0; i_5 < this.sizeX >> 3; i_5++) {
+				for (int i_6 = 0; i_6 < this.sizeY >> 3; i_6++) {
+					int i_7 = this.chunkFlags[i_4][i_5][i_6];
 					if (i_7 == -1) {
 						class329_sub1_1.method5838(i_4, i_5 * 8, i_6 * 8, 8, 8);
 					}
@@ -1133,15 +1125,15 @@ public class MapRegion {
 	}
 
 	void method4498() {
-		this.aClass256_3164 = this.aClass256_3163;
-		this.method4456(Class106.aClass106_1075, -1398023418);
+		this.aClass256_3164 = this.mapType;
+		this.setMapSizes(MapSize.aClass106_1075, -1398023418);
 		int i_2;
 		int i_4;
 		int i_21;
 		for (i_2 = 0; i_2 < 4; i_2++) {
 			for (i_21 = 0; i_21 < this.sizeX >> 3; i_21++) {
 				for (i_4 = 0; i_4 < this.sizeY >> 3; i_4++) {
-					this.anIntArrayArrayArray3205[i_2][i_21][i_4] = -1;
+					this.chunkFlags[i_2][i_21][i_4] = -1;
 				}
 			}
 		}
@@ -1184,9 +1176,9 @@ public class MapRegion {
 				int i_18 = i_14;
 				for (int i_19 = i_5; i_19 < i_11 + i_5; i_18 += b_15) {
 					if (bool_22) {
-						this.anIntArrayArrayArray3205[i_10][i_7 + i_13][i_18 + i_8] = (i_19 << 14) + (i_17 << 3) + (i_9 << 24) + (i_21 << 1);
+						this.chunkFlags[i_10][i_7 + i_13][i_18 + i_8] = (i_19 << 14) + (i_17 << 3) + (i_9 << 24) + (i_21 << 1);
 					} else {
-						this.anIntArrayArrayArray3205[i_10][i_18 + i_7][i_8 + i_13] = (i_19 << 14) + (i_17 << 3) + (i_9 << 24) + (i_21 << 1);
+						this.chunkFlags[i_10][i_18 + i_7][i_8 + i_13] = (i_19 << 14) + (i_17 << 3) + (i_9 << 24) + (i_21 << 1);
 					}
 					++i_19;
 				}
@@ -1242,14 +1234,14 @@ public class MapRegion {
 	}
 
 	public void method4499(Class335 class335_1, int i_2) {
-		this.aClass256_3163 = class335_1.aClass256_3915;
-		if (this.aClass256_3163 == Class256.aClass256_3154) {
+		this.mapType = class335_1.aClass256_3915;
+		if (this.mapType == Class256.aClass256_3154) {
 			this.method4422();
-		} else if (this.aClass256_3163 == Class256.aClass256_3158) {
+		} else if (this.mapType == Class256.aClass256_3158) {
 			this.method4452(class335_1.buffer);
-		} else if (this.aClass256_3163 == Class256.aClass256_3153) {
+		} else if (this.mapType == Class256.aClass256_3153) {
 			this.method4498();
-		} else if (this.aClass256_3163.method4410((byte) -13)) {
+		} else if (this.mapType.method4410((byte) -13)) {
 			this.method4439(class335_1.buffer);
 		}
 	}
@@ -1306,7 +1298,7 @@ public class MapRegion {
 			this.clipMaps = mapregion_2.clipMaps;
 			this.aClass311_3202 = mapregion_2.aClass311_3202;
 			this.aClass239_3175 = mapregion_2.aClass239_3175;
-			this.anIntArrayArrayArray3205 = mapregion_2.anIntArrayArrayArray3205;
+			this.chunkFlags = mapregion_2.chunkFlags;
 			this.anInt3177 = mapregion_2.anInt3177;
 			this.zFar = mapregion_2.zFar;
 			this.aCacheableNode_Sub6_3176 = mapregion_2.aCacheableNode_Sub6_3176;
@@ -1314,7 +1306,7 @@ public class MapRegion {
 			this.anIntArrayArray3185 = mapregion_2.anIntArrayArray3185;
 			this.anIntArrayArray3186 = mapregion_2.anIntArrayArray3186;
 			this.aByteArrayArrayArray3162 = mapregion_2.aByteArrayArrayArray3162;
-			this.aClass256_3163 = mapregion_2.aClass256_3163;
+			this.mapType = mapregion_2.mapType;
 			this.aClass106_3165 = mapregion_2.aClass106_3165;
 			this.coordGrid = mapregion_2.coordGrid;
 			this.aClass219_3169 = mapregion_2.aClass219_3169;

@@ -40,7 +40,7 @@ public class Surface {
 		if (Class148.anInt1730 != 0) {
 			Class158_Sub2_Sub3.anInt10243 = i_0;
 		} else {
-			Class148.aNode_Sub15_Sub2_1735.method15144(i_0, 814872907);
+			Class148.aNode_Sub15_Sub2_1735.setVolume(i_0, 814872907);
 		}
 	}
 }

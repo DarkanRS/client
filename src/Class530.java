@@ -46,8 +46,8 @@ public class Class530 {
 		}
 	}
 
-	static Class106[] method11352() {
-		return new Class106[] { Class106.aClass106_1072, Class106.aClass106_1073, Class106.aClass106_1070, Class106.aClass106_1074, Class106.aClass106_1075 };
+	static MapSize[] method11352() {
+		return new MapSize[] { MapSize.aClass106_1072, MapSize.aClass106_1073, MapSize.aClass106_1070, MapSize.aClass106_1074, MapSize.aClass106_1075 };
 	}
 
 	static Class204[] method11353() {

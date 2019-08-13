@@ -9,7 +9,7 @@ public class Preference_Sub1 extends Preference {
 	}
 
 	int method7781(int i_1) {
-		return Class106.aClass106_1075.anInt1071;
+		return MapSize.aClass106_1075.anInt1071;
 	}
 
 	public boolean method12609() {
@@ -19,7 +19,7 @@ public class Preference_Sub1 extends Preference {
 
 	public int method7785(int i_1) {
 		int i_3 = this.manager.getProcessorSpecs().getMaxMemory();
-		return i_3 < 245 ? 3 : (i_1 == Class106.aClass106_1073.anInt1071 && i_3 < 500 ? 3 : 1);
+		return i_3 < 245 ? 3 : (i_1 == MapSize.aClass106_1073.anInt1071 && i_3 < 500 ? 3 : 1);
 	}
 
 	public Preference_Sub1(int i_1, GamePreferences class282_sub54_2) {
@@ -28,7 +28,7 @@ public class Preference_Sub1 extends Preference {
 
 	public int method7784(int i_1) {
 		int i_2 = this.manager.getProcessorSpecs().getMaxMemory();
-		return i_2 < 245 ? 3 : (Class106.aClass106_1073.anInt1071 * -827615537 * -530599889 == i_1 && i_2 < 500 ? 3 : 1);
+		return i_2 < 245 ? 3 : (MapSize.aClass106_1073.anInt1071 * -827615537 * -530599889 == i_1 && i_2 < 500 ? 3 : 1);
 	}
 
 	void method7780(int i_1) {
@@ -36,11 +36,11 @@ public class Preference_Sub1 extends Preference {
 	}
 
 	int method7786() {
-		return -530599889 * Class106.aClass106_1075.anInt1071 * -827615537;
+		return -530599889 * MapSize.aClass106_1075.anInt1071 * -827615537;
 	}
 
 	int method7787() {
-		return -530599889 * Class106.aClass106_1075.anInt1071 * -827615537;
+		return -530599889 * MapSize.aClass106_1075.anInt1071 * -827615537;
 	}
 
 	public int method12615(int i_1) {
@@ -50,14 +50,14 @@ public class Preference_Sub1 extends Preference {
 	public void method12616() {
 		int i_2 = this.manager.getProcessorSpecs().getMaxMemory();
 		if (i_2 < 245) {
-			this.anInt5578 = Class106.aClass106_1075.anInt1071;
+			this.anInt5578 = MapSize.aClass106_1075.anInt1071;
 		}
 
-		if (this.anInt5578 == Class106.aClass106_1073.anInt1071 && i_2 < 500) {
-			this.anInt5578 = Class106.aClass106_1072.anInt1071;
+		if (this.anInt5578 == MapSize.aClass106_1073.anInt1071 && i_2 < 500) {
+			this.anInt5578 = MapSize.aClass106_1072.anInt1071;
 		}
 
-		if (this.anInt5578 < Class106.aClass106_1075.anInt1071 || this.anInt5578 > Class106.aClass106_1070.anInt1071) {
+		if (this.anInt5578 < MapSize.aClass106_1075.anInt1071 || this.anInt5578 > MapSize.aClass106_1070.anInt1071) {
 			this.anInt5578 = this.method7781(1738483379);
 		}
 

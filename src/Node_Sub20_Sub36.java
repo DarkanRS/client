@@ -61,7 +61,7 @@ public class Node_Sub20_Sub36 extends Node_Sub20 {
 
 	public static void method15418() {
 		Index36FileReference.method13449((byte) -118);
-		Class253.method4330(Class393.preferences.aPreference_Sub10_8215.method12691(-490218326) == 1);
+		Class253.method4330(Class393.preferences.monoStereo.method12691(-490218326) == 1);
 		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(Node_Sub20_Sub10.method15262((Node_Sub15_Sub2) null, 1928117026), (short) 11196);
 		ShaderDecoder.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
@@ -82,7 +82,7 @@ public class Node_Sub20_Sub36 extends Node_Sub20 {
 					if (i_1 < 0) {
 						i_1 = 0;
 					}
-					Class148.aNode_Sub15_Sub2_1735.method15144(i_1, -610431115);
+					Class148.aNode_Sub15_Sub2_1735.setVolume(i_1, -610431115);
 					return;
 				}
 				Class148.aNode_Sub15_Sub2_1735.method15101((short) 15315);
@@ -102,7 +102,7 @@ public class Node_Sub20_Sub36 extends Node_Sub20 {
 					if (i_1 > Class158_Sub2_Sub3.anInt10243) {
 						i_1 = Class158_Sub2_Sub3.anInt10243;
 					}
-					Class148.aNode_Sub15_Sub2_1735.method15144(i_1, -348021123);
+					Class148.aNode_Sub15_Sub2_1735.setVolume(i_1, -348021123);
 				} else {
 					Class383.anInt4664 = 0;
 					Class148.anInt1730 = 0;

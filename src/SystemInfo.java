@@ -7,26 +7,26 @@ public class SystemInfo extends Node {
 	String aString8160;
 	String aString8159;
 	String aString8153;
-	int[] anIntArray8139 = new int[3];
-	int anInt8126;
-	boolean aBool8142;
-	int anInt8141;
-	int anInt8155;
-	public int javaRelease;
-	int anInt8148;
+	int[] rawCPUInformationData = new int[3];
+	int operatingSystem;
+	boolean x64os;
+	int osVendor;
+	int javaVersion;
+	public int javaBuild;
+	int javaSubBuild;
 	public int javaUpdate;
-	boolean aBool8150;
-	int anInt8151;
-	int anInt8146;
-	public int anInt8167;
-	int anInt8163;
-	int anInt8156;
-	String aString8165;
-	int anInt8168;
-	int anInt8121;
-	String aString8166;
-	int anInt8162;
-	int anInt8164;
+	boolean idk;
+	int maxMem;
+	int processors;
+	public int ram;
+	int cpuCores;
+	int cpuClock;
+	String cpuType;
+	int rawCPUInformation2;
+	int rawCPUInformation;
+	String cpuData;
+	int dxDriverMonth;
+	int dxDriverYear;
 
 	public int method13454() {
 		byte b_2 = 38;
@@ -34,8 +34,8 @@ public class SystemInfo extends Node {
 		i_3 += Utils.stringLengthPlus2(this.aString8160);
 		i_3 += Utils.stringLengthPlus2(this.aString8159);
 		i_3 += Utils.stringLengthPlus2(this.aString8153);
-		i_3 += Utils.stringLengthPlus2(this.aString8165);
-		i_3 += Utils.stringLengthPlus2(this.aString8166);
+		i_3 += Utils.stringLengthPlus2(this.cpuType);
+		i_3 += Utils.stringLengthPlus2(this.cpuData);
 		return i_3;
 	}
 
@@ -56,88 +56,88 @@ public class SystemInfo extends Node {
 
 	public void writeMachineInformation(RsByteBuffer rsbytebuffer_1) {
 		rsbytebuffer_1.writeByte(6);
-		rsbytebuffer_1.writeByte(this.anInt8126);
-		rsbytebuffer_1.writeByte(this.aBool8142 ? 1 : 0);
-		rsbytebuffer_1.writeByte(this.anInt8141);
-		rsbytebuffer_1.writeByte(this.anInt8155);
-		rsbytebuffer_1.writeByte(this.javaRelease);
-		rsbytebuffer_1.writeByte(this.anInt8148);
+		rsbytebuffer_1.writeByte(this.operatingSystem);
+		rsbytebuffer_1.writeByte(this.x64os ? 1 : 0);
+		rsbytebuffer_1.writeByte(this.osVendor);
+		rsbytebuffer_1.writeByte(this.javaVersion);
+		rsbytebuffer_1.writeByte(this.javaBuild);
+		rsbytebuffer_1.writeByte(this.javaSubBuild);
 		rsbytebuffer_1.writeByte(this.javaUpdate);
-		rsbytebuffer_1.writeByte(this.aBool8150 ? 1 : 0);
-		rsbytebuffer_1.writeShort(this.anInt8151);
-		rsbytebuffer_1.writeByte(this.anInt8146);
-		rsbytebuffer_1.write24BitInt(this.anInt8167);
-		rsbytebuffer_1.writeShort(this.anInt8156);
+		rsbytebuffer_1.writeByte(this.idk ? 1 : 0);
+		rsbytebuffer_1.writeShort(this.maxMem);
+		rsbytebuffer_1.writeByte(this.processors);
+		rsbytebuffer_1.write24BitInt(this.ram);
+		rsbytebuffer_1.writeShort(this.cpuClock);
 		rsbytebuffer_1.writeJagString(this.aString8157);
 		rsbytebuffer_1.writeJagString(this.aString8160);
 		rsbytebuffer_1.writeJagString(this.aString8159);
 		rsbytebuffer_1.writeJagString(this.aString8153);
-		rsbytebuffer_1.writeByte(this.anInt8162);
-		rsbytebuffer_1.writeShort(this.anInt8164);
-		rsbytebuffer_1.writeJagString(this.aString8165);
-		rsbytebuffer_1.writeJagString(this.aString8166);
-		rsbytebuffer_1.writeByte(this.anInt8163);
-		rsbytebuffer_1.writeByte(this.anInt8121);
-		for (int i_3 = 0; i_3 < this.anIntArray8139.length; i_3++) {
-			rsbytebuffer_1.writeInt(this.anIntArray8139[i_3]);
+		rsbytebuffer_1.writeByte(this.dxDriverMonth);
+		rsbytebuffer_1.writeShort(this.dxDriverYear);
+		rsbytebuffer_1.writeJagString(this.cpuType);
+		rsbytebuffer_1.writeJagString(this.cpuData);
+		rsbytebuffer_1.writeByte(this.cpuCores);
+		rsbytebuffer_1.writeByte(this.rawCPUInformation);
+		for (int i_3 = 0; i_3 < this.rawCPUInformationData.length; i_3++) {
+			rsbytebuffer_1.writeInt(this.rawCPUInformationData[i_3]);
 		}
-		rsbytebuffer_1.writeInt(this.anInt8168);
+		rsbytebuffer_1.writeInt(this.rawCPUInformation2);
 	}
 
 	public SystemInfo() {
 		if (GroundItemStrategy.aString8069.startsWith("win")) {
-			this.anInt8126 = 1;
+			this.operatingSystem = 1;
 		} else if (GroundItemStrategy.aString8069.startsWith("mac")) {
-			this.anInt8126 = 2;
+			this.operatingSystem = 2;
 		} else if (GroundItemStrategy.aString8069.startsWith("linux")) {
-			this.anInt8126 = 3;
+			this.operatingSystem = 3;
 		} else {
-			this.anInt8126 = 4;
+			this.operatingSystem = 4;
 		}
 		if (!Class402.aString4828.startsWith("amd64") && !Class402.aString4828.startsWith("x86_64")) {
-			this.aBool8142 = false;
+			this.x64os = false;
 		} else {
-			this.aBool8142 = true;
+			this.x64os = true;
 		}
-		if (this.anInt8126 == 1) {
+		if (this.operatingSystem == 1) {
 			if (Class231.aString2876.indexOf("4.0") != -1) {
-				this.anInt8141 = 1;
+				this.osVendor = 1;
 			} else if (Class231.aString2876.indexOf("4.1") != -1) {
-				this.anInt8141 = 2;
+				this.osVendor = 2;
 			} else if (Class231.aString2876.indexOf("4.9") != -1) {
-				this.anInt8141 = 3;
+				this.osVendor = 3;
 			} else if (Class231.aString2876.indexOf("5.0") != -1) {
-				this.anInt8141 = 4;
+				this.osVendor = 4;
 			} else if (Class231.aString2876.indexOf("5.1") != -1) {
-				this.anInt8141 = 5;
+				this.osVendor = 5;
 			} else if (Class231.aString2876.indexOf("5.2") != -1) {
-				this.anInt8141 = 8;
+				this.osVendor = 8;
 			} else if (Class231.aString2876.indexOf("6.0") != -1) {
-				this.anInt8141 = 6;
+				this.osVendor = 6;
 			} else if (Class231.aString2876.indexOf("6.1") != -1) {
-				this.anInt8141 = 7;
+				this.osVendor = 7;
 			} else if (Class231.aString2876.indexOf("6.2") != -1) {
-				this.anInt8141 = 9;
+				this.osVendor = 9;
 			}
-		} else if (this.anInt8126 == 2) {
+		} else if (this.operatingSystem == 2) {
 			if (Class231.aString2876.indexOf("10.4") != -1) {
-				this.anInt8141 = 20;
+				this.osVendor = 20;
 			} else if (Class231.aString2876.indexOf("10.5") != -1) {
-				this.anInt8141 = 21;
+				this.osVendor = 21;
 			} else if (Class231.aString2876.indexOf("10.6") != -1) {
-				this.anInt8141 = 22;
+				this.osVendor = 22;
 			} else if (Class231.aString2876.indexOf("10.7") != -1) {
-				this.anInt8141 = 23;
+				this.osVendor = 23;
 			}
 		}
 		if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("sun") != -1) {
-			this.anInt8155 = 1;
+			this.javaVersion = 1;
 		} else if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("microsoft") != -1) {
-			this.anInt8155 = 2;
+			this.javaVersion = 2;
 		} else if (Node_Sub20_Sub34.aString9967.toLowerCase().indexOf("apple") != -1) {
-			this.anInt8155 = 3;
+			this.javaVersion = 3;
 		} else {
-			this.anInt8155 = 4;
+			this.javaVersion = 4;
 		}
 		int i_2 = ChatLine.aString1093.startsWith("1.") ? 2 : 0;
 		int i_3 = 0;
@@ -154,7 +154,7 @@ public class SystemInfo extends Node {
 		} catch (Exception exception_24) {
 			;
 		}
-		this.javaRelease = i_3;
+		this.javaBuild = i_3;
 		i_2 = ChatLine.aString1093.indexOf(46, 2) + 1;
 		i_3 = 0;
 		try {
@@ -169,7 +169,7 @@ public class SystemInfo extends Node {
 		} catch (Exception exception_23) {
 			;
 		}
-		this.anInt8148 = i_3;
+		this.javaSubBuild = i_3;
 		i_2 = ChatLine.aString1093.indexOf(95, 4) + 1;
 		i_3 = 0;
 		try {
@@ -185,19 +185,19 @@ public class SystemInfo extends Node {
 			;
 		}
 		this.javaUpdate = i_3;
-		this.aBool8150 = false;
-		this.anInt8151 = Engine.MAX_MEMORY;
-		if (this.javaRelease > 3) {
-			this.anInt8146 = Engine.AVAILABLE_PROCESSORS;
+		this.idk = false;
+		this.maxMem = Engine.MAX_MEMORY;
+		if (this.javaBuild > 3) {
+			this.processors = Engine.AVAILABLE_PROCESSORS;
 		} else {
-			this.anInt8146 = 0;
+			this.processors = 0;
 		}
 		try {
 			int[] ints_14 = HardwareInfo.getCPUInfo();
 			if (ints_14 != null && ints_14.length == 3) {
-				this.anInt8163 = ints_14[0];
-				this.anInt8156 = ints_14[1];
-				this.anInt8167 = ints_14[2];
+				this.cpuCores = ints_14[0];
+				this.cpuClock = ints_14[1];
+				this.ram = ints_14[2];
 			}
 			int[] ints_5 = HardwareInfo.getRawCPUInfo();
 			int i_7;
@@ -222,19 +222,19 @@ public class SystemInfo extends Node {
 					rsbytebuffer_16.method13232(class430_15.anInt5136, (byte) -21);
 					rsbytebuffer_16.method13232(class430_15.anInt5138, (byte) -95);
 					rsbytebuffer_16.index = 0;
-					this.aString8165 = rsbytebuffer_16.readString();
+					this.cpuType = rsbytebuffer_16.readString();
 				}
 				Class430 class430_27 = (Class430) hashmap_6.get(Integer.valueOf(1));
 				if (class430_27 != null) {
-					this.anInt8168 = class430_27.anInt5139;
+					this.rawCPUInformation2 = class430_27.anInt5139;
 					i_9 = class430_27.anInt5137;
-					this.anInt8121 = i_9 >> 16 & 0xff;
-					this.anIntArray8139[0] = class430_27.anInt5138;
-					this.anIntArray8139[1] = class430_27.anInt5136;
+					this.rawCPUInformation = i_9 >> 16 & 0xff;
+					this.rawCPUInformationData[0] = class430_27.anInt5138;
+					this.rawCPUInformationData[1] = class430_27.anInt5136;
 				}
 				Class430 class430_17 = (Class430) hashmap_6.get(Integer.valueOf(-2147483647));
 				if (class430_17 != null) {
-					this.anIntArray8139[2] = class430_17.anInt5136;
+					this.rawCPUInformationData[2] = class430_17.anInt5136;
 				}
 				RsByteBuffer rsbytebuffer_18 = new RsByteBuffer(49);
 				for (i_11 = -2147483646; i_11 <= -2147483644; i_11++) {
@@ -247,7 +247,7 @@ public class SystemInfo extends Node {
 					}
 				}
 				rsbytebuffer_18.index = 0;
-				this.aString8166 = rsbytebuffer_18.readString();
+				this.cpuData = rsbytebuffer_18.readString();
 			}
 			String[][] arr_25 = HardwareInfo.getDXDiagDisplayDevicesProps();
 			String string_28;
@@ -260,8 +260,8 @@ public class SystemInfo extends Node {
 						try {
 							i_9 = string_28.indexOf("/");
 							i_10 = string_28.indexOf("/", i_9 + 1);
-							this.anInt8162 = Integer.parseInt(string_28.substring(0, i_9));
-							this.anInt8164 = Integer.parseInt(string_28.substring(i_10 + 1, string_28.indexOf(" ", i_10)));
+							this.dxDriverMonth = Integer.parseInt(string_28.substring(0, i_9));
+							this.dxDriverYear = Integer.parseInt(string_28.substring(i_10 + 1, string_28.indexOf(" ", i_10)));
 						} catch (Exception exception_20) {
 							;
 						}
@@ -285,7 +285,7 @@ public class SystemInfo extends Node {
 				this.aString8159 = string_28 + "." + str_29 + str_30;
 			}
 		} catch (Throwable throwable_21) {
-			this.anInt8167 = 0;
+			this.ram = 0;
 		}
 		if (this.aString8157 == null) {
 			this.aString8157 = "";
@@ -299,11 +299,11 @@ public class SystemInfo extends Node {
 		if (this.aString8153 == null) {
 			this.aString8153 = "";
 		}
-		if (this.aString8165 == null) {
-			this.aString8165 = "";
+		if (this.cpuType == null) {
+			this.cpuType = "";
 		}
-		if (this.aString8166 == null) {
-			this.aString8166 = "";
+		if (this.cpuData == null) {
+			this.cpuData = "";
 		}
 		this.method13455();
 	}

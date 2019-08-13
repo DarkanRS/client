@@ -53,11 +53,11 @@ public class RsByteBuffer extends Node {
         this.buffer[++this.index - 1] = (byte) i_1;
     }
 
-    public void method13061(int i_1, int i_2) {
+    public void writeIndex(int i_1) {
         this.buffer[this.index - i_1 - 1] = (byte) i_1;
     }
 
-    public void writeLEShort(int i_1, byte b_2) {
+    public void writeLEShort(int i_1) {
         this.buffer[++this.index - 1] = (byte) i_1;
         this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
     }

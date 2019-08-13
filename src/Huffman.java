@@ -228,7 +228,7 @@ public class Huffman {
 	}
 
 	public static void playSoundJingle(int i_0, int i_1, int i_2) {
-		i_2 = i_2 * Class393.preferences.aPreference_Sub13_8228.method12714() >> 8;
+		i_2 = i_2 * Class393.preferences.musicVolume.method12714() >> 8;
 		if (i_2 != 0 && i_0 != -1) {
 			if (!Class260.aBool3220 && Class260.anInt3223 != -1 && SongReference.method1966(1048199259) && !ParticleArchive1Def.method6140()) {
 				Class260.aNode_Sub15_Sub2_3231 = Message.method7272();

@@ -105,14 +105,14 @@ public class ProcessorSpecs {
                     int i_3;
                     if (Class383.anInt4664 > 0) {
                         Class148.anInt1730 = 3;
-                        Class148.aNode_Sub15_Sub2_1735.method15144(Class383.anInt4664 > Class158_Sub2_Sub3.anInt10243 ? Class158_Sub2_Sub3.anInt10243 : Class383.anInt4664, -21624698);
+                        Class148.aNode_Sub15_Sub2_1735.setVolume(Class383.anInt4664 > Class158_Sub2_Sub3.anInt10243 ? Class158_Sub2_Sub3.anInt10243 : Class383.anInt4664, -21624698);
                         for (i_3 = 0; i_3 < HashTable.anIntArray5449.length; i_3++) {
                             Class148.aNode_Sub15_Sub2_1735.method15095(i_3, HashTable.anIntArray5449[i_3], 2144704341);
                             HashTable.anIntArray5449[i_3] = 255;
                         }
                     } else {
                         Class148.anInt1730 = 0;
-                        Class148.aNode_Sub15_Sub2_1735.method15144(Class158_Sub2_Sub3.anInt10243, 1350898514);
+                        Class148.aNode_Sub15_Sub2_1735.setVolume(Class158_Sub2_Sub3.anInt10243, 1350898514);
                         for (i_3 = 0; i_3 < HashTable.anIntArray5449.length; i_3++) {
                             Class148.aNode_Sub15_Sub2_1735.method15095(i_3, HashTable.anIntArray5449[i_3], 1431081574);
                             HashTable.anIntArray5449[i_3] = 255;

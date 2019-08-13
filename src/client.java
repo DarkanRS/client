@@ -1099,7 +1099,7 @@ public final class client extends Engine {
 
 			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.aPreference_Sub4_8187.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.aPreference_Sub19_8204.method12786() + " ";
-			str_2 = str_2 + Class393.preferences.aPreference_Sub2_8205.method12624((byte) -13) + " ";
+			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624((byte) -13) + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
 			str_2 = str_2 + Class393.preferences.textures.method12873(-932998306) + " ";
 			str_2 = str_2 + Class393.preferences.aPreference_Sub12_8195.method12706((byte) 75) + " ";
@@ -1107,7 +1107,7 @@ public final class client extends Engine {
 			str_2 = str_2 + MAX_MEMORY + " ";
 			str_2 = str_2 + gameState + " ";
 			if (Class11.SYSTEM_INFO != null) {
-				str_2 = str_2 + Class11.SYSTEM_INFO.anInt8167;
+				str_2 = str_2 + Class11.SYSTEM_INFO.ram;
 			} else {
 				str_2 = str_2 + -1;
 			}

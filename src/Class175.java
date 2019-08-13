@@ -31,7 +31,7 @@ public class Class175 {
     static void method2964(Node_Sub48 class282_sub48_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
         if (class282_sub48_0.soundEffectId != -1 || class282_sub48_0.anIntArray8102 != null) {
             int i_6 = 0;
-            int i_7 = class282_sub48_0.anInt8089 * Class393.preferences.aPreference_Sub13_8193.method12714() >> 8;
+            int i_7 = class282_sub48_0.anInt8089 * Class393.preferences.ambientSoundVolume.method12714() >> 8;
             if (i_2 > class282_sub48_0.anInt8079) {
                 i_6 += i_2 - class282_sub48_0.anInt8079;
             } else if (i_2 < class282_sub48_0.anInt8107) {
@@ -42,7 +42,7 @@ public class Class175 {
             } else if (i_3 < class282_sub48_0.anInt8078) {
                 i_6 += class282_sub48_0.anInt8078 - i_3;
             }
-            if (class282_sub48_0.anInt8105 != 0 && i_6 - 256 <= class282_sub48_0.anInt8105 && Class393.preferences.aPreference_Sub13_8193.method12714() != 0 && class282_sub48_0.anInt8076 == i_1) {
+            if (class282_sub48_0.anInt8105 != 0 && i_6 - 256 <= class282_sub48_0.anInt8105 && Class393.preferences.ambientSoundVolume.method12714() != 0 && class282_sub48_0.anInt8076 == i_1) {
                 i_6 -= 256;
                 if (i_6 < 0) {
                     i_6 = 0;

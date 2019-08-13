@@ -70,7 +70,7 @@ public class Class124 {
 						shorts_17 = class390_sub2_3.materialIndices[i_15++];
 						if (shorts_17 != null) {
 							for (i_18 = 0; i_18 < shorts_17.length; i_18++) {
-								rsbytebuffer_19.writeLEShort(shorts_17[i_18] & 0xffff, (byte) -58);
+								rsbytebuffer_19.writeLEShort(shorts_17[i_18] & 0xffff);
 							}
 						}
 					}

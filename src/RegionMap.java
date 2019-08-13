@@ -55,7 +55,7 @@ public class RegionMap {
 					int i_18 = i_3 + i_14;
 					if (i_17 > 0 && i_18 > 0 && i_17 < i_4 - 1 && i_18 < i_5 - 1) {
 						ObjectDefinitions objectdefinitions_19 = objectindexloader_0.getObjectDefinitions(i_9);
-						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.aPreference_Sub23_8202.method12897((byte) 59) != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
+						if (i_16 != SceneObjectType.GROUND_DECORATION.type || Class393.preferences.groundDecoration.method12897((byte) 59) != 0 || objectdefinitions_19.interactable != 0 || objectdefinitions_19.clipType == 1 || objectdefinitions_19.obstructsGround) {
 							if (!objectdefinitions_19.method7968()) {
 								++i_7;
 							}

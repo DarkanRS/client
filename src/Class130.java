@@ -80,7 +80,7 @@ public class Class130 {
 											}
 										} else {
 											for (i_19 = 0; i_19 < shorts_18.length; i_19++) {
-												class282_sub35_sub1_14.writeLEShort(shorts_18[i_19] & 0xffff, (byte) -24);
+												class282_sub35_sub1_14.writeLEShort(shorts_18[i_19] & 0xffff);
 												++i_11;
 											}
 										}

@@ -28,13 +28,7 @@ public abstract class Preference {
 
 	abstract void setValue(int var1);
 
-	abstract int method7784(int var1);
-
 	abstract int method7785(int var1);
-
-	abstract int method7786();
-
-	abstract int method7787();
 
 	public static String method7788(long long_0, int i_2) {
 		Calendar calendar_5;

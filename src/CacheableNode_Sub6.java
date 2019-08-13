@@ -36,7 +36,7 @@ public class CacheableNode_Sub6 extends CacheableNode {
 			this.anInt9542 = 0;
 		}
 
-		Class480.method8046(i_8, (byte) 69);
+		Class480.getMapSize(i_8, (byte) 69);
 		this.aClass482_9537 = new NodeCollection();
 	}
 

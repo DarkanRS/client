@@ -44,9 +44,9 @@ public final class Comparable_Sub1 implements Comparable {
 			if (file_1.exists()) {
 				Engine.aClass440_3269 = new Class440(new Class442(file_1, 25L), 24);
 			} else {
-				label34: for (int i_2 = 0; i_2 < Class106.aStringArray1077.length; i_2++) {
+				label34: for (int i_2 = 0; i_2 < MapSize.aStringArray1077.length; i_2++) {
 					for (i_3 = 0; i_3 < Class246.aStringArray3028.length; i_3++) {
-						File file_4 = new File(Class246.aStringArray3028[i_3] + Class106.aStringArray1077[i_2] + File.separatorChar + "random.dat");
+						File file_4 = new File(Class246.aStringArray3028[i_3] + MapSize.aStringArray1077[i_2] + File.separatorChar + "random.dat");
 						if (file_4.exists()) {
 							Engine.aClass440_3269 = new Class440(new Class442(file_4, 25L), 24);
 							break label34;

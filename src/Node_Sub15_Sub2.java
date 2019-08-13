@@ -2,7 +2,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 
 	int anInt9719;
 	boolean aBool9724;
-	int anInt9692 = 256;
+	int volume = 256;
 	int anInt9690 = 256;
 	int anInt9695 = 1000000;
 	int[] anIntArray9702 = new int[16];
@@ -219,7 +219,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 			int i_4 = this.anIntArray9697[class282_sub13_1.anInt7582] * this.anIntArray9711[class282_sub13_1.anInt7582] + 4096 >> 13;
 			i_4 = i_4 * i_4 + 16384 >> 15;
 			i_4 = i_4 * class282_sub13_1.anInt7570 + 16384 >> 15;
-			i_4 = i_4 * this.anInt9692 + 128 >> 8;
+			i_4 = i_4 * this.volume + 128 >> 8;
 			i_4 = i_4 * this.anInt9690 >> 8;
 			i_4 = i_4 * this.anIntArray9702[class282_sub13_1.anInt7582] + 128 >> 8;
 			if (class110_3.anInt1096 > 0) {
@@ -603,7 +603,7 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 	}
 
 	int method15123(int i_1) {
-		return this.anInt9692;
+		return this.volume;
 	}
 
 	synchronized void method12231(int i_1) {
@@ -954,8 +954,8 @@ public class Node_Sub15_Sub2 extends Node_Sub15 {
 		this.method15105();
 	}
 
-	synchronized void method15144(int i_1, int i_2) {
-		this.anInt9692 = i_1;
+	synchronized void setVolume(int i_1, int i_2) {
+		this.volume = i_1;
 	}
 
 	synchronized Node_Sub15 method12239() {
