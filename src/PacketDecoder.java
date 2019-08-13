@@ -281,7 +281,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.IF_SETCOLOUR) {
+		} else if (context.currentPacket == ServerPacket.IF_SETCOLOR) {
 			int key = buffer.readIntLE();
 			int flags = buffer.readUnsignedShort128();
 			Class470.method7825();
@@ -1781,7 +1781,7 @@ public class PacketDecoder {
 			Class158_Sub1.PLAYER_VAR_PROVIDER.method268(key, flags, -1140695527);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECEIVE_PRIVATE_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_PRIVATE_ECHO) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;

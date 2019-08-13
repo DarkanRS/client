@@ -12,7 +12,7 @@ public enum ServerPacket {
 	IF_SETTEXTFONT(7, 8),
 	VARP_LARGE(8, 6),
 	LOGOUT_LOBBY(9, 0),
-	RECEIVE_PRIVATE_MESSAGE(10, -2),
+	MESSAGE_PRIVATE_ECHO(10, -2),
 	aClass375_4362(11, 2), //vorbis preload sound related with sending packet 37 as response
 	CLIENT_SETVARC_LARGE(12, 6),
 	aClass375_4365(13, 8), //closes and redraws interfaces?
@@ -107,7 +107,7 @@ public enum ServerPacket {
 	UPDATE_REBOOT_TIMER(102, 2),
 	WORLD_LIST(103, -2),
 	SOUND_IDX15(104, 6),
-	IF_SETCOLOUR(105, 6),
+	IF_SETCOLOR(105, 6),
 	aClass375_4457(106, 2), //vorbis related?
 	GROUND_ITEM_REVEAL(107, 7),
 	VARBIT_LARGE(108, 6),
