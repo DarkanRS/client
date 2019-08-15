@@ -2662,25 +2662,25 @@ public class CS2Interpreter {
 		case instr5955:
 			method504(exec);
 			break;
-		case instr6696:
+		case MEC_TEXT:
 			method15616(exec);
 			break;
-		case instr6832:
+		case MEC_SPRITE:
 			method1255(exec);
 			break;
-		case instr6833:
+		case MEC_TEXTSIZE:
 			method3755(exec);
 			break;
-		case instr6834:
+		case MEC_CATEGORY:
 			method290(exec);
 			break;
-		case WORLD_MAP_PARAM:
+		case MEC_PARAM:
 			getWorldMapParam(exec);
 			break;
-		case instr6836:
+		case USERDETAIL_QUICKCHAT:
 			method5832(exec);
 			break;
-		case instr6837:
+		case USERDETAIL_LOBBY_MEMBERSHIP:
 			method1499(exec);
 			break;
 		case instr6509:
@@ -2716,7 +2716,7 @@ public class CS2Interpreter {
 		case instr6848:
 			method8869(exec);
 			break;
-		case instr6496:
+		case instr6496: //pak
 			method1816(exec);
 			break;
 		case instr6850:

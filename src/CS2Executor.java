@@ -52,15 +52,15 @@ public class CS2Executor {
 		System.out.println("Error: " + CutsceneAction.method1609(string_0, "%0a", "\n"));
 	}
 
-	static void method1834(Class397 class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
+	static void method1834(CS2HookEventType class397_0, int i_1, int i_2, CS2Executor cs2executor_3, byte b_4) {
 		CS2Script cs2script_5 = FixedTileStrategy.getScript(class397_0, i_1, i_2);
 		if (cs2script_5 == null) {
 			decrementCS2ExecIdx();
 		} else {
 			cs2executor_3.intLocals = new int[cs2script_5.intLocalsCount];
 			cs2executor_3.objectLocals = new Object[cs2script_5.stringLocalsCount];
-			if (cs2script_5.aClass397_9527 != Class397.aClass397_4797 && cs2script_5.aClass397_9527 != Class397.aClass397_4805 && cs2script_5.aClass397_9527 != Class397.aClass397_4798) {
-				if (cs2script_5.aClass397_9527 == Class397.aClass397_4806) {
+			if (cs2script_5.aClass397_9527 != CS2HookEventType.aClass397_4797 && cs2script_5.aClass397_9527 != CS2HookEventType.aClass397_4805 && cs2script_5.aClass397_9527 != CS2HookEventType.aClass397_4798) {
+				if (cs2script_5.aClass397_9527 == CS2HookEventType.aClass397_4806) {
 					cs2executor_3.intLocals[0] = cs2executor_3.anInt7004;
 				}
 			} else {
@@ -200,7 +200,7 @@ public class CS2Executor {
 	}
 	
 	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
-		CS2Script cs2script_4 = FixedTileStrategy.getScript(Class397.aClass397_4792, i_0, -1);
+		CS2Script cs2script_4 = FixedTileStrategy.getScript(CS2HookEventType.aClass397_4792, i_0, -1);
 		if (cs2script_4 != null) {
 			CS2Executor cs2executor_5 = getNextScriptExecutor();
 			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];

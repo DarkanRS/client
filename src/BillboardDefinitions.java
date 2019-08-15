@@ -110,14 +110,14 @@ public class BillboardDefinitions {
 					}
 					if (!class282_sub33_5.aNode_Sub36_7835.aBool7989) {
 						class282_sub33_5.aNode_Sub36_7835.aBool7989 = true;
-						HitsplatIndexLoader.method3614(Class397.aClass397_4797, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 82);
+						HitsplatIndexLoader.method3614(CS2HookEventType.aClass397_4797, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 82);
 					}
 					if (class282_sub33_5.aNode_Sub36_7835.aBool7989) {
-						HitsplatIndexLoader.method3614(Class397.aClass397_4805, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 69);
+						HitsplatIndexLoader.method3614(CS2HookEventType.aClass397_4805, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 69);
 					}
 				} else if (class282_sub33_5.aNode_Sub36_7835.aBool7989) {
 					class282_sub33_5.aNode_Sub36_7835.aBool7989 = false;
-					HitsplatIndexLoader.method3614(Class397.aClass397_4798, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 75);
+					HitsplatIndexLoader.method3614(CS2HookEventType.aClass397_4798, class282_sub33_5.aNode_Sub36_7835.anInt7991, worldmapareadefs_6.anInt2718, (byte) 75);
 				}
 			}
 		}

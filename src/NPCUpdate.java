@@ -187,7 +187,7 @@ public class NPCUpdate {
 			}
 			npc_6.move(i_12, VertexNormal.MY_PLAYER.regionBaseX[0] + i_10, VertexNormal.MY_PLAYER.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize());
 			if (npc_6.definitions.method6886()) {
-				Class397.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
+				Static.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
 			}
 		}
 		rsbitsbuffer_2.finishBitAccess((byte) 35);
@@ -380,7 +380,7 @@ public class NPCUpdate {
 				npc.setBoundSize(npc.definitions.size);
 				npc.anInt10340 = npc.definitions.contrast << 3;
 				if (npc.definitions.method6886()) {
-					Class397.method6775(npc.plane, npc.regionBaseX[0], npc.regionBaseY[0], 0, (ObjectDefinitions) null, npc, (Player) null, 352984427);
+					Static.method6775(npc.plane, npc.regionBaseX[0], npc.regionBaseY[0], 0, (ObjectDefinitions) null, npc, (Player) null, 352984427);
 				}
 			}
 			if ((i_4 & 0x2000000) != 0) {

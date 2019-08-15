@@ -2105,7 +2105,7 @@ public final class client extends Engine {
 									for (i_27 = 0; i_27 < i_25; i_27++) {
 										Player player_55 = players[ints_46[i_27]];
 										if (player_55 != null) {
-											AccountCreationStage.method252(Class397.aClass397_4806, -1, player_55, ints_46[i_27], 1912850737);
+											AccountCreationStage.method252(CS2HookEventType.aClass397_4806, -1, player_55, ints_46[i_27], 1912850737);
 											player_55.method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10, (byte) 91);
 										}
 									}
@@ -2114,7 +2114,7 @@ public final class client extends Engine {
 										i_52 = NPC_UPDATE_INDICES[i_27];
 										StringNode class282_sub47_56 = (StringNode) NPCS.get((long) i_52);
 										if (class282_sub47_56 != null) {
-											AccountCreationStage.method252(Class397.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.type, (Entity) class282_sub47_56.anObject8068, i_52, 1492205273);
+											AccountCreationStage.method252(CS2HookEventType.aClass397_4804, ((NPC) class282_sub47_56.anObject8068).definitions.type, (Entity) class282_sub47_56.anObject8068, i_52, 1492205273);
 											((Entity) class282_sub47_56.anObject8068).method15880(i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10, (byte) 77);
 										}
 									}

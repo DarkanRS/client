@@ -1,6 +1,6 @@
 public class CS2Script extends CacheableNode {
 
-	public Class397 aClass397_9527;
+	public CS2HookEventType aClass397_9527;
 	public int intLocalsCount;
 	public int stringLocalsCount;
 	public int longLocalsCount;

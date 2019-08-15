@@ -1767,7 +1767,7 @@ public class PacketDecoder {
 			int key = buffer.readIntLE();
 			if (key != Class354.anInt4112) {
 				Class354.anInt4112 = key;
-				HitsplatIndexLoader.method3614(Class397.aClass397_4812, -1, -1, (byte) 95);
+				HitsplatIndexLoader.method3614(CS2HookEventType.aClass397_4812, -1, -1, (byte) 95);
 			}
 			context.currentPacket = null;
 			return true;
@@ -2121,7 +2121,7 @@ public class PacketDecoder {
 			if (bool_66 != Class469.aBool5585 || key != KeyHoldInputSubscriber.anInt2879) {
 				Class469.aBool5585 = bool_66;
 				KeyHoldInputSubscriber.anInt2879 = key;
-				HitsplatIndexLoader.method3614(Class397.aClass397_4803, -1, -1, (byte) 27);
+				HitsplatIndexLoader.method3614(CS2HookEventType.aClass397_4803, -1, -1, (byte) 27);
 			}
 			context.currentPacket = null;
 			return true;

@@ -94,7 +94,7 @@ public class HitsplatIndexLoader {
 		}
 	}
 
-	public static void method3614(Class397 class397_0, int i_1, int i_2, byte b_3) {
+	public static void method3614(CS2HookEventType class397_0, int i_1, int i_2, byte b_3) {
 		CS2Executor cs2executor_4 = CS2Executor.getNextScriptExecutor();
 		CS2Executor.method1834(class397_0, i_1, i_2, cs2executor_4, (byte) 7);
 	}

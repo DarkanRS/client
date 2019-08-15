@@ -52,7 +52,7 @@ final class Class15 implements Interface35 {
         return stringbuilder_2.toString();
     }
 
-    public static void method549(Class397 class397_0, int i_1, SceneObject sceneobject_3) {
+    public static void method549(CS2HookEventType class397_0, int i_1, SceneObject sceneobject_3) {
         CS2Executor cs2executor_5 = CS2Executor.getNextScriptExecutor();
         cs2executor_5.currentSceneObject = sceneobject_3;
         CS2Executor.method1834(class397_0, i_1, -1, cs2executor_5, (byte) 23);

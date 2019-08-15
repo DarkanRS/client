@@ -61,7 +61,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_22 = (i_5 << 9) + (i_14 << 8);
 			boolean bool_23 = this.aBool3773 && !this.overlayHidden && objectDefs.delayShading;
 			if (objectDefs.hasSound(317865608)) {
-				Class397.method6775(i_3, i_4, i_5, i_7, objectDefs, (NPC) null, (Player) null, 2109240355);
+				Static.method6775(i_3, i_4, i_5, i_7, objectDefs, (NPC) null, (Player) null, 2109240355);
 			}
 			boolean bool_24 = i_10 == -1 && !objectDefs.method7967((byte) 85) && objectDefs.toObjectIds == null && !objectDefs.hasAnimation && !objectDefs.aBool5699;
 			if (!aBool7717 || (!Class308.isWall(i_8, -2097799445) || objectDefs.occludes == 1) && (!QuestDefinitions.isRoof(i_8, -1938518575) || objectDefs.occludes != 0)) {

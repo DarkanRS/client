@@ -38,8 +38,8 @@ public class FixedTileStrategy extends RouteStrategy {
 		return class282_sub54_2;
 	}
 
-	static CS2Script getScript(Class397 class397_0, int i_1, int i_2) {
-		int i_4 = class397_0.anInt4802 | i_1 << 10;
+	static CS2Script getScript(CS2HookEventType class397_0, int i_1, int i_2) {
+		int i_4 = class397_0.id | i_1 << 10;
 		CS2Script cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
 		if (cs2script_5 != null) {
 			return cs2script_5;
@@ -60,7 +60,7 @@ public class FixedTileStrategy extends RouteStrategy {
 					return cs2script_5;
 				}
 			} else {
-				i_4 = class397_0.anInt4802 | i_2 + 65536 << 10;
+				i_4 = class397_0.id | i_2 + 65536 << 10;
 				cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
 				if (cs2script_5 != null) {
 					return cs2script_5;
@@ -81,7 +81,7 @@ public class FixedTileStrategy extends RouteStrategy {
 							return cs2script_5;
 						}
 					} else {
-						i_4 = class397_0.anInt4802 | 0x3fffc00;
+						i_4 = class397_0.id | 0x3fffc00;
 						cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
 						if (cs2script_5 != null) {
 							return cs2script_5;

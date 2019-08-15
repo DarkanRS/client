@@ -4,7 +4,7 @@ public class AccountCreationStage {
 	static AccountCreationStage REQUEST = new AccountCreationStage();
 	static AccountCreationStage RESPONSE = new AccountCreationStage();
 
-	public static void method252(Class397 class397_0, int i_1, Entity animable_3, int i_4, int i_5) {
+	public static void method252(CS2HookEventType class397_0, int i_1, Entity animable_3, int i_4, int i_5) {
 		CS2Executor cs2executor_6 = CS2Executor.getNextScriptExecutor();
 		cs2executor_6.currentEntity = animable_3;
 		cs2executor_6.anInt7004 = i_4;

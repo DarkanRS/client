@@ -58,7 +58,7 @@ public class Class62 implements Interface3 {
 			tcpmessage_3.buffer.writeShort(i_0);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
 		} else {
-			HitsplatIndexLoader.method3614(Class397.aClass397_4800, i_0, -1, (byte) 69);
+			HitsplatIndexLoader.method3614(CS2HookEventType.aClass397_4800, i_0, -1, (byte) 69);
 		}
 	}
 
