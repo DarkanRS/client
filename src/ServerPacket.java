@@ -27,7 +27,7 @@ public enum ServerPacket {
 	MESSAGE_QUICKCHAT_PRIVATE(22, -1),
 	IF_OPENSUB_ACTIVE_OBJECT(23, 32),
 	CAM_LOOKAT(24, 6),
-	RECEIVE_FRIENDS_CHAT_MESSAGE(25, -1),
+	MESSAGE_FRIENDS_CHAT(25, -1),
 	VARCLAN_SET_LONG(26, 10),
 	CREATE_GROUND_ITEM(27, 5),
 	aClass375_4480(28, -2), //clan chat and guest clan chat related
@@ -134,7 +134,7 @@ public enum ServerPacket {
 	aClass375_4364(129, 2), //reads some weird shit and is only set, never read?.. entity method gets set in cs2 interpreter
 	IF_SETPLAYERHEAD_IGNOREWORN(130, 10),
 	MESSAGE_QUICKCHAT_CLANCHANNEL(131, -1),
-	aClass375_4483(132, 9), //retex/recolor interface?
+	IF_SETRETEX(132, 9),
 	MESSAGE_PLAYER_GROUP(133, -1),
 	aClass375_4453(134, 2), //not a clue
 	IF_SETMODEL(135, 8),
@@ -144,9 +144,9 @@ public enum ServerPacket {
 	SPOT_ANIM(139, 8),
 	UPDATE_STAT(140, 6),
 	VARCLAN_SET_INT(141, 6),
-	MESSAGE_QUICKCHAT_FRIENDCHAT(142, -1),
+	MESSAGE_QUICKCHAT_FRIENDS_CHAT(142, -1),
 	MAP_PROJANIM(143, 16),
-	aClass375_4495(144, 9), //retex/recolor interface?
+	IF_SETRECOL(144, 9),
 	ANIMATE_NPC(145, 19),
 	aClass375_4497(146, 0), //load last interface? no idea
 	IDENTIFY_HOST_NAME(147, 4),
@@ -154,7 +154,7 @@ public enum ServerPacket {
 	HINT_TRAIL(149, -2),
 	IF_SETCLICKMASK(150, 5),
 	SET_DRAW_ORDER(151, 1),
-	PUBLIC_MESSAGE(152, -1),
+	MESSAGE_PUBLIC(152, -1),
 	SET_CURSOR(153, -1),
 	BLOCK_MINIMAP_STATE(154, 1),
 	IF_OPENSUB_ACTIVE_GROUNDITEM(155, 29),

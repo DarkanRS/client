@@ -656,7 +656,7 @@ public class PacketDecoder {
 			PulseEvent.setIFContent(key, 2, flags, -1, (byte) -52);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.PUBLIC_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_PUBLIC) {
 			int playerIndex = buffer.readUnsignedShort();
 			Player player;
 			if (playerIndex == client.myPlayerIndex) {
@@ -962,7 +962,7 @@ public class PacketDecoder {
 			client.CLAN_VAR_KEYS[++client.CLAN_VAR_COUNTER - 1 & 0x1f] = key;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_FRIENDCHAT) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_QUICKCHAT_FRIENDS_CHAT) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -1576,7 +1576,7 @@ public class PacketDecoder {
 			Class46.CLAN_VARS = new Object[IndexLoaders.CLAN_VAR_LOADER.size];
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.aClass375_4495) {
+		} else if (context.currentPacket == ServerPacket.IF_SETRECOL) {
 			int key = buffer.readIntV2();
 			int flags = buffer.readShortLE();
 			int i_6 = buffer.readShortLE();
@@ -2174,7 +2174,7 @@ public class PacketDecoder {
 			NPCUpdate.decode(false);
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.RECEIVE_FRIENDS_CHAT_MESSAGE) {
+		} else if (context.currentPacket == ServerPacket.MESSAGE_FRIENDS_CHAT) {
 			boolean bool_91 = buffer.readUnsignedByte() == 1;
 			String string_88 = buffer.readString();
 			String str_92 = string_88;
@@ -2262,7 +2262,7 @@ public class PacketDecoder {
 			client.anInt7386 = client.anInt7347;
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.aClass375_4483) {
+		} else if (context.currentPacket == ServerPacket.IF_SETRETEX) {
 			int key = buffer.readShortLE();
 			int flags = buffer.readUnsignedShort();
 			int i_6 = buffer.readUnsigned128Byte();
