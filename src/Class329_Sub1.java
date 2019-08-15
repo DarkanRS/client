@@ -298,7 +298,7 @@ public class Class329_Sub1 extends Class329 {
 		RsByteBuffer rsbytebuffer_7 = new RsByteBuffer(bytes_2);
 		int i_8 = -1;
 		while (true) {
-			int i_9 = rsbytebuffer_7.readSmart2(75082230);
+			int i_9 = rsbytebuffer_7.readSum(75082230);
 			if (i_9 == 0) {
 				return;
 			}
@@ -339,7 +339,7 @@ public class Class329_Sub1 extends Class329 {
 		RsByteBuffer rsbytebuffer_12 = new RsByteBuffer(bytes_2);
 		int i_13 = -1;
 		while (true) {
-			int i_14 = rsbytebuffer_12.readSmart2(-378735322);
+			int i_14 = rsbytebuffer_12.readSum(-378735322);
 			if (i_14 == 0) {
 				return;
 			}

@@ -264,25 +264,6 @@ public class RsByteBuffer extends Node {
         }
     }
 
-    public int readSmart() {
-        int i_2 = this.buffer[this.index] & 0xff;
-        return i_2 < 128 ? this.readUnsignedByte() - 64 : this.readUnsignedShort() - 49152;
-    }
-
-    public int readSmart2(int i_1) {
-        int i_2 = 0;
-        int i_3;
-        for (i_3 = this.readUnsignedSmart(); i_3 == 32767; i_3 = this.readUnsignedSmart()) {
-            i_2 += 32767;
-        }
-        i_2 += i_3;
-        return i_2;
-    }
-
-    public int readUnsignedBigSmart() {
-        return this.buffer[this.index] < 0 ? this.readInt() & 0x7fffffff : this.readUnsignedShort();
-    }
-
     public int method13099(int i_1) {
         byte b_2 = this.buffer[++this.index - 1];
         int i_3;
@@ -483,6 +464,25 @@ public class RsByteBuffer extends Node {
         this.buffer[++this.index - 1] = (byte) i_1;
         this.buffer[++this.index - 1] = (byte) (i_1 >> 24);
         this.buffer[++this.index - 1] = (byte) (i_1 >> 16);
+    }
+    
+    public int readSignedSmart() {
+        int i_2 = this.buffer[this.index] & 0xff;
+        return i_2 < 128 ? this.readUnsignedByte() - 64 : this.readUnsignedShort() - 49152;
+    }
+
+    public int readSum(int i_1) {
+        int i_2 = 0;
+        int i_3;
+        for (i_3 = this.readUnsignedSmart(); i_3 == 32767; i_3 = this.readUnsignedSmart()) {
+            i_2 += 32767;
+        }
+        i_2 += i_3;
+        return i_2;
+    }
+
+    public int readUnsignedBigSmart() {
+        return this.buffer[this.index] < 0 ? this.readInt() & 0x7fffffff : this.readUnsignedShort();
     }
 
     public int readBigSmart() {

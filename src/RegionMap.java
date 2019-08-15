@@ -33,7 +33,7 @@ public class RegionMap {
 		RsByteBuffer rsbytebuffer_8 = new RsByteBuffer(bytes_1);
 		int i_9 = -1;
 		label56: while (true) {
-			int i_10 = rsbytebuffer_8.readSmart2(-1436314957);
+			int i_10 = rsbytebuffer_8.readSum(-1436314957);
 			if (i_10 == 0) {
 				return i_7;
 			}

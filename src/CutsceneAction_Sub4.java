@@ -13,7 +13,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 		this.anInt8519 = i_2 >>> 16;
 		this.anInt8521 = i_2 & 0xffff;
 		this.anInt8522 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt8523 = rsbytebuffer_1.readSmart();
+		this.anInt8523 = rsbytebuffer_1.readSignedSmart();
 	}
 
 	public void method1592() {

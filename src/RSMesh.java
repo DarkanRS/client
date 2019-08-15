@@ -264,17 +264,17 @@ public class RSMesh {
 			flags = buffer.readUnsignedByte();
 			vertextOffsetX = 0;
 			if ((flags & 0x1) != 0) {
-				vertextOffsetX = rsbytebuffer_3.readSmart();
+				vertextOffsetX = rsbytebuffer_3.readSignedSmart();
 			}
 
 			vertextOffsetY = 0;
 			if ((flags & 0x2) != 0) {
-				vertextOffsetY = rsbytebuffer_4.readSmart();
+				vertextOffsetY = rsbytebuffer_4.readSignedSmart();
 			}
 
 			vertetxOffsetZ = 0;
 			if ((flags & 0x4) != 0) {
-				vertetxOffsetZ = rsbytebuffer_5.readSmart();
+				vertetxOffsetZ = rsbytebuffer_5.readSignedSmart();
 			}
 
 			this.vertexX[i_53] = i_50 + vertextOffsetX;
@@ -396,9 +396,9 @@ public class RSMesh {
 		for (int i_7 = 0; i_7 < this.faceCount; i_7++) {
 			int i_8 = rsbytebuffer_2.readUnsignedByte();
 			if (i_8 == 1) {
-				s_3 = (short) (rsbytebuffer_1.readSmart() + s_6);
-				s_4 = (short) (rsbytebuffer_1.readSmart() + s_3);
-				s_5 = (short) (rsbytebuffer_1.readSmart() + s_4);
+				s_3 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
+				s_4 = (short) (rsbytebuffer_1.readSignedSmart() + s_3);
+				s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_4);
 				s_6 = s_5;
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_4;
@@ -418,7 +418,7 @@ public class RSMesh {
 
 			if (i_8 == 2) {
 				s_4 = s_5;
-				s_5 = (short) (rsbytebuffer_1.readSmart() + s_6);
+				s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
 				s_6 = s_5;
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_4;
@@ -430,7 +430,7 @@ public class RSMesh {
 
 			if (i_8 == 3) {
 				s_3 = s_5;
-				s_5 = (short) (rsbytebuffer_1.readSmart() + s_6);
+				s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
 				s_6 = s_5;
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_4;
@@ -444,7 +444,7 @@ public class RSMesh {
 				short s_9 = s_3;
 				s_3 = s_4;
 				s_4 = s_9;
-				s_5 = (short) (rsbytebuffer_1.readSmart() + s_6);
+				s_5 = (short) (rsbytebuffer_1.readSignedSmart() + s_6);
 				s_6 = s_5;
 				this.triangleX[i_7] = s_3;
 				this.triangleY[i_7] = s_9;
@@ -860,17 +860,17 @@ public class RSMesh {
 			i_36 = rsbytebuffer_4.readUnsignedByte();
 			int i_37 = 0;
 			if ((i_36 & 0x1) != 0) {
-				i_37 = rsbytebuffer_5.readSmart();
+				i_37 = rsbytebuffer_5.readSignedSmart();
 			}
 
 			int i_38 = 0;
 			if ((i_36 & 0x2) != 0) {
-				i_38 = rsbytebuffer_6.readSmart();
+				i_38 = rsbytebuffer_6.readSignedSmart();
 			}
 
 			i_39 = 0;
 			if ((i_36 & 0x4) != 0) {
-				i_39 = rsbytebuffer_7.readSmart();
+				i_39 = rsbytebuffer_7.readSignedSmart();
 			}
 
 			this.vertexX[i_35] = i_32 + i_37;
@@ -939,9 +939,9 @@ public class RSMesh {
 		for (i_39 = 0; i_39 < this.faceCount; i_39++) {
 			i_40 = rsbytebuffer_5.readUnsignedByte();
 			if (i_40 == 1) {
-				s_43 = (short) (rsbytebuffer_4.readSmart() + s_46);
-				s_44 = (short) (rsbytebuffer_4.readSmart() + s_43);
-				s_45 = (short) (rsbytebuffer_4.readSmart() + s_44);
+				s_43 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
+				s_44 = (short) (rsbytebuffer_4.readSignedSmart() + s_43);
+				s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_44);
 				s_46 = s_45;
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_44;
@@ -961,7 +961,7 @@ public class RSMesh {
 
 			if (i_40 == 2) {
 				s_44 = s_45;
-				s_45 = (short) (rsbytebuffer_4.readSmart() + s_46);
+				s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
 				s_46 = s_45;
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_44;
@@ -973,7 +973,7 @@ public class RSMesh {
 
 			if (i_40 == 3) {
 				s_43 = s_45;
-				s_45 = (short) (rsbytebuffer_4.readSmart() + s_46);
+				s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
 				s_46 = s_45;
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_44;
@@ -987,7 +987,7 @@ public class RSMesh {
 				short s_41 = s_43;
 				s_43 = s_44;
 				s_44 = s_41;
-				s_45 = (short) (rsbytebuffer_4.readSmart() + s_46);
+				s_45 = (short) (rsbytebuffer_4.readSignedSmart() + s_46);
 				s_46 = s_45;
 				this.triangleX[i_39] = s_43;
 				this.triangleY[i_39] = s_41;

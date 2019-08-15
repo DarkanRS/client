@@ -286,7 +286,7 @@ public class Instrument {
 			}
 
 			this.oscillatorVolume[i] = volume;
-			this.oscillatorPitch[i] = buffer.readSmart();
+			this.oscillatorPitch[i] = buffer.readSignedSmart();
 			this.oscillatorDelays[i] = buffer.readUnsignedSmart();
 		}
 

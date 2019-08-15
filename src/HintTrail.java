@@ -86,7 +86,7 @@ public class HintTrail {
 
 	public HintTrail(GraphicalRenderer graphicalrenderer_1, RsByteBuffer rsbytebuffer_2, int i_3) {
 		this.modelId = i_3;
-		this.length = rsbytebuffer_2.readSmart();
+		this.length = rsbytebuffer_2.readSignedSmart();
 		this.xLocs = new int[this.length];
 		this.yLocs = new int[this.length];
 		int i_4 = rsbytebuffer_2.readUnsignedShort();

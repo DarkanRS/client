@@ -52,19 +52,19 @@ public class AnimationFrame {
 					}
 
 					if ((attribute & 0x1) != 0) {
-						bufferX[used] = (short) transformationBuffer.readSmart();
+						bufferX[used] = (short) transformationBuffer.readSignedSmart();
 					} else {
 						bufferX[used] = value;
 					}
 
 					if ((attribute & 0x2) != 0) {
-						bufferY[used] = (short) transformationBuffer.readSmart();
+						bufferY[used] = (short) transformationBuffer.readSignedSmart();
 					} else {
 						bufferY[used] = value;
 					}
 
 					if ((attribute & 0x4) != 0) {
-						bufferZ[used] = (short) transformationBuffer.readSmart();
+						bufferZ[used] = (short) transformationBuffer.readSignedSmart();
 					} else {
 						bufferZ[used] = value;
 					}
