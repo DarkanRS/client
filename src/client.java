@@ -52,7 +52,7 @@ public final class client extends Engine {
 	static boolean aBool7177 = false;
 	public static int REBOOT_TIMER = 0;
 	public static HintArrow[] HINT_ARROWS = new HintArrow[8];
-	public static Class281[] aClass281Array7180 = new Class281[9];
+	public static HintTrail[] HINT_TRAILS = new HintTrail[9];
 	public static boolean aBool7219 = false;
 	static boolean aBool7241 = false;
 	static boolean aBool7372 = true;
@@ -1089,12 +1089,12 @@ public final class client extends Engine {
 		String str_2 = " ";
 
 		try {
-			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			str_2 = str_2 + coordgrid_3.x + "," + coordgrid_3.y + "," + IndexLoaders.MAP_REGION_DECODER.getSizeX() + "," + IndexLoaders.MAP_REGION_DECODER.getSizeY() + " ";
 			if (VertexNormal.MY_PLAYER != null) {
-				str_2 = str_2 + Class4.anInt35 + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_3.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_3.y) + " ";
+				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_3.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_3.y) + " ";
 			} else {
-				str_2 = str_2 + Class4.anInt35 + "," + Class4.anInt35 + "," + Class4.anInt35 + "," + " ";
+				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
 			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.aPreference_Sub4_8187.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";

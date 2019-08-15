@@ -6,7 +6,7 @@ public class ChatLine {
     public int anInt1085 = Node_Sub20_Sub28.method15396();
     public int time;
     public int type;
-    public int anInt1086;
+    public int effectFlags;
     public String crownedName;
     public String name;
     public String nameSimple;
@@ -20,7 +20,7 @@ public class ChatLine {
         this.anInt1085 = Node_Sub20_Sub28.method15396();
         this.time = client.cycles;
         this.type = type;
-        this.anInt1086 = i_2;
+        this.effectFlags = i_2;
         this.crownedName = string_3;
         this.name = string_4;
         this.nameSimple = string_5;
@@ -56,10 +56,10 @@ public class ChatLine {
 		client.anInt7391 = client.anInt7347;
 	}
 
-	ChatLine(int type, int i_2, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
+	ChatLine(int type, int effectFlags, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
         this.time = client.cycles;
         this.type = type;
-        this.anInt1086 = i_2;
+        this.effectFlags = effectFlags;
         this.crownedName = crownedName;
         this.name = name;
         this.nameSimple = nameSimple;

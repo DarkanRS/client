@@ -39,7 +39,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 				clickType -= 2000;
 			}
 
-			CoordGrid coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_10 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			ClientPacket outgoingpacket_11 = null;
 			if (clickType == 44) {
 				outgoingpacket_11 = ClientPacket.PLAYER_OP1;

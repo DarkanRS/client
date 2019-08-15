@@ -151,7 +151,7 @@ public enum ServerPacket {
 	aClass375_4497(146, 0), //load last interface? no idea
 	IDENTIFY_HOST_NAME(147, 4),
 	IF_RESETTARGETPARAM(148, 10),
-	aClass375_5382(149, -2), //rebuild region maybe?
+	HINT_TRAIL(149, -2), //rebuild region maybe?
 	IF_SETCLICKMASK(150, 5),
 	SET_DRAW_ORDER(151, 1),
 	PUBLIC_MESSAGE(152, -1),

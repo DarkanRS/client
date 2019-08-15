@@ -57,7 +57,7 @@ public class QuickChatMessage {
                 i_10 = i_9 >> 28;
                 i_11 = i_9 >> 14 & 0xff;
                 int i_12 = i_9 & 0xff;
-                CoordGrid coordgrid_13 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+                WorldTile coordgrid_13 = IndexLoaders.MAP_REGION_DECODER.getBase();
                 int i_14 = i_4 + (i_11 << 6) - coordgrid_13.x;
                 int i_15 = i_5 + (i_12 << 6) - coordgrid_13.y;
                 player_8.aBool10571 = class4_7.aBool29;

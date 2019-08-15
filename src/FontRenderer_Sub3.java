@@ -496,7 +496,7 @@ public class FontRenderer_Sub3 extends FontRenderer {
 				return true;
 			}
 		} catch (Exception exception_8) {
-			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			String string_5 = (class184_0.currentPacket != null ? class184_0.currentPacket.opcode : -1) + "," + (class184_0.secondLastPacket != null ? class184_0.secondLastPacket.opcode : -1) + "," + (class184_0.thirdLastPacket != null ? class184_0.thirdLastPacket.opcode : -1) + " " + class184_0.currentPacketSize + "," + (VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_4.x) + "," + (VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_4.y) + " ";
 			for (int i_6 = 0; i_6 < class184_0.currentPacketSize && i_6 < 50; i_6++) {
 				string_5 = string_5 + class184_0.recievedBuffer.buffer[i_6] + ",";

@@ -43,7 +43,7 @@ public class ClanVarDefinitions {
 			Class534_Sub2.method12847(2, (byte) 69);
 		}
 
-		client.anInt7472 = Class4.anInt35;
+		client.anInt7472 = Class4.MY_PLAYER_PLANE;
 	}
 
 	static void method6824(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {

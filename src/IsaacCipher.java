@@ -210,12 +210,12 @@ public final class IsaacCipher {
         SceneObjectManager sceneobjectmanager_2 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager();
         int i_3 = Class11.anInt122 >> 9;
         int i_4 = Class266.anInt3289 >> 9;
-        int i_5 = Class504.getTerrainHeightAtPos(Class11.anInt122, Class266.anInt3289, Class4.anInt35);
+        int i_5 = Class504.getTerrainHeightAtPos(Class11.anInt122, Class266.anInt3289, Class4.MY_PLAYER_PLANE);
         int i_6 = 0;
         if (i_3 > 3 && i_4 > 3 && i_3 < IndexLoaders.MAP_REGION_DECODER.getSizeX() - 4 && i_4 < IndexLoaders.MAP_REGION_DECODER.getSizeY() - 4) {
             for (int x = i_3 - 4; x <= i_3 + 4; x++) {
                 for (int y = i_4 - 4; y <= i_4 + 4; y++) {
-                    int i_9 = Class4.anInt35;
+                    int i_9 = Class4.MY_PLAYER_PLANE;
                     if (i_9 < 3 && regionmap_1.is0x2(x, y, 1857186418)) {
                         ++i_9;
                     }

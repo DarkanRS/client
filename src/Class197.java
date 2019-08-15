@@ -25,11 +25,11 @@ public class Class197 {
 		byte b_5 = (byte) (i_4 >> 28);
 		int i_6 = i_4 >> 14 & 0x3fff;
 		int i_7 = i_4 & 0x3fff;
-		CoordGrid coordgrid_8 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_8 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		player_3.regionBaseX[0] = i_6 - coordgrid_8.x;
 		player_3.regionBaseY[0] = i_7 - coordgrid_8.y;
 		player_3.method11172((float) ((player_3.regionBaseX[0] << 9) + (player_3.getSize() << 8)), player_3.method11165().coords.y, (float) ((player_3.regionBaseY[0] << 9) + (player_3.getSize() << 8)));
-		Class4.anInt35 = player_3.plane = player_3.collisionPlane = b_5;
+		Class4.MY_PLAYER_PLANE = player_3.plane = player_3.collisionPlane = b_5;
 		if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(player_3.regionBaseX[0], player_3.regionBaseY[0], 1664929780)) {
 			player_3.collisionPlane = (byte) (player_3.collisionPlane + 1);
 		}

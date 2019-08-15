@@ -14,7 +14,7 @@ public class Class335 {
 	static void method5961() {
 		if (Class260.aClass277_3221 != null) {
 			Vector3 vector3_1 = Vector3.popVectorStackTo(VertexNormal.MY_PLAYER.method11166().coords);
-			CoordGrid coordgrid_2 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_2 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			vector3_1.x += (float) (coordgrid_2.x << 9);
 			vector3_1.z += (float) (coordgrid_2.y << 9);
 			vector3_1.subtract((float) Class260.aClass277_3221.anInt3349, vector3_1.y, (float) Class260.aClass277_3221.anInt3348);

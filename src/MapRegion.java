@@ -5,7 +5,7 @@ public class MapRegion {
 	public long aLong3183;
 	boolean aBool3171;
 	Class256 aClass256_3164;
-	CoordGrid aClass219_3169 = new CoordGrid();
+	WorldTile aClass219_3169 = new WorldTile();
 	int[][] xteas;
 	int[] regionIds;
 	int[] mapDataArchiveIds;
@@ -39,7 +39,7 @@ public class MapRegion {
 	MapSize aClass106_3165;
 	int anInt3170;
 	int anInt3207;
-	CoordGrid coordGrid = new CoordGrid();
+	WorldTile coordGrid = new WorldTile();
 	CacheableNode_Sub6 aCacheableNode_Sub6_3176;
 	Class283 aClass283_3180;
 	Class329_Sub1 highDetailWaterPlane;
@@ -80,7 +80,7 @@ public class MapRegion {
 		int mapBaseX = (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12) + (i_2 >> 3);
 		int mapBaseY = (Class246.CAM_MOVE_ABSOLUTEY >> 12) + (i_3 >> 3);
 		VertexNormal.MY_PLAYER.plane = 0;
-		Class4.anInt35 = 0;
+		Class4.MY_PLAYER_PLANE = 0;
 		VertexNormal.MY_PLAYER.move(8, 8);
 		byte regionSize = 18;
 		this.xteas = new int[regionSize][4];
@@ -436,9 +436,9 @@ public class MapRegion {
 			if (this.coordGrid != null) {
 				this.aClass219_3169 = this.coordGrid;
 			} else {
-				this.aClass219_3169 = new CoordGrid(0, 0, 0);
+				this.aClass219_3169 = new WorldTile(0, 0, 0);
 			}
-			this.coordGrid = new CoordGrid(0, (this.anInt3170 - (this.sizeX >> 4)) * 8, (this.anInt3207 - (this.sizeY >> 4)) * 8);
+			this.coordGrid = new WorldTile(0, (this.anInt3170 - (this.sizeX >> 4)) * 8, (this.anInt3207 - (this.sizeY >> 4)) * 8);
 			this.aCacheableNode_Sub6_3176 = Class291.method5175(this.coordGrid.x, this.coordGrid.y);
 			this.aClass283_3180 = null;
 			if (!this.aBool3171) {
@@ -912,9 +912,9 @@ public class MapRegion {
 						}
 					}
 				}
-				for (i_5 = 0; i_5 < client.aClass281Array7180.length; i_5++) {
-					if (client.aClass281Array7180[i_5] != null) {
-						client.aClass281Array7180[i_5].method4978(this.sceneObjectManager);
+				for (i_5 = 0; i_5 < client.HINT_TRAILS.length; i_5++) {
+					if (client.HINT_TRAILS[i_5] != null) {
+						client.HINT_TRAILS[i_5].method4978(this.sceneObjectManager);
 					}
 				}
 				ClanVarDefinitions.method6823();
@@ -1119,7 +1119,7 @@ public class MapRegion {
 	}
 
 	public void method4485(int i_1) {
-		this.coordGrid = new CoordGrid();
+		this.coordGrid = new WorldTile();
 		this.anInt3207 = 0;
 		this.anInt3170 = 0;
 	}
@@ -1250,7 +1250,7 @@ public class MapRegion {
 		return this.aClass329_Sub1_3167 != null && this.aClass329_Sub1_3167.aByteArrayArrayArray3788 != null && this.aClass329_Sub1_3167.aByteArrayArrayArray3788[i_1] != null ? this.aClass329_Sub1_3167.aByteArrayArrayArray3788[i_1] : null;
 	}
 
-	public CoordGrid getCoordGrid() {
+	public WorldTile getBase() {
 		return this.coordGrid;
 	}
 

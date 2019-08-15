@@ -330,7 +330,7 @@ public class PacketDecoder {
 			}
 			boolean setting2 = (settings >> 7 & 0x1) == 1;
 			if (targetHash >> 30 != 0) {
-				CoordGrid coordgrid_33 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+				WorldTile coordgrid_33 = IndexLoaders.MAP_REGION_DECODER.getBase();
 				int fromPlane = targetHash >> 28 & 0x3;
 				int x = (targetHash >> 14 & 0x3fff) - coordgrid_33.x;
 				int y = (targetHash & 0x3fff) - coordgrid_33.y;
@@ -738,7 +738,7 @@ public class PacketDecoder {
 			int i_7 = buffer.readInt();
 			int i_8 = buffer.readIntV1();
 			int i_9 = buffer.readUnsigned128Byte();
-			CoordGrid coordgrid_90 = new CoordGrid(buffer.readIntV1());
+			WorldTile coordgrid_90 = new WorldTile(buffer.readIntV1());
 			int i_11 = buffer.readIntV1();
 			int i_12 = buffer.readUnsignedShortLE128();
 			Class470.method7825();
@@ -877,7 +877,7 @@ public class PacketDecoder {
 				PingRequester.anInt5864 = -1;
 				Class86.anInt833 = -1;
 			} else {
-				CoordGrid coordgrid_114 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+				WorldTile coordgrid_114 = IndexLoaders.MAP_REGION_DECODER.getBase();
 				int i_6 = key >> 14 & 0x3fff;
 				int i_7 = key & 0x3fff;
 				i_6 -= coordgrid_114.x;
@@ -1081,16 +1081,16 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return true;
-		} else if (context.currentPacket == ServerPacket.aClass375_5382) {
-			int key = buffer.readUnsignedByte();
-			int flags = buffer.readBigSmart();
-			if (client.aClass281Array7180[key] != null) {
-				client.aClass281Array7180[key].method4979(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
-				client.aClass281Array7180[key] = null;
+		} else if (context.currentPacket == ServerPacket.HINT_TRAIL) {
+			int idx = buffer.readUnsignedByte();
+			int modelId = buffer.readBigSmart();
+			if (client.HINT_TRAILS[idx] != null) {
+				client.HINT_TRAILS[idx].method4979(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+				client.HINT_TRAILS[idx] = null;
 			}
-			if (flags != -1) {
-				client.aClass281Array7180[key] = new Class281(Renderers.SOFTWARE_RENDERER, buffer, flags);
-				client.aClass281Array7180[key].method4978(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
+			if (modelId != -1) {
+				client.HINT_TRAILS[idx] = new HintTrail(Renderers.SOFTWARE_RENDERER, buffer, modelId);
+				client.HINT_TRAILS[idx].method4978(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager());
 			}
 			context.currentPacket = null;
 			return true;
@@ -1167,7 +1167,7 @@ public class PacketDecoder {
 			Static.UPDATE_ZONE_X = buffer.read128Byte() << 3;
 			Class158_Sub1_Sub2.UPDATE_ZONE_Y = buffer.readByte() << 3;
 			Class272.UPDATE_ZONE_PLANE = buffer.readUnsignedByte();
-			CoordGrid coordgrid_67 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_67 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			for (Node_Sub29 class282_sub29_109 = (Node_Sub29) client.aClass465_7414.method7750(-1866877180); class282_sub29_109 != null; class282_sub29_109 = (Node_Sub29) client.aClass465_7414.method7751((byte) 48)) {
 				int i_6 = (int) (class282_sub29_109.data >> 28 & 0x3L);
 				int i_7 = (int) (class282_sub29_109.data & 0x3fffL);
@@ -1256,7 +1256,7 @@ public class PacketDecoder {
 							}
 							arrow.targetType = 2;
 							arrow.plane = buffer.readUnsignedByte();
-							CoordGrid grid = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+							WorldTile grid = IndexLoaders.MAP_REGION_DECODER.getBase();
 							arrow.x += buffer.readUnsignedShort() - grid.x << 9;
 							arrow.y += buffer.readUnsignedShort() - grid.y << 9;
 							arrow.height = buffer.readUnsignedByte() << 2;
@@ -1299,7 +1299,7 @@ public class PacketDecoder {
 			} else {
 				startHeight *= 4;
 			}
-			CoordGrid coordgrid_39 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_39 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			int localX = x - coordgrid_39.x * 2;
 			int localY = y - coordgrid_39.y * 2;
 			int xOff = xDist + localX;
@@ -2233,21 +2233,21 @@ public class PacketDecoder {
 			int type = objFlags >> 2;
 			int rotation = objFlags & 0x3;
 			int slot = client.OBJECT_TYPE_SLOTS[type];
-			CoordGrid coordgrid_33 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_33 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			x -= coordgrid_33.x;
 			y -= coordgrid_33.y;
 			Class9.animateObject(plane, x, y, slot, type, rotation, animationId);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.VORBIS_SPEECH_SOUND) {
-			int key = buffer.readUnsignedShort();
-			if (key == 65535) {
-				key = -1;
+			int id = buffer.readUnsignedShort();
+			if (id == 65535) {
+				id = -1;
 			}
-			int flags = buffer.readUnsignedByte();
-			int i_6 = buffer.readUnsignedShort();
+			int soundType = buffer.readUnsignedByte();
+			int delay = buffer.readUnsignedShort();
 			int i_7 = buffer.readUnsignedByte();
-			Class435.playSoundVorbis(key, flags, i_6, i_7, true, 256);
+			Class435.playSoundVorbis(id, soundType, delay, i_7, true, 256);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IGNORE_LIST) {
@@ -2286,7 +2286,7 @@ public class PacketDecoder {
 			int i_11 = i_10 >> 2;
 			int i_12 = i_10 & 0x3;
 			int i_35 = buffer.readInt();
-			CoordGrid coordgrid_36 = new CoordGrid(buffer.readIntV2());
+			WorldTile coordgrid_36 = new WorldTile(buffer.readIntV2());
 			int i_15 = buffer.readInt();
 			Class470.method7825();
 			IdentiKitIndexLoader.method812(key, new Node_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
@@ -2349,7 +2349,7 @@ public class PacketDecoder {
 		RsBitsBuffer buffer = client.GAME_CONNECTION_CONTEXT.recievedBuffer;
 		if (UpdateZonePacket.GROUND_ITEM_COUNT == packet) {
 			int i_3 = buffer.readUnsignedByte();
-			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int y = i_5 + coordgrid_4.y;
 			int i_7 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2469,7 +2469,7 @@ public class PacketDecoder {
 			}
 		} else if (UpdateZonePacket.REMOVE_GROUND_ITEM == packet) {
 			int i_3 = buffer.readUnsignedByteC();
-			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			int i_5 = (i_3 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int i_6 = i_5 + coordgrid_4.y;
 			int i_7 = (i_3 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2597,7 +2597,7 @@ public class PacketDecoder {
 		} else if (UpdateZonePacket.GROUND_ITEM_REVEAL == packet) {
 			int playerId = buffer.readUnsignedShort();
 			int i_21 = buffer.readUnsignedByte();
-			CoordGrid coordgrid_25 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_25 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			int i_6 = (i_21 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int y = i_6 + coordgrid_25.y;
 			int i_8 = (i_21 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2617,7 +2617,7 @@ public class PacketDecoder {
 			int amount = buffer.readUnsignedShortLE128();
 			int id = buffer.readUnsignedShort128();
 			int i_5 = buffer.readUnsignedByteC();
-			CoordGrid coordgrid_31 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_31 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			int localY = (i_5 & 0x7) + Class158_Sub1_Sub2.UPDATE_ZONE_Y;
 			int y = localY + coordgrid_31.y;
 			int localX = (i_5 >> 4 & 0x7) + Static.UPDATE_ZONE_X;
@@ -2634,25 +2634,25 @@ public class PacketDecoder {
 			int localX = (localCoordsHash >> 4 & 0xf) + Static.UPDATE_ZONE_X * 2;
 			int localY = Class158_Sub1_Sub2.UPDATE_ZONE_Y * 2 + (localCoordsHash & 0xf);
 			int flags = buffer.readUnsignedByte();
-			boolean useFloorHeight = (flags & 0x1) != 0;
-			boolean bool_34 = (flags & 0x2) != 0;
-			int basOffIdx = bool_34 ? flags >> 2 : -1;
+			boolean adjustToTerrainHeight = (flags & 0x1) != 0;
+			boolean adjustToBASAnimFrameHeight = (flags & 0x2) != 0;
+			int basOffIdx = adjustToBASAnimFrameHeight ? flags >> 2 : -1;
 			int xOff = localX + buffer.readByte();
 			int yOff = localY + buffer.readByte();
 			int source = buffer.readShort();
 			int lockOn = buffer.readShort();
 			int spotAnimId = buffer.readUnsignedShort();
 			int startHeight = buffer.readUnsignedByte();
-			if (bool_34) {
+			if (adjustToBASAnimFrameHeight) {
 				startHeight = (byte) startHeight;
 			} else {
 				startHeight *= 4;
 			}
 			int endHeight = buffer.readUnsignedByte() * 4;
-			int delay = buffer.readUnsignedShort();
+			int startTime = buffer.readUnsignedShort();
 			int endTime = buffer.readUnsignedShort();
 			int angle = buffer.readUnsignedByte();
-			int angle2 = buffer.readUnsignedShort();
+			int slope = buffer.readUnsignedShort();
 			if (angle == 255) {
 				angle = -1;
 			}
@@ -2663,8 +2663,8 @@ public class PacketDecoder {
 				yOff *= 256;
 				startHeight <<= 2;
 				endHeight <<= 2;
-				angle2 <<= 2;
-				CursorIndexLoader.createProjectile(spotAnimId, source, lockOn, basOffIdx, startHeight, endHeight, localX, localY, xOff, yOff, delay, endTime, angle, angle2, useFloorHeight);
+				slope <<= 2;
+				CursorIndexLoader.createProjectile(spotAnimId, source, lockOn, basOffIdx, startHeight, endHeight, localX, localY, xOff, yOff, startTime, endTime, angle, slope, adjustToTerrainHeight);
 			}
 		} else if (UpdateZonePacket.CREATE_OBJECT == packet) {
 			int i_3 = buffer.readInt();

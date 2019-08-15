@@ -1,7 +1,7 @@
 public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 
 	MeshRasterizer aMeshRasterizer_10310;
-	Class281 aClass281_10311;
+	HintTrail aClass281_10311;
 
 	boolean method13020(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		return false;
@@ -31,7 +31,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 
 	Class285 method12990(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aMeshRasterizer_10310 == null) {
-			this.aMeshRasterizer_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
+			this.aMeshRasterizer_10310 = this.aClass281_10311.getMeshRasterizer(graphicalrenderer_1);
 		}
 
 		if (this.aMeshRasterizer_10310 != null) {
@@ -94,7 +94,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 
 	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aMeshRasterizer_10310 == null) {
-			this.aMeshRasterizer_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
+			this.aMeshRasterizer_10310 = this.aClass281_10311.getMeshRasterizer(graphicalrenderer_1);
 		}
 
 		if (this.aMeshRasterizer_10310 != null) {
@@ -119,7 +119,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 
 	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aMeshRasterizer_10310 == null) {
-			this.aMeshRasterizer_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
+			this.aMeshRasterizer_10310 = this.aClass281_10311.getMeshRasterizer(graphicalrenderer_1);
 		}
 
 		if (this.aMeshRasterizer_10310 != null) {
@@ -155,7 +155,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 
 	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
 		if (this.aMeshRasterizer_10310 == null) {
-			this.aMeshRasterizer_10310 = this.aClass281_10311.method4977(graphicalrenderer_1);
+			this.aMeshRasterizer_10310 = this.aClass281_10311.getMeshRasterizer(graphicalrenderer_1);
 		}
 
 		if (this.aMeshRasterizer_10310 != null) {
@@ -185,7 +185,7 @@ public class Transform_Sub1_Sub1_Sub1 extends Transform_Sub1_Sub1 {
 		return this.aMeshRasterizer_10310 != null ? this.aMeshRasterizer_10310.i() : false;
 	}
 
-	Transform_Sub1_Sub1_Sub1(SceneObjectManager sceneobjectmanager_1, Class281 class281_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+	Transform_Sub1_Sub1_Sub1(SceneObjectManager sceneobjectmanager_1, HintTrail class281_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
 		super(sceneobjectmanager_1, i_3, i_4, i_5, i_6, i_7, i_5 >> 9, i_5 >> 9, i_7 >> 9, i_7 >> 9, false, (byte) 0);
 		this.aClass281_10311 = class281_2;
 	}

@@ -33,7 +33,7 @@ public class CutsceneArea extends Node {
 			tcpmessage_4 = Class271.createPacket(ClientPacket.MINI_WALK, client.GAME_CONNECTION_CONTEXT.isaac);
 		}
 
-		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		tcpmessage_4.buffer.writeByte(VertexNormal.method1465(-2046314159) ? 1 : 0);
 		tcpmessage_4.buffer.writeShort(i_0 + coordgrid_5.x);
 		tcpmessage_4.buffer.writeShortLE(coordgrid_5.y + i_1);

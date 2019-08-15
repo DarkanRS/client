@@ -416,7 +416,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 
 	static void iComponentOnGroundTile(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
 		if (i_1 >= 0 && i_2 >= 0 && Class20.aClass384_158 != null) {
-			CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			Matrix44Arr matrix44arr_5 = graphicalrenderer_0.method8449();
 			graphicalrenderer_0.method8424(Class20.aClass384_158);
 			graphicalrenderer_0.method8457(Class20.aClass294_155);

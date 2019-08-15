@@ -114,14 +114,14 @@ public class RSInterface {
 			boolean bool_3 = false;
 			int i_4;
 			if (sound.aNode_Sub15_Sub5_3304 == null) {
-				--sound.anInt3297;
-				if (sound.anInt3297 >= (sound.method4793((byte) -64) ? -1500 : -10)) {
+				--sound.delay;
+				if (sound.delay >= (sound.method4793((byte) -64) ? -1500 : -10)) {
 					if (sound.type == 1 && sound.soundEffect == null) {
 						sound.soundEffect = SoundEffect.getSoundEffect(IndexLoaders.SOUND_EFFECT_INDEX, sound.soundId, 0);
 						if (sound.soundEffect == null) {
 							continue;
 						}
-						sound.anInt3297 += sound.soundEffect.getDelay();
+						sound.delay += sound.soundEffect.getDelay();
 					} else if (sound.method4793((byte) -41) && (sound.aNode_Sub18_3294 == null || sound.aNode_Sub26_Sub1_Sub1_3296 == null)) {
 						if (sound.aNode_Sub18_3294 == null) {
 							sound.aNode_Sub18_3294 = MIDIInstrument.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, sound.soundId);
@@ -136,7 +136,7 @@ public class RSInterface {
 							}
 						}
 					}
-					if (sound.anInt3297 < 0) {
+					if (sound.delay < 0) {
 						i_4 = 8192;
 						int i_5;
 						if (sound.anInt3298 != 0) {
@@ -151,13 +151,13 @@ public class RSInterface {
 								int i_13 = (i_12 << 9) + 256 - (int) vector3_9.z + i_8;
 								int i_14 = Math.abs(i_11) + Math.abs(i_13) - 512;
 								if (i_14 > i_7) {
-									sound.anInt3297 = -99999;
+									sound.delay = -99999;
 									continue;
 								}
 								if (i_14 < 0) {
 									i_14 = 0;
 								}
-								i_5 = (i_7 - i_14) * Class393.preferences.ambientSoundVolume.method12714() * sound.anInt3299 / i_7 >> 2;
+								i_5 = (i_7 - i_14) * Class393.preferences.ambientSoundVolume.method12714() * sound.volume / i_7 >> 2;
 								if (sound.anInt3305 != -1) {
 									i_10 = sound.anInt3305;
 									i_12 = sound.anInt3306;
@@ -181,7 +181,7 @@ public class RSInterface {
 								i_5 = 0;
 							}
 						} else {
-							i_5 = sound.anInt3299 * (sound.type == 3 ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) >> 2;
+							i_5 = sound.volume * (sound.type == 3 ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) >> 2;
 						}
 						if (i_5 > 0) {
 							if (sound.type == 1) {

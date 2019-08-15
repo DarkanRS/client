@@ -26,7 +26,7 @@ public class Item extends Node {
 			}
 
 			if (Class187.anInt2363 != 2 && Class187.anInt2363 != 5 && CursorDefintions.aNativeSprite_5004 != null) {
-				CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+				WorldTile coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getBase();
 				int i_8;
 				int i_9;
 				int i_10;

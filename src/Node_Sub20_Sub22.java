@@ -247,7 +247,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 																} else if (i_2 > 3) {
 																	i_2 = 3;
 																}
-																CoordGrid coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+																WorldTile coordgrid_12 = IndexLoaders.MAP_REGION_DECODER.getBase();
 																VarnIndexLoader.method7460(i_2, VertexNormal.MY_PLAYER.regionBaseX[0] + coordgrid_12.x, VertexNormal.MY_PLAYER.regionBaseY[0] + coordgrid_12.y, -1104014965);
 															}
 															for (i_2 = 0; i_2 < 5; i_2++) {
@@ -371,6 +371,6 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 	}
 
 	public static void setParticleIndex(Index index_0) {
-		CoordGrid.PARTICLE_INDEX = index_0;
+		WorldTile.PARTICLE_INDEX = index_0;
 	}
 }

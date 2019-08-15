@@ -46,8 +46,8 @@ public class ParamDefinitions {
 			ParticleProducerDefinition.method1160(-319039192);
 			Class386.method6673(326422820);
 			int i_1;
-			for (i_1 = 0; i_1 < client.aClass281Array7180.length; i_1++) {
-				Class281 class281_10000 = client.aClass281Array7180[i_1];
+			for (i_1 = 0; i_1 < client.HINT_TRAILS.length; i_1++) {
+				HintTrail class281_10000 = client.HINT_TRAILS[i_1];
 			}
 			int i_3;
 			for (i_1 = 0; i_1 < 2048; i_1++) {

@@ -149,7 +149,7 @@ public class QuickchatFiller implements Interface19 {
 		if (class268_0.aNode_Sub15_Sub5_3304 != null) {
 			Class79.aNode_Sub15_Sub4_783.method15276(class268_0.aNode_Sub15_Sub5_3304);
 		} else {
-			class268_0.anInt3297 = Integer.MIN_VALUE;
+			class268_0.delay = Integer.MIN_VALUE;
 		}
 	}
 }

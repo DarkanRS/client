@@ -116,7 +116,7 @@ public class MapSpriteIndexLoader {
 				NPC npc_10 = (NPC) animable_0;
 				if (npc_10.anInt10578 != -1 && (npc_10.anInt10355 == 0 || npc_10.anInt10366 > 0)) {
 					vector3_9 = npc_10.method11166().coords;
-					CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+					WorldTile coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getBase();
 					i_5 = (int) vector3_9.x - (npc_10.anInt10578 * 256 - coordgrid_7.x * 256 - coordgrid_7.x * 256);
 					int i_6 = (int) vector3_9.z - (npc_10.anInt10577 * 256 - coordgrid_7.y * 256 - coordgrid_7.y * 256);
 					if (i_5 != 0 || i_6 != 0) {

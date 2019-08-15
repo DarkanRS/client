@@ -398,7 +398,7 @@ public class AsyncOutputStream implements Runnable {
 					Class283 class283_44 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 79);
 					if (class283_44 != null) {
 						IndexLoaders.WORLD_MAP_LOADER.method3697(1024, 64, -2093693613);
-						CoordGrid coordgrid_45 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+						WorldTile coordgrid_45 = IndexLoaders.MAP_REGION_DECODER.getBase();
 						for (i_23 = 0; i_23 < class283_44.anInt3382; i_23++) {
 							i_24 = class283_44.anIntArray3381[i_23];
 							if (i_24 >> 28 == VertexNormal.MY_PLAYER.plane) {

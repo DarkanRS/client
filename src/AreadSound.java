@@ -20,9 +20,9 @@ public class AreadSound {
 
 	int anInt3302;
 
-	int anInt3297;
+	int delay;
 
-	int anInt3299;
+	int volume;
 
 	int anInt3298;
 
@@ -36,8 +36,8 @@ public class AreadSound {
 		this.type = type;
 		this.soundId = soundId;
 		this.anInt3302 = i_3;
-		this.anInt3297 = i_4;
-		this.anInt3299 = i_5;
+		this.delay = i_4;
+		this.volume = i_5;
 		this.anInt3298 = i_6;
 		this.anInt3295 = i_7;
 		if (class521_sub1_8 != null && class521_sub1_8 instanceof Transform_Sub1_Sub1) {

@@ -99,7 +99,7 @@ public class Node_Sub11_Sub1 extends Node_Sub11 {
 		if (defs != null) {
 			return defs;
 		} else {
-			byte[] bytes_3 = CoordGrid.PARTICLE_INDEX.getFile(0, i_0);
+			byte[] bytes_3 = WorldTile.PARTICLE_INDEX.getFile(0, i_0);
 			defs = new ParticleProducerDefinition();
 			if (bytes_3 != null) {
 				defs.decode(new RsByteBuffer(bytes_3));

@@ -3178,7 +3178,7 @@ public class CS2Interpreter {
 	static final void getMyPlayerPos(CS2Executor executor) {
 		byte b_2 = VertexNormal.MY_PLAYER.plane;
 		Vector3 vector3_3 = VertexNormal.MY_PLAYER.method11166().coords;
-		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		int i_5 = ((int) vector3_3.x >> 9) + coordgrid_4.x;
 		int i_6 = ((int) vector3_3.z >> 9) + coordgrid_4.y;
 		executor.intStack[++executor.intStackPtr - 1] = (i_5 << 14) + i_6 + (b_2 << 28);
@@ -5493,7 +5493,7 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		int i_5 = executor.intStack[executor.intStackPtr + 3];
-		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		RouteStrategy.moveCamera((i_2 >> 14 & 0x3fff) - coordgrid_6.x, (i_2 & 0x3fff) - coordgrid_6.y, i_3 << 2, i_4, i_5, false);
 	}
 
@@ -6130,7 +6130,7 @@ public class CS2Interpreter {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		int i_3 = i_2 >> 14 & 0x3fff;
 		int i_4 = i_2 & 0x3fff;
-		CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		i_3 -= coordgrid_5.x;
 		if (i_3 < 0) {
 			i_3 = 0;
@@ -7475,7 +7475,7 @@ public class CS2Interpreter {
 		ChatLine chatline_3 = HintArrow.method3032(i_2);
 		int i_4 = 0;
 		if (chatline_3 != null) {
-			i_4 = chatline_3.anInt1086;
+			i_4 = chatline_3.effectFlags;
 		}
 		executor.intStack[++executor.intStackPtr - 1] = i_4;
 	}
@@ -8086,7 +8086,7 @@ public class CS2Interpreter {
 		if (i_2 == -1) {
 			int i_3 = i_2 >> 14 & 0x3fff;
 			int i_4 = i_2 & 0x3fff;
-			CoordGrid coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_5 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			i_3 -= coordgrid_5.x;
 			if (i_3 < 0) {
 				i_3 = 0;
@@ -9825,7 +9825,7 @@ public class CS2Interpreter {
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
 		int i_4 = executor.intStack[executor.intStackPtr + 2];
 		int i_5 = executor.intStack[executor.intStackPtr + 3];
-		CoordGrid coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_6 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		Class11.method469((i_2 >> 14 & 0x3fff) - coordgrid_6.x, (i_2 & 0x3fff) - coordgrid_6.y, i_3 << 2, i_4, i_5, (byte) -62);
 	}
 

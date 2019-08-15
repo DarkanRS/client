@@ -6,9 +6,9 @@ public class Class435 {
 		throw new Error();
 	}
 
-	public static AreadSound playSoundVorbis(int i_0, int i_1, int i_2, int i_3, boolean idk, int i_5) {
-		if ((idk ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && i_1 != 0 && Class260.SOUNDS_SIZE < 50 && i_0 != -1) {
-			AreadSound class268_7 = new AreadSound((byte) (idk ? 3 : 2), i_0, i_1, i_2, i_3, 0, i_5, (Transform_Sub1) null);
+	public static AreadSound playSoundVorbis(int soundId, int type, int delay, int i_3, boolean voiceEffect, int i_5) {
+		if ((voiceEffect ? Class393.preferences.voiceOverVolume.method12714() : Class393.preferences.soundEffectVolume.method12714()) != 0 && type != 0 && Class260.SOUNDS_SIZE < 50 && soundId != -1) {
+			AreadSound class268_7 = new AreadSound((byte) (voiceEffect ? 3 : 2), soundId, type, delay, i_3, 0, i_5, (Transform_Sub1) null);
 			Class260.SOUNDS[++Class260.SOUNDS_SIZE - 1] = class268_7;
 			return class268_7;
 		} else {
@@ -80,7 +80,7 @@ public class Class435 {
 				int i_4 = -1;
 				int i_5 = -1;
 				Vector3 vector3_6 = VertexNormal.MY_PLAYER.method11166().coords;
-				CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+				WorldTile coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getBase();
 				if (Class291_Sub1.aCacheableNode_Sub6_3491.method14778(VertexNormal.MY_PLAYER.plane, ((int) vector3_6.x >> 9) + coordgrid_7.x, ((int) vector3_6.z >> 9) + coordgrid_7.y, ints_3, -1889386276)) {
 					i_4 = ints_3[1] - Class291_Sub1.anInt3472;
 					i_5 = ints_3[2] - Class291_Sub1.anInt3473;

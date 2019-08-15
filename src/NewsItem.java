@@ -40,7 +40,7 @@ public class NewsItem {
 	}
 
 	static void method1806(RsBitsBuffer rsbitsbuffer_0, int i_1, int i_2) {
-		CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+		WorldTile coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
 		boolean bool_4 = rsbitsbuffer_0.readBits(1) == 1;
 		if (bool_4) {
 			Class197.anIntArray2435[++Class197.anInt2434 - 1] = i_1;
@@ -194,8 +194,8 @@ public class NewsItem {
 					if (IndexLoaders.MAP_REGION_DECODER.method4433().is0x2(i_12, i_13, 1753987250)) {
 						player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
 					}
-					if (client.myPlayerIndex == i_1 && player_6.plane != Class4.anInt35) {
-						Class4.anInt35 = player_6.plane;
+					if (client.myPlayerIndex == i_1 && player_6.plane != Class4.MY_PLAYER_PLANE) {
+						Class4.MY_PLAYER_PLANE = player_6.plane;
 					}
 				} else {
 					i_8 = rsbitsbuffer_0.readBits(30);
@@ -216,7 +216,7 @@ public class NewsItem {
 						player_6.collisionPlane = (byte) (player_6.collisionPlane + 1);
 					}
 					if (client.myPlayerIndex == i_1) {
-						Class4.anInt35 = player_6.plane;
+						Class4.MY_PLAYER_PLANE = player_6.plane;
 					}
 				}
 			}

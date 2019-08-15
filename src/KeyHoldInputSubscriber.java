@@ -79,7 +79,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 			}
 			int i_4 = (int) client.camAngleY + client.anInt7343 & 0x3fff;
 			Vector3 vector3_5 = VertexNormal.MY_PLAYER.method11166().coords;
-			LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos((int) vector3_5.x, (int) vector3_5.z, Class4.anInt35) - 200, Class266.anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0, 1500551332);
+			LoadingStage.method6683(Class11.anInt122, Class504.getTerrainHeightAtPos((int) vector3_5.x, (int) vector3_5.z, Class4.MY_PLAYER_PLANE) - 200, Class266.anInt3289, i_3, i_4, (i_3 >> 3) * 3 + 600 << 2, i_0, 1500551332);
 			float f_6 = 1.0F - (float) ((100 - i_2) * (100 - i_2) * (100 - i_2)) / 1000000.0F;
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = (int) ((float) Class186.anInt2349 + f_6 * (float) (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX - Class186.anInt2349));
 			Class109_Sub1.CAM_MOVE_ABSOLUTEZ = (int) ((float) Transform_Sub1_Sub2.anInt9461 + f_6 * (float) (Class109_Sub1.CAM_MOVE_ABSOLUTEZ - Transform_Sub1_Sub2.anInt9461));

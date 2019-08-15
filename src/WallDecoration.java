@@ -328,7 +328,7 @@ public class WallDecoration extends Transform_Sub1_Sub4 implements SceneObject {
 	static final void method16087(Entity animable_0) {
 		if (animable_0.anIntArray10335 != null || animable_0.anIntArray10362 != null) {
 			boolean bool_2 = true;
-			CoordGrid coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid();
+			WorldTile coordgrid_3 = IndexLoaders.MAP_REGION_DECODER.getBase();
 			for (int i_4 = 0; i_4 < animable_0.anIntArray10335.length; i_4++) {
 				int i_5 = -1;
 				if (animable_0.anIntArray10335 != null) {

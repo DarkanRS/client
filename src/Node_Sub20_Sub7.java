@@ -62,7 +62,7 @@ public class Node_Sub20_Sub7 extends Node_Sub20 {
 
 	static final void method15240() {
 		Message.method7275(Renderers.SOFTWARE_RENDERER);
-		if (client.anInt7472 != Class4.anInt35) {
+		if (client.anInt7472 != Class4.MY_PLAYER_PLANE) {
 			ClanVarDefinitions.method6823();
 		}
 

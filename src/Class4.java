@@ -12,7 +12,7 @@ public class Class4 {
 
 	public static int WORLD_LIST_SIZE;
 
-	public static int anInt35;
+	public static int MY_PLAYER_PLANE;
 
 	static float method288(float f_0, float f_1, float f_2, float f_3, float f_4, float f_5, int i_6, int i_7) {
 		float f_8 = 0.0F;

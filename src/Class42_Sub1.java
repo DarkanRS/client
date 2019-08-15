@@ -43,8 +43,8 @@ public class Class42_Sub1 extends Class42 {
 			client.HINT_ARROWS[i_1] = null;
 		}
 
-		for (i_1 = 0; i_1 < client.aClass281Array7180.length; i_1++) {
-			client.aClass281Array7180[i_1] = null;
+		for (i_1 = 0; i_1 < client.HINT_TRAILS.length; i_1++) {
+			client.HINT_TRAILS[i_1] = null;
 		}
 
 		Class186.method3084();
