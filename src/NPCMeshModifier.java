@@ -1,6 +1,6 @@
 public class NPCMeshModifier {
 
-	public static int anInt4994;
+	public static int MESSAGES;
 
 	public long aLong4993;
 

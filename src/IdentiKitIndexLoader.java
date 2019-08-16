@@ -67,8 +67,8 @@ public class IdentiKitIndexLoader implements IndexLoader {
 	public static void method809(RsByteBuffer rsbytebuffer_0, int i_1) {
 		byte[] bytes_2 = new byte[24];
 		try {
-			Engine.aClass440_3269.method7347(0L);
-			Engine.aClass440_3269.method7351(bytes_2);
+			Engine.PLAYER_UID192.method7347(0L);
+			Engine.PLAYER_UID192.method7351(bytes_2);
 			int i_3;
 			for (i_3 = 0; i_3 < 24 && bytes_2[i_3] == 0; i_3++) {
 				;
@@ -84,32 +84,32 @@ public class IdentiKitIndexLoader implements IndexLoader {
 		rsbytebuffer_0.writeBytes(bytes_2, 0, 24);
 	}
 
-	public static final Node_Sub44 method812(int i_0, Node_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
-		Node_Sub44 class282_sub44_5 = (Node_Sub44) client.aClass465_7442.get((long) i_0);
-		if (class282_sub44_5 != null) {
-			Class351.closeChildren(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
+	public static final IFSubNode openSub(int parentId, IFSubNode sub, int[] ints_2, boolean bool_3, byte b_4) {
+		IFSubNode currOpen = (IFSubNode) client.OPEN_INTERFACES.get((long) parentId);
+		if (currOpen != null) {
+			Class351.closeChildren(currOpen, currOpen.interfaceId != sub.interfaceId, bool_3);
 		}
-		client.aClass465_7442.put(class282_sub44_1, (long) i_0);
-		ClipMap.method6007(class282_sub44_1.anInt8063, ints_2, -1937827624);
-		IComponentDefinitions icomponentdefinitions_6 = IComponentDefinitions.getDefs(i_0);
-		if (icomponentdefinitions_6 != null) {
-			Class109.redrawComponent(icomponentdefinitions_6);
+		client.OPEN_INTERFACES.put(sub, (long) parentId);
+		ClipMap.method6007(sub.interfaceId, ints_2, -1937827624);
+		IComponentDefinitions parentDef = IComponentDefinitions.getDefs(parentId);
+		if (parentDef != null) {
+			Class109.redrawComponent(parentDef);
 		}
 		if (client.aClass118_7352 != null) {
 			Class109.redrawComponent(client.aClass118_7352);
 			client.aClass118_7352 = null;
 		}
 		OutputStream_Sub1.method12938((byte) 26);
-		if (icomponentdefinitions_6 != null) {
-			HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
+		if (parentDef != null) {
+			HostNameIdentifier.method483(CustomCursorsPreference.INTERFACES[parentDef.idHash >>> 16], parentDef, !bool_3, -1031164822);
 		}
 		if (!bool_3) {
-			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);
+			Class150.method2582(sub.interfaceId, ints_2, -1100140607);
 		}
 		if (!bool_3 && client.BASE_WINDOW_ID != -1) {
 			Class383.method6514(client.BASE_WINDOW_ID, 1, 815212600);
 		}
-		return class282_sub44_1;
+		return sub;
 	}
 
 	static final void method813(int i_0, int i_1, int i_2, int i_3) {

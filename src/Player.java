@@ -407,7 +407,7 @@ public class Player extends Entity {
 		this.method15875(string_1, i_2, i_3, Class204.method3363(592406309) * QuickchatFiller.ENTITY_DEFAULTS.playerMessageDuration, 1858323003);
 	}
 
-	public int method15794() {
+	public int getCS2Index() {
 		return -this.index - 1;
 	}
 
@@ -813,7 +813,7 @@ public class Player extends Entity {
 		this.skullId = buffer.readByte();
 		this.headIconId = buffer.readByte();
 		this.hidden = buffer.readByte() == 1;
-		if (ServerEnvironment.LIVE == HDWaterTile.SERVER_ENVIRONMENT && client.rights >= 2) {
+		if (ServerEnvironment.LIVE == HDWaterTile.SERVER_ENVIRONMENT && client.PLAYER_RIGHTS >= 2) {
 			this.hidden = false;
 		}
 

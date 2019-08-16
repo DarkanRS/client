@@ -1,7 +1,7 @@
 import java.io.EOFException;
 import java.io.IOException;
 
-public class Class440 {
+public class UID192 {
 
 	public static int anInt5357;
 	long aLong5353;
@@ -137,7 +137,7 @@ public class Class440 {
 		this.method7350(bytes_1, 0, bytes_1.length, 79386718);
 	}
 
-	public void method7352(byte[] bytes_1, int i_2, int i_3) throws IOException {
+	public void write(byte[] bytes_1, int i_2, int i_3) throws IOException {
 		try {
 			if ((long) i_3 + this.aLong5353 > this.aLong5355) {
 				this.aLong5355 = this.aLong5353 + (long) i_3;
@@ -245,7 +245,7 @@ public class Class440 {
 
 	}
 
-	public Class440(Class442 class442_1, int i_2) throws IOException {
+	public UID192(Class442 class442_1, int i_2) throws IOException {
 		this.aClass442_5346 = class442_1;
 		this.aLong5355 = this.aLong5354 = class442_1.method7388();
 		this.aByteArray5350 = new byte[i_2];

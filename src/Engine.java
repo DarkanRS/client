@@ -34,9 +34,9 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     static volatile long aLong3280 = 0L;
     protected static boolean aBool3259 = false;
     static volatile boolean aBool3275 = true;
-    static Class440 aClass440_3269 = null;
-    protected static Class440 aClass440_3270 = null;
-    static Class440 aClass440_3271 = null;
+    static UID192 PLAYER_UID192 = null;
+    protected static UID192 aClass440_3270 = null;
+    static UID192 aClass440_3271 = null;
     static Class279 aClass279_3267 = null;
     static long aLong3255 = 0L;
     static boolean aBool3276 = false;
@@ -51,7 +51,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     static int anInt3279;
 
     public void supplyApplet(Applet applet_1) {
-        Node_Sub44.anApplet8065 = applet_1;
+        IFSubNode.anApplet8065 = applet_1;
     }
 
     final void method4655(Class274 class274_1, String string_2, String string_3, int i_4, int i_5, boolean bool_8, int i_9) {
@@ -68,7 +68,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class107.anInt1082 += 2 * class274_1.method4872();
                 this.method4661(class274_1.getName());
             }
-            RuntimeException_Sub3.anApplet10460 = Node_Sub44.anApplet8065;
+            RuntimeException_Sub3.anApplet10460 = IFSubNode.anApplet8065;
             this.method4656(string_2, string_3, i_4, i_5);
         } catch (Throwable throwable_11) {
             Class151.method2594((String) null, throwable_11, (byte) -115);
@@ -163,11 +163,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         }
         Class499.method8334(aFile3264);
         Comparable_Sub1.method5827();
-        aClass440_3270 = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.dat2", 1605505802), 524288000L), 5200);
-        aClass440_3271 = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx255", 526140284), 1048576L), 6000);
-        Class97.aClass440Array996 = new Class440[HitbarIndexLoader.anInt3451];
+        aClass440_3270 = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.dat2", 1605505802), 524288000L), 5200);
+        aClass440_3271 = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx255", 526140284), 1048576L), 6000);
+        Class97.aClass440Array996 = new UID192[HitbarIndexLoader.anInt3451];
         for (i_13 = 0; i_13 < HitbarIndexLoader.anInt3451; i_13++) {
-            Class97.aClass440Array996[i_13] = new Class440(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx" + i_13, 535964137), 1048576L), 6000);
+            Class97.aClass440Array996[i_13] = new UID192(new Class442(CutsceneAction_Sub23.method14681("main_file_cache.idx" + i_13, 535964137), 1048576L), 6000);
         }
         try {
             Class274.aClass470_3336 = new Class470();
@@ -361,7 +361,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     }
 
     final boolean method4665(byte b_1) {
-        String string_2 = Node_Sub44.anApplet8065.getDocumentBase().getHost().toLowerCase();
+        String string_2 = IFSubNode.anApplet8065.getDocumentBase().getHost().toLowerCase();
         if (!string_2.equals("jagex.com") && !string_2.endsWith(".jagex.com")) {
             if (!string_2.equals("runescape.com") && !string_2.endsWith(".runescape.com")) {
                 if (!string_2.equals("stellardawn.com") && !string_2.endsWith(".stellardawn.com")) {
@@ -513,7 +513,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class97.aClass440Array996[i_4].method7346();
             }
             aClass440_3271.method7346();
-            aClass440_3269.method7346();
+            PLAYER_UID192.method7346();
         } catch (Exception exception_8) {
             ;
         }
@@ -559,12 +559,12 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             this.aBool3254 = true;
             System.out.println("error_game_" + string_1);
             try {
-                Class441.method7377(Node_Sub44.anApplet8065, "loggedout", 1643442211);
+                Class441.method7377(IFSubNode.anApplet8065, "loggedout", 1643442211);
             } catch (Throwable throwable_5) {
                 ;
             }
             try {
-                Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
+                IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
             } catch (Exception exception_4) {
                 ;
             }
@@ -608,7 +608,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
     abstract void method4690();
 
     public void method168(Applet applet_1) {
-        Node_Sub44.anApplet8065 = applet_1;
+        IFSubNode.anApplet8065 = applet_1;
     }
 
     public void start() {

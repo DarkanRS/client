@@ -1,6 +1,6 @@
 public class Preference_Sub28 extends Preference {
 
-	public static int anInt7961;
+	public static int LASTLOGINLDAY;
 
 	public int method7784(int i_1) {
 		return 1;

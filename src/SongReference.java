@@ -1,6 +1,6 @@
 public class SongReference {
 
-	public static long aLong1259;
+	public static long MEMBERSHIP_END;
 	Class250 aClass250_1257 = null;
 	int loadedStage = 0;
 	Index musicIndex;

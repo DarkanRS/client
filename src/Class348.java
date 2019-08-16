@@ -66,17 +66,17 @@ public class Class348 {
 			if (client.BASE_WINDOW_ID != -1) {
 				Class337.unloadInterface(client.BASE_WINDOW_ID, -1669420859);
 			}
-			for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(1087054250); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 11)) {
+			for (IFSubNode class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(1087054250); class282_sub44_2 != null; class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 11)) {
 				if (!class282_sub44_2.isLinked()) {
-					class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-848491079);
+					class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(-848491079);
 					if (class282_sub44_2 == null) {
 						break;
 					}
 				}
-				Class351.closeChildren(class282_sub44_2, true, false, -2131194694);
+				Class351.closeChildren(class282_sub44_2, true, false);
 			}
 			client.BASE_WINDOW_ID = -1;
-			client.aClass465_7442 = new IterableNodeMap(8);
+			client.OPEN_INTERFACES = new IterableNodeMap(8);
 			MeshModifier.method7041((byte) -6);
 			client.BASE_WINDOW_ID = QuickchatFiller.ENTITY_DEFAULTS.loginWindow;
 			Class516.method8867(false);
@@ -96,7 +96,7 @@ public class Class348 {
 		IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = 0;
 		if (NativeLibraryLoader.anInt3240 == 5) {
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX << 9;
-			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY << 9;
+			Class246.CAM_MOVE_ABSOLUTEY = IFSubNode.CAM_MOVE_LOCALY << 9;
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);
 		}

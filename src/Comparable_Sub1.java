@@ -42,26 +42,26 @@ public final class Comparable_Sub1 implements Comparable {
 			File file_1 = new File(Class110.aString1103, "random.dat");
 			int i_3;
 			if (file_1.exists()) {
-				Engine.aClass440_3269 = new Class440(new Class442(file_1, 25L), 24);
+				Engine.PLAYER_UID192 = new UID192(new Class442(file_1, 25L), 24);
 			} else {
 				label34: for (int i_2 = 0; i_2 < MapSize.aStringArray1077.length; i_2++) {
 					for (i_3 = 0; i_3 < Class246.aStringArray3028.length; i_3++) {
 						File file_4 = new File(Class246.aStringArray3028[i_3] + MapSize.aStringArray1077[i_2] + File.separatorChar + "random.dat");
 						if (file_4.exists()) {
-							Engine.aClass440_3269 = new Class440(new Class442(file_4, 25L), 24);
+							Engine.PLAYER_UID192 = new UID192(new Class442(file_4, 25L), 24);
 							break label34;
 						}
 					}
 				}
 			}
-			if (Engine.aClass440_3269 == null) {
+			if (Engine.PLAYER_UID192 == null) {
 				RandomAccessFile randomaccessfile_5 = new RandomAccessFile(file_1, "rw");
 				i_3 = randomaccessfile_5.read();
 				randomaccessfile_5.seek(0L);
 				randomaccessfile_5.write(i_3);
 				randomaccessfile_5.seek(0L);
 				randomaccessfile_5.close();
-				Engine.aClass440_3269 = new Class440(new Class442(file_1, 25L), 24);
+				Engine.PLAYER_UID192 = new UID192(new Class442(file_1, 25L), 24);
 			}
 		} catch (IOException ioexception_6) {
 			;

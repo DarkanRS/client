@@ -2,7 +2,7 @@ public class Class125 implements Interface8 {
 
     public static NativeSprite aNativeSprite_1571;
 
-    static int anInt1572;
+    static int LAST_IP_ADDRESS;
 
     int anInt1568;
 

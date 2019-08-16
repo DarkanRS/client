@@ -1,9 +1,9 @@
 
 
-public class Node {
+public class Node<T> {
     public long data;
-    public Node next;
-    public Node prev;
+    public Node<T> next;
+    public Node<T> prev;
 
     public void remove() {
         if (this.prev != null) {

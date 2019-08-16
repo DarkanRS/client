@@ -21,15 +21,15 @@ public class HashTableIterator implements Iterator {
 	}
 
 	public boolean hasNext() {
-		if (this.aClass465_5439.aNodeArray5558[this.anInt5442 - 1] != this.aNode_5440) {
+		if (this.aClass465_5439.nodes[this.anInt5442 - 1] != this.aNode_5440) {
 			return true;
 		} else {
-			while (this.anInt5442 < this.aClass465_5439.anInt5560) {
-				if (this.aClass465_5439.aNodeArray5558[++this.anInt5442 - 1].next != this.aClass465_5439.aNodeArray5558[this.anInt5442 - 1]) {
-					this.aNode_5440 = this.aClass465_5439.aNodeArray5558[this.anInt5442 - 1].next;
+			while (this.anInt5442 < this.aClass465_5439.size) {
+				if (this.aClass465_5439.nodes[++this.anInt5442 - 1].next != this.aClass465_5439.nodes[this.anInt5442 - 1]) {
+					this.aNode_5440 = this.aClass465_5439.nodes[this.anInt5442 - 1].next;
 					return true;
 				}
-				this.aNode_5440 = this.aClass465_5439.aNodeArray5558[this.anInt5442 - 1];
+				this.aNode_5440 = this.aClass465_5439.nodes[this.anInt5442 - 1];
 			}
 			return false;
 		}
@@ -46,15 +46,15 @@ public class HashTableIterator implements Iterator {
 
 	public Object next() {
 		Node node_1;
-		if (this.aClass465_5439.aNodeArray5558[this.anInt5442 - 1] != this.aNode_5440) {
+		if (this.aClass465_5439.nodes[this.anInt5442 - 1] != this.aNode_5440) {
 			node_1 = this.aNode_5440;
 			this.aNode_5440 = node_1.next;
 			this.aNode_5441 = node_1;
 			return node_1;
 		} else {
-			while (this.anInt5442 < this.aClass465_5439.anInt5560) {
-				node_1 = this.aClass465_5439.aNodeArray5558[++this.anInt5442 - 1].next;
-				if (node_1 != this.aClass465_5439.aNodeArray5558[this.anInt5442 - 1]) {
+			while (this.anInt5442 < this.aClass465_5439.size) {
+				node_1 = this.aClass465_5439.nodes[++this.anInt5442 - 1].next;
+				if (node_1 != this.aClass465_5439.nodes[this.anInt5442 - 1]) {
 					this.aNode_5440 = node_1.next;
 					this.aNode_5441 = node_1;
 					return node_1;
@@ -65,7 +65,7 @@ public class HashTableIterator implements Iterator {
 	}
 
 	void method7512(int i_1) {
-		this.aNode_5440 = this.aClass465_5439.aNodeArray5558[0].next;
+		this.aNode_5440 = this.aClass465_5439.nodes[0].next;
 		this.anInt5442 = 1;
 		this.aNode_5441 = null;
 	}

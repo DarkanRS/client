@@ -319,7 +319,7 @@ public class Class247 {
 	}
 
 	public static void method4250(byte b_0) {
-		for (Index36FileNode class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7750(-1139367366); class282_sub37_1 != null; class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 8)) {
+		for (VorbisNode class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7750(-1139367366); class282_sub37_1 != null; class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 8)) {
 			Class92.method1563(class282_sub37_1.fileId);
 		}
 	}

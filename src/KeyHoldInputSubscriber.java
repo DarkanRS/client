@@ -2,7 +2,7 @@ public class KeyHoldInputSubscriber implements InputSubscriber {
 
 	static int anInt2878;
 
-	public static int anInt2879;
+	public static int LOYALTY_BALANCE;
 
 	int[] requiredKeys;
 

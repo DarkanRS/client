@@ -20,8 +20,8 @@ public class Class351 implements Interface3 {
         return Class60.aClass60_601;
     }
 
-    public static final void closeChildren(Node_Sub44 parentInterface, boolean unload, boolean bool_2, int i_3) {
-        int i_4 = parentInterface.anInt8063;
+    public static final void closeChildren(IFSubNode parentInterface, boolean unload, boolean bool_2) {
+        int i_4 = parentInterface.interfaceId;
         int interfaceHash = (int) parentInterface.data;
         parentInterface.remove();
         if (unload) {
@@ -36,18 +36,18 @@ public class Class351 implements Interface3 {
         if (!bool_2 && client.BASE_WINDOW_ID != -1) {
             Class383.method6514(client.BASE_WINDOW_ID, 1, 772605854);
         }
-        HashTableIterator itr = new HashTableIterator(client.aClass465_7442);
-        for (Node_Sub44 class282_sub44_8 = (Node_Sub44) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (Node_Sub44) itr.next()) {
+        HashTableIterator itr = new HashTableIterator(client.OPEN_INTERFACES);
+        for (IFSubNode class282_sub44_8 = (IFSubNode) itr.first(); class282_sub44_8 != null; class282_sub44_8 = (IFSubNode) itr.next()) {
             if (!class282_sub44_8.isLinked()) {
-                class282_sub44_8 = (Node_Sub44) itr.first();
+                class282_sub44_8 = (IFSubNode) itr.first();
                 if (class282_sub44_8 == null) {
                     break;
                 }
             }
-            if (class282_sub44_8.anInt8062 == 3) {
+            if (class282_sub44_8.overlay == 3) {
                 int i_9 = (int) class282_sub44_8.data;
                 if (i_9 >>> 16 == i_4) {
-                    closeChildren(class282_sub44_8, true, bool_2, -1676599874);
+                    closeChildren(class282_sub44_8, true, bool_2);
                 }
             }
         }

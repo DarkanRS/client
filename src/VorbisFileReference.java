@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Index36FileReference extends Class278 {
+public class VorbisFileReference extends Class278 {
 
     int[] values;
     int anInt8115;
@@ -10,7 +10,7 @@ public class Index36FileReference extends Class278 {
     Index index;
     int fileId;
 
-    public Index36FileReference(Index index_2, int i_3) {
+    public VorbisFileReference(Index index_2, int i_3) {
         super();
         this.index = index_2;
         this.fileId = i_3;

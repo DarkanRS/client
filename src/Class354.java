@@ -4,7 +4,7 @@ public final class Class354 {
 
 	static World[] WORLDS;
 
-	public static int anInt4112;
+	public static int JCOINS;
 
 	Object anObject4109;
 

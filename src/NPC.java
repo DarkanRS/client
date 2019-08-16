@@ -110,7 +110,7 @@ public class NPC extends Entity {
 
 	}
 
-	public int method15794() {
+	public int getCS2Index() {
 		return this.index + 1;
 	}
 

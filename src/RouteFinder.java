@@ -438,10 +438,10 @@ public final class RouteFinder {
 			Class209.printConsoleMessage(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE));
 			return;
 		}
-		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT || client.rights >= 2) {
+		if (ServerEnvironment.LIVE != HDWaterTile.SERVER_ENVIRONMENT || client.PLAYER_RIGHTS >= 2) {
 			try {
 				if (string_0.equalsIgnoreCase("wm1")) {
-					Class440.method7373(1, -1, -1, false, (byte) 111);
+					UID192.method7373(1, -1, -1, false, (byte) 111);
 					if (Class158.windowedMode() == 1) {
 						Class209.printConsoleMessage("Success");
 					} else {
@@ -450,7 +450,7 @@ public final class RouteFinder {
 					return;
 				}
 				if (string_0.equalsIgnoreCase("wm2")) {
-					Class440.method7373(2, -1, -1, false, (byte) 71);
+					UID192.method7373(2, -1, -1, false, (byte) 71);
 					if (Class158.windowedMode() == 2) {
 						Class209.printConsoleMessage("Success");
 					} else {
@@ -459,7 +459,7 @@ public final class RouteFinder {
 					return;
 				}
 				if (Class475.supportsFullScreen && string_0.equalsIgnoreCase("wm3")) {
-					Class440.method7373(3, 1024, 768, false, (byte) 71);
+					UID192.method7373(3, 1024, 768, false, (byte) 71);
 					if (Class158.windowedMode() == 3) {
 						Class209.printConsoleMessage("Success");
 					} else {

@@ -448,7 +448,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							}
 							if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1339) {
 								if (inter.method2046(Renderers.SOFTWARE_RENDERER, -1781031351) != null) {
-									Index36FileReference.method13448(inter, drawX, drawY);
+									VorbisFileReference.method13448(inter, drawX, drawY);
 									Renderers.SOFTWARE_RENDERER.r(i_2, i_3, i_4, i_5);
 								}
 								continue;
@@ -484,9 +484,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 							if (inter.aClass118Array1439 != null) {
 								method16094(inter.aClass118Array1439, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
 							}
-							Node_Sub44 class282_sub44_33 = (Node_Sub44) client.aClass465_7442.get((long) inter.idHash);
+							IFSubNode class282_sub44_33 = (IFSubNode) client.OPEN_INTERFACES.get((long) inter.idHash);
 							if (class282_sub44_33 != null) {
-								RenderAnimIndexLoader.method3629(class282_sub44_33.anInt8063, i_17, i_18, i_19, i_20, drawX, drawY, i_13, -1473886497);
+								RenderAnimIndexLoader.method3629(class282_sub44_33.interfaceId, i_17, i_18, i_19, i_20, drawX, drawY, i_13, -1473886497);
 							}
 							if (inter.contentType == IComponentDefinitions.CONTENT_TYPE_1407) {
 								if (Renderers.SOFTWARE_RENDERER.method8471()) {

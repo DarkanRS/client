@@ -423,26 +423,26 @@ public class Login {
                         Class9.loginStage = 140;
                     }
                 } else {
-                    RsBitsBuffer rsbitsbuffer_19;
+                    RsBitsBuffer buffer;
                     if (Class9.loginStage == 140) {
-                        rsbitsbuffer_19 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer;
+                        buffer = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer;
                         if (Class9.lobbyStage == 273) {
                             if (!Class9.CURRENT_CONNECTION_CONTEXT.getConnection().available(VarNPCMap.anInt1965)) {
                                 return;
                             }
-                            Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(rsbitsbuffer_19.buffer, 0, VarNPCMap.anInt1965);
-                            rsbitsbuffer_19.index = 0;
-                            client.rights = rsbitsbuffer_19.readUnsignedByte();
-                            client.PLAYER_MOD_LEVEL = rsbitsbuffer_19.readUnsignedByte();
-                            client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.IS_QUICKCHAT_ONLY = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.myPlayerIndex = rsbitsbuffer_19.readUnsignedShort();
-                            client.IS_MEMBER = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(1818887431);
-                            client.membersWorld = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            RegionMap.aString3643 = rsbitsbuffer_19.readString();
+                            Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(buffer.buffer, 0, VarNPCMap.anInt1965);
+                            buffer.index = 0;
+                            client.PLAYER_RIGHTS = buffer.readUnsignedByte();
+                            client.PLAYER_MOD_LEVEL = buffer.readUnsignedByte();
+                            client.aBool7224 = buffer.readUnsignedByte() == 1;
+                            client.aBool7244 = buffer.readUnsignedByte() == 1;
+                            client.aBool7322 = buffer.readUnsignedByte() == 1;
+                            client.IS_QUICKCHAT_ONLY = buffer.readUnsignedByte() == 1;
+                            client.myPlayerIndex = buffer.readUnsignedShort();
+                            client.IS_MEMBER = buffer.readUnsignedByte() == 1;
+                            Class504.PLAYER_DOB = buffer.read24BitInteger();
+                            client.membersWorld = buffer.readUnsignedByte() == 1;
+                            RegionMap.aString3643 = buffer.readString();
                             IndexLoaders.MAP_REGION_DECODER.method4436().method7912(client.membersWorld);
                             IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) 2983).method4436().method7912(client.membersWorld);
                             IndexLoaders.ITEM_LOADER.method7148(client.membersWorld);
@@ -451,64 +451,64 @@ public class Login {
                             if (!Class9.CURRENT_CONNECTION_CONTEXT.getConnection().available(VarNPCMap.anInt1965)) {
                                 return;
                             }
-                            Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(rsbitsbuffer_19.buffer, 0, VarNPCMap.anInt1965);
-                            rsbitsbuffer_19.index = 0;
-                            client.rights = rsbitsbuffer_19.readUnsignedByte();
-                            client.PLAYER_MOD_LEVEL = rsbitsbuffer_19.readUnsignedByte();
-                            client.aBool7224 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            Class504.anInt5832 = rsbitsbuffer_19.read24BitInteger(979570289);
-                            VertexNormal.MY_PLAYER.male = (byte) rsbitsbuffer_19.readUnsignedByte();
-                            client.aBool7244 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            client.aBool7322 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            SongReference.aLong1259 = rsbitsbuffer_19.readLong();
-                            Class43.aLong420 = SongReference.aLong1259 - Utils.time() - rsbitsbuffer_19.read5ByteInteger();
-                            i_3 = rsbitsbuffer_19.readUnsignedByte();
+                            Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(buffer.buffer, 0, VarNPCMap.anInt1965);
+                            buffer.index = 0;
+                            client.PLAYER_RIGHTS = buffer.readUnsignedByte();
+                            client.PLAYER_MOD_LEVEL = buffer.readUnsignedByte();
+                            client.aBool7224 = buffer.readUnsignedByte() == 1;
+                            Class504.PLAYER_DOB = buffer.read24BitInteger();
+                            VertexNormal.MY_PLAYER.male = (byte) buffer.readUnsignedByte();
+                            client.aBool7244 = buffer.readUnsignedByte() == 1;
+                            client.aBool7322 = buffer.readUnsignedByte() == 1;
+                            SongReference.MEMBERSHIP_END = buffer.readLong();
+                            Class43.aLong420 = SongReference.MEMBERSHIP_END - Utils.time() - buffer.read5ByteInteger();
+                            i_3 = buffer.readUnsignedByte();
                             client.IS_MEMBER = (i_3 & 0x1) != 0;
-                            Class509.aBool5870 = (i_3 & 0x2) != 0;
-                            Class354.anInt4112 = rsbitsbuffer_19.readInt();
-                            Class469.aBool5585 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            KeyHoldInputSubscriber.anInt2879 = rsbitsbuffer_19.readInt();
-                            Class115.anInt1247 = rsbitsbuffer_19.readUnsignedShort();
-                            NPCMeshModifier.anInt4994 = rsbitsbuffer_19.readUnsignedShort();
-                            Preference_Sub28.anInt7961 = rsbitsbuffer_19.readUnsignedShort();
-                            Class125.anInt1572 = rsbitsbuffer_19.readInt();
-                            Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.anInt1572);
+                            Class509.IS_MEMBER_SUBSCRIPTION = (i_3 & 0x2) != 0;
+                            Class354.JCOINS = buffer.readInt();
+                            Class469.LOYALTY_ENABLED = buffer.readUnsignedByte() == 1;
+                            KeyHoldInputSubscriber.LOYALTY_BALANCE = buffer.readInt();
+                            Class115.RECOVERYQUESTIONSSETDATE = buffer.readUnsignedShort();
+                            NPCMeshModifier.MESSAGES = buffer.readUnsignedShort();
+                            Preference_Sub28.LASTLOGINLDAY = buffer.readUnsignedShort();
+                            Class125.LAST_IP_ADDRESS = buffer.readInt();
+                            Class119.HOSTNAME_IDENTIFIER = new HostNameIdentifier(Class125.LAST_IP_ADDRESS);
                             (new Thread(Class119.HOSTNAME_IDENTIFIER)).start();
-                            InputSubscriberType.anInt2762 = rsbitsbuffer_19.readUnsignedByte();
-                            SendFinishedCutsceneAction.anInt8307 = rsbitsbuffer_19.readUnsignedShort();
-                            Class440.anInt5357 = rsbitsbuffer_19.readUnsignedShort();
-                            Class464.aBool5556 = rsbitsbuffer_19.readUnsignedByte() == 1;
-                            VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.aString10458 = rsbitsbuffer_19.readGJString();
-                            RegionMap.anInt3644 = rsbitsbuffer_19.readUnsignedByte();
-                            Class121.anInt1526 = rsbitsbuffer_19.readInt();
-                            client.aBool7323 = rsbitsbuffer_19.readUnsignedByte() == 1;
+                            InputSubscriberType.EMAIL_STATUS = buffer.readUnsignedByte();
+                            SendFinishedCutsceneAction.anInt8307 = buffer.readUnsignedShort();
+                            UID192.anInt5357 = buffer.readUnsignedShort();
+                            Class464.aBool5556 = buffer.readUnsignedByte() == 1;
+                            VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.aString10458 = buffer.readGJString();
+                            RegionMap.anInt3644 = buffer.readUnsignedByte();
+                            Class121.anInt1526 = buffer.readInt();
+                            client.aBool7323 = buffer.readUnsignedByte() == 1;
                             Class448.CONNECTION_INFO = new ConnectionInfo();
-                            Class448.CONNECTION_INFO.worldId = rsbitsbuffer_19.readUnsignedShort();
+                            Class448.CONNECTION_INFO.worldId = buffer.readUnsignedShort();
                             if (Class448.CONNECTION_INFO.worldId == 65535) {
                                 Class448.CONNECTION_INFO.worldId = -1;
                             }
-                            Class448.CONNECTION_INFO.host = rsbitsbuffer_19.readGJString();
+                            Class448.CONNECTION_INFO.host = buffer.readGJString();
                             if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LIVE) {
-                                Class448.CONNECTION_INFO.anInt5434 = Class448.CONNECTION_INFO.worldId * -1708079975 + 1140744768;
-                                Class448.CONNECTION_INFO.anInt5437 = Class448.CONNECTION_INFO.worldId * -1473668237 + 1047080176;
+                                Class448.CONNECTION_INFO.anInt5434 = Class448.CONNECTION_INFO.worldId;
+                                Class448.CONNECTION_INFO.anInt5437 = Class448.CONNECTION_INFO.worldId;
                             }
-                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.rights < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
-                                Class274.method4884((byte) 74);
+                            if (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.LOCAL && (HDWaterTile.SERVER_ENVIRONMENT != ServerEnvironment.WTQA || client.PLAYER_RIGHTS < 2) && Class159.GAME_CONNECTION_INFO.equals(Class448.aClass450_5420)) {
+                                Class274.method4884();
                             }
                         }
                         if ((!client.aBool7224 || client.aBool7322) && !client.IS_MEMBER) {
                             try {
-                                Class441.method7377(Node_Sub44.anApplet8065, "unzap", 1103714597);
+                                Class441.method7377(IFSubNode.anApplet8065, "unzap", 1103714597);
                             } catch (Throwable throwable_14) {
                                 ;
                             }
                         } else {
                             try {
-                                Class441.method7377(Node_Sub44.anApplet8065, "zap", 1696424400);
+                                Class441.method7377(IFSubNode.anApplet8065, "zap", 1696424400);
                             } catch (Throwable throwable_16) {
                                 if (client.aBool7147) {
                                     try {
-                                        Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), "blank.ws"), "tbi");
+                                        IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), "blank.ws"), "tbi");
                                     } catch (Exception exception_15) {
                                         ;
                                     }
@@ -536,17 +536,17 @@ public class Login {
                         Class9.loginStage = 173;
                     }
                     if (Class9.loginStage == 173) {
-                        rsbitsbuffer_19 = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer;
-                        rsbitsbuffer_19.index = 0;
-                        if (rsbitsbuffer_19.nextIsSmart()) {
+                        buffer = Class9.CURRENT_CONNECTION_CONTEXT.recievedBuffer;
+                        buffer.index = 0;
+                        if (buffer.nextIsSmart()) {
                             if (!Class9.CURRENT_CONNECTION_CONTEXT.getConnection().available(1)) {
                                 return;
                             }
-                            Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(rsbitsbuffer_19.buffer, 3, 1);
+                            Class9.CURRENT_CONNECTION_CONTEXT.getConnection().read(buffer.buffer, 3, 1);
                         }
-                        i_3 = rsbitsbuffer_19.readEncryptedSmart();
+                        i_3 = buffer.readEncryptedSmart();
                         Class9.CURRENT_CONNECTION_CONTEXT.currentPacket = ServerPacket.forId(i_3);
-                        Class9.CURRENT_CONNECTION_CONTEXT.currentPacketSize = rsbitsbuffer_19.readUnsignedShort();
+                        Class9.CURRENT_CONNECTION_CONTEXT.currentPacketSize = buffer.readUnsignedShort();
                         Class9.loginStage = 156;
                     }
                     if (Class9.loginStage == 156) {

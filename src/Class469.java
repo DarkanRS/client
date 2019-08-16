@@ -2,7 +2,7 @@ import java.util.Iterator;
 
 public class Class469 implements Iterator {
 
-	public static boolean aBool5585;
+	public static boolean LOYALTY_ENABLED;
 	CacheableNode aCacheableNode_5582 = null;
 	Queue aClass477_5584;
 	CacheableNode aCacheableNode_5583;

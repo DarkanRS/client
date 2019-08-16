@@ -224,17 +224,17 @@ public class QuickChatMessage {
             if (client.BASE_WINDOW_ID != -1) {
                 Class337.unloadInterface(client.BASE_WINDOW_ID, -650534239);
             }
-            for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 6)) {
+            for (IFSubNode class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(-649341183); class282_sub44_2 != null; class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 6)) {
                 if (!class282_sub44_2.isLinked()) {
-                    class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(439080271);
+                    class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(439080271);
                     if (class282_sub44_2 == null) {
                         break;
                     }
                 }
-                Class351.closeChildren(class282_sub44_2, true, false, -1457682699);
+                Class351.closeChildren(class282_sub44_2, true, false);
             }
             client.BASE_WINDOW_ID = -1;
-            client.aClass465_7442 = new IterableNodeMap(8);
+            client.OPEN_INTERFACES = new IterableNodeMap(8);
             MeshModifier.method7041((byte) -97);
             client.BASE_WINDOW_ID = QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow;
             Class516.method8867(false);

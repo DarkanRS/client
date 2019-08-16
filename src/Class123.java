@@ -288,7 +288,7 @@ public class Class123 {
 	}
 
 	public static void method2152(int i_0, int i_1) {
-		Index36FileNode class282_sub37_2 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
+		VorbisNode class282_sub37_2 = (VorbisNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.aBool7995 = !class282_sub37_2.aBool7995;
 			class282_sub37_2.reference.method4924(class282_sub37_2.aBool7995);

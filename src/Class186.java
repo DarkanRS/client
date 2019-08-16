@@ -35,7 +35,7 @@ public class Class186 {
 			}
 		} else if (i_1 == 1) {
 			try {
-				Object object_5 = Class441.method7375(Node_Sub44.anApplet8065, string_2, new Object[] { (new URL(Node_Sub44.anApplet8065.getCodeBase(), string_0)).toString() }, 161008971);
+				Object object_5 = Class441.method7375(IFSubNode.anApplet8065, string_2, new Object[] { (new URL(IFSubNode.anApplet8065.getCodeBase(), string_0)).toString() }, 161008971);
 				bool_4 = object_5 != null;
 				return bool_4;
 			} catch (Throwable throwable_8) {
@@ -43,7 +43,7 @@ public class Class186 {
 			}
 		} else if (i_1 == 2) {
 			try {
-				Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), string_0), "_blank");
+				IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), string_0), "_blank");
 				bool_4 = true;
 				return bool_4;
 			} catch (Exception exception_9) {
@@ -51,13 +51,13 @@ public class Class186 {
 			}
 		} else if (i_1 == 3) {
 			try {
-				Class441.method7377(Node_Sub44.anApplet8065, "loggedout", 1762272883);
+				Class441.method7377(IFSubNode.anApplet8065, "loggedout", 1762272883);
 			} catch (Throwable throwable_11) {
 				;
 			}
 
 			try {
-				Node_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Node_Sub44.anApplet8065.getCodeBase(), string_0), "_top");
+				IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), string_0), "_top");
 				bool_4 = true;
 				return bool_4;
 			} catch (Exception exception_10) {

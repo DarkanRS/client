@@ -83,11 +83,11 @@ public class Class103_Sub1 extends Class103 {
 			while (true) {
 				try {
 					Image image_3 = Toolkit.getDefaultToolkit().createImage(bytes_0);
-					MediaTracker mediatracker_4 = new MediaTracker(Node_Sub44.anApplet8065);
+					MediaTracker mediatracker_4 = new MediaTracker(IFSubNode.anApplet8065);
 					mediatracker_4.addImage(image_3, 0);
 					mediatracker_4.waitForAll();
-					int i_5 = image_3.getWidth(Node_Sub44.anApplet8065);
-					int i_6 = image_3.getHeight(Node_Sub44.anApplet8065);
+					int i_5 = image_3.getWidth(IFSubNode.anApplet8065);
+					int i_6 = image_3.getHeight(IFSubNode.anApplet8065);
 					if (!mediatracker_4.isErrorAny() && i_5 >= 0 && i_6 >= 0) {
 						int[] ints_7 = new int[i_5 * i_6];
 						PixelGrabber pixelgrabber_8 = new PixelGrabber(image_3, 0, 0, i_5, i_6, ints_7, 0, i_5);

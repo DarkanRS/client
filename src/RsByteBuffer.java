@@ -197,7 +197,7 @@ public class RsByteBuffer extends Node {
         return ((this.buffer[this.index - 3] & 0xff) << 16) + (this.buffer[this.index - 1] & 0xff) + ((this.buffer[this.index - 2] & 0xff) << 8);
     }
 
-    public int read24BitInteger(int i_1) {
+    public int read24BitInteger() {
         this.index += 3;
         int i_2 = ((this.buffer[this.index - 3] & 0xff) << 16) + (this.buffer[this.index - 1] & 0xff) + ((this.buffer[this.index - 2] & 0xff) << 8);
         if (i_2 > 8388607) {
@@ -324,13 +324,13 @@ public class RsByteBuffer extends Node {
         this.writeBytes(bytes_7, 0, bytes_7.length);
     }
 
-    public int method13104(int i_1) {
+    public int writeCRC(int i_1) {
         int i_3 = Class455.getCRC(this.buffer, i_1, this.index);
         this.writeInt(i_3);
         return i_3;
     }
 
-    public boolean method13105() {
+    public boolean checkCRC() {
         this.index -= 4;
         int i_2 = Class455.getCRC(this.buffer, 0, this.index);
         int i_3 = this.readInt();

@@ -288,7 +288,7 @@ public class BASDefinitions {
 		AccountCreationStage.method253(this.runTurn2, iterablenodemap_2, -1749638);
 		AccountCreationStage.method253(this.walkTurn1, iterablenodemap_2, 2115368709);
 		AccountCreationStage.method253(this.walkTurn2, iterablenodemap_2, -1020829225);
-		ints_3 = new int[iterablenodemap_2.method7748((short) 9430)];
+		ints_3 = new int[iterablenodemap_2.size()];
 		i_4 = 0;
 		Node node_6;
 		for (Iterator iterator_5 = iterablenodemap_2.iterator(); iterator_5.hasNext(); ints_3[i_4++] = (int) node_6.data) {

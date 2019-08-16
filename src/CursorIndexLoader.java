@@ -102,7 +102,7 @@ public class CursorIndexLoader {
 		} else {
 			Class365.setGameState(5);
 			try {
-				Class441.method7377(Node_Sub44.anApplet8065, "loggedout", 1769975690);
+				Class441.method7377(IFSubNode.anApplet8065, "loggedout", 1769975690);
 			} catch (Throwable throwable_7) {
 				;
 			}

@@ -68,9 +68,9 @@ public class Class480 {
 		if (icomponentdefinitions_1.aClass118Array1439 != null) {
 			InteractableObject.method16099(icomponentdefinitions_1.aClass118Array1439, icomponentdefinitions_1.idHash, i_4, i_5, bool_2, (byte) 17);
 		}
-		Node_Sub44 class282_sub44_6 = (Node_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_1.idHash);
+		IFSubNode class282_sub44_6 = (IFSubNode) client.OPEN_INTERFACES.get((long) icomponentdefinitions_1.idHash);
 		if (class282_sub44_6 != null) {
-			Class442.method7403(class282_sub44_6.anInt8063, i_4, i_5, bool_2, 1720687852);
+			Class442.method7403(class282_sub44_6.interfaceId, i_4, i_5, bool_2, 1720687852);
 		}
 		if (icomponentdefinitions_1 == client.aClass118_7183) {
 			int i_7 = Class197.NUM_PLAYER_INDICES;

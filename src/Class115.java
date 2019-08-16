@@ -4,7 +4,7 @@ public abstract class Class115 implements Interface7 {
 
 	protected String aString1246;
 
-	public static int anInt1247;
+	public static int RECOVERYQUESTIONSSETDATE;
 
 	static NativeSprite[] aNativeSpriteArray1248;
 

@@ -80,7 +80,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 		return this.aBool10312;
 	}
 
-	public abstract int method15794();
+	public abstract int getCS2Index();
 
 	public void method15795(int i_1, int i_2, boolean bool_3, byte b_4) {
 		if (this.initInterface()) {

@@ -7,16 +7,16 @@ public final class JS5CacheFile {
 
 	static byte[] aByteArray2576 = new byte[520];
 
-	Class440 aClass440_2573 = null;
+	UID192 aClass440_2573 = null;
 
-	Class440 aClass440_2574 = null;
+	UID192 aClass440_2574 = null;
 
 	int anInt2572 = 65000;
 
 	int anInt2575;
 
 	public boolean method3348(int i_1, byte[] bytes_2, int i_3) {
-		Class440 class440_5 = this.aClass440_2573;
+		UID192 class440_5 = this.aClass440_2573;
 		synchronized (this.aClass440_2573) {
 			if (i_3 >= 0 && i_3 <= this.anInt2572) {
 				boolean bool_6 = this.method3349(i_1, bytes_2, i_3, true, 1578851603);
@@ -31,7 +31,7 @@ public final class JS5CacheFile {
 	}
 
 	boolean method3349(int i_1, byte[] bytes_2, int i_3, boolean bool_4, int i_5) {
-		Class440 class440_6 = this.aClass440_2573;
+		UID192 class440_6 = this.aClass440_2573;
 		synchronized (this.aClass440_2573) {
 			boolean bool_9;
 			try {
@@ -64,7 +64,7 @@ public final class JS5CacheFile {
 				aByteArray2576[4] = (byte) (i_8 >> 8);
 				aByteArray2576[5] = (byte) i_8;
 				this.aClass440_2574.method7347((long) (i_1 * 6));
-				this.aClass440_2574.method7352(aByteArray2576, 0, 6);
+				this.aClass440_2574.write(aByteArray2576, 0, 6);
 				int i_22 = 0;
 				int i_10 = 0;
 				while (true) {
@@ -134,12 +134,12 @@ public final class JS5CacheFile {
 								aByteArray2576[8] = (byte) i_11;
 								aByteArray2576[9] = (byte) this.anInt2575;
 								this.aClass440_2573.method7347((long) (i_8 * 520));
-								this.aClass440_2573.method7352(aByteArray2576, 0, 10);
+								this.aClass440_2573.write(aByteArray2576, 0, 10);
 								i_12 = i_3 - i_22;
 								if (i_12 > 510) {
 									i_12 = 510;
 								}
-								this.aClass440_2573.method7352(bytes_2, i_22, i_12);
+								this.aClass440_2573.write(bytes_2, i_22, i_12);
 								i_22 += i_12;
 							} else {
 								aByteArray2576[0] = (byte) (i_1 >> 8);
@@ -151,12 +151,12 @@ public final class JS5CacheFile {
 								aByteArray2576[6] = (byte) i_11;
 								aByteArray2576[7] = (byte) this.anInt2575;
 								this.aClass440_2573.method7347((long) (i_8 * 520));
-								this.aClass440_2573.method7352(aByteArray2576, 0, 8);
+								this.aClass440_2573.write(aByteArray2576, 0, 8);
 								i_12 = i_3 - i_22;
 								if (i_12 > 512) {
 									i_12 = 512;
 								}
-								this.aClass440_2573.method7352(bytes_2, i_22, i_12);
+								this.aClass440_2573.write(bytes_2, i_22, i_12);
 								i_22 += i_12;
 							}
 							i_8 = i_11;
@@ -175,7 +175,7 @@ public final class JS5CacheFile {
 	}
 
 	public byte[] method3350(int i_1, byte b_2) {
-		Class440 class440_3 = this.aClass440_2573;
+		UID192 class440_3 = this.aClass440_2573;
 		synchronized (this.aClass440_2573) {
 			Object obj_10000;
 			try {
@@ -268,7 +268,7 @@ public final class JS5CacheFile {
 		return "" + this.anInt2575;
 	}
 
-	public JS5CacheFile(int i_1, Class440 class440_2, Class440 class440_3) {
+	public JS5CacheFile(int i_1, UID192 class440_2, UID192 class440_3) {
 		this.anInt2575 = i_1;
 		this.aClass440_2573 = class440_2;
 		this.aClass440_2574 = class440_3;

@@ -39,11 +39,11 @@ public class Class361 {
 	}
 
 	public Object method6254(Object[] arr_1, byte b_2) throws Throwable {
-		return Class441.method7375(Node_Sub44.anApplet8065, this.method6253((byte) -103), arr_1, -864782771);
+		return Class441.method7375(IFSubNode.anApplet8065, this.method6253((byte) -103), arr_1, -864782771);
 	}
 
 	public Object method6255() throws Throwable {
-		return Class441.method7377(Node_Sub44.anApplet8065, this.method6253((byte) -29), 2107704152);
+		return Class441.method7377(IFSubNode.anApplet8065, this.method6253((byte) -29), 2107704152);
 	}
 
 	public void method6256(Object[] arr_1) {

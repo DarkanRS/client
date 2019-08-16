@@ -478,7 +478,7 @@ public class FontRenderer_Sub2 extends FontRenderer {
 				}
 			}
 
-			rsbitsbuffer_0.method13104(i_3);
+			rsbitsbuffer_0.writeCRC(i_3);
 			class282_sub42_2.remove();
 		}
 

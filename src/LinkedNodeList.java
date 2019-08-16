@@ -162,15 +162,15 @@ public class LinkedNodeList {
     public static final void method7886() {
         TCPPacket tcpmessage_2 = Class271.createPacket(ClientPacket.CLOSE_INTERFACE, client.GAME_CONNECTION_CONTEXT.isaac);
         client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_2);
-        for (Node_Sub44 class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7751((byte) 30)) {
+        for (IFSubNode class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7750(1343073416); class282_sub44_3 != null; class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 30)) {
             if (!class282_sub44_3.isLinked()) {
-                class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7750(861555487);
+                class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7750(861555487);
                 if (class282_sub44_3 == null) {
                     break;
                 }
             }
-            if (class282_sub44_3.anInt8062 == 0) {
-                Class351.closeChildren(class282_sub44_3, true, true, -1206109982);
+            if (class282_sub44_3.overlay == 0) {
+                Class351.closeChildren(class282_sub44_3, true, true);
             }
         }
         if (client.aClass118_7352 != null) {

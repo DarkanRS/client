@@ -8,7 +8,7 @@ public class Class509 {
 
 	CS2Script aCacheableNode_Sub5_5869;
 
-	public static boolean aBool5870;
+	public static boolean IS_MEMBER_SUBSCRIPTION;
 
 	int anInt5866 = -1;
 

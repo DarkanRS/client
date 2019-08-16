@@ -57,9 +57,9 @@ public class Class151 {
                     if (icomponentdefinitions_4.aClass118Array1439 != null) {
                         method2591(icomponentdefinitions_4.aClass118Array1439, i_1, (byte) -28);
                     }
-                    Node_Sub44 class282_sub44_5 = (Node_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
+                    IFSubNode class282_sub44_5 = (IFSubNode) client.OPEN_INTERFACES.get((long) icomponentdefinitions_4.idHash);
                     if (class282_sub44_5 != null) {
-                        Class383.method6514(class282_sub44_5.anInt8063, i_1, -138211954);
+                        Class383.method6514(class282_sub44_5.interfaceId, i_1, -138211954);
                     }
                 }
                 HookRequest hookrequest_6;

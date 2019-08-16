@@ -4,7 +4,7 @@ public final class Class97 {
 
 	static long aLong994;
 
-	protected static Class440[] aClass440Array996;
+	protected static UID192[] aClass440Array996;
 
 	Class97() throws Throwable {
 		throw new Error();

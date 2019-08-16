@@ -240,7 +240,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 																Class161.method2827(1342280577);
 															}
 															FriendStatus.method7703();
-															if (client.rights > 0 && PlaySoundJingleCutsceneAction.keyRecorder.held(82) && PlaySoundJingleCutsceneAction.keyRecorder.held(81) && client.anInt7191 != 0) {
+															if (client.PLAYER_RIGHTS > 0 && PlaySoundJingleCutsceneAction.keyRecorder.held(82) && PlaySoundJingleCutsceneAction.keyRecorder.held(81) && client.anInt7191 != 0) {
 																i_2 = VertexNormal.MY_PLAYER.plane - client.anInt7191;
 																if (i_2 < 0) {
 																	i_2 = 0;

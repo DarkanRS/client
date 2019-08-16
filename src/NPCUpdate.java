@@ -30,7 +30,7 @@ public class NPCUpdate {
 		}
 		if (bool_2) {
 			i_3 = client.anInt7210;
-			client.anInt7210 = client.NPCS.method7748((short) 15812);
+			client.anInt7210 = client.NPCS.size();
 			i_4 = 0;
 			StringNode class282_sub47_9;
 			for (Iterator iterator_8 = client.NPCS.iterator(); iterator_8.hasNext(); client.aNode_Sub47Array7209[i_4++] = class282_sub47_9) {

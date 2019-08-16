@@ -68,7 +68,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                         if (client.PLAYER_OPTIONS[i_10] != null) {
                             short s_11 = 0;
                             if (Game.darkan == client.CURRENT_GAME && client.PLAYER_OPTIONS[i_10].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE))) {
-                                if (client.aBool7454 && player_0.combatLevel > VertexNormal.MY_PLAYER.combatLevel) {
+                                if (client.REDUCE_ATTACK_PRIORITY && player_0.combatLevel > VertexNormal.MY_PLAYER.combatLevel) {
                                     s_11 = 2000;
                                 }
                                 if (VertexNormal.MY_PLAYER.teamId != 0 && player_0.teamId != 0) {

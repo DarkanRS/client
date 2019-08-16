@@ -77,9 +77,9 @@ public final class Class464 {
 					if (icomponentdefinitions_4.aClass118Array1439 != null) {
 						method7743(icomponentdefinitions_4.aClass118Array1439, icomponentdefinitions_4.idHash);
 					}
-					Node_Sub44 class282_sub44_5 = (Node_Sub44) client.aClass465_7442.get((long) icomponentdefinitions_4.idHash);
+					IFSubNode class282_sub44_5 = (IFSubNode) client.OPEN_INTERFACES.get((long) icomponentdefinitions_4.idHash);
 					if (class282_sub44_5 != null) {
-						CS2Interface.method8777(class282_sub44_5.anInt8063, (byte) -57);
+						CS2Interface.method8777(class282_sub44_5.interfaceId, (byte) -57);
 					}
 				}
 				if (icomponentdefinitions_4.type == ComponentType.MODEL && icomponentdefinitions_4.animation != -1) {

@@ -7,7 +7,7 @@ public class IComponentDefinitions {
 	public int modelTintScalar;
 	public Object[] anObjectArray1407;
 	public int[] anIntArray1408;
-	public int anInt1414;
+	public int serverTriggers;
 	public Object[] anObjectArray1418;
 	public int[] anIntArray1425;
 	public int anInt1430;

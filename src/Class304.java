@@ -58,7 +58,7 @@ public class Class304 implements Interface27 {
 
 	Image method5399(String string_1) throws IOException {
 		try {
-			InputStream inputstream_4 = Node_Sub44.anApplet8065.getClass().getClassLoader().getResourceAsStream(string_1);
+			InputStream inputstream_4 = IFSubNode.anApplet8065.getClass().getClassLoader().getResourceAsStream(string_1);
 			byte[] bytes_5 = new byte[4000];
 			int i_7;
 			for (int i_6 = 0; (i_7 = inputstream_4.read()) != -1; bytes_5[i_6++] = (byte) i_7) {

@@ -362,7 +362,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	}
 
 	public static void method15536() {
-		for (Index36FileNode class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 17)) {
+		for (VorbisNode class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 17)) {
 			if (class282_sub37_1.reference.method4921()) {
 				Class92.method1563(class282_sub37_1.fileId);
 			} else {

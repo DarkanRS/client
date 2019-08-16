@@ -354,11 +354,11 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 
 	static final void method16113() {
 		int i_1 = Class296.CAM_MOVE_LOCALX * 512 + 256;
-		int i_2 = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
+		int i_2 = IFSubNode.CAM_MOVE_LOCALY * 512 + 256;
 		int i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.MY_PLAYER_PLANE) - SpotAnimDefinitions.CAM_MOVE_Z;
 		if (Class115.CAM_MOVE_VAR_SPEED >= 100) {
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX = Class296.CAM_MOVE_LOCALX * 512 + 256;
-			Class246.CAM_MOVE_ABSOLUTEY = Node_Sub44.CAM_MOVE_LOCALY * 512 + 256;
+			Class246.CAM_MOVE_ABSOLUTEY = IFSubNode.CAM_MOVE_LOCALY * 512 + 256;
 			Class109_Sub1.CAM_MOVE_ABSOLUTEZ = Class504.getTerrainHeightAtPos(IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class246.CAM_MOVE_ABSOLUTEY, Class4.MY_PLAYER_PLANE) - SpotAnimDefinitions.CAM_MOVE_Z;
 		} else {
 			if (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX < i_1) {

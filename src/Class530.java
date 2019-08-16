@@ -56,7 +56,7 @@ public class Class530 {
 
 	public static Class357 method11354(RsByteBuffer rsbytebuffer_0) {
 		Class357 class357_2 = Class258.method4570(rsbytebuffer_0, 2052241851);
-		int i_3 = rsbytebuffer_0.read24BitInteger(1307039132);
+		int i_3 = rsbytebuffer_0.read24BitInteger();
 		return new Class357_Sub1(class357_2.anInt4124, class357_2.aClass356_4121, class357_2.aClass353_4122, class357_2.anInt4123, class357_2.anInt4120, i_3);
 	}
 }

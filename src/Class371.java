@@ -110,6 +110,6 @@ public class Class371 {
 	}
 
 	public static Container getActiveContainer() {
-		return (Container) (Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : Node_Sub44.anApplet8065));
+		return (Container) (Engine.fullScreenFrame != null ? Engine.fullScreenFrame : (Engine.engineFrame != null ? Engine.engineFrame : IFSubNode.anApplet8065));
 	}
 }

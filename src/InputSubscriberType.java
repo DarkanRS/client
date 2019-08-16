@@ -1,6 +1,6 @@
 public class InputSubscriberType {
 
-	public static int anInt2762;
+	public static int EMAIL_STATUS;
 
 	static IComponentDefinitions aClass118_2763;
 

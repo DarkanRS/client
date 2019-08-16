@@ -2599,28 +2599,28 @@ public class CS2Interpreter {
 		case instr6809:
 			method5816(exec);
 			break;
-		case SET_PING_WORLDS:
+		case WORLDLIST_PINGWORLDS:
 			setPingWorlds(exec);
 			break;
 		case instr6589:
 			method3039(exec);
 			break;
-		case instr6812:
+		case IF_DEBUG_GETOPENIFCOUNT:
 			method927(exec);
 			break;
-		case instr6813:
+		case IF_DEBUG_GETOPENIFID:
 			method11613(exec);
 			break;
-		case instr6950:
+		case IF_DEBUG_GETNAME:
 			method7006(exec);
 			break;
-		case instr6815:
+		case IF_DEBUG_GETCOMCOUNT:
 			method5904(exec);
 			break;
-		case instr6816:
+		case IF_DEBUG_GETCOMNAME:
 			method3341(exec);
 			break;
-		case instr6015:
+		case IF_DEBUG_GETSERVERTRIGGERS:
 			method8724(exec);
 			break;
 		case instr6386:
@@ -2683,61 +2683,61 @@ public class CS2Interpreter {
 		case USERDETAIL_LOBBY_MEMBERSHIP:
 			method1499(exec);
 			break;
-		case instr6509:
+		case USERDETAIL_LOBBY_RECOVERYDAY:
 			method14655(exec);
 			break;
-		case instr6839:
+		case USERDETAIL_LOBBY_UNREADMESSAGES:
 			method7915(exec);
 			break;
-		case instr6840:
+		case USERDETAIL_LOBBY_LASTLOGINDAY:
 			method12859(exec);
 			break;
-		case instr6536:
+		case USERDETAIL_LOBBY_LASTLOGINADDRESS:
 			method7462(exec);
 			break;
-		case instr6483:
+		case USERDETAIL_LOBBY_EMAILSTATUS:
 			method3894(exec);
 			break;
 		case instr6843:
-			method1357(exec);
+			method1357(exec); //USERDETAIL_LOBBY_CCEXPIRY
 			break;
 		case instr6844:
-			method1855(exec);
+			method1855(exec); //USERDETAIL_LOBBY_GRACEEXPIRY
 			break;
 		case instr6845:
-			method12352(exec);
+			method12352(exec); //USERDETAIL_LOBBY_DOBREQUESTED
 			break;
 		case instr6846:
-			method586(exec);
+			method586(exec); //USERDETAIL_DOB
 			break;
 		case instr6847:
-			method13467(exec);
+			method13467(exec); //USERDETAIL_LOBBY_MEMBERSSTATS
 			break;
 		case instr6848:
-			method8869(exec);
+			method8869(exec); //USERDETAIL_LOBBY_PLAYAGE
 			break;
-		case instr6496: //pak
-			method1816(exec);
+		case instr6496:
+			method1816(exec); //packet 75 USERDETAIL_LOBBY_JCOINS_BALANCE
 			break;
 		case instr6850:
-			method1351(exec);
+			method1351(exec); //packet 32 USERDETAIL_LOBBY_LOYALTY_BALANCE
 			break;
 		case instr6851:
-			method6046(exec);
+			method6046(exec); //packet 32 USERDETAIL_LOBBY_LOYALTY_BALANCE
 			break;
 		case instr6852:
 			method1590(exec);
 			break;
-		case instr6853:
+		case AUTOSETUP_SETHIGH:
 			method3233(exec);
 			break;
-		case instr6310:
+		case AUTOSETUP_SETMEDIUM:
 			method7773(exec);
 			break;
-		case instr6855:
+		case AUTOSETUP_SETLOW:
 			method15306(exec);
 			break;
-		case instr6394:
+		case AUTOSETUP_SETMIN:
 			method6239(exec);
 			break;
 		case instr6857:
@@ -2914,7 +2914,7 @@ public class CS2Interpreter {
 		case instr6107:
 			method3740(exec);
 			break;
-		case instr6915:
+		case IS_TARGETED_ENTITY:
 			method3344(exec);
 			break;
 		case instr6916:
@@ -3225,7 +3225,7 @@ public class CS2Interpreter {
 
 	static final void method2866(CS2Executor executor) {
 		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-			Class440.method7373(Class393.preferences.screenSize.method12687(-580037051), -1, -1, false, (byte) 116);
+			UID192.method7373(Class393.preferences.screenSize.method12687(-580037051), -1, -1, false, (byte) 116);
 		}
 		if (NamedFileReference.method867(-391014767) == Class279.aClass279_3368) {
 			Node_Sub11.method12211(-541554902);
@@ -3517,7 +3517,7 @@ public class CS2Interpreter {
 		boolean bool_2 = false;
 		if (client.aBool7310) {
 			try {
-				Object object_3 = Class361.aClass361_4178.method6254(new Object[] { Integer.valueOf(Class504.anInt5832), Boolean.valueOf(VertexNormal.MY_PLAYER.male == 1), Integer.valueOf(executor.intStack[--executor.intStackPtr]) }, (byte) 69);
+				Object object_3 = Class361.aClass361_4178.method6254(new Object[] { Integer.valueOf(Class504.PLAYER_DOB), Boolean.valueOf(VertexNormal.MY_PLAYER.male == 1), Integer.valueOf(executor.intStack[--executor.intStackPtr]) }, (byte) 69);
 				if (object_3 != null) {
 					bool_2 = ((Boolean) object_3).booleanValue();
 				}
@@ -3583,7 +3583,7 @@ public class CS2Interpreter {
 
 	static final void method8263(CS2Executor executor) {
 		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-			Class440.method7373(Class393.preferences.screenSize.method12687(577867050), -1, -1, false, (byte) 35);
+			UID192.method7373(Class393.preferences.screenSize.method12687(577867050), -1, -1, false, (byte) 35);
 		}
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
 		boolean bool_3 = executor.intStack[--executor.intStackPtr] == 1;
@@ -3622,7 +3622,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3894(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = InputSubscriberType.anInt2762;
+		executor.intStack[++executor.intStackPtr - 1] = InputSubscriberType.EMAIL_STATUS;
 	}
 
 	static final void getPlayerGender(CS2Executor executor) {
@@ -3665,7 +3665,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method12859(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Preference_Sub28.anInt7961;
+		executor.intStack[++executor.intStackPtr - 1] = Preference_Sub28.LASTLOGINLDAY;
 	}
 
 	static final void method2978(CS2Executor executor) {
@@ -3702,7 +3702,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1855(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class440.anInt5357;
+		executor.intStack[++executor.intStackPtr - 1] = UID192.anInt5357;
 	}
 
 	static final void stringLength(CS2Executor executor) {
@@ -4627,7 +4627,7 @@ public class CS2Interpreter {
 	static final void method12933(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		if (i_2 >= 1 && i_2 <= 2) {
-			Class440.method7373(i_2, -1, -1, false, (byte) 57);
+			UID192.method7373(i_2, -1, -1, false, (byte) 57);
 		}
 	}
 
@@ -5253,7 +5253,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1351(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class469.aBool5585 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class469.LOYALTY_ENABLED ? 1 : 0;
 	}
 
 	static final void method1352(CS2Executor executor) {
@@ -5265,7 +5265,7 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		IdentiKitIndexLoader.method812(i_2, new Node_Sub44(i_3, 3), (int[]) null, true, (byte) 92);
+		IdentiKitIndexLoader.openSub(i_2, new IFSubNode(i_3, 3), (int[]) null, true, (byte) 92);
 	}
 
 	static final void ccCreate(CS2Executor executor) {
@@ -5998,9 +5998,9 @@ public class CS2Interpreter {
 	static final void method4839(CS2Executor executor) {
 		--executor.intStackPtr;
 		int i_2 = executor.intStack[executor.intStackPtr];
-		Node_Sub44 class282_sub44_3 = (Node_Sub44) client.aClass465_7442.get((long) i_2);
-		if (class282_sub44_3 != null && class282_sub44_3.anInt8062 == 3) {
-			Class351.closeChildren(class282_sub44_3, true, true, -1932930202);
+		IFSubNode class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.get((long) i_2);
+		if (class282_sub44_3 != null && class282_sub44_3.overlay == 3) {
+			Class351.closeChildren(class282_sub44_3, true, true);
 		}
 	}
 
@@ -6068,7 +6068,7 @@ public class CS2Interpreter {
 
 	static final void method3613(CS2Executor executor) {
 		if (Class475.supportsFullScreen && Engine.fullScreenFrame != null) {
-			Class440.method7373(Class393.preferences.screenSize.method12687(551500203), -1, -1, false, (byte) 52);
+			UID192.method7373(Class393.preferences.screenSize.method12687(551500203), -1, -1, false, (byte) 52);
 		}
 	}
 
@@ -6359,7 +6359,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method927(CS2Executor executor) {
-		int i_2 = client.aClass465_7442.method7748((short) 622);
+		int i_2 = client.OPEN_INTERFACES.size();
 		if (client.BASE_WINDOW_ID != -1) {
 			++i_2;
 		}
@@ -6530,7 +6530,7 @@ public class CS2Interpreter {
 		if (CustomCursorsPreference.INTERFACES[i_2] == null) {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = CustomCursorsPreference.INTERFACES[i_2].components[i_3].anInt1414;
+			executor.intStack[++executor.intStackPtr - 1] = CustomCursorsPreference.INTERFACES[i_2].components[i_3].serverTriggers;
 		}
 	}
 
@@ -7156,7 +7156,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method586(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class504.anInt5832;
+		executor.intStack[++executor.intStackPtr - 1] = Class504.PLAYER_DOB;
 	}
 
 	static final void method587(CS2Executor executor) {
@@ -7334,9 +7334,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method1499(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = (int) (SongReference.aLong1259 / 60000L);
-		executor.intStack[++executor.intStackPtr - 1] = (int) ((SongReference.aLong1259 - Utils.time() - Class43.aLong420) / 60000L);
-		executor.intStack[++executor.intStackPtr - 1] = Class509.aBool5870 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = (int) (SongReference.MEMBERSHIP_END / 60000L);
+		executor.intStack[++executor.intStackPtr - 1] = (int) ((SongReference.MEMBERSHIP_END - Utils.time() - Class43.aLong420) / 60000L);
+		executor.intStack[++executor.intStackPtr - 1] = Class509.IS_MEMBER_SUBSCRIPTION ? 1 : 0;
 	}
 
 	static final void method1500(CS2Executor executor) {
@@ -7493,7 +7493,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method1816(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class354.anInt4112;
+		executor.intStack[++executor.intStackPtr - 1] = Class354.JCOINS;
 	}
 
 	static final void getColTag(CS2Executor executor) {
@@ -7608,7 +7608,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5816(CS2Executor executor) {
-		Class274.method4884((byte) 13);
+		Class274.method4884();
 	}
 
 	static final void method2150(CS2Executor executor) {
@@ -7835,7 +7835,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method14655(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class115.anInt1247;
+		executor.intStack[++executor.intStackPtr - 1] = Class115.RECOVERYQUESTIONSSETDATE;
 	}
 
 	static final void method6073(CS2Executor executor) {
@@ -8222,7 +8222,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method7915(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = NPCMeshModifier.anInt4994;
+		executor.intStack[++executor.intStackPtr - 1] = NPCMeshModifier.MESSAGES;
 	}
 
 	static final void method3988(CS2Executor executor) {
@@ -8363,7 +8363,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method3344(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.anInt7162 == executor.currentEntity.method15794() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = client.ENTITY_TARGET == executor.currentEntity.getCS2Index() ? 1 : 0;
 	}
 
 	static final void method3346(CS2Executor executor) {
@@ -8810,7 +8810,7 @@ public class CS2Interpreter {
 
 	static final void method2914(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Node_Sub44 class282_sub44_3 = (Node_Sub44) client.aClass465_7442.get((long) i_2);
+		IFSubNode class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.get((long) i_2);
 		if (class282_sub44_3 != null) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
@@ -8901,11 +8901,11 @@ public class CS2Interpreter {
 			}
 			--i_2;
 		}
-		Node_Sub44 class282_sub44_3;
-		for (class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7750(-1846591050); i_2-- > 0; class282_sub44_3 = (Node_Sub44) client.aClass465_7442.method7751((byte) 5)) {
+		IFSubNode class282_sub44_3;
+		for (class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7750(-1846591050); i_2-- > 0; class282_sub44_3 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 5)) {
 			;
 		}
-		executor.intStack[++executor.intStackPtr - 1] = class282_sub44_3.anInt8063;
+		executor.intStack[++executor.intStackPtr - 1] = class282_sub44_3.interfaceId;
 	}
 
 	static final void setGender(CS2Executor executor) {
@@ -8923,8 +8923,8 @@ public class CS2Interpreter {
 	}
 
 	static final void staffModLevel(CS2Executor executor) {
-		if (client.rights >= 2) {
-			executor.intStack[++executor.intStackPtr - 1] = client.rights;
+		if (client.PLAYER_RIGHTS >= 2) {
+			executor.intStack[++executor.intStackPtr - 1] = client.PLAYER_RIGHTS;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
 		}
@@ -9318,7 +9318,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6046(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = KeyHoldInputSubscriber.anInt2879;
+		executor.intStack[++executor.intStackPtr - 1] = KeyHoldInputSubscriber.LOYALTY_BALANCE;
 	}
 
 	static final void method12718(CS2Executor executor) {
@@ -9578,7 +9578,7 @@ public class CS2Interpreter {
 		executor.stringStackPtr -= 2;
 		String string_2 = (String) executor.stringStack[executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
-		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+		if (client.PLAYER_RIGHTS != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 			BufferedConnectionContext class184_4 = Preference_Sub20.method12807(65699692);
 			TCPPacket tcpmessage_5 = Class271.createPacket(ClientPacket.SEND_PRIVATE_MESSAGE, class184_4.isaac);
 			tcpmessage_5.buffer.writeShort(0);
@@ -9801,8 +9801,8 @@ public class CS2Interpreter {
 		executor.intStackPtr -= 2;
 		int i_2 = executor.intStack[executor.intStackPtr];
 		int i_3 = executor.intStack[executor.intStackPtr + 1];
-		Node_Sub44 class282_sub44_4 = (Node_Sub44) client.aClass465_7442.get((long) i_2);
-		if (class282_sub44_4 != null && i_3 == class282_sub44_4.anInt8063) {
+		IFSubNode class282_sub44_4 = (IFSubNode) client.OPEN_INTERFACES.get((long) i_2);
+		if (class282_sub44_4 != null && i_3 == class282_sub44_4.interfaceId) {
 			executor.intStack[++executor.intStackPtr - 1] = 1;
 		} else {
 			executor.intStack[++executor.intStackPtr - 1] = 0;
@@ -9922,7 +9922,7 @@ public class CS2Interpreter {
 
 	static final void method1860(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		if (client.rights != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+		if (client.PLAYER_RIGHTS != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
 			String string_3 = string_2.toLowerCase();
 			byte b_4 = 0;
 			if (string_3.startsWith(Message.aClass433_5310.translate(Language.ENGLISH))) {

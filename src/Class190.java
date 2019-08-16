@@ -145,7 +145,7 @@ public class Class190 {
 		Class158_Sub1.PLAYER_VAR_PROVIDER.method265(-1043684196);
 		FontRenderer_Sub3.method14341();
 		Class296.CAM_MOVE_LOCALX = 0;
-		Node_Sub44.CAM_MOVE_LOCALY = 0;
+		IFSubNode.CAM_MOVE_LOCALY = 0;
 		SpotAnimDefinitions.CAM_MOVE_Z = 0;
 		Class454.CAM_MOVE_CONST_SPEED = 0;
 		Class115.CAM_MOVE_VAR_SPEED = 0;
@@ -165,19 +165,19 @@ public class Class190 {
 			Class337.unloadInterface(client.BASE_WINDOW_ID, 1308673999);
 		}
 
-		for (Node_Sub44 class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(774217336); class282_sub44_2 != null; class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7751((byte) 87)) {
+		for (IFSubNode class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(774217336); class282_sub44_2 != null; class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7751((byte) 87)) {
 			if (!class282_sub44_2.isLinked()) {
-				class282_sub44_2 = (Node_Sub44) client.aClass465_7442.method7750(-1913243579);
+				class282_sub44_2 = (IFSubNode) client.OPEN_INTERFACES.method7750(-1913243579);
 				if (class282_sub44_2 == null) {
 					break;
 				}
 			}
 
-			Class351.closeChildren(class282_sub44_2, true, false, -1492337711);
+			Class351.closeChildren(class282_sub44_2, true, false);
 		}
 
 		client.BASE_WINDOW_ID = -1;
-		client.aClass465_7442 = new IterableNodeMap(8);
+		client.OPEN_INTERFACES = new IterableNodeMap(8);
 		MeshModifier.method7041((byte) -126);
 		client.aClass118_7352 = null;
 

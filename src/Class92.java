@@ -63,7 +63,7 @@ public class Class92 {
 	}
 
 	public static void method1563(int i_0) {
-		Index36FileNode class282_sub37_2 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
+		VorbisNode class282_sub37_2 = (VorbisNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			class282_sub37_2.reference.method4947((byte) 44);
 			Class62.method1260(class282_sub37_2.fileId, class282_sub37_2.aBool7998, 1656056599);

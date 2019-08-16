@@ -508,7 +508,7 @@ public class MapRegion {
 				}
 			}
 			if (bool_21) {
-				client.anInt7210 = client.NPCS.method7748((short) 292);
+				client.anInt7210 = client.NPCS.size();
 				i_8 = 0;
 				StringNode class282_sub47_28;
 				for (Iterator iterator_24 = client.NPCS.iterator(); iterator_24.hasNext(); client.aNode_Sub47Array7209[i_8++] = class282_sub47_28) {
@@ -587,7 +587,7 @@ public class MapRegion {
 			}
 		} else {
 			Class296.CAM_MOVE_LOCALX -= i_3;
-			Node_Sub44.CAM_MOVE_LOCALY -= i_4;
+			IFSubNode.CAM_MOVE_LOCALY -= i_4;
 			PlaySynthCutsceneAction.anInt9368 -= i_3;
 			OutgoingLoginPacket.anInt4280 -= i_4;
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= i_3 * 512;

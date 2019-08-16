@@ -35,15 +35,15 @@ public class Class516 {
 		client.aString7281 = string_0;
 		if (NamedFileReference.method867(-1769935536) != Class279.aClass279_3368) {
 			try {
-				String string_2 = Node_Sub44.anApplet8065.getParameter(Class358.aClass358_4158.aString4159);
-				String string_3 = Node_Sub44.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
+				String string_2 = IFSubNode.anApplet8065.getParameter(Class358.aClass358_4158.aString4159);
+				String string_3 = IFSubNode.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
 				String string_4 = string_2 + "settings=" + string_0 + "; version=1; path=/; domain=" + string_3;
 				if (string_0.length() == 0) {
 					string_4 = string_4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
 				} else {
 					string_4 = string_4 + "; Expires=" + Class316.method5596(Utils.time() + 94608000000L) + "; Max-Age=" + 94608000L;
 				}
-				Class441.method7376(Node_Sub44.anApplet8065, "document.cookie=\"" + string_4 + "\"", (byte) 78);
+				Class441.method7376(IFSubNode.anApplet8065, "document.cookie=\"" + string_4 + "\"", (byte) 78);
 			} catch (Throwable throwable_5) {
 				;
 			}

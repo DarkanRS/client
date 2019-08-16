@@ -19,7 +19,7 @@ public class Class148 {
 	}
 
 	public static String method2550(int i_0) {
-		Index36FileNode class282_sub37_2 = (Index36FileNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
+		VorbisNode class282_sub37_2 = (VorbisNode) Class492.INDEX36_FILE_CACHE.get((long) i_0);
 		if (class282_sub37_2 != null) {
 			Node_Sub41_Sub2 class282_sub41_sub2_3 = class282_sub37_2.reference.method4935();
 			if (class282_sub41_sub2_3 != null) {

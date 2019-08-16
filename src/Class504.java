@@ -1,6 +1,6 @@
 public abstract class Class504 {
 
-    public static int anInt5832;
+    public static int PLAYER_DOB;
 
     Class504() throws Throwable {
         throw new Error();

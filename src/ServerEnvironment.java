@@ -25,11 +25,11 @@ public enum ServerEnvironment implements Identifiable {
         return WTRC == class496_0 || WTQA == class496_0 || WTWIP == class496_0 || WTI == class496_0 || INTBETA == class496_0;
     }
 
-    static void method8309(RsByteBuffer rsbytebuffer_0, int i_1) {
-        if (Engine.aClass440_3269 != null) {
+    static void updateRandomDatUID192(RsByteBuffer data, int i_1) {
+        if (Engine.PLAYER_UID192 != null) {
             try {
-                Engine.aClass440_3269.method7347(0L);
-                Engine.aClass440_3269.method7352(rsbytebuffer_0.buffer, i_1, 24);
+                Engine.PLAYER_UID192.method7347(0L);
+                Engine.PLAYER_UID192.write(data.buffer, i_1, 24);
             } catch (Exception exception_4) {
                 ;
             }
@@ -93,7 +93,7 @@ public enum ServerEnvironment implements Identifiable {
                 client.anInt7367 = Class349.anInt4083;
                 client.anInt7476 = client.anInt3243 * -969250379;
             }
-            LightIntensityIndexLoader.method7313((Node_Sub44) null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
+            LightIntensityIndexLoader.method7313((IFSubNode) null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
             if (Node_Sub20_Sub24.aClass118_9884 != null) {
                 BillboardDefinitions.method6170(i_1, i_2);
             }
