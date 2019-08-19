@@ -24,7 +24,7 @@ public class Class373 {
 					if (class282_sub53_sub1_3 == null) {
 						return;
 					}
-					if (point_2 != null && Class351.gameCanvas.isShowing() && Class530.appletHasFocus) {
+					if (point_2 != null && Class351.gameCanvas.isShowing() && IFSubObjectPosition.appletHasFocus) {
 						class282_sub53_sub1_3.method14732(point_2);
 						if (!class282_sub53_sub1_3.method14731() && class282_sub53_sub1_3.getX() < Class349.anInt4083 && class282_sub53_sub1_3.getY() < Engine.anInt3243 * -969250379 && class282_sub53_sub1_3.getX() >= 0 && class282_sub53_sub1_3.getY() >= 0) {
 							int i_4 = class282_sub53_sub1_3.getClickType();

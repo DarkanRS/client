@@ -352,7 +352,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         }
         Class351.gameCanvas.addFocusListener(this);
         Class351.gameCanvas.requestFocus();
-        Class530.appletHasFocus = true;
+        IFSubObjectPosition.appletHasFocus = true;
         aBool3275 = true;
         Class351.gameCanvas.setFocusTraversalKeysEnabled(false);
         aBool3274 = true;
@@ -416,7 +416,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             ;
         }
         synchronized (this) {
-            Class530.appletHasFocus = aBool3275;
+            IFSubObjectPosition.appletHasFocus = aBool3275;
         }
         this.method4677();
     }

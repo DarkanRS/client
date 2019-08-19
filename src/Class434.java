@@ -57,10 +57,10 @@ public abstract class Class434 {
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 
-		if (Class236.aBool2909 != Class530.appletHasFocus) {
-			Class236.aBool2909 = Class530.appletHasFocus;
+		if (Class236.aBool2909 != IFSubObjectPosition.appletHasFocus) {
+			Class236.aBool2909 = IFSubObjectPosition.appletHasFocus;
 			tcpmessage_1 = Class271.createPacket(ClientPacket.CLIENT_FOCUS, client.GAME_CONNECTION_CONTEXT.isaac);
-			tcpmessage_1.buffer.writeByte(Class530.appletHasFocus ? 1 : 0);
+			tcpmessage_1.buffer.writeByte(IFSubObjectPosition.appletHasFocus ? 1 : 0);
 			client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_1);
 		}
 

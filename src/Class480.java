@@ -93,7 +93,7 @@ public class Class480 {
 	}
 
 	public static MapSize getMapSize(int i_0, byte b_1) {
-		MapSize[] arr_2 = Class530.method11352();
+		MapSize[] arr_2 = IFSubObjectPosition.method11352();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			MapSize class106_4 = arr_2[i_3];
 			if (i_0 == class106_4.anInt1071) {

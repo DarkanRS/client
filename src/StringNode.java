@@ -33,7 +33,7 @@ public class StringNode extends Node {
 		graphicalrenderer_0.r(0, 0, Class349.anInt4083, 350);
 		graphicalrenderer_0.method8659(0, 350 - Class179.anInt2230, Class349.anInt4083, -1, -51892104);
 		Class285.aFontRenderer_3394.renderText("--> " + GameTipsLoader.method6793(Class179.aString2225), 10, 350 - SkyboxIndexLoader.aClass414_3438.bottomPadding - 1, -1, -16777216);
-		if (Class530.appletHasFocus) {
+		if (IFSubObjectPosition.appletHasFocus) {
 			i_3 = -1;
 			if (client.cycles % 30 > 15) {
 				i_3 = 16777215;

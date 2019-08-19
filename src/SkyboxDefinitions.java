@@ -32,7 +32,7 @@ public class SkyboxDefinitions {
 		} else if (opcode == 3) {
 			this.anInt2654 = buffer.readUnsignedByte();
 		} else if (opcode == 4) {
-			this.aClass204_2656 = (Class204) Class386.identify(Class530.method11353(), buffer.readUnsignedByte());
+			this.aClass204_2656 = (Class204) Class386.identify(IFSubObjectPosition.method11353(), buffer.readUnsignedByte());
 		} else if (opcode == 5) {
 			this.anInt2657 = buffer.readBigSmart();
 		}

@@ -38,8 +38,8 @@ public class FixedTileStrategy extends RouteStrategy {
 		return class282_sub54_2;
 	}
 
-	static CS2Script getScript(CS2HookEventType class397_0, int i_1, int i_2) {
-		int i_4 = class397_0.id | i_1 << 10;
+	static CS2Script getScript(CS2HookEventType event, int scriptId, int i_2) {
+		int i_4 = event.id | scriptId << 10;
 		CS2Script cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
 		if (cs2script_5 != null) {
 			return cs2script_5;
@@ -55,12 +55,12 @@ public class FixedTileStrategy extends RouteStrategy {
 						throw new RuntimeException(exception_8.getMessage() + " " + i_4);
 					}
 
-					cs2script_5.aClass397_9527 = class397_0;
+					cs2script_5.aClass397_9527 = event;
 					Class506.CS2_CACHE.put(cs2script_5, (long) i_4 << 16);
 					return cs2script_5;
 				}
 			} else {
-				i_4 = class397_0.id | i_2 + 65536 << 10;
+				i_4 = event.id | i_2 + 65536 << 10;
 				cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
 				if (cs2script_5 != null) {
 					return cs2script_5;
@@ -76,12 +76,12 @@ public class FixedTileStrategy extends RouteStrategy {
 								throw new RuntimeException(exception_9.getMessage() + " " + i_4);
 							}
 
-							cs2script_5.aClass397_9527 = class397_0;
+							cs2script_5.aClass397_9527 = event;
 							Class506.CS2_CACHE.put(cs2script_5, (long) i_4 << 16);
 							return cs2script_5;
 						}
 					} else {
-						i_4 = class397_0.id | 0x3fffc00;
+						i_4 = event.id | 0x3fffc00;
 						cs2script_5 = (CS2Script) Class506.CS2_CACHE.get((long) i_4 << 16);
 						if (cs2script_5 != null) {
 							return cs2script_5;
@@ -97,7 +97,7 @@ public class FixedTileStrategy extends RouteStrategy {
 										throw new RuntimeException(exception_10.getMessage() + " " + i_4);
 									}
 
-									cs2script_5.aClass397_9527 = class397_0;
+									cs2script_5.aClass397_9527 = event;
 									Class506.CS2_CACHE.put(cs2script_5, (long) i_4 << 16);
 									return cs2script_5;
 								}

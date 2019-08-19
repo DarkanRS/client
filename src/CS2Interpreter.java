@@ -2698,32 +2698,32 @@ public class CS2Interpreter {
 		case USERDETAIL_LOBBY_EMAILSTATUS:
 			method3894(exec);
 			break;
-		case instr6843:
-			method1357(exec); //USERDETAIL_LOBBY_CCEXPIRY
+		case USERDETAIL_LOBBY_CCEXPIRY:
+			method1357(exec);
 			break;
-		case instr6844:
-			method1855(exec); //USERDETAIL_LOBBY_GRACEEXPIRY
+		case USERDETAIL_LOBBY_GRACEEXPIRY:
+			method1855(exec);
 			break;
-		case instr6845:
-			method12352(exec); //USERDETAIL_LOBBY_DOBREQUESTED
+		case USERDETAIL_LOBBY_DOBREQUESTED:
+			method12352(exec);
 			break;
-		case instr6846:
-			method586(exec); //USERDETAIL_DOB
+		case USERDETAIL_DOB:
+			method586(exec);
 			break;
-		case instr6847:
-			method13467(exec); //USERDETAIL_LOBBY_MEMBERSSTATS
+		case USERDETAIL_LOBBY_MEMBERSSTATS:
+			method13467(exec);
 			break;
-		case instr6848:
-			method8869(exec); //USERDETAIL_LOBBY_PLAYAGE
+		case USERDETAIL_LOBBY_PLAYAGE:
+			method8869(exec);
 			break;
-		case instr6496:
-			method1816(exec); //packet 75 USERDETAIL_LOBBY_JCOINS_BALANCE
+		case USERDETAIL_LOBBY_JCOINS_BALANCE:
+			method1816(exec);
 			break;
-		case instr6850:
-			method1351(exec); //packet 32 USERDETAIL_LOBBY_LOYALTY_BALANCE
+		case USERDETAIL_LOBBY_LOYALTY_ENABLED:
+			method1351(exec);
 			break;
-		case instr6851:
-			method6046(exec); //packet 32 USERDETAIL_LOBBY_LOYALTY_BALANCE
+		case USERDETAIL_LOBBY_LOYALTY_BALANCE:
+			method6046(exec);
 			break;
 		case instr6852:
 			method1590(exec);
@@ -5626,7 +5626,7 @@ public class CS2Interpreter {
 	}
 
 	static final void getAppletFocus(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class530.appletHasFocus ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = IFSubObjectPosition.appletHasFocus ? 1 : 0;
 	}
 
 	static final void method6802(CS2Executor executor) {

@@ -1,4 +1,4 @@
-public class Class530 {
+public class IFSubObjectPosition {
 
 	public static boolean appletHasFocus;
 
@@ -17,7 +17,7 @@ public class Class530 {
 		return sceneobject_2 == null ? null : (sceneobject_2.getId(416174941) != this.anInt7049 ? null : sceneobject_2);
 	}
 
-	public Class530(WorldTile coordgrid_1, int i_2, int i_3, int i_4) {
+	public IFSubObjectPosition(WorldTile coordgrid_1, int i_2, int i_3, int i_4) {
 		this.aClass219_7048 = coordgrid_1;
 		this.anInt7047 = i_2;
 		this.anInt7049 = i_4;

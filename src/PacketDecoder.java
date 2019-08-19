@@ -2276,20 +2276,20 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IF_OPENSUB_ACTIVE_OBJECT) {
-			int key = buffer.readIntV2();
+			int topUid = buffer.readIntV2();
 			int flags = buffer.readIntV2();
-			int i_6 = buffer.readUnsignedByte128();
+			int overlay = buffer.readUnsignedByte128();
 			int i_7 = buffer.readInt();
 			int i_8 = buffer.readIntV1();
-			int i_9 = buffer.readUnsignedShort128();
-			int i_10 = buffer.readUnsigned128Byte();
-			int i_11 = i_10 >> 2;
-			int i_12 = i_10 & 0x3;
+			int subId = buffer.readUnsignedShort128();
+			int objFlags = buffer.readUnsigned128Byte();
+			int type = objFlags >> 2;
+			int rotation = objFlags & 0x3;
 			int i_35 = buffer.readInt();
-			WorldTile coordgrid_36 = new WorldTile(buffer.readIntV2());
-			int i_15 = buffer.readInt();
+			WorldTile tile = new WorldTile(buffer.readIntV2());
+			int objectId = buffer.readInt();
 			Class470.method7825();
-			IdentiKitIndexLoader.openSub(key, new Node_Sub44_Sub4(i_9, i_6, new Class530(coordgrid_36, i_11, i_12, i_15)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
+			IdentiKitIndexLoader.openSub(topUid, new IFSubObjectNode(subId, overlay, new IFSubObjectPosition(tile, type, rotation, objectId)), new int[] { i_8, i_7, flags, i_35 }, false, (byte) 10);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.VARCLAN_DISABLE) {

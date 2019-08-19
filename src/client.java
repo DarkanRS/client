@@ -995,7 +995,7 @@ public final class client extends Engine {
 				}
 			}
 
-			if (Class475.supportsFullScreen && fullScreenFrame != null && !Class530.appletHasFocus && Class176.method2980(gameState, -576589462)) {
+			if (Class475.supportsFullScreen && fullScreenFrame != null && !IFSubObjectPosition.appletHasFocus && Class176.method2980(gameState, -576589462)) {
 				PLAYER_UID192.method7373(Class393.preferences.screenSize.method12687(-342071815), -1, -1, false, (byte) 98);
 			}
 

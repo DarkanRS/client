@@ -110,7 +110,7 @@ public class Class190 {
 
 		Class186.method3083(619410098);
 		client.LOBBY_CONNECTION_CONTEXT.method3051();
-		Class530.appletHasFocus = true;
+		IFSubObjectPosition.appletHasFocus = true;
 		Class250.method4296();
 
 		int i_1;
