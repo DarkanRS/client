@@ -42,7 +42,7 @@ public class Class151 {
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345);
             tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
-            tcpmessage_4.buffer.writeLEInt(icomponentdefinitions_0.idHash, (byte) 89);
+            tcpmessage_4.buffer.writeIntLE(icomponentdefinitions_0.idHash);
             tcpmessage_4.buffer.writeIntV2(client.anInt56);
             tcpmessage_4.buffer.writeShortLE(client.anInt7346);
             client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_4);

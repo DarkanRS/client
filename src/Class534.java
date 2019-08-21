@@ -19,12 +19,12 @@ public abstract class Class534 {
 		if (this.aLong7074 == -1L) {
 			long_4 = (long) i_2;
 		} else {
-			long_4 = class282_sub53_1.method13471(-568247340) - this.aLong7074;
+			long_4 = class282_sub53_1.method13471() - this.aLong7074;
 			if (long_4 > (long) i_2) {
 				long_4 = (long) i_2;
 			}
 		}
-		this.aLong7074 = class282_sub53_1.method13471(1455935453);
+		this.aLong7074 = class282_sub53_1.method13471();
 		return (int) long_4;
 	}
 
@@ -80,7 +80,7 @@ public abstract class Class534 {
 						i_9 = 65534;
 					}
 					if (i_9 == this.anInt7075 && i_8 == this.anInt7078) {
-						class282_sub53_13.cache(-894194576);
+						class282_sub53_13.cache();
 					} else {
 						if (tcpmessage_2 == null) {
 							tcpmessage_2 = this.method11416();
@@ -96,8 +96,8 @@ public abstract class Class534 {
 						if (this.aLong7076 != -1L) {
 							i_10 = i_9 - this.anInt7075;
 							i_11 = i_8 - this.anInt7078;
-							i_12 = (int) ((class282_sub53_13.method13471(1951145050) - this.aLong7076) / 20L);
-							i_4 = (int) ((long) i_4 + (class282_sub53_13.method13471(898396823) - this.aLong7076) % 20L);
+							i_12 = (int) ((class282_sub53_13.method13471() - this.aLong7076) / 20L);
+							i_4 = (int) ((long) i_4 + (class282_sub53_13.method13471() - this.aLong7076) % 20L);
 						} else {
 							i_10 = i_9;
 							i_11 = i_8;
@@ -131,8 +131,8 @@ public abstract class Class534 {
 						}
 						++i_5;
 						this.method11413(tcpmessage_2.buffer, class282_sub53_13);
-						this.aLong7076 = class282_sub53_13.method13471(1014804991);
-						class282_sub53_13.cache(684754110);
+						this.aLong7076 = class282_sub53_13.method13471();
+						class282_sub53_13.cache();
 					}
 				}
 			}

@@ -26,7 +26,7 @@ public class Class350_Sub3 extends Class350 {
 	}
 
 	static void method12590(TCPPacket tcpmessage_0, int i_1, int i_2, int i_3) {
-		tcpmessage_0.buffer.writeLEInt(i_1, (byte) -5);
+		tcpmessage_0.buffer.writeIntLE(i_1);
 		tcpmessage_0.buffer.writeShort(i_3);
 		tcpmessage_0.buffer.writeShort128(i_2);
 	}

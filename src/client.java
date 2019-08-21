@@ -847,13 +847,13 @@ public final class client extends Engine {
 					JS5CacheFile.record(record);
 				} else if (type == 6) {
 					anInt7191 += record.getMeta();
-					record.cache(-667277258);
+					record.cache();
 				} else if (Class298.method5304(type, -1452447223)) {
 					mouseRecords.append(record);
 					if (mouseRecords.size() > 10) {
 						MouseRecord head = (MouseRecord) mouseRecords.popHead();
 						if (head != null) {
-							head.cache(1848572957);
+							head.cache();
 						}
 					}
 				}

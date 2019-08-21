@@ -35,7 +35,7 @@ public class Class373 {
 							}
 						}
 					} else {
-						class282_sub53_sub1_3.cache(665742059);
+						class282_sub53_sub1_3.cache();
 					}
 				}
 			}

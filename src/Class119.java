@@ -101,7 +101,7 @@ public class Class119 {
 		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.anInt1426);
 		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.anInt1426);
 		tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);
-		tcpmessage_3.buffer.writeLEInt(icomponentdefinitions_1.idHash, (byte) 77);
+		tcpmessage_3.buffer.writeIntLE(icomponentdefinitions_1.idHash);
 		client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);
 	}
 

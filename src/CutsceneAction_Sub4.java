@@ -344,7 +344,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 					tcpmessage_15.buffer.writeShort(i_5 + coordgrid_10.y);
 					tcpmessage_15.buffer.writeShort(i_4 + coordgrid_10.x);
 					tcpmessage_15.buffer.writeInt((int) (long_8 >>> 32) & 0x7fffffff);
-					tcpmessage_15.buffer.writeByte128(VertexNormal.method1465(-1734216598) ? 1 : 0, 784835211);
+					tcpmessage_15.buffer.writeByte128(VertexNormal.method1465(-1734216598) ? 1 : 0);
 					client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_15);
 					Class439.routeToSceneObject(i_4, i_5, long_8);
 				}

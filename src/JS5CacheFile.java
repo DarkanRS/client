@@ -277,7 +277,7 @@ public final class JS5CacheFile {
 
 	public static void record(MouseRecord class282_sub53_0) {
 		if (!TextureDetails.method2875(client.gameState, -1927229770)) {
-			class282_sub53_0.cache(-485901681);
+			class282_sub53_0.cache();
 		} else {
 			Class236.aClass534_Sub2_2911.method11410(class282_sub53_0);
 		}

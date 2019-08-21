@@ -214,7 +214,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 						TCPPacket tcpmessage_8;
 						if (client.aBool7375) {
 							tcpmessage_8 = Class271.createPacket(ClientPacket.WORLD_MAP_CLICK, client.GAME_CONNECTION_CONTEXT.isaac);
-							tcpmessage_8.buffer.writeLEInt(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015, (byte) -22);
+							tcpmessage_8.buffer.writeIntLE(Node_Sub15_Sub5.anInt9859 << 28 | IdentikitDefinition.anInt431 << 14 | StructIndexLoader.anInt5015);
 							client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_8);
 							client.aBool7375 = false;
 						}

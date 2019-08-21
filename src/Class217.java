@@ -25,7 +25,7 @@ public abstract class Class217 {
 		Node_Sub33.aNode_Sub15_Sub2_7836 = class282_sub15_sub2_5;
 	}
 
-	public static MouseRecord_Sub1 method3694(int i_0, int i_1, int i_2, int i_3, int i_4) {
+	public static MouseRecord_Sub1 method3694(int x, int y, int i_2, int i_3, int i_4) {
 		MouseRecord_Sub1[] arr_5 = MouseRecord_Sub1.aMouseRecord_Sub1Array9497;
 		synchronized (MouseRecord_Sub1.aMouseRecord_Sub1Array9497) {
 			MouseRecord_Sub1 class282_sub53_sub1_6;
@@ -34,11 +34,11 @@ public abstract class Class217 {
 			} else {
 				class282_sub53_sub1_6 = MouseRecord_Sub1.aMouseRecord_Sub1Array9497[--Class81.anInt803];
 			}
-			class282_sub53_sub1_6.anInt9516 = i_0;
-			class282_sub53_sub1_6.anInt9517 = i_1;
+			class282_sub53_sub1_6.x = x;
+			class282_sub53_sub1_6.y = y;
 			class282_sub53_sub1_6.anInt9513 = i_2;
 			class282_sub53_sub1_6.anInt9514 = i_3;
-			class282_sub53_sub1_6.aLong9515 = Utils.time();
+			class282_sub53_sub1_6.time = Utils.time();
 			return class282_sub53_sub1_6;
 		}
 	}

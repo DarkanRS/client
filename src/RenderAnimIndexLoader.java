@@ -88,7 +88,7 @@ public class RenderAnimIndexLoader {
 				if (class282_sub53_sub1_2 == null) {
 					return;
 				}
-				class282_sub53_sub1_2.cache(-1123290307);
+				class282_sub53_sub1_2.cache();
 			}
 		}
 	}

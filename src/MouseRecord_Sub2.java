@@ -28,7 +28,7 @@ public final class MouseRecord_Sub2 extends MouseRecord {
 		return this.anInt9635;
 	}
 
-	public void cache(int i_1) {
+	public void cache() {
 		MouseRecord_Sub2[] arr_2 = aMouseRecord_Sub2Array9633;
 		synchronized (aMouseRecord_Sub2Array9633) {
 			if (Class279.anInt3370 < anInt9630 - 1) {
@@ -109,7 +109,7 @@ public final class MouseRecord_Sub2 extends MouseRecord {
 		}
 	}
 
-	public long method13471(int i_1) {
+	public long method13471() {
 		return this.aLong9634;
 	}
 

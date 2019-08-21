@@ -143,7 +143,7 @@ public class RsByteBuffer extends Node {
         return (this.buffer[this.index - 1] - 128 & 0xff) + ((this.buffer[this.index - 2] & 0xff) << 8);
     }
 
-    public void writeByte128(int i_1, int i_2) {
+    public void writeByte128(int i_1) {
         this.buffer[++this.index - 1] = (byte) (i_1 + 128);
     }
 
@@ -404,7 +404,7 @@ public class RsByteBuffer extends Node {
         return i_2;
     }
 
-    public void writeLEInt(int i_1, byte b_2) {
+    public void writeIntLE(int i_1) {
         this.buffer[++this.index - 1] = (byte) i_1;
         this.buffer[++this.index - 1] = (byte) (i_1 >> 8);
         this.buffer[++this.index - 1] = (byte) (i_1 >> 16);
