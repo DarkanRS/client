@@ -762,7 +762,7 @@ public class ObjectDefinitions {
 		return meshrasterizer_16;
 	}
 
-	public final ObjectDefinitions method8013(VarProvider varProvider, byte b_2) {
+	public final ObjectDefinitions getTransformed(VarProvider varProvider, byte b_2) {
 		int i_3 = -1;
 		if (this.configFileId != -1) {
 			i_3 = varProvider.getVarBit(this.configFileId);

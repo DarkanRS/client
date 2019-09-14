@@ -109,12 +109,12 @@ public class Class534_Sub1 extends Class534 {
 	}
 
 	static int[] method12815(CacheableNode_Sub7 class282_sub50_sub7_0, int i_1) {
-		int[] ints_2 = null;
-		if (SunDefinitions.method859(class282_sub50_sub7_0.clickType, 219826890)) {
-			ints_2 = IndexLoaders.ITEM_LOADER.getItemDefinitions((int) class282_sub50_sub7_0.aLong9584).quests;
-		} else if (class282_sub50_sub7_0.anInt9579 != -1) {
-			ints_2 = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub50_sub7_0.anInt9579).quests;
-		} else if (Class237.method3989(class282_sub50_sub7_0.clickType)) {
+		int[] quests = null;
+		if (SunDefinitions.isItemClickType(class282_sub50_sub7_0.clickType, 219826890)) {
+			quests = IndexLoaders.ITEM_LOADER.getItemDefinitions((int) class282_sub50_sub7_0.aLong9584).quests;
+		} else if (class282_sub50_sub7_0.itemId != -1) {
+			quests = IndexLoaders.ITEM_LOADER.getItemDefinitions(class282_sub50_sub7_0.itemId).quests;
+		} else if (Class237.isNPCClickType(class282_sub50_sub7_0.clickType)) {
 			StringNode class282_sub47_3 = (StringNode) client.NPCS.get((long) ((int) class282_sub50_sub7_0.aLong9584));
 			if (class282_sub47_3 != null) {
 				NPC npc_4 = (NPC) class282_sub47_3.anObject8068;
@@ -123,18 +123,18 @@ public class Class534_Sub1 extends Class534 {
 					npcdefinitions_5 = npcdefinitions_5.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 				}
 				if (npcdefinitions_5 != null) {
-					ints_2 = npcdefinitions_5.anIntArray4915;
+					quests = npcdefinitions_5.quests;
 				}
 			}
-		} else if (EnumDefinitions.method7252(class282_sub50_sub7_0.clickType)) {
+		} else if (EnumDefinitions.isObjectClickType(class282_sub50_sub7_0.clickType)) {
 			ObjectDefinitions objectdefinitions_6 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions((int) (class282_sub50_sub7_0.aLong9584 >>> 32 & 0x7fffffffL));
 			if (objectdefinitions_6.toObjectIds != null) {
-				objectdefinitions_6 = objectdefinitions_6.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 45);
+				objectdefinitions_6 = objectdefinitions_6.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 45);
 			}
 			if (objectdefinitions_6 != null) {
-				ints_2 = objectdefinitions_6.anIntArray5707;
+				quests = objectdefinitions_6.anIntArray5707;
 			}
 		}
-		return ints_2;
+		return quests;
 	}
 }

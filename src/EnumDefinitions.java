@@ -173,7 +173,7 @@ public class EnumDefinitions {
 		}
 	}
 
-	static boolean method7252(int i_0) {
+	static boolean isObjectClickType(int i_0) {
 		return i_0 != 3 && i_0 != 4 && i_0 != 5 && i_0 != 6 && i_0 != 1001 && i_0 != 1002 ? i_0 == 2 : true;
 	}
 

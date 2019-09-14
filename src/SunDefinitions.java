@@ -176,7 +176,7 @@ public class SunDefinitions {
 		}
 	}
 
-	static boolean method859(int i_0, int i_1) {
+	static boolean isItemClickType(int i_0, int i_1) {
 		return i_0 != 18 && i_0 != 19 && i_0 != 20 && i_0 != 21 && i_0 != 22 && i_0 != 1004 ? i_0 == 17 : true;
 	}
 

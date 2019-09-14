@@ -58,7 +58,7 @@ final class Class237 implements Interface45 {
     public void method249(boolean bool_1) {
     }
 
-    static boolean method3989(int i_0) {
+    static boolean isNPCClickType(int i_0) {
         return i_0 != 9 && i_0 != 10 && i_0 != 11 && i_0 != 12 && i_0 != 13 && i_0 != 1003 ? i_0 == 8 : true;
     }
 

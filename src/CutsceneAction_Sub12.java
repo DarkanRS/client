@@ -49,7 +49,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
 			return 0;
 		} else {
 			int i_2 = class282_sub50_sub7_0.clickType;
-			return Class14.method539(i_2, 85195047) ? 1 : (SunDefinitions.method859(i_2, -1682057624) ? 2 : (EnumDefinitions.method7252(i_2) ? 3 : (Class237.method3989(i_2) ? 4 : (Class348.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
+			return Class14.method539(i_2, 85195047) ? 1 : (SunDefinitions.isItemClickType(i_2, -1682057624) ? 2 : (EnumDefinitions.isObjectClickType(i_2) ? 3 : (Class237.isNPCClickType(i_2) ? 4 : (Class348.method6176(i_2) ? 7 : (i_2 == 16 ? 8 : 5)))));
 		}
 	}
 

@@ -73,7 +73,7 @@ public class Class123 {
 		if ((this.aClass539_1538 == null || this.aClass539_1538.aBool7132) && (arr_10 != null || arr_11 != null)) {
 			ObjectDefinitions objectdefinitions_12 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 			if (objectdefinitions_12.toObjectIds != null) {
-				objectdefinitions_12 = objectdefinitions_12.method8013((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) -36);
+				objectdefinitions_12 = objectdefinitions_12.getTransformed((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) -36);
 			}
 			if (objectdefinitions_12 != null) {
 				this.aClass539_1538 = ParticleSystem.method11557(client.cycles, true);
@@ -101,7 +101,7 @@ public class Class123 {
 			ObjectDefinitions objectdefinitions_7 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 			ObjectDefinitions objectdefinitions_8 = objectdefinitions_7;
 			if (objectdefinitions_7.toObjectIds != null) {
-				objectdefinitions_7 = objectdefinitions_7.method8013((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 4);
+				objectdefinitions_7 = objectdefinitions_7.getTransformed((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 4);
 			}
 			if (objectdefinitions_7 == null) {
 				return;
@@ -165,7 +165,7 @@ public class Class123 {
 	final MeshRasterizer method2132(GraphicalRenderer graphicalrenderer_1, int i_2, boolean bool_3, boolean bool_4) {
 		ObjectDefinitions objectdefinitions_6 = this.aClass474_1536.getObjectDefinitions(this.anInt1540);
 		if (objectdefinitions_6.toObjectIds != null) {
-			objectdefinitions_6 = objectdefinitions_6.method8013((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 31);
+			objectdefinitions_6 = objectdefinitions_6.getTransformed((VarProvider) (client.anInt7341 == 4 ? Class86.anInterface42_832 : Class158_Sub1.PLAYER_VAR_PROVIDER), (byte) 31);
 		}
 		if (objectdefinitions_6 == null) {
 			this.method2118(graphicalrenderer_1, 2015419671);

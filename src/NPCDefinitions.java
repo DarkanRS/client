@@ -1,6 +1,6 @@
 public class NPCDefinitions {
 
-	NPCIndexLoader aClass406_4855;
+	NPCIndexLoader npcLoader;
 	public int type;
 	public String[] options;
 	public static short[] aShortArray4862 = new short[256];
@@ -63,7 +63,7 @@ public class NPCDefinitions {
 	byte aByte4868;
 	byte aByte4869;
 	byte aByte4905;
-	public int[] anIntArray4915;
+	public int[] quests;
 	public boolean aBool4872;
 	IterableNodeMap cs2Params;
 
@@ -95,7 +95,7 @@ public class NPCDefinitions {
 			this.modelIds = new int[0];
 		}
 		if (this.aByte4916 == -1) {
-			if (this.aClass406_4855.aClass486_4844 == Game.darkan) {
+			if (this.npcLoader.aClass486_4844 == Game.darkan) {
 				this.aByte4916 = 1;
 			} else {
 				this.aByte4916 = 0;
@@ -135,10 +135,10 @@ public class NPCDefinitions {
 			if (class417_10 != null) {
 				long_33 |= class417_10.aLong4993 << 24;
 			}
-			SoftCache softcache_20 = this.aClass406_4855.aClass229_4836;
+			SoftCache softcache_20 = this.npcLoader.aClass229_4836;
 			MeshRasterizer meshrasterizer_19;
-			synchronized (this.aClass406_4855.aClass229_4836) {
-				meshrasterizer_19 = (MeshRasterizer) this.aClass406_4855.aClass229_4836.get(long_33);
+			synchronized (this.npcLoader.aClass229_4836) {
+				meshrasterizer_19 = (MeshRasterizer) this.npcLoader.aClass229_4836.get(long_33);
 			}
 			BASDefinitions renderanimdefs_45 = null;
 			if (!bool_12 && i_11 != -1) {
@@ -163,14 +163,14 @@ public class NPCDefinitions {
 				}
 				int[] ints_22 = class417_10 != null && class417_10.anIntArray4992 != null ? class417_10.anIntArray4992 : this.modelIds;
 				boolean bool_23 = false;
-				Index index_24 = this.aClass406_4855.aClass317_4842;
-				synchronized (this.aClass406_4855.aClass317_4842) {
+				Index index_24 = this.npcLoader.aClass317_4842;
+				synchronized (this.npcLoader.aClass317_4842) {
 					i_25 = 0;
 					while (true) {
 						if (i_25 >= ints_22.length) {
 							break;
 						}
-						if (ints_22[i_25] != -1 && !this.aClass406_4855.aClass317_4842.load(ints_22[i_25], 0)) {
+						if (ints_22[i_25] != -1 && !this.npcLoader.aClass317_4842.load(ints_22[i_25], 0)) {
 							bool_23 = true;
 						}
 						++i_25;
@@ -182,9 +182,9 @@ public class NPCDefinitions {
 				RSMesh[] arr_47 = new RSMesh[ints_22.length];
 				for (i_25 = 0; i_25 < ints_22.length; i_25++) {
 					if (ints_22[i_25] != -1) {
-						Index index_26 = this.aClass406_4855.aClass317_4842;
-						synchronized (this.aClass406_4855.aClass317_4842) {
-							arr_47[i_25] = RSMesh.decodeMesh(this.aClass406_4855.aClass317_4842, ints_22[i_25]);
+						Index index_26 = this.npcLoader.aClass317_4842;
+						synchronized (this.npcLoader.aClass317_4842) {
+							arr_47[i_25] = RSMesh.decodeMesh(this.npcLoader.aClass317_4842, ints_22[i_25]);
 						}
 						if (arr_47[i_25] != null) {
 							if (arr_47[i_25].version < 13) {
@@ -229,7 +229,7 @@ public class NPCDefinitions {
 				} else {
 					rsmesh_36 = new RSMesh(arr_47, arr_47.length);
 				}
-				meshrasterizer_19 = graphicalrenderer_1.createMeshRasterizer(rsmesh_36, i_21, this.aClass406_4855.anInt4845, this.anInt4885 + 64, this.anInt4888 * 5 + 850);
+				meshrasterizer_19 = graphicalrenderer_1.createMeshRasterizer(rsmesh_36, i_21, this.npcLoader.anInt4845, this.anInt4885 + 64, this.anInt4888 * 5 + 850);
 				short[] shorts_48;
 				if (this.originalColors != null) {
 					if (class417_10 != null && class417_10.aShortArray4990 != null) {
@@ -259,9 +259,9 @@ public class NPCDefinitions {
 					meshrasterizer_19.PA(this.aByte4868, this.aByte4869, this.aByte4905, this.aByte4871 & 0xff);
 				}
 				meshrasterizer_19.KA(i_32);
-				SoftCache softcache_49 = this.aClass406_4855.aClass229_4836;
-				synchronized (this.aClass406_4855.aClass229_4836) {
-					this.aClass406_4855.aClass229_4836.put(meshrasterizer_19, long_33);
+				SoftCache softcache_49 = this.npcLoader.aClass229_4836;
+				synchronized (this.npcLoader.aClass229_4836) {
+					this.npcLoader.aClass229_4836.put(meshrasterizer_19, long_33);
 				}
 			}
 			MeshRasterizer meshrasterizer_37 = meshrasterizer_19.method11289((byte) 4, i_32, true);
@@ -344,10 +344,10 @@ public class NPCDefinitions {
 			if (class417_5 != null) {
 				long_8 |= class417_5.aLong4993 << 24;
 			}
-			SoftCache softcache_11 = this.aClass406_4855.aClass229_4843;
+			SoftCache softcache_11 = this.npcLoader.aClass229_4843;
 			MeshRasterizer meshrasterizer_10;
-			synchronized (this.aClass406_4855.aClass229_4843) {
-				meshrasterizer_10 = (MeshRasterizer) this.aClass406_4855.aClass229_4843.get(long_8);
+			synchronized (this.npcLoader.aClass229_4843) {
+				meshrasterizer_10 = (MeshRasterizer) this.npcLoader.aClass229_4843.get(long_8);
 			}
 			if (meshrasterizer_10 == null || (meshrasterizer_10.m() & i_18) != i_18) {
 				if (meshrasterizer_10 != null) {
@@ -365,15 +365,15 @@ public class NPCDefinitions {
 				}
 				int[] ints_12 = class417_5 != null && class417_5.anIntArray4992 != null ? class417_5.anIntArray4992 : this.headModels;
 				boolean bool_13 = false;
-				Index index_14 = this.aClass406_4855.aClass317_4842;
+				Index index_14 = this.npcLoader.aClass317_4842;
 				int i_15;
-				synchronized (this.aClass406_4855.aClass317_4842) {
+				synchronized (this.npcLoader.aClass317_4842) {
 					i_15 = 0;
 					while (true) {
 						if (i_15 >= ints_12.length) {
 							break;
 						}
-						if (!this.aClass406_4855.aClass317_4842.load(ints_12[i_15], 0)) {
+						if (!this.npcLoader.aClass317_4842.load(ints_12[i_15], 0)) {
 							bool_13 = true;
 						}
 						++i_15;
@@ -383,10 +383,10 @@ public class NPCDefinitions {
 					return null;
 				}
 				RSMesh[] arr_26 = new RSMesh[ints_12.length];
-				Index index_20 = this.aClass406_4855.aClass317_4842;
-				synchronized (this.aClass406_4855.aClass317_4842) {
+				Index index_20 = this.npcLoader.aClass317_4842;
+				synchronized (this.npcLoader.aClass317_4842) {
 					for (int i_16 = 0; i_16 < ints_12.length; i_16++) {
-						arr_26[i_16] = RSMesh.decodeMesh(this.aClass406_4855.aClass317_4842, ints_12[i_16]);
+						arr_26[i_16] = RSMesh.decodeMesh(this.npcLoader.aClass317_4842, ints_12[i_16]);
 					}
 				}
 				for (i_15 = 0; i_15 < ints_12.length; i_15++) {
@@ -400,7 +400,7 @@ public class NPCDefinitions {
 				} else {
 					rsmesh_27 = new RSMesh(arr_26, arr_26.length);
 				}
-				meshrasterizer_10 = graphicalrenderer_1.createMeshRasterizer(rsmesh_27, i_19, this.aClass406_4855.anInt4845, 64, 768);
+				meshrasterizer_10 = graphicalrenderer_1.createMeshRasterizer(rsmesh_27, i_19, this.npcLoader.anInt4845, 64, 768);
 				int i_17;
 				short[] shorts_21;
 				if (this.originalColors != null) {
@@ -431,9 +431,9 @@ public class NPCDefinitions {
 					meshrasterizer_10.PA(this.aByte4868, this.aByte4869, this.aByte4905, this.aByte4871 & 0xff);
 				}
 				meshrasterizer_10.KA(i_18);
-				SoftCache softcache_28 = this.aClass406_4855.aClass229_4843;
-				synchronized (this.aClass406_4855.aClass229_4843) {
-					this.aClass406_4855.aClass229_4843.put(meshrasterizer_10, long_8);
+				SoftCache softcache_28 = this.npcLoader.aClass229_4843;
+				synchronized (this.npcLoader.aClass229_4843) {
+					this.npcLoader.aClass229_4843.put(meshrasterizer_10, long_8);
 				}
 			}
 			if (animation_4 != null) {
@@ -453,7 +453,7 @@ public class NPCDefinitions {
 			int[] ints_3 = this.modelIds;
 			for (int i_4 = 0; i_4 < ints_3.length; i_4++) {
 				int i_5 = ints_3[i_4];
-				if (!this.aClass406_4855.aClass317_4842.load(i_5, 0)) {
+				if (!this.npcLoader.aClass317_4842.load(i_5, 0)) {
 					bool_2 = false;
 				}
 			}
@@ -470,18 +470,18 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final NPCDefinitions getTransformed(VarProvider interface42_1) {
-		int i_3 = -1;
+	public final NPCDefinitions getTransformed(VarProvider vars) {
+		int index = -1;
 		if (this.varpBit != -1) {
-			i_3 = interface42_1.getVarBit(this.varpBit);
+			index = vars.getVarBit(this.varpBit);
 		} else if (this.varp != -1) {
-			i_3 = interface42_1.getVar(this.varp);
+			index = vars.getVar(this.varp);
 		}
-		if (i_3 >= 0 && i_3 < this.transformTo.length - 1 && this.transformTo[i_3] != -1) {
-			return this.aClass406_4855.getNPCDefinitions(this.transformTo[i_3]);
+		if (index >= 0 && index < this.transformTo.length - 1 && this.transformTo[index] != -1) {
+			return this.npcLoader.getNPCDefinitions(this.transformTo[index]);
 		} else {
-			int i_4 = this.transformTo[this.transformTo.length - 1];
-			return i_4 != -1 ? this.aClass406_4855.getNPCDefinitions(i_4) : null;
+			int varIdx = this.transformTo[this.transformTo.length - 1];
+			return varIdx != -1 ? this.npcLoader.getNPCDefinitions(varIdx) : null;
 		}
 	}
 
@@ -510,7 +510,7 @@ public class NPCDefinitions {
 		} else {
 			for (int i_2 = 0; i_2 < this.transformTo.length; i_2++) {
 				if (this.transformTo[i_2] != -1) {
-					NPCDefinitions npcdefinitions_3 = this.aClass406_4855.getNPCDefinitions(this.transformTo[i_2]);
+					NPCDefinitions npcdefinitions_3 = this.npcLoader.getNPCDefinitions(this.transformTo[i_2]);
 					if (npcdefinitions_3.walkingAnimation != -1 || npcdefinitions_3.rotate90RightAnimation != -1 || npcdefinitions_3.rotate90LeftAnimation != -1) {
 						return true;
 					}
@@ -685,7 +685,7 @@ public class NPCDefinitions {
 			this.aBool4890 = true;
 		} else if (opcode >= 150 && opcode < 155) {
 			this.options[opcode - 150] = stream.readString();
-			if (!this.aClass406_4855.aBool4838) {
+			if (!this.npcLoader.aBool4838) {
 				this.options[opcode - 150] = null;
 			}
 		} else if (opcode == 155) {
@@ -699,9 +699,9 @@ public class NPCDefinitions {
 			this.aByte4916 = 0;
 		} else if (opcode == 160) {
 			int i_4 = stream.readUnsignedByte();
-			this.anIntArray4915 = new int[i_4];
+			this.quests = new int[i_4];
 			for (int i_5 = 0; i_5 < i_4; i_5++) {
-				this.anIntArray4915[i_5] = stream.readUnsignedShort();
+				this.quests[i_5] = stream.readUnsignedShort();
 			}
 		} else if (opcode == 162) {
 			this.aBool4872 = true;

@@ -37,7 +37,7 @@ public class EnumIndexLoader {
 
 	public static boolean method7426(int i_0, byte b_1) {
 		for (CacheableNode_Sub7 class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.head(); class282_sub50_sub7_2 != null; class282_sub50_sub7_2 = (CacheableNode_Sub7) Class20.aClass482_171.next(1043628930)) {
-			if (Class237.method3989(class282_sub50_sub7_2.clickType) && (long) i_0 == class282_sub50_sub7_2.aLong9584) {
+			if (Class237.isNPCClickType(class282_sub50_sub7_2.clickType) && (long) i_0 == class282_sub50_sub7_2.aLong9584) {
 				return true;
 			}
 		}

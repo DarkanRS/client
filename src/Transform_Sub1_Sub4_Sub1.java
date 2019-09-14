@@ -704,7 +704,7 @@ public class Transform_Sub1_Sub4_Sub1 extends Transform_Sub1_Sub4 implements Sce
 							sceneobject_60 = (SceneObject) class285_34.aTransform_Sub1_3391;
 							objectdefinitions_57 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(sceneobject_60.getId(2000772127));
 							if (objectdefinitions_57.toObjectIds != null) {
-								objectdefinitions_57 = objectdefinitions_57.method8013(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 107);
+								objectdefinitions_57 = objectdefinitions_57.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 107);
 							}
 						} while (objectdefinitions_57 == null);
 
