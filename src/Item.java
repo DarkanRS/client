@@ -68,8 +68,8 @@ public class Item extends Node {
 					i_16 = Class187.anIntArray2354[i_21] * 4 + 2 - i_8 / 128;
 					i_17 = Class187.anIntArray2355[i_21] * 4 + 2 - i_9 / 128;
 					ObjectDefinitions objectdefinitions_23 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions(Class187.anIntArray2357[i_21]);
-					if (objectdefinitions_23.toObjectIds != null) {
-						objectdefinitions_23 = objectdefinitions_23.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) -58);
+					if (objectdefinitions_23.transformTo != null) {
+						objectdefinitions_23 = objectdefinitions_23.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 						if (objectdefinitions_23 == null || objectdefinitions_23.mapIcon == -1) {
 							continue;
 						}

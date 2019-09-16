@@ -340,8 +340,8 @@ public class Class291 {
 							for (int i_4 = 0; i_4 < class282_sub49_14.anIntArray8109.length; i_4++) {
 								ObjectDefinitions objectdefinitions_12 = OBJECT_LOADER.getObjectDefinitions(class282_sub49_14.anIntArray8109[i_4]);
 								i_13 = objectdefinitions_12.mapIcon;
-								if (objectdefinitions_12.toObjectIds != null) {
-									objectdefinitions_12 = objectdefinitions_12.getTransformed(PLAYER_VAR_PROVIDER, (byte) -58);
+								if (objectdefinitions_12.transformTo != null) {
+									objectdefinitions_12 = objectdefinitions_12.getTransformed(PLAYER_VAR_PROVIDER);
 									if (objectdefinitions_12 != null) {
 										i_13 = objectdefinitions_12.mapIcon;
 									}
@@ -359,8 +359,8 @@ public class Class291 {
 						Integer integer_3 = (Integer) object_2;
 						ObjectDefinitions objectdefinitions_10 = OBJECT_LOADER.getObjectDefinitions(integer_3.intValue());
 						int i_5 = objectdefinitions_10.mapIcon;
-						if (objectdefinitions_10.toObjectIds != null) {
-							objectdefinitions_10 = objectdefinitions_10.getTransformed(PLAYER_VAR_PROVIDER, (byte) 19);
+						if (objectdefinitions_10.transformTo != null) {
+							objectdefinitions_10 = objectdefinitions_10.getTransformed(PLAYER_VAR_PROVIDER);
 							if (objectdefinitions_10 != null) {
 								i_5 = objectdefinitions_10.mapIcon;
 							}
@@ -397,8 +397,8 @@ public class Class291 {
 							for (i_13 = 0; i_13 < class269_18.anIntArray3313.length; i_13++) {
 								ObjectDefinitions objectdefinitions_16 = OBJECT_LOADER.getObjectDefinitions(class269_18.anIntArray3313[i_13]);
 								int i_8 = objectdefinitions_16.mapIcon;
-								if (objectdefinitions_16.toObjectIds != null) {
-									objectdefinitions_16 = objectdefinitions_16.getTransformed(PLAYER_VAR_PROVIDER, (byte) -18);
+								if (objectdefinitions_16.transformTo != null) {
+									objectdefinitions_16 = objectdefinitions_16.getTransformed(PLAYER_VAR_PROVIDER);
 									if (objectdefinitions_16 != null) {
 										i_8 = objectdefinitions_16.mapIcon;
 									}

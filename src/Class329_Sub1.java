@@ -63,7 +63,7 @@ public class Class329_Sub1 extends Class329 {
 			if (objectDefs.hasSound(317865608)) {
 				Static.method6775(i_3, i_4, i_5, i_7, objectDefs, (NPC) null, (Player) null, 2109240355);
 			}
-			boolean bool_24 = i_10 == -1 && !objectDefs.method7967((byte) 85) && objectDefs.toObjectIds == null && !objectDefs.hasAnimation && !objectDefs.aBool5699;
+			boolean bool_24 = i_10 == -1 && !objectDefs.method7967((byte) 85) && objectDefs.transformTo == null && !objectDefs.hasAnimation && !objectDefs.aBool5699;
 			if (!aBool7717 || (!Class308.isWall(i_8, -2097799445) || objectDefs.occludes == 1) && (!QuestDefinitions.isRoof(i_8, -1938518575) || objectDefs.occludes != 0)) {
 				Object obj_25;
 				if (i_8 == SceneObjectType.GROUND_DECORATION.type) {

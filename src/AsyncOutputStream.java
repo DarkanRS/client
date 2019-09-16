@@ -344,10 +344,10 @@ public class AsyncOutputStream implements Runnable {
 										ObjectDefinitions objectdefinitions_41 = objectindexloader_39.getObjectDefinitions(sceneobject_40.getId(905574000));
 										if (!objectdefinitions_41.members || client.membersWorld) {
 											i_26 = objectdefinitions_41.mapIcon;
-											if (objectdefinitions_41.toObjectIds != null) {
-												for (i_27 = 0; i_27 < objectdefinitions_41.toObjectIds.length; i_27++) {
-													if (objectdefinitions_41.toObjectIds[i_27] != -1) {
-														ObjectDefinitions objectdefinitions_42 = objectindexloader_39.getObjectDefinitions(objectdefinitions_41.toObjectIds[i_27]);
+											if (objectdefinitions_41.transformTo != null) {
+												for (i_27 = 0; i_27 < objectdefinitions_41.transformTo.length; i_27++) {
+													if (objectdefinitions_41.transformTo[i_27] != -1) {
+														ObjectDefinitions objectdefinitions_42 = objectindexloader_39.getObjectDefinitions(objectdefinitions_41.transformTo[i_27]);
 														if (objectdefinitions_42.mapIcon >= 0) {
 															i_26 = objectdefinitions_42.mapIcon;
 														}

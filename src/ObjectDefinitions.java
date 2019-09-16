@@ -38,14 +38,14 @@ public class ObjectDefinitions {
 	public boolean obstructsGround = false;
 	public boolean alt = false;
 	public int supportsItems = -1;
-	int configFileId = -1;
-	int configId = -1;
+	int varBit = -1;
+	int var = -1;
 	public int ambientSoundId = -1;
 	public int ambientSoundHearDistance = 0;
 	public int anInt5667 = 0;
 	public int anInt5698 = 0;
 	public int[] audioTracks;
-	public int[] toObjectIds;
+	public int[] transformTo;
 	int anInt5654 = -1;
 	public boolean hidden = false;
 	public boolean aBool5703 = true;
@@ -328,24 +328,24 @@ public class ObjectDefinitions {
 				}
 			}
 		} else {
-			this.configFileId = buffer.readUnsignedShort();
-			if (this.configFileId == 65535) {
-				this.configFileId = -1;
+			this.varBit = buffer.readUnsignedShort();
+			if (this.varBit == 65535) {
+				this.varBit = -1;
 			}
-			this.configId = buffer.readUnsignedShort();
-			if (this.configId == 65535) {
-				this.configId = -1;
+			this.var = buffer.readUnsignedShort();
+			if (this.var == 65535) {
+				this.var = -1;
 			}
 			i_4 = -1;
 			if (opcode == 92) {
 				i_4 = buffer.readBigSmart();
 			}
 			i_5 = buffer.readUnsignedByte();
-			this.toObjectIds = new int[i_5 + 2];
+			this.transformTo = new int[i_5 + 2];
 			for (i_6 = 0; i_6 <= i_5; i_6++) {
-				this.toObjectIds[i_6] = buffer.readBigSmart();
+				this.transformTo[i_6] = buffer.readBigSmart();
 			}
-			this.toObjectIds[i_5 + 1] = i_4;
+			this.transformTo[i_5 + 1] = i_4;
 		}
 	}
 
@@ -365,7 +365,7 @@ public class ObjectDefinitions {
 		if (this.supportsItems == -1) {
 			this.supportsItems = this.clipType != 0 ? 1 : 0;
 		}
-		if (this.method7967((byte) 39) || this.hasAnimation || this.toObjectIds != null) {
+		if (this.method7967((byte) 39) || this.hasAnimation || this.transformTo != null) {
 			this.aBool5699 = true;
 		}
 	}
@@ -530,12 +530,12 @@ public class ObjectDefinitions {
 	}
 
 	public boolean hasSound(int i_1) {
-		if (this.toObjectIds == null) {
+		if (this.transformTo == null) {
 			return this.ambientSoundId != -1 || this.audioTracks != null;
 		} else {
-			for (int i_2 = 0; i_2 < this.toObjectIds.length; i_2++) {
-				if (this.toObjectIds[i_2] != -1) {
-					ObjectDefinitions objectdefinitions_3 = this.loader.getObjectDefinitions(this.toObjectIds[i_2]);
+			for (int i_2 = 0; i_2 < this.transformTo.length; i_2++) {
+				if (this.transformTo[i_2] != -1) {
+					ObjectDefinitions objectdefinitions_3 = this.loader.getObjectDefinitions(this.transformTo[i_2]);
 					if (objectdefinitions_3.ambientSoundId != -1 || objectdefinitions_3.audioTracks != null) {
 						return true;
 					}
@@ -762,18 +762,18 @@ public class ObjectDefinitions {
 		return meshrasterizer_16;
 	}
 
-	public final ObjectDefinitions getTransformed(VarProvider varProvider, byte b_2) {
-		int i_3 = -1;
-		if (this.configFileId != -1) {
-			i_3 = varProvider.getVarBit(this.configFileId);
-		} else if (this.configId != -1) {
-			i_3 = varProvider.getVar(this.configId);
+	public final ObjectDefinitions getTransformed(VarProvider vars) {
+		int index = -1;
+		if (this.varBit != -1) {
+			index = vars.getVarBit(this.varBit);
+		} else if (this.var != -1) {
+			index = vars.getVar(this.var);
 		}
-		if (i_3 >= 0 && i_3 < this.toObjectIds.length - 1 && this.toObjectIds[i_3] != -1) {
-			return this.loader.getObjectDefinitions(this.toObjectIds[i_3]);
+		if (index >= 0 && index < this.transformTo.length - 1 && this.transformTo[index] != -1) {
+			return this.loader.getObjectDefinitions(this.transformTo[index]);
 		} else {
-			int i_4 = this.toObjectIds[this.toObjectIds.length - 1];
-			return i_4 != -1 ? this.loader.getObjectDefinitions(i_4) : null;
+			int id = this.transformTo[this.transformTo.length - 1];
+			return id != -1 ? this.loader.getObjectDefinitions(id) : null;
 		}
 	}
 

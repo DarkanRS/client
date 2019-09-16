@@ -163,7 +163,7 @@ public class Static {
 			class282_sub48_8.anInt8094 = objectdefinitions_4.anInt5709;
 			class282_sub48_8.anInt8093 = objectdefinitions_4.anInt5708;
 			class282_sub48_8.anInt8081 = objectdefinitions_4.anInt5694 << 9;
-			if (objectdefinitions_4.toObjectIds != null) {
+			if (objectdefinitions_4.transformTo != null) {
 				class282_sub48_8.aBool8092 = true;
 				class282_sub48_8.method13426();
 			}

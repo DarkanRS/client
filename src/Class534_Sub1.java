@@ -128,8 +128,8 @@ public class Class534_Sub1 extends Class534 {
 			}
 		} else if (EnumDefinitions.isObjectClickType(class282_sub50_sub7_0.clickType)) {
 			ObjectDefinitions objectdefinitions_6 = IndexLoaders.MAP_REGION_DECODER.method4436().getObjectDefinitions((int) (class282_sub50_sub7_0.aLong9584 >>> 32 & 0x7fffffffL));
-			if (objectdefinitions_6.toObjectIds != null) {
-				objectdefinitions_6 = objectdefinitions_6.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER, (byte) 45);
+			if (objectdefinitions_6.transformTo != null) {
+				objectdefinitions_6 = objectdefinitions_6.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER);
 			}
 			if (objectdefinitions_6 != null) {
 				quests = objectdefinitions_6.anIntArray5707;
