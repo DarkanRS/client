@@ -1299,9 +1299,9 @@ public class PacketDecoder {
 			} else {
 				startHeight *= 4;
 			}
-			WorldTile coordgrid_39 = IndexLoaders.MAP_REGION_DECODER.getBase();
-			int localX = x - coordgrid_39.x * 2;
-			int localY = y - coordgrid_39.y * 2;
+			WorldTile base = IndexLoaders.MAP_REGION_DECODER.getBase();
+			int localX = x - base.x * 2;
+			int localY = y - base.y * 2;
 			int xOff = xDist + localX;
 			int yOff = yDist + localY;
 			if (localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && localY < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && xOff >= 0 && yOff >= 0 && xOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && yOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && spotAnimId != 65535) {
@@ -2417,8 +2417,8 @@ public class PacketDecoder {
 			int spotAnimId = buffer.readUnsignedShort();
 			int startHeight = buffer.readUnsignedByte() * 4;
 			int endHeight = buffer.readUnsignedByte() * 4;
-			int delay = buffer.readUnsignedShort();
-			int delayPlusSpeed = buffer.readUnsignedShort();
+			int startTime = buffer.readUnsignedShort();
+			int endTime = buffer.readUnsignedShort();
 			int angle = buffer.readUnsignedByte();
 			int slope = buffer.readUnsignedShort();
 			if (angle == 255) {
@@ -2432,9 +2432,9 @@ public class PacketDecoder {
 				startHeight <<= 2;
 				endHeight <<= 2;
 				slope <<= 2;
-				Projectile class521_sub1_sub1_sub3_17 = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, delayPlusSpeed + client.cycles, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
-				class521_sub1_sub1_sub3_17.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, delay + client.cycles);
-				client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_17));
+				Projectile p = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.cycles, endTime + client.cycles, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
+				p.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.cycles);
+				client.PROJECTILES.append(new ProjectileNode(p));
 			}
 		} else if (UpdateZonePacket.MIDI_SONG_LOCATION == packet) {
 			int i_3 = buffer.readUnsignedByte();
