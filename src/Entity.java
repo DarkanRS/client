@@ -1,14 +1,14 @@
 public abstract class Entity extends Transform_Sub1_Sub1 {
 
 	public int index;
-	public int anInt10326;
+	public int forceMovementT1XOff;
 	public byte greenAdd;
-	public int anInt10328;
-	public int anInt10341;
-	public int anInt10342;
-	public int anInt10343;
-	public int anInt10345;
-	public int anInt10346;
+	public int forceMovementT1YOff;
+	public int forceMovementT2XOff;
+	public int forceMovementT1Delay;
+	public int forceMovementT2YOff;
+	public int forceMovementT2Delay;
+	public int forceMovementDir;
 	public int anInt10349;
 	public byte blueAdd;
 	public byte redAdd;

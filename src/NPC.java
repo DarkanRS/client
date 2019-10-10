@@ -1,8 +1,8 @@
 public class NPC extends Entity {
 
 	public NPCMeshModifier meshModifiers;
-	public int anInt10578 = -1;
-	public int anInt10577 = -1;
+	public int faceX = -1;
+	public int faceY = -1;
 	public int meshModifierCount = 1;
 	public int headMeshModifierCount = 1;
 	public int anInt10575 = -1;

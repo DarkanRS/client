@@ -56,9 +56,9 @@ public class Class363 {
     static final void method6287(Entity animable_0, boolean bool_1, int i_2) {
         int moveType = MovementType.STATIONARY.id;
         int i_4 = 0;
-        if (animable_0.anInt10342 > client.cycles) {
+        if (animable_0.forceMovementT1Delay > client.cycles) {
             Static.method4281(animable_0);
-        } else if (animable_0.anInt10345 >= client.cycles) {
+        } else if (animable_0.forceMovementT2Delay >= client.cycles) {
             ProcessorSpecs.method7727(animable_0);
         } else {
             SystemInfo.method13466(animable_0, bool_1);
@@ -74,8 +74,8 @@ public class Class363 {
                 animable_0.aClass161Array10339[i_6].animation.update(-1);
             }
             animable_0.currentAnimations = null;
-            animable_0.anInt10342 = 0;
-            animable_0.anInt10345 = 0;
+            animable_0.forceMovementT1Delay = 0;
+            animable_0.forceMovementT2Delay = 0;
             moveType = MovementType.STATIONARY.id;
             i_4 = 0;
             animable_0.method11172((float) (512 * animable_0.regionBaseX[0] + animable_0.getSize() * 256), vector3_5.y, (float) (animable_0.regionBaseY[0] * 512 + animable_0.getSize() * 256));
@@ -88,8 +88,8 @@ public class Class363 {
                 animable_0.aClass161Array10339[i_6].animation.update(-1);
             }
             animable_0.currentAnimations = null;
-            animable_0.anInt10342 = 0;
-            animable_0.anInt10345 = 0;
+            animable_0.forceMovementT1Delay = 0;
+            animable_0.forceMovementT2Delay = 0;
             moveType = MovementType.STATIONARY.id;
             i_4 = 0;
             animable_0.method11172((float) (animable_0.regionBaseX[0] * 512 + animable_0.getSize() * 256), vector3_5.y, (float) (512 * animable_0.regionBaseY[0] + animable_0.getSize() * 256));

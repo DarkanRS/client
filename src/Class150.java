@@ -50,12 +50,12 @@ public class Class150 {
 					AnimationDefinitions animationdefinitions_6 = animation_4.getDefs();
 					if (spotanimdefinitions_5.aBool6968) {
 						if (animationdefinitions_6.animatingPrecedence == 3) {
-							if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
+							if (animable_0.anInt10367 > 0 && animable_0.forceMovementT1Delay <= client.cycles && animable_0.forceMovementT2Delay < client.cycles) {
 								animation_4.update(-1);
 								animable_0.aClass161Array10339[i_3].spotAnimId = -1;
 								continue;
 							}
-						} else if (animationdefinitions_6.animatingPrecedence == 1 && animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
+						} else if (animationdefinitions_6.animatingPrecedence == 1 && animable_0.anInt10367 > 0 && animable_0.forceMovementT1Delay <= client.cycles && animable_0.forceMovementT2Delay < client.cycles) {
 							continue;
 						}
 					}
@@ -71,13 +71,13 @@ public class Class150 {
 			label88: {
 				AnimationDefinitions animationdefinitions_9 = animation_7.getDefs();
 				if (animationdefinitions_9.animatingPrecedence == 3) {
-					if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
+					if (animable_0.anInt10367 > 0 && animable_0.forceMovementT1Delay <= client.cycles && animable_0.forceMovementT2Delay < client.cycles) {
 						animable_0.currentAnimations = null;
 						animation_7.update(-1);
 						break label88;
 					}
 				} else if (animationdefinitions_9.animatingPrecedence == 1) {
-					if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
+					if (animable_0.anInt10367 > 0 && animable_0.forceMovementT1Delay <= client.cycles && animable_0.forceMovementT2Delay < client.cycles) {
 						animation_7.setSpeed(1);
 						break label88;
 					}
