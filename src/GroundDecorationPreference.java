@@ -1,4 +1,4 @@
-public class Preference_Sub23 extends Preference {
+public class GroundDecorationPreference extends Preference {
 
 	public int method12897(byte b_1) {
 		return this.anInt5578;
@@ -10,7 +10,7 @@ public class Preference_Sub23 extends Preference {
 		}
 
 		if (this.anInt5578 != 0 && this.anInt5578 != 1) {
-			this.anInt5578 = this.method7781(2046040491);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
@@ -23,7 +23,7 @@ public class Preference_Sub23 extends Preference {
 		return this.manager.getGame() == Game.darkan;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
@@ -31,7 +31,7 @@ public class Preference_Sub23 extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	public Preference_Sub23(int i_1, GamePreferences class282_sub54_2) {
+	public GroundDecorationPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -47,11 +47,11 @@ public class Preference_Sub23 extends Preference {
 		return 1;
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return this.manager.getGame() == Game.darkan ? 1 : 3;
 	}
 
-	public Preference_Sub23(GamePreferences class282_sub54_1) {
+	public GroundDecorationPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 

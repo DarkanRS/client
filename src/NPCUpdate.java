@@ -462,7 +462,6 @@ public class NPCUpdate {
 			if ((i_4 & 0x4) != 0) {
 				npc.faceX = buffer.readUnsignedShortLE128();
 				npc.faceY = buffer.readShortLE();
-				System.out.println("Face tile: " + npc.faceX + ", " + npc.faceY);
 			}
 			if ((i_4 & 0x20000) != 0) {
 				npc.redAdd = buffer.read128Byte();

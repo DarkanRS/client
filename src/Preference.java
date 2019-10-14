@@ -9,26 +9,23 @@ public abstract class Preference {
 		this.anInt5578 = i_1;
 		this.manager = class282_sub54_2;
 	}
-
-	abstract void method7780(int var1);
-
+	
 	Preference(GamePreferences class282_sub54_1) {
 		this.manager = class282_sub54_1;
-		this.anInt5578 = this.method7781(1882816731);
+		this.anInt5578 = this.getDefaultValue();
 	}
 
-	abstract int method7781(int var1);
+	abstract int getDefaultValue();
 
 	void setPref(int i_1) {
-		if (this.method7785(i_1) != 3) {
+		if (this.checkValid(i_1) != 3) {
 			this.setValue(i_1);
 		}
 
 	}
 
 	abstract void setValue(int var1);
-
-	abstract int method7785(int var1);
+	abstract int checkValid(int var1);
 
 	public static String method7788(long long_0, int i_2) {
 		Calendar calendar_5;

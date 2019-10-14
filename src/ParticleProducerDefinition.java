@@ -314,7 +314,7 @@ public class ParticleProducerDefinition {
 		if (index_0.loadFile(Class16.anInt137)) {
 			++i_2;
 		}
-		if (index_0.loadFile(Preference_Sub12.anInt7899)) {
+		if (index_0.loadFile(BloomPreference.anInt7899)) {
 			++i_2;
 		}
 		if (index_0.loadFile(Class13.anInt130)) {

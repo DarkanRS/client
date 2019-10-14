@@ -2,7 +2,7 @@ public class GraphicsPreference extends Preference {
 
 	public void method12653() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 4) {
-			this.anInt5578 = this.method7781(1866918213);
+			this.anInt5578 = this.getDefaultValue();
 		}
 	}
 
@@ -10,11 +10,11 @@ public class GraphicsPreference extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 0;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 

@@ -159,7 +159,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 		IndexLoaders.MAP_REGION_DECODER.method4447(1353866416);
 		Renderers.SOFTWARE_RENDERER.method8568();
 		if (Renderers.SOFTWARE_RENDERER.method8403()) {
-			Class115.method1952(Class393.preferences.aPreference_Sub12_8195.method12706((byte) 97) == 1, -1437511825);
+			Class115.setBloom(Class393.preferences.bloom.method12706((byte) 97) == 1);
 		}
 		IndexLoaders.MAP_REGION_DECODER.method4446((byte) 78);
 		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(1352749078);

@@ -132,18 +132,18 @@ public abstract class Class115 implements Interface7 {
 		return Class272.method4841(charsequence_0);
 	}
 
-	public static boolean method1952(boolean bool_0, int i_1) {
+	public static boolean setBloom(boolean bloom) {
 		boolean bool_2 = Renderers.SOFTWARE_RENDERER.method8471();
-		if (bool_0 != bool_2) {
-			if (bool_0) {
+		if (bloom != bool_2) {
+			if (bloom) {
 				if (!Renderers.SOFTWARE_RENDERER.method8469()) {
-					bool_0 = false;
+					bloom = false;
 				}
 			} else {
 				Renderers.SOFTWARE_RENDERER.method8490();
 			}
-			if (bool_0 != bool_2) {
-				Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, bool_0 ? 1 : 0);
+			if (bloom != bool_2) {
+				Class393.preferences.setValue(Class393.preferences.bloom, bloom ? 1 : 0);
 				Class190.savePreferences((byte) 111);
 				return true;
 			} else {

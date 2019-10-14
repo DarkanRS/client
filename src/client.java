@@ -1102,7 +1102,7 @@ public final class client extends Engine {
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624((byte) -13) + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
 			str_2 = str_2 + Class393.preferences.textures.method12873(-932998306) + " ";
-			str_2 = str_2 + Class393.preferences.aPreference_Sub12_8195.method12706((byte) 75) + " ";
+			str_2 = str_2 + Class393.preferences.bloom.method12706((byte) 75) + " ";
 			str_2 = str_2 + "0 ";
 			str_2 = str_2 + MAX_MEMORY + " ";
 			str_2 = str_2 + gameState + " ";

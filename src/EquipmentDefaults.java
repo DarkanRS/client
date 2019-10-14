@@ -64,7 +64,7 @@ public class EquipmentDefaults {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, 0);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub20_8207, 2);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub1_8197, MapSize.aClass106_1075.anInt1071);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, 0);
+		Class393.preferences.setValue(Class393.preferences.bloom, 0);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub14_8211, 1);
 		ImageIndexLoader.method5777(1560410818);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 0);

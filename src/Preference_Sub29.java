@@ -10,12 +10,12 @@ public class Preference_Sub29 extends Preference {
 
 	public void method13048() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
-			this.anInt5578 = this.method7781(2080539463);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 0;
 	}
 
@@ -23,7 +23,7 @@ public class Preference_Sub29 extends Preference {
 		return true;
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return i_1 == 2 ? 2 : 1;
 	}
 

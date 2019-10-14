@@ -2,12 +2,12 @@ public class Preference_Sub16 extends Preference {
 
 	public void method12749() {
 		if (this.anInt5578 < Class104.aClass104_1061.id || this.anInt5578 > Class104.aClass104_1062.id) {
-			this.anInt5578 = this.method7781(1820963129);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return Class104.aClass104_1061.id;
 	}
 
@@ -15,7 +15,7 @@ public class Preference_Sub16 extends Preference {
 		return -1544200711 * Class104.aClass104_1061.id * 2087113801;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 

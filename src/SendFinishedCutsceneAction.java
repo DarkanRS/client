@@ -4,11 +4,11 @@ public class SendFinishedCutsceneAction extends CutsceneAction {
 	static int anInt8308;
 
 	public void method1601() {
-		Preference_Sub21.method12869(true, 594187291);
+		BrightnessPreference.method12869(true, 594187291);
 	}
 
 	public void method1592() {
-		Preference_Sub21.method12869(true, -748080019);
+		BrightnessPreference.method12869(true, -748080019);
 	}
 
 	SendFinishedCutsceneAction(RsByteBuffer rsbytebuffer_1) {

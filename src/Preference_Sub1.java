@@ -8,7 +8,7 @@ public class Preference_Sub1 extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return MapSize.aClass106_1075.anInt1071;
 	}
 
@@ -17,7 +17,7 @@ public class Preference_Sub1 extends Preference {
 		return i_2 >= 245;
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		int i_3 = this.manager.getProcessorSpecs().getMaxMemory();
 		return i_3 < 245 ? 3 : (i_1 == MapSize.aClass106_1073.anInt1071 && i_3 < 500 ? 3 : 1);
 	}
@@ -58,7 +58,7 @@ public class Preference_Sub1 extends Preference {
 		}
 
 		if (this.anInt5578 < MapSize.aClass106_1075.anInt1071 || this.anInt5578 > MapSize.aClass106_1070.anInt1071) {
-			this.anInt5578 = this.method7781(1738483379);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}

@@ -1,20 +1,20 @@
-public class Preference_Sub13 extends Preference {
+public class SoundLevelPreference extends Preference {
 
-	public Preference_Sub13(int i_1, GamePreferences class282_sub54_2) {
+	public SoundLevelPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
 	public void method12712(byte b_1) {
 		if (this.anInt5578 < 0 && this.anInt5578 > 127) {
-			this.anInt5578 = this.method7781(1905000313);
+			this.anInt5578 = this.getDefaultValue();
 		}
 	}
 
-	public Preference_Sub13(GamePreferences class282_sub54_1) {
+	public SoundLevelPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 
@@ -38,7 +38,7 @@ public class Preference_Sub13 extends Preference {
 		return 127;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 127;
 	}
 

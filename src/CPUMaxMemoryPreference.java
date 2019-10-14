@@ -10,12 +10,12 @@ public class CPUMaxMemoryPreference extends Preference {
 
 	public void method12648() {
 		if (this.anInt5578 < 0 && this.anInt5578 > 4) {
-			this.anInt5578 = this.method7781(1857700567);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return this.manager.getProcessorSpecs().getProcessorCount() > 1 ? 4 : 2;
 	}
 
@@ -23,7 +23,7 @@ public class CPUMaxMemoryPreference extends Preference {
 		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 

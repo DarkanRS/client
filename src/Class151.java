@@ -11,7 +11,7 @@ public class Class151 {
         }
         CutsceneAction_Sub20.WORLD_LIST_BUFFER.writeBytes(data, 0, data.length);
         if (refresh) {
-            Preference_Sub10.decodeWorldList(CutsceneAction_Sub20.WORLD_LIST_BUFFER.buffer);
+            MonoStereoPreference.decodeWorldList(CutsceneAction_Sub20.WORLD_LIST_BUFFER.buffer);
             Class448.WORLD_DESCRIPTORS_BYID = new WorldDescriptor[Class4.WORLD_LIST_SIZE];
             int i_3 = 0;
             for (int i_4 = Class485.WORLD_LIST_START; i_4 <= Class244.WORLD_LIST_SIZEPLUS1; i_4++) {

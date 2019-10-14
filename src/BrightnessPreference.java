@@ -1,21 +1,21 @@
-public class Preference_Sub21 extends Preference {
+public class BrightnessPreference extends Preference {
 
-	public Preference_Sub21(int i_1, GamePreferences class282_sub54_2) {
+	public BrightnessPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
 	public void method12861() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 4) {
-			this.anInt5578 = this.method7781(1833294862);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 
-	public Preference_Sub21(GamePreferences class282_sub54_1) {
+	public BrightnessPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
@@ -31,7 +31,7 @@ public class Preference_Sub21 extends Preference {
 		return this.anInt5578;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 3;
 	}
 

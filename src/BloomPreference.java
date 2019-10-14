@@ -1,4 +1,4 @@
-public class Preference_Sub12 extends Preference {
+public class BloomPreference extends Preference {
 
 	static int anInt7899;
 
@@ -8,20 +8,20 @@ public class Preference_Sub12 extends Preference {
 		}
 
 		if (this.anInt5578 < 0 || this.anInt5578 > 1) {
-			this.anInt5578 = this.method7781(1776771873);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	public Preference_Sub12(int i_1, GamePreferences class282_sub54_2) {
+	public BloomPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 0;
 	}
 
-	public Preference_Sub12(GamePreferences class282_sub54_1) {
+	public BloomPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
@@ -53,7 +53,7 @@ public class Preference_Sub12 extends Preference {
 		return Class60.method1166(this.manager.currentToolkit.getValue(-1301268154), -1253259438);
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(-2032316540), -1020408311) ? 3 : 1;
 	}
 

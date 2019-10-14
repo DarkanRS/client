@@ -40,7 +40,7 @@ public class Class94 {
 		if (Class393.preferences.textures.method12873(477680375) == 0) {
 			i_1 |= 0x40;
 		}
-		Preference_Sub12.method12710(i_1);
+		BloomPreference.method12710(i_1);
 		IndexLoaders.MAP_REGION_DECODER.method4436().method7893(i_1, 2082493334);
 		IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -5779).method4436().method7893(i_1, -79480655);
 		IndexLoaders.ITEM_LOADER.method7153(i_1);

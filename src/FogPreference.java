@@ -14,12 +14,12 @@ public class FogPreference extends Preference {
 		}
 
 		if (this.anInt5578 < 0 || this.anInt5578 > 1) {
-			this.anInt5578 = this.method7781(1923702795);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
@@ -27,7 +27,7 @@ public class FogPreference extends Preference {
 		super(class282_sub54_1);
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return i_1 != 0 && this.manager.aPreference_Sub29_8201.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(410905125) != 1 ? 2 : 1);
 	}
 

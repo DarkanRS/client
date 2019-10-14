@@ -499,7 +499,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									i_25 = client.anInt7217;
 									if (client.cycles < client.anInt7237) {
 										float f_26 = (float) (client.cycles - client.anInt7236) * 1.0F / (float) (client.anInt7237 - client.anInt7236);
-										i_22 = (int) ((float) client.anInt7238 * f_26 + (1.0F - f_26) * (float) Preference_Sub2.anInt7868);
+										i_22 = (int) ((float) client.anInt7238 * f_26 + (1.0F - f_26) * (float) SceneryShadowPreference.anInt7868);
 										i_23 = (int) ((float) client.anInt7377 * f_26 + (float) Class350_Sub2.anInt7815 * (1.0F - f_26));
 										i_24 = (int) (f_26 * (float) client.anInt7413 + (float) Class329_Sub1.anInt7726 * (1.0F - f_26));
 										i_25 = (int) (f_26 * (float) client.anInt7217 + (float) Node_Sub17_Sub4.anInt9940 * (1.0F - f_26));

@@ -796,7 +796,7 @@ public enum CS2Instruction {
 	instr6738(703),
 	instr5993(380),
 	instr6740(376),
-	instr6557(564),
+	DETAIL_BLOOM(564),
 	instr6742(181),
 	instr6743(553),
 	instr6744(464),

@@ -72,7 +72,7 @@ public class Node_Sub20_Sub25 extends Node_Sub20 {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, 0);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub20_8207, 0);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub1_8197, MapSize.aClass106_1075.anInt1071);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub12_8195, 0);
+		Class393.preferences.setValue(Class393.preferences.bloom, 0);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub14_8211, 0);
 		ImageIndexLoader.method5777(1755856105);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 2);

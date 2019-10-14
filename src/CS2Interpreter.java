@@ -2392,8 +2392,8 @@ public class CS2Interpreter {
 		case instr6740:
 			method5766(exec);
 			break;
-		case instr6557:
-			method1508(exec);
+		case DETAIL_BLOOM:
+			setBloom(exec);
 			break;
 		case instr6742:
 			method1857(exec);
@@ -3540,7 +3540,7 @@ public class CS2Interpreter {
 
 	static final void method6279(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub20_8207.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub20_8207.checkValid(i_2);
 	}
 
 	static final void method6280(CS2Executor executor) {
@@ -4042,7 +4042,7 @@ public class CS2Interpreter {
 
 	static final void method4867(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub14_8211.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub14_8211.checkValid(i_2);
 	}
 
 	static final void storeVarcString(CS2Executor executor) {
@@ -4235,7 +4235,7 @@ public class CS2Interpreter {
 
 	static final void method15551(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub28_8212.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub28_8212.checkValid(i_2);
 	}
 
 	static final void method4277(CS2Executor executor) {
@@ -5258,7 +5258,7 @@ public class CS2Interpreter {
 
 	static final void method1352(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub17_8200.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub17_8200.checkValid(i_2);
 	}
 
 	static final void method1355(CS2Executor executor) {
@@ -5523,7 +5523,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6072(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub12_8195.method12707() && Renderers.SOFTWARE_RENDERER.method8403() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.bloom.method12707() && Renderers.SOFTWARE_RENDERER.method8403() ? 1 : 0;
 	}
 
 	static final void method6169(CS2Executor executor) {
@@ -6724,7 +6724,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method15449(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub12_8195.method12706((byte) 21) == 1 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.bloom.method12706((byte) 21) == 1 ? 1 : 0;
 	}
 
 	static final void method2549(CS2Executor executor) {
@@ -7031,7 +7031,7 @@ public class CS2Interpreter {
 		if (!Renderers.SOFTWARE_RENDERER.method8403()) {
 			executor.intStack[++executor.intStackPtr - 1] = 3;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub12_8195.method7785(i_2);
+			executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.bloom.checkValid(i_2);
 		}
 	}
 
@@ -7056,7 +7056,7 @@ public class CS2Interpreter {
 
 	static final void method11351(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.sceneryShadows.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.sceneryShadows.checkValid(i_2);
 	}
 
 	static final void method11355(CS2Executor executor) {
@@ -7525,12 +7525,12 @@ public class CS2Interpreter {
 		Class365.method6299(i_2, bool_3, i_4, bool_5);
 	}
 
-	static final void method1508(CS2Executor executor) {
+	static final void setBloom(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		if (i_2 < 0 || i_2 > 1) {
 			i_2 = 0;
 		}
-		Class115.method1952(i_2 == 1, -1838966944);
+		Class115.setBloom(i_2 == 1);
 	}
 
 	static final void method1509(CS2Executor executor) {
@@ -7783,7 +7783,7 @@ public class CS2Interpreter {
 
 	static final void method12596(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub7_8210.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub7_8210.checkValid(i_2);
 	}
 
 	static final void method12597(CS2Executor executor) {
@@ -7980,7 +7980,7 @@ public class CS2Interpreter {
 		if (!Renderers.SOFTWARE_RENDERER.method8405()) {
 			executor.intStack[++executor.intStackPtr - 1] = 3;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub4_8187.method7785(i_2);
+			executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub4_8187.checkValid(i_2);
 		}
 	}
 
@@ -8137,7 +8137,7 @@ public class CS2Interpreter {
 
 	static final void method3713(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.water.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.water.checkValid(i_2);
 	}
 
 	static final void method3714(CS2Executor executor) {
@@ -8191,7 +8191,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method6374(CS2Executor executor) {
-		WorldDescriptor class217_sub1_2 = Preference_Sub2.method12629();
+		WorldDescriptor class217_sub1_2 = SceneryShadowPreference.method12629();
 		if (class217_sub1_2 != null) {
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.worldNumber;
 			executor.intStack[++executor.intStackPtr - 1] = class217_sub1_2.flags;
@@ -8266,7 +8266,7 @@ public class CS2Interpreter {
 
 	static final void method2108(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub18_8214.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub18_8214.checkValid(i_2);
 	}
 
 	static final void method2112(CS2Executor executor) {
@@ -8984,7 +8984,7 @@ public class CS2Interpreter {
 
 	static final void method1968(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub29_8201.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub29_8201.checkValid(i_2);
 	}
 
 	static final void method5362(CS2Executor executor) {
@@ -9228,7 +9228,7 @@ public class CS2Interpreter {
 
 	static final void method14649(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub1_8197.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub1_8197.checkValid(i_2);
 	}
 
 	static final void method5082(CS2Executor executor) {
@@ -9794,7 +9794,7 @@ public class CS2Interpreter {
 
 	static final void method1572(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.textures.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.textures.checkValid(i_2);
 	}
 
 	static final void method1573(CS2Executor executor) {
@@ -10126,7 +10126,7 @@ public class CS2Interpreter {
 
 	static final void method15407(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.fog.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.fog.checkValid(i_2);
 	}
 
 	static final void method15408(CS2Executor executor) {
@@ -10298,7 +10298,7 @@ public class CS2Interpreter {
 
 	static final void method11341(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.groundDecoration.method7785(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.groundDecoration.checkValid(i_2);
 	}
 
 	static final void method11370(CS2Executor executor) {
@@ -10785,7 +10785,7 @@ public class CS2Interpreter {
 		}
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Preference_Sub12.method12709(icomponentdefinitions_0.idHash);
+			BloomPreference.method12709(icomponentdefinitions_0.idHash);
 		}
 	}
 

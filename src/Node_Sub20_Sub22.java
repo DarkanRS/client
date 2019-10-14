@@ -149,7 +149,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 							Class155.method2636();
 							GrandExchangeSlot.method5916();
 						} else if (Node_Sub13.DEFAULTS_LOADER_8.inputSubscriber.valid(class282_sub53_13, client.keyRecords, client.maximumHeldKeys, PlaySoundJingleCutsceneAction.keyRecorder)) {
-							Preference_Sub21.method12869(false, -200546110);
+							BrightnessPreference.method12869(false, -200546110);
 						} else {
 							if (client.anInt7341 == 3 && LoadingStage.method6684(client.CURRENT_CUTSCENE)) {
 								IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3153, (RsBitsBuffer) null), 218907808);

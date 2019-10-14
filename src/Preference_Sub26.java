@@ -10,16 +10,16 @@ public class Preference_Sub26 extends Preference {
 
 	public void method12941() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
-			this.anInt5578 = this.method7781(1706482651);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 
