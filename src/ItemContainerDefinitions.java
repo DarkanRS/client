@@ -21,10 +21,6 @@ public class ItemContainerDefinitions extends CacheableNode implements Definitio
 	void method15691(RsByteBuffer rsbytebuffer_1, int i_2) {
 		if (i_2 == 2) {
 			this.maxSize = rsbytebuffer_1.readUnsignedShort();
-			// if (this.maxSize == 556) {
-			// System.out.println("Bank inventorydef increased to 800.");
-			// this.maxSize = 800;
-			// }
 		} else if (i_2 == 4) {
 			this.contentSize = rsbytebuffer_1.readUnsignedByte();
 			this.itemIds = new int[this.contentSize];

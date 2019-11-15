@@ -60,7 +60,7 @@ public class QuickchatMessageLoader {
 	}
 
 	static final void method7215() {
-		if (Class393.preferences.aPreference_Sub27_8209.method12952((byte) 89) == 2) {
+		if (Class393.preferences.removeRoofsOptionOverride.method12952((byte) 89) == 2) {
 			byte[][][] bytes_1 = IndexLoaders.MAP_REGION_DECODER.method4532();
 			byte b_2 = (byte) (client.anInt7286 - 4 & 0xff);
 			int i_3 = client.anInt7286 % IndexLoaders.MAP_REGION_DECODER.getSizeX();

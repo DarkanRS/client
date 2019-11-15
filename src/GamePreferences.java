@@ -3,7 +3,7 @@ public class GamePreferences extends Node {
 	Game game;
 	ProcessorSpecs processorSpecs;
 	public GraphicsToolkitPreference currentToolkit;
-	public Preference_Sub4 aPreference_Sub4_8187;
+	public Preference_Sub4 antiAliasingDefault;
 	public Preference_Sub4 aPreference_Sub4_8223;
 	public BloomPreference bloom;
 	public BrightnessPreference brightness;
@@ -17,9 +17,9 @@ public class GamePreferences extends Node {
 	public Preference_Sub19 aPreference_Sub19_8204;
 	public SceneryShadowPreference sceneryShadows;
 	public Preference_Sub29 aPreference_Sub29_8201;
-	public Preference_Sub20 aPreference_Sub20_8207;
+	public Preference_Sub20 particles;
 	public Preference_Sub27 aPreference_Sub27_8208;
-	public Preference_Sub27 aPreference_Sub27_8209;
+	public Preference_Sub27 removeRoofsOptionOverride;
 	public Preference_Sub7 aPreference_Sub7_8210;
 	public Preference_Sub14 aPreference_Sub14_8211;
 	public Preference_Sub28 aPreference_Sub28_8212;
@@ -62,8 +62,8 @@ public class GamePreferences extends Node {
 			} else if (i_3 > 27) {
 				this.method13497(true, 2054281814);
 			} else {
-				this.aPreference_Sub4_8187 = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub4_8223 = new Preference_Sub4(this.aPreference_Sub4_8187.method12641(-1510157435), this);
+				this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
+				this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(-1510157435), this);
 				this.bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub1_8197 = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
@@ -82,9 +82,9 @@ public class GamePreferences extends Node {
 					this.aPreference_Sub29_8201 = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
 				}
 
-				this.aPreference_Sub20_8207 = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
+				this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub27_8208 = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub27_8209 = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 37), this);
+				this.removeRoofsOptionOverride = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 37), this);
 				this.aPreference_Sub7_8210 = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 25) {
 					this.aPreference_Sub14_8211 = new Preference_Sub14(rsbytebuffer_1.readUnsignedByte(), this);
@@ -127,12 +127,12 @@ public class GamePreferences extends Node {
 	}
 
 	void method13497(boolean bool_1, int i_2) {
-		if (bool_1 || this.aPreference_Sub4_8187 == null) {
-			this.aPreference_Sub4_8187 = new Preference_Sub4(this);
+		if (bool_1 || this.antiAliasingDefault == null) {
+			this.antiAliasingDefault = new Preference_Sub4(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub4_8223 == null) {
-			this.aPreference_Sub4_8223 = new Preference_Sub4(this.aPreference_Sub4_8187.method12641(2142983368), this);
+			this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(2142983368), this);
 		}
 
 		if (bool_1 || this.bloom == null) {
@@ -183,16 +183,16 @@ public class GamePreferences extends Node {
 			this.aPreference_Sub29_8201 = new Preference_Sub29(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub20_8207 == null) {
-			this.aPreference_Sub20_8207 = new Preference_Sub20(this);
+		if (bool_1 || this.particles == null) {
+			this.particles = new Preference_Sub20(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub27_8208 == null) {
 			this.aPreference_Sub27_8208 = new Preference_Sub27(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub27_8209 == null) {
-			this.aPreference_Sub27_8209 = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 96), this);
+		if (bool_1 || this.removeRoofsOptionOverride == null) {
+			this.removeRoofsOptionOverride = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 96), this);
 		}
 
 		if (bool_1 || this.aPreference_Sub7_8210 == null) {
@@ -313,7 +313,7 @@ public class GamePreferences extends Node {
 		this.aPreference_Sub19_8204 = new Preference_Sub19(bool_6 | bool_7 ? 1 : 0, this);
 		this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
-		this.aPreference_Sub4_8187 = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
+		this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
 		this.monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		if (i_2 >= 20) {
@@ -340,7 +340,7 @@ public class GamePreferences extends Node {
 		}
 
 		if (i_2 >= 4) {
-			this.aPreference_Sub20_8207 = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
+			this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		rsbytebuffer_1.readInt();
@@ -405,7 +405,7 @@ public class GamePreferences extends Node {
 	public RsByteBuffer encode() {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(40);
 		/*0*/rsbytebuffer_2.writeByte(27);
-		/*1*/rsbytebuffer_2.writeByte(this.aPreference_Sub4_8187.method12641(1497480561));
+		/*1*/rsbytebuffer_2.writeByte(this.antiAliasingDefault.method12641(1497480561));
 		/*2*/rsbytebuffer_2.writeByte(this.bloom.method12706((byte) 95));
 		/*3*/rsbytebuffer_2.writeByte(this.brightness.method12865());
 		/*4*/rsbytebuffer_2.writeByte(this.aPreference_Sub1_8197.method12615(-462784918));
@@ -418,7 +418,7 @@ public class GamePreferences extends Node {
 		/*11*/rsbytebuffer_2.writeByte(this.aPreference_Sub19_8204.method12786());
 		/*12*/rsbytebuffer_2.writeByte(this.sceneryShadows.method12624((byte) -37));
 		/*13*/rsbytebuffer_2.writeByte(this.aPreference_Sub29_8201.method13050());
-		/*14*/rsbytebuffer_2.writeByte(this.aPreference_Sub20_8207.method12794());
+		/*14*/rsbytebuffer_2.writeByte(this.particles.method12794());
 		/*15*/rsbytebuffer_2.writeByte(this.aPreference_Sub27_8208.method12952((byte) 121));
 		/*16*/rsbytebuffer_2.writeByte(this.aPreference_Sub7_8210.method12666(141061966));
 		/*17*/rsbytebuffer_2.writeByte(this.aPreference_Sub14_8211.method12728());
@@ -444,7 +444,7 @@ public class GamePreferences extends Node {
 	}
 
 	void method13502() {
-		this.aPreference_Sub4_8187.method12639((byte) -35);
+		this.antiAliasingDefault.method12639((byte) -35);
 		this.aPreference_Sub4_8223.method12639((byte) -23);
 		this.bloom.method12703();
 		this.brightness.method12861();
@@ -458,9 +458,9 @@ public class GamePreferences extends Node {
 		this.aPreference_Sub19_8204.method12785();
 		this.sceneryShadows.method12627();
 		this.aPreference_Sub29_8201.method13048();
-		this.aPreference_Sub20_8207.method12793();
+		this.particles.method12793();
 		this.aPreference_Sub27_8208.method12950(1301389562);
-		this.aPreference_Sub27_8209.method12950(221369371);
+		this.removeRoofsOptionOverride.method12950(221369371);
 		this.aPreference_Sub7_8210.method12663();
 		this.aPreference_Sub14_8211.method12725();
 		this.aPreference_Sub28_8212.method12959();

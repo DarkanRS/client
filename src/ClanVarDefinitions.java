@@ -28,7 +28,7 @@ public class ClanVarDefinitions {
 	}
 
 	public static final void method6823() {
-		int i_1 = Class393.preferences.aPreference_Sub27_8209.method12952((byte) 47);
+		int i_1 = Class393.preferences.removeRoofsOptionOverride.method12952((byte) 47);
 		if (i_1 == 0) {
 			IndexLoaders.MAP_REGION_DECODER.method4440((byte[][][]) null);
 			Class534_Sub2.method12847(0, (byte) 57);

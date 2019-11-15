@@ -1097,7 +1097,7 @@ public final class client extends Engine {
 				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
-			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.aPreference_Sub4_8187.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
+			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.antiAliasingDefault.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
 			str_2 = str_2 + Class393.preferences.aPreference_Sub19_8204.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624((byte) -13) + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";

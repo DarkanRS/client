@@ -2368,28 +2368,28 @@ public class CS2Interpreter {
 		case instr6674:
 			method14647(exec);
 			break;
-		case instr6733:
+		case DETAIL_STEREO:
 			method3942(exec);
 			break;
-		case instr6741:
+		case DETAIL_SOUNDVOL:
 			method3599(exec);
 			break;
-		case instr6735:
+		case DETAIL_MUSICVOL:
 			method2554(exec);
 			break;
-		case instr6736:
+		case DETAIL_BGSOUNDVOL:
 			method12718(exec);
 			break;
-		case instr6525:
+		case DETAIL_REMOVEROOFS_OPTION_OVERRIDE:
 			method6397(exec);
 			break;
-		case instr6738:
+		case DETAIL_PARTICLES:
 			method11218(exec);
 			break;
-		case instr5993:
+		case DETAIL_ANTIALIASING_DEFAULT:
 			method4168(exec);
 			break;
-		case instr6740:
+		case DETAIL_BUILDAREA:
 			method5766(exec);
 			break;
 		case DETAIL_BLOOM:
@@ -3138,7 +3138,7 @@ public class CS2Interpreter {
 
 	static final void method11218(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub20_8207, i_2);
+		Class393.preferences.setValue(Class393.preferences.particles, i_2);
 		Class190.savePreferences((byte) 88);
 		client.aBool7175 = false;
 	}
@@ -3540,7 +3540,7 @@ public class CS2Interpreter {
 
 	static final void method6279(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub20_8207.checkValid(i_2);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.particles.checkValid(i_2);
 	}
 
 	static final void method6280(CS2Executor executor) {
@@ -3669,7 +3669,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method2978(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub4_8187.method12641(-255008598);
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.antiAliasingDefault.method12641(-255008598);
 	}
 
 	static final void method1853(CS2Executor executor) {
@@ -4799,7 +4799,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method4168(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8187, executor.intStack[--executor.intStackPtr]);
+		Class393.preferences.setValue(Class393.preferences.antiAliasingDefault, executor.intStack[--executor.intStackPtr]);
 		Class190.savePreferences((byte) 102);
 	}
 
@@ -5869,7 +5869,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method8343(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub4_8187.method12646() && Renderers.SOFTWARE_RENDERER.method8405() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.antiAliasingDefault.method12646() && Renderers.SOFTWARE_RENDERER.method8405() ? 1 : 0;
 	}
 
 	static final void method8344(CS2Executor executor) {
@@ -6023,7 +6023,7 @@ public class CS2Interpreter {
 
 	static final void method6397(CS2Executor executor) {
 		int i_2 = Class393.preferences.aPreference_Sub27_8208.method12952((byte) 81);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, executor.intStack[--executor.intStackPtr] == 1 ? 0 : i_2);
+		Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, executor.intStack[--executor.intStackPtr] == 1 ? 0 : i_2);
 		ClanVarDefinitions.method6823();
 	}
 
@@ -6091,7 +6091,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5767(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub20_8207.method12797() ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.particles.method12797() ? 1 : 0;
 	}
 
 	static final void method5769(CS2Executor executor) {
@@ -6468,7 +6468,7 @@ public class CS2Interpreter {
 	static final void method284(CS2Executor executor) {
 		boolean bool_2 = executor.intStack[--executor.intStackPtr] == 1;
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8208, bool_2 ? 2 : 1);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, bool_2 ? 2 : 1);
+		Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, bool_2 ? 2 : 1);
 		ClanVarDefinitions.method6823();
 		Class190.savePreferences((byte) 111);
 		client.aBool7175 = false;
@@ -7980,7 +7980,7 @@ public class CS2Interpreter {
 		if (!Renderers.SOFTWARE_RENDERER.method8405()) {
 			executor.intStack[++executor.intStackPtr - 1] = 3;
 		} else {
-			executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub4_8187.checkValid(i_2);
+			executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.antiAliasingDefault.checkValid(i_2);
 		}
 	}
 
