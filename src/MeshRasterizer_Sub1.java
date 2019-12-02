@@ -93,23 +93,23 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 		this.aGraphicalRenderer_Sub1_8239 = class505_sub1_1;
 		this.anInt8240 = i_3;
 		this.anInt8241 = i_6;
-		if (Class129.method2192(i_3, i_6)) {
+		if (RasterizerFlags.method2192(i_3)) {
 			this.aClass143_8272 = new OpenGlArrayBufferPointer((Interface14) null, 5126, 3, 0);
 		}
 
-		if (Class129.method2201(i_3, i_6)) {
+		if (RasterizerFlags.method2201(i_3, i_6)) {
 			this.aClass143_8275 = new OpenGlArrayBufferPointer((Interface14) null, 5126, 2, 0);
 		}
 
-		if (Class129.method2193(i_3, i_6)) {
+		if (RasterizerFlags.method2193(i_3, i_6)) {
 			this.aClass143_8274 = new OpenGlArrayBufferPointer((Interface14) null, 5126, 3, 0);
 		}
 
-		if (Class129.method2194(i_3, i_6)) {
+		if (RasterizerFlags.method2194(i_3)) {
 			this.aClass143_8273 = new OpenGlArrayBufferPointer((Interface14) null, 5121, 4, 0);
 		}
 
-		if (Class129.method2196(i_3, i_6)) {
+		if (RasterizerFlags.method2196(i_3)) {
 			this.aClass132_8276 = new Class132();
 		}
 
@@ -644,15 +644,15 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 		this.aByteArray8264 = method13555(this.aByteArray8264, this.anInt8300);
 		this.aFloatArray8297 = method13523(this.aFloatArray8297, this.anInt8300);
 		this.aFloatArray8292 = method13523(this.aFloatArray8292, this.anInt8300);
-		if (rsmesh_2.vertexSkins != null && Class129.method2226(i_3, this.anInt8241)) {
+		if (rsmesh_2.vertexSkins != null && RasterizerFlags.method2226(i_3, this.anInt8241)) {
 			this.anIntArrayArray8263 = rsmesh_2.getBones(false);
 		}
 
-		if (rsmesh_2.isolatedVertexNormals != null && Class129.method2260(i_3, this.anInt8241)) {
+		if (rsmesh_2.isolatedVertexNormals != null && RasterizerFlags.method2260(i_3, this.anInt8241)) {
 			this.anIntArrayArray8278 = rsmesh_2.method2667();
 		}
 
-		if (rsmesh_2.textureSkins != null && Class129.method2208(i_3, this.anInt8241)) {
+		if (rsmesh_2.textureSkins != null && RasterizerFlags.method2208(i_3, this.anInt8241)) {
 			i_85 = 0;
 			int[] ints_68 = new int[256];
 
@@ -831,9 +831,9 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 		}
 
 		class528_sub1_1.aBool8246 = this.aBool8246;
-		boolean bool_6 = Class129.method2180(i_3, this.anInt8241);
-		boolean bool_7 = Class129.method2181(i_3, this.anInt8241);
-		boolean bool_8 = Class129.method2184(i_3, this.anInt8241);
+		boolean bool_6 = RasterizerFlags.method2180(i_3);
+		boolean bool_7 = RasterizerFlags.method2181(i_3);
+		boolean bool_8 = RasterizerFlags.method2184(i_3);
 		boolean bool_9 = bool_6 | bool_7 | bool_8;
 		int i_10;
 		if (bool_9) {
@@ -886,7 +886,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.verticesZ = this.verticesZ;
 		}
 
-		if (Class129.method2197(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2197(i_3)) {
 			if (bool_4) {
 				class528_sub1_1.aByte8242 = (byte) (class528_sub1_1.aByte8242 | 0x1);
 			}
@@ -894,13 +894,13 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aClass143_8272 = class528_sub1_2.aClass143_8272;
 			class528_sub1_1.aClass143_8272.aByte1669 = this.aClass143_8272.aByte1669;
 			class528_sub1_1.aClass143_8272.anInterface14_1667 = this.aClass143_8272.anInterface14_1667;
-		} else if (Class129.method2192(i_3, this.anInt8241)) {
+		} else if (RasterizerFlags.method2192(i_3)) {
 			class528_sub1_1.aClass143_8272 = this.aClass143_8272;
 		} else {
 			class528_sub1_1.aClass143_8272 = null;
 		}
 
-		if (Class129.method2185(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2185(i_3)) {
 			if (class528_sub1_2.colors != null && class528_sub1_2.colors.length >= this.triangleCount) {
 				class528_sub1_1.colors = class528_sub1_2.colors;
 			} else {
@@ -914,7 +914,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.colors = this.colors;
 		}
 
-		if (Class129.method2186(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2186(i_3)) {
 			if (class528_sub1_2.aByteArray8265 != null && class528_sub1_2.aByteArray8265.length >= this.triangleCount) {
 				class528_sub1_1.aByteArray8265 = class528_sub1_2.aByteArray8265;
 			} else {
@@ -928,7 +928,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aByteArray8265 = this.aByteArray8265;
 		}
 
-		if (Class129.method2199(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2199(i_3, this.anInt8241)) {
 			if (bool_4) {
 				class528_sub1_1.aByte8242 = (byte) (class528_sub1_1.aByte8242 | 0x2);
 			}
@@ -936,14 +936,14 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aClass143_8273 = class528_sub1_2.aClass143_8273;
 			class528_sub1_1.aClass143_8273.aByte1669 = this.aClass143_8273.aByte1669;
 			class528_sub1_1.aClass143_8273.anInterface14_1667 = this.aClass143_8273.anInterface14_1667;
-		} else if (Class129.method2194(i_3, this.anInt8241)) {
+		} else if (RasterizerFlags.method2194(i_3)) {
 			class528_sub1_1.aClass143_8273 = this.aClass143_8273;
 		} else {
 			class528_sub1_1.aClass143_8273 = null;
 		}
 
 		int i_11;
-		if (Class129.method2195(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2195(i_3)) {
 			if (class528_sub1_2.aShortArray8255 != null && class528_sub1_2.aShortArray8255.length >= this.anInt8300) {
 				class528_sub1_1.aShortArray8255 = class528_sub1_2.aShortArray8255;
 				class528_sub1_1.aShortArray8270 = class528_sub1_2.aShortArray8270;
@@ -995,7 +995,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aByteArray8264 = this.aByteArray8264;
 		}
 
-		if (Class129.method2261(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2261(i_3, this.anInt8241)) {
 			if (bool_4) {
 				class528_sub1_1.aByte8242 = (byte) (class528_sub1_1.aByte8242 | 0x4);
 			}
@@ -1003,32 +1003,16 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aClass143_8274 = class528_sub1_2.aClass143_8274;
 			class528_sub1_1.aClass143_8274.aByte1669 = this.aClass143_8274.aByte1669;
 			class528_sub1_1.aClass143_8274.anInterface14_1667 = this.aClass143_8274.anInterface14_1667;
-		} else if (Class129.method2193(i_3, this.anInt8241)) {
+		} else if (RasterizerFlags.method2193(i_3, this.anInt8241)) {
 			class528_sub1_1.aClass143_8274 = this.aClass143_8274;
 		} else {
 			class528_sub1_1.aClass143_8274 = null;
 		}
+		
+		class528_sub1_1.aFloatArray8297 = this.aFloatArray8297;
+		class528_sub1_1.aFloatArray8292 = this.aFloatArray8292;
 
-		if (Class129.method2242(i_3, this.anInt8241)) {
-			if (class528_sub1_2.aFloatArray8297 != null && class528_sub1_2.aFloatArray8297.length >= this.triangleCount) {
-				class528_sub1_1.aFloatArray8297 = class528_sub1_2.aFloatArray8297;
-				class528_sub1_1.aFloatArray8292 = class528_sub1_2.aFloatArray8292;
-			} else {
-				i_10 = this.anInt8300;
-				class528_sub1_1.aFloatArray8297 = class528_sub1_2.aFloatArray8297 = new float[i_10];
-				class528_sub1_1.aFloatArray8292 = class528_sub1_2.aFloatArray8292 = new float[i_10];
-			}
-
-			for (i_10 = 0; i_10 < this.anInt8300; i_10++) {
-				class528_sub1_1.aFloatArray8297[i_10] = this.aFloatArray8297[i_10];
-				class528_sub1_1.aFloatArray8292[i_10] = this.aFloatArray8292[i_10];
-			}
-		} else {
-			class528_sub1_1.aFloatArray8297 = this.aFloatArray8297;
-			class528_sub1_1.aFloatArray8292 = this.aFloatArray8292;
-		}
-
-		if (Class129.method2200(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2200(i_3, this.anInt8241)) {
 			if (bool_4) {
 				class528_sub1_1.aByte8242 = (byte) (class528_sub1_1.aByte8242 | 0x8);
 			}
@@ -1036,13 +1020,13 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aClass143_8275 = class528_sub1_2.aClass143_8275;
 			class528_sub1_1.aClass143_8275.aByte1669 = this.aClass143_8275.aByte1669;
 			class528_sub1_1.aClass143_8275.anInterface14_1667 = this.aClass143_8275.anInterface14_1667;
-		} else if (Class129.method2201(i_3, this.anInt8241)) {
+		} else if (RasterizerFlags.method2201(i_3, this.anInt8241)) {
 			class528_sub1_1.aClass143_8275 = this.aClass143_8275;
 		} else {
 			class528_sub1_1.aClass143_8275 = null;
 		}
 
-		if (Class129.method2188(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2188(i_3)) {
 			if (class528_sub1_2.aShortArray8266 != null && class528_sub1_2.aShortArray8266.length >= this.triangleCount) {
 				class528_sub1_1.aShortArray8266 = class528_sub1_2.aShortArray8266;
 				class528_sub1_1.aShortArray8267 = class528_sub1_2.aShortArray8267;
@@ -1065,20 +1049,20 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aShortArray8256 = this.aShortArray8256;
 		}
 
-		if (Class129.method2283(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2283(i_3, this.anInt8241)) {
 			if (bool_4) {
 				class528_sub1_1.aByte8242 = (byte) (class528_sub1_1.aByte8242 | 0x10);
 			}
 
 			class528_sub1_1.aClass132_8276 = class528_sub1_2.aClass132_8276;
 			class528_sub1_1.aClass132_8276.anInterface15_1595 = this.aClass132_8276.anInterface15_1595;
-		} else if (Class129.method2196(i_3, this.anInt8241)) {
+		} else if (RasterizerFlags.method2196(i_3)) {
 			class528_sub1_1.aClass132_8276 = this.aClass132_8276;
 		} else {
 			class528_sub1_1.aClass132_8276 = null;
 		}
 
-		if (Class129.method2189(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2189(i_3)) {
 			if (class528_sub1_2.aShortArray8269 != null && class528_sub1_2.aShortArray8269.length >= this.triangleCount) {
 				class528_sub1_1.aShortArray8269 = class528_sub1_2.aShortArray8269;
 			} else {
@@ -1093,7 +1077,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 			class528_sub1_1.aShortArray8269 = this.aShortArray8269;
 		}
 
-		if (Class129.method2190(i_3, this.anInt8241)) {
+		if (RasterizerFlags.method2190(i_3)) {
 			if (class528_sub1_2.aClass145Array8258 != null && class528_sub1_2.aClass145Array8258.length >= this.anInt8294) {
 				class528_sub1_1.aClass145Array8258 = class528_sub1_2.aClass145Array8258;
 
@@ -1143,11 +1127,11 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 	void method13525() {
 		if (this.aBool8279) {
 			this.aBool8279 = false;
-			if (this.aClass87Array8252 == null && this.aClass172Array8244 == null && this.aClass162Array8295 == null && !Class129.method2183(this.anInt8240, this.anInt8241)) {
+			if (this.aClass87Array8252 == null && this.aClass172Array8244 == null && this.aClass162Array8295 == null && !RasterizerFlags.method2183(this.anInt8240)) {
 				boolean bool_1 = false;
 				boolean bool_2 = false;
 				boolean bool_3 = false;
-				if (this.verticesX != null && !Class129.method2202(this.anInt8240, this.anInt8241)) {
+				if (this.verticesX != null && !RasterizerFlags.method2202(this.anInt8240, this.anInt8241)) {
 					if (this.aClass143_8272 != null && this.aClass143_8272.anInterface14_1667 == null) {
 						this.aBool8279 = true;
 					} else {
@@ -1159,7 +1143,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 					}
 				}
 
-				if (this.verticesY != null && !Class129.method2229(this.anInt8240, this.anInt8241)) {
+				if (this.verticesY != null && !RasterizerFlags.method2229(this.anInt8240, this.anInt8241)) {
 					if (this.aClass143_8272 != null && this.aClass143_8272.anInterface14_1667 == null) {
 						this.aBool8279 = true;
 					} else {
@@ -1171,7 +1155,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 					}
 				}
 
-				if (this.verticesZ != null && !Class129.method2252(this.anInt8240, this.anInt8241)) {
+				if (this.verticesZ != null && !RasterizerFlags.method2252(this.anInt8240, this.anInt8241)) {
 					if (this.aClass143_8272 != null && this.aClass143_8272.anInterface14_1667 == null) {
 						this.aBool8279 = true;
 					} else {
@@ -1201,7 +1185,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				this.triangles = null;
 			}
 
-			if (this.aByteArray8264 != null && !Class129.method2204(this.anInt8240, this.anInt8241)) {
+			if (this.aByteArray8264 != null && !RasterizerFlags.method2204(this.anInt8240, this.anInt8241)) {
 				if (this.aClass143_8274 != null) {
 					if (this.aClass143_8274.anInterface14_1667 != null) {
 						this.aShortArray8261 = null;
@@ -1221,7 +1205,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				}
 			}
 
-			if (this.colors != null && !Class129.method2205(this.anInt8240, this.anInt8241)) {
+			if (this.colors != null && !RasterizerFlags.method2205(this.anInt8240, this.anInt8241)) {
 				if (this.aClass143_8273 != null && this.aClass143_8273.anInterface14_1667 == null) {
 					this.aBool8279 = true;
 				} else {
@@ -1229,7 +1213,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				}
 			}
 
-			if (this.aByteArray8265 != null && !Class129.method2206(this.anInt8240, this.anInt8241)) {
+			if (this.aByteArray8265 != null && !RasterizerFlags.method2206(this.anInt8240, this.anInt8241)) {
 				if (this.aClass143_8273 != null && this.aClass143_8273.anInterface14_1667 == null) {
 					this.aBool8279 = true;
 				} else {
@@ -1237,7 +1221,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				}
 			}
 
-			if (this.aFloatArray8297 != null && !Class129.method2241(this.anInt8240, this.anInt8241)) {
+			if (this.aFloatArray8297 != null && !RasterizerFlags.method2241(this.anInt8240, this.anInt8241)) {
 				if (this.aClass143_8275 != null && this.aClass143_8275.anInterface14_1667 == null) {
 					this.aBool8279 = true;
 				} else {
@@ -1246,7 +1230,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				}
 			}
 
-			if (this.aShortArray8269 != null && !Class129.method2212(this.anInt8240, this.anInt8241)) {
+			if (this.aShortArray8269 != null && !RasterizerFlags.method2212(this.anInt8240, this.anInt8241)) {
 				if (this.aClass143_8273 != null && this.aClass143_8273.anInterface14_1667 == null) {
 					this.aBool8279 = true;
 				} else {
@@ -1254,7 +1238,7 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				}
 			}
 
-			if (this.aShortArray8266 != null && !Class129.method2211(this.anInt8240, this.anInt8241)) {
+			if (this.aShortArray8266 != null && !RasterizerFlags.method2211(this.anInt8240, this.anInt8241)) {
 				if (this.aClass132_8276 != null && this.aClass132_8276.anInterface15_1595 == null || this.aClass143_8273 != null && this.aClass143_8273.anInterface14_1667 == null) {
 					this.aBool8279 = true;
 				} else {
@@ -1264,17 +1248,17 @@ public class MeshRasterizer_Sub1 extends MeshRasterizer {
 				}
 			}
 
-			if (this.anIntArrayArray8282 != null && !Class129.method2208(this.anInt8240, this.anInt8241)) {
+			if (this.anIntArrayArray8282 != null && !RasterizerFlags.method2208(this.anInt8240, this.anInt8241)) {
 				this.anIntArrayArray8282 = null;
 				this.aShortArray8304 = null;
 			}
 
-			if (this.anIntArrayArray8263 != null && !Class129.method2226(this.anInt8240, this.anInt8241)) {
+			if (this.anIntArrayArray8263 != null && !RasterizerFlags.method2226(this.anInt8240, this.anInt8241)) {
 				this.anIntArrayArray8263 = null;
 				this.aShortArray8253 = null;
 			}
 
-			if (this.anIntArrayArray8278 != null && !Class129.method2260(this.anInt8240, this.anInt8241)) {
+			if (this.anIntArrayArray8278 != null && !RasterizerFlags.method2260(this.anInt8240, this.anInt8241)) {
 				this.anIntArrayArray8278 = null;
 			}
 

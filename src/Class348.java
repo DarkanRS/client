@@ -100,7 +100,7 @@ public class Class348 {
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);
 		}
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-367591790);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 	}
 
 	static boolean method6176(int i_0) {

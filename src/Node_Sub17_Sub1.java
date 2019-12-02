@@ -162,7 +162,7 @@ public class Node_Sub17_Sub1 extends Node_Sub17 {
 			Class115.setBloom(Class393.preferences.bloom.method12706((byte) 97) == 1);
 		}
 		IndexLoaders.MAP_REGION_DECODER.method4446((byte) 78);
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(1352749078);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		client.aBool7175 = false;
 		client.aBool7185 = true;
 		Class149_Sub3.aClass467Array9380 = null;

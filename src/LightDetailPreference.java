@@ -1,10 +1,10 @@
-public class Preference_Sub19 extends Preference {
+public class LightDetailPreference extends Preference {
 
 	void setValue(int i_1) {
 		this.anInt5578 = i_1;
 	}
 
-	public Preference_Sub19(int i_1, GamePreferences class282_sub54_2) {
+	public LightDetailPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -39,7 +39,7 @@ public class Preference_Sub19 extends Preference {
 		return 1;
 	}
 
-	public Preference_Sub19(GamePreferences class282_sub54_1) {
+	public LightDetailPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 

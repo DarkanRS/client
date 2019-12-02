@@ -57,7 +57,7 @@ public class EquipmentDefaults {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub28_8212, 1);
 		Class393.preferences.setValue(Class393.preferences.textures, 1);
 		Class393.preferences.setValue(Class393.preferences.sceneryShadows, 2);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub19_8204, 1);
+		Class393.preferences.setValue(Class393.preferences.lightDetail, 1);
 		Class393.preferences.setValue(Class393.preferences.water, 2);
 		Class393.preferences.setValue(Class393.preferences.fog, 1);
 		Class393.preferences.setValue(Class393.preferences.antiAliasingDefault, 0);
@@ -70,7 +70,7 @@ public class EquipmentDefaults {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 0);
 		Class393.preferences.setValue(Class393.preferences.graphics, 4);
 		Class94.method1589();
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(1356336946);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		client.aBool7185 = true;
 	}
 }

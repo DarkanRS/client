@@ -2356,10 +2356,10 @@ public class CS2Interpreter {
 		case instr6860:
 			method3611(exec);
 			break;
-		case instr6729:
+		case DETAIL_LIGHTDETAIL_HIGH:
 			method451(exec);
 			break;
-		case instr6730:
+		case DETAIL_WATERDETAIL_HIGH:
 			method3693(exec);
 			break;
 		case instr6731:
@@ -2455,7 +2455,7 @@ public class CS2Interpreter {
 		case instr6761:
 			method585(exec);
 			break;
-		case GET_WATER_PREFERENCE:
+		case DETAILGET_WATERDETAIL_HIGH:
 			getWaterPreference(exec);
 			break;
 		case instr6060:
@@ -6179,7 +6179,7 @@ public class CS2Interpreter {
 
 	static final void method4968(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
-		Preference_Sub19.method12790(executor.clanChannel == Class113.CLAN_CHANNEL, i_2);
+		LightDetailPreference.method12790(executor.clanChannel == Class113.CLAN_CHANNEL, i_2);
 	}
 
 	static final void method4970(CS2Executor executor) {
@@ -7152,7 +7152,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method585(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.aPreference_Sub19_8204.method12786() == 1 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = Class393.preferences.lightDetail.method12786() == 1 ? 1 : 0;
 	}
 
 	static final void method586(CS2Executor executor) {
@@ -8525,9 +8525,9 @@ public class CS2Interpreter {
 	}
 
 	static final void method451(CS2Executor executor) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub19_8204, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
+		Class393.preferences.setValue(Class393.preferences.lightDetail, executor.intStack[--executor.intStackPtr] == 1 ? 1 : 0);
 		Class94.method1589();
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-407830274);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		Class190.savePreferences((byte) 90);
 		client.aBool7175 = false;
 	}

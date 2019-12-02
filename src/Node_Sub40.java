@@ -36,7 +36,7 @@ public class Node_Sub40 extends Node {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub28_8212, 1);
 		Class393.preferences.setValue(Class393.preferences.textures, 1);
 		Class393.preferences.setValue(Class393.preferences.sceneryShadows, 1);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub19_8204, 1);
+		Class393.preferences.setValue(Class393.preferences.lightDetail, 1);
 		Class393.preferences.setValue(Class393.preferences.water, 0);
 		Class393.preferences.setValue(Class393.preferences.fog, 1);
 		Class393.preferences.setValue(Class393.preferences.antiAliasingDefault, 0);
@@ -49,7 +49,7 @@ public class Node_Sub40 extends Node {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 1);
 		Class393.preferences.setValue(Class393.preferences.graphics, 3);
 		Class94.method1589();
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(2045600476);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		client.aBool7185 = true;
 	}
 }

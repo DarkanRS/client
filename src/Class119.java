@@ -115,7 +115,7 @@ public class Class119 {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub28_8212, 0);
 		Class393.preferences.setValue(Class393.preferences.sceneryShadows, 0);
 		Class393.preferences.setValue(Class393.preferences.textures, 0);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub19_8204, 0);
+		Class393.preferences.setValue(Class393.preferences.lightDetail, 0);
 		Class393.preferences.setValue(Class393.preferences.water, 0);
 		Class393.preferences.setValue(Class393.preferences.fog, 0);
 		Class393.preferences.setValue(Class393.preferences.antiAliasingDefault, 0);
@@ -128,7 +128,7 @@ public class Class119 {
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 2);
 		Class393.preferences.setValue(Class393.preferences.graphics, 2);
 		Class94.method1589();
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(572282036);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		client.aBool7185 = true;
 	}
 

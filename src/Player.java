@@ -254,7 +254,7 @@ public class Player extends Entity {
 		this.method11171(vector3_5);
 		vector3_5.pushVectorStack();
 		if (this == VertexNormal.MY_PLAYER) {
-			IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-402586639);
+			IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		}
 
 		if (this.aClass539_10369 != null) {

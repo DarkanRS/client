@@ -198,7 +198,7 @@ public class Class190 {
 			client.GRAND_EXCHANGE_SLOTS[i_1] = new GrandExchangeSlot();
 		}
 
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(117803918);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		client.aBool7371 = true;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);

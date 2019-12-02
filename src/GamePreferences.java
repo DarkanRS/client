@@ -14,7 +14,7 @@ public class GamePreferences extends Node {
 	public Preference_Sub17 aPreference_Sub17_8200;
 	public GroundDecorationPreference groundDecoration;
 	public IdleAnimationsPreference idleAnimations;
-	public Preference_Sub19 aPreference_Sub19_8204;
+	public LightDetailPreference lightDetail;
 	public SceneryShadowPreference sceneryShadows;
 	public Preference_Sub29 aPreference_Sub29_8201;
 	public Preference_Sub20 particles;
@@ -76,7 +76,7 @@ public class GamePreferences extends Node {
 				this.aPreference_Sub17_8200 = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
 				this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub19_8204 = new Preference_Sub19(rsbytebuffer_1.readUnsignedByte(), this);
+				this.lightDetail = new LightDetailPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.sceneryShadows = new SceneryShadowPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 24) {
 					this.aPreference_Sub29_8201 = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
@@ -171,8 +171,8 @@ public class GamePreferences extends Node {
 			this.idleAnimations = new IdleAnimationsPreference(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub19_8204 == null) {
-			this.aPreference_Sub19_8204 = new Preference_Sub19(this);
+		if (bool_1 || this.lightDetail == null) {
+			this.lightDetail = new LightDetailPreference(this);
 		}
 
 		if (bool_1 || this.sceneryShadows == null) {
@@ -310,7 +310,7 @@ public class GamePreferences extends Node {
 			rsbytebuffer_1.readUnsignedByte();
 		}
 
-		this.aPreference_Sub19_8204 = new Preference_Sub19(bool_6 | bool_7 ? 1 : 0, this);
+		this.lightDetail = new LightDetailPreference(bool_6 | bool_7 ? 1 : 0, this);
 		this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
@@ -415,7 +415,7 @@ public class GamePreferences extends Node {
 		/*8*/rsbytebuffer_2.writeByte(this.aPreference_Sub17_8200.method12762(-140573));
 		/*9*/rsbytebuffer_2.writeByte(this.groundDecoration.method12897((byte) 75));
 		/*10*/rsbytebuffer_2.writeByte(this.idleAnimations.getValue());
-		/*11*/rsbytebuffer_2.writeByte(this.aPreference_Sub19_8204.method12786());
+		/*11*/rsbytebuffer_2.writeByte(this.lightDetail.method12786());
 		/*12*/rsbytebuffer_2.writeByte(this.sceneryShadows.method12624((byte) -37));
 		/*13*/rsbytebuffer_2.writeByte(this.aPreference_Sub29_8201.method13050());
 		/*14*/rsbytebuffer_2.writeByte(this.particles.method12794());
@@ -455,7 +455,7 @@ public class GamePreferences extends Node {
 		this.aPreference_Sub17_8200.method12767();
 		this.groundDecoration.method12898();
 		this.idleAnimations.method12741();
-		this.aPreference_Sub19_8204.method12785();
+		this.lightDetail.method12785();
 		this.sceneryShadows.method12627();
 		this.aPreference_Sub29_8201.method13048();
 		this.particles.method12793();
