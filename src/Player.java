@@ -214,12 +214,12 @@ public class Player extends Entity {
 			this.currentAnimation.update(-1);
 		}
 
-		for (int i_5 = 0; i_5 < this.aClass161Array10339.length; i_5++) {
-			if (this.aClass161Array10339[i_5].spotAnimId != -1) {
-				SpotAnimDefinitions spotanimdefinitions_6 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_5].spotAnimId, (byte) 55);
+		for (int i_5 = 0; i_5 < this.spotAnims.length; i_5++) {
+			if (this.spotAnims[i_5].spotAnimId != -1) {
+				SpotAnimDefinitions spotanimdefinitions_6 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.spotAnims[i_5].spotAnimId, (byte) 55);
 				if (spotanimdefinitions_6.aBool6968 && spotanimdefinitions_6.animationId != -1 && IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_6.animationId, (byte) -26).walkingPrecedence == 1) {
-					this.aClass161Array10339[i_5].animation.update(-1);
-					this.aClass161Array10339[i_5].spotAnimId = -1;
+					this.spotAnims[i_5].animation.update(-1);
+					this.spotAnims[i_5].spotAnimId = -1;
 				}
 			}
 		}

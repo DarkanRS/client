@@ -126,12 +126,12 @@ public class NPC extends Entity {
 		}
 
 		int i_7;
-		for (i_7 = 0; i_7 < this.aClass161Array10339.length; i_7++) {
-			if (this.aClass161Array10339[i_7].spotAnimId != -1) {
-				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_7].spotAnimId, (byte) -95);
+		for (i_7 = 0; i_7 < this.spotAnims.length; i_7++) {
+			if (this.spotAnims[i_7].spotAnimId != -1) {
+				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.spotAnims[i_7].spotAnimId, (byte) -95);
 				if (spotanimdefinitions_11.aBool6968 && spotanimdefinitions_11.animationId != -1 && IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_11.animationId, (byte) 7).walkingPrecedence == 1) {
-					this.aClass161Array10339[i_7].animation.update(-1);
-					this.aClass161Array10339[i_7].spotAnimId = -1;
+					this.spotAnims[i_7].animation.update(-1);
+					this.spotAnims[i_7].spotAnimId = -1;
 				}
 			}
 		}
@@ -231,12 +231,12 @@ public class NPC extends Entity {
 		}
 
 		int i_6;
-		for (i_6 = 0; i_6 < this.aClass161Array10339.length; i_6++) {
-			if (this.aClass161Array10339[i_6].spotAnimId != -1) {
-				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_6].spotAnimId, (byte) -12);
+		for (i_6 = 0; i_6 < this.spotAnims.length; i_6++) {
+			if (this.spotAnims[i_6].spotAnimId != -1) {
+				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(this.spotAnims[i_6].spotAnimId, (byte) -12);
 				if (spotanimdefinitions_7.aBool6968 && spotanimdefinitions_7.animationId != -1 && IndexLoaders.ANIMATION_LOADER.getAnimDefs(spotanimdefinitions_7.animationId, (byte) -9).walkingPrecedence == 1) {
-					this.aClass161Array10339[i_6].animation.update(-1);
-					this.aClass161Array10339[i_6].spotAnimId = -1;
+					this.spotAnims[i_6].animation.update(-1);
+					this.spotAnims[i_6].spotAnimId = -1;
 				}
 			}
 		}

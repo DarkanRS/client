@@ -42,17 +42,17 @@ public class Class150 {
 			}
 			class456_sub3_2.method7582((byte) -126);
 		}
-		for (int i_3 = 0; i_3 < animable_0.aClass161Array10339.length; i_3++) {
-			if (animable_0.aClass161Array10339[i_3].spotAnimId != -1) {
-				Animation animation_4 = animable_0.aClass161Array10339[i_3].animation;
+		for (int i_3 = 0; i_3 < animable_0.spotAnims.length; i_3++) {
+			if (animable_0.spotAnims[i_3].spotAnimId != -1) {
+				Animation animation_4 = animable_0.spotAnims[i_3].animation;
 				if (animation_4.hasSpeed(1176831971)) {
-					SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_3].spotAnimId, (byte) 52);
+					SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(animable_0.spotAnims[i_3].spotAnimId, (byte) 52);
 					AnimationDefinitions animationdefinitions_6 = animation_4.getDefs();
 					if (spotanimdefinitions_5.aBool6968) {
 						if (animationdefinitions_6.animatingPrecedence == 3) {
 							if (animable_0.anInt10367 > 0 && animable_0.forceMovementT1Delay <= client.cycles && animable_0.forceMovementT2Delay < client.cycles) {
 								animation_4.update(-1);
-								animable_0.aClass161Array10339[i_3].spotAnimId = -1;
+								animable_0.spotAnims[i_3].spotAnimId = -1;
 								continue;
 							}
 						} else if (animationdefinitions_6.animatingPrecedence == 1 && animable_0.anInt10367 > 0 && animable_0.forceMovementT1Delay <= client.cycles && animable_0.forceMovementT2Delay < client.cycles) {
@@ -62,7 +62,7 @@ public class Class150 {
 				}
 				if (animation_4.method7627(1, -1386003531) && animation_4.method7580(1255247674)) {
 					animation_4.update(-1);
-					animable_0.aClass161Array10339[i_3].spotAnimId = -1;
+					animable_0.spotAnims[i_3].spotAnimId = -1;
 				}
 			}
 		}

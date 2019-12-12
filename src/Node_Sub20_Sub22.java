@@ -237,7 +237,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 																client.anInt7184 = 0;
 															}
 															if (client.aClass118_7257 != null) {
-																Class161.method2827(1342280577);
+																EntitySpotAnim.method2827(1342280577);
 															}
 															FriendStatus.method7703();
 															if (client.PLAYER_RIGHTS > 0 && PlaySoundJingleCutsceneAction.keyRecorder.held(82) && PlaySoundJingleCutsceneAction.keyRecorder.held(81) && client.anInt7191 != 0) {

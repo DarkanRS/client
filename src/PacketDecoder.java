@@ -357,7 +357,7 @@ public class PacketDecoder {
 				StringNode class282_sub47_116 = (StringNode) client.NPCS.get((long) i_35);
 				if (class282_sub47_116 != null) {
 					NPC npc_120 = (NPC) class282_sub47_116.anObject8068;
-					Class161 class161_104 = npc_120.aClass161Array10339[idk];
+					EntitySpotAnim class161_104 = npc_120.spotAnims[idk];
 					if (spotAnimId == 65535) {
 						spotAnimId = -1;
 					}
@@ -391,7 +391,7 @@ public class PacketDecoder {
 					}
 					if (bool_115) {
 						class161_104.spotAnimId = spotAnimId;
-						class161_104.anInt2013 = height;
+						class161_104.height = height;
 						class161_104.anInt2011 = setting1;
 						if (spotAnimId != -1) {
 							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -65);
@@ -414,7 +414,7 @@ public class PacketDecoder {
 					player_117 = client.players[i_35];
 				}
 				if (player_117 != null) {
-					Class161 class161_121 = player_117.aClass161Array10339[idk];
+					EntitySpotAnim class161_121 = player_117.spotAnims[idk];
 					if (spotAnimId == 65535) {
 						spotAnimId = -1;
 					}
@@ -448,9 +448,9 @@ public class PacketDecoder {
 					}
 					if (bool_16) {
 						class161_121.spotAnimId = spotAnimId;
-						class161_121.anInt2013 = height;
+						class161_121.height = height;
 						class161_121.anInt2011 = setting1;
-						class161_121.anInt2015 = rotation;
+						class161_121.rotation = rotation;
 						if (spotAnimId != -1) {
 							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -15);
 							int i_83 = spotanimdefinitions_125.aBool6968 ? 0 : 2;

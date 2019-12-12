@@ -1,16 +1,16 @@
-public class Class161 {
+public class EntitySpotAnim {
 
 	public int anInt2011;
 
-	public int anInt2013;
+	public int height;
 
-	public int anInt2015;
+	public int rotation;
 
 	public int spotAnimId = -1;
 
 	public Animation animation;
 
-	Class161(Entity animable_1) {
+	EntitySpotAnim(Entity animable_1) {
 		this.animation = new Animation_Sub2(animable_1);
 	}
 

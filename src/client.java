@@ -2877,7 +2877,7 @@ public final class client extends Engine {
 										hookrequest_13 = (HookRequest) PENDING_HOOK_REQUESTS.popHead();
 										if (hookrequest_13 == null) {
 											if (aClass118_7257 != null) {
-												Class161.method2827(1986248750);
+												EntitySpotAnim.method2827(1986248750);
 											}
 
 											if (cycles % 1500 == 0) {

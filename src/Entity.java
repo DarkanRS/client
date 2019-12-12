@@ -56,7 +56,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 	public int[] regionBaseY;
 	public byte[] walkTypes;
 	public MeshRasterizer[] aMeshRasterizerArray10372;
-	public Class161[] aClass161Array10339;
+	public EntitySpotAnim[] spotAnims;
 	public Animation_Sub2_Sub1[] aAnimation_Sub2_Sub1Array10354;
 	Class163 aClass163_10334;
 	int anInt10322;
@@ -314,8 +314,8 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 
 	}
 
-	public final void sendSpotAnim(int spotAnimId, int i_2, int i_3, int i_4, boolean bool_5, int i_6) {
-		Class161 class161_8 = this.aClass161Array10339[i_6];
+	public final void sendSpotAnim(int spotAnimId, int flags1, int rotation, int i_4, boolean bool_5, int index) {
+		EntitySpotAnim class161_8 = this.spotAnims[index];
 		int currSpotAnimId = class161_8.spotAnimId;
 		if (spotAnimId != -1 && currSpotAnimId != -1) {
 			SpotAnimDefinitions spotAnimDefs;
@@ -357,9 +357,9 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 
 		class161_8.spotAnimId = spotAnimId;
 		class161_8.anInt2011 = i_4;
-		class161_8.anInt2013 = i_2 >> 16;
-		class161_8.anInt2015 = i_3;
-		class161_8.animation.animateFull(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
+		class161_8.height = flags1 >> 16;
+		class161_8.rotation = rotation;
+		class161_8.animation.animateFull(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, flags1 & 0xffff, b_14, false, -1358660139);
 	}
 
 	public final void method15801() {
@@ -640,7 +640,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 	}
 
 	void method15837(GraphicalRenderer graphicalrenderer_1, BASDefinitions renderanimdefs_2, int i_3, int i_4, int i_5, int i_6) {
-		for (int i_8 = 0; i_8 < this.aClass161Array10339.length; i_8++) {
+		for (int i_8 = 0; i_8 < this.spotAnims.length; i_8++) {
 			byte b_9 = 0;
 			if (i_8 == 0) {
 				b_9 = 2;
@@ -652,7 +652,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 				b_9 = 7;
 			}
 
-			Class161 class161_10 = this.aClass161Array10339[i_8];
+			EntitySpotAnim class161_10 = this.spotAnims[i_8];
 			if (class161_10.spotAnimId != -1 && !class161_10.animation.hasSpeed(-544447199)) {
 				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(class161_10.spotAnimId, (byte) 62);
 				boolean bool_12 = spotanimdefinitions_11.aByte6982 == 3 && (i_4 != 0 || i_5 != 0);
@@ -660,11 +660,11 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 				if (bool_12) {
 					i_13 = i_3 | 0x7;
 				} else {
-					if (class161_10.anInt2015 != 0) {
+					if (class161_10.rotation != 0) {
 						i_13 = i_3 | 0x5;
 					}
 
-					if (class161_10.anInt2013 != 0) {
+					if (class161_10.height != 0) {
 						i_13 |= 0x2;
 					}
 
@@ -697,7 +697,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 								i_18 = this.anIntArray10362[class161_10.anInt2011];
 							}
 
-							int i_19 = i_18 + class161_10.anInt2015 * 2048 - i_6 & 0x3fff;
+							int i_19 = i_18 + class161_10.rotation * 2048 - i_6 & 0x3fff;
 							if (i_19 != 0) {
 								meshrasterizer_14.f(i_19);
 							}
@@ -710,12 +710,12 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 						}
 
 						meshrasterizer_14.ia(i_15, i_16, i_17);
-					} else if (class161_10.anInt2015 != 0) {
-						meshrasterizer_14.f(class161_10.anInt2015 * 2048);
+					} else if (class161_10.rotation != 0) {
+						meshrasterizer_14.f(class161_10.rotation * 2048);
 					}
 
-					if (class161_10.anInt2013 != 0) {
-						meshrasterizer_14.ia(0, -class161_10.anInt2013 << 2, 0);
+					if (class161_10.height != 0) {
+						meshrasterizer_14.ia(0, -class161_10.height << 2, 0);
 					}
 
 					if (bool_12) {
@@ -817,10 +817,10 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 		this.regionBaseY = new int[i_2];
 		this.walkTypes = new byte[i_2];
 		this.aMeshRasterizerArray10372 = new MeshRasterizer[5];
-		this.aClass161Array10339 = new Class161[4];
+		this.spotAnims = new EntitySpotAnim[4];
 
 		for (int i_3 = 0; i_3 < 4; i_3++) {
-			this.aClass161Array10339[i_3] = new Class161(this);
+			this.spotAnims[i_3] = new EntitySpotAnim(this);
 		}
 
 		this.aAnimation_Sub2_Sub1Array10354 = new Animation_Sub2_Sub1[LinkedNodeList.EQUIPMENT_DEFAULTS.hidden.length];
