@@ -4,7 +4,7 @@ public final class Class484 {
 		throw new Error();
 	}
 
-	static void method8200(IComponentDefinitions iCompDef, int i_1, int i_2, boolean bool_3, int i_4) {
+	static void initSizes(IComponentDefinitions iCompDef, int i_1, int i_2, boolean bool_3, int i_4) {
 		int i_5 = iCompDef.width;
 		int i_6 = iCompDef.height;
 		if (iCompDef.aspectWidthType == 0) {

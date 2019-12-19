@@ -59,18 +59,18 @@ public class ProcessorSpecs {
 
     static final void method7727(Entity animable_0) {
         Animation animation_2 = animable_0.currentAnimation;
-        if (animable_0.anInt10345 == client.cycles || !animation_2.hasDefs() || animation_2.method7585(1)) {
-            int i_3 = animable_0.anInt10345 - animable_0.anInt10342;
-            int i_4 = client.cycles - animable_0.anInt10342;
-            int i_5 = animable_0.anInt10326 * 512 + animable_0.getSize() * 256;
-            int i_6 = animable_0.anInt10328 * 512 + animable_0.getSize() * 256;
-            int i_7 = animable_0.anInt10341 * 512 + animable_0.getSize() * 256;
-            int i_8 = animable_0.anInt10343 * 512 + animable_0.getSize() * 256;
+        if (animable_0.forceMovementT2Delay == client.cycles || !animation_2.hasDefs() || animation_2.method7585(1)) {
+            int i_3 = animable_0.forceMovementT2Delay - animable_0.forceMovementT1Delay;
+            int i_4 = client.cycles - animable_0.forceMovementT1Delay;
+            int i_5 = animable_0.forceMovementT1XOff * 512 + animable_0.getSize() * 256;
+            int i_6 = animable_0.forceMovementT1YOff * 512 + animable_0.getSize() * 256;
+            int i_7 = animable_0.forceMovementT2XOff * 512 + animable_0.getSize() * 256;
+            int i_8 = animable_0.forceMovementT2YOff * 512 + animable_0.getSize() * 256;
             Vector3 vector3_9 = animable_0.method11166().coords;
             animable_0.method11172((float) ((i_7 * i_4 + i_5 * (i_3 - i_4)) / i_3), (float) ((int) vector3_9.y), (float) ((i_4 * i_8 + i_6 * (i_3 - i_4)) / i_3));
         }
         animable_0.anInt10366 = 0;
-        animable_0.turn(animable_0.anInt10346, false);
+        animable_0.turn(animable_0.forceMovementDir, false);
     }
 
     static void method7728(int i_0, int i_1, int i_2, int i_3, int i_4) {

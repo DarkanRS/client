@@ -83,7 +83,7 @@ public class Class348 {
 			Static.method6378();
 			Class150.method2582(client.BASE_WINDOW_ID, (int[]) null, -1484331524);
 		}
-		Preference_Sub12.method12708();
+		BloomPreference.method12708();
 		Class9.aBool71 = false;
 		Class509.method8739();
 		client.anInt7427 = -1;
@@ -100,7 +100,7 @@ public class Class348 {
 		} else {
 			SpotAnimIndexLoader.method8860((byte) -92);
 		}
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(-367591790);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 	}
 
 	static boolean method6176(int i_0) {

@@ -16,7 +16,7 @@ public abstract class Class152 {
 					throw new IOException();
 				}
 			}
-			Preference_Sub10.method12696(new RsByteBuffer(bytes_2));
+			MonoStereoPreference.method12696(new RsByteBuffer(bytes_2));
 		} catch (Exception exception_6) {
 			;
 		}

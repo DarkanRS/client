@@ -326,7 +326,7 @@ public class InteractableObject extends Transform_Sub1_Sub1 implements SceneObje
 		for (int i_6 = 0; i_6 < arr_0.length; i_6++) {
 			IComponentDefinitions icomponentdefinitions_7 = arr_0[i_6];
 			if (icomponentdefinitions_7 != null && icomponentdefinitions_7.parent == i_1) {
-				Class484.method8200(icomponentdefinitions_7, i_2, i_3, bool_4, -417515150);
+				Class484.initSizes(icomponentdefinitions_7, i_2, i_3, bool_4, -417515150);
 				Class246.method4204(icomponentdefinitions_7, i_2, i_3, -878856707);
 				if (icomponentdefinitions_7.scrollX > icomponentdefinitions_7.scrollWidth - icomponentdefinitions_7.width) {
 					icomponentdefinitions_7.scrollX = icomponentdefinitions_7.scrollWidth - icomponentdefinitions_7.width;

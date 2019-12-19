@@ -1097,12 +1097,12 @@ public final class client extends Engine {
 				str_2 = str_2 + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + Class4.MY_PLAYER_PLANE + "," + " ";
 			}
 
-			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.aPreference_Sub4_8187.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
-			str_2 = str_2 + Class393.preferences.aPreference_Sub19_8204.method12786() + " ";
+			str_2 = str_2 + Class393.preferences.currentToolkit.getValue(-993129385) + " " + Class393.preferences.antiAliasingDefault.method12641(-679082268) + " " + Class158.windowedMode() + " " + Class349.anInt4083 + "," + anInt3243 * -969250379 + " ";
+			str_2 = str_2 + Class393.preferences.lightDetail.method12786() + " ";
 			str_2 = str_2 + Class393.preferences.sceneryShadows.method12624((byte) -13) + " ";
 			str_2 = str_2 + Class393.preferences.water.getValue() + " ";
 			str_2 = str_2 + Class393.preferences.textures.method12873(-932998306) + " ";
-			str_2 = str_2 + Class393.preferences.aPreference_Sub12_8195.method12706((byte) 75) + " ";
+			str_2 = str_2 + Class393.preferences.bloom.method12706((byte) 75) + " ";
 			str_2 = str_2 + "0 ";
 			str_2 = str_2 + MAX_MEMORY + " ";
 			str_2 = str_2 + gameState + " ";
@@ -2877,7 +2877,7 @@ public final class client extends Engine {
 										hookrequest_13 = (HookRequest) PENDING_HOOK_REQUESTS.popHead();
 										if (hookrequest_13 == null) {
 											if (aClass118_7257 != null) {
-												Class161.method2827(1986248750);
+												EntitySpotAnim.method2827(1986248750);
 											}
 
 											if (cycles % 1500 == 0) {

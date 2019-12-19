@@ -98,7 +98,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 		return null;
 	}
 
-	public final void method15904(int i_1, int i_2, int i_3, int i_4) {
+	public final void start(int i_1, int i_2, int i_3, int i_4) {
 		Vector3 position = Vector3.popVectorStackTo(this.method11166().coords);
 		if (!this.aBool10398) {
 			float f_7 = (float) i_1 - position.x;

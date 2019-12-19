@@ -1,6 +1,6 @@
-public class Preference_Sub10 extends Preference {
+public class MonoStereoPreference extends Preference {
 
-	public Preference_Sub10(int i_1, GamePreferences class282_sub54_2) {
+	public MonoStereoPreference(int i_1, GamePreferences class282_sub54_2) {
 		super(i_1, class282_sub54_2);
 	}
 
@@ -8,13 +8,13 @@ public class Preference_Sub10 extends Preference {
 		return this.anInt5578;
 	}
 
-	public Preference_Sub10(GamePreferences class282_sub54_1) {
+	public MonoStereoPreference(GamePreferences class282_sub54_1) {
 		super(class282_sub54_1);
 	}
 
 	public void method12692() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
-			this.anInt5578 = this.method7781(2089221504);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
@@ -39,11 +39,11 @@ public class Preference_Sub10 extends Preference {
 		return 1;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 

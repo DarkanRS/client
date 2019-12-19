@@ -1,6 +1,6 @@
 public class IdleAnimationsPreference extends Preference {
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
@@ -34,12 +34,12 @@ public class IdleAnimationsPreference extends Preference {
 		}
 
 		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
-			this.anInt5578 = this.method7781(2078065686);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 

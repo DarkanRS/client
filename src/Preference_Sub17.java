@@ -1,6 +1,6 @@
 public class Preference_Sub17 extends Preference {
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		if (this.manager.getGame() == Game.darkan) {
 			if (i_1 == 0) {
 				if (this.manager.fog.method13417(-2085338596) == 1) {
@@ -30,7 +30,7 @@ public class Preference_Sub17 extends Preference {
 		return 1;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
@@ -82,7 +82,7 @@ public class Preference_Sub17 extends Preference {
 		}
 
 		if (this.anInt5578 != 0 && this.anInt5578 != 1) {
-			this.anInt5578 = this.method7781(2034434304);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}

@@ -1,8 +1,8 @@
-public class Preference_Sub2 extends Preference {
+public class SceneryShadowPreference extends Preference {
 
     public static int anInt7868;
 
-    public Preference_Sub2(int i_1, GamePreferences class282_sub54_2) {
+    public SceneryShadowPreference(int i_1, GamePreferences class282_sub54_2) {
         super(i_1, class282_sub54_2);
     }
 
@@ -14,7 +14,7 @@ public class Preference_Sub2 extends Preference {
         return 2;
     }
 
-    public int method7785(int i_1) {
+    public int checkValid(int i_1) {
         return this.manager.textures.method12873(547920845) == 0 ? 3 : 1;
     }
 
@@ -38,11 +38,11 @@ public class Preference_Sub2 extends Preference {
         return 2;
     }
 
-    int method7781(int i_1) {
+    int getDefaultValue() {
         return 2;
     }
 
-    public Preference_Sub2(GamePreferences class282_sub54_1) {
+    public SceneryShadowPreference(GamePreferences class282_sub54_1) {
         super(class282_sub54_1);
     }
 
@@ -51,7 +51,7 @@ public class Preference_Sub2 extends Preference {
             this.anInt5578 = 0;
         }
         if (this.anInt5578 < 0 || this.anInt5578 > 2) {
-            this.anInt5578 = this.method7781(1987108969);
+            this.anInt5578 = this.getDefaultValue();
         }
     }
 

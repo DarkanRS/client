@@ -11,7 +11,7 @@ public class Preference_Sub3 extends Preference {
 		}
 
 		if (this.anInt5578 != 0 && this.anInt5578 != 1) {
-			this.anInt5578 = this.method7781(1709697432);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
@@ -24,12 +24,12 @@ public class Preference_Sub3 extends Preference {
 		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		int i_2 = this.manager.aPreference_Sub18_8214.getValue(-1849420735);
 		return i_2 != 3 && i_2 != 5 ? 0 : 0;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		if (i_1 == 0) {
 			return 1;
 		} else if (this.manager.getProcessorSpecs().getProcessorCount() < 2) {

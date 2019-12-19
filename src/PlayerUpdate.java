@@ -374,24 +374,24 @@ public class PlayerUpdate {
 		}
 	
 		if ((flags & 0x800) != 0) {
-			player.anInt10326 = stream.readByteC();
-			player.anInt10328 = stream.read128Byte();
-			player.anInt10341 = stream.readByte128();
-			player.anInt10343 = stream.readByteC();
-			player.anInt10342 = stream.readUnsignedShortLE128() + client.cycles;
-			player.anInt10345 = stream.readShortLE() + client.cycles;
-			player.anInt10346 = stream.readUnsignedShort128();
+			player.forceMovementT1XOff = stream.readByteC();
+			player.forceMovementT1YOff = stream.read128Byte();
+			player.forceMovementT2XOff = stream.readByte128();
+			player.forceMovementT2YOff = stream.readByteC();
+			player.forceMovementT1Delay = stream.readUnsignedShortLE128() + client.cycles;
+			player.forceMovementT2Delay = stream.readShortLE() + client.cycles;
+			player.forceMovementDir = stream.readUnsignedShort128();
 			if (player.aBool10568) {
-				player.anInt10326 += player.anInt10569;
-				player.anInt10328 += player.anInt10570;
-				player.anInt10341 += player.anInt10569;
-				player.anInt10343 += player.anInt10570;
+				player.forceMovementT1XOff += player.anInt10569;
+				player.forceMovementT1YOff += player.anInt10570;
+				player.forceMovementT2XOff += player.anInt10569;
+				player.forceMovementT2YOff += player.anInt10570;
 				player.anInt10355 = 0;
 			} else {
-				player.anInt10326 += player.regionBaseX[0];
-				player.anInt10328 += player.regionBaseY[0];
-				player.anInt10341 += player.regionBaseX[0];
-				player.anInt10343 += player.regionBaseY[0];
+				player.forceMovementT1XOff += player.regionBaseX[0];
+				player.forceMovementT1YOff += player.regionBaseY[0];
+				player.forceMovementT2XOff += player.regionBaseX[0];
+				player.forceMovementT2YOff += player.regionBaseY[0];
 				player.anInt10355 = 1;
 			}
 	
@@ -399,21 +399,21 @@ public class PlayerUpdate {
 		}
 	
 		if ((flags & 0x80) != 0) {
-			int i_6 = stream.readShortLE();
-			int i_7 = stream.readInt();
-			if (i_6 == 65535) {
-				i_6 = -1;
+			int spotAnimId = stream.readShortLE();
+			int flags1 = stream.readInt();
+			if (spotAnimId == 65535) {
+				spotAnimId = -1;
 			}
 	
-			int i_8 = stream.readUnsignedByte128();
-			int i_9 = i_8 & 0x7;
-			int i_10 = i_8 >> 3 & 0xf;
+			int flags2 = stream.readUnsignedByte128();
+			int rotation = flags2 & 0x7;
+			int i_10 = flags2 >> 3 & 0xf;
 			if (i_10 == 15) {
 				i_10 = -1;
 			}
 	
-			boolean bool_11 = (i_8 >> 7 & 0x1) == 1;
-			player.sendSpotAnim(i_6, i_7, i_9, i_10, bool_11, 0);
+			boolean bool_11 = (flags2 >> 7 & 0x1) == 1;
+			player.sendSpotAnim(spotAnimId, flags1, rotation, i_10, bool_11, 0);
 		}
 	
 		if (player.aBool10568) {

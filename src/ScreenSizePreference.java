@@ -8,7 +8,7 @@ public class ScreenSizePreference extends Preference {
 
 	public void method12684(byte b_1) {
 		if (this.anInt5578 < 1 || this.anInt5578 > 3) {
-			this.anInt5578 = this.method7781(1889699071);
+			this.anInt5578 = this.getDefaultValue();
 		}
 	}
 
@@ -40,11 +40,11 @@ public class ScreenSizePreference extends Preference {
 		return this.anInt5578;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return this.manager.getProcessorSpecs().isARM() ? 3 : 2;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 }

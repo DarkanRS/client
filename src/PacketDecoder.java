@@ -357,7 +357,7 @@ public class PacketDecoder {
 				StringNode class282_sub47_116 = (StringNode) client.NPCS.get((long) i_35);
 				if (class282_sub47_116 != null) {
 					NPC npc_120 = (NPC) class282_sub47_116.anObject8068;
-					Class161 class161_104 = npc_120.aClass161Array10339[idk];
+					EntitySpotAnim class161_104 = npc_120.spotAnims[idk];
 					if (spotAnimId == 65535) {
 						spotAnimId = -1;
 					}
@@ -391,7 +391,7 @@ public class PacketDecoder {
 					}
 					if (bool_115) {
 						class161_104.spotAnimId = spotAnimId;
-						class161_104.anInt2013 = height;
+						class161_104.height = height;
 						class161_104.anInt2011 = setting1;
 						if (spotAnimId != -1) {
 							SpotAnimDefinitions spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -65);
@@ -414,7 +414,7 @@ public class PacketDecoder {
 					player_117 = client.players[i_35];
 				}
 				if (player_117 != null) {
-					Class161 class161_121 = player_117.aClass161Array10339[idk];
+					EntitySpotAnim class161_121 = player_117.spotAnims[idk];
 					if (spotAnimId == 65535) {
 						spotAnimId = -1;
 					}
@@ -448,9 +448,9 @@ public class PacketDecoder {
 					}
 					if (bool_16) {
 						class161_121.spotAnimId = spotAnimId;
-						class161_121.anInt2013 = height;
+						class161_121.height = height;
 						class161_121.anInt2011 = setting1;
-						class161_121.anInt2015 = rotation;
+						class161_121.rotation = rotation;
 						if (spotAnimId != -1) {
 							SpotAnimDefinitions spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_LOADER.getSpotAnimDefs(spotAnimId, (byte) -15);
 							int i_83 = spotanimdefinitions_125.aBool6968 ? 0 : 2;
@@ -1299,9 +1299,9 @@ public class PacketDecoder {
 			} else {
 				startHeight *= 4;
 			}
-			WorldTile coordgrid_39 = IndexLoaders.MAP_REGION_DECODER.getBase();
-			int localX = x - coordgrid_39.x * 2;
-			int localY = y - coordgrid_39.y * 2;
+			WorldTile base = IndexLoaders.MAP_REGION_DECODER.getBase();
+			int localX = x - base.x * 2;
+			int localY = y - base.y * 2;
 			int xOff = xDist + localX;
 			int yOff = yDist + localY;
 			if (localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && localY < IndexLoaders.MAP_REGION_DECODER.getSizeX() * 2 && xOff >= 0 && yOff >= 0 && xOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && yOff < IndexLoaders.MAP_REGION_DECODER.getSizeY() * 2 && spotAnimId != 65535) {
@@ -2417,8 +2417,8 @@ public class PacketDecoder {
 			int spotAnimId = buffer.readUnsignedShort();
 			int startHeight = buffer.readUnsignedByte() * 4;
 			int endHeight = buffer.readUnsignedByte() * 4;
-			int delay = buffer.readUnsignedShort();
-			int delayPlusSpeed = buffer.readUnsignedShort();
+			int startTime = buffer.readUnsignedShort();
+			int endTime = buffer.readUnsignedShort();
 			int angle = buffer.readUnsignedByte();
 			int slope = buffer.readUnsignedShort();
 			if (angle == 255) {
@@ -2432,9 +2432,9 @@ public class PacketDecoder {
 				startHeight <<= 2;
 				endHeight <<= 2;
 				slope <<= 2;
-				Projectile class521_sub1_sub1_sub3_17 = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, delay + client.cycles, delayPlusSpeed + client.cycles, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
-				class521_sub1_sub1_sub3_17.method15904(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, delay + client.cycles);
-				client.PROJECTILES.append(new ProjectileNode(class521_sub1_sub1_sub3_17));
+				Projectile p = new Projectile(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.cycles, endTime + client.cycles, angle, slope, 0, lockOn, endHeight, useFloorHeight, -1);
+				p.start(xOff, yOff, Class504.getTerrainHeightAtPos(xOff, yOff, Class272.UPDATE_ZONE_PLANE) - endHeight, startTime + client.cycles);
+				client.PROJECTILES.append(new ProjectileNode(p));
 			}
 		} else if (UpdateZonePacket.MIDI_SONG_LOCATION == packet) {
 			int i_3 = buffer.readUnsignedByte();

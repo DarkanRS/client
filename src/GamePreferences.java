@@ -3,23 +3,23 @@ public class GamePreferences extends Node {
 	Game game;
 	ProcessorSpecs processorSpecs;
 	public GraphicsToolkitPreference currentToolkit;
-	public Preference_Sub4 aPreference_Sub4_8187;
+	public Preference_Sub4 antiAliasingDefault;
 	public Preference_Sub4 aPreference_Sub4_8223;
-	public Preference_Sub12 aPreference_Sub12_8195;
-	public Preference_Sub21 brightness;
+	public BloomPreference bloom;
+	public BrightnessPreference brightness;
 	public Preference_Sub1 aPreference_Sub1_8197;
 	public Preference_Sub16 aPreference_Sub16_8198;
 	public Preference_Sub26 aPreference_Sub26_8224;
 	public FogPreference fog;
 	public Preference_Sub17 aPreference_Sub17_8200;
-	public Preference_Sub23 groundDecoration;
+	public GroundDecorationPreference groundDecoration;
 	public IdleAnimationsPreference idleAnimations;
-	public Preference_Sub19 aPreference_Sub19_8204;
-	public Preference_Sub2 sceneryShadows;
+	public LightDetailPreference lightDetail;
+	public SceneryShadowPreference sceneryShadows;
 	public Preference_Sub29 aPreference_Sub29_8201;
-	public Preference_Sub20 aPreference_Sub20_8207;
+	public Preference_Sub20 particles;
 	public Preference_Sub27 aPreference_Sub27_8208;
-	public Preference_Sub27 aPreference_Sub27_8209;
+	public Preference_Sub27 removeRoofsOptionOverride;
 	public Preference_Sub7 aPreference_Sub7_8210;
 	public Preference_Sub14 aPreference_Sub14_8211;
 	public Preference_Sub28 aPreference_Sub28_8212;
@@ -34,12 +34,12 @@ public class GamePreferences extends Node {
 	public Preference_Sub11 aPreference_Sub11_8217;
 	public SafeModePreference safeMode;
 	public Preference_Sub3 aPreference_Sub3_8199;
-	public Preference_Sub13 soundEffectVolume;
-	public Preference_Sub13 ambientSoundVolume;
-	public Preference_Sub13 voiceOverVolume;
-	public Preference_Sub13 musicVolume;
-	public Preference_Sub13 aPreference_Sub13_8229;
-	public Preference_Sub10 monoStereo;
+	public SoundLevelPreference soundEffectVolume;
+	public SoundLevelPreference ambientSoundVolume;
+	public SoundLevelPreference voiceOverVolume;
+	public SoundLevelPreference musicVolume;
+	public SoundLevelPreference aPreference_Sub13_8229;
+	public MonoStereoPreference monoStereo;
 
 	public GamePreferences(RsByteBuffer rsbytebuffer_1, Game game_2) {
 		this.game = game_2;
@@ -62,10 +62,10 @@ public class GamePreferences extends Node {
 			} else if (i_3 > 27) {
 				this.method13497(true, 2054281814);
 			} else {
-				this.aPreference_Sub4_8187 = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub4_8223 = new Preference_Sub4(this.aPreference_Sub4_8187.method12641(-1510157435), this);
-				this.aPreference_Sub12_8195 = new Preference_Sub12(rsbytebuffer_1.readUnsignedByte(), this);
-				this.brightness = new Preference_Sub21(rsbytebuffer_1.readUnsignedByte(), this);
+				this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
+				this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(-1510157435), this);
+				this.bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub1_8197 = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 27) {
 					this.aPreference_Sub16_8198 = new Preference_Sub16(rsbytebuffer_1.readUnsignedByte(), this);
@@ -74,17 +74,17 @@ public class GamePreferences extends Node {
 				this.aPreference_Sub26_8224 = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
 				this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub17_8200 = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
-				this.groundDecoration = new Preference_Sub23(rsbytebuffer_1.readUnsignedByte(), this);
+				this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub19_8204 = new Preference_Sub19(rsbytebuffer_1.readUnsignedByte(), this);
-				this.sceneryShadows = new Preference_Sub2(rsbytebuffer_1.readUnsignedByte(), this);
+				this.lightDetail = new LightDetailPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.sceneryShadows = new SceneryShadowPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 24) {
 					this.aPreference_Sub29_8201 = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
 				}
 
-				this.aPreference_Sub20_8207 = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
+				this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
 				this.aPreference_Sub27_8208 = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub27_8209 = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 37), this);
+				this.removeRoofsOptionOverride = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 37), this);
 				this.aPreference_Sub7_8210 = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 25) {
 					this.aPreference_Sub14_8211 = new Preference_Sub14(rsbytebuffer_1.readUnsignedByte(), this);
@@ -111,12 +111,12 @@ public class GamePreferences extends Node {
 					this.aPreference_Sub3_8199 = new Preference_Sub3(rsbytebuffer_1.readUnsignedByte(), this);
 				}
 
-				this.soundEffectVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
-				this.ambientSoundVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
-				this.voiceOverVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
-				this.musicVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub13_8229 = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
-				this.monoStereo = new Preference_Sub10(rsbytebuffer_1.readUnsignedByte(), this);
+				this.soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.method13497(false, -23246823);
 			}
 		} else {
@@ -127,20 +127,20 @@ public class GamePreferences extends Node {
 	}
 
 	void method13497(boolean bool_1, int i_2) {
-		if (bool_1 || this.aPreference_Sub4_8187 == null) {
-			this.aPreference_Sub4_8187 = new Preference_Sub4(this);
+		if (bool_1 || this.antiAliasingDefault == null) {
+			this.antiAliasingDefault = new Preference_Sub4(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub4_8223 == null) {
-			this.aPreference_Sub4_8223 = new Preference_Sub4(this.aPreference_Sub4_8187.method12641(2142983368), this);
+			this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(2142983368), this);
 		}
 
-		if (bool_1 || this.aPreference_Sub12_8195 == null) {
-			this.aPreference_Sub12_8195 = new Preference_Sub12(this);
+		if (bool_1 || this.bloom == null) {
+			this.bloom = new BloomPreference(this);
 		}
 
 		if (bool_1 || this.brightness == null) {
-			this.brightness = new Preference_Sub21(this);
+			this.brightness = new BrightnessPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub1_8197 == null) {
@@ -164,35 +164,35 @@ public class GamePreferences extends Node {
 		}
 
 		if (bool_1 || this.groundDecoration == null) {
-			this.groundDecoration = new Preference_Sub23(this);
+			this.groundDecoration = new GroundDecorationPreference(this);
 		}
 
 		if (bool_1 || this.idleAnimations == null) {
 			this.idleAnimations = new IdleAnimationsPreference(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub19_8204 == null) {
-			this.aPreference_Sub19_8204 = new Preference_Sub19(this);
+		if (bool_1 || this.lightDetail == null) {
+			this.lightDetail = new LightDetailPreference(this);
 		}
 
 		if (bool_1 || this.sceneryShadows == null) {
-			this.sceneryShadows = new Preference_Sub2(this);
+			this.sceneryShadows = new SceneryShadowPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub29_8201 == null) {
 			this.aPreference_Sub29_8201 = new Preference_Sub29(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub20_8207 == null) {
-			this.aPreference_Sub20_8207 = new Preference_Sub20(this);
+		if (bool_1 || this.particles == null) {
+			this.particles = new Preference_Sub20(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub27_8208 == null) {
 			this.aPreference_Sub27_8208 = new Preference_Sub27(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub27_8209 == null) {
-			this.aPreference_Sub27_8209 = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 96), this);
+		if (bool_1 || this.removeRoofsOptionOverride == null) {
+			this.removeRoofsOptionOverride = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 96), this);
 		}
 
 		if (bool_1 || this.aPreference_Sub7_8210 == null) {
@@ -256,36 +256,36 @@ public class GamePreferences extends Node {
 		}
 
 		if (bool_1 || this.soundEffectVolume == null) {
-			this.soundEffectVolume = new Preference_Sub13(this);
+			this.soundEffectVolume = new SoundLevelPreference(this);
 		}
 
 		if (bool_1 || this.ambientSoundVolume == null) {
-			this.ambientSoundVolume = new Preference_Sub13(this);
+			this.ambientSoundVolume = new SoundLevelPreference(this);
 		}
 
 		if (bool_1 || this.voiceOverVolume == null) {
-			this.voiceOverVolume = new Preference_Sub13(this);
+			this.voiceOverVolume = new SoundLevelPreference(this);
 		}
 
 		if (bool_1 || this.musicVolume == null) {
-			this.musicVolume = new Preference_Sub13(this);
+			this.musicVolume = new SoundLevelPreference(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub13_8229 == null) {
-			this.aPreference_Sub13_8229 = new Preference_Sub13(this);
+			this.aPreference_Sub13_8229 = new SoundLevelPreference(this);
 		}
 
 		if (bool_1 || this.monoStereo == null) {
-			this.monoStereo = new Preference_Sub10(this);
+			this.monoStereo = new MonoStereoPreference(this);
 		}
 
 	}
 
 	void method13498(RsByteBuffer rsbytebuffer_1, int i_2) {
-		this.brightness = new Preference_Sub21(rsbytebuffer_1.readUnsignedByte(), this);
+		this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		++rsbytebuffer_1.index;
 		this.aPreference_Sub27_8208 = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
-		this.groundDecoration = new Preference_Sub23(rsbytebuffer_1.readUnsignedByte(), this);
+		this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		++rsbytebuffer_1.index;
 		this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.aPreference_Sub26_8224 = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
@@ -297,7 +297,7 @@ public class GamePreferences extends Node {
 			i_5 = rsbytebuffer_1.readUnsignedByte();
 		}
 
-		this.sceneryShadows = new Preference_Sub2(i_4 > i_5 ? i_4 : i_5, this);
+		this.sceneryShadows = new SceneryShadowPreference(i_4 > i_5 ? i_4 : i_5, this);
 		boolean bool_6 = true;
 		boolean bool_7 = true;
 		if (i_2 >= 2) {
@@ -310,24 +310,24 @@ public class GamePreferences extends Node {
 			rsbytebuffer_1.readUnsignedByte();
 		}
 
-		this.aPreference_Sub19_8204 = new Preference_Sub19(bool_6 | bool_7 ? 1 : 0, this);
+		this.lightDetail = new LightDetailPreference(bool_6 | bool_7 ? 1 : 0, this);
 		this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
-		this.aPreference_Sub4_8187 = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
-		this.monoStereo = new Preference_Sub10(rsbytebuffer_1.readUnsignedByte(), this);
-		this.soundEffectVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
+		this.antiAliasingDefault = new Preference_Sub4(rsbytebuffer_1.readUnsignedByte(), this);
+		this.monoStereo = new MonoStereoPreference(rsbytebuffer_1.readUnsignedByte(), this);
+		this.soundEffectVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		if (i_2 >= 20) {
-			this.voiceOverVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
+			this.voiceOverVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		} else {
-			this.voiceOverVolume = new Preference_Sub13(this.soundEffectVolume.method12714(), this);
+			this.voiceOverVolume = new SoundLevelPreference(this.soundEffectVolume.method12714(), this);
 		}
 
-		this.musicVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
-		this.ambientSoundVolume = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
+		this.musicVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
+		this.ambientSoundVolume = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		if (i_2 >= 21) {
-			this.aPreference_Sub13_8229 = new Preference_Sub13(rsbytebuffer_1.readUnsignedByte(), this);
+			this.aPreference_Sub13_8229 = new SoundLevelPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		} else {
-			this.aPreference_Sub13_8229 = new Preference_Sub13(this.musicVolume.method12714(), this);
+			this.aPreference_Sub13_8229 = new SoundLevelPreference(this.musicVolume.method12714(), this);
 		}
 
 		if (i_2 >= 1) {
@@ -340,7 +340,7 @@ public class GamePreferences extends Node {
 		}
 
 		if (i_2 >= 4) {
-			this.aPreference_Sub20_8207 = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
+			this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		rsbytebuffer_1.readInt();
@@ -361,7 +361,7 @@ public class GamePreferences extends Node {
 		}
 
 		if (i_2 >= 10) {
-			this.aPreference_Sub12_8195 = new Preference_Sub12(rsbytebuffer_1.readUnsignedByte(), this);
+			this.bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 11) {
@@ -405,8 +405,8 @@ public class GamePreferences extends Node {
 	public RsByteBuffer encode() {
 		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(40);
 		/*0*/rsbytebuffer_2.writeByte(27);
-		/*1*/rsbytebuffer_2.writeByte(this.aPreference_Sub4_8187.method12641(1497480561));
-		/*2*/rsbytebuffer_2.writeByte(this.aPreference_Sub12_8195.method12706((byte) 95));
+		/*1*/rsbytebuffer_2.writeByte(this.antiAliasingDefault.method12641(1497480561));
+		/*2*/rsbytebuffer_2.writeByte(this.bloom.method12706((byte) 95));
 		/*3*/rsbytebuffer_2.writeByte(this.brightness.method12865());
 		/*4*/rsbytebuffer_2.writeByte(this.aPreference_Sub1_8197.method12615(-462784918));
 		/*5*/rsbytebuffer_2.writeByte(this.aPreference_Sub16_8198.method12750());
@@ -415,10 +415,10 @@ public class GamePreferences extends Node {
 		/*8*/rsbytebuffer_2.writeByte(this.aPreference_Sub17_8200.method12762(-140573));
 		/*9*/rsbytebuffer_2.writeByte(this.groundDecoration.method12897((byte) 75));
 		/*10*/rsbytebuffer_2.writeByte(this.idleAnimations.getValue());
-		/*11*/rsbytebuffer_2.writeByte(this.aPreference_Sub19_8204.method12786());
+		/*11*/rsbytebuffer_2.writeByte(this.lightDetail.method12786());
 		/*12*/rsbytebuffer_2.writeByte(this.sceneryShadows.method12624((byte) -37));
 		/*13*/rsbytebuffer_2.writeByte(this.aPreference_Sub29_8201.method13050());
-		/*14*/rsbytebuffer_2.writeByte(this.aPreference_Sub20_8207.method12794());
+		/*14*/rsbytebuffer_2.writeByte(this.particles.method12794());
 		/*15*/rsbytebuffer_2.writeByte(this.aPreference_Sub27_8208.method12952((byte) 121));
 		/*16*/rsbytebuffer_2.writeByte(this.aPreference_Sub7_8210.method12666(141061966));
 		/*17*/rsbytebuffer_2.writeByte(this.aPreference_Sub14_8211.method12728());
@@ -444,9 +444,9 @@ public class GamePreferences extends Node {
 	}
 
 	void method13502() {
-		this.aPreference_Sub4_8187.method12639((byte) -35);
+		this.antiAliasingDefault.method12639((byte) -35);
 		this.aPreference_Sub4_8223.method12639((byte) -23);
-		this.aPreference_Sub12_8195.method12703();
+		this.bloom.method12703();
 		this.brightness.method12861();
 		this.aPreference_Sub1_8197.method12616();
 		this.aPreference_Sub16_8198.method12749();
@@ -455,12 +455,12 @@ public class GamePreferences extends Node {
 		this.aPreference_Sub17_8200.method12767();
 		this.groundDecoration.method12898();
 		this.idleAnimations.method12741();
-		this.aPreference_Sub19_8204.method12785();
+		this.lightDetail.method12785();
 		this.sceneryShadows.method12627();
 		this.aPreference_Sub29_8201.method13048();
-		this.aPreference_Sub20_8207.method12793();
+		this.particles.method12793();
 		this.aPreference_Sub27_8208.method12950(1301389562);
-		this.aPreference_Sub27_8209.method12950(221369371);
+		this.removeRoofsOptionOverride.method12950(221369371);
 		this.aPreference_Sub7_8210.method12663();
 		this.aPreference_Sub14_8211.method12725();
 		this.aPreference_Sub28_8212.method12959();

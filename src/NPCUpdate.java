@@ -256,17 +256,17 @@ public class NPCUpdate {
 				}
 			}
 			if ((i_4 & 0x400) != 0) {
-				npc.anInt10326 = buffer.read128Byte();
-				npc.anInt10328 = buffer.readByte128();
-				npc.anInt10341 = buffer.readByteC();
-				npc.anInt10343 = buffer.readByte128();
-				npc.anInt10342 = buffer.readShortLE() + client.cycles;
-				npc.anInt10345 = buffer.readShortLE() + client.cycles;
-				npc.anInt10346 = buffer.readUnsignedShortLE128();
-				npc.anInt10326 += npc.regionBaseX[0];
-				npc.anInt10328 += npc.regionBaseY[0];
-				npc.anInt10341 += npc.regionBaseX[0];
-				npc.anInt10343 += npc.regionBaseY[0];
+				npc.forceMovementT1XOff = buffer.read128Byte();
+				npc.forceMovementT1YOff = buffer.readByte128();
+				npc.forceMovementT2XOff = buffer.readByteC();
+				npc.forceMovementT2YOff = buffer.readByte128();
+				npc.forceMovementT1Delay = buffer.readShortLE() + client.cycles;
+				npc.forceMovementT2Delay = buffer.readShortLE() + client.cycles;
+				npc.forceMovementDir = buffer.readUnsignedShortLE128();
+				npc.forceMovementT1XOff += npc.regionBaseX[0];
+				npc.forceMovementT1YOff += npc.regionBaseY[0];
+				npc.forceMovementT2XOff += npc.regionBaseX[0];
+				npc.forceMovementT2YOff += npc.regionBaseY[0];
 				npc.anInt10355 = 1;
 				npc.anInt10367 = 0;
 			}
@@ -460,8 +460,8 @@ public class NPCUpdate {
 				}
 			}
 			if ((i_4 & 0x4) != 0) {
-				npc.anInt10578 = buffer.readUnsignedShortLE128();
-				npc.anInt10577 = buffer.readShortLE();
+				npc.faceX = buffer.readUnsignedShortLE128();
+				npc.faceY = buffer.readShortLE();
 			}
 			if ((i_4 & 0x20000) != 0) {
 				npc.redAdd = buffer.read128Byte();

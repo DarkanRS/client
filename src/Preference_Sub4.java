@@ -4,7 +4,7 @@ public class Preference_Sub4 extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(-1381198903), -2081713291) ? 3 : 1;
 	}
 
@@ -14,12 +14,12 @@ public class Preference_Sub4 extends Preference {
 		}
 
 		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
-			this.anInt5578 = this.method7781(1915744773);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 0;
 	}
 

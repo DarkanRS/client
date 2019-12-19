@@ -16,11 +16,11 @@ public class Preference_Sub20 extends Preference {
 			this.anInt5578 = 0;
 		}
 		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
-			this.anInt5578 = this.method7781(2034586631);
+			this.anInt5578 = this.getDefaultValue();
 		}
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 0 : 2;
 	}
 
@@ -28,7 +28,7 @@ public class Preference_Sub20 extends Preference {
 		return this.anInt5578;
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return this.manager.getProcessorSpecs().getMaxMemory() < 245 ? 3 : 1;
 	}
 
@@ -74,7 +74,7 @@ public class Preference_Sub20 extends Preference {
 		Class16.anInt135 = index_0.getArchiveId("hint_headicons");
 		Class16.anInt142 = index_0.getArchiveId("hint_mapmarkers");
 		Class16.anInt137 = index_0.getArchiveId("mapflag");
-		Preference_Sub12.anInt7899 = index_0.getArchiveId("cross");
+		BloomPreference.anInt7899 = index_0.getArchiveId("cross");
 		Class13.anInt130 = index_0.getArchiveId("mapdots");
 		Class16.anInt143 = index_0.getArchiveId("name_icons");
 		GameTipsLoader.anInt4821 = index_0.getArchiveId("floorshadows");

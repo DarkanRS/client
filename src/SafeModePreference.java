@@ -16,13 +16,13 @@ public class SafeModePreference extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	int method7785(int i_1) {
+	int checkValid(int i_1) {
 		return 1;
 	}
 
 	public void method12928() {
 		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
-			this.anInt5578 = this.method7781(1979417411);
+			this.anInt5578 = this.getDefaultValue();
 		}
 	}
 
@@ -42,7 +42,7 @@ public class SafeModePreference extends Preference {
 		super(i_1, class282_sub54_2);
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 0;
 	}
 }

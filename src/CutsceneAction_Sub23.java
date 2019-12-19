@@ -16,7 +16,7 @@ public class CutsceneAction_Sub23 extends CutsceneAction {
 	public void method1592() {
 		client.anInt7236 = client.cycles;
 		client.anInt7237 = this.anInt9443 + client.cycles;
-		Preference_Sub2.anInt7868 = client.anInt7238;
+		SceneryShadowPreference.anInt7868 = client.anInt7238;
 		Class350_Sub2.anInt7815 = client.anInt7377;
 		Class329_Sub1.anInt7726 = client.anInt7413;
 		Node_Sub17_Sub4.anInt9940 = client.anInt7217;
@@ -29,7 +29,7 @@ public class CutsceneAction_Sub23 extends CutsceneAction {
 	public void method1601() {
 		client.anInt7236 = 1519430577 * client.cycles * 1968179203 * 1475344155;
 		client.anInt7237 = (266167451 * client.cycles * 1968179203 + 349339261 * this.anInt9443 * -1213243163) * -1347062991;
-		Preference_Sub2.anInt7868 = client.anInt7238 * -16843009 * 255 * -1065441845 * -390938125 * -1396457669 * 1823561699 * -16843009 * 255;
+		SceneryShadowPreference.anInt7868 = client.anInt7238 * -16843009 * 255 * -1065441845 * -390938125 * -1396457669 * 1823561699 * -16843009 * 255;
 		Class350_Sub2.anInt7815 = -415330727 * client.anInt7377 * -1161006165 * 364894697 * 1356525315;
 		Class329_Sub1.anInt7726 = -347829129 * client.anInt7413 * -403366797 * 935136583 * 1512368315;
 		Node_Sub17_Sub4.anInt9940 = -1700206581 * client.anInt7217 * -284907767 * -88550325;

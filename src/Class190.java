@@ -198,11 +198,11 @@ public class Class190 {
 			client.GRAND_EXCHANGE_SLOTS[i_1] = new GrandExchangeSlot();
 		}
 
-		IndexLoaders.MAP_REGION_DECODER.method4435().method4048(117803918);
+		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();
 		client.aBool7371 = true;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		Class85.aString817 = Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8209, Class393.preferences.aPreference_Sub27_8208.method12952((byte) 104));
+		Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, Class393.preferences.aPreference_Sub27_8208.method12952((byte) 104));
 		client.anInt7221 = 0;
 		Class350.method6189((byte) 111);
 		Class388.method6692(2043592347);

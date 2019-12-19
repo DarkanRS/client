@@ -40,7 +40,7 @@ public class Class188 {
 			arr_3[i_5].method1529(-b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D), -b_6 + (int) (Math.random() * (double) b_6 * 2.0D));
 			Class16.aNativeSpriteArray145[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);
 		}
-		arr_3 = SpriteDefinitions.method1514(index_1, Preference_Sub12.anInt7899);
+		arr_3 = SpriteDefinitions.method1514(index_1, BloomPreference.anInt7899);
 		Node_Sub36.aNativeSpriteArray7994 = new NativeSprite[arr_3.length];
 		for (i_5 = 0; i_5 < arr_3.length; i_5++) {
 			Node_Sub36.aNativeSpriteArray7994[i_5] = graphicalrenderer_0.method8444(arr_3[i_5], true);

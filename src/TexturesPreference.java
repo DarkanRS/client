@@ -10,12 +10,12 @@ public class TexturesPreference extends Preference {
 		}
 
 		if (this.anInt5578 != 0 && this.anInt5578 != 1) {
-			this.anInt5578 = this.method7781(2131611866);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 
@@ -23,7 +23,7 @@ public class TexturesPreference extends Preference {
 		return this.manager.getGame() == Game.darkan;
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(288309414) != 1 ? 2 : 1) : 3;
 	}
 

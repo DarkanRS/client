@@ -5,7 +5,7 @@ public class GraphicsToolkitPreference extends Preference {
 
 	public void method12773(int i_1) {
 		if (this.anInt5578 < 0 || this.anInt5578 > 5) {
-			this.anInt5578 = this.method7781(1922687325);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
@@ -18,7 +18,7 @@ public class GraphicsToolkitPreference extends Preference {
 		return true;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		this.aBool7914 = true;
 		return 2;
 	}
@@ -28,7 +28,7 @@ public class GraphicsToolkitPreference extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return i_1 == 3 && !Class362.getNativeLibraryLoader().method218() ? 3 : 2;
 	}
 

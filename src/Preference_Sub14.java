@@ -10,7 +10,7 @@ public class Preference_Sub14 extends Preference {
 
 	public void method12725() {
 		if (this.anInt5578 < 0 || this.anInt5578 > 1) {
-			this.anInt5578 = this.method7781(1719006425);
+			this.anInt5578 = this.getDefaultValue();
 		}
 
 	}
@@ -19,7 +19,7 @@ public class Preference_Sub14 extends Preference {
 		return Class60.method1166(this.manager.currentToolkit.getValue(-1914029751), -830025324);
 	}
 
-	public int method7785(int i_1) {
+	public int checkValid(int i_1) {
 		return !Class60.method1166(this.manager.currentToolkit.getValue(1687107728), 131652836) ? 3 : 1;
 	}
 
@@ -27,7 +27,7 @@ public class Preference_Sub14 extends Preference {
 		this.anInt5578 = i_1;
 	}
 
-	int method7781(int i_1) {
+	int getDefaultValue() {
 		return 1;
 	}
 

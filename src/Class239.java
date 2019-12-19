@@ -74,7 +74,7 @@ public class Class239 {
 		this.method4049((byte) 70);
 	}
 
-	public void method4048(int i_1) {
+	public void method4048() {
 		this.aBool2947 = true;
 	}
 
@@ -124,7 +124,7 @@ public class Class239 {
 	void method4065() {
 		if (this.anInt2945 >= 0) {
 			long long_2 = Utils.time();
-			this.anInt2945 = (int) ((long) (this.anInt2945 * 824774497) - (long_2 - this.aLong2936) * 824774497L) * 1863439521;
+			this.anInt2945 = (int) ((long) (this.anInt2945) - (long_2 - this.aLong2936));
 			if (this.anInt2945 > 0) {
 				this.aClass535_2951.method11445(this.aGraphicalRenderer_2944, this.aClass535_2937, this.aClass535_2931, (float) (this.anInt2946 - this.anInt2945) / (float) this.anInt2946);
 			} else {
@@ -182,7 +182,7 @@ public class Class239 {
 		this.aClass535_2951 = new Class535();
 		this.aClass535_2937 = new Class535();
 		this.aClass535_2931 = new Class535();
-		this.method4048(899760555);
+		this.method4048();
 	}
 
 	public static void method4090(int[] ints_0, int[] ints_1, int i_2) {
