@@ -1971,10 +1971,10 @@ public class PacketDecoder {
 					i_12 = buffer.readInt();
 				}
 				for (int i_35 = 0; i_35 < client.FRIEND_COUNT; i_35++) {
-					Friend class6_113 = client.FRIENDS[i_35];
+					Friend friend = client.FRIENDS[i_35];
 					if (!warnMessage) {
-						if (displayName.equals(class6_113.displayName)) {
-							if (world != class6_113.worldId) {
+						if (displayName.equals(friend.displayName)) {
+							if (world != friend.worldId) {
 								boolean bool_73 = true;
 								for (EntityNode_Sub4 class275_sub4_32 = (EntityNode_Sub4) client.aClass457_7350.method7659(); class275_sub4_32 != null; class275_sub4_32 = (EntityNode_Sub4) client.aClass457_7350.method7650((byte) 73)) {
 									if (class275_sub4_32.aString7837.equals(displayName)) {
@@ -1990,20 +1990,20 @@ public class PacketDecoder {
 								if (bool_73) {
 									client.aClass457_7350.offer(new EntityNode_Sub4(displayName, world), 1701737919);
 								}
-								class6_113.worldId = world;
+								friend.worldId = world;
 							}
-							class6_113.username = username;
-							class6_113.worldName = worldName;
-							class6_113.fcRank = fcFrank;
-							class6_113.platform = i_11;
-							class6_113.referrer = bool_69;
-							class6_113.worldFlags = i_12;
+							friend.username = username;
+							friend.worldName = worldName;
+							friend.fcRank = fcFrank;
+							friend.platform = i_11;
+							friend.referrer = bool_69;
+							friend.worldFlags = i_12;
 							displayName = null;
 							break;
 						}
-					} else if (username.equals(class6_113.displayName)) {
-						class6_113.displayName = displayName;
-						class6_113.username = username;
+					} else if (username.equals(friend.displayName)) {
+						friend.displayName = displayName;
+						friend.username = username;
 						displayName = null;
 						break;
 					}
