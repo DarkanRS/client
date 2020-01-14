@@ -20,7 +20,7 @@ public abstract class Node_Sub17 extends Node {
 
     abstract void method12258(ClanSettings var1);
 
-    public static boolean lobbyState(int i_0, int i_1) {
+    public static boolean inLobby(int i_0) {
         return i_0 == 0 || i_0 == 2 || i_0 == 7 || i_0 == 6;
     }
 }

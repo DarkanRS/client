@@ -73,8 +73,8 @@ public class Class365 implements Interface3 {
 				Class60.method1172(280036334);
 			}
 
-			boolean bool_2 = state == 1 || Class97.loggedOutState(state) || Node_Sub17.lobbyState(state, -2143190341);
-			boolean bool_3 = client.gameState == 1 || Class97.loggedOutState(client.gameState) || Node_Sub17.lobbyState(client.gameState, -2129908537);
+			boolean bool_2 = state == 1 || Class97.loggedOutState(state) || Node_Sub17.inLobby(state);
+			boolean bool_3 = client.gameState == 1 || Class97.loggedOutState(client.gameState) || Node_Sub17.inLobby(client.gameState);
 			if (bool_2 != bool_3) {
 				if (bool_2) {
 					Class260.anInt3223 = Class260.anInt3228;

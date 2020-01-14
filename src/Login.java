@@ -434,8 +434,8 @@ public class Login {
                             buffer.index = 0;
                             client.PLAYER_RIGHTS = buffer.readUnsignedByte();
                             client.PLAYER_MOD_LEVEL = buffer.readUnsignedByte();
-                            client.aBool7224 = buffer.readUnsignedByte() == 1;
-                            client.aBool7244 = buffer.readUnsignedByte() == 1;
+                            client.USERDETAIL_QUICKCHAT = buffer.readUnsignedByte() == 1;
+                            client.VERIFIED_EMAIL_ADDRESS = buffer.readUnsignedByte() == 1;
                             client.aBool7322 = buffer.readUnsignedByte() == 1;
                             client.IS_QUICKCHAT_ONLY = buffer.readUnsignedByte() == 1;
                             client.myPlayerIndex = buffer.readUnsignedShort();
@@ -455,10 +455,10 @@ public class Login {
                             buffer.index = 0;
                             client.PLAYER_RIGHTS = buffer.readUnsignedByte();
                             client.PLAYER_MOD_LEVEL = buffer.readUnsignedByte();
-                            client.aBool7224 = buffer.readUnsignedByte() == 1;
+                            client.USERDETAIL_QUICKCHAT = buffer.readUnsignedByte() == 1;
                             Class504.PLAYER_DOB = buffer.read24BitInteger();
                             VertexNormal.MY_PLAYER.male = (byte) buffer.readUnsignedByte();
-                            client.aBool7244 = buffer.readUnsignedByte() == 1;
+                            client.VERIFIED_EMAIL_ADDRESS = buffer.readUnsignedByte() == 1;
                             client.aBool7322 = buffer.readUnsignedByte() == 1;
                             SongReference.MEMBERSHIP_END = buffer.readLong();
                             Class43.aLong420 = SongReference.MEMBERSHIP_END - Utils.time() - buffer.read5ByteInteger();
@@ -496,7 +496,7 @@ public class Login {
                                 Class274.method4884();
                             }
                         }
-                        if ((!client.aBool7224 || client.aBool7322) && !client.IS_MEMBER) {
+                        if ((!client.USERDETAIL_QUICKCHAT || client.aBool7322) && !client.IS_MEMBER) {
                             try {
                                 Class441.method7377(IFSubNode.anApplet8065, "unzap", 1103714597);
                             } catch (Throwable throwable_14) {

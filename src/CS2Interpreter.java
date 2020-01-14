@@ -3804,7 +3804,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5832(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = client.aBool7224 && !client.aBool7244 ? 1 : 0;
+		executor.intStack[++executor.intStackPtr - 1] = client.USERDETAIL_QUICKCHAT && !client.VERIFIED_EMAIL_ADDRESS ? 1 : 0;
 	}
 
 	static final void method5833(CS2Executor executor) {
@@ -9578,7 +9578,7 @@ public class CS2Interpreter {
 		executor.stringStackPtr -= 2;
 		String string_2 = (String) executor.stringStack[executor.stringStackPtr];
 		String string_3 = (String) executor.stringStack[executor.stringStackPtr + 1];
-		if (client.PLAYER_RIGHTS != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+		if (client.PLAYER_RIGHTS != 0 || (!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
 			BufferedConnectionContext class184_4 = Preference_Sub20.method12807(65699692);
 			TCPPacket tcpmessage_5 = Class271.createPacket(ClientPacket.SEND_PRIVATE_MESSAGE, class184_4.isaac);
 			tcpmessage_5.buffer.writeShort(0);
@@ -9922,7 +9922,7 @@ public class CS2Interpreter {
 
 	static final void method1860(CS2Executor executor) {
 		String string_2 = (String) executor.stringStack[--executor.stringStackPtr];
-		if (client.PLAYER_RIGHTS != 0 || (!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+		if (client.PLAYER_RIGHTS != 0 || (!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
 			String string_3 = string_2.toLowerCase();
 			byte b_4 = 0;
 			if (string_3.startsWith(Message.aClass433_5310.translate(Language.ENGLISH))) {

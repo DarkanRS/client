@@ -181,8 +181,8 @@ public final class client extends Engine {
 	public static boolean membersWorld;
 	public static int PLAYER_RIGHTS;
 	public static int PLAYER_MOD_LEVEL;
-	public static boolean aBool7224;
-	public static boolean aBool7244;
+	public static boolean USERDETAIL_QUICKCHAT;
+	public static boolean VERIFIED_EMAIL_ADDRESS;
 	static boolean aBool7322;
 	public static boolean aBool7323;
 	static boolean REDUCE_ATTACK_PRIORITY;
@@ -417,8 +417,8 @@ public final class client extends Engine {
 		membersWorld = false;
 		PLAYER_RIGHTS = 0;
 		PLAYER_MOD_LEVEL = 0;
-		aBool7224 = false;
-		aBool7244 = false;
+		USERDETAIL_QUICKCHAT = false;
+		VERIFIED_EMAIL_ADDRESS = false;
 		aBool7322 = false;
 		aBool7323 = false;
 		REDUCE_ATTACK_PRIORITY = true;
@@ -874,7 +874,7 @@ public final class client extends Engine {
 				this.method12044((short) 3630);
 				Transform_Sub1_Sub5_Sub1.handleAccountCreationStart();
 				Login.method5018();
-			} else if (Node_Sub17.lobbyState(gameState, -1507650612) && !Class464.method7742(gameState, (byte) 25)) {
+			} else if (Node_Sub17.inLobby(gameState) && !Class464.method7742(gameState, (byte) 25)) {
 				this.method12044((short) 3677);
 				Login.method5018();
 			} else if (gameState == 12) {
@@ -1273,7 +1273,7 @@ public final class client extends Engine {
 							arr_10[i_5].method7439(rsbytebuffer_4.readInt());
 						}
 
-						boolean loggedOut = Class504.loadingState(gameState, (byte) 104) || Class97.loggedOutState(gameState) || Node_Sub17.lobbyState(gameState, -869623251);
+						boolean loggedOut = Class504.loadingState(gameState, (byte) 104) || Class97.loggedOutState(gameState) || Node_Sub17.inLobby(gameState);
 						Class119.JS5_STANDARD_REQUESTER.init(Class47_Sub1.updateConnection, !loggedOut);
 						Node_Sub20_Sub10.clientSocket = null;
 						Class47_Sub1.updateConnection = null;

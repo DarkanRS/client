@@ -86,7 +86,7 @@ public class Class151 {
     }
 
     static final void method2592(byte b_0) {
-        if (!Node_Sub17.lobbyState(client.gameState, -632153862) && !Class97.loggedOutState(client.gameState)) {
+        if (!Node_Sub17.inLobby(client.gameState) && !Class97.loggedOutState(client.gameState)) {
             ClanVarSettingsIndexLoader.aClass202_2883 = client.GAME_CONNECTION_CONTEXT.getConnection();
             client.GAME_CONNECTION_CONTEXT.reset();
             Class365.setGameState(10);

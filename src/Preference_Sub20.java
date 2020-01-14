@@ -84,7 +84,7 @@ public class Preference_Sub20 extends Preference {
 	}
 
 	public static BufferedConnectionContext method12807(int i_0) {
-		return Node_Sub17.lobbyState(client.gameState, -1194987033) ? client.LOBBY_CONNECTION_CONTEXT : client.GAME_CONNECTION_CONTEXT;
+		return Node_Sub17.inLobby(client.gameState) ? client.LOBBY_CONNECTION_CONTEXT : client.GAME_CONNECTION_CONTEXT;
 	}
 
 	public static void method12808() {

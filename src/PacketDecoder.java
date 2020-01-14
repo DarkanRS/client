@@ -561,7 +561,7 @@ public class PacketDecoder {
 			int i_7 = buffer.readUnsignedByte();
 			boolean bool_74 = false;
 			if (i_7 <= 1) {
-				if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+				if ((!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
 					if (i_7 <= 1 && Class280.isIgnored(str_92)) {
 						bool_74 = true;
 					}
@@ -674,7 +674,7 @@ public class PacketDecoder {
 				if (player.displayName != null && player.playerAppearance != null) {
 					boolean bool_69 = false;
 					if (icon <= 1) {
-						if (!is0x8000 && (client.aBool7224 && !client.aBool7244 || client.IS_QUICKCHAT_ONLY)) {
+						if (!is0x8000 && (client.USERDETAIL_QUICKCHAT && !client.VERIFIED_EMAIL_ADDRESS || client.IS_QUICKCHAT_ONLY)) {
 							bool_69 = true;
 						} else if (Class280.isIgnored(player.displayName)) {
 							bool_69 = true;
@@ -1135,7 +1135,7 @@ public class PacketDecoder {
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.UPDATE_REBOOT_TIMER) {
-			if (Node_Sub17.lobbyState(client.gameState, -1298993736)) {
+			if (Node_Sub17.inLobby(client.gameState)) {
 				client.REBOOT_TIMER = (int) ((float) buffer.readUnsignedShort() * 2.5F);
 			} else {
 				client.REBOOT_TIMER = buffer.readUnsignedShort() * 30;
@@ -1603,7 +1603,7 @@ public class PacketDecoder {
 			return true;
 		} else if (context.currentPacket == ServerPacket.UPDATE_DOB) {
 			Class504.PLAYER_DOB = buffer.read24BitInteger();
-			client.aBool7224 = buffer.readUnsignedByte() == 1;
+			client.USERDETAIL_QUICKCHAT = buffer.readUnsignedByte() == 1;
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.IF_OPENSUB_ACTIVE_NPC) {
@@ -1797,7 +1797,7 @@ public class PacketDecoder {
 			while (true) {
 				if (i_15 >= 100) {
 					if (i_11 <= 1) {
-						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+						if ((!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
 							if (Class280.isIgnored(str_92)) {
 								bool_14 = true;
 							}
@@ -1902,7 +1902,7 @@ public class PacketDecoder {
 						}
 					}
 					if (i_10 <= 1) {
-						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+						if ((!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
 							if (Class280.isIgnored(string_88)) {
 								bool_112 = true;
 							}
@@ -2191,7 +2191,7 @@ public class PacketDecoder {
 			while (true) {
 				if (i_34 >= 100) {
 					if (i_35 <= 1) {
-						if ((!client.aBool7224 || client.aBool7244) && !client.IS_QUICKCHAT_ONLY) {
+						if ((!client.USERDETAIL_QUICKCHAT || client.VERIFIED_EMAIL_ADDRESS) && !client.IS_QUICKCHAT_ONLY) {
 							if (Class280.isIgnored(str_92)) {
 								bool_16 = true;
 							}
