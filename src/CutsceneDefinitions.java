@@ -13,7 +13,7 @@ public class CutsceneDefinitions {
 				return false;
 			}
 			RsByteBuffer buffer = new RsByteBuffer(data);
-			Class176.readValueLoop(buffer);
+			readValueLoop(buffer);
 			int numAreas = buffer.readUnsignedByte();
 			for (int i = 0; i < numAreas; i++) {
 				Class86.CUTSCENE_AREAS.append(new CutsceneArea(buffer));
@@ -173,6 +173,20 @@ public class CutsceneDefinitions {
 			action = new CutsceneAction_Sub23(buffer);
 		}
 		return (CutsceneAction) action;
+	}
+
+	static void readValueLoop(RsByteBuffer rsbytebuffer_0) {
+		while (true) {
+			int i_2 = rsbytebuffer_0.readUnsignedByte();
+			switch (i_2) {
+			case 0:
+				Class86.anInt825 = rsbytebuffer_0.readUnsignedShort();
+				Class86.anInt824 = rsbytebuffer_0.readUnsignedShort();
+				break;
+			case 255:
+				return;
+			}
+		}
 	}
 
 }
