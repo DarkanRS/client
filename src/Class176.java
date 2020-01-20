@@ -40,7 +40,7 @@ public class Class176 {
 		return new Class176(this.anInt2199, this.aFloat2190, this.aFloat2191, this.anInt2192, this.anInt2189, this.anInt2194);
 	}
 
-	static void method2976(RsByteBuffer rsbytebuffer_0) {
+	static void readValueLoop(RsByteBuffer rsbytebuffer_0) {
 		while (true) {
 			int i_2 = rsbytebuffer_0.readUnsignedByte();
 			switch (i_2) {

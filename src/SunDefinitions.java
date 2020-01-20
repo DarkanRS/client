@@ -71,7 +71,7 @@ public class SunDefinitions {
 		}
 		if (bool_1) {
 			++Class540.anInt7135;
-			Class77.method1365();
+			CutsceneCameraMovement.method1365();
 		}
 	}
 

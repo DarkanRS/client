@@ -37,7 +37,7 @@ public class Class395 {
 	
 	public static final void method6772(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
 		if (i_0 >= Class532_Sub1.anInt7071 && i_1 <= Class532_Sub1.anInt7069 && i_2 >= Class532_Sub1.anInt7070 && i_3 <= Class532_Sub1.anInt7068) {
-			Class92.method1564(i_0, i_1, i_2, i_3, i_4);
+			CutsceneObject.method1564(i_0, i_1, i_2, i_3, i_4);
 		} else {
 			ProcessorSpecs.method7728(i_0, i_1, i_2, i_3, i_4);
 		}

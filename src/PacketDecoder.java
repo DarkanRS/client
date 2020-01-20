@@ -480,7 +480,7 @@ public class PacketDecoder {
 			int key = buffer.readUnsignedByte();
 			int flags = buffer.readUnsignedShort128();
 			Class470.method7825();
-			Class93.method1575(flags, key, true);
+			CutsceneEntityMovement.method1575(flags, key, true);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.GAME_MESSAGE) {
@@ -1332,7 +1332,7 @@ public class PacketDecoder {
 		} else if (context.currentPacket == ServerPacket.aClass375_4362) { //request packet 37?
 			int key = buffer.readUnsignedShortLE128();
 			Class470.method7825();
-			Class92.method1563(key);
+			CutsceneObject.method1563(key);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.CLANSETTINGS_FULL) {
@@ -2099,10 +2099,10 @@ public class PacketDecoder {
 			Class316.method5594();
 			HitsplatDefinitions.method3851();
 			int flags = buffer.readUnsignedShort();
-			NativeLibraryLoader.anIntArrayArray3239 = new int[flags][4];
+			NativeLibraryLoader.CUTSCENE_MAP_XTEAS = new int[flags][4];
 			for (int i_6 = 0; i_6 < flags; i_6++) {
 				for (int i_7 = 0; i_7 < 4; i_7++) {
-					NativeLibraryLoader.anIntArrayArray3239[i_6][i_7] = buffer.readInt();
+					NativeLibraryLoader.CUTSCENE_MAP_XTEAS[i_6][i_7] = buffer.readInt();
 				}
 			}
 			int i_6 = buffer.readUnsignedByte();

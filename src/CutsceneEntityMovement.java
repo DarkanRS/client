@@ -1,30 +1,29 @@
-public class Class93 {
+public class CutsceneEntityMovement {
 
-	int[] anIntArray971;
+	int[] movementTypes;
+	int[] movementCoordinates;
 
-	int[] anIntArray968;
-
-	Class93(RsByteBuffer rsbytebuffer_1) {
+	CutsceneEntityMovement(RsByteBuffer rsbytebuffer_1) {
 		int i_2 = rsbytebuffer_1.readUnsignedSmart();
-		this.anIntArray971 = new int[i_2];
-		this.anIntArray968 = new int[i_2];
+		this.movementTypes = new int[i_2];
+		this.movementCoordinates = new int[i_2];
 		for (int i_3 = 0; i_3 < i_2; i_3++) {
 			int i_4 = rsbytebuffer_1.readUnsignedByte();
-			this.anIntArray971[i_3] = i_4;
+			this.movementTypes[i_3] = i_4;
 			int i_5 = rsbytebuffer_1.readUnsignedShort();
 			int i_6 = rsbytebuffer_1.readUnsignedShort();
-			this.anIntArray968[i_3] = i_6 + (i_5 << 16);
+			this.movementCoordinates[i_3] = i_6 + (i_5 << 16);
 		}
 	}
 
-	void method1566(CutsceneEntity class75_1, int i_2, int i_3) {
-		int i_4 = this.anIntArray968[0];
-		class75_1.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
-		Entity animable_5 = class75_1.method1342((byte) 51);
+	void method1566(CutsceneEntity entity, int i_2, int i_3) {
+		int i_4 = this.movementCoordinates[0];
+		entity.method1338(i_2, i_4 >>> 16, i_4 & 0xffff);
+		Entity animable_5 = entity.method1342((byte) 51);
 		animable_5.anInt10355 = 0;
-		for (int i_6 = this.anIntArray971.length - 1; i_6 >= 0; --i_6) {
-			int i_7 = this.anIntArray971[i_6];
-			int i_8 = this.anIntArray968[i_6];
+		for (int i_6 = this.movementTypes.length - 1; i_6 >= 0; --i_6) {
+			int i_7 = this.movementTypes[i_6];
+			int i_8 = this.movementCoordinates[i_6];
 			animable_5.regionBaseX[animable_5.anInt10355] = i_8 >> 16;
 			animable_5.regionBaseY[animable_5.anInt10355] = i_8 & 0xffff;
 			byte b_9 = MovementType.WALKING.id;

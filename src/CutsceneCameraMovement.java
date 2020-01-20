@@ -1,4 +1,4 @@
-public class Class77 {
+public class CutsceneCameraMovement {
 
 	int[] anIntArray763;
 
@@ -29,7 +29,7 @@ public class Class77 {
 		client.anIntArrayArrayArray7302[i_1] = ints_3;
 	}
 
-	Class77(RsByteBuffer rsbytebuffer_1) {
+	CutsceneCameraMovement(RsByteBuffer rsbytebuffer_1) {
 		int i_2 = rsbytebuffer_1.readUnsignedSmart();
 		this.anIntArray763 = new int[i_2];
 		this.anIntArray760 = new int[i_2];

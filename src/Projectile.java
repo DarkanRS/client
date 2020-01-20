@@ -34,7 +34,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 		if (!this.aBool10398 && this.entitySource != 0) {
 			Object obj_2 = null;
 			if (client.anInt7341 == 4) {
-				obj_2 = Class82.aClass75Array804[this.entitySource - 1].method1342((byte) 61);
+				obj_2 = Class82.CUTSCENE_ENTITIES[this.entitySource - 1].method1342((byte) 61);
 			} else {
 				int i_14;
 				if (this.entitySource < 0) {

@@ -9,7 +9,7 @@ import java.util.Vector;
 
 public class NativeLibraryLoader implements Interface36 {
 
-    public static int[][] anIntArrayArray3239;
+    public static int[][] CUTSCENE_MAP_XTEAS;
 
     public static int anInt3240;
 

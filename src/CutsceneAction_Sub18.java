@@ -20,7 +20,7 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
     }
 
     public void method1592() {
-        Entity animable_2 = Class82.aClass75Array804[this.anInt9395].method1342((byte) 62);
+        Entity animable_2 = Class82.CUTSCENE_ENTITIES[this.anInt9395].method1342((byte) 62);
         if (this.anInt9398 == 0) {
             Class20.animate(animable_2, this.anIntArray9397, 0, false);
         } else {
@@ -34,7 +34,7 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
     }
 
     public void method1601() {
-        Entity animable_1 = Class82.aClass75Array804[1932395903 * this.anInt9395 * 1548991103].method1342((byte) 78);
+        Entity animable_1 = Class82.CUTSCENE_ENTITIES[1932395903 * this.anInt9395 * 1548991103].method1342((byte) 78);
         if (1684442377 * this.anInt9398 * 933564729 == 0) {
             Class20.animate(animable_1, this.anIntArray9397, 0, false);
         } else {

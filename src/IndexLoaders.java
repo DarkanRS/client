@@ -300,7 +300,7 @@ public class IndexLoaders {
 			QUICK_CHAT_MESSAGE_LOADER = new QuickchatMessageLoader(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX, new QuickchatFiller());
 			Class158_Sub1.PLAYER_VAR_PROVIDER = new PlayerVarProvider();
 			Class94.method1589();
-			Class77.method1369(ANIMATION_LOADER);
+			CutsceneCameraMovement.method1369(ANIMATION_LOADER);
 			Class62.method1261(PARTICLE_INDEX);
 			FriendsChatPlayer.method2943(MESH_INDEX, IMAGE_LOADER);
 			Huffman huffman = new Huffman(HUFFMAN_INDEX.getFileByName("huffman", ""));

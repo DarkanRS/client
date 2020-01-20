@@ -5,11 +5,11 @@ public class CutsceneAction_Sub20 extends CutsceneAction {
 	int anInt9414;
 
 	public void method1601() {
-		Class82.aClass75Array804[1703207571 * this.anInt9414 * 1116179355].method1337(1434043760);
+		Class82.CUTSCENE_ENTITIES[1703207571 * this.anInt9414 * 1116179355].method1337(1434043760);
 	}
 
 	public void method1592() {
-		Class82.aClass75Array804[this.anInt9414].method1337(-646760907);
+		Class82.CUTSCENE_ENTITIES[this.anInt9414].method1337(-646760907);
 	}
 
 	CutsceneAction_Sub20(RsByteBuffer rsbytebuffer_1) {

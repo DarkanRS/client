@@ -1,6 +1,6 @@
 final class Class82 implements Interface11 {
 
-    public static CutsceneEntity[] aClass75Array804;
+    public static CutsceneEntity[] CUTSCENE_ENTITIES;
 
     @Override
     public long method79(String string_1, int i_2) {

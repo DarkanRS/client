@@ -112,7 +112,7 @@ public class Class250 {
 		client.anInt7415 = 0;
 		int i_9;
 		if (client.anInt7341 == 4) {
-			i_9 = Class82.aClass75Array804.length;
+			i_9 = Class82.CUTSCENE_ENTITIES.length;
 		} else {
 			i_9 = i_7 + client.NPC_UPDATE_INDEX;
 		}
@@ -129,7 +129,7 @@ public class Class250 {
 		for (i_10 = 0; i_10 < i_9; i_10++) {
 			NPCDefinitions npcdefinitions_91 = null;
 			if (client.anInt7341 == 4) {
-				CutsceneEntity class75_13 = Class82.aClass75Array804[i_10];
+				CutsceneEntity class75_13 = Class82.CUTSCENE_ENTITIES[i_10];
 				if (!class75_13.initialized) {
 					continue;
 				}

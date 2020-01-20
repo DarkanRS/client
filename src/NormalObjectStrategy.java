@@ -104,7 +104,7 @@ public class NormalObjectStrategy extends RouteStrategy {
 		int i_4 = Class407.aCalendar4848.get(5);
 		int i_5 = Class407.aCalendar4848.get(2);
 		int i_6 = Class407.aCalendar4848.get(1);
-		return i_2 == 3 ? Class93.method1578(long_0, i_2) : Integer.toString(i_4 / 10) + i_4 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_5] + "-" + i_6;
+		return i_2 == 3 ? CutsceneEntityMovement.method1578(long_0, i_2) : Integer.toString(i_4 / 10) + i_4 % 10 + "-" + Class407.aStringArrayArray4849[i_2][i_5] + "-" + i_6;
 	}
 
 	public static void method13047(int[] ints_0, int[] ints_1, int i_2, int i_3) {

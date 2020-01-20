@@ -528,7 +528,7 @@ public class FontMetrics {
 	static final void method6989() {
 		client.CURRENT_CUTSCENE = -1;
 		client.anInt7341 = 1;
-		NativeLibraryLoader.anIntArrayArray3239 = null;
+		NativeLibraryLoader.CUTSCENE_MAP_XTEAS = null;
 		Class276.aNode_Sub35_3346 = null;
 		Class79.method1390(1755874378);
 	}

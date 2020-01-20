@@ -59,7 +59,7 @@ public class BrightnessPreference extends Preference {
 			}
 
 			client.anInt7341 = 2;
-			NativeLibraryLoader.anIntArrayArray3239 = null;
+			NativeLibraryLoader.CUTSCENE_MAP_XTEAS = null;
 			Class276.aNode_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(2119033925);

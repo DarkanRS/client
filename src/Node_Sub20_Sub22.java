@@ -151,7 +151,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 						} else if (Node_Sub13.DEFAULTS_LOADER_8.inputSubscriber.valid(class282_sub53_13, client.keyRecords, client.maximumHeldKeys, PlaySoundJingleCutsceneAction.keyRecorder)) {
 							BrightnessPreference.method12869(false, -200546110);
 						} else {
-							if (client.anInt7341 == 3 && LoadingStage.method6684(client.CURRENT_CUTSCENE)) {
+							if (client.anInt7341 == 3 && CutsceneDefinitions.method6684(client.CURRENT_CUTSCENE)) {
 								IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3153, (RsBitsBuffer) null), 218907808);
 								client.anInt7341 = 0;
 							}
@@ -174,8 +174,8 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 									} while (client.anInt7341 == 4 && ++client.anInt7235 < Class86.aCutsceneActionArray822.length);
 								}
 								if (client.anInt7341 == 4) {
-									for (int i_7 = 0; i_7 < Class82.aClass75Array804.length; i_7++) {
-										CutsceneEntity class75_4 = Class82.aClass75Array804[i_7];
+									for (int i_7 = 0; i_7 < Class82.CUTSCENE_ENTITIES.length; i_7++) {
+										CutsceneEntity class75_4 = Class82.CUTSCENE_ENTITIES[i_7];
 										if (class75_4.initialized) {
 											Entity animable_5 = class75_4.method1342((byte) 112);
 											Class363.method6287(animable_5, true, -101184635);

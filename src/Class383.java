@@ -54,7 +54,7 @@ public class Class383 implements Interface41 {
 	public static void method6511() {
 		for (VorbisNode class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7750(76127195); class282_sub37_1 != null; class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 48)) {
 			if (!class282_sub37_1.aBool7996) {
-				Class92.method1563(class282_sub37_1.fileId);
+				CutsceneObject.method1563(class282_sub37_1.fileId);
 			} else {
 				class282_sub37_1.aBool7996 = false;
 			}

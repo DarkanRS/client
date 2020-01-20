@@ -35,7 +35,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 			i_3 = this.anInt9404 * 512 + 256;
 			i_4 = this.anInt9401;
 		} else {
-			Entity animable_9 = Class82.aClass75Array804[this.anInt9402].method1342((byte) 70);
+			Entity animable_9 = Class82.CUTSCENE_ENTITIES[this.anInt9402].method1342((byte) 70);
 			Vector3 vector3_10 = animable_9.method11166().coords;
 			i_2 = (int) vector3_10.x;
 			i_3 = (int) vector3_10.z;
@@ -47,7 +47,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 			i_5 = this.anInt9407 * 512 + 256;
 			i_6 = this.anInt9408 * 512 + 256;
 		} else {
-			Entity animable_11 = Class82.aClass75Array804[this.anInt9400].method1342((byte) 21);
+			Entity animable_11 = Class82.CUTSCENE_ENTITIES[this.anInt9400].method1342((byte) 21);
 			Vector3 vector3_8 = animable_11.method11166().coords;
 			i_5 = (int) vector3_8.x;
 			i_6 = (int) vector3_8.z;
@@ -70,7 +70,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 			i_2 = 256 + 1197836800 * this.anInt9404 * -943784947;
 			i_3 = 1713842129 * this.anInt9401 * 1723109681;
 		} else {
-			Entity animable_8 = Class82.aClass75Array804[-772738915 * this.anInt9402 * -37939787].method1342((byte) 45);
+			Entity animable_8 = Class82.CUTSCENE_ENTITIES[-772738915 * this.anInt9402 * -37939787].method1342((byte) 45);
 			Vector3 vector3_9 = animable_8.method11166().coords;
 			i_1 = (int) vector3_9.x;
 			i_2 = (int) vector3_9.z;
@@ -82,7 +82,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 			i_4 = this.anInt9407 * -1660550435 * -875894272 + 256;
 			i_5 = this.anInt9408 * 11223535 * -2078663168 + 256;
 		} else {
-			Entity animable_10 = Class82.aClass75Array804[this.anInt9400 * 857868507 * 1060287315].method1342((byte) 42);
+			Entity animable_10 = Class82.CUTSCENE_ENTITIES[this.anInt9400 * 857868507 * 1060287315].method1342((byte) 42);
 			Vector3 vector3_7 = animable_10.method11166().coords;
 			i_4 = (int) vector3_7.x;
 			i_5 = (int) vector3_7.z;

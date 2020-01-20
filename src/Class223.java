@@ -55,7 +55,7 @@ public final class Class223 {
 	}
 
 	public static void method3770() {
-		if (Class93.method1576()) {
+		if (CutsceneEntityMovement.method1576()) {
 			TextureDetails.method2877(new Class237());
 		}
 	}

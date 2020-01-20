@@ -40,7 +40,7 @@ public class Class357_Sub1 extends Class357 {
 		IndexLoaders.CURSOR_LOADER.method7327();
 		IndexLoaders.HITSPLAT_LOADER.method3608();
 		IndexLoaders.HITBAR_LOADER.method5109();
-		Class93.method1568();
+		CutsceneEntityMovement.method1568();
 		GrandExchangeSlot.method5913();
 		Class487.aClass378_5752.method6412();
 		Class18.method571();

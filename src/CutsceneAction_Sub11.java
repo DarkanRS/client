@@ -13,8 +13,8 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
 	int anInt9304;
 
 	public void method1601() {
-		Class86.aClass77Array818[136884767 * this.anInt9299 * -1845605921].method1363(0, 463737202);
-		Class86.aClass77Array818[this.anInt9300 * 2006204237 * 1097011589].method1363(1, 571564949);
+		Class86.CUTSCENE_CAMERA_MOVEMENTS[136884767 * this.anInt9299 * -1845605921].method1363(0, 463737202);
+		Class86.CUTSCENE_CAMERA_MOVEMENTS[this.anInt9300 * 2006204237 * 1097011589].method1363(1, 571564949);
 		client.anInt7277 = 0 * -1384937123;
 		client.anInt7279 = this.anInt9301 * 1340850825 * 456369407 * 1010790215;
 		client.anInt7256 = 0 * -1409864719 * -65537 * 65535;
@@ -38,8 +38,8 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
 	}
 
 	public void method1592() {
-		Class86.aClass77Array818[this.anInt9299].method1363(0, 556897359);
-		Class86.aClass77Array818[this.anInt9300].method1363(1, -1985151600);
+		Class86.CUTSCENE_CAMERA_MOVEMENTS[this.anInt9299].method1363(0, 556897359);
+		Class86.CUTSCENE_CAMERA_MOVEMENTS[this.anInt9300].method1363(1, -1985151600);
 		client.anInt7277 = 0;
 		client.anInt7279 = this.anInt9301;
 		client.anInt7256 = 0;

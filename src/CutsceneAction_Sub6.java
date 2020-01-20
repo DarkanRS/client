@@ -18,10 +18,10 @@ public class CutsceneAction_Sub6 extends CutsceneAction {
 	}
 
 	public void method1592() {
-		Class86.aClass92Array820[this.anInt9170].method1559(this.anInt9171, this.anInt9169, this.anInt9168, this.anInt9172, (byte) 60);
+		Class86.CUTSCENE_OBJECTS[this.anInt9170].method1559(this.anInt9171, this.anInt9169, this.anInt9168, this.anInt9172, (byte) 60);
 	}
 
 	public void method1601() {
-		Class86.aClass92Array820[848428857 * this.anInt9170 * 1418149641].method1559(this.anInt9171 * 10301909 * 376340349, -916997341 * this.anInt9169 * 1332038795, -1710403859 * this.anInt9168 * -2105065755, this.anInt9172 * -781329023 * -2066193791, (byte) 30);
+		Class86.CUTSCENE_OBJECTS[848428857 * this.anInt9170 * 1418149641].method1559(this.anInt9171 * 10301909 * 376340349, -916997341 * this.anInt9169 * 1332038795, -1710403859 * this.anInt9168 * -2105065755, this.anInt9172 * -781329023 * -2066193791, (byte) 30);
 	}
 }

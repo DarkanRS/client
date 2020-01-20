@@ -1,8 +1,8 @@
 public class Class86 {
 
-	static Class77[] aClass77Array818;
-	static Class92[] aClass92Array820;
-	static Class93[] aClass93Array821;
+	static CutsceneCameraMovement[] CUTSCENE_CAMERA_MOVEMENTS;
+	static CutsceneObject[] CUTSCENE_OBJECTS;
+	static CutsceneEntityMovement[] aClass93Array821;
 	public static CutsceneAction[] aCutsceneActionArray822;
 	static short aShort828;
 	static short aShort829;

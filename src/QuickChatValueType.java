@@ -49,7 +49,7 @@ public class QuickChatValueType {
 	}
 
 	public static QuickChatValueType get(int i_0) {
-		QuickChatValueType[] arr_2 = Class92.getQuickChatDynamicValueTypes();
+		QuickChatValueType[] arr_2 = CutsceneObject.getQuickChatDynamicValueTypes();
 		for (int i_3 = 0; i_3 < arr_2.length; i_3++) {
 			if (i_0 == arr_2[i_3].id) {
 				return arr_2[i_3];

@@ -1392,7 +1392,7 @@ public class Class329 {
 					if (this.overlayHidden) {
 						this.tileHeights[0][x + i_5][y + i_6] = 0;
 					} else if (plane == 0) {
-						this.tileHeights[0][x + i_5][y + i_6] = -Class92.calculateTileHeights(i_7 + 932731, i_8 + 556238) * 8 << 2;
+						this.tileHeights[0][x + i_5][y + i_6] = -CutsceneObject.calculateTileHeights(i_7 + 932731, i_8 + 556238) * 8 << 2;
 					} else {
 						this.tileHeights[plane][x + i_5][y + i_6] = this.tileHeights[plane - 1][x + i_5][y + i_6] - 960;
 					}

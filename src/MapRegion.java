@@ -1137,23 +1137,16 @@ public class MapRegion {
 				}
 			}
 		}
-		int i_5;
-		int i_6;
-		int i_7;
-		int i_8;
-		int i_9;
-		int i_10;
-		int i_11;
 		for (CutsceneArea class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.head(); class282_sub2_20 != null; class282_sub2_20 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(832197045)) {
 			i_21 = class282_sub2_20.anInt7486;
 			boolean bool_22 = (i_21 & 0x1) == 1;
-			i_5 = class282_sub2_20.regionX >> 3;
-			i_6 = class282_sub2_20.regionY >> 3;
-			i_7 = class282_sub2_20.anInt7480;
-			i_8 = class282_sub2_20.anInt7483;
-			i_9 = class282_sub2_20.plane;
-			i_10 = class282_sub2_20.anInt7481;
-			i_11 = class282_sub2_20.width;
+			int i_5 = class282_sub2_20.regionX >> 3;
+			int i_6 = class282_sub2_20.regionY >> 3;
+			int i_7 = class282_sub2_20.anInt7480;
+			int i_8 = class282_sub2_20.anInt7483;
+			int i_9 = class282_sub2_20.plane;
+			int i_10 = class282_sub2_20.anInt7481;
+			int i_11 = class282_sub2_20.width;
 			int i_12 = class282_sub2_20.length;
 			int i_13 = 0;
 			int i_14 = 0;
@@ -1185,7 +1178,7 @@ public class MapRegion {
 				++i_17;
 			}
 		}
-		i_2 = NativeLibraryLoader.anIntArrayArray3239.length;
+		i_2 = NativeLibraryLoader.CUTSCENE_MAP_XTEAS.length;
 		this.regionIds = new int[i_2];
 		this.mapDataArchiveIds = new int[i_2];
 		this.landscapeDataArchiveIds = new int[i_2];
@@ -1200,21 +1193,21 @@ public class MapRegion {
 		i_2 = 0;
 		for (CutsceneArea class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.head(); class282_sub2_3 != null; class282_sub2_3 = (CutsceneArea) Class86.CUTSCENE_AREAS.next(2076366148)) {
 			i_4 = class282_sub2_3.regionX >>> 3;
-			i_5 = class282_sub2_3.regionY >>> 3;
-			i_6 = i_4 + class282_sub2_3.width;
+			int i_5 = class282_sub2_3.regionY >>> 3;
+			int i_6 = i_4 + class282_sub2_3.width;
 			if ((i_6 & 0x7) == 0) {
 				--i_6;
 			}
 			i_6 >>>= 3;
-			i_7 = i_5 + class282_sub2_3.length;
+			int i_7 = i_5 + class282_sub2_3.length;
 			if ((i_7 & 0x7) == 0) {
 				--i_7;
 			}
 			i_7 >>>= 3;
-			for (i_8 = i_4 >>> 3; i_8 <= i_6; i_8++) {
-				label82: for (i_9 = i_5 >>> 3; i_9 <= i_7; i_9++) {
-					i_10 = i_8 << 8 | i_9;
-					for (i_11 = 0; i_11 < i_2; i_11++) {
+			for (int i_8 = i_4 >>> 3; i_8 <= i_6; i_8++) {
+				label82: for (int i_9 = i_5 >>> 3; i_9 <= i_7; i_9++) {
+					int i_10 = i_8 << 8 | i_9;
+					for (int i_11 = 0; i_11 < i_2; i_11++) {
 						if (i_10 == this.regionIds[i_11]) {
 							continue label82;
 						}
@@ -1228,8 +1221,8 @@ public class MapRegion {
 				}
 			}
 		}
-		this.xteas = NativeLibraryLoader.anIntArrayArray3239;
-		NativeLibraryLoader.anIntArrayArray3239 = null;
+		this.xteas = NativeLibraryLoader.CUTSCENE_MAP_XTEAS;
+		NativeLibraryLoader.CUTSCENE_MAP_XTEAS = null;
 		this.method4458(this.sizeX >> 4, this.sizeY >> 4, 18, false);
 	}
 

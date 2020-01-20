@@ -1,8 +1,8 @@
-public class Class92 {
+public class CutsceneObject {
 
-	int anInt964;
+	int objectId;
 
-	SceneObjectType aClass458_963;
+	SceneObjectType type;
 
 	int anInt965;
 
@@ -13,11 +13,11 @@ public class Class92 {
 	int anInt967;
 
 	boolean method1557() {
-		if (this.anInt964 < 0) {
+		if (this.objectId < 0) {
 			return true;
 		} else {
-			ObjectDefinitions objectdefinitions_2 = IndexLoaders.OBJECT_LOADER.getObjectDefinitions(this.anInt964);
-			boolean bool_3 = objectdefinitions_2.method7987(this.aClass458_963.type, 792891536);
+			ObjectDefinitions objectdefinitions_2 = IndexLoaders.OBJECT_LOADER.getObjectDefinitions(this.objectId);
+			boolean bool_3 = objectdefinitions_2.method7987(this.type.type, 792891536);
 			int[] ints_4 = objectdefinitions_2.method8008();
 			if (ints_4 != null) {
 				int[] ints_5 = ints_4;
@@ -30,17 +30,17 @@ public class Class92 {
 		}
 	}
 
-	Class92(RsByteBuffer rsbytebuffer_1) {
-		this.anInt964 = rsbytebuffer_1.readBigSmart();
-		this.aClass458_963 = (SceneObjectType) Class386.identify(Class2.method262(), rsbytebuffer_1.readUnsignedByte());
+	CutsceneObject(RsByteBuffer rsbytebuffer_1) {
+		this.objectId = rsbytebuffer_1.readBigSmart();
+		this.type = (SceneObjectType) Class386.identify(Class2.method262(), rsbytebuffer_1.readUnsignedByte());
 	}
 
 	void method1558(byte b_1) {
-		Class299.method5313(this.anInt965, this.anInt962, this.anInt966, this.aClass458_963.anInt5494, -1, this.aClass458_963.type, this.anInt967);
+		Class299.method5313(this.anInt965, this.anInt962, this.anInt966, this.type.anInt5494, -1, this.type.type, this.anInt967);
 	}
 
 	void method1559(int i_1, int i_2, int i_3, int i_4, byte b_5) {
-		Class299.method5313(i_1, i_2, i_3, this.aClass458_963.anInt5494, this.anInt964, this.aClass458_963.type, i_4);
+		Class299.method5313(i_1, i_2, i_3, this.type.anInt5494, this.objectId, this.type.type, i_4);
 		this.anInt965 = i_1;
 		this.anInt962 = i_2;
 		this.anInt966 = i_3;

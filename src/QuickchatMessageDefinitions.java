@@ -120,17 +120,17 @@ public class QuickchatMessageDefinitions extends CacheableNode {
 		boolean bool_5 = true;
 		SceneObject sceneobject_6 = (SceneObject) sceneobjectmanager_4.getWall(i_0, i_1, i_2, (byte) -61);
 		if (sceneobject_6 != null) {
-			bool_5 &= Class93.method1577(sceneobject_6, -1691371970);
+			bool_5 &= CutsceneEntityMovement.method1577(sceneobject_6, -1691371970);
 		}
 
 		sceneobject_6 = (SceneObject) sceneobjectmanager_4.getInteractableObject(i_0, i_1, i_2, client.anInterface25_7446);
 		if (sceneobject_6 != null) {
-			bool_5 &= Class93.method1577(sceneobject_6, -1754652045);
+			bool_5 &= CutsceneEntityMovement.method1577(sceneobject_6, -1754652045);
 		}
 
 		sceneobject_6 = (SceneObject) sceneobjectmanager_4.getGroundDecoration(i_0, i_1, i_2);
 		if (sceneobject_6 != null) {
-			bool_5 &= Class93.method1577(sceneobject_6, -1776795369);
+			bool_5 &= CutsceneEntityMovement.method1577(sceneobject_6, -1776795369);
 		}
 
 		return bool_5;

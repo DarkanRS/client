@@ -16,14 +16,14 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
     }
 
     public void method1592() {
-        CutsceneEntity class75_2 = Class82.aClass75Array804[this.anInt9442];
-        Class93 class93_3 = Class86.aClass93Array821[this.anInt9439];
+        CutsceneEntity class75_2 = Class82.CUTSCENE_ENTITIES[this.anInt9442];
+        CutsceneEntityMovement class93_3 = Class86.aClass93Array821[this.anInt9439];
         class93_3.method1566(class75_2, this.anInt9441, 682382660);
     }
 
     public void method1601() {
-        CutsceneEntity class75_1 = Class82.aClass75Array804[-1738900237 * this.anInt9442 * 1623391291];
-        Class93 class93_2 = Class86.aClass93Array821[588964331 * this.anInt9439 * 1017986755];
+        CutsceneEntity class75_1 = Class82.CUTSCENE_ENTITIES[-1738900237 * this.anInt9442 * 1623391291];
+        CutsceneEntityMovement class93_2 = Class86.aClass93Array821[588964331 * this.anInt9439 * 1017986755];
         class93_2.method1566(class75_1, this.anInt9441 * 579947685 * -851068115, -1235876637);
     }
 

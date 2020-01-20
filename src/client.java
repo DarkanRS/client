@@ -912,7 +912,7 @@ public final class client extends Engine {
 		int[] ints_1 = Class197.PLAYER_INDICES;
 		int i_2;
 		if (anInt7341 == 4) {
-			i_2 = Class82.aClass75Array804.length;
+			i_2 = Class82.CUTSCENE_ENTITIES.length;
 		} else {
 			i_2 = aBool7241 ? i_0 : i_0 + NPC_UPDATE_INDEX;
 		}
@@ -920,7 +920,7 @@ public final class client extends Engine {
 		for (int i_3 = 0; i_3 < i_2; i_3++) {
 			Object obj_4;
 			if (anInt7341 == 4) {
-				CutsceneEntity class75_5 = Class82.aClass75Array804[i_3];
+				CutsceneEntity class75_5 = Class82.CUTSCENE_ENTITIES[i_3];
 				if (!class75_5.initialized) {
 					continue;
 				}
@@ -1434,7 +1434,7 @@ public final class client extends Engine {
 		int[][] ints_4 = IndexLoaders.MAP_REGION_DECODER.method4438(2109447530);
 		int i_5;
 		if (anInt7341 == 4) {
-			i_5 = Class82.aClass75Array804.length;
+			i_5 = Class82.CUTSCENE_ENTITIES.length;
 		} else {
 			i_5 = i_1 + NPC_UPDATE_INDEX;
 		}
@@ -1442,7 +1442,7 @@ public final class client extends Engine {
 		for (int i_6 = 0; i_6 < i_5; i_6++) {
 			Object obj_7;
 			if (anInt7341 == 4) {
-				CutsceneEntity class75_8 = Class82.aClass75Array804[i_6];
+				CutsceneEntity class75_8 = Class82.CUTSCENE_ENTITIES[i_6];
 				if (!class75_8.initialized) {
 					continue;
 				}
@@ -1510,7 +1510,7 @@ public final class client extends Engine {
 		int[][] ints_4 = IndexLoaders.MAP_REGION_DECODER.method4438(129417438);
 		int i_5;
 		if (anInt7341 == 4) {
-			i_5 = Class82.aClass75Array804.length;
+			i_5 = Class82.CUTSCENE_ENTITIES.length;
 		} else {
 			i_5 = aBool7241 ? i_1 : i_1 + NPC_UPDATE_INDEX;
 		}
@@ -1518,7 +1518,7 @@ public final class client extends Engine {
 		for (int i_6 = 0; i_6 < i_5; i_6++) {
 			Object obj_7;
 			if (anInt7341 == 4) {
-				CutsceneEntity class75_8 = Class82.aClass75Array804[i_6];
+				CutsceneEntity class75_8 = Class82.CUTSCENE_ENTITIES[i_6];
 				if (!class75_8.initialized) {
 					continue;
 				}

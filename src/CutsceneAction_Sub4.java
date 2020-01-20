@@ -17,11 +17,11 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
 	}
 
 	public void method1592() {
-		Class82.aClass75Array804[this.anInt8520].move(this.anInt8519, this.anInt8521, this.anInt8522, this.anInt8523);
+		Class82.CUTSCENE_ENTITIES[this.anInt8520].move(this.anInt8519, this.anInt8521, this.anInt8522, this.anInt8523);
 	}
 
 	public void method1601() {
-		Class82.aClass75Array804[this.anInt8520 * 2062001331 * 2144840315].move(1910720287 * this.anInt8519 * 517305567, this.anInt8521 * -1845072575 * -194698559, 1760322517 * this.anInt8522 * 1440988541, 1015183835 * this.anInt8523 * 1479203411);
+		Class82.CUTSCENE_ENTITIES[this.anInt8520 * 2062001331 * 2144840315].move(1910720287 * this.anInt8519 * 517305567, this.anInt8521 * -1845072575 * -194698559, 1760322517 * this.anInt8522 * 1440988541, 1015183835 * this.anInt8523 * 1479203411);
 	}
 
 	static boolean method13788(int i_0, int i_1) {

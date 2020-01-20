@@ -2164,7 +2164,7 @@ public class CS2Interpreter {
 		case instr6410:
 			method587(exec);
 			break;
-		case instr5956:
+		case GETCLIPBOARD:
 			method6440(exec);
 			break;
 		case instr6780:
@@ -2179,7 +2179,7 @@ public class CS2Interpreter {
 		case CHECK_JAVA_VERSION:
 			checkJavaVersion(exec);
 			break;
-		case instr6044:
+		case IS_GAMESCREEN_STATE:
 			method6317(exec);
 			break;
 		case instr6923:
@@ -3743,7 +3743,7 @@ public class CS2Interpreter {
 			} else if (i_3 < 0) {
 				i_3 = 0;
 			}
-			Class93.method1575(i_2, i_3, false);
+			CutsceneEntityMovement.method1575(i_2, i_3, false);
 		}
 	}
 
@@ -4576,7 +4576,7 @@ public class CS2Interpreter {
 	static final void method12561(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		if (i_2 != -1) {
-			Class92.method1563(i_2);
+			CutsceneObject.method1563(i_2);
 		}
 	}
 
@@ -8004,7 +8004,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method11244(CS2Executor executor) {
-		WorldDescriptor descriptor = Class77.getCurrentWorldDescriptor();
+		WorldDescriptor descriptor = CutsceneCameraMovement.getCurrentWorldDescriptor();
 		if (descriptor != null) {
 			executor.intStack[++executor.intStackPtr - 1] = descriptor.worldNumber;
 			executor.intStack[++executor.intStackPtr - 1] = descriptor.flags;
@@ -11191,7 +11191,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.npcMeshModifier = null;
 		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, -1575336609);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, -1575336609);
 		}
 	}
 
@@ -11434,7 +11434,7 @@ public class CS2Interpreter {
 			icomponentdefinitions_0.wearCol = false;
 		}
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, -940537484);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, -940537484);
 		}
 	}
 
@@ -11479,7 +11479,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		Class109.redrawComponent(icomponentdefinitions_0);
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, -624586705);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, -624586705);
 		}
 	}
 
@@ -11541,7 +11541,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.modelId = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, -1355203883);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, -1355203883);
 		}
 	}
 
@@ -11574,7 +11574,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.modelId = client.myPlayerIndex;
 		icomponentdefinitions_0.anInt1339 = 0;
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, -2001727659);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, -2001727659);
 		}
 	}
 
@@ -11617,7 +11617,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.modelType = ModelType.PLAYER_MODEL;
 		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, 1743541888);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, 1743541888);
 		}
 	}
 
@@ -11851,7 +11851,7 @@ public class CS2Interpreter {
 		icomponentdefinitions_0.npcMeshModifier = null;
 		icomponentdefinitions_0.modelId = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
 		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
-			Class92.method1565(icomponentdefinitions_0.idHash, -515297121);
+			CutsceneObject.method1565(icomponentdefinitions_0.idHash, -515297121);
 		}
 	}
 

@@ -43,8 +43,8 @@ public class Class357 implements Interface3 {
 			}
 		}
 		if (client.anInt7341 == 4) {
-			for (i_2 = 0; i_2 < Class82.aClass75Array804.length; i_2++) {
-				CutsceneEntity class75_8 = Class82.aClass75Array804[i_2];
+			for (i_2 = 0; i_2 < Class82.CUTSCENE_ENTITIES.length; i_2++) {
+				CutsceneEntity class75_8 = Class82.CUTSCENE_ENTITIES[i_2];
 				if (class75_8.initialized) {
 					class75_8.method1342((byte) 50).method15812(298889820);
 				}

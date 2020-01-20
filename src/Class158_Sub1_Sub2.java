@@ -364,7 +364,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	public static void method15536() {
 		for (VorbisNode class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7750(1144665389); class282_sub37_1 != null; class282_sub37_1 = (VorbisNode) Class492.INDEX36_FILE_CACHE.method7751((byte) 17)) {
 			if (class282_sub37_1.reference.method4921()) {
-				Class92.method1563(class282_sub37_1.fileId);
+				CutsceneObject.method1563(class282_sub37_1.fileId);
 			} else {
 				class282_sub37_1.reference.method13447(-947293525);
 
@@ -372,7 +372,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 					class282_sub37_1.reference.method4932();
 				} catch (Exception exception_4) {
 					Class151.method2594("" + class282_sub37_1.fileId, exception_4, (byte) -82);
-					Class92.method1563(class282_sub37_1.fileId);
+					CutsceneObject.method1563(class282_sub37_1.fileId);
 				}
 
 				if (!class282_sub37_1.aBool8000 && !class282_sub37_1.aBool7995) {
