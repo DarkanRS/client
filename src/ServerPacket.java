@@ -54,7 +54,7 @@ public enum ServerPacket {
 	CLANCHANNEL_FULL(49, -2),
 	SET_CLAN_STRING(50, -1),
 	DYNAMIC_MAP_REGION(51, -2),
-	aClass375_4499(52, 1), //boolean also set on login?
+	DEPRECATED_52_CLIENTPACKET_97(52, 1), //boolean also set on login?
 	IF_SETPLAYERMODEL_OTHER(53, 10),
 	CLIENT_SETVARCSTR_SMALL(54, -1),
 	IF_SETSCROLLPOS(55, 6),

@@ -481,8 +481,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								Renderers.SOFTWARE_RENDERER.method8525(Class349.anInt4083, client.anInt3243 * -969250379);
 							}
 							method16094(arr_0, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
-							if (inter.aClass118Array1439 != null) {
-								method16094(inter.aClass118Array1439, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
+							if (inter.itemSlots != null) {
+								method16094(inter.itemSlots, inter.idHash, i_17, i_18, i_19, i_20, drawX - inter.scrollX, drawY - inter.scrollY, i_13, bool_9);
 							}
 							IFSubNode class282_sub44_33 = (IFSubNode) client.OPEN_INTERFACES.get((long) inter.idHash);
 							if (class282_sub44_33 != null) {
@@ -535,8 +535,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									} else {
 										i_22 = inter.color;
 										String string_35 = inter.text;
-										if (inter.anInt1426 != -1) {
-											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.anInt1426);
+										if (inter.slotId2 != -1) {
+											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.slotId2);
 											string_35 = itemdefinitions_36.name;
 											if (string_35 == null) {
 												string_35 = "null";
@@ -575,9 +575,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											inter.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1984245878).method4214(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter.width, inter.height, inter.anInt1430 << 3, inter.anInt1431 << 3);
 										} else {
 											NativeSprite nativesprite_41;
-											if (inter.anInt1426 != -1) {
+											if (inter.slotId2 != -1) {
 												PlayerAppearance playerappearance_34 = inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null;
-												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.anInt1426, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.renderStack, playerappearance_34);
+												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.slotId2, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.renderStack, playerappearance_34);
 											} else if (inter.anInt1435 != -1) {
 												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, inter.anInt1435);
 											} else {
@@ -636,8 +636,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											i_22 |= 0x80000;
 										}
 										i_23 = 0;
-										if (inter.anInt1426 != -1) {
-											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.anInt1426);
+										if (inter.slotId2 != -1) {
+											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.slotId2);
 											if (itemdefinitions_36 != null) {
 												itemdefinitions_36 = itemdefinitions_36.method7090(inter.anInt1427);
 												meshRasterizer = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null, inter.anim, 0, 0, 0, 0);

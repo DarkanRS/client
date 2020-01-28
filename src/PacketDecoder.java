@@ -135,7 +135,7 @@ public class PacketDecoder {
 				if (nonGuest) {
 					Class113.CLAN_CHANNEL = null;
 				} else {
-					AsyncConnection.GUEST_CLAN_CHANNEL = null;
+					AsyncConnection.LISTENED_CLAN_CHANNEL = null;
 				}
 				context.currentPacket = null;
 				return true;
@@ -143,7 +143,7 @@ public class PacketDecoder {
 				if (nonGuest) {
 					Class113.CLAN_CHANNEL = new ClanChannel(buffer);
 				} else {
-					AsyncConnection.GUEST_CLAN_CHANNEL = new ClanChannel(buffer);
+					AsyncConnection.LISTENED_CLAN_CHANNEL = new ClanChannel(buffer);
 				}
 				context.currentPacket = null;
 				return true;
@@ -642,7 +642,7 @@ public class PacketDecoder {
 			}
 			context.currentPacket = null;
 			return false;
-		} else if (context.currentPacket == ServerPacket.aClass375_4499) {
+		} else if (context.currentPacket == ServerPacket.DEPRECATED_52_CLIENTPACKET_97) {
 			client.aByte7458 = buffer.readByte();
 			if (client.aByte7458 == 0 || client.aByte7458 == 1) {
 				client.aBool7323 = true;
@@ -919,7 +919,7 @@ public class PacketDecoder {
 			int i_11 = buffer.readUnsignedShort();
 			long long_53 = long_51 + (long_49 << 32);
 			boolean bool_14 = false;
-			ClanChannel class282_sub4_102 = bool_91 ? Class113.CLAN_CHANNEL : AsyncConnection.GUEST_CLAN_CHANNEL;
+			ClanChannel class282_sub4_102 = bool_91 ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
 			if (class282_sub4_102 == null) {
 				bool_14 = true;
 			} else {
@@ -1499,7 +1499,7 @@ public class PacketDecoder {
 			if (bool_91) {
 				clanChannel = Class113.CLAN_CHANNEL;
 			} else {
-				clanChannel = AsyncConnection.GUEST_CLAN_CHANNEL;
+				clanChannel = AsyncConnection.LISTENED_CLAN_CHANNEL;
 			}
 			class349_105.method6179(clanChannel);
 			context.currentPacket = null;
@@ -1890,7 +1890,7 @@ public class PacketDecoder {
 			int i_10 = buffer.readUnsignedByte();
 			long long_55 = long_51 + (long_49 << 32);
 			boolean bool_112 = false;
-			ClanChannel class282_sub4_37 = bool_91 ? Class113.CLAN_CHANNEL : AsyncConnection.GUEST_CLAN_CHANNEL;
+			ClanChannel class282_sub4_37 = bool_91 ? Class113.CLAN_CHANNEL : AsyncConnection.LISTENED_CLAN_CHANNEL;
 			if (class282_sub4_37 == null) {
 				bool_112 = true;
 			} else {

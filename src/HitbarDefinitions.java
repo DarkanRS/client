@@ -264,7 +264,7 @@ public class HitbarDefinitions {
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_2, i_3);
 				IndexLoaders.MAP_REGION_DECODER.method4435().method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
 				byte b_15 = Class393.preferences.removeRoofsOptionOverride.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.aPreference_Sub26_8224.method12943(619789577) == 0);
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager().method3447(client.cycles, IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX, Class109_Sub1.CAM_MOVE_ABSOLUTEZ, Class246.CAM_MOVE_ABSOLUTEY, IndexLoaders.MAP_REGION_DECODER.method4532(), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, VertexNormal.MY_PLAYER.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.preferences.flickeringEffects.method12943(619789577) == 0);
 				++client.anInt7396;
 				Node_Sub20_Sub24.method15391(-1221353280);
 				if (client.gameState == 13) {

@@ -1,7 +1,7 @@
 public class Class308 {
 
 	public static client aclient3620;
-	public static short[] aShortArray3621;
+	public static short[] CS2_QUERY_RESULTS;
 	static Node_Sub16 aNode_Sub16_3618 = new Node_Sub16(0, 0);
 	Node_Sub16[] aNode_Sub16Array3615;
 	int[][][] anIntArrayArrayArray3614;

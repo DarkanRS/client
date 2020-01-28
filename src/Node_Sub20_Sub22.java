@@ -343,7 +343,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 															break;
 														}
 														icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
-													} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
+													} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.anInt1288]);
 													CS2Executor.executeHookInner200k(hookrequest_14, 2146300541);
 												}
 											}
@@ -352,7 +352,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 												break;
 											}
 											icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
-										} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
+										} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.anInt1288]);
 										CS2Executor.executeHookInner200k(hookrequest_14, 690549551);
 									}
 								}
@@ -361,7 +361,7 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 									break;
 								}
 								icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
-							} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.aClass118Array1438 == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.aClass118Array1438.length || icomponentdefinitions_10 != icomponentdefinitions_11.aClass118Array1438[icomponentdefinitions_10.anInt1288]);
+							} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.anInt1288]);
 							CS2Executor.executeHookInner200k(hookrequest_14, 859874447);
 						}
 					}

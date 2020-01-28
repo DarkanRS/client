@@ -1,6 +1,6 @@
 public class Class283 {
 
-    public static int anInt3384;
+    public static int CS2_QUERY_RESULT_IDX;
 
     public int anInt3382;
 

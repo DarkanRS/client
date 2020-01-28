@@ -30,7 +30,7 @@ public class ShaderDecoder {
         }
     }
 
-    public static void method1644(String[] arr_0, short[] shorts_1, short s_2) {
-        Class88.method1495(arr_0, shorts_1, 0, arr_0.length - 1, -519753439);
+    public static void sortAlphabetically(String[] names, short[] ids) {
+        Class88.method1495(names, ids, 0, names.length - 1);
     }
 }

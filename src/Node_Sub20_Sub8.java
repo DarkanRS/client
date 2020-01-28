@@ -74,8 +74,8 @@ public class Node_Sub20_Sub8 extends Node_Sub20 {
 		super(0, true);
 	}
 
-	public static void method15242(String string_0, boolean bool_1, int i_2, int i_3, int i_4) {
-		CombinedInputSubscriber.method3673(string_0, bool_1, i_2, i_3, (String) null, false);
+	public static void queryItemParamInt(String name, boolean tradeableOnly, int paramId, int paramIntQuery) {
+		CombinedInputSubscriber.queryItem(name, tradeableOnly, paramId, paramIntQuery, (String) null, false);
 	}
 
 }

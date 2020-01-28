@@ -53,7 +53,7 @@ public class Player extends Entity {
 			matrix44var_2.method5219(0.0F, (float) (-20 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -110) == 1) {
+			if (Class393.preferences.characterShadows.method12966((byte) -110) == 1) {
 				BASDefinitions renderanimdefs_8 = this.getRenderAnimDefs();
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-563768008) ? this.currentAnimation : null;
@@ -429,7 +429,7 @@ public class Player extends Entity {
 			matrix44var_2.method5219(0.0F, (float) (-20 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -42) == 1) {
+			if (Class393.preferences.characterShadows.method12966((byte) -42) == 1) {
 				BASDefinitions renderanimdefs_8 = this.getRenderAnimDefs();
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-305064415) ? this.currentAnimation : null;
@@ -544,7 +544,7 @@ public class Player extends Entity {
 			matrix44var_2.method5219(0.0F, (float) (-20 - -2023195771 * this.anInt10325 * -374848179), 0.0F);
 			Class285 class285_17 = null;
 			this.aBool10312 = false;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -32) == 1) {
+			if (Class393.preferences.characterShadows.method12966((byte) -32) == 1) {
 				BASDefinitions renderanimdefs_8 = this.getRenderAnimDefs();
 				if (renderanimdefs_8.aBool2787 && (-977770149 * this.playerAppearance.anInt2928 * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928 * 232890067 * -977770149).aBool4912)) {
 					Animation animation_9 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(871780846) ? this.currentAnimation : null;
@@ -887,7 +887,7 @@ public class Player extends Entity {
 		this.username = buffer.readString();
 		this.displayName = this.username;
 		if (this == VertexNormal.MY_PLAYER) {
-			RuntimeException_Sub3.aString10458 = this.username;
+			RuntimeException_Sub3.MY_PLAYER_USERNAME = this.username;
 		}
 
 		this.combatLevel = buffer.readUnsignedByte();
@@ -1022,7 +1022,7 @@ public class Player extends Entity {
 			matrix44var_3.method5219(0.0F, (float) (-20 - this.anInt10325), 0.0F);
 			Class285 class285_18 = null;
 			this.aBool10312 = false;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -35) == 1) {
+			if (Class393.preferences.characterShadows.method12966((byte) -35) == 1) {
 				BASDefinitions renderanimdefs_9 = this.getRenderAnimDefs();
 				if (renderanimdefs_9.aBool2787 && (this.playerAppearance.anInt2928 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(this.playerAppearance.anInt2928).aBool4912)) {
 					Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1045482299) ? this.currentAnimation : null;

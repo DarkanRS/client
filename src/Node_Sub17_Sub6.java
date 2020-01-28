@@ -20,7 +20,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 		class61_1.talkRank = this.aByte10015;
 		class61_1.kickRank = this.aByte10014;
 		class61_1.lootshareRank = this.aByte10017;
-		class61_1.aByte628 = this.aByte10018;
+		class61_1.coinShare = this.aByte10018;
 	}
 
 	void method12251(ClanSettings class61_1) {
@@ -28,7 +28,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 		class61_1.talkRank = this.aByte10015;
 		class61_1.kickRank = this.aByte10014;
 		class61_1.lootshareRank = this.aByte10017;
-		class61_1.aByte628 = this.aByte10018;
+		class61_1.coinShare = this.aByte10018;
 	}
 
 	void method12249(RsByteBuffer rsbytebuffer_1) {
@@ -60,7 +60,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 		class61_1.talkRank = this.aByte10015;
 		class61_1.kickRank = this.aByte10014;
 		class61_1.lootshareRank = this.aByte10017;
-		class61_1.aByte628 = this.aByte10018;
+		class61_1.coinShare = this.aByte10018;
 	}
 
 	void method12258(ClanSettings class61_1) {
@@ -68,7 +68,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 		class61_1.talkRank = this.aByte10015;
 		class61_1.kickRank = this.aByte10014;
 		class61_1.lootshareRank = this.aByte10017;
-		class61_1.aByte628 = this.aByte10018;
+		class61_1.coinShare = this.aByte10018;
 	}
 
 	void method12254(ClanSettings class61_1) {
@@ -76,7 +76,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 		class61_1.talkRank = this.aByte10015;
 		class61_1.kickRank = this.aByte10014;
 		class61_1.lootshareRank = this.aByte10017;
-		class61_1.aByte628 = this.aByte10018;
+		class61_1.coinShare = this.aByte10018;
 	}
 
 	Node_Sub17_Sub6(Class348 class348_1) {
@@ -88,7 +88,7 @@ public class Node_Sub17_Sub6 extends Node_Sub17 {
 		class61_1.talkRank = this.aByte10015;
 		class61_1.kickRank = this.aByte10014;
 		class61_1.lootshareRank = this.aByte10017;
-		class61_1.aByte628 = this.aByte10018;
+		class61_1.coinShare = this.aByte10018;
 	}
 
 	static final byte[] method15438(byte[] data, byte b_1) {

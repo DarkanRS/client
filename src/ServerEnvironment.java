@@ -58,7 +58,7 @@ public enum ServerEnvironment implements Identifiable {
             b_1 = 1;
         }
         if (Class393.preferences.currentToolkit.getValue(-1431790545) != 0) {
-            Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
+            Class393.preferences.setValue(Class393.preferences.toolKit, 0);
             ParticleProducer.method11500(0, false);
         } else {
             Class393.preferences.method13505(Class393.preferences.currentToolkit, true, -1824777589);

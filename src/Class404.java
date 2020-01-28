@@ -8,7 +8,7 @@ public class Class404 {
 	}
 
 	public static final void setFCRank(String string_0, int i_1) {
-		BufferedConnectionContext class184_3 = Preference_Sub20.method12807(-19463532);
+		BufferedConnectionContext class184_3 = Preference_Sub20.getConnectionContext();
 		TCPPacket tcpmessage_4 = Class271.createPacket(ClientPacket.FC_SET_RANK, class184_3.isaac);
 		tcpmessage_4.buffer.writeByte(1 + ChatLine.getLength(string_0));
 		tcpmessage_4.buffer.write128Byte(i_1);
@@ -28,8 +28,8 @@ public class Class404 {
 		if (Class113.CLAN_CHANNEL != null && i_0 >= 0 && i_0 < Class113.CLAN_CHANNEL.numPlayers) {
 			ClanChannelPlayer class57_2 = Class113.CLAN_CHANNEL.players[i_0];
 			if (class57_2.rank == -1) {
-				BufferedConnectionContext class184_3 = Preference_Sub20.method12807(2122526956);
-				TCPPacket tcpmessage_4 = Class271.createPacket(ClientPacket.CLAN_CHAT_KICK, class184_3.isaac);
+				BufferedConnectionContext class184_3 = Preference_Sub20.getConnectionContext();
+				TCPPacket tcpmessage_4 = Class271.createPacket(ClientPacket.UNUSED_CLAN_OP, class184_3.isaac);
 				tcpmessage_4.buffer.writeByte(2 + ChatLine.getLength(class57_2.name));
 				tcpmessage_4.buffer.writeShort(i_0);
 				tcpmessage_4.buffer.writeString(class57_2.name);

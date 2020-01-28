@@ -44,57 +44,57 @@ public class CombinedInputSubscriber implements InputSubscriber {
 		return new CombinedInputSubscriber(clickType, minimumClicks, keys);
 	}
 
-	static void method3673(String string_0, boolean bool_1, int i_2, int i_3, String string_4, boolean bool_5) {
-        string_0 = string_0.toLowerCase();
-        short[] shorts_7 = new short[16];
-        int i_8 = -1;
-        String string_9 = null;
-        if (i_2 != -1) {
-            ParamDefinitions attributedefault_10 = IndexLoaders.PARAM_LOADER.getParam(i_2);
-            if (attributedefault_10 == null || attributedefault_10.isString() != bool_5) {
+	static void queryItem(String query, boolean tradeableOnly, int paramId, int paramIntQuery, String paramStringQuery, boolean paramIsString) {
+        query = query.toLowerCase();
+        short[] results = new short[16];
+        int paramIntDefault = -1;
+        String paramStrDefault = null;
+        if (paramId != -1) {
+            ParamDefinitions paramDef = IndexLoaders.PARAM_LOADER.getParam(paramId);
+            if (paramDef == null || paramDef.isString() != paramIsString) {
                 return;
             }
-            if (attributedefault_10.isString()) {
-                string_9 = attributedefault_10.typeName;
+            if (paramDef.isString()) {
+                paramStrDefault = paramDef.typeName;
             } else {
-                i_8 = attributedefault_10.defaultInt;
+                paramIntDefault = paramDef.defaultInt;
             }
         }
-        int i_15 = 0;
-        for (int i_11 = 0; i_11 < IndexLoaders.ITEM_LOADER.maxItemsCount; i_11++) {
-            ItemDefinitions itemdefinitions_17 = IndexLoaders.ITEM_LOADER.getItemDefinitions(i_11);
-            if ((!bool_1 || itemdefinitions_17.grandExchange) && itemdefinitions_17.certTemplateId == -1 && itemdefinitions_17.lendTemplateId == -1 && itemdefinitions_17.bindTemplateId == -1 && itemdefinitions_17.unknownInt6 == 0 && itemdefinitions_17.name.toLowerCase().indexOf(string_0) != -1) {
-                if (i_2 != -1) {
-                    if (bool_5) {
-                        if (!string_4.equals(itemdefinitions_17.getCS2String(i_2, string_9))) {
+        int numResults = 0;
+        for (int i = 0; i < IndexLoaders.ITEM_LOADER.maxItemsCount; i++) {
+            ItemDefinitions itemDef = IndexLoaders.ITEM_LOADER.getItemDefinitions(i);
+            if ((!tradeableOnly || itemDef.grandExchange) && itemDef.certTemplateId == -1 && itemDef.lendTemplateId == -1 && itemDef.bindTemplateId == -1 && itemDef.unknownInt6 == 0 && itemDef.name.toLowerCase().indexOf(query) != -1) {
+                if (paramId != -1) {
+                    if (paramIsString) {
+                        if (!paramStringQuery.equals(itemDef.getCS2String(paramId, paramStrDefault))) {
                             continue;
                         }
-                    } else if (i_3 != itemdefinitions_17.getCS2Integer(i_2, i_8)) {
+                    } else if (paramIntQuery != itemDef.getCS2Integer(paramId, paramIntDefault)) {
                         continue;
                     }
                 }
-                if (i_15 >= 250) {
-                    VarcDefinitions.anInt4985 = -1;
-                    Class308.aShortArray3621 = null;
+                if (numResults >= 250) {
+                    VarcDefinitions.CS2_QUERY_RESULTS_LEN = -1;
+                    Class308.CS2_QUERY_RESULTS = null;
                     return;
                 }
-                if (i_15 >= shorts_7.length) {
-                    short[] shorts_13 = new short[shorts_7.length * 2];
-                    for (int i_14 = 0; i_14 < i_15; i_14++) {
-                        shorts_13[i_14] = shorts_7[i_14];
+                if (numResults >= results.length) {
+                    short[] newResults = new short[results.length * 2];
+                    for (int j = 0; j < numResults; j++) {
+                        newResults[j] = results[j];
                     }
-                    shorts_7 = shorts_13;
+                    results = newResults;
                 }
-                shorts_7[i_15++] = (short) i_11;
+                results[numResults++] = (short) i;
             }
         }
-        Class308.aShortArray3621 = shorts_7;
-        Class283.anInt3384 = 0;
-        VarcDefinitions.anInt4985 = i_15;
-        String[] arr_16 = new String[VarcDefinitions.anInt4985];
-        for (int i_12 = 0; i_12 < VarcDefinitions.anInt4985; i_12++) {
-            arr_16[i_12] = IndexLoaders.ITEM_LOADER.getItemDefinitions(shorts_7[i_12]).name;
+        Class308.CS2_QUERY_RESULTS = results;
+        Class283.CS2_QUERY_RESULT_IDX = 0;
+        VarcDefinitions.CS2_QUERY_RESULTS_LEN = numResults;
+        String[] resultNames = new String[VarcDefinitions.CS2_QUERY_RESULTS_LEN];
+        for (int i_12 = 0; i_12 < VarcDefinitions.CS2_QUERY_RESULTS_LEN; i_12++) {
+            resultNames[i_12] = IndexLoaders.ITEM_LOADER.getItemDefinitions(results[i_12]).name;
         }
-        ShaderDecoder.method1644(arr_16, Class308.aShortArray3621, (short) 2733);
+        ShaderDecoder.sortAlphabetically(resultNames, Class308.CS2_QUERY_RESULTS);
     }
 }

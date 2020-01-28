@@ -74,7 +74,7 @@ public class MapRegion {
 	}
 
 	void method4422() {
-		this.setMapSizes(Class480.getMapSize(Class393.preferences.aPreference_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
+		this.setMapSizes(Class480.getMapSize(Class393.preferences.buildArea.method12615(-765902295), (byte) 100), 375022217);
 		int i_2 = this.coordGrid.x;
 		int i_3 = this.coordGrid.y;
 		int mapBaseX = (IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX >> 12) + (i_2 >> 3);
@@ -777,7 +777,7 @@ public class MapRegion {
 				this.aClass329_Sub1_3167.anInt3809 = Class393.preferences.sceneryShadows.method12624((byte) -19);
 				this.aClass329_Sub1_3167.highDetailWater = Class393.preferences.water.getValue() == 2;
 				this.aClass329_Sub1_3167.aBool3780 = Class393.preferences.lightDetail.method12786() == 1;
-				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.aPreference_Sub17_8200.method12762(-267054469) == 1;
+				this.aClass329_Sub1_3167.aBool3820 = Class393.preferences.groundBlending.method12762(-267054469) == 1;
 				this.aClass329_Sub1_3167.aBool3782 = Class393.preferences.textures.method12873(1377050121) == 1;
 				if (!this.mapType.method4410((byte) -32)) {
 					this.decodeUnderlayMasks(this.aClass329_Sub1_3167, this.mapDataBuffer, 1315892185);
@@ -796,7 +796,7 @@ public class MapRegion {
 					this.highDetailWaterPlane.anInt3809 = Class393.preferences.sceneryShadows.method12624((byte) -93);
 					this.highDetailWaterPlane.highDetailWater = Class393.preferences.water.getValue() == 2;
 					this.highDetailWaterPlane.aBool3780 = Class393.preferences.lightDetail.method12786() == 1;
-					this.highDetailWaterPlane.aBool3820 = Class393.preferences.aPreference_Sub17_8200.method12762(1666715266) == 1;
+					this.highDetailWaterPlane.aBool3820 = Class393.preferences.groundBlending.method12762(1666715266) == 1;
 					this.highDetailWaterPlane.aBool3782 = Class393.preferences.textures.method12873(-332126301) == 1;
 					if (!this.mapType.method4410((byte) 46)) {
 						this.decodeUnderlayMasks(this.highDetailWaterPlane, this.hdWaterMapDataBuffer, 500096938);

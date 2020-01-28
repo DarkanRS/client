@@ -179,7 +179,7 @@ public class GameTipsLoader {
 		}
 
 		try {
-			Class361.aClass361_4173.method6256(new Object[] { Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.windowedMode()), Integer.valueOf(Class393.preferences.aPreference_Sub7_8210.method12666(1852404651)) });
+			Class361.aClass361_4173.method6256(new Object[] { Integer.valueOf(i_1), Integer.valueOf(i_2), Integer.valueOf(Class158.windowedMode()), Integer.valueOf(Class393.preferences.maxScreenSize.method12666(1852404651)) });
 		} catch (Throwable throwable_4) {
 			;
 		}

@@ -56,14 +56,14 @@ public class Node_Sub20_Sub25 extends Node_Sub20 {
 	}
 
 	public static void method15393(int i_1) {
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub27_8208, 1);
+		Class393.preferences.setValue(Class393.preferences.removeRoofs, 1);
 		Class393.preferences.setValue(Class393.preferences.removeRoofsOptionOverride, 1);
 		Class393.preferences.setValue(Class393.preferences.groundDecoration, 0);
 		Class393.preferences.setValue(Class393.preferences.fog, 0);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub17_8200, 0);
+		Class393.preferences.setValue(Class393.preferences.groundBlending, 0);
 		Class393.preferences.setValue(Class393.preferences.idleAnimations, 0);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub26_8224, 0);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub28_8212, 0);
+		Class393.preferences.setValue(Class393.preferences.flickeringEffects, 0);
+		Class393.preferences.setValue(Class393.preferences.characterShadows, 0);
 		Class393.preferences.setValue(Class393.preferences.sceneryShadows, 0);
 		Class393.preferences.setValue(Class393.preferences.textures, 0);
 		Class393.preferences.setValue(Class393.preferences.lightDetail, 0);
@@ -71,11 +71,11 @@ public class Node_Sub20_Sub25 extends Node_Sub20 {
 		Class393.preferences.setValue(Class393.preferences.antiAliasingDefault, 0);
 		Class393.preferences.setValue(Class393.preferences.aPreference_Sub4_8223, 0);
 		Class393.preferences.setValue(Class393.preferences.particles, 0);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub1_8197, MapSize.aClass106_1075.anInt1071);
+		Class393.preferences.setValue(Class393.preferences.buildArea, MapSize.aClass106_1075.anInt1071);
 		Class393.preferences.setValue(Class393.preferences.bloom, 0);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub14_8211, 0);
+		Class393.preferences.setValue(Class393.preferences.skyBoxes, 0);
 		ImageIndexLoader.method5777(1755856105);
-		Class393.preferences.setValue(Class393.preferences.aPreference_Sub7_8210, 2);
+		Class393.preferences.setValue(Class393.preferences.maxScreenSize, 2);
 		Class393.preferences.setValue(Class393.preferences.graphics, 1);
 		Class94.method1589();
 		IndexLoaders.MAP_REGION_DECODER.method4435().method4048();

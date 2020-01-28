@@ -31,20 +31,20 @@ public class RSInterface {
 	        if (defs.anInt1288 != -1) {
 	            IComponentDefinitions icomponentdefinitions_3 = inter.getComponent(defs.parent);
 	            if (icomponentdefinitions_3 != null) {
-	                if (icomponentdefinitions_3.aClass118Array1439 == icomponentdefinitions_3.aClass118Array1438) {
-	                    icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
-	                    icomponentdefinitions_3.aClass118Array1439[icomponentdefinitions_3.aClass118Array1439.length - 1] = defs;
-	                    Class503.method8359(icomponentdefinitions_3.aClass118Array1438, 0, icomponentdefinitions_3.aClass118Array1439, 0, defs.anInt1288);
-	                    Class503.method8359(icomponentdefinitions_3.aClass118Array1438, defs.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1439, defs.anInt1288, icomponentdefinitions_3.aClass118Array1438.length - defs.anInt1288 - 1);
+	                if (icomponentdefinitions_3.itemSlots == icomponentdefinitions_3.slotChildren) {
+	                    icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
+	                    icomponentdefinitions_3.itemSlots[icomponentdefinitions_3.itemSlots.length - 1] = defs;
+	                    Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 0, defs.anInt1288);
+	                    Class503.method8359(icomponentdefinitions_3.slotChildren, defs.anInt1288 + 1, icomponentdefinitions_3.itemSlots, defs.anInt1288, icomponentdefinitions_3.slotChildren.length - defs.anInt1288 - 1);
 	                } else {
 	                    i_4 = 0;
 	                    IComponentDefinitions[] arr_5;
-	                    for (arr_5 = icomponentdefinitions_3.aClass118Array1439; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
+	                    for (arr_5 = icomponentdefinitions_3.itemSlots; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
 	                        ;
 	                    }
 	                    if (i_4 < arr_5.length) {
 	                        Class503.method8359(arr_5, i_4 + 1, arr_5, i_4, arr_5.length - i_4 - 1);
-	                        arr_5[icomponentdefinitions_3.aClass118Array1439.length - 1] = defs;
+	                        arr_5[icomponentdefinitions_3.itemSlots.length - 1] = defs;
 	                    }
 	                }
 	            }
@@ -67,16 +67,16 @@ public class RSInterface {
 			if (defs.anInt1288 != -1) {
 				IComponentDefinitions icomponentdefinitions_3 = inter.components[defs.parent & 0xffff];
 				if (icomponentdefinitions_3 != null) {
-					if (icomponentdefinitions_3.aClass118Array1438 == icomponentdefinitions_3.aClass118Array1439) {
-						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
-						icomponentdefinitions_3.aClass118Array1439[0] = defs;
-						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, 0, icomponentdefinitions_3.aClass118Array1439, 1, defs.anInt1288);
-						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, defs.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1439, defs.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1438.length - defs.anInt1288 - 1);
+					if (icomponentdefinitions_3.slotChildren == icomponentdefinitions_3.itemSlots) {
+						icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
+						icomponentdefinitions_3.itemSlots[0] = defs;
+						Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 1, defs.anInt1288);
+						Class503.method8359(icomponentdefinitions_3.slotChildren, defs.anInt1288 + 1, icomponentdefinitions_3.itemSlots, defs.anInt1288 + 1, icomponentdefinitions_3.slotChildren.length - defs.anInt1288 - 1);
 					} else {
 						i_4 = 0;
 	
 						IComponentDefinitions[] arr_5;
-						for (arr_5 = icomponentdefinitions_3.aClass118Array1439; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
+						for (arr_5 = icomponentdefinitions_3.itemSlots; i_4 < arr_5.length && arr_5[i_4] != defs; i_4++) {
 							;
 						}
 	

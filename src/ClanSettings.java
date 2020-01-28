@@ -7,8 +7,8 @@ public class ClanSettings {
 	public int banCount;
 	long[] bannedUserHashes;
 	public String[] bannedUserNames;
-	IterableNodeMap variables;
-	int[] anIntArray621;
+	IterableNodeMap<Object> variables;
+	int[] sortedAffinedSlots;
 	public int memberCount;
 	int updateCount = 0;
 	public String clanName = null;
@@ -24,7 +24,7 @@ public class ClanSettings {
 	public byte talkRank;
 	public byte kickRank;
 	public byte lootshareRank;
-	public byte aByte628;
+	public byte coinShare;
 
 	public int method1197(String string_1) {
 		if (string_1 != null && string_1.length() != 0) {
@@ -48,7 +48,7 @@ public class ClanSettings {
 		if (this.variables == null) {
 			return null;
 		} else {
-			Node node_3 = this.variables.get((long) i_1);
+			Node<Object> node_3 = this.variables.get((long) i_1);
 			return node_3 != null && node_3 instanceof IntNode ? new Integer(((IntNode) node_3).value) : null;
 		}
 	}
@@ -57,7 +57,7 @@ public class ClanSettings {
 		if (this.variables == null) {
 			return null;
 		} else {
-			Node node_3 = this.variables.get((long) i_1);
+			Node<Object> node_3 = this.variables.get((long) i_1);
 			return node_3 != null && node_3 instanceof LongNode ? new Long(((LongNode) node_3).aLong8066) : null;
 		}
 	}
@@ -66,7 +66,7 @@ public class ClanSettings {
 		if (this.variables == null) {
 			return null;
 		} else {
-			Node node_3 = this.variables.get((long) i_1);
+			Node<Object> node_3 = this.variables.get((long) i_1);
 			return node_3 != null && node_3 instanceof StringNode ? (String) ((StringNode) node_3).anObject8068 : null;
 		}
 	}
@@ -191,7 +191,7 @@ public class ClanSettings {
 		i_2 <<= i_3;
 		i_2 &= i_8;
 		if (this.variables != null) {
-			Node node_9 = this.variables.get((long) i_1);
+			Node<Object> node_9 = this.variables.get((long) i_1);
 			if (node_9 != null) {
 				if (node_9 instanceof IntNode) {
 					IntNode class282_sub38_10 = (IntNode) node_9;
@@ -233,15 +233,15 @@ public class ClanSettings {
 	}
 
 	public int[] method1215() {
-		if (this.anIntArray621 == null) {
+		if (this.sortedAffinedSlots == null) {
 			String[] arr_2 = new String[this.memberCount];
-			this.anIntArray621 = new int[this.memberCount];
-			for (int i_3 = 0; i_3 < this.memberCount; this.anIntArray621[i_3] = i_3++) {
+			this.sortedAffinedSlots = new int[this.memberCount];
+			for (int i_3 = 0; i_3 < this.memberCount; this.sortedAffinedSlots[i_3] = i_3++) {
 				arr_2[i_3] = this.memberNames[i_3];
 			}
-			Class111.method1865(arr_2, this.anIntArray621, 415358781);
+			Class111.toSortedIndicesArr(arr_2, this.sortedAffinedSlots);
 		}
-		return this.anIntArray621;
+		return this.sortedAffinedSlots;
 	}
 
 	void method1216(long long_1, String string_3, int i_4, byte b_5) {
@@ -271,7 +271,7 @@ public class ClanSettings {
 			this.anIntArray633[this.memberCount] = 0;
 			this.anIntArray634[this.memberCount] = i_4;
 			++this.memberCount;
-			this.anIntArray621 = null;
+			this.sortedAffinedSlots = null;
 		}
 	}
 
@@ -379,7 +379,7 @@ public class ClanSettings {
 	void method1233(int i_1, int i_2) {
 		if (i_1 >= 0 && i_1 < this.memberCount) {
 			--this.memberCount;
-			this.anIntArray621 = null;
+			this.sortedAffinedSlots = null;
 			if (this.memberCount == 0) {
 				this.memberHashes = null;
 				this.memberNames = null;
@@ -440,7 +440,7 @@ public class ClanSettings {
 			this.talkRank = buffer.readByte();
 			this.kickRank = buffer.readByte();
 			this.lootshareRank = buffer.readByte();
-			this.aByte628 = buffer.readByte();
+			this.coinShare = buffer.readByte();
 			int i_5;
 			if (this.memberCount > 0) {
 				if (this.useHashes && (this.memberHashes == null || this.memberHashes.length < this.memberCount)) {

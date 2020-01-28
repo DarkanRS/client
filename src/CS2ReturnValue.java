@@ -1,4 +1,4 @@
-public class Class509 {
+public class CS2ReturnValue {
 
 	Object[] anObjectArray5865;
 

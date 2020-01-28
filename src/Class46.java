@@ -87,7 +87,7 @@ public class Class46 implements Interface2 {
 	static void method935(byte b_0) {
 		int i_1 = 0;
 		if (Class393.preferences != null) {
-			i_1 = Class393.preferences.aPreference_Sub7_8210.method12666(1300916790);
+			i_1 = Class393.preferences.maxScreenSize.method12666(1300916790);
 		}
 		int i_2;
 		int i_3;

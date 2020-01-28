@@ -5,11 +5,11 @@ public class FogPreference extends Preference {
 	}
 
 	public void method13415() {
-		if (this.anInt5578 != 0 && this.manager.aPreference_Sub17_8200.method12762(1488967501) != 1) {
+		if (this.anInt5578 != 0 && this.manager.groundBlending.method12762(1488967501) != 1) {
 			this.anInt5578 = 0;
 		}
 
-		if (this.anInt5578 != 0 && this.manager.aPreference_Sub29_8201.method13050() == 2) {
+		if (this.anInt5578 != 0 && this.manager.toolkitDefault.method13050() == 2) {
 			this.anInt5578 = 0;
 		}
 
@@ -28,7 +28,7 @@ public class FogPreference extends Preference {
 	}
 
 	public int checkValid(int i_1) {
-		return i_1 != 0 && this.manager.aPreference_Sub29_8201.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(410905125) != 1 ? 2 : 1);
+		return i_1 != 0 && this.manager.toolkitDefault.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.groundBlending.method12762(410905125) != 1 ? 2 : 1);
 	}
 
 	public int method13417(int i_1) {
@@ -36,7 +36,7 @@ public class FogPreference extends Preference {
 	}
 
 	public int method7784(int i_1) {
-		return i_1 != 0 && this.manager.aPreference_Sub29_8201.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(-1758430035) != 1 ? 2 : 1);
+		return i_1 != 0 && this.manager.toolkitDefault.method13050() == 2 ? 3 : (i_1 != 0 && this.manager.groundBlending.method12762(-1758430035) != 1 ? 2 : 1);
 	}
 
 	void method7780(int i_1) {

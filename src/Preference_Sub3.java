@@ -1,7 +1,7 @@
 public class Preference_Sub3 extends Preference {
 
 	public void method12631() {
-		int i_2 = this.manager.aPreference_Sub18_8214.getValue(1989130239);
+		int i_2 = this.manager.toolKit.getValue(1989130239);
 		if (i_2 != 3 && i_2 != 5) {
 			this.anInt5578 = 0;
 		}
@@ -25,7 +25,7 @@ public class Preference_Sub3 extends Preference {
 	}
 
 	int getDefaultValue() {
-		int i_2 = this.manager.aPreference_Sub18_8214.getValue(-1849420735);
+		int i_2 = this.manager.toolKit.getValue(-1849420735);
 		return i_2 != 3 && i_2 != 5 ? 0 : 0;
 	}
 
@@ -35,7 +35,7 @@ public class Preference_Sub3 extends Preference {
 		} else if (this.manager.getProcessorSpecs().getProcessorCount() < 2) {
 			return 3;
 		} else {
-			int i_3 = this.manager.aPreference_Sub18_8214.getValue(-1012176870);
+			int i_3 = this.manager.toolKit.getValue(-1012176870);
 			return i_3 != 3 && i_3 != 5 ? 3 : 1;
 		}
 	}
@@ -54,13 +54,13 @@ public class Preference_Sub3 extends Preference {
 		} else if (this.manager.getProcessorSpecs().getProcessorCount() < 2) {
 			return 3;
 		} else {
-			int i_2 = this.manager.aPreference_Sub18_8214.getValue(-1120904037);
+			int i_2 = this.manager.toolKit.getValue(-1120904037);
 			return i_2 != 3 && i_2 != 5 ? 3 : 1;
 		}
 	}
 
 	int method7787() {
-		int i_1 = this.manager.aPreference_Sub18_8214.getValue(-1264159175);
+		int i_1 = this.manager.toolKit.getValue(-1264159175);
 		return i_1 != 3 && i_1 != 5 ? 0 : 0;
 	}
 
@@ -69,7 +69,7 @@ public class Preference_Sub3 extends Preference {
 	}
 
 	int method7786() {
-		int i_1 = this.manager.aPreference_Sub18_8214.getValue(1736686662);
+		int i_1 = this.manager.toolKit.getValue(1736686662);
 		return i_1 != 3 && i_1 != 5 ? 0 : 0;
 	}
 

@@ -68,8 +68,8 @@ public class Node_Sub20_Sub36 extends Node_Sub20 {
 		ShaderDecoder.aClass253_1008.method4329(Class79.aNode_Sub15_Sub4_783);
 	}
 
-	public static void method15419(String string_0, boolean bool_1) {
-		Node_Sub20_Sub8.method15242(string_0, bool_1, -1, -1, -1618689115);
+	public static void queryItemNoParams(String name, boolean tradeable) {
+		Node_Sub20_Sub8.queryItemParamInt(name, tradeable, -1, -1);
 	}
 
 	public static void method15420() {

@@ -24,7 +24,7 @@ public class TexturesPreference extends Preference {
 	}
 
 	public int checkValid(int i_1) {
-		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(288309414) != 1 ? 2 : 1) : 3;
+		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.groundBlending.method12762(288309414) != 1 ? 2 : 1) : 3;
 	}
 
 	public int method12873(int i_1) {
@@ -36,7 +36,7 @@ public class TexturesPreference extends Preference {
 	}
 
 	public int method7784(int i_1) {
-		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(-925093981) != 1 ? 2 : 1) : 3;
+		return this.manager.getGame() == Game.darkan ? (i_1 != 0 && this.manager.groundBlending.method12762(-925093981) != 1 ? 2 : 1) : 3;
 	}
 
 	void method7780(int i_1) {

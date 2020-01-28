@@ -154,7 +154,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 							client.IGNORED_PLAYERS[i_7] = client.IGNORED_PLAYERS[i_7 + 1];
 						}
 						client.anInt7386 = client.anInt7347;
-						BufferedConnectionContext class184_9 = Preference_Sub20.method12807(-1089718324);
+						BufferedConnectionContext class184_9 = Preference_Sub20.getConnectionContext();
 						TCPPacket tcpmessage_8 = Class271.createPacket(ClientPacket.REMOVE_IGNORE, class184_9.isaac);
 						tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_8.buffer.writeString(string_0);
@@ -166,7 +166,7 @@ public class ProjectileCutsceneAction extends CutsceneAction {
 		}
 	}
 
-	public static void method14666(String string_0, boolean bool_1, int i_2, String string_3) {
-		CombinedInputSubscriber.method3673(string_0, bool_1, i_2, -1, string_3, true);
+	public static void queryItemParamString(String itemName, boolean tradeableOnly, int paramId, String paramString) {
+		CombinedInputSubscriber.queryItem(itemName, tradeableOnly, paramId, -1, paramString, true);
 	}
 }

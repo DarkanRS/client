@@ -5,7 +5,7 @@ public class ClanChannel extends Node {
 	boolean namesAsString = true;
 	public int numPlayers = 0;
 	public String clanName = null;
-	int[] anIntArray7500;
+	int[] sortedNameIndices;
 	public ClanChannelPlayer[] players;
 	boolean namesAsLong;
 	long nextUpdateNumber;
@@ -20,16 +20,16 @@ public class ClanChannel extends Node {
 		this.decode(buffer);
 	}
 
-	public int[] method12095() {
-		if (this.anIntArray7500 == null) {
-			String[] arr_2 = new String[this.numPlayers];
-			this.anIntArray7500 = new int[this.numPlayers];
-			for (int i_3 = 0; i_3 < this.numPlayers; this.anIntArray7500[i_3] = i_3++) {
-				arr_2[i_3] = this.players[i_3].name;
+	public int[] getSortedPlayersByName() {
+		if (this.sortedNameIndices == null) {
+			String[] playerNames = new String[this.numPlayers];
+			this.sortedNameIndices = new int[this.numPlayers];
+			for (int i_3 = 0; i_3 < this.numPlayers; this.sortedNameIndices[i_3] = i_3++) {
+				playerNames[i_3] = this.players[i_3].name;
 			}
-			Class111.method1865(arr_2, this.anIntArray7500, 413972480);
+			Class111.toSortedIndicesArr(playerNames, this.sortedNameIndices);
 		}
-		return this.anIntArray7500;
+		return this.sortedNameIndices;
 	}
 
 	void method12096(int i_1) {
@@ -39,10 +39,10 @@ public class ClanChannel extends Node {
 		} else {
 			Class503.method8359(this.players, i_1 + 1, this.players, i_1, this.numPlayers - i_1);
 		}
-		this.anIntArray7500 = null;
+		this.sortedNameIndices = null;
 	}
 
-	public int method12098(String string_1) {
+	public int getUserSlot(String string_1) {
 		for (int i_3 = 0; i_3 < this.numPlayers; i_3++) {
 			if (this.players[i_3].name.equalsIgnoreCase(string_1)) {
 				return i_3;
@@ -88,7 +88,7 @@ public class ClanChannel extends Node {
 			this.method12112(this.numPlayers + 5);
 		}
 		this.players[++this.numPlayers - 1] = class57_1;
-		this.anIntArray7500 = null;
+		this.sortedNameIndices = null;
 	}
 
 	void method12112(int i_1) {

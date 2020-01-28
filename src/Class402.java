@@ -25,7 +25,7 @@ public class Class402 {
 							client.FRIENDS[i_7] = client.FRIENDS[i_7 + 1];
 						}
 						client.anInt7386 = client.anInt7347;
-						BufferedConnectionContext class184_9 = Preference_Sub20.method12807(222304163);
+						BufferedConnectionContext class184_9 = Preference_Sub20.getConnectionContext();
 						TCPPacket tcpmessage_8 = Class271.createPacket(ClientPacket.REMOVE_FRIEND, class184_9.isaac);
 						tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_8.buffer.writeString(string_0);

@@ -248,32 +248,32 @@ public abstract class Shader {
 
 	abstract Node_Sub21_Sub1 method1765(Class122 var1);
 
-	static void method1773(String[] arr_0, int[] ints_1, int i_2, int i_3) {
-		if (i_2 < i_3) {
-			int i_5 = (i_3 + i_2) / 2;
-			int i_6 = i_2;
-			String string_7 = arr_0[i_5];
-			arr_0[i_5] = arr_0[i_3];
-			arr_0[i_3] = string_7;
-			int i_8 = ints_1[i_5];
-			ints_1[i_5] = ints_1[i_3];
-			ints_1[i_3] = i_8;
-			for (int i_9 = i_2; i_9 < i_3; i_9++) {
-				if (string_7 == null || arr_0[i_9] != null && arr_0[i_9].compareTo(string_7) < (i_9 & 0x1)) {
-					String string_10 = arr_0[i_9];
-					arr_0[i_9] = arr_0[i_6];
-					arr_0[i_6] = string_10;
-					int i_11 = ints_1[i_9];
-					ints_1[i_9] = ints_1[i_6];
-					ints_1[i_6++] = i_11;
+	static void getSortedStringIndices(String[] strings, int[] ints, int fromIndex, int toIndex) {
+		if (fromIndex < toIndex) {
+			int middle = (toIndex + fromIndex) / 2;
+			int i_6 = fromIndex;
+			String string_7 = strings[middle];
+			strings[middle] = strings[toIndex];
+			strings[toIndex] = string_7;
+			int i_8 = ints[middle];
+			ints[middle] = ints[toIndex];
+			ints[toIndex] = i_8;
+			for (int i_9 = fromIndex; i_9 < toIndex; i_9++) {
+				if (string_7 == null || strings[i_9] != null && strings[i_9].compareTo(string_7) < (i_9 & 0x1)) {
+					String string_10 = strings[i_9];
+					strings[i_9] = strings[i_6];
+					strings[i_6] = string_10;
+					int i_11 = ints[i_9];
+					ints[i_9] = ints[i_6];
+					ints[i_6++] = i_11;
 				}
 			}
-			arr_0[i_3] = arr_0[i_6];
-			arr_0[i_6] = string_7;
-			ints_1[i_3] = ints_1[i_6];
-			ints_1[i_6] = i_8;
-			method1773(arr_0, ints_1, i_2, i_6 - 1);
-			method1773(arr_0, ints_1, i_6 + 1, i_3);
+			strings[toIndex] = strings[i_6];
+			strings[i_6] = string_7;
+			ints[toIndex] = ints[i_6];
+			ints[i_6] = i_8;
+			getSortedStringIndices(strings, ints, fromIndex, i_6 - 1);
+			getSortedStringIndices(strings, ints, i_6 + 1, toIndex);
 		}
 	}
 

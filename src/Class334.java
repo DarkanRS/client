@@ -84,7 +84,7 @@ public class Class334 {
 	}
 
 	void method5939(GraphicalRenderer graphicalrenderer_1, Class334 class334_2) {
-		RSMesh rsmesh_3 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3893);
+		RSMesh rsmesh_3 = RSMesh.decodeMesh(PaddedJS5Request.TEXTURED_MESH_INDEX, this.anInt3893);
 		if (rsmesh_3 != null) {
 			graphicalrenderer_1.qa(anIntArray3884);
 			graphicalrenderer_1.r(0, 0, this.anInt3902, this.anInt3902);
@@ -160,8 +160,8 @@ public class Class334 {
 	boolean method5942(GraphicalRenderer graphicalrenderer_1, Class334 class334_2) {
 		if (this.aNativeSprite_3910 == null) {
 			if (this.anInt3887 == 0) {
-				if (Class247.anInterface22_3046.method139(this.anInt3893, -725088114)) {
-					int[] ints_3 = Class247.anInterface22_3046.method141(this.anInt3893, this.anInt3902, this.anInt3902, false, 1606527906);
+				if (Class247.TEXTURE_LOADER.method139(this.anInt3893, -725088114)) {
+					int[] ints_3 = Class247.TEXTURE_LOADER.method141(this.anInt3893, this.anInt3902, this.anInt3902, false, 1606527906);
 					this.aNativeSprite_3910 = graphicalrenderer_1.createNativeSprite(ints_3, this.anInt3902, this.anInt3902, this.anInt3902, -1804968029);
 				}
 			} else if (this.anInt3887 == 2) {

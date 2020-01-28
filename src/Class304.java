@@ -196,7 +196,7 @@ public class Class304 implements Interface27 {
 						Image image_28 = Class351.gameCanvas.createImage(i_27, 1149083423 * this.anInt3571 * 544546015 - i_20 - i_18);
 						int i_29 = image_28.getWidth((ImageObserver) null);
 						Graphics graphics_30 = image_28.getGraphics();
-						int i_31 = this.anInt3593 * -1517908233 * -493710649 * Class509.method8740(-1334135782) / 10 % i_22;
+						int i_31 = this.anInt3593 * -1517908233 * -493710649 * CS2ReturnValue.method8740(-1334135782) / 10 % i_22;
 						for (i_32 = i_31 - i_22; i_32 < i_29; i_32 += i_22) {
 							graphics_30.drawImage(this.anImage3575, i_32, 0, (ImageObserver) null);
 						}
@@ -338,7 +338,7 @@ public class Class304 implements Interface27 {
 						Image image_28 = Class351.gameCanvas.createImage(i_27, 1149083423 * this.anInt3571 * 544546015 - i_20 - i_18);
 						int i_29 = image_28.getWidth((ImageObserver) null);
 						Graphics graphics_30 = image_28.getGraphics();
-						int i_31 = this.anInt3593 * -1517908233 * -493710649 * Class509.method8740(-1290011940) / 10 % i_22;
+						int i_31 = this.anInt3593 * -1517908233 * -493710649 * CS2ReturnValue.method8740(-1290011940) / 10 % i_22;
 						for (i_32 = i_31 - i_22; i_32 < i_29; i_32 += i_22) {
 							graphics_30.drawImage(this.anImage3575, i_32, 0, (ImageObserver) null);
 						}
@@ -476,7 +476,7 @@ public class Class304 implements Interface27 {
 						Image image_29 = Class351.gameCanvas.createImage(i_28, this.anInt3571 - i_21 - i_19);
 						int i_30 = image_29.getWidth((ImageObserver) null);
 						Graphics graphics_31 = image_29.getGraphics();
-						int i_32 = this.anInt3593 * Class509.method8740(-1387759931) / 10 % i_23;
+						int i_32 = this.anInt3593 * CS2ReturnValue.method8740(-1387759931) / 10 % i_23;
 						for (i_33 = i_32 - i_23; i_33 < i_30; i_33 += i_23) {
 							graphics_31.drawImage(this.anImage3575, i_33, 0, (ImageObserver) null);
 						}
@@ -614,7 +614,7 @@ public class Class304 implements Interface27 {
 						Image image_28 = Class351.gameCanvas.createImage(i_27, 1149083423 * this.anInt3571 * 544546015 - i_20 - i_18);
 						int i_29 = image_28.getWidth((ImageObserver) null);
 						Graphics graphics_30 = image_28.getGraphics();
-						int i_31 = this.anInt3593 * -1517908233 * -493710649 * Class509.method8740(-1010766912) / 10 % i_22;
+						int i_31 = this.anInt3593 * -1517908233 * -493710649 * CS2ReturnValue.method8740(-1010766912) / 10 % i_22;
 						for (i_32 = i_31 - i_22; i_32 < i_29; i_32 += i_22) {
 							graphics_30.drawImage(this.anImage3575, i_32, 0, (ImageObserver) null);
 						}
@@ -692,7 +692,7 @@ public class Class304 implements Interface27 {
 			client.anInt7345 = componentDefs.anInt1288;
 			Class506.USE_OPTIONS_FLAGS = flags;
 			CutsceneAction_Sub12.USE_INTERFACE_ID = interfaceId;
-			client.anInt7346 = componentDefs.anInt1426;
+			client.anInt7346 = componentDefs.slotId2;
 			Defaults8Loader.anInt5932 = componentDefs.targetOverCursor;
 			client.anInt7427 = componentDefs.targetLeaveCursor;
 			Class109.redrawComponent(componentDefs);

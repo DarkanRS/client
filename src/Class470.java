@@ -148,7 +148,7 @@ public class Class470 {
 			b_2 = 1;
 		}
 		if (Class393.preferences.currentToolkit.getValue(-1022441189) != 2) {
-			Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 2);
+			Class393.preferences.setValue(Class393.preferences.toolKit, 2);
 			ParticleProducer.method11500(2, false);
 		} else {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, 861454749);

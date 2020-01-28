@@ -41,7 +41,7 @@ public final class Class484 {
 			}
 		}
 		if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337) {
-			client.aClass118_7183 = iCompDef;
+			client.GAME_SCREEN_INTERFACE = iCompDef;
 		}
 		if (bool_3 && iCompDef.anObjectArray1271 != null && (i_5 != iCompDef.width || i_6 != iCompDef.height)) {
 			HookRequest hookrequest_7 = new HookRequest();

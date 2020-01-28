@@ -74,8 +74,8 @@ public final class Class464 {
 			if (icomponentdefinitions_4 != null && icomponentdefinitions_4.parent == i_1 && !client.method11651(icomponentdefinitions_4)) {
 				if (icomponentdefinitions_4.type == ComponentType.CONTAINER) {
 					method7743(arr_0, icomponentdefinitions_4.idHash);
-					if (icomponentdefinitions_4.aClass118Array1439 != null) {
-						method7743(icomponentdefinitions_4.aClass118Array1439, icomponentdefinitions_4.idHash);
+					if (icomponentdefinitions_4.itemSlots != null) {
+						method7743(icomponentdefinitions_4.itemSlots, icomponentdefinitions_4.idHash);
 					}
 					IFSubNode class282_sub44_5 = (IFSubNode) client.OPEN_INTERFACES.get((long) icomponentdefinitions_4.idHash);
 					if (class282_sub44_5 != null) {

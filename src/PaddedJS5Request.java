@@ -3,7 +3,7 @@ public class PaddedJS5Request extends JS5CacheRequest {
 	byte padding;
 	int anInt10377;
 	RsByteBuffer stream;
-	static Index aClass317_10379;
+	static Index TEXTURED_MESH_INDEX;
 
 	int method14947() {
 		return this.stream == null ? 0 : this.stream.index / (this.stream.buffer.length - this.padding);

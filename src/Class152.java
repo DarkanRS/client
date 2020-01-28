@@ -185,7 +185,7 @@ public abstract class Class152 {
 					if (Class383.method6515(VertexNormal.MY_PLAYER.displayName).equals(string_2)) {
 						ChatLine.appendGameMessage(Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE));
 					} else {
-						BufferedConnectionContext class184_7 = Preference_Sub20.method12807(1188178835);
+						BufferedConnectionContext class184_7 = Preference_Sub20.getConnectionContext();
 						TCPPacket tcpmessage_9 = Class271.createPacket(ClientPacket.ADD_FRIEND, class184_7.isaac);
 						tcpmessage_9.buffer.writeByte(ChatLine.getLength(string_0));
 						tcpmessage_9.buffer.writeString(string_0);

@@ -1,6 +1,6 @@
 public class Class247 {
 
-	static Interface22 anInterface22_3046;
+	static Interface22 TEXTURE_LOADER;
 
 	int anInt3053;
 
@@ -54,9 +54,9 @@ public class Class247 {
 			graphicalrenderer_1.ba(2, 0);
 			i_8 = i_8 + i_2 & 0x3fff;
 			if (this.anInt3031 != -1 && this.anInt3034 != 0) {
-				TextureDetails class169_16 = anInterface22_3046.method144(this.anInt3031);
-				if (this.aNativeSprite_3030 == null && anInterface22_3046.method139(this.anInt3031, -408857237)) {
-					int[] ints_17 = class169_16.blendType == 2 ? anInterface22_3046.method141(this.anInt3031, this.anInt3034, this.anInt3034, false, -1509054197) : anInterface22_3046.method140(this.anInt3031, 0.7F, this.anInt3034, this.anInt3034, false, (byte) 127);
+				TextureDetails class169_16 = TEXTURE_LOADER.method144(this.anInt3031);
+				if (this.aNativeSprite_3030 == null && TEXTURE_LOADER.method139(this.anInt3031, -408857237)) {
+					int[] ints_17 = class169_16.blendType == 2 ? TEXTURE_LOADER.method141(this.anInt3031, this.anInt3034, this.anInt3034, false, -1509054197) : TEXTURE_LOADER.method140(this.anInt3031, 0.7F, this.anInt3034, this.anInt3034, false, (byte) 127);
 					this.anInt3053 = ints_17[0];
 					this.anInt3044 = ints_17[ints_17.length - 1];
 					this.aNativeSprite_3030 = graphicalrenderer_1.createNativeSprite(ints_17, this.anInt3034, this.anInt3034, this.anInt3034, 1367570399);
@@ -233,10 +233,10 @@ public class Class247 {
 
 	void method4229(GraphicalRenderer graphicalrenderer_1) {
 		try {
-			boolean bool_3 = PaddedJS5Request.aClass317_10379.loadArchive(this.anInt3047);
+			boolean bool_3 = PaddedJS5Request.TEXTURED_MESH_INDEX.loadArchive(this.anInt3047);
 			if (bool_3) {
 				graphicalrenderer_1.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-				RSMesh rsmesh_4 = RSMesh.decodeMesh(PaddedJS5Request.aClass317_10379, this.anInt3047);
+				RSMesh rsmesh_4 = RSMesh.decodeMesh(PaddedJS5Request.TEXTURED_MESH_INDEX, this.anInt3047);
 				this.aMeshRasterizer_3048 = graphicalrenderer_1.createMeshRasterizer(rsmesh_4, 1099776, 0, 255, 1);
 				byte[] bytes_5 = this.aMeshRasterizer_3048.aw();
 				if (bytes_5 == null) {

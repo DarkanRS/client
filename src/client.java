@@ -217,7 +217,7 @@ public final class client extends Engine {
 	public static int RUN_WEIGHT;
 	static boolean aBool7168;
 	static boolean aBool7264;
-	public static IComponentDefinitions aClass118_7183;
+	public static IComponentDefinitions GAME_SCREEN_INTERFACE;
 	static boolean aBool7358;
 	static IComponentDefinitions aClass118_7257;
 	static IComponentDefinitions aClass118_7247;
@@ -453,7 +453,7 @@ public final class client extends Engine {
 		RUN_WEIGHT = 0;
 		aBool7168 = false;
 		aBool7264 = false;
-		aClass118_7183 = null;
+		GAME_SCREEN_INTERFACE = null;
 		aBool7358 = false;
 		aClass118_7257 = null;
 		aClass118_7247 = null;
@@ -1912,7 +1912,7 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.anInt1426 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
+						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.slotId2 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -2082,10 +2082,10 @@ public final class client extends Engine {
 							if (iCompDef.contentType != 0) {
 								int i_52;
 								if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 || iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1403) {
-									aClass118_7183 = iCompDef;
+									GAME_SCREEN_INTERFACE = iCompDef;
 									Class535 class535_59 = IndexLoaders.MAP_REGION_DECODER.method4435().method4038((short) 4792);
 									if (class535_59.method11451() != null && !IndexLoaders.MAP_REGION_LOADER_THREAD.method6051()) {
-										class535_59.method11451().method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.aPreference_Sub14_8211.method12728());
+										class535_59.method11451().method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.skyBoxes.method12728());
 									}
 
 									if (iCompDef.contentType == IComponentDefinitions.CONTENT_TYPE_1337 && !Class20.aBool161 && i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -2166,7 +2166,7 @@ public final class client extends Engine {
 									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
 										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(client.anInt56, anInt7345);
 										if (icomponentdefinitions_35 != null) {
-											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, iCompDef.anInt1426, 1L, i_33, i_34, true, false, (long) (iCompDef.anInt1288 << 32 | iCompDef.idHash), true, -1033171513);
+											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, iCompDef.slotId2, 1L, i_33, i_34, true, false, (long) (iCompDef.anInt1288 << 32 | iCompDef.idHash), true, -1033171513);
 										} else {
 											Class60.method1170();
 										}
@@ -2568,14 +2568,14 @@ public final class client extends Engine {
 						}
 
 						if (iCompDef.type == ComponentType.SPRITE && iCompDef.anInt1404 != -1) {
-							iCompDef.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.aPreference_Sub14_8211.method12728());
+							iCompDef.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1847543291).method4217(Renderers.SOFTWARE_RENDERER, iCompDef.height, Class393.preferences.skyBoxes.method12728());
 						}
 
 						Class86.method1482(iCompDef, (byte) 9);
 						if (iCompDef.type == ComponentType.CONTAINER) {
 							method11768(interface_0, components, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
-							if (iCompDef.aClass118Array1439 != null) {
-								method11768(interface_0, iCompDef.aClass118Array1439, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
+							if (iCompDef.itemSlots != null) {
+								method11768(interface_0, iCompDef.itemSlots, iCompDef.idHash, i_15, i_16, i_17, i_18, x - iCompDef.scrollX, y - iCompDef.scrollY, i_9, i_10);
 							}
 
 							IFSubNode class282_sub44_58 = (IFSubNode) OPEN_INTERFACES.get((long) iCompDef.idHash);
@@ -2938,7 +2938,7 @@ public final class client extends Engine {
 										}
 
 										icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
-									} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
+									} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.anInt1288]);
 
 									CS2Executor.executeHookInner200k(hookrequest_13, 970362287);
 								}
@@ -2950,7 +2950,7 @@ public final class client extends Engine {
 							}
 
 							icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
-						} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
+						} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.anInt1288]);
 
 						CS2Executor.executeHookInner200k(hookrequest_13, 433740759);
 					}
@@ -2962,7 +2962,7 @@ public final class client extends Engine {
 				}
 
 				icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
-			} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.aClass118Array1438 == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.aClass118Array1438.length || icomponentdefinitions_16 != icomponentdefinitions_14.aClass118Array1438[icomponentdefinitions_16.anInt1288]);
+			} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.anInt1288]);
 
 			CS2Executor.executeHookInner200k(hookrequest_13, 60192385);
 		}

@@ -22,7 +22,7 @@ public class Class88 {
         }
     }
 
-    static void method1495(String[] arr_0, short[] shorts_1, int i_2, int i_3, int i_4) {
+    static void method1495(String[] arr_0, short[] shorts_1, int i_2, int i_3) {
         if (i_2 < i_3) {
             int i_5 = (i_3 + i_2) / 2;
             int i_6 = i_2;
@@ -46,8 +46,8 @@ public class Class88 {
             arr_0[i_6] = string_7;
             shorts_1[i_3] = shorts_1[i_6];
             shorts_1[i_6] = s_8;
-            method1495(arr_0, shorts_1, i_2, i_6 - 1, -109372868);
-            method1495(arr_0, shorts_1, i_6 + 1, i_3, -805435373);
+            method1495(arr_0, shorts_1, i_2, i_6 - 1);
+            method1495(arr_0, shorts_1, i_6 + 1, i_3);
         }
     }
 }

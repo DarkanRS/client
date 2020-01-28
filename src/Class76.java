@@ -48,8 +48,8 @@ public class Class76 {
 			QuickchatMessageDefinitions quickchatdefinitions_12 = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(i_7);
 			if (quickchatdefinitions_12.searchable && quickchatdefinitions_12.method14898(409119349).toLowerCase().indexOf(string_0) != -1) {
 				if (i_4 >= 50) {
-					VarcDefinitions.anInt4985 = -1;
-					Class308.aShortArray3621 = null;
+					VarcDefinitions.CS2_QUERY_RESULTS_LEN = -1;
+					Class308.CS2_QUERY_RESULTS = null;
 					return;
 				}
 				if (i_4 >= shorts_3.length) {
@@ -62,14 +62,14 @@ public class Class76 {
 				shorts_3[i_4++] = (short) i_7;
 			}
 		}
-		Class308.aShortArray3621 = shorts_3;
-		Class283.anInt3384 = 0;
-		VarcDefinitions.anInt4985 = i_4;
-		String[] arr_11 = new String[VarcDefinitions.anInt4985];
-		for (int i_8 = 0; i_8 < VarcDefinitions.anInt4985; i_8++) {
+		Class308.CS2_QUERY_RESULTS = shorts_3;
+		Class283.CS2_QUERY_RESULT_IDX = 0;
+		VarcDefinitions.CS2_QUERY_RESULTS_LEN = i_4;
+		String[] arr_11 = new String[VarcDefinitions.CS2_QUERY_RESULTS_LEN];
+		for (int i_8 = 0; i_8 < VarcDefinitions.CS2_QUERY_RESULTS_LEN; i_8++) {
 			arr_11[i_8] = IndexLoaders.QUICK_CHAT_MESSAGE_LOADER.getMessageDefinitions(shorts_3[i_8]).method14898(-47369611);
 		}
-		ShaderDecoder.method1644(arr_11, Class308.aShortArray3621, (short) 30307);
+		ShaderDecoder.sortAlphabetically(arr_11, Class308.CS2_QUERY_RESULTS);
 	}
 
 	public static void method1361(byte b_0) {

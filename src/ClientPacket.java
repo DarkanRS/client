@@ -38,7 +38,7 @@ public enum ClientPacket {
 	REFLECTION_CHECK(36, -1),
 	UNK_37(37, 2), //index 36 and some hook/click type related
 	OBJECT_OP3(38, 9, true),
-	CLAN_CHAT_KICK(39, -1),
+	UNUSED_CLAN_OP(39, -1), //Packet is referenced by one CS2 instruction but that CS2 instruction is present in no scripts
 	MOVE_MOUSE(40, -1),
 	IF_ON_NPC(41, 11, true),
 	MINI_WALK(42, 18, true),
@@ -89,14 +89,14 @@ public enum ClientPacket {
 	RESUME_TEXTDIALOG(87, -1),
 	WRITE_PING(88, 2),
 	PLAYER_OP4(89, 3, true),
-	UNK_90(90, -1), //TODO another clan user click one
+	CLANCHANNEL_KICKUSER(90, -1),
 	FC_KICK(91, -1),
 	EMAIL_VALIDATION_ADD_NEW_ADDRESS(92, -2),
 	OBJECT_OP2(93, 9, true),
 	PLAYER_OP8(94, 3, true),
 	NPC_OP5(95, 3, true),
 	IF_OP1(96, 8, true),
-	UNK_97(97, -1), //cs2 driven something during login stage?
+	DEPRECATED_97_SERVERPACKET_52(97, -1), //cs2 driven something during login stage?
 	IF_ON_OBJECT(98, 17, true),
 	EMAIL_VALIDATION_CHANGE_ADDRESS(99, -2),
 	REPORT_ABUSE(100, -1),

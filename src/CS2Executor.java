@@ -27,14 +27,16 @@ public class CS2Executor {
 	boolean aBool7022;
 	int[] globalArrayLengths = new int[5];
 	int[][] globalArrays = new int[5][5000];
+	
 	int[] intStack = new int[1000];
 	int intStackPtr = 0;
-	Object[] stringStack = new Object[1000];
-	int stringStackPtr = 0;
 	long[] longStack = new long[1000];
 	int longStackPtr = 0;
+	Object[] stringStack = new Object[1000];
+	int stringStackPtr = 0;
+	
 	int anInt7002 = 0;
-	Class509[] returnValues = new Class509[50];
+	CS2ReturnValue[] returnValues = new CS2ReturnValue[50];
 	CS2Interface hookedInterface1 = new CS2Interface();
 	CS2Interface hookedInterface2 = new CS2Interface();
 	int anInt7015 = 0;

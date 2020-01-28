@@ -62,10 +62,10 @@ public class ItemDefinitions implements Definition {
     public int unknownInt19 = -1;
     public int unknownInt20 = -1;
     public int unknownInt21 = -1;
-    public int unknownInt22 = -1;
-    public int unknownInt23 = -1;
-    public int unknownInt27 = -1;
-    public int unknownInt28 = -1;
+    public int customCursorOp1 = -1;
+    public int customCursorId1 = -1;
+    public int customCursorOp2 = -1;
+    public int customCursorId2 = -1;
     public int[] quests;
     public int pickSizeShift = 0;
     int bindId = -1;
@@ -382,11 +382,11 @@ public class ItemDefinitions implements Definition {
                 this.unknownInt20 = stream.readUnsignedByte();
                 this.unknownInt21 = stream.readUnsignedShort();
             } else if (opcode == 129) {
-                this.unknownInt22 = stream.readUnsignedByte();
-                this.unknownInt23 = stream.readUnsignedShort();
+                this.customCursorOp1 = stream.readUnsignedByte();
+                this.customCursorId1 = stream.readUnsignedShort();
             } else if (opcode == 130) {
-                this.unknownInt27 = stream.readUnsignedByte();
-                this.unknownInt28 = stream.readUnsignedShort();
+                this.customCursorOp2 = stream.readUnsignedByte();
+                this.customCursorId2 = stream.readUnsignedShort();
             } else if (opcode == 132) {
                 i_4 = stream.readUnsignedByte();
                 this.quests = new int[i_4];

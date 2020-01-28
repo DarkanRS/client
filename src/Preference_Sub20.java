@@ -83,7 +83,7 @@ public class Preference_Sub20 extends Preference {
 		Class271.anInt3330 = index_0.getArchiveId("hint_mapedge");
 	}
 
-	public static BufferedConnectionContext method12807(int i_0) {
+	public static BufferedConnectionContext getConnectionContext() {
 		return Node_Sub17.inLobby(client.gameState) ? client.LOBBY_CONNECTION_CONTEXT : client.GAME_CONNECTION_CONTEXT;
 	}
 

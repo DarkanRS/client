@@ -7,8 +7,8 @@ public class NPC extends Entity {
 	public int headMeshModifierCount = 1;
 	public int anInt10575 = -1;
 	public VarNPCMap varns = new VarNPCMap();
-	int[] anIntArray10585 = new int[6];
-	int[] anIntArray10586 = new int[6];
+	int[] maxStats = new int[6];
+	int[] currStats = new int[6];
 	int anInt10587;
 	int anInt10588;
 	int anInt10589;
@@ -309,7 +309,7 @@ public class NPC extends Entity {
 	}
 
 	public int method16163(int i_1) {
-		return this.anIntArray10585[i_1];
+		return this.maxStats[i_1];
 	}
 
 	public boolean method15871() {
@@ -386,7 +386,7 @@ public class NPC extends Entity {
 			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+			if (Class393.preferences.characterShadows.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1080298347) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
@@ -473,7 +473,7 @@ public class NPC extends Entity {
 			NPCDefinitions npcdefinitions_9 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_10 = null;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
+			if (Class393.preferences.characterShadows.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
 				Animation animation_11 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-539713016) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_12 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_13 = SongReference.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.definitions.size, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11));
@@ -555,7 +555,7 @@ public class NPC extends Entity {
 			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+			if (Class393.preferences.characterShadows.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1093777602) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));
@@ -762,7 +762,7 @@ public class NPC extends Entity {
 	}
 
 	public int method16169(int i_1) {
-		return this.anIntArray10586[i_1];
+		return this.currStats[i_1];
 	}
 
 	final void method13015() {
@@ -793,8 +793,8 @@ public class NPC extends Entity {
 	}
 
 	public void method16179(int i_1, int i_2, int i_3) {
-		this.anIntArray10585[i_1] = i_2;
-		this.anIntArray10586[i_1] = i_3;
+		this.maxStats[i_1] = i_2;
+		this.currStats[i_1] = i_3;
 	}
 
 	public int method15899(int i_1) {
@@ -842,7 +842,7 @@ public class NPC extends Entity {
 			NPCDefinitions npcdefinitions_8 = this.definitions.transformTo != null ? this.definitions.getTransformed(Class158_Sub1.PLAYER_VAR_PROVIDER) : this.definitions;
 			this.aBool10312 = false;
 			Class285 class285_9 = null;
-			if (Class393.preferences.aPreference_Sub28_8212.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+			if (Class393.preferences.characterShadows.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
 				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(2108774285) ? this.currentAnimation : null;
 				MovingAnimation class456_sub3_11 = !this.aAnimation_Sub3_10337.hasDefs() || this.aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aAnimation_Sub3_10337;
 				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.definitions.size * -1156523463, this.aMeshRasterizerArray10372[0], this.definitions.aShort4874 & 0xffff, this.definitions.aShort4897 & 0xffff, this.definitions.aByte4883 & 0xff, this.definitions.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10));

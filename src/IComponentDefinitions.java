@@ -16,8 +16,8 @@ public class IComponentDefinitions {
 	public int anInt1433;
 	public int anInt1434;
 	public Animation anim;
-	public IComponentDefinitions[] aClass118Array1438;
-	public IComponentDefinitions[] aClass118Array1439;
+	public IComponentDefinitions[] slotChildren;
+	public IComponentDefinitions[] itemSlots;
 	public static int anInt1283 = 0;
 	public static int anInt1373 = 1;
 	public static int anInt1265 = 2;
@@ -165,7 +165,7 @@ public class IComponentDefinitions {
 	public boolean textAntiMacro = false;
 	public int anInt1378;
 	public IComponentDefinitions aClass118_1379;
-	public int anInt1426;
+	public int slotId2;
 	public int anInt1427;
 	public boolean wearCol;
 	public int anInt1404;
@@ -727,7 +727,7 @@ public class IComponentDefinitions {
 		this.anInt1382 = anInt1283;
 		this.useOptionString = "";
 		this.usesScripts = false;
-		this.anInt1426 = -1;
+		this.slotId2 = -1;
 		this.anInt1427 = 0;
 		this.wearCol = false;
 		this.anInt1404 = -1;

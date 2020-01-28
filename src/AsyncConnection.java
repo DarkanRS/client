@@ -3,7 +3,7 @@ import java.net.Socket;
 
 public class AsyncConnection extends Connection {
 
-	public static ClanChannel GUEST_CLAN_CHANNEL;
+	public static ClanChannel LISTENED_CLAN_CHANNEL;
 
 	Socket socket;
 

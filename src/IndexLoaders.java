@@ -386,16 +386,16 @@ public class IndexLoaders {
 			client.aBool7465 = Class393.preferences.safeMode.getValue((byte) -77) == 1;
 			Class393.preferences.setValue(Class393.preferences.safeMode, 1);
 			if (client.aBool7465) {
-				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
-			} else if (Class393.preferences.aPreference_Sub18_8214.aBool7914 && Class11.SYSTEM_INFO.ram < 512 && Class11.SYSTEM_INFO.ram != 0) {
-				Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, 0);
+				Class393.preferences.setValue(Class393.preferences.toolKit, 0);
+			} else if (Class393.preferences.toolKit.aBool7914 && Class11.SYSTEM_INFO.ram < 512 && Class11.SYSTEM_INFO.ram != 0) {
+				Class393.preferences.setValue(Class393.preferences.toolKit, 0);
 			}
 
 			Class190.savePreferences((byte) 125);
 			if (client.aBool7465) {
 				ParticleProducer.method11500(0, false);
 			} else {
-				ParticleProducer.method11500(Class393.preferences.aPreference_Sub18_8214.getValue(2116214746), false);
+				ParticleProducer.method11500(Class393.preferences.toolKit.getValue(2116214746), false);
 			}
 
 			UID192.method7373(Class393.preferences.screenSize.method12687(-2050547783), -1, -1, false, (byte) 65);

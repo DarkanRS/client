@@ -464,7 +464,7 @@ public class Login {
                             Class43.aLong420 = SongReference.MEMBERSHIP_END - Utils.time() - buffer.read5ByteInteger();
                             i_3 = buffer.readUnsignedByte();
                             client.IS_MEMBER = (i_3 & 0x1) != 0;
-                            Class509.IS_MEMBER_SUBSCRIPTION = (i_3 & 0x2) != 0;
+                            CS2ReturnValue.IS_MEMBER_SUBSCRIPTION = (i_3 & 0x2) != 0;
                             Class354.JCOINS = buffer.readInt();
                             Class469.LOYALTY_ENABLED = buffer.readUnsignedByte() == 1;
                             KeyHoldInputSubscriber.LOYALTY_BALANCE = buffer.readInt();
@@ -478,7 +478,7 @@ public class Login {
                             SendFinishedCutsceneAction.anInt8307 = buffer.readUnsignedShort();
                             UID192.anInt5357 = buffer.readUnsignedShort();
                             Class464.aBool5556 = buffer.readUnsignedByte() == 1;
-                            VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.aString10458 = buffer.readGJString();
+                            VertexNormal.MY_PLAYER.displayName = VertexNormal.MY_PLAYER.username = RuntimeException_Sub3.MY_PLAYER_USERNAME = buffer.readGJString();
                             RegionMap.anInt3644 = buffer.readUnsignedByte();
                             Class121.anInt1526 = buffer.readInt();
                             client.aBool7323 = buffer.readUnsignedByte() == 1;

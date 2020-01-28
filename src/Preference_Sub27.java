@@ -5,7 +5,7 @@ public class Preference_Sub27 extends Preference {
 	}
 
 	public void method12950(int i_1) {
-		if (this.manager.aPreference_Sub29_8201.method13050() == 2 && this.anInt5578 == 2) {
+		if (this.manager.toolkitDefault.method13050() == 2 && this.anInt5578 == 2) {
 			this.anInt5578 = 1;
 		}
 

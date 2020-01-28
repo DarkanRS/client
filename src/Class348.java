@@ -85,7 +85,7 @@ public class Class348 {
 		}
 		BloomPreference.method12708();
 		Class9.aBool71 = false;
-		Class509.method8739();
+		CS2ReturnValue.method8739();
 		client.anInt7427 = -1;
 		UnderlayIndexLoader.method8036(client.anInt7340);
 		VertexNormal.MY_PLAYER = new Player((SceneObjectManager) null);

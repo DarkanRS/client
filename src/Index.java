@@ -591,8 +591,12 @@ public final class Index {
 		return i_6;
 	}
 
-	public static IComponentDefinitions getIComponentDefinitions(int interfaceId, int i_1) {
-		IComponentDefinitions icomponentdefinitions_3 = IComponentDefinitions.getDefs(interfaceId);
-		return i_1 == -1 ? icomponentdefinitions_3 : (icomponentdefinitions_3 != null && icomponentdefinitions_3.aClass118Array1438 != null && i_1 < icomponentdefinitions_3.aClass118Array1438.length ? icomponentdefinitions_3.aClass118Array1438[i_1] : null);
+	public static IComponentDefinitions getIComponentDefinitions(int interfaceId, int slotId) {
+		IComponentDefinitions ifDef = IComponentDefinitions.getDefs(interfaceId);
+		if (slotId == -1)
+			return ifDef;
+		if (ifDef != null && ifDef.slotChildren != null && slotId < ifDef.slotChildren.length)
+			return ifDef.slotChildren[slotId];
+		return null;
 	}
 }

@@ -184,7 +184,7 @@ public class ClanVarDefinitions {
 			Class467[] arr_1 = Class386.method6671(Class274.aClass470_3336, 1629641091);
 			Class467[] arr_2 = new Class467[arr_1.length];
 			int i_3 = 0;
-			int i_4 = Class393.preferences.aPreference_Sub7_8210.method12666(527706569);
+			int i_4 = Class393.preferences.maxScreenSize.method12666(527706569);
 
 			label70: for (int i_5 = 0; i_5 < arr_1.length; i_5++) {
 				Class467 class467_10 = arr_1[i_5];

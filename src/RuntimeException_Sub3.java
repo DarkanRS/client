@@ -3,7 +3,7 @@ import java.applet.Applet;
 public class RuntimeException_Sub3 extends RuntimeException {
 
 	public static int anInt10457;
-	public static String aString10458;
+	public static String MY_PLAYER_USERNAME;
 	static long aLong10459;
 	public static Applet anApplet10460;
 	String aString10461;

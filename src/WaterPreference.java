@@ -27,7 +27,7 @@ public class WaterPreference extends Preference {
 	}
 
 	public int method7784(int i_1) {
-		return i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(1640668889) != 1 ? 2 : 1;
+		return i_1 != 0 && this.manager.groundBlending.method12762(1640668889) != 1 ? 2 : 1;
 	}
 
 	public WaterPreference(GamePreferences class282_sub54_1) {
@@ -43,7 +43,7 @@ public class WaterPreference extends Preference {
 	}
 
 	public int checkValid(int i_1) {
-		return i_1 != 0 && this.manager.aPreference_Sub17_8200.method12762(182985530) != 1 ? 2 : 1;
+		return i_1 != 0 && this.manager.groundBlending.method12762(182985530) != 1 ? 2 : 1;
 	}
 
 	public boolean method12923() {

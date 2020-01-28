@@ -504,7 +504,7 @@ public class FontRenderer_Sub1 extends FontRenderer {
 		}
 
 		if (Class393.preferences.currentToolkit.getValue(-1837910677) != i_0) {
-			Class393.preferences.setValue(Class393.preferences.aPreference_Sub18_8214, i_0);
+			Class393.preferences.setValue(Class393.preferences.toolKit, i_0);
 			ParticleProducer.method11500(i_0, false);
 		} else {
 			Class393.preferences.method13505(Class393.preferences.currentToolkit, true, -1708960758);

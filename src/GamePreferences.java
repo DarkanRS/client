@@ -7,24 +7,24 @@ public class GamePreferences extends Node {
 	public Preference_Sub4 aPreference_Sub4_8223;
 	public BloomPreference bloom;
 	public BrightnessPreference brightness;
-	public Preference_Sub1 aPreference_Sub1_8197;
+	public Preference_Sub1 buildArea;
 	public Preference_Sub16 aPreference_Sub16_8198;
-	public Preference_Sub26 aPreference_Sub26_8224;
+	public Preference_Sub26 flickeringEffects;
 	public FogPreference fog;
-	public Preference_Sub17 aPreference_Sub17_8200;
+	public Preference_Sub17 groundBlending;
 	public GroundDecorationPreference groundDecoration;
 	public IdleAnimationsPreference idleAnimations;
 	public LightDetailPreference lightDetail;
 	public SceneryShadowPreference sceneryShadows;
-	public Preference_Sub29 aPreference_Sub29_8201;
+	public Preference_Sub29 toolkitDefault;
 	public Preference_Sub20 particles;
-	public Preference_Sub27 aPreference_Sub27_8208;
+	public Preference_Sub27 removeRoofs;
 	public Preference_Sub27 removeRoofsOptionOverride;
-	public Preference_Sub7 aPreference_Sub7_8210;
-	public Preference_Sub14 aPreference_Sub14_8211;
-	public Preference_Sub28 aPreference_Sub28_8212;
+	public Preference_Sub7 maxScreenSize;
+	public Preference_Sub14 skyBoxes;
+	public Preference_Sub28 characterShadows;
 	public TexturesPreference textures;
-	public GraphicsToolkitPreference aPreference_Sub18_8214;
+	public GraphicsToolkitPreference toolKit;
 	public WaterPreference water;
 	public ScreenSizePreference screenSize;
 	public ScreenSizePreference aPreference_Sub9_8218;
@@ -66,38 +66,38 @@ public class GamePreferences extends Node {
 				this.aPreference_Sub4_8223 = new Preference_Sub4(this.antiAliasingDefault.method12641(-1510157435), this);
 				this.bloom = new BloomPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub1_8197 = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
+				this.buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 27) {
 					this.aPreference_Sub16_8198 = new Preference_Sub16(rsbytebuffer_1.readUnsignedByte(), this);
 				}
 
-				this.aPreference_Sub26_8224 = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
+				this.flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
 				this.fog = new FogPreference(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub17_8200 = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
+				this.groundBlending = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
 				this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.lightDetail = new LightDetailPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.sceneryShadows = new SceneryShadowPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 24) {
-					this.aPreference_Sub29_8201 = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
+					this.toolkitDefault = new Preference_Sub29(rsbytebuffer_1.readUnsignedByte(), this);
 				}
 
 				this.particles = new Preference_Sub20(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub27_8208 = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte(), this);
-				this.removeRoofsOptionOverride = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 37), this);
-				this.aPreference_Sub7_8210 = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
+				this.removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte(), this);
+				this.removeRoofsOptionOverride = new Preference_Sub27(this.removeRoofs.method12952((byte) 37), this);
+				this.maxScreenSize = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 >= 25) {
-					this.aPreference_Sub14_8211 = new Preference_Sub14(rsbytebuffer_1.readUnsignedByte(), this);
+					this.skyBoxes = new Preference_Sub14(rsbytebuffer_1.readUnsignedByte(), this);
 				}
 
-				this.aPreference_Sub28_8212 = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
+				this.characterShadows = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
 				if (i_3 <= 25) {
 					++rsbytebuffer_1.index;
 				}
 
 				this.textures = new TexturesPreference(rsbytebuffer_1.readUnsignedByte(), this);
-				this.aPreference_Sub18_8214 = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
-				this.currentToolkit = new GraphicsToolkitPreference(this.aPreference_Sub18_8214.getValue(-958077547), this);
+				this.toolKit = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
+				this.currentToolkit = new GraphicsToolkitPreference(this.toolKit.getValue(-958077547), this);
 				rsbytebuffer_1.readUnsignedByte();
 				this.water = new WaterPreference(rsbytebuffer_1.readUnsignedByte(), this);
 				this.screenSize = new ScreenSizePreference(rsbytebuffer_1.readUnsignedByte(), this);
@@ -143,24 +143,24 @@ public class GamePreferences extends Node {
 			this.brightness = new BrightnessPreference(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub1_8197 == null) {
-			this.aPreference_Sub1_8197 = new Preference_Sub1(this);
+		if (bool_1 || this.buildArea == null) {
+			this.buildArea = new Preference_Sub1(this);
 		}
 
 		if (bool_1 || this.aPreference_Sub16_8198 == null) {
 			this.aPreference_Sub16_8198 = new Preference_Sub16(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub26_8224 == null) {
-			this.aPreference_Sub26_8224 = new Preference_Sub26(this);
+		if (bool_1 || this.flickeringEffects == null) {
+			this.flickeringEffects = new Preference_Sub26(this);
 		}
 
 		if (bool_1 || this.fog == null) {
 			this.fog = new FogPreference(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub17_8200 == null) {
-			this.aPreference_Sub17_8200 = new Preference_Sub17(this);
+		if (bool_1 || this.groundBlending == null) {
+			this.groundBlending = new Preference_Sub17(this);
 		}
 
 		if (bool_1 || this.groundDecoration == null) {
@@ -179,44 +179,44 @@ public class GamePreferences extends Node {
 			this.sceneryShadows = new SceneryShadowPreference(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub29_8201 == null) {
-			this.aPreference_Sub29_8201 = new Preference_Sub29(this);
+		if (bool_1 || this.toolkitDefault == null) {
+			this.toolkitDefault = new Preference_Sub29(this);
 		}
 
 		if (bool_1 || this.particles == null) {
 			this.particles = new Preference_Sub20(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub27_8208 == null) {
-			this.aPreference_Sub27_8208 = new Preference_Sub27(this);
+		if (bool_1 || this.removeRoofs == null) {
+			this.removeRoofs = new Preference_Sub27(this);
 		}
 
 		if (bool_1 || this.removeRoofsOptionOverride == null) {
-			this.removeRoofsOptionOverride = new Preference_Sub27(this.aPreference_Sub27_8208.method12952((byte) 96), this);
+			this.removeRoofsOptionOverride = new Preference_Sub27(this.removeRoofs.method12952((byte) 96), this);
 		}
 
-		if (bool_1 || this.aPreference_Sub7_8210 == null) {
-			this.aPreference_Sub7_8210 = new Preference_Sub7(this);
+		if (bool_1 || this.maxScreenSize == null) {
+			this.maxScreenSize = new Preference_Sub7(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub14_8211 == null) {
-			this.aPreference_Sub14_8211 = new Preference_Sub14(this);
+		if (bool_1 || this.skyBoxes == null) {
+			this.skyBoxes = new Preference_Sub14(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub28_8212 == null) {
-			this.aPreference_Sub28_8212 = new Preference_Sub28(this);
+		if (bool_1 || this.characterShadows == null) {
+			this.characterShadows = new Preference_Sub28(this);
 		}
 
 		if (bool_1 || this.textures == null) {
 			this.textures = new TexturesPreference(this);
 		}
 
-		if (bool_1 || this.aPreference_Sub18_8214 == null) {
-			this.aPreference_Sub18_8214 = new GraphicsToolkitPreference(this);
+		if (bool_1 || this.toolKit == null) {
+			this.toolKit = new GraphicsToolkitPreference(this);
 		}
 
 		if (bool_1 || this.currentToolkit == null) {
-			this.currentToolkit = new GraphicsToolkitPreference(this.aPreference_Sub18_8214.getValue(-1125192103), this);
+			this.currentToolkit = new GraphicsToolkitPreference(this.toolKit.getValue(-1125192103), this);
 		}
 
 		if (bool_1 || this.water == null) {
@@ -284,13 +284,13 @@ public class GamePreferences extends Node {
 	void method13498(RsByteBuffer rsbytebuffer_1, int i_2) {
 		this.brightness = new BrightnessPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		++rsbytebuffer_1.index;
-		this.aPreference_Sub27_8208 = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
+		this.removeRoofs = new Preference_Sub27(rsbytebuffer_1.readUnsignedByte() + 1, this);
 		this.groundDecoration = new GroundDecorationPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		++rsbytebuffer_1.index;
 		this.idleAnimations = new IdleAnimationsPreference(rsbytebuffer_1.readUnsignedByte(), this);
-		this.aPreference_Sub26_8224 = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
+		this.flickeringEffects = new Preference_Sub26(rsbytebuffer_1.readUnsignedByte(), this);
 		rsbytebuffer_1.readUnsignedByte();
-		this.aPreference_Sub28_8212 = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
+		this.characterShadows = new Preference_Sub28(rsbytebuffer_1.readUnsignedByte(), this);
 		int i_4 = rsbytebuffer_1.readUnsignedByte();
 		int i_5 = 0;
 		if (i_2 >= 17) {
@@ -357,7 +357,7 @@ public class GamePreferences extends Node {
 		}
 
 		if (i_2 >= 9) {
-			this.aPreference_Sub1_8197 = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
+			this.buildArea = new Preference_Sub1(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 10) {
@@ -373,11 +373,11 @@ public class GamePreferences extends Node {
 		}
 
 		if (i_2 >= 13) {
-			this.aPreference_Sub17_8200 = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
+			this.groundBlending = new Preference_Sub17(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 14) {
-			this.aPreference_Sub18_8214 = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
+			this.toolKit = new GraphicsToolkitPreference(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 15) {
@@ -393,7 +393,7 @@ public class GamePreferences extends Node {
 		}
 
 		if (i_2 >= 19) {
-			this.aPreference_Sub7_8210 = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
+			this.maxScreenSize = new Preference_Sub7(rsbytebuffer_1.readUnsignedByte(), this);
 		}
 
 		if (i_2 >= 22) {
@@ -408,23 +408,23 @@ public class GamePreferences extends Node {
 		/*1*/rsbytebuffer_2.writeByte(this.antiAliasingDefault.method12641(1497480561));
 		/*2*/rsbytebuffer_2.writeByte(this.bloom.method12706((byte) 95));
 		/*3*/rsbytebuffer_2.writeByte(this.brightness.method12865());
-		/*4*/rsbytebuffer_2.writeByte(this.aPreference_Sub1_8197.method12615(-462784918));
+		/*4*/rsbytebuffer_2.writeByte(this.buildArea.method12615(-462784918));
 		/*5*/rsbytebuffer_2.writeByte(this.aPreference_Sub16_8198.method12750());
-		/*6*/rsbytebuffer_2.writeByte(this.aPreference_Sub26_8224.method12943(975799184));
+		/*6*/rsbytebuffer_2.writeByte(this.flickeringEffects.method12943(975799184));
 		/*7*/rsbytebuffer_2.writeByte(this.fog.method13417(-1899817216));
-		/*8*/rsbytebuffer_2.writeByte(this.aPreference_Sub17_8200.method12762(-140573));
+		/*8*/rsbytebuffer_2.writeByte(this.groundBlending.method12762(-140573));
 		/*9*/rsbytebuffer_2.writeByte(this.groundDecoration.method12897((byte) 75));
 		/*10*/rsbytebuffer_2.writeByte(this.idleAnimations.getValue());
 		/*11*/rsbytebuffer_2.writeByte(this.lightDetail.method12786());
 		/*12*/rsbytebuffer_2.writeByte(this.sceneryShadows.method12624((byte) -37));
-		/*13*/rsbytebuffer_2.writeByte(this.aPreference_Sub29_8201.method13050());
+		/*13*/rsbytebuffer_2.writeByte(this.toolkitDefault.method13050());
 		/*14*/rsbytebuffer_2.writeByte(this.particles.method12794());
-		/*15*/rsbytebuffer_2.writeByte(this.aPreference_Sub27_8208.method12952((byte) 121));
-		/*16*/rsbytebuffer_2.writeByte(this.aPreference_Sub7_8210.method12666(141061966));
-		/*17*/rsbytebuffer_2.writeByte(this.aPreference_Sub14_8211.method12728());
-		/*18*/rsbytebuffer_2.writeByte(this.aPreference_Sub28_8212.method12966((byte) -41));
+		/*15*/rsbytebuffer_2.writeByte(this.removeRoofs.method12952((byte) 121));
+		/*16*/rsbytebuffer_2.writeByte(this.maxScreenSize.method12666(141061966));
+		/*17*/rsbytebuffer_2.writeByte(this.skyBoxes.method12728());
+		/*18*/rsbytebuffer_2.writeByte(this.characterShadows.method12966((byte) -41));
 		/*19*/rsbytebuffer_2.writeByte(this.textures.method12873(2145197376));
-		/*20*/rsbytebuffer_2.writeByte(this.aPreference_Sub18_8214.getValue(-120460114));
+		/*20*/rsbytebuffer_2.writeByte(this.toolKit.getValue(-120460114));
 		/*21*/rsbytebuffer_2.writeByte(0);
 		/*22*/rsbytebuffer_2.writeByte(this.water.getValue());
 		/*23*/rsbytebuffer_2.writeByte(this.screenSize.method12687(416506379));
@@ -448,24 +448,24 @@ public class GamePreferences extends Node {
 		this.aPreference_Sub4_8223.method12639((byte) -23);
 		this.bloom.method12703();
 		this.brightness.method12861();
-		this.aPreference_Sub1_8197.method12616();
+		this.buildArea.method12616();
 		this.aPreference_Sub16_8198.method12749();
-		this.aPreference_Sub26_8224.method12941();
+		this.flickeringEffects.method12941();
 		this.fog.method13415();
-		this.aPreference_Sub17_8200.method12767();
+		this.groundBlending.method12767();
 		this.groundDecoration.method12898();
 		this.idleAnimations.method12741();
 		this.lightDetail.method12785();
 		this.sceneryShadows.method12627();
-		this.aPreference_Sub29_8201.method13048();
+		this.toolkitDefault.method13048();
 		this.particles.method12793();
-		this.aPreference_Sub27_8208.method12950(1301389562);
+		this.removeRoofs.method12950(1301389562);
 		this.removeRoofsOptionOverride.method12950(221369371);
-		this.aPreference_Sub7_8210.method12663();
-		this.aPreference_Sub14_8211.method12725();
-		this.aPreference_Sub28_8212.method12959();
+		this.maxScreenSize.method12663();
+		this.skyBoxes.method12725();
+		this.characterShadows.method12959();
 		this.textures.method12871();
-		this.aPreference_Sub18_8214.method12773(-132030593);
+		this.toolKit.method12773(-132030593);
 		this.currentToolkit.method12773(-1630198990);
 		this.water.method12918();
 		this.screenSize.method12684((byte) -10);
