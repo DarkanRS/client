@@ -185,7 +185,7 @@ public class Projectile extends Transform_Sub1_Sub1 {
 
 	void method15905(GraphicalRenderer graphicalrenderer_1, MeshRasterizer meshrasterizer_2, Matrix44Var matrix44var_3, short s_4) {
 		meshrasterizer_2.method11273(matrix44var_3);
-		Surface[] arr_5 = meshrasterizer_2.method11253();
+		ParticleEmitterConfig[] arr_5 = meshrasterizer_2.method11253();
 		SurfaceSkin[] arr_6 = meshrasterizer_2.method11274();
 		if ((this.aClass539_10402 == null || this.aClass539_10402.aBool7132) && (arr_5 != null || arr_6 != null)) {
 			this.aClass539_10402 = ParticleSystem.method11557(client.cycles, true);

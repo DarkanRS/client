@@ -134,10 +134,6 @@ public class ParticleArchive1Def {
 		ItemContainer.aClass229_7712.method3859();
 	}
 
-	static OutgoingLoginPacket[] getOutgoingLoginPackets() {
-		return new OutgoingLoginPacket[] { OutgoingLoginPacket.GAMELOGIN_CONTINUE, OutgoingLoginPacket.LOBBYLOGIN, OutgoingLoginPacket.INIT_JS5REMOTE_CONNECTION, OutgoingLoginPacket.GAMELOGIN, OutgoingLoginPacket.INIT_GAME_CONNECTION, OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN, OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT, OutgoingLoginPacket.CHECK_WORLD_SUITABILITY, OutgoingLoginPacket.SSL_WEBCONNECTION, OutgoingLoginPacket.INIT_SOCIAL_NETWORK_CONNECTION, OutgoingLoginPacket.REQUEST_WORLDLIST };
-	}
-
 	static void worldLogin(String string_0, String string_1, int i_2) {
 		Class9.lobbyStage = 273;
 		Class9.CURRENT_CONNECTION_CONTEXT = client.GAME_CONNECTION_CONTEXT;

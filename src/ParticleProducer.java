@@ -14,7 +14,7 @@ public class ParticleProducer {
 	boolean aBool7118 = false;
 	boolean unmoved = false;
 	boolean aBool7107 = false;
-	Surface aClass87_7110;
+	ParticleEmitterConfig aClass87_7110;
 	ParticleSystem parent;
 	long startTime;
 	ParticleProducerDefinition definition;
@@ -241,7 +241,7 @@ public class ParticleProducer {
 
 	}
 
-	ParticleProducer(GraphicalRenderer graphicalrenderer_1, Surface class87_2, ParticleSystem class539_3, long long_4) {
+	ParticleProducer(GraphicalRenderer graphicalrenderer_1, ParticleEmitterConfig class87_2, ParticleSystem class539_3, long long_4) {
 		this.aClass87_7110 = class87_2;
 		this.parent = class539_3;
 		this.startTime = long_4;

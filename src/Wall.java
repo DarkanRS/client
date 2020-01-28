@@ -405,7 +405,7 @@ public class Wall extends Transform_Sub1_Sub5 implements SceneObject {
 		}
 
 		i_1 = PlaySynthCutsceneAction.anInt9368 * 512 + 256;
-		i_2 = OutgoingLoginPacket.anInt4280 * 512 + 256;
+		i_2 = IdentiKitIndexLoader.anInt4280 * 512 + 256;
 		i_3 = Class504.getTerrainHeightAtPos(i_1, i_2, Class4.MY_PLAYER_PLANE) - Class121.anInt1527;
 		int i_4 = i_1 - IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX;
 		int i_5 = i_3 - Class109_Sub1.CAM_MOVE_ABSOLUTEZ;

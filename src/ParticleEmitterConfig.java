@@ -1,7 +1,7 @@
-public class Surface {
+public class ParticleEmitterConfig {
 
 	public int anInt834;
-	public Surface aClass87_835;
+	public ParticleEmitterConfig aClass87_835;
 	public int anInt840;
 	public int anInt841;
 	public int anInt843;
@@ -10,26 +10,26 @@ public class Surface {
 	public int anInt846;
 	public int anInt847;
 	public int anInt848;
-	int anInt842;
-	public int anInt836;
-	public int anInt837;
-	public int anInt838;
-	public byte aByte839;
+	int type;
+	public int faceX;
+	public int faceY;
+	public int faceZ;
+	public byte priority;
 
 	public ParticleProducerDefinition method1485() {
-		return Node_Sub11_Sub1.getParticleProducerDefs(this.anInt842);
+		return Node_Sub11_Sub1.getParticleProducerDefs(this.type);
 	}
 
-	Surface method1488(int i_1, int i_2, int i_3) {
-		return new Surface(this.anInt842, i_1, i_2, i_3, this.aByte839);
+	ParticleEmitterConfig method1488(int i_1, int i_2, int i_3) {
+		return new ParticleEmitterConfig(this.type, i_1, i_2, i_3, this.priority);
 	}
 
-	Surface(int i_1, int i_2, int i_3, int i_4, byte b_5) {
-		this.anInt842 = i_1;
-		this.anInt836 = i_2;
-		this.anInt837 = i_3;
-		this.anInt838 = i_4;
-		this.aByte839 = b_5;
+	ParticleEmitterConfig(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+		this.type = i_1;
+		this.faceX = i_2;
+		this.faceY = i_3;
+		this.faceZ = i_4;
+		this.priority = b_5;
 	}
 
 	public static AccountCreationResponseOpcodes method1489() {

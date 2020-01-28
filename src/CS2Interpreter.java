@@ -6748,7 +6748,7 @@ public class CS2Interpreter {
 					VarBitDefinitions.method3805();
 					Class260.aBool3220 = false;
 				} else {
-					Surface.method1491(i_2, (byte) -25);
+					ParticleEmitterConfig.method1491(i_2, (byte) -25);
 				}
 			}
 			Class393.preferences.setValue(Class393.preferences.musicVolume, i_2);
@@ -7205,7 +7205,7 @@ public class CS2Interpreter {
 					VarBitDefinitions.method3805();
 					Class260.aBool3220 = false;
 				} else {
-					Surface.method1491(i_2, (byte) -14);
+					ParticleEmitterConfig.method1491(i_2, (byte) -14);
 				}
 			}
 			Class393.preferences.setValue(Class393.preferences.aPreference_Sub13_8229, i_2);
@@ -8395,7 +8395,7 @@ public class CS2Interpreter {
 	}
 
 	static final void method5205(CS2Executor executor) {
-		executor.intStack[++executor.intStackPtr - 1] = Surface.method1489().getValue();
+		executor.intStack[++executor.intStackPtr - 1] = ParticleEmitterConfig.method1489().getValue();
 	}
 
 	static final void modulo(CS2Executor executor) {

@@ -10,6 +10,8 @@ public class IdentiKitIndexLoader implements IndexLoader {
 
 	Index aClass317_359;
 
+	public static int anInt4280;
+
 	public IdentikitDefinition getIdentiKit(int i_1) {
 		SoftCache softcache_4 = this.aClass229_360;
 		IdentikitDefinition class44_3;

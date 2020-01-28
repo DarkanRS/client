@@ -38,7 +38,7 @@ public class Particle extends PointEntity {
 		this.aShort10424 = (short) i_6;
 		this.aShort10430 = (short) i_7;
 		this.speed = i_8;
-		this.aByte10211 = this.producer.aClass87_7110.aByte839;
+		this.aByte10211 = this.producer.aClass87_7110.priority;
 		this.link();
 	}
 
@@ -186,7 +186,7 @@ public class Particle extends PointEntity {
 		this.aShort10424 = (short) i_6;
 		this.aShort10430 = (short) i_7;
 		this.speed = i_8;
-		this.aByte10211 = this.producer.aClass87_7110.aByte839;
+		this.aByte10211 = this.producer.aClass87_7110.priority;
 		this.link();
 	}
 

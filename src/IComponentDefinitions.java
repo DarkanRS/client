@@ -514,7 +514,7 @@ public class IComponentDefinitions {
 
 	public void method1991(GraphicalRenderer graphicalrenderer_1, MeshRasterizer meshrasterizer_2, Matrix44Var matrix44var_3, int i_4) {
 		meshrasterizer_2.method11273(matrix44var_3);
-		Surface[] arr_6 = meshrasterizer_2.method11253();
+		ParticleEmitterConfig[] arr_6 = meshrasterizer_2.method11253();
 		SurfaceSkin[] arr_7 = meshrasterizer_2.method11274();
 		if ((this.particleSystem == null || this.particleSystem.aBool7132) && (arr_6 != null || arr_7 != null)) {
 			this.particleSystem = ParticleSystem.method11557(i_4, false);

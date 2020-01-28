@@ -150,7 +150,7 @@ public class Class190 {
 		Class454.CAM_MOVE_CONST_SPEED = 0;
 		Class115.CAM_MOVE_VAR_SPEED = 0;
 		PlaySynthCutsceneAction.anInt9368 = 0;
-		OutgoingLoginPacket.anInt4280 = 0;
+		IdentiKitIndexLoader.anInt4280 = 0;
 		Class121.anInt1527 = 0;
 		LinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;

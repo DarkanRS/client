@@ -66,7 +66,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 	int[] anIntArray8944;
 	int[] anIntArray8946;
 	int[] anIntArray8952;
-	Surface[] aClass87Array8949;
+	ParticleEmitterConfig[] aClass87Array8949;
 	SurfaceSkin[] aClass172Array8950;
 	boolean aBool8919;
 	static long[] aLongArray8955;
@@ -1062,7 +1062,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 		this.anIntArray8931 = rsmesh_2.vertexZ;
 		this.aShortArray8905 = rsmesh_2.aShortArray1980;
 		Class36[] arr_64 = new Class36[this.anInt8910];
-		this.aClass87Array8949 = rsmesh_2.surfaces;
+		this.aClass87Array8949 = rsmesh_2.particleConfig;
 		this.aClass172Array8950 = rsmesh_2.surfaceSkins;
 		int i_79;
 		if (rsmesh_2.isolatedVertexNormals != null) {
@@ -2625,7 +2625,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 		return this.aClass172Array8950;
 	}
 
-	public Surface[] method11253() {
+	public ParticleEmitterConfig[] method11253() {
 		return this.aClass87Array8949;
 	}
 
@@ -2635,21 +2635,21 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 		int i_3;
 		if (this.aClass87Array8949 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array8949.length; i_3++) {
-				Surface class87_4 = this.aClass87Array8949[i_3];
-				Surface class87_5 = class87_4;
+				ParticleEmitterConfig class87_4 = this.aClass87Array8949[i_3];
+				ParticleEmitterConfig class87_5 = class87_4;
 				if (class87_4.aClass87_835 != null) {
 					class87_5 = class87_4.aClass87_835;
 				}
 
-				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt836] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt836] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt836]);
-				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt836] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt836] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt836]);
-				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt836] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt836] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt836]);
-				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt837] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt837] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt837]);
-				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt837] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt837] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt837]);
-				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt837] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt837] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt837]);
-				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt838] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt838] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt838]);
-				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt838] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt838] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt838]);
-				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt838] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt838] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt838]);
+				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceX] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceX] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceX]);
+				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceX] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceX] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceX]);
+				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceX] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceX] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceX]);
+				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceY] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceY] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceY]);
+				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceY] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceY] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceY]);
+				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceY] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceY] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceY]);
+				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceZ] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceZ] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceZ]);
+				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceZ] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceZ] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceZ]);
+				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceZ] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceZ] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceZ]);
 			}
 		}
 
@@ -4336,7 +4336,7 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 		this.aBool8937 = false;
 	}
 
-	public Surface[] method11300() {
+	public ParticleEmitterConfig[] method11300() {
 		return this.aClass87Array8949;
 	}
 
@@ -5598,21 +5598,21 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 		int i_3;
 		if (this.aClass87Array8949 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array8949.length; i_3++) {
-				Surface class87_4 = this.aClass87Array8949[i_3];
-				Surface class87_5 = class87_4;
+				ParticleEmitterConfig class87_4 = this.aClass87Array8949[i_3];
+				ParticleEmitterConfig class87_5 = class87_4;
 				if (class87_4.aClass87_835 != null) {
 					class87_5 = class87_4.aClass87_835;
 				}
 
-				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt836 * 1502404273 * -1572033967]) * -1929058355 * -75866875;
-				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt836 * 1502404273 * -1572033967]) * 996785411 * 1618253227;
-				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt836 * 1502404273 * -1572033967]) * 976806429 * -489230283;
-				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt837 * -2021469179 * -1955014451]) * -458323579 * 1747322701;
-				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt837 * -2021469179 * -1955014451]) * 543149547 * -174394685;
-				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt837 * -2021469179 * -1955014451]) * 1054448197 * 305293453;
-				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt838 * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
-				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt838 * -1292195173 * -2135413869]) * -1652520905 * 950906247;
-				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt838 * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
+				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceX * 1502404273 * -1572033967]) * -1929058355 * -75866875;
+				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceX * 1502404273 * -1572033967]) * 996785411 * 1618253227;
+				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceX * 1502404273 * -1572033967]) * 976806429 * -489230283;
+				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceY * -2021469179 * -1955014451]) * -458323579 * 1747322701;
+				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceY * -2021469179 * -1955014451]) * 543149547 * -174394685;
+				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceY * -2021469179 * -1955014451]) * 1054448197 * 305293453;
+				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceZ * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
+				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceZ * -1292195173 * -2135413869]) * -1652520905 * 950906247;
+				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceZ * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
 			}
 		}
 
@@ -5644,21 +5644,21 @@ public class MeshRasterizer_Sub3 extends MeshRasterizer {
 		int i_3;
 		if (this.aClass87Array8949 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array8949.length; i_3++) {
-				Surface class87_4 = this.aClass87Array8949[i_3];
-				Surface class87_5 = class87_4;
+				ParticleEmitterConfig class87_4 = this.aClass87Array8949[i_3];
+				ParticleEmitterConfig class87_5 = class87_4;
 				if (class87_4.aClass87_835 != null) {
 					class87_5 = class87_4.aClass87_835;
 				}
 
-				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt836 * 1502404273 * -1572033967]) * -1929058355 * -75866875;
-				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt836 * 1502404273 * -1572033967]) * 996785411 * 1618253227;
-				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt836 * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt836 * 1502404273 * -1572033967]) * 976806429 * -489230283;
-				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt837 * -2021469179 * -1955014451]) * -458323579 * 1747322701;
-				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt837 * -2021469179 * -1955014451]) * 543149547 * -174394685;
-				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt837 * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt837 * -2021469179 * -1955014451]) * 1054448197 * 305293453;
-				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.anInt838 * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
-				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.anInt838 * -1292195173 * -2135413869]) * -1652520905 * 950906247;
-				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.anInt838 * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.anInt838 * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
+				class87_5.anInt844 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceX * 1502404273 * -1572033967]) * -1929058355 * -75866875;
+				class87_5.anInt841 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceX * 1502404273 * -1572033967]) * 996785411 * 1618253227;
+				class87_5.anInt847 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceX * 1502404273 * -1572033967] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceX * 1502404273 * -1572033967]) * 976806429 * -489230283;
+				class87_5.anInt834 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceY * -2021469179 * -1955014451]) * -458323579 * 1747322701;
+				class87_5.anInt843 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceY * -2021469179 * -1955014451]) * 543149547 * -174394685;
+				class87_5.anInt845 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceY * -2021469179 * -1955014451] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceY * -2021469179 * -1955014451]) * 1054448197 * 305293453;
+				class87_5.anInt846 = (int) (matrix44arr_2.buf[12] + matrix44arr_2.buf[0] * (float) this.anIntArray8901[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[4] * (float) this.anIntArray8902[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[8] * (float) this.anIntArray8931[class87_4.faceZ * -1292195173 * -2135413869]) * 1348028043 * 1878552867;
+				class87_5.anInt840 = (int) (matrix44arr_2.buf[13] + matrix44arr_2.buf[1] * (float) this.anIntArray8901[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[5] * (float) this.anIntArray8902[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[9] * (float) this.anIntArray8931[class87_4.faceZ * -1292195173 * -2135413869]) * -1652520905 * 950906247;
+				class87_5.anInt848 = (int) (matrix44arr_2.buf[14] + matrix44arr_2.buf[2] * (float) this.anIntArray8901[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[6] * (float) this.anIntArray8902[class87_4.faceZ * -1292195173 * -2135413869] + matrix44arr_2.buf[10] * (float) this.anIntArray8931[class87_4.faceZ * -1292195173 * -2135413869]) * 1757672349 * -1923011915;
 			}
 		}
 

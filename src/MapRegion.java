@@ -589,7 +589,7 @@ public class MapRegion {
 			Class296.CAM_MOVE_LOCALX -= i_3;
 			IFSubNode.CAM_MOVE_LOCALY -= i_4;
 			PlaySynthCutsceneAction.anInt9368 -= i_3;
-			OutgoingLoginPacket.anInt4280 -= i_4;
+			IdentiKitIndexLoader.anInt4280 -= i_4;
 			IdentiKitIndexLoader.CAM_MOVE_ABSOLUTEX -= i_3 * 512;
 			Class246.CAM_MOVE_ABSOLUTEY -= i_4 * 512;
 			if (Math.abs(i_3) > this.sizeX || Math.abs(i_4) > this.sizeY) {

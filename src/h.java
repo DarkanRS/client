@@ -3,7 +3,7 @@ public class h extends MeshRasterizer implements Interface40 {
 	long nativeid;
 	ja aja7140;
 	ba aba7141;
-	Surface[] aClass87Array7139;
+	ParticleEmitterConfig[] aClass87Array7139;
 	SurfaceSkin[] aClass172Array7142;
 
 	public void method11299(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4, boolean bool_5) {
@@ -31,7 +31,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		int i_3;
 		if (this.aClass87Array7139 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
-				Surface class87_4 = this.aClass87Array7139[i_3];
+				ParticleEmitterConfig class87_4 = this.aClass87Array7139[i_3];
 				class87_4.anInt844 = ja.aa[i_2++];
 				class87_4.anInt841 = ja.aa[i_2++];
 				class87_4.anInt847 = ja.aa[i_2++];
@@ -122,18 +122,18 @@ public class h extends MeshRasterizer implements Interface40 {
 	h(ja ja_1, ba ba_2, RSMesh rsmesh_3, int i_4, int i_5, int i_6, int i_7) {
 		this.aja7140 = ja_1;
 		this.aba7141 = ba_2;
-		this.aClass87Array7139 = rsmesh_3.surfaces;
+		this.aClass87Array7139 = rsmesh_3.particleConfig;
 		this.aClass172Array7142 = rsmesh_3.surfaceSkins;
-		int i_8 = rsmesh_3.surfaces == null ? 0 : rsmesh_3.surfaces.length;
+		int i_8 = rsmesh_3.particleConfig == null ? 0 : rsmesh_3.particleConfig.length;
 		int i_9 = rsmesh_3.surfaceSkins == null ? 0 : rsmesh_3.surfaceSkins.length;
 		int i_10 = 0;
 		int[] ints_11 = new int[i_9 + i_8 * 3];
 
 		int i_12;
 		for (i_12 = 0; i_12 < i_8; i_12++) {
-			ints_11[i_10++] = this.aClass87Array7139[i_12].anInt836;
-			ints_11[i_10++] = this.aClass87Array7139[i_12].anInt837;
-			ints_11[i_10++] = this.aClass87Array7139[i_12].anInt838;
+			ints_11[i_10++] = this.aClass87Array7139[i_12].faceX;
+			ints_11[i_10++] = this.aClass87Array7139[i_12].faceY;
+			ints_11[i_10++] = this.aClass87Array7139[i_12].faceZ;
 		}
 
 		for (i_12 = 0; i_12 < i_9; i_12++) {
@@ -163,7 +163,7 @@ public class h extends MeshRasterizer implements Interface40 {
 			ints_13[i_14++] = class84_16.anInt811;
 		}
 
-		this.U(this.aja7140, this.aba7141, rsmesh_3.vertexCount, rsmesh_3.maxDepth, rsmesh_3.vertexX, rsmesh_3.vertexY, rsmesh_3.vertexZ, rsmesh_3.vertexSkins, rsmesh_3.aShortArray1980, rsmesh_3.faceCount, rsmesh_3.triangleX, rsmesh_3.triangleY, rsmesh_3.triangleZ, rsmesh_3.faceType, rsmesh_3.facePriorities, rsmesh_3.faceAlphas, rsmesh_3.texturePos, rsmesh_3.faceColor, rsmesh_3.faceTextures, rsmesh_3.textureSkins, rsmesh_3.priority, rsmesh_3.aShortArray1981, rsmesh_3.numTextureTriangles, rsmesh_3.textureRenderTypes, rsmesh_3.texTriX, rsmesh_3.texTriY, rsmesh_3.texTriZ, rsmesh_3.particleDirectionX, rsmesh_3.particleDirectionY, rsmesh_3.particleDirectionZ, rsmesh_3.particleLifespanX, rsmesh_3.particleLifespanY, rsmesh_3.particleLifespanZ, rsmesh_3.texturePrimaryColor, rsmesh_3.textureSecondaryColor, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
+		this.U(this.aja7140, this.aba7141, rsmesh_3.vertexCount, rsmesh_3.maxDepth, rsmesh_3.vertexX, rsmesh_3.vertexY, rsmesh_3.vertexZ, rsmesh_3.vertexSkins, rsmesh_3.aShortArray1980, rsmesh_3.faceCount, rsmesh_3.triangleX, rsmesh_3.triangleY, rsmesh_3.triangleZ, rsmesh_3.faceType, rsmesh_3.facePriorities, rsmesh_3.faceAlphas, rsmesh_3.texturePos, rsmesh_3.faceColor, rsmesh_3.faceTextures, rsmesh_3.textureSkins, rsmesh_3.priority, rsmesh_3.aShortArray1981, rsmesh_3.texturedFaceCount, rsmesh_3.textureRenderTypes, rsmesh_3.texTriX, rsmesh_3.texTriY, rsmesh_3.texTriZ, rsmesh_3.particleDirectionX, rsmesh_3.particleDirectionY, rsmesh_3.particleDirectionZ, rsmesh_3.particleLifespanX, rsmesh_3.particleLifespanY, rsmesh_3.particleLifespanZ, rsmesh_3.texturePrimaryColor, rsmesh_3.textureSecondaryColor, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
 	}
 
 	native void J(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
@@ -248,7 +248,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native boolean u();
 
-	public Surface[] method11253() {
+	public ParticleEmitterConfig[] method11253() {
 		return this.aClass87Array7139;
 	}
 
@@ -403,7 +403,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		int i_3;
 		if (this.aClass87Array7139 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
-				Surface class87_4 = this.aClass87Array7139[i_3];
+				ParticleEmitterConfig class87_4 = this.aClass87Array7139[i_3];
 				class87_4.anInt844 = ja.aa[i_2++] * -1929058355 * -75866875;
 				class87_4.anInt841 = ja.aa[i_2++] * 996785411 * 1618253227;
 				class87_4.anInt847 = ja.aa[i_2++] * 976806429 * -489230283;
@@ -502,7 +502,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void cy(int var1, int var2, int var3, int var4);
 
-	public Surface[] method11300() {
+	public ParticleEmitterConfig[] method11300() {
 		return this.aClass87Array7139;
 	}
 
@@ -601,7 +601,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		int i_3;
 		if (this.aClass87Array7139 != null) {
 			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
-				Surface class87_4 = this.aClass87Array7139[i_3];
+				ParticleEmitterConfig class87_4 = this.aClass87Array7139[i_3];
 				class87_4.anInt844 = ja.aa[i_2++] * -1929058355 * -75866875;
 				class87_4.anInt841 = ja.aa[i_2++] * 996785411 * 1618253227;
 				class87_4.anInt847 = ja.aa[i_2++] * 976806429 * -489230283;

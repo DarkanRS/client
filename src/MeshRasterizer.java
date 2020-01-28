@@ -4,7 +4,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void bc(int var1, int var2, Ground var3, Ground var4, int var5, int var6, int var7);
 
-	public abstract Surface[] method11253();
+	public abstract ParticleEmitterConfig[] method11253();
 
 	public abstract int o();
 
@@ -68,7 +68,7 @@ public abstract class MeshRasterizer {
 		int[] ints_6 = null;
 		float[][] floats_7 = null;
 		if (rsmesh_1.texturePos != null) {
-			int i_8 = rsmesh_1.numTextureTriangles;
+			int i_8 = rsmesh_1.texturedFaceCount;
 			int[] ints_9 = new int[i_8];
 			int[] ints_10 = new int[i_8];
 			int[] ints_11 = new int[i_8];
@@ -860,7 +860,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void cy(int var1, int var2, int var3, int var4);
 
-	public abstract Surface[] method11300();
+	public abstract ParticleEmitterConfig[] method11300();
 
 	public abstract void p(int var1);
 

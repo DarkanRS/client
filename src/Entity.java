@@ -242,7 +242,7 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 			int i_9 = 0;
 			int i_10 = -1;
 			int i_11 = -1;
-			Surface[][] arr_12 = new Surface[arr_2.length][];
+			ParticleEmitterConfig[][] arr_12 = new ParticleEmitterConfig[arr_2.length][];
 			SurfaceSkin[][] arr_13 = new SurfaceSkin[arr_2.length][];
 
 			for (int i_14 = 0; i_14 < arr_2.length; i_14++) {
@@ -270,11 +270,11 @@ public abstract class Entity extends Transform_Sub1_Sub1 {
 
 			if (this.aClass539_10369 != null) {
 				Object obj_20 = null;
-				Surface[] arr_15;
+				ParticleEmitterConfig[] arr_15;
 				if (i_7 == 1) {
 					arr_15 = arr_12[i_10];
 				} else {
-					arr_15 = new Surface[i_6];
+					arr_15 = new ParticleEmitterConfig[i_6];
 					int i_21 = 0;
 
 					for (int i_22 = 0; i_22 < arr_2.length; i_22++) {
