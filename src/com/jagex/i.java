@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class i extends Ground implements Interface40 {
 
 	long nativeid;
