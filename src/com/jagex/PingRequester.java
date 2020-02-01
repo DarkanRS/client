@@ -1,11 +1,12 @@
 package com.jagex;
-import jaclib.ping.Ping;
 import java.awt.Desktop;
 import java.awt.Desktop.Action;
 import java.net.InetAddress;
 import java.net.URI;
 import java.util.LinkedList;
 import java.util.Queue;
+
+import jaclib.ping.Ping;
 
 public class PingRequester implements Runnable {
 

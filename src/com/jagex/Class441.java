@@ -1,5 +1,6 @@
 package com.jagex;
 import java.applet.Applet;
+
 import netscape.javascript.JSObject;
 
 public class Class441 {

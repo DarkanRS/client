@@ -1,6 +1,7 @@
 package com.jagex;
-import jaggl.OpenGL;
 import java.awt.Canvas;
+
+import jaggl.OpenGL;
 
 public class Class315 {
 

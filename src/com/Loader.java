@@ -1,4 +1,5 @@
 package com;
+
 import java.applet.Applet;
 import java.applet.AppletStub;
 import java.awt.BorderLayout;
@@ -12,9 +13,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import com.jagex.client;
-
-import net.arikia.dev.drpc.DiscordRPC;
-import net.arikia.dev.drpc.DiscordRichPresence;
 
 public class Loader extends Applet implements AppletStub {
 

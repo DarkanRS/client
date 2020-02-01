@@ -1,7 +1,4 @@
 package com.jagex;
-import jaclib.ping.Ping;
-import net.arikia.dev.drpc.DiscordRichPresence;
-
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Frame;
@@ -17,6 +14,9 @@ import java.util.TimeZone;
 import java.util.Vector;
 
 import com.Loader;
+
+import jaclib.ping.Ping;
+import net.arikia.dev.drpc.DiscordRichPresence;
 
 public final class client extends Engine {
 

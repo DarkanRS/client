@@ -1,13 +1,14 @@
 package com.jagex;
-import jaclib.memory.DirectBufferHelper;
-import jaclib.memory.Stream;
-import jaclib.memory.heap.NativeHeap;
-import jaclib.memory.heap.NativeHeapBuffer;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import jaclib.memory.DirectBufferHelper;
+import jaclib.memory.Stream;
+import jaclib.memory.heap.NativeHeap;
+import jaclib.memory.heap.NativeHeapBuffer;
 import sun.misc.Unsafe;
 
 public abstract class GraphicalRenderer_Sub2 extends GraphicalRenderer {

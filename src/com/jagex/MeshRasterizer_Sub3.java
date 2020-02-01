@@ -1,5 +1,6 @@
 package com.jagex;
 import java.nio.ByteBuffer;
+
 import sun.misc.Unsafe;
 
 public class MeshRasterizer_Sub3 extends MeshRasterizer {

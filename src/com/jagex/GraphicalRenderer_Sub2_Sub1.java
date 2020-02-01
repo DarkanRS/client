@@ -1,8 +1,9 @@
 package com.jagex;
+import java.awt.Canvas;
+
 import jaclib.memory.Stream;
 import jaggl.MapBuffer;
 import jaggl.OpenGL;
-import java.awt.Canvas;
 
 public final class GraphicalRenderer_Sub2_Sub1 extends GraphicalRenderer_Sub2 {
 

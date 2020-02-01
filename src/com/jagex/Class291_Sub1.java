@@ -1,5 +1,4 @@
 package com.jagex;
-import java.io.File;
 
 public class Class291_Sub1 extends Class291 {
 

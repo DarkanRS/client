@@ -1,5 +1,4 @@
 package com.jagex;
-import jaclib.nanotime.QueryPerformanceCounter;
 import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Container;
@@ -17,6 +16,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URL;
+
+import jaclib.nanotime.QueryPerformanceCounter;
 
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 

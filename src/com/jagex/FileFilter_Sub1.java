@@ -1,5 +1,6 @@
 package com.jagex;
 import java.io.File;
+
 import javax.swing.filechooser.FileFilter;
 
 public class FileFilter_Sub1 extends FileFilter {

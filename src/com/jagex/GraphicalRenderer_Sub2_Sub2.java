@@ -1,4 +1,6 @@
 package com.jagex;
+import java.awt.Canvas;
+
 import jagdx.D3DADAPTER_IDENTIFIER;
 import jagdx.D3DCAPS;
 import jagdx.D3DDISPLAYMODE;
@@ -9,7 +11,6 @@ import jagdx.IDirect3DDevice;
 import jagdx.IDirect3DEventQuery;
 import jagdx.IDirect3DSurface;
 import jagdx.IUnknown;
-import java.awt.Canvas;
 
 public class GraphicalRenderer_Sub2_Sub2 extends GraphicalRenderer_Sub2 {
 
