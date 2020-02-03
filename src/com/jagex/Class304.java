@@ -686,14 +686,14 @@ public class Class304 implements Interface27 {
 				HookRequest hookrequest_4 = new HookRequest();
 				hookrequest_4.source = componentDefs;
 				hookrequest_4.params = componentDefs.anObjectArray1400;
-				CS2Executor.executeHookInner200k(hookrequest_4, 1699733120);
+				CS2Executor.executeHookInner(hookrequest_4);
 			}
 			client.aBool7344 = true;
 			client.anInt56 = componentDefs.idHash;
-			client.anInt7345 = componentDefs.anInt1288;
+			client.anInt7345 = componentDefs.slotId;
 			Class506.USE_OPTIONS_FLAGS = flags;
 			CutsceneAction_Sub12.USE_INTERFACE_ID = interfaceId;
-			client.anInt7346 = componentDefs.slotId2;
+			client.anInt7346 = componentDefs.containerItemId;
 			Defaults8Loader.anInt5932 = componentDefs.targetOverCursor;
 			client.anInt7427 = componentDefs.targetLeaveCursor;
 			Class109.redrawComponent(componentDefs);

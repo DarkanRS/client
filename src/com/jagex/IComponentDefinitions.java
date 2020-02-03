@@ -150,7 +150,7 @@ public class IComponentDefinitions {
 	public ParticleSystem particleSystem;
 	IterableNodeMap aClass465_1365;
 	public int idHash = -1;
-	public int anInt1288 = -1;
+	public int slotId = -1;
 	public int x = 0;
 	public int y = 0;
 	public int width = 0;
@@ -166,7 +166,7 @@ public class IComponentDefinitions {
 	public boolean textAntiMacro = false;
 	public int anInt1378;
 	public IComponentDefinitions aClass118_1379;
-	public int slotId2;
+	public int containerItemId;
 	public int anInt1427;
 	public boolean wearCol;
 	public int anInt1404;
@@ -728,7 +728,7 @@ public class IComponentDefinitions {
 		this.anInt1382 = anInt1283;
 		this.useOptionString = "";
 		this.usesScripts = false;
-		this.slotId2 = -1;
+		this.containerItemId = -1;
 		this.anInt1427 = 0;
 		this.wearCol = false;
 		this.anInt1404 = -1;
@@ -801,7 +801,7 @@ public class IComponentDefinitions {
 	}
 
 	public Class119 method2046(GraphicalRenderer graphicalrenderer_1, int i_2) {
-		long long_3 = (long) this.idHash << 32 | (long) this.anInt1288 & 0xffffffffL;
+		long long_3 = (long) this.idHash << 32 | (long) this.slotId & 0xffffffffL;
 		Class119 class119_5 = (Class119) aClass229_1303.get(long_3);
 		if (class119_5 != null) {
 			if (class119_5.anInt1459 != this.spriteId) {

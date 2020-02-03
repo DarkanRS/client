@@ -3,11 +3,11 @@ public class CS2Interface {
 	RSInterface inter;
 	IComponentDefinitions defs;
 
-	boolean method8764(int i_1, int i_2) {
-		IComponentDefinitions icomponentdefinitions_4 = Index.getIComponentDefinitions(i_1, i_2);
-		if (icomponentdefinitions_4 != null) {
-			this.inter = CustomCursorsPreference.INTERFACES[i_1 >> 16];
-			this.defs = icomponentdefinitions_4;
+	boolean setChild(int ifComp, int slotId) {
+		IComponentDefinitions def = Index.getIComponentDefinitions(ifComp, slotId);
+		if (def != null) {
+			this.inter = CustomCursorsPreference.INTERFACES[ifComp >> 16];
+			this.defs = def;
 			return true;
 		} else {
 			this.method8768();

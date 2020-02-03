@@ -2332,7 +2332,7 @@ public class PacketDecoder {
 			Class470.method7825();
 			HookRequest hookrequest_27 = new HookRequest();
 			hookrequest_27.params = arr_26;
-			CS2Executor.executeHookInner200k(hookrequest_27, 502538057);
+			CS2Executor.executeHookInner(hookrequest_27);
 			context.currentPacket = null;
 			return true;
 		} else if (context.currentPacket == ServerPacket.NPC_UPDATE_LARGE) {

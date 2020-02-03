@@ -36,11 +36,11 @@ public class CS2Executor {
 	Object[] stringStack = new Object[1000];
 	int stringStackPtr = 0;
 	
-	int anInt7002 = 0;
+	int returnValuesPtr = 0;
 	CS2ReturnValue[] returnValues = new CS2ReturnValue[50];
 	CS2Interface hookedInterface1 = new CS2Interface();
 	CS2Interface hookedInterface2 = new CS2Interface();
-	int anInt7015 = 0;
+	int hookRequestCount = 0;
 	int instrPtr = -1;
 
 	static final void method11250(int i_0, int i_1, int i_2, int i_3) {
@@ -76,11 +76,11 @@ public class CS2Executor {
 				cs2executor_3.intLocals[0] = Class163.mouseRecorder.getMouseX() - i_6;
 				cs2executor_3.intLocals[1] = Class163.mouseRecorder.getMouseY() - i_7;
 			}
-			method1068(cs2script_5, 200000, cs2executor_3);
+			executeScript(cs2script_5, 200000, cs2executor_3);
 		}
 	}
 	
-	static void method1068(CS2Script cs2script_0, int i_1, CS2Executor cs2executor_2) {
+	static void executeScript(CS2Script cs2script_0, int stackLimit, CS2Executor cs2executor_2) {
 		cs2executor_2.intStackPtr = 0;
 		cs2executor_2.stringStackPtr = 0;
 		cs2executor_2.instrPtr = -1;
@@ -88,13 +88,13 @@ public class CS2Executor {
 		cs2executor_2.operations = cs2executor_2.current.operations;
 		cs2executor_2.intOpValues = cs2executor_2.current.intOpValues;
 		CS2Instruction cs2opinfo_4 = null;
-		cs2executor_2.anInt7002 = 0;
+		cs2executor_2.returnValuesPtr = 0;
 		try {
 			try {
 				anInt5904 = 0;
 				while (true) {
 					++anInt5904;
-					if (anInt5904 > i_1) {
+					if (anInt5904 > stackLimit) {
 						throw new RuntimeException("");
 					}
 					cs2opinfo_4 = cs2executor_2.operations[++cs2executor_2.instrPtr];
@@ -106,7 +106,7 @@ public class CS2Executor {
 					} else {
 						cs2executor_2.aBool7022 = false;
 					}
-					if (cs2opinfo_4 == CS2Instruction.RETURN && cs2executor_2.anInt7002 == 0) {
+					if (cs2opinfo_4 == CS2Instruction.RETURN && cs2executor_2.returnValuesPtr == 0) {
 						decrementCS2ExecIdx();
 						break;
 					}
@@ -115,7 +115,7 @@ public class CS2Executor {
 			} catch (Exception exception_8) {
 				StringBuilder stringbuilder_6 = new StringBuilder(30);
 				stringbuilder_6.append("").append(cs2executor_2.current.data).append(" ");
-				for (int i_7 = cs2executor_2.anInt7002 - 1; i_7 >= 0; --i_7) {
+				for (int i_7 = cs2executor_2.returnValuesPtr - 1; i_7 >= 0; --i_7) {
 					stringbuilder_6.append("").append(cs2executor_2.returnValues[i_7].aCacheableNode_Sub5_5869.data).append(" ");
 				}
 				stringbuilder_6.append("").append(Integer.valueOf(cs2opinfo_4.opcode));
@@ -127,78 +127,78 @@ public class CS2Executor {
 		}
 	}
 	
-	public static void executeHookInner200k(HookRequest hookrequest_0, int i_1) {
-		executeHookInner(hookrequest_0, 200000, (byte) 44);
+	public static void executeHookInner(HookRequest hook) {
+		executeHookInner(hook, 200000);
 	}
 	
-	static void executeHookInner(HookRequest hookrequest_0, int i_1, byte b_2) {
-		Object[] arr_3 = hookrequest_0.params;
-		int i_4 = ((Integer) arr_3[0]).intValue();
-		CS2Script cs2script_5 = AsyncInputStream.getCS2Script(i_4);
-		if (cs2script_5 != null) {
-			CS2Executor cs2executor_6 = getNextScriptExecutor();
-			cs2executor_6.intLocals = new int[cs2script_5.intLocalsCount];
-			int i_7 = 0;
-			cs2executor_6.objectLocals = new String[cs2script_5.stringLocalsCount];
-			int i_8 = 0;
-			cs2executor_6.longLocals = new long[cs2script_5.longLocalsCount];
-			int i_9 = 0;
+	static void executeHookInner(HookRequest hook, int stackLimit) {
+		Object[] params = hook.params;
+		int scriptId = ((Integer) params[0]).intValue();
+		CS2Script script = AsyncInputStream.getCS2Script(scriptId);
+		if (script != null) {
+			CS2Executor executor = getNextScriptExecutor();
+			executor.intLocals = new int[script.intLocalsCount];
+			int intLocalCount = 0;
+			executor.objectLocals = new String[script.stringLocalsCount];
+			int objectLocalCount = 0;
+			executor.longLocals = new long[script.longLocalsCount];
+			int longLocalCount = 0;
 
-			for (int i_10 = 1; i_10 < arr_3.length; i_10++) {
-				if (arr_3[i_10] instanceof Integer) {
-					int i_11 = ((Integer) arr_3[i_10]).intValue();
-					if (i_11 == -2147483647) {
-						i_11 = hookrequest_0.mouseX;
+			for (int paramIdx = 1; paramIdx < params.length; paramIdx++) {
+				if (params[paramIdx] instanceof Integer) {
+					int intLocal = ((Integer) params[paramIdx]).intValue();
+					if (intLocal == -2147483647) {
+						intLocal = hook.mouseX;
 					}
 
-					if (i_11 == -2147483646) {
-						i_11 = hookrequest_0.mouseY;
+					if (intLocal == -2147483646) {
+						intLocal = hook.mouseY;
 					}
 
-					if (i_11 == -2147483645) {
-						i_11 = hookrequest_0.source != null ? hookrequest_0.source.idHash : -1;
+					if (intLocal == -2147483645) {
+						intLocal = hook.source != null ? hook.source.idHash : -1;
 					}
 
-					if (i_11 == -2147483644) {
-						i_11 = hookrequest_0.anInt8051;
+					if (intLocal == -2147483644) {
+						intLocal = hook.anInt8051;
 					}
 
-					if (i_11 == -2147483643) {
-						i_11 = hookrequest_0.source != null ? hookrequest_0.source.anInt1288 : -1;
+					if (intLocal == -2147483643) {
+						intLocal = hook.source != null ? hook.source.slotId : -1;
 					}
 
-					if (i_11 == -2147483642) {
-						i_11 = hookrequest_0.aClass118_8057 != null ? hookrequest_0.aClass118_8057.idHash : -1;
+					if (intLocal == -2147483642) {
+						intLocal = hook.aClass118_8057 != null ? hook.aClass118_8057.idHash : -1;
 					}
 
-					if (i_11 == -2147483641) {
-						i_11 = hookrequest_0.aClass118_8057 != null ? hookrequest_0.aClass118_8057.anInt1288 : -1;
+					if (intLocal == -2147483641) {
+						intLocal = hook.aClass118_8057 != null ? hook.aClass118_8057.slotId : -1;
 					}
 
-					if (i_11 == -2147483640) {
-						i_11 = hookrequest_0.typedKeyCode;
+					if (intLocal == -2147483640) {
+						intLocal = hook.typedKeyCode;
 					}
 
-					if (i_11 == -2147483639) {
-						i_11 = hookrequest_0.typedKeyChar;
+					if (intLocal == -2147483639) {
+						intLocal = hook.typedKeyChar;
 					}
 
-					cs2executor_6.intLocals[i_7++] = i_11;
-				} else if (arr_3[i_10] instanceof String) {
-					String string_13 = (String) arr_3[i_10];
+					executor.intLocals[intLocalCount++] = intLocal;
+				} else if (params[paramIdx] instanceof String) {
+					String string_13 = (String) params[paramIdx];
 					if (string_13.equals("event_opbase")) {
-						string_13 = hookrequest_0.opName;
+						string_13 = hook.opName;
 					}
 
-					cs2executor_6.objectLocals[i_8++] = string_13;
-				} else if (arr_3[i_10] instanceof Long) {
-					long long_14 = ((Long) arr_3[i_10]).longValue();
-					cs2executor_6.longLocals[i_9++] = long_14;
+					executor.objectLocals[objectLocalCount++] = string_13;
+				} else if (params[paramIdx] instanceof Long) {
+					long long_14 = ((Long) params[paramIdx]).longValue();
+					executor.longLocals[longLocalCount++] = long_14;
 				}
 			}
 
-			cs2executor_6.anInt7015 = hookrequest_0.anInt8061;
-			method1068(cs2script_5, i_1, cs2executor_6);
+			executor.hookRequestCount = hook.requestId;
+			executeScript(script, stackLimit, executor);
 		}
 	}
 	
@@ -210,7 +210,7 @@ public class CS2Executor {
 			cs2executor_5.objectLocals = new String[cs2script_4.stringLocalsCount];
 			cs2executor_5.objectLocals[0] = string_1;
 			cs2executor_5.intLocals[0] = i_2;
-			method1068(cs2script_4, 200000, cs2executor_5);
+			executeScript(cs2script_4, 200000, cs2executor_5);
 		}
 	}
 

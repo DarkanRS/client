@@ -36,13 +36,13 @@ public class Class151 {
                     hookrequest_3.source = icomponentdefinitions_0;
                     hookrequest_3.aClass118_8057 = icomponentdefinitions_2;
                     hookrequest_3.params = icomponentdefinitions_0.anObjectArray1393;
-                    CS2Executor.executeHookInner200k(hookrequest_3, 1791224764);
+                    CS2Executor.executeHookInner(hookrequest_3);
                 }
             }
             TCPPacket tcpmessage_4 = Class271.createPacket(ClientPacket.IF_ON_IF, client.GAME_CONNECTION_CONTEXT.isaac);
-            tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.anInt1288);
+            tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.slotId);
             tcpmessage_4.buffer.writeShortLE(client.anInt7345);
-            tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.slotId2);
+            tcpmessage_4.buffer.writeShortLE128(icomponentdefinitions_0.containerItemId);
             tcpmessage_4.buffer.writeIntLE(icomponentdefinitions_0.idHash);
             tcpmessage_4.buffer.writeIntV2(client.anInt56);
             tcpmessage_4.buffer.writeShortLE(client.anInt7346);
@@ -68,19 +68,19 @@ public class Class151 {
                     hookrequest_6 = new HookRequest();
                     hookrequest_6.source = icomponentdefinitions_4;
                     hookrequest_6.params = icomponentdefinitions_4.anObjectArray1421;
-                    CS2Executor.executeHookInner200k(hookrequest_6, 506526261);
+                    CS2Executor.executeHookInner(hookrequest_6);
                 }
                 if (i_1 == 1 && icomponentdefinitions_4.anObjectArray1346 != null) {
-                    if (icomponentdefinitions_4.anInt1288 >= 0) {
+                    if (icomponentdefinitions_4.slotId >= 0) {
                         IComponentDefinitions icomponentdefinitions_7 = IComponentDefinitions.getDefs(icomponentdefinitions_4.idHash);
-                        if (icomponentdefinitions_7 == null || icomponentdefinitions_7.slotChildren == null || icomponentdefinitions_4.anInt1288 >= icomponentdefinitions_7.slotChildren.length || icomponentdefinitions_4 != icomponentdefinitions_7.slotChildren[icomponentdefinitions_4.anInt1288]) {
+                        if (icomponentdefinitions_7 == null || icomponentdefinitions_7.slotChildren == null || icomponentdefinitions_4.slotId >= icomponentdefinitions_7.slotChildren.length || icomponentdefinitions_4 != icomponentdefinitions_7.slotChildren[icomponentdefinitions_4.slotId]) {
                             continue;
                         }
                     }
                     hookrequest_6 = new HookRequest();
                     hookrequest_6.source = icomponentdefinitions_4;
                     hookrequest_6.params = icomponentdefinitions_4.anObjectArray1346;
-                    CS2Executor.executeHookInner200k(hookrequest_6, 2094989397);
+                    CS2Executor.executeHookInner(hookrequest_6);
                 }
             }
         }

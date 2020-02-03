@@ -97,10 +97,10 @@ public class Class119 {
 
 	static void method2076(IComponentDefinitions icomponentdefinitions_0, IComponentDefinitions icomponentdefinitions_1) {
 		TCPPacket tcpmessage_3 = Class271.createPacket(ClientPacket.IF_DRAG_ONTO_IF, client.GAME_CONNECTION_CONTEXT.isaac);
-		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.anInt1288);
-		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.anInt1288);
-		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.slotId2);
-		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.slotId2);
+		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_1.slotId);
+		tcpmessage_3.buffer.writeShortLE(icomponentdefinitions_0.slotId);
+		tcpmessage_3.buffer.writeShort(icomponentdefinitions_1.containerItemId);
+		tcpmessage_3.buffer.writeShortLE128(icomponentdefinitions_0.containerItemId);
 		tcpmessage_3.buffer.writeIntV1(icomponentdefinitions_0.idHash, -1596162032);
 		tcpmessage_3.buffer.writeIntLE(icomponentdefinitions_1.idHash);
 		client.GAME_CONNECTION_CONTEXT.queuePacket(tcpmessage_3);

@@ -1602,7 +1602,7 @@ public final class client extends Engine {
 	}
 
 	public static IFTargetParams getIComponentSettings(IComponentDefinitions icomponentdefinitions_0) {
-		IFTargetParams class282_sub10_1 = (IFTargetParams) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
+		IFTargetParams class282_sub10_1 = (IFTargetParams) ICOMPONENT_SETTINGS_SLOTS.get(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.slotId);
 		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.targetParams;
 	}
 
@@ -1915,7 +1915,7 @@ public final class client extends Engine {
 							}
 						}
 
-						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.slotId2 == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
+						boolean bool_47 = iCompDef.clickMask && iCompDef.type == ComponentType.SPRITE && iCompDef.transparency == 0 && iCompDef.anInt1404 < 0 && iCompDef.containerItemId == -1 && iCompDef.anInt1435 == -1 && !iCompDef.tiling && iCompDef.angle2d == 0;
 						boolean bool_48 = false;
 						int i_24;
 						if (i_9 >= i_15 && i_10 >= i_16 && i_9 < i_17 && i_10 < i_18) {
@@ -2016,7 +2016,7 @@ public final class client extends Engine {
 
 								if (bool_51) {
 									if (i_24 < 10) {
-										CutsceneAction_Sub10.method14603(i_24 + 1, iCompDef.idHash, iCompDef.anInt1288, "", (byte) 124);
+										CutsceneAction_Sub10.method14603(i_24 + 1, iCompDef.idHash, iCompDef.slotId, "", (byte) 124);
 									} else if (i_24 == 10) {
 										Class60.method1170();
 										IFTargetParams class282_sub10_41 = getIComponentSettings(iCompDef);
@@ -2169,7 +2169,7 @@ public final class client extends Engine {
 									if (aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x40) != 0) {
 										IComponentDefinitions icomponentdefinitions_35 = Index.getIComponentDefinitions(client.anInt56, anInt7345);
 										if (icomponentdefinitions_35 != null) {
-											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, iCompDef.slotId2, 1L, i_33, i_34, true, false, (long) (iCompDef.anInt1288 << 32 | iCompDef.idHash), true, -1033171513);
+											PlayerAppearance.method4032(aString7275, " " + "->", Defaults8Loader.anInt5932, 59, iCompDef.containerItemId, 1L, i_33, i_34, true, false, (long) (iCompDef.slotId << 32 | iCompDef.idHash), true, -1033171513);
 										} else {
 											Class60.method1170();
 										}
@@ -2936,38 +2936,38 @@ public final class client extends Engine {
 										}
 
 										icomponentdefinitions_16 = hookrequest_13.source;
-										if (icomponentdefinitions_16.anInt1288 < 0) {
+										if (icomponentdefinitions_16.slotId < 0) {
 											break;
 										}
 
 										icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
-									} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.anInt1288]);
+									} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.slotId >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.slotId]);
 
-									CS2Executor.executeHookInner200k(hookrequest_13, 970362287);
+									CS2Executor.executeHookInner(hookrequest_13);
 								}
 							}
 
 							icomponentdefinitions_16 = hookrequest_13.source;
-							if (icomponentdefinitions_16.anInt1288 < 0) {
+							if (icomponentdefinitions_16.slotId < 0) {
 								break;
 							}
 
 							icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
-						} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.anInt1288]);
+						} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.slotId >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.slotId]);
 
-						CS2Executor.executeHookInner200k(hookrequest_13, 433740759);
+						CS2Executor.executeHookInner(hookrequest_13);
 					}
 				}
 
 				icomponentdefinitions_16 = hookrequest_13.source;
-				if (icomponentdefinitions_16.anInt1288 < 0) {
+				if (icomponentdefinitions_16.slotId < 0) {
 					break;
 				}
 
 				icomponentdefinitions_14 = IComponentDefinitions.getDefs(icomponentdefinitions_16.parent);
-			} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.anInt1288 >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.anInt1288]);
+			} while (icomponentdefinitions_14 == null || icomponentdefinitions_14.slotChildren == null || icomponentdefinitions_16.slotId >= icomponentdefinitions_14.slotChildren.length || icomponentdefinitions_16 != icomponentdefinitions_14.slotChildren[icomponentdefinitions_16.slotId]);
 
-			CS2Executor.executeHookInner200k(hookrequest_13, 60192385);
+			CS2Executor.executeHookInner(hookrequest_13);
 		}
 	}
 

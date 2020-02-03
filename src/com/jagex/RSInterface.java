@@ -29,14 +29,14 @@ public class RSInterface {
 	static void method7554(RSInterface inter, IComponentDefinitions defs) {
 	    if (defs != null) {
 	        int i_4;
-	        if (defs.anInt1288 != -1) {
+	        if (defs.slotId != -1) {
 	            IComponentDefinitions icomponentdefinitions_3 = inter.getComponent(defs.parent);
 	            if (icomponentdefinitions_3 != null) {
 	                if (icomponentdefinitions_3.itemSlots == icomponentdefinitions_3.slotChildren) {
 	                    icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
 	                    icomponentdefinitions_3.itemSlots[icomponentdefinitions_3.itemSlots.length - 1] = defs;
-	                    Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 0, defs.anInt1288);
-	                    Class503.method8359(icomponentdefinitions_3.slotChildren, defs.anInt1288 + 1, icomponentdefinitions_3.itemSlots, defs.anInt1288, icomponentdefinitions_3.slotChildren.length - defs.anInt1288 - 1);
+	                    Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 0, defs.slotId);
+	                    Class503.method8359(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
 	                } else {
 	                    i_4 = 0;
 	                    IComponentDefinitions[] arr_5;
@@ -65,14 +65,14 @@ public class RSInterface {
 	static void method3710(RSInterface inter, IComponentDefinitions defs) {
 		if (defs != null) {
 			int i_4;
-			if (defs.anInt1288 != -1) {
+			if (defs.slotId != -1) {
 				IComponentDefinitions icomponentdefinitions_3 = inter.components[defs.parent & 0xffff];
 				if (icomponentdefinitions_3 != null) {
 					if (icomponentdefinitions_3.slotChildren == icomponentdefinitions_3.itemSlots) {
 						icomponentdefinitions_3.itemSlots = new IComponentDefinitions[icomponentdefinitions_3.slotChildren.length];
 						icomponentdefinitions_3.itemSlots[0] = defs;
-						Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 1, defs.anInt1288);
-						Class503.method8359(icomponentdefinitions_3.slotChildren, defs.anInt1288 + 1, icomponentdefinitions_3.itemSlots, defs.anInt1288 + 1, icomponentdefinitions_3.slotChildren.length - defs.anInt1288 - 1);
+						Class503.method8359(icomponentdefinitions_3.slotChildren, 0, icomponentdefinitions_3.itemSlots, 1, defs.slotId);
+						Class503.method8359(icomponentdefinitions_3.slotChildren, defs.slotId + 1, icomponentdefinitions_3.itemSlots, defs.slotId + 1, icomponentdefinitions_3.slotChildren.length - defs.slotId - 1);
 					} else {
 						i_4 = 0;
 	

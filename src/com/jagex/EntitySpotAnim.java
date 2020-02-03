@@ -55,7 +55,7 @@ public class EntitySpotAnim {
 						hookrequest_5.mouseY = i_4;
 						hookrequest_5.aClass118_8057 = client.aClass118_7370;
 						hookrequest_5.params = client.aClass118_7257.anObjectArray1394;
-						CS2Executor.executeHookInner200k(hookrequest_5, 79466209);
+						CS2Executor.executeHookInner(hookrequest_5);
 					}
 					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null) {
 						Class119.method2076(client.aClass118_7257, client.aClass118_7370);
@@ -81,7 +81,7 @@ public class EntitySpotAnim {
 					hookrequest_5.mouseX = i_3;
 					hookrequest_5.mouseY = i_4;
 					hookrequest_5.params = client.aClass118_7257.anObjectArray1451;
-					CS2Executor.executeHookInner200k(hookrequest_5, 814557204);
+					CS2Executor.executeHookInner(hookrequest_5);
 				}
 			}
 		} else if (SendFinishedCutsceneAction.anInt8308 > 1) {

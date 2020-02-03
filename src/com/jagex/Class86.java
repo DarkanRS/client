@@ -35,7 +35,7 @@ public class Class86 {
 	}
 
 	static void method1482(IComponentDefinitions icomponentdefinitions_0, byte b_1) {
-		if (icomponentdefinitions_0.type == ComponentType.SPRITE && icomponentdefinitions_0.slotId2 != -1) {
+		if (icomponentdefinitions_0.type == ComponentType.SPRITE && icomponentdefinitions_0.containerItemId != -1) {
 			VarcDefinitions.method6996(Renderers.SOFTWARE_RENDERER, icomponentdefinitions_0);
 		}
 	}

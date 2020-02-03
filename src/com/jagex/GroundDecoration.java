@@ -536,8 +536,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									} else {
 										i_22 = inter.color;
 										String string_35 = inter.text;
-										if (inter.slotId2 != -1) {
-											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.slotId2);
+										if (inter.containerItemId != -1) {
+											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.containerItemId);
 											string_35 = itemdefinitions_36.name;
 											if (string_35 == null) {
 												string_35 = "null";
@@ -576,9 +576,9 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											inter.method2027(IndexLoaders.SKYBOX_LOADER, IndexLoaders.SUN_LOADER, -1984245878).method4214(Renderers.SOFTWARE_RENDERER, drawX, drawY, inter.width, inter.height, inter.anInt1430 << 3, inter.anInt1431 << 3);
 										} else {
 											NativeSprite nativesprite_41;
-											if (inter.slotId2 != -1) {
+											if (inter.containerItemId != -1) {
 												PlayerAppearance playerappearance_34 = inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null;
-												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.slotId2, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.renderStack, playerappearance_34);
+												nativesprite_41 = IndexLoaders.ITEM_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, inter.containerItemId, inter.anInt1427, inter.borderThickness, ~0xffffff | inter.spriteShadow, inter.renderStack, playerappearance_34);
 											} else if (inter.anInt1435 != -1) {
 												nativesprite_41 = SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, inter.anInt1435);
 											} else {
@@ -637,8 +637,8 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 											i_22 |= 0x80000;
 										}
 										i_23 = 0;
-										if (inter.slotId2 != -1) {
-											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.slotId2);
+										if (inter.containerItemId != -1) {
+											itemdefinitions_36 = IndexLoaders.ITEM_LOADER.getItemDefinitions(inter.containerItemId);
 											if (itemdefinitions_36 != null) {
 												itemdefinitions_36 = itemdefinitions_36.method7090(inter.anInt1427);
 												meshRasterizer = itemdefinitions_36.method7084(Renderers.SOFTWARE_RENDERER, i_22, 1, inter.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null, inter.anim, 0, 0, 0, 0);

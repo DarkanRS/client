@@ -340,30 +340,30 @@ public class Node_Sub20_Sub22 extends Node_Sub20 {
 															return;
 														}
 														icomponentdefinitions_10 = hookrequest_14.source;
-														if (icomponentdefinitions_10.anInt1288 < 0) {
+														if (icomponentdefinitions_10.slotId < 0) {
 															break;
 														}
 														icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
-													} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.anInt1288]);
-													CS2Executor.executeHookInner200k(hookrequest_14, 2146300541);
+													} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.slotId >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.slotId]);
+													CS2Executor.executeHookInner(hookrequest_14);
 												}
 											}
 											icomponentdefinitions_10 = hookrequest_14.source;
-											if (icomponentdefinitions_10.anInt1288 < 0) {
+											if (icomponentdefinitions_10.slotId < 0) {
 												break;
 											}
 											icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
-										} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.anInt1288]);
-										CS2Executor.executeHookInner200k(hookrequest_14, 690549551);
+										} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.slotId >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.slotId]);
+										CS2Executor.executeHookInner(hookrequest_14);
 									}
 								}
 								icomponentdefinitions_10 = hookrequest_14.source;
-								if (icomponentdefinitions_10.anInt1288 < 0) {
+								if (icomponentdefinitions_10.slotId < 0) {
 									break;
 								}
 								icomponentdefinitions_11 = IComponentDefinitions.getDefs(icomponentdefinitions_10.parent);
-							} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.anInt1288 >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.anInt1288]);
-							CS2Executor.executeHookInner200k(hookrequest_14, 859874447);
+							} while (icomponentdefinitions_11 == null || icomponentdefinitions_11.slotChildren == null || icomponentdefinitions_10.slotId >= icomponentdefinitions_11.slotChildren.length || icomponentdefinitions_10 != icomponentdefinitions_11.slotChildren[icomponentdefinitions_10.slotId]);
+							CS2Executor.executeHookInner(hookrequest_14);
 						}
 					}
 				}

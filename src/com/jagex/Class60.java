@@ -35,7 +35,7 @@ public class Class60 {
 				HookRequest hookrequest_2 = new HookRequest();
 				hookrequest_2.source = icomponentdefinitions_1;
 				hookrequest_2.params = icomponentdefinitions_1.anObjectArray1396;
-				CS2Executor.executeHookInner200k(hookrequest_2, 1386646091);
+				CS2Executor.executeHookInner(hookrequest_2);
 			}
 			client.anInt7427 = -1;
 			client.anInt7346 = -1;

@@ -124,7 +124,7 @@ public class PulseEvent extends CacheableNode {
 					icomponentdefinitions_5.spritePitch = event.primary;
 					icomponentdefinitions_5.spriteRoll = event.secondary;
 					icomponentdefinitions_5.spriteScale = event.tertiary;
-					if (icomponentdefinitions_5.slotId2 != -1) {
+					if (icomponentdefinitions_5.containerItemId != -1) {
 						if (icomponentdefinitions_5.aspectWidth > 0) {
 							icomponentdefinitions_5.spriteScale = icomponentdefinitions_5.spriteScale * 32 / icomponentdefinitions_5.aspectWidth;
 						} else if (icomponentdefinitions_5.baseWidth > 0) {
@@ -135,8 +135,8 @@ public class PulseEvent extends CacheableNode {
 				}
 			} else if (type == 9) {
 				IComponentDefinitions icomponentdefinitions_5 = IComponentDefinitions.getDefs((int) value);
-				if (icomponentdefinitions_5.slotId2 != event.primary || event.secondary != icomponentdefinitions_5.anInt1427) {
-					icomponentdefinitions_5.slotId2 = event.primary;
+				if (icomponentdefinitions_5.containerItemId != event.primary || event.secondary != icomponentdefinitions_5.anInt1427) {
+					icomponentdefinitions_5.containerItemId = event.primary;
 					icomponentdefinitions_5.anInt1427 = event.secondary;
 					Class109.redrawComponent(icomponentdefinitions_5);
 				}

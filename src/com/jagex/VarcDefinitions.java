@@ -24,9 +24,9 @@ public class VarcDefinitions {
 	}
 
 	static void method6996(GraphicalRenderer graphicalrenderer_0, IComponentDefinitions icomponentdefinitions_1) {
-		boolean bool_3 = IndexLoaders.ITEM_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.slotId2, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, ~0xffffff | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null) == null;
+		boolean bool_3 = IndexLoaders.ITEM_LOADER.softwareRender(graphicalrenderer_0, icomponentdefinitions_1.containerItemId, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, ~0xffffff | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol ? VertexNormal.MY_PLAYER.playerAppearance : null) == null;
 		if (bool_3) {
-			Class182.ITEMS.append(new Item(icomponentdefinitions_1.slotId2, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, ~0xffffff | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol));
+			Class182.ITEMS.append(new Item(icomponentdefinitions_1.containerItemId, icomponentdefinitions_1.anInt1427, icomponentdefinitions_1.borderThickness, ~0xffffff | icomponentdefinitions_1.spriteShadow, icomponentdefinitions_1.renderStack, icomponentdefinitions_1.wearCol));
 			Class109.redrawComponent(icomponentdefinitions_1);
 		}
 	}

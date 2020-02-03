@@ -11,6 +11,6 @@ public class HookRequest extends Node {
 	public int typedKeyCode;
 	public int mouseX;
 	public String opName;
-	int anInt8061;
+	int requestId;
 
 }
