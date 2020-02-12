@@ -1,8 +1,9 @@
 package com.jagex;
+
 public class DefaultsFile {
 
     static Class194 aClass194_6967;
-    
+
     public static DefaultsFile FILE_1 = new DefaultsFile(1);
     public static DefaultsFile FILE_2 = new DefaultsFile(2);
     public static DefaultsFile ENTITY = new DefaultsFile(3);

@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class ProcessorSpecs {
 
     static Index SPRITES_INDEX;

@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class SceneryShadowPreference extends Preference {
 
     public static int anInt7868;

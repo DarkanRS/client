@@ -1,10 +1,10 @@
 package com.jagex;
-import java.awt.Canvas;
-import java.awt.Component;
+
+import java.awt.*;
 import java.util.Random;
 
 public abstract class FontRenderer {
-	
+
     static int anInt61 = -1;
     static int anInt62 = -1;
     static int anInt63 = 0;
@@ -20,21 +20,21 @@ public abstract class FontRenderer {
     public void renderText(String string_1, int i_2, int i_3, int i_4, int i_5) {
         if (string_1 != null) {
             this.method365(i_4, i_5, -52680990);
-            this.method371(string_1, i_2, i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0);
+            this.method371(string_1, i_2, i_3, null, null, null, 0, 0);
         }
     }
 
     public void drawText(String string_1, int i_2, int i_3, int i_4, int i_5) {
         if (string_1 != null) {
             this.method365(i_4, i_5, 248909725);
-            this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1), i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0);
+            this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1), i_3, null, null, null, 0, 0);
         }
     }
 
     public void method360(String string_1, int i_2, int i_3, int i_4, int i_5) {
         if (string_1 != null) {
             this.method365(i_4, i_5, 289850430);
-            this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0);
+            this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, null, null, null, 0, 0);
         }
     }
 
@@ -58,7 +58,7 @@ public abstract class FontRenderer {
         if (string_1 == null) {
             return 0;
         } else {
-            random_10.setSeed((long) i_11);
+            random_10.setSeed(i_11);
             int i_16 = 192 + (random_10.nextInt() & 0x1f);
             this.method365(i_16 << 24 | i_6 & 0xffffff, i_7 == -1 ? 0 : i_16 << 24 | i_7 & 0xffffff, 1360524651);
             int i_17 = string_1.length();
@@ -86,7 +86,7 @@ public abstract class FontRenderer {
                 i_22 = this.fontMetrics.getWidthNoSprites(string_1) + i_19;
                 i_20 = i_2 + (i_4 - i_22);
             }
-            this.method372(string_1, i_20, i_21, arr_13, ints_14, ints_18, (int[]) null, 1660900204);
+            this.method372(string_1, i_20, i_21, arr_13, ints_14, ints_18, null, 1660900204);
             if (ints_12 != null) {
                 if (i_22 == -1) {
                     i_22 = this.fontMetrics.getWidthNoSprites(string_1) + i_19;
@@ -110,7 +110,7 @@ public abstract class FontRenderer {
                 ints_9[i_11] = (int) (Math.sin((double) i_6 / 5.0D + (double) i_11 / 5.0D) * 5.0D);
                 ints_10[i_11] = (int) (Math.sin((double) i_6 / 5.0D + (double) i_11 / 3.0D) * 5.0D);
             }
-            this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, (NativeSprite[]) null, (int[]) null, ints_9, ints_10, 1888974579);
+            this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, null, null, ints_9, ints_10, 1888974579);
         }
     }
 
@@ -149,7 +149,6 @@ public abstract class FontRenderer {
                 this.method365(anInt63, anInt65, -571655303);
             }
         } catch (Exception exception_4) {
-            ;
         }
     }
 
@@ -213,7 +212,6 @@ public abstract class FontRenderer {
                                     i_2 += arr_4[i_16].scaleWidth();
                                     i_11 = -1;
                                 } catch (Exception exception_21) {
-                                    ;
                                 }
                             } else {
                                 this.method369(string_15, (byte) 85);
@@ -310,7 +308,6 @@ public abstract class FontRenderer {
                                     i_2 += arr_4[i_18].scaleWidth();
                                     i_10 = -1;
                                 } catch (Exception exception_23) {
-                                    ;
                                 }
                             } else {
                                 this.method369(string_15, (byte) 115);
@@ -374,7 +371,7 @@ public abstract class FontRenderer {
             if (i_5 < i_10 + this.fontMetrics.bottomPadding + this.fontMetrics.topPadding && i_5 < i_10 + i_10) {
                 ints_18 = null;
             } else {
-                ints_18 = new int[] { i_4 };
+                ints_18 = new int[]{i_4};
             }
             int i_19 = this.fontMetrics.method6987(string_1, ints_18, aStringArray69, arr_12);
             if (i_11 == -1) {
@@ -448,7 +445,7 @@ public abstract class FontRenderer {
             for (int i_13 = 0; i_13 < i_11; i_13++) {
                 ints_12[i_13] = (int) (Math.sin((double) i_6 / 1.0D + (double) i_13 / 1.5D) * d_9);
             }
-            this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, (NativeSprite[]) null, (int[]) null, (int[]) null, ints_12, 1742290741);
+            this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, null, null, null, ints_12, 1742290741);
         }
     }
 
@@ -456,7 +453,7 @@ public abstract class FontRenderer {
         if (string_1 == null) {
             return 0;
         } else {
-            random_6.setSeed((long) i_7);
+            random_6.setSeed(i_7);
             int i_11 = 192 + (random_6.nextInt() & 0x1f);
             this.method365(i_11 << 24 | i_4 & 0xffffff, i_11 << 24 | 0 & 0xffffff, -761696495);
             int i_12 = string_1.length();
@@ -468,7 +465,7 @@ public abstract class FontRenderer {
                     ++i_14;
                 }
             }
-            this.method372(string_1, i_2, i_3, arr_8, ints_9, ints_13, (int[]) null, 1983305186);
+            this.method372(string_1, i_2, i_3, arr_8, ints_9, ints_13, null, 1983305186);
             return i_14;
         }
     }
@@ -481,7 +478,7 @@ public abstract class FontRenderer {
             for (int i_10 = 0; i_10 < i_8; i_10++) {
                 ints_9[i_10] = (int) (Math.sin((double) i_6 / 5.0D + (double) i_10 / 2.0D) * 5.0D);
             }
-            this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, (NativeSprite[]) null, (int[]) null, (int[]) null, ints_9, 1737737512);
+            this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1) / 2, i_3, null, null, null, ints_9, 1737737512);
         }
     }
 

@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Class52 implements Interface2 {
 
     FontRenderer aFontRenderer_492;

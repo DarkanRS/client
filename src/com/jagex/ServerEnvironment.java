@@ -1,4 +1,5 @@
 package com.jagex;
+
 public enum ServerEnvironment implements Identifiable {
 
     LOCAL("LOCAL", "", 4),
@@ -17,7 +18,7 @@ public enum ServerEnvironment implements Identifiable {
         this.aString5815 = string_1;
         this.anInt5814 = i_3;
     }
-    
+
     public int getValue() {
         return this.anInt5814;
     }
@@ -32,7 +33,6 @@ public enum ServerEnvironment implements Identifiable {
                 Engine.PLAYER_UID192.method7347(0L);
                 Engine.PLAYER_UID192.write(data.buffer, i_1, 24);
             } catch (Exception exception_4) {
-                ;
             }
         }
     }
@@ -94,7 +94,7 @@ public enum ServerEnvironment implements Identifiable {
                 client.anInt7367 = Class349.anInt4083;
                 client.anInt7476 = client.anInt3243 * -969250379;
             }
-            LightIntensityIndexLoader.method7313((IFSubNode) null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
+            LightIntensityIndexLoader.method7313(null, client.BASE_WINDOW_ID, 0, 0, Class349.anInt4083, client.anInt3243 * -969250379, 0, 0, i_1, i_2, (byte) -112);
             if (Node_Sub20_Sub24.aClass118_9884 != null) {
                 BillboardDefinitions.method6170(i_1, i_2);
             }

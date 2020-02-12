@@ -1,4 +1,5 @@
 package com.jagex;
+
 final class Class17 implements Interface25 {
 
     public static int anInt148;

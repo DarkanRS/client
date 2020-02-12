@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class TextureDetails {
 
     public boolean isGroundMesh;

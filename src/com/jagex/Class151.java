@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.DataInputStream;
 import java.net.URL;
 
@@ -58,7 +59,7 @@ public class Class151 {
                     if (icomponentdefinitions_4.itemSlots != null) {
                         method2591(icomponentdefinitions_4.itemSlots, i_1, (byte) -28);
                     }
-                    IFSubNode class282_sub44_5 = (IFSubNode) client.OPEN_INTERFACES.get((long) icomponentdefinitions_4.idHash);
+                    IFSubNode class282_sub44_5 = (IFSubNode) client.OPEN_INTERFACES.get(icomponentdefinitions_4.idHash);
                     if (class282_sub44_5 != null) {
                         Class383.method6514(class282_sub44_5.interfaceId, i_1, -138211954);
                     }
@@ -117,7 +118,6 @@ public class Class151 {
                     str_4 = System.getProperty("java.vendor");
                     str_5 = System.getProperty("java.version");
                 } catch (Exception exception_8) {
-                    ;
                 }
                 URL url_6 = new URL(RuntimeException_Sub3.anApplet10460.getCodeBase(), "clienterror.ws?c=" + RuntimeException_Sub3.anInt10457 + "&cs=" + InventoriesIndexLoader.anInt4781 + "&u=" + (RuntimeException_Sub3.MY_PLAYER_USERNAME != null ? Class475.method7926(RuntimeException_Sub3.MY_PLAYER_USERNAME, -790911814) : "" + RuntimeException_Sub3.aLong10459) + "&v1=" + Class475.method7926(str_4, 553035872) + "&v2=" + Class475.method7926(str_5, 72672054) + "&e=" + str_3);
                 DataInputStream datainputstream_7 = new DataInputStream(url_6.openStream());

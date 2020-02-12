@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Node_Sub20_Sub4 extends Node_Sub20 {
 
     byte[] aByteArray9732 = new byte[512];
@@ -177,7 +178,7 @@ public class Node_Sub20_Sub4 extends Node_Sub20 {
     }
 
     void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
-        switch(i_1) {
+        switch (i_1) {
             case 0:
                 this.aBool9726 = rsbytebuffer_2.readUnsignedByte() == 1;
                 break;
@@ -213,13 +214,13 @@ public class Node_Sub20_Sub4 extends Node_Sub20 {
             this.aShortArray9730 = new short[this.anInt9736];
             this.aShortArray9731 = new short[this.anInt9736];
             for (i_2 = 0; i_2 < this.anInt9736; i_2++) {
-                this.aShortArray9730[i_2] = (short) ((int) (Math.pow((double) ((float) this.anInt9737 / 4096.0F), (double) i_2) * 4096.0D));
-                this.aShortArray9731[i_2] = (short) ((int) Math.pow(2.0D, (double) i_2));
+                this.aShortArray9730[i_2] = (short) ((int) (Math.pow((float) this.anInt9737 / 4096.0F, i_2) * 4096.0D));
+                this.aShortArray9731[i_2] = (short) ((int) Math.pow(2.0D, i_2));
             }
         } else if (this.aShortArray9730 != null && this.aShortArray9730.length == this.anInt9736) {
             this.aShortArray9731 = new short[this.anInt9736];
             for (i_2 = 0; i_2 < this.anInt9736; i_2++) {
-                this.aShortArray9731[i_2] = (short) ((int) Math.pow(2.0D, (double) i_2));
+                this.aShortArray9731[i_2] = (short) ((int) Math.pow(2.0D, i_2));
             }
         }
     }

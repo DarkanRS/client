@@ -4,19 +4,19 @@
 package jaclib.memory;
 
 public interface Source {
-	public int method1();
+    int method1();
 
-	public long method2();
+    long method2();
 
-	public int method3();
+    int method3();
 
-	public int method4();
+    int method4();
 
-	public long method5();
+    long method5();
 
-	public long method6();
+    long method6();
 
-	public long method7();
+    long method7();
 
-	public long method8();
+    long method8();
 }

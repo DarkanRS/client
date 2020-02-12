@@ -1,18 +1,19 @@
 package com.jagex;
+
 public class IdentikitDefinition implements Definition {
 
     IdentiKitIndexLoader aClass31_429;
     static int anInt430;
     static int anInt431;
-    public static int[] anIntArray428 = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };
-    public static int[] anIntArray422 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
-    
+    public static int[] anIntArray428 = new int[]{0, 1, 2, 3, 4, 5, 6, 14};
+    public static int[] anIntArray422 = new int[]{7, 8, 9, 10, 11, 12, 13, 15};
+
     int[] modelIds;
     short[] originalColours;
     short[] replacementColours;
     short[] originalTextures;
     short[] replacementTextures;
-    int[] headModels = new int[] { -1, -1, -1, -1, -1 };
+    int[] headModels = new int[]{-1, -1, -1, -1, -1};
 
     public RSMesh renderHead() {
         RSMesh[] arr_2 = new RSMesh[5];
@@ -51,33 +52,33 @@ public class IdentikitDefinition implements Definition {
     }
 
     void method897(RsByteBuffer buffer, int opcode) {
-    	if (opcode == 1) {
-    		buffer.readUnsignedByte();
-    	} else if (opcode == 2) {
-    		int count = buffer.readUnsignedByte();
-    		this.modelIds = new int[count];
-    		for (int i_5 = 0; i_5 < count; i_5++) {
-    			this.modelIds[i_5] = buffer.readBigSmart();
-    		}
-    	} else if (opcode == 40) {
-    		int count = buffer.readUnsignedByte();
-    		this.originalColours = new short[count];
-    		this.replacementColours = new short[count];
-    		for (int i_5 = 0; i_5 < count; i_5++) {
-    			this.originalColours[i_5] = (short) buffer.readUnsignedShort();
-    			this.replacementColours[i_5] = (short) buffer.readUnsignedShort();
-    		}
-    	} else if (opcode == 41) {
-    		int  count = buffer.readUnsignedByte();
-    		this.originalTextures = new short[count];
-    		this.replacementTextures = new short[count];
-    		for (int i_5 = 0; i_5 < count; i_5++) {
-    			this.originalTextures[i_5] = (short) buffer.readUnsignedShort();
-    			this.replacementTextures[i_5] = (short) buffer.readUnsignedShort();
-    		}
-    	} else if (opcode >= 60 && opcode < 70) {
-    		this.headModels[opcode - 60] = buffer.readBigSmart();
-    	}
+        if (opcode == 1) {
+            buffer.readUnsignedByte();
+        } else if (opcode == 2) {
+            int count = buffer.readUnsignedByte();
+            this.modelIds = new int[count];
+            for (int i_5 = 0; i_5 < count; i_5++) {
+                this.modelIds[i_5] = buffer.readBigSmart();
+            }
+        } else if (opcode == 40) {
+            int count = buffer.readUnsignedByte();
+            this.originalColours = new short[count];
+            this.replacementColours = new short[count];
+            for (int i_5 = 0; i_5 < count; i_5++) {
+                this.originalColours[i_5] = (short) buffer.readUnsignedShort();
+                this.replacementColours[i_5] = (short) buffer.readUnsignedShort();
+            }
+        } else if (opcode == 41) {
+            int count = buffer.readUnsignedByte();
+            this.originalTextures = new short[count];
+            this.replacementTextures = new short[count];
+            for (int i_5 = 0; i_5 < count; i_5++) {
+                this.originalTextures[i_5] = (short) buffer.readUnsignedShort();
+                this.replacementTextures[i_5] = (short) buffer.readUnsignedShort();
+            }
+        } else if (opcode >= 60 && opcode < 70) {
+            this.headModels[opcode - 60] = buffer.readBigSmart();
+        }
     }
 
     public boolean method898() {

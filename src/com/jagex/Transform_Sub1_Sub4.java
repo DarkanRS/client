@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Transform_Sub1_Sub4 extends Transform_Sub1 {
 
     protected short aShort9611;

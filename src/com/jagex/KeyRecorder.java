@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class KeyRecorder {
 
     public abstract KeyRecord method3234();

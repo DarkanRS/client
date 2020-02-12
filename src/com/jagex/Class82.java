@@ -1,4 +1,5 @@
 package com.jagex;
+
 final class Class82 implements Interface11 {
 
     public static CutsceneEntity[] CUTSCENE_ENTITIES;

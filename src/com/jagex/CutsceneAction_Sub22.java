@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class CutsceneAction_Sub22 extends CutsceneAction {
 
     static int anInt9440;
@@ -32,7 +33,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
         if (Class20.anInt169 < 412) {
             if (VertexNormal.MY_PLAYER == player_0) {
                 if (client.aBool7344 && (Class506.USE_OPTIONS_FLAGS & 0x10) != 0) {
-                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, (long) player_0.index, false, -1931180359);
+                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE), Defaults8Loader.anInt5932, 16, -1, 0L, 0, 0, true, false, player_0.index, false, -1931180359);
                 }
             } else {
                 String string_3;
@@ -60,10 +61,10 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                     string_3 = player_0.getUsernameWithTitle() + " (" + Message.SKILL_.translate(Class223.CURRENT_LANGUAGE) + player_0.elo + ")";
                 }
                 if (client.aBool7344 && !bool_1 && (Class506.USE_OPTIONS_FLAGS & 0x8) != 0) {
-                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1521566355);
+                    PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16777215) + string_3, Defaults8Loader.anInt5932, 15, -1, player_0.index, 0, 0, true, false, player_0.index, false, -1521566355);
                 }
                 if (bool_1) {
-                    PlayerAppearance.method4032(Utils.rgbToColHexShortcut(13421772) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, (long) player_0.index, false, -1005059728);
+                    PlayerAppearance.method4032(Utils.rgbToColHexShortcut(13421772) + string_3, "", -1, -1, 0, 0L, 0, 0, false, true, player_0.index, false, -1005059728);
                 } else {
                     for (int i_10 = 7; i_10 >= 0; --i_10) {
                         if (client.PLAYER_OPTIONS[i_10] != null) {
@@ -86,7 +87,7 @@ public class CutsceneAction_Sub22 extends CutsceneAction {
                             }
                             short s_12 = (short) (client.aShortArray7239[i_10] + s_11);
                             int i_7 = client.PLAYER_OPTION_CURSORS[i_10] != -1 ? client.PLAYER_OPTION_CURSORS[i_10] : client.anInt7342;
-                            PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], Utils.rgbToColHexShortcut(16777215) + string_3, i_7, s_12, -1, (long) player_0.index, 0, 0, true, false, (long) player_0.index, false, -1621747030);
+                            PlayerAppearance.method4032(client.PLAYER_OPTIONS[i_10], Utils.rgbToColHexShortcut(16777215) + string_3, i_7, s_12, -1, player_0.index, 0, 0, true, false, player_0.index, false, -1621747030);
                         }
                     }
                 }

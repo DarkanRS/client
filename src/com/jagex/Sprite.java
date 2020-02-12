@@ -1,14 +1,15 @@
 package com.jagex;
+
 public interface Sprite {
 
-	int method225();
+    int method225();
 
-	int method226();
+    int method226();
 
-	int method227();
+    int method227();
 
-	int scaleWidth();
+    int scaleWidth();
 
-	int method229();
+    int method229();
 
 }

@@ -1,4 +1,5 @@
 package com.jagex;
+
 public final class Node_Sub52 extends Node implements KeyRecord {
 
     long aLong8169;

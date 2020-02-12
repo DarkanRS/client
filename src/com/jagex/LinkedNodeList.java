@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class LinkedNodeList {
 
     public static EquipmentDefaults EQUIPMENT_DEFAULTS;

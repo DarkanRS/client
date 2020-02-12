@@ -1,31 +1,32 @@
 package com.jagex;
+
 public class Class362 {
 
-	Class362() throws Throwable {
-		throw new Error();
-	}
+    Class362() throws Throwable {
+        throw new Error();
+    }
 
-	public static final void method6276() {
-		OutputStream_Sub1.anImage7953 = null;
-		SpotAnimIndexLoader.aFont5893 = null;
-	}
+    public static final void method6276() {
+        OutputStream_Sub1.anImage7953 = null;
+        SpotAnimIndexLoader.aFont5893 = null;
+    }
 
-	static final String[] method6277(String[] arr_0) {
-		String[] arr_2 = new String[5];
-		for (int i_3 = 0; i_3 < 5; i_3++) {
-			arr_2[i_3] = i_3 + " ";
-			if (arr_0 != null && arr_0[i_3] != null) {
-				arr_2[i_3] = arr_2[i_3] + arr_0[i_3];
-			}
-		}
-		return arr_2;
-	}
+    static final String[] method6277(String[] arr_0) {
+        String[] arr_2 = new String[5];
+        for (int i_3 = 0; i_3 < 5; i_3++) {
+            arr_2[i_3] = i_3 + " ";
+            if (arr_0 != null && arr_0[i_3] != null) {
+                arr_2[i_3] = arr_2[i_3] + arr_0[i_3];
+            }
+        }
+        return arr_2;
+    }
 
-	public static Interface36 getNativeLibraryLoader() {
-		if (Class404.LIBRARY_LOADER == null) {
-			throw new IllegalStateException("");
-		} else {
-			return Class404.LIBRARY_LOADER;
-		}
-	}
+    public static Interface36 getNativeLibraryLoader() {
+        if (Class404.LIBRARY_LOADER == null) {
+            throw new IllegalStateException("");
+        } else {
+            return Class404.LIBRARY_LOADER;
+        }
+    }
 }

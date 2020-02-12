@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Canvas;
+
+import java.awt.*;
 
 public final class Class241 {
 
@@ -10,7 +11,7 @@ public final class Class241 {
     public static int getCPUProfile() {
         Canvas canvas_1 = new Canvas();
         canvas_1.setSize(100, 100);
-        GraphicalRenderer graphicalrenderer_2 = Class320.createRenderer(0, canvas_1, (Interface22) null, (Index) null, 0, -2017555063);
+        GraphicalRenderer graphicalrenderer_2 = Class320.createRenderer(0, canvas_1, null, null, 0, -2017555063);
         long long_3 = Utils.time();
         int i_5;
         for (i_5 = 0; i_5 < 10000; i_5++) {
@@ -47,11 +48,11 @@ public final class Class241 {
             }
             int i_17 = i_16 * i_4 + i_5 * i_15 >> 14;
             int i_18 = i_5 * i_16 - i_15 * i_4 >> 14;
-            int i_19 = fontmetrics_9.method6951(string_7, 100, (Sprite[]) null, (byte) 100);
-            int i_20 = fontmetrics_9.method6972(string_7, 100, 0, (Sprite[]) null, 2039884820);
+            int i_19 = fontmetrics_9.method6951(string_7, 100, null, (byte) 100);
+            int i_20 = fontmetrics_9.method6972(string_7, 100, 0, null, 2039884820);
             i_17 -= i_19 / 2;
             if (i_17 >= -icomponentdefinitions_0.width && i_17 <= icomponentdefinitions_0.width && i_18 >= -icomponentdefinitions_0.height && i_18 <= icomponentdefinitions_0.height) {
-                fontrenderer_8.method378(string_7, i_17 + icomponentdefinitions_0.width / 2 + i_2, i_3 + icomponentdefinitions_0.height / 2 - i_18 - i_6 - i_20, i_19, 50, i_10, 0, 1, 0, 0, (NativeSprite[]) null, (int[]) null, class455_1, i_2, i_3, (byte) 123);
+                fontrenderer_8.method378(string_7, i_17 + icomponentdefinitions_0.width / 2 + i_2, i_3 + icomponentdefinitions_0.height / 2 - i_18 - i_6 - i_20, i_19, 50, i_10, 0, 1, 0, 0, null, null, class455_1, i_2, i_3, (byte) 123);
             }
         }
     }

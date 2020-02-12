@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class CombinedInputSubscriber implements InputSubscriber {
 
     int clickType;
@@ -13,9 +14,7 @@ public class CombinedInputSubscriber implements InputSubscriber {
 
     public boolean valid(MouseRecord class282_sub53_1, KeyRecord[] arr_2, int i_3, KeyRecorder class199_4) {
         if (class282_sub53_1 == null) {
-            if (this.clickType != -1) {
-                return false;
-            }
+            return this.clickType == -1;
         } else {
             if (this.clickType != class282_sub53_1.getClickType()) {
                 return false;
@@ -35,17 +34,17 @@ public class CombinedInputSubscriber implements InputSubscriber {
     }
 
     static CombinedInputSubscriber decode(RsByteBuffer rsbytebuffer_0) {
-		int clickType = rsbytebuffer_0.readUnsignedByte();
-		int minimumClicks = rsbytebuffer_0.readUnsignedByte();
-		int count = rsbytebuffer_0.readUnsignedByte();
-		int[] keys = new int[count];
-		for (int i_6 = 0; i_6 < count; i_6++) {
-			keys[i_6] = rsbytebuffer_0.readUnsignedByte();
-		}
-		return new CombinedInputSubscriber(clickType, minimumClicks, keys);
-	}
+        int clickType = rsbytebuffer_0.readUnsignedByte();
+        int minimumClicks = rsbytebuffer_0.readUnsignedByte();
+        int count = rsbytebuffer_0.readUnsignedByte();
+        int[] keys = new int[count];
+        for (int i_6 = 0; i_6 < count; i_6++) {
+            keys[i_6] = rsbytebuffer_0.readUnsignedByte();
+        }
+        return new CombinedInputSubscriber(clickType, minimumClicks, keys);
+    }
 
-	static void queryItem(String query, boolean tradeableOnly, int paramId, int paramIntQuery, String paramStringQuery, boolean paramIsString) {
+    static void queryItem(String query, boolean tradeableOnly, int paramId, int paramIntQuery, String paramStringQuery, boolean paramIsString) {
         query = query.toLowerCase();
         short[] results = new short[16];
         int paramIntDefault = -1;

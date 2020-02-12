@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Node_Sub25 extends Node {
 
     int anInt7688;
@@ -25,6 +26,6 @@ public class Node_Sub25 extends Node {
     }
 
     public static boolean method12402(char var_0) {
-        return var_0 >= 32 && var_0 <= 126 ? true : (var_0 >= 160 && var_0 <= 255 ? true : var_0 == 8364 || var_0 == 338 || var_0 == 8212 || var_0 == 339 || var_0 == 376);
+        return var_0 >= 32 && var_0 <= 126 || (var_0 >= 160 && var_0 <= 255 || (var_0 == 8364 || var_0 == 338 || var_0 == 8212 || var_0 == 339 || var_0 == 376));
     }
 }

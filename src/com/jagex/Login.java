@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
@@ -501,7 +502,6 @@ public class Login {
                             try {
                                 Class441.method7377(IFSubNode.anApplet8065, "unzap", 1103714597);
                             } catch (Throwable throwable_14) {
-                                ;
                             }
                         } else {
                             try {
@@ -511,7 +511,6 @@ public class Login {
                                     try {
                                         IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), "blank.ws"), "tbi");
                                     } catch (Exception exception_15) {
-                                        ;
                                     }
                                 }
                             }

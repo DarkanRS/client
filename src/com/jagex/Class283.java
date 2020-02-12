@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class283 {
 
     public static int CS2_QUERY_RESULT_IDX;

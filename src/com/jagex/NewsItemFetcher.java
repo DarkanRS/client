@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -51,7 +52,6 @@ public class NewsItemFetcher implements Runnable {
                 this.newsItems[i_6 / 3] = new NewsItem(arr_5[i_6], arr_5[i_6 + 1], arr_5[i_6 + 2]);
             }
         } catch (IOException ioexception_8) {
-            ;
         }
         this.fetched = true;
     }

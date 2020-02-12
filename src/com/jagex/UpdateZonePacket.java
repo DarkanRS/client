@@ -1,4 +1,5 @@
 package com.jagex;
+
 public enum UpdateZonePacket {
 
     CUSTOMIZE_OBJECT(-1),
@@ -16,11 +17,11 @@ public enum UpdateZonePacket {
     OBJ_ANIM(6),
     SOUND_AREA(9),
     SPOT_ANIM(8);
-	
-	public int size;
+
+    public int size;
 
     UpdateZonePacket(int size) {
-    	this.size = size;
+        this.size = size;
     }
 
     static final void method6292(int i_0, int i_1, int i_2, int i_3) {

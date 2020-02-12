@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class CutsceneAction_Sub10 extends CutsceneAction {
 
     int anInt9296;

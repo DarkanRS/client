@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class SurfaceSkin {
 
     public int anInt2113;

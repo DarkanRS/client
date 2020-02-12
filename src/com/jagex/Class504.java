@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Class504 {
 
     public static int PLAYER_DOB;

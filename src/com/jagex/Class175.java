@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class175 {
 
     Class175() throws Throwable {
@@ -62,7 +63,7 @@ public class Class175 {
                 int i_12 = (class282_sub48_0.anInt8107 + class282_sub48_0.anInt8079) / 2 - i_2;
                 int i_13 = (class282_sub48_0.anInt8078 + class282_sub48_0.anInt8077) / 2 - i_3;
                 if (i_12 != 0 || i_13 != 0) {
-                    int i_17 = -AnimationDefinitions.anInt5930 - (int) (Math.atan2((double) i_12, (double) i_13) * 2607.5945876176133D) - 4096 & 0x3fff;
+                    int i_17 = -AnimationDefinitions.anInt5930 - (int) (Math.atan2(i_12, i_13) * 2607.5945876176133D) - 4096 & 0x3fff;
                     if (i_17 > 8192) {
                         i_17 = 16384 - i_17;
                     }

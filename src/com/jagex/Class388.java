@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class388 implements Interface41 {
 
     static Index INTERFACE_INDEX;
@@ -54,7 +55,7 @@ public class Class388 implements Interface41 {
     }
 
     static boolean method6693(int i_0) {
-        return client.gameState != 5 ? false : !JS5CacheFile.method3360((byte) 103) && !Class85.method1466(-611019435);
+        return client.gameState == 5 && (!JS5CacheFile.method3360((byte) 103) && !Class85.method1466(-611019435));
     }
 
     static void method6694(Class200 class200_0, int i_1, int i_2, int i_3, MeshRasterizer meshrasterizer_4, int i_5) {

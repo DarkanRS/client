@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.Arrays;
 
 public class CutsceneAction_Sub18 extends CutsceneAction {
@@ -25,7 +26,7 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
         if (this.anInt9398 == 0) {
             Class20.animate(animable_2, this.anIntArray9397, 0, false);
         } else {
-            QuickchatCategoryLoader.method5923(animable_2, new int[] { this.anInt9396 }, new int[1], new int[] { this.anInt9398 }, 1929963591);
+            QuickchatCategoryLoader.method5923(animable_2, new int[]{this.anInt9396}, new int[1], new int[]{this.anInt9398}, 1929963591);
         }
     }
 
@@ -39,7 +40,7 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
         if (1684442377 * this.anInt9398 * 933564729 == 0) {
             Class20.animate(animable_1, this.anIntArray9397, 0, false);
         } else {
-            QuickchatCategoryLoader.method5923(animable_1, new int[] { this.anInt9396 * 185651677 * 1590562421 }, new int[1], new int[] { this.anInt9398 * 933564729 * 1684442377 }, 1894867046);
+            QuickchatCategoryLoader.method5923(animable_1, new int[]{this.anInt9396 * 185651677 * 1590562421}, new int[1], new int[]{this.anInt9398 * 933564729 * 1684442377}, 1894867046);
         }
     }
 }

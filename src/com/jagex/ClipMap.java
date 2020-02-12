@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.ArrayList;
 
 public class ClipMap {
@@ -10,14 +11,14 @@ public class ClipMap {
     int sizeY;
 
     static int anInt3968;
-    
+
     public static ArrayList<ClipFlag> getFlags(int value) {
-		ArrayList<ClipFlag> flags = new ArrayList<>();
-		for (ClipFlag f : ClipFlag.values()) {
-			if ((value & f.flag) != 0 && f != ClipFlag.EMPTY)
-				flags.add(f);
-		}
-		return flags;
+        ArrayList<ClipFlag> flags = new ArrayList<>();
+        for (ClipFlag f : ClipFlag.values()) {
+            if ((value & f.flag) != 0 && f != ClipFlag.EMPTY)
+                flags.add(f);
+        }
+        return flags;
     }
 
     public void initEmpty() {
@@ -262,13 +263,13 @@ public class ClipMap {
             }
         }
     }
-    
+
     public void addBlockFloorDeco(int i_1, int i_2) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
         this.map[i_1][i_2] |= ClipFlag.BLOCKED_DECO.flag;
     }
-    
+
     public void removeBlockFloorDeco(int i_1, int i_2) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
@@ -280,13 +281,13 @@ public class ClipMap {
         i_2 -= this.offsetY;
         this.map[i_1][i_2] |= ClipFlag.BLOCKED.flag;
     }
-    
+
     public void removeBlockedTile(int i_1, int i_2) {
         i_1 -= this.offsetX;
         i_2 -= this.offsetY;
         this.map[i_1][i_2] &= ~ClipFlag.BLOCKED.flag;
     }
-    
+
     void removeFlag(int i_1, int i_2, int i_3) {
         this.map[i_1][i_2] &= ~i_3;
     }
@@ -294,26 +295,26 @@ public class ClipMap {
     void addFlag(int i_1, int i_2, int i_3) {
         this.map[i_1][i_2] |= i_3;
     }
-    
+
     void removeFlag(int i_1, int i_2, ClipFlag... flags) {
-    	int flag = 0;
-    	for (ClipFlag f : flags)
-    		flag |= f.flag;
-    	removeFlag(i_1, i_2, flag);
+        int flag = 0;
+        for (ClipFlag f : flags)
+            flag |= f.flag;
+        removeFlag(i_1, i_2, flag);
     }
-    
+
     void addFlag(int i_1, int i_2, ClipFlag... flags) {
-    	int flag = 0;
-    	for (ClipFlag f : flags)
-    		flag |= f.flag;
-    	addFlag(i_1, i_2, flag);
+        int flag = 0;
+        for (ClipFlag f : flags)
+            flag |= f.flag;
+        addFlag(i_1, i_2, flag);
     }
-    
+
     public static boolean notFlagged(int value, ClipFlag... flags) {
-    	int flag = 0;
-    	for (ClipFlag f : flags)
-    		flag |= f.flag;
-    	return (value & flag) == 0;
+        int flag = 0;
+        for (ClipFlag f : flags)
+            flag |= f.flag;
+        return (value & flag) == 0;
     }
 
     public boolean method5978(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9) {
@@ -476,9 +477,7 @@ public class ClipMap {
                 if (i_4 - 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.E_OBJ)) {
                     return true;
                 }
-                if (i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ)) {
-                    return true;
-                }
+                return i_4 + 1 == i_1 && i_5 == i_2 && notFlagged(this.map[i_1][i_2], ClipFlag.W_OBJ);
             }
         } else {
             int i_9 = i_3 + i_1 - 1;
@@ -591,9 +590,7 @@ public class ClipMap {
                 if (i_4 - i_3 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_9][i_5], ClipFlag.E_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
                     return true;
                 }
-                if (i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED)) {
-                    return true;
-                }
+                return i_4 + 1 == i_1 && i_5 >= i_2 && i_5 <= i_10 && notFlagged(this.map[i_1][i_5], ClipFlag.W_OBJ, ClipFlag.OBJ, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED);
             }
         }
         return false;
@@ -601,11 +598,11 @@ public class ClipMap {
 
     public boolean method5988(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, byte b_9) {
         if (i_3 > 1) {
-            return Class325.method5790(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, -386839744) ? true : this.method5978(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, i_8);
+            return Class325.method5790(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, -386839744) || this.method5978(i_1, i_2, i_3, i_3, i_4, i_5, i_6, i_7, i_8);
         } else {
             int i_10 = i_4 + i_6 - 1;
             int i_11 = i_5 + i_7 - 1;
-            return i_1 >= i_4 && i_1 <= i_10 && i_2 >= i_5 && i_2 <= i_11 ? true : (i_4 - 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.E_OBJ) && notFlagged(i_8, ClipFlag.E_OBJ) ? true : (i_10 + 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.W_OBJ) && notFlagged(i_8, ClipFlag.N_OBJ) ? true : (i_2 == i_5 - 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.N_OBJ) && notFlagged(i_8, ClipFlag.NE_OBJ) ? true : i_2 == i_11 + 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.S_OBJ) && notFlagged(i_8, ClipFlag.NW_OBJ))));
+            return i_1 >= i_4 && i_1 <= i_10 && i_2 >= i_5 && i_2 <= i_11 || (i_4 - 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.E_OBJ) && notFlagged(i_8, ClipFlag.E_OBJ) || (i_10 + 1 == i_1 && i_2 >= i_5 && i_2 <= i_11 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.W_OBJ) && notFlagged(i_8, ClipFlag.N_OBJ) || (i_2 == i_5 - 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.N_OBJ) && notFlagged(i_8, ClipFlag.NE_OBJ) || i_2 == i_11 + 1 && i_1 >= i_4 && i_1 <= i_10 && notFlagged(this.map[i_1 - this.offsetX][i_2 - this.offsetY], ClipFlag.S_OBJ) && notFlagged(i_8, ClipFlag.NW_OBJ))));
         }
     }
 

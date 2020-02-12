@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class125 implements Interface8 {
 
     public static NativeSprite aNativeSprite_1571;

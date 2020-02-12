@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class445 {
 
     static String aString5384;

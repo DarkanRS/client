@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Node_Sub11 extends Node {
 
     abstract void method12203(RsByteBuffer var1);
@@ -28,14 +29,12 @@ public abstract class Node_Sub11 extends Node {
             }
             class442_1.method7386(rsbytebuffer_2.buffer, 0, rsbytebuffer_2.index, 18074141);
         } catch (Exception exception_5) {
-            ;
         }
         try {
             if (class442_1 != null) {
                 class442_1.method7385((short) 27554);
             }
         } catch (Exception exception_4) {
-            ;
         }
         client.aLong7401 = Utils.time();
         client.aBool7400 = false;

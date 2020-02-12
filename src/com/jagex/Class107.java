@@ -1,6 +1,7 @@
 package com.jagex;
+
 public class Class107 {
-	
+
     protected static int anInt1082;
     IterableNodeMap aClass465_1080;
     Node_Sub21[] aNode_Sub21Array1079;
@@ -9,7 +10,6 @@ public class Class107 {
     public Class107(int i_1, Interface11 interface11_2) {
         int i_3;
         for (i_3 = 1; i_3 < i_1; i_3 += i_3) {
-            ;
         }
         this.aClass465_1080 = new IterableNodeMap(i_3);
         this.aNode_Sub21Array1079 = new Node_Sub21[i_3];
@@ -43,7 +43,6 @@ public class Class107 {
             if (i_1 >= this.aNode_Sub21Array1079.length) {
                 int i_6;
                 for (i_6 = this.aNode_Sub21Array1079.length; i_1 >= i_6; i_6 += i_6) {
-                    ;
                 }
                 this.aClass465_1080 = new IterableNodeMap(i_6);
                 for (int i_7 = 0; i_7 < this.aNode_Sub21Array1079.length; i_7++) {

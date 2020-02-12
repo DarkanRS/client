@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class ApplyHitmarkCutsceneAction extends CutsceneAction {
 
     int anInt9369;
@@ -81,7 +82,6 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
                 try {
                     i_4 = Class383.method6513(2, 1000, 398662792);
                 } catch (Exception exception_12) {
-                    ;
                 }
             }
             if (bool_3) {
@@ -90,7 +90,7 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
                     if (Class393.preferences.currentToolkit.getValue(525522056) == 3) {
                         RendererInfo class168_7 = Renderers.SOFTWARE_RENDERER.method8392();
                         long long_8 = class168_7.driverVersion & 0xffffffffffffL;
-                        switch(class168_7.id) {
+                        switch (class168_7.id) {
                             case 4098:
                                 bool_2 &= long_8 >= 60129613779L;
                                 break;
@@ -99,14 +99,12 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
                         }
                     }
                 } catch (Exception exception_11) {
-                    ;
                 }
             }
             if (bool_2) {
                 try {
                     i_5 = Class383.method6513(1, 1000, 762994065);
                 } catch (Exception exception_10) {
-                    ;
                 }
             }
             if (i_4 == -1 && i_5 == -1 && i_6 == -1) {
@@ -121,6 +119,6 @@ public class ApplyHitmarkCutsceneAction extends CutsceneAction {
 
     static boolean method14643(IComponentDefinitions icomponentdefinitions_0, int i_1) {
         IFTargetParams class282_sub10_2 = client.getIComponentSettings(icomponentdefinitions_0);
-        return class282_sub10_2.depthFlags() > 0 ? true : (class282_sub10_2.bit23Enabled() ? true : icomponentdefinitions_0.aClass118_1379 != null);
+        return class282_sub10_2.depthFlags() > 0 || (class282_sub10_2.bit23Enabled() || icomponentdefinitions_0.aClass118_1379 != null);
     }
 }

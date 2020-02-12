@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class306 implements Runnable {
 
     boolean aBool3597;
@@ -111,7 +112,7 @@ public class Class306 implements Runnable {
             long long_12 = Utils.time();
             int i_5 = (int) (20L - (long_12 - long_1));
             if (i_5 > 0) {
-                Class89.sleep((long) i_5);
+                Class89.sleep(i_5);
             }
         }
     }

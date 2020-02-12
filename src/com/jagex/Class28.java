@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class28 implements Interface2 {
 
     static long aLong351;
@@ -81,7 +82,7 @@ public class Class28 implements Interface2 {
     }
 
     int method770(FontRenderer fontrenderer_1, String string_2, int i_3, int i_4, int i_6) {
-        return fontrenderer_1.method378(string_2, i_3 + 5, 5 + i_4, this.aClass365_349.anInt4227 - 5 * 2, this.aClass365_349.anInt4228 - 5 * 2, this.aClass365_349.anInt4224, this.aClass365_349.anInt4222, 0, 0, 0, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 76);
+        return fontrenderer_1.method378(string_2, i_3 + 5, 5 + i_4, this.aClass365_349.anInt4227 - 5 * 2, this.aClass365_349.anInt4228 - 5 * 2, this.aClass365_349.anInt4224, this.aClass365_349.anInt4222, 0, 0, 0, null, null, null, 0, 0, (byte) 76);
     }
 
     public void method14(boolean bool_1) {
@@ -144,7 +145,6 @@ public class Class28 implements Interface2 {
                     VarDefinitionLoader.aThread4520.join();
                     break;
                 } catch (InterruptedException interruptedexception_2) {
-                    ;
                 }
             }
         }

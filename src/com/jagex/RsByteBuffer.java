@@ -1,7 +1,8 @@
 package com.jagex;
-import java.math.BigInteger;
 
 import com.Loader;
+
+import java.math.BigInteger;
 
 public class RsByteBuffer extends Node {
 
@@ -28,7 +29,7 @@ public class RsByteBuffer extends Node {
         }
         aLongArray7979 = new long[256];
         for (i_0 = 0; i_0 < 256; i_0++) {
-            long long_4 = (long) i_0;
+            long long_4 = i_0;
             for (int i_3 = 0; i_3 < 8; i_3++) {
                 if ((long_4 & 0x1L) == 1L) {
                     long_4 = long_4 >>> 1 ^ ~0x3693a86a2878f0bdL;
@@ -260,7 +261,6 @@ public class RsByteBuffer extends Node {
         } else {
             int idx = this.index;
             while (this.buffer[++this.index - 1] != 0) {
-                ;
             }
             int i_4 = this.index - idx - 1;
             return i_4 == 0 ? "" : Utils.readString(this.buffer, idx, i_4);
@@ -468,7 +468,7 @@ public class RsByteBuffer extends Node {
         this.buffer[++this.index - 1] = (byte) (i_1 >> 24);
         this.buffer[++this.index - 1] = (byte) (i_1 >> 16);
     }
-    
+
     public int readSignedSmart() {
         int i_2 = this.buffer[this.index] & 0xff;
         return i_2 < 128 ? this.readUnsignedByte() - 64 : this.readUnsignedShort() - 49152;
@@ -525,7 +525,6 @@ public class RsByteBuffer extends Node {
     public String readString() {
         int i_1 = this.index;
         while (this.buffer[++this.index - 1] != 0) {
-            ;
         }
         int i_2 = this.index - i_1 - 1;
         return i_2 == 0 ? "" : Utils.readString(this.buffer, i_1, i_2);

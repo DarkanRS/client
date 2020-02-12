@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class ShaderDecoder {
 
     static Class253 aClass253_1008;

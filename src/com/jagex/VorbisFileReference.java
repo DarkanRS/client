@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.IOException;
 
 public class VorbisFileReference extends Class278 {
@@ -6,8 +7,8 @@ public class VorbisFileReference extends Class278 {
     int[] values;
     int anInt8115;
     byte[][] aByteArrayArray8111 = new byte[10][];
-    RsByteBuffer aNode_Sub35_8112 = new RsByteBuffer((byte[]) null);
-    RsByteBuffer byteBuffer = new RsByteBuffer((byte[]) null);
+    RsByteBuffer aNode_Sub35_8112 = new RsByteBuffer(null);
+    RsByteBuffer byteBuffer = new RsByteBuffer(null);
     Index index;
     int fileId;
 

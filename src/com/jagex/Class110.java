@@ -1,27 +1,28 @@
 package com.jagex;
+
 public class Class110 {
 
-	byte[] aByteArray1094;
+    byte[] aByteArray1094;
 
-	int anInt1095;
+    int anInt1095;
 
-	int anInt1096;
+    int anInt1096;
 
-	byte[] aByteArray1097;
+    byte[] aByteArray1097;
 
-	int anInt1098;
+    int anInt1098;
 
-	int anInt1099;
+    int anInt1099;
 
-	int anInt1100;
+    int anInt1100;
 
-	int anInt1101;
+    int anInt1101;
 
-	int anInt1102;
+    int anInt1102;
 
-	static String aString1103;
+    static String aString1103;
 
-	static int anInt1104;
+    static int anInt1104;
 
-	static int anInt1105;
+    static int anInt1105;
 }

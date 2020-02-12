@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class NamedFileReference {
 
     static AnimationIndexLoader ANIMATION_INDEX_LOADER;
@@ -23,7 +24,6 @@ public class NamedFileReference {
     public NamedFileReference(int[] ints_1) {
         int i_2;
         for (i_2 = 1; i_2 <= (ints_1.length >> 1) + ints_1.length; i_2 <<= 1) {
-            ;
         }
         this.anIntArray410 = new int[i_2 + i_2];
         int i_3;
@@ -33,7 +33,6 @@ public class NamedFileReference {
         int i_4;
         for (i_3 = 0; i_3 < ints_1.length; this.anIntArray410[i_4 + i_4 + 1] = i_3++) {
             for (i_4 = ints_1[i_3] & i_2 - 1; this.anIntArray410[i_4 + i_4 + 1] != -1; i_4 = i_4 + 1 & i_2 - 1) {
-                ;
             }
             this.anIntArray410[i_4 + i_4] = ints_1[i_3];
         }

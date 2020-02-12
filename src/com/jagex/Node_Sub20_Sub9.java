@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.Random;
 
 public class Node_Sub20_Sub9 extends Node_Sub20 {
@@ -114,7 +115,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
     }
 
     void method12322(int i_1, RsByteBuffer rsbytebuffer_2) {
-        switch(i_1) {
+        switch (i_1) {
             case 0:
                 this.anInt9782 = rsbytebuffer_2.readUnsignedByte();
                 break;
@@ -171,7 +172,7 @@ public class Node_Sub20_Sub9 extends Node_Sub20 {
                 int i_18 = Class316.anInt3670 / i_14 + 1;
                 int[][] ints_19 = new int[i_18][3];
                 int[][] ints_20 = new int[i_18][3];
-                Random random_21 = new Random((long) this.anInt9782);
+                Random random_21 = new Random(this.anInt9782);
                 while (true) {
                     while (true) {
                         int i_22 = i_14 + Class476.method7931(random_21, i_15 - i_14, 43789865);

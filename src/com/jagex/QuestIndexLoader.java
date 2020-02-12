@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class QuestIndexLoader {
 
     static SpriteDefinitions aClass91_2981;

@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.IOException;
 import java.util.Date;
 
@@ -75,7 +76,6 @@ public abstract class Class209 {
                 try {
                     TextureDefinition.aFileOutputStream9481.write(LinkedNodeList.method7885(Class13.aStringArray129[0] + "\n", (byte) -108));
                 } catch (IOException ioexception_10) {
-                    ;
                 }
             }
             if (Class179.anInt2227 < Class13.aStringArray129.length - 1) {
@@ -89,6 +89,6 @@ public abstract class Class209 {
 
     public static boolean method3600(byte b_0) {
         int i_2 = b_0 & 0xff;
-        return i_2 == 0 ? false : i_2 < 128 || i_2 >= 160 || Class490.aCharArray5766[i_2 - 128] != 0;
+        return i_2 != 0 && (i_2 < 128 || i_2 >= 160 || Class490.aCharArray5766[i_2 - 128] != 0);
     }
 }

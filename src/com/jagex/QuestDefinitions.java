@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class QuestDefinitions {
 
     QuestIndexLoader aClass242_2976;
@@ -163,7 +164,7 @@ public class QuestDefinitions {
                     } else {
                         obj_8 = new IntNode(rsbytebuffer_1.readInt());
                     }
-                    this.params.put((Node) obj_8, (long) i_7);
+                    this.params.put((Node) obj_8, i_7);
                 }
             }
         }
@@ -218,7 +219,7 @@ public class QuestDefinitions {
     }
 
     public boolean method4103(VarProvider interface42_1, int i_2) {
-        return this.questPrerequisiteIds != null && i_2 >= 0 && i_2 < this.questPrerequisiteIds.length ? this.aClass242_2976.getQuest(this.questPrerequisiteIds[i_2]).isComplete(interface42_1) : false;
+        return (this.questPrerequisiteIds != null && i_2 >= 0 && i_2 < this.questPrerequisiteIds.length) && this.aClass242_2976.getQuest(this.questPrerequisiteIds[i_2]).isComplete(interface42_1);
     }
 
     public boolean method4104(VarProvider interface42_1, int i_2) {
@@ -243,13 +244,13 @@ public class QuestDefinitions {
         if (this.params == null) {
             return string_2;
         } else {
-            StringNode class282_sub47_4 = (StringNode) this.params.get((long) i_1);
+            StringNode class282_sub47_4 = (StringNode) this.params.get(i_1);
             return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
         }
     }
 
     public boolean method4111(int[] ints_1, int i_2) {
-        return this.levelRequirements != null && i_2 >= 0 && i_2 < this.levelRequirements.length ? ints_1[this.levelRequirements[i_2][0]] >= this.levelRequirements[i_2][1] : false;
+        return (this.levelRequirements != null && i_2 >= 0 && i_2 < this.levelRequirements.length) && ints_1[this.levelRequirements[i_2][0]] >= this.levelRequirements[i_2][1];
     }
 
     void method4119(RsByteBuffer rsbytebuffer_1) {
@@ -266,7 +267,7 @@ public class QuestDefinitions {
         if (this.params == null) {
             return i_2;
         } else {
-            IntNode class282_sub38_4 = (IntNode) this.params.get((long) i_1);
+            IntNode class282_sub38_4 = (IntNode) this.params.get(i_1);
             return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
         }
     }

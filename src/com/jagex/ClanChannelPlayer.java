@@ -1,9 +1,10 @@
 package com.jagex;
+
 public class ClanChannelPlayer {
 
-	public String name;
+    public String name;
 
-	public byte rank;
+    public byte rank;
 
-	public int world;
+    public int world;
 }

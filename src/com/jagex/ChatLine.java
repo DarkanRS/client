@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.Iterator;
 
 public class ChatLine {
@@ -14,8 +15,8 @@ public class ChatLine {
     public String clan;
     public int quickchatMessageId;
     public String message;
-	static int NUM_CHAT_LINES;
-	static ChatLine[] CHAT_LINES = new ChatLine[100];
+    static int NUM_CHAT_LINES;
+    static ChatLine[] CHAT_LINES = new ChatLine[100];
 
     void set(int type, int i_2, String string_3, String string_4, String string_5, String string_6, int i_7, String string_8) {
         this.anInt1085 = Node_Sub20_Sub28.method15396();
@@ -31,33 +32,33 @@ public class ChatLine {
     }
 
     public static void appendGameMessage(String message) {
-		appendChatMessage(4, 0, "", "", "", message);
-	}
+        appendChatMessage(4, 0, "", "", "", message);
+    }
 
-	public static void appendChatMessage(String message) {
-		appendChatMessage(0, 0, "", "", "", message);
-	}
+    public static void appendChatMessage(String message) {
+        appendChatMessage(0, 0, "", "", "", message);
+    }
 
-	public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message) {
-		appendChatMessage(type, effectFlags, crownedName, name, nameSimple, message, (String) null, -1);
-	}
+    public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message) {
+        appendChatMessage(type, effectFlags, crownedName, name, nameSimple, message, null, -1);
+    }
 
-	public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message, String clan, int quickChatMessageId) {
-		ChatLine line = CHAT_LINES[99];
-		for (int i = 99; i > 0; --i) {
-			CHAT_LINES[i] = CHAT_LINES[i - 1];
-		}
-		if (line == null) {
-			line = new ChatLine(type, effectFlags, crownedName, name, nameSimple, clan, quickChatMessageId, message);
-		} else {
-			line.set(type, effectFlags, crownedName, name, nameSimple, clan, quickChatMessageId, message);
-		}
-		CHAT_LINES[0] = line;
-		++NUM_CHAT_LINES;
-		client.anInt7391 = client.anInt7347;
-	}
+    public static void appendChatMessage(int type, int effectFlags, String crownedName, String name, String nameSimple, String message, String clan, int quickChatMessageId) {
+        ChatLine line = CHAT_LINES[99];
+        for (int i = 99; i > 0; --i) {
+            CHAT_LINES[i] = CHAT_LINES[i - 1];
+        }
+        if (line == null) {
+            line = new ChatLine(type, effectFlags, crownedName, name, nameSimple, clan, quickChatMessageId, message);
+        } else {
+            line.set(type, effectFlags, crownedName, name, nameSimple, clan, quickChatMessageId, message);
+        }
+        CHAT_LINES[0] = line;
+        ++NUM_CHAT_LINES;
+        client.anInt7391 = client.anInt7347;
+    }
 
-	ChatLine(int type, int effectFlags, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
+    ChatLine(int type, int effectFlags, String crownedName, String name, String nameSimple, String clan, int i_7, String message) {
         this.time = client.cycles;
         this.type = type;
         this.effectFlags = effectFlags;

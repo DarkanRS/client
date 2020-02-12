@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.Queue;
 
 final class Class237 implements Interface45 {
@@ -60,7 +61,7 @@ final class Class237 implements Interface45 {
     }
 
     static boolean isNPCClickType(int i_0) {
-        return i_0 != 9 && i_0 != 10 && i_0 != 11 && i_0 != 12 && i_0 != 13 && i_0 != 1003 ? i_0 == 8 : true;
+        return i_0 == 9 || i_0 == 10 || i_0 == 11 || i_0 == 12 || i_0 == 13 || i_0 == 1003 || i_0 == 8;
     }
 
     public static void method3990() {

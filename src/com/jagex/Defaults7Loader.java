@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Defaults7Loader {
 
     static NativeSprite aNativeSprite_5883;
@@ -65,7 +66,7 @@ public class Defaults7Loader {
     }
 
     public static MeshRasterizer method8752(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2, int i_3, int i_4, int i_5) {
-        long long_7 = (long) i_5;
+        long long_7 = i_5;
         MeshRasterizer meshrasterizer_9 = (MeshRasterizer) HintArrow.aClass229_2245.get(long_7);
         short s_10 = 2055;
         if (meshrasterizer_9 == null) {

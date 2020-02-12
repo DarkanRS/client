@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -45,8 +46,8 @@ public class NativeLibraryLoader implements Interface36 {
             Class class_25 = Class.forName("java.lang.reflect.AccessibleObject");
             Class class_5 = Class.forName("java.lang.ClassLoader");
             Field field_6 = class_5.getDeclaredField("nativeLibraries");
-            Method method_7 = class_25.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
-            method_7.invoke(field_6, new Object[] { Boolean.TRUE });
+            Method method_7 = class_25.getDeclaredMethod("setAccessible", Boolean.TYPE);
+            method_7.invoke(field_6, Boolean.TRUE);
             try {
                 enumeration_3 = this.linkedLibraries.keys();
                 while (enumeration_3.hasMoreElements()) {
@@ -59,42 +60,36 @@ public class NativeLibraryLoader implements Interface36 {
                             try {
                                 Object object_13 = vector_11.elementAt(i_12);
                                 Field field_14 = object_13.getClass().getDeclaredField("name");
-                                method_7.invoke(field_14, new Object[] { Boolean.TRUE });
+                                method_7.invoke(field_14, Boolean.TRUE);
                                 try {
                                     String string_15 = (String) field_14.get(object_13);
                                     if (string_15 != null && string_15.equalsIgnoreCase(file_9.getCanonicalPath())) {
                                         Field field_16 = object_13.getClass().getDeclaredField("handle");
-                                        Method method_17 = object_13.getClass().getDeclaredMethod("finalize", new Class[0]);
-                                        method_7.invoke(field_16, new Object[] { Boolean.TRUE });
-                                        method_7.invoke(method_17, new Object[] { Boolean.TRUE });
+                                        Method method_17 = object_13.getClass().getDeclaredMethod("finalize");
+                                        method_7.invoke(field_16, Boolean.TRUE);
+                                        method_7.invoke(method_17, Boolean.TRUE);
                                         try {
-                                            method_17.invoke(object_13, new Object[0]);
+                                            method_17.invoke(object_13);
                                             field_16.set(object_13, new Integer(0));
                                             hashtable_2.remove(string_8);
                                         } catch (Throwable throwable_19) {
-                                            ;
                                         }
-                                        method_7.invoke(method_17, new Object[] { Boolean.FALSE });
-                                        method_7.invoke(field_16, new Object[] { Boolean.FALSE });
+                                        method_7.invoke(method_17, Boolean.FALSE);
+                                        method_7.invoke(field_16, Boolean.FALSE);
                                     }
                                 } catch (Throwable throwable_20) {
-                                    ;
                                 }
-                                method_7.invoke(field_14, new Object[] { Boolean.FALSE });
+                                method_7.invoke(field_14, Boolean.FALSE);
                             } catch (Throwable throwable_21) {
-                                ;
                             }
                         }
                     } catch (Throwable throwable_22) {
-                        ;
                     }
                 }
             } catch (Throwable throwable_23) {
-                ;
             }
-            method_7.invoke(field_6, new Object[] { Boolean.FALSE });
+            method_7.invoke(field_6, Boolean.FALSE);
         } catch (Throwable throwable_24) {
-            ;
         }
         this.linkedLibraries = hashtable_2;
         return this.linkedLibraries.isEmpty();
@@ -240,8 +235,8 @@ public class NativeLibraryLoader implements Interface36 {
             Class class_24 = Class.forName("java.lang.reflect.AccessibleObject");
             Class class_4 = Class.forName("java.lang.ClassLoader");
             Field field_5 = class_4.getDeclaredField("nativeLibraries");
-            Method method_6 = class_24.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
-            method_6.invoke(field_5, new Object[] { Boolean.TRUE });
+            Method method_6 = class_24.getDeclaredMethod("setAccessible", Boolean.TYPE);
+            method_6.invoke(field_5, Boolean.TRUE);
             try {
                 enumeration_2 = this.linkedLibraries.keys();
                 while (enumeration_2.hasMoreElements()) {
@@ -254,42 +249,36 @@ public class NativeLibraryLoader implements Interface36 {
                             try {
                                 Object object_12 = vector_10.elementAt(i_11);
                                 Field field_13 = object_12.getClass().getDeclaredField("name");
-                                method_6.invoke(field_13, new Object[] { Boolean.TRUE });
+                                method_6.invoke(field_13, Boolean.TRUE);
                                 try {
                                     String string_14 = (String) field_13.get(object_12);
                                     if (string_14 != null && string_14.equalsIgnoreCase(file_8.getCanonicalPath())) {
                                         Field field_15 = object_12.getClass().getDeclaredField("handle");
-                                        Method method_16 = object_12.getClass().getDeclaredMethod("finalize", new Class[0]);
-                                        method_6.invoke(field_15, new Object[] { Boolean.TRUE });
-                                        method_6.invoke(method_16, new Object[] { Boolean.TRUE });
+                                        Method method_16 = object_12.getClass().getDeclaredMethod("finalize");
+                                        method_6.invoke(field_15, Boolean.TRUE);
+                                        method_6.invoke(method_16, Boolean.TRUE);
                                         try {
-                                            method_16.invoke(object_12, new Object[0]);
+                                            method_16.invoke(object_12);
                                             field_15.set(object_12, new Integer(0));
                                             hashtable_1.remove(string_7);
                                         } catch (Throwable throwable_18) {
-                                            ;
                                         }
-                                        method_6.invoke(method_16, new Object[] { Boolean.FALSE });
-                                        method_6.invoke(field_15, new Object[] { Boolean.FALSE });
+                                        method_6.invoke(method_16, Boolean.FALSE);
+                                        method_6.invoke(field_15, Boolean.FALSE);
                                     }
                                 } catch (Throwable throwable_19) {
-                                    ;
                                 }
-                                method_6.invoke(field_13, new Object[] { Boolean.FALSE });
+                                method_6.invoke(field_13, Boolean.FALSE);
                             } catch (Throwable throwable_20) {
-                                ;
                             }
                         }
                     } catch (Throwable throwable_21) {
-                        ;
                     }
                 }
             } catch (Throwable throwable_22) {
-                ;
             }
-            method_6.invoke(field_5, new Object[] { Boolean.FALSE });
+            method_6.invoke(field_5, Boolean.FALSE);
         } catch (Throwable throwable_23) {
-            ;
         }
         this.linkedLibraries = hashtable_1;
         return this.linkedLibraries.isEmpty();

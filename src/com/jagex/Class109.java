@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Class109 {
 
     abstract void method1849(byte var1);
@@ -22,7 +23,7 @@ public abstract class Class109 {
         Class158_Sub2_Sub3.anInt10243 = i_3;
         Class152.aBool1962 = bool_4;
         CutsceneAction_Sub22.anInt9440 = 10000;
-        Class148.aLong1740 = (long) 0;
+        Class148.aLong1740 = 0;
         Class383.anInt4664 = 0;
     }
 }

@@ -1,4 +1,5 @@
 package com.jagex;
+
 import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggStreamState;
 

@@ -1,15 +1,16 @@
 package com.jagex;
+
 import java.util.Locale;
 
 public enum Language implements Identifiable {
 
-	ENGLISH("EN", "en", "English", ServerEnvironment.LIVE, 0, "GB"),
+    ENGLISH("EN", "en", "English", ServerEnvironment.LIVE, 0, "GB"),
     GERMAN("DE", "de", "German", ServerEnvironment.LIVE, 1, "DE"),
     FRENCH("FR", "fr", "French", ServerEnvironment.LIVE, 2, "FR"),
     PORTUGESE("PT", "pt", "Portuguese", ServerEnvironment.LIVE, 3, "BR"),
     DUTCH("NL", "nl", "Dutch", ServerEnvironment.WTWIP, 4, "NL"),
     SPANISH("ES", "es", "Spanish", ServerEnvironment.WTWIP, 5, "ES");
-	
+
     static Language[] aClass495Array5796;
 
     String aString5806;

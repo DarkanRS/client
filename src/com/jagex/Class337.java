@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.LinkedList;
 
 public class Class337 {

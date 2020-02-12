@@ -1,13 +1,9 @@
 package com.jagex;
+
+import jaclib.nanotime.QueryPerformanceCounter;
+
 import java.applet.Applet;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.LayoutManager;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
@@ -16,8 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URL;
-
-import jaclib.nanotime.QueryPerformanceCounter;
 
 public abstract class Engine implements Interface24, Runnable, FocusListener, WindowListener {
 
@@ -73,7 +67,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             RuntimeException_Sub3.anApplet10460 = IFSubNode.anApplet8065;
             this.method4656(string_2, string_3, i_4, i_5);
         } catch (Throwable throwable_11) {
-            Class151.method2594((String) null, throwable_11, (byte) -115);
+            Class151.method2594(null, throwable_11, (byte) -115);
             this.method4680("crash", -1314193107);
         }
     }
@@ -89,7 +83,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             Node_Sub20_Sub34.aString9967 = System.getProperty("java.vendor");
             ChatLine.aString1093 = System.getProperty("java.version");
         } catch (Exception exception_22) {
-            ;
         }
         try {
             RuntimeException_Sub4.aString10463 = System.getProperty("os.name");
@@ -113,7 +106,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class110.aString1103 = Class110.aString1103 + "/";
             }
         } catch (Exception exception_18) {
-            ;
         }
         try {
             if (GroundItemStrategy.aString8069.startsWith("win")) {
@@ -127,7 +119,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class110.aString1103 = Class110.aString1103 + "/";
             }
         } catch (Exception exception_17) {
-            ;
         }
         if (Class110.aString1103 == null) {
             Class110.aString1103 = "~/";
@@ -135,12 +126,12 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         try {
             Shadow.anEventQueue10074 = Toolkit.getDefaultToolkit().getSystemEventQueue();
         } catch (Throwable throwable_16) {
-            ;
         }
-        Class246.aStringArray3028 = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", Class110.aString1103, "/tmp/", "" };
-        MapSize.aStringArray1077 = new String[] { ".dk_cache_" + Class514.anInt5887, ".file_store_" + Class514.anInt5887 };
+        Class246.aStringArray3028 = new String[]{"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", Class110.aString1103, "/tmp/", ""};
+        MapSize.aStringArray1077 = new String[]{".dk_cache_" + Class514.anInt5887, ".file_store_" + Class514.anInt5887};
         int i_13 = 0;
-        label131: while (i_13 < 4) {
+        label131:
+        while (i_13 < 4) {
             aFile3264 = this.method4657(string_1, string_2, i_13);
             if (!aFile3264.exists()) {
                 aFile3264.mkdirs();
@@ -250,7 +241,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             }
         }
         if (string_6 == null && i_3 == 0) {
-            label103: for (int i_17 = 0; i_17 < MapSize.aStringArray1077.length; i_17++) {
+            label103:
+            for (int i_17 = 0; i_17 < MapSize.aStringArray1077.length; i_17++) {
                 for (i_10 = 0; i_10 < Class246.aStringArray3028.length; i_10++) {
                     File file_23 = new File(Class246.aStringArray3028[i_10] + MapSize.aStringArray1077[i_17] + File.separatorChar + string_1 + File.separatorChar);
                     if (file_23.exists() && this.method4720(new File(file_23, "test.dat"), true, (byte) -97)) {
@@ -285,7 +277,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             bool_8 = true;
         }
         if (bool_8) {
-            this.method4659(new File(string_6), (File) null, -1666415972);
+            this.method4659(new File(string_6), null, -1666415972);
         }
         return new File(string_6);
     }
@@ -342,7 +334,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
     void method4663(Container container_1) {
         container_1.setBackground(Color.black);
-        container_1.setLayout((LayoutManager) null);
+        container_1.setLayout(null);
         container_1.add(Class351.gameCanvas);
         Class351.gameCanvas.setSize(Class349.anInt4083, anInt3243 * -969250379);
         Class351.gameCanvas.setVisible(true);
@@ -415,7 +407,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         aLongArray3247[CutsceneEntity.anInt747] = long_2;
         CutsceneEntity.anInt747 = CutsceneEntity.anInt747 + 1 & 0x1f;
         if (long_4 != 0L) {
-            ;
         }
         synchronized (this) {
             IFSubObjectPosition.appletHasFocus = aBool3275;
@@ -507,7 +498,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
         try {
             this.method4714();
         } catch (Exception exception_7) {
-            ;
         }
         try {
             aClass440_3270.method7346();
@@ -517,13 +507,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             aClass440_3271.method7346();
             PLAYER_UID192.method7346();
         } catch (Exception exception_8) {
-            ;
         }
         if (this.aBool3268) {
             try {
                 QueryPerformanceCounter.quit();
             } catch (Throwable throwable_6) {
-                ;
             }
         }
         Class156.method2645();
@@ -535,7 +523,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 Class351.gameCanvas.removeFocusListener(this);
                 Class351.gameCanvas.getParent().remove(Class351.gameCanvas);
             } catch (Exception exception_5) {
-                ;
             }
         }
         if (engineFrame != null) {
@@ -563,12 +550,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             try {
                 Class441.method7377(IFSubNode.anApplet8065, "loggedout", 1643442211);
             } catch (Throwable throwable_5) {
-                ;
             }
             try {
                 IFSubNode.anApplet8065.getAppletContext().showDocument(new URL(IFSubNode.anApplet8065.getCodeBase(), "error_game_" + string_1 + ".ws"), "_top");
             } catch (Exception exception_4) {
-                ;
             }
         }
     }
@@ -579,7 +564,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
             try {
                 QueryPerformanceCounter.init();
             } catch (Throwable throwable_3) {
-                ;
             }
         }
         return this.aBool3268;
@@ -758,7 +742,6 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
                 if (string_3.startsWith("1.6.0_")) {
                     int i_4;
                     for (i_4 = 6; i_4 < string_3.length() && AnimationIndexLoader.method11219(string_3.charAt(i_4), -2094159875); i_4++) {
-                        ;
                     }
                     String string_5 = string_3.substring(6, i_4);
                     if (Class115.method1950(string_5, 233261508) && Utils.parseInt(string_5) < 10) {

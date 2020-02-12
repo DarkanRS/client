@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Node_Sub21_Sub1 extends Node_Sub21 {
 
     Class111 aClass111_10058;

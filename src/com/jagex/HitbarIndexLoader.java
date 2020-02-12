@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class HitbarIndexLoader {
 
     static int anInt3451;
@@ -12,7 +13,7 @@ public class HitbarIndexLoader {
         SoftCache softcache_4 = this.aClass229_3449;
         HitbarDefinitions hitbardefinitions_3;
         synchronized (this.aClass229_3449) {
-            hitbardefinitions_3 = (HitbarDefinitions) this.aClass229_3449.get((long) i_1);
+            hitbardefinitions_3 = (HitbarDefinitions) this.aClass229_3449.get(i_1);
         }
         if (hitbardefinitions_3 != null) {
             return hitbardefinitions_3;
@@ -29,7 +30,7 @@ public class HitbarIndexLoader {
             }
             SoftCache softcache_9 = this.aClass229_3449;
             synchronized (this.aClass229_3449) {
-                this.aClass229_3449.put(hitbardefinitions_3, (long) i_1);
+                this.aClass229_3449.put(hitbardefinitions_3, i_1);
                 return hitbardefinitions_3;
             }
         }

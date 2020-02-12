@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
@@ -240,7 +241,7 @@ public class QuickChatMessage {
             client.BASE_WINDOW_ID = QuickchatFiller.ENTITY_DEFAULTS.lobbyWindow;
             Class516.method8867(false);
             Static.method6378();
-            Class150.method2582(client.BASE_WINDOW_ID, (int[]) null, -1429871398);
+            Class150.method2582(client.BASE_WINDOW_ID, null, -1429871398);
         }
         Class9.aBool71 = true;
     }

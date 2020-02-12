@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.io.IOException;
 
 public abstract class Connection {
@@ -108,7 +109,7 @@ public abstract class Connection {
     }
 
     static FriendStatus[] method3343() {
-        return new FriendStatus[] { FriendStatus.FRIENDS_ONLY, FriendStatus.ONLINE, FriendStatus.OFFLINE };
+        return new FriendStatus[]{FriendStatus.FRIENDS_ONLY, FriendStatus.ONLINE, FriendStatus.OFFLINE};
     }
 
     public static final void method3345(String string_0) {

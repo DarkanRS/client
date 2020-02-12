@@ -1,4 +1,5 @@
 package com.jagex;
+
 public final class Class475 {
 
     static int anInt5622;

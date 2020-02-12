@@ -1,4 +1,5 @@
 package com.jagex;
+
 import java.util.List;
 
 public class Class235 {

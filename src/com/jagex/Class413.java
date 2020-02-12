@@ -1,4 +1,5 @@
 package com.jagex;
+
 public enum Class413 implements Identifiable {
 
     aClass413_4971(1, 0, "", ""),
@@ -8,7 +9,7 @@ public enum Class413 implements Identifiable {
     aClass413_4970(4, 4, "", ""),
     aClass413_4969(5, 5, "", ""),
     aClass413_4964(0, 6, "", ""),
-    aClass413_4966("", "", new Class413[] { aClass413_4971, aClass413_4965, aClass413_4968, aClass413_4970, aClass413_4967 });
+    aClass413_4966("", "", new Class413[]{aClass413_4971, aClass413_4965, aClass413_4968, aClass413_4970, aClass413_4967});
 
     int anInt4972;
     int anInt4973;

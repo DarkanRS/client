@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class287 {
 
     public int anInt3419;
@@ -56,7 +57,7 @@ public class Class287 {
     }
 
     void method5052() {
-        switch(this.anInt3430) {
+        switch (this.anInt3430) {
             case 2:
                 this.anInt3431 = 1;
                 this.anInt3435 = 0;
@@ -159,7 +160,7 @@ public class Class287 {
         int i_4;
         if (!bool_2) {
             int i_5 = this.anInt3432 * i_1 / 50 + this.anInt3433 & 0x7ff;
-            switch(this.anInt3431) {
+            switch (this.anInt3431) {
                 case 1:
                     i_4 = (Class382.SINE[i_5 << 3] >> 4) + 1024;
                     break;

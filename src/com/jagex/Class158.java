@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Class158 {
 
     public abstract int method2714();

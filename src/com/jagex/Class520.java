@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class520 {
 
     WorldTile aClass219_5934;
@@ -6,7 +7,7 @@ public class Class520 {
     int anInt5933;
 
     public GroundItem method11158() {
-        Node_Sub29 class282_sub29_2 = (Node_Sub29) client.aClass465_7414.get((long) (this.aClass219_5934.plane << 28 | this.aClass219_5934.y << 14 | this.aClass219_5934.x));
+        Node_Sub29 class282_sub29_2 = (Node_Sub29) client.aClass465_7414.get(this.aClass219_5934.plane << 28 | this.aClass219_5934.y << 14 | this.aClass219_5934.x);
         if (class282_sub29_2 == null) {
             return null;
         } else {

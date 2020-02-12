@@ -1,15 +1,16 @@
 package com.jagex;
+
 public class Class454 {
 
-	static Class250 aClass250_5450;
+    static Class250 aClass250_5450;
 
-	static int CAM_MOVE_CONST_SPEED;
+    static int CAM_MOVE_CONST_SPEED;
 
-	public Class454() {
-		System.nanoTime();
-	}
+    public Class454() {
+        System.nanoTime();
+    }
 
-	public long method7548(byte b_1) {
-		return System.nanoTime();
-	}
+    public long method7548(byte b_1) {
+        return System.nanoTime();
+    }
 }

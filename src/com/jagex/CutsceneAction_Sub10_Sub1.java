@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class CutsceneAction_Sub10_Sub1 extends CutsceneAction_Sub10 {
 
     static int anInt10159;

@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class CutsceneAction_Sub9 extends CutsceneAction {
 
     static AccountCreationResponseOpcodes RECIEVED_RESPONSE;

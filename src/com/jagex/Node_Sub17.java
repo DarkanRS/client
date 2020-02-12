@@ -1,4 +1,5 @@
 package com.jagex;
+
 public abstract class Node_Sub17 extends Node {
 
     abstract void method12249(RsByteBuffer var1);

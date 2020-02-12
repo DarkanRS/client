@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class EntityList {
 
     EntityNode aEntityNode_5468 = new EntityNode();

@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class13 {
 
     static int anInt128;

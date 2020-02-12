@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class MapAreaDefinitions {
 
     MapAreaIndexLoader aClass218_2716;
@@ -154,7 +155,7 @@ public class MapAreaDefinitions {
                         } else {
                             obj_8 = new IntNode(rsbytebuffer_1.readInt());
                         }
-                        this.aClass465_2737.put((Node) obj_8, (long) i_7);
+                        this.aClass465_2737.put((Node) obj_8, i_7);
                     }
                 }
             }
@@ -209,7 +210,7 @@ public class MapAreaDefinitions {
         if (this.aClass465_2737 == null) {
             return string_2;
         } else {
-            StringNode class282_sub47_4 = (StringNode) this.aClass465_2737.get((long) i_1);
+            StringNode class282_sub47_4 = (StringNode) this.aClass465_2737.get(i_1);
             return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
         }
     }
@@ -218,13 +219,13 @@ public class MapAreaDefinitions {
         if (this.aClass465_2737 == null) {
             return i_2;
         } else {
-            IntNode class282_sub38_4 = (IntNode) this.aClass465_2737.get((long) i_1);
+            IntNode class282_sub38_4 = (IntNode) this.aClass465_2737.get(i_1);
             return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
         }
     }
 
     public NativeSprite method3729(GraphicalRenderer graphicalrenderer_1) {
-        NativeSprite nativesprite_3 = (NativeSprite) this.aClass218_2716.aClass229_2708.get((long) (this.anInt2733 | 0x20000 | graphicalrenderer_1.rendererId << 29));
+        NativeSprite nativesprite_3 = (NativeSprite) this.aClass218_2716.aClass229_2708.get(this.anInt2733 | 0x20000 | graphicalrenderer_1.rendererId << 29);
         if (nativesprite_3 != null) {
             return nativesprite_3;
         } else {
@@ -232,7 +233,7 @@ public class MapAreaDefinitions {
             SpriteDefinitions class91_4 = SpriteDefinitions.getSprite(this.aClass218_2716.aClass317_2703, this.anInt2733, 0);
             if (class91_4 != null) {
                 nativesprite_3 = graphicalrenderer_1.method8444(class91_4, true);
-                this.aClass218_2716.aClass229_2708.put(nativesprite_3, (long) (this.anInt2733 | 0x20000 | graphicalrenderer_1.rendererId << 29));
+                this.aClass218_2716.aClass229_2708.put(nativesprite_3, this.anInt2733 | 0x20000 | graphicalrenderer_1.rendererId << 29);
             }
             return nativesprite_3;
         }
@@ -241,7 +242,7 @@ public class MapAreaDefinitions {
     public NativeSprite renderIcons(GraphicalRenderer graphicalrenderer_1, boolean bool_2) {
         int i_4 = bool_2 ? this.anInt2757 : this.anInt2719;
         int i_5 = i_4 | graphicalrenderer_1.rendererId << 29;
-        NativeSprite nativesprite_6 = (NativeSprite) this.aClass218_2716.aClass229_2708.get((long) i_5);
+        NativeSprite nativesprite_6 = (NativeSprite) this.aClass218_2716.aClass229_2708.get(i_5);
         if (nativesprite_6 != null) {
             return nativesprite_6;
         } else if (!this.aClass218_2716.aClass317_2703.loadFile(i_4)) {
@@ -250,7 +251,7 @@ public class MapAreaDefinitions {
             SpriteDefinitions class91_7 = SpriteDefinitions.getSprite(this.aClass218_2716.aClass317_2703, i_4, 0);
             if (class91_7 != null) {
                 nativesprite_6 = graphicalrenderer_1.method8444(class91_7, true);
-                this.aClass218_2716.aClass229_2708.put(nativesprite_6, (long) i_5);
+                this.aClass218_2716.aClass229_2708.put(nativesprite_6, i_5);
             }
             return nativesprite_6;
         }
@@ -275,7 +276,7 @@ public class MapAreaDefinitions {
                 if (client.aBool7344 && !bool_1) {
                     ParamDefinitions attributedefault_10 = CutsceneAction_Sub12.USE_INTERFACE_ID != -1 ? IndexLoaders.PARAM_LOADER.getParam(CutsceneAction_Sub12.USE_INTERFACE_ID) : null;
                     if ((Class506.USE_OPTIONS_FLAGS & 0x2) != 0 && (attributedefault_10 == null || npcdefinitions_3.method6876(CutsceneAction_Sub12.USE_INTERFACE_ID, attributedefault_10.defaultInt, 130038001) != attributedefault_10.defaultInt)) {
-                        PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1728725165);
+                        PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + Utils.rgbToColHexShortcut(16776960) + string_4, Defaults8Loader.anInt5932, 8, -1, npc_0.index, 0, 0, true, false, npc_0.index, false, -1728725165);
                     }
                 }
                 if (!bool_1) {
@@ -314,7 +315,7 @@ public class MapAreaDefinitions {
                                 if (i_6 == npcdefinitions_3.anInt4854) {
                                     i_8 = npcdefinitions_3.anInt4861;
                                 }
-                                PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1773453670);
+                                PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_8, s_7, -1, npc_0.index, 0, 0, true, false, npc_0.index, false, -1773453670);
                             }
                         }
                         if (npcdefinitions_3.aByte4916 == 1) {
@@ -353,7 +354,7 @@ public class MapAreaDefinitions {
                                     if (i_6 == npcdefinitions_3.anInt4854) {
                                         i_9 = npcdefinitions_3.anInt4861;
                                     }
-                                    PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, (long) npc_0.index, 0, 0, true, false, (long) npc_0.index, false, -1021673171);
+                                    PlayerAppearance.method4032(arr_11[i_6], Utils.rgbToColHexShortcut(16776960) + string_4, arr_11[i_6].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE)) ? npcdefinitions_3.anInt4877 : i_9, s_12, -1, npc_0.index, 0, 0, true, false, npc_0.index, false, -1021673171);
                                 }
                             }
                         }
@@ -436,7 +437,7 @@ public class MapAreaDefinitions {
         if (worldmapareadefs_2.areaName != null) {
             class194_15 = AsyncInputStream.method5048(worldmapareadefs_2.anInt2722);
             if (class194_15 != null) {
-                i_16 = Node_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, (int[]) null, Class291_Sub1.aStringArray8024, (Sprite[]) null);
+                i_16 = Node_Sub17_Sub2.aClass414_9933.method6987(worldmapareadefs_2.areaName, null, Class291_Sub1.aStringArray8024, null);
                 i_17 = (Class291_Sub1.anInt3476 - Class291_Sub1.anInt3489) * worldmapareadefs_2.anInt2750 / (Class291_Sub1.anInt3480 - Class291_Sub1.anInt3485) + class282_sub36_1.anInt7990;
                 i_18 = class282_sub36_1.anInt7992 - (Class291_Sub1.anInt3492 - Class291_Sub1.anInt3490) * worldmapareadefs_2.anInt2752 / (Class291_Sub1.anInt3486 - Class291_Sub1.anInt3465);
                 if (nativesprite_10 == null) {

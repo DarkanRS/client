@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Canvas;
+
+import java.awt.*;
 
 public class Class351 implements Interface3 {
 

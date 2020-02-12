@@ -1,4 +1,5 @@
 package com.jagex;
+
 public final class Class47_Sub1 extends Class47 {
 
     static Connection updateConnection;
@@ -48,7 +49,7 @@ public final class Class47_Sub1 extends Class47 {
     }
 
     public void method937(int i_1, int i_2) {
-        switch(i_1) {
+        switch (i_1) {
             case 0:
                 this.aClass303_9140.fromInt(i_2);
                 this.aClass303_9141.fromInt(0);
@@ -100,7 +101,7 @@ public final class Class47_Sub1 extends Class47 {
     }
 
     public void method939(int i_1, int i_2) {
-        switch(i_1) {
+        switch (i_1) {
             case 0:
                 this.aClass303_9140.fromInt(i_2);
                 this.aClass303_9141.fromInt(0);
@@ -125,7 +126,7 @@ public final class Class47_Sub1 extends Class47 {
     }
 
     public void method940(int i_1, int i_2) {
-        switch(i_1) {
+        switch (i_1) {
             case 0:
                 this.aClass303_9140.fromInt(i_2);
                 this.aClass303_9141.fromInt(0);

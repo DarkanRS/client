@@ -1,8 +1,9 @@
 package com.jagex;
+
 public class Class274 {
 
     protected static Class470 aClass470_3336;
-    
+
     int width;
     int height;
     int anInt3333;

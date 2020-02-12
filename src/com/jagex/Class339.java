@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class339 {
 
     public static byte[][] aByteArrayArray3986;

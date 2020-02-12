@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class29 {
 
     NewsItemFetcher aClass30_354;
@@ -12,7 +13,7 @@ public class Class29 {
             return null;
         } else {
             Class60 class60_3 = interface3_1.method24();
-            return (Interface2) (class60_3 == Class60.aClass60_609 ? new Class46((Class366) interface3_1) : (class60_3 == Class60.aClass60_605 ? new Class28(this.method782(), (Class365) interface3_1) : (class60_3 == Class60.aClass60_606 ? new Class42(this.aClass317_352, (Class357) interface3_1) : (class60_3 == Class60.aClass60_607 ? new Class42_Sub1(this.aClass317_352, (Class357_Sub1) interface3_1) : (class60_3 == Class60.aClass60_602 ? new Class52_Sub3(this.aClass317_352, this.aClass317_353, (Class350_Sub2) interface3_1) : (class60_3 == Class60.aClass60_603 ? new Class52_Sub1(this.aClass317_352, this.aClass317_353, (Class350_Sub1) interface3_1) : (class60_3 == Class60.aClass60_608 ? new Class52_Sub2(this.aClass317_352, this.aClass317_353, (Class350_Sub3) interface3_1) : (class60_3 == Class60.aClass60_604 ? new Class51(this.aClass317_352, this.aClass317_353, (Class62) interface3_1) : (class60_3 == Class60.aClass60_601 ? new Class43(this.aClass317_352, (Class351) interface3_1) : (class60_3 == Class60.aClass60_610 ? new Class52_Sub2_Sub1(this.aClass317_352, this.aClass317_353, (Class350_Sub3_Sub1) interface3_1) : null))))))))));
+            return class60_3 == Class60.aClass60_609 ? new Class46((Class366) interface3_1) : (class60_3 == Class60.aClass60_605 ? new Class28(this.method782(), (Class365) interface3_1) : (class60_3 == Class60.aClass60_606 ? new Class42(this.aClass317_352, (Class357) interface3_1) : (class60_3 == Class60.aClass60_607 ? new Class42_Sub1(this.aClass317_352, (Class357_Sub1) interface3_1) : (class60_3 == Class60.aClass60_602 ? new Class52_Sub3(this.aClass317_352, this.aClass317_353, (Class350_Sub2) interface3_1) : (class60_3 == Class60.aClass60_603 ? new Class52_Sub1(this.aClass317_352, this.aClass317_353, (Class350_Sub1) interface3_1) : (class60_3 == Class60.aClass60_608 ? new Class52_Sub2(this.aClass317_352, this.aClass317_353, (Class350_Sub3) interface3_1) : (class60_3 == Class60.aClass60_604 ? new Class51(this.aClass317_352, this.aClass317_353, (Class62) interface3_1) : (class60_3 == Class60.aClass60_601 ? new Class43(this.aClass317_352, (Class351) interface3_1) : (class60_3 == Class60.aClass60_610 ? new Class52_Sub2_Sub1(this.aClass317_352, this.aClass317_353, (Class350_Sub3_Sub1) interface3_1) : null)))))))));
         }
     }
 

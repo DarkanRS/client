@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Rectangle;
+
+import java.awt.*;
 
 public class Class292 {
 

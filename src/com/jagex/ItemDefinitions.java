@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class ItemDefinitions implements Definition {
 
     ItemIndexLoader loader;
@@ -92,7 +93,7 @@ public class ItemDefinitions implements Definition {
         SoftCache softcache_13 = this.loader.aClass229_5115;
         MeshRasterizer meshrasterizer_17;
         synchronized (this.loader.aClass229_5115) {
-            meshrasterizer_17 = (MeshRasterizer) this.loader.aClass229_5115.get((long) (this.id | graphicalrenderer_1.rendererId << 29));
+            meshrasterizer_17 = (MeshRasterizer) this.loader.aClass229_5115.get(this.id | graphicalrenderer_1.rendererId << 29);
         }
         if (meshrasterizer_17 == null || graphicalrenderer_1.method8452(meshrasterizer_17.m(), i_11) != 0) {
             if (meshrasterizer_17 != null) {
@@ -152,7 +153,7 @@ public class ItemDefinitions implements Definition {
             meshrasterizer_17.KA(i_11);
             SoftCache softcache_19 = this.loader.aClass229_5115;
             synchronized (this.loader.aClass229_5115) {
-                this.loader.aClass229_5115.put(meshrasterizer_17, (long) (this.id | graphicalrenderer_1.rendererId << 29));
+                this.loader.aClass229_5115.put(meshrasterizer_17, this.id | graphicalrenderer_1.rendererId << 29);
             }
         }
         if (animation_5 != null || i_9 != 0) {
@@ -415,7 +416,7 @@ public class ItemDefinitions implements Definition {
                     } else {
                         obj_8 = new IntNode(stream.readInt());
                     }
-                    this.cs2Map.put((Node) obj_8, (long) i_7);
+                    this.cs2Map.put((Node) obj_8, i_7);
                 }
             }
         }
@@ -524,7 +525,7 @@ public class ItemDefinitions implements Definition {
                 hardwareRenderer.ba(2, 0);
                 hardwareRenderer.B(0, 0, 36, 32, 0, 0);
                 hardwareRenderer.c(0, -1, 0);
-                meshRasterizer.method11282(matrix44var_20, (EntityNode_Sub5) null, 1);
+                meshRasterizer.method11282(matrix44var_20, null, 1);
                 hardwareRenderer.method8424(matrix44arr_17);
                 int[] ints_21 = hardwareRenderer.ab(0, 0, 36, 32);
                 if (outlineSize >= 1) {
@@ -655,10 +656,10 @@ public class ItemDefinitions implements Definition {
                         if (rsmesh_9.version < 13) {
                             rsmesh_9.upscale();
                         }
-                        RSMesh[] arr_10 = new RSMesh[] { rsmesh_7, rsmesh_8, rsmesh_9 };
+                        RSMesh[] arr_10 = new RSMesh[]{rsmesh_7, rsmesh_8, rsmesh_9};
                         rsmesh_7 = new RSMesh(arr_10, 3);
                     } else {
-                        RSMesh[] arr_13 = new RSMesh[] { rsmesh_7, rsmesh_8 };
+                        RSMesh[] arr_13 = new RSMesh[]{rsmesh_7, rsmesh_8};
                         rsmesh_7 = new RSMesh(arr_13, 2);
                     }
                 }
@@ -731,7 +732,7 @@ public class ItemDefinitions implements Definition {
         if (this.cs2Map == null) {
             return i_2;
         } else {
-            IntNode class282_sub38_4 = (IntNode) this.cs2Map.get((long) i_1);
+            IntNode class282_sub38_4 = (IntNode) this.cs2Map.get(i_1);
             return class282_sub38_4 == null ? i_2 : class282_sub38_4.value;
         }
     }
@@ -740,7 +741,7 @@ public class ItemDefinitions implements Definition {
         if (this.cs2Map == null) {
             return defaultValue;
         } else {
-            StringNode class282_sub47_4 = (StringNode) this.cs2Map.get((long) key);
+            StringNode class282_sub47_4 = (StringNode) this.cs2Map.get(key);
             return class282_sub47_4 == null ? defaultValue : (String) class282_sub47_4.anObject8068;
         }
     }
@@ -798,7 +799,7 @@ public class ItemDefinitions implements Definition {
                 if (rsmesh_7.version < 13) {
                     rsmesh_7.upscale();
                 }
-                RSMesh[] arr_8 = new RSMesh[] { rsmesh_6, rsmesh_7 };
+                RSMesh[] arr_8 = new RSMesh[]{rsmesh_6, rsmesh_7};
                 rsmesh_6 = new RSMesh(arr_8, 2);
             }
             int i_9;
@@ -877,14 +878,14 @@ public class ItemDefinitions implements Definition {
     static final void method7140(Entity animable_0, Entity animable_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
         int i_10 = animable_1.method15899(-525246876);
         if (i_10 != -1) {
-            NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get((long) i_10);
+            NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get(i_10);
             if (nativesprite_11 == null) {
                 SpriteDefinitions[] arr_12 = SpriteDefinitions.method1514(IndexLoaders.SPRITES_INDEX, i_10);
                 if (arr_12 == null) {
                     return;
                 }
                 nativesprite_11 = Renderers.SOFTWARE_RENDERER.method8444(arr_12[0], true);
-                client.aClass229_7204.put(nativesprite_11, (long) i_10);
+                client.aClass229_7204.put(nativesprite_11, i_10);
             }
             Vector3 vector3_16 = animable_0.method11166().coords;
             HitsplatIndexLoader.method3612(animable_0.plane, (int) vector3_16.x, (int) vector3_16.z, animable_0.getSize() * 256, 0, false, (byte) 2);

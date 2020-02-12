@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class159 {
 
     public static ConnectionInfo GAME_CONNECTION_INFO;
@@ -18,7 +19,6 @@ public class Class159 {
                         return string_1.equals(string_3);
                     }
                     if (b_4 < -1) {
-                        ;
                     }
                 }
                 return string_0.equals(string_2);

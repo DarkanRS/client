@@ -1,4 +1,5 @@
 package com.jagex;
+
 public final class HashTable {
 
     static int[] anIntArray5449;

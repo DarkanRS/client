@@ -1,8 +1,9 @@
 package com.jagex;
+
 public class RuntimeException_Sub1 extends RuntimeException {
 
-	private RuntimeException_Sub1() throws Throwable {
-		throw new Error();
-	}
+    private RuntimeException_Sub1() throws Throwable {
+        throw new Error();
+    }
 
 }

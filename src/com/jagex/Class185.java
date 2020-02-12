@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class Class185 {
     boolean aBool2304;
     float aFloat2326;

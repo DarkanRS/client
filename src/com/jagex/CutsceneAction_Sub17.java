@@ -1,4 +1,5 @@
 package com.jagex;
+
 public class CutsceneAction_Sub17 extends CutsceneAction {
 
     int anInt9385;
@@ -29,7 +30,7 @@ public class CutsceneAction_Sub17 extends CutsceneAction {
     }
 
     public static void method14656(int i_0) {
-        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(20, (long) i_0);
+        PulseEvent class282_sub50_sub12_2 = PulseEvent.createPulseEvent(20, i_0);
         class282_sub50_sub12_2.method14965((byte) 40);
     }
 }
