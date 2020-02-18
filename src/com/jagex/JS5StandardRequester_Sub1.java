@@ -14,7 +14,7 @@ public class JS5StandardRequester_Sub1 extends JS5StandardRequester {
                 return null;
             } else {
                 MapAreaDefinitions worldmapareadefs_2 = Class291_Sub1.MAP_AREA_LOADER.getWorldMapDefs(class282_sub36_1.anInt7991);
-                return worldmapareadefs_2 != null && worldmapareadefs_2.aBool2742 && worldmapareadefs_2.method3719(Class291_Sub1.PLAYER_VAR_PROVIDER) ? class282_sub36_1 : Class540.method11595();
+                return worldmapareadefs_2 != null && worldmapareadefs_2.aBool2742 && worldmapareadefs_2.shouldDraw(Class291_Sub1.PLAYER_VAR_PROVIDER) ? class282_sub36_1 : Class540.method11595();
             }
         } else {
             return null;

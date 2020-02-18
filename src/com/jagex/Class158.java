@@ -8,7 +8,7 @@ public abstract class Class158 {
 
     static void method2731(AbstractRenderer graphicalrenderer_0, Class455 class455_1, Component icomponentdefinitions_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
         MapAreaDefinitions worldmapareadefs_9 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(i_7);
-        if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.method3719(Class158_Sub1.PLAYER_VAR_PROVIDER)) {
+        if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.shouldDraw(Class158_Sub1.PLAYER_VAR_PROVIDER)) {
             int i_11;
             if (worldmapareadefs_9.anIntArray2717 != null) {
                 int[] ints_10 = new int[worldmapareadefs_9.anIntArray2717.length];

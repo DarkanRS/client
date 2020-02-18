@@ -32,15 +32,15 @@ public class MapAreaDefinitions {
     public int anInt2746 = Integer.MIN_VALUE;
     public String[] aStringArray2740 = new String[5];
     MapAreaIndexLoader aClass218_2716;
-    int anInt2736 = -1;
-    int anInt2745 = -1;
-    int anInt2734;
-    int anInt2735;
+    int varbit = -1;
+    int var = -1;
+    int varValueMin;
+    int varValueMax;
     int anInt2733 = -1;
-    int anInt2755 = -1;
-    int anInt2741 = -1;
-    int anInt2743;
-    int anInt2739;
+    int varbitSecondary = -1;
+    int varSecondary = -1;
+    int varValueMinSecondary;
+    int varValueMaxSecondary;
     IterableNodeMap aClass465_2737;
 
     static void iComponentOnNPC(NPCEntity npc_0, boolean bool_1) {
@@ -334,16 +334,16 @@ public class MapAreaDefinitions {
             } else if (i_2 == 8) {
                 aBool2730 = rsbytebuffer_1.readUnsignedByte() == 1;
             } else if (i_2 == 9) {
-                anInt2736 = rsbytebuffer_1.readUnsignedShort();
-                if (anInt2736 == 65535) {
-                    anInt2736 = -1;
+                varbit = rsbytebuffer_1.readUnsignedShort();
+                if (varbit == 65535) {
+                    varbit = -1;
                 }
-                anInt2745 = rsbytebuffer_1.readUnsignedShort();
-                if (anInt2745 == 65535) {
-                    anInt2745 = -1;
+                var = rsbytebuffer_1.readUnsignedShort();
+                if (var == 65535) {
+                    var = -1;
                 }
-                anInt2734 = rsbytebuffer_1.readInt();
-                anInt2735 = rsbytebuffer_1.readInt();
+                varValueMin = rsbytebuffer_1.readInt();
+                varValueMax = rsbytebuffer_1.readInt();
             } else if (i_2 >= 10 && i_2 <= 14) {
                 aStringArray2740[i_2 - 10] = rsbytebuffer_1.readString();
             } else {
@@ -374,16 +374,16 @@ public class MapAreaDefinitions {
                 } else if (i_2 == 19) {
                     anInt2718 = rsbytebuffer_1.readUnsignedShort();
                 } else if (i_2 == 20) {
-                    anInt2755 = rsbytebuffer_1.readUnsignedShort();
-                    if (anInt2755 == 65535) {
-                        anInt2755 = -1;
+                    varbitSecondary = rsbytebuffer_1.readUnsignedShort();
+                    if (varbitSecondary == 65535) {
+                        varbitSecondary = -1;
                     }
-                    anInt2741 = rsbytebuffer_1.readUnsignedShort();
-                    if (anInt2741 == 65535) {
-                        anInt2741 = -1;
+                    varSecondary = rsbytebuffer_1.readUnsignedShort();
+                    if (varSecondary == 65535) {
+                        varSecondary = -1;
                     }
-                    anInt2743 = rsbytebuffer_1.readInt();
-                    anInt2739 = rsbytebuffer_1.readInt();
+                    varValueMinSecondary = rsbytebuffer_1.readInt();
+                    varValueMaxSecondary = rsbytebuffer_1.readInt();
                 } else if (i_2 == 21) {
                     anInt2727 = rsbytebuffer_1.readInt();
                 } else if (i_2 == 22) {
@@ -434,28 +434,28 @@ public class MapAreaDefinitions {
         }
     }
 
-    public boolean method3719(VarProvider interface42_1) {
+    public boolean shouldDraw(VarProvider interface42_1) {
         int i_3;
-        if (anInt2745 != -1) {
-            i_3 = interface42_1.getVar(anInt2745);
+        if (var != -1) {
+            i_3 = interface42_1.getVar(var);
         } else {
-            if (anInt2736 == -1) {
+            if (varbit == -1) {
                 return true;
             }
-            i_3 = interface42_1.getVarBit(anInt2736);
+            i_3 = interface42_1.getVarBit(varbit);
         }
-        if (i_3 >= anInt2734 && i_3 <= anInt2735) {
+        if (i_3 >= varValueMin && i_3 <= varValueMax) {
             boolean bool_4 = false;
             int i_5;
-            if (anInt2741 != -1) {
-                i_5 = interface42_1.getVar(anInt2741);
+            if (varSecondary != -1) {
+                i_5 = interface42_1.getVar(varSecondary);
             } else {
-                if (anInt2755 == -1) {
+                if (varbitSecondary == -1) {
                     return true;
                 }
-                i_5 = interface42_1.getVarBit(anInt2755);
+                i_5 = interface42_1.getVarBit(varbitSecondary);
             }
-            return i_5 >= anInt2743 && i_5 <= anInt2739;
+            return i_5 >= varValueMinSecondary && i_5 <= varValueMaxSecondary;
         } else {
             return false;
         }
